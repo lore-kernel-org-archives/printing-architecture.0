@@ -1,6 +1,6 @@
-Message-ID: <E0BE13326C4EBC45BBC635197DEB7E3F9FC66B@x-crt-es-ms1.cp10.es.xerox.com>
-From: "Hastings, Tom N" <hastings@cp10.es.xerox.com>
-Date: Thu, 24 Apr 2003 17:19:03 -0700
+Message-ID: <116DB56CD7DED511BC7800508B2CA53735CF9E@mailsrvnt02.enet.sharplabs.com>
+From: "McDonald, Ira" <imcdonald@sharplabs.com>
+Date: Fri, 25 Apr 2003 11:38:11 -0700
 MIME-Version: 1.0
 Content-Type: text/plain;
 	charset="iso-8859-1"
@@ -15,8 +15,35 @@ List-Id: <printing-architecture.freestandards.org>
 List-Unsubscribe: <http://freestandards.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@freestandards.org?subject=unsubscribe>
 List-Archive: <http://freestandards.org/pipermail/printing-architecture/>
-To: printing-architecture@freestandards.org
+To: "'Hastings, Tom N'" <hastings@cp10.es.xerox.com>, printing-architecture@freestandards.org
 Cc: "'ipp@pwg.org'" <ipp@pwg.org>, "McDonald, Ira" <imcdonald@sharplabs.com>
+
+Hi Tom,
+
+I disagree entirely with your reasoning below.
+
+The main purpose of PSI is print-by-reference.  If Send-URI
+remains OPTIONAL (and therefore rarely implemented and not
+interoperable) in IPP, then gateways based on FSG PAPI/1.0 
+interfaces between PSI and IPP transports will fail (unless
+the gateway fetches the referenced document, which introduces
+a different set of security issues).
+
+This isn't a percentage kind of thing.  The most important
+operation in PSI is AddDocumentByReference.  All of the mobile
+scenarios depend on it.  Mobile devices _cannot_ fetch local
+copies of large documents, in order to use AddDocumentByValue.
+
+Cheers,
+- Ira
+
+-----Original Message-----
+From: Hastings, Tom N [mailto:hastings@cp10.es.xerox.com]
+Sent: Thursday, April 24, 2003 8:19 PM
+To: printing-architecture@freestandards.org
+Cc: 'ipp@pwg.org'; McDonald, Ira
+Subject: RE: IPP> FW: Summary of PWG Document Object issues
+
 
 To the FSG Group,
 cc: IPP DL
