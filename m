@@ -1,9 +1,10 @@
-Message-ID: <E0BE13326C4EBC45BBC635197DEB7E3FCBB7@x-crt-es-ms1.cp10.es.xerox.com>
-From: "Hastings, Tom N" <hastings@cp10.es.xerox.com>
-Date: Thu, 21 Nov 2002 15:40:36 -0800
+Subject: Re: [Printing-architecture] RE:Scenarios for using the various Open Print
+ API
+Message-ID: <OF63108296.468827EB-ON85256C84.0058D5DF@pok.ibm.com>
+From: "Pete Zannucci" <pzaan@us.ibm.com>
+Date: Tue, 3 Dec 2002 10:51:35 -0600
 MIME-Version: 1.0
-Content-Type: text/plain
-Subject: [Printing-architecture] RE: Scenarios for using the various Open Print API [my comments]
+Content-type: text/plain; charset=us-ascii
 Sender: printing-architecture-admin@freestandards.org
 Errors-To: printing-architecture-admin@freestandards.org
 List-Help: <mailto:printing-architecture-request@freestandards.org?subject=help>
@@ -14,52 +15,90 @@ List-Id: <printing-architecture.freestandards.org>
 List-Unsubscribe: <http://freestandards.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@freestandards.org?subject=unsubscribe>
 List-Archive: <http://freestandards.org/pipermail/printing-architecture/>
-To: Claudia Alimpich <alimpich@us.ibm.com>
-Cc: printing-architecture <printing-architecture@freestandards.org>
+To: printing-architecture@freestandards.org
 
-Here are my comments on Claudia's scenarios from today's FSG Architecture
-meeting which covered only the JT API, PAPI, and the Capabilities API.
 
-1. Firstly, discussing these scenarios verbally on today's telecon, helped
-us see the relationship more clearly between the PAPI and the Capabilities
-API.  Also the discussion of the scenarios caused us to realize that we need
-two profiles added to the PAPI 1.0 spec and a library function call to
-return which profile or which functions the implementation supports as
-opposed to returning the status code: not-supported.  The two distinct use
-case that need to be reflected in two separate profiles of PAPI were whether
-or not the Application used the functions that submitted and managed Jobs.
+SORRY - LONG APPEND
 
-Therefore, for the next FSG Architecture meeting, I suggest that we continue
-this same level of discussion of scenarios for the applications that use the
-other APIs in the FSG-10000000ft-updated.jpg picture.  It will help us
-understand these other APIs much better.
 
-2. In the meeting, we realized that the term Capabilities API is somewhat
-confusing, since the PAPI 1.0 has the papiPrinterQuery function which
-returns all of the supported attribute values of the selected Printer, but
-does not return any of the inter-attribute constraints.  So drawing the
-Capabilities API as a separate API from the PAPI is misleading.  On the
-other hand, the PAPI V1.0 doesn't meet all of the Capability requirements.  
+In Claudia's note below, she has hit on the gray area.
+Do we need a capabilities API or not?
 
-However, the discussion seems to be heading to adding the inter-attribute
-constraints to the papiPrinterQuery function call after PAPI V1.0, i.e.,
-V1.1 or V2.0.  So for the discussion below I'm assuming the "capabilities"
-means using the papiPrinterQuery function as in PAPI V1.0, i.e., just the
-supported values as if all attributes are orthogonal.  Then lets add
-obtaining or at least using the "inter-attribute constraints" as a separate
-step. 
+We need to define what "Capabilities" really is and
+what is the crossover between capabilities and the
+standard attributes that are currently defined in
+protocols such as IPP and to be provided by the printer
+(or subsystem).
 
-3.  Building on Claudia's formulation, here are my comments below, bracketed
-by <th> .... </th>.
+The basic capabilities of a device will be provided back
+through the papiPrinterQuery call which will enable printing.
+The problem with these attribute/values is that the
+information provided back will be non-hardware / rendering
+specific.  We should get back the standard IPP information,
+at minimum, which provides for things like:
+      form
+      tray information
+      media
+      finishing options, etc.
 
-Tom
+This information formulates the basics of capabilities.
+These items will let you send a job and pick certain hardware
+features/finishing options but do not provide possible
+additional information on how the job can be laid out and
+what are possible rendering options based on the hardware's
+capabilities.
 
------Original Message-----
-From: Claudia Alimpich [mailto:alimpich@us.ibm.com]
-Sent: Thursday, November 21, 2002 11:09
-To: printing-architecture
-Subject: [Printing-architecture] RE:Scenarios for using the various Open
-Print API
+We need to come to a consensus on what additional types
+of information an application might need to be able to
+generate a job to it's satisfaction.  We have discussed
+how to provide printable area and margin information.
+That is a start.  Their may be other things that some apps.
+would like to know about a device and that should be added
+as a possible separate api (get all the pertinent info.
+back from a device on what it supports) or could possibly
+be added as an additional grouping of attributes.
+
+There are two sides of adding additional attributes that
+worry me.
+      1. No protocol support for the attributes so
+         current devices will not be able to handle or
+         provide the information back on a query.
+      2. Since there is no support there will need to be
+         an intermediary such as a ppd or a driver when
+         using such a device.
+
+In reality most information is provided by the current
+set of attributes except for some specific hardware and
+rendering information.  We should be able to get that
+information based on a current group of settings so that
+an application can generate a page correctly.
+This could be done with the current attribute mechanism
+though we have to make sure that we offset any discrepancies
+that a particular implementation (such as IPP or various
+other backends) with system specific function to provide
+the additional information to the application.
+
+
+
+Peter Zannucci
+
+IBM Linux Technology Center
+Open Source Software Development
+Omni Print Project http://sourceforge.net/projects/omniprint
+Austin, TX - Tel. 512-838-4687 (t/l 678) pzaan@us.ibm.com
+
+
+Claudia Alimpich/Boulder/IBM@IBMUS@freestandards.org on 11/21/2002 01:09:27
+PM
+
+Sent by:    printing-architecture-admin@freestandards.org
+
+
+To:    "printing-architecture" <printing-architecture@freestandards.org>
+cc:
+Subject:    [Printing-architecture] RE:Scenarios for using the various Open
+       Print API
+
 
 
 Well, that last note that I sent sure looked bad! Let me try again.
@@ -87,44 +126,16 @@ be used (or not used) together:
             b) The Application uses the Capabilities API* to determine
                   the capabilities of the target device(s) and then
                   provides the user with choices.
-            c) The Application uses a PPD <th>, GPD, UPDF, or other 
-                  description </th> file to determine the
+            c) The Application uses a PPD file to determine the
                   capabilities of the target device.
             d) What other ways can device capabilities be
                   determined?
-<th> How about the following additional ways (or add e) and f) as an
-optional Step 0):
-d) The Application queries the Device using SNMP.
-e) The Application reads a Job Ticket file as directed by the user and
-instantiates a Job Ticket object using the JT API.
-f) The Application reads a default Job Ticket file as it is configured by
-either the user or by the administrator and instantiates a Job Ticket object
-using the JT API. </th>
-
       2) The user makes selections from the choices.
-<th> Either add the following to step 2 or add another step which I'll
-temporarily label 2a, so this note doesn't renumber:
-2a) Optionally, the Application obtains/uses the inter-attribute constraints
-and indicates the choices no longer available to the user based on the
-user's choices so far.  Repeat steps 2 and 2a </th>
-
       3) Optionally, one of the following:
-<th> Why is Step 3 optional? </th>
-
             a) The Application uses the JTAPI to create a job ticket.
             b) The Application sets IPP attributes that describe how the
                   job is to be processed.
             c) Both a) and b).
-<th> I suggest adding an optional Step, temporarily numbered 3a:
-3) Optionally, one of the following:
-   a) The Application uses some of the selections to generate the
-data/content file.
-   b) The Application calls the Graphics API (not yet shown in the
-architecture diagram) which creates the data/content file.
-   c) The Application uses some of the selections to select from among
-alternate formats of data/content files that have previously been generated
-and made available.
-
       4) One of the following:
             a) The Application uses the PAPI to submit the data/content
                   file and the job ticket to the Print Service.
@@ -147,5 +158,9 @@ and made available.
 _______________________________________________
 Printing-architecture mailing list
 Printing-architecture@freestandards.org
-http://freestandards.org/mailman/listinfo/printing-architecture
+ http://freestandards.org/mailman/listinfo/printing-architecture
+
+
+
+
 
