@@ -1,11 +1,10 @@
-Message-ID: <018101c339cd$271f2fa0$0ff65e8f@inferno>
-From: "Osamu MIHARA" <mihara.osamu@fxpsc.co.jp>
-Date: Mon, 23 Jun 2003 19:16:08 +0900
+Message-ID: <3EF8D316.70002@gmx.net>
+Date: Wed, 25 Jun 2003 00:39:18 +0200
+From: Till Kamppeter <till.kamppeter@gmx.net>
 MIME-Version: 1.0
-Content-Type: text/plain;
-	charset="iso-2022-jp"
+Content-Type: text/plain; charset=us-ascii; format=flowed
 Content-Transfer-Encoding: 7bit
-Subject: [Printing-architecture] Presentation Slides in the meeting last week
+Subject: [Printing-architecture] Photos of the PWG meeting in Portland
 Sender: printing-architecture-admin@freestandards.org
 Errors-To: printing-architecture-admin@freestandards.org
 List-Help: <mailto:printing-architecture-request@freestandards.org?subject=help>
@@ -16,16 +15,20 @@ List-Id: <printing-architecture.freestandards.org>
 List-Unsubscribe: <http://freestandards.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@freestandards.org?subject=unsubscribe>
 List-Archive: <http://freestandards.org/pipermail/printing-architecture/>
-To: printing-architecture@freestandards.org
+To: printing-architecture <printing-architecture@freestandards.org>, printing-jobticket@freestandards.org, harryl@us.ibm.com, david.suffield@hp.com, toratani.yasumasa@canon.co.jp
 
-Charles,
+Oi,
 
-I would appreciate if you could upload all the slide files presented in the
-meeting last week to the PWG ftp site?  It should be good for sharing the
-information what was talked in the meeting.
+here are the photos of the meeting in Portland:
 
-Thank you!
--- 
-  Osamu Mihara // Fuji Xerox Printing Systems
+http://www.linuxprinting.org/till/pwg-portland2003/photos/
+
+All photos are there in three sizes with the biggest being 4 Megapixel. 
+So you will be able to make high-quality printouts.
+
+I have posted this mail on the architecture and jobticket lists. Who is 
+subscribed to PWG lists, please forwrad this mail, thank you.
+
+    Till
 
 
