@@ -1,11 +1,10 @@
-Message-ID: <116DB56CD7DED511BC7800508B2CA53735D07A@mailsrvnt02.enet.sharplabs.com>
-From: "McDonald, Ira" <imcdonald@sharplabs.com>
-Subject: RE: [Printing-architecture] [who hosts??] Architecture meeting *U
-	NABLE TO HOST* agenda 20030626. . .
-Date: Thu, 26 Jun 2003 10:21:08 -0700
+Subject: RE: [Printing-architecture] [who hosts??] Architecture meeting *U	NABLE TO
+ HOST* agenda 20030626. . .
+Message-ID: <OFED4058DB.6E567857-ON87256D51.006194DE@us.ibm.com>
+From: Claudia Alimpich <alimpich@us.ibm.com>
+Date: Thu, 26 Jun 2003 11:47:12 -0600
 MIME-Version: 1.0
-Content-Type: text/plain;
-	charset="iso-8859-1"
+Content-type: text/plain; charset=US-ASCII
 Sender: printing-architecture-admin@freestandards.org
 Errors-To: printing-architecture-admin@freestandards.org
 List-Help: <mailto:printing-architecture-request@freestandards.org?subject=help>
@@ -16,7 +15,30 @@ List-Id: <printing-architecture.freestandards.org>
 List-Unsubscribe: <http://freestandards.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@freestandards.org?subject=unsubscribe>
 List-Archive: <http://freestandards.org/pipermail/printing-architecture/>
-To: 'Charles Hemstreet' <charles_at_hp@hotmail.com>, printing-architecture@freestandards.org
+To: printing-architecture@freestandards.org
+
+
+
+
+I don't have another phone number to use (the JT phone number is only for
+that day and time). I believe that Glen said that he was not going to be
+able attend today's meeting.
+
+Claudia
+
+"McDonald, Ira" <imcdonald@sharplabs.com>@freestandards.org on 06/26/2003
+11:21:08 AM
+
+Sent by:    printing-architecture-admin@freestandards.org
+
+
+To:    "'Charles Hemstreet'" <charles_at_hp@hotmail.com>,
+       printing-architecture@freestandards.org
+cc:
+Subject:    RE: [Printing-architecture] [who hosts??] Architecture meeting
+       *U   NABLE TO HOST* agenda 20030626. . .
+
+
 
 Hi,
 
@@ -46,6 +68,7 @@ The proposed agenda is the continuation of the USE-CASES.
 I've included the USE-CASES we came up with at the PWG/FSG meeting.
 
 ----------------------------------------------------------------------------
+
 -----------------
 
 16Jan2003
@@ -76,9 +99,9 @@ be used (or not used) together:
          determined?
 
    3) The user makes selections from the choices presented by the
-	Application.
-	a) The choices presented are limited/constrained by the
-		user's selection of other/related choices.
+ Application.
+ a) The choices presented are limited/constrained by the
+  user's selection of other/related choices.
 
    4) One of the following:
       a) The Application uses the JTAPI to create a job ticket.
@@ -112,7 +135,7 @@ be used (or not used) together:
      03Dec2003 appends to the architecture mailing list.
 
 _________________________________________________________________
-Add photos to your messages with MSN 8. Get 2 months FREE*.  
+Add photos to your messages with MSN 8. Get 2 months FREE*.
 http://join.msn.com/?page=features/featuredemail
 
 
@@ -120,4 +143,11 @@ _______________________________________________
 Printing-architecture mailing list
 Printing-architecture@freestandards.org
 http://freestandards.org/mailman/listinfo/printing-architecture
+
+_______________________________________________
+Printing-architecture mailing list
+Printing-architecture@freestandards.org
+ http://freestandards.org/mailman/listinfo/printing-architecture
+
+
 
