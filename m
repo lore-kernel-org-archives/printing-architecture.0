@@ -1,10 +1,9 @@
-Message-ID: <E0BE13326C4EBC45BBC635197DEB7E3FCB2B@x-crt-es-ms1.cp10.es.xerox.com>
-From: "Hastings, Tom N" <hastings@cp10.es.xerox.com>
-Subject: RE: [Printing-architecture] Call for Agenda for 11/21/02 Architec
-	ture meeting. . .
-Date: Wed, 20 Nov 2002 17:39:52 -0800
+From: "Claudia Alimpich" <alimpich@us.ibm.com>
+Message-ID: <OFB8F4308A.1A711DE7-ON87256C78.0068136F@boulder.ibm.com>
+Date: Thu, 21 Nov 2002 11:58:56 -0700
 MIME-Version: 1.0
-Content-Type: text/plain
+Content-type: text/plain; charset=us-ascii
+Subject: [Printing-architecture] Scenarios for using the various Open Print API
 Sender: printing-architecture-admin@freestandards.org
 Errors-To: printing-architecture-admin@freestandards.org
 List-Help: <mailto:printing-architecture-request@freestandards.org?subject=help>
@@ -15,40 +14,65 @@ List-Id: <printing-architecture.freestandards.org>
 List-Unsubscribe: <http://freestandards.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@freestandards.org?subject=unsubscribe>
 List-Archive: <http://freestandards.org/pipermail/printing-architecture/>
-To: "HEMSTREET,CHARLES (HP-Vancouver,ex1)" <charles_hemstreet@hp.com>, "'printing-discuss@freestandards.org'" <printing-discuss@freestandards.org>, "'printing-architecture@freestandards.org'" <printing-architecture@freestandards.org>
+To: printing-architecture <printing-architecture@freestandards.org>
 
-I think we need to review the abstracts that some of the WG have written.
+First I sent this note to printing-discuss but it got held up waiting for
+the monitor. Maybe the same will happen to this note...
 
-Also the relationships between the various APIs:
+Following is what I came up with for possible scenarios describing how to
+use the APIs together. Please provide your comments and any additions. When
+it is clean, I will post it to the PWG site.
 
-  which APIs MAY an application use by itself
-  which APIs MAY a single application use in combination
-  which APIs MUST a single application use in combination
+Claudia Alimpich
+alimpich@us.ibm.com
+-------------------------------------------------------------------------
 
-Tom
+21Nov2002
 
------Original Message-----
-From: HEMSTREET,CHARLES (HP-Vancouver,ex1)
-[mailto:charles_hemstreet@hp.com]
-Sent: Wednesday, November 20, 2002 11:31
-To: 'printing-discuss@freestandards.org';
-'printing-architecture@freestandards.org'
-Subject: [Printing-architecture] Call for Agenda for 11/21/02
-Architecture meeting. . .
+            Using the Application, JTAPI, Capabilities API, PAPI, and Print
+Service
 
 
-Folks:
+Following are scenarios that describe how the various Open Print APIs can
+be used (or not used)
+together:
 
-We've been spending a lot of time reviewing the architecture diagram.  
+      1) One of the following:
+            a) The Application provides the user with choices that are
+determined by
+                  the application itself.
+            b) The Application uses the Capabilities API* to determine the
+capabilities
+                  of the target device(s) and then provides the user with
+choices.
+            c) The Application uses a PPD file to determine the
+capabilities of the target
+                  device.
+            d) What other ways can device capabilities be determined?
+      2) The user makes selections from the choices.
+      3) Optionally, one of the following:
+            a) The Application uses the JTAPI to create a job ticket.
+            b) The Application sets IPP attributes that describe how the
+job is to be
+                  processed.
+            c) Both a) and b).
+      4) One of the following:
+            a) The Application uses the PAPI to submit the data/content
+file and the job
+                  ticket to the Print Service.
+            b) The Application uses the PAPI to submit the data/content
+file and the IPP
+                  attributes to the Print Service.
+            c) The Application uses the PAPI to submit the data/content
+file, the job ticket,
+                  and the IPP attributes to the Print Service.
+            d) The Applicaiton saves the job ticket without submitting it
+or the data/content
+                  file to the Print Service.
 
-Please email me (charles.hemstreet@hp.com) any other items you need to have
-covered in our 11/21/02 meeting.
+* Question: Is the Capabilities API part of PAPI or a separate API?
 
-Thanks,
-Charles
 
-_______________________________________________
-Printing-architecture mailing list
-Printing-architecture@freestandards.org
-http://freestandards.org/mailman/listinfo/printing-architecture
+
+
 
