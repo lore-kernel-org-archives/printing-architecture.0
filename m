@@ -1,11 +1,11 @@
-Message-ID: <CFEE79A465B35C4385389BA5866BEDF00C7569@mailsrvnt02.enet.sharplabs.com>
-From: "McDonald, Ira" <imcdonald@sharplabs.com>
-Date: Wed, 25 Feb 2004 07:28:37 -0800
+Message-ID: <OF17588849.E9319A1B-ON86256E46.00686F1C-86256E46.0068B54F@us.ibm.com>
+From: Mark Hamzy <hamzy@us.ibm.com>
+Date: Thu, 26 Feb 2004 13:03:41 -0600
 MIME-Version: 1.0
-Content-Type: text/plain;
-	charset="iso-8859-1"
-Subject: [Printing-architecture] FW: [P2600] New IEEE Standard Project on
-	Hardcopy Device and Syst em Security
+Content-type: multipart/alternative; 
+	Boundary="0__=09BBE4D5DFFBE98C8f9e8a93df938690918c09BBE4D5DFFBE98C"
+Content-Disposition: inline
+Subject: [Printing-architecture] Architecture meeting 02/26/2004
 List-Id: Printing architecture under linux
 	<printing-architecture.freestandards.org>
 List-Unsubscribe: <http://freestandards.org/mailman/listinfo/printing-architecture>,
@@ -17,62 +17,62 @@ List-Subscribe: <http://freestandards.org/mailman/listinfo/printing-architecture
 	<mailto:printing-architecture-request@freestandards.org?subject=subscribe>
 To: printing-architecture@freestandards.org
 
-FYI,
-- Ira
-
-Ira McDonald (Musician / Software Architect)
-Blue Roof Music / High North Inc
-PO Box 221  Grand Marais, MI  49839
-phone: +1-906-494-2434
-email: imcdonald@sharplabs.com
-
------Original Message-----
-From: Don Wright [mailto:don@lexmark.com]
-Sent: Wednesday, February 25, 2004 7:42 AM
-To: pwg-announce@pwg.org
-Subject: PWG-ANNOUNCE> New IEEE Standard Project on Hardcopy Device and
-System Security
+--0__=09BBE4D5DFFBE98C8f9e8a93df938690918c09BBE4D5DFFBE98C
+Content-type: text/plain; charset=US-ASCII
 
 
-I probably should have distributed this notice on this reflector a month or
-more ago but too many hours at 40,000 feet tend to temporarily diminish
-one's mental acumen.
 
-At the December 2003 meeting of the IEEE Standards Board, a new project was
-approved to develop a standard for Security for Hardcopy Devices and
-Systems. This covers the printers, multifunction devices, etc. as well as
-the communications channels and the operating systems that drive them.
 
-You can find a press release on the subject at
-http://standards.ieee.org/announcements/pr_p2600.html
 
-The group has a growing website at http://grouper.ieee.org/groups/2600
+Thursday, February 26
 
-The group is currently still in the formative and requirements stage but it
-is expected the standard will contain a protection profile using the common
-criteria. (If you are not familiar with the common criteria, the website has
-links.)
+GMT 20:00-22:00
+EDT 15:00-17:00
+CDT 14:00-16:00
+MDT 13:00-15:00
+PDT 12:00-14:00
 
-The next meeting of the group will be March 10-11 at the IEEE offices in
-Piscataway, NJ. If you or your company are interested in participating,
-please review the material on the website including the information from the
-first meeting as well as the logistics for this upcoming meeting.
-Afterwards, please RSVP to me so we can finalize the plans. Deadline for
-RSVP is March 1, 2004. We expect to have a number of future meetings that
-will align with the PWG.
+Toll Free:  1-888-687-2858 (use this first if possible)
+Toll:       1-719-457-3541
+Passcode:           726694
 
-*******************************************
-Don Wright don@lexmark.com
+Agenda:     Job Ticket structure
+            Use cases
 
-Chair, IEEE SA Standards Board
-Member, IEEE-ISTO Board of Directors
-f.wright@ieee.org / f.wright@computer.org
 
-Director, Alliances and Standards
-Lexmark International
-740 New Circle Rd C14/082-3
-Lexington, Ky 40550
+Sorry for the late notice...
 
-859-825-4808 (phone) 603-963-8352 (fax)
-*******************************************
+Mark
+
+Take a look at the Linux Omni Printer Driver Framework at
+http://www.ibm.com/linux/ltc/projects/omni/
+--0__=09BBE4D5DFFBE98C8f9e8a93df938690918c09BBE4D5DFFBE98C
+Content-type: text/html; charset=US-ASCII
+Content-Disposition: inline
+
+<html><body>
+<p><tt>Thursday, February 26</tt><br>
+<br>
+<tt>GMT 20:00-22:00</tt><br>
+<tt>EDT 15:00-17:00</tt><br>
+<tt>CDT 14:00-16:00</tt><br>
+<tt>MDT 13:00-15:00</tt><br>
+<tt>PDT 12:00-14:00</tt><br>
+<br>
+<tt>Toll Free: &nbsp;1-888-687-2858 (use this first if possible)<br>
+Toll: &nbsp; &nbsp; &nbsp; 1-719-457-3541</tt><br>
+<tt>Passcode: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 726694</tt><br>
+<br>
+<tt>Agenda: &nbsp; &nbsp; Job Ticket structure</tt><br>
+<tt> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</tt><tt>Use cases</tt><br>
+<br>
+<br>
+Sorry for the late notice...<br>
+<br>
+Mark<br>
+<br>
+Take a look at the Linux Omni Printer Driver Framework at<br>
+<a href="http://www.ibm.com/linux/ltc/projects/omni/">http://www.ibm.com/linux/ltc/projects/omni/</a></body></html>
+--0__=09BBE4D5DFFBE98C8f9e8a93df938690918c09BBE4D5DFFBE98C--
+
 
