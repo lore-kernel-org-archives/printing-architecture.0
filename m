@@ -1,9 +1,10 @@
-Message-ID: <OF44B66E91.5373AE31-ON87256DCE.0067F6E1@us.ibm.com>
-From: Claudia Alimpich <alimpich@us.ibm.com>
-Date: Wed, 29 Oct 2003 12:05:30 -0700
+Message-ID: <116DB56CD7DED511BC7800508B2CA537B00207@mailsrvnt02.enet.sharplabs.com>
+From: "McDonald, Ira" <imcdonald@sharplabs.com>
+Date: Wed, 29 Oct 2003 17:52:40 -0800
 MIME-Version: 1.0
-Content-type: text/plain; charset=US-ASCII
-Subject: [Printing-architecture] There will be an Architecture meeting 10/30/2003
+Content-Type: text/plain;
+	charset="iso-8859-1"
+Subject: [Printing-architecture] Nice JPEG/PNG reader - Acrobat Reader
 Sender: printing-architecture-admin@freestandards.org
 Errors-To: printing-architecture-admin@freestandards.org
 List-Help: <mailto:printing-architecture-request@freestandards.org?subject=help>
@@ -16,24 +17,25 @@ List-Unsubscribe: <http://freestandards.org/mailman/listinfo/printing-architectu
 List-Archive: <http://freestandards.org/pipermail/printing-architecture/>
 To: printing-architecture@freestandards.org
 
+Hi,
 
+[a hint for Windows users]
 
+Searching around this Windows 2000 Pro system for a good
+reader for '.png' (for the FSG/OP Job Ticket UML diagrams),
+I found you can open them directly with Acrobat Reader.
 
-There will be an Architecture meeting Thursday October 30th:
+After upgrading to IE 6 and applying a bunch of patches,
+for some reason IE 6 will NOT open a local '.png' file
+correctly on my system.  Lucky me - I much prefer using
+Acrobat Reader.
 
-1200-1300 PST
-1300-1400 MST
-1400-1500 CST
-1500-1600 EST
-2000-2100 UTC
+Cheers,
+- Ira
 
-The old number is no longer available and I have not heard back from Mark
-or Pete so for THIS WEEK only, I set up a call as follows:
-
-  USA Toll Free Number: 888-981-0180
-  USA Toll Number: +1-484-630-2765
-  PASSCODE: 49537
-
-Claudia
-
+Ira McDonald (Musician / Software Architect)
+Blue Roof Music / High North Inc
+PO Box 221  Grand Marais, MI  49839
+phone: +1-906-494-2434
+email: imcdonald@sharplabs.com
 
