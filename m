@@ -1,11 +1,10 @@
-Message-ID: <2F7D63A21DB2C74EB8EB8C09AF667DB001B9ACE8@eitc220.eitc.epson.com>
+Message-ID: <2F7D63A21DB2C74EB8EB8C09AF667DB001B9ACE9@eitc220.eitc.epson.com>
 From: "Petrie, Glen" <glen.petrie@eitc.epson.com>
-Date: Tue, 15 Mar 2005 13:23:21 -0800
+Date: Tue, 15 Mar 2005 13:39:33 -0800
 MIME-Version: 1.0
 Content-Type: multipart/alternative;
-	boundary="----_=_NextPart_001_01C529A5.367E0BA0"
-Subject: [Printing-architecture] FSG OpenPrinting Job Ticket API Version
-	1.00 - Stable available
+	boundary="----_=_NextPart_001_01C529A7.7A09B160"
+Subject: [Printing-architecture] The need for English 
 List-Id: Printing architecture under linux
 	<printing-architecture.mail.freestandards.org>
 List-Unsubscribe: <http://mail.freestandards.org/mailman/listinfo/printing-architecture>,
@@ -15,34 +14,33 @@ List-Post: <mailto:printing-architecture@mail.freestandards.org>
 List-Help: <mailto:printing-architecture-request@mail.freestandards.org?subject=help>
 List-Subscribe: <http://mail.freestandards.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@mail.freestandards.org?subject=subscribe>
-To: printing-jobticket@freestandards.org, printing-announce@base3.freestandards.org
-Cc: printing-architecture@freestandards.org, printing-sc@freestandards.org
+To: printing-sc@freestandards.org, "Japanese discussions on printing under Linux." <printing-japan@base3.freestandards.org>, printing-architecture@base3.freestandards.org
 
 This message is in MIME format. Since your mail reader does not understand
 this format, some or all of this message may not be legible.
 
-------_=_NextPart_001_01C529A5.367E0BA0
+------_=_NextPart_001_01C529A7.7A09B160
 Content-Type: text/plain
 
-All
+All,
 
-The Job Ticket group of FSG / OpenPrinting has completed the stable version
-of 1.00 of the JTAPI API Specification.  The next step is to submit the API
-document to the FSG / OpenPrinting Steering Committee and make available for
-last review (for a 1 month period).
+There is a growing desire among the FSG/OpenPrinting-US and
+FSG/OpenPrinting-European members to follow, understand and contribute to
+the activities of the FSG/OpenPrinting-Japan.   Therefore, I have been asked
+to send this message requesting that English be adopted as the international
+language for all discussions of FSG/OpenPrinting API's and specifications;
+including those being developed in Japan.   All existing printing standards
+bodies have and continue to use English as the common language.   It is also
+believed that since the normal practice is to use English for these type of
+activities, that FSG/OpenPrinting activities, overall, would appear to be
+more professional to the parent FSG group and other standards bodies if will
+use English as the common language.
 
-Please find the latest version at
-
-ftp://ftp.pwg.org/pub/pwg/fsg/jobticket/JTAPI_Spec/fsg-openprinting-job-tick
-et-api-v0100-20050315.doc
-<ftp://ftp.pwg.org/pub/pwg/fsg/jobticket/JTAPI_Spec/fsg-openprinting-job-tic
-ket-api-v0100-20050315.doc> 
-ftp://ftp.pwg.org/pub/pwg/fsg/jobticket/JTAPI_Spec/fsg-openprinting-job-tick
-et-api-v0100-20050315.pdf
-<ftp://ftp.pwg.org/pub/pwg/fsg/jobticket/JTAPI_Spec/fsg-openprinting-job-tic
-ket-api-v0100-20050315.pdf> 
-
-
+Although FSG/OpenPrinting-US and FSG/OpenPrinting-European members
+understand some need for Japanese communication, the current policy of
+Japanese-only greatly restrict contribution to and by related
+FSG/OpenPrinting API/specifications and the overall architecture.   It also
+greatly reduces contribution by non- FSG/OpenPrinting members.
 Rgds, 
 Glen W. Petrie 
 Epson Imaging Technology Center 
@@ -52,7 +50,7 @@ Voice: 408.576.4131  Fax: 408.474.0511
 
 
 
-------_=_NextPart_001_01C529A5.367E0BA0
+------_=_NextPart_001_01C529A7.7A09B160
 Content-Type: text/html
 Content-Transfer-Encoding: quoted-printable
 
@@ -63,56 +61,108 @@ Content-Transfer-Encoding: quoted-printable
 charset=3Dus-ascii">
 <META NAME=3D"Generator" CONTENT=3D"MS Exchange Server version =
 5.5.2653.12">
-<TITLE>FSG OpenPrinting Job Ticket API  Version 1.00 - Stable =
-available</TITLE>
+<TITLE>The need for English </TITLE>
 </HEAD>
 <BODY>
 
-<P ALIGN=3DLEFT><FONT SIZE=3D2 FACE=3D"Arial">All</FONT></P>
+<P ALIGN=3DLEFT><FONT SIZE=3D2 FACE=3D"Arial">All,</FONT></P>
 
-<P ALIGN=3DLEFT><FONT SIZE=3D2 FACE=3D"Arial">The Job Ticket group =
-of</FONT> <FONT SIZE=3D2 FACE=3D"Arial">F</FONT><FONT SIZE=3D2 =
-FACE=3D"Arial">SG / OpenPrinting has complete</FONT><FONT SIZE=3D2 =
-FACE=3D"Arial">d</FONT><FONT SIZE=3D2 FACE=3D"Arial"> the stable =
-version of 1.00</FONT><FONT SIZE=3D2 FACE=3D"Arial"> of the JTAPI API =
-Specification</FONT><FONT SIZE=3D2 FACE=3D"Arial">.</FONT>&nbsp;<FONT =
-SIZE=3D2 FACE=3D"Arial"> T</FONT><FONT SIZE=3D2 =
-FACE=3D"Arial">h</FONT><FONT SIZE=3D2 FACE=3D"Arial">e</FONT><FONT =
-SIZE=3D2 FACE=3D"Arial"> next step is to submit the</FONT><FONT =
-SIZE=3D2 FACE=3D"Arial"> API document</FONT> <FONT SIZE=3D2 =
-FACE=3D"Arial">to the</FONT> <FONT SIZE=3D2 FACE=3D"Arial">FSG / =
-OpenPrinting Steering Committee and ma</FONT><FONT SIZE=3D2 =
-FACE=3D"Arial">k</FONT><FONT SIZE=3D2 FACE=3D"Arial">e</FONT> <FONT =
-SIZE=3D2 FACE=3D"Arial">available</FONT><FONT SIZE=3D2 =
-FACE=3D"Arial"></FONT> <FONT SIZE=3D2 FACE=3D"Arial">for last =
-review</FONT><FONT SIZE=3D2 FACE=3D"Arial"> (for a 1 month =
-period).</FONT></P>
+<P ALIGN=3DLEFT><FONT FACE=3D"Times New Roman">There is</FONT> <FONT =
+FACE=3D"Times New Roman">a growing</FONT> <FONT FACE=3D"Times New =
+Roman">d</FONT><FONT FACE=3D"Times New Roman">esire</FONT><FONT =
+FACE=3D"Times New Roman"></FONT> <FONT FACE=3D"Times New =
+Roman">among</FONT><FONT FACE=3D"Times New Roman"> the</FONT> <FONT =
+FACE=3D"Times New Roman">FSG/</FONT><FONT FACE=3D"Times New =
+Roman">OpenPrint</FONT><FONT FACE=3D"Times New Roman">ing</FONT><FONT =
+FACE=3D"Times New Roman">-</FONT><FONT FACE=3D"Times New Roman">US and =
+FSG/</FONT><FONT FACE=3D"Times New Roman">OpenPrint</FONT><FONT =
+FACE=3D"Times New Roman">ing</FONT><FONT FACE=3D"Times New =
+Roman">-</FONT><FONT FACE=3D"Times New Roman">European members</FONT> =
+<FONT FACE=3D"Times New Roman">t</FONT><FONT FACE=3D"Times New =
+Roman">o</FONT><FONT FACE=3D"Times New Roman"> follow</FONT><FONT =
+FACE=3D"Times New Roman">,</FONT><FONT FACE=3D"Times New Roman"> =
+understand</FONT><FONT FACE=3D"Times New Roman"></FONT> <FONT =
+FACE=3D"Times New Roman">and contribute to the activities of the =
+FSG</FONT><FONT FACE=3D"Times New Roman">/</FONT><FONT FACE=3D"Times =
+New Roman">OpenPrint</FONT><FONT FACE=3D"Times New =
+Roman">ing</FONT><FONT FACE=3D"Times New Roman">-</FONT><FONT =
+FACE=3D"Times New Roman">Japan.</FONT> <FONT FACE=3D"Times New =
+Roman">&nbsp;</FONT> <FONT FACE=3D"Times New Roman">Therefore,</FONT> =
+<FONT FACE=3D"Times New Roman">I have been ask</FONT><FONT =
+FACE=3D"Times New Roman">ed</FONT><FONT FACE=3D"Times New Roman"> to =
+send this message requesting th</FONT><FONT FACE=3D"Times New =
+Roman">at</FONT><FONT FACE=3D"Times New Roman"> English be</FONT> <FONT =
+FACE=3D"Times New Roman">adopted as</FONT> <FONT FACE=3D"Times New =
+Roman">the international language for all discussions of =
+FSG/OpenPrinting API</FONT><FONT FACE=3D"Times New Roman">'</FONT><FONT =
+FACE=3D"Times New Roman">s and</FONT> <FONT FACE=3D"Times New =
+Roman">specifications</FONT><FONT FACE=3D"Times New =
+Roman">;</FONT><FONT FACE=3D"Times New Roman"> including those being =
+developed</FONT> <FONT FACE=3D"Times New Roman">in Japan</FONT><FONT =
+FACE=3D"Times New Roman">.&nbsp;</FONT>&nbsp;<FONT FACE=3D"Times New =
+Roman"> A</FONT><FONT FACE=3D"Times New Roman">ll</FONT> <FONT =
+FACE=3D"Times New Roman">existing printing</FONT><FONT FACE=3D"Times =
+New Roman"></FONT> <FONT FACE=3D"Times New Roman">s</FONT><FONT =
+FACE=3D"Times New Roman">tandard</FONT><FONT FACE=3D"Times New Roman">s =
+bodies</FONT><FONT FACE=3D"Times New Roman"></FONT> <FONT FACE=3D"Times =
+New Roman">have and continue to</FONT> <FONT FACE=3D"Times New =
+Roman">use</FONT> <FONT FACE=3D"Times New Roman">English as the common =
+language</FONT><FONT FACE=3D"Times New Roman">.</FONT><FONT =
+FACE=3D"Times New Roman">&nbsp;</FONT>&nbsp;<FONT FACE=3D"Times New =
+Roman"></FONT> <FONT FACE=3D"Times New Roman">It</FONT><FONT =
+FACE=3D"Times New Roman"></FONT> <FONT FACE=3D"Times New =
+Roman">is</FONT> <FONT FACE=3D"Times New Roman">also</FONT> <FONT =
+FACE=3D"Times New Roman">believe</FONT><FONT FACE=3D"Times New =
+Roman">d</FONT><FONT FACE=3D"Times New Roman"> that</FONT> <FONT =
+FACE=3D"Times New Roman">s</FONT><FONT FACE=3D"Times New =
+Roman">ince</FONT><FONT FACE=3D"Times New Roman"> the normal =
+practice</FONT><FONT FACE=3D"Times New Roman"></FONT> <FONT =
+FACE=3D"Times New Roman">is to</FONT><FONT FACE=3D"Times New Roman"> =
+us</FONT><FONT FACE=3D"Times New Roman">e</FONT><FONT FACE=3D"Times New =
+Roman"> English</FONT><FONT FACE=3D"Times New Roman"> for these type of =
+activities</FONT><FONT FACE=3D"Times New Roman">,</FONT><FONT =
+FACE=3D"Times New Roman"> that</FONT> <FONT FACE=3D"Times New =
+Roman">FSG/</FONT><FONT FACE=3D"Times New Roman">OpenPrint</FONT><FONT =
+FACE=3D"Times New Roman">ing</FONT><FONT FACE=3D"Times New Roman"></FONT=
+> <FONT FACE=3D"Times New Roman">activities</FONT><FONT FACE=3D"Times =
+New Roman">,</FONT><FONT FACE=3D"Times New Roman"> overall</FONT><FONT =
+FACE=3D"Times New Roman">,</FONT><FONT FACE=3D"Times New Roman"> =
+would</FONT> <FONT FACE=3D"Times New Roman">appear to</FONT> <FONT =
+FACE=3D"Times New Roman">be more</FONT> <A NAME=3D"_MailAutoSig"><FONT =
+FACE=3D"Times New Roman">professional to</FONT></A> <FONT FACE=3D"Times =
+New Roman">the</FONT> <FONT FACE=3D"Times New Roman">parent FSG =
+group</FONT> <FONT FACE=3D"Times New Roman">and other standards =
+bodies</FONT> <FONT FACE=3D"Times New Roman">if will use English as the =
+common language</FONT><FONT FACE=3D"Times New Roman">.</FONT></P>
 
-<P ALIGN=3DLEFT><FONT SIZE=3D2 FACE=3D"Arial">Please find the latest =
-version at</FONT></P>
-
-<P ALIGN=3DLEFT><A =
-HREF=3D"ftp://ftp.pwg.org/pub/pwg/fsg/jobticket/JTAPI_Spec/fsg-openprint=
-ing-job-ticket-api-v0100-20050315.doc"><U></U><U><FONT =
-COLOR=3D"#0000FF" SIZE=3D2 FACE=3D"Arial">ftp</FONT><FONT =
-COLOR=3D"#0000FF" SIZE=3D2 =
-FACE=3D"Arial">://ftp.pwg.org/pub/pwg/fsg/jobticket/JTAPI_Spec/</FONT><F=
-ONT COLOR=3D"#0000FF" SIZE=3D2 =
-FACE=3D"Arial">fsg-openprinting-job-ticket-api-v0100-20050315.doc</FONT>=
-</U></A></P>
-
-<P ALIGN=3DLEFT><A =
-HREF=3D"ftp://ftp.pwg.org/pub/pwg/fsg/jobticket/JTAPI_Spec/fsg-openprint=
-ing-job-ticket-api-v0100-20050315.pdf"><U></U><U><FONT =
-COLOR=3D"#0000FF" SIZE=3D2 FACE=3D"Arial">ftp</FONT><FONT =
-COLOR=3D"#0000FF" SIZE=3D2 =
-FACE=3D"Arial">://ftp.pwg.org/pub/pwg/fsg/jobticket/JTAPI_Spec/</FONT><F=
-ONT COLOR=3D"#0000FF" SIZE=3D2 =
-FACE=3D"Arial">fsg-openprinting-job-ticket-api-v0100-20050315.</FONT></U=
-><U></U><U><FONT COLOR=3D"#0000FF" SIZE=3D2 =
-FACE=3D"Arial">pdf</FONT></U></A></P>
-
-<P ALIGN=3DLEFT><A NAME=3D"_MailAutoSig"></A></P>
+<P ALIGN=3DLEFT><FONT FACE=3D"Times New Roman">Although</FONT> <FONT =
+FACE=3D"Times New Roman">FSG/</FONT><FONT FACE=3D"Times New =
+Roman">OpenPrint</FONT><FONT FACE=3D"Times New Roman">ing</FONT><FONT =
+FACE=3D"Times New Roman">-</FONT><FONT FACE=3D"Times New Roman">US and =
+FSG/</FONT><FONT FACE=3D"Times New Roman">OpenPrint</FONT><FONT =
+FACE=3D"Times New Roman">ing</FONT><FONT FACE=3D"Times New =
+Roman">-</FONT><FONT FACE=3D"Times New Roman">European =
+members</FONT><FONT FACE=3D"Times New Roman"> understand some need =
+for</FONT> <FONT FACE=3D"Times New Roman">Japanese</FONT><FONT =
+FACE=3D"Times New Roman"></FONT> <FONT FACE=3D"Times New =
+Roman">communication, the current</FONT> <FONT FACE=3D"Times New =
+Roman">policy of Japanese-only greatly restrict contribution =
+to</FONT><FONT FACE=3D"Times New Roman"> and by</FONT><FONT =
+FACE=3D"Times New Roman"></FONT> <FONT FACE=3D"Times New =
+Roman">related</FONT> <FONT FACE=3D"Times New Roman">FSG/</FONT><FONT =
+FACE=3D"Times New Roman">OpenPrint</FONT><FONT FACE=3D"Times New =
+Roman">ing</FONT><FONT FACE=3D"Times New Roman"> API/</FONT><FONT =
+FACE=3D"Times New Roman">specifications</FONT><FONT FACE=3D"Times New =
+Roman"></FONT> <FONT FACE=3D"Times New Roman">and the</FONT> <FONT =
+FACE=3D"Times New Roman">overall architecture.</FONT><FONT =
+FACE=3D"Times New Roman">&nbsp;</FONT>&nbsp;<FONT FACE=3D"Times New =
+Roman"> I</FONT><FONT FACE=3D"Times New Roman">t</FONT> <FONT =
+FACE=3D"Times New Roman">also</FONT><FONT FACE=3D"Times New =
+Roman"></FONT> <FONT FACE=3D"Times New Roman">greatly reduces =
+contribution by non-</FONT><FONT FACE=3D"Times New Roman"></FONT> <FONT =
+FACE=3D"Times New Roman">FSG/</FONT><FONT FACE=3D"Times New =
+Roman">OpenPrint</FONT><FONT FACE=3D"Times New Roman">ing</FONT><FONT =
+FACE=3D"Times New Roman"> members.</FONT></P>
 
 <P ALIGN=3DLEFT><B><I>Rgds,<BR>
 </I></B><B><I></I></B><B><I><FONT COLOR=3D"#0000FF" SIZE=3D5>Glen W. =
@@ -126,5 +176,5 @@ Voice: 408.576.4131&nbsp; Fax: 408.474.0511 </I></B></P>
 
 </BODY>
 </HTML>
-------_=_NextPart_001_01C529A5.367E0BA0--
+------_=_NextPart_001_01C529A7.7A09B160--
 
