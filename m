@@ -1,13 +1,11 @@
-Message-ID: <40241262.20401@easysw.com>
-Date: Fri, 06 Feb 2004 17:17:06 -0500
-From: Michael Sweet <mike@easysw.com>
+Message-ID: <OF25403140.8576C91D-ON86256E38.0058716D-86256E38.0058A4AF@us.ibm.com>
+From: Mark Hamzy <hamzy@us.ibm.com>
+Date: Thu, 12 Feb 2004 10:08:13 -0600
 MIME-Version: 1.0
-References: <40240483.B2A8686@Sun.COM>
-In-Reply-To: <40240483.B2A8686@Sun.COM>
-Content-Type: text/plain; charset=us-ascii; format=flowed
-Content-Transfer-Encoding: 7bit
-Subject: [Printing-architecture] Re: [printing-spool] PAPI Source code on
-	SourceForge
+Content-type: multipart/alternative; 
+	Boundary="0__=09BBE4ABDFCBF7FD8f9e8a93df938690918c09BBE4ABDFCBF7FD"
+Content-Disposition: inline
+Subject: [Printing-architecture] Architecture meeting 02/12/2004
 List-Id: Printing architecture under linux
 	<printing-architecture.freestandards.org>
 List-Unsubscribe: <http://freestandards.org/mailman/listinfo/printing-architecture>,
@@ -17,33 +15,64 @@ List-Post: <mailto:printing-architecture@freestandards.org>
 List-Help: <mailto:printing-architecture-request@freestandards.org?subject=help>
 List-Subscribe: <http://freestandards.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@freestandards.org?subject=subscribe>
-To: Discussion for Spool/Job/Queue API subgroup <printing-spool@freestandards.org>
-Cc: printing-announce@freestandards.org, printing-architecture@freestandards.org
+To: printing-architecture@freestandards.org
 
-Norm Jacobs wrote:
-> ...
-> Since Shawn Pratt is the only listed project administrator for the
-> openprinting project on SourceForge and his email bounced, I have
-> initiated a "takeover" request for the project so that I can
-> administrate it (add administrators/developers/content/...).  In the
-> meantime, here are some specifics about what I have delivered.
+--0__=09BBE4ABDFCBF7FD8f9e8a93df938690918c09BBE4ABDFCBF7FD
+Content-type: text/plain; charset=US-ASCII
 
-Great, I've sent several requests to Shawn to be added to the
-project with no response; it will be nice to actually start
-developing the code again...
 
-> ...
-> port).  PAPI over IPP is in the plan and will likely use the IPP support
-> from the Apache IPP listener module, but we need to find an http library
-> to use first.
 
-I'd like to (again) volunteer the CUPS HTTP and IPP code; it is
-fast, stable, supports TLS and SSL, and it substantially smaller
-than any other code I've seen.
 
--- 
-______________________________________________________________________
-Michael Sweet, Easy Software Products           mike at easysw dot com
-Printing Software for UNIX                       http://www.easysw.com
+
+Thursday, February 12
+
+GMT 20:00-22:00
+EDT 15:00-17:00
+CDT 14:00-16:00
+MDT 13:00-15:00
+PDT 12:00-14:00
+
+Toll Free:  1-888-687-2858 (use this first if possible)
+Toll:       1-719-457-3541
+Passcode:           726694
+
+Agenda:     Steering committee for Americas/Europe/Asia
+            Japanese meeting results
+            FSG face to face meetings
+            Use cases
+
+
+Mark
+
+Take a look at the Linux Omni Printer Driver Framework at
+http://www.ibm.com/linux/ltc/projects/omni/
+--0__=09BBE4ABDFCBF7FD8f9e8a93df938690918c09BBE4ABDFCBF7FD
+Content-type: text/html; charset=US-ASCII
+Content-Disposition: inline
+
+<html><body>
+<p><tt>Thursday, February 12</tt><br>
+<br>
+<tt>GMT 20:00-22:00</tt><br>
+<tt>EDT 15:00-17:00</tt><br>
+<tt>CDT 14:00-16:00</tt><br>
+<tt>MDT 13:00-15:00</tt><br>
+<tt>PDT 12:00-14:00</tt><br>
+<br>
+<tt>Toll Free: &nbsp;1-888-687-2858 (use this first if possible)<br>
+Toll: &nbsp; &nbsp; &nbsp; 1-719-457-3541</tt><br>
+<tt>Passcode: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 726694</tt><br>
+<br>
+<tt>Agenda: &nbsp; &nbsp; Steering committee for Americas/Europe/Asia</tt><br>
+<tt> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Japanese meeting results</tt><br>
+<tt> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;FSG face to face meetings</tt><br>
+<tt> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Use cases</tt><br>
+<br>
+<br>
+Mark<br>
+<br>
+Take a look at the Linux Omni Printer Driver Framework at<br>
+<a href="http://www.ibm.com/linux/ltc/projects/omni/">http://www.ibm.com/linux/ltc/projects/omni/</a></body></html>
+--0__=09BBE4ABDFCBF7FD8f9e8a93df938690918c09BBE4ABDFCBF7FD--
 
 
