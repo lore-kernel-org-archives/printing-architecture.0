@@ -1,13 +1,12 @@
-Message-ID: <40D08A2A.6080100@gmx.net>
-Date: Wed, 16 Jun 2004 19:58:02 +0200
-From: Till Kamppeter <till.kamppeter@gmx.net>
+Subject: Re: [Printing-architecture] Query - Joint FSG/PWG face-to-face in San
+	Antonio (15-17 Nov 2004 )
+Message-ID: <OFB77E6D7E.56954AFC-ON86256EB5.00677FDB-86256EB5.0067A006@us.ibm.com>
+From: Mark Hamzy <hamzy@us.ibm.com>
+Date: Wed, 16 Jun 2004 13:51:51 -0500
 MIME-Version: 1.0
-References: <CFEE79A465B35C4385389BA5866BEDF00C7727@mailsrvnt02.enet.sharplabs.com>
-In-Reply-To: <CFEE79A465B35C4385389BA5866BEDF00C7727@mailsrvnt02.enet.sharplabs.com>
-Content-Type: text/plain; charset=us-ascii; format=flowed
-Content-Transfer-Encoding: 7bit
-Subject: [Printing-architecture] Re: Query - Joint FSG/PWG face-to-face in
- San Antonio (15-17 Nov 2004	)
+Content-type: multipart/alternative; 
+	Boundary="0__=09BBE426DFF4F94B8f9e8a93df938690918c09BBE426DFF4F94B"
+Content-Disposition: inline
 List-Id: Printing architecture under linux
 	<printing-architecture.mail.freestandards.org>
 List-Unsubscribe: <http://mail.freestandards.org/mailman/listinfo/printing-architecture>,
@@ -18,58 +17,32 @@ List-Help: <mailto:printing-architecture-request@mail.freestandards.org?subject=
 List-Subscribe: <http://mail.freestandards.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@mail.freestandards.org?subject=subscribe>
 To: "McDonald, Ira" <imcdonald@sharplabs.com>
-Cc: "'Petrie, Glen'" <glen.petrie@eitc.epson.com>, 'Claudia Alimpich' <alimpich@us.ibm.com>, "'pwg@pwg.org'" <pwg@pwg.org>, printing-architecture@freestandards.org, printing-sc@freestandards.org
+Cc: "'Petrie, Glen'" <glen.petrie@eitc.epson.com>, printing-sc@freestandards.org, printing-architecture@freestandards.org, "'pwg@pwg.org'" <pwg@pwg.org>, 'Claudia Alimpich' <alimpich@us.ibm.com>, printing-architecture-bounces@base3.freestandards.org, 'Till Kamppeter' <till.kamppeter@gmx.net>
 
-I can come if someone pays the travel and the hotel for me.
+--0__=09BBE426DFF4F94B8f9e8a93df938690918c09BBE426DFF4F94B
+Content-type: text/plain; charset=US-ASCII
 
-    Till
 
-McDonald, Ira wrote:
-> Hi,
-> 
-> *** Please respond quickly if you _can_ attend or _cannot_ 
-> attend this proposed meeting, using 'reply all'.  I will
-> consolidate replies across the three mailing lists. ***
-> 
-> Yesterday, in the FSG Open Printing Job Ticket working group,
-> Glen Petrie, Claudia Alimpich, Till Kamppeter, and I discussed
-> possible dates in 2004 for a joint FSG/PWG face-to-face.  We
-> looked at the current PWG scheduled meetings Harry Lewis posted.
-> 
-> The only plausible candidate we found was San Antonio, Texas, in
-> November.  We suggest running parallel meetings on Monday and 
-> Tuesday and then having a joint plenary on Wednesday morning.
-> 
-> Monday - 15 November 2004
->   PWG - TBD 
->   FSG - Open Printing International Steering Committee
-> 
-> Tuesday - 16 November 2004
->   PWG - WIMS (Web-based Imaging Management Service)
->   FSG - Open Printing WG meetings (JT, Driver, etc.)
-> 
-> Wednesday - 17 November 2004
->   PWG - Joint Plenary (morning)
->       - TBD (afternoon)
->   FSG - Joint Plenary (morning)
->       - TBD (afternoon)
-> 
-> Thursday - 18 November 2004
->   IEEE P2600 
-> 
-> Friday - 19 November 2004
->   IEEE P2600
-> 
-> Cheers,
-> - Ira
-> 
-> 
-> Ira McDonald (Musician / Software Architect)
-> Blue Roof Music / High North Inc
-> PO Box 221  Grand Marais, MI  49839
-> phone: +1-906-494-2434
-> email: imcdonald@sharplabs.com
-> 
-> 
+
+
+
+I can attend (even though it will require a lot of travel :).
+
+Mark
+
+Take a look at the Linux Omni Printer Driver Framework at
+http://www.ibm.com/linux/ltc/projects/omni/
+--0__=09BBE426DFF4F94B8f9e8a93df938690918c09BBE426DFF4F94B
+Content-type: text/html; charset=US-ASCII
+Content-Disposition: inline
+
+<html><body>
+<p>I can attend (even though it will require a lot of travel :).<br>
+<br>
+Mark<br>
+<br>
+Take a look at the Linux Omni Printer Driver Framework at<br>
+<a href="http://www.ibm.com/linux/ltc/projects/omni/">http://www.ibm.com/linux/ltc/projects/omni/</a></body></html>
+--0__=09BBE426DFF4F94B8f9e8a93df938690918c09BBE426DFF4F94B--
 
 
