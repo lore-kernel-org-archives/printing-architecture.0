@@ -1,9 +1,11 @@
-Message-ID: <OF21DAD013.43CC2230-ON85256D43.004C2496@pok.ibm.com>
-From: "Pete Zannucci" <pzaan@us.ibm.com>
-Date: Thu, 12 Jun 2003 09:36:35 -0500
+Message-ID: <116DB56CD7DED511BC7800508B2CA53735D04B@mailsrvnt02.enet.sharplabs.com>
+From: "McDonald, Ira" <imcdonald@sharplabs.com>
+Subject: RE: [Printing-architecture] [Full URLs] Updated low level archite
+	cture drawings (LONG)
+Date: Thu, 12 Jun 2003 07:53:41 -0700
 MIME-Version: 1.0
-Content-type: text/plain; charset=us-ascii
-Subject: [Printing-architecture] Updated low level architecture drawings (LONG)
+Content-Type: text/plain;
+	charset="iso-8859-1"
 Sender: printing-architecture-admin@freestandards.org
 Errors-To: printing-architecture-admin@freestandards.org
 List-Help: <mailto:printing-architecture-request@freestandards.org?subject=help>
@@ -14,7 +16,27 @@ List-Id: <printing-architecture.freestandards.org>
 List-Unsubscribe: <http://freestandards.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@freestandards.org?subject=unsubscribe>
 List-Archive: <http://freestandards.org/pipermail/printing-architecture/>
+To: 'Pete Zannucci' <pzaan@us.ibm.com>, printing-architecture@freestandards.org
+
+Hi,
+
+These files are stored on the PWG anonymous FTP server at:
+
+ftp://ftp.pwg.org/pub/pwg/fsg/architecture/arch1-6-12-03.jpg
+
+ftp://ftp.pwg.org/pub/pwg/fsg/architecture/arch2-6-12-03.jpg
+
+Cheers,
+- Ira McDonald
+
+
+-----Original Message-----
+From: Pete Zannucci [mailto:pzaan@us.ibm.com]
+Sent: Thursday, June 12, 2003 10:37 AM
 To: printing-architecture@freestandards.org
+Subject: [Printing-architecture] Updated low level architecture drawings
+(LONG)
+
 
 Hello all,
 
@@ -104,4 +126,9 @@ Omni Print Project http://sourceforge.net/projects/omniprint
 Austin, TX - Tel. 512-838-4687 (t/l 678) pzaan@us.ibm.com
 
 
+
+_______________________________________________
+Printing-architecture mailing list
+Printing-architecture@freestandards.org
+http://freestandards.org/mailman/listinfo/printing-architecture
 
