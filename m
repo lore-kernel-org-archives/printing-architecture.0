@@ -1,11 +1,11 @@
-Message-ID: <OF0FACDFCF.8B709972-ON86256E31.005865D4-86256E31.00588DAC@us.ibm.com>
-From: Mark Hamzy <hamzy@us.ibm.com>
-Date: Thu, 5 Feb 2004 10:07:14 -0600
+Sender: jacobs@printing.Eng.Sun.COM
+Message-ID: <40240483.B2A8686@Sun.COM>
+Date: Fri, 06 Feb 2004 15:17:55 -0600
+From: Norm Jacobs <Norm.Jacobs@Sun.COM>
 MIME-Version: 1.0
-Content-type: multipart/alternative; 
-	Boundary="0__=09BBE4A2DFCBE3448f9e8a93df938690918c09BBE4A2DFCBE344"
-Content-Disposition: inline
-Subject: [Printing-architecture] Architecture meeting 02/05/2004
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+Subject: [Printing-architecture] PAPI Source code on SourceForge
 List-Id: Printing architecture under linux
 	<printing-architecture.freestandards.org>
 List-Unsubscribe: <http://freestandards.org/mailman/listinfo/printing-architecture>,
@@ -15,60 +15,95 @@ List-Post: <mailto:printing-architecture@freestandards.org>
 List-Help: <mailto:printing-architecture-request@freestandards.org?subject=help>
 List-Subscribe: <http://freestandards.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@freestandards.org?subject=subscribe>
-To: printing-architecture@freestandards.org
-
---0__=09BBE4A2DFCBE3448f9e8a93df938690918c09BBE4A2DFCBE344
-Content-type: text/plain; charset=US-ASCII
+To: printing-announce@freestandards.org, printing-spool@freestandards.org, printing-architecture@freestandards.org
 
 
+FWIW
 
+I have imported a bunch of PAPI source code into CVS on SourceForge
+under
+the "openprinting" project.  You can get to the SourceForge openprinting
+project page via http://sourceforge.net/projects/openprinting
+from there you can browse the CVS repository and/or get complete 
+instructions on how to download code.
 
+The short version is that
+  $ cvs -d:pserver:anonymous@cvs.sourceforge.net:/cvsroot/openprinting
+login 
+  $ cvs -z3
+-d:pserver:anonymous@cvs.sourceforge.net:/cvsroot/openprinting co papi
+should get you a copy of code.
 
-Thursday, February 5
+Since Shawn Pratt is the only listed project administrator for the
+openprinting project on SourceForge and his email bounced, I have
+initiated a "takeover" request for the project so that I can
+administrate it (add administrators/developers/content/...).  In the
+meantime, here are some specifics about what I have delivered.
 
-GMT 20:00-22:00
-EDT 15:00-17:00
-CDT 14:00-16:00
-MDT 13:00-15:00
-PDT 12:00-14:00
+I have dropped two PAPI library implementations and a client
+implementation into CVS.
 
-Toll Free:  1-888-687-2858 (use this first if possible)
-Toll:       1-719-457-3541
-Passcode:           726694
+papi/papi-lib-dynamic
+	This library implements all of the functions in v0.91 of the
+	specification, but doesn't communicate with a particular backend
+	print service or protocol.  It provides naming lookup support for
+	printer configuration and dynamically redirects PAPI calls to the
+	configured backend PAPI implementation.  The naming support uses
+	the name service switch on Solaris and does a crude emulation of
+	it on "other" platforms.  It also supports the use of URI style
+	printer names (lpd://server/queue, ipp://server/printers/queue,
+	etc.).  In the event that a URI is used, the uri scheme is used
+	to dynamically load the backend PAPI implementation.  Without
+	additional PAPI implementations installed, this module is of no
+	real interest other than an example or skeleton to build a PAPI
+	implementation from.  The papi-lib-dynamic code was contributed
+	by Sun Microsystems, Inc.
 
-Agenda:     FSG face to face meetings
+papi/papi-lib-cups
+	This library appears to implement v0.9 of the specification over
+	libcups (mostly the IPP support in libcups).  It was originally
+	written on top of libipp (an offshoot of libcups that IBM was
+	working on).  I was unable to locate a copy of libipp, so I made
+	a few modifications to the code to build under libcups.  I also
+	fixed a couple of minor bugs and added some of the v0.91 interface
+	calls to the code.  I have been able to use this module to
+	communicate with a CUPS server as well as the IPP server Apache
+	module that I have implemented on Solaris.  The papi-lib-cups code
+	was contributed by by IBM.
 
-Note:       I might be a little late to the meeting.
+papi/papi-clients-bsd-sysv
+	This part of the tree implements support for the BSD and SYSV end-user
+	printing commands on top of the PAPI.  The implemented commands
+	include lpr(1b), lpq(1b), lprm(1b), lpc(1M), lp(1), lpstat(1),
+	cancel(1), accept(1M), reject(1M), enable(1M), disable(1M), and
+	in.lpd(1M). The implementations are reasonably complete and should
+	be pretty good examples of how to the the PAPI.  The in.lpd(1M)
+	implementation is still missing some functionality.  The
+	papi-clients-bsd-sysv code was contributed by Sun Microsystems, Inc.
 
-Mark
+All of the code uses Autoconf/Automake/Libtool to build.  You should
+be able to build/install with:
+	$ sh ./autogen.sh --prefix=/opt/papi
+	$ make install
+build and install a library first, then the clients.  I have
+built/installed
+on Solaris and Linux.  Things appear to be working, but I'm sure that
+there are issues to be addressed.
 
-Take a look at the Linux Omni Printer Driver Framework at
-http://www.ibm.com/linux/ltc/projects/omni/
---0__=09BBE4A2DFCBE3448f9e8a93df938690918c09BBE4A2DFCBE344
-Content-type: text/html; charset=US-ASCII
-Content-Disposition: inline
+We have an IPP listening service on top of the PAPI implemented as an
+Apache module.  We are planning on dropping that code into CVS soon.
+Also, we are finishing up a PAPI implementation on top of RFC-1179 that
+doesn't require applications to have special privilege to use (mere
+mortals can contact a remote RFC-1179 based print service via a reserved
+port).  PAPI over IPP is in the plan and will likely use the IPP support
+from the Apache IPP listener module, but we need to find an http library
+to use first.
 
-<html><body>
-<p><tt>Thursday, February 5</tt><br>
-<br>
-<tt>GMT 20:00-22:00</tt><br>
-<tt>EDT 15:00-17:00</tt><br>
-<tt>CDT 14:00-16:00</tt><br>
-<tt>MDT 13:00-15:00</tt><br>
-<tt>PDT 12:00-14:00</tt><br>
-<br>
-<tt>Toll Free: &nbsp;1-888-687-2858 (use this first if possible)<br>
-Toll: &nbsp; &nbsp; &nbsp; 1-719-457-3541</tt><br>
-<tt>Passcode: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 726694</tt><br>
-<br>
-<tt>Agenda: &nbsp; &nbsp; FSG face to face meetings</tt><br>
-<br>
-<tt>Note: &nbsp; &nbsp; &nbsp; I might be a little late to the meeting.</tt><br>
-<br>
-Mark<br>
-<br>
-Take a look at the Linux Omni Printer Driver Framework at<br>
-<a href="http://www.ibm.com/linux/ltc/projects/omni/">http://www.ibm.com/linux/ltc/projects/omni/</a></body></html>
---0__=09BBE4A2DFCBE3448f9e8a93df938690918c09BBE4A2DFCBE344--
+Anyway, I will send out another email when the SourceForge issue is
+resolved.  I had hoped to get this all done yesterday afternoon, but
+there are never enough hours in the day and there is an issue with
+the CVS server right now, so the CVS repository wasn't available for
+web browsing or anonymous pserver access until about 10 minutes ago.
 
+		-Norm
 
