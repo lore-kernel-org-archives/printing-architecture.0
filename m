@@ -1,9 +1,10 @@
-From: Claudia Alimpich <alimpich@us.ibm.com>
-Message-ID: <OFBAF6F2F0.96FDFFB1-ON87256CE0.000C7C53@us.ibm.com>
-Date: Tue, 4 Mar 2003 19:58:46 -0700
+Message-ID: <CBD6266EA291D5118144009027AA63350D8240F6@xboi05.boi.hp.com>
+From: "PRATT,SHAWN (HP-Boise,ex1)" <shawn_pratt@am.exch.hp.com>
+Subject: RE: [Printing-architecture] Proposed agenda for FSG face-2-face i
+	n DC on April 1st (no fooling)
+Date: Wed, 5 Mar 2003 05:38:33 -0500 
 MIME-Version: 1.0
-Content-type: text/plain; charset=US-ASCII
-Subject: [Printing-architecture] Proposed agenda for FSG face-2-face in DC on April 1st (no fooling)
+Content-Type: text/plain
 Sender: printing-architecture-admin@freestandards.org
 Errors-To: printing-architecture-admin@freestandards.org
 List-Help: <mailto:printing-architecture-request@freestandards.org?subject=help>
@@ -14,7 +15,22 @@ List-Id: <printing-architecture.freestandards.org>
 List-Unsubscribe: <http://freestandards.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@freestandards.org?subject=unsubscribe>
 List-Archive: <http://freestandards.org/pipermail/printing-architecture/>
-To: printing-architecture@freestandards.org, printing-announce@freestandards.org
+To: 'Claudia Alimpich' <alimpich@us.ibm.com>, "'printing-architecture@freestandards.org'" <printing-architecture@freestandards.org>, "'printing-announce@freestandards.org'" <printing-announce@freestandards.org>
+
+Claudia:  I would go with this proposal.  I would like to add to this,
+probably in the architecture discussion, a discussion around future Linux
+printing needs.  
+
+- Shawn
+
+-----Original Message-----
+From: Claudia Alimpich [mailto:alimpich@us.ibm.com] 
+Sent: Tuesday, March 04, 2003 7:59 PM
+To: printing-architecture@freestandards.org;
+printing-announce@freestandards.org
+Subject: [Printing-architecture] Proposed agenda for FSG face-2-face in DC
+on April 1st (no fooling)
+
 
 
 
@@ -105,4 +121,9 @@ Following is a proposed agenda for the FSG meeting:
          - Other documents pertaining to this working group
    f. Q&A and discussion
 
+
+_______________________________________________
+Printing-architecture mailing list
+Printing-architecture@freestandards.org
+http://freestandards.org/mailman/listinfo/printing-architecture
 
