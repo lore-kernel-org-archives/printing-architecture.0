@@ -1,9 +1,11 @@
-From: Claudia Alimpich <alimpich@us.ibm.com>
-Message-ID: <OF0251108A.26689210-ON87256CB0.0070B0F7@us.ibm.com>
-Date: Thu, 16 Jan 2003 13:31:34 -0700
+Message-ID: <116DB56CD7DED511BC7800508B2CA53735CE94@mailsrvnt02.enet.sharplabs.com>
+From: "McDonald, Ira" <imcdonald@sharplabs.com>
+Date: Fri, 24 Jan 2003 12:26:35 -0800
 MIME-Version: 1.0
-Content-type: text/plain; charset=US-ASCII
-Subject: [Printing-architecture] RE:Scenarios for using the various Open Print API
+Content-Type: text/plain;
+	charset="iso-8859-1"
+Subject: [Printing-architecture] FW: PS> RFC 3470 (BCP 70) Guidelines for use of XML in IETF Proto
+ cols
 Sender: printing-architecture-admin@freestandards.org
 Errors-To: printing-architecture-admin@freestandards.org
 List-Help: <mailto:printing-architecture-request@freestandards.org?subject=help>
@@ -17,84 +19,83 @@ List-Archive: <http://freestandards.org/pipermail/printing-architecture/>
 To: printing-architecture@freestandards.org
 
 
+-----Original Message-----
+From: McDonald, Ira [mailto:imcdonald@sharplabs.com]
+Sent: Thursday, January 23, 2003 3:23 PM
+To: 'ps@pwg.org'; 'ipp@pwg.org'
+Subject: PS> RFC 3470 (BCP 70) Guidelines for use of XML in IETF
+Protocols
 
 
-Following is the updated Scenarios that I first put on the forum 21Nov2002.
-Tom Hastings provided feedback and additions which I incorporated. There is
-still some discussion about Capabilities and what the Application should
-call to get device capablilities information. Please review the scenarios
-and provide your comments and feedback. I also put this on the pwg site at:
+Hi folks,
 
-ftp://ftp.pwg.org/pub/pwg/fsg/architecture/LinuxScenarios_16Jan2003.txt
+Excellent reading.
 
-Claudia Alimpich
-IBM Printing Systems Division
-alimpich@us.ibm.com
------------------------------------------
+    ftp://ftp.isi.edu/in-notes/rfc3470.txt
 
-16Jan2003
+I particularly enjoyed the discussion of XML validation using
+ISO SGML DTD, W3C XML Schema, and OASIS RELAX-NG in section 4.7.
 
-  Using the Application, JTAPI, Capabilities API, PAPI, and Print Service
+Cheers,
+- Ira McDonald
+  High North Inc
+----------------------------------
+[excerpts from RFC 3470]
 
+Abstract
 
-Following are scenarios that describe how the various Open Print APIs can
-be used (or not used) together:
+   The Extensible Markup Language (XML) is a framework for structuring
+   data.  While it evolved from Standard Generalized Markup Language
+   (SGML) -- a markup language primarily focused on structuring
+   documents -- XML has evolved to be a widely-used mechanism for
+   representing structured data.
 
-      1) One of the following:
-            a) The Application reads a job ticket file, as directed by
-                  the user, by using the JTAPI.
-            b) The Application reads a default job ticket file, as
-                  configured by the administrator, by using the JTAPI.
+   There are a wide variety of Internet protocols being developed; many
+   have need for a representation for structured data relevant to their
+   application.  There has been much interest in the use of XML as a
+   representation method.  This document describes basic XML concepts,
+   analyzes various alternatives in the use of XML, and provides
+   guidelines for the use of XML within IETF standards-track protocols.
 
-      2) One of the following:
-            a) The Application provides the user with choices that are
-                  determined by the application itself.
-            b) The Application uses the Capabilities API* to determine
-                  the capabilities of the target device(s) and then
-                  provides the user with choices.
-            c) The Application uses a PPD, GPD, UPDP, or other device
-                  description file to determine the capabilities of
-                  the target device.
-            d) The Application queries the Device using SNMP.
-            e) What other ways can device capabilities be
-                  determined?
+Table of Contents
 
-      3) The user makes selections from the choices presented by the
-            Application.
-            a) The choices presented are limited/constrained by the
-                  user's selection of other/related choices.
-
-      4) One of the following:
-            a) The Application uses the JTAPI to create a job ticket.
-            b) The Application sets IPP attributes that describe how the
-                  job is to be processed.
-            c) Both a) and b).
-
-      5) Optionally, one of the following:
-            a) The Application uses some of the user's selections to
-                  generate the data/content file.
-            b) The Application uses the Graphics API to generate the
-                  data/content file.
-            c) The Application uses some of the user's selections to
-                  select from among alternate formats of data/content
-                  files that have previously been generated and made
-                  available.
-
-      6) One of the following:
-            a) The Application uses the PAPI to submit the data/content
-                  file and the job ticket to the Print Service.
-            b) The Application uses the PAPI to submit the data/content
-                  file and the IPP  attributes to the Print Service.
-            c) The Application uses the PAPI to submit the data/content
-                  file, the job ticket, and the IPP attributes to the Print
-                  Service.
-            d) The Applicaiton saves the job ticket without submitting it
-                  or the data/content file to the Print Service.
-
-* Question: Is the Capabilities API part of PAPI or a separate API?
-      See Pete Zannucci's 03Dec2002 and Michael Sweet's 21Nov2002 and
-      03Dec2003 appends to the architecture mailing list.
-
-
-
+   Conventions Used In This Document  . . . . . . . . . . . . . . . .  2
+   1.    Introduction and Overview  . . . . . . . . . . . . . . . . .  2
+         1.1   Intended Audience. . . . . . . . . . . . . . . . . . .  3
+         1.2   Scope  . . . . . . . . . . . . . . . . . . . . . . . .  3
+         1.3   XML Evolution  . . . . . . . . . . . . . . . . . . . .  3
+         1.4   XML Users, Support Groups, and Additional
+               Information. . . . . . . . . . . . . . . . . . . . . .  4
+   2.    XML Selection Considerations . . . . . . . . . . . . . . . .  4
+   3.    XML Alternatives . . . . . . . . . . . . . . . . . . . . . .  5
+   4.    XML Use Considerations and Recommendations . . . . . . . . .  7
+         4.1   XML Syntax and Well-Formedness . . . . . . . . . . . .  7
+         4.2   XML Information Set  . . . . . . . . . . . . . . . . .  7
+         4.3   Syntactic Restrictions . . . . . . . . . . . . . . . .  8
+         4.4   XML Declarations . . . . . . . . . . . . . . . . . . .  9
+         4.5   XML Processing Instructions  . . . . . . . . . . . . .  9
+         4.6   XML Comments . . . . . . . . . . . . . . . . . . . . . 10
+         4.7   Validity and Extensibility . . . . . . . . . . . . . . 10
+         4.8   Semantics as Well as Syntax. . . . . . . . . . . . . . 12
+         4.9   Namespaces . . . . . . . . . . . . . . . . . . . . . . 12
+               4.9.1 Namespaces and Attributes. . . . . . . . . . . . 13
+         4.10  Element and Attribute Design Considerations. . . . . . 14
+         4.11  Binary Data and Text with Control Characters . . . . . 16
+         4.12  Incremental Processing . . . . . . . . . . . . . . . . 16
+         4.13  Entity Declarations and Entity References  . . . . . . 16
+         4.14  External References  . . . . . . . . . . . . . . . . . 17
+         4.15  URI Processing . . . . . . . . . . . . . . . . . . . . 17
+         4.16  White Space  . . . . . . . . . . . . . . . . . . . . . 18
+         4.17  Interaction with the IANA  . . . . . . . . . . . . . . 19
+   5.    Internationalization Considerations  . . . . . . . . . . . . 19
+         5.1   Character Sets and Encodings . . . . . . . . . . . . . 19
+         5.2   Language Declaration . . . . . . . . . . . . . . . . . 20
+         5.3   Other Internationalization Considerations  . . . . . . 20
+   6.    IANA Considerations  . . . . . . . . . . . . . . . . . . . . 21
+   7.    Security Considerations  . . . . . . . . . . . . . . . . . . 21
+   8.    Acknowledgements . . . . . . . . . . . . . . . . . . . . . . 22
+   9.    Normative References . . . . . . . . . . . . . . . . . . . . 22
+   10.   Informative References . . . . . . . . . . . . . . . . . . . 23
+   11.   Authors' Addresses . . . . . . . . . . . . . . . . . . . . . 27
+   12.   Full Copyright Statement . . . . . . . . . . . . . . . . . . 28
 
