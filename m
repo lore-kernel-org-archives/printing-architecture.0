@@ -1,9 +1,9 @@
-Message-ID: <OF21A8EB45.A6296D78-ON86256D9E.0054BA03-86256D9E.0054D139@us.ibm.com>
-From: Mark Hamzy <hamzy@us.ibm.com>
-Date: Thu, 11 Sep 2003 10:26:25 -0500
+Message-ID: <OF096CD2C9.B3F38007-ON87256D9E.007EFFE5@us.ibm.com>
+From: Claudia Alimpich <alimpich@us.ibm.com>
+Date: Thu, 11 Sep 2003 17:09:49 -0600
 MIME-Version: 1.0
 Content-type: text/plain; charset=US-ASCII
-Subject: [Printing-architecture] Architecture meeting 09/11/2003
+Subject: [Printing-architecture] FSG Open Print Status reports
 Sender: printing-architecture-admin@freestandards.org
 Errors-To: printing-architecture-admin@freestandards.org
 List-Help: <mailto:printing-architecture-request@freestandards.org?subject=help>
@@ -14,28 +14,18 @@ List-Id: <printing-architecture.freestandards.org>
 List-Unsubscribe: <http://freestandards.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@freestandards.org?subject=unsubscribe>
 List-Archive: <http://freestandards.org/pipermail/printing-architecture/>
-To: printing-architecture@freestandards.org
+To: printing-architecture@freestandards.org, printing-jobticket@freestandards.org
 
 
 
 
-Thursday, September 11
+There is a new directory for our working group status reports on the
+pwg/fsg ftp site called:
+   ftp://ftp.pwg.org/pub/pwg/fsg/status_reports/
 
-1200-1300 PST
-1300-1400 MST
-1400-1500 CST
-1500-1600 EST
-2000-2100 UTC
+The first JT WG status report is at:
+   ftp://ftp.pwg.org/pub/pwg/fsg/status_reports/JT_WG_Status_11Sept2003.txt
 
-Tie Line:    650-3239
-Toll Free:   1-800-497-2024
-Toll Number: 1-719-457-3821
-Passcode:     160458
-
-
-Mark
-
-Take a look at the Linux Omni Printer Driver Framework at
-http://www.ibm.com/linux/ltc/projects/omni/
+Claudia Alimpich
 
 
