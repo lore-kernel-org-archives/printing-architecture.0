@@ -1,11 +1,11 @@
-Message-ID: <OF25403140.8576C91D-ON86256E38.0058716D-86256E38.0058A4AF@us.ibm.com>
-From: Mark Hamzy <hamzy@us.ibm.com>
-Date: Thu, 12 Feb 2004 10:08:13 -0600
+Message-ID: <CFEE79A465B35C4385389BA5866BEDF00C7534@mailsrvnt02.enet.sharplabs.com>
+From: "McDonald, Ira" <imcdonald@sharplabs.com>
+Date: Thu, 12 Feb 2004 08:27:53 -0800
 MIME-Version: 1.0
-Content-type: multipart/alternative; 
-	Boundary="0__=09BBE4ABDFCBF7FD8f9e8a93df938690918c09BBE4ABDFCBF7FD"
-Content-Disposition: inline
-Subject: [Printing-architecture] Architecture meeting 02/12/2004
+Content-Type: text/plain;
+	charset="iso-8859-1"
+Subject: [Printing-architecture] FW: PWG-ANNOUNCE> Formal Vote on PSI
+	Specification
 List-Id: Printing architecture under linux
 	<printing-architecture.freestandards.org>
 List-Unsubscribe: <http://freestandards.org/mailman/listinfo/printing-architecture>,
@@ -17,62 +17,74 @@ List-Subscribe: <http://freestandards.org/mailman/listinfo/printing-architecture
 	<mailto:printing-architecture-request@freestandards.org?subject=subscribe>
 To: printing-architecture@freestandards.org
 
---0__=09BBE4ABDFCBF7FD8f9e8a93df938690918c09BBE4ABDFCBF7FD
-Content-type: text/plain; charset=US-ASCII
+Hi,
+
+The PSI/1.0 Protocol spec has passed last call without
+issues.  It's now gone to Formal Vote to become an
+IEEE/ISTO PWG Candidate Standard (see below).
+
+Cheers,
+- Ira
+
+Ira McDonald (Musician / Software Architect)
+Blue Roof Music / High North Inc
+PO Box 221  Grand Marais, MI  49839
+phone: +1-906-494-2434
+email: imcdonald@sharplabs.com 
+
+
+-----Original Message-----
+From: BERKEMA,ALAN C (HP-Roseville,ex1) [mailto:alan.berkema@hp.com]
+Sent: Wednesday, February 11, 2004 12:54 PM
+To: pwg-announce@pwg.org
+Cc: a.s.patel@ieee.org
+Subject: PWG-ANNOUNCE> Formal Vote on PSI Specification
+
+
+Please vote, if you are a member of the PWG you have an obligation to
+participate.
+Greetings: 
+The following Printer Working Group document has completed its second Last
+Call without comment.
+                                                                            
+Print Service Interface Specification
+
+Available for review at: 
+ftp://ftp.pwg.org/pub/pwg/ps/wd/wd-psi10-20040113.pdf
+ftp://ftp.pwg.org/pub/pwg/ps/wd/wd-psi10-20040113.doc
+ftp://ftp.pwg.org/pub/pwg/ps/wd/wd-psi10-20040113.zip
+ Therefore I am submitting this specification for PWG approval by FORMAL 
+VOTE. If approved this will become a Candidate Standard, with a PWG 
+number, and we will issue a final version with the revision history 
+removed.                                                              
+                                                                            
+Send votes (one per company) to the ISTO in care of Ami Patel and please 
+copy me. 
+                                                                            
+   a.s.patel@ieee.org 
+ 
+
+   aberkema@hp.com 
+ 
+
+Voting ends at 5PM EDT on 25 Feb 2004 
+ Thanks,                                                               
+Alan Berkema/Chairman PSI WG 
+                                                                            
+
+
+
+Alan Berkema
+Senior Engineer Scientist
+Connectivity Roseville, CA
+Hewlett-Packard Company
+
+916 785-5605 Phone
+aberkema@hp.com 
 
 
 
 
 
-Thursday, February 12
-
-GMT 20:00-22:00
-EDT 15:00-17:00
-CDT 14:00-16:00
-MDT 13:00-15:00
-PDT 12:00-14:00
-
-Toll Free:  1-888-687-2858 (use this first if possible)
-Toll:       1-719-457-3541
-Passcode:           726694
-
-Agenda:     Steering committee for Americas/Europe/Asia
-            Japanese meeting results
-            FSG face to face meetings
-            Use cases
-
-
-Mark
-
-Take a look at the Linux Omni Printer Driver Framework at
-http://www.ibm.com/linux/ltc/projects/omni/
---0__=09BBE4ABDFCBF7FD8f9e8a93df938690918c09BBE4ABDFCBF7FD
-Content-type: text/html; charset=US-ASCII
-Content-Disposition: inline
-
-<html><body>
-<p><tt>Thursday, February 12</tt><br>
-<br>
-<tt>GMT 20:00-22:00</tt><br>
-<tt>EDT 15:00-17:00</tt><br>
-<tt>CDT 14:00-16:00</tt><br>
-<tt>MDT 13:00-15:00</tt><br>
-<tt>PDT 12:00-14:00</tt><br>
-<br>
-<tt>Toll Free: &nbsp;1-888-687-2858 (use this first if possible)<br>
-Toll: &nbsp; &nbsp; &nbsp; 1-719-457-3541</tt><br>
-<tt>Passcode: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 726694</tt><br>
-<br>
-<tt>Agenda: &nbsp; &nbsp; Steering committee for Americas/Europe/Asia</tt><br>
-<tt> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Japanese meeting results</tt><br>
-<tt> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;FSG face to face meetings</tt><br>
-<tt> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Use cases</tt><br>
-<br>
-<br>
-Mark<br>
-<br>
-Take a look at the Linux Omni Printer Driver Framework at<br>
-<a href="http://www.ibm.com/linux/ltc/projects/omni/">http://www.ibm.com/linux/ltc/projects/omni/</a></body></html>
---0__=09BBE4ABDFCBF7FD8f9e8a93df938690918c09BBE4ABDFCBF7FD--
-
+  
 
