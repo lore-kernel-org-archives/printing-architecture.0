@@ -1,10 +1,11 @@
-Message-ID: <2F7D63A21DB2C74EB8EB8C09AF667DB06EFAC0@eitc220.eitc.epson.com>
+Message-ID: <2F7D63A21DB2C74EB8EB8C09AF667DB06EFAC7@eitc220.eitc.epson.com>
 From: "Petrie, Glen" <glen.petrie@eitc.epson.com>
-Date: Wed, 4 Aug 2004 14:03:51 -0700 
+Date: Wed, 4 Aug 2004 15:38:47 -0700 
 MIME-Version: 1.0
 Content-Type: multipart/alternative;
-	boundary="----_=_NextPart_001_01C47A66.8B8971F0"
-Subject: [Printing-architecture] Updated Reference Model Diagrams
+	boundary="----_=_NextPart_001_01C47A73.CE31E2A0"
+Subject: [Printing-architecture] Reference Model Description for Status
+	Monitoring and Capabilitie s. 
 List-Id: Printing architecture under linux
 	<printing-architecture.mail.freestandards.org>
 List-Unsubscribe: <http://mail.freestandards.org/mailman/listinfo/printing-architecture>,
@@ -19,28 +20,52 @@ To: printing-architecture@freestandards.org
 This message is in MIME format. Since your mail reader does not understand
 this format, some or all of this message may not be legible.
 
-------_=_NextPart_001_01C47A66.8B8971F0
+------_=_NextPart_001_01C47A73.CE31E2A0
 Content-Type: text/plain
 
-ftp://ftp.pwg.org/pub/pwg/fsg/architecture/Reference-Model/fsg-arch-Ref-Mode
-l-Diagram-v00.20-2004.08.04.ppt
-<ftp://ftp.pwg.org/pub/pwg/fsg/architecture/Reference-Model/fsg-arch-Ref-Mod
-el-Diagram-v00.20-2004.08.04.ppt>  
+Status Monitoring Subsystem:
 
  
 
-ftp://ftp.pwg.org/pub/pwg/fsg/architecture/Reference-Model/fsg-arch-Ref-Mode
-l-Diagram-v00.20-2004.08.04.pdf
-<ftp://ftp.pwg.org/pub/pwg/fsg/architecture/Reference-Model/fsg-arch-Ref-Mod
-el-Diagram-v00.20-2004.08.04.pdf>  
+The Status Monitoring subsystem provides a single subsystem for the
+collection, acquisition, summarization, dissemination and/or reporting of
+the physical and/or logical print driver, print communication and/or printer
+status and/or state information.  There is a single Application Programming
+Interface (API) for the setup and retrieval of specified status information.
+In addition to polling support for specified status information, the API
+shall include a callback mechanism to report specified status information
+based on an events and/or times.   The subsystem shall include a dead-man
+timer capability for monitoring the general operation of the print driver,
+print communication and/or printer.  Status information, for example
+includes, but is not limited to, the printer's current state, ink/toner
+levels, percentage of a page, document and/or job completed and the
+state/condition of all I/O channels.  "Standard" status information (to be
+determined) is formatted for efficiency while formatting for extension
+status information is not specified.  Status Monitoring is not to be
+confused with Job Monitoring associated with the Print Manager.
 
  
 
  
 
-Above are the updated Reference Model Diagrams as discussion in the
-Architecture working group meeting.   Note I have left the "drawing
-subsystem" and "rendering" boxes shadowed pending further discussion.
+Capabilities Subsystem:
+
+ 
+
+The Capabilities Subsystem provides a single subsystem for the collection,
+acquisition, summarization, dissemination and/or reporting of the printer's
+physical and logical capabilities.  Collection of capability information
+comes from the printer, a file(s) and/or network location(s).  There is a
+single Application Programming Interface (API) that can accept capability
+information in to-be-determined formats and report specified capability
+information.  The API will provide specified information for a specified
+print device and/or can provide the printer or list of printers with the
+specified capability(ies).  "Standard" capability information (to be
+determined) is formatted for efficiency while formatting for extension
+capability information is represented by key-value pairs.  The Capability
+Subsystem does not interpret capability information nor validate the
+information beyond syntax and "reasonableness" bounds checking for
+"standard" capability information.  
 
 Rgds, 
 Glen W. Petrie 
@@ -52,7 +77,7 @@ Voice: 408.576.4131  Fax: 408.474.0511
  
 
 
-------_=_NextPart_001_01C47A66.8B8971F0
+------_=_NextPart_001_01C47A73.CE31E2A0
 Content-Type: text/html
 Content-Transfer-Encoding: quoted-printable
 
@@ -123,12 +148,8 @@ div.Section1
 
 <p class=3DMsoNormal><font size=3D2 face=3D"Courier New"><span =
 style=3D'font-size:10.0pt;
-font-family:"Courier New"'><a
-href=3D"ftp://ftp.pwg.org/pub/pwg/fsg/architecture/Reference-Model/fsg-a=
-rch-Ref-Model-Diagram-v00.20-2004.08.04.ppt">ftp://ftp.pwg.org/pub/pwg/f=
-sg/architecture/Reference-Model/fsg-arch-Ref-Model-Diagram-v00.20-2004.0=
-8.04.ppt</a>
-<o:p></o:p></span></font></p>
+font-family:"Courier New"'>Status Monitoring =
+Subsystem:<o:p></o:p></span></font></p>
 
 <p class=3DMsoNormal><font size=3D2 face=3D"Courier New"><span =
 style=3D'font-size:10.0pt;
@@ -136,12 +157,36 @@ font-family:"Courier New"'><o:p>&nbsp;</o:p></span></font></p>
 
 <p class=3DMsoNormal><font size=3D2 face=3D"Courier New"><span =
 style=3D'font-size:10.0pt;
-font-family:"Courier New"'><a
-href=3D"ftp://ftp.pwg.org/pub/pwg/fsg/architecture/Reference-Model/fsg-a=
-rch-Ref-Model-Diagram-v00.20-2004.08.04.pdf">ftp://ftp.pwg.org/pub/pwg/f=
-sg/architecture/Reference-Model/fsg-arch-Ref-Model-Diagram-v00.20-2004.0=
-8.04.pdf</a>
-<o:p></o:p></span></font></p>
+font-family:"Courier New"'>The Status Monitoring subsystem provides a =
+single subsystem
+for the collection, acquisition, summarization, dissemination and/or =
+reporting
+of the physical and/or logical print driver, print communication and/or =
+printer
+status and/or state information.&nbsp; There is a single Application
+Programming Interface (API) for the setup and retrieval of specified =
+status
+information. &nbsp;&nbsp;In addition to polling support for specified =
+status
+information, the API shall include a callback mechanism to report =
+specified
+status information based on an events and/or times. &nbsp;&nbsp;The =
+subsystem
+shall include a dead-man timer capability for monitoring the general =
+operation
+of the print driver, print communication and/or printer. &nbsp;Status
+information, for example includes, but is not limited to, the =
+printer&#8217;s
+current state, ink/toner levels, percentage of a page, document and/or =
+job
+completed and the state/condition of all I/O channels.&nbsp; =
+&#8220;Standard&#8221;
+status information (to be determined) is formatted for efficiency while =
+formatting
+for extension status information is not specified. &nbsp;Status =
+Monitoring is
+not to be confused with Job Monitoring associated with the Print =
+Manager.<o:p></o:p></span></font></p>
 
 <p class=3DMsoNormal><font size=3D2 face=3D"Courier New"><span =
 style=3D'font-size:10.0pt;
@@ -153,12 +198,40 @@ font-family:"Courier New"'><o:p>&nbsp;</o:p></span></font></p>
 
 <p class=3DMsoNormal><font size=3D2 face=3D"Courier New"><span =
 style=3D'font-size:10.0pt;
-font-family:"Courier New"'>Above are the updated Reference Model =
-Diagrams as
-discussion in the Architecture working group meeting. &nbsp;&nbsp;Note =
-I have left the &#8220;drawing
-subsystem&#8221; and &#8220;rendering&#8221; boxes shadowed pending =
-further discussion.<o:p></o:p></span></font></p>
+font-family:"Courier New"'>Capabilities =
+Subsystem:<o:p></o:p></span></font></p>
+
+<p class=3DMsoNormal><font size=3D2 face=3D"Courier New"><span =
+style=3D'font-size:10.0pt;
+font-family:"Courier New"'><o:p>&nbsp;</o:p></span></font></p>
+
+<p class=3DMsoNormal><font size=3D2 face=3D"Courier New"><span =
+style=3D'font-size:10.0pt;
+font-family:"Courier New"'>The Capabilities Subsystem provides a single
+subsystem for the collection, acquisition, summarization, dissemination =
+and/or
+reporting of the printer&#8217;s physical and logical =
+capabilities.&nbsp; Collection
+of capability information comes from the printer, a file(s) and/or =
+network
+location(s). &nbsp;There is a single Application Programming Interface =
+(API) that
+can accept capability information in to-be-determined formats and =
+report
+specified capability information. &nbsp;The API will provide specified
+information for a specified print device and/or can provide the printer =
+or list
+of printers with the specified capability(ies). =
+&nbsp;&#8220;Standard&#8221; capability
+information (to be determined) is formatted for efficiency while =
+formatting for
+extension capability information is represented by key-value =
+pairs.&nbsp; The Capability
+Subsystem does not interpret capability information nor validate the =
+information
+beyond syntax and &#8220;reasonableness&#8221; bounds checking for =
+&#8220;standard&#8221;
+capability information. &nbsp;<o:p></o:p></span></font></p>
 
 <p><i><font size=3D2 face=3D"Comic Sans MS"><span =
 style=3D'font-size:10.0pt;
@@ -197,5 +270,5 @@ style=3D'font-size:
 
 </html>
 
-------_=_NextPart_001_01C47A66.8B8971F0--
+------_=_NextPart_001_01C47A73.CE31E2A0--
 
