@@ -1,11 +1,10 @@
-Message-ID: <116DB56CD7DED511BC7800508B2CA53735D05B@mailsrvnt02.enet.sharplabs.com>
+Message-ID: <116DB56CD7DED511BC7800508B2CA53735D05C@mailsrvnt02.enet.sharplabs.com>
 From: "McDonald, Ira" <imcdonald@sharplabs.com>
-Subject: RE: [Printing-architecture] Phone Number - The FSG/OP F2F meeting
-	 schedule June 17th/18th...
-Date: Tue, 17 Jun 2003 08:43:50 -0700
+Date: Tue, 17 Jun 2003 09:21:48 -0700
 MIME-Version: 1.0
 Content-Type: text/plain;
 	charset="iso-8859-1"
+Subject: [Printing-architecture] CORRECTED phone number/passcode for PWG/FSG meetings (16-20 June)
 Sender: printing-architecture-admin@freestandards.org
 Errors-To: printing-architecture-admin@freestandards.org
 List-Help: <mailto:printing-architecture-request@freestandards.org?subject=help>
@@ -16,24 +15,18 @@ List-Id: <printing-architecture.freestandards.org>
 List-Unsubscribe: <http://freestandards.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@freestandards.org?subject=unsubscribe>
 List-Archive: <http://freestandards.org/pipermail/printing-architecture/>
-To: 'Charles Hemstreet' <charles_at_hp@hotmail.com>, printing-architecture@freestandards.org
+To: printing-architecture@freestandards.org, pwg-announce@pwg.org
 Cc: "'hastings@cp10.es.xerox.com'" <hastings@cp10.es.xerox.com>
 
-Hi Tom,
+Hi folks,
 
-Here's the dial-up info from Ami Patel's note last week:
+Harry Lewis just called me with this info.  I tried and it works.
 
-The meetings will be held all week in the Alder East Room.  The meetings
-will be posted as "Printer Working Group Meetings".  For those who will be
-dialing into the meetings, you may use the following numbers:
-
-Dial-In: 1-866-365-4406
-Passcode: 4656477#
-Chairman Code: 6477#
+Dial-In:  866-465-4406
+Passcode: 2635888#
 
 Cheers,
-- Ira McDonald
-  High North Inc
+- Ira
 
 
 -----Original Message-----
@@ -107,6 +100,11 @@ _________________________________________________________________
 STOP MORE SPAM with the new MSN 8 and get 2 months FREE*  
 http://join.msn.com/?page=features/junkmail
 
+
+_______________________________________________
+Printing-architecture mailing list
+Printing-architecture@freestandards.org
+http://freestandards.org/mailman/listinfo/printing-architecture
 
 _______________________________________________
 Printing-architecture mailing list
