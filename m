@@ -1,9 +1,11 @@
-Message-ID: <OF3D6A6A73.1E4CB38E-ON87256CFE.00642E10@us.ibm.com>
-From: Claudia Alimpich <alimpich@us.ibm.com>
-Date: Fri, 4 Apr 2003 11:15:51 -0700
+Message-ID: <116DB56CD7DED511BC7800508B2CA53735CF70@mailsrvnt02.enet.sharplabs.com>
+From: "McDonald, Ira" <imcdonald@sharplabs.com>
+Subject: RE: [Printing-architecture] Next PWG meeting is June 16 - Portlan
+	d OR
+Date: Sun, 6 Apr 2003 16:05:56 -0700 
 MIME-Version: 1.0
-Content-type: text/plain; charset=US-ASCII
-Subject: [Printing-architecture] Next PWG meeting is June 16 - Portland OR
+Content-Type: text/plain;
+	charset="iso-8859-1"
 Sender: printing-architecture-admin@freestandards.org
 Errors-To: printing-architecture-admin@freestandards.org
 List-Help: <mailto:printing-architecture-request@freestandards.org?subject=help>
@@ -14,7 +16,33 @@ List-Id: <printing-architecture.freestandards.org>
 List-Unsubscribe: <http://freestandards.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@freestandards.org?subject=unsubscribe>
 List-Archive: <http://freestandards.org/pipermail/printing-architecture/>
+To: 'Claudia Alimpich' <alimpich@us.ibm.com>, printing-architecture@freestandards.org
+
+Hi Claudia,
+
+Yes - at least during the PWG Plenary last week, we agreed that
+the PWG folks would very much like to have FSG schedule Mon or
+Tues sessions the week of June 16th.  If we can get the CIP4
+folks to join us as well (though perhaps not with overlapping
+sessions like before), they would also be very welcome to join
+us in Portland.
+
+Cheers,
+- Ira McDonald
+  High North Inc
+
+PS - Although I have lots of musical friends in Portland (from
+my two years there with Sharp and Xerox), I don't have the funds 
+to travel to Portland in June.  So I won't be attending - sigh...
+
+-----Original Message-----
+From: Claudia Alimpich [mailto:alimpich@us.ibm.com]
+Sent: Friday, April 04, 2003 12:16 PM
 To: printing-architecture@freestandards.org
+Subject: [Printing-architecture] Next PWG meeting is June 16 - Portland
+OR
+
+
 
 
 
@@ -46,4 +74,9 @@ IBM Printing Systems
 ----------------------------------------------
 
 
+
+_______________________________________________
+Printing-architecture mailing list
+Printing-architecture@freestandards.org
+http://freestandards.org/mailman/listinfo/printing-architecture
 
