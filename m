@@ -1,9 +1,9 @@
-Message-ID: <6D805D4C4567D411AF32009027B683510FC6369C@xvan02.vcd.hp.com>
+Message-ID: <6D805D4C4567D411AF32009027B683510FC637D9@xvan02.vcd.hp.com>
 From: "HEMSTREET,CHARLES (HP-Vancouver,ex1)" <charles.hemstreet@hp.com>
-Date: Wed, 29 Jan 2003 15:45:50 -0800
+Date: Wed, 5 Feb 2003 14:25:20 -0500 
 MIME-Version: 1.0
 Content-Type: text/plain
-Subject: [Printing-architecture] Architecture meeting 20030130
+Subject: [Printing-architecture] No architecture meeting 2/6 and 2/13
 Sender: printing-architecture-admin@freestandards.org
 Errors-To: printing-architecture-admin@freestandards.org
 List-Help: <mailto:printing-architecture-request@freestandards.org?subject=help>
@@ -16,20 +16,10 @@ List-Unsubscribe: <http://freestandards.org/mailman/listinfo/printing-architectu
 List-Archive: <http://freestandards.org/pipermail/printing-architecture/>
 To: "'printing-architecture@freestandards.org'" <printing-architecture@freestandards.org>
 
-Phone/Passcode:
-* Dial-in  : 816.650.0688
-* passcode : 9 6 4 6 2 8
+Folks:
 
-Thursday from 8-9 am PST, 9-10 am
-MST, 11-12 pm EST, 4-5 pm UTC.
- 
-
--------------------------
-
-Agenda for 01/30/03:
-
-* Claudia's sequence diagram
-* We need to chose what we are going to focus on next
+I am not going to be able to make the meeting for the next two weeks.
+Please continue the discussions via the forums.
 
 Thanks,
 Charles
