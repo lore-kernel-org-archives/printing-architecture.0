@@ -1,9 +1,9 @@
-Message-ID: <OF1D2BBBB3.A4C9D7EF-ON87256D37.0015CAF7@us.ibm.com>
-From: Claudia Alimpich <alimpich@us.ibm.com>
-Date: Fri, 30 May 2003 22:00:44 -0600
-MIME-Version: 1.0
-Content-type: text/plain; charset=US-ASCII
-Subject: [Printing-architecture] 5/29 Architecture meeting notes - worked on JTAPI schedule
+From: "Charles Hemstreet" <charles_at_hp@hotmail.com>
+Date: Tue, 03 Jun 2003 17:37:44 -0700
+Mime-Version: 1.0
+Content-Type: text/plain; format=flowed
+Message-ID: <Sea2-F54XIaKGdQPPxe00046ed1@hotmail.com>
+Subject: [Printing-architecture] Architecture meeting agenda 20030605. . .
 Sender: printing-architecture-admin@freestandards.org
 Errors-To: printing-architecture-admin@freestandards.org
 List-Help: <mailto:printing-architecture-request@freestandards.org?subject=help>
@@ -14,34 +14,39 @@ List-Id: <printing-architecture.freestandards.org>
 List-Unsubscribe: <http://freestandards.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@freestandards.org?subject=unsubscribe>
 List-Archive: <http://freestandards.org/pipermail/printing-architecture/>
-To: printing-jobticket@freestandards.org, printing-architecture@freestandards.org
+To: printing-architecture@freestandards.org
 
+Folks:
 
+New meeting time for our architecture teleconference:
 
+Every Thursday
+1200-1300 PST
+1300-1400 MST
+1400-1500 CST
+1500-1600 EST
+2000-2100 UTC
 
-We had low a turnout for today's architecture meeting because of the phone
-number confusion. Those of us who found our way to the old phone number
-talked about a schedule for the continued work on the JTAPI.
+There is a new call-in number:
 
-- JTAPI Alpha content list:
-   6/3/2003 and 6/10/2003 - Determine JTAPI Alpha content list from
-   existing JTAPI UML diagrams and IPP Mapping table.
-   6/17/2003 - Present and get feedback during FSG face-2-face.
-   6/24/2003 - Digest and incorporate/digest feedback from 6/17 meeting.
+          - *Toll Free Access Number:
+            866-639-4758 (toll-free)
+            574-935-6716 (toll)
 
-- High Level JTAPI specification:
-   5-6 pages in length that describes the high level objects in the JTAPI
-   and their relationships.
-   7/8/2003 - Review of draft
-   7/15/2003 - Review of final
+          - Participant PIN:
+            2124490
 
-- C Header files for JTAPI Alpha content list:
-   7/29/2003 - Preliminary (one or two files to review the structure of the
-   JTAPI C files)
-   8/20/2003 - First draft
-   9/10/2003 - Final
+Agenda:
 
-- C implementation of JTAPI Alpha content list:
-   TBD
+1) Backup calling plan
+2) FSG/OP schedule
+3) other?
+
+Thanks,
+Charles
+
+_________________________________________________________________
+MSN 8 with e-mail virus protection service: 2 months FREE*  
+http://join.msn.com/?page=features/virus
 
 
