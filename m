@@ -1,10 +1,13 @@
-Message-ID: <OFA66077FC.887D3E17-ON87256CF5.000BB070@us.ibm.com>
-From: Claudia Alimpich <alimpich@us.ibm.com>
-Date: Tue, 25 Mar 2003 19:11:57 -0700
+Message-ID: <3E812D30.40701@easysw.com>
+Date: Tue, 25 Mar 2003 23:31:44 -0500
+From: Mike Sweet <mike@easysw.com>
 MIME-Version: 1.0
-Content-type: text/plain; charset=UTF-8
-Content-transfer-encoding: base64
-Subject: [Printing-architecture] URGENT - WASHINGTON D.C. MEETING CANCELED
+Subject: Re: [Printing-architecture] Re: [printing-driver] FSG Printer Working
+ Group conference call 03/26/03
+References: <OFC5111351.DFB34EDB-ON86256CF3.006ACF5B-86256CF3.006B2C0C@us.ibm.com> <200303250116.h2P1GZVc009025@dsl092-065-009.bos1.dsl.speakeasy.net> <3E7FBB4F.4040503@easysw.com> <200303250242.h2P2gEia009925@dsl092-065-009.bos1.dsl.speakeasy.net> <3E807421.9050508@easysw.com> <200303260156.h2Q1udkt023508@dsl092-065-009.bos1.dsl.speakeasy.net>
+In-Reply-To: <200303260156.h2Q1udkt023508@dsl092-065-009.bos1.dsl.speakeasy.net>
+Content-Type: text/plain; charset=us-ascii; format=flowed
+Content-Transfer-Encoding: 7bit
 Sender: printing-architecture-admin@freestandards.org
 Errors-To: printing-architecture-admin@freestandards.org
 List-Help: <mailto:printing-architecture-request@freestandards.org?subject=help>
@@ -15,62 +18,71 @@ List-Id: <printing-architecture.freestandards.org>
 List-Unsubscribe: <http://freestandards.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@freestandards.org?subject=unsubscribe>
 List-Archive: <http://freestandards.org/pipermail/printing-architecture/>
-To: printing-architecture@freestandards.org
+To: Robert L Krawitz <rlk@alum.mit.edu>
+Cc: printing-driver@freestandards.org, printing-architecture@freestandards.org
 
-DQoNCg0KDQpGb2xsb3dpbmcgaXMgdGhlIG5vdGUgdGhhdCBIYXJyeSBMZXdpcyBzZW50IHRvIHRo
-ZSBQV0cgb3JnLg0KDQpXZSBzaG91bGQgZGVjaWRlIGR1cmluZyB0aGlzIFRodXJzZGF5J3MgQXJj
-aCBtZWV0aW5nIGlmIHRoZXJlIGlzIGFueSB2YWx1ZQ0KaW4gaGF2aW5nIGFueSBjb25mZXJlbmNl
-IGNhbGxzIG9uIFR1ZXNkYXkgbmV4dCB3ZWVrLg0KDQpDbGF1ZGlhDQotLS0tLS0tLS0tLS0tLS0t
-LS0tLS0tIEZvcndhcmRlZCBieSBDbGF1ZGlhIEFsaW1waWNoL0JvdWxkZXIvSUJNIG9uDQowMy8y
-NS8yMDAzIDA3OjA5IFBNIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQ0KDQoNCkhBUlJZIExF
-V0lTDQowMy8yNS8yMDAzIDA0OjI1IFBNDQoNClRvOiAgICBwd2ctYW5ub3VuY2VAcHdnLm9yZw0K
-Y2M6ICAgIENsYXVkaWEgQWxpbXBpY2gvQm91bGRlci9JQk1ASUJNVVMsIHNoYXduX3ByYXR0QGhw
-LmNvbQ0KRnJvbTogIEhhcnJ5IExld2lzL0JvdWxkZXIvSUJNQElCTVVTDQpTdWJqZWN0OiAgICBV
-UkdFTlQgLSBXQVNISU5HVE9OIEQuQy4gTUVFVElORyBDQU5DRUxFRA0KDQoNCkRlYXIgUFdHIENv
-bGxlYWd1ZSwNCg0KVGhlIHN0YXJ0IG9mIG1pbGl0YXJ5IGFjdGlvbiBpbiBJcmFxLCBhbmQgaGVp
-Z2h0ZW5lZCB0ZXJyb3Jpc3QgYWxlcnQgc3RhdHVzDQppbiB0aGUgVS5TLiwgaGFzIGZvcmNlZCBz
-b21lIG9mIG91ciBtZW1iZXIgY29tcGFuaWVzIHRvIGNoYW5nZSB0aGVpciB0cmF2ZWwNCnBvbGlj
-aWVzLCByZXN0cmljdGluZyB0cmF2ZWwuIEFsdGhvdWdoIG90aGVyIGNvbXBhbnnigJlzIHRyYXZl
-bCBwb2xpY2llcw0KcmVtYWluIHVuY2hhbmdlZCwgdHJhdmVsIGF0IHRoaXMgdGltZSBpcyB2aWV3
-ZWQgYXMgdGVudW91cyBieSBtYW55IG9mIG91cg0KcmVndWxhcmx5IGF0dGVuZGluZyBtZW1iZXJz
-LiBUaGlzIGhhcyByZXN1bHRlZCBpbiBhIHN1YnN0YW50aWFsIHJlZHVjdGlvbg0KaW4gYXR0ZW5k
-YW5jZSBmb3IgdGhlIFdhc2hpbmd0b24gRC5DLiBtZWV0aW5nIGZyb20gd2hhdCB3YXMgb3JpZ2lu
-YWxseQ0KcGxhbm5lZC4NCg0KSW4gbWFueSBjYXNlcywgd29ya2luZyBncm91cCBjaGFpcnBlcnNv
-bnMsIGVkaXRvcnMgYW5kIGtleSBjb250cmlidXRvcnMNCmhhdmUgaGFkIHRvIGRlLWNvbW1pdCB3
-aGljaCBoYXMgcmVzdWx0ZWQgaW4gY2FuY2VsbGF0aW9uIG9mIGVudGlyZSB3b3JraW5nDQpncm91
-cCBtZWV0aW5ncy4gVGhlIHJlZHVjdGlvbiBpbiBudW1iZXJzIGFuZCBrZXkgcGVyc29ubmVsIGlz
-IGRpc3J1cHRpdmUNCmVub3VnaCB0byB0aGUgYWdlbmRhIHRoYXQgdGhlIFByaW50ZXIgV29ya2lu
-ZyBHcm91cCwgYWxvbmcgd2l0aCBGU0cgYW5kDQpDSVA0IGhhdmUgZGVjaWRlZCB0byBjYW5jZWwg
-dGhlIG1lZXRpbmdzIHRoYXQgd2VyZSB0byBiZSBoZWxkIGF0IHRoZQ0KV3luZGhhbSBXYXNoaW5n
-dG9uIEQuQy4gb24gTWFyY2ggMzEtQXByaWwgNCwgMjAwMy4NCg0KVG8gY29tcGVuc2F0ZSBmb3Ig
-dGhpcyBzdWRkZW4gY2hhbmdlIGluIHBsYW5zIHdlIHdpbGwgYXR0ZW1wdCB0aGUgZm9sbG93aW5n
-DQoNCjEuIFdlIHdpbGwgdHJ5IHRvIGFycmFuZ2UgcGhvbmUgYnJpZGdlcyBzbyB0aGF0IGFudGlj
-aXBhdGVkIHdvcmsgZWZmb3J0cw0KbWF5IHN0aWxsIGJlIGFjY29tcGxpc2hlZCB2aWEgdGVsZWNv
-bmZlcmVuY2UgKFdHIGNoYWlycyB0byBjb29yZGluYXRlIHdpdGgNClBXRyBjaGFpciBhbmQgSVNU
-TykNCjIuIFdlIHdpbGwgcmVzY2hlZHVsZSBvdXIgSnVseSBtZWV0aW5nIHRvIG9jY3VyIGVhcmxp
-ZXIgKE1heS9KdW5lKSBhbmQNCmxpa2VseSBpbiBhbiBlYXN5IGFjY2VzcyB3ZXN0IGNvYXN0IFUu
-Uy4gbG9jYXRpb24gKGV4LiBTZWF0dGxlLCBTYW4gSm9zZQ0KZXRjLikuDQozLiBXZSB3aWxsIGF0
-dGVtcHQgY29uZmx1ZW5jZSBvZiBQV0csIEZTRyBhbmQgQ0lQNCBzdWNoIGFzIHdvdWxkIGhhdmUN
-Cm9jY3VycmVkIGluIEQuQy4gaWYgYXQgYWxsIHBvc3NpYmxlDQo0LiBXZSB3aWxsIHJlYXJyYW5n
-ZSBvdXIgcmVtYWluaW5nIDIwMDMgdmVudWUgYnkgbW92aW5nIE9jdG9iZXIgZnJvbSBOWUMgdG8N
-ClByb3ZvIChOb3ZlbGwgaG9zdGluZykgYW5kIERlY2VtYmVyIGZyb20gUHJvdm8gdG8gKGxpa2Vs
-eSkgVmVnYXMuDQoNCk1vc3QgYWlybGluZXMgYXJlIGhhbmRsaW5nIHRyYXZlbCBjYW5jZWxhdGlv
-bnMgYXQgdGhpcyB0aW1lIGJ5IGFsbG93aW5nDQpwYXNzZW5nZXJzIHRvIHJlc2NoZWR1bGUgdy9v
-IHBlbmFsdHkgd2l0aGluIGEgc3BlY2lmaWMgdGltZSBmcmFtZSAoZXguIHdpdGgNCkZyb250aWVy
-IGl0IGlzIE1heSAxKSBhbmQgY29tcGxldGUgdHJhdmVsIGJ5IHllYXIgZW5kLiBDaGVjayB3aXRo
-IHlvdXINCmFpcmxpbmUuDQoNCllvdSBhcmUgcmVzcG9uc2libGUgZm9yIGNhbmNlbGluZyB5b3Vy
-IG93biBob3RlbCByZXNlcnZhdGlvbnMhDQoNCkZvciB0aG9zZSBvZiB5b3Ugd2hvIGhhdmUgcmVn
-aXN0ZXJlZCB3aXRoIHRoZSBJU1RPIGZvciB0aGUgRC5DLiBtZWV0aW5ncywNCnlvdXIgY3JlZGl0
-IGNhcmQgd2lsbCAiTk9UIiBiZSBjaGFyZ2VkIGFueSBmZWVzIGJ5IHRoZSBJRUVFIGZvciB0aGlz
-DQptZWV0aW5nLiAgSWYgeW91IGRvIHNlZSBhIGNoYXJnZSBwbGVhc2Ugbm90aWZ5IEFtaSBQYXRl
-bCByaWdodCBhd2F5LiBQbGVhc2UNCnNlZSBoZXIgY29udGFjdCBpbmZvcm1hdGlvbiBiZWxvdzoN
-Cg0KQW1pIFBhdGVsDQphLnMucGF0ZWxAaWVlZS5vcmcNClBob25lOiArMSA3MzIgNDY1IDY0NzcN
-CkZheDogKzEgNzMyIDk4MSA5NDczDQoNCklmIGFueW9uZSBoYXMgYW55IHF1ZXN0aW9ucyBvciBj
-b25jZXJucywgcGxlYXNlIGRvIG5vdCBoZXNpdGF0ZSB0byBjb250YWN0DQplaXRoZXIgbXlzZWxm
-IG9yIEFtaS4NCg0KV2l0aCBLaW5kZXN0IFJlZ2FyZHMsDQoNCkhhcnJ5IExld2lzDQpJQk0NClBX
-RyBDaGFpcm1hbg0KLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0t
-LQ0KSGFycnkgTGV3aXMNCklCTSBQcmludGluZyBTeXN0ZW1zDQotLS0tLS0tLS0tLS0tLS0tLS0t
-LS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tDQo=
+Robert L Krawitz wrote:
+ > ...
+>    (and from the CUPS standpoint, we *will not* be supporting a
+>    direct scheduler<->driver interface, as that opens up serious
+>    security and performance issues...)
+> 
+> What's the security issue?
 
+The two main ones are:
+
+     1. If we directly connect to the driver/library, then any buffer
+        overflows in the driver/library might be exploited to gain
+        root access.  Thus, we won't directly connect...
+
+     2. If we indirectly connect to the driver/library, and do it
+        "safely" with a non-priviledged user with pipes to and from
+        the backend so the driver can communicate with the device,
+        we run the risk of a DoS attack if more than one user wants
+        to print at the same time and needs the "dynamic" driver
+        data.  This also falls under the performance umbrella...
+
+The mechanism we will be using in CUPS 1.2 is an asynchronous
+device daemon with a "port monitor" facility that will allow
+developers to provide printer driver filter(s) and a "port
+monitor" program; the filter(s) will handle the production of
+data suitable for the printer, while the (optional) port
+monitor handles printer queries, data encoding, etc.  One other
+task for the port monitor is periodic status updates via the
+device monitor - this will allow the port monitor to update the
+PPD file for current device configuration, update the printer
+object for current state, etc.
+
+> ...
+> Another issue that didn't occur to me last night is that actually
+> going through and computing the constraints (to generate PPD
+> constraints) is expensive; in principle, genppd would have to set all
+> of the option to all of the possible values to determine the legal
+> combinations.  While in practice it's not that bad, it's much easier
+> to determine the legal values for a given option in the context of all
+> other current settings.
+ > ...
+
+I have some code we're using for the HP APDK drivers in ESP Print
+Pro (those are the same ones that come in HP IJS, although the IJS
+drivers are stripped down in comparison...) that may come in handy
+for doing the basic constraints.  It isn't that bad for the
+relatively small number of drivers we have to generate PPD files
+for...
+
+Ideally we should be able to provide a GIMP-print API for
+retrieving the driver constraints and/or put all of the driver-
+specific data in the printers.xml file so that the driver and
+PPD files are data driven and not hardcoded.  This would also
+make it possible for programmatic PPD file generation - CUPS
+would ask GIMP-print for a list of the drivers it supports
+along with "virtual" PPD filenames, and then CUPS can have
+GIMP-print write the PPD file in /etc/cups/ppd as requested by
+the administrator.
+
+-- 
+______________________________________________________________________
+Michael Sweet, Easy Software Products                  mike@easysw.com
+Printing Software for UNIX                       http://www.easysw.com
 
 
