@@ -1,10 +1,9 @@
-Message-ID: <116DB56CD7DED511BC7800508B2CA53735D0C8@mailsrvnt02.enet.sharplabs.com>
-From: "McDonald, Ira" <imcdonald@sharplabs.com>
-Date: Fri, 25 Jul 2003 13:41:54 -0700
+Message-ID: <OF4F235713.102DBA2E-ON87256D73.004B6770@us.ibm.com>
+From: Claudia Alimpich <alimpich@us.ibm.com>
+Date: Wed, 30 Jul 2003 07:49:37 -0600
 MIME-Version: 1.0
-Content-Type: text/plain;
-	charset="iso-8859-1"
-Subject: [Printing-architecture] FW: PWG-ANNOUNCE> Free XML Schema Validator (XSV 2.5)
+Content-type: text/plain; charset=US-ASCII
+Subject: [Printing-architecture] Is there a meeting on Thursday July 31st?
 Sender: printing-architecture-admin@freestandards.org
 Errors-To: printing-architecture-admin@freestandards.org
 List-Help: <mailto:printing-architecture-request@freestandards.org?subject=help>
@@ -18,31 +17,11 @@ List-Archive: <http://freestandards.org/pipermail/printing-architecture/>
 To: printing-architecture@freestandards.org
 
 
------Original Message-----
-From: Michael Sweet [mailto:mike@easysw.com]
-Sent: Friday, July 25, 2003 3:27 PM
-To: McDonald, Ira
-Cc: pwg-announce@pwg.org
-Subject: Re: PWG-ANNOUNCE> Free XML Schema Validator (XSV 2.5)
 
 
-McDonald, Ira wrote:
-> Hi,
-> 
-> [worth adding to your bag of local XML tools]
-> ...
+Are we having an architecture meeting tomorrow (Thursday Aug 31st)? I have
+a conflict and I want to know if I should work out my conflict or not.
 
-Also, for those wanting a tiny XML library for their (embedded)
-apps, my free Mini-XML library is available at:
-
-     http://www.easysw.com/~mike/mxml/
-
-It is about 1/100th the size of libxml2...
-
--- 
-______________________________________________________________________
-Michael Sweet, Easy Software Products           mike at easysw dot com
-Printing Software for UNIX                       http://www.easysw.com
-
+Claudia
 
 
