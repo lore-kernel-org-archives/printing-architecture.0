@@ -1,9 +1,11 @@
-From: "Charles Hemstreet" <charles_at_hp@hotmail.com>
-Date: Tue, 03 Jun 2003 17:37:44 -0700
-Mime-Version: 1.0
-Content-Type: text/plain; format=flowed
-Message-ID: <Sea2-F54XIaKGdQPPxe00046ed1@hotmail.com>
-Subject: [Printing-architecture] Architecture meeting agenda 20030605. . .
+Message-ID: <116DB56CD7DED511BC7800508B2CA53735D021@mailsrvnt02.enet.sharplabs.com>
+From: "McDonald, Ira" <imcdonald@sharplabs.com>
+Date: Wed, 4 Jun 2003 09:00:30 -0700 
+MIME-Version: 1.0
+Content-Type: text/plain;
+	charset="iso-8859-1"
+Subject: [Printing-architecture] FW: PWG-ANNOUNCE> Document Object Specification for Portland fina
+ l review
 Sender: printing-architecture-admin@freestandards.org
 Errors-To: printing-architecture-admin@freestandards.org
 List-Help: <mailto:printing-architecture-request@freestandards.org?subject=help>
@@ -16,37 +18,49 @@ List-Unsubscribe: <http://freestandards.org/mailman/listinfo/printing-architectu
 List-Archive: <http://freestandards.org/pipermail/printing-architecture/>
 To: printing-architecture@freestandards.org
 
-Folks:
 
-New meeting time for our architecture teleconference:
+-----Original Message-----
+From: Zehler, Peter [mailto:PZehler@crt.xerox.com]
+Sent: Wednesday, June 04, 2003 11:09 AM
+To: PWG Announce (E-mail)
+Subject: PWG-ANNOUNCE> Document Object Specification for Portland final
+review
 
-Every Thursday
-1200-1300 PST
-1300-1400 MST
-1400-1500 CST
-1500-1600 EST
-2000-2100 UTC
 
-There is a new call-in number:
+All,
 
-          - *Toll Free Access Number:
-            866-639-4758 (toll-free)
-            574-935-6716 (toll)
+Here is the Document Object specification that we will be reviewing at the
+upcoming Face-to-Face in Portland.  The objective is to get the Document
+Object specification into Last Call.  Please come with any comments or
+issues so they can be resolved at the meeting.  Those not attending are
+encouraged to send comments and issues to the IPP mailing list
+(mailto:IPP@pwg.org).  Hopefully after the Portland meeting there will be
+another revision that will be sent to Last Call.
 
-          - Participant PIN:
-            2124490
+The file for review is the pdf file:
+ftp://www.pwg.org/pub/pwg/ipp/new_DOC/wd-ippdoc10-20030603.pdf
+( or ftp://www.pwg.org/pub/pwg/ipp/new_DOC/wd-ippdoc10-20030603pdf.zip)
 
-Agenda:
+Also available are the Word and rev versions 
+ftp://www.pwg.org/pub/pwg/ipp/new_DOC/wd-ippdoc10-20030603doc.zip
+ftp://www.pwg.org/pub/pwg/ipp/new_DOC/wd-ippdoc10-20030603doc-rev.zip
 
-1) Backup calling plan
-2) FSG/OP schedule
-3) other?
 
-Thanks,
-Charles
+Pete
 
-_________________________________________________________________
-MSN 8 with e-mail virus protection service: 2 months FREE*  
-http://join.msn.com/?page=features/virus
+
+
+
+				Peter Zehler
+				XEROX
+				Xerox Innovation Group
+				Email: PZehler@crt.xerox.com
+				Voice:    (585) 265-8755
+				FAX:      (585) 422-7961
+				US Mail: Peter Zehler
+				        Xerox Corp.
+				        800 Phillips Rd.
+				        M/S 128-25E
+				        Webster NY, 14580-9701
 
 
