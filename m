@@ -1,11 +1,10 @@
-Message-ID: <116DB56CD7DED511BC7800508B2CA53735D00C@mailsrvnt02.enet.sharplabs.com>
-From: "McDonald, Ira" <imcdonald@sharplabs.com>
-Subject: RE: [Printing-architecture]  [go to OLD number] Today's meeting -
-	 no initiator number to activate call
-Date: Thu, 29 May 2003 12:14:38 -0700
+Message-ID: <CBD6266EA291D5118144009027AA63350A37288B@xboi05.boi.hp.com>
+From: "PRATT,SHAWN (HP-Boise,ex1)" <shawn.pratt@hp.com>
+Subject: RE: [Printing-architecture] Today's meeting - no initiator number
+	 to activate call
+Date: Thu, 29 May 2003 12:17:50 -0700
 MIME-Version: 1.0
-Content-Type: text/plain;
-	charset="iso-8859-1"
+Content-Type: text/plain
 Sender: printing-architecture-admin@freestandards.org
 Errors-To: printing-architecture-admin@freestandards.org
 List-Help: <mailto:printing-architecture-request@freestandards.org?subject=help>
@@ -18,21 +17,16 @@ List-Unsubscribe: <http://freestandards.org/mailman/listinfo/printing-architectu
 List-Archive: <http://freestandards.org/pipermail/printing-architecture/>
 To: 'Glen Petrie' <glen.petrie@eitc.epson.com>, 'Claudia Alimpich' <alimpich@us.ibm.com>, printing-architecture@freestandards.org
 
-Hi Glen,
-
-Ah hah!  Yes let's go to the old number.
-
-Cheers,
-- Ira
-
+Hi guys:  You can use the old number for the next 45 minutes.  It will get
+used at 2:00 pm MT time.  Sorry I can't make the meeting, I am in another
+meeting right now.  - Shawn
 
 -----Original Message-----
-From: Glen Petrie [mailto:glen.petrie@eitc.epson.com]
-Sent: Thursday, May 29, 2003 3:02 PM
+From: Glen Petrie [mailto:glen.petrie@eitc.epson.com] 
+Sent: Thursday, May 29, 2003 1:02 PM
 To: 'Claudia Alimpich'; printing-architecture@freestandards.org
-Subject: RE: [Printing-architecture] Today's meeting - no initiator
-number to activate call
-
+Subject: RE: [Printing-architecture] Today's meeting - no initiator number
+to activate call
 
 The old number appears to work and we have the special code for that - do we
 want to transfer to the old call in number
