@@ -1,10 +1,10 @@
-Message-ID: <3EF8D316.70002@gmx.net>
-Date: Wed, 25 Jun 2003 00:39:18 +0200
-From: Till Kamppeter <till.kamppeter@gmx.net>
+Message-ID: <116DB56CD7DED511BC7800508B2CA53735D076@mailsrvnt02.enet.sharplabs.com>
+From: "McDonald, Ira" <imcdonald@sharplabs.com>
+Date: Thu, 26 Jun 2003 07:35:20 -0700
 MIME-Version: 1.0
-Content-Type: text/plain; charset=us-ascii; format=flowed
-Content-Transfer-Encoding: 7bit
-Subject: [Printing-architecture] Photos of the PWG meeting in Portland
+Content-Type: text/plain;
+	charset="iso-8859-1"
+Subject: [Printing-architecture] FSG Arch telecon today (26 June)??
 Sender: printing-architecture-admin@freestandards.org
 Errors-To: printing-architecture-admin@freestandards.org
 List-Help: <mailto:printing-architecture-request@freestandards.org?subject=help>
@@ -15,20 +15,16 @@ List-Id: <printing-architecture.freestandards.org>
 List-Unsubscribe: <http://freestandards.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@freestandards.org?subject=unsubscribe>
 List-Archive: <http://freestandards.org/pipermail/printing-architecture/>
-To: printing-architecture <printing-architecture@freestandards.org>, printing-jobticket@freestandards.org, harryl@us.ibm.com, david.suffield@hp.com, toratani.yasumasa@canon.co.jp
+To: printing-architecture@freestandards.org
 
-Oi,
+Hi,
 
-here are the photos of the meeting in Portland:
+Are we having an FSG OP Arch telecon today at 8am PDT?
 
-http://www.linuxprinting.org/till/pwg-portland2003/photos/
+Possible topic:  Recap last week's PWG/FSG meetings and
+talk about next steps.
 
-All photos are there in three sizes with the biggest being 4 Megapixel. 
-So you will be able to make high-quality printouts.
-
-I have posted this mail on the architecture and jobticket lists. Who is 
-subscribed to PWG lists, please forwrad this mail, thank you.
-
-    Till
-
+Cheers,
+- Ira McDonald
+  High North
 
