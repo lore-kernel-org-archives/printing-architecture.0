@@ -1,11 +1,11 @@
-Message-ID: <116DB56CD7DED511BC7800508B2CA537B0023D@mailsrvnt02.enet.sharplabs.com>
+Message-ID: <116DB56CD7DED511BC7800508B2CA537B0023E@mailsrvnt02.enet.sharplabs.com>
 From: "McDonald, Ira" <imcdonald@sharplabs.com>
-Date: Fri, 14 Nov 2003 09:45:29 -0800
+Date: Fri, 14 Nov 2003 09:46:40 -0800
 MIME-Version: 1.0
 Content-Type: text/plain;
 	charset="iso-8859-1"
 Subject: [Printing-architecture] FW: PWG-ANNOUNCE> Announcing IEEE-ISTO PWG Candidate Standard 510
- 0.6-2003
+ 0.7-2003
 Sender: printing-architecture-admin@freestandards.org
 Errors-To: printing-architecture-admin@freestandards.org
 List-Help: <mailto:printing-architecture-request@freestandards.org?subject=help>
@@ -20,7 +20,7 @@ To: printing-architecture@freestandards.org
 
 Hi,
 
-IPP Page Overrides is now IEEE-ISTO PWG Candidate Standard 5100.6-2003.
+IPP Job Extensions is now IEEE-ISTO PWG Candidate Standard 5100.7-2003.
 
 Cheers,
 - Ira
@@ -33,20 +33,17 @@ email: imcdonald@sharplabs.com
 
 -----Original Message-----
 From: Zehler, Peter [mailto:PZehler@crt.xerox.com]
-Sent: Thursday, November 13, 2003 11:16 AM
+Sent: Thursday, November 13, 2003 11:18 AM
 To: PWG Announce (pwg-announce@pwg.org)
 Subject: PWG-ANNOUNCE> Announcing IEEE-ISTO PWG Candidate Standard
-5100.6-2003
+5100.7-2003 
 
 
 All,
-The IEEE-ISTO PWG Candidate Standard 5100.6-2003 - IPP Page Overrides
-specification has been approved as a candidate standard.  The vote was 8
-for, 0 against and 1 abstain. This Candidate Standard obsoletes the
-IEEE-ISTO PWG Trial Use Standard 5100.4-2001 - IPP Override Attributes for
-Documents and Pages specification.  The Candidate Standard5100.6-2003 has
-been published on the PWG standards page < http://www.pwg.org/standards.html
->.
+The IEEE-ISTO PWG Candidate Standard 5100.7-2003 - IPP Job Extensions
+specification has been approved as a candidate standard.  The vote was 7
+for, 0 against and 1 abstain. The Candidate Standard has been published on
+the PWG standards page < http://www.pwg.org/standards.html >.
 Pete
 
 
