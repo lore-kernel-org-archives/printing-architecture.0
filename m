@@ -1,9 +1,9 @@
-Message-ID: <OF6D395B77.8E666500-ON86256DB3.006E8C55-86256DB3.006FA93C@us.ibm.com>
-From: Mark Hamzy <hamzy@us.ibm.com>
-Date: Thu, 2 Oct 2003 15:19:38 -0500
+Message-ID: <OF9A432519.006AE914-ON87256DB8.00064D84@us.ibm.com>
+From: Claudia Alimpich <alimpich@us.ibm.com>
+Date: Mon, 6 Oct 2003 19:19:30 -0600
 MIME-Version: 1.0
 Content-type: text/plain; charset=US-ASCII
-Subject: [Printing-architecture] Which license should the Open Printing group use
+Subject: [Printing-architecture] Remember those monthly status reports? It's that time!
 Sender: printing-architecture-admin@freestandards.org
 Errors-To: printing-architecture-admin@freestandards.org
 List-Help: <mailto:printing-architecture-request@freestandards.org?subject=help>
@@ -14,34 +14,24 @@ List-Id: <printing-architecture.freestandards.org>
 List-Unsubscribe: <http://freestandards.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@freestandards.org?subject=unsubscribe>
 List-Archive: <http://freestandards.org/pipermail/printing-architecture/>
-To: Douglas McNeil <mcneil@us.ibm.com>
-Cc: printing-architecture@freestandards.org
+To: printing-architecture@freestandards.org
 
 
 
 
-Hi Scott,
+Our status reports are due by the end of the day Friday Oct 10th. I would
+like to merge and send the reports Friday afternoon, so if you could please
+put your reports on the pwg site
+(ftp://ftp.pwg.org/pub/pwg/fsg/status_reports/) Friday morning that would
+be great.
 
-There are a number of licenses that can be used for code that is released
-by the OP working groups.  For example, GPL, LGPL, MIT (Expat), and the CPL
-are choices that are available.  I think that the GPL and the LGPL will be
-ruled out because modifications to the source need to be released and the
-companies that participate may not want that restriction.
+We'll briefly talk about the Arch status report during Thursday's Arch
+meeting and the JT status report during tomorrow's JT WG meeting. Could
+someone (Glen or Ira) please put together the Driver report in Mark's
+absence? You can probably just copy the Sept report and edit it with
+updates.
 
-Therefore, two that are left are the Expat and the CPL license.  The
-problem with the CPL license is that the FSF considers it to be
-incompatible with the GPL.  This could limit participation by the
-community.
-
-What we are looking for is a recommendation by the FSG that code released
-by a working group should be under a certain license.  Do you recommend
-either of those two licenses or do you recommend another license?
-
-Also, what license should be used for documentation?
-
-Mark
-
-Take a look at the Linux Omni Printer Driver Framework at
-http://www.ibm.com/linux/ltc/projects/omni/
+Thanks,
+Claudia
 
 
