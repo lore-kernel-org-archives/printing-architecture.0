@@ -1,11 +1,11 @@
-Message-ID: <2F7D63A21DB2C74EB8EB8C09AF667DB06EFAC7@eitc220.eitc.epson.com>
-From: "Petrie, Glen" <glen.petrie@eitc.epson.com>
-Date: Wed, 4 Aug 2004 15:38:47 -0700 
+Message-ID: <OFFA850325.CE3227DE-ON86256EE8.007888D7-86256EE8.00792A6F@us.ibm.com>
+From: Mark Hamzy <hamzy@us.ibm.com>
+Date: Fri, 6 Aug 2004 17:03:27 -0500
 MIME-Version: 1.0
-Content-Type: multipart/alternative;
-	boundary="----_=_NextPart_001_01C47A73.CE31E2A0"
-Subject: [Printing-architecture] Reference Model Description for Status
-	Monitoring and Capabilitie s. 
+Content-type: multipart/alternative; 
+	Boundary="0__=09BBE47BDFEB0E478f9e8a93df938690918c09BBE47BDFEB0E47"
+Content-Disposition: inline
+Subject: [Printing-architecture] renderer/driver
 List-Id: Printing architecture under linux
 	<printing-architecture.mail.freestandards.org>
 List-Unsubscribe: <http://mail.freestandards.org/mailman/listinfo/printing-architecture>,
@@ -17,258 +17,142 @@ List-Subscribe: <http://mail.freestandards.org/mailman/listinfo/printing-archite
 	<mailto:printing-architecture-request@mail.freestandards.org?subject=subscribe>
 To: printing-architecture@freestandards.org
 
-This message is in MIME format. Since your mail reader does not understand
-this format, some or all of this message may not be legible.
-
-------_=_NextPart_001_01C47A73.CE31E2A0
-Content-Type: text/plain
-
-Status Monitoring Subsystem:
-
- 
-
-The Status Monitoring subsystem provides a single subsystem for the
-collection, acquisition, summarization, dissemination and/or reporting of
-the physical and/or logical print driver, print communication and/or printer
-status and/or state information.  There is a single Application Programming
-Interface (API) for the setup and retrieval of specified status information.
-In addition to polling support for specified status information, the API
-shall include a callback mechanism to report specified status information
-based on an events and/or times.   The subsystem shall include a dead-man
-timer capability for monitoring the general operation of the print driver,
-print communication and/or printer.  Status information, for example
-includes, but is not limited to, the printer's current state, ink/toner
-levels, percentage of a page, document and/or job completed and the
-state/condition of all I/O channels.  "Standard" status information (to be
-determined) is formatted for efficiency while formatting for extension
-status information is not specified.  Status Monitoring is not to be
-confused with Job Monitoring associated with the Print Manager.
-
- 
-
- 
-
-Capabilities Subsystem:
-
- 
-
-The Capabilities Subsystem provides a single subsystem for the collection,
-acquisition, summarization, dissemination and/or reporting of the printer's
-physical and logical capabilities.  Collection of capability information
-comes from the printer, a file(s) and/or network location(s).  There is a
-single Application Programming Interface (API) that can accept capability
-information in to-be-determined formats and report specified capability
-information.  The API will provide specified information for a specified
-print device and/or can provide the printer or list of printers with the
-specified capability(ies).  "Standard" capability information (to be
-determined) is formatted for efficiency while formatting for extension
-capability information is represented by key-value pairs.  The Capability
-Subsystem does not interpret capability information nor validate the
-information beyond syntax and "reasonableness" bounds checking for
-"standard" capability information.  
-
-Rgds, 
-Glen W. Petrie 
-Epson Imaging Technology Center 
-150 River Oaks Parkway, Suite 200 
-San Jose, CA, 95134 
-Voice: 408.576.4131  Fax: 408.474.0511 
-
- 
+--0__=09BBE47BDFEB0E478f9e8a93df938690918c09BBE47BDFEB0E47
+Content-type: text/plain; charset=US-ASCII
 
 
-------_=_NextPart_001_01C47A73.CE31E2A0
-Content-Type: text/html
-Content-Transfer-Encoding: quoted-printable
-
-<html xmlns:o=3D"urn:schemas-microsoft-com:office:office" =
-xmlns:w=3D"urn:schemas-microsoft-com:office:word" =
-xmlns=3D"http://www.w3.org/TR/REC-html40">
-
-<head>
-<META HTTP-EQUIV=3D"Content-Type" CONTENT=3D"text/html; =
-charset=3Dus-ascii">
 
 
-<meta name=3DGenerator content=3D"Microsoft Word 11 (filtered medium)">
-<style>
-<!--
- /* Font Definitions */
- @font-face
-	{font-family:"MS Mincho";
-	panose-1:2 2 6 9 4 2 5 8 3 4;}
-@font-face
-	{font-family:SimSun;
-	panose-1:2 1 6 0 3 1 1 1 1 1;}
-@font-face
-	{font-family:"Comic Sans MS";
-	panose-1:3 15 7 2 3 3 2 2 2 4;}
-@font-face
-	{font-family:"\@SimSun";
-	panose-1:2 1 6 0 3 1 1 1 1 1;}
-@font-face
-	{font-family:"\@MS Mincho";
-	panose-1:2 2 6 9 4 2 5 8 3 4;}
- /* Style Definitions */
- p.MsoNormal, li.MsoNormal, div.MsoNormal
-	{margin:0in;
-	margin-bottom:.0001pt;
-	font-size:12.0pt;
-	font-family:"Times New Roman";}
-a:link, span.MsoHyperlink
-	{color:blue;
-	text-decoration:underline;}
-a:visited, span.MsoHyperlinkFollowed
-	{color:purple;
-	text-decoration:underline;}
-p
-	{mso-margin-top-alt:auto;
-	margin-right:0in;
-	mso-margin-bottom-alt:auto;
-	margin-left:0in;
-	font-size:12.0pt;
-	font-family:"Times New Roman";}
-span.EmailStyle17
-	{mso-style-type:personal-compose;
-	font-family:"Courier New";
-	color:windowtext;}
-@page Section1
-	{size:8.5in 11.0in;
-	margin:1.0in 1.25in 1.0in 1.25in;}
-div.Section1
-	{page:Section1;}
--->
-</style>
 
-</head>
+A renderer is a program that takes a recording of drawing commands from an
+application and interfaces with a printer driver (driver) to create a
+print job in printer specific language.  The driver may support high level
+drawing commands, accept a raster image, or handle a mixture of some high
+level drawing commands with a raster image fallback.  The renderer is also
+responsible for presenting the printer driver's device fonts to the
+operating system.  If an application uses device fonts, then the renderer
+will notify the printer driver during the print job.
 
-<body lang=3DEN-US link=3Dblue vlink=3Dpurple>
+The operating system may support the concept of device independent drawing
+contexts.  Once these contexts are created, they can be used for drawing
+on the video screen or on hardcopy output with no change to the API set
+except for the initial creation.
 
-<div class=3DSection1>
+---
 
-<p class=3DMsoNormal><font size=3D2 face=3D"Courier New"><span =
-style=3D'font-size:10.0pt;
-font-family:"Courier New"'>Status Monitoring =
-Subsystem:<o:p></o:p></span></font></p>
+A printer driver (driver) is the interface between the operating system
+(OS) and a physical printer (printer).  There are many responsibilities
+for a driver.  The primary responsibility is to generate print jobs from
+an application.
 
-<p class=3DMsoNormal><font size=3D2 face=3D"Courier New"><span =
-style=3D'font-size:10.0pt;
-font-family:"Courier New"'><o:p>&nbsp;</o:p></span></font></p>
+One interface that the driver provides deals with properties.  There is a
+set of properties that can change between print jobs.  These properties
+are called job properties.  The job properties are divided into three
+sets, 1) those properties that are defined by the OS and are supported by
+the printer driver, 2) those properties that are defined by the OS and
+understood by the driver but not necessarily supported by a driver and 3)
+properties that are specific to each driver.  Some properties might be
+supported if an optional feature of the printer is installed.  Defining
+if these properties are installed/activated or not are called printer
+properties.  Through the interface, applications (and spoolers) may
+enumerate the properties (either one or many).  The interface also may
+tell the application that constraints exist between different properties.
 
-<p class=3DMsoNormal><font size=3D2 face=3D"Courier New"><span =
-style=3D'font-size:10.0pt;
-font-family:"Courier New"'>The Status Monitoring subsystem provides a =
-single subsystem
-for the collection, acquisition, summarization, dissemination and/or =
-reporting
-of the physical and/or logical print driver, print communication and/or =
-printer
-status and/or state information.&nbsp; There is a single Application
-Programming Interface (API) for the setup and retrieval of specified =
-status
-information. &nbsp;&nbsp;In addition to polling support for specified =
-status
-information, the API shall include a callback mechanism to report =
-specified
-status information based on an events and/or times. &nbsp;&nbsp;The =
-subsystem
-shall include a dead-man timer capability for monitoring the general =
-operation
-of the print driver, print communication and/or printer. &nbsp;Status
-information, for example includes, but is not limited to, the =
-printer&#8217;s
-current state, ink/toner levels, percentage of a page, document and/or =
-job
-completed and the state/condition of all I/O channels.&nbsp; =
-&#8220;Standard&#8221;
-status information (to be determined) is formatted for efficiency while =
-formatting
-for extension status information is not specified. &nbsp;Status =
-Monitoring is
-not to be confused with Job Monitoring associated with the Print =
-Manager.<o:p></o:p></span></font></p>
+Another interface is dealing with print jobs.  Print jobs under linux are
+generated using the Postscript language.  When the jobs are despooled,
+then a rendering engine that understands Postscript will convert the
+Postscript commands into a API set for the driver.  The driver will then
+create a printer specific data stream that corresponds to the Postscript
+commands.  Drivers may support either a set of vector drawing calls or
+accept a raster bitmap or support both sets of drawing calls.
 
-<p class=3DMsoNormal><font size=3D2 face=3D"Courier New"><span =
-style=3D'font-size:10.0pt;
-font-family:"Courier New"'><o:p>&nbsp;</o:p></span></font></p>
+Drivers may optionally support device fonts.  When device fonts are
+supported, then applications can query and use these fonts as part of the
+print job.  The font metrics are provided so that the application can
+position the characters on the screen using a system font if an exact font
+is not available.
 
-<p class=3DMsoNormal><font size=3D2 face=3D"Courier New"><span =
-style=3D'font-size:10.0pt;
-font-family:"Courier New"'><o:p>&nbsp;</o:p></span></font></p>
+Drivers are asked what devices that they support.  Drivers are told to
+install or remove a specific device.  They are also told that a new
+version is being installed.
 
-<p class=3DMsoNormal><font size=3D2 face=3D"Courier New"><span =
-style=3D'font-size:10.0pt;
-font-family:"Courier New"'>Capabilities =
-Subsystem:<o:p></o:p></span></font></p>
+Drivers are responsible for bidirectional communications protocols to
+their device.
 
-<p class=3DMsoNormal><font size=3D2 face=3D"Courier New"><span =
-style=3D'font-size:10.0pt;
-font-family:"Courier New"'><o:p>&nbsp;</o:p></span></font></p>
+Drivers may provide a color profile for their device given the current job
+properties.
 
-<p class=3DMsoNormal><font size=3D2 face=3D"Courier New"><span =
-style=3D'font-size:10.0pt;
-font-family:"Courier New"'>The Capabilities Subsystem provides a single
-subsystem for the collection, acquisition, summarization, dissemination =
-and/or
-reporting of the printer&#8217;s physical and logical =
-capabilities.&nbsp; Collection
-of capability information comes from the printer, a file(s) and/or =
-network
-location(s). &nbsp;There is a single Application Programming Interface =
-(API) that
-can accept capability information in to-be-determined formats and =
-report
-specified capability information. &nbsp;The API will provide specified
-information for a specified print device and/or can provide the printer =
-or list
-of printers with the specified capability(ies). =
-&nbsp;&#8220;Standard&#8221; capability
-information (to be determined) is formatted for efficiency while =
-formatting for
-extension capability information is represented by key-value =
-pairs.&nbsp; The Capability
-Subsystem does not interpret capability information nor validate the =
-information
-beyond syntax and &#8220;reasonableness&#8221; bounds checking for =
-&#8220;standard&#8221;
-capability information. &nbsp;<o:p></o:p></span></font></p>
+Mark
 
-<p><i><font size=3D2 face=3D"Comic Sans MS"><span =
-style=3D'font-size:10.0pt;
-font-family:"Comic Sans MS";font-style:italic'>Rgds, =
-</span></font></i><br>
-<b><i><font color=3D"#333399" face=3D"Comic Sans MS"><span =
-style=3D'font-family:"Comic Sans MS";
-color:#333399;font-weight:bold;font-style:italic'>Glen W. =
-Petrie</span></font></i></b>
+Take a look at the Linux Omni Printer Driver Framework at
+http://www.ibm.com/linux/ltc/projects/omni/
+--0__=09BBE47BDFEB0E478f9e8a93df938690918c09BBE47BDFEB0E47
+Content-type: text/html; charset=US-ASCII
+Content-Disposition: inline
+
+<html><body>
+<p>A renderer is a program that takes a recording of drawing commands from an<br>
+application and interfaces with a printer driver (driver) to create a<br>
+print job in printer specific language.  The driver may support high level<br>
+drawing commands, accept a raster image, or handle a mixture of some high<br>
+level drawing commands with a raster image fallback.  The renderer is also<br>
+responsible for presenting the printer driver's device fonts to the<br>
+operating system.  If an application uses device fonts, then the renderer<br>
+will notify the printer driver during the print job.<br>
 <br>
-<i><font size=3D2 face=3D"Comic Sans MS"><span =
-style=3D'font-size:10.0pt;font-family:
-"Comic Sans MS";font-style:italic'>Epson Imaging Technology Center =
-</span></font></i><br>
-<i><font size=3D2 face=3D"Comic Sans MS"><span =
-style=3D'font-size:10.0pt;font-family:
-"Comic Sans MS";font-style:italic'>150 River Oaks Parkway, Suite 200 =
-</span></font></i><br>
-<i><font size=3D2 face=3D"Comic Sans MS"><span =
-style=3D'font-size:10.0pt;font-family:
-"Comic Sans MS";font-style:italic'>San Jose, CA, 95134 =
-</span></font></i><br>
-<i><font size=3D2 face=3D"Comic Sans MS"><span =
-style=3D'font-size:10.0pt;font-family:
-"Comic Sans MS";font-style:italic'>Voice: 408.576.4131&nbsp; Fax: =
-408.474.0511</span></font></i>
-<o:p></o:p></p>
+The operating system may support the concept of device independent drawing<br>
+contexts.  Once these contexts are created, they can be used for drawing<br>
+on the video screen or on hardcopy output with no change to the API set<br>
+except for the initial creation.<br>
+<br>
+---<br>
+<br>
+A printer driver (driver) is the interface between the operating system<br>
+(OS) and a physical printer (printer).  There are many responsibilities<br>
+for a driver.  The primary responsibility is to generate print jobs from<br>
+an application.<br>
+<br>
+One interface that the driver provides deals with properties.  There is a<br>
+set of properties that can change between print jobs.  These properties<br>
+are called job properties.  The job properties are divided into three<br>
+sets, 1) those properties that are defined by the OS and are supported by<br>
+the printer driver, 2) those properties that are defined by the OS and<br>
+understood by the driver but not necessarily supported by a driver and 3)<br>
+properties that are specific to each driver.  Some properties might be<br>
+supported if an optional feature of the printer is installed.  Defining<br>
+if these properties are installed/activated or not are called printer<br>
+properties.  Through the interface, applications (and spoolers) may<br>
+enumerate the properties (either one or many).  The interface also may<br>
+tell the application that constraints exist between different properties.<br>
+<br>
+Another interface is dealing with print jobs.  Print jobs under linux are<br>
+generated using the Postscript language.  When the jobs are despooled,<br>
+then a rendering engine that understands Postscript will convert the<br>
+Postscript commands into a API set for the driver.  The driver will then<br>
+create a printer specific data stream that corresponds to the Postscript<br>
+commands.  Drivers may support either a set of vector drawing calls or<br>
+accept a raster bitmap or support both sets of drawing calls.<br>
+<br>
+Drivers may optionally support device fonts.  When device fonts are<br>
+supported, then applications can query and use these fonts as part of the<br>
+print job.  The font metrics are provided so that the application can<br>
+position the characters on the screen using a system font if an exact font<br>
+is not available.<br>
+<br>
+Drivers are asked what devices that they support.  Drivers are told to<br>
+install or remove a specific device.  They are also told that a new<br>
+version is being installed.<br>
+<br>
+Drivers are responsible for bidirectional communications protocols to<br>
+their device.<br>
+<br>
+Drivers may provide a color profile for their device given the current job<br>
+properties.<br>
+<br>
+Mark<br>
+<br>
+Take a look at the Linux Omni Printer Driver Framework at<br>
+<a href="http://www.ibm.com/linux/ltc/projects/omni/">http://www.ibm.com/linux/ltc/projects/omni/</a></body></html>
+--0__=09BBE47BDFEB0E478f9e8a93df938690918c09BBE47BDFEB0E47--
 
-<p class=3DMsoNormal><font size=3D3 face=3D"Times New Roman"><span =
-style=3D'font-size:
-12.0pt'><o:p>&nbsp;</o:p></span></font></p>
-
-</div>
-
-</body>
-
-</html>
-
-------_=_NextPart_001_01C47A73.CE31E2A0--
 
