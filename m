@@ -1,10 +1,11 @@
-Message-ID: <116DB56CD7DED511BC7800508B2CA53735CF57@mailsrvnt02.enet.sharplabs.com>
+Message-ID: <116DB56CD7DED511BC7800508B2CA53735CF58@mailsrvnt02.enet.sharplabs.com>
 From: "McDonald, Ira" <imcdonald@sharplabs.com>
-Date: Sun, 30 Mar 2003 16:22:05 -0800
+Date: Sun, 30 Mar 2003 16:27:28 -0800
 MIME-Version: 1.0
 Content-Type: text/plain;
 	charset="iso-8859-1"
-Subject: [Printing-architecture] FW: PWG IPPFAX> Wed 2 April 12-3pm PST telecon
+Subject: [Printing-architecture] FW: PWG CR> Mon 31 March 12:30-2pm PST Character Repertoire telec
+ on
 Sender: printing-architecture-admin@freestandards.org
 Errors-To: printing-architecture-admin@freestandards.org
 List-Help: <mailto:printing-architecture-request@freestandards.org?subject=help>
@@ -17,35 +18,52 @@ List-Unsubscribe: <http://freestandards.org/mailman/listinfo/printing-architectu
 List-Archive: <http://freestandards.org/pipermail/printing-architecture/>
 To: printing-architecture@freestandards.org
 
+
 -----Original Message-----
-From: HALL,DAVID (HP-Vancouver,ex1) [mailto:dhall@hp.com]
-Sent: Friday, March 28, 2003 10:46 AM
-To: 'Gail Songer'; pwg-announce@pwg.org; ifx@pwg.org
-Subject: RE: IFX> Wed 2 April 3-6pm EST Conf call
+From: ElliottBradshaw@oaktech.com [mailto:ElliottBradshaw@oaktech.com]
+Sent: Friday, March 28, 2003 7:47 AM
+To: cr@pwg.org
+Cc: pwg@pwg.org
+Subject: CR> Mon 31 March 3:30 EST Character Repertoire conference call
+in lieu of face-to-face
 
 
-Here is the information for the Web-Ex conference call.
-Dave
-https://hp.webex.com
-Name: IFX
-Date: 4/2/2003
-Time: 11:45AM, (GMT -08:00) Pacific Time, USA & Canada
-Meeting Number: 24626121
-Meeting Password: pwgifx
------Original Message-----
-From: Gail Songer [mailto:gsonger@peerless.com]
-Sent: Friday, March 28, 2003 8:23 AM
-To: pwg-announce@pwg.org; ifx@pwg.org
-Subject: IFX> Wednesday IFX Conf call
+Harry and ISTO have set up phone bridges for next week.
+
+The CR session will be Monday (3/31) at 12:30-2:00 Pacific, aka 3:30-5:00
+Eastern.
+
+To take part:
+  Dial-In #: +1 719-457-0335
+  Participant Password: 400908#
+
+Our main agenda is to turn pages and comment on:
+
+  ftp://ftp.pwg.org/pub/pwg/Character-Repertoires/wd-pcr10-20030317.html
 
 
-Greetings!
+Pete Zehler has added a reference to this in the Semantic Model.  His
+comment:
 
-IPPFax will have its makeup conf call Wednesday April 2 from Noon to 3
-Pacific.  We'll be going through our two specs during the call.
+  The latest version of the SM now includes Character Repertoire.  I have
+ posted a preliminary version linked to the SM web site (or directly at
+ ftp://ftp.pwg.org/pub/pwg/Semantic-Model/PWG-Semantic-Model-Latest.pdf)
+ Take a look at three locations in the document and let me know if it's OK.
+ The locations are Figure 5, Table 6 and the reference in section 11. (All
+ sorted alphabetically) I know the reference will need to be updated as
+your
+ document progresses.
 
-Dial-In #: +1 719-457-0335
-Participant Password: 400908#
 
-Gail
+
+Near the end of Monday's meeting I plan to ask the group what we need to
+address to prepare for Last Call on this.
+
+
+------------------------------------------
+Elliott Bradshaw
+Director, Software Engineering
+Oak Technology Imaging Group
+781 638-7534
+
 
