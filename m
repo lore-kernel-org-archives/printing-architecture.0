@@ -1,9 +1,9 @@
-Message-ID: <OFA26D7A64.46D84AC3-ON87256DC8.0071F826@us.ibm.com>
+Message-ID: <OF44B66E91.5373AE31-ON87256DCE.0067F6E1@us.ibm.com>
 From: Claudia Alimpich <alimpich@us.ibm.com>
-Date: Thu, 23 Oct 2003 14:50:04 -0600
+Date: Wed, 29 Oct 2003 12:05:30 -0700
 MIME-Version: 1.0
 Content-type: text/plain; charset=US-ASCII
-Subject: [Printing-architecture] Updated Requrements document posted
+Subject: [Printing-architecture] There will be an Architecture meeting 10/30/2003
 Sender: printing-architecture-admin@freestandards.org
 Errors-To: printing-architecture-admin@freestandards.org
 List-Help: <mailto:printing-architecture-request@freestandards.org?subject=help>
@@ -15,17 +15,24 @@ List-Unsubscribe: <http://freestandards.org/mailman/listinfo/printing-architectu
 	<mailto:printing-architecture-request@freestandards.org?subject=unsubscribe>
 List-Archive: <http://freestandards.org/pipermail/printing-architecture/>
 To: printing-architecture@freestandards.org
-Cc: glen.petrie@eitc.epson.com
 
 
 
 
-Today during the Architecture conference call, Ira, Till, and I finished
-reviewing the Mobile Printing use model  and made updates to the
-Requirements spec. The updated Requirements spec is at:
+There will be an Architecture meeting Thursday October 30th:
 
-ftp://ftp.pwg.org/pub/pwg/fsg/architecture/requirements/fsg-open-printing-requirements--V0027-102303.sxw
-ftp://ftp.pwg.org/pub/pwg/fsg/architecture/requirements/fsg-open-printing-requirements--V0027-102303.pdf
+1200-1300 PST
+1300-1400 MST
+1400-1500 CST
+1500-1600 EST
+2000-2100 UTC
+
+The old number is no longer available and I have not heard back from Mark
+or Pete so for THIS WEEK only, I set up a call as follows:
+
+  USA Toll Free Number: 888-981-0180
+  USA Toll Number: +1-484-630-2765
+  PASSCODE: 49537
 
 Claudia
 
