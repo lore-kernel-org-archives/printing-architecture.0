@@ -1,11 +1,10 @@
-Message-ID: <CFEE79A465B35C4385389BA5866BEDF00C7538@mailsrvnt02.enet.sharplabs.com>
+Message-ID: <CFEE79A465B35C4385389BA5866BEDF00C753A@mailsrvnt02.enet.sharplabs.com>
 From: "McDonald, Ira" <imcdonald@sharplabs.com>
-Date: Fri, 13 Feb 2004 12:35:00 -0800
+Subject: RE: [Printing-architecture] Architecture meeting 02/12/2004
+Date: Fri, 13 Feb 2004 12:50:13 -0800
 MIME-Version: 1.0
 Content-Type: text/plain;
 	charset="iso-8859-1"
-Subject: [Printing-architecture] FW: PWG-ANNOUNCE> PSI Requirements - PWG
-	5104.1 - Candidate Stand ard
 List-Id: Printing architecture under linux
 	<printing-architecture.freestandards.org>
 List-Unsubscribe: <http://freestandards.org/mailman/listinfo/printing-architecture>,
@@ -15,37 +14,108 @@ List-Post: <mailto:printing-architecture@freestandards.org>
 List-Help: <mailto:printing-architecture-request@freestandards.org?subject=help>
 List-Subscribe: <http://freestandards.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@freestandards.org?subject=subscribe>
-To: printing-architecture@freestandards.org
+To: 'Claudia Alimpich' <alimpich@us.ibm.com>, printing-architecture@freestandards.org
 
 Hi,
 
-This is the PSI spec that has the Use Model style (pretty much)
-we're using in the FSG/OP Architecture spec.  Including good
-network topology diagrams.
+Given that Claudia, Norm, and I missed this meeting, 
+I'd like to request that we reprise most of Mark's 
+excellent and important agenda topics this coming 
+Thursday (19 Feb).
+
+Glen Petrie, Norm Jacobs, and I have all agreed to
+serve on an International FSG Open Printing Steering
+Committee (per feedback from the Japanese meetings).
+
+Norm and I (at least) would like to know more about
+what the work of this Steering Committee will be.
 
 Cheers,
 - Ira
+
 
 Ira McDonald (Musician / Software Architect)
 Blue Roof Music / High North Inc
 PO Box 221  Grand Marais, MI  49839
 phone: +1-906-494-2434
-email: imcdonald@sharplabs.com
+email: imcdonald@sharplabs.com 
 
 -----Original Message-----
-From: BERKEMA,ALAN C (HP-Roseville,ex1) [mailto:alan.berkema@hp.com]
-Sent: Thursday, February 12, 2004 3:52 PM
-To: pwg-announce@pwg.org
-Subject: PWG-ANNOUNCE> Announcing PSI Requirements document posted
+From: Claudia Alimpich [mailto:alimpich@us.ibm.com]
+Sent: Thursday, February 12, 2004 11:11 PM
+To: printing-architecture@freestandards.org
+Subject: Re: [Printing-architecture] Architecture meeting 02/12/2004
+
+
+I also missed the meeting. We discussed canceling it last week and I assumed
+that because we didn't get a meeting notice that it was canceled.
+Sorry,
+Claudia
+---------------------- Forwarded by Claudia Alimpich/Boulder/IBM on
+02/12/2004 09:10 PM ---------------------------
+
+Sent by: printing-architecture-bounces@freestandards.org 
+To: "McDonald, Ira" <imcdonald@sharplabs.com>
+cc: Mark Hamzy/Austin/IBM@IBMUS, printing-architecture@freestandards.org 
+Subject: Re: [Printing-architecture] Architecture meeting 02/12/2004
 
 
 
-This is an adopted candidate and can be found at:
 
-ftp://ftp.pwg.org/pub/pwg/candidates/cs-psireq10-20040204-5104.1.doc
+Sorry I missed the meeting.  I didn't get an announcement and had a
+last minute conflict. 
+-Norm
 
-ftp://ftp.pwg.org/pub/pwg/candidates/cs-psireq10-20040204-5104.1.pdf
+McDonald, Ira wrote:
 
-Thanks,
-Alan
+> Hi Mark,
+>
+> Is there an architecture meeting in 15 minutes?
+>
+> Ira McDonald (Musician / Software Architect)
+> Blue Roof Music / High North Inc
+> PO Box 221  Grand Marais, MI  49839
+> phone: +1-906-494-2434
+> email: imcdonald@sharplabs.com
+> -----Original Message-----
+> *From:* Mark Hamzy [mailto:hamzy@us.ibm.com]
+> *Sent:* Thursday, February 05, 2004 11:07 AM
+> *To:* printing-architecture@freestandards.org
+> *Subject:* [Printing-architecture] Architecture meeting 02/05/2004
+>
+> Thursday, February 5
+>
+> GMT 20:00-22:00
+> EDT 15:00-17:00
+> CDT 14:00-16:00
+> MDT 13:00-15:00
+> PDT 12:00-14:00
+>
+> Toll Free:  1-888-687-2858 (use this first if possible)
+> Toll:       1-719-457-3541
+> Passcode:           726694
+>
+> Agenda:     FSG face to face meetings
+>
+> Note:       I might be a little late to the meeting.
+>
+> Mark
+>
+> Take a look at the Linux Omni Printer Driver Framework at
+> http://www.ibm.com/linux/ltc/projects/omni/
+>
+>------------------------------------------------------------------------
+>
+>_______________________________________________
+>Printing-architecture mailing list
+>Printing-architecture@freestandards.org
+>http://freestandards.org/mailman/listinfo/printing-architecture
+>
+>
+
+
+_______________________________________________
+Printing-architecture mailing list
+Printing-architecture@freestandards.org
+http://freestandards.org/mailman/listinfo/printing-architecture
 
