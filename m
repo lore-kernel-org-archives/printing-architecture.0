@@ -1,11 +1,11 @@
-Message-ID: <CFEE79A465B35C4385389BA5866BEDF00C79E1@mailsrvnt02.enet.sharplabs.com>
+Message-ID: <CFEE79A465B35C4385389BA5866BEDF00C79EF@mailsrvnt02.enet.sharplabs.com>
 From: "McDonald, Ira" <imcdonald@sharplabs.com>
-Date: Mon, 17 Jan 2005 13:31:00 -0800
+Date: Tue, 18 Jan 2005 13:52:46 -0800
 MIME-Version: 1.0
-Content-Type: text/plain;
-	charset="ISO-8859-1"
-Subject: [Printing-architecture] FW: 11-15 April PWG and FSG - Tokyo
-	tentative
+Content-Type: multipart/alternative;
+	boundary="----_=_NextPart_001_01C4FDA7.D9422657"
+Subject: [Printing-architecture] FW: PWG-ANNOUNCE> January 2005 PWG Plenary
+	Meeting Minutes Posted
 List-Id: Printing architecture under linux
 	<printing-architecture.mail.freestandards.org>
 List-Unsubscribe: <http://mail.freestandards.org/mailman/listinfo/printing-architecture>,
@@ -15,70 +15,72 @@ List-Post: <mailto:printing-architecture@mail.freestandards.org>
 List-Help: <mailto:printing-architecture-request@mail.freestandards.org?subject=help>
 List-Subscribe: <http://mail.freestandards.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@mail.freestandards.org?subject=subscribe>
-To: printing-architecture@freestandards.org, printing-sc@freestandards.org
+To: printing-sc@freestandards.org, printing-architecture@freestandards.org
 
-Hi,
+This message is in MIME format. Since your mail reader does not understand
+this format, some or all of this message may not be legible.
 
-From Harry Lewis (PWG chairman), below is the tentative schedule 
-for the PWG/P2600/FSG meetings in Tokyo on 11-15 April 2005.
-
-Note that the joint FSG/PWG plenary is scheduled for Wednesday
-afternoon (13 April).
-
-Please consider topics and schedule for FSG meetings and reply
-ASAP (to the Steering Committee or Architecture list).
-
-Harry Lewis will contact Epson to request a second meeting room
-(for parallel sessions on Thursday and possibly Friday).
-
-Cheers,
-- Ira, liason from PWG to FSG
-
-
-Ira McDonald (Musician / Software Architect)
-Blue Roof Music / High North Inc
-PO Box 221  Grand Marais, MI  49839
-phone: +1-906-494-2434
-email: imcdonald@sharplabs.com 
+------_=_NextPart_001_01C4FDA7.D9422657
+Content-Type: text/plain;
+	charset="ISO-8859-1"
 
 -----Original Message-----
-From: Harry Lewis [mailto:harryl@us.ibm.com]
-Sent: Wednesday, January 12, 2005 1:30 PM
-To: imcdonald@sharplabs.com
-Subject: April PWG - Tokyo tentative
+From: owner-pwg-announce@pwg.org [mailto:owner-pwg-announce@pwg.org]On
+Behalf Of thrasher@lexmark.com
+Sent: Tuesday, January 18, 2005 11:38 AM
+To: pwg-announce@pwg.org
+Subject: PWG-ANNOUNCE> January 2005 PWG Plenary Meeting Minutes Posted
 
 
-*        Monday (11 April)
--        WIMS and Counters Spec Final Review 
 
-*        Tuesday (12 April)
--        IEEE P2600 Hardcopy Device & Systems Security 
+The minutes from the January 12,  2005  PWG Plenary Meeting have been posted
+to the PWG's ftp site at: 
 
-*        Wednesday morning (13 April)
--        IEEE P2600 Hardcopy Device & Systems Security 
+ftp://ftp.pwg.org/pub/pwg/general/minutes/pwg_plenary_minutes_20050112.pdf 
 
-*        Wednesday afternoon (13 April)
--        PWG / FSG Joint Plenary 
 
-*        Thursday (14 April)
--        MIBS 
-  *        PWG Port Mon MIB 
-  *        Counter MIB 
--        MailTo 
--        MJT/TFM (as appropriate) 
--        Parallel FSG 
+Jerry Thrasher 
 
-*        Friday (15 April)
--        FSG 
--        TCG parallel ? 
 
----------------------------------------------- 
-Harry Lewis 
-IBM STSM
-Chairman - IEEE-ISTO Printer Working Group
-http://www.pwg.org
-IBM Printing Systems 
-http://www.ibm.com/printers
-303-924-5337
----------------------------------------------- 
+
+
+
+
+
+
+------_=_NextPart_001_01C4FDA7.D9422657
+Content-Type: text/html;
+	charset="ISO-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD>
+<META HTTP-EQUIV=3D"Content-Type" CONTENT=3D"text/html; =
+charset=3DISO-8859-1">
+
+
+<META content=3D"MSHTML 6.00.2800.1458" name=3DGENERATOR></HEAD>
+<BODY>
+<DIV class=3DOutlookMessageHeader dir=3Dltr align=3Dleft><FONT =
+face=3DTahoma=20
+size=3D2>-----Original Message-----<BR><B>From:</B> =
+owner-pwg-announce@pwg.org=20
+[mailto:owner-pwg-announce@pwg.org]<B>On Behalf Of=20
+</B>thrasher@lexmark.com<BR><B>Sent:</B> Tuesday, January 18, 2005 =
+11:38=20
+AM<BR><B>To:</B> pwg-announce@pwg.org<BR><B>Subject:</B> =
+PWG-ANNOUNCE&gt;=20
+January 2005 PWG Plenary Meeting Minutes =
+Posted<BR><BR></FONT></DIV><BR><FONT=20
+face=3Dsans-serif size=3D2>The minutes from the January 12, &nbsp;2005 =
+&nbsp;PWG=20
+Plenary Meeting have been posted to the PWG's ftp site at:</FONT> =
+<BR><BR><A=20
+href=3D"=CA=FE><font size=3D2 face=3D"=20
+sans-serif?><B>ftp://ftp.pwg.org/pub/pwg/general/minutes/pwg_plenary_min=
+utes_20050112.pdf</B></FONT></A>=20
+<BR><BR><BR><FONT face=3Dsans-serif size=3D2>Jerry Thrasher</FONT>=20
+<BR><BR><BR><BR><BR><BR><BR></BODY></HTML>
+
+------_=_NextPart_001_01C4FDA7.D9422657--
 
