@@ -1,11 +1,9 @@
-Message-ID: <116DB56CD7DED511BC7800508B2CA537B0028F@mailsrvnt02.enet.sharplabs.com>
-From: "McDonald, Ira" <imcdonald@sharplabs.com>
-Subject: RE: [Printing-architecture] Schedule a FSG Open Printing face-to-
-	face in 2004?
-Date: Tue, 2 Dec 2003 12:34:25 -0800 
+Message-ID: <OFA33A202F.7E75019B-ON87256DF0.0074E30F@us.ibm.com>
+From: Claudia Alimpich <alimpich@us.ibm.com>
+Date: Tue, 2 Dec 2003 14:23:12 -0700
 MIME-Version: 1.0
-Content-Type: text/plain;
-	charset="iso-8859-1"
+Content-type: text/plain; charset=US-ASCII
+Subject: [Printing-architecture] RE: Schedule a FSG Open Printing face-to-face in 2004?
 Sender: printing-architecture-admin@freestandards.org
 Errors-To: printing-architecture-admin@freestandards.org
 List-Help: <mailto:printing-architecture-request@freestandards.org?subject=help>
@@ -16,7 +14,32 @@ List-Id: <printing-architecture.freestandards.org>
 List-Unsubscribe: <http://freestandards.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@freestandards.org?subject=unsubscribe>
 List-Archive: <http://freestandards.org/pipermail/printing-architecture/>
-To: 'Claudia Alimpich' <alimpich@us.ibm.com>, printing-architecture@freestandards.org
+To: printing-architecture@freestandards.org
+
+
+
+
+I don't think that I will be able to make a January meeting because I have
+some other trips planned early in the year. Late March or in April would be
+better for me.
+
+Claudia
+---------------------- Forwarded by Claudia Alimpich/Boulder/IBM on
+12/02/2003 02:19 PM ---------------------------
+
+"McDonald, Ira" <imcdonald@sharplabs.com>@freestandards.org on 12/02/2003
+01:34:25 PM
+
+Sent by:    printing-architecture-admin@freestandards.org
+
+
+To:    Claudia Alimpich/Boulder/IBM@IBMUS,
+       printing-architecture@freestandards.org
+cc:
+Subject:    RE: [Printing-architecture] Schedule a FSG Open Printing
+       face-to-   face in 2004?
+
+
 
 Hi,
 
@@ -67,4 +90,11 @@ _______________________________________________
 Printing-architecture mailing list
 Printing-architecture@freestandards.org
 http://freestandards.org/mailman/listinfo/printing-architecture
+
+_______________________________________________
+Printing-architecture mailing list
+Printing-architecture@freestandards.org
+ http://freestandards.org/mailman/listinfo/printing-architecture
+
+
 
