@@ -1,11 +1,10 @@
-Message-ID: <CFEE79A465B35C4385389BA5866BEDF00C77E2@mailsrvnt02.enet.sharplabs.com>
-From: "McDonald, Ira" <imcdonald@sharplabs.com>
-Date: Thu, 29 Jul 2004 17:29:08 -0700
+Message-ID: <2F7D63A21DB2C74EB8EB8C09AF667DB06EFAC0@eitc220.eitc.epson.com>
+From: "Petrie, Glen" <glen.petrie@eitc.epson.com>
+Date: Wed, 4 Aug 2004 14:03:51 -0700 
 MIME-Version: 1.0
-Content-Type: text/plain;
-	charset="ISO-8859-1"
-Subject: [Printing-architecture] RE: [printing-spool] PAPI v1.0 final
-	functionality
+Content-Type: multipart/alternative;
+	boundary="----_=_NextPart_001_01C47A66.8B8971F0"
+Subject: [Printing-architecture] Updated Reference Model Diagrams
 List-Id: Printing architecture under linux
 	<printing-architecture.mail.freestandards.org>
 List-Unsubscribe: <http://mail.freestandards.org/mailman/listinfo/printing-architecture>,
@@ -15,194 +14,188 @@ List-Post: <mailto:printing-architecture@mail.freestandards.org>
 List-Help: <mailto:printing-architecture-request@mail.freestandards.org?subject=help>
 List-Subscribe: <http://mail.freestandards.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@mail.freestandards.org?subject=subscribe>
-To: 'Discussion for Spool/Job/Queue API subgroup' <printing-spool@base3.freestandards.org>, printing-spool@freestandards.org, printing-architecture@freestandards.org
+To: printing-architecture@freestandards.org
 
-Hi Norm,
+This message is in MIME format. Since your mail reader does not understand
+this format, some or all of this message may not be legible.
 
-Note that (even as I write) the IESG is moving to approve
-the final edits to the IPP Admin spec.  Given that the
-IEEE/ISTO PWG has already approved IPP Document Object
-(PWG 5100.5) last fall, we have solid 'standard-track'
-references for these bits of functionality (finally).
+------_=_NextPart_001_01C47A66.8B8971F0
+Content-Type: text/plain
 
-Cheers,
-- Ira
+ftp://ftp.pwg.org/pub/pwg/fsg/architecture/Reference-Model/fsg-arch-Ref-Mode
+l-Diagram-v00.20-2004.08.04.ppt
+<ftp://ftp.pwg.org/pub/pwg/fsg/architecture/Reference-Model/fsg-arch-Ref-Mod
+el-Diagram-v00.20-2004.08.04.ppt>  
 
-Ira McDonald (Musician / Software Architect)
-Blue Roof Music / High North Inc
-PO Box 221  Grand Marais, MI  49839
-phone: +1-906-494-2434
-email: imcdonald@sharplabs.com
+ 
 
------Original Message-----
-From: printing-spool-bounces@base3.freestandards.org
-[mailto:printing-spool-bounces@base3.freestandards.org]On Behalf Of Norm
-Jacobs
-Sent: Thursday, July 29, 2004 6:39 PM
-To: printing-spool@freestandards.org;
-printing-architecture@freestandards.org
-Subject: [printing-spool] PAPI v1.0 final functionality
+ftp://ftp.pwg.org/pub/pwg/fsg/architecture/Reference-Model/fsg-arch-Ref-Mode
+l-Diagram-v00.20-2004.08.04.pdf
+<ftp://ftp.pwg.org/pub/pwg/fsg/architecture/Reference-Model/fsg-arch-Ref-Mod
+el-Diagram-v00.20-2004.08.04.pdf>  
 
+ 
 
+ 
 
-I am proposing that we add content to cover the following areas prior to
-finalizing v1.0 of the spec.
+Above are the updated Reference Model Diagrams as discussion in the
+Architecture working group meeting.   Note I have left the "drawing
+subsystem" and "rendering" boxes shadowed pending further discussion.
 
-	Creation of a Document object
+Rgds, 
+Glen W. Petrie 
+Epson Imaging Technology Center 
+150 River Oaks Parkway, Suite 200 
+San Jose, CA, 95134 
+Voice: 408.576.4131  Fax: 408.474.0511 
 
-	Administrative operations
-		Add/Remove destination (printer/queue)
-			(modify is already in the spec. but may need a
-			 more complete description.)
-		Enable/Disable destination (printer/queue)
-			Enable/Disable job creation on a
-			particular destination.
-		Promote Job
-			make a job the next one to process.
-
-If there is anything else that others would like to add, please bring
-it up now.  I would like to finalize the content of PAPI v1.0 in the
-next few weeks so that there is some small chance that it can be
-completed this fall.
-
-	-Norm
-
-More detail on document object interfaces will follow next week (I
-hope), but I propose that the additions for new administrative
-operations be as follows.
-
-papi_status_t papiPrinterAdd(papi_service_t handle, char *printer_name,
-		papi_attribute_t **attributes, papi_printer_t *printer);
-INPUTS
-	handle	- Handle to the print service on which to create the
-		  printer object.
-	name	- Name or URI of the printer to be created
-	attrs	- Attributes to associate with the printer object
-		  being created.
-OUTPUTS
-	printer	- The printer object created on the print service.
-RETURNS
-	If successful, a value of PAPI_OK is returned.  Otherwise an
-	appropriate failure value is returned.
-EXAMPLE
-	papi_status_t status;
-	papi_service_t svc = NULL;
-	papi_attribute_t **attrs = NULL;
-	papi_printer_t printer = NULL;
-	...
-	papiAttributeListAddString(&attrs, PAPI_EXCL,
-			"device-uri", "socket://printer:9100");
-	papiAttributeListAddString(&attrs, PAPI_ATTR_APPEND,
-			"document-format-supported", "application/ps");
-	papiAttributeListAddString(&attrs, PAPI_ATTR_APPEND,
-			"document-format-supported", "text/plain");
-	papiAttributeListAddInteger(&attrs, PAPI_EXCL,
-			"copies-default", 3);
-	...
-	status = papiPrinterAdd(svc, "ipp://server/printers/triplicate",
-			attrs, &result);
-	papiAttributeListFree(attrs);
-
-	if (status != PAPI_OK) {
-		/* report a failure */
-	}
-
-	if (result != NULL) {
-		/* dump the printer info */
-
-		papiPrinterFree(result);
-	}
-	...
-	papiServiceDestroy(svc);
-
-papi_status_t papiPrinterRemove(papi_service_t handle, char
-*printer_name);
-INPUTS
-	handle	- Handle to the print service from which to remove the
-		  printer object.
-	name	- Name or URI of the printer to be removed.
-RETURNS
-	If successful, a value of PAPI_OK is returned.  Otherwise an
-	appropriate failure value is returned.
-EXAMPLE
-	papi_status_t status;
-	papi_service_t svc = NULL;
-	...
-	status = papiPrinterRemove(svc, "ipp://server/printers/triplicate");
-	if (status != PAPI_OK) {
-		/* report a failure */
-	}
-	...
-	papiServiceDestroy(svc);
-
-papi_status_t papiPrinterEnable(papi_service_t handle, char
-*printer_name);
-INPUTS
-	handle	- Handle to the print service on which to enable job
-		  creation for the printer object.
-	name	- Name or URI of the printer to be enabled
-RETURNS
-	If successful, a value of PAPI_OK is returned.  Otherwise an
-	appropriate failure value is returned.
-EXAMPLE
-	papi_status_t status;
-	papi_service_t svc = NULL;
-	...
-	status = papiPrinterEnable(svc, "ipp://server/printers/triplicate");
-	if (status != PAPI_OK) {
-		/* report a failure */
-	}
-	Dis.
-	papiServiceDestroy(svc);
-
-papi_status_t papiPrinterDisable(papi_service_t handle, char
-*printer_name,
-		char *message);
-INPUTS
-	handle	- Handle to the print service on which to disable job
-		  creation for the printer object.
-	name	- Name or URI of the printer to be disabled
-	message	- an optional reason for disabling the print queue. 
-RETURNS
-	If successful, a value of PAPI_OK is returned.  Otherwise an
-	appropriate failure value is returned.
-EXAMPLE
-	papi_status_t status;
-	papi_service_t svc = NULL;
-	...
-	status = papiPrinterDisable(svc, "ipp://server/printers/triplicate",
-			"because it's Tuesday");
-	if (status != PAPI_OK) {
-		/* report a failure */
-	}
-	...
-	papiServiceDestroy(svc);
-
-papi_status_t papiJobPromote(papi_service_t handle, char *printer_name,
-		int32_t job_id);
-INPUTS
-	handle	- Handle to the print service on which the job resides.
-	name	- Name or URI of the printer associated with the job.
-	job_id	- Id number of the job to promote.
-RETURNS
-	If successful, a value of PAPI_OK is returned.  Otherwise an
-	appropriate failure value is returned.
-EXAMPLE
-	papi_status_t status;
-	papi_service_t svc = NULL;
-	...
-	status = papiJobPromote(svc, "ipp://server/printers/triplicate",
-12);
-	if (status != PAPI_OK) {
-		/* report a failure */
-	}
-	...
-	papiServiceDestroy(svc);
+ 
 
 
+------_=_NextPart_001_01C47A66.8B8971F0
+Content-Type: text/html
+Content-Transfer-Encoding: quoted-printable
 
-_______________________________________________
-printing-spool mailing list
-printing-spool@mail.freestandards.org
-http://mail.freestandards.org/mailman/listinfo/printing-spool
+<html xmlns:o=3D"urn:schemas-microsoft-com:office:office" =
+xmlns:w=3D"urn:schemas-microsoft-com:office:word" =
+xmlns=3D"http://www.w3.org/TR/REC-html40">
+
+<head>
+<META HTTP-EQUIV=3D"Content-Type" CONTENT=3D"text/html; =
+charset=3Dus-ascii">
+
+
+<meta name=3DGenerator content=3D"Microsoft Word 11 (filtered medium)">
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:"MS Mincho";
+	panose-1:2 2 6 9 4 2 5 8 3 4;}
+@font-face
+	{font-family:SimSun;
+	panose-1:2 1 6 0 3 1 1 1 1 1;}
+@font-face
+	{font-family:"Comic Sans MS";
+	panose-1:3 15 7 2 3 3 2 2 2 4;}
+@font-face
+	{font-family:"\@SimSun";
+	panose-1:2 1 6 0 3 1 1 1 1 1;}
+@font-face
+	{font-family:"\@MS Mincho";
+	panose-1:2 2 6 9 4 2 5 8 3 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0in;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:purple;
+	text-decoration:underline;}
+p
+	{mso-margin-top-alt:auto;
+	margin-right:0in;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+span.EmailStyle17
+	{mso-style-type:personal-compose;
+	font-family:"Courier New";
+	color:windowtext;}
+@page Section1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.25in 1.0in 1.25in;}
+div.Section1
+	{page:Section1;}
+-->
+</style>
+
+</head>
+
+<body lang=3DEN-US link=3Dblue vlink=3Dpurple>
+
+<div class=3DSection1>
+
+<p class=3DMsoNormal><font size=3D2 face=3D"Courier New"><span =
+style=3D'font-size:10.0pt;
+font-family:"Courier New"'><a
+href=3D"ftp://ftp.pwg.org/pub/pwg/fsg/architecture/Reference-Model/fsg-a=
+rch-Ref-Model-Diagram-v00.20-2004.08.04.ppt">ftp://ftp.pwg.org/pub/pwg/f=
+sg/architecture/Reference-Model/fsg-arch-Ref-Model-Diagram-v00.20-2004.0=
+8.04.ppt</a>
+<o:p></o:p></span></font></p>
+
+<p class=3DMsoNormal><font size=3D2 face=3D"Courier New"><span =
+style=3D'font-size:10.0pt;
+font-family:"Courier New"'><o:p>&nbsp;</o:p></span></font></p>
+
+<p class=3DMsoNormal><font size=3D2 face=3D"Courier New"><span =
+style=3D'font-size:10.0pt;
+font-family:"Courier New"'><a
+href=3D"ftp://ftp.pwg.org/pub/pwg/fsg/architecture/Reference-Model/fsg-a=
+rch-Ref-Model-Diagram-v00.20-2004.08.04.pdf">ftp://ftp.pwg.org/pub/pwg/f=
+sg/architecture/Reference-Model/fsg-arch-Ref-Model-Diagram-v00.20-2004.0=
+8.04.pdf</a>
+<o:p></o:p></span></font></p>
+
+<p class=3DMsoNormal><font size=3D2 face=3D"Courier New"><span =
+style=3D'font-size:10.0pt;
+font-family:"Courier New"'><o:p>&nbsp;</o:p></span></font></p>
+
+<p class=3DMsoNormal><font size=3D2 face=3D"Courier New"><span =
+style=3D'font-size:10.0pt;
+font-family:"Courier New"'><o:p>&nbsp;</o:p></span></font></p>
+
+<p class=3DMsoNormal><font size=3D2 face=3D"Courier New"><span =
+style=3D'font-size:10.0pt;
+font-family:"Courier New"'>Above are the updated Reference Model =
+Diagrams as
+discussion in the Architecture working group meeting. &nbsp;&nbsp;Note =
+I have left the &#8220;drawing
+subsystem&#8221; and &#8220;rendering&#8221; boxes shadowed pending =
+further discussion.<o:p></o:p></span></font></p>
+
+<p><i><font size=3D2 face=3D"Comic Sans MS"><span =
+style=3D'font-size:10.0pt;
+font-family:"Comic Sans MS";font-style:italic'>Rgds, =
+</span></font></i><br>
+<b><i><font color=3D"#333399" face=3D"Comic Sans MS"><span =
+style=3D'font-family:"Comic Sans MS";
+color:#333399;font-weight:bold;font-style:italic'>Glen W. =
+Petrie</span></font></i></b>
+<br>
+<i><font size=3D2 face=3D"Comic Sans MS"><span =
+style=3D'font-size:10.0pt;font-family:
+"Comic Sans MS";font-style:italic'>Epson Imaging Technology Center =
+</span></font></i><br>
+<i><font size=3D2 face=3D"Comic Sans MS"><span =
+style=3D'font-size:10.0pt;font-family:
+"Comic Sans MS";font-style:italic'>150 River Oaks Parkway, Suite 200 =
+</span></font></i><br>
+<i><font size=3D2 face=3D"Comic Sans MS"><span =
+style=3D'font-size:10.0pt;font-family:
+"Comic Sans MS";font-style:italic'>San Jose, CA, 95134 =
+</span></font></i><br>
+<i><font size=3D2 face=3D"Comic Sans MS"><span =
+style=3D'font-size:10.0pt;font-family:
+"Comic Sans MS";font-style:italic'>Voice: 408.576.4131&nbsp; Fax: =
+408.474.0511</span></font></i>
+<o:p></o:p></p>
+
+<p class=3DMsoNormal><font size=3D3 face=3D"Times New Roman"><span =
+style=3D'font-size:
+12.0pt'><o:p>&nbsp;</o:p></span></font></p>
+
+</div>
+
+</body>
+
+</html>
+
+------_=_NextPart_001_01C47A66.8B8971F0--
 
