@@ -1,9 +1,9 @@
-Message-ID: <OF949719CE.1A2EB4EB-ON87256CE7.005CBC6C@us.ibm.com>
-From: Claudia Alimpich <alimpich@us.ibm.com>
-Date: Wed, 12 Mar 2003 10:08:17 -0700
+Message-ID: <A134E2426B46D711BB4B000347AE6E7CE07472@xvan02.vcd.hp.com>
+From: "HEMSTREET,CHARLES (HP-Vancouver,ex1)" <charles.hemstreet@hp.com>
+Date: Wed, 12 Mar 2003 17:34:23 -0500
 MIME-Version: 1.0
-Content-type: text/plain; charset=US-ASCII
-Subject: [Printing-architecture] Updated JTAPI slides for PWG/FSG meeting in DC
+Content-Type: text/plain
+Subject: [Printing-architecture] Architecture meeting agenda 20030313. . .
 Sender: printing-architecture-admin@freestandards.org
 Errors-To: printing-architecture-admin@freestandards.org
 List-Help: <mailto:printing-architecture-request@freestandards.org?subject=help>
@@ -14,31 +14,26 @@ List-Id: <printing-architecture.freestandards.org>
 List-Unsubscribe: <http://freestandards.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@freestandards.org?subject=unsubscribe>
 List-Archive: <http://freestandards.org/pipermail/printing-architecture/>
-To: printing-jobticket@freestandards.org, printing-architecture@freestandards.org
+To: "'printing-architecture@freestandards.org'" <printing-architecture@freestandards.org>
 
+Phone/Passcode:
+* Dial-in  : 816.650.0688
+* passcode : 9 6 4 6 2 8
 
+Thursday from 8-9 am PST, 9-10 am
+MST, 11-12 pm EST, 4-5 pm UTC.
+ 
 
+-------------------------
 
-During the JT working group meeting yesterday we reviewed and updated the
-JTAPI slides to be presented during the PWG/FSG meeting in DC on April 1.
-The updated slides can be found at:
-   FSGOpenPrint_JT_11Mar2003.ppt
-   FSGOpenPrint_JT_11Mar2003.pdf
+Agenda for 03/13/03:
 
-The slides are still a draft. If anyone has any comments please send mail
-to the JT mailing list or plan to call into the JT working group meeting
-next week. We'll accept comments before March 24 at which time we will
-publish the final version of the JTAPI slides.
+* Mark Hamzy - driver subgroup
+* Agenda input for upcoming Washington DC meeting
+* other?
 
-We did change the overall structure of the slides as follows:
-   Introduction
-   Objectives
-   Accomplishments
-   Details
-   What's next
-   Issues
-   JT Working Group Information
+Thanks,
+Charles
 
-Claudia Alimpich
 
 
