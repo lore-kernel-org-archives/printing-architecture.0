@@ -1,10 +1,10 @@
-Message-ID: <116DB56CD7DED511BC7800508B2CA53735CF59@mailsrvnt02.enet.sharplabs.com>
+Message-ID: <116DB56CD7DED511BC7800508B2CA53735CF5A@mailsrvnt02.enet.sharplabs.com>
 From: "McDonald, Ira" <imcdonald@sharplabs.com>
-Date: Sun, 30 Mar 2003 16:28:45 -0800
+Date: Sun, 30 Mar 2003 16:30:57 -0800
 MIME-Version: 1.0
 Content-Type: text/plain;
 	charset="iso-8859-1"
-Subject: [Printing-architecture] FW: PWG WBMM> Mon 31 March 12-2pm EST telecon
+Subject: [Printing-architecture] FW: PWG> Wed 2 April 9-10:30am PST Plenary telecon
 Sender: printing-architecture-admin@freestandards.org
 Errors-To: printing-architecture-admin@freestandards.org
 List-Help: <mailto:printing-architecture-request@freestandards.org?subject=help>
@@ -18,44 +18,21 @@ List-Archive: <http://freestandards.org/pipermail/printing-architecture/>
 To: printing-architecture@freestandards.org
 
 -----Original Message-----
-From: Wagner,William [mailto:WWagner@NetSilicon.com]
-Sent: Friday, March 28, 2003 11:34 AM
-To: pwg-announce@pwg.org; 'Wbmm (E-mail)
-Subject: WBMM> Mon 31 March 12-2pm EST Remote Meeting 
+From: Harry Lewis [mailto:harryl@us.ibm.com]
+Sent: Friday, March 28, 2003 2:12 PM
+To: pwg-announce@pwg.org
+Cc: pwg@pwg.org
+Subject: PWG> Plenary Phone Bridge - Wednesday
 
 
-Greetings:
 
-The Web Based Monitoring and Management Working Group (WBMM) conference call
-will be on Monday, 31 March
-
-12:00 PM to 2:30 PM EST
-
-9:00 AM to 11:30 AM  PST
-
-
+The PWG plenary makeup for the canceled D.C. meting will be Wednesday April
+2 from 9am to 10:30am Pacific. Agenda to follow. 
+  
 Dial-In #: +1 719-457-0335
 Participant Password: 400908# 
-
-We will be reviewing the results of the definition efforts since the past
-face-to-face meeting, and will attempt to wrap up the charter, scope
-statement and partitioning of the working group effort. The discussions
-appear to have broadened the scope of the activity to go beyond issues of
-transport  to include defining a new management model for imaging devices
-and services.
-
-Documents and phone conference minutes are accessible at
-ftp://ftp.pwg.org/pub/pwg/wbmm/.  (The "white" subdirectory contains white
-papers.) The results of this week's conference call will be added to the
-WBMM subdirectory later today. Since webex is not supported, it is strongly
-suggested that perspective participants access the WBMM documents on the PWG
-web site.
-
-Please email me if there are any questions.
-
-Bill Wagner/ Chairman - NetSilicon, a Digi International Company
-
-
-
- 
+---------------------------------------------- 
+Harry Lewis 
+IBM Printing Systems 
+---------------------------------------------- 
 
