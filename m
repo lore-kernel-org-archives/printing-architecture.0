@@ -1,9 +1,9 @@
-Message-ID: <OFDFA587AC.17944CAA-ON86256D97.0055E1D1-86256D97.0055FB17@us.ibm.com>
-From: Mark Hamzy <hamzy@us.ibm.com>
-Date: Thu, 4 Sep 2003 10:39:08 -0500
+Subject: [Printing-architecture] Architecture meeting 09/04/2003
+Message-ID: <OFB55B5ECC.1579BC26-ON87256D97.0057DE7C@us.ibm.com>
+From: Claudia Alimpich <alimpich@us.ibm.com>
+Date: Thu, 4 Sep 2003 10:01:21 -0600
 MIME-Version: 1.0
 Content-type: text/plain; charset=US-ASCII
-Subject: [Printing-architecture] Architecture meeting 09/04/2003
 Sender: printing-architecture-admin@freestandards.org
 Errors-To: printing-architecture-admin@freestandards.org
 List-Help: <mailto:printing-architecture-request@freestandards.org?subject=help>
@@ -15,6 +15,28 @@ List-Unsubscribe: <http://freestandards.org/mailman/listinfo/printing-architectu
 	<mailto:printing-architecture-request@freestandards.org?subject=unsubscribe>
 List-Archive: <http://freestandards.org/pipermail/printing-architecture/>
 To: printing-architecture@freestandards.org
+
+
+
+
+Just a reminder that Scott McNeil and Doug Beattie will be calling into our
+Arch meeting this afternnon to talk about FSG and Open Printing.
+
+Claudia
+---------------------- Forwarded by Claudia Alimpich/Boulder/IBM on
+09/04/2003 10:03 AM ---------------------------
+
+Mark Hamzy/Austin/IBM@IBMUS@freestandards.org on 09/04/2003 09:39:08 AM
+
+Sent by:    printing-architecture-admin@freestandards.org
+
+
+To:    printing-architecture@freestandards.org
+cc:
+Subject:    [Printing-architecture] Architecture meeting 09/04/2003
+
+
+
 
 
 
@@ -37,5 +59,12 @@ Mark
 
 Take a look at the Linux Omni Printer Driver Framework at
 http://www.ibm.com/linux/ltc/projects/omni/
+
+
+_______________________________________________
+Printing-architecture mailing list
+Printing-architecture@freestandards.org
+ http://freestandards.org/mailman/listinfo/printing-architecture
+
 
 
