@@ -1,12 +1,11 @@
-Message-ID: <40C7C5C1.3080501@gmx.net>
-Date: Thu, 10 Jun 2004 04:21:53 +0200
-From: Till Kamppeter <till.kamppeter@gmx.net>
+Message-ID: <OFAB72C3B3.A32F6DF8-ON86256EAF.00570E45-86256EAF.00579EC1@us.ibm.com>
+From: Mark Hamzy <hamzy@us.ibm.com>
+Date: Thu, 10 Jun 2004 10:57:02 -0500
 MIME-Version: 1.0
-Subject: Re: [Printing-architecture] Schedule for Open Printing day(s) at LSM?
-References: <CFEE79A465B35C4385389BA5866BEDF00C7714@mailsrvnt02.enet.sharplabs.com>
-In-Reply-To: <CFEE79A465B35C4385389BA5866BEDF00C7714@mailsrvnt02.enet.sharplabs.com>
-Content-Type: text/plain; charset=us-ascii; format=flowed
-Content-Transfer-Encoding: 7bit
+Content-type: multipart/alternative; 
+	Boundary="0__=09BBE43CDFC488D58f9e8a93df938690918c09BBE43CDFC488D5"
+Content-Disposition: inline
+Subject: [Printing-architecture] Architecture meeting 06/10/2004
 List-Id: Printing architecture under linux
 	<printing-architecture.mail.freestandards.org>
 List-Unsubscribe: <http://mail.freestandards.org/mailman/listinfo/printing-architecture>,
@@ -16,66 +15,60 @@ List-Post: <mailto:printing-architecture@mail.freestandards.org>
 List-Help: <mailto:printing-architecture-request@mail.freestandards.org?subject=help>
 List-Subscribe: <http://mail.freestandards.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@mail.freestandards.org?subject=subscribe>
-To: "McDonald, Ira" <imcdonald@sharplabs.com>
-Cc: "'lsm-printing@linuxprinting.org'" <lsm-printing@linuxprinting.org>, 'Pierre Jarillon' <jarillon@abul.org>, printing-architecture@freestandards.org
+To: printing-architecture@freestandards.org
 
-McDonald, Ira wrote:
-> Hi Till,
-> 
-> At the FSG Open Printing Int'l Steering Committee meeting 
-> two days ago we agreed to try to schedule:
-> 
-> (1) First day of Open Printing overview/intro/etc., 
->     for attendance by all LSM conference members
-> (2) Second day of Open Printing technical sessions,
->     for working on FSG OP standards issues
-> 
+--0__=09BBE43CDFC488D58f9e8a93df938690918c09BBE43CDFC488D5
+Content-type: text/plain; charset=US-ASCII
 
-At first we must know, which days of the event are only for 
-project-group-internal sessions and on which days of the event are 
-public sessions. We must also know on which day(s) we can give our 
-presentations to the visitors of LSM and which is the total of hours in 
-these sessions. Pierre?
 
-Then we must sort out, which presentations are only interesting for the 
-FSG OpenPrinting group, which are also interesting to the other 
-participating printing developers, and which should be given in the 
-publich session(s), where also visitors will be.
 
-We must also take into account, that not all of the participants of the 
-printing workshop on the LSM are members of FSG OpenPrinting group. This 
-means, that they also want to have a certain part of the talking time in 
-the public session(s) and they also will be not necessarily interested 
-in all our sessions.
 
-Under these aspects we should choose the days and the hours of our sessions.
 
-We should also present somehow to the non-FSG-OpenPrinting people and to 
-the visitors of LSM, what we have done in OpenPrinting and what we will do.
+Thursday, June 3
 
-We have a room for us during all the five days and we have also a 
-session in the conference. We cannot stuff the time in our room full 
-with presentations as there should also stay time for individual 
-discussion and sor hacking sessions.
+GMT 19:00-21:00
+EDT 15:00-17:00
+CDT 14:00-16:00
+MDT 13:00-15:00
+PDT 12:00-14:00
 
-> At the LSM Web page (http://lsm.abul.org/rubrique2.html),
-> we still can't find any day-by-day schedule.
-> 
-> Please ask the LSM organizers, if necessary, and reply to
-> this note with a day-by-day LSM schedule _very_ soon.
-> 
+Toll Free:  1-888-687-2858 (use this first if possible)
+Toll:       1-719-457-3541
+Passcode:           726694
 
-So please make your suggestions for a schedule. Everyone reading this 
-and not being member of the FSG OpenPrinting group, please make your 
-suggestions on what and when you like to present.
+Agenda:     Finalized reference model
+            LSM
 
-> If we can have a second day of technical sessions (perhaps
-> outside the regular LSM conference days), then Mark Hamzy
-> can schedule one or more telecons for those who can't
-> travel to France this July.
-> 
 
-Perhaps July 5 or July 11?
+Mark
 
-    Till
+Take a look at the Linux Omni Printer Driver Framework at
+http://www.ibm.com/linux/ltc/projects/omni/
+--0__=09BBE43CDFC488D58f9e8a93df938690918c09BBE43CDFC488D5
+Content-type: text/html; charset=US-ASCII
+Content-Disposition: inline
+
+<html><body>
+<p><tt>Thursday, June 3</tt><br>
+<br>
+<tt>GMT 19:00-21:00</tt><br>
+<tt>EDT 15:00-17:00</tt><br>
+<tt>CDT 14:00-16:00</tt><br>
+<tt>MDT 13:00-15:00</tt><br>
+<tt>PDT 12:00-14:00</tt><br>
+<br>
+<tt>Toll Free: &nbsp;1-888-687-2858 (use this first if possible)<br>
+Toll: &nbsp; &nbsp; &nbsp; 1-719-457-3541</tt><br>
+<tt>Passcode: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 726694</tt><br>
+<br>
+<tt>Agenda: &nbsp; &nbsp; Finalized reference model</tt><br>
+<tt> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;LSM</tt><br>
+<br>
+<br>
+Mark<br>
+<br>
+Take a look at the Linux Omni Printer Driver Framework at<br>
+<a href="http://www.ibm.com/linux/ltc/projects/omni/">http://www.ibm.com/linux/ltc/projects/omni/</a></body></html>
+--0__=09BBE43CDFC488D58f9e8a93df938690918c09BBE43CDFC488D5--
+
 
