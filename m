@@ -1,11 +1,11 @@
-Message-ID: <116DB56CD7DED511BC7800508B2CA537B0023E@mailsrvnt02.enet.sharplabs.com>
+Message-ID: <116DB56CD7DED511BC7800508B2CA537B00255@mailsrvnt02.enet.sharplabs.com>
 From: "McDonald, Ira" <imcdonald@sharplabs.com>
-Date: Fri, 14 Nov 2003 09:46:40 -0800
+Date: Tue, 18 Nov 2003 17:50:37 -0800
 MIME-Version: 1.0
 Content-Type: text/plain;
 	charset="iso-8859-1"
-Subject: [Printing-architecture] FW: PWG-ANNOUNCE> Announcing IEEE-ISTO PWG Candidate Standard 510
- 0.7-2003
+Subject: [Printing-architecture] FW: PWG-ANNOUNCE> Announcing Last Call for the PWG Semantic Model
+ Schema
 Sender: printing-architecture-admin@freestandards.org
 Errors-To: printing-architecture-admin@freestandards.org
 List-Help: <mailto:printing-architecture-request@freestandards.org?subject=help>
@@ -20,7 +20,8 @@ To: printing-architecture@freestandards.org
 
 Hi,
 
-IPP Job Extensions is now IEEE-ISTO PWG Candidate Standard 5100.7-2003.
+Last call on of the PWG Semantic Model/1.0 schema (especially
+for use by PWG PSI/1.0 which goes to last call in January).
 
 Cheers,
 - Ira
@@ -29,23 +30,49 @@ Ira McDonald (Musician / Software Architect)
 Blue Roof Music / High North Inc
 PO Box 221  Grand Marais, MI  49839
 phone: +1-906-494-2434
-email: imcdonald@sharplabs.com 
-
+email: imcdonald@sharplabs.com
+ 
 -----Original Message-----
 From: Zehler, Peter [mailto:PZehler@crt.xerox.com]
-Sent: Thursday, November 13, 2003 11:18 AM
+Sent: Monday, November 17, 2003 8:49 AM
 To: PWG Announce (pwg-announce@pwg.org)
-Subject: PWG-ANNOUNCE> Announcing IEEE-ISTO PWG Candidate Standard
-5100.7-2003 
-
+Subject: PWG-ANNOUNCE> Announcing Last Call for the PWG Semantic Model
+Schema
 
 All,
-The IEEE-ISTO PWG Candidate Standard 5100.7-2003 - IPP Job Extensions
-specification has been approved as a candidate standard.  The vote was 7
-for, 0 against and 1 abstain. The Candidate Standard has been published on
-the PWG standards page < http://www.pwg.org/standards.html >.
+
+This is the announcement to begin the Last Call process for "The PWG
+Semantic Model" Schema.  The Last Call will last for 2 weeks. At the
+upcoming PWG Face to Face in Provo Utah we will review and resolve all
+comments during the Semantic Model session.  Once Last Call has completed
+and a formal vote succeeds the PWG Semantic Model Schema will be published
+as v1.0.
+
+Please review the schma listed below and send comments to the sm reflector
+(mailto:sm@pwg.org ). 
+
+Thanks,
 Pete
 
+The latest Semantic Model schema (v0.97) is now available at: 
+
+Semantic Model Objects (flat list of objects)
+	http://www.pwg.org/schemas/sm/latest/PwgObjects.xsd 
+
+Semantic Model (hierarchical relationship between objects)
+	http://www.pwg.org/schemas/sm/latest/PwgSemanticModel.xsd
+
+See the "Semantic Model Schema: Latest Version" section under "Documents"
+On the "PWG Semantic Model" web page (http://www.pwg.org/sm/index.html) for
+direct access to all the sub-schema.  
+
+A list of changes from the v0.95 schema is available at 
+http://www.pwg.org/schemas/sm/latest/Schema-Changes.pdf 
+
+I will post some instance documents later this week to help in the Last
+Call.
+
+Pete
 
 Peter Zehler
 XEROX
