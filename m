@@ -1,9 +1,10 @@
-From: "Charles Hemstreet" <charles_at_hp@hotmail.com>
-Date: Thu, 15 May 2003 07:54:34 -0700
-Mime-Version: 1.0
-Content-Type: text/plain; format=flowed
-Message-ID: <Sea2-F62MwVN7miR9Od0002a1a2@hotmail.com>
-Subject: [Printing-architecture] Architecture meeting notes 20030508
+Message-ID: <116DB56CD7DED511BC7800508B2CA53735CFCC@mailsrvnt02.enet.sharplabs.com>
+From: "McDonald, Ira" <imcdonald@sharplabs.com>
+Subject: RE: [Printing-architecture] FSG OpenPrinting Chair election
+Date: Thu, 15 May 2003 09:06:02 -0700
+MIME-Version: 1.0
+Content-Type: text/plain;
+	charset="iso-8859-1"
 Sender: printing-architecture-admin@freestandards.org
 Errors-To: printing-architecture-admin@freestandards.org
 List-Help: <mailto:printing-architecture-request@freestandards.org?subject=help>
@@ -14,54 +15,78 @@ List-Id: <printing-architecture.freestandards.org>
 List-Unsubscribe: <http://freestandards.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@freestandards.org?subject=unsubscribe>
 List-Archive: <http://freestandards.org/pipermail/printing-architecture/>
-To: printing-architecture@freestandards.org
+To: "'PRATT,SHAWN (HP-Boise,ex1)'" <shawn.pratt@hp.com>, "'printing-architecture@freestandards.org'" <printing-architecture@freestandards.org>
 
-Subject: [Printing-architecture] Architecture meeting agenda 20030508. . .
+Hi,
 
-Phone/Passcode:
-* Dial-in: 816.650.0688
-* passcode : 9 6 4 6 2 8
+Shawn's attachment (MS Word) has been converted to PDF (43KB) and
+stored on the PWG FTP server at:
 
-Thursday from 8-9 am PST, 9-10 am MST, 11-12 pm EST, 4-5 pm UTC.
+ftp://ftp.pwg.org/pub/pwg/fsg/general/FSG-OP-Organizational.pdf
 
+Cheers,
+- Ira McDonald
+  High North Inc
 
--------------------------
-In attendance:
-
-Norm Jacobs
-Mark Hamzy
-Ira McDonald
-Charles Hemstreet
+PS - please take a look at this document and send comments or
+join the next FSG OP Architecture telecon on Thursday (22 May).
 
 
+-----Original Message-----
+From: PRATT,SHAWN (HP-Boise,ex1) [mailto:shawn.pratt@hp.com]
+Sent: Friday, April 25, 2003 4:21 PM
+To: 'printing-architecture@freestandards.org';
+'printing-announce@freestandards.org'
+Subject: [Printing-architecture] FSG OpenPrinting Chair election
 
-Agenda for 05/08/03:
 
-�	Catch up � Shawn led last meeting.  Shawn asked for volunteer for position 
-of Chairperson.  Pete Zannucci and Mark Hamzy volunteered.
+Folks:
 
-�	Charles would like to have the elected leader host the meeting
+Attached is the OpenPrinting Organizational document that explains the
+layout of our Openprinting organziation as well as layout and timeframe of
+its leadership.  One of the items in this organization is that the
+OpenPrinting chairperson will only serve a 2 year timeslot and then either
+is re-elected by the voting body or a new person is elected.
 
-�	The June meeting is approaching rapidly, be sure to be thinking about your 
-content (slides) and agenda (what you plan on covering).  Please be sure to 
-publish your agenda�s with content at least the week before.
+The timeslot for me is coming do.  As a lot probably have seen, my ability
+to give focus to the position has dimished greatly over the past few months.
+As such we need to elect a new chairperson.
 
-�	Mark, Pete and Norm are making great headway on the driver.  Job Ticket is 
-becoming a problem due to lack of people that have available time to work on 
-it.
+What are the chairperson's responsibilities:
+*  Leading the steering body of openprinting.  This includes working with
+the various task groups and regional groups to ensure movement around
+openprinting is moving forward.
+*  Providing monthly feedback to the FSG Executive chair, Scott McNeil, on
+the progress, plans and issues the OpenPrinting group.
+*  Working with the FSG Executive board and other FSG working group chairs
+with respect to FSG directions and how this influences changes Openprinting
+work.
+*  Maintain a mailing list/website/Sourceforge project for internal
+communication, document and code repository and external communication.
+*  Work to bring together face-to-face meetings one a 2-4 times a year
+basis.  Currently we are trying to build ourselves into the PWG conference
+schedule.
 
-�	Norm � Shawn mentioned that Federal Government � possibility to get grants 
-was mentioned at one of the meetings.  Many labs are using Linux.
+The first thing I am going to do is see if there are any folks interested in
+this position - volunteers?  If so, let me know.  I will then present that
+person to the voting group to see if there is approval.  If there are
+multiple volunteers, we can establish a voting process.
 
-�	Ira - US Government has a long term project PDF/A(rchival).  PDF/IS is 
-strictly conforming subset of PDF/A.
+Unless people object, I do not see a need to make this extremely formal.
+Let me know.  Otherwise, my plan is to find a group of 2-3 people who could
+be the vote collection committee who will tally up the votes and announce
+the next chair.
 
-�	Talked about FSG meeting in June.
+But first, I am requesting those interested in this position.  I will
+collect names over the next 2 weeks.
 
-�	Claudia thought it would be good to have a driver meeting.
+Also if you are interested in being on the vote collection committee, please
+let me know.
 
-_________________________________________________________________
-The new MSN 8: advanced junk mail protection and 2 months FREE*  
-http://join.msn.com/?page=features/junkmail
+Please send all emails directly to me, shawn.pratt@hp.com.
+
+Regards,
+
+Shawn Pratt
 
 
