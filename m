@@ -1,9 +1,9 @@
-Message-ID: <OF2B8F35B5.2D17516C-ON87256D49.0020F1B2@us.ibm.com>
-From: Claudia Alimpich <alimpich@us.ibm.com>
-Date: Wed, 18 Jun 2003 00:09:03 -0600
+Subject: Re: [Printing-architecture] FSG meeting to continue on Wed. June18
+Message-ID: <OFB5E02289.4F92B97C-ON85256D49.00527CC0@pok.ibm.com>
+From: "Pete Zannucci" <pzaan@us.ibm.com>
+Date: Wed, 18 Jun 2003 10:01:44 -0500
 MIME-Version: 1.0
-Content-type: text/plain; charset=US-ASCII
-Subject: [Printing-architecture] FSG meeting to continue on Wed. June18
+Content-type: text/plain; charset=us-ascii
 Sender: printing-architecture-admin@freestandards.org
 Errors-To: printing-architecture-admin@freestandards.org
 List-Help: <mailto:printing-architecture-request@freestandards.org?subject=help>
@@ -14,7 +14,33 @@ List-Id: <printing-architecture.freestandards.org>
 List-Unsubscribe: <http://freestandards.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@freestandards.org?subject=unsubscribe>
 List-Archive: <http://freestandards.org/pipermail/printing-architecture/>
-To: printing-architecture@freestandards.org
+To: Claudia Alimpich <alimpich@us.ibm.com>
+Cc: printing-architecture@freestandards.org
+
+Is this the correct chairperson code?  Doesn't seem to work
+
+
+
+Peter Zannucci
+
+IBM Linux Technology Center
+Open Source Software Development
+Omni Print Project http://sourceforge.net/projects/omniprint
+Austin, TX - Tel. 512-838-4687 (t/l 678) pzaan@us.ibm.com
+
+
+Claudia Alimpich/Boulder/IBM@IBMUS@freestandards.org on 06/18/2003 01:09:03
+AM
+
+Sent by:    printing-architecture-admin@freestandards.org
+
+
+To:    printing-architecture@freestandards.org
+cc:
+Subject:    [Printing-architecture] FSG meeting to continue on Wed. June18
+
+
+
 
 
 
@@ -34,5 +60,14 @@ and FSG should work on together.
 Dial-In: 1-866-365-4406
 Passcode: 2635888#
 Chairman Code: 6477#
+
+
+_______________________________________________
+Printing-architecture mailing list
+Printing-architecture@freestandards.org
+ http://freestandards.org/mailman/listinfo/printing-architecture
+
+
+
 
 
