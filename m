@@ -1,11 +1,11 @@
-Message-ID: <OF7422350A.FC9B3751-ON86256EF2.0064C9DF-86256EF2.00652E6A@us.ibm.com>
+Message-ID: <OFD56D362E.4A0FE775-ON86256EF5.006AA0A4-86256EF5.006B0697@us.ibm.com>
 From: Mark Hamzy <hamzy@us.ibm.com>
-Date: Mon, 16 Aug 2004 13:25:10 -0500
+Date: Thu, 19 Aug 2004 14:29:00 -0500
 MIME-Version: 1.0
 Content-type: multipart/alternative; 
-	Boundary="0__=09BBE461DFF74F4F8f9e8a93df938690918c09BBE461DFF74F4F"
+	Boundary="0__=09BBE466DFF926348f9e8a93df938690918c09BBE466DFF92634"
 Content-Disposition: inline
-Subject: [Printing-architecture] FSG Architecture conference call 08/19/2004
+Subject: [Printing-architecture] Reference model assignments
 List-Id: Printing architecture under linux
 	<printing-architecture.mail.freestandards.org>
 List-Unsubscribe: <http://mail.freestandards.org/mailman/listinfo/printing-architecture>,
@@ -17,50 +17,58 @@ List-Subscribe: <http://mail.freestandards.org/mailman/listinfo/printing-archite
 	<mailto:printing-architecture-request@mail.freestandards.org?subject=subscribe>
 To: printing-architecture@freestandards.org
 
---0__=09BBE461DFF74F4F8f9e8a93df938690918c09BBE461DFF74F4F
+--0__=09BBE466DFF926348f9e8a93df938690918c09BBE466DFF92634
 Content-type: text/plain; charset=US-ASCII
 
 
 
 
 
-Thursday, August 19
+All,
 
-GMT 19:00-21:00
-EDT 15:00-17:00
-CDT 14:00-16:00
-MDT 13:00-15:00
-PDT 12:00-14:00
+Here are the current writing assignments for the reference model:
 
-Toll Free:  1-888-687-2858 (use this first if possible)
-Toll:       1-719-457-3541
-Passcode:           844198
+claudia - jtapi
+till    -
+mark    - driver, transform
+(08/06/2004 05:03 PM)
+ira     - print channel controller, print manager, spooler
+glen    - update reference model, status monitoring, capabilities
+(08/04/2004 05:38 PM)
+norm    - print dialog, app interface, printer data
+jody    - plug and play
+
+Will everyone please work on their assignments and finish them this week so
+that we can discuss them next week?  If you cannot finish what you
+volunteered for, please respond to the list.
 
 Mark
 
 Take a look at the Linux Omni Printer Driver Framework at
 http://www.ibm.com/linux/ltc/projects/omni/
---0__=09BBE461DFF74F4F8f9e8a93df938690918c09BBE461DFF74F4F
+--0__=09BBE466DFF926348f9e8a93df938690918c09BBE466DFF92634
 Content-type: text/html; charset=US-ASCII
 Content-Disposition: inline
 
 <html><body>
-<p><tt>Thursday, August 19</tt><br>
+<p>All,<br>
 <br>
-<tt>GMT 19:00-21:00</tt><br>
-<tt>EDT 15:00-17:00</tt><br>
-<tt>CDT 14:00-16:00</tt><br>
-<tt>MDT 13:00-15:00</tt><br>
-<tt>PDT 12:00-14:00</tt><br>
+Here are the current writing assignments for the reference model:<br>
 <br>
-<tt>Toll Free: &nbsp;1-888-687-2858 (use this first if possible)<br>
-Toll: &nbsp; &nbsp; &nbsp; 1-719-457-3541</tt><br>
-<tt>Passcode: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 844198</tt><br>
+claudia - jtapi<br>
+till    - <br>
+mark    - driver, transform                                       (08/06/2004 05:03 PM)<br>
+ira     - print channel controller, print manager, spooler<br>
+glen    - update reference model, status monitoring, capabilities (08/04/2004 05:38 PM)<br>
+norm    - print dialog, app interface, printer data<br>
+jody    - plug and play<br>
+<br>
+Will everyone please work on their assignments and finish them this week so that we can discuss them next week?  If you cannot finish what you volunteered for, please respond to the list.<br>
 <br>
 Mark<br>
 <br>
 Take a look at the Linux Omni Printer Driver Framework at<br>
 <a href="http://www.ibm.com/linux/ltc/projects/omni/">http://www.ibm.com/linux/ltc/projects/omni/</a></body></html>
---0__=09BBE461DFF74F4F8f9e8a93df938690918c09BBE461DFF74F4F--
+--0__=09BBE466DFF926348f9e8a93df938690918c09BBE466DFF92634--
 
 
