@@ -1,9 +1,9 @@
+Message-ID: <OF409322D1.122D3D72-ON85256C69.007DD688@pok.ibm.com>
+From: "Pete Zannucci" <pzaan@us.ibm.com>
+Date: Wed, 6 Nov 2002 17:00:56 -0600
 MIME-Version: 1.0
-Subject: Re: [Printing-architecture] PAPI Overview Section
-From: "Alan Hlava" <hlava@us.ibm.com>
-Message-ID: <OF0B0C9311.A9CD38A6-ON87256C59.005883C2@boulder.ibm.com>
-Date: Mon, 21 Oct 2002 10:10:04 -0600
-Content-Type: multipart/alternative; boundary="=_alternative 0058C4F487256C59_="
+Content-type: text/plain; charset=us-ascii
+Subject: [Printing-architecture] New diagrams
 Sender: printing-architecture-admin@freestandards.org
 Errors-To: printing-architecture-admin@freestandards.org
 List-Help: <mailto:printing-architecture-request@freestandards.org?subject=help>
@@ -16,57 +16,26 @@ List-Unsubscribe: <http://freestandards.org/mailman/listinfo/printing-architectu
 List-Archive: <http://freestandards.org/pipermail/printing-architecture/>
 To: printing-architecture@freestandards.org
 
-This is a multipart message in MIME format.
---=_alternative 0058C4F487256C59_=
-Content-Type: text/plain; charset="us-ascii"
+I have updated the lower level architecture diagrams that were being
+discussed
+last week.  Ira had some good feedback (thanks Ira) along with what I could
+remember from the conversation that I incorporated.  I didn't have any
+hollow
+arrows for returned data this time around, sorry.  I'll have to work on
+that one.
 
-On Monday, 10/21/2002 at 11:50 AST, Michael Sweet <mike@easysw.com> wrote:
-> Alan Hlava wrote:
-> >
-> > I created a PAPI overview section using Claudia's template and stored 
-it
-> > in:
-> > ftp://ftp.pwg.org/pub/pwg/fsg/architecture/papi/
-> >
-> > Please send comments/suggestions here or to me directly.
-> 
-> Well, aside from the non-working links and the obviously-exported-
-> from-MS-Word appearance, it looks good.
+I have put them on the PWG ftp site.  Their names are arch1_11-7.jpg and
+arch2_11-7.jpg in the fsg/architecture directory.
 
-I was just using the template Claudia created.  If anyone knows how to get 
-
-from a MS Word format to a format without external links and  with a 
-NOT-obviously-exported-from-MS-Word format, please let me know how.
-
-Regards,
-
-Alan Hlava
-IBM Printing Systems Division
-hlava@us.ibm.com
---=_alternative 0058C4F487256C59_=
-Content-Type: text/html; charset="us-ascii"
+Thanks,
 
 
-<br><font size=2 face="sans-serif">On Monday, 10/21/2002 at 11:50 AST, Michael Sweet &lt;mike@easysw.com&gt; wrote:<br>
-&gt; Alan Hlava wrote:<br>
-&gt; &gt;<br>
-&gt; &gt; I created a PAPI overview section using Claudia's template and stored it<br>
-&gt; &gt; in:<br>
-&gt; &gt; ftp://ftp.pwg.org/pub/pwg/fsg/architecture/papi/<br>
-&gt; &gt;<br>
-&gt; &gt; Please send comments/suggestions here or to me directly.<br>
-&gt; <br>
-&gt; Well, aside from the non-working links and the obviously-exported-<br>
-&gt; from-MS-Word appearance, it looks good.<br>
-</font>
-<br><font size=2 face="sans-serif">I was just using the template Claudia created. &nbsp;If anyone knows how to get </font>
-<br><font size=2 face="sans-serif">from a MS Word format to a format without external links and &nbsp;with a </font>
-<br><font size=2 face="sans-serif">NOT-obviously-exported-from-MS-Word format, please let me know how.</font>
-<br>
-<br><font size=2 face="sans-serif">Regards,</font>
-<br>
-<br><font size=2 face="sans-serif">Alan Hlava<br>
-IBM Printing Systems Division<br>
-hlava@us.ibm.com</font>
---=_alternative 0058C4F487256C59_=--
+Peter Zannucci
+
+IBM Linux Technology Center
+Open Source Software Development
+Omni Print Project http://sourceforge.net/projects/omniprint
+Austin, TX - Tel. 512-838-4687 (t/l 678) pzaan@us.ibm.com
+
+
 
