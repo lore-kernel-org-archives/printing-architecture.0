@@ -1,9 +1,11 @@
-From: "Charles Hemstreet" <charles_at_hp@hotmail.com>
-Date: Thu, 26 Jun 2003 10:01:33 -0700
-Mime-Version: 1.0
-Content-Type: text/plain; format=flowed
-Message-ID: <Sea2-F42YsnU1UOJqXU000059b3@hotmail.com>
-Subject: [Printing-architecture] Architecture meeting *UNABLE TO HOST* agenda 20030626. . .
+Message-ID: <116DB56CD7DED511BC7800508B2CA53735D07A@mailsrvnt02.enet.sharplabs.com>
+From: "McDonald, Ira" <imcdonald@sharplabs.com>
+Subject: RE: [Printing-architecture] [who hosts??] Architecture meeting *U
+	NABLE TO HOST* agenda 20030626. . .
+Date: Thu, 26 Jun 2003 10:21:08 -0700
+MIME-Version: 1.0
+Content-Type: text/plain;
+	charset="iso-8859-1"
 Sender: printing-architecture-admin@freestandards.org
 Errors-To: printing-architecture-admin@freestandards.org
 List-Help: <mailto:printing-architecture-request@freestandards.org?subject=help>
@@ -14,7 +16,26 @@ List-Id: <printing-architecture.freestandards.org>
 List-Unsubscribe: <http://freestandards.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@freestandards.org?subject=unsubscribe>
 List-Archive: <http://freestandards.org/pipermail/printing-architecture/>
+To: 'Charles Hemstreet' <charles_at_hp@hotmail.com>, printing-architecture@freestandards.org
+
+Hi,
+
+Charles - does someone else have the chair activation code?
+
+Claudia and Glen - should we shift to some other teleconference
+number and passcode?
+
+Cheers,
+- Ira
+
+
+-----Original Message-----
+From: Charles Hemstreet [mailto:charles_at_hp@hotmail.com]
+Sent: Thursday, June 26, 2003 1:02 PM
 To: printing-architecture@freestandards.org
+Subject: [Printing-architecture] Architecture meeting *UNABLE TO HOST*
+agenda 20030626. . .
+
 
 Folks:
 
@@ -24,7 +45,8 @@ The proposed agenda is the continuation of the USE-CASES.
 
 I've included the USE-CASES we came up with at the PWG/FSG meeting.
 
----------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------
+-----------------
 
 16Jan2003
 
@@ -93,4 +115,9 @@ _________________________________________________________________
 Add photos to your messages with MSN 8. Get 2 months FREE*.  
 http://join.msn.com/?page=features/featuredemail
 
+
+_______________________________________________
+Printing-architecture mailing list
+Printing-architecture@freestandards.org
+http://freestandards.org/mailman/listinfo/printing-architecture
 
