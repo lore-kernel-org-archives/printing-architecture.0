@@ -1,9 +1,9 @@
-Message-ID: <6D805D4C4567D411AF32009027B683510DF68416@xvan02.vcd.hp.com>
+Message-ID: <6D805D4C4567D411AF32009027B683510F209B5F@xvan02.vcd.hp.com>
 From: "HEMSTREET,CHARLES (HP-Vancouver,ex1)" <charles_hemstreet@hp.com>
-Subject: RE: [Printing-architecture] Meeting on the 9th of January?
-Date: Mon, 6 Jan 2003 00:44:36 -0500 
+Date: Wed, 8 Jan 2003 13:52:03 -0500 
 MIME-Version: 1.0
 Content-Type: text/plain
+Subject: [Printing-architecture] Architecture meeting agenda 20030109. . .
 Sender: printing-architecture-admin@freestandards.org
 Errors-To: printing-architecture-admin@freestandards.org
 List-Help: <mailto:printing-architecture-request@freestandards.org?subject=help>
@@ -14,16 +14,23 @@ List-Id: <printing-architecture.freestandards.org>
 List-Unsubscribe: <http://freestandards.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@freestandards.org?subject=unsubscribe>
 List-Archive: <http://freestandards.org/pipermail/printing-architecture/>
-To: "'imcdonald@sharplabs.com'" <imcdonald@sharplabs.com>, "'printing-architecture@freestandards.org'" <printing-architecture@freestandards.org>
+To: "'printing-architecture@freestandards.org'" <printing-architecture@freestandards.org>
 
-Yes, we are indeed meeting. I hope that everyone is refreshed and had a good
-holiday. 
+Phone/Passcode:
+* Dial-in  : 816.650.0688
+* passcode : 9 6 4 6 2 8
 
-Agenda suggestions?
+Thursday from 8-9 am PST, 9-10 am
+MST, 11-12 pm EST, 4-5 pm UTC.
+ 
 
+-------------------------
+
+Agenda for 01/09/03:
+
+* Discuss next face-to-face meeting.  Interest in meeting at LinuxWorld?
+* Where does the architecture meeting need to pick up?
+
+Thanks,
 Charles
---------------------------
-Charles H. Hemstreet IV
-The New HP
-Sent from my BlackBerry Wireless Handheld (www.BlackBerry.net)
 
