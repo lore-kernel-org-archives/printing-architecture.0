@@ -1,11 +1,11 @@
-Message-ID: <CFEE79A465B35C4385389BA5866BEDF00C7662@mailsrvnt02.enet.sharplabs.com>
-From: "McDonald, Ira" <imcdonald@sharplabs.com>
-Date: Thu, 8 Apr 2004 09:36:10 -0700 
+Message-ID: <OF1CDA35E0.D6976257-ON86256E77.00531F20-86256E77.0053AA95@us.ibm.com>
+From: Mark Hamzy <hamzy@us.ibm.com>
+Date: Thu, 15 Apr 2004 10:13:51 -0500
 MIME-Version: 1.0
-Content-Type: text/plain;
-	charset="iso-8859-1"
-Subject: [Printing-architecture] FW: PWG-ANNOUNCE> 24-27 May - Tentative
-	Vancouver agenda
+Content-type: multipart/alternative; 
+	Boundary="0__=09BBE4E4DFC099B08f9e8a93df938690918c09BBE4E4DFC099B0"
+Content-Disposition: inline
+Subject: [Printing-architecture] Architecture meeting 04/15/2004
 List-Id: Printing architecture under linux
 	<printing-architecture.mail.freestandards.org>
 List-Unsubscribe: <http://mail.freestandards.org/mailman/listinfo/printing-architecture>,
@@ -17,46 +17,54 @@ List-Subscribe: <http://mail.freestandards.org/mailman/listinfo/printing-archite
 	<mailto:printing-architecture-request@mail.freestandards.org?subject=subscribe>
 To: printing-architecture@freestandards.org
 
-Hi,
-
-Below is the tentative PWG Vancouver agenda for 24-27 May.
-
-Cheers,
-- Ira
-
-Ira McDonald (Musician / Software Architect)
-Blue Roof Music / High North Inc
-PO Box 221  Grand Marais, MI  49839
-phone: +1-906-494-2434
-email: imcdonald@sharplabs.com 
-
-
------Original Message-----
-From: Harry Lewis [mailto:harryl@us.ibm.com]
-Sent: Wednesday, April 07, 2004 1:51 PM
-To: pwg-announce@pwg.org
-Cc: a.s.patel@ieee.org
-Subject: PWG-ANNOUNCE> Tentative Vancouver agenda
+--0__=09BBE4E4DFC099B08f9e8a93df938690918c09BBE4E4DFC099B0
+Content-type: text/plain; charset=US-ASCII
 
 
 
-Following discussion with the steering committee, here is the tentative
-agenda for Vancouver (May 24-27) 
 
-Monday - WBMM 
-Tuesday - Plenary (morning - with time for PSI Last Call review); PWG
-process last call review including Semantic Model process and aux documents
-such as file naming (afternoon) 
-Wednesday - Semantic Model Extensions (morning); Standard Imaging Systems
-Events (afternoon) 
-Thursday - Consumer (8:30-11:30); Transform Services Interface Introduction
-(12:30 - 3pm) 
----------------------------------------------- 
-Harry Lewis 
-Chairman - IEEE-ISTO Printer Working Group
-http://www.pwg.org
-IBM Printing Systems 
-http://www.ibm.com/printers
-303-924-5337
----------------------------------------------- 
+
+Thursday, April 15
+
+GMT 19:00-21:00
+EDT 15:00-17:00
+CDT 14:00-16:00
+MDT 13:00-15:00
+PDT 12:00-14:00
+
+Toll Free:  1-888-687-2858 (use this first if possible)
+Toll:       1-719-457-3541
+Passcode:           726694
+
+Agenda:     Use cases?
+
+Mark
+
+Take a look at the Linux Omni Printer Driver Framework at
+http://www.ibm.com/linux/ltc/projects/omni/
+--0__=09BBE4E4DFC099B08f9e8a93df938690918c09BBE4E4DFC099B0
+Content-type: text/html; charset=US-ASCII
+Content-Disposition: inline
+
+<html><body>
+<p><tt>Thursday, April 15</tt><br>
+<br>
+<tt>GMT 19:00-21:00</tt><br>
+<tt>EDT 15:00-17:00</tt><br>
+<tt>CDT 14:00-16:00</tt><br>
+<tt>MDT 13:00-15:00</tt><br>
+<tt>PDT 12:00-14:00</tt><br>
+<br>
+<tt>Toll Free: &nbsp;1-888-687-2858 (use this first if possible)<br>
+Toll: &nbsp; &nbsp; &nbsp; 1-719-457-3541</tt><br>
+<tt>Passcode: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 726694</tt><br>
+<br>
+<tt>Agenda: &nbsp; &nbsp; Use cases?</tt><br>
+<br>
+Mark<br>
+<br>
+Take a look at the Linux Omni Printer Driver Framework at<br>
+<a href="http://www.ibm.com/linux/ltc/projects/omni/">http://www.ibm.com/linux/ltc/projects/omni/</a></body></html>
+--0__=09BBE4E4DFC099B08f9e8a93df938690918c09BBE4E4DFC099B0--
+
 
