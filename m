@@ -1,10 +1,13 @@
-Date: Wed, 26 Mar 2003 20:01:13 -0500
-Message-Id: <200303270101.h2R11DYt001480@dsl092-065-009.bos1.dsl.speakeasy.net>
-From: Robert L Krawitz <rlk@alum.mit.edu>
-In-reply-to: <3E812D30.40701@easysw.com> (mike@easysw.com)
-Subject: Re: [Printing-architecture] Re: [printing-driver] FSG Printer Working
- Group conference call 03/26/03
-References: <OFC5111351.DFB34EDB-ON86256CF3.006ACF5B-86256CF3.006B2C0C@us.ibm.com> <200303250116.h2P1GZVc009025@dsl092-065-009.bos1.dsl.speakeasy.net> <3E7FBB4F.4040503@easysw.com> <200303250242.h2P2gEia009925@dsl092-065-009.bos1.dsl.speakeasy.net> <3E807421.9050508@easysw.com> <200303260156.h2Q1udkt023508@dsl092-065-009.bos1.dsl.speakeasy.net> <3E812D30.40701@easysw.com>
+Message-ID: <3E826CE6.7010904@easysw.com>
+Date: Wed, 26 Mar 2003 22:15:50 -0500
+From: Mike Sweet <mike@easysw.com>
+MIME-Version: 1.0
+Subject: Re: [Printing-architecture] FSG Printer Working Group meeting notes
+ 03/26/03
+References: <OF681B092B.0DF4A39F-ON86256CF5.0081DB93-86256CF5.008305E7@us.ibm.com>
+In-Reply-To: <OF681B092B.0DF4A39F-ON86256CF5.0081DB93-86256CF5.008305E7@us.ibm.com>
+Content-Type: text/plain; charset=us-ascii; format=flowed
+Content-Transfer-Encoding: 7bit
 Sender: printing-architecture-admin@freestandards.org
 Errors-To: printing-architecture-admin@freestandards.org
 List-Help: <mailto:printing-architecture-request@freestandards.org?subject=help>
@@ -15,68 +18,115 @@ List-Id: <printing-architecture.freestandards.org>
 List-Unsubscribe: <http://freestandards.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@freestandards.org?subject=unsubscribe>
 List-Archive: <http://freestandards.org/pipermail/printing-architecture/>
-To: mike@easysw.com
+To: Mark Hamzy <hamzy@us.ibm.com>
 Cc: printing-driver@freestandards.org, printing-architecture@freestandards.org
 
-   Date: Tue, 25 Mar 2003 23:31:44 -0500
-   From: Mike Sweet <mike@easysw.com>
+Mark Hamzy wrote:
+> ...
+> Yes. Supporting the key=values from the JT is a requirement. This
+> would lead us to consider the JT keys and values as the standard to
+> use. We need to make sure that all printer drivers have either a
+> mapping from their old keys/values to the new JT keys/values or
+ > have their keys and values added to the JT standard.
 
-   Robert L Krawitz wrote:
-    > ...
-   >    (and from the CUPS standpoint, we *will not* be supporting a
-   >    direct scheduler<->driver interface, as that opens up serious
-   >    security and performance issues...)
-   > 
-   > What's the security issue?
+Better to define a standard mechanism for vendors to add their own
+attributes, e.g. com.vendor.attr.
 
-   The two main ones are:
+Also, I'm not clear if you are advocating using the subverted IPP
+names (e.g. documentFormat instead of document-format?) instead?
+If so, that will be a hard sell - we already have to map IPP
+attributes to PPD options...
 
-	1. If we directly connect to the driver/library, then any buffer
-	   overflows in the driver/library might be exploited to gain
-	   root access.  Thus, we won't directly connect...
+> ...
+> One worry is size of data if all are passed in at once.  One
+ > solution that is proposed is to query the driver for the number
+ > of key/values that can be passed in one call.
 
-Yup, that makes sense.  The driver should in any event run with the
-least possible privilege.
+I think it will be a lot better to just require drivers accept
+data of arbitrary size; drivers can read/process attributes
+incrementally on their own, and if a driver only supports a very
+small buffer then some attributes may be lost (no way to send a
+long attribute if the buffer is too small...)
 
-	2. If we indirectly connect to the driver/library, and do it
-	   "safely" with a non-priviledged user with pipes to and from
-	   the backend so the driver can communicate with the device,
-	   we run the risk of a DoS attack if more than one user wants
-	   to print at the same time and needs the "dynamic" driver
-	   data.  This also falls under the performance umbrella...
+ > ...
+> New issues that occurred during the meeting:
+>    * should there be API to set/query default job properties?
+> 
+>      Yes.
 
-   The mechanism we will be using in CUPS 1.2 is an asynchronous
-   device daemon with a "port monitor" facility that will allow
-   developers to provide printer driver filter(s) and a "port monitor"
-   program; the filter(s) will handle the production of data suitable
-   for the printer, while the (optional) port monitor handles printer
-   queries, data encoding, etc.  One other task for the port monitor
-   is periodic status updates via the device monitor - this will allow
-   the port monitor to update the PPD file for current device
-   configuration, update the printer object for current state, etc.
+papiPrinterQuery() already supports this...
 
-That sounds like a good architecture anyway.  I don't see why the
-filter couldn't also act as an "option server" or some such, though.
+> ...
+>    * should we use a structured data message format?
+> 
+>       + should it be
+>          - XML
+>          - a simple human readable ASCII string encoding
+>          - binary
+>             ~ big-endian/little-endian
+>             ~ 8-bit clean
+> 
+>       + should it have a length in the structure?
+> 
+>          - 20-octet end-of-string marker instead of sizeof structure
 
-   Ideally we should be able to provide a GIMP-print API for
-   retrieving the driver constraints and/or put all of the driver-
-   specific data in the printers.xml file so that the driver and PPD
-   files are data driven and not hardcoded.  This would also make it
-   possible for programmatic PPD file generation - CUPS would ask
-   GIMP-print for a list of the drivers it supports along with
-   "virtual" PPD filenames, and then CUPS can have GIMP-print write
-   the PPD file in /etc/cups/ppd as requested by the administrator.
+PAPI defines a format for ASCII attributes; from the standpoint of
+passing command-line arguments, etc., using this format would make
+sense, and it maps cleanly to XML and/or IPP data streams.
 
-Any suggestions from your experience what kind of constructs might be
-good for this purpose?
+> ...
+>>* can there be different job properties for each page?
+>>
+>>  + Can this can be optional?
+> 
+> 
+> Yes.  If a device cannot handle switching job properties on a new page,
+> then
+> the driver should stop the print job and start another one.
+
+Note: this MUST be transparent to the print system and application,
+so in the end per-page properties are not optional, and the driver
+MUST support per-page properties by starting a new job.
+
+> ...
+> Unicode font metrics can be a large message.
+
+It might be useful to include the range of interest, e.g. "give me
+font metrics for chars 0 to 255".
+
+> ...
+>>* should we require a standard install path?
+>>  /usr/lib/print/driver/drivername
+>>  /usr/share/print/font/drivername/
+> 
+> 
+> This question was asked because we need some method of detectability or
+> discoverability of installed drivers.  This can be as simple as an ini file
+> that is found at a certain location.  This file can contain:
+>    - what driver is installed
+>    - where it is located
+>    - how do I communicate with it
+
+As I mentioned before, a better interface would be to provide a
+standard command that can be used to install one or more printer
+drivers in a standard format; this command would then handle the
+printing system specific installation stuff.
+
+> Future issues are:
+>    - should there be calls to the driver to notify when the driver is
+>       + installed
+>       + uninstalled
+>       + upgraded
+
+Aside from actual installation/removal/upgrade of the software
+itself, there could also be an issue with initial device
+configuration when the printer is connected and queue is setup
+for the printing system (e.g. for CUPS to query the printer and
+update the PPD file for installed options...)
 
 -- 
-Robert Krawitz                                     <rlk@alum.mit.edu>      
+______________________________________________________________________
+Michael Sweet, Easy Software Products                  mike@easysw.com
+Printing Software for UNIX                       http://www.easysw.com
 
-Tall Clubs International  --  http://www.tall.org/ or 1-888-IM-TALL-2
-Member of the League for Programming Freedom -- mail lpf@uunet.uu.net
-Project lead for Gimp Print   --    http://gimp-print.sourceforge.net
-
-"Linux doesn't dictate how I work, I dictate how Linux works."
---Eric Crampton
 
