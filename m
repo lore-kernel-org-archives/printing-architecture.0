@@ -1,11 +1,11 @@
-Message-ID: <2F7D63A21DB2C74EB8EB8C09AF667DB06EF7FB@eitc220.eitc.epson.com>
-From: "Petrie, Glen" <glen.petrie@eitc.epson.com>
-Date: Tue, 15 Jun 2004 08:18:55 -0700
+Message-ID: <CFEE79A465B35C4385389BA5866BEDF00C7725@mailsrvnt02.enet.sharplabs.com>
+From: "McDonald, Ira" <imcdonald@sharplabs.com>
+Date: Tue, 15 Jun 2004 08:54:44 -0700
 MIME-Version: 1.0
 Content-Type: multipart/alternative;
-	boundary="----_=_NextPart_001_01C452EC.12A59EE0"
-Subject: [Printing-architecture] Will there be an Arch meeting this week
-	[6/17] ?
+	boundary="----_=_NextPart_001_01C452F0.50E51C43"
+Subject: [Printing-architecture] FW: PWG-ANNOUNCE> Printer & Finisher MIBs
+	Published!!!
 List-Id: Printing architecture under linux
 	<printing-architecture.mail.freestandards.org>
 List-Unsubscribe: <http://mail.freestandards.org/mailman/listinfo/printing-architecture>,
@@ -20,173 +20,153 @@ To: printing-architecture@freestandards.org
 This message is in MIME format. Since your mail reader does not understand
 this format, some or all of this message may not be legible.
 
-------_=_NextPart_001_01C452EC.12A59EE0
-Content-Type: text/plain
+------_=_NextPart_001_01C452F0.50E51C43
+Content-Type: text/plain;
+	charset="iso-8859-1"
 
-Everyone seems to be very busy this week (including myself); so I want to
-check if there will be enough people for an architecture meeting this week.
-
+Hi,
+ 
+After nine years of patient work, the Printer MIB v2 (RFC 3805)
+has finally been published.  Also, the Finisher MIB (RFC 3806)
+and the supporting IANA Charset MIB (RFC 3808).
+ 
+Please pass this note on to other printing standards mailing lists.
+ 
+Thanks to Ron Bergman (Hitachi) and Harry Lewis (IBM) for all
+of their excellent work and dogged persistence.
+ 
+Cheers,
+- Ira, co-editor of these MIBs
  
 
-Also, I am being asked to present slides to the public on FSG activities at
-the Libre conference.   I will be taking slides from the presentation we
-gave at the US-Japan SC meeting.  However, I would like to review with each
-group before I leave on July 2.  This leaves June 17 and June 24.   I will
-not have time on July 1 to make any changes.
+Ira McDonald (Musician / Software Architect)
+Blue Roof Music / High North Inc
+PO Box 221  Grand Marais, MI  49839
+phone: +1-906-494-2434
+email: imcdonald@sharplabs.com 
 
- 
-
-Rgds, 
-Glen W. Petrie 
-Epson Imaging Technology Center 
-150 River Oaks Parkway, Suite 200 
-San Jose, CA, 95134 
-Voice: 408.576.4131  Fax: 408.474.0511 
-
- 
+-----Original Message-----
+From: owner-pwg-announce@pwg.org [mailto:owner-pwg-announce@pwg.org]On
+Behalf Of Bergman, Ron
+Sent: Monday, June 14, 2004 8:00 PM
+To: pwg-announce@pwg.org
+Subject: PWG-ANNOUNCE> Printer & Finisher MIBs Status
 
 
-------_=_NextPart_001_01C452EC.12A59EE0
-Content-Type: text/html
-Content-Transfer-Encoding: quoted-printable
 
-<html xmlns:v=3D"urn:schemas-microsoft-com:vml" =
-xmlns:o=3D"urn:schemas-microsoft-com:office:office" =
-xmlns:w=3D"urn:schemas-microsoft-com:office:word" =
-xmlns=3D"http://www.w3.org/TR/REC-html40">
+The long awaited Printer MIB v2 and Finisher MIB are now available as IETF
+official documents. 
+(Although the official IETF announce has not been made.) 
 
-<head>
-<META HTTP-EQUIV=3D"Content-Type" CONTENT=3D"text/html; =
-charset=3Dus-ascii">
+  ftp://ftp.isi.edu/in-notes/rfc3805.txt
+<ftp://ftp.isi.edu/in-notes/rfc3805.txt>    (Printer MIB v2) 
+
+  ftp://ftp.isi.edu/in-notes/rfc3806.txt
+<ftp://ftp.isi.edu/in-notes/rfc3806.txt>    (Finisher MIB) 
+
+  ftp://ftp.isi.edu/in-notes/rfc3808.txt
+<ftp://ftp.isi.edu/in-notes/rfc3808.txt>    (Charset MIB) 
+
+Note that the Charset MIB now provides the missing enumerations for the
+CodedCharSet 
+textual convention defined in RFC1759.  This TC is now known as IANACharset.
 
 
-<meta name=3DGenerator content=3D"Microsoft Word 11 (filtered medium)">
-<style>
-<!--
- /* Font Definitions */
- @font-face
-	{font-family:"MS Mincho";
-	panose-1:2 2 6 9 4 2 5 8 3 4;}
-@font-face
-	{font-family:SimSun;
-	panose-1:2 1 6 0 3 1 1 1 1 1;}
-@font-face
-	{font-family:"Comic Sans MS";
-	panose-1:3 15 7 2 3 3 2 2 2 4;}
-@font-face
-	{font-family:"\@SimSun";
-	panose-1:2 1 6 0 3 1 1 1 1 1;}
-@font-face
-	{font-family:"\@MS Mincho";
-	panose-1:2 2 6 9 4 2 5 8 3 4;}
- /* Style Definitions */
- p.MsoNormal, li.MsoNormal, div.MsoNormal
-	{margin:0in;
-	margin-bottom:.0001pt;
-	font-size:12.0pt;
-	font-family:"Times New Roman";}
-a:link, span.MsoHyperlink
-	{color:blue;
-	text-decoration:underline;}
-a:visited, span.MsoHyperlinkFollowed
-	{color:purple;
-	text-decoration:underline;}
-p
-	{mso-margin-top-alt:auto;
-	margin-right:0in;
-	mso-margin-bottom-alt:auto;
-	margin-left:0in;
-	font-size:12.0pt;
-	font-family:"Times New Roman";}
-span.EmailStyle17
-	{mso-style-type:personal-compose;
-	font-family:"Courier New";
-	color:windowtext;}
-@page Section1
-	{size:8.5in 11.0in;
-	margin:1.0in 1.25in 1.0in 1.25in;}
-div.Section1
-	{page:Section1;}
--->
-</style>
+I would like to thank everyone who contributed to these documents over the
+last 8 years. 
+I especially want to thank Ira McDonald and Bert Wijnen, who spent countless
+hours 
+reviewing and helping edit the documents and working with the IETF to move
+the drafts 
+to their final state.  Others outside of the PWG that provided significant
+inputs include 
+Juergen Schoenwaelder and David Harrington. 
 
-</head>
+The number of contibutors in the PWG is a long list and can be found in the
+documents. 
 
-<body lang=3DEN-US link=3Dblue vlink=3Dpurple>
+        Ron Bergman 
+        Hitachi Printing Solutions, America 
 
-<div class=3DSection1>
 
-<p class=3DMsoNormal><font size=3D2 color=3Dnavy face=3D"Comic Sans =
-MS"><span
-style=3D'font-size:10.0pt;font-family:"Comic Sans =
-MS";color:navy'>Everyone seems
-to be very busy this week (including myself); so I want to check if =
-there will
-be enough people for an architecture meeting this =
-week.<o:p></o:p></span></font></p>
+------_=_NextPart_001_01C452F0.50E51C43
+Content-Type: text/html;
+	charset="iso-8859-1"
 
-<p class=3DMsoNormal><font size=3D2 color=3Dnavy face=3D"Comic Sans =
-MS"><span
-style=3D'font-size:10.0pt;font-family:"Comic Sans =
-MS";color:navy'><o:p>&nbsp;</o:p></span></font></p>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>Printer & Finisher MIBs Status</TITLE>
 
-<p class=3DMsoNormal><font size=3D2 color=3Dnavy face=3D"Comic Sans =
-MS"><span
-style=3D'font-size:10.0pt;font-family:"Comic Sans MS";color:navy'>Also, =
-I am
-being asked to present slides to the public on FSG activities at the =
-Libre
-conference. &nbsp;&nbsp;I will be taking slides from the presentation =
-we gave
-at the US-Japan SC meeting. &nbsp;However, I would like to review with =
-each
-group before I leave on July 2.&nbsp; This leaves June 17 and June =
-24.&nbsp;&nbsp; I will not
-have time on July 1 to make any changes.</span></font><font size=3D2
-face=3D"Courier New"><span =
-style=3D'font-size:10.0pt;font-family:"Courier =
-New"'><o:p></o:p></span></font></p>
+<META content="MSHTML 6.00.2800.1276" name=GENERATOR></HEAD>
+<BODY>
+<DIV><SPAN class=350565015-15062004><FONT face=Arial color=#0000ff 
+size=2>Hi,</FONT></SPAN></DIV>
+<DIV><SPAN class=350565015-15062004><FONT face=Arial color=#0000ff 
+size=2></FONT></SPAN>&nbsp;</DIV>
+<DIV><SPAN class=350565015-15062004><FONT face=Arial color=#0000ff size=2>After 
+nine years of patient work, the Printer MIB v2 (RFC 3805)</FONT></SPAN></DIV>
+<DIV><SPAN class=350565015-15062004><FONT face=Arial color=#0000ff size=2>has 
+finally been published.&nbsp; Also, the Finisher MIB (RFC 
+3806)</FONT></SPAN></DIV>
+<DIV><SPAN class=350565015-15062004><FONT face=Arial color=#0000ff size=2>and 
+the supporting IANA Charset MIB (RFC 3808).</FONT></SPAN></DIV>
+<DIV><SPAN class=350565015-15062004><FONT face=Arial color=#0000ff 
+size=2></FONT></SPAN>&nbsp;</DIV>
+<DIV><SPAN class=350565015-15062004><FONT face=Arial color=#0000ff size=2>Please 
+pass this note on to other printing standards mailing lists.</FONT></SPAN></DIV>
+<DIV><SPAN class=350565015-15062004><FONT face=Arial color=#0000ff 
+size=2></FONT></SPAN>&nbsp;</DIV>
+<DIV><SPAN class=350565015-15062004><FONT face=Arial color=#0000ff size=2>Thanks 
+to Ron Bergman (Hitachi) and Harry Lewis (IBM) for all</FONT></SPAN></DIV>
+<DIV><SPAN class=350565015-15062004><FONT face=Arial color=#0000ff size=2>of 
+their excellent work and dogged persistence.</FONT></SPAN></DIV>
+<DIV><SPAN class=350565015-15062004><FONT face=Arial color=#0000ff 
+size=2></FONT></SPAN>&nbsp;</DIV>
+<DIV><SPAN class=350565015-15062004><FONT face=Arial color=#0000ff 
+size=2>Cheers,</FONT></SPAN></DIV>
+<DIV><SPAN class=350565015-15062004><FONT face=Arial color=#0000ff size=2>- Ira, 
+co-editor of these MIBs</FONT></SPAN></DIV>
+<DIV><SPAN class=350565015-15062004><FONT face=Arial color=#0000ff 
+size=2></FONT></SPAN>&nbsp;</DIV>
+<P><FONT size=2>Ira McDonald (Musician / Software Architect)<BR>Blue Roof Music 
+/ High North Inc<BR>PO Box 221&nbsp; Grand Marais, MI&nbsp; 49839<BR>phone: 
++1-906-494-2434<BR>email: imcdonald@sharplabs.com</FONT> </P>
+<DIV class=OutlookMessageHeader dir=ltr align=left><FONT face=Tahoma 
+size=2>-----Original Message-----<BR><B>From:</B> owner-pwg-announce@pwg.org 
+[mailto:owner-pwg-announce@pwg.org]<B>On Behalf Of </B>Bergman, 
+Ron<BR><B>Sent:</B> Monday, June 14, 2004 8:00 PM<BR><B>To:</B> 
+pwg-announce@pwg.org<BR><B>Subject:</B> PWG-ANNOUNCE&gt; Printer &amp; Finisher 
+MIBs Status<BR><BR></FONT></DIV><!-- Converted from text/rtf format -->
+<P><FONT face=Arial size=2>The long awaited Printer MIB v2 and Finisher MIB are 
+now available as IETF official documents.</FONT> <BR><FONT face=Arial 
+size=2>(Although the official IETF announce has not been made.)</FONT> </P>
+<P><FONT face=Arial size=2>&nbsp; <A 
+href="ftp://ftp.isi.edu/in-notes/rfc3805.txt">ftp://ftp.isi.edu/in-notes/rfc3805.txt</A>&nbsp;&nbsp; 
+(Printer MIB v2)</FONT> </P>
+<P><FONT face=Arial size=2>&nbsp; <A 
+href="ftp://ftp.isi.edu/in-notes/rfc3806.txt">ftp://ftp.isi.edu/in-notes/rfc3806.txt</A>&nbsp;&nbsp; 
+(Finisher MIB)</FONT> </P>
+<P><FONT face=Arial size=2>&nbsp; <A 
+href="ftp://ftp.isi.edu/in-notes/rfc3808.txt">ftp://ftp.isi.edu/in-notes/rfc3808.txt</A>&nbsp;&nbsp; 
+(Charset MIB)</FONT> </P>
+<P><FONT face=Arial size=2>Note that the Charset MIB now provides the missing 
+enumerations for the CodedCharSet</FONT> <BR><FONT face=Arial size=2>textual 
+convention defined in RFC1759.&nbsp; This TC is now known as IANACharset. 
+</FONT></P>
+<P><FONT face=Arial size=2>I would like to thank everyone who contributed to 
+these documents over the last 8 years.</FONT> <BR><FONT face=Arial size=2>I 
+especially want to thank Ira McDonald and Bert Wijnen, who spent countless 
+hours</FONT> <BR><FONT face=Arial size=2>reviewing and helping edit the 
+documents and working with the IETF to move the drafts</FONT> <BR><FONT 
+face=Arial size=2>to their final state.&nbsp; Others outside of the PWG that 
+provided significant inputs include</FONT> <BR><FONT face=Arial size=2>Juergen 
+Schoenwaelder and David Harrington.</FONT> </P>
+<P><FONT face=Arial size=2>The number of contibutors in the PWG is a long list 
+and can be found in the documents.</FONT> </P>
+<P>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <FONT face=Arial size=2>Ron 
+Bergman</FONT> <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <FONT face=Arial 
+size=2>Hitachi Printing Solutions, America</FONT> </P></BODY></HTML>
 
-<p class=3DMsoNormal><font size=3D2 face=3D"Courier New"><span =
-style=3D'font-size:10.0pt;
-font-family:"Courier New"'><o:p>&nbsp;</o:p></span></font></p>
-
-<p><i><font size=3D2 face=3D"Comic Sans MS"><span =
-style=3D'font-size:10.0pt;
-font-family:"Comic Sans MS";font-style:italic'>Rgds, =
-</span></font></i><br>
-<b><i><font color=3D"#333399" face=3D"Comic Sans MS"><span =
-style=3D'font-family:"Comic Sans MS";
-color:#333399;font-weight:bold;font-style:italic'>Glen W. =
-Petrie</span></font></i></b>
-<br>
-<i><font size=3D2 face=3D"Comic Sans MS"><span =
-style=3D'font-size:10.0pt;font-family:
-"Comic Sans MS";font-style:italic'>Epson Imaging Technology Center =
-</span></font></i><br>
-<i><font size=3D2 face=3D"Comic Sans MS"><span =
-style=3D'font-size:10.0pt;font-family:
-"Comic Sans MS";font-style:italic'>150 River Oaks Parkway, Suite 200 =
-</span></font></i><br>
-<i><font size=3D2 face=3D"Comic Sans MS"><span =
-style=3D'font-size:10.0pt;font-family:
-"Comic Sans MS";font-style:italic'>San Jose, CA, 95134 =
-</span></font></i><br>
-<i><font size=3D2 face=3D"Comic Sans MS"><span =
-style=3D'font-size:10.0pt;font-family:
-"Comic Sans MS";font-style:italic'>Voice: 408.576.4131&nbsp; Fax: =
-408.474.0511</span></font></i>
-<o:p></o:p></p>
-
-<p class=3DMsoNormal><font size=3D3 face=3D"Times New Roman"><span =
-style=3D'font-size:
-12.0pt'><o:p>&nbsp;</o:p></span></font></p>
-
-</div>
-
-</body>
-
-</html>
-
-------_=_NextPart_001_01C452EC.12A59EE0--
+------_=_NextPart_001_01C452F0.50E51C43--
 
