@@ -1,11 +1,12 @@
-Message-ID: <OFAA67302F.3969BC30-ON87256E00.008201A5@us.ibm.com>
-From: Claudia Alimpich <alimpich@us.ibm.com>
-Date: Thu, 18 Dec 2003 16:41:12 -0700
+Message-ID: <3FE24BC6.40902@gmx.net>
+Date: Fri, 19 Dec 2003 00:52:22 +0000
+From: Till Kamppeter <till.kamppeter@gmx.net>
 MIME-Version: 1.0
-Content-type: multipart/alternative; 
-	Boundary="0__=08BBE493DF1187358f9e8a93df938690918c08BBE493DF118735"
-Content-Disposition: inline
-Subject: [Printing-architecture] Missed the meeting today
+Subject: Re: [Printing-architecture] Missed the meeting today
+References: <OFAA67302F.3969BC30-ON87256E00.008201A5@us.ibm.com>
+In-Reply-To: <OFAA67302F.3969BC30-ON87256E00.008201A5@us.ibm.com>
+Content-Type: text/plain; charset=us-ascii; format=flowed
+Content-Transfer-Encoding: 7bit
 List-Id: Printing architecture under linux
 	<printing-architecture.freestandards.org>
 List-Unsubscribe: <http://freestandards.org/mailman/listinfo/printing-architecture>,
@@ -15,27 +16,16 @@ List-Post: <mailto:printing-architecture@freestandards.org>
 List-Help: <mailto:printing-architecture-request@freestandards.org?subject=help>
 List-Subscribe: <http://freestandards.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@freestandards.org?subject=subscribe>
-To: printing-architecture@freestandards.org
+To: Claudia Alimpich <alimpich@us.ibm.com>
+Cc: printing-architecture@freestandards.org
 
---0__=08BBE493DF1187358f9e8a93df938690918c08BBE493DF118735
-Content-type: text/plain; charset=US-ASCII
+I was also busy with other stuff and missed the meeting. Did it take 
+place? Or was it cancelled due to too low participation?
 
+    Till
 
-
-
-
-Sorry I missed the meeting today. I am having some new "hang" problems with
-my laptop and I completely lost track of the time.
-
-Claudia
---0__=08BBE493DF1187358f9e8a93df938690918c08BBE493DF118735
-Content-type: text/html; charset=US-ASCII
-Content-Disposition: inline
-
-<html><body>
-<p>Sorry I missed the meeting today. I am having some new &quot;hang&quot; problems with my laptop and I completely lost track of the time.<br>
-<br>
-Claudia</body></html>
---0__=08BBE493DF1187358f9e8a93df938690918c08BBE493DF118735--
+Claudia Alimpich wrote:
+> Sorry I missed the meeting today. I am having some new "hang" problems 
+> with my laptop and I completely lost track of the time.
 
 
