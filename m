@@ -1,11 +1,11 @@
-Message-ID: <CFEE79A465B35C4385389BA5866BEDF00C7839@mailsrvnt02.enet.sharplabs.com>
+Message-ID: <CFEE79A465B35C4385389BA5866BEDF00C784A@mailsrvnt02.enet.sharplabs.com>
 From: "McDonald, Ira" <imcdonald@sharplabs.com>
-Date: Sun, 22 Aug 2004 11:49:25 -0700
+Date: Tue, 24 Aug 2004 14:52:58 -0700
 MIME-Version: 1.0
 Content-Type: text/plain;
 	charset="ISO-8859-1"
-Subject: [Printing-architecture] Print Channel Controller, Print Manager,
-	Spooler for Reference Mo del
+Subject: [Printing-architecture] FW: PWG> Posted Micro Job Ticket draft (24
+	August 2004)
 List-Id: Printing architecture under linux
 	<printing-architecture.mail.freestandards.org>
 List-Unsubscribe: <http://mail.freestandards.org/mailman/listinfo/printing-architecture>,
@@ -17,9 +17,24 @@ List-Subscribe: <http://mail.freestandards.org/mailman/listinfo/printing-archite
 	<mailto:printing-architecture-request@mail.freestandards.org?subject=subscribe>
 To: printing-architecture@freestandards.org
 
-Hi,                                                Sunday 22 August 2004
+-----Original Message-----
+From: owner-pwg@pwg.org [mailto:owner-pwg@pwg.org]On Behalf Of McDonald,
+Ira
+Sent: Tuesday, August 24, 2004 5:50 PM
+To: 'pwg@pwg.org'
+Subject: PWG> Posted Micro Job Ticket draft (24 August 2004)
 
-Below are my three subsystem descriptions for FSG/OP Reference Model.
+
+Hi folks,                                       Tuesday (24 August 2004)
+
+[for comments from designers and implementors and for review at the next
+PWG face-to-face in Lexington in October]
+
+I have just posted a Micro Job Ticket draft:
+
+    ftp://ftp.pwg.org/pub/pwg/BOFs/mjt/tb-mjt10-20040824.htm
+
+Below are:  (a) abstract; (b) change log.
 
 Cheers,
 - Ira
@@ -29,87 +44,41 @@ Blue Roof Music / High North Inc
 PO Box 221  Grand Marais, MI  49839
 phone: +1-906-494-2434
 email: imcdonald@sharplabs.com
-----------------------------------------
 
-Print Channel Controller (PCC)
+------------------------------------------------------------------------
 
-The Print Channel Controller subsystem provides a single subsystem for
-opening, managing, transferring data over, and closing Channels (using
-datagrams or connections, local or network) between any of the FSG/OP
-Architecture subsystems and a Printer subsystem.  There is a single
-Application Programming Interface (API) for Channel access.
+Abstract:  This document defines the semantics and encoding for the
+PWG Micro Job Ticket v1.0 (MJT/1.0).  A mobile device (e.g., digital
+camera or cell phone) can transfer a standard MJT/1.0 job ticket via
+removable media (e.g., memory card or DVD), direct connect (e.g., USB
+or parallel), or network interface (e.g., IEEE 802.11 or Ethernet) to
+a print service or a print device.
 
-An FSG/OP Architecture subsystem may open a Channel to a Printer (using
-a URI to specify the destination protocol endpoint for portability) in
-order to support a job submission, job management, status monitoring, or
-other application protocol.
+For industry coherence, this document imports the semantics (but not
+the encoding) of the Job and Document objects and selected attributes
+from the PWG Semantic Model [PWG5105.1].
 
-Note:  A single transport connection may simultaneously support more
-than one Channel (e.g., IETF BEEP, RFC 3080).
+In order to support low-cost mobile devices, this document defines a
+compact string encoding (non-XML) for the MJT/1.0, using minimal
+markup and numeric tokens in place of textual attribute names and
+values.  This encoding also allows the inclusion of vendor extensions
+as well as other attributes from the complete PWG Semantic Model.
 
-A Channel includes a transport protocol (e.g., TCP or UDP), and may
-include a session protocol (e.g., HTTP), a presentation protocol (e.g.,
-SOAP), and/or layer security protocols (e.g., TLS).  A Channel is bound
-(for the lifetime of the Channel) to a particular Interface.
+------------------------------------------------------------------------
 
-An Interface includes a communications port (local or network) or an OS
-pipe/shared-memory port, and may include a datalink protocol (e.g.,
-Ethernet), a network protocol (e.g., IP or IPX), and/or layer security
-protocols (e.g., IPsec).
+[changes from previous draft for CE BOF in May 2004]
 
-See:  Section 2.2.10 'Print Job Delivery Channels' and Channel group in
-      section 6 of Printer MIB v2, RFC 3805, June 2004.
+(1) Minor editorial changes.
 
-See:  Blocks Extensible Exchange Protocol Core, RFC 3080, March 2001.
+(2) Renamed document from 'Simple Job Ticket' to 'Micro Job Ticket',
+    per suggestion of Harry Lewis (IBM).
 
-----------------------------------------
+(3) Changed structural markup delimiter from dot '.' to caret '^',
+    per suggestion of Pete Zehler (Xerox) in Montreal 16 August 2004.
 
-Print Manager (PM)
+(4) Revised "JobMedia" attribute to correctly reference "media-size" and
+    "media-type" attributes in PWG 5100.3 for normative definitions,
+    per suggestion of Fumio Nagasaka (Epson).
 
-The Print Manager subsystem provides a single subsystem for accepting,
-monitoring, scheduling, and cancelling print jobs for Applications and
-Gateways.  The Print Manager provides an abstraction of Servers, Queues,
-Jobs, Documents, and Resources (see ISO 10175).  There is a single
-Application Programming Interface (API) for Print Manager access.
-
-An Application or Gateway may open an output stream to the Print Manager
-subsystem, send the job/document processing and description attributes,
-(optionally) the job ticket, and the job data (by reference or by value)
-to the Print Manager subsystem, and then close the output stream.
-
-The Print Manager subystem may use the Spooler subsystem to support
-rate adaption across different communications paths and/or additional
-temporary job storage for limited Printer subsystems.
-
-See:  Section 1.1 'Simplified Printing Model' and section 2.1 'Printer
-      Object' in IPP/1.1 Model and Semantics, RFC 2911, September 2000.
-
-See:  Document Printing Application (DPA), ISO 10175, June 1996.
-
-----------------------------------------
-
-Spooler (SP)
-
-The Spooler subsystem provides a single subsystem for saving (writing)
-and retrieving (reading) print jobs on behalf of the Print Manager
-subsystem.  The Spooler provides buffering of incoming print jobs
-(including job tickets and job data) for later scheduling and forwarding
-to other FSG/OP Architecture subsystems.  There is a single Application
-Programming Interface (API) for Spooler access.
-
-For each incoming print job, the Print Manager subsystem may open an
-output stream to the Spooler subystem (using a URI to specify the
-destination file for portability), copy the incoming job to the Spooler
-subsystem, and then close the output stream.  Later, the Print Manager
-subsystem will schedule the saved job, open an input stream from the
-Spooler subsystem for the saved job (using a URI), forward the saved job
-to another FSG/OP Architecture subsystem for processing, and then close
-the input stream.
-
-See:  Section 1.1 'Simplified Printing Model' and section 2.2 'Job
-      Object' in IPP/1.1 Model and Semantics, RFC 2911, September 2000.
-
-See:  Document Printing Application (DPA), ISO 10175, June 1996.
-
-----------------------------------------
+------------------------------------------------------------------------
 
