@@ -1,11 +1,10 @@
-Message-ID: <OF06B9457D.947192BE-ON86256EFC.00673383-86256EFC.006741A3@us.ibm.com>
-From: Mark Hamzy <hamzy@us.ibm.com>
-Date: Thu, 26 Aug 2004 13:47:50 -0500
+Message-ID: <2F7D63A21DB2C74EB8EB8C09AF667DB0A7B2AB@eitc220.eitc.epson.com>
+From: "Petrie, Glen" <glen.petrie@eitc.epson.com>
+Date: Mon, 30 Aug 2004 11:35:26 -0700
 MIME-Version: 1.0
-Content-type: multipart/alternative; 
-	Boundary="0__=09BBE46FDFF4B5138f9e8a93df938690918c09BBE46FDFF4B513"
-Content-Disposition: inline
-Subject: [Printing-architecture] FSG Architecture conference call 08/26/2004
+Content-Type: multipart/alternative;
+	boundary="----_=_NextPart_001_01C48EC0.1E435250"
+Subject: [Printing-architecture] FYI: note on the open printing web page
 List-Id: Printing architecture under linux
 	<printing-architecture.mail.freestandards.org>
 List-Unsubscribe: <http://mail.freestandards.org/mailman/listinfo/printing-architecture>,
@@ -15,52 +14,99 @@ List-Post: <mailto:printing-architecture@mail.freestandards.org>
 List-Help: <mailto:printing-architecture-request@mail.freestandards.org?subject=help>
 List-Subscribe: <http://mail.freestandards.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@mail.freestandards.org?subject=subscribe>
-To: printing-architecture@freestandards.org
+To: printing-architecture@freestandards.org, printing-sc@freestandards.org, printing-driver@freestandards.org
+Cc: "Japanese discussions on printing under Linux." <printing-japan@base3.freestandards.org>
 
---0__=09BBE46FDFF4B5138f9e8a93df938690918c09BBE46FDFF4B513
-Content-type: text/plain; charset=US-ASCII
+This message is in MIME format. Since your mail reader does not understand
+this format, some or all of this message may not be legible.
+
+------_=_NextPart_001_01C48EC0.1E435250
+Content-Type: text/plain
+
+Hello All,
+
+From a printing-japan email I got a message about a new "Open Printing" web
+page at http://www.epkowa.co.jp/linux/OpenPrintingProject/
+<http://www.epkowa.co.jp/linux/OpenPrintingProject/> .    (Can be translated
+using the http://babelfish.altavista.com/babelfish/tr
+<http://babelfish.altavista.com/babelfish/tr>  web page.)  I was wondering
+if this web page is directly connected to FSG or the Japanese government
+activity or just a Kowa activity?
+
+
+Rgds, 
+Glen W. Petrie 
+Epson Imaging Technology Center 
+150 River Oaks Parkway, Suite 200 
+San Jose, CA, 95134 
+Voice: 408.576.4131  Fax: 408.474.0511 
 
 
 
+------_=_NextPart_001_01C48EC0.1E435250
+Content-Type: text/html
+Content-Transfer-Encoding: quoted-printable
 
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV=3D"Content-Type" CONTENT=3D"text/html; =
+charset=3Dus-ascii">
+<META NAME=3D"Generator" CONTENT=3D"MS Exchange Server version =
+5.5.2653.12">
+<TITLE>FYI: note on the open printing web page</TITLE>
+</HEAD>
+<BODY>
 
-Thursday, August 26
+<P ALIGN=3DLEFT><FONT SIZE=3D2 FACE=3D"Arial">Hello All,</FONT></P>
 
-GMT 19:00-21:00
-EDT 15:00-17:00
-CDT 14:00-16:00
-MDT 13:00-15:00
-PDT 12:00-14:00
+<P ALIGN=3DLEFT><FONT SIZE=3D2 FACE=3D"Arial">From</FONT> <FONT =
+SIZE=3D2 FACE=3D"Arial">a</FONT> <FONT SIZE=3D2 =
+FACE=3D"Arial">printing-japan email I got</FONT> <FONT SIZE=3D2 =
+FACE=3D"Arial">a</FONT><FONT SIZE=3D2 FACE=3D"Arial"> =
+message</FONT><FONT SIZE=3D2 FACE=3D"Arial"> about a new</FONT> <FONT =
+COLOR=3D"#000000">"</FONT><FONT COLOR=3D"#000000">Open</FONT><FONT =
+COLOR=3D"#000000"></FONT> <FONT COLOR=3D"#000000">Printing</FONT><FONT =
+COLOR=3D"#000000">"</FONT><FONT COLOR=3D"#000000"> web page at</FONT> =
+<A HREF=3D"http://www.epkowa.co.jp/linux/OpenPrintingProject/"><U><FONT =
+COLOR=3D"#0000FF" SIZE=3D2 FACE=3D"MS =
+PGothic">http://www.epkowa.co.jp/linux/OpenPrintingProject/</FONT></U></=
+A><FONT SIZE=3D2 FACE=3D"MS PGothic">.</FONT><FONT SIZE=3D2 FACE=3D"MS =
+PGothic">&nbsp;</FONT> <FONT SIZE=3D2 FACE=3D"MS PGothic">&nbsp;</FONT> =
+<FONT SIZE=3D2 FACE=3D"MS PGothic">(Can be translated using</FONT> =
+<FONT SIZE=3D2 FACE=3D"MS PGothic">the</FONT> <A =
+HREF=3D"http://babelfish.altavista.com/babelfish/tr"><U><FONT =
+COLOR=3D"#0000FF" SIZE=3D2 FACE=3D"MS =
+PGothic">http://babelfish.altavista.com/babelfish/tr</FONT></U></A><FONT=
+ SIZE=3D2 FACE=3D"MS PGothic"></FONT> <FONT SIZE=3D2 FACE=3D"MS =
+PGothic">web page.)&nbsp;</FONT> <FONT SIZE=3D2 FACE=3D"MS =
+PGothic">I</FONT><FONT SIZE=3D2 FACE=3D"MS PGothic"> was</FONT> <FONT =
+SIZE=3D2 FACE=3D"MS PGothic">w</FONT><FONT SIZE=3D2 FACE=3D"MS =
+PGothic">ondering if</FONT> <FONT SIZE=3D2 FACE=3D"MS =
+PGothic">this</FONT> <FONT SIZE=3D2 FACE=3D"MS PGothic">web page =
+is</FONT> <FONT SIZE=3D2 FACE=3D"MS PGothic">directly connected =
+to</FONT> <FONT SIZE=3D2 FACE=3D"MS PGothic">F</FONT><FONT SIZE=3D2 =
+FACE=3D"MS PGothic">SG</FONT><FONT SIZE=3D2 FACE=3D"MS PGothic"> or =
+the</FONT> <FONT SIZE=3D2 FACE=3D"MS PGothic">Japanese</FONT><FONT =
+SIZE=3D2 FACE=3D"MS PGothic"></FONT> <FONT SIZE=3D2 FACE=3D"MS =
+PGothic">government activity</FONT><FONT SIZE=3D2 FACE=3D"MS PGothic"> =
+or just a</FONT><FONT SIZE=3D2 FACE=3D"MS PGothic"> Kowa =
+activit</FONT><FONT SIZE=3D2 FACE=3D"MS PGothic">y</FONT><FONT SIZE=3D2 =
+FACE=3D"MS PGothic">?</FONT></P>
 
-Toll Free:  1-888-687-2858 (use this first if possible)
-Toll:       1-719-457-3541
-Passcode:           844198
+<P ALIGN=3DLEFT><A NAME=3D"_MailAutoSig"></A></P>
 
-Mark
+<P ALIGN=3DLEFT><B><I>Rgds,<BR>
+</I></B><B><I></I></B><B><I><FONT COLOR=3D"#0000FF" SIZE=3D5>Glen W. =
+Petrie</FONT></I></B><B><I></I></B><B><I><FONT SIZE=3D5><BR>
+</FONT></I></B><B><I>Epson Imaging Technology Center<BR>
+150 River Oaks Parkway, Suite 200<BR>
+San Jose, CA, 95134<BR>
+Voice: 408.576.4131&nbsp; Fax: 408.474.0511 </I></B></P>
 
-Take a look at the Linux Omni Printer Driver Framework at
-http://www.ibm.com/linux/ltc/projects/omni/
---0__=09BBE46FDFF4B5138f9e8a93df938690918c09BBE46FDFF4B513
-Content-type: text/html; charset=US-ASCII
-Content-Disposition: inline
+<P ALIGN=3DLEFT></P>
 
-<html><body>
-<p><tt>Thursday, August 26</tt><br>
-<br>
-<tt>GMT 19:00-21:00</tt><br>
-<tt>EDT 15:00-17:00</tt><br>
-<tt>CDT 14:00-16:00</tt><br>
-<tt>MDT 13:00-15:00</tt><br>
-<tt>PDT 12:00-14:00</tt><br>
-<br>
-<tt>Toll Free: &nbsp;1-888-687-2858 (use this first if possible)<br>
-Toll: &nbsp; &nbsp; &nbsp; 1-719-457-3541</tt><br>
-<tt>Passcode: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 844198</tt><br>
-<br>
-Mark<br>
-<br>
-Take a look at the Linux Omni Printer Driver Framework at<br>
-<a href="http://www.ibm.com/linux/ltc/projects/omni/">http://www.ibm.com/linux/ltc/projects/omni/</a></body></html>
---0__=09BBE46FDFF4B5138f9e8a93df938690918c09BBE46FDFF4B513--
-
+</BODY>
+</HTML>
+------_=_NextPart_001_01C48EC0.1E435250--
 
