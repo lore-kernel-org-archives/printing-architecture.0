@@ -1,9 +1,10 @@
-From: "Charles Hemstreet" <charles_at_hp@hotmail.com>
-Date: Fri, 28 Mar 2003 13:42:10 -0800
-Mime-Version: 1.0
-Content-Type: text/plain; format=flowed
-Message-ID: <F26zXotJAadVe5HXC9x0000f7c0@hotmail.com>
-Subject: [Printing-architecture] Architecture meeting notes 20030327
+Message-ID: <116DB56CD7DED511BC7800508B2CA53735CF51@mailsrvnt02.enet.sharplabs.com>
+From: "McDonald, Ira" <imcdonald@sharplabs.com>
+Date: Sat, 29 Mar 2003 11:23:29 -0800
+MIME-Version: 1.0
+Content-Type: text/plain;
+	charset="iso-8859-1"
+Subject: [Printing-architecture] FW: PWG Telecon Schedule for DC Make-Up [this week]
 Sender: printing-architecture-admin@freestandards.org
 Errors-To: printing-architecture-admin@freestandards.org
 List-Help: <mailto:printing-architecture-request@freestandards.org?subject=help>
@@ -15,69 +16,37 @@ List-Unsubscribe: <http://freestandards.org/mailman/listinfo/printing-architectu
 	<mailto:printing-architecture-request@freestandards.org?subject=unsubscribe>
 List-Archive: <http://freestandards.org/pipermail/printing-architecture/>
 To: printing-architecture@freestandards.org
+Cc: 'Harry Lewis' <harryl@us.ibm.com>
+
+Hi folks,
+
+The IEEE/ISTO has graciously provided two conference bridges.
+A large number of PWG conference calls are now scheduled for
+this week (Monday through Friday).
+
+Please take a look at this list (link below has to be followed
+a SECOND level down) and consider listening in.  Sorry the
+schedule's in an Excel spreadsheet.  I'll try to forward specific
+telecon announcments.
+
+Thanks,
+- Ira McDonald
+  High North Inc
 
 
-Linux Open Printing Meeting
-03/27/03, 8-9am PST (actual 8:00 � 9:00am PST)
-
-Attendees:
-Charles Hemstreet
-Till Kamppeter
-Glen Petry
-Mark Hamzy
-Norm Jacobs
-Claudia Alimpich
-Ira McDonald
+-----Original Message-----
+From: Gail Songer [mailto:gsonger@peerless.com]
+Sent: Friday, March 28, 2003 9:47 PM
+To: pwg-announce@pwg.org
+Cc: harryl@us.ibm.com; a.s.patel@ieee.org
+Subject: PWG-ANNOUNCE> Conference Call summary
 
 
-Agenda for meeting (03/27/03):
-�	PLEASE NOTE - Next Architecture meeting will be held on 4/17/03.  There 
-will be no meeting 4/3/03 or 4/10/03.
+Hi!
 
-�	FSG/PWG meeting summary � Editor�s and Chair�s of a couple of working 
-groups cancelled out � A lot of people cancelled out.  Amy Pitel from ieee 
-and Harry Lewis are working to make available some conference bridges in 
-case we would like to have joint sessions.
+Ami was kind enough to start an excel spread sheet with all the info
+concerning next week's conference calls.  I've added a bit and posted the
+result to the web site: http://www.pwg.org/calls/confcall.htm
 
-�	Driver subgroup � Will be meeting next Wednesday, March 26, 2003 at 11am 
-PST.  � agreed to all the bullets that was posted in the agenda.  Key thing 
-� going to support Job Ticket as a requirement for the driver subgroup.  
-Mark Hamzy will put up notes from the meeting.
-
-�	Summary of IPP document object review (Ira).  � Pretty mature.  Attributes 
-are stable.  Not sure if it is shipping 1.2.x and not 1.2.0.  Besides a few 
-new attributes for the document object.  It adds operations � CreateDocument 
-� which creates the container.  SetDocumentAttributes, restricted to 
-administrator.  There is a CancelDocument � mark the document as cancelled � 
-it doesn�t remove it.  There is a deletedocument is the administrator�s 
-recovery.  CloseJob, new operation.  �I�m done adding documents to this job 
-you can now schedule it� If you want more information, check out the PWG 
-server via ftp -> pub/pwg/ipp/new_DOC
-
-�	How are we going to move PAPI 1.0 forward?
-o	Principle author doesn�t have time to work on it right now.
-o	Norm volunteered to continue to work on it. � Document source was received 
-this week.  Michael has given input.
-o	Do we want to publish PAPI 1.0 as is, or do we want to catch it up to 
-current standards? (Ira)
-&#61607;	Document support lacking � adding documents would be the best to 
-add if we aren�t going to publish 1.0 as it is.  Document objects.
-o	Needs to be published on the PAPI list as a request for feedback.
-o	Not in PAPI or Job Ticket (subscriptions � simple notifications are in) is 
-notifications � consider adding subscriptions to PAPI
-
-Agenda for next meeting (4/17/03):
-�	We need a time scale and roadmap for content release needed now that we 
-are looking at getting the driver subgroup up and running with that thought 
-that we will be prototyping drivers.
-o	Job Ticket 1.0 needs to move from API UML (pretty solid) to API in a 
-programming language.  Do it in �C� first, then Java, and then revisit �C� 
-API while working on the Java API.
-�	Summary of meeting in DC from Claudia
-
-
-
-_________________________________________________________________
-
-
+Gail
 
