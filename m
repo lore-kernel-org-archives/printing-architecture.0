@@ -1,10 +1,9 @@
-Message-ID: <116DB56CD7DED511BC7800508B2CA53735D04C@mailsrvnt02.enet.sharplabs.com>
-From: "McDonald, Ira" <imcdonald@sharplabs.com>
-Date: Thu, 12 Jun 2003 09:59:23 -0700
-MIME-Version: 1.0
-Content-Type: text/plain;
-	charset="iso-8859-1"
-Subject: [Printing-architecture] FSG OP Arch meeting today?
+From: "Charles Hemstreet" <charles_at_hp@hotmail.com>
+Date: Thu, 12 Jun 2003 10:24:20 -0700
+Mime-Version: 1.0
+Content-Type: text/plain; format=flowed
+Message-ID: <Sea2-F67CjOuF1Qp4hZ000315aa@hotmail.com>
+Subject: [Printing-architecture] Architecture meeting agenda 20030612. . .
 Sender: printing-architecture-admin@freestandards.org
 Errors-To: printing-architecture-admin@freestandards.org
 List-Help: <mailto:printing-architecture-request@freestandards.org?subject=help>
@@ -17,20 +16,40 @@ List-Unsubscribe: <http://freestandards.org/mailman/listinfo/printing-architectu
 List-Archive: <http://freestandards.org/pipermail/printing-architecture/>
 To: printing-architecture@freestandards.org
 
-Hi Charles et al,
+New meeting time for our architecture teleconference:
 
-Are we having an FSG OP Architecture teleconference in a few hours?
+Every Thursday
+1200-1300 PST
+1300-1400 MST
+1400-1500 CST
+1500-1600 EST
+2000-2100 UTC
 
-We could:
-1)  Look at Pete Z's revised low-level architecture diagrams
-2)  Look at Claudia A's revised Job Ticket API slides for next week
-3)  Talk about PAPI/1.0 futures (Document object, new attributes, etc.)
-4)  or something else...
+There is a new call-in number:
 
-Cheers,
-- Ira McDonald
-  High North Inc
+          - *Toll Free Access Number:
+            866-639-4758 (toll-free)
+            574-935-6716 (toll)
 
-PS - I now disappear for two hours into a PWG Semantic Model telecon
-that is a detailed (page-turner) review of IPP Job Extensions spec.
+          - Participant PIN:
+            2124490
+
+Agenda:
+
+1) FSG/OP schedule
+2) review of new architecture diagrams
+
+These files are stored on the PWG anonymous FTP server at:
+
+ftp://ftp.pwg.org/pub/pwg/fsg/architecture/arch1-6-12-03.jpg
+
+ftp://ftp.pwg.org/pub/pwg/fsg/architecture/arch2-6-12-03.jpg
+
+Thanks,
+Charles
+
+_________________________________________________________________
+Tired of spam? Get advanced junk mail protection with MSN 8. 
+http://join.msn.com/?page=features/junkmail
+
 
