@@ -1,9 +1,9 @@
-Message-ID: <OF4F235713.102DBA2E-ON87256D73.004B6770@us.ibm.com>
-From: Claudia Alimpich <alimpich@us.ibm.com>
-Date: Wed, 30 Jul 2003 07:49:37 -0600
+Message-ID: <OF35BD6624.1CF18BF7-ON86256D73.0056638D-86256D73.005680F1@us.ibm.com>
+From: Mark Hamzy <hamzy@us.ibm.com>
+Date: Wed, 30 Jul 2003 10:44:51 -0500
 MIME-Version: 1.0
 Content-type: text/plain; charset=US-ASCII
-Subject: [Printing-architecture] Is there a meeting on Thursday July 31st?
+Subject: [Printing-architecture] Architecture meeting 07/31/2003
 Sender: printing-architecture-admin@freestandards.org
 Errors-To: printing-architecture-admin@freestandards.org
 List-Help: <mailto:printing-architecture-request@freestandards.org?subject=help>
@@ -19,9 +19,22 @@ To: printing-architecture@freestandards.org
 
 
 
-Are we having an architecture meeting tomorrow (Thursday Aug 31st)? I have
-a conflict and I want to know if I should work out my conflict or not.
+Thursday, July 31
 
-Claudia
+1200-1300 PST
+1300-1400 MST
+1400-1500 CST
+1500-1600 EST
+2000-2100 UTC
+
+Tie Line:    650-3239
+Toll Free:   1-800-497-2024
+Toll Number: 1-719-457-3821
+Passcode:     160458
+
+Mark
+
+Take a look at the Linux Omni Printer Driver Framework at
+http://www.ibm.com/linux/ltc/projects/omni/
 
 
