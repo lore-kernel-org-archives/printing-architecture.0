@@ -1,10 +1,9 @@
-Message-ID: <116DB56CD7DED511BC7800508B2CA537B001CB@mailsrvnt02.enet.sharplabs.com>
-From: "McDonald, Ira" <imcdonald@sharplabs.com>
-Date: Thu, 25 Sep 2003 11:44:57 -0700
+Message-ID: <OF19226BCC.35EC595E-ON86256DB3.0052B4A7-86256DB3.0052CA46@us.ibm.com>
+From: Mark Hamzy <hamzy@us.ibm.com>
+Date: Thu, 2 Oct 2003 10:04:17 -0500
 MIME-Version: 1.0
-Content-Type: text/plain;
-	charset="iso-8859-1"
-Subject: [Printing-architecture] FW: PS> [PSI}:Requirements v0.87 Posted
+Content-type: text/plain; charset=US-ASCII
+Subject: [Printing-architecture] Architecture meeting 10/02/2003
 Sender: printing-architecture-admin@freestandards.org
 Errors-To: printing-architecture-admin@freestandards.org
 List-Help: <mailto:printing-architecture-request@freestandards.org?subject=help>
@@ -18,20 +17,24 @@ List-Archive: <http://freestandards.org/pipermail/printing-architecture/>
 To: printing-architecture@freestandards.org
 
 
------Original Message-----
-From: BERKEMA,ALAN C (HP-Roseville,ex1) [mailto:alan.berkema@hp.com]
-Sent: Wednesday, September 24, 2003 6:33 PM
-To: 'a PSI pwg.org'
-Subject: PS> [PSI}: Marketing Requiremets Docs Posted
 
 
+Thursday, October 2
 
-ftp://ftp.pwg.org/pub/pwg/ps/wd-psireq10-200309_87.doc
+1200-1300 PST
+1300-1400 MST
+1400-1500 CST
+1500-1600 EST
+2000-2100 UTC
 
-ftp://ftp.pwg.org/pub/pwg/ps/wd-psireq10-200309_87.pdf
+Tie Line:    650-3239
+Toll Free:   1-800-497-2024
+Toll Number: 1-719-457-3821
+Passcode:     160458
 
-New content is sections 4.n.1 and section 5.1
+Mark
 
-Thanks,
-Alan
+Take a look at the Linux Omni Printer Driver Framework at
+http://www.ibm.com/linux/ltc/projects/omni/
+
 
