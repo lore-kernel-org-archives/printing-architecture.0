@@ -1,9 +1,9 @@
-Message-ID: <A134E2426B46D711BB4B000347AE6E7CE07077@xvan02.vcd.hp.com>
+Message-ID: <A134E2426B46D711BB4B000347AE6E7CE07096@xvan02.vcd.hp.com>
 From: "HEMSTREET,CHARLES (HP-Vancouver,ex1)" <charles.hemstreet@hp.com>
-Date: Tue, 25 Feb 2003 17:12:16 -0800
+Date: Wed, 26 Feb 2003 13:49:13 -0500
 MIME-Version: 1.0
 Content-Type: text/plain
-Subject: [Printing-architecture] Call for agenda 2/27/03. . .
+Subject: [Printing-architecture] Agenda items?
 Sender: printing-architecture-admin@freestandards.org
 Errors-To: printing-architecture-admin@freestandards.org
 List-Help: <mailto:printing-architecture-request@freestandards.org?subject=help>
@@ -16,11 +16,11 @@ List-Unsubscribe: <http://freestandards.org/mailman/listinfo/printing-architectu
 List-Archive: <http://freestandards.org/pipermail/printing-architecture/>
 To: "'printing-architecture@freestandards.org'" <printing-architecture@freestandards.org>
 
-Folks:
+Folks,
 
-Looks like the listserver is back up and running.
+I didn't this come out.  
 
-Please send me your agenda items for our 02/27/03 architecture meeting.
+Please send me your agenda items for Thursdays (02/27/03) meeting.
 
 Thanks,
 Charles
