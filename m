@@ -1,10 +1,11 @@
-Message-ID: <CFEE79A465B35C4385389BA5866BEDF00C77C2@mailsrvnt02.enet.sharplabs.com>
+Message-ID: <CFEE79A465B35C4385389BA5866BEDF00C77E2@mailsrvnt02.enet.sharplabs.com>
 From: "McDonald, Ira" <imcdonald@sharplabs.com>
-Subject: RE: [Printing-architecture] Architecture meeting 07/22/2004
-Date: Thu, 22 Jul 2004 14:24:54 -0700
+Date: Thu, 29 Jul 2004 17:29:08 -0700
 MIME-Version: 1.0
-Content-Type: multipart/alternative;
-	boundary="----_=_NextPart_001_01C47032.1C9360D8"
+Content-Type: text/plain;
+	charset="ISO-8859-1"
+Subject: [Printing-architecture] RE: [printing-spool] PAPI v1.0 final
+	functionality
 List-Id: Printing architecture under linux
 	<printing-architecture.mail.freestandards.org>
 List-Unsubscribe: <http://mail.freestandards.org/mailman/listinfo/printing-architecture>,
@@ -14,118 +15,194 @@ List-Post: <mailto:printing-architecture@mail.freestandards.org>
 List-Help: <mailto:printing-architecture-request@mail.freestandards.org?subject=help>
 List-Subscribe: <http://mail.freestandards.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@mail.freestandards.org?subject=subscribe>
-To: 'Mark Hamzy' <hamzy@us.ibm.com>, printing-architecture@freestandards.org
+To: 'Discussion for Spool/Job/Queue API subgroup' <printing-spool@base3.freestandards.org>, printing-spool@freestandards.org, printing-architecture@freestandards.org
 
-This message is in MIME format. Since your mail reader does not understand
-this format, some or all of this message may not be legible.
+Hi Norm,
 
-------_=_NextPart_001_01C47032.1C9360D8
-Content-Type: text/plain;
-	charset="ISO-8859-1"
+Note that (even as I write) the IESG is moving to approve
+the final edits to the IPP Admin spec.  Given that the
+IEEE/ISTO PWG has already approved IPP Document Object
+(PWG 5100.5) last fall, we have solid 'standard-track'
+references for these bits of functionality (finally).
 
-Hi,
- 
-Sorry I missed your discussion this week.
- 
-I was 60 miles west of here getting the front end
-(hood, bumper, grill, headlights, etc.) replaced
-after having hit a deer recently.
- 
-Just got back (too late).
- 
 Cheers,
 - Ira
- 
 
 Ira McDonald (Musician / Software Architect)
 Blue Roof Music / High North Inc
 PO Box 221  Grand Marais, MI  49839
 phone: +1-906-494-2434
-email: imcdonald@sharplabs.com 
+email: imcdonald@sharplabs.com
 
 -----Original Message-----
-From: printing-architecture-bounces@base3.freestandards.org
-[mailto:printing-architecture-bounces@base3.freestandards.org]On Behalf Of
-Mark Hamzy
-Sent: Thursday, July 22, 2004 2:23 PM
-To: printing-architecture@freestandards.org
-Subject: [Printing-architecture] Architecture meeting 07/22/2004
+From: printing-spool-bounces@base3.freestandards.org
+[mailto:printing-spool-bounces@base3.freestandards.org]On Behalf Of Norm
+Jacobs
+Sent: Thursday, July 29, 2004 6:39 PM
+To: printing-spool@freestandards.org;
+printing-architecture@freestandards.org
+Subject: [printing-spool] PAPI v1.0 final functionality
 
 
 
-Thursday, July 22
+I am proposing that we add content to cover the following areas prior to
+finalizing v1.0 of the spec.
 
-GMT 19:00-21:00
-EDT 15:00-17:00
-CDT 14:00-16:00
-MDT 13:00-15:00
-PDT 12:00-14:00
+	Creation of a Document object
 
-Toll Free:  1-888-687-2858 (use this first if possible)
-Toll:       1-719-457-3541
-Passcode:           726694
+	Administrative operations
+		Add/Remove destination (printer/queue)
+			(modify is already in the spec. but may need a
+			 more complete description.)
+		Enable/Disable destination (printer/queue)
+			Enable/Disable job creation on a
+			particular destination.
+		Promote Job
+			make a job the next one to process.
 
-Mark
+If there is anything else that others would like to add, please bring
+it up now.  I would like to finalize the content of PAPI v1.0 in the
+next few weeks so that there is some small chance that it can be
+completed this fall.
 
-Take a look at the Linux Omni Printer Driver Framework at
-http://www.ibm.com/linux/ltc/projects/omni/
-<http://www.ibm.com/linux/ltc/projects/omni/> 
+	-Norm
+
+More detail on document object interfaces will follow next week (I
+hope), but I propose that the additions for new administrative
+operations be as follows.
+
+papi_status_t papiPrinterAdd(papi_service_t handle, char *printer_name,
+		papi_attribute_t **attributes, papi_printer_t *printer);
+INPUTS
+	handle	- Handle to the print service on which to create the
+		  printer object.
+	name	- Name or URI of the printer to be created
+	attrs	- Attributes to associate with the printer object
+		  being created.
+OUTPUTS
+	printer	- The printer object created on the print service.
+RETURNS
+	If successful, a value of PAPI_OK is returned.  Otherwise an
+	appropriate failure value is returned.
+EXAMPLE
+	papi_status_t status;
+	papi_service_t svc = NULL;
+	papi_attribute_t **attrs = NULL;
+	papi_printer_t printer = NULL;
+	...
+	papiAttributeListAddString(&attrs, PAPI_EXCL,
+			"device-uri", "socket://printer:9100");
+	papiAttributeListAddString(&attrs, PAPI_ATTR_APPEND,
+			"document-format-supported", "application/ps");
+	papiAttributeListAddString(&attrs, PAPI_ATTR_APPEND,
+			"document-format-supported", "text/plain");
+	papiAttributeListAddInteger(&attrs, PAPI_EXCL,
+			"copies-default", 3);
+	...
+	status = papiPrinterAdd(svc, "ipp://server/printers/triplicate",
+			attrs, &result);
+	papiAttributeListFree(attrs);
+
+	if (status != PAPI_OK) {
+		/* report a failure */
+	}
+
+	if (result != NULL) {
+		/* dump the printer info */
+
+		papiPrinterFree(result);
+	}
+	...
+	papiServiceDestroy(svc);
+
+papi_status_t papiPrinterRemove(papi_service_t handle, char
+*printer_name);
+INPUTS
+	handle	- Handle to the print service from which to remove the
+		  printer object.
+	name	- Name or URI of the printer to be removed.
+RETURNS
+	If successful, a value of PAPI_OK is returned.  Otherwise an
+	appropriate failure value is returned.
+EXAMPLE
+	papi_status_t status;
+	papi_service_t svc = NULL;
+	...
+	status = papiPrinterRemove(svc, "ipp://server/printers/triplicate");
+	if (status != PAPI_OK) {
+		/* report a failure */
+	}
+	...
+	papiServiceDestroy(svc);
+
+papi_status_t papiPrinterEnable(papi_service_t handle, char
+*printer_name);
+INPUTS
+	handle	- Handle to the print service on which to enable job
+		  creation for the printer object.
+	name	- Name or URI of the printer to be enabled
+RETURNS
+	If successful, a value of PAPI_OK is returned.  Otherwise an
+	appropriate failure value is returned.
+EXAMPLE
+	papi_status_t status;
+	papi_service_t svc = NULL;
+	...
+	status = papiPrinterEnable(svc, "ipp://server/printers/triplicate");
+	if (status != PAPI_OK) {
+		/* report a failure */
+	}
+	Dis.
+	papiServiceDestroy(svc);
+
+papi_status_t papiPrinterDisable(papi_service_t handle, char
+*printer_name,
+		char *message);
+INPUTS
+	handle	- Handle to the print service on which to disable job
+		  creation for the printer object.
+	name	- Name or URI of the printer to be disabled
+	message	- an optional reason for disabling the print queue. 
+RETURNS
+	If successful, a value of PAPI_OK is returned.  Otherwise an
+	appropriate failure value is returned.
+EXAMPLE
+	papi_status_t status;
+	papi_service_t svc = NULL;
+	...
+	status = papiPrinterDisable(svc, "ipp://server/printers/triplicate",
+			"because it's Tuesday");
+	if (status != PAPI_OK) {
+		/* report a failure */
+	}
+	...
+	papiServiceDestroy(svc);
+
+papi_status_t papiJobPromote(papi_service_t handle, char *printer_name,
+		int32_t job_id);
+INPUTS
+	handle	- Handle to the print service on which the job resides.
+	name	- Name or URI of the printer associated with the job.
+	job_id	- Id number of the job to promote.
+RETURNS
+	If successful, a value of PAPI_OK is returned.  Otherwise an
+	appropriate failure value is returned.
+EXAMPLE
+	papi_status_t status;
+	papi_service_t svc = NULL;
+	...
+	status = papiJobPromote(svc, "ipp://server/printers/triplicate",
+12);
+	if (status != PAPI_OK) {
+		/* report a failure */
+	}
+	...
+	papiServiceDestroy(svc);
 
 
-------_=_NextPart_001_01C47032.1C9360D8
-Content-Type: text/html;
-	charset="ISO-8859-1"
 
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<HTML><HEAD>
-<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=ISO-8859-1">
-
-
-<META content="MSHTML 6.00.2800.1276" name=GENERATOR></HEAD>
-<BODY>
-<DIV><SPAN class=407112521-22072004><FONT face=Arial color=#0000ff 
-size=2>Hi,</FONT></SPAN></DIV>
-<DIV><SPAN class=407112521-22072004><FONT face=Arial color=#0000ff 
-size=2></FONT></SPAN>&nbsp;</DIV>
-<DIV><SPAN class=407112521-22072004><FONT face=Arial color=#0000ff size=2>Sorry 
-I missed your discussion this week.</FONT></SPAN></DIV>
-<DIV><SPAN class=407112521-22072004><FONT face=Arial color=#0000ff 
-size=2></FONT></SPAN>&nbsp;</DIV>
-<DIV><SPAN class=407112521-22072004><FONT face=Arial color=#0000ff size=2>I was 
-60 miles west of here getting the front end</FONT></SPAN></DIV>
-<DIV><SPAN class=407112521-22072004><FONT face=Arial color=#0000ff size=2>(hood, 
-bumper, grill, headlights, etc.) replaced</FONT></SPAN></DIV>
-<DIV><SPAN class=407112521-22072004><FONT face=Arial color=#0000ff size=2>after 
-having hit a deer recently.</FONT></SPAN></DIV>
-<DIV><SPAN class=407112521-22072004><FONT face=Arial color=#0000ff 
-size=2></FONT></SPAN>&nbsp;</DIV>
-<DIV><SPAN class=407112521-22072004><FONT face=Arial color=#0000ff size=2>Just 
-got back (too late).</FONT></SPAN></DIV>
-<DIV><SPAN class=407112521-22072004><FONT face=Arial color=#0000ff 
-size=2></FONT></SPAN>&nbsp;</DIV>
-<DIV><SPAN class=407112521-22072004><FONT face=Arial color=#0000ff 
-size=2>Cheers,</FONT></SPAN></DIV>
-<DIV><SPAN class=407112521-22072004><FONT face=Arial color=#0000ff size=2>- 
-Ira</FONT></SPAN></DIV>
-<DIV>&nbsp;</DIV>
-<P><FONT size=2>Ira McDonald (Musician / Software Architect)<BR>Blue Roof Music 
-/ High North Inc<BR>PO Box 221&nbsp; Grand Marais, MI&nbsp; 49839<BR>phone: 
-+1-906-494-2434<BR>email: imcdonald@sharplabs.com</FONT> </P>
-<DIV class=OutlookMessageHeader dir=ltr align=left><FONT face=Tahoma 
-size=2>-----Original Message-----<BR><B>From:</B> 
-printing-architecture-bounces@base3.freestandards.org 
-[mailto:printing-architecture-bounces@base3.freestandards.org]<B>On Behalf Of 
-</B>Mark Hamzy<BR><B>Sent:</B> Thursday, July 22, 2004 2:23 PM<BR><B>To:</B> 
-printing-architecture@freestandards.org<BR><B>Subject:</B> 
-[Printing-architecture] Architecture meeting 07/22/2004<BR><BR></FONT></DIV>
-<P><TT>Thursday, July 22</TT><BR><BR><TT>GMT 19:00-21:00</TT><BR><TT>EDT 
-15:00-17:00</TT><BR><TT>CDT 14:00-16:00</TT><BR><TT>MDT 
-13:00-15:00</TT><BR><TT>PDT 12:00-14:00</TT><BR><BR><TT>Toll Free: 
-&nbsp;1-888-687-2858 (use this first if possible)<BR>Toll: &nbsp; &nbsp; &nbsp; 
-1-719-457-3541</TT><BR><TT>Passcode: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-726694</TT><BR><BR>Mark<BR><BR>Take a look at the Linux Omni Printer Driver 
-Framework at<BR><A 
-href="http://www.ibm.com/linux/ltc/projects/omni/">http://www.ibm.com/linux/ltc/projects/omni/</A></P></BODY></HTML>
-
-------_=_NextPart_001_01C47032.1C9360D8--
+_______________________________________________
+printing-spool mailing list
+printing-spool@mail.freestandards.org
+http://mail.freestandards.org/mailman/listinfo/printing-spool
 
