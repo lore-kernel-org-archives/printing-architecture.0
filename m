@@ -1,10 +1,9 @@
-Message-ID: <116DB56CD7DED511BC7800508B2CA53735D09D@mailsrvnt02.enet.sharplabs.com>
-From: "McDonald, Ira" <imcdonald@sharplabs.com>
-Date: Thu, 10 Jul 2003 13:17:15 -0700
-MIME-Version: 1.0
-Content-Type: text/plain;
-	charset="iso-8859-1"
-Subject: [Printing-architecture] Use Cases in PWG PSI requirements
+From: "Charles Hemstreet" <charles_at_hp@hotmail.com>
+Date: Thu, 10 Jul 2003 10:21:30 -0700
+Mime-Version: 1.0
+Content-Type: text/plain; format=flowed
+Message-ID: <Sea2-F50pqvc6dI6UNe00003406@hotmail.com>
+Subject: [Printing-architecture] Architecture meeting agenda 20030710. . .
 Sender: printing-architecture-admin@freestandards.org
 Errors-To: printing-architecture-admin@freestandards.org
 List-Help: <mailto:printing-architecture-request@freestandards.org?subject=help>
@@ -17,23 +16,27 @@ List-Unsubscribe: <http://freestandards.org/mailman/listinfo/printing-architectu
 List-Archive: <http://freestandards.org/pipermail/printing-architecture/>
 To: printing-architecture@freestandards.org
 
-Hi,
+The call-in number:
 
-There are 5 excellent use cases in this short PSI document.
-They focus heavily on mobile printing scenarios.
+          - *Toll Free Access Number:
+            866-639-4758 (toll-free)
+            574-935-6716 (toll)
 
-ftp://ftp.pwg.org/pub/pwg/ps/psi_requirements081.pdf
-(there's an underscore after psi above)
+          - Participant PIN:
+            2124490
 
-I'll be writing Security Considerations (i.e., threat and
-defense models) for each of these 5 uses cases for PSI.
+Agenda:
 
-The diagrams need to be enhanced to add dotted lines for
-the various subnets (admin/security domains) in each
-scenario.
+1) Review TODO list
+2) discuss who will/should create each diagram (from last meeting)
+3) continue working on the use cases
+4) other?
 
+Thanks,
+Charles
 
-Cheers,
-- Ira McDonald
-  High North Inc
+_________________________________________________________________
+Add photos to your e-mail with MSN 8. Get 2 months FREE*.  
+http://join.msn.com/?page=features/featuredemail
+
 
