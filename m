@@ -1,10 +1,9 @@
-Message-ID: <116DB56CD7DED511BC7800508B2CA53735D030@mailsrvnt02.enet.sharplabs.com>
-From: "McDonald, Ira" <imcdonald@sharplabs.com>
-Date: Sat, 7 Jun 2003 11:47:21 -0700 
+Message-ID: <OF341B5F3C.677DE0AA-ON86256D41.0072A259-86256D41.00734A57@us.ibm.com>
+From: Mark Hamzy <hamzy@us.ibm.com>
+Date: Tue, 10 Jun 2003 15:59:16 -0500
 MIME-Version: 1.0
-Content-Type: text/plain;
-	charset="iso-8859-1"
-Subject: [Printing-architecture] FW: PS> [PSI]: New Dates for Interop Event 1
+Content-type: text/plain; charset=US-ASCII
+Subject: [Printing-architecture] Print scenario
 Sender: printing-architecture-admin@freestandards.org
 Errors-To: printing-architecture-admin@freestandards.org
 List-Help: <mailto:printing-architecture-request@freestandards.org?subject=help>
@@ -18,54 +17,49 @@ List-Archive: <http://freestandards.org/pipermail/printing-architecture/>
 To: printing-architecture@freestandards.org
 
 
------Original Message-----
-From: BERKEMA,ALAN C (HP-Roseville,ex1) [mailto:alan.berkema@hp.com]
-Sent: Friday, June 06, 2003 12:30 PM
-To: 'a PSI pwg.org'
-Subject: PS> [PSI]: New Dates for Interop Event 1
 
 
-All,
+The following is a scenario for an application that wants to print.
+These are the steps that I think the application will perform.  What areas
+in this scenario do we need to work on/standardize?
 
-To accommodate the companies that will attend
-PSI Interop 1 we have changed the dates to
-August 12th and 13th, 2003. Location is the same.
+ 1 enumerate print queues
+      * Use Foomatic for this?
 
-For this event we will use the WSDL based on the 20030411 
-specification. This gives us a stable base for testing.
-http://www.pwg.org/schemas/ps/20030411/
+ 2 display job dialog
 
-Future events will use the version that results for the
-Last call re-circ.
+ 3 receive job properties in standardized format
+      * rely on PPD file format for this?
 
-RSVP asap
+ 4 query page presentation parameters
+      - size of page
+      - margin information
+      - resolution
+      - color/monochrome
+      - fonts
+      * parse PPD file for this information?
 
-Thanks,
-Alan
+ 5 generate print job
+      - postscript/PDF
+      - html
+      - plain text
+      - bitmap file (png, jpg, etc)
+      - SVG file
+      * linux applications generate postscript files
 
------Original Message-----
-From: BERKEMA,ALAN C (HP-Roseville,ex1) [mailto:alan.berkema@hp.com]
-Sent: Tuesday, May 20, 2003 3:14 PM
-To: 'a PSI pwg.org'
-Subject: PS> [PSI]: Interop Fest 1
+ 6 submit print job with job properties.  The queue processor will run some
+      transformation.  Ex: use Ghostscript to convert postscript to printer
+output.
+      * CUPS will accept postscript
 
+ 7 track print job / display status
+     - real-time display?
 
-Hi All,
+ 8 receive end of job notification
 
-PSI will conduct it's first interoperability event on
-July 15th & 16th at HP's Vancouver Wa site.
-Detailed logistics will follow.
+Mark
 
-In order to make this event successful we need as many PSI devices
-as possible. Please let me know as soon as you can if you will
-attend and what devices you will bring to the party.
+Take a look at the Linux Omni Printer Driver Framework at
+http://www.ibm.com/linux/ltc/projects/omni/
 
-We will have an interoperability test plan proposal before the June 20
-F2F. This will be reviewed and finalized at the F2F.
-We expect this to include Basic Job Submission methods.
-Status, Cancel will be wants .
-Target Device Interface will be later.
-
-Thanks,
-Alan
 
