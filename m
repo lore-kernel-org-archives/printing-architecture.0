@@ -1,14 +1,11 @@
-Message-ID: <1be90c0a050313203926362db9@mail.gmail.com>
-Date: Mon, 14 Mar 2005 10:09:33 +0530
-From: Prince P <prince1a@gmail.com>
-In-Reply-To: <CFEE79A465B35C4385389BA5866BEDF00C7A9B@mailsrvnt02.enet.sharplabs.com>
-Mime-Version: 1.0
-Content-Type: text/plain; charset=US-ASCII
-Content-Transfer-Encoding: 7bit
-References: <CFEE79A465B35C4385389BA5866BEDF00C7A9B@mailsrvnt02.enet.sharplabs.com>
-Subject: [Printing-architecture] Re: How to convert xhtml-print to printer
-	specific data
-Reply-To: Prince P <prince1a@gmail.com>
+Message-ID: <CFEE79A465B35C4385389BA5866BEDF00C7AAB@mailsrvnt02.enet.sharplabs.com>
+From: "McDonald, Ira" <imcdonald@sharplabs.com>
+Subject: RE: [Printing-architecture] Re: How to convert xhtml-print to pri
+	nter specific data
+Date: Mon, 14 Mar 2005 13:21:58 -0800
+MIME-Version: 1.0
+Content-Type: text/plain;
+	charset="ISO-8859-1"
 List-Id: Printing architecture under linux
 	<printing-architecture.mail.freestandards.org>
 List-Unsubscribe: <http://mail.freestandards.org/mailman/listinfo/printing-architecture>,
@@ -18,8 +15,38 @@ List-Post: <mailto:printing-architecture@mail.freestandards.org>
 List-Help: <mailto:printing-architecture-request@mail.freestandards.org?subject=help>
 List-Subscribe: <http://mail.freestandards.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@mail.freestandards.org?subject=subscribe>
-To: "McDonald, Ira" <imcdonald@sharplabs.com>
-Cc: printing-architecture@base3.freestandards.org, pwg@pwg.org
+To: 'Prince P' <prince1a@gmail.com>, "McDonald, Ira" <imcdonald@sharplabs.com>
+Cc: printing-architecture@base3.freestandards.org
+
+Hi,
+
+Ah - you're building an interpreter - I'm sure there are some
+free XHTML to PCL raster libraries somewhere, but some Google
+searching for an hour didn't find them.
+
+There was a design effort in XHTML-Print to ensure that a
+receiver (a spooler or a printer) could interpret the XHMTL
+pages one at a time, without caching.
+
+Good luck with your project,
+- Ira
+
+Ira McDonald (Musician / Software Architect)
+Blue Roof Music / High North Inc
+PO Box 221  Grand Marais, MI  49839
+phone: +1-906-494-2434
+email: imcdonald@sharplabs.com
+
+-----Original Message-----
+From: printing-architecture-bounces@base3.freestandards.org
+[mailto:printing-architecture-bounces@base3.freestandards.org]On Behalf
+Of Prince P
+Sent: Sunday, March 13, 2005 11:40 PM
+To: McDonald, Ira
+Cc: printing-architecture@base3.freestandards.org; pwg@pwg.org
+Subject: [Printing-architecture] Re: How to convert xhtml-print to
+printer specific data
+
 
 Dear Ira,
           By acutal print data, what i meant was how to convert the
@@ -124,4 +151,9 @@ On Thu, 10 Mar 2005 06:23:19 -0800, "McDonald, Ira"
 > > http://mail.freestandards.org/mailman/listinfo/printing-architecture
 > >
 >
+
+_______________________________________________
+Printing-architecture mailing list
+Printing-architecture@mail.freestandards.org
+http://mail.freestandards.org/mailman/listinfo/printing-architecture
 
