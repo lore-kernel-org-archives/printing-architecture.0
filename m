@@ -1,11 +1,13 @@
-Message-ID: <2F7D63A21DB2C74EB8EB8C09AF667DB04A3346@eitc220.eitc.epson.com>
-From: "Petrie, Glen" <glen.petrie@eitc.epson.com>
-Date: Thu, 18 Mar 2004 17:27:35 -0800
+Message-ID: <405A85F1.7060907@fxpsc.co.jp>
+Date: Fri, 19 Mar 2004 14:32:33 +0900
+From: Osamu MIHARA <mihara.osamu@fxpsc.co.jp>
 MIME-Version: 1.0
-Content-Type: multipart/alternative;
-	boundary="----_=_NextPart_001_01C40D51.5B93C720"
-Subject: [Printing-architecture] Final Version of Slides for March 24,
-	04 FSG -Japan/US available
+References: <2F7D63A21DB2C74EB8EB8C09AF667DB04A3346@eitc220.eitc.epson.com>
+In-Reply-To: <2F7D63A21DB2C74EB8EB8C09AF667DB04A3346@eitc220.eitc.epson.com>
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+Subject: [Printing-architecture] Re: [Printing-sc] Final Version of Slides
+ for March 24, 04 FSG -Japan/US available
 List-Id: Printing architecture under linux
 	<printing-architecture.mail.freestandards.org>
 List-Unsubscribe: <http://mail.freestandards.org/mailman/listinfo/printing-architecture>,
@@ -16,298 +18,18 @@ List-Help: <mailto:printing-architecture-request@mail.freestandards.org?subject=
 List-Subscribe: <http://mail.freestandards.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@mail.freestandards.org?subject=subscribe>
 To: printing-architecture@freestandards.org, printing-announce@freestandards.org, printing-driver@freestandards.org, printing-japan@freestandards.org, printing-jobticket@freestandards.org, printing-spool@freestandards.org, printing-sc@freestandards.org
-Cc: "Petrie, Glen" <glen.petrie@eitc.epson.com>
 
-This message is in MIME format. Since your mail reader does not understand
-this format, some or all of this message may not be legible.
+Hi, all
 
-------_=_NextPart_001_01C40D51.5B93C720
-Content-Type: text/plain
+I have placed the vector driver spec and presentation.
 
-Job-Ticket
+ftp://ftp.pwg.org/pub/pwg/fsg/vector/VectorPrinterDriverAPI-0.2en.pdf
+ftp://ftp.pwg.org/pub/pwg/fsg/vector/VectorPrinterDriverAPI-0.2en.sxw
 
-ftp://ftp.pwg.org/pub/pwg/fsg/March2004_Japan-US_meeting_slides/FSGOpenPrint
-_JT_20040324-final.ppt
-<ftp://ftp.pwg.org/pub/pwg/fsg/March2004_Japan-US_meeting_slides/FSGOpenPrin
-t_JT_20040324-final.ppt> 
+ftp://ftp.pwg.org/pub/pwg/fsg/March2004_Japan-US_meeting_slides/FSGOpenPrint_Vector_20040324-final.pdf
+ftp://ftp.pwg.org/pub/pwg/fsg/March2004_Japan-US_meeting_slides/FSGOpenPrint_Vector_20040324-final.ppt
 
-ftp://ftp.pwg.org/pub/pwg/fsg/March2004_Japan-US_meeting_slides/FSGOpenPrint
-_JT_20040324-final.pdf
-<ftp://ftp.pwg.org/pub/pwg/fsg/March2004_Japan-US_meeting_slides/FSGOpenPrin
-t_JT_20040324-final.pdf> 
-
- 
-
-Architecture
-
-ftp://ftp.pwg.org/pub/pwg/fsg/March2004_Japan-US_meeting_slides/FSGOpenPrint
-_Arch_20040324-final.ppt
-<ftp://ftp.pwg.org/pub/pwg/fsg/March2004_Japan-US_meeting_slides/FSGOpenPrin
-t_Arch_20040324-final.ppt> 
-
-ftp://ftp.pwg.org/pub/pwg/fsg/March2004_Japan-US_meeting_slides/FSGOpenPrint
-_Arch_20040324-final.pdf
-<ftp://ftp.pwg.org/pub/pwg/fsg/March2004_Japan-US_meeting_slides/FSGOpenPrin
-t_Arch_20040324-final.pdf> 
-
- 
-
-Print Driver
-
-ftp://ftp.pwg.org/pub/pwg/fsg/March2004_Japan-US_meeting_slides/FSGOpenPrint
-_PD_20040324-final.ppt
-<ftp://ftp.pwg.org/pub/pwg/fsg/March2004_Japan-US_meeting_slides/FSGOpenPrin
-t_PD_20040324-final.ppt> 
-
-ftp://ftp.pwg.org/pub/pwg/fsg/March2004_Japan-US_meeting_slides/FSGOpenPrint
-_PD_20040324-final.pdf
-<ftp://ftp.pwg.org/pub/pwg/fsg/March2004_Japan-US_meeting_slides/FSGOpenPrin
-t_PD_20040324-final.pdf> 
-
- 
-
-PAPI
-
-ftp://ftp.pwg.org/pub/pwg/fsg/March2004_Japan-US_meeting_slides/FSGOpenPrint
-_PAPI_20040324-final.sxi
-<ftp://ftp.pwg.org/pub/pwg/fsg/March2004_Japan-US_meeting_slides/FSGOpenPrin
-t_PAPI_20040324-final.sxi>    
-
-ftp://ftp.pwg.org/pub/pwg/fsg/March2004_Japan-US_meeting_slides/FSGOpenPrint
-_PAPI_20040324-final.pdf
-<ftp://ftp.pwg.org/pub/pwg/fsg/March2004_Japan-US_meeting_slides/FSGOpenPrin
-t_PAPI_20040324-final.pdf> 
-
- 
-
- 
-
- 
-
-Rgds, 
-Glen W. Petrie 
-Epson Imaging Technology Center 
-150 River Oaks Parkway, Suite 200 
-San Jose, CA, 95134 
-Voice: 408.576.4131  Fax: 408.474.0511 
-
- 
-
-
-------_=_NextPart_001_01C40D51.5B93C720
-Content-Type: text/html
-Content-Transfer-Encoding: quoted-printable
-
-<html xmlns:v=3D"urn:schemas-microsoft-com:vml" =
-xmlns:o=3D"urn:schemas-microsoft-com:office:office" =
-xmlns:w=3D"urn:schemas-microsoft-com:office:word" =
-xmlns:x=3D"urn:schemas-microsoft-com:office:excel" =
-xmlns:p=3D"urn:schemas-microsoft-com:office:powerpoint" =
-xmlns:dt=3D"uuid:C2F41010-65B3-11d1-A29F-00AA00C14882" =
-xmlns=3D"http://www.w3.org/TR/REC-html40">
-
-<head>
-<META HTTP-EQUIV=3D"Content-Type" CONTENT=3D"text/html; =
-charset=3DUS-ASCII">
-
-
-<meta name=3DGenerator content=3D"Microsoft Word 11 (filtered medium)">
-<style>
-<!--
- /* Font Definitions */
- @font-face
-	{font-family:"MS Mincho";
-	panose-1:2 2 6 9 4 2 5 8 3 4;}
-@font-face
-	{font-family:"Comic Sans MS";
-	panose-1:3 15 7 2 3 3 2 2 2 4;}
-@font-face
-	{font-family:"\@MS Mincho";
-	panose-1:2 2 6 9 4 2 5 8 3 4;}
- /* Style Definitions */
- p.MsoNormal, li.MsoNormal, div.MsoNormal
-	{margin:0in;
-	margin-bottom:.0001pt;
-	font-size:12.0pt;
-	font-family:"Times New Roman";}
-a:link, span.MsoHyperlink
-	{color:blue;
-	text-decoration:underline;}
-a:visited, span.MsoHyperlinkFollowed
-	{color:purple;
-	text-decoration:underline;}
-p.MsoPlainText, li.MsoPlainText, div.MsoPlainText
-	{margin:0in;
-	margin-bottom:.0001pt;
-	font-size:10.0pt;
-	font-family:"Courier New";}
-p
-	{mso-margin-top-alt:auto;
-	margin-right:0in;
-	mso-margin-bottom-alt:auto;
-	margin-left:0in;
-	font-size:12.0pt;
-	font-family:"Times New Roman";}
-span.EmailStyle17
-	{mso-style-type:personal-compose;
-	font-family:"Courier New";
-	color:windowtext;}
-@page Section1
-	{size:8.5in 11.0in;
-	margin:1.0in 1.25in 1.0in 1.25in;}
-div.Section1
-	{page:Section1;}
--->
-</style>
-
-</head>
-
-<body lang=3DEN-US link=3Dblue vlink=3Dpurple>
-
-<div class=3DSection1>
-
-<p class=3DMsoNormal><font size=3D2 face=3D"Courier New"><span =
-style=3D'font-size:10.0pt;
-font-family:"Courier New"'>Job-Ticket<o:p></o:p></span></font></p>
-
-<p class=3DMsoNormal><font size=3D2 face=3D"Courier New"><span =
-style=3D'font-size:10.0pt;
-font-family:"Courier New"'><a
-href=3D"ftp://ftp.pwg.org/pub/pwg/fsg/March2004_Japan-US_meeting_slides/=
-FSGOpenPrint_JT_20040324-final.ppt"
-title=3D"ftp://ftp.pwg.org/pub/pwg/fsg/March2004_Japan-US_meeting_slides=
-/FSGOpenPrint_JT_20040324-final.ppt">ftp://ftp.pwg.org/pub/pwg/fsg/March=
-2004_Japan-US_meeting_slides/FSGOpenPrint_JT_20040324-final.ppt</a><o:p>=
-</o:p></span></font></p>
-
-<p class=3DMsoNormal><font size=3D2 face=3D"Courier New"><span =
-style=3D'font-size:10.0pt;
-font-family:"Courier New"'><a
-href=3D"ftp://ftp.pwg.org/pub/pwg/fsg/March2004_Japan-US_meeting_slides/=
-FSGOpenPrint_JT_20040324-final.pdf"
-title=3D"ftp://ftp.pwg.org/pub/pwg/fsg/March2004_Japan-US_meeting_slides=
-/FSGOpenPrint_JT_20040324-final.pdf">ftp://ftp.pwg.org/pub/pwg/fsg/March=
-2004_Japan-US_meeting_slides/FSGOpenPrint_JT_20040324-final.pdf</a><o:p>=
-</o:p></span></font></p>
-
-<p class=3DMsoNormal><font size=3D2 face=3D"Courier New"><span =
-style=3D'font-size:10.0pt;
-font-family:"Courier New"'><o:p>&nbsp;</o:p></span></font></p>
-
-<p class=3DMsoNormal><font size=3D2 face=3D"Courier New"><span =
-style=3D'font-size:10.0pt;
-font-family:"Courier New"'>Architecture<o:p></o:p></span></font></p>
-
-<p class=3DMsoNormal><font size=3D2 face=3D"Courier New"><span =
-style=3D'font-size:10.0pt;
-font-family:"Courier New"'><a
-href=3D"ftp://ftp.pwg.org/pub/pwg/fsg/March2004_Japan-US_meeting_slides/=
-FSGOpenPrint_Arch_20040324-final.ppt">ftp://ftp.pwg.org/pub/pwg/fsg/Marc=
-h2004_Japan-US_meeting_slides/FSGOpenPrint_Arch_20040324-final.ppt</a><o=
-:p></o:p></span></font></p>
-
-<p class=3DMsoNormal><font size=3D2 face=3D"Courier New"><span =
-style=3D'font-size:10.0pt;
-font-family:"Courier New"'><a
-href=3D"ftp://ftp.pwg.org/pub/pwg/fsg/March2004_Japan-US_meeting_slides/=
-FSGOpenPrint_Arch_20040324-final.pdf">ftp://ftp.pwg.org/pub/pwg/fsg/Marc=
-h2004_Japan-US_meeting_slides/FSGOpenPrint_Arch_20040324-final.pdf</a><o=
-:p></o:p></span></font></p>
-
-<p class=3DMsoNormal><font size=3D2 face=3D"Courier New"><span =
-style=3D'font-size:10.0pt;
-font-family:"Courier New"'><o:p>&nbsp;</o:p></span></font></p>
-
-<p class=3DMsoNormal><font size=3D2 face=3D"Courier New"><span =
-style=3D'font-size:10.0pt;
-font-family:"Courier New"'>Print Driver<o:p></o:p></span></font></p>
-
-<p class=3DMsoNormal><font size=3D2 face=3D"Courier New"><span =
-style=3D'font-size:10.0pt;
-font-family:"Courier New"'><a
-href=3D"ftp://ftp.pwg.org/pub/pwg/fsg/March2004_Japan-US_meeting_slides/=
-FSGOpenPrint_PD_20040324-final.ppt">ftp://ftp.pwg.org/pub/pwg/fsg/March2=
-004_Japan-US_meeting_slides/FSGOpenPrint_PD_20040324-final.ppt</a><o:p><=
-/o:p></span></font></p>
-
-<p class=3DMsoNormal><font size=3D2 face=3D"Courier New"><span =
-style=3D'font-size:10.0pt;
-font-family:"Courier New"'><a
-href=3D"ftp://ftp.pwg.org/pub/pwg/fsg/March2004_Japan-US_meeting_slides/=
-FSGOpenPrint_PD_20040324-final.pdf">ftp://ftp.pwg.org/pub/pwg/fsg/March2=
-004_Japan-US_meeting_slides/FSGOpenPrint_PD_20040324-final.pdf</a><o:p><=
-/o:p></span></font></p>
-
-<p class=3DMsoNormal><font size=3D2 face=3D"Courier New"><span =
-style=3D'font-size:10.0pt;
-font-family:"Courier New"'><o:p>&nbsp;</o:p></span></font></p>
-
-<p class=3DMsoNormal><font size=3D2 face=3D"Courier New"><span =
-style=3D'font-size:10.0pt;
-font-family:"Courier New"'>PAPI<o:p></o:p></span></font></p>
-
-<p class=3DMsoNormal><font size=3D2 face=3D"Courier New"><span =
-style=3D'font-size:10.0pt;
-font-family:"Courier New"'><a
-href=3D"ftp://ftp.pwg.org/pub/pwg/fsg/March2004_Japan-US_meeting_slides/=
-FSGOpenPrint_PAPI_20040324-final.sxi">ftp://ftp.pwg.org/pub/pwg/fsg/Marc=
-h2004_Japan-US_meeting_slides/FSGOpenPrint_PAPI_20040324-final.sxi</a>&n=
-bsp;&nbsp; <o:p></o:p></span></font></p>
-
-<p class=3DMsoNormal><font size=3D2 face=3D"Courier New"><span =
-style=3D'font-size:10.0pt;
-font-family:"Courier New"'><a
-href=3D"ftp://ftp.pwg.org/pub/pwg/fsg/March2004_Japan-US_meeting_slides/=
-FSGOpenPrint_PAPI_20040324-final.pdf">ftp://ftp.pwg.org/pub/pwg/fsg/Marc=
-h2004_Japan-US_meeting_slides/FSGOpenPrint_PAPI_20040324-final.pdf</a><o=
-:p></o:p></span></font></p>
-
-<p class=3DMsoNormal><font size=3D2 face=3D"Courier New"><span =
-style=3D'font-size:10.0pt;
-font-family:"Courier New"'><o:p>&nbsp;</o:p></span></font></p>
-
-<p class=3DMsoNormal><font size=3D2 face=3D"Courier New"><span =
-style=3D'font-size:10.0pt;
-font-family:"Courier New"'><o:p>&nbsp;</o:p></span></font></p>
-
-<p class=3DMsoNormal><font size=3D2 face=3D"Courier New"><span =
-style=3D'font-size:10.0pt;
-font-family:"Courier New"'><o:p>&nbsp;</o:p></span></font></p>
-
-<p class=3DMsoPlainText><i><font size=3D2 face=3D"Comic Sans MS"><span
-style=3D'font-size:10.0pt;font-family:"Comic Sans =
-MS";font-style:italic'>Rgds, </span></font></i><br>
-<b><i><font color=3D"#333399" face=3D"Comic Sans MS"><span =
-style=3D'font-family:"Comic Sans MS";
-color:#333399;font-weight:bold;font-style:italic'>Glen W. =
-Petrie</span></font></i></b>
-<br>
-<i><font face=3D"Comic Sans MS"><span style=3D'font-family:"Comic Sans =
-MS";
-font-style:italic'>Epson Imaging Technology Center =
-</span></font></i><br>
-<i><font face=3D"Comic Sans MS"><span style=3D'font-family:"Comic Sans =
-MS";
-font-style:italic'>150 River Oaks Parkway, Suite 200 =
-</span></font></i><br>
-<i><font face=3D"Comic Sans MS"><span style=3D'font-family:"Comic Sans =
-MS";
-font-style:italic'>San Jose, CA, 95134 </span></font></i><br>
-<i><font face=3D"Comic Sans MS"><span style=3D'font-family:"Comic Sans =
-MS";
-font-style:italic'>Voice: 408.576.4131&nbsp; Fax: =
-408.474.0511</span></font></i>
-<o:p></o:p></p>
-
-<p class=3DMsoNormal><font size=3D3 face=3D"Times New Roman"><span =
-style=3D'font-size:
-12.0pt'><o:p>&nbsp;</o:p></span></font></p>
-
-</div>
-
-</body>
-
-</html>
-
-------_=_NextPart_001_01C40D51.5B93C720--
+Regards,
+-- 
+  Osamu MIHARA // Fuji Xerox Printing Systems Co., Ltd.
 
