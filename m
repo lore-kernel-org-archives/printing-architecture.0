@@ -1,10 +1,11 @@
-Message-ID: <40C8FD0E.8060703@gmx.net>
-Date: Fri, 11 Jun 2004 02:30:06 +0200
-From: Till Kamppeter <till.kamppeter@gmx.net>
+Message-ID: <CFEE79A465B35C4385389BA5866BEDF00C771E@mailsrvnt02.enet.sharplabs.com>
+From: "McDonald, Ira" <imcdonald@sharplabs.com>
+Subject: RE: [lsm-printing] Re: [Printing-architecture] Schedule for Open 
+	Printing day(s) at LSM?
+Date: Thu, 10 Jun 2004 19:01:14 -0700
 MIME-Version: 1.0
-Content-Type: text/plain; charset="iso-8859-1"; format="flowed"
-Content-Transfer-Encoding: quoted-printable
-Subject: [Printing-architecture] General scheduling of the LSM
+Content-Type: text/plain;
+	charset="iso-8859-1"
 List-Id: Printing architecture under linux
 	<printing-architecture.mail.freestandards.org>
 List-Unsubscribe: <http://mail.freestandards.org/mailman/listinfo/printing-architecture>,
@@ -14,55 +15,46 @@ List-Post: <mailto:printing-architecture@mail.freestandards.org>
 List-Help: <mailto:printing-architecture-request@mail.freestandards.org?subject=help>
 List-Subscribe: <http://mail.freestandards.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@mail.freestandards.org?subject=subscribe>
-To: "'lsm-printing@linuxprinting.org'" <lsm-printing@linuxprinting.org>
-Cc: Francois PELLEGRINI <pelegrin@labri.u-bordeaux.fr>, Pierre Jarillon <jarillon@abul.org>, =?ISO-8859-1?Q?ic_P=E9net?= <ludovic@penet.org>, printing-architecture <printing-architecture@freestandards.org>, =?ISO-8859-1?Q?Ludov?=
+To: 'Jody Goldberg' <jody@gnome.org>, Till Kamppeter <till.kamppeter@gmx.net>
+Cc: "'lsm-printing@linuxprinting.org'" <lsm-printing@linuxprinting.org>, 'Pierre Jarillon' <jarillon@abul.org>, "McDonald,
+	Ira" <imcdonald@sharplabs.com>, printing-architecture@freestandards.org
 
-Oi,
+Hi,
 
-to know about the general scheduling on the event, please have a look here:
+I also vote July 11, rather than July 5 for an extension
+FSG Open Printing day.
 
-http://wiki.ael.be/rmll2004/index.php/Schedule
+Cheers,
+- Ira
 
-Do not edit this Wiki page, please post your suggestions in this thread=20
-here on the list.
+PS - I would only be joining by teleconference.
 
-So we have a developer room througout all the five days (and perhaps=20
-even somewhat longer) and we will have HALF A DAY of a lecture hall to=20
-give talks to the visitors of the LSM.
+Ira McDonald (Musician / Software Architect)
+Blue Roof Music / High North Inc
+PO Box 221  Grand Marais, MI  49839
+phone: +1-906-494-2434
+email: imcdonald@sharplabs.com
 
-I want to ask for the following:
+-----Original Message-----
+From: Jody Goldberg [mailto:jody@gnome.org]
+Sent: Thursday, June 10, 2004 5:23 PM
+To: Till Kamppeter
+Cc: McDonald, Ira; 'lsm-printing@linuxprinting.org'; 'Pierre Jarillon';
+printing-architecture@freestandards.org
+Subject: Re: [lsm-printing] Re: [Printing-architecture] Schedule for
+Open Printing day(s) at LSM?
 
-1. Pierre, Fran=E7ois, Ludovic, can we have A FULL DAY for giving our=20
-presentations in the lecture hall? I also like to not do our=20
-presentations in the lecture hall on Saturday, the 10th, as the Kyocera=20
-people come only that day and want to talk with us in the developer=20
-room. For our presentations Thursday or Friday would be best.
 
-2. To everyone of the participants, especially the ones working in=20
-bigger companies: The developer's room will not have a beamer. It would=20
-be nice if someone could organize and bring one. Perhaps one could add a=20
-beamer to the printer loan from Epson? Glen?
+On Thu, Jun 10, 2004 at 04:21:53AM +0200, Till Kamppeter wrote:
+> >If we can have a second day of technical sessions (perhaps
+> >outside the regular LSM conference days), then Mark Hamzy
+> >can schedule one or more telecons for those who can't
+> >travel to France this July.
+> >
+> 
+> Perhaps July 5 or July 11?
 
-3. To the people of FSG OpenPrinting: For the call-in sessions we need a=20
-host for phone conferences. I suggest using the hosts which we use for=20
-the architecture, job ticket, and driver telecons. Can you arrange that=20
-we can use them. Calling to these hosts from France will be not more=20
-expensive than a local call when using www.telerabais.com, so we do not=20
-need to worry about the host being in the US. It is also cheaper for the=20
-US participants.
-
-4. Pierre, Fran=E7ois, Ludovic, we need a way to do phone conferences in=20
-the developer room. Can you provide a conference phone and if there is=20
-no phone line in the developer room a voice-over-IP connection?
-
-5. Pierre, Fran=E7ois, Ludovic, we will need the developer room for=20
-somewhat more than the five days of the event. I would be grateful if we=20
-can get it from July 5th - 11th, including LAN, internet access, and=20
-phone conference infrastructure as described under 4. I am also grateful=20
-if we could book also the nights from 4th to 5th, from 10th to 11th, and=20
-from 11th to 12th in the students dorms.
-
-Thank you in advance for your cooperation.
-
-    Till
+Is this open to a vote ?
+[ ] July 5
+[x] July 11
 
