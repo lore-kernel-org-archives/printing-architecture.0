@@ -1,11 +1,10 @@
-Message-ID: <116DB56CD7DED511BC7800508B2CA537B0030B@mailsrvnt02.enet.sharplabs.com>
+Message-ID: <116DB56CD7DED511BC7800508B2CA537B0030C@mailsrvnt02.enet.sharplabs.com>
 From: "McDonald, Ira" <imcdonald@sharplabs.com>
-Date: Wed, 14 Jan 2004 14:25:29 -0800
+Date: Wed, 14 Jan 2004 14:28:36 -0800
 MIME-Version: 1.0
 Content-Type: text/plain;
 	charset="iso-8859-1"
-Subject: [Printing-architecture] Is there an FSG Arch meeting tomorrow?
-	[PAPI topic]
+Subject: [Printing-architecture] FW: PWG-ANNOUNCE> Feb 23-26 - PWG Meeting
 List-Id: Printing architecture under linux
 	<printing-architecture.freestandards.org>
 List-Unsubscribe: <http://freestandards.org/mailman/listinfo/printing-architecture>,
@@ -19,21 +18,11 @@ To: printing-architecture <printing-architecture@freestandards.org>
 
 Hi,
 
-I haven't seen any announcement.  
+Below is the agenda for the next PWG face-to-face (23-26 Feb).
 
-Are we meeting tomorrow afternoon?  Is there an agenda?
-
-At yesterday's Job Ticket telecon, we speculated that
-discussion of plans to complete the PAPI/1.0 spec would
-be a good topic tomorrow (since Norm Jacobs has taken
-over as document editor).
-
-For example, since in the intervening year the IPP
-Document Object has been comleted and added to the PWG
-Semantic Model/1.0 spec and XML schema set, Norm has
-suggested that it would be better if PAPI/1.0 explicitly
-included Document objects (and their operations), to
-avoid the 'catching up' situation that IPP/1.1 now has.
+The Monday (23 Feb) agenda (now confirmed with WG chairs) is:
+- IPPFAX (IFX) morning
+- PSI afternoon
 
 Cheers,
 - Ira
@@ -42,5 +31,31 @@ Ira McDonald (Musician / Software Architect)
 Blue Roof Music / High North Inc
 PO Box 221  Grand Marais, MI  49839
 phone: +1-906-494-2434
-email: imcdonald@sharplabs.com
+email: imcdonald@sharplabs.com 
+
+-----Original Message-----
+From: Harry Lewis [mailto:harryl@us.ibm.com]
+Sent: Tuesday, January 13, 2004 12:02 AM
+To: pwg-announce@pwg.org
+Subject: PWG-ANNOUNCE> Feb 23-26 - PWG Meeting
+
+
+
+The February face to face will be in San Jose Feb 23-26 (Monday-Thurs).
+Proposed agenda as follows (need to confirm with w/g chairs) 
+
+Monday - PSI / IFX 
+Tuesday - Plenary / DMTF CIM Semantic Model BOF 
+Wednesday - WBMM 
+Thursday (morning) - Eventing best practices update 
+
+Still working on exact location (hotel). 
+---------------------------------------------- 
+Harry Lewis 
+Chairman - IEEE-ISTO Printer Working Group
+http://www.pwg.org
+IBM Printing Systems 
+http://www.ibm.com/printers
+303-924-5337
+---------------------------------------------- 
 
