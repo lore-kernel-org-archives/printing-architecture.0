@@ -1,9 +1,9 @@
-Message-ID: <OF516D333E.95134150-ON86256D6D.00575BDC-86256D6D.005792A6@us.ibm.com>
+Message-ID: <OF25D35009.B045A979-ON86256D6D.0057948A-86256D6D.0057AC09@us.ibm.com>
 From: Mark Hamzy <hamzy@us.ibm.com>
-Date: Thu, 24 Jul 2003 10:56:31 -0500
+Date: Thu, 24 Jul 2003 10:57:36 -0500
 MIME-Version: 1.0
 Content-type: text/plain; charset=US-ASCII
-Subject: [Printing-architecture] Architecture meeting notes 07/17/2003
+Subject: [Printing-architecture] Architecture meeting 07/24/2003
 Sender: printing-architecture-admin@freestandards.org
 Errors-To: printing-architecture-admin@freestandards.org
 List-Help: <mailto:printing-architecture-request@freestandards.org?subject=help>
@@ -19,27 +19,20 @@ To: printing-architecture@freestandards.org
 
 
 
-Attendees:
-Claudia Alimpich
-Mark Hamzy
-Till Kamppeter
-Norm Jacobs
-Ira McDonald
-Glen Petrie
+Thursday, July 24
 
-We talked about creating/working on flow diagrams.  The following people
-signed up for these diagrams
-  1,000,000 (Norm)
-  retrieving capabilities (Mark)
-  submission
-    with jt (Claudia)
-    without jt (Claudia)
-  job monitoring
-  job management
+NOTE: different number than usual.
 
-We talked about bidirectional communications and what that entails.
+1200-1300 PST
+1300-1400 MST
+1400-1500 CST
+1500-1600 EST
+2000-2100 UTC
 
-We talked about starting a new group for general install issues.
+Tie Line:    650-3239
+Toll Free:   1-800-497-2024
+Toll Number: 1-719-457-3821
+Passcode:     160458
 
 Mark
 
