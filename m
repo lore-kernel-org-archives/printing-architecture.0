@@ -1,12 +1,11 @@
-Message-ID: <OF59BFA7FB.9F0DEB69-ON86256F18.006D5580-86256F18.006DF753@us.ibm.com>
-From: Mark Hamzy <hamzy@us.ibm.com>
-Date: Thu, 23 Sep 2004 15:01:07 -0500
+Message-ID: <CFEE79A465B35C4385389BA5866BEDF00C78F2@mailsrvnt02.enet.sharplabs.com>
+From: "McDonald, Ira" <imcdonald@sharplabs.com>
+Date: Tue, 5 Oct 2004 05:59:55 -0700 
 MIME-Version: 1.0
-Content-type: multipart/alternative; 
-	Boundary="0__=09BBE58BDFFED3108f9e8a93df938690918c09BBE58BDFFED310"
-Content-Disposition: inline
-Subject: [Printing-architecture] Work over email instead of during
-	conference calls.
+Content-Type: text/plain;
+	charset="ISO-8859-1"
+Subject: [Printing-architecture] FW: PWG> Preliminary Details: PWG Face to
+	Face Meeting - November 15-19, 2004 - San Antonio TX
 List-Id: Printing architecture under linux
 	<printing-architecture.mail.freestandards.org>
 List-Unsubscribe: <http://mail.freestandards.org/mailman/listinfo/printing-architecture>,
@@ -16,71 +15,102 @@ List-Post: <mailto:printing-architecture@mail.freestandards.org>
 List-Help: <mailto:printing-architecture-request@mail.freestandards.org?subject=help>
 List-Subscribe: <http://mail.freestandards.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@mail.freestandards.org?subject=subscribe>
-To: printing-architecture@freestandards.org
+To: printing-architecture@freestandards.org, printing-sc@freestandards.org
 
---0__=09BBE58BDFFED3108f9e8a93df938690918c09BBE58BDFFED310
-Content-type: text/plain; charset=US-ASCII
-Content-transfer-encoding: quoted-printable
+Hi,
+
+Here are the hotel and registration details for the PWG
+meeting in San Antonio, TX in mid-November.
+
+Mark and Glen - we will need to bring our own conference
+phone and projector (since our first two days meetings
+overlap with PWG).
+
+It's now quite possible that the PWG will have an OPEN
+(unscheduled) day on Monday 15 November, because we're
+skipping our two BOFs for the next meeting.
+
+If so, the PWG would very much like to have input on the
+FSG schedules on Monday, so that they encourage cross-
+participation.
+
+Gotta go - PWG face-to-face in Lexington, KY this week.
+
+Cheers,
+- Ira
+
+Ira McDonald (Musician / Software Architect)
+Blue Roof Music / High North Inc
+PO Box 221  Grand Marais, MI  49839
+phone: +1-906-494-2434
+email: imcdonald@sharplabs.com
+
+-----Original Message-----
+From: owner-pwg@pwg.org [mailto:owner-pwg@pwg.org]On Behalf Of
+a.s.patel@ieee.org
+Sent: Tuesday, October 05, 2004 8:20 AM
+To: pwg-announce@pwg.org
+Cc: pwg@pwg.org
+Subject: PWG> Preliminary Details: PWG Face to Face Meeting - November
+15-19, 2004 - San Antonio TX
+Importance: High
 
 
+Greetings All,
+
+The arrangements have been finalized for the upcoming November 15-19, 2004,
+PWG Meetings in San Antonio, Texas as follows:
+
+When: Monday - Friday
+      November 15-19, 2004
+
+Where:      The Clarion Hotel Riverwalk
+      110 Lexington Avenue
+      San Antonio, TX 78205
+      Phone: 210-223-9461
+      Fax: 210-223-4520
+      www.clarion.com
 
 
+Hotel Accommodations:
+*** Room block has been opened***
+The PWG rate obtained is USD$85.00/night (plus a 16.75% tax), single or
+double occupancy.  All attendees are responsible for making their own hotel
+reservations.  Please ask for "IEEE Printer Working Group" to get the
+negotiated sleeping room rate.  Rooms are being held for the nights of
+Sunday, November 14-Thursday, November 19, 2004.
+
+ *** Please contact Ami Patel at a.s.patel@ieee.org if for any reason you
+are unable to obtain the negotiated room rate. ***
+
+Deadline:  Please call the reservation hotline toll-free at +1-800-288-3927
+and ask for the "PWG" or "IEEE Printer Working Group rate".  Please make
+sleeping room reservations by  October 29, 2004.
+
+The PWG Meeting Registration Form is in the process of being posted, and
+will be available shortly. The tentative schedule and other pertinent
+information will be conveyed to everyone in a future announcement.
+
+The cost for daily meeting attendance is US$65.00 per day. (Payments are
+processed on the first day of the meeting series.)Participants are
+responsible for their own lunch.
 
 
-Due to lack of participation in the architecture conference calls, I
-propose the following.  We will do the majority of our work via email.
-People will write individual points in separate emails so that they won=
-'t
-get lost in the responses from others.  Only when there are points that=
+Please contact  Ami Patel, PWG Program Lead at +1-732-465-6477 if you have
+any questions.
 
-need disscussion from everyone, will we hold a phone conference.
+With Kindest Regards,
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+*-*-*-*-*-*-*-*-*-*-
 
-Currently the goals of the architecture group are:
-      1) complete the reference model.
-      2) complete the use cases.
-      3) create a requirements document.
-
-So, will every one read the reference model document:
-ftp://ftp.pwg.org/pub/pwg/fsg/architecture/Reference-Model/FSG-OpenPrin=
-ting-Reference-Model--V0001-2004-0901.pdf
-and start discussing it over email.
-
-Mark
-
-Take a look at the Linux Omni Printer Driver Framework at
-http://www.ibm.com/linux/ltc/projects/omni/=
-
---0__=09BBE58BDFFED3108f9e8a93df938690918c09BBE58BDFFED310
-Content-type: text/html; charset=US-ASCII
-Content-Disposition: inline
-Content-transfer-encoding: quoted-printable
-
-<html><body>
-<p>Due to lack of participation in the architecture conference calls, I=
- propose the following.  We will do the majority of our work via email.=
-  People will write individual points in separate emails so that they w=
-on't get lost in the responses from others.  Only when there are points=
- that need disscussion from everyone, will we hold a phone conference.<=
-br>
-<br>
-Currently the goals of the architecture group are:<br>
-	1) complete the reference model.<br>
-	2) complete the use cases.<br>
-	3) create a requirements document.<br>
-<br>
-So, will every one read the reference model document:<br>
-<a href=3D"ftp://ftp.pwg.org/pub/pwg/fsg/architecture/Reference-Model/F=
-SG-OpenPrinting-Reference-Model--V0001-2004-0901.pdf">ftp://ftp.pwg.org=
-/pub/pwg/fsg/architecture/Reference-Model/FSG-OpenPrinting-Reference-Mo=
-del--V0001-2004-0901.pdf</a><br>
-and start discussing it over email.<br>
-<br>
-Mark<br>
-<br>
-Take a look at the Linux Omni Printer Driver Framework at<br>
-<a href=3D"http://www.ibm.com/linux/ltc/projects/omni/">http://www.ibm.=
-com/linux/ltc/projects/omni/</a></body></html>=
-
---0__=09BBE58BDFFED3108f9e8a93df938690918c09BBE58BDFFED310--
+Ami Patel
+Program Lead
+c/o The Printer Working Group
+IEEE Industry Standards and Technology Organization
+445 Hoes Lane, Piscataway, NJ 08854 USA
+Phone: +1-732-465-6477; Fax: +1- 651-318-7292 or +1-732-981-9473
+AIM: Shortjunior; Email: a.s.patel@ieee.org; URL: http://www.ieee-isto.org
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+*-*-*-*-*-*-*-*-*-*-
 
 
