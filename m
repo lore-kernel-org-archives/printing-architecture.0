@@ -1,10 +1,11 @@
-Message-ID: <116DB56CD7DED511BC7800508B2CA53735D095@mailsrvnt02.enet.sharplabs.com>
+Message-ID: <116DB56CD7DED511BC7800508B2CA53735D096@mailsrvnt02.enet.sharplabs.com>
 From: "McDonald, Ira" <imcdonald@sharplabs.com>
-Date: Wed, 9 Jul 2003 08:33:00 -0700 
+Date: Wed, 9 Jul 2003 08:40:52 -0700 
 MIME-Version: 1.0
 Content-Type: text/plain;
 	charset="iso-8859-1"
-Subject: [Printing-architecture] FW: PWG-ANNOUNCE> IETF 57 Agenda - Vienna, Austria (13-18 July)
+Subject: [Printing-architecture] FW: SM> Thur 10 July 1pm EDT - Semantic Model (JobX) teleconferen
+ ce
 Sender: printing-architecture-admin@freestandards.org
 Errors-To: printing-architecture-admin@freestandards.org
 List-Help: <mailto:printing-architecture-request@freestandards.org?subject=help>
@@ -15,212 +16,151 @@ List-Id: <printing-architecture.freestandards.org>
 List-Unsubscribe: <http://freestandards.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@freestandards.org?subject=unsubscribe>
 List-Archive: <http://freestandards.org/pipermail/printing-architecture/>
-To: printing-architecture@freestandards.org
+To: printing-jobticket@freestandards.org, printing-architecture@freestandards.org
 
-Hi folks,
+Hi FSG folks,
 
-FYI - the schedule of working group sessions at next week's IETF 57
-in Vienna, Austria.
+Below is the info for tomorrow's PWG Semantic Model telecon,
+reviewing the IPP Job Extensions (JobX) spec in a page turner.
+In a moment I'll send our request that "print-optimize" be 
+discussed FIRST to the PWG SM/IPP lists (which are also closed).
+I'll forward any reply.
 
-Cheers,
+PLEASE try to attend tomorrow at 10am PDT / 1pm EDT and support
+the separate semantics of "print-optimize".
+
+Thanks,
 - Ira McDonald
   High North Inc
 
-
 -----Original Message-----
-From: McDonald, Ira [mailto:imcdonald@sharplabs.com]
-Sent: Tuesday, July 08, 2003 12:18 PM
-To: pwg-announce@pwg.org
-Subject: PWG-ANNOUNCE> IETF 57 Agenda - Vienna, Austria (13-18 July)
+From: Zehler, Peter [mailto:PZehler@crt.xerox.com]
+Sent: Wednesday, July 02, 2003 11:16 AM
+To: PWG Semantic Model WG (sm@pwg.org)
+Cc: 'Claudia Alimpich'; IPP Discussion List (IPP@pwg.org);
+printing-jobticket@freestandards.org; printing-driver@freestandards.org
+Subject: SM> Thur 10 July 1pm EDT - Semantic Model (JobX) teleconference
 
 
-Agenda of the Fifty-seven IETF
-July 13-18, 2003
-=====================================
+All,
+Thursday July 10th at 1pm EDT is the Semantic Model teleconference. This 
+week's Teleconference will be dedicated to IPP JobX.  The document is 
+available on the PWG server at 
+ftp://ftp.pwg.org/pub/pwg/Semantic-Model/wd-ippjobx10-20030702.doc 
+(If someone could convert this to PDF I would appreciate it.  I haven't
+found my copy of distiller to put on my new system yet.)
+The teleconference is 2 hours long.  It will be run using phone and Webex.
+Anyone that does not yet have Webex installed should do that before
+Thursday.  Information for the phone and Webex are included below.  NOTE:
+New Dial in number and passcode
+The agenda for the Semantic Model teleconference is:
+1) Discuss the print-quality issue (see included notes below)
+2) Discuss the document-xxx-supplied changes in JobX
+3) Discuss the output-device resolution
+Pete
+PS: Bob let me know if there is a problem hosting Webex.
+________________________________________________
+Dial in Info:
+Phone Number:(877) 707-6056
+(Phone Number for Xerox Employees: 8*594-0077)
+ PARTICIPANT PASSCODE: 437874#
+________________________________________________
+webex info:
+We will also use an on line tool called webex,
+if you have not used this before, setup up by
+following the First Time Users instructions.
+Do this in advance of the meeting.
+-------------------------
+FIRST TIME USERS
+-------------------------
+For fully interactive meetings, including the ability
+to present your documents and applications, a one-time
+setup takes less than 10 minutes. Click this URL to set up now:
+http://hp.webex.com
+Then click New User.
+-------------------------
+On Thursday use:
+https://hp.webex.com/join/
+Then click join unlisted meeting.
+Use the info below:
+-------------------------
+Webex MEETING SUMMARY
+-------------------------
+Topic: PWG Semantic Model 
+Date: Thursday, July 10, 2003 
+Time: 10:00 am, Pacific Daylight Time (GMT -07:00, San Jose) 
+Meeting number: 21366675 
+Meeting password: pwg_sm1! 
+Host: 
+Bob Taylor (HP)
+___________________________________________________
 
-SUNDAY, July 13, 2003
-1000-1700 IEPG Meeting - Hall LM
-1200-1900 Registration - Main Lobby Foyer
-1300-1400 Newcomer's Orientation - Hall E2
-1500-1700 Security Tutorial - Hall E2
-1700-1900 Welcome Reception - Main Lobby Foyer
 
-MONDAY, July 14, 2003
-0800-1930 IETF Registration - Main Lobby Foyer 
-0800-0900 Continental Breakfast - Main Lobby Foyer 
-0900-1130 Morning Sessions 
-Hall NO	  APP	apparea  Applications Open Area Meeting 
-Hall IK	  INT	mip4     Mobility for IPv4 BOF
-Hall GH	  INT	send     Securing Neighbor Discovery WG
-Hall E2	  OPS	netconf	 Network Configuration WG
-Hall F1	  RTG	rpsec    Routing Protocol Security Requirements WG
-Hall F2	  TSV	avt	 Audio/Video Transport WG
-Hall LM	  TSV	rserpool Reliable Server Pooling WG
-		
-1130-1300 Break 
-1300-1500 Afternoon Sessions I
-Hall LM	  APP	xmpp	 Extensible Messaging and Presence Protocol WG
-Hall F2	  GEN	coach	 Comprehensive apprOACH to quality BOF
-Hall E2	  INT	pana     Protocol for carrying Authentication for Network
-Access WG
-Hall F1	  OPS	multi6	 Site Multihoming in IPv6 WG
-Hall NO	  RTG	forces	 Forwarding and Control Element Separation WG
-Hall GH	  SUB	tewg     Internet Traffic Engineering WG
-Hall IK	  TSV	enum     Telephone Number Mapping WG
-
-1500-1530 Break (Refreshments provided) - Main Lobby Foyer
-1530-1730 Afternoon Sessions II
-Hall GH	  APP	simple	 SIP for Instant Mess. and Pres. Lever Extensions WG
-Hall IK	  IAB	iab	 IAB Open Architecture Meeting 
-Hall E2	  INT	eap	 Extensible Authentication Protocol WG
-Hall LM	  INT	ip-dvb	 IP over MPEG-2/DVB Transport BOF
-Hall NO	  OPS	dnsop    Domain Name Server Operations WG
-Hall F2	  TSV	nsis     Next Steps in Signaling WG
-Hall F1	  TSV	rmt	 Reliable Multicast Transport WG
-	
-1730-1930 Break
-1930-2200 Evening Sessions
-Hall F2	  INT	ipv6	 IP Version 6 WG
-Hall E2	  OPS	grow     Global Routing Operations WG
-Hall LM	  OPS	rmonmib	 Remote Network Monitoring WG
-Hall NO	  RTG	mlm      Multicast Last Mile BOF
-Hall GH	  SEC	msec	 Multicast Security WG
-Hall F1	  TSV	sipping	 Session Initiation Proposal Investigation WG
-
-TUESDAY, July 15, 2003
-0800-1700 IETF Registration - Main Lobby Foyer
-0800-0900 Continental Breakfast - Main Lobby Foyer
-0900-1130 Morning Sessions
-Hall GH	  APP	opes     Open Pluggable Edge Services WG
-Hall F2	  GEN	problem  Problem Statement WG
-Hall LM	  INT	dhc      Dynamic Host Configuration WG
-Hall IK	  OPS	mboned   MBONE Deployment WG
-Hall GH	  SEC	enroll	 Credential and Provisioning BOF
-Hall F1	  SUB	mpls	 Multiprotocol Label Switching WG
-Hall E2	  TSV	ippm	 IP Performance Metrics WG
-
-1130-1300 Break
-1300-1400 Afternoon Sessions I
-Hall GH	  APP	ldup	 LDAP Duplication/Replication/Update Protocols WG
-Hall IK	  INT	dnsext   DNS Extensions WG
-Hall F1	  OPS	bmwg     Benchmarking Methodology WG
-Hall NO	  OPS	entmib	 Entity MIB WG
-Hall E2	  SEC	smime	 S/MIME Mail Security WG
-Hall LM	  TSV	nfsv4	 Network File System Version 4 WG
-Hall F2	  TSV	nsis	 Next Steps in Signaling WG
-	
-1415-1515 Afternoon Sessions II
-Hall LM	  APP	ldapbis	 LDAP (v3) Revision WG
-Hall E2	  INT	l2tpext	 Layer Two Tunneling Protocol Extensions WG
-Hall F2	  INT	magma	 Multicast & Anycast Group Membership WG
-Hall F1	  OPS	bmwg     Benchmarking Methodology WG
-Hall GH	  RTG	isis     IS-IS for IP Internets WG
-Hall IK	  TSV	midcom	 Middlebox Communication WG
-Hall NO	  TSV	rohc     Robust Header Compression WG
-	
-1515-1545 Break (Refreshments provided) - Main Lobby Foyer
-1545-1645 Afternoon Sessions III
-Hall LM	  APP	webdav	 WWW Distributed Authoring and Versioning WG
-Hall IK	  OPS	v6ops	 IPv6 Operations WG
-Hall F2	  RTG	pim	 Protocol Independent Multicast WG
-Hall F1	  SEC	sasl	 Simple Authentication and Security Layer WG
-Hall GH	  SUB	gsmp	 General Switch Management Protocol WG
-Hall E2	  TSV	alias	 Access Link Intermediaries Assisting Services BOF
-Hall No	  TSV     rohc     Robust Header Compression WG
-
-1700-1800 Afternoon Sessions IV
-Hall E2	  APP	calsch	 Calendaring and Scheduling WG
-Hall IK	  OPS	v6ops	 IPv6 Operations WG
-Hall GH	  RTG	ospf     Open Shortest Path First IGP WG
-Hall LM	  SEC	krb-wg 	 Kerberos WG
-Hall F1	  TSV	rddp	 Remote Direct Data Placement WG
-Hall F2	  TSV	xcon	 Centralized Conferencing BOF
-
-WEDNESDAY, July 16, 2003
-0800-1700 IETF Registration - Main Lobby Foyer
-0800-0900 Continental Breakfast - Main Lobby Foyer
-0900-1130 Morning Sessions
-Hall F1	  INT	mip6	 Mobility for IPv6 BOF 
-		mipshop	 MIPv6 Signaling and Handoff Optimization BOF
-Hall LM	  INT	ipcdn    IP over Cable Data Network WG
-Hall E2	  OPS	multi6	 Site Multihoming in IPv6 WG
-Hall NO	  RTG	vrrp     Virtual Router Redundancy Protocol WG
-Hall GH	  SEC	secsh	 Secure Shell WG
-Hall F2	  SUB	ccamp	 Common Control and Measurement Plane WG
-Hall IK	  TSV	sip      Session Initiation Protocol WG
-
-1130-1300 Break
-1300-1500 Afternoon Sessions I	
-Hall GH	  GEN	edu      Education BOF
-Hall F2	  INT	nemo     Network Mobility WG
-Hall NO	  IRTG	gsec     Security Research Group
-Hall LM	  OPS	aaa	 Authentication, Authorization and Accounting WG
-Hall F1	  SUB	ppvpn	 Provider Provisioned Virtual Private Networks WG
-Hall E2	  TSV	dccp     Datagram Congestion Control Protocol WG
-Hall IK	  TSV	ieprep	 Internet Emergency Preparedness WG
-
-1500-1530 Break (Refreshments provided) - Main Lobby Foyer
-1530-1730	 Afternoon Sessions II
-Hall Lm	  APP	crisp	 Cross Registry Information Service Protocol WG
-Hall NO	  OPS	ipfix    IP Flow Information Export WG
-Hall F2	  OPS	v6ops    IPv6 Operations WG
-Hall F1	  RTG	manet	 Mobile Ad-hoc Networks WG
-Hall GH	  SEC	inch     Extended Incident Handling WG
-Hall Ik	  TSV	pwe3	 Pseudo Wire Emulation Edge to Edge WG
-Hall E2	  TSV	speechsc Speech Services Control WG
-
-1730-1930 Break
-1930-2200 IAB Open Plenary - Hall D (Room changed from F1/F2)
- . IAB chair remarks
- . Regular reports (IANA, RFC-Editor, IRTF)
- . ISOC presentation of the Jon Postel Award
- . Recent IAB documents
- . Any other business  . Open architecture discussion
-
- 
-THURSDAY, July 17, 2003
-0800-1700 IETF Registration - Main Lobby Foyer
-0800-0900 Continental Breakfast - Main Lobby Foyer
-0900-1130 Morning Sessions	
-Hall LM	  APP	geopriv  Geographic Location/Privacy WG
-Hall F2	  INT	ipv6	 IP Version 6 WG 
-Hall GH	  OPS	psamp	 Packet Sampling WG
-Hall NO	  RTG	idr      Inter-Domain Routing WG
-Hall E2	  SEC	pkix	 Public-Key Infrastructure (X.509) WG
-Hall IK	  TSV	mmusic	 Multiparty Multimedia Session Control WG
-	
-1130-1300 Break
-1300-1500 Afternoon Sessions I
-Hall LM	  APP	trade    Internet Open Trading Protocol WG
-Hall NO	  INT	atommib  AToM MIB WG
-Hall F2	  INT	eap      Extensible Authentication Protocol WG
-Hall GH	  OPS	opsec	 Operational Security Requirements BOF
-Hall IK	  SUB	ppvpn	 Provider Provisioned Virtual Private Networks WG
-Hall E2	  TSV	pmtud	 Path Maximum Transmission Unit Discovery PWG
-Hall F1	  TSV	sipping  Session Initiation Proposal Investigation WG
-	
-1500-1530 Break (Refreshments provided) - Main Lobby Foyer
-1530-1730 Afternoon Sessions II
-Hall LM	  APP 	lemonade License to Enhance Messaging Oriented Network
-Access for 
-	    	 	 Diverse Endpoints WG
-Hall E2	  INT	ddbof    Device Discovery BOF
-Hall F1	  OPS	ispmon   Monitoring Infrastructure Deployment BOF
-Hall NO	  RTG	rtgarea	 Routing Area Meeting
-Hall F2	  SEC	saag	 Open Security Area Directorate
-Hall GH	  TSV	rddp	 Remote Direct Data Placement WG
-Hall IK	  TSV	seamoby  Context Transfer, Handoff Candidate Discovery, and
-                	 Dormant Mode Host Alerting WG
-
-1730-1930 Break
-1930-2200 Open IESG Plenary - Hall D (Room changed from F1/F2)
-
-Friday, July 18, 2003
-0800-0900 Continental Breakfast - Main Lobby Foyer
-0900-1130 Morning Sessions	
-Hall NO	  INT	dna	 Detecting Network Attachment BOF
-Hall GH	  OPS	capwap   Control And Provisioning of Wireless Access Points
-BOF
-Hall IK	  TSV 	tsvwg	 Transport Area Working Group
-
+Peter Zehler
+XEROX
+Xerox Innovation Group
+Email: PZehler@crt.xerox.com
+Voice:    (585) 265-8755
+FAX:      (585) 422-7961
+US Mail: Peter Zehler
+        Xerox Corp.
+        800 Phillips Rd.
+        M/S 128-25E
+        Webster NY, 14580-9701
+Print Quality Issue:
+Last Tuesday during the PWG/FSG meeting in Portland we had a discussion
+about the IPP print-quality attribute and FSG's desire to add two new
+values, "economy" and "fine", where "economy" is lower than "draft" and
+"fine" is higher than "high". After some discussion we all pretty much
+decided that it is not possible to add these new values to the already
+existing "draft", "normal", and "high" values because of the current
+definitions of the existing values (high is defined as the highest quality
+and draft is defined as the lowest quality). It also seemed like what FSG
+wanted was a way to specify print optimization and not additional levels of
+print quality.
+The FSG working group met today, and based on the input from last Tuesday's
+meeting, we would like to propose the addition of a new attribute, called
+print-optimize, that is defined as follows:
+   print-optimize (type2 keyword)
+      This attribute refines the value specified by the print-quality
+      attribute.
+      The standard keyword values are:
+         'image': optimize for image clarity
+         'photo': optimize for photo clarity
+         'text': optimize for text clarity
+         'text-and-image': optimize for both text and image clarity
+         'save-toner': optimize for minimal toner usage
+         'speed': optimize for printing speed
+We would appreciate your feedback on this proposal including suggestions for
+additional values.
+If this proposal looks good, we would like to propose that it be included in
+the JobX Spec. If the print-optimize attribute is approved by PWG by the end
+of August, then we can propose that it be added to the JDF 1.2 Spec that is
+being finalized in early September.
+Thank you for your time and feedback.
+Claudia Alimpich
+IBM Printing Systems Division
+Boulder CO
+303-924-4418
+alimpich@us.ibm.com
+Response to Print Quality Issue:
+I understand the desire to avoid violating the semantics of the IPP
+attribute - but adding these enumerations to print-quality does not feel as
+objectionable to me as splitting a single semantic concept into two
+different attributes.  If this is the precedent we take for extending the
+semantic model, I'm worried that we'll end up with an increasingly confusing
+and complex.  I would rather we take the minor hit and fix the high & draft
+definitions in the semantic model than create another ~equivalent attribute
+with a whole bunch of special semantic rules (e.g. - what should the service
+do if print-quality=high and print-optimize=save-toner?).
+bt
+---------------------------------------------------
+Bob Taylor                                        
+Senior Architect                            
+IPG Strategic Technology Development  
+Hewlett-Packard Co.       
+mailto:bobt@hp.com                        
+phone: 360.212.2625/T212.2625                    
+fax: 208.730-5111                 
+---------------------------------------------------   
 
