@@ -1,9 +1,9 @@
-Message-ID: <OF19226BCC.35EC595E-ON86256DB3.0052B4A7-86256DB3.0052CA46@us.ibm.com>
+Message-ID: <OF6D395B77.8E666500-ON86256DB3.006E8C55-86256DB3.006FA93C@us.ibm.com>
 From: Mark Hamzy <hamzy@us.ibm.com>
-Date: Thu, 2 Oct 2003 10:04:17 -0500
+Date: Thu, 2 Oct 2003 15:19:38 -0500
 MIME-Version: 1.0
 Content-type: text/plain; charset=US-ASCII
-Subject: [Printing-architecture] Architecture meeting 10/02/2003
+Subject: [Printing-architecture] Which license should the Open Printing group use
 Sender: printing-architecture-admin@freestandards.org
 Errors-To: printing-architecture-admin@freestandards.org
 List-Help: <mailto:printing-architecture-request@freestandards.org?subject=help>
@@ -14,23 +14,30 @@ List-Id: <printing-architecture.freestandards.org>
 List-Unsubscribe: <http://freestandards.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@freestandards.org?subject=unsubscribe>
 List-Archive: <http://freestandards.org/pipermail/printing-architecture/>
-To: printing-architecture@freestandards.org
+To: Douglas McNeil <mcneil@us.ibm.com>
+Cc: printing-architecture@freestandards.org
 
 
 
 
-Thursday, October 2
+Hi Scott,
 
-1200-1300 PST
-1300-1400 MST
-1400-1500 CST
-1500-1600 EST
-2000-2100 UTC
+There are a number of licenses that can be used for code that is released
+by the OP working groups.  For example, GPL, LGPL, MIT (Expat), and the CPL
+are choices that are available.  I think that the GPL and the LGPL will be
+ruled out because modifications to the source need to be released and the
+companies that participate may not want that restriction.
 
-Tie Line:    650-3239
-Toll Free:   1-800-497-2024
-Toll Number: 1-719-457-3821
-Passcode:     160458
+Therefore, two that are left are the Expat and the CPL license.  The
+problem with the CPL license is that the FSF considers it to be
+incompatible with the GPL.  This could limit participation by the
+community.
+
+What we are looking for is a recommendation by the FSG that code released
+by a working group should be under a certain license.  Do you recommend
+either of those two licenses or do you recommend another license?
+
+Also, what license should be used for documentation?
 
 Mark
 
