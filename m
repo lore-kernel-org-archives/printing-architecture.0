@@ -1,10 +1,9 @@
-Message-ID: <116DB56CD7DED511BC7800508B2CA537B00155@mailsrvnt02.enet.sharplabs.com>
-From: "McDonald, Ira" <imcdonald@sharplabs.com>
-Date: Tue, 12 Aug 2003 12:46:41 -0700
+Message-ID: <OFB418B8DE.38C16082-ON86256D82.004EB91F-86256D82.004ECCB5@us.ibm.com>
+From: Mark Hamzy <hamzy@us.ibm.com>
+Date: Thu, 14 Aug 2003 09:20:42 -0500
 MIME-Version: 1.0
-Content-Type: text/plain;
-	charset="iso-8859-1"
-Subject: [Printing-architecture] FW: PWG> NYC Schedule update
+Content-type: text/plain; charset=US-ASCII
+Subject: [Printing-architecture] Architecture meeting 08/14/2003
 Sender: printing-architecture-admin@freestandards.org
 Errors-To: printing-architecture-admin@freestandards.org
 List-Help: <mailto:printing-architecture-request@freestandards.org?subject=help>
@@ -17,40 +16,25 @@ List-Unsubscribe: <http://freestandards.org/mailman/listinfo/printing-architectu
 List-Archive: <http://freestandards.org/pipermail/printing-architecture/>
 To: printing-architecture@freestandards.org
 
-Hi folks,
-
-Below is the latest (today's) proposed schedule for PWG in NYC
-in October.
-
-Comments?
-
-Cheers,
-- Ira McDonald
-  High North Inc
-
-
------Original Message-----
-From: Harry Lewis [mailto:harryl@us.ibm.com]
-Sent: Tuesday, August 12, 2003 9:25 AM
-To: pwg@pwg.org
-Subject: PWG> NYC Schedule update
 
 
 
-Here is the latest schedule proposal based on feedback. (Monday and Tuesday
-were switched and more time given to the IPP topics). 
+Thursday, August 14
 
-Monday - WBMM 
-Tuesday - PSI (morning), SM (afternoon) 
-Wednesday - Plenary (morning), IFX / CR afternoon 
-Thursday - IPP extensings, JobX 
-Friday - New items - Notifications, Discovery BOF 
----------------------------------------------- 
-Harry Lewis 
-Chairman - IEEE-ISTO Printer Working Group
-http://www.pwg.org
-IBM Printing Systems 
-http://www.ibm.com/printers
-303-924-5337
----------------------------------------------- 
+1200-1300 PST
+1300-1400 MST
+1400-1500 CST
+1500-1600 EST
+2000-2100 UTC
+
+Tie Line:    650-3239
+Toll Free:   1-800-497-2024
+Toll Number: 1-719-457-3821
+Passcode:     160458
+
+Mark
+
+Take a look at the Linux Omni Printer Driver Framework at
+http://www.ibm.com/linux/ltc/projects/omni/
+
 
