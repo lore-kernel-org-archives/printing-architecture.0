@@ -1,11 +1,10 @@
-Message-ID: <OF68C62561.3139ED9C-ON86256E46.00717D6C-86256E46.00723433@us.ibm.com>
-From: Mark Hamzy <hamzy@us.ibm.com>
-Date: Thu, 26 Feb 2004 14:47:24 -0600
+Date: Mon, 01 Mar 2004 09:28:34 +0900
+From: TORATANI Yasumasa <toratani.yasumasa@canon.co.jp>
+Message-Id: <20040301092027.B400.TORATANI.YASUMASA@canon.co.jp>
 MIME-Version: 1.0
-Content-type: multipart/alternative; 
-	Boundary="0__=09BBE4D5DFE2FBFC8f9e8a93df938690918c09BBE4D5DFE2FBFC"
-Content-Disposition: inline
-Subject: [Printing-architecture] Need slides for steering committee meeting
+Content-Type: text/plain; charset="US-ASCII"
+Content-Transfer-Encoding: 7bit
+Subject: [Printing-architecture] Bi-di Plug-in API draft document
 List-Id: Printing architecture under linux
 	<printing-architecture.freestandards.org>
 List-Unsubscribe: <http://freestandards.org/mailman/listinfo/printing-architecture>,
@@ -15,49 +14,32 @@ List-Post: <mailto:printing-architecture@freestandards.org>
 List-Help: <mailto:printing-architecture-request@freestandards.org?subject=help>
 List-Subscribe: <http://freestandards.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@freestandards.org?subject=subscribe>
-To: printing-architecture@freestandards.org, printing-driver@freestandards.org, printing-spool@freestandards.org, printing-jobticket@freestandards.org
+To: printing-architecture@freestandards.org, printing-japan@freestandards.org
 
---0__=09BBE4D5DFE2FBFC8f9e8a93df938690918c09BBE4D5DFE2FBFC
-Content-type: text/plain; charset=US-ASCII
+Hi,
 
+I've uploaded the Bi-di Plug-in API draft document at:
+http://www2s.biglobe.ne.jp/~papadon/OpenPrinting/BidiPluginAPI/
 
+You can download the latest document from the above location,
+and it's a first draft version fully translated in English.
 
+I think, we need more clarifications in the near future version's
+docutment for:
 
+- The standard "idRequest" value for the bidiCtrl() function.
+  (Currently, no standard idRequest is defined.)
+- Sample bi-di implementation under CUPS.
+- Mapping some of the printer status data to IPP attributes.
+- PPD keywords related to Bi-di Plug-in modules.
+- Guidelines for saving the printer status data as a local file.
 
-We are going to present high level status and low level
-architecture/implementation detail for your group.  Will the group leaders
-please prepare a set of slides that have:
-      - high level overview
-      - technical content of implementation
-      - architectural issues/concerns of what other groups must do to
-support your code
-      - what needs to be done in the future
-For the architecture group, will everyone prepare some information for us?
+Comments are welcome.
+Regards,
 
-The deadline for this is March 4th.
-
-Mark
-
-Take a look at the Linux Omni Printer Driver Framework at
-http://www.ibm.com/linux/ltc/projects/omni/
---0__=09BBE4D5DFE2FBFC8f9e8a93df938690918c09BBE4D5DFE2FBFC
-Content-type: text/html; charset=US-ASCII
-Content-Disposition: inline
-
-<html><body>
-<p>We are going to present high level status and low level architecture/implementation detail for your group.  Will the group leaders please prepare a set of slides that have:<br>
-	- high level overview<br>
-	- technical content of implementation<br>
-	- architectural issues/concerns of what other groups must do to support your code<br>
-	- what needs to be done in the future<br>
-For the architecture group, will everyone prepare some information for us?<br>
-<br>
-The deadline for this is March 4th.<br>
-<br>
-Mark<br>
-<br>
-Take a look at the Linux Omni Printer Driver Framework at<br>
-<a href="http://www.ibm.com/linux/ltc/projects/omni/">http://www.ibm.com/linux/ltc/projects/omni/</a></body></html>
---0__=09BBE4D5DFE2FBFC8f9e8a93df938690918c09BBE4D5DFE2FBFC--
+-----------------------------------------
+TORATANI Yasumasa
+Computer Technology Development Dept. 12
+CANON INC. Shimomaruko Office, Japan
 
 
