@@ -1,6 +1,6 @@
-Message-ID: <116DB56CD7DED511BC7800508B2CA537B00319@mailsrvnt02.enet.sharplabs.com>
+Message-ID: <116DB56CD7DED511BC7800508B2CA537B0031A@mailsrvnt02.enet.sharplabs.com>
 From: "McDonald, Ira" <imcdonald@sharplabs.com>
-Date: Thu, 22 Jan 2004 16:12:11 -0800
+Date: Thu, 22 Jan 2004 16:16:47 -0800
 MIME-Version: 1.0
 Content-Type: text/plain;
 	charset="iso-8859-1"
@@ -17,28 +17,45 @@ List-Subscribe: <http://freestandards.org/mailman/listinfo/printing-architecture
 	<mailto:printing-architecture-request@freestandards.org?subject=subscribe>
 To: printing-architecture@freestandards.org
 
-Hi,
-
-[Note that the HP chair of the DMTF CIM (Core Info Model) Device 
-working group plans to present to us on Tuesday pm (24 Feb).]
-
-Cheers,
-- Ira
-
-Ira McDonald (Musician / Software Architect)
-Blue Roof Music / High North Inc
-PO Box 221  Grand Marais, MI  49839
-phone: +1-906-494-2434
-email: imcdonald@sharplabs.com
-
+ 
 -----Original Message-----
-From: a.leisz@ieee.org [mailto:a.leisz@ieee.org]
-Sent: Thursday, January 22, 2004 3:38 PM
-To: pwg-announce@pwg.org
-Cc: a.s.patel@ieee.org
-Subject: PWG-ANNOUNCE> Preliminary Details: February 23-26, 2004, San
+From: Harry Lewis [mailto:harryl@us.ibm.com]
+Sent: Thursday, January 22, 2004 6:13 PM
+To: a.leisz@ieee.org
+Cc: a.s.patel@ieee.org; pwg-announce@pwg.org
+Subject: Re: PWG-ANNOUNCE> Preliminary Details: February 23-26, 2004, San
 Jose
-Importance: High
+
+
+
+Please note some minor agenda corrections. 
+
+Monday - IFX is morning, PSI afternoon 
+Thursday - I plan to focus on PWG process as well as Notification /
+Discovery... as time permits 
+I've projected a 3pm finish on Thursday. 
+
+I've asked the ISTO about converting the registration link to a secure URL. 
+---------------------------------------------- 
+Harry Lewis 
+Chairman - IEEE-ISTO Printer Working Group
+http://www.pwg.org
+IBM Printing Systems 
+http://www.ibm.com/printers
+303-924-5337
+---------------------------------------------- 
+
+
+a.leisz@ieee.org 
+Sent by: owner-pwg-announce@pwg.org 
+01/22/2004 01:37 PM Topwg-announce@pwg.org 
+cca.s.patel@ieee.org 
+SubjectPWG-ANNOUNCE> Preliminary Details: February 23-26, 2004, San Jose
+
+
+
+
+
 
 
 Greetings All,
@@ -47,14 +64,14 @@ The arrangements have been finalized for the upcoming February 23-26, 2004
 PWG Meetings in San Jose, CA as follows:
 
 When: Monday - Thursday
-      February 23-26, 2004
+     February 23-26, 2004
 
 Where:The Doubletree San Jose
-      2050 Gateway Place
-      San Jose, CA
-      Tel: 1 (408) 453-4000
-      Fax: 1 (408) 437-2899
-      http://www.hilton.com
+     2050 Gateway Place
+     San Jose, CA
+     Tel: 1 (408) 453-4000
+     Fax: 1 (408) 437-2899
+     http://www.hilton.com
 
 Hotel Accommodations:
 *** Room block will be opened on the morning of Friday January 23, 2004***
@@ -79,15 +96,15 @@ http://www.ieee-isto.net/pwg/registration.html.
 
 The tentatively finalized February 23-36, 2004 agenda is as follows:
 Monday (February 23)
-     - Print Services Interface (morning)
-     - IFX (afternoon)
+    - Print Services Interface (morning)
+    - IFX (afternoon)
 Tuesday (February 24)
-     - Plenary (morning)
-     - DMTF CIM Semantic Model BOF (afternoon)
+    - Plenary (morning)
+    - DMTF CIM Semantic Model BOF (afternoon)
 Wednesday (February 25)
-     - WBMM (all day)
+    - WBMM (all day)
 Thursday (February 26)
-     - Eventing Best Practices Update (morning)
+    - Eventing Best Practices Update (morning)
 
 The cost for daily meeting attendance is US$55.00 per day. (Payments are
 processed on the first day of the meeting series.)
@@ -108,6 +125,4 @@ Piscataway, NJ  08854
 Phone: +1 732 465 5855; Fax: +1 732 981 9473
 Email: a.leisz@ieee.org   URL: www.ieee-isto.org
 *********************************************************
-
-
 
