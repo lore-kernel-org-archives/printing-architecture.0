@@ -1,11 +1,10 @@
-Message-ID: <116DB56CD7DED511BC7800508B2CA53735CF58@mailsrvnt02.enet.sharplabs.com>
+Message-ID: <116DB56CD7DED511BC7800508B2CA53735CF59@mailsrvnt02.enet.sharplabs.com>
 From: "McDonald, Ira" <imcdonald@sharplabs.com>
-Date: Sun, 30 Mar 2003 16:27:28 -0800
+Date: Sun, 30 Mar 2003 16:28:45 -0800
 MIME-Version: 1.0
 Content-Type: text/plain;
 	charset="iso-8859-1"
-Subject: [Printing-architecture] FW: PWG CR> Mon 31 March 12:30-2pm PST Character Repertoire telec
- on
+Subject: [Printing-architecture] FW: PWG WBMM> Mon 31 March 12-2pm EST telecon
 Sender: printing-architecture-admin@freestandards.org
 Errors-To: printing-architecture-admin@freestandards.org
 List-Help: <mailto:printing-architecture-request@freestandards.org?subject=help>
@@ -18,52 +17,45 @@ List-Unsubscribe: <http://freestandards.org/mailman/listinfo/printing-architectu
 List-Archive: <http://freestandards.org/pipermail/printing-architecture/>
 To: printing-architecture@freestandards.org
 
-
 -----Original Message-----
-From: ElliottBradshaw@oaktech.com [mailto:ElliottBradshaw@oaktech.com]
-Sent: Friday, March 28, 2003 7:47 AM
-To: cr@pwg.org
-Cc: pwg@pwg.org
-Subject: CR> Mon 31 March 3:30 EST Character Repertoire conference call
-in lieu of face-to-face
+From: Wagner,William [mailto:WWagner@NetSilicon.com]
+Sent: Friday, March 28, 2003 11:34 AM
+To: pwg-announce@pwg.org; 'Wbmm (E-mail)
+Subject: WBMM> Mon 31 March 12-2pm EST Remote Meeting 
 
 
-Harry and ISTO have set up phone bridges for next week.
+Greetings:
 
-The CR session will be Monday (3/31) at 12:30-2:00 Pacific, aka 3:30-5:00
-Eastern.
+The Web Based Monitoring and Management Working Group (WBMM) conference call
+will be on Monday, 31 March
 
-To take part:
-  Dial-In #: +1 719-457-0335
-  Participant Password: 400908#
+12:00 PM to 2:30 PM EST
 
-Our main agenda is to turn pages and comment on:
-
-  ftp://ftp.pwg.org/pub/pwg/Character-Repertoires/wd-pcr10-20030317.html
+9:00 AM to 11:30 AM  PST
 
 
-Pete Zehler has added a reference to this in the Semantic Model.  His
-comment:
+Dial-In #: +1 719-457-0335
+Participant Password: 400908# 
 
-  The latest version of the SM now includes Character Repertoire.  I have
- posted a preliminary version linked to the SM web site (or directly at
- ftp://ftp.pwg.org/pub/pwg/Semantic-Model/PWG-Semantic-Model-Latest.pdf)
- Take a look at three locations in the document and let me know if it's OK.
- The locations are Figure 5, Table 6 and the reference in section 11. (All
- sorted alphabetically) I know the reference will need to be updated as
-your
- document progresses.
+We will be reviewing the results of the definition efforts since the past
+face-to-face meeting, and will attempt to wrap up the charter, scope
+statement and partitioning of the working group effort. The discussions
+appear to have broadened the scope of the activity to go beyond issues of
+transport  to include defining a new management model for imaging devices
+and services.
+
+Documents and phone conference minutes are accessible at
+ftp://ftp.pwg.org/pub/pwg/wbmm/.  (The "white" subdirectory contains white
+papers.) The results of this week's conference call will be added to the
+WBMM subdirectory later today. Since webex is not supported, it is strongly
+suggested that perspective participants access the WBMM documents on the PWG
+web site.
+
+Please email me if there are any questions.
+
+Bill Wagner/ Chairman - NetSilicon, a Digi International Company
 
 
 
-Near the end of Monday's meeting I plan to ask the group what we need to
-address to prepare for Last Call on this.
-
-
-------------------------------------------
-Elliott Bradshaw
-Director, Software Engineering
-Oak Technology Imaging Group
-781 638-7534
-
+ 
 
