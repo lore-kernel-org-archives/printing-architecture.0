@@ -1,10 +1,10 @@
-Message-ID: <116DB56CD7DED511BC7800508B2CA537B00167@mailsrvnt02.enet.sharplabs.com>
-From: "McDonald, Ira" <imcdonald@sharplabs.com>
-Date: Tue, 19 Aug 2003 10:06:30 -0700
+In-Reply-To: <116DB56CD7DED511BC7800508B2CA537B0014D@mailsrvnt02.enet.sharplabs.com>
 MIME-Version: 1.0
-Content-Type: text/plain;
-	charset="iso-8859-1"
-Subject: [Printing-architecture] FSG/OP Requirements use model diagrams
+Message-ID: <OFB6C50771.D13ACFBE-ON87256D7F.006B7185-87256D7F.006BFBA9@us.ibm.com>
+From: Harry Lewis <harryl@us.ibm.com>
+Date: Mon, 11 Aug 2003 13:40:59 -0600
+Content-Type: multipart/alternative; boundary="=_alternative 006BFBA687256D7F_="
+Subject: [Printing-architecture] Re: FW: PWG> Tentative NYC agenda
 Sender: printing-architecture-admin@freestandards.org
 Errors-To: printing-architecture-admin@freestandards.org
 List-Help: <mailto:printing-architecture-request@freestandards.org?subject=help>
@@ -15,104 +15,190 @@ List-Id: <printing-architecture.freestandards.org>
 List-Unsubscribe: <http://freestandards.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@freestandards.org?subject=unsubscribe>
 List-Archive: <http://freestandards.org/pipermail/printing-architecture/>
-To: printing-architecture@freestandards.org
+To: "McDonald, Ira" <imcdonald@sharplabs.com>
+Cc: printing-architecture@freestandards.org, "'pwg@pwg.org'" <pwg@pwg.org>
+
+This is a multipart message in MIME format.
+--=_alternative 006BFBA687256D7F_=
+Content-Type: text/plain; charset="US-ASCII"
+
+Sorry, I forgot we'd discussed this in Portland. Ira is correct. In 
+Portland we proposed the following... with Friday open for FSG or UPnP. 
+I'd certainly like to see us meet with FSG again in NYC, if possible. If 
+Friday remains open, I may recommend we split IPP, Jobx, Doc object out 
+for Thursday and have a Notifications/Discovery BOF Friday.
+
+Monday - PSI (morning), SM (afternoon)
+Tuesday - WBMM
+Wednesday - Plenary (morning), IFX / CR afternoon
+Thursday - New Activities (IPP, Notifications, Discovery)
+Friday - Open
+---------------------------------------------- 
+Harry Lewis 
+Chairman - IEEE-ISTO Printer Working Group
+http://www.pwg.org
+IBM Printing Systems 
+http://www.ibm.com/printers
+303-924-5337
+---------------------------------------------- 
+
+
+
+"McDonald, Ira" <imcdonald@sharplabs.com> 
+Sent by: owner-pwg@pwg.org
+08/11/2003 01:01 PM
+
+To
+printing-architecture@freestandards.org, "'pwg@pwg.org'" <pwg@pwg.org>
+cc
+
+Subject
+FW: PWG> Tentative NYC agenda
+
+
+
+
+
 
 Hi,
 
-Alan Berkema (HP, chair of IEEE/ISTO PWG Print Services Interfaces, PSI)
-updated three of the five PSI use model diagrams in the style I suggested
-in the simple ASCII-art diagram I sent below.  I stored Alan's (original)
-document on the PWG FTP server at:
+A comment - all the topic days are completely different from the ones
+in the minutes of the Portland meeting that I just sent an hour ago to
+the Free Standards Group - sigh!
 
-  ftp://ftp.pwg.org/pub/pwg/ps/psi-reqs-figs-2.pdf
-
-CHANGES we made at today's PSI telecon to use model 1 are:
-
-(1) Extended the blue Personal Area Network (PAN) ellipse to include
-    Target Printer within the Bluetooth PAN domain (see use model 2).
-(2) Changed 'Public WAN' to simply 'Internet'
-(3) Put the 'PAN' _inside_ the blue ellipse (like 'Intranet')
-(4) Added 'Intranet' _inside_ the Content Provider's black ellipse'
-
-On reflection, I personally prefer the generic term 'Piconet' to
-'PAN' for the Mobile's administrative domain.
-
-Glen - I'll try to get MS PowerPoint source (or whatever) for these
-diagrams to you ASAP - I'll write up my Mobile print-by-reference
-use case for FSG/OP with a simple ASCII-art equivalent diagram.
+OK, are FSG folks interested in a joint meeting with PWG in October?
 
 Cheers,
 - Ira McDonald
   High North Inc
 
-
 -----Original Message-----
-From: BERKEMA,ALAN C (HP-Roseville,ex1) [mailto:alan.berkema@hp.com]
-Sent: Monday, August 18, 2003 7:37 PM
-To: 'McDonald, Ira'
-Subject: RE: PS> Enhance version of Use Model 1 diagram
+From: Harry Lewis [mailto:harryl@us.ibm.com]
+Sent: Monday, August 11, 2003 9:15 AM
+To: pwg@pwg.org
+Cc: wwagner@digi.com; Lee.Farrell@cda.canon.com; PZehler@crt.xerox.com;
+alan.berkema@hp.com; ElliottBradshaw@oaktech.com; gsonger@peerless.com;
+shivaun_albright@hp.com
+Subject: PWG> Tentative NYC agenda
 
 
-Ira,
 
-I only got through Use Model 3.
+Please comment on the proposed NYC agenda week of October 6-10. 
 
-Talk to you tomorrow.
+Tuesday - WBMM 
+Wednesday  - Plenary, IFX, Char Rep 
+Thur - Semantic Model 
+Fri - PSI 
 
-regards,
-Alan
+---------------------------------------------- 
+Harry Lewis 
+Chairman - IEEE-ISTO Printer Working Group
+http://www.pwg.org
+IBM Printing Systems 
+http://www.ibm.com/printers
+303-924-5337
+---------------------------------------------- 
 
 
------Original Message-----
-From: McDonald, Ira [mailto:imcdonald@sharplabs.com]
-Sent: Wednesday, August 06, 2003 11:41 AM
-To: 'ps@pwg.org'
-Subject: PS> Enhance version of Use Model 1 diagram
+--=_alternative 006BFBA687256D7F_=
+Content-Type: text/html; charset="US-ASCII"
 
 
-Hi Alan and Dave,
-
-Below is a simple ASCII-art enhancement of Use Model 1 diagram,
-showing the actual network technologies and connectivity, so that
-we can address concrete security threats.
-
-Comments?
-
-Cheers,
-- Ira McDonald
-  High North Inc
- 
---------------------------
-
-                         Use Model 1
--------------                                   -------------
-|           |                                   !           |
-|   Print   |<---------------(5)----------------!  Content  |
-|  Service  |                                   !  Provider |
-|   (PS)    |                                   !           |
--------------                                   -------------
-E ^   ^   |   ADSL Modem             T1 Circuit       |
-n |   |   |      ISP      ( ------ )    ISP           |
-e |   |   |              (          )                 |
-t(3) (4) (6)            (  INTERNET  )               (0)
-L |   |   |              (          )                 |
-A |   |   |               ( ------ ) GSM Cellular     |
-N v   v   v                          Wireless ISP     v
--------------                                   -------------
-|           |                                   !           |
-|  Target   |<---------------(1)----------------!  Mobile   |
-|  Device   |           Bluetooth PAN           !  Device   |
-| (Printer) |<---------------(2)----------------!           |
--------------                                   -------------
- (PSI Client)
-
-Data Flows:
-(0) Browse - Public Internet browse for content URL
-(1) Discovery - Bluetooth discovery
-(2) Reference - Bluetooth print-by-reference of content URL
-(3) C2S - Ethernet LAN PSI print job
-(4) T2S - Ethernet LAN PSI print job
-(5) Content - Public Internet fetch of content URL
-(6) Formatted Data - Ethernet LAN PSI print job
-
+<br><font size=2 face="sans-serif">Sorry, I forgot we'd discussed this
+in Portland. Ira is correct. In Portland we proposed the following... with
+Friday open for FSG or UPnP. I'd certainly like to see us meet with FSG
+again in NYC, if possible. If Friday remains open, I may recommend we split
+IPP, Jobx, Doc object out for Thursday and have a Notifications/Discovery
+BOF Friday.</font>
+<br>
+<br><font size=2 face="sans-serif">Monday - PSI (morning), SM (afternoon)</font>
+<br><font size=2 face="sans-serif">Tuesday - WBMM</font>
+<br><font size=2 face="sans-serif">Wednesday - Plenary (morning), IFX /
+CR afternoon</font>
+<br><font size=2 face="sans-serif">Thursday - New Activities (IPP, Notifications,
+Discovery)</font>
+<br><font size=2 face="sans-serif">Friday - Open</font>
+<br><font size=2 face="sans-serif">----------------------------------------------
+<br>
+Harry Lewis <br>
+Chairman - IEEE-ISTO Printer Working Group<br>
+http://www.pwg.org<br>
+IBM Printing Systems <br>
+http://www.ibm.com/printers<br>
+303-924-5337<br>
+---------------------------------------------- </font>
+<br>
+<br>
+<br>
+<table width=100%>
+<tr valign=top>
+<td width=40%><font size=1 face="sans-serif"><b>&quot;McDonald, Ira&quot;
+&lt;imcdonald@sharplabs.com&gt;</b> </font>
+<br><font size=1 face="sans-serif">Sent by: owner-pwg@pwg.org</font>
+<p><font size=1 face="sans-serif">08/11/2003 01:01 PM</font>
+<td width=59%>
+<table width=100%>
+<tr>
+<td>
+<div align=right><font size=1 face="sans-serif">To</font></div>
+<td valign=top><font size=1 face="sans-serif">printing-architecture@freestandards.org,
+&quot;'pwg@pwg.org'&quot; &lt;pwg@pwg.org&gt;</font>
+<tr>
+<td>
+<div align=right><font size=1 face="sans-serif">cc</font></div>
+<td valign=top>
+<tr>
+<td>
+<div align=right><font size=1 face="sans-serif">Subject</font></div>
+<td valign=top><font size=1 face="sans-serif">FW: PWG&gt; Tentative NYC
+agenda</font></table>
+<br>
+<table>
+<tr valign=top>
+<td>
+<td></table>
+<br></table>
+<br>
+<br>
+<br><font size=2><tt>Hi,<br>
+<br>
+A comment - all the topic days are completely different from the ones<br>
+in the minutes of the Portland meeting that I just sent an hour ago to<br>
+the Free Standards Group - sigh!<br>
+<br>
+OK, are FSG folks interested in a joint meeting with PWG in October?<br>
+<br>
+Cheers,<br>
+- Ira McDonald<br>
+ &nbsp;High North Inc<br>
+<br>
+-----Original Message-----<br>
+From: Harry Lewis [mailto:harryl@us.ibm.com]<br>
+Sent: Monday, August 11, 2003 9:15 AM<br>
+To: pwg@pwg.org<br>
+Cc: wwagner@digi.com; Lee.Farrell@cda.canon.com; PZehler@crt.xerox.com;<br>
+alan.berkema@hp.com; ElliottBradshaw@oaktech.com; gsonger@peerless.com;<br>
+shivaun_albright@hp.com<br>
+Subject: PWG&gt; Tentative NYC agenda<br>
+<br>
+<br>
+<br>
+Please comment on the proposed NYC agenda week of October 6-10. <br>
+<br>
+Tuesday - WBMM <br>
+Wednesday &nbsp;- Plenary, IFX, Char Rep <br>
+Thur - Semantic Model <br>
+Fri - PSI <br>
+<br>
+---------------------------------------------- <br>
+Harry Lewis <br>
+Chairman - IEEE-ISTO Printer Working Group<br>
+http://www.pwg.org<br>
+IBM Printing Systems <br>
+http://www.ibm.com/printers<br>
+303-924-5337<br>
+---------------------------------------------- <br>
+</tt></font>
+<br>
+--=_alternative 006BFBA687256D7F_=--
 
