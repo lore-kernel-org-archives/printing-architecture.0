@@ -1,10 +1,11 @@
-Subject: Re: [Printing-architecture] Architecture meeting *UNABLE TO HOST* agenda
- 20030626. . .
-Message-ID: <OFA8626CF2.6FB0EEEF-ON87256D51.006971CD@us.ibm.com>
-From: Claudia Alimpich <alimpich@us.ibm.com>
-Date: Thu, 26 Jun 2003 13:18:52 -0600
+Message-ID: <116DB56CD7DED511BC7800508B2CA53735D07D@mailsrvnt02.enet.sharplabs.com>
+From: "McDonald, Ira" <imcdonald@sharplabs.com>
+Subject: RE: [Printing-architecture] Architecture meeting *UNABLE TO HOST*
+	 agenda 20030626. . .
+Date: Thu, 26 Jun 2003 12:28:44 -0700
 MIME-Version: 1.0
-Content-type: text/plain; charset=US-ASCII
+Content-Type: text/plain;
+	charset="iso-8859-1"
 Sender: printing-architecture-admin@freestandards.org
 Errors-To: printing-architecture-admin@freestandards.org
 List-Help: <mailto:printing-architecture-request@freestandards.org?subject=help>
@@ -15,7 +16,26 @@ List-Id: <printing-architecture.freestandards.org>
 List-Unsubscribe: <http://freestandards.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@freestandards.org?subject=unsubscribe>
 List-Archive: <http://freestandards.org/pipermail/printing-architecture/>
-To: printing-architecture@freestandards.org, Charles Hemstreet <charles_at_hp@hotmail.com>
+To: 'Claudia Alimpich' <alimpich@us.ibm.com>, printing-architecture@freestandards.org, Charles Hemstreet <charles_at_hp@hotmail.com>
+
+Hi,
+
+Norm's file from last week is at:
+
+ftp://ftp.pwg.org/pub/pwg/fsg/architecture/FSG-10000ft.pdf
+
+Cheers,
+- Ira McDonald
+
+
+-----Original Message-----
+From: Claudia Alimpich [mailto:alimpich@us.ibm.com]
+Sent: Thursday, June 26, 2003 3:19 PM
+To: printing-architecture@freestandards.org; Charles Hemstreet
+Subject: Re: [Printing-architecture] Architecture meeting *UNABLE TO
+HOST* agenda 20030626. . .
+
+
 
 
 
@@ -51,7 +71,8 @@ The proposed agenda is the continuation of the USE-CASES.
 
 I've included the USE-CASES we came up with at the PWG/FSG meeting.
 
----------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------
+-----------------
 
 
 16Jan2003
@@ -128,4 +149,9 @@ Printing-architecture@freestandards.org
  http://freestandards.org/mailman/listinfo/printing-architecture
 
 
+
+_______________________________________________
+Printing-architecture mailing list
+Printing-architecture@freestandards.org
+http://freestandards.org/mailman/listinfo/printing-architecture
 
