@@ -1,14 +1,11 @@
-Message-ID: <1be90c0a05031601085693acdd@mail.gmail.com>
-Date: Wed, 16 Mar 2005 14:38:28 +0530
-From: Prince P <prince1a@gmail.com>
-In-Reply-To: <CFEE79A465B35C4385389BA5866BEDF00C7AAB@mailsrvnt02.enet.sharplabs.com>
-Mime-Version: 1.0
-Content-Type: text/plain; charset=ISO-8859-1
-Content-Transfer-Encoding: 7bit
-References: <CFEE79A465B35C4385389BA5866BEDF00C7AAB@mailsrvnt02.enet.sharplabs.com>
-Subject: [Printing-architecture] Re: How to convert xhtml-print to pri nter
+Message-ID: <CFEE79A465B35C4385389BA5866BEDF00C7AB6@mailsrvnt02.enet.sharplabs.com>
+From: "McDonald, Ira" <imcdonald@sharplabs.com>
+Date: Wed, 16 Mar 2005 08:26:17 -0800
+MIME-Version: 1.0
+Content-Type: text/plain;
+	charset="ISO-8859-1"
+Subject: [Printing-architecture] RE: How to convert xhtml-print to pri nter
 	specific data
-Reply-To: Prince P <prince1a@gmail.com>
 List-Id: Printing architecture under linux
 	<printing-architecture.mail.freestandards.org>
 List-Unsubscribe: <http://mail.freestandards.org/mailman/listinfo/printing-architecture>,
@@ -18,8 +15,33 @@ List-Post: <mailto:printing-architecture@mail.freestandards.org>
 List-Help: <mailto:printing-architecture-request@mail.freestandards.org?subject=help>
 List-Subscribe: <http://mail.freestandards.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@mail.freestandards.org?subject=subscribe>
-To: "McDonald, Ira" <imcdonald@sharplabs.com>
+To: 'Prince P' <prince1a@gmail.com>, "McDonald, Ira" <imcdonald@sharplabs.com>
 Cc: printing-architecture@base3.freestandards.org
+
+Hi,
+
+I'd suggest you write directly to the W3C XHTML-Print editor
+Jim Bigelow (jim.bigelow@hp.com).
+
+I wasn't personally active in either the IEEE/ISTO PWG or
+later W3C working groups for this standard.
+
+Cheers,
+- Ira
+
+Ira McDonald (Musician / Software Architect)
+Blue Roof Music / High North Inc
+PO Box 221  Grand Marais, MI  49839
+phone: +1-906-494-2434
+email: imcdonald@sharplabs.com
+
+-----Original Message-----
+From: Prince P [mailto:prince1a@gmail.com]
+Sent: Wednesday, March 16, 2005 4:08 AM
+To: McDonald, Ira
+Cc: printing-architecture@base3.freestandards.org
+Subject: Re: How to convert xhtml-print to pri nter specific data
+
 
 Hi Ira,
         Thank you very much for the information and the help extended
@@ -145,7 +167,8 @@ On Mon, 14 Mar 2005 13:21:58 -0800, "McDonald, Ira"
 > > > 
 > > > -----Original Message-----
 > > > From: printing-architecture-bounces@base3.freestandards.org
-> > > [mailto:printing-architecture-bounces@base3.freestandards.org]On Behalf
+> > > [mailto:printing-architecture-bounces@base3.freestandards.org]On
+Behalf
 > > > Of Prince P
 > > > Sent: Wednesday, March 09, 2005 12:05 AM
 > > > To: printing-architecture@base3.freestandards.org
