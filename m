@@ -1,9 +1,10 @@
-Message-ID: <OF27AFA33A.01E32C4E-ON86256CF5.0081F563-86256CFA.00778122@us.ibm.com>
-From: Mark Hamzy <hamzy@us.ibm.com>
-Date: Mon, 31 Mar 2003 15:45:18 -0600
+Message-ID: <116DB56CD7DED511BC7800508B2CA53735CF64@mailsrvnt02.enet.sharplabs.com>
+From: "McDonald, Ira" <imcdonald@sharplabs.com>
+Date: Tue, 1 Apr 2003 07:59:40 -0800 
 MIME-Version: 1.0
-Content-type: text/plain; charset=US-ASCII
-Subject: [Printing-architecture] FSG Printer Working Group conference call 04/02/03
+Content-Type: text/plain;
+	charset="iso-8859-1"
+Subject: [Printing-architecture] FW: PWG SM> [WebEx] Thur 3 April 9am PST - Semantic Model Telecon
 Sender: printing-architecture-admin@freestandards.org
 Errors-To: printing-architecture-admin@freestandards.org
 List-Help: <mailto:printing-architecture-request@freestandards.org?subject=help>
@@ -14,94 +15,98 @@ List-Id: <printing-architecture.freestandards.org>
 List-Unsubscribe: <http://freestandards.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@freestandards.org?subject=unsubscribe>
 List-Archive: <http://freestandards.org/pipermail/printing-architecture/>
-To: printing-driver@freestandards.org
-Cc: printing-architecture@freestandards.org
+To: printing-architecture@freestandards.org
 
 
+-----Original Message-----
+From: TAYLOR,BOB (HP-Vancouver,ex1) [mailto:bobt@hp.com]
+Sent: Monday, March 31, 2003 12:13 PM
+To: Zehler, Peter; PWG Semantic Model WG (E-mail)
+Cc: PWG Announce (E-mail)
+Subject: PWG-ANNOUNCE> RE: SM> Semantic Model Teleconference 4/3
 
 
-Wednesday, April 2
+Hi all,
 
-GMT 19:00
-EST 14:00
-CST 13:00
-MST 12:00
-PST 11:00
+Here is the webex info for the Thursday SM teleconference:
 
-Tie Line:    650-3239
-Toll Free:   1-800-497-2024
-Toll Number: 1-719-457-3821
-Passcode:     160458
+https://hp.webex.com/join/
+Name: Semantic Model
+Date: 4/3/2003
+Time: 9:00AM, (GMT -08:00) Pacific Time, USA & Canada
+Meeting Number: 29039952
+Meeting Password: pwg_sm
 
-Topics
+thanks,
 
-Talk about API calls
+bt
 
-initialize session ( "client version" )
-<- "server version"
+> -----Original Message-----
+> From: Zehler, Peter [mailto:PZehler@crt.xerox.com]
+> Sent: Monday, March 31, 2003 6:26 AM
+> To: PWG Semantic Model WG (E-mail)
+> Cc: PWG Announce (E-mail)
+> Subject: SM> Semantic Model Teleconference 4/3
+> 
+> 
+> All,
+> 
+> The Semantic Model group will be holding a teleconference on
+> Thursday April 3.  The primary focus of the teleconference is 
+> to complete the review of the Document Object Specification.  
+> The current plan is to hold the teleconference from 12:00 to 
+> 3:00 eastern (9:00 to 12:00 Pacific).  The first hour we will 
+> discuss the latest schema (version 0.91) which will be posted 
+> some time this week.  The agenda and teleconference 
+> information is included below.  
+> 
+> Will anyone be able to host a Webex for this teleconference?
+> ___________________________________________________
+> Agenda:
+> 12:00 to 12:10 EST (9:00 to 9:10 PST):
+>    Intros & adjust agenda
+> 12:10 to 1:00 EST (9:10 to 10:00 PST) :
+>    Schema review
+> 	Overview of changes
+> 	Discuss any issues
+> 	Schema structure and tool issues
+> 	Schema reuse discussion
+> 	Next steps
+> 1:00 to 1:10 EST (10:00 to 10:10 PST):
+>     Intros & adjust agenda for Document Object
+> 1:10 to 3:00 EST (10:10 to 12:00 PST):
+>     Document Object review
+> 	Priority issue discussion
+> 	Page turn review
+> 	Next steps
+> ___________________________________________________
+> Dial in info:
+> Dial-In #: +1 719-457-0335
+> Participant Password: 400908# 
+> ___________________________________________________
+> Webex info:
+> TBD
+> ___________________________________________________
+> Document Links:
+> Document Object Specification:
+>    ftp://ftp.pwg.org/pub/pwg/ipp/new_DOC/wd-ippdoc10-20030324.pdf.zip
+> PWG Semantic Model Schema v0.91 (To be posted this week):
+>    http://www.pwg.org/sm/index.html
+> PWG Semantic Model v0.27 (To be posted later today): 
+ftp://ftp.pwg.org/pub/pwg/Semantic-Model/wd-sm010-20030331.pdf
+___________________________________________________
 
-close session
 
-is command supported ( cmd )
-<- success/failure
-
-set translatable language ( "abbreviationX" )
-<- success/failure
-
-get translatable language
-<- "abbreviationX"
-
-query translatable languages
-<- "abbreviation1 abbreviation2 ... abbreviationN"
-
-enumerate devices
-<- "display_device_string1 load_hints1 ... display_device_stringN load_hintsN"
-
-select device ( "load_hintsX" )
-<- success/failure
-
-is device valid ( "load_hintsX" )
-<- success/failure
-
-get PDL info
-<- "PDL info"
-
-query current job properties
-<- "key1=value1 key2=value2 ... keyN=valueN"
-
-list job property keys
-<- "key1 key2 ... keyN"
-
-get job property ( "key" )
-<- "value"
-
-get job property type ( "key" )
-<- string/integer/boolean/...
-
-translate job property key/value ( "key=value" )
-<- "display_key=display_value"
-
-begin job
-<- success/failure
-
-start page
-<- success/failure
-
-end page
-<- success/failure
-
-end job
-<- success/failure
-
-abort page
-<- success/failure
-
-abort job
-<- success/failure
-
-Mark
-
-Take a look at the Linux Omni Printer Driver Framework at
-http://www.ibm.com/linux/ltc/projects/omni/
+				Peter Zehler
+				XEROX
+				Xerox Architecture Center
+				Email: PZehler@crt.xerox.com
+				Voice:    (585) 265-8755
+				FAX:      (585) 265-8871 
+				US Mail: Peter Zehler
+				        Xerox Corp.
+				        800 Phillips Rd.
+				        M/S 128-30E
+				        Webster NY, 14580-9701
 
 
