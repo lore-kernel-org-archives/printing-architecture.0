@@ -1,10 +1,10 @@
-Message-ID: <116DB56CD7DED511BC7800508B2CA537B0017C@mailsrvnt02.enet.sharplabs.com>
-From: "McDonald, Ira" <imcdonald@sharplabs.com>
-Date: Mon, 25 Aug 2003 16:15:32 -0700
+Message-ID: <OF755C830C.0D227EC8-ON87256D8E.00702FA6@us.ibm.com>
+From: Claudia Alimpich <alimpich@us.ibm.com>
+Date: Tue, 26 Aug 2003 14:42:15 -0600
 MIME-Version: 1.0
-Content-Type: text/plain;
-	charset="iso-8859-1"
-Subject: [Printing-architecture] More complete use model diagrams from PWG PSI
+Content-type: text/plain; charset=US-ASCII
+Subject: [Printing-architecture] Schedule Arch WG conf call for Scott McNeil, FSG Executive Director, to
+ attend
 Sender: printing-architecture-admin@freestandards.org
 Errors-To: printing-architecture-admin@freestandards.org
 List-Help: <mailto:printing-architecture-request@freestandards.org?subject=help>
@@ -17,67 +17,67 @@ List-Unsubscribe: <http://freestandards.org/mailman/listinfo/printing-architectu
 List-Archive: <http://freestandards.org/pipermail/printing-architecture/>
 To: printing-architecture@freestandards.org
 
-Hi folks,
-
-Stored on the PWG FTP server at:
-
-ftp://ftp.pwg.org/pub/ps/psi-reqs-figs-2-20030825.pdf
-
-Please look at these diagrams.  We'll be reviewing them tomorrow
-morning (Tuesday) at the weekly PSI telecon.  They include the
-various networks as dotted-line ellipses.
-
-Cheers,
-- Ira McDonald
-  High North Inc
-
-
------Original Message-----
-From: BERKEMA,ALAN C (HP-Roseville,ex1) [mailto:alan.berkema@hp.com]
-Sent: Monday, August 25, 2003 1:15 PM
-To: 'a PSI pwg.org'
-Subject: PS> [PSI] Diagrams for Next Call 08/26/03
 
 
 
-Teleconference details:
+I spoke with Scott McNeil, FSG Executive Director, yesterday about
+contributing the IBM implementation of the JTAPI C code to FSG and what FSG
+expects from a contribution. He and I also talked about the FSG
+OpenPrinting working group and what the FSG Board expects from the
+OpenPrinting working group. I asked if he would be willing to call into one
+of our Thursday Architecture conference calls and he thought that it would
+be a good idea. Here is a list of topics that he came up with (I added
+topic 7). Are there other topics that he should include in the agenda?
 
-NEXT: Tuesday August 26 2003 (USA)
+Scott cannot attend this Thursday 8/28, but he is available next Thursday
+9/4. It would be nice if everyone in our working group can attend. Will
+everyone be on the call Thursday 9/4. I have a slight recollection that
+Glen will be out of town next week, is that true? Let me know and I will
+see if we can reschedule with Scott.
 
-NO Call 9/2/2003 (Day after Labor day)
+Claudia
 
-Time: 8:00AM (US PDT)
+-------------------------------------------------------------
+Thank you for enlightening me on the progress of OpenPrinting
+yesterday.
 
-Number: 866-639-4738
-Participant PIN: 7855605
+I look forward to attending the September 4, 3:00pm EDT OpenPrinting
+teleconference. Please let me know the phone and passcode. Also, I
+will be bringing in Doug Beattie on this call. Doug is responsible for
+our Government Grant/University Outreach program. More information on
+Doug can be found here,
+http://www.freestandards.org/modules.php?name=htmlmodule&url=themes/FreeStandards/pages/staff.txt#beattie
 
-If Trouble with Above Try:
-Toll Access Number: 574-935-6700
-Participant PIN: 7855605
 
-Agenda:
-1) Requirements Doc
-2) Spec Review
-3) Succinct List of Actions needed to go to next Last Call
+I am planning to discuss the following topics:
 
------------------
-WebEx info:
--------------------------
-FIRST TIME USERS
--------------------------
-For fully interactive meetings, including the ability
-to present your documents and applications, a one-time
-setup takes less than 10 minutes. Click this URL to set up now:
-http://hp.webex.com/
-Then click New User.
--------------------------
-MEETING SUMMARY
--------------------------
-Name: PSI
-Time: 9:00AM, (GMT -08:00) Pacific Time, USA & Canada
-Meeting number: 743057814  
-Meeting password: newpsi-1 
-Host: Alan Berkema
-1(916)7855605
+ 1. Life of a typical open source project: Feast; Famine;
+    Traction; Success!
+
+ 2. Request status of OpenPrinting
+
+ 3. Open source community acceptance of OpenPrinting's efforts
+
+ 4. Request plans of OpenPrinting
+
+    - per task? roadmap? timeline? etc.
+
+ 5. Discuss leadership issue
+
+ 6. Request list of resources needed by OpenPrinting in 2004
+
+ 7. Contributing code to FSG/Open Source
+
+ 8. other?
+
+Please advise if this agenda is ok.
+
+Scott
+--
+Scott McNeil
+Executive Director
+Free Standards Group
+646.598.6224 voice
+ 510.847.0009 cell
 
 
