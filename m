@@ -1,9 +1,9 @@
-From: "Charles Hemstreet" <charles_at_hp@hotmail.com>
-Date: Thu, 12 Jun 2003 13:09:02 -0700
-Mime-Version: 1.0
-Content-Type: text/plain; format=flowed
-Message-ID: <SEA2-F330pepP1znXgf0002fa79@hotmail.com>
-Subject: [Printing-architecture] Architecture meeting notes 20030612...
+Message-ID: <OF9EAB140B.3E7672D0-ON87256D43.006E2505@us.ibm.com>
+From: Claudia Alimpich <alimpich@us.ibm.com>
+Date: Thu, 12 Jun 2003 14:27:06 -0600
+MIME-Version: 1.0
+Content-type: text/plain; charset=US-ASCII
+Subject: [Printing-architecture] Updated FSG schedule for Portland PWG meeting
 Sender: printing-architecture-admin@freestandards.org
 Errors-To: printing-architecture-admin@freestandards.org
 List-Help: <mailto:printing-architecture-request@freestandards.org?subject=help>
@@ -14,147 +14,86 @@ List-Id: <printing-architecture.freestandards.org>
 List-Unsubscribe: <http://freestandards.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@freestandards.org?subject=unsubscribe>
 List-Archive: <http://freestandards.org/pipermail/printing-architecture/>
-To: printing-architecture@freestandards.org
+To: a.s.patel@ieee.org
+Cc: Harry Lewis <harryl@us.ibm.com>, printing-architecture@freestandards.org
 
-Architecture meeting notes 20030612.
 
-New meeting time for our architecture teleconference:
 
-Every Thursday
-1200-1300 PST
-1300-1400 MST
-1400-1500 CST
-1500-1600 EST
-2000-2100 UTC
 
-There is a new call-in number:
+Ami,
+Here is an update to the agenda for the FSG meeting on Tuesday 6/17 in
+Portland. Is it possible to update the PWG site with this information? We
+had to add another topic so we squeezed some time out of the other topics
+and did some rearranging to accomodate individual travel schedules. We also
+added some items for Wednesday that will occur in parallel with the PWG
+spec work that is occurring in the morning and the PWG IFX in the
+afternoon. Is it possible to get a smaller room for Wednesday that is
+separate from the main room?
 
-          - *Toll Free Access Number:
-            866-639-4758 (toll-free)
-            574-935-6716 (toll)
+Also, great news about the phone. Thanks! What phone number should everyone
+call into?
 
-          - Participant PIN:
-            2124490
-
--------------------------
-In attendance:
-
-Norm Jacobs
-Ira McDonald
-Charles Hemstreet
-Glen Petrie
+Thank you.
 Claudia Alimpich
-Mark Hamzy
-Till Kamppeter
 
-
-Agenda for 06/12/03:
-
-1)	FSG/OP schedule
-a.)	There will be a phone, and there is a number.  Watch the PWG site.  Ira 
-will take a look for it.
-b.)	Wednesday evening will be the extended plenary for PWG/FSG.
-c.)	What alignment are we going to have with the PWG?  Are we going to meet 
-every one, or once every two?  If we continue, will we get more time?
-d.)	Talk of what to do on Wednesday?  Architecture?  Driver?
-e.)	Schedule was reviewed and modified
-2)	review of new architecture diagrams (Did not happen in this meeting)
-
-These files are stored on the PWG anonymous FTP server at:
-
-ftp://ftp.pwg.org/pub/pwg/fsg/architecture/arch1-6-12-03.jpg
-
-ftp://ftp.pwg.org/pub/pwg/fsg/architecture/arch2-6-12-03.jpg
-
-
-New Tuesday FSG/OP schedule proposal
+--------------------------------------------------
+Tuesday 6/17:
+------------
 
 8:30-9:00 AM - Coffee (30 minutes)
 
 9:00-10:00 AM - Architecture Overview (60 minutes)
-(10 minutes to discuss+5 minutes for questions/each topic at a high level)
-Presenters: Charles Hemstreet, Claudia Alimpich, Mark Hamzy
+(10 minutes per topic to discuss+5 minutes for questions/each topic at a
+      high level)
+Presenters: Charles Hemstreet, Claudia Alimpich, Mark Hamzy, Norm Jacobs
       a. High level architecture diagram
       b. Job Ticket Status
       c. Driver status
       d. PAPI status
 
-10:00 � 10:15 Break
+10:00-10:15 Break (15 minutes)
 
-10:15 � 12:00  Printer Driver Renderer work group (105 minutes)
+10:15-12:00 AM - Printer Driver Renderer work group (105 minutes)
    Chair: Mark Hamzy/Glen Petrie
-
-12:00 � 1:00 Lunch
-
-1:00 � 2:00 Vector Driver and Bidi
-
-2:00 � 2:45 PAPI work group (Part 1) (45 minutes)
-   Chair: Norm Jacobs/Michael Sweet
-
-2:45 � 3:00 break
-
-3:00 � 3:45 PAPI work group (Part 2) (45 minutes)
-   Chair: Norm Jacobs/Michael Sweet
-
-3:45 � 5:15 JTAPI work group (105 minutes)
-   Chair: Claudia Alimpich
-
-5:15 � 7:00 Dinner
-
-7:00 � 9:00 Architecture work group (105 minutes)
-   Chair: Charles Hemstreet
-
-New Wednesday FSG/OP overflow schedule proposal
-
-Wednesday (room TBD) Charles to secure a project
-1000 � 1100 Foomatic (Till Kamppeter)
-
-1100 � 1200 Architecture overflow
-
-1200 � 1300 lunch
-
-1300 � 1700 Capabilities, Driver, and other overflow from 6/17
-
-1700 � 2000 Dinner
-
-2000 � 2200 Plenary FSG/PWG
-
-
-
-OLD FSG/OP schedule for June 17th
-
-8:30-9:00 AM - Coffee (30 minutes)
-
-9:00-10:00 AM - Architecture Overview (60 minutes)
-(10 minutes to discuss+5 minutes for questions/each topic at a high level)
-Presenters: Charles Hemstreet, Claudia Alimpich, Mark Hamzy
-      a. High level architecture diagram
-      b. Job Ticket Status
-      c. Driver status
-      d. PAPI status
-
-10:00-10:15 Break
-
-10:15-12:00 PM - Architecture work group (105 minutes)
-   Chair: Charles Hemstreet
 
 12:00-1:00 PM - Lunch (60 minutes)
 
-1:00-2:45 PM - JTAPI work group (105 minutes)
-   Chair: Claudia Alimpich
+1:00-2:00 Vector Driver and Bidi (60 minutes)
+   Chair: Yasumasa Toratani/Osamu Mihara
+
+2:00-2:45 PM - PAPI work group part 1 (45 minutes)
+   Chair: Norm Jacobs/Michael Sweet
 
 2:45-3:00 PM Break (15 minutes)
 
-3:00-5:00 PM - PAPI work group (120 minutes)
-   Chair: Norm Jacobs/Michael Sweet?
+3:00-3:45 PM - PAPI work group part 2 (45 minutes)
+   Chair: Norm Jacobs/Michael Sweet
 
-5:00-7:00 PM - Dinner (120 minutes)
+Stretch break - 5 minutes
 
-7:00-9:00 PM - Printer Driver Renderer work group (120 minutes)
-   Chair: Mark Hamzy/Glen Petrie
+3:50-5:15 PM - JTAPI work group (85 minutes)
+   Chair: Claudia Alimpich
 
-_________________________________________________________________
-The new MSN 8: advanced junk mail protection and 2 months FREE*  
-http://join.msn.com/?page=features/junkmail
+5:15-7:00 PM - Dinner (105 minutes)
+
+07:00-9:00 PM - Architecture work group (120 minutes)
+   Chair: Charles Hemstreet
+
+
+Wednesday 6/18:
+--------------
+
+10:00 - 11:00 AM - Foomatic (60 minutes)
+   Chair: Till Kamppeter
+
+11:00 - 12:00 AM - Architecture work group (overflow)
+   Chair: Charles Hemstreet
+
+12:00 - 1:00 PM - Lunch (60 minutes)
+
+1:00 - 5:00 PM - Overflow from Tuesday (240 minutes)
+   Capabilities
+   Driver
+   Other topics
 
 
