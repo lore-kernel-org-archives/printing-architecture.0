@@ -1,9 +1,9 @@
 From: "Charles Hemstreet" <charles_at_hp@hotmail.com>
-Date: Thu, 17 Apr 2003 10:17:15 -0700
+Date: Thu, 17 Apr 2003 10:24:45 -0700
 Mime-Version: 1.0
 Content-Type: text/plain; format=flowed
-Message-ID: <Sea2-F37uPCHX2WK43S00002a81@hotmail.com>
-Subject: [Printing-architecture] (no subject)
+Message-ID: <Sea2-F22RMWuLn5U9T300005c25@hotmail.com>
+Subject: [Printing-architecture] Architecture meeting notes 20030417
 Sender: printing-architecture-admin@freestandards.org
 Errors-To: printing-architecture-admin@freestandards.org
 List-Help: <mailto:printing-architecture-request@freestandards.org?subject=help>
@@ -94,7 +94,7 @@ do to make sure that this is a productive meeting.
 
 
 _________________________________________________________________
-Tired of spam? Get advanced junk mail protection with MSN 8. 
+Help STOP SPAM with the new MSN 8 and get 2 months FREE*  
 http://join.msn.com/?page=features/junkmail
 
 
