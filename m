@@ -1,9 +1,9 @@
-Message-ID: <OF9DEA49C7.6D6A2E9F-ON87256CE5.0003CEAE@us.ibm.com>
+Message-ID: <OFFFACD500.660FFB6D-ON87256CE7.00543973@us.ibm.com>
 From: Claudia Alimpich <alimpich@us.ibm.com>
-Date: Sun, 9 Mar 2003 17:49:02 -0700
+Date: Wed, 12 Mar 2003 08:32:20 -0700
 MIME-Version: 1.0
 Content-type: text/plain; charset=US-ASCII
-Subject: [Printing-architecture] Created ../pwg/fsg/April2003_meeting_slides directory for FSG presentations
+Subject: [Printing-architecture] This (March 13) Thursday's FSG architecture meeting
 Sender: printing-architecture-admin@freestandards.org
 Errors-To: printing-architecture-admin@freestandards.org
 List-Help: <mailto:printing-architecture-request@freestandards.org?subject=help>
@@ -14,23 +14,24 @@ List-Id: <printing-architecture.freestandards.org>
 List-Unsubscribe: <http://freestandards.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@freestandards.org?subject=unsubscribe>
 List-Archive: <http://freestandards.org/pipermail/printing-architecture/>
-To: printing-architecture@freestandards.org
+To: printing-architecture@freestandards.org, Harry Lewis <harryl@us.ibm.com>
 
 
 
 
-I created a directory under the fsg directory where we can put our FSG
-presentations for the PSG/FSG meeting on April 1st.
-   ftp://ftp.pwg.org/pub/pwg/fsg/April2003_meeting_slides
+During the Job Ticket working group meeting yesterday it was mentioned that
+it might be a good idea to try and better align some of the FSG and PWG
+discussions during the DC meeting. We want to make sure that the FSG people
+attend the appropriate PWG meetings and the PWG people attend the
+appropriate FSG meetings and that we get some dialog going between the
+groups on specific items.
 
-If you don't like the name of the directory or where it resides, we can
-change/move it. I thought that it would be better to have all of the
-presentations in the same directory instead of under the individual
-sub-directories.
-
-I placed the DRAFT version of the JT presentation there already and will
-replace it with the FINAL version once we review it this Tuesday and make
-changes.
+We thought that it might be a good idea during this Thursday's FSG Open
+Print Architecture meeting to brain storm and come up with some specific
+areas where we want to try and align the two groups and make sure that the
+DC agenda supports this. We thought that inviting Harry Lewis to this
+Thursday's meeting to represent PWG would be a good idea. What does
+everyone think?
 
 Claudia Alimpich
 
