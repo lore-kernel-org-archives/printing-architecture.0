@@ -1,10 +1,10 @@
-Date: Fri, 12 Nov 2004 23:59:11 +0900
-From: TORATANI Yasumasa <toratani.yasumasa@canon.co.jp>
-Message-Id: <20041112234910.12C0.TORATANI.YASUMASA@canon.co.jp>
+Message-ID: <56DBC1B7ACBDAE45AB2858C17E2F5B2C141E3F8D@hroaex2.hro.epson.co.jp>
+From: Ide Kentaro <Ide.Kentaro@exc.epson.co.jp>
+Date: Sat, 13 Nov 2004 21:30:59 +0900
 MIME-Version: 1.0
-Content-Type: text/plain; charset="ISO-2022-JP"
-Content-Transfer-Encoding: 7bit
-Subject: [Printing-architecture] Final slides for PCM Plug-in and SM
+Content-Type: text/plain
+Subject: [Printing-architecture] Re: [printing-japan] Slides for San Antonio
+	Meeting
 List-Id: Printing architecture under linux
 	<printing-architecture.mail.freestandards.org>
 List-Unsubscribe: <http://mail.freestandards.org/mailman/listinfo/printing-architecture>,
@@ -14,24 +14,20 @@ List-Post: <mailto:printing-architecture@mail.freestandards.org>
 List-Help: <mailto:printing-architecture-request@mail.freestandards.org?subject=help>
 List-Subscribe: <http://mail.freestandards.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@mail.freestandards.org?subject=subscribe>
-To: printing-architecture@freestandards.org, printing-driver@freestandards.org, printing-japan@freestandards.org, printing-jobticket@freestandards.org, printing-spool@freestandards.org
+To: "Japanese discussions on printing under Linux." <printing-japan@mail.freestandards.org>
+Cc: printing-driver@freestandards.org, printing-jobticket@freestandards.org, printing-architecture@freestandards.org
 
-I've uploaded the final slides;
-http://www2s.biglobe.ne.jp/~papadon/OpenPrinting/Presentation/FSGOpenPrint_2004-Nov-Plugin_SM.pdf
-http://www2s.biglobe.ne.jp/~papadon/OpenPrinting/Presentation/FSGOpenPrint_2004-Nov-Plugin_SM.ppt
+Hi, folks,
 
-Kindly regards,
+I put my slides for FSG meeting at San Antonio as below.
 
-----
-プレゼン資料の最終版をアップしました。
-＃ハンドアウトもこれで印刷しました。
+ <http://www.st.rim.or.jp/~k_ide/OpenPrinting/doc/FSGOpenPrint_PCM_20041116.pdf>
+ <http://www.st.rim.or.jp/~k_ide/OpenPrinting/doc/FSGOpenPrint_PCM_20041116.ppt>
 
-尚、もし要修正個所がある場合は、連絡ください。
-よろしくお願いします。
-
------------------------------------------
-TORATANI Yasumasa
-Computer Technology Development Dept. 12
-CANON INC. Shimomaruko Office, Japan
-
+Best regards,
+--
+Kentaro Ide
+IJP Design Dept. Imaging & Information Products Operations Div.
+SEIKO EPSON Corporation
+Tel 81-263-5603 / Fax 81-263-5613
 
