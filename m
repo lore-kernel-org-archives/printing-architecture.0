@@ -1,13 +1,13 @@
-Date: Thu, 17 Jun 2004 08:23:16 +0900
-From: "Shida, Casey" <shida.keisho@canon.co.jp>
-In-Reply-To: <CFEE79A465B35C4385389BA5866BEDF00C7727@mailsrvnt02.enet.sh
-	arplabs.com>
-Mime-Version: 1.0
-Content-Type: text/plain; charset="us-ascii"
-Message-Id: <20040616232114.6F88238615@insca2.canon.co.jp>
+Message-ID: <40D0F837.8050407@fxpsc.co.jp>
+Date: Thu, 17 Jun 2004 10:47:35 +0900
+From: Osamu MIHARA <mihara.osamu@fxpsc.co.jp>
+MIME-Version: 1.0
+References: <CFEE79A465B35C4385389BA5866BEDF00C7727@mailsrvnt02.enet.sharplabs.com>
+In-Reply-To: <CFEE79A465B35C4385389BA5866BEDF00C7727@mailsrvnt02.enet.sharplabs.com>
+Content-Type: text/plain; charset=us-ascii; format=flowed
+Content-Transfer-Encoding: 7bit
 Subject: [Printing-architecture] Re: [Printing-sc] Query - Joint FSG/PWG
- face-to-face in San Antonio(15-17 Nov 2004 )
-Reply-To: shida.keisho@canon.co.jp
+ face-to-face in San Antonio (15-17 Nov 2004 )
 List-Id: Printing architecture under linux
 	<printing-architecture.mail.freestandards.org>
 List-Unsubscribe: <http://mail.freestandards.org/mailman/listinfo/printing-architecture>,
@@ -17,18 +17,14 @@ List-Post: <mailto:printing-architecture@mail.freestandards.org>
 List-Help: <mailto:printing-architecture-request@mail.freestandards.org?subject=help>
 List-Subscribe: <http://mail.freestandards.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@mail.freestandards.org?subject=subscribe>
-To: "McDonald, Ira" <imcdonald@sharplabs.com>, printing-architecture@freestandards.org, printing-sc@freestandards.org, "'pwg@pwg.org'" <pwg@pwg.org>
-Cc: 'Till Kamppeter' <till.kamppeter@gmx.net>, 'Claudia Alimpich' <alimpich@us.ibm.com>
+To: "McDonald, Ira" <imcdonald@sharplabs.com>
+Cc: 'Till Kamppeter' <till.kamppeter@gmx.net>, 'Claudia Alimpich' <alimpich@us.ibm.com>, "'pwg@pwg.org'" <pwg@pwg.org>, printing-architecture@freestandards.org, printing-sc@freestandards.org
 
-Good Mornig;
+I can attend.
 
-I may have a opportunety to attend but required the management approval.
+// Osamu MIHARA
 
-
-Shida/
-======
-
-At 09:53 2004/06/16 -0700, McDonald, Ira wrote:
+on 2004/06/17 1:53 McDonald, Ira said the following:
 > Hi,
 > 
 > *** Please respond quickly if you _can_ attend or _cannot_ 
