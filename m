@@ -1,9 +1,11 @@
-Message-ID: <OFF299C659.F4FD0397-ON86256DDD.00570294-86256DDD.00571ABB@us.ibm.com>
-From: Mark Hamzy <hamzy@us.ibm.com>
-Date: Thu, 13 Nov 2003 09:51:24 -0600
+Message-ID: <116DB56CD7DED511BC7800508B2CA537B0023C@mailsrvnt02.enet.sharplabs.com>
+From: "McDonald, Ira" <imcdonald@sharplabs.com>
+Date: Fri, 14 Nov 2003 09:44:03 -0800
 MIME-Version: 1.0
-Content-type: text/plain; charset=US-ASCII
-Subject: [Printing-architecture] Architecture meeting 11/13/2003
+Content-Type: text/plain;
+	charset="iso-8859-1"
+Subject: [Printing-architecture] FW: PWG-ANNOUNCE> Announcing IEEE-ISTO PWG Candidate Standard 510
+ 0.5-2003
 Sender: printing-architecture-admin@freestandards.org
 Errors-To: printing-architecture-admin@freestandards.org
 List-Help: <mailto:printing-architecture-request@freestandards.org?subject=help>
@@ -16,27 +18,42 @@ List-Unsubscribe: <http://freestandards.org/mailman/listinfo/printing-architectu
 List-Archive: <http://freestandards.org/pipermail/printing-architecture/>
 To: printing-architecture@freestandards.org
 
+Hi,
+
+IPP Document Object is now IEEE-ISTO PWG Candidate Standard 5100.5-2003.
+
+Cheers,
+- Ira
+
+Ira McDonald (Musician / Software Architect)
+Blue Roof Music / High North Inc
+PO Box 221  Grand Marais, MI  49839
+phone: +1-906-494-2434
+email: imcdonald@sharplabs.com 
+
+-----Original Message-----
+From: Zehler, Peter [mailto:PZehler@crt.xerox.com]
+Sent: Thursday, November 13, 2003 11:11 AM
+To: PWG Announce (pwg-announce@pwg.org)
+Subject: PWG-ANNOUNCE> Announcing IEEE-ISTO PWG Candidate Standard
+5100.5-2003 
 
 
-
-Thursday, November 13
-
-GMT 18:00-20:00
-EDT 15:00-17:00
-CDT 14:00-16:00
-MDT 13:00-15:00
-PDT 12:00-14:00
-
-Toll Free: 1-888-206-4960
-Toll:      1-719-457-3545
-Tie Line:        650-3080
-Passcode:          633661
-
-Note: New number.  Participants must wait until moderator arrives.
-
-Mark
-
-Take a look at the Linux Omni Printer Driver Framework at
-http://www.ibm.com/linux/ltc/projects/omni/
-
+All,
+The IEEE-ISTO PWG Candidate Standard 5100.5-2003 - IPP Document Object
+specification has been approved as a candidate standard.  The vote was 9
+for, 0 against and 0 abstain. The Candidate Standard has been published on
+the PWG standards page < http://www.pwg.org/standards.html >.
+Pete
+Peter Zehler
+XEROX
+Xerox Innovation Group
+Email: PZehler@crt.xerox.com
+Voice:    (585) 265-8755
+FAX:      (585) 422-7961
+US Mail: Peter Zehler
+        Xerox Corp.
+        800 Phillips Rd.
+        M/S 128-25E
+        Webster NY, 14580-9701
 
