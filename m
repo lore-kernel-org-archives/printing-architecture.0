@@ -1,11 +1,9 @@
-Message-ID: <116DB56CD7DED511BC7800508B2CA53735CF90@mailsrvnt02.enet.sharplabs.com>
-From: "McDonald, Ira" <imcdonald@sharplabs.com>
-Date: Sat, 19 Apr 2003 14:20:34 -0700
-MIME-Version: 1.0
-Content-Type: text/plain;
-	charset="iso-8859-1"
-Subject: [Printing-architecture] FW: PWG-ANNOUNCE> Preliminary Details: June 16-20, 2003, Portland
- Oregon
+From: "Charles Hemstreet" <charles_at_hp@hotmail.com>
+Date: Thu, 24 Apr 2003 01:52:59 -0700
+Mime-Version: 1.0
+Content-Type: text/plain; format=flowed
+Message-ID: <Sea2-F15S3JH47R674O00004924@hotmail.com>
+Subject: [Printing-architecture] Architecture meeting *UNABLE TO HOST* agenda 20030424. . .
 Sender: printing-architecture-admin@freestandards.org
 Errors-To: printing-architecture-admin@freestandards.org
 List-Help: <mailto:printing-architecture-request@freestandards.org?subject=help>
@@ -18,74 +16,48 @@ List-Unsubscribe: <http://freestandards.org/mailman/listinfo/printing-architectu
 List-Archive: <http://freestandards.org/pipermail/printing-architecture/>
 To: printing-architecture@freestandards.org
 
+Folks:
 
------Original Message-----
-From: a.s.patel@ieee.org [mailto:a.s.patel@ieee.org]
-Sent: Friday, April 18, 2003 1:33 PM
-To: pwg-announce@pwg.org
-Subject: PWG-ANNOUNCE> Preliminary Details: June 16-20, 2003, Portland
-Oregon
-Importance: High
+I had to attend to a friend that needed emergency room care last night (I 
+just got home at 1:00am) and will need to go back to help him at 6:00am.  I 
+will not be able to host the meeting today.
 
+Sadly, we have not put together a plan for handling emergency situations 
+such as this very event.  This topic needs to be addressed and resolved by 
+next meeting.
 
-Greetings All,
+With regards to the architecture, we need to get back to focusing on the 
+details rather than administrative tasks.  I think it would help pull us 
+back on task if we put together a time line for our efforts.
 
-The arrangements have been finalized for the upcoming June 16-20,2003 PWG
-Meetings in Portland OR as follows:
+Here are example questions we might ask to help us pull together tasks and 
+dates:
 
-When:     Monday - Friday
-     June 16-20, 2003
+  - What are the missing pieces?
+  - What are the incomplete pieces?
+  - What are the dependencies on the missing or incompletes?
+  - Who will work on what?  How long will it take?
+  - What supporting documentation do we need to write?
+  - Are we waiting for anything else?
+  - Do we have a deadline we are trying to meet?
 
-Where:    The Westin Portland
-     750 S.W. Alder Street, Portland, OR 97205
-     Phone: 503-294-9000
-     Fax: 503-402-8776
-     http://www.westin.com
+You get the idea.
 
+Mark Hamzy and Glen Petrie did a great job pulling together a roadmap for 
+the driver subgroup.  I think we can leverage from the work that they 
+established.
 
-Hotel Accomodations:
-*** Room block will be opened on Monday, April 21, 2003***
-The negotiated sleeping room rate with the hotel is US$129.00/night (plus
-11.5% tax), single or double occupancy. Each additional person is (129 + 25
-+ 11.5% tax). All attendees are responsible for making their own hotel
-reservations.  Please ask for "The Printer Working Group or PWG" to get the
-negotiated sleeping room rate.  Rooms are being held for the nights of
-Sunday, June 15, 2003-Thursday, June 19, 2003.
-*** Please contact Ami Patel at a.s.patel@ieee.org if for any reason you
-are unable to obtain the negotiated room rate. ***
+If you do not think this is the right direction we need to take, please let 
+me know.
 
-Deadline:  Please call the reservation hotline toll-free at +1-888-627-8401
-to make your reservations.  Please make sleeping room reservations by May
-23, 2003.
+If you have additions to the above, please let me know.
 
-The PWG Meeting Registration Form is in the process of being posted, and
-will be available shortly at
-https://www.ieee-isto.org/pwg/registration.html.  The tentative schedule
-and other pertinent information will be conveyed to everyone in a future
-announcement.
-
-The cost for daily meeting attendance is US$45.00 per day. (Payments are
-processed on the first day of the meeting series.)
-Participants are responsible for their own lunch.
-
-Please contact Cindy Tiritilli, IEEE-ISTO PWG Program Manager at
-+1-732-981-3434 or Ami Patel, IEEE-ISTO PWG Administrative Assistant at
-+1-732-465-6477 if you have any questions.
-
-With Kindest Regards,
-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
-*-*-*-*-*-*-*-*-*-*-
-
-Ami Patel
-Administrative Assistant
-c/o The Printer Working Group
-IEEE Industry Standards and Technology Organization
-445 Hoes Lane, Piscataway, NJ 08854 USA
-Phone: +1-732-465-6477; Fax: +1- 651-318-7292 or +1-732-981-9473
-AIM: Shortjunior; Email: a.s.patel@ieee.org; URL: http://www.ieee-isto.org
-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
-*-*-*-*-*-*-*-*-*-*-
+My apologies for the inconvenience,
+Charles
 
 
+_________________________________________________________________
+The new MSN 8: smart spam protection and 2 months FREE*  
+http://join.msn.com/?page=features/junkmail
 
 
