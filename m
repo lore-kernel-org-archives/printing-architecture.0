@@ -1,9 +1,11 @@
-Message-ID: <OFA4D43D80.6923DE26-ON87256DD1.00020A8F@us.ibm.com>
-From: Claudia Alimpich <alimpich@us.ibm.com>
-Date: Fri, 31 Oct 2003 17:30:05 -0700
+Message-ID: <116DB56CD7DED511BC7800508B2CA537B0020D@mailsrvnt02.enet.sharplabs.com>
+From: "McDonald, Ira" <imcdonald@sharplabs.com>
+Date: Mon, 3 Nov 2003 11:04:54 -0800 
 MIME-Version: 1.0
-Content-type: text/plain; charset=US-ASCII
-Subject: [Printing-architecture] Pay for Print Use Case
+Content-Type: text/plain;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+Subject: [Printing-architecture] FW: Common Locale Data Repository V1.0 Beta Available!
 Sender: printing-architecture-admin@freestandards.org
 Errors-To: printing-architecture-admin@freestandards.org
 List-Help: <mailto:printing-architecture-request@freestandards.org?subject=help>
@@ -14,78 +16,90 @@ List-Id: <printing-architecture.freestandards.org>
 List-Unsubscribe: <http://freestandards.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@freestandards.org?subject=unsubscribe>
 List-Archive: <http://freestandards.org/pipermail/printing-architecture/>
-To: printing-architecture@freestandards.org
+To: "'pwg-announce@pwg.org'" <pwg-announce@pwg.org>, printing-architecture@freestandards.org
+
+Hi folks,
+
+Below are two notes about the Common Locale Data Repository
+(CLDR), an XML-based standardized locale database.  Well
+worth exploring.  Relevant to several PWG and FSG projects.
+
+Cheers,
+- Ira
+
+Ira McDonald (Musician / Software Architect)
+Blue Roof Music / High North Inc
+PO Box 221  Grand Marais, MI  49839
+phone: +1-906-494-2434
+email: imcdonald@sharplabs.com
 
 
+-----Original Message-----
+From: w3c-i18n-ig-request@w3.org [mailto:w3c-i18n-ig-request@w3.org] On
+Behalf Of Helena Shih
+Sent: 01 November 2003 01:52
+To: w3c-i18n-ig@w3.org
+Subject: Common Locale Data Repository V1.0 Beta Available!
+
+The OpenI18N WG of the Free Standards Group is pleased to inform you
+that
+CLDR (Common XML Locale Data Repository) V1.0 Beta snapshot is
+available.
+
+The CLDR repository provides application developers a consistent and
+uniform resource in managing the locale-sensitive data used for
+formatting,
+parsing, and analysis. It also includes the comparison charts that
+demonstrates the locale data differences on various platforms.
+
+New in this snapshot are initial versions of collation tailoring data.
+
+For details on the data, reporting problems, and information on the =
+LDML
+specification, see:
+
+http://oss.software.ibm.com/cvs/icu/~checkout~/locale/CLDR_status.html.
+
+Thank you.
+
+Sincerely,
+
+Helena S Chapman
+
+Co-Chair of OpenI18N
+
+----------------------------------------------------------------
+[note from Mark Davis (IBM) on 3 October 2003]
 
 
-Here is the use case that I created for Pay for Print.
+We wish to announce the availability of the Version 1.0 Alpha of the =
+Common
+Locale Data Repository for public feedback. We request that people =
+review
+the data for languages and countries that they are familiar with, =
+and=A0 file
+bug reports where they see problems. (This is an alpha release, so =
+there
+are known fixes that have not yet been incorporated.)
 
-I will be out of town late next week so I will not be able to attend the
-Nov 6th Architecture conference call. We can talk about this use case the
-following week after we talk about Till's use case.
+The purpose of the Common Locale Data Repository project is to:
 
-Claudia
------------------------------------------------------------------------------------------------------
-Use Model : Pay for Print
+1. devise a general XML format for the exchange of culturally sensitive
+(locale) information for use in application and system development =
+(V1.0
+released 2003.07.02)
 
-Print using a job ticket from a print driver through a print spooler to a
-mid-range (90 PPM) color laser printer.
+2. gather, store, and make available data generated in that format
 
-Amy is a student at the university who has to do research on controlling
-forest fires near densely populated areas. She decides to go the library at
-the university so that she can access restricted archives of information
-pertaining to her topic. The database contains research papers that have
-information that is controversial, so some of the information has never
-been made public.
+For details, please see
 
-Amy was given a PrintCard by the university at the beginning of the
-semester that gives her $10 worth of print credit. The PrintCard has a
-magnetic strip which is encoded with her student Id and the balance for her
-printing account. Duplex black/white prints cost 10 cents per sheet and
-duplex color prints cost $1 per sheet. The student must enter their student
-ID and a PIN code to use the PrintCard.
+http://oss.software.ibm.com/cvs/icu/~checkout~/locale/CLDR_status.html
 
-Amy searches the restricted archives and finds a paper of interest, both
-for use in her research and to her parents whose house was recently burned
-down by a forest fire. The paper is formatted to print on legal size paper
-and has front and back cover sheets.
+Please forward this note to anyone else you think might be interested.
 
-Amy selects the Print menu item on the Netscape browser and the Print
-dialog displays. Sher selects a printer called ColorLibraryPrinter. She
-selects legal size paper, duplex, covers, left corner staple, and two
-copies (one for her parents and one for herself). She clicks the OK button.
-A dialog displays asking her to swipe her PrintCard and to enter her
-student ID and PIN number. She does as instructed and clicks OK.
-
-A print application is called by the print driver to create a job ticket
-that contains the information that Amy selected in the Print dialog. The
-print application prepends the job ticket that it generated to the
-postscript file that was generated by the print driver and returns the
-result to the print driver. The print driver makes contact with Print
-Services and sends the print job that contains the ticket prepended to the
-postscipt file to the Print Service over the network. The Print Service
-recognizes the print job as a ticketed job, strips off the job ticket and
-consumes the job ticket. From the consumed job ticket, the Print Services
-extracts the name of the printer that the print job is to be sent to and
-maps the name to the IP address of the printer. The Print Service contacts
-the printer called ColorLibraryPrinter using its IP address and sends the
-print job that contains the job ticket prepended to the postscript file to
-ColorLibraryPrinter. ColorLibraryPrinter receives the print job, recognizes
-that the print job as a ticketed job, strips off the job ticket, and
-consumes the job ticket.
-
-Amy wallks to the first floor of the library to the printer labeled
-ColorLibraryPrinter. She swipes her PrintCard and enters her student ID and
-PIN on the printer console when prompted. A summary of Amy's print job
-appears on the printer console asking her if the options are correct. Amy
-has decided to also print a copy of the paper for her brother Tim, so she
-changes the number of copies to three and clicks OK. Amy's print job
-completes printing. She picks up her print job from the printer's over-size
-output bin and examines the output. A message on the printer console asks
-if the print output looks okay. Amy clicks OK and her print account is
-debited. Amy swipes her PrintCard again to update it with her new account
-balance. Amy leaves the library with the three copies of the research
-paper.
-
+___
+mark.davis@us.ibm.com
+IBM, MS 50-2/B11, 5600 Cottle Rd, SJ CA 95193
+(408) 256-3148
+fax: (408) 256-0799
 
