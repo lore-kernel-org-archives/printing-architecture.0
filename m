@@ -1,9 +1,10 @@
-Message-ID: <OF99E9F600.B0407B35-ON86256D89.004F6218-86256D89.004F71FA@us.ibm.com>
-From: Mark Hamzy <hamzy@us.ibm.com>
-Date: Thu, 21 Aug 2003 09:27:45 -0500
+Message-ID: <116DB56CD7DED511BC7800508B2CA537B0017C@mailsrvnt02.enet.sharplabs.com>
+From: "McDonald, Ira" <imcdonald@sharplabs.com>
+Date: Mon, 25 Aug 2003 16:15:32 -0700
 MIME-Version: 1.0
-Content-type: text/plain; charset=US-ASCII
-Subject: [Printing-architecture] Architecture meeting 08/21/2003
+Content-Type: text/plain;
+	charset="iso-8859-1"
+Subject: [Printing-architecture] More complete use model diagrams from PWG PSI
 Sender: printing-architecture-admin@freestandards.org
 Errors-To: printing-architecture-admin@freestandards.org
 List-Help: <mailto:printing-architecture-request@freestandards.org?subject=help>
@@ -16,25 +17,67 @@ List-Unsubscribe: <http://freestandards.org/mailman/listinfo/printing-architectu
 List-Archive: <http://freestandards.org/pipermail/printing-architecture/>
 To: printing-architecture@freestandards.org
 
+Hi folks,
+
+Stored on the PWG FTP server at:
+
+ftp://ftp.pwg.org/pub/ps/psi-reqs-figs-2-20030825.pdf
+
+Please look at these diagrams.  We'll be reviewing them tomorrow
+morning (Tuesday) at the weekly PSI telecon.  They include the
+various networks as dotted-line ellipses.
+
+Cheers,
+- Ira McDonald
+  High North Inc
+
+
+-----Original Message-----
+From: BERKEMA,ALAN C (HP-Roseville,ex1) [mailto:alan.berkema@hp.com]
+Sent: Monday, August 25, 2003 1:15 PM
+To: 'a PSI pwg.org'
+Subject: PS> [PSI] Diagrams for Next Call 08/26/03
 
 
 
-Thursday, August 21
+Teleconference details:
 
-1200-1300 PST
-1300-1400 MST
-1400-1500 CST
-1500-1600 EST
-2000-2100 UTC
+NEXT: Tuesday August 26 2003 (USA)
 
-Tie Line:    650-3239
-Toll Free:   1-800-497-2024
-Toll Number: 1-719-457-3821
-Passcode:     160458
+NO Call 9/2/2003 (Day after Labor day)
 
-Mark
+Time: 8:00AM (US PDT)
 
-Take a look at the Linux Omni Printer Driver Framework at
-http://www.ibm.com/linux/ltc/projects/omni/
+Number: 866-639-4738
+Participant PIN: 7855605
+
+If Trouble with Above Try:
+Toll Access Number: 574-935-6700
+Participant PIN: 7855605
+
+Agenda:
+1) Requirements Doc
+2) Spec Review
+3) Succinct List of Actions needed to go to next Last Call
+
+-----------------
+WebEx info:
+-------------------------
+FIRST TIME USERS
+-------------------------
+For fully interactive meetings, including the ability
+to present your documents and applications, a one-time
+setup takes less than 10 minutes. Click this URL to set up now:
+http://hp.webex.com/
+Then click New User.
+-------------------------
+MEETING SUMMARY
+-------------------------
+Name: PSI
+Time: 9:00AM, (GMT -08:00) Pacific Time, USA & Canada
+Meeting number: 743057814  
+Meeting password: newpsi-1 
+Host: Alan Berkema
+1(916)7855605
 
 
