@@ -1,9 +1,9 @@
-Message-ID: <A134E2426B46D711BB4B000347AE6E7CE070ED@xvan02.vcd.hp.com>
-From: "HEMSTREET,CHARLES (HP-Vancouver,ex1)" <charles.hemstreet@hp.com>
-Date: Thu, 27 Feb 2003 12:10:37 -0500
+From: Claudia Alimpich <alimpich@us.ibm.com>
+Message-ID: <OFBAF6F2F0.96FDFFB1-ON87256CE0.000C7C53@us.ibm.com>
+Date: Tue, 4 Mar 2003 19:58:46 -0700
 MIME-Version: 1.0
-Content-Type: text/plain
-Subject: [Printing-architecture] Printing Architecture meeting notes 02/27/03
+Content-type: text/plain; charset=US-ASCII
+Subject: [Printing-architecture] Proposed agenda for FSG face-2-face in DC on April 1st (no fooling)
 Sender: printing-architecture-admin@freestandards.org
 Errors-To: printing-architecture-admin@freestandards.org
 List-Help: <mailto:printing-architecture-request@freestandards.org?subject=help>
@@ -14,44 +14,95 @@ List-Id: <printing-architecture.freestandards.org>
 List-Unsubscribe: <http://freestandards.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@freestandards.org?subject=unsubscribe>
 List-Archive: <http://freestandards.org/pipermail/printing-architecture/>
-To: "'printing-architecture@freestandards.org'" <printing-architecture@freestandards.org>
-
-Linux Open Printing Meeting
-02/27/03, 8-9am PST (actual 8:00 - 9:00am PST)
-
-Attendees:
-Charles Hemstreet
-Glen Petrie
-Ira McDonald
-Claudia Alimpich
-Mark Hamzy
-Peter Zannucci
-Till Kamppeter
-
-
-Agenda for meeting (2/27/03):
-
-1.	(Shawn)  I need to know who is planning to attend the FSG / PWG
-meetings end of March, first of April.  The PWG is asking if we could move
-our meetings to Monday, instead of Tuesday.  Basically, I am ok with this
-unless people have already set their schedules.  Please let me know if you
-are planning to attend and if Monday is ok for our meetings.
-
-The word is that the meeting is on Tuesday
-
-Note from Claudia - there will be a Sit4 digital printing working group
-meeting - later in the week - Wednesday, Thursday and Friday
-
-2.	Backend Scenario's (Peter Zannucci) - Peter will dress up and post
-the changes. (Thanks Peter)
-3.    Agenda items for next meeting (03/06/03) to be discussed this week
+To: printing-architecture@freestandards.org, printing-announce@freestandards.org
 
 
 
-Action items
-#	What	Owner	Status
-Action items from 02/27/03
-1 	It would be nice if we could get a translation or running summary
-(one sentence) of the discussions that happen on the printing-japan
-discussion list	Charles	
+
+Let's talk about the following during this Thursday's (March 6)architecture
+meeting. Suggestions and other ideas are welcome.
+
+During the Job Ticket working group meeting today we (Tom, Ira, Till, Glen,
+and Claudia) came up with a proposal for an agenda for the  FSG meeting in
+Washington DC. We also thought that it might be a good idea to put the
+slides for each of the presentations on the website at least one week
+before the meeting. Each presenter(s) is responsible for the slides.
+
+March 17 - Target for first draft of slides
+March 24 - Target for final version of slides
+
+Following is a proposed agenda for the FSG meeting:
+---------------------------------------------------------
+8:00-9:00 AM - Plenary
+      (60 minutes = 15 minutes for coffee + 45 minutes for meeting)
+   Presenters: Shawn Pratt/Charles Hemstreet
+   Agenda
+      a. Coffee
+      b. Business meeting
+
+9:00-9:30 AM - Architecture Overview
+      (30 minutes = 20 minutes for presentation + 10 minutes for questions)
+   Presenters: Charles Hemstreet/Mark Hamzy
+      a. High level architecture diagram
+      b. Identify major pieces of the architecture and which are:
+         1. Work in progress (percentage complete)
+         2. Not much activity, need more work
+      c. Questions
+
+9:30-9:45 AM - Break (15 minutes)
+
+9:45-10:45 AM - JTAPI
+      (60 minutes = 40 minutes for presentation + 20 minutes for questions)
+   Presenter: Claudia Alimpich
+   For the agenda guidelines, see the *note below
+
+10:45-11:45 AM - PAPI
+      (60 minutes = 40 minutes for presentation + 20 minutes for questions)
+   Presenter: Michael Sweet ?
+   For the agenda guidelines, see the *note below
+
+11:45 AM -1:00 PM - Lunch (75 minutes)
+
+1:00-1:30 PM - Capabilities (30 minutes)
+   Presenter: ?
+   For the agenda guidelines, see the *note below
+
+1:30-2:00 PM - Notification (30 minutes)
+   Presenter: Tom Hastings
+   For the agenda guidelines, see the *note below
+
+2:00-3:00 PM - Printer Driver Renderer (60 minutes)
+   Presenter: Glen Petrie/Mark Hamzy
+   For the agenda guidelines, see the *note below
+
+3:00-3:15 PM - Break (15 minutes)
+
+3:15-5:15 PM - Architecture details (120 minutes)
+   Presenter: Charles Hemstreet/Mark Hamzy
+   a. Low level architecture diagram
+   b. Resolve problems/issues identified during earlier sessions
+   c. Resolve open problems/issues
+
+5:15-7:00 PM - Dinner (105 minutes)
+
+7:00-9:00 PM - Overflow (120 minutes)
+   Any items that were identified during the previous sessions that need to
+   be covered. The agenda will be determined as the day progresses.
+
+
+*note - The following format should be followed for the slide presentation:
+   a. Introduction/Purpose
+   b. Status
+      - Milestones (previous and future)
+   c. Details
+      - whatever slides are needed to describe the details
+   d. Issues
+   e. Information about this working group
+      1. Active participants
+      2. Meeting day, time, call in information
+      3. Websites
+         - Mailing list and archives
+         - Other documents pertaining to this working group
+   f. Q&A and discussion
+
 
