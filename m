@@ -1,5 +1,5 @@
-Message-ID: <3DB4222C.7030109@easysw.com>
-Date: Mon, 21 Oct 2002 11:50:04 -0400
+Message-ID: <3DB42265.9000502@easysw.com>
+Date: Mon, 21 Oct 2002 11:51:01 -0400
 From: Michael Sweet <mike@easysw.com>
 MIME-Version: 1.0
 Subject: Re: [Printing-architecture] PAPI Overview Section
@@ -27,8 +27,9 @@ Alan Hlava wrote:
 > 
 > Please send comments/suggestions here or to me directly.
 
-Well, aside from the non-working links and the obviously-exported-
-from-MS-Word appearance, it looks good.
+Oh, and given that the overview image is small enough, it might
+be appropriate to place the image in-line with the rest of the
+content...
 
 -- 
 ______________________________________________________________________
