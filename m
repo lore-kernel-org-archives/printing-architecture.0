@@ -1,11 +1,10 @@
-Date: Tue, 25 Mar 2003 21:01:05 -0500
-Message-Id: <200303260201.h2Q2155Z023588@dsl092-065-009.bos1.dsl.speakeasy.net>
-From: Robert L Krawitz <rlk@alum.mit.edu>
-In-reply-to: <OF4F5F0FA3.10E5FF1A-ON85256CF4.004B44C5@pok.ibm.com>
-	(pzaan@us.ibm.com)
-Subject: Re: [Printing-architecture] Re: [printing-driver] FSG Printer Working Group
- conference call 03/26/03
-References: <OF4F5F0FA3.10E5FF1A-ON85256CF4.004B44C5@pok.ibm.com>
+Message-ID: <OFA66077FC.887D3E17-ON87256CF5.000BB070@us.ibm.com>
+From: Claudia Alimpich <alimpich@us.ibm.com>
+Date: Tue, 25 Mar 2003 19:11:57 -0700
+MIME-Version: 1.0
+Content-type: text/plain; charset=UTF-8
+Content-transfer-encoding: base64
+Subject: [Printing-architecture] URGENT - WASHINGTON D.C. MEETING CANCELED
 Sender: printing-architecture-admin@freestandards.org
 Errors-To: printing-architecture-admin@freestandards.org
 List-Help: <mailto:printing-architecture-request@freestandards.org?subject=help>
@@ -16,53 +15,62 @@ List-Id: <printing-architecture.freestandards.org>
 List-Unsubscribe: <http://freestandards.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@freestandards.org?subject=unsubscribe>
 List-Archive: <http://freestandards.org/pipermail/printing-architecture/>
-To: pzaan@us.ibm.com
-Cc: printing-driver@freestandards.org, printing-architecture@freestandards.org
+To: printing-architecture@freestandards.org
 
-   From: "Pete Zannucci" <pzaan@us.ibm.com>
-   Date: Tue, 25 Mar 2003 08:06:22 -0600
+DQoNCg0KDQpGb2xsb3dpbmcgaXMgdGhlIG5vdGUgdGhhdCBIYXJyeSBMZXdpcyBzZW50IHRvIHRo
+ZSBQV0cgb3JnLg0KDQpXZSBzaG91bGQgZGVjaWRlIGR1cmluZyB0aGlzIFRodXJzZGF5J3MgQXJj
+aCBtZWV0aW5nIGlmIHRoZXJlIGlzIGFueSB2YWx1ZQ0KaW4gaGF2aW5nIGFueSBjb25mZXJlbmNl
+IGNhbGxzIG9uIFR1ZXNkYXkgbmV4dCB3ZWVrLg0KDQpDbGF1ZGlhDQotLS0tLS0tLS0tLS0tLS0t
+LS0tLS0tIEZvcndhcmRlZCBieSBDbGF1ZGlhIEFsaW1waWNoL0JvdWxkZXIvSUJNIG9uDQowMy8y
+NS8yMDAzIDA3OjA5IFBNIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQ0KDQoNCkhBUlJZIExF
+V0lTDQowMy8yNS8yMDAzIDA0OjI1IFBNDQoNClRvOiAgICBwd2ctYW5ub3VuY2VAcHdnLm9yZw0K
+Y2M6ICAgIENsYXVkaWEgQWxpbXBpY2gvQm91bGRlci9JQk1ASUJNVVMsIHNoYXduX3ByYXR0QGhw
+LmNvbQ0KRnJvbTogIEhhcnJ5IExld2lzL0JvdWxkZXIvSUJNQElCTVVTDQpTdWJqZWN0OiAgICBV
+UkdFTlQgLSBXQVNISU5HVE9OIEQuQy4gTUVFVElORyBDQU5DRUxFRA0KDQoNCkRlYXIgUFdHIENv
+bGxlYWd1ZSwNCg0KVGhlIHN0YXJ0IG9mIG1pbGl0YXJ5IGFjdGlvbiBpbiBJcmFxLCBhbmQgaGVp
+Z2h0ZW5lZCB0ZXJyb3Jpc3QgYWxlcnQgc3RhdHVzDQppbiB0aGUgVS5TLiwgaGFzIGZvcmNlZCBz
+b21lIG9mIG91ciBtZW1iZXIgY29tcGFuaWVzIHRvIGNoYW5nZSB0aGVpciB0cmF2ZWwNCnBvbGlj
+aWVzLCByZXN0cmljdGluZyB0cmF2ZWwuIEFsdGhvdWdoIG90aGVyIGNvbXBhbnnigJlzIHRyYXZl
+bCBwb2xpY2llcw0KcmVtYWluIHVuY2hhbmdlZCwgdHJhdmVsIGF0IHRoaXMgdGltZSBpcyB2aWV3
+ZWQgYXMgdGVudW91cyBieSBtYW55IG9mIG91cg0KcmVndWxhcmx5IGF0dGVuZGluZyBtZW1iZXJz
+LiBUaGlzIGhhcyByZXN1bHRlZCBpbiBhIHN1YnN0YW50aWFsIHJlZHVjdGlvbg0KaW4gYXR0ZW5k
+YW5jZSBmb3IgdGhlIFdhc2hpbmd0b24gRC5DLiBtZWV0aW5nIGZyb20gd2hhdCB3YXMgb3JpZ2lu
+YWxseQ0KcGxhbm5lZC4NCg0KSW4gbWFueSBjYXNlcywgd29ya2luZyBncm91cCBjaGFpcnBlcnNv
+bnMsIGVkaXRvcnMgYW5kIGtleSBjb250cmlidXRvcnMNCmhhdmUgaGFkIHRvIGRlLWNvbW1pdCB3
+aGljaCBoYXMgcmVzdWx0ZWQgaW4gY2FuY2VsbGF0aW9uIG9mIGVudGlyZSB3b3JraW5nDQpncm91
+cCBtZWV0aW5ncy4gVGhlIHJlZHVjdGlvbiBpbiBudW1iZXJzIGFuZCBrZXkgcGVyc29ubmVsIGlz
+IGRpc3J1cHRpdmUNCmVub3VnaCB0byB0aGUgYWdlbmRhIHRoYXQgdGhlIFByaW50ZXIgV29ya2lu
+ZyBHcm91cCwgYWxvbmcgd2l0aCBGU0cgYW5kDQpDSVA0IGhhdmUgZGVjaWRlZCB0byBjYW5jZWwg
+dGhlIG1lZXRpbmdzIHRoYXQgd2VyZSB0byBiZSBoZWxkIGF0IHRoZQ0KV3luZGhhbSBXYXNoaW5n
+dG9uIEQuQy4gb24gTWFyY2ggMzEtQXByaWwgNCwgMjAwMy4NCg0KVG8gY29tcGVuc2F0ZSBmb3Ig
+dGhpcyBzdWRkZW4gY2hhbmdlIGluIHBsYW5zIHdlIHdpbGwgYXR0ZW1wdCB0aGUgZm9sbG93aW5n
+DQoNCjEuIFdlIHdpbGwgdHJ5IHRvIGFycmFuZ2UgcGhvbmUgYnJpZGdlcyBzbyB0aGF0IGFudGlj
+aXBhdGVkIHdvcmsgZWZmb3J0cw0KbWF5IHN0aWxsIGJlIGFjY29tcGxpc2hlZCB2aWEgdGVsZWNv
+bmZlcmVuY2UgKFdHIGNoYWlycyB0byBjb29yZGluYXRlIHdpdGgNClBXRyBjaGFpciBhbmQgSVNU
+TykNCjIuIFdlIHdpbGwgcmVzY2hlZHVsZSBvdXIgSnVseSBtZWV0aW5nIHRvIG9jY3VyIGVhcmxp
+ZXIgKE1heS9KdW5lKSBhbmQNCmxpa2VseSBpbiBhbiBlYXN5IGFjY2VzcyB3ZXN0IGNvYXN0IFUu
+Uy4gbG9jYXRpb24gKGV4LiBTZWF0dGxlLCBTYW4gSm9zZQ0KZXRjLikuDQozLiBXZSB3aWxsIGF0
+dGVtcHQgY29uZmx1ZW5jZSBvZiBQV0csIEZTRyBhbmQgQ0lQNCBzdWNoIGFzIHdvdWxkIGhhdmUN
+Cm9jY3VycmVkIGluIEQuQy4gaWYgYXQgYWxsIHBvc3NpYmxlDQo0LiBXZSB3aWxsIHJlYXJyYW5n
+ZSBvdXIgcmVtYWluaW5nIDIwMDMgdmVudWUgYnkgbW92aW5nIE9jdG9iZXIgZnJvbSBOWUMgdG8N
+ClByb3ZvIChOb3ZlbGwgaG9zdGluZykgYW5kIERlY2VtYmVyIGZyb20gUHJvdm8gdG8gKGxpa2Vs
+eSkgVmVnYXMuDQoNCk1vc3QgYWlybGluZXMgYXJlIGhhbmRsaW5nIHRyYXZlbCBjYW5jZWxhdGlv
+bnMgYXQgdGhpcyB0aW1lIGJ5IGFsbG93aW5nDQpwYXNzZW5nZXJzIHRvIHJlc2NoZWR1bGUgdy9v
+IHBlbmFsdHkgd2l0aGluIGEgc3BlY2lmaWMgdGltZSBmcmFtZSAoZXguIHdpdGgNCkZyb250aWVy
+IGl0IGlzIE1heSAxKSBhbmQgY29tcGxldGUgdHJhdmVsIGJ5IHllYXIgZW5kLiBDaGVjayB3aXRo
+IHlvdXINCmFpcmxpbmUuDQoNCllvdSBhcmUgcmVzcG9uc2libGUgZm9yIGNhbmNlbGluZyB5b3Vy
+IG93biBob3RlbCByZXNlcnZhdGlvbnMhDQoNCkZvciB0aG9zZSBvZiB5b3Ugd2hvIGhhdmUgcmVn
+aXN0ZXJlZCB3aXRoIHRoZSBJU1RPIGZvciB0aGUgRC5DLiBtZWV0aW5ncywNCnlvdXIgY3JlZGl0
+IGNhcmQgd2lsbCAiTk9UIiBiZSBjaGFyZ2VkIGFueSBmZWVzIGJ5IHRoZSBJRUVFIGZvciB0aGlz
+DQptZWV0aW5nLiAgSWYgeW91IGRvIHNlZSBhIGNoYXJnZSBwbGVhc2Ugbm90aWZ5IEFtaSBQYXRl
+bCByaWdodCBhd2F5LiBQbGVhc2UNCnNlZSBoZXIgY29udGFjdCBpbmZvcm1hdGlvbiBiZWxvdzoN
+Cg0KQW1pIFBhdGVsDQphLnMucGF0ZWxAaWVlZS5vcmcNClBob25lOiArMSA3MzIgNDY1IDY0NzcN
+CkZheDogKzEgNzMyIDk4MSA5NDczDQoNCklmIGFueW9uZSBoYXMgYW55IHF1ZXN0aW9ucyBvciBj
+b25jZXJucywgcGxlYXNlIGRvIG5vdCBoZXNpdGF0ZSB0byBjb250YWN0DQplaXRoZXIgbXlzZWxm
+IG9yIEFtaS4NCg0KV2l0aCBLaW5kZXN0IFJlZ2FyZHMsDQoNCkhhcnJ5IExld2lzDQpJQk0NClBX
+RyBDaGFpcm1hbg0KLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0t
+LQ0KSGFycnkgTGV3aXMNCklCTSBQcmludGluZyBTeXN0ZW1zDQotLS0tLS0tLS0tLS0tLS0tLS0t
+LS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tDQo=
 
-   From: Robert L Krawitz <rlk@alum.mit.edu>
 
-   > True; I guess I glossed over the "job dialog" part.  However, I
-   > don't think that there actually need to be static files; an API
-   > to the printing system (whereby the printing system acts as an
-   > abstraction barrier between the application and the driver) would
-   > also accomplish this end.  The back end of this could be whatever
-   > the driver and the printing system agree on: it could be a PPD
-   > file for some drivers and an interface module (like
-   > rastertoprinter or ijsgimpprint) between the driver and the
-   > printing system for others.
-
-   The goal should be to abstract away the ugliness of the system and
-   provide a clean simple API for the application.  Applications
-   should not be concerned about the underlying architecture or
-   implementation.
-
-Agreed.  It's the back end (from the printing system on down) I'm
-talking about.
-
-   Secondly it would be nice if we could agree upon a single format
-   for storage of the properties based on the current printer
-   configuration.  The driver/backend could use whatever mechanism it
-   wants to use for generating or using information internally but if
-   properties could be stored by the print system/driver when settings
-   change or at install/config time in a common database, that will
-   ease the burden of having to put translation layers in for each of
-   the formats going to the application interface.  This would allow
-   consistent information be returned to the app.  It would also solve
-   a lot of portability issues between systems and make the interface
-   consistent and less error prone.
-
-BTW, how would we represent ICC profiles (for example)?
-
--- 
-Robert Krawitz                                     <rlk@alum.mit.edu>      
-
-Tall Clubs International  --  http://www.tall.org/ or 1-888-IM-TALL-2
-Member of the League for Programming Freedom -- mail lpf@uunet.uu.net
-Project lead for Gimp Print   --    http://gimp-print.sourceforge.net
-
-"Linux doesn't dictate how I work, I dictate how Linux works."
---Eric Crampton
 
