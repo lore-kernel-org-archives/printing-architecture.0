@@ -1,8 +1,8 @@
 From: "Charles Hemstreet" <charles_at_hp@hotmail.com>
-Date: Thu, 10 Jul 2003 10:59:26 -0700
+Date: Thu, 10 Jul 2003 11:03:35 -0700
 Mime-Version: 1.0
 Content-Type: text/plain; format=flowed
-Message-ID: <Sea2-F54C6HbSzxdWGH0000aee3@hotmail.com>
+Message-ID: <SEA2-F32U4UmRvlXONH00038166@hotmail.com>
 Subject: [Printing-architecture] Architecture meeting agenda 20030710. . .
 Sender: printing-architecture-admin@freestandards.org
 Errors-To: printing-architecture-admin@freestandards.org
@@ -15,6 +15,13 @@ List-Unsubscribe: <http://freestandards.org/mailman/listinfo/printing-architectu
 	<mailto:printing-architecture-request@freestandards.org?subject=unsubscribe>
 List-Archive: <http://freestandards.org/pipermail/printing-architecture/>
 To: printing-architecture@freestandards.org
+
+Every Thursday
+1200-1300 PST
+1300-1400 MST
+1400-1500 CST
+1500-1600 EST
+2000-2100 UTC
 
 Here is the call-in number:
 
@@ -53,7 +60,7 @@ Here's the to-do list for our group (from PWG/FSG meeting)
 6) Generate a specification that everyone will adopt
 
 _________________________________________________________________
-Help STOP SPAM with the new MSN 8 and get 2 months FREE*  
+The new MSN 8: advanced junk mail protection and 2 months FREE*  
 http://join.msn.com/?page=features/junkmail
 
 
