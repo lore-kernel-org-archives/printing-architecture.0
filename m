@@ -1,10 +1,9 @@
-Message-ID: <116DB56CD7DED511BC7800508B2CA53735CE6C@mailsrvnt02.enet.sharplabs.com>
-From: "McDonald, Ira" <imcdonald@sharplabs.com>
+Message-ID: <6D805D4C4567D411AF32009027B683510DF68416@xvan02.vcd.hp.com>
+From: "HEMSTREET,CHARLES (HP-Vancouver,ex1)" <charles_hemstreet@hp.com>
 Subject: RE: [Printing-architecture] Meeting on the 9th of January?
-Date: Sun, 5 Jan 2003 11:31:33 -0800 
+Date: Mon, 6 Jan 2003 00:44:36 -0500 
 MIME-Version: 1.0
-Content-Type: text/plain;
-	charset="iso-8859-1"
+Content-Type: text/plain
 Sender: printing-architecture-admin@freestandards.org
 Errors-To: printing-architecture-admin@freestandards.org
 List-Help: <mailto:printing-architecture-request@freestandards.org?subject=help>
@@ -15,37 +14,16 @@ List-Id: <printing-architecture.freestandards.org>
 List-Unsubscribe: <http://freestandards.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@freestandards.org?subject=unsubscribe>
 List-Archive: <http://freestandards.org/pipermail/printing-architecture/>
-To: "'HEMSTREET,CHARLES (HP-Vancouver,ex1)'" <charles_hemstreet@hp.com>, "'printing-architecture@freestandards.org'" <printing-architecture@freestandards.org>
+To: "'imcdonald@sharplabs.com'" <imcdonald@sharplabs.com>, "'printing-architecture@freestandards.org'" <printing-architecture@freestandards.org>
 
-Hi Charles,
+Yes, we are indeed meeting. I hope that everyone is refreshed and had a good
+holiday. 
 
-Are we indeed meeting this Thursday?  Agenda topics, anyone?
+Agenda suggestions?
 
-Cheers,
-- Ira McDonald
-  High North Inc
-
-
------Original Message-----
-From: HEMSTREET,CHARLES (HP-Vancouver,ex1)
-[mailto:charles_hemstreet@hp.com]
-Sent: Wednesday, December 11, 2002 7:31 PM
-To: 'printing-architecture@freestandards.org'
-Subject: [Printing-architecture] Meeting on the 9th of January?
-
-
-Folks:
-
-In line with the Job Ticket folks, and the holidays, I would like to cancel
-the printing-architecture meeting for the next few weeks.
-
-Unless someone objects, let's plan on reconvening on the 9th of January.
-
-Happy Holidays,
 Charles
-
-_______________________________________________
-Printing-architecture mailing list
-Printing-architecture@freestandards.org
-http://freestandards.org/mailman/listinfo/printing-architecture
+--------------------------
+Charles H. Hemstreet IV
+The New HP
+Sent from my BlackBerry Wireless Handheld (www.BlackBerry.net)
 
