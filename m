@@ -1,10 +1,11 @@
-Message-ID: <116DB56CD7DED511BC7800508B2CA53735D05C@mailsrvnt02.enet.sharplabs.com>
-From: "McDonald, Ira" <imcdonald@sharplabs.com>
-Date: Tue, 17 Jun 2003 09:21:48 -0700
+Message-ID: <E0BE13326C4EBC45BBC635197DEB7E3FB54BF9@x-crt-es-ms1.cp10.es.xerox.com>
+From: "Hastings, Tom N" <hastings@cp10.es.xerox.com>
+Date: Tue, 17 Jun 2003 15:48:52 -0700
 MIME-Version: 1.0
 Content-Type: text/plain;
 	charset="iso-8859-1"
-Subject: [Printing-architecture] CORRECTED phone number/passcode for PWG/FSG meetings (16-20 June)
+Subject: [Printing-architecture] REALLY THE: CORRECTED phone number/passcode for PWG/FSG meetings
+ (16-20 June)
 Sender: printing-architecture-admin@freestandards.org
 Errors-To: printing-architecture-admin@freestandards.org
 List-Help: <mailto:printing-architecture-request@freestandards.org?subject=help>
@@ -15,8 +16,21 @@ List-Id: <printing-architecture.freestandards.org>
 List-Unsubscribe: <http://freestandards.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@freestandards.org?subject=unsubscribe>
 List-Archive: <http://freestandards.org/pipermail/printing-architecture/>
-To: printing-architecture@freestandards.org, pwg-announce@pwg.org
-Cc: "'hastings@cp10.es.xerox.com'" <hastings@cp10.es.xerox.com>
+To: "McDonald, Ira" <imcdonald@sharplabs.com>, printing-architecture@freestandards.org, pwg-announce@pwg.org
+Cc: "Hastings, Tom N" <hastings@cp10.es.xerox.com>
+
+Dial-In: 1-866-365-4406   (365, not 465)
+Passcode: 2635888#
+Chairman Code: 6477#
+
+-----Original Message-----
+From: McDonald, Ira [mailto:imcdonald@sharplabs.com]
+Sent: Tuesday, June 17, 2003 09:22
+To: printing-architecture@freestandards.org; pwg-announce@pwg.org
+Cc: 'hastings@cp10.es.xerox.com'
+Subject: CORRECTED phone number/passcode for PWG/FSG meetings (16-20
+June)
+
 
 Hi folks,
 
