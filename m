@@ -1,11 +1,12 @@
-Message-ID: <CFEE79A465B35C4385389BA5866BEDF00C79C1@mailsrvnt02.enet.sharplabs.com>
+Message-ID: <CFEE79A465B35C4385389BA5866BEDF00C79C2@mailsrvnt02.enet.sharplabs.com>
 From: "McDonald, Ira" <imcdonald@sharplabs.com>
-Date: Mon, 20 Dec 2004 09:37:09 -0800
+Date: Mon, 20 Dec 2004 09:37:48 -0800
 MIME-Version: 1.0
 Content-Type: text/plain;
 	charset="ISO-8859-1"
-Subject: [Printing-architecture] FW: [lsm-printing] Printing Summit on LSM
-	2005, Dijon, France, Ju ly 5-9.
+Content-Transfer-Encoding: quoted-printable
+Subject: [Printing-architecture] FW: [lsm-printing] Location and links for
+	the Printing Summit 200 5
 List-Id: Printing architecture under linux
 	<printing-architecture.mail.freestandards.org>
 List-Unsubscribe: <http://mail.freestandards.org/mailman/listinfo/printing-architecture>,
@@ -19,11 +20,11 @@ To: printing-architecture@freestandards.org
 
 Hi,
 
-More information about the Printing Summit at LSM 2005.
-Logistics details follow.
+Logistics for the Printing Summit at LSM 2005.
 
 Cheers,
 - Ira
+
 
 Ira McDonald (Musician / Software Architect)
 Blue Roof Music / High North Inc
@@ -35,60 +36,90 @@ email: imcdonald@sharplabs.com
 From: lsm-printing-bounces@linuxprinting.org
 [mailto:lsm-printing-bounces@linuxprinting.org]On Behalf Of Till
 Kamppeter
-Sent: Wednesday, December 08, 2004 12:53 PM
-To: lsm-printing@linuxprinting.org
-Subject: [lsm-printing] Printing Summit on LSM 2005, Dijon, France, July
-5-9.
+Sent: Monday, December 20, 2004 10:11 AM
+To: yvanbelle@brother.be
+Cc: lsm-printing@linuxprinting.org
+Subject: [lsm-printing] Location and links for the Printing Summit 2005
 
 
-Oi,
+Yves, thanks for your interest in participation at the Printing Summit. =
 
-perhaps some of you remember the Printing Summit this year in Bordeaux 
-or at least my invitation.
+Below you find the info which you have asked for. Updates will be given =
 
-Next year the organizers of the Libre Software Meeting in France invited 
-me again to hold a Printing Summit at the place and time given above.
+on this list.
 
-This should be again a meeting of leading developers on the area of 
-printing with free software where further development can be discussed 
-and plans and results can be presented to the participants of the LSM.
+By the way, we are grateful for hardware loans during the event=20
+(printers, MF devices, ...) and also for sponsoring of the Printing=20
+Summit (for example traveling expenses of free software developers).
 
-People from important free software projects, from Linux (and other OS) 
-distributions, and from printer manufacturers are supposed to come.
+The event will take place in the
 
-Subjects to be worked on are printer drivers, spooler technology, 
-network printing, device independent print data formats, desktop 
-publishing, fonts, and so on. We also have enough time to plan on what 
-we will do on these five days.
+Universit=E9 de Bourgogne
 
-At first I want to ask you whether you are interested in participating. 
-As this year, we will have the possibility to finance the travel for at 
-least some of the participants.
+1 esplanade Erasme
+21078 DIJON CEDEX BP 2787
+France
 
-I am asking you that early, as this year some people could not come 
-because they had already planned their summer vacations in the christmas 
-holidays.
++33-3-80 39 50 00
 
-Please reply to this mail using the "Reply to all" function, so that it 
-goes to the mailing list. Please post also every suggestion to the list. 
-The address is lsm-printing@linuxprinting.org
+Address determined by www.pagesjaunes.fr, I don't know yet which=20
+department of the university will host the LSM.
 
-If you are not interested at all and want to unsubscribe therefore, or 
-simply want to configure your mailing list account, go to
+ From Bruxelles you get there in around 4 hours by high-speed trains=20
+(example of connection from www.sncf.com, one way around 107 EUR 2nd =
+class):
+
+BRUXELLES MIDI          08h10    THALYS 9310
+PARIS NORD              09h35
+
+PARIS GARE DE LYON      10h34    TGV 6759
+DIJON VILLE             12h11
+
+There will also be accomodation in students dorms, if a low-budget=20
+accomodation is needed.
+
+There is no official site for the 2005 edition of the LSM yet.
+
+The 2004 site is http://lsm.abul.org/
+
+There is already an organization site with WIKI available (in french):
+
+Info about LSM, who is organizing it, sponsoring, ...
+http://tarek.zopedirectory.com/wiki/PageDaccueil
+
+Documents, especially read the report "Compte rendu r=E9union =
+31/07/2004=20
+format PDF" to know more about the LSM organization
+http://tarek.zopedirectory.com/documents
+
+The WIKI section about the Printing Summit (will be in English as soon=20
+as I start to use it):
+ttp://tarek.zopedirectory.com/wiki/PrintingSummit
+
+There is also this mailing list:
 
 http://www.linuxprinting.org/cgi-bin/mailman/listinfo/lsm-printing
 
-If you didn't get a password or if you forgot it, use the password 
-reminder facility on that page at first. Please stay subscribed if you 
-are interested in participating, as all info, discussion, and 
-organization will go through this list. Note that the list is 
-spam-protected and therefore you can only post if you are subscribed.
+and its archives
+
+http://linuxprinting.org/pipermail/lsm-printing/
+
+which contain also the organization of the 2004 edition.
 
     Till
 
-P. S.: Some pictures of LSM 2004:
-http://www.linuxprinting.org/till/lsm2004/photos/
-http://www.elbazaar.cl/~carlos/LSM
+
+yvanbelle@brother.be wrote:
+> Hello everybody,
+>=20
+> Brother International Europe will send 2 people to the
+> Printing Summit. Would it be possible to have more info
+> about the location of the summit, I mean a real address,
+> when this is available.
+>=20
+> Best regards
+>=20
+> Yves
 
 _______________________________________________
 lsm-printing mailing list
