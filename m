@@ -1,11 +1,11 @@
-Message-ID: <CFEE79A465B35C4385389BA5866BEDF00C7556@mailsrvnt02.enet.sharplabs.com>
+Message-ID: <CFEE79A465B35C4385389BA5866BEDF00C7569@mailsrvnt02.enet.sharplabs.com>
 From: "McDonald, Ira" <imcdonald@sharplabs.com>
-Date: Thu, 19 Feb 2004 15:17:45 -0800
+Date: Wed, 25 Feb 2004 07:28:37 -0800
 MIME-Version: 1.0
 Content-Type: text/plain;
 	charset="iso-8859-1"
-Subject: [Printing-architecture] FW: PWG F2F - Tue 24 Feb - Plenary/Secure
-	Print/DMTF CIM Agenda
+Subject: [Printing-architecture] FW: [P2600] New IEEE Standard Project on
+	Hardcopy Device and Syst em Security
 List-Id: Printing architecture under linux
 	<printing-architecture.freestandards.org>
 List-Unsubscribe: <http://freestandards.org/mailman/listinfo/printing-architecture>,
@@ -17,60 +17,62 @@ List-Subscribe: <http://freestandards.org/mailman/listinfo/printing-architecture
 	<mailto:printing-architecture-request@freestandards.org?subject=subscribe>
 To: printing-architecture@freestandards.org
 
-
+FYI,
+- Ira
 
 Ira McDonald (Musician / Software Architect)
 Blue Roof Music / High North Inc
 PO Box 221  Grand Marais, MI  49839
 phone: +1-906-494-2434
-email: imcdonald@sharplabs.com 
+email: imcdonald@sharplabs.com
+
 -----Original Message-----
-From: Harry Lewis [mailto:harryl@us.ibm.com]
-Sent: Friday, February 13, 2004 12:26 PM
+From: Don Wright [mailto:don@lexmark.com]
+Sent: Wednesday, February 25, 2004 7:42 AM
 To: pwg-announce@pwg.org
-Cc: steve.jerman@hp.com; David.Staal@barrsystems.com
-Subject: PWG-ANNOUNCE> Agenda and New Topics for San Jose Plenary
+Subject: PWG-ANNOUNCE> New IEEE Standard Project on Hardcopy Device and
+System Security
 
 
+I probably should have distributed this notice on this reflector a month or
+more ago but too many hours at 40,000 feet tend to temporarily diminish
+one's mental acumen.
 
-I'd like to announce the agenda for the Tuesday - Feb 24 PWG Plenary in San
-Jose... as there are several new topics and participants who will be
-presenting. While there may be some minor changes, the tentative agenda is
-as follows 
+At the December 2003 meeting of the IEEE Standards Board, a new project was
+approved to develop a standard for Security for Hardcopy Devices and
+Systems. This covers the printers, multifunction devices, etc. as well as
+the communications channels and the operating systems that drive them.
 
-Tuesday Feb 24 - Doubletree - San Jose 
-8:30-10am - PWG Working group status 
-10-1pm - Secure Print Protocols - addressing traditional environments 
-1pm - 2pm - Lunch 
-2-5pm DMTF CIM and PWG Semantics 
+You can find a press release on the subject at
+http://standards.ieee.org/announcements/pr_p2600.html
 
-The Secure Print Protocol discussion will be lead by David Staal, Barr
-Systems, Inc, a new PWG member company. David is aware that IPP specifies
-TLS and would like to broaden the discussion to include methods for securing
-environments where IPP adoption has been slow. The goal is to determine if
-multiple vendors view this as an area that would benefit from
-standardization. 
+The group has a growing website at http://grouper.ieee.org/groups/2600
 
-The DMTF CIM discussion will be lead by a guest speaker, Steve Jerman,
-HP-Boise. Steve is Chairman of the DMTF System and Devices Working Group and
-has recently collaborated on semantics with the Storage Networking Industry
-Association. The goal of our meeting is to raise awareness of similar DMTF
-and PWG activities (such as Web Based Management and Monitoring), identify
-overlap between DMTF CIM and PWG Semantic Models and discuss mechanisms for
-harmonizing our activities in these areas.   
+The group is currently still in the formative and requirements stage but it
+is expected the standard will contain a protection profile using the common
+criteria. (If you are not familiar with the common criteria, the website has
+links.)
 
-If you plan to attend the PWG Plenary or any of the PWG meetings the week of
-Feb 23, and have not yet made your reservations with the Doubletree or
-registered with the ISTO please do so as soon as possible. 
+The next meeting of the group will be March 10-11 at the IEEE offices in
+Piscataway, NJ. If you or your company are interested in participating,
+please review the material on the website including the information from the
+first meeting as well as the logistics for this upcoming meeting.
+Afterwards, please RSVP to me so we can finalize the plans. Deadline for
+RSVP is March 1, 2004. We expect to have a number of future meetings that
+will align with the PWG.
 
-http://www.pwg.org/chair/SanJose2004.html 
+*******************************************
+Don Wright don@lexmark.com
 
----------------------------------------------- 
-Harry Lewis 
-Chairman - IEEE-ISTO Printer Working Group
-http://www.pwg.org
-IBM Printing Systems 
-http://www.ibm.com/printers
-303-924-5337
----------------------------------------------- 
+Chair, IEEE SA Standards Board
+Member, IEEE-ISTO Board of Directors
+f.wright@ieee.org / f.wright@computer.org
+
+Director, Alliances and Standards
+Lexmark International
+740 New Circle Rd C14/082-3
+Lexington, Ky 40550
+
+859-825-4808 (phone) 603-963-8352 (fax)
+*******************************************
 
