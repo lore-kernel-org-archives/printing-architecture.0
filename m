@@ -1,10 +1,10 @@
-Message-ID: <116DB56CD7DED511BC7800508B2CA53735CF99@mailsrvnt02.enet.sharplabs.com>
-From: "McDonald, Ira" <imcdonald@sharplabs.com>
-Date: Thu, 24 Apr 2003 10:11:52 -0700
+Message-ID: <E0BE13326C4EBC45BBC635197DEB7E3F9FC66B@x-crt-es-ms1.cp10.es.xerox.com>
+From: "Hastings, Tom N" <hastings@cp10.es.xerox.com>
+Date: Thu, 24 Apr 2003 17:19:03 -0700
 MIME-Version: 1.0
 Content-Type: text/plain;
 	charset="iso-8859-1"
-Subject: [Printing-architecture] Summary of PWG Document Object issues
+Subject: [Printing-architecture] RE: IPP> FW: Summary of PWG Document Object issues
 Sender: printing-architecture-admin@freestandards.org
 Errors-To: printing-architecture-admin@freestandards.org
 List-Help: <mailto:printing-architecture-request@freestandards.org?subject=help>
@@ -16,6 +16,139 @@ List-Unsubscribe: <http://freestandards.org/mailman/listinfo/printing-architectu
 	<mailto:printing-architecture-request@freestandards.org?subject=unsubscribe>
 List-Archive: <http://freestandards.org/pipermail/printing-architecture/>
 To: printing-architecture@freestandards.org
+Cc: "'ipp@pwg.org'" <ipp@pwg.org>, "McDonald, Ira" <imcdonald@sharplabs.com>
+
+To the FSG Group,
+cc: IPP DL
+
+Ira wrote:
+
+   PWG PSI/1.0 (now in working group 'last call') has only
+   REQUIRED operations (including print-by-reference), but
+   the IPP Document Object spec defines many operations and
+   almost all Document Description attributes as OPTIONAL.
+   This impacts any adoption of PSI by FSG PAPI, because
+   interworking with IPP-based intermediate systems and
+   printers will be degraded or will fail in some cases.
+
+So lets list the REQUIRED and OPTIONAL operations in the current spec (not
+counting the proposals to increase the conformance that are out for a two
+week comment and which have met with objection on the mailing list):
+
+2 REQUIRED Job operation: Close-Job, Get-Documents
+3 REQUIRED Document creation operations:  Create-Document, Send-Document
+(RFC 2911), Send-Data
+1 OPTIONAL Document creation operation:  Send-URI (RFC 2911)
+3 REQUIRED Document operations: Cancel-Document, Get-Document-Attributes,
+Get-Documents
+2 OPTIONAL Document operations: Delete-Document, Set-Document-Attributes
+
+ISSUE:  So which operations would the FSG PAPI not want to include in the
+PAPI because they are OPTIONAL in the Document object spec, but would if
+they were REQUIRED?  
+
+I don't see that any of the OPTIONAL operations would be serious omissions
+from the PAPI, if they weren't included in the PAPI.
+
+
+
+Also lets see which of the 8 Operation/Document Description attributes are
+REQUIRED and OPTIONAL in the Document object spec:
+
+1.	ipp-attribute-fidelity (boolean) *
+Job Creation
+MUST
+Allows the client to indicate whether or not the Printer MUST support all
+Job Template and Document Template attributes.
+
+2.	job-mandatory-attributes (1setOf type2 keyword)
+Job Creation
+MUST
+Allows the client to list which Job Template, Document Template and
+Operation attributes MUST be supported.
+
+3.	document-charset (charset)
+Document Creation
+CMUST (The Printer MUST support the "document-charset" operation/Document
+Description attributes if the Printer supports a document-format in which
+the charset may be ambiguous in the Document content, such as
+'application/vnd.hp-PCL' where the charset escape sequence MAY be omitted
+from the data)
+
+The charset of the Document Object content
+
+4.	document-digital-signature (type2 keyword)
+Document Creation
+MAY
+the type of digital signature, if any used in the Document Object content.
+
+5.	document-format (mimeMediaType)
+Document Creation
+MUST
+The document format of the Document Object content
+
+6.	document-format-details (1setOf collection)
+Document Creation
+CMUST (The Printer MUST support the "document-format-details"
+operation/Document Description attributes, if the Printer supports a
+packaging document format, such as 'application/zip' or 'multipart/related')
+
+The details of the Document Object content, including when its package of
+files (zip, multipart/related), such as application and operating system
+that created the document, the intended device type (when the format is
+device-dependent), the natural languages of the document.
+
+7.	document-format-version (text(127))
+Document Creation
+MAY
+The version of the document format.
+
+8.	document-natural-language (naturalLanguage)
+Document Creation
+MAY
+The primary language of the Document Object content.
+
+
+ISSUE:  Here the OPTIONAL operation/Document Description attributes can be
+without serious problems by a Printer that doesn't support them.
+
+So I don't see a problem with the PAPI including any of the OPTIONAL
+Operation/Document Description attributes in the PAPI, even though they are
+OPTIONAL.
+
+Tom
+
+
+-----Original Message-----
+From: McDonald, Ira [mailto:imcdonald@sharplabs.com]
+Sent: Thursday, April 24, 2003 15:07
+To: 'ipp@pwg.org'
+Subject: IPP> FW: Summary of PWG Document Object issues
+
+
+Hi folks,
+
+I sent the summary below to the Free Standards Group
+Open Printing Architecture mailing list earlier today.
+Most of the issues/topics below were discussed during
+this afternoon's continued review of the IPP Document 
+Object spec in the PWG Semantic Model telecon.
+
+Most of these issues remain unsolved.
+
+Comments?
+
+Cheers,
+- Ira McDonald
+  High North Inc
+
+
+-----Original Message-----
+From: McDonald, Ira [mailto:imcdonald@sharplabs.com]
+Sent: Thursday, April 24, 2003 1:12 PM
+To: printing-architecture@freestandards.org
+Subject: [Printing-architecture] Summary of PWG Document Object issues
+
 
 Hi,
 
@@ -121,4 +254,9 @@ some help from Dennis Carney and a few others).
 Cheers,
 - Ira McDonald
   High North Inc
+
+_______________________________________________
+Printing-architecture mailing list
+Printing-architecture@freestandards.org
+http://freestandards.org/mailman/listinfo/printing-architecture
 
