@@ -1,11 +1,11 @@
-Message-ID: <CFEE79A465B35C4385389BA5866BEDF00C78F2@mailsrvnt02.enet.sharplabs.com>
-From: "McDonald, Ira" <imcdonald@sharplabs.com>
-Date: Tue, 5 Oct 2004 05:59:55 -0700 
+Message-ID: <2F7D63A21DB2C74EB8EB8C09AF667DB0A7B326@eitc220.eitc.epson.com>
+From: "Petrie, Glen" <glen.petrie@eitc.epson.com>
+Date: Thu, 7 Oct 2004 07:52:50 -0700 
 MIME-Version: 1.0
-Content-Type: text/plain;
-	charset="ISO-8859-1"
-Subject: [Printing-architecture] FW: PWG> Preliminary Details: PWG Face to
-	Face Meeting - November 15-19, 2004 - San Antonio TX
+Content-Type: multipart/alternative;
+	boundary="----_=_NextPart_001_01C4AC7D.50EDAEA0"
+Subject: [Printing-architecture] Proposed Agenda for PWG/FSG Meeting In San
+	Antonio
 List-Id: Printing architecture under linux
 	<printing-architecture.mail.freestandards.org>
 List-Unsubscribe: <http://mail.freestandards.org/mailman/listinfo/printing-architecture>,
@@ -15,102 +15,282 @@ List-Post: <mailto:printing-architecture@mail.freestandards.org>
 List-Help: <mailto:printing-architecture-request@mail.freestandards.org?subject=help>
 List-Subscribe: <http://mail.freestandards.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@mail.freestandards.org?subject=subscribe>
-To: printing-architecture@freestandards.org, printing-sc@freestandards.org
+To: "'printing-meetingnotes@mail.freestandards.org'" <printing-meetingnotes@base3.freestandards.org>, 'Harry Lewis' <harryl@us.ibm.com>
+Cc: printing-driver@freestandards.org, "'printing-architecture@mail.freestandards.org'" <printing-architecture@base3.freestandards.org>, printing-spool@freestandards.org, "'printing-japan@mail.freestandards.org'" <printing-japan@base3.freestandards.org>, printing-sc@freestandards.org, printing-announce@base3.freestandards.org, "'printing-jobticket@mail.freestandards.org'" <printing-jobticket@base3.freestandards.org>
 
-Hi,
+This message is in MIME format. Since your mail reader does not understand
+this format, some or all of this message may not be legible.
 
-Here are the hotel and registration details for the PWG
-meeting in San Antonio, TX in mid-November.
+------_=_NextPart_001_01C4AC7D.50EDAEA0
+Content-Type: text/plain
 
-Mark and Glen - we will need to bring our own conference
-phone and projector (since our first two days meetings
-overlap with PWG).
+All,
 
-It's now quite possible that the PWG will have an OPEN
-(unscheduled) day on Monday 15 November, because we're
-skipping our two BOFs for the next meeting.
+I believe this was the tentative scheduled agreed upon for the Joint PWG/FSG
+Meeting in San Antonio.   
 
-If so, the PWG would very much like to have input on the
-FSG schedules on Monday, so that they encourage cross-
-participation.
+Monday 	November 15, 2004
+Time 			Meeting/Presentation 
 
-Gotta go - PWG face-to-face in Lexington, KY this week.
+8:00	8:15		Introduction and Agenda Check
+8:15	9:15		Job Ticket (status / Plans)
+9:15	10:15		PAPI (status / Plans)
+10:15	10:30		Break
+10:30	11:30		Print Control Manager (PCM) (Status / Plans)
+11:30	12:30		Lunch
+12:30	13:30		Status Monitoring (Status / Plans)
+13:30	15:30		Architecture (Status / Plans / Working Session)
+15:30	15:45		Break
+15:45	17:30		Driver / Raster #1 (Status / Plans / Working
+Session)
 
-Cheers,
-- Ira
+Tuesday 	November 16, 2004
+Time 			Meeting/Presentation 
 
-Ira McDonald (Musician / Software Architect)
-Blue Roof Music / High North Inc
-PO Box 221  Grand Marais, MI  49839
-phone: +1-906-494-2434
-email: imcdonald@sharplabs.com
+8:00	8:15		Agenda Check
+8:15	10:15		Driver / Raster #2 (Status / Plans / Working
+Session)
+10:15	10:30		Break
+10:30	11:30		Start of FSG Steering Committee Meeting
+11:30	12:30		Lunch
+12:30	17:30		FSG Steering Committee Meeting
+			< Breaks as requested >
 
------Original Message-----
-From: owner-pwg@pwg.org [mailto:owner-pwg@pwg.org]On Behalf Of
-a.s.patel@ieee.org
-Sent: Tuesday, October 05, 2004 8:20 AM
-To: pwg-announce@pwg.org
-Cc: pwg@pwg.org
-Subject: PWG> Preliminary Details: PWG Face to Face Meeting - November
-15-19, 2004 - San Antonio TX
-Importance: High
+Wednesday	November 17, 2004
+ Time 			Meeting/Presentation 
 
+Morning		Joint PWG / FSG Meeting
 
-Greetings All,
-
-The arrangements have been finalized for the upcoming November 15-19, 2004,
-PWG Meetings in San Antonio, Texas as follows:
-
-When: Monday - Friday
-      November 15-19, 2004
-
-Where:      The Clarion Hotel Riverwalk
-      110 Lexington Avenue
-      San Antonio, TX 78205
-      Phone: 210-223-9461
-      Fax: 210-223-4520
-      www.clarion.com
+Rgds, 
+Glen W. Petrie 
+Epson Imaging Technology Center 
+150 River Oaks Parkway, Suite 200 
+San Jose, CA, 95134 
+Voice: 408.576.4131  Fax: 408.474.0511 
 
 
-Hotel Accommodations:
-*** Room block has been opened***
-The PWG rate obtained is USD$85.00/night (plus a 16.75% tax), single or
-double occupancy.  All attendees are responsible for making their own hotel
-reservations.  Please ask for "IEEE Printer Working Group" to get the
-negotiated sleeping room rate.  Rooms are being held for the nights of
-Sunday, November 14-Thursday, November 19, 2004.
 
- *** Please contact Ami Patel at a.s.patel@ieee.org if for any reason you
-are unable to obtain the negotiated room rate. ***
+------_=_NextPart_001_01C4AC7D.50EDAEA0
+Content-Type: text/html
+Content-Transfer-Encoding: quoted-printable
 
-Deadline:  Please call the reservation hotline toll-free at +1-800-288-3927
-and ask for the "PWG" or "IEEE Printer Working Group rate".  Please make
-sleeping room reservations by  October 29, 2004.
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV=3D"Content-Type" CONTENT=3D"text/html; =
+charset=3Dus-ascii">
+<META NAME=3D"Generator" CONTENT=3D"MS Exchange Server version =
+5.5.2653.12">
+<TITLE>Proposed Agenda for PWG/FSG Meeting In San Antonio</TITLE>
+</HEAD>
+<BODY>
 
-The PWG Meeting Registration Form is in the process of being posted, and
-will be available shortly. The tentative schedule and other pertinent
-information will be conveyed to everyone in a future announcement.
+<P ALIGN=3DLEFT><FONT COLOR=3D"#000000" FACE=3D"Times New =
+Roman">All,</FONT></P>
 
-The cost for daily meeting attendance is US$65.00 per day. (Payments are
-processed on the first day of the meeting series.)Participants are
-responsible for their own lunch.
+<P ALIGN=3DLEFT><FONT COLOR=3D"#000000" FACE=3D"Times New Roman">I =
+believe this was the tent</FONT><FONT COLOR=3D"#000000" FACE=3D"Times =
+New Roman">at</FONT><FONT COLOR=3D"#000000" FACE=3D"Times New =
+Roman">ive</FONT> <FONT COLOR=3D"#000000" FACE=3D"Times New =
+Roman">scheduled agreed upon for the Joint PWG/FSG Meeting in San =
+Antonio</FONT><FONT COLOR=3D"#000000" FACE=3D"Times New Roman">.</FONT> =
+<FONT COLOR=3D"#000000" FACE=3D"Times New Roman">&nbsp;</FONT> </P>
 
+<P ALIGN=3DLEFT><FONT COLOR=3D"#000000" FACE=3D"Times New =
+Roman">Monday</FONT><FONT COLOR=3D"#000000" FACE=3D"Times New =
+Roman"></FONT>&nbsp; <FONT COLOR=3D"#000000" FACE=3D"Times New =
+Roman">November 1</FONT><FONT COLOR=3D"#000000" FACE=3D"Times New =
+Roman">5</FONT><FONT COLOR=3D"#000000" FACE=3D"Times New Roman">, =
+2004</FONT></P>
 
-Please contact  Ami Patel, PWG Program Lead at +1-732-465-6477 if you have
-any questions.
+<P ALIGN=3DLEFT><FONT COLOR=3D"#000000" FACE=3D"Times New =
+Roman">Time</FONT> &nbsp;&nbsp; =
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <FONT COLOR=3D"#000000" =
+FACE=3D"Times New Roman">Meeting/Presentation</FONT> </P>
 
-With Kindest Regards,
-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
-*-*-*-*-*-*-*-*-*-*-
+<P ALIGN=3DLEFT><FONT COLOR=3D"#000000" FACE=3D"Times New =
+Roman">8:</FONT><FONT COLOR=3D"#000000" FACE=3D"Times New =
+Roman">0</FONT><FONT COLOR=3D"#000000" FACE=3D"Times New =
+Roman">0&nbsp;&nbsp;&nbsp; 8:</FONT><FONT COLOR=3D"#000000" =
+FACE=3D"Times New Roman">15</FONT>&nbsp;&nbsp;&nbsp; =
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <FONT COLOR=3D"#000000" =
+FACE=3D"Times New Roman">Introduction and Agenda Check</FONT></P>
 
-Ami Patel
-Program Lead
-c/o The Printer Working Group
-IEEE Industry Standards and Technology Organization
-445 Hoes Lane, Piscataway, NJ 08854 USA
-Phone: +1-732-465-6477; Fax: +1- 651-318-7292 or +1-732-981-9473
-AIM: Shortjunior; Email: a.s.patel@ieee.org; URL: http://www.ieee-isto.org
-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
-*-*-*-*-*-*-*-*-*-*-
+<P ALIGN=3DLEFT><FONT COLOR=3D"#000000" FACE=3D"Times New =
+Roman">8</FONT><FONT COLOR=3D"#000000" FACE=3D"Times New =
+Roman">:</FONT><FONT COLOR=3D"#000000" FACE=3D"Times New =
+Roman">15</FONT>&nbsp;&nbsp;&nbsp; <FONT COLOR=3D"#000000" =
+FACE=3D"Times New Roman">9</FONT><FONT COLOR=3D"#000000" FACE=3D"Times =
+New Roman">:</FONT><FONT COLOR=3D"#000000" FACE=3D"Times New =
+Roman">15</FONT>&nbsp;&nbsp;&nbsp; =
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <FONT COLOR=3D"#000000" =
+FACE=3D"Times New Roman">Job Ticket</FONT><FONT COLOR=3D"#000000" =
+FACE=3D"Times New Roman"> (status</FONT><FONT COLOR=3D"#000000" =
+FACE=3D"Times New Roman"></FONT> <FONT COLOR=3D"#000000" FACE=3D"Times =
+New Roman">/</FONT><FONT COLOR=3D"#000000" FACE=3D"Times New =
+Roman"></FONT> <FONT COLOR=3D"#000000" FACE=3D"Times New =
+Roman">P</FONT><FONT COLOR=3D"#000000" FACE=3D"Times New =
+Roman">lans)</FONT></P>
 
+<P ALIGN=3DLEFT><FONT COLOR=3D"#000000" FACE=3D"Times New =
+Roman">9:</FONT><FONT COLOR=3D"#000000" FACE=3D"Times New =
+Roman">15</FONT>&nbsp;&nbsp;&nbsp; <FONT COLOR=3D"#000000" =
+FACE=3D"Times New Roman">10</FONT><FONT COLOR=3D"#000000" FACE=3D"Times =
+New Roman">:</FONT><FONT COLOR=3D"#000000" FACE=3D"Times New =
+Roman">1</FONT><FONT COLOR=3D"#000000" FACE=3D"Times New =
+Roman">5&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</FONT> =
+<FONT COLOR=3D"#000000" FACE=3D"Times New Roman">PAPI (status /</FONT> =
+<FONT COLOR=3D"#000000" FACE=3D"Times New Roman">P</FONT><FONT =
+COLOR=3D"#000000" FACE=3D"Times New Roman">lans</FONT><FONT =
+COLOR=3D"#000000" FACE=3D"Times New Roman">)</FONT></P>
+
+<P ALIGN=3DLEFT><FONT COLOR=3D"#000000" FACE=3D"Times New =
+Roman">10:</FONT><FONT COLOR=3D"#000000" FACE=3D"Times New =
+Roman">15</FONT>&nbsp;&nbsp; <FONT COLOR=3D"#000000" FACE=3D"Times New =
+Roman">1</FONT><FONT COLOR=3D"#000000" FACE=3D"Times New =
+Roman">0</FONT><FONT COLOR=3D"#000000" FACE=3D"Times New =
+Roman">:</FONT><FONT COLOR=3D"#000000" FACE=3D"Times New =
+Roman">3</FONT><FONT COLOR=3D"#000000" FACE=3D"Times New =
+Roman">0&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</FONT> =
+<FONT COLOR=3D"#000000" FACE=3D"Times New Roman">Break</FONT></P>
+
+<P ALIGN=3DLEFT><FONT COLOR=3D"#000000" FACE=3D"Times New =
+Roman">1</FONT><FONT COLOR=3D"#000000" FACE=3D"Times New Roman">0:30&nbs=
+p;&nbsp; 11:30&nbsp;&nbsp; =
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</FONT> <FONT =
+COLOR=3D"#000000" FACE=3D"Times New Roman">Print Control Manager (PCM) =
+(Status /</FONT> <FONT COLOR=3D"#000000" FACE=3D"Times New =
+Roman">P</FONT><FONT COLOR=3D"#000000" FACE=3D"Times New =
+Roman">lans)</FONT></P>
+
+<P ALIGN=3DLEFT><FONT COLOR=3D"#000000" FACE=3D"Times New =
+Roman">11:30&nbsp;&nbsp; 12:30&nbsp;&nbsp; =
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</FONT> <FONT =
+COLOR=3D"#000000" FACE=3D"Times New Roman">Lunch</FONT></P>
+
+<P ALIGN=3DLEFT><FONT COLOR=3D"#000000" FACE=3D"Times New =
+Roman">12:30&nbsp;&nbsp;</FONT> <FONT COLOR=3D"#000000" FACE=3D"Times =
+New Roman">13:30&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =
+Status Monitoring</FONT> <FONT COLOR=3D"#000000" FACE=3D"Times New =
+Roman">(Status /</FONT> <FONT COLOR=3D"#000000" FACE=3D"Times New =
+Roman">P</FONT><FONT COLOR=3D"#000000" FACE=3D"Times New =
+Roman">lans)</FONT></P>
+
+<P ALIGN=3DLEFT><FONT COLOR=3D"#000000" FACE=3D"Times New =
+Roman">13:30&nbsp;&nbsp;</FONT> <FONT COLOR=3D"#000000" FACE=3D"Times =
+New Roman">1</FONT><FONT COLOR=3D"#000000" FACE=3D"Times New =
+Roman">5</FONT><FONT COLOR=3D"#000000" FACE=3D"Times New =
+Roman">:30&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =
+Architecture (Status / Plans</FONT><FONT COLOR=3D"#000000" =
+FACE=3D"Times New Roman"> / Working Session)</FONT></P>
+
+<P ALIGN=3DLEFT><FONT COLOR=3D"#000000" FACE=3D"Times New =
+Roman">15:30&nbsp;&nbsp; 15:45&nbsp;&nbsp; =
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</FONT> <FONT =
+COLOR=3D"#000000" FACE=3D"Times New Roman">B</FONT><FONT =
+COLOR=3D"#000000" FACE=3D"Times New Roman">reak</FONT></P>
+
+<P ALIGN=3DLEFT><FONT COLOR=3D"#000000" FACE=3D"Times New =
+Roman">15:45&nbsp;&nbsp; 17:30&nbsp;&nbsp; =
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Driver / Raster</FONT> <FONT =
+COLOR=3D"#000000" FACE=3D"Times New Roman">#</FONT><FONT =
+COLOR=3D"#000000" FACE=3D"Times New Roman">1</FONT> <FONT =
+COLOR=3D"#000000" FACE=3D"Times New Roman">(Status / Plans / Working =
+Session)</FONT></P>
+
+<P ALIGN=3DLEFT><FONT COLOR=3D"#000000" FACE=3D"Times New =
+Roman">Tuesday</FONT><FONT COLOR=3D"#000000" FACE=3D"Times New =
+Roman"></FONT> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <FONT =
+COLOR=3D"#000000" FACE=3D"Times New Roman">November 1</FONT><FONT =
+COLOR=3D"#000000" FACE=3D"Times New Roman">6</FONT><FONT =
+COLOR=3D"#000000" FACE=3D"Times New Roman">, 2004</FONT></P>
+
+<P ALIGN=3DLEFT><FONT COLOR=3D"#000000" FACE=3D"Times New =
+Roman">Time</FONT> &nbsp;&nbsp; =
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <FONT COLOR=3D"#000000" =
+FACE=3D"Times New Roman">Meeting/Presenta</FONT><FONT COLOR=3D"#000000" =
+FACE=3D"Times New Roman">t</FONT><FONT COLOR=3D"#000000" FACE=3D"Times =
+New Roman">io</FONT><FONT COLOR=3D"#000000" FACE=3D"Times New =
+Roman">n</FONT> </P>
+
+<P ALIGN=3DLEFT><FONT COLOR=3D"#000000" FACE=3D"Times New =
+Roman">8:00&nbsp;&nbsp;&nbsp; 8:15&nbsp;&nbsp;&nbsp; =
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Agenda Check</FONT></P>
+
+<P ALIGN=3DLEFT><FONT COLOR=3D"#000000" FACE=3D"Times New =
+Roman">8:15&nbsp;&nbsp;&nbsp; 10:15&nbsp;&nbsp; =
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</FONT> <FONT =
+COLOR=3D"#000000" FACE=3D"Times New Roman">Driver / Raster</FONT> <FONT =
+COLOR=3D"#000000" FACE=3D"Times New Roman">#</FONT><FONT =
+COLOR=3D"#000000" FACE=3D"Times New Roman">2</FONT> <FONT =
+COLOR=3D"#000000" FACE=3D"Times New Roman">(Status / Plans / Working =
+Session)</FONT></P>
+
+<P ALIGN=3DLEFT><FONT COLOR=3D"#000000" FACE=3D"Times New =
+Roman">10:15&nbsp;&nbsp; 10:30&nbsp;&nbsp; =
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Break</FONT></P>
+
+<P ALIGN=3DLEFT><FONT COLOR=3D"#000000" FACE=3D"Times New =
+Roman">1</FONT><FONT COLOR=3D"#000000" FACE=3D"Times New =
+Roman">0:30&nbsp;&nbsp;</FONT> <FONT COLOR=3D"#000000" FACE=3D"Times =
+New Roman">11:30&nbsp;&nbsp;</FONT> =
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <FONT COLOR=3D"#000000" =
+FACE=3D"Times New Roman">Start of</FONT> <FONT COLOR=3D"#000000" =
+FACE=3D"Times New Roman">FSG Steering Committee Meeting</FONT></P>
+
+<P ALIGN=3DLEFT><FONT COLOR=3D"#000000" FACE=3D"Times New =
+Roman">11:30&nbsp;&nbsp; 12:30&nbsp;&nbsp; =
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Lunch</FONT></P>
+
+<P ALIGN=3DLEFT><FONT COLOR=3D"#000000" FACE=3D"Times New Roman">12:30&n=
+bsp;&nbsp;</FONT> <FONT COLOR=3D"#000000" FACE=3D"Times New =
+Roman">17</FONT><FONT COLOR=3D"#000000" FACE=3D"Times New =
+Roman">:30&nbsp;&nbsp; =
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</FONT> <FONT =
+COLOR=3D"#000000" FACE=3D"Times New Roman">FSG Steering</FONT> <FONT =
+COLOR=3D"#000000" FACE=3D"Times New Roman">C</FONT><FONT =
+COLOR=3D"#000000" FACE=3D"Times New Roman">ommittee</FONT><FONT =
+COLOR=3D"#000000" FACE=3D"Times New Roman"></FONT> <FONT =
+COLOR=3D"#000000" FACE=3D"Times New Roman">Meeting</FONT></P>
+
+<P ALIGN=3DLEFT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <FONT COLOR=3D"#000000" =
+FACE=3D"Times New Roman">&lt; Breaks as req</FONT><FONT =
+COLOR=3D"#000000" FACE=3D"Times New Roman">uested &gt;</FONT></P>
+
+<P ALIGN=3DLEFT><FONT COLOR=3D"#000000" FACE=3D"Times New =
+Roman">Wednesday</FONT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <FONT =
+COLOR=3D"#000000" FACE=3D"Times New Roman">November 17, 2004</FONT></P>
+
+<P ALIGN=3DLEFT><FONT COLOR=3D"#000000" FACE=3D"Times New =
+Roman"></FONT>&nbsp;<FONT COLOR=3D"#000000" FACE=3D"Times New =
+Roman">Time</FONT> &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <FONT COLOR=3D"#000000" =
+FACE=3D"Times New Roman">Meeting/Presentatio</FONT><FONT =
+COLOR=3D"#000000" FACE=3D"Times New Roman">n</FONT> </P>
+
+<P ALIGN=3DLEFT><FONT COLOR=3D"#000000" FACE=3D"Times New =
+Roman">Morning &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</FONT> <FONT =
+COLOR=3D"#000000" FACE=3D"Times New Roman">Joint PWG / FSG =
+Mee</FONT><FONT COLOR=3D"#000000" FACE=3D"Times New =
+Roman">ting</FONT></P>
+
+<P ALIGN=3DLEFT><A NAME=3D"_MailAutoSig"></A></P>
+
+<P ALIGN=3DLEFT><B><I>Rgds,<BR>
+</I></B><B><I></I></B><B><I><FONT COLOR=3D"#0000FF" SIZE=3D5>Glen W. =
+Petrie</FONT></I></B><B><I></I></B><B><I><FONT SIZE=3D5><BR>
+</FONT></I></B><B><I>Epson Imaging Technology Center<BR>
+150 River Oaks Parkway, Suite 200<BR>
+San Jose, CA, 95134<BR>
+Voice: 408.576.4131&nbsp; Fax: 408.474.0511 </I></B></P>
+
+<P ALIGN=3DLEFT></P>
+
+</BODY>
+</HTML>
+------_=_NextPart_001_01C4AC7D.50EDAEA0--
 
