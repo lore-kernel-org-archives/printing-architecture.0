@@ -1,10 +1,11 @@
-Message-ID: <CFEE79A465B35C4385389BA5866BEDF00C7974@mailsrvnt02.enet.sharplabs.com>
+Message-ID: <CFEE79A465B35C4385389BA5866BEDF00C7990@mailsrvnt02.enet.sharplabs.com>
 From: "McDonald, Ira" <imcdonald@sharplabs.com>
-Date: Tue, 16 Nov 2004 16:21:56 -0800
+Date: Tue, 30 Nov 2004 09:28:28 -0800
 MIME-Version: 1.0
 Content-Type: multipart/alternative;
-	boundary="----_=_NextPart_001_01C4CC3B.58B8B30A"
-Subject: [Printing-architecture] FW: PWG-ANNOUNCE> Brainstorm phone bridge
+	boundary="----_=_NextPart_001_01C4D701.D8CB7FC9"
+Subject: [Printing-architecture] FW: PWG-ANNOUNCE> November 2004 PWG Plenary
+	Meeting Minutes Poste d
 List-Id: Printing architecture under linux
 	<printing-architecture.mail.freestandards.org>
 List-Unsubscribe: <http://mail.freestandards.org/mailman/listinfo/printing-architecture>,
@@ -19,74 +20,89 @@ To: printing-architecture@freestandards.org
 This message is in MIME format. Since your mail reader does not understand
 this format, some or all of this message may not be legible.
 
-------_=_NextPart_001_01C4CC3B.58B8B30A
+------_=_NextPart_001_01C4D701.D8CB7FC9
 Content-Type: text/plain;
 	charset="ISO-8859-1"
 
 FYI,
 - Ira
  
-
 Ira McDonald (Musician / Software Architect)
 Blue Roof Music / High North Inc
 PO Box 221  Grand Marais, MI  49839
 phone: +1-906-494-2434
 email: imcdonald@sharplabs.com 
-
 -----Original Message-----
 From: owner-pwg-announce@pwg.org [mailto:owner-pwg-announce@pwg.org]On
-Behalf Of Harry Lewis
-Sent: Tuesday, November 16, 2004 2:12 PM
+Behalf Of thrasher@lexmark.com
+Sent: Tuesday, November 30, 2004 10:17 AM
 To: pwg-announce@pwg.org
-Subject: PWG-ANNOUNCE> Brainstorm phone bridge
+Subject: PWG-ANNOUNCE> November 2004 PWG Plenary Meeting Minutes Posted
 
 
 
-Dial In: 1-866-365-4406 
-Toll #: 1-303-248-9655 
-Passcode: 2635888# 
----------------------------------------------- 
-Harry Lewis 
-IBM STSM
-Chairman - IEEE-ISTO Printer Working Group
-http://www.pwg.org
-IBM Printing Systems 
-http://www.ibm.com/printers
-303-924-5337
----------------------------------------------- 
+The minutes from the November 17,  2004  PWG Plenary Meeting are now on the
+PWG's ftp site at: 
 
-------_=_NextPart_001_01C4CC3B.58B8B30A
+ftp://ftp.pwg.org/pub/pwg/general/minutes/pwg_plenary_minutes_20041117.pdf 
+
+Thanks to Lee Farrell for taking the minutes... 
+
+Jerry Thrasher 
+
+
+
+
+
+
+
+------_=_NextPart_001_01C4D701.D8CB7FC9
 Content-Type: text/html;
 	charset="ISO-8859-1"
+Content-Transfer-Encoding: quoted-printable
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <HTML><HEAD>
-<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=ISO-8859-1">
+<META HTTP-EQUIV=3D"Content-Type" CONTENT=3D"text/html; =
+charset=3DISO-8859-1">
 
 
-<META content="MSHTML 6.00.2800.1458" name=GENERATOR></HEAD>
+<META content=3D"MSHTML 6.00.2800.1458" name=3DGENERATOR></HEAD>
 <BODY>
-<DIV><FONT face=Arial color=#0000ff size=4><SPAN 
-class=013232100-17112004>FYI,</SPAN></FONT></DIV>
-<DIV><FONT face=Arial color=#0000ff size=4><SPAN class=013232100-17112004>- 
+<DIV><FONT face=3DArial color=3D#0000ff size=3D4><SPAN=20
+class=3D822242717-30112004>FYI,</SPAN></FONT></DIV>
+<DIV><FONT face=3DArial color=3D#0000ff size=3D4><SPAN =
+class=3D822242717-30112004>-=20
 Ira</SPAN></FONT></DIV>
-<DIV>&nbsp;</DIV>
-<P><FONT size=2>Ira McDonald (Musician / Software Architect)<BR>Blue Roof Music 
-/ High North Inc<BR>PO Box 221&nbsp; Grand Marais, MI&nbsp; 49839<BR>phone: 
-+1-906-494-2434<BR>email: imcdonald@sharplabs.com</FONT> </P>
-<DIV class=OutlookMessageHeader dir=ltr align=left><FONT face=Tahoma 
-size=2>-----Original Message-----<BR><B>From:</B> owner-pwg-announce@pwg.org 
-[mailto:owner-pwg-announce@pwg.org]<B>On Behalf Of </B>Harry 
-Lewis<BR><B>Sent:</B> Tuesday, November 16, 2004 2:12 PM<BR><B>To:</B> 
-pwg-announce@pwg.org<BR><B>Subject:</B> PWG-ANNOUNCE&gt; Brainstorm phone 
-bridge<BR><BR></FONT></DIV><BR><FONT size=2><TT>Dial In: 
-1-866-365-4406</TT></FONT> <BR><FONT size=2><TT>Toll #: 
-1-303-248-9655</TT></FONT> <BR><FONT size=2><TT>Passcode: 2635888#</TT></FONT> 
-<BR><FONT face=sans-serif size=2>---------------------------------------------- 
-<BR>Harry Lewis <BR>IBM STSM<BR>Chairman - IEEE-ISTO Printer Working 
-Group<BR>http://www.pwg.org<BR>IBM Printing Systems 
-<BR>http://www.ibm.com/printers<BR>303-924-5337<BR>---------------------------------------------- 
-</FONT></BODY></HTML>
+<DIV><FONT face=3DArial color=3D#0000ff size=3D4><SPAN=20
+class=3D822242717-30112004></SPAN></FONT>&nbsp;</DIV>
+<DIV><FONT size=3D2>Ira McDonald (Musician / Software =
+Architect)<BR>Blue Roof=20
+Music / High North Inc<BR>PO Box 221&nbsp; Grand Marais, MI&nbsp;=20
+49839<BR>phone: +1-906-494-2434<BR>email: =
+imcdonald@sharplabs.com</FONT> </DIV>
+<DIV class=3DOutlookMessageHeader dir=3Dltr align=3Dleft><FONT =
+face=3DTahoma=20
+size=3D2>-----Original Message-----<BR><B>From:</B> =
+owner-pwg-announce@pwg.org=20
+[mailto:owner-pwg-announce@pwg.org]<B>On Behalf Of=20
+</B>thrasher@lexmark.com<BR><B>Sent:</B> Tuesday, November 30, 2004 =
+10:17=20
+AM<BR><B>To:</B> pwg-announce@pwg.org<BR><B>Subject:</B> =
+PWG-ANNOUNCE&gt;=20
+November 2004 PWG Plenary Meeting Minutes =
+Posted<BR><BR></FONT></DIV><BR><FONT=20
+face=3Dsans-serif size=3D2>The minutes from the November 17, &nbsp;2004 =
+&nbsp;PWG=20
+Plenary Meeting are now on the PWG's ftp site at:</FONT> <BR><BR><A=20
+href=3D"=CA=FE><font size=3D2 face=3D"=20
+sans-serif?><B>ftp://ftp.pwg.org/pub/pwg/general/minutes/pwg_plenary_min=
+utes_20041117.pdf</B></FONT></A>=20
+<BR><BR><FONT face=3Dsans-serif size=3D2>Thanks to Lee Farrell for =
+taking the=20
+minutes...</FONT> <BR><BR><FONT face=3Dsans-serif size=3D2>Jerry =
+Thrasher</FONT>=20
+<BR><BR><BR><BR><BR><BR></BODY></HTML>
 
-------_=_NextPart_001_01C4CC3B.58B8B30A--
+------_=_NextPart_001_01C4D701.D8CB7FC9--
 
