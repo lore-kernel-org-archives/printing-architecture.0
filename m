@@ -1,10 +1,11 @@
+Message-ID: <CFEE79A465B35C4385389BA5866BEDF00C7839@mailsrvnt02.enet.sharplabs.com>
+From: "McDonald, Ira" <imcdonald@sharplabs.com>
+Date: Sun, 22 Aug 2004 11:49:25 -0700
 MIME-Version: 1.0
-Message-ID: <OF4D45FCC3.BE72D4C5-ON87256EF5.006C94C6-87256EF5.006D310E@us.ibm.com>
-From: Claudia Alimpich <alimpich@us.ibm.com>
-Date: Thu, 19 Aug 2004 13:52:38 -0600
-Content-Type: multipart/alternative;
-	boundary="=_alternative 006D310687256EF5_="
-Subject: [Printing-architecture] JTAPI description for Reference Model
+Content-Type: text/plain;
+	charset="ISO-8859-1"
+Subject: [Printing-architecture] Print Channel Controller, Print Manager,
+	Spooler for Reference Mo del
 List-Id: Printing architecture under linux
 	<printing-architecture.mail.freestandards.org>
 List-Unsubscribe: <http://mail.freestandards.org/mailman/listinfo/printing-architecture>,
@@ -16,118 +17,99 @@ List-Subscribe: <http://mail.freestandards.org/mailman/listinfo/printing-archite
 	<mailto:printing-architecture-request@mail.freestandards.org?subject=subscribe>
 To: printing-architecture@freestandards.org
 
-This is a multipart message in MIME format.
---=_alternative 006D310687256EF5_=
-Content-Type: text/plain; charset="US-ASCII"
+Hi,                                                Sunday 22 August 2004
 
-Following is a description of the JTAPI box in the Reference Model. I was 
-able to lift quite a bit of the description from the JTAPI Spec.
+Below are my three subsystem descriptions for FSG/OP Reference Model.
 
----------------------------------------------------------------------------------
-The Job Ticket Application Programming Interface (JTAPI) provides an 
-abstract interface for applications to read, edit, and write industry 
-standard or vendor specific document processing job tickets. The syntax of 
-a specific industry standard job ticket is defined by the organization 
-that owns the job ticket syntax and is not addressed by the JTAPI. The 
-JTAPI defines an abstract model of objects (jobs, documents, etc.) and 
-their operations and attributes for document processing (e.g. scanning, 
-printing, copying, etc.). An implementation of the JTAPI produces and/or 
-consumes one or more standard or vendor specific job tickets formats. 
+Cheers,
+- Ira
 
-The JTAPI defines an open standard for open printing on Linux, Unix, 
-Posix, Windows, Macintosh, and embedded platforms. The JTAPI isolates an 
-application from the syntax of a job ticket to hide details and the 
-structural complexity of a specific job ticket along with interoperability 
-between different job ticket file formats. The JTAPI abstract model is 
-programming language neutral. 
+Ira McDonald (Musician / Software Architect)
+Blue Roof Music / High North Inc
+PO Box 221  Grand Marais, MI  49839
+phone: +1-906-494-2434
+email: imcdonald@sharplabs.com
+----------------------------------------
 
-The JTAPI is an object oriented extensible API that contains objects that 
-are well known in the print industry. A job ticket information object 
-(JobTicketInfo) contains one job object (Job) where the job contains zero 
-or more document objects (Document). The JobDocumentPage object is 
-abstract and contains functionality that is common to jobs, documents, and 
-specific pages (PageOverrides) in a job or document. Each of the other 
-objects in the JTAPI represents functionality that can be specified for 
-the Job, Document, and PageOverrides objects. For example, the Media 
-object represents the media that the job, document, or specific pages in 
-the job or document is to be imaged/printed on. 
+Print Channel Controller (PCC)
 
-Some examples of industry standard job tickets are as follows:
+The Print Channel Controller subsystem provides a single subsystem for
+opening, managing, transferring data over, and closing Channels (using
+datagrams or connections, local or network) between any of the FSG/OP
+Architecture subsystems and a Printer subsystem.  There is a single
+Application Programming Interface (API) for Channel access.
 
-The International Cooperation for the Integration of Process in Prepress, 
-Press and Postpress (CIP4) is a joint initiative of vendors for the 
-graphical arts industry. CIP4 has published a Job Definition Format (JDF) 
-specification. JDF is a comprehensive XML-based file format proposed 
-industry standard for end-to-end job ticket specifications combined with a 
-message description standard and message interchange protocol to cover all 
-aspects of the commercial printing workflows.
+An FSG/OP Architecture subsystem may open a Channel to a Printer (using
+a URI to specify the destination protocol endpoint for portability) in
+order to support a job submission, job management, status monitoring, or
+other application protocol.
 
-The Printer Working Group (PWG) is a joint initiative of printer vendors 
-and print system providers to develop printing protocol standards for use 
-on the Internet and within enterprises on their intra nets [pwg]. The PWG 
-has published the Internet Printing Protocol (IPP) in September 2000 
-[rfc2910, rfc2911]. The PWG is in the process of publishing the PWG 
-Semantic Model which summarizes the printing semantics common to a number 
-of printing protocols, centered on the IPP semantics. The PWG Semantic 
-Model includes an XML Schema definition. Therefore, an XML Job Ticket 
-using the semantics of the PWG Semantic Model is possible.
---=_alternative 006D310687256EF5_=
-Content-Type: text/html; charset="US-ASCII"
+Note:  A single transport connection may simultaneously support more
+than one Channel (e.g., IETF BEEP, RFC 3080).
 
+A Channel includes a transport protocol (e.g., TCP or UDP), and may
+include a session protocol (e.g., HTTP), a presentation protocol (e.g.,
+SOAP), and/or layer security protocols (e.g., TLS).  A Channel is bound
+(for the lifetime of the Channel) to a particular Interface.
 
-<br><font size=2 face="Arial">Following is a description of the JTAPI box
-in the Reference Model. I was able to lift quite a bit of the description
-from the JTAPI Spec.</font>
-<br>
-<br><font size=2 face="Arial">---------------------------------------------------------------------------------</font>
-<br><font size=2 face="Arial">The Job Ticket Application Programming Interface
-(JTAPI) provides an abstract interface for applications to read, edit,
-and write industry standard or vendor specific document processing job
-tickets. The syntax of a specific industry standard job ticket is defined
-by the organization that owns the job ticket syntax and is not addressed
-by the JTAPI. The JTAPI defines an abstract model of objects (jobs, documents,
-etc.) and their operations and attributes for document processing (e.g.
-scanning, printing, copying, etc.). An implementation of the JTAPI produces
-and/or consumes one or more standard or vendor specific job tickets formats.
-</font>
-<br>
-<br><font size=2 face="Arial">The JTAPI defines an open standard for open
-printing on Linux, Unix, Posix, Windows, Macintosh, and embedded platforms.
-The JTAPI isolates an application from the syntax of a job ticket to hide
-details and the structural complexity of a specific job ticket along with
-interoperability between different job ticket file formats. The JTAPI abstract
-model is programming language neutral. </font>
-<br>
-<br><font size=2 face="Arial">The JTAPI is an object oriented extensible
-API that contains objects that are well known in the print industry. A
-job ticket information object (JobTicketInfo) contains one job object (Job)
-where the job contains zero or more document objects (Document). The JobDocumentPage
-object is abstract and contains functionality that is common to jobs, documents,
-and specific pages (PageOverrides) in a job or document. Each of the other
-objects in the JTAPI represents functionality that can be specified for
-the Job, Document, and PageOverrides objects. For example, the Media object
-represents the media that the job, document, or specific pages in the job
-or document is to be imaged/printed on. </font>
-<br>
-<br><font size=2 face="Arial">Some examples of industry standard job tickets
-are as follows:</font>
-<br>
-<br><font size=2 face="Arial">The International Cooperation for the Integration
-of Process in Prepress, Press and Postpress (CIP4) is a joint initiative
-of vendors for the graphical arts industry. CIP4 has published a Job Definition
-Format (JDF) specification. JDF is a comprehensive XML-based file format
-proposed industry standard for end-to-end job ticket specifications combined
-with a message description standard and message interchange protocol to
-cover all aspects of the commercial printing workflows.</font>
-<br>
-<br><font size=2 face="Arial">The Printer Working Group (PWG) is a joint
-initiative of printer vendors and print system providers to develop printing
-protocol standards for use on the Internet and within enterprises on their
-intra nets [pwg]. The PWG has published the Internet Printing Protocol
-(IPP) in September 2000 [rfc2910, rfc2911]. The PWG is in the process of
-publishing the PWG Semantic Model which summarizes the printing semantics
-common to a number of printing protocols, centered on the IPP semantics.
-The PWG Semantic Model includes an XML Schema definition. Therefore, an
-XML Job Ticket using the semantics of the PWG Semantic Model is possible.</font>
---=_alternative 006D310687256EF5_=--
+An Interface includes a communications port (local or network) or an OS
+pipe/shared-memory port, and may include a datalink protocol (e.g.,
+Ethernet), a network protocol (e.g., IP or IPX), and/or layer security
+protocols (e.g., IPsec).
+
+See:  Section 2.2.10 'Print Job Delivery Channels' and Channel group in
+      section 6 of Printer MIB v2, RFC 3805, June 2004.
+
+See:  Blocks Extensible Exchange Protocol Core, RFC 3080, March 2001.
+
+----------------------------------------
+
+Print Manager (PM)
+
+The Print Manager subsystem provides a single subsystem for accepting,
+monitoring, scheduling, and cancelling print jobs for Applications and
+Gateways.  The Print Manager provides an abstraction of Servers, Queues,
+Jobs, Documents, and Resources (see ISO 10175).  There is a single
+Application Programming Interface (API) for Print Manager access.
+
+An Application or Gateway may open an output stream to the Print Manager
+subsystem, send the job/document processing and description attributes,
+(optionally) the job ticket, and the job data (by reference or by value)
+to the Print Manager subsystem, and then close the output stream.
+
+The Print Manager subystem may use the Spooler subsystem to support
+rate adaption across different communications paths and/or additional
+temporary job storage for limited Printer subsystems.
+
+See:  Section 1.1 'Simplified Printing Model' and section 2.1 'Printer
+      Object' in IPP/1.1 Model and Semantics, RFC 2911, September 2000.
+
+See:  Document Printing Application (DPA), ISO 10175, June 1996.
+
+----------------------------------------
+
+Spooler (SP)
+
+The Spooler subsystem provides a single subsystem for saving (writing)
+and retrieving (reading) print jobs on behalf of the Print Manager
+subsystem.  The Spooler provides buffering of incoming print jobs
+(including job tickets and job data) for later scheduling and forwarding
+to other FSG/OP Architecture subsystems.  There is a single Application
+Programming Interface (API) for Spooler access.
+
+For each incoming print job, the Print Manager subsystem may open an
+output stream to the Spooler subystem (using a URI to specify the
+destination file for portability), copy the incoming job to the Spooler
+subsystem, and then close the output stream.  Later, the Print Manager
+subsystem will schedule the saved job, open an input stream from the
+Spooler subsystem for the saved job (using a URI), forward the saved job
+to another FSG/OP Architecture subsystem for processing, and then close
+the input stream.
+
+See:  Section 1.1 'Simplified Printing Model' and section 2.2 'Job
+      Object' in IPP/1.1 Model and Semantics, RFC 2911, September 2000.
+
+See:  Document Printing Application (DPA), ISO 10175, June 1996.
+
+----------------------------------------
 
