@@ -1,9 +1,9 @@
 From: "Charles Hemstreet" <charles_at_hp@hotmail.com>
-Date: Wed, 30 Apr 2003 22:38:53 -0700
+Date: Thu, 08 May 2003 01:18:05 -0700
 Mime-Version: 1.0
 Content-Type: text/plain; format=flowed
-Message-ID: <Sea2-F321U1tNLo453r000123cc@hotmail.com>
-Subject: [Printing-architecture] Architecture meeting 20030501
+Message-ID: <Sea2-F36PNWX63JD8F00000a66d@hotmail.com>
+Subject: [Printing-architecture] Architecture meeting agenda 20030508. . .
 Sender: printing-architecture-admin@freestandards.org
 Errors-To: printing-architecture-admin@freestandards.org
 List-Help: <mailto:printing-architecture-request@freestandards.org?subject=help>
@@ -26,21 +26,17 @@ MST, 11-12 pm EST, 4-5 pm UTC.
 
 -------------------------
 
-Shawn Pratt will be hosting the meeting.
 
-Agenda for 05/01/03:
+Agenda for 05/08/03:
 
-* Carry on from last week.
+* Catch up
+* Status
 
 Thanks,
 Charles
 
-
-
-
-
 _________________________________________________________________
-The new MSN 8: advanced junk mail protection and 2 months FREE*  
+Help STOP SPAM with the new MSN 8 and get 2 months FREE*  
 http://join.msn.com/?page=features/junkmail
 
 
