@@ -1,9 +1,9 @@
-Message-ID: <OF1AC92FE9.E930CF38-ON85256C54.0060F04E@pok.ibm.com>
-From: "Pete Zannucci" <pzaan@us.ibm.com>
-Date: Wed, 16 Oct 2002 12:42:43 -0500
 MIME-Version: 1.0
-Content-type: text/plain; charset=us-ascii
-Subject: [Printing-architecture] Preliminary mid level architecture
+From: "Alan Hlava" <hlava@us.ibm.com>
+Message-ID: <OF147E99B1.9288D9C6-ON87256C59.00551D7C@boulder.ibm.com>
+Date: Mon, 21 Oct 2002 09:32:25 -0600
+Content-Type: multipart/alternative; boundary="=_alternative 0055527A87256C59_="
+Subject: [Printing-architecture] PAPI Overview Section
 Sender: printing-architecture-admin@freestandards.org
 Errors-To: printing-architecture-admin@freestandards.org
 List-Help: <mailto:printing-architecture-request@freestandards.org?subject=help>
@@ -16,25 +16,34 @@ List-Unsubscribe: <http://freestandards.org/mailman/listinfo/printing-architectu
 List-Archive: <http://freestandards.org/pipermail/printing-architecture/>
 To: printing-architecture@freestandards.org
 
-I have put some files out at the pwg site in the /pwg/architecture
-directory.  The files are arch-1.jpg and arch-2.jpg which are the
-drawings.  There is a high level text file (backup.zip) that has
-information on some of the items on the drawing.  It is not complete
-but it is a start.
+This is a multipart message in MIME format.
+--=_alternative 0055527A87256C59_=
+Content-Type: text/plain; charset="us-ascii"
 
-I know there are things that might not make sense and also things
-that are missing.  Through our discussions, please let me know
-about them.  I didn't want the drawings to get even more overwhelming
-than they are.
+I created a PAPI overview section using Claudia's template and stored it 
+in:
+ftp://ftp.pwg.org/pub/pwg/fsg/architecture/papi/
 
-Thanks,
+Please send comments/suggestions here or to me directly.
 
-Peter Zannucci
+Regards,
 
-IBM Linux Technology Center
-Open Source Software Development
-Omni Print Project http://sourceforge.net/projects/omniprint
-Austin, TX - Tel. 512-838-4687 (t/l 678) pzaan@us.ibm.com
+Alan Hlava
+IBM Printing Systems Division
+hlava@us.ibm.com
+--=_alternative 0055527A87256C59_=
+Content-Type: text/html; charset="us-ascii"
 
 
+<br><font size=2 face="sans-serif">I created a PAPI overview section using Claudia's template and stored it in:</font>
+<br><font size=2 face="sans-serif">ftp://ftp.pwg.org/pub/pwg/fsg/architecture/papi/</font>
+<br>
+<br><font size=2 face="sans-serif">Please send comments/suggestions here or to me directly.</font>
+<br>
+<br><font size=2 face="sans-serif">Regards,</font>
+<br>
+<br><font size=2 face="sans-serif">Alan Hlava<br>
+IBM Printing Systems Division<br>
+hlava@us.ibm.com</font>
+--=_alternative 0055527A87256C59_=--
 
