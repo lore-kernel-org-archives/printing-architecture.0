@@ -1,13 +1,13 @@
-Date: Thu, 17 Jun 2004 08:14:23 +0900
-From: TORATANI Yasumasa <toratani.yasumasa@canon.co.jp>
-In-Reply-To: <CFEE79A465B35C4385389BA5866BEDF00C7727@mailsrvnt02.enet.sharplabs.com>
-References: <CFEE79A465B35C4385389BA5866BEDF00C7727@mailsrvnt02.enet.sharplabs.com>
-Message-Id: <20040617081335.DC68.TORATANI.YASUMASA@canon.co.jp>
-MIME-Version: 1.0
-Content-Type: text/plain; charset="US-ASCII"
-Content-Transfer-Encoding: 7bit
+Date: Thu, 17 Jun 2004 08:23:16 +0900
+From: "Shida, Casey" <shida.keisho@canon.co.jp>
+In-Reply-To: <CFEE79A465B35C4385389BA5866BEDF00C7727@mailsrvnt02.enet.sh
+	arplabs.com>
+Mime-Version: 1.0
+Content-Type: text/plain; charset="us-ascii"
+Message-Id: <20040616232114.6F88238615@insca2.canon.co.jp>
 Subject: [Printing-architecture] Re: [Printing-sc] Query - Joint FSG/PWG
-	face-to-face in San Antonio (15-17 Nov 2004 )
+ face-to-face in San Antonio(15-17 Nov 2004 )
+Reply-To: shida.keisho@canon.co.jp
 List-Id: Printing architecture under linux
 	<printing-architecture.mail.freestandards.org>
 List-Unsubscribe: <http://mail.freestandards.org/mailman/listinfo/printing-architecture>,
@@ -17,16 +17,18 @@ List-Post: <mailto:printing-architecture@mail.freestandards.org>
 List-Help: <mailto:printing-architecture-request@mail.freestandards.org?subject=help>
 List-Subscribe: <http://mail.freestandards.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@mail.freestandards.org?subject=subscribe>
-To: "McDonald, Ira" <imcdonald@sharplabs.com>
-Cc: 'Till Kamppeter' <till.kamppeter@gmx.net>, 'Claudia Alimpich' <alimpich@us.ibm.com>, "'pwg@pwg.org'" <pwg@pwg.org>, printing-architecture@freestandards.org, printing-sc@freestandards.org
+To: "McDonald, Ira" <imcdonald@sharplabs.com>, printing-architecture@freestandards.org, printing-sc@freestandards.org, "'pwg@pwg.org'" <pwg@pwg.org>
+Cc: 'Till Kamppeter' <till.kamppeter@gmx.net>, 'Claudia Alimpich' <alimpich@us.ibm.com>
 
-I can attend.
+Good Mornig;
 
-TORATANI Yasumasa.
+I may have a opportunety to attend but required the management approval.
 
-On Wed, 16 Jun 2004 09:53:26 -0700
-"McDonald, Ira" <imcdonald@sharplabs.com> wrote:
 
+Shida/
+======
+
+At 09:53 2004/06/16 -0700, McDonald, Ira wrote:
 > Hi,
 > 
 > *** Please respond quickly if you _can_ attend or _cannot_ 
@@ -76,10 +78,6 @@ On Wed, 16 Jun 2004 09:53:26 -0700
 > Printing-sc mailing list
 > Printing-sc@mail.freestandards.org
 > http://mail.freestandards.org/mailman/listinfo/printing-sc
-
------------------------------------------
-TORATANI Yasumasa
-Computer Technology Development Dept. 12
-CANON INC. Shimomaruko Office, Japan
-
+> 
+> 
 
