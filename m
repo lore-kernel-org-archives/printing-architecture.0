@@ -1,14 +1,11 @@
-Message-ID: <1be90c0a050310005953d0f264@mail.gmail.com>
-Date: Thu, 10 Mar 2005 14:29:21 +0530
-From: Prince P <prince1a@gmail.com>
-In-Reply-To: <CFEE79A465B35C4385389BA5866BEDF00C7A97@mailsrvnt02.enet.sharplabs.com>
-Mime-Version: 1.0
-Content-Type: text/plain; charset=US-ASCII
-Content-Transfer-Encoding: 7bit
-References: <CFEE79A465B35C4385389BA5866BEDF00C7A97@mailsrvnt02.enet.sharplabs.com>
-Subject: [Printing-architecture] Re: How to convert xhtml-print to printer
+Message-ID: <CFEE79A465B35C4385389BA5866BEDF00C7A9B@mailsrvnt02.enet.sharplabs.com>
+From: "McDonald, Ira" <imcdonald@sharplabs.com>
+Date: Thu, 10 Mar 2005 06:23:19 -0800
+MIME-Version: 1.0
+Content-Type: text/plain;
+	charset="ISO-8859-1"
+Subject: [Printing-architecture] RE: How to convert xhtml-print to printer
 	specific data
-Reply-To: Prince P <prince1a@gmail.com>
 List-Id: Printing architecture under linux
 	<printing-architecture.mail.freestandards.org>
 List-Unsubscribe: <http://mail.freestandards.org/mailman/listinfo/printing-architecture>,
@@ -18,8 +15,36 @@ List-Post: <mailto:printing-architecture@mail.freestandards.org>
 List-Help: <mailto:printing-architecture-request@mail.freestandards.org?subject=help>
 List-Subscribe: <http://mail.freestandards.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@mail.freestandards.org?subject=subscribe>
-To: "McDonald, Ira" <imcdonald@sharplabs.com>
-Cc: printing-architecture@base3.freestandards.org, "pwg@pwg.org" <pwg@pwg.org>
+To: 'Prince P' <prince1a@gmail.com>, "McDonald, Ira" <imcdonald@sharplabs.com>
+Cc: printing-architecture@base3.freestandards.org, pwg@pwg.org
+
+Hi Prince,
+
+By "actual print data" do you mean a raster format like
+PCL or a vector format like PDF or something else?
+
+The XHTML-Print to actual print data conversion is done
+by an "interpreter" (either on the spooler or the target
+printer).  Support for printing of HTML documents is
+becoming more common on printers.  Typically, a modern
+HTML interpreter can also parse XHTML correctly.
+
+Cheers,
+- Ira
+
+Ira McDonald (Musician / Software Architect)
+Blue Roof Music / High North Inc
+PO Box 221  Grand Marais, MI  49839
+phone: +1-906-494-2434
+email: imcdonald@sharplabs.com
+
+-----Original Message-----
+From: Prince P [mailto:prince1a@gmail.com]
+Sent: Thursday, March 10, 2005 3:59 AM
+To: McDonald, Ira
+Cc: printing-architecture@base3.freestandards.org; pwg@pwg.org
+Subject: Re: How to convert xhtml-print to printer specific data
+
 
 Hi Ira,
          Thank you very much for replying.  I had gone through the
