@@ -1,11 +1,10 @@
-Message-ID: <CFEE79A465B35C4385389BA5866BEDF00C774F@mailsrvnt02.enet.sharplabs.com>
-From: "McDonald, Ira" <imcdonald@sharplabs.com>
-Date: Fri, 25 Jun 2004 09:15:56 -0700
+Message-ID: <2F7D63A21DB2C74EB8EB8C09AF667DB06EF8CE@eitc220.eitc.epson.com>
+From: "Petrie, Glen" <glen.petrie@eitc.epson.com>
+Date: Mon, 28 Jun 2004 13:44:40 -0700
 MIME-Version: 1.0
-Content-Type: text/plain;
-	charset="iso-8859-1"
-Subject: [Printing-architecture] FW: PMP> RFCs/MIBs posted for Printer &
-	Finisher MIBs
+Content-Type: multipart/alternative;
+	boundary="----_=_NextPart_001_01C45D50.BC0A3950"
+Subject: [Printing-architecture] a test of email
 List-Id: Printing architecture under linux
 	<printing-architecture.mail.freestandards.org>
 List-Unsubscribe: <http://mail.freestandards.org/mailman/listinfo/printing-architecture>,
@@ -17,102 +16,142 @@ List-Subscribe: <http://mail.freestandards.org/mailman/listinfo/printing-archite
 	<mailto:printing-architecture-request@mail.freestandards.org?subject=subscribe>
 To: printing-architecture@freestandards.org
 
------Original Message-----
-From: pmp-owner@pwg.org [mailto:pmp-owner@pwg.org]On Behalf Of McDonald,
-Ira
-Sent: Thursday, June 24, 2004 4:35 PM
-To: 'pmp@pwg.org'
-Subject: PMP> RFCs/MIBs posted for Printer & Finisher MIBs
+This message is in MIME format. Since your mail reader does not understand
+this format, some or all of this message may not be legible.
+
+------_=_NextPart_001_01C45D50.BC0A3950
+Content-Type: text/plain
+
+ 
+
+ 
+
+Rgds, 
+Glen W. Petrie 
+Epson Imaging Technology Center 
+150 River Oaks Parkway, Suite 200 
+San Jose, CA, 95134 
+Voice: 408.576.4131  Fax: 408.474.0511 
+
+ 
 
 
-Hi folks,                                        Thursday (24 June 2004)
+------_=_NextPart_001_01C45D50.BC0A3950
+Content-Type: text/html
+Content-Transfer-Encoding: quoted-printable
 
-Thanks to Ron Bergman for reminding me.
+<html xmlns:o=3D"urn:schemas-microsoft-com:office:office" =
+xmlns:w=3D"urn:schemas-microsoft-com:office:word" =
+xmlns=3D"http://www.w3.org/TR/REC-html40">
 
-I've just posted both the source RFCs and the machine-extracted '.mib'
-files for Printer MIB v2 and Finisher MIB on the PWG server in the
-Printer MIB Project (pmp) directory:
-
-ftp://ftp.pwg.org/pub/pwg/pmp/mibs/rfc3805.txt  - RFC - Printer MIB v2
-ftp://ftp.pwg.org/pub/pwg/pmp/mibs/rfc3806.txt  - RFC - Finisher MIB
-ftp://ftp.pwg.org/pub/pwg/pmp/mibs/rfc3808.txt  - RFC - IANA Charset MIB
-
-ftp://ftp.pwg.org/pub/pwg/pmp/mibs/rfc3805a.mib - IANA Printer MIB
-ftp://ftp.pwg.org/pub/pwg/pmp/mibs/rfc3805b.mib - Printer MIB v2
-ftp://ftp.pwg.org/pub/pwg/pmp/mibs/rfc3806a.mib - IANA Finisher MIB
-ftp://ftp.pwg.org/pub/pwg/pmp/mibs/rfc3806b.mib - Finisher MIB
-ftp://ftp.pwg.org/pub/pwg/pmp/mibs/rfc3808.mib  - IANA Charset MIB
-
-Cheers,
-- Ira
+<head>
+<META HTTP-EQUIV=3D"Content-Type" CONTENT=3D"text/html; =
+charset=3Dus-ascii">
 
 
-Ira McDonald (Musician / Software Architect)
-Blue Roof Music / High North Inc
-PO Box 221  Grand Marais, MI  49839
-phone: +1-906-494-2434
-email: imcdonald@sharplabs.com
-------------------------------------------------------------------------
+<meta name=3DGenerator content=3D"Microsoft Word 11 (filtered medium)">
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:"MS Mincho";
+	panose-1:2 2 6 9 4 2 5 8 3 4;}
+@font-face
+	{font-family:SimSun;
+	panose-1:2 1 6 0 3 1 1 1 1 1;}
+@font-face
+	{font-family:"Comic Sans MS";
+	panose-1:3 15 7 2 3 3 2 2 2 4;}
+@font-face
+	{font-family:"\@MS Mincho";
+	panose-1:2 2 6 9 4 2 5 8 3 4;}
+@font-face
+	{font-family:"\@SimSun";
+	panose-1:2 1 6 0 3 1 1 1 1 1;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0in;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:purple;
+	text-decoration:underline;}
+p.MsoPlainText, li.MsoPlainText, div.MsoPlainText
+	{margin:0in;
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:"Courier New";}
+p
+	{mso-margin-top-alt:auto;
+	margin-right:0in;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+span.EmailStyle17
+	{mso-style-type:personal-compose;
+	font-family:"Courier New";
+	color:windowtext;}
+@page Section1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.25in 1.0in 1.25in;}
+div.Section1
+	{page:Section1;}
+-->
+</style>
 
-[duplicate copies in Finisher MIB Project]
+</head>
 
-I also posted duplicate copies of the '.mib' files to the Finisher MIB
-Project (fin) directory, to avoid confusion:
+<body lang=3DEN-US link=3Dblue vlink=3Dpurple>
 
-ftp://ftp.pwg.org/pub/pwg/fin/mibs/rfc3805a.mib - IANA Printer MIB
-ftp://ftp.pwg.org/pub/pwg/fin/mibs/rfc3805b.mib - Printer MIB v2
-ftp://ftp.pwg.org/pub/pwg/fin/mibs/rfc3806a.mib - IANA Finisher MIB
-ftp://ftp.pwg.org/pub/pwg/fin/mibs/rfc3806b.mib - Finisher MIB
-ftp://ftp.pwg.org/pub/pwg/fin/mibs/rfc3808.mib  - IANA Charset MIB
+<div class=3DSection1>
 
-------------------------------------------------------------------------
+<p class=3DMsoNormal><font size=3D2 face=3D"Courier New"><span =
+style=3D'font-size:10.0pt;
+font-family:"Courier New"'><o:p>&nbsp;</o:p></span></font></p>
 
-[compile dependency info]
+<p class=3DMsoNormal><font size=3D2 face=3D"Courier New"><span =
+style=3D'font-size:10.0pt;
+font-family:"Courier New"'><o:p>&nbsp;</o:p></span></font></p>
 
+<p class=3DMsoPlainText><i><font size=3D2 face=3D"Comic Sans MS"><span
+style=3D'font-size:10.0pt;font-family:"Comic Sans =
+MS";font-style:italic'>Rgds, </span></font></i><br>
+<b><i><font color=3D"#333399" face=3D"Comic Sans MS"><span =
+style=3D'font-family:"Comic Sans MS";
+color:#333399;font-weight:bold;font-style:italic'>Glen W. =
+Petrie</span></font></i></b>
+<br>
+<i><font face=3D"Comic Sans MS"><span style=3D'font-family:"Comic Sans =
+MS";
+font-style:italic'>Epson Imaging Technology Center =
+</span></font></i><br>
+<i><font face=3D"Comic Sans MS"><span style=3D'font-family:"Comic Sans =
+MS";
+font-style:italic'>150 River Oaks Parkway, Suite 200 =
+</span></font></i><br>
+<i><font face=3D"Comic Sans MS"><span style=3D'font-family:"Comic Sans =
+MS";
+font-style:italic'>San Jose, CA, 95134 </span></font></i><br>
+<i><font face=3D"Comic Sans MS"><span style=3D'font-family:"Comic Sans =
+MS";
+font-style:italic'>Voice: 408.576.4131&nbsp; Fax: =
+408.474.0511</span></font></i>
+<o:p></o:p></p>
 
-Finisher MIB (RFC3806b) imports:
+<p class=3DMsoNormal><font size=3D3 face=3D"Times New Roman"><span =
+style=3D'font-size:
+12.0pt'><o:p>&nbsp;</o:p></span></font></p>
 
-(1) SMIv2 (RFC 2578)
-(2) SMIv2 Conformance (RFC 2580)
-(3) Host Resources MIB v2 (RFC 2790)
-(4) IANA Printer MIB (old Type 2 textual conventions from RFC 1759)
-(5) IANA Charset MIB (old CodedCharSet textual convention in RFC 1759)
-(6) IANA Finisher MIB (old Type 2 textual conventions from drafts)
+</div>
 
+</body>
 
-Printer MIB v2 (RFC3805b) imports:
+</html>
 
-(1) SMIv2 (RFC 2578)
-(2) SMIv2 Textual Conventions (RFC 2579)
-(3) SMIv2 Conformance (RFC 2580)
-(4) Host Resources MIB v2 (RFC 2790)
-(5) Interfaces Group MIB (RFC 2863) - instead of MIB-II (RFC 1213)
-(6) IANA Printer MIB (old Type 2 textual conventions from RFC 1759)
-(7) IANA Charset MIB (old CodedCharSet textual convention in RFC 1759)
-
-
-Host Resources MIB v2 (RFC 2790) imports:
-
-(1) SMIv2 (RFC 2578)
-(2) SMIv2 Textual Conventions (RFC 2579)
-(3) SMIv2 Conformance (RFC 2580)
-(4) Interfaces Group MIB (RFC 2863) - instead of MIB-II (RFC 1213)
-
-
-Interfaces Group MIB (RFC 2863) imports:
-
-(1) SMIv2 (RFC 2578)
-(2) SMIv2 Textual Conventions (RFC 2579)
-(3) SMIv2 Conformance (RFC 2580)
-(4) SNMP MIB (RFC 3418) - instead of MIB-II (RFC 1213)
-(5) IANA Interface Type MIB
-
-
-SNMP MIB (RFC 3418) imports:
-
-(1) SMIv2 (RFC 2578)
-(2) SMIv2 Textual Conventions (RFC 2579)
-(3) SMIv2 Conformance (RFC 2580)
-
-------------------------------------------------------------------------
+------_=_NextPart_001_01C45D50.BC0A3950--
 
