@@ -1,12 +1,13 @@
-In-Reply-To: <2F7D63A21DB2C74EB8EB8C09AF667DB04A34F0@eitc220.eitc.epson.com>
-Message-ID: <OF875FF555.4F7745E7-ON86256E7B.007740FF-86256E7B.007D5FFB@us.ibm.com>
-From: Pete Zannucci <pzaan@us.ibm.com>
-Date: Mon, 19 Apr 2004 17:49:24 -0500
+Message-ID: <4084EB55.4060404@fxpsc.co.jp>
+Date: Tue, 20 Apr 2004 18:20:21 +0900
+From: Osamu MIHARA <mihara.osamu@fxpsc.co.jp>
 MIME-Version: 1.0
-Content-type: text/plain; charset=UTF-8
-Content-transfer-encoding: base64
-Subject: [Printing-architecture] Re: [printing-driver] More Vector Driver
-	questions and Job
+References: <2F7D63A21DB2C74EB8EB8C09AF667DB04A34E8@eitc220.eitc.epson.com>
+In-Reply-To: <2F7D63A21DB2C74EB8EB8C09AF667DB04A34E8@eitc220.eitc.epson.com>
+Content-Type: text/plain; charset=windows-1252; format=flowed
+Content-Transfer-Encoding: quoted-printable
+Subject: [Printing-architecture] Re: [printing-japan] Questions on the
+	Vector Driver API
 List-Id: Printing architecture under linux
 	<printing-architecture.mail.freestandards.org>
 List-Unsubscribe: <http://mail.freestandards.org/mailman/listinfo/printing-architecture>,
@@ -16,120 +17,147 @@ List-Post: <mailto:printing-architecture@mail.freestandards.org>
 List-Help: <mailto:printing-architecture-request@mail.freestandards.org?subject=help>
 List-Subscribe: <http://mail.freestandards.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@mail.freestandards.org?subject=subscribe>
-To: Discussion for the driver API subgroup <printing-driver@base3.freestandards.org>
-Cc: printing-driver@freestandards.org, printing-japan@freestandards.org, printing-architecture@freestandards.org
+To: "Japanese discussions on printing under Linux." <printing-japan@mail.freestandards.org>
+Cc: "Petrie, Glen" <glen.petrie@eitc.epson.com>, printing-driver@freestandards.org, printing-japan@freestandards.org, printing-architecture@freestandards.org
 
-DQoNCg0KDQpHbGVuLA0KDQpHcmVhdCEgIEpvYiBwcm9wZXJ0aWVzIGFuZCBjYXBhYmlsaXRpZXMg
-bm93IC0gdGhlIHRlcm0gdXNhZ2UgaXNuJ3QgYmVpbmcNCmludGVyY2hhbmdlZCBpcyBpdD8NCg0K
-TG9va3MgbGlrZSB3aGVuIHlvdSBjb21iaW5lIHRoZSBqb2IgcHJvcGVydGllcyBmdW5jdGlvbiBh
-bmQgdGhlIHZlY3Rvcg0Kd29yaywgdGhlIGdyb3VwIGlzIGdldHRpbmcgYXJvdW5kIHRvIGRyaXZl
-ciBlbmFibGVtZW50IGFuZCBzZXRzLiAgVGhpcyBub3cNCmJyaW5ncyB1cCBhIGZldyBxdWVzdGlv
-bnM6DQoNCiAgICAgIDEuIFNvIGF0IHdoYXQgcG9pbnQgaXMgdGhlIGRyaXZlciBnb2luZyB0byBi
-ZSB0b2xkIGFib3V0IHRoZQ0KcHJvcGVydGllcyBvZiB0aGUgam9iL3BhZ2U/ICBJIHNlZSBtZW50
-aW9uIG9mICJzdGFydCBqb2IiIHZzIG9wZW5wcmludGVyDQpiZWxvdyBidXQgSSBhbSBub3QgY2xl
-YXIgb24gd2hpY2ggaXMgYmV0dGVyIGFuZCB3aHkuICBJdCB3b3VsZCBwcm9iYWJseSBiZQ0Kbmlj
-ZSB0byBzZXQgYW4gaW5pdGlhbCBzdGF0ZSBvbiB0aGUgcHJpbnRlciBhdCB0aGUgYmVnaW5uaW5n
-IGFuZCB0aGVuIGp1c3QNCnNlbmQgYSBtb2RpZmljYXRpb24gb24gYSBwZXIgcGFnZSBiYXNpcyBp
-ZiB0aGluZ3MgY2hhbmdlIHNvIEkgY291bGQgc2VlDQpqb2IvcGFnZSBwcm9wZXJ0aWVzIHVzZWQg
-aW4gbXVsdGlwbGUgcGxhY2VzLiAgT2YgY291cnNlIHRoZSBjdXJyZW50IHN0YXRlDQp3b3VsZCBu
-ZWVkIHRvIGJlIGFibGUgdG8gYmUgcXVlcmllZCBzbyB0aGUgaW5mb3JtYXRpb24gd291bGQgaGF2
-ZSB0byB1cGRhdGUNCmEgY29udGV4dCBmb3IgdGhlIGRldmljZS4NCg0KICAgICAgMi4gRG9lcyB0
-aGlzIG1lYW4gdGhlIHByaW50IGRyaXZlciB3aWxsIGJlIGFibGUgdG8gaG9vayBvdXQgKHJlcGxh
-Y2UNCmZ1bmN0aW9uIHBvaW50ZXJzKSAgd2hhdGV2ZXIgZHJhd2luZyBjb21tYW5kcyBpdCB3YW50
-cyB0byBhcyBpdCBkb2VzIG5vdyBpbg0KR2hvc3RzY3JpcHQgYW5kIFdpbj8gIChpdCBzZWVtcyBp
-bXBsaWVkIGJ5IHRoZSBQQ0wyIHZzIFBDTDUgcmVmZXJlbmNlDQpiZWxvdykuDQoNCiAgICAgIDMu
-IElzIHRoaXMgYmVpbmcgd29ya2VkIGZyb20gdGhlIHZlY3Rvci9yZW5kZXJlciBzaWRlIHNvIHRo
-YXQgeW91IGNhbg0KcmVwbGFjZSBmdW5jdGlvbnMgYW5kIGhhbmRsZSB0aGUgdmVjdG9yIGNvbW1h
-bmRzIGRpcmVjdGx5IGluIHRoZSBkcml2ZXINCndpdGhvdXQgcmVxdWlyaW5nIHJlbmRlcmluZyB0
-byBiZSBkb25lPyAgWW91IHdvdWxkIHByb2JhYmx5IHdhbnQgdG8gaGF2ZQ0KYWxsIHRoZSBkcmF3
-aW5nIGNvbW1hbmRzIGdvIHRocm91Z2ggYW4gaW50ZXJtZWRpYXRlIGxheWVyIHNvIHRoZSBwcm9w
-ZXINCnBhdGggY2FuIGJlIHRha2VuIGJhc2VkIG9uIHRoZSBjYXBhYmlsaXRpZXMgYW5kIGpvYiBw
-cm9wZXJ0aWVzLg0KDQogICAgICA0LiBJcyBhbnlvbmUgd29ya2luZyBvbiBoYXZpbmcgYSBtdWx0
-aXBhc3MgcmVuZGVyZXIgc28gdGhhdCBncmFwaGljcw0KYW5kIHRleHQgY2FuIGJlIGRyYXduIG9u
-IHRoZSBzYW1lIHBhZ2U/DQoNCiAgICAgIDUuIElzIHRoaXMgQVBJRW50cnkgdGFibGUgb24gc3Rh
-cnRqb2IgZm9yIHBhc3NpbmcgaW4gYSB0YWJsZSBvZg0KZnVuY3Rpb25zPw0KDQpJIGFwb2xvZ2l6
-ZSBmb3IgbmVlZGluZyBjbGFyaWZpY2F0aW9uIHNpbmNlIEkgaGF2ZSBub3QgYmVlbiBpbiBvbiB0
-aGUgbGF0ZXINCnBob25lIGNhbGxzLg0KDQpUaGFua3MsDQoNClBldGVyIFphbm51Y2NpDQoNCklC
-TSBMaW51eCBUZWNobm9sb2d5IENlbnRlcg0KT3BlbiBTb3VyY2UgU29mdHdhcmUgRGV2ZWxvcG1l
-bnQNCkF1c3RpbiwgVFggLSBUZWwuIDUxMi04MzgtNDY4NyAodC9sIDY3OCkgcHphYW5AdXMuaWJt
-LmNvbQ0KDQoNCg0KICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgDQogICAgICAgICAgICAgIlBldHJpZSwgR2xl
-biIgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICANCiAgICAg
-ICAgICAgICA8Z2xlbi5wZXRyaWVAZWl0YyAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgIA0KICAgICAgICAgICAgIC5lcHNvbi5jb20+ICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgVG8gDQogICAgICAgICAgICAgU2VudCBieTog
-ICAgICAgICAgICAgICAgICBwcmludGluZy1qYXBhbkBmcmVlc3RhbmRhcmRzLm9yZywgICANCiAg
-ICAgICAgICAgICBwcmludGluZy1kcml2ZXItYiAgICAgICAgIHByaW50aW5nLWFyY2hpdGVjdHVy
-ZUBmcmVlc3RhbmRhcmRzIA0KICAgICAgICAgICAgIG91bmNlc0BiYXNlMy5mcmVlICAgICAgICAg
-Lm9yZywgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgDQogICAgICAgICAgICAgc3RhbmRh
-cmRzLm9yZyAgICAgICAgICAgICBwcmludGluZy1kcml2ZXJAZnJlZXN0YW5kYXJkcy5vcmcgICAN
-CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgIGNjIA0KICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgIlBldHJpZSwgR2xlbiIgICAgICAgICAgICAgICAgICAgICAgDQogICAgICAgICAgICAgMDQv
-MTkvMjAwNCAwMzoxMiAgICAgICAgICA8Z2xlbi5wZXRyaWVAZWl0Yy5lcHNvbi5jb20+ICAgICAg
-ICANCiAgICAgICAgICAgICBQTSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICBTdWJqZWN0IA0KICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgW3ByaW50aW5nLWRyaXZlcl0gTW9yZSBWZWN0b3IgICAgICAgDQogICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICBEcml2ZXIgcXVlc3Rpb25zIGFuZCBKb2IgICAgICAg
-ICAgICANCiAgICAgICAgICAgICBQbGVhc2UgcmVzcG9uZCB0byAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgIA0KICAgICAgICAgICAgICBEaXNjdXNzaW9uIGZvciAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgDQogICAgICAgICAg
-ICAgIHRoZSBkcml2ZXIgQVBJICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICANCiAgICAgICAgICAgICAgICAgc3ViZ3JvdXAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgIA0KICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgDQogICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICANCg0KDQoNCg0KDQoNCkhlbGxvLA0KDQoNCg0KVGhlIFVTZHJpdmVyIHRlYW0g
-ZGlzY3Vzc2VkIHRoZSBwb3NzaWJpbGl0eSBvZiBoYXZpbmcgdGhlIGRyaXZlciBzdXBwb3J0aW5n
-DQptdWx0aXBsZSBqb2JzOyB0aGUgaWRlYSB3YXMgb2sgd2l0aCB0aGUgY29uZGl0aW9uIHRoYXQg
-dGhlIGRyaXZlciBpcyBvbmx5DQpyZXF1aXJlZCB0byBzdXBwb3J0IGF0IG1vc3Qgb25lIGpvYi7C
-oCDCoEhvd2V2ZXIsIGl0IHN0aWxsIG1lYW5zIGNoYW5nZXMgdG8NCnRoZSBjdXJyZW50IEFQSS7C
-oCBTdXBwb3J0aW5nIG11bHRpcGxlIGpvYnMgbWFrZXMgdGhlIG92ZXJhbGwgZHJpdmVyIEFQSQ0K
-bW9yZSBnZW5lcmljIGFuZCBwcm92aWRlcyBmb3IgZ3JlYXRlciBpbnRlZ3JhdGlvbiBjb25maWd1
-cmF0aW9ucy7CoCBCdXQNCnRoZXJlIGFyZSBpc3N1ZXMgd2l0aCB0aGUgY3VycmVudCBkZXNpZ24u
-DQoNCg0KDQoNCg0KVGhlIEFQSSBuZWVkcyB0byBoYXZlIHNvbWUgY2hhbmdlcyBzdGFydGluZyBm
-cm9tIHRoZSB2ZXJ5IGZpcnN0IExpYnJhcnkNCmNhbGw7IE9wZW5QcmludGVyLsKgIEN1cnJlbnRs
-eSwgaW4gdGhlIGNhbGwgdGhlIHByaW50ZXIgbW9kZWwgaXMgc3BlY2lmaWVkLg0KRm9yIGEgbXVs
-dGlwbGUgam9iIGNvbmZpZ3VyYXRpb24gdGhpcyB3b3VsZCBoYXZlIHRvIGJlIGRvbmUgYXQgdGhl
-IOKAnHN0YXJ0DQpqb2LigJ0gQVBJLiDCoMKgSG93ZXZlciwgdGhpcyBjYW4gcmVkdWNlIHRoZSDi
-gJxkeW5hbWljc+KAnSBvZiB0aGUgQVBJRW50cnkgZmVhdHVyZQ0Kc2luY2UgdGhlIHByaW50ZXIg
-d291bGQgbm90IGJlIGtub3cgYXQgbGlicmFyeSBpbml0aWFsaXphdGlvbjsgaW5zdGVhZA0Kd291
-bGQgYmUga25vdyBhdCDigJxzdGFydCBqb2LigJ0gQVBJLsKgIMKgT25lIHNvbHV0aW9uIGlzIHRv
-IGhhdmUgYSBmaXhlZCBzZXQgb2YNCkFQSSB0aGF0IGEgZHJpdmVyIG11c3Qgc3VwcG9ydDsgdGhh
-dCBzaG91bGQgYmUgc3RyYWlnaHQgZm9yd2FyZC7CoCBUaGlzIHdheQ0KYXQgbGlicmFyeSBpbml0
-aWFsaXphdGlvbiwgY2VydGFpbiBjcml0aWNhbCBmdW5jdGlvbnMgbXVzdCBiZSBzdXBwb3J0ZWQu
-DQoNCg0KDQpEb2VzIHRoaXMgbWVhbiBtb3ZpbmcgdGhlIHJldHVybiBmb3Ig4oCcb3B0aW9uYWzi
-gJ0gQVBJRW50cnkgdGFibGUgdG8g4oCcc3RhcnQNCmpvYuKAnS7CoCDCoE1heWJlIFllcywgTWF5
-YmUgTm8uDQoNCg0KDQoxLikgRmlyc3QgdGhlIGRyaXZlciDigJxxdWVyeSBkZXZpY2UgY2FwYWJp
-bGl0eeKAnSBhbmQg4oCccXVlcnkgZGV2aWNlIGluZm/igJ0gQVBJDQp3b3VsZCBoYXZlIHRvIGJl
-IGNhbGxhYmxlIGJlZm9yZSBzZXR0aW5nL3N0YXJ0aW5nIGEgam9iLiDCoFRoaXMgbWVhbnMgdGhh
-dA0KdGhlIOKAnHByaW50ZXIgbW9kZWzigJ0gYmUgYWRkZWQgdG8gdGhlaXIgYXJndW1lbnQgbGlz
-dC4gLSBUaGF0IGVhc3kgc29sdmVkLg0KTm93IHRoZSBjYXBhYmlsaXR5IGlzIGNhbGxlZCBhZnRl
-ciB0aGUgbGlicmFyeSBpcyBpbml0aWFsaXplZCBidXQgYmVmb3JlDQpjYWxsaW5nIOKAnHN0YXJ0
-IGpvYuKAnS4NCg0KDQoNCjIuKSBUaGUgQVBJRW50cnkgY2hhbmdlcyBiYXNlZCBvbiB0aGUgcHJp
-bnRlciB0eXBlIGFuZCBpdHMgY2FwYWJpbGl0eS7CoCDCoEl0DQpoYXMgYmVlbiBhcmd1ZWQgdGhh
-dCBVc2VyIG9yIG90aGVyIGRldGVybWluaW5nIGJvZHkgbWF5IHdhbnQgdG8gY2hhbmdlIHRoZQ0K
-YmFzaWMgcHJpbnRlciBjYXBhYmlsaXR5LsKgIEZvciBleGFtcGxlLCB0aGUgcHJpbnRlciBsYW5n
-dWFnZTsgaWYgdGhlDQpwcmludGVyIHN1cHBvcnRzIFBDTDIgYW5kIFBDTDUgYW5kIHRoaXMgbWF5
-IGJlIGEgc2V0dGFibGUgb3B0aW9uLsKgIFRoaXMNCuKAnGJhc2ljIHByaW50ZXIgcHJvcGVydHni
-gJ0gc2VsZWN0aW9uIGRpZmZlcnMgZnJvbSBzZWxlY3Rpb24gZnJvbSBzZWxlY3Rpb24gd2UNCmRv
-IGluIGEgam9iLXRpY2tldC7CoCBJdCBpcyBnaXZpbmcgdGhlIFVzZXIgc2VsZWN0aW9uIG92ZXIg
-cHJpbnRlcg0KY2FwYWJpbGl0aWVzLiBUbyBzdXBwb3J0IHRoaXMga2luZCBvZiBzZWxlY3Rpb24s
-IHdlIHdvdWxkIG5lZWQgYSBuZXcgQVBJDQpjYWxsZWQg4oCcc2V0IHByaW50ZXIgY2FwYWJpbGl0
-aWVz4oCdLsKgIMKgVGhlIGRyaXZlciwgZ2VuZXJpY2FsbHksIHJlbWVtYmVycyB0aGUNCnNldCBw
-cmludGVyIGNhcGFiaWxpdGllcyBhbmQgd2hlbiBzdGFydCBqb2IgaXMgY2FsbGVkIHdpdGggcHJp
-bnRlciBuYW1lIGl0DQp3aWxsIHVzZSB0aGUgc2V0dGluZ3MuDQoNCg0KDQpJZiBib3RoIDEuKSBh
-bmQgMi4pIGFyZSBpbXBsZW1lbnRlZCB0aGVuIGdyZWF0ZXIgZHluYW1pY3Mgb2YgdGhlIEFQSUVu
-dHJ5DQppcyBwb3NzaWJsZS4NCg0KDQoNCkkgcmVhbGx5IGRvbuKAmXQgdGhpbmsg4oCcc3RhcnQg
-am9i4oCdIGlzIHRoZSBiZXN0IHBsYWNlIGZvciB0aGUgQVBJRW50cnnigJlzIHRvIGJlDQpyZXR1
-cm5lZDsgYnV0IGZvciBub3cgaXQgYSBzdGFydGluZyBwb2ludCBmb3IgZGlzY3Vzc2lvbi4NCg0K
-DQoNClJnZHMsDQpHbGVuIFcuIFBldHJpZQ0KRXBzb24gSW1hZ2luZyBUZWNobm9sb2d5IENlbnRl
-cg0KMTUwIFJpdmVyIE9ha3MgUGFya3dheSwgU3VpdGUgMjAwDQpTYW4gSm9zZSwgQ0EsIDk1MTM0
-DQpWb2ljZTogNDA4LjU3Ni40MTMxwqAgRmF4OiA0MDguNDc0LjA1MTENCg0KDQpfX19fX19fX19f
-X19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fXw0KcHJpbnRpbmctZHJpdmVyIG1h
-aWxpbmcgbGlzdA0KcHJpbnRpbmctZHJpdmVyQG1haWwuZnJlZXN0YW5kYXJkcy5vcmcNCmh0dHA6
-Ly9tYWlsLmZyZWVzdGFuZGFyZHMub3JnL21haWxtYW4vbGlzdGluZm8vcHJpbnRpbmctZHJpdmVy
-DQo=
+Thank you, Glen!
 
+I will invesitage your comments and reply later.
 
+on 2004/04/20 2:35 Petrie, Glen said the following:
+> Hello,
+>=20
+> =20
+>=20
+> I have reviewed the vector driver specification in detail and have some=
+=20
+> questions.
+>=20
+> =20
+>=20
+> General Comments
+>=20
+> =20
+>=20
+> 1.        All API specifications must work on/from Mobile/IA Devices,=20
+> Desktop, Office and/to Production printing solutions.  Mobile/IA=20
+> solutions places memory constraints not considered in higher-end=20
+> solution; however, I believe and it has been the general consensus that=
+=20
+> APIs should take Mobile/IA memory constraints into consideration in=20
+> their design.
+>=20
+> 2.        To avoid the overhead associated with floating point; it has=20
+> generally been accepted that the API=92s not contain floating point num=
+bers.
+>=20
+> =20
+>=20
+> Specific comments
+>=20
+> =20
+>=20
+> 1.        It appears that the API comprehends only a single job at a=20
+> time.   This means the higher level systems must hold and manage jobs o=
+r=20
+> you are instantiating a new instance of the driver for each job. This=20
+> bring ups the issue of . . .
+>=20
+> a.    Based on general comment 1. above, multiple instantiations is not=
+=20
+> advisable.  I believe the solution is to have the driver API support=20
+> multiple Job across the API with a single instantiation of the driver.=20
+>  To do this, the first argument of each function call is not=20
+> printerContext but JobId.   A JobId structure (i.e. the job) would then=
+=20
+> contain the printerContext for the job.  There would be an API call to=20
+> set and get the printerContext for the job.
+>=20
+> 2.        Again based on the general comment 1. above, the issue of=20
+> memory does not really support an API that =93only=94 has string transf=
+er of=20
+> job, document and page key/value attributes.  This even more significan=
+t=20
+> since the Steering Committee has asked that the driver key/value be=20
+> aligned the with Job-Ticket list which is richer that the current Drive=
+r=20
+> API list.
+>=20
+> a.    I suggest that the US driver group investigate this as we extend=20
+> the Japanese Vector Driver API for Raster support.
+>=20
+> 3.        There appears to be some inconsistency between the Color=20
+> Spaces listed on Page 9 and Page 45.
+>=20
+> a.    Shouldn=92t there be just one Color Space list
+>=20
+> 4.        What is the =93Fix=94 data type?
+>=20
+> 5.        Based on general comment 2. above, I would like to suggest=20
+> changing the SetAlphaConstant and GetAlphaConstant from using a float=20
+> value to an integer that is 10 times or 100 times the need alpha=20
+> constant.  For example Alpha of 0.89 would be 89 in the API.
+>=20
+> 6.        Several of the US teams have adopted a stricter data sizing b=
+y=20
+> using a data type naming convention for simple types; for example, do=20
+> not use =93int=94 since it has no specific size and in API=92s where da=
+ta size=20
+> may matter, the use of =93int=94 in not recommended.  I would like to=20
+> suggest the #define be made for the following basic types which are=20
+> resolved at development time.
+>=20
+> a.    BIT8
+>=20
+> b.    INT8
+>=20
+> c.    BIT16
+>=20
+> d.    INT16
+>=20
+> e.    BIT32
+>=20
+> f.    INT32
+>=20
+> g.    BIT64
+>=20
+> h.    INT64
+>=20
+> 7.        In the TransferRasterData call the data to be transferred is=20
+> typed as =93unsigned char=94.  The size of =93char=94 is not technicall=
+y defined=20
+> in C (most people take it to be 8 bits) and I have worked on platforms=20
+> where a char is 32-bit in length =96 not 8-bit.   I suggest the type fo=
+r=20
+> =93data=94 be changed to BIT8.
+>=20
+> 8.        There appears to be some inconsistency in naming convention.=20
+>  Sometime two word variable names have the second work capitalized and=20
+> sometimes not.  Sometime arguments that are pointers start with a =93p=94=
+=20
+> and sometimes not.
+>=20
+> =20
+>=20
+> =20
+>=20
+> =20
+>=20
+> /Rgds, /
+> */Glen W. Petrie/*
+> /Epson Imaging Technology Center /
+> /150 River Oaks Parkway, Suite 200 /
+> /San Jose, CA, 95134 /
+> /Voice: 408.576.4131  Fax: 408.474.0511/
+>=20
+> =20
+>=20
+>=20
+> -----------------------------------------------------------------------=
+-
+>=20
+> _______________________________________________
+> printing-japan mailing list
+> printing-japan@mail.freestandards.org
+> http://mail.freestandards.org/mailman/listinfo/printing-japan
 
