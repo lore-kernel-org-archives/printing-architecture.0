@@ -1,11 +1,9 @@
-Message-ID: <116DB56CD7DED511BC7800508B2CA53735CF05@mailsrvnt02.enet.sharplabs.com>
-From: "McDonald, Ira" <imcdonald@sharplabs.com>
-Subject: RE: [Printing-architecture] [Backend Scenarios] Call for agenda 2
-	/27/03. . .
-Date: Wed, 26 Feb 2003 15:35:47 -0800
+Message-ID: <A134E2426B46D711BB4B000347AE6E7CE070E1@xvan02.vcd.hp.com>
+From: "HEMSTREET,CHARLES (HP-Vancouver,ex1)" <charles.hemstreet@hp.com>
+Date: Thu, 27 Feb 2003 10:42:54 -0500
 MIME-Version: 1.0
-Content-Type: text/plain;
-	charset="iso-8859-1"
+Content-Type: text/plain
+Subject: [Printing-architecture] Architecture meeting on 02/27/03...
 Sender: printing-architecture-admin@freestandards.org
 Errors-To: printing-architecture-admin@freestandards.org
 List-Help: <mailto:printing-architecture-request@freestandards.org?subject=help>
@@ -16,50 +14,29 @@ List-Id: <printing-architecture.freestandards.org>
 List-Unsubscribe: <http://freestandards.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@freestandards.org?subject=unsubscribe>
 List-Archive: <http://freestandards.org/pipermail/printing-architecture/>
-To: "'HEMSTREET,CHARLES (HP-Vancouver,ex1)'" <charles.hemstreet@hp.com>, "'printing-architecture@freestandards.org'" <printing-architecture@freestandards.org>
-Cc: 'Pete Zannucci' <pzaan@us.ibm.com>
-
-Hi Charles,
-
-We should review the Backend Scenarios that Pete Zannucci sent
-out on 6 Feb (full text of Pete's note is pasted below).
-
-Cheers,
-- Ira McDonald
-  High North Inc
-
-
------Original Message-----
-From: HEMSTREET,CHARLES (HP-Vancouver,ex1)
-[mailto:charles.hemstreet@hp.com]
-Sent: Tuesday, February 25, 2003 7:12 PM
-To: 'printing-architecture@freestandards.org'
-Subject: [Printing-architecture] Call for agenda 2/27/03. . .
-
+To: "'printing-architecture@freestandards.org'" <printing-architecture@freestandards.org>
 
 Folks:
 
-Looks like the listserver is back up and running.
+Phone/Passcode:
+* Dial-in  : 816.650.0688
+* passcode : 9 6 4 6 2 8
 
-Please send me your agenda items for our 02/27/03 architecture meeting.
+Thursday from 8-9 am PST, 9-10 am
+MST, 11-12 pm EST, 4-5 pm UTC.
+ 
 
-Thanks,
-Charles
+Agenda
 
-_______________________________________________
-Printing-architecture mailing list
-Printing-architecture@freestandards.org
-http://freestandards.org/mailman/listinfo/printing-architecture
+* Need attendance information for PWG
+* Review backend scenarios (Peter Zannucci)
 
-[Pete Zannucci's note]
 
-Folks,
+----------------------------------------------------------------------------
+----------
 
-Here is a rather simplistic grouping of scenarios that I could
-think of for the backend processing.  Please send me some
-feedback and also updates since this can get to be a very deep
-subject.
-
+Here is the backend information that we should review in todays architecture
+meeting:
 
 Backend scenarios - minus error and recovery function
 
@@ -156,11 +133,4 @@ IBM Linux Technology Center
 Open Source Software Development
 Omni Print Project http://sourceforge.net/projects/omniprint
 Austin, TX - Tel. 512-838-4687 (t/l 678) pzaan@us.ibm.com
-
-
-
-_______________________________________________
-Printing-architecture mailing list
-Printing-architecture@freestandards.org
-http://freestandards.org/mailman/listinfo/printing-architecture
 
