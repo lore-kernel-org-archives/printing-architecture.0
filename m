@@ -1,11 +1,11 @@
+Message-ID: <CFEE79A465B35C4385389BA5866BEDF00C7B0F@mailsrvnt02.enet.sharplabs.com>
+From: "McDonald, Ira" <imcdonald@sharplabs.com>
+Date: Wed, 30 Mar 2005 07:46:55 -0800
 MIME-Version: 1.0
-Message-ID: <OF57E674B1.6712035C-ON87256FCC.007181D4-87256FCC.00743806@us.ibm.com>
-From: Claudia Alimpich <alimpich@us.ibm.com>
-Date: Tue, 22 Mar 2005 14:09:22 -0700
 Content-Type: multipart/alternative;
-	boundary="=_alternative 0074380487256FCC_="
-Subject: [Printing-architecture] JTAPI Release Request sent to FSG
-	OpenPrinting Steering Committee
+	boundary="----_=_NextPart_001_01C5353F.6D914266"
+Subject: [Printing-architecture] FW: WIMS> Last Call for the Imaging
+	Services Counter Standard, Th e Counter Spec.
 List-Id: Printing architecture under linux
 	<printing-architecture.mail.freestandards.org>
 List-Unsubscribe: <http://mail.freestandards.org/mailman/listinfo/printing-architecture>,
@@ -15,64 +15,124 @@ List-Post: <mailto:printing-architecture@mail.freestandards.org>
 List-Help: <mailto:printing-architecture-request@mail.freestandards.org?subject=help>
 List-Subscribe: <http://mail.freestandards.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@mail.freestandards.org?subject=subscribe>
-To: printing-jobticket@freestandards.org, printing-architecture@freestandards.org, printing-announce@freestandards.org, printing-japan@base3.freestandards.org
+To: printing-sc@freestandards.org, "'printing-architecture@base3.freestandards.org'" <printing-architecture@base3.freestandards.org>
 
-This is a multipart message in MIME format.
---=_alternative 0074380487256FCC_=
-Content-Type: text/plain; charset="US-ASCII"
+This message is in MIME format. Since your mail reader does not understand
+this format, some or all of this message may not be legible.
 
-The JT WG has posted the JTAPI Release Request form to the FSG 
-OpenPrinting Steering Committee mailing list for their action during the 
-Steering Committee meeting planned for April 4th/5th, 2005. Pending their 
-approval of the JTAPI Release Request, the JTAPI Spec and header files 
-will be posted for review for a period of one month. The JTAPI Spec and 
-header files will be posted to the FSG OpenPrinting Job Ticketing, 
-Announce, Japan, and Architecture mailing lists. They will also be 
-forwarded to the CIP4 (JDF) Digital Printing working group forum by 
-Claudia Alimpich and forwarded to the PWG Announce mailing list by Ira 
-McDonald.
+------_=_NextPart_001_01C5353F.6D914266
+Content-Type: text/plain;
+	charset="ISO-8859-1"
 
-The JT WG meeting next week, Tuesday March 29th,  is cancelled. 
+FYI
+ 
 
-The JT WG will meet on Tuesday April 5th, following the April 4th/5th 
-Steering Committee meeting.
+Ira McDonald (Musician / Software Architect)
+Blue Roof Music / High North Inc
+PO Box 221  Grand Marais, MI  49839
+phone: +1-906-494-2434
+email: imcdonald@sharplabs.com 
 
-Following the posting of the JTAPI Spec and header files for review, the 
-JT WG will meet as required to address comments and questions. The 
-meetings will be at the regular Tuesday time, and will be announced on the 
-JT WG mailing list.
-
-Congratulations to the JT WG for a job well done and thank you all for 
-your hard work and commitment!
-Claudia Alimpich
---=_alternative 0074380487256FCC_=
-Content-Type: text/html; charset="US-ASCII"
+-----Original Message-----
+From: owner-wims@pwg.org [mailto:owner-wims@pwg.org]On Behalf Of
+wamwagner@comcast.net
+Sent: Tuesday, March 29, 2005 3:55 PM
+To: PWG-ANNOUNCE@pwg.org; wims@pwg.org
+Subject: WIMS> Last Call for the Imaging Services Counter Standard, The
+Counter Spec.
 
 
-<br><font size=2 face="sans-serif">The JT WG has posted the JTAPI Release
-Request form to the FSG OpenPrinting Steering Committee mailing list for
-their action during the Steering Committee meeting planned for April 4th/5th,
-2005. Pending their approval of the JTAPI Release Request, the JTAPI Spec
-and header files will be posted for review for a period of one month. The
-JTAPI Spec and header files will be posted to the FSG OpenPrinting Job
-Ticketing, Announce, Japan, and Architecture mailing lists. They will also
-be forwarded to the CIP4 (JDF) Digital Printing working group forum by
-Claudia Alimpich and forwarded to the PWG Announce mailing list by Ira
-McDonald.</font>
-<br>
-<br><font size=2 face="sans-serif">The JT WG meeting next week, Tuesday
-March 29th, &nbsp;is cancelled. </font>
-<br>
-<br><font size=2 face="sans-serif">The JT WG will meet on Tuesday April
-5th, following the April 4th/5th Steering Committee meeting.</font>
-<br>
-<br><font size=2 face="sans-serif">Following the posting of the JTAPI Spec
-and header files for review, the JT WG will meet <b>as required </b>to
-address comments and questions. The meetings will be at the regular Tuesday
-time, and will be announced on the JT WG mailing list.</font>
-<br>
-<br><font size=2 face="sans-serif">Congratulations to the JT WG for a job
-well done and thank you all for your hard work and commitment!</font>
-<br><font size=2 face="sans-serif">Claudia Alimpich</font>
---=_alternative 0074380487256FCC_=--
+
+In accord with the PWG process document,
+ftp://ftp.pwg.org/pub/pwg/general/pwg-process20.pdf
+<ftp://ftp.pwg.org/pub/pwg/general/pwg-process20.pdf> , the PWG Imaging
+Services Counter Standard has completed working group last call. The PWG
+-wide last call period for the Imaging Services Counter Standard is now open
+and will close on or about 1 May.
+
+The document, largely a product of Peter Zehler of Xerox, but with
+contributions from many others is posted at:
+
+ftp://ftp.pwg.org/pub/pwg/wims/wd/wd-wimscount10-20050329.doc
+<ftp://ftp.pwg.org/pub/pwg/wims/wd/wd-wimscount10-20050329.doc>  and
+
+ftp://ftp.pwg.org/pub/pwg/wims/wd/wd-wimscount10-20050329.pdf
+<ftp://ftp.pwg.org/pub/pwg/wims/wd/wd-wimscount10-20050329.pdf> .
+
+Please send any comments to the wims@pwg.org <mailto:wims@pwg.org>  list.
+Please do not respond  to the PWG-ANNOUNCE list.  
+
+Bill Wagner, Chairman WIMS Working Group
+
+ 
+
+ 
+
+------_=_NextPart_001_01C5353F.6D914266
+Content-Type: text/html;
+	charset="ISO-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD>
+<META HTTP-EQUIV=3D"Content-Type" CONTENT=3D"text/html; =
+charset=3DISO-8859-1">
+
+
+<META content=3D"MSHTML 6.00.2800.1491" name=3DGENERATOR></HEAD>
+<BODY>
+<DIV><FONT face=3DArial color=3D#0000ff size=3D4><SPAN=20
+class=3D773214615-30032005>FYI</SPAN></FONT></DIV>
+<DIV>&nbsp;</DIV>
+<P><FONT size=3D2>Ira McDonald (Musician / Software Architect)<BR>Blue =
+Roof Music=20
+/ High North Inc<BR>PO Box 221&nbsp; Grand Marais, MI&nbsp; =
+49839<BR>phone:=20
++1-906-494-2434<BR>email: imcdonald@sharplabs.com</FONT> </P>
+<DIV class=3DOutlookMessageHeader dir=3Dltr align=3Dleft><FONT =
+face=3DTahoma=20
+size=3D2>-----Original Message-----<BR><B>From:</B> owner-wims@pwg.org=20
+[mailto:owner-wims@pwg.org]<B>On Behalf Of=20
+</B>wamwagner@comcast.net<BR><B>Sent:</B> Tuesday, March 29, 2005 3:55=20
+PM<BR><B>To:</B> PWG-ANNOUNCE@pwg.org; wims@pwg.org<BR><B>Subject:</B> =
+WIMS&gt;=20
+Last Call for the Imaging Services Counter Standard, The Counter=20
+Spec.<BR><BR></FONT></DIV>
+<DIV>
+<DIV>
+<P><FONT face=3DArial size=3D2><SPAN style=3D"FONT-SIZE: 10pt; =
+FONT-FAMILY: Arial">In=20
+accord with the PWG process document, <A=20
+href=3D"ftp://ftp.pwg.org/pub/pwg/general/pwg-process20.pdf">ftp://ftp.p=
+wg.org/pub/pwg/general/pwg-process20.pdf</A>,=20
+the PWG Imaging Services Counter Standard has completed working group =
+last call.=20
+The PWG -wide last call period for the Imaging Services Counter =
+Standard is now=20
+open and will close</SPAN></FONT> on or about 1 May.</P>
+<P>The document, largely a product of Peter Zehler of Xerox, but with=20
+contributions from many others is&nbsp;posted at:</P>
+<P><A=20
+href=3D"ftp://ftp.pwg.org/pub/pwg/wims/wd/wd-wimscount10-20050329.doc">f=
+tp://ftp.pwg.org/pub/pwg/wims/wd/wd-wimscount10-20050329.doc</A>&nbsp;an=
+d</P>
+<P><A=20
+href=3D"ftp://ftp.pwg.org/pub/pwg/wims/wd/wd-wimscount10-20050329.pdf">f=
+tp://ftp.pwg.org/pub/pwg/wims/wd/wd-wimscount10-20050329.pdf</A>.</P>
+<P><FONT face=3DArial size=3D2><SPAN=20
+style=3D"FONT-SIZE: 10pt; FONT-FAMILY: Arial">Please send any comments =
+to the <A=20
+href=3D"mailto:wims@pwg.org">wims@pwg.org</A> list.</SPAN></FONT> =
+Please do=20
+not<FONT face=3DArial size=3D2><SPAN style=3D"FONT-SIZE: 10pt; =
+FONT-FAMILY: Arial">=20
+respond&nbsp; to the PWG-ANNOUNCE list.</SPAN></FONT>&nbsp; </P>
+<P><FONT face=3DArial size=3D2><SPAN=20
+style=3D"FONT-SIZE: 10pt; FONT-FAMILY: Arial">Bill Wagner, Chairman =
+WIMS Working=20
+Group</SPAN></FONT></P>
+<P>&nbsp;</P></DIV>
+<DIV>&nbsp;</DIV></DIV></BODY></HTML>
+
+------_=_NextPart_001_01C5353F.6D914266--
 
