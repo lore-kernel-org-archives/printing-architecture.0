@@ -1,10 +1,10 @@
-Message-ID: <116DB56CD7DED511BC7800508B2CA53735CF5F@mailsrvnt02.enet.sharplabs.com>
+Message-ID: <116DB56CD7DED511BC7800508B2CA53735CF60@mailsrvnt02.enet.sharplabs.com>
 From: "McDonald, Ira" <imcdonald@sharplabs.com>
-Date: Mon, 31 Mar 2003 08:45:41 -0800
+Date: Mon, 31 Mar 2003 08:51:05 -0800
 MIME-Version: 1.0
 Content-Type: text/plain;
 	charset="iso-8859-1"
-Subject: [Printing-architecture] FW: PWG SM> Thur 3 April 9am PST - Semantic Model Telecon
+Subject: [Printing-architecture] FW: PWG PSI> Fri 4 April 10am PST - Telecon/Webex
 Sender: printing-architecture-admin@freestandards.org
 Errors-To: printing-architecture-admin@freestandards.org
 List-Help: <mailto:printing-architecture-request@freestandards.org?subject=help>
@@ -16,74 +16,66 @@ List-Unsubscribe: <http://freestandards.org/mailman/listinfo/printing-architectu
 	<mailto:printing-architecture-request@freestandards.org?subject=unsubscribe>
 List-Archive: <http://freestandards.org/pipermail/printing-architecture/>
 To: printing-architecture@freestandards.org
+Cc: "'alan.berkema@hp.com'" <alan.berkema@hp.com>, "'HALL,DAVID (HP-Vancouver,ex1)'" <dhall@hp.com>
+
+Hi Alan and Dave,
+
+Thanks - forwarded herewith to FSG Architecture mailing list.
+
+Cheers,
+- Ira McDonald
+  High North Inc
 
 
 -----Original Message-----
-From: Zehler, Peter [mailto:PZehler@crt.xerox.com]
-Sent: Monday, March 31, 2003 8:26 AM
-To: PWG Semantic Model WG (E-mail)
-Cc: PWG Announce (E-mail)
-Subject: SM> Thur 3 April 9am PST SM Telecon
+From: BERKEMA,ALAN C (HP-Roseville,ex1) [mailto:alan.berkema@hp.com]
+Sent: Monday, March 31, 2003 10:19 AM
+To: pwg-announce@pwg.org; 'a PSI pwg.org'
+Cc: pwg@pwg.org
+Subject: PS> [PSI]: Friday Phone & Webex
 
 
-All,
 
-The Semantic Model group will be holding a teleconference on Thursday April
-3.  The primary focus of the teleconference is to complete the review of the
-Document Object Specification.  The current plan is to hold the
-teleconference from 12:00 to 3:00 eastern (9:00 to 12:00 Pacific).  The
-first hour we will discuss the latest schema (version 0.91) which will be
-posted some time this week.  The agenda and teleconference information is
-included below.  
+PSI Call
 
-Will anyone be able to host a Webex for this teleconference?
-___________________________________________________
-Agenda:
-12:00 to 12:10 EST (9:00 to 9:10 PST):
-   Intros & adjust agenda
-12:10 to 1:00 EST (9:10 to 10:00 PST) :
-   Schema review
-	Overview of changes
-	Discuss any issues
-	Schema structure and tool issues
-	Schema reuse discussion
-	Next steps
-1:00 to 1:10 EST (10:00 to 10:10 PST):
-    Intros & adjust agenda for Document Object
-1:10 to 3:00 EST (10:10 to 12:00 PST):
-    Document Object review
-	Priority issue discussion
-	Page turn review
-	Next steps
-___________________________________________________
-Dial in info:
+10:00AM - 12noon
+ 1:00PM - 3:00PM
 Dial-In #: +1 719-457-0335
 Participant Password: 400908# 
-___________________________________________________
-Webex info:
-TBD
-___________________________________________________
-Document Links:
-Document Object Specification:
-   ftp://ftp.pwg.org/pub/pwg/ipp/new_DOC/wd-ippdoc10-20030324.pdf.zip
-PWG Semantic Model Schema v0.91 (To be posted this week):
-   http://www.pwg.org/sm/index.html
-PWG Semantic Model v0.27 (To be posted later today):
-ftp://ftp.pwg.org/pub/pwg/Semantic-Model/wd-sm010-20030331.pdf
-___________________________________________________
 
+Will begin with an overview for FSG folks
+Next page turner for Last Call Comments
 
-				Peter Zehler
-				XEROX
-				Xerox Architecture Center
-				Email: PZehler@crt.xerox.com
-				Voice:    (585) 265-8755
-				FAX:      (585) 265-8871 
-				US Mail: Peter Zehler
-				        Xerox Corp.
-				        800 Phillips Rd.
-				        M/S 128-30E
-				        Webster NY, 14580-9701
+Dave can you pass this along to FSG?
 
+FIRST TIME USERS
+-------------------------
+For fully interactive meetings, including the ability
+to present your documents and applications, a one-time
+setup takes less than 10 minutes. Click this URL to set up now:
 
+https://hp.webex.com/join/
+
+Then click New User.
+
+Meeting Summary
+Meeting Name:  PSI Last Call Review I 
+Scheduled Time: 4/4/2003 at 10:00AM (GMT -08:00) Pacific Time, USA & Canada.
+Meeting Number: 21659206
+Any meeting attendee can use this number to join the meeting, at
+https://hp.webex.com/join/
+
+Password: newpsi
+
+----------------------------------------------------------------------------
+-------------------------------------------------------------------
+	
+Meeting Summary
+Meeting Name:  PSI Last Call Review II 
+Scheduled Time: 4/4/2003 at 1:00PM (GMT -08:00) Pacific Time, USA & Canada.
+Meeting Number: 26342152
+Any meeting attendee can use this number to join the meeting, at
+https://hp.webex.com/join/
+
+Password: newpsi
 
