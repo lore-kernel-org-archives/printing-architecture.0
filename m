@@ -1,10 +1,11 @@
-Message-ID: <116DB56CD7DED511BC7800508B2CA537B00218@mailsrvnt02.enet.sharplabs.com>
+Message-ID: <116DB56CD7DED511BC7800508B2CA537B00232@mailsrvnt02.enet.sharplabs.com>
 From: "McDonald, Ira" <imcdonald@sharplabs.com>
-Date: Wed, 5 Nov 2003 10:47:07 -0800 
+Date: Tue, 11 Nov 2003 13:09:00 -0800
 MIME-Version: 1.0
 Content-Type: text/plain;
 	charset="iso-8859-1"
-Subject: [Printing-architecture] PWG Dec 2003 and 2004 meeting schedules
+Subject: [Printing-architecture] FW: PWG> Printer Working Group Face to Face Meeting - December 2-
+ 5, 2003 - Provo, UT
 Sender: printing-architecture-admin@freestandards.org
 Errors-To: printing-architecture-admin@freestandards.org
 List-Help: <mailto:printing-architecture-request@freestandards.org?subject=help>
@@ -15,83 +16,104 @@ List-Id: <printing-architecture.freestandards.org>
 List-Unsubscribe: <http://freestandards.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@freestandards.org?subject=unsubscribe>
 List-Archive: <http://freestandards.org/pipermail/printing-architecture/>
-To: "PWG Announce (pwg-announce@pwg.org)" <pwg-announce@pwg.org>, printing-architecture@freestandards.org
+To: printing-architecture@freestandards.org
 
-Hi folks,                                    Wednesday (5 November 2003)
+Hi folks,
 
-The complete minutes from the October 2003 New York City IEEE/ISTO PWG
-Plenary (Wednesday) and Notification/Discovery BOF (Friday) are at:
-
-    ftp://ftp.pwg.org/pub/pwg/general/minutes/pwg-0310.pdf
-
-Below are quoted excerpts about schedules for upcoming IEEE/ISTO PWG
-meetings.
-
-Can FSG Open Printing project members attend any of these PWG meetings?
-
-Please send your comments on locations and times soon.  On the PWG
-reflector, please reply to 'pwg@pwg.org' and NOT to the PWG Announce
-list.  Thank you.
+Below are hotel details for PWG face-to-face at Novell in
+Provo, Utah on Tuesday (2 Dec) through Friday (5 Dec).
 
 Cheers,
-- Ira McDonald
-
-------------------------------------------------------------------------
-5.1 Next Face to Face
-
-The remaining PWG face-to-face meeting for 2003 is scheduled for the
-week of December 1 at Provo, Utah, and is being hosted by Novell.  It
-was agreed that, since this is the week following the Thanksgiving
-weekend, meetings would start on Tuesday 2 December.  Eight participants
-at the New York meeting indicated that they planned to attend the
-December meeting.  However, since the October attendance itself was
-light owing possibly to the cost of the New York meeting, it can be
-assumed that the turnout for Provo will be somewhat higher than that.
-Because Novell is providing the meeting room, the ISTO will not be
-requiring registration for the meeting.  However, a query will be sent
-out toward the middle of November to get an attendance count for
-planning purposes.
-
-The proposed schedule for the December meeting is:
-
-    Monday (travel after Thanksgiving weekend) - no meetings
-    Tuesday - WBMM
-    Wednesday - Plenary / Semantic Model
-    Thursday - PSI / IPP
-    Friday - Notification / Discovery
-
-------------------------------------------------------------------------
-5.2 Proposed Schedule for 2004
-
-The PWG has a good reputation for setting its meetings well in advance.
-Indeed, it is written in the governing PWG Process document that the
-schedule for the next year is to be published the preceding October.
-The Chairman therefore proposed a tentative schedule.  One of the
-subjects of the PWG steering committee help after the June meeting were
-the considerations in location and timing of face-to-face meetings (see
-next section).  The tentative schedule attempted to keep these
-considerations in mind.  The Microsoft meetings are, of course,
-dependent upon agreement with Microsoft.  The Vancouver and Montreal
-meetings (unlikely to both be held) are predicated on cost effectiveness
-of Canadian venues as well as the international venues.  The Wisconsin
-meeting would be to allow attendance of Ira McDonald, a major
-contributor to PWG efforts as well as to other standards and industry
-groups.
-
-    January - Florida, Las Vegas, or Microsoft
-    March/April - Washington DC
-    June - Vancouver BC or Microsoft
-    August - Montreal
-    Fall - Madison WI (Ira)
-    December - San Diego
-
-This schedule will need to be firmed up at the December meeting.
-Comments both at that meeting and on the reflector are solicited.
-
+- Ira
 
 Ira McDonald (Musician / Software Architect)
 Blue Roof Music / High North Inc
 PO Box 221  Grand Marais, MI  49839
 phone: +1-906-494-2434
 email: imcdonald@sharplabs.com
+
+-----Original Message-----
+From: a.leisz@ieee.org [mailto:a.leisz@ieee.org]
+Sent: Tuesday, November 11, 2003 3:13 PM
+To: pwg@pwg.org; pwg-announce@pwg.org
+Cc: a.s.patel@ieee.org
+Subject: PWG> Printer Working Group Face to Face Meeting - December 2-5,
+2003 - Provo, UT
+
+
+Hello Everyone,
+
+PWG has arranged sleeping room accommodations for the upcoming December
+2-5,2003 face-to-face meetings, being held at Novell Corporation in Provo,
+Utah. Hotel details are as follows:
+
+When:     Monday - Friday
+     December 1-5, 2003
+
+Where:    The Provo Courtyard by Marriott
+     1600 N Freedom (200 West) Boulevard
+     Provo, UT 84604
+     USA
+     Phone: 1 801-373-2222
+     Fax: 1 801-374-2207
+     www.courtyard.com/slcpr
+
+Hotel Specifications:
+*** Room block will be opened on Tuesday, November 11, 2003***
+The negotiated sleeping room rate with the hotel is US$79.00/night (plus
+10.89% tax), single or double occupancy. All attendees are responsible for
+making their own hotel reservations.  Please make your reservations by
+going to www.courtyard.com/slcpr and entering one of the following Group
+Access Codes:
+          If you would prefer a Deluxe King Room please enter Group Access
+Code: IEEIEEA
+          If you would prefer a Deluxe Room with two double beds please
+enter: IEEIEEB
+
+
+*** Please contact either Ami Patel at a.s.patel@ieee.org or Allison Leisz
+at a.leisz@ieee.org if for any reason you are unable to obtain the
+negotiated room rate. ***
+
+Check-In time at the Provo Courtyard by Marriott is 3:00pm and Check-Out
+time is 1:00pm.
+
+Deadline:
+Please make sleeping room reservations by November 21, 2003.
+
+Some Special Hotel Perks!:
+   Complimentary high-speed Internet access anywhere in the hotel
+   Complimentary shuttle service to & from Novell Corporation
+
+Meeting Venue:
+Novell Campus
+1800 South Novell Place
+Provo, UT 84606
+
+Tentative Meeting Agenda:
+Monday (travel after Thanksgiving weekend) - no meetings
+Tuesday - WBMM
+Wednesday - Plenary / Semantic Model
+Thursday - PSI / IPP
+Friday - Notification / Discovery
+
+There is no cost to attend these meetings, however, please register your
+attendance so that we can coordinate logistics with Novell. The
+corresponding website registration page will be up shortly.
+
+Please contact Ami Patel, IEEE-ISTO PWG Program Administrator at
++1-732-465-6477 or Allison Leisz, IEEE-ISTO PWG Assistant Program
+Administrator at +1-732-465-5855 if you have any questions.
+
+
+Kindest Regards,
+**********************************************************
+Allison Leisz
+C/o The Printer Working Group
+445 Hoes Lane
+Piscataway, NJ  08854
+Phone: +1 732 465 5855; Fax: +1 732 981 9473
+Email: a.leisz@ieee.org   URL: www.ieee-isto.org
+**********************************************************
+
 
