@@ -1,10 +1,9 @@
-Subject: Re: [Printing-architecture] Architecture meeting *UNABLE TO HOST* agenda
- 20030424. . .
-Message-ID: <OFFBF694C7.1671A88B-ON87256D12.0052EAC3@us.ibm.com>
+Message-ID: <OF2BBC6C3B.1DEEB77F-ON87256D12.0054DDEC@us.ibm.com>
 From: Claudia Alimpich <alimpich@us.ibm.com>
-Date: Thu, 24 Apr 2003 09:07:13 -0600
+Date: Thu, 24 Apr 2003 10:16:44 -0600
 MIME-Version: 1.0
 Content-type: text/plain; charset=US-ASCII
+Subject: [Printing-architecture] Architecture meeting notes 20030424
 Sender: printing-architecture-admin@freestandards.org
 Errors-To: printing-architecture-admin@freestandards.org
 List-Help: <mailto:printing-architecture-request@freestandards.org?subject=help>
@@ -20,73 +19,46 @@ To: printing-architecture@freestandards.org
 
 
 
-Some of us have called into the meeting so please call in if you can.
-      1-816-650-0688
-      964628
-Claudia
+Attendees:
+   Ira MacDonald
+   Norm Jacobs
+   Mark Hamzy
+   Till Kamppeter
+   Pete Zannucci
+   Claudia Alimpich
 
-"Charles Hemstreet" <charles_at_hp@hotmail.com>@freestandards.org on
-04/24/2003 02:52:59 AM
+Notes:
+1)  Ira gave an overview and status of a discussion that us going on in the
+PWG regarding the Document object spec. The Document object is currently
+being scrutinized. Print by reference is a concern because of security
+issues (need credentials). There may be two specs, one containing the
+required function and one containing optional function. It is likely that
+the design will change which could affect PAPI and the JTAPI. The plan was
+for PAPI to be enhanced to include Document support and the plan for JTAPI
+1.0 was to include some Document level support. There are a number of PWG
+notes that describes the issues. Ira will read them and summarize the
+issues for us (FSG) as well as posting the detailed notes to the FSG
+mailing list.
 
-Sent by:    printing-architecture-admin@freestandards.org
+2) Mark gave an overview of the Driver schedule that the Driver working
+group created on 4/21.  Code will be put on the SourceForge CVS site.
+Header files will be put there for review. See the note dated "Mon, 21 Apr
+2003 15:54:51 -0500" for the schedule dates. The Driver working group would
+like to announce the Driver API on or before the next FSG meeting which is
+scheduled for mid June 2003. Omni driver will most likely be a reference
+implementation and possibly the Epson driver as well.
 
-
-To:    printing-architecture@freestandards.org
-cc:
-Subject:    [Printing-architecture] Architecture meeting *UNABLE TO HOST*
-       agenda 20030424. . .
-
-
-
-Folks:
-
-I had to attend to a friend that needed emergency room care last night (I
-just got home at 1:00am) and will need to go back to help him at 6:00am.  I
-will not be able to host the meeting today.
-
-Sadly, we have not put together a plan for handling emergency situations
-such as this very event.  This topic needs to be addressed and resolved by
-next meeting.
-
-With regards to the architecture, we need to get back to focusing on the
-details rather than administrative tasks.  I think it would help pull us
-back on task if we put together a time line for our efforts.
-
-Here are example questions we might ask to help us pull together tasks and
-dates:
-
-  - What are the missing pieces?
-  - What are the incomplete pieces?
-  - What are the dependencies on the missing or incompletes?
-  - Who will work on what?  How long will it take?
-  - What supporting documentation do we need to write?
-  - Are we waiting for anything else?
-  - Do we have a deadline we are trying to meet?
-
-You get the idea.
-
-Mark Hamzy and Glen Petrie did a great job pulling together a roadmap for
-the driver subgroup.  I think we can leverage from the work that they
-established.
-
-If you do not think this is the right direction we need to take, please let
-me know.
-
-If you have additions to the above, please let me know.
-
-My apologies for the inconvenience,
-Charles
-
-
-_________________________________________________________________
-The new MSN 8: smart spam protection and 2 months FREE*
-http://join.msn.com/?page=features/junkmail
-
-
-_______________________________________________
-Printing-architecture mailing list
-Printing-architecture@freestandards.org
- http://freestandards.org/mailman/listinfo/printing-architecture
-
+3) May want to target an alpha implementation for the JTAPI since the path
+to getting a full function version may be too far off given the resources
+that can be applied. The JTAPI working group will discuss this option and
+work on a schedule during next Tuesday's wokring group meeting. We talked
+about creating the header files for the JTAPI in parallel with the JTAPI
+Spec where the JTAPI Spec would be a high level description of the JTAPI,
+including the UML diagrams, and then point to the header files (and
+describe the structure/relationships of the header files). The code and
+descriptive details of the JTAPI would be in the header files. This may
+enable us to produce the code interface sooner. It was also viewed to be
+positive to have the detailed documentation in the header files instead of
+in a separate spec.
 
 
