@@ -1,12 +1,11 @@
-From: "Glen Petrie" <glen.petrie@eitc.epson.com>
-Subject: RE: [Printing-architecture] Today's meeting - no initiator number to activate call
-Date: Thu, 29 May 2003 12:02:16 -0700
-Message-ID: <007a01c32614$d2edff40$11031f8a@GWPLAPTOP>
+Message-ID: <116DB56CD7DED511BC7800508B2CA53735D00B@mailsrvnt02.enet.sharplabs.com>
+From: "McDonald, Ira" <imcdonald@sharplabs.com>
+Subject: RE: [Printing-architecture] Today's meeting - no initiator number
+	 to activate call
+Date: Thu, 29 May 2003 12:13:23 -0700
 MIME-Version: 1.0
 Content-Type: text/plain;
-	charset="us-ascii"
-Content-Transfer-Encoding: 7bit
-In-Reply-To: <OFC4C12598.B9BFBE01-ON87256D35.0068BF22@us.ibm.com>
+	charset="iso-8859-1"
 Sender: printing-architecture-admin@freestandards.org
 Errors-To: printing-architecture-admin@freestandards.org
 List-Help: <mailto:printing-architecture-request@freestandards.org?subject=help>
@@ -19,25 +18,23 @@ List-Unsubscribe: <http://freestandards.org/mailman/listinfo/printing-architectu
 List-Archive: <http://freestandards.org/pipermail/printing-architecture/>
 To: 'Claudia Alimpich' <alimpich@us.ibm.com>, printing-architecture@freestandards.org
 
-The old number appears to work and we have the special code for that - do we
-want to transfer to the old call in number
+Hi Claudia,
 
-Rgds,
-Glen W. Petrie
-Manager, Software Printing Solutions
-Epson Imaging Technology Center
-150 River Oaks Parkway, Suite 200
-San Jose, CA, 95134
-Voice: 408.576.4131  Fax: 408.474.0511
+No - I don't have a number for Charles - guess we're out of luck.
+Tom's probably trying to join us too...sigh...
+
+Cheers,
+- Ira
+
 
 -----Original Message-----
-From: printing-architecture-admin@freestandards.org
-[mailto:printing-architecture-admin@freestandards.org]On Behalf Of Claudia
-Alimpich
-Sent: Thursday, May 29, 2003 12:06 PM
+From: Claudia Alimpich [mailto:alimpich@us.ibm.com]
+Sent: Thursday, May 29, 2003 3:06 PM
 To: printing-architecture@freestandards.org
-Subject: [Printing-architecture] Today's meeting - no initiator number to
-activate call
+Subject: [Printing-architecture] Today's meeting - no initiator number
+to activate call
+
+
 
 
 
@@ -53,5 +50,4 @@ _______________________________________________
 Printing-architecture mailing list
 Printing-architecture@freestandards.org
 http://freestandards.org/mailman/listinfo/printing-architecture
-
 
