@@ -1,10 +1,10 @@
-Message-ID: <116DB56CD7DED511BC7800508B2CA53735D083@mailsrvnt02.enet.sharplabs.com>
+Message-ID: <116DB56CD7DED511BC7800508B2CA53735D084@mailsrvnt02.enet.sharplabs.com>
 From: "McDonald, Ira" <imcdonald@sharplabs.com>
-Date: Mon, 30 Jun 2003 16:13:08 -0700
+Date: Mon, 30 Jun 2003 16:23:28 -0700
 MIME-Version: 1.0
 Content-Type: text/plain;
 	charset="iso-8859-1"
-Subject: [Printing-architecture] FW: PWG-ANNOUNCE> PWG Meeting Schedule
+Subject: [Printing-architecture] FW: IFX> New version of PDF/is specification is now available.
 Sender: printing-architecture-admin@freestandards.org
 Errors-To: printing-architecture-admin@freestandards.org
 List-Help: <mailto:printing-architecture-request@freestandards.org?subject=help>
@@ -17,11 +17,13 @@ List-Unsubscribe: <http://freestandards.org/mailman/listinfo/printing-architectu
 List-Archive: <http://freestandards.org/pipermail/printing-architecture/>
 To: printing-architecture@freestandards.org
 
-Hi,
+Hi folks,
 
-PWG meeting will NOT be scheduled in August (for UPnP).
-Next PWG meeting (joint w/ FSG??) will be October 6-10.
-See below.
+Latest draft of PDF/is (image streamable) from Rick Seeler (Adobe).
+You may wish to pick up the *630-rev.pdf version to see changes.
+
+Note that Rick maintains an up-to-date sample (a .pdf document) 
+that conforms to the latest spec - see below.
 
 Cheers,
 - Ira McDonald
@@ -29,29 +31,39 @@ Cheers,
 
 
 -----Original Message-----
-From: Harry Lewis [mailto:harryl@us.ibm.com]
-Sent: Monday, June 30, 2003 3:53 PM
-To: pwg-announce@pwg.org
-Subject: PWG-ANNOUNCE> Meeting Schedule
+From: Rick Seeler [mailto:rseeler@adobe.com]
+Sent: Monday, June 30, 2003 6:29 PM
+To: ifx@pwg.org
+Subject: IFX> New version of PDF/is specification is now available.
 
 
+IFXers,
 
-In Portland, there was some  thought that PWG would attempt to coordinate an
-August meeting with UPnP who were reported to be meeting in Irvine. I have
-just learned that UPnP Imaging (Print and Scan) will NOT meet in August.
-They are hoping to meet, at Microsoft, in September. 
+The latest version of the PDF/is specification has been posted to the PWG
+website:
 
-The next scheduled PWG meeting is October 6-10 in NYC.  I don't believe we
-can coordinate meetings with UPnP in such close (date) proximity. 
+ftp://pwg.org/pub/pwg/QUALDOCS/wd-pdfis10-20030630.pdf
+ftp://pwg.org/pub/pwg/QUALDOCS/wd-pdfis10-20030630.doc
 
-Current plan of record, then, is to wait until October for the next PWG
-meeting (aside from the PSI interop test in August, hosted by HP). 
----------------------------------------------- 
-Harry Lewis 
-Chairman - IEEE-ISTO Printer Working Group
-http://www.pwg.org
-IBM Printing Systems 
-http://www.ibm.com/printers
-303-924-5337
----------------------------------------------- 
+A version showing the changes:
+ftp://pwg.org/pub/pwg/QUALDOCS/wd-pdfis10-20030630-rev.pdf
+
+
+Here's what has changed in this revision:
+
+- Flate encoding may now be used to encode non-image streams.
+- JBIG2 Profile 2 has been added as Optional for the Producer and is
+Required of the Consumer.
+- Line feeds are now a single line-feed character (0x0A).
+- A new sample PDF has been generated that is compliant with the current
+spec.
+- General document cleanup.
+- Patent section has been added to the appendix:
+	- Xerox patents have been identified as possibly relevant to some
+implementations.
+	- The Adobe IP statement has been updated.
+
+
+-Rick
+
 
