@@ -1,9 +1,9 @@
-Message-ID: <OF99E022A0.7F3F7293-ON86256DD3.006FBD01-86256DD3.00700052@us.ibm.com>
-From: Mark Hamzy <hamzy@us.ibm.com>
-Date: Mon, 3 Nov 2003 14:23:21 -0600
+Message-ID: <OF4F16D838.A0888425-ON87256DD4.00776006@us.ibm.com>
+From: Claudia Alimpich <alimpich@us.ibm.com>
+Date: Tue, 4 Nov 2003 14:48:36 -0700
 MIME-Version: 1.0
 Content-type: text/plain; charset=US-ASCII
-Subject: [Printing-architecture] Monthly status due this week
+Subject: [Printing-architecture] JT WG  Oct-Nov Status report
 Sender: printing-architecture-admin@freestandards.org
 Errors-To: printing-architecture-admin@freestandards.org
 List-Help: <mailto:printing-architecture-request@freestandards.org?subject=help>
@@ -14,20 +14,14 @@ List-Id: <printing-architecture.freestandards.org>
 List-Unsubscribe: <http://freestandards.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@freestandards.org?subject=unsubscribe>
 List-Archive: <http://freestandards.org/pipermail/printing-architecture/>
-To: printing-driver@freestandards.org, printing-jobticket@freestandards.org, printing-spool@freestandards.org, printing-architecture@freestandards.org
+To: printing-jobticket@freestandards.org, printing-architecture@freestandards.org
 
 
 
 
-This month's deadline is Friday, November 7.
+The JT WG Oct-Nov status report is located at:
+   ftp://ftp.pwg.org/pub/pwg/fsg/status_reports/JT_WG_Status_07Nov2003.txt
 
-Please submit your monthly status report that covers work completed,
-ongoing
-work and planned work.
-
-Mark
-
-Take a look at the Linux Omni Printer Driver Framework at
-http://www.ibm.com/linux/ltc/projects/omni/
+Claudia
 
 
