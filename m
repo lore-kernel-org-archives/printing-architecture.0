@@ -1,8 +1,7 @@
-Message-ID: <116DB56CD7DED511BC7800508B2CA53735D0B2@mailsrvnt02.enet.sharplabs.com>
+Message-ID: <116DB56CD7DED511BC7800508B2CA53735D0B5@mailsrvnt02.enet.sharplabs.com>
 From: "McDonald, Ira" <imcdonald@sharplabs.com>
-Subject: RE: [Printing-architecture] Today (17 July) ?? -  Architecture me
-	eting notes 20030710...
-Date: Thu, 17 Jul 2003 08:59:58 -0700
+Subject: RE: [Printing-architecture] Yes - Today (17 July) ?? 
+Date: Thu, 17 Jul 2003 09:21:33 -0700
 MIME-Version: 1.0
 Content-Type: text/plain;
 	charset="iso-8859-1"
@@ -17,6 +16,47 @@ List-Unsubscribe: <http://freestandards.org/mailman/listinfo/printing-architectu
 	<mailto:printing-architecture-request@freestandards.org?subject=unsubscribe>
 List-Archive: <http://freestandards.org/pipermail/printing-architecture/>
 To: 'Charles Hemstreet' <charles_at_hp@hotmail.com>, printing-architecture@freestandards.org
+
+Yes!  See Mark's note with DIFFERENT call-in number below.
+
+Cheers,
+- Ira
+-------------------------------------------------
+
+Thursday, July 17
+
+NOTE: different number than usual.
+
+1200-1300 PST
+1300-1400 MST
+1400-1500 CST
+1500-1600 EST
+2000-2100 UTC
+
+Tie Line:    650-3239
+Toll Free:   1-800-497-2024
+Toll Number: 1-719-457-3821
+Passcode:     160458
+
+Mark
+
+Take a look at the Linux Omni Printer Driver Framework at
+http://www.ibm.com/linux/ltc/projects/omni/
+
+
+_______________________________________________
+Printing-architecture mailing list
+Printing-architecture@freestandards.org
+http://freestandards.org/mailman/listinfo/printing-architecture
+
+
+-----Original Message-----
+From: McDonald, Ira [mailto:imcdonald@sharplabs.com]
+Sent: Thursday, July 17, 2003 12:00 PM
+To: 'Charles Hemstreet'; printing-architecture@freestandards.org
+Subject: RE: [Printing-architecture] Today (17 July) ?? - Architecture
+me eting notes 20030710...
+
 
 Hi Charles,
 
@@ -191,6 +231,11 @@ _________________________________________________________________
 Tired of spam? Get advanced junk mail protection with MSN 8. 
 http://join.msn.com/?page=features/junkmail
 
+
+_______________________________________________
+Printing-architecture mailing list
+Printing-architecture@freestandards.org
+http://freestandards.org/mailman/listinfo/printing-architecture
 
 _______________________________________________
 Printing-architecture mailing list
