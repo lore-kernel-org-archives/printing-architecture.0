@@ -1,11 +1,10 @@
-Message-ID: <CFEE79A465B35C4385389BA5866BEDF00C772B@mailsrvnt02.enet.sharplabs.com>
+Message-ID: <CFEE79A465B35C4385389BA5866BEDF00C772D@mailsrvnt02.enet.sharplabs.com>
 From: "McDonald, Ira" <imcdonald@sharplabs.com>
-Date: Thu, 17 Jun 2004 10:15:07 -0700
+Date: Fri, 18 Jun 2004 11:33:17 -0700
 MIME-Version: 1.0
-Content-Type: text/plain;
-	charset="iso-8859-1"
-Subject: [Printing-architecture] RE: Query - Joint FSG/PWG face-to-face in
-	San Antonio (15-17 Nov 2004	)
+Content-Type: multipart/mixed; boundary="----_=_NextPart_000_01C45562.7922825A"
+Subject: [Printing-architecture] FW: [Printing-sc] FSG OP Steering committee
+	action items
 List-Id: Printing architecture under linux
 	<printing-architecture.mail.freestandards.org>
 List-Unsubscribe: <http://mail.freestandards.org/mailman/listinfo/printing-architecture>,
@@ -15,83 +14,141 @@ List-Post: <mailto:printing-architecture@mail.freestandards.org>
 List-Help: <mailto:printing-architecture-request@mail.freestandards.org?subject=help>
 List-Subscribe: <http://mail.freestandards.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@mail.freestandards.org?subject=subscribe>
-To: 'Till Kamppeter' <till.kamppeter@gmx.net>, "McDonald, Ira" <imcdonald@sharplabs.com>
-Cc: "'Petrie, Glen'" <glen.petrie@eitc.epson.com>, 'Claudia Alimpich' <alimpich@us.ibm.com>, "'pwg@pwg.org'" <pwg@pwg.org>, printing-architecture@freestandards.org, printing-sc@freestandards.org
+To: printing-architecture@freestandards.org
+
+This message is in MIME format. Since your mail reader does not understand
+this format, some or all of this message may not be legible.
+
+------_=_NextPart_000_01C45562.7922825A
+Content-Type: multipart/alternative;
+	boundary="----_=_NextPart_001_01C45562.7922825A"
+
+
+------_=_NextPart_001_01C45562.7922825A
+Content-Type: text/plain;
+	charset="iso-8859-1"
 
 Hi,
-
-Like Till, I could come if a sponsor pays for my travel and
-hotel.
-
-Cheers,
+ 
+Please look at action items for working groups you're active in.
+New dates have just been assigned to some near-term action
+items at our recent Steering Committee telecon.
+ 
+Thanks,
 - Ira
+ 
 
 Ira McDonald (Musician / Software Architect)
 Blue Roof Music / High North Inc
 PO Box 221  Grand Marais, MI  49839
 phone: +1-906-494-2434
-email: imcdonald@sharplabs.com
+email: imcdonald@sharplabs.com 
 
 -----Original Message-----
-From: Till Kamppeter [mailto:till.kamppeter@gmx.net]
-Sent: Wednesday, June 16, 2004 1:58 PM
-To: McDonald, Ira
-Cc: printing-architecture@freestandards.org;
-printing-sc@freestandards.org; 'pwg@pwg.org'; 'Claudia Alimpich';
-'Petrie, Glen'
-Subject: Re: Query - Joint FSG/PWG face-to-face in San Antonio (15-17
-Nov 2004 )
+From: printing-sc-bounces@base3.freestandards.org
+[mailto:printing-sc-bounces@base3.freestandards.org]On Behalf Of Mark Hamzy
+Sent: Thursday, June 17, 2004 3:20 PM
+To: printing-sc@freestandards.org
+Subject: [Printing-sc] Steering committee action items
 
 
-I can come if someone pays the travel and the hotel for me.
 
-    Till
+The latest version of the steering committee actions items are at:
+ftp://ftp.pwg.org/pub/pwg/fsg/steering_committee/
+<ftp://ftp.pwg.org/pub/pwg/fsg/steering_committee/> 
+ftp://ftp.pwg.org/pub/pwg//fsg/steering_committee/FSG-SC%20Action%20Items%20
+060804.sxw
+<ftp://ftp.pwg.org/pub/pwg//fsg/steering_committee/FSG-SC%20Action%20Items%2
+0060804.sxw> 
+ftp://ftp.pwg.org/pub/pwg//fsg/steering_committee/FSG-SC%20Action%20Items%20
+060804.pdf
+<ftp://ftp.pwg.org/pub/pwg//fsg/steering_committee/FSG-SC%20Action%20Items%2
+0060804.pdf> 
 
-McDonald, Ira wrote:
-> Hi,
-> 
-> *** Please respond quickly if you _can_ attend or _cannot_ 
-> attend this proposed meeting, using 'reply all'.  I will
-> consolidate replies across the three mailing lists. ***
-> 
-> Yesterday, in the FSG Open Printing Job Ticket working group,
-> Glen Petrie, Claudia Alimpich, Till Kamppeter, and I discussed
-> possible dates in 2004 for a joint FSG/PWG face-to-face.  We
-> looked at the current PWG scheduled meetings Harry Lewis posted.
-> 
-> The only plausible candidate we found was San Antonio, Texas, in
-> November.  We suggest running parallel meetings on Monday and 
-> Tuesday and then having a joint plenary on Wednesday morning.
-> 
-> Monday - 15 November 2004
->   PWG - TBD 
->   FSG - Open Printing International Steering Committee
-> 
-> Tuesday - 16 November 2004
->   PWG - WIMS (Web-based Imaging Management Service)
->   FSG - Open Printing WG meetings (JT, Driver, etc.)
-> 
-> Wednesday - 17 November 2004
->   PWG - Joint Plenary (morning)
->       - TBD (afternoon)
->   FSG - Joint Plenary (morning)
->       - TBD (afternoon)
-> 
-> Thursday - 18 November 2004
->   IEEE P2600 
-> 
-> Friday - 19 November 2004
->   IEEE P2600
-> 
-> Cheers,
-> - Ira
-> 
-> 
-> Ira McDonald (Musician / Software Architect)
-> Blue Roof Music / High North Inc
-> PO Box 221  Grand Marais, MI  49839
-> phone: +1-906-494-2434
-> email: imcdonald@sharplabs.com
-> 
-> 
+Mark
+
+Take a look at the Linux Omni Printer Driver Framework at
+http://www.ibm.com/linux/ltc/projects/omni/
+<http://www.ibm.com/linux/ltc/projects/omni/> 
+
+
+------_=_NextPart_001_01C45562.7922825A
+Content-Type: text/html;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD>
+<META HTTP-EQUIV=3D"Content-Type" CONTENT=3D"text/html; =
+charset=3Diso-8859-1">
+
+
+<META content=3D"MSHTML 6.00.2800.1276" name=3DGENERATOR></HEAD>
+<BODY>
+<DIV><FONT face=3DArial color=3D#0000ff size=3D2><SPAN=20
+class=3D236103318-18062004>Hi,</SPAN></FONT></DIV>
+<DIV><FONT face=3DArial color=3D#0000ff size=3D2><SPAN=20
+class=3D236103318-18062004></SPAN></FONT>&nbsp;</DIV>
+<DIV><FONT face=3DArial color=3D#0000ff size=3D2><SPAN =
+class=3D236103318-18062004>Please=20
+look at action items for working groups you're active =
+in.</SPAN></FONT></DIV>
+<DIV><FONT face=3DArial color=3D#0000ff size=3D2><SPAN =
+class=3D236103318-18062004>New=20
+dates have just been assigned to some near-term =
+action</SPAN></FONT></DIV>
+<DIV><FONT face=3DArial color=3D#0000ff size=3D2><SPAN =
+class=3D236103318-18062004>items=20
+at our recent Steering Committee telecon.</SPAN></FONT></DIV>
+<DIV><FONT face=3DArial color=3D#0000ff size=3D2><SPAN=20
+class=3D236103318-18062004></SPAN></FONT>&nbsp;</DIV>
+<DIV><FONT face=3DArial color=3D#0000ff size=3D2><SPAN=20
+class=3D236103318-18062004>Thanks,</SPAN></FONT></DIV>
+<DIV><FONT face=3DArial color=3D#0000ff size=3D2><SPAN =
+class=3D236103318-18062004>-=20
+Ira</SPAN></FONT></DIV>
+<DIV>&nbsp;</DIV>
+<P><FONT size=3D2>Ira McDonald (Musician / Software Architect)<BR>Blue =
+Roof Music=20
+/ High North Inc<BR>PO Box 221&nbsp; Grand Marais, MI&nbsp; =
+49839<BR>phone:=20
++1-906-494-2434<BR>email: imcdonald@sharplabs.com</FONT> </P>
+<DIV class=3DOutlookMessageHeader dir=3Dltr align=3Dleft><FONT =
+face=3DTahoma=20
+size=3D2>-----Original Message-----<BR><B>From:</B>=20
+printing-sc-bounces@base3.freestandards.org=20
+[mailto:printing-sc-bounces@base3.freestandards.org]<B>On Behalf Of =
+</B>Mark=20
+Hamzy<BR><B>Sent:</B> Thursday, June 17, 2004 3:20 PM<BR><B>To:</B>=20
+printing-sc@freestandards.org<BR><B>Subject:</B> [Printing-sc] Steering =
+
+committee action items<BR><BR></FONT></DIV>
+<P>The latest version of the steering committee actions items are =
+at:<BR><A=20
+href=3D"ftp://ftp.pwg.org/pub/pwg/fsg/steering_committee/">ftp://ftp.pwg=
+.org/pub/pwg/fsg/steering_committee/</A><BR><A=20
+href=3D"ftp://ftp.pwg.org/pub/pwg//fsg/steering_committee/FSG-SC%20Actio=
+n%20Items%20060804.sxw">ftp://ftp.pwg.org/pub/pwg//fsg/steering_committe=
+e/FSG-SC%20Action%20Items%20060804.sxw</A><BR><A=20
+href=3D"ftp://ftp.pwg.org/pub/pwg//fsg/steering_committee/FSG-SC%20Actio=
+n%20Items%20060804.pdf">ftp://ftp.pwg.org/pub/pwg//fsg/steering_committe=
+e/FSG-SC%20Action%20Items%20060804.pdf</A><BR><BR>Mark<BR><BR>Take=20
+a look at the Linux Omni Printer Driver Framework at<BR><A=20
+href=3D"http://www.ibm.com/linux/ltc/projects/omni/">http://www.ibm.com/=
+linux/ltc/projects/omni/</A></P></BODY></HTML>
+
+------_=_NextPart_001_01C45562.7922825A--
+
+------_=_NextPart_000_01C45562.7922825A
+Content-Type: text/plain;
+	name="ATT88158.txt"
+Content-Disposition: attachment;
+	filename="ATT88158.txt"
+
+_______________________________________________
+Printing-sc mailing list
+Printing-sc@mail.freestandards.org
+http://mail.freestandards.org/mailman/listinfo/printing-sc
+
+------_=_NextPart_000_01C45562.7922825A--
 
