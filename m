@@ -1,11 +1,10 @@
-Message-ID: <CFEE79A465B35C4385389BA5866BEDF00C784A@mailsrvnt02.enet.sharplabs.com>
+Message-ID: <CFEE79A465B35C4385389BA5866BEDF00C784B@mailsrvnt02.enet.sharplabs.com>
 From: "McDonald, Ira" <imcdonald@sharplabs.com>
-Date: Tue, 24 Aug 2004 14:52:58 -0700
+Date: Tue, 24 Aug 2004 15:07:17 -0700
 MIME-Version: 1.0
 Content-Type: text/plain;
 	charset="ISO-8859-1"
-Subject: [Printing-architecture] FW: PWG> Posted Micro Job Ticket draft (24
-	August 2004)
+Subject: [Printing-architecture] FW: PAPI v1.0 final functionality
 List-Id: Printing architecture under linux
 	<printing-architecture.mail.freestandards.org>
 List-Unsubscribe: <http://mail.freestandards.org/mailman/listinfo/printing-architecture>,
@@ -17,24 +16,32 @@ List-Subscribe: <http://mail.freestandards.org/mailman/listinfo/printing-archite
 	<mailto:printing-architecture-request@mail.freestandards.org?subject=subscribe>
 To: printing-architecture@freestandards.org
 
------Original Message-----
-From: owner-pwg@pwg.org [mailto:owner-pwg@pwg.org]On Behalf Of McDonald,
-Ira
-Sent: Tuesday, August 24, 2004 5:50 PM
-To: 'pwg@pwg.org'
-Subject: PWG> Posted Micro Job Ticket draft (24 August 2004)
+Hi,
 
+Forwarded again to FSG/OP Architecture list, per request
+yesterday of Glen Petrie during our FSG/OP Int'l Steering
+Committee teleconference.
 
-Hi folks,                                       Tuesday (24 August 2004)
+PLEASE review Norm's short note below and reply with your
+opinions - please don't just be silent!
 
-[for comments from designers and implementors and for review at the next
-PWG face-to-face in Lexington in October]
+Earlier today during our FSG/OP Job Ticket teleconference,
+we decided to revisit the extent of Document object support
+in JTAPI/1.0 (the January 2005 version) after the decision
+on inclusion/exclusion of Document object in PAPI/1.0.
 
-I have just posted a Micro Job Ticket draft:
+The normative definition of the abstract Document object
+is IEEE/ISTO PWG Candidate Standard 5100.5 (October 2003).
 
-    ftp://ftp.pwg.org/pub/pwg/BOFs/mjt/tb-mjt10-20040824.htm
+Earlier today during our FSG/OP Job Ticket teleconference,
+we discussed and REJECTED adding support for Page Overrides,
+IEEE/ISTO PWG Candidate Standard 5100.6 (October 2003).
 
-Below are:  (a) abstract; (b) change log.
+Personally, I also suggest that PAPI/1.0 should add the
+important attributes defined in the Job Extensions spec,
+IEEE/ISTO PWG Candidate Standard 5100.7 (October 2003),
+for example "job-mandatory-attributes" which is used in
+JTAPI/1.0.
 
 Cheers,
 - Ira
@@ -45,40 +52,175 @@ PO Box 221  Grand Marais, MI  49839
 phone: +1-906-494-2434
 email: imcdonald@sharplabs.com
 
-------------------------------------------------------------------------
+-----Original Message-----
+From: printing-spool-bounces@base3.freestandards.org
+[mailto:printing-spool-bounces@base3.freestandards.org]On Behalf Of Norm
+Jacobs
+Sent: Thursday, July 29, 2004 6:39 PM
+To: printing-spool@freestandards.org;
+printing-architecture@freestandards.org
+Subject: [printing-spool] PAPI v1.0 final functionality
 
-Abstract:  This document defines the semantics and encoding for the
-PWG Micro Job Ticket v1.0 (MJT/1.0).  A mobile device (e.g., digital
-camera or cell phone) can transfer a standard MJT/1.0 job ticket via
-removable media (e.g., memory card or DVD), direct connect (e.g., USB
-or parallel), or network interface (e.g., IEEE 802.11 or Ethernet) to
-a print service or a print device.
 
-For industry coherence, this document imports the semantics (but not
-the encoding) of the Job and Document objects and selected attributes
-from the PWG Semantic Model [PWG5105.1].
 
-In order to support low-cost mobile devices, this document defines a
-compact string encoding (non-XML) for the MJT/1.0, using minimal
-markup and numeric tokens in place of textual attribute names and
-values.  This encoding also allows the inclusion of vendor extensions
-as well as other attributes from the complete PWG Semantic Model.
+I am proposing that we add content to cover the following areas prior to
+finalizing v1.0 of the spec.
 
-------------------------------------------------------------------------
+	Creation of a Document object
 
-[changes from previous draft for CE BOF in May 2004]
+	Administrative operations
+		Add/Remove destination (printer/queue)
+			(modify is already in the spec. but may need a
+			 more complete description.)
+		Enable/Disable destination (printer/queue)
+			Enable/Disable job creation on a
+			particular destination.
+		Promote Job
+			make a job the next one to process.
 
-(1) Minor editorial changes.
+If there is anything else that others would like to add, please bring
+it up now.  I would like to finalize the content of PAPI v1.0 in the
+next few weeks so that there is some small chance that it can be
+completed this fall.
 
-(2) Renamed document from 'Simple Job Ticket' to 'Micro Job Ticket',
-    per suggestion of Harry Lewis (IBM).
+	-Norm
 
-(3) Changed structural markup delimiter from dot '.' to caret '^',
-    per suggestion of Pete Zehler (Xerox) in Montreal 16 August 2004.
+More detail on document object interfaces will follow next week (I
+hope), but I propose that the additions for new administrative
+operations be as follows.
 
-(4) Revised "JobMedia" attribute to correctly reference "media-size" and
-    "media-type" attributes in PWG 5100.3 for normative definitions,
-    per suggestion of Fumio Nagasaka (Epson).
+papi_status_t papiPrinterAdd(papi_service_t handle, char *printer_name,
+		papi_attribute_t **attributes, papi_printer_t *printer);
+INPUTS
+	handle	- Handle to the print service on which to create the
+		  printer object.
+	name	- Name or URI of the printer to be created
+	attrs	- Attributes to associate with the printer object
+		  being created.
+OUTPUTS
+	printer	- The printer object created on the print service.
+RETURNS
+	If successful, a value of PAPI_OK is returned.  Otherwise an
+	appropriate failure value is returned.
+EXAMPLE
+	papi_status_t status;
+	papi_service_t svc = NULL;
+	papi_attribute_t **attrs = NULL;
+	papi_printer_t printer = NULL;
+	...
+	papiAttributeListAddString(&attrs, PAPI_EXCL,
+			"device-uri", "socket://printer:9100");
+	papiAttributeListAddString(&attrs, PAPI_ATTR_APPEND,
+			"document-format-supported", "application/ps");
+	papiAttributeListAddString(&attrs, PAPI_ATTR_APPEND,
+			"document-format-supported", "text/plain");
+	papiAttributeListAddInteger(&attrs, PAPI_EXCL,
+			"copies-default", 3);
+	...
+	status = papiPrinterAdd(svc, "ipp://server/printers/triplicate",
+			attrs, &result);
+	papiAttributeListFree(attrs);
 
-------------------------------------------------------------------------
+	if (status != PAPI_OK) {
+		/* report a failure */
+	}
+
+	if (result != NULL) {
+		/* dump the printer info */
+
+		papiPrinterFree(result);
+	}
+	...
+	papiServiceDestroy(svc);
+
+papi_status_t papiPrinterRemove(papi_service_t handle, char
+*printer_name);
+INPUTS
+	handle	- Handle to the print service from which to remove the
+		  printer object.
+	name	- Name or URI of the printer to be removed.
+RETURNS
+	If successful, a value of PAPI_OK is returned.  Otherwise an
+	appropriate failure value is returned.
+EXAMPLE
+	papi_status_t status;
+	papi_service_t svc = NULL;
+	...
+	status = papiPrinterRemove(svc, "ipp://server/printers/triplicate");
+	if (status != PAPI_OK) {
+		/* report a failure */
+	}
+	...
+	papiServiceDestroy(svc);
+
+papi_status_t papiPrinterEnable(papi_service_t handle, char
+*printer_name);
+INPUTS
+	handle	- Handle to the print service on which to enable job
+		  creation for the printer object.
+	name	- Name or URI of the printer to be enabled
+RETURNS
+	If successful, a value of PAPI_OK is returned.  Otherwise an
+	appropriate failure value is returned.
+EXAMPLE
+	papi_status_t status;
+	papi_service_t svc = NULL;
+	...
+	status = papiPrinterEnable(svc, "ipp://server/printers/triplicate");
+	if (status != PAPI_OK) {
+		/* report a failure */
+	}
+	Dis.
+	papiServiceDestroy(svc);
+
+papi_status_t papiPrinterDisable(papi_service_t handle, char
+*printer_name,
+		char *message);
+INPUTS
+	handle	- Handle to the print service on which to disable job
+		  creation for the printer object.
+	name	- Name or URI of the printer to be disabled
+	message	- an optional reason for disabling the print queue. 
+RETURNS
+	If successful, a value of PAPI_OK is returned.  Otherwise an
+	appropriate failure value is returned.
+EXAMPLE
+	papi_status_t status;
+	papi_service_t svc = NULL;
+	...
+	status = papiPrinterDisable(svc, "ipp://server/printers/triplicate",
+			"because it's Tuesday");
+	if (status != PAPI_OK) {
+		/* report a failure */
+	}
+	...
+	papiServiceDestroy(svc);
+
+papi_status_t papiJobPromote(papi_service_t handle, char *printer_name,
+		int32_t job_id);
+INPUTS
+	handle	- Handle to the print service on which the job resides.
+	name	- Name or URI of the printer associated with the job.
+	job_id	- Id number of the job to promote.
+RETURNS
+	If successful, a value of PAPI_OK is returned.  Otherwise an
+	appropriate failure value is returned.
+EXAMPLE
+	papi_status_t status;
+	papi_service_t svc = NULL;
+	...
+	status = papiJobPromote(svc, "ipp://server/printers/triplicate",
+12);
+	if (status != PAPI_OK) {
+		/* report a failure */
+	}
+	...
+	papiServiceDestroy(svc);
+
+
+
+_______________________________________________
+printing-spool mailing list
+printing-spool@mail.freestandards.org
+http://mail.freestandards.org/mailman/listinfo/printing-spool
 
