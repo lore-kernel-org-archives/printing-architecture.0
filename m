@@ -1,11 +1,11 @@
-Message-ID: <2F7D63A21DB2C74EB8EB8C09AF667DB06EF6DC@eitc220.eitc.epson.com>
-From: "Petrie, Glen" <glen.petrie@EITC.EPSON.com>
-Date: Mon, 24 May 2004 09:57:09 -0700
+Message-ID: <2F7D63A21DB2C74EB8EB8C09AF667DB06EF6FE@eitc220.eitc.epson.com>
+From: "Petrie, Glen" <glen.petrie@eitc.epson.com>
+Date: Tue, 25 May 2004 12:54:51 -0700
 MIME-Version: 1.0
 Content-Type: multipart/alternative;
-	boundary="----_=_NextPart_001_01C441B0.26D6D700"
-Subject: [Printing-architecture] I will be able to attend May 27th or June
-	3rd Arch Meeting [eom]
+	boundary="----_=_NextPart_001_01C44292.24174620"
+Subject: [Printing-architecture] FSG Job Ticket White Paper for Software
+	Development
 List-Id: Printing architecture under linux
 	<printing-architecture.mail.freestandards.org>
 List-Unsubscribe: <http://mail.freestandards.org/mailman/listinfo/printing-architecture>,
@@ -15,15 +15,62 @@ List-Post: <mailto:printing-architecture@mail.freestandards.org>
 List-Help: <mailto:printing-architecture-request@mail.freestandards.org?subject=help>
 List-Subscribe: <http://mail.freestandards.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@mail.freestandards.org?subject=subscribe>
-To: printing-architecture@freestandards.org
+To: printing-sc@freestandards.org, printing-japan@freestandards.org
+Cc: printing-jobticket@freestandards.org, printing-architecture@freestandards.org
 
 This message is in MIME format. Since your mail reader does not understand
 this format, some or all of this message may not be legible.
 
-------_=_NextPart_001_01C441B0.26D6D700
+------_=_NextPart_001_01C44292.24174620
 Content-Type: text/plain
 
+All,
+
  
+
+Please find referenced below the on-time completion of the Job Ticket White
+Paper for Software Development.  This White Paper is in response to the
+action item -
+
+ 
+
+Action Item Number: 2001
+
+Team              : US
+
+Action Item       : The job ticket group will submit a white 
+
+                    paper to the Japanese team. This white 
+
+                    paper will ask the Japanese government 
+
+                    for funding to create a reference 
+
+                    implementation of the job ticket
+                    specification.
+
+How to do         : Write a white paper
+
+Who will do       : Job Ticket Group
+
+By When           : May 2004
+
+ 
+
+ 
+
+----------------
+
+White Paper located at -
+
+ 
+
+ftp://ftp.pwg.org/pub/pwg/fsg/jobticket/JTAPI-WhitePaper/
+<ftp://ftp.pwg.org/pub/pwg/fsg/jobticket/JTAPI-WhitePaper/>
+jtapi-whitepaper--v01.00-2004.05.24.doc
+
+ftp://ftp.pwg.org/pub/pwg/fsg/jobticket/JTAPI-WhitePaper/jtapi-whitepaper--v
+01.00-2004.05.24.pdf
 
  
 
@@ -37,7 +84,7 @@ Voice: 408.576.4131  Fax: 408.474.0511
  
 
 
-------_=_NextPart_001_01C441B0.26D6D700
+------_=_NextPart_001_01C44292.24174620
 Content-Type: text/html
 Content-Transfer-Encoding: quoted-printable
 
@@ -108,7 +155,130 @@ div.Section1
 
 <p class=3DMsoNormal><font size=3D2 face=3D"Courier New"><span =
 style=3D'font-size:10.0pt;
+font-family:"Courier New"'>All,<o:p></o:p></span></font></p>
+
+<p class=3DMsoNormal><font size=3D2 face=3D"Courier New"><span =
+style=3D'font-size:10.0pt;
 font-family:"Courier New"'><o:p>&nbsp;</o:p></span></font></p>
+
+<p class=3DMsoNormal><font size=3D2 face=3D"Courier New"><span =
+style=3D'font-size:10.0pt;
+font-family:"Courier New"'>Please find referenced below the on-time =
+completion
+of the Job Ticket White Paper for Software Development. &nbsp;This =
+White Paper
+is in response to the action item &#8211;<o:p></o:p></span></font></p>
+
+<p class=3DMsoNormal><font size=3D2 face=3D"Courier New"><span =
+style=3D'font-size:10.0pt;
+font-family:"Courier New"'><o:p>&nbsp;</o:p></span></font></p>
+
+<p class=3DMsoNormal><font size=3D2 face=3D"Courier New"><span =
+style=3D'font-size:10.0pt;
+font-family:"Courier New"'>Action Item Number: =
+2001<o:p></o:p></span></font></p>
+
+<p class=3DMsoNormal><font size=3D2 face=3D"Courier New"><span =
+style=3D'font-size:10.0pt;
+font-family:"Courier =
+New"'>Team&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&n=
+bsp;&nbsp;&nbsp;
+: US<o:p></o:p></span></font></p>
+
+<p style=3D'margin:0in;margin-bottom:.0001pt'><font size=3D2 =
+face=3D"Courier New"><span
+style=3D'font-size:10.0pt;font-family:"Courier New"'>Action
+Item&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : </span></font><font size=3D2
+face=3D"Courier New"><span =
+style=3D'font-size:10.0pt;font-family:"Courier New"'>The
+job ticket group will submit a white <o:p></o:p></span></font></p>
+
+<p style=3D'margin:0in;margin-bottom:.0001pt'><font size=3D2 =
+face=3D"Courier New"><span
+style=3D'font-size:10.0pt;font-family:"Courier =
+New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=
+&nbsp;&nbsp;paper
+to the Japanese team. This white <o:p></o:p></span></font></p>
+
+<p style=3D'margin:0in;margin-bottom:.0001pt'><font size=3D2 =
+face=3D"Courier New"><span
+style=3D'font-size:10.0pt;font-family:"Courier =
+New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+paper will ask the Japanese government <o:p></o:p></span></font></p>
+
+<p style=3D'margin:0in;margin-bottom:.0001pt'><font size=3D2 =
+face=3D"Courier New"><span
+style=3D'font-size:10.0pt;font-family:"Courier =
+New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+for funding to create a reference <o:p></o:p></span></font></p>
+
+<p style=3D'margin:0in;margin-bottom:.0001pt'><font size=3D2 =
+face=3D"Courier New"><span
+style=3D'font-size:10.0pt;font-family:"Courier =
+New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+implementation of the job ticket<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+specification.<o:p></o:p></span></font></p>
+
+<p style=3D'margin:0in;margin-bottom:.0001pt'><font size=3D2 =
+face=3D"Courier New"><span
+style=3D'font-size:10.0pt;font-family:"Courier New"'>How to =
+do&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+: Write a white paper<o:p></o:p></span></font></p>
+
+<p style=3D'margin:0in;margin-bottom:.0001pt'><font size=3D2 =
+face=3D"Courier New"><span
+style=3D'font-size:10.0pt;font-family:"Courier New"'>Who will
+do&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : Job Ticket =
+Group<o:p></o:p></span></font></p>
+
+<p style=3D'margin:0in;margin-bottom:.0001pt'><font size=3D2 =
+face=3D"Courier New"><span
+style=3D'font-size:10.0pt;font-family:"Courier New"'>By
+When&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : May =
+2004<o:p></o:p></span></font></p>
+
+<p style=3D'margin:0in;margin-bottom:.0001pt'><font size=3D2 =
+face=3D"Courier New"><span
+style=3D'font-size:10.0pt;font-family:"Courier =
+New"'><o:p>&nbsp;</o:p></span></font></p>
+
+<p style=3D'margin:0in;margin-bottom:.0001pt'><font size=3D2 =
+face=3D"Courier New"><span
+style=3D'font-size:10.0pt;font-family:"Courier =
+New"'><o:p>&nbsp;</o:p></span></font></p>
+
+<p style=3D'margin:0in;margin-bottom:.0001pt'><font size=3D2 =
+face=3D"Courier New"><span
+style=3D'font-size:10.0pt;font-family:"Courier =
+New"'>----------------<o:p></o:p></span></font></p>
+
+<p class=3DMsoNormal><font size=3D2 face=3D"Courier New"><span =
+style=3D'font-size:10.0pt;
+font-family:"Courier New"'>White Paper located at =
+&#8211;<o:p></o:p></span></font></p>
+
+<p class=3DMsoNormal><font size=3D2 face=3D"Courier New"><span =
+style=3D'font-size:10.0pt;
+font-family:"Courier New"'><o:p>&nbsp;</o:p></span></font></p>
+
+<p class=3DMsoNormal><font size=3D2 face=3D"Courier New"><span =
+style=3D'font-size:10.0pt;
+font-family:"Courier New"'><a
+href=3D"ftp://ftp.pwg.org/pub/pwg/fsg/jobticket/JTAPI-WhitePaper/">ftp:/=
+/ftp.pwg.org/pub/pwg/fsg/jobticket/JTAPI-WhitePaper/</a>jtapi-whitepaper=
+--v01.00-2004.05.24.doc<o:p></o:p></span></font></p>
+
+<p class=3DMsoNormal><font size=3D2 face=3D"Courier New"><span =
+style=3D'font-size:10.0pt;
+font-family:"Courier =
+New"'>ftp://ftp.pwg.org/pub/pwg/fsg/jobticket/JTAPI-WhitePaper/jtapi-whi=
+tepaper--v01.00-2004.05.24.pdf<o:p></o:p></span></font></p>
 
 <p class=3DMsoNormal><font size=3D2 face=3D"Courier New"><span =
 style=3D'font-size:10.0pt;
@@ -151,5 +321,5 @@ style=3D'font-size:
 
 </html>
 
-------_=_NextPart_001_01C441B0.26D6D700--
+------_=_NextPart_001_01C44292.24174620--
 
