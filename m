@@ -1,11 +1,11 @@
-Message-ID: <2F7D63A21DB2C74EB8EB8C09AF667DB06EF6A3@eitc220.eitc.epson.com>
+Message-ID: <2F7D63A21DB2C74EB8EB8C09AF667DB06EF6B0@eitc220.eitc.epson.com>
 From: "Petrie, Glen" <glen.petrie@eitc.epson.com>
-Date: Tue, 18 May 2004 13:48:07 -0700
+Date: Wed, 19 May 2004 10:49:17 -0700
 MIME-Version: 1.0
 Content-Type: multipart/alternative;
-	boundary="----_=_NextPart_001_01C43D19.6C58EB60"
-Subject: [Printing-architecture] Proposed JTAPI White Paper for Ref SW
-	Development 
+	boundary="----_=_NextPart_001_01C43DC9.9B119C80"
+Subject: [Printing-architecture] Pre-read on Referernce Model for Arch
+	Meeting at 
 List-Id: Printing architecture under linux
 	<printing-architecture.mail.freestandards.org>
 List-Unsubscribe: <http://mail.freestandards.org/mailman/listinfo/printing-architecture>,
@@ -15,39 +15,16 @@ List-Post: <mailto:printing-architecture@mail.freestandards.org>
 List-Help: <mailto:printing-architecture-request@mail.freestandards.org?subject=help>
 List-Subscribe: <http://mail.freestandards.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@mail.freestandards.org?subject=subscribe>
-To: printing-jobticket@freestandards.org
-Cc: printing-architecture@freestandards.org
+To: printing-architecture@freestandards.org
 
 This message is in MIME format. Since your mail reader does not understand
 this format, some or all of this message may not be legible.
 
-------_=_NextPart_001_01C43D19.6C58EB60
+------_=_NextPart_001_01C43DC9.9B119C80
 Content-Type: text/plain
 
-The JTAPI working group has completed a draft White Paper on the estimate
-for developing JTAPI reference implementation software.   If you have
-comments on the content, please make submission to the JTAPI mail list on or
-before May 24, 2004
-
- 
-
-Documents can be found at 
-
- 
-
-ftp://ftp.pwg.org/fsg/jobticket/JTAPI-WhitePaper/jtapi-whitepaper--v00.00.03
--2004.05.18.doc
-<ftp://ftp.pwg.org/fsg/jobticket/JTAPI-WhitePaper/jtapi-whitepaper--v00.00.0
-3-2004.05.18.doc> 
-
-ftp://ftp.pwg.org/fsg/jobticket/JTAPI-WhitePaper/jtapi-whitepaper--v00.00.03
--2004.05.18.pdf
-<ftp://ftp.pwg.org/fsg/jobticket/JTAPI-WhitePaper/jtapi-whitepaper--v00.00.0
-3-2004.05.18.pdf> 
-
- 
-
- 
+ftp://ftp.pwg.org/pub/pwg/fsg/architecture/Reference-Model/RM-00.01-2004.05.
+19/
 
  
 
@@ -61,7 +38,7 @@ Voice: 408.576.4131  Fax: 408.474.0511
  
 
 
-------_=_NextPart_001_01C43D19.6C58EB60
+------_=_NextPart_001_01C43DC9.9B119C80
 Content-Type: text/html
 Content-Transfer-Encoding: quoted-printable
 
@@ -132,50 +109,9 @@ div.Section1
 
 <p class=3DMsoNormal><font size=3D2 face=3D"Courier New"><span =
 style=3D'font-size:10.0pt;
-font-family:"Courier New"'>The JTAPI working group has completed a =
-draft White
-Paper on the estimate for developing JTAPI reference implementation =
-software. &nbsp;&nbsp;If
-you have comments on the content, please make submission to the JTAPI =
-mail list
-on or before May 24, 2004<o:p></o:p></span></font></p>
-
-<p class=3DMsoNormal><font size=3D2 face=3D"Courier New"><span =
-style=3D'font-size:10.0pt;
-font-family:"Courier New"'><o:p>&nbsp;</o:p></span></font></p>
-
-<p class=3DMsoNormal><font size=3D2 face=3D"Courier New"><span =
-style=3D'font-size:10.0pt;
-font-family:"Courier New"'>Documents can be found at =
-<o:p></o:p></span></font></p>
-
-<p class=3DMsoNormal><font size=3D2 face=3D"Courier New"><span =
-style=3D'font-size:10.0pt;
-font-family:"Courier New"'><o:p>&nbsp;</o:p></span></font></p>
-
-<p class=3DMsoNormal><font size=3D2 face=3D"Courier New"><span =
-style=3D'font-size:10.0pt;
-font-family:"Courier New"'><a
-href=3D"ftp://ftp.pwg.org/fsg/jobticket/JTAPI-WhitePaper/jtapi-whitepape=
-r--v00.00.03-2004.05.18.doc">ftp://ftp.pwg.org/fsg/jobticket/JTAPI-White=
-Paper/jtapi-whitepaper--v00.00.03-2004.05.18.doc</a><o:p></o:p></span></=
-font></p>
-
-<p class=3DMsoNormal><font size=3D2 face=3D"Courier New"><span =
-style=3D'font-size:10.0pt;
-font-family:"Courier New"'><a
-href=3D"ftp://ftp.pwg.org/fsg/jobticket/JTAPI-WhitePaper/jtapi-whitepape=
-r--v00.00.03-2004.05.18.pdf">ftp://ftp.pwg.org/fsg/jobticket/JTAPI-White=
-Paper/jtapi-whitepaper--v00.00.03-2004.05.18.pdf</a><o:p></o:p></span></=
-font></p>
-
-<p class=3DMsoNormal><font size=3D2 face=3D"Courier New"><span =
-style=3D'font-size:10.0pt;
-font-family:"Courier New"'><o:p>&nbsp;</o:p></span></font></p>
-
-<p class=3DMsoNormal><font size=3D2 face=3D"Courier New"><span =
-style=3D'font-size:10.0pt;
-font-family:"Courier New"'><o:p>&nbsp;</o:p></span></font></p>
+font-family:"Courier =
+New"'>ftp://ftp.pwg.org/pub/pwg/fsg/architecture/Reference-Model/RM-00.0=
+1-2004.05.19/<o:p></o:p></span></font></p>
 
 <p class=3DMsoNormal><font size=3D2 face=3D"Courier New"><span =
 style=3D'font-size:10.0pt;
@@ -218,5 +154,5 @@ style=3D'font-size:
 
 </html>
 
-------_=_NextPart_001_01C43D19.6C58EB60--
+------_=_NextPart_001_01C43DC9.9B119C80--
 
