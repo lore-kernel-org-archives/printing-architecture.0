@@ -1,9 +1,11 @@
-From: Claudia Alimpich <alimpich@us.ibm.com>
-Subject: [Printing-architecture] Architecture meeting agenda 20030306. . .
-Message-ID: <OFF17FBB59.639372CD-ON87256CE1.00039EEC@us.ibm.com>
-Date: Wed, 5 Mar 2003 17:41:00 -0700
+Message-ID: <116DB56CD7DED511BC7800508B2CA53735CF21@mailsrvnt02.enet.sharplabs.com>
+From: "McDonald, Ira" <imcdonald@sharplabs.com>
+Date: Thu, 6 Mar 2003 08:49:30 -0800 
 MIME-Version: 1.0
-Content-type: text/plain; charset=US-ASCII
+Content-Type: text/plain;
+	charset="iso-8859-1"
+Subject: [Printing-architecture] RE: [Printing-architecture][Conference Phone?]  Proposed agenda f
+ or FSG face-2-face in DC on April 1st (no fooling)
 Sender: printing-architecture-admin@freestandards.org
 Errors-To: printing-architecture-admin@freestandards.org
 List-Help: <mailto:printing-architecture-request@freestandards.org?subject=help>
@@ -14,58 +16,127 @@ List-Id: <printing-architecture.freestandards.org>
 List-Unsubscribe: <http://freestandards.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@freestandards.org?subject=unsubscribe>
 List-Archive: <http://freestandards.org/pipermail/printing-architecture/>
-To: printing-architecture@freestandards.org
+To: 'Claudia Alimpich' <alimpich@us.ibm.com>, printing-architecture@freestandards.org
+Cc: "'hastings@cp10.es.xerox.com'" <hastings@cp10.es.xerox.com>, "'harryl@us.ibm.com'" <harryl@us.ibm.com>
+
+Hi Tom and Harry,
+
+Could either of you folks (or anyone else reading this FSG OP Arch
+mailing list) possibly check out at work (from facilities?) a
+real conference phone (a Motorola three-way or whatever) and take
+it with you to the April 1st FSG sessions?
+
+There is a strong interest in having one or more conference calls
+(one during Arch overview and one later in Print Driver/Renderer)
+during the day.
+
+Thanks
+- Ira McDonald
+  High North Inc
+
+
+-----Original Message-----
+From: Claudia Alimpich [mailto:alimpich@us.ibm.com]
+Sent: Tuesday, March 04, 2003 8:59 PM
+To: printing-architecture@freestandards.org;
+printing-announce@freestandards.org
+Subject: [Printing-architecture] Proposed agenda for FSG face-2-face in
+DC on April 1st (no fooling)
 
 
 
 
-I will not be able to attend the call, but Ira, Glen, and Till will be
-there to explain the agenda that we came up with.
-
-Claudia
---------------------- Forwarded by Claudia Alimpich/Boulder/IBM on
-03/05/2003 05:41 PM ---------------------------
-
-"HEMSTREET,CHARLES (HP-Vancouver,ex1)"
-<charles.hemstreet@hp.com>@freestandards.org on 03/05/2003 05:19:07 PM
-
-Sent by:    printing-architecture-admin@freestandards.org
 
 
-To:    "'printing-architecture@freestandards.org'"
-       <printing-architecture@freestandards.org>
-cc:
-Subject:    [Printing-architecture] Architecture meeting agenda 20030306. .
-       .
+Let's talk about the following during this Thursday's (March 6)architecture
+meeting. Suggestions and other ideas are welcome.
+
+During the Job Ticket working group meeting today we (Tom, Ira, Till, Glen,
+and Claudia) came up with a proposal for an agenda for the  FSG meeting in
+Washington DC. We also thought that it might be a good idea to put the
+slides for each of the presentations on the website at least one week
+before the meeting. Each presenter(s) is responsible for the slides.
+
+March 17 - Target for first draft of slides
+March 24 - Target for final version of slides
+
+Following is a proposed agenda for the FSG meeting:
+---------------------------------------------------------
+8:00-9:00 AM - Plenary
+      (60 minutes = 15 minutes for coffee + 45 minutes for meeting)
+   Presenters: Shawn Pratt/Charles Hemstreet
+   Agenda
+      a. Coffee
+      b. Business meeting
+
+9:00-9:30 AM - Architecture Overview
+      (30 minutes = 20 minutes for presentation + 10 minutes for questions)
+   Presenters: Charles Hemstreet/Mark Hamzy
+      a. High level architecture diagram
+      b. Identify major pieces of the architecture and which are:
+         1. Work in progress (percentage complete)
+         2. Not much activity, need more work
+      c. Questions
+
+9:30-9:45 AM - Break (15 minutes)
+
+9:45-10:45 AM - JTAPI
+      (60 minutes = 40 minutes for presentation + 20 minutes for questions)
+   Presenter: Claudia Alimpich
+   For the agenda guidelines, see the *note below
+
+10:45-11:45 AM - PAPI
+      (60 minutes = 40 minutes for presentation + 20 minutes for questions)
+   Presenter: Michael Sweet ?
+   For the agenda guidelines, see the *note below
+
+11:45 AM -1:00 PM - Lunch (75 minutes)
+
+1:00-1:30 PM - Capabilities (30 minutes)
+   Presenter: ?
+   For the agenda guidelines, see the *note below
+
+1:30-2:00 PM - Notification (30 minutes)
+   Presenter: Tom Hastings
+   For the agenda guidelines, see the *note below
+
+2:00-3:00 PM - Printer Driver Renderer (60 minutes)
+   Presenter: Glen Petrie/Mark Hamzy
+   For the agenda guidelines, see the *note below
+
+3:00-3:15 PM - Break (15 minutes)
+
+3:15-5:15 PM - Architecture details (120 minutes)
+   Presenter: Charles Hemstreet/Mark Hamzy
+   a. Low level architecture diagram
+   b. Resolve problems/issues identified during earlier sessions
+   c. Resolve open problems/issues
+
+5:15-7:00 PM - Dinner (105 minutes)
+
+7:00-9:00 PM - Overflow (120 minutes)
+   Any items that were identified during the previous sessions that need to
+   be covered. The agenda will be determined as the day progresses.
 
 
-
-Phone/Passcode:
-* Dial-in  : 816.650.0688
-* passcode : 9 6 4 6 2 8
-
-Thursday from 8-9 am PST, 9-10 am
-MST, 11-12 pm EST, 4-5 pm UTC.
-
-
--------------------------
-
-Agenda for 03/06/03:
-
-* Mark Hamzy - driver subgroup
-* Shawn Pratt - FSG Meeting in Washington DC
-* Claudia - proposal for an agenda for the FSG meeting in Washington DC
-* other?
-
-Thanks,
-Charles
-
+*note - The following format should be followed for the slide presentation:
+   a. Introduction/Purpose
+   b. Status
+      - Milestones (previous and future)
+   c. Details
+      - whatever slides are needed to describe the details
+   d. Issues
+   e. Information about this working group
+      1. Active participants
+      2. Meeting day, time, call in information
+      3. Websites
+         - Mailing list and archives
+         - Other documents pertaining to this working group
+   f. Q&A and discussion
 
 
 _______________________________________________
 Printing-architecture mailing list
 Printing-architecture@freestandards.org
- http://freestandards.org/mailman/listinfo/printing-architecture
-
-
+http://freestandards.org/mailman/listinfo/printing-architecture
 
