@@ -1,10 +1,9 @@
-Message-ID: <116DB56CD7DED511BC7800508B2CA537B00261@mailsrvnt02.enet.sharplabs.com>
-From: "McDonald, Ira" <imcdonald@sharplabs.com>
-Date: Sat, 22 Nov 2003 14:45:40 -0800
+Message-ID: <OFA886F0FC.FD6DBBE2-ON86256DEF.0074F2D3-86256DEF.0075504F@us.ibm.com>
+From: Mark Hamzy <hamzy@us.ibm.com>
+Date: Mon, 1 Dec 2003 15:21:22 -0600
 MIME-Version: 1.0
-Content-Type: text/plain;
-	charset="iso-8859-1"
-Subject: [Printing-architecture] FW: PWG-ANNOUNCE> 2004-2005 PWG Officers
+Content-type: text/plain; charset=US-ASCII
+Subject: [Printing-architecture] Architecture meeting 12/04/2003
 Sender: printing-architecture-admin@freestandards.org
 Errors-To: printing-architecture-admin@freestandards.org
 List-Help: <mailto:printing-architecture-request@freestandards.org?subject=help>
@@ -16,42 +15,27 @@ List-Unsubscribe: <http://freestandards.org/mailman/listinfo/printing-architectu
 	<mailto:printing-architecture-request@freestandards.org?subject=unsubscribe>
 List-Archive: <http://freestandards.org/pipermail/printing-architecture/>
 To: printing-architecture@freestandards.org
-
-FYI,
-- Ira
-
-Ira McDonald (Musician / Software Architect)
-Blue Roof Music / High North Inc
-PO Box 221  Grand Marais, MI  49839
-phone: +1-906-494-2434
-email: imcdonald@sharplabs.com 
-
------Original Message-----
-From: Harry Lewis [mailto:harryl@us.ibm.com]
-Sent: Thursday, November 20, 2003 10:32 AM
-To: pwg-announce@pwg.org
-Cc: thrasher@lexmark.com; wwagner@digi.com; Lee.Farrell@cda.canon.com
-Subject: PWG-ANNOUNCE> 2004-2005 PWG Officers
+Cc: dbb@linkexplorer.com
 
 
 
-The call for nominations for PWG officers resulted in one and only one
-candidate for each position. Therefore, there is no need to conduct a formal
-vote or acceptance process. The officers for the term November 20, 2003 to
-August 31, 2005 will be 
 
-Chairman - Harry Lewis (IBM) 
-Vice Chairman - Lee Farrell (Canon) 
-Secretary - Jerry Thrasher (Lexmark) 
+Thursday, December 4
 
-I want to thank Bill Wagner for his term as secretary and for hanging in
-beyond September, this year, as nominees were being drafted. 
----------------------------------------------- 
-Harry Lewis 
-Chairman - IEEE-ISTO Printer Working Group
-http://www.pwg.org
-IBM Printing Systems 
-http://www.ibm.com/printers
-303-924-5337
----------------------------------------------- 
+GMT 18:00-20:00
+EDT 15:00-17:00
+CDT 14:00-16:00
+MDT 13:00-15:00
+PDT 12:00-14:00
+
+Toll Free: 1-888-206-4960
+Passcode:          633661
+
+Note: New number.  Participants must wait until moderator arrives.
+
+Mark
+
+Take a look at the Linux Omni Printer Driver Framework at
+http://www.ibm.com/linux/ltc/projects/omni/
+
 
