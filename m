@@ -1,9 +1,9 @@
-Message-ID: <OF4F16D838.A0888425-ON87256DD4.00776006@us.ibm.com>
+Message-ID: <OFBFCAAE79.DAB02DA7-ON87256DD4.00792B2D@us.ibm.com>
 From: Claudia Alimpich <alimpich@us.ibm.com>
-Date: Tue, 4 Nov 2003 14:48:36 -0700
+Date: Tue, 4 Nov 2003 15:11:13 -0700
 MIME-Version: 1.0
 Content-type: text/plain; charset=US-ASCII
-Subject: [Printing-architecture] JT WG  Oct-Nov Status report
+Subject: [Printing-architecture] JT WG meeting schedule for the remainder of 2003
 Sender: printing-architecture-admin@freestandards.org
 Errors-To: printing-architecture-admin@freestandards.org
 List-Help: <mailto:printing-architecture-request@freestandards.org?subject=help>
@@ -19,8 +19,18 @@ To: printing-jobticket@freestandards.org, printing-architecture@freestandards.or
 
 
 
-The JT WG Oct-Nov status report is located at:
-   ftp://ftp.pwg.org/pub/pwg/fsg/status_reports/JT_WG_Status_07Nov2003.txt
+Following is the schedule of JT WG calls that we WILL have for the
+remainder of 2003:
+
+      Nov 11
+      Nov 18
+      Dec 2
+      Dec 16
+
+We will not have a Nov 25th call because of the US Thanksgiving holiday.
+We will not have a Dec 9th call because both Tom and Claudia will be
+attending the CIP4 Technical meeting in Orlando (although if there is
+enough interest we could reinstate this call without Tom and Claudia).
 
 Claudia
 
