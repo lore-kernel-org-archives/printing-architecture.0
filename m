@@ -1,9 +1,10 @@
-Message-ID: <OF2BBC6C3B.1DEEB77F-ON87256D12.0054DDEC@us.ibm.com>
-From: Claudia Alimpich <alimpich@us.ibm.com>
-Date: Thu, 24 Apr 2003 10:16:44 -0600
+Message-ID: <116DB56CD7DED511BC7800508B2CA53735CF99@mailsrvnt02.enet.sharplabs.com>
+From: "McDonald, Ira" <imcdonald@sharplabs.com>
+Date: Thu, 24 Apr 2003 10:11:52 -0700
 MIME-Version: 1.0
-Content-type: text/plain; charset=US-ASCII
-Subject: [Printing-architecture] Architecture meeting notes 20030424
+Content-Type: text/plain;
+	charset="iso-8859-1"
+Subject: [Printing-architecture] Summary of PWG Document Object issues
 Sender: printing-architecture-admin@freestandards.org
 Errors-To: printing-architecture-admin@freestandards.org
 List-Help: <mailto:printing-architecture-request@freestandards.org?subject=help>
@@ -16,49 +17,108 @@ List-Unsubscribe: <http://freestandards.org/mailman/listinfo/printing-architectu
 List-Archive: <http://freestandards.org/pipermail/printing-architecture/>
 To: printing-architecture@freestandards.org
 
+Hi,
+
+At today's FSG OP Architecture telecon, Claudia asked that I
+send out a summary of recent issues for IPP Document object.
+I used letters for the points below to avoid ambiguity with
+the many email notes on the PWG PSI, SM, and IPP reflectors.
 
 
+A) Print-by-reference authentication
 
-Attendees:
-   Ira MacDonald
-   Norm Jacobs
-   Mark Hamzy
-   Till Kamppeter
-   Pete Zannucci
-   Claudia Alimpich
+   (IPP "Send-URI" <==> PSI "AddDocumentByReference")
 
-Notes:
-1)  Ira gave an overview and status of a discussion that us going on in the
-PWG regarding the Document object spec. The Document object is currently
-being scrutinized. Print by reference is a concern because of security
-issues (need credentials). There may be two specs, one containing the
-required function and one containing optional function. It is likely that
-the design will change which could affect PAPI and the JTAPI. The plan was
-for PAPI to be enhanced to include Document support and the plan for JTAPI
-1.0 was to include some Document level support. There are a number of PWG
-notes that describes the issues. Ira will read them and summarize the
-issues for us (FSG) as well as posting the detailed notes to the FSG
-mailing list.
+   PWG PSI's design center is print-by-reference (a hand-held
+   telling a PSI Print Service to print some document available
+   on a Web or FTP server).  But the necessary authentication
+   credentials to _access_ the referenced file's URL must also
+   be available (or no security exists).  PSI actually sends
+   these credentials (inside a TLS-secured session).  But, as
+   Michael Sweet (CUPS) has pointed out:
+   a1) Simple end-user impersonation (username/password) is
+       fragile and the print server may accidentally expose
+       the user's security info - a liability for the vendor.
+   a2) Stronger certificate-based public key authentication
+       (usually used in TLS-secured sessions) may fail because
+       some certificates are only valid if used _from_ the end
+       user's home system (as identified by an FQDN stored in
+       the certificate and validated by DNS lookup for source
+       IP address for the transaction).
+   a3) Without Kerberos-style single-use "tickets" the delegation
+       of end user credentials to an intermediate server is an
+       unsolved software problem (existing solutions only work in
+       certain not-widely-deployed middleware).
 
-2) Mark gave an overview of the Driver schedule that the Driver working
-group created on 4/21.  Code will be put on the SourceForge CVS site.
-Header files will be put there for review. See the note dated "Mon, 21 Apr
-2003 15:54:51 -0500" for the schedule dates. The Driver working group would
-like to announce the Driver API on or before the next FSG meeting which is
-scheduled for mid June 2003. Omni driver will most likely be a reference
-implementation and possibly the Epson driver as well.
+B) REQUIRED versus OPTIONAL operations and attributes
 
-3) May want to target an alpha implementation for the JTAPI since the path
-to getting a full function version may be too far off given the resources
-that can be applied. The JTAPI working group will discuss this option and
-work on a schedule during next Tuesday's wokring group meeting. We talked
-about creating the header files for the JTAPI in parallel with the JTAPI
-Spec where the JTAPI Spec would be a high level description of the JTAPI,
-including the UML diagrams, and then point to the header files (and
-describe the structure/relationships of the header files). The code and
-descriptive details of the JTAPI would be in the header files. This may
-enable us to produce the code interface sooner. It was also viewed to be
-positive to have the detailed documentation in the header files instead of
-in a separate spec.
+   PWG PSI/1.0 (now in working group 'last call') has only
+   REQUIRED operations (including print-by-reference), but
+   the IPP Document Object spec defines many operations and
+   almost all Document Description attributes as OPTIONAL.
+   This impacts any adoption of PSI by FSG PAPI, because
+   interworking with IPP-based intermediate systems and
+   printers will be degraded or will fail in some cases.
 
+C) Flat-file registries needed for key Document attributes
+   
+   IPP Document object (based on input from PWG PSI and from
+   CIP4 JDF people) adds to the base "document-format" (MIME
+   type values) the parallel qualifier "document-format-versions"
+   (with values like "PDF/1.4" and "PDF/is-1.0").  The operation
+   of the PWG IPPFAX protocol (soon to enter 'last call') and
+   of IPP-based Document operations _depends_ on the presence
+   of "document-format-versions".  
+
+   However, it remains to be settled whether the PWG will rent 
+   space on a commercial server (to avoid burdening our current
+   host Lexmark with a file that might be downloaded by many 
+   clients) or the CIP4 will archive the file on their Web site.
+
+   Several other attributes that can be present in the new
+   "document-format-details" compound attribute also require
+   registration of standard values, such as
+   "document-source-application-version" ("MS Word 2000").
+
+D) Breaking IPP Document object into two (or more) specs
+
+   Dennis Carney (IBM) recently suggested a compromise solution
+   of making _two_ specs:  one with only REQUIRED operations
+   and attributes; and one with only OPTIONAL ones.  It turns
+   out (per Tom Hastings) that the first spec would be _very_
+   skinny.  Also, a whole bunch of important (but OPTIONAL) 
+   Document attributes would be delayed in the second spec
+   (expected to move more slowly through the adoption process).
+   There really should be a third spec (again, per Tom H) that
+   contains the Job-level operation extensions and attributes.
+
+E) IPP/1.2
+
+   Recently, Dennis Carney (IBM) observed that IPP Document
+   object was starting to look a lot like "IPP/1.2".
+   Michael Sweet suggested yesterday that perhaps we should
+   be _writing_ an IPP/1.2 spec, and gathering up the numerous
+   IPP extensions (several dozen) into one place (by reference,
+   I hope) with a new set of conformance requirements.
+   (I would collaborate on such a project, but I wouldn't
+   take it on alone.)
+
+
+Predications:
+
+I predict that some part of IPP Document object will go to
+working group 'last call' pretty soon because it's holding up
+the release of both the PWG Semantic Model 1.0 (and schemas)
+and PWG PSI/1.0 (and WSDL headers), both of which want full
+Document object semantics in their content.
+
+I also predict that some/most of the IPP Job-level extensions
+and some/most of the "document-format-details" attributes will
+be delayed much longer (months at least) by the process and also
+by the bandwidth of the editors (basically Tom Hastings, with
+some help from Dennis Carney and a few others).
+
+Cheers,
+- Ira McDonald
+  High North Inc
 
