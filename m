@@ -1,9 +1,10 @@
-From: "Charles Hemstreet" <charles_at_hp@hotmail.com>
-Date: Fri, 13 Jun 2003 13:31:39 -0700
-Mime-Version: 1.0
-Content-Type: text/plain; format=flowed
-Message-ID: <Sea2-F418ZtP0kvdIBi0003a1c3@hotmail.com>
-Subject: [Printing-architecture] The FSG/OP F2F meeting schedule June 17th/18th...
+Message-ID: <116DB56CD7DED511BC7800508B2CA53735D055@mailsrvnt02.enet.sharplabs.com>
+From: "McDonald, Ira" <imcdonald@sharplabs.com>
+Date: Sun, 15 Jun 2003 14:04:44 -0700
+MIME-Version: 1.0
+Content-Type: text/plain;
+	charset="iso-8859-1"
+Subject: [Printing-architecture] Tues 17 June - good evening music (8:30-11pm)
 Sender: printing-architecture-admin@freestandards.org
 Errors-To: printing-architecture-admin@freestandards.org
 List-Help: <mailto:printing-architecture-request@freestandards.org?subject=help>
@@ -14,69 +15,56 @@ List-Id: <printing-architecture.freestandards.org>
 List-Unsubscribe: <http://freestandards.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@freestandards.org?subject=unsubscribe>
 List-Archive: <http://freestandards.org/pipermail/printing-architecture/>
-To: printing-architecture@freestandards.org
+To: printing-architecture@freestandards.org, pwg-announce@pwg.org
 
-Tuesday 6/17:
-------------
+Hi folks,
 
-8:30-9:00 AM - Coffee (30 minutes)
+Downtown Portland on this coming Tuesday night (8:30-11:00pm).
 
-9:00-10:00 AM - Architecture Overview (60 minutes)
-(10 minutes per topic to discuss+5 minutes for questions/each topic at a
-      high level)
-Presenters: Charles Hemstreet, Claudia Alimpich, Mark Hamzy, Norm Jacobs
-      a. High level architecture diagram
-      b. Job Ticket Status
-      c. Driver status
-      d. PAPI status
+I played regularly for two years with Lorna Miller and also 
+quite often with her friend Jason Elton.  All of these folks 
+are talented folk singers and world music interpreters.
 
-10:00-10:15 Break (15 minutes)
+Highly recommended.
 
-10:15-12:00 AM - Printer Driver Renderer work group (105 minutes)
-   Chair: Mark Hamzy/Glen Petrie
+Cheers,
+- Ira McDonald
+  High North Inc
 
-12:00-1:00 PM - Lunch (60 minutes)
-
-1:00-2:00 Vector Driver and Bidi (60 minutes)
-   Chair: Yasumasa Toratani/Osamu Mihara
-
-2:00-2:45 PM - PAPI work group part 1 (45 minutes)
-   Chair: Norm Jacobs/Michael Sweet
-
-2:45-3:00 PM Break (15 minutes)
-
-3:00-3:45 PM - PAPI work group part 2 (45 minutes)
-   Chair: Norm Jacobs/Michael Sweet
-
-Stretch break - 5 minutes
-
-3:50-5:15 PM - JTAPI work group (85 minutes)
-   Chair: Claudia Alimpich
-
-5:15-7:00 PM - Dinner (105 minutes)
-
-07:00-9:00 PM - Architecture work group (120 minutes)
-   Chair: Charles Hemstreet
+PS - Give Lorna and Jason my best regards - thanks.
 
 
-Wednesday 6/18:
---------------
+-----Original Message-----
+From: Lorna J. Miller [mailto:ljmiller@pcez.com]
+Sent: Saturday, June 14, 2003 5:18 PM
+To: Lorna J. Miller
+Subject: Reminder of Songwriter's Roundup and mp3.com calendar
 
-10:00 - 11:00 AM - Foomatic (60 minutes)
-   Chair: Till Kamppeter
 
-11:00 - 12:00 AM - Architecture work group (overflow)
-   Chair: Charles Hemstreet
+LORNA MILLER, MUSICIAN/SINGER/SONGWRITER
+_____________________________________________
 
-12:00 - 1:00 PM - Lunch (60 minutes)
+Hi everybody! This is a two fold message,
 
-1:00 - 5:00 PM - Overflow from Tuesday (240 minutes)
-   Capabilities
-   Driver
-   Other topics
+1)The Songwriter's Roundup @ Burlingame Acoustic Room(
+aka Burlingame Pizza) is this coming Tuesday evening, beginning
+at 8:30-11:00 approx. Burlingame is located in Dowtown Portland
+on the max tracks, SW 1st and Ash.  A really nice room, comfortable,
+pizza, salads, beer and wine AND all ages welcome.  Smoke free.
+The line-up for this Roundup is as follows:
+Lorna Miller, Jason Elton, Joy Wilson, Henry and Moggy Weeks.
+This both an eclectic and very entertaining mix of writers and per-
+formers. From roots type to middle-eastern type instrumentals.
+Come join us and bring some friends.  Let's fill this place up.
 
-_________________________________________________________________
-STOP MORE SPAM with the new MSN 8 and get 2 months FREE*  
-http://join.msn.com/?page=features/junkmail
+2)I have a site on mp3.com (go to www.mp3.com and in search type
+   my name)with updates on my calendar through July.  Visit it as much
+   as you like, because it's always changing and tell your friends.  It
+helps.
+
+Look forward to seeing you at one of the gigs.
+Lorna - ljmiller@pcez.com
+
+
 
 
