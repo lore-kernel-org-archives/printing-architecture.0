@@ -1,9 +1,10 @@
-Message-ID: <OF7297A67B.457BD197-ON87256DF0.00623A7F@us.ibm.com>
-From: Claudia Alimpich <alimpich@us.ibm.com>
-Date: Tue, 2 Dec 2003 11:03:26 -0700
+Subject: Re: [Printing-architecture] Schedule a FSG Open Printing face-to-face in
+ 2004?
+Message-ID: <OF196CAFB5.9618C0B9-ON86256DF0.006A67DC-86256DF0.006AD41D@us.ibm.com>
+From: Mark Hamzy <hamzy@us.ibm.com>
+Date: Tue, 2 Dec 2003 13:26:51 -0600
 MIME-Version: 1.0
 Content-type: text/plain; charset=US-ASCII
-Subject: [Printing-architecture] Schedule a FSG Open Printing face-to-face in 2004?
 Sender: printing-architecture-admin@freestandards.org
 Errors-To: printing-architecture-admin@freestandards.org
 List-Help: <mailto:printing-architecture-request@freestandards.org?subject=help>
@@ -14,24 +15,19 @@ List-Id: <printing-architecture.freestandards.org>
 List-Unsubscribe: <http://freestandards.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@freestandards.org?subject=unsubscribe>
 List-Archive: <http://freestandards.org/pipermail/printing-architecture/>
-To: printing-architecture@freestandards.org
+To: Claudia Alimpich <alimpich@us.ibm.com>
+Cc: printing-architecture@freestandards.org
 
 
 
 
-Ira posted the following tentative 2004 PWG meeting a few weeks ago:
-      January - Florida, Las Vegas, or Microsoft
-       March/April - Washington DC
-       June - Vancouver BC or Microsoft
-       August - Montreal
-       Fall - Madison WI (Ira)
-       December - San Diego
+The Japanese group recently suggested Linux World in January as the next
+meeting.  That would allow us to possibly get a different set of people to
+attend and provide input.
 
-Should we plan a FSG Open Printing face-to-face meeting during one of the
-above? I think that January is too soon, so maybe the March/April meeting
-would be a good one to shoot for. Can we decide on this and let the PWG
-folks know about our plan?
+Mark
 
-Claudia
+Take a look at the Linux Omni Printer Driver Framework at
+http://www.ibm.com/linux/ltc/projects/omni/
 
 
