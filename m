@@ -1,11 +1,9 @@
-Message-ID: <CFEE79A465B35C4385389BA5866BEDF00C7AB6@mailsrvnt02.enet.sharplabs.com>
-From: "McDonald, Ira" <imcdonald@sharplabs.com>
-Date: Wed, 16 Mar 2005 08:26:17 -0800
+Message-ID: <2F7D63A21DB2C74EB8EB8C09AF667DB001B9ACEC@eitc220.eitc.epson.com>
+From: "Petrie, Glen" <glen.petrie@eitc.epson.com>
+Date: Wed, 16 Mar 2005 10:45:06 -0800
 MIME-Version: 1.0
-Content-Type: text/plain;
-	charset="ISO-8859-1"
-Subject: [Printing-architecture] RE: How to convert xhtml-print to pri nter
-	specific data
+Content-Type: text/plain
+Subject: [Printing-architecture] RE: [Printing-sc] The need for English
 List-Id: Printing architecture under linux
 	<printing-architecture.mail.freestandards.org>
 List-Unsubscribe: <http://mail.freestandards.org/mailman/listinfo/printing-architecture>,
@@ -15,188 +13,93 @@ List-Post: <mailto:printing-architecture@mail.freestandards.org>
 List-Help: <mailto:printing-architecture-request@mail.freestandards.org?subject=help>
 List-Subscribe: <http://mail.freestandards.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@mail.freestandards.org?subject=subscribe>
-To: 'Prince P' <prince1a@gmail.com>, "McDonald, Ira" <imcdonald@sharplabs.com>
-Cc: printing-architecture@base3.freestandards.org
+To: 'Takaaki Higuchi' <Takaaki.Higuchi@Sun.COM>, shida.keisho@canon.co.jp
+Cc: "Petrie, Glen" <glen.petrie@eitc.epson.com>, printing-architecture@base3.freestandards.org, printing-japan@base3.freestandards.org, printing-sc@freestandards.org
 
-Hi,
-
-I'd suggest you write directly to the W3C XHTML-Print editor
-Jim Bigelow (jim.bigelow@hp.com).
-
-I wasn't personally active in either the IEEE/ISTO PWG or
-later W3C working groups for this standard.
-
-Cheers,
-- Ira
-
-Ira McDonald (Musician / Software Architect)
-Blue Roof Music / High North Inc
-PO Box 221  Grand Marais, MI  49839
-phone: +1-906-494-2434
-email: imcdonald@sharplabs.com
+The belief is that there should be sufficient English communication such
+that any FSG/OpenPrinting member can contribute to the development and
+understanding of any specification.   This would require more than monthly
+summary reports since these reports would provide not mechanism for
+non-Japanese-speaking members to participate in development phase.   The key
+to this communication is to participate; not simple to be informed.
 
 -----Original Message-----
-From: Prince P [mailto:prince1a@gmail.com]
-Sent: Wednesday, March 16, 2005 4:08 AM
-To: McDonald, Ira
-Cc: printing-architecture@base3.freestandards.org
-Subject: Re: How to convert xhtml-print to pri nter specific data
+From: Takaaki Higuchi [mailto:Takaaki.Higuchi@Sun.COM] 
+Sent: Tuesday, March 15, 2005 10:12 PM
+To: shida.keisho@canon.co.jp
+Cc: glen.petrie@eitc.epson.com; printing-sc@freestandards.org;
+printing-japan@base3.freestandards.org;
+printing-architecture@base3.freestandards.org
+Subject: Re: [Printing-sc] The need for English
+
+Shida-san,
+
+My understanding of Glen's suggestion is that we need to communicate
+in English in appropriate timing. I don't think he does insist to discuss
+whole things in English in Japan team. And I agree to him that we'd
+better keep all members informed by sending English summaries in appropriate
+manner.
+
+regards,
+---
+Takaaki Higuchi, Industry Relations, Sun Microsystems K.K.
+SBS Tower, 4-10-1, Youga, Setagaya-ku,Tokyo,158-8633,Japan
+Phone: (81) (3) 5717-5132 Fax: (81) (3) 5717-2585
+E-Mail:takaaki.higuchi@Sun.COM <URL:http://blogs.sun.com/thiguchi/>
 
 
-Hi Ira,
-        Thank you very much for the information and the help extended
-to me.If you can give some insight or links  about the design effort
-in  XHTML-Print group to interpret the XHMTL pages one at a time,
-without caching, it will be a great help.
-
-Thanks and Regards
-
-Prince
-
-
-
-
-
-On Mon, 14 Mar 2005 13:21:58 -0800, "McDonald, Ira"
-<imcdonald@sharplabs.com> wrote:
-> Hi,
+In ""SHIDA.Keisho" <shida.keisho@canon.co.jp>" on Wed, 16 Mar 2005 10:38:19
++
+0900 wrote:
+> Glen:
 > 
-> Ah - you're building an interpreter - I'm sure there are some
-> free XHTML to PCL raster libraries somewhere, but some Google
-> searching for an hour didn't find them.
+> This is Shida.
+> Thank you for your comment.
 > 
-> There was a design effort in XHTML-Print to ensure that a
-> receiver (a spooler or a printer) could interpret the XHMTL
-> pages one at a time, without caching.
+> We understood your point but our local discussion should be made local 
+> language. Let us discuss loccally how we could update our major subjects 
+> and discussions by international language. For instance, we may able to 
+> summarize our discussion monthly by English.
 > 
-> Good luck with your project,
-> - Ira
+> We don't like to see any local member may have a hesitation to send email 
+> if English has to be used for locally.
 > 
-> Ira McDonald (Musician / Software Architect)
-> Blue Roof Music / High North Inc
-> PO Box 221  Grand Marais, MI  49839
-> phone: +1-906-494-2434
-> email: imcdonald@sharplabs.com
+> Anyway, let us discuss here how we could meet with your proposal.
 > 
-> -----Original Message-----
-> From: printing-architecture-bounces@base3.freestandards.org
-> [mailto:printing-architecture-bounces@base3.freestandards.org]On Behalf
-> Of Prince P
-> Sent: Sunday, March 13, 2005 11:40 PM
-> To: McDonald, Ira
-> Cc: printing-architecture@base3.freestandards.org; pwg@pwg.org
-> Subject: [Printing-architecture] Re: How to convert xhtml-print to
-> printer specific data
+> Thank you.
 > 
 > 
-> Dear Ira,
->           By acutal print data, what i meant was how to convert the
-> XHTML-Print format data to a raster format. In the specification, it
-> was pointed out that XHTML-Print is designed for low cost printers.  I
-> am trying to implement such an interpreter which can convert the
-> "XHTML-Print data to PCL format". It would be a great help, if you can
-> give me some links or guidelines on this. Again,the low cost printer
-> may not have enough memory  to store the XHTML-Print format data
-> fully. In that case,how we we can covert the partial data to actual. ?
+> Shida/
+> ===
 > 
->  Thanks again Ira, for your helping hand. 
+> At 13:39 05/03/15 -0800, Petrie, Glen wrote:
 > 
-> 
-> On Thu, 10 Mar 2005 06:23:19 -0800, "McDonald, Ira"
-> <imcdonald@sharplabs.com> wrote:
-> > Hi Prince,
-> > 
-> > By "actual print data" do you mean a raster format like
-> > PCL or a vector format like PDF or something else?
-> > 
-> > The XHTML-Print to actual print data conversion is done
-> > by an "interpreter" (either on the spooler or the target
-> > printer).  Support for printing of HTML documents is
-> > becoming more common on printers.  Typically, a modern
-> > HTML interpreter can also parse XHTML correctly.
-> > 
-> > Cheers,
-> > - Ira
-> > 
-> > Ira McDonald (Musician / Software Architect)
-> > Blue Roof Music / High North Inc
-> > PO Box 221  Grand Marais, MI  49839
-> > phone: +1-906-494-2434
-> > email: imcdonald@sharplabs.com
-> > 
-> > -----Original Message-----
-> > From: Prince P [mailto:prince1a@gmail.com]
-> > Sent: Thursday, March 10, 2005 3:59 AM
-> > To: McDonald, Ira
-> > Cc: printing-architecture@base3.freestandards.org; pwg@pwg.org
-> > Subject: Re: How to convert xhtml-print to printer specific data
-> > 
-> > 
-> > Hi Ira,
-> >          Thank you very much for replying.  I had gone through the
-> > spec http://www.w3.org/TR/xhtml-print/ . But it speaks about the xhtml
-> > standard only. It doesn't says how printers interprets this. Is the
-> > xhtml-print to actual print data conversion is done through some
-> > proprietary methods ?
-> > 
-> > Anyway thanks for the help Ira 
-> > 
-> > 
-> > 
-> > On Wed, 9 Mar 2005 08:12:48 -0800, "McDonald, Ira"
-> > <imcdonald@sharplabs.com> wrote:
-> > > Hi,
-> > > 
-> > > I'm forwarding your question to the general discussion list
-> > > of the IEEE/ISTO Printer Working Group (PWG), who developed
-> > > the XHTML-Print standard and then passed it over to the W3C,
-> > > who adopted it as a W3C Candidate Standard in January 2004:
-> > > 
-> > > 	http://www.w3.org/TR/xhtml-print/
-> > > 
-> > > You might want to take a look at that standard itself.
-> > > 
-> > > Cheers,
-> > > - Ira
-> > > 
-> > > Ira McDonald (Musician / Software Architect)
-> > > Blue Roof Music / High North Inc
-> > > PO Box 221  Grand Marais, MI  49839
-> > > phone: +1-906-494-2434
-> > > email: imcdonald@sharplabs.com
-> > > 
-> > > -----Original Message-----
-> > > From: printing-architecture-bounces@base3.freestandards.org
-> > > [mailto:printing-architecture-bounces@base3.freestandards.org]On
-Behalf
-> > > Of Prince P
-> > > Sent: Wednesday, March 09, 2005 12:05 AM
-> > > To: printing-architecture@base3.freestandards.org
-> > > Subject: [Printing-architecture] How to convert xhtml-print to printer
-> > > specific data
-> > > 
-> > > 
-> > > Can anyone tell how we can convert xhtml-print data to printer
-> > > specific data ? I had searched the whole web, but couldn't get any
-> > > useful info.
-> > > 
-> > > Please help me
-> > > 
-> > > 
-> > > Regards
-> > > 
-> > > Prince
-> > > 
-> > > _______________________________________________
-> > > Printing-architecture mailing list
-> > > Printing-architecture@mail.freestandards.org
-> > > http://mail.freestandards.org/mailman/listinfo/printing-architecture
-> > >
+> >All,
 > >
-> 
-> _______________________________________________
-> Printing-architecture mailing list
-> Printing-architecture@mail.freestandards.org
-> http://mail.freestandards.org/mailman/listinfo/printing-architecture
->
+> >There is a growing desire among the FSG/OpenPrinting-US and 
+> >FSG/OpenPrinting-European members to follow, understand and contribute to
+
+> >the activities of the FSG/OpenPrinting-Japan.   Therefore, I have been 
+> >asked to send this message requesting that English be adopted as the 
+> >international language for all discussions of FSG/OpenPrinting API's and 
+> >specifications; including those being developed in Japan.   All existing 
+> >printing standards bodies have and continue to use English as the common 
+> >language.   It is also believed that since the normal practice is to use 
+> >English for these type of activities, that FSG/OpenPrinting activities, 
+> >overall, would appear to be more professional to the parent FSG group and
+
+> >other standards bodies if will use English as the common language.
+> >
+> >Although FSG/OpenPrinting-US and FSG/OpenPrinting-European members 
+> >understand some need for Japanese communication, the current policy of 
+> >Japanese-only greatly restrict contribution to and by related 
+> >FSG/OpenPrinting API/specifications and the overall architecture.   It 
+> >also greatly reduces contribution by non- FSG/OpenPrinting members.
+> >
+> >Rgds,
+> >Glen W. Petrie
+> >Epson Imaging Technology Center
+> >150 River Oaks Parkway, Suite 200
+> >San Jose, CA, 95134
+> >Voice: 408.576.4131  Fax: 408.474.0511
 
