@@ -1,11 +1,11 @@
-Message-ID: <CFEE79A465B35C4385389BA5866BEDF00C76A5@mailsrvnt02.enet.sharplabs.com>
-From: "McDonald, Ira" <imcdonald@sharplabs.com>
-Date: Fri, 30 Apr 2004 14:11:24 -0700
+Message-ID: <OF82879B26.6FCE2FDD-ON86256E8C.0053806D-86256E8C.0053AD1B@us.ibm.com>
+From: Mark Hamzy <hamzy@us.ibm.com>
+Date: Thu, 6 May 2004 10:13:58 -0500
 MIME-Version: 1.0
-Content-Type: text/plain;
-	charset="iso-8859-1"
-Subject: [Printing-architecture] FW: PWG-ANNOUNCE> Preliminary Details - PWG
-	Face to Face Meeting - May 24-27, 2004 - Vancouver BC
+Content-type: multipart/alternative; 
+	Boundary="0__=09BBE41FDFC006FD8f9e8a93df938690918c09BBE41FDFC006FD"
+Content-Disposition: inline
+Subject: [Printing-architecture] Architecture meeting 05/06/2004
 List-Id: Printing architecture under linux
 	<printing-architecture.mail.freestandards.org>
 List-Unsubscribe: <http://mail.freestandards.org/mailman/listinfo/printing-architecture>,
@@ -17,74 +17,54 @@ List-Subscribe: <http://mail.freestandards.org/mailman/listinfo/printing-archite
 	<mailto:printing-architecture-request@mail.freestandards.org?subject=subscribe>
 To: printing-architecture@freestandards.org
 
------Original Message-----
-From: a.s.patel@ieee.org [mailto:a.s.patel@ieee.org]
-Sent: Friday, April 30, 2004 4:29 PM
-To: pwg-announce@pwg.org
-Subject: PWG-ANNOUNCE> Preliminary Details - PWG Face to Face Meeting -
-May 24-27, 2004 - Vancouver BC
-Importance: High
-
-
-Greetings All,
-
-The arrangements have been finalized for the upcoming May 24-27, 2004 PWG
-Meetings in Vancouver, BC as follows:
-
-When: Monday - Thursday
-      May 24-27, 2004
-
-Where:      Delta Vancouver Suites
-      550 West Hastings Street, Vancouver BC Canada V6B 5K3
-      Phone: 604-689-8188
-      Fax: 604-605-8881
-      http://www.deltahotels.com/hotels/hotels.do?hotelId=21
-
-
-Hotel Accomodations:
-*** Room block will be opened on Saturday, May 1, 2004***
-The PWG rate obtained is CND$155.00/night (plus 10% provincial tax and 7%
-Federal Goods tax), single or double occupancy.  All
-attendees are responsible for making their own hotel reservations.  Please
-ask for the "The Printer Working Group" to get the negotiated sleeping room
-rate.  Rooms are being held for the nights of Sunday, May 23,
-2004-Wednesday, May 26, 2004.
-
- *** Please contact Ami Patel at a.s.patel@ieee.org if for any reason you
-are unable to obtain the negotiated room rate. ***
-
-Deadline:  Please call the reservation hotlin toll-free at +1-800-268-1133
-or local number +1-604-689-8188 to make your reservations.  Please make
-sleeping room reservations by May 14, 2004.
-
-The PWG Meeting Registration Form is in the process of being posted, and
-will be available shortly. The tentative schedule and other pertinent
-information will be conveyed to everyone in a future announcement.
-
-The cost for daily meeting attendance is US$55.00 per day. (Payments are
-processed on the first day of the meeting series.)
-Participants are responsible for their own lunch.
-
-
-Please contact  Ami Patel, PWG Program Lead at +1-732-465-6477 if you have
-any questions or Allison Leisz, PWG Program Assistant at +1 732 465 5855 if
-you have any questions.
-
-With Kindest Regards,
-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
-*-*-*-*-*-*-*-*-*-*-
-
-Ami Patel
-Program Lead
-c/o The Printer Working Group
-IEEE Industry Standards and Technology Organization
-445 Hoes Lane, Piscataway, NJ 08854 USA
-Phone: +1-732-465-6477; Fax: +1- 651-318-7292 or +1-732-981-9473
-AIM: Shortjunior; Email: a.s.patel@ieee.org; URL: http://www.ieee-isto.org
-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
-*-*-*-*-*-*-*-*-*-*-
+--0__=09BBE41FDFC006FD8f9e8a93df938690918c09BBE41FDFC006FD
+Content-type: text/plain; charset=US-ASCII
 
 
 
+
+
+Thursday, May 6
+
+GMT 19:00-21:00
+EDT 15:00-17:00
+CDT 14:00-16:00
+MDT 13:00-15:00
+PDT 12:00-14:00
+
+Toll Free:  1-888-687-2858 (use this first if possible)
+Toll:       1-719-457-3541
+Passcode:           726694
+
+Agenda:     Use cases
+
+Mark
+
+Take a look at the Linux Omni Printer Driver Framework at
+http://www.ibm.com/linux/ltc/projects/omni/
+--0__=09BBE41FDFC006FD8f9e8a93df938690918c09BBE41FDFC006FD
+Content-type: text/html; charset=US-ASCII
+Content-Disposition: inline
+
+<html><body>
+<p><tt>Thursday, May 6</tt><br>
+<br>
+<tt>GMT 19:00-21:00</tt><br>
+<tt>EDT 15:00-17:00</tt><br>
+<tt>CDT 14:00-16:00</tt><br>
+<tt>MDT 13:00-15:00</tt><br>
+<tt>PDT 12:00-14:00</tt><br>
+<br>
+<tt>Toll Free: &nbsp;1-888-687-2858 (use this first if possible)<br>
+Toll: &nbsp; &nbsp; &nbsp; 1-719-457-3541</tt><br>
+<tt>Passcode: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 726694</tt><br>
+<br>
+<tt>Agenda: &nbsp; &nbsp; Use cases</tt><br>
+<br>
+Mark<br>
+<br>
+Take a look at the Linux Omni Printer Driver Framework at<br>
+<a href="http://www.ibm.com/linux/ltc/projects/omni/">http://www.ibm.com/linux/ltc/projects/omni/</a></body></html>
+--0__=09BBE41FDFC006FD8f9e8a93df938690918c09BBE41FDFC006FD--
 
 
