@@ -1,9 +1,9 @@
-Message-ID: <OFFFACD500.660FFB6D-ON87256CE7.00543973@us.ibm.com>
+Message-ID: <OF949719CE.1A2EB4EB-ON87256CE7.005CBC6C@us.ibm.com>
 From: Claudia Alimpich <alimpich@us.ibm.com>
-Date: Wed, 12 Mar 2003 08:32:20 -0700
+Date: Wed, 12 Mar 2003 10:08:17 -0700
 MIME-Version: 1.0
 Content-type: text/plain; charset=US-ASCII
-Subject: [Printing-architecture] This (March 13) Thursday's FSG architecture meeting
+Subject: [Printing-architecture] Updated JTAPI slides for PWG/FSG meeting in DC
 Sender: printing-architecture-admin@freestandards.org
 Errors-To: printing-architecture-admin@freestandards.org
 List-Help: <mailto:printing-architecture-request@freestandards.org?subject=help>
@@ -14,24 +14,30 @@ List-Id: <printing-architecture.freestandards.org>
 List-Unsubscribe: <http://freestandards.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@freestandards.org?subject=unsubscribe>
 List-Archive: <http://freestandards.org/pipermail/printing-architecture/>
-To: printing-architecture@freestandards.org, Harry Lewis <harryl@us.ibm.com>
+To: printing-jobticket@freestandards.org, printing-architecture@freestandards.org
 
 
 
 
-During the Job Ticket working group meeting yesterday it was mentioned that
-it might be a good idea to try and better align some of the FSG and PWG
-discussions during the DC meeting. We want to make sure that the FSG people
-attend the appropriate PWG meetings and the PWG people attend the
-appropriate FSG meetings and that we get some dialog going between the
-groups on specific items.
+During the JT working group meeting yesterday we reviewed and updated the
+JTAPI slides to be presented during the PWG/FSG meeting in DC on April 1.
+The updated slides can be found at:
+   FSGOpenPrint_JT_11Mar2003.ppt
+   FSGOpenPrint_JT_11Mar2003.pdf
 
-We thought that it might be a good idea during this Thursday's FSG Open
-Print Architecture meeting to brain storm and come up with some specific
-areas where we want to try and align the two groups and make sure that the
-DC agenda supports this. We thought that inviting Harry Lewis to this
-Thursday's meeting to represent PWG would be a good idea. What does
-everyone think?
+The slides are still a draft. If anyone has any comments please send mail
+to the JT mailing list or plan to call into the JT working group meeting
+next week. We'll accept comments before March 24 at which time we will
+publish the final version of the JTAPI slides.
+
+We did change the overall structure of the slides as follows:
+   Introduction
+   Objectives
+   Accomplishments
+   Details
+   What's next
+   Issues
+   JT Working Group Information
 
 Claudia Alimpich
 
