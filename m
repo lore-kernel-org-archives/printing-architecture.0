@@ -1,11 +1,11 @@
-Message-ID: <OFA0020C2B.D91DD17E-ON86256EB5.005A670E-86256EB5.005A8A0F@us.ibm.com>
-From: Mark Hamzy <hamzy@us.ibm.com>
-Date: Wed, 16 Jun 2004 11:28:55 -0500
+Message-ID: <CFEE79A465B35C4385389BA5866BEDF00C7727@mailsrvnt02.enet.sharplabs.com>
+From: "McDonald, Ira" <imcdonald@sharplabs.com>
+Date: Wed, 16 Jun 2004 09:53:26 -0700
 MIME-Version: 1.0
-Content-type: multipart/alternative; 
-	Boundary="0__=09BBE426DFC9E19E8f9e8a93df938690918c09BBE426DFC9E19E"
-Content-Disposition: inline
-Subject: [Printing-architecture] Monthly status reports are due
+Content-Type: text/plain;
+	charset="iso-8859-1"
+Subject: [Printing-architecture] Query - Joint FSG/PWG face-to-face in San
+	Antonio (15-17 Nov 2004 )
 List-Id: Printing architecture under linux
 	<printing-architecture.mail.freestandards.org>
 List-Unsubscribe: <http://mail.freestandards.org/mailman/listinfo/printing-architecture>,
@@ -15,53 +15,51 @@ List-Post: <mailto:printing-architecture@mail.freestandards.org>
 List-Help: <mailto:printing-architecture-request@mail.freestandards.org?subject=help>
 List-Subscribe: <http://mail.freestandards.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@mail.freestandards.org?subject=subscribe>
-To: printing-driver@freestandards.org, printing-jobticket@freestandards.org, printing-spool@freestandards.org, printing-architecture@freestandards.org, printing-japan@freestandards.org
+To: printing-architecture@freestandards.org, printing-sc@freestandards.org, "'pwg@pwg.org'" <pwg@pwg.org>
+Cc: "'Petrie, Glen'" <glen.petrie@eitc.epson.com>, 'Till Kamppeter' <till.kamppeter@gmx.net>, 'Claudia Alimpich' <alimpich@us.ibm.com>
 
---0__=09BBE426DFC9E19E8f9e8a93df938690918c09BBE426DFC9E19E
-Content-type: text/plain; charset=US-ASCII
+Hi,
+
+*** Please respond quickly if you _can_ attend or _cannot_ 
+attend this proposed meeting, using 'reply all'.  I will
+consolidate replies across the three mailing lists. ***
+
+Yesterday, in the FSG Open Printing Job Ticket working group,
+Glen Petrie, Claudia Alimpich, Till Kamppeter, and I discussed
+possible dates in 2004 for a joint FSG/PWG face-to-face.  We
+looked at the current PWG scheduled meetings Harry Lewis posted.
+
+The only plausible candidate we found was San Antonio, Texas, in
+November.  We suggest running parallel meetings on Monday and 
+Tuesday and then having a joint plenary on Wednesday morning.
+
+Monday - 15 November 2004
+  PWG - TBD 
+  FSG - Open Printing International Steering Committee
+
+Tuesday - 16 November 2004
+  PWG - WIMS (Web-based Imaging Management Service)
+  FSG - Open Printing WG meetings (JT, Driver, etc.)
+
+Wednesday - 17 November 2004
+  PWG - Joint Plenary (morning)
+      - TBD (afternoon)
+  FSG - Joint Plenary (morning)
+      - TBD (afternoon)
+
+Thursday - 18 November 2004
+  IEEE P2600 
+
+Friday - 19 November 2004
+  IEEE P2600
+
+Cheers,
+- Ira
 
 
-
-
-
-Your monthly status report that covers work completed, ongoing work and
-planned work.
-
-Remember - Funding and contributions to Workgroups are directly related to
-the visibility of your efforts.
-
-Your entire report will go into the monthly Executive Director's report to
-the Board of Directors. Elements of your report are used in communications
-with current members, selling membership to non member companies,
-conference
-and trade show presentations, the bimonthly FSG public newsletter and even
-external, third party publications.
-
-Mark
-
-Take a look at the Linux Omni Printer Driver Framework at
-http://www.ibm.com/linux/ltc/projects/omni/
---0__=09BBE426DFC9E19E8f9e8a93df938690918c09BBE426DFC9E19E
-Content-type: text/html; charset=US-ASCII
-Content-Disposition: inline
-
-<html><body>
-<p><font face="Courier New">Your monthly status report that covers work completed, ongoing work and<br>
-planned work.<br>
-<br>
-Remember - Funding and contributions to Workgroups are directly related to<br>
-the visibility of your efforts. <br>
-<br>
-Your entire report will go into the monthly Executive Director's report to<br>
-the Board of Directors. Elements of your report are used in communications<br>
-with current members, selling membership to non member companies, conference<br>
-and trade show presentations, the bimonthly FSG public newsletter and even<br>
-external, third party publications.</font><br>
-<br>
-Mark<br>
-<br>
-Take a look at the Linux Omni Printer Driver Framework at<br>
-<a href="http://www.ibm.com/linux/ltc/projects/omni/">http://www.ibm.com/linux/ltc/projects/omni/</a></body></html>
---0__=09BBE426DFC9E19E8f9e8a93df938690918c09BBE426DFC9E19E--
-
+Ira McDonald (Musician / Software Architect)
+Blue Roof Music / High North Inc
+PO Box 221  Grand Marais, MI  49839
+phone: +1-906-494-2434
+email: imcdonald@sharplabs.com
 
