@@ -1,13 +1,11 @@
-Message-ID: <40324262.5080108@easysw.com>
-Date: Tue, 17 Feb 2004 11:33:38 -0500
-From: Michael Sweet <mike@easysw.com>
-MIME-Version: 1.0
-Subject: Re: [Printing-architecture] PAPI status report [IPP System Admin
+Message-ID: <CFEE79A465B35C4385389BA5866BEDF00C753F@mailsrvnt02.enet.sharplabs.com>
+From: "McDonald, Ira" <imcdonald@sharplabs.com>
+Subject: RE: [Printing-architecture] PAPI status report [IPP System Admin 
 	issue]
-References: <CFEE79A465B35C4385389BA5866BEDF00C753E@mailsrvnt02.enet.sharplabs.com>
-In-Reply-To: <CFEE79A465B35C4385389BA5866BEDF00C753E@mailsrvnt02.enet.sharplabs.com>
-Content-Type: text/plain; charset=us-ascii; format=flowed
-Content-Transfer-Encoding: 7bit
+Date: Tue, 17 Feb 2004 09:38:54 -0800
+MIME-Version: 1.0
+Content-Type: text/plain;
+	charset="iso-8859-1"
 List-Id: Printing architecture under linux
 	<printing-architecture.freestandards.org>
 List-Unsubscribe: <http://freestandards.org/mailman/listinfo/printing-architecture>,
@@ -17,9 +15,61 @@ List-Post: <mailto:printing-architecture@freestandards.org>
 List-Help: <mailto:printing-architecture-request@freestandards.org?subject=help>
 List-Subscribe: <http://freestandards.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@freestandards.org?subject=subscribe>
-To: "McDonald, Ira" <imcdonald@sharplabs.com>
+To: 'Michael Sweet' <mike@easysw.com>, "McDonald, Ira" <imcdonald@sharplabs.com>
 Cc: printing-spool@freestandards.org, 'Norm Jacobs' <Norm.Jacobs@Sun.COM>, "Hastings, Tom N" <hastings@cp10.es.xerox.com>, "Zehler,
 	Peter" <PZehler@crt.xerox.com>, "'carl@manros.com'" <carl@manros.com>, printing-architecture@freestandards.org, 'Harry Lewis' <harryl@us.ibm.com>
+
+Hi,
+
+I've just spoken with Harry Lewis (IBM) and Tom Hastings (Xerox)
+about this IPP System Admin spec (they are co-authors, along with
+Carl Kugler, IBM).
+
+We think we should do a PWG IPP System Admin spec as _one_ spec,
+but delete or fix any 'broken' operations (see below).
+
+If we leave this spec on the IETF 'standards track', it will be 
+late 2005 at the earliest before it's published as an RFC (the
+typical delay for a no-issues spec is 18 months at present).
+
+If we move it to IEEE/ISTO PWG, it can be taken to 'last call'
+within a month or two (it already _passed_ an IETF IPP WG 'last
+call').  Tom has already made the (trivial) security changes
+requested by Ned Free (our IETF Applications Area Director)
+in summer 2001.  I've found other minor typos (and sent them
+to Tom).
+
+We need a volunteer to be principal editor of the PWG conversion
+of the spec (into IEEE/ISTO format in MS Word).  I would volunteer
+to be co-editor.  Because of issues such as Michael raises below, 
+a few operations must be deleted or fixed (new parameters or new
+state reasons).
+
+If this spec rapidly advanced, then PWG WBMM (which has XML
+schema for most of these operations) could continue to have
+Normative references to the IPP operation semantics.
+
+Cheers,
+- Ira 
+
+
+Ira McDonald (Musician / Software Architect)
+Blue Roof Music / High North Inc
+PO Box 221  Grand Marais, MI  49839
+phone: +1-906-494-2434
+email: imcdonald@sharplabs.com
+
+
+-----Original Message-----
+From: Michael Sweet [mailto:mike@easysw.com]
+Sent: Tuesday, February 17, 2004 11:34 AM
+To: McDonald, Ira
+Cc: 'Norm Jacobs'; printing-architecture@freestandards.org;
+printing-spool@freestandards.org; Hastings, Tom N; 'carl@manros.com';
+Zehler, Peter; 'Harry Lewis'
+Subject: Re: [Printing-architecture] PAPI status report [IPP System
+Admin issue]
+
 
 McDonald, Ira wrote:
 > ...
