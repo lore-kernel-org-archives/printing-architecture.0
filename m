@@ -1,9 +1,9 @@
-Message-ID: <OF1117C362.D81774E3-ON86256D97.0070B2AB-86256D97.00711E6C@us.ibm.com>
+Message-ID: <OF21A8EB45.A6296D78-ON86256D9E.0054BA03-86256D9E.0054D139@us.ibm.com>
 From: Mark Hamzy <hamzy@us.ibm.com>
-Date: Thu, 4 Sep 2003 15:35:33 -0500
+Date: Thu, 11 Sep 2003 10:26:25 -0500
 MIME-Version: 1.0
 Content-type: text/plain; charset=US-ASCII
-Subject: [Printing-architecture] FSG processes
+Subject: [Printing-architecture] Architecture meeting 09/11/2003
 Sender: printing-architecture-admin@freestandards.org
 Errors-To: printing-architecture-admin@freestandards.org
 List-Help: <mailto:printing-architecture-request@freestandards.org?subject=help>
@@ -19,15 +19,19 @@ To: printing-architecture@freestandards.org
 
 
 
-Two documents that were given as an example of the FSG's standardization
-process are the following:
+Thursday, September 11
 
-      http://www.linuxbase.org/futures/criteria/index.html
+1200-1300 PST
+1300-1400 MST
+1400-1500 CST
+1500-1600 EST
+2000-2100 UTC
 
-      http://www.linuxbase.org/futures/identification/index.html
+Tie Line:    650-3239
+Toll Free:   1-800-497-2024
+Toll Number: 1-719-457-3821
+Passcode:     160458
 
-These are found under the LSB (Linux Standard Base) Futures home page:
-      http://www.linuxbase.org/futures/
 
 Mark
 
