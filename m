@@ -1,11 +1,11 @@
-Message-ID: <OFAB72C3B3.A32F6DF8-ON86256EAF.00570E45-86256EAF.00579EC1@us.ibm.com>
-From: Mark Hamzy <hamzy@us.ibm.com>
-Date: Thu, 10 Jun 2004 10:57:02 -0500
+In-Reply-To: <OFAB72C3B3.A32F6DF8-ON86256EAF.00570E45-86256EAF.00579EC1@us.ibm.com>
 MIME-Version: 1.0
-Content-type: multipart/alternative; 
-	Boundary="0__=09BBE43CDFC488D58f9e8a93df938690918c09BBE43CDFC488D5"
-Content-Disposition: inline
-Subject: [Printing-architecture] Architecture meeting 06/10/2004
+Message-ID: <OF72904760.102AA94F-ON87256EAF.005974EF-87256EAF.00599D33@us.ibm.com>
+From: Claudia Alimpich <alimpich@us.ibm.com>
+Date: Thu, 10 Jun 2004 10:18:26 -0600
+Content-Type: multipart/alternative;
+	boundary="=_alternative 00599D3187256EAF_="
+Subject: [Printing-architecture] Re: Architecture meeting 06/10/2004
 List-Id: Printing architecture under linux
 	<printing-architecture.mail.freestandards.org>
 List-Unsubscribe: <http://mail.freestandards.org/mailman/listinfo/printing-architecture>,
@@ -17,8 +17,30 @@ List-Subscribe: <http://mail.freestandards.org/mailman/listinfo/printing-archite
 	<mailto:printing-architecture-request@mail.freestandards.org?subject=subscribe>
 To: printing-architecture@freestandards.org
 
---0__=09BBE43CDFC488D58f9e8a93df938690918c09BBE43CDFC488D5
-Content-type: text/plain; charset=US-ASCII
+This is a multipart message in MIME format.
+--=_alternative 00599D3187256EAF_=
+Content-Type: text/plain; charset="US-ASCII"
+
+Sorry, I still have that nasty deadline looming, so I won't be able to 
+call into the architecture meeting today.
+
+Claudia
+
+
+
+Mark Hamzy/Austin/IBM@IBMUS 
+Sent by: printing-architecture-bounces@base3.freestandards.org
+06/10/2004 09:57 AM
+
+To
+printing-architecture@freestandards.org
+cc
+
+Subject
+[Printing-architecture] Architecture meeting 06/10/2004
+
+
+
 
 
 
@@ -44,31 +66,81 @@ Mark
 
 Take a look at the Linux Omni Printer Driver Framework at
 http://www.ibm.com/linux/ltc/projects/omni/
---0__=09BBE43CDFC488D58f9e8a93df938690918c09BBE43CDFC488D5
-Content-type: text/html; charset=US-ASCII
-Content-Disposition: inline
+_______________________________________________
+Printing-architecture mailing list
+Printing-architecture@mail.freestandards.org
+http://mail.freestandards.org/mailman/listinfo/printing-architecture
 
-<html><body>
-<p><tt>Thursday, June 3</tt><br>
-<br>
-<tt>GMT 19:00-21:00</tt><br>
-<tt>EDT 15:00-17:00</tt><br>
-<tt>CDT 14:00-16:00</tt><br>
-<tt>MDT 13:00-15:00</tt><br>
-<tt>PDT 12:00-14:00</tt><br>
-<br>
-<tt>Toll Free: &nbsp;1-888-687-2858 (use this first if possible)<br>
-Toll: &nbsp; &nbsp; &nbsp; 1-719-457-3541</tt><br>
-<tt>Passcode: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 726694</tt><br>
-<br>
-<tt>Agenda: &nbsp; &nbsp; Finalized reference model</tt><br>
-<tt> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;LSM</tt><br>
-<br>
-<br>
-Mark<br>
-<br>
-Take a look at the Linux Omni Printer Driver Framework at<br>
-<a href="http://www.ibm.com/linux/ltc/projects/omni/">http://www.ibm.com/linux/ltc/projects/omni/</a></body></html>
---0__=09BBE43CDFC488D58f9e8a93df938690918c09BBE43CDFC488D5--
 
+--=_alternative 00599D3187256EAF_=
+Content-Type: text/html; charset="US-ASCII"
+
+
+<br><font size=2 face="sans-serif">Sorry, I still have that nasty deadline
+looming, so I won't be able to call into the architecture meeting today.</font>
+<br>
+<br><font size=2 face="sans-serif">Claudia</font>
+<br>
+<br>
+<br>
+<table width=100%>
+<tr valign=top>
+<td width=40%><font size=1 face="sans-serif"><b>Mark Hamzy/Austin/IBM@IBMUS</b>
+</font>
+<br><font size=1 face="sans-serif">Sent by: printing-architecture-bounces@base3.freestandards.org</font>
+<p><font size=1 face="sans-serif">06/10/2004 09:57 AM</font>
+<td width=59%>
+<table width=100%>
+<tr>
+<td>
+<div align=right><font size=1 face="sans-serif">To</font></div>
+<td valign=top><font size=1 face="sans-serif">printing-architecture@freestandards.org</font>
+<tr>
+<td>
+<div align=right><font size=1 face="sans-serif">cc</font></div>
+<td valign=top>
+<tr>
+<td>
+<div align=right><font size=1 face="sans-serif">Subject</font></div>
+<td valign=top><font size=1 face="sans-serif">[Printing-architecture] Architecture
+meeting 06/10/2004</font></table>
+<br>
+<table>
+<tr valign=top>
+<td>
+<td></table>
+<br></table>
+<br>
+<br>
+<br>
+<br>
+<br><font size=3><tt>Thursday, June 3</tt></font>
+<br>
+<br><font size=3><tt>GMT 19:00-21:00</tt></font>
+<br><font size=3><tt>EDT 15:00-17:00</tt></font>
+<br><font size=3><tt>CDT 14:00-16:00</tt></font>
+<br><font size=3><tt>MDT 13:00-15:00</tt></font>
+<br><font size=3><tt>PDT 12:00-14:00</tt></font>
+<br>
+<br><font size=3><tt>Toll Free: &nbsp;1-888-687-2858 (use this first if
+possible)</tt></font>
+<br><font size=3><tt>Toll: &nbsp; &nbsp; &nbsp; 1-719-457-3541</tt></font>
+<br><font size=3><tt>Passcode: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 726694</tt></font>
+<br>
+<br><font size=3><tt>Agenda: &nbsp; &nbsp; Finalized reference model</tt></font>
+<br><font size=3><tt>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;LSM</tt></font>
+<br>
+<br>
+<br><font size=3>Mark</font>
+<br>
+<br><font size=3>Take a look at the Linux Omni Printer Driver Framework
+at</font>
+<br><a href=http://www.ibm.com/linux/ltc/projects/omni/><font size=3 color=blue><u>http://www.ibm.com/linux/ltc/projects/omni/</u></font></a>
+<br><font size=2><tt>_______________________________________________<br>
+Printing-architecture mailing list<br>
+Printing-architecture@mail.freestandards.org<br>
+http://mail.freestandards.org/mailman/listinfo/printing-architecture</tt></font>
+<br>
+<br>
+--=_alternative 00599D3187256EAF_=--
 
