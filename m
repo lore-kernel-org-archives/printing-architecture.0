@@ -1,10 +1,11 @@
-Message-ID: <2F7D63A21DB2C74EB8EB8C09AF667DB0A7B2B7@eitc220.eitc.epson.com>
-From: "Petrie, Glen" <glen.petrie@eitc.epson.com>
-Date: Wed, 1 Sep 2004 08:49:53 -0700 
+Message-ID: <CFEE79A465B35C4385389BA5866BEDF00C7871@mailsrvnt02.enet.sharplabs.com>
+From: "McDonald, Ira" <imcdonald@sharplabs.com>
+Date: Thu, 2 Sep 2004 08:22:41 -0700 
 MIME-Version: 1.0
-Content-Type: multipart/alternative;
-	boundary="----_=_NextPart_001_01C4903B.52609CB0"
-Subject: [Printing-architecture] New Ref Model Diagram and document
+Content-Type: text/plain;
+	charset="iso-8859-1"
+Subject: [Printing-architecture] FW: PWG-ANNOUNCE> Open source ipr tools for
+	IPP
 List-Id: Printing architecture under linux
 	<printing-architecture.mail.freestandards.org>
 List-Unsubscribe: <http://mail.freestandards.org/mailman/listinfo/printing-architecture>,
@@ -16,117 +17,83 @@ List-Subscribe: <http://mail.freestandards.org/mailman/listinfo/printing-archite
 	<mailto:printing-architecture-request@mail.freestandards.org?subject=subscribe>
 To: printing-architecture@freestandards.org
 
-This message is in MIME format. Since your mail reader does not understand
-this format, some or all of this message may not be legible.
+Hi folks,
 
-------_=_NextPart_001_01C4903B.52609CB0
-Content-Type: text/plain
+The note below describes command-line tools for IPP, with
+downloadable binaries for Linux and Windows.
 
-See
+Cheers,
+- Ira
 
-ftp://ftp.pwg.org/pub/pwg/fsg/architecture/Reference-Model/FSG-OpenPrinting-
-Reference-Model--V0001-2004-0901.doc
-<ftp://ftp.pwg.org/pub/pwg/fsg/architecture/Reference-Model/FSG-OpenPrinting
--Reference-Model--V0001-2004-0901.doc>  
+Ira McDonald (Musician / Software Architect)
+Blue Roof Music / High North Inc
+PO Box 221  Grand Marais, MI  49839
+phone: +1-906-494-2434
+email: imcdonald@sharplabs.com
 
-ftp://ftp.pwg.org/pub/pwg/fsg/architecture/Reference-Model/FSG-OpenPrinting-
-Reference-Model--V0001-2004-0901.pdf
-<ftp://ftp.pwg.org/pub/pwg/fsg/architecture/Reference-Model/FSG-OpenPrinting
--Reference-Model--V0001-2004-0901.pdf>    
-
-
-
-
-ftp://ftp.pwg.org/pub/pwg/fsg/architecture/Reference-Model/fsg-arch-Ref-Mode
-l-Diagram-v00.20-2004.09.01.ppt
-<ftp://ftp.pwg.org/pub/pwg/fsg/architecture/Reference-Model/fsg-arch-Ref-Mod
-el-Diagram-v00.20-2004.09.01.ppt>  
-
-ftp://ftp.pwg.org/pub/pwg/fsg/architecture/Reference-Model/fsg-arch-Ref-Mode
-l-Diagram-v00.20-2004.09.01.pdf
-<ftp://ftp.pwg.org/pub/pwg/fsg/architecture/Reference-Model/fsg-arch-Ref-Mod
-el-Diagram-v00.20-2004.09.01.pdf>   
+-----Original Message-----
+From: owner-pwg-announce@pwg.org [mailto:owner-pwg-announce@pwg.org]On
+Behalf Of Peter Michalek
+Sent: Thursday, September 02, 2004 9:34 AM
+To: pwg-announce@pwg.org
+Subject: PWG-ANNOUNCE> Open source ipr tools for IPP
 
 
+ipr provides a series of client programs that enable the user to do
+printing compliant with the Internet Printing Protocol (IPP), directly
+to an IPP printer.
 
-Rgds, 
-Glen W. Petrie 
-Epson Imaging Technology Center 
-150 River Oaks Parkway, Suite 200 
-San Jose, CA, 95134 
-Voice: 408.576.4131  Fax: 408.474.0511 
+ipr,ipq,iprm,ipc follow the approach of unix lpr set of commands, but
+deal only with  IPP protocol.
+
+When performing and automating print tasks on unix and windows and using
+command line more often than the GUI, I kept using it instead of more
+heavyweight facilities: since most new printers support IPP, it's
+sometimes more efficient to talk to them directly from the command
+prompt, e.g.:
+
+ipr -P http://printerserver/printers/printer document.ps
+prints the document,
+
+ipq -P http://printerserver/printers/printer
+shows all pending jobs.
+
+This program is being rolled out as open source.
+It's based on CUPS ipp library and an article I wrote together
+with Michael Sweet back in 1998.
+ipr is implemented in c/c++ and can be used for light-weight internet
+printing from linux or windows.
+The footprint is < 200K.
+
+ipr was originally available from my company Shinesoft Systems
+as part of ShinePrint suite, but only in binary form. This release
+is based on that tool, but slightly different.
+
+A description of the concept is available in the article:
+
+Implementing an IPP client and server for Linux
+Peter Michalek, Michael Sweet
+Pages: 164 - 171
+at http://www.acm.org
+
+
+You can currently download source and binary for Windows and Linux from:
+
+http://www.michalek.org/ipr/
+
+I opened a project request on sourceforge.net where I'd like to move it
+soon.
+
+Note: also related to IPP is the application security project I am
+developing at:
+http://www.michalek.org/appsec
+(see CUPS scheduler scan).
+
+
+Peter
 
 
 
-------_=_NextPart_001_01C4903B.52609CB0
-Content-Type: text/html
-Content-Transfer-Encoding: quoted-printable
 
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
-<HTML>
-<HEAD>
-<META HTTP-EQUIV=3D"Content-Type" CONTENT=3D"text/html; =
-charset=3Dus-ascii">
-<META NAME=3D"Generator" CONTENT=3D"MS Exchange Server version =
-5.5.2653.12">
-<TITLE>New Ref Model Diagram and document</TITLE>
-</HEAD>
-<BODY>
 
-<P ALIGN=3DLEFT><FONT SIZE=3D2 FACE=3D"Arial">See</FONT></P>
-
-<P ALIGN=3DLEFT><A =
-HREF=3D"ftp://ftp.pwg.org/pub/pwg/fsg/architecture/Reference-Model/FSG-O=
-penPrinting-Reference-Model--V0001-2004-0901.doc"><U><FONT =
-COLOR=3D"#0000FF" SIZE=3D2 =
-FACE=3D"Arial">ftp://ftp.pwg.org/pub/pwg/fsg/architecture/Reference-Mode=
-l/</FONT></U><U><FONT COLOR=3D"#0000FF" SIZE=3D2 =
-FACE=3D"Arial">FSG-OpenPrinting-Reference-Model--V0001-2004-0901.doc</FO=
-NT></U></A><FONT SIZE=3D2 FACE=3D"Arial"> </FONT></P>
-
-<P ALIGN=3DLEFT><A =
-HREF=3D"ftp://ftp.pwg.org/pub/pwg/fsg/architecture/Reference-Model/FSG-O=
-penPrinting-Reference-Model--V0001-2004-0901.pdf"><U><FONT =
-COLOR=3D"#0000FF" SIZE=3D2 =
-FACE=3D"Arial">ftp://ftp.pwg.org/pub/pwg/fsg/architecture/Reference-Mode=
-l/FSG-OpenPrinting-Reference-Model--V0001-2004-0901.</FONT></U><U><FONT =
-COLOR=3D"#0000FF" SIZE=3D2 FACE=3D"Arial">pdf</FONT></U></A><FONT =
-SIZE=3D2 FACE=3D"Arial">&nbsp;&nbsp; </FONT></P>
-<BR>
-<BR>
-<BR>
-
-<P ALIGN=3DLEFT><A =
-HREF=3D"ftp://ftp.pwg.org/pub/pwg/fsg/architecture/Reference-Model/fsg-a=
-rch-Ref-Model-Diagram-v00.20-2004.09.01.ppt"><U><FONT COLOR=3D"#0000FF" =
-SIZE=3D2 =
-FACE=3D"Arial">ftp://ftp.pwg.org/pub/pwg/fsg/architecture/Reference-Mode=
-l/fsg-arch-Ref-Model-Diagram-v00.20-2004.09.01.ppt</FONT></U></A><FONT =
-SIZE=3D2 FACE=3D"Arial"></FONT> </P>
-
-<P ALIGN=3DLEFT><A =
-HREF=3D"ftp://ftp.pwg.org/pub/pwg/fsg/architecture/Reference-Model/fsg-a=
-rch-Ref-Model-Diagram-v00.20-2004.09.01.pdf"><U><FONT COLOR=3D"#0000FF" =
-SIZE=3D2 =
-FACE=3D"Arial">ftp://ftp.pwg.org/pub/pwg/fsg/architecture/Reference-Mode=
-l/fsg-arch-Ref-Model-Diagram-v00.20-2004.09.01.</FONT></U><U><FONT =
-COLOR=3D"#0000FF" SIZE=3D2 FACE=3D"Arial">pdf</FONT></U></A><FONT =
-SIZE=3D2 FACE=3D"Arial">&nbsp; </FONT></P>
-<BR>
-
-<P ALIGN=3DLEFT><A NAME=3D"_MailAutoSig"></A></P>
-
-<P ALIGN=3DLEFT><B><I>Rgds,<BR>
-</I></B><B><I></I></B><B><I><FONT COLOR=3D"#0000FF" SIZE=3D5>Glen W. =
-Petrie</FONT></I></B><B><I></I></B><B><I><FONT SIZE=3D5><BR>
-</FONT></I></B><B><I>Epson Imaging Technology Center<BR>
-150 River Oaks Parkway, Suite 200<BR>
-San Jose, CA, 95134<BR>
-Voice: 408.576.4131&nbsp; Fax: 408.474.0511 </I></B></P>
-
-<P ALIGN=3DLEFT></P>
-
-</BODY>
-</HTML>
-------_=_NextPart_001_01C4903B.52609CB0--
 
