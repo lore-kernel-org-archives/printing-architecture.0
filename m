@@ -1,9 +1,9 @@
-Subject: Re: [Printing-architecture] Architecture meeting agenda 20030612. . .
-Message-ID: <OFA0EACA90.5E8CD368-ON85256D44.00489948@pok.ibm.com>
-From: "Pete Zannucci" <pzaan@us.ibm.com>
-Date: Fri, 13 Jun 2003 08:41:17 -0500
+Message-ID: <OF4217A9F1.D6EC1C16-ON87256D44.0056599F@us.ibm.com>
+From: Claudia Alimpich <alimpich@us.ibm.com>
+Date: Fri, 13 Jun 2003 09:51:29 -0600
 MIME-Version: 1.0
-Content-type: text/plain; charset=us-ascii
+Content-type: text/plain; charset=US-ASCII
+Subject: [Printing-architecture] Re: Updated FSG schedule for Portland PWG meeting
 Sender: printing-architecture-admin@freestandards.org
 Errors-To: printing-architecture-admin@freestandards.org
 List-Help: <mailto:printing-architecture-request@freestandards.org?subject=help>
@@ -14,73 +14,150 @@ List-Id: <printing-architecture.freestandards.org>
 List-Unsubscribe: <http://freestandards.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@freestandards.org?subject=unsubscribe>
 List-Archive: <http://freestandards.org/pipermail/printing-architecture/>
-To: printing-architecture@freestandards.org
+To: Harry Lewis <harryl@us.ibm.com>
+Cc: a.s.patel@ieee.org, c.tiritilli@ieee.org, charles.hemstreet@hp.com, printing-architecture@freestandards.org
 
-Michael Sweet wrote:
 
 
-> The diagram separates the bidi handling from the driver,
-> which won't work for several consumer inkjet devices that
-> I personally know of.  Either remove this box or put it
-> in-line so that the output from the printer driver can be
-> massaged by the vendor filter.
 
-        > this special handling can be put in a "monitor"
-        > filter in-line between the driver filter and backend
-        > to packetize the output and provide ink status, etc.
+Harry and Ami,
+I was just checking out the possibility to see what the cost would be. I
+will pose the question to the FSG to see if everyone thinks that it is
+worth $250 to rent the penthouse. My guess is that no one will want to do
+this, but I can certainly ask. We had actually talked about just meeting in
+the lounge or a coffee shop, so this may be our best bet. So, don't do
+anything and I will get back with you by the end of today. Thanks for
+checking into this for us.
 
-You're correct Michael.  I had used the lines coming from the
-driver going back to the spool system as really just an api/
-interface to the backend (the possible owner of the library
-that supports the common backend interface.  So in fact,
-the bidi work would be done by the monitor.  I simplified it
-because there are likely multiple users of the data and put
-it in as an interface back through the spool system.  I will
-try and think of a way to clarify it.
+FSG members - please cast your vote on what to do.
 
-> There absolutely cannot be a direct link between a device
-> backend or vendor filter and a vendor-supplied UI.
+Thanks,
+Claudia
 
-> Any driver/filter communications should be in the form of
-> state information that is communicated to the scheduler,
-> which can then provide the information to apps in a
-> consistent way.  Vendors can provide UIs that query this
-> information, and the *same* interface can be used by all
-> vendors.
 
-The interfaces for the bidi management will definitely have
-to adhere to one single api set and be plug compatible otherwise
-there is no need to a bidi spec.  Everyone can do it for their
-devices.  As far as the scheduler that you suggest, I envision
-that as just another layer of the backend processing.  The
-bidi box is to merely show that the bidi stuff should be
-isolated out and should be able to plug in via a common
-interface.
+HARRY LEWIS
+06/12/2003 07:40 PM
 
-I didn't focus on clarifying the bidi area as much because most
-of the work everyone thought needed to be done was in the upper
-portion of the system and providing an API that is usable
-for an application.  The key to starting this and I think the
-one real reason to start with PAPI is that applications can
-be easily written and portable across systems.
+To:    Claudia Alimpich/Boulder/IBM@IBMUS
+cc:    a.s.patel@ieee.org, c.tiritilli@ieee.org
+Subject:    Re: Updated FSG schedule for Portland PWG meeting  (Document
+       link: Claudia Alimpich)
 
-As we dig deeper into the other subsystems we can map them out
-better.  The primary reason for doing this level of a drawing
-was to try and map out areas of work and not forget where the
-components lie where.
+Claudia, as meeting fee costs have already been calculated and posted (and
+re-calculated and reposted based on last minute request for phone ins)...
+I'm going to recommend that FSG members absorb the cost of the additional
+last minute room. Do you see a problem with this? I think we can rent you
+the Penthouse Suite for an additional $250. Not sure how many members you
+have to divide this among. Please advise. Recommend dividing among all FSG
+attendees (ex. the Tuesday crowd). If it's a VERY small number that need
+the breakout... you might want to consider using someone's sleeping room or
+a lounge setting... but the Penthouse is likely a preferred option.
+----------------------------------------------
+Harry Lewis
+Chairman - IEEE-ISTO Printer Working Group
+http://www.pwg.org
+IBM Printing Systems
+http://www.ibm.com/printers
+303-924-5337
+----------------------------------------------
 
-Your comments are very helpful and we can put more information
-into the drawing (though it is pretty busy right now).  Then
-we can start breaking the low level drawing into succinct parts
-so that we truly can be sure we didn't miss anything or any
-interface.
 
-Peter Zannucci
+                                                                           
+             Claudia                                                       
+             Alimpich/Boulder/                                             
+             IBM                                                        To 
+                                       a.s.patel@ieee.org                  
+             06/12/2003 02:27                                           cc 
+             PM                        Harry Lewis/Boulder/IBM@IBMUS,      
+                                       printing-architecture@freestandards 
+                                       .org                                
+                                                                   Subject 
+                                       Updated FSG schedule for Portland   
+                                       PWG meeting                         
+                                                                           
+                                                                           
+                                                                           
+                                                                           
+                                                                           
+                                                                           
 
-IBM Linux Technology Center
-Open Source Software Development
-Omni Print Project http://sourceforge.net/projects/omniprint
-Austin, TX - Tel. 512-838-4687 (t/l 678) pzaan@us.ibm.com
+
+
+Ami,
+Here is an update to the agenda for the FSG meeting on Tuesday 6/17 in
+Portland. Is it possible to update the PWG site with this information? We
+had to add another topic so we squeezed some time out of the other topics
+and did some rearranging to accomodate individual travel schedules. We also
+added some items for Wednesday that will occur in parallel with the PWG
+spec work that is occurring in the morning and the PWG IFX in the
+afternoon. Is it possible to get a smaller room for Wednesday that is
+separate from the main room?
+
+Also, great news about the phone. Thanks! What phone number should everyone
+call into?
+
+Thank you.
+Claudia Alimpich
+
+--------------------------------------------------
+Tuesday 6/17:
+------------
+
+8:30-9:00 AM - Coffee (30 minutes)
+
+9:00-10:00 AM - Architecture Overview (60 minutes)
+(10 minutes per topic to discuss+5 minutes for questions/each topic at a
+      high level)
+Presenters: Charles Hemstreet, Claudia Alimpich, Mark Hamzy, Norm Jacobs
+      a. High level architecture diagram
+      b. Job Ticket Status
+      c. Driver status
+      d. PAPI status
+
+10:00-10:15 Break (15 minutes)
+
+10:15-12:00 AM - Printer Driver Renderer work group (105 minutes)
+   Chair: Mark Hamzy/Glen Petrie
+
+12:00-1:00 PM - Lunch (60 minutes)
+
+1:00-2:00 Vector Driver and Bidi (60 minutes)
+   Chair: Yasumasa Toratani/Osamu Mihara
+
+2:00-2:45 PM - PAPI work group part 1 (45 minutes)
+   Chair: Norm Jacobs/Michael Sweet
+
+2:45-3:00 PM Break (15 minutes)
+
+3:00-3:45 PM - PAPI work group part 2 (45 minutes)
+   Chair: Norm Jacobs/Michael Sweet
+
+Stretch break - 5 minutes
+
+3:50-5:15 PM - JTAPI work group (85 minutes)
+   Chair: Claudia Alimpich
+
+5:15-7:00 PM - Dinner (105 minutes)
+
+07:00-9:00 PM - Architecture work group (120 minutes)
+   Chair: Charles Hemstreet
+
+
+Wednesday 6/18:
+--------------
+
+10:00 - 11:00 AM - Foomatic (60 minutes)
+   Chair: Till Kamppeter
+
+11:00 - 12:00 AM - Architecture work group (overflow)
+   Chair: Charles Hemstreet
+
+12:00 - 1:00 PM - Lunch (60 minutes)
+
+1:00 - 5:00 PM - Overflow from Tuesday (240 minutes)
+   Capabilities
+   Driver
+   Other topics
 
 
 
