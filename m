@@ -1,9 +1,13 @@
-From: "Charles Hemstreet" <charles_at_hp@hotmail.com>
-Date: Thu, 12 Jun 2003 10:24:20 -0700
-Mime-Version: 1.0
-Content-Type: text/plain; format=flowed
-Message-ID: <Sea2-F67CjOuF1Qp4hZ000315aa@hotmail.com>
-Subject: [Printing-architecture] Architecture meeting agenda 20030612. . .
+Message-ID: <3EE8CCA6.6070700@easysw.com>
+Date: Thu, 12 Jun 2003 14:55:34 -0400
+From: Michael Sweet <mike@easysw.com>
+MIME-Version: 1.0
+Subject: Re: [Printing-architecture] Architecture meeting agenda 20030612.
+ . .
+References: <Sea2-F67CjOuF1Qp4hZ000315aa@hotmail.com>
+In-Reply-To: <Sea2-F67CjOuF1Qp4hZ000315aa@hotmail.com>
+Content-Type: text/plain; charset=us-ascii; format=flowed
+Content-Transfer-Encoding: 7bit
 Sender: printing-architecture-admin@freestandards.org
 Errors-To: printing-architecture-admin@freestandards.org
 List-Help: <mailto:printing-architecture-request@freestandards.org?subject=help>
@@ -14,42 +18,57 @@ List-Id: <printing-architecture.freestandards.org>
 List-Unsubscribe: <http://freestandards.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@freestandards.org?subject=unsubscribe>
 List-Archive: <http://freestandards.org/pipermail/printing-architecture/>
-To: printing-architecture@freestandards.org
+To: Charles Hemstreet <charles_at_hp@hotmail.com>
+Cc: printing-architecture@freestandards.org
 
-New meeting time for our architecture teleconference:
+Charles Hemstreet wrote:
+> New meeting time for our architecture teleconference:
+> ...
+> ftp://ftp.pwg.org/pub/pwg/fsg/architecture/arch1-6-12-03.jpg
+> 
+> ftp://ftp.pwg.org/pub/pwg/fsg/architecture/arch2-6-12-03.jpg
 
-Every Thursday
-1200-1300 PST
-1300-1400 MST
-1400-1500 CST
-1500-1600 EST
-2000-2100 UTC
+As I can't attend any of the teleconferences due to scheduling
+conflicts, here are some comments on the current diagrams:
 
-There is a new call-in number:
+     1. The diagram separates the bidi handling from the driver,
+        which won't work for several consumer inkjet devices that
+        I personally know of.  Either remove this box or put it
+        in-line so that the output from the printer driver can be
+        massaged by the vendor filter.
 
-          - *Toll Free Access Number:
-            866-639-4758 (toll-free)
-            574-935-6716 (toll)
+        Example: the EPSON inkjet printers use a special packet
+        mode via USB or parallel port to provide continuous status
+        updates; this special handling can be put in a "monitor"
+        filter in-line between the driver filter and backend to
+        packetize the output and provide ink status, etc. as the
+        job is printed.  If you implement it the way the diagram
+        is, then the driver has to do all of the device-specific
+        stuff (and that device-specific stuff varies based upon
+        the interface, and it isn't always possible to automatically
+        determine the right mode - it needs to be configurable)
+        and the back-channel filter somehow needs to be able to
+        send as well as recieve data without trashing the driver's
+        output.
 
-          - Participant PIN:
-            2124490
+     2. There absolutely cannot be a direct link between a device
+        backend or vendor filter and a vendor-supplied UI.  Such
+        an interface opens up major security issues not to mention
+        that it likely won't work in a networked environment and
+        will kill any interoperability.
 
-Agenda:
+        Any driver/filter communications should be in the form of
+        state information that is communicated to the scheduler,
+        which can then provide the information to apps in a
+        consistent way.  Vendors can provide UIs that query this
+        information, and the *same* interface can be used by all
+        vendors.
 
-1) FSG/OP schedule
-2) review of new architecture diagrams
+-- 
+______________________________________________________________________
+Michael Sweet, Easy Software Products           mike at easysw dot com
+Printing Software for UNIX                       http://www.easysw.com
 
-These files are stored on the PWG anonymous FTP server at:
 
-ftp://ftp.pwg.org/pub/pwg/fsg/architecture/arch1-6-12-03.jpg
-
-ftp://ftp.pwg.org/pub/pwg/fsg/architecture/arch2-6-12-03.jpg
-
-Thanks,
-Charles
-
-_________________________________________________________________
-Tired of spam? Get advanced junk mail protection with MSN 8. 
-http://join.msn.com/?page=features/junkmail
 
 
