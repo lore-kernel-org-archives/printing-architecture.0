@@ -1,9 +1,10 @@
-From: "Charles Hemstreet" <charles_at_hp@hotmail.com>
-Date: Thu, 10 Jul 2003 11:03:35 -0700
-Mime-Version: 1.0
-Content-Type: text/plain; format=flowed
-Message-ID: <SEA2-F32U4UmRvlXONH00038166@hotmail.com>
-Subject: [Printing-architecture] Architecture meeting agenda 20030710. . .
+Message-ID: <116DB56CD7DED511BC7800508B2CA53735D09D@mailsrvnt02.enet.sharplabs.com>
+From: "McDonald, Ira" <imcdonald@sharplabs.com>
+Date: Thu, 10 Jul 2003 13:17:15 -0700
+MIME-Version: 1.0
+Content-Type: text/plain;
+	charset="iso-8859-1"
+Subject: [Printing-architecture] Use Cases in PWG PSI requirements
 Sender: printing-architecture-admin@freestandards.org
 Errors-To: printing-architecture-admin@freestandards.org
 List-Help: <mailto:printing-architecture-request@freestandards.org?subject=help>
@@ -16,51 +17,23 @@ List-Unsubscribe: <http://freestandards.org/mailman/listinfo/printing-architectu
 List-Archive: <http://freestandards.org/pipermail/printing-architecture/>
 To: printing-architecture@freestandards.org
 
-Every Thursday
-1200-1300 PST
-1300-1400 MST
-1400-1500 CST
-1500-1600 EST
-2000-2100 UTC
+Hi,
 
-Here is the call-in number:
+There are 5 excellent use cases in this short PSI document.
+They focus heavily on mobile printing scenarios.
 
-          - *Toll Free Access Number:
-            866-639-4758 (toll-free)
-            574-935-6716 (toll)
+ftp://ftp.pwg.org/pub/pwg/ps/psi_requirements081.pdf
+(there's an underscore after psi above)
 
-          - Participant PIN:
-            2124490
+I'll be writing Security Considerations (i.e., threat and
+defense models) for each of these 5 uses cases for PSI.
 
-Agenda:
-
-1) review the TODO list
-2) discuss who will/should create each diagram
-3) continue working on the use cases
-4) other?
-
-Thanks,
-Charles
+The diagrams need to be enhanced to add dotted lines for
+the various subnets (admin/security domains) in each
+scenario.
 
 
-TODO List
---------------
-Here's the to-do list for our group (from PWG/FSG meeting)
-
-1) Document the reduced architecture drawing and their scenarios
-
-2) Review #1
-
-3) Continue USE-CASES
-
-4) Generate requirements from USE-CASES
-
-5) Validate detailed work against requirements
-
-6) Generate a specification that everyone will adopt
-
-_________________________________________________________________
-The new MSN 8: advanced junk mail protection and 2 months FREE*  
-http://join.msn.com/?page=features/junkmail
-
+Cheers,
+- Ira McDonald
+  High North Inc
 
