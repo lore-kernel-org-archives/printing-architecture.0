@@ -1,11 +1,11 @@
-Message-ID: <CFEE79A465B35C4385389BA5866BEDF00C7AE1@mailsrvnt02.enet.sharplabs.com>
-From: "McDonald, Ira" <imcdonald@sharplabs.com>
-Date: Tue, 22 Mar 2005 05:52:08 -0800
 MIME-Version: 1.0
+Message-ID: <OF57E674B1.6712035C-ON87256FCC.007181D4-87256FCC.00743806@us.ibm.com>
+From: Claudia Alimpich <alimpich@us.ibm.com>
+Date: Tue, 22 Mar 2005 14:09:22 -0700
 Content-Type: multipart/alternative;
-	boundary="----_=_NextPart_001_01C52EE6.3D907C11"
-Subject: [Printing-architecture] FW: PWG-ANNOUNCE> Last Call for the Port
-	Monitor MIB
+	boundary="=_alternative 0074380487256FCC_="
+Subject: [Printing-architecture] JTAPI Release Request sent to FSG
+	OpenPrinting Steering Committee
 List-Id: Printing architecture under linux
 	<printing-architecture.mail.freestandards.org>
 List-Unsubscribe: <http://mail.freestandards.org/mailman/listinfo/printing-architecture>,
@@ -15,85 +15,64 @@ List-Post: <mailto:printing-architecture@mail.freestandards.org>
 List-Help: <mailto:printing-architecture-request@mail.freestandards.org?subject=help>
 List-Subscribe: <http://mail.freestandards.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@mail.freestandards.org?subject=subscribe>
-To: printing-sc@freestandards.org, printing-architecture@base3.freestandards.org
+To: printing-jobticket@freestandards.org, printing-architecture@freestandards.org, printing-announce@freestandards.org, printing-japan@base3.freestandards.org
 
-This message is in MIME format. Since your mail reader does not understand
-this format, some or all of this message may not be legible.
+This is a multipart message in MIME format.
+--=_alternative 0074380487256FCC_=
+Content-Type: text/plain; charset="US-ASCII"
 
-------_=_NextPart_001_01C52EE6.3D907C11
-Content-Type: text/plain;
-	charset="ISO-8859-1"
+The JT WG has posted the JTAPI Release Request form to the FSG 
+OpenPrinting Steering Committee mailing list for their action during the 
+Steering Committee meeting planned for April 4th/5th, 2005. Pending their 
+approval of the JTAPI Release Request, the JTAPI Spec and header files 
+will be posted for review for a period of one month. The JTAPI Spec and 
+header files will be posted to the FSG OpenPrinting Job Ticketing, 
+Announce, Japan, and Architecture mailing lists. They will also be 
+forwarded to the CIP4 (JDF) Digital Printing working group forum by 
+Claudia Alimpich and forwarded to the PWG Announce mailing list by Ira 
+McDonald.
 
------Original Message-----
-From: owner-pwg-announce@pwg.org [mailto:owner-pwg-announce@pwg.org]On
-Behalf Of Bergman, Ron
-Sent: Monday, March 21, 2005 8:59 PM
-To: PWG-ANNOUNCE@pwg.org
-Subject: PWG-ANNOUNCE> Last Call for the Port Monitor MIB
+The JT WG meeting next week, Tuesday March 29th,  is cancelled. 
+
+The JT WG will meet on Tuesday April 5th, following the April 4th/5th 
+Steering Committee meeting.
+
+Following the posting of the JTAPI Spec and header files for review, the 
+JT WG will meet as required to address comments and questions. The 
+meetings will be at the regular Tuesday time, and will be announced on the 
+JT WG mailing list.
+
+Congratulations to the JT WG for a job well done and thank you all for 
+your hard work and commitment!
+Claudia Alimpich
+--=_alternative 0074380487256FCC_=
+Content-Type: text/html; charset="US-ASCII"
 
 
-
-The last call period for the Port Monitor MIB is now open and will close 
-on April 25th.  Please send any comments to the pmp@pwg.org list. 
-
-Do not respond directly to the PWG-ANNOUNCE list. 
-
-The latest documents can be found at: 
-
-        ftp://ftp.pwg.org/pub/pwg/pmp/wd/wd-pmpportmib10-20050321.pdf
-<ftp://ftp.pwg.org/pub/pwg/pmp/wd/wd-pmpportmib10-20050321.pdf>   (.doc
-.mib) 
-
-        Ron Bergman 
-        Print MIB WG Chairman 
-        Ricoh Printing Systems America 
-
-
-------_=_NextPart_001_01C52EE6.3D907C11
-Content-Type: text/html;
-	charset="ISO-8859-1"
-Content-Transfer-Encoding: quoted-printable
-
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<HTML><HEAD>
-<META HTTP-EQUIV=3D"Content-Type" CONTENT=3D"text/html; =
-charset=3DISO-8859-1">
-<TITLE>Last Call for the Port Monitor MIB</TITLE>
-
-<META content=3D"MSHTML 6.00.2800.1491" name=3DGENERATOR></HEAD>
-<BODY>
-<DIV class=3DOutlookMessageHeader dir=3Dltr align=3Dleft><FONT =
-face=3DTahoma=20
-size=3D2>-----Original Message-----<BR><B>From:</B> =
-owner-pwg-announce@pwg.org=20
-[mailto:owner-pwg-announce@pwg.org]<B>On Behalf Of </B>Bergman,=20
-Ron<BR><B>Sent:</B> Monday, March 21, 2005 8:59 PM<BR><B>To:</B>=20
-PWG-ANNOUNCE@pwg.org<BR><B>Subject:</B> PWG-ANNOUNCE&gt; Last Call for =
-the Port=20
-Monitor MIB<BR><BR></FONT></DIV><!-- Converted from text/rtf format -->
-<P><FONT face=3DArial size=3D2>The last call period for the Port =
-Monitor MIB is now=20
-open and will close</FONT> <BR><FONT face=3DArial size=3D2>on April =
-25th.&nbsp;=20
-Please send any comments to the pmp@pwg.org list.</FONT> </P>
-<P><FONT face=3DArial size=3D2>Do not respond directly to the =
-PWG-ANNOUNCE=20
-list.</FONT> </P>
-<P><FONT face=3DArial size=3D2>The latest documents can be found =
-at:</FONT> </P>
-<P>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <FONT face=3DArial =
-size=3D2><A=20
-href=3D"ftp://ftp.pwg.org/pub/pwg/pmp/wd/wd-pmpportmib10-20050321.pdf">f=
-tp://ftp.pwg.org/pub/pwg/pmp/wd/wd-pmpportmib10-20050321.pdf</A>&nbsp;=20
-(.doc&nbsp; .mib)</FONT> </P>
-<P>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <FONT face=3DArial =
-size=3D2>Ron=20
-Bergman</FONT> <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <FONT =
-face=3DArial=20
-size=3D2>Print MIB WG Chairman</FONT>=20
-<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <FONT face=3DArial =
-size=3D2>Ricoh=20
-Printing Systems America</FONT> </P></BODY></HTML>
-
-------_=_NextPart_001_01C52EE6.3D907C11--
+<br><font size=2 face="sans-serif">The JT WG has posted the JTAPI Release
+Request form to the FSG OpenPrinting Steering Committee mailing list for
+their action during the Steering Committee meeting planned for April 4th/5th,
+2005. Pending their approval of the JTAPI Release Request, the JTAPI Spec
+and header files will be posted for review for a period of one month. The
+JTAPI Spec and header files will be posted to the FSG OpenPrinting Job
+Ticketing, Announce, Japan, and Architecture mailing lists. They will also
+be forwarded to the CIP4 (JDF) Digital Printing working group forum by
+Claudia Alimpich and forwarded to the PWG Announce mailing list by Ira
+McDonald.</font>
+<br>
+<br><font size=2 face="sans-serif">The JT WG meeting next week, Tuesday
+March 29th, &nbsp;is cancelled. </font>
+<br>
+<br><font size=2 face="sans-serif">The JT WG will meet on Tuesday April
+5th, following the April 4th/5th Steering Committee meeting.</font>
+<br>
+<br><font size=2 face="sans-serif">Following the posting of the JTAPI Spec
+and header files for review, the JT WG will meet <b>as required </b>to
+address comments and questions. The meetings will be at the regular Tuesday
+time, and will be announced on the JT WG mailing list.</font>
+<br>
+<br><font size=2 face="sans-serif">Congratulations to the JT WG for a job
+well done and thank you all for your hard work and commitment!</font>
+<br><font size=2 face="sans-serif">Claudia Alimpich</font>
+--=_alternative 0074380487256FCC_=--
 
