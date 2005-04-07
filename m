@@ -1,10 +1,11 @@
-Message-ID: <2F7D63A21DB2C74EB8EB8C09AF667DB001B9AD22@eitc220.eitc.epson.com>
-From: "Petrie, Glen" <glen.petrie@eitc.epson.com>
-Date: Tue, 5 Apr 2005 08:05:29 -0700 
+Message-ID: <CFEE79A465B35C4385389BA5866BEDF00C7B36@mailsrvnt02.enet.sharplabs.com>
+From: "McDonald, Ira" <imcdonald@sharplabs.com>
+Date: Thu, 7 Apr 2005 08:27:09 -0700 
 MIME-Version: 1.0
 Content-Type: multipart/alternative;
-	boundary="----_=_NextPart_001_01C539F0.E7AC9A30"
-Subject: [Printing-architecture] Restart the Raster Driver Activity
+	boundary="----_=_NextPart_001_01C53B85.8AB3CEE1"
+Subject: [Printing-architecture] FW: PWG-ANNOUNCE> New Topic(s) to be
+	discussed at Tokyo Plenary [ Projector MIB]
 List-Id: Printing architecture under linux
 	<printing-architecture.mail.freestandards.org>
 List-Unsubscribe: <http://mail.freestandards.org/mailman/listinfo/printing-architecture>,
@@ -14,114 +15,178 @@ List-Post: <mailto:printing-architecture@mail.freestandards.org>
 List-Help: <mailto:printing-architecture-request@mail.freestandards.org?subject=help>
 List-Subscribe: <http://mail.freestandards.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@mail.freestandards.org?subject=subscribe>
-To: printing-driver@freestandards.org
-Cc: printing-announce@base3.freestandards.org, 'Claudia Alimpich' <alimpich@us.ibm.com>, printing-architecture@freestandards.org
+To: printing-sc@freestandards.org, printing-architecture@base3.freestandards.org, 'Harry Lewis' <harryl@us.ibm.com>
 
 This message is in MIME format. Since your mail reader does not understand
 this format, some or all of this message may not be legible.
 
-------_=_NextPart_001_01C539F0.E7AC9A30
-Content-Type: text/plain
+------_=_NextPart_001_01C53B85.8AB3CEE1
+Content-Type: text/plain;
+	charset="ISO-8859-1"
 
-All,
+Hi FSG OpenPrinting folks,
+ 
+Below is an announcement of four possible new topics to be discussed at
+the FSG/PWG Joint Plenary on Wednesday afternoon next week.
+ 
+Included is the Projector MIB topic I mentioned at the Steering Committee
+meeting earlier this week.  Shida-san has inquired about this topic.
+ 
+Please forward this Projector MIB topic to people in your company that may
+be interested experts (and might attend on Wednesday or send opinions).
+ 
+Thanks,
+- Ira
+ 
 
-The FSG/OpenPrinting US/European Team would like to restart the Raster
-Driver activities of the Print Driver specification.    The principle
-interaction mode will be through email on the printing-driver mail list with
-occasional conference calls.  
+Ira McDonald (Musician / Software Architect)
+Blue Roof Music / High North Inc
+PO Box 221  Grand Marais, MI  49839
+phone: +1-906-494-2434
+email: imcdonald@sharplabs.com 
 
-To help get things restarted, I will attempt over the next week or so to
-summarize where the raster driver team left off and put forward some
-suggested areas for discussion.
-
-Would you please send a mail note (on the printing-driver mail list) of
-those individuals that would be interested in participating?
-
-I believe the current group is (was)
-
-Glen Petrie
-Till Kamppeter
-Ira McDonald 
-
-
-Rgds, 
-Glen W. Petrie 
-Epson Imaging Technology Center 
-150 River Oaks Parkway, Suite 200 
-San Jose, CA, 95134 
-Voice: 408.576.4131  Fax: 408.474.0511 
+-----Original Message-----
+From: owner-pwg-announce@pwg.org [mailto:owner-pwg-announce@pwg.org]On
+Behalf Of Harry Lewis
+Sent: Thursday, April 07, 2005 1:48 AM
+To: pwg-announce@pwg.org
+Subject: PWG-ANNOUNCE> New Topic(s) to be discussed at Tokyo Plenary
 
 
 
-------_=_NextPart_001_01C539F0.E7AC9A30
-Content-Type: text/html
-Content-Transfer-Encoding: quoted-printable
+Be advised that there are some new topics which will be introduced during
+the FSG/PWG joint Plenary in Tokyo Wednesday afternoon. One or more of these
+topics may result in a Wednesday evening BOF if enough interest is expressed
+during the Plenary. 
 
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
-<HTML>
-<HEAD>
-<META HTTP-EQUIV=3D"Content-Type" CONTENT=3D"text/html; =
-charset=3Dus-ascii">
-<META NAME=3D"Generator" CONTENT=3D"MS Exchange Server version =
-5.5.2653.12">
-<TITLE>Restart the Raster Driver Activity</TITLE>
-</HEAD>
+1. Projector Management BOF 
+  - It has been observed that projector equipment manufactures (ex. LCD
+projectors) are in a state similar to printer manufactures 10 years ago in
+that several major projector makers use SNMP for device management but all
+are using incompatible private MIBs. A standard MIB or, at least, common
+semantics may be very helpful in the industry. The PWG would be expanding
+its role into a broader set of "imaging" solutions if we were to host this
+project. 
+
+2. MFD Security Model. One PWG member has express a desire to introduce MFD
+Security Model concepts. Since the IEEE P2600 has been working in this area
+we will want to assure the PWG does not embark on a redundant effort. There
+may be elements of a standards MFD security model which are complimentary to
+P2600 and/or which belong in the PWG, however. 
+
+3. PWG Semantic Model / DMTF CIM mapping. We have been circling the wagons
+around this work effort but no one has built a campfire yet. Need to
+evaluate motive, requirements, resources, anticipated benefits etc and
+develop an action plan 
+
+4. Print Number (see Camas minutes
+<ftp://ftp.pwg.org/pub/pwg/general/minutes/pwg_plenary_minutes_20050112.pdf>
+ftp://ftp.pwg.org/pub/pwg/general/minutes/pwg_plenary_minutes_20050112.pdf.)
+The Print Number team (from China) indicated they may attend Tokyo but I
+haven't heard from them recently. We will add this to the (BOF) agenda if
+someone from Print Number attends. 
+
+If you are interested in any of these topics I strongly encourage your
+participating in the Plenary and ask you to consider the potential for an
+evening BOF Wednesday April 13 in Tokyo. 
+---------------------------------------------- 
+Harry Lewis 
+IBM STSM
+Chairman - IEEE-ISTO Printer Working Group
+http://www.pwg.org
+IBM Printing Systems 
+http://www.ibm.com/printers
+303-924-5337
+---------------------------------------------- 
+
+------_=_NextPart_001_01C53B85.8AB3CEE1
+Content-Type: text/html;
+	charset="ISO-8859-1"
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=ISO-8859-1">
+
+
+<META content="MSHTML 6.00.2800.1491" name=GENERATOR></HEAD>
 <BODY>
+<DIV><FONT face=Arial color=#0000ff size=4><SPAN class=287342315-07042005>Hi FSG 
+OpenPrinting folks,</SPAN></FONT></DIV>
+<DIV><FONT face=Arial color=#0000ff size=4><SPAN 
+class=287342315-07042005></SPAN></FONT>&nbsp;</DIV>
+<DIV><FONT face=Arial color=#0000ff size=4><SPAN class=287342315-07042005>Below 
+is an announcement of four possible new topics to be discussed 
+at</SPAN></FONT></DIV>
+<DIV><FONT face=Arial color=#0000ff size=4><SPAN class=287342315-07042005>the 
+FSG/PWG Joint Plenary on Wednesday afternoon next week.</SPAN></FONT></DIV>
+<DIV><FONT face=Arial color=#0000ff size=4><SPAN 
+class=287342315-07042005></SPAN></FONT>&nbsp;</DIV>
+<DIV><FONT face=Arial color=#0000ff size=4><SPAN 
+class=287342315-07042005>Included is the Projector MIB topic I mentioned at the 
+Steering Committee</SPAN></FONT></DIV>
+<DIV><FONT face=Arial color=#0000ff size=4><SPAN 
+class=287342315-07042005>meeting earlier this week.&nbsp; Shida-san has inquired 
+about this topic.</SPAN></FONT></DIV>
+<DIV><FONT face=Arial color=#0000ff size=4><SPAN 
+class=287342315-07042005></SPAN></FONT>&nbsp;</DIV>
+<DIV><FONT face=Arial color=#0000ff size=4><SPAN class=287342315-07042005>Please 
+forward this Projector MIB topic to people in your company that 
+may</SPAN></FONT></DIV>
+<DIV><FONT face=Arial color=#0000ff size=4><SPAN class=287342315-07042005>be 
+interested experts (and might attend on Wednesday or send 
+opinions).</SPAN></FONT></DIV>
+<DIV><FONT face=Arial color=#0000ff size=4><SPAN 
+class=287342315-07042005></SPAN></FONT><FONT face=Arial color=#0000ff 
+size=4><SPAN class=287342315-07042005></SPAN></FONT>&nbsp;</DIV>
+<DIV><FONT face=Arial color=#0000ff size=4><SPAN 
+class=287342315-07042005>Thanks,</SPAN></FONT></DIV>
+<DIV><FONT face=Arial color=#0000ff size=4><SPAN class=287342315-07042005>- 
+Ira</SPAN></FONT></DIV>
+<DIV>&nbsp;</DIV>
+<P><FONT size=2>Ira McDonald (Musician / Software Architect)<BR>Blue Roof Music 
+/ High North Inc<BR>PO Box 221&nbsp; Grand Marais, MI&nbsp; 49839<BR>phone: 
++1-906-494-2434<BR>email: imcdonald@sharplabs.com</FONT> </P>
+<DIV class=OutlookMessageHeader dir=ltr align=left><FONT face=Tahoma 
+size=2>-----Original Message-----<BR><B>From:</B> owner-pwg-announce@pwg.org 
+[mailto:owner-pwg-announce@pwg.org]<B>On Behalf Of </B>Harry 
+Lewis<BR><B>Sent:</B> Thursday, April 07, 2005 1:48 AM<BR><B>To:</B> 
+pwg-announce@pwg.org<BR><B>Subject:</B> PWG-ANNOUNCE&gt; New Topic(s) to be 
+discussed at Tokyo Plenary<BR><BR></FONT></DIV><BR><FONT face=sans-serif 
+size=2>Be advised that there are some new topics which will be introduced during 
+the FSG/PWG joint Plenary in Tokyo Wednesday afternoon. One or more of these 
+topics may result in a Wednesday evening BOF if enough interest is expressed 
+during the Plenary.</FONT> <BR><BR><FONT face=sans-serif size=2>1. Projector 
+Management BOF</FONT> <BR><FONT face=sans-serif size=2>&nbsp; - It has been 
+observed that projector equipment manufactures (ex. LCD projectors) are in a 
+state similar to printer manufactures 10 years ago in that several major 
+projector makers use SNMP for device management but all are using incompatible 
+private MIBs. A standard MIB or, at least, common semantics may be very helpful 
+in the industry. The PWG would be expanding its role into a broader set of 
+"imaging" solutions if we were to host this project.</FONT> <BR><BR><FONT 
+face=sans-serif size=2>2. MFD Security Model. One PWG member has express a 
+desire to introduce MFD Security Model concepts. Since the IEEE P2600 has been 
+working in this area we will want to assure the PWG does not embark on a 
+redundant effort. There may be elements of a standards MFD security model which 
+are complimentary to P2600 and/or which belong in the PWG, however. 
+</FONT><BR><BR><FONT face=sans-serif size=2>3. PWG Semantic Model / DMTF CIM 
+mapping. We have been circling the wagons around this work effort but no one has 
+built a campfire yet. Need to evaluate motive, requirements, resources, 
+anticipated benefits etc and develop an action plan</FONT> <BR><BR><FONT 
+face=sans-serif size=2>4. Print Number (see Camas minutes </FONT><A 
+href="ftp://ftp.pwg.org/pub/pwg/general/minutes/pwg_plenary_minutes_20050112.pdf"><FONT 
+face=sans-serif color=blue 
+size=2>ftp://ftp.pwg.org/pub/pwg/general/minutes/pwg_plenary_minutes_20050112.pdf</FONT></A><FONT 
+face=sans-serif size=2>.) The Print Number team (from China) indicated they may 
+attend Tokyo but I haven't heard from them recently. We will add this to the 
+(BOF) agenda if someone from Print Number attends.</FONT> <BR><BR><FONT 
+face=sans-serif size=2>If you are interested in any of these topics I strongly 
+encourage your participating in the Plenary and ask you to consider the 
+potential for an evening BOF Wednesday April 13 in Tokyo.</FONT> <BR><FONT 
+face=sans-serif size=2>---------------------------------------------- <BR>Harry 
+Lewis <BR>IBM STSM<BR>Chairman - IEEE-ISTO Printer Working 
+Group<BR>http://www.pwg.org<BR>IBM Printing Systems 
+<BR>http://www.ibm.com/printers<BR>303-924-5337<BR>---------------------------------------------- 
+</FONT></BODY></HTML>
 
-<P ALIGN=3DLEFT><FONT SIZE=3D2 FACE=3D"Arial">All,</FONT></P>
-
-<P ALIGN=3DLEFT><FONT SIZE=3D2 FACE=3D"Arial">The FSG/OpenPrinting =
-US/European Team</FONT><FONT SIZE=3D2 FACE=3D"Arial"> would like to =
-restart the Raster Driver activities of the Print Driver</FONT> <FONT =
-SIZE=3D2 FACE=3D"Arial">specification</FONT><FONT SIZE=3D2 =
-FACE=3D"Arial">.</FONT><FONT SIZE=3D2 FACE=3D"Arial"></FONT> <FONT =
-SIZE=3D2 FACE=3D"Arial">&nbsp;</FONT>&nbsp;<FONT SIZE=3D2 =
-FACE=3D"Arial"></FONT> <FONT SIZE=3D2 FACE=3D"Arial">T</FONT><FONT =
-SIZE=3D2 FACE=3D"Arial">he principle interaction</FONT><FONT SIZE=3D2 =
-FACE=3D"Arial"> mode</FONT><FONT SIZE=3D2 FACE=3D"Arial"> will be =
-through email on the printing-driver mail list with</FONT> <FONT =
-SIZE=3D2 FACE=3D"Arial">occasional</FONT><FONT SIZE=3D2 =
-FACE=3D"Arial"></FONT> <FONT SIZE=3D2 FACE=3D"Arial">conference =
-calls.</FONT>&nbsp;<FONT SIZE=3D2 FACE=3D"Arial"></FONT> </P>
-
-<P ALIGN=3DLEFT><FONT SIZE=3D2 FACE=3D"Arial">T</FONT><FONT SIZE=3D2 =
-FACE=3D"Arial">o</FONT> <FONT SIZE=3D2 FACE=3D"Arial">help get things =
-restarted, I will attempt over the next week or so to summarize where =
-the raster driver team left off and</FONT><FONT SIZE=3D2 =
-FACE=3D"Arial"></FONT> <FONT SIZE=3D2 FACE=3D"Arial">put forward =
-some</FONT> <FONT SIZE=3D2 FACE=3D"Arial">suggested areas for =
-discussion.</FONT></P>
-
-<P ALIGN=3DLEFT><FONT SIZE=3D2 FACE=3D"Arial">W</FONT><FONT SIZE=3D2 =
-FACE=3D"Arial">ould you please send</FONT><FONT SIZE=3D2 =
-FACE=3D"Arial"></FONT> <FONT SIZE=3D2 FACE=3D"Arial">a mail note (on =
-the printing-driver mail list) of those individuals that would be =
-interested in</FONT> <FONT SIZE=3D2 =
-FACE=3D"Arial">participating</FONT><FONT SIZE=3D2 =
-FACE=3D"Arial">?</FONT></P>
-
-<P ALIGN=3DLEFT><FONT SIZE=3D2 FACE=3D"Arial">I believe the current =
-group is (was)</FONT></P>
-
-<P ALIGN=3DLEFT><FONT SIZE=3D2 FACE=3D"Arial">Glen Petrie</FONT></P>
-
-<P ALIGN=3DLEFT><FONT SIZE=3D2 FACE=3D"Arial">Till Kamppeter</FONT></P>
-
-<P ALIGN=3DLEFT><FONT SIZE=3D2 FACE=3D"Arial">Ira McDonald</FONT> </P>
-
-<P ALIGN=3DLEFT><A NAME=3D"_MailAutoSig"></A></P>
-
-<P ALIGN=3DLEFT><B><I>Rgds,<BR>
-</I></B><B><I></I></B><B><I><FONT COLOR=3D"#0000FF" SIZE=3D5>Glen W. =
-Petrie</FONT></I></B><B><I></I></B><B><I><FONT SIZE=3D5><BR>
-</FONT></I></B><B><I>Epson Imaging Technology Center<BR>
-150 River Oaks Parkway, Suite 200<BR>
-San Jose, CA, 95134<BR>
-Voice: 408.576.4131&nbsp; Fax: 408.474.0511 </I></B></P>
-
-<P ALIGN=3DLEFT></P>
-
-</BODY>
-</HTML>
-------_=_NextPart_001_01C539F0.E7AC9A30--
+------_=_NextPart_001_01C53B85.8AB3CEE1--
 
