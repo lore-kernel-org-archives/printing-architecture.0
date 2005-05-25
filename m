@@ -1,9 +1,10 @@
-From: Toshiya Irie <TIRIE@jp.ibm.com>
-Message-ID: <OFA5514678.7DF28DBE-ON49256FF7.005BD636-49256FF7.005BD636@jp.ibm.com>
-Date: Thu, 5 May 2005 01:43:06 +0900
-MIME-Version: 1.0
-Content-type: text/plain; charset=US-ASCII
-Subject: [Printing-architecture] Toshiya Irie is out of the office.
+From: Norm Jacobs <Norm.Jacobs@Sun.COM>
+Content-Type: text/plain
+Message-Id: <1117048194.2477.20.camel@speedy>
+Mime-Version: 1.0
+Date: Wed, 25 May 2005 14:09:54 -0500
+Content-Transfer-Encoding: 7bit
+Subject: [Printing-architecture] Seeking an Achitecture team chair...
 List-Id: Printing architecture under linux
 	<printing-architecture.mail.freestandards.org>
 List-Unsubscribe: <http://mail.freestandards.org/mailman/listinfo/printing-architecture>,
@@ -16,13 +17,22 @@ List-Subscribe: <http://mail.freestandards.org/mailman/listinfo/printing-archite
 To: printing-architecture@base3.freestandards.org
 
 
+After several months of hiatus, it's time to get the OpenPrinting
+Architecture team reengaged.  We have a few specifications from
+subgroups that are ready for final review and need to get any
+architecture team final input.  With that in mind, we are seeking
+someone to chair the team.
 
+In the past we have held regular weekly telecon meetings,
+discussed things over email, and had the occasional face to face
+meeting.  I suspect that email discussions may be sufficient to
+discuss most, if not all, of the specifications and issues at
+hand.
 
+Anyone interested in chairing this team should either respond back
+to this alias and/or myself by next Friday, June 3rd.
 
-I will be out of the office starting  2005/04/21 and will not return until
-2005/05/06.
-
-If you have any urgent matter with me, please contact my Mgr. Fujita-san
-(1808-5505).
+	Thanks,
+		-Norm
 
 
