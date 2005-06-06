@@ -1,10 +1,10 @@
+Message-ID: <42A3D222.3030700@Sun.COM>
+Date: Sun, 05 Jun 2005 23:33:38 -0500
 From: Norm Jacobs <Norm.Jacobs@Sun.COM>
-Content-Type: text/plain
-Message-Id: <1117048194.2477.20.camel@speedy>
-Mime-Version: 1.0
-Date: Wed, 25 May 2005 14:09:54 -0500
+MIME-Version: 1.0
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
 Content-Transfer-Encoding: 7bit
-Subject: [Printing-architecture] Seeking an Achitecture team chair...
+Subject: [Printing-architecture] Release Request for JTAPI
 List-Id: Printing architecture under linux
 	<printing-architecture.mail.freestandards.org>
 List-Unsubscribe: <http://mail.freestandards.org/mailman/listinfo/printing-architecture>,
@@ -14,25 +14,25 @@ List-Post: <mailto:printing-architecture@mail.freestandards.org>
 List-Help: <mailto:printing-architecture-request@mail.freestandards.org?subject=help>
 List-Subscribe: <http://mail.freestandards.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@mail.freestandards.org?subject=subscribe>
-To: printing-architecture@base3.freestandards.org
+To: printing-jobticket@base3.freestandards.org, printing-architecture@base3.freestandards.org, printing-spool@base3.freestandards.org, printing-japan@base3.freestandards.org, printing-driver@base3.freestandards.org, printing-discuss@base3.freestandards.org
 
 
-After several months of hiatus, it's time to get the OpenPrinting
-Architecture team reengaged.  We have a few specifications from
-subgroups that are ready for final review and need to get any
-architecture team final input.  With that in mind, we are seeking
-someone to chair the team.
+The Job Ticketing Group has completed what is to be the final draft of 
+v1.0 of the
+Job Ticket API specification.  The release request for this 
+specification can be found at
 
-In the past we have held regular weekly telecon meetings,
-discussed things over email, and had the occasional face to face
-meeting.  I suspect that email discussions may be sufficient to
-discuss most, if not all, of the specifications and issues at
-hand.
+ftp://ftp.pwg.org/pub/pwg/fsg/jobticket/Release_Request/JTAPI-Release-Request--V0102-2005-0422.pdf
 
-Anyone interested in chairing this team should either respond back
-to this alias and/or myself by next Friday, June 3rd.
+If contains information about the release package awaiting review.  
+Please take some time to look
+through the package and review it.  All comments should be posted to the 
+Job Ticket list (printing-jobticket@mail.freestandards.org) and cross 
+post to the architecture
+list (printing-architecture@mail.freestandards.org).  Final comments 
+should be in no
+later than midnight CDT July 5, 2005.
 
-	Thanks,
-		-Norm
 
+       -Norm
 
