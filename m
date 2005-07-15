@@ -1,11 +1,11 @@
-Message-ID: <CFEE79A465B35C4385389BA5866BEDF00C7C97@mailsrvnt02.enet.sharplabs.com>
-From: "McDonald, Ira" <imcdonald@sharplabs.com>
-Date: Tue, 12 Jul 2005 09:09:28 -0700
+Message-ID: <2F7D63A21DB2C74EB8EB8C09AF667DB001B9AE3C@eitc220.eitc.epson.com>
+From: "Petrie, Glen" <glen.petrie@eitc.epson.com>
+Date: Fri, 15 Jul 2005 14:06:39 -0700
 MIME-Version: 1.0
 Content-Type: multipart/alternative;
-	boundary="----_=_NextPart_001_01C586FB.8E76BB86"
-Subject: [Printing-architecture] RE: [Printing-sc] Final Slides for
-	Cupertino FSG/PWG/Apple
+	boundary="----_=_NextPart_001_01C58981.17ACF450"
+Subject: [Printing-architecture] FSG/OpenPrinting Approves PAPI Version 1.0
+	Specification 
 List-Id: Printing architecture under linux
 	<printing-architecture.mail.freestandards.org>
 List-Unsubscribe: <http://mail.freestandards.org/mailman/listinfo/printing-architecture>,
@@ -15,145 +15,152 @@ List-Post: <mailto:printing-architecture@mail.freestandards.org>
 List-Help: <mailto:printing-architecture-request@mail.freestandards.org?subject=help>
 List-Subscribe: <http://mail.freestandards.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@mail.freestandards.org?subject=subscribe>
-To: "'Petrie, Glen'" <glen.petrie@eitc.epson.com>, printing-sc@freestandards.org, printing-spool@base3.freestandards.org, printing-jobticket@base3.freestandards.org, printing-japan@freestandards.org, printing-architecture@base3.freestandards.org
+To: "'printing-sc@base3.freestandards.org'" <printing-sc@base3.freestandards.org>, printing-architecture@base3.freestandards.org, 'Discussion for Spool/Job/Queue API  subgroup' <printing-spool@base3.freestandards.org>, printing-announce@base3.freestandards.org
 
 This message is in MIME format. Since your mail reader does not understand
 this format, some or all of this message may not be legible.
 
-------_=_NextPart_001_01C586FB.8E76BB86
-Content-Type: text/plain;
-	charset="ISO-8859-1"
+------_=_NextPart_001_01C58981.17ACF450
+Content-Type: text/plain
 
-Hi Glen,
- 
-These are good slides!  However, they're _much_ too long for the very brief
-joint plenary scheduled for 1:30pm to 3:00pm tomorrow.  You'll need
-something
-like 5 or 6 slides at most for the whole FSG/OP topic.
- 
-Cheers,
-- Ira
- 
- 
- 
+All,
 
-Ira McDonald (Musician / Software Architect)
-Blue Roof Music / High North Inc
-PO Box 221  Grand Marais, MI  49839
-phone: +1-906-494-2434
-email: imcdonald@sharplabs.com 
+I am please to announce the approval by the FSG/OpenPrinting Steering
+Committee of the 
 
------Original Message-----
-From: printing-sc-bounces@base3.freestandards.org
-[mailto:printing-sc-bounces@base3.freestandards.org]On Behalf Of Petrie,
-Glen
-Sent: Tuesday, July 12, 2005 10:43 AM
-To: printing-sc@freestandards.org; printing-spool@base3.freestandards.org;
-printing-jobticket@base3.freestandards.org;
-printing-japan@freestandards.org;
-printing-architecture@base3.freestandards.org
-Subject: [Printing-sc] Final Slides for Cupertino FSG/PWG/Apple
+		Print Application Programming Interface (PAPI) Version 1.0
+on July 15, 2005
 
 
+The latest Release Request is located at:
 
-I have integrated the SM and PCM slides
+ftp://ftp.pwg.org/pub/pwg/fsg/spool/Release-Request-PAPI-V1.00/papi-v1.0-rel
+ease-request-v1.03-2005-07-15.sxw
+<ftp://ftp.pwg.org/pub/pwg/fsg/spool/Release-Request-PAPI-V1.00/papi-v1.0-re
+lease-request-v1.03-2005-07-15.sxw>  
+ftp://ftp.pwg.org/pub/pwg/fsg/spool/Release-Request-PAPI-V1.00/papi-v1.0-rel
+ease-request-v1.03-2005-07-15.pdf
+<ftp://ftp.pwg.org/pub/pwg/fsg/spool/Release-Request-PAPI-V1.00/papi-v1.0-re
+lease-request-v1.03-2005-07-15.pdf>  
 
- 
-<ftp://ftp.pwg.org/pub/pwg/fsg/July2005-Cupertino-Slides/2005-07-14-FSG_PWG_
-Apple-OverView-Final.pdf>
-ftp://ftp.pwg.org/pub/pwg/fsg/July2005-Cupertino-Slides/2005-07-14-FSG_PWG_A
-pple-OverView-Final.pdf 
+The Print Application Programming Interface (PAPI) Version 1.0 Specification
+is located at:
 
- 
-<ftp://ftp.pwg.org/pub/pwg/fsg/July2005-Cupertino-Slides/2005-07-14-FSG_PWG_
-Apple-OverView-Final.ppt>
-ftp://ftp.pwg.org/pub/pwg/fsg/July2005-Cupertino-Slides/2005-07-14-FSG_PWG_A
-pple-OverView-Final.ppt 
+ftp://ftp.pwg.org/pub/pwg/fsg/spool/papi-v1.0-2005-07-15.pdf
+<ftp://ftp.pwg.org/pub/pwg/fsg/spool/papi-v1.0-2005-07-15.pdf>  
+ftp://ftp.pwg.org/pub/pwg/fsg/spool/papi-v1.0-2005-07-15.sxw
+<ftp://ftp.pwg.org/pub/pwg/fsg/spool/papi-v1.0-2005-07-15.sxw>  
 
-BM__MailAutoSig
+Final approval is now needed by the FSG/Board for final disposition. 
 
-Rgds,
-Glen W. Petrie
-Epson Imaging Technology Center
-150 River Oaks Parkway, Suite 200
-San Jose, CA, 95134
+
+
+Rgds, 
+Glen W. Petrie 
+Epson Imaging Technology Center 
+150 River Oaks Parkway, Suite 200 
+San Jose, CA, 95134 
 Voice: 408.576.4131  Fax: 408.474.0511 
 
 
 
+------_=_NextPart_001_01C58981.17ACF450
+Content-Type: text/html
+Content-Transfer-Encoding: quoted-printable
 
-------_=_NextPart_001_01C586FB.8E76BB86
-Content-Type: text/html;
-	charset="ISO-8859-1"
-
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<HTML><HEAD>
-<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=ISO-8859-1">
-<TITLE>Final Slides for Cupertino FSG/PWG/Apple</TITLE>
-
-<META content="MSHTML 6.00.2800.1491" name=GENERATOR></HEAD>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV=3D"Content-Type" CONTENT=3D"text/html; =
+charset=3Dus-ascii">
+<META NAME=3D"Generator" CONTENT=3D"MS Exchange Server version =
+5.5.2658.24">
+<TITLE>FSG/OpenPrinting Approves PAPI Version 1.0 Specification =
+</TITLE>
+</HEAD>
 <BODY>
-<DIV><SPAN class=253470816-12072005><FONT face=Arial color=#0000ff size=4>Hi 
-Glen,</FONT></SPAN></DIV>
-<DIV><SPAN class=253470816-12072005><FONT face=Arial color=#0000ff 
-size=4></FONT></SPAN>&nbsp;</DIV>
-<DIV><SPAN class=253470816-12072005><FONT face=Arial color=#0000ff size=4>These 
-are good slides!&nbsp; However, they're _much_ too long for the very 
-brief</FONT></SPAN></DIV>
-<DIV><SPAN class=253470816-12072005><FONT face=Arial color=#0000ff size=4>joint 
-plenary scheduled for 1:30pm to 3:00pm tomorrow.&nbsp; You'll need 
-something</FONT></SPAN></DIV>
-<DIV><SPAN class=253470816-12072005><FONT face=Arial color=#0000ff size=4>like 5 
-or 6 slides at most for the whole FSG/OP topic.</FONT></SPAN></DIV>
-<DIV><SPAN class=253470816-12072005><FONT face=Arial color=#0000ff 
-size=4></FONT></SPAN>&nbsp;</DIV>
-<DIV><SPAN class=253470816-12072005><FONT face=Arial color=#0000ff 
-size=4>Cheers,</FONT></SPAN></DIV>
-<DIV><SPAN class=253470816-12072005><FONT face=Arial color=#0000ff size=4>- 
-Ira</FONT></SPAN></DIV>
-<DIV><SPAN class=253470816-12072005><FONT face=Arial color=#0000ff 
-size=4></FONT></SPAN>&nbsp;</DIV>
-<DIV><SPAN class=253470816-12072005><FONT face=Arial color=#0000ff 
-size=4></FONT></SPAN>&nbsp;</DIV>
-<DIV>&nbsp;</DIV>
-<P><FONT size=2>Ira McDonald (Musician / Software Architect)<BR>Blue Roof Music 
-/ High North Inc<BR>PO Box 221&nbsp; Grand Marais, MI&nbsp; 49839<BR>phone: 
-+1-906-494-2434<BR>email: imcdonald@sharplabs.com</FONT> </P>
-<BLOCKQUOTE dir=ltr 
-style="PADDING-LEFT: 5px; MARGIN-LEFT: 5px; BORDER-LEFT: #0000ff 2px solid; MARGIN-RIGHT: 0px">
-  <DIV class=OutlookMessageHeader dir=ltr align=left><FONT face=Tahoma 
-  size=2>-----Original Message-----<BR><B>From:</B> 
-  printing-sc-bounces@base3.freestandards.org 
-  [mailto:printing-sc-bounces@base3.freestandards.org]<B>On Behalf Of 
-  </B>Petrie, Glen<BR><B>Sent:</B> Tuesday, July 12, 2005 10:43 AM<BR><B>To:</B> 
-  printing-sc@freestandards.org; printing-spool@base3.freestandards.org; 
-  printing-jobticket@base3.freestandards.org; printing-japan@freestandards.org; 
-  printing-architecture@base3.freestandards.org<BR><B>Subject:</B> [Printing-sc] 
-  Final Slides for Cupertino FSG/PWG/Apple<BR><BR></FONT></DIV>
-  <P align=left><FONT face=Arial size=2>I have integrated the SM and PCM 
-  slides</FONT></P>
-  <P align=left><A 
-  href="ftp://ftp.pwg.org/pub/pwg/fsg/July2005-Cupertino-Slides/2005-07-14-FSG_PWG_Apple-OverView-Final.pdf"><U></U><U><FONT 
-  face=Arial color=#0000ff 
-  size=2>ftp://ftp.pwg.org/pub/pwg/fsg/July2005-Cupertino-Slides/</FONT></U><U></U><U><FONT 
-  face=Arial color=#0000ff 
-  size=2>2005-07-14-FSG_PWG_Apple-OverView-Final.pdf</FONT></U></A><FONT 
-  face=Arial size=2></FONT> </P>
-  <P align=left><A 
-  href="ftp://ftp.pwg.org/pub/pwg/fsg/July2005-Cupertino-Slides/2005-07-14-FSG_PWG_Apple-OverView-Final.ppt"><U></U><U><FONT 
-  face=Arial color=#0000ff 
-  size=2>ftp://ftp.pwg.org/pub/pwg/fsg/July2005-Cupertino-Slides/</FONT></U><U></U><U><FONT 
-  face=Arial color=#0000ff 
-  size=2>2005-07-14-FSG_PWG_Apple-OverView-Final.p</FONT></U><U></U><U><FONT 
-  face=Arial color=#0000ff size=2>pt</FONT></U></A><FONT face=Arial 
-  size=2></FONT> </P>
-  <P align=left><A name=_MailAutoSig></A></P>
-  <P align=left><B><I>Rgds,<BR></I></B><B><I></I></B><B><I><FONT color=#0000ff 
-  size=5>Glen W. Petrie</FONT></I></B><B><I></I></B><B><I><FONT 
-  size=5><BR></FONT></I></B><B><I>Epson Imaging Technology Center<BR>150 River 
-  Oaks Parkway, Suite 200<BR>San Jose, CA, 95134<BR>Voice: 408.576.4131&nbsp; 
-  Fax: 408.474.0511 </I></B></P>
-  <P align=left></P></BLOCKQUOTE></BODY></HTML>
 
-------_=_NextPart_001_01C586FB.8E76BB86--
+<P ALIGN=3DLEFT><FONT SIZE=3D2 FACE=3D"Arial">All,</FONT></P>
+
+<P ALIGN=3DLEFT><FONT SIZE=3D2 FACE=3D"Arial">I am please to</FONT> =
+<FONT SIZE=3D2 FACE=3D"Arial">announce</FONT><FONT SIZE=3D2 =
+FACE=3D"Arial"></FONT> <FONT SIZE=3D2 FACE=3D"Arial">the approval by =
+the FSG/OpenPrinting Steering Committee of the </FONT></P>
+<UL><UL>
+<P ALIGN=3DLEFT><FONT SIZE=3D2 FACE=3D"Arial">Print Application =
+Program</FONT><FONT SIZE=3D2 FACE=3D"Arial">m</FONT><FONT SIZE=3D2 =
+FACE=3D"Arial">ing</FONT><FONT SIZE=3D2 FACE=3D"Arial"> Interface =
+(</FONT><FONT SIZE=3D2 FACE=3D"Arial">PAPI)</FONT> <FONT SIZE=3D2 =
+FACE=3D"Arial">Version 1.</FONT><FONT SIZE=3D2 FACE=3D"Arial">0</FONT> =
+<FONT SIZE=3D2 FACE=3D"Arial">on July 15, 2005</FONT></P>
+<BR>
+</UL></UL>
+<P ALIGN=3DLEFT><FONT SIZE=3D2 FACE=3D"Arial">The</FONT> <FONT SIZE=3D2 =
+FACE=3D"Arial">latest Release Request is located at</FONT><FONT =
+SIZE=3D2 FACE=3D"Arial">:</FONT></P>
+
+<P ALIGN=3DLEFT><A =
+HREF=3D"ftp://ftp.pwg.org/pub/pwg/fsg/spool/Release-Request-PAPI-V1.00/p=
+api-v1.0-release-request-v1.03-2005-07-15.sxw"><U></U><U><FONT =
+COLOR=3D"#0000FF" SIZE=3D2 =
+FACE=3D"Arial">ftp://ftp.pwg.org/pub/pwg/fsg/spool/Release-Request-PAPI-=
+V1.00/</FONT></U><U></U><U><FONT COLOR=3D"#0000FF" SIZE=3D2 =
+FACE=3D"Arial">papi-v1.0-release-request-v1.03-2005-07-15.</FONT></U><U>=
+</U><U><FONT COLOR=3D"#0000FF" SIZE=3D2 =
+FACE=3D"Arial">sxw</FONT></U></A><FONT SIZE=3D2 FACE=3D"Arial"></FONT> =
+</P>
+
+<P ALIGN=3DLEFT><A =
+HREF=3D"ftp://ftp.pwg.org/pub/pwg/fsg/spool/Release-Request-PAPI-V1.00/p=
+api-v1.0-release-request-v1.03-2005-07-15.pdf"><U></U><U><FONT =
+COLOR=3D"#0000FF" SIZE=3D2 =
+FACE=3D"Arial">ftp://ftp.pwg.org/pub/pwg/fsg/spool/Release-Request-PAPI-=
+V1.00/</FONT><FONT COLOR=3D"#0000FF" SIZE=3D2 =
+FACE=3D"Arial">papi-v1.0-release-request-v1.03-2005-07-15.pdf</FONT></U>=
+</A><FONT SIZE=3D2 FACE=3D"Arial"></FONT> </P>
+
+<P ALIGN=3DLEFT><FONT SIZE=3D2 FACE=3D"Arial">The</FONT> <FONT SIZE=3D2 =
+FACE=3D"Arial">Print Application Program</FONT><FONT SIZE=3D2 =
+FACE=3D"Arial">m</FONT><FONT SIZE=3D2 FACE=3D"Arial">ing</FONT><FONT =
+SIZE=3D2 FACE=3D"Arial"></FONT> <FONT SIZE=3D2 =
+FACE=3D"Arial">Interfac</FONT><FONT SIZE=3D2 =
+FACE=3D"Arial">e</FONT><FONT SIZE=3D2 FACE=3D"Arial"> (PAPI) Version =
+1.0 Specification is located at:</FONT></P>
+
+<P ALIGN=3DLEFT><A =
+HREF=3D"ftp://ftp.pwg.org/pub/pwg/fsg/spool/papi-v1.0-2005-07-15.pdf"><U=
+></U><U><FONT COLOR=3D"#0000FF" SIZE=3D2 =
+FACE=3D"Arial">ftp://ftp.pwg.org/pub/pwg/fsg/spool/</FONT><FONT =
+COLOR=3D"#0000FF" SIZE=3D2 =
+FACE=3D"Arial">papi-v1.0-2005-07-15.pdf</FONT></U></A><FONT SIZE=3D2 =
+FACE=3D"Arial"> </FONT></P>
+
+<P ALIGN=3DLEFT><A =
+HREF=3D"ftp://ftp.pwg.org/pub/pwg/fsg/spool/papi-v1.0-2005-07-15.sxw"><U=
+></U><U><FONT COLOR=3D"#0000FF" SIZE=3D2 =
+FACE=3D"Arial">ftp://ftp.pwg.org/pub/pwg/fsg/spool/</FONT><FONT =
+COLOR=3D"#0000FF" SIZE=3D2 =
+FACE=3D"Arial">papi-v1.0-2005-07-15.</FONT></U><U></U><U><FONT =
+COLOR=3D"#0000FF" SIZE=3D2 FACE=3D"Arial">sxw</FONT></U></A><FONT =
+SIZE=3D2 FACE=3D"Arial"></FONT> </P>
+
+<P ALIGN=3DLEFT><FONT SIZE=3D2 FACE=3D"Arial">Final approval is now =
+needed by the FSG/Board for final disposition.</FONT> </P>
+<BR>
+
+<P ALIGN=3DLEFT><A NAME=3D"_MailAutoSig"></A></P>
+
+<P ALIGN=3DLEFT><B><I>Rgds,<BR>
+</I></B><B><I></I></B><B><I><FONT COLOR=3D"#0000FF" SIZE=3D5>Glen W. =
+Petrie</FONT></I></B><B><I></I></B><B><I><FONT SIZE=3D5><BR>
+</FONT></I></B><B><I>Epson Imaging Technology Center<BR>
+150 River Oaks Parkway, Suite 200<BR>
+San Jose, CA, 95134<BR>
+Voice: 408.576.4131&nbsp; Fax: 408.474.0511 </I></B></P>
+
+<P ALIGN=3DLEFT></P>
+
+</BODY>
+</HTML>
+------_=_NextPart_001_01C58981.17ACF450--
 
