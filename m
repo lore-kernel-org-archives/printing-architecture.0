@@ -1,11 +1,11 @@
 MIME-Version: 1.0
-Message-ID: <OF025BB712.CA470391-ON87257053.00552191-87257053.0055E2B1@us.ibm.com>
+Message-ID: <OF712AC1C5.D1842E5C-ON87257053.00566C30-87257053.00567879@us.ibm.com>
 From: Claudia Alimpich <alimpich@us.ibm.com>
-Date: Thu, 4 Aug 2005 09:38:19 -0600
+Date: Thu, 4 Aug 2005 09:44:43 -0600
 Content-Type: multipart/alternative;
-	boundary="=_alternative 0055E2AF87257053_="
-Subject: [Printing-architecture] Fw: There will be a JT WG meeting Tuesday
-	July 26th
+	boundary="=_alternative 0056787787257053_="
+Subject: [Printing-architecture] Open Printing conference calls start Wed
+	Aug 17th
 List-Id: Printing architecture under linux
 	<printing-architecture.mail.freestandards.org>
 List-Unsubscribe: <http://mail.freestandards.org/mailman/listinfo/printing-architecture>,
@@ -18,7 +18,7 @@ List-Subscribe: <http://mail.freestandards.org/mailman/listinfo/printing-archite
 To: printing-jobticket@freestandards.org, printing-spool@base3.freestandards.org, printing-architecture@freestandards.org, printing-driver@base3.freestandards.org, printing-japan@base3.freestandards.org
 
 This is a multipart message in MIME format.
---=_alternative 0055E2AF87257053_=
+--=_alternative 0056787787257053_=
 Content-Type: text/plain; charset="US-ASCII"
 
 Our weekly (?) calls to discuss Open Printing issues 
@@ -26,44 +26,52 @@ Our weekly (?) calls to discuss Open Printing issues
 PAPI/Spooling, etc.) will be on Wednesdays starting August 17th. 
 
 On August 17th we will discuss our mission and what we hope to accomplish 
-in the working group. We will also decide how often we want to meet.
+in the working group. We will also decide how often we want to meet. 
 
-Anyone who is interested in Open Printing is welcome to join.
+Anyone who is interested in Open Printing is welcome to join. 
 
-Day: Wednesdays
-Time: 
-12:00-1:00 PM US Pacific time
-1:00-2:00 PM US Mountain time
-3:00-4:00 PM US Eastern time
-9:00-10:00 PM Paris time
-USA Toll Number: 1-484-630-2765
-PASSCODE: 84974
+Day: Wednesdays 
+Time:   
+12:00-1:00 PM US Pacific time 
+1:00-2:00 PM US Mountain time 
+3:00-4:00 PM US Eastern time 
+9:00-10:00 PM Paris time 
+USA Toll Number: 1-484-630-2765 
+PASSCODE: 84974 
 
-Claudia Alimpich
---=_alternative 0055E2AF87257053_=
+Claudia Alimpich_______________________________________________
+printing-jobticket mailing list
+printing-jobticket@mail.freestandards.org
+http://mail.freestandards.org/mailman/listinfo/printing-jobticket
+
+--=_alternative 0056787787257053_=
 Content-Type: text/html; charset="US-ASCII"
 
 
 <br><font size=2 face="sans-serif">Our weekly (?) calls to discuss Open
 Printing issues (Architecture/Reference diagram/Use cases, JTAPI/Job Ticketing,
-PAPI/Spooling, etc.) will be on Wednesdays starting August 17th. </font>
+PAPI/Spooling, etc.) will be on Wednesdays starting August 17th. </font><font size=3><br>
+</font><font size=2 face="sans-serif"><br>
+On August 17th we will discuss our mission and what we hope to accomplish
+in the working group. We will also decide how often we want to meet.</font><font size=3>
 <br>
-<br><font size=2 face="sans-serif">On August 17th we will discuss our mission
-and what we hope to accomplish in the working group. We will also decide
-how often we want to meet.</font>
+</font><font size=2 face="sans-serif"><br>
+Anyone who is interested in Open Printing is welcome to join.</font><font size=3>
 <br>
-<br><font size=2 face="sans-serif">Anyone who is interested in Open Printing
-is welcome to join.</font>
-<br>
-<br><font size=2 face="sans-serif">Day: Wednesdays</font>
-<br><font size=2 face="sans-serif">Time: &nbsp;</font>
-<br><font size=2 face="sans-serif">12:00-1:00 PM US Pacific time</font>
-<br><font size=2 face="sans-serif">1:00-2:00 PM US Mountain time</font>
-<br><font size=2 face="sans-serif">3:00-4:00 PM US Eastern time</font>
-<br><font size=2 face="sans-serif">9:00-10:00 PM Paris time</font>
-<br><font size=2 face="sans-serif">USA Toll Number: 1-484-630-2765</font>
-<br><font size=2 face="sans-serif">PASSCODE: 84974</font>
-<br>
-<br><font size=2 face="sans-serif">Claudia Alimpich</font>
---=_alternative 0055E2AF87257053_=--
+</font><font size=2 face="sans-serif"><br>
+Day: Wednesdays</font><font size=3> </font><font size=2 face="sans-serif"><br>
+Time: &nbsp;</font><font size=3> </font><font size=2 face="sans-serif"><br>
+12:00-1:00 PM US Pacific time</font><font size=3> </font><font size=2 face="sans-serif"><br>
+1:00-2:00 PM US Mountain time</font><font size=3> </font><font size=2 face="sans-serif"><br>
+3:00-4:00 PM US Eastern time</font><font size=3> </font><font size=2 face="sans-serif"><br>
+9:00-10:00 PM Paris time</font><font size=3> </font><font size=2 face="sans-serif"><br>
+USA Toll Number: 1-484-630-2765</font><font size=3> </font><font size=2 face="sans-serif"><br>
+PASSCODE: 84974</font><font size=3> <br>
+</font><font size=2 face="sans-serif"><br>
+Claudia Alimpich</font><font size=2><tt>_______________________________________________<br>
+printing-jobticket mailing list<br>
+printing-jobticket@mail.freestandards.org<br>
+http://mail.freestandards.org/mailman/listinfo/printing-jobticket<br>
+</tt></font>
+--=_alternative 0056787787257053_=--
 
