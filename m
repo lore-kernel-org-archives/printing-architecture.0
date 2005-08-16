@@ -1,11 +1,11 @@
 MIME-Version: 1.0
-Message-ID: <OF712AC1C5.D1842E5C-ON87257053.00566C30-87257053.00567879@us.ibm.com>
+Message-ID: <OFFD556FDC.8D1A06E8-ON8725705F.006B317A-8725705F.006B5389@us.ibm.com>
 From: Claudia Alimpich <alimpich@us.ibm.com>
-Date: Thu, 4 Aug 2005 09:44:43 -0600
+Date: Tue, 16 Aug 2005 13:32:19 -0600
 Content-Type: multipart/alternative;
-	boundary="=_alternative 0056787787257053_="
-Subject: [Printing-architecture] Open Printing conference calls start Wed
-	Aug 17th
+	boundary="=_alternative 006B53868725705F_="
+Subject: [Printing-architecture] Reminder: Open Printing conference calls
+	start Wed Aug 17th
 List-Id: Printing architecture under linux
 	<printing-architecture.mail.freestandards.org>
 List-Unsubscribe: <http://mail.freestandards.org/mailman/listinfo/printing-architecture>,
@@ -15,11 +15,13 @@ List-Post: <mailto:printing-architecture@mail.freestandards.org>
 List-Help: <mailto:printing-architecture-request@mail.freestandards.org?subject=help>
 List-Subscribe: <http://mail.freestandards.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@mail.freestandards.org?subject=subscribe>
-To: printing-jobticket@freestandards.org, printing-spool@base3.freestandards.org, printing-architecture@freestandards.org, printing-driver@base3.freestandards.org, printing-japan@base3.freestandards.org
+To: printing-jobticket@freestandards.org, printing-architecture@freestandards.org, printing-spool@base3.freestandards.org
 
 This is a multipart message in MIME format.
---=_alternative 0056787787257053_=
+--=_alternative 006B53868725705F_=
 Content-Type: text/plain; charset="US-ASCII"
+
+Just a reminder...
 
 Our weekly (?) calls to discuss Open Printing issues 
 (Architecture/Reference diagram/Use cases, JTAPI/Job Ticketing, 
@@ -39,15 +41,13 @@ Time:
 USA Toll Number: 1-484-630-2765 
 PASSCODE: 84974 
 
-Claudia Alimpich_______________________________________________
-printing-jobticket mailing list
-printing-jobticket@mail.freestandards.org
-http://mail.freestandards.org/mailman/listinfo/printing-jobticket
-
---=_alternative 0056787787257053_=
+Claudia Alimpich
+--=_alternative 006B53868725705F_=
 Content-Type: text/html; charset="US-ASCII"
 
 
+<br><font size=2 face="sans-serif">Just a reminder...</font>
+<br>
 <br><font size=2 face="sans-serif">Our weekly (?) calls to discuss Open
 Printing issues (Architecture/Reference diagram/Use cases, JTAPI/Job Ticketing,
 PAPI/Spooling, etc.) will be on Wednesdays starting August 17th. </font><font size=3><br>
@@ -68,10 +68,6 @@ Time: &nbsp;</font><font size=3> </font><font size=2 face="sans-serif"><br>
 USA Toll Number: 1-484-630-2765</font><font size=3> </font><font size=2 face="sans-serif"><br>
 PASSCODE: 84974</font><font size=3> <br>
 </font><font size=2 face="sans-serif"><br>
-Claudia Alimpich</font><font size=2><tt>_______________________________________________<br>
-printing-jobticket mailing list<br>
-printing-jobticket@mail.freestandards.org<br>
-http://mail.freestandards.org/mailman/listinfo/printing-jobticket<br>
-</tt></font>
---=_alternative 0056787787257053_=--
+Claudia Alimpich</font>
+--=_alternative 006B53868725705F_=--
 
