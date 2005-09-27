@@ -1,10 +1,11 @@
 MIME-Version: 1.0
-Message-ID: <OFA4EAA54D.A874EB4F-ON8725707C.0068B4B5-8725707C.006E5B52@us.ibm.com>
+Message-ID: <OF38315056.74CB6665-ON87257089.0058AF5F-87257089.005952CA@us.ibm.com>
 From: Claudia Alimpich <alimpich@us.ibm.com>
-Date: Wed, 14 Sep 2005 14:06:04 -0600
+Date: Tue, 27 Sep 2005 10:16:34 -0600
 Content-Type: multipart/alternative;
-	boundary="=_alternative 006E5B518725707C_="
-Subject: [Printing-architecture] Meeting minutes Wed September 14th
+	boundary="=_alternative 005952C887257089_="
+Subject: [Printing-architecture] There will be an Open Printing conference
+	call Wed Sep 28th
 List-Id: Printing architecture under linux
 	<printing-architecture.freestandards.org>
 List-Unsubscribe: <http://mail.freestandards.org/mailman/listinfo/printing-architecture>,
@@ -17,82 +18,47 @@ List-Subscribe: <http://mail.freestandards.org/mailman/listinfo/printing-archite
 To: printing-architecture@freestandards.org
 
 This is a multipart message in MIME format.
---=_alternative 006E5B518725707C_=
+--=_alternative 005952C887257089_=
 Content-Type: text/plain; charset="US-ASCII"
 
-Participants:
-Claudia Alimpich (IBM)
-Glen Petrie (Seiko-Epson, Inc.)
-Harry Lewis (IBM)
-Ira McDonald (High North Inc.)
-Norm Jacobs (Sun)
-Till Kamppeter (Till Kamppeter)
+There will be an Open Printing conference call Wed September 28th.
 
-Minutes:
+Day: Wednesdays 
+Time:   
+12:00-1:00 PM US Pacific time 
+1:00-2:00 PM US Mountain time 
+3:00-4:00 PM US Eastern time 
+9:00-10:00 PM Paris time 
+USA Toll Number: 1-484-630-2765 
+PASSCODE: 84974 
 
-Talked about the use of ther term spooler versus file system. Decided to 
-use the term Print Spooler to mean more than just the file system (which 
-includes scheduling) and ensure that the definition of the Print Spooler 
-is clear in the reference model.
-
-Clarify that Printer mean Physical Printer.
-
-Entire "thing" that we are defining is called the Print Subsystem.
-
-Print Subsystem contains multiple components. So the Print Spooler is a 
-component.
-
-Talked about placing job ticket information in a structure(s) and passing 
-between components. Decided that we would not define interfaces between 
-components in Print Subsystem other than the APIs between components.
- 
-Should be a box outside of the diagram for Data Store (local or network 
-file system that is accessible to all components in the Print Subsystem).
-
-Next we need to finish going through Print Job sequence diagram. Also need 
-to include sequence diagrams that show printer registry and administrative 
-tasks.
+We will finish going through the Print Job sequence diagram. We were 
+planning to create a high level sequence diagram and then create lower 
+level sequence diagrams to cover the details.
 
 Claudia
---=_alternative 006E5B518725707C_=
+
+--=_alternative 005952C887257089_=
 Content-Type: text/html; charset="US-ASCII"
 
 
-<br><font size=2 face="sans-serif">Participants:</font>
-<br><font size=2 face="sans-serif">Claudia Alimpich (IBM)</font>
-<br><font size=2 face="sans-serif">Glen Petrie (Seiko-Epson, Inc.)</font>
-<br><font size=2 face="sans-serif">Harry Lewis (IBM)</font>
-<br><font size=2 face="sans-serif">Ira McDonald (High North Inc.)</font>
-<br><font size=2 face="sans-serif">Norm Jacobs (Sun)</font>
-<br><font size=2 face="sans-serif">Till Kamppeter (Till Kamppeter)</font>
+<br><font size=2 face="sans-serif">There will be an Open Printing conference
+call Wed September 28th.</font>
 <br>
-<br><font size=2 face="sans-serif">Minutes:</font>
+<br><font size=2 face="sans-serif">Day: Wednesdays</font><font size=3>
+</font><font size=2 face="sans-serif"><br>
+Time: &nbsp;</font><font size=3> </font><font size=2 face="sans-serif"><br>
+12:00-1:00 PM US Pacific time</font><font size=3> </font><font size=2 face="sans-serif"><br>
+1:00-2:00 PM US Mountain time</font><font size=3> </font><font size=2 face="sans-serif"><br>
+3:00-4:00 PM US Eastern time</font><font size=3> </font><font size=2 face="sans-serif"><br>
+9:00-10:00 PM Paris time</font><font size=3> </font><font size=2 face="sans-serif"><br>
+USA Toll Number: 1-484-630-2765</font><font size=3> </font><font size=2 face="sans-serif"><br>
+PASSCODE: 84974</font><font size=3> </font>
 <br>
-<br><font size=2 face="sans-serif">Talked about the use of ther term spooler
-versus file system. Decided to use the term Print Spooler to mean more
-than just the file system (which includes scheduling) and ensure that the
-definition of the Print Spooler is clear in the reference model.</font>
+<br><font size=2 face="sans-serif">We will finish going through the Print
+Job sequence diagram. We were planning to create a high level sequence
+diagram and then create lower level sequence diagrams to cover the details.</font>
 <br>
-<br><font size=2 face="sans-serif">Clarify that Printer mean Physical Printer.</font>
+<br><font size=2 face="Arial">Claudia</font>
 <br>
-<br><font size=2 face="sans-serif">Entire &quot;thing&quot; that we are
-defining is called the Print Subsystem.</font>
-<br>
-<br><font size=2 face="sans-serif">Print Subsystem contains multiple components.
-So the Print Spooler is a component.</font>
-<br>
-<br><font size=2 face="sans-serif">Talked about placing job ticket information
-in a structure(s) and passing between components. Decided that we would
-not define interfaces between components in Print Subsystem other than
-the APIs between components.</font>
-<br><font size=2 face="sans-serif">&nbsp;</font>
-<br><font size=2 face="sans-serif">Should be a box outside of the diagram
-for Data Store (local or network file system that is accessible to all
-components in the Print Subsystem).</font>
-<br>
-<br><font size=2 face="sans-serif">Next we need to finish going through
-Print Job sequence diagram. Also need to include sequence diagrams that
-show printer registry and administrative tasks.</font>
-<br>
-<br><font size=2 face="sans-serif">Claudia</font>
---=_alternative 006E5B518725707C_=--
+--=_alternative 005952C887257089_=--
