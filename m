@@ -1,15 +1,16 @@
 MIME-Version: 1.0
-Message-ID: <OF62271649.B03E67AB-ON8725708A.006800B6-8725708A.007176F9@us.ibm.com>
+Message-ID: <OFE067254F.10788CB5-ON87257097.005BD50E-87257097.005C454A@us.ibm.com>
 From: Claudia Alimpich <alimpich@us.ibm.com>
-Date: Wed, 28 Sep 2005 14:40:19 -0600
+Date: Tue, 11 Oct 2005 10:49:02 -0600
 Content-Type: multipart/alternative;
-	boundary="=_alternative 007176F88725708A_="
-Subject: [Printing-architecture] Meeting minutes Wed September 28th
+	boundary="=_alternative 005C454887257097_="
+Subject: [Printing-architecture] There will be an Open Printing conference
+	call Wed Oct 12th
 List-Id: Printing architecture under linux
 	<printing-architecture.freestandards.org>
 List-Unsubscribe: <http://mail.freestandards.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@freestandards.org?subject=unsubscribe>
-List-Archive: <http://base4.freestandards.org/pipermail/printing-architecture>
+List-Archive: <http://mail.freestandards.org/pipermail/printing-architecture>
 List-Post: <mailto:printing-architecture@freestandards.org>
 List-Help: <mailto:printing-architecture-request@freestandards.org?subject=help>
 List-Subscribe: <http://mail.freestandards.org/mailman/listinfo/printing-architecture>,
@@ -17,9 +18,28 @@ List-Subscribe: <http://mail.freestandards.org/mailman/listinfo/printing-archite
 To: printing-architecture@freestandards.org
 
 This is a multipart message in MIME format.
---=_alternative 007176F88725708A_=
+--=_alternative 005C454887257097_=
 Content-Type: text/plain; charset="US-ASCII"
 
+There will be an Open Printing conference call Wed October 12th.
+
+Day: Wednesdays 
+Time:   
+12:00-1:00 PM US Pacific time 
+1:00-2:00 PM US Mountain time 
+3:00-4:00 PM US Eastern time 
+9:00-10:00 PM Paris time 
+USA Toll Number: 1-484-630-2765 
+PASSCODE: 84974 
+
+We will review the sequence of steps that we came up with two weeks ago 
+for the high level sequence diagram for job submission and then we must 
+decide if we want to go deeper and create diagrams for the details (based 
+on the diagrams that Glen created and posted) or to go wider and complete 
+the other high level diagrams.
+
+Claudia
+----------------------------------------------------
 Participants:
 Claudia Alimpich (IBM)
 Harry Lewis (IBM)
@@ -65,11 +85,31 @@ capabilities
 Manager)
 3. etc ... 
 
-Claudia
---=_alternative 007176F88725708A_=
+--=_alternative 005C454887257097_=
 Content-Type: text/html; charset="US-ASCII"
 
 
+<br><font size=2 face="sans-serif">There will be an Open Printing conference
+call Wed October 12th.</font>
+<br>
+<br><font size=2 face="sans-serif">Day: Wednesdays</font><font size=3>
+</font><font size=2 face="sans-serif"><br>
+Time: &nbsp;</font><font size=3> </font><font size=2 face="sans-serif"><br>
+12:00-1:00 PM US Pacific time</font><font size=3> </font><font size=2 face="sans-serif"><br>
+1:00-2:00 PM US Mountain time</font><font size=3> </font><font size=2 face="sans-serif"><br>
+3:00-4:00 PM US Eastern time</font><font size=3> </font><font size=2 face="sans-serif"><br>
+9:00-10:00 PM Paris time</font><font size=3> </font><font size=2 face="sans-serif"><br>
+USA Toll Number: 1-484-630-2765</font><font size=3> </font><font size=2 face="sans-serif"><br>
+PASSCODE: 84974</font><font size=3> </font>
+<br>
+<br><font size=2 face="Arial">We will review the sequence of steps that
+we came up with two weeks ago for the high level sequence diagram for job
+submission and then we must decide if we want to go deeper and create diagrams
+for the details (based on the diagrams that Glen created and posted) or
+to go wider and complete the other high level diagrams.</font>
+<br>
+<br><font size=2 face="Arial">Claudia</font>
+<br><font size=2 face="Arial">----------------------------------------------------</font>
 <br><font size=2 face="sans-serif">Participants:</font>
 <br><font size=2 face="sans-serif">Claudia Alimpich (IBM)</font>
 <br><font size=2 face="sans-serif">Harry Lewis (IBM)</font>
@@ -127,5 +167,4 @@ updates on new printers and printer capabilities</font>
 printer capabilities (target is Print Manager)</font>
 <br><font size=2 face="sans-serif">3. etc ... </font>
 <br>
-<br><font size=2 face="sans-serif">Claudia</font>
---=_alternative 007176F88725708A_=--
+--=_alternative 005C454887257097_=--
