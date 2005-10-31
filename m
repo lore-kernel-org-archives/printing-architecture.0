@@ -1,10 +1,11 @@
+Message-ID: <CFEE79A465B35C4385389BA5866BEDF00C7DCB@mailsrvnt02.enet.sharplabs.com>
+From: "McDonald, Ira" <imcdonald@sharplabs.com>
+Date: Mon, 31 Oct 2005 13:06:44 -0800
 MIME-Version: 1.0
-Message-ID: <OF38467201.B1B7C33A-ON87257098.00732E46-87257098.0073B551@us.ibm.com>
-From: Claudia Alimpich <alimpich@us.ibm.com>
-Date: Wed, 12 Oct 2005 15:05:06 -0600
-Content-Type: multipart/alternative;
-	boundary="=_alternative 0073B55087257098_="
-Subject: [Printing-architecture] FSG Arch Conference Call meeting schedule
+Content-Type: text/plain;
+	charset="ISO-8859-1"
+Content-Transfer-Encoding: quoted-printable
+Subject: [Printing-architecture] FW: [2600] 2006 Meeting Schedule
 List-Id: Printing architecture under linux
 	<printing-architecture.freestandards.org>
 List-Unsubscribe: <http://mail.freestandards.org/mailman/listinfo/printing-architecture>,
@@ -16,42 +17,60 @@ List-Subscribe: <http://mail.freestandards.org/mailman/listinfo/printing-archite
 	<mailto:printing-architecture-request@freestandards.org?subject=subscribe>
 To: printing-architecture@freestandards.org
 
-This is a multipart message in MIME format.
---=_alternative 0073B55087257098_=
-Content-Type: text/plain; charset="US-ASCII"
+Hi folks,
 
-We have to skip an additional week before our next FSG Architecture 
-meeting, so instead of 2 weeks from today, it will be 3 weeks from today. 
-Please update your calendars with the following meeting schedule:
+Some rearrangement in PWG meeting schedule for 2006 - see below.
 
-Wed November  2, 2005
-Wed November 16, 2005
-Wed November 30, 2005
-Wed December 14, 2005
-Note that we will skip December 28, 2005 because of the holidays
-Wed January 11, 2006
-Wed January 25, 2006
-... every 2 weeks
-
-Claudia
---=_alternative 0073B55087257098_=
-Content-Type: text/html; charset="US-ASCII"
+Cheers,
+- Ira
 
 
-<br><font size=2 face="Arial">We have to skip an additional week before
-our next FSG Architecture meeting, so instead of 2 weeks from today, it
-will be 3 weeks from today. Please update your calendars with the following
-meeting schedule:</font>
-<br>
-<br><font size=2 face="Arial">Wed November &nbsp;2, 2005</font>
-<br><font size=2 face="Arial">Wed November 16, 2005</font>
-<br><font size=2 face="Arial">Wed November 30, 2005</font>
-<br><font size=2 face="Arial">Wed December 14, 2005</font>
-<br><font size=2 face="Arial">Note that we will skip December 28, 2005
-because of the holidays</font>
-<br><font size=2 face="Arial">Wed January 11, 2006</font>
-<br><font size=2 face="Arial">Wed January 25, 2006</font>
-<br><font size=2 face="Arial">... every 2 weeks</font>
-<br>
-<br><font size=2 face="Arial">Claudia</font>
---=_alternative 0073B55087257098_=--
+Ira McDonald (Musician / Software Architect)
+Blue Roof Music / High North Inc
+PO Box 221  Grand Marais, MI  49839
+phone: +1-906-494-2434
+email: imcdonald@sharplabs.com=20
+-----Original Message-----
+From: Don Wright [mailto:don@LEXMARK.COM]
+Sent: Monday, October 31, 2005 3:46 PM
+To: STDS-2600@listserv.ieee.org
+Subject: [2600] 2006 Meeting Schedule
+
+
+
+After our meeting last week, the PWG, who has graciously hosted us for
+several meetings this year and will again in 2006, swapped the =
+locations of
+the June and September meetings.  As such, here are the dates and =
+locations
+for us in 2006.  I will update the web page accordingly.=20
+
+* January 16-17 with the PWG in Las Vegas=20
+* March 2-3 open=20
+* April 3-4 with PWG in Mount Laurel, NJ (near Philly) @ Okidata=20
+* May 23-24 (Oc=E9 checking on Paris)=20
+* June 19-20 with PWG (Portland - Sharp - tentative)=20
+* July 26-27 (Rochester, NY - Xerox)=20
+* September 6-7 (Boulder - IBM - tentative)=20
+* October 23-24 with PWG in Lexington KY @ Lexmark=20
+* December 11-12 (Canon, Orange County - tentative)=20
+
+After some checking, Ricoh is unable to host us in Atlanta in March.  =
+Anyone
+else have something available in the southern US (Georgia, Texas, =
+Florida,
+etc.)?=20
+
+************************************************************************=
+***=20
+ Don Wright                      don@lexmark.com=20
+                                 f.wright@ieee.org / =
+f.wright@computer.org=20
+ Director of Standards=20
+ Lexmark International           Past Chair, IEEE SA Standards Board=20
+ 740 New Circle Rd               Chair, Patent Committee IEEE SASB=20
+ Lexington, Ky 40550             Member-at-large, IEEE CS SAB=20
+ 859-825-4808 (phone)            Member, IEEE-ISTO Board of Directors=20
+ 603-963-8352 (fax)              Member, W3C Advisory Committee=20
+************************************************************************=
+***=20
