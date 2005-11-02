@@ -1,11 +1,10 @@
 MIME-Version: 1.0
-Message-ID: <OF77E0F99F.25C2AAF6-ON872570AC.005DA0FF-872570AC.005DBA23@us.ibm.com>
+Message-ID: <OF1C56C295.C3C74D80-ON872570AD.006E5458-872570AD.0072B83A@us.ibm.com>
 From: Claudia Alimpich <alimpich@us.ibm.com>
-Date: Tue, 1 Nov 2005 10:05:24 -0700
+Date: Wed, 2 Nov 2005 13:54:44 -0700
 Content-Type: multipart/alternative;
-	boundary="=_alternative 005DBA22872570AC_="
-Subject: [Printing-architecture] There will be an Open Printing conference
-	call Wed Nov 2nd
+	boundary="=_alternative 0072B838872570AD_="
+Subject: [Printing-architecture] FSG Arch meeting minutes - Wed Nov 2nd
 List-Id: Printing architecture under linux
 	<printing-architecture.freestandards.org>
 List-Unsubscribe: <http://mail.freestandards.org/mailman/listinfo/printing-architecture>,
@@ -18,43 +17,43 @@ List-Subscribe: <http://mail.freestandards.org/mailman/listinfo/printing-archite
 To: printing-architecture@freestandards.org
 
 This is a multipart message in MIME format.
---=_alternative 005DBA22872570AC_=
+--=_alternative 0072B838872570AD_=
 Content-Type: text/plain; charset="US-ASCII"
 
-There will be an Open Printing conference call Wed November 2nd.
+Participants: 
+Claudia Alimpich (IBM) 
+Ira McDonald (High North Inc.) 
+Norm Jacobs (Sun) 
 
-Day: Wednesdays 
-Time:   
-12:00-1:00 PM US Pacific time 
-1:00-2:00 PM US Mountain time 
-3:00-4:00 PM US Eastern time 
-9:00-10:00 PM Paris time 
-USA Toll Number: 1-484-630-2765 
-PASSCODE: 84974 
+Ira gave a summary of the PWG meeting that occurred last week.
 
-During this meeting, we will work on a few more sequence diagrams, 
-possibly printer discovery and Status Monitor initialization.
+We did not work on any sequence diagrams due to low attendance for the 
+whole meeting. We will meet again in 2 weeks to continue working on 
+sequence diagrams.
 
 Claudia
-------------------------------------------------------------
+
+Following is where we let off after the Oct 12th meeting:
+
+------------------------------------------------------------ 
 High level sequence diagram of Print Manager initialization, where the 
-sequence of steps is as follows:
-1. User or system invokes Print Manager
+sequence of steps is as follows: 
+1. User or system invokes Print Manager 
 2. Print Manager reads configuration profile from local or networked data 
 store (location of AAA, printers/queues that it is serving, fonts, media, 
-transform capabilities, printer capabilities and information, etc)
-3. Print Manager authenticates invoking user or system
-4. Print Manager invokes Status Monitor
+transform capabilities, printer capabilities and information, etc) 
+3. Print Manager authenticates invoking user or system 
+4. Print Manager invokes Status Monitor 
 5. Print Manager calls Status Monitor to subscribe for current printer 
 states, all printer events, and current job status for printers from the 
-configuration profile
+configuration profile 
 6. Print Manager calls Capabilities to determine current printer 
-capabilites for each printer
-7. Print Manager recovers saved jobs and initializes its queues
-8. Print Manager calls Spooler to initiate job scheduling
-9. Print Manager calls AAA informing AAA that Print Manager is available
+capabilites for each printer 
+7. Print Manager recovers saved jobs and initializes its queues 
+8. Print Manager calls Spooler to initiate job scheduling 
+9. Print Manager calls AAA informing AAA that Print Manager is available 
 10. The next steps are normal print operation as described in the Job 
-Submission sequence diagram
+Submission sequence diagram 
 
 High level sequence diagram for job submission, where the sequence of 
 steps is as follows: 
@@ -90,58 +89,60 @@ We also need sequence diagrams for the following:
 capabilities (Dynamic discovery of a new printer)
 2. Capabilities periodically updates printer capabilities (target is Print 
 Manager) 
-3. Status Monitor initialization
+3. Status Monitor initialization 
 4. etc ...
---=_alternative 005DBA22872570AC_=
+
+--=_alternative 0072B838872570AD_=
 Content-Type: text/html; charset="US-ASCII"
 
 
-<br><font size=2 face="sans-serif">There will be an Open Printing conference
-call Wed November 2nd.</font>
-<br>
-<br><font size=2 face="sans-serif">Day: Wednesdays</font><font size=3>
+<br><font size=2 face="sans-serif">Participants:</font><font size=3> </font>
+<br><font size=2 face="sans-serif">Claudia Alimpich (IBM)</font><font size=3>
 </font><font size=2 face="sans-serif"><br>
-Time: &nbsp;</font><font size=3> </font><font size=2 face="sans-serif"><br>
-12:00-1:00 PM US Pacific time</font><font size=3> </font><font size=2 face="sans-serif"><br>
-1:00-2:00 PM US Mountain time</font><font size=3> </font><font size=2 face="sans-serif"><br>
-3:00-4:00 PM US Eastern time</font><font size=3> </font><font size=2 face="sans-serif"><br>
-9:00-10:00 PM Paris time</font><font size=3> </font><font size=2 face="sans-serif"><br>
-USA Toll Number: 1-484-630-2765</font><font size=3> </font><font size=2 face="sans-serif"><br>
-PASSCODE: 84974</font><font size=3> </font>
+Ira McDonald (High North Inc.)</font><font size=3> </font><font size=2 face="sans-serif"><br>
+Norm Jacobs (Sun)</font><font size=3> </font>
 <br>
-<br><font size=2 face="Arial">During this meeting, we will work on a few
-more sequence diagrams, possibly printer discovery and Status Monitor initialization.</font>
+<br><font size=2 face="sans-serif">Ira gave a summary of the PWG meeting
+that occurred last week.</font>
 <br>
-<br><font size=2 face="Arial">Claudia</font>
-<br><font size=3>------------------------------------------------------------</font>
-<br><font size=2 face="sans-serif">High level sequence diagram of Print
-Manager initialization, where the sequence of steps is as follows:</font>
-<br><font size=2 face="sans-serif">1. User or system invokes Print Manager</font>
-<br><font size=2 face="sans-serif">2. Print Manager reads configuration
-profile from local or networked data store (location of AAA, printers/queues
-that it is serving, fonts, media, transform capabilities, printer capabilities
-and information, etc)</font>
-<br><font size=2 face="sans-serif">3. Print Manager authenticates invoking
-user or system</font>
-<br><font size=2 face="sans-serif">4. Print Manager invokes Status Monitor</font>
-<br><font size=2 face="sans-serif">5. Print Manager calls Status Monitor
-to subscribe for current printer states, all printer events, and current
-job status for printers from the configuration profile</font>
-<br><font size=2 face="sans-serif">6. Print Manager calls Capabilities
-to determine current printer capabilites for each printer</font>
-<br><font size=2 face="sans-serif">7. Print Manager recovers saved jobs
-and initializes its queues</font>
-<br><font size=2 face="sans-serif">8. Print Manager calls Spooler to initiate
-job scheduling</font>
-<br><font size=2 face="sans-serif">9. Print Manager calls AAA informing
-AAA that Print Manager is available</font>
-<br><font size=2 face="sans-serif">10. The next steps are normal print
-operation as described in the Job Submission sequence diagram</font>
-<br><font size=2 face="sans-serif"><br>
+<br><font size=2 face="sans-serif">We did not work on any sequence diagrams
+due to low attendance for the whole meeting. We will meet again in 2 weeks
+to continue working on sequence diagrams.</font>
+<br>
+<br><font size=2 face="sans-serif">Claudia</font>
+<br>
+<br><font size=2 face="sans-serif">Following is where we let off after
+the Oct 12th meeting:</font>
+<br>
+<br><font size=3>------------------------------------------------------------
+</font><font size=2 face="sans-serif"><br>
+High level sequence diagram of Print Manager initialization, where the
+sequence of steps is as follows:</font><font size=3> </font><font size=2 face="sans-serif"><br>
+1. User or system invokes Print Manager</font><font size=3> </font><font size=2 face="sans-serif"><br>
+2. Print Manager reads configuration profile from local or networked data
+store (location of AAA, printers/queues that it is serving, fonts, media,
+transform capabilities, printer capabilities and information, etc)</font><font size=3>
+</font><font size=2 face="sans-serif"><br>
+3. Print Manager authenticates invoking user or system</font><font size=3>
+</font><font size=2 face="sans-serif"><br>
+4. Print Manager invokes Status Monitor</font><font size=3> </font><font size=2 face="sans-serif"><br>
+5. Print Manager calls Status Monitor to subscribe for current printer
+states, all printer events, and current job status for printers from the
+configuration profile</font><font size=3> </font><font size=2 face="sans-serif"><br>
+6. Print Manager calls Capabilities to determine current printer capabilites
+for each printer</font><font size=3> </font><font size=2 face="sans-serif"><br>
+7. Print Manager recovers saved jobs and initializes its queues</font><font size=3>
+</font><font size=2 face="sans-serif"><br>
+8. Print Manager calls Spooler to initiate job scheduling</font><font size=3>
+</font><font size=2 face="sans-serif"><br>
+9. Print Manager calls AAA informing AAA that Print Manager is available</font><font size=3>
+</font><font size=2 face="sans-serif"><br>
+10. The next steps are normal print operation as described in the Job Submission
+sequence diagram</font><font size=3> </font><font size=2 face="sans-serif"><br>
+<br>
 High level sequence diagram for job submission, where the sequence of steps
-is as follows:</font><font size=3> </font>
-<br><font size=2 face="sans-serif">1. User invokes application</font><font size=3>
-</font><font size=2 face="sans-serif"><br>
+is as follows:</font><font size=3> </font><font size=2 face="sans-serif"><br>
+1. User invokes application</font><font size=3> </font><font size=2 face="sans-serif"><br>
 2. User selects print options and submits print request to Print Manager</font><font size=3>
 </font><font size=2 face="sans-serif"><br>
 3. Print Manager calls AAA to authenticate user</font><font size=3> </font><font size=2 face="sans-serif"><br>
@@ -174,15 +175,15 @@ Manager that all print data has been sent</font><font size=3> </font><font size=
 18. Print Manager removes job from Spooler</font><font size=3> </font><font size=2 face="sans-serif"><br>
 19. Print Manager calls SM to stop monitoring specific printer</font><font size=3>
 </font><font size=2 face="sans-serif"><br>
-20. Print Manager calls AAA informing that job is complete </font>
-<br>
-<br><font size=2 face="sans-serif">We also need sequence diagrams for the
-following:</font><font size=3> </font>
-<br><font size=2 face="sans-serif">1. Print Manager registers to receive
-updates on new printers and printer capabilities</font><font size=3> </font><font size=2 face="sans-serif">(Dynamic
+20. Print Manager calls AAA informing that job is complete </font><font size=3><br>
+</font><font size=2 face="sans-serif"><br>
+We also need sequence diagrams for the following:</font><font size=3> </font><font size=2 face="sans-serif"><br>
+1. Print Manager registers to receive updates on new printers and printer
+capabilities</font><font size=3> </font><font size=2 face="sans-serif">(Dynamic
 discovery of a new printer)<br>
 2. Capabilities periodically updates printer capabilities (target is Print
 Manager)</font><font size=3> </font><font size=2 face="sans-serif"><br>
-3. Status Monitor initialization</font>
-<br><font size=2 face="sans-serif">4. etc ...</font>
---=_alternative 005DBA22872570AC_=--
+3. Status Monitor initialization</font><font size=3> </font><font size=2 face="sans-serif"><br>
+4. etc ...</font><font size=2><tt><br>
+</tt></font>
+--=_alternative 0072B838872570AD_=--
