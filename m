@@ -1,6 +1,6 @@
-Message-ID: <438B8D2D.1060802@gmx.net>
-Date: Tue, 29 Nov 2005 00:05:17 +0100
-From: Till Kamppeter <till.kamppeter@gmx.net>
+Message-ID: <438B96F5.9080302@Sun.COM>
+Date: Mon, 28 Nov 2005 17:47:01 -0600
+From: Norm Jacobs <Norm.Jacobs@Sun.COM>
 MIME-Version: 1.0
 Subject: Re: [Printing-architecture] There will be an Open Printing conference
 	call Wed Nov 30th
@@ -20,15 +20,16 @@ List-Subscribe: <http://mail.freestandards.org/mailman/listinfo/printing-archite
 To: Claudia Alimpich <alimpich@us.ibm.com>
 Cc: printing-architecture@freestandards.org
 
-I cannot join, I will be in Portland, OSDL Desktop Architects Meeting.
 
-    Till
+I can't attend.  I am in meetings all day Wednesday - Friday
 
+       -Norm
 
 Claudia Alimpich wrote:
-> 
+
+>
 > There will be an Open Printing conference call Wed November 30th.
-> 
+>
 > Day: Wednesdays
 > Time:  
 > 12:00-1:00 PM US Pacific time
@@ -37,26 +38,27 @@ Claudia Alimpich wrote:
 > 9:00-10:00 PM Paris time
 > USA Toll Number: 1-484-630-2765
 > PASSCODE: 84974
-> 
+>
 > During this meeting, we will work on a few more sequence diagrams, 
 > possibly printer discovery and Status Monitor initialization.
-> 
+>
 > Claudia
-> 
+>
 > Following is where we let off after the last (Oct 12th) meeting:
-> 
+>
 > ------------------------------------------------------------
 > High level sequence diagram of Print Manager initialization, where the 
 > sequence of steps is as follows:
 > 1. User or system invokes Print Manager
 > 2. Print Manager reads configuration profile from local or networked 
-> data store (location of AAA, printers/queues that it is serving, fonts, 
-> media, transform capabilities, printer capabilities and information, etc)
+> data store (location of AAA, printers/queues that it is serving, 
+> fonts, media, transform capabilities, printer capabilities and 
+> information, etc)
 > 3. Print Manager authenticates invoking user or system
 > 4. Print Manager invokes Status Monitor
 > 5. Print Manager calls Status Monitor to subscribe for current printer 
-> states, all printer events, and current job status for printers from the 
-> configuration profile
+> states, all printer events, and current job status for printers from 
+> the configuration profile
 > 6. Print Manager calls Capabilities to determine current printer 
 > capabilites for each printer
 > 7. Print Manager recovers saved jobs and initializes its queues
@@ -64,7 +66,7 @@ Claudia Alimpich wrote:
 > 9. Print Manager calls AAA informing AAA that Print Manager is available
 > 10. The next steps are normal print operation as described in the Job 
 > Submission sequence diagram
-> 
+>
 > High level sequence diagram for job submission, where the sequence of 
 > steps is as follows:
 > 1. User invokes application
@@ -76,8 +78,8 @@ Claudia Alimpich wrote:
 > 6. Print Manager calls AAA to authorize capabilites allowed for user
 > 7. Print Manager determines if data in job must be transformed, and if 
 > so calls Transform to convert job data
-> 8. Print Manager places print data, job attributes, job ticket (if any) 
-> in Spooler for scheduling
+> 8. Print Manager places print data, job attributes, job ticket (if 
+> any) in Spooler for scheduling
 > 9. Print Manager sends job to the Driver
 > 10. Print Manager calls Status Monitor to monitor specific printer for 
 > printer and job events
@@ -93,7 +95,7 @@ Claudia Alimpich wrote:
 > 18. Print Manager removes job from Spooler
 > 19. Print Manager calls SM to stop monitoring specific printer
 > 20. Print Manager calls AAA informing that job is complete
-> 
+>
 > We also need sequence diagrams for the following:
 > 1. Print Manager registers to receive updates on new printers and 
 > printer capabilities (Dynamic discovery of a new printer)
@@ -101,12 +103,13 @@ Claudia Alimpich wrote:
 > Print Manager)
 > 3. Status Monitor initialization
 > 4. etc ...
-> 
-> 
-> ------------------------------------------------------------------------
-> 
-> _______________________________________________
-> Printing-architecture mailing list
-> Printing-architecture@freestandards.org
-> http://mail.freestandards.org/mailman/listinfo/printing-architecture
+>
+>------------------------------------------------------------------------
+>
+>_______________________________________________
+>Printing-architecture mailing list
+>Printing-architecture@freestandards.org
+>http://mail.freestandards.org/mailman/listinfo/printing-architecture
+>  
+>
 
