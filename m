@@ -1,11 +1,11 @@
-Message-ID: <CFEE79A465B35C4385389BA5866BEDF00C7DF7@mailsrvnt02.enet.sharplabs.com>
-From: "McDonald, Ira" <imcdonald@sharplabs.com>
-Date: Wed, 16 Nov 2005 17:32:21 -0800
 MIME-Version: 1.0
+Message-ID: <OFF96F5BA9.F027F677-ON872570C7.007DCD8B-872570C7.007DDDA3@us.ibm.com>
+From: Claudia Alimpich <alimpich@us.ibm.com>
+Date: Mon, 28 Nov 2005 15:56:44 -0700
 Content-Type: multipart/alternative;
-	boundary="----_=_NextPart_001_01C5EB16.79C7D91E"
-Subject: [Printing-architecture] FW: NEW Proposed dates for January
-	P2600/TCG/PWG face to face
+	boundary="=_alternative 007DDD9F872570C7_="
+Subject: [Printing-architecture] There will be an Open Printing conference
+	call Wed Nov 30th
 List-Id: Printing architecture under linux
 	<printing-architecture.freestandards.org>
 List-Unsubscribe: <http://mail.freestandards.org/mailman/listinfo/printing-architecture>,
@@ -15,175 +15,182 @@ List-Post: <mailto:printing-architecture@freestandards.org>
 List-Help: <mailto:printing-architecture-request@freestandards.org?subject=help>
 List-Subscribe: <http://mail.freestandards.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@freestandards.org?subject=subscribe>
-To: printing-sc@freestandards.org, printing-architecture@freestandards.org
+To: printing-architecture@freestandards.org
 
-This message is in MIME format. Since your mail reader does not understand
-this format, some or all of this message may not be legible.
+This is a multipart message in MIME format.
+--=_alternative 007DDD9F872570C7_=
+Content-Type: text/plain; charset="US-ASCII"
 
-------_=_NextPart_001_01C5EB16.79C7D91E
-Content-Type: text/plain;
-	charset="ISO-8859-1"
+There will be an Open Printing conference call Wed November 30th.
 
------Original Message-----
-From: Don Wright [mailto:don@LEXMARK.COM]
-Sent: Wednesday, November 16, 2005 11:47 AM
-To: STDS-2600@listserv.ieee.org
-Subject: [2600] NEW Proposed dates for January face to face
+Day: Wednesdays 
+Time:   
+12:00-1:00 PM US Pacific time 
+1:00-2:00 PM US Mountain time 
+3:00-4:00 PM US Eastern time 
+9:00-10:00 PM Paris time 
+USA Toll Number: 1-484-630-2765 
+PASSCODE: 84974 
 
+During this meeting, we will work on a few more sequence diagrams, 
+possibly printer discovery and Status Monitor initialization.
 
+Claudia
 
-We had one objection from Nick Del Re of Canon to the orginal proposed date
-changes for the January meeting. 
+Following is where we let off after the last (Oct 12th) meeting:
 
-Anyone object to: 
+------------------------------------------------------------ 
+High level sequence diagram of Print Manager initialization, where the 
+sequence of steps is as follows: 
+1. User or system invokes Print Manager 
+2. Print Manager reads configuration profile from local or networked data 
+store (location of AAA, printers/queues that it is serving, fonts, media, 
+transform capabilities, printer capabilities and information, etc) 
+3. Print Manager authenticates invoking user or system 
+4. Print Manager invokes Status Monitor 
+5. Print Manager calls Status Monitor to subscribe for current printer 
+states, all printer events, and current job status for printers from the 
+configuration profile 
+6. Print Manager calls Capabilities to determine current printer 
+capabilites for each printer 
+7. Print Manager recovers saved jobs and initializes its queues 
+8. Print Manager calls Spooler to initiate job scheduling 
+9. Print Manager calls AAA informing AAA that Print Manager is available 
+10. The next steps are normal print operation as described in the Job 
+Submission sequence diagram 
 
-Jan 16 - Monday - P2600 
-Jan 17 - Tuesday - P2600 
-Jan 18 - Wednesday - TCG 
+High level sequence diagram for job submission, where the sequence of 
+steps is as follows: 
+1. User invokes application 
+2. User selects print options and submits print request to Print Manager 
+3. Print Manager calls AAA to authenticate user 
+4. Print Manager calls Job Ticketing to parse job ticket (if necessary) 
+5. Print Manager validates job attributes and job ticket content using 
+stored capabilites 
+6. Print Manager calls AAA to authorize capabilites allowed for user 
+7. Print Manager determines if data in job must be transformed, and if so 
+calls Transform to convert job data 
+8. Print Manager places print data, job attributes, job ticket (if any) in 
+Spooler for scheduling 
+9. Print Manager sends job to the Driver 
+10. Print Manager calls Status Monitor to monitor specific printer for 
+printer and job events 
+11. Driver calls Capability to check printer capabilities against job 
+attributes and job ticket 
+12. Driver applies job attributes and job ticket (if any) to print data 
+13. Driver converts print data to printer ready format 
+14. Driver sends printer ready print data to PCM   
+15. PCM forwards printer ready print data Printer 
+16. Once Driver has sent all print data to PCM, Driver informs Printer 
+Manager that all print data has been sent 
+17. Status Monitor tells Print Manager that job has completed 
+18. Print Manager removes job from Spooler 
+19. Print Manager calls SM to stop monitoring specific printer 
+20. Print Manager calls AAA informing that job is complete 
 
-Additionally, the PWG will meet as follows: 
+We also need sequence diagrams for the following: 
+1. Print Manager registers to receive updates on new printers and printer 
+capabilities (Dynamic discovery of a new printer)
+2. Capabilities periodically updates printer capabilities (target is Print 
+Manager) 
+3. Status Monitor initialization 
+4. etc ...
 
-Jan 19 - Thursday 
-Jan 20 - Friday 
-
-(If someone else from Canon objects to this arrangement, I'll have to tell
-Canon to work it out ;>)) 
-
-*************************************************************************** 
- Don Wright                      don@lexmark.com 
-                                 f.wright@ieee.org / f.wright@computer.org 
- Director of Standards 
- Lexmark International           Past Chair, IEEE SA Standards Board 
- 740 New Circle Rd               Chair, Patent Committee IEEE SASB 
- Lexington, Ky 40550             Member-at-large, IEEE CS SAB 
- 859-825-4808 (phone)            Member, IEEE-ISTO Board of Directors 
- 603-963-8352 (fax)              Member, W3C Advisory Committee 
-*************************************************************************** 
-
-
------ Forwarded by Don Wright/Lex/Lexmark on 11/16/2005 11:40 AM ----- 
-
-	Don Wright 
-
-
-11/08/2005 01:21 PM 
-
-
-        
-        To:        stds-2600@ieee.org 
-        cc:         
-        Subject:        Proposed dates for January face to face
-
-
-
-In order to accomodate a face-to-face meeting of the TCG Hardcopy Working
-Group, I am proposing an adjustment of the January meeting dates in Las
-Vegas as follows: 
-
-Jan 16 - Monday - TCG 
-Jan 17 - Tuesday - P2600 
-Jan 18 - Wednesday - P2600 
-
-Additionally, the PWG will meet as follows: 
-
-Jan 19 - Thursday 
-Jan 20 - Friday
-
-Any objections? 
-
-*************************************************************************** 
- Don Wright                      don@lexmark.com 
-                                 f.wright@ieee.org / f.wright@computer.org 
- Director of Standards 
- Lexmark International           Past Chair, IEEE SA Standards Board 
- 740 New Circle Rd               Chair, Patent Committee IEEE SASB 
- Lexington, Ky 40550             Member-at-large, IEEE CS SAB 
- 859-825-4808 (phone)            Member, IEEE-ISTO Board of Directors 
- 603-963-8352 (fax)              Member, W3C Advisory Committee 
-*************************************************************************** 
+--=_alternative 007DDD9F872570C7_=
+Content-Type: text/html; charset="US-ASCII"
 
 
-------_=_NextPart_001_01C5EB16.79C7D91E
-Content-Type: text/html;
-	charset="ISO-8859-1"
-
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<HTML><HEAD>
-<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=ISO-8859-1">
-
-
-<META content="MSHTML 6.00.2800.1515" name=GENERATOR></HEAD>
-<BODY>
-<DIV class=OutlookMessageHeader dir=ltr align=left><FONT face=Tahoma 
-size=2>-----Original Message-----<BR><B>From:</B> Don Wright 
-[mailto:don@LEXMARK.COM]<BR><B>Sent:</B> Wednesday, November 16, 2005 11:47 
-AM<BR><B>To:</B> STDS-2600@listserv.ieee.org<BR><B>Subject:</B> [2600] NEW 
-Proposed dates for January face to face<BR><BR></FONT></DIV><BR><FONT size=3>We 
-had one objection from Nick Del Re of Canon to the orginal proposed date changes 
-for the January meeting.</FONT> <BR><BR><FONT size=3>Anyone object to:</FONT> 
-<BR><BR><FONT size=3>Jan 16 - Monday - P2600 <BR>Jan 17 - Tuesday - P2600 
-<BR>Jan 18 - Wednesday - TCG </FONT><BR><BR><FONT size=3>Additionally, the PWG 
-will meet as follows:</FONT> <BR><FONT size=3><BR>Jan 19 - Thursday <BR>Jan 20 - 
-Friday</FONT> <BR><BR><FONT size=3>(If someone else from Canon objects to this 
-arrangement, I'll have to tell Canon to work it out ;&gt;))</FONT> <BR><BR><FONT 
-face="Courier New" 
-size=1>***************************************************************************</FONT> 
-<BR><FONT face="Courier New" size=1>&nbsp;Don Wright &nbsp; &nbsp; &nbsp; &nbsp; 
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;don@lexmark.com</FONT> <BR><FONT 
-face="Courier New" size=1>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-&nbsp;f.wright@ieee.org / f.wright@computer.org</FONT> <BR><FONT 
-face="Courier New" size=1>&nbsp;Director of Standards</FONT> <BR><FONT 
-face="Courier New" size=1>&nbsp;Lexmark International &nbsp; &nbsp; &nbsp; 
-&nbsp; &nbsp; Past Chair, IEEE SA Standards Board</FONT> <BR><FONT 
-face="Courier New" size=1>&nbsp;740 New Circle Rd &nbsp; &nbsp; &nbsp; &nbsp; 
-&nbsp; &nbsp; &nbsp; Chair, Patent Committee IEEE SASB</FONT> <BR><FONT 
-face="Courier New" size=1>&nbsp;Lexington, Ky 40550 &nbsp; &nbsp; &nbsp; &nbsp; 
-&nbsp; &nbsp; Member-at-large, IEEE CS SAB</FONT> <BR><FONT face="Courier New" 
-size=1>&nbsp;859-825-4808 (phone) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-&nbsp;Member, IEEE-ISTO Board of Directors</FONT> <BR><FONT face="Courier New" 
-size=1>&nbsp;603-963-8352 (fax) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-&nbsp;Member, W3C Advisory Committee</FONT> <BR><FONT face="Courier New" 
-size=1>***************************************************************************</FONT> 
-<BR><BR><BR><FONT face=sans-serif color=#800080 size=1>----- Forwarded by Don 
-Wright/Lex/Lexmark on 11/16/2005 11:40 AM -----</FONT> <BR>
-<TABLE width="100%">
-  <TBODY>
-  <TR vAlign=top>
-    <TD>
-    <TD><FONT face=sans-serif size=1><B>Don Wright</B></FONT> 
-      <P><FONT face=sans-serif size=1>11/08/2005 01:21 PM</FONT> <BR></P>
-    <TD><FONT face=Arial size=1>&nbsp; &nbsp; &nbsp; &nbsp; </FONT><BR><FONT 
-      face=sans-serif size=1>&nbsp; &nbsp; &nbsp; &nbsp; To: &nbsp; &nbsp; 
-      &nbsp; &nbsp;stds-2600@ieee.org</FONT> <BR><FONT face=sans-serif 
-      size=1>&nbsp; &nbsp; &nbsp; &nbsp; cc: &nbsp; &nbsp; &nbsp; &nbsp;</FONT> 
-      <BR><FONT face=sans-serif size=1>&nbsp; &nbsp; &nbsp; &nbsp; Subject: 
-      &nbsp; &nbsp; &nbsp; &nbsp;Proposed dates for January face to 
-  face</FONT></TR></TBODY></TABLE><BR><BR><FONT size=3><BR>In order to accomodate 
-a face-to-face meeting of the TCG Hardcopy Working Group, I am proposing an 
-adjustment of the January meeting dates in Las Vegas as follows: <BR><BR>Jan 16 
-- Monday - TCG <BR>Jan 17 - Tuesday - P2600 <BR>Jan 18 - Wednesday - P2600 
-</FONT><BR><BR><FONT size=3>Additionally, the PWG will meet as follows:</FONT> 
-<BR><FONT size=3><BR>Jan 19 - Thursday <BR>Jan 20 - Friday<BR><BR>Any 
-objections?</FONT> <BR><BR><FONT face="Courier New" 
-size=1>***************************************************************************</FONT> 
-<BR><FONT face="Courier New" size=1>&nbsp;Don Wright &nbsp; &nbsp; &nbsp; &nbsp; 
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;don@lexmark.com</FONT> <BR><FONT 
-face="Courier New" size=1>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-&nbsp;f.wright@ieee.org / f.wright@computer.org</FONT> <BR><FONT 
-face="Courier New" size=1>&nbsp;Director of Standards</FONT> <BR><FONT 
-face="Courier New" size=1>&nbsp;Lexmark International &nbsp; &nbsp; &nbsp; 
-&nbsp; &nbsp; Past Chair, IEEE SA Standards Board</FONT> <BR><FONT 
-face="Courier New" size=1>&nbsp;740 New Circle Rd &nbsp; &nbsp; &nbsp; &nbsp; 
-&nbsp; &nbsp; &nbsp; Chair, Patent Committee IEEE SASB</FONT> <BR><FONT 
-face="Courier New" size=1>&nbsp;Lexington, Ky 40550 &nbsp; &nbsp; &nbsp; &nbsp; 
-&nbsp; &nbsp; Member-at-large, IEEE CS SAB</FONT> <BR><FONT face="Courier New" 
-size=1>&nbsp;859-825-4808 (phone) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-&nbsp;Member, IEEE-ISTO Board of Directors</FONT> <BR><FONT face="Courier New" 
-size=1>&nbsp;603-963-8352 (fax) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-&nbsp;Member, W3C Advisory Committee</FONT> <BR><FONT face="Courier New" 
-size=1>***************************************************************************</FONT> 
-<BR></BODY></HTML>
-
-------_=_NextPart_001_01C5EB16.79C7D91E--
+<br><font size=2 face="sans-serif">There will be an Open Printing conference
+call Wed November 30th.</font>
+<br>
+<br><font size=2 face="sans-serif">Day: Wednesdays</font><font size=3>
+</font><font size=2 face="sans-serif"><br>
+Time: &nbsp;</font><font size=3> </font><font size=2 face="sans-serif"><br>
+12:00-1:00 PM US Pacific time</font><font size=3> </font><font size=2 face="sans-serif"><br>
+1:00-2:00 PM US Mountain time</font><font size=3> </font><font size=2 face="sans-serif"><br>
+3:00-4:00 PM US Eastern time</font><font size=3> </font><font size=2 face="sans-serif"><br>
+9:00-10:00 PM Paris time</font><font size=3> </font><font size=2 face="sans-serif"><br>
+USA Toll Number: 1-484-630-2765</font><font size=3> </font><font size=2 face="sans-serif"><br>
+PASSCODE: 84974</font><font size=3> </font>
+<br>
+<br><font size=2 face="Arial">During this meeting, we will work on a few
+more sequence diagrams, possibly printer discovery and Status Monitor initialization.</font>
+<br>
+<br><font size=2 face="Arial">Claudia</font>
+<br>
+<br><font size=2 face="sans-serif">Following is where we let off after
+the last (Oct 12th) meeting:</font>
+<br>
+<br><font size=3>------------------------------------------------------------
+</font><font size=2 face="sans-serif"><br>
+High level sequence diagram of Print Manager initialization, where the
+sequence of steps is as follows:</font><font size=3> </font><font size=2 face="sans-serif"><br>
+1. User or system invokes Print Manager</font><font size=3> </font><font size=2 face="sans-serif"><br>
+2. Print Manager reads configuration profile from local or networked data
+store (location of AAA, printers/queues that it is serving, fonts, media,
+transform capabilities, printer capabilities and information, etc)</font><font size=3>
+</font><font size=2 face="sans-serif"><br>
+3. Print Manager authenticates invoking user or system</font><font size=3>
+</font><font size=2 face="sans-serif"><br>
+4. Print Manager invokes Status Monitor</font><font size=3> </font><font size=2 face="sans-serif"><br>
+5. Print Manager calls Status Monitor to subscribe for current printer
+states, all printer events, and current job status for printers from the
+configuration profile</font><font size=3> </font><font size=2 face="sans-serif"><br>
+6. Print Manager calls Capabilities to determine current printer capabilites
+for each printer</font><font size=3> </font><font size=2 face="sans-serif"><br>
+7. Print Manager recovers saved jobs and initializes its queues</font><font size=3>
+</font><font size=2 face="sans-serif"><br>
+8. Print Manager calls Spooler to initiate job scheduling</font><font size=3>
+</font><font size=2 face="sans-serif"><br>
+9. Print Manager calls AAA informing AAA that Print Manager is available</font><font size=3>
+</font><font size=2 face="sans-serif"><br>
+10. The next steps are normal print operation as described in the Job Submission
+sequence diagram</font><font size=3> </font><font size=2 face="sans-serif"><br>
+<br>
+High level sequence diagram for job submission, where the sequence of steps
+is as follows:</font><font size=3> </font><font size=2 face="sans-serif"><br>
+1. User invokes application</font><font size=3> </font><font size=2 face="sans-serif"><br>
+2. User selects print options and submits print request to Print Manager</font><font size=3>
+</font><font size=2 face="sans-serif"><br>
+3. Print Manager calls AAA to authenticate user</font><font size=3> </font><font size=2 face="sans-serif"><br>
+4. Print Manager calls Job Ticketing to parse job ticket (if necessary)</font><font size=3>
+</font><font size=2 face="sans-serif"><br>
+5. Print Manager validates job attributes and job ticket content using
+stored capabilites</font><font size=3> </font><font size=2 face="sans-serif"><br>
+6. Print Manager calls AAA to authorize capabilites allowed for user</font><font size=3>
+</font><font size=2 face="sans-serif"><br>
+7. Print Manager determines if data in job must be transformed, and if
+so calls Transform to convert job data</font><font size=3> </font><font size=2 face="sans-serif"><br>
+8. Print Manager places print data, job attributes, job ticket (if any)
+in Spooler for scheduling</font><font size=3> </font><font size=2 face="sans-serif"><br>
+9. Print Manager sends job to the Driver</font><font size=3> </font><font size=2 face="sans-serif"><br>
+10. Print Manager calls Status Monitor to monitor specific printer for
+printer and job events</font><font size=3> </font><font size=2 face="sans-serif"><br>
+11. Driver calls Capability to check printer capabilities against job attributes
+and job ticket</font><font size=3> </font><font size=2 face="sans-serif"><br>
+12. Driver applies job attributes and job ticket (if any) to print data</font><font size=3>
+</font><font size=2 face="sans-serif"><br>
+13. Driver converts print data to printer ready format</font><font size=3>
+</font><font size=2 face="sans-serif"><br>
+14. Driver sends printer ready print data to PCM &nbsp;</font><font size=3>
+</font><font size=2 face="sans-serif"><br>
+15. PCM forwards printer ready print data Printer</font><font size=3> </font><font size=2 face="sans-serif"><br>
+16. Once Driver has sent all print data to PCM, Driver informs Printer
+Manager that all print data has been sent</font><font size=3> </font><font size=2 face="sans-serif"><br>
+17. Status Monitor tells Print Manager that job has completed</font><font size=3>
+</font><font size=2 face="sans-serif"><br>
+18. Print Manager removes job from Spooler</font><font size=3> </font><font size=2 face="sans-serif"><br>
+19. Print Manager calls SM to stop monitoring specific printer</font><font size=3>
+</font><font size=2 face="sans-serif"><br>
+20. Print Manager calls AAA informing that job is complete </font><font size=3><br>
+</font><font size=2 face="sans-serif"><br>
+We also need sequence diagrams for the following:</font><font size=3> </font><font size=2 face="sans-serif"><br>
+1. Print Manager registers to receive updates on new printers and printer
+capabilities</font><font size=3> </font><font size=2 face="sans-serif">(Dynamic
+discovery of a new printer)<br>
+2. Capabilities periodically updates printer capabilities (target is Print
+Manager)</font><font size=3> </font><font size=2 face="sans-serif"><br>
+3. Status Monitor initialization</font><font size=3> </font><font size=2 face="sans-serif"><br>
+4. etc ...</font><font size=2><tt><br>
+</tt></font>
+--=_alternative 007DDD9F872570C7_=--
