@@ -1,12 +1,13 @@
-Return-Path: <imcdonald@sharplabs.com>
-Message-ID: <CFEE79A465B35C4385389BA5866BEDF00C7ECE@mailsrvnt02.enet.sharplabs.com>
-From: "McDonald, Ira" <imcdonald@sharplabs.com>
-Subject: FW: [Desktop_printing] Re: [Printing-architecture] Printing Summi
-	t memo (for tomorrow sc meeting)
-Date: Wed, 8 Feb 2006 11:43:12 -0800 
+Return-Path: <mike@easysw.com>
+Message-ID: <43ED0A9E.50404@easysw.com>
+Date: Fri, 10 Feb 2006 16:50:22 -0500
+From: Michael Sweet <mike@easysw.com>
 MIME-Version: 1.0
-Content-Type: text/plain;
-	charset="ISO-8859-1"
+Subject: Re: [Printing-architecture] Request for comment to PCM draft
+References: <8A33346A3922BD4EB48A18128BAB16AB474F55@SWA6204.apo.epson.net>
+In-Reply-To: <8A33346A3922BD4EB48A18128BAB16AB474F55@SWA6204.apo.epson.net>
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: 7bit
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.freestandards.org>
 List-Unsubscribe: <http://lists.freestandards.org/cgi-bin/mailman/listinfo/printing-architecture>,
@@ -16,64 +17,75 @@ List-Post: <mailto:printing-architecture@lists.freestandards.org>
 List-Help: <mailto:printing-architecture-request@lists.freestandards.org?subject=help>
 List-Subscribe: <http://lists.freestandards.org/cgi-bin/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.freestandards.org?subject=subscribe>
-To: printing-architecture@freestandards.org
+To: Ide Kentaro <Ide.Kentaro@exc.epson.co.jp>
+Cc: printing-architecture@freestandards.org
 
-Hi,
+Ide Kentaro wrote:
+> Hi, folks,
+> 
+> I posted link of PCM draft document to OpenPrinting web site.
+> <http://www.openprinting.org/moin.cgi/OpenPrinting/PrintChannelManager>
+> 
+> I would like you to comment these documents with two viewpoints.
+> 
+> 	1. Architecture
+> 		If you predict that a problem occurs to your system with this architecture,
+> 		point out the problem, please.
 
-Forwarded below is Mihara-san's criticism of shifting from PS to PDF
-for Linux printing document data format.
+1. Architecture Diagram
 
-For discussion at today's Architecture meeting, along with Till's
-comments Monday on Mihara-san's proposed FSG/OP position statement
-for OSDL Printing Summit (already forwarded to Architecture list).
+    It isn't clear how this will work with CUPS; the architecture
+    diagram references an "Open Printing System", but the diagram
+    does *not* match up with how CUPS interfaces with and discovers
+    devices.
 
-Cheers,
-- Ira
+    Basically, I'd focus on the PCM design/architecture itself, and
+    then show possible interfaces with other apps like CUPS, SANE,
+    and so forth.  All of the PCM stuff should be in the middle,
+    possible apps/users at the top, and devices at the bottom.
 
-Ira McDonald (Musician / Software Architect)
-Blue Roof Music / High North Inc
-PO Box 221  Grand Marais, MI  49839
-phone: +1-906-494-2434
-email: imcdonald@sharplabs.com
+2. Device Discovery
 
------Original Message-----
-From: desktop_printing-bounces@lists.osdl.org
-[mailto:desktop_printing-bounces@lists.osdl.org]On Behalf Of Osamu
-MIHARA
-Sent: Wednesday, February 08, 2006 12:43 AM
-To: desktop_printing@osdl.org
-Subject: [Desktop_printing] Re: [Printing-architecture] Printing Summit
-memo (for tomorrow sc meeting)
+    The spec and API only focus on accessing a particular device.
+    There is no way to discover or enumerate devices, which is
+    most definitely going to be needed.
 
+3. Asynchronous I/O, Non-Blocking IO, and/or Timeouts
 
-Hi,
+    The read and write APIs need to support non-blocking I/O or at
+    least basic timeouts so that an application can communicate
+    without getting hung/deadlocked.
 
-I just joined Desktop_printing ML and am on the way to understand what 
-is discussed for printing summit reading archived mails.
+    It would also be useful to get a file descriptor or some
+    other mechanism so that you can poll() or select() for
+    ok-to-read/write conditions.
 
-One thing I'm concerning is that transition of printing spool format 
-from PostScript to PDF.  Moving spooling format from PS to other is a 
-good idea and PDF can be a candidate for it.  However, the original PDF 
-from Adobe places meta information (dictionary) at the end of the PDF 
-file.  This requires spooling all of the PDF file to spooler or renderer 
-before start printing.  PDF/is is proposed by IEEE for facsimile 
-application in order to handle stream PDF, but it handles only raster 
-data and graphics information seems to be lost. Also streamed PDF is 
-provided from Adobe, but I heard that streaming technology about PDF 
-format is patented by Adobe.
+    Without this, you are forced to use threading which is
+    problematic.
 
-Under these situation, adopting PDF to spool format can be problems in 
-many aspects.
+> 	2. License
+> 		My questions are "Which license is better for us?" and
+> 		"As for we should we select the license that was unified
+> 		with all the Open Printing documents? ".
+> 
+> 		We chose BSD like license to PCM specification, today.
+> 		But some other documents chose another license as FDL.
+> 		One of the license of a BSD derivation may be easy to accept,
+> 		in the case that the application in business with one,
+> 		although it is natural to use FDL and the licenses of
+> 		other GNU derivations, if I think with the position
+> 		that says FSG.
+> 		So, comment your idea about license of these documents, please.
 
-I'd rather like to take SVG for the spooling format, as it is *OPEN*, 
-not under control of particular company and well designed graphic 
-format, although it has less actual results.
+As far as licensing goes, BSD or LGPL is suitable for the code, but
+simple copyright (with FSG as the copyright holder) should be used
+for the spec since you don't want to have others modify the spec
+once it has been accepted.
 
-What do you think?
+That is, specifications/standards documents are normally controlled
+by the organization that produced them...
+
 -- 
-Osamu MIHARA // Fuji Xerox Printing Systems Co.,Ltd.
-
-_______________________________________________
-Desktop_printing mailing list
-Desktop_printing@lists.osdl.org
-https://lists.osdl.org/mailman/listinfo/desktop_printing
+______________________________________________________________________
+Michael Sweet, Easy Software Products           mike at easysw dot com
+Internet Printing and Document Software          http://www.easysw.com
