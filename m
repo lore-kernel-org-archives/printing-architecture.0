@@ -1,11 +1,12 @@
-Return-Path: <Ide.Kentaro@exc.epson.co.jp>
-Message-ID: <8A33346A3922BD4EB48A18128BAB16AB474F81@SWA6204.apo.epson.net>
-From: Ide Kentaro <Ide.Kentaro@exc.epson.co.jp>
-Subject: RE: [Printing-architecture] Request for comment to PCM draft
-Date: Tue, 14 Feb 2006 02:36:29 +0900
+Return-Path: <imcdonald@sharplabs.com>
+Message-ID: <CFEE79A465B35C4385389BA5866BEDF00C7EF0@mailsrvnt02.enet.sharplabs.com>
+From: "McDonald, Ira" <imcdonald@sharplabs.com>
+Date: Thu, 16 Feb 2006 12:40:16 -0800
 MIME-Version: 1.0
 Content-Type: text/plain;
-	charset="iso-8859-1"
+	charset="ISO-8859-1"
+Subject: [Printing-architecture] OSDL Printing Summit (10-12 April 2006) in
+	Atlanta
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.freestandards.org>
 List-Unsubscribe: <http://lists.freestandards.org/cgi-bin/mailman/listinfo/printing-architecture>,
@@ -15,41 +16,57 @@ List-Post: <mailto:printing-architecture@lists.freestandards.org>
 List-Help: <mailto:printing-architecture-request@lists.freestandards.org?subject=help>
 List-Subscribe: <http://lists.freestandards.org/cgi-bin/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.freestandards.org?subject=subscribe>
-To: 'Michael Sweet' <mike@easysw.com>, "McDonald, Ira" <imcdonald@sharplabs.com>
-Cc: printing-architecture@freestandards.org
+To: "'pwg-announce@pwg.org'" <pwg-announce@pwg.org>, printing-architecture@freestandards.org
+Cc: 'John Cherry' <cherry@osdl.org>
 
 Hi,
 
-As Ira says, PCM don't have device discovery mechanism within itself.
-PCM rely the function of device discovery on the other module of Open Printing System.
-In my recogunition, Architecture-team discuss about these architecture
-that iclude device discovery and device information management, so on.
-After architecture fixed, PCM will be modifing specification or adjusting
-in implementation for ensure consistency.
+This is an invitation to printer vendors and printing ISVs
+to register for and attend the upcoming OSDL (Open Source
+Development Lab) Printing Summit.  
 
-In the other hand, we, printing-japan team, design PCM specification with
-existence printing system in mind but solo-PCM can't implemet to existence printing system like as CUPS.
-What I'm trying to say is, combined some Open Printing module and glue code
-will be coexistence with CUPS or other system.
+Over twenty participants are already registered (I'll soon
+forward the list with their affiliations) from Linux OSVs,
+printer vendors, ISVs, etc.
 
-Implementation study of Open Printing project will be serve as good example.
-<http://lx1.avasys.jp/OpenPrintingProject/index_e.html>
+IMPORTANT:  Registration is limited to 50 people by the
+facility donated by Ricoh/Lanier.  Don't miss the chance.
+There's a very attractive conference hotel rate.
+
+The latest agenda, including registration and hotel info,
+is in the directory:
+
+  ftp://ftp.pwg.org/pub/pwg/osdl/
+
+in the file:
+
+  osdl-printing-summit-agenda-20060216.pdf
+
+The template to be filled out by particpants is in the file:
+
+  osdl-printing-summit-template-20060215.pdf
+
+There will also be summary/wrap-up _teleconferences_ at the
+end of each day, for those who can't attend in person (not
+yet shown on this version of the agenda).
+
+There will be another planning teleconference in approximately
+four weeks (we had one earlier today).
+
+To subscribe to the very active (and technical) OSDL Desktop
+Printing mailing list visit:
+
+  http://lists.osdl.org/mailman/listinfo
+
+If your company builds printers and/or cares about printing
+on Linux, this is the MOST IMPORTANT focused event in 2006.
+
+Cheers,
+- Ira (for the FSG Open Printing Steering Committee)
 
 
-Michael Sweet wrote
-| As far as licensing goes, BSD or LGPL is suitable for the 
-| code, but simple copyright (with FSG as the copyright holder) 
-| should be used for the spec since you don't want to have 
-| others modify the spec once it has been accepted.
-| 
-| That is, specifications/standards documents are normally 
-| controlled by the organization that produced them...
-
-That's right.
-And we need uniform license for documents of Open Printing, doesn't?
-The point of my question is it.
-
-Anyway, I'll try to discuss a license and your comment in meeting of Printing-Japan, ongoingly.
-
-Best regards,
-Kentaro Ide
+Ira McDonald (Musician / Software Architect)
+Blue Roof Music / High North Inc
+PO Box 221  Grand Marais, MI  49839
+phone: +1-906-494-2434
+email: imcdonald@sharplabs.com
