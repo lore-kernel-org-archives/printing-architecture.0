@@ -1,12 +1,12 @@
 Return-Path: <imcdonald@sharplabs.com>
-Message-ID: <CFEE79A465B35C4385389BA5866BEDF00C7EF0@mailsrvnt02.enet.sharplabs.com>
+Message-ID: <CFEE79A465B35C4385389BA5866BEDF00C7EFA@mailsrvnt02.enet.sharplabs.com>
 From: "McDonald, Ira" <imcdonald@sharplabs.com>
-Date: Thu, 16 Feb 2006 12:40:16 -0800
+Date: Fri, 17 Feb 2006 07:49:31 -0800
 MIME-Version: 1.0
 Content-Type: text/plain;
 	charset="ISO-8859-1"
-Subject: [Printing-architecture] OSDL Printing Summit (10-12 April 2006) in
-	Atlanta
+Subject: [Printing-architecture] OSDL Printing Summit - Current
+	Registrations and Agenda (16 Feb 2 006)
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.freestandards.org>
 List-Unsubscribe: <http://lists.freestandards.org/cgi-bin/mailman/listinfo/printing-architecture>,
@@ -17,52 +17,31 @@ List-Help: <mailto:printing-architecture-request@lists.freestandards.org?subject
 List-Subscribe: <http://lists.freestandards.org/cgi-bin/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.freestandards.org?subject=subscribe>
 To: "'pwg-announce@pwg.org'" <pwg-announce@pwg.org>, printing-architecture@freestandards.org
-Cc: 'John Cherry' <cherry@osdl.org>
+Cc: 'Till Kamppeter' <till.kamppeter@gmx.net>, 'John Cherry' <cherry@osdl.org>
 
 Hi,
 
-This is an invitation to printer vendors and printing ISVs
-to register for and attend the upcoming OSDL (Open Source
-Development Lab) Printing Summit.  
+For people trying to justify travel costs to their managers...
 
-Over twenty participants are already registered (I'll soon
-forward the list with their affiliations) from Linux OSVs,
-printer vendors, ISVs, etc.
+New information about the OSDL Printing Summit (10-12 April 2006)
+is now posted in the directory:
 
-IMPORTANT:  Registration is limited to 50 people by the
-facility donated by Ricoh/Lanier.  Don't miss the chance.
-There's a very attractive conference hotel rate.
+  ftp://ftp.pwg.org/pub/pwg/osdl
 
-The latest agenda, including registration and hotel info,
-is in the directory:
+in the files:
 
-  ftp://ftp.pwg.org/pub/pwg/osdl/
+  osdl-printing-summit-agenda-20060216.txt
+  - updated agenda (OBSOLETES the PDF of same date)
 
-in the file:
+  OSDL-Printing-Summit-Registrations-20060216.pdf
+  - list of current registrations (with most of the affiliations)
 
-  osdl-printing-summit-agenda-20060216.pdf
-
-The template to be filled out by particpants is in the file:
-
-  osdl-printing-summit-template-20060215.pdf
-
-There will also be summary/wrap-up _teleconferences_ at the
-end of each day, for those who can't attend in person (not
-yet shown on this version of the agenda).
-
-There will be another planning teleconference in approximately
-four weeks (we had one earlier today).
-
-To subscribe to the very active (and technical) OSDL Desktop
-Printing mailing list visit:
-
-  http://lists.osdl.org/mailman/listinfo
-
-If your company builds printers and/or cares about printing
-on Linux, this is the MOST IMPORTANT focused event in 2006.
+Many more people have committed to attend (attendance is limited
+to 50 people total by the facility size at Ricoh/Lanier), but
+have not yet registered.  Please don't wait until too late!
 
 Cheers,
-- Ira (for the FSG Open Printing Steering Committee)
+- Ira
 
 
 Ira McDonald (Musician / Software Architect)
