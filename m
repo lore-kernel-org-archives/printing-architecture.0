@@ -1,11 +1,12 @@
-Return-Path: <imcdonald@sharplabs.com>
-Message-ID: <CFEE79A465B35C4385389BA5866BEDF00C7FBA@mailsrvnt02.enet.sharplabs.com>
-From: "McDonald, Ira" <imcdonald@sharplabs.com>
-Subject: RE: [Printing-architecture] Ira has conflict on Wed 5 April
-Date: Fri, 17 Mar 2006 15:49:53 -0800
+Return-Path: <alimpich@us.ibm.com>
 MIME-Version: 1.0
-Content-Type: text/plain;
-	charset="ISO-8859-1"
+Message-ID: <OF602CA404.7B5F8DA6-ON8725713F.007B3052-8725713F.007B4D71@us.ibm.com>
+From: Claudia Alimpich <alimpich@us.ibm.com>
+Date: Tue, 28 Mar 2006 15:29:32 -0700
+Content-Type: multipart/alternative;
+	boundary="=_alternative 007B4D708725713F_="
+Subject: [Printing-architecture] There will be a FSG Arch meeting on Wed Mar
+	29th
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.freestandards.org>
 List-Unsubscribe: <http://lists.freestandards.org/cgi-bin/mailman/listinfo/printing-architecture>,
@@ -15,77 +16,50 @@ List-Post: <mailto:printing-architecture@lists.freestandards.org>
 List-Help: <mailto:printing-architecture-request@lists.freestandards.org?subject=help>
 List-Subscribe: <http://lists.freestandards.org/cgi-bin/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.freestandards.org?subject=subscribe>
-To: 'Claudia Alimpich' <alimpich@us.ibm.com>, printing-architecture@freestandards.org
-
-Hi Claudia,
-
-Actually Thursday is worse.  It turns out that at the Wednesday
-time there is a BOF on Imaging Display Management led by Rick
-Landau (Dell) - see full agenda appended below - while I'd like
-to hear this, it's far from critical to miss.
-
-Let's stick with Wednesday 5 April 12pm US PDT / 3pm US EDT.
-
-Cheers,
-- Ira
-
-
-Ira McDonald (Musician / Software Architect)
-Blue Roof Music / High North Inc
-PO Box 221  Grand Marais, MI  49839
-phone: +1-906-494-2434
-email: imcdonald@sharplabs.com 
---------------------------
-
-April PWG face-to-face agenda (per Harry Lewis on Tuesday 7 March)
-
-Wed 4/5 - PWG Plenary (8:30 to 10am) 
-             - WIMS CIM (10am to 3pm ... 1 hr lunch break) 
-             - Image Display Management (3pm to 5pm) 
-              - Printer MIB Implementer's guide BOF (5pm to 7pm) 
-
-Thu  4/6 - Semantic Model (9am to 1pm) 
-             - MFP Alerts (2pm to 4pm) 
-             - IPP Extensions (eg. for Trusted Computing) (4pm to 5pm) 
-
------Original Message-----
-From: printing-architecture-bounces@lists.freestandards.org
-[mailto:printing-architecture-bounces@lists.freestandards.org]On Behalf Of
-Claudia Alimpich
-Sent: Friday, March 17, 2006 5:36 PM
 To: printing-architecture@freestandards.org
-Subject: Fw: [Printing-architecture] Ira has conflict on Wed 5 April
+
+This is a multipart message in MIME format.
+--=_alternative 007B4D708725713F_=
+Content-Type: text/plain; charset="US-ASCII"
+
+There will be an Open Printing conference call Wed March 29th.
+
+Day: Wednesdays 
+Time:   
+12:00-1:00 PM US Pacific time 
+1:00-2:00 PM US Mountain time 
+3:00-4:00 PM US Eastern time 
+9:00-10:00 PM Paris time 
+USA Toll Number: 1-484-630-2765 
+PASSCODE: 84974 
+
+We will continue to work on the slides that we are putting together for 
+the OSDL Printing Summit. The current/draft versions of the FSG Overview, 
+PAPI, and JTAPI slides are on the PWG site:
+ftp://ftp.pwg.org/pub/pwg/fsg/April2006-OSDL-Printing-Summit-Slides/
+
+Claudia
+--=_alternative 007B4D708725713F_=
+Content-Type: text/html; charset="US-ASCII"
 
 
-
-We could move this meeting to another day. How about the same time on
-Thursday April 6th? 
-Claudia 
-
------ Forwarded by Claudia Alimpich/Boulder/IBM on 03/17/2006 03:31 PM -----
-
-
-printing-architecture-bounces@lists.freestandards.org wrote on 03/17/2006
-12:54:33 PM:
-
-> Hi,
-> 
-> NOTE - I have a serious conflict with Wednesday 5 April - I will be the
-> presenter at that time during the IEEE-ISTO PWG face-to-face, so I 
-> probably can't join that last FSG OP Arch teleconference before the
-> OSDL Printing Summit the following week.
-> 
-> Cheers,
-> - Ira
-> 
-> Ira McDonald (Musician / Software Architect)
-> Blue Roof Music / High North Inc
-> PO Box 221  Grand Marais, MI  49839
-> phone: +1-906-494-2434
-> email: imcdonald@sharplabs.com
-> _______________________________________________
-> Printing-architecture mailing list
-> Printing-architecture@lists.freestandards.org
->
-http://lists.freestandards.org/cgi-bin/mailman/listinfo/printing-architectur
-e
+<br><font size=2 face="sans-serif">There will be an Open Printing conference
+call Wed March 29th.</font>
+<br>
+<br><font size=2 face="sans-serif">Day: Wednesdays</font><font size=3>
+</font><font size=2 face="sans-serif"><br>
+Time: &nbsp;</font><font size=3> </font><font size=2 face="sans-serif"><br>
+12:00-1:00 PM US Pacific time</font><font size=3> </font><font size=2 face="sans-serif"><br>
+1:00-2:00 PM US Mountain time</font><font size=3> </font><font size=2 face="sans-serif"><br>
+3:00-4:00 PM US Eastern time</font><font size=3> </font><font size=2 face="sans-serif"><br>
+9:00-10:00 PM Paris time</font><font size=3> </font><font size=2 face="sans-serif"><br>
+USA Toll Number: 1-484-630-2765</font><font size=3> </font><font size=2 face="sans-serif"><br>
+PASSCODE: 84974</font><font size=3> </font>
+<br>
+<br><font size=2 face="sans-serif">We will continue to work on the slides
+that we are putting together for the OSDL Printing Summit. The current/draft
+versions of the FSG Overview, PAPI, and JTAPI slides are on the PWG site:<br>
+ftp://ftp.pwg.org/pub/pwg/fsg/April2006-OSDL-Printing-Summit-Slides/</font>
+<br>
+<br><font size=2 face="sans-serif">Claudia</font>
+--=_alternative 007B4D708725713F_=--
