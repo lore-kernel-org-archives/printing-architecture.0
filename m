@@ -1,11 +1,11 @@
-Return-Path: <alimpich@us.ibm.com>
+Return-Path: <Norm.Jacobs@Sun.COM>
+Message-ID: <442B6CF4.3030807@Sun.COM>
+Date: Wed, 29 Mar 2006 23:30:28 -0600
+From: Norm Jacobs <Norm.Jacobs@Sun.COM>
 MIME-Version: 1.0
-Message-ID: <OFDFC7382A.00FD8A17-ON87257140.007CF516-87257140.007D1FD0@us.ibm.com>
-From: Claudia Alimpich <alimpich@us.ibm.com>
-Date: Wed, 29 Mar 2006 15:49:26 -0700
-Content-Type: multipart/alternative;
-	boundary="=_alternative 007D1FCE87257140_="
-Subject: [Printing-architecture] Slides for OSDL Printing Summit
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: 7bit
+Subject: [Printing-architecture] PAPI Implementation slides
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.freestandards.org>
 List-Unsubscribe: <http://lists.freestandards.org/cgi-bin/mailman/listinfo/printing-architecture>,
@@ -17,38 +17,12 @@ List-Subscribe: <http://lists.freestandards.org/cgi-bin/mailman/listinfo/printin
 	<mailto:printing-architecture-request@lists.freestandards.org?subject=subscribe>
 To: printing-architecture@freestandards.org
 
-This is a multipart message in MIME format.
---=_alternative 007D1FCE87257140_=
-Content-Type: text/plain; charset="US-ASCII"
+I have put a draft copy of the PAPI Implementation slides on the PWG ftp
+site at
+ftp://ftp.pwg.org/pub/pwg/fsg/April2006-OSDL-Printing-Summit-Slides/2006-04-11-FSG_PAPI_OSDL_Printing_Summit_Implementation.pdf
+ftp://ftp.pwg.org/pub/pwg/fsg/April2006-OSDL-Printing-Summit-Slides/2006-04-11-FSG_PAPI_OSDL_Printing_Summit_Implementation.sxi
 
-During the Architecture working group meeting today, we worked on and 
-completed the FSG Overview and JTAPI slides that will be presented during 
-the OSDL Printing Summit. They are on the PWG site:
+Believe it or not, this is the trimmed down version and I know that it's
+missing TONS of information.  Let me know what you think. 
 
-ftp://ftp.pwg.org/pub/pwg/fsg/April2006-OSDL-Printing-Summit-Slides/2006-03-29-FSG_Overview_OSDL_Printing_Summit.ppt
-ftp://ftp.pwg.org/pub/pwg/fsg/April2006-OSDL-Printing-Summit-Slides/2006-03-29-FSG_Overview_OSDL_Printing_Summit.pdf
-ftp://ftp.pwg.org/pub/pwg/fsg/April2006-OSDL-Printing-Summit-Slides/2006-03-29-FSG_JTAPI_OSDL_Printing_Summit.ppt
-ftp://ftp.pwg.org/pub/pwg/fsg/April2006-OSDL-Printing-Summit-Slides/2006-03-29-FSG_JTAPI_OSDL_Printing_Summit.pdf
-
-I have also posted the pdf files to the Desktop Printing mailing list.
-
-Claudia
---=_alternative 007D1FCE87257140_=
-Content-Type: text/html; charset="US-ASCII"
-
-
-<br><font size=2 face="sans-serif">During the Architecture working group
-meeting today, we worked on and completed the FSG Overview and JTAPI slides
-that will be presented during the OSDL Printing Summit. They are on the
-PWG site:</font>
-<br>
-<br><font size=2 face="sans-serif">ftp://ftp.pwg.org/pub/pwg/fsg/April2006-OSDL-Printing-Summit-Slides/2006-03-29-FSG_Overview_OSDL_Printing_Summit.ppt</font>
-<br><font size=2 face="sans-serif">ftp://ftp.pwg.org/pub/pwg/fsg/April2006-OSDL-Printing-Summit-Slides/2006-03-29-FSG_Overview_OSDL_Printing_Summit.pdf</font>
-<br><font size=2 face="sans-serif">ftp://ftp.pwg.org/pub/pwg/fsg/April2006-OSDL-Printing-Summit-Slides/2006-03-29-FSG_JTAPI_OSDL_Printing_Summit.ppt</font>
-<br><font size=2 face="sans-serif">ftp://ftp.pwg.org/pub/pwg/fsg/April2006-OSDL-Printing-Summit-Slides/2006-03-29-FSG_JTAPI_OSDL_Printing_Summit.pdf</font>
-<br>
-<br><font size=2 face="sans-serif">I have also posted the pdf files to
-the Desktop Printing mailing list.</font>
-<br>
-<br><font size=2 face="sans-serif">Claudia</font>
---=_alternative 007D1FCE87257140_=--
+          -Norm
