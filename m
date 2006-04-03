@@ -1,13 +1,14 @@
-Return-Path: <Norm.Jacobs@Sun.COM>
-Message-ID: <442C0E10.30307@Sun.COM>
-Date: Thu, 30 Mar 2006 10:57:52 -0600
-From: Norm Jacobs <Norm.Jacobs@Sun.COM>
-MIME-Version: 1.0
-Subject: Re: [Printing-architecture] PAPI Overview Slides
-References: <442B8020.5010709@Sun.COM> <442BAC7E.9050005@gmx.net>
-In-Reply-To: <442BAC7E.9050005@gmx.net>
-Content-Type: text/plain; charset=ISO-8859-1; format=flowed
-Content-Transfer-Encoding: 7bit
+Return-Path: <Takaaki.Higuchi@Sun.COM>
+Date: Tue, 04 Apr 2006 07:34:58 +0900
+From: Takaaki Higuchi <Takaaki.Higuchi@Sun.COM>
+Subject: Re: [Printing-architecture] Slides for OSDL Printing Summit
+In-reply-to: <OFDFC7382A.00FD8A17-ON87257140.007CF516-87257140.007D1FD0@us.ibm.com>
+Sender: Takaaki.Higuchi@Sun.COM
+Message-id: <4431A312.2040209@Sun.COM>
+MIME-version: 1.0
+Content-type: text/plain; charset=us-ascii
+Content-transfer-encoding: 7BIT
+References: <OFDFC7382A.00FD8A17-ON87257140.007CF516-87257140.007D1FD0@us.ibm.com>
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.freestandards.org>
 List-Unsubscribe: <http://lists.freestandards.org/cgi-bin/mailman/listinfo/printing-architecture>,
@@ -17,51 +18,16 @@ List-Post: <mailto:printing-architecture@lists.freestandards.org>
 List-Help: <mailto:printing-architecture-request@lists.freestandards.org?subject=help>
 List-Subscribe: <http://lists.freestandards.org/cgi-bin/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.freestandards.org?subject=subscribe>
-To: Till Kamppeter <till.kamppeter@gmx.net>
-Cc: printing-architecture@freestandards.org
+To: printing-architecture@freestandards.org
 
+I'd like to point out a minor change in page 7.
+Ide Kentaro should be Kentaro Ide, Kentaro is his first name.
+Though I think he does not mind...
 
-Thanks, I did both.  I lightened the background and darkened the text.
+thanks in advance,
+Takaaki Higuchi
 
-
-       -Norm
-
-Till Kamppeter wrote:
-
->The links on page 5 and 6 are unreadable. They should be a dark color
->and/or the background needs to be lightened.
->
->   Till
->
->
->Norm Jacobs wrote:
->  
->
->>I have put a draft copy of the PAPI Overview slides on the PWG ftp
->>site at
->>ftp://ftp.pwg.org/pub/pwg/fsg/April2006-OSDL-Printing-Summit-Slides/2006-04-10-FSG_PAPI_OSDL_Printing_Summit_Overview.pdf
->>
->>ftp://ftp.pwg.org/pub/pwg/fsg/April2006-OSDL-Printing-Summit-Slides/2006-04-10-FSG_PAPI_OSDL_Printing_Summit_Overview.odp
->>
->>
->>I think that this should cover everything that we talked about in
->>today's concall.
->>
->>        -Norm
->>_______________________________________________
->>Printing-architecture mailing list
->>Printing-architecture@lists.freestandards.org
->>http://lists.freestandards.org/cgi-bin/mailman/listinfo/printing-architecture
->>
->>
->>
->>    
->>
->
->_______________________________________________
->Printing-architecture mailing list
->Printing-architecture@lists.freestandards.org
->http://lists.freestandards.org/cgi-bin/mailman/listinfo/printing-architecture
->  
->
-
+Claudia Alimpich wrote:
+> ftp://ftp.pwg.org/pub/pwg/fsg/April2006-OSDL-Printing-Summit-Slides/2006-03-29-FSG_Overview_OSDL_Printing_Summit.ppt 
+> 
+> ftp://ftp.pwg.org/pub/pwg/fsg/April2006-OSDL-Printing-Summit-Slides/2006-03-29-FSG_Overview_OSDL_Printing_Summit.pdf 
