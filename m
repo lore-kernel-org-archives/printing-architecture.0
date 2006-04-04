@@ -1,13 +1,14 @@
 Return-Path: <Norm.Jacobs@Sun.COM>
-Message-ID: <4432BB4F.2080908@Sun.COM>
-Date: Tue, 04 Apr 2006 13:30:39 -0500
+Message-ID: <4432C20D.9050601@Sun.COM>
+Date: Tue, 04 Apr 2006 13:59:25 -0500
 From: Norm Jacobs <Norm.Jacobs@Sun.COM>
 MIME-Version: 1.0
-Subject: Re: [Printing-architecture] CANCELLED - FSG Arch on Wed 5 April 2006
 References: <OF7228B75C.635BC15A-ON87257146.0063B236-87257146.006389CC@us.ibm.com>
-In-Reply-To: <OF7228B75C.635BC15A-ON87257146.0063B236-87257146.006389CC@us.ibm.com>
+	<4432BB4F.2080908@Sun.COM>
+In-Reply-To: <4432BB4F.2080908@Sun.COM>
 Content-Type: text/plain; charset=ISO-8859-1; format=flowed
 Content-Transfer-Encoding: 7bit
+Subject: [Printing-architecture] Updated FSG Overview and PCM slides...
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.freestandards.org>
 List-Unsubscribe: <http://lists.freestandards.org/cgi-bin/mailman/listinfo/printing-architecture>,
@@ -17,57 +18,29 @@ List-Post: <mailto:printing-architecture@lists.freestandards.org>
 List-Help: <mailto:printing-architecture-request@lists.freestandards.org?subject=help>
 List-Subscribe: <http://lists.freestandards.org/cgi-bin/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.freestandards.org?subject=subscribe>
-To: Claudia Alimpich <alimpich@us.ibm.com>
+To: "Printing-Sc (E-mail)" <printing-sc@freestandards.org>
 Cc: printing-architecture@freestandards.org
 
-Nope, but shortly.  I will send out mail.
 
+During the FSG OpenPrinting SC telecon last night, we went through the 
+overview slides to be presented
+at the Printing Summit next week.  I have updated the slides and put 
+them out on the PWG ftp site.  Please
+look them over and let me know if I have missed anything.
+
+ftp://ftp.pwg.org/pub/pwg/fsg/April2006-OSDL-Printing-Summit-Slides/2006-04-10-FSG_Overview_OSDL_Printing_Summit.pdf
+ftp://ftp.pwg.org/pub/pwg/fsg/April2006-OSDL-Printing-Summit-Slides/2006-04-10-FSG_Overview_OSDL_Printing_Summit.odp
+
+Ira dug the PCM diagram out of the PCM specification and sent it to me.  
+(Thanks Ira)  I have updated the
+PCM slides to include the diagram.  It's not the best quality, but it's 
+an improvment over the previous
+version of the slide.  Let me know if there is anything else I need to 
+change.
+
+ftp://ftp.pwg.org/pub/pwg/fsg/April2006-OSDL-Printing-Summit-Slides/2006-04-10-FSG_PCM_OSDL_Printing_Summit_Overview.pdf
+ftp://ftp.pwg.org/pub/pwg/fsg/April2006-OSDL-Printing-Summit-Slides/2006-04-10-FSG_PCM_OSDL_Printing_Summit_Overview.odp
+
+
+Thanks
        -Norm
-
-Claudia Alimpich wrote:
-
->
-> Have the updated slides been posted to the PWG site?
->
-> printing-architecture-bounces@lists.freestandards.org wrote on 
-> 04/04/2006 11:23:57 AM:
->
-> > Hi,
-> >
-> > We did some good cleanup on the FSG Open Printing Overview
-> > slides at yesterday's Steering Committee teleconference.
-> >
-> > We concluded that there is no need for a further FSG OP
-> > Architecture teleconference tomorrow.
-> >
-> > See some of you next week in Atlanta at the OSDL PS.
-> >
-> > Cheers,
-> > - Ira
-> >
-> > Ira McDonald (Musician / Software Architect)
-> > Blue Roof Music / High North Inc
-> > PO Box 221  Grand Marais, MI  49839
-> > phone: +1-906-494-2434
-> > email: imcdonald@sharplabs.com
-> >
-> > --
-> > No virus found in this outgoing message.
-> > Checked by AVG Free Edition.
-> > Version: 7.1.385 / Virus Database: 268.3.5/301 - Release Date: 4/4/2006
-> >  
-> > _______________________________________________
-> > Printing-architecture mailing list
-> > Printing-architecture@lists.freestandards.org
-> > 
-> http://lists.freestandards.org/cgi-bin/mailman/listinfo/printing-architecture
->
->------------------------------------------------------------------------
->
->_______________________________________________
->Printing-architecture mailing list
->Printing-architecture@lists.freestandards.org
->http://lists.freestandards.org/cgi-bin/mailman/listinfo/printing-architecture
->  
->
-
