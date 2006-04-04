@@ -1,14 +1,12 @@
-Return-Path: <Norm.Jacobs@Sun.COM>
-Message-ID: <4432C20D.9050601@Sun.COM>
-Date: Tue, 04 Apr 2006 13:59:25 -0500
-From: Norm Jacobs <Norm.Jacobs@Sun.COM>
+Return-Path: <imcdonald@sharplabs.com>
+Message-ID: <789E617C880666438EDEE30C2A3E8D10EDB5@mailsrvnt05.enet.sharplabs.com>
+From: "McDonald, Ira" <imcdonald@sharplabs.com>
+Date: Tue, 4 Apr 2006 12:21:39 -0700 
 MIME-Version: 1.0
-References: <OF7228B75C.635BC15A-ON87257146.0063B236-87257146.006389CC@us.ibm.com>
-	<4432BB4F.2080908@Sun.COM>
-In-Reply-To: <4432BB4F.2080908@Sun.COM>
-Content-Type: text/plain; charset=ISO-8859-1; format=flowed
-Content-Transfer-Encoding: 7bit
-Subject: [Printing-architecture] Updated FSG Overview and PCM slides...
+Content-Type: text/plain;
+	charset="ISO-8859-1"
+Subject: [Printing-architecture] FSG OP Slides optimized with Acrobat
+	Distiller
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.freestandards.org>
 List-Unsubscribe: <http://lists.freestandards.org/cgi-bin/mailman/listinfo/printing-architecture>,
@@ -18,29 +16,35 @@ List-Post: <mailto:printing-architecture@lists.freestandards.org>
 List-Help: <mailto:printing-architecture-request@lists.freestandards.org?subject=help>
 List-Subscribe: <http://lists.freestandards.org/cgi-bin/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.freestandards.org?subject=subscribe>
-To: "Printing-Sc (E-mail)" <printing-sc@freestandards.org>
-Cc: printing-architecture@freestandards.org
+To: printing-architecture@freestandards.org
 
+Hi,
 
-During the FSG OpenPrinting SC telecon last night, we went through the 
-overview slides to be presented
-at the Printing Summit next week.  I have updated the slides and put 
-them out on the PWG ftp site.  Please
-look them over and let me know if I have missed anything.
+Optimized with Acrobat Distiller/6.0 (now set to compatible with
+Acrobat/5.0 and higher) in the directory:
 
-ftp://ftp.pwg.org/pub/pwg/fsg/April2006-OSDL-Printing-Summit-Slides/2006-04-10-FSG_Overview_OSDL_Printing_Summit.pdf
-ftp://ftp.pwg.org/pub/pwg/fsg/April2006-OSDL-Printing-Summit-Slides/2006-04-10-FSG_Overview_OSDL_Printing_Summit.odp
+  ftp://ftp.pwg.org/pub/pwg/fsg/April2006-OSDL-Printing-Summit-Slides
 
-Ira dug the PCM diagram out of the PCM specification and sent it to me.  
-(Thanks Ira)  I have updated the
-PCM slides to include the diagram.  It's not the best quality, but it's 
-an improvment over the previous
-version of the slide.  Let me know if there is anything else I need to 
-change.
+in the files:
 
-ftp://ftp.pwg.org/pub/pwg/fsg/April2006-OSDL-Printing-Summit-Slides/2006-04-10-FSG_PCM_OSDL_Printing_Summit_Overview.pdf
-ftp://ftp.pwg.org/pub/pwg/fsg/April2006-OSDL-Printing-Summit-Slides/2006-04-10-FSG_PCM_OSDL_Printing_Summit_Overview.odp
+  2006-04-10-FSG_Overview_OSDL_Printing_Summit-Optimized.pdf
+  2006-04-10-FSG_PCM_OSDL_Printing_Summit_Overview-Optimized.pdf
+  2006-04-10-FSG_PAPI_OSDL_Printing_Summit_Overview-Optimized.pdf
+  2006-04-11-FSG_PAPI_OSDL_Printing_Summit_Implementation-Optimized.pdf
+  
+These files are much smaller and download much faster.
 
+Cheers,
+- Ira
 
-Thanks
-       -Norm
+Ira McDonald (Musician / Software Architect)
+Blue Roof Music / High North Inc
+PO Box 221  Grand Marais, MI  49839
+phone: +1-906-494-2434
+email: imcdonald@sharplabs.com
+
+-- 
+No virus found in this outgoing message.
+Checked by AVG Free Edition.
+Version: 7.1.385 / Virus Database: 268.3.5/301 - Release Date: 4/4/2006
+ 
