@@ -1,14 +1,11 @@
-Return-Path: <till.kamppeter@gmx.net>
-Message-ID: <4431A7F9.1000203@gmx.net>
-Date: Tue, 04 Apr 2006 00:55:53 +0200
-From: Till Kamppeter <till.kamppeter@gmx.net>
+Return-Path: <imcdonald@sharplabs.com>
+Message-ID: <789E617C880666438EDEE30C2A3E8D10EDB0@mailsrvnt05.enet.sharplabs.com>
+From: "McDonald, Ira" <imcdonald@sharplabs.com>
+Date: Tue, 4 Apr 2006 10:23:57 -0700 
 MIME-Version: 1.0
-Subject: Re: [Printing-architecture] Slides for OSDL Printing Summit
-References: <OFDFC7382A.00FD8A17-ON87257140.007CF516-87257140.007D1FD0@us.ibm.com>
-	<4431A312.2040209@Sun.COM>
-In-Reply-To: <4431A312.2040209@Sun.COM>
-Content-Type: text/plain; charset=ISO-8859-1
-Content-Transfer-Encoding: 7bit
+Content-Type: text/plain;
+	charset="ISO-8859-1"
+Subject: [Printing-architecture] CANCELLED - FSG Arch on Wed 5 April 2006
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.freestandards.org>
 List-Unsubscribe: <http://lists.freestandards.org/cgi-bin/mailman/listinfo/printing-architecture>,
@@ -18,32 +15,29 @@ List-Post: <mailto:printing-architecture@lists.freestandards.org>
 List-Help: <mailto:printing-architecture-request@lists.freestandards.org?subject=help>
 List-Subscribe: <http://lists.freestandards.org/cgi-bin/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.freestandards.org?subject=subscribe>
-To: Takaaki Higuchi <Takaaki.Higuchi@Sun.COM>
-Cc: printing-architecture@freestandards.org
+To: printing-architecture@freestandards.org
 
-Thank you very much. We have found it out half an hour ago in the
-Steering Committe telecon. It is corrected now.
+Hi,
 
-   Till
+We did some good cleanup on the FSG Open Printing Overview
+slides at yesterday's Steering Committee teleconference.
 
-Takaaki Higuchi wrote:
-> I'd like to point out a minor change in page 7.
-> Ide Kentaro should be Kentaro Ide, Kentaro is his first name.
-> Though I think he does not mind...
-> 
-> thanks in advance,
-> Takaaki Higuchi
-> 
-> Claudia Alimpich wrote:
-> 
->>ftp://ftp.pwg.org/pub/pwg/fsg/April2006-OSDL-Printing-Summit-Slides/2006-03-29-FSG_Overview_OSDL_Printing_Summit.ppt 
->>
->>ftp://ftp.pwg.org/pub/pwg/fsg/April2006-OSDL-Printing-Summit-Slides/2006-03-29-FSG_Overview_OSDL_Printing_Summit.pdf 
-> 
-> _______________________________________________
-> Printing-architecture mailing list
-> Printing-architecture@lists.freestandards.org
-> http://lists.freestandards.org/cgi-bin/mailman/listinfo/printing-architecture
-> 
-> 
+We concluded that there is no need for a further FSG OP
+Architecture teleconference tomorrow.
 
+See some of you next week in Atlanta at the OSDL PS.
+
+Cheers,
+- Ira
+
+Ira McDonald (Musician / Software Architect)
+Blue Roof Music / High North Inc
+PO Box 221  Grand Marais, MI  49839
+phone: +1-906-494-2434
+email: imcdonald@sharplabs.com
+
+-- 
+No virus found in this outgoing message.
+Checked by AVG Free Edition.
+Version: 7.1.385 / Virus Database: 268.3.5/301 - Release Date: 4/4/2006
+ 
