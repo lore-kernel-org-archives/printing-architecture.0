@@ -1,12 +1,12 @@
-Return-Path: <imcdonald@sharplabs.com>
-Message-ID: <789E617C880666438EDEE30C2A3E8D10EDB5@mailsrvnt05.enet.sharplabs.com>
-From: "McDonald, Ira" <imcdonald@sharplabs.com>
-Date: Tue, 4 Apr 2006 12:21:39 -0700 
+Return-Path: <alimpich@us.ibm.com>
 MIME-Version: 1.0
-Content-Type: text/plain;
-	charset="ISO-8859-1"
-Subject: [Printing-architecture] FSG OP Slides optimized with Acrobat
-	Distiller
+Message-ID: <OF02A75D11.E9B133A1-ON87257154.0063BB8F-87257154.0063EE31@us.ibm.com>
+From: Claudia Alimpich <alimpich@us.ibm.com>
+Date: Tue, 18 Apr 2006 12:14:19 -0600
+Content-Type: multipart/alternative;
+	boundary="=_alternative 0063EE3087257154_="
+Subject: [Printing-architecture] Should we have an Arch meeting on Wed April
+	19th?
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.freestandards.org>
 List-Unsubscribe: <http://lists.freestandards.org/cgi-bin/mailman/listinfo/printing-architecture>,
@@ -18,33 +18,24 @@ List-Subscribe: <http://lists.freestandards.org/cgi-bin/mailman/listinfo/printin
 	<mailto:printing-architecture-request@lists.freestandards.org?subject=subscribe>
 To: printing-architecture@freestandards.org
 
-Hi,
+This is a multipart message in MIME format.
+--=_alternative 0063EE3087257154_=
+Content-Type: text/plain; charset="US-ASCII"
 
-Optimized with Acrobat Distiller/6.0 (now set to compatible with
-Acrobat/5.0 and higher) in the directory:
+I have it on my schedule that we are planning to have an FSG Arch meeting 
+tomorrow (Wed April 19th). Does everyone want to meet or is everyone still 
+recovering from last week's OSDL Printing Summit and would like to skip 
+this week's meeting and meet in two weeks?
 
-  ftp://ftp.pwg.org/pub/pwg/fsg/April2006-OSDL-Printing-Summit-Slides
+Claudia
+--=_alternative 0063EE3087257154_=
+Content-Type: text/html; charset="US-ASCII"
 
-in the files:
 
-  2006-04-10-FSG_Overview_OSDL_Printing_Summit-Optimized.pdf
-  2006-04-10-FSG_PCM_OSDL_Printing_Summit_Overview-Optimized.pdf
-  2006-04-10-FSG_PAPI_OSDL_Printing_Summit_Overview-Optimized.pdf
-  2006-04-11-FSG_PAPI_OSDL_Printing_Summit_Implementation-Optimized.pdf
-  
-These files are much smaller and download much faster.
-
-Cheers,
-- Ira
-
-Ira McDonald (Musician / Software Architect)
-Blue Roof Music / High North Inc
-PO Box 221  Grand Marais, MI  49839
-phone: +1-906-494-2434
-email: imcdonald@sharplabs.com
-
--- 
-No virus found in this outgoing message.
-Checked by AVG Free Edition.
-Version: 7.1.385 / Virus Database: 268.3.5/301 - Release Date: 4/4/2006
- 
+<br><font size=2 face="sans-serif">I have it on my schedule that we are
+planning to have an FSG Arch meeting tomorrow (Wed April 19th). Does everyone
+want to meet or is everyone still recovering from last week's OSDL Printing
+Summit and would like to skip this week's meeting and meet in two weeks?</font>
+<br>
+<br><font size=2 face="sans-serif">Claudia</font>
+--=_alternative 0063EE3087257154_=--
