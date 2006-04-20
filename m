@@ -1,12 +1,11 @@
-Return-Path: <alimpich@us.ibm.com>
+Return-Path: <fsg-spam-admin@freestandards.org>
+Message-ID: <4448095B.6050806@gmx.net>
+Date: Fri, 21 Apr 2006 00:21:15 +0200
+From: Till Kamppeter <till.kamppeter@gmx.net>
 MIME-Version: 1.0
-Message-ID: <OFD124E31F.23AC6632-ON87257154.006D90C4-87257154.006D66A0@us.ibm.com>
-From: Claudia Alimpich <alimpich@us.ibm.com>
-Date: Tue, 18 Apr 2006 13:57:46 -0600
-Content-Type: multipart/alternative;
-	boundary="=_alternative 006D669F87257154_="
-Subject: [Printing-architecture] There will be a FSG Arch meeting on Wed Apr
-	19th
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: 7bit
+Subject: [Printing-architecture] My suggestions for Ira on the LSB meeting
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.freestandards.org>
 List-Unsubscribe: <http://lists.freestandards.org/cgi-bin/mailman/listinfo/printing-architecture>,
@@ -16,40 +15,74 @@ List-Post: <mailto:printing-architecture@lists.freestandards.org>
 List-Help: <mailto:printing-architecture-request@lists.freestandards.org?subject=help>
 List-Subscribe: <http://lists.freestandards.org/cgi-bin/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.freestandards.org?subject=subscribe>
-To: printing-architecture@freestandards.org
+To: "'McDonald, Ira'" <imcdonald@sharplabs.com>, printing-architecture <printing-architecture@freestandards.org>, "desktop_printing@osdl.org" <desktop_printing@osdl.org>
 
-This is a multipart message in MIME format.
---=_alternative 006D669F87257154_=
-Content-Type: text/plain; charset="US-ASCII"
+Oi,
 
-There will be an Open Printing conference call Wed April 19th.
+Ira, as you asked for on the phone on Wednesday I give my suggestions here:
 
-Day: Wednesdays 
-Time:   
-12:00-1:00 PM US Pacific time 
-1:00-2:00 PM US Mountain time 
-3:00-4:00 PM US Eastern time 
-9:00-10:00 PM Paris time 
-USA Toll Number: 1-484-630-2765 
-PASSCODE: 84974 
+The best would be that a distro to be LSB-certified requires all FSG
+OpenPrinting standards to be implemented and included: JTAPI, PAPI, PCM,
+OpenPrinting vector, ... (and also a PDF-based printing workflow)
 
-Claudia
---=_alternative 006D669F87257154_=
-Content-Type: text/html; charset="US-ASCII"
+But as long as "apt-get install libjtapi-dev" tells me that the package
+does not exist, I think we will not be able to make LSB requiring this.
+So I urgently suggest to FSG OpenPrinting to apply as a mentor
+organization on the Google Summer of Code 2006
+(http://code.google.com/soc/, deadline May 1st, 17:00 pacific). This way
+we can perhaps achieve our goal on a later LSB version.
 
+For currently existing software I suggest the following requirements
+(Ira, probably you will not like this, but somehow we have to start now):
 
-<br><font size=2 face="sans-serif">There will be an Open Printing conference
-call Wed April 19th.</font>
-<br>
-<br><font size=2 face="sans-serif">Day: Wednesdays</font><font size=3>
-</font><font size=2 face="sans-serif"><br>
-Time: &nbsp;</font><font size=3> </font><font size=2 face="sans-serif"><br>
-12:00-1:00 PM US Pacific time</font><font size=3> </font><font size=2 face="sans-serif"><br>
-1:00-2:00 PM US Mountain time</font><font size=3> </font><font size=2 face="sans-serif"><br>
-3:00-4:00 PM US Eastern time</font><font size=3> </font><font size=2 face="sans-serif"><br>
-9:00-10:00 PM Paris time</font><font size=3> </font><font size=2 face="sans-serif"><br>
-USA Toll Number: 1-484-630-2765</font><font size=3> </font><font size=2 face="sans-serif"><br>
-PASSCODE: 84974</font><font size=3> </font>
-<br>
-<br><font size=2 face="sans-serif">Claudia</font>
---=_alternative 006D669F87257154_=--
+- CUPS 1.2.0 or newer with
+
+   o Either standard paths (/etc/cups, /usr/lib/cups, /usr/share/cups,
+     ...)
+
+        OR
+
+     cups-config in the main CUPS package (not in -devel) for path
+     auto-detection
+
+   o Working web interface (no blocking like in Ubuntu, or Digest
+     Authentification like in SuSE)
+
+- Foomatic (current CVS of all sub-packages or newer) with
+
+   o Standard paths (/usr/share/foomatic, /usr/bin, ...)
+
+   o On-the-fly building of PPDs with CUPS 1.2 (I added this feature to
+     the CVS yesterday)
+
+- GhostScript (ex. current SVN rev of ESP GS or newer) with
+
+   o Standard program and font paths
+
+   o At least the ijs, cups, opvp, pswrite, and pdfwrite
+     devices (opvp is OpenPrinting Vector, already available on
+     Subversion of ESP GS)
+
+- KDE with
+
+   o CUPS support (compiled against libcups)
+
+   o Patched/fixed to smoothly work with CUPS 1.2 in standard
+     configuration
+
+- GTK/GNOME with
+
+   o newest libgtk/Cairo with the new printing support and CUPS-enabled
+     dialog
+
+- General
+
+   o All KDE and GNOME applications and also OpenOffice.org have to
+     feature a printing dialog which gives access to all printers and
+     PPD options. Better even if Firefox and Thunderbird fulfill this,
+     too.
+
+WDYT?
+
+   Till
+
