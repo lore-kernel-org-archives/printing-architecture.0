@@ -1,11 +1,11 @@
-Return-Path: <fsg-spam-admin@freestandards.org>
-Message-ID: <4448095B.6050806@gmx.net>
-Date: Fri, 21 Apr 2006 00:21:15 +0200
-From: Till Kamppeter <till.kamppeter@gmx.net>
+Return-Path: <glen.petrie@EITC.EPSON.com>
+Message-ID: <2F7D63A21DB2C74EB8EB8C09AF667DB00559C675@eitc220.eitc.epson.com>
+From: "Petrie, Glen" <glen.petrie@EITC.EPSON.com>
+Date: Mon, 1 May 2006 08:56:05 -0700 
 MIME-Version: 1.0
-Content-Type: text/plain; charset=ISO-8859-1
-Content-Transfer-Encoding: 7bit
-Subject: [Printing-architecture] My suggestions for Ira on the LSB meeting
+Content-Type: multipart/alternative;
+	boundary="----_=_NextPart_001_01C66D37.B920A2D8"
+Subject: [Printing-architecture] test only
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.freestandards.org>
 List-Unsubscribe: <http://lists.freestandards.org/cgi-bin/mailman/listinfo/printing-architecture>,
@@ -15,74 +15,51 @@ List-Post: <mailto:printing-architecture@lists.freestandards.org>
 List-Help: <mailto:printing-architecture-request@lists.freestandards.org?subject=help>
 List-Subscribe: <http://lists.freestandards.org/cgi-bin/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.freestandards.org?subject=subscribe>
-To: "'McDonald, Ira'" <imcdonald@sharplabs.com>, printing-architecture <printing-architecture@freestandards.org>, "desktop_printing@osdl.org" <desktop_printing@osdl.org>
+To: "'printing-architecture@mail.freestandards.org'" <printing-architecture@freestandards.org>
 
-Oi,
+This message is in MIME format. Since your mail reader does not understand
+this format, some or all of this message may not be legible.
 
-Ira, as you asked for on the phone on Wednesday I give my suggestions here:
+------_=_NextPart_001_01C66D37.B920A2D8
+Content-Type: text/plain
 
-The best would be that a distro to be LSB-certified requires all FSG
-OpenPrinting standards to be implemented and included: JTAPI, PAPI, PCM,
-OpenPrinting vector, ... (and also a PDF-based printing workflow)
 
-But as long as "apt-get install libjtapi-dev" tells me that the package
-does not exist, I think we will not be able to make LSB requiring this.
-So I urgently suggest to FSG OpenPrinting to apply as a mentor
-organization on the Google Summer of Code 2006
-(http://code.google.com/soc/, deadline May 1st, 17:00 pacific). This way
-we can perhaps achieve our goal on a later LSB version.
 
-For currently existing software I suggest the following requirements
-(Ira, probably you will not like this, but somehow we have to start now):
 
-- CUPS 1.2.0 or newer with
+Rgds, 
+Glen W. Petrie 
+Epson Imaging Technology Center 
+150 River Oaks Parkway, Suite 200 
+San Jose, CA, 95134 
+Voice: 408.576.4131  Fax: 408.474.0511 
 
-   o Either standard paths (/etc/cups, /usr/lib/cups, /usr/share/cups,
-     ...)
 
-        OR
 
-     cups-config in the main CUPS package (not in -devel) for path
-     auto-detection
+------_=_NextPart_001_01C66D37.B920A2D8
+Content-Type: text/html
 
-   o Working web interface (no blocking like in Ubuntu, or Digest
-     Authentification like in SuSE)
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=us-ascii">
+<META NAME="Generator" CONTENT="MS Exchange Server version 5.5.2658.24">
+<TITLE>test only</TITLE>
+</HEAD>
+<BODY>
+<BR>
+<BR>
 
-- Foomatic (current CVS of all sub-packages or newer) with
+<P ALIGN=LEFT><A NAME="_MailAutoSig"></A></P>
 
-   o Standard paths (/usr/share/foomatic, /usr/bin, ...)
+<P ALIGN=LEFT><B><I>Rgds,<BR>
+</I></B><B><I></I></B><B><I><FONT COLOR="#0000FF" SIZE=5>Glen W. Petrie</FONT></I></B><B><I></I></B><B><I><FONT SIZE=5><BR>
+</FONT></I></B><B><I>Epson Imaging Technology Center<BR>
+150 River Oaks Parkway, Suite 200<BR>
+San Jose, CA, 95134<BR>
+Voice: 408.576.4131&nbsp; Fax: 408.474.0511 </I></B></P>
 
-   o On-the-fly building of PPDs with CUPS 1.2 (I added this feature to
-     the CVS yesterday)
+<P ALIGN=LEFT></P>
 
-- GhostScript (ex. current SVN rev of ESP GS or newer) with
-
-   o Standard program and font paths
-
-   o At least the ijs, cups, opvp, pswrite, and pdfwrite
-     devices (opvp is OpenPrinting Vector, already available on
-     Subversion of ESP GS)
-
-- KDE with
-
-   o CUPS support (compiled against libcups)
-
-   o Patched/fixed to smoothly work with CUPS 1.2 in standard
-     configuration
-
-- GTK/GNOME with
-
-   o newest libgtk/Cairo with the new printing support and CUPS-enabled
-     dialog
-
-- General
-
-   o All KDE and GNOME applications and also OpenOffice.org have to
-     feature a printing dialog which gives access to all printers and
-     PPD options. Better even if Firefox and Thunderbird fulfill this,
-     too.
-
-WDYT?
-
-   Till
-
+</BODY>
+</HTML>
+------_=_NextPart_001_01C66D37.B920A2D8--
