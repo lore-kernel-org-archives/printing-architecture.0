@@ -1,10 +1,14 @@
-Return-Path: <Ide.Kentaro@exc.epson.co.jp>
-Message-ID: <8A33346A3922BD4EB48A18128BAB16AB04352539@SWA6204.apo.epson.net>
-From: Ide Kentaro <Ide.Kentaro@exc.epson.co.jp>
-Date: Tue, 16 May 2006 01:31:18 +0900
+Return-Path: <mike@easysw.com>
+Message-ID: <4468D97E.1030707@easysw.com>
+Date: Mon, 15 May 2006 15:41:50 -0400
+From: Michael Sweet <mike@easysw.com>
 MIME-Version: 1.0
-Content-Type: multipart/mixed; boundary="----_=_NextPart_000_01C6783C.FDE824E1"
-Subject: [Printing-architecture] Draft idea of PCM's error codes
+References: <44664EAA.2030508@gmx.net> <4468D32D.40005@gmx.net>
+In-Reply-To: <4468D32D.40005@gmx.net>
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: 7bit
+Subject: [Printing-architecture] Re: [Desktop_printing] Re: Trying out
+ sample implementation of japanese OpenPrinting efforts
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.freestandards.org>
 List-Unsubscribe: <http://lists.freestandards.org/cgi-bin/mailman/listinfo/printing-architecture>,
@@ -14,76 +18,37 @@ List-Post: <mailto:printing-architecture@lists.freestandards.org>
 List-Help: <mailto:printing-architecture-request@lists.freestandards.org?subject=help>
 List-Subscribe: <http://lists.freestandards.org/cgi-bin/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.freestandards.org?subject=subscribe>
-To: printing-architecture <printing-architecture@freestandards.org>
+To: Till Kamppeter <till.kamppeter@gmx.net>
+Cc: printing-architecture <printing-architecture@freestandards.org>, "desktop_printing@osdl.org" <desktop_printing@osdl.org>
 
-This message is in MIME format. Since your mail reader does not understand
-this format, some or all of this message may not be legible.
+Till Kamppeter wrote:
+> Here is a way to print with a real PDF workflow and without GhostScript
+> at all:
+> 
+> Now I have also tried to compile the pdftoopvp package from the CVS of
+> the opfc project on SourceForge.jp
+> (http://sourceforge.jp/projects/opfc/). One needs these two patches:
+> 
+> http://www.linuxprinting.org/till/tmp/xpdf-3.00-gcc401.patch
+> http://www.linuxprinting.org/till/tmp/pdftoopvp-gcc401.patch
+> 
+> After compiling there is a CUPS filter xpdf-3.00/xpdf/pdftoopvp which
+> has to be copied into /usr/lib/cups/filter and the PPDs into
+> /usr/share/cups/model. In addition, the OpenPrinting vector drivers for
+> the desired printers need to be installed. Then PDF files sent to a
+> queue created with the new PPDs should be directly rendered with
+> pdftoopvp, without GhostScript detour. pdftoopvp is a real CUPS filter
+> which does not need any wrapper. the driver library to be used it
+> determines by reading the PPD file.
+> 
+> The PPD files need to be edited to comply with cupstestppd.
 
-------_=_NextPart_000_01C6783C.FDE824E1
-Content-Type: text/plain
+It is important to note that this is NOT a complete solution.  We
+still need to implement a pdftopdf filter which does page selection,
+imposition, page labeling, and so forth before we can use this in
+CUPS...
 
-Hi, all,
-
-I attach draft idea of error codes for PCM.
-These code will be return via fsgpcmIOError();
-
-At the present, printing-japan team start discussion about this error code.
-Please reffer PCM draft and this error code, give us comment or suggestions.
-
-regards,
-Kentaro Ide
-
-
-------_=_NextPart_000_01C6783C.FDE824E1
-Content-Type: text/plain;
-	name="PCM_ERROR_Code_E.txt"
-Content-Disposition: attachment;
-	filename="PCM_ERROR_Code_E.txt"
-
-PCM_ERROR_PARAM         Invalid parameters
-			This error will be return when using un-supported
-			parameter.
-
-PCM_ERROR_NOSUPPORT     Invalid control command
-			This error will be return when using un-supported
-			control command.
-
-PCM_ERROR_NOOPEN        Plug-in is not opened
-			This error will be return when other function is
-			called before call the function fsgpcmOpen()
-
-PCM_ERROR_NOJOB         Plug-in don't have any Job
-			This error will be return when using Job operational
-			control commands although don't send Jobs.
-
-PCM_ERROR_NOCONNECT     Error on connection with file descriptor *Fatal*
-			This error will be return when can't read/write to
-			File Descriptor (FD) with something reason include
-			protocol mismatch.
-
-PCM_ERROR_NOMEM         Can't allocate memory.
-
-PCM_ERROR_SIGNAL        Interrupted by signal
-
-PCM_ERROR_BUSY          Plug-in is busy
-			This error will be return when Plug-in is busy.
-			While this code is returned, Plug-in can't apply
-			print data.
-			Upper layer must wait certain period of time and
-			re-write.
-
-
-
-These codes depend on implementation method.
-
-PCM_ERROR_2NDOPEN       If implementation need the error code that occur when fsgpcmOpen
-			called although already called fsgpcmOpen.
-
-PCM_ERROR_INTR          When we chose time-out method to PCM spec., this code will be return
-			with signal before time-out.
-
-PCM_ERROR_VERSION       *Fatal*
-			If the PCM of future version don't have backword compatibility,
-			this code will be return when PCM can't start communication with
-			older version's Plug-in.
-------_=_NextPart_000_01C6783C.FDE824E1--
+-- 
+______________________________________________________________________
+Michael Sweet, Easy Software Products           mike at easysw dot com
+Internet Printing and Document Software          http://www.easysw.com
