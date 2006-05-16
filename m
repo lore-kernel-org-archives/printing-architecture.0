@@ -1,17 +1,15 @@
 Return-Path: <mike@easysw.com>
-Message-ID: <446919E7.3070905@easysw.com>
-Date: Mon, 15 May 2006 20:16:39 -0400
+Message-ID: <44691BAC.5040205@easysw.com>
+Date: Mon, 15 May 2006 20:24:12 -0400
 From: Michael Sweet <mike@easysw.com>
 MIME-Version: 1.0
-References: <44664EAA.2030508@gmx.net>
-	<4467B9FD.6030005@gmx.net>	<20060515183801.A638.TORATANI.YASUMASA@canon.co.jp>	<4468CAFA.9030408@gmx.net>
-	<4468E039.5000304@gmx.net> <4468E873.7050902@easysw.com>
-	<4468ECB9.5060507@gmx.net>
-In-Reply-To: <4468ECB9.5060507@gmx.net>
+References: <54FC073FD525F643838BA51F30EDAD5E029A9887@cacexc07.americas.cpqcorp.net>
+	<44690EA5.1040106@gmx.net>
+In-Reply-To: <44690EA5.1040106@gmx.net>
 Content-Type: text/plain; charset=UTF-8; format=flowed
 Content-Transfer-Encoding: 7bit
 Subject: [Printing-architecture] Re: [Desktop_printing] Deprecate IJS?
- GhostScript with only "opvp" as	output device?
+ GhostScript with only "opvp" as output device?
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.freestandards.org>
 List-Unsubscribe: <http://lists.freestandards.org/cgi-bin/mailman/listinfo/printing-architecture>,
@@ -22,49 +20,35 @@ List-Help: <mailto:printing-architecture-request@lists.freestandards.org?subject
 List-Subscribe: <http://lists.freestandards.org/cgi-bin/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.freestandards.org?subject=subscribe>
 To: Till Kamppeter <till.kamppeter@gmx.net>
-Cc: TORATANI Yasumasa <toratani.yasumasa@canon.co.jp>, printing-architecture <printing-architecture@freestandards.org>, "desktop_printing@osdl.org" <desktop_printing@osdl.org>
+Cc: "Oleinik, John H" <john.oleinik@hp.com>, printing-architecture <printing-architecture@freestandards.org>, desktop_printing@osdl.org
 
 Till Kamppeter wrote:
-> Michael Sweet wrote:
->> Both Gutenprint and HPLIP have CUPS native interfaces that are better
->> suited to pure-raster printing.
->>
+> I also did not want to simply take it away, but simply hear opinions. We
+> must at first observe how well the new opvp is going and perhaps see in
+> real live were it needs to be improved. One thing which opvp most
+> probably does not have yet is KRGB, which is important for economic
+> handling of black and colored ink or toner.
 > 
-> I do not want to deprecate CUPS raster (CUPS raster is probably the
-> second reason to deprecate IJS), it is probably the better choice in
-> terms of color management and clean job canceling than OpenPrinting vector.
+> Vector drivers are most interesting for laser printers who do not do
+> PostScript but do another high-level language (PCL for example, but also
+> the ESC/Page of the Epson EPL non-"L" and AcuLaser printers).
 > 
-> When will HP's rastertohplip be published?
+> For inkjet printers and fax machines raster drivers based on IJS or CUPS
+> raster are just fime. Raster devices are probably not accelerated by
+> using opvp. Here the only benefit is reducing the number of different
+> interfaces.
+> 
+> So for now it is perhaps best to keep the three interfaces and observe
+> there developemt and drop only GhostScript built-in. Perhaps it should
+> also be avoided to make a raster driver CUPS-raster-only but better let
+> it have both the CUPS raster and opvp or IJS interface as BSD and
+> Solaris do not use CUPS as default spooler.
 
-You need to ask HP about that.  I do owe them a .drv file against
-the latest release...
-
->>> And with the OpenPrinting vector interface one would even be able to
->>> modularize out all the GhostScript output devices and leave GhostScript
->>> with "opvp" as the only output device. So also the problem of the X11
->>> output drivers in the GhostScript implementation of distributions and
->>> using GhostScript on X-less servers would get nicely solved.
->>>
->>> WDYT?
->>
->> We still need to ensure that the new interface is compatible on all
->> of the current operating systems; for us that means: AIX, HP-UX, IRIX,
->> Linux, MacOS X, Solaris, and *BSD.
->>
-> 
-> If an OS does not provide any possibility for dynamic linking like libdl
-> under Linux, we must fall back to a separate process, where the driver
-> library is statically linked to the server executable.
-> 
->> Also, the X11 problem is already solved by the dynamic module support,
->> right?
->>
-> 
-> Yes, but this solution seems not to be overtaken by upstream (AFPL/GPL)
-> GhostScript.
-> 
->   Till
-
+Keep in mind that nothing prevents you from using CUPS raster with
+Sun's LP spooler or any other non-CUPS print spooler - you just need
+to provide a wrapper script (simpler than Foomatic) that runs the
+corresponding CUPS filters.  That is, in fact, the way the
+predecessor to CUPS worked on HP-UX, IRIX, and Solaris...
 
 -- 
 ______________________________________________________________________
