@@ -1,15 +1,14 @@
-Return-Path: <mike@easysw.com>
-Message-ID: <44691BAC.5040205@easysw.com>
-Date: Mon, 15 May 2006 20:24:12 -0400
-From: Michael Sweet <mike@easysw.com>
+Return-Path: <toratani.yasumasa@canon.co.jp>
+Date: Tue, 16 May 2006 12:22:24 +0900
+From: TORATANI Yasumasa <toratani.yasumasa@canon.co.jp>
+In-Reply-To: <4468EF42.8060502@gmx.net>
+References: <4468D97E.1030707@easysw.com> <4468EF42.8060502@gmx.net>
+Message-Id: <20060516114211.A670.TORATANI.YASUMASA@canon.co.jp>
 MIME-Version: 1.0
-References: <54FC073FD525F643838BA51F30EDAD5E029A9887@cacexc07.americas.cpqcorp.net>
-	<44690EA5.1040106@gmx.net>
-In-Reply-To: <44690EA5.1040106@gmx.net>
-Content-Type: text/plain; charset=UTF-8; format=flowed
+Content-Type: text/plain; charset="US-ASCII"
 Content-Transfer-Encoding: 7bit
-Subject: [Printing-architecture] Re: [Desktop_printing] Deprecate IJS?
- GhostScript with only "opvp" as output device?
+Subject: [Printing-architecture] Re: [Desktop_printing] Re: Trying out
+	sample implementation of japanese OpenPrinting efforts
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.freestandards.org>
 List-Unsubscribe: <http://lists.freestandards.org/cgi-bin/mailman/listinfo/printing-architecture>,
@@ -20,37 +19,60 @@ List-Help: <mailto:printing-architecture-request@lists.freestandards.org?subject
 List-Subscribe: <http://lists.freestandards.org/cgi-bin/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.freestandards.org?subject=subscribe>
 To: Till Kamppeter <till.kamppeter@gmx.net>
-Cc: "Oleinik, John H" <john.oleinik@hp.com>, printing-architecture <printing-architecture@freestandards.org>, desktop_printing@osdl.org
+Cc: Michael Sweet <mike@easysw.com>, printing-architecture <printing-architecture@freestandards.org>, "desktop_printing@osdl.org" <desktop_printing@osdl.org>
 
-Till Kamppeter wrote:
-> I also did not want to simply take it away, but simply hear opinions. We
-> must at first observe how well the new opvp is going and perhaps see in
-> real live were it needs to be improved. One thing which opvp most
-> probably does not have yet is KRGB, which is important for economic
-> handling of black and colored ink or toner.
-> 
-> Vector drivers are most interesting for laser printers who do not do
-> PostScript but do another high-level language (PCL for example, but also
-> the ESC/Page of the Epson EPL non-"L" and AcuLaser printers).
-> 
-> For inkjet printers and fax machines raster drivers based on IJS or CUPS
-> raster are just fime. Raster devices are probably not accelerated by
-> using opvp. Here the only benefit is reducing the number of different
-> interfaces.
-> 
-> So for now it is perhaps best to keep the three interfaces and observe
-> there developemt and drop only GhostScript built-in. Perhaps it should
-> also be avoided to make a raster driver CUPS-raster-only but better let
-> it have both the CUPS raster and opvp or IJS interface as BSD and
-> Solaris do not use CUPS as default spooler.
+Hi,
 
-Keep in mind that nothing prevents you from using CUPS raster with
-Sun's LP spooler or any other non-CUPS print spooler - you just need
-to provide a wrapper script (simpler than Foomatic) that runs the
-corresponding CUPS filters.  That is, in fact, the way the
-predecessor to CUPS worked on HP-UX, IRIX, and Solaris...
+I think the common statement that we will shift to PDF as a new printing
+spooling format is reasonable.
 
--- 
-______________________________________________________________________
-Michael Sweet, Easy Software Products           mike at easysw dot com
-Internet Printing and Publishing Software        http://www.easysw.com
+On the other hand, when a CUPS filter handles the PDF data, I think the
+filter needs to access the entire PDF file, so, in case of long page document,
+for instance over 100 pages document, does pdftopdf convert 100 pages PDF
+into layouted 100 pages PDF, and save it into disk, and after completion of
+saving 100 pages PDF data, pdfto* filter starts to read the saved PDF data
+from the disk, and converts it into raster, PDL, etc?  Or, does pdftopdf send
+some header including some PDF table info. to pdf* filter via stdin/stdout,
+before sending the PDF document body data?
+
+TORATANI.
+
+On Mon, 15 May 2006 23:14:42 +0200
+Till Kamppeter <till.kamppeter@gmx.net> wrote:
+
+> Michael Sweet wrote:
+> > Till Kamppeter wrote:
+> > 
+> >> Here is a way to print with a real PDF workflow and without GhostScript
+> >> at all:
+> >>
+> > 
+> > 
+> > It is important to note that this is NOT a complete solution.  We
+> > still need to implement a pdftopdf filter which does page selection,
+> > imposition, page labeling, and so forth before we can use this in
+> > CUPS...
+> > 
+> 
+> And there are more things missing or better to be made differently:
+> 
+> - The PDF renderer should not be a patched XPDF, but it should be linked
+>   against libpoppler, as well as the pdftops which ships already with
+>   CUPS, so that there is no repeated code which causes full hard disks
+>   and maintenance neightmares.
+> 
+> - A pstopdf filter is needed to handle incoming PostScript jobs
+> 
+> - Also an imagetopdf and texttopdf filter is needed.
+> 
+>    Till
+> _______________________________________________
+> Desktop_printing mailing list
+> Desktop_printing@lists.osdl.org
+> https://lists.osdl.org/mailman/listinfo/desktop_printing
+
+-----------------------------------------
+TORATANI Yasumasa
+Software Engineering Dept.22
+Platform Technology Development Headquarters, CANON INC.
+
