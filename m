@@ -1,14 +1,14 @@
-Return-Path: <toratani.yasumasa@canon.co.jp>
-Date: Tue, 16 May 2006 17:56:22 +0900
-From: TORATANI Yasumasa <toratani.yasumasa@canon.co.jp>
+Return-Path: <mike@easysw.com>
+Message-ID: <4469AF6E.40707@easysw.com>
+Date: Tue, 16 May 2006 06:54:38 -0400
+From: Michael Sweet <mike@easysw.com>
+MIME-Version: 1.0
 Subject: Re: [Printing-architecture] Re: [Desktop_printing] Re: Trying out
 	sample implementation of japanese OpenPrinting efforts
-In-Reply-To: <4469922E.9060301@gmx.net>
-References: <20060516134006.A673.TORATANI.YASUMASA@canon.co.jp>
-	<4469922E.9060301@gmx.net>
-Message-Id: <20060516175222.A685.TORATANI.YASUMASA@canon.co.jp>
-MIME-Version: 1.0
-Content-Type: text/plain; charset="US-ASCII"
+References: <4468D97E.1030707@easysw.com> <4468EF42.8060502@gmx.net>
+	<20060516114211.A670.TORATANI.YASUMASA@canon.co.jp>
+In-Reply-To: <20060516114211.A670.TORATANI.YASUMASA@canon.co.jp>
+Content-Type: text/plain; charset=UTF-8; format=flowed
 Content-Transfer-Encoding: 7bit
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.freestandards.org>
@@ -19,36 +19,41 @@ List-Post: <mailto:printing-architecture@lists.freestandards.org>
 List-Help: <mailto:printing-architecture-request@lists.freestandards.org?subject=help>
 List-Subscribe: <http://lists.freestandards.org/cgi-bin/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.freestandards.org?subject=subscribe>
-To: Till Kamppeter <till.kamppeter@gmx.net>
-Cc: printing-architecture <printing-architecture@freestandards.org>, "desktop_printing@osdl.org" <desktop_printing@osdl.org>
+To: TORATANI Yasumasa <toratani.yasumasa@canon.co.jp>
+Cc: Till Kamppeter <till.kamppeter@gmx.net>, printing-architecture <printing-architecture@freestandards.org>, "desktop_printing@osdl.org" <desktop_printing@osdl.org>
 
-On Tue, 16 May 2006 10:49:50 +0200
-Till Kamppeter <till.kamppeter@gmx.net> wrote:
-
-> TORATANI Yasumasa wrote:
-> > 
-> > We will discuss this issue on the japan side mailing list.
-> > I guess you need a single job cancellation, and do not have to support
-> > multiple StartJob/EndJob/CancelJob, is it correct?
-> > 
+TORATANI Yasumasa wrote:
+> Hi,
 > 
-> As far as I understand, a regular job is started with StartJob and ends
-> with EndJob, no multiple calls of these functions. And I understand a
-> job cancel as being done by sending a SIGTERM to the renderer and then
-> the renderer catches the signal, calls CancelJob, closes the connection,
-> and exits. The CancelJob function implemented in the driver library
-> should close down the job in a way so that the printer gets back to
-> accepting new jobs.
+> I think the common statement that we will shift to PDF as a new printing
+> spooling format is reasonable.
 > 
-> I do not know where multiple StartJob/EndJob/CancelJob would be needed.
-> 
->    Till
+> On the other hand, when a CUPS filter handles the PDF data, I think the
+> filter needs to access the entire PDF file, so, in case of long page document,
+> for instance over 100 pages document, does pdftopdf convert 100 pages PDF
+> into layouted 100 pages PDF, and save it into disk, and after completion of
+> saving 100 pages PDF data, pdfto* filter starts to read the saved PDF data
+> from the disk, and converts it into raster, PDL, etc?  Or, does pdftopdf send
+> some header including some PDF table info. to pdf* filter via stdin/stdout,
+> before sending the PDF document body data?
 
-Thank you so much for your comment.
-We also think that we don't have to handle multiple printing jobs at the
-driver level. We will discuss it on the mailing list as well as at the f2f
-meeting next week.
+Those are implementation details - we're a bit too early in the
+process set those in stone.  In general, we *will* need to save the
+printer-specific PDF file (application/vnd.cups-pdf, already
+registered with IANA) to disk in the pdftops/pdftoraster filter,
+however the document filter (pdftopdf) can probably stream the
+objects through the use of indirect objects to hold the stream
+lengths.
 
------------------------------------------
-TORATANI Yasumasa
+That said, an alternative solution would be to put the job filtering
+in pdftops/pdftoraster themselves, in which case pdftopdf will only
+be necessary when printing to a PDF-capable printer.  The current
+Xpdf/poppler APIs are insufficient for this right now, but if
+implemented properly it would provide a highly efficient filtering
+solution.
+
+-- 
+______________________________________________________________________
+Michael Sweet, Easy Software Products           mike at easysw dot com
+Internet Printing and Publishing Software        http://www.easysw.com
 
