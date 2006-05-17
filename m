@@ -1,16 +1,14 @@
-Return-Path: <imurdock@gmail.com>
-Message-ID: <a77be9650605200642l6884aad0qf7ebdd45eecc2b97@mail.gmail.com>
-Date: Sat, 20 May 2006 09:42:55 -0400
-From: "Ian Murdock" <imurdock@imurdock.com>
-Sender: imurdock@gmail.com
+Return-Path: <till.kamppeter@gmx.net>
+Message-ID: <446BACA6.5000604@gmx.net>
+Date: Thu, 18 May 2006 01:07:18 +0200
+From: Till Kamppeter <till.kamppeter@gmx.net>
+MIME-Version: 1.0
 Subject: Re: [Printing-architecture] Meeting notes for 2006-05-17 / LSB 3.2
 	recommendation
-In-Reply-To: <446BA39A.80802@Sun.COM>
-MIME-Version: 1.0
-Content-Type: text/plain; charset=ISO-8859-1; format=flowed
-Content-Transfer-Encoding: quoted-printable
-Content-Disposition: inline
 References: <446BA39A.80802@Sun.COM>
+In-Reply-To: <446BA39A.80802@Sun.COM>
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: 7bit
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.freestandards.org>
 List-Unsubscribe: <http://lists.freestandards.org/cgi-bin/mailman/listinfo/printing-architecture>,
@@ -20,22 +18,61 @@ List-Post: <mailto:printing-architecture@lists.freestandards.org>
 List-Help: <mailto:printing-architecture-request@lists.freestandards.org?subject=help>
 List-Subscribe: <http://lists.freestandards.org/cgi-bin/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.freestandards.org?subject=subscribe>
-To: Norm Jacobs <Norm.Jacobs@sun.com>
+To: Norm Jacobs <Norm.Jacobs@Sun.COM>
 Cc: printing-architecture <printing-architecture@freestandards.org>
 
-On 5/17/06, Norm Jacobs <Norm.Jacobs@sun.com> wrote:
-> We spent the vast majority of our meeting time discussing what we would
-> like to
-> recommend for LSB 3.2.  We are also planning on meeting next week at our
-> normal Wednesday time.
+Norm Jacobs wrote:
+> <RECOMMENDATION>
+> 
+>    Installation Locations
+>       PPD
+>          /usr/share/ppd/{supplier}/{manufacturer}-{model}.ppd
+>             where whitespace and dash(-) are replaced with with
+> unserscore(_)
+>             supplier is the ppd file supplier (gutenprint, hplip, cups,
+> epson,
+>                                                hp, ...)
+>             manufacturer is the print manufacturer name from the IEEE 1284
+>                          Device ID
+>             model is the printer model from the IEEE 1284 Device ID
+>          Eg.
+>            
+> /usr/share/ppd/gutenprint/Hewlett_Packard-hp_color_LaserJet_4650.ppd
+>             /usr/share/ppd/HP/Hewlett_Packard-hp_color_LaserJet_4650.ppd
+> 
 
-I'll be on the call Weds. Sorry I couldn't make the last one.
+As some suppliers could have more than one PPD file for the same
+printer, for example Foomatic PPDs can exist for one printer used with
+different drivers, I suggest to add the driver or whatever is different
+in the PPD after the model, separated by another dash. This should
+optional but not required. In addition, there should be a directory
+level between supplier and PPD for the language:
 
--ian
---=20
-Ian Murdock
-317-863-2590
-http://ianmurdock.com/
+/usr/share/ppd/{supplier}/{lang}/{manufacturer}-{model}-{extra info}.ppd
+/usr/share/ppd/{supplier}/{lang}/{manufacturer}-{model}.ppd
 
-"Don't look back--something might be gaining on you." --Satchel Paige
+          extra-info can be the driver name or anything else which
+          distiguishes PPDs for the same printer model. Spaces have
+          to be replaced by underscores, as usual.
+
+Examples:
+
+/usr/share/ppd/foomatic/en/HP-LaserJet_4-hpijs.ppd
+/usr/share/ppd/foomatic/en/HP-LaserJet_4-ljet4.ppd
+/usr/share/ppd/foomatic/en/HP-LaserJet_4-opvp_pcl5e.ppd
+/usr/share/ppd/HP/en/Hewlett_Packard-hp_color_LaserJet_4650.ppd
+/usr/share/ppd/HP/de/Hewlett_Packard-hp_color_LaserJet_4650.ppd
+
+[...]
+>    Possibly require/recommend foomatic for LSB 3.2
+>
+
+Another question: What is "Linux Standards Base" really about? Only
+LINUX or also BSD, Solaris, ...
+
+In case of only Linux we could even require CUPS ...
+
+> </RECOMMENDATION>
+
+   Till
 
