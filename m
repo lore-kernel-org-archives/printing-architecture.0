@@ -1,13 +1,11 @@
-Return-Path: <Norm.Jacobs@Sun.COM>
-Message-ID: <446B3404.9060809@Sun.COM>
-Date: Wed, 17 May 2006 09:32:36 -0500
-From: Norm Jacobs <Norm.Jacobs@Sun.COM>
+Return-Path: <alimpich@us.ibm.com>
 MIME-Version: 1.0
-References: <446B24E3.2080702@gmx.net>
-In-Reply-To: <446B24E3.2080702@gmx.net>
-Content-Type: text/plain; charset=ISO-8859-1; format=flowed
-Content-Transfer-Encoding: 7bit
-Subject: [Printing-architecture] Re: Building PAPI implementation
+Message-ID: <OFA6A70DAC.4E87DEC8-ON87257171.0063AFC0-87257171.00638A9C@us.ibm.com>
+From: Claudia Alimpich <alimpich@us.ibm.com>
+Date: Wed, 17 May 2006 12:10:20 -0600
+Content-Type: multipart/alternative;
+	boundary="=_alternative 00638A9B87257171_="
+Subject: [Printing-architecture] Won't be able to attend Arch call today
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.freestandards.org>
 List-Unsubscribe: <http://lists.freestandards.org/cgi-bin/mailman/listinfo/printing-architecture>,
@@ -17,44 +15,23 @@ List-Post: <mailto:printing-architecture@lists.freestandards.org>
 List-Help: <mailto:printing-architecture-request@lists.freestandards.org?subject=help>
 List-Subscribe: <http://lists.freestandards.org/cgi-bin/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.freestandards.org?subject=subscribe>
-To: Till Kamppeter <till.kamppeter@gmx.net>
-Cc: printing-architecture <printing-architecture@freestandards.org>, "desktop_printing@osdl.org" <desktop_printing@osdl.org>
+To: printing-architecture@freestandards.org
+
+This is a multipart message in MIME format.
+--=_alternative 00638A9B87257171_=
+Content-Type: text/plain; charset="US-ASCII"
+
+Something came up and I will not be able to attend the FSG Arch meeting 
+today. The phone line is still available so go ahead without me.
+Sorry for the late notice.
+Claudia
+--=_alternative 00638A9B87257171_=
+Content-Type: text/html; charset="US-ASCII"
 
 
-The Apache support is only necessary if you want to supply IPP
-support for a print service that doesn't already have an IPP listener.
-We use it on Solaris, but if you are using CUPS, you don't need the
-listener.  That being said, I will be fixing it in the next few days when
-I fix it's Apache 2.X support.  In the meantime, you can configure
---without-apache and it should avoid building the IPP listener
-module (mod_ipp.so).
-Thanks for the heads-up and the patch to the build infrastructure.
-
-    -Norm
-
-Till Kamppeter wrote:
-> Now I am trying to build the PAPI package from
-> http://openprinting.sourceforge.net/ I am building the current
-> Subversion state, rev 164.
->
-> There I have encountered some problems:
->
-> - At first I needed to patch the build infrastructure a little bit to
-> make it compiling the Apache support. The patch on the acinclude.m4 file
-> you can find here:
->
-> http://www.linuxprinting.org/till/tmp/papi-1.0-acinclude-m4-apache-apr1.patch
->
-> - Then I had a problem building the software, as
-> source/mod_ipp/mod_ipp.c includes the file apr_compat.h in case of
-> building with Apache support. According to
->
-> http://www.apache.org/dist/apr/CHANGES-APR-1.2
->
-> this header file was removed on the transition from APR 0.9.5 to 1.0.0
-> and I have 1.2.7 on Mandriva's Cooker. So here the Apache module needs
-> to be updated to the current Apache/APR API.
->
->    Till
->   
-
+<br><font size=2 face="sans-serif">Something came up and I will not be
+able to attend the FSG Arch meeting today. The phone line is still available
+so go ahead without me.</font>
+<br><font size=2 face="sans-serif">Sorry for the late notice.</font>
+<br><font size=2 face="sans-serif">Claudia</font>
+--=_alternative 00638A9B87257171_=--
