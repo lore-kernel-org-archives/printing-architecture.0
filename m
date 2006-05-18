@@ -1,14 +1,12 @@
-Return-Path: <mike@easysw.com>
-Message-ID: <446F3A8F.1020504@easysw.com>
-Date: Sat, 20 May 2006 11:49:35 -0400
-From: Michael Sweet <mike@easysw.com>
+Return-Path: <till.kamppeter@gmx.net>
+Message-ID: <446CC825.3020005@gmx.net>
+Date: Thu, 18 May 2006 21:16:53 +0200
+From: Till Kamppeter <till.kamppeter@gmx.net>
 MIME-Version: 1.0
-Subject: Re: [Printing-architecture] Meeting notes for 2006-05-17 / LSB 3.2
-	recommendation
-References: <446BA39A.80802@Sun.COM> <446BACA6.5000604@gmx.net>
-In-Reply-To: <446BACA6.5000604@gmx.net>
-Content-Type: text/plain; charset=UTF-8; format=flowed
+Content-Type: text/plain; charset=ISO-8859-1
 Content-Transfer-Encoding: 7bit
+Subject: [Printing-architecture] PAPI bug: "lpstat -v" uses /etc/printcap on
+	CUPS system
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.freestandards.org>
 List-Unsubscribe: <http://lists.freestandards.org/cgi-bin/mailman/listinfo/printing-architecture>,
@@ -18,25 +16,42 @@ List-Post: <mailto:printing-architecture@lists.freestandards.org>
 List-Help: <mailto:printing-architecture-request@lists.freestandards.org?subject=help>
 List-Subscribe: <http://lists.freestandards.org/cgi-bin/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.freestandards.org?subject=subscribe>
-To: Till Kamppeter <till.kamppeter@gmx.net>
-Cc: Norm Jacobs <Norm.Jacobs@Sun.COM>, printing-architecture <printing-architecture@freestandards.org>
+To: Norm Jacobs <Norm.Jacobs@Sun.COM>, "desktop_printing@osdl.org" <desktop_printing@osdl.org>, printing-architecture <printing-architecture@freestandards.org>
 
-Till Kamppeter wrote:
-> ...
-> optional but not required. In addition, there should be a directory
-> level between supplier and PPD for the language:
-> 
-> /usr/share/ppd/{supplier}/{lang}/{manufacturer}-{model}-{extra info}.ppd
-> /usr/share/ppd/{supplier}/{lang}/{manufacturer}-{model}.ppd
-> ...
-> /usr/share/ppd/HP/en/Hewlett_Packard-hp_color_LaserJet_4650.ppd
-> /usr/share/ppd/HP/de/Hewlett_Packard-hp_color_LaserJet_4650.ppd
+I am using the PAPI with the psm-ipp backend as CUPS is the spooler on
+my Mandriva box. By default CUPS writes a pseudo /etc/printcap for
+backwards compatibility. Therefore I did not get aware of the problem in
+the first tests.
 
-IMHO, the focus should be on "globalized" PPD files; the DDK will
-(soon) provide a ppdmerge utility to make this process trivial.
+This writing of /etc/printcap can be turned off by putting a line only
+containing "Printcap" into /etc/cups/cupsd.conf and then restarting the
+CUPS daemon. After that I also deleted the last /etc/printcap which CUPS
+keft over and entered
 
--- 
-______________________________________________________________________
-Michael Sweet, Easy Software Products           mike at easysw dot com
-Internet Printing and Publishing Software        http://www.easysw.com
+lpstat -v
+
+again and then no print queue was listed. I cannot even print any more.
+the "lpr" command tells me that the printer which I have specified does
+not exist.
+
+This means that without /etc/printcap libpapi does not work at all. And
+as in CUPS printer enumeration is done via IPP and not via /etc/printcap
+this is a real bug in libpapi.
+
+The psm-ipp plug-in even has a function which uses an IPP extension of
+CUPS to enumerate the printers, papiPrintersList() in libpapi-ipp/printer.c.
+
+Very strange is also the output of
+
+strace lpstat -v > x 2>&1
+
+when CUPS does not write /etc/printcap. I have IPP set as compile-time
+default for the print service module and in the strace output one can
+see that lpstat fails to open /etc/printcap and then it decides to try
+opening /usr/lib/psm-_all.so which also does not exist and probably
+never existed. Why does lpstat check /etc/printcap? All communication
+with the printing system should be done through the PSM backends, in my
+case through /usr/lib/psm-ipp.so and this is never called in this case.
+
+   Till
 
