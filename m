@@ -1,12 +1,13 @@
 Return-Path: <mike@easysw.com>
-Message-ID: <446BBE7C.5090500@easysw.com>
-Date: Wed, 17 May 2006 20:23:24 -0400
+Message-ID: <446CCE7F.4070501@easysw.com>
+Date: Thu, 18 May 2006 15:43:59 -0400
 From: Michael Sweet <mike@easysw.com>
 MIME-Version: 1.0
 Subject: Re: [Printing-architecture] Meeting notes for 2006-05-17 / LSB 3.2
 	recommendation
-References: <446BA39A.80802@Sun.COM>
-In-Reply-To: <446BA39A.80802@Sun.COM>
+References: <446BA39A.80802@Sun.COM> <446BBE7C.5090500@easysw.com>
+	<446CB026.4020804@gmx.net>
+In-Reply-To: <446CB026.4020804@gmx.net>
 Content-Type: text/plain; charset=UTF-8; format=flowed
 Content-Transfer-Encoding: 7bit
 List-Id: Printing architecture under linux
@@ -18,69 +19,56 @@ List-Post: <mailto:printing-architecture@lists.freestandards.org>
 List-Help: <mailto:printing-architecture-request@lists.freestandards.org?subject=help>
 List-Subscribe: <http://lists.freestandards.org/cgi-bin/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.freestandards.org?subject=subscribe>
-To: Norm Jacobs <Norm.Jacobs@Sun.COM>
-Cc: printing-architecture <printing-architecture@freestandards.org>
+To: Till Kamppeter <till.kamppeter@gmx.net>
+Cc: Norm Jacobs <Norm.Jacobs@Sun.COM>, printing-architecture <printing-architecture@freestandards.org>
 
-Norm Jacobs wrote:
-> 
-> 
-> We spent the vast majority of our meeting time discussing what we would 
-> like to
-> recommend for LSB 3.2.  We are also planning on meeting next week at our
-> normal Wednesday time.
-> 
-> <RECOMMENDATION>
-> 
->    ESPgs 8.15.1 or later with the following drivers compiled in
->             ijs    - InkJet Server
->             cups   - CUPS raster
->             opvp   - OpenPrinting Vector
->  
->    Installation Locations
->       PPD
->          /usr/share/ppd/{supplier}/{manufacturer}-{model}.ppd
->             where whitespace and dash(-) are replaced with with 
-> unserscore(_)
->             supplier is the ppd file supplier (gutenprint, hplip, cups, 
-> epson,
->                                                hp, ...)
+Till Kamppeter wrote:
+> ...
+> CUPS driver scripts and backends must go into /usr/lib/cups/filter and
+> /usr/lib/cups/backend, either physically or as a symbolic link from
+> files in /usr/lib/printerdriver/{supplier}/.
 
-Don't bother listing CUPS here; we will only be using
-/usr/share/cups/model for PPD files supplied with CUPS.
+That's actually not necessary.  You can (and most vendors do, on
+MacOS X) put a full path to the filter in the PPD file.
 
 > ...
->       Driver
->          /usr/lib/printerdriver/{supplier}/...
->             where whitespace and dash(-) are replaced with with 
-> unserscore(_)
->             supplier is the ppd file supplier (gutenprint, hplip, cups, 
-> epson,
->                                                hp, ...)
->          /usr/lib/printerdriver/bin/{supplier-executable(s)}
->             links to executables in the {supplier} directory
- > ...
+> So If we really say LSB is the LINUX Standards Base, we can let the LSB
+> 3.2 require CUPS 1.2.x or newer, ESP GhostScript 8.15.2 or newer (to
+> serve pswrite, pdfwrite, cups, ijs, opvp), KDE Print, GTK Print, PAPI
 
-What kind of printer drivers are to be supported by this?  I don't
-see what you are trying to do here?
+Agreed.
 
->    Printer identification
->       use IEEE 1284 Device Id.  In particular, the MFG, MDL, and CMD values
->       are what we most want to see used (and correctly provided by printer
->       vendors).  This should be the EXACT same value for 1284 parallel,
->       USB, SNMP, and ultimately IPP query.
+> If we want the LSB standard to be a standard for all Unixes (then they
+> should rename to USB perhaps) then we can only require more abstract
+> standards, especially PAPI, so that ISVs do not need to care about the
+> spooler used on the destination system. In that case also Foomatic
+> should be required by the standard, as it interfaces the same driver
+> (including CUPS raster drivers) to many different spoolers, including
+> CUPS, BSD LPD, and Solaris LP.
 
-FWIW, device ID information is not standardized in IPP, at least not
-yet.  Some vendors put the device ID string in printer-info, but that
-gets truncated too easily.
+Does Foomatic do file type detection and conversion (i.e. the whole
+CUPS filter chain)?
 
- > ...
->    Possibly require/recommend foomatic for LSB 3.2
+I'm thinking more along the lines of a Solaris-specific interface
+script (and a BSD-specific filter script) which emulates/provides
+the CUPS, IJS, and OPVP driver interfaces.
 
--1 from me on that one, we've seen too many problems over the years,
-and you really only need Foomatic to support legacy Ghostscript
-drivers...
+We did the equivalent of the CUPS raster path via Solaris interface
+scripts and a helper program for 5 years before we released CUPS -
+I'm happy to donate the code to the cause.
+
+The CUPS testmime program could also serve this function as well.
+I believe that is what Codehost, one of our OEMs, does to support
+copiers on Solaris and other commercial UNIX's when running with
+the native spooler...
+
+All that said, keep in mind that the functionality of printing
+with older print spoolers can be quite limited - that's one of
+the reasons we developed CUPS in the first place.  IMHO we should
+concentrate on print spoolers that can provide a good user
+experience...
 
 -- 
 ______________________________________________________________________
 Michael Sweet, Easy Software Products           mike at easysw dot com
-Internet Printing and Publishing Software        http://www.easysw.com
+Internet Printing and Document Software          http://www.easysw.com
