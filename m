@@ -1,15 +1,11 @@
 Return-Path: <till.kamppeter@gmx.net>
-Message-ID: <446C42EB.4020709@gmx.net>
-Date: Thu, 18 May 2006 11:48:27 +0200
+Message-ID: <446CB64A.9090600@gmx.net>
+Date: Thu, 18 May 2006 20:00:42 +0200
 From: Till Kamppeter <till.kamppeter@gmx.net>
 MIME-Version: 1.0
-Subject: Re: [Desktop_printing] Re: [Printing-architecture] Re: Building PAPI
-	implementation
-References: <446B24E3.2080702@gmx.net> <446B3404.9060809@Sun.COM>
-	<446B8F9E.5070306@gmx.net>
-In-Reply-To: <446B8F9E.5070306@gmx.net>
 Content-Type: text/plain; charset=ISO-8859-1
 Content-Transfer-Encoding: 7bit
+Subject: [Printing-architecture] PAPI is part of Mandriva Linux now!
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.freestandards.org>
 List-Unsubscribe: <http://lists.freestandards.org/cgi-bin/mailman/listinfo/printing-architecture>,
@@ -19,124 +15,56 @@ List-Post: <mailto:printing-architecture@lists.freestandards.org>
 List-Help: <mailto:printing-architecture-request@lists.freestandards.org?subject=help>
 List-Subscribe: <http://lists.freestandards.org/cgi-bin/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.freestandards.org?subject=subscribe>
-To: Norm Jacobs <Norm.Jacobs@Sun.COM>
-Cc: printing-architecture <printing-architecture@freestandards.org>, "desktop_printing@osdl.org" <desktop_printing@osdl.org>
+To: "desktop_printing@osdl.org" <desktop_printing@osdl.org>, printing-architecture <printing-architecture@freestandards.org>, Tim Waugh <twaugh@redhat.com>, Martin Pitt <martin.pitt@ubuntu.com>, Johannes Meixner <jsmeix@suse.de>, Henrique de Moraes Holschuh <hmh@debian.org>, Klaus Singvogel <kssingvo@suse.de>, "Bastian, Waldo" <waldo.bastian@intel.com>
 
-Now I got it working with CUPS by changing the default print service at
-compile time. The problem was the quoting. The current code
+Oi,
 
------------------------------------------------------------------------
-#ifndef DEFAULT_PRINT_SERVICE
-#define DEFAULT_PRINT_SERVICE   "lpsched"
-#endif
+today I have finished a first RPM package of PAPI and have already blown
+it into Mandriva's Cooker:
 
-...
+http://archives.mandrivalinux.com/changelog/2006-05/msg01953.php
 
-char *scheme = DEFAULT_PRINT_SERVICE;
------------------------------------------------------------------------
+So our Cooker is now PAPI-compliant. The RPM is split up into several
+binary RPMs. To make the installed Cooker PAPI compliant for users it is
+enough to install the libpapi0 and papi-psm packages and to develop
+applications accessing the printing infrastructure via PAPI, one has to
+install the libpapi0-devel package in addition. The papi-doc package
+contains the PAPI specs and additional documentation.
 
-requires from the user to supply also the quotes. So in the spec file I
-had to do
+Overview of binary packages:
 
------------------------------------------------------------------------
-export CFLAGS="$CFLAGS -DDEFAULT_PRINT_SERVICE=\\\"ipp\\\""
-%configure --without-apache
-%make
------------------------------------------------------------------------
+libpapi0:       The dynamic library which provides the PAPI
+libpapi0-devel: The header files for and static libraries for libpapi
+papi-psm:       The plug-ins to interface libpapi with CUPS/IPP and LPD
+papi-doc:       PAPI specs (PDF), docs for this implementation, source
+                code of the sample tools in papi-utils
+papi-utils:     Some sample tools using PAPI. Try out PAPI with them and
+                study there source code in papi-doc
+papi-commands:  BSD and SystemV standard printing commands using PAPI,
+                with complete set of man pages. You can switch between
+                these commands and the commands supplied by CUPS using
+                the "update-alternatives" command. The man pages are
+                switched simultaneously.
+ruby-papi:      Ruby bindings to allow writing Ruby programs with
+                printing functionality.
 
-Note the quoted quotes in the first line. This I did not do in the first
-place and therefore it broke.
+The source code for these RPMs is the subversion snapshot rev 164 from
+http://openprinting.sourceforge.net/. I did not succeed to compile the
+(well older) beta1 release on Madriva. Of the current snapshot I
+succeeded to build everything except the Apache IPP Module (which does
+also not make much sense on a CUPS-eequipped Linux distribution.
 
-But please still supply the documentation to configure PAPI at run time.
-Also a possibility to define the compile time default by the configure
-script, both by spooler auto discovery and also by command line option
-would be great.
+I want to ask all of you who work for a Linux distribution (or a Unix in
+general) to also package PAPI for your distribution and put it into the
+repository which goes towards the next release of the distribution. To
+make it easier for you to start, I give you all my RPM packages
+including the source RPM for download on:
 
-Note also that on the linker call(s) for the Ruby bindings the
+http://www.linuxprinting.org/till/tmp/openprinting/papi/
 
--L$RPM_BUILD_DIR/papi/source/libpapi-dynamic/.libs
-
-is missing. So I had to put
-
------------------------------------------------------------------------
-export LDFLAGS="$LDFLAGS -L$RPM_BUILD_DIR/papi/source/libpapi-dynamic/.libs"
------------------------------------------------------------------------
-
-before the "%configure" in the spec file.
+When we all have PAPI in our upcoming products we have much better
+chances to get PAPI into LSB 3.2. So it is important to act quickly as
+the LSB 3.2 meeting is in the beginning of June (Waldo, you will go there?).
 
    Till
-
-
-
-Till Kamppeter wrote:
-> Now I got it RPMized so that it can be installed on a machine with
-> already installed CUPS. No I tried to make it actually working with the
-> installed CUPS. I found out by running an "lpr" command through strace
-> that it tries to load the non-existing "lpsched" service
-> (/usr/lib/psm-lpsched.so) and I have seen in the source code that
-> "lpsched" is used a s the default service (should not be as "lpsched"
-> does not ship with the package.
-> 
-> So I compile with
-> 
-> export CFLAGS="$CFLAGS -DDEFAULT_PRINT_SERVICE=ipp"
-> ./configure --without-apache --without-ruby
-> make
-> 
-> to make it using "ipp" as default service (can one configure/switch the
-> service at run time? There are no files in /etc/... and no documentation
-> about such files, man pages are only in section 1 and 8, nothing in
-> section 5).
-> 
-> But with this setting it does not build:
-> 
-> ------------------------------------------------------------------------------------
-> [...]
-> Making all in libpapi-dynamic
-> make[2]: Entering directory
-> `/home/tkamppeter/rpm/BUILD/papi/source/libpapi-dynamic'
-> if /bin/sh ../../libtool --tag=CC --mode=compile
-> i586-mandriva-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I.
-> -I../../source/libpapi-common  -I. -DPSM_DIR=\"/usr/lib\"
-> -I../libpapi-common  -I./nss -DNSS_EMULATION   -I/usr/include/apr-1
-> -DDEFAULT_PRINT_SERVICE=ipp -MT psm.lo -MD -MP -MF ".deps/psm.Tpo" -c -o
-> psm.lo psm.c; \
-> then mv -f ".deps/psm.Tpo" ".deps/psm.Plo"; else rm -f ".deps/psm.Tpo";
-> exit 1; fi
-> mkdir .libs
->  i586-mandriva-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I.
-> -I../../source/libpapi-common -I. -DPSM_DIR=\"/usr/lib\"
-> -I../libpapi-common -I./nss -DNSS_EMULATION -I/usr/include/apr-1
-> -DDEFAULT_PRINT_SERVICE=ipp -MT psm.lo -MD -MP -MF .deps/psm.Tpo -c
-> psm.c  -fPIC -DPIC -o .libs/psm.o
-> if /bin/sh ../../libtool --tag=CC --mode=compile
-> i586-mandriva-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I.
-> -I../../source/libpapi-common  -I. -DPSM_DIR=\"/usr/lib\"
-> -I../libpapi-common  -I./nss -DNSS_EMULATION   -I/usr/include/apr-1
-> -DDEFAULT_PRINT_SERVICE=ipp -MT service.lo -MD -MP -MF
-> ".deps/service.Tpo" -c -o service.lo service.c; \
-> then mv -f ".deps/service.Tpo" ".deps/service.Plo"; else rm -f
-> ".deps/service.Tpo"; exit 1; fi
->  i586-mandriva-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I.
-> -I../../source/libpapi-common -I. -DPSM_DIR=\"/usr/lib\"
-> -I../libpapi-common -I./nss -DNSS_EMULATION -I/usr/include/apr-1
-> -DDEFAULT_PRINT_SERVICE=ipp -MT service.lo -MD -MP -MF .deps/service.Tpo
-> -c service.c  -fPIC -DPIC -o .libs/service.o
-> service.c: In function 'service_load':
-> service.c:60: error: 'ipp' undeclared (first use in this function)
-> service.c:60: error: (Each undeclared identifier is reported only once
-> service.c:60: error: for each function it appears in.)
-> ICECREAM[19319]: Compiled on 192.168.2.67
-> make[2]: *** [service.lo] Error 1
-> make[2]: Leaving directory
-> `/home/tkamppeter/rpm/BUILD/papi/source/libpapi-dynamic'
-> make[1]: *** [all-recursive] Error 1
-> make[1]: Leaving directory `/home/tkamppeter/rpm/BUILD/papi/source'
-> make: *** [all-recursive] Error 1
-> ------------------------------------------------------------------------------------
-> 
-> Can you tell me how to get it correctly talking with CUPS? Thanks.
-> 
->    Till
-> 
 
