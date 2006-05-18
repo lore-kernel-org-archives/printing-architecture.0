@@ -1,12 +1,14 @@
 Return-Path: <till.kamppeter@gmx.net>
-Message-ID: <446B8F9E.5070306@gmx.net>
-Date: Wed, 17 May 2006 23:03:26 +0200
+Message-ID: <446CD01E.7020002@gmx.net>
+Date: Thu, 18 May 2006 21:50:54 +0200
 From: Till Kamppeter <till.kamppeter@gmx.net>
 MIME-Version: 1.0
-Subject: Re: [Printing-architecture] Re: Building PAPI implementation
-References: <446B24E3.2080702@gmx.net> <446B3404.9060809@Sun.COM>
-In-Reply-To: <446B3404.9060809@Sun.COM>
-Content-Type: text/plain; charset=ISO-8859-1
+Subject: Re: [Printing-architecture] Meeting notes for 2006-05-17 / LSB 3.2
+	recommendation
+References: <446BA39A.80802@Sun.COM> <446BBE7C.5090500@easysw.com>
+	<446CB026.4020804@gmx.net> <446CCE7F.4070501@easysw.com>
+In-Reply-To: <446CCE7F.4070501@easysw.com>
+Content-Type: text/plain; charset=UTF-8
 Content-Transfer-Encoding: 7bit
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.freestandards.org>
@@ -17,128 +19,45 @@ List-Post: <mailto:printing-architecture@lists.freestandards.org>
 List-Help: <mailto:printing-architecture-request@lists.freestandards.org?subject=help>
 List-Subscribe: <http://lists.freestandards.org/cgi-bin/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.freestandards.org?subject=subscribe>
-To: Norm Jacobs <Norm.Jacobs@Sun.COM>
-Cc: printing-architecture <printing-architecture@freestandards.org>, "desktop_printing@osdl.org" <desktop_printing@osdl.org>
+To: Michael Sweet <mike@easysw.com>
+Cc: Norm Jacobs <Norm.Jacobs@Sun.COM>, printing-architecture <printing-architecture@freestandards.org>
 
-
-Now I got it RPMized so that it can be installed on a machine with
-already installed CUPS. No I tried to make it actually working with the
-installed CUPS. I found out by running an "lpr" command through strace
-that it tries to load the non-existing "lpsched" service
-(/usr/lib/psm-lpsched.so) and I have seen in the source code that
-"lpsched" is used a s the default service (should not be as "lpsched"
-does not ship with the package.
-
-So I compile with
-
-export CFLAGS="$CFLAGS -DDEFAULT_PRINT_SERVICE=ipp"
-./configure --without-apache --without-ruby
-make
-
-to make it using "ipp" as default service (can one configure/switch the
-service at run time? There are no files in /etc/... and no documentation
-about such files, man pages are only in section 1 and 8, nothing in
-section 5).
-
-But with this setting it does not build:
-
-------------------------------------------------------------------------------------
-[...]
-Making all in libpapi-dynamic
-make[2]: Entering directory
-`/home/tkamppeter/rpm/BUILD/papi/source/libpapi-dynamic'
-if /bin/sh ../../libtool --tag=CC --mode=compile
-i586-mandriva-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I.
--I../../source/libpapi-common  -I. -DPSM_DIR=\"/usr/lib\"
--I../libpapi-common  -I./nss -DNSS_EMULATION   -I/usr/include/apr-1
--DDEFAULT_PRINT_SERVICE=ipp -MT psm.lo -MD -MP -MF ".deps/psm.Tpo" -c -o
-psm.lo psm.c; \
-then mv -f ".deps/psm.Tpo" ".deps/psm.Plo"; else rm -f ".deps/psm.Tpo";
-exit 1; fi
-mkdir .libs
- i586-mandriva-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I.
--I../../source/libpapi-common -I. -DPSM_DIR=\"/usr/lib\"
--I../libpapi-common -I./nss -DNSS_EMULATION -I/usr/include/apr-1
--DDEFAULT_PRINT_SERVICE=ipp -MT psm.lo -MD -MP -MF .deps/psm.Tpo -c
-psm.c  -fPIC -DPIC -o .libs/psm.o
-if /bin/sh ../../libtool --tag=CC --mode=compile
-i586-mandriva-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I.
--I../../source/libpapi-common  -I. -DPSM_DIR=\"/usr/lib\"
--I../libpapi-common  -I./nss -DNSS_EMULATION   -I/usr/include/apr-1
--DDEFAULT_PRINT_SERVICE=ipp -MT service.lo -MD -MP -MF
-".deps/service.Tpo" -c -o service.lo service.c; \
-then mv -f ".deps/service.Tpo" ".deps/service.Plo"; else rm -f
-".deps/service.Tpo"; exit 1; fi
- i586-mandriva-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I.
--I../../source/libpapi-common -I. -DPSM_DIR=\"/usr/lib\"
--I../libpapi-common -I./nss -DNSS_EMULATION -I/usr/include/apr-1
--DDEFAULT_PRINT_SERVICE=ipp -MT service.lo -MD -MP -MF .deps/service.Tpo
--c service.c  -fPIC -DPIC -o .libs/service.o
-service.c: In function 'service_load':
-service.c:60: error: 'ipp' undeclared (first use in this function)
-service.c:60: error: (Each undeclared identifier is reported only once
-service.c:60: error: for each function it appears in.)
-ICECREAM[19319]: Compiled on 192.168.2.67
-make[2]: *** [service.lo] Error 1
-make[2]: Leaving directory
-`/home/tkamppeter/rpm/BUILD/papi/source/libpapi-dynamic'
-make[1]: *** [all-recursive] Error 1
-make[1]: Leaving directory `/home/tkamppeter/rpm/BUILD/papi/source'
-make: *** [all-recursive] Error 1
-------------------------------------------------------------------------------------
-
-Can you tell me how to get it correctly talking with CUPS? Thanks.
-
-   Till
-
-
-Norm Jacobs wrote:
-> 
-> The Apache support is only necessary if you want to supply IPP
-> support for a print service that doesn't already have an IPP listener.
-> We use it on Solaris, but if you are using CUPS, you don't need the
-> listener.  That being said, I will be fixing it in the next few days when
-> I fix it's Apache 2.X support.  In the meantime, you can configure
-> --without-apache and it should avoid building the IPP listener
-> module (mod_ipp.so).
-> Thanks for the heads-up and the patch to the build infrastructure.
-> 
->    -Norm
-> 
+Michael Sweet wrote:
 > Till Kamppeter wrote:
 > 
->> Now I am trying to build the PAPI package from
->> http://openprinting.sourceforge.net/ I am building the current
->> Subversion state, rev 164.
->>
->> There I have encountered some problems:
->>
->> - At first I needed to patch the build infrastructure a little bit to
->> make it compiling the Apache support. The patch on the acinclude.m4 file
->> you can find here:
->>
->> http://www.linuxprinting.org/till/tmp/papi-1.0-acinclude-m4-apache-apr1.patch
->>
->>
->> - Then I had a problem building the software, as
->> source/mod_ipp/mod_ipp.c includes the file apr_compat.h in case of
->> building with Apache support. According to
->>
->> http://www.apache.org/dist/apr/CHANGES-APR-1.2
->>
->> this header file was removed on the transition from APR 0.9.5 to 1.0.0
->> and I have 1.2.7 on Mandriva's Cooker. So here the Apache module needs
->> to be updated to the current Apache/APR API.
->>
->>    Till
->>   
+>> ...
+>> CUPS driver scripts and backends must go into /usr/lib/cups/filter and
+>> /usr/lib/cups/backend, either physically or as a symbolic link from
+>> files in /usr/lib/printerdriver/{supplier}/.
 > 
 > 
-> _______________________________________________
-> Printing-architecture mailing list
-> Printing-architecture@lists.freestandards.org
-> http://lists.freestandards.org/cgi-bin/mailman/listinfo/printing-architecture
+> That's actually not necessary.  You can (and most vendors do, on
+> MacOS X) put a full path to the filter in the PPD file.
+> 
+>> ...
+>> So If we really say LSB is the LINUX Standards Base, we can let the LSB
+>> 3.2 require CUPS 1.2.x or newer, ESP GhostScript 8.15.2 or newer (to
+>> serve pswrite, pdfwrite, cups, ijs, opvp), KDE Print, GTK Print, PAPI
 > 
 > 
+> Agreed.
 > 
+>> If we want the LSB standard to be a standard for all Unixes (then they
+>> should rename to USB perhaps) then we can only require more abstract
+>> standards, especially PAPI, so that ISVs do not need to care about the
+>> spooler used on the destination system. In that case also Foomatic
+>> should be required by the standard, as it interfaces the same driver
+>> (including CUPS raster drivers) to many different spoolers, including
+>> CUPS, BSD LPD, and Solaris LP.
+> 
+> 
+> Does Foomatic do file type detection and conversion (i.e. the whole
+> CUPS filter chain)?
+> 
+
+It delegates file type conversion to a2ps (or another converter, it is
+configurable). Norm, feel free to add more sophisticated file type
+conversion functionality.
+
+   Till
 
