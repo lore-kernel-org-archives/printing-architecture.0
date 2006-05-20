@@ -1,11 +1,12 @@
-Return-Path: <till.kamppeter@gmx.net>
-Message-ID: <446CB64A.9090600@gmx.net>
-Date: Thu, 18 May 2006 20:00:42 +0200
-From: Till Kamppeter <till.kamppeter@gmx.net>
+Return-Path: <imcdonald@sharplabs.com>
+Message-ID: <789E617C880666438EDEE30C2A3E8D10EE19@mailsrvnt05.enet.sharplabs.com>
+From: "McDonald, Ira" <imcdonald@sharplabs.com>
+Subject: RE: [Printing-architecture] [next meeting 31 May!] Meeting notes 
+	for 2006-05-17 / LSB 3.2 recommendation
+Date: Sat, 20 May 2006 10:12:22 -0700
 MIME-Version: 1.0
-Content-Type: text/plain; charset=ISO-8859-1
-Content-Transfer-Encoding: 7bit
-Subject: [Printing-architecture] PAPI is part of Mandriva Linux now!
+Content-Type: text/plain;
+	charset="ISO-8859-1"
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.freestandards.org>
 List-Unsubscribe: <http://lists.freestandards.org/cgi-bin/mailman/listinfo/printing-architecture>,
@@ -15,56 +16,77 @@ List-Post: <mailto:printing-architecture@lists.freestandards.org>
 List-Help: <mailto:printing-architecture-request@lists.freestandards.org?subject=help>
 List-Subscribe: <http://lists.freestandards.org/cgi-bin/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.freestandards.org?subject=subscribe>
-To: "desktop_printing@osdl.org" <desktop_printing@osdl.org>, printing-architecture <printing-architecture@freestandards.org>, Tim Waugh <twaugh@redhat.com>, Martin Pitt <martin.pitt@ubuntu.com>, Johannes Meixner <jsmeix@suse.de>, Henrique de Moraes Holschuh <hmh@debian.org>, Klaus Singvogel <kssingvo@suse.de>, "Bastian, Waldo" <waldo.bastian@intel.com>
+To: 'Ian Murdock' <imurdock@imurdock.com>, Norm Jacobs <Norm.Jacobs@sun.com>
+Cc: printing-architecture <printing-architecture@freestandards.org>
 
-Oi,
+Hi Ian,
 
-today I have finished a first RPM package of PAPI and have already blown
-it into Mandriva's Cooker:
+Unfortunately, the FSG OP Architecture telecon is 
+bi-weekly - so our next (and last) meeting before
+the LSB meeting is _the_day_before_ on 31 May.
 
-http://archives.mandrivalinux.com/changelog/2006-05/msg01953.php
+Thus, if we're to get anywhere with a coherent
+recommendation for LSB 3.2 from the OSDL Printing
+Summit and FSG Open Printing we only have this
+mailing list to reach concensus.
 
-So our Cooker is now PAPI-compliant. The RPM is split up into several
-binary RPMs. To make the installed Cooker PAPI compliant for users it is
-enough to install the libpapi0 and papi-psm packages and to develop
-applications accessing the printing infrastructure via PAPI, one has to
-install the libpapi0-devel package in addition. The papi-doc package
-contains the PAPI specs and additional documentation.
+Cheers,
+- Ira
 
-Overview of binary packages:
+Ira McDonald (Musician / Software Architect)
+Blue Roof Music / High North Inc
+PO Box 221  Grand Marais, MI  49839
+phone: +1-906-494-2434
+email: imcdonald@sharplabs.com
 
-libpapi0:       The dynamic library which provides the PAPI
-libpapi0-devel: The header files for and static libraries for libpapi
-papi-psm:       The plug-ins to interface libpapi with CUPS/IPP and LPD
-papi-doc:       PAPI specs (PDF), docs for this implementation, source
-                code of the sample tools in papi-utils
-papi-utils:     Some sample tools using PAPI. Try out PAPI with them and
-                study there source code in papi-doc
-papi-commands:  BSD and SystemV standard printing commands using PAPI,
-                with complete set of man pages. You can switch between
-                these commands and the commands supplied by CUPS using
-                the "update-alternatives" command. The man pages are
-                switched simultaneously.
-ruby-papi:      Ruby bindings to allow writing Ruby programs with
-                printing functionality.
+> -----Original Message-----
+> From: printing-architecture-bounces@lists.freestandards.org
+> [mailto:printing-architecture-bounces@lists.freestandards.org]
+> On Behalf
+> Of Ian Murdock
+> Sent: Saturday, May 20, 2006 9:43 AM
+> To: Norm Jacobs
+> Cc: printing-architecture
+> Subject: Re: [Printing-architecture] Meeting notes for 
+> 2006-05-17 / LSB
+> 3.2 recommendation
+> 
+> 
+> On 5/17/06, Norm Jacobs <Norm.Jacobs@sun.com> wrote:
+> > We spent the vast majority of our meeting time discussing 
+> what we would
+> > like to
+> > recommend for LSB 3.2.  We are also planning on meeting 
+> next week at our
+> > normal Wednesday time.
+> 
+> I'll be on the call Weds. Sorry I couldn't make the last one.
+> 
+> -ian
+> -- 
+> Ian Murdock
+> 317-863-2590
+> http://ianmurdock.com/
+> 
+> "Don't look back--something might be gaining on you." --Satchel Paige
+> 
+> _______________________________________________
+> Printing-architecture mailing list
+> Printing-architecture@lists.freestandards.org
+> http://lists.freestandards.org/cgi-bin/mailman/listinfo/printi
+> ng-architecture
+> 
+> -- 
+> No virus found in this incoming message.
+> Checked by AVG Free Edition.
+> Version: 7.1.392 / Virus Database: 268.6.1/344 - Release 
+> Date: 5/19/2006
+>  
+> 
 
-The source code for these RPMs is the subversion snapshot rev 164 from
-http://openprinting.sourceforge.net/. I did not succeed to compile the
-(well older) beta1 release on Madriva. Of the current snapshot I
-succeeded to build everything except the Apache IPP Module (which does
-also not make much sense on a CUPS-eequipped Linux distribution.
-
-I want to ask all of you who work for a Linux distribution (or a Unix in
-general) to also package PAPI for your distribution and put it into the
-repository which goes towards the next release of the distribution. To
-make it easier for you to start, I give you all my RPM packages
-including the source RPM for download on:
-
-http://www.linuxprinting.org/till/tmp/openprinting/papi/
-
-When we all have PAPI in our upcoming products we have much better
-chances to get PAPI into LSB 3.2. So it is important to act quickly as
-the LSB 3.2 meeting is in the beginning of June (Waldo, you will go there?).
-
-   Till
+-- 
+No virus found in this outgoing message.
+Checked by AVG Free Edition.
+Version: 7.1.392 / Virus Database: 268.6.1/344 - Release Date: 5/19/2006
+ 
 
