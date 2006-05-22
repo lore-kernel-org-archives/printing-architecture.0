@@ -1,15 +1,12 @@
-Return-Path: <till.kamppeter@gmx.net>
-Message-ID: <446CD01E.7020002@gmx.net>
-Date: Thu, 18 May 2006 21:50:54 +0200
-From: Till Kamppeter <till.kamppeter@gmx.net>
+Return-Path: <alimpich@us.ibm.com>
 MIME-Version: 1.0
-Subject: Re: [Printing-architecture] Meeting notes for 2006-05-17 / LSB 3.2
-	recommendation
-References: <446BA39A.80802@Sun.COM> <446BBE7C.5090500@easysw.com>
-	<446CB026.4020804@gmx.net> <446CCE7F.4070501@easysw.com>
-In-Reply-To: <446CCE7F.4070501@easysw.com>
-Content-Type: text/plain; charset=UTF-8
-Content-Transfer-Encoding: 7bit
+Message-ID: <OFFC743DB4.B5EE4184-ON87257176.005B379D-87257176.005BBFBF@us.ibm.com>
+From: Claudia Alimpich <alimpich@us.ibm.com>
+Date: Mon, 22 May 2006 10:45:17 -0600
+Content-Type: multipart/alternative;
+	boundary="=_alternative 005BBFBD87257176_="
+Subject: [Printing-architecture] There will be a FSG Arch meeting on Wed May
+	24th
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.freestandards.org>
 List-Unsubscribe: <http://lists.freestandards.org/cgi-bin/mailman/listinfo/printing-architecture>,
@@ -19,45 +16,45 @@ List-Post: <mailto:printing-architecture@lists.freestandards.org>
 List-Help: <mailto:printing-architecture-request@lists.freestandards.org?subject=help>
 List-Subscribe: <http://lists.freestandards.org/cgi-bin/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.freestandards.org?subject=subscribe>
-To: Michael Sweet <mike@easysw.com>
-Cc: Norm Jacobs <Norm.Jacobs@Sun.COM>, printing-architecture <printing-architecture@freestandards.org>
+To: printing-architecture@freestandards.org
 
-Michael Sweet wrote:
-> Till Kamppeter wrote:
-> 
->> ...
->> CUPS driver scripts and backends must go into /usr/lib/cups/filter and
->> /usr/lib/cups/backend, either physically or as a symbolic link from
->> files in /usr/lib/printerdriver/{supplier}/.
-> 
-> 
-> That's actually not necessary.  You can (and most vendors do, on
-> MacOS X) put a full path to the filter in the PPD file.
-> 
->> ...
->> So If we really say LSB is the LINUX Standards Base, we can let the LSB
->> 3.2 require CUPS 1.2.x or newer, ESP GhostScript 8.15.2 or newer (to
->> serve pswrite, pdfwrite, cups, ijs, opvp), KDE Print, GTK Print, PAPI
-> 
-> 
-> Agreed.
-> 
->> If we want the LSB standard to be a standard for all Unixes (then they
->> should rename to USB perhaps) then we can only require more abstract
->> standards, especially PAPI, so that ISVs do not need to care about the
->> spooler used on the destination system. In that case also Foomatic
->> should be required by the standard, as it interfaces the same driver
->> (including CUPS raster drivers) to many different spoolers, including
->> CUPS, BSD LPD, and Solaris LP.
-> 
-> 
-> Does Foomatic do file type detection and conversion (i.e. the whole
-> CUPS filter chain)?
-> 
+This is a multipart message in MIME format.
+--=_alternative 005BBFBD87257176_=
+Content-Type: text/plain; charset="US-ASCII"
 
-It delegates file type conversion to a2ps (or another converter, it is
-configurable). Norm, feel free to add more sophisticated file type
-conversion functionality.
+There will be an Open Printing conference call Wed May 24th. This is an 
+extra meeting scheduled for this week which was to be our week off. The 
+intent for this meeting to finalize recommendations for LSB 3.2.
 
-   Till
+Day: Wednesdays 
+Time:   
+12:00-1:00 PM US Pacific time 
+1:00-2:00 PM US Mountain time 
+3:00-4:00 PM US Eastern time 
+9:00-10:00 PM Paris time 
+USA Toll Number: 1-484-630-2765 
+PASSCODE: 84974 
+
+Claudia
+--=_alternative 005BBFBD87257176_=
+Content-Type: text/html; charset="US-ASCII"
+
+
+<br><font size=2 face="sans-serif">There will be an Open Printing conference
+call Wed May 24th. This is an extra meeting scheduled for this week which
+was to be our week off. The intent for this meeting to finalize recommendations
+for LSB 3.2.</font>
+<br>
+<br><font size=2 face="sans-serif">Day: Wednesdays</font><font size=3>
+</font><font size=2 face="sans-serif"><br>
+Time: &nbsp;</font><font size=3> </font><font size=2 face="sans-serif"><br>
+12:00-1:00 PM US Pacific time</font><font size=3> </font><font size=2 face="sans-serif"><br>
+1:00-2:00 PM US Mountain time</font><font size=3> </font><font size=2 face="sans-serif"><br>
+3:00-4:00 PM US Eastern time</font><font size=3> </font><font size=2 face="sans-serif"><br>
+9:00-10:00 PM Paris time</font><font size=3> </font><font size=2 face="sans-serif"><br>
+USA Toll Number: 1-484-630-2765</font><font size=3> </font><font size=2 face="sans-serif"><br>
+PASSCODE: 84974</font><font size=3> </font>
+<br>
+<br><font size=2 face="sans-serif">Claudia</font>
+--=_alternative 005BBFBD87257176_=--
 
