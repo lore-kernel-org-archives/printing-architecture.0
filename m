@@ -1,12 +1,13 @@
-Return-Path: <till.kamppeter@gmx.net>
-Message-ID: <44773DF8.9010802@gmx.net>
-Date: Fri, 26 May 2006 19:42:16 +0200
-From: Till Kamppeter <till.kamppeter@gmx.net>
+Return-Path: <mike@easysw.com>
+Message-ID: <4477404C.7070909@easysw.com>
+Date: Fri, 26 May 2006 13:52:12 -0400
+From: Michael Sweet <mike@easysw.com>
 MIME-Version: 1.0
 Subject: Re: [Printing-architecture] Notes of today's telecon
 References: <789E617C880666438EDEE30C2A3E8D10EE1E@mailsrvnt05.enet.sharplabs.com>
-In-Reply-To: <789E617C880666438EDEE30C2A3E8D10EE1E@mailsrvnt05.enet.sharplabs.com>
-Content-Type: text/plain; charset=ISO-8859-1
+	<44773DF8.9010802@gmx.net>
+In-Reply-To: <44773DF8.9010802@gmx.net>
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
 Content-Transfer-Encoding: 7bit
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.freestandards.org>
@@ -17,61 +18,44 @@ List-Post: <mailto:printing-architecture@lists.freestandards.org>
 List-Help: <mailto:printing-architecture-request@lists.freestandards.org?subject=help>
 List-Subscribe: <http://lists.freestandards.org/cgi-bin/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.freestandards.org?subject=subscribe>
-To: "McDonald, Ira" <imcdonald@sharplabs.com>
-Cc: Wendy Phillips <wendyp@sun.com>, Norm Jacobs <Norm.Jacobs@Sun.COM>, 'Michael Sweet' <mike@easysw.com>, printing-architecture <printing-architecture@freestandards.org>
+To: Till Kamppeter <till.kamppeter@gmx.net>
+Cc: Wendy Phillips <wendyp@sun.com>, Norm Jacobs <Norm.Jacobs@Sun.COM>, "McDonald, Ira" <imcdonald@sharplabs.com>, printing-architecture <printing-architecture@freestandards.org>
 
-McDonald, Ira wrote:
-> Hi,
+Till Kamppeter wrote:
+> McDonald, Ira wrote:
+>> Hi,
+>>
+>> I'm going to support Michael's point here.  The prevailing
+>> usage in the localization industry and in most file systems
+>> is to use language tag directories immediately _before_ the
+>> terminal filename in a path.
+>>
 > 
-> I'm going to support Michael's point here.  The prevailing
-> usage in the localization industry and in most file systems
-> is to use language tag directories immediately _before_ the
-> terminal filename in a path.
+> So you suggest
 > 
-
-So you suggest
-
-/usr/share/ppd/foomatic/HP/en/HP-LaserJet_4050-ljet4-en.ppd
-/usr/share/ppd/foomatic/HP/en/HP-LaserJet_4050-pxlmono-en.ppd
-/usr/share/ppd/foomatic/HP/en/HP-LaserJet_4050-hpijs-en.ppd
-/usr/share/ppd/gutenprint/HP/en/HP-LaserJet_4050-standard-en.ppd
-/usr/share/ppd/gutenprint/HP/en/HP-LaserJet_4050-simplified-en.ppd
-/usr/share/ppd/gutenprint/HP/de/HP-LaserJet_4050-simplified-de.ppd
-
-Is this what you mean?
-
-Having the language directory as the last level makes it also easier to
-install (and also to uninstall) selected languages.
-
-> And leaving aside "extra" entirely (not that we should),
-> 10,000 printers with typically 10 languages supported
-> makes a directory of 100,000 PPDs with the language tag 
-> as a suffix in the terminal filename - awful performance
-> for search and installation tools.
->
-
-Or should we do
-
-/usr/share/ppd/gutenprint/HP/LaserJet_4050/simplified/de/HP-LaserJet_4050-simplified-de.ppd
-
-but we must read the PPDs anyway to match the detected printer against
-the device ID strings in them.
-
-> Though an installation tool MIGHT have to search multiple
-> directories for a given model, it could easily check the
-> user's current locale and present as the default (before
-> ANY other searching) a PPD for the current locale.
+> /usr/share/ppd/foomatic/HP/en/HP-LaserJet_4050-ljet4-en.ppd
+> /usr/share/ppd/foomatic/HP/en/HP-LaserJet_4050-pxlmono-en.ppd
+> /usr/share/ppd/foomatic/HP/en/HP-LaserJet_4050-hpijs-en.ppd
+> /usr/share/ppd/gutenprint/HP/en/HP-LaserJet_4050-standard-en.ppd
+> /usr/share/ppd/gutenprint/HP/en/HP-LaserJet_4050-simplified-en.ppd
+> /usr/share/ppd/gutenprint/HP/de/HP-LaserJet_4050-simplified-de.ppd
 > 
+> Is this what you mean?
 
-This reduces search time a lot, and by not installing unneeded language
-directories one can save a lot of disk space.
+I'd actually suggest having the language first, e.g.:
 
-> I sympathize with Glen about standardizing "extra", but
-> I tend to think it's mostly hopeless - syntax yes, content
-> not worth the effort.
+     /usr/share/ppd/gutenprint/de/HP/HP-LaserJet_4050-simplified-de.ppd
 
-Some tag in "Extra" telling the meaning of the content (like a "d_" for
-a driver name) could make things easier, but it is not absolutely needed.
+> Having the language directory as the last level makes it also easier to
+> install (and also to uninstall) selected languages.
+ > ...
 
-   Till
+Putting the language first makes this trivial; burying it a few
+levels deep makes things more difficult, which is why we (and Apple)
+make it first...
+
+-- 
+______________________________________________________________________
+Michael Sweet, Easy Software Products           mike at easysw dot com
+Internet Printing and Document Software          http://www.easysw.com
 
