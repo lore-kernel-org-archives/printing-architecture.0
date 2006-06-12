@@ -1,12 +1,15 @@
 Return-Path: <till.kamppeter@gmx.net>
-Message-ID: <4489B4A0.4090807@gmx.net>
-Date: Fri, 09 Jun 2006 19:49:20 +0200
+Message-ID: <448D2CA5.906@gmx.net>
+Date: Mon, 12 Jun 2006 10:58:13 +0200
 From: Till Kamppeter <till.kamppeter@gmx.net>
 MIME-Version: 1.0
+References: <25386-cups.general@news.easysw.com>
+	<1150100858.3652.6.camel@cyberelk.elk>
+In-Reply-To: <1150100858.3652.6.camel@cyberelk.elk>
 Content-Type: text/plain; charset=ISO-8859-1
 Content-Transfer-Encoding: 7bit
-Subject: [Printing-architecture] PAPI should be implemented in the CUPS
-	package
+Subject: [Printing-architecture] Another reason why we need a standard
+ directory structure for printer drivers
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.freestandards.org>
 List-Unsubscribe: <http://lists.freestandards.org/mailman/listinfo/printing-architecture>,
@@ -16,22 +19,30 @@ List-Post: <mailto:printing-architecture@lists.freestandards.org>
 List-Help: <mailto:printing-architecture-request@lists.freestandards.org?subject=help>
 List-Subscribe: <http://lists.freestandards.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.freestandards.org?subject=subscribe>
-To: printing-architecture <printing-architecture@freestandards.org>, "Printing-Sc (E-mail)" <printing-sc@freestandards.org>, "desktop_printing@osdl.org" <desktop_printing@osdl.org>
+To: lsb-f2f@freestandards.org, printing-architecture <printing-architecture@freestandards.org>
 
-Oi,
-
-on the last FSG OpenPrinting Steering Comittee phone meeting we came out
-with the result that the best for getting PAPI into the Linux
-distributions (and into all other operating systems using CUPS) is to
-have it as a part of the CUPS package, as the distributions are always
-using an up-to-date version of CUPS.
-
-Therefore I have posted a feature request:
-
-http://www.cups.org/str.php?L1767
-
-Please everyone who has a comment to it, post directly into this feature
-request.
+See below, Fedora/Red Hat uses SELinux as an enhanced security
+infrastructure. It seems that there are set certain security policies by
+the directory structure which leads to printer drivers not working when
+they have files outside the places where printer drivers are expected to
+be. Having standard directories for printer driver this problem should
+go away.
 
    Till
+
+
+Tim Waugh wrote today on the CUPS general mailing list:
+> On Sun, 2006-06-11 at 17:10 -0400, John Benson wrote:
+> 
+>>Hi, this is just a post to notify people that SELinux in "Enforcing" mode on Red Hat Fedora Core 5 Linux can prevents CUPS jobs from printing. The job status shows as "stopped".
+> 
+> 
+> Just to clarify: CUPS in Fedora Core 5 works fine with the supplied
+> drivers.  The problem you have run into, and supplied a link to an FAQ
+> for, is that you have installed a 3rd party (Brother) driver which for
+> some reason has not taken account of SELinux in its installation script.
+> 
+> In general, if a 3rd party driver adds files to existing CUPS
+> directories there should be nothing further to do; but in this case the
+> Brother driver uses /usr/local directories.
 
