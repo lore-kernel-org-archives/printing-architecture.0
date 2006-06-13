@@ -1,13 +1,13 @@
-Return-Path: <till.kamppeter@gmx.net>
-Message-ID: <448D7ED8.5030308@gmx.net>
-Date: Mon, 12 Jun 2006 16:48:56 +0200
-From: Till Kamppeter <till.kamppeter@gmx.net>
+Return-Path: <alimpich@us.ibm.com>
+Message-ID: <OF90499921.26C43A0C-ON8725718C.0071CE26-8725718C.00719DC8@us.ibm.com>
+From: Claudia Alimpich <alimpich@us.ibm.com>
+Date: Tue, 13 Jun 2006 14:44:17 -0600
 MIME-Version: 1.0
-References: <448D7CCD.9060103@Sun.COM>
-In-Reply-To: <448D7CCD.9060103@Sun.COM>
-Content-Type: text/plain; charset=ISO-8859-1
-Content-Transfer-Encoding: 7bit
-Subject: Re: [Printing-architecture] Agenda fodder for our next meeting
+Content-type: multipart/alternative; 
+	Boundary="0__=08BBFB1FDFE248B68f9e8a93df938690918c08BBFB1FDFE248B6"
+Content-Disposition: inline
+Subject: [Printing-architecture] There will be a FSG Arch meeting on Wed
+	June 14th
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.freestandards.org>
 List-Unsubscribe: <http://lists.freestandards.org/mailman/listinfo/printing-architecture>,
@@ -17,38 +17,43 @@ List-Post: <mailto:printing-architecture@lists.freestandards.org>
 List-Help: <mailto:printing-architecture-request@lists.freestandards.org?subject=help>
 List-Subscribe: <http://lists.freestandards.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.freestandards.org?subject=subscribe>
-To: Norm Jacobs <Norm.Jacobs@Sun.COM>
-Cc: printing-spool@freestandards.org, printing-architecture <printing-architecture@freestandards.org>, printing-jobticket@freestandards.org
+To: printing-architecture@freestandards.org
 
-I have already posted a feature request on the CUPS site:
-
-http://www.cups.org/str.php?L1767
-
-It appears also in the roadmap under the open features for CUPS 1.3:
-
-http://www.cups.org/roadmap.php
-
-   Till
+--0__=08BBFB1FDFE248B68f9e8a93df938690918c08BBFB1FDFE248B6
+Content-type: text/plain; charset=US-ASCII
 
 
-Norm Jacobs wrote:
-> So... in the Steering Committee meeting last week, we had a fairly 
-> lengthy discussion
-> about getting adoption of various interfaces that we have been working on.
-> I received an action item to prod the architecture, papi, and jtapi teams
-> to discuss how various open source projects might integrate support for PAPI
-> and JTAPI, along with some potential benefits of using these 
-> interfaces.  Once
-> we have started the discussions, maybe we can engage some of these projects
-> to improve adoption and work toward LSB 4.0 inclusion.
-> 
->        -Norm
-> 
-> 
-> _______________________________________________
-> Printing-architecture mailing list
-> Printing-architecture@lists.freestandards.org
-> http://lists.freestandards.org/mailman/listinfo/printing-architecture
-> 
-> 
+
+
+
+There will be an Open Printing conference call Wed June 14th.
+
+Day: Wednesdays
+Time:
+12:00-1:00 PM US Pacific time
+1:00-2:00 PM US Mountain time
+3:00-4:00 PM US Eastern time
+9:00-10:00 PM Paris time
+USA Toll Number: 1-484-630-2765
+PASSCODE: 84974
+
+Claudia
+--0__=08BBFB1FDFE248B68f9e8a93df938690918c08BBFB1FDFE248B6
+Content-type: text/html; charset=US-ASCII
+Content-Disposition: inline
+
+<html><body>
+<p>There will be an Open Printing conference call Wed June 14th. <br>
+<br>
+Day: Wednesdays<font size="4"> </font><br>
+Time:  <font size="4"> </font><br>
+12:00-1:00 PM US Pacific time<font size="4"> </font><br>
+1:00-2:00 PM US Mountain time<font size="4"> </font><br>
+3:00-4:00 PM US Eastern time<font size="4"> </font><br>
+9:00-10:00 PM Paris time<font size="4"> </font><br>
+USA Toll Number: 1-484-630-2765<font size="4"> </font><br>
+PASSCODE: 84974<font size="4"> </font><br>
+<br>
+Claudia</body></html>
+--0__=08BBFB1FDFE248B68f9e8a93df938690918c08BBFB1FDFE248B6--
 
