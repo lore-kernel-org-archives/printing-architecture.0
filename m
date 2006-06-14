@@ -1,14 +1,11 @@
-Return-Path: <alimpich@us.ibm.com>
-In-Reply-To: <OF90499921.26C43A0C-ON8725718C.0071CE26-8725718C.00719DC8@us.ibm.com>
-Message-ID: <OFB6C2B74F.7CFE81EA-ON8725718C.0073C0F6-8725718C.0073B657@us.ibm.com>
-From: Claudia Alimpich <alimpich@us.ibm.com>
-Date: Tue, 13 Jun 2006 15:07:11 -0600
+Return-Path: <till.kamppeter@gmx.net>
+Message-ID: <449029BF.3000909@gmx.net>
+Date: Wed, 14 Jun 2006 17:22:39 +0200
+From: Till Kamppeter <till.kamppeter@gmx.net>
 MIME-Version: 1.0
-Content-type: multipart/alternative; 
-	Boundary="0__=08BBFB1FDFE046668f9e8a93df938690918c08BBFB1FDFE04666"
-Content-Disposition: inline
-Subject: [Printing-architecture] Can't call into FSG Arch meeting on Wed
-	June 14th
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: 7bit
+Subject: [Printing-architecture] Printing on the LSB Summit 2006 in Boston
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.freestandards.org>
 List-Unsubscribe: <http://lists.freestandards.org/mailman/listinfo/printing-architecture>,
@@ -18,64 +15,56 @@ List-Post: <mailto:printing-architecture@lists.freestandards.org>
 List-Help: <mailto:printing-architecture-request@lists.freestandards.org?subject=help>
 List-Subscribe: <http://lists.freestandards.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.freestandards.org?subject=subscribe>
-To: printing-architecture@freestandards.org
+To: "desktop_printing@osdl.org" <desktop_printing@osdl.org>, printing-architecture <printing-architecture@freestandards.org>
 
---0__=08BBFB1FDFE046668f9e8a93df938690918c08BBFB1FDFE04666
-Content-type: text/plain; charset=US-ASCII
+Oi,
+
+as talked about in the OpenPrinting steering committee meeting I am
+posting here some info about the printing part of the LSB Summit 2006 in
+Boston.
+
+My slides (and pictures) you can find here:
+
+http://freestandards.org/en/LSB_Summit
+http://www.freestandards.org/~till/events/lsb2006/
+
+- Only OpenPrinting part which can enter in LSB 3.2 is OpenPrinting
+  vector, as the appropriate interface is part of ESP GhostScript 8.15.1
+  or later and this ships with all major distros (Red Hat/Fedora, SuSE,
+  Mandriva, Ubuntu, Debian). Official release of the Vector API is
+  prepared during this month.
+
+- PCM and SM are independent of the OpenPrinting vector driver and they
+  are not in the distros yet, so they can only make it into LSB 4.0.
+
+- PAPI, JTAPI, ... are not in the distros yet, so they are only
+  interesting for LSB 4.0, too. In the OpenPrinting Steering Committee
+  we talked about how to get them into the distros. For PAPI we agreed
+  on that it should be made part of the CUPS package, especially as Mike
+  Sweet is one of the authors of PAPI. Therefore I have posted the
+  following feature request for CUPS 1.3:
+
+  http://www.cups.org/str.php?L1767
+
+  But there is no reaction from Mike Sweet up to now.
+
+- Standardized directories are also a candidate for the LSB 3.2. After
+  the meeting there came up a thread in the CUPS general forum/mailing
+  list that a user has a problem with SE-Linux-enforced Red Hat that his
+  printer driver did not work. It was dropped in /usr/local, whereas
+  SE-Linux accepts printer drivers only in standard CUPS directories ny
+  default. With standard directories such problems should go away.
+
+  For the PPD file tree it was decided to have sub-directories for the
+  different UI languages, so that one can easily make language packages.
+  The PPD file names itself should also contain language tags.
+
+- The only possibility to provide a printing interface to applications
+  (ISVs) in LSB 3.2 is the CUPS API, but it suffers the problem that
+  only Linux has standardized on CUPS and many other Unixes (like BSD or
+  Solaris) not. Now there is the Question whether LSB should be
+  considered as LINUX Standards Base or Unix Standards Base.
 
 
-
-
-
-I have a conflict so I will not be able to call into the meeting on Wed
-June 14th.
-
-Claudia
-
-printing-architecture-bounces@lists.freestandards.org wrote on 06/13/2006
-02:44:17 PM:
-
-> There will be an Open Printing conference call Wed June 14th.
->
-> Day: Wednesdays
-> Time:
-> 12:00-1:00 PM US Pacific time
-> 1:00-2:00 PM US Mountain time
-> 3:00-4:00 PM US Eastern time
-> 9:00-10:00 PM Paris time
-> USA Toll Number: 1-484-630-2765
-> PASSCODE: 84974
->
-> Claudia_______________________________________________
-> Printing-architecture mailing list
-> Printing-architecture@lists.freestandards.org
-> http://lists.freestandards.org/mailman/listinfo/printing-architecture
---0__=08BBFB1FDFE046668f9e8a93df938690918c08BBFB1FDFE04666
-Content-type: text/html; charset=US-ASCII
-Content-Disposition: inline
-
-<html><body>
-<p>I have a conflict so I will not be able to call into the meeting on Wed June 14th.<br>
-<br>
-Claudia<br>
-<br>
-<tt>printing-architecture-bounces@lists.freestandards.org wrote on 06/13/2006 02:44:17 PM:<br>
-<br>
-&gt; There will be an Open Printing conference call Wed June 14th. <br>
-&gt; <br>
-&gt; Day: Wednesdays <br>
-&gt; Time: <br>
-&gt; 12:00-1:00 PM US Pacific time <br>
-&gt; 1:00-2:00 PM US Mountain time <br>
-&gt; 3:00-4:00 PM US Eastern time <br>
-&gt; 9:00-10:00 PM Paris time <br>
-&gt; USA Toll Number: 1-484-630-2765 <br>
-&gt; PASSCODE: 84974 <br>
-&gt; <br>
-&gt; Claudia_______________________________________________<br>
-&gt; Printing-architecture mailing list<br>
-&gt; Printing-architecture@lists.freestandards.org<br>
-&gt; <a href="http://lists.freestandards.org/mailman/listinfo/printing-architecture">http://lists.freestandards.org/mailman/listinfo/printing-architecture</a><br>
-</tt></body></html>
---0__=08BBFB1FDFE046668f9e8a93df938690918c08BBFB1FDFE04666--
+   Till
 
