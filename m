@@ -1,14 +1,14 @@
 Return-Path: <till.kamppeter@gmx.net>
-Message-ID: <44B7F6EE.3020207@gmx.net>
-Date: Fri, 14 Jul 2006 21:56:30 +0200
+Message-ID: <44BB5A73.6070506@gmx.net>
+Date: Mon, 17 Jul 2006 11:37:55 +0200
 From: Till Kamppeter <till.kamppeter@gmx.net>
 MIME-Version: 1.0
-References: <789E617C880666438EDEE30C2A3E8D10EE78@mailsrvnt05.enet.sharplabs.com>
-In-Reply-To: <789E617C880666438EDEE30C2A3E8D10EE78@mailsrvnt05.enet.sharplabs.com>
+References: <44B439E2.5050105@Sun.COM> <44B73B41.5080408@fxpsc.co.jp>
+In-Reply-To: <44B73B41.5080408@fxpsc.co.jp>
 Content-Type: text/plain; charset=ISO-8859-1
 Content-Transfer-Encoding: 7bit
-Subject: Re: [Printing-architecture] directory structure / file name conve
- ntions
+Subject: Re: [Printing-architecture] [Printing-sc] migration of OpenPrinting
+	WIKI
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.freestandards.org>
 List-Unsubscribe: <http://lists.freestandards.org/mailman/listinfo/printing-architecture>,
@@ -18,50 +18,49 @@ List-Post: <mailto:printing-architecture@lists.freestandards.org>
 List-Help: <mailto:printing-architecture-request@lists.freestandards.org?subject=help>
 List-Subscribe: <http://lists.freestandards.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.freestandards.org?subject=subscribe>
-To: "McDonald, Ira" <imcdonald@sharplabs.com>
-Cc: printing-architecture@lists.freestandards.org
+To: Osamu MIHARA <mihara.osamu@fxpsc.co.jp>
+Cc: Norm Jacobs <Norm.Jacobs@Sun.COM>, ldb@freestandards.org, Jeff Licquia <licquia@debian.org>, printing-architecture <printing-architecture@freestandards.org>, "Printing-Sc (E-mail)" <printing-sc@freestandards.org>
 
-McDonald, Ira wrote:
-> Hi,
+Osamu MIHARA wrote:
+> Here are my comments.
 > 
-> Staying conformant to FHS (required for LSB conformance)
-> appears to need some significant thought and modifications
-> to our previous FSG/OP concensus (see Wendy Phillips' note
-> yesterday).
-> 
-> For those having trouble finding the authoritative source
-> for the FHS spec (I did), below is the home page:
-> 
->   http://www.pathname.com/fhs/
-> 
-> The most recent release is v2.3 (29 January 2004) - there
-> are links for PDF, PS, HTML, etc. versions of FHS/2.3 on
-> the above web page.
-> 
-> Does anyone know if there is work-in-progress for a newer
-> version of FHS?  Thirty months is a long time in computers.
-> 
-> I don't think the FSG/OP should recommend a hierarchy std
-> for printing that is broken across the 'shipped with system'
-> versus 'later vendor packages'.  But I suspect that's just
-> what Debian, SUSE, and others want, for security reasons.
-> Yuck!
-> 
-> Comments?
+> o "Printer Driver" and "SM" is linked to APAC's page. (Is this
+> intentional, Higuchi-san?)
 > 
 
-Having one directory would make configuring the security enhancements
-(SELinux, AppArmor) easier, but if the appropriate maintainers of the
-distros pre-configured them once correctly it should not be a problem.
+These sub projects are done by the APAC workgroup and the APAC page has
+all links to the implementations now (the implementation pages of
+printer driver, SM, and PCM are the same). As long as printer driver and
+SM do not have their own Wiki pages we should leave it this way.
+Volunteers are welcome to create separate Wiki pages for printer driver,
+SM and PCM.
 
-So we are probably better of to define at least two directories, one for
- drivers to be shipped with the distro and one for distro-independent
-drivers.
+> o Link menu for work group is not shown. See capture attached. (It is
+> enabled in DMI workgroups pages.)
+> 
 
-Or can we even go with one directory when it is not in /usr? For example
-/opt/(open)printing/ppd/ and /opt/(open)printing/drivers/. Note that for
-example the KDE and GNOME which ships with SuSE is also in /opt. Or does
-SuSE violate the FHS with that?
+Here someone with access to the configuration of the MediaWiki is
+needed, Lawrence? Jeff?
+
+> o We have 2 published specifications - PAPI and JTAPI, but they are not
+> available from Specifications menu of FSG site -
+> http://www.freestandards.org/en/Specifications
+> 
+
+The files are spread around everywhere (PWG, SourceForge, ...), can
+someone tell me where are the current versions of all the OpenPrinting
+specifications? Perhaps the one who has uploaded them, Claudia? Ira?
+Norm? (We must really do a central organization of all FSG OpenPrinting
+files an repositories on the FSG servers)
+
+> We should request to add these to above page;
+>   2. OpenPrinting
+>     2.1 Print Application Programming Interface (PAPI)
+>     2.2 Job Ticket Application Programming Interface (JTAPI)
+> 
+
+This would be a good idea, but then we would also need to add PDAPI, SM,
+and PCM.
 
    Till
 
