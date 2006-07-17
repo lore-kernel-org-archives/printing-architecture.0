@@ -1,13 +1,16 @@
-Return-Path: <till.kamppeter@gmx.net>
-Message-ID: <44BBBABF.80407@gmx.net>
-Date: Mon, 17 Jul 2006 18:28:47 +0200
-From: Till Kamppeter <till.kamppeter@gmx.net>
+Return-Path: <imurdock@gmail.com>
+Message-ID: <44BC01E5.1060703@imurdock.com>
+Date: Mon, 17 Jul 2006 17:32:21 -0400
+From: Ian Murdock <imurdock@imurdock.com>
 MIME-Version: 1.0
-References: <D90275D3D462F94E9B3892626804E08C01447C44@orsmsx412.amr.corp.intel.com>
-In-Reply-To: <D90275D3D462F94E9B3892626804E08C01447C44@orsmsx412.amr.corp.intel.com>
-Content-Type: text/plain; charset=ISO-8859-1
+References: <44B439E2.5050105@Sun.COM> <44B73B41.5080408@fxpsc.co.jp>
+	<44BB5A73.6070506@gmx.net>
+In-Reply-To: <44BB5A73.6070506@gmx.net>
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
 Content-Transfer-Encoding: 7bit
-Subject: Re: [Printing-architecture] The English OpenPrinting Vector specs
+Sender: Ian Murdock <imurdock@gmail.com>
+Subject: Re: [Printing-architecture] [Printing-sc] migration of OpenPrinting
+ WIKI
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.freestandards.org>
 List-Unsubscribe: <http://lists.freestandards.org/mailman/listinfo/printing-architecture>,
@@ -17,26 +20,25 @@ List-Post: <mailto:printing-architecture@lists.freestandards.org>
 List-Help: <mailto:printing-architecture-request@lists.freestandards.org?subject=help>
 List-Subscribe: <http://lists.freestandards.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.freestandards.org?subject=subscribe>
-To: "Fujinaka, Todd" <todd.fujinaka@intel.com>
-Cc: 'Glen Petrie' <glen.petrie@eitc.epson.com>, printing-architecture@lists.freestandards.org, Olaf Meeuwissen <olaf.meeuwissen@avasys.jp>
+To: Till Kamppeter <till.kamppeter@gmx.net>
+Cc: ldb@freestandards.org, "Printing-Sc (E-mail)" <printing-sc@freestandards.org>, Norm Jacobs <Norm.Jacobs@Sun.COM>, Jeff Licquia <licquia@debian.org>, Osamu MIHARA <mihara.osamu@fxpsc.co.jp>, printing-architecture <printing-architecture@freestandards.org>
 
-Glen Petrie? Olaf Meeuwissen?
+Till Kamppeter wrote:
+> Osamu MIHARA wrote:
+>> o Link menu for work group is not shown. See capture attached. (It is
+>> enabled in DMI workgroups pages.)
+>>
+> 
+> Here someone with access to the configuration of the MediaWiki is
+> needed, Lawrence? Jeff?
 
-   Till
+Fixed.
 
-Fujinaka, Todd wrote:
-> I noticed on the Japanese mailing list that they're waiting for comments
-> on their draft of the English specs for OpenPrinting vector from a
-> "Glenn" and an "Olaf." I'm not sure who those people are, but I thought
-> I'd just prod people here just in case.
-> 
-> Thanks,
-> Todd
-> 
-> _______________________________________________
-> Printing-architecture mailing list
-> Printing-architecture@lists.freestandards.org
-> http://lists.freestandards.org/mailman/listinfo/printing-architecture
-> 
-> 
+-ian
+-- 
+Ian Murdock
+317-863-2590
+http://ianmurdock.com/
+
+"Don't look back--something might be gaining on you." --Satchel Paige
 
