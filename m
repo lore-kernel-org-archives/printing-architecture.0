@@ -1,16 +1,10 @@
-Return-Path: <imurdock@gmail.com>
-Message-ID: <44BC01E5.1060703@imurdock.com>
-Date: Mon, 17 Jul 2006 17:32:21 -0400
-From: Ian Murdock <imurdock@imurdock.com>
+Return-Path: <Ide.Kentaro@exc.epson.co.jp>
+Message-ID: <8A33346A3922BD4EB48A18128BAB16AB043526CE@SWA6204.apo.epson.net>
+From: Ide Kentaro <Ide.Kentaro@exc.epson.co.jp>
+Date: Tue, 18 Jul 2006 10:29:57 +0900
 MIME-Version: 1.0
-References: <44B439E2.5050105@Sun.COM> <44B73B41.5080408@fxpsc.co.jp>
-	<44BB5A73.6070506@gmx.net>
-In-Reply-To: <44BB5A73.6070506@gmx.net>
-Content-Type: text/plain; charset=ISO-8859-1; format=flowed
-Content-Transfer-Encoding: 7bit
-Sender: Ian Murdock <imurdock@gmail.com>
-Subject: Re: [Printing-architecture] [Printing-sc] migration of OpenPrinting
- WIKI
+Content-Type: text/plain
+Subject: Re: [Printing-architecture] The English OpenPrinting Vector specs
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.freestandards.org>
 List-Unsubscribe: <http://lists.freestandards.org/mailman/listinfo/printing-architecture>,
@@ -20,25 +14,49 @@ List-Post: <mailto:printing-architecture@lists.freestandards.org>
 List-Help: <mailto:printing-architecture-request@lists.freestandards.org?subject=help>
 List-Subscribe: <http://lists.freestandards.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.freestandards.org?subject=subscribe>
-To: Till Kamppeter <till.kamppeter@gmx.net>
-Cc: ldb@freestandards.org, "Printing-Sc (E-mail)" <printing-sc@freestandards.org>, Norm Jacobs <Norm.Jacobs@Sun.COM>, Jeff Licquia <licquia@debian.org>, Osamu MIHARA <mihara.osamu@fxpsc.co.jp>, printing-architecture <printing-architecture@freestandards.org>
+To: "'Fujinaka, Todd'" <todd.fujinaka@intel.com>, printing-architecture@lists.freestandards.org
 
-Till Kamppeter wrote:
-> Osamu MIHARA wrote:
->> o Link menu for work group is not shown. See capture attached. (It is
->> enabled in DMI workgroups pages.)
->>
-> 
-> Here someone with access to the configuration of the MediaWiki is
-> needed, Lawrence? Jeff?
+Hi,
 
-Fixed.
+Maybe you said about my mail that request for comments for PCM draft.
+If my understanding is correct, you can find out ther name, Glen and Olaf,
+ and their mail address in participant list of "Printing-Japan" ML.
+<http://lists.freestandards.org/mailman/listinfo/printing-japan>
 
--ian
--- 
-Ian Murdock
-317-863-2590
-http://ianmurdock.com/
+On the other hand, I explain simply the back of my mail,
+I asked them checking the PCM draft directly at outside of ML
+before announcement PCM draft's review.
+Glen is my workfellow and the member of steering committee.
+Olaf is one of the people who can understanding Japanese and English.
 
-"Don't look back--something might be gaining on you." --Satchel Paige
+regards,
+--
+Kentaro Ide
+VA Design Engineering  Group
+Seiko Epson Corp.
+
+
+| -----Original Message-----
+| From: printing-architecture-bounces@lists.freestandards.org 
+| [mailto:printing-architecture-bounces@lists.freestandards.org]
+|  On Behalf Of Fujinaka, Todd
+| Sent: Tuesday, July 18, 2006 1:24 AM
+| To: printing-architecture@lists.freestandards.org
+| Subject: [Printing-architecture] The English OpenPrinting Vector specs
+| 
+| 
+| I noticed on the Japanese mailing list that they're waiting 
+| for comments on their draft of the English specs for 
+| OpenPrinting vector from a "Glenn" and an "Olaf." I'm not 
+| sure who those people are, but I thought I'd just prod people 
+| here just in case.
+| 
+| Thanks,
+| Todd
+| 
+| _______________________________________________
+| Printing-architecture mailing list 
+| Printing-architecture@lists.freestandards.org
+| http://lists.freestandards.org/mailman/listinfo/printing-architecture
+| 
 
