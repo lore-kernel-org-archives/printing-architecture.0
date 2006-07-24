@@ -1,14 +1,12 @@
-Return-Path: <mike@easysw.com>
-Message-ID: <44C4DF12.3030704@easysw.com>
-Date: Mon, 24 Jul 2006 10:54:10 -0400
-From: Michael Sweet <mike@easysw.com>
+Return-Path: <todd.fujinaka@intel.com>
+Content-class: urn:content-classes:message
 MIME-Version: 1.0
-References: <44BFD8AA.8060502@sun.com>
-	<44BFDD7A.6000303@gmail.com>	<44BFEAE9.4060703@easysw.com>
-	<44C4C7A0.1000703@gmail.com>
-In-Reply-To: <44C4C7A0.1000703@gmail.com>
-Content-Type: text/plain; charset=ISO-8859-1; format=flowed
-Content-Transfer-Encoding: 7bit
+Content-Type: text/plain;
+	charset="us-ascii"
+Content-Transfer-Encoding: quoted-printable
+Date: Mon, 24 Jul 2006 09:19:16 -0700
+Message-ID: <D90275D3D462F94E9B3892626804E08C01580B06@orsmsx412.amr.corp.intel.com>
+From: "Fujinaka, Todd" <todd.fujinaka@intel.com>
 Subject: Re: [Printing-architecture] resend notes from last week
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.freestandards.org>
@@ -19,39 +17,52 @@ List-Post: <mailto:printing-architecture@lists.freestandards.org>
 List-Help: <mailto:printing-architecture-request@lists.freestandards.org?subject=help>
 List-Subscribe: <http://lists.freestandards.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.freestandards.org?subject=subscribe>
-To: Till Kamppeter <till.kamppeter@gmail.com>
-Cc: Wendy Phillips <wendy.phillips@sun.com>, printing-architecture <printing-architecture@freestandards.org>, "Printing-Sc (E-mail)" <printing-sc@freestandards.org>
+Cc: "Printing-Sc (E-mail)" <printing-sc@freestandards.org>, printing-architecture <printing-architecture@freestandards.org>, Wendy Phillips <wendy.phillips@sun.com>
 
-Till Kamppeter wrote:
-> ...
-> Does this mean that putting a third-party CUPS filter into
-> /usr/lib/cups/filter/ is no violation of FHS?
+>-----Original Message-----
+>From: printing-architecture-bounces@lists.freestandards.org
+>[mailto:printing-architecture-bounces@lists.freestandards.org] On
+Behalf Of
+>Michael Sweet
+>
+>Till Kamppeter wrote:
+>> ...
+>> Does this mean that putting a third-party CUPS filter into
+>> /usr/lib/cups/filter/ is no violation of FHS?
+>
+>Technically yes, since they aren't part of the standard printing
+>system.  That said, there is a long history of putting drivers
+>(or interface scripts, or filters, etc.) in /usr/share, so it
+>might make sense to add a grandfather clause for this, or make
+>it one of several possible directories - OS vendors put them in
+>/usr/share, other vendors in /opt/printing/share, local drivers
+>in /usr/local/share, etc.
 
-Technically yes, since they aren't part of the standard printing
-system.  That said, there is a long history of putting drivers
-(or interface scripts, or filters, etc.) in /usr/share, so it
-might make sense to add a grandfather clause for this, or make
-it one of several possible directories - OS vendors put them in
-/usr/share, other vendors in /opt/printing/share, local drivers
-in /usr/local/share, etc.
+It is my understanding that /usr/share shouldn't change. I think Till is
+forgetting that CUPS is included by the distro, so having things in
+/usr/share/CUPS at install time is not a problem.
 
-> Would then putting a driver and its PPD into the directories
-> 
-> /usr/share/ppd/<supplier>/<manufacturer>/
-> 
-> and
-> 
-> /usr/lib/printdrivers/<supplier>
-> 
-> because these directories are a core part of the OS?
-> 
-> Or do we still need the alternative location /opt/printing/?
+>> Would then putting a driver and its PPD into the directories
+>>
+>> /usr/share/ppd/<supplier>/<manufacturer>/
+>>
+>> and
+>>
+>> /usr/lib/printdrivers/<supplier>
+>>
+>> because these directories are a core part of the OS?
+>>
+>> Or do we still need the alternative location /opt/printing/?
+>
+>I'd say to support both - /usr for OS-supplied stuff, /opt and
+>/usr/local for locally-installed stuff.
 
-I'd say to support both - /usr for OS-supplied stuff, /opt and
-/usr/local for locally-installed stuff.
+It is my understanding nothing should be installed into /usr while the
+system is running normally. There are times when packages are updated,
+but I think the assumption is that updates are not happening during
+"normal use." Also, /usr is the domain of the distro and I doubt they
+want you to touch it without their OK.
 
--- 
-______________________________________________________________________
-Michael Sweet, Easy Software Products           mike at easysw dot com
-Internet Printing and Document Software          http://www.easysw.com
+Thanks,
+Todd
 
