@@ -1,12 +1,13 @@
-Return-Path: <todd.fujinaka@intel.com>
-Content-class: urn:content-classes:message
+Return-Path: <till.kamppeter@gmail.com>
+Message-ID: <44C65452.9040603@gmail.com>
+Date: Tue, 25 Jul 2006 19:26:42 +0200
+From: Till Kamppeter <till.kamppeter@gmail.com>
 MIME-Version: 1.0
-Content-Type: text/plain;
-	charset="us-ascii"
-Content-Transfer-Encoding: quoted-printable
-Date: Tue, 25 Jul 2006 08:25:14 -0700
-Message-ID: <D90275D3D462F94E9B3892626804E08C015CE87E@orsmsx412.amr.corp.intel.com>
-From: "Fujinaka, Todd" <todd.fujinaka@intel.com>
+References: <D90275D3D462F94E9B3892626804E08C015CE87E@orsmsx412.amr.corp.intel.com>
+	<17606.15861.773455.901325@localhost.localdomain>
+In-Reply-To: <17606.15861.773455.901325@localhost.localdomain>
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: 7bit
 Subject: Re: [Printing-architecture] [lsb-discuss] resend notes from lastweek
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.freestandards.org>
@@ -17,63 +18,52 @@ List-Post: <mailto:printing-architecture@lists.freestandards.org>
 List-Help: <mailto:printing-architecture-request@lists.freestandards.org?subject=help>
 List-Subscribe: <http://lists.freestandards.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.freestandards.org?subject=subscribe>
-To: Christopher Yeoh <cyeoh@samba.org>, Till Kamppeter <till.kamppeter@gmail.com>
+To: Christopher Yeoh <cyeoh@samba.org>
 Cc: "Printing-Sc (E-mail)" <printing-sc@freestandards.org>, Michael Sweet <mike@easysw.com>, printing-architecture <printing-architecture@freestandards.org>, lsb-discuss <lsb-discuss@freestandards.org>, freestandards-fhs-discuss@lists.sourceforge.net, Wendy Phillips <wendy.phillips@sun.com>
 
->-----Original Message-----
->From: lsb-discuss-bounces@lists.freestandards.org [mailto:lsb-discuss-
->bounces@lists.freestandards.org] On Behalf Of Christopher Yeoh
+Christopher Yeoh wrote:
+> 
+> Yea, I agree /opt/vendor appears scattered, but symlinking them in
+> through into /opt/lib/ and /opt/share/ should bring them all together
+> without the need for adding a special printing directory to /opt. I'd
+> like to avoid having a special case here unless it can be shown to be
+> really necessary.
 >
->At 2006/7/25 15:06+0200  Till Kamppeter writes:
->> Wichmann, Mats D wrote:
->> > it's possible we could conceive a less scattered scheme for
->> > printer drivers - I'm envisioning something like reserving
->> > /opt/printing with LANANA, then providing a way to manage
->> > that namespace so it can be shared, perhaps through a second
->> > registry.
->> >
->>
->> This means that if LANANA registers /opt/printing we can agree on
-only
->> the pair
->>
->> /opt/printing/ppd/<supplier>/<manufacturer>/
->> /opt/printing/drivers/<supplier>/
->>
->> as the only PPD/driver directories?
->
->So am I correct in assuming that the files if shipped as part
->of a distribution normally go into:
->
->/usr/share/ppd
->/usr/lib/drivers
->
->If there is distro agreement here, we should get this put into the FHS
->as well.
->
->I'm not convinced that we need to add /opt/printing
->
->The /opt/<vendor> technique should still work, and for convenience
->symlinks can be created in /opt/share/ppd and /opt/lib/drivers to the
->actual files. If you use LANANA, strictly speaking you could just
->install straight into /opt/share and /opt/lib because you know there
->won't be any clashes, but I'd still strongly recommend using symlinks
->instead as it keeps the design simpler and consistent.
 
-The argument for /opt/printing is a compromise. OpenPrinting wanted to
-put everything in /usr/share and /usr/lib, and I told them that 3rd
-party vendors who add things after the distro should NOT be using /usr
-(at least that was my understanding).
+Would /opt/share/ppd/<supplier> and /opt/lib/printerdrivers/<supplier>
+violate the FHS or can we define this as the standard places for
+third-party files?
 
-However, OpenPrinting wants a standard directory for PPDs and drivers,
-so they can tell a 3rd-party vendor that there is one place to look for
-those things. I pointed out that they couldn't touch /usr, and they
-needed /opt/<vendor> and then suggested /opt/printing/<vendor> when the
-first was thought to be too scattered.
+> Note that although 3rd party vendors will only have to install into
+> one place, applications that look for them will still need to look in
+> /usr/lib and /usr/local/lib in addition to /opt and at a higher level
+> someone will need to work out precedence rules (say /usr/local ->
+> /opt/ -> /usr in order of decreasing importance)
 
-I had not been able to find an FHS person or active mailing-list to
-bounce these ideas off of and that's another reason that some of these
-suggestions are a bit off.
+In a typical Linux distro with CUPS /usr/share/cups/model will contain
+symlinks to /usr/share/ppd, /usr/local/share/ppd, and /opt/share/ppd and
+so it will see all PPDs. The drivers are found by absolute paths in the
+PPDs. Problem is how will CUPS handle priorities. If there are three
+PPDs with equal NickNames but in different directories, the web
+interface will show three equal list entries.
 
-Todd
+The priorities you suggested are good. /opt overrides /usr and so
+manufacturer drivers (or updates downloaded as LSB packages from
+linuxprinting.org) have priority against distro-included drivers. With
+/usr/local having highest priority, drivers installed from source, for
+example hacked by the admin will be preferrably used. So admins do not
+need to wonder why their patches or CVS updates to not work due to the
+distro's version of the driver still being installed.
+
+> freestandards-fhs-discuss@lists.sourceforge.net is the best place for
+> FHS discussions. Apologies if I hadn't responded to you before, but
+> for some reason SourceForge unsubscribed me from the list and I didn't
+> realise (I'm an FHS person). We go through periods of not much
+> activity until there is enough in the queue to justify a new release.
+
+Would the suggestion with /opt/share/ppd/<supplier> and
+/opt/lib/printerdrivers/<supplier> for third-party drivers need a change
+on FHS?
+
+   Till
 
