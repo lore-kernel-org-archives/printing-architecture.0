@@ -1,13 +1,13 @@
-Return-Path: <till.kamppeter@gmail.com>
-Message-ID: <44C6174B.6020705@gmail.com>
-Date: Tue, 25 Jul 2006 15:06:19 +0200
-From: Till Kamppeter <till.kamppeter@gmail.com>
+Return-Path: <todd.fujinaka@intel.com>
+Content-class: urn:content-classes:message
 MIME-Version: 1.0
-References: <3F62CBEE02D6404E98C65934617EB582441EF5@fmsmsx414.amr.corp.intel.com>
-In-Reply-To: <3F62CBEE02D6404E98C65934617EB582441EF5@fmsmsx414.amr.corp.intel.com>
-Content-Type: text/plain; charset=ISO-8859-1
-Content-Transfer-Encoding: 7bit
-Subject: Re: [Printing-architecture] [lsb-discuss] resend notes from lastweek
+Content-Type: text/plain;
+	charset="us-ascii"
+Content-Transfer-Encoding: quoted-printable
+Date: Tue, 25 Jul 2006 08:04:29 -0700
+Message-ID: <D90275D3D462F94E9B3892626804E08C015CE800@orsmsx412.amr.corp.intel.com>
+From: "Fujinaka, Todd" <todd.fujinaka@intel.com>
+Subject: Re: [Printing-architecture] resend notes from last week
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.freestandards.org>
 List-Unsubscribe: <http://lists.freestandards.org/mailman/listinfo/printing-architecture>,
@@ -17,27 +17,29 @@ List-Post: <mailto:printing-architecture@lists.freestandards.org>
 List-Help: <mailto:printing-architecture-request@lists.freestandards.org?subject=help>
 List-Subscribe: <http://lists.freestandards.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.freestandards.org?subject=subscribe>
-To: "Wichmann, Mats D" <mats.d.wichmann@intel.com>
-Cc: "Printing-Sc (E-mail)" <printing-sc@freestandards.org>, Michael Sweet <mike@easysw.com>, Ian Murdock <imurdock@imurdock.com>, printing-architecture <printing-architecture@freestandards.org>, lsb-discuss <lsb-discuss@freestandards.org>, freestandards-fhs-discuss@lists.sourceforge.net, Wendy Phillips <wendy.phillips@sun.com>
+To: Till Kamppeter <till.kamppeter@gmail.com>, Michael Sweet <mike@easysw.com>
+Cc: Wendy Phillips <wendy.phillips@sun.com>, printing-architecture <printing-architecture@freestandards.org>, "Printing-Sc (E-mail)" <printing-sc@freestandards.org>
 
-Wichmann, Mats D wrote:
-> possibly we also want freestandards-fhs-discuss@lists.sourceforge.net
-> (added with this message) as it's the official list of FHS.
-> 
-> it's possible we could conceive a less scattered scheme for
-> printer drivers - I'm envisioning something like reserving
-> /opt/printing with LANANA, then providing a way to manage
-> that namespace so it can be shared, perhaps through a second
-> registry.
-> 
+>-----Original Message-----
+>From: Till Kamppeter [mailto:till.kamppeter@gmail.com]
+>
+>Is it not enough agreeing on one ofthe pairs
+>
+>/usr/local/share/ppd/<supplier>/<manufacturer>
+>/usr/local/lib/printdrivers/<supplier>
+>
+>and
+>
+>/opt/printing/ppd/<supplier>/<manufacturer>/
+>/opt/printing/drivers/<supplier>/
+>
+>Why are both pairs needed?
 
-This means that if LANANA registers /opt/printing we can agree on only
-the pair
+I will repeat this again: /opt is for third-party vendors, /usr/local is
+for the local sysadmin to install things. These are called out
+separately by the FHS.
 
-/opt/printing/ppd/<supplier>/<manufacturer>/
-/opt/printing/drivers/<supplier>/
+Both should be included.
 
-as the only PPD/driver directories?
-
-   Till
+Todd
 
