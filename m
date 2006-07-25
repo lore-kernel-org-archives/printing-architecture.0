@@ -1,13 +1,14 @@
-Return-Path: <till.kamppeter@gmail.com>
-Message-ID: <44C5FE6D.3010803@gmail.com>
-Date: Tue, 25 Jul 2006 13:20:13 +0200
-From: Till Kamppeter <till.kamppeter@gmail.com>
+Return-Path: <imurdock@gmail.com>
+Message-ID: <44C60094.3030809@imurdock.com>
+Date: Tue, 25 Jul 2006 07:29:24 -0400
+From: Ian Murdock <imurdock@imurdock.com>
 MIME-Version: 1.0
-References: <D90275D3D462F94E9B3892626804E08C015CE3C2@orsmsx412.amr.corp.intel.com>
-	<44C5DD23.1030400@gmail.com> <44C5FBEE.5070901@easysw.com>
-In-Reply-To: <44C5FBEE.5070901@easysw.com>
-Content-Type: text/plain; charset=UTF-8
+References: <D90275D3D462F94E9B3892626804E08C015CE3C2@orsmsx412.amr.corp.intel.com>	<44C5DD23.1030400@gmail.com>
+	<44C5FBEE.5070901@easysw.com> <44C5FE6D.3010803@gmail.com>
+In-Reply-To: <44C5FE6D.3010803@gmail.com>
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
 Content-Transfer-Encoding: 7bit
+Sender: Ian Murdock <imurdock@gmail.com>
 Subject: Re: [Printing-architecture] resend notes from last week
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.freestandards.org>
@@ -18,77 +19,47 @@ List-Post: <mailto:printing-architecture@lists.freestandards.org>
 List-Help: <mailto:printing-architecture-request@lists.freestandards.org?subject=help>
 List-Subscribe: <http://lists.freestandards.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.freestandards.org?subject=subscribe>
-To: Michael Sweet <mike@easysw.com>
-Cc: Wendy Phillips <wendy.phillips@sun.com>, printing-architecture <printing-architecture@freestandards.org>, "Printing-Sc (E-mail)" <printing-sc@freestandards.org>
+To: Till Kamppeter <till.kamppeter@gmail.com>
+Cc: "Printing-Sc (E-mail)" <printing-sc@freestandards.org>, Michael Sweet <mike@easysw.com>, lsb-discuss <lsb-discuss@freestandards.org>, printing-architecture <printing-architecture@freestandards.org>, Wendy Phillips <wendy.phillips@sun.com>
 
-Michael Sweet wrote:
-> Till Kamppeter wrote:
+Till Kamppeter wrote:
+> Michael Sweet wrote:
+>> Till Kamppeter wrote:
+>>> Are more directories needed?
+>>
+>> /usr/local/share/ppd/<supplier>/<manufacturer>
+>> /usr/local/lib/printdrivers/<supplier>
+>>
 > 
->> Fujinaka, Todd wrote:
->>
->>>> -----Original Message-----
->>>> From: Till Kamppeter [mailto:till.kamppeter@gmail.com]
->>>>
->>>> But third-party CUPS drivers go into /usr/lib/cupss/filter and
->>>> /usr/share/cups/model. So there is third-party software which goes into
->>>> /usr.
->>>
->>>
->>> Yes, this is wrong, AFAIK. CUPS can have 3rd party drivers /usr (in
->>> specific places) as long as the distro provides them. Other people (like
->>> printer manufacturers) are not allowed to add to /usr.
->>>
->>>
->>>> So third-party CUPS drivers are violating the standards currently, due
->>>> to requirements of CUPS.
->>>
->>>
->>> Yes. Currently this is what CUPS does. Mike Sweet said he'd change
->>> things around to allow other directories (correct me if I'm wrong).
->>>
->>> I keep harping on the FHS because it's a requirement of LSB, and I'm
->>> working on the LSB project. We'd like to have the printing directory
->>> structure in LSB, but if the printing directory structure conflicts with
->>> the FHS we'd have ambiguities. Ambiguous standard won't be much use to
->>> anyone.
->>>
->>
->> Then I would suggest that we settle on
->>
->> /usr/share/ppd/<supplier>/<manufacturer>/
->>
->> dor the PPDs which make part of the distribution and
->>
->> /usr/lib/printdrivers/<supplier>
->>
->> for the drivers which make part of the distribution.
->>
->> The third-party PPDs go into
->>
->> /opt/printing/ppd/<supplier>/<manufacturer>/
->>
->> and the third-party drivers into
->>
->> /opt/printing/drivers/<supplier>/
->>
->> Are more directories needed?
-> 
+> Is it not enough agreeing on one ofthe pairs
 > 
 > /usr/local/share/ppd/<supplier>/<manufacturer>
 > /usr/local/lib/printdrivers/<supplier>
 > 
+> and
+> 
+> /opt/printing/ppd/<supplier>/<manufacturer>/
+> /opt/printing/drivers/<supplier>/
+> 
+> Why are both pairs needed?
 
-Is it not enough agreeing on one ofthe pairs
+/usr/local is where system administrators can install printer drivers
+(say, downloaded manually from linuxprinting.org), and /opt is where
+vendors can install printer drivers (say, installed via an LSB package
+downloaded from the vendor's website) that aren't shipped as part of
+the operating system. Question: Is /opt/printing consistent with the
+FHS? Wouldn't it be /opt/<vendor>? Yes, that means there's no
+canonical place for vendors to drop printer drivers so they
+are available system-wide, but that's the equivalent problem of
+not having a single path element for third-party
+executables, and should presumably be solved in the same manner.
 
-/usr/local/share/ppd/<supplier>/<manufacturer>
-/usr/local/lib/printdrivers/<supplier>
+(Adding lsb-discuss to this discussion, so we can get FHS feedback.)
 
-and
+-- 
+Ian Murdock
+317-863-2590
+http://ianmurdock.com/
 
-/opt/printing/ppd/<supplier>/<manufacturer>/
-/opt/printing/drivers/<supplier>/
-
-Why are both pairs needed?
-
-   Till
+"Don't look back--something might be gaining on you." --Satchel Paige
 
