@@ -1,14 +1,13 @@
-Return-Path: <till.kamppeter@gmail.com>
-Message-ID: <44C659EA.8000602@gmail.com>
-Date: Tue, 25 Jul 2006 19:50:34 +0200
-From: Till Kamppeter <till.kamppeter@gmail.com>
+Return-Path: <alimpich@us.ibm.com>
+Message-ID: <OF7C2549D6.33BBC75F-ON872571B6.0074EF48-872571B6.00750F6E@us.ibm.com>
+From: Claudia Alimpich <alimpich@us.ibm.com>
+Date: Tue, 25 Jul 2006 15:18:24 -0600
 MIME-Version: 1.0
-References: <D90275D3D462F94E9B3892626804E08C015CE87E@orsmsx412.amr.corp.intel.com>
-	<17606.15861.773455.901325@localhost.localdomain>
-In-Reply-To: <17606.15861.773455.901325@localhost.localdomain>
-Content-Type: text/plain; charset=ISO-8859-1
-Content-Transfer-Encoding: 7bit
-Subject: Re: [Printing-architecture] [lsb-discuss] resend notes from lastweek
+Content-type: multipart/alternative; 
+	Boundary="0__=08BBFB25DFE769D88f9e8a93df938690918c08BBFB25DFE769D8"
+Content-Disposition: inline
+Subject: [Printing-architecture] There will be a FSG Arch meeting on Wed
+	July 26th
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.freestandards.org>
 List-Unsubscribe: <http://lists.freestandards.org/mailman/listinfo/printing-architecture>,
@@ -18,43 +17,43 @@ List-Post: <mailto:printing-architecture@lists.freestandards.org>
 List-Help: <mailto:printing-architecture-request@lists.freestandards.org?subject=help>
 List-Subscribe: <http://lists.freestandards.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.freestandards.org?subject=subscribe>
-To: Christopher Yeoh <cyeoh@samba.org>
-Cc: "Printing-Sc (E-mail)" <printing-sc@freestandards.org>, Michael Sweet <mike@easysw.com>, printing-architecture <printing-architecture@freestandards.org>, lsb-discuss <lsb-discuss@freestandards.org>, freestandards-fhs-discuss@lists.sourceforge.net, Wendy Phillips <wendy.phillips@sun.com>
+To: printing-architecture@freestandards.org
 
-Christopher Yeoh wrote:
-> 
-> Yea, I agree /opt/vendor appears scattered, but symlinking them in
-> through into /opt/lib/ and /opt/share/ should bring them all together
-> without the need for adding a special printing directory to /opt. I'd
-> like to avoid having a special case here unless it can be shown to be
-> really necessary.
-> 
-> We would of course need agreement from all of the major distributions
-> before adding this to the FHS.
-> 
-> Note that although 3rd party vendors will only have to install into
-> one place, applications that look for them will still need to look in
-> /usr/lib and /usr/local/lib in addition to /opt and at a higher level
-> someone will need to work out precedence rules (say /usr/local ->
-> /opt/ -> /usr in order of decreasing importance)
-> 
+--0__=08BBFB25DFE769D88f9e8a93df938690918c08BBFB25DFE769D8
+Content-type: text/plain; charset=US-ASCII
 
-I got the following suggestion from a De Zeurkous <zeurk (at) xs4all.nl>:
 
-------------------------------------------------------------------------
-Personally I'd suggest using /usr/opt for this kind of cases, and put all
-the relatively generic data in there -- libraries in /usr/opt/lib, manual
-pages in /usr/opt/man, perhaps binary symlinks to /usr/opt/bin instead of
-in /usr/bin, etc. For the vendor-specific issue, i'd suggest just adding
-the supplier tag as a directory and then symlinking back --
-/usr/opt/lib/printerdrivers/foo -> /usr/opt/lib/acme/foo and so on.
 
-De Zeurkous
------------
 
-------------------------------------------------------------------------
 
-I think this is somewhat strange, is this FHS compliant?
+There will be an Open Printing conference call Wed July 26th.
 
-   Till
+Day: Wednesdays
+Time:
+12:00-1:00 PM US Pacific time
+1:00-2:00 PM US Mountain time
+3:00-4:00 PM US Eastern time
+9:00-10:00 PM Paris time
+USA Toll Number: 1-484-630-2765
+PASSCODE: 84974
+
+Claudia
+--0__=08BBFB25DFE769D88f9e8a93df938690918c08BBFB25DFE769D8
+Content-type: text/html; charset=US-ASCII
+Content-Disposition: inline
+
+<html><body>
+<p>There will be an Open Printing conference call Wed July 26th. <br>
+<br>
+Day: Wednesdays<font size="4"> </font><br>
+Time:  <font size="4"> </font><br>
+12:00-1:00 PM US Pacific time<font size="4"> </font><br>
+1:00-2:00 PM US Mountain time<font size="4"> </font><br>
+3:00-4:00 PM US Eastern time<font size="4"> </font><br>
+9:00-10:00 PM Paris time<font size="4"> </font><br>
+USA Toll Number: 1-484-630-2765<font size="4"> </font><br>
+PASSCODE: 84974<font size="4"> </font><br>
+<br>
+Claudia</body></html>
+--0__=08BBFB25DFE769D88f9e8a93df938690918c08BBFB25DFE769D8--
 
