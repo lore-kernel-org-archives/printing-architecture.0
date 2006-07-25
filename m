@@ -1,6 +1,6 @@
 Return-Path: <till.kamppeter@gmail.com>
-Message-ID: <44C65452.9040603@gmail.com>
-Date: Tue, 25 Jul 2006 19:26:42 +0200
+Message-ID: <44C659EA.8000602@gmail.com>
+Date: Tue, 25 Jul 2006 19:50:34 +0200
 From: Till Kamppeter <till.kamppeter@gmail.com>
 MIME-Version: 1.0
 References: <D90275D3D462F94E9B3892626804E08C015CE87E@orsmsx412.amr.corp.intel.com>
@@ -28,42 +28,33 @@ Christopher Yeoh wrote:
 > without the need for adding a special printing directory to /opt. I'd
 > like to avoid having a special case here unless it can be shown to be
 > really necessary.
->
-
-Would /opt/share/ppd/<supplier> and /opt/lib/printerdrivers/<supplier>
-violate the FHS or can we define this as the standard places for
-third-party files?
-
+> 
+> We would of course need agreement from all of the major distributions
+> before adding this to the FHS.
+> 
 > Note that although 3rd party vendors will only have to install into
 > one place, applications that look for them will still need to look in
 > /usr/lib and /usr/local/lib in addition to /opt and at a higher level
 > someone will need to work out precedence rules (say /usr/local ->
 > /opt/ -> /usr in order of decreasing importance)
+> 
 
-In a typical Linux distro with CUPS /usr/share/cups/model will contain
-symlinks to /usr/share/ppd, /usr/local/share/ppd, and /opt/share/ppd and
-so it will see all PPDs. The drivers are found by absolute paths in the
-PPDs. Problem is how will CUPS handle priorities. If there are three
-PPDs with equal NickNames but in different directories, the web
-interface will show three equal list entries.
+I got the following suggestion from a De Zeurkous <zeurk (at) xs4all.nl>:
 
-The priorities you suggested are good. /opt overrides /usr and so
-manufacturer drivers (or updates downloaded as LSB packages from
-linuxprinting.org) have priority against distro-included drivers. With
-/usr/local having highest priority, drivers installed from source, for
-example hacked by the admin will be preferrably used. So admins do not
-need to wonder why their patches or CVS updates to not work due to the
-distro's version of the driver still being installed.
+------------------------------------------------------------------------
+Personally I'd suggest using /usr/opt for this kind of cases, and put all
+the relatively generic data in there -- libraries in /usr/opt/lib, manual
+pages in /usr/opt/man, perhaps binary symlinks to /usr/opt/bin instead of
+in /usr/bin, etc. For the vendor-specific issue, i'd suggest just adding
+the supplier tag as a directory and then symlinking back --
+/usr/opt/lib/printerdrivers/foo -> /usr/opt/lib/acme/foo and so on.
 
-> freestandards-fhs-discuss@lists.sourceforge.net is the best place for
-> FHS discussions. Apologies if I hadn't responded to you before, but
-> for some reason SourceForge unsubscribed me from the list and I didn't
-> realise (I'm an FHS person). We go through periods of not much
-> activity until there is enough in the queue to justify a new release.
+De Zeurkous
+-----------
 
-Would the suggestion with /opt/share/ppd/<supplier> and
-/opt/lib/printerdrivers/<supplier> for third-party drivers need a change
-on FHS?
+------------------------------------------------------------------------
+
+I think this is somewhat strange, is this FHS compliant?
 
    Till
 
