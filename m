@@ -1,13 +1,14 @@
-Return-Path: <alimpich@us.ibm.com>
-Message-ID: <OF7C2549D6.33BBC75F-ON872571B6.0074EF48-872571B6.00750F6E@us.ibm.com>
-From: Claudia Alimpich <alimpich@us.ibm.com>
-Date: Tue, 25 Jul 2006 15:18:24 -0600
+Return-Path: <till.kamppeter@gmail.com>
+Message-ID: <44C7C914.7060702@gmail.com>
+Date: Wed, 26 Jul 2006 21:57:08 +0200
+From: Till Kamppeter <till.kamppeter@gmail.com>
 MIME-Version: 1.0
-Content-type: multipart/alternative; 
-	Boundary="0__=08BBFB25DFE769D88f9e8a93df938690918c08BBFB25DFE769D8"
-Content-Disposition: inline
-Subject: [Printing-architecture] There will be a FSG Arch meeting on Wed
-	July 26th
+References: <44C62D3C.9070704@gmail.com> <44C6ED53.9020606@fxpsc.co.jp>
+In-Reply-To: <44C6ED53.9020606@fxpsc.co.jp>
+Content-Type: text/plain; charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+Subject: Re: [Printing-architecture] [Printing-japan] Status of OpenPrinting
+	Vector
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.freestandards.org>
 List-Unsubscribe: <http://lists.freestandards.org/mailman/listinfo/printing-architecture>,
@@ -17,43 +18,68 @@ List-Post: <mailto:printing-architecture@lists.freestandards.org>
 List-Help: <mailto:printing-architecture-request@lists.freestandards.org?subject=help>
 List-Subscribe: <http://lists.freestandards.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.freestandards.org?subject=subscribe>
-To: printing-architecture@freestandards.org
+To: Osamu MIHARA <mihara.osamu@fxpsc.co.jp>
+Cc: printing-japan@freestandards.org, printing-architecture <printing-architecture@freestandards.org>, "Printing-Sc (E-mail)" <printing-sc@freestandards.org>
 
---0__=08BBFB25DFE769D88f9e8a93df938690918c08BBFB25DFE769D8
-Content-type: text/plain; charset=US-ASCII
+Thank you for the files.
+
+I have converted the specs to PDF now, for those who still not have a
+program to read the Open Document Format. Get it here:
+
+http://www.freestandards.org/~till/tmp/pdapi-spec-1.0RC20060711.pdf
+
+Can please someone copy it onto the FTP server at PWG, right into the
+same directory where the .odt file is? Thanks.
+
+I forward your mail to the printing-architecture list, so that everyone
+can have a look at the PDAPI state.
+
+ftp://ftp.pwg.org/pub/pwg/fsg/vector/work-in-progress/pdapi-spec-1.0RC20060=
+711.odt
+ftp://ftp.pwg.org/pub/pwg/fsg/vector/work-in-progress/fsgpd-20060711.tar.gz
+
+   Till
 
 
-
-
-
-There will be an Open Printing conference call Wed July 26th.
-
-Day: Wednesdays
-Time:
-12:00-1:00 PM US Pacific time
-1:00-2:00 PM US Mountain time
-3:00-4:00 PM US Eastern time
-9:00-10:00 PM Paris time
-USA Toll Number: 1-484-630-2765
-PASSCODE: 84974
-
-Claudia
---0__=08BBFB25DFE769D88f9e8a93df938690918c08BBFB25DFE769D8
-Content-type: text/html; charset=US-ASCII
-Content-Disposition: inline
-
-<html><body>
-<p>There will be an Open Printing conference call Wed July 26th. <br>
-<br>
-Day: Wednesdays<font size="4"> </font><br>
-Time:  <font size="4"> </font><br>
-12:00-1:00 PM US Pacific time<font size="4"> </font><br>
-1:00-2:00 PM US Mountain time<font size="4"> </font><br>
-3:00-4:00 PM US Eastern time<font size="4"> </font><br>
-9:00-10:00 PM Paris time<font size="4"> </font><br>
-USA Toll Number: 1-484-630-2765<font size="4"> </font><br>
-PASSCODE: 84974<font size="4"> </font><br>
-<br>
-Claudia</body></html>
---0__=08BBFB25DFE769D88f9e8a93df938690918c08BBFB25DFE769D8--
+Osamu MIHARA wrote:
+> Hi,
+>=20
+> The latest spec and header file have been placed on the PWG ftp server.
+>=20
+> ftp://ftp.pwg.org/pub/pwg/fsg/vector/work-in-progress/pdapi-spec-1.0RC200=
+60711.odt
+>=20
+> ftp://ftp.pwg.org/pub/pwg/fsg/vector/work-in-progress/fsgpd-20060711.tar.=
+gz
+>=20
+> So, current status is that "Higuchi is champion and awaiting paperwork."
+>=20
+> on 2006/07/25 23:39 Till Kamppeter said the following:
+>=20
+>> Hi,
+>>
+>> on the last OpenPrinting Steering Committee telecon we have agreed on
+>> the following concerning the OpenPrinting Vector Driver API:
+>>
+>> ------------------------------------------------------------------------=
+--
+>>
+>> o       Expected to be done within the next period
+>> =B7       Vector Driver API - This is number ONE priority
+>> o       Completed the specification next week.
+>> =A7       Higuchi will send a note to architecture as soon an info ready.
+>> o       Higuchi is champion and awaiting paperwork.
+>> o       The items to be reviewed are
+>> =A7       The specification
+>> =A7       The principle header files that represent that API
+>> ------------------------------------------------------------------------=
+--
+>>
+>>
+>> What is the current state on this?
+>>
+>>    Till
+>=20
+>=20
+>=20
 
