@@ -1,13 +1,12 @@
 Return-Path: <imcdonald@sharplabs.com>
-Message-ID: <789E617C880666438EDEE30C2A3E8D10EE8F@mailsrvnt05.enet.sharplabs.com>
+Message-ID: <789E617C880666438EDEE30C2A3E8D10EE90@mailsrvnt05.enet.sharplabs.com>
 From: "McDonald, Ira" <imcdonald@sharplabs.com>
-Date: Fri, 28 Jul 2006 12:56:18 -0700
+Date: Fri, 28 Jul 2006 13:17:37 -0700
 MIME-Version: 1.0
 Content-Type: text/plain;
 	charset="ISO-8859-1"
-Content-Transfer-Encoding: quoted-printable
-Subject: Re: [Printing-architecture] [Printing-japan] [PDF posted] Status of
-	OpenPrinting Vector
+Subject: Re: [Printing-architecture] Submitting a standard candidate to the
+	FSG OP Steering Commit	tee
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.freestandards.org>
 List-Unsubscribe: <http://lists.freestandards.org/mailman/listinfo/printing-architecture>,
@@ -17,27 +16,51 @@ List-Post: <mailto:printing-architecture@lists.freestandards.org>
 List-Help: <mailto:printing-architecture-request@lists.freestandards.org?subject=help>
 List-Subscribe: <http://lists.freestandards.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.freestandards.org?subject=subscribe>
-To: 'Till Kamppeter' <till.kamppeter@gmail.com>, Osamu MIHARA <mihara.osamu@fxpsc.co.jp>
-Cc: printing-japan@freestandards.org, printing-architecture <printing-architecture@freestandards.org>, "Printing-Sc (E-mail)" <printing-sc@freestandards.org>
+To: 'Till Kamppeter' <till.kamppeter@gmail.com>, Norm Jacobs <Norm.Jacobs@Sun.COM>, "McDonald, Ira" <imcdonald@sharplabs.com>, printing-architecture <printing-architecture@freestandards.org>
 
-Hi,
+Hi Till,
 
-Thanks Till for converting the PDAPI spec to PDF.  Now
-posted to the FTP server in the directory:
+After we reach concensus on the directory hierarchy and
+filename standard, I have volunteered as editor to wrap
+it in FSG document boilerplate/format (like JTAPI spec),
+including a Rationale section that justifies our design
+choices.  
 
-  ftp://ftp.pwg.org/pub/pwg/fsg/vector/work-in-progress
+I'll produce this spec in HTML format, because I don't
+know how to run MS Word or Open Office or whatever.  You
+could help by converting that HTML format to '.doc' and/or
+'.odt' and generating the '.pdf'.
 
-in the file:
+Then, as champion, you fill out the forms (see below)
+and submit them to the Steering Committee, who start
+an open last call to all of FSG Open Printing and any
+other interested parties.
 
-  pdapi-spec-1.0RC20060711.pdf (~1.2MB)
+The complete FSG/OP release procedure (including forms)
+is in the directory:
 
-[By the way, FSG Open Printing (and many other standards
-projects) require the PDF format for document review,
-because the pagination and layout is fixed, making it
-much easier to describe comments and changes.]
+ftp://ftp.pwg.org/pub/pwg/fsg/steering_committee/Release-Procedure
+
+in the files:
+
+  FSG-OpenPrinting-Release-Procedure--V0100-2004-0930.doc
+  FSG-OpenPrinting-Release-Procedure--V0100-2004-0930.pdf
+
+The final version of the form for JTAPI is in directory:
+
+ftp://ftp.pwg.org/pub/pwg/fsg/jobticket/Release_Request
+
+in the files:
+
+  JTAPI-Release-Request-V0102-2005-0715.doc
+  JTAPI-Release-Request-V0102-2005-0715.pdf
+
+Chris Yeoh and others still seem to want more changes,
+so I'm not sure we're that close to concensus yet.
 
 Cheers,
 - Ira
+
 
 Ira McDonald (Musician / Software Architect)
 Blue Roof Music / High North Inc
@@ -46,101 +69,126 @@ phone: +1-906-494-2434
 email: imcdonald@sharplabs.com
 
 > -----Original Message-----
-> From: printing-architecture-bounces@lists.freestandards.org
-> [mailto:printing-architecture-bounces@lists.freestandards.org]
-> On Behalf
-> Of Till Kamppeter
-> Sent: Wednesday, July 26, 2006 3:57 PM
-> To: Osamu MIHARA
-> Cc: printing-japan@freestandards.org; printing-architecture;=20
-> Printing-Sc
-> (E-mail)
-> Subject: Re: [Printing-architecture] [Printing-japan] Status of
-> OpenPrinting Vector
->=20
->=20
-> Thank you for the files.
->=20
-> I have converted the specs to PDF now, for those who still not have a
-> program to read the Open Document Format. Get it here:
->=20
-> http://www.freestandards.org/~till/tmp/pdapi-spec-1.0RC20060711.pdf
->=20
-> Can please someone copy it onto the FTP server at PWG, right into the
-> same directory where the .odt file is? Thanks.
->=20
-> I forward your mail to the printing-architecture list, so=20
-> that everyone
-> can have a look at the PDAPI state.
->=20
-> ftp://ftp.pwg.org/pub/pwg/fsg/vector/work-in-progress/pdapi-sp
-> ec-1.0RC20060711.odt
-> ftp://ftp.pwg.org/pub/pwg/fsg/vector/work-in-progress/fsgpd-20
-060711.tar.gz
-
-   Till
-
-
-Osamu MIHARA wrote:
+> From: Till Kamppeter [mailto:till.kamppeter@gmail.com]
+> Sent: Thursday, July 27, 2006 5:58 AM
+> To: McDonald, Ira; Norm Jacobs
+> Subject: Submitting a standard candidate to the FSG OP Steering
+> Committee
+>
+> 
 > Hi,
->=20
-> The latest spec and header file have been placed on the PWG ftp =
-server.
->=20
->
-ftp://ftp.pwg.org/pub/pwg/fsg/vector/work-in-progress/pdapi-spec-1.0RC20=
-0607
-11.odt
->=20
->
-ftp://ftp.pwg.org/pub/pwg/fsg/vector/work-in-progress/fsgpd-20060711.tar=
-.gz
->=20
-> So, current status is that "Higuchi is champion and awaiting =
-paperwork."
->=20
-> on 2006/07/25 23:39 Till Kamppeter said the following:
->=20
->> Hi,
->>
->> on the last OpenPrinting Steering Committee telecon we have agreed =
-on
->> the following concerning the OpenPrinting Vector Driver API:
->>
->>
-------------------------------------------------------------------------=
---
->>
->> o       Expected to be done within the next period
->> =B7       Vector Driver API - This is number ONE priority
->> o       Completed the specification next week.
->> =A7       Higuchi will send a note to architecture as soon an info =
-ready.
->> o       Higuchi is champion and awaiting paperwork.
->> o       The items to be reviewed are
->> =A7       The specification
->> =A7       The principle header files that represent that API
->>
-------------------------------------------------------------------------=
---
->>
->>
->> What is the current state on this?
->>
->>    Till
->=20
->=20
->=20
+> 
+> the printing directory structure standard is nearly finished 
+> (see cited
+> posting below). If up to the middle of next week no one of the FHS
+> people objects, I will have to submit this standard to be approved by
+> the FSG OpenPrinting Steering Committee as I am assigned to be the
+> champion of this standard candidate.
+> 
+> What do I have to do exactly. Which forms do a have to fill 
+> and what do
+> I have to report? Where do I have to post them?
+> 
+>    Till
+> 
+> 
+> Wendy Phillips wrote:
+> > As a result of the past weeks discussion and the fsg architecture 
+> > meeting today, the following proposal is on the table. It defines 
+> > directories for ppd files and print drivers; placement of 
+> files is based 
+> > on category of provider: distribution, third party vendor, 
+> and system 
+> > administrator.
+> > 
+> > I have added Chris and Mats as you have been contributing to the 
+> > discussion. If you want to add yourself to the fsg 
+> architecture alias, 
+> > it's not high volumne and it would be good to have you.
+> > 
+> > Regards.
+> > 
+> > -Wendy
+> > 
+> > 
+> > 1. Distro supplied files
+> > 
+> >          The filesystem layout as utilized by the 
+> distibutions when the
+> >          ppd files and print drivers are initially 
+> installed on the 		 
+> > system. It is presumed that this will also be used for 
+> patches 			and 
+> > updates created and delivered by the distro.
+> > 
+> >          a. Installation path for ppd files
+> >                  /usr/share/ppd/<supplier>/<manufacturer>/
+> > 
+> >          b. Installation path for print drivers
+> >                  /usr/lib/printdriver/<supplier>
+> > 
+> > 2. Third Party Vendor supplied files
+> > 
+> >          The filesystem layout to be utilized by third party vendors
+> >          for delivery of ppd files, print drivers and other vendor
+> >          supplied files.
+> > 
+> >          a. Installation path for PPD files
+> >                  /opt/print/ppd/<supplier>/<manufacturer>
+> > 
+> >          b. Installation path for print drivers
+> >                  /opt/print/driver/<supplier>
+> > 
+> > 3. Files created, downloaded, or modified by a system administrator.
+> > 
+> >          a. Installation path for PPD files
+> >                  /usr/local/print/ppd/<supplier>/<manufacturer>
+> > 
+> >          b. Installation path for print drivers
+> >                  /usr/local/print/driver/<supplier>
+> > 
+> > 4. Common features
+> >          These features apply to each of the three supplier 
+> categories,
+> >          distro, third party vendor, and administrator.
+> > 
+> >          a. PPD file naming convention
+> >                  <MFGString>-<MDLString>-<driver>-<language>.ppd
+> > 
+> >          b. The contents of the driver directories are entirely
+> >          determined by the supplier.  The path to a driver is found
+> >          by using an absolute path in the ppd file.
+> > 
+> >          c. Install scripts must be  written in Bourne Shell without
+> >          any extensions.
+> > 
+> > 5. Precedence Rules
+> >          Highest precedence is given to the system 
+> administrator which
+> >          allows for system by system modfications as determined by
+> >          support personel.
+> > 
+> >          PPD files
+> >          Admin :                 /usr/local/print/ppd    Highest
+> >          Third Party Vendor :    /opt/print/ppd
+> >          Distro :                /usr/share/ppd          Lowest
+> > 
+> >          Drivers
+> >          Admin :                 /usr/local/print/driver Highest
+> >          Third Party Vendor :    /opt/print/driver
+> >          Distro :                /usr/lib/printdriver    Lowest
+> > 
+> > _______________________________________________
+> > Printing-architecture mailing list
+> > Printing-architecture@lists.freestandards.org
+> > 
+> http://lists.freestandards.org/mailman/listinfo/printing-architecture
+> > 
+> 
 
-_______________________________________________
-Printing-architecture mailing list
-Printing-architecture@lists.freestandards.org
-http://lists.freestandards.org/mailman/listinfo/printing-architecture
-
---=20
+-- 
 No virus found in this outgoing message.
 Checked by AVG Free Edition.
-Version: 7.1.394 / Virus Database: 268.10.5/403 - Release Date: =
-7/28/2006
-=20
+Version: 7.1.394 / Virus Database: 268.10.5/403 - Release Date: 7/28/2006
+ 
 
