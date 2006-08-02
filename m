@@ -1,10 +1,10 @@
 Return-Path: <till.kamppeter@gmail.com>
-Message-ID: <44D0D1FC.5050604@gmail.com>
-Date: Wed, 02 Aug 2006 18:25:32 +0200
+Message-ID: <44D0D5A5.7070900@gmail.com>
+Date: Wed, 02 Aug 2006 18:41:09 +0200
 From: Till Kamppeter <till.kamppeter@gmail.com>
 MIME-Version: 1.0
-References: <789E617C880666438EDEE30C2A3E8D10EEA3@mailsrvnt05.enet.sharplabs.com>
-In-Reply-To: <789E617C880666438EDEE30C2A3E8D10EEA3@mailsrvnt05.enet.sharplabs.com>
+References: <3F62CBEE02D6404E98C65934617EB58254DED6@fmsmsx414.amr.corp.intel.com>
+In-Reply-To: <3F62CBEE02D6404E98C65934617EB58254DED6@fmsmsx414.amr.corp.intel.com>
 Content-Type: text/plain; charset=ISO-8859-1
 Content-Transfer-Encoding: 7bit
 Subject: Re: [Printing-architecture] Proposed filesystem layout for print
@@ -18,28 +18,49 @@ List-Post: <mailto:printing-architecture@lists.freestandards.org>
 List-Help: <mailto:printing-architecture-request@lists.freestandards.org?subject=help>
 List-Subscribe: <http://lists.freestandards.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.freestandards.org?subject=subscribe>
-To: "McDonald, Ira" <imcdonald@sharplabs.com>
-Cc: mats.d.wichmann@intel.com, wendyp@jurassic.eng.sun.com, rusty@samba.org, printing-architecture <printing-architecture@freestandards.org>, Wendy Phillips <wendy.phillips@sun.com>
+To: "Wichmann, Mats D" <mats.d.wichmann@intel.com>
+Cc: wendyp@jurassic.eng.sun.com, rusty@samba.org, printing-architecture <printing-architecture@freestandards.org>, "McDonald, Ira" <imcdonald@sharplabs.com>, Wendy Phillips <wendy.phillips@sun.com>
 
-McDonald, Ira wrote:
-> Hi Till,
+Wichmann, Mats D wrote:
+>>>Except that I do NOT agree that the symlinks should be
+>>>mandatory - if a print software vendor wants to store
+>>>directly and ONLY in '/opt/share/ppd/<supplier>/<mfg>',
+>>>that is sufficient and _preferable_ to the creation of
+>>>more '/opt/<supplier>' directories for a useless level
+>>>of indirection.
+>>
+>>Does the FHS allow files other than symlinks in subdirectories of
+>>/opt/share/ and /opt/lib?
 > 
-> I mostly agree with this set of directory paths - thanks for
-> writing up the summary.
 > 
-> I think that full FHS compliance is important - partly because
-> it's a requirement for inclusion in LSB - and partly because
-> I dislike "reinventing the wheel".
+> Yes, but it does not allow a software packager to
+> put them there.
 > 
-> Except that I do NOT agree that the symlinks should be
-> mandatory - if a print software vendor wants to store
-> directly and ONLY in '/opt/share/ppd/<supplier>/<mfg>',
-> that is sufficient and _preferable_ to the creation of
-> more '/opt/<supplier>' directories for a useless level
-> of indirection.
+> "The directories /opt/bin, /opt/doc, /opt/include, /opt/info, /opt/lib,
+> and /opt/man are reserved for local system administrator use. Packages
+> may provide "front-end" files intended to be placed in (by linking or
+> copying) these reserved directories by the local system administrator,
+> but must function normally in the absence of these reserved
+> directories."
+> 
+> (so it doesn't mention /opt/share explicitly but it seems
+> like the intent is clear)
+> 
 
-Does the FHS allow files other than symlinks in subdirectories of
-/opt/share/ and /opt/lib?
+Does this mean that for third-party vendors only
+
+/opt/<supplier>/
+
+is allowed and nothing outside of this?
+
+Then I see the only solution in
+
+/opt/<supplier>/ppd/<file>.ppd
+
+for the PPD files of this supplier and requiring absolute paths in the
+PPD to the driver, which can be at an arbitrary place in /opt/<supplier>/.
+
+WDYT?
 
    Till
 
