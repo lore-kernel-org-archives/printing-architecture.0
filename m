@@ -1,14 +1,15 @@
-Return-Path: <todd.fujinaka@intel.com>
-Content-class: urn:content-classes:message
+Return-Path: <till.kamppeter@gmail.com>
+Message-ID: <44D0CD44.3090702@gmail.com>
+Date: Wed, 02 Aug 2006 18:05:24 +0200
+From: Till Kamppeter <till.kamppeter@gmail.com>
 MIME-Version: 1.0
-Content-Type: text/plain;
-	charset="us-ascii"
-Content-Transfer-Encoding: quoted-printable
-Date: Fri, 28 Jul 2006 15:16:45 -0700
-Message-ID: <D90275D3D462F94E9B3892626804E08C01676159@orsmsx412.amr.corp.intel.com>
-From: "Fujinaka, Todd" <todd.fujinaka@intel.com>
-Subject: [Printing-architecture] Questions about Ghostscript and IJS and
-	OpenPrinting Vector
+References: <44C80C19.6040700@sun.com>
+	<17608.16706.402317.393006@localhost.localdomain>
+In-Reply-To: <17608.16706.402317.393006@localhost.localdomain>
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: 7bit
+Subject: Re: [Printing-architecture] Proposed filesystem layout for print
+ ppd and driver files
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.freestandards.org>
 List-Unsubscribe: <http://lists.freestandards.org/mailman/listinfo/printing-architecture>,
@@ -18,30 +19,189 @@ List-Post: <mailto:printing-architecture@lists.freestandards.org>
 List-Help: <mailto:printing-architecture-request@lists.freestandards.org?subject=help>
 List-Subscribe: <http://lists.freestandards.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.freestandards.org?subject=subscribe>
-To: printing-architecture <printing-architecture@freestandards.org>, lsb-discuss@freestandards.org
+To: Christopher Yeoh <cyeoh@samba.org>
+Cc: rusty@samba.org, mats.d.wichmann@intel.com, wendyp@jurassic.eng.sun.com, printing-architecture <printing-architecture@freestandards.org>, Wendy Phillips <wendy.phillips@sun.com>
 
-Please forgive the simplicity of these questions, but since I'm going to
-have to evaluate IJS and OpenPrinting vector and then add them to the
-LSB standard, I have a few questions. I'm sure I'll have to dive into
-the code, but I thought some pointers would help me so I don't get lost.
+I would like to agree on a directory layout for printing this week. What
+do you think about Chris' suggestions
 
-First, does the open IJS standard map to the HP standard? The IJS page
-on LinuxPrinting.org appears to be just a skeleton
-www.linuxprinting.org/ijs.
+Distro-supplied:
+  /usr/share/ppd/<supplier>/<manufacturer>/
+  /usr/lib/printdriver/<supplier>/
 
-It looks like both IJS and OpenPrinting vector use ghostscript to
-convert Postscript or PDF to API calls, and then a plugin with the API
-definition talks to the output device. The APIs are defined but I'm not
-quite sure what happens on both sides of that API, so that's just a
-guess. It also looks like there's glue code linked into ghostscript that
-creates the API calls as well as drivers that consume the calls and then
-talk to the output device. Please correct me if I'm wrong.
+Vendor-supplied:
+  /opt/share/ppd/<supplier>/<manufacturer>/ be a symlink to
+    /opt/<vendor>/<undefined_place_in_hierarchy>
+  /opt/lib/printdriver/<supplier>/ be a symlink
+    /opt/<vendor>/<undefined_place_in_hierarchy>
 
-If that's the case, does the driver have any access back into
-ghostscript? If not, can a plugin be provided as a binary with no
-source? (This is with the assumption that we're using the GPL version of
-ghostscript.)
+Local admin:
+  /usr/local/share/ppd/<supplier>/<manufacturer>/
+  /usr/local/lib/printdriver/<supplier>/
 
-Thanks for any help.
-Todd
+to be completely FHS compliant?
+
+Is it really not possible to get the stuff in /opt somewhat simpler and
+stay FHS compliant?
+
+All the rest (file names, scripts, ...) should stay as we already agreed on.
+
+   Till
+
+
+Christopher Yeoh wrote:
+> Hi Wendy,
+> 
+> (Added Rusty to the CC list since he is also an FHS editor)
+> 
+> At 2006/7/26 17:43-0700  Wendy Phillips writes:
+> 
+>>As a result of the past weeks discussion and the fsg architecture 
+>>meeting today, the following proposal is on the table. It defines 
+>>directories for ppd files and print drivers; placement of files is based 
+>>on category of provider: distribution, third party vendor, and system 
+>>administrator.
+> 
+> 
+>>From an FHS point of view I think the proposal is inconsistent.
+> Currently there is symmetry between /usr, /usr/local and /opt.
+> 
+> Eg if something would normally go in /usr/lib if shipped as part of
+> the distribution, then it would go into /usr/local/lib if compiled
+> locally or /opt/lib (via a symlink) if through a 3rd party package.
+> 
+> We'd need a pretty good reason to break that convention.
+> 
+> Also, I'd reiterate that I don't believe a print subdirectory is
+> needed for the /usr/local and /opt hierarchies.
+> 
+> 
+>>1. Distro supplied files
+>>
+>>         The filesystem layout as utilized by the distibutions when the
+>>         ppd files and print drivers are initially installed on the 		 
+>>system. It is presumed that this will also be used for patches 			and 
+>>updates created and delivered by the distro.
+>>
+>>         a. Installation path for ppd files
+>>                 /usr/share/ppd/<supplier>/<manufacturer>/
+>>
+>>         b. Installation path for print drivers
+>>                 /usr/lib/printdriver/<supplier>
+>>
+> 
+> This looks fine.
+> 
+> 
+>>2. Third Party Vendor supplied files
+>>
+>>         The filesystem layout to be utilized by third party vendors
+>>         for delivery of ppd files, print drivers and other vendor
+>>         supplied files.
+>>
+>>         a. Installation path for PPD files
+>>                 /opt/print/ppd/<supplier>/<manufacturer>
+>>
+>>         b. Installation path for print drivers
+>>                 /opt/print/driver/<supplier>
+>>
+> 
+> I'd suggest instead
+> 
+> /opt/share/ppd/<supplier>/<manufacturer>/<ppd_file> be a symlink to /opt/<vendor>/<undefined_place_in_hierarchy>
+> 
+> and 
+> 
+> /opt/lib/printdriver/<supplier>/<print_driver_filename> be a symlink to /opt/vendor/<undefined_place_in_hierarchy>
+> 
+> 
+> Currently *nothing* installs directly under /opt, outside of
+> /opt/<vendor> (except for symlinks) and we'd need a good reason to
+> change that.
+> 
+> 
+>>3. Files created, downloaded, or modified by a system administrator.
+>>
+>>         a. Installation path for PPD files
+>>                 /usr/local/print/ppd/<supplier>/<manufacturer>
+>>
+>>         b. Installation path for print drivers
+>>                 /usr/local/print/driver/<supplier>
+>>
+> 
+> and here:
+> 
+> /usr/local/share/ppd/<supplier>/manufacturer/
+> 
+> and
+> 
+> /usr/local/lib/printdriver/<supplier>
+> 
+>>4. Common features
+>>         These features apply to each of the three supplier categories,
+>>         distro, third party vendor, and administrator.
+>>
+>>         a. PPD file naming convention
+>>                 <MFGString>-<MDLString>-<driver>-<language>.ppd
+> 
+> 
+> are the mfgstring and mdl strings always going to be unique between
+> suppliers and manufacturers? If so the supplier and manufacturer
+> subdirectories can be dropped for the ppd files - which would simply
+> things somewhat for applications.
+> 
+> 
+>>         b. The contents of the driver directories are entirely
+>>         determined by the supplier.  The path to a driver is found
+>>         by using an absolute path in the ppd file.
+> 
+> 
+> If the path to the driver directory is always determined by the
+> contents of the ppd file, and applications should never be capable of
+> finding them through other means, then for /opt we don't need to
+> specify a path for where they are installed. They can simply live
+> somewhere under /opt/<vendor> (exactly where up to the vendor's
+> discretion)
+> 
+> 
+>>         c. Install scripts must be  written in Bourne Shell without
+>>         any extensions.
+> 
+> 
+> I would suggest restricting to the commands and utilities to usage as
+> specified in the LSB specification (the LSB requires a POSIX shell, so
+> maybe do not allow bash extensions).
+> 
+> 
+>>5. Precedence Rules
+>>         Highest precedence is given to the system administrator which
+>>         allows for system by system modfications as determined by
+>>         support personel.
+>>
+>>         PPD files
+>>         Admin :                 /usr/local/print/ppd    Highest
+>>         Third Party Vendor :    /opt/print/ppd
+>>         Distro :                /usr/share/ppd          Lowest
+>>
+>>         Drivers
+>>         Admin :                 /usr/local/print/driver Highest
+>>         Third Party Vendor :    /opt/print/driver
+>>         Distro :                /usr/lib/printdriver    Lowest
+> 
+> 
+> Precendence rules look good. Though if drivers are always discovered
+> through ppd files do you need to specify precedence rules for them? Or
+> if only a driver and not a ppd file is installed under /usr/local do
+> you expect the application to find it even though the ppd file
+> specifies one in /usr/lib/printdriver ?
+> 
+> btw are there distribution representatives on the
+> printing-architecture mailing list? Because we really do need
+> agreement from them on whatever gets settled upon.
+> 
+> (am on planes for the next couple of days so may be slow in replying)
+> 
+> Regards,
+> 
+> Chris
 
