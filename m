@@ -1,14 +1,13 @@
-Return-Path: <Norm.Jacobs@Sun.COM>
-Message-ID: <44D8B209.4040007@Sun.COM>
-Date: Tue, 08 Aug 2006 10:47:21 -0500
-From: Norm Jacobs <Norm.Jacobs@Sun.COM>
+Return-Path: <todd.fujinaka@intel.com>
+Content-class: urn:content-classes:message
 MIME-Version: 1.0
-References: <OF0C82FDB2.1D5FA186-ON872571C4.00502070-872571C4.00503937@us.ibm.com>
-In-Reply-To: <OF0C82FDB2.1D5FA186-ON872571C4.00502070-872571C4.00503937@us.ibm.com>
-Content-Type: text/plain; charset=ISO-8859-1; format=flowed
-Content-Transfer-Encoding: 7bit
-Subject: Re: [Printing-architecture] There will be a FSG Arch meeting on Wed
- Aug	9th
+Content-Type: text/plain;
+	charset="us-ascii"
+Content-Transfer-Encoding: quoted-printable
+Date: Tue, 8 Aug 2006 10:38:06 -0700
+Message-ID: <D90275D3D462F94E9B3892626804E08C0182122F@orsmsx412.amr.corp.intel.com>
+From: "Fujinaka, Todd" <todd.fujinaka@intel.com>
+Subject: [Printing-architecture] IJS example code causing a segfault
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.freestandards.org>
 List-Unsubscribe: <http://lists.freestandards.org/mailman/listinfo/printing-architecture>,
@@ -18,32 +17,21 @@ List-Post: <mailto:printing-architecture@lists.freestandards.org>
 List-Help: <mailto:printing-architecture-request@lists.freestandards.org?subject=help>
 List-Subscribe: <http://lists.freestandards.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.freestandards.org?subject=subscribe>
-To: Claudia Alimpich <alimpich@us.ibm.com>
-Cc: printing-architecture@freestandards.org
+To: printing-architecture <printing-architecture@freestandards.org>
 
-I will not be able to make it.
-       -Norm
+I'm trying to use the example code from ijs-0.35 and I'm getting
+segfaults. I'll go digging some more, but when I do a
 
-Claudia Alimpich wrote:
->
-> There will be an Open Printing conference call Wed August 9th.
->
-> Day: Wednesdays
-> Time:
-> 12:00-1:00 PM US Pacific time
-> 1:00-2:00 PM US Mountain time
-> 3:00-4:00 PM US Eastern time
-> 9:00-10:00 PM Paris time
-> USA Toll Number: 1-484-630-2765
-> PASSCODE: 84974
->
-> Claudia
->
-> ------------------------------------------------------------------------
->
-> _______________________________________________
-> Printing-architecture mailing list
-> Printing-architecture@lists.freestandards.org
-> http://lists.freestandards.org/mailman/listinfo/printing-architecture
->   
+
+./configure; make; gs -sDEVICE=3Dijs -sIjsServer=3D./ijs_server_example =
+-
+sOutputFile=3Dtestout -dNOPAUSE -dBATCH example.ps
+
+I get segmentation faults on SLED10 and FC5, but not on RHEL4U3.
+
+Is this the list for this? I tried desktop_printing, but that list is no
+longer available.
+
+Thanks,
+Todd
 
