@@ -1,13 +1,14 @@
-Return-Path: <alimpich@us.ibm.com>
-Message-ID: <OF0C82FDB2.1D5FA186-ON872571C4.00502070-872571C4.00503937@us.ibm.com>
-From: Claudia Alimpich <alimpich@us.ibm.com>
-Date: Tue, 8 Aug 2006 08:36:14 -0600
+Return-Path: <Norm.Jacobs@Sun.COM>
+Message-ID: <44D8B209.4040007@Sun.COM>
+Date: Tue, 08 Aug 2006 10:47:21 -0500
+From: Norm Jacobs <Norm.Jacobs@Sun.COM>
 MIME-Version: 1.0
-Content-type: multipart/alternative; 
-	Boundary="0__=08BBFB57DFC3A6E08f9e8a93df938690918c08BBFB57DFC3A6E0"
-Content-Disposition: inline
-Subject: [Printing-architecture] There will be a FSG Arch meeting on Wed Aug
-	9th
+References: <OF0C82FDB2.1D5FA186-ON872571C4.00502070-872571C4.00503937@us.ibm.com>
+In-Reply-To: <OF0C82FDB2.1D5FA186-ON872571C4.00502070-872571C4.00503937@us.ibm.com>
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: 7bit
+Subject: Re: [Printing-architecture] There will be a FSG Arch meeting on Wed
+ Aug	9th
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.freestandards.org>
 List-Unsubscribe: <http://lists.freestandards.org/mailman/listinfo/printing-architecture>,
@@ -17,43 +18,32 @@ List-Post: <mailto:printing-architecture@lists.freestandards.org>
 List-Help: <mailto:printing-architecture-request@lists.freestandards.org?subject=help>
 List-Subscribe: <http://lists.freestandards.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.freestandards.org?subject=subscribe>
-To: printing-architecture@freestandards.org
+To: Claudia Alimpich <alimpich@us.ibm.com>
+Cc: printing-architecture@freestandards.org
 
---0__=08BBFB57DFC3A6E08f9e8a93df938690918c08BBFB57DFC3A6E0
-Content-type: text/plain; charset=US-ASCII
+I will not be able to make it.
+       -Norm
 
-
-
-
-
-There will be an Open Printing conference call Wed August 9th.
-
-Day: Wednesdays
-Time:
-12:00-1:00 PM US Pacific time
-1:00-2:00 PM US Mountain time
-3:00-4:00 PM US Eastern time
-9:00-10:00 PM Paris time
-USA Toll Number: 1-484-630-2765
-PASSCODE: 84974
-
-Claudia
---0__=08BBFB57DFC3A6E08f9e8a93df938690918c08BBFB57DFC3A6E0
-Content-type: text/html; charset=US-ASCII
-Content-Disposition: inline
-
-<html><body>
-<p>There will be an Open Printing conference call Wed August 9th. <br>
-<br>
-Day: Wednesdays<font size="4"> </font><br>
-Time:  <font size="4"> </font><br>
-12:00-1:00 PM US Pacific time<font size="4"> </font><br>
-1:00-2:00 PM US Mountain time<font size="4"> </font><br>
-3:00-4:00 PM US Eastern time<font size="4"> </font><br>
-9:00-10:00 PM Paris time<font size="4"> </font><br>
-USA Toll Number: 1-484-630-2765<font size="4"> </font><br>
-PASSCODE: 84974<font size="4"> </font><br>
-<br>
-Claudia</body></html>
---0__=08BBFB57DFC3A6E08f9e8a93df938690918c08BBFB57DFC3A6E0--
+Claudia Alimpich wrote:
+>
+> There will be an Open Printing conference call Wed August 9th.
+>
+> Day: Wednesdays
+> Time:
+> 12:00-1:00 PM US Pacific time
+> 1:00-2:00 PM US Mountain time
+> 3:00-4:00 PM US Eastern time
+> 9:00-10:00 PM Paris time
+> USA Toll Number: 1-484-630-2765
+> PASSCODE: 84974
+>
+> Claudia
+>
+> ------------------------------------------------------------------------
+>
+> _______________________________________________
+> Printing-architecture mailing list
+> Printing-architecture@lists.freestandards.org
+> http://lists.freestandards.org/mailman/listinfo/printing-architecture
+>   
 
