@@ -1,12 +1,13 @@
 Return-Path: <alimpich@us.ibm.com>
-Message-ID: <OF6A96C5E9.49D0DB43-ON872571D3.00693DAF-872571D3.006979CE@us.ibm.com>
+Message-ID: <OF7333159C.BC9AE5F0-ON872571D3.006AB13F-872571D3.006AEC88@us.ibm.com>
 From: Claudia Alimpich <alimpich@us.ibm.com>
-Date: Wed, 23 Aug 2006 13:12:02 -0600
+Date: Wed, 23 Aug 2006 13:27:51 -0600
 MIME-Version: 1.0
 Content-type: multipart/alternative; 
-	Boundary="0__=08BBFB40DFFABB3F8f9e8a93df938690918c08BBFB40DFFABB3F"
+	Boundary="0__=08BBFB40DFF937AF8f9e8a93df938690918c08BBFB40DFF937AF"
 Content-Disposition: inline
-Subject: [Printing-architecture] New new call in number for FSG Arch meeting
+Subject: [Printing-architecture] There will be a FSG Arch meeting on Wed Aug
+	23rd
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.freestandards.org>
 List-Unsubscribe: <http://lists.freestandards.org/mailman/listinfo/printing-architecture>,
@@ -18,30 +19,52 @@ List-Subscribe: <http://lists.freestandards.org/mailman/listinfo/printing-archit
 	<mailto:printing-architecture-request@lists.freestandards.org?subject=subscribe>
 To: printing-architecture@freestandards.org
 
---0__=08BBFB40DFFABB3F8f9e8a93df938690918c08BBFB40DFFABB3F
+--0__=08BBFB40DFF937AF8f9e8a93df938690918c08BBFB40DFF937AF
 Content-type: text/plain; charset=US-ASCII
 
 
 
 
 
-I have a new new all in number for the FSG Arch meeting:
+This is the newest conference code that we will use from this point on.
+Please delete the previous conference code.
 
-Toll-free US: 1-866-312-6342
-Toll (outside US): 1-763-391-6805
+There will be an Open Printing conference call Wed August 23rd.
 
-Conference code: 582 658 5482
---0__=08BBFB40DFFABB3F8f9e8a93df938690918c08BBFB40DFFABB3F
+Day: Wednesdays
+
+Time:
+   12:00-1:00 PM US Pacific time
+   1:00-2:00 PM US Mountain time
+   3:00-4:00 PM US Eastern time
+   9:00-10:00 PM Paris time
+
+USA Toll-free Number: 866-312-6342
+Toll Number: 763-391-6805
+Conference Code: 582 658 5482
+
+Claudia
+--0__=08BBFB40DFF937AF8f9e8a93df938690918c08BBFB40DFF937AF
 Content-type: text/html; charset=US-ASCII
 Content-Disposition: inline
 
 <html><body>
-<p>I have a new <u>new</u> all in number for the FSG Arch meeting:<br>
+<p>This is the newest conference code that we will use from this point on. Please delete the previous conference code.<br>
 <br>
-Toll-free US: 1-866-312-6342<br>
-Toll (outside US): 1-763-391-6805<br>
+There will be an Open Printing conference call Wed August 23rd. <br>
 <br>
-Conference code: 582 658 5482<br>
-</body></html>
---0__=08BBFB40DFFABB3F8f9e8a93df938690918c08BBFB40DFFABB3F--
+Day: Wednesdays<font size="4"> </font><br>
+<br>
+Time: 
+<ul>12:00-1:00 PM US Pacific time <br>
+1:00-2:00 PM US Mountain time <br>
+3:00-4:00 PM US Eastern time <br>
+9:00-10:00 PM Paris time <br>
+</ul>
+USA Toll-free Number: 866-312-6342<br>
+Toll Number: 763-391-6805 <br>
+Conference Code: 582 658 5482 <br>
+<br>
+Claudia</body></html>
+--0__=08BBFB40DFF937AF8f9e8a93df938690918c08BBFB40DFF937AF--
 
