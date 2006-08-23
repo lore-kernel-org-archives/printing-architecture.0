@@ -1,14 +1,14 @@
-Return-Path: <todd.fujinaka@intel.com>
-Content-class: urn:content-classes:message
+Return-Path: <Norm.Jacobs@Sun.COM>
+Message-ID: <44ECA7CA.6070808@Sun.COM>
+Date: Wed, 23 Aug 2006 14:08:58 -0500
+From: Norm Jacobs <Norm.Jacobs@Sun.COM>
 MIME-Version: 1.0
-Content-Type: text/plain;
-	charset="us-ascii"
-Content-Transfer-Encoding: quoted-printable
-Date: Wed, 23 Aug 2006 12:08:21 -0700
-Message-ID: <D90275D3D462F94E9B3892626804E08C01A7CEEA@orsmsx412.amr.corp.intel.com>
-From: "Fujinaka, Todd" <todd.fujinaka@intel.com>
-Subject: Re: [Printing-architecture] Don't forget new call in number
-	fortoday's FSG Arch meeting
+References: <OF3404A31C.25D24118-ON872571D1.00829343-872571D1.0083301C@us.ibm.com>
+In-Reply-To: <OF3404A31C.25D24118-ON872571D1.00829343-872571D1.0083301C@us.ibm.com>
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: 7bit
+Subject: Re: [Printing-architecture] There will be a FSG Arch meeting on Wed
+ Aug	23rd !!!!! NEW CALL IN NUMBERS!!!!!!!
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.freestandards.org>
 List-Unsubscribe: <http://lists.freestandards.org/mailman/listinfo/printing-architecture>,
@@ -21,61 +21,32 @@ List-Subscribe: <http://lists.freestandards.org/mailman/listinfo/printing-archit
 To: Claudia Alimpich <alimpich@us.ibm.com>
 Cc: printing-architecture@freestandards.org
 
-I hate to say "me too" but I'm having the exact same problem.
+The concall number doesn't work for me (or Wendy)
 
->-----Original Message-----
->From: printing-architecture-bounces@lists.freestandards.org
->[mailto:printing-architecture-bounces@lists.freestandards.org] On
-Behalf Of
->Ian Murdock
->Sent: Wednesday, August 23, 2006 12:05 PM
->To: Claudia Alimpich
->Cc: printing-architecture@freestandards.org
->Subject: Re: [Printing-architecture] Don't forget new call in number
->fortoday's FSG Arch meeting
+       -Norm
+Claudia Alimpich wrote:
 >
->It's saying the passcode isn't valid "at this time". -ian
+> There will be an Open Printing conference call Wed August 23rd.
 >
->On 8/23/06, Claudia Alimpich <alimpich@us.ibm.com> wrote:
->>
->>
->>
->> !!!!! DON'T FORGET THE NEW CALL IN NUMBER !!!!!
->>
->>  There will be an Open Printing conference call Wed August 23rd.
->>
->>  Day: Wednesdays
->>
->>  Time:
->> 12:00-1:00 PM US Pacific time
->>  1:00-2:00 PM US Mountain time
->>  3:00-4:00 PM US Eastern time
->>  9:00-10:00 PM Paris time
->>  USA Toll-free Number: 866-312-6342
->>  Toll Number: 763-391-6805
->>  Conference Code: 343 139 3341
->>
->>  Claudia
->>
->>
->> _______________________________________________
->> Printing-architecture mailing list
->> Printing-architecture@lists.freestandards.org
->> http://lists.freestandards.org/mailman/listinfo/printing-architecture
->>
->>
->>
+> Day: Wednesdays
 >
+> Time:
 >
->--
->Ian Murdock
->317-863-2590
->http://ianmurdock.com/
+>       12:00-1:00 PM US Pacific time
+>       1:00-2:00 PM US Mountain time
+>       3:00-4:00 PM US Eastern time
+>       9:00-10:00 PM Paris time
 >
->"Don't look back--something might be gaining on you." --Satchel Paige
+> USA Toll-free Number: 866-312-6342
+> Toll Number: 763-391-6805
+> Conference Code: 343 139 3341
 >
->_______________________________________________
->Printing-architecture mailing list
->Printing-architecture@lists.freestandards.org
->http://lists.freestandards.org/mailman/listinfo/printing-architecture
+> Claudia
+> ------------------------------------------------------------------------
+>
+> _______________________________________________
+> Printing-architecture mailing list
+> Printing-architecture@lists.freestandards.org
+> http://lists.freestandards.org/mailman/listinfo/printing-architecture
+>   
 
