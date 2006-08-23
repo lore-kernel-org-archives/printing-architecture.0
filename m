@@ -1,13 +1,13 @@
 Return-Path: <alimpich@us.ibm.com>
-Message-ID: <OF3404A31C.25D24118-ON872571D1.00829343-872571D1.0083301C@us.ibm.com>
+Message-ID: <OF482D3B2D.ED31FA7A-ON872571D3.00655EC6-872571D3.00659405@us.ibm.com>
 From: Claudia Alimpich <alimpich@us.ibm.com>
-Date: Mon, 21 Aug 2006 17:52:53 -0600
+Date: Wed, 23 Aug 2006 12:29:28 -0600
 MIME-Version: 1.0
 Content-type: multipart/alternative; 
-	Boundary="0__=08BBFB42DF1115D38f9e8a93df938690918c08BBFB42DF1115D3"
+	Boundary="0__=08BBFB40DFF6D8568f9e8a93df938690918c08BBFB40DFF6D856"
 Content-Disposition: inline
-Subject: [Printing-architecture] There will be a FSG Arch meeting on Wed Aug
-	23rd !!!!! NEW CALL IN NUMBERS!!!!!!!
+Subject: [Printing-architecture] Don't forget new call in number for today's
+	FSG Arch meeting
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.freestandards.org>
 List-Unsubscribe: <http://lists.freestandards.org/mailman/listinfo/printing-architecture>,
@@ -19,12 +19,14 @@ List-Subscribe: <http://lists.freestandards.org/mailman/listinfo/printing-archit
 	<mailto:printing-architecture-request@lists.freestandards.org?subject=subscribe>
 To: printing-architecture@freestandards.org
 
---0__=08BBFB42DF1115D38f9e8a93df938690918c08BBFB42DF1115D3
+--0__=08BBFB40DFF6D8568f9e8a93df938690918c08BBFB40DFF6D856
 Content-type: text/plain; charset=US-ASCII
 
 
 
 
+
+!!!!! DON'T FORGET THE NEW CALL IN NUMBER !!!!!
 
 There will be an Open Printing conference call Wed August 23rd.
 
@@ -41,12 +43,14 @@ Toll Number: 763-391-6805
 Conference Code: 343 139 3341
 
 Claudia
---0__=08BBFB42DF1115D38f9e8a93df938690918c08BBFB42DF1115D3
+--0__=08BBFB40DFF6D8568f9e8a93df938690918c08BBFB40DFF6D856
 Content-type: text/html; charset=US-ASCII
 Content-Disposition: inline
 
 <html><body>
-<p>There will be an Open Printing conference call Wed August 23rd. <br>
+<p>!!!!! DON'T FORGET THE NEW CALL IN NUMBER !!!!!<br>
+<br>
+There will be an Open Printing conference call Wed August 23rd. <br>
 <br>
 Day: Wednesdays<font size="4"> </font><br>
 <br>
@@ -61,5 +65,5 @@ Toll Number: 763-391-6805 <br>
 Conference Code: 343 139 3341 <br>
 <br>
 Claudia</body></html>
---0__=08BBFB42DF1115D38f9e8a93df938690918c08BBFB42DF1115D3--
+--0__=08BBFB40DFF6D8568f9e8a93df938690918c08BBFB40DFF6D856--
 
