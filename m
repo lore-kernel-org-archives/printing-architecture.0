@@ -1,13 +1,13 @@
-Return-Path: <alimpich@us.ibm.com>
-Message-ID: <OF7333159C.BC9AE5F0-ON872571D3.006AB13F-872571D3.006AEC88@us.ibm.com>
-From: Claudia Alimpich <alimpich@us.ibm.com>
-Date: Wed, 23 Aug 2006 13:27:51 -0600
+Return-Path: <spillner@kde.org>
+From: Josef Spillner <spillner@kde.org>
+Date: Mon, 28 Aug 2006 11:58:27 +0200
 MIME-Version: 1.0
-Content-type: multipart/alternative; 
-	Boundary="0__=08BBFB40DFF937AF8f9e8a93df938690918c08BBFB40DFF937AF"
 Content-Disposition: inline
-Subject: [Printing-architecture] There will be a FSG Arch meeting on Wed Aug
-	23rd
+Message-Id: <200608281158.32769.spillner@kde.org>
+Content-Type: text/plain;
+  charset="utf-8"
+Content-Transfer-Encoding: 7bit
+Subject: [Printing-architecture] Printer dialog generation
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.freestandards.org>
 List-Unsubscribe: <http://lists.freestandards.org/mailman/listinfo/printing-architecture>,
@@ -17,54 +17,37 @@ List-Post: <mailto:printing-architecture@lists.freestandards.org>
 List-Help: <mailto:printing-architecture-request@lists.freestandards.org?subject=help>
 List-Subscribe: <http://lists.freestandards.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.freestandards.org?subject=subscribe>
-To: printing-architecture@freestandards.org
+To: printing-architecture@lists.freestandards.org
 
---0__=08BBFB40DFF937AF8f9e8a93df938690918c08BBFB40DFF937AF
-Content-type: text/plain; charset=US-ASCII
+Hello,
 
+a few weeks ago I talked to some people about the possibility of having print 
+dialogs generated from a formal schema and some GUI generation hints.
+[I hope this is the correct list for such topics.]
 
+I'm involved with research in this area, particularly in ad-hoc usage of web 
+services, but most of the concepts apply to any schema-based GUI generation. 
+A schema in the world of printing would be a data model which includes 
+choices about the paper size, printer capabilities and document-specific 
+options.
 
+Creating type-safe dialogs which represent the schema are not an issue, there 
+are proven concepts and we have work in progress code for KDE, for example. 
+However, creating GUIs which follow HCI standards and are at least basically 
+usable is a challenge. Layouting algorithms in particular are not well 
+explored yet and almost always need human correction.
 
+As someone not coming from the world of printers, I find PPD files slightly 
+weird, to put it mildly. They contain both information about printers and 
+interaction code akin to an embedded programming language. However, they seem 
+to contain all the necessary information needed for user configuration, 
+especially multi-language strings.
 
-This is the newest conference code that we will use from this point on.
-Please delete the previous conference code.
+Now there are a few questions to those who could help:
+* What are the issues with current print dialogs that could or should be 
+solved with GUI generation?
+* Are there other printer description formats I should have a look at?
+* Is there any work being done in this area already?
 
-There will be an Open Printing conference call Wed August 23rd.
-
-Day: Wednesdays
-
-Time:
-   12:00-1:00 PM US Pacific time
-   1:00-2:00 PM US Mountain time
-   3:00-4:00 PM US Eastern time
-   9:00-10:00 PM Paris time
-
-USA Toll-free Number: 866-312-6342
-Toll Number: 763-391-6805
-Conference Code: 582 658 5482
-
-Claudia
---0__=08BBFB40DFF937AF8f9e8a93df938690918c08BBFB40DFF937AF
-Content-type: text/html; charset=US-ASCII
-Content-Disposition: inline
-
-<html><body>
-<p>This is the newest conference code that we will use from this point on. Please delete the previous conference code.<br>
-<br>
-There will be an Open Printing conference call Wed August 23rd. <br>
-<br>
-Day: Wednesdays<font size="4"> </font><br>
-<br>
-Time: 
-<ul>12:00-1:00 PM US Pacific time <br>
-1:00-2:00 PM US Mountain time <br>
-3:00-4:00 PM US Eastern time <br>
-9:00-10:00 PM Paris time <br>
-</ul>
-USA Toll-free Number: 866-312-6342<br>
-Toll Number: 763-391-6805 <br>
-Conference Code: 582 658 5482 <br>
-<br>
-Claudia</body></html>
---0__=08BBFB40DFF937AF8f9e8a93df938690918c08BBFB40DFF937AF--
+Josef
 
