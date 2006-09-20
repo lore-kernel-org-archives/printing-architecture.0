@@ -1,12 +1,14 @@
-Return-Path: <alimpich@us.ibm.com>
-Message-ID: <OFDDFD1703.9864B4C6-ON872571EF.0065357A-872571EF.00657D5C@us.ibm.com>
-From: Claudia Alimpich <alimpich@us.ibm.com>
-Date: Wed, 20 Sep 2006 12:28:31 -0600
+Return-Path: <todd.fujinaka@intel.com>
+Content-class: urn:content-classes:message
 MIME-Version: 1.0
-Content-type: multipart/alternative; 
-	Boundary="0__=08BBFB7CDFF6B3EA8f9e8a93df938690918c08BBFB7CDFF6B3EA"
-Content-Disposition: inline
-Subject: [Printing-architecture] Can't call into meeting today
+Content-Type: text/plain;
+	charset="us-ascii"
+Content-Transfer-Encoding: quoted-printable
+Date: Wed, 20 Sep 2006 12:17:53 -0700
+Message-ID: <D90275D3D462F94E9B3892626804E08C01F3094D@orsmsx412.amr.corp.intel.com>
+From: "Fujinaka, Todd" <todd.fujinaka@intel.com>
+Subject: [Printing-architecture] Proposed CUPS interfaces to be added to LSB
+	3.2
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.freestandards.org>
 List-Unsubscribe: <http://lists.freestandards.org/mailman/listinfo/printing-architecture>,
@@ -16,26 +18,17 @@ List-Post: <mailto:printing-architecture@lists.freestandards.org>
 List-Help: <mailto:printing-architecture-request@lists.freestandards.org?subject=help>
 List-Subscribe: <http://lists.freestandards.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.freestandards.org?subject=subscribe>
-To: printing-architecture@freestandards.org
+To: printing-architecture <printing-architecture@freestandards.org>
 
---0__=08BBFB7CDFF6B3EA8f9e8a93df938690918c08BBFB7CDFF6B3EA
-Content-type: text/plain; charset=US-ASCII
+This is a repeat of Ira's email, sent at the request of some people on
+the printing architecture conference call who missed the initial email.
+This is just my preliminary research on the interfaces from CUPS that we
+would like to add to the LSB.
 
+Please check the wiki page and edit it or comment as necessary
 
+http://www.freestandards.org/en/CUPS
 
-
-
-Something came up and I will not be able to call into the meeting today.
-Many of you should have the leader code.
-Sorry,
-Claudia
---0__=08BBFB7CDFF6B3EA8f9e8a93df938690918c08BBFB7CDFF6B3EA
-Content-type: text/html; charset=US-ASCII
-Content-Disposition: inline
-
-<html><body>
-<p>Something came up and I will not be able to call into the meeting today. Many of you should have the leader code.<br>
-Sorry,<br>
-Claudia</body></html>
---0__=08BBFB7CDFF6B3EA8f9e8a93df938690918c08BBFB7CDFF6B3EA--
+Thanks,
+Todd
 
