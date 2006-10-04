@@ -1,13 +1,11 @@
-Return-Path: <alimpich@us.ibm.com>
-Message-ID: <OF9CCD9AE2.F8CB53D9-ON872571FD.0014F742-872571FD.001557BA@us.ibm.com>
-From: Claudia Alimpich <alimpich@us.ibm.com>
-Date: Tue, 3 Oct 2006 21:53:07 -0600
+Return-Path: <Norm.Jacobs@Sun.COM>
+Message-ID: <45241950.4070208@Sun.COM>
+Date: Wed, 04 Oct 2006 15:28:00 -0500
+From: Norm Jacobs <Norm.Jacobs@Sun.COM>
 MIME-Version: 1.0
-Content-type: multipart/alternative; 
-	Boundary="0__=08BBFB6EDF8771D28f9e8a93df938690918c08BBFB6EDF8771D2"
-Content-Disposition: inline
-Subject: [Printing-architecture] There will be a FSG Arch meeting on Wed Oct
-	4th
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: 7bit
+Subject: [Printing-architecture] OPVP specification and use of UPDF
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.freestandards.org>
 List-Unsubscribe: <http://lists.freestandards.org/mailman/listinfo/printing-architecture>,
@@ -17,52 +15,27 @@ List-Post: <mailto:printing-architecture@lists.freestandards.org>
 List-Help: <mailto:printing-architecture-request@lists.freestandards.org?subject=help>
 List-Subscribe: <http://lists.freestandards.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.freestandards.org?subject=subscribe>
-To: printing-architecture@freestandards.org
-
---0__=08BBFB6EDF8771D28f9e8a93df938690918c08BBFB6EDF8771D2
-Content-type: text/plain; charset=US-ASCII
+To: printing-architecture <printing-architecture@freestandards.org>, "Printing-Sc (E-mail)" <printing-sc@freestandards.org>, printing-japan@freestandards.org
 
 
+At today's architecture meeting, we discussed the proposed OPVP 
+specification in it's current form.  We discussed the issue with the 
+method of describing properties that was brought up at the last 
+OpenPrinting SC meeting.  The issue is that the specification does not 
+require a conforming implementation to support a specific scheme, but 
+instead simply states that the implementation can support any scheme it 
+likes.  The specification goes on to use UPDF as an example.
 
+What we are looking for is a statement in the specification that selects 
+a required scheme to facilitate standard
+description of properties so that there is a known method of specifying 
+properties.  Without this, it becomes less likely that renderers and 
+drivers will be able to be used outside of the specific renderer or 
+driver that they were designed to be used with.
 
+We would appreciate it if someone would come to the OpenPrinting 
+Steering Committee meeting next week prepared to respond to this.  Once 
+this is addressed, we can move forward with the process.
 
-A few people has said (Till and Wendy) that they cannot attend the FSG Arch
-meeting on Wed 10/4. Is everyone else able to call in? If not please post
-to the mailing list. The plan is to have a meeting, unless you hear
-otherwise.
-
-Day: Wednesdays
-
-Time:
-   12:00-1:00 PM US Pacific time
-   1:00-2:00 PM US Mountain time
-   3:00-4:00 PM US Eastern time
-   9:00-10:00 PM Paris time
-
-USA Toll-free Number: 866-312-6342
-Toll Number: 763-391-6805
-Conference Code: 582 658 5482
-
-Claudia
---0__=08BBFB6EDF8771D28f9e8a93df938690918c08BBFB6EDF8771D2
-Content-type: text/html; charset=US-ASCII
-Content-Disposition: inline
-
-<html><body>
-<p>A few people has said (Till and Wendy) that they cannot attend the FSG Arch meeting on Wed 10/4. Is everyone else able to call in? If not please post to the mailing list. The plan is to have a meeting, unless you hear otherwise.<br>
-<br>
-Day: Wednesdays<font size="4"> </font><br>
-<br>
-Time: 
-<ul>12:00-1:00 PM US Pacific time <br>
-1:00-2:00 PM US Mountain time <br>
-3:00-4:00 PM US Eastern time <br>
-9:00-10:00 PM Paris time <br>
-</ul>
-USA Toll-free Number: 866-312-6342<br>
-Toll Number: 763-391-6805 <br>
-Conference Code: 582 658 5482 <br>
-<br>
-Claudia</body></html>
---0__=08BBFB6EDF8771D28f9e8a93df938690918c08BBFB6EDF8771D2--
+       -Norm
 
