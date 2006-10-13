@@ -1,15 +1,11 @@
-Return-Path: <Takaaki.Higuchi@Sun.COM>
-Date: Thu, 05 Oct 2006 11:43:13 +0900
-From: Takaaki Higuchi <Takaaki.Higuchi@Sun.COM>
-In-reply-to: <45241950.4070208@Sun.COM>
-Sender: Takaaki.Higuchi@Sun.COM
-Message-id: <45247141.5040405@Sun.COM>
-MIME-version: 1.0
-Content-type: text/plain; format=flowed; charset=ISO-8859-1
-Content-transfer-encoding: 7BIT
-References: <45241950.4070208@Sun.COM>
-Subject: Re: [Printing-architecture] [Printing-sc] OPVP specification and
-	use of UPDF
+Return-Path: <imcdonald@sharplabs.com>
+Message-ID: <789E617C880666438EDEE30C2A3E8D10EF39@mailsrvnt05.enet.sharplabs.com>
+From: "McDonald, Ira" <imcdonald@sharplabs.com>
+Date: Fri, 13 Oct 2006 12:12:30 -0700
+MIME-Version: 1.0
+Content-Type: text/plain;
+	charset="ISO-8859-1"
+Subject: [Printing-architecture] Any FSG interest in Hawaii in February 2007?
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.freestandards.org>
 List-Unsubscribe: <http://lists.freestandards.org/mailman/listinfo/printing-architecture>,
@@ -19,36 +15,43 @@ List-Post: <mailto:printing-architecture@lists.freestandards.org>
 List-Help: <mailto:printing-architecture-request@lists.freestandards.org?subject=help>
 List-Subscribe: <http://lists.freestandards.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.freestandards.org?subject=subscribe>
-To: printing-architecture <printing-architecture@freestandards.org>, "Printing-Sc (E-mail)" <printing-sc@freestandards.org>, printing-japan@freestandards.org
+To: printing-summit@freestandards.org, printing-architecture@lists.freestandards.org
 
-as far as I am concerned, I don't mind such updates if it does not
-affect to existing codes(sample implementations).
+Hi,
 
-could you provide us the exact pages and lines for me to expedite
-our local discussions ?
+Please reply with your opinions soon.
 
-thanks in advance,
-Takaaki Higuchi
+On behalf of the PWG Steering Committee, these questions:
 
-Norm Jacobs wrote:
-> At today's architecture meeting, we discussed the proposed OPVP 
-> specification in it's current form.  We discussed the issue with the 
-> method of describing properties that was brought up at the last 
-> OpenPrinting SC meeting.  The issue is that the specification does not 
-> require a conforming implementation to support a specific scheme, but 
-> instead simply states that the implementation can support any scheme it 
-> likes.  The specification goes on to use UPDF as an example.
-> 
-> What we are looking for is a statement in the specification that selects 
-> a required scheme to facilitate standard
-> description of properties so that there is a known method of specifying 
-> properties.  Without this, it becomes less likely that renderers and 
-> drivers will be able to be used outside of the specific renderer or 
-> driver that they were designed to be used with.
-> 
-> We would appreciate it if someone would come to the OpenPrinting 
-> Steering Committee meeting next week prepared to respond to this.  Once 
-> this is addressed, we can move forward with the process.
-> 
->        -Norm
+(1) Does the FSG Printing Summit want to have another joint
+    meeting with the PWG in Hawaii in February 2007?
+
+(2) Does the FSG Open Printing team want to have a joint
+    meeting with the PWG in Hawaii, even without PS?
+
+Jerry Thrasher (Lexmark, PWG Secretary) asked me to pass
+on these probable costs (from current IEEE-ISTO planning):
+
+(1) Hotel on Maui - $200/day plus tax
+
+(2) Meeting Room Fee - $75-100/day
+
+In my opinion, Hawaii will be too expensive and February 
+is too soon for another Printing Summit or FSG/OP meeting.
+A better time would be the April or May PWG meeting.
+
+Cheers,
+- Ira
+
+Ira McDonald (Musician / Software Architect)
+Blue Roof Music / High North Inc
+PO Box 221  Grand Marais, MI  49839
+phone: +1-906-494-2434
+email: imcdonald@sharplabs.com
+
+-- 
+No virus found in this outgoing message.
+Checked by AVG Free Edition.
+Version: 7.1.408 / Virus Database: 268.13.3/474 - Release Date: 10/13/2006
+ 
 
