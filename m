@@ -1,14 +1,13 @@
-Return-Path: <mike@easysw.com>
-Message-ID: <452FF11C.1060702@easysw.com>
-Date: Fri, 13 Oct 2006 16:03:40 -0400
-From: Michael Sweet <mike@easysw.com>
+Return-Path: <alimpich@us.ibm.com>
+Message-ID: <OF80D282B4.AF2F4BA4-ON8725720A.006512E9-8725720A.006529C0@us.ibm.com>
+From: Claudia Alimpich <alimpich@us.ibm.com>
+Date: Tue, 17 Oct 2006 12:24:56 -0600
 MIME-Version: 1.0
-References: <789E617C880666438EDEE30C2A3E8D10EF39@mailsrvnt05.enet.sharplabs.com>
-In-Reply-To: <789E617C880666438EDEE30C2A3E8D10EF39@mailsrvnt05.enet.sharplabs.com>
-Content-Type: text/plain; charset=UTF-8; format=flowed
-Content-Transfer-Encoding: 7bit
-Subject: Re: [Printing-architecture] Any FSG interest in Hawaii in February
- 2007?
+Content-type: multipart/alternative; 
+	Boundary="0__=08BBF899DFF694798f9e8a93df938690918c08BBF899DFF69479"
+Content-Disposition: inline
+Subject: [Printing-architecture] There will be a FSG Arch meeting on Wed Oct
+	18th
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.freestandards.org>
 List-Unsubscribe: <http://lists.freestandards.org/mailman/listinfo/printing-architecture>,
@@ -18,20 +17,50 @@ List-Post: <mailto:printing-architecture@lists.freestandards.org>
 List-Help: <mailto:printing-architecture-request@lists.freestandards.org?subject=help>
 List-Subscribe: <http://lists.freestandards.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.freestandards.org?subject=subscribe>
-To: "McDonald, Ira" <imcdonald@sharplabs.com>
-Cc: printing-architecture@lists.freestandards.org, printing-summit@freestandards.org
+To: printing-architecture@freestandards.org
 
-McDonald, Ira wrote:
-> ...
-> In my opinion, Hawaii will be too expensive and February 
-> is too soon for another Printing Summit or FSG/OP meeting.
-> A better time would be the April or May PWG meeting.
+--0__=08BBF899DFF694798f9e8a93df938690918c08BBF899DFF69479
+Content-type: text/plain; charset=US-ASCII
 
-The expense is OK (given where the meeting would be ;), but I also
-don't see a need for another summit so soon.
 
--- 
-______________________________________________________________________
-Michael Sweet, Easy Software Products           mike at easysw dot com
-Internet Printing and Publishing Software        http://www.easysw.com
+
+
+
+
+There will be an Open Printing conference call on Wednesday October 18th.
+
+Day: Wednesdays
+
+Time:
+   12:00-1:00 PM US Pacific time
+   1:00-2:00 PM US Mountain time
+   3:00-4:00 PM US Eastern time
+   9:00-10:00 PM Paris time
+
+USA Toll-free Number: 866-312-6342
+Toll Number: 763-391-6805
+Conference Code: 582 658 5482
+
+Claudia
+--0__=08BBF899DFF694798f9e8a93df938690918c08BBF899DFF69479
+Content-type: text/html; charset=US-ASCII
+Content-Disposition: inline
+
+<html><body>
+<p>There will be an Open Printing conference call on Wednesday October 18th.<br>
+<br>
+Day: Wednesdays<font size="4"> </font><br>
+<br>
+Time: 
+<ul>12:00-1:00 PM US Pacific time <br>
+1:00-2:00 PM US Mountain time <br>
+3:00-4:00 PM US Eastern time <br>
+9:00-10:00 PM Paris time <br>
+</ul>
+USA Toll-free Number: 866-312-6342<br>
+Toll Number: 763-391-6805 <br>
+Conference Code: 582 658 5482 <br>
+<br>
+Claudia</body></html>
+--0__=08BBF899DFF694798f9e8a93df938690918c08BBF899DFF69479--
 
