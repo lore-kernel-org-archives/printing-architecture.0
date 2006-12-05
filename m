@@ -1,12 +1,11 @@
-Return-Path: <Norm.Jacobs@Sun.COM>
-Message-ID: <456F6492.30104@Sun.COM>
-Date: Thu, 30 Nov 2006 17:09:06 -0600
-From: Norm Jacobs <Norm.Jacobs@Sun.COM>
+Return-Path: <glen.petrie@eitc.epson.com>
+Message-ID: <2F7D63A21DB2C74EB8EB8C09AF667DB00559C8C0@eitc220.eitc.epson.com>
+From: "Petrie, Glen" <glen.petrie@eitc.epson.com>
+Date: Tue, 5 Dec 2006 07:44:58 -0800 
 MIME-Version: 1.0
-Content-Type: text/plain; charset=ISO-8859-1
-Content-Transfer-Encoding: 7bit
-Subject: [Printing-architecture] Ira McDonald has been selected as the new
-	FSG OpenPrinting Chair
+Content-Type: text/plain
+Subject: Re: [Printing-architecture] [printing-driver] PDL Reference Manuals
+	and documentation ne	eded
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.freestandards.org>
 List-Unsubscribe: <http://lists.freestandards.org/mailman/listinfo/printing-architecture>,
@@ -16,11 +15,23 @@ List-Post: <mailto:printing-architecture@lists.freestandards.org>
 List-Help: <mailto:printing-architecture-request@lists.freestandards.org?subject=help>
 List-Subscribe: <http://lists.freestandards.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.freestandards.org?subject=subscribe>
-To: printing-announce@freestandards.org
-Cc: printing-driver@freestandards.org, printing-spool@freestandards.org, "Printing-Sc (E-mail)" <printing-sc@freestandards.org>, printing-architecture <printing-architecture@freestandards.org>, "McDonald, Ira" <imcdonald@sharplabs.com>, printing-japan@freestandards.org, printing-jobticket@freestandards.org
+To: "'printing-driver@lists.freestandards.org'" <printing-driver@freestandards.org>, "Printing-Sc (E-mail)" <printing-sc@freestandards.org>, printing-architecture <printing-architecture@freestandards.org>
+Cc: Hin-Tak Leung <hintak_leung@yahoo.co.uk>, Ian Murdock <imurdock@imurdock.com>, Jeff Licquia <licquia@debian.org>
 
-A couple of months ago, I decided to step down as the FSG OpenPrinting Chair.  Over the course of the intervening months, the OpenPrinting Steering committee has gone through a process of nominating candidates for and electing a new Chair.  This process has come to completion and we have elected a new chair.  As my last official act, it gives me great pleasure to announce the selection of Ira McDonald as the new Chair of the FSG OpenPrinting Workgroup.  Ira has been involved in the printing industry and standards since the dawn of time (or at least close to).  He has been instrumental in defining and editing printing related standards in multiple organizations and has acted as a liason to some of those organization through his tenure in FSG OpenPrinting. 
-Congratulations Ira, we look forward to a productive year.
+-Another problem is that the FSG site uses a modified version of the GNU
+FDL, which might not be compatible with the standard GNU FDL (all undocprint
+content uses the standard GNU FDL)
 
-    -Norm
+-----------
+
+Till,
+
+Does this mean that FSG/OpenPrinting API, presentations, etc are now under
+GNU FDL?   I assumed that like JTAPI, these things were under a MIT or, more
+specifically, not under GNU licenses!  I know this is not exactly the same
+issues as with GPL or LGPL licenses but there was a big discussion of this
+matter early in OpenPrinting's history and I would like to know if things
+have changed since linuxprinting.org moved/merged/integrated with fsg????
+
+glen
 
