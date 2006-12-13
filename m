@@ -1,14 +1,11 @@
-Return-Path: <till.kamppeter@gmail.com>
-Message-ID: <45805710.7070401@gmail.com>
-Date: Wed, 13 Dec 2006 20:40:00 +0100
-From: Till Kamppeter <till.kamppeter@gmail.com>
+Return-Path: <imcdonald@sharplabs.com>
+Message-ID: <789E617C880666438EDEE30C2A3E8D100105A594@mailsrvnt05.enet.sharplabs.com>
+From: "McDonald, Ira" <imcdonald@sharplabs.com>
+Date: Wed, 13 Dec 2006 11:56:29 -0800
 MIME-Version: 1.0
-References: <789E617C880666438EDEE30C2A3E8D100105A593@mailsrvnt05.enet.sharplabs.com>
-In-Reply-To: <789E617C880666438EDEE30C2A3E8D100105A593@mailsrvnt05.enet.sharplabs.com>
-Content-Type: text/plain; charset=UTF-8; format=flowed
-Content-Transfer-Encoding: 7bit
-Subject: Re: [Printing-architecture] Claudia - FSG Arch meeting on Wed 13t
- h	Dec, please?
+Content-Type: text/plain;
+	charset="utf-8"
+Subject: Re: [Printing-architecture] YES - FSG Arch meeting on Wed 13 Dec
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.freestandards.org>
 List-Unsubscribe: <http://lists.freestandards.org/mailman/listinfo/printing-architecture>,
@@ -18,8 +15,41 @@ List-Post: <mailto:printing-architecture@lists.freestandards.org>
 List-Help: <mailto:printing-architecture-request@lists.freestandards.org?subject=help>
 List-Subscribe: <http://lists.freestandards.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.freestandards.org?subject=subscribe>
-To: "McDonald, Ira" <imcdonald@sharplabs.com>
+To: 'Till Kamppeter' <till.kamppeter@gmail.com>
 Cc: printing-architecture@freestandards.org
+
+Hi,
+
+YES - we are meeting - I will chair for Claudia
+
+Time:
+12:00-1:00 PM US Pacific time
+1:00-2:00 PM US Mountain time
+3:00-4:00 PM US Eastern time
+9:00-10:00 PM Paris time
+
+USA Toll-free Number: 866-312-6342
+Toll Number: 763-391-6805
+Conference Code: 582 658 5482
+
+Cheers,
+- Ira
+
+Ira McDonald (Musician / Software Architect)
+Chair - FSG Open Printing Steering Committee
+Blue Roof Music / High North Inc
+PO Box 221  Grand Marais, MI  49839
+phone: +1-906-494-2434
+email: imcdonald@sharplabs.com
+
+-----Original Message-----
+From: Till Kamppeter [mailto:till.kamppeter@gmail.com]
+Sent: Wednesday, December 13, 2006 2:40 PM
+To: McDonald, Ira
+Cc: printing-architecture@freestandards.org
+Subject: Re: [Printing-architecture] Claudia - FSG Arch meeting on Wed
+13t h Dec, please?
+
 
 I am here and will call in.
 
@@ -61,14 +91,16 @@ McDonald, Ira wrote:
 > Here's a link to organizer John Cherry's excellent summary
 > (which includes an action item for FSG/OP on page 10):
 > 
-> http://groups.osdl.org/apps/group_public/download.php/3016/dam3_summary.pdf
+>
+http://groups.osdl.org/apps/group_public/download.php/3016/dam3_summary.pdf
 > 
 > (all one line, if it wrapped in your email reader)
 > 
 > Here's the link to the fascinating collection of
 > slides from almost every participant:
 > 
-> http://developer.osdl.org/dev/desktop_architects/index.php/DAM-3_preparation
+>
+http://developer.osdl.org/dev/desktop_architects/index.php/DAM-3_preparation
 > _slides
 > 
 > (all one line, if it wrapped in your email reader)
@@ -87,4 +119,11 @@ McDonald, Ira wrote:
 > phone: +1-906-494-2434
 > email: imcdonald@sharplabs.com
 > 
+
+-- 
+No virus found in this outgoing message.
+Checked by AVG Free Edition.
+Version: 7.5.432 / Virus Database: 268.15.18/585 - Release Date: 12/13/2006
+11:49 AM
+ 
 
