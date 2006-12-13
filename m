@@ -1,12 +1,9 @@
-Return-Path: <till.kamppeter@gmail.com>
-Message-ID: <45805D9D.8000501@gmail.com>
-Date: Wed, 13 Dec 2006 21:07:57 +0100
-From: Till Kamppeter <till.kamppeter@gmail.com>
+Return-Path: <glen.petrie@eitc.epson.com>
+Message-ID: <2F7D63A21DB2C74EB8EB8C09AF667DB00559C8EA@eitc220.eitc.epson.com>
+From: "Petrie, Glen" <glen.petrie@eitc.epson.com>
+Date: Wed, 13 Dec 2006 12:15:04 -0800
 MIME-Version: 1.0
-References: <789E617C880666438EDEE30C2A3E8D100105A594@mailsrvnt05.enet.sharplabs.com>
-In-Reply-To: <789E617C880666438EDEE30C2A3E8D100105A594@mailsrvnt05.enet.sharplabs.com>
-Content-Type: text/plain; charset=UTF-8; format=flowed
-Content-Transfer-Encoding: 7bit
+Content-Type: text/plain
 Subject: Re: [Printing-architecture] YES - FSG Arch meeting on Wed 13 Dec
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.freestandards.org>
@@ -17,8 +14,19 @@ List-Post: <mailto:printing-architecture@lists.freestandards.org>
 List-Help: <mailto:printing-architecture-request@lists.freestandards.org?subject=help>
 List-Subscribe: <http://lists.freestandards.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.freestandards.org?subject=subscribe>
-To: "McDonald, Ira" <imcdonald@sharplabs.com>
+To: 'Till Kamppeter' <till.kamppeter@gmail.com>, "McDonald, Ira" <imcdonald@sharplabs.com>
 Cc: printing-architecture@freestandards.org
+
+It is about 15 after the hour and no one seems to be on the conference call.
+
+-----Original Message-----
+From: printing-architecture-bounces@lists.freestandards.org
+[mailto:printing-architecture-bounces@lists.freestandards.org] On Behalf Of
+Till Kamppeter
+Sent: Wednesday, December 13, 2006 12:08 PM
+To: McDonald, Ira
+Cc: printing-architecture@freestandards.org
+Subject: Re: [Printing-architecture] YES - FSG Arch meeting on Wed 13 Dec
 
 Ira, I have dialled in. Please call with the leader code to start the 
 conference.
@@ -101,14 +109,16 @@ McDonald, Ira wrote:
 >> (which includes an action item for FSG/OP on page 10):
 >>
 >>
-> http://groups.osdl.org/apps/group_public/download.php/3016/dam3_summary.pdf
+>
+http://groups.osdl.org/apps/group_public/download.php/3016/dam3_summary.pdf
 >> (all one line, if it wrapped in your email reader)
 >>
 >> Here's the link to the fascinating collection of
 >> slides from almost every participant:
 >>
 >>
-> http://developer.osdl.org/dev/desktop_architects/index.php/DAM-3_preparation
+>
+http://developer.osdl.org/dev/desktop_architects/index.php/DAM-3_preparation
 >> _slides
 >>
 >> (all one line, if it wrapped in your email reader)
@@ -128,4 +138,9 @@ McDonald, Ira wrote:
 >> email: imcdonald@sharplabs.com
 >>
 > 
+
+_______________________________________________
+Printing-architecture mailing list
+Printing-architecture@lists.freestandards.org
+http://lists.freestandards.org/mailman/listinfo/printing-architecture
 
