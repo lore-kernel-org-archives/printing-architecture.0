@@ -1,12 +1,11 @@
 Return-Path: <imcdonald@sharplabs.com>
-Message-ID: <789E617C880666438EDEE30C2A3E8D100105A59C@mailsrvnt05.enet.sharplabs.com>
+Message-ID: <789E617C880666438EDEE30C2A3E8D100105A5B0@mailsrvnt05.enet.sharplabs.com>
 From: "McDonald, Ira" <imcdonald@sharplabs.com>
-Date: Tue, 19 Dec 2006 10:43:58 -0800
+Date: Tue, 9 Jan 2007 10:49:41 -0800 
 MIME-Version: 1.0
 Content-Type: text/plain;
 	charset="ISO-8859-1"
-Subject: Re: [Printing-architecture] [Printing-sc] Public Review of FSG/OP
-	PDAPI/1.0 (Vector Print		er Driver)
+Subject: [Printing-architecture] [Reminder] Next FSG Arch - Wed 10 Jan 2007
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.freestandards.org>
 List-Unsubscribe: <http://lists.freestandards.org/mailman/listinfo/printing-architecture>,
@@ -16,57 +15,14 @@ List-Post: <mailto:printing-architecture@lists.freestandards.org>
 List-Help: <mailto:printing-architecture-request@lists.freestandards.org?subject=help>
 List-Subscribe: <http://lists.freestandards.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.freestandards.org?subject=subscribe>
-To: "'printing-architecture@freestandards.org'" <printing-architecture@freestandards.org>, "'printing-sc@lists.freestandards.org'" <printing-sc@freestandards.org>
-
-Hi PDAPI editors,
-
-Unfortunately I've been down with a bad cold/flu
-for the last week and we're moving down to Ann
-Arbor within the next few days.
-
-My comments on the PDAPI spec will be delayed
-until sometime later next week.
-
-Cheers,
-- Ira
-
-Ira McDonald (Musician / Software Architect)
-Chair - FSG Open Printing Steering Committee
-Blue Roof Music / High North Inc
-PO Box 221  Grand Marais, MI  49839
-phone: +1-906-494-2434
-email: imcdonald@sharplabs.com
-
------Original Message-----
-From: printing-sc-bounces@lists.freestandards.org
-[mailto:printing-sc-bounces@lists.freestandards.org]On Behalf Of
-McDonald, Ira
-Sent: Thursday, December 14, 2006 1:19 PM
-To: 'printing-architecture@freestandards.org';
-'printing-sc@lists.freestandards.org'
-Subject: Re: [Printing-sc] Public Review of FSG/OP PDAPI/1.0 (Vector
-Print er Driver)
-
+To: 'Claudia Alimpich' <alimpich@us.ibm.com>, printing-architecture@freestandards.org
 
 Hi,
 
-I have not seen any public comments in the last month.
-
-All - PLEASE take a few minutes at least to look at this
-spec - the technical aspects are quite good - the English
-usage is somewhat rough-edged and better explanations are
-needed some places.
-
-I am currently working my way (slowly) through the entire
-spec - the 20061205 version below w/ section/line numbers.
-But due to the OSDL DAM3 conference last week, I will not
-be finished until about a week from now.  I'll send my
-comments ASAP.
-
-I believe we should try to polish up the English version
-of this spec before adopting it as an FSG standard.  So we
-should discuss it on the FSG/OP Arch and FSG/OP Steering 
-Committee mailing lists.
+Reminder that we should have an FSG Architecture telecon
+tomorrow.  Till and I could talk some about the OSDL
+Desktop Architects meeting in Portland in December.
+I brought away an action item for FSG Open Printing folks.
 
 Cheers,
 - Ira
@@ -76,125 +32,84 @@ Chair - FSG Open Printing Steering Committee
 Blue Roof Music / High North Inc
 PO Box 221  Grand Marais, MI  49839
 phone: +1-906-494-2434
-email: imcdonald@sharplabs.com
-
+email: imcdonald@sharplabs.com 
 -----Original Message-----
-From: McDonald, Ira 
-Sent: Wednesday, December 06, 2006 8:48 PM
-To: McDonald, Ira; 'printing-architecture@freestandards.org';
-'pwg-announce@pwg.org'; 'printing-sc@lists.freestandards.org';
-STDS-2600@listserv.ieee.org
-Cc: 'alimpich@us.ibm.com'; 'harryl@us.ibm.com'
-Subject: RE: [Printing-sc] Public Review of FSG/OP PDAPI/1.0 (Vector
-Printer Driver)
+From: printing-architecture-bounces@lists.freestandards.org
+[mailto:printing-architecture-bounces@lists.freestandards.org]On Behalf Of
+Claudia Alimpich
+Sent: Thursday, December 14, 2006 1:37 PM
+To: printing-architecture@freestandards.org
+Subject: Re: [Printing-architecture] Next FSG Arch - Wed 10 Jan 2007
 
 
-Hi,
 
-REMINDER - public review period ends on 13 December.
+The meeting on 12/27 is cancelled and meetings every other Wednesday
+starting on 1/10/07 have been set up. Happy holidays to everyone and talk to
+you all after the first of the year. 
+Claudia 
 
-In order to facilitate comments, Osamu Mihara-san
-has reissued the spec with section numbers (at all
-levels) and line numbers (on each page).  Please
-comment on this version, archived in the directory:
+printing-architecture-bounces@lists.freestandards.org wrote on 12/14/2006
+10:56:13 AM:
 
-  ftp://ftp.pwg.org/pub/pwg/fsg/vector/
-
-in the file:
-
-  pdapi-spec-1.0-20061205.pdf
-
-Cheers,
-- Ira
-
-Ira McDonald (Musician / Software Architect)
-Chair - FSG Open Printing Steering Committee
-Blue Roof Music / High North Inc
-PO Box 221  Grand Marais, MI  49839
-phone: +1-906-494-2434
-email: imcdonald@sharplabs.com
-
------Original Message-----
-From: printing-sc-bounces@lists.freestandards.org
-[mailto:printing-sc-bounces@lists.freestandards.org]On Behalf Of
-McDonald, Ira
-Sent: Monday, November 13, 2006 3:28 PM
-To: 'printing-architecture@freestandards.org'; 'pwg-announce@pwg.org';
-'printing-sc@lists.freestandards.org'; STDS-2600@listserv.ieee.org
-Cc: 'alimpich@us.ibm.com'; 'harryl@us.ibm.com'
-Subject: [Printing-sc] Public Review of FSG/OP PDAPI/1.0 (Vector Printer
-Driver)
-
-
-Greetings,                                     Monday (13 November 2006)
-
-[This public review ends on Wednesday 13 December 2006 at 5pm US EST.]
-
-The Free Standards Group Open Printing Steering Committee (FSG/OP SC)
-has reviewed the "FSG/OP Vector Printer Driver API (PDAPI) Version 1.0
-RC3" specification, aka OPVP (Open Printing Vector Printing), and found
-it to be technically complete and without any remaining open issues (the
-section on Text Operations has been removed and will be addressed in a
-future version).
-
-The FSG/OP SC requests public review for 30 days of the PDAPI/1.0 RC3
-specification, archived in the directory:
-
-  ftp://ftp.pwg.org/pub/pwg/fsg/vector/work-in-progress
-
-in the file:
-
-  pdapi-spec-1.0rc20061020.pdf
-
-Please send your comments to the FSG/OP Architecture mailing list:
-
-  mailto:printing-architecture@freestandards.org
-
-Thank you,
-- Ira (for the FSG Open Printing Steering Committee)
-
-PS - Claudia - please forward to CIP4 JDF mailing list.
-Harry - please forward to AFP and other mailing lists.
-
-Ira McDonald (Musician / Software Architect)
-Blue Roof Music / High North Inc
-PO Box 221  Grand Marais, MI  49839
-phone: +1-906-494-2434
-email: imcdonald@sharplabs.com
+> Hi,
+> 
+> We should skip the 27 December call, so our next
+> FSG Architecture call will be 10 January.
+> 
+> [Claudia - please cancel 27 December (if you have
+> it scheduled with the conference call provider)
+> and schedule 10 January (and subsequent ones).]
+> 
+> Wednesday 10 January 2007
+> 
+>   12:00-1:00 PM US Pacific time
+>   1:00-2:00 PM US Mountain time
+>   3:00-4:00 PM US Eastern time
+>   9:00-10:00 PM Paris time
+> 
+> USA Toll-free Number: 866-312-6342
+> Toll Number: 763-391-6805
+> Conference Code: 582 658 5482
+> 
+> This is good, because our next FSG/OP Steering 
+> Committee monthly call will be 15/16 January.
+> 
+> The FSG/OP SC will be discussing individual responses
+> to Shida-san's proposal for a three-year "mid-term 
+> vision or plan for FSG/OP".  
+> 
+> Members of this FSG Arch mailing list - please send
+> FSG/OP goals and objectives for 2007-2009 timeframe.
+> Just send an email with your ideas to this list with
+> a subject line including "FSG/OP Roadmap".
+> 
+> Cheers,
+> - Ira
+> 
+> Ira McDonald (Musician / Software Architect)
+> Chair - FSG Open Printing Steering Committee
+> Blue Roof Music / High North Inc
+> PO Box 221  Grand Marais, MI  49839
+> phone: +1-906-494-2434
+> email: imcdonald@sharplabs.com
+> 
+> -- 
+> No virus found in this outgoing message.
+> Checked by AVG Free Edition.
+> Version: 7.5.432 / Virus Database: 268.15.18/586 - Release Date:
+12/13/2006
+> 6:13 PM
+>  
+> 
+> _______________________________________________
+> Printing-architecture mailing list
+> Printing-architecture@lists.freestandards.org
+> http://lists.freestandards.org/mailman/listinfo/printing-architecture
 
 -- 
 No virus found in this outgoing message.
 Checked by AVG Free Edition.
-Version: 7.1.409 / Virus Database: 268.14.4/532 - Release Date: 11/13/2006
+Version: 7.5.432 / Virus Database: 268.16.8/621 - Release Date: 1/9/2007
+1:37 PM
  
 
-_______________________________________________
-Printing-sc mailing list
-Printing-sc@lists.freestandards.org
-http://lists.freestandards.org/mailman/listinfo/printing-sc
-
--- 
-No virus found in this outgoing message.
-Checked by AVG Free Edition.
-Version: 7.5.432 / Virus Database: 268.15.13/577 - Release Date: 12/6/2006
-4:39 PM
- 
-
--- 
-No virus found in this outgoing message.
-Checked by AVG Free Edition.
-Version: 7.5.432 / Virus Database: 268.15.18/586 - Release Date: 12/13/2006
-6:13 PM
- 
-
-_______________________________________________
-Printing-sc mailing list
-Printing-sc@lists.freestandards.org
-http://lists.freestandards.org/mailman/listinfo/printing-sc
-
--- 
-No virus found in this outgoing message.
-Checked by AVG Free Edition.
-Version: 7.5.432 / Virus Database: 268.15.25/593 - Release Date: 12/19/2006
-1:17 PM
- 
