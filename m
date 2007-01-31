@@ -1,13 +1,12 @@
-Return-Path: <till.kamppeter@gmail.com>
-Message-ID: <45B7D73A.2000209@gmail.com>
-Date: Wed, 24 Jan 2007 22:01:30 +0000
-From: Till Kamppeter <till.kamppeter@gmail.com>
+Return-Path: <imcdonald@sharplabs.com>
+Message-ID: <789E617C880666438EDEE30C2A3E8D100105A5CF@mailsrvnt05.enet.sharplabs.com>
+From: "McDonald, Ira" <imcdonald@sharplabs.com>
+Date: Wed, 31 Jan 2007 08:30:49 -0800
 MIME-Version: 1.0
-References: <45B7BCD4.4030506@gmail.com>
-In-Reply-To: <45B7BCD4.4030506@gmail.com>
-Content-Type: text/plain; charset=UTF-8; format=flowed
-Content-Transfer-Encoding: 7bit
-Subject: Re: [Printing-architecture] PDAPI spec part 1
+Content-Type: text/plain;
+	charset="utf-8"
+Subject: [Printing-architecture] FW: Printing mathml and Indic scripts on
+	Linux
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.freestandards.org>
 List-Unsubscribe: <http://lists.freestandards.org/mailman/listinfo/printing-architecture>,
@@ -19,24 +18,65 @@ List-Subscribe: <http://lists.freestandards.org/mailman/listinfo/printing-archit
 	<mailto:printing-architecture-request@lists.freestandards.org?subject=subscribe>
 To: printing-architecture@lists.freestandards.org
 
-There will be no part 2, the rest of the document seems OK for me.
+Hi,
 
-    Till
+FYI - from the Linux UTF-8 mailing list.
 
-Till Kamppeter wrote:
-> Hi, I am current;y looking through the PDAPI spec
+Cheers,
+- Ira
+
+Ira McDonald (Musician / Software Architect)
+Chair - FSG Open Printing Steering Committee
+Blue Roof Music / High North Inc
+PO Box 221  Grand Marais, MI  49839
+phone: +1-906-494-2434
+email: imcdonald@sharplabs.com
+
+-----Original Message-----
+From: linux-utf8-bounce@nl.linux.org
+[mailto:linux-utf8-bounce@nl.linux.org]On Behalf Of Jan Willem Stumpel
+Sent: Tuesday, January 30, 2007 2:47 PM
+To: Behdad Esfahbod
+Cc: linux-utf8@nl.linux.org
+Subject: Re: mathml
+
+
+Behdad Esfahbod wrote:
+
+> If you use the latest Firefox 1.5 with Pango text rendering
+> enabled (unset MOZ_DISABLE_PANGO) AND my Firefox+Pango printing
+> patch from here:
 > 
-> ftp://ftp.pwg.org/pub/pwg/fsg/vector/pdapi-spec-1.0-20061205.pdf
+> https://bugzilla.mozilla.org/show_bug.cgi?id=357733
 > 
-> Here are my observations:
+> You can view and print MathML in Linux.
 > 
-> Page 9, line 4, section 3.5 Alpha Composition: Should we really have 
-> this section where the alpha composition is not supported yet?
-> 
-> Page 9, line 8, section 3.6 Scan Rule: I do not really understand this 
-> section. I think the wording should be redone to make this section more 
-> clear.
-> 
->    Till
-> 
+> behdad, hoping that his message makes it to the list.
+
+I finally managed to get a firefox incorporating your patch to
+work on Debian (I borrowed it from FC6). I am very impressed. Now,
+for the first time, both MATHML *and* Indic scripts can be
+displayed *and printed* from Linux. Congratulations on a very good
+piece of work.
+
+I wrote about it on my page:
+
+http://www.jw-stumpel.nl/stestu#T9.3
+
+I hope other distros (in particular Debian) will soon follow
+Fedora's example in applying your patch.
+
+Regards, Jan
+
+
+--
+Linux-UTF8:   i18n of Linux on all levels
+Archive:      http://mail.nl.linux.org/linux-utf8/
+
+-- 
+No virus found in this outgoing message.
+Checked by AVG Free Edition.
+Version: 7.5.432 / Virus Database: 268.17.17/661 - Release Date: 1/30/2007
+11:30 PM
+ 
 
