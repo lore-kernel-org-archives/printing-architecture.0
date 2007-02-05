@@ -1,10 +1,10 @@
 Return-Path: <till.kamppeter@gmail.com>
-Message-ID: <45C764CA.4070000@gmail.com>
-Date: Mon, 05 Feb 2007 17:09:30 +0000
+Message-ID: <45C76F10.4080205@gmail.com>
+Date: Mon, 05 Feb 2007 17:53:20 +0000
 From: Till Kamppeter <till.kamppeter@gmail.com>
 MIME-Version: 1.0
-References: <3F62CBEE02D6404E98C65934617EB58201949FE6@fmsmsx414.amr.corp.intel.com>
-In-Reply-To: <3F62CBEE02D6404E98C65934617EB58201949FE6@fmsmsx414.amr.corp.intel.com>
+References: <3F62CBEE02D6404E98C65934617EB5820194A075@fmsmsx414.amr.corp.intel.com>
+In-Reply-To: <3F62CBEE02D6404E98C65934617EB5820194A075@fmsmsx414.amr.corp.intel.com>
 Content-Type: text/plain; charset=UTF-8; format=flowed
 Content-Transfer-Encoding: 7bit
 Subject: Re: [Printing-architecture] [lsb-discuss] Distribution-independent
@@ -22,41 +22,39 @@ To: "Wichmann, Mats D" <mats.d.wichmann@intel.com>
 Cc: printing-architecture@lists.freestandards.org, lsb-discuss <lsb-discuss@lists.freestandards.org>
 
 Wichmann, Mats D wrote:
->> I have intendedly left it out as the LSB Build Environment 
->> does not have an "lsb" package installed. It should have such a package
+>> On the sample implementation the RPM installation does not complain 
+>> about missing PPDs, but about missing directories:
+>>
+>> ---------------------------------------------------------------
+>> ---------
+>> bash-3.1# rpm -Uvh /tmp/work/splix-1.0.1-0.beta2.1lsb3.1.i486.rpm
+>> error: Failed dependencies:
+>>         /opt is needed by splix-1.0.1-0.beta2.1lsb3.1.i486
+>>         /opt/lib/printdriver is needed by 
+>> splix-1.0.1-0.beta2.1lsb3.1.i486
+>>         /opt/share/ppd is needed by splix-1.0.1-0.beta2.1lsb3.1.i486
+>> bash-3.1#
+>> ---------------------------------------------------------------
 > 
->> (meta-package?) installed so that you can install LSB packages in it.
+>> Once RPM should simply create the directories and not complain, and 
+>> second, all the directories are there, I have created them 
+>> before trying to install the RPM.
 > 
-> At least the lsb sample implementation (lsbsi) does or should
-> have this.  I'm not sure of the thinking behind leaving it
-> of the buildenv, if it wasn't just an omission. Wouldn't hurt
-> to file a bug on this as a reminder.
->
-
-On the sample implementation the RPM installation does not complain 
-about missing PPDs, but about missing directories:
-
-------------------------------------------------------------------------
-bash-3.1# rpm -Uvh /tmp/work/splix-1.0.1-0.beta2.1lsb3.1.i486.rpm
-error: Failed dependencies:
-         /opt is needed by splix-1.0.1-0.beta2.1lsb3.1.i486
-         /opt/lib/printdriver is needed by splix-1.0.1-0.beta2.1lsb3.1.i486
-         /opt/share/ppd is needed by splix-1.0.1-0.beta2.1lsb3.1.i486
-bash-3.1#
-------------------------------------------------------------------------
-
-Once RPM should simply create the directories and not complain, and 
-second, all the directories are there, I have created them before trying 
-to install the RPM.
-
->> Why can I not use "Requires lsb >= 3.1", are the LSBs not backward 
->> compatible?
+> this is caused by a moderately recent change to upstream rpm.
+> everything now has to be "owned", so creating the directories
+> before installing the rpm is not sufficient, they actually have
+> to be in the rpm database as belonging to some package.
 > 
-> You can and should - at least at the moment when there's no
-> such thing as a 3.2.  pkgchk is saying it didn't see this...
->
 
-I have changed it to "lsb >= 3.1" now.
+I can make an RPM providing the printing-related directories, but which 
+package should own /opt then? This should be corrected in build 
+environment and sample implementation. We need to somehow conserve the 
+possibility to install software with RPM.
+
+RPM in FC6 does not yet require all directories to be owned by an RPM 
+package. Should we add something to the LSB so that installing with RPM 
+keeps working, also if the distro as the new RPM? Does RPM have a 
+command line switch to get back to the old behavior?
 
     Till
 
