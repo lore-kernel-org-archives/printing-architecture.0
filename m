@@ -1,12 +1,12 @@
-Return-Path: <till.kamppeter@gmail.com>
-Message-ID: <45C7C416.4010106@gmail.com>
-Date: Mon, 05 Feb 2007 23:56:06 +0000
-From: Till Kamppeter <till.kamppeter@gmail.com>
+Return-Path: <alimpich@us.ibm.com>
 MIME-Version: 1.0
-Content-Type: text/plain; charset=UTF-8; format=flowed
-Content-Transfer-Encoding: 7bit
-Subject: [Printing-architecture] Distribution-independent printer driver
-	package
+Message-ID: <OFAF938861.DE676FE1-ON8725727A.0057AB12-8725727A.0057CAAD@us.ibm.com>
+From: Claudia Alimpich <alimpich@us.ibm.com>
+Date: Tue, 6 Feb 2007 08:58:53 -0700
+Content-Type: multipart/alternative;
+	boundary="=_alternative 0057CAAC8725727A_="
+Subject: [Printing-architecture] There will be a FSG Arch meeting on Wed Feb
+	7th
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.freestandards.org>
 List-Unsubscribe: <http://lists.freestandards.org/mailman/listinfo/printing-architecture>,
@@ -16,66 +16,47 @@ List-Post: <mailto:printing-architecture@lists.freestandards.org>
 List-Help: <mailto:printing-architecture-request@lists.freestandards.org?subject=help>
 List-Subscribe: <http://lists.freestandards.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.freestandards.org?subject=subscribe>
-To: printing-architecture@lists.freestandards.org
-Cc: lsb-discuss <lsb-discuss@lists.freestandards.org>
+To: printing-architecture@freestandards.org
 
-Hi,
+This is a multipart message in MIME format.
+--=_alternative 0057CAAC8725727A_=
+Content-Type: text/plain; charset="US-ASCII"
 
-I have made the first two distribution independent driver packages (x86 
-32-bit only).
+There will be an Open Printing conference call on Wednesday February 7th.
 
-They are at the new download place
+Day: Wednesdays 
 
-http://www.openprinting.org/download/printdriver/
+Time: 
+12:00-1:00 PM US Pacific time 
+1:00-2:00 PM US Mountain time 
+3:00-4:00 PM US Eastern time 
+9:00-10:00 PM Paris time 
 
-The drivers are in the RPMS/ subdirectory.
+USA Toll-free Number: 866-312-6342
+Toll Number: 763-391-6805 
+Conference Code: 582 658 5482 
 
-Please test them on all current distros (Novell/SuSE, Red Hat/Fedora, 
-Mandriva, Ubuntu, Debian, ...).
+Claudia
+--=_alternative 0057CAAC8725727A_=
+Content-Type: text/html; charset="US-ASCII"
 
-Proceed as follows:
 
-1. Make your not too old distro LSB-3.1 compliant by installing the 
-"lsb" package.
-
-2. Add the LSB 3.2 requirements for printing by installing CUPS, 
-foomatic-filters, ESP GhostScript, and add some directories and links:
-
-   o On Ubuntu Feisty, install the latest cupsys package
-   o On any other Ubuntu or Debian do
-
-       mkdir -p /opt/share/ppd
-       mkdir -p /usr/local/share/ppd
-       ln -s /usr/local/share/ppd /usr/share/ppd/1-local-admin
-       ln -s /opt/share/ppd /usr/share/ppd/2-third-party
-
-   o On any other distribution do
-
-       mkdir -p /usr/share/ppd
-       mkdir -p /opt/share/ppd
-       mkdir -p /usr/local/share/ppd
-       ln -s /usr/local/share/ppd /usr/share/cups/model/1-local-admin
-       ln -s /opt/share/ppd /usr/share/cups/model/2-third-party
-       ln -s /usr/share/ppd /usr/share/cups/model/3-distribution
-
-     or install fhs-printingdirs which you find at the same place as
-     where the driver packages are.
-
-3. If you have a non-RPM-based distribution, convert the driver 
-package(s) with alien.
-
-4. Install the driver package(s).
-
-5. Set up a print queue with your distribution's printer setup tool.
-
-6. If you do not have the actual printer to print with the currently 
-available driver packages, do a "dry test". Add a line "FileDevice Yes" 
-to the /etc/cups/cupsd.conf file, restart CUPS, and then set up the 
-print queue with the URI "file:/tmp/printout".
-
-7. Watch out for more driver packages at the given place in the next days.
-
-A HOWTO for making such packages will come later.
-
-    Till
+<br><font size=2 face="sans-serif">There will be an Open Printing conference
+call on Wednesday February 7th.</font>
+<br>
+<br><font size=2 face="sans-serif">Day: Wednesdays</font><font size=3>
+</font>
+<br><font size=2 face="sans-serif"><br>
+Time: </font>
+<br><font size=2 face="sans-serif">12:00-1:00 PM US Pacific time <br>
+1:00-2:00 PM US Mountain time <br>
+3:00-4:00 PM US Eastern time <br>
+9:00-10:00 PM Paris time <br>
+</font>
+<br><font size=2 face="sans-serif">USA Toll-free Number: 866-312-6342</font>
+<br><font size=2 face="sans-serif">Toll Number: 763-391-6805 <br>
+Conference Code: 582 658 5482 </font>
+<br>
+<br><font size=2 face="sans-serif">Claudia</font>
+--=_alternative 0057CAAC8725727A_=--
 
