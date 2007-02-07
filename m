@@ -1,7 +1,7 @@
 Return-Path: <imcdonald@sharplabs.com>
-Message-ID: <789E617C880666438EDEE30C2A3E8D100105A5DD@mailsrvnt05.enet.sharplabs.com>
+Message-ID: <789E617C880666438EDEE30C2A3E8D100105A5DC@mailsrvnt05.enet.sharplabs.com>
 From: "McDonald, Ira" <imcdonald@sharplabs.com>
-Date: Wed, 7 Feb 2007 09:36:39 -0800 
+Date: Wed, 7 Feb 2007 09:33:37 -0800 
 MIME-Version: 1.0
 Content-Type: text/plain;
 	charset="iso-8859-1"
@@ -19,18 +19,7 @@ List-Subscribe: <http://lists.freestandards.org/mailman/listinfo/printing-archit
 To: 'TORATANI Yasumasa' <toratani.yasumasa@canon.co.jp>
 Cc: printing-architecture@lists.freestandards.org
 
-Hi,
 
-Oops - I hit SEND accidentally a minute ago.
-
-Yes - I like your proposed usage (consistent with
-JTAPI C headers).
-
-I agree that a naming standard should go deeper
-than just the external function names.
-
-Cheers,
-- Ira
 
 Ira McDonald (Musician / Software Architect)
 Chair - Linux Foundation Open Printing WG
