@@ -1,16 +1,11 @@
-Return-Path: <till.kamppeter@gmail.com>
-DKIM-Signature: a=rsa-sha1; c=relaxed/relaxed; d=gmail.com; s=beta;
-	h=domainkey-signature:received:received:message-id:date:from:user-agent:mime-version:to:subject:references:in-reply-to:content-type:content-transfer-encoding;
-	b=PtmXOiw4gFUYKPlJm4XDbvi0ZSJTkj52il8RtD1qp43XBi5ZD0KBfgCbdU+qvp3lJlyiEMKsX82XCKQwCLuGY/f7W89RMo0pSrFbsGyfvIUo4tOtg88jl7rEliv4AY5JZYyaCWUZ0MPyERgit1rLvLn0ut+xj9SYNTkGv6pwhcw=
-Message-ID: <45DCA9D9.3070907@gmail.com>
-Date: Wed, 21 Feb 2007 20:21:45 +0000
-From: Till Kamppeter <till.kamppeter@gmail.com>
+Return-Path: <imcdonald@sharplabs.com>
+Message-ID: <789E617C880666438EDEE30C2A3E8D100105A614@mailsrvnt05.enet.sharplabs.com>
+From: "McDonald, Ira" <imcdonald@sharplabs.com>
+Date: Mon, 5 Mar 2007 09:25:24 -0800 
 MIME-Version: 1.0
-References: <OFA84FB2E6.1E0E6356-ON87257288.006108B0-87257288.00611D0F@us.ibm.com>
-In-Reply-To: <OFA84FB2E6.1E0E6356-ON87257288.006108B0-87257288.00611D0F@us.ibm.com>
-Content-Type: text/plain; charset=UTF-8; format=flowed
-Content-Transfer-Encoding: 7bit
-Subject: [Printing-architecture] CANCELED: FSG Arch meeting on Wed Feb	21st
+Content-Type: text/plain;
+	charset="ISO-8859-1"
+Subject: [Printing-architecture] Reminder - Wed 7 March - OP Arch meeting
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.freestandards.org>
 List-Unsubscribe: <http://lists.freestandards.org/mailman/listinfo/printing-architecture>,
@@ -20,37 +15,32 @@ List-Post: <mailto:printing-architecture@lists.freestandards.org>
 List-Help: <mailto:printing-architecture-request@lists.freestandards.org?subject=help>
 List-Subscribe: <http://lists.freestandards.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.freestandards.org?subject=subscribe>
-To: printing-architecture@freestandards.org
+To: printing-architecture@lists.freestandards.org
 
-As no one else than Ira and me called in we have decided to cancel the 
-meeting. Next meeting is in two weeks, as usual.
+Hi,
 
-    Till
+Reminder to us all - please make sure that this
+Wednesday's Open Printing Architecture meeting
+is on your calendars.
 
+Norm and Wendy - we need you folks too!
 
-Claudia Alimpich wrote:
-> 
-> There will be an Open Printing conference call on Wednesday February 21st.
-> 
-> Day: Wednesdays
-> 
-> Time:
-> 12:00-1:00 PM US Pacific time
-> 1:00-2:00 PM US Mountain time
-> 3:00-4:00 PM US Eastern time
-> 9:00-10:00 PM Paris time
-> 
-> USA Toll-free Number: 866-312-6342
-> Toll Number: 763-391-6805
-> Conference Code: 582 658 5482
-> 
-> Claudia
-> 
-> 
-> ------------------------------------------------------------------------
-> 
-> _______________________________________________
-> Printing-architecture mailing list
-> Printing-architecture@lists.freestandards.org
-> http://lists.freestandards.org/mailman/listinfo/printing-architecture
+Claudia - please remember to send details.
+
+Cheers,
+- Ira
+
+Ira McDonald (Musician / Software Architect)
+Chair - Linux Foundation Open Printing WG
+Blue Roof Music / High North Inc
+PO Box 221  Grand Marais, MI  49839
+phone: +1-906-494-2434
+email: imcdonald@sharplabs.com
+
+-- 
+No virus found in this outgoing message.
+Checked by AVG Free Edition.
+Version: 7.5.446 / Virus Database: 268.18.7/711 - Release Date: 3/5/2007
+9:41 AM
+ 
 
