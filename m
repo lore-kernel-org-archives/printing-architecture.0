@@ -1,16 +1,12 @@
-Return-Path: <till.kamppeter@gmail.com>
-DKIM-Signature: a=rsa-sha1; c=relaxed/relaxed; d=gmail.com; s=beta;
-	h=domainkey-signature:received:received:message-id:date:from:user-agent:mime-version:to:cc:subject:references:in-reply-to:content-type:content-transfer-encoding;
-	b=FRIC/Xio9NVxaYYg3oEsa/ym5nEfR/Z/kFRJK9XESPxH71JL7C97DBU1yUYuXkotQ3HdsCaWDf4/UDr47vSPKiyrAVrclSMg8P8sUnyEg5Bwje2NeG5lzbDX+O6FzD7ZkJ2/DPoZ4BzLCdDc9jcAPCQogIuIMZlDgUX0oMg1ZMc=
-Message-ID: <45EC5A2A.7030302@gmail.com>
-Date: Mon, 05 Mar 2007 17:58:02 +0000
-From: Till Kamppeter <till.kamppeter@gmail.com>
+Return-Path: <alimpich@us.ibm.com>
 MIME-Version: 1.0
-References: <789E617C880666438EDEE30C2A3E8D100105A614@mailsrvnt05.enet.sharplabs.com>
-In-Reply-To: <789E617C880666438EDEE30C2A3E8D100105A614@mailsrvnt05.enet.sharplabs.com>
-Content-Type: text/plain; charset=UTF-8
-Content-Transfer-Encoding: 7bit
-Subject: Re: [Printing-architecture] Reminder - Wed 7 March - OP Arch meeting
+Message-ID: <OFCB2F1268.93B63033-ON87257295.0062E9BD-87257295.0062FCD7@us.ibm.com>
+From: Claudia Alimpich <alimpich@us.ibm.com>
+Date: Mon, 5 Mar 2007 11:01:10 -0700
+Content-Type: multipart/alternative;
+	boundary="=_alternative 0062FCD687257295_="
+Subject: [Printing-architecture] There will be a FSG Arch meeting on Wed Mar
+	7th
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.freestandards.org>
 List-Unsubscribe: <http://lists.freestandards.org/mailman/listinfo/printing-architecture>,
@@ -20,50 +16,47 @@ List-Post: <mailto:printing-architecture@lists.freestandards.org>
 List-Help: <mailto:printing-architecture-request@lists.freestandards.org?subject=help>
 List-Subscribe: <http://lists.freestandards.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.freestandards.org?subject=subscribe>
-To: "McDonald, Ira" <imcdonald@sharplabs.com>
-Cc: printing-architecture@lists.freestandards.org
+To: printing-architecture@freestandards.org
 
-For the Google Summer of Code the period of application for mentoring
-organizations has started today and will have its deadline on Monday
-March 12.
+This is a multipart message in MIME format.
+--=_alternative 0062FCD687257295_=
+Content-Type: text/plain; charset="US-ASCII"
 
-I think as OpenPrinting we should participate so that we can open
-projects like work on implementation of APIs, work on
-distribution-independent driver package stuff, PDF workflow, ...
+There will be an Open Printing conference call on Wednesday March 7th.
 
-See
+Day: Wednesdays 
 
-http://code.google.com/support/bin/answer.py?answer=60302&topic=10727
-http://code.google.com/support/bin/answer.py?answer=60303&topic=10727&ctx=sibling
+Time: 
+12:00-1:00 PM US Pacific time 
+1:00-2:00 PM US Mountain time 
+3:00-4:00 PM US Eastern time 
+9:00-10:00 PM Paris time 
 
-According to the information which has to be supplied with the
-application we do not have to decide on the concrete projects yet. For
-now we must only get a participating organization.
+USA Toll-free Number: 866-312-6342
+Toll Number: 763-391-6805 
+Conference Code: 582 658 5482 
 
-We should add this application to the agenda of our phone meeting.
+Claudia
+--=_alternative 0062FCD687257295_=
+Content-Type: text/html; charset="US-ASCII"
 
-   Till
 
-
-McDonald, Ira wrote:
-> Hi,
-> 
-> Reminder to us all - please make sure that this
-> Wednesday's Open Printing Architecture meeting
-> is on your calendars.
-> 
-> Norm and Wendy - we need you folks too!
-> 
-> Claudia - please remember to send details.
-> 
-> Cheers,
-> - Ira
-> 
-> Ira McDonald (Musician / Software Architect)
-> Chair - Linux Foundation Open Printing WG
-> Blue Roof Music / High North Inc
-> PO Box 221  Grand Marais, MI  49839
-> phone: +1-906-494-2434
-> email: imcdonald@sharplabs.com
-> 
+<br><font size=2 face="sans-serif">There will be an Open Printing conference
+call on Wednesday March 7th.</font>
+<br>
+<br><font size=2 face="sans-serif">Day: Wednesdays</font><font size=3>
+</font>
+<br><font size=2 face="sans-serif"><br>
+Time: </font>
+<br><font size=2 face="sans-serif">12:00-1:00 PM US Pacific time <br>
+1:00-2:00 PM US Mountain time <br>
+3:00-4:00 PM US Eastern time <br>
+9:00-10:00 PM Paris time <br>
+</font>
+<br><font size=2 face="sans-serif">USA Toll-free Number: 866-312-6342</font>
+<br><font size=2 face="sans-serif">Toll Number: 763-391-6805 <br>
+Conference Code: 582 658 5482 </font>
+<br>
+<br><font size=2 face="sans-serif">Claudia</font>
+--=_alternative 0062FCD687257295_=--
 
