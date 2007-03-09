@@ -1,15 +1,15 @@
-Return-Path: <till.kamppeter@gmail.com>
-DKIM-Signature: a=rsa-sha1; c=relaxed/relaxed; d=gmail.com; s=beta;
-	h=domainkey-signature:received:received:message-id:date:from:user-agent:mime-version:to:cc:subject:content-type:content-transfer-encoding;
-	b=kVNp4PCMul4onUrdZ6Q59AyvB/kNC8w+NSsJp/2KGxSvUk62S0lv6xV3Gjye2wE/3Xn3PH1z5Ge+LlIJmq5pTU7KYg+pYhySi+nNBp3NJaFk1oX3Yp0uhGOR6EKmLwhmMr3rolkODxxeQHbs21sHCOzEEzb9Zu9RUsD2205ZoM0=
-Message-ID: <45F069B1.9010302@gmail.com>
-Date: Thu, 08 Mar 2007 19:53:21 +0000
-From: Till Kamppeter <till.kamppeter@gmail.com>
+Return-Path: <imcdonald@sharplabs.com>
+Content-class: urn:content-classes:message
 MIME-Version: 1.0
-Content-Type: text/plain; charset=UTF-8
-Content-Transfer-Encoding: 7bit
-Subject: [Printing-architecture] Application of OpenPrinting as Mentoring
- Organization for the Google Summer of Code 2007
+Content-Type: text/plain;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+Date: Fri, 9 Mar 2007 11:53:01 -0800
+Message-ID: <811D382F92501D4EB5F748D2BF9EFBB92B9BE6@wabex2.sharpamericas.com>
+In-reply-to: <45F069B1.9010302@gmail.com>
+From: "McDonald, Ira" <imcdonald@sharplabs.com>
+Subject: Re: [Printing-architecture] Application of OpenPrinting as
+	Mentoring Organization for the Google Summer of Code 2007
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.freestandards.org>
 List-Unsubscribe: <http://lists.freestandards.org/mailman/listinfo/printing-architecture>,
@@ -19,8 +19,52 @@ List-Post: <mailto:printing-architecture@lists.freestandards.org>
 List-Help: <mailto:printing-architecture-request@lists.freestandards.org?subject=help>
 List-Subscribe: <http://lists.freestandards.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.freestandards.org?subject=subscribe>
-To: printing-architecture@lists.freestandards.org, "Printing-Sc (E-mail)" <printing-sc@freestandards.org>, printing-japan@lists.freestandards.org
-Cc: Jim Zemlin <jzemlin@freestandards.org>, 'Ian Murdock' <imurdock@imurdock.com>
+To: Till Kamppeter <till.kamppeter@gmail.com>, printing-architecture@lists.freestandards.org, "Printing-Sc (E-mail)" <printing-sc@freestandards.org>, printing-japan@lists.freestandards.org
+Cc: Jim Zemlin <jzemlin@freestandards.org>, Ian Murdock <imurdock@imurdock.com>
+
+Hi Till,
+
+Yes - I'd be willing to be backup administrator.
+
+One VERY important change is to fix the overly narrow
+OP scope - PLEASE fix this on OP home page as well.
+
+Change scope of OP from (below in your application):
+
+The goal of the OpenPrinting workgroup is to develop and promote a set
+of standards that will address the needs of desktop to enterprise-ready
+printing, including management, reliability, security, scalability,
+printer feature access and network accessibility.
+
+To (correct):
+
+The goal of the OpenPrinting workgroup is to develop and promote a set
+of standards that will address the complete printing needs of embedded, =
+mobile, desktop, enterprise, and production environments, including =
+management, reliability, security, scalability,
+printer feature access and network accessibility.
+
+Cheers,
+- Ira
+
+Ira McDonald (Musician / Software Architect)
+Chair - Linux Foundation Open Printing WG
+Blue Roof Music / High North Inc
+PO Box 221  Grand Marais, MI  49839
+phone: +1-906-494-2434
+email: imcdonald@sharplabs.com
+
+-----Original Message-----
+From: printing-architecture-bounces@lists.freestandards.org
+[mailto:printing-architecture-bounces@lists.freestandards.org]On Behalf
+Of Till Kamppeter
+Sent: Thursday, March 08, 2007 2:53 PM
+To: printing-architecture@lists.freestandards.org; Printing-Sc (E-mail);
+printing-japan@lists.freestandards.org
+Cc: Jim Zemlin; 'Ian Murdock'
+Subject: [Printing-architecture] Application of OpenPrinting as
+Mentoring Organization for the Google Summer of Code 2007
+
 
 Hi,
 
@@ -36,15 +80,18 @@ into other renderers like XPDF/libpoppler).
 
 The application deadline is Monday (March 12), see
 
-http://code.google.com/support/bin/answer.py?answer=60302&topic=10727
+http://code.google.com/support/bin/answer.py?answer=3D60302&topic=3D10727=
+
 
 Application instructions are here:
-http://groups.google.com/group/google-summer-of-code-announce/web/gsoc-mentor-organization-application-how-to
+http://groups.google.com/group/google-summer-of-code-announce/web/gsoc-me=
+ntor-organization-application-how-to
 
 As you cannot access the application form without a valid Google
 account, See the questions asked in the form here:
 
-http://code.google.com/support/bin/answer.py?answer=60303&topic=10727&ctx=sibling
+http://code.google.com/support/bin/answer.py?answer=3D60303&topic=3D10727=
+&ctx=3Dsibling
 
 One needs an administrator a backup for the administrator and mentors
 for supervising the students.
@@ -75,7 +122,8 @@ If so, tell me and I will invite you.
 
 Now to the questions of the application form, here are they and I have
 partially filled in the answers. Please fill in the blanks and improve
-my answers. Fill in also your Google account names in case you participate.
+my answers. Fill in also your Google account names in case you =
+participate.
 
 The page for project ideas is
 
@@ -102,7 +150,6 @@ The goal of the OpenPrinting workgroup is to develop and promote a set
 of standards that will address the needs of desktop to enterprise-ready
 printing, including management, reliability, security, scalability,
 printer feature access and network accessibility.
-
 OpenPrinting also provides the most comprehensive printer compatibility
 database, Foomatic, with its printer driver integration framework. This
 system turned a de-facto standard which is used by all Linux
@@ -205,4 +252,16 @@ the deadline is already on Monday. Google will decide on which
 organizations participate on Wednesday March 14.
 
    Till
+
+_______________________________________________
+Printing-architecture mailing list
+Printing-architecture@lists.freestandards.org
+http://lists.freestandards.org/mailman/listinfo/printing-architecture
+
+--=20
+No virus found in this outgoing message.
+Checked by AVG Free Edition.
+Version: 7.5.446 / Virus Database: 268.18.8/714 - Release Date: 3/8/2007 =
+10:58 AM
+=20
 
