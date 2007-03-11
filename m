@@ -1,9 +1,9 @@
 Return-Path: <till.kamppeter@gmail.com>
 DKIM-Signature: a=rsa-sha1; c=relaxed/relaxed; d=gmail.com; s=beta;
 	h=domainkey-signature:received:received:message-id:date:from:user-agent:mime-version:to:cc:subject:references:in-reply-to:content-type:content-transfer-encoding;
-	b=n851m29jSEFOZ1vrJM8R8FtTp4fZGDcG/xjWvtSx/g6FDSkRBiFnbvIg0Nisl9Ulpx3VuDW/JG+3JgIh/YLNBeqnrnQab3ZuX2Zb8jZEnEujiVpL3NLJAkHNqjItExCcFE9WQKleF17FSaEx9LdjP0WLouV1WS3PurmeTLFBWZI=
-Message-ID: <45F353E7.6000803@gmail.com>
-Date: Sun, 11 Mar 2007 00:57:11 +0000
+	b=WcnVhEHcXk/INHUx0GPRVeVj6iiTY/524jDPedXWouJuXg3CYoBSf4U8Qma1nDfVl3XYiZjcZwmo9YpcudqoWXb6BBlIPC4HfGcYsTfpjjIf1olR7/ijoVTSnefX97SGKcXH95zltA6XGt6Bf9uELklt0N+7wFz9Bt25Ltx06Ko=
+Message-ID: <45F35C5A.8030105@gmail.com>
+Date: Sun, 11 Mar 2007 01:33:14 +0000
 From: Till Kamppeter <till.kamppeter@gmail.com>
 MIME-Version: 1.0
 References: <811D382F92501D4EB5F748D2BF9EFBB92B9BE7@wabex2.sharpamericas.com>
@@ -26,36 +26,10 @@ To: printing-architecture@lists.freestandards.org, printing-japan@lists.freestan
 Cc: Jim Zemlin <jzemlin@freestandards.org>, "McDonald,
 	Ira" <imcdonald@sharplabs.com>, Ian Murdock <imurdock@imurdock.com>, "Printing-Sc (E-mail)" <printing-sc@freestandards.org>
 
-I have added more to the projects page.
+Here is some general info for mentoring organizations:
 
-Would someone of the OpenPrinting Vector developers volunteer to be
-mentor for the GhostScript built-in driver modularization? Feel free to
-edit the project description.
-
-Claudia, would you be mentor for the JTAPI implementation and also add a
-project description?
+http://code.google.com/p/google-summer-of-code/wiki/AdviceforMentors
 
    Till
 
-Till Kamppeter wrote:
-> I have added the first project suggestion to
-> 
-> http://www.linux-foundation.org/en/OpenPrinting/GoSC2007
-> 
->    Till
-> 
-> 
-> McDonald, Ira wrote:
->> Hi Till,
->>
->> See my additions below in the GSoC form, surrounded by
->> square brackets (e.g., "[ Ira - ... ]").
->>
->> The license on JTAPI is MIT - don't know the answer for
->> PAPI - Norm?
->>
->> My longstanding Google account is "blueroofmusic@gmail.com".
->>
-> 
-> 
 
