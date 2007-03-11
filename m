@@ -1,9 +1,9 @@
 Return-Path: <till.kamppeter@gmail.com>
 DKIM-Signature: a=rsa-sha1; c=relaxed/relaxed; d=gmail.com; s=beta;
 	h=domainkey-signature:received:received:message-id:date:from:user-agent:mime-version:to:cc:subject:references:in-reply-to:content-type:content-transfer-encoding;
-	b=f+voYj6gHpPZC8VxsqDmDiUK1DekVhIOmjygYmlRPaUU75pY+haoBbo8cRUROetvog7E2hMbUGD9DoX+IvHi2ClVbaxuv73fTyHpIPkeXKNFNZwh1UIzpoi8QrP+la/THRIBUR+yVO9P1Bbc0OpOnY8TFKJ+BOgdoZRNak4JHD0=
-Message-ID: <45F309E6.8020605@gmail.com>
-Date: Sat, 10 Mar 2007 19:41:26 +0000
+	b=U4jTIFa65mzOvIg0/KcNaa2QShfl0W8LXgWW0/ZbAoZZyPPZGrdIkmOMoGqAX8FfhEuCIZGaaHJwq/gcQBX1jt4LRkBe7qX68q7045CyCxkye+uDnup4wCDv75Pzr8/s1fhpOOvDg4pchv5FwodJfeVM8sXOrft9b/b+kSOngZg=
+Message-ID: <45F34A15.60204@gmail.com>
+Date: Sun, 11 Mar 2007 00:15:17 +0000
 From: Till Kamppeter <till.kamppeter@gmail.com>
 MIME-Version: 1.0
 References: <811D382F92501D4EB5F748D2BF9EFBB92B9BE7@wabex2.sharpamericas.com>
@@ -24,20 +24,12 @@ List-Subscribe: <http://lists.freestandards.org/mailman/listinfo/printing-archit
 To: "McDonald, Ira" <imcdonald@sharplabs.com>
 Cc: printing-architecture@lists.freestandards.org, Jim Zemlin <jzemlin@freestandards.org>, printing-japan@lists.freestandards.org, Ian Murdock <imurdock@imurdock.com>, "Printing-Sc (E-mail)" <printing-sc@freestandards.org>
 
-Thank you very much, Ira.
-
-Can you also add some projecty descriptions on
+I have added the first project suggestion to
 
 http://www.linux-foundation.org/en/OpenPrinting/GoSC2007
 
-This is a Wiki, create an account and write. Formatting instructions at
-mediawiki.org.
-
-Norm, Wendy, Claudia, ..., can you also add you project descriptions to
-mentioned Wiki page and also provide your Google account names (create a
-Google account if you have none).
-
    Till
+
 
 McDonald, Ira wrote:
 > Hi Till,
@@ -49,232 +41,5 @@ McDonald, Ira wrote:
 > PAPI - Norm?
 > 
 > My longstanding Google account is "blueroofmusic@gmail.com".
-> 
-> Hope this helps.
-> 
-> Cheers,
-> - Ira
-> 
-> Ira McDonald (Musician / Software Architect)
-> Chair - Linux Foundation Open Printing WG
-> Blue Roof Music / High North Inc
-> PO Box 221  Grand Marais, MI  49839
-> phone: +1-906-494-2434
-> email: imcdonald@sharplabs.com
-> 
-> -----Original Message-----
-> From: printing-architecture-bounces@lists.freestandards.org
-> [mailto:printing-architecture-bounces@lists.freestandards.org]On Behalf
-> Of Till Kamppeter
-> Sent: Thursday, March 08, 2007 2:53 PM
-> To: printing-architecture@lists.freestandards.org; Printing-Sc (E-mail);
-> printing-japan@lists.freestandards.org
-> Cc: Jim Zemlin; 'Ian Murdock'
-> Subject: [Printing-architecture] Application of OpenPrinting as
-> Mentoring Organization for the Google Summer of Code 2007
-> 
-> 
-> Hi,
-> 
-> I wanted to make this an agenda item for the call yesterday, but for
-> technical reasons there was no call possible yesterday.
-> 
-> I would like the OpenPrinting project being a mentoring organization in
-> the Google Summer of Code 2007 (GSoC). This gives us some manpower to
-> get APIs implemented (PAPI, JTAPI, ...) and also other coding work done
-> (for example making foomatic-rip ready for the PDF workflow,
-> modularizing the built-in drivers of GhostScript, so that they can plug
-> into other renderers like XPDF/libpoppler).
-> 
-> The application deadline is Monday (March 12), see
-> 
-> http://code.google.com/support/bin/answer.py?answer=60302&topic=10727
-> 
-> Application instructions are here:
-> http://groups.google.com/group/google-summer-of-code-announce/web/gsoc-mentor-organization-application-how-to
-> 
-> As you cannot access the application form without a valid Google
-> account, See the questions asked in the form here:
-> 
-> http://code.google.com/support/bin/answer.py?answer=60303&topic=10727&ctx=sibling
-> 
-> One needs an administrator a backup for the administrator and mentors
-> for supervising the students.
-> 
-> I could do the administrator's job and also be mentor for
-> Foomatic-related projects and perhaps also for the modularization of the
-> GhostScript drivers.
-> 
-> Ira, could you be the administrator's backup?
-> 
-> Claudia, could you be mentor for JTAPI subprojects?
-> 
-> Norm, Wendy, could one of you be mentor for PAPI subprojects?
-> 
-> Anyone who I did not mention here, would you also like to enter as a
-> mentor for one or more subprojects?
-> 
-> Everyone who enters, independent whether as admin or as mentor, needs to
-> have a Google account. Please create one ASAP if you have non. If you
-> have a <NAME>@gmail.com e-mail address, you have a Google account with
-> user name <NAME>. Log into your account and then click the following
-> link to see the application form:
-> 
-> http://code.google.com/soc/org_signup.html
-> 
-> I do not know whether one needs an invitation to get a Google account.
-> If so, tell me and I will invite you.
-> 
-> Now to the questions of the application form, here are they and I have
-> partially filled in the answers. Please fill in the blanks and improve
-> my answers. Fill in also your Google account names in case you participate.
-> 
-> The page for project ideas is
-> 
-> http://www.linux-foundation.org/en/OpenPrinting/GoSC2007
-> 
-> and it is linked in the application form. Please fill in your project
-> ideas there. Page should not be empty when we submit our application.
-> 
-> 
-> General
-> -------
-> 
-> 1. What is your Organization's Name?
-> 
-> OpenPrinting
-> 
-> 2. What is your Organization's Homepage?
-> 
-> http://www.openprinting.org/
-> 
-> 3. Describe your organization.
-> 
-> The goal of the OpenPrinting workgroup is to develop and promote a set
-> of standards that will address the needs of desktop to enterprise-ready
-> printing, including management, reliability, security, scalability,
-> printer feature access and network accessibility.
-> 
-> OpenPrinting also provides the most comprehensive printer compatibility
-> database, Foomatic, with its printer driver integration framework. This
-> system turned a de-facto standard which is used by all Linux
-> distributions and SUN Solaris.
-> 
-> [ Probably more needed ]
-> [ Ira - I think not - this should be concise]
-> 
-> 4. Why is your organization applying to participate in GSoC 2007? What
-> do you hope to gain by participating?
-> 
-> [ Ira - We want to get complete implementations of Open Printing API
-> modules into the common Linux distributions, in order to add them to
-> the Linux Standard Base (LSB) in the 4.0 release ]
-> 
-> 
-> 5. Did your organization participate in GSoC 2005 or 2006? If so, please
-> summarize your involvement and the sucesses and failures of your student
-> projects. (optional)
-> 
-> No, we did not participate.
-> 
-> 6. If your organization has not previously participated in GSoC, have
-> you applied in the past? If so, for what year(s)? (optional)
-> 
-> No, this is our first application.
-> 
-> 7. What license does your project use?
-> 
-> PAPI:  ...
-> JTAPI:  MIT
-> Foomatic:  GPL
-> Downloadable drivers and PPDs: Licenses of the upstream suppliers, for
-> most PPDs MIT.
-> 
-> 8. URL for your ideas page
-> 
-> http://www.linux-foundation.org/en/OpenPrinting/GoSC2007
-> 
-> 9. What is the main development mailing list for your organization?
-> 
-> printing-architecture Mailing List,
-> http://lists.freestandards.org/mailman/listinfo/printing-architecture
-> 
-> 10. Where is the main IRC channel for your organization?
-> 
-> We are not using IRC currently.
-> 
-> 11. Does your organization have an application template you would like
-> to see students use? If so, please provide it now. (optional)
-> 
-> 
-> 
-> 12. Who will be your backup organization administrator? Please enter
-> their Google Account address. We will email them to confirm, your
-> organization will not become active until they respond. (optional)
-> 
-> Ira McDonald (blueroofmusic@gmail.com)
-> 
-> 
-> 
-> About Your Mentors
-> ------------------
-> 
-> 1. What criteria did you use to select these individuals as mentors?
-> Please be as specific as possible.
-> 
-> [ Ira - We selected working group chairs and/or principal editors for
-> the various Open Printing APIs. ]
-> 
-> 
-> 2. Who will your mentors be? Please enter their Google Account address
-> separated by commas. If your organization is accepted we will email each
-> mentor to invite them to take part. (optional)
-> 
-> Till Kamppeter
-> Claudia Alimpich
-> Norm Jacobs
-> Wendy Philips
-> 
-> 
-> 
-> About The Program
-> -----------------
-> 
-> 1. What is your plan for dealing with disappearing students?
-> 
-> [ Ira - We will transition their work-in-progress to a caretaker
-> (i.e., the appropriate mentor) ]
-> 
-> 
-> 2. What is your plan for dealing with disappearing mentors?
-> 
-> [ Ira - We will transition their mentor role to another active
-> member of appropriate Open Printing working group ]
-> 
-> 
-> 3. What steps will you take to encourage students to interact with your
-> project's community before, during and after the program?
-> 
-> [ Ira - We hold annual Printing Summit face-to-face conferences.
-> We will attend other Linux professional conferences and shows as
-> time and funding permits. ]
-> 
-> 
-> 4. What will you do to ensure that your accepted students stick with the
-> project after GSoC concludes?
-> 
-> [ Ira - frankly it seems unlikely that they will - IMHO ]
-> 
-> 
-> Can you please give your answers and suggestions as soon as possible, as
-> the deadline is already on Monday. Google will decide on which
-> organizations participate on Wednesday March 14.
-> 
->    Till
-> 
-> _______________________________________________
-> Printing-architecture mailing list
-> Printing-architecture@lists.freestandards.org
-> http://lists.freestandards.org/mailman/listinfo/printing-architecture
 > 
 
