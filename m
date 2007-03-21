@@ -1,13 +1,15 @@
-Return-Path: <alimpich@us.ibm.com>
-In-Reply-To: <46018F14.40505@Sun.COM>
+Return-Path: <imcdonald@sharplabs.com>
+Content-class: urn:content-classes:message
 MIME-Version: 1.0
-Message-ID: <OF4004BF9A.3AFD932C-ON872572A5.0068BDC9-872572A5.0069DC65@us.ibm.com>
-From: Claudia Alimpich <alimpich@us.ibm.com>
-Date: Wed, 21 Mar 2007 13:16:10 -0600
-Content-Type: multipart/alternative;
-	boundary="=_alternative 0069DC61872572A5_="
-Subject: Re: [Printing-architecture] There will be a FSG Arch meeting on Wed
-	Mar	21st
+Content-Type: text/plain;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+Date: Wed, 21 Mar 2007 12:16:59 -0700
+Message-ID: <811D382F92501D4EB5F748D2BF9EFBB92B9BFD@wabex2.sharpamericas.com>
+In-Reply-To: <46018F14.40505@Sun.COM>
+From: "McDonald, Ira" <imcdonald@sharplabs.com>
+Subject: Re: [Printing-architecture] [cancelled] There will be a FSG Arch
+	meeting on Wed Mar 21st
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.freestandards.org>
 List-Unsubscribe: <http://lists.freestandards.org/mailman/listinfo/printing-architecture>,
@@ -17,46 +19,55 @@ List-Post: <mailto:printing-architecture@lists.freestandards.org>
 List-Help: <mailto:printing-architecture-request@lists.freestandards.org?subject=help>
 List-Subscribe: <http://lists.freestandards.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.freestandards.org?subject=subscribe>
-To: Norm Jacobs <Norm.Jacobs@Sun.COM>
+To: Norm Jacobs <Norm.Jacobs@Sun.COM>, Claudia Alimpich <alimpich@us.ibm.com>
 Cc: printing-architecture@freestandards.org
 
-This is a multipart message in MIME format.
---=_alternative 0069DC61872572A5_=
-Content-Type: text/plain; charset="US-ASCII"
+Hi,
 
-There is a problem with the line (again) and a ticket has been turned in 
-(again). I tried to get the operator to manually add me to the call, so I 
-might be there now (I'm dialed in and don't hear anything). Please try to 
-call in now.
+I got the same message - the same as two weeks ago.
+
+I wondered if that flaky Daylight Savings timechange
+we just had might have screwed up the scheduling.
+
+Windows XP/Vista are the only ones where autochange
+still works now - and MS aren't shipping a patch for
+even Windows 2000 or Windows 2003 Server which seems
+a might self-defeating - they recommend you disable
+autochange and manually correct the time.
+
+Oh well - we'll try again in two weeks, right after
+our next OP Steering Committee teleconference.
+
+Cheers,
+- Ira
+
+Ira McDonald (Musician / Software Architect)
+Chair - Linux Foundation Open Printing WG
+Blue Roof Music / High North Inc
+PO Box 221  Grand Marais, MI  49839
+phone: +1-906-494-2434
+email: imcdonald@sharplabs.com
+
+-----Original Message-----
+From: printing-architecture-bounces@lists.freestandards.org
+[mailto:printing-architecture-bounces@lists.freestandards.org]On Behalf
+Of Norm Jacobs
+Sent: Wednesday, March 21, 2007 3:01 PM
+To: Claudia Alimpich
+Cc: printing-architecture@freestandards.org
+Subject: Re: [Printing-architecture] There will be a FSG Arch meeting on
+Wed Mar 21st
 
 
-
-
-
-Norm Jacobs <Norm.Jacobs@Sun.COM> 
-03/21/2007 02:01 PM
-
-To
-Claudia Alimpich/Boulder/IBM@IBMUS
-cc
-printing-architecture@freestandards.org
-Subject
-Re: [Printing-architecture] There will be a FSG Arch meeting on Wed Mar 
-21st
-
-
-
-
-
-
-I can't get in.  The conference calling system tells me to contact you 
+I can't get in.  The conference calling system tells me to contact you=20
 about the scheduled conference time.
 
        -Norm
 
 Claudia Alimpich wrote:
 >
-> There will be an Open Printing conference call on Wednesday March 21st.
+> There will be an Open Printing conference call on Wednesday March =
+21st.
 >
 > Day: Wednesdays
 >
@@ -71,88 +82,24 @@ Claudia Alimpich wrote:
 > Conference Code: 582 658 5482
 >
 > Claudia
-> ------------------------------------------------------------------------
+> =
+------------------------------------------------------------------------
 >
 > _______________________________________________
 > Printing-architecture mailing list
 > Printing-architecture@lists.freestandards.org
 > http://lists.freestandards.org/mailman/listinfo/printing-architecture
-> 
+>  =20
 
+_______________________________________________
+Printing-architecture mailing list
+Printing-architecture@lists.freestandards.org
+http://lists.freestandards.org/mailman/listinfo/printing-architecture
 
---=_alternative 0069DC61872572A5_=
-Content-Type: text/html; charset="US-ASCII"
-
-
-<br><font size=2 face="sans-serif">There is a problem with the line (again)
-and a ticket has been turned in (again). I tried to get the operator to
-manually add me to the call, so I might be there now (I'm dialed in and
-don't hear anything). Please try to call in now.</font>
-<br>
-<br>
-<br>
-<br>
-<br>
-<table width=100%>
-<tr valign=top>
-<td width=40%><font size=1 face="sans-serif"><b>Norm Jacobs &lt;Norm.Jacobs@Sun.COM&gt;</b>
-</font>
-<p><font size=1 face="sans-serif">03/21/2007 02:01 PM</font>
-<td width=59%>
-<table width=100%>
-<tr valign=top>
-<td>
-<div align=right><font size=1 face="sans-serif">To</font></div>
-<td><font size=1 face="sans-serif">Claudia Alimpich/Boulder/IBM@IBMUS</font>
-<tr valign=top>
-<td>
-<div align=right><font size=1 face="sans-serif">cc</font></div>
-<td><font size=1 face="sans-serif">printing-architecture@freestandards.org</font>
-<tr valign=top>
-<td>
-<div align=right><font size=1 face="sans-serif">Subject</font></div>
-<td><font size=1 face="sans-serif">Re: [Printing-architecture] There will
-be a FSG Arch meeting on Wed Mar &nbsp; &nbsp; &nbsp; &nbsp;21st</font></table>
-<br>
-<table>
-<tr valign=top>
-<td>
-<td></table>
-<br></table>
-<br>
-<br>
-<br><tt><font size=2>I can't get in. &nbsp;The conference calling system
-tells me to contact you <br>
-about the scheduled conference time.<br>
-<br>
- &nbsp; &nbsp; &nbsp; -Norm<br>
-<br>
-Claudia Alimpich wrote:<br>
-&gt;<br>
-&gt; There will be an Open Printing conference call on Wednesday March
-21st.<br>
-&gt;<br>
-&gt; Day: Wednesdays<br>
-&gt;<br>
-&gt; Time:<br>
-&gt; 12:00-1:00 PM US Pacific time<br>
-&gt; 1:00-2:00 PM US Mountain time<br>
-&gt; 3:00-4:00 PM US Eastern time<br>
-&gt; 9:00-10:00 PM Paris time<br>
-&gt;<br>
-&gt; USA Toll-free Number: 866-312-6342<br>
-&gt; Toll Number: 763-391-6805<br>
-&gt; Conference Code: 582 658 5482<br>
-&gt;<br>
-&gt; Claudia<br>
-&gt; ------------------------------------------------------------------------<br>
-&gt;<br>
-&gt; _______________________________________________<br>
-&gt; Printing-architecture mailing list<br>
-&gt; Printing-architecture@lists.freestandards.org<br>
-&gt; http://lists.freestandards.org/mailman/listinfo/printing-architecture<br>
-&gt; &nbsp; <br>
-</font></tt>
-<br>
---=_alternative 0069DC61872572A5_=--
+--=20
+No virus found in this outgoing message.
+Checked by AVG Free Edition.
+Version: 7.5.446 / Virus Database: 268.18.16/729 - Release Date: =
+3/21/2007 7:52 AM
+=20
 
