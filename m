@@ -1,12 +1,14 @@
-Return-Path: <alimpich@us.ibm.com>
+Return-Path: <Norm.Jacobs@Sun.COM>
+Message-ID: <46018F14.40505@Sun.COM>
+Date: Wed, 21 Mar 2007 15:01:24 -0500
+From: Norm Jacobs <Norm.Jacobs@Sun.COM>
 MIME-Version: 1.0
-Message-ID: <OF98921447.9BDBAA6E-ON872572A3.007F4C4E-872572A3.007F5B5F@us.ibm.com>
-From: Claudia Alimpich <alimpich@us.ibm.com>
-Date: Mon, 19 Mar 2007 17:11:02 -0600
-Content-Type: multipart/alternative;
-	boundary="=_alternative 007F5B5C872572A3_="
-Subject: [Printing-architecture] There will be a FSG Arch meeting on Wed Mar
-	21st
+References: <OF98921447.9BDBAA6E-ON872572A3.007F4C4E-872572A3.007F5B5F@us.ibm.com>
+In-Reply-To: <OF98921447.9BDBAA6E-ON872572A3.007F4C4E-872572A3.007F5B5F@us.ibm.com>
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: 7bit
+Subject: Re: [Printing-architecture] There will be a FSG Arch meeting on Wed
+ Mar	21st
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.freestandards.org>
 List-Unsubscribe: <http://lists.freestandards.org/mailman/listinfo/printing-architecture>,
@@ -16,47 +18,36 @@ List-Post: <mailto:printing-architecture@lists.freestandards.org>
 List-Help: <mailto:printing-architecture-request@lists.freestandards.org?subject=help>
 List-Subscribe: <http://lists.freestandards.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.freestandards.org?subject=subscribe>
-To: printing-architecture@freestandards.org
+To: Claudia Alimpich <alimpich@us.ibm.com>
+Cc: printing-architecture@freestandards.org
 
-This is a multipart message in MIME format.
---=_alternative 007F5B5C872572A3_=
-Content-Type: text/plain; charset="US-ASCII"
+I can't get in.  The conference calling system tells me to contact you 
+about the scheduled conference time.
 
-There will be an Open Printing conference call on Wednesday March 21st.
+       -Norm
 
-Day: Wednesdays 
-
-Time: 
-12:00-1:00 PM US Pacific time 
-1:00-2:00 PM US Mountain time 
-3:00-4:00 PM US Eastern time 
-9:00-10:00 PM Paris time 
-
-USA Toll-free Number: 866-312-6342
-Toll Number: 763-391-6805 
-Conference Code: 582 658 5482 
-
-Claudia
---=_alternative 007F5B5C872572A3_=
-Content-Type: text/html; charset="US-ASCII"
-
-
-<br><font size=2 face="sans-serif">There will be an Open Printing conference
-call on Wednesday March 21st.</font>
-<br>
-<br><font size=2 face="sans-serif">Day: Wednesdays</font><font size=3>
-</font>
-<br><font size=2 face="sans-serif"><br>
-Time: </font>
-<br><font size=2 face="sans-serif">12:00-1:00 PM US Pacific time <br>
-1:00-2:00 PM US Mountain time <br>
-3:00-4:00 PM US Eastern time <br>
-9:00-10:00 PM Paris time <br>
-</font>
-<br><font size=2 face="sans-serif">USA Toll-free Number: 866-312-6342</font>
-<br><font size=2 face="sans-serif">Toll Number: 763-391-6805 <br>
-Conference Code: 582 658 5482 </font>
-<br>
-<br><font size=2 face="sans-serif">Claudia</font>
---=_alternative 007F5B5C872572A3_=--
+Claudia Alimpich wrote:
+>
+> There will be an Open Printing conference call on Wednesday March 21st.
+>
+> Day: Wednesdays
+>
+> Time:
+> 12:00-1:00 PM US Pacific time
+> 1:00-2:00 PM US Mountain time
+> 3:00-4:00 PM US Eastern time
+> 9:00-10:00 PM Paris time
+>
+> USA Toll-free Number: 866-312-6342
+> Toll Number: 763-391-6805
+> Conference Code: 582 658 5482
+>
+> Claudia
+> ------------------------------------------------------------------------
+>
+> _______________________________________________
+> Printing-architecture mailing list
+> Printing-architecture@lists.freestandards.org
+> http://lists.freestandards.org/mailman/listinfo/printing-architecture
+>   
 
