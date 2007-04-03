@@ -4,11 +4,10 @@ MIME-Version: 1.0
 Content-Type: text/plain;
 	charset="iso-8859-1"
 Content-Transfer-Encoding: quoted-printable
-Date: Tue, 3 Apr 2007 10:40:04 -0700
-Message-ID: <811D382F92501D4EB5F748D2BF9EFBB92B9C25@wabex2.sharpamericas.com>
+Date: Tue, 3 Apr 2007 10:43:14 -0700
+Message-ID: <811D382F92501D4EB5F748D2BF9EFBB92B9C26@wabex2.sharpamericas.com>
 From: "McDonald, Ira" <imcdonald@sharplabs.com>
-Subject: [Printing-architecture] SC - Next OP SC - Mon/Tue 7/8 May 2007
-	(second week)
+Subject: [Printing-architecture] Abandon OP SC list - please use OP Arch list
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.freestandards.org>
 List-Unsubscribe: <http://lists.freestandards.org/mailman/listinfo/printing-architecture>,
@@ -22,25 +21,12 @@ To: printing-architecture@freestandards.org
 
 Hi,
 
-Per the minutes from yesterday's OP SC meeting, our next
-OP SC meeting will be the _second_ week of May:
+In the interests of simplicity and of open process, effective
+immediately all Open Printing Steering Committee email notes
+should be send to the OP Architecture list (see above).
 
-    - Note
-      - Till's vacation may conflict with 7/8 May - he will let us know
-
-    - Monday 7 May 2007, Evening
-        4pm in San Francisco - US PDT (Pacific Daylight Time)
-        5pm in Colorado - US MDT (Mountain Daylight Time)
-        6pm in Chicago - US CDT (Central Daylight Time)
-        7pm in New York - US EDT (Eastern Daylight Time)
-
-    - Tuesday 8 May 2007, Morning
-        12am in Coimbra, Portugal - WEST (Western European Summer Time)
-        8am in Japan - JST (Japan Standard Time)
-
-    Toll Free (866) 839-8145
-    Int'l     (865) 524-6352
-    ACCESS Code: 7548766
+ACTION - Till - arrange for OP SC to autoforward to OP Arch
+with Linux Foundation system support staff.
 
 Cheers,
 - Ira
