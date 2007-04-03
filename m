@@ -4,10 +4,11 @@ MIME-Version: 1.0
 Content-Type: text/plain;
 	charset="iso-8859-1"
 Content-Transfer-Encoding: quoted-printable
-Date: Tue, 3 Apr 2007 10:33:07 -0700
-Message-ID: <811D382F92501D4EB5F748D2BF9EFBB92B9C24@wabex2.sharpamericas.com>
+Date: Tue, 3 Apr 2007 10:40:04 -0700
+Message-ID: <811D382F92501D4EB5F748D2BF9EFBB92B9C25@wabex2.sharpamericas.com>
 From: "McDonald, Ira" <imcdonald@sharplabs.com>
-Subject: [Printing-architecture] SC -  Minutes for OP SC (2 April 2007)
+Subject: [Printing-architecture] SC - Next OP SC - Mon/Tue 7/8 May 2007
+	(second week)
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.freestandards.org>
 List-Unsubscribe: <http://lists.freestandards.org/mailman/listinfo/printing-architecture>,
@@ -21,19 +22,28 @@ To: printing-architecture@freestandards.org
 
 Hi,
 
-I've just posted the minutes from yesterdays's Linux Foundation
-Open Printing Steering Committee telecon in the directory:
+Per the minutes from yesterday's OP SC meeting, our next
+OP SC meeting will be the _second_ week of May:
 
-  ftp://ftp.pwg.org/pub/pwg/fsg/steering_committee
+    - Note
+      - Till's vacation may conflict with 7/8 May - he will let us know
 
-in the files:
+    - Monday 7 May 2007, Evening
+        4pm in San Francisco - US PDT (Pacific Daylight Time)
+        5pm in Colorado - US MDT (Mountain Daylight Time)
+        6pm in Chicago - US CDT (Central Daylight Time)
+        7pm in New York - US EDT (Eastern Daylight Time)
 
-  OP-SC-Minutes-20070402.htm
-  OP-SC-Minutes-20070402.pdf
+    - Tuesday 8 May 2007, Morning
+        12am in Coimbra, Portugal - WEST (Western European Summer Time)
+        8am in Japan - JST (Japan Standard Time)
+
+    Toll Free (866) 839-8145
+    Int'l     (865) 524-6352
+    ACCESS Code: 7548766
 
 Cheers,
 - Ira
-
 
 Ira McDonald (Musician / Software Architect)
 Chair - Linux Foundation Open Printing WG
