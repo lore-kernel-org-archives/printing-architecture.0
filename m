@@ -1,12 +1,17 @@
-Return-Path: <alimpich@us.ibm.com>
+Return-Path: <till.kamppeter@gmail.com>
+DKIM-Signature: a=rsa-sha1; c=relaxed/relaxed; d=gmail.com; s=beta;
+	h=domainkey-signature:received:received:message-id:date:from:user-agent:mime-version:to:cc:subject:references:in-reply-to:content-type:content-transfer-encoding;
+	b=PI6cX18iEa27blo6lA51lbS2yYcmwQLUDbq1rHr5G7dbP2jaLAiMX+ZYF6+E3+v5soOZ5cot47PISFgWTKdsn88z1+fN1u+ZWEiTll/kiEcD/CTtVPapVoekYGJIiHVJL7rfWmm3Ng6olYodGJL9znrxcMT/Y7mStf1JywWibRU=
+Message-ID: <46136EC0.4000200@gmail.com>
+Date: Wed, 04 Apr 2007 10:24:16 +0100
+From: Till Kamppeter <till.kamppeter@gmail.com>
 MIME-Version: 1.0
-Message-ID: <OFFB80BFEC.9AE2CD54-ON872572B2.0062836C-872572B2.00629A51@us.ibm.com>
-From: Claudia Alimpich <alimpich@us.ibm.com>
-Date: Tue, 3 Apr 2007 11:56:49 -0600
-Content-Type: multipart/alternative;
-	boundary="=_alternative 00629A4F872572B2_="
-Subject: [Printing-architecture] There will be a FSG Arch meeting on Wed Apr
-	4th
+References: <811D382F92501D4EB5F748D2BF9EFBB92B9C26@wabex2.sharpamericas.com>
+In-Reply-To: <811D382F92501D4EB5F748D2BF9EFBB92B9C26@wabex2.sharpamericas.com>
+Content-Type: text/plain; charset=UTF-8; format=flowed
+Content-Transfer-Encoding: 7bit
+Subject: Re: [Printing-architecture] Abandon OP SC list - please use OP Arch
+ list
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.freestandards.org>
 List-Unsubscribe: <http://lists.freestandards.org/mailman/listinfo/printing-architecture>,
@@ -16,47 +21,14 @@ List-Post: <mailto:printing-architecture@lists.freestandards.org>
 List-Help: <mailto:printing-architecture-request@lists.freestandards.org?subject=help>
 List-Subscribe: <http://lists.freestandards.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.freestandards.org?subject=subscribe>
-To: printing-architecture@freestandards.org
+To: "McDonald, Ira" <imcdonald@sharplabs.com>
+Cc: printing-architecture@freestandards.org
 
-This is a multipart message in MIME format.
---=_alternative 00629A4F872572B2_=
-Content-Type: text/plain; charset="US-ASCII"
+McDonald, Ira wrote:
+> ACTION - Till - arrange for OP SC to autoforward to OP Arch
+> with Linux Foundation system support staff.
 
-There will be an Open Printing conference call on Wednesday April 4th.
+I have sent a mail to the admins now.
 
-Day: Wednesdays 
-
-Time: 
-12:00-1:00 PM US Pacific time 
-1:00-2:00 PM US Mountain time 
-3:00-4:00 PM US Eastern time 
-9:00-10:00 PM Paris time 
-
-USA Toll-free Number: 866-312-6342
-Toll Number: 763-391-6805 
-Conference Code: 582 658 5482 
-
-Claudia
---=_alternative 00629A4F872572B2_=
-Content-Type: text/html; charset="US-ASCII"
-
-
-<br><font size=2 face="sans-serif">There will be an Open Printing conference
-call on Wednesday April 4th.</font>
-<br>
-<br><font size=2 face="sans-serif">Day: Wednesdays</font><font size=3>
-</font>
-<br><font size=2 face="sans-serif"><br>
-Time: </font>
-<br><font size=2 face="sans-serif">12:00-1:00 PM US Pacific time <br>
-1:00-2:00 PM US Mountain time <br>
-3:00-4:00 PM US Eastern time <br>
-9:00-10:00 PM Paris time <br>
-</font>
-<br><font size=2 face="sans-serif">USA Toll-free Number: 866-312-6342</font>
-<br><font size=2 face="sans-serif">Toll Number: 763-391-6805 <br>
-Conference Code: 582 658 5482 </font>
-<br>
-<br><font size=2 face="sans-serif">Claudia</font>
---=_alternative 00629A4F872572B2_=--
+    Till
 
