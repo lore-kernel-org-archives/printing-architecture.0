@@ -1,15 +1,14 @@
-Return-Path: <till.kamppeter@gmail.com>
-DKIM-Signature: a=rsa-sha1; c=relaxed/relaxed; d=gmail.com; s=beta;
-	h=domainkey-signature:received:received:message-id:date:from:user-agent:mime-version:to:subject:content-type:content-transfer-encoding;
-	b=ODl3lj0yOmew2fdo67i19Pipy+v7cJt00WcjrptE/4L1wJyE8em41hFjo9M1WVsWPsno4LK2oYK5YImQtiloXiq9dSl8jpwGQSbpavIT0XK4V9nv/lZ7D49Z+03a440VdSklKgIevgQEfFTOc+eRiehsqxiJurdHyk/PF2xeDuA=
-Message-ID: <4613809E.3010205@gmail.com>
-Date: Wed, 04 Apr 2007 11:40:30 +0100
-From: Till Kamppeter <till.kamppeter@gmail.com>
+Return-Path: <imcdonald@sharplabs.com>
+Content-class: urn:content-classes:message
 MIME-Version: 1.0
-Content-Type: text/plain; charset=UTF-8; format=flowed
-Content-Transfer-Encoding: 7bit
-Subject: [Printing-architecture] Status of distribution-independent driver
-	packages/LSB DDK
+Content-Type: text/plain;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+Date: Wed, 4 Apr 2007 08:30:46 -0700
+Message-ID: <811D382F92501D4EB5F748D2BF9EFBB92B9C27@wabex2.sharpamericas.com>
+In-Reply-To: <OFFB80BFEC.9AE2CD54-ON872572B2.0062836C-872572B2.00629A51@us.ibm.com>
+From: "McDonald, Ira" <imcdonald@sharplabs.com>
+Subject: Re: [Printing-architecture] Wed 4  April - OP Architecture meeting
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.freestandards.org>
 List-Unsubscribe: <http://lists.freestandards.org/mailman/listinfo/printing-architecture>,
@@ -19,70 +18,61 @@ List-Post: <mailto:printing-architecture@lists.freestandards.org>
 List-Help: <mailto:printing-architecture-request@lists.freestandards.org?subject=help>
 List-Subscribe: <http://lists.freestandards.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.freestandards.org?subject=subscribe>
-To: printing-architecture@lists.freestandards.org
+To: Claudia Alimpich <alimpich@us.ibm.com>, printing-architecture@freestandards.org
 
 Hi,
 
-here is an update on the distribution-independent driver packages and 
-the LSB DDK.
+The backup number at Free Conference Call that Till arranged is:
 
-As I probably already reported on earlier telecons the API for querying 
-driver packages and related driver info is up and running:
+FC Backup Number: 712-580-0600
+Conference Code: 839473#
 
-http://www.linux-foundation.org/en/OpenPrinting/Database/Query
+If the main number (below) doesn't work, please shift to this
+backup number - thanks.
 
-To be able to create and test distribution-independent driver packages 
-the LSB DDK is needed. It consists of the following components:
+Claudia - please note that Till is now living in from Coimbra,
+Portugal, where the start time will be 8pm WEST (Western European
+Summer Time) - and please add the FC backup number to announcements.
 
-- LSB Build Environment (supplied by LSB, for current work version 3.1.1
-   is used)
-- CUPS (created a distribution-independent CUPS 1.2.10 package, which
-   installs in LSB Build Environment - DONE)
-- GhostScript (created a distribution-independent ESP GhostScript 8.15.4
-   package, which installs in LSB Build Environment - DONE)
-- foomatic-filters (TO DO)
-- RPM macro set for maintainer scripts. Due to several missing
-   facilities in the LSB which are needed to easily implement system
-   tool/component packages the maintainer scripts (pre/post (un)install
-   scripts) get very awkward. To make it easy for driver authors and
-   printer manufacturers to supply correct maintainer scripts in their
-   packages I plan to create appropriate RPM macros. I also reported on
-   the lsb-discuss mailing list that system config features are missing
-   in the LSB.
+Cheers,
+- Ira
 
-In addition, a little change is needed in the printing requirements of 
-the LSB 3.2:
+Ira McDonald (Musician / Software Architect)
+Chair - Linux Foundation Open Printing WG
+Blue Roof Music / High North Inc
+PO Box 221  Grand Marais, MI  49839
+phone: +1-906-494-2434
+email: imcdonald@sharplabs.com=20
+-----Original Message-----
+From: printing-architecture-bounces@lists.freestandards.org =
+[mailto:printing-architecture-bounces@lists.freestandards.org]On Behalf =
+Of Claudia Alimpich
+Sent: Tuesday, April 03, 2007 12:57 PM
+To: printing-architecture@freestandards.org
+Subject: [Printing-architecture] Wed 4 April - OP Architecture meeting
 
-Distribution maintainers (Red Hat, Ubuntu) complained about that the 
-CUPS package requires directories in and links into /opt and /usr/local. 
-Therefore I decided to let all distribution-independent driver packages 
-work as follows:
 
-- Install all files into /opt/<supplier> according to FHS requirements 
-for applications.
 
-- Let the PPD directory of the driver package get symlinked into 
-/usr/share/ppd by the packages maintainer scripts
+There will be an Open Printing conference call on Wednesday April 4th.=20
 
-- Let the maintainer script also do additional tasks like symlinking 
-CUPS backends into the appropriate directories and add directories with 
-printer maintenance tools (ink levels, nozzle cleaning, ...) to the path.
+Day: Wednesdays=20
 
-The directory requirements for LSB 3.2 reduce then to have
+Time:=20
+12:00-1:00 PM US Pacific time=20
+1:00-2:00 PM US Mountain time=20
+3:00-4:00 PM US Eastern time=20
+9:00-10:00 PM Paris time=20
 
-/usr/share/ppd/<supplier>
+USA Toll-free Number: 866-312-6342=20
+Toll Number: 763-391-6805=20
+Conference Code: 582 658 5482=20
 
-as PPD search directory.
+Claudia
 
-Example for a distribution-independent driver package:
-
-http://openprinting.org/show_driver.cgi?driver=gutenprint
-
-Examples for the awkward maintainer scripts:
-
-http://www.linuxprinting.org/download/printdriver/SPECS/cups.spec
-http://www.linuxprinting.org/download/printdriver/SPECS/ghostscript.spec
-http://www.linuxprinting.org/download/printdriver/SPECS/gutenprint.spec
-
-    Till
+--=20
+No virus found in this outgoing message.
+Checked by AVG Free Edition.
+Version: 7.5.446 / Virus Database: 268.18.26/746 - Release Date: =
+4/4/2007 1:09 PM
+=20
 
