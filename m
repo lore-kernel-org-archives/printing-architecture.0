@@ -1,17 +1,15 @@
-Return-Path: <till.kamppeter@gmail.com>
-DKIM-Signature: a=rsa-sha1; c=relaxed/relaxed; d=gmail.com; s=beta;
-	h=domainkey-signature:received:received:message-id:date:from:user-agent:mime-version:to:cc:subject:references:in-reply-to:content-type:content-transfer-encoding;
-	b=fCoc1y45lzZXWnC6kO6aDwkgvrYSTsCcZlMSmLH7NXe6U+QW4owSIK5qRpyhG/QX0Pf6/0QApPe60D3Z31PhW8fEYDDkGXEIf35mAVhBT4+H0rJ8j55EsGwVrMIChJas2LEJ5JQ6IsKMTJ0It6WJcTJ6iu+dsx3bkqGdz14f5fQ=
-Message-ID: <461A7866.10008@gmail.com>
-Date: Mon, 09 Apr 2007 18:31:18 +0100
-From: Till Kamppeter <till.kamppeter@gmail.com>
+Return-Path: <imcdonald@sharplabs.com>
+Content-class: urn:content-classes:message
 MIME-Version: 1.0
-References: <811D382F92501D4EB5F748D2BF9EFBB92B9C30@wabex2.sharpamericas.com>
-In-Reply-To: <811D382F92501D4EB5F748D2BF9EFBB92B9C30@wabex2.sharpamericas.com>
-Content-Type: text/plain; charset=UTF-8; format=flowed
-Content-Transfer-Encoding: 7bit
+Content-Type: text/plain;
+	charset="UTF-8"
+Content-Transfer-Encoding: base64
+Date: Mon, 9 Apr 2007 10:45:28 -0700
+Message-ID: <811D382F92501D4EB5F748D2BF9EFBB92B9C3B@wabex2.sharpamericas.com>
+In-Reply-To: <461A7866.10008@gmail.com>
+From: "McDonald, Ira" <imcdonald@sharplabs.com>
 Subject: Re: [Printing-architecture] Proposal - 15 June - OP WG Face-to-Face
- and	Telecon
+	and	Telecon
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.freestandards.org>
 List-Unsubscribe: <http://lists.freestandards.org/mailman/listinfo/printing-architecture>,
@@ -21,39 +19,38 @@ List-Post: <mailto:printing-architecture@lists.freestandards.org>
 List-Help: <mailto:printing-architecture-request@lists.freestandards.org?subject=help>
 List-Subscribe: <http://lists.freestandards.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.freestandards.org?subject=subscribe>
-To: "McDonald, Ira" <imcdonald@sharplabs.com>
+To: Till Kamppeter <till.kamppeter@gmail.com>
 Cc: printing-architecture@freestandards.org
 
-I think, this is a good idea.
-
-Please everyone who wants to participate, please tell whether you want 
-to come to Mountain View or to call in. So that we can plan more easily.
-
-    Till
-
-
-McDonald, Ira wrote:
-> Hi,
-> 
-> Since many Open Printing participants won't be able to
-> travel to Google in June, how about if we plan to have
-> an all-day teleconference on Friday 15 June?  
-> 
-> Till and Glen (and possibly others) could be in the room 
-> together in Mountain View and the rest of us could join
-> by telecon and have a serious working meeting - not just
-> status and planning.
-> 
-> Comments?
-> 
-> Cheers,
-> - Ira
-> 
-> Ira McDonald (Musician / Software Architect)
-> Chair - Linux Foundation Open Printing WG
-> Blue Roof Music / High North Inc
-> PO Box 221  Grand Marais, MI  49839
-> phone: +1-906-494-2434
-> email: imcdonald@sharplabs.com
-> 
+SGkgVGlsbCwNCg0KSSBtdWNoIHByZWZlciB0byBjYWxsIGluIHJlbW90ZWx5IC0gZXZlbiB3aXRo
+IHNvbWUNCmZ1bmRpbmcgaGVscCwgdGhlIHRyaXAgd2lsbCB3aW5kIHVwIGNvc3RpbmcgbWUgbW9u
+ZXksDQphbmQgSSBzaW1wbHkgY2FuJ3QgYWZmb3JkIGl0Lg0KDQpDaGVlcnMsDQotIElyYQ0KDQpJ
+cmEgTWNEb25hbGQgKE11c2ljaWFuIC8gU29mdHdhcmUgQXJjaGl0ZWN0KQ0KQ2hhaXIgLSBMaW51
+eCBGb3VuZGF0aW9uIE9wZW4gUHJpbnRpbmcgV0cNCkJsdWUgUm9vZiBNdXNpYyAvIEhpZ2ggTm9y
+dGggSW5jDQpQTyBCb3ggMjIxICBHcmFuZCBNYXJhaXMsIE1JICA0OTgzOQ0KcGhvbmU6ICsxLTkw
+Ni00OTQtMjQzNA0KZW1haWw6IGltY2RvbmFsZEBzaGFycGxhYnMuY29tDQoNCi0tLS0tT3JpZ2lu
+YWwgTWVzc2FnZS0tLS0tDQpGcm9tOiBUaWxsIEthbXBwZXRlciBbbWFpbHRvOnRpbGwua2FtcHBl
+dGVyQGdtYWlsLmNvbV0NClNlbnQ6IE1vbmRheSwgQXByaWwgMDksIDIwMDcgMTI6MzEgUE0NClRv
+OiBNY0RvbmFsZCwgSXJhDQpDYzogcHJpbnRpbmctYXJjaGl0ZWN0dXJlQGZyZWVzdGFuZGFyZHMu
+b3JnDQpTdWJqZWN0OiBSZTogW1ByaW50aW5nLWFyY2hpdGVjdHVyZV0gUHJvcG9zYWwgLSAxNSBK
+dW5lIC0gT1AgV0cNCkZhY2UtdG8tRmFjZSBhbmQgVGVsZWNvbg0KDQoNCkkgdGhpbmssIHRoaXMg
+aXMgYSBnb29kIGlkZWEuDQoNClBsZWFzZSBldmVyeW9uZSB3aG8gd2FudHMgdG8gcGFydGljaXBh
+dGUsIHBsZWFzZSB0ZWxsIHdoZXRoZXIgeW91IHdhbnQgDQp0byBjb21lIHRvIE1vdW50YWluIFZp
+ZXcgb3IgdG8gY2FsbCBpbi4gU28gdGhhdCB3ZSBjYW4gcGxhbiBtb3JlIGVhc2lseS4NCg0KICAg
+IFRpbGwNCg0KDQpNY0RvbmFsZCwgSXJhIHdyb3RlOg0KPiBIaSwNCj4gDQo+IFNpbmNlIG1hbnkg
+T3BlbiBQcmludGluZyBwYXJ0aWNpcGFudHMgd29uJ3QgYmUgYWJsZSB0bw0KPiB0cmF2ZWwgdG8g
+R29vZ2xlIGluIEp1bmUsIGhvdyBhYm91dCBpZiB3ZSBwbGFuIHRvIGhhdmUNCj4gYW4gYWxsLWRh
+eSB0ZWxlY29uZmVyZW5jZSBvbiBGcmlkYXkgMTUgSnVuZT8gIA0KPiANCj4gVGlsbCBhbmQgR2xl
+biAoYW5kIHBvc3NpYmx5IG90aGVycykgY291bGQgYmUgaW4gdGhlIHJvb20gDQo+IHRvZ2V0aGVy
+IGluIE1vdW50YWluIFZpZXcgYW5kIHRoZSByZXN0IG9mIHVzIGNvdWxkIGpvaW4NCj4gYnkgdGVs
+ZWNvbiBhbmQgaGF2ZSBhIHNlcmlvdXMgd29ya2luZyBtZWV0aW5nIC0gbm90IGp1c3QNCj4gc3Rh
+dHVzIGFuZCBwbGFubmluZy4NCj4gDQo+IENvbW1lbnRzPw0KPiANCj4gQ2hlZXJzLA0KPiAtIEly
+YQ0KPiANCj4gSXJhIE1jRG9uYWxkIChNdXNpY2lhbiAvIFNvZnR3YXJlIEFyY2hpdGVjdCkNCj4g
+Q2hhaXIgLSBMaW51eCBGb3VuZGF0aW9uIE9wZW4gUHJpbnRpbmcgV0cNCj4gQmx1ZSBSb29mIE11
+c2ljIC8gSGlnaCBOb3J0aCBJbmMNCj4gUE8gQm94IDIyMSAgR3JhbmQgTWFyYWlzLCBNSSAgNDk4
+MzkNCj4gcGhvbmU6ICsxLTkwNi00OTQtMjQzNA0KPiBlbWFpbDogaW1jZG9uYWxkQHNoYXJwbGFi
+cy5jb20NCj4gDQoNCg0KLS0gDQpObyB2aXJ1cyBmb3VuZCBpbiB0aGlzIG91dGdvaW5nIG1lc3Nh
+Z2UuDQpDaGVja2VkIGJ5IEFWRyBGcmVlIEVkaXRpb24uDQpWZXJzaW9uOiA3LjUuNDQ2IC8gVmly
+dXMgRGF0YWJhc2U6IDI2OS4wLjAvNzUyIC0gUmVsZWFzZSBEYXRlOiA0LzgvMjAwNyA4OjM0IFBN
+DQogDQo=
 
