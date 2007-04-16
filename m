@@ -1,13 +1,12 @@
-Return-Path: <imcdonald@sharplabs.com>
-Content-class: urn:content-classes:message
+Return-Path: <alimpich@us.ibm.com>
 MIME-Version: 1.0
-Content-Type: text/plain;
-	charset="iso-8859-1"
-Content-Transfer-Encoding: quoted-printable
-Date: Mon, 16 Apr 2007 13:02:47 -0700
-Message-ID: <811D382F92501D4EB5F748D2BF9EFBB92B9C47@wabex2.sharpamericas.com>
-From: "McDonald, Ira" <imcdonald@sharplabs.com>
-Subject: [Printing-architecture] REMINDER - Wed 18 April - OP Arch Telecon
+Message-ID: <OF91F948E8.E57ADF8E-ON872572BF.007603FD-872572BF.00761DDD@us.ibm.com>
+From: Claudia Alimpich <alimpich@us.ibm.com>
+Date: Mon, 16 Apr 2007 15:29:54 -0600
+Content-Type: multipart/alternative;
+	boundary="=_alternative 00761DDA872572BF_="
+Subject: [Printing-architecture] There will be a Linux Open Printing Arch
+	meeting on Wed Apr 18th
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.freestandards.org>
 List-Unsubscribe: <http://lists.freestandards.org/mailman/listinfo/printing-architecture>,
@@ -19,37 +18,56 @@ List-Subscribe: <http://lists.freestandards.org/mailman/listinfo/printing-archit
 	<mailto:printing-architecture-request@lists.freestandards.org?subject=subscribe>
 To: printing-architecture@freestandards.org
 
-Hi,
+This is a multipart message in MIME format.
+--=_alternative 00761DDA872572BF_=
+Content-Type: text/plain; charset="US-ASCII"
 
-Reminder that we should have our next Open Printing
-Architecture WG telecon this Wednesday 18 April.
+There will be an Linux Open Printing Architecture conference call on 
+Wednesday April 18th.
 
-Two suggested agenda topics:
+Day: Wednesdays 
 
-(1) Discussion of Glen's excellent project outline note
-    "OP Thin Thread Developement for LinuxEmbedded Solutions"
-    sent to Printing-Architecture list on Monday 9 April
+Time: 
+12:00-1:00 PM US Pacific time 
+1:00-2:00 PM US Mountain time 
+3:00-4:00 PM US Eastern time 
+8:00-9:00 PM Western European time 
 
-(2) Discussion of the Linux Foundation Summit scheduled
-    for Wednesday through Friday 13-15 June
-    - Desktop Architects Meeting 4 (DAM4)
-    - Open Printing WG meeting
-    - who will attend in person or by phone?
+USA Toll-free Number: 866-312-6342
+Toll Number: 763-391-6805 
+Conference Code: 582 658 5482 
 
-Cheers,
-- Ira
+There is a backup number at Free Conference Call. If the main number 
+(above) doesn't work, please use this backup number:
+FC Backup Number: 712-580-0600
+Conference Code: 839473#
 
-Ira McDonald (Musician / Software Architect)
-Chair - Linux Foundation Open Printing WG
-Blue Roof Music / High North Inc
-PO Box 221  Grand Marais, MI  49839
-phone: +1-906-494-2434
-email: imcdonald@sharplabs.com
+Claudia
+--=_alternative 00761DDA872572BF_=
+Content-Type: text/html; charset="US-ASCII"
 
---=20
-No virus found in this outgoing message.
-Checked by AVG Free Edition.
-Version: 7.5.446 / Virus Database: 269.5.0/763 - Release Date: 4/16/2007 =
-5:53 PM
-=20
+
+<br><font size=2 face="sans-serif">There will be an Linux Open Printing
+Architecture conference call on Wednesday April 18th.</font>
+<br>
+<br><font size=2 face="sans-serif">Day: Wednesdays</font><font size=3>
+</font>
+<br><font size=2 face="sans-serif"><br>
+Time: </font>
+<br><font size=2 face="sans-serif">12:00-1:00 PM US Pacific time <br>
+1:00-2:00 PM US Mountain time <br>
+3:00-4:00 PM US Eastern time <br>
+8:00-9:00 PM Western European time <br>
+</font>
+<br><font size=2 face="sans-serif">USA Toll-free Number: 866-312-6342</font>
+<br><font size=2 face="sans-serif">Toll Number: 763-391-6805 <br>
+Conference Code: 582 658 5482 </font>
+<br>
+<br><font size=2 face="sans-serif">There is a backup number at Free Conference
+Call. If the main number (above) doesn't work, please use this backup number:</font>
+<br><font size=2 face="sans-serif">FC Backup Number: 712-580-0600<br>
+Conference Code: 839473#</font>
+<br>
+<br><font size=2 face="sans-serif">Claudia</font>
+--=_alternative 00761DDA872572BF_=--
 
