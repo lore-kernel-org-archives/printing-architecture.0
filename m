@@ -1,17 +1,13 @@
-Return-Path: <till.kamppeter@gmail.com>
-DKIM-Signature: a=rsa-sha1; c=relaxed/relaxed; d=gmail.com; s=beta;
-	h=domainkey-signature:received:received:message-id:date:from:user-agent:mime-version:to:cc:subject:references:in-reply-to:content-type:content-transfer-encoding;
-	b=aSr7OrUJQt7m6FY8YP57wnQMhSeZqGdOR2Q5T+R5KT9p2R/IO9S1n7PZuIvtNEGsHlsw2tiOCHGNgIWe8oDtmJ8fpIR+A7RJKlcJfN+B9y6qQt1HERFarfCRbjjImUz/MLqpyC0S+4Lz49fBL7ydKJDLw4vKNWSZ6U32fB74H0U=
-Message-ID: <46200C01.1070701@gmail.com>
-Date: Sat, 14 Apr 2007 00:02:25 +0100
-From: Till Kamppeter <till.kamppeter@gmail.com>
+Return-Path: <imcdonald@sharplabs.com>
+Content-class: urn:content-classes:message
 MIME-Version: 1.0
-References: <8B8709E6C8B8784583FA9C7C013CB4513A9794@etd1.etd.ussj.ricoh.com>
-In-Reply-To: <8B8709E6C8B8784583FA9C7C013CB4513A9794@etd1.etd.ussj.ricoh.com>
-Content-Type: text/plain; charset=UTF-8; format=flowed
-Content-Transfer-Encoding: 7bit
-Subject: Re: [Printing-architecture] Problem related to automatic driver
-	download
+Content-Type: text/plain;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+Date: Mon, 16 Apr 2007 13:02:47 -0700
+Message-ID: <811D382F92501D4EB5F748D2BF9EFBB92B9C47@wabex2.sharpamericas.com>
+From: "McDonald, Ira" <imcdonald@sharplabs.com>
+Subject: [Printing-architecture] REMINDER - Wed 18 April - OP Arch Telecon
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.freestandards.org>
 List-Unsubscribe: <http://lists.freestandards.org/mailman/listinfo/printing-architecture>,
@@ -21,63 +17,39 @@ List-Post: <mailto:printing-architecture@lists.freestandards.org>
 List-Help: <mailto:printing-architecture-request@lists.freestandards.org?subject=help>
 List-Subscribe: <http://lists.freestandards.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.freestandards.org?subject=subscribe>
-To: George Liu <george.liu@ussj.ricoh.com>
-Cc: printing-architecture@lists.freestandards.org
+To: printing-architecture@freestandards.org
 
-George Liu wrote:
-> While downloading a PPD file or a driver package from openprinting.org,
-> user can see the requirement or instructions from printer/driver
-> information page. 
-> 
-> It will introduce confusion if a downloaded PPD/driver does not work on
-> user's Linux box.
-> 
-> Scenario 1: 
-> Printer has Postscript as option. CUPS downloaded Postscript drivers
-> automatically without informing user Postscript option needs to be
-> installed on the printer. 
-> 
-> 
-> Scenario 2:
-> User installed CUPS 1.3 (which supports auto PPD/driver download) on Red
-> Hat Enterprise Server 4. CUPS downloaded an GS-opvp driver, but GS/opvp
-> is not supported on the Linux box. 
-> 
-> 
-> Here's my suggestions on how these problems can be addressed:
-> 
-> 1. Make a PPD extension "*DriverInformation: ". It can state either
-> "Recommended" or whatever deems fit. E.g.
-> *DriverInformation: "Recommended"
-> *DriverInformation: "Printer needs to have Postscript Option Installed"
-> Printer setup utility or CUPS web UI need to display it to user.
->
+Hi,
 
-A field for warning messages is also a nice feature. So special cases 
-which cannot be auto-detected can get covered,
+Reminder that we should have our next Open Printing
+Architecture WG telecon this Wednesday 18 April.
 
-The case of having the PostScript option installed can perhaps even be 
-auto-detected, for example on some printer models "PS" or "PS3" gets 
-added to the "CMD" field of the IEEE-1284 device ID.
+Two suggested agenda topics:
 
-> 
-> 2. Make another PPD extension and list all the required components. E.g.
-> *DriverDependencies: foomatic-rip	3.43
-> *DriverDependencies: gs       8.15    
-> *DriverDependencies: LSB	3.1
-> Distribution can use which command/or whatever they chose to determine
-> whether the required components exist.
-> 
-> WDYT?
+(1) Discussion of Glen's excellent project outline note
+    "OP Thin Thread Developement for LinuxEmbedded Solutions"
+    sent to Printing-Architecture list on Monday 9 April
 
-I think this is a good idea, especially as in the future it can easily 
-happen that driver packages for different LSB versions can be on the server.
+(2) Discussion of the Linux Foundation Summit scheduled
+    for Wednesday through Friday 13-15 June
+    - Desktop Architects Meeting 4 (DAM4)
+    - Open Printing WG meeting
+    - who will attend in person or by phone?
 
- From LSB 3.2 on a certain version of GhostScript is already there due 
-to the LSB 3.2, same for foomatic-rip, so the dependencies need only to 
-be mentioned explicitly if the driver really needs special versions. 
-With all fully LSB-compliant driver packages it is enough to only put 
-the LSB dependency.
+Cheers,
+- Ira
 
-    Till
+Ira McDonald (Musician / Software Architect)
+Chair - Linux Foundation Open Printing WG
+Blue Roof Music / High North Inc
+PO Box 221  Grand Marais, MI  49839
+phone: +1-906-494-2434
+email: imcdonald@sharplabs.com
+
+--=20
+No virus found in this outgoing message.
+Checked by AVG Free Edition.
+Version: 7.5.446 / Virus Database: 269.5.0/763 - Release Date: 4/16/2007 =
+5:53 PM
+=20
 
