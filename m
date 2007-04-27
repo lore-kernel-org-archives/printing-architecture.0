@@ -1,62 +1,36 @@
-Return-Path: <imcdonald@sharplabs.com>
-Content-class: urn:content-classes:message
+Return-Path: <shida.keisho@canon.co.jp>
+From: "SHIDA, Keisho" <shida.keisho@canon.co.jp>
+Message-Id: <20070427094107.980A.SHIDA.KEISHO@canon.co.jp>
 MIME-Version: 1.0
-Content-Type: text/plain;
-	charset="UTF-8"
-Content-Transfer-Encoding: base64
-Date: Sat, 28 Apr 2007 12:01:37 -0700
-Message-ID: <FCC7D7D1DB94054EB491EED9D274727D030EF3@wabex2.sharpamericas.com>
-In-Reply-To: <46323E5E.3000909@gmail.com>
-From: "McDonald, Ira" <imcdonald@sharplabs.com>
-Subject: [Printing-architecture] SC - Next OP SC - Mon/Tue 14/15 May 2007
-	(third week)
+Content-Type: text/plain; charset="US-ASCII"
+Content-Transfer-Encoding: 7bit
+Subject: [Printing-architecture] Agenda for LF summit in June
 List-Id: Printing architecture under linux
-	<printing-architecture.lists.freestandards.org>
-List-Unsubscribe: <http://lists.freestandards.org/mailman/listinfo/printing-architecture>,
-	<mailto:printing-architecture-request@lists.freestandards.org?subject=unsubscribe>
-List-Archive: <http://lists.freestandards.org/pipermail/printing-architecture>
-List-Post: <mailto:printing-architecture@lists.freestandards.org>
-List-Help: <mailto:printing-architecture-request@lists.freestandards.org?subject=help>
-List-Subscribe: <http://lists.freestandards.org/mailman/listinfo/printing-architecture>,
-	<mailto:printing-architecture-request@lists.freestandards.org?subject=subscribe>
-To: Till Kamppeter <till.kamppeter@gmail.com>
-Cc: printing-architecture@freestandards.org
+	<printing-architecture.lists.linux-foundation.org>
+List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
+	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=unsubscribe>
+List-Archive: <http://lists.linux-foundation.org/pipermail/printing-architecture>
+List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
+List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
+List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
+	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
+Date: Fri, 27 Apr 2007 00:44:35 -0000
+To: OP SC <printing-sc@freestandards.org>
+Cc: toratani.yasumasa@canon.co.jp, osamu.mihara@fujixerox.co.jp, shida.keisho@canon.co.jp
 
-SGksDQoNCk9LIC0gV2UnbGwgZGVmZXIgdGhlIG5leHQgT3BlbiBQcmludGluZyBTdGVlcmluZyBD
-b21taXR0ZWUNCnVudGlsIE1vbmRheS9UdWVzZGF5IDE0LzE1IE1heSAtIHRoYXQgd29ya3MgbXVj
-aCBiZXR0ZXIgZm9yDQptZSB0b28gLSBOYW5jeSBhbmQgSSB3aWxsIGJlIG1vdmluZyBob21lIGR1
-cmluZyB0aGUgd2VlayBvZg0KTW9uZGF5IDcgTWF5Lg0KDQpJJ2xsIHNlbmQgYSByZW1pbmRlciB3
-aXRoIGFuIGFnZW5kYSBpbiBhbm90aGVyIHdlZWsgb3IgdGVuDQpkYXlzLg0KDQpDaGVlcnMsDQot
-IElyYQ0KDQpJcmEgTWNEb25hbGQgKE11c2ljaWFuIC8gU29mdHdhcmUgQXJjaGl0ZWN0KQ0KQ2hh
-aXIgLSBMaW51eCBGb3VuZGF0aW9uIE9wZW4gUHJpbnRpbmcgV0cNCkJsdWUgUm9vZiBNdXNpYyAv
-IEhpZ2ggTm9ydGggSW5jDQpQTyBCb3ggMjIxICBHcmFuZCBNYXJhaXMsIE1JICA0OTgzOQ0KcGhv
-bmU6ICsxLTkwNi00OTQtMjQzNA0KZW1haWw6IGltY2RvbmFsZEBzaGFycGxhYnMuY29tDQoNCi0t
-LS0tT3JpZ2luYWwgTWVzc2FnZS0tLS0tDQpGcm9tOiBUaWxsIEthbXBwZXRlciBbbWFpbHRvOnRp
-bGwua2FtcHBldGVyQGdtYWlsLmNvbV0NClNlbnQ6IEZyaWRheSwgQXByaWwgMjcsIDIwMDcgMTox
-OCBQTQ0KVG86IE1jRG9uYWxkLCBJcmENCkNjOiBwcmludGluZy1hcmNoaXRlY3R1cmVAZnJlZXN0
-YW5kYXJkcy5vcmcNClN1YmplY3Q6IFJlOiBbUHJpbnRpbmctYXJjaGl0ZWN0dXJlXSBTQyAtIE5l
-eHQgT1AgU0MgLSBNb24vVHVlIDcvOCBNYXkNCjIwMDcgKHNlY29uZCB3ZWVrKQ0KDQoNCk1jRG9u
-YWxkLCBJcmEgd3JvdGU6DQo+IEhpLA0KPiANCj4gUGVyIHRoZSBtaW51dGVzIGZyb20geWVzdGVy
-ZGF5J3MgT1AgU0MgbWVldGluZywgb3VyIG5leHQNCj4gT1AgU0MgbWVldGluZyB3aWxsIGJlIHRo
-ZSBfc2Vjb25kXyB3ZWVrIG9mIE1heToNCj4gDQo+ICAgICAtIE5vdGUNCj4gICAgICAgLSBUaWxs
-J3MgdmFjYXRpb24gbWF5IGNvbmZsaWN0IHdpdGggNy84IE1heSAtIGhlIHdpbGwgbGV0IHVzIGtu
-b3cNCj4NCg0KWWVzLCBteSB2YWNhdGlvbiB3aWxsIGNvbmZsaWN0IHdpdGggdGhhdCBkYXkuIExl
-dCdzIGhhdmUgdGhlIFNDIE1lZXRpbmcgDQpvbmUgd2VlayBsYXRlci4NCg0KICAgIFRpbGwNCg0K
-DQo+ICAgICAtIE1vbmRheSA3IE1heSAyMDA3LCBFdmVuaW5nDQo+ICAgICAgICAgNHBtIGluIFNh
-biBGcmFuY2lzY28gLSBVUyBQRFQgKFBhY2lmaWMgRGF5bGlnaHQgVGltZSkNCj4gICAgICAgICA1
-cG0gaW4gQ29sb3JhZG8gLSBVUyBNRFQgKE1vdW50YWluIERheWxpZ2h0IFRpbWUpDQo+ICAgICAg
-ICAgNnBtIGluIENoaWNhZ28gLSBVUyBDRFQgKENlbnRyYWwgRGF5bGlnaHQgVGltZSkNCj4gICAg
-ICAgICA3cG0gaW4gTmV3IFlvcmsgLSBVUyBFRFQgKEVhc3Rlcm4gRGF5bGlnaHQgVGltZSkNCj4g
-DQo+ICAgICAtIFR1ZXNkYXkgOCBNYXkgMjAwNywgTW9ybmluZw0KPiAgICAgICAgIDEyYW0gaW4g
-Q29pbWJyYSwgUG9ydHVnYWwgLSBXRVNUIChXZXN0ZXJuIEV1cm9wZWFuIFN1bW1lciBUaW1lKQ0K
-PiAgICAgICAgIDhhbSBpbiBKYXBhbiAtIEpTVCAoSmFwYW4gU3RhbmRhcmQgVGltZSkNCj4gDQo+
-ICAgICBUb2xsIEZyZWUgKDg2NikgODM5LTgxNDUNCj4gICAgIEludCdsICAgICAoODY1KSA1MjQt
-NjM1Mg0KPiAgICAgQUNDRVNTIENvZGU6IDc1NDg3NjYNCj4gDQo+IENoZWVycywNCj4gLSBJcmEN
-Cj4gDQo+IElyYSBNY0RvbmFsZCAoTXVzaWNpYW4gLyBTb2Z0d2FyZSBBcmNoaXRlY3QpDQo+IENo
-YWlyIC0gTGludXggRm91bmRhdGlvbiBPcGVuIFByaW50aW5nIFdHDQo+IEJsdWUgUm9vZiBNdXNp
-YyAvIEhpZ2ggTm9ydGggSW5jDQo+IFBPIEJveCAyMjEgIEdyYW5kIE1hcmFpcywgTUkgIDQ5ODM5
-DQo+IHBob25lOiArMS05MDYtNDk0LTI0MzQNCj4gZW1haWw6IGltY2RvbmFsZEBzaGFycGxhYnMu
-Y29tDQo+IA0KDQoNCk5vIHZpcnVzIGZvdW5kIGluIHRoaXMgb3V0Z29pbmcgbWVzc2FnZS4NCkNo
-ZWNrZWQgYnkgQVZHIEZyZWUgRWRpdGlvbi4gDQpWZXJzaW9uOiA3LjUuNDY3IC8gVmlydXMgRGF0
-YWJhc2U6IDI2OS42LjEvNzc4IC0gUmVsZWFzZSBEYXRlOiA0LzI3LzIwMDcgMTozOSBQTQ0KIA0K
+Hello Till:
+
+How are you? This is Shida from OP Japan.
+
+We had a monthly local meeting here in yesterday and one of topics was upcoming LF Summit in June but local members were wondering that there is not much detail of the agenda available. 
+
+Please let us know the detail of agenda, in particular, printing related subjects. The information may allow us to study the participation of the meeting with their management.
+
+
+Thank you.
+
+
+Shida/
+==
+
 
