@@ -1,11 +1,17 @@
-Return-Path: <glen.petrie@eitc.epson.com>
-Message-ID: <2F7D63A21DB2C74EB8EB8C09AF667DB00559CADF@eitc220.eitc.epson.com>
-From: "Petrie, Glen" <glen.petrie@eitc.epson.com>
-Date: Wed, 18 Apr 2007 13:37:02 -0700
+Return-Path: <till.kamppeter@gmail.com>
+DKIM-Signature: a=rsa-sha1; c=relaxed/relaxed; d=gmail.com; s=beta;
+	h=domainkey-signature:received:received:message-id:date:from:user-agent:mime-version:to:cc:subject:references:in-reply-to:content-type:content-transfer-encoding;
+	b=ObqXVhR/sDnpuunX78huhpijcoazxmRqHn1Iklh9LKnB1Cx97IJf0P2A8GPmGzPrzY/O5mqoPqdESaBrPd62JG+0WeHUC3gqP4+BuE/Ttuv+J6FETyGizObwmBaWsD9+qBps6g8bsp+0v1zeDE+kMMQ+92PZJLTZfALql8ip6Bc=
+Message-ID: <46323E5E.3000909@gmail.com>
+Date: Fri, 27 Apr 2007 19:18:06 +0100
+From: Till Kamppeter <till.kamppeter@gmail.com>
 MIME-Version: 1.0
-Content-Type: multipart/alternative;
-	boundary="----_=_NextPart_001_01C781F9.521409C0"
-Subject: [Printing-architecture] a test
+References: <811D382F92501D4EB5F748D2BF9EFBB92B9C25@wabex2.sharpamericas.com>
+In-Reply-To: <811D382F92501D4EB5F748D2BF9EFBB92B9C25@wabex2.sharpamericas.com>
+Content-Type: text/plain; charset=UTF-8; format=flowed
+Content-Transfer-Encoding: 7bit
+Subject: Re: [Printing-architecture] SC - Next OP SC - Mon/Tue 7/8 May 2007
+ (second week)
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.freestandards.org>
 List-Unsubscribe: <http://lists.freestandards.org/mailman/listinfo/printing-architecture>,
@@ -15,60 +21,47 @@ List-Post: <mailto:printing-architecture@lists.freestandards.org>
 List-Help: <mailto:printing-architecture-request@lists.freestandards.org?subject=help>
 List-Subscribe: <http://lists.freestandards.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.freestandards.org?subject=subscribe>
-To: printing-architecture@freestandards.org
+To: "McDonald, Ira" <imcdonald@sharplabs.com>
+Cc: printing-architecture@freestandards.org
 
-This message is in MIME format. Since your mail reader does not understand
-this format, some or all of this message may not be legible.
+McDonald, Ira wrote:
+> Hi,
+> 
+> Per the minutes from yesterday's OP SC meeting, our next
+> OP SC meeting will be the _second_ week of May:
+> 
+>     - Note
+>       - Till's vacation may conflict with 7/8 May - he will let us know
+>
 
-------_=_NextPart_001_01C781F9.521409C0
-Content-Type: text/plain
+Yes, my vacation will conflict with that day. Let's have the SC Meeting 
+one week later.
 
-this is only a test
-
-
-Rgds, 
-Glen W. Petrie 
-Epson Imaging Technology Center 
-2580 Orchard Parkway, Suite 200 
-San Jose, CA, 95131 
-Voice: 408.576.4131  Fax: 408.474.0511 
-
+    Till
 
 
-------_=_NextPart_001_01C781F9.521409C0
-Content-Type: text/html
-Content-Transfer-Encoding: quoted-printable
-
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
-<HTML>
-<HEAD>
-<META HTTP-EQUIV=3D"Content-Type" CONTENT=3D"text/html; =
-charset=3Dus-ascii">
-<META NAME=3D"Generator" CONTENT=3D"MS Exchange Server version =
-5.5.2658.24">
-<TITLE>a test</TITLE>
-</HEAD>
-<BODY>
-
-<P ALIGN=3DLEFT><FONT SIZE=3D2 FACE=3D"Arial">this is only a =
-test</FONT></P>
-
-<P ALIGN=3DLEFT><A NAME=3D"_MailAutoSig"></A></P>
-
-<P ALIGN=3DLEFT><B><I><FONT FACE=3D"Times New Roman">Rgds,<BR>
-</FONT></I></B><B><I></I></B><B><I><FONT COLOR=3D"#0000FF" SIZE=3D5 =
-FACE=3D"Times New Roman">Glen W. =
-Petrie</FONT></I></B><B><I></I></B><B><I><FONT SIZE=3D5 FACE=3D"Times =
-New Roman"><BR>
-</FONT></I></B><B><I><FONT FACE=3D"Times New Roman">Epson Imaging =
-Technology Center<BR>
-2580 Orchard Parkway, Suite 200<BR>
-</FONT><FONT FACE=3D"Times New Roman">San Jose, CA, 95131<BR>
-Voice: 408.576.4131&nbsp; Fax: 408.474.0511 </FONT></I></B></P>
-
-<P ALIGN=3DLEFT></P>
-
-</BODY>
-</HTML>
-------_=_NextPart_001_01C781F9.521409C0--
+>     - Monday 7 May 2007, Evening
+>         4pm in San Francisco - US PDT (Pacific Daylight Time)
+>         5pm in Colorado - US MDT (Mountain Daylight Time)
+>         6pm in Chicago - US CDT (Central Daylight Time)
+>         7pm in New York - US EDT (Eastern Daylight Time)
+> 
+>     - Tuesday 8 May 2007, Morning
+>         12am in Coimbra, Portugal - WEST (Western European Summer Time)
+>         8am in Japan - JST (Japan Standard Time)
+> 
+>     Toll Free (866) 839-8145
+>     Int'l     (865) 524-6352
+>     ACCESS Code: 7548766
+> 
+> Cheers,
+> - Ira
+> 
+> Ira McDonald (Musician / Software Architect)
+> Chair - Linux Foundation Open Printing WG
+> Blue Roof Music / High North Inc
+> PO Box 221  Grand Marais, MI  49839
+> phone: +1-906-494-2434
+> email: imcdonald@sharplabs.com
+> 
 
