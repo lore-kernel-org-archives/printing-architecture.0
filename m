@@ -1,14 +1,10 @@
-Return-Path: <blueroofmusic@gmail.com>
-DKIM-Signature: a=rsa-sha1; c=relaxed/relaxed; d=gmail.com; s=beta;
-	h=domainkey-signature:received:received:message-id:date:from:to:subject:mime-version:content-type:content-transfer-encoding:content-disposition;
-	b=I7BabGLfrRSlfaIwu2nU2B6GBEtIpt6HXTChXYAW6DhRgGVJp4QDDfpE5xyatdVkGvdvF0IhZJ2xSqYJBrSTZvMmBnsNhFlvW0Is3tKqG6+FjMVJwRhj3nVZerMkwcFueLs1phkDyjtne7ISPuFF9a3QSjdbQQP5/nE25UltsL4=
-Message-ID: <e395be80705100846i22655868r8a131acaa67c2cf1@mail.gmail.com>
-From: "Ira McDonald" <blueroofmusic@gmail.com>
+Return-Path: <toratani.yasumasa@canon.co.jp>
+From: TORATANI Yasumasa <toratani.yasumasa@canon.co.jp>
+Message-Id: <20070514190316.BAB5.TORATANI.YASUMASA@canon.co.jp>
 MIME-Version: 1.0
-Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Type: text/plain; charset="US-ASCII"
 Content-Transfer-Encoding: 7bit
-Content-Disposition: inline
-Subject: [Printing-architecture] TEST - OP/SC mailing list
+Subject: [Printing-architecture] Japan side activities update 07/04
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -18,32 +14,39 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-Date: Thu, 10 May 2007 15:46:18 -0000
-To: printing-sc@lists.freestandards.org
+Date: Mon, 14 May 2007 10:34:09 -0000
+To: OP SC <printing-sc@freestandards.org>
 
-Hi,
+Hi
 
-This is a test of the closed OP Steering Committee mailing list
-to make sure I'm now properly subscribed at my durable address:
+This is Toratani.
+As I posted before, I have another internal meeting on 15th, I post the following
+updates of the Japan side activities in stead of participating in the meeting.
 
-  blueroofmusic@gmail.com
 
-Assuming this works OK, I'll try to send out an agenda before our
-SC meeting this coming Monday/Tuesday.  I will be out-of-town
-from Saturday through Monday afternoon, so the agenda may
-come rather late.
+OPVP spec
 
-MOST IMPORTANT - discussion of Open Printing session agenda
-for the upcoming Linux Foundation Summit in June at Google.
+Revised OPVP 1.0 document RC2 has been posted at the following site.
+ftp://ftp.pwg.org/pub/pwg/fsg/vector/pdapi-spec-1.0rc2-070511-1.odt
+ftp://ftp.pwg.org/pub/pwg/fsg/vector/pdapi-spec-1.0rc2-070511-1.pdf
+We have a schedule to have a f2f meeting to discuss several ambiguous/TBD
+specs marked in the document.
 
-Cheers,
-- Ira
+We've already implemented the ghostscript "opvp" driver which conforms to
+OPVP 1.0 RC2 spec, and finished the sample driver test made by FUJI XEROX
+Printing Systems. The new "opvp" ghostscript driver also supports the former
+OPVP 0.2 spec, so, the printer driver which conforms to OPVP 0.2 can also
+work with it, but not yet testd. The former driver test will be done this month.
 
--- 
-Ira McDonald (Musician / Software Architect)
-Chair - Linux Foundation Open Printing WG
-Blue Roof Music / High North Inc
-PO Box 221  Grand Marais, MI  49839
-phone: +1-906-494-2434
-email: blueroofmusic@gmail.com
+
+CUPS PDF filter implementation (Project funded by Japan Agency)
+
+We realized that we need the confirmation about several points of PDF support
+under CUPS. We'll summarize the points ASAP, and have plan to discuss it with
+Michael Sweet this month.
+
+-----------------------------------------
+TORATANI Yasumasa
+NPC Development Dept.23
+Platform Technology Development HQs, CANON INC.
 
