@@ -1,15 +1,16 @@
 Return-Path: <blueroofmusic@gmail.com>
 DKIM-Signature: a=rsa-sha1; c=relaxed/relaxed; d=gmail.com; s=beta;
 	h=domainkey-signature:received:received:message-id:date:from:to:subject:mime-version:content-type:content-transfer-encoding:content-disposition;
-	b=qjXR/4qLbbrgP3El3ul0FEmoFOCIi4BANoK5bNZbVeqFM0ayvylBbKFplQ+QobnKX2zl2YzT3ljbd4T9V6/JtA7kr7mIIWsI18/W+7BQ7gQ7a3CPgVS+B9lyOzmsba5rc0Ut7B/tILbUlj5RnsQff1iW3uorDfnCz6y6jpxR+TI=
-Message-ID: <e395be80705151124yedfbc42n1c4f4472c7785cd1@mail.gmail.com>
-Date: Tue, 15 May 2007 13:24:16 -0500
+	b=c8fAFnmWdOtF/XJstZ2yT9XOLLj00UKtmW5YzH1344BmJ3oVhscYwku04uB/1xW68GK8/n+R/8ko+8PbY5KyQutid+EOJvheb9hjSDUfTgsobDHys3O6d85092XA/hfrt+bvIksw2I6Wi93hmHbK+ujXH727YQ1pBOsun+GDvJI=
+Message-ID: <e395be80705151127gad64b89xa9394c3e9e167c36@mail.gmail.com>
+Date: Tue, 15 May 2007 13:27:51 -0500
 From: "Ira McDonald" <blueroofmusic@gmail.com>
 MIME-Version: 1.0
 Content-Type: text/plain; charset=ISO-8859-1; format=flowed
 Content-Transfer-Encoding: 7bit
 Content-Disposition: inline
-Subject: [Printing-architecture] Posted OP SC Minutes (14 May 2007)
+Subject: [Printing-architecture] Reminder - Next OP SC - Mon/Tue 4/5 June
+	2007 (first week)
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.freestandards.org>
 List-Unsubscribe: <http://lists.freestandards.org/mailman/listinfo/printing-architecture>,
@@ -23,14 +24,21 @@ To: printing-architecture@lists.freestandards.org
 
 Hi,
 
-I've just posted minutes from yesterday's Open Printing
-Steering Committee teleconference in the directory:
+Reminder of our next Open Printing Steering Committee meeting:
 
-  ftp://ftp.pwg.org/pub/pwg/fsg/steering_committee
+    Toll Free (866) 839-8145
+    Int'l     (865) 524-6352
+    ACCESS Code: 7548766
 
-in the files
+    - Monday 4 June 2007, Evening
+        4pm in San Francisco - US PDT (Pacific Daylight Time)
+        5pm in Colorado - US MDT (Mountain Daylight Time)
+        6pm in Chicago - US CDT (Central Daylight Time)
+        7pm in New York - US EDT (Eastern Daylight Time)
 
-  OP-SC-Minutes-20070514.htm/pdf
+    - Tuesday 5 June 2007, Morning
+        12am in Coimbra, Portugal - WEST (Western European Summer Time)
+        8am in Japan - JST (Japan Standard Time)
 
 Cheers,
 - Ira
