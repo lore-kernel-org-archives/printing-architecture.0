@@ -1,17 +1,11 @@
-Return-Path: <till.kamppeter@gmail.com>
-DKIM-Signature: a=rsa-sha1; c=relaxed/relaxed; d=gmail.com; s=beta;
-	h=domainkey-signature:received:received:message-id:date:from:user-agent:mime-version:to:cc:subject:references:in-reply-to:content-type:content-transfer-encoding;
-	b=o2iBIMMPlw1Y7c5SzdiXCfSDuUeywHxAPSUwtLfpS50sVy2GxYzx4LEeyXAGLdT33luXqD4kYXZfB45BpVGYgyk/UvRMDzIgYb6KbMvd2ANwXQUv2EjwqLciG3bEbwLRM8XCw2+gmT9mu+ryQFnwrUk1rjFfu6Q/gqNlZsFq+Ks=
-Message-ID: <464B80FD.4020905@gmail.com>
-Date: Wed, 16 May 2007 23:09:01 +0100
-From: Till Kamppeter <till.kamppeter@gmail.com>
+Return-Path: <glen.petrie@eitc.epson.com>
+Message-ID: <2F7D63A21DB2C74EB8EB8C09AF667DB00559CB1A@eitc220.eitc.epson.com>
+From: "Petrie, Glen" <glen.petrie@eitc.epson.com>
+Date: Wed, 16 May 2007 15:32:05 -0700
 MIME-Version: 1.0
-References: <464B6006.40502@gmail.com> <464B7DB6.4080907@easysw.com>
-In-Reply-To: <464B7DB6.4080907@easysw.com>
-Content-Type: text/plain; charset=UTF-8; format=flowed
-Content-Transfer-Encoding: 7bit
-Subject: Re: [Printing-architecture] OpenPrinting Meeting on the Linux
- Foundation Collaboration Summit: Order of sessions substantially changed
+Content-Type: text/plain
+Subject: [Printing-architecture] Embedded Client Thin-Thread: Initial
+	Information
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.freestandards.org>
 List-Unsubscribe: <http://lists.freestandards.org/mailman/listinfo/printing-architecture>,
@@ -21,33 +15,89 @@ List-Post: <mailto:printing-architecture@lists.freestandards.org>
 List-Help: <mailto:printing-architecture-request@lists.freestandards.org?subject=help>
 List-Subscribe: <http://lists.freestandards.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.freestandards.org?subject=subscribe>
-To: Michael Sweet <mike@easysw.com>
-Cc: printing-architecture@lists.freestandards.org, printing-summit@lists.freestandards.org
+To: printing-architecture@lists.freestandards.org
 
-Michael Sweet wrote:
-> Till Kamppeter wrote:
->> Hi,
->>
->> During the OpenPrinting Architecture working group phone meeting we 
->> have   changed the order of the sessions. See:
->>
->> http://www.linux-foundation.org/en/OpenPrinting/LFSummitMountainView2007
->>
->> Please note that morning and afternoon are exchanged. We did this to 
->> conflict less with Mike Sweet's printing session on the Apple 
->> developer conference in San Francisco in the morning. As many people 
->> of printer manufacturers will go there we have move the topics most 
->> interesting for manufacturers to the afternoon. So interested people 
->> can easily move from San Francisco to Mountain View.
-> 
-> I think you are underestimating the traffic, Till...  I still will not
-> be able to attend...
-> 
+All,
 
-Mike, I did not change the schedules for you to attend, I changed it so 
-that people can go to San Francisco in the morning for your talk and to 
-Mountain View in the afternoon for the driver-relevant topics of the 
-OpenPrinting Meeting.
+I started reviewing the work I did last year.  It appears I took some
+liberties with things!!!! Ops!!!! 
 
-    Till
+The overall reasons for the changes I made was that I saw all of the OP
+API's with differing naming conventions and duplicated (and sometimes
+differing) definitions; which to me was/would-be very confusing to a
+developer.  I wanted to solve this without being in conflict with existing
+work.  So I took the approach of creating a new naming convention and would
+remove any duplicate definitions.  To do that I decided to start with the
+variables (meaning) used in JTAPI as the base and migrate everything else to
+a common and new naming convention.  To do this I 
+
+1. I renamed the JTAPI stuff to EPP_; followed by a three char; then a
+descriptor.
+
+for example: binding type when from
+
+typedef enum
+{
+   FSGJT_BD_NOT_SET = 0,
+   FSGJT_BD_NONE,
+   FSGJT_BD_CHANNEL,
+   FSGJT_BD_EDGE_GLUE,
+   FSGJT_BD_PERFECT,
+   FSGJT_BD_PLASTIC_COMB,
+   FSGJT_BD_RING,
+   FSGJT_BD_SPIRAL,
+   FSGJT_BD_STRIP,
+   FSGJT_BD_TAPE,
+   FSGJT_BD_THREAD_SEAL,
+   FSGJT_BD_VELO,
+   FSGJT_BD_WIRE_COMB
+} fsgjt_binding_type_t;
+
+
+to 
+typedef enum {
+    EPP_BDT_NOT_SET = 0 ,
+    EPP_BDT_NONE        ,
+    EPP_BDT_CHANNEL     ,
+    EPP_BDT_EDGE_GLUE   ,
+    EPP_BDT_PERFECT     ,
+    EPP_BDT_PLASTIC_COMB,
+    EPP_BDT_RING        ,
+    EPP_BDT_SPIRAL      ,
+    EPP_BDT_STRIP       ,
+    EPP_BDT_TAPE        ,
+    EPP_BDT_THREAD_SEAL ,
+    EPP_BDT_VELO        ,
+    EPP_BDT_WIRE_COMB   ,
+    EPP_BDT_EOL         ,
+    EPP_BDT_EXT = EPP_EXTEN
+} EPP_BINDING_TYPE;
+#define EPP_BDT     EPP_BINDING_TYPE
+
+So the numerical value of each enum is the same but not the name!!!
+
+
+Because I was initially (and could still) provide on a DOS-like interface
+for the thin-thread, I needed a way to have a simple input mechanism for a
+job ticket; so
+
+2. I created a job-ticket file format that is parsed directly into a
+job-ticket struct(s) I am using.
+
+No telling what other liberties I took!!!
+
+
+Right now, I am at a conflict weather to just keep going or restart.  The
+issue, to me, is one of overall and long term coherence.  If I keep going
+then the intent is to use the best of any open source code and create a
+coherent solution (both in naming and definition).  The alternative is to
+try plugging existing but distinct pieces together.  I am worried about that
+the latter, since it may result in an amount (small or large) of "glue code"
+and perhaps some disconnects.  I guess I believe that in the end a developer
+would have to get and understand distinct pieces of codes and disconnected
+API's versus coherent set of API's
+
+Comments?  Opinions? 
+
+glen 
 
