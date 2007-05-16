@@ -1,15 +1,14 @@
-Return-Path: <till.kamppeter@gmail.com>
-DKIM-Signature: a=rsa-sha1; c=relaxed/relaxed; d=gmail.com; s=beta;
-	h=domainkey-signature:received:received:message-id:date:from:user-agent:mime-version:to:subject:content-type:content-transfer-encoding;
-	b=uMYWvpuAALrNzRzPnieXeec3nvr9Fy5BXtoAW0xWyhuv60SPgS/TS+ljoOPtuLrT+UQJNXlA5ilWasPdRO+GpKtytmUxk5YddUMH8krLxnBzj4+foUG+ZXiVjfMHOdXrHGMK9Tb0Q/d0X/CFsQugJP1BgwtS/fmmpsUbo+fVuQU=
-Message-ID: <464B711C.6080900@gmail.com>
-Date: Wed, 16 May 2007 22:01:16 +0100
-From: Till Kamppeter <till.kamppeter@gmail.com>
+Return-Path: <mike@easysw.com>
+Message-ID: <464B7DB6.4080907@easysw.com>
+Date: Wed, 16 May 2007 17:55:02 -0400
+From: Michael Sweet <mike@easysw.com>
 MIME-Version: 1.0
-Content-Type: text/plain; charset=UTF-8; format=flowed
+References: <464B6006.40502@gmail.com>
+In-Reply-To: <464B6006.40502@gmail.com>
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
 Content-Transfer-Encoding: 7bit
-Subject: [Printing-architecture] OpenPrinting Meeting on the Linux
- Foundation Collaboration Summit: Prep Call moved to 11 am Pacific
+Subject: Re: [Printing-architecture] OpenPrinting Meeting on the Linux
+ Foundation Collaboration Summit: Order of sessions substantially changed
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.freestandards.org>
 List-Unsubscribe: <http://lists.freestandards.org/mailman/listinfo/printing-architecture>,
@@ -19,25 +18,29 @@ List-Post: <mailto:printing-architecture@lists.freestandards.org>
 List-Help: <mailto:printing-architecture-request@lists.freestandards.org?subject=help>
 List-Subscribe: <http://lists.freestandards.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.freestandards.org?subject=subscribe>
-To: printing-summit@lists.freestandards.org, printing-architecture@lists.freestandards.org
+To: Till Kamppeter <till.kamppeter@gmail.com>
+Cc: printing-architecture@lists.freestandards.org, printing-summit@lists.freestandards.org
 
-Hi,
+Till Kamppeter wrote:
+> Hi,
+> 
+> During the OpenPrinting Architecture working group phone meeting we have 
+>   changed the order of the sessions. See:
+> 
+> http://www.linux-foundation.org/en/OpenPrinting/LFSummitMountainView2007
+> 
+> Please note that morning and afternoon are exchanged. We did this to 
+> conflict less with Mike Sweet's printing session on the Apple developer 
+> conference in San Francisco in the morning. As many people of printer 
+> manufacturers will go there we have move the topics most interesting for 
+> manufacturers to the afternoon. So interested people can easily move 
+> from San Francisco to Mountain View.
 
-the preparation conference call for the OpenPrinting Meeting on the LF 
-Summit is moved to two hours later as Ira has a conflict. So it is now on
+I think you are underestimating the traffic, Till...  I still will not
+be able to attend...
 
-Thursday, May 24, 11am US Pacific daylight saving time.
-
-The dial-in data stays the same:
-
-Dial +1-605-990-0700 and use the participant code 574207#
-Press 6 to mute/unmute (access data same as for calling into the meeting
-itself)
-
-See also the reordered agenda on
-
-http://www.linux-foundation.org/en/OpenPrinting/LFSummitMountainView2007
-
-    Till
-
+-- 
+______________________________________________________________________
+Michael Sweet, Easy Software Products           mike at easysw dot com
+Internet Printing and Document Software          http://www.easysw.com
 
