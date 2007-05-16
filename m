@@ -1,15 +1,18 @@
 Return-Path: <till.kamppeter@gmail.com>
 DKIM-Signature: a=rsa-sha1; c=relaxed/relaxed; d=gmail.com; s=beta;
-	h=domainkey-signature:received:received:message-id:date:from:user-agent:mime-version:to:subject:content-type:content-transfer-encoding;
-	b=a1TE1TmkpldsIWg/dBUNeaHJhwRfiovZlCHXhHYNRnyQMXkFhUpE++9avEQz+VkMzGyZemPoFmJC5B8jFgU9uUM2o7ysdZSHmzH1xwfW7MyTsyo0g+TTz/EphMEJXH6z3GbuIqv5X+ON6DStkwcV4mgFBh8EJuV7E68kJsWfatU=
-Message-ID: <464B6006.40502@gmail.com>
-Date: Wed, 16 May 2007 20:48:22 +0100
+	h=domainkey-signature:received:received:message-id:date:from:user-agent:mime-version:to:cc:subject:references:in-reply-to:content-type:content-transfer-encoding;
+	b=YhJIhuciZRRkngfdpZOWDqH3V/gXtGJgPejhTG9/kac276m2UBLjXdZhlCGY+bArTfl0Vlz4dDkCbR3eHtYUrT5e6CERaWYFWSIg7yxrSUJXDX3cGq4Fz5Ko0d8FWFPkHJOHdYla0BW6RkasdIa+YaNnTVWaEPrmvAzJ6o1ZS8M=
+Message-ID: <464B6E0A.9060709@gmail.com>
+Date: Wed, 16 May 2007 21:48:10 +0100
 From: Till Kamppeter <till.kamppeter@gmail.com>
 MIME-Version: 1.0
+References: <46439358.7070404@gmail.com>
+	<074201c793e3$7e173d60$6501a8c0@TCSLAPTOP01>
+In-Reply-To: <074201c793e3$7e173d60$6501a8c0@TCSLAPTOP01>
 Content-Type: text/plain; charset=UTF-8; format=flowed
 Content-Transfer-Encoding: 7bit
-Subject: [Printing-architecture] OpenPrinting Meeting on the Linux
- Foundation Collaboration Summit: Order of sessions substantially changed
+Subject: Re: [Printing-architecture] [Printing-summit] OpenPrinting Meeting
+ on the Linux Foundation Collaboration Summit: The Agenda
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.freestandards.org>
 List-Unsubscribe: <http://lists.freestandards.org/mailman/listinfo/printing-architecture>,
@@ -19,21 +22,16 @@ List-Post: <mailto:printing-architecture@lists.freestandards.org>
 List-Help: <mailto:printing-architecture-request@lists.freestandards.org?subject=help>
 List-Subscribe: <http://lists.freestandards.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.freestandards.org?subject=subscribe>
-To: printing-summit@lists.freestandards.org, printing-architecture@lists.freestandards.org
+To: ptykodi@tykodi.com
+Cc: printing-architecture@lists.freestandards.org, printing-summit@lists.freestandards.org
 
-Hi,
+Paul Tykodi wrote:
+> I have a scheduling conflict for the May 24th conference call so I wanted to
+> put forward the following request.
+>
 
-During the OpenPrinting Architecture working group phone meeting we have 
-  changed the order of the sessions. See:
-
-http://www.linux-foundation.org/en/OpenPrinting/LFSummitMountainView2007
-
-Please note that morning and afternoon are exchanged. We did this to 
-conflict less with Mike Sweet's printing session on the Apple developer 
-conference in San Francisco in the morning. As many people of printer 
-manufacturers will go there we have move the topics most interesting for 
-manufacturers to the afternoon. So interested people can easily move 
-from San Francisco to Mountain View.
+I am thinking about moving the call to 11am Pacific time on the same 
+day. WDYT?
 
     Till
 
