@@ -1,11 +1,15 @@
-Return-Path: <glen.petrie@eitc.epson.com>
-Message-ID: <2F7D63A21DB2C74EB8EB8C09AF667DB00559CB1A@eitc220.eitc.epson.com>
-From: "Petrie, Glen" <glen.petrie@eitc.epson.com>
-Date: Wed, 16 May 2007 15:32:05 -0700
+Return-Path: <till.kamppeter@gmail.com>
+DKIM-Signature: a=rsa-sha1; c=relaxed/relaxed; d=gmail.com; s=beta;
+	h=domainkey-signature:received:received:message-id:date:from:user-agent:mime-version:to:subject:content-type:content-transfer-encoding;
+	b=GSYHtMs8Mqsi8NONBNuVlamnRbP60xC2P+aT8QNQ9Sgzgv4oqwfWBVutDSqU2TGO2/fslXB5QiWX2nEImkh+tn3qOGmx0FoOlh82S/u3PlmJTIdNqrpKmSmjBpb3ll/89T21A5e5sVGzkAvoGnA+RfpRH2N3r5o2NxLtS2a1oeI=
+Message-ID: <464CA989.5060803@gmail.com>
+Date: Thu, 17 May 2007 20:14:17 +0100
+From: Till Kamppeter <till.kamppeter@gmail.com>
 MIME-Version: 1.0
-Content-Type: text/plain
-Subject: [Printing-architecture] Embedded Client Thin-Thread: Initial
-	Information
+Content-Type: text/plain; charset=UTF-8; format=flowed
+Content-Transfer-Encoding: 7bit
+Subject: [Printing-architecture] Merger of ESP Ghostscript and GPL
+	Ghostscript
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.freestandards.org>
 List-Unsubscribe: <http://lists.freestandards.org/mailman/listinfo/printing-architecture>,
@@ -17,87 +21,55 @@ List-Subscribe: <http://lists.freestandards.org/mailman/listinfo/printing-archit
 	<mailto:printing-architecture-request@lists.freestandards.org?subject=subscribe>
 To: printing-architecture@lists.freestandards.org
 
-All,
+Hi,
 
-I started reviewing the work I did last year.  It appears I took some
-liberties with things!!!! Ops!!!! 
+as told on the last OP Arch phone meeting I have merged the extra 
+functionality of ESP Ghostscript into GPL Ghostscript now.
 
-The overall reasons for the changes I made was that I saw all of the OP
-API's with differing naming conventions and duplicated (and sometimes
-differing) definitions; which to me was/would-be very confusing to a
-developer.  I wanted to solve this without being in conflict with existing
-work.  So I took the approach of creating a new naming convention and would
-remove any duplicate definitions.  To do that I decided to start with the
-variables (meaning) used in JTAPI as the base and migrate everything else to
-a common and new naming convention.  To do this I 
+Last year Artifex changed their license policy to providing the HEAD 
+development of Ghostscript under the GPL. So distributions can ship the 
+newest Ghostscript from now on and GPL Ghostscript is under the full 
+attention of the upstream maintainers. In this situation maintaining a 
+fork like ESP Ghostscript is not needed any more and therefore Mike 
+Sweet has discontinued the development after the final 8.15.4 release. See
 
-1. I renamed the JTAPI stuff to EPP_; followed by a three char; then a
-descriptor.
+http://www.cups.org/espgs/
 
-for example: binding type when from
+Some weeks after Mike has released ESP GS 8.15.4 and as many reports of 
+ESP Ghostscript crashes have reached Ubuntu
 
-typedef enum
-{
-   FSGJT_BD_NOT_SET = 0,
-   FSGJT_BD_NONE,
-   FSGJT_BD_CHANNEL,
-   FSGJT_BD_EDGE_GLUE,
-   FSGJT_BD_PERFECT,
-   FSGJT_BD_PLASTIC_COMB,
-   FSGJT_BD_RING,
-   FSGJT_BD_SPIRAL,
-   FSGJT_BD_STRIP,
-   FSGJT_BD_TAPE,
-   FSGJT_BD_THREAD_SEAL,
-   FSGJT_BD_VELO,
-   FSGJT_BD_WIRE_COMB
-} fsgjt_binding_type_t;
+https://bugs.launchpad.net/ubuntu/+source/gs-esp/
 
+(note that bug 103595 has 27 duplicates and bug 105752 has 18 
+duplicates) I have decided to start the merger, to soon get to 
+well-maintained and up-to-date Ghostscript for the distros again.
 
-to 
-typedef enum {
-    EPP_BDT_NOT_SET = 0 ,
-    EPP_BDT_NONE        ,
-    EPP_BDT_CHANNEL     ,
-    EPP_BDT_EDGE_GLUE   ,
-    EPP_BDT_PERFECT     ,
-    EPP_BDT_PLASTIC_COMB,
-    EPP_BDT_RING        ,
-    EPP_BDT_SPIRAL      ,
-    EPP_BDT_STRIP       ,
-    EPP_BDT_TAPE        ,
-    EPP_BDT_THREAD_SEAL ,
-    EPP_BDT_VELO        ,
-    EPP_BDT_WIRE_COMB   ,
-    EPP_BDT_EOL         ,
-    EPP_BDT_EXT = EPP_EXTEN
-} EPP_BINDING_TYPE;
-#define EPP_BDT     EPP_BINDING_TYPE
+The state of the art of the merger is available here:
 
-So the numerical value of each enum is the same but not the name!!!
+http://www.openprinting.org/download/printing/esp-gpl-ghostscript-merge/README
 
+(or click the link in http://www.cups.org/espgs/articles.php?L463)
 
-Because I was initially (and could still) provide on a DOS-like interface
-for the thin-thread, I needed a way to have a simple input mechanism for a
-job ticket; so
+Currently it is uploaded into the Subversion repositories at 
+ghostscript.com, as the branch "gs-esp-gpl-merger". It will make part of 
+the next stable GPL Ghostscript release, version 8.60. Currently testing 
+is done to assure that it builds on all supported platforms and does not 
+cause any regressions.
 
-2. I created a job-ticket file format that is parsed directly into a
-job-ticket struct(s) I am using.
+I have also made distribution-independent packages from it, and packages 
+for Ubuntu Gutsy (current development version of Ubuntu, packages will 
+come with the automatic update in some days).
 
-No telling what other liberties I took!!!
+Currently there is only one problem, which I hope can be fixed before 
+the release of GPL Ghostscript 8.60. GPL Ghostscript 8.57 or later (with 
+or without merger) has problems to display PDFs with gv or kghostviev or 
+to convert PDFs to PostScript with pdf2ps:
 
+http://bugs.ghostscript.com/show_bug.cgi?id=689237
 
-Right now, I am at a conflict weather to just keep going or restart.  The
-issue, to me, is one of overall and long term coherence.  If I keep going
-then the intent is to use the best of any open source code and create a
-coherent solution (both in naming and definition).  The alternative is to
-try plugging existing but distinct pieces together.  I am worried about that
-the latter, since it may result in an amount (small or large) of "glue code"
-and perhaps some disconnects.  I guess I believe that in the end a developer
-would have to get and understand distinct pieces of codes and disconnected
-API's versus coherent set of API's
+GPL Ghostscript 8.60 will make ESP Ghostscript obsolete. AFPL 
+Ghostscript was already made obsolete by earlier versions of GPL 
+Ghostscript. So there is now only one Ghostscript -- GPL Ghostscript.
 
-Comments?  Opinions? 
-
-glen 
+    Till
 
