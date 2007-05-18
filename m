@@ -1,11 +1,11 @@
 Return-Path: <glen.petrie@eitc.epson.com>
-Message-ID: <2F7D63A21DB2C74EB8EB8C09AF667DB00559CB26@eitc220.eitc.epson.com>
+Message-ID: <2F7D63A21DB2C74EB8EB8C09AF667DB00559CB27@eitc220.eitc.epson.com>
 From: "Petrie, Glen" <glen.petrie@eitc.epson.com>
-Date: Fri, 18 May 2007 10:40:02 -0700
+Date: Fri, 18 May 2007 11:21:06 -0700
 MIME-Version: 1.0
 Content-Type: text/plain
-Subject: Re: [Printing-architecture] Embedded Client Thin-Thread: Initial
-	Information
+Subject: Re: [Printing-architecture] Embedded Client Thin-Thread:
+	Initial	Information
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.freestandards.org>
 List-Unsubscribe: <http://lists.freestandards.org/mailman/listinfo/printing-architecture>,
@@ -16,6 +16,27 @@ List-Help: <mailto:printing-architecture-request@lists.freestandards.org?subject
 List-Subscribe: <http://lists.freestandards.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.freestandards.org?subject=subscribe>
 To: printing-architecture@lists.freestandards.org
+
+Ira, 
+
+Follow up on the last note.  Assume we go to a thin-thread for a
+desktop-client, then it makes more sense to have the authors of the API's,
+SDK's write the thin-client versions.  Then others can write
+architecture/thin-client elements not currently defined.
+
+glen 
+
+
+p.s. "QT core" should have been "QNX core"
+
+-----Original Message-----
+From: printing-architecture-bounces@lists.freestandards.org
+[mailto:printing-architecture-bounces@lists.freestandards.org] On Behalf Of
+Petrie, Glen
+Sent: Friday, May 18, 2007 10:40 AM
+To: printing-architecture@lists.freestandards.org
+Subject: Re: [Printing-architecture] Embedded Client Thin-Thread:
+InitialInformation
 
 Ira,
 
@@ -193,4 +214,9 @@ Blue Roof Music / High North Inc
 PO Box 221  Grand Marais, MI  49839
 phone: +1-906-494-2434
 email: blueroofmusic@gmail.com
+
+_______________________________________________
+Printing-architecture mailing list
+Printing-architecture@lists.freestandards.org
+http://lists.freestandards.org/mailman/listinfo/printing-architecture
 
