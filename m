@@ -1,18 +1,18 @@
 Return-Path: <blueroofmusic@gmail.com>
 DKIM-Signature: a=rsa-sha1; c=relaxed/relaxed; d=gmail.com; s=beta;
 	h=domainkey-signature:received:received:message-id:date:from:to:subject:cc:in-reply-to:mime-version:content-type:content-transfer-encoding:content-disposition:references;
-	b=Mc29pdwDWsS+vzNM9cDOFQs75UOtxeTIV486scthzNUby/XX8na0b8ni9vTbh78kIGSTyRL/bQnklaK2MvJ9RFUysbv4YlyYGDC/CoEZSVM+gegnRHLtn2XIS6QtV475loPM0ksslJH1Ig14vSgxk2gp03ulmRKTdQlMzejunpM=
-Message-ID: <e395be80705181003k37564376k2c81119e85e4e293@mail.gmail.com>
-Date: Fri, 18 May 2007 12:03:51 -0500
+	b=KrQ7wJ57RoCfUvqv+fhH9WCGL0i2CG20sGVlpdbAyZESmiM78weda6NUQ0oa1arr1ky8SJTd2N7BEAvU7BYz/iqcKIiilB8rztLgUaZDVCWUucxgW8ZMnf5KVk+DjlOP3EqPD6NS5fahO2lCRwfOaUVSVBYaTzcFqXEpdprl0fE=
+Message-ID: <e395be80705181020g23177572j8618c64ec6e8490@mail.gmail.com>
+Date: Fri, 18 May 2007 12:20:07 -0500
 From: "Ira McDonald" <blueroofmusic@gmail.com>
-In-Reply-To: <464DC548.5080803@gmail.com>
+In-Reply-To: <2F7D63A21DB2C74EB8EB8C09AF667DB00559CB24@eitc220.eitc.epson.com>
 MIME-Version: 1.0
 Content-Type: text/plain; charset=ISO-8859-1; format=flowed
 Content-Transfer-Encoding: 7bit
 Content-Disposition: inline
-References: <07616E99-C1A3-4F6D-AD07-E6811D16FE16@dankohn.com>
-	<464DC548.5080803@gmail.com>
-Subject: Re: [Printing-architecture] LinuxPrinting.com naming
+References: <2F7D63A21DB2C74EB8EB8C09AF667DB00559CB24@eitc220.eitc.epson.com>
+Subject: Re: [Printing-architecture] Embedded Client Thin-Thread: Initial
+	Information
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.freestandards.org>
 List-Unsubscribe: <http://lists.freestandards.org/mailman/listinfo/printing-architecture>,
@@ -22,61 +22,142 @@ List-Post: <mailto:printing-architecture@lists.freestandards.org>
 List-Help: <mailto:printing-architecture-request@lists.freestandards.org?subject=help>
 List-Subscribe: <http://lists.freestandards.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.freestandards.org?subject=subscribe>
-To: Till Kamppeter <till.kamppeter@gmail.com>, Ira McDonald <blueroofmusic@gmail.com>
-Cc: printing-architecture@lists.freestandards.org, Amanda McPherson <amanda@linux-foundation.org>
+To: "Petrie, Glen" <glen.petrie@eitc.epson.com>
+Cc: printing-architecture@lists.freestandards.org
 
-Hi,
+Hi Glen,
 
-<OP Chair hat on> There is a very strong negative feeling among many
-of the OP WG chairs whose companies do NOT ship Linux that we should
-keep the name "Open Printing" (which we've always had from the outset
-six years ago), to indicate that the scope is POSIX (not just Linux) for
-our APIs and components.
-
-We can change the name, but it's likely to lose us several working
-group chairs and my immediate predecessor as OP Steering
-Committee chair, Norm Jacobs (Sun Solaris).
+I'm strongly opposed to the cosmetic name fixups.  PAPI has been
+shipping in Solaris for years.  OPVP is shipping on most Linux
+distributions.  It's unfortunate, but that's life.
 
 Cheers,
 - Ira
 
-On 5/18/07, Till Kamppeter <till.kamppeter@gmail.com> wrote:
-> Yes, it has the advantages you mentioned, and the part of the project
-> most known to users had the name linuxprinting.org.
+On 5/18/07, Petrie, Glen <glen.petrie@eitc.epson.com> wrote:
+> All,
 >
-> Disadvantages are that we are renaming a project again after short time
-> and this means changing back all texts on the site, distros have to
-> rename the packages again, confusing the users, changing names in
-> OpenPrinting APIs (or leaving traces of all project names in the APIs
-> with the time) ...
+> Since I did not receive any "Comments?  Opinions?", I am not sure what the
+> reaction was to the my note below.  I'll bet is was surprise to some but
+> others know how I feel about coherence.
 >
-> So I want to ask the OpenPrinting workgroup members about whether we
-> should rename or not. Or whether we should agree on the name on the next
->   OpenPrinting Steering Committee meeting. So anyone of the OP folks, WDYT?
+> So again, do we want to try the coherence path?  Yes I know is heresy,
+> non-conventional and again the grain.  I know that others, including myself,
+> have put a lot work in their creations (API's, SDK's, actual code).  But....
+> I think one of the powers of open source is to use the best from each and,
+> in that way, create, especially for this case, a larger AND coherent
+> solution.
 >
->     Till
+> or
+>
+> Do we want to try the integration path?  Although this preserves the work of
+> the individuals, it is a integration and gluing approach for the larger
+> solution.
+>
+> glen
+>
+> -----Original Message-----
+> From: printing-architecture-bounces@lists.freestandards.org
+> [mailto:printing-architecture-bounces@lists.freestandards.org] On Behalf Of
+> Petrie, Glen
+> Sent: Wednesday, May 16, 2007 3:32 PM
+> To: printing-architecture@lists.freestandards.org
+> Subject: [Printing-architecture] Embedded Client Thin-Thread:
+> InitialInformation
+>
+> All,
+>
+> I started reviewing the work I did last year.  It appears I took some
+> liberties with things!!!! Ops!!!!
+>
+> The overall reasons for the changes I made was that I saw all of the OP
+> API's with differing naming conventions and duplicated (and sometimes
+> differing) definitions; which to me was/would-be very confusing to a
+> developer.  I wanted to solve this without being in conflict with existing
+> work.  So I took the approach of creating a new naming convention and would
+> remove any duplicate definitions.  To do that I decided to start with the
+> variables (meaning) used in JTAPI as the base and migrate everything else to
+> a common and new naming convention.  To do this I
+>
+> 1. I renamed the JTAPI stuff to EPP_; followed by a three char; then a
+> descriptor.
+>
+> for example: binding type when from
+>
+> typedef enum
+> {
+>    FSGJT_BD_NOT_SET = 0,
+>    FSGJT_BD_NONE,
+>    FSGJT_BD_CHANNEL,
+>    FSGJT_BD_EDGE_GLUE,
+>    FSGJT_BD_PERFECT,
+>    FSGJT_BD_PLASTIC_COMB,
+>    FSGJT_BD_RING,
+>    FSGJT_BD_SPIRAL,
+>    FSGJT_BD_STRIP,
+>    FSGJT_BD_TAPE,
+>    FSGJT_BD_THREAD_SEAL,
+>    FSGJT_BD_VELO,
+>    FSGJT_BD_WIRE_COMB
+> } fsgjt_binding_type_t;
 >
 >
-> Dan Kohn wrote:
-> > Till, I apologize in advance if you see this request as a reversal.
-> >
-> > Anyway, Amanda and I both think that the LinuxPrinting name is much
-> > stronger and more compelling than OpenPrinting.  The term "open" has
-> > been overused so much that it is almost meaningless at this point.  I
-> > appreciate that LinuxPrinting provides drivers for BSD, Solaris, OS X,
-> > etc. (and we want it to continue to do so), but just as the Linux
-> > Foundation and Linux Standard Base work on an array of issues but have a
-> > Linux focus at their core, so does LinuxPrinting.  Would you be willing
-> > to change the branding of your website and working group?
-> >
-> >            - dan
-> > --Dan Kohn <mailto:dan@dankohn.com>
-> > COO, The Linux Foundation <http://www.linux-foundation.org>
-> > <http://www.dankohn.com/>  <tel:+1-415-233-1000>
-> >
-> >
-> >
+> to
+> typedef enum {
+>     EPP_BDT_NOT_SET = 0 ,
+>     EPP_BDT_NONE        ,
+>     EPP_BDT_CHANNEL     ,
+>     EPP_BDT_EDGE_GLUE   ,
+>     EPP_BDT_PERFECT     ,
+>     EPP_BDT_PLASTIC_COMB,
+>     EPP_BDT_RING        ,
+>     EPP_BDT_SPIRAL      ,
+>     EPP_BDT_STRIP       ,
+>     EPP_BDT_TAPE        ,
+>     EPP_BDT_THREAD_SEAL ,
+>     EPP_BDT_VELO        ,
+>     EPP_BDT_WIRE_COMB   ,
+>     EPP_BDT_EOL         ,
+>     EPP_BDT_EXT = EPP_EXTEN
+> } EPP_BINDING_TYPE;
+> #define EPP_BDT     EPP_BINDING_TYPE
 >
+> So the numerical value of each enum is the same but not the name!!!
+>
+>
+> Because I was initially (and could still) provide on a DOS-like interface
+> for the thin-thread, I needed a way to have a simple input mechanism for a
+> job ticket; so
+>
+> 2. I created a job-ticket file format that is parsed directly into a
+> job-ticket struct(s) I am using.
+>
+> No telling what other liberties I took!!!
+>
+>
+> Right now, I am at a conflict weather to just keep going or restart.  The
+> issue, to me, is one of overall and long term coherence.  If I keep going
+> then the intent is to use the best of any open source code and create a
+> coherent solution (both in naming and definition).  The alternative is to
+> try plugging existing but distinct pieces together.  I am worried about that
+> the latter, since it may result in an amount (small or large) of "glue code"
+> and perhaps some disconnects.  I guess I believe that in the end a developer
+> would have to get and understand distinct pieces of codes and disconnected
+> API's versus coherent set of API's
+>
+> Comments?  Opinions?
+>
+> glen
+>
+> _______________________________________________
+> Printing-architecture mailing list
+> Printing-architecture@lists.freestandards.org
+> http://lists.freestandards.org/mailman/listinfo/printing-architecture
+>
+> _______________________________________________
+> Printing-architecture mailing list
+> Printing-architecture@lists.freestandards.org
+> http://lists.freestandards.org/mailman/listinfo/printing-architecture
 >
 
 
