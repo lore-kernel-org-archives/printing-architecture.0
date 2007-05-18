@@ -1,16 +1,9 @@
-Return-Path: <blueroofmusic@gmail.com>
-DKIM-Signature: a=rsa-sha1; c=relaxed/relaxed; d=gmail.com; s=beta;
-	h=domainkey-signature:received:received:message-id:date:from:to:subject:cc:in-reply-to:mime-version:content-type:content-transfer-encoding:content-disposition:references;
-	b=KrQ7wJ57RoCfUvqv+fhH9WCGL0i2CG20sGVlpdbAyZESmiM78weda6NUQ0oa1arr1ky8SJTd2N7BEAvU7BYz/iqcKIiilB8rztLgUaZDVCWUucxgW8ZMnf5KVk+DjlOP3EqPD6NS5fahO2lCRwfOaUVSVBYaTzcFqXEpdprl0fE=
-Message-ID: <e395be80705181020g23177572j8618c64ec6e8490@mail.gmail.com>
-Date: Fri, 18 May 2007 12:20:07 -0500
-From: "Ira McDonald" <blueroofmusic@gmail.com>
-In-Reply-To: <2F7D63A21DB2C74EB8EB8C09AF667DB00559CB24@eitc220.eitc.epson.com>
+Return-Path: <glen.petrie@eitc.epson.com>
+Message-ID: <2F7D63A21DB2C74EB8EB8C09AF667DB00559CB26@eitc220.eitc.epson.com>
+From: "Petrie, Glen" <glen.petrie@eitc.epson.com>
+Date: Fri, 18 May 2007 10:40:02 -0700
 MIME-Version: 1.0
-Content-Type: text/plain; charset=ISO-8859-1; format=flowed
-Content-Transfer-Encoding: 7bit
-Content-Disposition: inline
-References: <2F7D63A21DB2C74EB8EB8C09AF667DB00559CB24@eitc220.eitc.epson.com>
+Content-Type: text/plain
 Subject: Re: [Printing-architecture] Embedded Client Thin-Thread: Initial
 	Information
 List-Id: Printing architecture under linux
@@ -22,8 +15,31 @@ List-Post: <mailto:printing-architecture@lists.freestandards.org>
 List-Help: <mailto:printing-architecture-request@lists.freestandards.org?subject=help>
 List-Subscribe: <http://lists.freestandards.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.freestandards.org?subject=subscribe>
-To: "Petrie, Glen" <glen.petrie@eitc.epson.com>
+To: printing-architecture@lists.freestandards.org
+
+Ira,
+
+I believe it is bit more than "cosmetic name fixups"!  I also don't believe
+that an embedded-client will be implemented using Solaris or a standard
+Linux distributions; maybe a QT core or some other Posix core.  Anyway, I
+understand your point; however, (there is always has to be a however) I am
+worried that gluing together the existing stuff "as is" will simple result
+in too large of a code base to be practical for any embedded-clients.
+Therefore, I suggest we need to move the thin-thread from embedded-clients
+to desktop-clients.  I remember all the discussions and reasons we went to
+embedded-clients but there will be less practical risks/issues if we now
+target desktop-clients.  After that, we can see how it will fit in the
+embedded-clients.  We can still the scope of a desktop-client.
+
+glen
+
+-----Original Message-----
+From: Ira McDonald [mailto:blueroofmusic@gmail.com] 
+Sent: Friday, May 18, 2007 10:20 AM
+To: Petrie, Glen
 Cc: printing-architecture@lists.freestandards.org
+Subject: Re: [Printing-architecture] Embedded Client Thin-Thread: Initial
+Information
 
 Hi Glen,
 
@@ -42,15 +58,18 @@ On 5/18/07, Petrie, Glen <glen.petrie@eitc.epson.com> wrote:
 > others know how I feel about coherence.
 >
 > So again, do we want to try the coherence path?  Yes I know is heresy,
-> non-conventional and again the grain.  I know that others, including myself,
-> have put a lot work in their creations (API's, SDK's, actual code).  But....
+> non-conventional and again the grain.  I know that others, including
+myself,
+> have put a lot work in their creations (API's, SDK's, actual code).
+But....
 > I think one of the powers of open source is to use the best from each and,
 > in that way, create, especially for this case, a larger AND coherent
 > solution.
 >
 > or
 >
-> Do we want to try the integration path?  Although this preserves the work of
+> Do we want to try the integration path?  Although this preserves the work
+of
 > the individuals, it is a integration and gluing approach for the larger
 > solution.
 >
@@ -58,7 +77,8 @@ On 5/18/07, Petrie, Glen <glen.petrie@eitc.epson.com> wrote:
 >
 > -----Original Message-----
 > From: printing-architecture-bounces@lists.freestandards.org
-> [mailto:printing-architecture-bounces@lists.freestandards.org] On Behalf Of
+> [mailto:printing-architecture-bounces@lists.freestandards.org] On Behalf
+Of
 > Petrie, Glen
 > Sent: Wednesday, May 16, 2007 3:32 PM
 > To: printing-architecture@lists.freestandards.org
@@ -74,9 +94,11 @@ On 5/18/07, Petrie, Glen <glen.petrie@eitc.epson.com> wrote:
 > API's with differing naming conventions and duplicated (and sometimes
 > differing) definitions; which to me was/would-be very confusing to a
 > developer.  I wanted to solve this without being in conflict with existing
-> work.  So I took the approach of creating a new naming convention and would
+> work.  So I took the approach of creating a new naming convention and
+would
 > remove any duplicate definitions.  To do that I decided to start with the
-> variables (meaning) used in JTAPI as the base and migrate everything else to
+> variables (meaning) used in JTAPI as the base and migrate everything else
+to
 > a common and new naming convention.  To do this I
 >
 > 1. I renamed the JTAPI stuff to EPP_; followed by a three char; then a
@@ -139,9 +161,12 @@ On 5/18/07, Petrie, Glen <glen.petrie@eitc.epson.com> wrote:
 > issue, to me, is one of overall and long term coherence.  If I keep going
 > then the intent is to use the best of any open source code and create a
 > coherent solution (both in naming and definition).  The alternative is to
-> try plugging existing but distinct pieces together.  I am worried about that
-> the latter, since it may result in an amount (small or large) of "glue code"
-> and perhaps some disconnects.  I guess I believe that in the end a developer
+> try plugging existing but distinct pieces together.  I am worried about
+that
+> the latter, since it may result in an amount (small or large) of "glue
+code"
+> and perhaps some disconnects.  I guess I believe that in the end a
+developer
 > would have to get and understand distinct pieces of codes and disconnected
 > API's versus coherent set of API's
 >
