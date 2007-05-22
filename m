@@ -1,14 +1,15 @@
-Return-Path: <mike@easysw.com>
-Message-ID: <464E3B50.4010800@easysw.com>
-Date: Fri, 18 May 2007 19:48:32 -0400
-From: Michael Sweet <mike@easysw.com>
+Return-Path: <Norm.Jacobs@Sun.COM>
+Message-ID: <46523CAE.5000706@Sun.COM>
+Date: Mon, 21 May 2007 19:43:26 -0500
+From: Norm Jacobs <Norm.Jacobs@Sun.COM>
 MIME-Version: 1.0
-References: <2F7D63A21DB2C74EB8EB8C09AF667DB00559CB28@eitc220.eitc.epson.com>
-In-Reply-To: <2F7D63A21DB2C74EB8EB8C09AF667DB00559CB28@eitc220.eitc.epson.com>
+References: <07616E99-C1A3-4F6D-AD07-E6811D16FE16@dankohn.com>
+	<464DC548.5080803@gmail.com>
+	<e395be80705181003k37564376k2c81119e85e4e293@mail.gmail.com>
+In-Reply-To: <e395be80705181003k37564376k2c81119e85e4e293@mail.gmail.com>
 Content-Type: text/plain; charset=ISO-8859-1; format=flowed
 Content-Transfer-Encoding: 7bit
-Subject: Re: [Printing-architecture] Embedded Client Thin-Thread: Initial
- Information
+Subject: Re: [Printing-architecture] LinuxPrinting.com naming
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.freestandards.org>
 List-Unsubscribe: <http://lists.freestandards.org/mailman/listinfo/printing-architecture>,
@@ -18,40 +19,72 @@ List-Post: <mailto:printing-architecture@lists.freestandards.org>
 List-Help: <mailto:printing-architecture-request@lists.freestandards.org?subject=help>
 List-Subscribe: <http://lists.freestandards.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.freestandards.org?subject=subscribe>
-To: "Petrie, Glen" <glen.petrie@eitc.epson.com>
-Cc: printing-architecture@lists.freestandards.org
+To: Ira McDonald <blueroofmusic@gmail.com>
+Cc: printing-architecture@lists.freestandards.org, Amanda McPherson <amanda@linux-foundation.org>, Till Kamppeter <till.kamppeter@gmail.com>
 
-Petrie, Glen wrote:
-> ...
-> If CUPS or another deployed solution has a functional, scalable and industry
-> accepted architecture; then, we should adopt their architecture; thus, I
-> would like to have more discussion on "what are the LFOP goals and, thus,
-> our activities."  For example, the activity could be "how to create an
-> embedded-client solution based on their architecture".   If CUPS does not an
-> industry accepted architecture; would CUPS be willing to migrate to a
-> standard print architecture?
 
-I don't think we'd have a problem adding another ("emulated") API to
-CUPS, much like the planned PAPI on CUPS implementation.  However,
-it is extremely unlikely that we would convert CUPS itself to another
-API since a) we'd have a fair amount of code to convert (with the
-corresponding opportunities for breaking things) and b) the current
-API works quite well.
+Apparently, I missed the context of Dan Kohn's message.  What *exacly* 
+is being proposed here?
 
-As for the question of whether the CUPS API would be suitable for
-embedded/thin clients, I don't see why it wouldn't be, especially
-if you stick with the (tiny) subset used for LSB 3.2 plus the CUPS
-1.3 streaming print API.
+    -Norm
 
-In my experience, the bigger issue will be printer drivers and
-generation of PDL data, which will need to be closely tied to the
-toolkit being used (e.g. Qt or GTK+ on top of Cairo) so that the
-printed files can be printer-ready bitmap/vector data, PDF, or
-PostScript.  This print data will most likely need to be streamed,
-which may require some further changes in those toolkits...
-
--- 
-______________________________________________________________________
-Michael Sweet, Easy Software Products           mike at easysw dot com
-Internet Printing and Document Software          http://www.easysw.com
+Ira McDonald wrote:
+> Hi,
+>
+> <OP Chair hat on> There is a very strong negative feeling among many
+> of the OP WG chairs whose companies do NOT ship Linux that we should
+> keep the name "Open Printing" (which we've always had from the outset
+> six years ago), to indicate that the scope is POSIX (not just Linux) for
+> our APIs and components.
+>
+> We can change the name, but it's likely to lose us several working
+> group chairs and my immediate predecessor as OP Steering
+> Committee chair, Norm Jacobs (Sun Solaris).
+>
+> Cheers,
+> - Ira
+>
+> On 5/18/07, Till Kamppeter <till.kamppeter@gmail.com> wrote:
+>   
+>> Yes, it has the advantages you mentioned, and the part of the project
+>> most known to users had the name linuxprinting.org.
+>>
+>> Disadvantages are that we are renaming a project again after short time
+>> and this means changing back all texts on the site, distros have to
+>> rename the packages again, confusing the users, changing names in
+>> OpenPrinting APIs (or leaving traces of all project names in the APIs
+>> with the time) ...
+>>
+>> So I want to ask the OpenPrinting workgroup members about whether we
+>> should rename or not. Or whether we should agree on the name on the next
+>>   OpenPrinting Steering Committee meeting. So anyone of the OP folks, WDYT?
+>>
+>>     Till
+>>
+>>
+>> Dan Kohn wrote:
+>>     
+>>> Till, I apologize in advance if you see this request as a reversal.
+>>>
+>>> Anyway, Amanda and I both think that the LinuxPrinting name is much
+>>> stronger and more compelling than OpenPrinting.  The term "open" has
+>>> been overused so much that it is almost meaningless at this point.  I
+>>> appreciate that LinuxPrinting provides drivers for BSD, Solaris, OS X,
+>>> etc. (and we want it to continue to do so), but just as the Linux
+>>> Foundation and Linux Standard Base work on an array of issues but have a
+>>> Linux focus at their core, so does LinuxPrinting.  Would you be willing
+>>> to change the branding of your website and working group?
+>>>
+>>>            - dan
+>>> --Dan Kohn <mailto:dan@dankohn.com>
+>>> COO, The Linux Foundation <http://www.linux-foundation.org>
+>>> <http://www.dankohn.com/>  <tel:+1-415-233-1000>
+>>>
+>>>
+>>>
+>>>       
+>>     
+>
+>
+>   
 
