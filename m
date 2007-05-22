@@ -1,15 +1,15 @@
 Return-Path: <jzemlin@yahoo.com>
-In-Reply-To: <46523CAE.5000706@Sun.COM>
+In-Reply-To: <465219DA.2040509@gmail.com>
 References: <07616E99-C1A3-4F6D-AD07-E6811D16FE16@dankohn.com>
 	<464DC548.5080803@gmail.com>
 	<e395be80705181003k37564376k2c81119e85e4e293@mail.gmail.com>
-	<46523CAE.5000706@Sun.COM>
+	<46523CAE.5000706@Sun.COM> <465219DA.2040509@gmail.com>
 Mime-Version: 1.0 (Apple Message framework v752.3)
 Content-Type: text/plain; charset=US-ASCII; delsp=yes; format=flowed
-Message-Id: <50DD31CD-FD7A-455C-B889-72349286776C@yahoo.com>
+Message-Id: <E8296958-E037-4508-9FB6-4CC007B98634@yahoo.com>
 Content-Transfer-Encoding: 7bit
 From: Jim Zemlin <jzemlin@yahoo.com>
-Date: Mon, 21 May 2007 19:24:18 -0700
+Date: Mon, 21 May 2007 22:29:36 -0700
 Subject: Re: [Printing-architecture] LinuxPrinting.com naming
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.freestandards.org>
@@ -20,97 +20,117 @@ List-Post: <mailto:printing-architecture@lists.freestandards.org>
 List-Help: <mailto:printing-architecture-request@lists.freestandards.org?subject=help>
 List-Subscribe: <http://lists.freestandards.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.freestandards.org?subject=subscribe>
-To: Norm Jacobs <Norm.Jacobs@Sun.COM>
-Cc: printing-architecture@lists.freestandards.org, Amanda McPherson <amanda@linux-foundation.org>, Till Kamppeter <till.kamppeter@gmail.com>
+To: Till Kamppeter <till.kamppeter@gmail.com>
+Cc: Norm Jacobs <Norm.Jacobs@Sun.COM>, printing-architecture@lists.freestandards.org, Amanda McPherson <amanda@linux-foundation.org>
 
 
-All:
+Till:
 
-I suggest we focus on the work and not the name right now.      This  
-can be a topic for discussion at our member meeting in June.    This  
+Allow me to repeat:
+
+I suggest we focus on the work and not the name right now.      This
+can be a topic for discussion at our member meeting in June.    This
 isn't worth spending a lot of time discussing right now.
 
-Thanks,
+Thanks. ;-)
 
 Jim
 
 
-On May 21, 2007, at 5:43 PM, Norm Jacobs wrote:
+On May 21, 2007, at 3:14 PM, Till Kamppeter wrote:
 
+> Dan wants to rename the OpenPrinting project (the whole project,  
+> what we
+> have done the last 6 years as FSG OpenPrinting and what I have done in
+> the last 6 years as linuxprinting.org) from OpenPrinting to
+> LinuxPrinting, due to being the Linux Foundation, having the Linux
+> Standards Base, ...
 >
-> Apparently, I missed the context of Dan Kohn's message.  What *exacly*
-> is being proposed here?
+>     Till
 >
->     -Norm
->
-> Ira McDonald wrote:
->> Hi,
+> Norm Jacobs wrote:
 >>
->> <OP Chair hat on> There is a very strong negative feeling among many
->> of the OP WG chairs whose companies do NOT ship Linux that we should
->> keep the name "Open Printing" (which we've always had from the outset
->> six years ago), to indicate that the scope is POSIX (not just  
->> Linux) for
->> our APIs and components.
+>> Apparently, I missed the context of Dan Kohn's message.  What  
+>> *exacly*
+>> is being proposed here?
 >>
->> We can change the name, but it's likely to lose us several working
->> group chairs and my immediate predecessor as OP Steering
->> Committee chair, Norm Jacobs (Sun Solaris).
+>>    -Norm
 >>
->> Cheers,
->> - Ira
->>
->> On 5/18/07, Till Kamppeter <till.kamppeter@gmail.com> wrote:
->>
->>> Yes, it has the advantages you mentioned, and the part of the  
->>> project
->>> most known to users had the name linuxprinting.org.
+>> Ira McDonald wrote:
+>>> Hi,
 >>>
->>> Disadvantages are that we are renaming a project again after  
->>> short time
->>> and this means changing back all texts on the site, distros have to
->>> rename the packages again, confusing the users, changing names in
->>> OpenPrinting APIs (or leaving traces of all project names in the  
->>> APIs
->>> with the time) ...
+>>> <OP Chair hat on> There is a very strong negative feeling among many
+>>> of the OP WG chairs whose companies do NOT ship Linux that we should
+>>> keep the name "Open Printing" (which we've always had from the  
+>>> outset
+>>> six years ago), to indicate that the scope is POSIX (not just  
+>>> Linux) for
+>>> our APIs and components.
 >>>
->>> So I want to ask the OpenPrinting workgroup members about whether we
->>> should rename or not. Or whether we should agree on the name on  
->>> the next
->>>   OpenPrinting Steering Committee meeting. So anyone of the OP  
->>> folks, WDYT?
+>>> We can change the name, but it's likely to lose us several working
+>>> group chairs and my immediate predecessor as OP Steering
+>>> Committee chair, Norm Jacobs (Sun Solaris).
 >>>
->>>     Till
+>>> Cheers,
+>>> - Ira
 >>>
+>>> On 5/18/07, Till Kamppeter <till.kamppeter@gmail.com> wrote:
 >>>
->>> Dan Kohn wrote:
->>>
->>>> Till, I apologize in advance if you see this request as a reversal.
+>>>> Yes, it has the advantages you mentioned, and the part of the  
+>>>> project
+>>>> most known to users had the name linuxprinting.org.
 >>>>
->>>> Anyway, Amanda and I both think that the LinuxPrinting name is much
->>>> stronger and more compelling than OpenPrinting.  The term "open"  
->>>> has
->>>> been overused so much that it is almost meaningless at this  
->>>> point.  I
->>>> appreciate that LinuxPrinting provides drivers for BSD, Solaris,  
->>>> OS X,
->>>> etc. (and we want it to continue to do so), but just as the Linux
->>>> Foundation and Linux Standard Base work on an array of issues  
->>>> but have a
->>>> Linux focus at their core, so does LinuxPrinting.  Would you be  
->>>> willing
->>>> to change the branding of your website and working group?
+>>>> Disadvantages are that we are renaming a project again after  
+>>>> short time
+>>>> and this means changing back all texts on the site, distros have to
+>>>> rename the packages again, confusing the users, changing names in
+>>>> OpenPrinting APIs (or leaving traces of all project names in the  
+>>>> APIs
+>>>> with the time) ...
 >>>>
->>>>            - dan
->>>> --Dan Kohn <mailto:dan@dankohn.com>
->>>> COO, The Linux Foundation <http://www.linux-foundation.org>
->>>> <http://www.dankohn.com/>  <tel:+1-415-233-1000>
+>>>> So I want to ask the OpenPrinting workgroup members about  
+>>>> whether we
+>>>> should rename or not. Or whether we should agree on the name on  
+>>>> the next
+>>>>   OpenPrinting Steering Committee meeting. So anyone of the OP  
+>>>> folks,
+>>>> WDYT?
+>>>>
+>>>>     Till
 >>>>
 >>>>
+>>>> Dan Kohn wrote:
 >>>>
+>>>>> Till, I apologize in advance if you see this request as a  
+>>>>> reversal.
+>>>>>
+>>>>> Anyway, Amanda and I both think that the LinuxPrinting name is  
+>>>>> much
+>>>>> stronger and more compelling than OpenPrinting.  The term  
+>>>>> "open" has
+>>>>> been overused so much that it is almost meaningless at this  
+>>>>> point.  I
+>>>>> appreciate that LinuxPrinting provides drivers for BSD,  
+>>>>> Solaris, OS X,
+>>>>> etc. (and we want it to continue to do so), but just as the Linux
+>>>>> Foundation and Linux Standard Base work on an array of issues but
+>>>>> have a
+>>>>> Linux focus at their core, so does LinuxPrinting.  Would you be  
+>>>>> willing
+>>>>> to change the branding of your website and working group?
+>>>>>
+>>>>>            - dan
+>>>>> --Dan Kohn <mailto:dan@dankohn.com>
+>>>>> COO, The Linux Foundation <http://www.linux-foundation.org>
+>>>>> <http://www.dankohn.com/>  <tel:+1-415-233-1000>
+>>>>>
+>>>>>
+>>>>>
+>>>>>
 >>>>
 >>>
->>
+>>>
+>>>
 >>
 >>
 >
