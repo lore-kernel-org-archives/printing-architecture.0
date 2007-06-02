@@ -1,16 +1,15 @@
 Return-Path: <blueroofmusic@gmail.com>
 DKIM-Signature: a=rsa-sha1; c=relaxed/relaxed; d=gmail.com; s=beta;
 	h=domainkey-signature:received:received:message-id:date:from:to:subject:mime-version:content-type:content-transfer-encoding:content-disposition;
-	b=r0RZZOgpYvrQ2AavP89zWUbsAK8ioiSeNOtJJlHxWHzvKvf9mq5lUce17RG4tbliXaowQ2RMb533tD3V3BVnTACUVwehV2tO50OvzCYoN9kv77bojrhR7yn8WID5EvIdrnYtvXio8tSNPcp3zBgdkPpqu0SbjWQar9IimspkinA=
-Message-ID: <e395be80706021125i1625c56cue4657f8fad0ba864@mail.gmail.com>
-Date: Sat, 2 Jun 2007 13:25:51 -0500
+	b=Mg5fWzCUm2rdzsdJJm4xD5s507PQE3JozMyx32XTsBrXnVXQZW5pB6OOPq1MJ4TQWC+jXJZXXNiNPClARz//hnw/qG2/JoEyN54VRuj6ErpE4TItWxACI4/9zq5SKECjcPjWW4v02A/ExuQgtBQPRi39AFL1n47c4jgJU7k4nt4=
+Message-ID: <e395be80706021138t610c53ccvf9a9f2b1e15486f0@mail.gmail.com>
+Date: Sat, 2 Jun 2007 13:38:37 -0500
 From: "Ira McDonald" <blueroofmusic@gmail.com>
 MIME-Version: 1.0
 Content-Type: text/plain; charset=ISO-8859-1; format=flowed
 Content-Transfer-Encoding: 7bit
 Content-Disposition: inline
-Subject: [Printing-architecture] Agenda for OP SC - Mon/Tue 4/5 June 2007
-	(first week)
+Subject: [Printing-architecture] Reminder - Wed 6 June - OP Architecture
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.freestandards.org>
 List-Unsubscribe: <http://lists.freestandards.org/mailman/listinfo/printing-architecture>,
@@ -24,60 +23,39 @@ To: printing-architecture@lists.freestandards.org, Ira McDonald <blueroofmusic@g
 
 Hi,
 
-Open Printing Steering Committee meeting this week:
-
-    - Monday 4 June 2007, Evening
-        4pm in San Francisco - US PDT (Pacific Daylight Time)
-        5pm in Colorado - US MDT (Mountain Daylight Time)
-        6pm in Chicago - US CDT (Central Daylight Time)
-        7pm in New York - US EDT (Eastern Daylight Time)
-
-    - Tuesday 5 June 2007, Morning
-        12am in Coimbra, Portugal - WEST (Western European Summer Time)
-        8am in Japan - JST (Japan Standard Time)
-
-    Toll Free (866) 839-8145
-    Int'l     (865) 524-6352
-    ACCESS Code: 7548766
+Reminder of our next Open Printing Architecture meeting this week on
+Wednesday 6 June.
 
 Agenda:
+(1) Discuss Open Printing agenda for June Linux Foundation Summit - see
+    LFSummitMountainView2007 in the directory
+    http://www.linux-foundation.org/en/OpenPrinting/
 
-(1) Review minutes of last OP SC meeting -
-      ftp://ftp.pwg.org/pub/pwg/fsg/steering_committee/ in the files
-        OP-SC-Minutes-20070514.htm/pdf
+(2) Discuss Glen's proposal for an OP Thin-Thread implementation - see
+    OpenPrinting-Thin-Thread-Discussion-20070418.pdf in the directory
+    ftp://ftp.pwg.org/pub/pwg/fsg/architecture/
 
-(2) Printing Dialog Open Usability face-to-face meeting in June 2007
-    - LinuxTag 2007 in Berlin - 30 May to 2 June 2007
-      - Till - brief report / summary
-      - Till - prepare slides soon for LF Summit meeting
-
-(3) Open Printing at LF Summit face-to-face in June 2007
-    - LF Summit - Mountain View, CA - 13-15 June 2007
-    - See:
-      http://www.linux-foundation.org/en/
-      - main page
-      http://www.linux-foundation.org/en/Desktop_Architects_Meeting_4
-      - LF Desktop Architects Meeting 4 (DAM4)
-      http://www.linux-foundation.org/en/OpenPrinting/LFSummitMountainView2007
-      - LF Open Printing
-
-(4) Printing Summit and PWG face-to-face in September 2007
+(3) Discuss Printing Summit agenda for September:
     - Printing Summit - Montreal, Canada - 10-13 September 2007
       - Ira working with Louis Desjardins (coordinator of recent LGM)
       - Ecole Polytechnique - professors/students/IT will attend
       http://www.polymtl.ca/inter/en/index.php (English home page)
-    - IEEE/ISTO PWG - Montreal, Canada - 13-14 September 2007
-      - Joint Plenary IEEE-ISTO PWG / LF OP - Thursday 13 September
-      - PWG working group meetings - Thursday/Friday 13-14 September
+     - Ira - email reply received from Louis Desjardins on 14 May 2007
+       - Ecole Polytechnique de Montreal
+         http://www.polymtl.ca/inter/en/index.php (English home page)
+   - IEEE/ISTO PWG - Montreal, Canada - 13-14 September 2007
+     - Joint Plenary IEEE-ISTO PWG / LF OP - Thursday 13 September
+     - PWG working group meetings - Thursday/Friday 13-14 September
 
-(5) Report on Open Printing Japan activities
-    - See
-    ftp://ftp.pwg.org/pub/pwg/fsg/vector/pdapi-spec-1.0rc2-070511-1.odt
-    ftp://ftp.pwg.org/pub/pwg/fsg/vector/pdapi-spec-1.0rc2-070511-1.pdf
-    - PDAPI, CUPS PDF Filter, etc.
+Time:
+12:00-1:00 PM US Pacific time
+1:00-2:00 PM US Mountain time
+3:00-4:00 PM US Eastern time
+8:00-9:00 PM Western European time
 
-(6) Future directions for Open Printing - 2007 to 2009
-    - Glen - OP Embedded Client Thin-Thread
+Due to off-cycle call, please use this Free Conference Call number:
+FC Backup Number: 712-580-0600
+Conference Code: 839473#
 
 Cheers,
 - Ira
