@@ -1,14 +1,11 @@
-Return-Path: <osamu.mihara@fujixerox.co.jp>
-Message-ID: <46649C0B.9040906@fujixerox.co.jp>
-Date: Tue, 05 Jun 2007 08:11:07 +0900
-From: Osamu MIHARA <osamu.mihara@fujixerox.co.jp>
+Return-Path: <toratani.yasumasa@canon.co.jp>
+Date: Tue, 05 Jun 2007 08:27:38 +0900
+From: TORATANI Yasumasa <toratani.yasumasa@canon.co.jp>
+Message-Id: <20070605082706.04B7.TORATANI.YASUMASA@canon.co.jp>
 MIME-Version: 1.0
-References: <e395be80706041605h75d1657dqf2bff9aa42607c1c@mail.gmail.com>
-In-Reply-To: <e395be80706041605h75d1657dqf2bff9aa42607c1c@mail.gmail.com>
-Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Type: text/plain; charset="US-ASCII"
 Content-Transfer-Encoding: 7bit
-Subject: Re: [Printing-architecture] CANCELLED - Agenda for OP SC - Mon/Tue
- 4/5 June 2007 (first week)
+Subject: [Printing-architecture] Japan side activity monthly report '07 May
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.freestandards.org>
 List-Unsubscribe: <http://lists.freestandards.org/mailman/listinfo/printing-architecture>,
@@ -22,89 +19,22 @@ To: printing-architecture@lists.freestandards.org
 
 Hi,
 
-Members from Japan may not be able to join the arch. telecon.  So, I 
-have asked Toratani-san to report the Japan activities.
+As the SC meeting has been canceled, I post the monthly report
+of the Japan side activity;
 
-on 2007/06/05 8:05 Ira McDonald said the following:
-> Hi,
-> 
-> OK - then our meeting is cancelled (as Norm alone has the passcode).
-> 
-> We'll cover (some of) these subjects on Wednesday at OP Archhitecture
-> telecon.
-> 
-> Cheers,
-> - Ira
-> 
-> On 6/2/07, Ira McDonald <blueroofmusic@gmail.com> wrote:
->> Hi,
->>
->> Open Printing Steering Committee meeting this week:
->>
->>     - Monday 4 June 2007, Evening
->>         4pm in San Francisco - US PDT (Pacific Daylight Time)
->>         5pm in Colorado - US MDT (Mountain Daylight Time)
->>         6pm in Chicago - US CDT (Central Daylight Time)
->>         7pm in New York - US EDT (Eastern Daylight Time)
->>
->>     - Tuesday 5 June 2007, Morning
->>         12am in Coimbra, Portugal - WEST (Western European Summer Time)
->>         8am in Japan - JST (Japan Standard Time)
->>
->>     Toll Free (866) 839-8145
->>     Int'l     (865) 524-6352
->>     ACCESS Code: 7548766
->>
->> Agenda:
->>
->> (1) Review minutes of last OP SC meeting -
->>       ftp://ftp.pwg.org/pub/pwg/fsg/steering_committee/ in the files
->>         OP-SC-Minutes-20070514.htm/pdf
->>
->> (2) Printing Dialog Open Usability face-to-face meeting in June 2007
->>     - LinuxTag 2007 in Berlin - 30 May to 2 June 2007
->>       - Till - brief report / summary
->>       - Till - prepare slides soon for LF Summit meeting
->>
->> (3) Open Printing at LF Summit face-to-face in June 2007
->>     - LF Summit - Mountain View, CA - 13-15 June 2007
->>     - See:
->>       http://www.linux-foundation.org/en/
->>       - main page
->>       http://www.linux-foundation.org/en/Desktop_Architects_Meeting_4
->>       - LF Desktop Architects Meeting 4 (DAM4)
->>       http://www.linux-foundation.org/en/OpenPrinting/LFSummitMountainView2007
->>       - LF Open Printing
->>
->> (4) Printing Summit and PWG face-to-face in September 2007
->>     - Printing Summit - Montreal, Canada - 10-13 September 2007
->>       - Ira working with Louis Desjardins (coordinator of recent LGM)
->>       - Ecole Polytechnique - professors/students/IT will attend
->>       http://www.polymtl.ca/inter/en/index.php (English home page)
->>     - IEEE/ISTO PWG - Montreal, Canada - 13-14 September 2007
->>       - Joint Plenary IEEE-ISTO PWG / LF OP - Thursday 13 September
->>       - PWG working group meetings - Thursday/Friday 13-14 September
->>
->> (5) Report on Open Printing Japan activities
->>     - See
->>     ftp://ftp.pwg.org/pub/pwg/fsg/vector/pdapi-spec-1.0rc2-070511-1.odt
->>     ftp://ftp.pwg.org/pub/pwg/fsg/vector/pdapi-spec-1.0rc2-070511-1.pdf
->>     - PDAPI, CUPS PDF Filter, etc.
->>
->> (6) Future directions for Open Printing - 2007 to 2009
->>     - Glen - OP Embedded Client Thin-Thread
->>
->> Cheers,
->> - Ira
->>
->> --
->> Ira McDonald (Musician / Software Architect)
->> Chair - Linux Foundation Open Printing WG
->> Blue Roof Music / High North Inc
->> PO Box 221  Grand Marais, MI  49839
->> phone: +1-906-494-2434
->> email: blueroofmusic@gmail.com
->>
-> 
->
+- OPVP spec - revised OPVP 1.0 document RC3 has been posted at
+ftp://ftp.pwg.org/pub/pwg/fsg/vector/work-in-progress/pdapi-spec-1.0rc3-070603-5.odt
+- OPVP spec
+  - Spec is almost fixed except two API, opvpSetLineDash, opvpGetLineDash
+  - RC4 fill be posted by the LF meeting
+- OPVP implementation
+  - will be updated after finishing the RC4 spec.
+  - found image drawsing bugs with OPVP 0.2 driver, and now investigating
+- CUPS PDF filter implementation
+  - finished, and will be pulic soon
+
+-----------------------------------------
+TORATANI Yasumasa
+Software Engineering Dept.23
+Platform Technology Development Headquarters, CANON INC.
 
