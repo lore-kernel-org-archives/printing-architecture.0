@@ -1,16 +1,14 @@
-Return-Path: <blueroofmusic@gmail.com>
-DKIM-Signature: a=rsa-sha1; c=relaxed/relaxed; d=gmail.com; s=beta;
-	h=domainkey-signature:received:received:message-id:date:from:to:subject:mime-version:content-type:content-transfer-encoding:content-disposition;
-	b=d9sQDfxLk4+NHWe94+4ARTmdY/7LiEGN6s3Ce1adKBJdY1CGXs5XbjCCD8gy9gj+XhVaGWSRlITit1eAMyqcMKcq5JXStlNdokZHNrOqEsXmBrFUW4rCX+GPC3rdEvA3il4112sE/XzU0p2Pln0XkoXtRD0dyRpPpqYlm9Z51tI=
-Message-ID: <e395be80706041605h75d1657dqf2bff9aa42607c1c@mail.gmail.com>
-Date: Mon, 4 Jun 2007 18:05:07 -0500
-From: "Ira McDonald" <blueroofmusic@gmail.com>
+Return-Path: <Norm.Jacobs@Sun.COM>
+Message-ID: <4664BF6D.9010109@Sun.COM>
+Date: Mon, 04 Jun 2007 20:42:05 -0500
+From: Norm Jacobs <Norm.Jacobs@Sun.COM>
 MIME-Version: 1.0
+References: <e395be80706021125i1625c56cue4657f8fad0ba864@mail.gmail.com>
+In-Reply-To: <e395be80706021125i1625c56cue4657f8fad0ba864@mail.gmail.com>
 Content-Type: text/plain; charset=ISO-8859-1; format=flowed
 Content-Transfer-Encoding: 7bit
-Content-Disposition: inline
-Subject: Re: [Printing-architecture] CANCELLED - Agenda for OP SC - Mon/Tue
-	4/5 June 2007 (first week)
+Subject: Re: [Printing-architecture] Agenda for OP SC - Mon/Tue 4/5 June
+ 2007 (first week)
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.freestandards.org>
 List-Unsubscribe: <http://lists.freestandards.org/mailman/listinfo/printing-architecture>,
@@ -20,19 +18,15 @@ List-Post: <mailto:printing-architecture@lists.freestandards.org>
 List-Help: <mailto:printing-architecture-request@lists.freestandards.org?subject=help>
 List-Subscribe: <http://lists.freestandards.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.freestandards.org?subject=subscribe>
-To: printing-architecture@lists.freestandards.org, Ira McDonald <blueroofmusic@gmail.com>
+To: Ira McDonald <blueroofmusic@gmail.com>
+Cc: printing-architecture@lists.freestandards.org
 
-Hi,
+I am on my way out the door to a meeting that I can't miss.  I will not 
+be able to attend.
 
-OK - then our meeting is cancelled (as Norm alone has the passcode).
+          -Norm
 
-We'll cover (some of) these subjects on Wednesday at OP Archhitecture
-telecon.
-
-Cheers,
-- Ira
-
-On 6/2/07, Ira McDonald <blueroofmusic@gmail.com> wrote:
+Ira McDonald wrote:
 > Hi,
 >
 > Open Printing Steering Committee meeting this week:
@@ -93,21 +87,5 @@ On 6/2/07, Ira McDonald <blueroofmusic@gmail.com> wrote:
 > Cheers,
 > - Ira
 >
-> --
-> Ira McDonald (Musician / Software Architect)
-> Chair - Linux Foundation Open Printing WG
-> Blue Roof Music / High North Inc
-> PO Box 221  Grand Marais, MI  49839
-> phone: +1-906-494-2434
-> email: blueroofmusic@gmail.com
->
-
-
--- 
-Ira McDonald (Musician / Software Architect)
-Chair - Linux Foundation Open Printing WG
-Blue Roof Music / High North Inc
-PO Box 221  Grand Marais, MI  49839
-phone: +1-906-494-2434
-email: blueroofmusic@gmail.com
+>   
 
