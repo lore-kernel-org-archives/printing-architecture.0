@@ -1,15 +1,16 @@
 Return-Path: <blueroofmusic@gmail.com>
 DKIM-Signature: a=rsa-sha1; c=relaxed/relaxed; d=gmail.com; s=beta;
 	h=domainkey-signature:received:received:message-id:date:from:to:subject:mime-version:content-type:content-transfer-encoding:content-disposition;
-	b=XYIOea55W+3P6TmtBtFm0AmbC1NJkzbFxM0yVPxH8P886WG+G045/0WduHmT2rQy5j4TA4eaCuIKfkMBb0JSVQe4mkMeDcG0QaYvKr14C3fjsRWU0Inq2xsyCyl7lbSwRTa5RUURiv5ulb9LzgHjOHrMCvfcafsyRv1UPP1+PhI=
-Message-ID: <e395be80706201358k242a4bbfub6e354cd2a1bdf42@mail.gmail.com>
-Date: Wed, 20 Jun 2007 15:58:58 -0500
+	b=KQXiWa+fZBCxezuE6RXTVq0D1MlIYDqxtSzMYQHfqH/GwqlUipJhxvnu4ajOlNnzhwU5lhgtgmOcyFJV/mTKz+H5am+eDHBBqxCO6IetDTXOYShclmh+QYC1uP2OrT7XXQMCBKEdWsSRBZ+LV9Jl7/EKxn0sWpWu+vEQZv+c/bo=
+Message-ID: <e395be80706201421n6b8d7f7ax517c5e9ce4e2fdd3@mail.gmail.com>
+Date: Wed, 20 Jun 2007 16:21:10 -0500
 From: "Ira McDonald" <blueroofmusic@gmail.com>
 MIME-Version: 1.0
 Content-Type: text/plain; charset=ISO-8859-1; format=flowed
 Content-Transfer-Encoding: 7bit
 Content-Disposition: inline
-Subject: [Printing-architecture] PS - Progress on Montreal schedule
+Subject: [Printing-architecture] Reminder - Wed 27 June - Next OP
+	Architecture
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.freestandards.org>
 List-Unsubscribe: <http://lists.freestandards.org/mailman/listinfo/printing-architecture>,
@@ -23,28 +24,25 @@ To: printing-architecture@lists.freestandards.org, Ira McDonald <blueroofmusic@g
 
 Hi,
 
-I just spoke yesterday with our main Montreal contact, Louis
-Desjardins (Mardigrafe, Libre Graphics Meeting organizer).
+Reminder that we will return to our regular bi-weekly schedule with
+our next Linux Foundation Open Printing Architecture teleconference
+on Wednesday 27 June:
 
-Our originally planned week of 10-14 September for the next
-Printing Summit and joint meeting with IEEE-ISTO PWG would
-be too early in the semester at Ecole Polytechnique.  The best
-alternative week (to preserve our joint meeting with the PWG)
-would be 24-28 September.
+Time:
+12:00-1:00 PM US Pacific time
+1:00-2:00 PM US Mountain time
+3:00-4:00 PM US Eastern time
+8:00-9:00 PM Western European time
 
-Louis plans to call me or email me tomorrow (Thursday) with
-a reply from our host, Benoit Ozell, hopefully confirming this
-new schedule.
+USA Toll-free Number: 866-312-6342
+Toll Number: 763-391-6805
+Conference Code: 582 658 5482
 
-Then, I'll work with the IEEE-ISTO PWG Steering Committee
-and Secretary (Jerry Thrasher, Lexmark) to get the ISTO to
-set up an online Registration page.
+If any problems occur with the main number (above), please use:
+Free Conference Backup Number: 712-580-0600
+Conference Code: 839473#
 
-I'll also work with Louis to find recommended hotels near the
-Ecole Polytechnique (there are two subway stations on the
-university campus).  Louis tells me that $100 Canadian is a
-probable price range for a conference rate (much better than
-equivalent US hotels).  And of course all that lovely food...
+Agenda to follow.
 
 Cheers,
 - Ira
