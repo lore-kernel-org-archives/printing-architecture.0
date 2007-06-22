@@ -1,16 +1,16 @@
-Return-Path: <till.kamppeter@gmail.com>
+Return-Path: <blueroofmusic@gmail.com>
 DKIM-Signature: a=rsa-sha1; c=relaxed/relaxed; d=gmail.com; s=beta;
-	h=domainkey-signature:received:received:message-id:date:from:user-agent:mime-version:to:cc:subject:references:in-reply-to:content-type:content-transfer-encoding;
-	b=PDoO0+H+HVotOwj2ZweLtIqS6BJ0Ga1fsYvFh6k6CwnlfgUoG64KLerWav3dq9k9b93lT9tzvZ1HMQZbxUum6+ULakek9bEidbSolWZ01VyzX5vxIYR6V3obykwU11K86bSBa1r+0ol6v1pwZLJa6LOXRWudrtqZBrIntRdhUPs=
-Message-ID: <4679A49B.4050107@gmail.com>
-Date: Wed, 20 Jun 2007 23:05:15 +0100
-From: Till Kamppeter <till.kamppeter@gmail.com>
+	h=domainkey-signature:received:received:message-id:date:from:to:subject:cc:mime-version:content-type:content-transfer-encoding:content-disposition;
+	b=pFsVnqBtE/QGvmfHqkqvHk5pJIBYfkCDguXyI/tpK9R2WG3bRS8NFBrFyDtJ92aZu3njk3uI8ItkOvO2jb9FqbZxP9AAepRWWRA1Q9mSVZZC6Z7ANApRfI+CcGZrVH7rqcsSIzB3UiW/walKwabumoDPZBOXCJLiZfwEPTEm/qM=
+Message-ID: <e395be80706221052h770a1ab5w77ae304c8e677ded@mail.gmail.com>
+Date: Fri, 22 Jun 2007 12:52:29 -0500
+From: "Ira McDonald" <blueroofmusic@gmail.com>
 MIME-Version: 1.0
-References: <e395be80706201358k242a4bbfub6e354cd2a1bdf42@mail.gmail.com>
-In-Reply-To: <e395be80706201358k242a4bbfub6e354cd2a1bdf42@mail.gmail.com>
-Content-Type: text/plain; charset=UTF-8; format=flowed
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
 Content-Transfer-Encoding: 7bit
-Subject: Re: [Printing-architecture] PS - Progress on Montreal schedule
+Content-Disposition: inline
+Subject: [Printing-architecture] Confirmed - 24-28 Sept - Montreal Printing
+	Summit and PWG
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.freestandards.org>
 List-Unsubscribe: <http://lists.freestandards.org/mailman/listinfo/printing-architecture>,
@@ -20,47 +20,35 @@ List-Post: <mailto:printing-architecture@lists.freestandards.org>
 List-Help: <mailto:printing-architecture-request@lists.freestandards.org?subject=help>
 List-Subscribe: <http://lists.freestandards.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.freestandards.org?subject=subscribe>
-To: Ira McDonald <blueroofmusic@gmail.com>
-Cc: printing-architecture@lists.freestandards.org
+To: Till Kamppeter <till.kamppeter@gmail.com>, Ira McDonald <blueroofmusic@gmail.com>
+Cc: printing-architecture@lists.freestandards.org, printing-summit@lists.freestandards.org
 
-Seems for me that Sep 24-28 is much more probable as the date as 10-14. 
-I have updated
+Hi,
 
-http://www.linux-foundation.org/en/OpenPrinting/SummitMontreal
+This morning, Benoit Ozell confirmed our invitation to come on
+24-28 September to our joint PS/PWG in Montreal at the Ecole
+Polytechnique.
 
-appropriately. I have also updated the "next meeting" on
+Next week, I'll finish working on the details of specific room reservations
+and other logistics with Benoit.  Meanwhile, Till can begin to send out
+invitations.
 
-http://www.linux-foundation.org/en/OpenPrinting/Development
+Till has already updated the meeting dates on:
 
-    Till
+  http://www.linux-foundation.org/en/OpenPrinting/SummitMontreal
 
-Ira McDonald wrote:
-> Hi,
-> 
-> I just spoke yesterday with our main Montreal contact, Louis
-> Desjardins (Mardigrafe, Libre Graphics Meeting organizer).
-> 
-> Our originally planned week of 10-14 September for the next
-> Printing Summit and joint meeting with IEEE-ISTO PWG would
-> be too early in the semester at Ecole Polytechnique.  The best
-> alternative week (to preserve our joint meeting with the PWG)
-> would be 24-28 September.
-> 
-> Louis plans to call me or email me tomorrow (Thursday) with
-> a reply from our host, Benoit Ozell, hopefully confirming this
-> new schedule.
-> 
-> Then, I'll work with the IEEE-ISTO PWG Steering Committee
-> and Secretary (Jerry Thrasher, Lexmark) to get the ISTO to
-> set up an online Registration page.
-> 
-> I'll also work with Louis to find recommended hotels near the
-> Ecole Polytechnique (there are two subway stations on the
-> university campus).  Louis tells me that $100 Canadian is a
-> probable price range for a conference rate (much better than
-> equivalent US hotels).  And of course all that lovely food...
-> 
-> Cheers,
-> - Ira
-> 
+The Printing Summit will run Monday, Tuesday, and Wednesday,
+and the morning of Thursday.  The IEEE-ISTO Printer Working
+Group will run Thursday and Friday.
+
+Cheers,
+- Ira
+
+-- 
+Ira McDonald (Musician / Software Architect)
+Chair - Linux Foundation Open Printing WG
+Blue Roof Music / High North Inc
+PO Box 221  Grand Marais, MI  49839
+phone: +1-906-494-2434
+email: blueroofmusic@gmail.com
 
