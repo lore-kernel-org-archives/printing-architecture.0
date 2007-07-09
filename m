@@ -1,11 +1,11 @@
 Return-Path: <toratani.yasumasa@canon.co.jp>
-Date: Tue, 10 Jul 2007 08:05:47 +0900
+Date: Tue, 10 Jul 2007 08:12:26 +0900
 From: TORATANI Yasumasa <toratani.yasumasa@canon.co.jp>
-Message-Id: <20070710074712.88C7.TORATANI.YASUMASA@canon.co.jp>
+Message-Id: <20070710081012.88C9.TORATANI.YASUMASA@canon.co.jp>
 MIME-Version: 1.0
 Content-Type: text/plain; charset="US-ASCII"
 Content-Transfer-Encoding: 7bit
-Subject: [Printing-architecture] Japan side activity monthly report June '07
+Subject: [Printing-architecture] sc meeting canceled?
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.freestandards.org>
 List-Unsubscribe: <http://lists.freestandards.org/mailman/listinfo/printing-architecture>,
@@ -17,17 +17,10 @@ List-Subscribe: <http://lists.freestandards.org/mailman/listinfo/printing-archit
 	<mailto:printing-architecture-request@lists.freestandards.org?subject=subscribe>
 To: printing-architecture@lists.freestandards.org
 
-Japan side activity monthly report June '07
+Hi,
 
-- Reviewed the LF meeting slides at the f2f meeting on 28, June.
-
-- Received several comments to the OPVP 1.0 spec from Saitoh-san
-of NEC software. The comments include many good suggestions to
-make more clear the specs. At the f2f meeting, we reviewed them.
-
-- Continuing the OPVP 1.0 driver test, and found two bugs.
-These bugs were posted to the ML as well as source forge bug
-tracking system. New opvp 1.0 source code soon available.
+No one is calling in the sc meeting.
+Has the meeting been canceled?
 
 -----------------------------------------
 TORATANI Yasumasa
