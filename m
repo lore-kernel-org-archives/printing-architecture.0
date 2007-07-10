@@ -1,15 +1,13 @@
-Return-Path: <blueroofmusic@gmail.com>
-DKIM-Signature: a=rsa-sha1; c=relaxed/relaxed; d=gmail.com; s=beta;
-	h=domainkey-signature:received:received:message-id:date:from:to:subject:mime-version:content-type:content-transfer-encoding:content-disposition;
-	b=XwoXnQqzF3OPqpWJwrpPrSgkOnwPaMDUPWbzWFOWRDC0zypInotp2fM8yV50M0tMFCpH7W1k6UypIX/CkKqx+UewSGB9Uf2ML2tym/uQudyAN6cBlxRo1sTcDtRRAFWJCykTA94RrhjjXK/0ZON1PQvYqg9ciFqHRexM9PvY5Tw=
-Message-ID: <e395be80707091640s469da1dy4304078ea277abe6@mail.gmail.com>
-Date: Mon, 9 Jul 2007 18:40:32 -0500
-From: "Ira McDonald" <blueroofmusic@gmail.com>
+Return-Path: <shida.keisho@canon.co.jp>
+Date: Tue, 10 Jul 2007 12:05:41 +0900
+From: "SHIDA, Keisho" <shida.keisho@canon.co.jp>
+In-Reply-To: <e395be80707091640s469da1dy4304078ea277abe6@mail.gmail.com>
+References: <e395be80707091640s469da1dy4304078ea277abe6@mail.gmail.com>
+Message-Id: <20070710120244.1CEB.SHIDA.KEISHO@canon.co.jp>
 MIME-Version: 1.0
-Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Type: text/plain; charset="US-ASCII"
 Content-Transfer-Encoding: 7bit
-Content-Disposition: inline
-Subject: [Printing-architecture] RESCHEDULE - OP SC - please respond ASAP
+Subject: Re: [Printing-architecture] RESCHEDULE - OP SC - please respond ASAP
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.freestandards.org>
 List-Unsubscribe: <http://lists.freestandards.org/mailman/listinfo/printing-architecture>,
@@ -19,37 +17,60 @@ List-Post: <mailto:printing-architecture@lists.freestandards.org>
 List-Help: <mailto:printing-architecture-request@lists.freestandards.org?subject=help>
 List-Subscribe: <http://lists.freestandards.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.freestandards.org?subject=subscribe>
-To: printing-architecture@lists.freestandards.org, Ira McDonald <blueroofmusic@gmail.com>
+To: Ira McDonald <blueroofmusic@gmail.com>
+Cc: printing-architecture@lists.freestandards.org
 
-Hi,
+Ira:
 
-Sorry for the confusion today - I was on PWG face-to-face telecons until
-shortly before our scheduled OP SC meeting - when I learned that Norm was
-stuck in traffic and couldn't attend - so I sent a very late note asking people
-to use the backup FC number - but only Till and I called in to that number.
+We have tried two deferent phone numbers but nonody was there in this morning.
 
-We need to reschedule.
+Any event, Toratani and I will standing by again in next weet, 08:00 AM June 17 here.
 
-I would prefer to hold the meeting a week later (Monday/Tuesday 16/17 July)
-at our regular time, so that our OP Japan members can join.
+regards,
 
-Otherwise, we could have a US/Europe only OP SC meeting this Wednesday
-(11 July) at the OP Architecture meeting time - not as good a choice.
 
-What do you think?
+Shida
+===
 
-Can the OP Japan members join in the morning next Tuesday (17 July)?
+On Mon, 9 Jul 2007 18:40:32 -0500
+"Ira McDonald" <blueroofmusic@gmail.com> wrote:
 
-Please respond ASAP.
+> Hi,
+> 
+> Sorry for the confusion today - I was on PWG face-to-face telecons until
+> shortly before our scheduled OP SC meeting - when I learned that Norm was
+> stuck in traffic and couldn't attend - so I sent a very late note asking people
+> to use the backup FC number - but only Till and I called in to that number.
+> 
+> We need to reschedule.
+> 
+> I would prefer to hold the meeting a week later (Monday/Tuesday 16/17 July)
+> at our regular time, so that our OP Japan members can join.
+> 
+> Otherwise, we could have a US/Europe only OP SC meeting this Wednesday
+> (11 July) at the OP Architecture meeting time - not as good a choice.
+> 
+> What do you think?
+> 
+> Can the OP Japan members join in the morning next Tuesday (17 July)?
+> 
+> Please respond ASAP.
+> 
+> Cheers,
+> - Ira
+> 
+> -- 
+> Ira McDonald (Musician / Software Architect)
+> Chair - Linux Foundation Open Printing WG
+> Blue Roof Music / High North Inc
+> PO Box 221  Grand Marais, MI  49839
+> phone: +1-906-494-2434
+> email: blueroofmusic@gmail.com
+> 
+> _______________________________________________
+> Printing-architecture mailing list
+> Printing-architecture@lists.freestandards.org
+> http://lists.freestandards.org/mailman/listinfo/printing-architecture
 
-Cheers,
-- Ira
 
--- 
-Ira McDonald (Musician / Software Architect)
-Chair - Linux Foundation Open Printing WG
-Blue Roof Music / High North Inc
-PO Box 221  Grand Marais, MI  49839
-phone: +1-906-494-2434
-email: blueroofmusic@gmail.com
 
