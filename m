@@ -1,10 +1,15 @@
-Return-Path: <glen.petrie@eitc.epson.com>
-Message-ID: <2F7D63A21DB2C74EB8EB8C09AF667DB00559CB81@eitc220.eitc.epson.com>
-From: "Petrie, Glen" <glen.petrie@eitc.epson.com>
-Date: Wed, 11 Jul 2007 10:59:37 -0700
+Return-Path: <blueroofmusic@gmail.com>
+DKIM-Signature: a=rsa-sha1; c=relaxed/relaxed; d=gmail.com; s=beta;
+	h=domainkey-signature:received:received:message-id:date:from:to:subject:mime-version:content-type:content-transfer-encoding:content-disposition;
+	b=cAmoFPmfCdsS/KOOvP3HqFxTXCJPQEFJm9+TxfXkayr2kYNaAqfTF03IK6CXxFgIGakHaZipwkGuhOAfG1ZhNz7omMePXLZCljMkz6MtWYPu3nYWxa18lN8VP6SP6TKszGcEGBRxjhynsAPGynENJHkSXYJCP3liCpvvijrTGY0=
+Message-ID: <e395be80707111524h12fd0ee0j93305fdc7c8e342c@mail.gmail.com>
+Date: Wed, 11 Jul 2007 17:24:24 -0500
+From: "Ira McDonald" <blueroofmusic@gmail.com>
 MIME-Version: 1.0
-Content-Type: text/plain
-Subject: Re: [Printing-architecture] Agenda - Wed 11 July - OP Architectur	e
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline
+Subject: [Printing-architecture] Posted OP Arch Minutes (11 July 2007)
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.freestandards.org>
 List-Unsubscribe: <http://lists.freestandards.org/mailman/listinfo/printing-architecture>,
@@ -14,52 +19,12 @@ List-Post: <mailto:printing-architecture@lists.freestandards.org>
 List-Help: <mailto:printing-architecture-request@lists.freestandards.org?subject=help>
 List-Subscribe: <http://lists.freestandards.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.freestandards.org?subject=subscribe>
-To: printing-architecture@lists.freestandards.org
+To: printing-architecture@lists.freestandards.org, Ira McDonald <blueroofmusic@gmail.com>
 
-I would like to add to the agenda a discussion on the self-certification.
+Minutes from yesterday's OP Architecture teleconference at:
 
-glen
-
------Original Message-----
-From: printing-architecture-bounces@lists.freestandards.org
-[mailto:printing-architecture-bounces@lists.freestandards.org] On Behalf Of
-Ira McDonald
-Sent: Tuesday, July 10, 2007 2:58 PM
-To: printing-architecture@lists.freestandards.org; Ira McDonald
-Subject: [Printing-architecture] Agenda - Wed 11 July - OP Architecture
-
-Hi,
-
-Open Printing Architecture teleconference on Wednesday 11 July.
-
-Time:
-12:00-1:00 PM US Pacific time
-1:00-2:00 PM US Mountain time
-3:00-4:00 PM US Eastern time
-8:00-9:00 PM Western European time
-
-USA Toll-free Number: 866-312-6342
-Toll Number: 763-391-6805
-Conference Code: 582 658 5482
-
-If any problems occur with the main number (above), please use:
-Free Conference Backup Number: 712-580-0600
-Conference Code: 839473#
-
-Agenda:
-
-(1) Vacation Report - Claudia Alimpich
-     - highlights
-
-(2) Embedded Printing Solution - Glen Petrie
-     - license, libraries, approach
-
-(3) OP IJS/1.0 Spec - Glen Petrie
-     - issues?
-
-(4) Printing Summit - Montreal - Till Kamppeter & Ira McDonald
-     - PS - Mon-Thu 24-27 September
-     - PWG - Thu-Fri 27-28 September
+ftp://ftp.pwg.org/pub/pwg/fsg/architecture/OP-Arch-Minutes-20070711.htm
+ftp://ftp.pwg.org/pub/pwg/fsg/architecture/OP-Arch-Minutes-20070711.pdf
 
 Cheers,
 - Ira
@@ -71,9 +36,4 @@ Blue Roof Music / High North Inc
 PO Box 221  Grand Marais, MI  49839
 phone: +1-906-494-2434
 email: blueroofmusic@gmail.com
-
-_______________________________________________
-Printing-architecture mailing list
-Printing-architecture@lists.freestandards.org
-http://lists.freestandards.org/mailman/listinfo/printing-architecture
 
