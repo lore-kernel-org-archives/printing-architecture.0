@@ -1,14 +1,14 @@
-DKIM-Signature: a=rsa-sha1; c=relaxed/relaxed; d=gmail.com; s=beta;
-	h=domainkey-signature:received:received:message-id:date:from:to:subject:mime-version:content-type:content-transfer-encoding:content-disposition;
-	b=UPy4g8lUop69ftgs2rumTXX9nnPCk7+IImLvV6ImjXU0N1ineH/aZmREC6fb8yGcgq/0gT5pw6slt8+UnEK4e55UQZfzGuQtk4RGdqbp36uQgpSCqqP1oZ0yTWHCscDzoLbM5Ko8WYa8ytP3ehtNq3Cc+RjCqZDHomR6l7idECw=
-Message-ID: <e395be80707170915m5287dfc9r2a3c5dfea812b03a@mail.gmail.com>
-Date: Tue, 17 Jul 2007 11:15:01 -0500
-From: "Ira McDonald" <blueroofmusic@gmail.com>
+Date: Tue, 17 Jul 2007 14:44:51 -0300
+From: Marcelo Ricardo Leitner <mrl@mandriva.com>
+Subject: Re: [Printing-architecture] Self-certification of Printers and
+	Print Drivers for POSIX/Linux
+Message-ID: <20070717174451.GG11968@idolize.conectiva>
+References: <e395be80707111541u3beb6037pa30682c6018f1991@mail.gmail.com>
+	<46979D69.90009@gmail.com>
 MIME-Version: 1.0
-Content-Type: text/plain; charset=ISO-8859-1; format=flowed
-Content-Transfer-Encoding: 7bit
+Content-Type: text/plain; charset=us-ascii
 Content-Disposition: inline
-Subject: [Printing-architecture] REIMINDER - Next OP SC - Mon/Tue 6/7 August
+In-Reply-To: <46979D69.90009@gmail.com>
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -18,40 +18,60 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: printing-architecture@lists.freestandards.org, Ira McDonald <blueroofmusic@gmail.com>
+To: Till Kamppeter <till.kamppeter@gmail.com>
+Cc: printing-architecture@lists.freestandards.org
 
-Hi,
+Hi all,
 
-Our next Open Printing Steering Committee teleconference is
-scheduled for the FIRST week of August:
+On Fri Jul 13, 2007 at 16:42:33 +0100, Till Kamppeter wrote:
+> My suggestions for the testing are the following:
+>
+> - Distributions must be LSB compliant. This way they have a common 
+> environment for binary executables. LSB 3.2 will require important 
+> interfaces for printing functionality in applications and for printer 
+> driver integration.
+>
+> The driver package should be made in distribution-indepent form to cover 
+> all Linux distros with one driver.
+>
+> - Core/system components which need to be tested:
+>
+>    o CUPS
+>    o Ghostscript
+>    o foomatic-rip
+>
+> The printer drivers interact only with these ones. Apps send jobs to 
+> CUPS/the printing system.
+>
+> - One good test would be to set up a print queue for the printer pointing 
+> into a file and to print into it. The output file must have a reasonable 
+> size after that. If something in the chain is missing this test would fail. 
+> If there is physical access to the printer, printing on the printer should 
+> also be tested.
 
-    - Monday 6 August 2007, Evening
-      - US
-        4pm in San Francisco - US PDT (Pacific Daylight Time)
-        5pm in Colorado - US MDT (Mountain Daylight Time)
-        6pm in Chicago - US CDT (Central Daylight Time)
-        7pm in New York - US EDT (Eastern Daylight Time)
+I used this kind of test while developing the now old Conectiva Linux 10 and
+it worked pretty well. I had scripts that could even grab the relevant
+error from cups' error_log (debug level) and identify it. Then after running
+this test for all printer/driver combinations (that time from
+foomatic-configure -O), I had a clear view of the main problems in the
+distro. This is a nice test (distro level?), indeed.
 
-    - Tuesday 7 August 2007, Morning
-      - Europe/Japan
-        12am in Coimbra, Portugal - WEST (Western European Summer Time)
-        8am in Japan - JST (Japan Standard Time)
+But, unfortunately, this won't work with drivers that requires direct access
+to the device.
 
-    Toll Free (866) 839-8145
-    Int'l     (865) 524-6352
-    ACCESS Code: 7548766
+> - The user tool should be a distribution-independent package (or a package 
+> each distro has to supply) which runs the tests in an automated way and 
+> presents the results in both machine- and human-readable form. It should 
+> also provide info to the user what he will need to do to make his printing 
+> working.
 
-    If any problems occur with the main number (above), please use:
-    Free Conference Backup Number: 712-580-0600
-    Conference Code: 839473#
+I can't see what this application would do. The main reasons I see for it
+not working are either he made a custom installation (and thus he has some
+linux development skills) or the distro didn't do its job well, assuming the
+driver was well tested by the manufacturer and it really should work with
+the printer being used.
 
-Cheers,
-- Ira
+Can you explain a bit more about this tool please?
 
--- 
-Ira McDonald (Musician / Software Architect)
-Chair - Linux Foundation Open Printing WG
-Blue Roof Music / High North Inc
-PO Box 221  Grand Marais, MI  49839
-phone: +1-906-494-2434
-email: blueroofmusic@gmail.com
+Thanks,
+Marcelo.
