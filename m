@@ -1,10 +1,9 @@
-From: Olaf Meeuwissen <olaf.meeuwissen@avasys.jp>
-Subject: Re: [Printing-architecture] Posted OP Arch Minutes (11 July 2007)
-References: <2F7D63A21DB2C74EB8EB8C09AF667DB00559CB82@eitc220.eitc.epson.com>
-Date: Tue, 17 Jul 2007 15:22:22 +0900
-Message-ID: <87wswz1rdt.fsf@geek.avasys.jp>
+Message-ID: <2F7D63A21DB2C74EB8EB8C09AF667DB00559CB92@eitc220.eitc.epson.com>
+From: "Petrie, Glen" <glen.petrie@eitc.epson.com>
+Subject: RE: [Printing-architecture] Posted OP Arch Minutes (11 July 2007)
+Date: Tue, 17 Jul 2007 07:51:25 -0700
 MIME-Version: 1.0
-Content-Type: text/plain; charset=us-ascii
+Content-Type: text/plain
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -14,17 +13,10 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: "Petrie, Glen" <glen.petrie@eitc.epson.com>
+To: 'Olaf Meeuwissen' <olaf.meeuwissen@avasys.jp>, "Petrie, Glen" <glen.petrie@eitc.epson.com>
 Cc: printing-architecture@lists.freestandards.org
 
-"Petrie, Glen" <glen.petrie@eitc.epson.com> writes:
 
-> Olaf,...
-
-Glen, thanks for your detailed reply and apologies for my belated
-reply.  I now understand your (and the rest of the architecture
-group's) concerns a lot better.
-# Not that I necessarily agree, but that's another matter.
 
 One thing I'd like to make clear from the beginning: I'm NOT lobbying
 to change the license for OP work to the GNU GPL, but you already knew
@@ -33,18 +25,33 @@ proprietary software vendors as well as *compatible* with the GNU GPL
 for the simple reason that the current "restricted MIT" license
 prevents use of any OP created software by software under the GNU GPL.
 
+[[gwp]]I don't believe there are any licenses that are compatible with GNU
+GPL in relationship to proprietary software.   GNU GPL has as one of its
+explicit functions to "trap" developers in releasing their software.  I have
+talked with a many company representatives on the subject of using GNU GPL
+software and all of them, without exception, state they never use GNU GPL
+software in their products.
+
 >  1) What kind of further restrictions is it that you are concerned
 >     about?
 >
 > [gwp] The concern is that the work done by Open-Printing will be modified
 > and put under a GNU GPL like license.  This will then invoke the software
-> trap of GNU GPL and companies will stop using the Open-Printing stuff.  And
+> trap of GNU GPL and companies will stop using the Open-Printing stuff.
+And
 > that is the last thing we want.
 
 You can't just go around modify things and change the licensing
 conditions unless *all* copyright holders agree.  Just make sure that
 all work done by OP is copyrighted by OP and OP can veto any license
 changes.
+
+[[gwp]] 1.) I am writing new code that based on software that was developed
+under the MIT license from IBM.  So I am currently the only holder.  2.) I
+have discussed the license with the others holders and they agreed with the
+license modification. 3.) The Steering Committee of the OP has agreed to
+this license and any attempt to change that license will result in
+withdrawal of my software from Open-Printing.
 
 What you *can* do is built something on top of OP work and put that
 out under the GNU GPL.  However, that does not mean that the OP work
@@ -68,10 +75,12 @@ claiming they are material modifications of the spec, that is.
 >  2) Why single out the GNU GPL?  Is "any means" not good enough?
 >     # Yes, I'm an FSF associate member.
 >
-> [gwp] Yes, "any means" would have been sufficient; however, identifying, not
+> [gwp] Yes, "any means" would have been sufficient; however, identifying,
+not
 > singling out, GNU GPL was to make clear to both individual developers and
 > companies that want to use the code that there is no licensing TRAP to
-> release the developer's or company's software no matter if their software is
+> release the developer's or company's software no matter if their software
+is
 > proprietary or open-source. 
 
 Understood, but the language of your mail makes me sceptic about the
@@ -86,7 +95,8 @@ Understood, but the language of your mail makes me sceptic about the
 >
 > [gwp] The restricted MIT states that the software may be used by anyone.
 > But in the sense since the GNU GPL has a TRAP that would re-license any
-> integrated or associated software to become GNU GPL; then the answer is no,
+> integrated or associated software to become GNU GPL; then the answer is
+no,
 > the licenses are not compatible.  In fact the goal is to prevent
 > Open-Printing stuff and the companies / individuals that use Open-printing
 > stuff from being TRAPPED by "any means", including GNU GPL, and thus
@@ -119,7 +129,8 @@ modify and merge one would already need the source.
 
 > [gwp] I personally believe that one of the primary goals of the
 > Open-Printing activities has been and continues to be the development of
-> printing architecture, documentation and software that can be used freely by
+> printing architecture, documentation and software that can be used freely
+by
 > anyone without the concerns, worries and legal problems of the license
 > associated with the software.  GNU GPL is the opposite of that.
 
@@ -148,7 +159,8 @@ lot of legal expertise in this area.
 > competitive advantage.  As long as GNU GPL "free software" has a mandatory
 > "give back" TRAP of a company's software; companies will avoid integrating
 > or using GNU GPL software directly.  They may take ideas or concepts but
-> they will not use GNU GPL software directly with their proprietary software.
+> they will not use GNU GPL software directly with their proprietary
+software.
 > Some argue that they can even use the ideas and concepts.  This leads to a
 > lot of great software from being adopted by companies that could go in
 > products and, thus, be used.
@@ -164,13 +176,16 @@ FYI, a substantial part of CUPS is GPL.  The libraries are LGPL.
 
 > [gwp] The goal of Open-Printing, I believe, is coherence for printing; not
 > software or license traps.  I personally would encourage anyone to improve
-> or directly use the Open-Printing stuff; but I personally don't care if the
+> or directly use the Open-Printing stuff; but I personally don't care if
+the
 > stuff they use goes into their proprietary solution or an open-source
 > solution; just as long as they use it and coherence for printing improves.
 > I firmly believe that companies that would use Open-Printing stuff would
-> provide, at least, feedback if they found something wrong or that something
+> provide, at least, feedback if they found something wrong or that
+something
 > needed improvement.   And, in a way, this is better method because the
-> original authors of the Open-Printing stuff would re-integrate fixes or new
+> original authors of the Open-Printing stuff would re-integrate fixes or
+new
 > features in a coherent fashion based on their original knowledge.
 
 If you care about the OpenPrinting stuff getting used, you should
@@ -178,14 +193,17 @@ consider whether a restrictive MIT license is in the best interest of
 OP stuff getting used, because as it is now it can't be used by a
 great deal of existing software.
 
-> [gwp] Acceptance.  I believe Open-Printing software, concepts, architectures
-> and/or documentation that is licensed under the restricted MIT license will
+> [gwp] Acceptance.  I believe Open-Printing software, concepts,
+architectures
+> and/or documentation that is licensed under the restricted MIT license
+will
 > have a greater acceptance both as a standard and as usable software.   We
 > want both companies and individuals to accept and use Open-Printing stuff
 > without trying to trap them by a license.   Companies will definitely be
 > willing to use both the standard and software because it does not have
 > traps.   Companies involved in printing are mid-size to large-size
-> companies; they worry about be sued and will avoid situations that can cause
+> companies; they worry about be sued and will avoid situations that can
+cause
 > difficulties for them which is what GNU GPL does. 
 
 With a restricted MIT license they have just as much to worry about
