@@ -1,15 +1,14 @@
 DKIM-Signature: a=rsa-sha1; c=relaxed/relaxed; d=gmail.com; s=beta;
 	h=domainkey-signature:received:received:message-id:date:from:to:subject:mime-version:content-type:content-transfer-encoding:content-disposition;
-	b=IK0QCZSJY2M6NmMlPAwhK8ahDVAJJewYGBFfkJhSqdteJF2iATEHKH40oENUqg0vCpbfaWZhPFzh5w1QyAzBAsoMPLSXDTEzXWU8TX1GHoikAf5zkDxodaNRSw32nDvQsedSTr40a9sln+xuy5ghza6iRHhYmLNkgsjVOWLSdN0=
-Message-ID: <e395be80707200903h52cc7017t8d6164eb5359f614@mail.gmail.com>
-Date: Fri, 20 Jul 2007 11:03:38 -0500
+	b=SkIdSJBervkcl83LcH6IFuXc4llGb3kXM1UMAqQlEYrptZrwAxcB/v+xKWOKml5uDasanjNYxbVzXlRchNbtZBaZ+/rtboShe2UWLXq1inHtpGqlSmZK0DFB2QDjhCZqRT9g/bSBt8XzCVf+f97KkWmXZFIx6n3gWOwhRnJqlOQ=
+Message-ID: <e395be80707231104n193c8a3ct11425f94e54a6d8c@mail.gmail.com>
+Date: Mon, 23 Jul 2007 13:04:24 -0500
 From: "Ira McDonald" <blueroofmusic@gmail.com>
 MIME-Version: 1.0
 Content-Type: text/plain; charset=ISO-8859-1; format=flowed
 Content-Transfer-Encoding: 7bit
 Content-Disposition: inline
-Subject: [Printing-architecture] Montreal hotels and Ira at Hiawatha Folk
-	Festival
+Subject: [Printing-architecture] REMINDER - Wed 25 July - OP Architecture
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -19,28 +18,27 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Till Kamppeter <till.kamppeter@gmail.com>, Ira McDonald <blueroofmusic@gmail.com>, Harry Lewis <harryl@us.ibm.com>, printing-architecture@lists.freestandards.org, Ira McDonald <imcdonald@sharplabs.com>
+To: printing-architecture@lists.freestandards.org, Ira McDonald <blueroofmusic@gmail.com>
 
-Hi Till and Harry,
+Hi,
 
-I had a note yesterday from Louis Desjardins saying that he's going to
-get recommendations for a hotel from a local Montreal travel agency
-that his firm (Mardigrafe) works with regularly, probably today (Friday).
+Agenda to follow - please send suggestions to this mailing list.
 
-Louis also included some good info about the range of prices for
-various meals and public transport.
+Open Printing Architecture teleconference on Wednesday 25 July.
 
-Benoit Ozell also sent a couple of suggestions for hotels (including
-one 15 minutes WALK from the conference), but he suggested that
-we wait to hear from the travel agency people.
+Time:
+12:00-1:00 PM US Pacific time
+1:00-2:00 PM US Mountain time
+3:00-4:00 PM US Eastern time
+8:00-9:00 PM Western European time
 
-I'm just off for three days to the Hiawatha Folk Festival to play with my
-friends' band 'Ski in a bunch of workshops and soak up music and sun:
+USA Toll-free Number: 866-312-6342
+Toll Number: 763-391-6805
+Conference Code: 582 658 5482
 
-  http://www.hiawathamusic.org/
-
-We should be able to put up the travel logistics details by the middle
-of next week and get the ISTO joint registration page going then.
+If any problems occur with the main number (above), please use:
+Free Conference Backup Number: 712-580-0600
+Conference Code: 839473#
 
 Cheers,
 - Ira
@@ -52,4 +50,4 @@ Blue Roof Music / High North Inc
 PO Box 221  Grand Marais, MI  49839
 work: +1-906-494-2434
 home: +1-906-494-2697
-email: blueroofmusic@gmail.co
+email: blueroofmusic@gmail.com
