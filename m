@@ -1,14 +1,15 @@
 DKIM-Signature: a=rsa-sha1; c=relaxed/relaxed; d=gmail.com; s=beta;
 	h=domainkey-signature:received:received:message-id:date:from:to:subject:mime-version:content-type:content-transfer-encoding:content-disposition;
-	b=Y9kroFmq7GobnhMti81Ql5/FxR3ZSNzY89oihV4/boC5wBuWx9AdZyPmQllh+CU0sySm1ZHMWjg0nDezLIKJxm0XU5f4O4W6nFBAlaJkq7M0K+cPkx2Nydob9zJQPiW7o5hT3i4uX746w0qjjrD1yqFVYYOWusLRRrYn8ulSfGo=
-Message-ID: <e395be80708051246t7696a1b1vf0a13baadb52afad@mail.gmail.com>
-Date: Sun, 5 Aug 2007 14:46:01 -0500
+	b=T/k1FfSkXNnLCJqTZdMRT659UjqL42wphA5ezN8bZ7QZewlAyZeZinNakkUtqjEdnxaD9h+JEkcab79SAoIuxVidpLcsSWXX5XM/gEbXOFYYOoOowOLc2ahud5b7+mWSc1vH6Ve3yN8nlvKNJG2Ek2JAv2DSNad4CYlsG7m07ZE=
+Message-ID: <e395be80708051257r69e13c2fu6578b028d4098d26@mail.gmail.com>
+Date: Sun, 5 Aug 2007 14:57:08 -0500
 From: "Ira McDonald" <blueroofmusic@gmail.com>
 MIME-Version: 1.0
 Content-Type: text/plain; charset=ISO-8859-1
 Content-Transfer-Encoding: 7bit
 Content-Disposition: inline
-Subject: [Printing-architecture] OP SC Agenda - Mon/Tue 6/7 August
+Subject: [Printing-architecture] Reminder - Wed 8 August - Next OP Arch
+	meeting
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -22,68 +23,26 @@ To: printing-architecture@lists.freestandards.org, Ira McDonald <blueroofmusic@g
 
 Hi,
 
-Our next Open Printing Steering Committee teleconference is
-scheduled for tomorrow, in the FIRST week of August:
+Agenda to follow - please send suggestions to this mailing list.
 
-   - Monday 6 August 2007, Evening
-     - US
-       4pm in San Francisco - US PDT (Pacific Daylight Time)
-       5pm in Colorado - US MDT (Mountain Daylight Time)
-       6pm in Chicago - US CDT (Central Daylight Time)
-       7pm in New York - US EDT (Eastern Daylight Time)
+Open Printing Architecture teleconference on Wednesday 8 August.
 
-   - Tuesday 7 August 2007, Morning
-     - Europe/Japan
-       12am in Coimbra, Portugal - WEST (Western European Summer Time)
-       8am in Japan - JST (Japan Standard Time)
+Time:
+12:00-1:00 PM US Pacific time
+1:00-2:00 PM US Mountain time
+3:00-4:00 PM US Eastern time
+8:00-9:00 PM Western European time
 
-   Toll Free (866) 839-8145
-   Int'l     (865) 524-6352
-   ACCESS Code: 7548766
+USA Toll-free Number: 866-312-6342
+Toll Number: 763-391-6805
+Conference Code: 582 658 5482
 
-   If any problems occur with the main number (above), please use:
-   Free Conference Backup Number: 712-580-0600
-   Conference Code: 839473#
-
-If you cannot attend, or have conferencing problems, please send
-an email with your project status, issues, or topics for the Printing
-Summit.
-
-Agenda:
-
-(1) Review minutes of last OP SC meeting -
-   ftp://ftp.pwg.org/pub/pwg/fsg/steering_committee/ in the files
-     OP-SC-Minutes-20070716.htm/pdf
-
-(2) OP Validation for Printers, Print Drivers, and Print Systems
-   - Approaches?
-     - C tools, scripts, XML profiles, ???)
-   - Need volunteers
-
-(3) Printing Summit and PWG meetings in September 2007
-   - Printing Summit - Montreal, Canada - 24-27 September 2007
-     - Ecole Polytechnique
-     http://www.polymtl.ca/inter/en/index.php (English home page)
-   - IEEE/ISTO PWG / LF OPWG Collaboration
-     - Joint Plenary - Thursday am 27 September
-   - IEEE/ISTO PWG - Montreal, Canada - 26-28 September 2007
-     - PWG WG sessions - Wednesday pm/Thursday pm/Friday am
-
-(4) Report on Open Printing Japan activities
-   - See
-   ftp://ftp.pwg.org/pub/pwg/fsg/vector/pdapi-spec-1.0rc4-20070614.odt
-   ftp://ftp.pwg.org/pub/pwg/fsg/vector/pdapi-spec-1.0rc4-20070614.pdf
-   - PDAPI, CUPS PDF Filter, etc.
-
-(5) Report on OP Embedded Printing Solution - Glen Petrie
-   - See files in new OPEP directory tree
-   ftp://ftp.pwg.org/pub/pwg/openprinting/embedded/opepCurrent
-   - See recent notes from Glen to Printing-Architecture list
-   - Discuss comments, naming conventions, directory structure, etc.
+If any problems occur with the main number (above), please use:
+Free Conference Backup Number: 712-580-0600
+Conference Code: 839473#
 
 Cheers,
 - Ira
-
 
 -- 
 Ira McDonald (Musician / Software Architect)
