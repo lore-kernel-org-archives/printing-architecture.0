@@ -1,14 +1,15 @@
 DKIM-Signature: a=rsa-sha1; c=relaxed/relaxed; d=gmail.com; s=beta;
 	h=domainkey-signature:received:received:message-id:date:from:to:subject:mime-version:content-type:content-transfer-encoding:content-disposition;
-	b=AwybJQouvPVBRJPKdaSNMnd0tNulZZWf5lenW+3PcDGM5PwGXLsaoD8wljEq6t1MdJfI8IF2firVCvDuekpvImYaLmwo1S8nz07BeGpDRqwT0SGqP6FvMLgdCiBuDyv/IWc8jYK85cpuvkbYJwVkoo9rZjpLP4mzVKHxtQ9S4Qk=
-Message-ID: <e395be80708061746g5d7efbcaoa49a4878d5a0ad7d@mail.gmail.com>
-Date: Mon, 6 Aug 2007 19:46:55 -0500
+	b=EDN8nw73oGR0D1VNvj7Y9j/YfjB9Zp8vdZzxpiBeA8zijXD4BDxOMjeTJXJRQuL/lBBgy1p6+llY1zJEK5xTsSXmDvgyDcUWBobzjqnUVHUqoqGSsPoXXDAE2mvwdBMAI6qChRKRBjaN095jSgTKE1F2FZQVZKs1EHFE97xAsX0=
+Message-ID: <e395be80708061751l37dcb4b1gf874142028616255@mail.gmail.com>
+Date: Mon, 6 Aug 2007 19:51:21 -0500
 From: "Ira McDonald" <blueroofmusic@gmail.com>
 MIME-Version: 1.0
 Content-Type: text/plain; charset=ISO-8859-1
 Content-Transfer-Encoding: 7bit
 Content-Disposition: inline
-Subject: [Printing-architecture] Posted OP SC Minutes (6 August 2007)
+Subject: [Printing-architecture] Reminder - Next OP SC - Mon/Tue 10/11
+	September
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -22,11 +23,28 @@ To: printing-architecture@lists.freestandards.org, Ira McDonald <blueroofmusic@g
 
 Hi,
 
-I've just posted minutes from today's Open Printing
-Architecture/Steering Committee telecon at:
+Our next Open Printing Steering Committee teleconference is
+scheduled for the SECOND week of September:
 
-  ftp://ftp.pwg.org/pub/pwg/fsg/steering_committee/OP-SC-Minutes-20070806.htm
-  ftp://ftp.pwg.org/pub/pwg/fsg/steering_committee/OP-SC-Minutes-20070806.pdf
+    - Monday 10 September 2007, Evening
+      - US
+        4pm in San Francisco - US PDT (Pacific Daylight Time)
+        5pm in Colorado - US MDT (Mountain Daylight Time)
+        6pm in Chicago - US CDT (Central Daylight Time)
+        7pm in New York - US EDT (Eastern Daylight Time)
+
+    - Tuesday 11 September 2007, Morning
+      - Europe/Japan
+        12am in Coimbra, Portugal - WEST (Western European Summer Time)
+        8am in Japan - JST (Japan Standard Time)
+
+    Toll Free (866) 839-8145
+    Int'l     (865) 524-6352
+    ACCESS Code: 7548766
+
+   If any problems occur with the main number (above), please use:
+   Free Conference Backup Number: 712-580-0600
+   Conference Code: 839473#
 
 Cheers,
 - Ira
