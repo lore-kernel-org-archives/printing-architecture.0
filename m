@@ -1,14 +1,9 @@
-DKIM-Signature: a=rsa-sha1; c=relaxed/relaxed; d=gmail.com; s=beta;
-	h=domainkey-signature:received:received:message-id:date:from:to:subject:mime-version:content-type:content-transfer-encoding:content-disposition;
-	b=TprMi5d2QJ90n1+g7pLxrxvjpTQLn8TzI5WcKVOGiJW3aGNVgnFuNFkUe1IqQJ5YUjDnS9ihRy4e5D+DQPQPuVQlqL4kTiYm4zhb7hq3ThpQOo/TswjZnFeuHma/2d7YRdbPID7H8NlkXqyKV8jVO1C4pZf70ey8p8yFaZmgJeM=
-Message-ID: <e395be80708081025k395796acud5c4e36a3f9b616a@mail.gmail.com>
-Date: Wed, 8 Aug 2007 12:25:22 -0500
-From: "Ira McDonald" <blueroofmusic@gmail.com>
+Message-ID: <2F7D63A21DB2C74EB8EB8C09AF667DB00559CBD4@eitc220.eitc.epson.com>
+From: "Petrie, Glen" <glen.petrie@eitc.epson.com>
+Subject: RE: [Printing-architecture] Multiple Job Ticket Question
+Date: Wed, 8 Aug 2007 10:40:23 -0700 
 MIME-Version: 1.0
-Content-Type: text/plain; charset=ISO-8859-1
-Content-Transfer-Encoding: 7bit
-Content-Disposition: inline
-Subject: [Printing-architecture] OP Arch Agenda - Wed 8 August 2007
+Content-Type: text/plain
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -18,52 +13,93 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: printing-architecture@lists.freestandards.org, Ira McDonald <blueroofmusic@gmail.com>
+To: 'Ira McDonald' <blueroofmusic@gmail.com>, "Petrie, Glen" <glen.petrie@eitc.epson.com>
+Cc: printing-architecture@lists.freestandards.org
 
-Hi,
+Ok,
 
-My apologies for this late agenda - a busy week.
+My mistake, your right.  We can talk more about it at today's meeting.
 
-Open Printing Architecture teleconference on Wednesday 8 August.
+glen 
 
-Time:
-12:00-1:00 PM US Pacific time
-1:00-2:00 PM US Mountain time
-3:00-4:00 PM US Eastern time
-8:00-9:00 PM Western European time
+-----Original Message-----
+From: Ira McDonald [mailto:blueroofmusic@gmail.com] 
+Sent: Wednesday, August 08, 2007 9:40 AM
+To: Petrie, Glen; Ira McDonald
+Cc: printing-architecture@lists.freestandards.org
+Subject: Re: [Printing-architecture] Multiple Job Ticket Question
 
-USA Toll-free Number: 866-312-6342
-Toll Number: 763-391-6805
-Conference Code: 582 658 5482
+Hi Glen,
 
-If any problems occur with the main number (above), please use:
-Free Conference Backup Number: 712-580-0600
-Conference Code: 839473#
-
-Agenda:
-
-(1) Review and approve minutes from last meeting
-ftp://ftp.pwg.org/pub/pwg/fsg/architecture/OP-Arch-Minutes-20070725.htm
-ftp://ftp.pwg.org/pub/pwg/fsg/architecture/OP-Arch-Minutes-20070725.pdf
-
-(2) OP Embedded Print Solution - Glen Petrie
-    - See files in new OPEP directory tree
-      ftp://ftp.pwg.org/pub/pwg/openprinting/embedded/opepCurrent
-    - See recent notes from Glen to Printing-Architecture list
-    - Discuss comments, naming conventions, directory structure, etc.
-
-(3) Printing Summit and PWG meetings in September 2007
-    - Printing Summit - Montreal, Canada - 24-27 September 2007
-      - Ecole Polytechnique
-        http://www.polymtl.ca/inter/en/index.php (English home page)
-    - IEEE/ISTO PWG / LF OPWG Collaboration
-      - Joint Plenary - Thursday am 27 September
-    - IEEE/ISTO PWG - Montreal, Canada - 26-28 September 2007
-      - PWG WG sessions - Wednesday pm/Thursday pm/Friday am
+Your hierarchy is slightly confused - JTAPI JobTicketInfo object CONTAINS
+JTAPI Job object (not the other way around) - and JTAPI has ALWAYS
+supported multiple concurrent instances of a JobTicketInfo tree, as far as
+I can see.
 
 Cheers,
 - Ira
 
+
+On 8/8/07, Petrie, Glen <glen.petrie@eitc.epson.com> wrote:
+>
+>
+>
+> All,
+>
+> I don't remember how we decided to handle processing of multiple jobs.
+> For a desktop, the JTAPI software could have individual instances of the
+> software for each job.  Thus, there is no need for the JTAPI to understand
+> processing multiple job tickets.   However, for an embedded solution
+having
+> different instances of the code may not be desired - simply a waste of
+> memory.
+>
+> Scenario --- John turns on his pda.  (Not all pda's can multiplex
+> applications; they simply run the active application.)   John read several
+> email and decides to print three of them.  After he starts the print
+> creation operation << one to possibly three open job-tickets >>; John gets
+> an alert that he has a meeting in ten minutes.   He needs to print two
+> documents before the meeting.  John selects the two documents he need from
+> the pda's desktop and initiates a print action.  << Two more job-tickets
+may
+> be open or they may be done serially. >>
+>
+> -- this would be easy to handle if there are multiple instances of the
+print
+> software; however, if there is only one instances of the print software
+then
+> all of the JTAPI need an additional argument.   The argument is a job
+> identifier so that the api's know what job to associate the request to.
+>
+> example:
+>
+> I would change opjtOpenLib(context) ---> opjtOpenLib(void);
+>
+> Add a api call opjtNewJob((void**)foo) or require that
+> opjtNewObject((void**)foo, OP_JOB_OBJECT) be called before any other API
+> (after openlib).
+>
+>
+> --- the other choice is to allow only one open print job at a time.
+>
+> What is the suggested solution?
+>
+>
+>
+> Rgds,
+>  Glen W. Petrie
+>  Epson Imaging Technology Center
+>  2580 Orchard Parkway, Suite 200
+>  San Jose, CA, 95131
+>  Voice: 408.576.4131  Fax: 408.474.0511
+>
+>
+> _______________________________________________
+> Printing-architecture mailing list
+> Printing-architecture@lists.linux-foundation.org
+> https://lists.linux-foundation.org/mailman/listinfo/printing-architecture
+>
+>
 
 
 -- 
