@@ -1,9 +1,14 @@
-Message-ID: <2F7D63A21DB2C74EB8EB8C09AF667DB00559CBD4@eitc220.eitc.epson.com>
-From: "Petrie, Glen" <glen.petrie@eitc.epson.com>
-Subject: RE: [Printing-architecture] Multiple Job Ticket Question
-Date: Wed, 8 Aug 2007 10:40:23 -0700 
+DKIM-Signature: a=rsa-sha1; c=relaxed/relaxed; d=gmail.com; s=beta;
+	h=domainkey-signature:received:received:message-id:date:from:to:subject:mime-version:content-type:content-transfer-encoding:content-disposition;
+	b=k+N7oRkIO7FeE5QUY6Tfw2Fefxkn0KlsEbJPrvGGrKScUiUiTjhbLmz1sMc8RG81EcC53GAh/MPJbOeC5lhovlXwanwlRWjrovnz2Jp1JUdAAs2XSrWHdA17c/epdqUqLzMJu7lkqRg7h83VyNDYFUfWG8lM18Bl+GZHyvE0IyU=
+Message-ID: <e395be80708081310x229b889bp3a98dd0fdeb6b7c3@mail.gmail.com>
+Date: Wed, 8 Aug 2007 15:10:20 -0500
+From: "Ira McDonald" <blueroofmusic@gmail.com>
 MIME-Version: 1.0
-Content-Type: text/plain
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline
+Subject: [Printing-architecture] Posted OP Arch Minutes (8 August 2007)
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -13,94 +18,15 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: 'Ira McDonald' <blueroofmusic@gmail.com>, "Petrie, Glen" <glen.petrie@eitc.epson.com>
-Cc: printing-architecture@lists.freestandards.org
+To: printing-architecture@lists.freestandards.org, Ira McDonald <blueroofmusic@gmail.com>
 
-Ok,
+Minutes from today's OP Architecture teleconference at:
 
-My mistake, your right.  We can talk more about it at today's meeting.
-
-glen 
-
------Original Message-----
-From: Ira McDonald [mailto:blueroofmusic@gmail.com] 
-Sent: Wednesday, August 08, 2007 9:40 AM
-To: Petrie, Glen; Ira McDonald
-Cc: printing-architecture@lists.freestandards.org
-Subject: Re: [Printing-architecture] Multiple Job Ticket Question
-
-Hi Glen,
-
-Your hierarchy is slightly confused - JTAPI JobTicketInfo object CONTAINS
-JTAPI Job object (not the other way around) - and JTAPI has ALWAYS
-supported multiple concurrent instances of a JobTicketInfo tree, as far as
-I can see.
+ftp://ftp.pwg.org/pub/pwg/fsg/architecture/OP-Arch-Minutes-20070808.htm
+ftp://ftp.pwg.org/pub/pwg/fsg/architecture/OP-Arch-Minutes-20070808.pdf
 
 Cheers,
 - Ira
-
-
-On 8/8/07, Petrie, Glen <glen.petrie@eitc.epson.com> wrote:
->
->
->
-> All,
->
-> I don't remember how we decided to handle processing of multiple jobs.
-> For a desktop, the JTAPI software could have individual instances of the
-> software for each job.  Thus, there is no need for the JTAPI to understand
-> processing multiple job tickets.   However, for an embedded solution
-having
-> different instances of the code may not be desired - simply a waste of
-> memory.
->
-> Scenario --- John turns on his pda.  (Not all pda's can multiplex
-> applications; they simply run the active application.)   John read several
-> email and decides to print three of them.  After he starts the print
-> creation operation << one to possibly three open job-tickets >>; John gets
-> an alert that he has a meeting in ten minutes.   He needs to print two
-> documents before the meeting.  John selects the two documents he need from
-> the pda's desktop and initiates a print action.  << Two more job-tickets
-may
-> be open or they may be done serially. >>
->
-> -- this would be easy to handle if there are multiple instances of the
-print
-> software; however, if there is only one instances of the print software
-then
-> all of the JTAPI need an additional argument.   The argument is a job
-> identifier so that the api's know what job to associate the request to.
->
-> example:
->
-> I would change opjtOpenLib(context) ---> opjtOpenLib(void);
->
-> Add a api call opjtNewJob((void**)foo) or require that
-> opjtNewObject((void**)foo, OP_JOB_OBJECT) be called before any other API
-> (after openlib).
->
->
-> --- the other choice is to allow only one open print job at a time.
->
-> What is the suggested solution?
->
->
->
-> Rgds,
->  Glen W. Petrie
->  Epson Imaging Technology Center
->  2580 Orchard Parkway, Suite 200
->  San Jose, CA, 95131
->  Voice: 408.576.4131  Fax: 408.474.0511
->
->
-> _______________________________________________
-> Printing-architecture mailing list
-> Printing-architecture@lists.linux-foundation.org
-> https://lists.linux-foundation.org/mailman/listinfo/printing-architecture
->
->
-
 
 -- 
 Ira McDonald (Musician / Software Architect)
