@@ -1,10 +1,10 @@
-Message-ID: <2F7D63A21DB2C74EB8EB8C09AF667DB00559CBCE@eitc220.eitc.epson.com>
+Message-ID: <2F7D63A21DB2C74EB8EB8C09AF667DB00559CBD3@eitc220.eitc.epson.com>
 From: "Petrie, Glen" <glen.petrie@eitc.epson.com>
-Date: Tue, 7 Aug 2007 07:11:49 -0700 
+Date: Wed, 8 Aug 2007 07:41:46 -0700 
 MIME-Version: 1.0
 Content-Type: multipart/alternative;
-	boundary="----_=_NextPart_001_01C7D8FC.E52D55C8"
-Subject: [Printing-architecture] opJTAPI Header File
+	boundary="----_=_NextPart_001_01C7D9CA.3F14B058"
+Subject: [Printing-architecture] Multiple Job Ticket Question
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -19,42 +19,43 @@ To: printing-architecture@lists.freestandards.org
 This message is in MIME format. Since your mail reader does not understand
 this format, some or all of this message may not be legible.
 
-------_=_NextPart_001_01C7D8FC.E52D55C8
+------_=_NextPart_001_01C7D9CA.3F14B058
 Content-Type: text/plain
 
-Hello All,
+All,
 
-During yesterdays SC meeting there was general agreement with the change and
-solution details I am implementing for the OPEP. However, (why is there
-always a "however", anyway) there is the concern for capability with the
-existing fsgJTAPI version 1.0.  (I will call the new api opjtapi and the
-existing one fsgjtapi for discussion).  There were several great ideas
-discussed for resolving the differences between the two api's.  After some
-consideration, I like the ideas of providing macros or in the worst case
-functions to go between the opjtapi and fsgjtapi.   
+I don't remember how we decided to handle processing of multiple jobs.
+For a desktop, the JTAPI software could have individual instances of the
+software for each job.  Thus, there is no need for the JTAPI to understand
+processing multiple job tickets.   However, for an embedded solution having
+different instances of the code may not be desired - simply a waste of
+memory.
 
-So, what is needed?
+Scenario --- John turns on his pda.  (Not all pda's can multiplex
+applications; they simply run the active application.)   John read several
+email and decides to print three of them.  After he starts the print
+creation operation << one to possibly three open job-tickets >>; John gets
+an alert that he has a meeting in ten minutes.   He needs to print two
+documents before the meeting.  John selects the two documents he need from
+the pda's desktop and initiates a print action.  << Two more job-tickets may
+be open or they may be done serially. >>
 
-1.	A parser developer who uses the opjtapi's and has an fsgjtapi lib.
-2.	A parser developer who uses the fsgjtpai's and has an opjtapi lib.
+-- this would be easy to handle if there are multiple instances of the print
+software; however, if there is only one instances of the print software then
+all of the JTAPI need an additional argument.   The argument is a job
+identifier so that the api's know what job to associate the request to.
 
-My first plan will be continue the opjtapi coding (the opJTAPI.c file) to
-make sure that there are no other necessary changes before addressing the
-capability between the jtapi instantiations.
+example:
+I would change opjtOpenLib(context) ---> opjtOpenLib(void);
 
-Since the plan is to create a capability between the two api's, I took
-additional liberties with difference between them.  I removed the individual
-"New-<object>" api's and created a single api which has as one of its
-arguments an object id.   This is just using the same idea that was used in
-fsgjtapi (and opjtapi) for attributes.  This has simplified the over set of
-api's without any loss of functionality.   See the new version of opJTAPI.h
-at
+Add a api call opjtNewJob((void**)foo) or require that
+opjtNewObject((void**)foo, OP_JOB_OBJECT) be called before any other API
+(after openlib).
 
-ftp://ftp.pwg.org/pub/pwg/openprinting/embedded/opepCurrent/opepSoftware/Job
-Ticket_Lib/inc/opJTAPI.h
-<ftp://ftp.pwg.org/pub/pwg/openprinting/embedded/opepCurrent/opepSoftware/Jo
-bTicket_Lib/inc/opJTAPI.h>   
 
+--- the other choice is to allow only one open print job at a time.
+
+What is the suggested solution?
 
 Rgds, 
 Glen W. Petrie 
@@ -65,7 +66,7 @@ Voice: 408.576.4131  Fax: 408.474.0511
 
 
 
-------_=_NextPart_001_01C7D8FC.E52D55C8
+------_=_NextPart_001_01C7D9CA.3F14B058
 Content-Type: text/html
 Content-Transfer-Encoding: quoted-printable
 
@@ -76,111 +77,119 @@ Content-Transfer-Encoding: quoted-printable
 charset=3Dus-ascii">
 <META NAME=3D"Generator" CONTENT=3D"MS Exchange Server version =
 5.5.2658.24">
-<TITLE>opJTAPI Header File</TITLE>
+<TITLE>Multiple Job Ticket Question</TITLE>
 </HEAD>
 <BODY>
 
-<P ALIGN=3DLEFT><FONT SIZE=3D2 FACE=3D"Arial">Hell</FONT><FONT SIZE=3D2 =
-FACE=3D"Arial">o All,</FONT></P>
+<P ALIGN=3DLEFT><FONT SIZE=3D2 FACE=3D"Arial">A</FONT><FONT SIZE=3D2 =
+FACE=3D"Arial">l</FONT><FONT SIZE=3D2 FACE=3D"Arial">l,</FONT></P>
 
-<P ALIGN=3DLEFT><FONT SIZE=3D2 FACE=3D"Arial">During</FONT> <FONT =
-SIZE=3D2 FACE=3D"Arial">yesterdays SC meeting there was general =
-agreement with the change and solution</FONT> <FONT SIZE=3D2 =
-FACE=3D"Arial">details</FONT><FONT SIZE=3D2 FACE=3D"Arial"></FONT> =
-<FONT SIZE=3D2 FACE=3D"Arial">I am implementing for the =
-OPEP.</FONT><FONT SIZE=3D2 FACE=3D"Arial"> H</FONT><FONT SIZE=3D2 =
-FACE=3D"Arial">owever, (why is there always a</FONT> <FONT SIZE=3D2 =
-FACE=3D"Arial">"</FONT><FONT SIZE=3D2 =
-FACE=3D"Arial">however</FONT><FONT SIZE=3D2 =
-FACE=3D"Arial">"</FONT><FONT SIZE=3D2 FACE=3D"Arial">, anyway) there is =
-the concern for</FONT> <FONT SIZE=3D2 FACE=3D"Arial">capa</FONT><FONT =
-SIZE=3D2 FACE=3D"Arial">b</FONT><FONT SIZE=3D2 =
-FACE=3D"Arial">ility</FONT> <FONT SIZE=3D2 FACE=3D"Arial">with the =
-existing fsgJTAPI version 1.0.</FONT>&nbsp;<FONT SIZE=3D2 =
-FACE=3D"Arial"> (</FONT><FONT SIZE=3D2 FACE=3D"Arial">I will call the =
-new api opjtapi and the existing one fsgjtapi for =
-discussion).</FONT>&nbsp;<FONT SIZE=3D2 FACE=3D"Arial"></FONT> <FONT =
-SIZE=3D2 FACE=3D"Arial">There were several</FONT> <FONT SIZE=3D2 =
-FACE=3D"Arial">great ideas</FONT><FONT SIZE=3D2 FACE=3D"Arial"> =
-discussed</FONT><FONT SIZE=3D2 FACE=3D"Arial"> for</FONT> <FONT =
-SIZE=3D2 FACE=3D"Arial">resolving</FONT><FONT SIZE=3D2 =
-FACE=3D"Arial"></FONT> <FONT SIZE=3D2 FACE=3D"Arial">the</FONT> <FONT =
-SIZE=3D2 FACE=3D"Arial">differences between the two api</FONT><FONT =
-SIZE=3D2 FACE=3D"Arial">'</FONT><FONT SIZE=3D2 =
-FACE=3D"Arial">s.</FONT>&nbsp;<FONT SIZE=3D2 FACE=3D"Arial"> =
-A</FONT><FONT SIZE=3D2 FACE=3D"Arial">fter</FONT> <FONT SIZE=3D2 =
-FACE=3D"Arial">some</FONT><FONT SIZE=3D2 FACE=3D"Arial"></FONT> <FONT =
-SIZE=3D2 FACE=3D"Arial">consider</FONT><FONT SIZE=3D2 =
-FACE=3D"Arial">ation</FONT><FONT SIZE=3D2 FACE=3D"Arial">, I like the =
-ideas of providing macros or in the worst case functions to go between =
-the opjtapi and fsgjtapi.</FONT> <FONT SIZE=3D2 FACE=3D"Arial">&nbsp; =
-</FONT></P>
-
-<P ALIGN=3DLEFT><FONT SIZE=3D2 FACE=3D"Arial">So, what is =
-needed</FONT><FONT SIZE=3D2 FACE=3D"Arial">?</FONT></P>
-
-<P><FONT SIZE=3D2 =
-FACE=3D"Arial">1.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</FONT> <FONT SIZE=3D2 =
-FACE=3D"Arial">A parser</FONT> <FONT SIZE=3D2 =
-FACE=3D"Arial">developer</FONT> <FONT SIZE=3D2 FACE=3D"Arial">who uses =
-the opjtapi</FONT><FONT SIZE=3D2 FACE=3D"Arial">'</FONT><FONT SIZE=3D2 =
-FACE=3D"Arial">s</FONT><FONT SIZE=3D2 FACE=3D"Arial"> and has an =
-fsgjtapi lib.</FONT>
-<BR><FONT SIZE=3D2 =
-FACE=3D"Arial">2.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</FONT> <FONT SIZE=3D2 =
-FACE=3D"Arial">A parser developer who uses</FONT> <FONT SIZE=3D2 =
-FACE=3D"Arial">the fsgjtpai</FONT><FONT SIZE=3D2 =
-FACE=3D"Arial">'</FONT><FONT SIZE=3D2 FACE=3D"Arial">s and has an =
-opjtapi lib.</FONT>
-</P>
-
-<P ALIGN=3DLEFT><FONT SIZE=3D2 FACE=3D"Arial">My first plan will be =
-continue the opjtapi coding (the opJTAPI.c file) to make sure that =
-there are no other necessary changes before</FONT> <FONT SIZE=3D2 =
-FACE=3D"Arial">addressing</FONT><FONT SIZE=3D2 FACE=3D"Arial"></FONT> =
-<FONT SIZE=3D2 FACE=3D"Arial">the</FONT> <FONT SIZE=3D2 =
-FACE=3D"Arial">capability between the jtapi instantiations.</FONT></P>
-
-<P ALIGN=3DLEFT><FONT SIZE=3D2 FACE=3D"Arial">Since</FONT> <FONT =
-SIZE=3D2 FACE=3D"Arial">the</FONT><FONT SIZE=3D2 FACE=3D"Arial"></FONT> =
-<FONT SIZE=3D2 FACE=3D"Arial">plan</FONT> <FONT SIZE=3D2 =
-FACE=3D"Arial">is</FONT> <FONT SIZE=3D2 FACE=3D"Arial">to create a =
-capability between the two api</FONT><FONT SIZE=3D2 =
-FACE=3D"Arial">'</FONT><FONT SIZE=3D2 FACE=3D"Arial">s, I took =
-additional</FONT> <FONT SIZE=3D2 FACE=3D"Arial">liberties</FONT><FONT =
-SIZE=3D2 FACE=3D"Arial"> with difference between them.</FONT><FONT =
-SIZE=3D2 FACE=3D"Arial">&nbsp;</FONT> <FONT SIZE=3D2 =
-FACE=3D"Arial">I</FONT><FONT SIZE=3D2 FACE=3D"Arial"> remove</FONT><FONT=
- SIZE=3D2 FACE=3D"Arial">d</FONT><FONT SIZE=3D2 FACE=3D"Arial"> the =
-individual</FONT> <FONT SIZE=3D2 FACE=3D"Arial">"</FONT><FONT SIZE=3D2 =
-FACE=3D"Arial">New-&lt;object&gt;</FONT><FONT SIZE=3D2 =
-FACE=3D"Arial">"</FONT><FONT SIZE=3D2 FACE=3D"Arial"> api</FONT><FONT =
-SIZE=3D2 FACE=3D"Arial">'</FONT><FONT SIZE=3D2 FACE=3D"Arial">s and =
-created a single api</FONT> <FONT SIZE=3D2 FACE=3D"Arial">which has as =
-one of it</FONT><FONT SIZE=3D2 FACE=3D"Arial">s</FONT><FONT SIZE=3D2 =
-FACE=3D"Arial"></FONT> <FONT SIZE=3D2 FACE=3D"Arial">arguments an =
-object id.</FONT><FONT SIZE=3D2 FACE=3D"Arial">&nbsp;</FONT>&nbsp;<FONT =
-SIZE=3D2 FACE=3D"Arial"> T</FONT><FONT SIZE=3D2 FACE=3D"Arial">his is =
-just</FONT> <FONT SIZE=3D2 FACE=3D"Arial">using</FONT><FONT SIZE=3D2 =
-FACE=3D"Arial"> the same idea that was used in fsgjtapi (and opjtapi) =
-for attributes.</FONT><FONT SIZE=3D2 FACE=3D"Arial">&nbsp;</FONT> <FONT =
-SIZE=3D2 FACE=3D"Arial">This has simplified the over set of =
-api</FONT><FONT SIZE=3D2 FACE=3D"Arial">'</FONT><FONT SIZE=3D2 =
-FACE=3D"Arial">s</FONT><FONT SIZE=3D2 FACE=3D"Arial"> without any loss =
-of functionality.</FONT><FONT SIZE=3D2 =
+<P ALIGN=3DLEFT><FONT SIZE=3D2 FACE=3D"Arial">I don</FONT><FONT =
+SIZE=3D2 FACE=3D"Arial">'</FONT><FONT SIZE=3D2 FACE=3D"Arial">t =
+remember how we decided to handle</FONT> <FONT SIZE=3D2 =
+FACE=3D"Arial">processing of</FONT> <FONT SIZE=3D2 =
+FACE=3D"Arial">multiple jo</FONT><FONT SIZE=3D2 =
+FACE=3D"Arial">bs.</FONT> <FONT SIZE=3D2 =
 FACE=3D"Arial">&nbsp;</FONT>&nbsp;<FONT SIZE=3D2 FACE=3D"Arial"> =
-S</FONT><FONT SIZE=3D2 FACE=3D"Arial">ee the new version of</FONT> =
-<FONT SIZE=3D2 FACE=3D"Arial">opJTAPI.h at</FONT></P>
+F</FONT><FONT SIZE=3D2 FACE=3D"Arial">or a desktop, the JTAPI software =
+could</FONT> <FONT SIZE=3D2 FACE=3D"Arial">have individual =
+instan</FONT><FONT SIZE=3D2 FACE=3D"Arial">ces</FONT> <FONT SIZE=3D2 =
+FACE=3D"Arial">of the software</FONT><FONT SIZE=3D2 FACE=3D"Arial"> for =
+each job</FONT><FONT SIZE=3D2 FACE=3D"Arial">.&nbsp; T</FONT><FONT =
+SIZE=3D2 FACE=3D"Arial">hus, there is no need for the JTAPI to</FONT> =
+<FONT SIZE=3D2 FACE=3D"Arial">understand</FONT><FONT SIZE=3D2 =
+FACE=3D"Arial"></FONT> <FONT SIZE=3D2 FACE=3D"Arial">processing =
+multiple job tickets.</FONT> <FONT SIZE=3D2 =
+FACE=3D"Arial">&nbsp;</FONT> <FONT SIZE=3D2 FACE=3D"Arial">However, for =
+an embedded solution</FONT> <FONT SIZE=3D2 FACE=3D"Arial">having =
+different instances of the code may not be desired</FONT><FONT SIZE=3D2 =
+FACE=3D"Arial"></FONT> <FONT SIZE=3D2 FACE=3D"Arial">-</FONT><FONT =
+SIZE=3D2 FACE=3D"Arial"> simply</FONT> <FONT SIZE=3D2 FACE=3D"Arial">a =
+waste of memory.</FONT></P>
 
-<P ALIGN=3DLEFT><A =
-HREF=3D"ftp://ftp.pwg.org/pub/pwg/openprinting/embedded/opepCurrent/opep=
-Software/JobTicket_Lib/inc/opJTAPI.h"><U></U><U><FONT COLOR=3D"#0000FF" =
-SIZE=3D2 =
-FACE=3D"Arial">ftp://ftp.pwg.org/pub/pwg/openprinting/embedded/opepCurre=
-nt/opepSoftware/JobTicket_Lib/inc/</FONT></U><U></U><U><FONT =
-COLOR=3D"#0000FF" SIZE=3D2 FACE=3D"Arial">opJTAPI.h</FONT></U></A><FONT =
-SIZE=3D2 FACE=3D"Arial"></FONT>&nbsp;<FONT SIZE=3D2 =
-FACE=3D"Arial"></FONT> </P>
+<P ALIGN=3DLEFT><FONT SIZE=3D2 FACE=3D"Arial">Scenario --- John</FONT> =
+<FONT SIZE=3D2 FACE=3D"Arial">turn</FONT><FONT SIZE=3D2 =
+FACE=3D"Arial">s</FONT><FONT SIZE=3D2 FACE=3D"Arial"> on his =
+pda</FONT><FONT SIZE=3D2 FACE=3D"Arial">.&nbsp;</FONT> <FONT SIZE=3D2 =
+FACE=3D"Arial">(Not all pda</FONT><FONT SIZE=3D2 =
+FACE=3D"Arial">'</FONT><FONT SIZE=3D2 FACE=3D"Arial">s can multiplex =
+applications; they simply run the active application.</FONT><FONT =
+SIZE=3D2 FACE=3D"Arial">)</FONT><FONT SIZE=3D2 =
+FACE=3D"Arial">&nbsp;</FONT>&nbsp;<FONT SIZE=3D2 FACE=3D"Arial"></FONT> =
+<FONT SIZE=3D2 FACE=3D"Arial">J</FONT><FONT SIZE=3D2 FACE=3D"Arial">ohn =
+read several email and decides to print three of them.</FONT><FONT =
+SIZE=3D2 FACE=3D"Arial">&nbsp;</FONT> <FONT SIZE=3D2 =
+FACE=3D"Arial">After</FONT> <FONT SIZE=3D2 FACE=3D"Arial">he starts the =
+print creation</FONT> <FONT SIZE=3D2 =
+FACE=3D"Arial">operation</FONT><FONT SIZE=3D2 FACE=3D"Arial"> =
+&lt;&lt;</FONT> <FONT SIZE=3D2 FACE=3D"Arial">one to possibly</FONT> =
+<FONT SIZE=3D2 FACE=3D"Arial">three</FONT> <FONT SIZE=3D2 =
+FACE=3D"Arial">open job-ticket</FONT><FONT SIZE=3D2 =
+FACE=3D"Arial">s</FONT><FONT SIZE=3D2 FACE=3D"Arial"></FONT> <FONT =
+SIZE=3D2 FACE=3D"Arial">&gt;&gt;</FONT><FONT SIZE=3D2 FACE=3D"Arial">; =
+John get</FONT><FONT SIZE=3D2 FACE=3D"Arial">s</FONT><FONT SIZE=3D2 =
+FACE=3D"Arial"> an alert</FONT> <FONT SIZE=3D2 FACE=3D"Arial">that he =
+has a meeting in ten</FONT><FONT SIZE=3D2 FACE=3D"Arial"></FONT> <FONT =
+SIZE=3D2 FACE=3D"Arial">minutes</FONT><FONT SIZE=3D2 =
+FACE=3D"Arial">.</FONT> <FONT SIZE=3D2 FACE=3D"Arial">&nbsp;</FONT> =
+<FONT SIZE=3D2 FACE=3D"Arial">He needs to print</FONT> <FONT SIZE=3D2 =
+FACE=3D"Arial">two documents</FONT> <FONT SIZE=3D2 =
+FACE=3D"Arial">before the meeting.&nbsp; J</FONT><FONT SIZE=3D2 =
+FACE=3D"Arial">ohn</FONT> <FONT SIZE=3D2 FACE=3D"Arial">s</FONT><FONT =
+SIZE=3D2 FACE=3D"Arial">elects the two documents he need from the =
+pda</FONT><FONT SIZE=3D2 FACE=3D"Arial">'</FONT><FONT SIZE=3D2 =
+FACE=3D"Arial">s desktop</FONT><FONT SIZE=3D2 FACE=3D"Arial"> and =
+initiates a</FONT> <FONT SIZE=3D2 FACE=3D"Arial">print =
+action.</FONT>&nbsp;<FONT SIZE=3D2 FACE=3D"Arial"></FONT> <FONT =
+SIZE=3D2 FACE=3D"Arial">&lt;</FONT><FONT SIZE=3D2 FACE=3D"Arial">&lt; =
+Two more job-tickets may be open or they</FONT> <FONT SIZE=3D2 =
+FACE=3D"Arial">may be</FONT><FONT SIZE=3D2 FACE=3D"Arial"> done =
+serially.</FONT><FONT SIZE=3D2 FACE=3D"Arial"> &gt;&gt;</FONT></P>
+
+<P ALIGN=3DLEFT><FONT SIZE=3D2 FACE=3D"Arial">-- this would be easy to =
+handle if there are multiple instances of the print =
+software</FONT><FONT SIZE=3D2 FACE=3D"Arial">; however, if there is =
+only one</FONT> <FONT SIZE=3D2 FACE=3D"Arial">instances of the print =
+software then</FONT> <FONT SIZE=3D2 FACE=3D"Arial">all of</FONT> <FONT =
+SIZE=3D2 FACE=3D"Arial">the JTAPI n</FONT><FONT SIZE=3D2 =
+FACE=3D"Arial">eed an</FONT> <FONT SIZE=3D2 =
+FACE=3D"Arial">additional</FONT><FONT SIZE=3D2 FACE=3D"Arial"></FONT> =
+<FONT SIZE=3D2 FACE=3D"Arial">argument</FONT><FONT SIZE=3D2 =
+FACE=3D"Arial">.</FONT> <FONT SIZE=3D2 FACE=3D"Arial">&nbsp;</FONT> =
+<FONT SIZE=3D2 FACE=3D"Arial">The</FONT> <FONT SIZE=3D2 =
+FACE=3D"Arial">argument</FONT> <FONT SIZE=3D2 FACE=3D"Arial">is a job =
+identifier</FONT><FONT SIZE=3D2 FACE=3D"Arial"> so that the =
+api</FONT><FONT SIZE=3D2 FACE=3D"Arial">'</FONT><FONT SIZE=3D2 =
+FACE=3D"Arial">s know what job to</FONT> <FONT SIZE=3D2 =
+FACE=3D"Arial">associate</FONT><FONT SIZE=3D2 FACE=3D"Arial"></FONT> =
+<FONT SIZE=3D2 FACE=3D"Arial">the request to.</FONT></P>
+
+<P ALIGN=3DLEFT><FONT SIZE=3D2 FACE=3D"Arial">example:</FONT></P>
+
+<P ALIGN=3DLEFT><FONT SIZE=3D2 FACE=3D"Arial">I would change =
+op</FONT><FONT SIZE=3D2 FACE=3D"Arial">jtOpenLib(context) -</FONT><FONT =
+SIZE=3D2 FACE=3D"Arial">--&gt;</FONT><FONT SIZE=3D2 FACE=3D"Arial"> =
+opjtOpenLib(void);</FONT></P>
+
+<P ALIGN=3DLEFT><FONT SIZE=3D2 FACE=3D"Arial">Add a api call =
+opjtNewJob(</FONT><FONT SIZE=3D2 FACE=3D"Arial">(</FONT><FONT SIZE=3D2 =
+FACE=3D"Arial">void**</FONT><FONT SIZE=3D2 =
+FACE=3D"Arial">)foo</FONT><FONT SIZE=3D2 FACE=3D"Arial">) or require =
+that</FONT> <FONT SIZE=3D2 FACE=3D"Arial">opjtNewObject</FONT><FONT =
+SIZE=3D2 FACE=3D"Arial">(</FONT><FONT SIZE=3D2 =
+FACE=3D"Arial">(void**)foo,</FONT> <FONT SIZE=3D2 =
+FACE=3D"Arial">OP_JOB_OBJECT</FONT><FONT SIZE=3D2 =
+FACE=3D"Arial">)</FONT><FONT SIZE=3D2 FACE=3D"Arial"> be called before =
+any other</FONT> <FONT SIZE=3D2 FACE=3D"Arial">API (after =
+openlib).</FONT></P>
+<BR>
+
+<P ALIGN=3DLEFT><FONT SIZE=3D2 FACE=3D"Arial">--- the other choice is =
+to allow only one open print job at a time.</FONT></P>
+
+<P ALIGN=3DLEFT><FONT SIZE=3D2 FACE=3D"Arial">What is</FONT> <FONT =
+SIZE=3D2 FACE=3D"Arial">the s</FONT><FONT SIZE=3D2 =
+FACE=3D"Arial">uggested solution?</FONT></P>
 
 <P ALIGN=3DLEFT><A NAME=3D"_MailAutoSig"></A></P>
 
@@ -193,11 +202,11 @@ New Roman"><BR>
 Technology Center<BR>
 2580 Orchard Parkway, Suite 200<BR>
 San Jose, CA, 95131<BR>
-Voice: 408.576.41</FONT><FONT FACE=3D"Times New Roman">31&nbsp; Fax: =
+</FONT><FONT FACE=3D"Times New Roman">Voice: 408.576.4131&nbsp; Fax: =
 408.474.0511 </FONT></I></B></P>
 
 <P ALIGN=3DLEFT></P>
 
 </BODY>
 </HTML>
-------_=_NextPart_001_01C7D8FC.E52D55C8--
+------_=_NextPart_001_01C7D9CA.3F14B058--
