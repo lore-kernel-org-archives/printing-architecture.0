@@ -1,14 +1,14 @@
 DKIM-Signature: a=rsa-sha1; c=relaxed/relaxed; d=gmail.com; s=beta;
 	h=domainkey-signature:received:received:message-id:date:from:to:subject:mime-version:content-type:content-transfer-encoding:content-disposition;
-	b=k+N7oRkIO7FeE5QUY6Tfw2Fefxkn0KlsEbJPrvGGrKScUiUiTjhbLmz1sMc8RG81EcC53GAh/MPJbOeC5lhovlXwanwlRWjrovnz2Jp1JUdAAs2XSrWHdA17c/epdqUqLzMJu7lkqRg7h83VyNDYFUfWG8lM18Bl+GZHyvE0IyU=
-Message-ID: <e395be80708081310x229b889bp3a98dd0fdeb6b7c3@mail.gmail.com>
-Date: Wed, 8 Aug 2007 15:10:20 -0500
+	b=V/ouHvz/Jtfm29B2f7OrW6JiyneNSXtcH4KG8GB8Ci0EAFgGZgQq6ew/21+bYWxxVTiM4yqo71Kbl3IgNrmeVANJTT0GpSqrqXGe7zHhuo4VMNgf46XfGmIQ/0PicDd8T29AOplkwfS1r8EGHFYkF+3OaBOkl0zJcarlX72TTl8=
+Message-ID: <e395be80708081313p44531fcfs8ba7eb16efcb60c7@mail.gmail.com>
+Date: Wed, 8 Aug 2007 15:13:02 -0500
 From: "Ira McDonald" <blueroofmusic@gmail.com>
 MIME-Version: 1.0
 Content-Type: text/plain; charset=ISO-8859-1
 Content-Transfer-Encoding: 7bit
 Content-Disposition: inline
-Subject: [Printing-architecture] Posted OP Arch Minutes (8 August 2007)
+Subject: [Printing-architecture] Reminder - Next OP Arch - Wed 22 August 2007
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -20,13 +20,22 @@ List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-ar
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
 To: printing-architecture@lists.freestandards.org, Ira McDonald <blueroofmusic@gmail.com>
 
-Minutes from today's OP Architecture teleconference at:
+Hi,
 
-ftp://ftp.pwg.org/pub/pwg/fsg/architecture/OP-Arch-Minutes-20070808.htm
-ftp://ftp.pwg.org/pub/pwg/fsg/architecture/OP-Arch-Minutes-20070808.pdf
+Reminder of next OP Architecture meeting on Wednesday 22 August:
 
-Cheers,
-- Ira
+    12:00-1:00 PM US Pacific time
+    1:00-2:00 PM US Mountain time
+    3:00-4:00 PM US Eastern time
+    8:00-9:00 PM Western European time
+
+    USA Toll-free Number: 866-312-6342
+    Toll Number: 763-391-6805
+    Conference Code: 582 658 5482#
+
+    If any problems occur with the main number (above), please use:
+    Free Conference Backup Number: 712-580-0600
+    Conference Code: 839473#
 
 -- 
 Ira McDonald (Musician / Software Architect)
