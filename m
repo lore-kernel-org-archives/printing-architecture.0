@@ -1,10 +1,15 @@
-Message-ID: <2F7D63A21DB2C74EB8EB8C09AF667DB00559CC11@eitc220.eitc.epson.com>
-From: "Petrie, Glen" <glen.petrie@eitc.epson.com>
-Date: Mon, 20 Aug 2007 10:26:21 -0700
+DKIM-Signature: a=rsa-sha1; c=relaxed/relaxed; d=gmail.com; s=beta;
+	h=domainkey-signature:received:received:message-id:date:from:user-agent:mime-version:to:cc:subject:references:in-reply-to:content-type:content-transfer-encoding;
+	b=mKrLmS1M4hpLf7GMUEqfGinL5Tje8kdOEmB06hb3Bq15HCDvSESSQ5935qo6nQ58wl+YTQwCazVjbrMsn3rzOeLf7exZYIMVjNDDKeZ+1bw32oFR+qsySUEmD3eh+/0HPM9Jn8t44+fJT3TD4OkHBMWtWGJ/R2upVfMCOzYfMpg=
+Message-ID: <46C9FFBE.3030202@gmail.com>
+Date: Mon, 20 Aug 2007 21:55:26 +0100
+From: Till Kamppeter <till.kamppeter@gmail.com>
 MIME-Version: 1.0
-Content-Type: multipart/alternative;
-	boundary="----_=_NextPart_001_01C7E34F.39FC7048"
-Subject: [Printing-architecture] test
+Subject: Re: [Printing-architecture] printing-japan mailing list does not work
+References: <20070819195614.CEBB.TORATANI.YASUMASA@canon.co.jp>
+In-Reply-To: <20070819195614.CEBB.TORATANI.YASUMASA@canon.co.jp>
+Content-Type: text/plain; charset="utf-8"; format="flowed"
+Content-Transfer-Encoding: 8bit
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -14,59 +19,42 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: "'printing-architecture@lists.freestandards.org'" <printing-architecture@lists.freestandards.org>
+To: webdevel@linux-foundation.org, David Ames <david@linux-foundation.org>
+Cc: TORATANI Yasumasa <toratani.yasumasa@canon.co.jp>, printing-architecture@freestandards.org
 
-This message is in MIME format. Since your mail reader does not understand
-this format, some or all of this message may not be legible.
+Hi,
 
-------_=_NextPart_001_01C7E34F.39FC7048
-Content-Type: text/plain
+ĩt seems that since beginning of August the printing-japan mailing list 
+does not work any more. See once the mail below and also the archives. 
+There is no posting in August.
 
+Probably the server change has somehow broken the list.
 
+Also the japanese mails in the archives are unreadable.
 
+Can someone fix that? Thanks.
 
-Rgds, 
-Glen W. Petrie 
-Epson Imaging Technology Center 
-2580 Orchard Parkway, Suite 200 
-San Jose, CA, 95131 
-Voice: 408.576.4131  Fax: 408.474.0511 
-
+    Till
 
 
-------_=_NextPart_001_01C7E34F.39FC7048
-Content-Type: text/html
-Content-Transfer-Encoding: quoted-printable
+TORATANI Yasumasa wrote:
+> Hello Till,
+> 
+> I posted a few emails into both the printing-japan at freestandards.org
+> and printing-japan at lists.linux-foundation.org, however, since the
+> beginning of this month,  both mailing lists didn't send any emails to
+> the list members.
+> 
+> Could you check whether each mailing list is working properly?
+> 
+> Kind regards,
+> 
+> -----------------------------------------
+> TORATANI Yasumasa
+> 
+> _______________________________________________
+> Printing-architecture mailing list
+> Printing-architecture@lists.linux-foundation.org
+> https://lists.linux-foundation.org/mailman/listinfo/printing-architecture
+> 
 
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
-<HTML>
-<HEAD>
-<META HTTP-EQUIV=3D"Content-Type" CONTENT=3D"text/html; =
-charset=3Dus-ascii">
-<META NAME=3D"Generator" CONTENT=3D"MS Exchange Server version =
-5.5.2658.24">
-<TITLE>test</TITLE>
-</HEAD>
-<BODY>
-<BR>
-<BR>
-
-<P ALIGN=3DLEFT><A NAME=3D"_MailAutoSig"></A></P>
-
-<P ALIGN=3DLEFT><B><I><FONT FACE=3D"Times New Roman">Rgds,<BR>
-</FONT></I></B><B><I></I></B><B><I><FONT COLOR=3D"#0000FF" SIZE=3D5 =
-FACE=3D"Times New Roman">Glen W. =
-Petrie</FONT></I></B><B><I></I></B><B><I><FONT SIZE=3D5 FACE=3D"Times =
-New Roman"><BR>
-</FONT></I></B><B><I><FONT FACE=3D"Times New Roman">Epson Imaging =
-Technology Center<BR>
-2580 Orchard Parkway, Suite 200<BR>
-San Jose, CA, 95131<BR>
-Voice: 408.576.41</FONT><FONT FACE=3D"Times New Roman">31&nbsp; Fax: =
-408.474.0511 </FONT></I></B></P>
-
-<P ALIGN=3DLEFT></P>
-
-</BODY>
-</HTML>
-------_=_NextPart_001_01C7E34F.39FC7048--
