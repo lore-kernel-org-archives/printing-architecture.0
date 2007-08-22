@@ -1,9 +1,14 @@
-Message-ID: <2F7D63A21DB2C74EB8EB8C09AF667DB00559CC1E@eitc220.eitc.epson.com>
-From: "Petrie, Glen" <glen.petrie@eitc.epson.com>
-Date: Wed, 22 Aug 2007 09:22:27 -0700
+DKIM-Signature: a=rsa-sha1; c=relaxed/relaxed; d=gmail.com; s=beta;
+	h=domainkey-signature:received:received:message-id:date:from:to:subject:mime-version:content-type:content-transfer-encoding:content-disposition;
+	b=FW2zMXh4CkdnqddZdXN1tWcah7y/d40yL8JLHQmDFK5SSLKRRw+iGctlvieVTUkbMP3qoUUyQJW3kqqmlqljg+kcX/z0xLiXfK6BSszNt5j2mM/5KMyn4qoeFSxGV+1hmFw4McQUH4Tc89dOK3andlVH3xEJVrgLlas0hj2vCsw=
+Message-ID: <e395be80708221404pe8bcb62m37fc9acdb6faa5b3@mail.gmail.com>
+Date: Wed, 22 Aug 2007 16:04:52 -0500
+From: "Ira McDonald" <blueroofmusic@gmail.com>
 MIME-Version: 1.0
-Content-Type: text/plain
-Subject: [Printing-architecture] RE: OPEP - Need single ZIP file, please
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline
+Subject: [Printing-architecture] Posted OP Arch Minutes (22 August 2007)
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -13,45 +18,14 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: "'printing-architecture@lists.freestandards.org'" <printing-architecture@lists.freestandards.org>
+To: printing-architecture@lists.freestandards.org, Ira McDonald <blueroofmusic@gmail.com>
 
-I will also re-examine the directory structure.
+Minutes from today's OP Architecture teleconference at:
 
-glen
+ftp://ftp.pwg.org/pub/pwg/fsg/architecture/OP-Arch-Minutes-20070822.htm
+ftp://ftp.pwg.org/pub/pwg/fsg/architecture/OP-Arch-Minutes-20070822.pdf
 
------Original Message-----
-From: Petrie, Glen 
-Sent: Wednesday, August 22, 2007 8:53 AM
-To: 'Ira McDonald'; printing-architecture@lists.freestandards.org; Petrie,
-Glen
-Subject: RE: OPEP - Need single ZIP file, please
-
-No problem.  Since I will be developing code by functional area (i.e. jtapi,
-pcm, driver, etc) it should be no problem to send things in bundles.   I
-will keep the more complex OPEP tree on the ftp site since it is how the
-whole solution divides and goes together.
-
-glen
-
-
------Original Message-----
-From: Ira McDonald [mailto:blueroofmusic@gmail.com] 
-Sent: Wednesday, August 22, 2007 8:49 AM
-To: printing-architecture@lists.freestandards.org; Petrie, Glen; Ira
-McDonald
-Subject: OPEP - Need single ZIP file, please
-
-Hi Glen,
-
-Harvesting your changed files from the deep and wide OPEP tree is
-excruciating, even with a graphical FTP tool (FileZilla).  Could you
-*please* begin posting, in one invariant directory, a single ZIP file
-of all your changed files (in addition to the individual files in tree)?
-
-Then those of us trying to do review and keep up can unpack that
-ZIP file into a single flat directory for review.
-
-Thanks,
+Cheers,
 - Ira
 
 -- 
