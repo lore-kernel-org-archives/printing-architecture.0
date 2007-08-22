@@ -1,14 +1,9 @@
-DKIM-Signature: a=rsa-sha1; c=relaxed/relaxed; d=gmail.com; s=beta;
-	h=domainkey-signature:received:received:message-id:date:from:to:subject:mime-version:content-type:content-transfer-encoding:content-disposition;
-	b=Yofptv3XJ74Z4Gwyv5CIa5GeXX2YypLPUtS+QmQTpurl9fEZ+ttpVZc4OyubY0uzXbPAcRjOqPWygb24HTI+916/RAKAQY1OQp/RJ+FBSOHTv1DUhb9RlPRqaNirA2089wjDDbfxyMCRIm9GNU7h4/KhqaVGBumdw5lcAOr0C/U=
-Message-ID: <e395be80708220849l34952aecg2ccec1486b841f51@mail.gmail.com>
-Date: Wed, 22 Aug 2007 10:49:18 -0500
-From: "Ira McDonald" <blueroofmusic@gmail.com>
+Message-ID: <2F7D63A21DB2C74EB8EB8C09AF667DB00559CC1C@eitc220.eitc.epson.com>
+From: "Petrie, Glen" <glen.petrie@eitc.epson.com>
+Date: Wed, 22 Aug 2007 08:52:36 -0700
 MIME-Version: 1.0
-Content-Type: text/plain; charset=ISO-8859-1
-Content-Transfer-Encoding: 7bit
-Content-Disposition: inline
-Subject: [Printing-architecture] OPEP - Need single ZIP file, please
+Content-Type: text/plain
+Subject: [Printing-architecture] RE: OPEP - Need single ZIP file, please
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -18,7 +13,22 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: printing-architecture@lists.freestandards.org, "Petrie, Glen" <glen.petrie@eitc.epson.com>, Ira McDonald <blueroofmusic@gmail.com>
+To: 'Ira McDonald' <blueroofmusic@gmail.com>, printing-architecture@lists.freestandards.org, "Petrie, Glen" <glen.petrie@eitc.epson.com>
+
+No problem.  Since I will be developing code by functional area (i.e. jtapi,
+pcm, driver, etc) it should be no problem to send things in bundles.   I
+will keep the more complex OPEP tree on the ftp site since it is how the
+whole solution divides and goes together.
+
+glen
+
+
+-----Original Message-----
+From: Ira McDonald [mailto:blueroofmusic@gmail.com] 
+Sent: Wednesday, August 22, 2007 8:49 AM
+To: printing-architecture@lists.freestandards.org; Petrie, Glen; Ira
+McDonald
+Subject: OPEP - Need single ZIP file, please
 
 Hi Glen,
 
