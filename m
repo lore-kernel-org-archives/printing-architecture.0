@@ -1,17 +1,14 @@
 DKIM-Signature: a=rsa-sha1; c=relaxed/relaxed; d=gmail.com; s=beta;
-	h=domainkey-signature:received:received:message-id:date:from:to:subject:in-reply-to:mime-version:content-type:content-transfer-encoding:content-disposition:references;
-	b=aQHJ/pic4sx+Tf3nd+H+ebwxTawvjSfCELxQMtMOEtYYAlrL2jG7IIlpia/TF16Pp9+g4RtYBEqEgwzwWhWh4efDs7yINFmp+ca6btEy8MgtFUuOKtOSYrSmpJcSi2Sogos6nCuHFK4YhimqNwieYbC4x3fF6ZQ9z/NG1wCPFFE=
-Message-ID: <e395be80708241051j26ba5a49s75764687a9b90d8a@mail.gmail.com>
-Date: Fri, 24 Aug 2007 12:51:28 -0500
-From: "Ira McDonald" <blueroofmusic@gmail.com>
-In-Reply-To: <e395be80708061751l37dcb4b1gf874142028616255@mail.gmail.com>
+	h=domainkey-signature:received:received:message-id:date:from:user-agent:mime-version:to:subject:content-type:content-transfer-encoding;
+	b=CloJYrlzG/InV28S33dG6h9wKmgV9sG0ehQ3ThPl50WU3+Hq0A/RtoKBAUDRPVXjHsuXJu2GdZebG0cnR8i4oB1yd+Aa/dYjhyNCkgi+yujDNLW1NnGoZw8X2htgAwAA5voFyFL+peMQ230cBi1C2Vor8XPiiQX2p9RFF7UHQu8=
+Message-ID: <46D59D8E.9070307@gmail.com>
+Date: Wed, 29 Aug 2007 17:23:42 +0100
+From: Till Kamppeter <till.kamppeter@gmail.com>
 MIME-Version: 1.0
-Content-Type: text/plain; charset=ISO-8859-1
+Content-Type: text/plain; charset=UTF-8; format=flowed
 Content-Transfer-Encoding: 7bit
-Content-Disposition: inline
-References: <e395be80708061751l37dcb4b1gf874142028616255@mail.gmail.com>
-Subject: [Printing-architecture] Re: Reminder - Next OP SC - Mon/Tue 10/11
-	September
+Subject: [Printing-architecture] The Linux Foundation is Hiring
+ Students/Interns for Implementing the PDF Printing Workflow
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -21,63 +18,38 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: printing-architecture@lists.freestandards.org, Ira McDonald <blueroofmusic@gmail.com>
+To: printing-architecture@lists.linux-foundation.org
 
-Hi,
+One of the decisions which was made on the OSDL Printing Summit in 
+Atlanta last year and widely accepted by all participants was to switch 
+the standard print job transfer format from PostScript to PDF. This 
+format has many important advantages, especially
 
-Reminder that we the OP Steering Committee is meeting the
-SECOND week of September.
+* PDF is the common platform-independent web format for printable
+   documents
+* Portable
+* Easy post-processing (N-up, booklets, scaling, ...)
+* Easy Color management support
+* Easy High color depth support (> 8bit/channel)
+* Easy Transparency support
+* Smaller files
+* Linux workflow gets closer to Mac OS X
 
-Cheers,
-- Ira
+To turn this into reality work is needed in many components of the 
+printing infrastructure. The japanese team of the OpenPrinting work 
+group has already the needed CUPS filters in their Subversion repositories.
 
-On 8/6/07, Ira McDonald <blueroofmusic@gmail.com> wrote:
-> Hi,
->
-> Our next Open Printing Steering Committee teleconference is
-> scheduled for the SECOND week of September:
->
->     - Monday 10 September 2007, Evening
->       - US
->         4pm in San Francisco - US PDT (Pacific Daylight Time)
->         5pm in Colorado - US MDT (Mountain Daylight Time)
->         6pm in Chicago - US CDT (Central Daylight Time)
->         7pm in New York - US EDT (Eastern Daylight Time)
->
->     - Tuesday 11 September 2007, Morning
->       - Europe/Japan
->         12am in Coimbra, Portugal - WEST (Western European Summer Time)
->         8am in Japan - JST (Japan Standard Time)
->
->     Toll Free (866) 839-8145
->     Int'l     (865) 524-6352
->     ACCESS Code: 7548766
->
->    If any problems occur with the main number (above), please use:
->    Free Conference Backup Number: 712-580-0600
->    Conference Code: 839473#
->
-> Cheers,
-> - Ira
->
->
->
-> --
-> Ira McDonald (Musician / Software Architect)
-> Chair - Linux Foundation Open Printing WG
-> Blue Roof Music / High North Inc
-> PO Box 221  Grand Marais, MI  49839
-> work: +1-906-494-2434
-> home: +1-906-494-2697
-> email: blueroofmusic@gmail.com
->
+What is still missing is to make the universal print filter foomatic-rip 
+(most printer drivers are integrated into the printing system with this 
+filter) handling PDF input and to make the built-in printer drivers of 
+Ghostscript also working with other renderers than Ghostscript, like 
+XPDF/Poppler for example.
 
+These two projects are now open for students or interns. If you like to 
+take one of these challenges, go to the detailed project description 
+and/or contact Till Kamppeter (till.kamppeter at gmail.com).
 
--- 
-Ira McDonald (Musician / Software Architect)
-Chair - Linux Foundation Open Printing WG
-Blue Roof Music / High North Inc
-PO Box 221  Grand Marais, MI  49839
-work: +1-906-494-2434
-home: +1-906-494-2697
-email: blueroofmusic@gmail.com
+If you know someone who could be interested, please forward this 
+message. Please spread this message also on other lists, forums, ...
+
+    Till
