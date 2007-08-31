@@ -1,10 +1,16 @@
-Message-ID: <2F7D63A21DB2C74EB8EB8C09AF667DB00559CC48@eitc220.eitc.epson.com>
-From: "Petrie, Glen" <glen.petrie@eitc.epson.com>
-Date: Fri, 31 Aug 2007 07:57:59 -0700
+DKIM-Signature: a=rsa-sha1; c=relaxed/relaxed; d=gmail.com; s=beta;
+	h=domainkey-signature:received:received:message-id:date:from:to:subject:cc:in-reply-to:mime-version:content-type:content-transfer-encoding:content-disposition:references;
+	b=d8wSCrE2Jf1B+DyuqGcSvq+6vA1erg4ijuZxz92VqiYM0U72Y4Sz/FllwWqreBwpsh+C7FNDnjmDi5tbm/RYpeF1hrXSGx7McI1G0EUUxPYIgrkzDs5YWE5YvgaXKzMhuAnwbkiws+tMVCorLOw1BrDEfy0bRBMPdG/OqYJkl8Y=
+Message-ID: <e395be80708310926i3636bd24l84883e2d96ac6857@mail.gmail.com>
+Date: Fri, 31 Aug 2007 11:26:19 -0500
+From: "Ira McDonald" <blueroofmusic@gmail.com>
+Subject: Re: [Printing-architecture] Question on Destroy Object
+In-Reply-To: <2F7D63A21DB2C74EB8EB8C09AF667DB00559CC47@eitc220.eitc.epson.com>
 MIME-Version: 1.0
-Content-Type: multipart/alternative;
-	boundary="----_=_NextPart_001_01C7EBDF.5269F228"
-Subject: [Printing-architecture] more questions on fsgjt api
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline
+References: <2F7D63A21DB2C74EB8EB8C09AF667DB00559CC47@eitc220.eitc.epson.com>
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -14,116 +20,77 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: printing-architecture@lists.freestandards.org
+To: "Petrie, Glen" <glen.petrie@eitc.epson.com>, Ira McDonald <blueroofmusic@gmail.com>
+Cc: printing-architecture@lists.freestandards.org
 
-This message is in MIME format. Since your mail reader does not understand
-this format, some or all of this message may not be legible.
+Hi Glen,
 
-------_=_NextPart_001_01C7EBDF.5269F228
-Content-Type: text/plain
+YES - it's the intent that Destroy (aka free) is recursive and will
+destroy individual attributes (even if they are contained objects).
 
-I believe that for the API call
+YES - I think the enum name should be changed (although it
+must also be corrected in "fsgjt_separator_sheet.h", remember).
 
-fsgjt_return_code_t fsgjtNewInsertSheet(  /* OP_INT32  */
+I see there are other inconsistencies, where a finishing object's
+type doesn't contain the "Type" suffix.  Not sure why.
 
-        fsgjt_object_t*     insertSheet,  /* void**    */
-        fsgjt_position_t    position,     /* enum      */
-        fsgjt_object_t*     pages         /* void**    */  --->>>>>
-fsgjt_object_t     pages         /* void*    */
+Claudia - can you straighten us out on this?
 
-that the  'pages'  parameter should be "fsg_object_t' and not
-"fsg_object_t*'  because the 'pages' in an input and is not created with
-this api.
+Cheers,
+- Ira
 
 
-Rgds, 
-Glen W. Petrie 
-Epson Imaging Technology Center 
-2580 Orchard Parkway, Suite 200 
-San Jose, CA, 95131 
-Voice: 408.576.4131  Fax: 408.474.0511 
+On 8/31/07, Petrie, Glen <glen.petrie@eitc.epson.com> wrote:
+>
+>
+>
+> for the fsgJTAPI - 'fsgDestroy(object)'  is it the intent the any attributes
+> bound to (for) the 'object' are automatically destroyed or should the
+> programmer explicitly destroy individual attributes.
+>
+>
+> Also, am I correct on the following
+>
+> I believe that in fsgjt_enum.h there should be a
+>
+> #define FSGJT_VT_JOB_TICKET_OBJECT
+> "JOB_TICKET_OBJECT"
+>
+> which is used in "fsgjtNewJobTicketInfo"
+>
+> I believe that in  fsgjt_enum.h there is an error ---
+>
+> 4// error #define FSGJT_VT_SEPARATOR_SHEET_ENUM
+> "SEPARATOR_SHEET_ENUM"
+>
+> should be
+>
+> #define FSGJT_VT_SEPARATOR_SHEET_TYPE_ENUM
+> "SEPARATOR_SHEET_TYPE_ENUM"
+>
+>
+>
+> Rgds,
+>  Glen W. Petrie
+>  Epson Imaging Technology Center
+>  2580 Orchard Parkway, Suite 200
+>  San Jose, CA, 95131
+>  Voice: 408.576.4131  Fax: 408.474.0511
+>
+>
+> _______________________________________________
+> Printing-architecture mailing list
+> Printing-architecture@lists.linux-foundation.org
+> https://lists.linux-foundation.org/mailman/listinfo/printing-architecture
+>
+>
 
 
-
-------_=_NextPart_001_01C7EBDF.5269F228
-Content-Type: text/html
-Content-Transfer-Encoding: quoted-printable
-
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
-<HTML>
-<HEAD>
-<META HTTP-EQUIV=3D"Content-Type" CONTENT=3D"text/html; =
-charset=3Dus-ascii">
-<META NAME=3D"Generator" CONTENT=3D"MS Exchange Server version =
-5.5.2658.24">
-<TITLE>more questions on fsgjt api</TITLE>
-</HEAD>
-<BODY>
-
-<P ALIGN=3DLEFT><FONT SIZE=3D2 FACE=3D"Arial">I be</FONT><FONT SIZE=3D2 =
-FACE=3D"Arial">lieve that</FONT> <FONT SIZE=3D2 FACE=3D"Arial">for the =
-API call</FONT></P>
-
-<P ALIGN=3DLEFT><FONT SIZE=3D2 FACE=3D"Arial">fsgjt_return_code_t =
-fsgjtNewInsertSheet(&nbsp; /* OP_INT32&nbsp; */</FONT></P>
-
-<P ALIGN=3DLEFT><FONT SIZE=3D2 =
-FACE=3D"Arial">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</FONT> <FONT =
-SIZE=3D2 FACE=3D"Arial">fsgjt_object_t*&nbsp;&nbsp;&nbsp;&nbsp; =
-insertSheet,&nbsp; /* void**&nbsp;&nbsp;&nbsp; */</FONT></P>
-
-<P ALIGN=3DLEFT><FONT SIZE=3D2 =
-FACE=3D"Arial">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</FONT> <FONT =
-SIZE=3D2 FACE=3D"Arial">fsgjt_position_t&nbsp;&nbsp;&nbsp; =
-position,&nbsp;&nbsp;&nbsp;&nbsp; /* enum&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =
-*/</FONT></P>
-
-<P ALIGN=3DLEFT><FONT SIZE=3D2 =
-FACE=3D"Arial">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =
-fsgjt_object_t*&nbsp;&nbsp;&nbsp;&nbsp; =
-pages&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; /* =
-void**&nbsp;&nbsp;&nbsp; */</FONT><FONT SIZE=3D2 FACE=3D"Arial">&nbsp; =
--</FONT><FONT SIZE=3D2 FACE=3D"Arial">--&gt;</FONT><FONT SIZE=3D2 =
-FACE=3D"Arial">&gt;&gt;&gt;&gt;</FONT>&nbsp;<FONT SIZE=3D2 =
-FACE=3D"Arial"> fsgjt_object_t</FONT><FONT SIZE=3D2 =
-FACE=3D"Arial">&nbsp;&nbsp;&nbsp;&nbsp; =
-pages&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; /* =
-void*</FONT><FONT SIZE=3D2 FACE=3D"Arial"></FONT> <FONT SIZE=3D2 =
-FACE=3D"Arial">&nbsp;&nbsp; */</FONT></P>
-
-<P ALIGN=3DLEFT><FONT SIZE=3D2 FACE=3D"Arial">t</FONT><FONT SIZE=3D2 =
-FACE=3D"Arial">hat the&nbsp;</FONT> <FONT SIZE=3D2 =
-FACE=3D"Arial">'</FONT><FONT SIZE=3D2 FACE=3D"Arial">pages</FONT><FONT =
-SIZE=3D2 FACE=3D"Arial">'</FONT><FONT SIZE=3D2 =
-FACE=3D"Arial">&nbsp;</FONT> <FONT SIZE=3D2 =
-FACE=3D"Arial">parameter</FONT> <FONT SIZE=3D2 FACE=3D"Arial">should =
-be</FONT> <FONT SIZE=3D2 FACE=3D"Arial">"</FONT><FONT SIZE=3D2 =
-FACE=3D"Arial">fsg_object_t</FONT><FONT SIZE=3D2 =
-FACE=3D"Arial">'</FONT><FONT SIZE=3D2 FACE=3D"Arial"> and not</FONT> =
-<FONT SIZE=3D2 FACE=3D"Arial">"</FONT><FONT SIZE=3D2 =
-FACE=3D"Arial">fsg_object_t*</FONT><FONT SIZE=3D2 =
-FACE=3D"Arial">'</FONT><FONT SIZE=3D2 FACE=3D"Arial">&nbsp; because =
-the</FONT> <FONT SIZE=3D2 FACE=3D"Arial">'</FONT><FONT SIZE=3D2 =
-FACE=3D"Arial">pages</FONT><FONT SIZE=3D2 FACE=3D"Arial">'</FONT><FONT =
-SIZE=3D2 FACE=3D"Arial"> in an input and is</FONT> <FONT SIZE=3D2 =
-FACE=3D"Arial">not</FONT> <FONT SIZE=3D2 FACE=3D"Arial">created with =
-this</FONT> <FONT SIZE=3D2 FACE=3D"Arial">api.</FONT></P>
-
-<P ALIGN=3DLEFT><A NAME=3D"_MailAutoSig"></A></P>
-
-<P ALIGN=3DLEFT><B><I><FONT FACE=3D"Times New Roman">Rgds,<BR>
-</FONT></I></B><B><I></I></B><B><I><FONT COLOR=3D"#0000FF" SIZE=3D5 =
-FACE=3D"Times New Roman">Glen W. =
-Petrie</FONT></I></B><B><I></I></B><B><I><FONT SIZE=3D5 FACE=3D"Times =
-New Roman"><BR>
-</FONT></I></B><B><I><FONT FACE=3D"Times New Roman">Epson Imaging =
-Technology Center<BR>
-2580 Orchard Parkway, Suite 200<BR>
-San Jose, CA, 95131<BR>
-Voice: 408.576.4131&nbsp; Fax: 408.474.0511 </FONT></I></B></P>
-
-<P ALIGN=3DLEFT></P>
-
-</BODY>
-</HTML>
-------_=_NextPart_001_01C7EBDF.5269F228--
+-- 
+Ira McDonald (Musician / Software Architect)
+Chair - Linux Foundation Open Printing WG
+Blue Roof Music / High North Inc
+PO Box 221  Grand Marais, MI  49839
+work: +1-906-494-2434
+home: +1-906-494-2697
+email: blueroofmusic@gmail.com
