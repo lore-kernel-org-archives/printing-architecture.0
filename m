@@ -1,16 +1,16 @@
 DKIM-Signature: a=rsa-sha1; c=relaxed/relaxed; d=gmail.com; s=beta;
 	h=domainkey-signature:received:received:message-id:date:from:to:subject:cc:in-reply-to:mime-version:content-type:content-transfer-encoding:content-disposition:references;
-	b=d8wSCrE2Jf1B+DyuqGcSvq+6vA1erg4ijuZxz92VqiYM0U72Y4Sz/FllwWqreBwpsh+C7FNDnjmDi5tbm/RYpeF1hrXSGx7McI1G0EUUxPYIgrkzDs5YWE5YvgaXKzMhuAnwbkiws+tMVCorLOw1BrDEfy0bRBMPdG/OqYJkl8Y=
-Message-ID: <e395be80708310926i3636bd24l84883e2d96ac6857@mail.gmail.com>
-Date: Fri, 31 Aug 2007 11:26:19 -0500
+	b=sKpyOndvcDo40RfaeNwwC3AyHgc1WgEATP82cadrMFAysEd6/Quy6t6AQG4OuYgKyhkaDsJuCrbFqe3Aa7fta5Jt6/ee5cW2nO8R/t6bxnuZMx+Ty79ZIjDpsUwYtIQUalmpgcJnlLWZNLbvhleXntEmMgBtuKXw1jhW0AjLq0I=
+Message-ID: <e395be80708310930pf17f57fy5eef2e79d1c229f9@mail.gmail.com>
+Date: Fri, 31 Aug 2007 11:30:34 -0500
 From: "Ira McDonald" <blueroofmusic@gmail.com>
-Subject: Re: [Printing-architecture] Question on Destroy Object
-In-Reply-To: <2F7D63A21DB2C74EB8EB8C09AF667DB00559CC47@eitc220.eitc.epson.com>
+Subject: Re: [Printing-architecture] more questions on fsgjt api
+In-Reply-To: <2F7D63A21DB2C74EB8EB8C09AF667DB00559CC48@eitc220.eitc.epson.com>
 MIME-Version: 1.0
 Content-Type: text/plain; charset=ISO-8859-1
 Content-Transfer-Encoding: 7bit
 Content-Disposition: inline
-References: <2F7D63A21DB2C74EB8EB8C09AF667DB00559CC47@eitc220.eitc.epson.com>
+References: <2F7D63A21DB2C74EB8EB8C09AF667DB00559CC48@eitc220.eitc.epson.com>
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -25,16 +25,8 @@ Cc: printing-architecture@lists.freestandards.org
 
 Hi Glen,
 
-YES - it's the intent that Destroy (aka free) is recursive and will
-destroy individual attributes (even if they are contained objects).
-
-YES - I think the enum name should be changed (although it
-must also be corrected in "fsgjt_separator_sheet.h", remember).
-
-I see there are other inconsistencies, where a finishing object's
-type doesn't contain the "Type" suffix.  Not sure why.
-
-Claudia - can you straighten us out on this?
+NO - the 'pages' parameter is a LIST of objects (thus pointer to
+pointer), which is NULL terminated, NOT a single object.
 
 Cheers,
 - Ira
@@ -44,29 +36,20 @@ On 8/31/07, Petrie, Glen <glen.petrie@eitc.epson.com> wrote:
 >
 >
 >
-> for the fsgJTAPI - 'fsgDestroy(object)'  is it the intent the any attributes
-> bound to (for) the 'object' are automatically destroyed or should the
-> programmer explicitly destroy individual attributes.
+> I believe that for the API call
 >
+> fsgjt_return_code_t fsgjtNewInsertSheet(  /* OP_INT32  */
 >
-> Also, am I correct on the following
+>         fsgjt_object_t*     insertSheet,  /* void**    */
 >
-> I believe that in fsgjt_enum.h there should be a
+>         fsgjt_position_t    position,     /* enum      */
 >
-> #define FSGJT_VT_JOB_TICKET_OBJECT
-> "JOB_TICKET_OBJECT"
+>         fsgjt_object_t*     pages         /* void**    */  --->>>>>
+> fsgjt_object_t     pages         /* void*    */
 >
-> which is used in "fsgjtNewJobTicketInfo"
->
-> I believe that in  fsgjt_enum.h there is an error ---
->
-> 4// error #define FSGJT_VT_SEPARATOR_SHEET_ENUM
-> "SEPARATOR_SHEET_ENUM"
->
-> should be
->
-> #define FSGJT_VT_SEPARATOR_SHEET_TYPE_ENUM
-> "SEPARATOR_SHEET_TYPE_ENUM"
+> that the  'pages'  parameter should be "fsg_object_t' and not
+> "fsg_object_t*'  because the 'pages' in an input and is not created with
+> this api.
 >
 >
 >
