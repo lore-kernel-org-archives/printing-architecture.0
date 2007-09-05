@@ -1,14 +1,14 @@
 DKIM-Signature: a=rsa-sha1; c=relaxed/relaxed; d=gmail.com; s=beta;
 	h=domainkey-signature:received:received:message-id:date:from:to:subject:mime-version:content-type:content-transfer-encoding:content-disposition;
-	b=l97vfirS2XTWM2gpSsQlx7+95MeF2RNfCHIp5/+bZQdW+gNK6i1PkxEohhhzIKk5AuJIZZ9U/VRpQQijON8ehjTrHRM32VKbvW1sD2KuZQ1BwObo+ESAdN6vZwjMjDjoGQMgcsquZZJzVvbluNqMxQfIZLxkzqMNcQXO29wTwl0=
-Message-ID: <e395be80709041723n2e9631m3cfc9f640ff29c8b@mail.gmail.com>
-Date: Tue, 4 Sep 2007 19:23:30 -0500
+	b=X2+pDMreKHBBI4epe7CQOQ8r9+01nKXK0iRl6sge1XtpeUylDZra/1r5eQYmHAY6mGhKYFf0K1Cj6FPhcgIVKhVnBc4+rbqkfmvrdrxlqfVvVSiRksHq63wrqnwWiBg7gmiMWii8VQt94X5TYkEYs7VmrIlD/YTnzYQcjsXYoM8=
+Message-ID: <e395be80709041725q755b9518h67a084a165157279@mail.gmail.com>
+Date: Tue, 4 Sep 2007 19:25:35 -0500
 From: "Ira McDonald" <blueroofmusic@gmail.com>
 MIME-Version: 1.0
 Content-Type: text/plain; charset=ISO-8859-1
 Content-Transfer-Encoding: 7bit
 Content-Disposition: inline
-Subject: [Printing-architecture] OP Arch Agenda - Wed 5 September 2007
+Subject: [Printing-architecture] RESEND - OP Arch - Wed 5 September 2007
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -26,20 +26,20 @@ NOTE - Nancy and I are receiving a *HORSE* sometime Wednesday
 afternoon - I will have to leave the teleconference early (or miss it) if
 the timing works out that way - horses come first!
 
-Open Printing Architecture teleconference today Wednesday 22 August:
+Open Printing Architecture teleconference on Wednesday 5 September:
 
-  12:00-1:00 PM US Pacific time
-  1:00-2:00 PM US Mountain time
-  3:00-4:00 PM US Eastern time
-  8:00-9:00 PM Western European time
+ 12:00-1:00 PM US Pacific time
+ 1:00-2:00 PM US Mountain time
+ 3:00-4:00 PM US Eastern time
+ 8:00-9:00 PM Western European time
 
-  USA Toll-free Number: 866-312-6342
-  Toll Number: 763-391-6805
-  Conference Code: 582 658 5482#
+ USA Toll-free Number: 866-312-6342
+ Toll Number: 763-391-6805
+ Conference Code: 582 658 5482#
 
-  If any problems occur with the main number (above), please use:
-  Free Conference Backup Number: 712-580-0600
-  Conference Code: 839473#
+ If any problems occur with the main number (above), please use:
+ Free Conference Backup Number: 712-580-0600
+ Conference Code: 839473#
 
 
 Agenda:
@@ -49,19 +49,19 @@ ftp://ftp.pwg.org/pub/pwg/fsg/architecture/OP-Arch-Minutes-20070822.htm
 ftp://ftp.pwg.org/pub/pwg/fsg/architecture/OP-Arch-Minutes-20070822.pdf
 
 (2) OP Embedded Print Solution - Glen Petrie
-  - See files in new OPEP directory tree
-    ftp://ftp.pwg.org/pub/pwg/openprinting/embedded/opepCurrent
-  - See recent notes from Glen to Printing-Architecture list
-  - Discuss comments, naming conventions, directory structure, etc.
+ - See files in new OPEP directory tree
+   ftp://ftp.pwg.org/pub/pwg/openprinting/embedded/opepCurrent
+ - See recent notes from Glen to Printing-Architecture list
+ - Discuss comments, naming conventions, directory structure, etc.
 
 (3) Printing Summit and PWG meetings in September 2007
-  - Printing Summit - Montreal, Canada - 24-27 September 2007
-    - Ecole Polytechnique
-      http://www.polymtl.ca/inter/en/index.php (English home page)
-  - IEEE/ISTO PWG / LF OPWG Collaboration
-    - Joint Plenary - Thursday am 27 September
-  - IEEE/ISTO PWG - Montreal, Canada - 26-28 September 2007
-    - PWG WG sessions - Wednesday pm/Thursday pm/Friday am
+ - Printing Summit - Montreal, Canada - 24-27 September 2007
+   - Ecole Polytechnique
+     http://www.polymtl.ca/inter/en/index.php (English home page)
+ - IEEE/ISTO PWG / LF OPWG Collaboration
+   - Joint Plenary - Thursday am 27 September
+ - IEEE/ISTO PWG - Montreal, Canada - 26-28 September 2007
+   - PWG WG sessions - Wednesday pm/Thursday pm/Friday am
 
 Cheers,
 - Ira
