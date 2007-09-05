@@ -1,10 +1,14 @@
-Message-ID: <2F7D63A21DB2C74EB8EB8C09AF667DB00559CC4D@eitc220.eitc.epson.com>
-From: "Petrie, Glen" <glen.petrie@eitc.epson.com>
-Date: Tue, 4 Sep 2007 07:21:05 -0700 
+DKIM-Signature: a=rsa-sha1; c=relaxed/relaxed; d=gmail.com; s=beta;
+	h=domainkey-signature:received:received:message-id:date:from:to:subject:mime-version:content-type:content-transfer-encoding:content-disposition;
+	b=l97vfirS2XTWM2gpSsQlx7+95MeF2RNfCHIp5/+bZQdW+gNK6i1PkxEohhhzIKk5AuJIZZ9U/VRpQQijON8ehjTrHRM32VKbvW1sD2KuZQ1BwObo+ESAdN6vZwjMjDjoGQMgcsquZZJzVvbluNqMxQfIZLxkzqMNcQXO29wTwl0=
+Message-ID: <e395be80709041723n2e9631m3cfc9f640ff29c8b@mail.gmail.com>
+Date: Tue, 4 Sep 2007 19:23:30 -0500
+From: "Ira McDonald" <blueroofmusic@gmail.com>
 MIME-Version: 1.0
-Content-Type: multipart/alternative;
-	boundary="----_=_NextPart_001_01C7EEFE.D4524EF8"
-Subject: [Printing-architecture] fsgJTAPI source file (very early version)
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline
+Subject: [Printing-architecture] OP Arch Agenda - Wed 5 September 2007
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -14,114 +18,59 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: printing-architecture@lists.freestandards.org
+To: printing-architecture@lists.freestandards.org, Ira McDonald <blueroofmusic@gmail.com>
 
-This message is in MIME format. Since your mail reader does not understand
-this format, some or all of this message may not be legible.
+Hi,
 
-------_=_NextPart_001_01C7EEFE.D4524EF8
-Content-Type: text/plain
+NOTE - Nancy and I are receiving a *HORSE* sometime Wednesday
+afternoon - I will have to leave the teleconference early (or miss it) if
+the timing works out that way - horses come first!
 
-Hello All,
+Open Printing Architecture teleconference today Wednesday 22 August:
 
-I we discussed, I have started an implementation with 100% capability with
-fsgJTAPI.  The file below is the very early draft, draft, draft version of
-the file.  Only some of the routines have been addressed and many of the
-comments still need to be updates in those routine.  I am simply providing
-it as a possible discussion item for this week's architecture meeting. 
+  12:00-1:00 PM US Pacific time
+  1:00-2:00 PM US Mountain time
+  3:00-4:00 PM US Eastern time
+  8:00-9:00 PM Western European time
 
-You will see a section at the top of the file called "FSGJT Additions or
-corrections".  This where I am trying to capture possible bugs, omissions or
-recommended improvements to the fsgJTAPI header files.
+  USA Toll-free Number: 866-312-6342
+  Toll Number: 763-391-6805
+  Conference Code: 582 658 5482#
 
-
-ftp://ftp.pwg.org/pub/pwg/openprinting/email-zip/2007.09.04-fsgJTAPI.zip
-<ftp://ftp.pwg.org/pub/pwg/openprinting/email-zip/2007.09.04-fsgJTAPI.zip> 
-
+  If any problems occur with the main number (above), please use:
+  Free Conference Backup Number: 712-580-0600
+  Conference Code: 839473#
 
 
-Rgds, 
-Glen W. Petrie 
-Epson Imaging Technology Center 
-2580 Orchard Parkway, Suite 200 
-San Jose, CA, 95131 
-Voice: 408.576.4131  Fax: 408.474.0511 
+Agenda:
 
+(1) Review and approve minutes from last meeting
+ftp://ftp.pwg.org/pub/pwg/fsg/architecture/OP-Arch-Minutes-20070822.htm
+ftp://ftp.pwg.org/pub/pwg/fsg/architecture/OP-Arch-Minutes-20070822.pdf
 
+(2) OP Embedded Print Solution - Glen Petrie
+  - See files in new OPEP directory tree
+    ftp://ftp.pwg.org/pub/pwg/openprinting/embedded/opepCurrent
+  - See recent notes from Glen to Printing-Architecture list
+  - Discuss comments, naming conventions, directory structure, etc.
 
-------_=_NextPart_001_01C7EEFE.D4524EF8
-Content-Type: text/html
-Content-Transfer-Encoding: quoted-printable
+(3) Printing Summit and PWG meetings in September 2007
+  - Printing Summit - Montreal, Canada - 24-27 September 2007
+    - Ecole Polytechnique
+      http://www.polymtl.ca/inter/en/index.php (English home page)
+  - IEEE/ISTO PWG / LF OPWG Collaboration
+    - Joint Plenary - Thursday am 27 September
+  - IEEE/ISTO PWG - Montreal, Canada - 26-28 September 2007
+    - PWG WG sessions - Wednesday pm/Thursday pm/Friday am
 
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
-<HTML>
-<HEAD>
-<META HTTP-EQUIV=3D"Content-Type" CONTENT=3D"text/html; =
-charset=3Dus-ascii">
-<META NAME=3D"Generator" CONTENT=3D"MS Exchange Server version =
-5.5.2658.24">
-<TITLE>fsgJTAPI source file (very early version)</TITLE>
-</HEAD>
-<BODY>
+Cheers,
+- Ira
 
-<P ALIGN=3DLEFT><FONT SIZE=3D2 FACE=3D"Arial">Hello All,</FONT></P>
-
-<P ALIGN=3DLEFT><FONT SIZE=3D2 FACE=3D"Arial">I we discussed, I have =
-started an implementation with 100% capability with =
-fsgJTAPI.</FONT>&nbsp;<FONT SIZE=3D2 FACE=3D"Arial"> T</FONT><FONT =
-SIZE=3D2 FACE=3D"Arial">he</FONT> <FONT SIZE=3D2 FACE=3D"Arial">file =
-below is the</FONT> <FONT SIZE=3D2 FACE=3D"Arial">ve</FONT><FONT =
-SIZE=3D2 FACE=3D"Arial">ry</FONT> <FONT SIZE=3D2 =
-FACE=3D"Arial">early</FONT> <FONT SIZE=3D2 FACE=3D"Arial">draft, draft, =
-draft version of the file.</FONT>&nbsp;<FONT SIZE=3D2 FACE=3D"Arial"> =
-O</FONT><FONT SIZE=3D2 FACE=3D"Arial">nly</FONT> <FONT SIZE=3D2 =
-FACE=3D"Arial">some of the routines have been address</FONT><FONT =
-SIZE=3D2 FACE=3D"Arial">ed</FONT><FONT SIZE=3D2 FACE=3D"Arial"> =
-and</FONT> <FONT SIZE=3D2 FACE=3D"Arial">many of the comments still =
-need to be updates in those routine.</FONT><FONT SIZE=3D2 =
-FACE=3D"Arial">&nbsp;</FONT> <FONT SIZE=3D2 FACE=3D"Arial">I am simply =
-providing it as a</FONT> <FONT SIZE=3D2 FACE=3D"Arial">possible</FONT> =
-<FONT SIZE=3D2 FACE=3D"Arial">discussion</FONT> <FONT SIZE=3D2 =
-FACE=3D"Arial">item for this week</FONT><FONT SIZE=3D2 =
-FACE=3D"Arial">'</FONT><FONT SIZE=3D2 FACE=3D"Arial">s architecture =
-meeting.</FONT> </P>
-
-<P ALIGN=3DLEFT><FONT SIZE=3D2 FACE=3D"Arial">Y</FONT><FONT SIZE=3D2 =
-FACE=3D"Arial">ou</FONT><FONT SIZE=3D2 FACE=3D"Arial"> will see a =
-section at the top of the file called</FONT><FONT SIZE=3D2 =
-FACE=3D"Arial"></FONT> <FONT SIZE=3D2 FACE=3D"Arial">"</FONT><FONT =
-SIZE=3D2 FACE=3D"Arial">FSGJT Additions or corrections</FONT><FONT =
-SIZE=3D2 FACE=3D"Arial">"</FONT><FONT SIZE=3D2 =
-FACE=3D"Arial">.</FONT>&nbsp;<FONT SIZE=3D2 FACE=3D"Arial"> =
-T</FONT><FONT SIZE=3D2 FACE=3D"Arial">his</FONT> <FONT SIZE=3D2 =
-FACE=3D"Arial">where I am trying to capture possible bugs,</FONT> <FONT =
-SIZE=3D2 FACE=3D"Arial">omissions or recommended improvements to the =
-fsgJTAPI header files.</FONT></P>
-<BR>
-
-<P ALIGN=3DLEFT><A =
-HREF=3D"ftp://ftp.pwg.org/pub/pwg/openprinting/email-zip/2007.09.04-fsgJ=
-TAPI.zip"><U></U><U><FONT COLOR=3D"#0000FF" SIZE=3D2 =
-FACE=3D"Arial">ftp://ftp.pwg.org/pub/pwg/openprinting/email-zip/</FONT><=
-FONT COLOR=3D"#0000FF" SIZE=3D2 =
-FACE=3D"Arial">2007.09.04-fsgJTAPI.zip</FONT></U></A></P>
-<BR>
-
-<P ALIGN=3DLEFT><A NAME=3D"_MailAutoSig"></A></P>
-
-<P ALIGN=3DLEFT><B><I><FONT FACE=3D"Times New Roman">Rgds,<BR>
-</FONT></I></B><B><I></I></B><B><I><FONT COLOR=3D"#0000FF" SIZE=3D5 =
-FACE=3D"Times New Roman">Glen W. =
-Petrie</FONT></I></B><B><I></I></B><B><I><FONT SIZE=3D5 FACE=3D"Times =
-New Roman"><BR>
-</FONT></I></B><B><I><FONT FACE=3D"Times New Roman">Epson Imaging =
-Technology Center<BR>
-2580 Orchard Parkway, Suite 200<BR>
-San Jose, CA, 95131<BR>
-Voice: 408.576.4131&nbsp; Fax: 408.474.0511 </FONT></I></B></P>
-
-<P ALIGN=3DLEFT></P>
-
-</BODY>
-</HTML>
-------_=_NextPart_001_01C7EEFE.D4524EF8--
+-- 
+Ira McDonald (Musician / Software Architect)
+Chair - Linux Foundation Open Printing WG
+Blue Roof Music / High North Inc
+PO Box 221  Grand Marais, MI  49839
+work: +1-906-494-2434
+home: +1-906-494-2697
+email: blueroofmusic@gmail.com
