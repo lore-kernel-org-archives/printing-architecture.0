@@ -1,15 +1,15 @@
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=beta;
 	h=domainkey-signature:received:received:message-id:date:from:to:subject:mime-version:content-type:content-transfer-encoding:content-disposition;
-	bh=gY2DFqarS6MMcNJkoQHQMPOmVzEza3EG5zwetIAR+iU=;
-	b=CXQqXmHxMI2zwf0Q4X8ClCyRsZRIB2Nb1cnWOLGKPx6BdpbiFzx9rWMkI3txAdMgZ+R08M5R3PlSSlnmr60vfRtV8QSxUUVQBb33ZEoQWFs97aA3ZGl4Y7Y5Zayez+9r7vxcXvGhNQJ961iO8E1vDQ5nBqIjNhYCWOwZ92U03nk=
-Message-ID: <e395be80709101127r4b35ae16ncde50860fe0c4dcd@mail.gmail.com>
-Date: Mon, 10 Sep 2007 13:27:38 -0500
+	bh=IMrkkbfX7S3gs8/z+rkcP85nSoovK/IHDL/2mUCTfdY=;
+	b=JG0Us7tJsrKbvAl0VqQMB95GYFOWh6y37rwgatt8/SFLmdx9op5lThb4x6WicBv3vXLPrVV+qGE5M+prUMmLFDdIxF5wVJ28P951mcPk4bdG5Jp8oJKsXtqII86NMApDmuAY5+4h+Pe+82xGG77sOcEhf0/kHjwTJfCp8L1vSvs=
+Message-ID: <e395be80709111122x22d40759v1361b36224818f03@mail.gmail.com>
+Date: Tue, 11 Sep 2007 13:22:18 -0500
 From: "Ira McDonald" <blueroofmusic@gmail.com>
 MIME-Version: 1.0
 Content-Type: text/plain; charset=ISO-8859-1
 Content-Transfer-Encoding: 7bit
 Content-Disposition: inline
-Subject: [Printing-architecture] OP SC Agenda - Mon/Tue 10/11 September
+Subject: [Printing-architecture] Posted OP SC Minutes (10 September 2007)
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -23,62 +23,11 @@ To: printing-architecture@lists.freestandards.org, Ira McDonald <blueroofmusic@g
 
 Hi,
 
-[My apologies for late agenda posting.  The keyboard on my laptop
-died on Saturday and I had to drive to Marquette (100 miles away)
-today to get an external USB keyboard - works fine.]
+I've just posted minutes from yesterday's Open Printing Steering Committee
+telecon at:
 
-Our next Open Printing Steering Committee teleconference is
-scheduled for *today*, in the SECOND week of September.
-
-  - Monday 10 September 2007, Evening
-    - US
-      4pm in San Francisco - US PDT (Pacific Daylight Time)
-      5pm in Colorado - US MDT (Mountain Daylight Time)
-      6pm in Chicago - US CDT (Central Daylight Time)
-      7pm in New York - US EDT (Eastern Daylight Time)
-
-  - Tuesday 11 September 2007, Morning
-    - Europe/Japan
-      12am in Coimbra, Portugal - WEST (Western European Summer Time)
-      8am in Japan - JST (Japan Standard Time)
-
-  Toll Free (866) 839-8145
-  Int'l     (865) 524-6352
-  ACCESS Code: 7548766
-
-  If any problems occur with the main number (above), please use:
-  Free Conference Backup Number: 712-580-0600
-  Conference Code: 839473#
-
-If you cannot attend, or have conferencing problems, please send
-an email with your project status, issues, or topics for the Printing
-Summit.
-
-Agenda:
-
-(1) Review minutes of last OP SC meeting -
-  ftp://ftp.pwg.org/pub/pwg/fsg/steering_committee/ in the files
-    OP-SC-Minutes-20070806.htm/pdf
-
-(2) Printing Summit and PWG meetings in September 2007
-  - Printing Summit - Montreal, Canada - 24-27 September 2007
-    - Ecole Polytechnique
-    http://www.polymtl.ca/inter/en/index.php (English home page)
-  - IEEE/ISTO PWG / LF OPWG Collaboration
-    - Joint Plenary - Thursday am 27 September
-  - IEEE/ISTO PWG - Montreal, Canada - 26-28 September 2007
-    - PWG WG sessions - Wednesday pm/Thursday pm/Friday am
-
-(3) Report on Open Printing Japan activities
-  - See
-  ftp://ftp.pwg.org/pub/pwg/fsg/vector/pdapi-spec-1.0rc4-20070614.odt
-  ftp://ftp.pwg.org/pub/pwg/fsg/vector/pdapi-spec-1.0rc4-20070614.pdf
-  - PDAPI, CUPS PDF Filter, etc.
-
-(4) Report on OP Embedded Printing Solution - Glen Petrie
-  - See files in new OPEP directory tree
-  ftp://ftp.pwg.org/pub/pwg/openprinting/embedded/opepCurrent
-  - See recent notes from Glen to Printing-Architecture list
+ ftp://ftp.pwg.org/pub/pwg/fsg/steering_committee/OP-SC-Minutes-20070910.htm
+ ftp://ftp.pwg.org/pub/pwg/fsg/steering_committee/OP-SC-Minutes-20070910.pdf
 
 Cheers,
 - Ira
