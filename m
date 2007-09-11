@@ -1,15 +1,15 @@
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=beta;
 	h=domainkey-signature:received:received:message-id:date:from:to:subject:mime-version:content-type:content-transfer-encoding:content-disposition;
-	bh=IMrkkbfX7S3gs8/z+rkcP85nSoovK/IHDL/2mUCTfdY=;
-	b=JG0Us7tJsrKbvAl0VqQMB95GYFOWh6y37rwgatt8/SFLmdx9op5lThb4x6WicBv3vXLPrVV+qGE5M+prUMmLFDdIxF5wVJ28P951mcPk4bdG5Jp8oJKsXtqII86NMApDmuAY5+4h+Pe+82xGG77sOcEhf0/kHjwTJfCp8L1vSvs=
-Message-ID: <e395be80709111122x22d40759v1361b36224818f03@mail.gmail.com>
-Date: Tue, 11 Sep 2007 13:22:18 -0500
+	bh=CNf8fnpCjAS5hRd/JLH8aD7yywHLpaqwnpQD6NateIM=;
+	b=RMURKA7/XPX/wz6NT+GxSOXnjNRCBl/OsYH/jt9BaTFdPwIdUCtvUlygTl9LIpFtUu35sh5og2cVEvIG91PlXXzJAlrForZhZIDjRCkosnkL1x8+VvfrQb9GGaVbg+qiB4IWyQK3EAz51+H30/KrzuYO1HebOew096ySjCiiPh4=
+Message-ID: <e395be80709111125x5985b726of23dc3f67295b658@mail.gmail.com>
+Date: Tue, 11 Sep 2007 13:25:34 -0500
 From: "Ira McDonald" <blueroofmusic@gmail.com>
 MIME-Version: 1.0
 Content-Type: text/plain; charset=ISO-8859-1
 Content-Transfer-Encoding: 7bit
 Content-Disposition: inline
-Subject: [Printing-architecture] Posted OP SC Minutes (10 September 2007)
+Subject: [Printing-architecture] Reminder - Next OP SC - Mon/Tue 1/2 October
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -23,11 +23,26 @@ To: printing-architecture@lists.freestandards.org, Ira McDonald <blueroofmusic@g
 
 Hi,
 
-I've just posted minutes from yesterday's Open Printing Steering Committee
-telecon at:
+Reminder - our next Open Printing Steering Committee telecon will be:
 
- ftp://ftp.pwg.org/pub/pwg/fsg/steering_committee/OP-SC-Minutes-20070910.htm
- ftp://ftp.pwg.org/pub/pwg/fsg/steering_committee/OP-SC-Minutes-20070910.pdf
+    - Note
+      - first week of October - just after Montreal Printing Summit
+
+    - Monday 1 October 2007, Evening
+      - US
+        4pm in San Francisco - US PDT (Pacific Daylight Time)
+        5pm in Colorado - US MDT (Mountain Daylight Time)
+        6pm in Chicago - US CDT (Central Daylight Time)
+        7pm in New York - US EDT (Eastern Daylight Time)
+
+    - Tuesday 2 October 2007, Morning
+      - Europe/Japan
+        12am in Coimbra, Portugal - WEST (Western European Summer Time)
+        8am in Japan - JST (Japan Standard Time)
+
+    Toll Free (866) 839-8145
+    Int'l     (865) 524-6352
+    ACCESS Code: 7548766
 
 Cheers,
 - Ira
