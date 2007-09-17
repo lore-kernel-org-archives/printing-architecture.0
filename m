@@ -1,15 +1,11 @@
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=beta;
-	h=domainkey-signature:received:received:message-id:date:from:to:subject:mime-version:content-type:content-transfer-encoding:content-disposition;
-	bh=CNf8fnpCjAS5hRd/JLH8aD7yywHLpaqwnpQD6NateIM=;
-	b=RMURKA7/XPX/wz6NT+GxSOXnjNRCBl/OsYH/jt9BaTFdPwIdUCtvUlygTl9LIpFtUu35sh5og2cVEvIG91PlXXzJAlrForZhZIDjRCkosnkL1x8+VvfrQb9GGaVbg+qiB4IWyQK3EAz51+H30/KrzuYO1HebOew096ySjCiiPh4=
-Message-ID: <e395be80709111125x5985b726of23dc3f67295b658@mail.gmail.com>
-Date: Tue, 11 Sep 2007 13:25:34 -0500
-From: "Ira McDonald" <blueroofmusic@gmail.com>
+Message-ID: <2F7D63A21DB2C74EB8EB8C09AF667DB00559CC77@eitc220.eitc.epson.com>
+From: "Petrie, Glen" <glen.petrie@eitc.epson.com>
+Date: Mon, 17 Sep 2007 16:04:21 -0700
 MIME-Version: 1.0
-Content-Type: text/plain; charset=ISO-8859-1
-Content-Transfer-Encoding: 7bit
-Content-Disposition: inline
-Subject: [Printing-architecture] Reminder - Next OP SC - Mon/Tue 1/2 October
+Content-Type: multipart/alternative;
+	boundary="----_=_NextPart_001_01C7F97F.14E79D48"
+Subject: [Printing-architecture] Very early version of my slides for the
+	summit
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -19,39 +15,98 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: printing-architecture@lists.freestandards.org, Ira McDonald <blueroofmusic@gmail.com>
+To: printing-architecture@lists.freestandards.org
 
-Hi,
+This message is in MIME format. Since your mail reader does not understand
+this format, some or all of this message may not be legible.
 
-Reminder - our next Open Printing Steering Committee telecon will be:
+------_=_NextPart_001_01C7F97F.14E79D48
+Content-Type: text/plain
 
-    - Note
-      - first week of October - just after Montreal Printing Summit
+I have started slides for print summit.   Initial slides (not complete) are
+at;
 
-    - Monday 1 October 2007, Evening
-      - US
-        4pm in San Francisco - US PDT (Pacific Daylight Time)
-        5pm in Colorado - US MDT (Mountain Daylight Time)
-        6pm in Chicago - US CDT (Central Daylight Time)
-        7pm in New York - US EDT (Eastern Daylight Time)
 
-    - Tuesday 2 October 2007, Morning
-      - Europe/Japan
-        12am in Coimbra, Portugal - WEST (Western European Summer Time)
-        8am in Japan - JST (Japan Standard Time)
+ftp://ftp.pwg.org/pub/pwg/fsg/2006.09.24-26-OpenPrintingSummit-Montreal/Cana
+daPresentation2007.09.24.pdf
+<ftp://ftp.pwg.org/pub/pwg/fsg/2006.09.24-26-OpenPrintingSummit-Montreal/Can
+adaPresentation2007.09.24.pdf>  
+  
 
-    Toll Free (866) 839-8145
-    Int'l     (865) 524-6352
-    ACCESS Code: 7548766
 
-Cheers,
-- Ira
+I will not be in the office tomorrow but I am interesting in hearing your
+comments on what to add, change and/or remove. 
 
--- 
-Ira McDonald (Musician / Software Architect)
-Chair - Linux Foundation Open Printing WG
-Blue Roof Music / High North Inc
-PO Box 221  Grand Marais, MI  49839
-work: +1-906-494-2434
-home: +1-906-494-2697
-email: blueroofmusic@gmail.com
+
+Rgds, 
+Glen W. Petrie 
+Epson Imaging Technology Center 
+2580 Orchard Parkway, Suite 200 
+San Jose, CA, 95131 
+Voice: 408.576.4131  Fax: 408.474.0511 
+
+
+
+------_=_NextPart_001_01C7F97F.14E79D48
+Content-Type: text/html
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV=3D"Content-Type" CONTENT=3D"text/html; =
+charset=3Dus-ascii">
+<META NAME=3D"Generator" CONTENT=3D"MS Exchange Server version =
+5.5.2658.24">
+<TITLE>Very early version of my slides for the summit</TITLE>
+</HEAD>
+<BODY>
+
+<P ALIGN=3DLEFT><FONT SIZE=3D2 FACE=3D"Arial">I have started slides for =
+print summit.</FONT> <FONT SIZE=3D2 FACE=3D"Arial">&nbsp;</FONT> <FONT =
+SIZE=3D2 FACE=3D"Arial">Initial slides (not complete) are =
+at;</FONT></P>
+<BR>
+
+<P ALIGN=3DLEFT><A =
+HREF=3D"ftp://ftp.pwg.org/pub/pwg/fsg/2006.09.24-26-OpenPrintingSummit-M=
+ontreal/CanadaPresentation2007.09.24.pdf"><U></U><U><FONT =
+COLOR=3D"#0000FF" SIZE=3D2 =
+FACE=3D"Arial">ftp://ftp.pwg.org/pub/pwg/fsg/2006.09.24-26-OpenPrintingS=
+ummit-Montreal</FONT></U><U></U><U><FONT COLOR=3D"#0000FF" SIZE=3D2 =
+FACE=3D"Arial">/</FONT></U><U></U><U><FONT COLOR=3D"#0000FF" SIZE=3D2 =
+FACE=3D"Arial">Canada</FONT><FONT COLOR=3D"#0000FF" SIZE=3D2 =
+FACE=3D"Arial">Presentation</FONT><FONT COLOR=3D"#0000FF" SIZE=3D2 =
+FACE=3D"Arial">2007.09.24.pdf</FONT></U></A><FONT SIZE=3D2 =
+FACE=3D"Arial"></FONT> </P>
+
+<P ALIGN=3DLEFT><FONT SIZE=3D2 FACE=3D"Arial"></FONT>&nbsp;<FONT =
+SIZE=3D2 FACE=3D"Arial"></FONT> </P>
+<BR>
+
+<P ALIGN=3DLEFT><FONT SIZE=3D2 FACE=3D"Arial">I will not be in the =
+office tomorrow</FONT><FONT SIZE=3D2 FACE=3D"Arial"> but</FONT> <FONT =
+SIZE=3D2 FACE=3D"Arial">I am interesting in hearing your comments on =
+what to add, change</FONT><FONT SIZE=3D2 FACE=3D"Arial"> =
+and/or</FONT><FONT SIZE=3D2 FACE=3D"Arial"> remove.</FONT><FONT =
+SIZE=3D2 FACE=3D"Arial"></FONT> </P>
+
+<P ALIGN=3DLEFT><A NAME=3D"_MailAutoSig"></A></P>
+
+<P ALIGN=3DLEFT><B><I><FONT FACE=3D"Times New Roman">Rgds,<BR>
+</FONT></I></B><B><I></I></B><B><I><FONT COLOR=3D"#0000FF" SIZE=3D5 =
+FACE=3D"Times New Roman">Glen W. =
+Petrie</FONT></I></B><B><I></I></B><B><I><FONT SIZE=3D5 FACE=3D"Times =
+New Roman"><BR>
+</FONT></I></B><B><I><FONT FACE=3D"Times New Roman">Epson Imaging =
+Technology Center<BR>
+2580 Orchard Parkway, Suite 200<BR>
+San Jose, CA, 95131<BR>
+</FONT><FONT FACE=3D"Times New Roman">Voice: 408.576.4131&nbsp; Fax: =
+408.474.0511 </FONT></I></B></P>
+
+<P ALIGN=3DLEFT></P>
+
+</BODY>
+</HTML>
+------_=_NextPart_001_01C7F97F.14E79D48--
