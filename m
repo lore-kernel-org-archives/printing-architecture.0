@@ -1,10 +1,10 @@
-Message-ID: <2F7D63A21DB2C74EB8EB8C09AF667DB00559CC79@eitc220.eitc.epson.com>
+Message-ID: <2F7D63A21DB2C74EB8EB8C09AF667DB00559CC7B@eitc220.eitc.epson.com>
 From: "Petrie, Glen" <glen.petrie@eitc.epson.com>
-Date: Wed, 19 Sep 2007 08:54:45 -0700
+Date: Wed, 19 Sep 2007 10:58:30 -0700
 MIME-Version: 1.0
 Content-Type: multipart/alternative;
-	boundary="----_=_NextPart_001_01C7FAD5.66515E58"
-Subject: [Printing-architecture] does anyone have summary slide
+	boundary="----_=_NextPart_001_01C7FAE6.97A53AE0"
+Subject: [Printing-architecture] updated slides 
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -19,19 +19,14 @@ To: printing-architecture@lists.freestandards.org
 This message is in MIME format. Since your mail reader does not understand
 this format, some or all of this message may not be legible.
 
-------_=_NextPart_001_01C7FAD5.66515E58
+------_=_NextPart_001_01C7FAE6.97A53AE0
 Content-Type: text/plain
 
-Does anyone have a single or a few summary slides on the openprinting api's
-I can print?
-
-If not, can you create one for your api.  I have one for JTAPI.  Info
-suggested to include: version no., specification location, code location,
-any comments--- see chart I put on the fsg site:
-
-ftp://ftp.pwg.org/pub/pwg/fsg/2006.09.24-26-OpenPrintingSummit-Montreal/jtap
-i-summary-slide.pdf
-
+I added a few more slide and  made corrections
+ftp://ftp.pwg.org/pub/pwg/fsg/2006.09.24-26-OpenPrintingSummit-Montreal/Cana
+daPresentation2007.09.24-1.pdf
+<ftp://ftp.pwg.org/pub/pwg/fsg/2006.09.24-26-OpenPrintingSummit-Montreal/Can
+adaPresentation2007.09.24-1.pdf>  
 
 Rgds, 
 Glen W. Petrie 
@@ -42,7 +37,7 @@ Voice: 408.576.4131  Fax: 408.474.0511
 
 
 
-------_=_NextPart_001_01C7FAD5.66515E58
+------_=_NextPart_001_01C7FAE6.97A53AE0
 Content-Type: text/html
 Content-Transfer-Encoding: quoted-printable
 
@@ -53,30 +48,32 @@ Content-Transfer-Encoding: quoted-printable
 charset=3Dus-ascii">
 <META NAME=3D"Generator" CONTENT=3D"MS Exchange Server version =
 5.5.2658.24">
-<TITLE>does anyone have summary slide</TITLE>
+<TITLE>updated slides </TITLE>
 </HEAD>
 <BODY>
 
-<P ALIGN=3DLEFT><FONT SIZE=3D2 FACE=3D"Arial">Does anyone have a single =
-or a few summary slides on the openprinting api</FONT><FONT SIZE=3D2 =
-FACE=3D"Arial">'</FONT><FONT SIZE=3D2 FACE=3D"Arial">s I can =
-print</FONT><FONT SIZE=3D2 FACE=3D"Arial">?</FONT></P>
+<P ALIGN=3DLEFT><FONT SIZE=3D2 FACE=3D"Arial">I added a few more =
+slide</FONT><FONT SIZE=3D2 FACE=3D"Arial"> and</FONT>&nbsp;<FONT =
+SIZE=3D2 FACE=3D"Arial"> made correction</FONT><FONT SIZE=3D2 =
+FACE=3D"Arial">s</FONT></P>
 
-<P ALIGN=3DLEFT><FONT SIZE=3D2 FACE=3D"Arial">If not, can you create =
-one for your api.&nbsp; I</FONT><FONT SIZE=3D2 FACE=3D"Arial"> have one =
-for JTAPI</FONT><FONT SIZE=3D2 FACE=3D"Arial">.</FONT>&nbsp;<FONT =
-SIZE=3D2 FACE=3D"Arial"> I</FONT><FONT SIZE=3D2 FACE=3D"Arial">nfo =
-suggested to include: version no., specification location, code =
-location, any comments</FONT><FONT SIZE=3D2 FACE=3D"Arial">--- see =
-chart I put on the</FONT> <FONT SIZE=3D2 FACE=3D"Arial">fsg =
-site:</FONT></P>
-
-<P ALIGN=3DLEFT><FONT SIZE=3D2 FACE=3D"Arial"><A =
+<P ALIGN=3DLEFT><A =
 HREF=3D"ftp://ftp.pwg.org/pub/pwg/fsg/2006.09.24-26-OpenPrintingSummit-M=
-ontreal/" =
-TARGET=3D"_blank">ftp://ftp.pwg.org/pub/pwg/fsg/2006.09.24-26-OpenPrinti=
-ngSummit-Montreal/</A></FONT><FONT SIZE=3D2 =
-FACE=3D"Arial">jtapi-summary-slide.pdf</FONT></P>
+ontreal/CanadaPresentation2007.09.24-1.pdf"><U></U><U><FONT =
+COLOR=3D"#0000FF" SIZE=3D2 FACE=3D"Arial">ftp://ftp.pwg.o</FONT><FONT =
+COLOR=3D"#0000FF" SIZE=3D2 =
+FACE=3D"Arial">rg/pub/pwg/fsg/2006.09.24-26-OpenPrintingSummit-Montrea</=
+FONT><FONT COLOR=3D"#0000FF" SIZE=3D2 FACE=3D"Arial">l</FONT><FONT =
+COLOR=3D"#0000FF" SIZE=3D2 FACE=3D"Arial">/</FONT><FONT =
+COLOR=3D"#0000FF" SIZE=3D2 FACE=3D"Arial">Canad</FONT><FONT =
+COLOR=3D"#0000FF" SIZE=3D2 FACE=3D"Arial">a</FONT><FONT =
+COLOR=3D"#0000FF" SIZE=3D2 FACE=3D"Arial">Presentatio</FONT><FONT =
+COLOR=3D"#0000FF" SIZE=3D2 FACE=3D"Arial">n</FONT><FONT =
+COLOR=3D"#0000FF" SIZE=3D2 =
+FACE=3D"Arial">2007.09.24</FONT></U><U></U><U><FONT COLOR=3D"#0000FF" =
+SIZE=3D2 FACE=3D"Arial">-1</FONT></U><U></U><U><FONT COLOR=3D"#0000FF" =
+SIZE=3D2 FACE=3D"Arial">.pdf</FONT></U></A><FONT FACE=3D"Times New =
+Roman"></FONT> </P>
 
 <P ALIGN=3DLEFT><A NAME=3D"_MailAutoSig"></A></P>
 
@@ -96,4 +93,4 @@ San Jose, CA, 95131<BR>
 
 </BODY>
 </HTML>
-------_=_NextPart_001_01C7FAD5.66515E58--
+------_=_NextPart_001_01C7FAE6.97A53AE0--
