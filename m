@@ -1,17 +1,10 @@
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=beta;
-	h=domainkey-signature:received:received:message-id:date:from:user-agent:mime-version:to:cc:subject:references:in-reply-to:content-type:content-transfer-encoding;
-	bh=K0nK7DA+FQf4vp1MFQs6wg7FN3b6MqAOZbALEIrlGP4=;
-	b=uLhmNIzIanyMx73Ptv2LGrGEUmmL9kTmlBhPb3sXTnDHv1hnfsdG/p/zhgMSEAQZH6Tf2+TBSJy7cNIa6Ai37IX0wrzNRpcD12NZnISrBtn5rFSgSjKbIyFeuoRKMA0XZm9BAcbduPBO6u+23JFC+RZOYVd8qWT5APkN1Jm5jEM=
-Message-ID: <46F2347F.2050408@gmail.com>
-Date: Thu, 20 Sep 2007 09:51:11 +0100
-From: Till Kamppeter <till.kamppeter@gmail.com>
+Date: Sun, 23 Sep 2007 22:39:21 +0900
+From: TORATANI Yasumasa <toratani.yasumasa@canon.co.jp>
+Message-Id: <20070923222959.7982.TORATANI.YASUMASA@canon.co.jp>
 MIME-Version: 1.0
-Subject: Re: [Printing-architecture] uploaded slides
-References: <2F7D63A21DB2C74EB8EB8C09AF667DB00559CC7B@eitc220.eitc.epson.com>
-	<46F1BA7E.9010907@Sun.COM>
-In-Reply-To: <46F1BA7E.9010907@Sun.COM>
-Content-Type: text/plain; charset=UTF-8; format=flowed
+Content-Type: text/plain; charset="US-ASCII"
 Content-Transfer-Encoding: 7bit
+Subject: [Printing-architecture] OPVP 1.0 RC5 document uploaded
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -21,32 +14,18 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Norm Jacobs <Norm.Jacobs@sun.com>
-Cc: printing-architecture@lists.freestandards.org
+To: printing-architecture@lists.freestandards.org
 
-Norm, can you do one small correction:
+Hi,
 
-Can you replace the "freestandards.org" in the e-mail address and in the 
-mailman URL for the printing-architecture mailing list by 
-"linux-foundation.org"? Thanks.
+We, Japan OPWG, uploaded the opvp 1.0 RC5 spec document at;
+ftp://ftp.pwg.org/pub/pwg/fsg/vector/pdapi-spec-1.0rc5.odt
+ftp://ftp.pwg.org/pub/pwg/fsg/vector/pdapi-spec-1.0rc5.pdf
 
-    Till
+And also uploaded the modification points between the 0.2 and 1.0 spec at;
+ftp://ftp.pwg.org/pub/pwg/fsg/vector/pdapi-changes-0.2to1.0rc5.odt
+ftp://ftp.pwg.org/pub/pwg/fsg/vector/pdapi-changes-0.2to1.0rc5.pdf
 
-Norm Jacobs wrote:
-> FWIW,
-> 
-> I have placed a set of updated slides for the PAPI on the Wiki.  The 
-> slides are linked into the Agenda, but you can get to them directly via
-> 
->    
-> https://www.linux-foundation.org/images/1/15/2007-09-24_OP_Montreal_PAPI.pdf 
-> 
-> 
-> 
->    -Norm
-> _______________________________________________
-> Printing-architecture mailing list
-> Printing-architecture@lists.linux-foundation.org
-> https://lists.linux-foundation.org/mailman/listinfo/printing-architecture
-> 
+-----------------------------------------
+TORATANI Yasumasa
 
