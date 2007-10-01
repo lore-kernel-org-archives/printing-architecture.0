@@ -1,10 +1,17 @@
-Message-ID: <2F7D63A21DB2C74EB8EB8C09AF667DB00559CC9D@eitc220.eitc.epson.com>
-From: "Petrie, Glen" <glen.petrie@eitc.epson.com>
-Date: Mon, 1 Oct 2007 11:48:23 -0700 
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=beta;
+	h=domainkey-signature:received:received:message-id:date:from:user-agent:mime-version:to:cc:subject:references:in-reply-to:content-type:content-transfer-encoding;
+	bh=LO1n3+bhemRmtVLV5YJmIbYoVyqoOGzLjkJL/tGrKZs=;
+	b=lJf3lWVypXOybFGng0R/FAwrdkwc8SEiGStiqKHjsGpAWUZ7CpvrkskRJYGrdhDNNBdiejhVdo4wLfxe+shRfB9+NW6Jzg4YTGHHGalI8XZ6w7t7AjbpsJ+OHb/EOvTrEN5Cl948mUUZ6NCDFmnO9zJJRphPiQx8o0I+6m3d5PU=
+Message-ID: <47017ADE.7070007@gmail.com>
+Date: Mon, 01 Oct 2007 23:55:26 +0100
+From: Till Kamppeter <till.kamppeter@gmail.com>
 MIME-Version: 1.0
-Content-Type: text/plain
-Subject: [Printing-architecture] RE: [Printing-summit] Printing Path
-	validation tool
+Subject: Re: [Printing-architecture] Montreal Summit Slides for OPVP and Canon
+	Driver
+References: <20070930212955.E349.TORATANI.YASUMASA@canon.co.jp>
+In-Reply-To: <20070930212955.E349.TORATANI.YASUMASA@canon.co.jp>
+Content-Type: text/plain; charset=UTF-8; format=flowed
+Content-Transfer-Encoding: 7bit
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -14,66 +21,45 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: 'Michael R Sweet' <msweet@apple.com>, Marcelo Ricardo Leitner <mrl@mandriva.com>
-Cc: printing-architecture@lists.freestandards.org, printing-summit@lists.freestandards.org
+To: TORATANI Yasumasa <toratani.yasumasa@canon.co.jp>
+Cc: printing-architecture@lists.freestandards.org, printing-summit@lists.linux-foundation.org
 
-Actually, Print Vendors want a test application that is completely
-independent of other software entities.   This would include any print
-manager, print spooler, transform, etc.   If an entity, like the
-OpenPrinting working group, defines "what is the required results/"; then,
-the Print Vendor can write the test application for the Vendors specific
-printers.  Then, there would exist something like the EpsonPrinterTest,
-HPPrinterTest, CanonPrinterTest, etc.  Where the program argument is the
-printer model to test.   If a third party wants to provide a driver; say me,
-then the test application might be called GlenEpsonPrinterTest and
-GlenHPPrinterTest, etc. GutenPrint might look like GutenEpsonPrinterTest,
-etc.   The distro would contain a single directory with the "Printer" test
-applications.
+I have replaced the files on the OpenPrinting Summit page by the updated 
+files now. They have the same names as the previous ones.
 
-For Distro's, they will need another program to test "Printing" which
-includes the print-path and the printer-driver.  This application may have
-to test many paths depending on what print managers; print spoolers; and
-transforms are defined and supported by an individual distro.   
+Thank you for the updates.
 
-I believe that if the print-vendors (and, perhaps, the distro's) test the
-driver for supported printers that the Distro's "Printing" test application
-does not have to output to a physical printer (or to the driver) but simply
-to a file.  The file is then expected to have a pre-determinable content.
-Thus, the application can test a very wide variation of "Printing" paths
-with physically having to have every printer.
+    Till
 
-glen
+TORATANI Yasumasa wrote:
+> Hello Till,
+> 
+> Thank you so much for having a good collaboration with us, and
+> I look forward to seeing you again in Tokyo.
+> 
+> BTW, I think that you've already gotten the following two files from
+> my USB memory.
+> 
+> 1) OpenPrinting Vector
+>   LFSummit-2007-OPWGJapanActivities-OPVP-Final.pdf
+> 
+> 2) Canon Linux Printer Driver
+>   MontrealSummit-2007-Canon_Printer_Drivers_for_Linux_070926-2.pdf
+> 
+> I uploaded above two PDF files again at; 
+> ftp://ftp.pwg.org/pub/pwg/fsg/Sept2007_OPSummit/LFSummit-2007-OPWGJapanActivities-OPVP-Final.pdf
+> ftp://ftp.pwg.org/pub/pwg/fsg/Sept2007_OPSummit/MontrealSummit-2007-Canon_Printer_Drivers_for_Linux_070926-2.pdf
+> 
+> So, please upload these files to the Montreal Summit page;
+> http://www.linux-foundation.org/en/OpenPrinting/SummitMontreal
+> 
+> Thank you in advance.
+> 
+> TORATANI Yasumasa
+> 
+> _______________________________________________
+> Printing-architecture mailing list
+> Printing-architecture@lists.linux-foundation.org
+> https://lists.linux-foundation.org/mailman/listinfo/printing-architecture
+> 
 
------Original Message-----
-From: printing-summit-bounces@lists.linux-foundation.org
-[mailto:printing-summit-bounces@lists.linux-foundation.org] On Behalf Of
-Michael R Sweet
-Sent: Thursday, September 27, 2007 3:28 PM
-To: Marcelo Ricardo Leitner
-Cc: printing-summit@lists.freestandards.org
-Subject: Re: [Printing-summit] Printing Path validation tool
-
-Marcelo Ricardo Leitner wrote:
-> Michael R Sweet wrote:
->> Marcelo Ricardo Leitner wrote:
->>> ...
->>> Actually, we would just have to make a change in CUPS logging system: 
->>> make it detailed logs per queue per job. I mean:
->>>
->>> 1) Create a file with all those "[ Job XX ]" messages, and only those.
->>
->> CUPS (as of 1.3) prefixes ALL job-related log messages with "[Job N]"
->> so you can just grep.
-> I can't check nows, sorry, but perhaps CUPS > 1.3.0, as the example 
-> message I pasted was generated by a CUPS 1.3.0.
-
-No, 1.3.0 and higher.  The PID message isn't tagged, but there is a
-corresponding job status message that *is* tagged...
-
--- 
-______________________________________________________________________
-Michael R Sweet                        Senior Printing System Engineer
-_______________________________________________
-Printing-summit mailing list
-Printing-summit@lists.linux-foundation.org
-https://lists.linux-foundation.org/mailman/listinfo/printing-summit
