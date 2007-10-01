@@ -1,10 +1,11 @@
-Message-ID: <2F7D63A21DB2C74EB8EB8C09AF667DB00559CC94@eitc220.eitc.epson.com>
+Message-ID: <2F7D63A21DB2C74EB8EB8C09AF667DB00559CC98@eitc220.eitc.epson.com>
 From: "Petrie, Glen" <glen.petrie@eitc.epson.com>
-Date: Mon, 1 Oct 2007 07:59:17 -0700 
+Date: Mon, 1 Oct 2007 08:17:37 -0700 
 MIME-Version: 1.0
 Content-Type: multipart/alternative;
-	boundary="----_=_NextPart_001_01C8043B.9AA59900"
-Subject: [Printing-architecture] FYI:  GPL defenders say: See you in court
+	boundary="----_=_NextPart_001_01C8043E.332C9CF0"
+Subject: [Printing-architecture] Novell credits Microsoft for soaring Linux
+	sales
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -19,15 +20,16 @@ To: printing-architecture@lists.freestandards.org
 This message is in MIME format. Since your mail reader does not understand
 this format, some or all of this message may not be legible.
 
-------_=_NextPart_001_01C8043B.9AA59900
+------_=_NextPart_001_01C8043E.332C9CF0
 Content-Type: text/plain
 
-http://www.news.com/GPL-defenders-say-See-you-in-court/2100-7344_3-6210837.h
-tml?tag=html.alert.comp
-<http://www.news.com/GPL-defenders-say-See-you-in-court/2100-7344_3-6210837.
-html?tag=html.alert.comp>  
 
+fyi
 
+http://www.news.com/Novell-credits-Microsoft-for-soaring-Linux-sales/2100-73
+44_3-6210692.html?tag=html.alert.comp
+<http://www.news.com/Novell-credits-Microsoft-for-soaring-Linux-sales/2100-7
+344_3-6210692.html?tag=html.alert.comp>  
 
 Rgds, 
 Glen W. Petrie 
@@ -38,7 +40,7 @@ Voice: 408.576.4131  Fax: 408.474.0511
 
 
 
-------_=_NextPart_001_01C8043B.9AA59900
+------_=_NextPart_001_01C8043E.332C9CF0
 Content-Type: text/html
 Content-Transfer-Encoding: quoted-printable
 
@@ -49,17 +51,20 @@ Content-Transfer-Encoding: quoted-printable
 charset=3Dus-ascii">
 <META NAME=3D"Generator" CONTENT=3D"MS Exchange Server version =
 5.5.2658.24">
-<TITLE>FYI:  GPL defenders say: See you in court</TITLE>
+<TITLE>Novell credits Microsoft for soaring Linux sales</TITLE>
 </HEAD>
 <BODY>
+<BR>
+
+<P ALIGN=3DLEFT><FONT SIZE=3D2 FACE=3D"Arial">fyi</FONT></P>
 
 <P ALIGN=3DLEFT><A =
-HREF=3D"http://www.news.com/GPL-defenders-say-See-you-in-court/2100-7344=
-_3-6210837.html?tag=3Dhtml.alert.comp"><U></U><U><FONT =
+HREF=3D"http://www.news.com/Novell-credits-Microsoft-for-soaring-Linux-s=
+ales/2100-7344_3-6210692.html?tag=3Dhtml.alert.comp"><U></U><U><FONT =
 COLOR=3D"#0000FF" SIZE=3D2 =
-FACE=3D"Arial">http://www.news.com/GPL-defenders-say-See-you-in-court/21=
-00-7344_3-6210837.html?tag=3Dhtml.alert.comp</FONT></U></A><FONT =
-SIZE=3D2 FACE=3D"Arial"></FONT> </P>
+FACE=3D"Arial">http://www.news.com/Novell-credits-Microsoft-for-soaring-=
+Linux-sales/2100-7344_3-6210692.html?tag=3Dhtml.alert.comp</FONT></U></A=
+><FONT SIZE=3D2 FACE=3D"Arial"></FONT> </P>
 
 <P ALIGN=3DLEFT><A NAME=3D"_MailAutoSig"></A></P>
 
@@ -78,4 +83,4 @@ Voice: 408.576.4131&nbsp; Fax: 408.474.0511 </FONT></I></B></P>
 
 </BODY>
 </HTML>
-------_=_NextPart_001_01C8043B.9AA59900--
+------_=_NextPart_001_01C8043E.332C9CF0--
