@@ -1,16 +1,15 @@
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=beta;
 	h=domainkey-signature:received:received:message-id:date:from:to:subject:mime-version:content-type:content-transfer-encoding:content-disposition;
-	bh=KTKlaTKMZ/w2KoSdwyvQsF7Cl63Hro8SBb0WiR9ikFA=;
-	b=Sr2OIqnbzm49Z7UJnMUgcx/ArAJjSVZ+81cYOH8xOlA5f5Gu7jKOqSEJ2YV0dWPibYgsbjd47pFUc+za6rcC0UAy9ryfV0OoLrbDE6x4/eb9Qa4+pvzHP1b6dWv3xjgQiEcgjX5FleUjZzWnQDcAuvk2x8bfbutGisPhWcRofI4=
-Message-ID: <e395be80710021004u1c282877o195f21da612f74b1@mail.gmail.com>
-Date: Tue, 2 Oct 2007 12:04:14 -0500
+	bh=/J/NQe/E1S6ThYyC2snwqbZfiI9kOh1ibkUmDSkL+XU=;
+	b=Z1MLXVo7uTm089tVJp65zTNmHaaIJm8m5HlmBVvewH0kgI4qO7rOMq1GkCHyNtZDZM8F98nWWZ4SlSEKXypZXFaIlqdJI13TvBnczSOIU+g3Nq0Y9JKHDYq92K64m9VQmtzjHDc4Pvj4ZuXrgvUrQrSwAV1KX9WVKKjf0z+EQhg=
+Message-ID: <e395be80710021554q75599754k129eef6cf60cf1bd@mail.gmail.com>
+Date: Tue, 2 Oct 2007 17:54:39 -0500
 From: "Ira McDonald" <blueroofmusic@gmail.com>
 MIME-Version: 1.0
 Content-Type: text/plain; charset=ISO-8859-1
 Content-Transfer-Encoding: 7bit
 Content-Disposition: inline
-Subject: [Printing-architecture] Reminder - Next OP SC - Mon/Tue 5/6
-	November 2007
+Subject: [Printing-architecture] OP Arch Agenda - Wed 3 October 2007
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -24,34 +23,42 @@ To: printing-architecture@lists.freestandards.org, Ira McDonald <blueroofmusic@g
 
 Hi,
 
-Reminder for our next Open Printing Steering Committee telecon:
+Open Printing Architecture teleconference on Wednesday 3 October:
 
-    - Note
-      - first week of November
-      - Daylight Saving Time ends in Europe 28 October and US 4 November
+ 12:00-1:00 PM US Pacific time
+ 1:00-2:00 PM US Mountain time
+ 3:00-4:00 PM US Eastern time
+ 8:00-9:00 PM Western European time
 
-    - Monday 5 November 2007, Evening
-      - US/Europe
-        3pm in San Francisco - US PST (Pacific Standard Time)
-        4pm in Colorado - US MST (Mountain Standard Time)
-        5pm in Chicago - US CST (Central Standard Time)
-        6pm in New York - US EST (Eastern Standard Time)
-        11pm in Coimbra, Portugal - WET (Western European Time)
+ USA Toll-free Number: 866-312-6342
+ Toll Number: 763-391-6805
+ Conference Code: 582 658 5482#
 
-    - Tuesday 6 November 2007, Morning
-      - Japan
-        8am in Japan - JST (Japan Standard Time)
+ If any problems occur with the main number (above), please use:
+ Free Conference Backup Number: 712-580-0600
+ Conference Code: 839473#
 
-    Toll Free (866) 839-8145
-    Int'l     (865) 524-6352
-    ACCESS Code: 7548766
 
-    If any problems occur with the main number (above), please use:
-    Free Conference Backup Number: 712-580-0600
-    Conference Code: 839473#
+Agenda:
+
+(1) Review and approve minutes from last OP Architecture meeting
+     - none published (Nancy was taken to hospital during meeting - OK now)
+
+(2) Printing Summit and PWG meetings in September 2007
+     - Printing Summit - Montreal, Canada - 24-27 September 2007
+       - Ecole Polytechnique
+     - IEEE/ISTO PWG / LF OPWG Collaboration
+       - Joint Plenary - Thursday am 27 September
+     - IEEE/ISTO PWG - Montreal, Canada - 26-28 September 2007
+       - PWG WG sessions - Wednesday pm/Thursday pm/Friday am
+
+(3) Open Printing Future Directions
+     - See minutes from Monday's OP Steering Committee meeting
+     ftp://ftp.pwg.org/pub/pwg/fsg/architecture/OP-SC-Minutes-20071001.pdf
 
 Cheers,
 - Ira
+
 
 -- 
 Ira McDonald (Musician / Software Architect)
