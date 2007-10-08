@@ -1,12 +1,9 @@
-Date: Mon, 8 Oct 2007 13:49:56 -0300
-From: Marcelo Ricardo Leitner <mrl@mandriva.com>
-Subject: Re: [Printing-architecture] My suggestions for OP next steps
-Message-ID: <20071008164956.GA7807@idolize.conectiva>
-References: <2F7D63A21DB2C74EB8EB8C09AF667DB0130D17F2@eitc220.eitc.epson.com>
+Message-ID: <2F7D63A21DB2C74EB8EB8C09AF667DB0130D182D@eitc220.eitc.epson.com>
+From: "Petrie, Glen" <glen.petrie@eitc.epson.com>
+Subject: RE: [Printing-architecture] My suggestions for OP next steps
+Date: Mon, 8 Oct 2007 10:01:20 -0700 
 MIME-Version: 1.0
-Content-Type: text/plain; charset=us-ascii
-Content-Disposition: inline
-In-Reply-To: <2F7D63A21DB2C74EB8EB8C09AF667DB0130D17F2@eitc220.eitc.epson.com>
+Content-Type: text/plain
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -16,8 +13,18 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: "Petrie, Glen" <glen.petrie@eitc.epson.com>
+To: Marcelo Ricardo Leitner <mrl@mandriva.com>, "Petrie, Glen" <glen.petrie@eitc.epson.com>
 Cc: printing-architecture@lists.freestandards.org
+
+Local channel here means USB, parallel.  We would deal with networked (not
+local) next version.
+
+-----Original Message-----
+From: Marcelo Ricardo Leitner [mailto:mrl@mandriva.com] 
+Sent: Monday, October 08, 2007 9:50 AM
+To: Petrie, Glen
+Cc: printing-architecture@lists.freestandards.org
+Subject: Re: [Printing-architecture] My suggestions for OP next steps
 
 On Sex Out 05, 2007 at 12:37:31 -0700, Petrie, Glen wrote:
 > [ This is does not include my work on embedded thin thread. ]
