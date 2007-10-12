@@ -1,12 +1,15 @@
-Date: Mon, 8 Oct 2007 14:02:20 -0300
-From: Marcelo Ricardo Leitner <mrl@mandriva.com>
-Subject: Re: [Printing-architecture] My suggestions for OP next steps
-Message-ID: <20071008170219.GB7807@idolize.conectiva>
-References: <2F7D63A21DB2C74EB8EB8C09AF667DB0130D182D@eitc220.eitc.epson.com>
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=beta;
+	h=domainkey-signature:received:received:message-id:date:from:user-agent:mime-version:to:subject:content-type:content-transfer-encoding;
+	bh=nOug1wqYIUyVHv4/Lero8PtqCcZz6FpHoRo4WM54FnA=;
+	b=I4KSPTZ/2s4BpDBY8YDXggjjXM687Lr73BFg4HOnyJ6T+gcJE6cwNsKdHBko+1dFErGqo81CuPWxaomN7VN4b3mJOlKz0OFdJnpfpQjnKFc3/IWQN8jNac9X7+P0nFdx7Irr0zaMPlmpW3036cUWmNYsio3dtDOsSfve4UtLXZw=
+Message-ID: <470F965E.9020104@gmail.com>
+Date: Fri, 12 Oct 2007 16:44:30 +0100
+From: Till Kamppeter <till.kamppeter@gmail.com>
 MIME-Version: 1.0
-Content-Type: text/plain; charset=us-ascii
-Content-Disposition: inline
-In-Reply-To: <2F7D63A21DB2C74EB8EB8C09AF667DB0130D182D@eitc220.eitc.epson.com>
+Content-Type: text/plain; charset=UTF-8; format=flowed
+Content-Transfer-Encoding: 7bit
+Subject: [Printing-architecture] Agenda for next week's architecture call:
+ OpenPrinting Meeting in Tokyo
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -16,40 +19,20 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: "Petrie, Glen" <glen.petrie@eitc.epson.com>
-Cc: printing-architecture@lists.freestandards.org
+To: printing-architecture@lists.linux-foundation.org
 
-Ok, thank you.
+Hi,
 
-On Seg Out 08, 2007 at 10:01:20 -0700, Petrie, Glen wrote:
-> Local channel here means USB, parallel.  We would deal with networked (not
-> local) next version.
-> 
-> -----Original Message-----
-> From: Marcelo Ricardo Leitner [mailto:mrl@mandriva.com] 
-> Sent: Monday, October 08, 2007 9:50 AM
-> To: Petrie, Glen
-> Cc: printing-architecture@lists.freestandards.org
-> Subject: Re: [Printing-architecture] My suggestions for OP next steps
-> 
-> On Sex Out 05, 2007 at 12:37:31 -0700, Petrie, Glen wrote:
-> > [ This is does not include my work on embedded thin thread. ]
-> > 
-> >  
-> > 
-> > - OP should evaluate our short-/mid-/long-term directions
-> > 
-> >  
-> > 
-> > - Short - OP should specify guidelines for printer driver test tools
-> > 
-> >     - Directory names and calling sequence (printer name)
-> > 
-> >     - Send data direct to printer via local channel only?
-> 
-> What do you mean by this topic above?
-> local channel would be the device itself?
-> 
-> Thanks,
-> Marcelo.
----end quoted text---
+the OpenPrinting Meeting in Tokyo is coming close and the agenda is 
+already set up:
+
+https://www.linux-foundation.org/en/OpenPrinting/LFJapanSymposiumTokyo2007
+
+There will be a short presentation about OP WG US/Europe activities in 
+the session 10:10am - 11:00am. We should talk about the slides for this 
+session.
+
+We should also talk about anything else which you think is important for 
+that meeting, as this is the last architecture call before my departure.
+
+    Till
