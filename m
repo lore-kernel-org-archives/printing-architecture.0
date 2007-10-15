@@ -1,9 +1,9 @@
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=beta;
 	h=domainkey-signature:received:received:message-id:date:from:user-agent:mime-version:to:cc:subject:references:in-reply-to:content-type:content-transfer-encoding;
-	bh=6YgJoefUDvJoFZIc50I4TqD+qNNH8CwfcP0mgD2hXYs=;
-	b=MG9+O/sYMFBUwaGHIgHXmKAV10f+15J1Uc9wrLUztdw2zwJk2JllF3LG7a3e3aNwKV1xqzeDzcgiuj24BV04JBAFQIxu0Ut+WKV3AHGiTYnzaYk8enRRKXaYBj4N6Ur4aVVfEwMo1e/avnhFrdGAOkpuFLwSKNGmdmiH3K/3dTo=
-Message-ID: <4713C618.2070302@gmail.com>
-Date: Mon, 15 Oct 2007 20:57:12 +0100
+	bh=ts06unqth1F3Rsbxwac9Mw605Pvne4qt/pHrW45jy9I=;
+	b=lpiUjCwXZFjBQBbVHY/X2f0bq4GZep2HVMCJj2PH2s71BqiBj3ucuEi3rmpDMw/3IXwNcp3sqY3IzDcQQH58eZ+Kn1rkeH8Wo+TqRz7kqYW8r77ybZcfCMPFXZAwDKGo4ABa4EIqJVjei2/sKqqhe8wnMYIfpaXVzk/0UxO0AmM=
+Message-ID: <4713CA56.3050708@gmail.com>
+Date: Mon, 15 Oct 2007 21:15:18 +0100
 From: Till Kamppeter <till.kamppeter@gmail.com>
 MIME-Version: 1.0
 Subject: Re: [Printing-architecture] Posted OPS Summary from Montreal
@@ -23,10 +23,9 @@ List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-ar
 To: Ira McDonald <blueroofmusic@gmail.com>
 Cc: printing-architecture@lists.freestandards.org, printing-summit@lists.linux-foundation.org
 
-Thank you very much for the great summary. At first I thought that you 
-will write only about what you talked about in the end, I did not know 
-that you wanted to summarize also all the presentations. I will add it 
-to the Summit web page.
+Now the summary is also integrated in the Wiki, as
+
+https://www.linux-foundation.org/en/SummitMontrealSummary
 
     Till
 
