@@ -1,15 +1,15 @@
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=beta;
 	h=domainkey-signature:received:received:message-id:date:from:to:subject:mime-version:content-type:content-transfer-encoding:content-disposition;
-	bh=/LEHaCdEcVjhZh+ZoseJrF53jcU+xPnpgSPXz5dzYvs=;
-	b=o/WC5ZewGP5/YQHnCTtVfzl2LL+ufShwKqlnVZOH8lfkHVyQ/SQMnbFyu/nvT/L9D73tG1XG9wurGgCPB45unGCHbGNZkGgSygottN+cz07GXa+UL6NZ/Zgi2bhS/jAtr2oCjMUK1NjkfPpFTUVkroBxpz2nuQ3d3BDuHaxSZYo=
-Message-ID: <e395be80710151142y1c10408ei62c07ea6ddc5ec72@mail.gmail.com>
-Date: Mon, 15 Oct 2007 14:42:38 -0400
+	bh=7o9hk1rE+h1zV/Eii5PjUVslTvqk8fP2C9YxdHh9l/E=;
+	b=elpuxWDKLxA4z5MPZvEEXVIFTK60WOmcxUg7FkAzGAC3a8/CiJxtitWv3JHMqAtFQd6DqRXyBa/lWFcn5hBZH2MVMUmt0NM3ZgBig5Eb9OL8fkv1lcniaFoAYNk2TggEteUudHeUgWyRanUrgMdih22M0wnZFCtmPN4LaZYDixI=
+Message-ID: <e395be80710151209g67bc3439ta89f1b1d4e594403@mail.gmail.com>
+Date: Mon, 15 Oct 2007 15:09:57 -0400
 From: "Ira McDonald" <blueroofmusic@gmail.com>
 MIME-Version: 1.0
 Content-Type: text/plain; charset=ISO-8859-1
 Content-Transfer-Encoding: 7bit
 Content-Disposition: inline
-Subject: [Printing-architecture] Posted OPS Summary from Montreal
+Subject: [Printing-architecture] OP Arch Agenda - Wed 17 October 2007
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -19,20 +19,39 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: printing-architecture@lists.freestandards.org, printing-summit@lists.linux-foundation.org, Ira McDonald <blueroofmusic@gmail.com>
+To: printing-architecture@lists.freestandards.org, Ira McDonald <blueroofmusic@gmail.com>
 
 Hi,
 
-My apologies for this belated summary - reality keeps intervening...
+Open Printing Architecture teleconference on Wednesday 17 October:
 
-Posted at the PWG FTP server in the directory:
+ 12:00-1:00 PM US Pacific time
+ 1:00-2:00 PM US Mountain time
+ 3:00-4:00 PM US Eastern time
+ 8:00-9:00 PM Western European time
 
-  ftp://ftp.pwg.org/pub/pwg/fsg/Sept2007_OPSummit
+ USA Toll-free Number: 866-312-6342
+ Toll Number: 763-391-6805
+ Conference Code: 582 658 5482#
 
-in the files:
+ If any problems occur with the main number (above), please use:
+ Free Conference Backup Number: 712-580-0600
+ Conference Code: 839473#
 
-  Open-Printing-Summit-Summary-20070927.htm
-  Open-Printing-Summit-Summary-20070927.pdf
+
+Agenda:
+
+(1) Review and approve minutes from last OP Architecture meeting
+    - See minutes at:
+    ftp://ftp.pwg.org/pub/pwg/fsg/architecture/OP-Arch-Minutes-20071003.htm
+
+(2) Open Printing Meeting in Tokyo (Friday, 2 November 2007)
+    - See latest agenda at:
+    https://www.linux-foundation.org/en/OpenPrinting/LFJapanSymposiumTokyo2007
+
+(3) Open Printing Future Directions
+    - See minutes from Monday's OP Steering Committee meeting
+    ftp://ftp.pwg.org/pub/pwg/fsg/architecture/OP-SC-Minutes-20071001.pdf
 
 Cheers,
 - Ira
