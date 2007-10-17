@@ -1,15 +1,16 @@
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=beta;
-	h=domainkey-signature:received:received:message-id:date:from:to:subject:mime-version:content-type:content-transfer-encoding:content-disposition;
-	bh=dnYH04lCNIdrV8cFJfQc5yrwTjrw6w/OvYoIys1Or40=;
-	b=Mn21PmMz74k4Ddab0lvUIgKKKi+eJ13/KuGpeZLX7q2PCXhHC2UfQt6Lo9/CYp40bfFvAC0htmWuuUdRbKSVzZwJWJr1A6jhMRcgIcSacsVzhsFpXZrWdJ8HsOHa+waMV52p19/Jdi1PINos7eOtJN6ToLwLA2chhynHgtjLHwc=
-Message-ID: <e395be80710171317y24e4428es8d0dca54244aa16c@mail.gmail.com>
-Date: Wed, 17 Oct 2007 16:17:06 -0400
-From: "Ira McDonald" <blueroofmusic@gmail.com>
+	h=domainkey-signature:received:received:message-id:date:from:user-agent:mime-version:to:cc:subject:references:in-reply-to:content-type:content-transfer-encoding;
+	bh=WkHI9AyzoDyxNvx8QIWgwBmIDPCzwLZpanggJNngHws=;
+	b=Zen5VQL4eDnr/IWkcl2Gk8csoWnNug5QR/apuBT/mjNaIbtz8EtXraTASRtUW3nW9ABPLufMiqSiDnm1Z5fkk3ESnyxk8Yrh2tRA7I6UF9erthb6z+loCejxHnEauzz38TS7Y0wSun4rE1H4zL1Jq+DXMXEFGxUM0HhJpWOEN+U=
+Message-ID: <47166DDE.8010504@gmail.com>
+Date: Wed, 17 Oct 2007 21:17:34 +0100
+From: Till Kamppeter <till.kamppeter@gmail.com>
 MIME-Version: 1.0
-Content-Type: text/plain; charset=ISO-8859-1
+Subject: Re: [Printing-architecture] Driver Validation Kickoff Slide
+References: <20071004205554.A7F8.TORATANI.YASUMASA@canon.co.jp>
+In-Reply-To: <20071004205554.A7F8.TORATANI.YASUMASA@canon.co.jp>
+Content-Type: text/plain; charset=UTF-8; format=flowed
 Content-Transfer-Encoding: 7bit
-Content-Disposition: inline
-Subject: [Printing-architecture] Posted OP Arch Minutes (17 October 2007)
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -19,23 +20,36 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: printing-architecture@lists.freestandards.org, Ira McDonald <blueroofmusic@gmail.com>
+To: TORATANI Yasumasa <toratani.yasumasa@canon.co.jp>
+Cc: printing-architecture@lists.freestandards.org, printing-summit@lists.linux-foundation.org
 
-Hi,
+Sorry for the late answer.
 
-I've just posted minutes from yesterday's OP Architecture meeting at:
+Slides are up now:
 
- ftp://ftp.pwg.org/pub/pwg/fsg/architecture/OP-Arch-Minutes-20071017.htm
- ftp://ftp.pwg.org/pub/pwg/fsg/architecture/OP-Arch-Minutes-20071017.pdf
+https://www.linux-foundation.org/images/9/99/PrinterValidationDiscussion.pdf
 
-Cheers,
-- Ira
+They are also linked on
 
--- 
-Ira McDonald (Musician / Software Architect)
-Chair - Linux Foundation Open Printing WG
-Blue Roof Music / High North Inc
-PO Box 221  Grand Marais, MI  49839
-work: +1-906-494-2434
-home: +1-906-494-2697
-email: blueroofmusic@gmail.com
+https://www.linux-foundation.org/en/OpenPrinting/SummitMontreal
+
+    Till
+
+
+TORATANI Yasumasa wrote:
+> Hi Till,
+> 
+> I realized that I missed to pass the slide for the driver validation discussion.
+> 
+> I placed the slide at;
+> http://www.papadon.jp/OpenPrinting/Montreal/PrinterValidationDiscussion.pdf
+> Please upload the data to the Montreal Summit page.
+> 
+> TORATANI
+> 
+> _______________________________________________
+> Printing-architecture mailing list
+> Printing-architecture@lists.linux-foundation.org
+> https://lists.linux-foundation.org/mailman/listinfo/printing-architecture
+> 
+
