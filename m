@@ -1,19 +1,14 @@
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=beta;
-	h=domainkey-signature:received:received:message-id:date:from:user-agent:mime-version:to:cc:subject:references:in-reply-to:content-type:content-transfer-encoding;
-	bh=y1jdVESWqJZBdPZpPN5GqUoc1FYhz77yI/X13xv7K/Q=;
-	b=JA9eCZAdsR0fMCwkHy4aSIvcQWRK+w/RfIuHWZRQVfwquNpPflEpDvTvMVfsLAncfl77+XlBKcBOXdKQOi7D/ZmMyWSgK9WThbkc2k+SMSu5zKZRyolSmOcdbR4qc4FDx9Tc3SsSvI+oyFXzv4achUZAC2P7XH8wHICMOChIgjE=
-Message-ID: <472368F6.1060105@gmail.com>
-Date: Sat, 27 Oct 2007 17:36:06 +0100
+	h=domainkey-signature:received:received:message-id:date:from:user-agent:mime-version:to:subject:content-type:content-transfer-encoding;
+	bh=nSXI+bj+zwPCFTFgBaa9YKEFGTz9ngT8Jg8MyEU5iyA=;
+	b=SmTfeF+9tcuApFHL2psv5efwt6gV6LYgdMEUvNSHo6NAA5K239fYVp0n4qDJ8Zu4FOykEgtfdpjunTf7eD8j5nH91rLH8BBelokTTnML/BQPkcP4V6ko9c1MjZdHiTSsPlQgo3rZl0Z7gF+FBUEuhyMGR/0m7SEDlT+ZqetlM0s=
+Message-ID: <472378C5.9050607@gmail.com>
+Date: Sat, 27 Oct 2007 18:43:33 +0100
 From: Till Kamppeter <till.kamppeter@gmail.com>
 MIME-Version: 1.0
-Subject: Re: [Printing-architecture] Second version of slides for Tokyo
-	uploaded
-References: <47212609.5010001@gmail.com> <47223E70.8060700@gmail.com>	
-	<e395be80710261501i13783e39v1440e02181da4bde@mail.gmail.com>
-	<e395be80710270909xdcbf670m6b4961090089b557@mail.gmail.com>
-In-Reply-To: <e395be80710270909xdcbf670m6b4961090089b557@mail.gmail.com>
 Content-Type: text/plain; charset=UTF-8; format=flowed
 Content-Transfer-Encoding: 7bit
+Subject: [Printing-architecture] Slides for OpenPrinting Japan Meeting posted
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -23,28 +18,18 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Ira McDonald <blueroofmusic@gmail.com>
-Cc: printing-architecture@lists.linux-foundation.org, printing-summit@lists.linux-foundation.org
+To: Printing-japan <printing-japan@lists.linux-foundation.org>, printing-summit@lists.linux-foundation.org, printing-architecture@lists.linux-foundation.org, "Kunai, Takashi" <kunai@linux-foundation.jp>, Markus Rex <msrex@suse.de>, Ira McDonald <blueroofmusic@gmail.com>, IZUMISAWA Jin <izumisawa@linux-foundation.jp>, Dan Kohn <dan@dankohn.com>, Jim Zemlin <jzemlin@linux-foundation.org>
 
-Ira McDonald wrote:
-> Very good!  I carefully read all of your slides this morning.
-> 
-> They are a wonderful distillation of the long HTML summary I wrote
-> about the Open Printing Summit in Montreal.
-> 
-> They are also still *much* too long to cover in 90 minutes in Tokyo,
-> so you'll have to skip over some of the slides quickly.
-> 
-> A few edits:
-> - Page 16 - "expecially" --> "especially"
-> - Page 17 - break top bullet into two lines about Mac OS X versions
-> - Page 18 - "Port monitor MIB"  --> "PWG 5107.1 Port Monitor MIB"
->   (to emphasize that this is an open standard, not a vendor MIB)
-> - Page 18 - last line - change "PCK" to "PCL"
-> 
-> Thanks for your hard work.  Good luck in Tokyo this coming week.
+Hi,
 
-Thank you very much for your proofreading. I have re-uploaded the files 
-with your proposed corrections applied.
+I have posted the slides for the sessions on the OpenPrinting Japan 
+Meeting on Friday, November 2 now. They are linked in the agenda of the 
+meeting:
+
+http://www.linux-foundation.org/en/OpenPrinting/LFJapanSymposiumTokyo2007
+
+Note that they will not be presented completely, main activity of the 
+meeting will be discussion and the slides should help the discussion. 
+Some slide sets also have blanks to be filled with discussion results.
 
     Till
