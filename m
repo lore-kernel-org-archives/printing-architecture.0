@@ -1,19 +1,15 @@
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=beta;
-	h=domainkey-signature:received:received:message-id:date:from:user-agent:mime-version:to:cc:subject:references:in-reply-to:content-type:content-transfer-encoding;
-	bh=yt4UOl6a2ZyEI2ASLf0AC65g/Ut/z7m9AKTpvacfm3c=;
-	b=UyTnSXDZ+6uUQGdRNZ02UOXMIMatjn7uxv0WkB8Ko1paWdV+QFGL6UQb5x0W0l7mPgQiNiwv5T5PkWgH1aZ8SygiBWyDn0q7fBYNNkjjT2laTCFgXI798JaAtzzxgIfMrvQZZTHhDIhLfC8d176Ij2R5oD0/qmOp4Cbt2jxRTSg=
-Message-ID: <4728EFBB.1070200@gmail.com>
-Date: Thu, 01 Nov 2007 06:12:27 +0900
-From: Till Kamppeter <till.kamppeter@gmail.com>
+	h=domainkey-signature:received:received:message-id:date:from:to:subject:mime-version:content-type:content-transfer-encoding:content-disposition;
+	bh=FdYIjX9/hjplxr1fK0j2YT9MwEEo29Xt2F1WnYHXadw=;
+	b=EBpTyqGatiYpGx1oQxDCQ0WTEoeP0L8rHfSqrGZGCd/HXeN5iVrEO7SGoNqKQgyq04rbAdXd//4mNUAgfxEVeR7SCNPWTaDBB2Up0DQqBBoeJhgX4e6iQKIP4lwv/itSEMrcbEmFlvgvzWYn6mt6NKEyRX6DivT57DzGhk2LrlM=
+Message-ID: <e395be80711010830g58912c29y65e755fa96e9ae84@mail.gmail.com>
+Date: Thu, 1 Nov 2007 11:30:54 -0400
+From: "Ira McDonald" <blueroofmusic@gmail.com>
 MIME-Version: 1.0
-References: <2F7D63A21DB2C74EB8EB8C09AF667DB0130D1AF1@eitc220.eitc.epson.com>
-	<4727BBE2.4050301@gmail.com>
-	<20071031100252.EAAD.SHIDA.KEISHO@canon.co.jp>
-In-Reply-To: <20071031100252.EAAD.SHIDA.KEISHO@canon.co.jp>
-Content-Type: text/plain; charset="utf-8"; format="flowed"
-Content-Transfer-Encoding: 8bit
-Subject: [Printing-architecture] Re: [Printing-japan] Re: The new
- "OpenPrinting Testing and Certification Program" Web Page
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline
+Subject: [Printing-architecture] Next OP Arch - Wed 14 November 2007
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -23,102 +19,36 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: "SHIDA, Keisho" <shida.keisho@canon.co.jp>
-Cc: "Petrie, Glen" <glen.petrie@eitc.epson.com>, printing-architecture@lists.linux-foundation.org, Printing-japan <printing-japan@lists.linux-foundation.org>, printing-summit@lists.linux-foundation.org
+To: printing-architecture@lists.freestandards.org, Ira McDonald <blueroofmusic@gmail.com>
 
-I have added a note to the page now. It will be updated after the Tokyo 
-OpenPrinting Meeting.
+Hi,
 
-    Till
+Next OP Architecture meeting will be Wednesday 14 November:
 
+    - Note
+      - Daylight Time ends: a) Europe 28 October; b) US 4 November.
 
-SHIDA, Keisho wrote:
-> Till:
-> 
-> Please act one of the following item immediately.
-> We believe that it mislead the people have no back ground of these discussion
-> 
-> 1. Delete the pages
-> 2. Date it as you described if it was available in August 2006 but we never seen as Glen.
-> 
-> Thank you.
-> 
-> 
-> Shida
-> ===
-> 
-> On Wed, 31 Oct 2007 08:18:58 +0900
-> Till Kamppeter <till.kamppeter@gmail.com> wrote:
-> 
->> This page is old/obsolete (last edited Aug 2006). It needs to be updated 
->> with the results we obtain this Friday here in Tokyo.
->>
->>     Till
->>
->> Petrie, Glen wrote:
->>> Till,
->>>
->>>  
->>>
->>> I just noticed on the OpenPrinting web page a new page on "OpenPrinting 
->>> Testing and Certification Program" with the expressed goal
->>>
->>>  
->>>
->>> Here we will develop a distribution-independent testing and 
->>> certification program for printers and printer drivers. The goal of this 
->>> program is that
->>>
->>> *LSB-certified printer + LSB-certified OS distribution = Just works!*
->>>
->>> It should be agreed on a test program which covers use cases appropriate 
->>> to the printers and gives ratings on how well the functionalities of the 
->>> printer work with free Linux/Unix operating systems. The results should 
->>> be published in the linuxprinting.org printer database.
->>>
->>> … and the section …
->>>
->>>
->>>       *Certification *
->>>
->>> A printer should be certified by FSG OpenPrinting when it succeeds in 
->>> the tests and when the driver is either in the standard repertoire of 
->>> the distributions, downloadable as distribution-independent package from 
->>> linuxprinting.org or coming as distribution-independent package with the 
->>> printer, so that the printer installs out-of-the-box from any 
->>> LSB-compliant distribution.
->>>
->>>  
->>>
->>> I am a little surprised to see this page with goal.   At the last two 
->>> summit meetings, the Printer Manufactures all agreed that they did not 
->>> support an "OpenPrinting Testing and Certification Program" but would 
->>> support a “Self Validation Program”.   As a member of the Open Printing 
->>> Steering Committee I don’t remember the discussion of having an 
->>> "OpenPrinting Testing and Certification Program".  
->>>
->>>  
->>>
->>> Can you clarify if the page promoting a “Certification Program” or a 
->>> “Self-Validation Program”?   If the intent is a “Self-Validation 
->>> Program”, then I would encourage you to change the wording.  If the 
->>> intent is to be a “Certification Program” I would like to know if 
->>> printer manufactures are willing to support it.
->>>
->>>  
->>>
->>>  
->>>
->>>  
->>>
->>> See: http://www.linux-foundation.org/en/OpenPrinting/TestingCertification
->>>
->> _______________________________________________
->> Printing-japan mailing list
->> Printing-japan@lists.linux-foundation.org
->> https://lists.linux-foundation.org/mailman/listinfo/printing-japan
-> 
-> 
-> 
-> 
+    12:00-1:00 PM US Pacific time
+    1:00-2:00 PM US Mountain time
+    3:00-4:00 PM US Eastern time
+    8:00-9:00 PM Western European time
 
+    USA Toll-free Number: 866-312-6342
+    Toll Number: 763-391-6805
+    Conference Code: 582 658 5482#
+
+    If any problems occur with the main number (above), please use:
+    Free Conference Backup Number: 712-580-0600
+    Conference Code: 839473#
+
+Cheers,
+- Ira
+
+-- 
+Ira McDonald (Musician / Software Architect)
+Chair - Linux Foundation Open Printing WG
+Blue Roof Music / High North Inc
+PO Box 221  Grand Marais, MI  49839
+work: +1-906-494-2434
+home: +1-906-494-2697
+email: blueroofmusic@gmail.com
