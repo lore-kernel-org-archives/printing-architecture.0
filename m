@@ -1,10 +1,10 @@
-Message-ID: <2F7D63A21DB2C74EB8EB8C09AF667DB0130D1CB0@eitc220.eitc.epson.com>
+Message-ID: <2F7D63A21DB2C74EB8EB8C09AF667DB0130D1CB5@eitc220.eitc.epson.com>
 From: "Petrie, Glen" <glen.petrie@eitc.epson.com>
-Subject: RE: [Printing-architecture] RE: [Printing-summit] RE: where is th
-	e info on driver directories
-Date: Fri, 9 Nov 2007 08:24:41 -0800 
+Date: Fri, 9 Nov 2007 09:22:17 -0800 
 MIME-Version: 1.0
-Content-Type: text/plain
+Content-Type: multipart/alternative;
+	boundary="----_=_NextPart_001_01C822F5.138E99C8"
+Subject: [Printing-architecture] Directory Path for Printing stuff
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -14,123 +14,295 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: "Petrie, Glen" <glen.petrie@eitc.epson.com>, 'Olaf Meeuwissen' <olaf.meeuwissen@avasys.jp>
-Cc: "'printing-architecture@lists.freestandards.org'" <printing-architecture@lists.freestandards.org>, "'printing-summit@lists.linux-foundation.org'" <printing-summit@lists.linux-foundation.org>
+To: "'printing-architecture@lists.freestandards.org'" <printing-architecture@lists.freestandards.org>, "'printing-summit@lists.linux-foundation.org'" <printing-summit@lists.linux-foundation.org>
 
-A thought I did not complete in the last email is the directory structure
-for pdpca.  With in the $bindir/pdpca directory, do we ...
+This message is in MIME format. Since your mail reader does not understand
+this format, some or all of this message may not be legible.
 
-1.)  Have no sub directories for the pdpca files
-2.)  Have subdirectories based on <dev>
+------_=_NextPart_001_01C822F5.138E99C8
+Content-Type: text/plain
 
-I actually like number '1.)'.  The first reason is that I believe that <dev>
-will start having sub-dir, with more sub-dir, with more sub-dir etc..  I
-find this to be a pain-in-neck when I am trying to locate something of the
-nature of the pdpca.  It is ok for the <dev> but not typically anyone else.
-Another advantage of '1.)' is there can never be two files with the same
-filename.  This will prevent bad naming or improper naming by various
-independent developing parties.
+The existing 'freestandards-fhs-discuss@lists.sourceforge.net' mail list
+does not seem to work; does anyone know the correct/new one.
+
+ 
+
+====- 
+
+ 
+
+Hello,
+
+ 
+
+I am member of the 'Linux Foundation/Open Printing' group.  We have recently
+trying to create some coherence in the Linux Printing world.  We are looking
+for guidance from the fhs group on a directory naming.  
+
+ 
+
+Without going in the all of the details we have been trying to stabilize
+where printing content is stored.  I recently suggested to the group that a
+high level directly for Linux printing be created called '<foo>/print' or
+'<foo>/printing'.  This would be the top level directory for all printing
+related content.  Since we are trying to create end-user test app's and the
+like, I believe that such top level printing directory would make everyone
+life a little easier.  However, I was informed that the fhs requires that,
+for at least drivers that there is an *existing* convention of
+"/usr/lib/supplier".  For printing in the Linux world "supplier" does not
+mean manufacture; since there are many independent parties developing
+drivers.  So trying to find print related information could be difficult.
+Things were ok when the user really didn't need to find things, but that
+need becoming a new requirement, I believe another level of organizational
+structure is needed. 
+
+ 
+
+My suggest was to have a functional top level directory name; for example,
+"print", "scan", "fax", "display" and so forth.  With this type of
+convention, users would have a fighting chance to locate related
+information.   
+
+ 
+
+For the "print" or "printing" directory, I would further suggest having the
+following subdirectories
+
+ 
+
+<foo>/print/managers
+
+<foo>/print/spoolers
+
+<foo>/print/drivers
+
+<foo>/print/help
+
+<foo>/print/pdpca  (a collection of test application which started this
+discussion)
+
+<foo>/print/ppd
+
+[I would ask the printing group for the actual list]
+
+ 
+
+Under these directories would be the <developer> (supplier) (or project
+name) sub-directories and so forth.
+
+ 
+
+Glen
+
+ 
 
 
+------_=_NextPart_001_01C822F5.138E99C8
+Content-Type: text/html
+Content-Transfer-Encoding: quoted-printable
 
-> -----Original Message-----
-> From: Petrie, Glen
-> Sent: Friday, November 09, 2007 8:11 AM
-> To: Olaf Meeuwissen; Petrie, Glen
-> Cc: printing-architecture@lists.freestandards.org; printing-
-> summit@lists.linux-foundation.org
-> Subject: RE: [Printing-architecture] RE: [Printing-summit] RE: where is th
-> e info on driver directories
-> 
-> Thanks for your suggestions.
-> 
-> <...snip...>
-> 
-> > Normally you would have you PATH
-> > set to something reasonable you you would just run it as:
-> >
-> >   pdpca --dev <dev> --qual <qual> [other options]
-> >
-> 
-> [gwp] I considered this (and still like it) but I thought it would be
-> more/too complicated for user (of any kind) to figure out or know the
-> <dev> and the possible list of <qual's> since <qual's> could change with
-> <dev>.    For code that will be used very seldom (once the printer is
-> working, there is little reason to test again), I thought having <dev> and
-> <qual> right in the file name would/could help the user (of any kind)
-> select which pdpca to try.  Example (which may not be correct but are
-> shown for illustration)
-> 
-> Directory					command line
-> pdpca_guten_hp_laser_bw    or pdpca --dev guten --qual hp_laser_bw
-> 				   or pdpca --dev guten --qual hp --qual
-laser_bw
-> 				   or pdpca --dev guten --qual hp,laser_bw
-> pdpca_guten_hp_laser_color
-> pdpca_guten_hp_laser_mfd
-> pdpca_guten_hp_inkjet_4color
-> pdpca_guten_hp_inkjet_6color
-> pdpca_guten_hp_inkjet_mfd
-> <... repeated for Epson, Canon, Lexmark, Xerox, and so forth under
-> guten...>
-> 
-> pdpca_hp_laser_bw		   or     pdpca --dev hp --qual laser_bw
-> pdpca_hp_laser_color
-> pdpca_hp_laser_mfd
-> pdpca_hp_inkjet_4color
-> pdpca_hp_inkjet_6color
-> pdpca_hp_inkjet_mfd
-> <... repeated for Epson, Canon, Lexmark, Xerox, and so forth...>
-> 
-> Since I can not, at this time, begin to determine the number of
-> instantiations of pdpca there will be for every <dev> and every <qual>, I
-> thought the file name approach would be the best.  Maybe a pattern will
-> emerge; we will have to wait and see.
-> 
-> Scenario:  Help Desk (HD) help user (U) on the phone.
-> 
-> U:  My printer will not print my picture.
-> HD: What printer do you have?
-> U: A SuperX model 300 which is an inkjet printer.
-> HD: What application are you trying to print with.
-> U:  Guten
-> HD: Go to the /usr/bin/print/pdpca directory.
-> U: OK, got there
-> HD: Locate the file pdpca_guten_superx_inkjet
-> U: Ok located
-> HD: execute the file........
-> 
-> Or does the HD tell the user
-> 
-> HD: type in pdpca --dev guten -qual superx,inkjet 300
-> 
-> Once someone knows the list of possible and then the specific <dev's> and
-> <qual's> it is pretty easy either way but if the HD did not know that info
-> he could have
-> 
-> HD: Go to the /usr/bin/print/pdpca directory.
-> HD: look for a file called pdpca_guten
-> U: found a bunch of them
-> HD: Is there file or files with superx in the name
-> U: yes
-> HD: Is there a file with inkjet in the name
-> U: No
-> HD: is there a file with generic in the name
-> U: yes
-> HD: execute the following pdpca_guten_superx_generic -s 300
-> U: It says the superX Model 300 is supported
-> HD: now execute pdpca_guten_superx_generic 300
-> 
-> So, my reasoning was .....
-> 
-> Is it easier for an end user (which is one of the target users) to
-> navigate a directory list with files containing the <dev> and <qual's> or
-> read instructions on what possible <dev> and <qual> to use.  Overall,
-> would suspect that the navigating will be easier.
-> 
-> Anyway, that was my reasoning I used to create the specification.   My
-> next goal was to find a directory that would be easy to locate by the HD
-> and/or user.
-> 
-> p.s.  dev looks like developer and device (we could pick a better word if
-> the decision is to go with a scheme as you suggest).  Which did you mean?
+<html xmlns:o=3D"urn:schemas-microsoft-com:office:office" =
+xmlns:w=3D"urn:schemas-microsoft-com:office:word" =
+xmlns=3D"http://www.w3.org/TR/REC-html40">
+
+<head>
+<META HTTP-EQUIV=3D"Content-Type" CONTENT=3D"text/html; =
+charset=3Dus-ascii">
+
+
+<meta name=3DGenerator content=3D"Microsoft Word 11 (filtered medium)">
+<style>
+<!--
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0in;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:purple;
+	text-decoration:underline;}
+span.EmailStyle17
+	{mso-style-type:personal-compose;
+	font-family:Arial;
+	color:windowtext;}
+@page Section1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.25in 1.0in 1.25in;}
+div.Section1
+	{page:Section1;}
+-->
+</style>
+
+</head>
+
+<body lang=3DEN-US link=3Dblue vlink=3Dpurple>
+
+<div class=3DSection1>
+
+<p class=3DMsoNormal><font size=3D2 face=3DArial><span =
+style=3D'font-size:10.0pt;
+font-family:Arial'>The existing =
+'freestandards-fhs-discuss@lists.sourceforge.net'
+mail list does not seem to work; does anyone know the correct/new =
+one.<o:p></o:p></span></font></p>
+
+<p class=3DMsoNormal><font size=3D2 face=3DArial><span =
+style=3D'font-size:10.0pt;
+font-family:Arial'><o:p>&nbsp;</o:p></span></font></p>
+
+<p class=3DMsoNormal><font size=3D2 face=3DArial><span =
+style=3D'font-size:10.0pt;
+font-family:Arial'>=3D=3D=3D=3D- <o:p></o:p></span></font></p>
+
+<p class=3DMsoNormal><font size=3D2 face=3DArial><span =
+style=3D'font-size:10.0pt;
+font-family:Arial'><o:p>&nbsp;</o:p></span></font></p>
+
+<p class=3DMsoNormal><font size=3D2 face=3DArial><span =
+style=3D'font-size:10.0pt;
+font-family:Arial'>Hello,<o:p></o:p></span></font></p>
+
+<p class=3DMsoNormal><font size=3D2 face=3DArial><span =
+style=3D'font-size:10.0pt;
+font-family:Arial'><o:p>&nbsp;</o:p></span></font></p>
+
+<p class=3DMsoNormal><font size=3D2 face=3DArial><span =
+style=3D'font-size:10.0pt;
+font-family:Arial'>I am member of the &#8216;Linux Foundation/Open
+Printing&#8217; group.&nbsp; We have recently trying to create some =
+coherence
+in the Linux Printing world.&nbsp; We are looking for guidance from the =
+fhs
+group on a directory naming.&nbsp; <o:p></o:p></span></font></p>
+
+<p class=3DMsoNormal><font size=3D2 face=3DArial><span =
+style=3D'font-size:10.0pt;
+font-family:Arial'><o:p>&nbsp;</o:p></span></font></p>
+
+<p class=3DMsoNormal><font size=3D2 face=3DArial><span =
+style=3D'font-size:10.0pt;
+font-family:Arial'>Without going in the all of the details we have been =
+trying
+to stabilize where printing content is stored.&nbsp; I recently =
+suggested to
+the group that a high level directly for Linux printing be created =
+called
+&#8216;&lt;foo&gt;/print&#8217; or =
+&#8216;&lt;foo&gt;/printing&#8217;.&nbsp;
+This would be the top level directory for all printing related =
+content.&nbsp;
+Since we are trying to create end-user test app&#8217;s and the like, I =
+believe
+that such top level printing directory would make everyone life a =
+little
+easier.&nbsp; However, I was informed that the fhs requires that, for =
+at least
+drivers that there is an *existing* convention of
+&nbsp;&#8220;/usr/lib/supplier&#8221;.&nbsp; For printing in the Linux =
+world
+&#8220;supplier&#8221; does not mean manufacture; since there are many
+independent parties developing drivers.&nbsp; So trying to find print =
+related information
+could be difficult.&nbsp;&nbsp; Things were ok when the user really
+didn&#8217;t need to find things, but that need becoming a new =
+requirement, I
+believe another level of organizational structure is needed. =
+<o:p></o:p></span></font></p>
+
+<p class=3DMsoNormal><font size=3D2 face=3DArial><span =
+style=3D'font-size:10.0pt;
+font-family:Arial'><o:p>&nbsp;</o:p></span></font></p>
+
+<p class=3DMsoNormal><font size=3D2 face=3DArial><span =
+style=3D'font-size:10.0pt;
+font-family:Arial'>My suggest was to have a functional top level =
+directory
+name; for example, &#8220;print&#8221;, &#8220;scan&#8221;, =
+&#8220;fax&#8221;,
+&#8220;display&#8221; and so forth.&nbsp; With this type of convention, =
+users
+would have a fighting chance to locate related information.&nbsp;&nbsp; =
+<o:p></o:p></span></font></p>
+
+<p class=3DMsoNormal><font size=3D2 face=3DArial><span =
+style=3D'font-size:10.0pt;
+font-family:Arial'><o:p>&nbsp;</o:p></span></font></p>
+
+<p class=3DMsoNormal><font size=3D2 face=3DArial><span =
+style=3D'font-size:10.0pt;
+font-family:Arial'>For the &#8220;print&#8221; or =
+&#8220;printing&#8221;
+directory, I would further suggest having the following =
+subdirectories<o:p></o:p></span></font></p>
+
+<p class=3DMsoNormal><font size=3D2 face=3DArial><span =
+style=3D'font-size:10.0pt;
+font-family:Arial'><o:p>&nbsp;</o:p></span></font></p>
+
+<p class=3DMsoNormal><font size=3D2 face=3DArial><span =
+style=3D'font-size:10.0pt;
+font-family:Arial'>&lt;foo&gt;/print/managers<o:p></o:p></span></font></=
+p>
+
+<p class=3DMsoNormal><font size=3D2 face=3DArial><span =
+style=3D'font-size:10.0pt;
+font-family:Arial'>&lt;foo&gt;/print/spoolers<o:p></o:p></span></font></=
+p>
+
+<p class=3DMsoNormal><font size=3D2 face=3DArial><span =
+style=3D'font-size:10.0pt;
+font-family:Arial'>&lt;foo&gt;/print/drivers<o:p></o:p></span></font></p=
+>
+
+<p class=3DMsoNormal><font size=3D2 face=3DArial><span =
+style=3D'font-size:10.0pt;
+font-family:Arial'>&lt;foo&gt;/print/help<o:p></o:p></span></font></p>
+
+<p class=3DMsoNormal><font size=3D2 face=3DArial><span =
+style=3D'font-size:10.0pt;
+font-family:Arial'>&lt;foo&gt;/print/pdpca&nbsp; (a collection of test
+application which started this discussion)<o:p></o:p></span></font></p>
+
+<p class=3DMsoNormal><font size=3D2 face=3DArial><span =
+style=3D'font-size:10.0pt;
+font-family:Arial'>&lt;foo&gt;/print/ppd<o:p></o:p></span></font></p>
+
+<p class=3DMsoNormal><font size=3D2 face=3DArial><span =
+style=3D'font-size:10.0pt;
+font-family:Arial'>[I would ask the printing group for the actual =
+list]<o:p></o:p></span></font></p>
+
+<p class=3DMsoNormal><font size=3D2 face=3DArial><span =
+style=3D'font-size:10.0pt;
+font-family:Arial'><o:p>&nbsp;</o:p></span></font></p>
+
+<p class=3DMsoNormal><font size=3D2 face=3DArial><span =
+style=3D'font-size:10.0pt;
+font-family:Arial'>Under these directories would be the =
+&lt;developer&gt;
+(supplier) (or project name) sub-directories and so =
+forth.<o:p></o:p></span></font></p>
+
+<p class=3DMsoNormal><font size=3D2 face=3DArial><span =
+style=3D'font-size:10.0pt;
+font-family:Arial'><o:p>&nbsp;</o:p></span></font></p>
+
+<p class=3DMsoNormal><font size=3D2 face=3DArial><span =
+style=3D'font-size:10.0pt;
+font-family:Arial'>Glen<o:p></o:p></span></font></p>
+
+<p class=3DMsoNormal><font size=3D2 face=3DArial><span =
+style=3D'font-size:10.0pt;
+font-family:Arial'><o:p>&nbsp;</o:p></span></font></p>
+
+</div>
+
+</body>
+
+</html>
+
+------_=_NextPart_001_01C822F5.138E99C8--
