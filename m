@@ -1,18 +1,10 @@
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=beta;
-	h=domainkey-signature:received:received:message-id:date:from:user-agent:mime-version:to:cc:subject:references:in-reply-to:content-type:content-transfer-encoding;
-	bh=s9+0ZHP2UOp9asbVJfDQdH4WF7uRZwTW907S180y8LA=;
-	b=rVv2lz8NITF1kQBBeFiqaRF6dWEo4014pCiczNGlqfk5uHdEq1Ug3wgHB5e48R7v3BpesxOt74sgIL0SubA6N1PqQBKXDD/RIq6VMQy25mMWT/uL9jb4x27wS5Be0tw0CG44JrQIjIr5WIQy0RkaLpvsz3kFU8wyfH3hhspPALo=
-Message-ID: <47386A3D.3080109@gmail.com>
-Date: Mon, 12 Nov 2007 07:59:09 -0700
-From: Till Kamppeter <till.kamppeter@gmail.com>
+Message-ID: <2F7D63A21DB2C74EB8EB8C09AF667DB0130D1CD0@eitc220.eitc.epson.com>
+From: "Petrie, Glen" <glen.petrie@eitc.epson.com>
+Subject: RE: [Printing-architecture] RE: [Printing-summit] RE: where is th
+	e info on driver directories
+Date: Mon, 12 Nov 2007 08:15:04 -0800
 MIME-Version: 1.0
-Subject: Re: [Printing-architecture] RE: [Printing-summit] RE: where is th
-	e	info on driver directories
-References: <2F7D63A21DB2C74EB8EB8C09AF667DB0130D1CB0@eitc220.eitc.epson.com>
-	<873avcs4w8.fsf@penguin.avasys.jp>
-In-Reply-To: <873avcs4w8.fsf@penguin.avasys.jp>
-Content-Type: text/plain; charset=UTF-8; format=flowed
-Content-Transfer-Encoding: 7bit
+Content-Type: text/plain
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -22,43 +14,96 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Olaf Meeuwissen <olaf.meeuwissen@avasys.jp>
-Cc: "Petrie, Glen" <glen.petrie@eitc.epson.com>, "'printing-architecture@lists.freestandards.org'" <printing-architecture@lists.freestandards.org>, "'printing-summit@lists.linux-foundation.org'" <printing-summit@lists.linux-foundation.org>
+To: Olaf Meeuwissen <olaf.meeuwissen@avasys.jp>, "Petrie, Glen" <glen.petrie@eitc.epson.com>
+Cc: printing-architecture@lists.freestandards.org, printing-summit@lists.linux-foundation.org
 
-Olaf Meeuwissen wrote:
-> "Petrie, Glen" <glen.petrie@eitc.epson.com> writes:
-> 
->> A thought I did not complete in the last email is the directory structure
->> for pdpca.  With in the $bindir/pdpca directory, do we ...
->>
->> 1.)  Have no sub directories for the pdpca files
->> 2.)  Have subdirectories based on <dev>
->>
->> I actually like number '1.)'.  The first reason is that I believe that <dev>
->> will start having sub-dir, with more sub-dir, with more sub-dir etc..  I
->> find this to be a pain-in-neck when I am trying to locate something of the
->> nature of the pdpca.  It is ok for the <dev> but not typically anyone else.
-> 
-> Then have a tool locate it for you, as per my previous mail.
-> 
->> Another advantage of '1.)' is there can never be two files with the same
->> filename.  This will prevent bad naming or improper naming by various
->> independent developing parties.
-> 
-> Just put the driver specific tool with the rest of the driver, that is
-> somewhere below /opt/<supplier>, and have the LSB DDK add the links to
-> the right place.  As it does now already for everything else.
-> 
-> It's up to the <supplier> to make sure there are no conflicts in their
-> little piece of the file system.  Personally, I'd suggest following
-> the conventions of the GNU people modulo --prefix=/opt/<supplier>, so
-> your driver specific tools will probably live in /opt/<supplier>/bin/
-> or /opt/<supplier>/lib/.
-> 
+< ... snip ... >
 
-This is also how I would do it in the distro-independent packages. The 
-LSB DDK already adds /opt/<supplier>/bin/ and /opt/<supplier>/sbin/ to 
-the $PATH, so a test tool can started by the user like any auxiliary 
-utility (as ink level checkers, etc.).
+> Eh, why not just add an option to /usr/bin/pdpca to list what is
+> there.  For your example:
+> 
+>   pdpca --dev guten --list
+> 
+> You could even have options to get a list of valid arguments for the
+> --dev option.  Why make the user navigate the file system if a tool
+> can do it for them?
 
-    Till
+[gwp] ok, there is a single 'controlling' pdpca application which can invoke
+a developer specific version of a pdpca and the 'controlling' pdpca is
+location in 'foo' with a actual path added to the system $PATH variable.  
+
+Then the 'controlling' pdpca would have options as
+
+pdpca --list 			: list the possible developers
+pdpca --devel foo --list	: list the options for the developers
+
+to actually execute, use
+
+pdpca [-t,-h,-i,-s] --devel foo [option]
+
+this would now locate and execute the requested/actual pdpca 
+
+Now the user/HD does not need to know where the actual pdpca app's are but
+the 'controlling' pdpca will.  But again, as you suggest, the system $PATH
+variable is updated to include the developer path to their pdpca.   I can
+remember if you suggested using a new system $PDPCA variable which would
+have the path for the actual pdpca software or just use the system $PATH
+variable (which is getting pretty long considering printing is not the only
+thing needing path info).
+
+The alternative to using system variables for each developer is to use the
+directory structure I have been proposing along with the 'controlling' pdpca
+(the 'controlling' pdpca does a $PATH entry).   This way printing things are
+collected under one directory and there may not be a need for linking
+(things are in known locations which I see a good approach for the goal of
+making printing easier on Linux including all aspects for retrieving
+capabilities, drivers, etc). 
+
+< ... snip ... >
+
+> FWIW, manufacturer, developer and supplier are three different hats.
+> It just so happens that there's usually only one or two heads wearing
+> them.
+
+[gwp] Actually I would like to see use establish the definition for the
+three entities in context of printing drivers and printers.  To get the
+discussion rolling I suggest the following as starting points.
+
+Manufacturer: 
+-- The Company, Project, Entity or Person who Company's, Project's, Entity's
+or Person's name is affixed to a hardware unit. 
+
+----- This means that an OEM company is not the "Manufacturer".  Although an
+OEM company produced the actual hardware; the OEM company name is not
+affixed to the product.
+
+
+Developer:
+-- The Company, Project, Entity or Person who Company's, Project's, Entity's
+or Person's name is affixed to a software application.
+
+----- This means that an OEM software company is not the "Developer".
+Although the OEM company produced the actual software; the OEM company name
+is not affixed to the product.
+
+
+Supplier:
+-- The Company, Project, Entity or Person who distributes the hardware or
+software but may or may not be the Company, Project, Entity or Person who
+Company's, Project's, Entity's or Person's name that is affixed to the
+hardware or software.
+
+----- RedHat can be a supplier of Epson Printer Drivers but they are the
+Developer or the Manufacturer.  However, when someone refers to "the Epson's
+Printer Driver" which may be produced by an OEM or subcontractor for Epson
+but Epson affixes their name to the driver; then, Epson is still the
+Manufacturer and Developer along with be the possible Supplier.
+
+So for the pdpca application it is not Supplier, but the Developer that is
+being specified. 
+
+If the actually printer is being specified, then it we would refer to the
+Manufacturer.
+
+Glen
+
