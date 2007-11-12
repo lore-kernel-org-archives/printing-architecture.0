@@ -1,11 +1,11 @@
 From: Olaf Meeuwissen <olaf.meeuwissen@avasys.jp>
 Subject: Re: [Printing-architecture] RE: [Printing-summit] RE: where is th e
 	info on driver directories
-References: <2F7D63A21DB2C74EB8EB8C09AF667DB0130D1CAF@eitc220.eitc.epson.com>
-Date: Mon, 12 Nov 2007 08:59:55 +0900
-In-Reply-To: <2F7D63A21DB2C74EB8EB8C09AF667DB0130D1CAF@eitc220.eitc.epson.com>
-	(Glen Petrie's message of "Fri, 9 Nov 2007 08:10:57 -0800")
-Message-ID: <877ikos58k.fsf@penguin.avasys.jp>
+References: <2F7D63A21DB2C74EB8EB8C09AF667DB0130D1CB0@eitc220.eitc.epson.com>
+Date: Mon, 12 Nov 2007 09:07:19 +0900
+In-Reply-To: <2F7D63A21DB2C74EB8EB8C09AF667DB0130D1CB0@eitc220.eitc.epson.com>
+	(Glen Petrie's message of "Fri, 9 Nov 2007 08:24:41 -0800")
+Message-ID: <873avcs4w8.fsf@penguin.avasys.jp>
 MIME-Version: 1.0
 Content-Type: text/plain; charset=us-ascii
 List-Id: Printing architecture under linux
@@ -18,94 +18,41 @@ List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subj
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
 To: "Petrie, Glen" <glen.petrie@eitc.epson.com>
-Cc: printing-architecture@lists.freestandards.org, printing-summit@lists.linux-foundation.org
+Cc: "'printing-architecture@lists.freestandards.org'" <printing-architecture@lists.freestandards.org>, "'printing-summit@lists.linux-foundation.org'" <printing-summit@lists.linux-foundation.org>
 
 "Petrie, Glen" <glen.petrie@eitc.epson.com> writes:
 
-> Thanks for your suggestions.
+> A thought I did not complete in the last email is the directory structure
+> for pdpca.  With in the $bindir/pdpca directory, do we ...
 >
-> <...snip...>
+> 1.)  Have no sub directories for the pdpca files
+> 2.)  Have subdirectories based on <dev>
 >
->> Normally you would have you PATH
->> set to something reasonable you you would just run it as:
->> 
->>   pdpca --dev <dev> --qual <qual> [other options]
->> 
->
-> [gwp] I considered this (and still like it) but I thought it would be
-> more/too complicated for user (of any kind) to figure out or know the <dev>
-> and the possible list of <qual's> since <qual's> could change with <dev>.
-> [snip]
->
-> Scenario:  Help Desk (HD) help user (U) on the phone.
->
-> U:  My printer will not print my picture.
-> HD: What printer do you have?
-> U: A SuperX model 300 which is an inkjet printer.
-> HD: What application are you trying to print with.
-> U:  Guten
-> HD: Go to the /usr/bin/print/pdpca directory.
-> U: OK, got there
-> HD: Locate the file pdpca_guten_superx_inkjet
-> U: Ok located
-> HD: execute the file........
->
-> Or does the HD tell the user 
->
-> HD: type in pdpca --dev guten -qual superx,inkjet 300
->
-> Once someone knows the list of possible and then the specific <dev's> and
-> <qual's> it is pretty easy either way but if the HD did not know that info
-> he could have
->
-> HD: Go to the /usr/bin/print/pdpca directory.
-> HD: look for a file called pdpca_guten
-> U: found a bunch of them
-> HD: Is there file or files with superx in the name
-> U: yes
-> HD: Is there a file with inkjet in the name
-> U: No
-> HD: is there a file with generic in the name
-> U: yes
-> HD: execute the following pdpca_guten_superx_generic -s 300
-> U: It says the superX Model 300 is supported
-> HD: now execute pdpca_guten_superx_generic 300
->
-> So, my reasoning was .....
->
-> Is it easier for an end user (which is one of the target users) to navigate
-> a directory list with files containing the <dev> and <qual's> or read
-> instructions on what possible <dev> and <qual> to use.  Overall, would
-> suspect that the navigating will be easier.
+> I actually like number '1.)'.  The first reason is that I believe that <dev>
+> will start having sub-dir, with more sub-dir, with more sub-dir etc..  I
+> find this to be a pain-in-neck when I am trying to locate something of the
+> nature of the pdpca.  It is ok for the <dev> but not typically anyone else.
 
-Eh, why not just add an option to /usr/bin/pdpca to list what is
-there.  For your example:
+Then have a tool locate it for you, as per my previous mail.
 
-  pdpca --dev guten --list
+> Another advantage of '1.)' is there can never be two files with the same
+> filename.  This will prevent bad naming or improper naming by various
+> independent developing parties.
 
-You could even have options to get a list of valid arguments for the
---dev option.  Why make the user navigate the file system if a tool
-can do it for them?
+Just put the driver specific tool with the rest of the driver, that is
+somewhere below /opt/<supplier>, and have the LSB DDK add the links to
+the right place.  As it does now already for everything else.
 
-> Anyway, that was my reasoning I used to create the specification.   My next
-> goal was to find a directory that would be easy to locate by the HD and/or
-> user.
-
-With a single program in an established place for user programs, all
-you have to do is run the command with the right option(s).  Neither
-user nor HD has to know any locations in the file system.  Locations
-could even change transparently without the need to retrain HD staff
-provided the pdpca utility is updated accordingly.
-
-> p.s.  dev looks like developer and device (we could pick a better word if
-> the decision is to go with a scheme as you suggest).  Which did you mean?
-
-Actually, I'd vote for --supplier.
-FWIW, manufacturer, developer and supplier are three different hats.
-It just so happens that there's usually only one or two heads wearing
-them.
+It's up to the <supplier> to make sure there are no conflicts in their
+little piece of the file system.  Personally, I'd suggest following
+the conventions of the GNU people modulo --prefix=/opt/<supplier>, so
+your driver specific tools will probably live in /opt/<supplier>/bin/
+or /opt/<supplier>/lib/.
 
 Hope this helps,
+
+>> -----Original Message-----
+>> [snip]
 -- 
 Olaf Meeuwissen             FLOSS Engineer -- EPSON AVASYS Corporation
 FSF Associate Member #1962           sign up at http://member.fsf.org/
