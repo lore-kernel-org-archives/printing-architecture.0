@@ -1,15 +1,15 @@
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=gamma;
 	h=domainkey-signature:received:received:message-id:date:from:to:subject:mime-version:content-type:content-transfer-encoding:content-disposition;
-	bh=ZNuIfsxpH7931/LCp4kXF2/rcI4UL4AOZHz2ck8HpFU=;
-	b=TrAtZXDazjWZUYAVgvz3k9oT/k+Ehyj+zP48kuQ8CJZViOMP3X6HmqODDDMMlRfN+HK0U5sfLziKihbbPE7UafyPhX5YWDLzrRe+JkEitAaaXi5FP5ymwkVegSZ0XbNefPbLtxcTZmD37p3rKk04tPRdSrQpFqmO5m/eP3AlmNY=
-Message-ID: <e395be80711281345k1514e55eo13b5f4c93087bb1c@mail.gmail.com>
-Date: Wed, 28 Nov 2007 13:45:11 -0800
+	bh=W6hwAvoCZWHWlX0aKhrr14u0vePv4xrFPxgHgSSgARU=;
+	b=cQejDLNaj8o3BImDntOgCVFG0IzC1Ll+V6R9dtjIs/QAZlpJKRfiJAfUJgtNuK3TCwJmoayNn+LrxfHgv0jDCsP62G+WIUPZ3TtUk6Y/ueWy6RKTngNGUgB3sZ9rokMXNsDobWIXdfzjndjmdUNPY2RbqsqO383jZavIMPEcos8=
+Message-ID: <e395be80711281400g51da538ek954091747344e11@mail.gmail.com>
+Date: Wed, 28 Nov 2007 14:00:32 -0800
 From: "Ira McDonald" <blueroofmusic@gmail.com>
 MIME-Version: 1.0
 Content-Type: text/plain; charset=ISO-8859-1
 Content-Transfer-Encoding: 7bit
 Content-Disposition: inline
-Subject: [Printing-architecture] Posted OP Arch Minutes (28 November 2007)
+Subject: [Printing-architecture] Next OP SC - Mon/Tue - 3/4 Dec 2007 - URGENT
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -23,23 +23,27 @@ To: printing-architecture@lists.freestandards.org, Ira McDonald <blueroofmusic@g
 
 Hi,
 
-I've just posted minutes from today's OP Architecture telecon at:
+NOTE - Both OP Architecture teleconferences in December are canceled!!!
 
-  ftp://ftp.pwg.org/pub/pwg/fsg/architecture/OP-Arch-Minutes-20071128.htm
+OP Japan SC members - please attend next week's teleconference - thanks.
 
-NOTE - All OP Architecture meetings in December 2007 canceled !!!
+Reminder of our next Open Printing Steering Committee teleconference:
 
-Next OP Architecture Teleconference:
+    - Monday 3 December 2007, Evening
+      - US/Europe
+        3pm in San Francisco - US PST (Pacific Standard Time)
+        4pm in Colorado - US MST (Mountain Standard Time)
+        5pm in Chicago - US CST (Central Standard Time)
+        6pm in New York - US EST (Eastern Standard Time)
+        11pm in Coimbra, Portugal - WET (Western European Time)
 
-Wednesday 9 January 2008 !!!
-    - Note
-      - Wednesday 12 December 2007 conflict with PWG face-to-face
-      - Wednesday 26 December 2007 conflict with Christmas holidays
+    - Tuesday 4 December 2007, Morning
+      - Japan
+        8am in Japan - JST (Japan Standard Time)
 
-    12:00-1:00 PM US Pacific time
-    1:00-2:00 PM US Mountain time
-    3:00-4:00 PM US Eastern time
-    8:00-9:00 PM Western European time
+    Toll Free (866) 839-8145
+    Int'l     (865) 524-6352
+    ACCESS Code: 7548766
 
 Cheers,
 - Ira
