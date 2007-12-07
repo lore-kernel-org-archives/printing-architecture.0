@@ -1,14 +1,14 @@
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=gamma;
 	h=domainkey-signature:received:received:message-id:date:from:user-agent:mime-version:to:cc:subject:content-type:content-transfer-encoding;
-	bh=uJ+A7Wfug6rQovGzXEeZjxEoGOB85S+moxPXsIkmAOs=;
-	b=on9u3ldVowp+IpfYEgnEiPH+hoLdHxAv9APWvH9+yy1vMYBKXK6rvsNvVTwswCE1SvuOlm5cpLUAbm35+syBFfYN8aPpDEgFaCuUQkBxT41h8+BpXVgXO7ug9BPUSnsriW1qNLyWCF9cO3hTRa+G9QjtfFWMdRHvV8+ThWN6gpM=
-Message-ID: <4755A02B.6080105@gmail.com>
-Date: Tue, 04 Dec 2007 18:44:59 +0000
+	bh=u7mcYVsr62QxCzZgpHI4Pnn+ObZrVQIRcQ8kFOXm1dU=;
+	b=A8cNgI4EKMkyLcLCs8mS9ul3Ky61ST2G+f8QjxvmaIEBLeRFviiees83HCLXUx47483PrIZ3YnnahGTdaxbf8fpx3g7SAfRjqE0D78KpWIvmzZ0WP+VWoTXUdlqC0fOl1eOC9UciVrej8sHpiHhN5FNRryyFq1tcVqlEQiwq7WI=
+Message-ID: <4759D70D.2060403@gmail.com>
+Date: Fri, 07 Dec 2007 23:28:13 +0000
 From: Till Kamppeter <till.kamppeter@gmail.com>
 MIME-Version: 1.0
 Content-Type: text/plain; charset=UTF-8; format=flowed
 Content-Transfer-Encoding: 7bit
-Subject: [Printing-architecture] Printing part of the LSB 3.2
+Subject: [Printing-architecture] Time line for the common printing dialog
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -19,26 +19,35 @@ List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subj
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
 To: printing-architecture@lists.linux-foundation.org
-Cc: 'Glen Petrie' <glen.petrie@eitc.epson.com>
+Cc: Celeste Lyn Paul <celeste@kde.org>, kurt pfeifle <k1pfeifle@gmx.net>, Jan Muehlig <jan.muehlig@relevantive.de>, Peter Sikking <peter@mmiworks.net>
 
-Below are links to the places where you find documentation and test 
-suites for the printing part of the LSB 3.2. The test suite will 
-probably already provide good part of the printing path tests.
+Hi,
 
-Here the printing specs are coming in:
+after the OpenPrinting Meeting in Tokyo
 
-http://www.linux-foundation.org/snapshots/books/Printing/
+https://www.linux-foundation.org/en/OpenPrinting/LFJapanSymposiumTokyo2007
 
-This is a daily build of the test suite for printing:
+we have agreed on a time line for the common printing dialog:
 
-ftp://ftp.freestandards.org/pub/lsb/snapshots/printing-test
+End of November (not fulfilled): Manufacturers comment on the current 
+design of the dialog 
+(http://www.mmiworks.net/eng/publications/labels/openPrinting.html)
 
-And here you can browse/download the soources of the test suite:
+December: First draft of dialog spec
 
-http://bzr.freestandards.org/lsb/devel/printing-test
-http://bzr.freestandards.org/lsb/devel/printing-test?cmd=inventory;rev=pqm%40freestandards.org-20071203201005-wyjkf8a24xrqx3u5;pathrevid=pqm%40freestandards.org-20071203201005-wyjkf8a24xrqx3u5;path=
+January: Finishing of dialog design. The design should not only contain 
+how the dialog looks like but also extensions for PPD files and Foomatic 
+as needed.
 
-The beta release of the LSB 3.2 is due by the end of this week, the 
-final release two weeks later.
+February: Final spec
+
+End of February; Kick-off meeting for the coding of the dialog: The 
+dialog designer group of OpenUsability meets with developers from GNOME, 
+KDE, Trolltech, GTK, ...
+
+The Linux Foundation sponsors a student to work together with Peter 
+Sikking, for starting immediately.
+
+The Linux Foundation also supports the meeting in February,
 
     Till
