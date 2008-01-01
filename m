@@ -1,15 +1,15 @@
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=gamma;
 	h=domainkey-signature:received:received:message-id:date:from:to:subject:mime-version:content-type:content-transfer-encoding:content-disposition;
-	bh=88B+T7TSAKLNLKpkrov7A3UAe1CvnlnyvRivosGzD0Y=;
-	b=ZWE7o35jxPbcg9glufy3dPZNHMdmBa/31QOkQvQbEukrrJHV0TOaUOlD03Npyl7qDnBAs+6ZB+QJQCMhPvP0sH9IgDcBYfsUEJqgdPOuSSTrdXVkEUjkHjp+yG1Fqk88jpTHWz2TZU92e37L1MLRgaMrPTo5I6Fu//fgKNph8+o=
-Message-ID: <e395be80801011500x6d9c47d1j95d54785e544d7e8@mail.gmail.com>
-Date: Tue, 1 Jan 2008 18:00:18 -0500
+	bh=3793ZFv04nNPYU0k2jBUISfcvIAHonywNPLrGPUe9z0=;
+	b=TADE4+9+TzCf9UneaBK3ng7fIYYHWL0UrcOUFb6jZVCGNHZ4/UinwbLqotxRSIMDYFL0sTvYEqyavK4qijppiBR9TEvmCwubwL+bJQFiUFknuUxvVRRGkyBiHyLCetS5sgi2xRWbY2GG+c7pptvDGCcDnOyTYnNvmnZ6ZqqSz6Q=
+Message-ID: <e395be80801011508y485a2caag74ff6e8008f94d77@mail.gmail.com>
+Date: Tue, 1 Jan 2008 18:08:24 -0500
 From: "Ira McDonald" <blueroofmusic@gmail.com>
 MIME-Version: 1.0
 Content-Type: text/plain; charset=ISO-8859-1
 Content-Transfer-Encoding: 7bit
 Content-Disposition: inline
-Subject: [Printing-architecture] Next OP SC - Mon/Tue - 7/8 Jan 2008
+Subject: [Printing-architecture] Next OP Arch - Wed 9 January 2008
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -23,23 +23,22 @@ To: printing-architecture@lists.freestandards.org, Ira McDonald <blueroofmusic@g
 
 Hi folks,
 
-Reminder of our next Open Printing Steering Committee teleconference:
+Reminder of our next Open Printing Architecture teleconference:
 
-    - Monday 7 January 2008, Evening
-      - US/Europe
-        3pm in San Francisco - US PST (Pacific Standard Time)
-        4pm in Colorado - US MST (Mountain Standard Time)
-        5pm in Chicago - US CST (Central Standard Time)
-        6pm in New York - US EST (Eastern Standard Time)
-        11pm in Coimbra, Portugal - WET (Western European Time)
+    Wednesday - 9 January 2008
 
-    - Tuesday 8 January 2008, Morning
-      - Japan
-        8am in Japan - JST (Japan Standard Time)
+    12:00-1:00 PM US Pacific time
+    1:00-2:00 PM US Mountain time
+    3:00-4:00 PM US Eastern time
+    8:00-9:00 PM Western European time
 
-    Toll Free (866) 839-8145
-    Int'l     (865) 524-6352
-    ACCESS Code: 7548766
+    USA Toll-free Number: 866-312-6342
+    Toll Number: 763-391-6805
+    Conference Code: 582 658 5482#
+
+    If any problems occur with the main number (above), please use:
+    Free Conference Backup Number: 712-580-0600
+    Conference Code: 839473#
 
 Cheers,
 - Ira
