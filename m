@@ -1,15 +1,16 @@
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=gamma;
 	h=domainkey-signature:received:received:message-id:date:from:to:subject:mime-version:content-type:content-transfer-encoding:content-disposition;
-	bh=3793ZFv04nNPYU0k2jBUISfcvIAHonywNPLrGPUe9z0=;
-	b=TADE4+9+TzCf9UneaBK3ng7fIYYHWL0UrcOUFb6jZVCGNHZ4/UinwbLqotxRSIMDYFL0sTvYEqyavK4qijppiBR9TEvmCwubwL+bJQFiUFknuUxvVRRGkyBiHyLCetS5sgi2xRWbY2GG+c7pptvDGCcDnOyTYnNvmnZ6ZqqSz6Q=
-Message-ID: <e395be80801011508y485a2caag74ff6e8008f94d77@mail.gmail.com>
-Date: Tue, 1 Jan 2008 18:08:24 -0500
+	bh=9OxHHQjVeXn8jg2/SiZWID5M1+dvHlXQePZLmPte0mM=;
+	b=BFU3wmCxzgFVryyb0snfkOuVSSHmeJie7mM+uPjytI8Nxc10ywE4CMB/QGQb2pIfKgZlSFISfvpYKeX0AV3OcYByWbEWUgVinB/DJA5gmdAg4YZGZafw8t84eSD30fLysh3NQwc9HqpW2TyolP9yqygudQLgWhI0aMvZ6mOzIu8=
+Message-ID: <e395be80801021455w8a307eep1ca30618a5f26c8@mail.gmail.com>
+Date: Wed, 2 Jan 2008 17:55:03 -0500
 From: "Ira McDonald" <blueroofmusic@gmail.com>
 MIME-Version: 1.0
 Content-Type: text/plain; charset=ISO-8859-1
 Content-Transfer-Encoding: 7bit
 Content-Disposition: inline
-Subject: [Printing-architecture] Next OP Arch - Wed 9 January 2008
+Subject: [Printing-architecture] RESCHEDULED - OP SC - Mon/Tue - 14/15 Jan
+	2008
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -21,27 +22,29 @@ List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-ar
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
 To: printing-architecture@lists.freestandards.org, Ira McDonald <blueroofmusic@gmail.com>
 
-Hi folks,
+My apologies - my trio was already booked to play next Monday night.
 
-Reminder of our next Open Printing Architecture teleconference:
+RESCHEDULED next Open Printing Steering Committee teleconference:
 
-    Wednesday - 9 January 2008
+   - Monday 14 January 2008, Evening
+     - US/Europe
+       3pm in San Francisco - US PST (Pacific Standard Time)
+       4pm in Colorado - US MST (Mountain Standard Time)
+       5pm in Chicago - US CST (Central Standard Time)
+       6pm in New York - US EST (Eastern Standard Time)
+       11pm in Coimbra, Portugal - WET (Western European Time)
 
-    12:00-1:00 PM US Pacific time
-    1:00-2:00 PM US Mountain time
-    3:00-4:00 PM US Eastern time
-    8:00-9:00 PM Western European time
+   - Tuesday 15 January 2008, Morning
+     - Japan
+       8am in Japan - JST (Japan Standard Time)
 
-    USA Toll-free Number: 866-312-6342
-    Toll Number: 763-391-6805
-    Conference Code: 582 658 5482#
-
-    If any problems occur with the main number (above), please use:
-    Free Conference Backup Number: 712-580-0600
-    Conference Code: 839473#
+   Toll Free (866) 839-8145
+   Int'l     (865) 524-6352
+   ACCESS Code: 7548766
 
 Cheers,
 - Ira
+
 
 -- 
 Ira McDonald (Musician / Software Architect)
