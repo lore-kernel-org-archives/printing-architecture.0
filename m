@@ -1,15 +1,15 @@
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=gamma;
 	h=domainkey-signature:received:received:message-id:date:from:to:subject:mime-version:content-type:content-transfer-encoding:content-disposition;
-	bh=r7NMueZjC8ID2e7amNvwCjOvJXWbeNNEeGzJdqK62g0=;
-	b=AVebywEfv5+2CqtooT+rctjJ5i8BFWAe0q/HD5z/WthRGXy4hl4CLG4mXv0SnTGeYpGHb52xRz7FEMayrzdVdx16BbzNn4O67QIH+ugpMlFHSgcAwDC7H4++ApuRqmSiXysHW21yFzAWth2YYJ8sQQAp3rDZ20ifuF8v7AbA3qw=
-Message-ID: <e395be80801070902n72d84bb9m50fb4cfba790cd1@mail.gmail.com>
-Date: Mon, 7 Jan 2008 12:02:28 -0500
+	bh=OWnRJXjZbTrPyZRa6s/YrHP3VMPAUdz6UEp9uoTEYj0=;
+	b=lu8RnBM7B/Kj8BMP4IQ0FqnXvhbBt2EOGmKuON66bRSKNEEpTjzaQ4dYrgK9qVqBsSLQtYURWP+K/UieYW4NhY/m/lvWIFNOtn3MUArkdrNJY/QyPlc0m7PE0nvMoIV6+mmZRsfspPIA9MBAan8st9NYgl5LekP3KiPClTxiU1k=
+Message-ID: <e395be80801091324x25d31ceap90940d02ccdbb975@mail.gmail.com>
+Date: Wed, 9 Jan 2008 16:24:11 -0500
 From: "Ira McDonald" <blueroofmusic@gmail.com>
 MIME-Version: 1.0
 Content-Type: text/plain; charset=ISO-8859-1
 Content-Transfer-Encoding: 7bit
 Content-Disposition: inline
-Subject: [Printing-architecture] OP Arch Agenda - Wed 9 January 2008
+Subject: [Printing-architecture] Posted OP Arch Minutes (9 January 2008)
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -21,44 +21,16 @@ List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-ar
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
 To: printing-architecture@lists.freestandards.org, Ira McDonald <blueroofmusic@gmail.com>
 
-Hi folks,
+I've just posted minutes from today's OP Architecture telecon at:
 
-Reminder of our next Open Printing Architecture teleconference:
+ ftp://ftp.pwg.org/pub/pwg/fsg/architecture/OP-Arch-Minutes-20080109.htm
 
-   Wednesday - 9 January 2008
+SUSPENSION - OP Architecture teleconferences are temporarily suspended
+             (due to low participation in recent months)
 
-   12:00-1:00 PM US Pacific time
-   1:00-2:00 PM US Mountain time
-   3:00-4:00 PM US Eastern time
-   8:00-9:00 PM Western European time
-
-   USA Toll-free Number: 866-312-6342
-   Toll Number: 763-391-6805
-   Conference Code: 582 658 5482#
-
-   If any problems occur with the main number (above), please use:
-   Free Conference Backup Number: 712-580-0600
-   Conference Code: 839473#
-
-Agenda:
-
-(1) Review and approve minutes from last OP Architecture meeting
-    - See minutes at:
-    ftp://ftp.pwg.org/pub/pwg/fsg/architecture/OP-Arch-Minutes-20071128.htm
-
-(2) Action Items from Open Printing Meeting in Tokyo - Till Kamppeter
-    - See Till's summary of results at:
-    https://www.linux-foundation.org/en/OpenPrinting/LFJapanSymposiumTokyo2007
-    - Current status?
-
-(3) New Printing Dialog - Till Kamppeter
-    - Meeting in Europe in February?
-
-(4) OP Print Driver Compatibility Testing - Glen Petrie
-    - Current status?
-
-(5) Joint OPS/PWG in 26-31 October 2008 - Ira McDonald
-    - Location in Europe?  (PWG SC favors this idea)
+MEETING TIME - Possible new times for better participation are:
+               4pm EST Wednesday (one hour later)
+               2pm, 3pm, or 4pm EST Tuesday
 
 Cheers,
 - Ira
