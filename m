@@ -1,15 +1,15 @@
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=gamma;
 	h=domainkey-signature:received:received:message-id:date:from:to:subject:mime-version:content-type:content-transfer-encoding:content-disposition;
-	bh=XMmOQjejToEZrt6qtpBu9uxvnSXLPzM1T/TQLDkys0c=;
-	b=Z96wr4MhlVxnQGniz1NrWXsd2HrdNFm7SSiSMkX48uLnAJUT2lWSJwmjaUHWzTxuc7oiwnyQ5bp2np9Ad2UcTjwSDGFMLIEzvcUKLqx+HAAjnZPT8aQhCrUBGuJ9KQs2JQvuuAvqJQdCPP/H6RNwRVzURLRJgN2MVwv4MHE2gDo=
-Message-ID: <e395be80801141602t100e2ac6u2a6a9d49de1385a5@mail.gmail.com>
-Date: Mon, 14 Jan 2008 19:02:25 -0500
+	bh=HeGPrS/C81IpLJHbg8mipZ4Jqpp3jtXA7UT1RxC6p/g=;
+	b=Uy24TPv864F/TrId/0N7O1WuMSzEUCUSEUhlIfCESLEjtGK68RgfifgMyq6NOcTVxjELOeLKi16EPLSAGBwVq2n18Ej0MIEkqc7qFLVM3P8KftZ7yU6O+eBXpPrXmVCroCwpMgocORdgx7Vh3rPQcqGMGdXXmIw08uW4wUufuck=
+Message-ID: <e395be80801141606x10091efel8cae80c1c8b57268@mail.gmail.com>
+Date: Mon, 14 Jan 2008 19:06:42 -0500
 From: "Ira McDonald" <blueroofmusic@gmail.com>
 MIME-Version: 1.0
 Content-Type: text/plain; charset=ISO-8859-1
 Content-Transfer-Encoding: 7bit
 Content-Disposition: inline
-Subject: [Printing-architecture] Posted OP SC Minutes - 14 Jan 2008
+Subject: [Printing-architecture] Next OP SC - Mon/Tue - 4/5 Feb 2008
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -23,15 +23,29 @@ To: printing-architecture@lists.freestandards.org, Ira McDonald <blueroofmusic@g
 
 Hi,
 
-I just posted the minutes from today's Open Printing Steering Committee at:
+Our next Open Printing Steering Committee telecon will be:
 
- ftp://ftp.pwg.org/pub/pwg/fsg/steering_committee/OP-SC-Minutes-20080114.htm
+    - Monday 4 February 2008, Evening
+      - US/Europe
+        3pm in San Francisco - US PST (Pacific Standard Time)
+        4pm in Colorado - US MST (Mountain Standard Time)
+        5pm in Chicago - US CST (Central Standard Time)
+        6pm in New York - US EST (Eastern Standard Time)
+        11pm in Coimbra, Portugal - WET (Western European Time)
 
-Toratani-san sent a note about an internal conflict and will
-send monthly status today or tomorrow - thanks.
+    - Tuesday 5 February 2008, Morning
+      - Japan
+        8am in Japan - JST (Japan Standard Time)
+
+    Toll Free (866) 839-8145
+    Int'l     (865) 524-6352
+    ACCESS Code: 7548766
+
+This will right before the next PWG face-to-face meeting in February.
 
 Cheers,
 - Ira
+
 -- 
 Ira McDonald (Musician / Software Architect)
 Chair - Linux Foundation Open Printing WG
