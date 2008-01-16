@@ -1,17 +1,9 @@
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=gamma;
-	h=domainkey-signature:received:received:message-id:date:from:user-agent:mime-version:to:cc:subject:references:in-reply-to:content-type:content-transfer-encoding;
-	bh=vZMj4VH1BVcn6jsO55+rKEDSssQJMTMUbCQDj4SGcGo=;
-	b=ILjSlD3KIl9AsV6SvQDVwKpj2mksytrz78xfD9szG1VzMQ5WaA1FTB8etC8p7VsyevWNsfvpB/chEOvJPcDuf02jiVvrprP12/nKkQNS0r+WF7IgzewvnlREC95odRuE9nZJDqtn8BMOeyGPEtUc3F60AIV9criWsEiu/tRcj0U=
-Message-ID: <478CA26D.406@gmail.com>
-Date: Tue, 15 Jan 2008 12:09:17 +0000
-From: Till Kamppeter <till.kamppeter@gmail.com>
+From: Olaf Meeuwissen <olaf.meeuwissen@avasys.jp>
+Date: Wed, 16 Jan 2008 13:47:09 +0900
+Message-ID: <871w8iv0ky.fsf@geek.avasys.jp>
 MIME-Version: 1.0
-Subject: Re: [Printing-architecture] Posted OP SC Minutes - 14 Jan 2008
-References: <e395be80801141602t100e2ac6u2a6a9d49de1385a5@mail.gmail.com>
-	<20080115123254.E64B.TORATANI.YASUMASA@canon.co.jp>
-In-Reply-To: <20080115123254.E64B.TORATANI.YASUMASA@canon.co.jp>
-Content-Type: text/plain; charset=UTF-8; format=flowed
-Content-Transfer-Encoding: 7bit
+Content-Type: text/plain; charset=us-ascii
+Subject: [Printing-architecture] Some thoughts on the * Print* Dialog
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -21,131 +13,176 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: TORATANI Yasumasa <toratani.yasumasa@canon.co.jp>
-Cc: printing-architecture@lists.freestandards.org, Printing-japan <printing-japan@lists.linux-foundation.org>
+To: printing-japan@lists.linux-foundation.org
+Cc: Kurt Pfeifle <k1pfeifle@gmx.net>, Jan Muehlig <jan.muehlig@relevantive.de>, Peter Sikking <peter@mmiworks.net>, printing-architecture@lists.freestandards.org, Celeste Lyn Paul <celeste@kde.org>
 
-Thank you for the report. More inline.
+I left the 2008-01-10 Printing Japan Meeting with a little bit of home
+work.  This is the result.
 
-TORATANI Yasumasa wrote:
-> <Check Action Items>
-> - ppd options conflicts of Common Printing Dialog
->     - Should check the current status and how this issue has been resolved.
->       (because this issue has already been done on the TLF-OP page)
-> - IPA font issue on major applications
->     - Waiting results from IPA
-> - OPVP rpc update
->     - Under testing.
-> - New IPA(CJK) font announcement on the OPFC sourceforge page
->     - Should be done by the next f2f meeting
-> 
-> <Common Printing Dialog>
-> - Comment from vendors
->     - How the common dialog shows the ppd options conflict to users?
->        (Not defined on the Peter's dialog)
->       The current common printing dialog design is fine, but because
->       the dialog has more complex features than the current GNOME
->       or KDE print dialog, showing the conflict to users easily might be
->       more difficult (If conflicts occur, message box are shown? Or
->       some conflicts mark are shown on the dialog?)
+ # I Cc:d the OpenUsability people individually for lack of knowledge
+ # of a mailing list I could use instead.
 
-See the section "the gray zone" on
+To get my bearings again, I've read Peter's ever-growing blog[1] head
+to toe and the bulk of related communications on the printing-japan[2]
+and printing-architecture[3] lists of the last two months or so.
 
-http://www.mmiworks.net/eng/publications/labels/openPrinting.html
+ # The archive for printing-japan[2] is pretty much unusable for posts
+ # in Japanese (or posts by Glen) at the moment ... :-(
 
-for the common printing dialog. Conflicting choices will get grayed out 
-and by clicking an icon near a grayed out choice one gets info with 
-which setting this choice conflicts.
+ | Disclaimer: I'm a scanner guy, I get printing backwards ;-)
 
-XPP and KDE Print mark conflicting settings in red.
 
->     - Need the new ppd keyword for grouping items
->        (Grouping keyword for each ppd options including vendor options)
-> 
+ * waterfall <--> tracer bullet[4]
 
-I have already made suggestions about how to tag the options in PPDs and 
-in the Foomatic XML data and also about how to generate the quick 
-settings on the left of the dialog via PPDs and Foomatic. See my 
-suggestions which I e-mailed to OpenUsability people below.
+The thread started by Mr. Sekiguchi[5] gave me the impression that the
+feedback/spec "impasse" may be due to a misunderstanding of the styles
+of development used by both sides.  My (limited) experience is that
+there is still quite of bit of "spec first" attitude towards software
+projects in Japan. The openUsability approach is much more agile.  It
+wants much more frequent feedback based on much more vaguely defined
+concepts.
 
-> <LF OpenPrinting Meeting in Tokyo>
-> - TLF-Japan suggested to have a TFL OpenPrinting f2f meeting Tokyo
->    in 11th of Mar. if we have some agenda.
->    - For instance, if the Common Printing Dialog Hacker's meeting in
->       Europe will be held before the Tokyo meeting, and if we can see
->       the prototype dialog working on PC, it can be a good agenda.
+I've brought this up at our meeting and I think the misunderstanding
+is mostly resolved now.  Just keep this is mind on both sides so that
+we don't get a repeat.
 
-As Peter Sikking had no student in the time after the Montreal Printing 
-Summit up to now, we have postpond the Hacker kick-off meeting to May. 
-He will have a new student from February 1 on and this student will work 
-on the spec. I will add PPD and Foomatic extensions as suggested below.
 
-Peter also told that he will prepare something for me to show in Tokyo 
-in  March.
+ * what's in a name
 
-As another agenda item I will demo automatic printer driver download 
-from OpenPrinting with system-config-printer.
+While going through all the information I noticed that everyone seems
+to be using a slightly different name for this printing dialog.  Hence
+my wildcarded "* Print* Dialog" in the subject.  I don't really mind
+but it would be nice (and maybe less confusing) to pick a single name.
+I think the name should make it very clear that the dialog is about
+_printing_ and *not* about the _printer_.  Only vendors care about the
+printer ;-)  Users care about what comes out of it.
 
->    - All vendors should bring other meeting agenda at the next Japan meeting.
-> 
-> <pdftoraster and texttopdf>
-> - Currently we do not have any development resources for these filters.
->    Under arranging, but will inform the result of it around Apr.
->
+For the record, I've seen:
 
-Should I perhaps ask the Linux Foundation for opening another internship 
-so that a student can work on the missing CUPS filters? Who should be 
-this student's supervisor then? OP Japan? Mike Sweet? Me?
+   - Open Usability Printing Dialog
+   - Common Printing Dialog
+   - Linux Print Dialog
 
-    Till
 
---------------------------------------------------------------------
+ * dialog
 
-Very important is the draft specification, especially what PPD 
-extensions are needed. As far as I have seen the current design, we need
+I like the dialog and the reasoning behind it.  I definitely would
+like to see it in action with a bit of code behind the UI.  It's OK to
+hardcode the PPD info for demo purposes as far as I'm concerned.  The
+area that I would like to see in action most is that of conflict
+resolution.  I realize that level one[6] and level two[7] are not
+particularly likely to trigger conflicts.  Most conflicts will occur
+with level three[8] so it will be a bit of an exception.  However, I
+have the feeling that doing the conflict resolution correctly may have
+quite a big effect on part of the implementation.  Noticing a conflict
+is the easy part and is covered in Peter's "gray zone".  Backing out
+of it, either manually or automatically, can be a lot harder.  Note,
+the use of tags creates another means of triggering conflicts.  Also
+note that I really like the idea of tags ;-)
 
-- to tag the options: Every user-visible option in the PPD (with 
-*OpenUI...*CloseUI) should get a line/lines added which holds one or 
-more tags. Example:
+Another topic that I'd like to see in action is that for printing to a
+remote printer.  There are a number of things that you can do with
+local printers (parallel, USB, etc) that you can not do with a remote
+printer (via CUPS or otherwise).  Will local vs. remote differences
+impact the design/implementation?  That's something I'd like to find
+out early.  Are there things that could/should be solved elsewhere in
+the printing architecture to facilitate the dialog?
 
-*OPUITags: "
-PaperHandling/Paper Handling
-ResourceSaving/Resource Saving"
-*End
+I understand the current design is geared toward the general inkjet[9]
+and some of the design decisions may reflect that.  Is any work being
+done on a design for the high volume[10] case?  If so, I bet some of
+us would like to see.  If not, maybe it's time to start so you can get
+an idea of how much of the inkject ideas (and code?) can be shared.
+Maybe some of the high volume ideas and solution should flow back to
+the general inkjet case.
 
-Note that we also need to find a concept for the translation in 
-multi-language PPDs ("Globalized PPD Support" on 
-http://www.cups.org/documentation.php/spec-ppd.html, PPDs which come 
-with CUPS 1.3.x).
+I was also going to ask about the PPD keyword for tags and how one
+would make a suitable PPD for the dialog but it seems that Till has
+already answered most of that on the printing-architecture list[11].
 
-For backward compatibility: If the options in a PPD are not tagged, the 
-groups will be used as tags, but then the tags will act like tabs and so 
-not give all their functionality.
+Finally, I couldn't help but notice that Peter's blog mentions some
+fixed(?) dialog dimensions.  With respect to I18N needs, this may not
+be such a good idea.  Some languages are rather verbose and use long
+words (German for example ;-P), others need a lot less horizontal
+space (Chinese for example).  Also, while you may be able to reduce
+font size quite comfortably for Latin alphabets, for things like the
+CJK ideographs anything less than 10 points is next to unreadable on
+the screen.
 
-For PPDs built from the Foomatic database, new XML markup for tagging 
-the options is needed, for example:
+Semi-related, how do all these nifty UI tricks work out in terms of
+accessibility?  Is this something that will be left to the various
+toolkits' accessibility support?
 
-<tags>
-   <tag id="PaperHandling">
-      <en>Paper Handling</en>
-   </tag>
-   <tag id="ResourceSaving">
-      <en>Resource Saving</en>
-   </tag>
-</tags>
 
-- to define the "Quick Presets": Several Foomatic-generated PPDs have an 
-option named "PrintoutMode" which has usually settings like "Draft". 
-"Normal Quality", "Photo", ... (Gutenprint IJS driver, HPIJS, ...). This 
-option has the same intention as the "Quick Presets". It sets several 
-other options to quickly set up the printer for a common printing task. 
-  So I suggest that for generating the "Quick Presets" buttons the PPD 
-is searched for an option named "QuickPresets" and if such an option 
-does not exist it is searched for "PrintoutMode" for backward 
-compatibility. The choices of this option are shown as the "Quick 
-Presets" buttons and the option is not shown under the tags.
+ * printer maintenance
 
-In Foomatic PPDs this option is a composite option which describes which 
-of the other option it sets in which way and foomatic-rip takes care of 
-the correct execution. For PPDs for PostScript printers I recommend that 
-one codes up the appropriate functionality in PostScript and for CUPS 
-raster drivers the handling should be done in the rastertoXXX executable.
+This may be a bit off-topic but has any thought been given to the idea
+of kick-starting external applications from the printing dialog?  This
+functionality was mentioned during our discussion at the Printing
+Japan Meeting.  It seems the Windows dialog allows this and it is
+often used to fire up a printer maintenance application.
+
+ # Sorry, I wouldn't know.  I haven't used Windows in ages.  It's a
+ # license thing ;-)
+
+Personally, I don't think _printer_ maintenance should be incorporated
+in a _printing_ dialog.  It's a system's activity and not a user's
+activity.  But, as with today's single user configurations being the
+norm rather than the exception, there is something to say for this.
+Of course, one could think of a printing or user's activity that would
+warrant such functionality.  I can't think of any right now, though.
+
+While on the topic of hooks into the dialog, will it be setup solely
+through what is in the PPD or will there also be a programmatic
+extension API?  Something like a plug-in architecture for example,
+where the plug-in name may be set in the PPD file but additional
+functionality is provided by the plug-in.  Of course, the plug-in will
+be in a perfect position to completely ruin the beauty of the dialog
+with stuff that the vendor thinks is good for you in ways the vendor
+thinks they ought to look but that is another issue ;-)
+
+ # Programmatic extensions for remote printers will be fun!  Not.
+
+
+ * extensions
+
+Personally, I'm no big fan of vendor extensions.  They are confusing
+when you switch printers.  Rather than see a "Extensions" tag with all
+vendor stuff dumped there, I think it would be better when vendors tag
+their extensions with tags from the "default" tag set wherever this is
+possible.  Whatever doesn't fit nicely should just *not* get tagged.
+These untagged settings are probably only relevant for level three[8]
+anyway.  They can use the fallback behaviour mentioned earlier by
+Till[11].
+
+Now application extensions are a different thing because you use these
+to do specific kinds of things naturally.  You are not going to use an
+image manipulation program like the GIMP to write an essay.  However,
+chances are you use the same printer to get either onto paper (except
+perhaps in the level three[8] use case).  What I'm trying to say is
+that you switch applications much more purposefully than you switch
+printers and because of that application extensions in the printing
+dialog are OK.  Printer extensions should be discouraged, IMHO, but
+not be made impossible altogether.
+
+
+Just my two yen.
+
+
+References:
+  [1] http://www.mmiworks.net/eng/publications/labels/openPrinting.html
+  [2] https://lists.linux-foundation.org/mailman/listinfo/printing-japan
+  [3] https://lists.linux-foundation.org/mailman/listinfo/printing-architecture
+  [4] http://www.artima.com/intv/tracer.html
+  [5] https://lists.linux-foundation.org/pipermail/printing-japan/2007-December/013774.html
+  [6] http://www.mmiworks.net/eng/publications/labels/openPrinting.html#level1
+  [7] http://www.mmiworks.net/eng/publications/labels/openPrinting.html#level2
+  [8] http://www.mmiworks.net/eng/publications/labels/openPrinting.html#level3
+  [9] http://wiki.openusability.org/printing/index.php/General_inkjet
+ [10] http://wiki.openusability.org/printing/index.php/High_volume
+ [11] https://lists.linux-foundation.org/pipermail/printing-architecture/2008/001245.html
+
+Hope this helps,
+-- 
+Olaf Meeuwissen             FLOSS Engineer -- EPSON AVASYS Corporation
+FSF Associate Member #1962           sign up at http://member.fsf.org/
