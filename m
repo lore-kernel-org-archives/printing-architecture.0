@@ -1,15 +1,15 @@
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=gamma;
 	h=domainkey-signature:received:received:message-id:date:from:to:subject:mime-version:content-type:content-transfer-encoding:content-disposition;
-	bh=44/ER4YRSsYrWeJzMWvHsle3cxxHlY1KNI1fiEuItbA=;
-	b=opFWQ0pOpdYVmGbGViVvy4+tC2bUSBzGKknzVbb4HClqNZDJs/RL+/HdpokNeYk/1ZdmF2GEzP6CRxGdEE+bkjxQzCMSsjry54nPx7oQMJBPILSGu8XarngGEW2kHwTp6XwZR5Ka+IiY1VJA+oghDA0M5PBd3ll56quOlxUR/BI=
-Message-ID: <e395be80802121009k521a9b52k127d4442930bfadb@mail.gmail.com>
-Date: Tue, 12 Feb 2008 13:09:32 -0500
+	bh=NKv11QVwXVtf0fyy2dJPJS7r7fooF8R/r3SEzm0kp2k=;
+	b=ddnneBBmAvCqPAKDHe/X/hMWFWU6BuD3/5Fy03fyitXpmRH7lmF4njKYiCJw97mzBopEgCvEAfctgbNrNwq9+RZUcEBsofsCwDCbW6FZiblhE/M6ObeV/4rQBHKj5sI191gBEfFsjHkVl44+mEMbgdHiPHTRePRxaMRnm4UGwG4=
+Message-ID: <e395be80802121332l4d7f97aet27ae9574d50b3d57@mail.gmail.com>
+Date: Tue, 12 Feb 2008 16:32:54 -0500
 From: "Ira McDonald" <blueroofmusic@gmail.com>
 MIME-Version: 1.0
 Content-Type: text/plain; charset=ISO-8859-1
 Content-Transfer-Encoding: 7bit
 Content-Disposition: inline
-Subject: [Printing-architecture] Posted OP Arch Minutes (11 February 2008)
+Subject: [Printing-architecture] Next OP SC - Mon/Tue - 3/4 March 2008
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -23,11 +23,24 @@ To: printing-architecture@lists.freestandards.org, Ira McDonald <blueroofmusic@g
 
 Hi,
 
-I just posted the minutes from yesterday's Open Printing Steering Committee at:
+Next Open Printing Steering Committee teleconference:
 
- ftp://ftp.pwg.org/pub/pwg/fsg/steering_committee/OP-SC-Minutes-20080211.htm
+    - Monday 3 March 2008, Evening
+      - US/Europe
+        3pm in San Francisco - US PST (Pacific Standard Time)
+        4pm in Colorado - US MST (Mountain Standard Time)
+        5pm in Chicago - US CST (Central Standard Time)
+        6pm in New York - US EST (Eastern Standard Time)
 
-Toratani-san sent a note last week with monthly OP Japan status - thanks.
+    - Tuesday 4 March 2008, Morning
+      - Europe
+        12am in Berlin - CET (Central European Time)
+      - Japan
+        8am in Japan - JST (Japan Standard Time)
+
+    Toll Free (866) 839-8145
+    Int'l (865) 524-6352
+    ACCESS Code: 7548766
 
 Cheers,
 - Ira
