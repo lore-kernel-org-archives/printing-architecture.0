@@ -1,9 +1,10 @@
-Message-ID: <47C74539.90302@gmail.com>
-Date: Fri, 29 Feb 2008 00:35:21 +0100
+Message-ID: <47C74863.5000408@gmail.com>
+Date: Fri, 29 Feb 2008 00:48:51 +0100
 From: Till Kamppeter <till.kamppeter@gmail.com>
 MIME-Version: 1.0
 References: <47C5880E.4070703@gmail.com> <47C5A86B.2030602@licquia.org>
-In-Reply-To: <47C5A86B.2030602@licquia.org>
+	<47C74539.90302@gmail.com>
+In-Reply-To: <47C74539.90302@gmail.com>
 Content-Type: text/plain; charset=UTF-8; format=flowed
 Content-Transfer-Encoding: 7bit
 Subject: Re: [Printing-architecture] [Printing-summit] Google Summer of Code
@@ -20,53 +21,17 @@ List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-ar
 To: Jeff Licquia <jeff@licquia.org>
 Cc: printing-architecture@lists.linux-foundation.org, lsb-discuss@lists.linux-foundation.org, Linux Foundation Staff <lf_staff@lists.linux-foundation.org>, Tso Ted <tytso@MIT.EDU>
 
-Jeff Licquia wrote:
-> Till Kamppeter wrote:
->> As agreed with Jeff Licquia, the Linux Foundation will enter as one 
->> mentoring organization, with projects from all workgroups, especially 
->> also LSB.
+Till Kamppeter wrote:
+> We should also have a look at
 > 
-> [...]
+> http://code.google.com/soc/2008/faqs.html#0.1_org_apply
 > 
->> Should we schedule a conference call about the application for the 
->> Google Summer of Code?
+> and answer all these 17 questions in the list, so that we can submit the 
+> application in time and so that we have good chances to be accepted.
 > 
-> We probably should. 
 
-I suggest Wed March 5, 9pm CET (3pm Eastern, noon Pacific). This was the 
-time when we had regular meetings of the OpenPrinting workgroup.
-
-> As it turns out, it seems likely that OpenPrinting 
-> will have far more GSoC projects than LSB will have; there's even the 
-> possibility that the LSB will have none.
-> 
-> So we should decide how we will coordinate the LF GSoC application as a 
-> mentoring organization in order to ensure maximum success.
-
-If there is at least one non-OpenPrinting project, the mentoring 
-organization will be the Linux Foundation, otherwise it should perhaps 
-better be OpenPrinting.
-
-According to our GSoC page
-
-https://www.linux-foundation.org/en/Google_Summer_of_Code
-
-there are non-OpenPrinting projects.
-
-We should also have a look at
-
-http://code.google.com/soc/2008/faqs.html#0.1_org_apply
-
-and answer all these 17 questions in the list, so that we can submit the 
-application in time and so that we have good chances to be accepted.
-
-I could do the admin's or backup admin's job as OpenPrinting is one of 
-the main contributors of projects. I will also be mentor of some of my 
-suggested projects.
-
-We also need to do some more detailed project descriptions to be more 
-attractive to students applying for a project.
-
-So let's prepare our application.
+And anyone who wants to participate in the mentoring, as admin, backup 
+admin, or mentor, please set up a Google account and make sure that you 
+read your mail which you gfet through your new gmail.com address.
 
     Till
