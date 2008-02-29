@@ -1,14 +1,12 @@
-Message-ID: <47C876C9.3030108@gmail.com>
-Date: Fri, 29 Feb 2008 22:19:05 +0100
+Message-ID: <47C879B9.3020305@gmail.com>
+Date: Fri, 29 Feb 2008 22:31:37 +0100
 From: Till Kamppeter <till.kamppeter@gmail.com>
 MIME-Version: 1.0
-References: <47C5880E.4070703@gmail.com> <47C5A86B.2030602@licquia.org>
-	<47C74539.90302@gmail.com> <47C78897.6080307@licquia.org>
-In-Reply-To: <47C78897.6080307@licquia.org>
+References: <e395be80802121332l4d7f97aet27ae9574d50b3d57@mail.gmail.com>
+In-Reply-To: <e395be80802121332l4d7f97aet27ae9574d50b3d57@mail.gmail.com>
 Content-Type: text/plain; charset=UTF-8; format=flowed
 Content-Transfer-Encoding: 7bit
-Subject: Re: [Printing-architecture] [Printing-summit] Google Summer of Code
- 2008: Application period for mentoring organizations: March 3-12
+Subject: Re: [Printing-architecture] Next OP SC - Mon/Tue - 3/4 March 2008
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -18,67 +16,90 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Jeff Licquia <jeff@licquia.org>
-Cc: lsb-discuss@lists.linux-foundation.org, Tso Ted <tytso@MIT.EDU>, Linux Foundation Staff <lf_staff@lists.linux-foundation.org>, printing-architecture@lists.linux-foundation.org
+To: Ira McDonald <blueroofmusic@gmail.com>
+Cc: printing-architecture@lists.freestandards.org
 
-Jeff Licquia wrote:
-> Till Kamppeter wrote:
->> I suggest Wed March 5, 9pm CET (3pm Eastern, noon Pacific). This was 
->> the time when we had regular meetings of the OpenPrinting workgroup.
-> 
-> Any time early next week is bad for me, and probably for Ted and Markus, 
-> too; we'll be in Santa Clara, California, meeting with ISVs.
-> 
-> I get back Thursday morning (Eastern) after a red-eye.  Or, we can do it 
-> before Monday.
-> 
+Agenda for the next OpenPrinting Steering Committee Meeting:
 
-Before Monday is too late, Friday is already ending here in Europe. So 
-lets do it Thursday, US morning, European afternoon. 10am Pacific? Ira 
-what were your free slots on Thursday? If this does not work, lets do it 
-on Friday.
+The Google Summer of Code 2008
+------------------------------
 
-Ira, or should we open the next OpenPrinting Steering Comittee Meeting 
-to the LF and LSB folks as coordination meeting (Monday 3 March 2008, 
-3pm Pacific, 6pm Eastern, Tue 12am Berlin, Tue 8am Japan) for the GSoC 
-mentoring organization application of the Linux Foundation? And then 
-perhaps do a real OP SC meeting the week after?
+the Google Summer of Code 2008 got announced these days:
 
->> If there is at least one non-OpenPrinting project, the mentoring 
->> organization will be the Linux Foundation, otherwise it should perhaps 
->> better be OpenPrinting.
-> 
-> I'm cool with that.
-> 
->> According to our GSoC page
->>
->> https://www.linux-foundation.org/en/Google_Summer_of_Code
->>
->> there are non-OpenPrinting projects.
-> 
-> Some of those may not end up being so, but I think we have at least one 
-> to propose.
-> 
->> We should also have a look at
->>
->> http://code.google.com/soc/2008/faqs.html#0.1_org_apply
->>
->> and answer all these 17 questions in the list, so that we can submit 
->> the application in time and so that we have good chances to be accepted.
->>
->> I could do the admin's or backup admin's job as OpenPrinting is one of 
->> the main contributors of projects. I will also be mentor of some of my 
->> suggested projects.
->>
->> We also need to do some more detailed project descriptions to be more 
->> attractive to students applying for a project.
-> 
-> Yup.  Not sure who should be the LF caretaker, but perhaps it should be 
-> you and I.  Who is admin, and who is backup, isn't a big deal to me.
-> 
-> 
+http://code.google.com/soc/2008
 
-As OpenPrinting makes up the majority I will do the admin and Jeff, you 
-will do the backup. OK?
+The application period for mentoring organizations is March 3 - 12. 
+Fortunately, our Steering Committee meeting is not at the end of the 
+application period this time.
+
+It would be great if this year we get some implementation work done by 
+means of the Google Summer of Code. My ideas for student projects are:
+
+  * libjtapi: C implementation of JTAPI to be shipped by Linux
+    distribution and Unix operating systems.
+  * PAPI integration in CUPS: Seems that no one is working on that
+    currently
+  * Filling the holes in the PDF workflow with CUPS: It is still not
+    determined who will code the CUPS filters pdftoraster, texttopdf,
+    pdftoijs
+  * Common Printing Dialog: Coding on the dialog designed by
+    OpenUsability, for KDE and/or GNOME
+  * OpenPrinting database: Web-based (CGI) software for efficiently
+    reviewing and triaging user-contributed printer entries and comments
+    and integrating them into OpenPrinting XML database (Foomatic
+    database). Also to join duplicates and to remove bad entries.
+
+Please post your ideas up to Monday, March 10 at the latest, so that we 
+have time to include them in our application.
+
+As agreed with Jeff Licquia, the Linux Foundation will enter as one 
+mentoring organization, with projects from all workgroups, especially 
+also LSB. If no one objects I will be the admin of the Linux Foundation 
+GSoC project and Jeff Licquia will be the backup admin.
+
+Please enter your project ideas on
+
+https://www.linux-foundation.org/en/Google_Summer_of_Code
+
+Note that the project descriptions need to be more detailed, please 
+start directly with more detailed versions. We need to attract students 
+with them.
+
+If you want to be a mentor for one of the student projects, get yourself 
+a Google/GMail account. This is needed for our application.
+
+On the Steering Committee Meeting we will coordinate our application, 
+with which projects we will enter, who will mentor them, ...
+
+What about opening this meeting also for the LSB and other Linux 
+Foundation folks for them participating with their projects?
 
     Till
+
+
+Ira McDonald wrote:
+> Hi,
+> 
+> Next Open Printing Steering Committee teleconference:
+> 
+>     - Monday 3 March 2008, Evening
+>       - US/Europe
+>         3pm in San Francisco - US PST (Pacific Standard Time)
+>         4pm in Colorado - US MST (Mountain Standard Time)
+>         5pm in Chicago - US CST (Central Standard Time)
+>         6pm in New York - US EST (Eastern Standard Time)
+> 
+>     - Tuesday 4 March 2008, Morning
+>       - Europe
+>         12am in Berlin - CET (Central European Time)
+>       - Japan
+>         8am in Japan - JST (Japan Standard Time)
+> 
+>     Toll Free (866) 839-8145
+>     Int'l (865) 524-6352
+>     ACCESS Code: 7548766
+> 
+> Cheers,
+> - Ira
+> 
+
