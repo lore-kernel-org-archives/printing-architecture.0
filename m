@@ -1,15 +1,11 @@
-Message-ID: <e395be80803021041rf46fee2r514e85df9fdb3b0a@mail.gmail.com>
-Date: Sun, 2 Mar 2008 13:41:00 -0500
-From: "Ira McDonald" <blueroofmusic@gmail.com>
-In-Reply-To: <47CAD569.1060207@gmail.com>
+Message-ID: <47CAE589.1070603@gmail.com>
+Date: Sun, 02 Mar 2008 18:36:09 +0100
+From: Till Kamppeter <till.kamppeter@gmail.com>
 MIME-Version: 1.0
-Content-Type: text/plain; charset=ISO-8859-1
+Content-Type: text/plain; charset=UTF-8; format=flowed
 Content-Transfer-Encoding: 7bit
-Content-Disposition: inline
-References: <e395be80803020559i10af8a8fx4a18758d708a8321@mail.gmail.com>
-	<47CAD569.1060207@gmail.com>
-Subject: Re: [Printing-architecture] OP SC Agenda - Mon/Tue - 3/4 March 2008
-	- Pinging Norm
+Subject: [Printing-architecture] Google Summer of Code 2008 -- Call for
+	Projects / Conference Calls
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -19,68 +15,60 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Till Kamppeter <till.kamppeter@gmail.com>, Ira McDonald <blueroofmusic@gmail.com>
-Cc: printing-architecture@lists.linux-foundation.org, Norm Jacobs <Norm.Jacobs@sun.com>
+To: printing-architecture@lists.linux-foundation.org, "'printing-summit@lists.linux-foundation.org'" <printing-summit@lists.linux-foundation.org>, Printing-japan <printing-japan@lists.linux-foundation.org>, lsb-discuss@lists.linux-foundation.org, lf_driver_backport@lists.linux-foundation.org, Linux Foundation Staff <lf_staff@lists.linux-foundation.org>, webdevel@lists.linux-foundation.org, Jim Zemlin <jzemlin@linux-foundation.org>, Dan Kohn <dan@dankohn.com>, Markus Rex <msrex@suse.de>
 
-Hi Till,
+Hi,
 
-No, that FCC number expired months ago.  I'm hoping Norm
-can attend - changing numbers in realtime has never worked.
+the Linux Foundation is applying as a mentoring organization at the 
+Google Summer of Code 2008:
 
-Cheers,
-- Ira
+http://code.google.com/soc/2008
 
-On Sun, Mar 2, 2008 at 11:27 AM, Till Kamppeter
-<till.kamppeter@gmail.com> wrote:
-> Ira McDonald wrote:
->  > Hi,
->  >
->  > Glen Petrie (Epson) cannot attend. OP Japan members
->  > have been unable to attend in recent months.
->  >
->  > If Norm Jacobs (Sun) also cannot attend, then we will
->  > need an alternate teleconference number - Norm?
->  >
->
->  Is the FreeConferenceCall backup number of our Printing Architecture
->  calls still active? If yes, we should provide it as backup number.
->
->
->  > Next Open Printing Steering Committee teleconference:
->
->  [...]
->
->
->  > Agenda:
->  >
->  > (1) Review minutes of last OP SC meeting - Ira
->  >     - See
->  >     ftp://ftp.pwg.org/pub/pwg/fsg/steering_committee/OP-SC-Minutes-20080211.htm
->  >
->  > (2) March - Google Summer of Code - OP Projects - Till
->  >     - See Till's recent notes on Printing Architecture mailing list
->  >     - Issue - qualified mentors for each project (e.g., JTAPI)
->  >
->
->  ...
->
->  Let's do the GSoC as the first topic, so that we can invite all
->  interested parties of the LF and after that they can drop out and we do
->  the rest of the topics.
->
->     Till
->
+To get our standards, specs, and projects implemented and to find new 
+developers, we are offering several projects for students to implement:
 
+https://www.linux-foundation.org/en/Google_Summer_of_Code
 
+Everyone of you is invited to add his own project ideas. Please give 
+also a project description of around 20-30 lines to attract students to 
+work on the projects (will also follow for the projects which I have 
+posted).
 
--- 
-Ira McDonald (Musician / Software Architect)
-Chair - Linux Foundation Open Printing WG
-Blue Roof Music/High North Inc
-email: blueroofmusic@gmail.com
-winter:
-  579 Park Place  Saline, MI  48176
-  734-944-0094
-summer:
-  PO Box 221  Grand Marais, MI 49839
-  906-494-2434
+Note that we need all projects posted up to March 10, as March 12 is the 
+deadline for mentoring organization applications.
+
+You are also invited to help filling the mentoring organization 
+application form as described on
+
+http://code.google.com/soc/2008/faqs.html#0.1_org_apply
+
+To coordinate this I invite you to join our conference call
+
+    - Monday 3 March 2008, Evening
+      - US/Europe
+        3pm in San Francisco - US PST (Pacific Standard Time)
+        4pm in Colorado - US MST (Mountain Standard Time)
+        5pm in Chicago - US CST (Central Standard Time)
+        6pm in New York - US EST (Eastern Standard Time)
+
+    - Tuesday 4 March 2008, Morning
+      - Europe
+        12am in Berlin - CET (Central European Time)
+      - Japan
+        8am in Japan - JST (Japan Standard Time)
+
+    Toll Free (866) 839-8145
+    Int'l (865) 524-6352
+    ACCESS Code: 7548766
+
+This is the monthly call of the OpenPrinting Steering Committee 
+(OpenPrinting is main contributor of projects to the GSoC), but the GSoC 
+will be the main subject and done in the beginning of the call. This is 
+late in the evening for Europeans, but it is the only way to get also 
+the Japaneses participating.
+
+We can also have a second conference call on Thursday March 6 (2pm PST, 
+5pm EST, 11pm CET, 7am+ JST or later) or on Friday March 7 at any time 
+(for example 9am PST, noon EST, 6pm CET). WDYT?
+
+    Till
