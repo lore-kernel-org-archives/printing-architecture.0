@@ -1,11 +1,13 @@
-Message-ID: <47D190A3.4010708@gmail.com>
-Date: Fri, 07 Mar 2008 19:59:47 +0100
+Message-ID: <47D1CA49.80609@gmail.com>
+Date: Sat, 08 Mar 2008 00:05:45 +0100
 From: Till Kamppeter <till.kamppeter@gmail.com>
 MIME-Version: 1.0
+References: <165167.29222.qm@web23115.mail.ird.yahoo.com>
+In-Reply-To: <165167.29222.qm@web23115.mail.ird.yahoo.com>
 Content-Type: text/plain; charset=UTF-8; format=flowed
 Content-Transfer-Encoding: 7bit
-Subject: [Printing-architecture] Google Summer of Code 2008 - Mentors
-	urgently needed
+Subject: Re: [Printing-architecture] [Printing-summit] Google Summer of Code
+ 2008 - Mentors urgently needed
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -15,40 +17,33 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: printing-architecture@lists.linux-foundation.org, Printing-japan <printing-japan@lists.linux-foundation.org>, "'printing-summit@lists.linux-foundation.org'" <printing-summit@lists.linux-foundation.org>
+To: Hin-Tak Leung <hintak_leung@yahoo.co.uk>
+Cc: printing-architecture@lists.linux-foundation.org, Printing-japan <printing-japan@lists.linux-foundation.org>, "'printing-summit@lists.linux-foundation.org'" <printing-summit@lists.linux-foundation.org>
 
-Hi,
+Thank you for your offer to overtake mentorship for these projects.
 
-there are still three project proposals on the list for which we do not 
-have mentors:
+See
 
-1. PAPI integration in CUPS
-2. JTAPI implementation (for this I have already a student, Lars 
-Uebernickel, who currently works on the PDF-capable foomatic-rip 4.0)
-3. texttopdf and pdftoijs CUPS filters for the PDF workflow
+http://code.google.com/soc/2008/faqs.html#0.1_mentor_time
 
-See also
+-------------------------------------------------------------------------
+How much time is required to participate as a mentor in Google Summer of 
+Code?
 
-https://www.linux-foundation.org/en/Google_Summer_of_Code
+While the answer to this question will vary widely depending on the 
+number of students a mentor works with, the difficulty of the proposals 
+and the skill level of the students, most mentors have let us know that 
+they underestimated the amount of time they would need to invest in 
+GSoC. Five hours per student per week is a reasonable estimate.
+-------------------------------------------------------------------------
 
-For the PAPI CUPS integration we also need a project description, 
-perhaps also for the JTAPI implementation (to make the Linux Foundation 
-more attractive for Google by listing more projects). Volunteers welcome.
-
-Norm, what do you think about mentoring the PAPI CUPS integration?
-
-Claudia, what do you think about mentoring the JTAPI
-implementation?
-
-Anyone volunteering for the CUPS filters? For texttopdf it would be 
-great to have someone familiar with CJK text, so that the filter can 
-also cover these text files? Anyone in Japan?
-
-Note: One person can mentor more than one student.
-
-See more about mentoring at http://code.google.com/soc/2008/faqs.html
-
-And note that the application deadline is on March 12. To do the 
-organization smoothly, please answer on Monday March 10 at the latest.
+Is this OK? Then create a Google/GMail account if you do not have one 
+yet and send me your Google user name/GMail address. Thanks.
 
     Till
+
+
+Hin-Tak Leung wrote:
+> I suppose I can volunteer for the pdftoijs mentoring role... and possibly the
+> testtopdf one well.
+> How big a commitment (time, etc) is it meant to be.
