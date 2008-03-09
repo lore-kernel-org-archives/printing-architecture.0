@@ -1,9 +1,9 @@
-Message-ID: <47D1CA49.80609@gmail.com>
-Date: Sat, 08 Mar 2008 00:05:45 +0100
+Message-ID: <47D45830.60307@gmail.com>
+Date: Sun, 09 Mar 2008 22:35:44 +0100
 From: Till Kamppeter <till.kamppeter@gmail.com>
 MIME-Version: 1.0
-References: <165167.29222.qm@web23115.mail.ird.yahoo.com>
-In-Reply-To: <165167.29222.qm@web23115.mail.ird.yahoo.com>
+References: <909212.49990.qm@web23103.mail.ird.yahoo.com>
+In-Reply-To: <909212.49990.qm@web23103.mail.ird.yahoo.com>
 Content-Type: text/plain; charset=UTF-8; format=flowed
 Content-Transfer-Encoding: 7bit
 Subject: Re: [Printing-architecture] [Printing-summit] Google Summer of Code
@@ -20,30 +20,16 @@ List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-ar
 To: Hin-Tak Leung <hintak_leung@yahoo.co.uk>
 Cc: printing-architecture@lists.linux-foundation.org, Printing-japan <printing-japan@lists.linux-foundation.org>, "'printing-summit@lists.linux-foundation.org'" <printing-summit@lists.linux-foundation.org>
 
-Thank you for your offer to overtake mentorship for these projects.
+Hin-Tak Leung wrote:
+> My gmail account is HinTak.Leung@gmail.com (not very surprising!). I haven't
+> used it at all since I registered a few years ago so I don't know if it is 
+> still there - but I would think it should. I guess I'll just have to login and
+> see.
+> 
+> Hin-Tak 
 
-See
-
-http://code.google.com/soc/2008/faqs.html#0.1_mentor_time
-
--------------------------------------------------------------------------
-How much time is required to participate as a mentor in Google Summer of 
-Code?
-
-While the answer to this question will vary widely depending on the 
-number of students a mentor works with, the difficulty of the proposals 
-and the skill level of the students, most mentors have let us know that 
-they underestimated the amount of time they would need to invest in 
-GSoC. Five hours per student per week is a reasonable estimate.
--------------------------------------------------------------------------
-
-Is this OK? Then create a Google/GMail account if you do not have one 
-yet and send me your Google user name/GMail address. Thanks.
+Please check your account, as Google will send you an e-mail which you 
+have to answer.
 
     Till
 
-
-Hin-Tak Leung wrote:
-> I suppose I can volunteer for the pdftoijs mentoring role... and possibly the
-> testtopdf one well.
-> How big a commitment (time, etc) is it meant to be.
