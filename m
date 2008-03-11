@@ -1,15 +1,14 @@
-Message-ID: <47D5D500.80602@gmail.com>
-Date: Tue, 11 Mar 2008 01:40:32 +0100
+Message-ID: <47D6426F.6050800@gmail.com>
+Date: Tue, 11 Mar 2008 09:27:27 +0100
 From: Till Kamppeter <till.kamppeter@gmail.com>
 MIME-Version: 1.0
-References: <OF087066B6.776C4C03-ON87257408.00675FDE-87257408.0067B3C2@us.ibm.com>	
-	<47D58640.7070205@gmail.com>
-	<e395be80803101717q1a9d5cc1m204f18151060936d@mail.gmail.com>
-In-Reply-To: <e395be80803101717q1a9d5cc1m204f18151060936d@mail.gmail.com>
+References: <e395be80803041049vbea950w1cd03928402f481f@mail.gmail.com>	<e395be80803061312k489b1eco6085410a936dee68@mail.gmail.com>
+	<47D57DD5.6080007@gmail.com> <47D5D9B3.80307@linux-foundation.org>
+In-Reply-To: <47D5D9B3.80307@linux-foundation.org>
 Content-Type: text/plain; charset=UTF-8; format=flowed
 Content-Transfer-Encoding: 7bit
-Subject: Re: [Printing-architecture] Google Summer of Code 2008 - Mentors
- urgently needed
+Subject: Re: [Printing-architecture] [lsb-discuss] Google Summer of Code
+ 2008 -- Finalization of the application of the Linux Foundation
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -19,77 +18,63 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Ira McDonald <blueroofmusic@gmail.com>
-Cc: printing-architecture@lists.linux-foundation.org, Claudia Alimpich <alimpich@us.ibm.com>, Printing-japan <printing-japan@lists.linux-foundation.org>, "printing-summit@lists.linux-foundation.org" <printing-summit@lists.linux-foundation.org>
+To: Jeff Licquia <licquia@linux-foundation.org>
+Cc: lsb-discuss@lists.linux-foundation.org, Jim Zemlin <jzemlin@linux-foundation.org>, webdevel@lists.linux-foundation.org, Dan Kohn <dan@dankohn.com>, Linux Foundation Staff <lf_staff@lists.linux-foundation.org>, "printing-summit@lists.linux-foundation.org" <printing-summit@lists.linux-foundation.org>, Printing-japan <printing-japan@lists.linux-foundation.org>, printing-architecture@lists.linux-foundation.org, lf_driver_backport@lists.linux-foundation.org
 
-Thank you for the insight on this. I will talk with Lars about 
-alternative possibilities to contribute to OpenPrinting by means of the 
-Google Summer of Code. libjtapi is also not really needed to get the PDF 
-workflow working. I think I will make him somehow wrap up on the PDF 
-workflow so that we get this one out for sure and on the OpenPrinting 
-Summit this year we can tell that we have completed this project 
-initiated in Atlanta.
-
-If we also find a student for the Common Printing Dialog we get two of 
-the projects opened in Atlanta concluded.
-
-One other thing: Is someone here who would volunteer on mentoring the 
-PAPI integration in CUPS? Are there any suggestions who would be most 
-suitable for this task?
+Thank you for your suggestions of answers for the application form. I 
+will wait a little bit to get some comments, and independent whether I 
+get comments and/or further improvements I will submit the application 
+(with all improvements up to then) today in the (European) afternoon.
 
     Till
 
 
-Ira McDonald wrote:
-> Hi,
+Jeff Licquia wrote:
+> I'm not entirely sure if these changes constitute improvement or not. 
+> Feel free to run them by some people, and not use whatever parts are 
+> weak (or even none of it).
 > 
-> Sorry, I am NOT able to mentor a JTAPI GSoC project, due to my
-> lworkload at Samsung plus my PWG and DMTF public standards
-> work (five very active working groups).
+> Till Kamppeter wrote:
+>> 4. Why is your organization applying to participate in GSoC 2008? What 
+>> do you hope to gain by participating?
 > 
-> I suggest that a complete JTAPI implementation (C interfaces,
-> abstract memory-based object manager, and encode/decode
-> routines for at least one industry standard job ticket format)
-> would be 8 man-months for an experienced developer with
-> a strong printing background - i.e., too large for a summer
-> intern project.
+> Our goals are twofold: to meet specific technical goals, and to gain new 
+> members of our community (and the open-source community, by extension).
 > 
-> I also would like to complete the standardization of my proposed
-> PWG Micro Job Ticket (a very compact encoding), because an
-> XML encoded job ticket will remain unacceptably large for use
-> in mobile devices (a major target for Open Printing APIs).
+> For both printing and kernel work, having a specific goal and a mentor 
+> are important in penetrating areas which can be more complex than some 
+> other projects.  And none of the projects in question are "filler"; each 
+> will provide a very specific, in-demand benefit.
 > 
-> Cheers,
-> - Ira
+>> 3. What steps will you take to encourage students to interact with 
+>> your project's community before, during and after the program?
 > 
-> On Mon, Mar 10, 2008 at 3:04 PM, Till Kamppeter
-> <till.kamppeter@gmail.com> wrote:
->> Glen, Ira, one of you would like to mentor a student to implement JTAPI?
->>  The student who will do this project I know already and he does very
->>  good work and also does not take too much time of the mentor.
->>
->>  After designing JTAPI, please help also on its implementation.
->>
->>  I appreciate very much if one of you could do the mentorship.
->>
->>     Till
->>
->>
->>
->>  Claudia Alimpich wrote:
->>  >
->>  > Thank you for asking, but I will not be able to mentor the JTAPI
->>  > implementation.
->>  > Sorry,
->>  > Claudia Alimpich
->>
->>
->> _______________________________________________
->>  Printing-architecture mailing list
->>  Printing-architecture@lists.linux-foundation.org
->>  https://lists.linux-foundation.org/mailman/listinfo/printing-architecture
->>
+> Each of the projects has methods for community interaction, whether 
+> through conference calls, IRC, or face-to-face meetings.  To the extent 
+> possible, we intend to give our students time to report on their 
+> project, both in the progress they make and in the things they learn. 
+> Invitations to these events will be given at the earliest opportunity.
 > 
+> Some of the projects may take more time than just the summer, or may 
+> involve integration work after the project is complete.  Even if the 
+> project is done, we will work to keep the student involved in the 
+> integration process.  And we hope to suggest other ways the student can 
+> participate that mesh well with their strengths once this project is done.
 > 
+>> 4. What will you do to ensure that your accepted students stick with 
+>> the project after GSoC concludes?
+> 
+> We will gauge each student's progress, and suggest other projects they 
+> may wish to work on after their summer project is done.
+> 
+> Integration with the main upstream projects will likely be an important 
+> part of the task.  Our students will be encouraged to take part in that 
+> process, and not just "throw the patch over the wall".
+> 
+> Occasionally, other internships and even contracting jobs can come up. 
+> In these cases, previous participants in GSoC who have continued to 
+> participate in their respective projects may find themselves with job 
+> opportunities, either within a Linux Foundation workgroup or in the 
+> general community.
 > 
 
