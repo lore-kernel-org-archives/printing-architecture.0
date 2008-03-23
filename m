@@ -1,5 +1,5 @@
-Message-ID: <47E596D2.6020905@gmail.com>
-Date: Sun, 23 Mar 2008 00:31:30 +0100
+Message-ID: <47E59FA6.5060405@gmail.com>
+Date: Sun, 23 Mar 2008 01:09:10 +0100
 From: Till Kamppeter <till.kamppeter@gmail.com>
 MIME-Version: 1.0
 References: <e942fc210803221558p3c22c219p79f09e94da47e17e@mail.gmail.com>
@@ -16,17 +16,20 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: printing-architecture@lists.linux-foundation.org, Norm Jacobs <Norm.Jacobs@Sun.COM>, Wendy Phillips <wendy.phillips@Sun.COM>
+To: Cherif YAYA <chef.ya@gmail.com>
+Cc: printing-architecture@lists.linux-foundation.org
 
 Cherif YAYA wrote:
-> Hi,
-> I'm a CS student and I'm very interested in working on the CUPS 
-> integration of PAPI project.
+> Also in the TODO file, under the libpapi-cups entry it is said that 
+> "Once libpapi-ipp is complete this can be dropped, because CUPS will 
+> accept jobs from "any" IPP client and the PAPI IPP support is guaranteed 
+> to work." Does that mean that any work done for this project would be 
+> practically useless? It's probably not the case and I'm probably missing 
+> something. But I'd like some clarification as to how the deliverables of 
+> this CUPS integration will contribute to the PAPI effort.
 
-Thank you for your interest in the project. On the coding of PAPI is 
-mainly worked by Norm Jacobs and Wendy Phillips currently. Wendy, Norm, 
-can you help on Cherif's questions? Anyone of you would perhaps also 
-work on mentoring?
+For me this looks more like that libpapi-cups' functionality gets merged 
+into libpapi-ipp. Norm, Wendy, am I correct?
 
     Till
 
