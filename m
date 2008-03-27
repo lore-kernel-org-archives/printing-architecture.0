@@ -1,14 +1,16 @@
-Date: Thu, 27 Mar 2008 16:31:12 +0100
+Date: Thu, 27 Mar 2008 17:55:06 +0100
 From: Klaus Singvogel <kssingvo@suse.de>
-Message-ID: <20080327153111.GB17559@suse.de>
+Message-ID: <20080327165506.GA7647@suse.de>
 References: <47EA99E8.8020007@licquia.org> <47EAC155.4040206@gmail.com>
 	<Pine.LNX.4.64.0803271421320.19740@nelson.suse.de>
 	<20080327141959.GB5084@suse.de>
 	<Pine.LNX.4.64.0803271527300.20593@nelson.suse.de>
+	<20080327153111.GB17559@suse.de>
+	<Pine.LNX.4.64.0803271634280.23932@nelson.suse.de>
 Mime-Version: 1.0
 Content-Type: text/plain; charset=us-ascii
 Content-Disposition: inline
-In-Reply-To: <Pine.LNX.4.64.0803271527300.20593@nelson.suse.de>
+In-Reply-To: <Pine.LNX.4.64.0803271634280.23932@nelson.suse.de>
 Subject: Re: [Printing-architecture] [lsb-discuss] LSB 4.0 and printing
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
@@ -23,26 +25,57 @@ To: Johannes Meixner <jsmeix@suse.de>
 Cc: printing-architecture@lists.linux-foundation.org, lsb-discuss@lists.linux-foundation.org
 
 Johannes Meixner wrote:
-[...]
-> The same question applies for printing:
 > 
-> Should printing be mandatory for all kind of machines
-> in particular for servers which never submit a print job
-> (e.g. a plain mail server or a plain web server)?
+> Have a network scanner (a scanner with ethernet connection)
+> in an office for several people.
 
-Printing a job to a server can be done without any user interaction.
-So I can see the arguments why a server machine can easily be used
-as a print server too (for spooling).
+If the scanner has ethernet connection, any user can install drivers
+on his _desktop_. No need to restrict installation on a _server_, or?
 
-But scanning usually requires interaction, like turning pages on the
-scanner, pressing some buttons, watching previews, cutting the image,
-etc. This cannot be done without having a user sitting in front of the
-machine, and IMHO this contradicts the server declaration. Therefore
-I don't see a need to blow a server with SANE packages additional.
+> Run the scanner driver (the SANE backend) together with
+> the saned on an arbitrary server machine somewhere in
+> a locked server room to have both the driver and the
+> access permission stuff under full control of the admin
+> of the central server.
 
-I thought, I already gave this hint in my first posting...
+What's the advantage of your model? It seems not very practicable and
+a bit uncommon to me.
 
-Regards,
+Restricting printing access is easy to explain: every single page
+printed out costs resources (paper, toner, etc).
+
+But scanning?
+
+Why restricting a network scanner to special users and not to a
+special, secure place? If there is no trust to all of the users, why
+is the network scanner physical accessible to anyone, with danger of
+thefts, and the scanning restricted to users? Why not locking the
+scanner into a restricted room?
+
+I neither see how you can prevent scanning by the bad guys, if the
+scanner is still accessible by (physical) anyone and (by software)
+through whole network?
+
+I would suggest to setup a special desktop machine with limited
+physical access in such an scenario into a special secured room. IMHO
+more secure.
+
+Another solution for your example might be to setup a a _desktop_
+machine and use (in a limited way) as a server for above scenario. No
+need to blow up all the other server machines with unnecessary scanner
+software.
+
+And I think it is a very limited, uncommon scenario you describe.
+Let us stay at the more common real life examples, please.
+
+> Run the scanning frontend together with the SANE "net"
+> meta-driver on the individual user's workstation where
+> it doesn't harm others if one user corrupts his workstation.
+
+Workstation means a desktop machine right? So again: scanning with
+SANE is done on the desktop machine.
+
+Kindly regards,
 	Klaus.
 -- 
 Klaus Singvogel
