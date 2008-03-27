@@ -1,18 +1,12 @@
-Message-ID: <e395be80803271042s482e612eu14499ecb064a7c7e@mail.gmail.com>
-Date: Thu, 27 Mar 2008 13:42:25 -0400
-From: "Ira McDonald" <blueroofmusic@gmail.com>
-In-Reply-To: <20080327165506.GA7647@suse.de>
+Message-ID: <47EC1E74.50409@gmail.com>
+Date: Thu, 27 Mar 2008 23:23:48 +0100
+From: Till Kamppeter <till.kamppeter@gmail.com>
 MIME-Version: 1.0
-Content-Type: text/plain; charset=ISO-8859-1
-Content-Transfer-Encoding: 7bit
-Content-Disposition: inline
 References: <47EA99E8.8020007@licquia.org> <47EAC155.4040206@gmail.com>
 	<Pine.LNX.4.64.0803271421320.19740@nelson.suse.de>
-	<20080327141959.GB5084@suse.de>
-	<Pine.LNX.4.64.0803271527300.20593@nelson.suse.de>
-	<20080327153111.GB17559@suse.de>
-	<Pine.LNX.4.64.0803271634280.23932@nelson.suse.de>
-	<20080327165506.GA7647@suse.de>
+In-Reply-To: <Pine.LNX.4.64.0803271421320.19740@nelson.suse.de>
+Content-Type: text/plain; charset=UTF-8; format=flowed
+Content-Transfer-Encoding: 7bit
 Subject: Re: [Printing-architecture] [lsb-discuss] LSB 4.0 and printing
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
@@ -23,100 +17,172 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Klaus Singvogel <kssingvo@suse.de>, Ira McDonald <blueroofmusic@gmail.com>
-Cc: printing-architecture@lists.linux-foundation.org, Johannes Meixner <jsmeix@suse.de>, lsb-discuss@lists.linux-foundation.org
+To: Johannes Meixner <jsmeix@suse.de>
+Cc: printing-architecture@lists.linux-foundation.org, lsb-discuss@lists.linux-foundation.org
 
-Hi,
+Johannes Meixner wrote:
+> Hello,
+> 
+> On Mar 26 22:34 Till Kamppeter wrote (shortened):
+>> What can be added without problems is SANE
+> 
+> "SANE Standard Version 1.0" (the so called "SANE1")
+> to be precise, see
+> http://www.sane-project.org/docs.html
+> 
+> I would very much appreciate it if SANE1 was LSB standard.
+> 
+> As Till already mentioned:
+> Without a scanning standard in LSB (which is compatible
+> with the LSB printing standard), there is just no support
+> for all-in-one devices in LSB.
+> 
 
-My two cents...
+Having scanning covered by the LSB standard will not only help to get 
+printer manufacturers fully support their multi-function devices, it 
+will also help scanner manufacturers to ship Linux drivers for their 
+devices.
 
-I agree with Klaus.  Network scanning (remote submission of scan jobs)
-is ALWAYS done from a client desktop machine directly to the networked
-scanner or multifunction device.  Adding SANE packages to a Linux server
-never makes sense in the real world - just one more needless security risk.
+> But I should mention that there is since a long time
+> the discussion on sane-devel@lists.alioth.debian.org
+> how to move forward with SANE.
+> 
 
-Cheers,
-- Ira
+There was again a longer posting about SANE2 today on the SANE mailing 
+liat. See below.
 
--- 
-Ira McDonald (Musician / Software Architect)
-Chair - Linux Foundation Open Printing WG
-Blue Roof Music/High North Inc
-email: blueroofmusic@gmail.com
-winter:
- 579 Park Place Saline, MI 48176
- 734-944-0094
-summer:
- PO Box 221 Grand Marais, MI 49839
- 906-494-2434
+> Unfortunately - as far as I understand it - the planned
+> SANE2 API would not be backward-compatible with SANE1
+> which is a main reason - as far as I understand it - why
+> there is no real progress how to move forward with SANE.
+> 
 
+We must standardize on SANE1, as this is in the distros. SANE2 will for 
+sure take at least a year until it comes out when work on it would start 
+today. And it will take two more years until it will make it into all 
+enterprise distros.
 
-On Thu, Mar 27, 2008 at 12:55 PM, Klaus Singvogel <kssingvo@suse.de> wrote:
-> Johannes Meixner wrote:
->  >
->  > Have a network scanner (a scanner with ethernet connection)
->  > in an office for several people.
->
->  If the scanner has ethernet connection, any user can install drivers
->  on his _desktop_. No need to restrict installation on a _server_, or?
->
->  > Run the scanner driver (the SANE backend) together with
->  > the saned on an arbitrary server machine somewhere in
->  > a locked server room to have both the driver and the
->  > access permission stuff under full control of the admin
->  > of the central server.
->
->  What's the advantage of your model? It seems not very practicable and
->  a bit uncommon to me.
->
->  Restricting printing access is easy to explain: every single page
->  printed out costs resources (paper, toner, etc).
->
->  But scanning?
->
->  Why restricting a network scanner to special users and not to a
->  special, secure place? If there is no trust to all of the users, why
->  is the network scanner physical accessible to anyone, with danger of
->  thefts, and the scanning restricted to users? Why not locking the
->  scanner into a restricted room?
->
->  I neither see how you can prevent scanning by the bad guys, if the
->  scanner is still accessible by (physical) anyone and (by software)
->  through whole network?
->
->  I would suggest to setup a special desktop machine with limited
->  physical access in such an scenario into a special secured room. IMHO
->  more secure.
->
->  Another solution for your example might be to setup a a _desktop_
->  machine and use (in a limited way) as a server for above scenario. No
->  need to blow up all the other server machines with unnecessary scanner
->  software.
->
->  And I think it is a very limited, uncommon scenario you describe.
->  Let us stay at the more common real life examples, please.
->
->  > Run the scanning frontend together with the SANE "net"
->  > meta-driver on the individual user's workstation where
->  > it doesn't harm others if one user corrupts his workstation.
->
->  Workstation means a desktop machine right? So again: scanning with
->  SANE is done on the desktop machine.
->
->  Kindly regards,
->
->
->         Klaus.
->  --
->  Klaus Singvogel
->  SUSE LINUX Products GmbH
->  Maxfeldstr. 5                     E-Mail: Klaus.Singvogel@SuSE.de
->  90409 Nuernberg                   Phone: +49 (0) 911 740530
->  Germany                           GnuPG-Key-ID: 1024R/5068792D  1994-06-27
->
->  SUSE LINUX Products GmbH, GF: Markus Rex, HRB 16746 (AG Nuernberg)
->  _______________________________________________
->  Printing-architecture mailing list
->  Printing-architecture@lists.linux-foundation.org
->  https://lists.linux-foundation.org/mailman/listinfo/printing-architecture
->
+> Perhaps the experience of LSB people with API upgrades
+> could even help the SANE developers to find a solution
+> how to move forward with SANE.
+
+With a good planning one can perhaps even reach backward compatibility. 
+Or one could write a piece of glue code to plug SANE1 drivers into SANE2.
+
+    Till
+
+--------------------------------------------------------------------------
+
+Subject: [sane-devel] SANE2 standard completion
+From: stef.dev@free.fr
+To: sane-devel@lists.alioth.debian.org
+
+	Hello,
+
+	before any work can start on SANE 2, the current proposal has to be 
+completed.
+
+	The major change is the image data format. SANE 2 will be able to 
+handle new formats easily (which matches the current needs, especially 
+regarding ir
+  channel). There will be 2 major image format, one pixel oriented and 
+the other will give images as a mime attachment. There is also standard 
+part for button handling.
+
+	Here is a summary of the differences between SANE 1 and SANE 2 proposal 
+standards:
+
+structures changes:
+	- the SANE_Device struct has more fields, giving contact information 
+about the devices in case of bug, and the ability to send device 
+capability flags
+	- the SANE_Parameters changes to suit the image format improvement. It 
+also gives new informations such as a proposed filename and X/Y dpi.
+	
+options changes:
+	- capability hidden and allways settable added
+	- more commonly used options are now part of the standard
+
+SANE operations changes:
+	- sane_open has a SANE_Device ** parameter
+	- scanner's button handling
+
+newtwork operation:
+	The Network Protocol chapter seems to lag behind the SANE 1 chapter, 
+and the SANE_NET_OPEN call needs to be updated to reflect sane_open 
+evolution.
+
+		The current proposal is in good shape, and the change regarding image 
+format seems to suit the current need for new formats. Converting 
+current backends
+to SANE2 doesn't seem that difficult.
+
+	But before starting, there are some things I'd like to see in the new 
+standard:
+	- the current code flow is
+	sane_init
+		sane_open
+			sane_start
+				sane_read
+			sane_cancel
+		sane_close
+	sane_exit
+	
+		rather than calling sane_cancel at the end of scan, I'd like to have a 
+sane_end function. Leaving the use of sane_cancel for canceling the scan 
+like it allready does. This new function would do about the same, but 
+code flow would be cleaner and easier to understand:
+	sane_init
+		sane_open
+			sane_start
+				sane_read
+			sane_end
+		sane_close
+	sane_exit
+	
+	- the proposed button handling would surely be better if we create 
+sane_lock_buttons(), sane_update_buttons() and sane_unlock() buttons, 
+instead
+of doing this with control options.
+	
+	- we should also add something about panels. Would some control options 
+be enough,  or do we also need some lock/update/unlock behavior ?
+	
+	- there are some issues about backends configuration. In order to be 
+detected, some backends need their  configuration files tweaked. I think 
+that
+having well-known configuration options would improve  the situation and 
+would
+also let us have a common way of accessing configuration parameters across
+backends.
+	
+	- do we want to improve warmup handling ? Currently there is no 
+feedback when warming-up is going on, which is sometime confusing, we 
+can have the feeling that nothing is happening. Do we want a 
+sane_warm_up() or a
+SANE_STATUS_WARMING_UP would be enough ?
+	
+	There are other points that I feel they could be improved, but could be 
+done as we develop SANE2:
+	- we need a sane type for scanner buttons. Either we rename the 
+SANE_TYPE_BUTTON to SANE_TYPE_SOFT_BUTTON and use SANE_TYPE_BUTTON for
+physical buttons, or we create a SANE_TYPE_HARD_BUTTON. So that a 
+frontend can easily detect hardware buttons. There should be a list of 
+well-known buttons
+description to use when  possible.
+	- a SANE_TYPE_PANEL would be handy
+	- since there are well-know options there should be well-known groups, 
+and the SANE_CAP of these options should also be given.
+	- a SANE_STATUS_LOCKED could be added to handle the case where the 
+hardware lock of a scanner has been left.
+	
+Regards,
+	Stef
+	
+		
+
+-- sane-devel mailing list: sane-devel@lists.alioth.debian.org 
+http://lists.alioth.debian.org/mailman/listinfo/sane-devel Unsubscribe: 
+Send mail with subject "unsubscribe your_password" to 
+sane-devel-request@lists.alioth.debian.org
+
