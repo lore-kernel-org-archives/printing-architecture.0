@@ -1,10 +1,10 @@
-Message-ID: <2F7D63A21DB2C74EB8EB8C09AF667DB0152D3561@eitc220.eitc.epson.com>
+Message-ID: <2F7D63A21DB2C74EB8EB8C09AF667DB0152D3567@eitc220.eitc.epson.com>
 From: "Petrie, Glen" <glen.petrie@eitc.epson.com>
-Date: Tue, 1 Apr 2008 10:18:51 -0700 
+Date: Tue, 1 Apr 2008 10:40:42 -0700 
 MIME-Version: 1.0
 Content-Type: text/plain
 Subject: Re: [Printing-architecture] Optimizing MicroJobTicket - JTAPI
-	'native' symbols
+	'native' symbols - second n	ote
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -18,14 +18,58 @@ To: Ira McDonald <blueroofmusic@gmail.com>, printing-architecture@lists.linux-fo
 
 Ira,
 
-Isn't coherence a wonderful thing?  I think question/idea you bring up is a
-important issue (and big one).  I have written the rest of email twice now
-and still not happy with results.
+Is coherence, at the level we are discussing needed or wanted?  Or is what
+is needed/wanted is a translation mechanism to "seamlessly move between
+job-ticket representation"?
 
-I want to think on it more before responding.
+Coherence to me and in this context would mean consuming any job-ticket
+format and outputting a common (read as coherent) job-ticket representation.
 
-Glen
 
+          JDF -----\
+                   \
+          MJT ----->---->>> common job-ticket representation 
+                   /
+          XYZ JT --/
+
+A translation mechanism says "take what I got and give me something I can
+use".
+
+          JDF <<<<<<<<
+                      ^  MJT becames a JDF
+          MJT >>>>>>>>^
+                   
+          XYZ JT --/
+
+
+I believe in coherence but I also believe the world only needs/wants
+translation.
+
+Therefore, the project as I proposed uses JTAPI to create the translation
+service; as I believe was the originally intended.  When you add the concept
+of a binary (internal) job-ticket representation writer/reader you can
+achieve a small degree of coherence or at least start a path to coherence.
+
+I also designed the project to accept only a few variations of a MJT.  This
+is so Lars would not have to process all the possible attribute values of a
+MJT (read this as IPP).  He only needs to concentrate on the one in the
+pre-defined MJTs and focus his development time on the core JTAPI code.  I
+had to scope the project as a summer project but tried to figure out how to
+structure the activity so that is could continue afterwards. 
+
+Therefore, let's leave MJT as is.   I actually picked MJT because I
+understood it to be simplified job-ticket based on IPP and PWG content.   
+
+gwp 
+
+p.s. 
+
+Isn't defining the second standard suggested below creating another
+job-ticket format?  If we are going to do that then I would rather spend the
+time create the specification for the binary (internal) job-ticket
+representation discussed above.  
+
+gwp 
 
 > -----Original Message-----
 > From: Ira McDonald [mailto:blueroofmusic@gmail.com]
