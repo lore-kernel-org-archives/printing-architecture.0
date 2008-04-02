@@ -1,10 +1,13 @@
-Message-ID: <e942fc210804011328s669a39b3p5caef35c265ac829@mail.gmail.com>
-Date: Tue, 1 Apr 2008 22:28:02 +0200
-From: "Cherif YAYA" <chef.ya@gmail.com>
+Message-ID: <47F3CD43.60503@gmail.com>
+Date: Wed, 02 Apr 2008 20:15:31 +0200
+From: Till Kamppeter <till.kamppeter@gmail.com>
 MIME-Version: 1.0
-Content-Type: multipart/alternative; 
-	boundary="----=_Part_28934_29611554.1207081682026"
-Subject: [Printing-architecture] GSoC appliation input
+References: <54C98E13EDB0A647B5470AF6229AEE633C1267@JPESWA303.apo.epson.net>
+In-Reply-To: <54C98E13EDB0A647B5470AF6229AEE633C1267@JPESWA303.apo.epson.net>
+Content-Type: text/plain; charset=UTF-8; format=flowed
+Content-Transfer-Encoding: 7bit
+Subject: Re: [Printing-architecture] OpenPrinting Meeting on the LF Summit
+ in Austin: Any ideas fo r the slot from 9:15am to 11:30am?
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -14,37 +17,38 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: printing-architecture@lists.linux-foundation.org
+To: Nagasaka Fumio <Nagasaka.Fumio@exc.epson.co.jp>
+Cc: "Petrie, Glen" <glen.petrie@eitc.epson.com>, 'George Liu' <george.liu@ricoh-tech.com>, "'SHIDA,
+	Keisho'" <shida.keisho@canon.co.jp>, "SUFFIELD,
+	DAVID (HP-Vancouver, ex1)" <david.suffield@hp.com>, printing-summit@lists.linux-foundation.org, "'toratani.yasumasa@canon.co.jp'" <toratani.yasumasa@canon.co.jp>, printing-architecture@lists.linux-foundation.org
 
-------=_Part_28934_29611554.1207081682026
-Content-Type: text/plain; charset=ISO-8859-1
-Content-Transfer-Encoding: 7bit
-Content-Disposition: inline
+Nagasaka Fumio wrote:
+> Hi,
+> 
+> I would be happy to share information and status of Open Printing Japan,
+> but it will take only 30 - 40 minutes. 
 
-Hi,
-I'm a student applying to participate in the Google Summer of Code 2008.
-Last sunday, I submitted an application for the CUPS implementation of the
-PAPI. Since Google is giving us another week extension, I'd like to use that
-time to improve my application.
-In my proposal, I outlined a few guidelines I intend to follow for the
-implementation  (for example the use of libcups for some of the API
-functions). I'd very much appreciate to get some input  from the working
-group members and developers about that proposal. That'd certainly help me
-to further understand the needs of the project and modify my proposal
-accordingly to meet the community expectations.
-Thanks.
+Great, so I will schedule this time for you on our meeting. I will 
+schedule 1 hour so that we can discuss. Is this OK?
 
-Cherif YAYA
+> And I would not like to make an impression
+> as if OP-J would be a separated activity. As far as I know OP-J is just a regional
+> membership as a part of Open Printing. I hope this is very common understanding.
+> 
 
-------=_Part_28934_29611554.1207081682026
-Content-Type: text/html; charset=ISO-8859-1
-Content-Transfer-Encoding: 7bit
-Content-Disposition: inline
+Yes, this is important. There is only one OpenPrinting organization. And 
+this organization has Japanese, US, European (and wherever else) members.
 
-Hi,<br>I&#39;m a student applying to participate in the Google Summer of Code 2008. Last sunday, I submitted an application for the CUPS implementation of the PAPI. Since Google is giving us another week extension, I&#39;d like to use that time to improve my application.<br>
+If you do not mind discussing your work in English I would appreciate if 
+you move your discussion from the printing-japan to the 
+printing-architecture mailing list. This would improve communication 
+within OpenPrinting a lot.
 
-In my proposal, I outlined a few guidelines I intend to follow for the implementation&nbsp; (for example the use of libcups for some of the API functions). I&#39;d very much appreciate to get some input&nbsp; from the working group members and developers about that proposal. That&#39;d certainly help me to further understand the needs of the project and modify my proposal accordingly to meet the community expectations.<br>
+OpenPrinting in Japan has done great work, especially with the 
+OpenPrinting Vector (OPVP, PDAPI) driver interface and the CUPS filters 
+for the PDF workflow (only a few are missing and I am trying to complete 
+these via the Google Summer of Code).
 
-Thanks.<br><br>Cherif YAYA<br><br>
+    Till
 
-------=_Part_28934_29611554.1207081682026--
+
