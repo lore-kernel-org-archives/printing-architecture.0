@@ -1,10 +1,9 @@
-Date: Thu, 10 Apr 2008 11:50:42 +0900
-From: TORATANI Yasumasa <toratani.yasumasa@canon.co.jp>
-Message-Id: <20080410111019.77F2.TORATANI.YASUMASA@canon.co.jp>
+Message-ID: <2F7D63A21DB2C74EB8EB8C09AF667DB0152D37B5@eitc220.eitc.epson.com>
+From: "Petrie, Glen" <glen.petrie@eitc.epson.com>
+Date: Mon, 21 Apr 2008 15:09:30 -0700
 MIME-Version: 1.0
-Content-Type: text/plain; charset="US-ASCII"
-Content-Transfer-Encoding: 7bit
-Subject: [Printing-architecture] Proposals to LSB 4.0
+Content-Type: text/plain
+Subject: Re: [Printing-architecture] Partner Ship for Next Summit Meeting
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -14,76 +13,36 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Till Kamppeter <till.kamppeter@gmail.com>
-Cc: printing-architecture@lists.linux-foundation.org, printing-japan@lists.linux-foundation.org
+To: printing-architecture@lists.linux-foundation.org
 
-Hi Till and OpenPrinting Japan members,
+All,
 
-When we had the OpenPrinting f2f meeting in Tokyo on Apr 3rd, 
-we discussed the "Printing and the LSB 4.0" requirements.
+I have just returned from both the Linux Foundation Collaboration Summit and
+the PWG Face-Two-Face Meetings.   At both meetings the issues and side-bar
+discussion of joint meeting was discussed.  The conclusion from both
+meetings was that the Open-Printing group should move it partnership and,
+thus, joint meetings from the PWG to the Linux Foundation Summit, the KDE
+Desktop and Gnome Desktop conferences/summits/meetings.  
 
-Attendees at the meeting were;
-Miyata (Avasys),
-Olaf (Avasys),
-Kanjo (BBR),
-Otani (BBR),
-Chigusa (Ricoh),
-Ogasawara (Ricoh),
-Saitoh (NEC Soft)
-Mihara (FUJI XEROX),
-Owa (FUJI XEROX),
-Uoshima (FUJI XEROX),
-Sekiguchi (Konica Minolta),
-Toratani (Canon)
-Kunai (The Linux Foundation),
+This now make more sense as we all see the Open-Printing activities moving
+from architecture and sub-system work to integration with Desktop and Linux
+Distributions along with implementation of existing Open-Printing
+specifications. 
 
-And the results of the discussion were as following.
-(To Japan side members: Please add/modify the comment above if you need)
+With the existing cross-membership of individuals in both the PWG and
+Open-Printing, I don't believe there will be any loss in connectivity
+between the PWG and Open-Printing.  However, based on the actual
+results/interactions of the last Linux Foundation Summit, we need to create
+new alliances with the other Linux Foundation groups and Linux Foundation
+collaborating (desktop) groups.
 
-- LSB 3.2 Printing specification defines "At least the following devices must be
-present: cups (CUPS Raster), ijs, pxlmono, pxlcolor, and opvp (OpenPrinting Vector). "
-http://refspecs.linux-foundation.org/LSB_3.2.0/LSB-Printing/LSB-Printing/gs.html
-We believe that LSB 4.0 should be upper compatible with LSB 3.2, and LSB 4.0
-should include all the above Ghostscript devices.
+Therefore, I would like the question of Open-Printing partnership
+realignment on the agenda for the next Open-Printing Steering Committee
+Meeting.  Further, assuming acceptance of this realignment, I would like to
+have a discussion of specific summits/meetings/forums that we should try to
+join over the next year or so. And, in addition, what specific goals we
+should achieve at each of the specific summits/meetings/forums.
 
-Additionally, we've defined the new OpenPrinting Vector specification and have
-already developed and tested the new Ghostscript device "opvp" which is
-*compatible* with the former "opvp". See page 3 and 4 of the slide;
-https://www.linux-foundation.org/images/4/43/LFSummit-2008-OPWGJapanActivities-OPVP-Final.pdf
-Same test suiete can be used for the new "opvp" testing, thus we believe
-there is no problem that LSB 4.0 has the same definition as LSB 3.2 which
-includes the Ghostscript "opvp" device.
+gwp
 
-On the other hand, if LSB 4.0 will define more detailed API of each devices,
-including ijs, pxlmono, pxlcolor and opvp, we should consider when most Linux distros
-will include Ghostscript which includes the new "opvp" device which is based
-on the new OpenPrinting Vector API. We discussed this issue, and our conclusion
-at the f2f meeting was, from the view point of the LSB 4.0 time schedule, a few
-major Linux distros may include the new Ghostscript, but *not* enough time for
-most distros, and thus, the detailed OpenPrinting Vector API will not be able to
-be included in LSB 4.0.
-
-- We still develop printer drivers which can work under CUPS 1.1 and 1.2 for
-backward compatibility. We are glad if CUPS 1.2 will be included in LSB 4.0,
-on the other hand, we do not have a strong requirement that LSB 4.0 should
-include CUPS 1.2.
-
-- We are not sure LSB 3.2 defines the "Path to store the PPD files".
-If the path is not defined clearly in LSB 3.2, we strongly request that
-LSB 4.0 should define it.
-
-- For SANE, we worry about that the project roadmap of SANE.
-Actually, we are preparing many drivers under SANE, however, we are not sure
-SANE2 will replace the genuine SANE interface in the near future with keeping
-the backward compatibility. If the new SANE interface will not keep the
-compatibility with today's SANE, and if most Linux distro will switch from
-today's SANE to the new SANE and will not support today's SANE in the near
-future, from the view point of LSB backward compatibility, we should consider
-to postpone to include the SANE in LSB 4.0.
-
-
-Regards,
-
------------------------------------------
-TORATANI Yasumasa
 
