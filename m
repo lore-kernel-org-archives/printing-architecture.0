@@ -1,14 +1,14 @@
-Date: Wed, 23 Apr 2008 20:08:48 +0200
-From: Klaus Singvogel <kssingvo@suse.de>
-Message-ID: <20080423180848.GA19456@suse.de>
+Message-ID: <480F9127.5090308@gmail.com>
+Date: Wed, 23 Apr 2008 21:42:31 +0200
+From: Till Kamppeter <till.kamppeter@gmail.com>
+MIME-Version: 1.0
 References: <2F7D63A21DB2C74EB8EB8C09AF667DB0152D3819@eitc220.eitc.epson.com>
-	<480F68C5.4070508@gmail.com>
-Mime-Version: 1.0
-Content-Type: text/plain; charset=us-ascii
-Content-Disposition: inline
-In-Reply-To: <480F68C5.4070508@gmail.com>
+	<480F68C5.4070508@gmail.com> <20080423180848.GA19456@suse.de>
+In-Reply-To: <20080423180848.GA19456@suse.de>
+Content-Type: text/plain; charset=UTF-8; format=flowed
+Content-Transfer-Encoding: 7bit
 Subject: Re: [Printing-architecture] LF Collaboration Summit Open Printing
-	Minutes from Glen Petrie
+ Minutes from Glen Petrie
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -18,36 +18,52 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Till Kamppeter <till.kamppeter@gmail.com>
+To: Klaus Singvogel <kssingvo@suse.de>
 Cc: "Petrie, Glen" <glen.petrie@eitc.epson.com>, printing-architecture@lists.linux-foundation.org
 
-Till Kamppeter wrote:
-[...]
-> > --- Glen is worried of extensibility of the dialog for manufacture.
-> >
+Klaus Singvogel wrote:
+> Till Kamppeter wrote:
+> [...]
+>>> --- Glen is worried of extensibility of the dialog for manufacture.
+>>>
+>> Manufacturer extensions cannot be done by means of executable code, as 
+>> printer drivers run on the server and server and client can be different 
+>> architectures. Manufacturer extensions can only be done by PPD options, 
+>> the custom options of CUPS allow extended data formats.
+> [...]
 > 
-> Manufacturer extensions cannot be done by means of executable code, as 
-> printer drivers run on the server and server and client can be different 
-> architectures. Manufacturer extensions can only be done by PPD options, 
-> the custom options of CUPS allow extended data formats.
-[...]
+> I agree.
+> 
+> But want to point out that manufacturers should also keep in mind,
+> that there is no _our_ nor any _single_ printer on _the_ only USB
+> port.
+>
 
-I agree.
+See for example the Brother drivers, you cannot install two of them on 
+the same machine (independent of the connection type), due to common 
+files. Bad for good customers of Brother, who want to use more than one 
+Brother printer. I have found a volunteer and mentored him through 
+making these drivers distro friendly. It was a HUGE effort for him to 
+make 14 simultaneously installable Ubuntu packages out of ~200 .deb 
+packages provided by Brother:
 
-But want to point out that manufacturers should also keep in mind,
-that there is no _our_ nor any _single_ printer on _the_ only USB
-port.
+https://bugs.launchpad.net/bugs/25966
+https://bugs.launchpad.net/bugs/219509
 
-Means: LSB team should remember manufacturers regularly to avoid using
-a direct communication to "/dev/usb/lp*" (or similar) to a printer in
-their drivers.
+This made me adding several new items to the driver design guidelines:
 
-Thanks in advance.
+http://www.linux-foundation.org/en/OpenPrinting/WritingAndPackagingPrinterDrivers
+http://www.linux-foundation.org/en/OpenPrinting/WritingAndPackagingPrinterDrivers#What_to_do_and_what_not_to_do
 
-Kindly regards,
-	Klaus.
--- 
-Klaus Singvogel  -  Maxfeldstr. 5  -  90409 Nuernberg  -  Germany
-Phone: +49-911-74053-0
-GnuPG-Key-ID: 1024R/5068792D  1994-06-27
-SUSE LINUX Products GmbH,  GF: Markus Rex,  HRB 16746 (AG Nuernberg)
+> Means: LSB team should remember manufacturers regularly to avoid using
+> a direct communication to "/dev/usb/lp*" (or similar) to a printer in
+> their drivers.
+>
+
+Mike Sweet tries to move distros and driver developers away from this 
+bad behavior by not supporting URIs like usb:///dev/usb/lp0 with his 
+"usb" CUPS backend.
+
+But anyway, good point you mention here. I will add it to my guidelines.
+
+    Till
