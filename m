@@ -1,13 +1,11 @@
-Message-ID: <4810B1EF.2000604@gmail.com>
-Date: Thu, 24 Apr 2008 18:14:39 +0200
+Message-ID: <481101A3.6030700@gmail.com>
+Date: Thu, 24 Apr 2008 23:54:43 +0200
 From: Till Kamppeter <till.kamppeter@gmail.com>
 MIME-Version: 1.0
-References: <2F7D63A21DB2C74EB8EB8C09AF667DB0152D383C@eitc220.eitc.epson.com>
-In-Reply-To: <2F7D63A21DB2C74EB8EB8C09AF667DB0152D383C@eitc220.eitc.epson.com>
 Content-Type: text/plain; charset=UTF-8; format=flowed
 Content-Transfer-Encoding: 7bit
-Subject: Re: [Printing-architecture] LF Collaboration Summit Open	Printin
- gMinutes from Glen Petrie
+Subject: [Printing-architecture] Coding the Common Printing Dialog and its
+	interface
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -17,142 +15,138 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: "Petrie, Glen" <glen.petrie@eitc.epson.com>
-Cc: printing-architecture@lists.linux-foundation.org, Jonathan Riddell <jriddell@ubuntu.com>, Alexander Wauck <alex.wauck@gmail.com>
+To: Alexander Wauck <alex.wauck@gmail.com>, Lars Uebernickel <larsuebernickel@gmx.de>
+Cc: printing-architecture@lists.linux-foundation.org, Peter Sikking <peter@mmiworks.net>, Jonathan Riddell <jriddell@ubuntu.com>
 
-Lars, Alexander, and Jonathan, can you all subscribe to the 
-printing-architecture mailing list and do all discussion concerning the 
-specifications of the Common Printing Dialog and the interface between 
-application and dialog here on the printing-architecture mailing list, 
-so that printer manufacturers and others can participate?
+Hi,
 
-Thanks.
+here I post some bits about the coordination of the coding of the Common 
+Printing Dialog. They are results of our discussion on the OpenPrinting 
+Meeting on the Linux Foundation Summit in Austin:
+
+https://www.linux-foundation.org/en/OpenPrinting/LFSummitAustin2008
+https://lists.linux-foundation.org/pipermail/printing-architecture/2008/001351.html
+    (and follow-ups)
+
+There are two students in the Google Summer of Code to implement the dialog:
+
+Lars Uebernickel will code the interface between applications and the 
+printing dialog, so that the dialog gets exchangeable, for example one 
+can let the GNOME/GTK printing dialog appear when a KDE app is used on a 
+GNOME desktop. This will also allow to plug the OpenUsability printing 
+dialog.
+
+Alexander Wauck will code the Common Printing Dialog itself as designed 
+by OpenUsability.
+
+These students will have Jonathan Riddell, developer of dual-UI (KDE and 
+GNOME) apps, as principal mentor. Co-mentoring is done by me (printing 
+infrastructure coordination) and Josef Spillner (expert on automated 
+dialog generation, so more for the dialog itself).
+
+See also http://code.google.com/soc/2008/linux/about.html
+
+During the coding of the dialog projects we must create the following 
+specs, and these must get finished before the Linux Foundation Japan 
+Symposium in Tokyo on July 8. Peter Sikking (OpenUsability) and me will 
+present the dialog and the specs there.
+
+1. PPD extensions (and Foomatic extensions) for driver
+    developers/printer manufacturers: Here we have to list special
+    keywords and standard parameters added to the Adobe specs so that the
+    driver designer can m ake use of all features of the dialog:
+
+     - Tagging options to put them into categories like "Paper Saving",
+       "Printout Quality", ... An option should be able to have more than
+       one tag
+     - Marking one option to be used for the quick selection buttons of
+       the standard view of the OpenUsability dialog
+     - CUPS custom options to allow advanced data types, like for user
+       names, passwords, fax numbers, numerical parameters
+     - CUPS multi-language extensions for multi-language PPDs
+     - UU-encoded icons for options and choices, to allow easier
+       understanding of options and also to allow manufacturers to inject
+       some corporate identity into the dialog.
+
+2. Interface between application and dialog. On the OpenPrinting Meeting
+    on the LF Summit in Austin we have discussed what the application has
+    to communicate with the printing dialog. It looks more or less like
+    this:
+
+     - User clicks "Print": Application generates PDF from the document
+       and sends it to the dialog, along with the list of
+       application-specific options (all choices, ranges, icons, ...) and
+       their settings, application-specific constraints for the printer
+       or CUPS options, printer option settings and queue selection which
+       were saved with the document, window ID of the application (to
+       inform app when dialog gets killed).
+     - Dialog loads list of print queues from CUPS, options for the
+       currently selected queue, and shows the PDF in the preview and the
+       quick selection buttons of the current printer. The dialog reports
+       its window ID back to the app.
+     - If user changes application-specific options, new settings are
+       reported back to the app immediately and app sends new, updated
+       PDF.
+     - If user changes printer-specific options, CUPS options, or the
+       print queue, nothing is reported back to the app. The preview
+       gets updated.
+     - If user clicks "Print" in the dialog, the PDF as it is currently
+       is sent off into the print queue, along with a list of the
+       settings for the CUPS options and the printer-specific options.
+       The choice of the queue, the CUPS option settings and the settings
+       of the printer-specific options are reported back to the
+       application, so that the application can save them with the
+       document to be used on the next printout.
+
+    Suggested data formats and wire protocols:
+
+     - Use DBUS for exchanging data between the app process and the
+       dialog process.
+     - Everything except the PDF data stream goes through the DBUS, for
+       the PDF data stream we use sockets.
+     - The application specific options and constraints with all choices,
+       tags, icons, can be submitted in PPD format, using the PPD
+       extensions of spec 1.
+     - Option setting lists can be exchanged as simple key-value pairs
+       ("opt1=choiceA opt2=choiceC ...")
+     - Print queue choice and window ID can be exchanged as simple ASCII
+     - If ASCII text pieces are too big, exchange them gzipped
+
+3. How the OpenUsability dialog itself has to look like and how it is
+    operated.
+
+     - See Peter Sikking's blog
+       http://www.mmiworks.net/eng/publications/labels/openPrinting.html
+     - Peter is working with a student on the specs.
+
+
+For part 1 of the specs I will post suggestions soon.
+
+Part 2 will be mainly determined by Lars and part 3 by Peter.
+
+As Lars's modularization of the printing dialog is not restricted to the 
+OpenUsability printing dialog part 2 needs perhaps some additional 
+features (are the features shown above also enough for the standard KDE 
+and GNOME print dialogs?)
+
+To let the two projects not depend on each other too early but allow 
+them to be coupled near the end of the Google Summer of Code, one can 
+proceed as follows:
+
+Alexander will start coding the dialog simply coupled to one reference 
+application, so that one can demo it in Tokyo.
+
+Lars will use the the standard KDE and/or GNOME dialogs as the Common 
+Printing Dialog at first. He will define the DBUS communication and 
+write glue code for the dialog side and the app side. The glue code on 
+the app side can be patches to the printing libraries of the desktops, 
+so that ideally existing apps stay using the current APIs and do not 
+need to be modified. The whole thing can be even delivered as patches to 
+the printing libraries of the desktops.
+
+I hope this is a good start of information for all parties to get into 
+this project.
+
+Any suggestions for improvement are welcome.
 
     Till
-
-
-Petrie, Glen wrote:
-> Finally catching up with email...
-> 
-> General request; Can the specification development content of GSoC
-> activities be openly communicated on the mail-list __during__ the
-> development.  Manufactures and others may have comments or needs to be
-> added/considered.
-> 
-> 
-> 
-> <...snip...>
-> 
->>>    1. Define a specification for machine readable print setting at the
->>>       doc, app and desktop level.
->>       Will be part of Lars' GSoC work on the application/printing dialog
->>       interface
-> 
-> [gwp] can this part be openly discussed on the mail-list, so others can
-> understand and participate?
-> 
-> 
-> 
-> <...snip...>
-> 
->>>    2. Define a set of simple top level state/status indicators for top
->>>       level of the Common Print Dialog.
->>       We will tell Lars and Alex Wauck (implementation of the dialog
->>       itself in the GSoC) about taking into account this,
-> 
-> [gwp] Can this part be openly discussed on the mail-list.  There may be
-> manufacture specific indicators (number of, state of, etc)?
-> 
-> 
-> 
-> <...snip...>
-> 
->> Manufacturer extensions cannot be done by means of executable code, as
->> printer drivers run on the server and server and client can be different
->> architectures. Manufacturer extensions can only be done by PPD options,
->> the custom options of CUPS allow extended data formats.
->>
->>> -- Should application be able to restrict options?
->>>
->> This is a good idea, will pass it on to the GSoC students who will work
->> on the dialog.
-> 
-> [gwp] How does an application "know" / "understand" what the manufacture
-> extensions/options actually do?  So an application can't really do more than
-> simply turn off manufacture extensions/options.
-> 
-> 
-> 
-> <...snip...>
-> 
->>> = Like in Windows, there was an expressed desire for remembering print
->>> setting at the desktop level, the application level and the document
->> level.
->> Will be no big deal: Dialog reports back option settings as simple
->> key/value pairs to app. App keeps them as text and adds them to document
->> file on saving. When dialog is opened again, app sends saved options to
->> dialog.
-> 
-> [gwp] This may be a big deal if it requires the document format to change!
-> 
-> 
-> 
-> <...snip...>
-> 
->>> -- Thus the desktop group is looking for a machine readable definition
->>> (specification) of print settings.
->>>
->> Simply use key-value pairs:
->>
->> PageSize=A4
->> Resolution=1200dpi
-> 
-> [gwp] As I remember the conversation; this is exactly what they did not
-> want. They want a binary representation (machine readable, not human
-> readable) definition.  
-> Example
-> 0x07 0x42		(means PageSize(0x07) = A4 (0x42)
-> 0x08 0x04 0xB0	(means Resolution(0x08) = 1200 (0x04 0xB0)
-> 
-> [gwp] We need to get clarification 
-> 
-> 
-> <...snip...>
-> 
->>> = Want the CPD to have a state/status tab.
->>>
->>> -- After some discussion, what the desktop people also wanted was some
->>> very simple indicators in the main CPD window showing the "status"
->>> ("state", "condition", "readiness", "busyness") of the printer.   That
->>> is, they want to know that the printer is really ready/available for
->>> printing.  Is the printer out of ink, is the print out of paper, is the
->>> printer busy, is the printer online.   The idea was that the indicators
->>> are simple colored boxes.  For example, a box for ink-level is green if
->>> ink/toner level is ok, blue if ink/toner low, red if ink/toner out.
->>> Same for the other status items.  The user could go to the state/status
->>> tab if they need more information.
->>>
->> Dialog could poll status from CUPS and show it somewhere.
-> 
-> [gwp]  The desktop people stated the "somewhere" should be the main dialog
-> window/view.  The user should not have to go to a tab to get this info.
-> 
-> 
-> <...snip...>
-> 
->>> = The desktop group would like to see the CPD be a plug-in solution
->>> versus a separate process.
->>>
->> Problems of plug-in: Dialog and app is one process, dialog and app
->> cannot be of arbitrary licenses then, crash of dialog would crash app.
-> 
-> [gwp] Then I support separate process model.
-> 
-> 
-> gwp
-> _______________________________________________
-> Printing-architecture mailing list
-> Printing-architecture@lists.linux-foundation.org
-> https://lists.linux-foundation.org/mailman/listinfo/printing-architecture
-> 
-
