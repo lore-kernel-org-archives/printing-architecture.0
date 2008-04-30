@@ -1,14 +1,10 @@
-Message-ID: <4818D949.5040605@gmail.com>
-Date: Wed, 30 Apr 2008 22:40:41 +0200
-From: Till Kamppeter <till.kamppeter@gmail.com>
+Message-ID: <e942fc210804301454u28afdf5cx248eeb7c257277a7@mail.gmail.com>
+Date: Wed, 30 Apr 2008 23:54:45 +0200
+From: "Cherif YAYA" <chef.ya@gmail.com>
 MIME-Version: 1.0
-References: <481101A3.6030700@gmail.com> <4818BB7F.50603@gmail.com>
-	<b801b6f40804301312m3a97c2eie3257cd339865be@mail.gmail.com>
-In-Reply-To: <b801b6f40804301312m3a97c2eie3257cd339865be@mail.gmail.com>
-Content-Type: text/plain; charset=UTF-8; format=flowed
-Content-Transfer-Encoding: 7bit
-Subject: Re: [Printing-architecture] Coding the Common Printing Dialog and
- its interface
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_3853_27439944.1209592485736"
+Subject: [Printing-architecture] GSoC : PAPI for CUPS
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -18,57 +14,43 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Alex Wauck <alex.wauck@gmail.com>, Peter Sikking <peter@mmiworks.net>
-Cc: printing-architecture@lists.linux-foundation.org
+To: printing-architecture@lists.linux-foundation.org
+Cc: Norm Jacobs <Norm.Jacobs@sun.com>
 
-Peter, can you help Alex here?
+------=_Part_3853_27439944.1209592485736
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline
 
-Peter, can you also subscribe to the printing-architecture mailing list, 
-as here the discussion about the implementation of the Common Printing 
-Dialog will happen. Subscription via
+Hi,
+I am Cherif YAYA and I'm one of the accepted GSoC students. I'll be working
+on the implementation of the Open Printing API for CUPS. The goal is to
+develop a native implementation of the PAPI as opposed to using an
+intermediary layer (such as the IPP protocol) to communicate with CUPS.
+Therefore I'll be using functions calls from libcups for the implementation.
+A more detailed abstract can be found at
+http://code.google.com/soc/2008/linux/appinfo.html?csaid=299BBA6CA11C146C .
+I am being mentored by Norm Jacobs from Sun. I still need to work out some
+technical details with Norm. But I intend to start coding as soon as
+possible. I set up a web blog at http://cherif.ycsoft.org/blog/ . I'll be
+posting  weekly updates of my progress there.
+I believe that implementing the Printing API natively in CUPS can really
+help foster the use of the PAPI and I'll put my best into building an
+implementation as decent as possible.  Any suggestion for improvement is
+welcome.
 
-https://lists.linux-foundation.org/mailman/listinfo/printing-architecture
+Cherif
 
-    Till
+------=_Part_3853_27439944.1209592485736
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline
 
-Alex Wauck wrote:
-> One comment so far: in the "dialog specification" section, it only 
-> mentions the three columns in the middle part of the dialog.  Then, in 
-> the "Dialog Zones Specification" section, it adds a zone that spans 
-> columns 2 and 3.  That has very different consequences for the 
-> implementation than simply having three columns.  It looks like the 
-> level 3 dialog always has that zone, so perhaps the first specification 
-> should mention it?
-> 
-> Alex
-> 
-> On Wed, Apr 30, 2008 at 1:33 PM, Till Kamppeter 
-> <till.kamppeter@gmail.com <mailto:till.kamppeter@gmail.com>> wrote:
-> 
->     Till Kamppeter wrote:
-> 
->         3. How the OpenUsability dialog itself has to look like and how
->         it is
->           operated.
-> 
->            - See Peter Sikking's blog
->            
->          http://www.mmiworks.net/eng/publications/labels/openPrinting.html
->            - Peter is working with a student on the specs.
-> 
-> 
->     Peter has started to write down the specs here:
-> 
->     http://wiki.openusability.org/printing/index.php/Specification
-> 
->       Till
-> 
-> 
-> 
-> ------------------------------------------------------------------------
-> 
-> _______________________________________________
-> Printing-architecture mailing list
-> Printing-architecture@lists.linux-foundation.org
-> https://lists.linux-foundation.org/mailman/listinfo/printing-architecture
+Hi,<br>I am Cherif YAYA and I&#39;m one of the accepted GSoC students. I&#39;ll be working on the implementation of the Open Printing API for CUPS. The goal is to develop a native implementation of the PAPI as opposed to using an intermediary layer (such as the IPP protocol) to communicate with CUPS. Therefore I&#39;ll be using functions calls from libcups for the implementation. A more detailed abstract can be found at <a href="http://code.google.com/soc/2008/linux/appinfo.html?csaid=299BBA6CA11C146C" target="_blank">http://code.google.com/soc/2008/linux/appinfo.html?csaid=299BBA6CA11C146C</a> .<br>
 
+I am being mentored by Norm Jacobs from Sun. I still need to work out some technical details with Norm. But I intend to start coding as soon as possible. I set up a web blog at <a href="http://cherif.ycsoft.org/blog/" target="_blank">http://cherif.ycsoft.org/blog/</a> . I&#39;ll be&nbsp; posting&nbsp; weekly updates of my progress there.<br>
+I believe that implementing the Printing API natively in CUPS can really help foster the use of the PAPI and I&#39;ll put my best into building an implementation as decent as possible.&nbsp; Any suggestion for improvement is welcome.<br>
+
+<br>Cherif<br>
+
+------=_Part_3853_27439944.1209592485736--
