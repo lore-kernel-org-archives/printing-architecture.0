@@ -1,16 +1,13 @@
-Message-ID: <4819F84F.40501@gmail.com>
-Date: Thu, 01 May 2008 19:05:19 +0200
+Message-ID: <481A017F.5010006@gmail.com>
+Date: Thu, 01 May 2008 19:44:31 +0200
 From: Till Kamppeter <till.kamppeter@gmail.com>
 MIME-Version: 1.0
-References: <481101A3.6030700@gmail.com>
-	<481131B6.5050809@gmail.com>	<4811C5C7.2070803@gmail.com>
-	<4812642B.5040406@gmail.com>	<48145E03.6080505@gmail.com>
-	<4819E5CC.3040106@gmx.de>
-In-Reply-To: <4819E5CC.3040106@gmx.de>
+References: <481212B6.9040301@gmail.com> <4819EE1D.8030502@gmx.de>
+In-Reply-To: <4819EE1D.8030502@gmx.de>
 Content-Type: text/plain; charset=UTF-8; format=flowed
 Content-Transfer-Encoding: 7bit
 Subject: Re: [Printing-architecture] Coding the Common Printing Dialog and
- its interface
+ its interface - PPD and Foomatic extensions
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -25,44 +22,151 @@ Cc: printing-architecture@lists.linux-foundation.org
 
 Lars Uebernickel wrote:
 > Till Kamppeter wrote:
->>> In this case, storing the configs along with the dialog would be enough,
->>> as it would be cross-referenced against printer queue and application
->>> being used.
->>>
->>> You are right, perhaps the application would want to store it matching
->>> against the document being printed. But that could be handled by the
->>> dialog too, it would just be another field or even a matter of defining
->>> a format for that domain name I talked about, "app[/doc hash]"..
->> OpenOffice.org saves printing settings (selected print queue and option 
->> settings) in its documents. To not require OOo to change the feature 
->> with the introduction of the Common Printing Dialog we should support 
->> this in our interface between application and dialog.
+>> Hi,
+>>
+>> here is my suggestion for part 1 of the specs, the extensions for PPDs:
+>>
+>>
+>> 1. Custom options/Advanced data types
+>> -------------------------------------
+>>
+>> We use the CUPS extensions for custom options, so that not only boolean 
+>> and enumerated choice options are posible but also more advanced datatypes:
+>>
+>> - integer numbers
+>> - real numbers - interpreted linearly or exponentially, for example for
+>>   color and brightness adjustments
+>> - lengths in points - for example for margin widths
+>> - strings - for example for user names and fax numbers
+>> - passwords - numerical or alphanumerical
+>>
+>> See section "Custom Options" on
+>> http://www.cups.org/documentation.php/spec-ppd.html
 > 
-> I see two possibilities for this problem:
+> Are there any other datatypes that might be needed often? The more 
+> precise an option is defined in the PPD, the better a gui can show
+> it to the user (and prevent false entries).
 > 
-> (1) Applications can enable/disable the saving of the printing options 
-> via the dialog API. This would mean that OpenOffice can keep its own per 
-> document settings and other applications can take advantage of the 
-> dialogs capabilities for that. But, they need to explicitly tell the 
-> dialog to do so.
+> For example, Ricoh's "UserCode" option, which is basically an 
+> eight-digit number, but should be displayed as a string rather than a 
+> slider or spinbox. This is similar to the 'passcode' option, only in 
+> clear text. If it is exposed as a string, the dialog can not warn a user 
+> if he enters non-digit characters.
 > 
-> (2) Options are always saved on a per application/document basis by the 
-> dialog. The saved options are applied _before_ any application settings 
-> take place. The application will not be notified. Afterwards, the 
-> application sets its own settings, effectively overwriting the saved 
-> ones. So OpenOffice's per document options would still work, and all 
-> other applications would gain the same feature transparently. It would 
-> also keep the API cleaner.
+> If there is a need for additional types like this, we should try to get 
+> them into CUPS as soon as possible, otherwise all kinds of workarounds 
+> might get into the PPDs.
+>
 
-Support both possibilities in a switchable way. Let application 
-developers choose between option saving/remembering per
+CUPS 1.4 seems to be shortly before beta and so shortly before feature 
+freeze. I do not kno whether we will get still something new in, but you 
+should try. Make a feature request for a new custom option, like for 
+example "code" which allows a string of digits in a given length range, 
+but with visible input of the code.
 
-- Document file (saved in document file)
-- Document (saved in personal config directory of the dialog)
-- Application (saved in personal config directory of the dialog)
-- Globally per user (saved in ~/.cups/lpoptions)
+> 
+>  > --- snip ---
+>  >
+>> 3. "Quick Presets" button support
+>> ---------------------------------
+>>
+>> There are two possibilities to describe such buttons in the PPD file 
+>> (and we should support both for maximum flexibility):
+>>
+>> a) One option in the PPD has to be selected to represent the quick 
+>> preset buttons in the default view of the OpenUsability printing dialog. 
+>>  This option will not appear under the tags then, even if it is tagged 
+>> in the PPD. It must be an enumerated choice option where each choice 
+>> will make up one button. We will select it by using the following 
+>> keyword ONCE in the PPD file:
+>>
+>> *OPQuickPresetsOption: PrintoutMode
+>>
+>> In this example "PrintoutMode" is the option selected to make up the 
+>> buttons.
+>>
+>> In Foomatic we could add the tag
+>>
+>> <QuickPresets />
+>>
+>> to one option XML file to select the appropriate option.
+>>
+>> b) With special keywords we define each button and which options it 
+>> should set:
+>>
+>> *OPQuickPresetsButton Document/Office Document: "Resolution=600dpi 
+>> MediaType=Plain"
+>> *OPQuickPresetsButton Photo/Photo: "Resolution=1200dpi MediaType=Glossy"
+>> ...
+> 
+> I think "*OPQuickPreset" suffices. It might not be implemented as
+> buttons in all cases.
+> 
 
-Only in the first case option settings which are not 
-application-specific have to be reported back to the application.
+You mean simply to replace the keyword *OPQuickPresetsButton by 
+*OPQuickPreset here? I think this is a good idea. It is also shorter.
+
+> 
+>> --- snip ---
+>  >
+>> 5. Icons for options and choices
+>> --------------------------------
+>>
+>> Let us also give the possibility to add an icon to every human-readable 
+>> text item in the dialog: option names, choice names, tag names. ...
+>>
+>> To not need to invent too many new keywords, let us simply add 
+>> "translations" with the language code "OPIcon" for option choices and 
+>> let them have the base-64-UU-encoded icon, either a PNG image or SVG 
+>> drawing as its code:
+>>
+>> *OPIcon.InputSlot Auto: "begin-base64 644 InputSlot-Auto.png
+>> iVBORw0KGgoAAAANSUhEUgAAAOAAAAC6CAMAAACA5rFCAAADAFBMVEX/////
+>> /8z/zP//zMz/zGb/zDP/zAD/mWb/mTP/mQD/Zmb/MzPM///M/8zM/zPMzP/M
+>> zMzMzJnMzGbMzDPMzADMmf/MmczMmZnMmWbMmTPMmQDMZjPMZgCZzP+ZzMyZ
+>> ...
+>> 4SfnV38C83lfZ0FU5/N58n1aZI2z2fxfwOTVfkPrH2h/Luv33J7bc3tuz+25
+>> Pbfn9tye25+5/T9t163O+/ghTQAAAABJRU5ErkJggg==
+>> ===="
+>> *End
+>>
+>> For main keywords lets use
+>>
+>> *OPIcon InputSlot: "begin-base64 644 InputSlot.png
+>> iVBORw0KGgoAAAANSUhEUgAAAOAAAAC6CAMAAACA5rFCAAADAFBMVEX/////
+>> ..."
+>> *End
+> 
+> Will those icons only be defined in the PPD files? This could mean that
+> the options and tags have different icons for different printers 
+> (especially if they are from different vendors), which might be 
+> confusing. Wouldn't it make sense to have a set of standard icons for 
+> the most common options (such as PaperSize), and only use custom icons 
+> for options which are specific to a printer/vendor?
+>
+
+We can do it as follows:
+
+We let the dialog provide standard icons, and they are used as long as 
+the appropriate option or choice in the PPD does not bring its own icon. 
+If neither the dialog nor the PPD has an icon, the option or choice 
+stays without icon.
+
+In the specs we should give a list of the icons we provide and also info 
+about the desired size for icons provided by the PPD. The dialog should 
+scale icons which are of unsuitable size though.
+
+> 
+>> For a manufacturer-specific picture (logo or so) let us use '*OPIcon 
+>> Manufacturer: "..."' and for a model-specific picture (image of the 
+>> printer or so) let us use '*OPIcon ModelName: "..."'.
+> 
+> Where will the logo appear in the dialog? If we reserve space for it 
+> somewhere in the dialog, we should probably publish some some size 
+> restrictions for it (or at least an aspect ratio).
+> 
+
+Yes, we should give an aspect ratio, perhaps even more than one scheme 
+(horizontal top banner, left side banner, ...).
 
     Till
