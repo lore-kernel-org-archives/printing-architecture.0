@@ -1,14 +1,15 @@
-Message-ID: <b801b6f40805010844ka80fd30o64e1df4b525e00e2@mail.gmail.com>
-Date: Thu, 1 May 2008 10:44:07 -0500
-From: "Alex Wauck" <alex.wauck@gmail.com>
-In-Reply-To: <b801b6f40804301312m3a97c2eie3257cd339865be@mail.gmail.com>
+Message-ID: <4819E5CC.3040106@gmx.de>
+Date: Thu, 01 May 2008 17:46:20 +0200
+From: Lars Uebernickel <larsuebernickel@gmx.de>
 MIME-Version: 1.0
-Content-Type: multipart/alternative; 
-	boundary="----=_Part_4071_16898938.1209656647907"
-References: <481101A3.6030700@gmail.com> <4818BB7F.50603@gmail.com>
-	<b801b6f40804301312m3a97c2eie3257cd339865be@mail.gmail.com>
+References: <481101A3.6030700@gmail.com> <481131B6.5050809@gmail.com>
+	<4811C5C7.2070803@gmail.com> <4812642B.5040406@gmail.com>
+	<48145E03.6080505@gmail.com>
+In-Reply-To: <48145E03.6080505@gmail.com>
+Content-Type: text/plain; charset=UTF-8; format=flowed
+Content-Transfer-Encoding: 7bit
 Subject: Re: [Printing-architecture] Coding the Common Printing Dialog and
-	its interface
+ its interface
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -20,88 +21,48 @@ List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-ar
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
 To: printing-architecture@lists.linux-foundation.org
 
-------=_Part_4071_16898938.1209656647907
-Content-Type: text/plain; charset=ISO-8859-1
-Content-Transfer-Encoding: 7bit
-Content-Disposition: inline
-
-Another comment:
-Forcing the columns to be a particular height is not particularly easy in Qt
-(I don't know how difficult it is in GTK+), and it leads to unexpected
-behavior when resizing the dialog.  Specifically, some resize operations are
-not possible, and the user may not like that.  Is it really necessary to
-force column height?  Perhaps that part of the spec should be relaxed to a
-preferred or minimum height instead of a required height.  I got it to work
-in Qt by subclassing QGridLayout, but it's a bit of a hack, and a real
-solution would likely be much more difficult.
-
-Alex
-
-On Wed, Apr 30, 2008 at 3:12 PM, Alex Wauck <alex.wauck@gmail.com> wrote:
-
-> One comment so far: in the "dialog specification" section, it only mentions
-> the three columns in the middle part of the dialog.  Then, in the "Dialog
-> Zones Specification" section, it adds a zone that spans columns 2 and 3.
-> That has very different consequences for the implementation than simply
-> having three columns.  It looks like the level 3 dialog always has that
-> zone, so perhaps the first specification should mention it?
->
-> Alex
->
->
-> On Wed, Apr 30, 2008 at 1:33 PM, Till Kamppeter <till.kamppeter@gmail.com>
-> wrote:
->
->> Till Kamppeter wrote:
+Till Kamppeter wrote:
+> Marcelo Ricardo Leitner wrote:
+>> Ok, I've no idea how each app converts its data to the print job, but is
+>> that really possible? I mean, rendering page 3 on a browser wouldn't
+>> require pages 1 and 2 be rendered first? Again, no idea here, but the
+>> idea sounds interesting if possible.
 >>
->>> 3. How the OpenUsability dialog itself has to look like and how it is
->>>   operated.
->>>
->>>    - See Peter Sikking's blog
->>>      http://www.mmiworks.net/eng/publications/labels/openPrinting.html
->>>    - Peter is working with a student on the specs.
->>>
->>>
->> Peter has started to write down the specs here:
+> 
+> Such applications will have to rerender the whole document, but many 
+> other do not, like OpenOffice.org, Scribus, photo management software, 
+> ... This is no big problem, as wep pages are not so long and also not 
+> very complex to render, whereas a document in OOo can have several 
+> hundred pages, many fonts, vector-drawn pictures, ...
+> 
 >>
->> http://wiki.openusability.org/printing/index.php/Specification
+>> In this case, storing the configs along with the dialog would be enough,
+>> as it would be cross-referenced against printer queue and application
+>> being used.
 >>
->>   Till
->>
->>
->
+>> You are right, perhaps the application would want to store it matching
+>> against the document being printed. But that could be handled by the
+>> dialog too, it would just be another field or even a matter of defining
+>> a format for that domain name I talked about, "app[/doc hash]"..
+> 
+> OpenOffice.org saves printing settings (selected print queue and option 
+> settings) in its documents. To not require OOo to change the feature 
+> with the introduction of the Common Printing Dialog we should support 
+> this in our interface between application and dialog.
 
-------=_Part_4071_16898938.1209656647907
-Content-Type: text/html; charset=ISO-8859-1
-Content-Transfer-Encoding: 7bit
-Content-Disposition: inline
+I see two possibilities for this problem:
 
-Another comment:<br>Forcing the columns to be a particular height is not particularly easy in Qt (I don&#39;t know how difficult it is in GTK+), and it leads to unexpected behavior when resizing the dialog.&nbsp; Specifically, some resize operations are not possible, and the user may not like that.&nbsp; Is it really necessary to force column height?&nbsp; Perhaps that part of the spec should be relaxed to a preferred or minimum height instead of a required height.&nbsp; I got it to work in Qt by subclassing QGridLayout, but it&#39;s a bit of a hack, and a real solution would likely be much more difficult.<br>
-<br>Alex<br><br><div class="gmail_quote">On Wed, Apr 30, 2008 at 3:12 PM, Alex Wauck &lt;<a href="mailto:alex.wauck@gmail.com">alex.wauck@gmail.com</a>&gt; wrote:<br><blockquote class="gmail_quote" style="border-left: 1px solid rgb(204, 204, 204); margin: 0pt 0pt 0pt 0.8ex; padding-left: 1ex;">
-One comment so far: in the &quot;dialog specification&quot; section, it only mentions the three columns in the middle part of the dialog.&nbsp; Then, in the &quot;Dialog Zones Specification&quot; section, it adds a zone that spans columns 2 and 3.&nbsp; That has very different consequences for the implementation than simply having three columns.&nbsp; It looks like the level 3 dialog always has that zone, so perhaps the first specification should mention it?<br>
-<font color="#888888">
+(1) Applications can enable/disable the saving of the printing options 
+via the dialog API. This would mean that OpenOffice can keep its own per 
+document settings and other applications can take advantage of the 
+dialogs capabilities for that. But, they need to explicitly tell the 
+dialog to do so.
 
-<br>Alex</font><div><div></div><div class="Wj3C7c"><br><br><div class="gmail_quote">On Wed, Apr 30, 2008 at 1:33 PM, Till Kamppeter &lt;<a href="mailto:till.kamppeter@gmail.com" target="_blank">till.kamppeter@gmail.com</a>&gt; wrote:<br>
-<blockquote class="gmail_quote" style="border-left: 1px solid rgb(204, 204, 204); margin: 0pt 0pt 0pt 0.8ex; padding-left: 1ex;">
+(2) Options are always saved on a per application/document basis by the 
+dialog. The saved options are applied _before_ any application settings 
+take place. The application will not be notified. Afterwards, the 
+application sets its own settings, effectively overwriting the saved 
+ones. So OpenOffice's per document options would still work, and all 
+other applications would gain the same feature transparently. It would 
+also keep the API cleaner.
 
-<div>Till Kamppeter wrote:<br>
-<blockquote class="gmail_quote" style="border-left: 1px solid rgb(204, 204, 204); margin: 0pt 0pt 0pt 0.8ex; padding-left: 1ex;">
-3. How the OpenUsability dialog itself has to look like and how it is<br>
- &nbsp; operated.<br>
-<br>
- &nbsp; &nbsp;- See Peter Sikking&#39;s blog<br>
- &nbsp; &nbsp; &nbsp;<a href="http://www.mmiworks.net/eng/publications/labels/openPrinting.html" target="_blank">http://www.mmiworks.net/eng/publications/labels/openPrinting.html</a><br>
- &nbsp; &nbsp;- Peter is working with a student on the specs.<br>
-<br>
-</blockquote>
-<br></div>
-Peter has started to write down the specs here:<br>
-<br>
-<a href="http://wiki.openusability.org/printing/index.php/Specification" target="_blank">http://wiki.openusability.org/printing/index.php/Specification</a><br><font color="#888888">
-<br>
- &nbsp; Till<br>
-<br>
-</font></blockquote></div><br>
-</div></div></blockquote></div><br>
-
-------=_Part_4071_16898938.1209656647907--
