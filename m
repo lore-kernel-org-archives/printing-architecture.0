@@ -1,10 +1,14 @@
-Message-ID: <e942fc210804301454u28afdf5cx248eeb7c257277a7@mail.gmail.com>
-Date: Wed, 30 Apr 2008 23:54:45 +0200
-From: "Cherif YAYA" <chef.ya@gmail.com>
+Message-ID: <b801b6f40805010844ka80fd30o64e1df4b525e00e2@mail.gmail.com>
+Date: Thu, 1 May 2008 10:44:07 -0500
+From: "Alex Wauck" <alex.wauck@gmail.com>
+In-Reply-To: <b801b6f40804301312m3a97c2eie3257cd339865be@mail.gmail.com>
 MIME-Version: 1.0
 Content-Type: multipart/alternative; 
-	boundary="----=_Part_3853_27439944.1209592485736"
-Subject: [Printing-architecture] GSoC : PAPI for CUPS
+	boundary="----=_Part_4071_16898938.1209656647907"
+References: <481101A3.6030700@gmail.com> <4818BB7F.50603@gmail.com>
+	<b801b6f40804301312m3a97c2eie3257cd339865be@mail.gmail.com>
+Subject: Re: [Printing-architecture] Coding the Common Printing Dialog and
+	its interface
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -15,42 +19,89 @@ List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subj
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
 To: printing-architecture@lists.linux-foundation.org
-Cc: Norm Jacobs <Norm.Jacobs@sun.com>
 
-------=_Part_3853_27439944.1209592485736
+------=_Part_4071_16898938.1209656647907
 Content-Type: text/plain; charset=ISO-8859-1
 Content-Transfer-Encoding: 7bit
 Content-Disposition: inline
 
-Hi,
-I am Cherif YAYA and I'm one of the accepted GSoC students. I'll be working
-on the implementation of the Open Printing API for CUPS. The goal is to
-develop a native implementation of the PAPI as opposed to using an
-intermediary layer (such as the IPP protocol) to communicate with CUPS.
-Therefore I'll be using functions calls from libcups for the implementation.
-A more detailed abstract can be found at
-http://code.google.com/soc/2008/linux/appinfo.html?csaid=299BBA6CA11C146C .
-I am being mentored by Norm Jacobs from Sun. I still need to work out some
-technical details with Norm. But I intend to start coding as soon as
-possible. I set up a web blog at http://cherif.ycsoft.org/blog/ . I'll be
-posting  weekly updates of my progress there.
-I believe that implementing the Printing API natively in CUPS can really
-help foster the use of the PAPI and I'll put my best into building an
-implementation as decent as possible.  Any suggestion for improvement is
-welcome.
+Another comment:
+Forcing the columns to be a particular height is not particularly easy in Qt
+(I don't know how difficult it is in GTK+), and it leads to unexpected
+behavior when resizing the dialog.  Specifically, some resize operations are
+not possible, and the user may not like that.  Is it really necessary to
+force column height?  Perhaps that part of the spec should be relaxed to a
+preferred or minimum height instead of a required height.  I got it to work
+in Qt by subclassing QGridLayout, but it's a bit of a hack, and a real
+solution would likely be much more difficult.
 
-Cherif
+Alex
 
-------=_Part_3853_27439944.1209592485736
+On Wed, Apr 30, 2008 at 3:12 PM, Alex Wauck <alex.wauck@gmail.com> wrote:
+
+> One comment so far: in the "dialog specification" section, it only mentions
+> the three columns in the middle part of the dialog.  Then, in the "Dialog
+> Zones Specification" section, it adds a zone that spans columns 2 and 3.
+> That has very different consequences for the implementation than simply
+> having three columns.  It looks like the level 3 dialog always has that
+> zone, so perhaps the first specification should mention it?
+>
+> Alex
+>
+>
+> On Wed, Apr 30, 2008 at 1:33 PM, Till Kamppeter <till.kamppeter@gmail.com>
+> wrote:
+>
+>> Till Kamppeter wrote:
+>>
+>>> 3. How the OpenUsability dialog itself has to look like and how it is
+>>>   operated.
+>>>
+>>>    - See Peter Sikking's blog
+>>>      http://www.mmiworks.net/eng/publications/labels/openPrinting.html
+>>>    - Peter is working with a student on the specs.
+>>>
+>>>
+>> Peter has started to write down the specs here:
+>>
+>> http://wiki.openusability.org/printing/index.php/Specification
+>>
+>>   Till
+>>
+>>
+>
+
+------=_Part_4071_16898938.1209656647907
 Content-Type: text/html; charset=ISO-8859-1
 Content-Transfer-Encoding: 7bit
 Content-Disposition: inline
 
-Hi,<br>I am Cherif YAYA and I&#39;m one of the accepted GSoC students. I&#39;ll be working on the implementation of the Open Printing API for CUPS. The goal is to develop a native implementation of the PAPI as opposed to using an intermediary layer (such as the IPP protocol) to communicate with CUPS. Therefore I&#39;ll be using functions calls from libcups for the implementation. A more detailed abstract can be found at <a href="http://code.google.com/soc/2008/linux/appinfo.html?csaid=299BBA6CA11C146C" target="_blank">http://code.google.com/soc/2008/linux/appinfo.html?csaid=299BBA6CA11C146C</a> .<br>
+Another comment:<br>Forcing the columns to be a particular height is not particularly easy in Qt (I don&#39;t know how difficult it is in GTK+), and it leads to unexpected behavior when resizing the dialog.&nbsp; Specifically, some resize operations are not possible, and the user may not like that.&nbsp; Is it really necessary to force column height?&nbsp; Perhaps that part of the spec should be relaxed to a preferred or minimum height instead of a required height.&nbsp; I got it to work in Qt by subclassing QGridLayout, but it&#39;s a bit of a hack, and a real solution would likely be much more difficult.<br>
+<br>Alex<br><br><div class="gmail_quote">On Wed, Apr 30, 2008 at 3:12 PM, Alex Wauck &lt;<a href="mailto:alex.wauck@gmail.com">alex.wauck@gmail.com</a>&gt; wrote:<br><blockquote class="gmail_quote" style="border-left: 1px solid rgb(204, 204, 204); margin: 0pt 0pt 0pt 0.8ex; padding-left: 1ex;">
+One comment so far: in the &quot;dialog specification&quot; section, it only mentions the three columns in the middle part of the dialog.&nbsp; Then, in the &quot;Dialog Zones Specification&quot; section, it adds a zone that spans columns 2 and 3.&nbsp; That has very different consequences for the implementation than simply having three columns.&nbsp; It looks like the level 3 dialog always has that zone, so perhaps the first specification should mention it?<br>
+<font color="#888888">
 
-I am being mentored by Norm Jacobs from Sun. I still need to work out some technical details with Norm. But I intend to start coding as soon as possible. I set up a web blog at <a href="http://cherif.ycsoft.org/blog/" target="_blank">http://cherif.ycsoft.org/blog/</a> . I&#39;ll be&nbsp; posting&nbsp; weekly updates of my progress there.<br>
-I believe that implementing the Printing API natively in CUPS can really help foster the use of the PAPI and I&#39;ll put my best into building an implementation as decent as possible.&nbsp; Any suggestion for improvement is welcome.<br>
+<br>Alex</font><div><div></div><div class="Wj3C7c"><br><br><div class="gmail_quote">On Wed, Apr 30, 2008 at 1:33 PM, Till Kamppeter &lt;<a href="mailto:till.kamppeter@gmail.com" target="_blank">till.kamppeter@gmail.com</a>&gt; wrote:<br>
+<blockquote class="gmail_quote" style="border-left: 1px solid rgb(204, 204, 204); margin: 0pt 0pt 0pt 0.8ex; padding-left: 1ex;">
 
-<br>Cherif<br>
+<div>Till Kamppeter wrote:<br>
+<blockquote class="gmail_quote" style="border-left: 1px solid rgb(204, 204, 204); margin: 0pt 0pt 0pt 0.8ex; padding-left: 1ex;">
+3. How the OpenUsability dialog itself has to look like and how it is<br>
+ &nbsp; operated.<br>
+<br>
+ &nbsp; &nbsp;- See Peter Sikking&#39;s blog<br>
+ &nbsp; &nbsp; &nbsp;<a href="http://www.mmiworks.net/eng/publications/labels/openPrinting.html" target="_blank">http://www.mmiworks.net/eng/publications/labels/openPrinting.html</a><br>
+ &nbsp; &nbsp;- Peter is working with a student on the specs.<br>
+<br>
+</blockquote>
+<br></div>
+Peter has started to write down the specs here:<br>
+<br>
+<a href="http://wiki.openusability.org/printing/index.php/Specification" target="_blank">http://wiki.openusability.org/printing/index.php/Specification</a><br><font color="#888888">
+<br>
+ &nbsp; Till<br>
+<br>
+</font></blockquote></div><br>
+</div></div></blockquote></div><br>
 
-------=_Part_3853_27439944.1209592485736--
+------=_Part_4071_16898938.1209656647907--
