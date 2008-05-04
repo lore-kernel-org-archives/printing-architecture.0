@@ -1,17 +1,18 @@
-Message-ID: <481B85C2.2070304@gmail.com>
-Date: Fri, 02 May 2008 23:21:06 +0200
-From: Till Kamppeter <till.kamppeter@gmail.com>
-MIME-Version: 1.0
-References: <481212B6.9040301@gmail.com> <4819EE1D.8030502@gmx.de>
-	<481A017F.5010006@gmail.com>
-	<8B8709E6C8B8784583FA9C7C013CB4515366F2@etd1.etd.ussj.ricoh.com>
-	<481A094E.1030304@gmail.com>
-	<8B8709E6C8B8784583FA9C7C013CB45142BBE6@etd1.etd.ussj.ricoh.com>
-In-Reply-To: <8B8709E6C8B8784583FA9C7C013CB45142BBE6@etd1.etd.ussj.ricoh.com>
-Content-Type: text/plain; charset=UTF-8; format=flowed
-Content-Transfer-Encoding: 7bit
+Message-Id: <05B6DB58-B03F-4054-A402-B7D376D7C129@mmiworks.net>
+From: peter sikking <peter@mmiworks.net>
+In-Reply-To: <87bq3pmekr.fsf@geek.avasys.jp>
+Content-Type: text/plain; charset=WINDOWS-1252; format=flowed; delsp=yes
+Content-Transfer-Encoding: quoted-printable
+Mime-Version: 1.0 (Apple Message framework v919.2)
+Date: Sun, 4 May 2008 13:06:45 +0200
+References: <481101A3.6030700@gmail.com> <4818BB7F.50603@gmail.com>
+	<b801b6f40804301312m3a97c2eie3257cd339865be@mail.gmail.com>
+	<b801b6f40805010844ka80fd30o64e1df4b525e00e2@mail.gmail.com>
+	<4819F6A5.3040400@gmail.com> <87myn9mvqu.fsf@geek.avasys.jp>
+	<b801b6f40805012017q2ca21240ma28e2f919f7330f3@mail.gmail.com>
+	<87bq3pmekr.fsf@geek.avasys.jp>
 Subject: Re: [Printing-architecture] Coding the Common Printing Dialog and
- its interface - PPD and Foomatic extensions
+	its interface
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -21,28 +22,53 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: George Liu <george.liu@ricoh-tech.com>
-Cc: printing-architecture@lists.linux-foundation.org
+To: printing-architecture@lists.linux-foundation.org
 
-George Liu wrote:
-> I have posted my suggestion to CUPS feature request 1729
-> http://cups.org/str.php?L1729+P0+S-2+C0+I0+E0+M10+Q
->
+Hi all,
 
-Please open a new feature request for that, STR 1729 is only about the 
-access to the custom options via the web interface, not about the design 
-of the options themselves.
+I joined the fun here too.
 
-> If my PPD has JobType=Normal/LockedPrint and LockedPrintPassword is 
-> using CUPS custom PPD option.
-> Will the following constraints work?
-> 
-> *UIConstraints: JobType=Normal LockedPrintPassword=Custom
-> 
+First of all welcome Alex and Lars. I am looking forward to working
+with you both on the dialog. you can find me on the openusability
+irc channel for a quick question.
 
-Here you should better ask Mike Sweet on the cups-general mailing list.
+Keep in mind that the spec on the wiki is =91under construction.=92
+I do not mind showing you how this grows step by step, if you do not
+mind looking at incomplete or plain wrong stuff for a week or two.
 
-Or you try it out.
+being on a helter-skelter schedule, I will keep it short here.
 
-    Till
+Yes I have been dealing with internationalisation of software for the =20=
+
+last
+14 years. See for instance that we are dealing with r-to-l languages =20
+from
+now on.
+
+Note that a preview shall (learned that one in '98) be shown under
+all circumstances in the print dialog. It shall be accurate within the
+small (just big enough) size I gave it. It is central to solving
+dozens of usability issues.
+
+About the dialog layout: most questions look to be caused by bugs in
+the spec. It is a dialog, so there is no user resizing. column spanning
+will be normal (big things like booklet making will probably need all
+that space).
+
+The state of the dialog shall be persisted for each
+user/printer (model)/app combination on pressing the Print button.
+per document looks to be excessive if not undesirable from usability =20
+pov.
+
+Oh yeah, we need to put the manufacturer logo somewhere. The top
+corner opposite the printer pop-up will be available for that.
+
+     --ps
+
+         founder + principal interaction architect
+             man + machine interface works
+
+         http://mmiworks.net/blog : on interaction architecture
+
+
 
