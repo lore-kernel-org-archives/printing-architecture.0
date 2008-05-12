@@ -1,11 +1,13 @@
-Message-ID: <e395be80805091051w804e413kcfb31214bee46a8e@mail.gmail.com>
-Date: Fri, 9 May 2008 13:51:41 -0400
-From: "Ira McDonald" <blueroofmusic@gmail.com>
+Message-ID: <4827A6EA.7060507@fujixerox.co.jp>
+Date: Mon, 12 May 2008 11:09:46 +0900
+From: Osamu MIHARA <osamu.mihara@fujixerox.co.jp>
 MIME-Version: 1.0
-Content-Type: text/plain; charset=ISO-8859-1
+References: <e395be80805091051w804e413kcfb31214bee46a8e@mail.gmail.com>
+In-Reply-To: <e395be80805091051w804e413kcfb31214bee46a8e@mail.gmail.com>
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
 Content-Transfer-Encoding: 7bit
-Content-Disposition: inline
-Subject: [Printing-architecture] OP SC / OP Arch Telecon - Mon/Tue 12/13 May
+Subject: Re: [Printing-architecture] OP SC / OP Arch Telecon - Mon/Tue 12/13
+ May
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -15,46 +17,29 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: printing-architecture@lists.linux-foundation.org, Ira McDonald <blueroofmusic@gmail.com>
+To: printing-architecture@lists.linux-foundation.org
 
 Hi,
 
-At the request of Toratani-san and other OP Japan members,
-our next Open Printing Steering Committee teleconference will
-be open to *all* OP participants worldwide:
+on 2008/05/10 2:51 Ira McDonald said the following:
+> Agenda will be determined during the meeting.
 
-- Monday 12 May 2008, Evening
- - US/Europe
-   4pm in San Francisco - US PDT (Pacific Daylight Time)
-   5pm in Colorado - US MDT (Mountain Daylight Time)
-   6pm in Chicago - US CDT (Central Daylight Time)
-   7pm in New York - US EDT (Eastern Daylight Time)
+I have an item to be discussed (or just confirmed) about the release 
+procedure for specifications.
 
-- Tuesday 13 May 2008, Morning
- - Europe
-   1am in Berlin - CEST (Central European Summer Time)
- - Japan
-   8am in Japan - JST (Japan Standard Time)
+The release procedure is defined in the document below, which can be 
+fetched from the PWG ftp site:
+ 
+ftp://ftp.pwg.org/pub/pwg/fsg/steering_committee/Release-Procedure/FSG-OpenPrinting-Release-Procedure--V0100-2004-0930.pdf
 
-Toll Free US: (866) 839-8145
-Outside US: (865) 524-6352
-Access Code: 7548766#
+This procedure was discussed and defined in the FSG era, but I believe 
+it is inherited to OpenPrinting WG under LF and still valid.
 
-Note:  US and Europe are now on summer time.
+I'd like to confirm that this is the common perception among the members.
 
-Agenda will be determined during the meeting.
-
-Cheers,
-- Ira
-
+In addition, I couldn't find a link to this document (and other spec 
+documents) from the current OpenPrinting web site.  I think it would be 
+convenient for developers if they find links to OP specs and procedure 
+documents.
 -- 
-Ira McDonald (Musician / Software Architect)
-Chair - Linux Foundation Open Printing WG
-Blue Roof Music/High North Inc
-email: blueroofmusic@gmail.com
-winter:
- 579 Park Place Saline, MI 48176
- 734-944-0094
-summer:
- PO Box 221 Grand Marais, MI 49839
- 906-494-2434
+   Osamu Mihara / Fuji Xerox Co., Ltd.
