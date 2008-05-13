@@ -1,14 +1,13 @@
-Message-ID: <4828C321.2070600@gmail.com>
-Date: Tue, 13 May 2008 00:22:25 +0200
+Message-ID: <482A15CF.4060507@gmail.com>
+Date: Wed, 14 May 2008 00:27:27 +0200
 From: Till Kamppeter <till.kamppeter@gmail.com>
 MIME-Version: 1.0
-References: <e395be80805091051w804e413kcfb31214bee46a8e@mail.gmail.com>
-	<4827A6EA.7060507@fujixerox.co.jp>
-In-Reply-To: <4827A6EA.7060507@fujixerox.co.jp>
+References: <480CC495.3010801@gmail.com>
+In-Reply-To: <480CC495.3010801@gmail.com>
 Content-Type: text/plain; charset=UTF-8; format=flowed
 Content-Transfer-Encoding: 7bit
-Subject: Re: [Printing-architecture] OP SC / OP Arch Telecon - Mon/Tue 12/13
- May
+Subject: [Printing-architecture] Common Printing Dialog: Coding Kick-Off in
+ Berlin CANCELED. New meeting plans.
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -18,38 +17,39 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Osamu MIHARA <osamu.mihara@fujixerox.co.jp>
-Cc: printing-architecture@lists.linux-foundation.org
+To: printing-architecture@lists.linux-foundation.org
+Cc: kurt pfeifle <k1pfeifle@gmx.net>, Jan Muehlig <jan.muehlig@relevantive.de>, Mathias Ettrich <ettrich@trolltech.com>, Thomas Zander <zander@kde.org>, Celeste Lyn Paul <celeste@kde.org>, Knut Yrvin <kyrvin@trolltech.com>
 
-Osamu MIHARA wrote:
-> Hi,
-> 
-> on 2008/05/10 2:51 Ira McDonald said the following:
->> Agenda will be determined during the meeting.
-> 
-> I have an item to be discussed (or just confirmed) about the release 
-> procedure for specifications.
-> 
-> The release procedure is defined in the document below, which can be 
-> fetched from the PWG ftp site:
->  
-> ftp://ftp.pwg.org/pub/pwg/fsg/steering_committee/Release-Procedure/FSG-OpenPrinting-Release-Procedure--V0100-2004-0930.pdf
-> 
-> This procedure was discussed and defined in the FSG era, but I believe 
-> it is inherited to OpenPrinting WG under LF and still valid.
-> 
-> I'd like to confirm that this is the common perception among the members.
-> 
-> In addition, I couldn't find a link to this document (and other spec 
-> documents) from the current OpenPrinting web site.  I think it would be 
-> convenient for developers if they find links to OP specs and procedure 
-> documents.
+Hi,
 
-The page to place these links is
+unfortunately, we did not find any suitable venue for running the 
+planned meeting. We also did not get many answers of people willing to 
+participate and the most important person for the implementation of the 
+dialog, Alexander Wauck, lives in the US.
 
-https://www.linux-foundation.org/en/OpenPrinting/Development
+So Peter and me have decided to cancel the meeting on a phone call which 
+we had today.
 
-This page is a Wiki page, so everyone can edit it (you only need to 
-register to get write access).
+We also have done the real coding kick-off already by the mailing list. 
+There we have already written down which specs we will create and how 
+the interface between the dialog and the applications should look like. 
+The original intention of the meeting was also to present the dialog to 
+KDE and GNOME developers to find people to do the implementation, but 
+now we have found the people via the Google Summer of Code.
+
+Me, Jonathan Riddell, and Celeste Paul will be on the Ubuntu Developer 
+Summit which will take place next week in Prague. There we will have 
+meetings about the dialog and I invite everyone here to join, at least 
+by phone. Schedules and call-in instructions I will post as soon as I 
+have them.
+
+Josef, for you it is only 2 hours (by train or by car) to get from 
+Dresden to Prague, you could even meet with us personally. I could ask 
+the Linux Foundation whether they would pay your travel for a one-day trip.
+
+I will also be on the LinuxTag, most probably Wed, May 28 and Thu, May 
+31. There I can also meet with some of you.
+
+Lars, we can also meet on Tue, May 27 here in Berlin.
 
     Till
