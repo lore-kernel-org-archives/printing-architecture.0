@@ -1,13 +1,10 @@
-Message-ID: <482A15CF.4060507@gmail.com>
-Date: Wed, 14 May 2008 00:27:27 +0200
-From: Till Kamppeter <till.kamppeter@gmail.com>
+Message-ID: <e395be80805141824v71d453d2y2e4ae3756e1807a8@mail.gmail.com>
+Date: Wed, 14 May 2008 21:24:29 -0400
+From: "Ira McDonald" <blueroofmusic@gmail.com>
 MIME-Version: 1.0
-References: <480CC495.3010801@gmail.com>
-In-Reply-To: <480CC495.3010801@gmail.com>
-Content-Type: text/plain; charset=UTF-8; format=flowed
-Content-Transfer-Encoding: 7bit
-Subject: [Printing-architecture] Common Printing Dialog: Coding Kick-Off in
- Berlin CANCELED. New meeting plans.
+Content-Type: multipart/mixed; 
+	boundary="----=_Part_898_25184987.1210814669071"
+Subject: [Printing-architecture] OP SC Minutes (12 May 2008)
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -17,39 +14,96 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: printing-architecture@lists.linux-foundation.org
-Cc: kurt pfeifle <k1pfeifle@gmx.net>, Jan Muehlig <jan.muehlig@relevantive.de>, Mathias Ettrich <ettrich@trolltech.com>, Thomas Zander <zander@kde.org>, Celeste Lyn Paul <celeste@kde.org>, Knut Yrvin <kyrvin@trolltech.com>
+To: printing-architecture@lists.linux-foundation.org, Ira McDonald <blueroofmusic@gmail.com>
+
+------=_Part_898_25184987.1210814669071
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline
 
 Hi,
 
-unfortunately, we did not find any suitable venue for running the 
-planned meeting. We also did not get many answers of people willing to 
-participate and the most important person for the implementation of the 
-dialog, Alexander Wauck, lives in the US.
+Minutes from Monday evening's Open Printing Steering Committee are attached
+and posted at:
 
-So Peter and me have decided to cancel the meeting on a phone call which 
-we had today.
+ftp://ftp.pwg.org/pub/pwg/fsg/steering_committee/OP-SC-Minutes-20080512.htm
 
-We also have done the real coding kick-off already by the mailing list. 
-There we have already written down which specs we will create and how 
-the interface between the dialog and the applications should look like. 
-The original intention of the meeting was also to present the dialog to 
-KDE and GNOME developers to find people to do the implementation, but 
-now we have found the people via the Google Summer of Code.
+Cheers,
+- Ira
 
-Me, Jonathan Riddell, and Celeste Paul will be on the Ubuntu Developer 
-Summit which will take place next week in Prague. There we will have 
-meetings about the dialog and I invite everyone here to join, at least 
-by phone. Schedules and call-in instructions I will post as soon as I 
-have them.
 
-Josef, for you it is only 2 hours (by train or by car) to get from 
-Dresden to Prague, you could even meet with us personally. I could ask 
-the Linux Foundation whether they would pay your travel for a one-day trip.
+-- 
+Ira McDonald (Musician / Software Architect)
+Chair - Linux Foundation Open Printing WG
+Blue Roof Music/High North Inc
+email: blueroofmusic@gmail.com
+winter:
+ 579 Park Place Saline, MI 48176
+ 734-944-0094
+summer:
+ PO Box 221 Grand Marais, MI 49839
+ 906-494-2434
 
-I will also be on the LinuxTag, most probably Wed, May 28 and Thu, May 
-31. There I can also meet with some of you.
+------=_Part_898_25184987.1210814669071
+Content-Type: text/html; name=OP-SC-Minutes-20080512.htm
+Content-Transfer-Encoding: base64
+X-Attachment-Id: f_fg8np6pw0
+Content-Disposition: attachment; filename=OP-SC-Minutes-20080512.htm
 
-Lars, we can also meet on Tue, May 27 here in Berlin.
-
-    Till
+PEhUTUw+DQo8SEVBRD4NCgk8VElUTEU+T1AgU0MgTWludXRlcyAtIDEyIE1heSAyMDA4PC9USVRM
+RT4NCjwvSEVBRD4NCjxCT0RZPg0KPENFTlRFUj48Qj5MaW51eCBGb3VuZGF0aW9uPC9CPjwvQ0VO
+VEVSPg0KPENFTlRFUj48Qj5PcGVuIFByaW50aW5nIFN0ZWVyaW5nIENvbW1pdHRlZTwvQj48L0NF
+TlRFUj4NCjxDRU5URVI+PEI+Q29uZmVyZW5jZSBDYWxsIE1pbnV0ZXM8L0I+PC9DRU5URVI+DQo8
+Q0VOVEVSPjxCPjEyIE1heSAyMDA4PC9CPjwvQ0VOVEVSPg0KPFA+DQo8UD4NCjxQPk1lZXRpbmcg
+Y2FsbGVkIHRvIG9yZGVyIGJ5IElyYSBNY0RvbmFsZCBhdCA3cG0gVVMgRURUIDEyIE1heSAyMDA4
+Lg0KTWludXRlcyB0YWtlbiBieSBJcmEgTWNEb25hbGQuDQo8QlI+DQo8UFJFPg0KPC9QUkU+DQo8
+Qj5BdHRlbmRlZXM8L0I+DQo8VUw+DQpOb3JtIEphY29icyAoU3VuKQ0KPEJSPg0KVGlsbCBLYW1w
+cGV0ZXIgKExpbnV4IEZvdW5kYXRpb24pIC0gTWFuYWdlciwgT3BlbiBQcmludGluZw0KPEJSPg0K
+SXJhIE1jRG9uYWxkIChIaWdoIE5vcnRoKSAtIENoYWlyLCBPcGVuIFByaW50aW5nDQo8QlI+DQpH
+bGVuIFBldHJpZSAoRXBzb24pDQo8QlI+DQpLdW5haS1zYW4gKExpbnV4IEZvdW5kYXRpb24gSmFw
+YW4pIC0gVGVsZWNvbmZlcmVuY2UgaG9zdCBpbiBKYXBhbg0KPEJSPg0KTWloYXJhLXNhbiAoRnVq
+aSBYZXJveCkNCjxCUj4NClRvcmF0YW5pLXNhbiAoQ2Fub24pDQo8QlI+DQpTZWtpZ3VjaGktc2Fu
+IChLb25pY2EgTWlub2x0YSkNCjwvVUw+DQo8Qj5BZ2VuZGE8L0I+DQo8VUw+DQo8TEk+KDEpIE9Q
+IFByb2Nlc3MNCjxQUkU+DQogICAgLSBDb25jZW5zdXMNCiAgICAgIC0gY2hhbmdlIEZTRyB0byBM
+RiBhbmQgcmVkYXRlIHRoZSAyMDA0IHNwZWMNCjwvUFJFPg0KPExJPigyKSBPcGVuIFByaW50aW5n
+IE5ld3MgLSBBdXN0aW4gTEYgbWVldGluZyBpbiBBcHJpbA0KPFBSRT4NCiAgICAtIG1lZXRpbmdz
+IHdpdGggb3RoZXIgd29ya2dyb3Vwcw0KICAgIC0gZGlzY3Vzc2lvbnMgYWJvdXQgT1AgdG9waWNz
+DQo8L1BSRT4NCjxMST4oMykgT3BlbiBQcmludGluZyBOZXdzIC0gR29vZ2xlIFN1bW1lciBvZiBD
+b2RlDQo8UFJFPg0KICAgIC0gMiBvbiBwcmludGluZyBkaWFsb2cNCiAgICAgIC0gR2VuZXJhbCBQ
+b3J0YWJpbGl0eT8gIGFuZCBDb21tb24gVXNhYmlsaXR5DQogICAgLSAxIG9uIEZpbHRlcnMgZm9y
+IHdvcmtmbG93DQogICAgICAtIFRleHRUb1BkZiBhbmQgUGRmVG9JanMNCiAgICAtIDEgb24gQ1VQ
+UyBvZiBQQVBJDQogICAgLSAxIG9uIFdlYiBhcHAgZm9yIE9QIERhdGFiYXNlIG1haW50ZW5hbmNl
+DQo8L1BSRT4NCjxMST4oNCkgT3BlbiBQcmludGluZyBOZXdzIC0gRmlsdGVycyBmb3IgQ1VQUyBQ
+REYgV29ya2Zsb3cNCjxQUkU+DQogICAgLSA0IGZpbHRlcnMgZ2l2ZW4gdG8gTWlrZSBTd2VldCBm
+b3IgQ1VQUw0KPC9QUkU+DQo8TEk+KDUpIE9wZW4gUHJpbnRpbmcgU3VtbWl0IDIwMDgNCjxQUkU+
+DQogICAgLSBkb25lIHcvIG90aGVyIHdvcmtncm91cHMgaW4gQXVzdGluIExGIENvbGxhYm9yYXRp
+b24gU3VtbWl0DQogICAgLSBuZXh0IE9QIFN1bW1pdCBpbiBBcHJpbCAyMDA5IHcvIExGDQogICAg
+LSBzbWFsbCBzZXNzaW9uIHcvIFBXRyBpbiBMZXhpbmd0b24gaW4gT2N0b2Jlcg0KPC9QUkU+DQo8
+TEk+KDYpIENvbW1vbiBQcmludGluZyBEaWFsb2cgLSBPUCBKYXBhbiBxdWVzdGlvbnMNCjxQUkU+
+DQogICAgLSBzcGVjaWZpY2F0aW9uIGluIHRoZSB3b3JrcyAoaW4gYSBXaWtpKSAtIFRpbGwNCiAg
+ICAtIHNwZWNpZmljYXRpb24gZHJhZnQgLSBuZWVkIGVhcmx5IGFzIHBvc3NpYmxlIC0gT1AgSmFw
+YW4gaXNzdWUNCjwvUFJFPg0KPExJPig3KSBUdW5hYmxlIFByaW50aW5nIERyaXZlcnMgLSBOb3Jt
+DQo8UFJFPg0KICAgIC0gcmVjZW50IHByZXNlbnRhdGlvbiBhYm91dCBwcmludGVyIGRyaXZlcnMg
+LSBOb3JtDQogICAgICAtIGZlYXR1cmVzIGFuZCBsaW1pdGF0aW9ucw0KICAgIC0gdXNlciB0dW5h
+YmxlIHByaW50ZXIgZHJpdmVyPyAtIFgub3JnIGd1eQ0KICAgICAgLSBodWg/DQogICAgLSB0dW5h
+YmxlIGNsYXNzIGRyaXZlcj8gLSBHbGVuDQogICAgICAtIGJ1c2luZXNzIGNsYXNzIGNvbG9yIHRh
+Ymxlcz8NCiAgICAtIHdobyB3b3VsZCBpbXBsZW1lbnQ/IC0gR2xlbg0KICAgICAgLSB0cmlja3ks
+IGJlY2F1c2UgdmVyeSB2ZW5kb3Itc3BlY2lmaWMNCjwvUFJFPg0KPC9VTD4NCjxCPk9wZW4gQWN0
+aW9uIEl0ZW1zPC9CPg0KPFVMPg0KPExJPlNlZSAnQUNUSU9OJyBpbiBhZ2VuZGEgdG9waWNzIGFi
+b3ZlDQo8L1VMPg0KPEI+TmV4dCBPUCBTdGVlcmluZyBDb21taXR0ZWUgVGVsZWNvbmZlcmVuY2Vz
+PC9CPg0KPFVMPg0KPExJPigxKSBKdW5lIDIwMDggU0MgbWVldGluZw0KPFBSRT4NCiAgICAtIE1v
+bmRheSAyIEp1bmUgMjAwOCwgRXZlbmluZw0KICAgICAgLSBVUy9FdXJvcGUNCiAgICAgICAgNHBt
+IGluIFNhbiBGcmFuY2lzY28gLSBVUyBQRFQgKFBhY2lmaWMgRGF5bGlnaHQgVGltZSkNCiAgICAg
+ICAgNXBtIGluIENvbG9yYWRvIC0gVVMgTURUIChNb3VudGFpbiBEYXlsaWdodCBUaW1lKQ0KICAg
+ICAgICA2cG0gaW4gQ2hpY2FnbyAtIFVTIENEVCAoQ2VudHJhbCBEYXlsaWdodCBUaW1lKQ0KICAg
+ICAgICA3cG0gaW4gTmV3IFlvcmsgLSBVUyBFU1QgKEVhc3Rlcm4gRGF5bGlnaHQgVGltZSkNCg0K
+ICAgIC0gVHVlc2RheSAzIEp1bmUgMjAwOCwgTW9ybmluZw0KICAgICAgLSBFdXJvcGUNCiAgICAg
+ICAgMWFtIGluIEJlcmxpbiAtIENFU1QgKENlbnRyYWwgRXVyb3BlYW4gU3VtbWVyIFRpbWUpDQog
+ICAgICAtIEphcGFuDQogICAgICAgIDhhbSBpbiBKYXBhbiAtIEpTVCAoSmFwYW4gU3RhbmRhcmQg
+VGltZSkNCg0KICAgIFRvbGwgRnJlZSAoODY2KSA4MzktODE0NQ0KICAgIEludCdsICg4NjUpIDUy
+NC02MzUyDQogICAgQUNDRVNTIENvZGU6IDc1NDg3NjYNCjwvUFJFPg0KPExJPigyKSBKdWx5IDIw
+MDggU0MgbWVldGluZyAtIHRlbnRhdGl2ZQ0KPFBSRT4NCiAgICAtIE1vbmRheSAxNCBKdWx5IDIw
+MDgsIEV2ZW5pbmcNCiAgICAgIC0gVVMNCg0KICAgIC0gVHVlc2RheSAxNSBKdWx5IDIwMDgsIE1v
+cm5pbmcNCiAgICAgIC0gSmFwYW4vRXVyb3BlDQo8L1BSRT4NCjwvVUw+DQo8L0JPRFk+DQo8L0hU
+TUw+DQo=
+------=_Part_898_25184987.1210814669071--
