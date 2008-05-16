@@ -1,10 +1,11 @@
-Message-ID: <e395be80805141824v71d453d2y2e4ae3756e1807a8@mail.gmail.com>
-Date: Wed, 14 May 2008 21:24:29 -0400
-From: "Ira McDonald" <blueroofmusic@gmail.com>
+Message-ID: <482D4F67.9070300@gmail.com>
+Date: Fri, 16 May 2008 11:09:59 +0200
+From: Till Kamppeter <till.kamppeter@gmail.com>
 MIME-Version: 1.0
-Content-Type: multipart/mixed; 
-	boundary="----=_Part_898_25184987.1210814669071"
-Subject: [Printing-architecture] OP SC Minutes (12 May 2008)
+Content-Type: text/plain; charset=UTF-8; format=flowed
+Content-Transfer-Encoding: 7bit
+Subject: [Printing-architecture] OpenPrinting has a bug and feature tracking
+	system now!
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -14,96 +15,37 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: printing-architecture@lists.linux-foundation.org, Ira McDonald <blueroofmusic@gmail.com>
-
-------=_Part_898_25184987.1210814669071
-Content-Type: text/plain; charset=ISO-8859-1
-Content-Transfer-Encoding: 7bit
-Content-Disposition: inline
+To: printing-architecture@lists.linux-foundation.org
 
 Hi,
 
-Minutes from Monday evening's Open Printing Steering Committee are attached
-and posted at:
+OpenPrinting has a Bugzilla-based bug/feature tracking system now. This 
+way we will assure that bug reports and feature requests do not get 
+forgotten under tons of postings on the forum or on mailing lists. In 
+the system all bug reports get registered with priority, state, package 
+they affect, they can get assigned to the developer who is supposed to 
+fix it, ...
 
-ftp://ftp.pwg.org/pub/pwg/fsg/steering_committee/OP-SC-Minutes-20080512.htm
+So if you think something is going wrong with Foomatic, the 
+OpenPrinting, database, the web site, or anything else coming from 
+OpenPrinting, please do not post on the forum, nor on any mailing list. 
+Post on our new bug tracker [1], under the product "OpenPrinting". This 
+way your problem will not get forgotten. Please report also feature 
+requests here.
 
-Cheers,
-- Ira
+Please do not report small issues (like typos) on Wiki pages, you can 
+fix them by yourself. Also do not report missing printer models in the 
+database. Please add them via the printer input form [2]. We are 
+currently developing a facility to let user-contributed printer entries 
+get more quickly into the Foomatic database [3].
 
+See all current open bug reports and feature requests concerning 
+OpenPrinting here [4].
 
--- 
-Ira McDonald (Musician / Software Architect)
-Chair - Linux Foundation Open Printing WG
-Blue Roof Music/High North Inc
-email: blueroofmusic@gmail.com
-winter:
- 579 Park Place Saline, MI 48176
- 734-944-0094
-summer:
- PO Box 221 Grand Marais, MI 49839
- 906-494-2434
+Till
 
-------=_Part_898_25184987.1210814669071
-Content-Type: text/html; name=OP-SC-Minutes-20080512.htm
-Content-Transfer-Encoding: base64
-X-Attachment-Id: f_fg8np6pw0
-Content-Disposition: attachment; filename=OP-SC-Minutes-20080512.htm
+[1]http://bugs.linux-foundation.org/
+[2]http://openprinting.org/edit_printer.cgi?newentry=1
+[3]http://code.google.com/soc/2008/linux/appinfo.html?csaid=1897A851CAC216AC
+[4]http://bugs.linux-foundation.org/buglist.cgi?query_format=advanced&short_desc_type=allwordssubstr&short_desc=&product=OpenPrinting&component=Common+Printing+Dialog&component=foomatic-db&component=foomatic-db-engine&component=foomatic-filters&component=OpenPrinting+database+maintenance+web+app&component=OpenPrinting+web+site&long_desc_type=substring&long_desc=&bug_file_loc_type=allwordssubstr&bug_file_loc=&bug_status=UNCONFIRMED&bug_status=NEW&bug_status=ASSIGNED&bug_status=REOPENED&emailassigned_to1=1&emailtype1=substring&email1=&emailassigned_to2=1&emailreporter2=1&emailcc2=1&emailtype2=substring&email2=&bugidtype=include&bug_id=&votes=&chfieldfrom=&chfieldto=Now&chfieldvalue=&cmdtype=doit&order=Reuse+same+sort+as+last+time&remtype=asdefault&field0-0-0=noop&type0-0-0=noop&value0-0-0=
 
-PEhUTUw+DQo8SEVBRD4NCgk8VElUTEU+T1AgU0MgTWludXRlcyAtIDEyIE1heSAyMDA4PC9USVRM
-RT4NCjwvSEVBRD4NCjxCT0RZPg0KPENFTlRFUj48Qj5MaW51eCBGb3VuZGF0aW9uPC9CPjwvQ0VO
-VEVSPg0KPENFTlRFUj48Qj5PcGVuIFByaW50aW5nIFN0ZWVyaW5nIENvbW1pdHRlZTwvQj48L0NF
-TlRFUj4NCjxDRU5URVI+PEI+Q29uZmVyZW5jZSBDYWxsIE1pbnV0ZXM8L0I+PC9DRU5URVI+DQo8
-Q0VOVEVSPjxCPjEyIE1heSAyMDA4PC9CPjwvQ0VOVEVSPg0KPFA+DQo8UD4NCjxQPk1lZXRpbmcg
-Y2FsbGVkIHRvIG9yZGVyIGJ5IElyYSBNY0RvbmFsZCBhdCA3cG0gVVMgRURUIDEyIE1heSAyMDA4
-Lg0KTWludXRlcyB0YWtlbiBieSBJcmEgTWNEb25hbGQuDQo8QlI+DQo8UFJFPg0KPC9QUkU+DQo8
-Qj5BdHRlbmRlZXM8L0I+DQo8VUw+DQpOb3JtIEphY29icyAoU3VuKQ0KPEJSPg0KVGlsbCBLYW1w
-cGV0ZXIgKExpbnV4IEZvdW5kYXRpb24pIC0gTWFuYWdlciwgT3BlbiBQcmludGluZw0KPEJSPg0K
-SXJhIE1jRG9uYWxkIChIaWdoIE5vcnRoKSAtIENoYWlyLCBPcGVuIFByaW50aW5nDQo8QlI+DQpH
-bGVuIFBldHJpZSAoRXBzb24pDQo8QlI+DQpLdW5haS1zYW4gKExpbnV4IEZvdW5kYXRpb24gSmFw
-YW4pIC0gVGVsZWNvbmZlcmVuY2UgaG9zdCBpbiBKYXBhbg0KPEJSPg0KTWloYXJhLXNhbiAoRnVq
-aSBYZXJveCkNCjxCUj4NClRvcmF0YW5pLXNhbiAoQ2Fub24pDQo8QlI+DQpTZWtpZ3VjaGktc2Fu
-IChLb25pY2EgTWlub2x0YSkNCjwvVUw+DQo8Qj5BZ2VuZGE8L0I+DQo8VUw+DQo8TEk+KDEpIE9Q
-IFByb2Nlc3MNCjxQUkU+DQogICAgLSBDb25jZW5zdXMNCiAgICAgIC0gY2hhbmdlIEZTRyB0byBM
-RiBhbmQgcmVkYXRlIHRoZSAyMDA0IHNwZWMNCjwvUFJFPg0KPExJPigyKSBPcGVuIFByaW50aW5n
-IE5ld3MgLSBBdXN0aW4gTEYgbWVldGluZyBpbiBBcHJpbA0KPFBSRT4NCiAgICAtIG1lZXRpbmdz
-IHdpdGggb3RoZXIgd29ya2dyb3Vwcw0KICAgIC0gZGlzY3Vzc2lvbnMgYWJvdXQgT1AgdG9waWNz
-DQo8L1BSRT4NCjxMST4oMykgT3BlbiBQcmludGluZyBOZXdzIC0gR29vZ2xlIFN1bW1lciBvZiBD
-b2RlDQo8UFJFPg0KICAgIC0gMiBvbiBwcmludGluZyBkaWFsb2cNCiAgICAgIC0gR2VuZXJhbCBQ
-b3J0YWJpbGl0eT8gIGFuZCBDb21tb24gVXNhYmlsaXR5DQogICAgLSAxIG9uIEZpbHRlcnMgZm9y
-IHdvcmtmbG93DQogICAgICAtIFRleHRUb1BkZiBhbmQgUGRmVG9JanMNCiAgICAtIDEgb24gQ1VQ
-UyBvZiBQQVBJDQogICAgLSAxIG9uIFdlYiBhcHAgZm9yIE9QIERhdGFiYXNlIG1haW50ZW5hbmNl
-DQo8L1BSRT4NCjxMST4oNCkgT3BlbiBQcmludGluZyBOZXdzIC0gRmlsdGVycyBmb3IgQ1VQUyBQ
-REYgV29ya2Zsb3cNCjxQUkU+DQogICAgLSA0IGZpbHRlcnMgZ2l2ZW4gdG8gTWlrZSBTd2VldCBm
-b3IgQ1VQUw0KPC9QUkU+DQo8TEk+KDUpIE9wZW4gUHJpbnRpbmcgU3VtbWl0IDIwMDgNCjxQUkU+
-DQogICAgLSBkb25lIHcvIG90aGVyIHdvcmtncm91cHMgaW4gQXVzdGluIExGIENvbGxhYm9yYXRp
-b24gU3VtbWl0DQogICAgLSBuZXh0IE9QIFN1bW1pdCBpbiBBcHJpbCAyMDA5IHcvIExGDQogICAg
-LSBzbWFsbCBzZXNzaW9uIHcvIFBXRyBpbiBMZXhpbmd0b24gaW4gT2N0b2Jlcg0KPC9QUkU+DQo8
-TEk+KDYpIENvbW1vbiBQcmludGluZyBEaWFsb2cgLSBPUCBKYXBhbiBxdWVzdGlvbnMNCjxQUkU+
-DQogICAgLSBzcGVjaWZpY2F0aW9uIGluIHRoZSB3b3JrcyAoaW4gYSBXaWtpKSAtIFRpbGwNCiAg
-ICAtIHNwZWNpZmljYXRpb24gZHJhZnQgLSBuZWVkIGVhcmx5IGFzIHBvc3NpYmxlIC0gT1AgSmFw
-YW4gaXNzdWUNCjwvUFJFPg0KPExJPig3KSBUdW5hYmxlIFByaW50aW5nIERyaXZlcnMgLSBOb3Jt
-DQo8UFJFPg0KICAgIC0gcmVjZW50IHByZXNlbnRhdGlvbiBhYm91dCBwcmludGVyIGRyaXZlcnMg
-LSBOb3JtDQogICAgICAtIGZlYXR1cmVzIGFuZCBsaW1pdGF0aW9ucw0KICAgIC0gdXNlciB0dW5h
-YmxlIHByaW50ZXIgZHJpdmVyPyAtIFgub3JnIGd1eQ0KICAgICAgLSBodWg/DQogICAgLSB0dW5h
-YmxlIGNsYXNzIGRyaXZlcj8gLSBHbGVuDQogICAgICAtIGJ1c2luZXNzIGNsYXNzIGNvbG9yIHRh
-Ymxlcz8NCiAgICAtIHdobyB3b3VsZCBpbXBsZW1lbnQ/IC0gR2xlbg0KICAgICAgLSB0cmlja3ks
-IGJlY2F1c2UgdmVyeSB2ZW5kb3Itc3BlY2lmaWMNCjwvUFJFPg0KPC9VTD4NCjxCPk9wZW4gQWN0
-aW9uIEl0ZW1zPC9CPg0KPFVMPg0KPExJPlNlZSAnQUNUSU9OJyBpbiBhZ2VuZGEgdG9waWNzIGFi
-b3ZlDQo8L1VMPg0KPEI+TmV4dCBPUCBTdGVlcmluZyBDb21taXR0ZWUgVGVsZWNvbmZlcmVuY2Vz
-PC9CPg0KPFVMPg0KPExJPigxKSBKdW5lIDIwMDggU0MgbWVldGluZw0KPFBSRT4NCiAgICAtIE1v
-bmRheSAyIEp1bmUgMjAwOCwgRXZlbmluZw0KICAgICAgLSBVUy9FdXJvcGUNCiAgICAgICAgNHBt
-IGluIFNhbiBGcmFuY2lzY28gLSBVUyBQRFQgKFBhY2lmaWMgRGF5bGlnaHQgVGltZSkNCiAgICAg
-ICAgNXBtIGluIENvbG9yYWRvIC0gVVMgTURUIChNb3VudGFpbiBEYXlsaWdodCBUaW1lKQ0KICAg
-ICAgICA2cG0gaW4gQ2hpY2FnbyAtIFVTIENEVCAoQ2VudHJhbCBEYXlsaWdodCBUaW1lKQ0KICAg
-ICAgICA3cG0gaW4gTmV3IFlvcmsgLSBVUyBFU1QgKEVhc3Rlcm4gRGF5bGlnaHQgVGltZSkNCg0K
-ICAgIC0gVHVlc2RheSAzIEp1bmUgMjAwOCwgTW9ybmluZw0KICAgICAgLSBFdXJvcGUNCiAgICAg
-ICAgMWFtIGluIEJlcmxpbiAtIENFU1QgKENlbnRyYWwgRXVyb3BlYW4gU3VtbWVyIFRpbWUpDQog
-ICAgICAtIEphcGFuDQogICAgICAgIDhhbSBpbiBKYXBhbiAtIEpTVCAoSmFwYW4gU3RhbmRhcmQg
-VGltZSkNCg0KICAgIFRvbGwgRnJlZSAoODY2KSA4MzktODE0NQ0KICAgIEludCdsICg4NjUpIDUy
-NC02MzUyDQogICAgQUNDRVNTIENvZGU6IDc1NDg3NjYNCjwvUFJFPg0KPExJPigyKSBKdWx5IDIw
-MDggU0MgbWVldGluZyAtIHRlbnRhdGl2ZQ0KPFBSRT4NCiAgICAtIE1vbmRheSAxNCBKdWx5IDIw
-MDgsIEV2ZW5pbmcNCiAgICAgIC0gVVMNCg0KICAgIC0gVHVlc2RheSAxNSBKdWx5IDIwMDgsIE1v
-cm5pbmcNCiAgICAgIC0gSmFwYW4vRXVyb3BlDQo8L1BSRT4NCjwvVUw+DQo8L0JPRFk+DQo8L0hU
-TUw+DQo=
-------=_Part_898_25184987.1210814669071--
