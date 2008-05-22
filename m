@@ -1,13 +1,11 @@
-Message-ID: <4835255F.90205@gmail.com>
-Date: Thu, 22 May 2008 09:48:47 +0200
+Message-ID: <48355362.8010600@gmail.com>
+Date: Thu, 22 May 2008 13:05:06 +0200
 From: Till Kamppeter <till.kamppeter@gmail.com>
 MIME-Version: 1.0
-References: <4832F154.5070104@gmail.com>
-In-Reply-To: <4832F154.5070104@gmail.com>
 Content-Type: text/plain; charset=UTF-8; format=flowed
 Content-Transfer-Encoding: 7bit
-Subject: Re: [Printing-architecture] OpenPrinting Common Printing Dialog
-	Session on the UDS on Thursday
+Subject: [Printing-architecture] Common Printing Dialog: News from the
+ Ubuntu Developer Summit in Prague
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -17,74 +15,41 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: printing-architecture@lists.linux-foundation.org, Lars Uebernickel <larsuebernickel@gmx.de>, Alexander Wauck <alex.wauck@gmail.com>, Peter Sikking <peter@mmiworks.net>, Matthias Klose <doko@ubuntu.com>, Jonathan Riddell <jriddell@ubuntu.com>, Susanne Oberhauser <froh@novell.com>, Martin Pitt <martin.pitt@ubuntu.com>, Kees Cook <kees@canonical.com>, seb128@ubuntu.com, Celeste Lyn Paul <celeste@kde.org>, Scott James Remnant <scott@ubuntu.com>, Josef Spillner <spillner@kde.org>, Henrik Nilsen Omma <henrik@ubuntu.com>, Tobias Hoffmann <th55@gmx.de>, Hin-Tak Leung <hintak_leung@yahoo.co.uk>
+To: printing-architecture@lists.linux-foundation.org, Alexander Wauck <alex.wauck@gmail.com>, Peter Sikking <peter@mmiworks.net>, Jonathan Riddell <jriddell@ubuntu.com>, Celeste Lyn Paul <celeste@kde.org>, Josef Spillner <spillner@kde.org>
 
-Our session is starting in 5 minutes.
+Hi,
 
-Room: Severn
-SIP call-in: sip:5006@canonical.com
-Icecast: http://icecast.ubuntu.com:8000/severn.ogg.m3u
-IRC: #uds-qa on Freenode
+I have been on the Ubuntu Developer Summit (UDS) in Prague now and there 
+I have run two discussion sessions about the dialog and I had also some 
+discussion outside these sessions.
 
-http://people.ubuntu.com/~scott/uds-intrepid/2008-05-22/severn.html
+Especially we are trying to get as many applications as possible using a 
+Common Printing Dialog in Ubuntu Intrepid and also to have the 
+OpenUsability-designed dialog to be the Common Printing Dialog of Ubuntu 
+Intrepid. Feature Freeze for Ubuntu Intrepid is end of August.
 
-See, hear, or read you there
+The Ubuntu Blueprint is here
+
+https://launchpad.net/distros/ubuntu/+spec/applications-printing
+
+and the blueprint Wiki (editable by everyone) with the minutes of the 
+meetings, suggestions, problems, plans, ... is here:
+
+https://wiki.ubuntu.com/PrintingStandardization
+
+Especially please everyone with contacts to desktop application 
+developers, tell them that we would like to have this dialog and to help 
+with the needed modifications of the applications.
+
+Biggest challenge currently is that several apps modify the standard 
+dialogs of KDE and GNOME by defining their own dialog class inheriting 
+the library's dialog class so that they can add application-specific 
+options. To get the application-specific options in with DBUS-plugged 
+dialog which can be of another desktop these apps need to be modified.
+
+We have also tried out Alex'code which he has uploaded to the BZR 
+repository. Unfortunately, it does not compile out of the box. Please 
+use the patch linked in the Blueprint Wiki to make the code working. 
+Alex, can you incorporate the patch? Thanks.
 
     Till
-
-
-Till Kamppeter wrote:
-> Hi,
-> 
-> on Thursday morning, 9:50am CEST, there will be another meeting about 
-> the Common Printing Dialog here on the UDS in Prague. I invite anyone 
-> who is interested to come, call in or chat in.
-> 
-> I will announce the room and the coordinates for call-invia SIP, 
-> Icecast, IRC in another e-mail. If you want to call in, get a SIP 
-> account as soon as possible, following the instructions of my first mail 
-> (copy below).
-> 
->    Till
-> 
-> -----------------------------------------------------------------------
-> 
-> [,,,]
-> 
-> Everyone who is here at the UDS in Prague, the sessions will most 
-> probably take place in the QA track, room Severn.
-> 
-> Everyone else please access by calling in via SIP or by connecting via 
-> Icecast and IRC.
-> 
-> Note that we will not use a public SIP network but a private one. To get 
-> an account, install a SIP client at first. If the client asks you to 
-> create an account on a public network, you can skip the account setup. 
-> Check your sound setup.
-> 
-> Then open IRC and go to the channel #canonical-sysadmin on Freenode and 
-> ask there for getting an account to call into the UDS sessions via SIP. 
-> Follow the instructions of the administrators. Mail to rt@ubuntu.com if 
-> no admin answers your request.
-> 
-> Please do the account setup ASAP, to have an account in time so that you 
-> can call in tomorrow.
-> 
-> Once you have the account, call in via sip:3406@canonical.com through 
-> your account. This address is not reachable through a public network.
-> 
-> Another possibility to participate is to click the Icecast link on
-> 
-> http://people.ubuntu.com/~scott/uds-intrepid/2008-05-20/index.html
-> 
-> in the head line of the room and you will be able to listen:
-> 
-> http://icecast.ubuntu.com:8000/severn.ogg.m3u
-> 
-> To talk, enter IRC and go to the #uds-qa channel on Freenode.
-> 
-> Hope I will, see, hear, or read you all tomorrow.
-> 
-> 
-> 
-
