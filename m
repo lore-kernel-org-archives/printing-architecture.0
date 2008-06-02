@@ -1,13 +1,13 @@
-Date: Mon, 2 Jun 2008 17:44:28 +0200
+Date: Mon, 2 Jun 2008 17:46:25 +0200
 From: Klaus Singvogel <kssingvo@suse.de>
-Message-ID: <20080602154427.GA771@suse.de>
-References: <4842D3A7.2070308@gmail.com>
+Message-ID: <20080602154625.GB771@suse.de>
+References: <48439926.8020004@gmail.com>
 Mime-Version: 1.0
 Content-Type: text/plain; charset=us-ascii
 Content-Disposition: inline
-In-Reply-To: <4842D3A7.2070308@gmail.com>
+In-Reply-To: <48439926.8020004@gmail.com>
 Subject: Re: [Printing-architecture] The Common Printing Dialog and PDF as
-	standard print job format for Qt/KDE applications
+	standard print job format in OpenOffice.org
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -18,7 +18,8 @@ List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subj
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
 To: Till Kamppeter <till.kamppeter@gmail.com>
-Cc: kurt pfeifle <k1pfeifle@gmx.net>, Henrik Nilsen Omma <henrik@ubuntu.com>, Jonathan Riddell <jriddell@ubuntu.com>, Thomas Zander <zander@kde.org>, Thomas Zander <thomas.zander@trolltech.com>, printing-architecture@lists.linux-foundation.org, Celeste Lyn Paul <celeste@kde.org>, Cristian Tibirna <tibirna@kde.org>
+Cc: Henrik Nilsen Omma <henrik@ubuntu.com>, chris.cheney@canonical.com, Matthias Klose <doko@ubuntu.com>, Jonathan Riddell <jriddell@ubuntu.com>, printing-architecture@lists.linux-foundation.org, dev@gsl.openoffice.org
+
 
 Hi,
 
