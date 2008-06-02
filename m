@@ -1,14 +1,10 @@
-Message-ID: <4843C442.9030905@gmail.com>
-Date: Mon, 02 Jun 2008 11:58:26 +0200
-From: Till Kamppeter <till.kamppeter@gmail.com>
+Date: Mon, 02 Jun 2008 19:31:19 +0900
+From: TORATANI Yasumasa <toratani.yasumasa@canon.co.jp>
+Message-Id: <20080602191745.C1C1.TORATANI.YASUMASA@canon.co.jp>
 MIME-Version: 1.0
-References: <openoffice.gsl.dev-48439926.8020004@gmail.com>
-	<g20egt$p3c$1@staroffice-news.germany.sun.com>
-In-Reply-To: <g20egt$p3c$1@staroffice-news.germany.sun.com>
-Content-Type: text/plain; charset=UTF-8; format=flowed
+Content-Type: text/plain; charset="US-ASCII"
 Content-Transfer-Encoding: 7bit
-Subject: Re: [Printing-architecture] [gsl-dev] The Common Printing Dialog
- and PDF as standard print job format in OpenOffice.org
+Subject: [Printing-architecture] Fw:  Proposals to LSB 4.0
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -18,63 +14,100 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: dev@gsl.openoffice.org
-Cc: Henrik Nilsen Omma <henrik@ubuntu.com>, chris.cheney@canonical.com, Matthias Klose <doko@ubuntu.com>, Jonathan Riddell <jriddell@ubuntu.com>, printing-architecture@lists.linux-foundation.org
+To: printing-architecture@lists.linux-foundation.org
 
-Philipp Lohmann wrote:
-> I have ot yet seen through all the references you gave, but some initial 
-> questions occured to me.
-> 
-> - There does not seem to be an implementation either in gtk+ or KDE/Qt 
-> mentioned yet. Would you want to use a gtk dialog then ? This would be 
-> easily done when using the gtk plugin, however less trivial in the Qt 
-> plugin or the native X plugin (because the latter two do not run any 
-> kind of toolkit "native" event queue). Or would there be an 
-> implementation using OOo's native toolkit VCL ? That would seem to 
-> contradict the idea of having a system wide dialog however. OTOH this 
-> would work out of the box on all our plaforms.
->
+All,
 
-The dialog implementation is currently in the works by one GSoC student 
-(Alexander Wauck). Another student (Lars Uebernickel) is working on a 
-DBUS interface between dialog and application. The dialog will be a 
-plug-in coupled via DBUS (and additional socket for high-volume data 
-transfer). So no dialog needs to be coded for OOo, also OOo does not 
-need to be linked with additional GUI toolkit libraries. Any dialog 
-using Lars' interface will work with OOo, independently which GUI 
-toolkit it uses.
+I post again the following email I posted on 10th Apr.
 
-Lars (CCed) will work together with you on adding the DBUS interface to 
-OOo. Please let the right people contact him.
+At the phone meeting on June 2nd, we guess the main topic is the progress
+of GSoC implementation for CPD as well as PDF workflow, if we have some
+spare time after discussing all the agenda that Ira posted, please add this issue.
 
-> - The dialog provides a preview feature. We can do this similar to the 
-> current MacPort native dialog, which implementationwise comes up after 
-> OOo has prepared the whole document for printing. This is a little 
-> awkward because the whole document is held in memory for, however until 
-> we change our applications to give up the "push" model they currently 
-> employ, this is the only way we can provide this kind of preview 
-> functionality. However how would the preview actually work ? What API 
-> would be used to render the page content to the preview ?
-> 
+TORATANI
 
-See
 
-http://www.linuxfoundation.org/en/OpenPrinting/Specifications
+Forwarded by TORATANI Yasumasa <toratani.yasumasa@canon.co.jp>
+----------------------- Original Message -----------------------
+From:    TORATANI Yasumasa <toratani.yasumasa@canon.co.jp>
+To:      Till Kamppeter <till.kamppeter@gmail.com>
+Date:    Thu, 10 Apr 2008 11:50:42 +0900
+Subject: [Printing-architecture] Proposals to LSB 4.0
+----
 
-and
+Hi Till and OpenPrinting Japan members,
 
-http://www.linuxfoundation.org/en/OpenPrinting/Requirements
+When we had the OpenPrinting f2f meeting in Tokyo on Apr 3rd, 
+we discussed the "Printing and the LSB 4.0" requirements.
 
-Lars will update these pages regularly.
+Attendees at the meeting were;
+Miyata (Avasys),
+Olaf (Avasys),
+Kanjo (BBR),
+Otani (BBR),
+Chigusa (Ricoh),
+Ogasawara (Ricoh),
+Saitoh (NEC Soft)
+Mihara (FUJI XEROX),
+Owa (FUJI XEROX),
+Uoshima (FUJI XEROX),
+Sekiguchi (Konica Minolta),
+Toratani (Canon)
+Kunai (The Linux Foundation),
 
-> Actually the biggest advantage I see here would be that CUPS could now 
-> support print jobs containing multiple page formats (like e.g. a letter 
-> with one page being the envelope) as PDF has the possibility to size 
-> every page. Will that be possible ? The other big advantage is to 
-> reliably use transparency.
+And the results of the discussion were as following.
+(To Japan side members: Please add/modify the comment if you need)
 
-CUPS does not nail down the page size for the job. A change of the page 
-size in the middle of a job should not be a problem if the printer is 
-configured to select the tray by page size.
+- LSB 3.2 Printing specification defines "At least the following devices must be
+present: cups (CUPS Raster), ijs, pxlmono, pxlcolor, and opvp (OpenPrinting Vector). "
+http://refspecs.linux-foundation.org/LSB_3.2.0/LSB-Printing/LSB-Printing/gs.html
+We believe that LSB 4.0 should be upper compatible with LSB 3.2, and LSB 4.0
+should include all the above Ghostscript devices.
 
-    Till
+Additionally, we've defined the new OpenPrinting Vector specification and have
+already developed and tested the new Ghostscript device "opvp" which is
+*compatible* with the former "opvp". See page 3 and 4 of the slide;
+https://www.linux-foundation.org/images/4/43/LFSummit-2008-OPWGJapanActivities-OPVP-Final.pdf
+Same test suiete can be used for the new "opvp" testing, thus we believe
+there is no problem that LSB 4.0 has the same definition as LSB 3.2 which
+includes the Ghostscript "opvp" device.
+
+On the other hand, if LSB 4.0 will define more detailed API of each devices,
+including ijs, pxlmono, pxlcolor and opvp, we should consider when most Linux distros
+will include Ghostscript which includes the new "opvp" device which is based
+on the new OpenPrinting Vector API. We discussed this issue, and our conclusion
+at the f2f meeting was, from the view point of the LSB 4.0 time schedule, a few
+major Linux distros may include the new Ghostscript, but *not* enough time for
+most distros, and thus, the detailed OpenPrinting Vector API will not be able to
+be included in LSB 4.0.
+
+- We still develop printer drivers which can work under CUPS 1.1 and 1.2 for
+backward compatibility. We are glad if CUPS 1.2 will be included in LSB 4.0,
+on the other hand, we do not have a strong requirement that LSB 4.0 should
+include CUPS 1.2.
+
+- We are not sure LSB 3.2 defines the "Path to store the PPD files".
+If the path is not defined clearly in LSB 3.2, we strongly request that
+LSB 4.0 should define it.
+
+- For SANE, we worry about that the project roadmap of SANE.
+Actually, we are preparing many drivers under SANE, however, we are not sure
+SANE2 will replace the genuine SANE interface in the near future with keeping
+the backward compatibility. If the new SANE interface will not keep the
+compatibility with today's SANE, and if most Linux distro will switch from
+today's SANE to the new SANE and will not support today's SANE in the near
+future, from the view point of LSB backward compatibility, we should consider
+to postpone to include the SANE in LSB 4.0.
+
+
+Regards,
+
+-----------------------------------------
+TORATANI Yasumasa
+
+_______________________________________________
+Printing-architecture mailing list
+Printing-architecture@lists.linux-foundation.org
+https://lists.linux-foundation.org/mailman/listinfo/printing-architecture
+--------------------- Original Message Ends --------------------
+
