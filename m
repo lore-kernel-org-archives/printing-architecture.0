@@ -1,11 +1,14 @@
-Message-ID: <48439926.8020004@gmail.com>
-Date: Mon, 02 Jun 2008 08:54:30 +0200
+Message-ID: <4843C442.9030905@gmail.com>
+Date: Mon, 02 Jun 2008 11:58:26 +0200
 From: Till Kamppeter <till.kamppeter@gmail.com>
 MIME-Version: 1.0
+References: <openoffice.gsl.dev-48439926.8020004@gmail.com>
+	<g20egt$p3c$1@staroffice-news.germany.sun.com>
+In-Reply-To: <g20egt$p3c$1@staroffice-news.germany.sun.com>
 Content-Type: text/plain; charset=UTF-8; format=flowed
 Content-Transfer-Encoding: 7bit
-Subject: [Printing-architecture] The Common Printing Dialog and PDF as
- standard print job format in OpenOffice.org
+Subject: Re: [Printing-architecture] [gsl-dev] The Common Printing Dialog
+ and PDF as standard print job format in OpenOffice.org
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -18,97 +21,60 @@ List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-ar
 To: dev@gsl.openoffice.org
 Cc: Henrik Nilsen Omma <henrik@ubuntu.com>, chris.cheney@canonical.com, Matthias Klose <doko@ubuntu.com>, Jonathan Riddell <jriddell@ubuntu.com>, printing-architecture@lists.linux-foundation.org
 
-Hi,
+Philipp Lohmann wrote:
+> I have ot yet seen through all the references you gave, but some initial 
+> questions occured to me.
+> 
+> - There does not seem to be an implementation either in gtk+ or KDE/Qt 
+> mentioned yet. Would you want to use a gtk dialog then ? This would be 
+> easily done when using the gtk plugin, however less trivial in the Qt 
+> plugin or the native X plugin (because the latter two do not run any 
+> kind of toolkit "native" event queue). Or would there be an 
+> implementation using OOo's native toolkit VCL ? That would seem to 
+> contradict the idea of having a system wide dialog however. OTOH this 
+> would work out of the box on all our plaforms.
+>
 
-at OpenPrinting [0] we have developed several new technologies for 
-making printing more reliable and much easier for the user. Currently, 
-we have 5 Google Summer of Code students and so we get a lot of our 
-ideas implemented. Two of our projects need changes in graphical 
-applications and/or the GUI toolkit libraries, as for example 
-OpenOffice.org. One is the Common Printing Dialog and the other is the 
-use of PDF as the standard print job format. Both features have found a 
-wide acceptance on the Printing Summits [10] and implementation has 
-started now. especially with a lot of support from the printer 
-manufacturers for the PDF printing workflow.
+The dialog implementation is currently in the works by one GSoC student 
+(Alexander Wauck). Another student (Lars Uebernickel) is working on a 
+DBUS interface between dialog and application. The dialog will be a 
+plug-in coupled via DBUS (and additional socket for high-volume data 
+transfer). So no dialog needs to be coded for OOo, also OOo does not 
+need to be linked with additional GUI toolkit libraries. Any dialog 
+using Lars' interface will work with OOo, independently which GUI 
+toolkit it uses.
 
+Lars (CCed) will work together with you on adding the DBUS interface to 
+OOo. Please let the right people contact him.
 
-Common Printing Dialog
-----------------------
+> - The dialog provides a preview feature. We can do this similar to the 
+> current MacPort native dialog, which implementationwise comes up after 
+> OOo has prepared the whole document for printing. This is a little 
+> awkward because the whole document is held in memory for, however until 
+> we change our applications to give up the "push" model they currently 
+> employ, this is the only way we can provide this kind of preview 
+> functionality. However how would the preview actually work ? What API 
+> would be used to render the page content to the preview ?
+> 
 
-As most of you already know, OpenPrinting and OpenUsability have 
-developed a Common Printing Dialog for all desktops and applications 
-[1], [2], [3]. Ubuntu blueprint at [9]. This should make printing much 
-easier as if users get used how to print with application A they 
-immediately know how to print from application B. It will also get 
-assured that there is always access to all functionality of the printer 
-(driver) and the printing system, requiring no effort from application 
-developers. We would like to have the support from OpenOffice.org to 
-make applications interfacing to the new dialog by a plug-in interface. 
-This will not only allow to use our dialog as the common one but also 
-any other one, as the ones from Qt or GTK for example.
+See
 
-The interface is designed and implemented by Lars Uebernickel, one of 
-the Google Summer of Code students [7]. The specs for this interface are 
-work in progress on [4]. Requirements are written up on [5]. This 
-interface needs also to be implemented in the applications and/or their 
-common GUI libraries, in our case OpenOffice.org. Lars will work on 
-patching the application, but these patches should not only go into 
-packages of Linux distributions but also into the upstream software 
-repositories. So I ask you for working together with Lars to make these 
-patches also part of the upstream code.
+http://www.linuxfoundation.org/en/OpenPrinting/Specifications
 
-Patches should only be used as a backport of a feature from a future 
-software version to the software in the current version of a 
-distribution (in the case the software currently under development will 
-not make it into the next releases of the distros).
+and
 
+http://www.linuxfoundation.org/en/OpenPrinting/Requirements
 
-PDF as the Standard Print Job Format
-------------------------------------
+Lars will update these pages regularly.
 
-To improve the reliability of the printing process, especially for 
-complex graphics, high color depths, and for jobs where pages get 
-separated and reordered (2 pages per sheet, booklets, selected pages, 
-...) we are switching from PostScript to PDF as standard print job format.
+> Actually the biggest advantage I see here would be that CUPS could now 
+> support print jobs containing multiple page formats (like e.g. a letter 
+> with one page being the envelope) as PDF has the possibility to size 
+> every page. Will that be possible ? The other big advantage is to 
+> reliably use transparency.
 
-The server (printing system) side is nearly completely implemented in 
-the form of new CUPS filters and file conversion rules.
-
-On the client (application) side it is needed that the applications 
-generate the print jobs in PDF and not in Postscript. This would mean a 
-change of the print job generation part of OpenOffice.org. As 
-OpenOffice.org has an excellent "Export to PDF" function, there will not 
-be needed much new code. One can use this functionality to generate 
-print jobs, using PDF settings optimized for printing.
-
-This is not absolutely urgent, as CUPS can convert PostScript to PDF 
-with a pstopdf filter, but applications which directly produce PDF have 
-a better control over the graphical quality of the print job, and they 
-even solve page management (2 on a sheet, booklets, selected pages, ...) 
-problems on old PostScript-based servers, as a CUPS filter will generate 
-PostScript from the incoming PDF then (pdftops) and this PostScript is 
-much cleaner as the one coming from most applications.
-
-So I am asking you whether you can change OpenOffice.org to make the 
-"Print" command emitting PDF instead of PostScript. To not break lagacy, 
-non-PDF-capable environments, make this a configurable option.
-
-I am very grateful for any support from the OpenOffice.org side in terms 
-of these OpenPrinting projects. They will improve the printing workflow 
-a lot and will make many bugs and user complaints go away.
+CUPS does not nail down the page size for the job. A change of the page 
+size in the middle of a job should not be a problem if the printer is 
+configured to select the tray by page size.
 
     Till
-
-
-[0]http://www.openprinting.org/
-[1]http://www.mmiworks.net/eng/publications/labels/openPrinting.html
-[2]http://wiki.openusability.org/printing/
-[3]http://wiki.openusability.org/printing/index.php/Specification
-[4]http://www.linux-foundation.org/en/OpenPrinting/Specifications
-[5]http://www.linux-foundation.org/en/OpenPrinting/Requirements
-[6]http://portland.freedesktop.org/wiki/PrintDialog
-[7]http://code.google.com/soc/2008/linux/appinfo.html?csaid=53E53CD78F134BE9
-[8]http://code.google.com/soc/2008/linux/appinfo.html?csaid=9D65D29842F34550
-[9]https://blueprints.launchpad.net/ubuntu/+spec/applications-printing
-[10]https://www.linux-foundation.org/en/OpenPrinting/MeetingInfo
-[11]https://blueprints.launchpad.net/ubuntu/+spec/pdf-as-standard-print-job-format
