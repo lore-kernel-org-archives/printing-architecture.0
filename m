@@ -1,5 +1,5 @@
-Message-ID: <48445812.9020300@gmail.com>
-Date: Mon, 02 Jun 2008 22:29:06 +0200
+Message-ID: <4844600B.50508@gmail.com>
+Date: Mon, 02 Jun 2008 23:03:07 +0200
 From: Till Kamppeter <till.kamppeter@gmail.com>
 MIME-Version: 1.0
 References: <e395be80805281844y30c06b1fgd4ae1aa1611fa2a3@mail.gmail.com>
@@ -20,50 +20,10 @@ List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-ar
 To: Ira McDonald <blueroofmusic@gmail.com>
 Cc: printing-architecture@lists.linux-foundation.org
 
-Some remarks on the agenda items:
-
 Ira McDonald wrote:
-> Agenda:
->
-
-[...]
-
-> (3) Open Printing Dialog status - Till Kamppeter
->       - Brief highlights for July planning
->
-
-I have pushed forward the distribution integration of three OpenPrinting 
-projects on the Ubuntu Developer Summit in Prague two weeks ago:
-
-Common Printing Dialog;
-https://blueprints.launchpad.net/ubuntu/+spec/applications-printing
-PDF instead of PostScript as standard print job transfer format:
-https://blueprints.launchpad.net/ubuntu/+spec/pdf-as-standard-print-job-format
-Automatic download of printer drivers:
-https://blueprints.launchpad.net/ubuntu/+spec/printerdriverautodownload
-
-By the integration into the next Ubuntu release I hope that other 
-distros (SUSE, Red Hat, ...) will soon take these features, too.
-
-I also found some contacts on the Ubuntu Summit and on the LinuxTag to 
-move forward the changes of the applications needed to integrate the 
-Common Printing Dialog and the PDF printing workflow.
-
-OpenOffice.org and KDE/Qt folks are informed, GNOME/GTK to follow.
-
-Lars Uebernickel is working on the DBUS API for plugging in the dialog 
-now. Name for the API/library package? Problem: Printing Dialog API -> 
-PDAPI already used for Printer Driver API.
-
 > (4) OP Japan Meeting in July - Toratani-san and Till Kamppeter
->       - Agenda topics
-> 
 
-Peter Sikking will present the Common Printing Dialog with live demo. 
-Alexander Wauck is coding on the dialog. I will present the progress of 
-all the other OpenPrinting projects. I am grateful for slides from the 
-GSoC students and/or mentors.
-
-[...]
+Wiki started for agenda:
+https://www.linuxfoundation.org/en/OpenPrinting/LFJapanSymposiumTokyoJuly2008
 
     Till
