@@ -1,11 +1,13 @@
-Message-ID: <b801b6f40806021541s7301efao48d7722bc61ff1b7@mail.gmail.com>
-Date: Mon, 2 Jun 2008 17:41:31 -0500
-From: "Alex Wauck" <alex.wauck@gmail.com>
-In-Reply-To: <4844567A.7080709@gmail.com>
+Message-ID: <e395be80806021555m3cd08365neaeb1fdc2b5cd8c4@mail.gmail.com>
+Date: Mon, 2 Jun 2008 18:55:01 -0400
+From: "Ira McDonald" <blueroofmusic@gmail.com>
+In-Reply-To: <b801b6f40806021541s7301efao48d7722bc61ff1b7@mail.gmail.com>
 MIME-Version: 1.0
-Content-Type: multipart/alternative; 
-	boundary="----=_Part_23100_25225703.1212446491246"
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline
 References: <4844567A.7080709@gmail.com>
+	<b801b6f40806021541s7301efao48d7722bc61ff1b7@mail.gmail.com>
 Subject: Re: [Printing-architecture] Suggestion for a small change in your
 	design for the Common Printing Dialog
 List-Id: Printing architecture under linux
@@ -17,69 +19,69 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Till Kamppeter <till.kamppeter@gmail.com>
-Cc: printing-architecture@lists.linux-foundation.org, Celeste Lyn Paul <celeste@kde.org>, Henrik Nilsen Omma <henrik@ubuntu.com>, Jonathan Riddell <jriddell@ubuntu.com>
+To: Alex Wauck <alex.wauck@gmail.com>, Ira McDonald <blueroofmusic@gmail.com>
+Cc: printing-architecture@lists.linux-foundation.org, Celeste Lyn Paul <celeste@kde.org>, Henrik Nilsen Omma <henrik@ubuntu.com>, Jonathan Riddell <jriddell@ubuntu.com>, Till Kamppeter <till.kamppeter@gmail.com>
 
-------=_Part_23100_25225703.1212446491246
-Content-Type: text/plain; charset=ISO-8859-1
-Content-Transfer-Encoding: 7bit
-Content-Disposition: inline
+Hi Alex and Till,
 
-I like it.  I'm using a custom widget for the preview instead of the Qt
-preview widget, so it won't be too difficult to implement.  We just need to
-figure out how to specify ranges.  People don't want to go through and mark
-every page in a 100-page range.
+FWIW - In IPP/1.1 Production Printing, Open Printing Job Ticket API, and
+PWG Semantic Model, we have a common "pages" attribute defined as
+'(1setOf rangeOfInteger(1:MAX))' (i.e., a set of page ranges).
 
-Alex
+I suggest we give the user a set of boxes like ordinary page range that can
+be filled in for a discontiguous set of pages.
 
-On Mon, Jun 2, 2008 at 3:22 PM, Till Kamppeter <till.kamppeter@gmail.com>
-wrote:
+Cheers,
+- Ira
 
-> Hi,
+On Mon, Jun 2, 2008 at 6:41 PM, Alex Wauck <alex.wauck@gmail.com> wrote:
+> I like it.  I'm using a custom widget for the preview instead of the Qt
+> preview widget, so it won't be too difficult to implement.  We just need to
+> figure out how to specify ranges.  People don't want to go through and mark
+> every page in a 100-page range.
 >
-> on the Ubuntu Developer Summit (UDS) in Prague we have discussed your
-> design for the Common Printing Dialog. During the discussion doubts came
-> up about how to print only selected pages of a document. A suggestion
-> was then that one can add buttons to the preview to (de)select the page
-> currently visible (like implemented in multi-function printers where one
-> can print photos from a memory card selecting them on the printer's
-> display, or like on digital cameras with PictBridge).
+> Alex
 >
-> WDYT about this feature? Or what were your ideas about selecting the
-> pages to be printed?
+> On Mon, Jun 2, 2008 at 3:22 PM, Till Kamppeter <till.kamppeter@gmail.com>
+> wrote:
+>>
+>> Hi,
+>>
+>> on the Ubuntu Developer Summit (UDS) in Prague we have discussed your
+>> design for the Common Printing Dialog. During the discussion doubts came
+>> up about how to print only selected pages of a document. A suggestion
+>> was then that one can add buttons to the preview to (de)select the page
+>> currently visible (like implemented in multi-function printers where one
+>> can print photos from a memory card selecting them on the printer's
+>> display, or like on digital cameras with PictBridge).
+>>
+>> WDYT about this feature? Or what were your ideas about selecting the
+>> pages to be printed?
+>>
+>>    Till
+>> _______________________________________________
+>> Printing-architecture mailing list
+>> Printing-architecture@lists.linux-foundation.org
+>> https://lists.linux-foundation.org/mailman/listinfo/printing-architecture
 >
->    Till
+>
 > _______________________________________________
 > Printing-architecture mailing list
 > Printing-architecture@lists.linux-foundation.org
 > https://lists.linux-foundation.org/mailman/listinfo/printing-architecture
 >
+>
 
-------=_Part_23100_25225703.1212446491246
-Content-Type: text/html; charset=ISO-8859-1
-Content-Transfer-Encoding: 7bit
-Content-Disposition: inline
 
-I like it.&nbsp; I&#39;m using a custom widget for the preview instead of the Qt preview widget, so it won&#39;t be too difficult to implement.&nbsp; We just need to figure out how to specify ranges.&nbsp; People don&#39;t want to go through and mark every page in a 100-page range.<br>
-<br>Alex<br><br><div class="gmail_quote">On Mon, Jun 2, 2008 at 3:22 PM, Till Kamppeter &lt;<a href="mailto:till.kamppeter@gmail.com">till.kamppeter@gmail.com</a>&gt; wrote:<br><blockquote class="gmail_quote" style="border-left: 1px solid rgb(204, 204, 204); margin: 0pt 0pt 0pt 0.8ex; padding-left: 1ex;">
-Hi,<br>
-<br>
-on the Ubuntu Developer Summit (UDS) in Prague we have discussed your<br>
-design for the Common Printing Dialog. During the discussion doubts came<br>
-up about how to print only selected pages of a document. A suggestion<br>
-was then that one can add buttons to the preview to (de)select the page<br>
-currently visible (like implemented in multi-function printers where one<br>
-can print photos from a memory card selecting them on the printer&#39;s<br>
-display, or like on digital cameras with PictBridge).<br>
-<br>
-WDYT about this feature? Or what were your ideas about selecting the<br>
-pages to be printed?<br>
-<br>
- &nbsp; &nbsp;Till<br>
-_______________________________________________<br>
-Printing-architecture mailing list<br>
-<a href="mailto:Printing-architecture@lists.linux-foundation.org">Printing-architecture@lists.linux-foundation.org</a><br>
-<a href="https://lists.linux-foundation.org/mailman/listinfo/printing-architecture" target="_blank">https://lists.linux-foundation.org/mailman/listinfo/printing-architecture</a><br>
-</blockquote></div><br>
 
-------=_Part_23100_25225703.1212446491246--
+-- 
+Ira McDonald (Musician / Software Architect)
+Chair - Linux Foundation Open Printing WG
+Blue Roof Music/High North Inc
+email: blueroofmusic@gmail.com
+winter:
+ 579 Park Place Saline, MI 48176
+ 734-944-0094
+summer:
+ PO Box 221 Grand Marais, MI 49839
+ 906-494-2434
