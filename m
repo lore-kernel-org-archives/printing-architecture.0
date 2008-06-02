@@ -1,13 +1,11 @@
-Date: Mon, 02 Jun 2008 20:30:23 +0900
-From: TORATANI Yasumasa <toratani.yasumasa@canon.co.jp>
-In-Reply-To: <4843D0FB.6070100@gmail.com>
-References: <482D53E9.4030201@gmail.com> <4843D0FB.6070100@gmail.com>
-Message-Id: <20080602201741.C1CA.TORATANI.YASUMASA@canon.co.jp>
+Message-ID: <e395be80806020756x7b8b5496n565098ece4190d2@mail.gmail.com>
+Date: Mon, 2 Jun 2008 10:56:55 -0400
+From: "Ira McDonald" <blueroofmusic@gmail.com>
 MIME-Version: 1.0
-Content-Type: text/plain; charset="US-ASCII"
+Content-Type: text/plain; charset=ISO-8859-1
 Content-Transfer-Encoding: 7bit
-Subject: Re: [Printing-architecture] Where should we track bugs in the LSB
-	DDK?
+Content-Disposition: inline
+Subject: [Printing-architecture] OP SC Agenda is flexible
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -17,58 +15,30 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Till Kamppeter <till.kamppeter@gmail.com>
-Cc: printing-architecture@lists.linux-foundation.org
+To: printing-architecture@lists.linux-foundation.org, Ira McDonald <blueroofmusic@gmail.com>
 
-Hi Till,
+Hi,
 
-How about the following flow?
-- Printer manufacturere or other developer/user posts the bugs related to printing
-  first to the OpenPrinting bug tracker.
-- OpenPrinting bug tracker admin (Till?) assigns the developer for each bug.
-  If the bug is caused by the LSB base modules, admin registers the bug into the
-  LSB bug tracker, and also records the LSB tracker bug id into the OpenPrinting
-  bug tracker. If the bug is caused by OpenPrinting specific modules, developer
-  of the module should be assigned.
+Per Toratani-san's note about LSB 4.0, our agenda later today for OP
+Steering Committee is flexible - if we want to drop some items or move
+others earlier in the schedule, that's fine.
 
-TORATANI
+Please reply to this note if you want to change any of the OP SC agenda.
 
-On Mon, 02 Jun 2008 12:52:43 +0200
-Till Kamppeter <till.kamppeter@gmail.com> wrote:
+I will be away from my office most of the day until our meeting, but I should
+see email before the meeting.
 
-> Hi,
-> 
-> no one has any opinion about this? I need it done quickly, as printer 
-> manufacturers are asking me where to report bugs.
-> 
->     Till
-> 
-> Till Kamppeter wrote:
-> > Hi,
-> > 
-> > I got already the first bug report for the LSB DDK (Driver Development 
-> > Kit) by e-mail.
-> > 
-> > As there are two suitable bug tracking systems
-> > 
-> > - LSB: http://bugs.linuxbase.org/
-> > - OpenPrinting: http://bugs.linux-foundation.org/ (Prod.: OpenPrinting)
-> > 
-> > I am in doubt where to report these bugs. WDYT? I would say it is better 
-> >  located in the LSB bug tracker.
-> > 
-> > This shows also that we should have only one bug tracker for the Linux 
-> > Foundation. So bugs can be more easily moved, for example an LSB-DDK bug 
-> > from OpenPrinting to LSB.
-> > 
-> >    Till
-> > 
-> 
-> _______________________________________________
-> Printing-architecture mailing list
-> Printing-architecture@lists.linux-foundation.org
-> https://lists.linux-foundation.org/mailman/listinfo/printing-architecture
+Cheers,
+- Ira
 
------------------------------------------
-TORATANI Yasumasa
-
+-- 
+Ira McDonald (Musician / Software Architect)
+Chair - Linux Foundation Open Printing WG
+Blue Roof Music/High North Inc
+email: blueroofmusic@gmail.com
+winter:
+ 579 Park Place Saline, MI 48176
+ 734-944-0094
+summer:
+ PO Box 221 Grand Marais, MI 49839
+ 906-494-2434
