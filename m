@@ -1,10 +1,13 @@
-Date: Tue, 03 Jun 2008 15:43:51 +0900
-From: TORATANI Yasumasa <toratani.yasumasa@canon.co.jp>
-Message-Id: <20080603153656.2F34.TORATANI.YASUMASA@canon.co.jp>
-MIME-Version: 1.0
-Content-Type: text/plain; charset="US-ASCII"
+Message-Id: <7212E812-C643-4171-AE0E-D296F4F7D6B6@mmiworks.net>
+From: peter sikking <peter@mmiworks.net>
+In-Reply-To: <4844567A.7080709@gmail.com>
+Content-Type: text/plain; charset=US-ASCII; format=flowed; delsp=yes
 Content-Transfer-Encoding: 7bit
-Subject: [Printing-architecture] PDF CUPS filter packages
+Mime-Version: 1.0 (Apple Message framework v924)
+Date: Tue, 3 Jun 2008 10:37:46 +0200
+References: <4844567A.7080709@gmail.com>
+Subject: Re: [Printing-architecture] Suggestion for a small change in your
+	design for the Common Printing Dialog
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -14,26 +17,28 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: printing-architecture@lists.linux-foundation.org
+To: Till Kamppeter <till.kamppeter@gmail.com>
+Cc: printing-architecture@lists.linux-foundation.org, Celeste Lyn Paul <celeste@kde.org>, Henrik Nilsen Omma <henrik@ubuntu.com>, Jonathan Riddell <jriddell@ubuntu.com>
 
-Hi,
+Till et al,
 
-Otani-san has uploaded the PDF filters packages for Ubuntu 7.10,
-Fedora 7 and Fedora 8 at;
-http://sourceforge.jp/projects/opfc/files/
+> on the Ubuntu Developer Summit (UDS) in Prague we have discussed  
+> your design for the Common Printing Dialog. During the discussion  
+> doubts came up about how to print only selected pages of a document.
 
-Ubuntu 7.10
-        opfc-pdf-filters_0.4-1ubuntu710.tgz
-        opfc-pdf-filters_0.4-1ubuntu710_i386.deb
+interesting, discussing UI that has not been designed yet.
 
-Fedora 8
-        opfc-pdf-filters-0.4-1.fc8.i386.rpm
-        opfc-pdf-filters-0.4-1.fc8.src.rpm
+I will put in a way to make the obvious easy, and the complicated  
+possible.
 
-Fedora7
-        opfc-pdf-filters-0.4-1.fc7.i386.rpm
-        opfc-pdf-filters-0.4-1.fc7.src.rpm
+there will be an update on the design project later today...
 
------------------------------------------
-TORATANI Yasumasa
+     --ps
+
+         founder + principal interaction architect
+             man + machine interface works
+
+         http://mmiworks.net/blog : on interaction architecture
+
+
 
