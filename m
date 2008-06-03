@@ -1,13 +1,11 @@
-Message-Id: <A6C9AD83-3B68-42A2-AA3D-D4B60AE9C251@mmiworks.net>
-From: peter sikking <peter@mmiworks.net>
-In-Reply-To: <484562EB.4090908@sun.com>
-Content-Type: text/plain; charset=US-ASCII; format=flowed; delsp=yes
+Message-ID: <e395be80806031305t682b26b1sbbb277a7f3eecc43@mail.gmail.com>
+Date: Tue, 3 Jun 2008 16:05:38 -0400
+From: "Ira McDonald" <blueroofmusic@gmail.com>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=ISO-8859-1
 Content-Transfer-Encoding: 7bit
-Mime-Version: 1.0 (Apple Message framework v924)
-Date: Tue, 3 Jun 2008 18:33:19 +0200
-References: <48455987.9010003@gmail.com> <484562EB.4090908@sun.com>
-Subject: Re: [Printing-architecture] The Common Printing Dialog and PDF as
-	standard print job format for	GTK/GNOME applications
+Content-Disposition: inline
+Subject: [Printing-architecture] OP SC Minutes - 2 June 2008
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -17,25 +15,25 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Ghee Teo <Ghee.Teo@Sun.COM>
-Cc: seb128@ubuntu.com, gnome-devel-list@gnome.org, Celeste Lyn Paul <celeste@kde.org>, Till Kamppeter <till.kamppeter@gmail.com>, printing-architecture@lists.linux-foundation.org, "gtk-devel-list@gnome.org" <gtk-devel-list@gnome.org>
+To: printing-architecture@lists.linux-foundation.org, Ira McDonald <blueroofmusic@gmail.com>
 
-Ghee wrote:
+Hi,
 
-> P.S. Would you or any of the GSOC going to GAUDEC 2008 in Istabul in  
-> July 7th-12th?
-> I have a BOF on http://guadec.expectnation.com/guadec08/public/schedule/detail/15
-> We could have more discussion after that in Print Dialog :)
+Minutes from yesterday's Open Printing Steering Committee:
 
-I will be a the guadec on the 10-12th, and present about the dialog
-on the 10th.
+ftp://ftp.pwg.org/pub/pwg/fsg/steering_committee/OP-SC-Minutes-20080602.htm
 
-     --ps
+Cheers,
+- Ira
 
-         founder + principal interaction architect
-             man + machine interface works
-
-         http://mmiworks.net/blog : on interaction architecture
-
-
-
+-- 
+Ira McDonald (Musician / Software Architect)
+Chair - Linux Foundation Open Printing WG
+Blue Roof Music/High North Inc
+email: blueroofmusic@gmail.com
+winter:
+ 579 Park Place Saline, MI 48176
+ 734-944-0094
+summer:
+ PO Box 221 Grand Marais, MI 49839
+ 906-494-2434
