@@ -1,13 +1,14 @@
-Message-ID: <484683B0.2060708@gmail.com>
-Date: Wed, 04 Jun 2008 13:59:44 +0200
-From: Till Kamppeter <till.kamppeter@gmail.com>
-MIME-Version: 1.0
-References: <484541C0.3060501@gmail.com>	<20080604.105602.104056266.sho@bbr.jp>	<48465B3D.4080809@gmail.com>
-	<20080604.181746.02274177.sho@bbr.jp>
-In-Reply-To: <20080604.181746.02274177.sho@bbr.jp>
-Content-Type: text/plain; charset=UTF-8; format=flowed
-Content-Transfer-Encoding: 7bit
-Subject: Re: [Printing-architecture] PDF CUPS filter packages
+Date: Wed, 4 Jun 2008 17:41:00 +0200
+From: Klaus Singvogel <kssingvo@suse.de>
+Message-ID: <20080604154059.GA30247@suse.de>
+References: <20080602154427.GA771@suse.de>
+	<200806022202.41614.Thomas.Zander@trolltech.com>
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Disposition: inline
+In-Reply-To: <200806022202.41614.Thomas.Zander@trolltech.com>
+Subject: Re: [Printing-architecture] The Common Printing Dialog and PDF as
+	standard print job format for Qt/KDE applications
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -17,109 +18,69 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Koji Otani <sho@bbr.jp>
-Cc: toratani.yasumasa@canon.co.jp, printing-architecture@lists.linux-foundation.org
+To: Thomas Zander <Thomas.Zander@trolltech.com>
+Cc: kurt pfeifle <k1pfeifle@gmx.net>, Henrik Nilsen Omma <henrik@ubuntu.com>, Jonathan Riddell <jriddell@ubuntu.com>, printing-architecture@lists.linux-foundation.org, Till Kamppeter <till.kamppeter@gmail.com>, Celeste Lyn Paul <celeste@kde.org>, Cristian Tibirna <tibirna@kde.org>
 
-Thank you, now the package rebuilds correctly for me. Next step to fix 
-now for you is to eliminate the necessity of full copies of the Poppler 
-and CUPS source code in the package.
+Hi,
+sorry for delay, but our next product is upcoming, and sometimes time
+is getting short at the moment at my side. :-)
 
-Another issue are the cost factors in the .convs files. They must 
-prioritize the PDF workflow. Note here that lower cost factors give 
-higher priority.
+I noticed that you couldn't fully dispel all my arguments, and
+therefore I think you caugth the issues.
 
-I suggest the following:
+Still I've some comments to your last e-mail...
 
-pdftopdf:
-application/pdf         application/vnd.cups-pdf        33   pdftopdf
-
-pdftoraster:
-application/vnd.cups-pdf application/vnd.cups-raster    66   pdftoraster
-
-imagetopdf:
-image/gif               application/vnd.cups-pdf        50   imagetopdf
-...
-image/x-sun-raster      application/vnd.cups-pdf        50   imagetopdf
-
-(all lines 50 as cost factor)
-
-We will also need a pstopdf filter to handle PostScript input. This 
-filter can be a simple script which can be easily derived from the 
-pstoraster filter. It will need the following conversion rule:
-
-pstopdf:
-application/postscript   application/pdf                   0 pstopdf
-
-We also need to add the following rule to make native PostScript 
-printers working with the PDF workflow (the filter comes already with CUPS):
-
-pdftops:
-application/vnd.cups-pdf application/vnd.cups-postscript   0 pdftops
-
-
-Also a problem are the PPD files shipped with the package. They need 
-certain OpenPrinting Vector driver modules which do not ship with the 
-package. The PPD files need to be moved into the packages which ship the 
-driver modules, as otherwise a printer setup tool will list the 
-appropriate printers but printing on them will not work. In addition, 
-PPD files should not be put directly into /usr/share/ppd, but into 
-/usr/share/ppd/<supplier>/<manufacturer>.
-
-
-I have also run lintian and linda, reporting the following smaller 
-issues with the package:
-
-------------------------------------------------------------------------
-till@till-laptop:~/ubuntu/opfc-pdf-filters/opfc-pdf-filters-0.4.1$ linda 
-../opfc-pdf-filters_0.4.1-1ubuntu804_amd64.deb
-W: opfc-pdf-filters; File 
-/usr/share/doc/opfc-pdf-filters/imagetopdf/LICENSE.txt.gz is considered 
-to be an extra license file.
-W: opfc-pdf-filters; Binary /usr/lib/cups/filter/pdftoopvp compiled with 
-an RPATH of /usr/lib.
-till@till-laptop:~/ubuntu/opfc-pdf-filters/opfc-pdf-filters-0.4.1$ 
-lintian ../opfc-pdf-filters_0.4.1-1ubuntu804_amd64.deb
-W: opfc-pdf-filters: extra-license-file 
-usr/share/doc/opfc-pdf-filters/imagetopdf/LICENSE.txt.gz
-W: opfc-pdf-filters: copyright-without-copyright-notice
-till@till-laptop:~/ubuntu/opfc-pdf-filters/opfc-pdf-filters-0.4.1$
-------------------------------------------------------------------------
-
-    Till
-
-
-
-Koji Otani wrote:
-> From: Till Kamppeter <till.kamppeter@gmail.com>
-> Subject: Re: [Printing-architecture] PDF CUPS filter packages
-> Date: Wed, 04 Jun 2008 11:07:09 +0200
-> Message-ID: <48465B3D.4080809@gmail.com>
+Thomas Zander wrote:
 > 
-> till.kamppeter> Koji Otani wrote:
-> till.kamppeter> > Hi Till,
-> till.kamppeter> > 
-> till.kamppeter> > I'm Koji Otani.
-> till.kamppeter> > 
-> till.kamppeter> > Thank you for trying PDF filters.
-> till.kamppeter> > 
-> till.kamppeter> > I'm wondering that error with dpkg-buildpackage is caused by using
-> till.kamppeter> > the compiler for 64bits. I'll see and fix it.
-> till.kamppeter> > 
-> till.kamppeter> > Errors with manually compiling are caused by wrong specified
-> till.kamppeter> >   --with-poppler-source option. That's option's value should be
-> till.kamppeter> >   specified with full path. (See INSTALL please)
-> till.kamppeter> >
-> till.kamppeter> 
-> till.kamppeter> I have used the full path now and the problem still occurs. See below.
-> till.kamppeter> 
-> till.kamppeter>     Till
-> till.kamppeter> 
-> 
-> Sorry, these problem was caused by newer GCC (>= 4.2).
-> I've fixed these and uploaded new packages for Ubuntu 8.04 and Fedora 9.
-> Please try these.
-> 
-> ------------
-> Koji Otani.
-> 
+> The usage of references means that it you are right that it is possible to 
+> have the first page reference an object at the end of the document, but thats 
+> just not how pdf exporters are written.
 
+But the PDF-1.7 reference from Adobe is written so:
+http://www.adobe.com/devnet/acrobat/pdfs/pdf_reference.pdf
+
+It could be viewed only (and only with acroread) after the file was
+completely downloaded.
+
+[...]
+> > But most OpenSource programs (like xpdf and clones) support only up to
+> > PDF-1.4.
+> >
+> > Therefore I'm asking, will be a PDF limitation made for Linux printing?
+> 
+> On screen PDF viewers are not really relevant here, the support of the 
+> standard in the printer is.
+
+Sorry, but how is the printout on non-brandnew or non-PDF-able printers
+done?
+Isn't there a conversion to older PDF versions or to a printer
+specific rasterization necessary?
+Which tool do you think is used for doing so, if not xpdf?
+
+> But more to the point, newer versions tend to only add multi-media versions 
+> (like 3D stuff) which obviously is not really relevant.
+
+What about the JPEG2000 support (PDF-1.5)? I doubt that it is
+multi-media related, and having doubts regarding "non relevant
+feature" classification either.
+
+What about the layering? I got bugzilla entries where the layering in
+some newer PDF versions produced wrong printouts (different then in
+viewer). I.e. https://bugzilla.novell.com/show_bug.cgi?id=377878
+
+A technique, which was introduced with PDF-1.6, I think.
+
+
+> On another note; KDE and poppler are working hard on getting that support up; 
+> which is the obvious correct solution, again IMO.
+
+I agree. But I heard about this rumor quiet some time now, and got
+doubts that it will ever be done.
+
+Regards,
+	Klaus.
+-- 
+Klaus Singvogel  -  Maxfeldstr. 5  -  90409 Nuernberg  -  Germany
+Phone: +49-911-74053-0
+GnuPG-Key-ID: 1024R/5068792D  1994-06-27
+SUSE LINUX Products GmbH,  GF: Markus Rex,  HRB 16746 (AG Nuernberg)
