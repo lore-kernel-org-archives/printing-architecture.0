@@ -1,13 +1,12 @@
-References: <484541C0.3060501@gmail.com>
-	<20080604.105602.104056266.sho@bbr.jp> <48465B3D.4080809@gmail.com>
-	<20080604.181746.02274177.sho@bbr.jp> <484683B0.2060708@gmail.com>
-From: Olaf Meeuwissen <olaf.meeuwissen@avasys.jp>
-Date: Thu, 05 Jun 2008 08:16:48 +0900
-In-Reply-To: <484683B0.2060708@gmail.com> (Till Kamppeter's message of "Wed\,
-	04 Jun 2008 13\:59\:44 +0200")
-Message-ID: <87ve0odc4f.fsf@geek.avasys.jp>
+Message-ID: <484794CF.10300@gmail.com>
+Date: Thu, 05 Jun 2008 09:25:03 +0200
+From: Till Kamppeter <till.kamppeter@gmail.com>
 MIME-Version: 1.0
-Content-Type: text/plain; charset=us-ascii
+References: <48465B3D.4080809@gmail.com>	<20080604.181746.02274177.sho@bbr.jp>	<484683B0.2060708@gmail.com>
+	<20080605.153828.28801505.sho@bbr.jp>
+In-Reply-To: <20080605.153828.28801505.sho@bbr.jp>
+Content-Type: text/plain; charset=UTF-8; format=flowed
+Content-Transfer-Encoding: 7bit
 Subject: Re: [Printing-architecture] PDF CUPS filter packages
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
@@ -18,43 +17,82 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Till Kamppeter <till.kamppeter@gmail.com>
-Cc: toratani.yasumasa@canon.co.jp, printing-architecture@lists.linux-foundation.org, Koji Otani <sho@bbr.jp>
+To: Koji Otani <sho@bbr.jp>
+Cc: toratani.yasumasa@canon.co.jp, printing-architecture@lists.linux-foundation.org
 
-Till Kamppeter <till.kamppeter@gmail.com> writes:
+Koji Otani wrote:
+> The CUPS source is needed by imagetopdf. This is because it use a CUPS's
+> internal function to be compatible with imagetops. Importing this code
+> into imagetopdf's source, the CUPS's full source will not be needed.
+>
 
-> Thank you, now the package rebuilds correctly for me. Next step to fix 
-> now for you is to eliminate the necessity of full copies of the Poppler 
-> and CUPS source code in the package.
+Then you should file an STR for CUPS (http://www.cups.org/str.php, 
+feature request for CUPS 1.4) with a patch for the current SVN snapshot 
+which integrates this filter.
 
-For the record, the "errors" were caused by telling gcc to treat
-warnings as errors (see snippet below).  I have not checked the
-opfc-pdf-filters sources but this is not the default gcc behaviour,
-AFAIK.
+> pdftopdf and pdftoraster need the Poppler source. This is because they are
+> using some API not installed by poppler package. While only header files
+> are needed, to include only header files into the PDF filter pacakge
+> is worse than to include full source, I think. So, to eliminate
+> the Poppler source from PDF filter source pacakage is very difficult.
+> 
 
-  make[2]: Entering directory 
-  `/home/till/ubuntu/opfc-pdf-filters/tmp/opfc-pdf-filters-0.4/pdftopdf/src'
-  g++ -DHAVE_CONFIG_H -I. -I.. 
-  -I/home/till/ubuntu/opfc-pdf-filters/tmp/opfc-pdf-filters-0.4/poppler-0.6//poppler 
-  -I/home/till/ubuntu/opfc-pdf-filters/tmp/opfc-pdf-filters-0.4/poppler-0.6/ 
-  -DCONFFILE_DIR=\"/etc/cups\" -DPDFTOPDF 
-  -I/home/till/ubuntu/opfc-pdf-filters/tmp/opfc-pdf-filters-0.4/poppler-0.6//poppler 
-    -Wall -Werror -g -O2 -MT pdf2pdf-P2PCatalog.o -MD -MP -MF 
-  .deps/pdf2pdf-P2PCatalog.Tpo -c -o pdf2pdf-P2PCatalog.o `test -f 
-  'P2PCatalog.cc' || echo './'`P2PCatalog.cc
-  cc1plus: warnings being treated as errors
+This looks like Poppler's API is incomplete. You should file a 
+bug/feature request to Poppler so that they expose the missing 
+functions. Or a feature request of making these filters part of Poppler. 
+Supply a patch with the bug report/feature request.
 
-While I am generally inclined to do this myself, it is a bit of a
-mixed blessing as not all gcc versions of all distribution flag the
-same things as warnings.  If adding your own warnings to -Wall, you
-will very likely compound the issue.
+> pdftoopvp's source is  a modified Poppler source.
+> 
 
-In this particular case, converting string constants to `char *`, I
-would say it should be fixed.
+Here you should also contact the Poppler project for either exposing 
+missing API elements or making the filter part of Poppler.
 
-> [snip]
+> 
+> These are same as counterparts of PS workflow.
+> If your printer driver accepts PDF not PS, these filters are used.
+> 
+> Why should their costs be lower than conterparts?
+>
 
-Hope this helps,
--- 
-Olaf Meeuwissen                   FLOSS Engineer -- AVASYS Corporation
-FSF Associate Member #1962           sign up at http://member.fsf.org/
+The PDF printing workflow is more reliable than the PostScript workflow. 
+So the printout is more reliable if pdftopdf and not pstops is used, 
+even in the case of having incoming PostScript and a driver which only 
+accepts PostScript. Then CUPS should do pstopdf->pdftopdf->pdftops to 
+get reliable page management.
+
+> I made a pstopdf script:
+> ---------------------
+> #!/bin/sh
+> if [ x$6 == x ];then
+>     INFILE=-
+> else
+>     INFILE=$6
+> fi
+> exec gs -q -dNOPAUSE -dBATCH -dSAFER -sDEVICE=pdfwrite
+> -dCompatibilityLevel=1.3 
+> -sOutputFile=- -c .setpdfwrite -f $INFILE
+> ----------------------------
+> 
+> And I tested it with some PS files.
+> I found a problem.
+> With a PS file produced by AdobeReader 8 from a PDF file, GS produce
+> following errors:
+> ------------------------------
+> This PostScript file was created from an encrypted PDF file.
+> Redistilling encrypted PDF is not permitted.
+> ERROR: /undefined in --get--
+> ...
+> --------------------------------
+> Original PDF file permits PRINTING, but not other things (EDIT,
+> etc). Adobe Reader 8 seems to embed code inhibits GS from converting to
+> PDF again. Do you have any idea about this?
+>
+
+File a bug at bugs.ghostscript.com, telling that this operation is 
+needed for the permitted action of PRINTING. Tell also that we are 
+implementing the PDF printing workflow where pstops gets replaced by 
+pdftopdf.
+
+    Till
+
