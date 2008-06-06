@@ -1,13 +1,14 @@
-Message-ID: <4848F9F6.1070003@gmail.com>
-Date: Fri, 06 Jun 2008 10:48:54 +0200
-From: Till Kamppeter <till.kamppeter@gmail.com>
+Message-ID: <48494DA6.5040502@gmx.de>
+Date: Fri, 06 Jun 2008 16:45:58 +0200
+From: Lars Uebernickel <larsuebernickel@gmx.de>
 MIME-Version: 1.0
-References: <e395be80806031305t682b26b1sbbb277a7f3eecc43@mail.gmail.com>
-	<4848660A.8010202@gmail.com>
-In-Reply-To: <4848660A.8010202@gmail.com>
-Content-Type: text/plain; charset=UTF-8; format=flowed
+References: <2F7D63A21DB2C74EB8EB8C09AF667DB0152D3998@eitc220.eitc.epson.com>
+	<48236D19.9090209@gmx.de>
+In-Reply-To: <48236D19.9090209@gmx.de>
+Content-Type: text/plain; charset=us-ascii; format=flowed
 Content-Transfer-Encoding: 7bit
-Subject: Re: [Printing-architecture] OP SC Minutes - 2 June 2008
+Subject: Re: [Printing-architecture] Coding the Common Printing Dialog	an
+ dits interface - PPD and Foomatic extensions
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -17,27 +18,39 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Norm Jacobs <Norm.Jacobs@Sun.COM>
-Cc: printing-architecture@lists.linux-foundation.org
+To: printing-architecture@lists.linux-foundation.org
 
-Till Kamppeter wrote:
-> Ira McDonald wrote:
->> Minutes from yesterday's Open Printing Steering Committee:
->>
->> ftp://ftp.pwg.org/pub/pwg/fsg/steering_committee/OP-SC-Minutes-20080602.htm 
->>
->>
->  >
->  > # (0) Open Printing News
->  >
->  >     - Norm - Foomatic PPD tarball problem
->  >     - Till - to be resolved
+Lars Uebernickel wrote:
+> Glen,
 > 
-> Norm, I have fixed the PPD tarball now. Thank you for the report.
+> Great idea - this way, we will have a better overview than browsing 
+> through endless threads here on the list.
 > 
->    Till
+> I have started a requirements page on the OpenPrinting wiki with the 
+> examples you've given:
+> 
+>    http://www.linux-foundation.org/en/OpenPrinting/Requirements
 > 
 
-Another bug fixed. Now the package should be correct.
+I have just changed the format of the Requirements page.
 
-    Till
+Each requirement has its own section now (there was too little room in 
+the table). I also suggest to put notes and remarks directly to the 
+corresponding requirement (with the colon syntax known from wikipedia 
+talk pages).
+
+I have also added some requirements that I came up with while I started 
+to specify the API. I will add some more later tonight (CEST).
+
+It would be nice if lots of people could look at them from time to time 
+(esp. the 'Pending' ones) and tell me what they think. Also, feel free 
+to add more requirements.
+
+I want to finish the API as soon as possible to start implementing it in 
+some applications. After that, it will be very hard to change 
+fundamental stuff.
+
+Thanks,
+
+     Lars
+
