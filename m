@@ -1,14 +1,16 @@
-Message-ID: <485F6F30.4090506@gmx.de>
-Date: Mon, 23 Jun 2008 11:38:56 +0200
-From: Lars Uebernickel <larsuebernickel@gmx.de>
+Message-ID: <485F862A.2000401@gmail.com>
+Date: Mon, 23 Jun 2008 13:16:58 +0200
+From: Till Kamppeter <till.kamppeter@gmail.com>
 MIME-Version: 1.0
-References: <001b01c8d263$64a884a0$9e72150a@nsl.ad.nec.co.jp>	<485B44C5.4000509@gmail.com>	<485B5347.3090408@fujixerox.co.jp>	<485B71CB.9090209@fujixerox.co.jp>
-	<485F6319.8060101@fujixerox.co.jp>
-In-Reply-To: <485F6319.8060101@fujixerox.co.jp>
-Content-Type: text/plain; charset=us-ascii; format=flowed
+References: <485AD507.4050300@gmail.com>
+	<485B474D.9070803@gmail.com>	<4665C7B0F1146045A32E6AA72D0D62D741A40F26@G3W0634.americas.hpqcorp.net>
+	<485F46F4.5090106@gmail.com>
+	<200806231052.m5NAqQp7031706@dsl092-065-009.bos1.dsl.speakeasy.net>
+In-Reply-To: <200806231052.m5NAqQp7031706@dsl092-065-009.bos1.dsl.speakeasy.net>
+Content-Type: text/plain; charset=UTF-8; format=flowed
 Content-Transfer-Encoding: 7bit
-Subject: Re: [Printing-architecture] [Printing-japan] OpenPrinting
- Japan	June Meeting Minutes
+Subject: Re: [Printing-architecture] [Gimp-print-devel] Printer setup tools:
+ Automatically choose the correct backend
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -18,159 +20,17 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: printing-architecture@lists.linux-foundation.org
+To: Robert Krawitz <rlk@alum.mit.edu>
+Cc: twaugh@redhat.com, printing-foomatic@lists.linux-foundation.org, david.suffield@hp.com, printing-japan@lists.linux-foundation.org, printing-architecture@lists.linux-foundation.org, gimp-print-devel@lists.sourceforge.net
 
-Thank you for your feedback! I've added some notes below.
+Robert Krawitz wrote:
+> 
+> This problem's not restricted to HP printers -- I have the same
+> problem with Epson printers.  If I turn the printer off, the queue
+> gets disabled, and then I have to manually re-enable the queue when I
+> turn the printer back on.  This is with OpenSUSE 10.3.
+> 
 
-Osamu MIHARA wrote:
-> Here is the second (last) part of the quick translation of the last
-> OPWP-J meeting minutes.
-> 
-> (4) CPD Specification Review
-> ----------------------------
-> Following documents (as of 6/19/2008) are reviewed.  Due to the limited
-> time, we only review these 2 documents.  May needs to review in deep in
-> July again.
-> 
-> OpenPrinting/CommonPrintingDialogRequirements
-> <http://www.linuxfoundation.org/en/OpenPrinting/CommonPrintingDialogRequirements>
-> 
-> OpenPrinting/PPDExtensions
-> <http://www.linuxfoundation.org/en/OpenPrinting/PPDExtensions>
-> 
-> 
-> ==== Overall (Terminology) ====
->   In order to avoid confusion, keyword must/should/may should be in
-> capital case (MUST/SHOULD/MAY)
-> 
-> ==== Requirements ====
-> - Open Icon
->   Icon format should be defined (PNG or SVG are discussed in ML)
-> 
-> - Preview
->   We need to consider what kind of information should be shown in the
-> preview window.
+The queues are supposed to get turned back on when reconnecting the printer.
 
-This is entirely up to the application. Most applications will send the 
-full document, maybe in a low-quality version. The dialog API also 
-supports sending partial documents, in the case that transmitting the 
-full document would take to long.
-
-
-> - Mutiple Print Dialogs
->   The document states one print dialog can be shown per one application
-> (or process).  It is sometimes inconvenient for users.  Some members
-> have opinion that one dialog for a opened document is preferable.
-
-This makes sense, especially now that many applications are SDI (one 
-window per document). I will change the specs accordingly.
-
-
-> - Access method to PPD
->   The dialog should access PPD file via CUPS API.  It shouldn't handle
-> th PPD directly to avoid access conflict, configuration problem, etc.
-
-You are right, this is the way it should be done. The OpenPrinting 
-specific keywords can be read with the ppdFindAttr/ppdFindNextAttr 
-functions of the CUPS API.
-
-
-> - Option Change Notification
->   Some members pointed out that applications/dialogs should be notified
-> when PPD is updated or printer configuration is updated.
-> 
-> - Document Size
-> 
->   What does the "Size" mean?  File size, or document dimension?
->   Which of dialog or application submit the document into the print
-> queue?  Is it preferable that the dialog submit the data, because it
-> does not require application to be largely modified.
-> 
->   Anyway, the print data flow should be defined clearly.
-
-This is the file size of the document, in bytes. If the dialog knows the 
-size of the document, it can show a progress bar or similar to indicate 
-the current state of transmitting the document.
-
-> 
-> - Option Hints
-> 
->   May need concrete example.
-
-Option hints add some semantics to an option. These are probably more 
-useful for application specific options. If an application can give the 
-dialog a hint on what an option value represents, the dialog can make 
-the setting of the option more accessible to the user.
-
-There are some examples on the requirements page you linked.
-
-> - Option Saving
-> 
->   Options saved by CPD and application may be different.
-> 
->   It is difficult to save option settings for dialogs not depending on
-> application or document data.
-> 
->   Applications can save option settings with document data.
-> 
->   It is really needed to save option settings INDEPENDENT from app?
-
-The print dialog should always apply the options it saved *before* the 
-application sets any options. This ensures settings by the application 
-will not get lost.
-
-The benefit of saving the options independent from the application is, 
-that all applications get automatic option saving, even if they do not 
-implement this by themselves.
-
-> - General
-> 
->   Shouldn't the changes in printer-specific setting need to notify to apps?
-
-Yes, applications will be notified by all option settings.
-
-
->   With current idea, it takes too much time for a dialog shown up after
-> clicking print button, because an app needs to generates PDF to do it.
-
-No, the dialog can be shown before the preview or document data are ready.
-
-
->   Multilingual should be supported in CPD in early stage.  CPD should
-> refer locale to switch format of units or dates.
-> 
->   Need provide library file which is needed by apps.
-> 
-> ==== PPD Extensions ====
-> - Quick Presets
->   The definition should be in formal matter such as BNF.
-> 
->   Need more explanation for each items, in special a) in Quick Presets
-> (no one can understand relationship of a) and b)).
-> 
->   Need detail explanation for Lecacy case
-> 
-> - Option Tagging
->   Is it a MUST item?  What happens for a PPD without tagging?
-> 
-> - Icons for options and chises
->   Icons should be switched based on language settings.
-> 
-> 
-> 
-> (5) Others
-> Opvp drivers cannot execute in SELinux environment.
->  - dlopen causes error
->  - driver vendors should provide policy, but it is difficult because the
-> policy spec is not stable.
->  - SUSE Linux uses another mechanism (AppArmor) ... need confirmation.
->  - Continue investigation.
-> 
-> 
-> // Osamu Mihara
-> 
-> _______________________________________________
-> Printing-architecture mailing list
-> Printing-architecture@lists.linux-foundation.org
-> https://lists.linux-foundation.org/mailman/listinfo/printing-architecture
-
+    Till
