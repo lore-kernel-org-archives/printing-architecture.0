@@ -1,5 +1,5 @@
-Message-ID: <48601A94.5090005@gmail.com>
-Date: Mon, 23 Jun 2008 23:50:12 +0200
+Message-ID: <48601AAA.2080807@gmail.com>
+Date: Mon, 23 Jun 2008 23:50:34 +0200
 From: Till Kamppeter <till.kamppeter@gmail.com>
 MIME-Version: 1.0
 References: <001b01c8d263$64a884a0$9e72150a@nsl.ad.nec.co.jp>	<485B44C5.4000509@gmail.com>	<485B5347.3090408@fujixerox.co.jp>	<485B71CB.9090209@fujixerox.co.jp>
@@ -22,7 +22,7 @@ To: Osamu MIHARA <osamu.mihara@fujixerox.co.jp>
 Cc: printing-architecture@lists.linux-foundation.org, printing-japan@lists.linux-foundation.org
 
 Thank you for the second part of the translation. I will improve my PPD 
-extension specs soon.
+extension specs this week.
 
     Till
 
