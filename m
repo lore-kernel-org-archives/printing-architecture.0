@@ -1,18 +1,14 @@
-Message-ID: <485F87B2.1070300@gmail.com>
-Date: Mon, 23 Jun 2008 13:23:30 +0200
+Message-ID: <48601A94.5090005@gmail.com>
+Date: Mon, 23 Jun 2008 23:50:12 +0200
 From: Till Kamppeter <till.kamppeter@gmail.com>
 MIME-Version: 1.0
-References: <485AD507.4050300@gmail.com> <485B474D.9070803@gmail.com>	
-	<4665C7B0F1146045A32E6AA72D0D62D741A40F26@G3W0634.americas.hpqcorp.net>	
-	<485F46F4.5090106@gmail.com>	
-	<200806231052.m5NAqQp7031706@dsl092-065-009.bos1.dsl.speakeasy.net>
-	<1214218973.4005.30.camel@cyberelk.elk>
-	<200806231111.m5NBB7eO031799@dsl092-065-009.bos1.dsl.speakeasy.net>
-In-Reply-To: <200806231111.m5NBB7eO031799@dsl092-065-009.bos1.dsl.speakeasy.net>
+References: <001b01c8d263$64a884a0$9e72150a@nsl.ad.nec.co.jp>	<485B44C5.4000509@gmail.com>	<485B5347.3090408@fujixerox.co.jp>	<485B71CB.9090209@fujixerox.co.jp>
+	<485F6319.8060101@fujixerox.co.jp>
+In-Reply-To: <485F6319.8060101@fujixerox.co.jp>
 Content-Type: text/plain; charset=UTF-8; format=flowed
 Content-Transfer-Encoding: 7bit
-Subject: Re: [Printing-architecture] [Gimp-print-devel] Printer setup tools:
- Automatically	choose the correct backend
+Subject: Re: [Printing-architecture] [Printing-japan] OpenPrinting Japan
+	June Meeting Minutes
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -22,51 +18,124 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Robert Krawitz <rlk@alum.mit.edu>
-Cc: Tim Waugh <twaugh@redhat.com>, printing-foomatic@lists.linux-foundation.org, david.suffield@hp.com, printing-japan@lists.linux-foundation.org, printing-architecture@lists.linux-foundation.org, gimp-print-devel@lists.sourceforge.net
+To: Osamu MIHARA <osamu.mihara@fujixerox.co.jp>
+Cc: printing-architecture@lists.linux-foundation.org, printing-japan@lists.linux-foundation.org
 
-Does SUSE really use the hal-cups-utils? They require 
-system-config-printer and AFAIK this is not available on SUSE.
+Thank you for the second part of the translation. I will improve my PPD 
+extension specs soon.
 
     Till
 
-Robert Krawitz wrote:
->    From: Tim Waugh <twaugh@redhat.com>
->    Date: Mon, 23 Jun 2008 12:02:53 +0100
+Osamu MIHARA wrote:
+> Here is the second (last) part of the quick translation of the last
+> OPWP-J meeting minutes.
 > 
->    On Mon, 2008-06-23 at 06:52 -0400, Robert Krawitz wrote:
->    > This problem's not restricted to HP printers -- I have the same
->    > problem with Epson printers.  If I turn the printer off, the queue
->    > gets disabled, and then I have to manually re-enable the queue when I
->    > turn the printer back on.  This is with OpenSUSE 10.3.
+> (4) CPD Specification Review
+> ----------------------------
+> Following documents (as of 6/19/2008) are reviewed.  Due to the limited
+> time, we only review these 2 documents.  May needs to review in deep in
+> July again.
 > 
->    Which version of hal-cups-utils?
+> OpenPrinting/CommonPrintingDialogRequirements
+> <http://www.linuxfoundation.org/en/OpenPrinting/CommonPrintingDialogRequirements>
 > 
-> This is all I can find.  It may have been an unwarranted guess on my
-> part that hal is responsible for this, but the effect is still there.
+> OpenPrinting/PPDExtensions
+> <http://www.linuxfoundation.org/en/OpenPrinting/PPDExtensions>
 > 
-> [1(rlk)|{!55}<dsl092-065-009>/home/rlk/sandbox/print-5.1/src/testpattern]
-> $ rpm -qa |grep cups
-> libgnomecups-lang-0.2.3-53.1
-> cups-devel-1.2.12-22.15
-> gnome-cups-manager-0.32cvs20060120-169.2
-> libgnomecups-devel-0.2.3-53.1
-> cups-client-1.2.12-22.15
-> gnome-cups-manager-devel-0.32cvs20060120-169.2
-> cups-libs-1.2.12-22.15
-> cupsddk-1.2.0-27
-> cups-autoconfig-0.1.0-27.2
-> rpmkey-apcupsd-0.1-2
-> cups-backends-1.0-126
-> libgnomecups-0.2.3-53.1
-> cups-drivers-1.2.12-28
-> cups-1.2.12-22.15
-> [1(rlk)|{!56}<dsl092-065-009>/home/rlk/sandbox/print-5.1/src/testpattern]
-> $ rpm -qa |grep hal
-> hal-palm-0.12.2-64.20
-> phalanx-22-583
-> hal-0.5.9_git20070831-13.2
-> hal-devel-0.5.9_git20070831-13.2
-> hal-resmgr-0.1_SVNr141-29
+> 
+> ==== Overall (Terminology) ====
+>   In order to avoid confusion, keyword must/should/may should be in
+> capital case (MUST/SHOULD/MAY)
+> 
+> ==== Requirements ====
+> - Open Icon
+>   Icon format should be defined (PNG or SVG are discussed in ML)
+> 
+> - Preview
+>   We need to consider what kind of information should be shown in the
+> preview window.
+> 
+> - Mutiple Print Dialogs
+>   The document states one print dialog can be shown per one application
+> (or process).  It is sometimes inconvenient for users.  Some members
+> have opinion that one dialog for a opened document is preferable.
+> 
+> - Access method to PPD
+>   The dialog should access PPD file via CUPS API.  It shouldn't handle
+> th PPD directly to avoid access conflict, configuration problem, etc.
+> 
+> - Option Change Notification
+>   Some members pointed out that applications/dialogs should be notified
+> when PPD is updated or printer configuration is updated.
+> 
+> - Document Size
+> 
+>   What does the "Size" mean?  File size, or document dimension?
+>   Which of dialog or application submit the document into the print
+> queue?  Is it preferable that the dialog submit the data, because it
+> does not require application to be largely modified.
+> 
+>   Anyway, the print data flow should be defined clearly.
+> 
+> 
+> - Option Hints
+> 
+>   May need concrete example.
+> 
+> - Option Saving
+> 
+>   Options saved by CPD and application may be different.
+> 
+>   It is difficult to save option settings for dialogs not depending on
+> application or document data.
+> 
+>   Applications can save option settings with document data.
+> 
+>   It is really needed to save option settings INDEPENDENT from app?
+> 
+> - General
+> 
+>   Shouldn't the changes in printer-specific setting need to notify to apps?
+> 
+>   With current idea, it takes too much time for a dialog shown up after
+> clicking print button, because an app needs to generates PDF to do it.
+> 
+>   Multilingual should be supported in CPD in early stage.  CPD should
+> refer locale to switch format of units or dates.
+> 
+>   Need provide library file which is needed by apps.
+> 
+> ==== PPD Extensions ====
+> - Quick Presets
+>   The definition should be in formal matter such as BNF.
+> 
+>   Need more explanation for each items, in special a) in Quick Presets
+> (no one can understand relationship of a) and b)).
+> 
+>   Need detail explanation for Lecacy case
+> 
+> - Option Tagging
+>   Is it a MUST item?  What happens for a PPD without tagging?
+> 
+> - Icons for options and chises
+>   Icons should be switched based on language settings.
+> 
+> 
+> 
+> (5) Others
+> Opvp drivers cannot execute in SELinux environment.
+>  - dlopen causes error
+>  - driver vendors should provide policy, but it is difficult because the
+> policy spec is not stable.
+>  - SUSE Linux uses another mechanism (AppArmor) ... need confirmation.
+>  - Continue investigation.
+> 
+> 
+> // Osamu Mihara
+> 
+> _______________________________________________
+> Printing-japan mailing list
+> Printing-japan@lists.linux-foundation.org
+> https://lists.linux-foundation.org/mailman/listinfo/printing-japan
 > 
 
