@@ -1,14 +1,10 @@
-Message-ID: <48601AAA.2080807@gmail.com>
-Date: Mon, 23 Jun 2008 23:50:34 +0200
-From: Till Kamppeter <till.kamppeter@gmail.com>
+Date: Wed, 25 Jun 2008 03:53:47 -0700 (PDT)
+From: Paul Tykodi <ptykodi@yahoo.com>
 MIME-Version: 1.0
-References: <001b01c8d263$64a884a0$9e72150a@nsl.ad.nec.co.jp>	<485B44C5.4000509@gmail.com>	<485B5347.3090408@fujixerox.co.jp>	<485B71CB.9090209@fujixerox.co.jp>
-	<485F6319.8060101@fujixerox.co.jp>
-In-Reply-To: <485F6319.8060101@fujixerox.co.jp>
-Content-Type: text/plain; charset=UTF-8; format=flowed
-Content-Transfer-Encoding: 7bit
-Subject: Re: [Printing-architecture] [Printing-japan] OpenPrinting Japan
-	June Meeting Minutes
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+Message-ID: <843312.95196.qm@web53402.mail.re2.yahoo.com>
+Subject: [Printing-architecture] PDPCA Source Code Question
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -18,124 +14,30 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Osamu MIHARA <osamu.mihara@fujixerox.co.jp>
-Cc: printing-architecture@lists.linux-foundation.org, printing-japan@lists.linux-foundation.org
+To: printing-architecture@lists.linux-foundation.org
 
-Thank you for the second part of the translation. I will improve my PPD 
-extension specs this week.
-
-    Till
-
-Osamu MIHARA wrote:
-> Here is the second (last) part of the quick translation of the last
-> OPWP-J meeting minutes.
-> 
-> (4) CPD Specification Review
-> ----------------------------
-> Following documents (as of 6/19/2008) are reviewed.  Due to the limited
-> time, we only review these 2 documents.  May needs to review in deep in
-> July again.
-> 
-> OpenPrinting/CommonPrintingDialogRequirements
-> <http://www.linuxfoundation.org/en/OpenPrinting/CommonPrintingDialogRequirements>
-> 
-> OpenPrinting/PPDExtensions
-> <http://www.linuxfoundation.org/en/OpenPrinting/PPDExtensions>
-> 
-> 
-> ==== Overall (Terminology) ====
->   In order to avoid confusion, keyword must/should/may should be in
-> capital case (MUST/SHOULD/MAY)
-> 
-> ==== Requirements ====
-> - Open Icon
->   Icon format should be defined (PNG or SVG are discussed in ML)
-> 
-> - Preview
->   We need to consider what kind of information should be shown in the
-> preview window.
-> 
-> - Mutiple Print Dialogs
->   The document states one print dialog can be shown per one application
-> (or process).  It is sometimes inconvenient for users.  Some members
-> have opinion that one dialog for a opened document is preferable.
-> 
-> - Access method to PPD
->   The dialog should access PPD file via CUPS API.  It shouldn't handle
-> th PPD directly to avoid access conflict, configuration problem, etc.
-> 
-> - Option Change Notification
->   Some members pointed out that applications/dialogs should be notified
-> when PPD is updated or printer configuration is updated.
-> 
-> - Document Size
-> 
->   What does the "Size" mean?  File size, or document dimension?
->   Which of dialog or application submit the document into the print
-> queue?  Is it preferable that the dialog submit the data, because it
-> does not require application to be largely modified.
-> 
->   Anyway, the print data flow should be defined clearly.
-> 
-> 
-> - Option Hints
-> 
->   May need concrete example.
-> 
-> - Option Saving
-> 
->   Options saved by CPD and application may be different.
-> 
->   It is difficult to save option settings for dialogs not depending on
-> application or document data.
-> 
->   Applications can save option settings with document data.
-> 
->   It is really needed to save option settings INDEPENDENT from app?
-> 
-> - General
-> 
->   Shouldn't the changes in printer-specific setting need to notify to apps?
-> 
->   With current idea, it takes too much time for a dialog shown up after
-> clicking print button, because an app needs to generates PDF to do it.
-> 
->   Multilingual should be supported in CPD in early stage.  CPD should
-> refer locale to switch format of units or dates.
-> 
->   Need provide library file which is needed by apps.
-> 
-> ==== PPD Extensions ====
-> - Quick Presets
->   The definition should be in formal matter such as BNF.
-> 
->   Need more explanation for each items, in special a) in Quick Presets
-> (no one can understand relationship of a) and b)).
-> 
->   Need detail explanation for Lecacy case
-> 
-> - Option Tagging
->   Is it a MUST item?  What happens for a PPD without tagging?
-> 
-> - Icons for options and chises
->   Icons should be switched based on language settings.
-> 
-> 
-> 
-> (5) Others
-> Opvp drivers cannot execute in SELinux environment.
->  - dlopen causes error
->  - driver vendors should provide policy, but it is difficult because the
-> policy spec is not stable.
->  - SUSE Linux uses another mechanism (AppArmor) ... need confirmation.
->  - Continue investigation.
-> 
-> 
-> // Osamu Mihara
-> 
-> _______________________________________________
-> Printing-japan mailing list
-> Printing-japan@lists.linux-foundation.org
-> https://lists.linux-foundation.org/mailman/listinfo/printing-japan
-> 
-
+Dear List,=0A=0AI have recently been corresponding with someone who is part=
+icipating in the ISO SC28 workgroup, which is tasked with defining image qu=
+ality test standards for =0Amonochrome laser printers.=0A=0AThe group is ap=
+parently considering methods for creating a test suite that consumers of it=
+s information could use to evaluate monochrome laser printer performance.=
+=0A=0AIn terms of non-Windows OS based hosts, it seemed to me that the Open=
+Printing PDPCA utility might be very helpful in support of their task when =
+using a POSIX compliant host to send test files.=0A=0AIn looking through th=
+e OpenPrinting web site, I have been unable to locate the source code for P=
+DPCA. Is the utility currently available?=0A=0AThanks.=0A=0ABest Regards,=
+=0A=0A/Paul=0A=0A--Paul Tykodi=0APrincipal Consultant=0ATCS - Tykodi Consul=
+ting Services LLC=0A=0A=0ATel/Fax: 603-343-1820=0AMobile:  603-866-0712=0AE=
+-mail:  ptykodi@yahoo.com=0AWWW:     http://www.tykodi.com=0A=0A =0A=0A____=
+____________________________=0A =0AFrom:printing-summit-bounces@lists.linux=
+-foundation.org [mailto:printing-summit-bounces@lists.linux-foundation.org]=
+ On Behalf Of Petrie, Glen=0ASent: Thursday, November 08, 2007 2:41 PM=0ATo=
+: printing-summit@lists.freestandards.org;=0Aprinting-architecture@lists.fr=
+eestandards.org=0ASubject: [Printing-summit] Version 0.2.0 of=0APrinter-Dri=
+ver/PrinterCompatibility Application Spec=0A =0AHello All,=0A =0AI have=0Au=
+pdated the =E2=80=9CPrinter-Driver/Printer Compatibility Application=E2=80=
+=9D Specification=0Adocument=0A =0AI changed=0Athe name from validation to =
+compatibility.=0AChanged the=0A=E2=80=98-p=E2=80=99 option to a =E2=80=98-s=
+=E2=80=99 option.=0AAdded the=0Adirectory location specification.=0A =0APle=
+ase see:=0A =0Aftp://ftp.pwg.org/pub/pwg/openprinting/pdpca/pdpca-spec/opPD=
+PCA-v00.02.00.txt=0A =0Aglen=0A=0A=0A=0A      
