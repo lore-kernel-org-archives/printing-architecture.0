@@ -1,11 +1,12 @@
-Message-ID: <486B6442.1000407@gmail.com>
-Date: Wed, 02 Jul 2008 13:19:30 +0200
-From: Till Kamppeter <till.kamppeter@gmail.com>
+Content-class: urn:content-classes:message
 MIME-Version: 1.0
-Content-Type: text/plain; charset=UTF-8; format=flowed
-Content-Transfer-Encoding: 7bit
-Subject: [Printing-architecture] OpenPrinting Meeting on the LF Japan
-	Symposium July 2008 - Agenda
+Content-Type: text/plain;
+	charset="us-ascii"
+Content-Transfer-Encoding: quoted-printable
+Date: Thu, 3 Jul 2008 07:40:28 -0700
+Message-ID: <ED4094DE5E8ACD4BBDACA6AD398E608F1274B0@EEAEX03.us.epson.net>
+From: "Petrie, Glen" <glen.petrie@eitc.epson.com>
+Subject: [Printing-architecture] FYI: PDF format becomes ISO standard
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -15,18 +16,9 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: "Kunai, Takashi" <kunai@linux-foundation.jp>, Printing-japan <printing-japan@lists.linux-foundation.org>, "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>, Peter Sikking <peter@mmiworks.net>
+To: pwg-announce@pwg.org, printing-architecture@lists.linux-foundation.org
 
-Hi,
 
-here is the preliminary agenda for the OpenPrinting Meeting in Tokyo 
-next week:
-
-https://www.linuxfoundation.org/en/OpenPrinting/LFJapanSymposiumTokyoJuly2008
-
-Please give your comments and suggestions. Or edit it. It's a Wiki.
-
-I will also look for the possibilities to set up a call-in line. I will 
-post the access data as soon as I have it.
-
-    Till
+>=20
+> ISO - News - PDF format becomes ISO standard
+> <http://www.iso.org/iso/pressrelease.htm?refid=3DRef1141>=20
