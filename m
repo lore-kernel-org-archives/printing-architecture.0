@@ -1,12 +1,11 @@
-Content-class: urn:content-classes:message
+Message-ID: <486DE7E0.1040006@gmail.com>
+Date: Fri, 04 Jul 2008 11:05:36 +0200
+From: Till Kamppeter <till.kamppeter@gmail.com>
 MIME-Version: 1.0
-Content-Type: text/plain;
-	charset="us-ascii"
-Content-Transfer-Encoding: quoted-printable
-Date: Thu, 3 Jul 2008 07:40:28 -0700
-Message-ID: <ED4094DE5E8ACD4BBDACA6AD398E608F1274B0@EEAEX03.us.epson.net>
-From: "Petrie, Glen" <glen.petrie@eitc.epson.com>
-Subject: [Printing-architecture] FYI: PDF format becomes ISO standard
+Content-Type: text/plain; charset=UTF-8; format=flowed
+Content-Transfer-Encoding: 7bit
+Subject: [Printing-architecture] OpenPrinting Meeting on LF Symposium in
+	Tokyo - Call-In Participation
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -16,9 +15,26 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: pwg-announce@pwg.org, printing-architecture@lists.linux-foundation.org
+To: "Kunai, Takashi" <kunai@linux-foundation.jp>, Printing-japan <printing-japan@lists.linux-foundation.org>, "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>, "'printing-summit@lists.linux-foundation.org'" <printing-summit@lists.linux-foundation.org>
 
+Hi,
 
->=20
-> ISO - News - PDF format becomes ISO standard
-> <http://www.iso.org/iso/pressrelease.htm?refid=3DRef1141>=20
+next Tuesday, July 8, I will meet the Japanese OpenPrinting workgroup in 
+Tokyo on a 1-day OpenPrinting Meeting. Everyone who cannot participate 
+in person is invited to call in. See the agenda of the meeting here:
+
+https://www.linuxfoundation.org/en/OpenPrinting/LFJapanSymposiumTokyoJuly2008
+
+Please call in at any time during the meeting (9:30am - 5pm Tokyo time 
+or 12:30am - 8am UTC/GMT or MONDAY 5:30pm - Tuesday 1am in San 
+Francisco) using the following phone number:
+
++1-218-936-7999
+
+and the access code
+
+546639#
+
+Hear you on Monday or Tuesday.
+
+    Till
