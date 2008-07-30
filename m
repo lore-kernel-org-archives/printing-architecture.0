@@ -1,11 +1,11 @@
-Message-ID: <4885ECA0.7020800@gmail.com>
-Date: Tue, 22 Jul 2008 16:20:16 +0200
+Message-ID: <48908DD8.2080405@gmail.com>
+Date: Wed, 30 Jul 2008 17:50:48 +0200
 From: Till Kamppeter <till.kamppeter@gmail.com>
 MIME-Version: 1.0
 Content-Type: text/plain; charset=UTF-8; format=flowed
 Content-Transfer-Encoding: 7bit
-Subject: [Printing-architecture] Specs for PPD extensions updated: Fallbacks
- for legacy PPDs and option widget hinting
+Subject: [Printing-architecture] Common Printing Dialog: PPD extension specs
+	updated
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -15,26 +15,42 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Printing-japan <printing-japan@lists.linux-foundation.org>, "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>
+To: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>, Printing-japan <printing-japan@lists.linux-foundation.org>, gimp-print-devel <gimp-print-devel@lists.sourceforge.net>, Michael R Sweet <msweet@apple.com>, Jonathan Riddell <jriddell@ubuntu.com>
 
 Hi,
 
-following the OpenPrinting Meeting in Tokyo of this month, I have 
-updated the specs for the OpenPrinting PPD extensions:
+after the conference call last week with Peter Sikking and the two GSoC 
+students implementing the dialog and after some discussion with Mike 
+Sweet from CUPS I have updated the specs of the PPD extensions:
 
-https://www.linuxfoundation.org/en/OpenPrinting/PPDExtensions
+http://www.linuxfoundation.org/en/OpenPrinting/PPDExtensions
 
-At first I have described fallback methods for how the Common Printing 
-Dialog (or any printing dialog in general) should behave if an option 
-definition in a PPD does not use the appropriate keywords of the PPD 
-extension. These fallback methods I have clearly marked with the word 
-"Fallback:" in bold so that one can quickly browse over the specs and 
-see which fallbacks are supposed to be used. I think this makes more 
-sense than moving them to an extra page, as now they stand together with 
-the new keywords which they replace.
+I have done the following changes:
 
-I have also added a new keyword which allows to give hints with each 
-option definition, which type of widgets should be used. Here both data 
-types or directly widget types can be supplied.
+- Replaced the "*OPQuickPresets" keyword by "*APPrinterPreset" as
+   defined in the CUPS PPD extensions on
+   http://www.cups.org/documentation.php/spec-ppd.html#APPrinterPreset
+
+- Mentioned that UI texts of PPDs should not be too long due to limited
+   space in the dialog.
+
+- Mentioned that a PPD cannot have more that 11 tags.
+
+- Allow tags for options which are not in the PPD (like CUPS options)
+
+- Allow canceling tags (like the predefined tags coming from CUPS
+   options).
+
+- Added section about CUPS options and their pre-defined tags
+
+- Added new "donthide1choice" widget hint to not suppress an option
+   when it has only one choice.
+
+I appreciate very much your comments, especially about the tags for the 
+CUPS options and additional document types for the "*APPrinterPreset" 
+keyword.
+
+I think with these extensions we should be well approaching the final 
+specs for the PPD extensions.
 
     Till
