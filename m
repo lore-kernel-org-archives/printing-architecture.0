@@ -1,10 +1,10 @@
-Message-ID: <48916564.10704@gmail.com>
-Date: Thu, 31 Jul 2008 09:10:28 +0200
+Message-ID: <48918374.8080404@gmail.com>
+Date: Thu, 31 Jul 2008 11:18:44 +0200
 From: Till Kamppeter <till.kamppeter@gmail.com>
 MIME-Version: 1.0
 References: <48908DD8.2080405@gmail.com> <4890C6FE.2090307@gmail.com>
-	<200807310148.m6V1mTkP006833@dsl092-065-009.bos1.dsl.speakeasy.net>
-In-Reply-To: <200807310148.m6V1mTkP006833@dsl092-065-009.bos1.dsl.speakeasy.net>
+	<200807310223.m6V2NkAv006976@dsl092-065-009.bos1.dsl.speakeasy.net>
+In-Reply-To: <200807310223.m6V2NkAv006976@dsl092-065-009.bos1.dsl.speakeasy.net>
 Content-Type: text/plain; charset=UTF-8; format=flowed
 Content-Transfer-Encoding: 7bit
 Subject: Re: [Printing-architecture] [Gimp-print-devel] Common Printing
@@ -22,40 +22,64 @@ To: Robert Krawitz <rlk@alum.mit.edu>
 Cc: printing-architecture@lists.linux-foundation.org, printing-japan@lists.linux-foundation.org, gimp-print-devel@lists.sourceforge.net, jriddell@ubuntu.com, msweet@apple.com
 
 Robert Krawitz wrote:
->    Date: Wed, 30 Jul 2008 21:54:38 +0200
->    From: Till Kamppeter <till.kamppeter@gmail.com>
-> 
->    After getting some suggestions from Mike Sweet I have updated the specs 
->    again in some points:
-> 
->    - Fallback when there are no Quick Presets: Option to choose BW or color 
->    is "ColorModel", not "ColorMode".
-> 
->    - Simplified option tagging: Now the PPD contains one entry per tag. It 
->    defines the tag, its UI string and the options being under that tag. No 
->    additional lines in each option entry any more.
-> 
->    - Option names in tag definitions and quick preset definitions start 
->    with an asterisk, to clearly mark them as option names and following the 
->    Adobe convention where main keywords start with an asterisk.
-> 
->    - The CUPS options brightness, gamma, hue, and saturation are deprecated 
->    (will be removed from CUPS soon) and therefore they will not get 
->    included in the Common Printing Dialog. I have removed them from the PPD 
->    extensions specs.
-> 
->    - The CUPS options page-left, page-right, page-top, and page-bottom 
->    apply only to plain-text jobs. Therefore I have put them under the 
->    "Text" tag.
-> 
->    Mike, thank you very much for your help.
-> 
-> One other hint I'd like: "hide", to not display the option at all.
-> This is for the fine adjustment options for the Gutenprint floating
-> point options.  With proper input widgets, the fine adjustment options
-> shouldn't display at all.
+> I've added support for Quick Presets using the Image Type
+> (StpImageType) and for widget hinting.  They pass cupstestppd.  Till,
+> can you check them out (use "make ppd-global" to produce
+> multi-language PPDs).
 > 
 
-I have added the "hide" widget hint now.
+Generally, the PPDs are generated correctly, but there are some problems:
+
+- All the translated UI strings are English for me. My distro is Ubuntu 
+Intrepid. What do I have to change to get actual translations. I would 
+like to have multi-language PPDs in both Ubuntu and LSB packages.
+
+- There is a small bug in the *OPOptionHints lines: At least for the 
+options whose machine-readable names start with "Stp" the option names 
+in the *OPOptionHints lines do not start with "Stp". Replace lines like
+
+*OPOptionHints Weave: ...
+
+by
+
+*OPOptionHints StpWeave: ...
+
+Check this for all options
+
+- I have changed the syntax of the *OPOptionHints keyword from
+
+*OPOptionHints <option name>: <hint1>[, <hint2>, ...]
+
+to
+
+*OPOptionHints <option name>: "<hint1> [<hint2> ...]"
+
+to be more consistent with the syntax of the other keywords of my PPD 
+extensions and also to be compatible with CUPS DDK. CUPS DDK is not able 
+to handle lines without quotes. It would add the quotes. With the quotes 
+we also open the possibility to distribute the hints over more than one 
+line.
+
+*OPOptionHints StpBrightness: slider, input, spinbox
+
+has to get replaced by
+
+*OPOptionHints StpBrightness: "slider input spinbox"
+
+now.
+
+- For the fine adjustment options add lines like
+
+*OPOptionHints StpFineBrightness: "hide"
+
+now.
+
+> I have not added support for option tagging, which will be more
+> complicated and will need some (minor) core changes.
+> 
+
+Here the tags need to be well selected so that the user finds the 
+desired controls easily. You could use the BZR snapshots of the dialogs 
+under development to test drive your tags.
 
     Till
