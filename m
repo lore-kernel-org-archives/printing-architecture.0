@@ -1,10 +1,12 @@
-Message-ID: <48918374.8080404@gmail.com>
-Date: Thu, 31 Jul 2008 11:18:44 +0200
+Message-ID: <4891C06D.1060409@gmail.com>
+Date: Thu, 31 Jul 2008 15:38:53 +0200
 From: Till Kamppeter <till.kamppeter@gmail.com>
 MIME-Version: 1.0
-References: <48908DD8.2080405@gmail.com> <4890C6FE.2090307@gmail.com>
-	<200807310223.m6V2NkAv006976@dsl092-065-009.bos1.dsl.speakeasy.net>
-In-Reply-To: <200807310223.m6V2NkAv006976@dsl092-065-009.bos1.dsl.speakeasy.net>
+References: <48908DD8.2080405@gmail.com>
+	<4890C6FE.2090307@gmail.com>	<200807310223.m6V2NkAv006976@dsl092-065-009.bos1.dsl.speakeasy.net>
+	<48918374.8080404@gmail.com>
+	<200807311226.m6VCQED9017811@dsl092-065-009.bos1.dsl.speakeasy.net>
+In-Reply-To: <200807311226.m6VCQED9017811@dsl092-065-009.bos1.dsl.speakeasy.net>
 Content-Type: text/plain; charset=UTF-8; format=flowed
 Content-Transfer-Encoding: 7bit
 Subject: Re: [Printing-architecture] [Gimp-print-devel] Common Printing
@@ -19,67 +21,47 @@ List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subj
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
 To: Robert Krawitz <rlk@alum.mit.edu>
-Cc: printing-architecture@lists.linux-foundation.org, printing-japan@lists.linux-foundation.org, gimp-print-devel@lists.sourceforge.net, jriddell@ubuntu.com, msweet@apple.com
+Cc: printing-architecture@lists.linux-foundation.org, printing-japan@lists.linux-foundation.org, gimp-print-devel@lists.sourceforge.net, jriddell@ubuntu.com
 
 Robert Krawitz wrote:
-> I've added support for Quick Presets using the Image Type
-> (StpImageType) and for widget hinting.  They pass cupstestppd.  Till,
-> can you check them out (use "make ppd-global" to produce
-> multi-language PPDs).
+>    Date: Thu, 31 Jul 2008 11:18:44 +0200
+>    From: Till Kamppeter <till.kamppeter@gmail.com>
 > 
-
-Generally, the PPDs are generated correctly, but there are some problems:
-
-- All the translated UI strings are English for me. My distro is Ubuntu 
-Intrepid. What do I have to change to get actual translations. I would 
-like to have multi-language PPDs in both Ubuntu and LSB packages.
-
-- There is a small bug in the *OPOptionHints lines: At least for the 
-options whose machine-readable names start with "Stp" the option names 
-in the *OPOptionHints lines do not start with "Stp". Replace lines like
-
-*OPOptionHints Weave: ...
-
-by
-
-*OPOptionHints StpWeave: ...
-
-Check this for all options
-
-- I have changed the syntax of the *OPOptionHints keyword from
-
-*OPOptionHints <option name>: <hint1>[, <hint2>, ...]
-
-to
-
-*OPOptionHints <option name>: "<hint1> [<hint2> ...]"
-
-to be more consistent with the syntax of the other keywords of my PPD 
-extensions and also to be compatible with CUPS DDK. CUPS DDK is not able 
-to handle lines without quotes. It would add the quotes. With the quotes 
-we also open the possibility to distribute the hints over more than one 
-line.
-
-*OPOptionHints StpBrightness: slider, input, spinbox
-
-has to get replaced by
-
-*OPOptionHints StpBrightness: "slider input spinbox"
-
-now.
-
-- For the fine adjustment options add lines like
-
-*OPOptionHints StpFineBrightness: "hide"
-
-now.
-
-> I have not added support for option tagging, which will be more
-> complicated and will need some (minor) core changes.
+>    Robert Krawitz wrote:
+>    > I've added support for Quick Presets using the Image Type
+>    > (StpImageType) and for widget hinting.  They pass cupstestppd.  Till,
+>    > can you check them out (use "make ppd-global" to produce
+>    > multi-language PPDs).
 > 
+>    Generally, the PPDs are generated correctly, but there are some problems:
+> 
+>    - All the translated UI strings are English for me. My distro is
+>    Ubuntu Intrepid. What do I have to change to get actual
+>    translations. I would like to have multi-language PPDs in both
+>    Ubuntu and LSB packages.
+> 
+> How did you create the PPD files: are these statically generated
+> files, did you use cups-genppdupdate, did you create new queues?
+> 
+> What locale is your system running in?
+>
 
-Here the tags need to be well selected so that the user finds the 
-desired controls easily. You could use the BZR snapshots of the dialogs 
-under development to test drive your tags.
+I used the following configure command line. It is from the LSB package 
+but with I18n reactivated:
+
+./configure --enable-static --disable-shared --disable-rpath 
+--without-modules --disable-libgutenprintui --disable-libgutenprintui2 
+--without-gimp --without-gimp2 --with-cups --without-ghostscript 
+--without-foomatic --with-foomatic3 --disable-test --enable-cups-ppds 
+         --enable-cups-level3-ppds --enable-static-genppd 
+--enable-simplified-cups-ppds --enable-cups-1_2-enhancements 
+--enable-escputil
+
+I want to conserve this command line as far as possible for the LSB package.
+
+My locale is en_US.UTF-8, I did not create any queues, I did not even do 
+"make install". I only looked into the PPDs which I got in src/cups/ppd/ 
+after running "make".
 
     Till
+
