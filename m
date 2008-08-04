@@ -1,13 +1,12 @@
-Message-ID: <48976FB0.5020806@gmail.com>
-Date: Mon, 04 Aug 2008 23:08:00 +0200
+Message-ID: <48977A53.8000502@gmail.com>
+Date: Mon, 04 Aug 2008 23:53:23 +0200
 From: Till Kamppeter <till.kamppeter@gmail.com>
 MIME-Version: 1.0
-References: <200807311309.m6VD9s5n018013@dsl092-065-009.bos1.dsl.speakeasy.net>	<p06110400c4b793ad4cd1@[192.168.1.102]>	<200807312114.m6VLEhgd004613@dsl092-065-009.bos1.dsl.speakeasy.net>	<489230B6.8050306@gmail.com>	<200807312156.m6VLusVF004364@dsl092-065-009.bos1.dsl.speakeasy.net>	<4892B6A9.90609@gmail.com>	<200808011134.m71BYXdK003793@dsl092-065-009.bos1.dsl.speakeasy.net>	<4892FDDB.5060104@gmail.com>	<20080801123314.GA26452@nagini.vm.bytemark.co.uk>	<489307A9.1020504@gmail.com>	<20080801130821.GC26452@nagini.vm.bytemark.co.uk>	<48930D59.3030003@gmail.com>
-	<48934778.1080504@apple.com>	<87ej58mptc.fsf@hardknott.home>
-	<4893A466.5040103@apple.com>	<87tze4l0sr.fsf@hardknott.home>	<200808020120.m721K3Uw007245@dsl092-065-009.bos1.dsl.speakeasy.net>	<87wsizvbdh.fsf@hardknott.home>
-	<87ej57v8gj.fsf@hardknott.home>
-In-Reply-To: <87ej57v8gj.fsf@hardknott.home>
-Content-Type: multipart/mixed; boundary="------------000107020709060600050708"
+References: <200807311309.m6VD9s5n018013@dsl092-065-009.bos1.dsl.speakeasy.net>	<4895C323.7060005@apple.com>	<200808031506.m73F6GPe025447@dsl092-065-009.bos1.dsl.speakeasy.net>
+	<200808030932.38287.hvengel@astound.net>
+In-Reply-To: <200808030932.38287.hvengel@astound.net>
+Content-Type: text/plain; charset=UTF-8; format=flowed
+Content-Transfer-Encoding: 7bit
 Subject: Re: [Printing-architecture] [Gimp-print-devel] Common Printing
  Dialog: PPD extension specs updated
 List-Id: Printing architecture under linux
@@ -19,207 +18,42 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Roger Leigh <rleigh@whinlatter.ukfsn.org>
-Cc: Robert Krawitz <rlk@alum.mit.edu>, printing-architecture@lists.linux-foundation.org, printing-japan@lists.linux-foundation.org, gimp-print-devel@lists.sourceforge.net, jriddell@ubuntu.com
+To: "Hal V. Engel" <hvengel@astound.net>
+Cc: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>, Printing-japan <printing-japan@lists.linux-foundation.org>, gimp-print-devel@lists.sourceforge.net
 
-This is a multi-part message in MIME format.
---------------000107020709060600050708
-Content-Type: text/plain; charset="utf-8"; format="flowed"
-Content-Transfer-Encoding: 8bit
+Hal V. Engel wrote:
+> I don't think this is off topic. After all the thread is about PPD files 
+> and the Common Printing Dialog and Kai-Uwe asked if the cupsICCProfile 
+> part of the PPD specification was going to be implemented in the new 
+> Common Printing Dialog. In addition, the thread mentioned color 
+> management as one of the reasons for a spec change for PPD files. This 
+> seems to me to be right on topic. I also want to know the answer to this 
+> question. Is the new printing dialog going to support color management 
+> and will it be able to make use of cupsICCProfile info from PPD files?
+> 
+> Hal
+> 
 
-Roger Leigh wrote:
-> 
-> If anyone could test using the program I posted, that would be very
-> helpful.  Testing on other BSD, Solaris, UNIX and Linux systems would
-> be great.  I'm using glibc-2.7/gettext-0.17.
-> 
-> http://nagini.vm.bytemark.co.uk/~rleigh/gettext-test.c
-> http://nagini.vm.bytemark.co.uk/~rleigh/gutenprint.mo
-> 
-> You'll need to
-> - save gutenprint.mo as <foo>/de_GB/LC_MESSAGES/gutenprint.mo
-> - set localedir to <foo> in gettext-test.c
-> - set _GNU_SOURCE to _BSD_SOURCE in gettext-test.c (or whatever needs
->   doing to get setenv() prototyped on BSD)
-> 
-> Build with "gcc -std=c99 -o gettext-test gettext-test.c
-> Run ./gettext-test
-> 
-> You should see something similar to:
-> 
-> % ./gettext-test
-> setlocale1: en_GB.ISO-8859-1
-> setlocale2: (null)
-> setlocale3: en_GB.ISO-8859-1
-> domain: /usr/share/locale
-> codset (null)->UTF-8
-> selected-domain: gutenprint
-> lookup: Foto aus fünf Farben gemischt
-> dlookup: Foto aus fünf Farben gemischt
-> 
-> To make the test most realistic, start by setting a non-UTF-8-locale
-> such as en_GB.ISO-8859-1 (any locale except C that is not UTF-8 is
-> good).  This tests correct recoding into UTF-8.  This is also why we
-> are using an ISO-8859-1 message catalogue.  Above we see correct UTF-8
-> output for a catalogue without a valid system locale, which is the
-> objective.
-
-I did the test again, but this time with strace. I did:
-
-wget http://nagini.vm.bytemark.co.uk/~rleigh/gettext-test.c
-wget http://nagini.vm.bytemark.co.uk/~rleigh/gutenprint.mo
-mkdir -p x/de_GB/LC_MESSAGES/
-mv gutenprint.mo x/de_GB/LC_MESSAGES/
-<edit gettext-test.c to set the localedir>
-gcc -std=c99 -o gettext-test gettext-test.c
-strace -s 1024 -o st.out ./gettext-test
-
-Screen output:
-
-setlocale1: (null)
-setlocale2: (null)
-setlocale3: C
-domain: /home/till/gutenprint/cvs/HEAD/x
-codset (null)->UTF-8
-selected-domain: gutenprint
-lookup: Five Color Photo Composite
-dlookup: Five Color Photo Composite
-till@till-laptop:~/gutenprint/cvs/HEAD$ less st.out
-
-The file st.out is attached. What one can see in the file is that the 
-gutenprint.mo is not touched by the program, not even the x/ directory.
+It is a good idea to add the color profile support to the dialog. But 
+are clients able to download the ICC profile from the CUPS server? Would 
+it not be the better solution if CUPS itself already supports color 
+management and not to make the dialog apply color profiles? Which 
+options would be needed in the Common Printing Dialog to control color 
+management?
 
     Till
 
 
---------------000107020709060600050708
-Content-Type: text/plain;
- name="st.out"
-Content-Transfer-Encoding: base64
-Content-Disposition: inline;
- filename="st.out"
+> PS: I tried to find info about this project on-line. Other than finding 
+> some basic references to the GSoC project I was unable to find anything 
+> that had any level of detail like for example specification or design 
+> documents or a project wiki or project email list. Is this type of 
+> information available and if so where is it located?
 
-ZXhlY3ZlKCIuL2dldHRleHQtdGVzdCIsIFsiLi9nZXR0ZXh0LXRlc3QiXSwgWy8qIDIzIHZh
-cnMgKi9dKSA9IDAKYnJrKDApICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgID0g
-MHg5MzBkMDAwCmFjY2VzcygiL2V0Yy9sZC5zby5ub2h3Y2FwIiwgRl9PSykgICAgICA9IC0x
-IEVOT0VOVCAoTm8gc3VjaCBmaWxlIG9yIGRpcmVjdG9yeSkKbW1hcDIoTlVMTCwgODE5Miwg
-UFJPVF9SRUFEfFBST1RfV1JJVEUsIE1BUF9QUklWQVRFfE1BUF9BTk9OWU1PVVMsIC0xLCAw
-KSA9IDB4YjgwMmYwMDAKYWNjZXNzKCIvZXRjL2xkLnNvLnByZWxvYWQiLCBSX09LKSAgICAg
-ID0gLTEgRU5PRU5UIChObyBzdWNoIGZpbGUgb3IgZGlyZWN0b3J5KQpvcGVuKCIvZXRjL2xk
-LnNvLmNhY2hlIiwgT19SRE9OTFkpICAgICAgPSAzCmZzdGF0NjQoMywge3N0X21vZGU9U19J
-RlJFR3wwNjQ0LCBzdF9zaXplPTEyMjQwMSwgLi4ufSkgPSAwCm1tYXAyKE5VTEwsIDEyMjQw
-MSwgUFJPVF9SRUFELCBNQVBfUFJJVkFURSwgMywgMCkgPSAweGI4MDExMDAwCmNsb3NlKDMp
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA9IDAKYWNjZXNzKCIvZXRjL2xkLnNv
-Lm5vaHdjYXAiLCBGX09LKSAgICAgID0gLTEgRU5PRU5UIChObyBzdWNoIGZpbGUgb3IgZGly
-ZWN0b3J5KQpvcGVuKCIvbGliL3Rscy9pNjg2L2Ntb3YvbGliYy5zby42IiwgT19SRE9OTFkp
-ID0gMwpyZWFkKDMsICJcMTc3RUxGXDFcMVwxXDBcMFwwXDBcMFwwXDBcMFwwXDNcMFwzXDBc
-MVwwXDBcMFwzNDBnXDFcMDAwNFwwXDBcMFwzNTBcMjY2XDI1XDBcMFwwXDBcMDAwNFwwIFww
-XG5cMChcMERcMENcMFw2XDBcMFwwMDA0XDBcMFwwMDA0XDBcMFwwMDA0XDBcMFwwQFwxXDBc
-MEBcMVwwXDBcNVwwXDBcMFw0XDBcMFwwXDNcMFwwXDBANlwyNFwwQDZcMjRcMEA2XDI0XDBc
-MjNcMFwwXDBcMjNcMFwwXDBcNFwwXDBcMFwxXDBcMFwwXDFcMFwwXDBcMFwwXDBcMFwwXDBc
-MFwwXDBcMFwwXDBodFwyNVwwaHRcMjVcMFw1XDBcMFwwXDBcMjBcMFwwXDFcMFwwXDBcMzUw
-XDIwMVwyNVwwXDM1MFwyMDFcMjVcMFwzNTBcMjAxXDI1XDBcMjI0XCdcMFwwXDIxMFRcMFww
-XDZcMFwwXDBcMFwyMFwwXDBcMlwwXDBcMFwyMzRcMjM1XDI1XDBcMjM0XDIzNVwyNVwwXDIz
-NFwyMzVcMjVcMFwzNjBcMFwwXDBcMzYwXDBcMFwwXDZcMFwwXDBcNFwwXDBcMFw0XDBcMFww
-dFwxXDBcMHRcMVwwXDB0XDFcMFwwIFwwXDBcMCBcMFwwXDBcNFwwXDBcMFw0XDBcMFwwXDdc
-MFwwXDBcMzUwXDIwMVwyNVwwXDM1MFwyMDFcMjVcMFwzNTBcMjAxXDI1XDBcMTBcMFwwXDAs
-XDBcMFwwXDRcMFwwXDBcNFwwXDBcMFBcMzQ1dGRUNlwyNFwwVDZcMjRcMFQ2XDI0XDBcMjA0
-K1wwXDBcMjA0K1wwXDBcNFwwXDBcMFw0XDBcMFwwUVwzNDV0ZFwwXDBcMFwwXDBcMFwwXDBc
-MFwwXDBcMFwwXDBcMFwwXDBcMFwwXDBcNlwwXDBcMFw0XDBcMFwwUlwzNDV0ZFwzNTBcMjAx
-XDI1XDBcMzUwXDIwMVwyNVwwXDM1MFwyMDFcMjVcMFwzMFwzNlwwXDBcMzBcMzZcMFwwXDRc
-MFwwXDBcMVwwXDBcMFw0XDBcMFwwXDIwXDBcMFwwXDFcMFwwXDBHTlVcMFwwXDBcMFwwXDJc
-MFwwXDBcNlwwXDBcMFwxMFwwXDBcMFwzNjNcM1wwXDBcdFwwXDBcMFwwXDJcMFwwXDE2XDBc
-MFwwXDI0MDBcMjBEXDIwMCBcMlwxXDIxNFwzXDM0NlwyMjBBRVwyMTBcMFwyMDRcMFwxMFww
-QVwyMDBcMEBcMzAwXDIwMFwwXGZcMlxmXDBcMDAxMFwwXDEwQFwiXDEwXDI0Nlw0XDIxMEg2
-bFwyNDBcMDI2MFwwJlwyMDRcMjAwXDIxNlw0XDEwQiRcMlxmXDI0NlwyNDRcMzJcNmNcMzEw
-XDBcMzAyIFwxXDMwMFwwUlwwIVwyMDFcMTBcNFxuICBcMjUwXDI0XDBcMjQoYFwwXDBQXDI0
-MFwzMTJEQiIsIDUxMikgPSA1MTIKZnN0YXQ2NCgzLCB7c3RfbW9kZT1TX0lGUkVHfDA3NTUs
-IHN0X3NpemU9MTQyNTgwMCwgLi4ufSkgPSAwCm1tYXAyKE5VTEwsIDE0MzExNTIsIFBST1Rf
-UkVBRHxQUk9UX0VYRUMsIE1BUF9QUklWQVRFfE1BUF9ERU5ZV1JJVEUsIDMsIDApID0gMHhi
-N2ViMzAwMAptbWFwMigweGI4MDBiMDAwLCAxMjI4OCwgUFJPVF9SRUFEfFBST1RfV1JJVEUs
-IE1BUF9QUklWQVRFfE1BUF9GSVhFRHxNQVBfREVOWVdSSVRFLCAzLCAweDE1OCkgPSAweGI4
-MDBiMDAwCm1tYXAyKDB4YjgwMGUwMDAsIDk4NDAsIFBST1RfUkVBRHxQUk9UX1dSSVRFLCBN
-QVBfUFJJVkFURXxNQVBfRklYRUR8TUFQX0FOT05ZTU9VUywgLTEsIDApID0gMHhiODAwZTAw
-MApjbG9zZSgzKSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPSAwCm1tYXAyKE5V
-TEwsIDQwOTYsIFBST1RfUkVBRHxQUk9UX1dSSVRFLCBNQVBfUFJJVkFURXxNQVBfQU5PTllN
-T1VTLCAtMSwgMCkgPSAweGI3ZWIyMDAwCnNldF90aHJlYWRfYXJlYSh7ZW50cnlfbnVtYmVy
-Oi0xIC0+IDYsIGJhc2VfYWRkcjoweGI3ZWIyNmIwLCBsaW1pdDoxMDQ4NTc1LCBzZWdfMzJi
-aXQ6MSwgY29udGVudHM6MCwgcmVhZF9leGVjX29ubHk6MCwgbGltaXRfaW5fcGFnZXM6MSwg
-c2VnX25vdF9wcmVzZW50OjAsIHVzZWFibGU6MX0pID0gMAptcHJvdGVjdCgweGI4MDBiMDAw
-LCA4MTkyLCBQUk9UX1JFQUQpICAgPSAwCm1wcm90ZWN0KDB4ODA0OTAwMCwgNDA5NiwgUFJP
-VF9SRUFEKSAgICA9IDAKbXByb3RlY3QoMHhiODA0YzAwMCwgNDA5NiwgUFJPVF9SRUFEKSAg
-ID0gMAptdW5tYXAoMHhiODAxMTAwMCwgMTIyNDAxKSAgICAgICAgICAgICAgPSAwCmJyaygw
-KSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA9IDB4OTMwZDAwMApicmsoMHg5
-MzJlMDAwKSAgICAgICAgICAgICAgICAgICAgICAgICAgPSAweDkzMmUwMDAKb3BlbigiL3Vz
-ci9saWIvbG9jYWxlL2xvY2FsZS1hcmNoaXZlIiwgT19SRE9OTFl8T19MQVJHRUZJTEUpID0g
-LTEgRU5PRU5UIChObyBzdWNoIGZpbGUgb3IgZGlyZWN0b3J5KQpvcGVuKCIvdXNyL3NoYXJl
-L2xvY2FsZS9sb2NhbGUuYWxpYXMiLCBPX1JET05MWSkgPSAzCmZzdGF0NjQoMywge3N0X21v
-ZGU9U19JRlJFR3wwNjQ0LCBzdF9zaXplPTI1ODYsIC4uLn0pID0gMAptbWFwMihOVUxMLCA0
-MDk2LCBQUk9UX1JFQUR8UFJPVF9XUklURSwgTUFQX1BSSVZBVEV8TUFQX0FOT05ZTU9VUywg
-LTEsIDApID0gMHhiODAyZTAwMApyZWFkKDMsICIjIExvY2FsZSBuYW1lIGFsaWFzIGRhdGEg
-YmFzZS5cbiMgQ29weXJpZ2h0IChDKSAxOTk2LTIwMDEsMjAwMyBGcmVlIFNvZnR3YXJlIEZv
-dW5kYXRpb24sIEluYy5cbiNcbiMgVGhpcyBwcm9ncmFtIGlzIGZyZWUgc29mdHdhcmU7IHlv
-dSBjYW4gcmVkaXN0cmlidXRlIGl0IGFuZC9vciBtb2RpZnlcbiMgaXQgdW5kZXIgdGhlIHRl
-cm1zIG9mIHRoZSBHTlUgR2VuZXJhbCBQdWJsaWMgTGljZW5zZSBhcyBwdWJsaXNoZWQgYnlc
-biMgdGhlIEZyZWUgU29mdHdhcmUgRm91bmRhdGlvbjsgZWl0aGVyIHZlcnNpb24gMiwgb3Ig
-KGF0IHlvdXIgb3B0aW9uKVxuIyBhbnkgbGF0ZXIgdmVyc2lvbi5cbiNcbiMgVGhpcyBwcm9n
-cmFtIGlzIGRpc3RyaWJ1dGVkIGluIHRoZSBob3BlIHRoYXQgaXQgd2lsbCBiZSB1c2VmdWws
-XG4jIGJ1dCBXSVRIT1VUIEFOWSBXQVJSQU5UWTsgd2l0aG91dCBldmVuIHRoZSBpbXBsaWVk
-IHdhcnJhbnR5IG9mXG4jIE1FUkNIQU5UQUJJTElUWSBvciBGSVRORVNTIEZPUiBBIFBBUlRJ
-Q1VMQVIgUFVSUE9TRS4gIFNlZSB0aGVcbiMgR05VIEdlbmVyYWwgUHVibGljIExpY2Vuc2Ug
-Zm9yIG1vcmUgZGV0YWlscy5cbiNcbiMgWW91IHNob3VsZCBoYXZlIHJlY2VpdmVkIGEgY29w
-eSBvZiB0aGUgR05VIEdlbmVyYWwgUHVibGljIExpY2Vuc2VcbiMgYWxvbmcgd2l0aCB0aGlz
-IHByb2dyYW07IGlmIG5vdCwgd3JpdGUgdG8gdGhlIEZyZWUgU29mdHdhcmVcbiMgRm91bmRh
-dGlvbiwgSW5jLiwgNTkgVGVtcGxlIFBsYWNlIC0gU3VpdGUgMzMwLCBCb3N0b24sIE1BIDAy
-MTExLTEzMDcsIFVTQS5cblxuIyBUaGUgZm9ybWF0IG9mIHRoaXMgZmlsZSBpcyB0aGUgc2Ft
-ZSBhcyBmb3IgdGhlIGNvcnJlc3BvbmRpbmcgZmlsZSBvZlxuIyB0aGUgWCBXaW5kb3cgU3lz
-dGVtLCB3aGljaCBub3JtYWxseSBjYW4gYmUgZm91bmQgaW5cbiNcdC91c3IvbGliL1gxMS9s
-b2NhbGUvbG9jYWxlLmFsaWFzXG4jIEEgc2luZ2xlIGxpbmUgY29udGFpbnMgdHdvIGZpZWxk
-czogYW4gYWxpYXMgYW5kIGEgc3Vic3RpdHV0aW9uIHZhbHVlLlxuIyBBbGwgZW50ciIuLi4s
-IDQwOTYpID0gMjU4NgpyZWFkKDMsICIiLCA0MDk2KSAgICAgICAgICAgICAgICAgICAgICAg
-PSAwCmNsb3NlKDMpICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA9IDAKbXVubWFw
-KDB4YjgwMmUwMDAsIDQwOTYpICAgICAgICAgICAgICAgID0gMApvcGVuKCIvdXNyL2xpYi9s
-b2NhbGUvZW5fR0IuSVNPLTg4NTktMS9MQ19JREVOVElGSUNBVElPTiIsIE9fUkRPTkxZKSA9
-IC0xIEVOT0VOVCAoTm8gc3VjaCBmaWxlIG9yIGRpcmVjdG9yeSkKb3BlbigiL3Vzci9saWIv
-bG9jYWxlL2VuX0dCLmlzbzg4NTkxL0xDX0lERU5USUZJQ0FUSU9OIiwgT19SRE9OTFkpID0g
-LTEgRU5PRU5UIChObyBzdWNoIGZpbGUgb3IgZGlyZWN0b3J5KQpvcGVuKCIvdXNyL2xpYi9s
-b2NhbGUvZW5fR0IvTENfSURFTlRJRklDQVRJT04iLCBPX1JET05MWSkgPSAtMSBFTk9FTlQg
-KE5vIHN1Y2ggZmlsZSBvciBkaXJlY3RvcnkpCm9wZW4oIi91c3IvbGliL2xvY2FsZS9lbi5J
-U08tODg1OS0xL0xDX0lERU5USUZJQ0FUSU9OIiwgT19SRE9OTFkpID0gLTEgRU5PRU5UIChO
-byBzdWNoIGZpbGUgb3IgZGlyZWN0b3J5KQpvcGVuKCIvdXNyL2xpYi9sb2NhbGUvZW4uaXNv
-ODg1OTEvTENfSURFTlRJRklDQVRJT04iLCBPX1JET05MWSkgPSAtMSBFTk9FTlQgKE5vIHN1
-Y2ggZmlsZSBvciBkaXJlY3RvcnkpCm9wZW4oIi91c3IvbGliL2xvY2FsZS9lbi9MQ19JREVO
-VElGSUNBVElPTiIsIE9fUkRPTkxZKSA9IC0xIEVOT0VOVCAoTm8gc3VjaCBmaWxlIG9yIGRp
-cmVjdG9yeSkKb3BlbigiL3Vzci9zaGFyZS9sb2NhbGUtbGFuZ3BhY2svZW5fR0IuSVNPLTg4
-NTktMS9MQ19JREVOVElGSUNBVElPTiIsIE9fUkRPTkxZKSA9IC0xIEVOT0VOVCAoTm8gc3Vj
-aCBmaWxlIG9yIGRpcmVjdG9yeSkKb3BlbigiL3Vzci9zaGFyZS9sb2NhbGUtbGFuZ3BhY2sv
-ZW5fR0IuaXNvODg1OTEvTENfSURFTlRJRklDQVRJT04iLCBPX1JET05MWSkgPSAtMSBFTk9F
-TlQgKE5vIHN1Y2ggZmlsZSBvciBkaXJlY3RvcnkpCm9wZW4oIi91c3Ivc2hhcmUvbG9jYWxl
-LWxhbmdwYWNrL2VuX0dCL0xDX0lERU5USUZJQ0FUSU9OIiwgT19SRE9OTFkpID0gLTEgRU5P
-RU5UIChObyBzdWNoIGZpbGUgb3IgZGlyZWN0b3J5KQpvcGVuKCIvdXNyL3NoYXJlL2xvY2Fs
-ZS1sYW5ncGFjay9lbi5JU08tODg1OS0xL0xDX0lERU5USUZJQ0FUSU9OIiwgT19SRE9OTFkp
-ID0gLTEgRU5PRU5UIChObyBzdWNoIGZpbGUgb3IgZGlyZWN0b3J5KQpvcGVuKCIvdXNyL3No
-YXJlL2xvY2FsZS1sYW5ncGFjay9lbi5pc284ODU5MS9MQ19JREVOVElGSUNBVElPTiIsIE9f
-UkRPTkxZKSA9IC0xIEVOT0VOVCAoTm8gc3VjaCBmaWxlIG9yIGRpcmVjdG9yeSkKb3Blbigi
-L3Vzci9zaGFyZS9sb2NhbGUtbGFuZ3BhY2svZW4vTENfSURFTlRJRklDQVRJT04iLCBPX1JE
-T05MWSkgPSAtMSBFTk9FTlQgKE5vIHN1Y2ggZmlsZSBvciBkaXJlY3RvcnkpCmZzdGF0NjQo
-MSwge3N0X21vZGU9U19JRkNIUnwwNjIwLCBzdF9yZGV2PW1ha2VkZXYoMTM2LCAxKSwgLi4u
-fSkgPSAwCm1tYXAyKE5VTEwsIDQwOTYsIFBST1RfUkVBRHxQUk9UX1dSSVRFLCBNQVBfUFJJ
-VkFURXxNQVBfQU5PTllNT1VTLCAtMSwgMCkgPSAweGI4MDJlMDAwCndyaXRlKDEsICJzZXRs
-b2NhbGUxOiAobnVsbClcbiIsIDE5KSAgICA9IDE5Cm9wZW4oIi91c3IvbGliL2xvY2FsZS9k
-ZV9HQi9MQ19JREVOVElGSUNBVElPTiIsIE9fUkRPTkxZKSA9IC0xIEVOT0VOVCAoTm8gc3Vj
-aCBmaWxlIG9yIGRpcmVjdG9yeSkKb3BlbigiL3Vzci9saWIvbG9jYWxlL2RlL0xDX0lERU5U
-SUZJQ0FUSU9OIiwgT19SRE9OTFkpID0gLTEgRU5PRU5UIChObyBzdWNoIGZpbGUgb3IgZGly
-ZWN0b3J5KQpvcGVuKCIvdXNyL3NoYXJlL2xvY2FsZS1sYW5ncGFjay9kZV9HQi9MQ19JREVO
-VElGSUNBVElPTiIsIE9fUkRPTkxZKSA9IC0xIEVOT0VOVCAoTm8gc3VjaCBmaWxlIG9yIGRp
-cmVjdG9yeSkKb3BlbigiL3Vzci9zaGFyZS9sb2NhbGUtbGFuZ3BhY2svZGUvTENfSURFTlRJ
-RklDQVRJT04iLCBPX1JET05MWSkgPSAtMSBFTk9FTlQgKE5vIHN1Y2ggZmlsZSBvciBkaXJl
-Y3RvcnkpCndyaXRlKDEsICJzZXRsb2NhbGUyOiAobnVsbClcbiIsIDE5KSAgICA9IDE5Cndy
-aXRlKDEsICJzZXRsb2NhbGUzOiBDXG4iLCAxNCkgICAgICAgICA9IDE0CndyaXRlKDEsICJk
-b21haW46IC9ob21lL3RpbGwvZ3V0ZW5wcmludC9jdnMvSEVBRC94XG4iLCA0MSkgPSA0MQp3
-cml0ZSgxLCAiY29kc2V0IChudWxsKS0+VVRGLThcbiIsIDIxKSAgPSAyMQp3cml0ZSgxLCAi
-c2VsZWN0ZWQtZG9tYWluOiBndXRlbnByaW50XG4iLCAyOCkgPSAyOAp3cml0ZSgxLCAibG9v
-a3VwOiBGaXZlIENvbG9yIFBob3RvIENvbXBvc2l0ZVxuIiwgMzUpID0gMzUKd3JpdGUoMSwg
-ImRsb29rdXA6IEZpdmUgQ29sb3IgUGhvdG8gQ29tcG9zaXRlXG4iLCAzNikgPSAzNgpleGl0
-X2dyb3VwKDApICAgICAgICAgICAgICAgICAgICAgICAgICAgPSA/Cg==
---------------000107020709060600050708--
+Here is the home page of the Common Printing dialog:
+
+https://www.linuxfoundation.org/en/OpenPrinting/CommonPrintingDialog
+
+There are links to all specs and related pages.
+
+    Till
