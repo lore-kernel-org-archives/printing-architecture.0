@@ -1,12 +1,15 @@
-Message-ID: <48977A53.8000502@gmail.com>
-Date: Mon, 04 Aug 2008 23:53:23 +0200
+Message-ID: <489785AD.5060806@gmail.com>
+Date: Tue, 05 Aug 2008 00:41:49 +0200
 From: Till Kamppeter <till.kamppeter@gmail.com>
 MIME-Version: 1.0
-References: <200807311309.m6VD9s5n018013@dsl092-065-009.bos1.dsl.speakeasy.net>	<4895C323.7060005@apple.com>	<200808031506.m73F6GPe025447@dsl092-065-009.bos1.dsl.speakeasy.net>
-	<200808030932.38287.hvengel@astound.net>
-In-Reply-To: <200808030932.38287.hvengel@astound.net>
-Content-Type: text/plain; charset=UTF-8; format=flowed
-Content-Transfer-Encoding: 7bit
+References: <200807311309.m6VD9s5n018013@dsl092-065-009.bos1.dsl.speakeasy.net>	<p06110400c4b793ad4cd1@[192.168.1.102]>	<200807312114.m6VLEhgd004613@dsl092-065-009.bos1.dsl.speakeasy.net>	<489230B6.8050306@gmail.com>	<200807312156.m6VLusVF004364@dsl092-065-009.bos1.dsl.speakeasy.net>	<4892B6A9.90609@gmail.com>	<200808011134.m71BYXdK003793@dsl092-065-009.bos1.dsl.speakeasy.net>	<4892FDDB.5060104@gmail.com>	<20080801123314.GA26452@nagini.vm.bytemark.co.uk>	<489307A9.1020504@gmail.com>	<20080801130821.GC26452@nagini.vm.bytemark.co.uk>	<48930D59.3030003@gmail.com>
+	<48934778.1080504@apple.com>	<87ej58mptc.fsf@hardknott.home>
+	<4893A466.5040103@apple.com>	<87tze4l0sr.fsf@hardknott.home>	<200808020120.m721K3Uw007245@dsl092-065-009.bos1.dsl.speakeasy.net>	<87wsizvbdh.fsf@hardknott.home>
+	<87ej57v8gj.fsf@hardknott.home>	<48976FB0.5020806@gmail.com>
+	<873alk8lwp.fsf@hardknott.home>
+In-Reply-To: <873alk8lwp.fsf@hardknott.home>
+Content-Type: text/plain; charset="utf-8"; format="flowed"
+Content-Transfer-Encoding: 8bit
 Subject: Re: [Printing-architecture] [Gimp-print-devel] Common Printing
  Dialog: PPD extension specs updated
 List-Id: Printing architecture under linux
@@ -18,42 +21,54 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: "Hal V. Engel" <hvengel@astound.net>
-Cc: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>, Printing-japan <printing-japan@lists.linux-foundation.org>, gimp-print-devel@lists.sourceforge.net
+To: Roger Leigh <rleigh@whinlatter.ukfsn.org>
+Cc: Robert Krawitz <rlk@alum.mit.edu>, printing-architecture@lists.linux-foundation.org, printing-japan@lists.linux-foundation.org, gimp-print-devel@lists.sourceforge.net, jriddell@ubuntu.com
 
-Hal V. Engel wrote:
-> I don't think this is off topic. After all the thread is about PPD files 
-> and the Common Printing Dialog and Kai-Uwe asked if the cupsICCProfile 
-> part of the PPD specification was going to be implemented in the new 
-> Common Printing Dialog. In addition, the thread mentioned color 
-> management as one of the reasons for a spec change for PPD files. This 
-> seems to me to be right on topic. I also want to know the answer to this 
-> question. Is the new printing dialog going to support color management 
-> and will it be able to make use of cupsICCProfile info from PPD files?
+
+
+Roger Leigh wrote:
+> Well, the problem here is simple.  The program fails as expected
+> because you *don't have a valid locale* for the testcase to use:
 > 
-> Hal
+>   // Initial setlocale call must succeed, or else we're still in a C
+>   // locale, and gettext won't translate at all.
+>   const char *l1 = setlocale(LC_ALL, "en_GB.ISO-8859-1");
 > 
+> Do you have a valid en_GB.ISO-8859-1 locale?  If not, then change this
+> to a different locale (e.g. "" to use your en_US locale), or generate
+> the locale.  To do the test as I requested above however, you *must*
+> start off in a non-UTF-8 locale to verify that the UTF-8 transcoding
+> is working properly, or else the test is not useful, though it will
+> verify we can do lookups while using "invalid" locales.
+> 
+> What results do you get if you fix this?
 
-It is a good idea to add the color profile support to the dialog. But 
-are clients able to download the ICC profile from the CUPS server? Would 
-it not be the better solution if CUPS itself already supports color 
-management and not to make the dialog apply color profiles? Which 
-options would be needed in the Common Printing Dialog to control color 
-management?
+Now the results are better.
 
-    Till
+I did
 
+sudo locale-gen en_US.ISO-8859-15
+    (locale must be listed in /usr/share/i18n/SUPPORTED)
 
-> PS: I tried to find info about this project on-line. Other than finding 
-> some basic references to the GSoC project I was unable to find anything 
-> that had any level of detail like for example specification or design 
-> documents or a project wiki or project email list. Is this type of 
-> information available and if so where is it located?
+edited gettext-test.c to have a line
 
-Here is the home page of the Common Printing dialog:
+const char *l1 = setlocale(LC_ALL, "en_US.ISO-8859-15");
 
-https://www.linuxfoundation.org/en/OpenPrinting/CommonPrintingDialog
+and all the rest like before.
 
-There are links to all specs and related pages.
+Then I get as screen output:
+
+setlocale1: en_US.ISO-8859-15
+setlocale2: (null)
+setlocale3: en_US.ISO-8859-15
+domain: /home/till/gutenprint/cvs/HEAD/x
+codset (null)->UTF-8
+selected-domain: gutenprint
+lookup: Foto aus fünf Farben gemischt
+dlookup: Foto aus fünf Farben gemischt
+
+So in this case translations work and encoding works. st.out is 
+attached. So this means that the system needs at least one non-C locale 
+and the PPD generator has to find and select it.
 
     Till
