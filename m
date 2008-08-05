@@ -1,14 +1,15 @@
-Message-ID: <48978F86.9080406@gmail.com>
-Date: Tue, 05 Aug 2008 01:23:50 +0200
+Message-ID: <48980D57.5000405@gmail.com>
+Date: Tue, 05 Aug 2008 10:20:39 +0200
 From: Till Kamppeter <till.kamppeter@gmail.com>
 MIME-Version: 1.0
-References: <489734F1.5020708@gmail.com>
-	<e395be80808041606p4a085d7i637f99ab7f5064ad@mail.gmail.com>
-In-Reply-To: <e395be80808041606p4a085d7i637f99ab7f5064ad@mail.gmail.com>
+References: <200807311309.m6VD9s5n018013@dsl092-065-009.bos1.dsl.speakeasy.net>
+	<48977A53.8000502@gmail.com> <4897BF6A.9090806@apple.com>
+	<200808050027.23995.hvengel@astound.net>
+In-Reply-To: <200808050027.23995.hvengel@astound.net>
 Content-Type: text/plain; charset=UTF-8; format=flowed
 Content-Transfer-Encoding: 7bit
-Subject: Re: [Printing-architecture] REMINDER: OP SC Meeting - Mon/Tue 4/5
-	August 2008 TODAY/TOMORROW
+Subject: Re: [Printing-architecture] [Gimp-print-devel] Common Printing
+ Dialog: PPD extension specs updated
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -18,63 +19,21 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Ira McDonald <blueroofmusic@gmail.com>
-Cc: printing-architecture@lists.linux-foundation.org
+To: "Hal V. Engel" <hvengel@astound.net>
+Cc: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>, Printing-japan <printing-japan@lists.linux-foundation.org>, gimp-print-devel@lists.sourceforge.net, Michael R Sweet <msweet@apple.com>
 
-I am OK with next week.
+Hal V. Engel wrote:
+> A lot of this depends on the Color Management (CM) services that are 
+> available in the printing system. If the issues with CUPS can be fixed 
+> then users need to have the following:
+>
+[...]
 
-We should post an agenda and a reminder this week. We also should 
-introduce a backup number, for the case Norm cannot make it to the call. 
-Perhaps I should get the host code too?
+You write about a lot of CM features missing in CUPS. Can you make 
+appropriate bug reports/feature requests at
+
+http://www.cups.org/str.php
+
+Thanks.
 
     Till
-
-
-
-Ira McDonald wrote:
-> Hi Till,
-> 
-> I've been unable to reach Norm Jacobs (host of the conference line) today.
-> 
-> We should try for next week - same time.
-> 
-> ALL - Please reply if you are or are NOT available for next week.
-> 
-> Cheers,
-> - Ira
-> 
-> On Mon, Aug 4, 2008 at 12:57 PM, Till Kamppeter
-> <till.kamppeter@gmail.com> wrote:
->> Hi,
->>
->> Reminder of our next Open Printing Steering Committee teleconference.
->>
->> If you are not able to make it, please tell. We can move to August 11/12 if
->> needed.
->>
->> Anyone can join and *participate*, you are all welcome.
->>
->>    - Monday 4 August 2008, Evening
->>      - US/Europe
->>        4pm in San Francisco - US PDT (Pacific Daylight Time)
->>        5pm in Colorado - US MDT (Mountain Daylight Time)
->>        6pm in Chicago - US CDT (Central Daylight Time)
->>        7pm in New York - US EST (Eastern Daylight Time)
->>
->>    - Tuesday 5 August 2008, Morning
->>      - Europe
->>        1am in Berlin - CEST (Central European Summer Time)
->>      - Japan
->>        8am in Japan - JST (Japan Standard Time)
->>
->>    Toll Free (866) 839-8145
->>    Int'l (865) 524-6352
->>    ACCESS Code: 7548766
->>
->>
->>   Till
->>
-> 
-> 
-> 
-
