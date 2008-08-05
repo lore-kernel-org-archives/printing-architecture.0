@@ -1,16 +1,16 @@
-Message-Id: <6758938C-39C9-40CD-B97C-C8896C0D47B3@mmiworks.net>
-From: peter sikking <peter@mmiworks.net>
-In-Reply-To: <48980F94.40306@gmail.com>
-Content-Type: text/plain; charset=WINDOWS-1252; format=flowed; delsp=yes
-Content-Transfer-Encoding: quoted-printable
-Mime-Version: 1.0 (Apple Message framework v926)
-Date: Tue, 5 Aug 2008 14:36:07 +0200
-References: <200807311309.m6VD9s5n018013@dsl092-065-009.bos1.dsl.speakeasy.net>
-	<200808031431.06482.hvengel@astound.net>
-	<48978139.3070005@gmail.com>
-	<200808050116.25204.hvengel@astound.net> <48980F94.40306@gmail.com>
-Subject: Re: [Printing-architecture] [Gimp-print-devel] Common Printing
-	Dialog: Color Management (was)PPD extension specs updated
+Message-ID: <e395be80808050820r3c504607r7bba9ab167208cab@mail.gmail.com>
+Date: Tue, 5 Aug 2008 11:20:28 -0400
+From: "Ira McDonald" <blueroofmusic@gmail.com>
+In-Reply-To: <48978F86.9080406@gmail.com>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline
+References: <489734F1.5020708@gmail.com>
+	<e395be80808041606p4a085d7i637f99ab7f5064ad@mail.gmail.com>
+	<48978F86.9080406@gmail.com>
+Subject: Re: [Printing-architecture] REMINDER: OP SC Meeting - Mon/Tue 4/5
+	August 2008 TODAY/TOMORROW
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -20,62 +20,101 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Till Kamppeter <till.kamppeter@gmail.com>
-Cc: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>, Printing-japan <printing-japan@lists.linux-foundation.org>, gimp-print-devel@lists.sourceforge.net, "Hal V. Engel" <hvengel@astound.net>
+To: Till Kamppeter <till.kamppeter@gmail.com>, Ira McDonald <blueroofmusic@gmail.com>
+Cc: printing-architecture@lists.linux-foundation.org
 
-Till + Hal wrote:
+Hi Till,
 
->> It was in the color settings for photoprinters (there was a color =20
->> management item that listed setting the ICC profile) but it was not =20=
+Glen mispoke twice above - he is NOT available next week on
+11 August, due to the simultaneous P2600 meeting in Camas, WA
+(across river from Portland, OR).
 
->> in the wide format printer spec.
+So we would have to move out two weeks to 18 August (as Glen said
+above).  I'm swamped until Friday 22 August.  I could attend on the 18th,
+but I can't attend some other day this week or next week.
 
-I have updated the intent of the clusters at the top of this page:
+Norm cannot share the teleconference host code, which is paid for by
+Sun.  You could choose an alternate teleconference host and number
+- e.g., a Linux Foundation number?
 
-<http://wiki.openusability.org/printing/index.php/Printer_type_clusters>
+OP Japan people and Norm - what is your availability, please?
 
-"Do not take the clusters too literal=85"
+Cheers,
+- Ira
 
->> I remember seeing in the design docs that since it is a dialog it =20
->> should be a fixed size. I am not sure where this "rule" comes from =20=
+On Mon, Aug 4, 2008 at 7:23 PM, Till Kamppeter <till.kamppeter@gmail.com> wrote:
+> I am OK with next week.
+>
+> We should post an agenda and a reminder this week. We also should introduce
+> a backup number, for the case Norm cannot make it to the call. Perhaps I
+> should get the host code too?
+>
+>   Till
+>
+>
+>
+> Ira McDonald wrote:
+>>
+>> Hi Till,
+>>
+>> I've been unable to reach Norm Jacobs (host of the conference line) today.
+>>
+>> We should try for next week - same time.
+>>
+>> ALL - Please reply if you are or are NOT available for next week.
+>>
+>> Cheers,
+>> - Ira
+>>
+>> On Mon, Aug 4, 2008 at 12:57 PM, Till Kamppeter
+>> <till.kamppeter@gmail.com> wrote:
+>>>
+>>> Hi,
+>>>
+>>> Reminder of our next Open Printing Steering Committee teleconference.
+>>>
+>>> If you are not able to make it, please tell. We can move to August 11/12
+>>> if
+>>> needed.
+>>>
+>>> Anyone can join and *participate*, you are all welcome.
+>>>
+>>>   - Monday 4 August 2008, Evening
+>>>     - US/Europe
+>>>       4pm in San Francisco - US PDT (Pacific Daylight Time)
+>>>       5pm in Colorado - US MDT (Mountain Daylight Time)
+>>>       6pm in Chicago - US CDT (Central Daylight Time)
+>>>       7pm in New York - US EST (Eastern Daylight Time)
+>>>
+>>>   - Tuesday 5 August 2008, Morning
+>>>     - Europe
+>>>       1am in Berlin - CEST (Central European Summer Time)
+>>>     - Japan
+>>>       8am in Japan - JST (Japan Standard Time)
+>>>
+>>>   Toll Free (866) 839-8145
+>>>   Int'l (865) 524-6352
+>>>   ACCESS Code: 7548766
+>>>
+>>>
+>>>  Till
+>>>
+>>
+>>
+>>
+>
+>
 
->> but I think that this should depend on the dialog.
-
-and in this case, after looking carefully at the role of each area in
-the printing dialog, the answer is no user resizing. the dialog
-resizes itself to accommodate all parameters.
-
-the preview is very important, it takes the voodoo out of printing.
-it shows that everything is going to be OK, on a macroscopic level.
-it has just enough size and enlargement to do that, but not more.
-
-it should not start leading a life of its own as a document viewer.
-
->> In some (actually in most) cases I would agree totally. In this =20
->> case I don't. Part if this gets back to use cases. My interests are =20=
-
->> more focused on PhotoPrinting and color critical work where the =20
->> preview can be very important.
-
-being the principal interaction architect of both this project and
-of the redesign of GIMP, I am just about the only person in the whole
-wide world who can answer your question.
-
-the printing dialog does not live in a vacuum. we have a general
-solution: if the transformation part (getting it on paper) is
-demanding or hands-on, then this task shall be performed in a
-sizeable (like the main-) window before the print dialog is entered.
-
-The printing dialog can even be skipped (in a Just Print fashion)
-after this big transformation window. (note the use of dialog and window
-for these two different types of interaction).
-
-     --ps
-
-         founder + principal interaction architect
-             man + machine interface works
-
-         http://mmiworks.net/blog : on interaction architecture
 
 
-
+-- 
+Ira McDonald (Musician / Software Architect)
+Chair - Linux Foundation Open Printing WG
+Blue Roof Music/High North Inc
+email: blueroofmusic@gmail.com
+winter:
+ 579 Park Place Saline, MI 48176
+ 734-944-0094
+summer:
+ PO Box 221 Grand Marais, MI 49839
+ 906-494-2434
