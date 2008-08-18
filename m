@@ -1,11 +1,11 @@
-Message-ID: <48A5EB32.2040008@gmail.com>
-Date: Fri, 15 Aug 2008 22:46:42 +0200
+Message-ID: <48A9D5E1.80509@gmail.com>
+Date: Mon, 18 Aug 2008 22:04:49 +0200
 From: Till Kamppeter <till.kamppeter@gmail.com>
 MIME-Version: 1.0
 Content-Type: text/plain; charset=UTF-8; format=flowed
 Content-Transfer-Encoding: 7bit
-Subject: [Printing-architecture] REMINDER: Next OP SC - Mon/Tue - 18/19
-	August 2008
+Subject: [Printing-architecture] REMINDER: In 3 hours Next OP SC - Mon/Tue -
+	18/19 August 2008
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -17,7 +17,8 @@ List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-ar
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
 To: Open Printing <printing-architecture@lists.linux-foundation.org>, Ira McDonald <blueroofmusic@gmail.com>, Norm Jacobs <Norm.Jacobs@sun.com>
 
-Reminder of our next Open Printing Steering Committee teleconference.
+Reminder of our next Open Printing Steering Committee teleconference in 
+3 hours from now.
 
 Anyone can join and *participate*, you are all welcome.
 
@@ -58,3 +59,4 @@ SCHEDULES:
 Hear you on Monday/Tuesday.
 
     Till
+
