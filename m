@@ -1,9 +1,13 @@
-Message-ID: <48B49BFB.2020700@fujixerox.co.jp>
-Date: Wed, 27 Aug 2008 09:12:43 +0900
-From: Osamu MIHARA <osamu.mihara@fujixerox.co.jp>
+Message-ID: <48BD500D.7040903@gmail.com>
+Date: Tue, 02 Sep 2008 16:39:09 +0200
+From: Till Kamppeter <till.kamppeter@gmail.com>
 MIME-Version: 1.0
-Content-Type: multipart/mixed; boundary="------------000305050700020903090707"
-Subject: [Printing-architecture] [FYI] Cairo Summit In Progress
+References: <200808281229.31215.hvengel@astound.net>
+In-Reply-To: <200808281229.31215.hvengel@astound.net>
+Content-Type: text/plain; charset=UTF-8; format=flowed
+Content-Transfer-Encoding: 7bit
+Subject: Re: [Printing-architecture] poppler vs. GhostScript & color
+	management
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -13,140 +17,78 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Open Printing <printing-architecture@lists.linux-foundation.org>, printing-japan@lists.linux-foundation.org
+To: "Hal V. Engel" <hvengel@astound.net>
+Cc: gs-devel <gs-devel@ghostscript.com>, OTANI Koji <sho@bbr.jp>, Tobias Hoffmann <th55@gmx.de>, Printing-japan <printing-japan@lists.linux-foundation.org>, "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>, Hin-Tak Leung <hintak_leung@yahoo.co.uk>
 
-This is a multi-part message in MIME format.
---------------000305050700020903090707
-Content-Type: text/plain; charset=ISO-2022-JP
-Content-Transfer-Encoding: 7bit
+Hal, thank you very much for your posting. This is a very important point.
 
-Hi,
+I think under these circumstances we should switch all PDF rasterization 
+to Ghostscript. Otani-san, can you change the pdftoraster (and if needed 
+also the pdftopdf filter) to be based on the Ghostscript library libgs? 
+Lars, Alex, can you make the preview of the printing dialog be 
+libgs-based? Tobias, Hin-Tak, can you do the appropriate changes on 
+pdftoijs?
 
-"Cairo" Summit is in progress and they also discuss about Printing/PDF.
-See http://cairographics.org/summit/2008/notes/
+We do not need to rush this into Intrepid or into the GSoC, but at some 
+point we should be standards-conforming as far as possible and we should 
+also support color management.
 
-[In Japanase]
+Ghostscript developers, what are the plans for support for handling all 
+"CIE based" objects using CIE compliant techniques and ICC profiles in 
+Ghostscript 8.64?
 
-Cairoサミットが現在開催されていて、Printing/PDFについての議論もされたよ
-うです。以下に概略が記載されています。
-http://cairographics.org/summit/2008/notes/
--- 
-  Osamu Mihara / Fuji Xerox Co., Lt.
+    Till
 
+Hal V. Engel wrote:
+>  From looking at the code for the new pdftoraster filter that is under 
+> developement it appears that it, like the Common Printing Dialog, uses 
+> poppler as it's pdf rasterization library. Inspecting the poppler code I 
+> discovered that it is not compliant with any of the published PDF 
+> specifications which require support for handling all "CIE based" 
+> objects using CIE compliant techniques. This includes support for ICC 
+> profiles imbedded in the PDF files as well as ICC profiles as an output 
+> target. In addition inquiries made on the poppler developer email list 
+> indicate that there are currently no plans to implement specifications 
+> compliant support for "CIE based" objects although the developement team 
+> would like to do this at some point. I was told that the code would need 
+> major restructuring to add this support and looking at the code this 
+> appears to be a correct assessment. In other words it will likely be a 
+> long time before poppler is compliant with the PDF specification.
+> 
+> GhostScript on the other hand has partial support in place for "CIE 
+> based" objects and user specified output color spaces with the current 
+> stable version. There are currently two issues in this area. First 
+> output color spaces can only be specified as a Postscript language CRD. 
+> And, second, currently only ICC V2 profiles are supported.
+> 
+> ICC profiles can be converted into a Postscript language CRD using the 
+> LittleCMS icc2ps utility and this can be passed on the command line to 
+> GhostScript during the conversion from PDF to a raster format. The use 
+> of Postscript language CRDs for specifying the output color space has 
+> it's limitations and there are issues like banding when creating output 
+> for larger gamut devices. Even with these limitations GhostScript is 
+> much closer to being in compliance with the PDF specification than is 
+> poppler. For details on how to setup and use GhostScript with the 
+> currently supported color management workflow see 
+> https://www.oyranos.org/wiki/index.php?title=Ghostscript .
+> 
+> In addition, the GhostScript team is in the process of doing a major 
+> rework of how ICC color management works in GhostScript that should fix 
+> all of the issues with the current implementation. For example it will 
+> be possible to configure GhostScript to use an external CMS like 
+> LittleCMS (currently it has an embedded cms library). LCMS has support 
+> for both ICC V2 and ICC V4 profiles. In addition, the rework will allow 
+> users to directly specify an ouput ICC profile and it will no longer use 
+> an intermeadeate Postscript language CRD for the color space conversion 
+> (IE. the conversion will use the installed CMS engine). See 
+> http://www.ghostscript.com/pipermail/gs-devel/2008-August/007871.html 
+> for more details about this.
+> 
+> Currently there is no indication when GhostScript will have the new ICC 
+> profile features. Given the lack of support for color managment in 
+> poppler is there any possibility that the new pdftoraster CUPS filter 
+> and the Common Printing Dialog might convert to using GhostScript?
+> 
+> Hal
+> 
 
---------------000305050700020903090707
-Content-Type: message/rfc822;
- name="Attached Message"
-Content-Transfer-Encoding: 7bit
-Content-Disposition: inline;
- filename="Attached Message"
-
-Return-Path: <cairo-bounces@cairographics.org>
-Received: from murder ([unix socket])
-	 by twister.dev.iwa.fujixerox.co.jp (Cyrus v2.2.13) with LMTPA;
-	 Wed, 27 Aug 2008 04:33:00 +0900
-X-Sieve: CMU Sieve 2.2
-Received: from twister.dev.iwa.fujixerox.co.jp (twister.dev.iwa.fujixerox.co.jp [129.249.250.7])
-	by twister.dev.iwa.fujixerox.co.jp (Postfix) with ESMTP id A3E23C65366
-	for <mihara@twister.dev.iwa.fujixerox.co.jp>; Wed, 27 Aug 2008 04:33:00 +0900 (JST)
-Received: from pop04.kdc.fujixerox.co.jp [143.94.15.57]
-	by twister.dev.iwa.fujixerox.co.jp with POP3 (fetchmail-6.3.8)
-	for <mihara@twister.dev.iwa.fujixerox.co.jp> (single-drop); Wed, 27 Aug 2008 04:33:00 +0900 (JST)
-Received: from ms2.dc.fxis.co.jp (ms2.dc.fxis.co.jp [143.94.15.17])
-	by pop04.dc.fxis.co.jp (8.13.8/8.13.8) with ESMTP id m7QJVahb019454
-	for <fx28013@pop04.kdc.fujixerox.co.jp>; Wed, 27 Aug 2008 04:31:36 +0900 (JST)
-Received: from ms10.fujixerox.co.jp (ms10.fujixerox.co.jp [129.249.27.65])
-	by ms2.dc.fxis.co.jp (8.13.8/8.13.8) with ESMTP id m7QJVaF0010360
-	for <fx28013@pop04.kdc.fujixerox.co.jp>; Wed, 27 Aug 2008 04:31:36 +0900 (JST)
-Received: from mx10.fujixerox.co.jp (isvw11.fujixerox.co.jp [129.249.27.136])
-	by ms10.fujixerox.co.jp  with ESMTP id m7QJVZ1O012562
-	for <osamu.mihara@fujixerox.co.jp>; Wed, 27 Aug 2008 04:31:35 +0900 (JST)
-Received: from mas37a.mxl.2iij.net (mas-v30a.mxl.2iij.net [202.214.64.5])
-	by mx10.fujixerox.co.jp  with ESMTP id m7QJVZlf005753
-	for <osamu.mihara@fujixerox.co.jp>; Wed, 27 Aug 2008 04:31:35 +0900 (JST)
-Received: from unknown [131.252.210.177] (EHLO gabe.freedesktop.org)
-	by mas37a.mxl.2iij.net (mxl_mta-3.1.0-05)
-	with ESMTP id 61a54b84.195214256.14886.00-052.mas37a.mxl.2iij.net (envelope-from <cairo-bounces@cairographics.org>);
-	Wed, 27 Aug 2008 04:31:34 +0900 (JST)
-Received: from gabe.freedesktop.org (localhost [127.0.0.1])
-	by gabe.freedesktop.org (Postfix) with ESMTP id 7C3CC9E959;
-	Tue, 26 Aug 2008 12:31:31 -0700 (PDT)
-X-Original-To: cairo@cairographics.org
-Delivered-To: cairo@cairographics.org
-Received: from olra.theworths.org (olra.theworths.org [82.165.184.25])
-	by gabe.freedesktop.org (Postfix) with ESMTP id 491ED9E7D5
-	for <cairo@cairographics.org>; Tue, 26 Aug 2008 12:31:29 -0700 (PDT)
-Received: from localhost (localhost [127.0.0.1])
-	by olra.theworths.org (Postfix) with ESMTP id 18873454988
-	for <cairo@cairographics.org>; Tue, 26 Aug 2008 12:31:41 -0700 (PDT)
-X-Virus-Scanned: Debian amavisd-new at olra.theworths.org
-Received: from olra.theworths.org ([127.0.0.1])
-	by localhost (olra.theworths.org [127.0.0.1]) (amavisd-new, port 10024)
-	with ESMTP id 1Kfhiv-QYCK9 for <cairo@cairographics.org>;
-	Tue, 26 Aug 2008 12:31:40 -0700 (PDT)
-Received: from [127.0.0.1] (localhost [127.0.0.1])
-	by olra.theworths.org (Postfix) with ESMTP id 0DC35454986
-	for <cairo@cairographics.org>; Tue, 26 Aug 2008 12:31:39 -0700 (PDT)
-From: Carl Worth <cworth@cworth.org>
-To: cairo <cairo@cairographics.org>
-Date: Tue, 26 Aug 2008 12:31:04 -0700
-Message-Id: <1219779064.4717.6.camel@samich.home.cworth.org>
-Mime-Version: 1.0
-X-Mailer: Evolution 2.22.3.1 
-Subject: [cairo] Cairo Summit in progress
-X-BeenThere: cairo@cairographics.org
-X-Mailman-Version: 2.1.9
-Precedence: list
-List-Id: cairo mailing list <cairo.cairographics.org>
-List-Unsubscribe: <http://lists.cairographics.org/mailman/listinfo/cairo>,
-	<mailto:cairo-request@cairographics.org?subject=unsubscribe>
-List-Archive: <http://lists.cairographics.org/archives/cairo>
-List-Post: <mailto:cairo@cairographics.org>
-List-Help: <mailto:cairo-request@cairographics.org?subject=help>
-List-Subscribe: <http://lists.cairographics.org/mailman/listinfo/cairo>,
-	<mailto:cairo-request@cairographics.org?subject=subscribe>
-Content-Type: text/plain; charset="us-ascii"
-Content-Transfer-Encoding: 7bit
-Sender: cairo-bounces@cairographics.org
-Errors-To: cairo-bounces@cairographics.org
-X-Spam: [F=0.1428571429; CM=0.500; S=0.100(2008081101); MH=0.600(2008082641); SC=none]
-X-MAIL-FROM: <cairo-bounces@cairographics.org>
-X-SOURCE-IP: [131.252.210.177]
-X-AnalysisOut: [v=1.0 c=0 a=XpDX9HDBAAAA:8 a=4cPo9keAxnl11vlUccEA:9 a=8D_T]
-X-AnalysisOut: [lR8My8z_NMy9LiFt5K2Ry2sA:4 a=VqeOQOFNVMMA:10 a=5FtdkfQUxfI]
-X-AnalysisOut: [A:10]
-
-We're having a lovely time at the first-ever Cairo Summit. We have about
-12 people physically in attendance, (and Behdad attending virtually with
-a fancy shared whiteboard and video-conference setup between two Mozilla
-offices).
-
-Meanwhile, we want everyone else that can't be physically present at the
-meeting to feel as involved as possible. We're using IRC, (server:
-irc.freenode , channel: #cairo) as our backchannel, and everyone is
-welcome to join in there.
-
-We're also doing our best to post live notes of the meeting here:
-
-http://cairographics.org/summit/2008/notes/
-
-and the schedule we've got so far is here:
-
-http://cairographics.org/summit/2008/schedule/
-
-So far, I think I've been doing a reasonable idea with those, but we'll
-see if my fingers don't give out...
-
-Everyone, please feel free to join us in IRC or share things on email if
-you have anything you'd like to share for the meeting.
-
--Carl
-
-
-_______________________________________________
-cairo mailing list
-cairo@cairographics.org
-http://lists.cairographics.org/mailman/listinfo/cairo
-
-
---------------000305050700020903090707--
