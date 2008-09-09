@@ -1,11 +1,19 @@
-Message-ID: <e395be80809081813t4415d97ah3ae7efad127cc7f5@mail.gmail.com>
-Date: Mon, 8 Sep 2008 21:13:07 -0400
-From: "Ira McDonald" <blueroofmusic@gmail.com>
+Message-ID: <48C69D38.4020607@gmail.com>
+Date: Tue, 09 Sep 2008 17:58:48 +0200
+From: Till Kamppeter <till.kamppeter@gmail.com>
 MIME-Version: 1.0
-Content-Type: text/plain; charset=ISO-8859-1
+References: <200808281229.31215.hvengel@astound.net>
+	<48BD500D.7040903@gmail.com> <48BD5F88.5040109@yahoo.co.uk>
+	<48BD6D42.7000209@gmail.com>
+	<Pine.LNX.4.64.0809021917440.5106@sirius.rasena>
+	<48BE2C3B.4070407@gmail.com>
+	<Pine.LNX.4.64.0809082211350.5851@sirius.rasena>
+	<Pine.LNX.4.64.0809091644001.5208@sirius.rasena>
+In-Reply-To: <Pine.LNX.4.64.0809091644001.5208@sirius.rasena>
+Content-Type: text/plain; charset=UTF-8; format=flowed
 Content-Transfer-Encoding: 7bit
-Content-Disposition: inline
-Subject: [Printing-architecture] OP SC Minutes - 8 September 2008
+Subject: Re: [Printing-architecture] [gs-devel] Re: poppler vs. GhostScript
+	& color management
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -15,25 +23,16 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Open Printing <printing-architecture@lists.linux-foundation.org>, Ira McDonald <blueroofmusic@gmail.com>
+To: Kai-Uwe Behrmann <ku.b@gmx.de>
+Cc: gs-devel <gs-devel@ghostscript.com>, Tobias Hoffmann <th55@gmx.de>, "Hal V. Engel" <hvengel@astound.net>, Printing-japan <printing-japan@lists.linux-foundation.org>, "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>, Hin-Tak Leung <hintak_leung@yahoo.co.uk>
 
-Hi,
+Kai-Uwe Behrmann wrote:
+> I've sent the below information to the respective bug trackers. 
+> The web has many good resources about PDF colour management. The OpenICC 
+> list is one good place to talk with people about this toppic or obtain 
+> specific hints.
 
-Minutes from today's Open Printing Steering Committee meeting are at:
+Can you post links to the bug reports/feature requests you have made?
 
- ftp://ftp.pwg.org/pub/pwg/fsg/steering_committee/OP-SC-Minutes-20080908.htm
+    Till
 
-Cheers,
-- Ira
-
--- 
-Ira McDonald (Musician / Software Architect)
-Chair - Linux Foundation Open Printing WG
-Blue Roof Music/High North Inc
-email: blueroofmusic@gmail.com
-winter:
- 579 Park Place Saline, MI 48176
- 734-944-0094
-summer:
- PO Box 221 Grand Marais, MI 49839
- 906-494-2434
