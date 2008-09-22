@@ -1,11 +1,11 @@
-Content-class: urn:content-classes:message
+Date: Mon, 22 Sep 2008 19:18:42 +0900
+From: TORATANI Yasumasa <toratani.yasumasa@canon.co.jp>
+In-Reply-To: <ED4094DE5E8ACD4BBDACA6AD398E608F1B23E6@EEAEX03.us.epson.net>
+References: <ED4094DE5E8ACD4BBDACA6AD398E608F1B23E6@EEAEX03.us.epson.net>
+Message-Id: <20080922191450.C46B.TORATANI.YASUMASA@canon.co.jp>
 MIME-Version: 1.0
-Content-Type: text/plain;
-	charset="us-ascii"
-Content-Transfer-Encoding: quoted-printable
-Date: Fri, 19 Sep 2008 07:56:24 -0700
-Message-ID: <ED4094DE5E8ACD4BBDACA6AD398E608F1B23E6@EEAEX03.us.epson.net>
-From: "Petrie, Glen" <glen.petrie@eitc.epson.com>
+Content-Type: text/plain; charset="US-ASCII"
+Content-Transfer-Encoding: 7bit
 Subject: Re: [Printing-architecture] Slides for GSoC report on the PWG
 	Meetingin October
 List-Id: Printing architecture under linux
@@ -17,74 +17,30 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Till Kamppeter <till.kamppeter@gmail.com>, printing-architecture@lists.linux-foundation.org
+To: "Petrie, Glen" <glen.petrie@eitc.epson.com>
+Cc: printing-architecture@lists.linux-foundation.org, Till Kamppeter <till.kamppeter@gmail.com>
 
-Thanks Till,
+Hi Glen,
 
-I will review the slides today and if I have any question I will send an
-email.
+On Fri, 19 Sep 2008 07:56:24 -0700
+"Petrie, Glen" <glen.petrie@eitc.epson.com> wrote:
 
-Can you provide a slide or two on what OpenPrinting related content that
-will be in the various releases of LSB and what time frame.  One thing I
-believe that PWG would be interested in is the "how".  "How" did
-OpenPrinting go from creating the spec to getting it in an LSB release.
-Has the LSB expressed any needs or things that OpenPrinting needs to
-address?
+(snip)
 
-Since you are a major driving force in OpenPrinting today, can you
-create a slide on what you see as the next things to address; what
-specifications are needed, what application code development is needed,
-what GSoC projects are needed for next year.
+> ============
+> 
+> Toratani
+> 
+> Can you provide overview slides on what "has, is and will" be going on
+> with OpenPrinting Japan.  Personally, I am really interested in future
+> activities and who is still involved in OpenPrinting Japan.
 
-gwp
-=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D
+Yes, but when I should prepare the slides?
 
-Ira,
+I need a time to confirm the slide contents with OpenPrinting
+Japan members, and it will finish by the end of this week.
 
-Can you provide a few introductory / general overlview slides on who is
-working on OpenPrinting and what is currently going on?=20
+Regards,
+TORATANI
 
-gwp
-=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D
 
-Toratani
-
-Can you provide overview slides on what "has, is and will" be going on
-with OpenPrinting Japan.  Personally, I am really interested in future
-activities and who is still involved in OpenPrinting Japan.
-
-gwp
-
-=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
-=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
-=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D
-=3D
-=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
-=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
-=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D
-=3D
-=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
-=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
-=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D
-=3D
-> -----Original Message-----
-> From: printing-architecture-bounces@lists.linux-foundation.org
-> [mailto:printing-architecture-bounces@lists.linux-foundation.org] On
-> Behalf Of Till Kamppeter
-> Sent: Friday, September 19, 2008 2:23 AM
-> To: printing-architecture@lists.linux-foundation.org
-> Subject: [Printing-architecture] Slides for GSoC report on the PWG
-> Meetingin October
->=20
-> Hi,
->=20
-> attached are the slides for the GSoC results presentation, as we
-talked
-> about on the last OP Steering Committee Meeting. For each of the 4
-> projects I have made one main slide and one slide with extra info. For
-> the printing dialog I have also added a screenshot (will most probably
-> get updated until the meeting).
->=20
-> Norm, can you finish the slides about the PAPI implementation? Thanks.
->=20
->     Till
