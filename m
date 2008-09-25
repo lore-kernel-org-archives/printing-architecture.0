@@ -1,12 +1,13 @@
-Message-ID: <48DAA1E5.8070908@gmail.com>
-Date: Wed, 24 Sep 2008 22:24:05 +0200
+Message-ID: <48DBF8E0.8090002@gmail.com>
+Date: Thu, 25 Sep 2008 22:47:28 +0200
 From: Till Kamppeter <till.kamppeter@gmail.com>
 MIME-Version: 1.0
-References: <ED4094DE5E8ACD4BBDACA6AD398E608F1B24B1@EEAEX03.us.epson.net>
-In-Reply-To: <ED4094DE5E8ACD4BBDACA6AD398E608F1B24B1@EEAEX03.us.epson.net>
+References: <20080925202407.GA11510@piware.de>
+In-Reply-To: <20080925202407.GA11510@piware.de>
 Content-Type: text/plain; charset=UTF-8; format=flowed
 Content-Transfer-Encoding: 7bit
-Subject: Re: [Printing-architecture] Glen's additional slides on GSoC
+Subject: Re: [Printing-architecture] [Lf_driver_backport] Jockey 0.5beta1
+	released
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -16,46 +17,54 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: "Petrie, Glen" <glen.petrie@eitc.epson.com>
-Cc: printing-architecture@lists.linux-foundation.org
+To: lf_driver_backport@lists.linux-foundation.org
+Cc: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>
 
-Sorry for not having answered all questions concerning my slides. I have 
-to finish something urgent today.
+Martin Pitt wrote:
+> Hi all,
+> 
+> I just released the first beta of Jockey 0.5, which fixes all of the
+> (currently) milestoned bugs for the final 0.5 release, and lots of
+> crashers, etc. Now it's actually usable (as opposed to the alpha1,
+> which was still crash-o-rama).
+> 
+> Download:
+> 
+>   https://launchpad.net/jockey/trunk/0.5beta1
+> 
+> Current screenshots:
+> 
+>   http://people.ubuntu.com/~pitti/screenshots/jockey/jockey-mainwindow.png
+>   http://people.ubuntu.com/~pitti/screenshots/jockey/jockey-mainwindow-kde.png
+> 
+> (featuring printer driver lookup from openprinting.org)
+>
 
-Tomorrow I will answer the mails.
+I have added the necessary stuff to system-config-printer so that it 
+asks Jockey for printer drivers via D-Bus in the case that there is no 
+exact model match for the drivers which are locally installed. Jockey 
+returns a list of all files which it has installed and so 
+system-config-printer prioritizes PPDs which come from the newly 
+installed driver.
+
+I have committed the changes into the system-config-printer GIT 
+repositories now, and so there is not yet an official release containing 
+this feature. I have also applied the changes to the 
+system-config-printer in Ubuntu Intrepid. There the complete workflow is 
+available and can be tried out.
+
+To get the source of system-config-printer, install "git" and run the 
+commands:
+
+git clone http://git.fedorahosted.org/git/system-config-printer.git
+cd system-config-printer
+git branch -r
+git checkout --track -b 1.0.x origin/1.0.x
+
+system-config-printer and Jockey (or Ubuntu Intrepid) are now the first 
+reference implementation for the client side of the automatic printer 
+driver download. This especially interesting for printer manufacturers 
+to test their driver packages.
 
     Till
-
-Petrie, Glen wrote:
-> All,
-> 
->  
-> 
-> I am going to add some boiler plates slide on the GSoC, the process, 
-> etc. to the PWG/OpenPrinting presentation.   I believe that PWG has an 
-> increased interest in getting their stuff prototyped, coded or 
-> implemented, and the GSoC offers one avenue for doing that.  Thus, the 
-> additional slides provide some of the background information on the 
-> GSoC.   I will present only one or two slides of the slides I am adding, 
-> but having them in the slide-pack may get individual PWG members and/or 
-> the PWG SC to consider the GSoC.   I could even envision the PWG 
-> creating a working group to just do prototyping and, as such, could 
-> handle the overhead of having a GSoC student or two.  (Actually, if PWG 
-> were to create a prototyping working group, they could even request 
-> prototype funds or man-power from member companies to do the coding!  I 
-> submit they should put it up for a vote by member companies!)
-> 
->  
-> 
-> gwp
-> 
->  
-> 
-> 
-> ------------------------------------------------------------------------
-> 
-> _______________________________________________
-> Printing-architecture mailing list
-> Printing-architecture@lists.linux-foundation.org
-> https://lists.linux-foundation.org/mailman/listinfo/printing-architecture
 
