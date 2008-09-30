@@ -1,10 +1,15 @@
-Message-ID: <48E22E48.5050400@gmail.com>
-Date: Tue, 30 Sep 2008 15:48:56 +0200
+Message-ID: <48E282F2.1070206@gmail.com>
+Date: Tue, 30 Sep 2008 21:50:10 +0200
 From: Till Kamppeter <till.kamppeter@gmail.com>
 MIME-Version: 1.0
+References: <ED4094DE5E8ACD4BBDACA6AD398E608F1B23E6@EEAEX03.us.epson.net>	<48DCEF5B.4070800@gmail.com>
+	<87bpy7x03n.fsf@geek.avasys.jp>	<48E07BF1.2060109@gmail.com>
+	<87od26wn8g.fsf@geek.avasys.jp>
+In-Reply-To: <87od26wn8g.fsf@geek.avasys.jp>
 Content-Type: text/plain; charset=UTF-8; format=flowed
 Content-Transfer-Encoding: 7bit
-Subject: [Printing-architecture] Bug in pdftoraster filter
+Subject: Re: [Printing-architecture] Slides for GSoC report on the PWG
+ Meetingin October
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -14,66 +19,46 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: OTANI Koji <sho@bbr.jp>, Printing-japan <printing-japan@lists.linux-foundation.org>, "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>
+To: Olaf Meeuwissen <olaf.meeuwissen@avasys.jp>, "lsb-discuss@lists.linux-foundation.org" <lsb-discuss@lists.linux-foundation.org>
+Cc: "Petrie, Glen" <glen.petrie@eitc.epson.com>, printing-architecture@lists.linux-foundation.org
 
-Hi,
+Olaf Meeuwissen wrote:
+> Till Kamppeter <till.kamppeter@gmail.com> writes:
+> 
+>> Olaf Meeuwissen wrote:
+>>> [snip]
+>>> Then a question.  Is the SANE API really slated for inclusion in
+>>> LSB-4.0?  I've seen only very minimal discussion on the lsb-discuss
+>>> list.
+>> The problem is the missing manpower for writing specs and test suites.
+> 
+> Could you be more specific about:
+> 
+>  - what kind of specs are required
+>  - what kind of test suites are required
+>  - how much time is approximately needed for each of these
+>  - the process involved to contribute these
+>
 
-I have integrated your filters in the CUPS package on Ubuntu and now we 
-have a complete PDF printing workflow there:
+Can someone of the LSB work group help Olaf here and post appropriate 
+documentation links, explain what to do, ...
 
-https://www.linuxfoundation.org/en/OpenPrinting/PDF_as_Standard_Print_Job_Format
-https://blueprints.launchpad.net/ubuntu/+spec/pdf-as-standard-print-job-format
 
-Thank you again for your great work.
+> That would make it easier for me to see if/when/where I can provide
+> some sorely missing manpower ;-)
+> 
+>> As the printer manufacturers benefit most from these new requirements,
+>> I think the best is to ask them for help.
+>>
+>> Olaf, would you, or someone of your co-workers at Avasys help here?
+> 
+> I would like to help but it doesn't look like I'll be having any time
+> until around the end of October (and even after that I'm not so sure
+> I'll be having a lot of time).
 
-Unfortunately, your pdftoraster filter has a bug. It seems to output a 
-broken CUPS Raster stream. The "SpliX" driver (a CUPS Raster driver for 
-Samsung laser printers, http://splix.ap2c.org/, 
-http://openprinting.org/show_driver.cgi?driver=splix2) produces black 
-printouts or even crashes when your pdftoraster is used:
-
-https://bugs.launchpad.net/ubuntu/+source/splix/+bug/261363
-https://bugs.launchpad.net/ubuntu/+source/splix/+bug/268510
-https://bugs.launchpad.net/ubuntu/+source/splix/+bug/269691
-
-To check whether pdftoraster is really the culprit, I have written an 
-alternative pdftoraster, a very simple shell script:
-
-#!/bin/sh
-set -e
-/usr/lib/cups/filter/cpdftocps "$@" | \
-   /usr/lib/cups/filter/pstoraster "$@"
-
-cpdftocps is a filter which converts PDF to PostScript and injects 
-PostScript commands from the PPD into the resulting PostScript according 
-to the option settings. It is originally intended to support PostScript 
-printers in the PDF workflow. You can download it here:
-
-http://www.openprinting.org/download/printing/pdf-printing/cpdftocps
-
-I have asked the reporters of the above-mentioned bugs to use this 
-alternative filter and they told that when they use it the problems with 
-"SpliX" disappear.
-
-So I assume that something is broken with your pdftoraster driver. Can 
-you check and fix this as soon as possible, as we are shortly before 
-release of Ubuntu Intrepid and it would be great to not have to use a 
-script which converts the PDF to PostScript to be able to get CUPS 
-Raster data.
-
-For investigating the problem, feel free to get in contact with the 
-reporters of the three above-mentioned bug reports, by adding comments 
-to the reports.
-
-I have also tried the alternative of a Ghostscript-based pdftoraster 
-driver where PDF is directly fed into Ghostscript, but it seems that 
-there is a bug in the "cups" output device of Ghostscript. See
-
-http://bugs.ghostscript.com/show_bug.cgi?id=690101
-
-This problem does not occur when feeding PostScript into Ghostscript. 
-Anyone who could help here is welcome, too.
-
-Thank you in advance for your quick help.
+LSB developers, what are the time frames for finishing specs and test 
+suites. Are they different for SANE, as SANE is planned to get into the 
+trial use category?
 
     Till
+
