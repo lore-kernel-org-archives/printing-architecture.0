@@ -1,14 +1,11 @@
-Message-ID: <f96d234e0810031125v3794d13fq3cfea519fc1e05d1@mail.gmail.com>
-Date: Fri, 3 Oct 2008 14:25:40 -0400
-From: "Cliff Brake" <cliff.brake@gmail.com>
-In-Reply-To: <99D9E6F4-E23E-4FB5-8FF9-6B0AFD94FE2B@hp.com>
+Content-class: urn:content-classes:message
 MIME-Version: 1.0
-Content-Type: text/plain; charset=ISO-8859-1
-Content-Transfer-Encoding: 7bit
-Content-Disposition: inline
-References: <f96d234e0810030811l5ae160a9m9f5997b29e194c38@mail.gmail.com>
-	<99D9E6F4-E23E-4FB5-8FF9-6B0AFD94FE2B@hp.com>
-Subject: Re: [Printing-architecture] printing in embedded systems
+Content-Type: multipart/alternative;
+	boundary="----_=_NextPart_001_01C92595.9404535C"
+Date: Fri, 3 Oct 2008 13:23:37 -0700
+Message-ID: <ED4094DE5E8ACD4BBDACA6AD398E608F1B2672@EEAEX03.us.epson.net>
+From: "Petrie, Glen" <glen.petrie@eitc.epson.com>
+Subject: [Printing-architecture] OpenPrinting Slides 0.90 for Review
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -18,27 +15,147 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Donald Welch <donald.welch@hp.com>
-Cc: printing-architecture@lists.linux-foundation.org, David Suffield <david.suffield@hp.com>, Raghothama Cauligi S <raghothama.cauligi@hp.com>
+To: printing-architecture@lists.linux-foundation.org
 
-On Fri, Oct 3, 2008 at 11:29 AM, Donald Welch <donald.welch@hp.com> wrote:
-> For printing to an HP printer:
-> http://hplipopensource.com/hplip-web/index.html
->
-> Specifically, the hpijs solution (a subset of hplip), provides a printing
-> driver for ~1,500 HP printers.
+This is a multi-part message in MIME format.
 
-Excellent, so I could write a IJS client in my application.  I think
-Cairo can generate image surfaces, so once I figure out the image
-format, it should be possible to send a raster image directly to the
-HPIJS server.  Seems doable.  I'd really like to skip ghostscript as
-cairo will likely be much more efficient at rasterizing an image on a
-low power ARM processor.
 
-Thanks,
-Cliff
+------_=_NextPart_001_01C92595.9404535C
+Content-Type: text/plain;
+	charset="us-ascii"
+Content-Transfer-Encoding: quoted-printable
 
--- 
-=======================
-Cliff Brake
-http://bec-systems.com
+Version 0.90 of slides available at
+
+=20
+
+ftp://ftp.pwg.org/pub/pwg/openprinting/presentations/pwg-update-status-2
+008.10.21-23/openprinting-2008-Ver090.pdf=20
+
+=20
+
+ftp://ftp.pwg.org/pub/pwg/openprinting/presentations/pwg-update-status-2
+008.10.21-23/openprinting-2008-Ver090.odp=20
+
+=20
+
+=20
+
+Please review and provide comments along with corrections.
+
+=20
+
+gwp
+
+
+------_=_NextPart_001_01C92595.9404535C
+Content-Type: text/html;
+	charset="us-ascii"
+Content-Transfer-Encoding: quoted-printable
+
+<html xmlns:o=3D"urn:schemas-microsoft-com:office:office" =
+xmlns:w=3D"urn:schemas-microsoft-com:office:word" =
+xmlns=3D"http://www.w3.org/TR/REC-html40">
+
+<head>
+<META HTTP-EQUIV=3D"Content-Type" CONTENT=3D"text/html; =
+charset=3Dus-ascii">
+<meta name=3DGenerator content=3D"Microsoft Word 11 (filtered medium)">
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:"MS Mincho";
+	panose-1:2 2 6 9 4 2 5 8 3 4;}
+@font-face
+	{font-family:"\@MS Mincho";
+	panose-1:2 2 6 9 4 2 5 8 3 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0in;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:purple;
+	text-decoration:underline;}
+span.EmailStyle17
+	{mso-style-type:personal-compose;
+	font-family:Arial;
+	color:windowtext;}
+@page Section1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.25in 1.0in 1.25in;}
+div.Section1
+	{page:Section1;}
+-->
+</style>
+
+</head>
+
+<body lang=3DEN-US link=3Dblue vlink=3Dpurple>
+
+<div class=3DSection1>
+
+<p class=3DMsoNormal><font size=3D2 face=3DArial><span =
+style=3D'font-size:10.0pt;
+font-family:Arial'>Version 0.90 of slides available =
+at<o:p></o:p></span></font></p>
+
+<p class=3DMsoNormal><font size=3D2 face=3DArial><span =
+style=3D'font-size:10.0pt;
+font-family:Arial'><o:p>&nbsp;</o:p></span></font></p>
+
+<p class=3DMsoNormal><font size=3D2 face=3DArial><span =
+style=3D'font-size:10.0pt;
+font-family:Arial'><a
+href=3D"ftp://ftp.pwg.org/pub/pwg/openprinting/presentations/pwg-update-s=
+tatus-2008.10.21-23/openprinting-2008-Ver090.pdf">ftp://ftp.pwg.org/pub/p=
+wg/openprinting/presentations/pwg-update-status-2008.10.21-23/openprintin=
+g-2008-Ver090.pdf</a>
+<o:p></o:p></span></font></p>
+
+<p class=3DMsoNormal><font size=3D2 face=3DArial><span =
+style=3D'font-size:10.0pt;
+font-family:Arial'><o:p>&nbsp;</o:p></span></font></p>
+
+<p class=3DMsoNormal><font size=3D2 face=3DArial><span =
+style=3D'font-size:10.0pt;
+font-family:Arial'><a
+href=3D"ftp://ftp.pwg.org/pub/pwg/openprinting/presentations/pwg-update-s=
+tatus-2008.10.21-23/openprinting-2008-Ver090.odp">ftp://ftp.pwg.org/pub/p=
+wg/openprinting/presentations/pwg-update-status-2008.10.21-23/openprintin=
+g-2008-Ver090.odp</a>
+<o:p></o:p></span></font></p>
+
+<p class=3DMsoNormal><font size=3D2 face=3DArial><span =
+style=3D'font-size:10.0pt;
+font-family:Arial'><o:p>&nbsp;</o:p></span></font></p>
+
+<p class=3DMsoNormal><font size=3D2 face=3DArial><span =
+style=3D'font-size:10.0pt;
+font-family:Arial'><o:p>&nbsp;</o:p></span></font></p>
+
+<p class=3DMsoNormal><font size=3D2 face=3DArial><span =
+style=3D'font-size:10.0pt;
+font-family:Arial'>Please review and provide comments along with =
+corrections.<o:p></o:p></span></font></p>
+
+<p class=3DMsoNormal><font size=3D2 face=3DArial><span =
+style=3D'font-size:10.0pt;
+font-family:Arial'><o:p>&nbsp;</o:p></span></font></p>
+
+<p class=3DMsoNormal><font size=3D2 face=3DArial><span =
+style=3D'font-size:10.0pt;
+font-family:Arial'>gwp<o:p></o:p></span></font></p>
+
+</div>
+
+</body>
+
+</html>
+
+------_=_NextPart_001_01C92595.9404535C--
