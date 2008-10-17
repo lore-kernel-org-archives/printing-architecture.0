@@ -1,13 +1,12 @@
-Message-ID: <48F887FB.7070701@the-axe-effect.de>
-Date: Fri, 17 Oct 2008 14:41:31 +0200
-From: Tobias Hoffmann <lprint-list@the-axe-effect.de>
+Content-class: urn:content-classes:message
 MIME-Version: 1.0
-References: <9624da290810162221p57b55292l7f51e1cc155d6fd9@mail.gmail.com>	<48F83E55.7080907@gmx.de>
-	<9624da290810170450g6401b162w598f9d51ac7d8a61@mail.gmail.com>
-In-Reply-To: <9624da290810170450g6401b162w598f9d51ac7d8a61@mail.gmail.com>
-Content-Type: text/plain; charset=ISO-8859-1; format=flowed
-Content-Transfer-Encoding: 7bit
-Subject: Re: [Printing-architecture] Associate printer
+Content-Type: multipart/alternative;
+	boundary="----_=_NextPart_001_01C9309A.F55EC80F"
+Date: Fri, 17 Oct 2008 14:00:06 -0700
+Message-ID: <ED4094DE5E8ACD4BBDACA6AD398E608F1B283F@EEAEX03.us.epson.net>
+From: "Petrie, Glen" <glen.petrie@eitc.epson.com>
+Subject: [Printing-architecture] Linux Foundation/Open Printing Presentation
+	for PWG Oct 21-23, 2008 F2F Meeting
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -17,32 +16,128 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Matt Gessner <magembcons@gmail.com>
-Cc: printing-architecture@lists.linux-foundation.org
+To: Open Printing <printing-architecture@lists.linux-foundation.org>, pwg-announce@pwg.org
 
-Matt Gessner wrote:
-> Well, I actually understand MOST of that... but I think what I was 
-> missing was the DeviceManufacturer and DeviceModel set_param stuff.
->
-> Thanks for filling that in.
->
-> So, by specifying the DeviceManufacturer and DeviceModel fields, 
-> THAT'S how HPIJS knows that it's a USB printer versus, say, a network 
-> printer or a parallel printer?  (Does it even support network printers 
-> without CUPS?)
-Well, they only specify the "output format" required for the given 
-printer-type. How this output data gets to the printer is again up to you.
-Cups has several backends for this; they are quite simple.
+This is a multi-part message in MIME format.
 
-On the IJS side you'll have to provide either the OutputFD or the 
-OutputFile parameter. A common case is
-OutputFD = dup(fileno(stdout))    and then pipe the output from your 
-printing filter to one of your output backends.
-For example with network printers this could be as simple as
-ijs-print-filter [inputfile] | netcat printer-ip 9100
 
-Yet can just as well create a pipe() and do everything in one 
-application, then again you can first store everything in a temporary 
-file, or ...
+------_=_NextPart_001_01C9309A.F55EC80F
+Content-Type: text/plain;
+	charset="us-ascii"
+Content-Transfer-Encoding: quoted-printable
 
-  Tobias
+Slides are available for the PWG Oct 21-23, 2008 F2F Meeting at
+
+=20
+
+ftp://ftp.pwg.org/pub/pwg/openprinting/presentations/pwg-update-status-2
+008.10.21-23/openprinting-2008-Ver100.pdf=20
+
+=20
+
+ftp://ftp.pwg.org/pub/pwg/openprinting/presentations/pwg-update-status-2
+008.10.21-23/openprinting-2008-Ver100.odp=20
+
+=20
+
+=20
+
+gwp
+
+
+------_=_NextPart_001_01C9309A.F55EC80F
+Content-Type: text/html;
+	charset="us-ascii"
+Content-Transfer-Encoding: quoted-printable
+
+<html xmlns:o=3D"urn:schemas-microsoft-com:office:office" =
+xmlns:w=3D"urn:schemas-microsoft-com:office:word" =
+xmlns=3D"http://www.w3.org/TR/REC-html40">
+
+<head>
+<META HTTP-EQUIV=3D"Content-Type" CONTENT=3D"text/html; =
+charset=3Dus-ascii">
+<meta name=3DGenerator content=3D"Microsoft Word 11 (filtered medium)">
+<style>
+<!--
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0in;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:purple;
+	text-decoration:underline;}
+span.EmailStyle17
+	{mso-style-type:personal-compose;
+	font-family:Arial;
+	color:windowtext;}
+@page Section1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.25in 1.0in 1.25in;}
+div.Section1
+	{page:Section1;}
+-->
+</style>
+
+</head>
+
+<body lang=3DEN-US link=3Dblue vlink=3Dpurple>
+
+<div class=3DSection1>
+
+<p class=3DMsoNormal><font size=3D2 face=3DArial><span =
+style=3D'font-size:10.0pt;
+font-family:Arial'>Slides are available for the PWG Oct 21-23, 2008 F2F =
+Meeting
+at<o:p></o:p></span></font></p>
+
+<p class=3DMsoNormal><font size=3D2 face=3DArial><span =
+style=3D'font-size:10.0pt;
+font-family:Arial'><o:p>&nbsp;</o:p></span></font></p>
+
+<p class=3DMsoNormal><font size=3D2 face=3DArial><span =
+style=3D'font-size:10.0pt;
+font-family:Arial'><a
+href=3D"ftp://ftp.pwg.org/pub/pwg/openprinting/presentations/pwg-update-s=
+tatus-2008.10.21-23/openprinting-2008-Ver100.pdf">ftp://ftp.pwg.org/pub/p=
+wg/openprinting/presentations/pwg-update-status-2008.10.21-23/openprintin=
+g-2008-Ver100.pdf</a>
+<o:p></o:p></span></font></p>
+
+<p class=3DMsoNormal><font size=3D2 face=3DArial><span =
+style=3D'font-size:10.0pt;
+font-family:Arial'><o:p>&nbsp;</o:p></span></font></p>
+
+<p class=3DMsoNormal><font size=3D2 face=3DArial><span =
+style=3D'font-size:10.0pt;
+font-family:Arial'><a
+href=3D"ftp://ftp.pwg.org/pub/pwg/openprinting/presentations/pwg-update-s=
+tatus-2008.10.21-23/openprinting-2008-Ver100.odp">ftp://ftp.pwg.org/pub/p=
+wg/openprinting/presentations/pwg-update-status-2008.10.21-23/openprintin=
+g-2008-Ver100.odp</a>
+<o:p></o:p></span></font></p>
+
+<p class=3DMsoNormal><font size=3D2 face=3DArial><span =
+style=3D'font-size:10.0pt;
+font-family:Arial'><o:p>&nbsp;</o:p></span></font></p>
+
+<p class=3DMsoNormal><font size=3D2 face=3DArial><span =
+style=3D'font-size:10.0pt;
+font-family:Arial'><o:p>&nbsp;</o:p></span></font></p>
+
+<p class=3DMsoNormal><font size=3D2 face=3DArial><span =
+style=3D'font-size:10.0pt;
+font-family:Arial'>gwp<o:p></o:p></span></font></p>
+
+</div>
+
+</body>
+
+</html>
+
+------_=_NextPart_001_01C9309A.F55EC80F--
