@@ -1,13 +1,10 @@
-Content-class: urn:content-classes:message
+Message-ID: <9624da290810162221p57b55292l7f51e1cc155d6fd9@mail.gmail.com>
+Date: Fri, 17 Oct 2008 01:21:24 -0400
+From: "Matt Gessner" <magembcons@gmail.com>
 MIME-Version: 1.0
-Content-Type: text/plain;
-	charset="us-ascii"
-Content-Transfer-Encoding: quoted-printable
-Date: Mon, 13 Oct 2008 11:24:28 -0700
-Message-ID: <ED4094DE5E8ACD4BBDACA6AD398E608F1B2750@EEAEX03.us.epson.net>
-From: "Petrie, Glen" <glen.petrie@eitc.epson.com>
-Subject: Re: [Printing-architecture] CANCEL - Next OP SC - Mon/Tue - 13/14
-	October 2008
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_123894_17515663.1224220884407"
+Subject: [Printing-architecture] Associate printer
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -17,40 +14,37 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Till Kamppeter <till.kamppeter@gmail.com>, Ira McDonald <blueroofmusic@gmail.com>
-Cc: Open Printing <printing-architecture@lists.linux-foundation.org>
+To: printing-architecture@lists.linux-foundation.org
 
-Fine with me.  Please send any comments on the slide to me or any items
-you wish me to bring up with the PWG
+------=_Part_123894_17515663.1224220884407
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline
 
+Hello,
 
-> -----Original Message-----
-> From: printing-architecture-bounces@lists.linux-foundation.org
-> [mailto:printing-architecture-bounces@lists.linux-foundation.org] On
-> Behalf Of Till Kamppeter
-> Sent: Monday, October 13, 2008 11:12 AM
-> To: Ira McDonald
-> Cc: Open Printing
-> Subject: Re: [Printing-architecture] CANCEL - Next OP SC - Mon/Tue -
-13/14
-> October 2008
->=20
-> Ira McDonald wrote:
-> > Hi,
-> >
-> > Toratani-san cannot join us (conflicting internal meeting)
-> > and the PWG face-to-face slides are largely complete,
-> > so I suggest that we CANCEL the October OP SC meeting
-> > and meet next on Monday/Tuesday 3/4 November.
-> >
-> > OK?
->=20
-> For me it is OK.
->=20
->     Till
-> _______________________________________________
-> Printing-architecture mailing list
-> Printing-architecture@lists.linux-foundation.org
->
-https://lists.linux-foundation.org/mailman/listinfo/printing-architectur
-e
+I have been scouring the web for details trying to figure out how to make
+printing with HPIJS work.
+
+I wish to print directly to hpijs w/o going through CUPS, since I'll be
+doing this on an embedded system w/ a low power CPU.
+
+I'm missing an important detail.  Can someone point me to an example that
+shows how to tell HPIJS which printer I wish to use?  From the 0.35 hpijs
+tar ball, I think I have enough information to do other things, but this
+part is eluding me.
+
+Thanks in advance,
+
+Matt Gessner
+
+------=_Part_123894_17515663.1224220884407
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline
+
+<div dir="ltr">Hello,<br><br>I have been scouring the web for details trying to figure out how to make printing with HPIJS work.<br><br>I wish to print directly to hpijs w/o going through CUPS, since I&#39;ll be doing this on an embedded system w/ a low power CPU.<br>
+<br>I&#39;m missing an important detail.&nbsp; Can someone point me to an example that shows how to tell HPIJS which printer I wish to use?&nbsp; From the 0.35 hpijs tar ball, I think I have enough information to do other things, but this part is eluding me.<br>
+<br>Thanks in advance,<br><br>Matt Gessner<br></div>
+
+------=_Part_123894_17515663.1224220884407--
