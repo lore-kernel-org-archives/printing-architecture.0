@@ -1,13 +1,10 @@
-Message-ID: <48F916CA.20702@gmail.com>
-Date: Sat, 18 Oct 2008 00:50:50 +0200
-From: Till Kamppeter <till.kamppeter@gmail.com>
+Message-ID: <9624da290810201121r480f57d6vce5a783da0272046@mail.gmail.com>
+Date: Mon, 20 Oct 2008 14:21:43 -0400
+From: "Matt Gessner" <magembcons@gmail.com>
 MIME-Version: 1.0
-References: <ED4094DE5E8ACD4BBDACA6AD398E608F1B283F@EEAEX03.us.epson.net>
-In-Reply-To: <ED4094DE5E8ACD4BBDACA6AD398E608F1B283F@EEAEX03.us.epson.net>
-Content-Type: text/plain; charset=UTF-8; format=flowed
-Content-Transfer-Encoding: 7bit
-Subject: Re: [Printing-architecture] Linux Foundation/Open Printing
- Presentation for PWG Oct 21-23, 2008 F2F Meeting
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_175977_30851775.1224526903943"
+Subject: [Printing-architecture] ijs_invoke_server with hpijs
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -17,37 +14,35 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: "Petrie, Glen" <glen.petrie@eitc.epson.com>
-Cc: Open Printing <printing-architecture@lists.linux-foundation.org>, pwg-announce@pwg.org
+To: printing-architecture@lists.linux-foundation.org
 
-The slides are OK now. Only Norm's part is missing.
+------=_Part_175977_30851775.1224526903943
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline
 
-    Till
+Hi,
 
-Petrie, Glen wrote:
-> Slides are available for the PWG Oct 21-23, 2008 F2F Meeting at
-> 
->  
-> 
-> ftp://ftp.pwg.org/pub/pwg/openprinting/presentations/pwg-update-status-2008.10.21-23/openprinting-2008-Ver100.pdf 
-> 
-> 
->  
-> 
-> ftp://ftp.pwg.org/pub/pwg/openprinting/presentations/pwg-update-status-2008.10.21-23/openprinting-2008-Ver100.odp 
-> 
-> 
->  
-> 
->  
-> 
-> gwp
-> 
-> 
-> ------------------------------------------------------------------------
-> 
-> _______________________________________________
-> Printing-architecture mailing list
-> Printing-architecture@lists.linux-foundation.org
-> https://lists.linux-foundation.org/mailman/listinfo/printing-architecture
+I need to know how to set the OutputFD parameter given to hpijs.
 
+I've tried opening several different files, and I always end up with "unable
+to read client data" coming from hpijs.
+
+I'm not running CUPS or HPLIP; I'm doing this on an embedded system, so I
+need to be able to do barebones hpijs.
+
+Thanks!
+
+Regards,
+
+Matt Gessner
+
+------=_Part_175977_30851775.1224526903943
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline
+
+<div dir="ltr">Hi,<br><br>I need to know how to set the OutputFD parameter given to hpijs.<br><br>I&#39;ve tried opening several different files, and I always end up with &quot;unable to read client data&quot; coming from hpijs.<br>
+<br>I&#39;m not running CUPS or HPLIP; I&#39;m doing this on an embedded system, so I need to be able to do barebones hpijs.<br><br>Thanks!<br><br>Regards,<br><br>Matt Gessner<br></div>
+
+------=_Part_175977_30851775.1224526903943--
