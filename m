@@ -1,10 +1,12 @@
-Message-ID: <9624da290810201121r480f57d6vce5a783da0272046@mail.gmail.com>
-Date: Mon, 20 Oct 2008 14:21:43 -0400
-From: "Matt Gessner" <magembcons@gmail.com>
+Message-ID: <48FDB8EF.4060101@the-axe-effect.de>
+Date: Tue, 21 Oct 2008 13:11:43 +0200
+From: Tobias Hoffmann <lprint-list@the-axe-effect.de>
 MIME-Version: 1.0
-Content-Type: multipart/alternative; 
-	boundary="----=_Part_175977_30851775.1224526903943"
-Subject: [Printing-architecture] ijs_invoke_server with hpijs
+References: <9624da290810201121r480f57d6vce5a783da0272046@mail.gmail.com>
+In-Reply-To: <9624da290810201121r480f57d6vce5a783da0272046@mail.gmail.com>
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: 7bit
+Subject: Re: [Printing-architecture] ijs_invoke_server with hpijs
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -14,35 +16,28 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: printing-architecture@lists.linux-foundation.org
+Cc: printing-architecture@lists.linux-foundation.org
 
-------=_Part_175977_30851775.1224526903943
-Content-Type: text/plain; charset=ISO-8859-1
-Content-Transfer-Encoding: 7bit
-Content-Disposition: inline
+Matt Gessner wrote:
+> I need to know how to set the OutputFD parameter given to hpijs.
+>
+> I've tried opening several different files, and I always end up with 
+> "unable to read client data" coming from hpijs.
+- does it work with OutputFile instead?
+- does it work with the ijs_server_example from the ijs package instead
+of hpijs?
 
-Hi,
+The ijs_client_example source code does help to clarify the API, when in
+doubt.
+You can also look at the pdftoijs print filter:
+http://svn.sourceforge.jp/cgi-bin/viewcvs.cgi/pdftoraster/branches/gsoc2008_pdftoijs_nocups/src/pdftoijs.cc?root=opfc&view=auto
 
-I need to know how to set the OutputFD parameter given to hpijs.
+Two other thoughts, though:
+- the error "unable to read client data" suggests to me, that the
+problem occurs way before anything related to the OutputFD happens, but
+you probably have looked deeper
+- the dup()/pipe()/open() or whatever you use to create the file
+descriptor has to happen before the ijs_invoke_server, so that the
+descriptor is  available to the forked process.
 
-I've tried opening several different files, and I always end up with "unable
-to read client data" coming from hpijs.
-
-I'm not running CUPS or HPLIP; I'm doing this on an embedded system, so I
-need to be able to do barebones hpijs.
-
-Thanks!
-
-Regards,
-
-Matt Gessner
-
-------=_Part_175977_30851775.1224526903943
-Content-Type: text/html; charset=ISO-8859-1
-Content-Transfer-Encoding: 7bit
-Content-Disposition: inline
-
-<div dir="ltr">Hi,<br><br>I need to know how to set the OutputFD parameter given to hpijs.<br><br>I&#39;ve tried opening several different files, and I always end up with &quot;unable to read client data&quot; coming from hpijs.<br>
-<br>I&#39;m not running CUPS or HPLIP; I&#39;m doing this on an embedded system, so I need to be able to do barebones hpijs.<br><br>Thanks!<br><br>Regards,<br><br>Matt Gessner<br></div>
-
-------=_Part_175977_30851775.1224526903943--
+   Tobias
