@@ -1,13 +1,14 @@
-Message-ID: <9624da290810210610p1508823cy46bbc479788ad083@mail.gmail.com>
-Date: Tue, 21 Oct 2008 09:10:21 -0400
-From: "Matt Gessner" <magembcons@gmail.com>
-In-Reply-To: <48FDB8B2.4030308@gmx.de>
+Message-ID: <48FF3D87.4070807@gmail.com>
+Date: Wed, 22 Oct 2008 16:49:43 +0200
+From: Till Kamppeter <till.kamppeter@gmail.com>
 MIME-Version: 1.0
-Content-Type: multipart/alternative; 
-	boundary="----=_Part_5307_19552636.1224594621153"
-References: <9624da290810201121r480f57d6vce5a783da0272046@mail.gmail.com>
-	<48FDB8B2.4030308@gmx.de>
-Subject: Re: [Printing-architecture] ijs_invoke_server with hpijs
+References: <200810132357.m9DNvMRf015955@dsl092-065-009.bos1.dsl.speakeasy.net>
+	<48FB37A3.8090007@gmail.com>
+	<200810191602.m9JG2D84030719@dsl092-065-009.bos1.dsl.speakeasy.net>
+In-Reply-To: <200810191602.m9JG2D84030719@dsl092-065-009.bos1.dsl.speakeasy.net>
+Content-Type: text/plain; charset=UTF-8; format=flowed
+Content-Transfer-Encoding: 7bit
+Subject: Re: [Printing-architecture] [Gimp-print-devel] Looking ahead to 5.3
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -17,124 +18,44 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Tobias Hoffmann <th55@gmx.de>
-Cc: printing-architecture@lists.linux-foundation.org
+To: Peter Sikking <peter@mmiworks.net>
+Cc: Robert Krawitz <rlk@alum.mit.edu>, "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>, gimp-print-devel@lists.sourceforge.net
 
-------=_Part_5307_19552636.1224594621153
-Content-Type: text/plain; charset=ISO-8859-1
-Content-Transfer-Encoding: 7bit
-Content-Disposition: inline
+Robert Krawitz wrote:
+>    Date: Sun, 19 Oct 2008 15:35:31 +0200
+>    From: Till Kamppeter <till.kamppeter@gmail.com>
+> 
+>    Another point is completing the PPD extensions for the Common Printing 
+>    Dialog. Most important point is tagging the options, so that they show 
+>    up with the right tags being selected.
+> 
+>    See
+> 
+>    http://www.linuxfoundation.org/en/OpenPrinting/CommonPrintingDialog
+>    http://www.linuxfoundation.org/en/OpenPrinting/PPDExtensions
+> 
+> I still don't much care for this limitation of 6 tags being available
+> for the driver.  If nothing else, we could use some assistance in
+> figuring out how to categorize all of the options.
+> 
+> In general, I'd really like to have a way to hide the advanced
+> options.  I know full well that the vast majority of people have no
+> interest in them, but that's not a reason to make them entirely
+> unavailable to the people who do have reason to use them.
+> Philosophically, I don't care for this dumbing down approach.  I know
+> I'm not the only person out there who likes to have fine-grained
+> controls available!
+> 
+> (I'd also like to have generalized piecewise or dense curves available
+> in CUPS, but that's another matter.)
 
-On Tue, Oct 21, 2008 at 7:10 AM, Tobias Hoffmann <th55@gmx.de> wrote:
+Perhaps we should find a solution together with Peter Sikking, designer 
+of the Common Printing Dialog.
 
-> Matt Gessner wrote:
->
->> I need to know how to set the OutputFD parameter given to hpijs.
->>
->> I've tried opening several different files, and I always end up with
->> "unable to read client data" coming from hpijs.
->
->
+Peter, the Gutenprint driver has far too many option groups for the 
+limited amount of tags in the Common Printing Dialog. What is your 
+suggestion how to let the options of Gutenprint get presented in the 
+Common Printing Dialog?
 
->
->>  - does it work with OutputFile instead?
+    Till
 
-
-OutputFile doesn't appear to be supported by hpijs.  hpijs.cpp shows only
-OutputFD to be supported.
-
-
->
-> - does it work with the ijs_server_example from the ijs package instead of
-> hpijs?
-
-
-
-
->
->
-> The ijs_client_example source code does help to clarify the API, when in
-> doubt.
-
-
-The ijs_client_example source code only goes so far, though.  It doesn't
-show me the VALUE to give to hpijs for OutputFD.
-
-
->
-> You can also look at the pdftoijs print filter:
->
-> http://svn.sourceforge.jp/cgi-bin/viewcvs.cgi/pdftoraster/branches/gsoc2008_pdftoijs_nocups/src/pdftoijs.cc?root=opfc&view=auto
->
-
-I will look at this.  Since it's not using cups, that looks like it has
-great potential.
-
-
->
-> Two other thoughts, though:
-> - the error "unable to read client data" suggests to me, that the problem
-> occurs way before anything related to the OutputFD happens, but you probably
-> have looked deeper
->
-
-Yes, I have.  That error is being generated by a read() on the OutputFD,
-IIRC.  Since I don't know what to open, the things I'm doing now to get an
-fd that I assign to OutputFD aren't working.
-
-
->
-> - the dup()/pipe()/open() or whatever you use to create the file descriptor
-> has to happen before the ijs_invoke_server, so that the descriptor is
->  available to the forked process.
-
-
-Yes; I'm doing it that way.  I open the file descriptor first, then invoke
-ijs_invoke_server ("/usr/bin/hpijs"), and then set OutputFD via the set
-parameter method.
-
-I'm still digging.
-
-Thanks for your comments!
-
-I did some other poking around, and it looks like I might need something
-from hpmud, which appears to be able to open USB endpoints.  I'm going to
-check that out later today.
-
-Regards,
-
-Matt
-
-------=_Part_5307_19552636.1224594621153
-Content-Type: text/html; charset=ISO-8859-1
-Content-Transfer-Encoding: 7bit
-Content-Disposition: inline
-
-On Tue, Oct 21, 2008 at 7:10 AM, Tobias Hoffmann <span dir="ltr">&lt;<a href="mailto:th55@gmx.de">th55@gmx.de</a>&gt;</span> wrote:<br><div class="gmail_quote"><blockquote class="gmail_quote" style="border-left: 1px solid rgb(204, 204, 204); margin: 0pt 0pt 0pt 0.8ex; padding-left: 1ex;">
-<div class="Ih2E3d">Matt Gessner wrote:<br>
-<blockquote class="gmail_quote" style="border-left: 1px solid rgb(204, 204, 204); margin: 0pt 0pt 0pt 0.8ex; padding-left: 1ex;">
-I need to know how to set the OutputFD parameter given to hpijs.<br>
-<br>
-I&#39;ve tried opening several different files, and I always end up with &quot;unable to read client data&quot; coming from hpijs.</blockquote></div></blockquote><div>&nbsp;</div><blockquote class="gmail_quote" style="border-left: 1px solid rgb(204, 204, 204); margin: 0pt 0pt 0pt 0.8ex; padding-left: 1ex;">
-<div class="Ih2E3d"><blockquote class="gmail_quote" style="border-left: 1px solid rgb(204, 204, 204); margin: 0pt 0pt 0pt 0.8ex; padding-left: 1ex;"><br>
-</blockquote></div>
-- does it work with OutputFile instead?</blockquote><div><br>OutputFile doesn&#39;t appear to be supported by hpijs.&nbsp; hpijs.cpp shows only OutputFD to be supported.<br>&nbsp;
-<br></div><blockquote class="gmail_quote" style="border-left: 1px solid rgb(204, 204, 204); margin: 0pt 0pt 0pt 0.8ex; padding-left: 1ex;"><br>
-- does it work with the ijs_server_example from the ijs package instead of hpijs?</blockquote><div><br>&nbsp;</div><blockquote class="gmail_quote" style="border-left: 1px solid rgb(204, 204, 204); margin: 0pt 0pt 0pt 0.8ex; padding-left: 1ex;">
-<br>
-<br>
-The ijs_client_example source code does help to clarify the API, when in doubt.</blockquote><div><br>The ijs_client_example source code only goes so far, though.&nbsp; It doesn&#39;t show me the VALUE to give to hpijs for OutputFD.<br>
-&nbsp;</div><blockquote class="gmail_quote" style="border-left: 1px solid rgb(204, 204, 204); margin: 0pt 0pt 0pt 0.8ex; padding-left: 1ex;"><br>
-You can also look at the pdftoijs print filter:<br>
-<a href="http://svn.sourceforge.jp/cgi-bin/viewcvs.cgi/pdftoraster/branches/gsoc2008_pdftoijs_nocups/src/pdftoijs.cc?root=opfc&amp;view=auto" target="_blank">http://svn.sourceforge.jp/cgi-bin/viewcvs.cgi/pdftoraster/branches/gsoc2008_pdftoijs_nocups/src/pdftoijs.cc?root=opfc&amp;view=auto</a><br>
-
-</blockquote><div><br>I will look at this.&nbsp; Since it&#39;s not using cups, that looks like it has great potential.<br>&nbsp;</div><blockquote class="gmail_quote" style="border-left: 1px solid rgb(204, 204, 204); margin: 0pt 0pt 0pt 0.8ex; padding-left: 1ex;">
-<br>
-Two other thoughts, though:<br>
-- the error &quot;unable to read client data&quot; suggests to me, that the problem occurs way before anything related to the OutputFD happens, but you probably have looked deeper<br></blockquote><div><br>Yes, I have.&nbsp; That error is being generated by a read() on the OutputFD, IIRC.&nbsp; Since I don&#39;t know what to open, the things I&#39;m doing now to get an fd that I assign to OutputFD aren&#39;t working.<br>
-&nbsp;</div><blockquote class="gmail_quote" style="border-left: 1px solid rgb(204, 204, 204); margin: 0pt 0pt 0pt 0.8ex; padding-left: 1ex;"><br>
-- the dup()/pipe()/open() or whatever you use to create the file descriptor has to happen before the ijs_invoke_server, so that the descriptor is &nbsp;available to the forked process.</blockquote><div><br>Yes; I&#39;m doing it that way.&nbsp; I open the file descriptor first, then invoke ijs_invoke_server (&quot;/usr/bin/hpijs&quot;), and then set OutputFD via the set parameter method.<br>
-<br>I&#39;m still digging.<br><br>Thanks for your comments!<br><br>I did some other poking around, and it looks like I might need something from hpmud, which appears to be able to open USB endpoints.&nbsp; I&#39;m going to check that out later today.<br>
-<br>Regards,<br><br>Matt</div></div><br>
-
-------=_Part_5307_19552636.1224594621153--
