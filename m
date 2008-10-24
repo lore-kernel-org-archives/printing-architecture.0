@@ -1,16 +1,11 @@
-Message-ID: <49019EB8.5030209@gmail.com>
-Date: Fri, 24 Oct 2008 12:08:56 +0200
-From: Till Kamppeter <till.kamppeter@gmail.com>
+Message-ID: <4901C12D.7010200@fakenhamweb.co.uk>
+Date: Fri, 24 Oct 2008 13:35:57 +0100
+From: "Alastair M. Robinson" <blackfive@fakenhamweb.co.uk>
 MIME-Version: 1.0
-References: <200810132357.m9DNvMRf015955@dsl092-065-009.bos1.dsl.speakeasy.net>
-	<48FB37A3.8090007@gmail.com>
-	<200810191602.m9JG2D84030719@dsl092-065-009.bos1.dsl.speakeasy.net>
-	<48FF3D87.4070807@gmail.com>
-	<69B1EF35-D85E-477C-848C-AB59A7745809@mmiworks.net>
-	<200810230019.m9N0JCIp018128@dsl092-065-009.bos1.dsl.speakeasy.net>
+References: <200810132357.m9DNvMRf015955@dsl092-065-009.bos1.dsl.speakeasy.net>	<48FB37A3.8090007@gmail.com>	<200810191602.m9JG2D84030719@dsl092-065-009.bos1.dsl.speakeasy.net>	<48FF3D87.4070807@gmail.com>	<69B1EF35-D85E-477C-848C-AB59A7745809@mmiworks.net>	<200810230019.m9N0JCIp018128@dsl092-065-009.bos1.dsl.speakeasy.net>
 	<0EBE855D-5320-4996-A88F-F81BF3EDA88E@mmiworks.net>
 In-Reply-To: <0EBE855D-5320-4996-A88F-F81BF3EDA88E@mmiworks.net>
-Content-Type: text/plain; charset=UTF-8; format=flowed
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
 Content-Transfer-Encoding: 7bit
 Subject: Re: [Printing-architecture] [Gimp-print-devel] Looking ahead to 5.3
 List-Id: Printing architecture under linux
@@ -23,68 +18,52 @@ List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subj
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
 To: peter sikking <peter@mmiworks.net>
-Cc: Robert Krawitz <rlk@alum.mit.edu>, printing-architecture@lists.linux-foundation.org, gimp-print-devel@lists.sourceforge.net
+Cc: Robert Krawitz <rlk@alum.mit.edu>, printing-architecture@lists.linux-foundation.org, gimp-print-devel@lists.sourceforge.net, till.kamppeter@gmail.com
+
+Hi,
 
 peter sikking wrote:
-> like I said, separate dialog triggered from the print dialog.
->
 
-And how should this dialog look like? Someone has to implement it. The 
-printer driver runs on the CUPS server and it cannot send executable 
-programs to the clients.
-
-Do we have to consider the design project of the Common Printing Dialog 
-as incomplete or even failed then?
-
-Do we have to start a design for a "Common Secondary Printing Dialog" 
-before we can implement the Common Printing Dialog?
-
-    Till
-
-
->>  In general, though, there aren't all that many boolean
->> parameters, and those that we do have really are orthogonal (linear
->> vs. S-curve contrast adjustment, borderless, and use of gloss enhancer
->> have absolutely nothing to do with one another).
-> 
-> OK, it was worth a try.
-> 
->>>   I would still encourage you to treat the 11 tags not as tabs, but
->>>   to dive into the world of gutenprint and find out what aspects of
->>>   printing really interest your audience. and then assign the
->>>   parameters you have to one or more tags.
->>
->> This is an area we could use some assistance on.  I have no feel at
->> all for UI design.  In general, the best way to utilize my skills in
->> user interface design is to invert whatever I might happen to come up
->> with.
->>
->> I really want Gutenprint to appeal to a very wide range of people,
->> from the "I just want it to work" folks all the way to the hard core
->> fine art (and other) professionals who want to be able to adjust
->> everything for a non-standard ink set and oddball paper.
-> 
 > For anybody to be able to help you at all, you first need to
 > set a clear vision for what the purpose of gutenprint is in
-> the printing world of today. And "to appeal to a very wide
-> range of people" is not it. You will have to say good bye to
-> some old goals. The (linux) printing world has evolved.
-> Similar to how GIMP has moved on from 'the sole pixel program
-> on linux' to an expert tool that does not aim to please
-> casual users.
-> 
-> I can tell you that when the GIMP team would not have defined
-> that vision, and tried to be the tool for "a very wide range
-> of people", I would not have got involved.
-> 
->     --ps
-> 
->         founder + principal interaction architect
->             man + machine interface works
-> 
->         http://mmiworks.net/blog : on interaction architecture
-> 
-> 
-> 
-> 
+> the printing world of today.
 
+Part of what makes this difficult is that gutenprint is at the same time 
+behind-the-scenes infrastructure, and also user-facing, since the 
+structure of its options system is exposed indirectly through the PPDs.
+
+ > You will have to say good bye to
+> some old goals.
+
+I think one thing we may have to revisit will be the assumption that 
+gutenprint's options are mapped directly to options in the printing 
+dialog.  The introduction of simplified PPDs was a step in this 
+direction, but the difficulty we've had in figuring out how to handle 
+calibration curves and so on makes me think it may be time to go further.
+
+With the recent push to make the Epson driver more data-driven, and 
+pulling previously hard-coded data into XML files, I wonder whether we 
+need to consider having an administration tool, completely separate from 
+the PPD-based print chain, which can be used by administrators and 
+"Domain Experts" (people who know how to handle colour-management and 
+calibration, but don't care about code) to fine tune things like the 
+low-level ink controls, and calibration curves, which are so hard to fit 
+into a user-facing print dialog.
+
+Gutenprint's "Quality" and "Media Type" options between them set a large 
+number of options to hard-coded defaults - I envisage this hypothetical 
+administration tool being used to *change* these defaults, and save them 
+  (along with calibration curves, and ideally ICC profiles too) as files 
+which could then be shared with other users.  This would solve another 
+difficulty that was brought up when we first started discussing 
+calibration and linearization - being able to *distribute* and share 
+settings.
+
+None of this detracts from the continued ability of software which uses 
+Gutenprint directly, like the advanced print plugin, or PhotoPrint, from 
+continuing to offer full control, but it could potentially make life 
+much more pleasant for "one-click-print" users.
+
+All the best,
+--
+Alastair M. Robinson
