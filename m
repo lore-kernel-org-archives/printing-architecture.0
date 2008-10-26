@@ -1,11 +1,12 @@
-Message-ID: <4903C566.7000700@fakenhamweb.co.uk>
-Date: Sun, 26 Oct 2008 01:18:30 +0000
-From: "Alastair M. Robinson" <blackfive@fakenhamweb.co.uk>
+Message-ID: <49043F9D.7000603@gmail.com>
+Date: Sun, 26 Oct 2008 10:59:57 +0100
+From: Till Kamppeter <till.kamppeter@gmail.com>
 MIME-Version: 1.0
-References: <200810132357.m9DNvMRf015955@dsl092-065-009.bos1.dsl.speakeasy.net>	<0EBE855D-5320-4996-A88F-F81BF3EDA88E@mmiworks.net>	<4901C12D.7010200@fakenhamweb.co.uk>	<200810241134.05394.hvengel@astound.net>	<200810251458.m9PEwS6D029068@dsl092-065-009.bos1.dsl.speakeasy.net>	<49035AC2.5000000@fakenhamweb.co.uk>	<200810251857.m9PIvIdi030089@dsl092-065-009.bos1.dsl.speakeasy.net>	<4903751E.2000507@fakenhamweb.co.uk>	<200810251950.m9PJoeFa030284@dsl092-065-009.bos1.dsl.speakeasy.net>	<4903BCCF.6060308@fakenhamweb.co.uk>
-	<200810260049.m9Q0nTIw032617@dsl092-065-009.bos1.dsl.speakeasy.net>
-In-Reply-To: <200810260049.m9Q0nTIw032617@dsl092-065-009.bos1.dsl.speakeasy.net>
-Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+References: <200810132357.m9DNvMRf015955@dsl092-065-009.bos1.dsl.speakeasy.net>	<0EBE855D-5320-4996-A88F-F81BF3EDA88E@mmiworks.net>	<4901C12D.7010200@fakenhamweb.co.uk>	<200810241134.05394.hvengel@astound.net>	<200810251458.m9PEwS6D029068@dsl092-065-009.bos1.dsl.speakeasy.net>
+	<49035AC2.5000000@fakenhamweb.co.uk> <4903A002.2000101@gmail.com>
+	<200810252249.m9PMnrSo030956@dsl092-065-009.bos1.dsl.speakeasy.net>
+In-Reply-To: <200810252249.m9PMnrSo030956@dsl092-065-009.bos1.dsl.speakeasy.net>
+Content-Type: text/plain; charset=UTF-8; format=flowed
 Content-Transfer-Encoding: 7bit
 Subject: Re: [Printing-architecture] [Gimp-print-devel] Looking ahead to 5.3
 List-Id: Printing architecture under linux
@@ -20,28 +21,58 @@ List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-ar
 To: Robert Krawitz <rlk@alum.mit.edu>
 Cc: printing-architecture@lists.linux-foundation.org, gimp-print-devel@lists.sourceforge.net
 
-Hi :)
-
 Robert Krawitz wrote:
+>    Date: Sun, 26 Oct 2008 00:38:58 +0200
+>    From: Till Kamppeter <till.kamppeter@gmail.com>
+>    MIME-Version: 1.0
+>    CC: Robert Krawitz <rlk@alum.mit.edu>,
+> 	   printing-architecture@lists.linux-foundation.org,
+> 	   gimp-print-devel@lists.sourceforge.net, peter@mmiworks.net
+>    Content-Type: text/plain; charset=UTF-8; format=flowed
+> 
+>    Alastair M. Robinson wrote:
+>    > Hi :)
+>    > 
+>    > Robert Krawitz wrote:
+>    > 
+>    >> When you get right down to it, Gutenprint at its core really is a
+>    >> hardware driver (or a package of hardware drivers).  It's not an
+>    >> application the way GIMP is -- it's a piece of infrastructure.
+>    > 
+>    > True - however it doesn't have the luxury enjoyed by other pieces of 
+>    > infrastructure of being isolated from end-users.  If I go to 
+>    > localhost:631, click on my printer and hit Set Printer Options, I see a 
+>    > user-interface.  CUPS *presents* this user-interface, but which controls 
+>    > I see and how they're grouped is determined by Gutenprint.  It may not 
+>    > be an application, but there are user-facing aspects.
+>    > 
+>    > Incidentally, Peter, if an option exists in the PPD but isn't tagged, 
+>    > what happens?  Will it appear in the Common Printing Dialog?
+>    > And what happens if an APPrinterPreset specifies a value for an untagged 
+>    > option?  Will it still be set?
+> 
+>    See my specs of the PPD extensions for the Common Printing Dialog:
+> 
+>    http://www.linuxfoundation.org/en/OpenPrinting/PPDExtensions
+> 
+>    Untagged PPDs will use the PPD groups as tags as a fallback. So options 
+>    will be shown in a reasonable order, But the advantage of one option 
+>    baing able to have more than one tag is not made use of with this fallback.
+> 
+> What happens if there are more than 11 or what have you PPD groups?
+> Same as what you describe below?
+> 
 
-> Why does it have to be server-side?  The print dialog could implement
-> it.
+Yes.
 
-Well, this whole discussion started with the question of how gutenprint 
-will work with the Common Printing Dialog.
+>    Each APPrinterPreset will create a quick preset button in the left
+>    column of the dialog. And the button will always set all options
+>    which it is supposed to set, independent of tags and groups.
+> 
+> What's the upper limit on the number of presets?
+> 
 
-You said: "There are a lot of low level ink controls that I would be 
-happy to move elsewhere, but it's not clear to me where that "elsewhere" 
-is provided."
+There is no upper limit defined. Peter, what should happen if there are 
+too many quick preset buttons to fit into the area on the left?
 
-I'm brainstorming here - simply exploring the idea that it may fall to 
-Gutenprint to create that "elsewhere" for itself, out-of-band as far as 
-the main printing dialog goes.  Making out-of-band data available to the 
-print filters without requiring admin permissions is not an easy problem 
-to solve, but it's one that we need to solve at some point anyway, I 
-think, in order to support the easy creation and sharing of 
-linearization curves.
-
-All the best,
---
-Alastair M. Robinson
+    Till
