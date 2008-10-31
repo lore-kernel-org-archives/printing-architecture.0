@@ -1,10 +1,11 @@
-Message-ID: <490B3474.4020203@gmail.com>
-Date: Fri, 31 Oct 2008 17:38:12 +0100
-From: Till Kamppeter <till.kamppeter@gmail.com>
+Message-ID: <e395be80810311040q78ca157aie4d0a64ec3c309b8@mail.gmail.com>
+Date: Fri, 31 Oct 2008 13:40:13 -0400
+From: "Ira McDonald" <blueroofmusic@gmail.com>
 MIME-Version: 1.0
-Content-Type: text/plain; charset=UTF-8; format=flowed
+Content-Type: text/plain; charset=ISO-8859-1
 Content-Transfer-Encoding: 7bit
-Subject: [Printing-architecture] Next OP SC - Mon/Tue - 3/4 November 2008
+Content-Disposition: inline
+Subject: [Printing-architecture] Job Tickets in PDF Files - see CUPS/1.4
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -14,53 +15,51 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Open Printing <printing-architecture@lists.linux-foundation.org>
+To: Till Kamppeter <till.kamppeter@gmail.com>, Ira McDonald <blueroofmusic@gmail.com>, Open Printing <printing-architecture@lists.linux-foundation.org>
 
-Hi,
+Hi Till,
 
-The next Open Printing Steering Committee meeting will be on:
+Thanks for announcing next week's Open Printing SC meeting!
+I've been very busy with a live radio show, PWG meetings last
+week, and Samsung stuff.
 
-     - NOTE - Summer Time ended in Europe - 26 October 2008
-     - NOTE - Daylight Saving Time ends in US - 2 November 2008
+I *have* read the various threads on Color Management and
+user-specific presets and so on.
 
-     - Monday 3 November 2008, Evening
-       - US
-         3pm in San Francisco - US PST (Pacific Standard Time)
-         4pm in Colorado - US MST (Mountain Standard Time)
-         5pm in Chicago - US CST (Central Standard Time)
-         6pm in New York - US EST (Eastern Standard Time)
 
-     - Tuesday 4 November 2008, Morning
-       - Europe
-         12am in Berlin - CET (Central European Time)
-       - Japan
-         8am in Tokyo - JST (Japan Standard Time)
+** Embedding Job Tickets in PDF Files **
 
-     * Main Number (Norm Jacobs, Sun, leader)
-       US Toll Free:  866-839-8145
-       International: +1-865-524-6352
-       Access Code:   7548766#
+        CUPS/1.4 Beta Support
 
-     * Backup Number (if main number is not working, please try this one)
-       International: +1-218-936-7999
-       Access Code:   546639#
+- STR#2903 - 3 September 2008
 
-Agenda:
+- "%cupsJobTicket:" comments at top of PDF files
 
-- Report from Glen Petrie from the PWG Meeting
+- Open printing should consider adopting this as
+  an OP Standard
 
-- Report from OP Japan Meeting October 23
+- A possible GSoC 2009 project could be JTAPI
+  support for this format
 
-- What should be done next:
+- Also, since it complements base PDF standards
+  (ISO PDF/A, PWG PDF/is), perhaps the PWG would
+  adopt it as a PWG Candidate Standard (with a PWG
+  namespace prefix, rather than CUPS)?
 
-    o Creation of a key to sign downloadable printer driver packages
-    o Embedding of printing metadata/job ticket in PDF for PDF printing
-    o Finishing of the Common Printing Dialog
-    o Study Out of Box User Experience
-    o Investigate Requirements for next LSB
-    o Color Management on the OS/Printing System level
+Comments?
 
-Please call-in and join us.
+Cheers,
+- Ira
 
-    Till
 
+-- 
+Ira McDonald (Musician / Software Architect)
+Chair - Linux Foundation Open Printing WG
+Blue Roof Music/High North Inc
+email: blueroofmusic@gmail.com
+winter:
+  579 Park Place  Saline, MI  48176
+  734-944-0094
+summer:
+  PO Box 221  Grand Marais, MI 49839
+  906-494-2434
