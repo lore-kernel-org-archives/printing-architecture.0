@@ -1,12 +1,13 @@
-Message-ID: <490B5468.1010101@gmail.com>
-Date: Fri, 31 Oct 2008 19:54:32 +0100
-From: Till Kamppeter <till.kamppeter@gmail.com>
+From: "Hal V. Engel" <hvengel@astound.net>
+Date: Fri, 31 Oct 2008 14:55:58 -0700
 MIME-Version: 1.0
-References: <e395be80810311040q78ca157aie4d0a64ec3c309b8@mail.gmail.com>
-In-Reply-To: <e395be80810311040q78ca157aie4d0a64ec3c309b8@mail.gmail.com>
-Content-Type: text/plain; charset=UTF-8; format=flowed
+Content-Type: Text/Plain;
+  charset="iso-8859-1"
 Content-Transfer-Encoding: 7bit
-Subject: Re: [Printing-architecture] Job Tickets in PDF Files - see CUPS/1.4
+Content-Disposition: inline
+Message-Id: <200810311455.58877.hvengel@astound.net>
+Subject: [Printing-architecture] Fwd: Re: [Openicc] [argyllcms] Re: Re: OT:
+	PDF frustration
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -16,40 +17,45 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Ira McDonald <blueroofmusic@gmail.com>
-Cc: Open Printing <printing-architecture@lists.linux-foundation.org>
+To: Open Printing <printing-architecture@lists.linux-foundation.org>
 
-Ira McDonald wrote:
-> ** Embedding Job Tickets in PDF Files **
-> 
->         CUPS/1.4 Beta Support
-> 
-> - STR#2903 - 3 September 2008
-> 
-> - "%cupsJobTicket:" comments at top of PDF files
-> 
-> - Open printing should consider adopting this as
->   an OP Standard
-> 
+This was sent to the OPenICC list earlier today.  Since this is of interest to 
+those involved in printing I decided to forward it.  Once the changes layed 
+out in the document are in place in GhostScript it should be fairly straight 
+forward to implement color management in the new PDF printing work flow.
 
-In principle this is a good idea, but if you look into the English 
-translation of the OP Japan minutes, they tell that on the Cairo 
-developer conference it was talked about embedding printing meta data as 
-an object in PDF files.
+Hal
 
-> - A possible GSoC 2009 project could be JTAPI
->   support for this format
-> 
+----------  Forwarded Message  ----------
 
-Yes, good idea.
+Subject: Re: [Openicc] [argyllcms] Re:  Re: OT: PDF frustration
+Date: Friday 31 October 2008
+From: "Michael Vrhel" <michael.vrhel@artifex.com>
+To: "'Kai-Uwe Behrmann'" <ku.b@gmx.de>
 
-> - Also, since it complements base PDF standards
->   (ISO PDF/A, PWG PDF/is), perhaps the PWG would
->   adopt it as a PWG Candidate Standard (with a PWG
->   namespace prefix, rather than CUPS)?
-> 
 
-Good idea, too.
+Hi Kai-Uwe,
 
-    Till
+Quite some time ago, I promised to share a document on my plan to update
+Ghostscript's color management.  Sorry it has taken so long to get this to
+you.  I have been sidetracked working on several issues in the transparency
+code.
 
+You can find the document at
+http://www.ghostscript.com/~mvrhel/Ghostscript_Proposed_ICCFlow.pdf
+
+Ralph Giles and I will be at ICC DevCon08 in Portland.  I hope to meet you
+there and I welcome input from anyone with regard to this project.
+
+Kind Regards,
+
+Michael Vrhel 
+
+
+
+_______________________________________________
+openicc mailing list
+openicc@lists.freedesktop.org
+http://lists.freedesktop.org/mailman/listinfo/openicc
+
+-------------------------------------------------------
