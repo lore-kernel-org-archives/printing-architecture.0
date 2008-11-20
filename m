@@ -1,13 +1,10 @@
-Content-class: urn:content-classes:message
+Message-ID: <003801c94ad0$279307d0$7302640a@mona>
+From: "chirag Shah" <chirag.shah@einfochips.com>
+Date: Thu, 20 Nov 2008 10:52:26 +0530
 MIME-Version: 1.0
-Content-Type: text/plain;
-	charset="us-ascii"
-Content-Transfer-Encoding: quoted-printable
-Date: Fri, 7 Nov 2008 07:36:55 -0800
-Message-ID: <ED4094DE5E8ACD4BBDACA6AD398E608F1B2B29@EEAEX03.us.epson.net>
-From: "Petrie, Glen" <glen.petrie@eitc.epson.com>
-Subject: Re: [Printing-architecture] More Comments: Some Comments /Feedback
-	onCPD Specification
+Content-Type: multipart/alternative;
+	boundary="----=_NextPart_000_0033_01C94AFE.134976A0"
+Subject: [Printing-architecture]  Embedded printing
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -17,240 +14,433 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Peter Sikking <peter@mmiworks.net>
-Cc: "Petrie, Glen" <glen.petrie@eitc.epson.com>, Open Printing <printing-architecture@lists.linux-foundation.org>
+To: printing-architecture@lists.linux-foundation.org
 
-Peter,
+This is a multi-part message in MIME format.
 
-Have you had time to consider my proposal to add the two additional
-dialog level's to the CPD?  These additions will extend the scope the
-CPD from Office (desktop) to embedded and handheld device applications
-so that users can truly have the same experience no matter what Linux
-"box" they are using.
+------=_NextPart_000_0033_01C94AFE.134976A0
+Content-Type: text/plain;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
 
-glen
+Hi All,
 
-> -----Original Message-----
-> From: printing-architecture-bounces@lists.linux-foundation.org
-> [mailto:printing-architecture-bounces@lists.linux-foundation.org] On
-> Behalf Of Petrie, Glen
-> Sent: Tuesday, November 04, 2008 8:06 AM
-> To: Open Printing; Peter Sikking
-> Subject: [Printing-architecture] More Comments: Some Comments
-/Feedback
-> onCPD Specification
->=20
-> > The UI specifications
-> >
-> > http://wiki.openusability.org/printing/index.php/Specification
-> >
-> > are not hosted by OpenPrinting nor by the Linux Foundation. So I do
-> not
-> > have write access to them.
-> >
-> > Who can improve or fix them are only the OpenUsability people.
->=20
-> [gwp] How can I join the Usability group in connection with the CPD.
-As
-> a print-vendor I would like to ensure that the CPD will support
-current
-> and future product needs.  I think separating the UI from the PPD was
-an
-> important step in that direction.  But please note, it is typical the
-> print-vendors who get the phone/support calls when there are print
-> issues; not the OS vendor, not the desktop vendor and not the
-usability
-> people.  So I hope that the usability people will accept input from
-> print-vendors in the spirit of reducing User confusion (and Support
-> Calls).
->=20
-> [gwp] Additions.
->=20
-> The current JTAPI covered the printing gamut from embedded
-> (phones/pda/etc.) to production printing.  It clearly defines what
-> objects/attributes are required for each environment.  I would like to
-> suggest that the CPD do the same by the addition of two new dialog
-> levels. I will do them in reverse order.
->=20
-> "level 1 dialog structure"
-> Target: Embedded devices, where screen area is very limit.
-> Structure: Printer Zone, Quick Preset Zone and Control Zone.  The
-width
-> all zones is set by the Quick Preset Zone.
-> Usage:  The caller (application, OS, whatever) must define all
-printing
-> "modes" by means of Presets.
->=20
-> "level 0 dialog structure"
-> Target: Embedded devices, GUI-less devices, special needs.
-> Structure: No GUI interface but same functional capability.
-> Usage: The caller (application, OS, whatever) sets the printer and
-> options value (based on some internal determination); the GUI-less CPD
-> returns the "print intent" information based on the callers input.
-This
-> way the caller can use a different with same set value but get the
-> correct "print intent" values for the specified printer.
->=20
-> A GUI-less CPD is not a made up request.  Epson routinely get requests
-> and provides this exact capability for our printer-drivers.  The
-ISV/IHV
-> make the same calls (basically, the sets but also some gets to do
-> calculations) to the print-dialog whether it/is displayed or not;
-thus,
-> do have to duplicate/change code depending on specific implementation
-> configurations.  Yes, the caller could get the information from the
-PPD,
-> but this now requires the caller to be able to parse and process PDD;
-> this should be done in a central location; namely, the CPD.
->=20
-> ----
-> The preview image does not completely show "print intent".  It does
-not
-> illustrate if the output is duplex, where the binding edge is, etc.
-> Attached is an example from an Epson driver better illustrating "print
-> intent" which this or some similar should be added to the preview.  If
-> the application must provide this preview image; I believe that is way
-> too much for the caller (application, etc) to do.
->=20
-> >
-> > Peter, can you have a look at Glen Petrie's suggestions for
-improving
-> > your specifications of the UI of the Common Printing Dialog? As far
-as
-> > it looks for me this is not a request for changing the UI in any
-way,
-> > but a request for a better formulation of the specs.
-> >
-> > Glen talks also about the option names in your examples, but note
-that
-> > in the real dialog these strings do not come from you. They are
-> > controlled by the PPDs and if we want to take control on them we
-must
-> > add additional sections to PPD extension specs.
-> >
-> >     Till
-> >
-> > Petrie, Glen wrote:
-> > >    1.   The specification needs a Terms and Acronyms Section
-> > >          1. Printer Zone - I think this mean "Printer Identifier"
-> Zone
-> > >          2. Quick Preset Zone
-> > >          3. Preview Zone
-> > >          4. Control Zone
-> > >          5. Configuration Matrix Zone
-> > >          6. Printing Parameter Zone
-> > >    2. Add a conformance section: SHALL (NOT), WILL (NOT), MAY
-(NOT)
-> > >    3. When a conformance term is being used in the specification
-it
-> > >       should be capitalized.
-> > >    4. The Overview section needs to provide an overview of CPD
-with
-> > >       objectives and goals
-> > >    5. Internationalization section should be move the a separate
-> section
-> > >       later in the specification.
-> > >    6. Diagram in "dialog structure" section don't match "Dialog
-> Zones"
-> > >       section; specifically, 'level 3' diagram.   Since there is
-no
-> > >       value to both set of diagrams and dual labels (Column 1 =
-=3D=3D
-> 'Quick
-> > >       Preset Zone"  I would suggest removing the "dialog
-structure"
-> and
-> > >       merge any dimensional data into the "Dialog Zones" section.
-> > >    7. Describing a 'Zone' occupies a specific column adds no value
-> to
-> > >       description; however, add the dimensional info from the
-> 'dialog
-> > >       structure' section would.
-> > >    8. Is there any value in having a 'level 3' and 'expanded level
-> 3'.
-> > >       The can be stated the 'expanded printing parameter zone'
-will
-> be
-> > >       increased (from 0 height) to accommodate added parameters.
-> > >    9. The next is 'zone content', but I notice there are fixed
-title
-> > >       fields, drop down, etc.;  are these fields and their
-> attributes
-> > >       determined the CPD itself or does the application or PPD
-file
-> > >       extensions have any control over these fields.   Are any
-> > >       attributes about the controllable by the application or PPD
-> > >       extensions? Can't really think why there might be any reason
-> for a
-> > >       application level control of attributes.
-> > >          1. However, I don't remember seeing in the CPDAPI "Get"
-> > >             information on the preview area.   This could be
-> important
-> > >             to some application on how they render reduced
-> resolution
-> > >             preview images.  I am assuming the current version
-does
-> not
-> > >             have magnification of the preview;  but that is a
-> logical
-> > >             extension and want to be considered in the
-specification
-> at
-> > >             this time.
-> > >
-> > >
-> > >
-> > > In general I have a concern with the terms and phrases used in the
-> > > dialog.   They do not follow existing conventions which I have
-found
-> > > with most user causes confusion and prompts help calls.
-> > >
-> > >
-> > >
-> > >   10. I notice on the 'level-3' example phrases like "For handing
-> out'
-> > >       instead of the traditional phrase "Handouts".   Can the
-> > >       OpenPrinting Architecture Team review these labels to ensure
-> > >       coherence with existing printing standards and conventions?
-> For
-> > >       example what does "Handling pages" means or imply?   "Best
-> ever"
-> > >       is a non-conventional term for either "Best" or "Photo"
-> quality.
-> > >        "On both sides of the paper" is called 'duplex'.  If we
-> create
-> > >       new words, terms and phrases for Linux printing is will be
-> just
-> > >       another reason for people to not use Linux and if the goal
-is
-> go
-> > >       beyond Linux, it must use words, terms and phrases that
-people
-> are
-> > >       used too - this comment comes from dealing with real user
-when
-> > >       even small changes are made.
-> > >   11. The label "Default" is confusing; it should say "Pre-set
-for"
-> or
-> > >       just "Pre-set".  If I read it as currently then it say
-> "Default
-> > >       Document, Crisp"; but "Pre-set for Document, crisp" in
-> > >       understandable by users.
-> > >
-> > >
-> > >
-> > >   12. Can the "Control Printing Aspects" rotating arrow just be
-> check
-> > >       box"?  I also like a simpler label of "Printing Controls" or
-> > >       "Printing Options".
-> > >          1. Is there a way to "Show" the dialog
-> > >
-> > >
-> > >
-> > >
-> > >
-> > > This discussion was further elaborated in the Steering Committee
-> meeting
-> > > and it was agreed to start an architecture to expand on this.
+Sorry to copy paste whole thread as i did not find any button to post =
+reply on continued thread. Anyway doesn't matter.
+What i would like to ask is, i am in the simillar situation as "Matt".=20
+
+I am developing an embedded system in which i need to give support of =
+laser printers. I am having monta vista linux 2.6 on my ARM based =
+embedded board. In that basic kernel i am having support of CUPS through =
+which i was able to print only .jpg files. I used lp commands to print =
+.jpg file. But my end goal is to print a report which can have text and =
+images combined on same page. I am not able to print a simple .txt or =
+.vi file.
+
+For that, i believe i need ghost script support. But my monta vista =
+linux is not having support for ghost script. I tried to cross-compile =
+ghost script source with my arm tool-chain but it failed.
+
+So, how can i add support of laser printers in my embedded(ARM based) =
+system?
+
+Thanks in advance,
+Chirag Shah (A new member eager for favorable reply :) )
+
+
+
+Matt Gessner magembcons at gmail.com=20
+Mon Oct 13 10:46:18 PDT 2008=20
+
+  a.. Previous message: [Printing-architecture] Embedded printing=20
+  b.. Next message: [Printing-architecture] CANCEL - Next OP SC - =
+Mon/Tue - 13/14 October 2008=20
+  c.. Messages sorted by: [ date ] [ thread ] [ subject ] [ author ]=20
+
+-------------------------------------------------------------------------=
+-------
+
+Hello, and thank you.
+
+Is the HPIJS solution part of the HPLIP solution?  Or is it something
+different?
+
+On the web page, http://www.linuxprinting.org/ijs there are some drivers
+listed, but I'm confused as to where to go from there?
+
+Also, is there a web page that describes in detail what I need?  =
+Something
+that lays out the architecture of what needs to be done by applications =
+(do
+I need lpd, CUPS, or something else?)  I've skimmed lots of =
+documentation,
+so perhaps I've missed something in my skimming that would answer all my
+questions.
+
+THanks lots,
+
+Matt
+
+On Mon, Oct 13, 2008 at 12:33 PM, Petrie, Glen
+<glen.petrie at eitc.epson.com>wrote:
+
+>  Matt,
+>
+>
+>
+> For embedded solutions, IJS (for Epson and others) or HPIJS (for HP
+> printers) is a suggestion.  It is small, MIT open-source driver; and,
+> print-vender drivers typically do not have floating point.   (Contact =
+me for
+> a CD of Epson's version of the IJS.)
+>
+>
+>
+> Epson also has a generic, platform independent, non-floating driver =
+for
+> their desktop inkjet printer. (Contact me if you are interested.)
+>
+>
+>
+> glen
+>
+>
+>   ------------------------------
+>
+> *From:* printing-architecture-bounces at lists.linux-foundation.org =
+[mailto:
+> printing-architecture-bounces at lists.linux-foundation.org] *On =
+Behalf Of *Matt
+> Gessner
+> *Sent:* Sunday, October 12, 2008 6:33 PM
+> *To:* printing-architecture at lists.linux-foundation.org
+> *Subject:* [Printing-architecture] Embedded printing
+>
+>
+>
+> Hi,
+>
+> I''m looking for some solutions for doing printing on an embedded =
+system
+> (arm, if it matters).  Raster screen shots and simple text reports are
+> (pretty much) all that's desired.
+>
+> One objective is to avoid using anything that requires floating point =
+math,
+> as it's only emulated on this particular arm.
+>
+> I've been searcing the lists and can't find anything specific to =
+embedded
+> systems, but in an O'Reilly article from 2007, there's a note that =
+such
+> capabilities would be added in 6 months.  Since we're well past that =
+date,
+> I'm wondering if that's been tackled.
+>
+> Would someone please point me to some resources where I could read up =
+on
+> how to do printing on such a system?  I will continue to do my own =
+research,
+> but it sure seems like this is an area where there would be some =
+discussion
+> so I'm hoping this is the right list.
+>
+> Thank you.
+
+-- 
+_____________________________________________________________________
+Disclaimer: This e-mail message and all attachments transmitted with it
+are intended solely for the use of the addressee and may contain legally
+privileged and confidential information. If the reader of this message
+is not the intended recipient, or an employee or agent responsible for
+delivering this message to the intended recipient, you are hereby
+notified that any dissemination, distribution, copying, or other use of
+this message or its attachments is strictly prohibited. If you have
+received this message in error, please notify the sender immediately by
+replying to this message and please delete it from your computer. Any
+views expressed in this message are those of the individual sender
+unless otherwise stated.Company has taken enough precautions to prevent
+the spread of viruses. However the company accepts no liability for any
+damage caused by any virus transmitted by this email.
+_____________________________________________________________________
+ 
+
+------=_NextPart_000_0033_01C94AFE.134976A0
+Content-Type: text/html;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD>
+<META http-equiv=3DContent-Type content=3D"text/html; =
+charset=3Diso-8859-1">
+<META content=3D"MSHTML 6.00.5730.11" name=3DGENERATOR>
+<STYLE></STYLE>
+</HEAD>
+<BODY bgColor=3D#ffffff>
+<DIV><FONT face=3D"Courier New" color=3D#0000ff size=3D2>Hi =
+All,</FONT></DIV>
+<DIV><FONT face=3D"Courier New" color=3D#0000ff =
+size=3D2></FONT>&nbsp;</DIV>
+<DIV><FONT face=3D"Courier New" color=3D#0000ff size=3D2>Sorry to copy =
+paste whole=20
+thread as i did not find any button to post reply on continued thread. =
+Anyway=20
+doesn't matter.</FONT></DIV>
+<DIV><FONT face=3D"Courier New" color=3D#0000ff size=3D2>What i would =
+like to ask is,=20
+i am in the simillar situation as "Matt". </FONT></DIV>
+<DIV><FONT face=3D"Courier New" color=3D#0000ff =
+size=3D2></FONT>&nbsp;</DIV>
+<DIV><FONT face=3D"Courier New" color=3D#0000ff size=3D2>I am developing =
+an embedded=20
+system in which i need to give support of laser printers. I am having =
+monta=20
+vista linux 2.6 on my ARM based embedded board. In that basic kernel i =
+am having=20
+support of CUPS through which&nbsp;i was able to print only .jpg files. =
+I used=20
+lp commands to print .jpg file. But my end goal is to print a report =
+which can=20
+have text and images combined on same page. I am not able to print a =
+simple .txt=20
+or .vi file.</FONT></DIV>
+<DIV><FONT face=3D"Courier New" color=3D#0000ff =
+size=3D2></FONT>&nbsp;</DIV>
+<DIV><FONT face=3D"Courier New" color=3D#0000ff size=3D2>For that, i =
+believe i need=20
+ghost script support. But my monta vista linux is not having support for =
+ghost=20
+script. I tried to cross-compile ghost script source with my arm =
+tool-chain but=20
+it failed.</FONT></DIV>
+<DIV><FONT face=3D"Courier New" color=3D#0000ff =
+size=3D2></FONT>&nbsp;</DIV>
+<DIV><FONT face=3D"Courier New" color=3D#0000ff size=3D2>So, how can i =
+add support of=20
+laser printers in my embedded(ARM based) system?</FONT></DIV>
+<DIV><FONT face=3D"Courier New" color=3D#0000ff =
+size=3D2></FONT>&nbsp;</DIV>
+<DIV><FONT face=3D"Courier New" color=3D#0000ff size=3D2>Thanks in=20
+advance,</FONT></DIV>
+<DIV><FONT face=3D"Courier New" color=3D#0000ff size=3D2>Chirag Shah (A =
+new member=20
+eager for favorable reply :) )</FONT></DIV>
+<DIV><FONT face=3D"Courier New" color=3D#0000ff =
+size=3D2></FONT>&nbsp;</DIV>
+<DIV><FONT face=3D"Courier New" color=3D#0000ff =
+size=3D2></FONT>&nbsp;</DIV>
+<DIV><FONT face=3D"Courier New" color=3D#0000ff=20
+size=3D2><STRONG></STRONG></FONT>&nbsp;</DIV>
+<DIV><FONT face=3D"Courier New"><FONT size=3D2><FONT =
+color=3D#0000ff><STRONG>Matt=20
+Gessner</STRONG> </FONT></FONT></FONT><A=20
+title=3D"[Printing-architecture] Embedded printing"=20
+href=3D"mailto:printing-architecture@lists.linux-foundation.org?Subject=3D=
+%5BPrinting-architecture%5D%20Embedded%20printing&amp;In-Reply-To=3DED409=
+4DE5E8ACD4BBDACA6AD398E608F1B2746%40EEAEX03.us.epson.net"><FONT=20
+face=3D"Courier New" size=3D2>magembcons at gmail.com =
+</FONT></A><BR><FONT=20
+face=3D"Courier New"><FONT size=3D2><FONT color=3D#0000ff><I>Mon Oct 13 =
+10:46:18 PDT=20
+2008</I> </FONT></FONT></FONT></DIV>
+<P><FONT face=3D"Courier New" color=3D#0000ff size=3D2></FONT></P>
+<UL>
+  <LI><FONT face=3D"Courier New" color=3D#0000ff size=3D2>Previous =
+message: </FONT><A=20
+  =
+href=3D"https://lists.linux-foundation.org/pipermail/printing-architectur=
+e/2008/001589.html"><FONT=20
+  face=3D"Courier New" size=3D2>[Printing-architecture] Embedded =
+printing=20
+  </FONT></A></LI>
+  <LI><FONT face=3D"Courier New" color=3D#0000ff size=3D2>Next message: =
+</FONT><A=20
+  =
+href=3D"https://lists.linux-foundation.org/pipermail/printing-architectur=
+e/2008/001592.html"><FONT=20
+  face=3D"Courier New" size=3D2>[Printing-architecture] CANCEL - Next OP =
+SC -=20
+  Mon/Tue - 13/14 October 2008 </FONT></A></LI>
+  <LI><FONT face=3D"Courier New"><FONT size=3D2><FONT =
+color=3D#0000ff><B>Messages=20
+  sorted by:</B> </FONT></FONT></FONT><A=20
+  =
+href=3D"https://lists.linux-foundation.org/pipermail/printing-architectur=
+e/2008/date.html#1590"><FONT=20
+  face=3D"Courier New" size=3D2>[ date ]</FONT></A><FONT face=3D"Courier =
+New"=20
+  color=3D#0000ff size=3D2> </FONT><A=20
+  =
+href=3D"https://lists.linux-foundation.org/pipermail/printing-architectur=
+e/2008/thread.html#1590"><FONT=20
+  face=3D"Courier New" size=3D2>[ thread ]</FONT></A><FONT =
+face=3D"Courier New"=20
+  color=3D#0000ff size=3D2> </FONT><A=20
+  =
+href=3D"https://lists.linux-foundation.org/pipermail/printing-architectur=
+e/2008/subject.html#1590"><FONT=20
+  face=3D"Courier New" size=3D2>[ subject ]</FONT></A><FONT =
+face=3D"Courier New"=20
+  color=3D#0000ff size=3D2> </FONT><A=20
+  =
+href=3D"https://lists.linux-foundation.org/pipermail/printing-architectur=
+e/2008/author.html#1590"><FONT=20
+  face=3D"Courier New" size=3D2>[ author ]</FONT></A><FONT =
+face=3D"Courier New"=20
+  color=3D#0000ff size=3D2> </FONT></LI></UL>
+<DIV><FONT face=3D"Courier New" color=3D#0000ff size=3D2>
+<HR>
+</FONT></DIV><!--beginarticle--><PRE><FONT color=3D#0000ff =
+size=3D2>Hello, and thank you.
+
+Is the HPIJS solution part of the HPLIP solution?  Or is it something
+different?
+
+On the web page, </FONT><A =
+href=3D"http://www.linuxprinting.org/ijs"><FONT =
+size=3D2>http://www.linuxprinting.org/ijs</FONT></A><FONT =
+color=3D#0000ff size=3D2> there are some drivers
+listed, but I'm confused as to where to go from there?
+
+Also, is there a web page that describes in detail what I need?  =
+Something
+that lays out the architecture of what needs to be done by applications =
+(do
+I need lpd, CUPS, or something else?)  I've skimmed lots of =
+documentation,
+so perhaps I've missed something in my skimming that would answer all my
+questions.
+
+THanks lots,
+
+Matt
+
+On Mon, Oct 13, 2008 at 12:33 PM, Petrie, Glen
+&lt;</FONT><A =
+href=3D"https://lists.linux-foundation.org/mailman/listinfo/printing-arch=
+itecture"><FONT size=3D2>glen.petrie at eitc.epson.com</FONT></A><FONT =
+color=3D#0000ff size=3D2>&gt;wrote:
+
+&gt;</FONT><FONT size=3D2><FONT color=3D#0000ff><I>  Matt,
+</I>&gt;</FONT></FONT><I>
+</I><FONT color=3D#0000ff size=3D2>&gt;</FONT><I>
+</I><FONT color=3D#0000ff size=3D2>&gt;</FONT><I>
+</I><FONT color=3D#0000ff size=3D2>&gt;</FONT><FONT size=3D2><FONT =
+color=3D#0000ff><I> For embedded solutions, IJS (for Epson and others) =
+or HPIJS (for HP
+</I>&gt;</FONT></FONT><FONT size=3D2><FONT color=3D#0000ff><I> printers) =
+is a suggestion.  It is small, MIT open-source driver; and,
+</I>&gt;</FONT></FONT><FONT size=3D2><FONT color=3D#0000ff><I> =
+print-vender drivers typically do not have floating point.   (Contact me =
+for
+</I>&gt;</FONT></FONT><FONT size=3D2><FONT color=3D#0000ff><I> a CD of =
+Epson's version of the IJS.)
+</I>&gt;</FONT></FONT><I>
+</I><FONT color=3D#0000ff size=3D2>&gt;</FONT><I>
+</I><FONT color=3D#0000ff size=3D2>&gt;</FONT><I>
+</I><FONT color=3D#0000ff size=3D2>&gt;</FONT><FONT size=3D2><FONT =
+color=3D#0000ff><I> Epson also has a generic, platform independent, =
+non-floating driver for
+</I>&gt;</FONT></FONT><FONT size=3D2><FONT color=3D#0000ff><I> their =
+desktop inkjet printer. (Contact me if you are interested.)
+</I>&gt;</FONT></FONT><I>
+</I><FONT color=3D#0000ff size=3D2>&gt;</FONT><I>
+</I><FONT color=3D#0000ff size=3D2>&gt;</FONT><I>
+</I><FONT color=3D#0000ff size=3D2>&gt;</FONT><FONT size=3D2><FONT =
+color=3D#0000ff><I> glen
+</I>&gt;</FONT></FONT><I>
+</I><FONT color=3D#0000ff size=3D2>&gt;</FONT><I>
+</I><FONT color=3D#0000ff size=3D2>&gt;</FONT><FONT size=3D2><FONT =
+color=3D#0000ff><I>   ------------------------------
+</I>&gt;</FONT></FONT><I>
+</I><FONT color=3D#0000ff size=3D2>&gt;</FONT><I><FONT color=3D#0000ff =
+size=3D2> *From:* </FONT><A =
+href=3D"https://lists.linux-foundation.org/mailman/listinfo/printing-arch=
+itecture"><FONT size=3D2>printing-architecture-bounces at =
+lists.linux-foundation.org</FONT></A><FONT color=3D#0000ff size=3D2> =
+[mailto:
+</FONT></I><FONT color=3D#0000ff size=3D2>&gt;</FONT><I><FONT =
+color=3D#0000ff size=3D2> </FONT><A =
+href=3D"https://lists.linux-foundation.org/mailman/listinfo/printing-arch=
+itecture"><FONT size=3D2>printing-architecture-bounces at =
+lists.linux-foundation.org</FONT></A><FONT color=3D#0000ff size=3D2>] =
+*On Behalf Of *Matt
+</FONT></I><FONT color=3D#0000ff size=3D2>&gt;</FONT><FONT =
+size=3D2><FONT color=3D#0000ff><I> Gessner
+</I>&gt;</FONT></FONT><FONT size=3D2><FONT color=3D#0000ff><I> *Sent:* =
+Sunday, October 12, 2008 6:33 PM
+</I>&gt;</FONT></FONT><I><FONT color=3D#0000ff size=3D2> *To:* </FONT><A =
+href=3D"https://lists.linux-foundation.org/mailman/listinfo/printing-arch=
+itecture"><FONT size=3D2>printing-architecture at =
+lists.linux-foundation.org</FONT></A>
+</I><FONT color=3D#0000ff size=3D2>&gt;</FONT><FONT size=3D2><FONT =
+color=3D#0000ff><I> *Subject:* [Printing-architecture] Embedded printing
+</I>&gt;</FONT></FONT><I>
+</I><FONT color=3D#0000ff size=3D2>&gt;</FONT><I>
+</I><FONT color=3D#0000ff size=3D2>&gt;</FONT><I>
+</I><FONT color=3D#0000ff size=3D2>&gt;</FONT><FONT size=3D2><FONT =
+color=3D#0000ff><I> Hi,
+</I>&gt;</FONT></FONT><I>
+</I><FONT color=3D#0000ff size=3D2>&gt;</FONT><FONT size=3D2><FONT =
+color=3D#0000ff><I> I''m looking for some solutions for doing printing =
+on an embedded system
+</I>&gt;</FONT></FONT><FONT size=3D2><FONT color=3D#0000ff><I> (arm, if =
+it matters).  Raster screen shots and simple text reports are
+</I>&gt;</FONT></FONT><FONT size=3D2><FONT color=3D#0000ff><I> (pretty =
+much) all that's desired.
+</I>&gt;</FONT></FONT><I>
+</I><FONT color=3D#0000ff size=3D2>&gt;</FONT><FONT size=3D2><FONT =
+color=3D#0000ff><I> One objective is to avoid using anything that =
+requires floating point math,
+</I>&gt;</FONT></FONT><FONT size=3D2><FONT color=3D#0000ff><I> as it's =
+only emulated on this particular arm.
+</I>&gt;</FONT></FONT><I>
+</I><FONT color=3D#0000ff size=3D2>&gt;</FONT><FONT size=3D2><FONT =
+color=3D#0000ff><I> I've been searcing the lists and can't find anything =
+specific to embedded
+</I>&gt;</FONT></FONT><FONT size=3D2><FONT color=3D#0000ff><I> systems, =
+but in an O'Reilly article from 2007, there's a note that such
+</I>&gt;</FONT></FONT><FONT size=3D2><FONT color=3D#0000ff><I> =
+capabilities would be added in 6 months.  Since we're well past that =
+date,
+</I>&gt;</FONT></FONT><FONT size=3D2><FONT color=3D#0000ff><I> I'm =
+wondering if that's been tackled.
+</I>&gt;</FONT></FONT><I>
+</I><FONT color=3D#0000ff size=3D2>&gt;</FONT><FONT size=3D2><FONT =
+color=3D#0000ff><I> Would someone please point me to some resources =
+where I could read up on
+</I>&gt;</FONT></FONT><FONT size=3D2><FONT color=3D#0000ff><I> how to do =
+printing on such a system?  I will continue to do my own research,
+</I>&gt;</FONT></FONT><FONT size=3D2><FONT color=3D#0000ff><I> but it =
+sure seems like this is an area where there would be some discussion
+</I>&gt;</FONT></FONT><FONT size=3D2><FONT color=3D#0000ff><I> so I'm =
+hoping this is the right list.
+</I>&gt;</FONT></FONT><I>
+</I><FONT color=3D#0000ff size=3D2>&gt;</FONT><I><FONT color=3D#0000ff =
+size=3D2> Thank you.
+</FONT></I></PRE><BR>
+<pre>-- 
+_____________________________________________________________________
+Disclaimer: This e-mail message and all attachments transmitted with it
+are intended solely for the use of the addressee and may contain legally
+privileged and confidential information. If the reader of this message
+is not the intended recipient, or an employee or agent responsible for
+delivering this message to the intended recipient, you are hereby
+notified that any dissemination, distribution, copying, or other use of
+this message or its attachments is strictly prohibited. If you have
+received this message in error, please notify the sender immediately by
+replying to this message and please delete it from your computer. Any
+views expressed in this message are those of the individual sender
+unless otherwise stated.Company has taken enough precautions to prevent
+the spread of viruses. However the company accepts no liability for any
+damage caused by any virus transmitted by this email.
+_____________________________________________________________________
+ 
+</pre>
+
+<BR>
+</BODY></HTML>
+
+------=_NextPart_000_0033_01C94AFE.134976A0--
 
