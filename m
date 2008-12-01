@@ -1,14 +1,11 @@
-Message-ID: <49345F2F.2030207@Sun.COM>
-Date: Mon, 01 Dec 2008 16:03:27 -0600
-From: Norm Jacobs <Norm.Jacobs@Sun.COM>
+Date: Tue, 02 Dec 2008 08:05:29 +0900
+From: TORATANI Yasumasa <toratani.yasumasa@canon.co.jp>
+Message-Id: <20081202075940.A261.TORATANI.YASUMASA@canon.co.jp>
 MIME-Version: 1.0
-References: <e395be80811270817n502ccd16wf6cc90f85364f5ae@mail.gmail.com>
-	<4934592F.9020203@gmail.com>
-In-Reply-To: <4934592F.9020203@gmail.com>
-Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Type: text/plain; charset="US-ASCII"
 Content-Transfer-Encoding: 7bit
-Subject: Re: [Printing-architecture] Next OP SC - Mon/Tue - 1/2
- December	2008 - please join us
+Subject: Re: [Printing-architecture] Next OP SC - Mon/Tue - 1/2 December
+	2008 - please join us
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -18,93 +15,16 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Till Kamppeter <till.kamppeter@gmail.com>
-Cc: Open Printing <printing-architecture@lists.linux-foundation.org>
+To: printing-architecture@lists.linux-foundation.org
 
-Till Kamppeter wrote:
-> Ira, thanks for posting another reminder.
->
-> Agenda:
->
-> - Year end and marketing report: Anything missing? To be changed?
->    See the report below. It will be used by the LF marketing to be put
->    into the web site and also presented to the printer manufacturers \
->    which are LF members to inform them what is going on.
->
-> - News:
->     o Foomatic 4.0 shortly before release
->     o Subhankar Sett will soon continue to work on a web app for admin of
->       the OP Server
->     o Funding needed for Lars Uebernickel to do Common Printing Dialog
->
-> - Any news from Japan? From somewhere else? I saw Norm reporting a bug
->    on CUPS. He seems to be back!
->   
-I'm around, well, sort of.  I am still involved in printing and have 
-many things that I would like to get done, but I also have another role 
-at Sun that is eating up a very large chunk of my time.  I should be on 
-in an hour.
+Hi
 
-       -Norm
-> Hope to hear you all in one and a half hours.
->
->     Till
->
-> Ira McDonald wrote:
->   
->> Hi,
->>
->> Till - thanks very much for getting us a new stable phone number!
->>
->> The next Open Printing Steering Committee meeting will be on:
->>
->>    - Monday 1 December 2008, Evening
->>       - US
->>         3pm in San Francisco - US PST (Pacific Standard Time)
->>         4pm in Colorado - US MST (Mountain Standard Time)
->>         5pm in Chicago - US CST (Central Standard Time)
->>         6pm in New York - US EST (Eastern Standard Time)
->>
->>     - Tuesday 2 December 2008, Morning
->>       - Europe
->>         12am in Berlin - CET (Central European Time)
->>       - Japan
->>         8am in Tokyo - JST (Japan Standard Time)
->>
->>     * Main Number (InstantConference.com)
->>       International: +1-218-936-7999
->>       Access Code:   491659#
->>
->> Please call-in and join us.
->>
->> Cheers,
->> - Ira
->>
->> PS - I will be at Samsung in Irvine, CA this coming Monday,
->> so I will be calling in from there - it's *possible* that urgent
->> Samsung meetings will intervene - if so, please carry on
->> without me.
->>
->> PPS - Till - would you send out an agenda?  I'll be travelling
->> for the next four days.
->>
->>
->> Ira McDonald (Musician / Software Architect)
->> Chair - Linux Foundation Open Printing WG
->> Blue Roof Music/High North Inc
->> email: blueroofmusic@gmail.com
->> winter:
->>   579 Park Place  Saline, MI  48176
->>   734-944-0094
->> summer:
->>   PO Box 221  Grand Marais, MI 49839
->>   906-494-2434
->>
->>     
->
-> _______________________________________________
-> Printing-architecture mailing list
-> Printing-architecture@lists.linux-foundation.org
-> https://lists.linux-foundation.org/mailman/listinfo/printing-architecture
->   
+This is Toratani.
+I tried a new conference number, however I could not.
+I will try again, but I'm sorry I'm not sure I'll be able to call in.
+
+-----------------------------------------
+TORATANI Yasumasa
+Software Platform Technology Development Dept. 33
+Digital Platform Technology Development HQs, CANON INC.
 
