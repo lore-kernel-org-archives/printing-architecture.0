@@ -1,16 +1,13 @@
-Message-ID: <49348420.30708@gmail.com>
-Date: Tue, 02 Dec 2008 01:41:04 +0100
+Message-ID: <4935A31E.1030003@gmail.com>
+Date: Tue, 02 Dec 2008 22:05:34 +0100
 From: Till Kamppeter <till.kamppeter@gmail.com>
 MIME-Version: 1.0
-References: <20081202075940.A261.TORATANI.YASUMASA@canon.co.jp>	
-	<49347071.5020709@gmail.com>	
-	<20081202082633.A267.TORATANI.YASUMASA@canon.co.jp>
-	<e395be80812011633h9610d03s3da9bc1d74b84fb4@mail.gmail.com>
-In-Reply-To: <e395be80812011633h9610d03s3da9bc1d74b84fb4@mail.gmail.com>
+References: <e395be80811270817n502ccd16wf6cc90f85364f5ae@mail.gmail.com>
+In-Reply-To: <e395be80811270817n502ccd16wf6cc90f85364f5ae@mail.gmail.com>
 Content-Type: text/plain; charset=UTF-8; format=flowed
 Content-Transfer-Encoding: 7bit
-Subject: Re: [Printing-architecture] Next OP SC - Mon/Tue - 1/2 December
- 2008 - please join us
+Subject: [Printing-architecture] Last OP SC - Mon/Tue - 1/2 December 2008 -
+	The Recording
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -21,23 +18,81 @@ List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subj
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
 To: Ira McDonald <blueroofmusic@gmail.com>
-Cc: TORATANI Yasumasa <toratani.yasumasa@canon.co.jp>, printing-architecture@lists.linux-foundation.org
+Cc: Open Printing <printing-architecture@lists.linux-foundation.org>
 
-I am currently downloading the minutes in MP3 format.
+Hi,
+
+InstantConference has an easy recording facility for phone meetings. If 
+activated, one gets a download link for an MP3 file with the recording. 
+I have transferred the file for the last OP Steering Committee meeting 
+to the OpenPrinting server:
+
+http://www.openprinting.org/download/meetingnotes/op-steering-committee/OP-SC-Meeting-20081201.mp3
+
+In general, recorded meetings I will upload to
+
+http://www.openprinting.org/download/meetingnotes/
+
+This SC Meeting was small. Only George Liu, Norm Jacobs, and me 
+participated. Also not very important stuff was discussed. I reported 
+some stuff of my activity, and Norm told about the development of the 
+printing part of Solaris. They take more and more of the Linux printing 
+stack: CUPS (should get standard with CUPS 1.4), system-config-printer 
+(printer setup tool), hal-cups-utils (Plug'n'Print script), ... 
+Foomatic, Ghostscript, HPIJS, and Gutenprint they used already. Norm 
+showed also interest in printer driver download from OpenPrinting for 
+Solaris.
+
+I asked Norm also to tell about how successful he was with the work of 
+his GSoC student to implement PAPI for CUPS. Norm told that they were 
+not so successful and he also did not have enough time for the 
+mentoring. We also concluded that PAPI will most probably not adopted, 
+as we end up with CUPS everywhere. So we should better work more on 
+existing de-facto standards than creating new things with the intention 
+that they should get a standard in the future.
 
     Till
 
+P. S.: The MP3 is 23 MB long, 73 minutes of talking.
+
 
 Ira McDonald wrote:
-> Hello folks,
+> Hi,
 > 
-> My apologies - a Samsung technical catastrophe took me away all day
-> until just now.
+> Till - thanks very much for getting us a new stable phone number!
 > 
-> I'll look forward to minutes or comments from any of you.
+> The next Open Printing Steering Committee meeting will be on:
+> 
+>    - Monday 1 December 2008, Evening
+>       - US
+>         3pm in San Francisco - US PST (Pacific Standard Time)
+>         4pm in Colorado - US MST (Mountain Standard Time)
+>         5pm in Chicago - US CST (Central Standard Time)
+>         6pm in New York - US EST (Eastern Standard Time)
+> 
+>     - Tuesday 2 December 2008, Morning
+>       - Europe
+>         12am in Berlin - CET (Central European Time)
+>       - Japan
+>         8am in Tokyo - JST (Japan Standard Time)
+> 
+>     * Main Number (InstantConference.com)
+>       International: +1-218-936-7999
+>       Access Code:   491659#
+> 
+> Please call-in and join us.
 > 
 > Cheers,
 > - Ira
+> 
+> PS - I will be at Samsung in Irvine, CA this coming Monday,
+> so I will be calling in from there - it's *possible* that urgent
+> Samsung meetings will intervene - if so, please carry on
+> without me.
+> 
+> PPS - Till - would you send out an agenda?  I'll be travelling
+> for the next four days.
+> 
 > 
 > Ira McDonald (Musician / Software Architect)
 > Chair - Linux Foundation Open Printing WG
@@ -49,40 +104,5 @@ Ira McDonald wrote:
 > summer:
 >   PO Box 221  Grand Marais, MI 49839
 >   906-494-2434
-> 
-> 
-> 
-> On Mon, Dec 1, 2008 at 6:30 PM, TORATANI Yasumasa
-> <toratani.yasumasa@canon.co.jp> wrote:
->> I pushed the correct access code, though, the auto receiver did not
->> recognize it. Maybe my new software/hardware trouble. Sorry.
->>
->> On Tue, 02 Dec 2008 00:17:05 +0100
->> Till Kamppeter <till.kamppeter@gmail.com> wrote:
->>
->>> TORATANI Yasumasa wrote:
->>>> Hi
->>>>
->>>> This is Toratani.
->>>> I tried a new conference number, however I could not.
->>>> I will try again, but I'm sorry I'm not sure I'll be able to call in.
->>> Norm, George, and me are talking on that number, +1-218-936-7999, access
->>> code 491659#, so keep trying.
->>>
->>>     Till
->>> _______________________________________________
->>> Printing-architecture mailing list
->>> Printing-architecture@lists.linux-foundation.org
->>> https://lists.linux-foundation.org/mailman/listinfo/printing-architecture
->> -----------------------------------------
->> TORATANI Yasumasa
->> Software Platform Technology Development Dept. 33
->> Digital Platform Technology Development HQs, CANON INC.
->>
->> _______________________________________________
->> Printing-architecture mailing list
->> Printing-architecture@lists.linux-foundation.org
->> https://lists.linux-foundation.org/mailman/listinfo/printing-architecture
->>
 > 
 
