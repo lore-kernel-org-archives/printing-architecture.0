@@ -1,13 +1,14 @@
-Message-ID: <4962A436.2050908@gmail.com>
-Date: Tue, 06 Jan 2009 01:22:14 +0100
-From: Till Kamppeter <till.kamppeter@gmail.com>
+Date: Tue, 6 Jan 2009 12:22:20 +0100 (CET)
+From: Kai-Uwe Behrmann <ku.b@gmx.de>
+In-Reply-To: <e395be80901041134g314423bam77dab8024708a6f5@mail.gmail.com>
+Message-ID: <alpine.LSU.2.00.0901061219430.6535@sirius.rasena>
+References: <49577626.5060307@gmail.com>
+	<e395be80901041134g314423bam77dab8024708a6f5@mail.gmail.com>
 MIME-Version: 1.0
-References: <e395be80811270817n502ccd16wf6cc90f85364f5ae@mail.gmail.com>
-In-Reply-To: <e395be80811270817n502ccd16wf6cc90f85364f5ae@mail.gmail.com>
-Content-Type: text/plain; charset=UTF-8; format=flowed
-Content-Transfer-Encoding: 7bit
-Subject: [Printing-architecture] Last OP SC - Mon/Tue - 5/6 January 2009 -
-	The Recording
+Content-Type: TEXT/PLAIN; charset=US-ASCII; format=flowed
+Subject: Re: [Printing-architecture] Next OpenPrinting Steering Committee
+ Meeting - Mon/Tue - 5/6 January 2009
+Reply-To: ku.b@gmx.de
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -17,20 +18,28 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Open Printing <printing-architecture@lists.linux-foundation.org>
+To: Ira McDonald <blueroofmusic@gmail.com>
+Cc: Open Printing <printing-architecture@lists.linux-foundation.org>, Printing-japan <printing-japan@lists.linux-foundation.org>, Till Kamppeter <till.kamppeter@gmail.com>
 
-Hi,
+Hello,
 
-I have uploaded the recording of the last OP Steering Committee meeting
-to the OpenPrinting server:
+I am in the conference room and hear only background music. Is there 
+somewone else now?
 
-http://www.openprinting.org/download/meetingnotes/op-steering-committee/OP-SC-Meeting-20090105.mp3
+kind regards
+Kai-Uwe Behrmann
+-- 
+developing for colour management 
+www.behrmann.name + www.oyranos.org
 
-In general, recorded meetings I will upload to
 
-http://www.openprinting.org/download/meetingnotes/
-
-    Till
-
-P. S.: The MP3 is 21 MB long, 65 minutes of talking.
-
+Am 04.01.09, 14:34 -0500 schrieb Ira McDonald:
+>>     - Tuesday 6 January 2009, Morning
+>>       - Europe
+>>         12am in Berlin - CET (Central European Time)
+>>       - Japan
+>>         8am in Tokyo - JST (Japan Standard Time)
+>>
+>>     * Main Number (InstantConference.com)
+>>       International: +1-218-936-7999
+>>       Access Code:   491659#
