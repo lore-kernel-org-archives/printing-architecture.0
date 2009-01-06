@@ -1,14 +1,11 @@
-Date: Tue, 6 Jan 2009 12:22:20 +0100 (CET)
-From: Kai-Uwe Behrmann <ku.b@gmx.de>
-In-Reply-To: <e395be80901041134g314423bam77dab8024708a6f5@mail.gmail.com>
-Message-ID: <alpine.LSU.2.00.0901061219430.6535@sirius.rasena>
-References: <49577626.5060307@gmail.com>
-	<e395be80901041134g314423bam77dab8024708a6f5@mail.gmail.com>
+Message-ID: <e395be80901061342p44179322q1d6782cba1920350@mail.gmail.com>
+Date: Tue, 6 Jan 2009 16:42:11 -0500
+From: "Ira McDonald" <blueroofmusic@gmail.com>
 MIME-Version: 1.0
-Content-Type: TEXT/PLAIN; charset=US-ASCII; format=flowed
-Subject: Re: [Printing-architecture] Next OpenPrinting Steering Committee
- Meeting - Mon/Tue - 5/6 January 2009
-Reply-To: ku.b@gmx.de
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline
+Subject: [Printing-architecture] OP SC Minutes - 5 January 2009
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -18,28 +15,24 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Ira McDonald <blueroofmusic@gmail.com>
-Cc: Open Printing <printing-architecture@lists.linux-foundation.org>, Printing-japan <printing-japan@lists.linux-foundation.org>, Till Kamppeter <till.kamppeter@gmail.com>
+To: Open Printing <printing-architecture@lists.linux-foundation.org>, Ira McDonald <blueroofmusic@gmail.com>
 
-Hello,
+Hi,
 
-I am in the conference room and hear only background music. Is there 
-somewone else now?
+Minutes from yesterday's Open Printing Steering Committee meeting are at:
 
-kind regards
-Kai-Uwe Behrmann
--- 
-developing for colour management 
-www.behrmann.name + www.oyranos.org
+ ftp://ftp.pwg.org/pub/pwg/fsg/steering_committee/OP-SC-Minutes-20090105.htm
 
+Cheers,
+- Ira
 
-Am 04.01.09, 14:34 -0500 schrieb Ira McDonald:
->>     - Tuesday 6 January 2009, Morning
->>       - Europe
->>         12am in Berlin - CET (Central European Time)
->>       - Japan
->>         8am in Tokyo - JST (Japan Standard Time)
->>
->>     * Main Number (InstantConference.com)
->>       International: +1-218-936-7999
->>       Access Code:   491659#
+Ira McDonald (Musician / Software Architect)
+Chair - Linux Foundation Open Printing WG
+Blue Roof Music/High North Inc
+email: blueroofmusic@gmail.com
+winter:
+  579 Park Place  Saline, MI  48176
+  734-944-0094
+summer:
+  PO Box 221  Grand Marais, MI 49839
+  906-494-2434
