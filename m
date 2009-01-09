@@ -1,11 +1,13 @@
-Message-ID: <e395be80901061342p44179322q1d6782cba1920350@mail.gmail.com>
-Date: Tue, 6 Jan 2009 16:42:11 -0500
-From: "Ira McDonald" <blueroofmusic@gmail.com>
+Message-ID: <4967CA7A.1090803@gmail.com>
+Date: Fri, 09 Jan 2009 23:06:50 +0100
+From: Till Kamppeter <till.kamppeter@gmail.com>
 MIME-Version: 1.0
-Content-Type: text/plain; charset=ISO-8859-1
+References: <fb0caef70901091155l5f6bb04cje51b7dd15fcc95bf@mail.gmail.com>
+In-Reply-To: <fb0caef70901091155l5f6bb04cje51b7dd15fcc95bf@mail.gmail.com>
+Content-Type: text/plain; charset=UTF-8; format=flowed
 Content-Transfer-Encoding: 7bit
-Content-Disposition: inline
-Subject: [Printing-architecture] OP SC Minutes - 5 January 2009
+Subject: Re: [Printing-architecture] [Desktop_architects] Collaboration
+	Summit Meeting Space
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -15,24 +17,75 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Open Printing <printing-architecture@lists.linux-foundation.org>, Ira McDonald <blueroofmusic@gmail.com>
+To: "C. Craig Ross" <ccr@linuxfoundation.org>
+Cc: desktop_architects@linuxfoundation.org, "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>
 
-Hi,
+Also a happy new year.
 
-Minutes from yesterday's Open Printing Steering Committee meeting are at:
+As the OpenPrinting working group has agreed on shifting the yearly 
+OpenPrinting Summit by half a year to have it on the LF Collab Summit I 
+want to organzie the first OpenPrinting Summit on this year's LF Collab 
+Summit.
 
- ftp://ftp.pwg.org/pub/pwg/fsg/steering_committee/OP-SC-Minutes-20090105.htm
+Previous OpenPrinting Summits (2006 in Atlanta and Lexington, 2007 in 
+Montreal, see http://www.openprinting.org/, links at the lower right) 
+were attended by around 40 people and they were lasting 3 days. Usually 
+we had a plenary room and two breakout rooms. What we need at least is 
+one room for 40-50 people for at least 2, better all 3 days. It would be 
+great to have one or two breakout rooms for some hours in addition.
 
-Cheers,
-- Ira
+Is this possible?
 
-Ira McDonald (Musician / Software Architect)
-Chair - Linux Foundation Open Printing WG
-Blue Roof Music/High North Inc
-email: blueroofmusic@gmail.com
-winter:
-  579 Park Place  Saline, MI  48176
-  734-944-0094
-summer:
-  PO Box 221  Grand Marais, MI 49839
-  906-494-2434
+    Till
+
+C. Craig Ross wrote:
+> Hello and Happy New Year.
+> 
+> 
+> The 2009 Collaboration Summit (April 8-10, 2009, San Francisco, CA) is 
+> 
+> coming up quickly and we have already started preparing the schedule.
+> 
+> It is very important for LF to provide a venue for our workgroups to meet
+> 
+> so workgroup leads should submit your request as soon as possible.  Please
+> 
+> keep in mind that there are no guarantees as space is limited.
+> 
+> 
+> If your workgroup is planning on meeting at the Collaboration Summit please
+> 
+> email me with the following information:
+> 
+> 
+> 1. How many attendees for your workgroup session?
+> 
+> 2. How much time will you need (N hours, 1/2 day or 1 day)?
+> 
+> 3. Are there any technical requirements (projector, etc.)?
+> 
+> 
+> If you have any questions please don't hesitate to contact me.  Thank you.
+> 
+> 
+> Cheers,
+> 
+> 
+> C.
+> 
+> 
+> -- 
+> C. Craig Ross
+> Community Relations Manager
+> The Linux Foundation
+> +1 613 220 8998
+> http://www.linuxfoundation.org/
+> 
+> 
+> ------------------------------------------------------------------------
+> 
+> _______________________________________________
+> Desktop_architects mailing list
+> Desktop_architects@lists.linux-foundation.org
+> https://lists.linux-foundation.org/mailman/listinfo/desktop_architects
+
