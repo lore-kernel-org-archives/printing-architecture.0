@@ -1,13 +1,14 @@
-Message-ID: <496C4BAA.90107@gmail.com>
-Date: Tue, 13 Jan 2009 09:07:06 +0100
-From: Till Kamppeter <till.kamppeter@gmail.com>
+Date: Wed, 14 Jan 2009 07:25:24 +0100 (CET)
+From: Kai-Uwe Behrmann <ku.b@gmx.de>
+In-Reply-To: <200901131138.20965.hvengel@astound.net>
+Message-ID: <alpine.LNX.2.00.0901140722380.5275@sirius.rasena>
+References: <20090113.140441.112598893.sho@bbr.jp> <496C4BAA.90107@gmail.com>
+	<20090113.175056.35024658.sho@bbr.jp>
+	<200901131138.20965.hvengel@astound.net>
 MIME-Version: 1.0
-References: <20090113.140441.112598893.sho@bbr.jp>
-In-Reply-To: <20090113.140441.112598893.sho@bbr.jp>
-Content-Type: text/plain; charset="utf-8"; format="flowed"
-Content-Transfer-Encoding: 8bit
-Subject: Re: [Printing-architecture] [Printing-japan] My Color Management
- Patch for poppler has been accepted
+Content-Type: TEXT/PLAIN; format=flowed; charset=US-ASCII
+Subject: Re: [Printing-architecture] [Openicc] [Printing-japan] My Color
+ Management Patch for poppler has been accepted
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -17,32 +18,31 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Koji Otani <sho@bbr.jp>
-Cc: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>, printing-japan@lists.linux-foundation.org, OpenICC Liste <openicc@lists.freedesktop.org>
+To: "Hal V. Engel" <hvengel@astound.net>
+Cc: printing-architecture@lists.linux-foundation.org, printing-japan@lists.linux-foundation.org, OpenICC Liste <openicc@lists.freedesktop.org>
 
-Does it mean that Poppler will have full Color Management support in its 
-next release? Can you compare with Ghostscript 8.64? Which renderer will 
-be better in color management then?
+Am 13.01.09, 11:38 -0800 schrieb Hal V. Engel:
+> On Tuesday 13 January 2009 00:50:56 Koji Otani wrote:
+>> You can get it from http://poppler.freedesktop.org/.
+>> -----------
+>> Koji Otani
 
-    Till
+wonderful
 
-Koji Otani wrote:
-> My color management patch has been accepted by poppler.
-> Now poppler can draw ICCBased color correctly.
-> It uses liblcms (little color management system library) and can
-> handle ICC Version 4 profiles.
-> 
-> ---------------------
-> 大谷です。
-> 
-> カラーマネージメント・パッチがpopplerのリポジトリに取り入れられました。
-> ICC Based Color等を正しく表示できるようになりました。
-> 
-> little color management systemを使用していて、ICC Version 4にも対応し
-> ています。
-> _______________________________________________
-> Printing-japan mailing list
-> Printing-japan@lists.linux-foundation.org
-> https://lists.linux-foundation.org/mailman/listinfo/printing-japan
-> 
+> I just did a quick test of git head using the qt4 test program that gets built
+> and it opened the "Is You System ICC Version 4 Ready?" pdf from the ICC web
+> site and correctly displayed the test image at least with respect to colors.
+> So at the very least this is a good starting point.  There does appear to be
+> some issues with banding in the v4 e-sRGB portion of the image and the v4 YCC-
+> RGB part of the image appears to be blurred and to have other artifacts.  I am
+> not sure if these are because of issues with the original images or if there
+> are problems with the code in poppler or issues with the v4 support in LCMS.
+
+You might compare to the v4 html test page or/and compare with Acroread.
+
+kind regards
+Kai-Uwe Behrmann
+-- 
+developing for colour management 
+www.behrmann.name + www.oyranos.org
 
