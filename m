@@ -1,10 +1,11 @@
-Message-ID: <496E5F8A.5080402@gmail.com>
-Date: Wed, 14 Jan 2009 22:56:26 +0100
+Message-ID: <49776716.4000004@gmail.com>
+Date: Wed, 21 Jan 2009 19:19:02 +0100
 From: Till Kamppeter <till.kamppeter@gmail.com>
 MIME-Version: 1.0
 Content-Type: text/plain; charset=UTF-8; format=flowed
 Content-Transfer-Encoding: 7bit
-Subject: [Printing-architecture] ANNOUNCE: Foomatic 4.0.0 released!
+Subject: [Printing-architecture] Project ideas for OpenPrinting in the
+	Google Summer of Code 2009
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -14,54 +15,37 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>, Printing-japan <printing-japan@lists.linux-foundation.org>
+To: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>, Printing-japan <printing-japan@lists.linux-foundation.org>, OpenICC Liste <openicc@lists.freedesktop.org>
 
-Foomatic 4.0.0 is released and now available for download [1]. Most
-important new feature is that it supports the PDF printing workflow [2]
-(replacing PostScript by PDF as standard print job format).
+Hi,
 
-It also uses the CUPS PPD extenstions [3] for custom options (numerical,
-string, and password options) so that these options can get fully
-accessed in graphical user interfaces like the web administration
-interface of CUPS [4] 1.4 or the GTK printing dialog.
+I will again apply for the Linux Foundation to participate in the Google 
+Summer of Code. So I want to ask you for your suggestions of coding work 
+at OpenPrinting which could be done by GSoC students and also whether 
+you would volunteer mentoring.
 
-The universal print filter foomatic-rip is now rewritten in C, so that
-it can directly make use of libraries without needing Perl bindings.
-This simplifies future development, like adding job ticket support.
+Important is that the code will really be used in the near future. Last 
+year we had for example one student implementing the PAPI in CUPS but it 
+seems that in our current printing environments there is no real need 
+for the PAPI.
 
-Support for more detailed driver information, to make it easier for
-users to choose the best driver, either by browsing the OpenPrinting web
-site or by the local printer setup tool offering drivers from
-OpenPrinting for automatic download. Also non-free drivers and PPDs are
-now supported by the database.
+We also need to try to assign projects which students can finish in 
+time. If projects are too big we should split them into two.
 
-New driver search facility. The OpenPrinting database can be queried
-with a device ID read from a connected printer and also with incomplete
-or not absolutely correctly typed manufacturer and model names and it
-gives the best matches of possible printer models.
+Note that the students in reality do less than you expect and that if 
+the GSoC is over and they are not ready that they usually do not have 
+time to finish what is still missing.
 
-More flexibility in writing XML data files. printer/driver relations can
-now also be defined in the printer XML files and not only in the driver
-XMLs.
+Work which needs to be done is for example:
 
-See more features in the README file of the foomatic-db-engine package [5].
-
-My special thanks go to Lars Uebernickel who did most of the work on
-developing Foomatic 4.0 as an intern at the Linux Foundation, mentored
-by me.
-
-Note that the OpenPrinting web site is still rebuilding and so the
-updated Foomatic 4.0 PPD files will appear only in a few hours.
-
-Have a lot of fun with the new Foomatic generation!
+- Patching individual applications to get the DBUS interface for a 
+Common Printing Dialog
+- Writing a web app to manage printer drivers and PPDsd uploaded by 
+manufacturers
+- Implementing JTAPI and integrating in foomatic-rip to add job ticket 
+support to the PDF work flow
+- Coding test suites for printer self certification
+- Coding on color management integration (TBD by the color management 
+experts and by the OpenPrinting Summit outcomes).
 
     Till
-
-
-[1]http://www.linuxfoundation.org/en/OpenPrinting/Database/Foomatic
-[2]http://www.linuxfoundation.org/en/OpenPrinting/PDF_as_Standard_Print_Job_Format
-[3]http://www.cups.org/documentation.php/doc-1.4/spec-ppd.html
-[4]http://www.cups.org/
-[5]http://www.openprinting.org/foomatic-db-engine/README
-
-
