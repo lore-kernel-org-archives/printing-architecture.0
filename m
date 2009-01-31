@@ -1,10 +1,11 @@
-Message-ID: <4984B8BC.9080703@gmail.com>
-Date: Sat, 31 Jan 2009 21:46:52 +0100
+Message-ID: <4984D1B0.5000503@gmail.com>
+Date: Sat, 31 Jan 2009 23:33:20 +0100
 From: Till Kamppeter <till.kamppeter@gmail.com>
 MIME-Version: 1.0
 Content-Type: text/plain; charset=UTF-8; format=flowed
 Content-Transfer-Encoding: 7bit
-Subject: [Printing-architecture] Next OP SC - Mon/Tue - 5/6 January 2008
+Subject: [Printing-architecture] Next OP SC Phone Meeting - Mon/Tue - 2/3
+	February 2009
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -15,6 +16,8 @@ List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subj
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
 To: Open Printing <printing-architecture@lists.linux-foundation.org>, Printing-japan <printing-japan@lists.linux-foundation.org>
+
+[ Corrected subject line ]
 
 Hi,
 
@@ -43,4 +46,5 @@ Summit 2009 in San Francisco.
 Please call-in and join us.
 
     Till
+
 
