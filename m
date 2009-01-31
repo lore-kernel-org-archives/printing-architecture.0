@@ -1,11 +1,10 @@
-Message-ID: <4983243C.4010500@gmail.com>
-Date: Fri, 30 Jan 2009 17:01:00 +0100
+Message-ID: <4984B8BC.9080703@gmail.com>
+Date: Sat, 31 Jan 2009 21:46:52 +0100
 From: Till Kamppeter <till.kamppeter@gmail.com>
 MIME-Version: 1.0
 Content-Type: text/plain; charset=UTF-8; format=flowed
 Content-Transfer-Encoding: 7bit
-Subject: [Printing-architecture] OpenPrinting Summit 2009: Web site set up /
- Preparation phone meetings / Logistics / Agenda and Topics
+Subject: [Printing-architecture] Next OP SC - Mon/Tue - 5/6 January 2008
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -15,61 +14,33 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: "'printing-summit@lists.linux-foundation.org'" <printing-summit@lists.linux-foundation.org>, "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>, Printing-japan <printing-japan@lists.linux-foundation.org>, OpenICC Liste <openicc@lists.freedesktop.org>
+To: Open Printing <printing-architecture@lists.linux-foundation.org>, Printing-japan <printing-japan@lists.linux-foundation.org>
 
 Hi,
 
-I have some more news about the OpenPrinting Summit:
+The next Open Printing Steering Committee meeting will be on:
 
+    - Monday 2 February 2009, Evening
+       - US
+         3pm in San Francisco - US PST (Pacific Standard Time)
+         4pm in Colorado - US MST (Mountain Standard Time)
+         5pm in Chicago - US CST (Central Standard Time)
+         6pm in New York - US EST (Eastern Standard Time)
 
-OpenPrinting Summit web site
-----------------------------
+     - Tuesday 3 February 2009, Morning
+       - Europe
+         12am in Berlin - CET (Central European Time)
+       - Japan
+         8am in Tokyo - JST (Japan Standard Time)
 
-I have set up the web site for the Summit now:
+     * Main Number (InstantConference.com)
+       International: +1-218-936-7999
+       Access Code:   491659#
 
-https://www.linuxfoundation.org/en/OpenPrinting/OpenPrinting_Summit_San_Francisco_2009
+Main topic will be to the organization of the OpenPrinting
+Summit 2009 in San Francisco.
 
-You find everything here at one place. And note that it is a Wiki, so 
-you can edit things where applicable.
-
-
-Preparation phone meetings
---------------------------
-
-I have scheduled 4 preparation conference calls for the event. They will 
-be on Thursdays, in the morning in the US and in the afternoon in 
-Europe. Note that Daylight Saving Time starts in March and so the 
-difference between local hours varies:
-
-Dates:
-
-   * February 12: 8am San Francisco, 11am New York, 5pm Berlin (4pm UTC)
-   * March 12, 26: 9am San Francisco, noon New York, 5pm Berlin (4pm UTC)
-   * April 2: 8am San Francisco, 11am New York, 5pm Berlin (3pm UTC)
-
-Dial-in number: +1-218-936-7999
-Access code: 491659#
-
-If not otherwise stated the same dial-in number and access code will be 
-used for all preparation conference calls and also for dialing into the 
-Printing Summit itself.
-
-
-Logistics
----------
-
-Everything about the event logistics is now posted on the web site. In 
-addition, see also the site of the Linux Foundation Collaboration 
-Summit, as OpenPrinting Summit will take place as a part of it.
-
-http://events.linuxfoundation.org/events/collaboration-summit
-
-
-Agenda and Topics
------------------
-
-Please make any suggestions for agenda and topics here on the list so 
-that we can discuss them.
-
+Please call-in and join us.
 
     Till
+
