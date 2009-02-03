@@ -1,13 +1,11 @@
-Message-ID: <49884253.8030207@gmail.com>
-Date: Tue, 03 Feb 2009 14:10:43 +0100
+Message-ID: <49884D71.6030800@gmail.com>
+Date: Tue, 03 Feb 2009 14:58:09 +0100
 From: Till Kamppeter <till.kamppeter@gmail.com>
 MIME-Version: 1.0
-References: <e395be80811270817n502ccd16wf6cc90f85364f5ae@mail.gmail.com>
-In-Reply-To: <e395be80811270817n502ccd16wf6cc90f85364f5ae@mail.gmail.com>
 Content-Type: text/plain; charset=UTF-8; format=flowed
 Content-Transfer-Encoding: 7bit
-Subject: [Printing-architecture] Last OP SC - Mon/Tue - 2/3 February 2009 -
-	The Recording
+Subject: [Printing-architecture] OpenPrinting Summit 2009: Schedules changed
+ for preparation phone meetings
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -17,20 +15,24 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Open Printing <printing-architecture@lists.linux-foundation.org>, Printing-japan <printing-japan@lists.linux-foundation.org>
+To: "'printing-summit@lists.linux-foundation.org'" <printing-summit@lists.linux-foundation.org>, "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>, Printing-japan <printing-japan@lists.linux-foundation.org>, OpenICC Liste <openicc@lists.freedesktop.org>
 
 Hi,
 
-I have uploaded the recording of the last OP Steering Committee meeting
-to the OpenPrinting server:
+I have moved the schedules for the 4 preparation conference calls for 
+the event. They will now be on Tuesdays, in the morning in the US and in 
+the afternoon in Europe, two days earlier than the original schedules 
+and one hour later at the day.
 
-http://www.openprinting.org/download/meetingnotes/op-steering-committee/OP-SC-Meeting-20090202.mp3
+Dates:
 
-In general, recorded meetings I will upload to
+   * February 10: 9am San Francisco, noon New York, 6pm Berlin (5pm UTC)
+   * March 10: 10am San Francisco, 1pm New York, 6pm Berlin (5pm UTC)
+   * March 24: 10am San Francisco, 1pm New York, 6pm Berlin (5pm UTC)
+   * March 31: 9am San Francisco, noon New York, 6pm Berlin (4pm UTC)
 
-http://www.openprinting.org/download/meetingnotes/
+Dial-in number: +1-218-936-7999
+Access code: 491659#
 
     Till
-
-P. S.: The MP3 is 30 MB long, 1 hour, 26 minutes of talking.
 
