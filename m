@@ -1,12 +1,13 @@
-Message-ID: <498F761D.40305@gmail.com>
-Date: Mon, 09 Feb 2009 01:17:33 +0100
-From: Till Kamppeter <till.kamppeter@gmail.com>
 MIME-Version: 1.0
-References: <fb0caef70902060814h1dc66c78se0d54f9c48243c82@mail.gmail.com>
-In-Reply-To: <fb0caef70902060814h1dc66c78se0d54f9c48243c82@mail.gmail.com>
-Content-Type: text/plain; charset=UTF-8; format=flowed
+In-Reply-To: <49884D71.6030800@gmail.com>
+References: <49884D71.6030800@gmail.com>
+Date: Mon, 9 Feb 2009 17:38:02 -0500
+Message-ID: <e395be80902091438k17e362b0u1a9dfa3414676666@mail.gmail.com>
+From: Ira McDonald <blueroofmusic@gmail.com>
+Content-Type: text/plain; charset=ISO-8859-1
 Content-Transfer-Encoding: 7bit
-Subject: [Printing-architecture] OpenPrinting Summit Agenda
+Subject: Re: [Printing-architecture] OpenPrinting Summit 2009: Schedules
+	changed for preparation phone meetings
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -16,42 +17,42 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: "'printing-summit@lists.linux-foundation.org'" <printing-summit@lists.linux-foundation.org>, "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>, Printing-japan <printing-japan@lists.linux-foundation.org>
-Cc: "C. Craig Ross" <ccr@linuxfoundation.org>
+To: Till Kamppeter <till.kamppeter@gmail.com>, Ira McDonald <blueroofmusic@gmail.com>
+Cc: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>, Printing-japan <printing-japan@lists.linux-foundation.org>, OpenICC Liste <openicc@lists.freedesktop.org>, "printing-summit@lists.linux-foundation.org" <printing-summit@lists.linux-foundation.org>
 
 Hi,
 
-we need to put together a preliminary agenda as soon as possible. At 
-least we will need a list of the most important topics, participants, 
-and presentations by the end of this week (Fri, Feb 13). This is needed 
-for the announcement of speaker lineup of the LF Collab Summit. See below.
+Reminder of Open Printing Summit planning teleconference tomorrow
 
-As we are doing the OpenPrinting Summit over all the three days and as 
-we do more discussion than presentations, we will not need to fix the 
-hours for each of our sessions, but at least get together a list of 
-highlights for the OpenPrinting Summit, as for example the most 
-important participants.
+February 10: 9am San Francisco, noon New York, 6pm Berlin (5pm UTC)
 
-Therefore we need anyone who has an important position in the printing 
-stack to tell us quickly whether he will attend, and also if he has 
-anything special to present and what.
+Cheers,
+- Ira
 
-See also the message cited below.
+Till - please forward to lists that I may not be subscribed to - thanks.
 
-    Till
-
-
-C. Craig Ross wrote:
-> Requirements for Session Leads:
-> 1. Organizing a list of presentations and speakers for your session.
-> 2. Inviting the appropriate people to the Collaboration Summit to speak
-> and attend your session.
-> 3. Preparing the schedule for your session.
-> 4. Making sure that we (LF) have all of the necessary abstracts and
-> information for the agenda.
-> 
-> We would like to have the majority of the topics and speakers confirmed
-> by Friday, February 13th so that we can publish the schedule and
-> announce the lineup for the Collaboration Summit.  Please do your best
-> to get your material prepared as quickly as possible.
-
+On Tue, Feb 3, 2009 at 8:58 AM, Till Kamppeter <till.kamppeter@gmail.com> wrote:
+> Hi,
+>
+> I have moved the schedules for the 4 preparation conference calls for
+> the event. They will now be on Tuesdays, in the morning in the US and in
+> the afternoon in Europe, two days earlier than the original schedules
+> and one hour later at the day.
+>
+> Dates:
+>
+>   * February 10: 9am San Francisco, noon New York, 6pm Berlin (5pm UTC)
+>   * March 10: 10am San Francisco, 1pm New York, 6pm Berlin (5pm UTC)
+>   * March 24: 10am San Francisco, 1pm New York, 6pm Berlin (5pm UTC)
+>   * March 31: 9am San Francisco, noon New York, 6pm Berlin (4pm UTC)
+>
+> Dial-in number: +1-218-936-7999
+> Access code: 491659#
+>
+>    Till
+>
+> _______________________________________________
+> Printing-architecture mailing list
+> Printing-architecture@lists.linux-foundation.org
+> https://lists.linux-foundation.org/mailman/listinfo/printing-architecture
+>
