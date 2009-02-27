@@ -1,10 +1,12 @@
-Message-ID: <49A83B3C.4060909@gmail.com>
-Date: Fri, 27 Feb 2009 16:13:00 -0300
+Message-ID: <49A843CA.2010703@gmail.com>
+Date: Fri, 27 Feb 2009 16:49:30 -0300
 From: Till Kamppeter <till.kamppeter@gmail.com>
 MIME-Version: 1.0
 References: <49A81F7B.5010903@gmail.com>
 	<8B8709E6C8B8784583FA9C7C013CB4515BEDB0@etd1.etd.ussj.ricoh.com>
-In-Reply-To: <8B8709E6C8B8784583FA9C7C013CB4515BEDB0@etd1.etd.ussj.ricoh.com>
+	<49A83B3C.4060909@gmail.com>
+	<8B8709E6C8B8784583FA9C7C013CB4515BEDB2@etd1.etd.ussj.ricoh.com>
+In-Reply-To: <8B8709E6C8B8784583FA9C7C013CB4515BEDB2@etd1.etd.ussj.ricoh.com>
 Content-Type: text/plain; charset=UTF-8; format=flowed
 Content-Transfer-Encoding: 7bit
 Subject: Re: [Printing-architecture] REMINDER: Project ideas for the
@@ -22,18 +24,28 @@ To: George Liu <george.liu@ricoh-tech.com>
 Cc: printing-architecture@lists.linux-foundation.org
 
 George Liu wrote:
-> The attached picture shows my understanding of the phase 1 of Common
-> Print Dialog Project. 
-> Is my understanding correct? The yellowish color section done by Lars?
+>> Lars is ... patching the toolkits to get the D-Bus interface in.
+> 
+> 1. Does it mean that the GTK+ Print dialog portion will be moved out of GTK+ library and be build into a utility (stand alone program)?
 
-Yes, it is exactly that. Lars is currently working on it. He is patching 
-the toolkits to get the D-Bus interface in.
+The print dialog will stay in GTK+. There will only get the D-Bus 
+interface inserted so that the GTK+ dialog can easily get replaced by 
+another dialog.
 
-Lars, what is your progress on that?
+> 2. Does GTK+ tool kit currently depends on D-Bus(libdbus)?
 
-The CPDAPI 2.0 (the preview support) is subject of the Google Summer of 
-Code 2009. Students should implement the preview in the GTK and Qt 
-implementations of the dialog and they should patch applications to use 
-the D-Bus interface directly.
+I don't know. Perhaps it uses D-Bus already for other things.
+
+> 3. What if there's no D-Bus Daemon on the distribution (Nokia Tablet, which uses Gtk+ tool kit, for example). Any fall-back solutions?
+
+The D-Bus part will be ptional. You will be able to build GTK+ with and 
+without D-Bus. Or there will be a fallback. If the dialog is called and 
+no dialog gets found via D-Bus one could do a fallback to the native 
+GTK+ dialog.
+
+> 4. How to register my CPDAPI server application with D-Bus? (Switch from gtk+ print dialog to QT print dialog, for example)
+
+Here I cannot help. Lars? Can you answer this question?
 
     Till
+
