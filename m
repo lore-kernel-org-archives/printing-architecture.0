@@ -1,11 +1,14 @@
-Message-ID: <49A81F7B.5010903@gmail.com>
-Date: Fri, 27 Feb 2009 14:14:35 -0300
+Message-ID: <49A83B3C.4060909@gmail.com>
+Date: Fri, 27 Feb 2009 16:13:00 -0300
 From: Till Kamppeter <till.kamppeter@gmail.com>
 MIME-Version: 1.0
+References: <49A81F7B.5010903@gmail.com>
+	<8B8709E6C8B8784583FA9C7C013CB4515BEDB0@etd1.etd.ussj.ricoh.com>
+In-Reply-To: <8B8709E6C8B8784583FA9C7C013CB4515BEDB0@etd1.etd.ussj.ricoh.com>
 Content-Type: text/plain; charset=UTF-8; format=flowed
 Content-Transfer-Encoding: 7bit
-Subject: [Printing-architecture] REMINDER: Project ideas for the Google
-	Summer of Code 2009
+Subject: Re: [Printing-architecture] REMINDER: Project ideas for the
+ GoogleSummer of Code 2009
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -15,36 +18,22 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Linus Torvalds <torvalds@linux-foundation.org>, Rik van Riel <riel@redhat.com>, Pekka Enberg <penberg@cs.helsinki.fi>, Casey Schaufler <casey@schaufler-ca.com>, "lsb-discuss@lists.linux-foundation.org" <lsb-discuss@lists.linux-foundation.org>, lf_driver_backport@lists.linux-foundation.org, Linux Foundation Staff <lf_staff@lists.linux-foundation.org>, "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>
+To: George Liu <george.liu@ricoh-tech.com>
+Cc: printing-architecture@lists.linux-foundation.org
 
-Hi,
+George Liu wrote:
+> The attached picture shows my understanding of the phase 1 of Common
+> Print Dialog Project. 
+> Is my understanding correct? The yellowish color section done by Lars?
 
-I will do the application for the Linux Foundation as mentoring 
-organization in the Google Summer of Code again.
+Yes, it is exactly that. Lars is currently working on it. He is patching 
+the toolkits to get the D-Bus interface in.
 
-Here is our project ideas list:
+Lars, what is your progress on that?
 
-https://www.linuxfoundation.org/en/Google_Summer_of_Code_2009
-
-Please add also your project ideas. The more we have the better our 
-chances to get accepted as mentoring organization again (note that they 
-will accept less mentoring organizations and students this year). There 
-are only project ideas for OpenPrinting yet. Please add a section for 
-your workgroup if there is none yet.
-
-Deadline for our application is March 13. Please have your ideas posted 
-some days before.
-
-More info about the Google Summer of Code:
-
-http://code.google.com/soc/
-http://code.google.com/opensource/gsoc/2009/faqs.html
-
-The FAQs (second link) describe the whole procedure with complete timeline.
-
-Feel free to ask me in case of any question.
-
-I also need a co-administrator, who will replace me if I am not 
-available during the GSoC. Volunteers please mail.
+The CPDAPI 2.0 (the preview support) is subject of the Google Summer of 
+Code 2009. Students should implement the preview in the GTK and Qt 
+implementations of the dialog and they should patch applications to use 
+the D-Bus interface directly.
 
     Till
