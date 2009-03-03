@@ -1,10 +1,12 @@
-Content-class: urn:content-classes:message
 MIME-Version: 1.0
-Content-Type: multipart/mixed; boundary="----_=_NextPart_001_01C99B8E.81C55DD3"
-Date: Mon, 2 Mar 2009 15:29:31 -0800
-Message-ID: <ED4094DE5E8ACD4BBDACA6AD398E608F379725@EEAEX03.us.epson.net>
-From: "Petrie, Glen" <glen.petrie@eitc.epson.com>
-Subject: [Printing-architecture] test -
+In-Reply-To: <e395be80902101125v2475f7b3g72247b617d46864d@mail.gmail.com>
+References: <e395be80902101125v2475f7b3g72247b617d46864d@mail.gmail.com>
+Date: Tue, 3 Mar 2009 17:59:39 -0500
+Message-ID: <e395be80903031459y40096a52uca0ac47ae80dfa7@mail.gmail.com>
+From: Ira McDonald <blueroofmusic@gmail.com>
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+Subject: Re: [Printing-architecture] Next OP SC - Mon/Tue 9/10 March 2009
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -14,178 +16,51 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: printing-architecture@lists.linux-foundation.org
+To: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>, Ira McDonald <blueroofmusic@gmail.com>
 
-This is a multi-part message in MIME format.
-
-------_=_NextPart_001_01C99B8E.81C55DD3
-Content-Type: multipart/alternative;
-	boundary="----_=_NextPart_002_01C99B8E.81C55DD3"
+REMINDER for next week
 
 
-------_=_NextPart_002_01C99B8E.81C55DD3
-Content-Type: text/plain;
-	charset="us-ascii"
-Content-Transfer-Encoding: quoted-printable
-
-=20
-
-
-------_=_NextPart_002_01C99B8E.81C55DD3
-Content-Type: text/html;
-	charset="us-ascii"
-Content-Transfer-Encoding: quoted-printable
-
-<html xmlns:o=3D"urn:schemas-microsoft-com:office:office" =
-xmlns:w=3D"urn:schemas-microsoft-com:office:word" =
-xmlns=3D"http://www.w3.org/TR/REC-html40">
-
-<head>
-<META HTTP-EQUIV=3D"Content-Type" CONTENT=3D"text/html; =
-charset=3Dus-ascii">
-<meta name=3DGenerator content=3D"Microsoft Word 11 (filtered medium)">
-<style>
-<!--
- /* Style Definitions */
- p.MsoNormal, li.MsoNormal, div.MsoNormal
-	{margin:0in;
-	margin-bottom:.0001pt;
-	font-size:12.0pt;
-	font-family:"Times New Roman";}
-a:link, span.MsoHyperlink
-	{color:blue;
-	text-decoration:underline;}
-a:visited, span.MsoHyperlinkFollowed
-	{color:purple;
-	text-decoration:underline;}
-span.EmailStyle17
-	{mso-style-type:personal-compose;
-	font-family:Arial;
-	color:windowtext;}
-@page Section1
-	{size:8.5in 11.0in;
-	margin:1.0in 1.25in 1.0in 1.25in;}
-div.Section1
-	{page:Section1;}
--->
-</style>
-
-</head>
-
-<body lang=3DEN-US link=3Dblue vlink=3Dpurple>
-
-<div class=3DSection1>
-
-<p class=3DMsoNormal><font size=3D2 face=3DArial><span =
-style=3D'font-size:10.0pt;
-font-family:Arial'><o:p>&nbsp;</o:p></span></font></p>
-
-</div>
-
-</body>
-
-</html>
-
-------_=_NextPart_002_01C99B8E.81C55DD3--
-
-------_=_NextPart_001_01C99B8E.81C55DD3
-Content-Type: image/jpeg;
-	name="00-03.jpg"
-Content-Transfer-Encoding: base64
-Content-Description: 00-03.jpg
-Content-Disposition: attachment;
-	filename="00-03.jpg"
-
-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
-
-------_=_NextPart_001_01C99B8E.81C55DD3--
+On Tue, Feb 10, 2009 at 2:25 PM, Ira McDonald <blueroofmusic@gmail.com> wro=
+te:
+> Hi,
+>
+> Till has conflicts for the first Monday in March.
+>
+> Therefore, we will hold our next Open Printing Steering
+> Committee teleconference in the second week of March
+> (see below).
+>
+> March OP SC Agenda will be:
+> - Open Printing Japan Report
+> =A0- project status and issues
+>
+> - Google Summer of Code (GSoC) 2009
+> =A0- final OP topics/mentors
+>
+> - Open Printing Summit (OPS)
+> =A0- input from OP Japan members for OPS Agenda Planning
+> =A0 =A0teleconference on Tuesday 12 March 12pm UST EST
+>
+> Next OP Steering Committee times:
+>
+> =A09/10 March - 8am JST Tuesday morning in Japan
+>
+> =A0skip April - OPS teleconferences instead
+>
+> =A04/5 May - 8am JST Tuesday morning in Japan
+>
+> Cheers,
+> - Ira
+>
+> Ira McDonald (Musician / Software Architect)
+> Chair - Linux Foundation Open Printing WG
+> Blue Roof Music/High North Inc
+> email: blueroofmusic@gmail.com
+> winter:
+> =A0579 Park Place =A0Saline, MI =A048176
+> =A0734-944-0094
+> summer:
+> =A0PO Box 221 =A0Grand Marais, MI 49839
+> =A0906-494-2434
+>
