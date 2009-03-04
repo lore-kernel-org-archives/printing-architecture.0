@@ -1,12 +1,10 @@
 MIME-Version: 1.0
-In-Reply-To: <e395be80902101125v2475f7b3g72247b617d46864d@mail.gmail.com>
-References: <e395be80902101125v2475f7b3g72247b617d46864d@mail.gmail.com>
-Date: Tue, 3 Mar 2009 17:59:39 -0500
-Message-ID: <e395be80903031459y40096a52uca0ac47ae80dfa7@mail.gmail.com>
+Date: Wed, 4 Mar 2009 14:03:22 -0500
+Message-ID: <e395be80903041103s1034d97bob2cc851e572bab46@mail.gmail.com>
 From: Ira McDonald <blueroofmusic@gmail.com>
 Content-Type: text/plain; charset=ISO-8859-1
-Content-Transfer-Encoding: quoted-printable
-Subject: Re: [Printing-architecture] Next OP SC - Mon/Tue 9/10 March 2009
+Content-Transfer-Encoding: 7bit
+Subject: [Printing-architecture] Next OP SC Agenda - Mon/Tue 9/10 March
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -16,51 +14,51 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>, Ira McDonald <blueroofmusic@gmail.com>
+To: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>, Till Kamppeter <till.kamppeter@gmail.com>, Ira McDonald <blueroofmusic@gmail.com>
 
-REMINDER for next week
+Hi,
 
+*** Daylight Saving Time starts on Sunday 8 March in the US ***
+*** Daylight Saving Time starts on Sunday 29 March in Europe ***
 
-On Tue, Feb 10, 2009 at 2:25 PM, Ira McDonald <blueroofmusic@gmail.com> wro=
-te:
-> Hi,
->
-> Till has conflicts for the first Monday in March.
->
-> Therefore, we will hold our next Open Printing Steering
-> Committee teleconference in the second week of March
-> (see below).
->
-> March OP SC Agenda will be:
-> - Open Printing Japan Report
-> =A0- project status and issues
->
-> - Google Summer of Code (GSoC) 2009
-> =A0- final OP topics/mentors
->
-> - Open Printing Summit (OPS)
-> =A0- input from OP Japan members for OPS Agenda Planning
-> =A0 =A0teleconference on Tuesday 12 March 12pm UST EST
->
-> Next OP Steering Committee times:
->
-> =A09/10 March - 8am JST Tuesday morning in Japan
->
-> =A0skip April - OPS teleconferences instead
->
-> =A04/5 May - 8am JST Tuesday morning in Japan
->
-> Cheers,
-> - Ira
->
-> Ira McDonald (Musician / Software Architect)
-> Chair - Linux Foundation Open Printing WG
-> Blue Roof Music/High North Inc
-> email: blueroofmusic@gmail.com
-> winter:
-> =A0579 Park Place =A0Saline, MI =A048176
-> =A0734-944-0094
-> summer:
-> =A0PO Box 221 =A0Grand Marais, MI 49839
-> =A0906-494-2434
->
+The next Open Printing Steering Committee meeting will be on:
+
+   - Monday 9 March 2009, Evening
+      - US
+        4pm in San Francisco - US PDT (Pacific Daylight Time)
+        5pm in Colorado - US MDT (Mountain Daylight Time)
+        6pm in Chicago - US CDT (Central Daylight Time)
+        7pm in New York - US EDT (Eastern Daylight Time)
+
+    - Tuesday 10 March 2009, Morning
+      - Europe
+        12am in Berlin - CET (Central European Time)
+      - Japan
+        8am in Tokyo - JST (Japan Standard Time)
+
+    * Main Number (InstantConference.com)
+      International: +1-218-936-7999
+      Access Code:   491659#
+
+Main topics will be the organization of the OpenPrinting
+Summit 2009 in San Francisco, Google Summer of Code,
+and project status from Open Printing Japan.
+
+The next OP Summit planning teleconference will be the
+next day (Tuesday in the US and Europe).
+
+Please call-in and join us.
+
+Cheers,
+- Ira and Till
+
+Ira McDonald (Musician / Software Architect)
+Chair - Linux Foundation Open Printing WG
+Blue Roof Music/High North Inc
+email: blueroofmusic@gmail.com
+winter:
+  579 Park Place  Saline, MI  48176
+  734-944-0094
+summer:
+  PO Box 221  Grand Marais, MI 49839
+  906-494-2434
