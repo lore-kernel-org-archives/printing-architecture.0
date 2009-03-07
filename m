@@ -1,10 +1,11 @@
 MIME-Version: 1.0
-Date: Wed, 4 Mar 2009 14:03:22 -0500
-Message-ID: <e395be80903041103s1034d97bob2cc851e572bab46@mail.gmail.com>
+Date: Fri, 6 Mar 2009 21:38:27 -0500
+Message-ID: <e395be80903061838g6d0be29cl30ed6c2146c1fcfc@mail.gmail.com>
 From: Ira McDonald <blueroofmusic@gmail.com>
 Content-Type: text/plain; charset=ISO-8859-1
-Content-Transfer-Encoding: 7bit
-Subject: [Printing-architecture] Next OP SC Agenda - Mon/Tue 9/10 March
+Content-Transfer-Encoding: quoted-printable
+Subject: [Printing-architecture] Tue 10 March - OpenPrinting Summit 2009
+	preparation telecon
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -14,43 +15,17 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>, Till Kamppeter <till.kamppeter@gmail.com>, Ira McDonald <blueroofmusic@gmail.com>
+To: Till Kamppeter <till.kamppeter@gmail.com>, "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>, Ira McDonald <blueroofmusic@gmail.com>
 
 Hi,
 
-*** Daylight Saving Time starts on Sunday 8 March in the US ***
-*** Daylight Saving Time starts on Sunday 29 March in Europe ***
+Reminder of our next OP Summit preparation teleconference
 
-The next Open Printing Steering Committee meeting will be on:
-
-   - Monday 9 March 2009, Evening
-      - US
-        4pm in San Francisco - US PDT (Pacific Daylight Time)
-        5pm in Colorado - US MDT (Mountain Daylight Time)
-        6pm in Chicago - US CDT (Central Daylight Time)
-        7pm in New York - US EDT (Eastern Daylight Time)
-
-    - Tuesday 10 March 2009, Morning
-      - Europe
-        12am in Berlin - CET (Central European Time)
-      - Japan
-        8am in Tokyo - JST (Japan Standard Time)
-
-    * Main Number (InstantConference.com)
-      International: +1-218-936-7999
-      Access Code:   491659#
-
-Main topics will be the organization of the OpenPrinting
-Summit 2009 in San Francisco, Google Summer of Code,
-and project status from Open Printing Japan.
-
-The next OP Summit planning teleconference will be the
-next day (Tuesday in the US and Europe).
-
-Please call-in and join us.
+  Tuesday 10 March
+  - 10am San Francisco, 1pm New York, 6pm Berlin (5pm UTC)
 
 Cheers,
-- Ira and Till
+- Ira
 
 Ira McDonald (Musician / Software Architect)
 Chair - Linux Foundation Open Printing WG
@@ -62,3 +37,32 @@ winter:
 summer:
   PO Box 221  Grand Marais, MI 49839
   906-494-2434
+
+
+
+On Tue, Feb 3, 2009 at 8:58 AM, Till Kamppeter <till.kamppeter@gmail.com> w=
+rote:
+> Hi,
+>
+> I have moved the schedules for the 4 preparation conference calls for
+> the event. They will now be on Tuesdays, in the morning in the US and in
+> the afternoon in Europe, two days earlier than the original schedules
+> and one hour later at the day.
+>
+> Dates:
+>
+> =A0 * February 10: 9am San Francisco, noon New York, 6pm Berlin (5pm UTC)
+> =A0 * March 10: 10am San Francisco, 1pm New York, 6pm Berlin (5pm UTC)
+> =A0 * March 24: 10am San Francisco, 1pm New York, 6pm Berlin (5pm UTC)
+> =A0 * March 31: 9am San Francisco, noon New York, 6pm Berlin (4pm UTC)
+>
+> Dial-in number: +1-218-936-7999
+> Access code: 491659#
+>
+> =A0 =A0Till
+>
+> _______________________________________________
+> Printing-architecture mailing list
+> Printing-architecture@lists.linux-foundation.org
+> https://lists.linux-foundation.org/mailman/listinfo/printing-architecture
+>
