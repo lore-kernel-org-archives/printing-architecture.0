@@ -1,13 +1,11 @@
-Content-class: urn:content-classes:message
+Message-ID: <49B8435D.40800@gmail.com>
+Date: Thu, 12 Mar 2009 00:03:57 +0100
+From: Till Kamppeter <till.kamppeter@gmail.com>
 MIME-Version: 1.0
-Content-Type: text/plain;
-	charset="iso-8859-1"
-Content-Transfer-Encoding: quoted-printable
-Date: Tue, 10 Mar 2009 16:17:22 -0700
-Message-ID: <ED4094DE5E8ACD4BBDACA6AD398E608F379820@EEAEX03.us.epson.net>
-From: "Petrie, Glen" <glen.petrie@eitc.epson.com>
-Subject: [Printing-architecture] Notes from Tue 10 March - OpenPrinting
-	Summit 2009preparation telecon
+Content-Type: text/plain; charset=UTF-8; format=flowed
+Content-Transfer-Encoding: 7bit
+Subject: [Printing-architecture] OpenPrinting Summit 2009: First cut of
+ putting the sessions into the days
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -17,138 +15,55 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: printing-architecture@lists.linux-foundation.org
+To: "'printing-summit@lists.linux-foundation.org'" <printing-summit@lists.linux-foundation.org>, "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>, Printing-japan <printing-japan@lists.linux-foundation.org>
 
-Glen Petrie
-Ira McDonald=20
-Till Kamppeter
-Hin-Tak Leung
+Hi,
 
-Set up schedule for the Summit
+please have a look at
 
-LSB
-Thursday - suggested day but don't have a time yet.
+https://www.linuxfoundation.org/en/OpenPrinting/OpenPrinting_Summit_San_Francisco_2009#Agenda
 
-Desktop
-Thursday - suggested day but don't have a time yet.
+The length of the sessions between the breaks given by the agenda of the 
+Linux Foundation Collaboration Summit 
+http://events.linuxfoundation.org/events/collaboration-summit/agenda/ 
+was not very friendly for fitting in the sessions we have talked about 
+on this Tuesday's planning phone meeting, but I have got it together.
 
-Driver Back-Plane
-Friday - suggested day but don't have a time yet.
+The topics most interesting for the printer vendors I have put onto the 
+Wednesday. Once, Nagasaki-san and Tak Shizoaki will probably only attend 
+the first day if they come, and second, I have put the sessions into the 
+afternoon, as this is the better time for Japaneses to call in (SF's 
+morning is in the middle of the night for Japan). See
 
+http://www.timeanddate.com/worldclock/meetingtime.html?month=4&day=9&year=2009&p1=224&p2=136&p3=37&p4=248
 
-Each person should notify Till on what there interest is.
+The second day is 3 hours color management and 3 hours Desktop printing. 
+The Joint meeting with the Desktop Architects should be scheduled as a 
+part of the desktop printing sessions in the afternoon. We can continue 
+the discussion in the breakout sessions of the third day.
 
-In Person
-	Till Kamppeter
-	Glen Petrie
-	George Lu ?
-	Peter Sikking
-	Lars Uebernickel
-	Hal Engel
-	Ralph Giles
-	Henry Stiles
-	Michael Vrtnel
-	Loye Young
-	Paul Tykodi=20
-	Jeremy Leones
+On the third day we will do the breakouts, and the joint meetings with 
+LSB and Driver Backports.
 
-Phone
-	Ira McDonald
-	Hin-Tak Leung
-	Dave Suffield
+I had to break the driver package part into two pieces, to make the 
+printer vendor part more accessible for the vendors (see reasoning for 
+the first day) and to be able to run a joint session with the Driver 
+Backports.
 
-Others
-	Michael Sweet
-	Olaf Meeuwissen
+Slight changes are possible, for example if one of the LF workgroups 
+does not agree with our schedule of their joint meeting, or if one of 
+you has problems to attend the sessions he desires to attend.
 
-=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D
- -- Introduction and Agenda Check
-	-- General=20
-	-- GSoC project summary
-	-- PWG Summary (maybe P2600)(very short presentation)
+Please tell what you think about the schedules and make suggestions if 
+you want to have something changed.
 
- -- Color Management
- 	-- A speaker will present his work on Ghostscript.
-	-- Color Management at the OS / Printer Level.
- 	-- 4 hours plus a break out.
-=20
- -- Upload driver
- 	-- 1 hour printer group
- 	-- 1 hour with back-plane groups
- 	-- 1 hour with distro's
- 	-- with breaks make it a half day
- 	-- Need agreement with distro's
-=20
- -- Self Printer Validation
- 	-- 1.5 hour (changed 1/2 day) on how to make it happen
-=20
- -- MFD Discussion
- 	-- 1 hours need a general discussion about MFD
- 		and is SANE what printer vendors wants...
-=20
- -- LSB Discussion
- 	-- What will go to in LSB for printing?
-	-- 1 hour
-=20
- -- Application Printing
- 	-- 2 Hours - How to do from
-=20
- -- Common Print Dialog
- 	-- Next Steps -=20
-	-- Embedded - Mobile/Handheld=20
-	-- 2 Hours=20
-=20
- -- Printing LSB
- 	-- Info done by Till
+If you want to give a presentation, edit the session where you want to 
+give it, and upload and link your slides as soon as you have them ready. 
+Slides should be uploaded before the event so that phone attendees can 
+easily follow your talk and attendees in general could prepare for the 
+discussion.
 
- -- Wrap up, Next Steps and Action Items
-	-- 1 hours
-=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D
+    Till
 
-Print Group -
-
-Suggest for Wednesday at
-9:00 - 9:30 Keynote=20
-9:30 - 10:30	1.00=20
-10:30 - 11:00
-11:00 - 11:45	0.75=20
-11:45 - 1:00
-1:00 - 2:45		1.75
-2:45 - 3:15
-3:15 - 5:00		1.75
-                --------
-Thursday
-9:00 - 10:15      1.25
-10:15 - 10:45
-10:45 - 12:00     1.25
-12:00 - 1:00
-1:00 - 3:00       2.00
-3:00 - 3:30      =20
-3:30 - 5:00       1.50
-
-Friday
-9:00 - 10:15      1.25
-10:15 - 10:45
-10:45 - 12:00     1.25
-12:00 - 1:00
-1:00 - 3:00       2.00
-3:00 - 3:30      =20
-3:30 - 4:30       1.00
-
-> >
-> > Dates:
-> >
-> > =A0 * February 10: 9am San Francisco, noon New York, 6pm Berlin (5pm =
-UTC)
-> > =A0 * March 10: 10am San Francisco, 1pm New York, 6pm Berlin (5pm =
-UTC)
-> > =A0 * March 24: 10am San Francisco, 1pm New York, 6pm Berlin (5pm =
-UTC)
-> > =A0 * March 31: 9am San Francisco, noon New York, 6pm Berlin (4pm =
-UTC)
-> >
-> > Dial-in number: +1-218-936-7999
-> > Access code: 491659#
-> >
 
 
