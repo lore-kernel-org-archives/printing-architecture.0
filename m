@@ -1,10 +1,11 @@
-Message-ID: <49B8D92D.5070402@gmail.com>
-Date: Thu, 12 Mar 2009 10:43:09 +0100
+Message-ID: <49C141D0.1050404@gmail.com>
+Date: Wed, 18 Mar 2009 19:47:44 +0100
 From: Till Kamppeter <till.kamppeter@gmail.com>
 MIME-Version: 1.0
 Content-Type: text/plain; charset=UTF-8; format=flowed
 Content-Transfer-Encoding: 7bit
-Subject: [Printing-architecture] OpenPrinting Summit 2009: Please register!!!
+Subject: [Printing-architecture] The Linux Foundation is accepted as a
+ Mentoring Organization for the Google Summer of Code 2009
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -14,40 +15,35 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Printing-japan <printing-japan@lists.linux-foundation.org>, "'printing-summit@lists.linux-foundation.org'" <printing-summit@lists.linux-foundation.org>, "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>
-Cc: Angela Brown <angela@linux-foundation.org>
+To: Tso Ted <tytso@MIT.EDU>, Jim Zemlin <jzemlin@linux-foundation.org>, Amanda McPherson <amanda@linux-foundation.org>, "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>, Printing-japan <printing-japan@lists.linux-foundation.org>, "lf_driver_backport@lists.linux-foundation.org" <lf_driver_backport@lists.linux-foundation.org>, Linux Foundation Staff <lf_staff@lists.linux-foundation.org>, "lsb-discuss@lists.linux-foundation.org" <lsb-discuss@lists.linux-foundation.org>, webdevel@linux-foundation.org
 
 Hi,
 
-up to now, only 9 (!) people have registered to attend the OpenPrinting 
-Summit. I assume that probably more people want to attend.
+we are accepted as a mentoring organization for the Google Summer of 
+Code 2009! Thanks to all of you for your support.
 
-So if you want to participate, please register on
+In one week Google will open for the student's applications, but already 
+now we should do everything to get good students to work on our 
+projects. So p[lease answer student's inquiries on prokect mailing lists 
+with priority and hang out on your project's IRC channel. Add any new 
+idea which you have for a student project immediately to the ideas list.
 
-http://events.linuxfoundation.org/component/registrationpro/?func=details&did=2
+If you want to mentor or if we have selected you as a mentor on the 
+ideas list, please
 
-and do not forget to mention "OpenPrinting" in your registration.
+1. Create a Google account if you have none. This does not require 
+having and using a gmail/googlemail e-Mail address.
 
-If you have already registered but did not appear in the atendees list 
-on http://events.linuxfoundation.org/events/collaboration-summit yet or 
-if you even got an e-mail rejecting your request, please tell me and 
-Angela Brown (CCed) immediately to resolve the issue (did you mention 
-"OpenPrinting" in your registration?).
+2. Go to http://socghop.appspot.com/, log in with your Google account 
+and create a profile for you.
 
-You can also register if you did not get a personal invitation from me.
+3. Tell me your link ID or apply as mentor for the Linux Foundation on 
+http://socghop.appspot.com/.
 
-If you are in doubt whether you really should participate, please have a 
-look at our agenda:
+As soon as I have your link idea or a notification about your mentor 
+application, I will invite/confirm you as a mentor.
 
-https://www.linuxfoundation.org/en/OpenPrinting/OpenPrinting_Summit_San_Francisco_2009
-
-And note that once attending the OpenPrinting Summit you can also attend 
-any session of the Linux Foundation Collaboration Summit:
-
-http://events.linuxfoundation.org/events/collaboration-summit/agenda/
-
-If you decide on participating by phone (OpenPrinting Summit sessions 
-only), please post here so that we know who will call in (and can wait 
-for you in the beginning of the appropriate sessions).
+And in general, please spread the news so that we get as many student 
+applications as possible.
 
     Till
