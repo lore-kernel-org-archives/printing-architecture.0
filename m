@@ -1,9 +1,12 @@
-Message-ID: <49CBDF45.8030708@gmail.com>
-Date: Thu, 26 Mar 2009 21:02:13 +0100
+Message-ID: <49CBDFA9.8050801@gmail.com>
+Date: Thu, 26 Mar 2009 21:03:53 +0100
 From: Till Kamppeter <till.kamppeter@gmail.com>
 MIME-Version: 1.0
-References: <49CAA2A1.6000906@gmail.com> <49CBABE5.6080305@redhat.com>
-In-Reply-To: <49CBABE5.6080305@redhat.com>
+References: <49CAA2A1.6000906@gmail.com>
+	<46089FAF7804194C8AD6458E272B07182173C29D89@GVW0676EXC.americas.hpqcorp.net>
+	<49CBDDCE.6000706@gmail.com>
+	<46089FAF7804194C8AD6458E272B07182173C29F51@GVW0676EXC.americas.hpqcorp.net>
+In-Reply-To: <46089FAF7804194C8AD6458E272B07182173C29F51@GVW0676EXC.americas.hpqcorp.net>
 Content-Type: text/plain; charset=UTF-8; format=flowed
 Content-Transfer-Encoding: 7bit
 Subject: Re: [Printing-architecture] [Printing-summit] OpenPrinting Summit
@@ -17,15 +20,12 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Tim Waugh <twaugh@redhat.com>
+To: "Yie, Shiyun" <shiyun.yie@hp.com>
 Cc: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>, Printing-japan <printing-japan@lists.linux-foundation.org>, Angela Brown <angela@linux-foundation.org>, "'printing-summit@lists.linux-foundation.org'" <printing-summit@lists.linux-foundation.org>
 
-Tim Waugh wrote:
-> I plan to call in to them.
+Yie, Shiyun wrote:
+> Dave or somebody else from the team will cover Friday. 
 
-OK. Especially important for your participation are the Friday afternoon 
-sessions about the agrrement about automatic driver downloads. Can you 
-participate in them?
+OK, thank you for the info.
 
     Till
-
