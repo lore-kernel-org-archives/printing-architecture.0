@@ -1,12 +1,11 @@
-Message-ID: <49CC1430.2080603@gmail.com>
-Date: Fri, 27 Mar 2009 00:48:00 +0100
-From: Till Kamppeter <till.kamppeter@gmail.com>
 MIME-Version: 1.0
+In-Reply-To: <49CC1430.2080603@gmail.com>
 References: <49CB60C5.8010608@bredband.net> <49CBD444.704@gmail.com>
-	<49CBE96B.8000202@bredband.net>
-In-Reply-To: <49CBE96B.8000202@bredband.net>
-Content-Type: text/plain; charset=UTF-8; format=flowed
-Content-Transfer-Encoding: 7bit
+	<49CBE96B.8000202@bredband.net> <49CC1430.2080603@gmail.com>
+Date: Thu, 26 Mar 2009 19:28:47 -0500
+Message-ID: <b801b6f40903261728h14e8b675m464f6cade51f5c96@mail.gmail.com>
+From: Alex Wauck <alex.wauck@gmail.com>
+Content-Type: multipart/alternative; boundary=0016364ece9ee9d99e04660ed0dc
 Subject: Re: [Printing-architecture] GSOC'09: Common Printing Dialog
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
@@ -17,57 +16,83 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Per Hermansson <hermansson.per@bredband.net>
+To: Till Kamppeter <till.kamppeter@gmail.com>
 Cc: printing-architecture@lists.linux-foundation.org
 
-Per Hermansson wrote:
-> I have seen the interface specification that was linked from the idea 
-> page. So the final version will be released soon, this sounds like 
-> excellent news.
+--0016364ece9ee9d99e04660ed0dc
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: 7bit
 
-OK, if you have questions about that, ask Peter Sikking (peter at 
-mmiworks dot net), leader of the development of this UI. You can also 
-call into the OpenPrinting Summit 2009 at Thursday, April 9 in the 
-afternoon PST and participate in the discussion about the newest state 
-of the dialog (or attend personally if you are near San Francisco then).
-
-https://www.linuxfoundation.org/en/OpenPrinting/OpenPrinting_Summit_San_Francisco_2009
-
-> I like both tasks but the first one will probably be easier to implement 
-> since modifying patching other applications is difficult estimate how 
-> much time it takes. Although it would be and probably not to difficult 
-> to try as Alex said with an application like Evince.
 >
+> Yes, my original idea was to have one student finishing the two dialogs
+> and another patching the applications (see ideas list), but it is no
+> problem for example if one student does the GTK dialog and patches the
+> GTK apps and the second does the KDE dialog and patches the KDE apps.
+> And if we get only applications for the dialog stuff and nothing for
+> JTAPI, drivers and whatever we offered, we can even put a third student
+> onto the dialog. We also can move around work tasks during the GSoC
+> (this we did last year as it turned out that Lars got the CPDAPI quickly
+> together, so he did also the GTK version of the dialog which the other
+> student on the CPD was supposed to do, but the the Qt dialog turned out
+> to be more work than expected).
 
-OK.
 
-> I'm not sure if either GTK or Qt implementation needs the most work? If 
-> Alex is focusing on the KDE dialog it would seem logical to start with 
-> the GTK implementation. But working with Qt would be fun too, I'm a 
-> quick learner and will probably have some extra time until the summer 
-> starts to get into deep with Qt.
-> I've downloaded and tested the cpdapi code from the Bazar branch and it 
-> looked very nice but I guess both toolkit versions have to be modified 
-> to follow the OpenUsability design?
+Interesting.  I don't recall being expected to do the GTK dialog.  At any
+rate, it should be easier to do other implementations now that we have an
+existing implementation.  I would say the hardest part is the interface to
+CUPS.  Since CUPS has a semi-object-oriented C API, producing an idiomatic
+Qt interface for it is decidedly non-trivial.  Someone familiar with GLib
+may find it easier to think in that way, and hence have an easier time with
+it.
+
+The next hardest part is making the custom widgets (like the option grid)
+and making them look good.  I'm not much of an artist, so I tried to reuse
+existing widgets as much as possible, but that didn't look the way Peter
+wanted it too.  I still haven't produced a widget that looks right.  The
+spec says that the widget toolkit's native grid widget should be used, but
+Qt's grid widget is not designed for such use and would look really weird.
+
+Lastly, I ran into a very strange QGraphicsView layout issue that seemed to
+occur on every computer except for mine.  Hopefully, there won't be any of
+that this year.
+
+Alex
+
+--0016364ece9ee9d99e04660ed0dc
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+<div class=3D"gmail_quote"><blockquote class=3D"gmail_quote" style=3D"borde=
+r-left: 1px solid rgb(204, 204, 204); margin: 0pt 0pt 0pt 0.8ex; padding-le=
+ft: 1ex;">Yes, my original idea was to have one student finishing the two d=
+ialogs<br>
+
+and another patching the applications (see ideas list), but it is no<br>
+problem for example if one student does the GTK dialog and patches the<br>
+GTK apps and the second does the KDE dialog and patches the KDE apps.<br>
+And if we get only applications for the dialog stuff and nothing for<br>
+JTAPI, drivers and whatever we offered, we can even put a third student<br>
+onto the dialog. We also can move around work tasks during the GSoC<br>
+(this we did last year as it turned out that Lars got the CPDAPI quickly<br=
 >
+together, so he did also the GTK version of the dialog which the other<br>
+student on the CPD was supposed to do, but the the Qt dialog turned out<br>
+to be more work than expected).</blockquote><div><br>Interesting.=A0 I don&=
+#39;t recall being expected to do the GTK dialog.=A0 At any rate, it should=
+ be easier to do other implementations now that we have an existing impleme=
+ntation.=A0 I would say the hardest part is the interface to CUPS.=A0 Since=
+ CUPS has a semi-object-oriented C API, producing an idiomatic Qt interface=
+ for it is decidedly non-trivial.=A0 Someone familiar with GLib may find it=
+ easier to think in that way, and hence have an easier time with it.<br>
+</div></div><br>The next hardest part is making the custom widgets (like th=
+e option grid) and making them look good.=A0 I&#39;m not much of an artist,=
+ so I tried to reuse existing widgets as much as possible, but that didn&#3=
+9;t look the way Peter wanted it too.=A0 I still haven&#39;t produced a wid=
+get that looks right.=A0 The spec says that the widget toolkit&#39;s native=
+ grid widget should be used, but Qt&#39;s grid widget is not designed for s=
+uch use and would look really weird.<br>
+<br>Lastly, I ran into a very strange QGraphicsView layout issue that seeme=
+d to occur on every computer except for mine.=A0 Hopefully, there won&#39;t=
+ be any of that this year.<br><br>Alex<br>
 
-Yes, they are both incomplete and your task is to complete them.
-
-> Also as I understand it both tasks (implementing the OpenUsablility 
-> design and porting desktop applications) can be done independently of 
-> each other?
-> 
-
-Yes, my original idea was to have one student finishing the two dialogs 
-and another patching the applications (see ideas list), but it is no 
-problem for example if one student does the GTK dialog and patches the 
-GTK apps and the second does the KDE dialog and patches the KDE apps. 
-And if we get only applications for the dialog stuff and nothing for 
-JTAPI, drivers and whatever we offered, we can even put a third student 
-onto the dialog. We also can move around work tasks during the GSoC 
-(this we did last year as it turned out that Lars got the CPDAPI quickly 
-together, so he did also the GTK version of the dialog which the other 
-student on the CPD was supposed to do, but the the Qt dialog turned out 
-to be more work than expected).
-
-    Till
+--0016364ece9ee9d99e04660ed0dc--
