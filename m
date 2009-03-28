@@ -1,14 +1,14 @@
-Message-ID: <49CCEBEB.7070208@gmail.com>
-Date: Fri, 27 Mar 2009 11:08:27 -0400
-From: Svilen Kanev <mighty.frost@gmail.com>
+Message-ID: <49CE21F2.5080102@bredband.net>
+Date: Sat, 28 Mar 2009 14:11:14 +0100
+From: Per Hermansson <hermansson.per@bredband.net>
 MIME-Version: 1.0
-References: <49CC84E5.8030604@gmail.com> <1238145837.5930.37.camel@chimera>
-	<49CCA000.2020908@gmail.com>
-In-Reply-To: <49CCA000.2020908@gmail.com>
-Content-Type: text/plain; charset=UTF-8; format=flowed
+References: <49CB60C5.8010608@bredband.net> <49CBD444.704@gmail.com>	
+	<49CBE96B.8000202@bredband.net> <49CC1430.2080603@gmail.com>
+	<b801b6f40903261728h14e8b675m464f6cade51f5c96@mail.gmail.com>
+In-Reply-To: <b801b6f40903261728h14e8b675m464f6cade51f5c96@mail.gmail.com>
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
 Content-Transfer-Encoding: 7bit
-Subject: Re: [Printing-architecture] GSoC 09: Modifying applications to use
- the new printing dialog
+Subject: Re: [Printing-architecture] GSOC'09: Common Printing Dialog
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -18,63 +18,99 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Till Kamppeter <till.kamppeter@gmail.com>
-Cc: printing-architecture@lists.linux-foundation.org
+To: printing-architecture@lists.linux-foundation.org
 
-Till Kamppeter wrote:
-> Lars Uebernickel wrote:
->> I am currently working on getting support for the dialog into GTK/Qt
->> themselves. This means that applications might be able to use it right
->> away. I hope this will be the preferred way for applications to use the
->> dialog (via their toolkit, not an external dependency).
->>
->> However, many applications (e.g. GIMP, Firefox) provide custom widgets
->> for the dialog, which set application specific options (e.g. the
->> "options" Tab in Firefox). Naturally, this doesn't work over D-Bus ...
->> Therefore, we have a way for applications to send option specifications
->> (such as the name, type, default value of the option) over the bus to
->> the common printing dialog. So they would have to be modified in such a
->> way that they do not make use of the 'custom widget' feature anymore and
->> send their options another way.
->>
->> Hence, these applications can all continue to use the GTK dialog API
->> (which might be a bit extended). This reduces the amount of work done
->> per application substantially.
-This really makes more sense than patching each application from 
-scratch. Just out of curiosity, how ready are these changes to the 
-toolkits and how can I eventually use the modified versions?
->> IIRC, evince does not have any extra options, so it can continue using
->> the GTK API. But a similar simple project for you to start on could be
->> gedit. It too uses the GTK printing API, but it enhances it with custom
->> options such as printing syntax highlighting and enabling line numbers.
->>
-Note taken, I'll start from something like gedit that's simple, but not 
-entirely trivial. It just occurred to me that this is the case also with 
-Gnome's default image viewer (EoG) - so this may also be an option.
-> Another potential reason for needing to patch applications is the live 
-> preview. The dialog could request a new preview from the app if 
-> certain option settings are changed. It should also request the 
-> preview only for selected pages to save resources on big documents.
+Alex Wauck skrev:
+>> Yes, my original idea was to have one student finishing the two dialogs
+>> and another patching the applications (see ideas list), but it is no
+>> problem for example if one student does the GTK dialog and patches the
+>> GTK apps and the second does the KDE dialog and patches the KDE apps.
+>> And if we get only applications for the dialog stuff and nothing for
+>> JTAPI, drivers and whatever we offered, we can even put a third student
+>> onto the dialog. We also can move around work tasks during the GSoC
+>> (this we did last year as it turned out that Lars got the CPDAPI quickly
+>> together, so he did also the GTK version of the dialog which the other
+>> student on the CPD was supposed to do, but the the Qt dialog turned out
+>> to be more work than expected).
+>>     
 >
->>> - Open Office uses its own printing dialog that looks much like the 
->>> Windows one. In fact, most of the printing settings are hidden under 
->>> another dialog, called "Printing Options". Both dialogs are supposed 
->>> to be platform-independent, i.e. there is only one implementation 
->>> for all environments. The actual code mixes GUI and data members in 
->>> one class per dialog. All this means it will be harder to use the 
->>> new dialog without breaking the platform independence and would 
->>> require some restructuring of the current code. A possible approach 
->>> would be to abstract away the different implementations that will be 
->>> created with interfaces and choose an implementation based on the 
->>> target platform (or for example, based on whether cpdapi is running).
->>
->> Yes, OO.o will probably be the hardest to patch. I would definitely not
->> start with it, but as Till already said, it has a high priority.
->>
 >
-> The Red Hat/Fedora packages of OpenOffice.org have patches to use the 
-> GTK printing dialog. Perhaps one could base the changes on these 
-> patches, or the patches show at least ehre changes in OOo are needed 
-> to replace the printing dialog.
+> Interesting.  I don't recall being expected to do the GTK dialog.  At any
+> rate, it should be easier to do other implementations now that we have an
+> existing implementation.  I would say the hardest part is the interface to
+> CUPS.  Since CUPS has a semi-object-oriented C API, producing an idiomatic
+> Qt interface for it is decidedly non-trivial.  Someone familiar with GLib
+> may find it easier to think in that way, and hence have an easier time with
+> it.
 >
-Thanks for that info. I'll definitely take a look at these packages.
+> The next hardest part is making the custom widgets (like the option grid)
+> and making them look good.  I'm not much of an artist, so I tried to reuse
+> existing widgets as much as possible, but that didn't look the way Peter
+> wanted it too.  I still haven't produced a widget that looks right.  The
+> spec says that the widget toolkit's native grid widget should be used, but
+> Qt's grid widget is not designed for such use and would look really weird.
+>
+> Lastly, I ran into a very strange QGraphicsView layout issue that seemed to
+> occur on every computer except for mine.  Hopefully, there won't be any of
+> that this year.
+>
+> Alex
+>
+>   
+Thanks both of you for your valuable help.
+I've done some more research (reading mailing lists archive and links 
+provided on the website) and I'm starting to understand what is needed know.
+Till (or anyone else), could you review my project idea and see if some 
+of it makes sense and that the amount of work is within what is expected.
+
+*Idea*
+
+The project goal for me would be to finalize the OpenUsability design in 
+at least one toolkit. My first choice would be to improve and refactor 
+the current design written in Gtk. This involves being continue the 
+effort to be compliance with the dialog specification and implementing 
+support for missing features described in the specification like custom 
+options and multi-language PPDs. With good background research and 
+preparation I expect this to take at most to the midterm evaluation.
+
+During and after the first phase has been in acceptable compliance with 
+the specification I expect that the project can take two ways. Either 
+help in the development of finalizing the dialog written in Qt using 
+experience and pitfalls gained from the previous implementation. If it's 
+at that time estimated that too little time remains to complete the 
+dialog (or that the work is already done) the second choice is to begin 
+porting a current desktop application to use the new common printing 
+dialog API. I've made some brief code inspections and except for Evince 
+that was mentioned earlier KDE text editor Kate seems to be valid choices.
+
+*Timeline*
+
+ - Before start of coding:
+First objective will be to study the OpenUsability design, probably as a 
+few design questions if anything seems unclear. Also study some advanced 
+topics in Qt, GTK and CUPS that will be required to implement the 
+specification. Eventually look into a few applications that could be 
+easily ported to use the common printing dialog, as mentioned above.
+
+ - May 23: (Students begin coding for their GSoC projects)
+Between here and the mid-term evaluation refactoring and improvement of 
+the existing design is top priority. This will probably be done using 
+incremental development since I expect that the features can be broken 
+done into individual tasks. Initial work will be done on the GTK dialog 
+but I expect that some solutions to some ideas can be shared and also 
+implemented in the Qt dialog if missing.
+
+ - July 6: (Mid-term evaluations)
+Depending on how quickly the previous phase ended, work finalizing the 
+Qt dialog will be given the highest priority. If it's estimated that too 
+little time is available, work to implement the dialog in a simple 
+desktop application will be prioritized instead.
+
+ - August 10:  (Suggested 'pencils down' date)
+At this stage I expect that a larger part of the GTK and Qt will be in 
+compliance with the specification all (most?) of the major features 
+being implemented and documented. If the finalization of the dialogs 
+proceeded according to the timeline above then at least one desktop 
+application will be modified to use the new dialog API.
+
+Per
