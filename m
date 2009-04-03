@@ -1,15 +1,16 @@
-Message-ID: <49D54B75.4070501@gmail.com>
-Date: Fri, 03 Apr 2009 01:34:13 +0200
+Message-ID: <49D62467.2000309@gmail.com>
+Date: Fri, 03 Apr 2009 16:59:51 +0200
 From: Till Kamppeter <till.kamppeter@gmail.com>
 MIME-Version: 1.0
 References: <49D39259.2050406@gmail.com>
-	<182FF6D7-0764-411E-A0AD-5545F5756331@mmiworks.net>
-	<8B8709E6C8B8784583FA9C7C013CB451611930@etd1.etd.ussj.ricoh.com>
-In-Reply-To: <8B8709E6C8B8784583FA9C7C013CB451611930@etd1.etd.ussj.ricoh.com>
+	<B5D52D7F610F471E850981EB156473AD@TCSLAPTOP01>
+	<49D398C0.2080606@gmail.com>
+	<D8967A49BF634D86B35C2069B92D3EC5@TCSLAPTOP01>
+In-Reply-To: <D8967A49BF634D86B35C2069B92D3EC5@TCSLAPTOP01>
 Content-Type: text/plain; charset=UTF-8; format=flowed
 Content-Transfer-Encoding: 7bit
 Subject: Re: [Printing-architecture] [Printing-summit] OpenPrinting Summit
- 2009: Schedules changedon Thursday, April 9
+ 2009: Schedules changed onThursday, April 9
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -19,18 +20,19 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: George Liu <george.liu@ricoh-tech.com>
-Cc: printing-architecture@lists.linux-foundation.org, Printing-japan <printing-japan@lists.linux-foundation.org>, printing-summit@lists.linux-foundation.org
+To: ptykodi@tykodi.com
+Cc: printing-architecture@lists.linux-foundation.org, 'Printing-japan' <printing-japan@lists.linux-foundation.org>, printing-summit@lists.linux-foundation.org
 
-George, your talk is added to the schedules now. Feel free to edit the 
-title of the talk when you add the link to your uploaded slides.
+Paul Tykodi wrote:
+> With the previous proposed schedule, the combination of Thursday
+> presentation and potential Friday break-out session, made color printing
+> seem like it was being given almost one whole day of effort at the Summit.
+> 
+> With the new proposed schedule, the effort has dropped below one day and I'm
+> waiting to see if that makes a big difference to the customer or not.
+
+Count in also the desktop printing sessions on Thursday afternoon. There 
+we will also talk about color management in desktop apps and printing 
+dialog.
 
     Till
-
-George Liu wrote:
-> As discussed in the preparation meeting, I'll book 30 minutes time slot
-> for my proposal for Common Printing Dialog.
-> I'll upload slide in a few days. I think my slide will address a higher
-> level view than Lar's slide, I prefer to have the presentation before
-> Lars.
-
