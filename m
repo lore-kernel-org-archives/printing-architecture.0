@@ -1,16 +1,17 @@
-Message-ID: <49D62467.2000309@gmail.com>
-Date: Fri, 03 Apr 2009 16:59:51 +0200
+Message-ID: <49D66403.6030802@gmail.com>
+Date: Fri, 03 Apr 2009 21:31:15 +0200
 From: Till Kamppeter <till.kamppeter@gmail.com>
 MIME-Version: 1.0
 References: <49D39259.2050406@gmail.com>
-	<B5D52D7F610F471E850981EB156473AD@TCSLAPTOP01>
-	<49D398C0.2080606@gmail.com>
-	<D8967A49BF634D86B35C2069B92D3EC5@TCSLAPTOP01>
-In-Reply-To: <D8967A49BF634D86B35C2069B92D3EC5@TCSLAPTOP01>
+	<182FF6D7-0764-411E-A0AD-5545F5756331@mmiworks.net>
+	<8B8709E6C8B8784583FA9C7C013CB451611930@etd1.etd.ussj.ricoh.com>
+	<49D54B75.4070501@gmail.com>
+	<8B8709E6C8B8784583FA9C7C013CB45161198D@etd1.etd.ussj.ricoh.com>
+In-Reply-To: <8B8709E6C8B8784583FA9C7C013CB45161198D@etd1.etd.ussj.ricoh.com>
 Content-Type: text/plain; charset=UTF-8; format=flowed
 Content-Transfer-Encoding: 7bit
 Subject: Re: [Printing-architecture] [Printing-summit] OpenPrinting Summit
- 2009: Schedules changed onThursday, April 9
+ 2009: Schedules changedon Thursday, April 9
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -20,19 +21,23 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: ptykodi@tykodi.com
-Cc: printing-architecture@lists.linux-foundation.org, 'Printing-japan' <printing-japan@lists.linux-foundation.org>, printing-summit@lists.linux-foundation.org
+To: George Liu <george.liu@ricoh-tech.com>
+Cc: printing-architecture@lists.linux-foundation.org, Printing-japan <printing-japan@lists.linux-foundation.org>, printing-summit@lists.linux-foundation.org
 
-Paul Tykodi wrote:
-> With the previous proposed schedule, the combination of Thursday
-> presentation and potential Friday break-out session, made color printing
-> seem like it was being given almost one whole day of effort at the Summit.
+George Liu wrote:
+> Thanks for allocating the time slot. I have uploaded the Slide on the agenda page. 
+> http://www.linuxfoundation.org/images/7/7a/CommonPrintingDialog_LF09.pdf
 > 
-> With the new proposed schedule, the effort has dropped below one day and I'm
-> waiting to see if that makes a big difference to the customer or not.
+> Please feel free to comment.
+> 
+> Are there anybody from application vendor side to attend the session? I think it would be highly valuable to learn what they think about the project.
 
-Count in also the desktop printing sessions on Thursday afternoon. There 
-we will also talk about color management in desktop apps and printing 
-dialog.
+Thank you for uploading the slides. This is a nice introduction into the 
+subject, so it fits well to be the first part of the session.
+
+I have sent personal e-mails to all participants of the LF Summit who 
+had at least one of the words "desktop", "GTK", "Qt", "GNOME", or "KDE" 
+in their registrations inviting them to the Thursday afternoon sessions 
+of the OpenPrinting Summit.
 
     Till
