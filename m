@@ -1,15 +1,16 @@
-MIME-Version: 1.0
-In-Reply-To: <46089FAF7804194C8AD6458E272B0718217458432C@GVW0676EXC.americas.hpqcorp.net>
+From: "Yie, Shiyun" <shiyun.yie@hp.com>
+Date: Tue, 7 Apr 2009 21:47:43 +0000
+Message-ID: <46089FAF7804194C8AD6458E272B071821747BAC1A@GVW0676EXC.americas.hpqcorp.net>
 References: <174725.13847.qm@web23106.mail.ird.yahoo.com>
 	<46089FAF7804194C8AD6458E272B0718217458432C@GVW0676EXC.americas.hpqcorp.net>
-Date: Tue, 7 Apr 2009 17:38:11 -0400
-Message-ID: <e395be80904071438g367d591y672560830db2437b@mail.gmail.com>
-From: Ira McDonald <blueroofmusic@gmail.com>
-Content-Type: text/plain; charset=ISO-8859-1
+	<e395be80904071438g367d591y672560830db2437b@mail.gmail.com>
+In-Reply-To: <e395be80904071438g367d591y672560830db2437b@mail.gmail.com>
+Content-Language: en-US
+Content-Type: text/plain; charset="iso-8859-1"
 Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
 Subject: Re: [Printing-architecture] [Printing-summit] time zone,
-	etc Re:  	OpenPrinting Summit 2009: Schedules changedon Thursday,
-	April 9
+ etc Re:  	OpenPrinting Summit 2009: Schedules changedon Thursday, April 9
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -19,13 +20,26 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: "Yie, Shiyun" <shiyun.yie@hp.com>, Ira McDonald <blueroofmusic@gmail.com>
+To: Ira McDonald <blueroofmusic@gmail.com>
 Cc: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>, Printing-japan <printing-japan@lists.linux-foundation.org>, Hin-Tak Leung <hintak_leung@yahoo.co.uk>, "printing-summit@lists.linux-foundation.org" <printing-summit@lists.linux-foundation.org>, Till Kamppeter <till.kamppeter@gmail.com>
+
+Thank you, Ira.  Appreciate it.
+
+Shiyun=20
+
+-----Original Message-----
+From: Ira McDonald [mailto:blueroofmusic@gmail.com]=20
+Sent: Tuesday, April 07, 2009 2:38 PM
+To: Yie, Shiyun; Ira McDonald
+Cc: Hin-Tak Leung; Till Kamppeter; printing-architecture@lists.linux-founda=
+tion.org; Printing-japan; printing-summit@lists.linux-foundation.org
+Subject: Re: [Printing-summit] time zone, etc Re: [Printing-architecture] O=
+penPrinting Summit 2009: Schedules changedon Thursday, April 9
 
 Hi Shiyun,
 
-The conference number for main room and breakout rooms ARE
-posted on the Wiki page (near the bottom) - see
+The conference number for main room and breakout rooms ARE posted on the Wi=
+ki page (near the bottom) - see
 
   http://www.linuxfoundation.org/en/OpenPrinting/OpenPrinting_Summit_San_Fr=
 ancisco_2009
@@ -48,9 +62,8 @@ NOTE - Conference number is always the same
 Cheers,
 - Ira
 
-Ira McDonald (Musician / Software Architect)
-Chair - Linux Foundation Open Printing WG
-Blue Roof Music/High North Inc
+Ira McDonald (Musician / Software Architect) Chair - Linux Foundation Open =
+Printing WG Blue Roof Music/High North Inc
 email: blueroofmusic@gmail.com
 winter:
   579 Park Place  Saline, MI  48176
@@ -69,14 +82,15 @@ ere a limit on how many people can dial in for the line?
 > Shiyun
 >
 > -----Original Message-----
-> From: printing-summit-bounces@lists.linux-foundation.org [mailto:printing=
--summit-bounces@lists.linux-foundation.org] On Behalf Of Hin-Tak Leung
+> From: printing-summit-bounces@lists.linux-foundation.org=20
+> [mailto:printing-summit-bounces@lists.linux-foundation.org] On Behalf=20
+> Of Hin-Tak Leung
 > Sent: Tuesday, April 07, 2009 12:53 PM
 > To: Till Kamppeter; Ira McDonald
-> Cc: printing-architecture@lists.linux-foundation.org; Printing-japan; pri=
-nting-summit@lists.linux-foundation.org
-> Subject: [Printing-summit] time zone, etc Re: [Printing-architecture] Ope=
-nPrinting Summit 2009: Schedules changedon Thursday, April 9
+> Cc: printing-architecture@lists.linux-foundation.org; Printing-japan;=20
+> printing-summit@lists.linux-foundation.org
+> Subject: [Printing-summit] time zone, etc Re: [Printing-architecture]=20
+> OpenPrinting Summit 2009: Schedules changedon Thursday, April 9
 >
 >
 > Sorry to be slightly off-topic - can we have a reminder of time zone of s=
@@ -90,19 +104,19 @@ e differences) for calling in from Japan, I think.
 >> Hi Till,
 >>
 >> Reversing the whole Thursday schedule (swapping morning and afternoon
->> topics) seems like a major change that is likely to lose some Open
+>> topics) seems like a major change that is likely to lose some Open=20
 >> Printing participation (by phone) on both topics.
 >>
 >> I suggest we leave the major topics schedule alone.
 >>
->> Perhaps we could ask the Desktop Architects people to join us in a
->> dedicated teleconference on Common Print Dialog sometime in the near
+>> Perhaps we could ask the Desktop Architects people to join us in a=20
+>> dedicated teleconference on Common Print Dialog sometime in the near=20
 >> future?
 >>
 >> Cheers,
 >> - Ira
 >>
->> Ira McDonald (Musician / Software Architect) Chair - Linux Foundation
+>> Ira McDonald (Musician / Software Architect) Chair - Linux Foundation=20
 >> Open Printing WG Blue Roof Music/High North Inc
 >> email: blueroofmusic@gmail.com
 >> winter:
@@ -114,19 +128,19 @@ e differences) for calling in from Japan, I think.
 >>
 >>
 >>
->> On Mon, Apr 6, 2009 at 6:35 PM, Till Kamppeter
+>> On Mon, Apr 6, 2009 at 6:35 PM, Till Kamppeter=20
 >> <till.kamppeter@gmail.com>
 >> wrote:
 >> > George Liu wrote:
 >> >> I checked Linux Collaboration Summit agenda,
->> there's a desktop track (the only desktop track) hold on Thursday
+>> there's a desktop track (the only desktop track) hold on Thursday=20
 >> afternoon.
 >> >>
 >> >> Do you think it's necessary that you ask for a 10
->> min time slot (4:50 - 5:00pm) in the Desktop track and briefly explain
->> Common Print Dialog / Auto-driver-download / PDF workflow / Color
->> management project, and invite them to attend open printing breakout
->> sessions on Friday morning?
+>> min time slot (4:50 - 5:00pm) in the Desktop track and briefly=20
+>> explain Common Print Dialog / Auto-driver-download / PDF workflow /=20
+>> Color management project, and invite them to attend open printing=20
+>> breakout sessions on Friday morning?
 >> >
 >> > George, thank you for advising me.
 >> >
@@ -153,7 +167,8 @@ e differences) for calling in from Japan, I think.
 >> > _______________________________________________
 >> > Printing-architecture mailing list
 >> > Printing-architecture@lists.linux-foundation.org
->> > https://lists.linux-foundation.org/mailman/listinfo/printing-archite
+>> > https://lists.linux-foundation.org/mailman/listinfo/printing-archit
+>> > e
 >> > cture
 >> >
 >> _______________________________________________
