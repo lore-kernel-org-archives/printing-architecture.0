@@ -1,22 +1,21 @@
-Message-ID: <49DCA02D.9090407@gmail.com>
-Date: Wed, 08 Apr 2009 15:01:33 +0200
+Message-ID: <49DCA0B3.4000405@gmail.com>
+Date: Wed, 08 Apr 2009 15:03:47 +0200
 From: Till Kamppeter <till.kamppeter@gmail.com>
 MIME-Version: 1.0
-References: <49D39259.2050406@gmail.com>
-	<182FF6D7-0764-411E-A0AD-5545F5756331@mmiworks.net>
-	<8B8709E6C8B8784583FA9C7C013CB451611930@etd1.etd.ussj.ricoh.com>
-	<49D54B75.4070501@gmail.com>
-	<8B8709E6C8B8784583FA9C7C013CB45161198D@etd1.etd.ussj.ricoh.com>
-	<49D66403.6030802@gmail.com>
-	<8B8709E6C8B8784583FA9C7C013CB4516119DF@etd1.etd.ussj.ricoh.com>
+References: <49D39259.2050406@gmail.com>	
+	<182FF6D7-0764-411E-A0AD-5545F5756331@mmiworks.net>	
+	<8B8709E6C8B8784583FA9C7C013CB451611930@etd1.etd.ussj.ricoh.com>	
+	<49D54B75.4070501@gmail.com>	
+	<8B8709E6C8B8784583FA9C7C013CB45161198D@etd1.etd.ussj.ricoh.com>	
+	<49D66403.6030802@gmail.com>	
+	<8B8709E6C8B8784583FA9C7C013CB4516119DF@etd1.etd.ussj.ricoh.com>	
 	<49DA83A3.4090303@gmail.com>
 	<e395be80904071037t4685f1d5i97dd9a3798f6e303@mail.gmail.com>
-	<8B8709E6C8B8784583FA9C7C013CB451611A07@etd1.etd.ussj.ricoh.com>
-In-Reply-To: <8B8709E6C8B8784583FA9C7C013CB451611A07@etd1.etd.ussj.ricoh.com>
+In-Reply-To: <e395be80904071037t4685f1d5i97dd9a3798f6e303@mail.gmail.com>
 Content-Type: text/plain; charset=UTF-8; format=flowed
 Content-Transfer-Encoding: 7bit
-Subject: [Printing-architecture] URGENT: Wiki attachments of the LF stopped
-	working
+Subject: Re: [Printing-architecture] [Printing-summit] OpenPrinting Summit
+ 2009: Schedules changedon Thursday, April 9
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -26,46 +25,16 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: David Ames <david@linux-foundation.org>, webdevel@linux-foundation.org, Dan Lopez <dlopez@linuxfoundation.org>
+To: Ira McDonald <blueroofmusic@gmail.com>
 Cc: printing-architecture@lists.linux-foundation.org, George Liu <george.liu@ricoh-tech.com>, Printing-japan <printing-japan@lists.linux-foundation.org>, printing-summit@lists.linux-foundation.org
 
-Hi,
-
-I have asked the participants of the OpenPrinting Summit to upload their 
-slides as Wiki attachments. See instructions at the beginning of the 
-"Agenda" section of
-
-http://www.linuxfoundation.org/en/OpenPrinting/OpenPrinting_Summit_San_Francisco_2009
-
-Unfortunately, the server seems to have lost connection to the 
-attachments. See what you get when clicking on a link to an attachment:
-
-http://www.linuxfoundation.org/en/Images/7/78/CUPS-2008-04-08.pdf
-
-Can you URGENTLY fix this, as our call-in participants will not be able 
-to access the slides. Thank you very much in advance.
+So I will keep it as it is. I will announce a phone meeting after the 
+Summit, to take place around 2 weeks after the Summit.
 
     Till
 
 
-
-George Liu wrote:
-> Till,
-> 
-> I found today that all slides uploaded to the agenda page (From Michael, Glen and me) are not viewable now. The web page gave an error "There is currently no text in this page, you can search for this page title in other pages or edit this page."
-> 
-> Anything wrong on the wiki?
-> 
-> George
-> 
-> 
-> -----Original Message-----
-> From: Ira McDonald [mailto:blueroofmusic@gmail.com] 
-> Sent: Tuesday, April 07, 2009 10:37 AM
-> To: Till Kamppeter; Ira McDonald
-> Cc: George Liu; printing-architecture@lists.linux-foundation.org; Printing-japan; printing-summit@lists.linux-foundation.org
-> Subject: Re: [Printing-architecture] [Printing-summit] OpenPrinting Summit 2009: Schedules changedon Thursday, April 9
-> 
+Ira McDonald wrote:
 > Hi Till,
 > 
 > Reversing the whole Thursday schedule (swapping morning and
