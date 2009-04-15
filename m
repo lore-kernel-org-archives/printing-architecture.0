@@ -1,18 +1,15 @@
-Message-ID: <49E5EF28.5030905@gmail.com>
-Date: Wed, 15 Apr 2009 16:28:56 +0200
+Message-ID: <49E5F22E.7030404@gmail.com>
+Date: Wed, 15 Apr 2009 16:41:50 +0200
 From: Till Kamppeter <till.kamppeter@gmail.com>
 MIME-Version: 1.0
 References: <46089FAF7804194C8AD6458E272B07182174584144@GVW0676EXC.americas.hpqcorp.net>
 	<49E51AB7.2010902@gmail.com>
-	<200904150120.n3F1Kg95023375@dsl092-065-009.bos1.dsl.speakeasy.net>
-	<49E55C8C.2010500@apple.com>
-	<200904151139.n3FBdmZJ030596@dsl092-065-009.bos1.dsl.speakeasy.net>
-	<49E5C95B.4080304@gmail.com>
-	<200904151206.n3FC6n7j030700@dsl092-065-009.bos1.dsl.speakeasy.net>
-In-Reply-To: <200904151206.n3FC6n7j030700@dsl092-065-009.bos1.dsl.speakeasy.net>
+	<alpine.LNX.2.00.0904151216120.10560@nelson.suse.de>
+	<49E5D2AB.7000000@redhat.com>
+In-Reply-To: <49E5D2AB.7000000@redhat.com>
 Content-Type: text/plain; charset=UTF-8; format=flowed
 Content-Transfer-Encoding: 7bit
-Subject: Re: [Printing-architecture] [Printing-summit] Issue list from HP
+Subject: Re: [Printing-architecture] Issue list from HP
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -22,43 +19,27 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Robert Krawitz <rlk@alum.mit.edu>
-Cc: printing-architecture@lists.linux-foundation.org, printing-summit@lists.linux-foundation.org, martin.pitt@ubuntu.com, msweet@apple.com
+To: Tim Waugh <twaugh@redhat.com>
+Cc: "Suffield, David" <david.suffield@hp.com>, "'printing-summit@lists.linux-foundation.org'" <printing-summit@lists.linux-foundation.org>, Johannes Meixner <jsmeix@suse.de>, Martin Pitt <martin.pitt@ubuntu.com>, "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>
 
-Robert Krawitz wrote:
->    Date: Wed, 15 Apr 2009 13:47:39 +0200
->    From: Till Kamppeter <till.kamppeter@gmail.com>
+Tim Waugh wrote:
+> Johannes Meixner wrote:
+>> How is this implemented?
+>> Via hardcoded stuff or is there a reliable working generic way?
 > 
->    No, there is a special PostScript expression:
+> Via hardcoded stuff that Till wrote, which depends on all sorts of HPLIP 
+> internals, and which I will probably remove soon.
 > 
->    <</cupsPageSizeName (A4.Full)>>setpagedevice
-> 
->    So the PostScript code of each paper size must be
-> 
->    <</PageSize[595 842] /cupsPageSizeName (A4.Full)>>setpagedevice
-> 
-> Like this?
-> 
-> *PageSize Letter.Full/Letter:	"<</PageSize[612 792]/cupsPageSizeName (Letter.Full)/ImagingBBox null>>setpagedevice"
->
-
-Yes, exactly this way.
-
-If a PDF workflow is used or an image is directly sent to CUPS there is 
-no PostScript data stream involved. In these cases the pdftoraster and 
-imagetoraster filters parse the PostScript code in the PPD file via a 
-CUPS library function and so alo in this case both the paper size in 
-numbers and the paper size name get made use of.
-
->    > PCFileName is a *real* crock these days.
-> 
->    Is it really needed in real life?
-> 
-> Seems to me that everything newer than Windows 3.1 supports long file
-> names.  We just generate names like STP00001.PPD, which aren't stable
-> from release to release (when we add new printers).
+> Tim.
+> */
 > 
 
-Here we only need to satisfy the specs somehow. This is one method.
+It calls "hp-info -i -dURI". If the output contains "plugin = 1" the 
+plugin is needed. system-config-printer also checks for "plugin = 2" to 
+offer the plugin if it has optional enhancements. It uses the 
+"plugin-reason" to tell the user which enhancements the plugin supplies. 
+And it neverv creates a queue for a printer requiring the plugin if the 
+plugin is rejected by the user. So non-working queues are generally not 
+set up.
 
     Till
