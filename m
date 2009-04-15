@@ -1,5 +1,5 @@
-Message-ID: <49E5C95B.4080304@gmail.com>
-Date: Wed, 15 Apr 2009 13:47:39 +0200
+Message-ID: <49E5EF28.5030905@gmail.com>
+Date: Wed, 15 Apr 2009 16:28:56 +0200
 From: Till Kamppeter <till.kamppeter@gmail.com>
 MIME-Version: 1.0
 References: <46089FAF7804194C8AD6458E272B07182174584144@GVW0676EXC.americas.hpqcorp.net>
@@ -7,7 +7,9 @@ References: <46089FAF7804194C8AD6458E272B07182174584144@GVW0676EXC.americas.hpqc
 	<200904150120.n3F1Kg95023375@dsl092-065-009.bos1.dsl.speakeasy.net>
 	<49E55C8C.2010500@apple.com>
 	<200904151139.n3FBdmZJ030596@dsl092-065-009.bos1.dsl.speakeasy.net>
-In-Reply-To: <200904151139.n3FBdmZJ030596@dsl092-065-009.bos1.dsl.speakeasy.net>
+	<49E5C95B.4080304@gmail.com>
+	<200904151206.n3FC6n7j030700@dsl092-065-009.bos1.dsl.speakeasy.net>
+In-Reply-To: <200904151206.n3FC6n7j030700@dsl092-065-009.bos1.dsl.speakeasy.net>
 Content-Type: text/plain; charset=UTF-8; format=flowed
 Content-Transfer-Encoding: 7bit
 Subject: Re: [Printing-architecture] [Printing-summit] Issue list from HP
@@ -21,50 +23,42 @@ List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subj
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
 To: Robert Krawitz <rlk@alum.mit.edu>
-Cc: printing-architecture@lists.linux-foundation.org, printing-summit@lists.linux-foundation.org, martin.pitt@ubuntu.com, Michael R Sweet <msweet@apple.com>
+Cc: printing-architecture@lists.linux-foundation.org, printing-summit@lists.linux-foundation.org, martin.pitt@ubuntu.com, msweet@apple.com
 
 Robert Krawitz wrote:
->    Date: Tue, 14 Apr 2009 21:03:24 -0700
->    From: Michael R Sweet <msweet@apple.com>
+>    Date: Wed, 15 Apr 2009 13:47:39 +0200
+>    From: Till Kamppeter <till.kamppeter@gmail.com>
 > 
->    Robert Krawitz wrote:
->    > ...
->    > There is a CUPS API call named ppdPageSize that should get the
->    > *actual* named paper size.  We had this kind of issue with Gutenprint
->    > a while back; that turned out to be the solution.
+>    No, there is a special PostScript expression:
 > 
->    There is also a cupsPageSizeName attribute that can be set by
->    drivers that need to know which version of a size was selected.
+>    <</cupsPageSizeName (A4.Full)>>setpagedevice
 > 
-> Is that just
+>    So the PostScript code of each paper size must be
 > 
-> *cupsPageSizeName: True
+>    <</PageSize[595 842] /cupsPageSizeName (A4.Full)>>setpagedevice
 > 
-> in the top section of the file?
+> Like this?
+> 
+> *PageSize Letter.Full/Letter:	"<</PageSize[612 792]/cupsPageSizeName (Letter.Full)/ImagingBBox null>>setpagedevice"
 >
 
-No, there is a special PostScript expression:
+Yes, exactly this way.
 
-<</cupsPageSizeName (A4.Full)>>setpagedevice
+If a PDF workflow is used or an image is directly sent to CUPS there is 
+no PostScript data stream involved. In these cases the pdftoraster and 
+imagetoraster filters parse the PostScript code in the PPD file via a 
+CUPS library function and so alo in this case both the paper size in 
+numbers and the paper size name get made use of.
 
-So the PostScript code of each paper size must be
-
-<</PageSize[595 842] /cupsPageSizeName (A4.Full)>>setpagedevice
-
-pdftoraster supports this, too.
-
->    > I think we've had one or two cases of something that was accepted in
->    > an older version of CUPS (and not getting flagged by cupstestppd)
->    > being rejected by a newer version.  It was either resolution names or
->    > option names or values greater than 40 bytes or so.
+>    > PCFileName is a *real* crock these days.
 > 
->    Resolution names and the PCFileName stuff come to mind.  There have
->    been issues with the lengths of translation strings, too.
+>    Is it really needed in real life?
 > 
-> PCFileName is a *real* crock these days.
->
+> Seems to me that everything newer than Windows 3.1 supports long file
+> names.  We just generate names like STP00001.PPD, which aren't stable
+> from release to release (when we add new printers).
+> 
 
-Is it really needed in real life?
+Here we only need to satisfy the specs somehow. This is one method.
 
     Till
-
