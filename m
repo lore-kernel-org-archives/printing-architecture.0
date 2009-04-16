@@ -1,14 +1,11 @@
-Message-ID: <49E76FA1.2020300@gmail.com>
-Date: Thu, 16 Apr 2009 19:49:21 +0200
+Message-ID: <49E7712B.1080105@gmail.com>
+Date: Thu, 16 Apr 2009 19:55:55 +0200
 From: Till Kamppeter <till.kamppeter@gmail.com>
 MIME-Version: 1.0
-References: <ED4094DE5E8ACD4BBDACA6AD398E608F379CAF@EEAEX03.us.epson.net>	<49E768BF.6030404@apple.com>
-	<e395be80904161029u6e2a1058n3a6e1283d5d21fca@mail.gmail.com>
-	<49E76EA6.10306@gmail.com>
-In-Reply-To: <49E76EA6.10306@gmail.com>
 Content-Type: text/plain; charset=UTF-8; format=flowed
 Content-Transfer-Encoding: 7bit
-Subject: Re: [Printing-architecture] [Printing-summit] Preview for CPD
+Subject: [Printing-architecture] Your demo for the stage 1 of the Common
+	Printing Dialog
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -18,36 +15,12 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Till Kamppeter <till.kamppeter@gmail.com>
-Cc: printing-architecture@lists.linux-foundation.org, printing-summit@lists.linux-foundation.org, Michael R Sweet <msweet@apple.com>
+To: Lars Uebernickel <larsuebernickel@gmx.de>, "'printing-summit@lists.linux-foundation.org'" <printing-summit@lists.linux-foundation.org>, "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>
 
-We should also try to get the best for the live preview. For example it 
-should render only the visible page (and the CPDAPI should support that).
+Lars,
+
+can you make your demo of the stage 1 (patching toolkits) of the CPD 
+available so that we can try it out? Can you also tell us how to get the 
+changes visible (for example KDE app under GNIME -> GTK dialog, ...).
 
     Till
-
-
-Till Kamppeter wrote:
-> I also agree with the use of a default image, once, while waiting for a 
-> live preview and second, on systems not capable of generating previews 
-> due to restricted resources, and also for the case that the client 
-> application does not support live preview (for example it did not get 
-> changed towards the printing dialog but Lars' stage-1-CPDAPI-patched GTK 
-> or Qt is used).
-> 
->    Till
-> 
-> Ira McDonald wrote:
->> Hi,
->>
->> I agree with Glen's suggestion - default images for preview
->> should ALWAYS be the fallback - for the limited-resource
->> embedded environment REAL preview images are NOT a
->> good idea.
->>
->> I also agree with Mike (and Glen) that displaying the default
->> image WHILE generating the real preview image is a friendly
->> design approach.
-> 
-> 
-
