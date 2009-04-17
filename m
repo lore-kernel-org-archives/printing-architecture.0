@@ -1,12 +1,13 @@
-Message-Id: <1C296078-3075-4D08-BE61-6CE082C165DB@mmiworks.net>
-From: peter sikking <peter@mmiworks.net>
-In-Reply-To: <ED4094DE5E8ACD4BBDACA6AD398E608F379CAF@EEAEX03.us.epson.net>
-Content-Type: text/plain; charset=WINDOWS-1252; format=flowed; delsp=yes
-Content-Transfer-Encoding: quoted-printable
-Mime-Version: 1.0 (Apple Message framework v930.3)
-Date: Fri, 17 Apr 2009 20:08:11 +0200
-References: <ED4094DE5E8ACD4BBDACA6AD398E608F379CAF@EEAEX03.us.epson.net>
-Subject: Re: [Printing-architecture] Preview for CPD
+Message-ID: <49E8CCB8.4000201@gmail.com>
+Date: Fri, 17 Apr 2009 20:38:48 +0200
+From: Till Kamppeter <till.kamppeter@gmail.com>
+MIME-Version: 1.0
+References: <ED4094DE5E8ACD4BBDACA6AD398E608F379CB8@EEAEX03.us.epson.net>
+	<1F40945E-38C1-4ADC-B54C-DEF213F8A625@mmiworks.net>
+In-Reply-To: <1F40945E-38C1-4ADC-B54C-DEF213F8A625@mmiworks.net>
+Content-Type: text/plain; charset=UTF-8; format=flowed
+Content-Transfer-Encoding: 7bit
+Subject: Re: [Printing-architecture] Another Common Dialog
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -16,56 +17,36 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: "Petrie, Glen" <glen.petrie@eitc.epson.com>
-Cc: printing-architecture@lists.linux-foundation.org, printing-summit@lists.linux-foundation.org, Till Kamppeter <till.kamppeter@gmail.com>
+To: peter sikking <peter@mmiworks.net>
+Cc: "Petrie, Glen" <glen.petrie@eitc.epson.com>, printing-architecture@lists.linux-foundation.org, printing-summit@lists.linux-foundation.org
 
-Glen wrote:
+peter sikking wrote:
+> Glen,
+> 
+>> Have you ever considered creating/defining a Common Status/Monitoring 
+>> Dialog.
+> 
+> for printing: sure that is the next project, together with
+> printer installation.
+> 
+>> CUPS may have something already but does it support multi-function 
+>> devices sub-units like fax, scan, memory card, etc and can it provide 
+>> the status/monitoring information on a sub-unit by sub-unit basis or 
+>> as a roll-up for the entire MFD or both????
+> 
+> for users printing, faxing, scanning, memory card reading are
+> totally unrelated activities. so it follows that faxing, scanning,
+> memory card reading is never going to be seen in a printing dialog
+> and also not in a status/monitoring dialog.
+> 
 
-> I believe my understanding from the print-summit was that the new =20
-> CPD would =93always=94 preview the actual print content, which was =
-based =20
-> on Peter=92s usability test results.
+I would say so, too. The scanner should appear in scanning applications, 
+memory cards should simply get auto-mounted and appear on the desktop 
+(at least for locally connected devices, for network devices they should 
+appear when scanning for file system shares in the network). Sending 
+faxes should be done by a print queue where the printing dialog shows an 
+appropriate widget for the fax number. A dialog to put these functions 
+together is not needed. It can even get counter-intuitive if an MF 
+device and a scan-only device is connected to the same machine.
 
-and the usability test results proved that the preview is a huge
-success and needs to be 100% "true". users will fully depend on
-it to start trusting the print process, and trust cannot be
-betrayed by a quick hack.
-
-no generic image can be a replacement and no army of engineers
-can discuss away this requirement.
-
-the speed with which the preview is generated is of course also
-100% a usability issue. we basically have 1 second (on modern
-hardware) to get that first page there. we will have a busy
-indication for that one second (max) wait.
-
-the optimisation opportunities are of course in that the longest
-side of the page is a low (225 at the moment) fixed (compile time,
-I say) number of pixels. there is going to be no resizing of the
-dialog, and no zooming of the preview. that is designed in, for
-other UI reasons, but it comes in handy here.
-
-the second optimisation opportunity is that only the first page
-needs to be 'immediately' there, in case of N-up > 1 more pages
-but the needed fidelity is proportionately lower (in integer steps,
-another optimisation opportunity).
-
-every trick in the book will probably have to be used to get
-a specialised preview pipeline up to speed. remember that when
-the printing dialog comes up that it occupies users' attention
-and hence has a licence to hog processor resources. I have
-no qualms about that.
-
-the preview is one big conn-trick, it simply needs to never
-get caught cheating, whatever the print is. without a real
-preview there is simply no common printing dialog.
-
-     --ps
-
-         founder + principal interaction architect
-             man + machine interface works
-
-         http://mmiworks.net/blog : on interaction architecture
-
-
-
+    Till
