@@ -1,14 +1,14 @@
-Message-Id: <E6115914-8CC1-4D9F-8068-182867649695@mmiworks.net>
+Message-Id: <4912F1C9-E7CE-42D0-87A2-5A1B2710F4DA@mmiworks.net>
 From: peter sikking <peter@mmiworks.net>
-In-Reply-To: <49E8ECCF.8050700@gmail.com>
-Content-Type: text/plain; charset=US-ASCII; format=flowed; delsp=yes
-Content-Transfer-Encoding: 7bit
+In-Reply-To: <ED4094DE5E8ACD4BBDACA6AD398E608F379CDB@EEAEX03.us.epson.net>
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed; delsp=yes
+Content-Transfer-Encoding: quoted-printable
 Mime-Version: 1.0 (Apple Message framework v930.3)
-Date: Sat, 18 Apr 2009 11:57:06 +0200
-References: <ED4094DE5E8ACD4BBDACA6AD398E608F379CB8@EEAEX03.us.epson.net>	<49E8CCB8.4000201@gmail.com>	<484F18A6-7ADF-4878-AD2F-2178B655199D@mmiworks.net>
-	<200904171232.16547.hvengel@astound.net>
-	<49E8ECCF.8050700@gmail.com>
-Subject: Re: [Printing-architecture] Another Common Dialog
+Date: Sat, 18 Apr 2009 12:39:42 +0200
+References: <ED4094DE5E8ACD4BBDACA6AD398E608F379CD1@EEAEX03.us.epson.net>
+	<7A1F4B7B-4038-414E-B5E4-0FE1F21D4738@mmiworks.net>
+	<ED4094DE5E8ACD4BBDACA6AD398E608F379CDB@EEAEX03.us.epson.net>
+Subject: Re: [Printing-architecture] Common Dialogs for Printing
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -18,68 +18,65 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Till Kamppeter <till.kamppeter@gmail.com>
-Cc: printing-architecture@lists.linux-foundation.org
+To: "Petrie, Glen" <glen.petrie@eitc.epson.com>
+Cc: printing-architecture@lists.linux-foundation.org, printing-summit@lists.linux-foundation.org
 
-Till wrote:
+Glen wrote:
 
-> Hal V. Engel wrote:
->> On Friday 17 April 2009 11:54:28 am peter sikking wrote:
->>> Till wrote:
->>>> Sending faxes should be done by a print queue where the printing
->>>> dialog shows an appropriate widget for the fax number.
->>> even that is mind-boggling incomprehensible for users.
->>> I will fight tooth and nail to avoid that solution.
->>>
->>
->> I also agree with Peter here.  A user sending a fax expects to see  
->> fax
->> specific dialogs.  Till however is correct that hidden below that  
->> fax specific
->> UI could be a print queue but the user should NEVER be aware of how  
->> it is
->> actually implemented.
->
->
-> So fax should look like this: On the implementation side we have print
-> queues for faxes, the PPD files of fax queues contain the following  
-> CUPS
-> extension:
->
-> *cupsFax: true
->
-> (see http://www.cups.org/documentation.php/doc-1.4/spec-ppd.html).  
-> This
-> allows distinguishing print queues and fax queues. Applications are
-> supposed to have a "Print ..." and a "Fax ..." entry.
+> The email I sent was to start a discussion; not a war.  But, I gather
+> from your replies; "that it is your way or no way".
 
-yes. this is the key to making things normal for users.
+developers are happy to receive any bug report, then reproduce and
+decide if it is really a bug, then see in the tech design/code
+(bug reporter has no idea what is in there) where the cause is,
+then make a solution and apply the fix.
 
-> If a queue type
-> (printing, faxing) is not present, the corresponding menu entry gets
-> grayed out.
+developers are not happy when people with near-zero development
+experience start saying that whole block of code need to be
+rewritten in this or that fashion. that does not wash.
 
-both will need access installation workflow (the next project...)
+interaction designers are happy to receive any bug report about
+the concept, then reproduce and decide if it is really a usability =20
+issue, then see in the concept/detailed design (bug reporter has no idea
+what is in there) where the cause is, then make a solution and
+apply the fix to the concept.
 
-> Clicking "Print ..." gives the printing dialog as Peter has
-> designed it, but only print queues (and no fax queues) are listed.
+interaction designers are not happy when people with near-zero
+interaction design experience start saying that central parts
+of concept need to be redesigned in this or that fashion.
+that does not wash.
 
-yes. excellent.
+I am open to any bug report on the concept. I will treat these very
+seriously, like you guys treat bugs in engineering.
 
-> Clicking "Fax ..." gives a dialog (slightly) different to Peter's
-> printing dialog, for example with an additional "zone" with one or  
-> more
->  widgets to choose the fax destination (by typing in, calling address
-> book, ...) and only the fax queues listed. The exact design for an  
-> ideal
-> fax dialog can also be left to OpenPrinting. WDYT?
+> I sorry, I am a user.  I have been a user, architect and developer on
+> everything from embedded, handheld, mobile, desktop, office, and
+> production printing solutions including front-end and back-ends.
+
+the first rule of professional interaction design is that you
+cannot design it for yourself. I design this keeping in mind
+the Gaussian distribution of 5 million users in umpteen dimensions.
+
+> And Please..... two people in one usability test does not define a
+> solution!!!!!!!!!!!!!!!
 
 
-just like I said for the pdf export dialog: it will be a cousin
-of the print dialog, not a twin brother. we can recycle a lot of
-good UI concepts and code for these dialogs, but sound UI practice
-demands that the design of each is optimised for the particular
-activity.
+if you want to discuss the rigours of usability tests please
+go ahead and do that with Jan M=FChlig of relevantive.
+
+both relevantive for the usability work and m+mi works
+for the innovative interaction design stake their international
+reputations on the design and validation of this printing UI.
+
+both our companies work (together and separately) for huge
+companies on UIs with hundreds of millions of users and
+on vertical market UIs which specialisation and complexity
+easily match that of the printing world.
+
+we are not here to play games. we are here to implement
+usability for open source projects and to show professional
+interaction design processes that deliver the goods again
+and again.
 
      --ps
 
