@@ -1,13 +1,16 @@
-Message-ID: <49E8ECCF.8050700@gmail.com>
-Date: Fri, 17 Apr 2009 22:55:43 +0200
-From: Till Kamppeter <till.kamppeter@gmail.com>
-MIME-Version: 1.0
-References: <ED4094DE5E8ACD4BBDACA6AD398E608F379CB8@EEAEX03.us.epson.net>	<49E8CCB8.4000201@gmail.com>	<484F18A6-7ADF-4878-AD2F-2178B655199D@mmiworks.net>
-	<200904171232.16547.hvengel@astound.net>
-In-Reply-To: <200904171232.16547.hvengel@astound.net>
-Content-Type: text/plain; charset=UTF-8; format=flowed
+Message-Id: <D4A9CA01-A36D-4DAA-B9AD-B988B4ACE183@mmiworks.net>
+From: peter sikking <peter@mmiworks.net>
+In-Reply-To: <200904172344.n3HNivf6025718@dsl092-065-009.bos1.dsl.speakeasy.net>
+Content-Type: text/plain; charset=US-ASCII; format=flowed
 Content-Transfer-Encoding: 7bit
-Subject: Re: [Printing-architecture] Another Common Dialog
+Mime-Version: 1.0 (Apple Message framework v930.3)
+Date: Sat, 18 Apr 2009 11:39:24 +0200
+References: <ED4094DE5E8ACD4BBDACA6AD398E608F379CB8@EEAEX03.us.epson.net>
+	<1F40945E-38C1-4ADC-B54C-DEF213F8A625@mmiworks.net>
+	<49E8CCB8.4000201@gmail.com>
+	<484F18A6-7ADF-4878-AD2F-2178B655199D@mmiworks.net>
+	<200904172344.n3HNivf6025718@dsl092-065-009.bos1.dsl.speakeasy.net>
+Subject: Re: [Printing-architecture] [Printing-summit] Another Common Dialog
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -17,46 +20,41 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: "Hal V. Engel" <hvengel@astound.net>
-Cc: printing-architecture@lists.linux-foundation.org
+To: Robert Krawitz <rlk@alum.mit.edu>
+Cc: printing-architecture@lists.linux-foundation.org, printing-summit@lists.linux-foundation.org, till.kamppeter@gmail.com
 
-Hal V. Engel wrote:
-> On Friday 17 April 2009 11:54:28 am peter sikking wrote:
->> Till wrote:
->>> peter sikking wrote:
->>>> for users printing, faxing, scanning, memory card reading are
->>>> totally unrelated activities.
->>> I would say so, too.
->> it is not just a good idea, it is the truth.
+Robert wrote:
+
+>>> for users printing, faxing, scanning, memory card reading are
+>>> totally unrelated activities.
 >>
->>> Sending faxes should be done by a print queue where the printing
->>> dialog shows an appropriate widget for the fax number.
->> even that is mind-boggling incomprehensible for users.
->> I will fight tooth and nail to avoid that solution.
->>
-> 
-> I also agree with Peter here.  A user sending a fax expects to see fax 
-> specific dialogs.  Till however is correct that hidden below that fax specific 
-> UI could be a print queue but the user should NEVER be aware of how it is 
-> actually implemented.
+>> I would say so, too.
+>
+>   it is not just a good idea, it is the truth.
+>
+> Other than that with all-in-ones they're all physically in the same
+> box (and the manufacturers sell them that way).
+
+as long as you remember that it is unrelated user tasks packed
+into one physical box, then I am happy.
+
+> We get quite a few
+> complaints about the scanner not functioning in multi-function
+> devices; users appear to expect that these devices be handled as a
+> single coherent unit.
 
 
-So fax should look like this: On the implementation side we have print 
-queues for faxes, the PPD files of fax queues contain the following CUPS 
-extension:
+I think the complaint is that the scanner is not working.
+they would love if you could make that work for them.
+do you really think any of them would expect a scan
+workflow that goes through the print dialog?
 
-*cupsFax: true
+     --ps
 
-(see http://www.cups.org/documentation.php/doc-1.4/spec-ppd.html). This 
-allows distinguishing print queues and fax queues. Applications are 
-supposed to have a "Print ..." and a "Fax ..." entry. If a queue type 
-(printing, faxing) is not present, the corresponding menu entry gets 
-grayed out. Clicking "Print ..." gives the printing dialog as Peter has 
-designed it, but only print queues (and no fax queues) are listed. 
-Clicking "Fax ..." gives a dialog (slightly) different to Peter's 
-printing dialog, for example with an additional "zone" with one or more 
-  widgets to choose the fax destination (by typing in, calling address 
-book, ...) and only the fax queues listed. The exact design for an ideal 
-fax dialog can also be left to OpenPrinting. WDYT?
+         founder + principal interaction architect
+             man + machine interface works
 
-    Till
+         http://mmiworks.net/blog : on interaction architecture
+
+
+
