@@ -1,12 +1,10 @@
-Message-ID: <49ECE824.90703@gmail.com>
-Date: Mon, 20 Apr 2009 17:24:52 -0400
-From: Svilen Kanev <mighty.frost@gmail.com>
+Message-ID: <49ECED69.1020104@gmail.com>
+Date: Mon, 20 Apr 2009 23:47:21 +0200
+From: Till Kamppeter <till.kamppeter@gmail.com>
 MIME-Version: 1.0
-References: <49ECDE30.3030604@bredband.net>
-In-Reply-To: <49ECDE30.3030604@bredband.net>
-Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Type: text/plain; charset=UTF-8; format=flowed
 Content-Transfer-Encoding: 7bit
-Subject: Re: [Printing-architecture] GSoC: Thanks
+Subject: [Printing-architecture] Congratulations!
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -16,26 +14,21 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: printing-architecture@lists.linux-foundation.org
+To: Svilen Kanev <mighty.frost@gmail.com>, Per Hermansson <hermansson.per@bredband.net>, Alexander Wauck <alex.wauck@gmail.com>
+Cc: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>
 
-I'm joining Per with my thanks as well.
-I hope we have a productive summer.
+Svilen, Per, Alexander, congratulations on your acceptance to the Common 
+Printing Dialog (CPD).
 
-Thanks,
-Svilen
+Lars Uebernickel will be your principal mentor and I will also help on 
+the mentoring. we will help and guide you through your work on your 
+project on the CPD. Peter Sikking, leader of the CPD UI design project 
+at OpenUsability will also help on questions about the UI (but not on 
+technical/programming questions).
 
-Per Hermansson wrote:
-> Hi
-> Thanks for accepting my proposal for working with the Common Printing 
-> Dialog.
-> I'm sure this will be a great experience for everyone involved.
->
-> Thanks again
-> Per
-> _______________________________________________
-> Printing-architecture mailing list
-> Printing-architecture@lists.linux-foundation.org
-> https://lists.linux-foundation.org/mailman/listinfo/printing-architecture
->
->   
+All discussion happens either here on the 
+printing-architecture@lists.linux-foundation.org mailing list (everyone 
+subscribed?) or on the #openprinting IRC channel on 
+irc.linux-foundation.org.
 
+    Till
