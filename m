@@ -1,10 +1,10 @@
-Message-Id: <A94A1587-C317-429B-9A5A-A468B69FC0C9@mmiworks.net>
+Message-Id: <29BE1E67-4A6A-40D7-86EC-A21E518E756A@mmiworks.net>
 From: peter sikking <peter@mmiworks.net>
 In-Reply-To: <alpine.LNX.2.00.0904211009120.29424@nelson.suse.de>
 Content-Type: text/plain; charset=US-ASCII; format=flowed
 Content-Transfer-Encoding: 7bit
 Mime-Version: 1.0 (Apple Message framework v930.3)
-Date: Tue, 21 Apr 2009 11:09:19 +0200
+Date: Tue, 21 Apr 2009 11:14:36 +0200
 References: <ED4094DE5E8ACD4BBDACA6AD398E608F379CB8@EEAEX03.us.epson.net>
 	<1F40945E-38C1-4ADC-B54C-DEF213F8A625@mmiworks.net>
 	<alpine.LNX.2.00.0904211009120.29424@nelson.suse.de>
@@ -55,12 +55,12 @@ when the print dialog comes up (or users Just Print) that
 the printer (part) actually looks unavailable/not there
 to the desktop computer?
 
-     --ps
+    --ps
 
-         founder + principal interaction architect
-             man + machine interface works
+        founder + principal interaction architect
+            man + machine interface works
 
-         http://mmiworks.net/blog : on interaction architecture
+        http://mmiworks.net/blog : on interaction architecture
 
 
 
