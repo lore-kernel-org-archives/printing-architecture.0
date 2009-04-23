@@ -1,18 +1,16 @@
-Content-class: urn:content-classes:message
-MIME-Version: 1.0
-Content-Type: text/plain;
-	charset="us-ascii"
-Content-Transfer-Encoding: quoted-printable
-Date: Thu, 23 Apr 2009 11:56:44 -0700
-Message-ID: <ED4094DE5E8ACD4BBDACA6AD398E608F379D8D@EEAEX03.us.epson.net>
-References: <ED4094DE5E8ACD4BBDACA6AD398E608F379D52@EEAEX03.us.epson.net><3602B1A0-C33E-4665-BBB6-46D59F2F044E@apple.com><ED4094DE5E8ACD4BBDACA6AD398E608F379D57@EEAEX03.us.epson.net><49EF53C7.8020901@the-axe-effect.de><ED4094DE5E8ACD4BBDACA6AD398E608F379D5B@EEAEX03.us.epson.net><ED4094DE5E8ACD4BBDACA6AD398E608F379D64@EEAEX03.us.epson.net><49EF7E44.6040700@gmail.com><B6DB3491-8B38-4F9B-940F-69CF61B7A93E@apple.com><49EF8444.7010304@gmail.com>	<ED4094DE5E8ACD4BBDACA6AD398E608F379D65@EEAEX03.us.epson.net>
-	<ED4094DE5E8ACD4BBDACA6AD398E608F379D70@EEAEX03.us.epson.net>
-	<49EF9E05.8070303@gmail.com>
-	<ED4094DE5E8ACD4BBDACA6AD398E608F379D75@EEAEX03.us.epson.net>
-	<49F08830.70207@gmail.com>
-From: "Petrie, Glen" <glen.petrie@eitc.epson.com>
-Subject: Re: [Printing-architecture] [Printing-summit]
-	Print	Dialog:PreviewProcessing: Only A Question
+Message-Id: <AA9213F0-7287-4824-8302-212B89F5B3AC@mmiworks.net>
+From: peter sikking <peter@mmiworks.net>
+In-Reply-To: <3F74D775-B66B-422D-A091-D8723BA657AC@apple.com>
+Content-Type: text/plain; charset=US-ASCII; format=flowed; delsp=yes
+Content-Transfer-Encoding: 7bit
+Mime-Version: 1.0 (Apple Message framework v930.3)
+Date: Thu, 23 Apr 2009 21:06:31 +0200
+References: <ED4094DE5E8ACD4BBDACA6AD398E608F379D52@EEAEX03.us.epson.net>
+	<3602B1A0-C33E-4665-BBB6-46D59F2F044E@apple.com>
+	<ED4094DE5E8ACD4BBDACA6AD398E608F379D57@EEAEX03.us.epson.net>
+	<3F74D775-B66B-422D-A091-D8723BA657AC@apple.com>
+Subject: Re: [Printing-architecture] [Printing-summit] Print Dialog: Preview
+	Processing: Only A Question
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -22,226 +20,127 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Till Kamppeter <till.kamppeter@gmail.com>, printing-architecture@lists.linux-foundation.org, printing-summit@lists.linux-foundation.org
+To: printing-architecture@lists.linux-foundation.org
+Cc: printing-summit@lists.linux-foundation.org
 
-I tried to explain differently my concerns and hope this long discussion
-continues.   Please, I am not trying being stubborn; I just want to help
-create a solution that is best for the user, the application and driver
-developers (oops, forgot CUPS).  So help me understand some of your
-choices and understand some of my suggestions.
+Wow guys,
 
-This discussion is really hard by email, this would be a good one for a
-F2F.
+that discussion is sort of mushrooming, so I'll have to cover
+stuff here in sweeping summaries.
 
-This note has three issues; namely,
+Some things discussed here have been 'designed in' for
+a long time:
 
-1. What to do when the application page-size does not match the print
-page-size.
-2. Who renders the preview
-3. Should applications support just PDF print format.
+- applications shall be able to pre-set printing parameters in
+   the dialog, for when they know from their domain knowledge
+   what is the "correct" value;
 
-=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
-=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
-=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D
-=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
-=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
-=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D
-=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
-=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
-=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D
-1. What to do when the application page-size does not match the print
-page-size.
+- applications shall be able to hide standard printing parameters in
+   the dialog, for when they can supply a more advanced control(s)
+   that take into account the application domain. I expect the
+   application to decompose the advanced control value(s) partially to
+   control their own transformation and partially to set those
+   hidden standard printing parameters.
 
-I believe it is becoming clearer that the key to this on going
-discussion is how we are thinking about the relationship between=20
+The two above cover a lot of the page formatting app + printer
+cooperation scenarios you are sketching. When discussing this
+"application is paper-based" scenario, we should not forget
+that is an exception:
 
-Electronic paper-size =3D=3D=3D Electronic page-size =3D=3D=3D EPS
-  This is set only by the application
+<http://www.mmiworks.net/eng/publications/2008/07/to-istanbul-via-tokyo.html#rule4 
+ >
 
-and
+but it is an exception that we have planned for and that is handled
+by the principles above. Since the application rules in its domain,
+it should be able to take over and take full responsibility of the
+page size, margins, orientation when it needs that. This is
+a structural requirement to get the apps on board. At the end the
+printing infrastructure service is (seen as) part of their app.
 
-Physical paper-size =3D=3D=3D Printer paper-size =3D=3D=3D  PPS
-  This is set only by the print dialog
+(and building in go-it-alone overrides from the printer side
+can create massive usability problems).
 
-EPS really has/should-have nothing to do with PPS.  I can have an A3 EPS
-while the printer only support letter.  This is an issue.  This issue
-needs to be handled by the print-system and shown in the print dialog,
-so the user will know what to expect and what to do.
+Transformation parameters update:
 
-I think examining this issue is something you really need to actually
-perform; so I tried it on a Mac and Window using PowerPoint.  In either
-system, when the EPS !=3D PPS then the preview show the EPS clipped to =
-the
-PPS (I assume the paper-size (PPS) the currently selected printer
-reports as the installed paper-size (PPS)).  If the scale-to-fit option
-is set; then, the EPS is scaled (maintaining the aspect ratio) to the
-PPS.
+yes, I can see that scaling is one that the app should know about.
 
-Mac's version of PowerPoint also illustrates more about dialog <->
-application interaction. (I believe Michael already commented on this
-but I will repeat here for completeness).  In the print dialog, you will
-not see a paper-size (PPS) option but you will see a button for
-page-size (EPS).  When this button is pressed, the print dialog returns
-control to the application (powerpoint) and powerpoint shows its dialog
-for the page-size (EPS) (this is completely independent of the print
-dialog).  The user can change the page-size (EPS) and indeed the
-powerpoint pages are reflowed in powerpoint and the powerpoint display
-changes.  Unfortunately, control is transferred automatically to the
-print dialog and user has to cancel the print dialog to fix any changes
-the new page-size (EPS) caused.
+also seeing the discussion about 'scale to fit' I tend more
+and more to see that as an application exclusive parameter.
+As Tobias said: "Only the application knows the "right" way
+to print it's  content onto a differently sized paper"
 
------ I don't believe this experience was end-user friendly.  If the
-print dialog is not going to have paper-size (PPS), then the user uses
-the preview to see what they will get.  Then if the user does not like
-what will be printed (scale-to-fit or center-and-clip) then the user
-should cancel the print dialog and return to the application to fix
-things. =20
------ If the print dialog shows a paper-size (PPS) option, then the user
-still uses the preview to see that they will get.  If the user changes
-the paper-size (PPS) then the print-system should scale-to-fit or
-center-and-clip the print content (format at EPS) to the paper-size
-(PPS).  Otherwise, the user needs to cancel the print dialog and return
-to powerpoint to modify things.  This is what I hope is the final choice
-for OpenPrinting.
+Till wrote:
 
-((( An interesting case to consider is when a photo-printer (PhotoSmart,
-PictureMate) is the connected printer.  )))
+> There can be documents which have different page sizes, for example  
+> page
+> 1 and A4, page 3 A3 and page 4 A4 again. With "Document Page  
+> Size(s)" an
+> appropriately loaded printer will take A4 paper for the pages 1, 2,  
+> and
+> 4 and A3 paper for page 3. All selections of a concrete page size will
+> let the printer print all pages on the same paper size, using  
+> different
+> scaling factors if needed.
 
-I hope we have been saying the same thing but just in a different way.
+this is an excellent example why applications must be fully in
+control of getting it on paper (it knows what is on those 4 pages).
 
-??? Do we have a way to support custom paper size (EPS and PPS) ???
+Then there is a lot of talk about if application need to re-render,
+reformat their transformation. the transformation of data and putting
+it on paper is a holistic part of the print job, that is why the
+parameters controlling it are in the print dialog. they must, else
+the simplest things stop actually working. my example:
 
-=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
-=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
-=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D
-=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
-=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
-=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D
-=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
-=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
-=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D
-2. Who renders the preview
-
-I really do want to push the case where the print-system creates the
-preview from the print-content.  It is really the only way for the print
-preview to display the best representation (we can do today) that the
-printer will actually print.
+> a simple example of an application parameter is a web browser
+> including the checkbox "Print headers and footers" in the
+> print dialog. toggling this should immediately reformat the
+> print, resulting even in more/less pages to print.
 
 
-=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
-=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
-=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D
-=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
-=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
-=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D
-=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
-=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
-=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D
-3. Should applications support just PDF print format.
+shows this in all its simpleness. It make a real difference to
+users if a web page is going to print on 3.1 or 2.9 pages.
+This example works today on OS-X, and makes me confident
+that is is not outrageous to engineer a framework to facilitate
+this for linux applications + printing.
 
-Till, in general I understand and probably agree with your comments. =20
+The phase we are now in is the 40% phase. I see this in every
+project in my interaction architecture practice:
 
-PDF format is great for documents.  There are concerns about have any
-filters in the print-chain between photo applications and the
-printer-driver (i.e. rendering and re-rendered image).
+I present the design that solves lots of usability issues,
+and the engineers respond with: I think we can achieve only
+40% of that. What happens then is that the engineers actually
+start checking out and testing what can be done, and at the
+the end of the project we achieve by cooperation 90% of the
+goals that I had set for the project.
 
-Can we support at least one image format or have a way for the filers
-that process PDF to not alter the original images. =20
+So knowing Till and having met Lars in SF, and knowing how they
+both see the point of the usability innovation in the designs,
+I am optimistic about what we can achieve here.
 
+Johannes Meixner is worried about what it will take to make
+the preview accurate enough. I suspect now that everybody here
+has a different perception of "accurate enough", and that everybody
+is not that sure that their counterparts in this conversation
+has the same perception.
 
-=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
-=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D
-Till below are some additional comments on your reply
+I say it is only a (fixed) 225 or so pixels on the longest side
+of the preview page. It is a really complex mix of any change
+users make in the dialog being reflected straight away in the
+preview (where possible), and the fact that being a millimetre
+off in the display is not that bad. It is all in the
+UI designer-developer cooperation to sort that out, one by one.
 
+Now about those ppd-only postscript printers: does not the
+the standardisation of the whole printing process point at
+a standardisation of how that can be reflected in the
+preview?
 
-[...snip...]
-=20
-> > Or are you saying that all drivers must accept/process PDF.
-> >
->=20
-> Drivers only need to accept a format which CUPS can generate from the
-> input data.=20
+     --ps
 
-Doesn't CUPS needs to transform (filter) input data to a format the
-driver can accept (image, ps, pdf, ???)!!!
+         founder + principal interaction architect
+             man + machine interface works
 
-> Usually they accept PostScript and PDF (Ghostscript-based
-> drivers) or CUPS Raster (CUPS Raster drivers).=20
-
-None of Epson's consumer inkjet printers accept PDF or PS; that why
-Ghostscript is needed.  Yes, office printer and high-end printer accept
-PS and PDF - is this the only printers we are targeting.
-
-Cups Raster is not really "raster" content; it is better described as a
-job-ticket (print-ticket) (actually done at on a page to page if I
-remember correctly) with image data attached.  So it really helps
-(although increase the processing) in rendering pages (to actual printer
-raster). =20
-
-
-The point is "why the constraints".
-
-
-> CUPS converts PostScript
-> and PDF to the driver's input format.
->=20
-
-
-
-> >
-> > If I have a photo app that wants to print an image. The steps are
-> >
-> > 1. app creates a pdf instantiation of the image
-> > 2. send pdf to print dialog
-> > 3. send pdf to CUPS
-> > 4. CUPS sends pdf to GhostScript to render
-> > 5. Ghostscript creates an image
-> > 6. Image is sent to a printer driver
-> >
->=20
-> The image created in 5. is not the same format as the image coming
-from
-> the app. The app sends JPG or PNG, in 5. PCL, ESC/P 2, or CUPS Raster
-is
-> created.
->=20
-
-As a vendor supporting photo printing; print vendors may have an issue
-with step 5.  If the filters (i.e. Ghostscript) dithers, halftone or
-changes the colors and, then, the printer-driver dithers and performs
-color-to-ink conversion you have high risk of creating artifacts in the
-final print.  Who will the user call or issue a bug report against - the
-print vendor.  And the user has a bad experience.
-
-> > Versus
-> > 1. app sends image to print dialog
-> > 2. print dialog display image (as preview)
-> > 3. send image to CUPS
-> > 4. Image sent to print driver.
-> >
->=20
-> So if all apps send images this would make sense, but apps like
-> OpenOffice.org or Firefox would preferably send PDF.=20
-
-I bet that neither openoffice nor firefox cares about PDF; what they
-prefer is that the GDI they are using supports a printer deviceContext
-and they just "display" to the printer deviceContext and deviceContext
-generate the print content (image, pdf, ps, cups raster, foo....)
-
-> So the dialog would
-> get much more complex if we make it capable of all formats which CUPS
-> can convert. So standardizing on one format simplifies the
-> implementation of the dialog a lot.
->=20
-
-Not if the dialog request CUPS to create the preview via it's filters.
-
-> You are now suggesting that the apps can send a wide range of formats
-> (ideally the full range of formats which the stock CUPS package
-> accepts). This would change the internal (not UI) design of the dialog
-> (and the apps) vastly.=20
-
-Not if the dialog request CUPS to create the preview via it's filters.
+         http://mmiworks.net/blog : on interaction architecture
 
 
 
