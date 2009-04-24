@@ -1,18 +1,24 @@
-From: "Hal V. Engel" <hvengel@astound.net>
-Date: Fri, 24 Apr 2009 13:02:40 -0700
+Content-class: urn:content-classes:message
+MIME-Version: 1.0
+Content-Type: text/plain;
+	charset="us-ascii"
+Content-Transfer-Encoding: quoted-printable
+Date: Fri, 24 Apr 2009 13:10:22 -0700
+Message-ID: <ED4094DE5E8ACD4BBDACA6AD398E608F379DBF@EEAEX03.us.epson.net>
 References: <ED4094DE5E8ACD4BBDACA6AD398E608F379D52@EEAEX03.us.epson.net>
+	<49EF8444.7010304@gmail.com>
+	<ED4094DE5E8ACD4BBDACA6AD398E608F379D65@EEAEX03.us.epson.net>
+	<ED4094DE5E8ACD4BBDACA6AD398E608F379D70@EEAEX03.us.epson.net>
+	<49EF9E05.8070303@gmail.com>
+	<ED4094DE5E8ACD4BBDACA6AD398E608F379D75@EEAEX03.us.epson.net>
+	<49F08830.70207@gmail.com>
+	<ED4094DE5E8ACD4BBDACA6AD398E608F379D8D@EEAEX03.us.epson.net>
 	<49F1F5A2.5060707@gmail.com>
 	<ED4094DE5E8ACD4BBDACA6AD398E608F379DB6@EEAEX03.us.epson.net>
-In-Reply-To: <ED4094DE5E8ACD4BBDACA6AD398E608F379DB6@EEAEX03.us.epson.net>
-MIME-Version: 1.0
-Content-Type: Text/Plain;
-  charset="iso-8859-1"
-Content-Transfer-Encoding: 7bit
-Content-Disposition: inline
-Message-Id: <200904241302.40953.hvengel@astound.net>
-Subject: Re: [Printing-architecture]
- =?iso-8859-1?q?=5BPrinting-summit=5D_Prin?=
- =?iso-8859-1?q?t=09Dialog=3APreviewProcessing=3A_Only_A_Question?=
+	<5d88ef650904241246i2c0cc6f2j3143053f5a4e50dd@mail.gmail.com>
+From: "Petrie, Glen" <glen.petrie@eitc.epson.com>
+Subject: Re: [Printing-architecture] [Printing-summit] Print
+	Dialog:PreviewProcessing: Only A Question
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -22,102 +28,90 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: printing-architecture@lists.linux-foundation.org
+To: Ralph Giles <giles@ghostscript.com>
+Cc: printing-architecture@lists.linux-foundation.org, Michael Vrhel <michael.vrhel@artifex.com>, printing-summit@lists.linux-foundation.org, Till Kamppeter <till.kamppeter@gmail.com>
 
-On Friday 24 April 2009 11:33:51 am Petrie, Glen wrote:
-snip
-> > > ==============================================================
-> > > ==============================================================
-> > > ==============================================================
-> > > 2. Who renders the preview
-> > >
-> > > I really do want to push the case where the print-system creates the
-> > > preview from the print-content.  It is really the only way for the
->
-> print
->
-> > > preview to display the best representation (we can do today) that
->
-> the
->
-> > > printer will actually print.
+Thanks for clarification on the color management side of things.  My
+concern is a little different, and is about whether or not Ghostscript
+will dither/halftone the image independent or in connection with of CM.
+But, if I understand correctly, Ghostscript will only dither/halftone if
+requested.  So, for the case I was describing, the printer driver will
+do the dither/halftoning along with conversion from color-to-inks and
+print control language stuff.
+
+This sounds like a good approach; printer drivers may not (maybe they
+should not) worry about the complexities of CM; there are better
+applications, filter, processes for that.  Printer driver, however,
+should and need to focus on dither/halftone and color-to-inks processing
+that is device dependent anyway.
+
+Back to preview; the preview cares (may care) about the CM but
+won't/can't care about the dither/halftone.  (I won't get into how
+dither/halftone may affect the CM!!!).
+
+
+glen
+
+
+> -----Original Message-----
+> From: ralph.giles@artifex.com [mailto:ralph.giles@artifex.com] On
+Behalf
+> Of Ralph Giles
+> Sent: Friday, April 24, 2009 12:46 PM
+> To: Petrie, Glen
+> Cc: Till Kamppeter; printing-architecture@lists.linux-foundation.org;
+> printing-summit@lists.linux-foundation.org; Michael Vrhel
+> Subject: Re: [Printing-summit] [Printing-architecture] Print
+> Dialog:PreviewProcessing: Only A Question
+>=20
+> On Fri, Apr 24, 2009 at 11:33 AM, Petrie, Glen
+> <glen.petrie@eitc.epson.com> wrote:
+>=20
+> >> In 5. we get CUPS Raster. This is not yet dithered. The dithering
+is
+> >> done by the rasterto... driver.
 > >
-> > What we do is taking the output geometry from the printer by polling
->
-> the
->
-> > PPD from the CUPS server. We will also poll the ICC profile to allow a
-> > preview of the color reproduction of the printer. CUPS' page
->
-> management
->
-> > options and their behavior are known so we can emulate them in the
-> > preview. 
-
-This is called soft proofing and I am not sure that this is a good fit for the 
-CPD preview as it adds additional complexity that may only be useful to a 
-small subset of users and because of the small size of the preview it may not 
-be useful at all.
-
-> > Also PPD options with known behavior (like grayscale) we can
-> > emulate in the preview. So the dialog will display the preview based
->
-> on
->
-> > PDF coming from the app.
-
-This is one place where using a proofing transform may make sense since it is 
-possible that the user may be sending a color document to a gray scale device 
-and this should be reflected in the preview.
-
->
-> 1. I was not aware that the print preview would be concerned with CM.
-
-If we are using PDF then CM is not optional.  PDF rendering engines are 
-required by the PDF specification to use CIE color spaces and ICC profiles to 
-do the rendering.  My point was that it is trivial to get the actual display 
-profile from XOrg and pass it to the PDF rendering engine so that it can use 
-the actual device profile rather than some generic "best guess" profile.  On 
-many displays a generic "best guess" profile like sRGB is not ideal but may be 
-"good enough" for users who are not doing color critical work.  But wide gamut 
-displays are becoming increasingly common and with this type of display using 
-a generic "best guess" profile will result in the colors in the preview being 
-quite distorted.   These colors will be way too saturated to the point that 
-the printed output would be far different from the preview and this will 
-likely be an issue for even for users who are not doing color critical work.  
-Why have that happen if it can be prevented with a few lines of fairly trivial 
-code?
-
-As a side note if the XOrg _ICC_PROFILE atom is not set the CPD should default 
-the display profile to sRGB. This is not ideal but if the user has not set the 
-_ICC_PROFILE atom then they are likely not too concerned about color accuracy 
-and they will probably find the result acceptable if they do not have a wide 
-gamut display.
-
-> I
-> though of it more as what the print format would be and not on the fine
-> details like "is this the right blue".  I am confused how this works.  I
-> would have thought the preview would have to use CM stuff for the
-> display; I guess the preview could use the reduced gamut of the printer.
-
-Again we are mixing up soft proofing with getting a reasonably accurate 
-preview.  I don't think the small preview being proposed is large enough to be 
-a workable solution for soft proofing.  Applications where color critical work 
-is normally done like GIMP, cinepaint and Scribus already have soft proofing 
-as a built in feature of the actual image/document editor (Photoshop and other 
-parts of the Adobe suite also do this).  So I don't think soft proofing is a 
-requirement for the preview and I agree with Glen that at least for now 
-getting and using the correct display profile, if it is set, or a suitable 
-default, if it is not set, is what should be done for the preview.
-
-> But, what will the user do with this knowledge.  The best the user can
-> do is go back to the calling application.  But, if the calling
-> application cannot adjust the content to account for the intended
-> printer; then what.
-
-Glen is correct.  Only users who are using apps that can correct for this (IE. 
-GIMP, cinepaint, Scribus...) need soft proofing and then they need it directly 
-in the app so that they see the affects of those edits on the soft proof as 
-the changes are made.
-
-Hal
+> > As Ghostscript is the most critical filter here, I would like to
+verify
+> > this with the Ghostscript folks.
+>=20
+> Till and Mike are more expert here, because it's not what ghostscript
+> does, but what cups asks it and the driver together to do.
+>=20
+> I don't think we have real colour management working yet. The cups
+> raster format can accept halftoned images, in which case gs can do the
+> halftoning. Normally, I think the driver does the halftoning, in which
+> case ghostscript generates a continuous-tone cups raster.
+>=20
+> Ghostscript has to do *some* colour management because the input pdf
+> could have different components in different colour spaces. Right now,
+> I think everything gets converted to some 'device space' and then goes
+> through some hard coded transformations in both ghostscript's graphics
+> library and the cups raster driver to get the right number of
+> components. Aside from applying an rgb matrix that looks like it came
+> from the cups ppd, I don't see any attempt at calibrating these colour
+> spaces.
+>=20
+> The point of the work Michael talked about at the summit is that cups
+> will be able to supply an ICC profile describing exactly what space
+> ghostscript should generate output in. If the application embeds an
+> icc profile in the pdf it generates, this will result in end-to-end
+> colour management if ghostscript is doing the halftoning. If not, the
+> PPD can at least request generation of a cups raster in an
+> intermediate space with an appropriate gamut for passing to the
+> rasterto* driver, which minimizes conversion loss. The printing dialog
+> would supply the screen's ICC profile *and* the printer's profile, so
+> ghostscript (or libpoppler, when it also has ICC support) could
+> approximate the appearance of the document within the constraints of
+> both the printer and the screen gamuts.
+>=20
+> If you don't want gs to do any colour management, then you have to
+> ensure that the image and output ICC profiles combine to a null
+> transform. The application can do this by looking up the printer
+> driver's ICC profile and using that directly. The printer driver can
+> do this by accepting sRGB, which would help applications that can't be
+> bothered since that's usually the default. As long as the image in the
+> pdf has a profile that matches the requested output profile, gs will
+> leave the image colour alone and let the next stage do all the work.
+>=20
+>  -r
