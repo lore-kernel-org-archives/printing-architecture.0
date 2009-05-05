@@ -1,14 +1,13 @@
-Message-ID: <49FF1792.2080507@gmail.com>
-Date: Mon, 04 May 2009 18:28:02 +0200
+Message-ID: <49FFDC61.7020703@gmail.com>
+Date: Tue, 05 May 2009 08:27:45 +0200
 From: Till Kamppeter <till.kamppeter@gmail.com>
 MIME-Version: 1.0
-References: <49F758CE.5060808@gmail.com> <49F98F67.2040401@gmail.com>
-	<DD6046532A44F047ACD45225E9D737B14A3FB6653D@GVW1155EXB.americas.hpqcorp.net>
-In-Reply-To: <DD6046532A44F047ACD45225E9D737B14A3FB6653D@GVW1155EXB.americas.hpqcorp.net>
+References: <e395be80811270817n502ccd16wf6cc90f85364f5ae@mail.gmail.com>
+In-Reply-To: <e395be80811270817n502ccd16wf6cc90f85364f5ae@mail.gmail.com>
 Content-Type: text/plain; charset=UTF-8; format=flowed
 Content-Transfer-Encoding: 7bit
-Subject: Re: [Printing-architecture] Fixes and changes on the "cups" output
- device of Ghostscript -Please Test!
+Subject: [Printing-architecture] Last OP Meeting - Mon/Tue - 4/5 May 2009 -
+	The Recording
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -18,16 +17,21 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: "Suffield, David" <david.suffield@hp.com>
-Cc: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>, gs-devel <gs-devel@ghostscript.com>, Michael Sweet <mike@easysw.com>
+To: Open Printing <printing-architecture@lists.linux-foundation.org>, Printing-japan <printing-japan@lists.linux-foundation.org>
 
-Suffield, David wrote:
-> Sorry I have not been able to test your patch yet, but *cupsEvenDuplex worked for me with gpl ghostscript 8.63 when testing hplip 3.9.4.
+Hi,
 
-Thank you for the hint. I have removed the *cupsEvenDuplex handling from 
-the CUPS Raster output device again as it is already done by pstops and 
-pdftopdf.
+I have uploaded the recording of the last OpenPrinting meeting to the 
+OpenPrinting server:
 
-I have announced the new patch in an earlier e-mail.
+http://www.openprinting.org/download/meetingnotes/op-telecons/OP-Meeting-20090504.mp3
+
+In general, recorded meetings I will upload to
+
+http://www.openprinting.org/download/meetingnotes/
 
     Till
+
+P. S.: The MP3 is 22 MB long, 1 hour, 4 minutes of talking.
+
+
