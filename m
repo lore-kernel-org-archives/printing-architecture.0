@@ -1,12 +1,12 @@
-Message-ID: <4A007A85.6030906@gmail.com>
-Date: Tue, 05 May 2009 19:42:29 +0200
-From: Till Kamppeter <till.kamppeter@gmail.com>
-MIME-Version: 1.0
-References: <e395be80905051009y2c6677c4yc23ea393c928f60e@mail.gmail.com>
-In-Reply-To: <e395be80905051009y2c6677c4yc23ea393c928f60e@mail.gmail.com>
-Content-Type: text/plain; charset=UTF-8; format=flowed
+Message-Id: <B2AF2CC1-2944-4395-8C6F-EC57B2683F0A@mmiworks.net>
+From: peter sikking <peter@mmiworks.net>
+In-Reply-To: <A6D4F730-27AA-4351-827A-1E9C38085E59@mmiworks.net>
+Content-Type: text/plain; charset=US-ASCII; format=flowed
 Content-Transfer-Encoding: 7bit
-Subject: Re: [Printing-architecture] OP Minutes - 4 May 2009
+Mime-Version: 1.0 (Apple Message framework v930.3)
+Date: Wed, 6 May 2009 00:48:23 -0400
+References: <A6D4F730-27AA-4351-827A-1E9C38085E59@mmiworks.net>
+Subject: [Printing-architecture] blogging, part two...
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -16,21 +16,23 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Ira McDonald <blueroofmusic@gmail.com>
-Cc: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>
+To: printing-summit@lists.linux-foundation.org, printing-architecture@lists.linux-foundation.org
 
-Correction of the link:
+guys,
 
-ftp://ftp.pwg.org/pub/pwg/fsg/minutes/OP-Minutes-20090504.htm
+second part of my sf blog.
 
-    Till
+this must be the most interesting part, discussing usability testing
+and the latest iteration of the printing dialog.
+
+enjoy,
+
+     --ps
+
+         founder + principal interaction architect
+             man + machine interface works
+
+         http://mmiworks.net/blog : on interaction architecture
 
 
-Ira McDonald wrote:
-> Hi,
-> 
-> Minutes from yesterday's Open Printing meeting are at:
-> 
->  ftp://ftp.pwg.org/pub/pwg/fsg/minutes/OP-Minutes-20090504.htm 
-> <ftp://ftp.pwg.org/pub/pwg/fsg/steering_committee/OP-SC-Minutes-20090309.htm>
 
