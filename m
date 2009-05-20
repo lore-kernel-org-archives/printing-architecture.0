@@ -1,5 +1,5 @@
-Message-ID: <4A13266E.6070607@gmail.com>
-Date: Tue, 19 May 2009 23:36:46 +0200
+Message-ID: <4A148C35.8050704@gmail.com>
+Date: Thu, 21 May 2009 01:03:17 +0200
 From: Till Kamppeter <till.kamppeter@gmail.com>
 MIME-Version: 1.0
 References: <49F758CE.5060808@gmail.com> <49F98F67.2040401@gmail.com>
@@ -26,14 +26,67 @@ To: "Suffield, David" <david.suffield@hp.com>
 Cc: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>, gs-devel <gs-devel@ghostscript.com>, Michael Sweet <mike@easysw.com>, "Cauligi,
 	Raghothama S" <raghothama.cauligi@hp.com>
 
-Thank you, now I see what you want to do.
+I have fixed the problem now in the SVN of Ghostscript (rev 9747). Or 
+apply the corrected patch:
 
-I have found a bug in gdevcups.c though. There was no protection against 
-cupsPageSizeName getting an invalid value if it does not get set 
-anywhere. Now the value is checked whether it is in the PPD file and if 
-not, it is deleted.
+http://www.openprinting.org/download/printing/ghostscript-cups-patches/cups-device-pagesize-margins-duplex-fixes.patch
+
+See the fix iteself below.
 
     Till
+
+----------------------------------------------------------------------
+
+Index: cups/gdevcups.c
+===================================================================
+--- cups/gdevcups.c	(revision 9738)
++++ cups/gdevcups.c	(working copy)
+@@ -378,7 +378,7 @@
+                                          /* cupsString */
+      "",                                 /* cupsMarkerType */
+      "",                                 /* cupsRenderingIntent */
+-    "Letter"                            /* cupsPageSizeName */
++    ""                                  /* cupsPageSizeName */
+  #endif /* CUPS_RASTER_SYNCv1 */
+    },
+    0                                     /* landscape */
+@@ -2798,6 +2798,7 @@
+    float                 swap;
+    int                   xflip = 0,
+                          yflip = 0;
++  int                   found = 0;
+
+    dprintf2("DEBUG2: cups_put_params(%p, %p)\n", pdev, plist);
+
+@@ -3071,7 +3072,26 @@
+  	yflip = 0;
+        }
+
++#ifdef CUPS_RASTER_SYNCv1
+       /*
++      * Chack whether cupsPageSizeName has a valid value
++      */
++
++      if (strlen(cups->header.cupsPageSizeName) != 0) {
++	found = 0;
++	for (i = cupsPPD->num_sizes, size = cupsPPD->sizes;
++	     i > 0;
++	     i --, size ++)
++	  if (strcasecmp(cups->header.cupsPageSizeName, size->name) == 0) {
++	    found = 1;
++	    break;
++	  }
++	if (found == 0) cups->header.cupsPageSizeName[0] = '\0';
++      }
++      dprintf1("DEBUG2: cups->header.cupsPageSizeName = %s\n", 
+cups->header.cupsPageSizeName);
++#endif
++
++     /*
+        * Find the matching page size...
+        */
+
+
 
 Suffield, David wrote:
 > Sorry, I sent you the wrong test PPD.
