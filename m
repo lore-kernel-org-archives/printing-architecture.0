@@ -1,9 +1,10 @@
 MIME-Version: 1.0
-Date: Tue, 2 Jun 2009 13:03:12 -0400
-Message-ID: <e395be80906021003g45c4a0e9v6f9da11fd6d157ee@mail.gmail.com>
+Date: Tue, 2 Jun 2009 13:07:52 -0400
+Message-ID: <e395be80906021007o4b38bc4dxe468ed33fc3e9731@mail.gmail.com>
 From: Ira McDonald <blueroofmusic@gmail.com>
-Content-Type: multipart/alternative; boundary=0015174c1d9496f5b2046b608415
-Subject: [Printing-architecture] OP Minutes - 1 June 2009
+Content-Type: multipart/alternative; boundary=0015174c0fa84b98be046b6095d8
+Subject: [Printing-architecture] Next US/Europe OP Teleconference - Tuesday
+	7 July 2009
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -13,17 +14,29 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>, Till Kamppeter <till.kamppeter@gmail.com>, Ira McDonald <blueroofmusic@gmail.com>
+To: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>, Ira McDonald <blueroofmusic@gmail.com>
 
---0015174c1d9496f5b2046b608415
+--0015174c0fa84b98be046b6095d8
 Content-Type: text/plain; charset=ISO-8859-1
 Content-Transfer-Encoding: 7bit
 
 Hi,
 
-Minutes from yesterday's Open Printing teleconference are posted at:
+Per our discussion during the Open Printing teleconference
+yesterday:
 
-  ftp://ftp.pwg.org/pub/pwg/fsg/minutes/OP-Minutes-20090601.htm
+    - Tuesday 7 July 2009, Daytime
+      - US
+        8am in San Francisco - US PDT (Pacific Daylight Time)
+        9am in Colorado - US MDT (Mountain Daylight Time)
+        10am in Chicago - US CDT (Central Daylight Time)
+        11am in New York - US EDT (Eastern Daylight Time)
+      - Europe
+        5pm in Berlin - CEST (Central European Summer Time)
+
+    * Main Number (Till Kamppeter, LF, leader)
+      International: +1-218-936-7999
+      Access Code:   491659#
 
 Cheers,
 - Ira
@@ -39,20 +52,27 @@ summer:
  PO Box 221  Grand Marais, MI 49839
  906-494-2434
 
---0015174c1d9496f5b2046b608415
+--0015174c0fa84b98be046b6095d8
 Content-Type: text/html; charset=ISO-8859-1
 Content-Transfer-Encoding: quoted-printable
 
-Hi,<br><br>Minutes from yesterday&#39;s Open Printing teleconference are po=
-sted at:<br><br>=A0 <a href=3D"ftp://ftp.pwg.org/pub/pwg/fsg/minutes/OP-Min=
-utes-20090601.htm">ftp://ftp.pwg.org/pub/pwg/fsg/minutes/OP-Minutes-2009060=
-1.htm</a><br>
-<br>Cheers,<br>- Ira<br><br clear=3D"all">Ira McDonald (Musician / Software=
- Architect)<br>Chair - Linux Foundation Open Printing WG<br>Blue Roof Music=
-/High North Inc<br>email: <a href=3D"mailto:blueroofmusic@gmail.com">bluero=
-ofmusic@gmail.com</a><br>
-winter:<br> =A0579 Park Place =A0Saline, MI =A048176<br> =A0734-944-0094<br=
->summer:<br> =A0PO Box 221 =A0Grand Marais, MI 49839<br> =A0906-494-2434<br=
->
+Hi,<br><br>Per our discussion during the Open Printing teleconference<br>ye=
+sterday:<br><br>=A0=A0=A0 - Tuesday 7 July 2009, Daytime<br>=A0=A0=A0=A0=A0=
+ - US<br>=A0=A0=A0=A0=A0=A0=A0 8am in San Francisco - US PDT (Pacific Dayli=
+ght Time)<br>=A0=A0=A0=A0=A0=A0=A0 9am in Colorado - US MDT (Mountain Dayli=
+ght Time)<br>
+=A0=A0=A0=A0=A0=A0=A0 10am in Chicago - US CDT (Central Daylight Time)<br>=
+=A0=A0=A0=A0=A0=A0=A0 11am in New York - US EDT (Eastern Daylight Time)<br>=
+=A0=A0=A0=A0=A0 - Europe<br>=A0=A0=A0=A0=A0=A0=A0 5pm in Berlin - CEST (Cen=
+tral European Summer Time)<br><br>=A0=A0=A0 * Main Number (Till Kamppeter, =
+LF, leader)<br>
+=A0=A0=A0=A0=A0 International: +1-218-936-7999<br>=A0=A0=A0=A0=A0 Access Co=
+de:=A0=A0 491659#<br><br>Cheers,<br>- Ira<br><br clear=3D"all">Ira McDonald=
+ (Musician / Software Architect)<br>Chair - Linux Foundation Open Printing =
+WG<br>Blue Roof Music/High North Inc<br>
+email: <a href=3D"mailto:blueroofmusic@gmail.com">blueroofmusic@gmail.com</=
+a><br>winter:<br> =A0579 Park Place =A0Saline, MI =A048176<br> =A0734-944-0=
+094<br>summer:<br> =A0PO Box 221 =A0Grand Marais, MI 49839<br> =A0906-494-2=
+434<br>
 
---0015174c1d9496f5b2046b608415--
+--0015174c0fa84b98be046b6095d8--
