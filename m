@@ -1,10 +1,16 @@
+From: "Hal V. Engel" <hvengel@astound.net>
+Date: Tue, 2 Jun 2009 11:41:12 -0700
+References: <e395be80811270817n502ccd16wf6cc90f85364f5ae@mail.gmail.com>
+	<4A25348F.20300@gmail.com>
+In-Reply-To: <4A25348F.20300@gmail.com>
 MIME-Version: 1.0
-Date: Tue, 2 Jun 2009 13:07:52 -0400
-Message-ID: <e395be80906021007o4b38bc4dxe468ed33fc3e9731@mail.gmail.com>
-From: Ira McDonald <blueroofmusic@gmail.com>
-Content-Type: multipart/alternative; boundary=0015174c0fa84b98be046b6095d8
-Subject: [Printing-architecture] Next US/Europe OP Teleconference - Tuesday
-	7 July 2009
+Content-Type: Text/Plain;
+  charset="iso-8859-1"
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline
+Message-Id: <200906021141.13029.hvengel@astound.net>
+Subject: Re: [Printing-architecture] Last OP Meeting - Mon/Tue - 1/2 June
+	2009 - The Recording
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -14,65 +20,90 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>, Ira McDonald <blueroofmusic@gmail.com>
+To: printing-architecture@lists.linux-foundation.org
 
---0015174c0fa84b98be046b6095d8
-Content-Type: text/plain; charset=ISO-8859-1
-Content-Transfer-Encoding: 7bit
+On Tuesday 02 June 2009 07:17:51 am Till Kamppeter wrote:
+> Hi,
+>
+> I have uploaded the recording of the last OpenPrinting meeting to the
+> OpenPrinting server:
+>
+> http://www.openprinting.org/download/meetingnotes/op-telecons/OP-Meeting-20
+>090601.mp3
+>
+> In general, recorded meetings I will upload to
+>
+> http://www.openprinting.org/download/meetingnotes/
+>
+>     Till
+>
+> P. S.: The MP3 is 18 MB long, 53 minutes of talking.
 
-Hi,
+ICC profile location/directory structure was talked about at the meeting. 
 
-Per our discussion during the Open Printing teleconference
-yesterday:
+OpenICC recommends basing the location of ICC profiles on the XDG Base 
+Directory Specification.   This is what is currently implemented in Oyranos.  
 
-    - Tuesday 7 July 2009, Daytime
-      - US
-        8am in San Francisco - US PDT (Pacific Daylight Time)
-        9am in Colorado - US MDT (Mountain Daylight Time)
-        10am in Chicago - US CDT (Central Daylight Time)
-        11am in New York - US EDT (Eastern Daylight Time)
-      - Europe
-        5pm in Berlin - CEST (Central European Summer Time)
+The current OpenICC specification for this can be found here: 
 
-    * Main Number (Till Kamppeter, LF, leader)
-      International: +1-218-936-7999
-      Access Code:   491659#
+http://www.oyranos.org/wiki/index.php?title=OpenIccDirectoryProposal
 
-Cheers,
-- Ira
+also see:
 
-Ira McDonald (Musician / Software Architect)
-Chair - Linux Foundation Open Printing WG
-Blue Roof Music/High North Inc
-email: blueroofmusic@gmail.com
-winter:
- 579 Park Place  Saline, MI  48176
- 734-944-0094
-summer:
- PO Box 221  Grand Marais, MI 49839
- 906-494-2434
+http://bugs.freestandards.org/show_bug.cgi?id=77
 
---0015174c0fa84b98be046b6095d8
-Content-Type: text/html; charset=ISO-8859-1
-Content-Transfer-Encoding: quoted-printable
+This specification was initially promulgated in 2005 and has been through a 
+number of revisions since then and is subject to additional changes going 
+forward.   It should be possible to extend this to include printer specific 
+requirements if this is needed.  For example one system wide location from 
+this specification is
 
-Hi,<br><br>Per our discussion during the Open Printing teleconference<br>ye=
-sterday:<br><br>=A0=A0=A0 - Tuesday 7 July 2009, Daytime<br>=A0=A0=A0=A0=A0=
- - US<br>=A0=A0=A0=A0=A0=A0=A0 8am in San Francisco - US PDT (Pacific Dayli=
-ght Time)<br>=A0=A0=A0=A0=A0=A0=A0 9am in Colorado - US MDT (Mountain Dayli=
-ght Time)<br>
-=A0=A0=A0=A0=A0=A0=A0 10am in Chicago - US CDT (Central Daylight Time)<br>=
-=A0=A0=A0=A0=A0=A0=A0 11am in New York - US EDT (Eastern Daylight Time)<br>=
-=A0=A0=A0=A0=A0 - Europe<br>=A0=A0=A0=A0=A0=A0=A0 5pm in Berlin - CEST (Cen=
-tral European Summer Time)<br><br>=A0=A0=A0 * Main Number (Till Kamppeter, =
-LF, leader)<br>
-=A0=A0=A0=A0=A0 International: +1-218-936-7999<br>=A0=A0=A0=A0=A0 Access Co=
-de:=A0=A0 491659#<br><br>Cheers,<br>- Ira<br><br clear=3D"all">Ira McDonald=
- (Musician / Software Architect)<br>Chair - Linux Foundation Open Printing =
-WG<br>Blue Roof Music/High North Inc<br>
-email: <a href=3D"mailto:blueroofmusic@gmail.com">blueroofmusic@gmail.com</=
-a><br>winter:<br> =A0579 Park Place =A0Saline, MI =A048176<br> =A0734-944-0=
-094<br>summer:<br> =A0PO Box 221 =A0Grand Marais, MI 49839<br> =A0906-494-2=
-434<br>
+/usr/share/color
 
---0015174c0fa84b98be046b6095d8--
+and all profiles there must be located in
+
+/usr/share/color/icc
+
+But the specification allows for things like:
+
+/usr/share/color/icc/printer
+
+and it is possible to do something like:
+
+/usr/share/color/icc/printer/Epson
+
+For printer profiles for Epson printers.  
+
+or
+
+/usr/share/color/icc/printer/Epson/R2400
+
+or
+
+/usr/share/color/icc/printer/GutenPrint-5.2/Epson_R2400
+
+or even
+
+/usr/share/color/icc/printer/GutenPrint-5.2/Epson/R2400
+
+But presently no one is using anything beyond:
+
+/usr/share/color/icc
+
+That is everyone is currently using a fairly flat directory structure since 
+most systems have a very limited number of profiles (at most a few dozen) and 
+there does not appear to be any reason to go farther.  However on a system 
+that is used as a print server with a large number of connected printers with 
+dozens or hundreds of printer profiles an extended directory structure may 
+make sense.  The specification allows for this but does not require it nor 
+does it contain any details for what this extended directory structure would 
+look like beyond the base <prefix>/share/color/icc/printer directory.
+
+It might make sense to look at this in connection with the GSoC OpenICC 
+Oyranos printer project.  This is also probably something that should be 
+settled before CM is added to the pdf2raster CUPS filter so that CUPS can be 
+updated to handle this correctly.
+
+Hal
+
+
