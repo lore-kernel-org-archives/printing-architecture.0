@@ -1,13 +1,10 @@
-Message-ID: <4A53CB59.3030805@gmail.com>
-Date: Wed, 08 Jul 2009 00:25:29 +0200
-From: Till Kamppeter <till.kamppeter@gmail.com>
 MIME-Version: 1.0
-References: <e395be80811270817n502ccd16wf6cc90f85364f5ae@mail.gmail.com>
-In-Reply-To: <e395be80811270817n502ccd16wf6cc90f85364f5ae@mail.gmail.com>
-Content-Type: text/plain; charset=UTF-8; format=flowed
+Date: Tue, 7 Jul 2009 18:45:01 -0400
+Message-ID: <e395be80907071545w789ea46chf8df78eba388ac2@mail.gmail.com>
+From: Ira McDonald <blueroofmusic@gmail.com>
+Content-Type: text/plain; charset=ISO-8859-1
 Content-Transfer-Encoding: 7bit
-Subject: [Printing-architecture] Last OP Meeting - Tue - 7 July 2009 - The
-	Recording
+Subject: [Printing-architecture] OP Minutes - 7 July 2009
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -17,23 +14,23 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Open Printing <printing-architecture@lists.linux-foundation.org>, Printing-japan <printing-japan@lists.linux-foundation.org>
+To: printing-architecture@lists.linux-foundation.org, Till Kamppeter <till.kamppeter@gmail.com>, Ira McDonald <blueroofmusic@gmail.com>
 
 Hi,
 
-I have uploaded the recording of the last OpenPrinting meeting to the
-OpenPrinting server:
+Minutes from today's Open Printing teleconference are posted at:
 
-http://www.openprinting.org/download/meetingnotes/op-telecons/OP-Meeting-20090707.mp3
+  ftp://ftp.pwg.org/pub/pwg/fsg/minutes/OP-Minutes-20090707.htm
 
-In general, recorded meetings I will upload to
-
-http://www.openprinting.org/download/meetingnotes/
-
-    Till
-
-P. S.: The MP3 is 19 MB long, 54 minutes of talking.
-
-
-
-
+Cheers,
+- Ira
+Ira McDonald (Musician / Software Architect)
+Chair - Linux Foundation Open Printing WG
+Blue Roof Music/High North Inc
+email: blueroofmusic@gmail.com
+winter:
+  579 Park Place  Saline, MI  48176
+  734-944-0094
+summer:
+  PO Box 221  Grand Marais, MI 49839
+  906-494-2434
