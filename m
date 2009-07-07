@@ -1,11 +1,11 @@
-Message-ID: <4A521497.3060204@gmail.com>
-Date: Mon, 06 Jul 2009 17:13:27 +0200
+Message-ID: <4A536126.8010307@gmail.com>
+Date: Tue, 07 Jul 2009 16:52:22 +0200
 From: Till Kamppeter <till.kamppeter@gmail.com>
 MIME-Version: 1.0
 Content-Type: text/plain; charset=UTF-8; format=flowed
 Content-Transfer-Encoding: 7bit
 Subject: [Printing-architecture] REMINDER: Next OpenPrinting telecon - Tue 7
-	July (Tomorrow)
+	July (Today)
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -21,7 +21,7 @@ Reminder of our next OpenPrinting teleconference.
 
 Anyone can join and *participate*, you are all welcome.
 
-The telecon starts in 24 hours from now.
+The telecon starts in 10 minutes from now.
 
 The OpenPrinting meeting will be on:
 
@@ -41,6 +41,7 @@ The OpenPrinting meeting will be on:
 Please call-in and join us.
 
     Till
+
 
 
 
