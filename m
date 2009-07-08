@@ -1,10 +1,11 @@
 MIME-Version: 1.0
-Date: Tue, 7 Jul 2009 18:45:01 -0400
-Message-ID: <e395be80907071545w789ea46chf8df78eba388ac2@mail.gmail.com>
+Date: Tue, 7 Jul 2009 21:30:02 -0400
+Message-ID: <e395be80907071830m63b17433n5acb39ec975111c4@mail.gmail.com>
 From: Ira McDonald <blueroofmusic@gmail.com>
 Content-Type: text/plain; charset=ISO-8859-1
 Content-Transfer-Encoding: 7bit
-Subject: [Printing-architecture] OP Minutes - 7 July 2009
+Subject: [Printing-architecture] Next US/Europe OP Teleconference - Tuesday
+	4 August 2009
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -14,16 +15,27 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: printing-architecture@lists.linux-foundation.org, Till Kamppeter <till.kamppeter@gmail.com>, Ira McDonald <blueroofmusic@gmail.com>
+To: printing-architecture@lists.linux-foundation.org, Till Kamppeter <till.kamppeter@gmail.com>, "Petrie, Glen" <glen.petrie@eitc.epson.com>
 
-Hi,
+Per our discussion during the Open Printing teleconference
+today:
 
-Minutes from today's Open Printing teleconference are posted at:
+    - Tuesday 4 August 2009, Daytime
+      - US
+        8am in San Francisco - US PDT (Pacific Daylight Time)
+        9am in Colorado - US MDT (Mountain Daylight Time)
+        10am in Chicago - US CDT (Central Daylight Time)
+        11am in New York - US EDT (Eastern Daylight Time)
+      - Europe
+        5pm in Berlin - CEST (Central European Summer Time)
 
-  ftp://ftp.pwg.org/pub/pwg/fsg/minutes/OP-Minutes-20090707.htm
+    * Main Number (Till Kamppeter, LF, leader)
+      International: +1-218-936-7999
+      Access Code:   491659#
 
 Cheers,
 - Ira
+
 Ira McDonald (Musician / Software Architect)
 Chair - Linux Foundation Open Printing WG
 Blue Roof Music/High North Inc
