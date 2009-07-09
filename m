@@ -1,13 +1,14 @@
-Content-class: urn:content-classes:message
-MIME-Version: 1.0
-Content-Type: text/plain;
-	charset="us-ascii"
-Content-Transfer-Encoding: quoted-printable
-Date: Thu, 9 Jul 2009 06:51:07 -0700
-Message-ID: <ED4094DE5E8ACD4BBDACA6AD398E608F41885E@EEAEX03.us.epson.net>
-References: <4A5364E7.9000904@gmail.com><ED4094DE5E8ACD4BBDACA6AD398E608F418826@EEAEX03.us.epson.net>
+From: Alexander Wauck <alex.wauck@gmail.com>
+Date: Thu, 9 Jul 2009 08:56:52 -0500
+References: <4A5364E7.9000904@gmail.com>
 	<ED4094DE5E8ACD4BBDACA6AD398E608F418827@EEAEX03.us.epson.net>
-From: "Petrie, Glen" <glen.petrie@eitc.epson.com>
+	<ED4094DE5E8ACD4BBDACA6AD398E608F41885E@EEAEX03.us.epson.net>
+In-Reply-To: <ED4094DE5E8ACD4BBDACA6AD398E608F41885E@EEAEX03.us.epson.net>
+MIME-Version: 1.0
+Content-Type: multipart/signed; boundary="nextPart3075781.NjPVe0ONxz";
+	protocol="application/pgp-signature"; micalg=pgp-sha1
+Content-Transfer-Encoding: 7bit
+Message-Id: <200907090856.57775.alex.wauck@gmail.com>
 Subject: Re: [Printing-architecture] new cpd specs
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
@@ -18,91 +19,58 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Till Kamppeter <till.kamppeter@gmail.com>
-Cc: printing-architecture@lists.linux-foundation.org
+To: printing-architecture@lists.linux-foundation.org
+Cc: "Petrie, Glen" <glen.petrie@eitc.epson.com>, Till Kamppeter <till.kamppeter@gmail.com>
 
-Till,
+--nextPart3075781.NjPVe0ONxz
+Content-Type: Text/Plain;
+  charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
 
-I thought of another useful button for "pages to print" (Should be
-called "Content to Print") is printing the Clipboard.  Since this is the
-CPD, the clipboard is something app have in common.=20
+> I thought of another useful button for "pages to print" (Should be
+> called "Content to Print") is printing the Clipboard.  Since this is the
+> CPD, the clipboard is something app have in common.
 
-> -----Original Message-----
-> From: printing-architecture-bounces@lists.linux-foundation.org
-> [mailto:printing-architecture-bounces@lists.linux-foundation.org] On
-> Behalf Of Petrie, Glen
-> Sent: Tuesday, July 07, 2009 1:28 PM
-> To: Till Kamppeter; printing-architecture@lists.linux-foundation.org
-> Subject: Re: [Printing-architecture] new cpd specs
->=20
-> Ops, forgot - how can I print just "selected".  For example only the
-> selected paragraph on a page.
->=20
-> glen
->=20
-> > -----Original Message-----
-> > From: printing-architecture-bounces@lists.linux-foundation.org
-> > [mailto:printing-architecture-bounces@lists.linux-foundation.org] On
-> > Behalf Of Petrie, Glen
-> > Sent: Tuesday, July 07, 2009 1:12 PM
-> > To: Till Kamppeter; printing-architecture@lists.linux-foundation.org
-> > Subject: Re: [Printing-architecture] new cpd specs
-> >
-> > Till,
-> >
-> > I have not seen the final interface.  But on the detailed view for
-> > "Pages to Print" is it possible to add a button for the "current"
-> page.
-> >
-> > How does the page range work in detail for a single page.  If I only
-> > want to print a single page; can I leave one the page range values
-> empty
-> > (either the to or from value) or do you have enter the same value in
-> the
-> > to and from fields.
-> >
-> > Glen.
-> >
-> >
-> > > -----Original Message-----
-> > > From: printing-architecture-bounces@lists.linux-foundation.org
-> > > [mailto:printing-architecture-bounces@lists.linux-foundation.org]
-On
-> > > Behalf Of Till Kamppeter
-> > > Sent: Tuesday, July 07, 2009 8:08 AM
-> > > To: printing-architecture@lists.linux-foundation.org
-> > > Subject: [Printing-architecture] new cpd specs
-> > >
-> > >
-> >
->
-http://wiki.openusability.org/printing/index.php/Level_2_Dialog_zones_an
-> > d_
-> > > content
-> > >
-> >
->
-http://wiki.openusability.org/printing/index.php/Level_3_Dialog_zones_an
-> > d_
-> > > content
-> > > _______________________________________________
-> > > Printing-architecture mailing list
-> > > Printing-architecture@lists.linux-foundation.org
-> > >
-> >
->
-https://lists.linux-foundation.org/mailman/listinfo/printing-architectur
-> > e
-> > _______________________________________________
-> > Printing-architecture mailing list
-> > Printing-architecture@lists.linux-foundation.org
-> >
->
-https://lists.linux-foundation.org/mailman/listinfo/printing-architectur
-> e
-> _______________________________________________
-> Printing-architecture mailing list
-> Printing-architecture@lists.linux-foundation.org
->
-https://lists.linux-foundation.org/mailman/listinfo/printing-architectur
-e
+Do Qt/GTK+ applications have their own clipboards (I'm thinking of OpenOffi=
+ce in=20
+particular), or do they use a common clipboard?  I don't think that=20
+functionality belongs in the dialog itself unless applications have their o=
+wn=20
+clipboards.  If the common clipboard is all there is, then a clipboard mana=
+ger=20
+application (like Klipper) should provide this functionality.
+
+Alex
+
+=2D-=20
+Public keys:
+http://dragonfly.mediaservices.gac.edu/alex/keys/
+
+()  ascii ribbon campaign - against html e-mail=20
+/\  www.asciiribbon.org   - against proprietary attachments
+
+http://www.gnu.org/philosophy/no-word-attachments.html
+
+--nextPart3075781.NjPVe0ONxz
+Content-Type: application/pgp-signature; name=signature.asc 
+Content-Description: This is a digitally signed message part.
+
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.9 (GNU/Linux)
+
+iQIcBAABAgAGBQJKVfckAAoJEDuw+vejsw6Umn0P/ijTK/OB4pibZqY+go7HvjMa
+/OV5sENcVTcUOjtYbUi/yWDYb3TBsw8z/gk7Uz1wRiweeXTbdfEeFQ9zMXA2Af4t
+VLEBYyo7S0HJfoktM2kvkGD3q1WoAFFqXYvnyyk6kFwq8KjexvVpno7ubMQtAi0W
+KtgIVoEeIVaC8MiyUKTfYxBsaoje5Wr0goKxMcaWyJUa7+VHKgOHskHn+/bAyBr7
+z6uj/U9y7vyW87Ic5bWQb6pgawofIAKqSTOuq+eiP4nPoZuBTRwOVJFF4qW6FaXz
+qG4bq0lDIBjG5q2tIDYINabZF8jUdBXZpoa6EvhbnL8INRbj6QmOWFnmhUcETvty
+fTeC37L8Yx9HdZx/XY2AmClFmhOXcN95LUxfz2DzDc8eLWz2freZ49ZuxemHBkFL
+H4aVtpBYg/x6RfEfwxNhjNE9Qu23IxMKff3wKBQm1CVIfxTpSEbIikAkhH3XO85S
+bsPv+UIYR2fjW4NIMc0YUSl6gFe0xiAwob45JLJlU9yYtBUQg1hXN8DxkWutjNDI
+7MdgYgdHI6JMs1XAdOt9RVLSYsSyyk94woZ7wAKZs09QfQbFXrycWGpHDzWe/3fN
+2O3/qoDfGBVuvJQD3rDulVrsfaRQNsqxqTnKBkMXTzdjUKz59itNyCmzo1mTfjL4
+Owd3BoRhZmp4Oc/lKEVQ
+=BkTP
+-----END PGP SIGNATURE-----
+
+--nextPart3075781.NjPVe0ONxz--
