@@ -1,14 +1,12 @@
-Message-ID: <4A57D539.5060602@gmail.com>
-Date: Sat, 11 Jul 2009 01:56:41 +0200
-From: Till Kamppeter <till.kamppeter@gmail.com>
-MIME-Version: 1.0
-References: <ED4094DE5E8ACD4BBDACA6AD398E608F418864@EEAEX03.us.epson.net>
-	<4A57B3E0.3030805@gmail.com>
-	<ED4094DE5E8ACD4BBDACA6AD398E608F4188A8@EEAEX03.us.epson.net>
-In-Reply-To: <ED4094DE5E8ACD4BBDACA6AD398E608F4188A8@EEAEX03.us.epson.net>
-Content-Type: text/plain; charset=UTF-8; format=flowed
+Message-Id: <60555AF1-6CA7-4C1E-88B5-499BCE19C138@mmiworks.net>
+From: kate price <kate@mmiworks.net>
+In-Reply-To: <ED4094DE5E8ACD4BBDACA6AD398E608F41887E@EEAEX03.us.epson.net>
+Content-Type: text/plain; charset=US-ASCII; format=flowed; delsp=yes
 Content-Transfer-Encoding: 7bit
-Subject: Re: [Printing-architecture] Questions, Concern, Disscusion on CPD
+Mime-Version: 1.0 (Apple Message framework v935.3)
+Date: Sun, 12 Jul 2009 15:23:29 +0200
+References: <ED4094DE5E8ACD4BBDACA6AD398E608F41887E@EEAEX03.us.epson.net>
+Subject: Re: [Printing-architecture] Vendor Extensions to the CPD
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -18,103 +16,71 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: "Petrie, Glen" <glen.petrie@eitc.epson.com>
-Cc: printing-architecture@lists.linux-foundation.org
+To: printing-architecture@lists.linux-foundation.org
 
-Petrie, Glen wrote:
->>> B: The "paper size" has no "default setting"; the application sends
-> the
->>> CPD the size of the media.  Setting the media-size is initially done
-> in
->>> the application in the "Page Setup".  The CPD is not doing setup
->>> functions.  The user may override the media-size; even the
-> orientation
->>> received from the application in the CPD; in which case the "fit
-> policy"
->>> would be invoked.
->>>
->> Probably we should add a choice "Document's Media Size" to the "Media
->> Size" (machine-readable name "PageSize") option. This choice should be
->> selected by default and then each page is sent with the size set by
-> the
->> application and a printer containing all needed paper sizes switches
-> the
->> trays automatically to have each page printed on the correct paper
-> size.
->> If one of the concrete mediua sizes (like "A4") is chosen, the pages
-> are
->>   all converted to print on the requested size, where the user can
->> select with another option whether to scale or to crop.
->>
-> 
-> [gwp] I do not quite understand what you stated.  Are we agreed the
-> application will send the media-size information to the CPD; if not,
-> that has to be the first item to address.  If the application sends the
-> "PageSize" to the CPD; then, the CPD changes the media-size choice to
-> the size sent by the application.  Now, if the user wants a different
-> size, the use the fit-option to tell how to fit it.
->
+Hi Glen and others
 
-In OpenOffice.org Writer, Scribus, ... you produce a document where each 
-page has its well-determined size (set with "Format" -> "Page"). Most 
-documents have the same size for all pages, but some can have pages of 
-different sizes. For example a book can contain a fold-out page with a 
-map. So the app sends the document in PDF format to the CPD. The PDF 
-contains the paghe size information for each page. If we want to get all 
-pages out in the sizes chosen when creating the document, the dialog 
-should not impose any page size to the job. Then we would use the choice 
-"Document's Media Size" in the PageSize option of the dialog. Then the 
-printer will automatically pull A4 for most of the pages and A3 for the 
-fold-outs. If our printer has only A4 paper, you would choose the page 
-size "A4" in the dialog and "fit to page". This makes the fold-outs 
-being shrinked to fit into A4 pages (and rotated by 90 degrees for the 
-best fit).
+For those that don't know I am working with Peter on the CPD, and will  
+be the doing the bulk of wiki maintenance.
+Peter is on holiday for a few days, hence the delay in getting back to  
+you...
+Thus, we will comment on Glen's previous email in more detail ASAP-
+However a few points-
 
->> If the document of an application does not have a well-defined paper
->> size, like the images in a photo viewer or the text files in a plain
->> text editor, the "Media Size" option should not have the "Document's
->> Media Size" choice and the current CUPS default setting for the page
->> size should be selected as default. The image or text gets fit into
-> that
->> page size by application-provided options, for example fit into page,
->> fixed size, n photos per sheet, poster of NxM inches, going over
-> several
->> sheets to stick together.
->>
-> 
-> [gwp] I would like to encourage a single architecture/ design/
-> implementation approach.  That is, even the photo-application can send a
-> media-size to the CPD.  Now the new question is where does the photo-app
-> get the media-size info; they pick on based on location (A4 or Letter);
-> from CUPS; from the User-Print-Profile concept I copied you privately
-> on.
-> 
+Regarding vendor specific panel or dialog extension- (and I hope I  
+understood your suggestion correctly):
 
-This is the problem: A photo does not have a well-determined absolute 
-size. So a size comes into the picture only if the user wants to print 
-the photo. Therefore I think here is best to set the size in the 
-printing dialog. Additional parameters could also get set in the 
-application-specific options.
+It is fully anticipated that all tags and therefore the system of  
+controls, which make up the level 3 of the dialog, will be adaptable  
+according to the printer manufacturer's requirements. Please don't  
+think that there will be a fixed set of tags defined by us, although  
+we will providing guidelines and making recommendations. (One of which  
+will include using some UI professionals to help in the integration of  
+the system). Because it's certain universal tags would in no way be  
+flexible enough.
 
-> [gwp] I have noted that most photo-apps that provide n photo per sheet
-> will request the user the media-size so that the photo-size can do the
-> layout correctly.  
-> 
+Certainly, some tags will be pretty common to most printer groups-  
+ones based around page handling for example. However,  it means that   
+manufacturers will be provided with the opportunity to really specify  
+tags (and by extension systems of controls) according to their  
+markets, features and user's needs: whilst at the same time, staying  
+within the holistic system of the configuration matrix.
 
-Here we would have layouted pages again (like the documents of 
-OpenOffice.org Writer), so the PageSize option should have "Document's 
-Media Size" added and selected by default.
+The togetherness of the system is vital for users. It means that when  
+they extend the dialog to it's third level, that they perceive that  
+they have full control. That doesn't mean that they immediately see  
+all controls of course! Merely that they now have access to them via  
+the config. matrix (the tags). Adding more controls, or different  
+panels- essentially outside of this system - would really sink that  
+idea for users. Especially when it isn't necessary to achieve the  
+desired aim,  because the dialog is in itself intrinsically vendor  
+specific.
 
-> [gwp] Can we avoid "poster" in the first version of the CPD?  Use Alex's
-> suggestion and find an application to do the function right now.
-> Example, spread-sheet app split on cells; photo-app may not care,
-> drawing-app do not want to split on a "line" or "split a thick";
-> text-app have less options.  So if you just "cut up the large page into
-> smaller print pages", the output could be unacceptable.  A very good
-> GSoC project for next year.
-> 
+Actually, I would even argue that the directness of how tags get their  
+ideas across, is a great opportunity for manufacturers. For example if  
+a printer range has a USP or a new feature, this can be incorporated  
+and communicated in one or more tags and tag names, which users will  
+see and be likely to use much more than they would be likely to click  
+on a link to a vendor specific panel or dialog-remembering that for  
+users printing -and by extension printer manufacturers -don't exist!
 
-Yes, let us leave out "Poster" for now and let it really be a project 
-for GSoC 2010.
+Additionally:
 
-    Till
+Thanks very much for going through the controls so carefully. I know  
+Peter and I will be discussing and acting on your comments as soon as  
+he is back from his holiday. I want to just make it clear that the  
+controls that you commented on are:
+
+1. based on the assumed parameters for the cluster personal laser  
+printers only- hence a large numbers of controls appropriate for other  
+printer cluster types, not being present in this list.
+2. this is a perceived "educational" group, used to design an assumed  
+set of parameters for a  group of printers, we are using as a design  
+method. The actual final tag-to-control mapping will vary per printer-  
+as written above.
+3. preliminary designs, which have yet to be refined or tested-
+
+Kate
+
+
+
