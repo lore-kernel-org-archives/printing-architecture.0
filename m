@@ -1,9 +1,9 @@
-Message-Id: <0919DD15-0F11-4242-9E5B-E5D7F86D87D9@mmiworks.net>
+Message-Id: <693AA525-2F82-4B62-A41B-FF4462B420F9@mmiworks.net>
 From: peter sikking <peter@mmiworks.net>
 Content-Type: text/plain; charset=US-ASCII; format=flowed
 Content-Transfer-Encoding: 7bit
 Mime-Version: 1.0 (Apple Message framework v935.3)
-Date: Mon, 20 Jul 2009 19:45:22 +0200
+Date: Mon, 20 Jul 2009 20:35:00 +0200
 Subject: [Printing-architecture] digesting et cetera...
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
@@ -49,12 +49,12 @@ from now on you can expect the feedback after a long-winding
 mail thread that I have updated our input page with some
 useful info found in the thread.
 
-     --ps
+    --ps
 
-         founder + principal interaction architect
-             man + machine interface works
+        founder + principal interaction architect
+            man + machine interface works
 
-         http://mmiworks.net/blog : on interaction architecture
+        http://mmiworks.net/blog : on interaction architecture
 
 
 
