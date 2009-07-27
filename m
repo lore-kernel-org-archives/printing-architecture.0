@@ -1,10 +1,10 @@
-Message-Id: <693AA525-2F82-4B62-A41B-FF4462B420F9@mmiworks.net>
-From: peter sikking <peter@mmiworks.net>
-Content-Type: text/plain; charset=US-ASCII; format=flowed
+Message-ID: <4A6DFCAB.1050503@gmail.com>
+Date: Mon, 27 Jul 2009 21:14:51 +0200
+From: Till Kamppeter <till.kamppeter@gmail.com>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8; format=flowed
 Content-Transfer-Encoding: 7bit
-Mime-Version: 1.0 (Apple Message framework v935.3)
-Date: Mon, 20 Jul 2009 20:35:00 +0200
-Subject: [Printing-architecture] digesting et cetera...
+Subject: [Printing-architecture] Clarifications about the Presets
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -14,47 +14,72 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: printing-architecture@lists.linux-foundation.org
+To: Per Hermansson <hermansson.per@bredband.net>, Alexander Wauck <alex.wauck@gmail.com>
+Cc: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>
 
-hey guys,
+Hi,
 
-I have taken the time (now that the heat is gone) to look at the
-communication of the last two weeks on this list.
+I had a phone call with Peter Sikking and asked him about tyhe exact 
+behavior of the presets. They should work as follows:
 
-first of all I must commend my colleague Kate for the patience and
-tact with which she answered the thread here in my absence.
-The patience and tact really being beyond the call of duty when
-compared to the general tone of the debate.
+If the user chooses a preset, all options are set to CUPS system 
+defaults and the options defined by the preset in the PPD are set as 
+defined in the preset. The dialog has to add a preset with the menu 
+entry "Default Settings" which sets everything to the CUPS system 
+defaults. This preset gets pre-selected when the dialog comes up for the 
+first time.
 
-second I have decided to implement a new method so that all this
-debate is not in vain. I have introduced an input page:
+This preset would be equivalent to
 
-<http://wiki.openusability.org/printing/index.php/Input_page>
+*APPrinterPreset Default/Default Settings: ""
 
-where we filter out what is useful to our design and specification
-work from all kinds of communication channels. we will pick off
-these points one by one when we get to work on the pertaining section.
+in the PPD file (not defining any option settings, we only set the 
+options to the CUPS defaults). So the "Default Settings" preset should 
+only get added if there is no preset with empty option list. This way a 
+manufacturer could customize the UI string by adding this to the PPD:
 
-this way the person who gives input can see that it goes into the
-process and we have one single persistent place where the useful
-is digested and combined.
+*APPrinterPreset CanonDefaults/Canon's Defaults: ""
 
-to start, I have filtered the last two weeks here and you can see
-the results on the page. I think it really shows the value for us,
-in that in what was buried between a lot of writing about technical
-standards (JTAPI, anyone?) I have fished out what we can use
-our interaction design work.
+If a user changes options on the right hand side of the level 3 dialog, 
+the Preset Zone should change its layout from
 
-from now on you can expect the feedback after a long-winding
-mail thread that I have updated our input page with some
-useful info found in the thread.
+           +------------------------------+-+
+Presets:  |Web page                      |v|
+           +------------------------------+-+
 
-    --ps
+(http://wiki.openusability.org/printing/images/thumb/300px-Level2.png)
 
-        founder + principal interaction architect
-            man + machine interface works
+to
 
-        http://mmiworks.net/blog : on interaction architecture
+                                  +-------+-+
+Current Settings:  Save...       |Presets|v|
+                    -------       +-------+-+
+
+(http://wiki.openusability.org/printing/images/Level3_extended.png)
 
 
+In the first case, the drop-down menu contains "Default Settings" as 
+first item (if there is no empty preset in the PPD) and all presets 
+defined in the PPD (or defined by a fallback if the PPD has no presets).
 
+In the second case the drop-down contains "Presets" as the first entry 
+and this is pre-selected. The following entries are the same as in the 
+first case. The "Save ..." link allows to save the current settings. 
+Saved settings are added as new presets to the presets drop-down.
+
+In the second case selecting a Preset leads to the Preset Zone returning 
+to the first case.
+
+Note that with a preset selected no "Save..." is needed, as the Preset 
+puts all options to well-defined values and one can always return to 
+this state by selecting the preset.
+
+If the user selects a preset which he has defined (saved settings), I 
+would suggest that then a little icon to delete this preset appears (a 
+trash can or so). preferably in the preset zone. Peter, what do you suggest?
+
+I think with this you should be able to implement the preset handling 
+already (Peter will put up this info in his specs later, but you can 
+already start with the implementation).
+
+    Till
