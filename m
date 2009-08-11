@@ -1,13 +1,11 @@
-Message-ID: <4A819264.1080500@gmail.com>
-Date: Tue, 11 Aug 2009 17:46:44 +0200
-From: Till Kamppeter <till.kamppeter@gmail.com>
 MIME-Version: 1.0
-References: <e395be80908110804j602d2ed6m731e2a62caf83574@mail.gmail.com>
-In-Reply-To: <e395be80908110804j602d2ed6m731e2a62caf83574@mail.gmail.com>
-Content-Type: text/plain; charset=UTF-8; format=flowed
+Date: Tue, 11 Aug 2009 13:33:03 -0400
+Message-ID: <e395be80908111033u14a02efdjac45e0b4d192b1cc@mail.gmail.com>
+From: Ira McDonald <blueroofmusic@gmail.com>
+Content-Type: text/plain; charset=ISO-8859-1
 Content-Transfer-Encoding: 7bit
-Subject: Re: [Printing-architecture] Proposed Monday 17 August - next OP
-	Teleconference
+Subject: [Printing-architecture] NEW TIME - US/Europe OP Teleconference -
+	MONDAY 17 August 2009
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -17,26 +15,54 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Ira McDonald <blueroofmusic@gmail.com>
-Cc: printing-architecture@lists.linux-foundation.org, "Petrie,
-	Glen" <glen.petrie@eitc.epson.com>
+To: printing-architecture@lists.linux-foundation.org, Till Kamppeter <till.kamppeter@gmail.com>, "Petrie, Glen" <glen.petrie@eitc.epson.com>, Lars Uebernickel <larsuebernickel@gmx.de>, Ira McDonald <blueroofmusic@gmail.com>
 
-Ira McDonald wrote:
-> Hi,
-> 
-> Sorry for the confusion.
-> 
-> The only possible time for an OP Teleconference
-> next week is MONDAY 17 August.
-> 
-> The PWG face-to-face at Microsoft in Redmond, WA
-> runs Monday afternoon through Thursday evening
-> next week.  And I'm not available on Friday.
-> 
-> So what about Monday 17 August at 11am US EDT
-> (usual time)?
+Hi,
 
-OK for me.
+NEW TIME for our next monthly US/Europe Open Printing phone
+call.  Please join us - all are welcome.
 
-    Till
+    - Monday 17 August 2009, Daytime
+      - US
+        8am in San Francisco - US PDT (Pacific Daylight Time)
+        9am in Colorado - US MDT (Mountain Daylight Time)
+        10am in Chicago - US CDT (Central Daylight Time)
+        11am in New York - US EDT (Eastern Daylight Time)
+      - Europe
+        5pm in Berlin - CEST (Central European Summer Time)
 
+    * Main Number (Till Kamppeter, LF, leader)
+      International: +1-218-936-7999
+      Access Code:   491659#
+
+Agenda topics will include:
+
+(1) Progress of the GSoC students (Till, Lars, OpenICC)
+
+(2) 3-day tutorial for printer manufacturers (proposal by Till)
+      - driiver design
+      - driver packaging for autodownload
+      - Common Printing Dialog
+
+(3) PWG Face-to-Face on 17-20 August (Ira, Glen)
+      - Hosted by Microsoft in Redmond, WA
+      - 1284 Device ID format for Command Set (PS, PCL, etc.)
+      - PWG Candidate Standard IPP/2.0 (PWG 5100.10)
+      - Hard Copy Device security (IETF NEA, MS-NAP, etc.)
+      - Multifunction Devices (Copy, FaxOut, EmailIn, etc.)
+
+(4) Any other topics you bring
+
+Cheers,
+- Ira
+
+Ira McDonald (Musician / Software Architect)
+Chair - Linux Foundation Open Printing WG
+Blue Roof Music/High North Inc
+email: blueroofmusic@gmail.com
+winter:
+  579 Park Place  Saline, MI  48176
+  734-944-0094
+summer:
+  PO Box 221  Grand Marais, MI 49839
+  906-494-2434
