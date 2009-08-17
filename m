@@ -1,11 +1,11 @@
 MIME-Version: 1.0
-Date: Mon, 17 Aug 2009 12:52:19 -0400
-Message-ID: <e395be80908170952h324a8231vc3fc7e1ef33aab2d@mail.gmail.com>
+Date: Mon, 17 Aug 2009 12:54:36 -0400
+Message-ID: <e395be80908170954y1319ec62qc232109e44f88213@mail.gmail.com>
 From: Ira McDonald <blueroofmusic@gmail.com>
 Content-Type: text/plain; charset=ISO-8859-1
 Content-Transfer-Encoding: 7bit
-Subject: [Printing-architecture] Next US/Europe OP Teleconference - Tuesday
-	8 September 2009
+Subject: [Printing-architecture] Next Japan/US/Europe OP Teleconference -
+	Mon/Tue 14/15 September 2009
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -19,16 +19,20 @@ To: printing-architecture@lists.linux-foundation.org, Ira McDonald <blueroofmusi
 
 Hi,
 
-Next US/Europe Open Printing Teleconference wil be:
+Next quarterly Japan/US/Europe Open Printing Teleconference:
 
-    - Tuesday 8 September 2009, Daytime
+    - Monday 14 September 2009, Evening
       - US
-        8am in San Francisco - US PDT (Pacific Daylight Time)
-        9am in Colorado - US MDT (Mountain Daylight Time)
-        10am in Chicago - US CDT (Central Daylight Time)
-        11am in New York - US EDT (Eastern Daylight Time)
+        4pm in San Francisco - US PDT (Pacific Daylight Time)
+        5pm in Colorado - US MDT (Mountain Daylight Time)
+        6pm in Chicago - US CDT (Central Daylight Time)
+        7pm in New York - US EDT (Eastern Daylight Time)
+
+    - Tuesday 15 September 2009, Morning
       - Europe
-        5pm in Berlin - CEST (Central European Summer Time)
+        1am in Berlin - CEST (Central European Summer Time)
+      - Japan
+        8am in Tokyo - JST (Japan Standard Time)
 
     * Main Number (Till Kamppeter, LF, leader)
       International: +1-218-936-7999
