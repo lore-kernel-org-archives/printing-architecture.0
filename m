@@ -1,11 +1,10 @@
 MIME-Version: 1.0
-Date: Mon, 17 Aug 2009 12:54:36 -0400
-Message-ID: <e395be80908170954y1319ec62qc232109e44f88213@mail.gmail.com>
+Date: Wed, 19 Aug 2009 00:34:22 -0400
+Message-ID: <e395be80908182134q51b9b3cemf62788a8a952f266@mail.gmail.com>
 From: Ira McDonald <blueroofmusic@gmail.com>
 Content-Type: text/plain; charset=ISO-8859-1
 Content-Transfer-Encoding: 7bit
-Subject: [Printing-architecture] Next Japan/US/Europe OP Teleconference -
-	Mon/Tue 14/15 September 2009
+Subject: [Printing-architecture] OP Minutes - 17 August 2009
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -15,28 +14,13 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: printing-architecture@lists.linux-foundation.org, Ira McDonald <blueroofmusic@gmail.com>, Till Kamppeter <till.kamppeter@gmail.com>, "Petrie, Glen" <glen.petrie@eitc.epson.com>
+To: printing-architecture@lists.linux-foundation.org, Till Kamppeter <till.kamppeter@gmail.com>, Ira McDonald <blueroofmusic@gmail.com>, Lars Uebernickel <larsuebernickel@gmx.de>, "Petrie, Glen" <glen.petrie@eitc.epson.com>
 
 Hi,
 
-Next quarterly Japan/US/Europe Open Printing Teleconference:
+Minutes from Monday's Open Printing teleconference are posted at:
 
-    - Monday 14 September 2009, Evening
-      - US
-        4pm in San Francisco - US PDT (Pacific Daylight Time)
-        5pm in Colorado - US MDT (Mountain Daylight Time)
-        6pm in Chicago - US CDT (Central Daylight Time)
-        7pm in New York - US EDT (Eastern Daylight Time)
-
-    - Tuesday 15 September 2009, Morning
-      - Europe
-        1am in Berlin - CEST (Central European Summer Time)
-      - Japan
-        8am in Tokyo - JST (Japan Standard Time)
-
-    * Main Number (Till Kamppeter, LF, leader)
-      International: +1-218-936-7999
-      Access Code:   491659#
+ ftp://ftp.pwg.org/pub/pwg/fsg/minutes/OP-Minutes-20090707.htm
 
 Cheers,
 - Ira
