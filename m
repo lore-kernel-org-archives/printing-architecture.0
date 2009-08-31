@@ -1,9 +1,12 @@
-Date: Thu, 27 Aug 2009 11:07:34 +0200 (CEST)
-From: Kai-Uwe Behrmann <ku.b@gmx.de>
-Message-ID: <alpine.LSU.2.00.0908271056100.19414@sirius.rasena>
-MIME-Version: 1.0
-Content-Type: TEXT/PLAIN; format=flowed; charset=US-ASCII
-Subject: [Printing-architecture] OpenICC GSoC 2009 finalised
+Message-Id: <1D91A1AF-FE4E-4E1C-B124-659AF0B2840E@mmiworks.net>
+From: peter sikking <peter@mmiworks.net>
+In-Reply-To: <4A8C0140.5060400@gmail.com>
+Content-Type: text/plain; charset=US-ASCII; format=flowed
+Content-Transfer-Encoding: 7bit
+Mime-Version: 1.0 (Apple Message framework v935.3)
+Date: Mon, 31 Aug 2009 15:12:21 +0200
+References: <4A8C0140.5060400@gmail.com>
+Subject: Re: [Printing-architecture] Common Printing Dialog: Window title bar
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -13,75 +16,49 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: OpenICC Liste <openicc@lists.freedesktop.org>, lprof-users@lists.sourceforge.net, oyranos-devel <oyranos-devel@lists.sourceforge.net>
+To: Till Kamppeter <till.kamppeter@gmail.com>
 Cc: Open Printing <printing-architecture@lists.linux-foundation.org>
 
-Dear list readers,
+catching up with the holiday mail:
+
+On 19 Aug, Till wrote:
+
+> please let the title bar of the Common Printing Dialog be one of these
+> (if possible):
+>
+> Print - <document file name> - <application name>
+> Print - <application name>
+> Print
 
 
-Google Summer of Code 2009 projects have officially finished. All 
-projects at OpenICC are brought to successful end. Two projects could 
-almost be completed as planed. One could be brought to a reasonable end. 
-The code will shurely find its way into the according projects or is 
-already included. Even though further work is needed to get it full 
-functional.
+well, let's look at what really matters here.
 
-Many thanks to all three students for their great commitment during 
-these months full of work and the community in giving a helpful hand. We 
-obtained as well helpful feedback on email lists of device related 
-projects.
+this may be a bit hard to swallow for the printing community
+but it is the big picture: for us guys who work on making printing
+happen, printing is a vast, hideously complex, important
+infrastructure project that.
 
+however for application developers and users (both of who
+I also represent as interaction architect), printing is a small
+cog, _inside_ the application.
 
-Hal V. Engel, the mentor of Amit Kumar, stated the Qt4 work on LProf is 
-complete and is currently in a branch waiting to be merged into LProf main 
-line.  I plan on cleaning up the GSoC2009 branch over the next few weeks 
-and merging it into the main line. 
-This project ran ahead of schedule almost from the beginning.  In part 
-this was because it was not nearly as ambitious as the Oyranos related 
-projects and it had well defined goals that were fairly easy to achieve in 
-the allotted time frame.  But it was also because the Amit worked hard on 
-getting it done right from the beginning.
+exactly the same as open and save dialogs.
 
-The two Oyranos related projects, mentored by me, started partitial very 
-early and up to the last day many things in Oyranos itself where not 
-clear. So the two students also worked on defining and discussing module 
-APIs and protocols for the three new Oyranos device configuration modules. 
-This contributed very much to clearing of device related concepts in 
-Oyranos.
+therefore there is no need for, or even patience with, grandiose
+dialog titles. "Print" is just enough.
 
-A very early start had the libraw and Sane modules from Yiannis Belias. He 
-discussed many issues on te Sane email list and found a way, on how to tag 
-colour relevance for Sane options. Still we have to prepare a patch to get 
-this functionality included in Sane. After that it sould get ready to use.
+another topic: I updated the
 
-Joe Simon's CUPS module for Oyranos had many interessting ideas 
-implemented, but was due to a lack of time not finished. Anyway the 
-"cupsICCProfile" PPD attribute is now understood by this module in Oyranos 
-git. This allowes reading of CUPS server side root only accessible 
-configurations (PPDs).
-To know a way on how to tag PPD attributes for their colour relevance 
-would be great. This would help to assign a local profile in Oyranos 
-to a printing device with user rights like with all other device backends.
+http://wiki.openusability.org/printing/index.php/Input_page
 
-The other part of Joe's OpenICC project the KolorManager CMS control panel 
-for KDE could in parts completely be substitited to rely on Oyranos for 
-obtaining device information, reading profile and storing custom ones.
+with the "job being rejected by CUPS" stuff.
 
-All this Oyranos related projects are still work in progress and in a 
-pre-alpha state. Nevertheless this work helps much to advance in 
-understanding many details related to the Oyranos CMS.
+     --ps
 
+         founder + principal interaction architect
+             man + machine interface works
 
-And last but not least Yiannis and Joe showed interesst in continuing 
-their contributions to Oyranos and KM.
-
-
-Kai-Uwe Behrmann
-for the OpenICC GSoC 2009 team
--- 
-Organiser for the OpenICC GSoC 2009 participation
-http://freedesktop.org/wiki/OpenIcc/GoogleSoC2009
+         http://mmiworks.net/blog : on interaction architecture
 
 
 
-PS: I am cc'ing OpenPrinting as Till expressed special interesst.
