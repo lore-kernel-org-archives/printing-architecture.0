@@ -1,10 +1,10 @@
 MIME-Version: 1.0
-Date: Tue, 8 Sep 2009 13:14:20 -0400
-Message-ID: <e395be80909081014yd863afdhff2fecad22048fc6@mail.gmail.com>
+Date: Tue, 8 Sep 2009 13:16:36 -0400
+Message-ID: <e395be80909081016g2a58c21dg571ff27252f39043@mail.gmail.com>
 From: Ira McDonald <blueroofmusic@gmail.com>
 Content-Type: text/plain; charset=ISO-8859-1
-Subject: [Printing-architecture] REMINDER - Next Japan/US/Europe OP
-	Teleconference - Mon/Tue 14/15 September 2009
+Subject: [Printing-architecture] Next US/Europe OP Teleconference - Tuesday
+	6 Octobber 2009
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -14,22 +14,18 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: printing-architecture@lists.linux-foundation.org, Ira McDonald <blueroofmusic@gmail.com>, Till Kamppeter <till.kamppeter@gmail.com>
+To: printing-architecture@lists.linux-foundation.org, Ira McDonald <blueroofmusic@gmail.com>, Till Kamppeter <till.kamppeter@gmail.com>, Lars Uebernickel <larsuebernickel@gmx.de>, "Petrie, Glen" <glen.petrie@eitc.epson.com>
 
-Next quarterly Japan/US/Europe Open Printing teleconference
+Next monthly US/Europe Open Printing teleconference
 
-    - Monday 14 September 2009, Evening
+    - Tuesday 6 October 2009, Daytime
       - US
-        4pm in San Francisco - US PDT (Pacific Daylight Time)
-        5pm in Colorado - US MDT (Mountain Daylight Time)
-        6pm in Chicago - US CDT (Central Daylight Time)
-        7pm in New York - US EDT (Eastern Daylight Time)
-
-    - Tuesday 15 September 2009, Morning
+        8am in San Francisco - US PDT (Pacific Daylight Time)
+        9am in Colorado - US MDT (Mountain Daylight Time)
+        10am in Chicago - US CDT (Central Daylight Time)
+        11am in New York - US EDT (Eastern Daylight Time)
       - Europe
-        1am in Berlin - CEST (Central European Summer Time)
-      - Japan
-        8am in Tokyo - JDT (Japan Standard Time)
+        5pm in Berlin - CEST (Central European Summer Time)
 
     * Main Number (Till Kamppeter, LF, leader)
       International: +1-218-936-7999
