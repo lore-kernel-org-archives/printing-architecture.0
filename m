@@ -1,12 +1,12 @@
-Message-ID: <4AAA050A.5070602@gmail.com>
-Date: Fri, 11 Sep 2009 10:06:34 +0200
-From: Till Kamppeter <till.kamppeter@gmail.com>
+Message-ID: <4AAA06CD.8080500@fujixerox.co.jp>
+Date: Fri, 11 Sep 2009 17:14:05 +0900
+From: Osamu MIHARA <osamu.mihara@fujixerox.co.jp>
 MIME-Version: 1.0
 References: <003801ca27d5$5481a3e0$9e72150a@nsl.ad.nec.co.jp>	<20090831082034.0AA7.E0F122DE@canon.co.jp>
-	<4AA9EC87.2050502@fujixerox.co.jp>
-In-Reply-To: <4AA9EC87.2050502@fujixerox.co.jp>
-Content-Type: text/plain; charset="utf-8"; format="flowed"
-Content-Transfer-Encoding: 8bit
+	<4AA9EC87.2050502@fujixerox.co.jp> <4AAA050A.5070602@gmail.com>
+In-Reply-To: <4AAA050A.5070602@gmail.com>
+Content-Type: multipart/signed; protocol="application/x-pkcs7-signature";
+	micalg=sha1; boundary="------------ms000501080900050204080609"
 Subject: Re: [Printing-architecture] [Printing-japan] <Translation>
  OpenPrinting Japan Aug. 2009 meeting minutes
 List-Id: Printing architecture under linux
@@ -18,177 +18,132 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Osamu MIHARA <osamu.mihara@fujixerox.co.jp>, printing-japan@lists.linux-foundation.org, Open Printing <printing-architecture@lists.linux-foundation.org>, Lars Uebernickel <larsuebernickel@gmx.de>, Alexander Wauck <alex.wauck@gmail.com>, Per Hermansson <hermansson.per@bredband.net>
+To: Till Kamppeter <till.kamppeter@gmail.com>
+Cc: Open Printing <printing-architecture@lists.linux-foundation.org>, printing-japan@lists.linux-foundation.org
 
-Mihara-san, thank you for your translation, but can you directly CC it 
-to the printing-architecture mailing list in the future?
+This is a cryptographically signed message in MIME format.
 
-Comments inline.
+--------------ms000501080900050204080609
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 7bit
 
-Osamu MIHARA wrote:
-> ==========
-> Date/Place
-> ==========
-> August 28, 2009 14:30-15:50 @ The Linux Foundation Japan Meeting Room
-> 
-> ==========
-> Attendee
-> ==========
-> Kunai (TLF), Olaf (Aasys), Otani (BBR), Kanjo (BBR), Chigusa (Ricoh),
-> Toratani (Canon), Mihara (Fuji Xerox), Miyata (Canon), Saitou (NEC Soft)
-> 
-> ==========
-> Agenda
-> ==========
-> - CPD Status Update Review and Demo
-> - Feedback to next OP US/EU/JP phone meeting
-> - Vector Driver Spec 1.0 Approval process
-> 
-> ==========
-> CPD
-> ==========
-> - Saito-san makes a CPD demo from latest (?) source.  (may need to
-> confirm if it is really a latest)
-> 
->  　　http://bzr.openprinting.org/misc/common-printing-dialog
->
+on 2009/09/11 17:06 Till Kamppeter said the following:
+> Mihara-san, thank you for your translation, but can you directly CC it
+> to the printing-architecture mailing list in the future?
 
-This is the latest source. Both students have uploaded their changes 
-regularly to there.
+No problem!
 
-> OPINIONS/PROBLEMS/COMMENTS/QUESTIONS:::
-> 
-> - Many items are put into a place togather.  Some items may be hidden
-> and need to scroll to exposure them. (Mihara)
->
 
-The flow of option widgets into the right part of the dialog and also 
-into the expansion of at the bottom (if the right part gets full) is one 
-of the few things which did not get finished yet.
+--------------ms000501080900050204080609
+Content-Type: application/x-pkcs7-signature; name="smime.p7s"
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="smime.p7s"
+Content-Description: S/MIME Cryptographic Signature
 
-> - Although there is a place to show the application name, but there
-> seems to be NO API to inform the app name. (Otani)
->
-
-We have agreed on letting it simply get "Print", perhaps with the 
-document name, but not more.
-
-> - May need to apply CPD to major applications to gather public comments
-> about the usability. (Mihara) ...  (GSoC work may contains integration
-> of CPD to applications??? (Saitou))
->
-
-There was no student working on patching applications, unfortunately. 
-Ther was a student who has applied and we have accepted him, but he did 
-not start the work due to visa problems. We are working on getting a 
-project funded for finishing the CPD GUI and patching the applications 
-and GUI toolkits (Lars has already started to patch GTK).
-
-> - Will the CPD inplementaion be improved to comply CPD specification ???
-> 
-
-Yes, what we have now is simply the state how far the students got. The 
-GTK dialog is very close to the specs. It mainly lacks only the 
-arranging of option widgets and some bug fixes. The Qt dialog needs more 
-work.
-
-> - "Preview" has been implemented.
-> 
-> - There was a discussion on "CPD should follow JTAPI terms.
->    --> End users may not be able to understand JTAPI terms.
-> 
-
-"Following JTAPI terms" serves only for recognizing the meaning of 
-options by their names to illustrate them in the preview. Only options 
-recognized now are the CUPS options (N-up, reverse order, ...) and 
-Duplex. Systematic work on the JTAPI-provided option names was not done 
-yet. For end users nothing visible happens, except that it will happen 
-more times that the preview changes with changing the setting of an option.
-
-> - N-UP: How is it processed??? (Toratani)
->   If pdftopdf makes n-up process, Preview image does not present the
-> exact print out.  Need to check how it is implemented. (Otani)
-> 
-
-First, was this observed with the GTK dialog or the Qt dialog? The GTK 
-dialog was tested more. It was tested for the preview and the printer 
-output corresponding to each other, but I do not know with which 
-distributions and printers.
-
-For the distributions note that Debian (unstable) and Ubuntu (Intrepid 
-and newer) and distributions derived from these use the PDF printing 
-workflow around the pdftopdf filter and all the others use the 
-pstops-centric PostScript filter chain as provided by CUPS upstream. 
-This means that an essential part for the preview to work reliably is 
-that pstops of CUPS and pdftopdf have the same behavior concerning the 
-CUPS options, especially also with combinations of them. If this is not 
-the case, we have to consider this as a bug of pdftopdf. Please test all 
-combinations and report any deviation to Otani-san.
-
-Once the two filters behave the same, the dialog has to get adapted to 
-this behavior. Please report any misbehavior of the dialog's preview to 
-Lars and to the student who has implemented the dialog (GTK: Per, Qt: Alex).
-
-> - CPD should utilize CUPS and Driver functions as much as possible.  For
-> example, "copies" process are tend to be problem if upper part
-> (application and printing system) processes it (it means it should be
-> processed in the driver or device.) (Chigusa)
->   ---> In CUPS, processes, eg. n-up, are done in upper layer.  It may be
-> difficult to cancel it in order to do them in the device side. (otani)
-> 
-
-Request for manufacturers on driver design: Do not let the driver do 
-things which CUPS already does, like N-up, reverse order, ... This only 
-causes confusion.
-
-Request to the dialog implementors: Recognize as well as possible if the 
-PPD provides options which seem to be also provide by CUPS and make sure 
-that the dialog does not show both. It is more predictable how the CUPS 
-options behave, so let the dialog suppress these CUPS-option-alike PPD 
-options and send their neutral settings (N-up=1, reverse-order=false, ...).
-
-> ==========================================
-> Feedback to next OP US/EU/JP phone meeting
-> ==========================================
-> We will input the feedback on CPD.
-> 
-> ==========================================
-> Vector Driver Spec 1.0 Approval process
-> ==========================================
-> - Lates ghostscript support both ver 0.2 and 1.0 vector drivers.
-> - Spec approval need many steps described in:
->     ftp://www.pwg.org/pub/pwg/openprinting/Release-Procedure/
-> - Shida-san may have process it??? (Worth to confirm)
-> - Do we really need get approval??? It is already in GS (Toratani)
->   --> There is no explicit problem on the current status, but we may
-> need get approval to put an end to a job.
-> - We may continue to discuss it next time....
->
-
-Formal approval of the spec would perhaps raise the acceptance by 
-manufacturers, so we should complete it.
-
-General note to manufacturers: As current Ghostscript ships OpenPrinting 
-Vector 1.0 you can make use of it for drivers/
-
-> ============
-> Action Items
-> ============
-> - Toratani to feedback CPD on US/EU/JP meeting; including
->     - confirm if the source code on "bzr" is latest?
->     - confirm if GSoC work include implementation of CPD to Apps
->     - how n-up is processed.
->     - confirm if improvement on CPD continues
-
-See my answers above.
-
-> - Toratani to confirm current status of vector spec approval to Shida-san
-> 
-> =========
-> Next
-> =========
-> Septempber 29, 2009, same time, same place
-
-Please remember to CC the translation also to printing-architecture.
-
-    Till
+MIAGCSqGSIb3DQEHAqCAMIACAQExCzAJBgUrDgMCGgUAMIAGCSqGSIb3DQEHAQAAoIITiDCC
+A6owggKSoAMCAQICCEmni1LN2Bf1MA0GCSqGSIb3DQEBBQUAMD8xCzAJBgNVBAYTAkpQMRMw
+EQYDVQQKEwpGdWppIFhlcm94MRswGQYDVQQDExJGdWppIFhlcm94IFhuZXQgQ0EwHhcNMDkw
+MzIyMjMzNzIwWhcNMTEwMzE4MTQ1OTU5WjBJMQswCQYDVQQGEwJKUDEdMBsGA1UEChMURnVq
+aSBYZXJveCBDby4sIEx0ZC4xGzAZBgNVBAMTEjI4MDEzIE9zYW11IE1paGFyYTCBnzANBgkq
+hkiG9w0BAQEFAAOBjQAwgYkCgYEAmv9PsStKUawcNrIIIViNlhcLn0L2KyiaCvRIl5RLMVMI
+cjylhpfI0prhVTSmZtzeGYsHIn7/1fVPzW0fuYDd5hkxpOfOa7uhU9awLIlxDYIPcdVfseTV
+UJuWJM7WCuyXyEP1TnK4w8LHEe5dKCBThxV7fX4PwXe4VN/PMIrZMH0CAwEAAaOCASIwggEe
+MB8GA1UdIwQYMBaAFE2I1t2VWHXrrYgbTTIISciCBGCOMAkGA1UdEwQCMAAwPQYDVR0fBDYw
+NDAyoDCgLoYsaHR0cDovL2NhcHMuZnVqaXhlcm94LmNvLmpwL2NybC9meHhuZXRjYS5jcmww
+HQYDVR0lBBYwFAYIKwYBBQUHAwIGCCsGAQUFBwMEMAsGA1UdDwQEAwIFoDBcBgNVHSAEVTBT
+MFEGCysGAQQBgikBBQEGMEIwQAYIKwYBBQUHAgEWNGh0dHA6Ly93d3cuZnVqaXhlcm94LmNv
+LmpwL3Byb2R1Y3QvY2FwL2Z4eG5ldGNhLmh0bWwwJwYDVR0RBCAwHoEcb3NhbXUubWloYXJh
+QGZ1aml4ZXJveC5jby5qcDANBgkqhkiG9w0BAQUFAAOCAQEAh8RdBQFJy1kqXZe9359TvZ3y
+Jg1TCBcaq1qv2dXVgxCzfyR6ACR30640a1aFBhp4nVuUjNXmf0joINV3X06WndjBxZdal1QL
+kgkSzJEcEhX/kxBmGinCEbshi/BXlnbEUX0LMJBYPpj5tfqnHS5VoXEsxdh458dmpQSJyk7a
+cc978wY+C8KaSMgiOq7ntN+o4yNs0O4tIkhEuAxGwXJLpqRhAbBVz+foLN8AfmJavYCHfAbr
+sKYYY5haiXkZkHOjwf6Hqzrnmtk+q1u0jGtZjZ+WtWQJli+WVV0uw5nzhhQSGPF74m1SbijZ
+mwthBLmXEUmYnm2xtYlGTEhDf0zJRDCCA6owggKSoAMCAQICCEmni1LN2Bf1MA0GCSqGSIb3
+DQEBBQUAMD8xCzAJBgNVBAYTAkpQMRMwEQYDVQQKEwpGdWppIFhlcm94MRswGQYDVQQDExJG
+dWppIFhlcm94IFhuZXQgQ0EwHhcNMDkwMzIyMjMzNzIwWhcNMTEwMzE4MTQ1OTU5WjBJMQsw
+CQYDVQQGEwJKUDEdMBsGA1UEChMURnVqaSBYZXJveCBDby4sIEx0ZC4xGzAZBgNVBAMTEjI4
+MDEzIE9zYW11IE1paGFyYTCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEAmv9PsStKUawc
+NrIIIViNlhcLn0L2KyiaCvRIl5RLMVMIcjylhpfI0prhVTSmZtzeGYsHIn7/1fVPzW0fuYDd
+5hkxpOfOa7uhU9awLIlxDYIPcdVfseTVUJuWJM7WCuyXyEP1TnK4w8LHEe5dKCBThxV7fX4P
+wXe4VN/PMIrZMH0CAwEAAaOCASIwggEeMB8GA1UdIwQYMBaAFE2I1t2VWHXrrYgbTTIISciC
+BGCOMAkGA1UdEwQCMAAwPQYDVR0fBDYwNDAyoDCgLoYsaHR0cDovL2NhcHMuZnVqaXhlcm94
+LmNvLmpwL2NybC9meHhuZXRjYS5jcmwwHQYDVR0lBBYwFAYIKwYBBQUHAwIGCCsGAQUFBwME
+MAsGA1UdDwQEAwIFoDBcBgNVHSAEVTBTMFEGCysGAQQBgikBBQEGMEIwQAYIKwYBBQUHAgEW
+NGh0dHA6Ly93d3cuZnVqaXhlcm94LmNvLmpwL3Byb2R1Y3QvY2FwL2Z4eG5ldGNhLmh0bWww
+JwYDVR0RBCAwHoEcb3NhbXUubWloYXJhQGZ1aml4ZXJveC5jby5qcDANBgkqhkiG9w0BAQUF
+AAOCAQEAh8RdBQFJy1kqXZe9359TvZ3yJg1TCBcaq1qv2dXVgxCzfyR6ACR30640a1aFBhp4
+nVuUjNXmf0joINV3X06WndjBxZdal1QLkgkSzJEcEhX/kxBmGinCEbshi/BXlnbEUX0LMJBY
+Ppj5tfqnHS5VoXEsxdh458dmpQSJyk7acc978wY+C8KaSMgiOq7ntN+o4yNs0O4tIkhEuAxG
+wXJLpqRhAbBVz+foLN8AfmJavYCHfAbrsKYYY5haiXkZkHOjwf6Hqzrnmtk+q1u0jGtZjZ+W
+tWQJli+WVV0uw5nzhhQSGPF74m1SbijZmwthBLmXEUmYnm2xtYlGTEhDf0zJRDCCA+8wggNY
+oAMCAQICAicSMA0GCSqGSIb3DQEBBQUAMIG7MSQwIgYDVQQHExtWYWxpQ2VydCBWYWxpZGF0
+aW9uIE5ldHdvcmsxFzAVBgNVBAoTDlZhbGlDZXJ0LCBJbmMuMTUwMwYDVQQLEyxWYWxpQ2Vy
+dCBDbGFzcyAxIFBvbGljeSBWYWxpZGF0aW9uIEF1dGhvcml0eTEhMB8GA1UEAxMYaHR0cDov
+L3d3dy52YWxpY2VydC5jb20vMSAwHgYJKoZIhvcNAQkBFhFpbmZvQHZhbGljZXJ0LmNvbTAe
+Fw0wNTAzMTYwMjM0NDJaFw0xNTAzMTYwMjM0NDJaMFAxCzAJBgNVBAYTAkpQMRgwFgYDVQQK
+Ew9TRUNPTSBUcnVzdC5uZXQxJzAlBgNVBAsTHlNlY3VyaXR5IENvbW11bmljYXRpb24gUm9v
+dENBMTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBALOz/n/TbbHvFnxXpQxtdoov
+S79k+0zuivDzKXz1/+4q4OnpultkIpqabyw6JmlRBZkm3NUcanHGmn0end18bMaMZ2dKPvhx
+sBknqQkMppW/S4wM+lWYO9joIqFLcTh5rJeSabOJfuohaAaYFJaH0mE2vG0nVp5X7sDAVv0y
+z6TZjsIj142o89glrJfkcDj0tjq0nTuXJkOjobxJWXJMIzCHAVj2Tr4caFZmr81BXcizTSpV
+Rqsf2h7iQD3bzX25koCcN90MlmSd3CL3ZIvfYd4VlFIVoH1SyUuoIcnGse3Lw5Vg0Q/wq3D4
+38tNfuzW+qvZvX9U8qXpefrZ1nYkKHMCAwEAAaOB5zCB5DAdBgNVHQ4EFgQUoHNJmWjchVtl
+45soL1efvTO8B0gwDgYDVR0PAQH/BAQDAgEGMA8GA1UdEwEB/wQFMAMBAf8wSAYDVR0fBEEw
+PzA9oDugOYY3aHR0cDovL3JlcG9zaXRvcnkuc2Vjb210cnVzdC5uZXQvcm9vdHJlcG9zaXRv
+cnkvQ1JMLmNybDBYBgNVHSAEUTBPME0GCiqDCIybG2SHBQEwPzA9BggrBgEFBQcCARYxaHR0
+cHM6Ly9yZXBvc2l0b3J5LnNlY29tdHJ1c3QubmV0L3Jvb3RyZXBvc2l0b3J5LzANBgkqhkiG
+9w0BAQUFAAOBgQAGiFFF93N5mphKlukZHYciAU3/pMq6rHS+5VkKd7HgLHzLQxp3v402BKge
+VpeXfcbUcoZkrlXxzy/Ld4hQCSxRVlFTgVJSM5kke3wHIAWwNeMwdpsv6lEpEiT/5dL5MIsb
+Xqd+wmIPKJxfzZsw6yvP7qmXgDQh1qLwZFjIgQtrIjCCBAswggLzoAMCAQICCQFFmYa/W4BQ
+eDANBgkqhkiG9w0BAQUFADBPMQswCQYDVQQGEwJKUDETMBEGA1UEChMKRnVqaSBYZXJveDEr
+MCkGA1UEAxMiRnVqaSBYZXJveCBDZXJ0aWZpY2F0aW9uIEF1dGhvcml0eTAeFw0wODA0Mjkx
+NTAwMDBaFw0xNDEyMTcwMjEzMzJaMD8xCzAJBgNVBAYTAkpQMRMwEQYDVQQKEwpGdWppIFhl
+cm94MRswGQYDVQQDExJGdWppIFhlcm94IFhuZXQgQ0EwggEiMA0GCSqGSIb3DQEBAQUAA4IB
+DwAwggEKAoIBAQC1d4sM15cgf8VPfGjBBbLkzoPqIEPdN44PTd5nevRRnDoEeITen95/dM9X
+d8n8tgmP6ddV9iiDJsbYegmWIqaK3l2MDhqoAontnG2VdPWCEnpkIym2r6pPcKrE0fiBP+fm
+3Z2O7LGzdBdOpvlJpLaq3C5eQMEwW/3yAODT8tYGhZBQrm+Mzp1BxfZniM5Mautyyk5on+PG
+WyNX60hexwRriRmqk7B7Qar3rW3vjZ9eTnF6zcE+2HZ4rpIahFmEnKlJ3zQozVhqdL4mQemt
+8GO4Dr7AE+NTpVlK2+awpwz28wgaI3VgQWQf0EjSan4BYBIbC0Iedv2m5un+XeVDPTtdAgMB
+AAGjgfkwgfYwCwYDVR0PBAQDAgEGMB0GA1UdDgQWBBRNiNbdlVh1662IG00yCEnIggRgjjAf
+BgNVHSMEGDAWgBTqxadWxChSPoKl7PVQFmOP4YgteTBYBgNVHSAEUTBPME0GCysGAQQBgikB
+BQEBMD4wPAYIKwYBBQUHAgEWMGh0dHA6Ly93d3cuZnVqaXhlcm94LmNvLmpwL3Byb2R1Y3Qv
+Y2FwL2Z4Y2EuaHRtbDASBgNVHRMBAf8ECDAGAQH/AgEAMDkGA1UdHwQyMDAwLqAsoCqGKGh0
+dHA6Ly9jYXBzLmZ1aml4ZXJveC5jby5qcC9jcmwvZnhjYS5jcmwwDQYJKoZIhvcNAQEFBQAD
+ggEBABX7JmjBozKrtM0xL7wIP75Ij8M8AktycL02h9keNLI2a8ggjeHusr5uGmR2/Or85f54
+AEVz4e5ZtxDGzCDKfTNxCYYLz4MMSh9ed/hd9ayhD8GjVqN6UBsUez/CcSDro2X0gaDS/2wK
+s/jmXCNwfyxoVug0weEKWrbeBmbn9d/QnjLVv6p3J32NbJyxzJVrGM2J+uPoevRcDgfZ4HzO
+m6MVd/7GADxs4wR+CCJUP9a6QFpSMhB6MUNeUv5VanJcO0AvQ/YIgVr+P7MvvNGV7I1ZobU7
+ONryWNzlgsvt5NEA1jWgypVc3JogClm3eY4dibvCJvj3Zs7KxK+KBCh2crkwggQmMIIDDqAD
+AgECAgQSubCnMA0GCSqGSIb3DQEBBQUAMFAxCzAJBgNVBAYTAkpQMRgwFgYDVQQKEw9TRUNP
+TSBUcnVzdC5uZXQxJzAlBgNVBAsTHlNlY3VyaXR5IENvbW11bmljYXRpb24gUm9vdENBMTAe
+Fw0wNDEyMTcwMjEzMzJaFw0xNDEyMTcwMjEzMzJaME8xCzAJBgNVBAYTAkpQMRMwEQYDVQQK
+EwpGdWppIFhlcm94MSswKQYDVQQDEyJGdWppIFhlcm94IENlcnRpZmljYXRpb24gQXV0aG9y
+aXR5MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAtyQ1+1+Md5GNGCW8TMtiG7iX
++xLIWzhiUZwEN5E9xozGHSByTNftuzH/gTvF3kkMdxS9JBMRcpXNYZK3gidArWd3aZv1Rjsb
+SBYHckoIuF1adKp5wEEo1JPWpgFx1DbOdlKpEzyjzqvVD5C4XMOVxDmabZBwLJjXZWtWgwf4
+k69pvZ//CCgGPgSzNxYVuLQW21ecD5Q6u9Qe8k7Zx3Samqzwaf5b54AEaR1r23EOJn0UW9SW
+ooliix1vtFdKI8De+eLp0vXxmPlqjN5fYG9ugGAyNyT87YSaccobbnORJj9xYxZrkaSv1J6r
+fIfJwZaifdBoGNPakL1C6xt+rosHmQIDAQABo4IBBzCCAQMwHQYDVR0OBBYEFOrFp1bEKFI+
+gqXs9VAWY4/hiC15MB8GA1UdIwQYMBaAFKBzSZlo3IVbZeObKC9Xn70zvAdIMBIGA1UdEwEB
+/wQIMAYBAf8CAQEwDgYDVR0PAQH/BAQDAgEGMEkGA1UdHwRCMEAwPqA8oDqGOGh0dHA6Ly9y
+ZXBvc2l0b3J5LnNlY29tdHJ1c3QubmV0L1NDLVJvb3QxL1NDUm9vdDFDUkwuY3JsMFIGA1Ud
+IARLMEkwRwYKKoMIjJsbZIcFATA5MDcGCCsGAQUFBwIBFitodHRwczovL3JlcG9zaXRvcnku
+c2Vjb210cnVzdC5uZXQvU0MtUm9vdDEvMA0GCSqGSIb3DQEBBQUAA4IBAQAtynjtnCEDvbfV
+CVwTwOK20eLsVcaKpvBOFd+BJtwkwWamQiYtR/Z5BwSdXX0R3LZm/b6huy3DwzKUkR7Sh2Kz
+mQCv1+D02u7CvGoVSNPi2ipjJ4nH39MYnEHlbz5ur25O1ShURqoGh5t+ABctTG/lqfFtlxWV
+cJwXGUUYKnx7K2H+LZMhgjFYfB/3+UJhMYciBrvcEudq0D3i8wOAbSIQuO2umhoEscHxStHH
+DGZUfe+Gw5mvulW+Ias4tbvQI+VrT4iecdvrkcFj5Q9Ko0tATGfMd2L1n6ObwdqVs/42k9n3
+n8OFkIlhQSlTzFwNqBNL+k/fKpEjRKBsTCd3jEugMYICbTCCAmkCAQEwSzA/MQswCQYDVQQG
+EwJKUDETMBEGA1UEChMKRnVqaSBYZXJveDEbMBkGA1UEAxMSRnVqaSBYZXJveCBYbmV0IENB
+AghJp4tSzdgX9TAJBgUrDgMCGgUAoIIBeDAYBgkqhkiG9w0BCQMxCwYJKoZIhvcNAQcBMBwG
+CSqGSIb3DQEJBTEPFw0wOTA5MTEwODE0MDVaMCMGCSqGSIb3DQEJBDEWBBS+GuDsrWsZYXXA
+1xo9eKy60QcToDBaBgkrBgEEAYI3EAQxTTBLMD8xCzAJBgNVBAYTAkpQMRMwEQYDVQQKEwpG
+dWppIFhlcm94MRswGQYDVQQDExJGdWppIFhlcm94IFhuZXQgQ0ECCEmni1LN2Bf1MFwGCyqG
+SIb3DQEJEAILMU2gSzA/MQswCQYDVQQGEwJKUDETMBEGA1UEChMKRnVqaSBYZXJveDEbMBkG
+A1UEAxMSRnVqaSBYZXJveCBYbmV0IENBAghJp4tSzdgX9TBfBgkqhkiG9w0BCQ8xUjBQMAsG
+CWCGSAFlAwQBAjAKBggqhkiG9w0DBzAOBggqhkiG9w0DAgICAIAwDQYIKoZIhvcNAwICAUAw
+BwYFKw4DAgcwDQYIKoZIhvcNAwICASgwDQYJKoZIhvcNAQEBBQAEgYCGWkt2P/nL3djPX1Zv
+zpVazl3IK05EcXijKqI1qT84QVy7wGO/c3RYNqqlni2iipX0230H+28g6FNSQfWWEPsAF1xs
+d3JG5OIs/ek+2T6jE1Qf/UHZSitseWIhgqkzqhz3cstRRVA86eyE2MDSugG/HfH3qLvIprZK
+Ms4gunGC8wAAAAAAAA==
+--------------ms000501080900050204080609--
