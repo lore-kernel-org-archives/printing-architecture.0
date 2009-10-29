@@ -1,14 +1,11 @@
-Message-ID: <4ACE4633.9010803@bredband.net>
-Date: Thu, 08 Oct 2009 22:06:11 +0200
-From: Per Hermansson <hermansson.per@bredband.net>
+Message-ID: <4AE92969.4030608@gmail.com>
+Date: Thu, 29 Oct 2009 06:34:33 +0100
+From: Till Kamppeter <till.kamppeter@gmail.com>
 MIME-Version: 1.0
-References: <4A8BCB46.9070401@gmail.com>
-	<200910081041.47887.hvengel@astound.net>
-In-Reply-To: <200910081041.47887.hvengel@astound.net>
-Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Type: text/plain; charset=UTF-8; format=flowed
 Content-Transfer-Encoding: 7bit
-Subject: Re: [Printing-architecture] Common Printing Dialog: Print to (PDF)
- file
+Subject: [Printing-architecture] REMINDER - Next US/Europe OP Teleconference
+ - Tuesday 3 November 2009
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -18,34 +15,32 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: "Hal V. Engel" <hvengel@astound.net>
-Cc: printing-architecture@lists.linux-foundation.org
+To: Open Printing <printing-architecture@lists.linux-foundation.org>
+Cc: "Petrie, Glen" <glen.petrie@eitc.epson.com>
 
-Hal V. Engel wrote:
->> we should implement such a "Print to File" queue also in the
->> Common Printing dialog, so that we get it quickly into the distros
->> without having a regression due to this feature missing.
->>
->> For the implementation note that the current dialogs do not send the job
->> into a CUPS queue for "Print to File" (we do not use facilities like the
->> cups-pdf package). "Print to File" opens a "Save as ..." dialog when
->> clicking on "Print" in the printing dialog  Then the user chooses where
->> to put his file. 
->>     
->
-> In GTK yes but the Qt4 print dialogs do not open a separate "Save as.." dialog 
-> since the regular print dialog has an "Output file:" widget that is activated 
-> when when of the print to file queues is selected and there is no need for a 
-> separate "Save as.." dialog.  The "Print" button will cause the file to be 
-> created/saved.  This seems a little cleaner to me than having a separate "Save 
-> as.." dialog.
->
->   
-This makes a good motivation for migrating to the real "Print to file" 
-dialog when designed.
-The CPD isn't designed for exporting to files so the current approach 
-offers a good trade off.
-If we make the current implementation too good no one will want to 
-switch when the new dialog is released :-)
+Hi,
 
-/Per
+next monthly US/Europe Open Printing teleconference
+
+     - Note
+       - European Summer Time ends Sunday 25 October 2009
+       - US Daylight Time ends Sunday 1 November 2009
+
+     - Tuesday 3 November 2009, Daytime
+       - US
+         9am in San Francisco - US PST (Pacific Standard Time)
+         10am in Colorado - US MST (Mountain Standard Time)
+         11am in Chicago - US CST (Central Standard Time)
+         12pm in New York - US EST (Eastern Standard Time)
+       - Europe
+         6pm in Berlin - CET (Central European Time)
+
+     * Main Number (Till Kamppeter, LF, leader)
+       International: +1-218-936-7999
+       Access Code:   491659#
+
+Agenda to be decided in realtime - all topics are welcome.
+
+Please join us.
+
+    Till
