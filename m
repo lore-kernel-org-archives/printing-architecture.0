@@ -1,11 +1,9 @@
-Message-ID: <4AF05E79.7030602@gmail.com>
-Date: Tue, 03 Nov 2009 17:46:49 +0100
-From: Till Kamppeter <till.kamppeter@gmail.com>
 MIME-Version: 1.0
-Content-Type: text/plain; charset=UTF-8; format=flowed
-Content-Transfer-Encoding: 7bit
-Subject: [Printing-architecture] REMINDER - Next US/Europe OP Teleconference
-	- IN 15 MINUTES
+Date: Tue, 3 Nov 2009 17:34:41 -0500
+Message-ID: <e395be80911031434t67f828f4tc0df1f5015b94c7@mail.gmail.com>
+From: Ira McDonald <blueroofmusic@gmail.com>
+Content-Type: text/plain; charset=ISO-8859-1
+Subject: [Printing-architecture] OP Minutes - 3 November 2009
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -15,33 +13,24 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Open Printing <printing-architecture@lists.linux-foundation.org>
-Cc: "Petrie, Glen" <glen.petrie@eitc.epson.com>
+To: printing-architecture@lists.linux-foundation.org, Ira McDonald <blueroofmusic@gmail.com>
 
 Hi,
 
-next monthly US/Europe Open Printing teleconference IN 15 MINUTES:
+Minutes from today's Open Printing teleconference are posted at:
 
-     - Note
-       - European Summer Time ends Sunday 25 October 2009
-       - US Daylight Time ends Sunday 1 November 2009
+ ftp://ftp.pwg.org/pub/pwg/fsg/minutes/OP-Minutes-20091103.htm
 
-     - Tuesday 3 November 2009, Daytime
-       - US
-         9am in San Francisco - US PST (Pacific Standard Time)
-         10am in Colorado - US MST (Mountain Standard Time)
-         11am in Chicago - US CST (Central Standard Time)
-         12pm in New York - US EST (Eastern Standard Time)
-       - Europe
-         6pm in Berlin - CET (Central European Time)
+Cheers,
+- Ira
 
-     * Main Number (Till Kamppeter, LF, leader)
-       International: +1-218-936-7999
-       Access Code:   491659#
-
-Agenda to be decided in realtime - all topics are welcome.
-
-Please join us.
-
-    Till
-
+Ira McDonald (Musician / Software Architect)
+Chair - Linux Foundation Open Printing WG
+Blue Roof Music/High North Inc
+email: blueroofmusic@gmail.com
+winter:
+  579 Park Place  Saline, MI  48176
+  734-944-0094
+summer:
+  PO Box 221  Grand Marais, MI 49839
+  906-494-2434
