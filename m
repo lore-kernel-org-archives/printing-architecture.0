@@ -1,10 +1,13 @@
-Date: Mon, 09 Nov 2009 19:09:16 +0900
-From: TORATANI Yasumasa <toratani.yasumasa@canon.co.jp>
-Message-Id: <20091109185101.900C.E0F122DE@canon.co.jp>
-MIME-Version: 1.0
-Content-Type: text/plain; charset="US-ASCII"
+Message-Id: <5B109C6D-12A5-47AD-9C26-D9E0606E21D3@mmiworks.net>
+From: kate price <kate@mmiworks.net>
+In-Reply-To: <4AF14A4E.5050903@gmail.com>
+Content-Type: text/plain; charset=US-ASCII; format=flowed; delsp=yes
 Content-Transfer-Encoding: 7bit
-Subject: [Printing-architecture] Japan/US/Europe quarterly OP Meeting day
+Mime-Version: 1.0 (Apple Message framework v936)
+Date: Mon, 9 Nov 2009 12:14:42 +0100
+References: <e395be80811270817n502ccd16wf6cc90f85364f5ae@mail.gmail.com>
+	<4AF14A4E.5050903@gmail.com>
+Subject: [Printing-architecture] Colour
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -15,23 +18,28 @@ List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subj
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
 To: printing-architecture@lists.linux-foundation.org
-Cc: printing-japan@lists.linux-foundation.org
 
-Hi All,
 
-This is Toratani from Tokyo.
 
-As we scheduled before, we have a plan to have a Japan/US/Europe
-quarterly OP Meeting on Nov. 30th in US/Europe (and Dec. 1st in Japan).
+I am working on the UI design of the CPD and  looking at the controls  
+and parameters for colour, both as presets/profiles and as more  
+detailed controls. Therefore, I'll need to get a good understanding of  
+how this all works.
 
-However, due to an internal event and meetings scheduled recent days,
-I'm sorry but I won't be able to attend the meeting on that day.
+Including:
+the workflow from application to printer
+colour profiles
+color management; in applications, and printer colour management.   
+what happens where?
+detailed user interaction: what controls need to be there?
 
-Other person from Tokyo, for instance Mihara-san, might be able to
-attend the meeting, though, we appreciate if telecon will be held one
-week earlier or one week later of Nov. 30th.
 
-Could you please consider to change?
+Can someone point me in the right direction? Provide some useful  
+information or sources of information?
 
-TORATANI
+Thanks in anticipation,
 
+
+Kate
+
+     man + machine interface works
