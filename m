@@ -1,13 +1,10 @@
-Message-ID: <4AF14A4E.5050903@gmail.com>
-Date: Wed, 04 Nov 2009 10:33:02 +0100
-From: Till Kamppeter <till.kamppeter@gmail.com>
+Date: Mon, 09 Nov 2009 19:09:16 +0900
+From: TORATANI Yasumasa <toratani.yasumasa@canon.co.jp>
+Message-Id: <20091109185101.900C.E0F122DE@canon.co.jp>
 MIME-Version: 1.0
-References: <e395be80811270817n502ccd16wf6cc90f85364f5ae@mail.gmail.com>
-In-Reply-To: <e395be80811270817n502ccd16wf6cc90f85364f5ae@mail.gmail.com>
-Content-Type: text/plain; charset=UTF-8; format=flowed
+Content-Type: text/plain; charset="US-ASCII"
 Content-Transfer-Encoding: 7bit
-Subject: [Printing-architecture] Last OP Meeting - Tue - 3 Nov 2009 - The
-	Recording
+Subject: [Printing-architecture] Japan/US/Europe quarterly OP Meeting day
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -17,21 +14,24 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Open Printing <printing-architecture@lists.linux-foundation.org>, Printing-japan <printing-japan@lists.linux-foundation.org>
+To: printing-architecture@lists.linux-foundation.org
+Cc: printing-japan@lists.linux-foundation.org
 
-Hi,
+Hi All,
 
-I have uploaded the recording of the last OpenPrinting meeting to the
-OpenPrinting server:
+This is Toratani from Tokyo.
 
-http://www.openprinting.org/download/meetingnotes/op-telecons/OP-Meeting-20091103.mp3
+As we scheduled before, we have a plan to have a Japan/US/Europe
+quarterly OP Meeting on Nov. 30th in US/Europe (and Dec. 1st in Japan).
 
-In general, recorded meetings I will upload to
+However, due to an internal event and meetings scheduled recent days,
+I'm sorry but I won't be able to attend the meeting on that day.
 
-http://www.openprinting.org/download/meetingnotes/
+Other person from Tokyo, for instance Mihara-san, might be able to
+attend the meeting, though, we appreciate if telecon will be held one
+week earlier or one week later of Nov. 30th.
 
-    Till
+Could you please consider to change?
 
-P. S.: The MP3 is 15 MB long, 43 minutes of talking.
-
+TORATANI
 
