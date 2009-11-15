@@ -1,12 +1,11 @@
 Mime-Version: 1.0 (Apple Message framework v1077)
-Content-Type: multipart/alternative; boundary=Apple-Mail-10-833477999
+Content-Type: text/plain; charset=us-ascii
 From: Chris Murphy <lists@colorremedies.com>
-In-Reply-To: <259EDC2F-D90C-4A5E-802F-F4C97AB4A08D@apple.com>
-Date: Sun, 15 Nov 2009 14:32:32 -0500
-Message-Id: <1CF4D0C9-61F2-496D-9F69-0F73A79A6E6C@colorremedies.com>
+In-Reply-To: <77618445-60C9-4D30-99F8-B42DBCCBF24E@apple.com>
+Date: Sun, 15 Nov 2009 15:12:18 -0500
+Content-Transfer-Encoding: quoted-printable
+Message-Id: <15E38B61-2C0A-4DEB-BB59-DC6459CE11E1@colorremedies.com>
 References: <e395be80811270817n502ccd16wf6cc90f85364f5ae@mail.gmail.com>
-	<4AF14A4E.5050903@gmail.com>
-	<5B109C6D-12A5-47AD-9C26-D9E0606E21D3@mmiworks.net>
 	<4AF96B6A.7030307@gmail.com>
 	<25E5CE60-FE48-41E9-B390-DD35452A6F68@colorremedies.com>
 	<A7277E6D-EAD7-4CD8-AD88-FB803B44EC74@apple.com>
@@ -16,6 +15,8 @@ References: <e395be80811270817n502ccd16wf6cc90f85364f5ae@mail.gmail.com>
 	<A388F76E-FFCF-49A4-94CB-A3DC103838DA@apple.com>
 	<1753203E-E616-401D-81B5-359D706D245B@colorremedies.com>
 	<259EDC2F-D90C-4A5E-802F-F4C97AB4A08D@apple.com>
+	<620c0af50911141715y3c5739ffxf51480387fa0be59@mail.gmail.com>
+	<77618445-60C9-4D30-99F8-B42DBCCBF24E@apple.com>
 Subject: Re: [Printing-architecture] [Gimp-print-devel] [Openicc]  Colour
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
@@ -29,107 +30,176 @@ List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-ar
 To: Michael Sweet <msweet@apple.com>
 Cc: printing-architecture@lists.linux-foundation.org, gimp-print-devel@lists.sourceforge.net, openicc <openicc@lists.freedesktop.org>
 
+I agree with Michael on all points.
 
---Apple-Mail-10-833477999
-Content-Transfer-Encoding: quoted-printable
-Content-Type: text/plain;
-	charset=us-ascii
+The existing user experience is broken. A different user experience =
+should be employed. But I think we need to be very conscientious about =
+both the next user experience and developer experience, if things are =
+going to be changed yet again. A huge, huge, huge problem on OS X is =
+that things keep changing. Such change + very limited documentation has =
+been a huge pain point for developers, and is a contributing factor to =
+their inconsistency.
 
-On Nov 14, 2009, at 3:59 PM, Michael Sweet wrote:
-> On Nov 14, 2009, at 2:10 AM, Chris Murphy wrote:
->> Michael, yes, I have no doubt about that. The problem is that these =
-sorts of color problems with printing are recurring themes. Epson is not =
-the only one who has had problems, although they very well may be the =
-worst offender. But we don't have these kinds of problems on Windows. =
-That should be a WTF moment for Apple. Sane people have started to =
-wonder, rationally, if there is something fwrong with the architecture =
-when there are so many recurring problems of this sort, through multiple =
-major revisions of the operating system. We've experienced color related =
-problems with Tioga drivers too.
+And I agree with Michael, in particular, on his first two paragraphs. =
+Duplicative selection of media/color mode/resolution, then having to do =
+this yet again with the profile selection, makes errors possible where =
+otherwise there would be none (at least not UI induced). For some time =
+it has been possible to include such device condition information into =
+the profile as metadata, so there should be room for an application to =
+specify a printer profile, and for the system to figure out what the =
+driver settings should be to replicate the print condition needed for =
+that profile to be valid.
+
+Two things that emphasize a continuing need for application prematching =
+capability:
+
+a.) Black point compensation in ColorSync has functioned incorrectly =
+since it was implemented. In an ICC v2 context, BPC is required. =
+Perceptual rendering is inadequate. So is it working on 10.6? I don't =
+know.
+
+b.) Only the Apple CMM is supported in the print architecture. It's not =
+possible for an application to ask for another CMM be used by =
+CoreGraphics for printing purposes. This means application prematching =
+is a required workflow.
+
+
+
+Chris Murphy
+
+On Nov 15, 2009, at 12:08 AM, Michael Sweet wrote:
+
+> On Nov 14, 2009, at 5:15 PM, Roy Harrington wrote:
+>>> I humbly suggest that what you want is a utility that allows the =
+user to print targets and generate/install ICC profiles for a > > =
+particular combination of printer, media, and other settings. If you =
+have to select a profile at print time, then the printing > > workflow =
+is broken.
+>>>=20
+>>> ___________________________________________________
+>>> Michael Sweet, Senior Printing System Engineer
+>>=20
+>> While a separate utility might be a useful thing, I think you are
+>> missing the point of view of the higher
+>> end people printing.  Most have Photoshop and print from Photoshop.
+>> Most use various different papers,
+>> not just printer manufacturer supplied papers.
 >=20
-> Windows doesn't provide the same level of support for color as Mac OS =
-X, and to say that Windows doesn't have these problems is a lie - they =
-are just hidden from most users since there isn't a "use this profile" =
-option staring you in the face every time you print.
+> I think you are missing my point - if you are profiling for your own =
+media and ink, then those profiles and corresponding media settings =
+should be savable so that the *only* thing you do in the print dialog is =
+choose that custom media/ink combination and *not* choose the media, =
+ink, and profile separately.  Why complicate the user interface with =
+profile controls that are only useful when you have created a custom =
+profile, something that will require a separate program and UI in order =
+to print the target, read it, and generate the profile in the first =
+place?!?
 >=20
-> In any case, venting here won't fix things in Mac OS X.  Please file =
-bugs with Apple so that any issues get escalated and dealt with:
+> In short, why make the user select everything every time and clutter =
+the UI with unnecessary information?
 >=20
->     http://bugreport.apple.com
+>>  So if you want to use
+>> various papers and the Epson
+>> driver you need to download ICC profiles from somewhere or create =
+your
+>> own custom ones.
+>> When you print you've got to be able to select which profile will be
+>> used -- during the printing process.
+>> =46rom a user point of view the natural thing is to do this in =
+Photoshop
+>> -- its right there in the Print Preview
+>> screen.  If you are doing soft-proofing you must do it in Photoshop.
+>> Creating custom ICC profiles
+>> is the other major difficulty -- this used to work just perfectly.
+>> Why break the existing workflows?
+>=20
+> Why not when they are already broken?
+>=20
+>> The OS centric point of view that the OS will handle it means you =
+have
+>> to go into ColorSync Utility
+>> and try to find out how to associate a custom ICC profile with a
+>> device.   There's no straightforward
+>> way to do this.
+>=20
+> I'm not arguing that Linux duplicate Apple's current ColorSync user =
+experience - that much is clearly broken since users and vendors =
+regularly have so many problems.
+>=20
+> I'm similarly not advocating a continuation of the current =
+"application color management" experience because that is similarly =
+broken for anyone but a professional, and even then individual driver =
+and application issues make it problematic.
+>=20
+> Instead, I'm suggesting that a different user experience be employed: =
+when printing, the user sees no color controls. Color profiles are =
+auto-selected based on the print settings - users can install new =
+profiles, media types, and ink sets separately as needed. These profiles =
+can be "canned" profiles the user downloads from somewhere or custom =
+profiles the user creates using profiling software.
+>=20
+> Applications that need to do their own color management (hopefully few =
+and far between) can specify so using an API, which disables color =
+management and profile selection so that the color data the application =
+provides is treated as device color all the way through to the printer.
+>=20
+>> ...
+>> I've asked quite explicitly via ADC what is the protocol to print =
+with No Color
+>> Management and Application Color Management but haven't gotten =
+answers.
+>> I was able to crawl through header files and find the =
+AP_ColorMatchingMode
+>> flag but there is no documentation.
+>=20
+> Whom did you talk to at ADC?
+>=20
+>> ...
+>> I've used the bug report system.  See bug 6503221 that I submitted in =
+Jan 2009.
+>> After quite a few emails back and forth, all seemed to agree that =
+there was a
+>> problem.  "Apple and Adobe are working on it" is all since then.  It =
+just
+>> sits as an open issue.
+>=20
+> Keep in mind that when there is a problem that requires coordination =
+between multiple vendors, a solution inevitably takes longer.
+>=20
+>> Simple question:  As an "Apple Senior Printing System Engineer" can =
+you find out
+>> how the No Color Management should work?
+>=20
+> Within Mac OS X, the only way to disable color management is to =
+associate the device profile with the colors you draw with - this =
+doesn't actually disable color management but *does* short-circuit it.
+>=20
+> However, that is only 1/2 of the equation - you also need to tell the =
+driver to go into "application color matching mode", and pray that the =
+driver actually implements it properly.  This is the =
+kPMColorMatchingModeKey (AP_ColorMatchingMode) setting, which is =
+described in the PMPrintSettingsKeys.h header along with the supported =
+values: kPMVendorColorMatching or kPMApplicationColorMatching. If not =
+set, ColorSync is used.
+>=20
+>> Thanks,
+>> Roy Harrington
+>>=20
+>> ps:  I do a third party print driver for Epson printers and various
+>> ICC profiling for this.
+>> I'm familiar with the printing system from the driver point of view =
+as
+>> well as from
+>> application point of view.
+>=20
+>=20
+> Prior to joining Apple, I wrote and sold commercial printer drivers =
+and RIPs for 13 years, and did printer software for 6 years before that =
+"just for fun".  My company was a member of the ICC...
+>=20
+> ___________________________________________________
+> Michael Sweet, Senior Printing System Engineer
+>=20
+>=20
+>=20
 
-
-A lie? As in, an intentionally false statement? That's an interesting =
-assertion. I know for a fact it's possible to print profile targets =
-reliably on Windows. There are other problems on Windows, but reliably =
-printing profile targets and prematching color without ICM becoming =
-involved is not one of them, because it is not aggressively invasive =
-like ColorSync. Those are the problems I'm referring to.
-
-My entrance to the thread was to lend my perspective to Linux dvelopers =
-on avoiding what I consider to be major flaws with printing and color on =
-OS X. Subsequent posts have been responses. These are not new =
-complaints. Multiple forums including Apple's ColorSync User's list and =
-support forums are littered with such complaints.
-
-There isn't a mechanism for relaying perceived (or real) architectural =
-flaws with Apple. Doing so on bug reporter consistently yields "works as =
-intended" responses from engineering. I know because I've been down that =
-road already.
-
-
-Chris Murphy=
-
---Apple-Mail-10-833477999
-Content-Transfer-Encoding: quoted-printable
-Content-Type: text/html;
-	charset=us-ascii
-
-<html><head></head><body style=3D"word-wrap: break-word; =
--webkit-nbsp-mode: space; -webkit-line-break: after-white-space; =
-"><div><font class=3D"Apple-style-span" face=3D"Helvetica"><span =
-class=3D"Apple-style-span" style=3D"font-family: Verdana; "><div>On Nov =
-14, 2009, at 3:59 PM, Michael Sweet wrote:</div><blockquote =
-type=3D"cite"><div style=3D"word-wrap: break-word; -webkit-nbsp-mode: =
-space; -webkit-line-break: after-white-space; "><div><div>On Nov 14, =
-2009, at 2:10 AM, Chris Murphy =
-wrote:</div></div></div></blockquote><blockquote type=3D"cite"><div =
-style=3D"word-wrap: break-word; -webkit-nbsp-mode: space; =
--webkit-line-break: after-white-space; "><div><blockquote =
-type=3D"cite"><div>Michael, yes, I have no doubt about that. The problem =
-is that these sorts of color problems with printing are recurring =
-themes. Epson is not the only one who has had problems, although they =
-very well may be the worst offender. But we don't have these kinds of =
-problems on Windows. That should be a WTF moment for Apple. Sane people =
-have started to wonder, rationally, if there is something fwrong with =
-the architecture when there are so many recurring problems of this sort, =
-through multiple major revisions of the operating system. We've =
-experienced color related problems with Tioga drivers =
-too.<br></div></blockquote><div><br></div>Windows doesn't provide the =
-same level of support for color as Mac OS X, and to say that Windows =
-doesn't have these problems is a lie - they are just hidden from most =
-users since there isn't a "use this profile" option staring you in the =
-face every time you print.</div><div><br></div><div>In any case, venting =
-here won't fix things in Mac OS X. &nbsp;Please file bugs with Apple so =
-that any issues get escalated and dealt =
-with:</div><div><br></div><div>&nbsp;&nbsp; &nbsp;<a =
-href=3D"http://bugreport.apple.com">http://bugreport.apple.com</a></div></=
-div></blockquote></span></font></div><div><div><br></div></div><div>A =
-lie? As in, an intentionally false statement? That's an interesting =
-assertion. I know for a fact it's possible to print profile targets =
-reliably on Windows. There are other problems on Windows, but reliably =
-printing profile targets and prematching color without ICM becoming =
-involved is not one of them, because it is not aggressively invasive =
-like ColorSync. Those are the problems I'm referring =
-to.</div><div><br></div><div>My entrance to the thread was to lend my =
-perspective to Linux dvelopers on avoiding what I consider to be major =
-flaws with printing and color on OS X. Subsequent posts have been =
-responses. These are not new complaints. Multiple forums including =
-Apple's ColorSync User's list and support forums are littered with such =
-complaints.</div><div><br></div><div>There isn't a mechanism for =
-relaying perceived (or real) architectural flaws with Apple. Doing so on =
-bug reporter consistently yields "works as intended" responses from =
-engineering. I know because I've been down that road =
-already.</div><div><br></div><div><br></div><div>Chris =
-Murphy</div></body></html>=
-
---Apple-Mail-10-833477999--
