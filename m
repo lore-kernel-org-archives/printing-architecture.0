@@ -1,14 +1,23 @@
-From: "Hal V. Engel" <hvengel@astound.net>
-Date: Sun, 15 Nov 2009 12:26:49 -0800
+Mime-Version: 1.0 (Apple Message framework v1077)
+Content-Type: multipart/alternative; boundary=Apple-Mail-14-863526191
+From: Chris Murphy <lists@colorremedies.com>
+In-Reply-To: <D365548B-A95D-4233-B810-5F0B291C6308@apple.com>
+Date: Sun, 15 Nov 2009 22:53:20 -0500
+Message-Id: <9F34689A-AD72-4C57-9FBD-F3E558C06FDF@colorremedies.com>
 References: <e395be80811270817n502ccd16wf6cc90f85364f5ae@mail.gmail.com>
-	<620c0af50911141715y3c5739ffxf51480387fa0be59@mail.gmail.com>
-	<77618445-60C9-4D30-99F8-B42DBCCBF24E@apple.com>
-In-Reply-To: <77618445-60C9-4D30-99F8-B42DBCCBF24E@apple.com>
-MIME-Version: 1.0
-Content-Type: Text/Plain;
-  charset="iso-8859-1"
-Content-Transfer-Encoding: 7bit
-Message-Id: <200911151226.49297.hvengel@astound.net>
+	<4AF14A4E.5050903@gmail.com>
+	<5B109C6D-12A5-47AD-9C26-D9E0606E21D3@mmiworks.net>
+	<4AF96B6A.7030307@gmail.com>
+	<25E5CE60-FE48-41E9-B390-DD35452A6F68@colorremedies.com>
+	<A7277E6D-EAD7-4CD8-AD88-FB803B44EC74@apple.com>
+	<2C324A50-9598-4F86-8C4E-8FF13A890826@colorremedies.com>
+	<4810817B-2933-4E6E-82DD-CB87931E917F@apple.com>
+	<3D6E9452-F2A5-4F43-AFD6-4CDF0655BE2A@colorremedies.com>
+	<A388F76E-FFCF-49A4-94CB-A3DC103838DA@apple.com>
+	<1753203E-E616-401D-81B5-359D706D245B@colorremedies.com>
+	<259EDC2F-D90C-4A5E-802F-F4C97AB4A08D@apple.com>
+	<1CF4D0C9-61F2-496D-9F69-0F73A79A6E6C@colorremedies.com>
+	<D365548B-A95D-4233-B810-5F0B291C6308@apple.com>
 Subject: Re: [Printing-architecture] [Gimp-print-devel] [Openicc]  Colour
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
@@ -19,91 +28,116 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: gimp-print-devel@lists.sourceforge.net
-Cc: Roy Harrington <roy@harrington.com>, Michael Sweet <msweet@apple.com>, openicc <openicc@lists.freedesktop.org>, Till Kamppeter <till.kamppeter@gmail.com>, printing-architecture@lists.linux-foundation.org
+To: Michael Sweet <msweet@apple.com>
+Cc: printing-architecture@lists.linux-foundation.org, gimp-print-devel@lists.sourceforge.net, openicc <openicc@lists.freedesktop.org>
 
-On Saturday 14 November 2009 09:08:17 pm Michael Sweet wrote:
-> I'm not arguing that Linux duplicate Apple's current ColorSync user
->  experience - that much is clearly broken since users and vendors regularly
->  have so many problems.
-> 
-> I'm similarly not advocating a continuation of the current "application
->  color management" experience because that is similarly broken for anyone
->  but a professional, and even then individual driver and application issues
->  make it problematic.
-> 
-> Instead, I'm suggesting that a different user experience be employed: when
->  printing, the user sees no color controls. Color profiles are
->  auto-selected based on the print settings - users can install new
->  profiles, media types, and ink sets separately as needed. These profiles
->  can be "canned" profiles the user downloads from somewhere or custom
->  profiles the user creates using profiling software.
-> 
-> Applications that need to do their own color management (hopefully few and
->  far between) can specify so using an API, which disables color management
->  and profile selection so that the color data the application provides is
->  treated as device color all the way through to the printer.
-> 
 
-This is something that I can generally agree with.  One of the goals of the 
-Oyranos project is to facilitate exactly this kind of user experience.  I also 
-think this is what the CPD is intended to support in the long run.  The key 
-points are:
+--Apple-Mail-14-863526191
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain;
+	charset=us-ascii
 
-1. A very simple printing UI that hides most things color related. 
 
-2. In general all (non-target, non-prematched) CM is handled on the back end 
-and color is managed using ICC profiles.
 
-3. The driver vendors will specify (and supply if needed) the default profiles 
-used by their device.
+On Nov 15, 2009, at 4:33 PM, Michael Sweet wrote:
+> Well, last time *I* tried to print a target on Windows I had the same =
+Epson driver problems that you'll find on Mac OS X - the Epson color =
+controls were still used, making the target print useless.
 
-4. Users/admins have complete control over things like which profiles are 
-installed and related settings so that the back end and how it selects and 
-uses profiles can be configured by the user/admin.
+It is true that on Windows the user should choose a different LUT than =
+the default which on current drivers is Epson Standard (sRGB). But the =
+printed target isn't useless. You'll actually make a profile that works =
+correctly, although it is restricted in gamut. However, in-gamut colors =
+reproduce correctly.
 
-5. Apps that need to do prematching or that are used to print targets will 
-have a simple API available to disable back end CM for their print jobs.
+The problem I'm referring to that does not happen on Windows is ICM =
+getting involved when it's not asked to. That's been a regular problem =
+on OS X, even if it's manifested itself in different ways.
 
-Of course at present almost none of this is in place in the non-OS/X world 
-(the following is FOSS specific).  
+Chris Murphy=
 
-#1. The CPD with proper PPD files will do this right now but none of the 
-existing PPD files are setup for this type of work flow.
+--Apple-Mail-14-863526191
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html;
+	charset=us-ascii
 
-#2. CUPS has the ability with proper *toraster filters to do #2.  But the 
-needed open source *toraster filters still need work.
+<html><head></head><body style=3D"word-wrap: break-word; =
+-webkit-nbsp-mode: space; -webkit-line-break: after-white-space; =
+"><div><span class=3D"Apple-style-span" style=3D"border-collapse: =
+separate; border-spacing: 0px 0px; color: rgb(0, 0, 0); font-family: =
+Helvetica; font-size: 12px; font-style: normal; font-variant: normal; =
+font-weight: normal; letter-spacing: normal; line-height: normal; =
+text-align: auto; -khtml-text-decorations-in-effect: none; text-indent: =
+0px; -apple-text-size-adjust: auto; text-transform: none; orphans: 2; =
+white-space: normal; widows: 2; word-spacing: 0px; "><span =
+class=3D"Apple-style-span" style=3D"border-collapse: separate; =
+border-spacing: 0px 0px; color: rgb(0, 0, 0); font-family: Helvetica; =
+font-size: 12px; font-style: normal; font-variant: normal; font-weight: =
+normal; letter-spacing: normal; line-height: normal; text-align: auto; =
+-khtml-text-decorations-in-effect: none; text-indent: 0px; =
+-apple-text-size-adjust: auto; text-transform: none; orphans: 2; =
+white-space: normal; widows: 2; word-spacing: 0px; "><span =
+class=3D"Apple-style-span" style=3D"border-collapse: separate; =
+border-spacing: 0px 0px; color: rgb(0, 0, 0); font-family: Helvetica; =
+font-size: 12px; font-style: normal; font-variant: normal; font-weight: =
+normal; letter-spacing: normal; line-height: normal; text-align: auto; =
+-khtml-text-decorations-in-effect: none; text-indent: 0px; =
+-apple-text-size-adjust: auto; text-transform: none; orphans: 2; =
+white-space: normal; widows: 2; word-spacing: 0px; "><span =
+class=3D"Apple-style-span" style=3D"border-collapse: separate; =
+border-spacing: 0px 0px; color: rgb(0, 0, 0); font-family: Helvetica; =
+font-size: 12px; font-style: normal; font-variant: normal; font-weight: =
+normal; letter-spacing: normal; line-height: normal; text-align: auto; =
+-khtml-text-decorations-in-effect: none; text-indent: 0px; =
+-apple-text-size-adjust: auto; text-transform: none; orphans: 2; =
+white-space: normal; widows: 2; word-spacing: 0px; "><span =
+class=3D"Apple-style-span" style=3D"border-collapse: separate; =
+border-spacing: 0px 0px; color: rgb(0, 0, 0); font-family: Helvetica; =
+font-size: 12px; font-style: normal; font-variant: normal; font-weight: =
+normal; letter-spacing: normal; line-height: normal; text-align: auto; =
+-khtml-text-decorations-in-effect: none; text-indent: 0px; =
+-apple-text-size-adjust: auto; text-transform: none; orphans: 2; =
+white-space: normal; widows: 2; word-spacing: 0px; "><span =
+class=3D"Apple-style-span" style=3D"border-collapse: separate; =
+border-spacing: 0px 0px; color: rgb(0, 0, 0); font-family: Helvetica; =
+font-size: 12px; font-style: normal; font-variant: normal; font-weight: =
+normal; letter-spacing: normal; line-height: normal; text-align: auto; =
+-khtml-text-decorations-in-effect: none; text-indent: 0px; =
+-apple-text-size-adjust: auto; text-transform: none; orphans: 2; =
+white-space: normal; widows: 2; word-spacing: 0px; "><span =
+class=3D"Apple-style-span" style=3D"border-collapse: separate; =
+border-spacing: 0px 0px; color: rgb(0, 0, 0); font-family: Helvetica; =
+font-size: 12px; font-style: normal; font-variant: normal; font-weight: =
+normal; letter-spacing: normal; line-height: normal; text-align: auto; =
+-khtml-text-decorations-in-effect: none; text-indent: 0px; =
+-apple-text-size-adjust: auto; text-transform: none; orphans: 2; =
+white-space: normal; widows: 2; word-spacing: 0px; "><span =
+class=3D"Apple-style-span" style=3D"border-collapse: separate; =
+border-spacing: 0px 0px; color: rgb(0, 0, 0); font-family: Helvetica; =
+font-size: 12px; font-style: normal; font-variant: normal; font-weight: =
+normal; letter-spacing: normal; line-height: normal; text-align: auto; =
+-khtml-text-decorations-in-effect: none; text-indent: 0px; =
+-apple-text-size-adjust: auto; text-transform: none; orphans: 2; =
+white-space: normal; widows: 2; word-spacing: 0px; "><br =
+class=3D"Apple-interchange-newline"></span></span></span></span></span></s=
+pan></span></span>
+</div>
+<br><div><div>On Nov 15, 2009, at 4:33 PM, Michael Sweet =
+wrote:</div><blockquote type=3D"cite"><div style=3D"word-wrap: =
+break-word; -webkit-nbsp-mode: space; -webkit-line-break: =
+after-white-space; "><div><div>Well, last time *I* tried to print a =
+target on Windows I had the same Epson driver problems that you'll find =
+on Mac OS X - the Epson color controls were still used, making the =
+target print =
+useless.</div></div></div></blockquote><div><br></div><div>It is true =
+that on Windows the user should choose a different LUT than the default =
+which on current drivers is Epson Standard (sRGB). But the printed =
+target isn't useless. You'll actually make a profile that works =
+correctly, although it is restricted in gamut. However, in-gamut colors =
+reproduce correctly.</div><div><br></div><div>The problem I'm referring =
+to that does not happen on Windows is ICM getting involved when it's not =
+asked to. That's been a regular problem on OS X, even if it's manifested =
+itself in different ways.</div></div><div><br></div><div>Chris =
+Murphy</div></body></html>=
 
-#3. This is in place on OS/X but the cupsICCProfile settings in the PPD files 
-are not correct for other platforms and I am not sure if this is the best way 
-to handle this requirement.
-
-#4. At present is missing.  Trying to configure this by using/modifying the PPD 
-files is at best clumsy and has lots of issues that have been touched on in 
-other notes in this thread and in other threads.  The cupsICCProfile settings 
-in the PPD file is simply not designed to meet this requirement. This could 
-conceivably be handled by some type of interface between CUPS, Oyranos and 
-user land but lots of work still needs to be done in all three areas.  Having 
-a clear vision of what the pieces are and how they fit together will make it 
-easier to get Oyranos, CUPS and user land tools (like Kolor Manager in KDE and 
-the CPD) up to speed and should allow for creating any needed APIs in the 
-various systems involved.  I think Oyranos already has most of the APIs needed 
-to support user land and CUPS.  CUPS, of course, has no working interface to 
-Oyranos in part because the Oyranos printer support is so new (GSoC 2009).
-
-#5. This does not currently exist as far as I can tell either on the back end 
-(IE. CUPS and friends) or in any of the existing apps that are CM aware.  On 
-the other hand in the open source world there are only a handful of apps that 
-are CM aware at all and only a subset of those know anything about ICC profiles 
-in the printing work flow (IE. most color manage to the display only - GIMP is 
-an example of a limited CM aware app).  I think if there were a simple to use 
-well documented API for this that those apps that need it would be modified to 
-use it fairly quickly.  Particularly since the developers of most of those 
-apps are members of at least one of the email lists that are part of this 
-thread.   But the issue is that there needs to be a way to do this either 
-through specialized applications like PhotoPrint or by having a switch on the 
-CPD if no apps with this ability are available.  That is I would consider 
-having a CPD switch for this to be a transition issue that would be removed 
-once we had applications available that could use the no-back end CM API call.
-
-Hal
+--Apple-Mail-14-863526191--
