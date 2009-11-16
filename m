@@ -1,15 +1,22 @@
-Date: Mon, 16 Nov 2009 18:36:26 +0100 (CET)
-From: Kai-Uwe Behrmann <ku.b@gmx.de>
-In-Reply-To: <5D2F46F4-82CB-44F0-8E08-466733DFABBB@mmiworks.net>
-Message-ID: <Pine.LNX.4.64.0911161329000.22140@sirius.rasena>
+Mime-Version: 1.0 (Apple Message framework v1077)
+Content-Type: text/plain; charset=us-ascii
+From: Chris Murphy <lists@colorremedies.com>
+In-Reply-To: <alpine.LSU.2.00.0911152027440.4678@sirius.rasena>
+Date: Mon, 16 Nov 2009 13:43:58 -0500
+Content-Transfer-Encoding: quoted-printable
+Message-Id: <B15C7BB8-0D3D-409B-AF50-D065B05B0C56@colorremedies.com>
 References: <e395be80811270817n502ccd16wf6cc90f85364f5ae@mail.gmail.com>
-	<620c0af50911141715y3c5739ffxf51480387fa0be59@mail.gmail.com>
-	<77618445-60C9-4D30-99F8-B42DBCCBF24E@apple.com>
-	<200911151226.49297.hvengel@astound.net>
-	<5D2F46F4-82CB-44F0-8E08-466733DFABBB@mmiworks.net>
-MIME-Version: 1.0
-Content-Type: TEXT/PLAIN; charset=US-ASCII
-Subject: Re: [Printing-architecture] [Gimp-print-devel] [Openicc]  Colour
+	<4AF14A4E.5050903@gmail.com>
+	<5B109C6D-12A5-47AD-9C26-D9E0606E21D3@mmiworks.net>
+	<4AF96B6A.7030307@gmail.com>
+	<25E5CE60-FE48-41E9-B390-DD35452A6F68@colorremedies.com>
+	<A7277E6D-EAD7-4CD8-AD88-FB803B44EC74@apple.com>
+	<2C324A50-9598-4F86-8C4E-8FF13A890826@colorremedies.com>
+	<4810817B-2933-4E6E-82DD-CB87931E917F@apple.com>
+	<3D6E9452-F2A5-4F43-AFD6-4CDF0655BE2A@colorremedies.com>
+	<4AFE4A28.90008@argyllcms.com>
+	<alpine.LSU.2.00.0911152027440.4678@sirius.rasena>
+Subject: Re: [Printing-architecture] [Openicc] [Gimp-print-devel]   Colour
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -19,126 +26,117 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: kate price <kate@mmiworks.net>
-Cc: Roy Harrington <roy@harrington.com>, Michael Sweet <msweet@apple.com>, openicc <openicc@lists.freedesktop.org>, Till Kamppeter <till.kamppeter@gmail.com>, printing-architecture@lists.linux-foundation.org, gimp-print-devel@lists.sourceforge.net
+To: openicc <openicc@lists.freedesktop.org>
+Cc: printing-architecture@lists.linux-foundation.org, Graeme Gill <graeme@argyllcms.com>
 
-Am 16.11.09, 13:09 +0100 schrieb kate price:
-> Hi all
-> 
-> I've been reading all posts with varying levels of comprehension, but  
-> always with great interest.
-> To get back to my own concern, design of the UI for the CPD I'm going  
-> to boil this down to a quite high level statement which expresses the  
-> direction we believe the CPD should take. This is not only in response  
-> to the information gleaned here, but also very much in the context of  
-> our own convictions about the design of a print dialogue for all users.
-> 
-> So:
-> 
-> *If printing doesn't exist, colour printing also doesn't exist. Terms  
-> and concepts like colour management and ICC profiles have no meaning  
-> to a vast majority of users. Most users  want their colour printing to  
-> just work with no intervention required.
+At least on OS X, the API is the means to set two flags: object source =
+and OutputIntent (destination profile and implicit source profile for =
+device color). The application doesn't directly set these. It has to ask =
+for it to be set via an API. And then only later if the two flags (color =
+spaces) are correctly set, is color management disabled at the raster =
+stage.
 
-Agreed, most users do not need to know about techical details.
-As soon as they want colour to just work, ICC colour management is the 
-right choice to get this done. So at least the results of colour 
-management are understood, and meeting of expectations regarding colour is 
-part of how they are satisfied with the print system.
+Putting objects into DeviceRGB/CMYK/Gray/N, instead of ICCBased color =
+space, with a required OutputIntent could be a way to inform the system =
+to not perform color management. But as Graeme points out it could be a =
+different flag entirely. Also, I don't know what the print spool file =
+format is in on Linux, so perhaps that language is more easily extended =
+than PDF.
 
-> *Successful colour printing is as much about media as it is about the  
-> ink which goes on it. This means that for successful colour printing  
-> from the CPD a holistic picture of the print is required.
+PDF/X-3 is just one possible model. It doesn't have to be followed =
+exactly. But it's a good model. (I'm calling it a model because we can =
+follow its workflow prescriptions without using the actual file format.)
 
-Colour experts will largely agree.
+PDF/X-4 which adds transparency support to PDF/X-3. As I've implemented =
+Ghostscript based proofing for high end clients, I'm confident its =
+transparency support works well.
 
-> *Detailed controls of colour settings, detailed proofing of colour  
-> fidelity etc. is far better suited to and achievable within the print  
-> preview of a suitable application (GIMP, photoshop etc etc).
+PDF/X-5 implements externally referenced images and ICC profiles, which =
+could come in handy.
 
-Is it planed to omit a detailed print preview? I have seen this kind of 
-windows and modes in office applications,  mainly to walk through multi 
-page documents before printing. They are very useful there.
+PDF 2.0 spec will add explicit BPC (black point compensation) support in =
+the file format, which means the ability to set a per object flag for =
+BPC on or off. And that should be considered since perceptual and relcol =
+transforms aren't ideal for most images, in an ICC v2 context. (In v4, =
+perceptual would be the default intent. In v2, relcol + bpc should be =
+the default.)
 
-How is the print preview integrated with CPD? Shall it work like a 
-button inside CPD, which calls into the main application with some 
-parameters to render the preview on application side? Or is it a tab? 
-A link to according documentation would be great.
+You may want multiple OutputIntents. Currently all of these specs use =
+just one, following a "one PDF, one output device condition" sort of =
+philosophy. But it's imaginable having a single print job for a small =
+book and cover, where there are different intents for the cover, and the =
+interior stock. Or a book that's mostly black and white but with some =
+color image inserts in the middle of the book.
 
-> *Professionals and power users and enthusiasts  need to be able to use  
-> profiles and presets they have made or downloaded.  Therefore there is  
-> a clear need to use colour presets directly from the CPD, even if it  
-> is accepted that they cannot be made within the CPD.
+Anyway, I think in the near term PDF/X-4 along with BPC support make the =
+most sense to me.
 
-How can we learn details about CPD presets? What makes it difficult to 
-dump out a CPD preset?
- 
-> Practically this means that:
-> 
-> *Color controls are not in the CPD or at the very most, barely there.
+Chris Murphy
 
-While the idea was provided to hide low level ICC options, I would 
-see it as an disadvantage to have the ICC related controls not 
-available and would favour to make the outlined CM controls available in 
-CPD through a experts only panel, which has a reset button for getting 
-easily to the defaults.
-But if not, how can applications plug-in a own CM panel into CPD?
+On Nov 16, 2009, at 12:10 AM, Kai-Uwe Behrmann wrote:
 
+> Am 14.11.09, 17:11 +1100 schrieb Graeme Gill:
+>> Chris Murphy wrote:
+>>> filter, and also ColorSync) to not convert the target. Presently on =
+Mac OS the
+>>> application of choice is Photoshop, with which we are presently =
+having problems because
+>>> the No Color Management based PDF spool file has different profiles =
+set for the profile
+>>> target object, and OutputIntent, causing ColorSync to color manage. =
+It autoconfigures
+>>> newer print driver settings correctly, but the PDF spool file is =
+malformed, so we get a
+>>> converted profile target.
+>>=20
+>> Yes, basically this is a really dumb API for turning color management =
+off.
+>> The right way to do it is to have a flag that turns color management =
+off,
+>> rather than relying on the software to figure out what profile is =
+being
+>> used for the end device, and labeling the file as already being in =
+that
+>> space. It's easy to demonstrate that this is sematically incorrect -
+>> if you were to spool the file and then replay it after the device
+>> profile has been changed, it will print incorrectly.
+>=20
+> I am not familiar with such a flag. So I may ask, where does this =
+apply to=20
+> which API? The print API while sending data which gets converted to =
+PDF?
+> The CMS, which is responsible to do the colour conversion or has in =
+that=20
+> special case to omit a conversion? ... or the spooling system? ...
+>=20
+>=20
+> Following  Chris' explanation, a print system "correctly" supporting=20=
 
-As well looking at Windows and osX print dialogs, there are a lot of 
-colour controls. These are not the expert controls you wrote about. 
-Nevertheless they are a big selling point for photo printers.
-Delivering vivid, natural, sepia and other effects on button click 
-including a canned ICC profile mode is typical integrated into driver 
-panels of photo capable printers. Why would print manufacturers wast that 
-space if it would be of no need?
-As well I expect most home users have a photo mode in their printing 
-device. They print mostly letters but from time to time as well images 
-and flyers. So this kind of ICC colour controls matters.
+> Device(RGB/CMYK/GRAY/N) in PDF/X-3 will have a path to pass all colour=20=
 
-> *Let the API take the strain: i.e automatic colour control override is  
-> desirable and achievable.
+> management conversions unaltered. Could this become a simple means of=20=
 
-You mean setting and freezing colour related controls as soon as a ICC 
-profile is selected(?) This would be the correct mode for the use of ICC 
-profiles. Somehow CPD has to know, which settings are colour related for 
-the particular driver. This can eigther be transported through Oyranos or 
-the profile itself, which again can be translated by Oyranos.
+> implementing Mike Sweets less is more scheme of hiding CM controls?=20
+> It would mean generate according targets and send them through CPD as =
+file=20
+> to the selected printer.
+>=20
+>=20
+> Still unresolved is the per paper ICC profile selection. To solve that=20=
 
-There will be people who complain about the missed capability to hand 
-tweak their colours. This is quite natural. A way to satisfy those 
-demand is to support effect profiles, which fits well with the point 
-above.
-
-> *Focus on at the practical process of getting presets into our CPD  
-> interface to work for enthusiasts and professionals alike.
-> 
-> It seems to me that a good focus from here would be to really get the  
-> presets working for the most sophisticated users (as well as others).  
-> This would be an area where further imput from interested parties  
-> would be welcomed because I believe that there is a great opportunity  
-> already here within the current design of the CPD. Surely integrating  
-> the making, saving and using of these presets into a  smooth and  
-> comprehensible part of a print workflow would be a great -and  
-> importantly- achievable step forward that we can provide?
-
-A big advantage of dumping out a preset is better supportability. With 
-dumped files, it is possible to send such a preset to a knowledgeable 
-person for remote analysis.
-Cloning presets is for administrators and for sharing among people equally 
-useful.
-
-Regarding ICC profiles, a preset package would need to include the ICC 
-profile.
-
-> Kate
-> 
-> Kate Price
-> man + machine interface works
-
-kind regards
-Kai-Uwe Behrmann
--- 
-developing for colour management 
-www.behrmann.name + www.oyranos.org
+> point CPD would be in need to add custom entries to non traceable=20
+> variables. These are mainly media and ink types which a driver has=20
+> currently no way to know of in a programatic manner.
+>=20
+>=20
+> kind regards
+> Kai-Uwe Behrmann
+> --=20
+> developing for colour management=20
+> www.behrmann.name + www.oyranos.org
+>=20
+> _______________________________________________
+> openicc mailing list
+> openicc@lists.freedesktop.org
+> http://lists.freedesktop.org/mailman/listinfo/openicc
 
