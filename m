@@ -1,14 +1,19 @@
-Mime-Version: 1.0 (Apple Message framework v1077)
-Content-Type: text/plain; charset=us-ascii
-From: Chris Murphy <lists@colorremedies.com>
+Date: Tue, 17 Nov 2009 14:39:31 +0100 (CET)
+From: Kai-Uwe Behrmann <ku.b@gmx.de>
 In-Reply-To: <200911170123.nAH1NDRT016538@dsl092-065-009.bos1.dsl.speakeasy.net>
-Date: Tue, 17 Nov 2009 03:26:45 -0500
-Content-Transfer-Encoding: quoted-printable
-Message-Id: <072F429A-4DC5-43CD-8649-93CE63E40C34@colorremedies.com>
-References: <e395be80811270817n502ccd16wf6cc90f85364f5ae@mail.gmail.com>	<620c0af50911141715y3c5739ffxf51480387fa0be59@mail.gmail.com>	<77618445-60C9-4D30-99F8-B42DBCCBF24E@apple.com>	<200911151226.49297.hvengel@astound.net>	<5D2F46F4-82CB-44F0-8E08-466733DFABBB@mmiworks.net>	<Pine.LNX.4.64.0911161329000.22140@sirius.rasena>	<E9C92136-4453-4938-A130-139BFF497874@colorremedies.com>
+Message-ID: <alpine.LSU.2.00.0911171357270.4903@sirius.rasena>
+References: <e395be80811270817n502ccd16wf6cc90f85364f5ae@mail.gmail.com>
+	<620c0af50911141715y3c5739ffxf51480387fa0be59@mail.gmail.com>
+	<77618445-60C9-4D30-99F8-B42DBCCBF24E@apple.com>
+	<200911151226.49297.hvengel@astound.net>
+	<5D2F46F4-82CB-44F0-8E08-466733DFABBB@mmiworks.net>
+	<Pine.LNX.4.64.0911161329000.22140@sirius.rasena>
+	<E9C92136-4453-4938-A130-139BFF497874@colorremedies.com>
 	<Pine.LNX.4.64.0911162229300.22140@sirius.rasena>
 	<4B01F77E.9090001@gmx.de>
 	<200911170123.nAH1NDRT016538@dsl092-065-009.bos1.dsl.speakeasy.net>
+MIME-Version: 1.0
+Content-Type: TEXT/PLAIN; charset=US-ASCII; format=flowed
 Subject: Re: [Printing-architecture] [Openicc]  [Gimp-print-devel]   Colour
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
@@ -20,28 +25,38 @@ List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subj
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
 To: Robert Krawitz <rlk@alum.mit.edu>
-Cc: roy@harrington.com, Gerhard Fuernkranz <nospam456@gmx.de>, msweet@apple.com, openicc@lists.freedesktop.org, printing-architecture@lists.linux-foundation.org, gimp-print-devel@lists.sourceforge.net
+Cc: printing-architecture@lists.linux-foundation.org, gimp-print-devel@lists.sourceforge.net, OpenICC Liste <openicc@lists.freedesktop.org>
 
-On Nov 16, 2009, at 8:23 PM, Robert Krawitz wrote:
-
-> That's why I think the intermediate color space should be high
+Am 16.11.09, 20:23 -0500 schrieb Robert Krawitz:
 > precision with extremely wide gamut.  I know memory and CPU isn't
 > free, but I think arguing over 8 vs. 16 bits of precision is
 > distinctly penny-wise and pound-foolish.
 
-It's fairly well established that printers do not need more than 8bpc. =
-The challenge is getting the correct 8bpc. And this is most easily =
-achieved by an intermediate space with 16bpc or higher. (e.g. ACE is =
-32bpc float for some time now, previously it was 20bpc integer =
-regardless of source bit depth). So yeah, any conversions shouldn't be =
-considering 8bpc at all. 16bpc works in most instances, and 32bpc float =
-is just going to totally clobber the issue altogether so I'd work toward =
-a 32bpc float model. And just totally eliminate any question about =
-whatever serious torquing of color spaces may be instituted (by the =
-pipeline or the user or the driver or LUTs or profiles, or whatever).
+I completely agree 16-bit can be a essential quality improovement. Its 
+like looking through glass or no glass. If someone has no problems while 
+looking on a surfaces through glass then be it.
 
-So *if* there is a debate it's between 16bpc integer and 32bpc float, =
-not 8bpc or 16bpc.
+If you want the best output in regards of fine shades, be warned of 8-bit 
+source and 8-bit print files.
+Printers capable of showing very smooth transitions of shades, are able to 
+expose stepping coming from 8-bit source material since years. This is 
+visible in smooth sourfaces like water, blurred image regions, sky and 
+other gradient alike image regions. Dithering is a poore cirumvention and 
+possibly sand for your eyes. Others may be trained and see the artificial 
+habit of the banding artifacts coming from the 8-bit source material.
+Keep in mind that most advertising material, arts prints, arts 
+paintings behind thick glass and of course monitors have easily 
+conditioned many peoples eyes to be very tollerant.
+
+That said, for office paper, news paper and smaller than post card size 
+prints 8-bit might be enough. This maps to the majority of printed 
+imagery, but not to all printing demands.
 
 
-Chris Murphy=
+kind regards
+Kai-Uwe Behrmann
+-- 
+developing for colour management 
+www.behrmann.name + www.oyranos.org
+
+
