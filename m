@@ -1,14 +1,11 @@
-Message-ID: <4B0722A1.7050208@gmail.com>
-Date: Fri, 20 Nov 2009 17:13:37 -0600
-From: Till Kamppeter <till.kamppeter@gmail.com>
 MIME-Version: 1.0
-References: <003601ca5887$d1e33c80$9e72150a@nsl.ad.nec.co.jp>
-	<4B034874.7020400@fujixerox.co.jp>
-In-Reply-To: <4B034874.7020400@fujixerox.co.jp>
-Content-Type: text/plain; charset=UTF-8; format=flowed
-Content-Transfer-Encoding: 7bit
-Subject: Re: [Printing-architecture] [Printing-japan] OpenPrinting Japan
-	Oct. 2009 meeting minutes
+Date: Mon, 23 Nov 2009 12:43:08 -0500
+Message-ID: <e395be80911230943h36637740qdf467a546441b001@mail.gmail.com>
+From: Ira McDonald <blueroofmusic@gmail.com>
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+Subject: [Printing-architecture] REMINDER - Quarterly Japan/US/Europe OP
+	Call - Mon/Tue 23/24 November 2009
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -18,67 +15,46 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Osamu MIHARA <osamu.mihara@fujixerox.co.jp>
-Cc: printing-architecture@lists.linux-foundation.org, printing-japan@lists.linux-foundation.org
+To: printing-architecture@lists.linux-foundation.org, Ira McDonald <blueroofmusic@gmail.com>, TORATANI Yasumasa <toratani.yasumasa@canon.co.jp>, Till Kamppeter <till.kamppeter@gmail.com>
 
-Osamu MIHARA wrote:
-> <Action Items Follow-up>
-> <Telecon (US/EU) Review>
-> - (review meeting minutes)
-> - Internationalization is needed for OpenPrinting Web Site and download site
->   -> Who will work for this?
-> 
-
-I will talks with Dan Lopez (LF web developer) about the implementation 
-of internationalization. The OpenPrinting database itself supports 
-internationalization.
-
-> <Printer Driver Seminar (Till's Proposal)>
-> - Posting from Till for the previous meeting minutes is reviewed.
->   -> "Training" is preferable compared with "Lecture."
-
-Yes, it is planned to be a hands-on training session.
-
->   -> Explanation of CPD does not necessarily need an application which
-> supports CPD.
-
-No application needed. For demonstration one can start the CPD from the 
-command line.
-
-> - A question arised from Kunai: Do any printer vendor currently consider
-> to provide printer drivers supports CPD?  Do they needs any training for
-> CPD?
-
-I am working together with one manufacturer currently who is preparing 
-packages for auto-download via OpenPrinting.
-
->    -> Printer vendors thinks it's too early to incorporate CPD in their
-> drivers.  It is because the spec is not fixed yet, then it doesn't show
-> definite merits yet.
-
-The dialog is nearly complete and the PPD extensions are unlikely to 
-change now. The PPD extensions are the interface with which the driver 
-developer controls the dialog. So you can safely use the PPD extensions. 
-As long as the CPD is not actually there, the extensions will be ignored 
-and the driver will still work with the old dialogs.
-
->    -> Main topic will be Printer Driver.  CPD part will be just a
-> introduction.
-
-That is true. Central topic is designing and packaging the drivers. The 
-CPD will be shown to demonstrate the effects of the PPD extensions.
-
-> - Timing/Schedule: Japan Linux Symposium in next fall (2010) will be
-> good timing for the seminar.
-
-I think this is too late, we should already do it earlier like early 2010.
-
-> - We'd like the developers of applications and GUI tool kits to come to
-> the seminar.
-> 
-
-The seminar is for printer driver developers. We can have another 
-(one-day) session at the symposium for further discussion of the CPD.
-
-    Till
-
+On Wed, Nov 11, 2009 at 4:53 PM, Ira McDonald <blueroofmusic@gmail.com> wro=
+te:
+> Hi,
+>
+> ONE WEEK EARLY
+>
+> =A0 =A0- Monday 23 November 2009, Evening
+> =A0 =A0 =A0- US
+> =A0 =A0 =A0 =A03pm in San Francisco - US PST (Pacific Standard Time)
+> =A0 =A0 =A0 =A04pm in Colorado - US MST (Mountain Standard Time)
+> =A0 =A0 =A0 =A05pm in Chicago - US CST (Central Standard Time)
+> =A0 =A0 =A0 =A06pm in New York - US EST (Eastern Standard Time)
+>
+> =A0 =A0- Tuesday 24 November 2009, Morning
+> =A0 =A0 =A0- Europe
+> =A0 =A0 =A0 =A012am in Berlin - CET (Central European Time)
+> =A0 =A0 =A0- Japan
+> =A0 =A0 =A0 =A08am in Tokyo - JDT (Japan Standard Time)
+>
+> =A0 =A0* Main Number (Till Kamppeter, LF, leader)
+> =A0 =A0 =A0International: +1-218-936-7999
+> =A0 =A0 =A0Access Code: =A0 491659#
+>
+> Agenda to be determined during our call.
+>
+> All are welcome - please join us.
+>
+> Cheers,
+> - Ira
+>
+> Ira McDonald (Musician / Software Architect)
+> Chair - Linux Foundation Open Printing WG
+> Blue Roof Music/High North Inc
+> email: blueroofmusic@gmail.com
+> winter:
+> =A0579 Park Place =A0Saline, MI =A048176
+> =A0734-944-0094
+> summer:
+> =A0PO Box 221 =A0Grand Marais, MI 49839
+> =A0906-494-2434
+>
