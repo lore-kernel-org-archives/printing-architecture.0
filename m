@@ -1,13 +1,13 @@
 MIME-Version: 1.0
 In-Reply-To: <e395be80911201510u70df2979u525312646ff67b90@mail.gmail.com>
 References: <e395be80911201510u70df2979u525312646ff67b90@mail.gmail.com>
-Date: Mon, 30 Nov 2009 17:11:31 -0500
-Message-ID: <e395be80911301411j3e068039sd97b9fa4fa6fd40c@mail.gmail.com>
+Date: Tue, 1 Dec 2009 11:55:52 -0500
+Message-ID: <e395be80912010855w666c9c0dtfa043603dcb798fa@mail.gmail.com>
 From: Ira McDonald <blueroofmusic@gmail.com>
 Content-Type: text/plain; charset=ISO-8859-1
 Content-Transfer-Encoding: quoted-printable
-Subject: Re: [Printing-architecture] NEW DATE - Monthly US/Europe OP Call -
-	1 December 2009
+Subject: Re: [Printing-architecture] [5 minutes] NEW DATE - Monthly
+	US/Europe OP Call - 1 December 2009
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -18,8 +18,6 @@ List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subj
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
 To: printing-architecture@lists.linux-foundation.org, Ira McDonald <blueroofmusic@gmail.com>, Till Kamppeter <till.kamppeter@gmail.com>
-
-Reminder
 
 On Fri, Nov 20, 2009 at 6:10 PM, Ira McDonald <blueroofmusic@gmail.com> wro=
 te:
