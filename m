@@ -1,12 +1,12 @@
 MIME-Version: 1.0
 In-Reply-To: <4B547F93.1010307@gmail.com>
 References: <4B547F93.1010307@gmail.com>
-Date: Tue, 19 Jan 2010 12:04:45 -0500
-Message-ID: <e395be81001190904r4b2e408fg5c8bab76ba6a4370@mail.gmail.com>
+Date: Tue, 19 Jan 2010 12:20:26 -0500
+Message-ID: <e395be81001190920s333474fchf8e5d12f0a9e025c@mail.gmail.com>
 From: Ira McDonald <blueroofmusic@gmail.com>
 Content-Type: text/plain; charset=ISO-8859-1
 Content-Transfer-Encoding: quoted-printable
-Subject: Re: [Printing-architecture] [5 minutes ago] REMINDER: OpenPrinting
+Subject: Re: [Printing-architecture] [cancelled!!!] REMINDER: OpenPrinting
 	US/Europe monthly call on Tuesday Jan 19
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
@@ -17,14 +17,16 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Till Kamppeter <till.kamppeter@gmail.com>, Ira McDonald <blueroofmusic@gmail.com>
+To: Till Kamppeter <till.kamppeter@gmail.com>
 Cc: OpenPrinting <printing-architecture@lists.linux-foundation.org>
 
-Hi Till et al,
+Hi,
 
-Nobody's on the call and it's 5 minutes past the hour.
+George Liu and I waited for 15 minutes and finally George
+dropped off.  Immediately after that, Till and Lars joined.
 
-Please call in.
+We will try again NEXT WEEK at the same time - see
+note that follows.
 
 Cheers,
 - Ira
