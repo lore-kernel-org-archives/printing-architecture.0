@@ -1,10 +1,11 @@
+Message-ID: <4B5E0FA2.8070109@gmail.com>
+Date: Mon, 25 Jan 2010 22:39:46 +0100
+From: Till Kamppeter <till.kamppeter@gmail.com>
 MIME-Version: 1.0
-Date: Tue, 19 Jan 2010 12:23:51 -0500
-Message-ID: <e395be81001190923i505de1f2xb0afd7aff8689a4b@mail.gmail.com>
-From: Ira McDonald <blueroofmusic@gmail.com>
-Content-Type: text/plain; charset=ISO-8859-1
-Subject: [Printing-architecture] RESCHEDULED - Next US/Europe OP
-	Teleconference - Tuesday 26 January 2010
+Content-Type: text/plain; charset=UTF-8; format=flowed
+Content-Transfer-Encoding: 7bit
+Subject: [Printing-architecture] REMINDER: OpenPrinting US/Europe monthly
+	call on Tuesday Jan 26
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -14,11 +15,11 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: printing-architecture@lists.linux-foundation.org, Ira McDonald <blueroofmusic@gmail.com>
+To: OpenPrinting <printing-architecture@lists.linux-foundation.org>
 
 Hi,
 
-We will try again NEXT WEEK.
+tomorrow we will have our conference call (see dial-in data below).
 
 Agenda:
 
@@ -27,31 +28,20 @@ Agenda:
 
 Dial-in data:
 
-    - Tuesday 26 January 2010, Daytime
-      - US
-        9am in San Francisco - US PST (Pacific Standard Time)
-        10am in Colorado - US MST (Mountain Standard Time)
-        11am in Chicago - US CST (Central Standard Time)
-        12pm in New York - US EST (Eastern Standard Time)
-      - Europe
-        6pm in Berlin - CET (Central European Time)
+     - Tuesday 26 January 2010, Daytime
+       - US
+         9am in San Francisco - US PST (Pacific Standard Time)
+         10am in Colorado - US MST (Mountain Standard Time)
+         11am in Chicago - US CST (Central Standard Time)
+         12pm in New York - US EST (Eastern Standard Time)
+       - Europe
+         6pm in Berlin - CET (Central European Time)
 
-    * Main Number (Till Kamppeter, LF, leader)
-      International: +1-218-936-7999
-      Access Code:   491659#
+     * Main Number (Till Kamppeter, LF, leader)
+       International: +1-218-936-7999
+       Access Code:   491659#
 
-Cheers,
-- Ira
 
-Ira McDonald (Musician / Software Architect)
-Chair - Linux Foundation Open Printing WG
-Co-Chair - TCG Hardcopy WG
-IETF Designated Expert - IPP & Printer MIB
-Blue Roof Music/High North Inc
-email: blueroofmusic@gmail.com
-winter:
-  579 Park Place  Saline, MI  48176
-  734-944-0094
-summer:
-  PO Box 221  Grand Marais, MI 49839
-  906-494-2434
+    Till
+
+
