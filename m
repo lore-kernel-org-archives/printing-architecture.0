@@ -1,9 +1,10 @@
 MIME-Version: 1.0
-Date: Tue, 26 Jan 2010 14:25:47 -0500
-Message-ID: <e395be81001261125x77a5df12kc1a686665381f9db@mail.gmail.com>
+Date: Tue, 26 Jan 2010 14:32:05 -0500
+Message-ID: <e395be81001261132u4243a803h9de58e379f09715e@mail.gmail.com>
 From: Ira McDonald <blueroofmusic@gmail.com>
 Content-Type: text/plain; charset=ISO-8859-1
-Subject: [Printing-architecture] OP Minutes - 26 January 2010
+Subject: [Printing-architecture] Quarterly Japan/US/Europe OP Call - Mon/Tue
+	1/2 March 2010
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -13,31 +14,28 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: printing-architecture@lists.linux-foundation.org, Ira McDonald <blueroofmusic@gmail.com>
+To: printing-architecture@lists.linux-foundation.org
 
 Hi,
 
-Minutes from today's Open Printing teleconference are posted at:
+REMINDER - our next Quarterly Japan/US/Europe OP Call will be:
 
- ftp://ftp.pwg.org/pub/pwg/fsg/minutes/OP-Minutes-20100126.htm
+   - Monday 1 March 2010, Evening
+      - US
+        3pm in San Francisco - US PST (Pacific Standard Time)
+        4pm in Colorado - US MST (Mountain Standard Time)
+        5pm in Chicago - US CST (Central Standard Time)
+        6pm in New York - US EST (Eastern Standard Time)
 
-Next OP monthly call:
+    - Tuesday 2 March 2010, Morning
+      - Europe
+        12am in Berlin - CET (Central European Time)
+      - Japan
+        8am in Tokyo - JST (Japan Standard Time)
 
-   - Note - PWG Face-to-Face 9-11 February 2010 in Scottsdale, AZ
-   - Note - Trusted Computing Group 22-25 February 2010 in Miami, FL
-
-   - Tuesday 16 February 2010, Daytime
-     - US
-       9am in San Francisco - US PST (Pacific Standard Time)
-       10am in Colorado - US MST (Mountain Standard Time)
-       11am in Chicago - US CST (Central Standard Time)
-       12pm in New York - US EST (Eastern Standard Time)
-     - Europe
-       6pm in Berlin - CET (Central European Time)
-
-   * Main Number (Till Kamppeter, LF, leader)
-     International: +1-218-936-7999
-     Access Code:   491659#
+    * Main Number (Till Kamppeter, LF, leader)
+      International: +1-218-936-7999
+      Access Code:   491659#
 
 Cheers,
 - Ira
