@@ -1,11 +1,10 @@
-Message-ID: <4B67049F.7030204@gmail.com>
-Date: Mon, 01 Feb 2010 17:43:11 +0100
-From: Till Kamppeter <till.kamppeter@gmail.com>
 MIME-Version: 1.0
-Content-Type: text/plain; charset=UTF-8; format=flowed
-Content-Transfer-Encoding: 7bit
-Subject: [Printing-architecture] OpenPrinting Summit 2010 on April 14-16 in
-	San Francisco
+Date: Mon, 15 Feb 2010 12:43:45 -0500
+Message-ID: <e395be81002150943r67d53042q23ed88328e4b6c08@mail.gmail.com>
+From: Ira McDonald <blueroofmusic@gmail.com>
+Content-Type: text/plain; charset=ISO-8859-1
+Subject: [Printing-architecture] REMINDER - Next US/Europe OP Call - Tue 16
+	February
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -15,47 +14,45 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: printing-summit@lists.linux-foundation.org, Open Printing <printing-architecture@lists.linux-foundation.org>, Printing-japan <printing-japan@lists.linux-foundation.org>
+To: printing-architecture@lists.linux-foundation.org, Ira McDonald <blueroofmusic@gmail.com>, Till Kamppeter <till.kamppeter@gmail.com>, Lars Uebernickel <larsuebernickel@gmx.de>, George Liu <george.liu@ricoh-tech.com>
 
 Hi,
 
-as last year, we will hold the OpenPrinting Summit [1] together with the 
-Linux Foundation Collaboration Summit [2] in the Kabuki Hotel in San 
-Francisco. Mark April 14-16 in your calendars.
+Reminder of our next OP monthly teleconference tomorrow.
 
-The most important developers and representatives for the Linux printing 
-infrastructure, printer drivers, printing dialogs, color management, 
-printer manufacturers, Linux distribution vendors, LSB, ... will meet 
-and talk about the following topics:
+Agenda:
 
-     * How to design printer drivers for distribution-independent
-       LSB-based packages and the Common Printing Dialog (mini seminar)
-     * Color Management
-     * Common Printing Dialog
-     * Printing in Chrome OS
-     * State of the art of the printing development
+    - State of the Common Printing Dialog
+    - Possible topics for the next OpenPrinting Summit
 
-If you also like to participate, you are welcome, registrations and 
-hotel room reservations for negotiated rates are available from now on. 
-Please visit the event's web page [1] or go directly to the registration 
-page [3].
+Call-in Info:
 
-Call-in will be available, too, for the case that you cannot attend 
-personally.
+    - Tuesday 16 February 2010, Daytime
+      - US
+        9am in San Francisco - US PST (Pacific Standard Time)
+        10am in Colorado - US MST (Mountain Standard Time)
+        11am in Chicago - US CST (Central Standard Time)
+        12pm in New York - US EST (Eastern Standard Time)
+      - Europe
+        6pm in Berlin - CET (Central European Time)
 
-If you are interested to participate, either personally or by call-in, 
-please subscribe to our mailing list [4] (if you have not already done 
-so, subscriptions from last year are conserved). Important announcements 
-are only made through this list.
+    * Main Number (Till Kamppeter, LF, leader)
+      International: +1-218-936-7999
+      Access Code:   491659#
 
-I hope I see (or at least hear) you all in April.
+Cheers,
+- Ira
 
-    Till
 
------
-
-[1]https://www.linuxfoundation.org/collaborate/workgroups/lf/openprinting-summit-san-francisco-2010
-[2]http://events.linuxfoundation.org/events/collaboration-summit
-[3]http://events.linuxfoundation.org/component/registrationpro/?func=details&did=26
-[4]http://lists.linux-foundation.org/mailman/listinfo/printing-summit
-
+Ira McDonald (Musician / Software Architect)
+Chair - Linux Foundation Open Printing WG
+Co-Chair - TCG Hardcopy WG
+IETF Designated Expert - IPP & Printer MIB
+Blue Roof Music/High North Inc
+email: blueroofmusic@gmail.com
+winter:
+  579 Park Place  Saline, MI  48176
+  734-944-0094
+summer:
+  PO Box 221  Grand Marais, MI 49839
+  906-494-2434
