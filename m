@@ -1,13 +1,10 @@
-Message-ID: <4B7B1935.2030104@gmail.com>
-Date: Tue, 16 Feb 2010 23:16:21 +0100
-From: Till Kamppeter <till.kamppeter@gmail.com>
 MIME-Version: 1.0
-References: <e395be80811270817n502ccd16wf6cc90f85364f5ae@mail.gmail.com>
-In-Reply-To: <e395be80811270817n502ccd16wf6cc90f85364f5ae@mail.gmail.com>
-Content-Type: text/plain; charset=UTF-8; format=flowed
-Content-Transfer-Encoding: 7bit
-Subject: [Printing-architecture] Last OP Meeting - Tue - 16 Feb 2010 - The
-	Recording
+Date: Wed, 17 Feb 2010 13:41:40 -0500
+Message-ID: <e395be81002171041n393719d5j590bcf76b2a633ed@mail.gmail.com>
+From: Ira McDonald <blueroofmusic@gmail.com>
+Content-Type: text/plain; charset=ISO-8859-1
+Subject: [Printing-architecture] OP Summit Preparation Minutes (17 February
+	2010)
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -17,20 +14,41 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Open Printing <printing-architecture@lists.linux-foundation.org>, Printing-japan <printing-japan@lists.linux-foundation.org>
+To: printing-architecture@lists.linux-foundation.org, printing-summit@lists.linux-foundation.org, Ira McDonald <blueroofmusic@gmail.com>
 
 Hi,
 
-I have uploaded the recording of the last OpenPrinting meeting to the
-OpenPrinting server:
+Minutes from today's OP Summit Preparation call are posted at:
 
-http://www.openprinting.org/download/meetingnotes/op-telecons/OP-Meeting-20100216.mp3
+  ftp://ftp.pwg.org/pub/pwg/fsg/minutes/OP-Summit-Prep-20100217.htm
 
-In general, recorded meetings I will upload to
+Please read these minutes and suggest other topics - thanks.
 
-http://www.openprinting.org/download/meetingnotes/
+Our next OP Summit Preparation call will be in 2 weeks:
 
-    Till
+    - Wednesday 3 March 2010, Daytime
+      - 6pm in Berlin - CET (Central European Time)
 
-P. S.: The MP3 is 14 MB long, 42 minutes of talking.
+    * Main Number (Till Kamppeter, LF, leader)
+      International: +1-218-936-7999
+      Access Code:   491659#
 
+Please join us.
+
+Cheers,
+- Ira
+
+Ira McDonald (Musician / Software Architect)
+Chair - Linux Foundation Open Printing WG
+Co-Chair - TCG Hardcopy WG
+IETF Designated Expert - IPP & Printer MIB
+Blue Roof Music/High North Inc
+http://sites.google.com/site/blueroofmusic
+http://sites.google.com/site/highnorthinc
+mailto:blueroofmusic@gmail.com
+winter:
+  579 Park Place  Saline, MI  48176
+  734-944-0094
+summer:
+  PO Box 221  Grand Marais, MI 49839
+  906-494-2434
