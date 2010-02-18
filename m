@@ -1,13 +1,11 @@
-Message-ID: <4B7CF942.1010509@gmail.com>
-Date: Thu, 18 Feb 2010 09:24:34 +0100
+Message-ID: <4B7D5800.6050309@gmail.com>
+Date: Thu, 18 Feb 2010 16:08:48 +0100
 From: Till Kamppeter <till.kamppeter@gmail.com>
 MIME-Version: 1.0
-References: <e395be80811270817n502ccd16wf6cc90f85364f5ae@mail.gmail.com>
-In-Reply-To: <e395be80811270817n502ccd16wf6cc90f85364f5ae@mail.gmail.com>
 Content-Type: text/plain; charset=UTF-8; format=flowed
 Content-Transfer-Encoding: 7bit
-Subject: [Printing-architecture] Last OP Summit Planning Meeting - Wed - 17
-	Feb 2010 - The Recording
+Subject: [Printing-architecture] OpenPrinting Summit 2010 - First Sketch of
+	the Agenda Available
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -17,21 +15,31 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Open Printing <printing-architecture@lists.linux-foundation.org>, printing-summit@lists.linux-foundation.org
+To: printing-summit@lists.linux-foundation.org, Open Printing <printing-architecture@lists.linux-foundation.org>, Printing-japan <printing-japan@lists.linux-foundation.org>
 
 Hi,
 
-I have uploaded the recording of the last OpenPrinting Summit planning 
-meeting to the OpenPrinting server:
+on the first planning phone meeting for the Summit yesterday we have 
+worked out a first sketch of the agenda, putting the proposed topics 
+intop days and deciding about how much time we will use for each topic.
 
-http://www.openprinting.org/download/meetingnotes/op-summit-2010/OP-Summit-2010-Prep1-20100217.mp3
+See
 
-In general, recorded meetings I will upload to
+https://www.linuxfoundation.org/collaborate/workgroups/lf/openprinting-summit-san-francisco-2010
 
-http://www.openprinting.org/download/meetingnotes/
+Especially we will dedicate the first day for the downloadable printer 
+driver packages, by giving a small seminar on how to design and package 
+printer drivers for automatic download to work on all LSB-compliant 
+distributions and together with the Common Printing Dialog.
+
+Most of the second day will be used to demonstarte and to discuss the 
+Common Printing Dialog
+
+Note that we do not know the exact hours yet as we do not yet know the 
+hours of the Linux Foundation Summit, and we want to synchronize to have 
+joint lunch and coffee breaks.
+
+In addition, the topics can still be moved, for example if we do not 
+succeed to have the joint meetings as planned now.
 
     Till
-
-P. S.: The MP3 is 25 MB long, 1 hour and 13 minutes of talking.
-
-
