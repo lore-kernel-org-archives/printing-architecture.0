@@ -1,11 +1,11 @@
-Message-ID: <4B7D929B.803@gmail.com>
-Date: Thu, 18 Feb 2010 20:18:51 +0100
-From: Till Kamppeter <till.kamppeter@gmail.com>
-MIME-Version: 1.0
-References: <ED4094DE5E8ACD4BBDACA6AD398E608F024235@EEAEX03.us.epson.net>
+Message-Id: <9A80752F-DCFC-4E56-A0BF-321B98323BC8@mmiworks.net>
+From: kate price <kate@mmiworks.net>
 In-Reply-To: <ED4094DE5E8ACD4BBDACA6AD398E608F024235@EEAEX03.us.epson.net>
-Content-Type: text/plain; charset="utf-8"; format="flowed"
-Content-Transfer-Encoding: 8bit
+Content-Type: text/plain; charset=WINDOWS-1252; format=flowed; delsp=yes
+Content-Transfer-Encoding: quoted-printable
+Mime-Version: 1.0 (Apple Message framework v936)
+Date: Fri, 19 Feb 2010 13:03:55 +0100
+References: <ED4094DE5E8ACD4BBDACA6AD398E608F024235@EEAEX03.us.epson.net>
 Subject: Re: [Printing-architecture] Epson Question on the Common Print
 	Dialog
 List-Id: Printing architecture under linux
@@ -17,83 +17,119 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: "Petrie, Glen" <glen.petrie@eitc.epson.com>
-Cc: printing-architecture@lists.linux-foundation.org
+To: Glen Petrie <glen.petrie@eitc.epson.com>, printing-architecture@lists.linux-foundation.org
 
-Petrie, Glen wrote:
-> As the Common Print Dialog (CPD) continues to mature, I felt is was time 
-> to get feedback from Epson internal.  Therefore, I sent an email Epson 
-> internally asking interested parties to review the current state of the 
-> CPD and to send me any questions, comments or concerns, which I am now 
-> forwarding to the open mailing list.
-> 
->  
-> 
->    1. Does the CPD support Watermarks?
->          1. I remember this being there at some point but it could be
->             confirmed.
+Dear Glen
 
-Watermark addition is currently only supported by certain printer models 
-(mainly PostScript printers). These printers have appropriate options to 
-control the watermarks in their PPD files. As the CPD is making all PPD 
-options available to the user, printing with watermark is possible with 
-the CPD.
+Thanks for getting the CPD out there in Epsom, naturally all feedback =20=
 
-As the names of watermark options and their choices are not standardized 
-(or are their standards somewhere) we cannnot interpret the options and 
-know how the watermark comes out on the paper. Therefore the watermarks 
-will not appear in the preview of the CPD.
+and questions are welcomed by us.
+Til has already replied I know, but it's worth giving you some more =20
+answers from the perspective of us here at mmi-works, who are =20
+developing the UI.
 
-The printing system (CUPS) does not provide watermarks, therefore there 
-are no general watermark options for all printers in the CPD. Options 
-which CUPS provides will be in the CPD.
 
->    2. How does the CPD support the connection between borderless print
->       mode and media size/type.
->          1. Not all media sizes and media types are designed to support
->             borderless mode; is there a mechanism to handle this.
+>
+> 	=95 Does the CPD support Watermarks?
+> 		=95 I remember this being there at some point but it =
+could be =20
+> confirmed.
 
-The only way the CPD can know that two settings are conflicting (here 
-the settings of PageSize and Borderless) are conflict definitions (UI 
-constraints) in the PPD. If certain paper sizes do not allow borderless 
-printing and appropriate conflict definitions are supplied by the PPD, 
-the dialog will warn the user and not allow to print when borderless is 
-turned on and an unsuitable paper size is chosen.
 
->    3. How will the CPD allow vendors to display printer status, toner
->       (ink) levels, job status and support printing maintenance items
->       like nozzle check, nozzle clean and head alignment?
->          1. Is there a vendor zone or pane (panel) for this?
+Just as an appendage to Til's comments; we have developed aUI for =20
+watermarking in the CPD. please see: =
+http://wiki.openusability.org/printing/index.php/Personal_laser_parameter_=
+specifications#Watermarking=20
+   for details
 
-AFAIK this is not foreseen for the printing dialog, as the printing 
-dialog gets opened out of an application for sending a print job and 
-closes when the job is sent. The above tasks are best done by a separate 
-application, like a job viewer or a printer setup tool.
 
-The only of the above tasks which makes sense in the printing dialog is 
-to show printer status, either for the selected printer or in the 
-drop-down list to choose the printer, at the right of the printer name, 
-in parentheses for example. This way a user knows before sending a job 
-whether the printer will print the job immediately or not.
+> 	=95 How does the CPD support the connection between borderless =
+print =20
+> mode and media size/type.
+> 	=95 Not all media sizes and media types are designed to support =20=
 
-Peter, Lars, are we doing a thing like this.
+> borderless mode; is there a mechanism to handle this.
 
->    4. Does changing the media size in the CPD “reflow” the document or
->       simple scale (perhaps with clip) the document content to the
->       selected media size in the CPD.
->          1. That is, an application (via the user) sets the document
->             page size (say letter) while the CPD (via the user)
->             specifies the print media size of the document page to be
->             A4; in which case, the letter sized content is scaled
->             (maintaining aspect ratio) to A4.
-> 
+We have created a new control (or actually set of controls called =20
+Print On. This integrates media type, media size  margins and color =20
+management into one inter-related group. Borderless printing comes as =20=
 
-Media size changes are reported back to the application and it is on the 
-application what to do. A browser or plain text editor would reflow the 
-document, a photo viewer would shrink or enlarge the photo, ...
+part of margins. We have created generic margin sizes - one of which =20
+can easily be "none" "minimum" or a term of your choice.
 
-Peter, Lars, I hope I have described everything correctly, please give 
-your comments where needed.
+We felt there were a couple major of issues here:
 
-    Till
+*ensuring that borders  -i.e.  drawn borders and "border-less =20
+printing" i.e. minimum or no margins, were not able to be confused
+*allowing specific feature names can be integrated here, whilst =20
+keeping it clear that margin sizes are always related to media type =20
+and size - literally what users are printing on.
+*not forgetting that manufacturers will have the capacity to create =20
+tags which can big up unique printer features, whilst enabling  users =20=
+
+to put together successful prints, for example there could be an "up =20
+to the edge" printing tag.
+
+see =
+http://wiki.openusability.org/printing/index.php/Photo_printers_parameter_=
+specifications#Print_On_-_Media_Type_and_Size
+
+
+> 	=95 How will the CPD allow vendors to display printer status, =
+toner =20
+> (ink) levels, job status and support printing maintenance items like =20=
+
+> nozzle check, nozzle clean and head alignment?
+> 		=95 Is there a vendor zone or pane (panel) for this?
+
+Actually, we are currently working on an icon to be shown next to the =20=
+
+printer selection pop-up which will open all the relevant maintenance =20=
+
+info.
+Here we see a low ink warning icon also being appropriate, though not =20=
+
+in any specific detail on the actual level 2/3 CPD pane.
+
+The maintenance icon will open a new dialog pane, which can include =20
+all the maintenance information Manufacturers require, including the =20
+relevant images, user instructions or guides that are existence. We =20
+are therefore designing in a neat, visible and immediate way for users =20=
+
+to access all the information manufacturers wish to provide relating =20
+to the chosen printer, directly from the CPD.
+
+I will be updating the wiki with this addition in the next week or so =20=
+
+so watch this space:
+=
+http://wiki.openusability.org/printing/index.php/Level_2_Dialog_zones_and_=
+content#Printer_Zone
+
+> 	=95 Does changing the media size in the CPD =93reflow=94 the =
+document or =20
+> simple scale (perhaps with clip) the document content to the =20
+> selected media size in the CPD.
+> 		=95 That is, an application (via the user) sets the =
+document page =20
+> size (say letter) while the CPD (via the user) specifies the print =20
+> media size of the document page to be A4; in which case, the letter =20=
+
+> sized content is scaled (maintaining aspect ratio) to A4.
+
+
+As Til wrote, generally media size changes by the user are always =20
+retransformed by the application. However, if the app has a page size =20=
+
+concept it can set the values when the CPD launches. Advanced: the app =20=
+
+would suppress the CPD controls and add it's own.
+
+Best wishes,
+
+Kate
+
+mmi works
+
+
 
