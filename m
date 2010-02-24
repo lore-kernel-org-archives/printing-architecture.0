@@ -1,11 +1,10 @@
-Message-ID: <4B8555D9.100@gmail.com>
-Date: Wed, 24 Feb 2010 17:37:45 +0100
-From: Till Kamppeter <till.kamppeter@gmail.com>
 MIME-Version: 1.0
-Content-Type: text/plain; charset=UTF-8; format=flowed
-Content-Transfer-Encoding: 7bit
-Subject: [Printing-architecture] Google Summer of Code 2010 - Project ideas
- page for the Linux Foundation online
+Date: Wed, 24 Feb 2010 15:49:03 -0500
+Message-ID: <e395be81002241249p5a8b5b1fs2b222c0fafadc898@mail.gmail.com>
+From: Ira McDonald <blueroofmusic@gmail.com>
+Content-Type: text/plain; charset=ISO-8859-1
+Subject: [Printing-architecture] REMINDER - Next US/Europe OP Call - Tue 2
+	March
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -15,15 +14,46 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Alexey Khoroshilov <khoroshilov@ispras.ru>, "Luis R. Rodriguez" <mcgrof@gmail.com>, Greg KH <greg@kroah.com>, "lsb-discuss@lists.linux-foundation.org" <lsb-discuss@lists.linux-foundation.org>, linux-wireless <linux-wireless@vger.kernel.org>, Open Printing <printing-architecture@lists.linux-foundation.org>, Lars Uebernickel <larsuebernickel@gmx.de>, peter sikking <peter@mmiworks.net>
+To: printing-architecture@lists.linux-foundation.org, Ira McDonald <blueroofmusic@gmail.com>
 
 Hi,
 
-I have set up a page for project ideas for the Linux Foundation's 
-participation in the Google Summer of Code 2010:
+Reminder of our next OP monthly teleconference tomorrow.
 
-https://www.linuxfoundation.org/collaborate/workgroups/lf/google-summer-code-2010
+Agenda:
 
-Please add your ideas. If you have problems mail me with your project idea.
+     - State of the Common Printing Dialog
+     - Possible topics for the next OpenPrinting Summit
 
-    Till
+Call-in Info:
+
+    - Tuesday 2 March 2010, Daytime
+      - US
+        9am in San Francisco - US PST (Pacific Standard Time)
+        10am in Colorado - US MST (Mountain Standard Time)
+        11am in Chicago - US CST (Central Standard Time)
+        12pm in New York - US EST (Eastern Standard Time)
+      - Europe
+        6pm in Berlin - CET (Central European Time)
+
+    * Main Number (Till Kamppeter, LF, leader)
+      International: +1-218-936-7999
+      Access Code:   491659#
+
+Cheers,
+- Ira
+
+Ira McDonald (Musician / Software Architect)
+Chair - Linux Foundation Open Printing WG
+Co-Chair - TCG Hardcopy WG
+IETF Designated Expert - IPP & Printer MIB
+Blue Roof Music/High North Inc
+http://sites.google.com/site/blueroofmusic
+http://sites.google.com/site/highnorthinc
+mailto:blueroofmusic@gmail.com
+winter:
+  579 Park Place  Saline, MI  48176
+  734-944-0094
+summer:
+  PO Box 221  Grand Marais, MI 49839
+  906-494-2434
