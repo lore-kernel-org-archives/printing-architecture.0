@@ -1,10 +1,11 @@
 MIME-Version: 1.0
-Date: Wed, 24 Feb 2010 15:49:03 -0500
-Message-ID: <e395be81002241249p5a8b5b1fs2b222c0fafadc898@mail.gmail.com>
+Date: Wed, 24 Feb 2010 15:50:33 -0500
+Message-ID: <e395be81002241250k21862dffw5414719d4b4b8513@mail.gmail.com>
 From: Ira McDonald <blueroofmusic@gmail.com>
 Content-Type: text/plain; charset=ISO-8859-1
-Subject: [Printing-architecture] REMINDER - Next US/Europe OP Call - Tue 2
-	March
+Content-Transfer-Encoding: quoted-printable
+Subject: [Printing-architecture] REMINDER - Quarterly Japan/US/Europe OP
+	Call - Mon/Tue 1/2 March 2010
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -16,44 +17,42 @@ List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-ar
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
 To: printing-architecture@lists.linux-foundation.org, Ira McDonald <blueroofmusic@gmail.com>
 
-Hi,
-
-Reminder of our next OP monthly teleconference tomorrow.
-
-Agenda:
-
-     - State of the Common Printing Dialog
-     - Possible topics for the next OpenPrinting Summit
-
-Call-in Info:
-
-    - Tuesday 2 March 2010, Daytime
-      - US
-        9am in San Francisco - US PST (Pacific Standard Time)
-        10am in Colorado - US MST (Mountain Standard Time)
-        11am in Chicago - US CST (Central Standard Time)
-        12pm in New York - US EST (Eastern Standard Time)
-      - Europe
-        6pm in Berlin - CET (Central European Time)
-
-    * Main Number (Till Kamppeter, LF, leader)
-      International: +1-218-936-7999
-      Access Code:   491659#
-
-Cheers,
-- Ira
-
-Ira McDonald (Musician / Software Architect)
-Chair - Linux Foundation Open Printing WG
-Co-Chair - TCG Hardcopy WG
-IETF Designated Expert - IPP & Printer MIB
-Blue Roof Music/High North Inc
-http://sites.google.com/site/blueroofmusic
-http://sites.google.com/site/highnorthinc
-mailto:blueroofmusic@gmail.com
-winter:
-  579 Park Place  Saline, MI  48176
-  734-944-0094
-summer:
-  PO Box 221  Grand Marais, MI 49839
-  906-494-2434
+On Tue, Jan 26, 2010 at 2:32 PM, Ira McDonald <blueroofmusic@gmail.com> wro=
+te:
+> Hi,
+>
+> REMINDER - our next Quarterly Japan/US/Europe OP Call will be:
+>
+> =A0 - Monday 1 March 2010, Evening
+> =A0 =A0 =A0- US
+> =A0 =A0 =A0 =A03pm in San Francisco - US PST (Pacific Standard Time)
+> =A0 =A0 =A0 =A04pm in Colorado - US MST (Mountain Standard Time)
+> =A0 =A0 =A0 =A05pm in Chicago - US CST (Central Standard Time)
+> =A0 =A0 =A0 =A06pm in New York - US EST (Eastern Standard Time)
+>
+> =A0 =A0- Tuesday 2 March 2010, Morning
+> =A0 =A0 =A0- Europe
+> =A0 =A0 =A0 =A012am in Berlin - CET (Central European Time)
+> =A0 =A0 =A0- Japan
+> =A0 =A0 =A0 =A08am in Tokyo - JST (Japan Standard Time)
+>
+> =A0 =A0* Main Number (Till Kamppeter, LF, leader)
+> =A0 =A0 =A0International: +1-218-936-7999
+> =A0 =A0 =A0Access Code: =A0 491659#
+>
+> Cheers,
+> - Ira
+>
+> Ira McDonald (Musician / Software Architect)
+> Chair - Linux Foundation Open Printing WG
+> Co-Chair - TCG Hardcopy WG
+> IETF Designated Expert - IPP & Printer MIB
+> Blue Roof Music/High North Inc
+> email: blueroofmusic@gmail.com
+> winter:
+> =A0579 Park Place =A0Saline, MI =A048176
+> =A0734-944-0094
+> summer:
+> =A0PO Box 221 =A0Grand Marais, MI 49839
+> =A0906-494-2434
+>
