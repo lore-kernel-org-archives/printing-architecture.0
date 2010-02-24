@@ -1,11 +1,13 @@
+Message-ID: <4B85A056.10508@gmail.com>
+Date: Wed, 24 Feb 2010 22:55:34 +0100
+From: Till Kamppeter <till.kamppeter@gmail.com>
 MIME-Version: 1.0
-Date: Wed, 24 Feb 2010 15:50:33 -0500
-Message-ID: <e395be81002241250k21862dffw5414719d4b4b8513@mail.gmail.com>
-From: Ira McDonald <blueroofmusic@gmail.com>
-Content-Type: text/plain; charset=ISO-8859-1
-Content-Transfer-Encoding: quoted-printable
-Subject: [Printing-architecture] REMINDER - Quarterly Japan/US/Europe OP
-	Call - Mon/Tue 1/2 March 2010
+References: <4B8555D9.100@gmail.com>
+In-Reply-To: <4B8555D9.100@gmail.com>
+Content-Type: text/plain; charset=UTF-8; format=flowed
+Content-Transfer-Encoding: 7bit
+Subject: Re: [Printing-architecture] Google Summer of Code 2010 - Project
+ ideas page for the Linux Foundation online
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -15,44 +17,26 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: printing-architecture@lists.linux-foundation.org, Ira McDonald <blueroofmusic@gmail.com>
+To: Alexey Khoroshilov <khoroshilov@ispras.ru>, "Luis R. Rodriguez" <mcgrof@gmail.com>, Greg KH <greg@kroah.com>, "lsb-discuss@lists.linux-foundation.org" <lsb-discuss@lists.linux-foundation.org>, linux-wireless <linux-wireless@vger.kernel.org>, Open Printing <printing-architecture@lists.linux-foundation.org>, Lars Uebernickel <larsuebernickel@gmx.de>, peter sikking <peter@mmiworks.net>
 
-On Tue, Jan 26, 2010 at 2:32 PM, Ira McDonald <blueroofmusic@gmail.com> wro=
-te:
+For technical reasons we had to change the URL of the GSoC ideas page. 
+Here is the new one:
+
+https://www.linuxfoundation.org/collaborate/workgroups/gsoc/google-summer-code-2010
+
+    Till
+
+On 02/24/2010 05:37 PM, Till Kamppeter wrote:
 > Hi,
 >
-> REMINDER - our next Quarterly Japan/US/Europe OP Call will be:
+> I have set up a page for project ideas for the Linux Foundation's
+> participation in the Google Summer of Code 2010:
 >
-> =A0 - Monday 1 March 2010, Evening
-> =A0 =A0 =A0- US
-> =A0 =A0 =A0 =A03pm in San Francisco - US PST (Pacific Standard Time)
-> =A0 =A0 =A0 =A04pm in Colorado - US MST (Mountain Standard Time)
-> =A0 =A0 =A0 =A05pm in Chicago - US CST (Central Standard Time)
-> =A0 =A0 =A0 =A06pm in New York - US EST (Eastern Standard Time)
+> https://www.linuxfoundation.org/collaborate/workgroups/lf/google-summer-code-2010
 >
-> =A0 =A0- Tuesday 2 March 2010, Morning
-> =A0 =A0 =A0- Europe
-> =A0 =A0 =A0 =A012am in Berlin - CET (Central European Time)
-> =A0 =A0 =A0- Japan
-> =A0 =A0 =A0 =A08am in Tokyo - JST (Japan Standard Time)
 >
-> =A0 =A0* Main Number (Till Kamppeter, LF, leader)
-> =A0 =A0 =A0International: +1-218-936-7999
-> =A0 =A0 =A0Access Code: =A0 491659#
+> Please add your ideas. If you have problems mail me with your project idea.
 >
-> Cheers,
-> - Ira
+> Till
 >
-> Ira McDonald (Musician / Software Architect)
-> Chair - Linux Foundation Open Printing WG
-> Co-Chair - TCG Hardcopy WG
-> IETF Designated Expert - IPP & Printer MIB
-> Blue Roof Music/High North Inc
-> email: blueroofmusic@gmail.com
-> winter:
-> =A0579 Park Place =A0Saline, MI =A048176
-> =A0734-944-0094
-> summer:
-> =A0PO Box 221 =A0Grand Marais, MI 49839
-> =A0906-494-2434
->
+
