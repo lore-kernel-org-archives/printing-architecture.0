@@ -1,15 +1,11 @@
-Message-ID: <4B9D7C3B.6010500@avasys.jp>
-Date: Mon, 15 Mar 2010 09:15:55 +0900
-From: Olaf Meeuwissen <olaf.meeuwissen@avasys.jp>
+Message-ID: <4BA009B8.3040104@gmail.com>
+Date: Tue, 16 Mar 2010 23:44:08 +0100
+From: Till Kamppeter <till.kamppeter@gmail.com>
 MIME-Version: 1.0
-References: <20100305095257.9953.E0F122DE@canon.co.jp>
-	<4B90ECFA.1030506@gmail.com> <4B943B74.8060602@avasys.jp>
-	<4B9CEECF.4050401@gmail.com>
-In-Reply-To: <4B9CEECF.4050401@gmail.com>
-Content-Type: text/plain; charset=UTF-8
+Content-Type: text/plain; charset=UTF-8; format=flowed
 Content-Transfer-Encoding: 7bit
-Subject: Re: [Printing-architecture] [Printing-japan] OpenPrinting Japan
- Mar. 2010 meeting minutes (in	English)
+Subject: [Printing-architecture] Open Printing Summit 2010 - Wednesday 17
+ March - Third Preparation Phone Meeting
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -19,31 +15,49 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Till Kamppeter <till.kamppeter@gmail.com>
-Cc: printing-architecture@lists.linux-foundation.org, printing-japan@lists.linux-foundation.org
+To: printing-summit@lists.linux-foundation.org, printing-architecture@lists.linux-foundation.org
 
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
+Hi,
 
-Till Kamppeter wrote:
+To plan the upcoming Open Printing Summit we will have four phone
+meetings every two weeks in the time before the Summit.
 
-> Lars, can you update the documentation of the dialog package (README,
-> ...) telling which versions of libraries are exactly needed for the dialog?
-> 
-> Olaf, can you try with a newer distribution, like Ubuntu Karmic or newer?
+The next meeting is tomorrow on Wednesday, in the late afternoon for
+Europe and in the morning for the US (details see below).
 
-Apart from a format and unused variable warning, r144 compiles fine on
-Karmic.
-- --
-Olaf Meeuwissen, LPIC-2           FLOSS Engineer -- AVASYS CORPORATION
-FSF Associate Member #1962               Help support software freedom
-                 http://www.fsf.org/jf?referrer=1962
+In our next meeting we will finalize the schedules, taking into account 
+the exact start and end times and the times of the breaks. In addition, 
+we will talk about any general planning and logistics questions.
 
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.9 (GNU/Linux)
-Comment: Using GnuPG with Mozilla - http://enigmail.mozdev.org
+The call takes place on
 
-iEYEARECAAYFAkudfDoACgkQt5qrxaZLMnKswwCcCV6XJAz7oVqPx9SaoQrqo9D7
-FGoAoLU2joypGKFu0GQNYb5nzyw6avCY
-=jKgf
------END PGP SIGNATURE-----
+Wednesday, 17 March 2010:
+
+   - 10am San Francisco (DST)
+   - 1pm New York (DST)
+   - 6pm Berlin
+   - 5pm UTC
+
+The call-in phone number is
+
+    +1-218-936-7999
+
+and the access code is
+
+    491659#
+
+Note that all four calls will be at 6pm in Berlin, the hours at the
+other places can vary depending on daylight saving time.
+
+The phone number and access code will be the same for all four calls and
+also for call-in participation in the Summit itself.
+
+See also
+
+https://www.linuxfoundation.org/collaborate/workgroups/lf/openprinting-summit-san-francisco-2010
+
+Hear you all on Wednesday.
+
+    Till
+
+
