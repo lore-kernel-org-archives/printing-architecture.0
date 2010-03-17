@@ -1,10 +1,13 @@
-Message-ID: <4BA10A8B.9010309@thax.hardliners.org>
-Date: Wed, 17 Mar 2010 17:59:55 +0100
-From: Tobias Hoffmann <lprint-list@thax.hardliners.org>
 MIME-Version: 1.0
-Content-Type: text/plain; charset=ISO-8859-1; format=flowed
-Content-Transfer-Encoding: 7bit
-Subject: [Printing-architecture] linuxfoundation login
+In-Reply-To: <4BA009B8.3040104@gmail.com>
+References: <4BA009B8.3040104@gmail.com>
+Date: Wed, 17 Mar 2010 13:04:59 -0400
+Message-ID: <e395be81003171004p29c7ff7cqbf4500bc48f5f39a@mail.gmail.com>
+From: Ira McDonald <blueroofmusic@gmail.com>
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+Subject: Re: [Printing-architecture] [Printing-summit] Open Printing Summit
+	2010 - Wednesday 17 March - Third Preparation Phone Meeting
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -14,28 +17,82 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: printing-architecture@lists.linux-foundation.org
+To: Till Kamppeter <till.kamppeter@gmail.com>, Ira McDonald <blueroofmusic@gmail.com>
+Cc: printing-architecture@lists.linux-foundation.org, printing-summit@lists.linux-foundation.org
 
-Hi,
-this might not be the most appropriate list for this, but I'm sure 
-somebody here can get this fixed, and I'm already subscribed.
+Hi Till et al,
 
-I wanted to post on the OpenPrinting Ricoh User Forum, so I came to:
-  http://forums.linux-foundation.org/login.php?30
-There is says you first need a linuxfoundation login from
-  https://www.linux-foundation.org/users/
-=> this gives a "Page not found" error.
+George Liu and I are waiting on you folks on the phone bridge.
 
-So I tried "Register" from the top bar. That worked, except
-that after submitting it redirected to that same page
-  https://www.linux-foundation.org/users
-which still is "Page not found", BUT below that headline there was a 
-yellow box "You are now a registered user. Please login using your new 
-credentials.", followed by the already known "The requested page could 
-not be found." text.
+Cheers,
+- Ira
 
-The confirmation email contains
-https://www.linuxfoundation.org/user
-which is correct.
+Ira McDonald (Musician / Software Architect)
+Chair - Linux Foundation Open Printing WG
+Co-Chair - TCG Hardcopy WG
+IETF Designated Expert - IPP & Printer MIB
+Blue Roof Music/High North Inc
+http://sites.google.com/site/blueroofmusic
+http://sites.google.com/site/highnorthinc
+mailto:blueroofmusic@gmail.com
+winter:
+  579 Park Place  Saline, MI  48176
+  734-944-0094
+summer:
+  PO Box 221  Grand Marais, MI 49839
+  906-494-2434
 
-  Tobias
+
+
+On Tue, Mar 16, 2010 at 6:44 PM, Till Kamppeter
+<till.kamppeter@gmail.com> wrote:
+> Hi,
+>
+> To plan the upcoming Open Printing Summit we will have four phone
+> meetings every two weeks in the time before the Summit.
+>
+> The next meeting is tomorrow on Wednesday, in the late afternoon for
+> Europe and in the morning for the US (details see below).
+>
+> In our next meeting we will finalize the schedules, taking into account
+> the exact start and end times and the times of the breaks. In addition,
+> we will talk about any general planning and logistics questions.
+>
+> The call takes place on
+>
+> Wednesday, 17 March 2010:
+>
+> =A0 - 10am San Francisco (DST)
+> =A0 - 1pm New York (DST)
+> =A0 - 6pm Berlin
+> =A0 - 5pm UTC
+>
+> The call-in phone number is
+>
+> =A0 =A0+1-218-936-7999
+>
+> and the access code is
+>
+> =A0 =A0491659#
+>
+> Note that all four calls will be at 6pm in Berlin, the hours at the
+> other places can vary depending on daylight saving time.
+>
+> The phone number and access code will be the same for all four calls and
+> also for call-in participation in the Summit itself.
+>
+> See also
+>
+> https://www.linuxfoundation.org/collaborate/workgroups/lf/openprinting-su=
+mmit-san-francisco-2010
+>
+> Hear you all on Wednesday.
+>
+> =A0 =A0Till
+>
+>
+> _______________________________________________
+> Printing-summit mailing list
+> Printing-summit@lists.linux-foundation.org
+> https://lists.linux-foundation.org/mailman/listinfo/printing-summit
+>
