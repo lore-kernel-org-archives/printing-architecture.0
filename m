@@ -1,15 +1,13 @@
-Content-class: urn:content-classes:message
+Message-ID: <4BB37EF8.60306@gmail.com>
+Date: Wed, 31 Mar 2010 18:57:28 +0200
+From: Till Kamppeter <till.kamppeter@gmail.com>
 MIME-Version: 1.0
-Content-Type: text/plain;
-	charset="US-ASCII"
-Content-Transfer-Encoding: quoted-printable
-Date: Tue, 30 Mar 2010 06:10:33 -0700
-Message-ID: <ED4094DE5E8ACD4BBDACA6AD398E608F0242C2@EEAEX03.us.epson.net>
-References: <ED4094DE5E8ACD4BBDACA6AD398E608F0242AF@EEAEX03.us.epson.net><4BABC456.4030005@gmail.com><77B651FE-6B30-499A-BFC6-DA4753374D97@mmiworks.net><ED4094DE5E8ACD4BBDACA6AD398E608F0242B7@EEAEX03.us.epson.net>
-	<D9530B8A-BA07-4848-BD7D-167B84480C0B@mmiworks.net>
-From: "Petrie, Glen" <glen.petrie@eitc.epson.com>
-Subject: Re: [Printing-architecture] Another Epson Question on the
-	CommonPrint	Dialog
+References: <e395be80811270817n502ccd16wf6cc90f85364f5ae@mail.gmail.com>
+In-Reply-To: <e395be80811270817n502ccd16wf6cc90f85364f5ae@mail.gmail.com>
+Content-Type: text/plain; charset=UTF-8; format=flowed
+Content-Transfer-Encoding: 7bit
+Subject: [Printing-architecture] Last OP Summit Planning Meeting - Wed - 31
+	Mar 2010 - The Recording
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -19,99 +17,20 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: peter sikking <peter@mmiworks.net>, Open Printing <printing-architecture@lists.linux-foundation.org>
-Cc: "Petrie, Glen" <glen.petrie@eitc.epson.com>
+To: Open Printing <printing-architecture@lists.linux-foundation.org>, printing-summit@lists.linux-foundation.org
 
-Thank you for your reply.  I have forwarded to the interested parties
-within Epson.
+Hi,
 
-Glen
+I have uploaded the recording of the last OpenPrinting Summit planning 
+meeting to the OpenPrinting server:
 
+http://www.openprinting.org/download/meetingnotes/op-summit-2010/OP-Summit-2010-Prep4-20100331.mp3
 
-> -----Original Message-----
-> From: printing-architecture-bounces@lists.linux-foundation.org
-> [mailto:printing-architecture-bounces@lists.linux-foundation.org] On
-> Behalf Of peter sikking
-> Sent: Tuesday, March 30, 2010 2:53 AM
-> To: Open Printing
-> Subject: Re: [Printing-architecture] Another Epson Question on the
-> CommonPrint Dialog
->=20
-> Glen wrote:
->=20
-> >>> ............ We are working from the basis that printable area and
-> > orientation are two obvious parameters that the app must know to
-> > transform.
-> >
-> > This clarification states, "the app must know to transform"; thus,
-the
-> > application will, by this clarification, perform the transformation.
-> > Epson is specifically interested in understanding about the "how
-does
-> > the app perform the transform" and
->=20
-> first of all, let's define transformation: this is the act of
-> "putting it on paper."
->=20
-> how any application gets its data on paper is exactly their
-> expert domain. for instance: a web browser reflows the web
-> page content to the printable area of the page, according to
-> the css of the page.
->=20
-> there are a thousands of applications where we have no idea how
-> they get it on paper. a DNA database? I have no idea what
-> would be an appropriate representation on printed media, but
-> the people who write the app do.
->=20
-> OK, so the app needs at least the printable area (page size - margins)
-> to do its job. in more advanced cases (eg. centre on page), it will
-> have to know the page size _and_ the margins.
->=20
-> now, if either of these things happen in the cpd,
->=20
-> - media size change (eg. A4 <-> letter)
-> - portrait <-> landscape change
-> - margin change
-> - borderless printing (hey, nothing but a margin change, really)
->=20
-> the app gets notified of the new printable area, or
-> new page size + margins, and does the transformation again.
->=20
-> >>>>  2. ..... how does the application "expand" the image ?
-> >>>>        1. by how much ?
-> >>>>        2. if the image size does not equal media size, the how is
-> >>>>           the scale ratio of the expanding decided?
-> >>>>        3. what is the method used by the application to expand
-the
-> >>>>           image? There are other methods beyond simple scaling.
-> >
-> > All of these item can change from print-vendor to print-vendor and
-> > printer-to-printer; so it important the printer vendor to understand
-> > more of the details.
->=20
->=20
-> printer vendors are in complete control of the default paper sizes,
-> and their margins in the cpd via the ppd. and borderless printing
-> ain't nothing but a special margin.
->=20
-> so putting it together we can see the chain now:
->=20
-> - the printer (vendor) provides the paper size + borderless margins;
-> - users choose this paper size + borderless;
-> - the app transforms its data to the resulting printable area.
->=20
->      --ps
->=20
->          founder + principal interaction architect
->              man + machine interface works
->=20
->          http://mmiworks.net/blog : on interaction architecture
->=20
->=20
->=20
-> _______________________________________________
-> Printing-architecture mailing list
-> Printing-architecture@lists.linux-foundation.org
->
-https://lists.linux-foundation.org/mailman/listinfo/printing-architectur
-e
+In general, recorded meetings I will upload to
+
+http://www.openprinting.org/download/meetingnotes/
+
+    Till
+
+P. S.: The MP3 is 11 MB long, 33 minutes of talking.
+
