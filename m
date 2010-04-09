@@ -1,11 +1,11 @@
+Message-ID: <4BBF9E93.9030609@gmail.com>
+Date: Fri, 09 Apr 2010 23:39:31 +0200
+From: Till Kamppeter <till.kamppeter@gmail.com>
 MIME-Version: 1.0
-Sender: vitormbaptista@gmail.com
-From: =?ISO-8859-1?Q?V=EDtor_Baptista?= <vitor@vitorbaptista.com>
-Date: Wed, 7 Apr 2010 21:21:52 -0300
-Message-ID: <u2q5a3baa741004071721j8838946btc23a24a6d9d5e397@mail.gmail.com>
-Content-Type: multipart/alternative; boundary=001636c597ed8976740483aeab58
-Subject: [Printing-architecture] [GSoC 2010] Introduction and PPD
-	compression proposal
+Content-Type: text/plain; charset=UTF-8; format=flowed
+Content-Transfer-Encoding: 7bit
+Subject: [Printing-architecture] Google Summer of Code 2010 - Student
+	Application Deadline has passed
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -15,58 +15,49 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: printing-architecture@lists.linux-foundation.org
-
---001636c597ed8976740483aeab58
-Content-Type: text/plain; charset=ISO-8859-1
-Content-Transfer-Encoding: quoted-printable
+To: Open Printing <printing-architecture@lists.linux-foundation.org>
 
 Hi,
 
-My name is V=EDtor. I am brazilian, and I am at my final year of Computer
-Science. I got interested in the PPD compression idea, and wrote a proposal
-for it. It's avaliable at
-http://socghop.appspot.com/gsoc/student_proposal/show/google/gsoc2010/vitor=
-baptista/t127060829734.
-I
-would really appreciate to receive some comments.
+now we have a lot of student applications and to assure that we get 
+enough slots for all students we want to actually mentor, we need to 
+assign mentors to the students until MONDAY at the latest.
 
-I look forward to working with you this summer.
+In addition, applications which are obviously spam should be marked 
+ineligible, also until MONDAY at the latest.
 
-Best regards,
+Incomplete proposals should only be ranked down, not marked ineligible.
 
---=20
-V=EDtor Baptista
-Comiss=E3o Organizadora
-IV Encontro de Software Livre da Para=EDba
-6, 7, 8 e 9 de Maio de 2010
-Esta=E7=E3o Ci=EAncia, Cultura e Artes Cabo Branco
-Jo=E3o Pessoa, PB.
+Please check which students are interesting for you to mentor, and feel 
+free to mentor more than one student if there are many good applications.
 
-http://www.ensol.org.br
+If you are not registered as a mentor yet, do so ASAP. To do so, do the 
+following:
 
---001636c597ed8976740483aeab58
-Content-Type: text/html; charset=ISO-8859-1
-Content-Transfer-Encoding: quoted-printable
+1. Make sure you have a Google account and you are able to log in.
 
-Hi,<div><br></div><div>My name is V=EDtor. I am brazilian, and I am at my f=
-inal year of Computer Science. I got interested in the PPD compression idea=
-, and wrote a proposal for it. It&#39;s avaliable at=A0<a href=3D"http://so=
-cghop.appspot.com/gsoc/student_proposal/show/google/gsoc2010/vitorbaptista/=
-t127060829734" target=3D"_blank">http://socghop.appspot.com/gsoc/student_pr=
-oposal/show/google/gsoc2010/vitorbaptista/t127060829734</a>.=A0I would real=
-ly appreciate to receive some comments.</div>
+2. Log in on http://socghop.appspot.com/ with your Google account.
 
+3. If you have no user profile for the Google Summer of Code yet, create 
+one. If you have a user profile already from one of the previous GSoCs, 
+reuse this profile.
 
-<div><br></div><div>I look forward to working with you this summer.</div><d=
-iv><br></div><div>Best regards,<br clear=3D"all"><br>-- <br>V=EDtor Baptist=
-a<br>Comiss=E3o Organizadora<br>IV Encontro de Software Livre da Para=EDba<=
-br>
+4. Under "Programs" -> "GSoC 2010" in the menu on the left you should 
+find an entry "Apply to become a Mentor" now. Click it. You will now 
+have to select the mentoring organization. It is the Linux Foundation 
+(Link ID: "lf"). After submitting your mentor application I will get a 
+notification so that I can approve it. You should get a notification 
+that I have approved you. After that you have to fill your mentor 
+profile. Only having done so you get a mentor and can assign yourself as 
+mentor for one or more students. To make it easier for me to recognize 
+your GSoC user name, send me an e-mail when you apply to get a mentor.
 
-6, 7, 8 e 9 de Maio de 2010<br>
-Esta=E7=E3o Ci=EAncia, Cultura e Artes Cabo Branco<br>Jo=E3o Pessoa, PB.<br=
-><br><a href=3D"http://www.ensol.org.br" target=3D"_blank">http://www.ensol=
-.org.br</a><br>
-</div>
+5. Assure that every good student application has a mentor assigned (not 
+only proposed).
 
---001636c597ed8976740483aeab58--
+Take more students than you really want to mentor for the case that the 
+"real" mentor is not available to assign some of the good students to 
+him until Monday. We can reassign mentors later, no we only need to 
+assign to secure good applications and slots.
+
+    Till
