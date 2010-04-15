@@ -1,10 +1,10 @@
-Message-ID: <4BC71531.2000609@gmail.com>
-Date: Thu, 15 Apr 2010 06:31:29 -0700
-From: Till Kamppeter <till.kamppeter@gmail.com>
 MIME-Version: 1.0
-Content-Type: text/plain; charset=UTF-8; format=flowed
-Content-Transfer-Encoding: 7bit
-Subject: [Printing-architecture] OpenPrinting Summit 2010 - Updates Day 2
+Date: Thu, 15 Apr 2010 11:51:43 -0400
+Message-ID: <l2je395be81004150851h6721e87fz643d98b3b9aed160@mail.gmail.com>
+From: Ira McDonald <blueroofmusic@gmail.com>
+Content-Type: text/plain; charset=ISO-8859-1
+Subject: [Printing-architecture] Ira's Internet down again - will call in to
+	OPS shortly
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -14,32 +14,30 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: "'printing-summit@lists.linux-foundation.org'" <printing-summit@lists.linux-foundation.org>, Open Printing <printing-architecture@lists.linux-foundation.org>, Printing-japan <printing-japan@lists.linux-foundation.org>
+To: printing-architecture@lists.linux-foundation.org, printing-summit@lists.linux-foundation.org, Ira McDonald <blueroofmusic@gmail.com>
 
 Hi,
 
-here are some updates for day 2 of the Summit:
+Whole Verizon Internet infrastructure in southeast Michigan
+has crashed again this morning.
 
-Tim Waugh's session about printer driver installation on Fedora had to 
-get moved to today, 9am).
+I have Tim's slides and will be calling in shortly (now at a
+nearby Internet cafe).
 
-The sessions about the Common Printing Dialog start 30 min later, at 9:30am.
+Cheers,
+- Ira
 
-The Ghostscript session does not take place, so we have one hour more 
-(until 3pm) for the Common Printing Dialog.
-
-The evening session for OpenPrinting Japan is canceled on request of 
-OpenPrinting Japan.
-
-The site is appropriately updated.
-
-If you want to call in, see the access info in the "Participation by 
-calling in" section, especially the instructions on how to watch the 
-screencast. The screencast is especially important to day as we will 
-show demos of the Common Printing Dialog.
-
-Sorry for not having a recording of yesterday afternoon.
-
-    Till
-
-https://www.linuxfoundation.org/collaborate/workgroups/lf/openprinting-summit-san-francisco-2010
+Ira McDonald (Musician / Software Architect)
+Chair - Linux Foundation Open Printing WG
+Co-Chair - TCG Hardcopy WG
+IETF Designated Expert - IPP & Printer MIB
+Blue Roof Music/High North Inc
+http://sites.google.com/site/blueroofmusic
+http://sites.google.com/site/highnorthinc
+mailto:blueroofmusic@gmail.com
+winter:
+  579 Park Place  Saline, MI  48176
+  734-944-0094
+summer:
+  PO Box 221  Grand Marais, MI 49839
+  906-494-2434
