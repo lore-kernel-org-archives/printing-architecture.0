@@ -1,10 +1,13 @@
-Message-ID: <4BF2BB11.2040302@gmail.com>
-Date: Tue, 18 May 2010 18:06:41 +0200
+Message-ID: <4BF2C52F.2040706@gmail.com>
+Date: Tue, 18 May 2010 18:49:51 +0200
 From: Till Kamppeter <till.kamppeter@gmail.com>
 MIME-Version: 1.0
+References: <e395be80811270817n502ccd16wf6cc90f85364f5ae@mail.gmail.com>
+In-Reply-To: <e395be80811270817n502ccd16wf6cc90f85364f5ae@mail.gmail.com>
 Content-Type: text/plain; charset=UTF-8; format=flowed
 Content-Transfer-Encoding: 7bit
-Subject: [Printing-architecture] Work plan for Common Printing Dialog
+Subject: [Printing-architecture] Last OP Meeting - Tue - 18 May 2010 - The
+	Recording
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -14,6 +17,21 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Open Printing <printing-architecture@lists.linux-foundation.org>
+To: Open Printing <printing-architecture@lists.linux-foundation.org>, Printing-japan <printing-japan@lists.linux-foundation.org>
 
-https://www.linuxfoundation.org/collaborate/workgroups/openprinting/plan-completion-common-printing-dialog
+Hi,
+
+I have uploaded the recording of the last OpenPrinting meeting to the
+OpenPrinting server:
+
+http://www.openprinting.org/download/meetingnotes/op-telecons/OP-Meeting-20100518.mp3
+
+In general, recorded meetings I will upload to
+
+http://www.openprinting.org/download/meetingnotes/
+
+    Till
+
+P. S.: The MP3 is 8 MB long, 26 minutes of talking.
+
+
