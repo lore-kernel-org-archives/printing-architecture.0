@@ -1,13 +1,13 @@
 MIME-Version: 1.0
 In-Reply-To: <AANLkTim4fOBhHnqtUDG1hcPL32MEjNY2ylHLKqNgDnpK@mail.gmail.com>
 References: <AANLkTim4fOBhHnqtUDG1hcPL32MEjNY2ylHLKqNgDnpK@mail.gmail.com>
-Date: Fri, 11 Jun 2010 15:35:08 -0400
-Message-ID: <AANLkTinHbsiwBbUIzYIzabAZ3hWpbR1pxob-WcAgaOa8@mail.gmail.com>
+Date: Sun, 13 Jun 2010 16:53:13 -0400
+Message-ID: <AANLkTimSMxsqvR8pYlfz5l3RlNHqqF9Q9wH-HOOsqT4r@mail.gmail.com>
 From: Ira McDonald <blueroofmusic@gmail.com>
 Content-Type: text/plain; charset=ISO-8859-1
 Content-Transfer-Encoding: quoted-printable
-Subject: Re: [Printing-architecture] REMINDER - Next Japan/US/Europe OP Call
-	- Mon/Tue 14/15 June 2010
+Subject: [Printing-architecture] REMINDER - Next Japan/US/Europe OP Call -
+	Mon/Tue 14/15 June 2010
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -18,6 +18,13 @@ List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subj
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
 To: printing-architecture@lists.linux-foundation.org, Printing-japan <printing-japan@lists.linux-foundation.org>, Till Kamppeter <till.kamppeter@gmail.com>, Ira McDonald <blueroofmusic@gmail.com>
+
+Hi,
+
+Please prepare some OP Japan status for this meeting.
+
+Thanks,
+- Ira
 
 On Tue, Jun 8, 2010 at 11:45 AM, Ira McDonald <blueroofmusic@gmail.com> wro=
 te:
