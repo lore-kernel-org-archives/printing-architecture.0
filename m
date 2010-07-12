@@ -1,9 +1,13 @@
+Message-ID: <4C3A7EF4.5060109@fujixerox.co.jp>
+Date: Mon, 12 Jul 2010 11:33:24 +0900
+From: Osamu MIHARA <osamu.mihara@fujixerox.co.jp>
 MIME-Version: 1.0
-Date: Tue, 15 Jun 2010 10:59:11 -0400
-Message-ID: <AANLkTikGlsgmA-w8smPYUa0XBkUOaIdN09iYhMIfwrU4@mail.gmail.com>
-From: Ira McDonald <blueroofmusic@gmail.com>
-Content-Type: text/plain; charset=ISO-8859-1
-Subject: [Printing-architecture] OP Quarterly Minutes - 14 June 2010
+References: <OFAE31947E.BEC78AC9-ON4925775B.0030D275-4925775B.00313F52@mta.ricoh.co.jp>
+In-Reply-To: <OFAE31947E.BEC78AC9-ON4925775B.0030D275-4925775B.00313F52@mta.ricoh.co.jp>
+Content-Type: text/plain; charset=ISO-2022-JP
+Content-Transfer-Encoding: 7bit
+Subject: Re: [Printing-architecture] [Printing-japan] OpenPrinting Japan
+	Jul. 2010 meeting minutes
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -13,49 +17,70 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: printing-architecture@lists.linux-foundation.org, Till Kamppeter <till.kamppeter@gmail.com>, Ira McDonald <blueroofmusic@gmail.com>, Printing-japan <printing-japan@lists.linux-foundation.org>
+To: printing-japan@lists.linux-foundation.org, printing-architecture@lists.linux-foundation.org
 
-Minutes from yesterday's Quarterly Open Printing Japan/US/Europe
-teleconference are posted at:
+Translation:
 
-  ftp://ftp.pwg.org/pub/pwg/fsg/minutes/OP-Minutes-20100614.htm
+OpenPrinting (Japan) Meeting
+9th July, 2010 @ The Linux Foundation Japan Kiocho-Office
 
-Next Quarterly OP Japan/US/Europe Conference Call:
+Olaf (Avasys), Mihara (Fuji Xerox), Saito (NEC Soft), Ohtani (BBR),
+Miyata (Canon), Chigusa (Ricoh)
 
-    - Note - US Labor Day Holiday is Monday 6 September
+*** Action Items Follow-ups ***
 
-    - Monday 13 September 2010, Evening
-      - US
-        4pm in San Francisco - US PDT (Pacific Daylight Time)
-        5pm in Colorado - US MDT (Mountain Daylight Time)
-        6pm in Chicago - US CDT (Central Daylight Time)
-        7pm in New York - US EDT (Eastern Daylight Time)
+o Vector API Approval Status
+  - need to decide duration and deadline for Last Call
+  -> Proposal from OPJ:
+     Review deadline: Aug 13th. (1 Month is enough.)
+     Voting in the next week.
 
-    - Tuesday 14 September 2010, Morning
-      - Europe
-        1am in Berlin - CEST (Central European Summer Time)
-      - Japan
-        8am in Tokyo - JST (Japan Standard Time)
+o CUPS Problem (STR #3273 http://www.cups.org/str.php?L3273 )
+  Agreed with Till-san that this should be fixed.
+  -> Continue (Toratani-san)
 
-    * Main Number (Till Kamppeter, LF, leader)
-      International: +1-218-936-7999
-      Access Code:   491659#
-
-Cheers,
-- Ira
+o Maintenance of GS CUPS raster driver
+  -> Till-san continue maintenance until until we find another
+     maintainer. (Thank you!)
 
 
-Ira McDonald (Musician / Software Architect)
-Chair - Linux Foundation Open Printing WG
-Co-Chair - TCG Hardcopy WG
-IETF Designated Expert - IPP & Printer MIB
-Blue Roof Music/High North Inc
-http://sites.google.com/site/blueroofmusic
-http://sites.google.com/site/highnorthinc
-mailto:blueroofmusic@gmail.com
-winter:
-  579 Park Place  Saline, MI  48176
-  734-944-0094
-summer:
-  PO Box 221  Grand Marais, MI 49839
-  906-494-2434
+*** Reveiw reply from Till-san on June 3. ***
+
+o Plan for Completion of the Common Printing Dialog
+  -> Till-san has told KDE team.
+  -> Continue. (need fund...)
+
+o PWG IPP Everywhere Project Charter (PPD Search function)
+  -> Till-san proposed an idea to provide PPD search function as a CUPS
+     library
+  -> If it is difficult to support in CUPS, it is possible to provide
+     as a separate library.
+  -> In any case, standardize is preferable, possibly under LSB.
+     Need to ask opinions from each distro, lead by OpenPrinting???
+
+
+*** Review of OP meetings ***
+
+ftp://ftp.pwg.org/pub/pwg/fsg/minutes/OP-Minutes-20100608.htm
+ftp://ftp.pwg.org/pub/pwg/fsg/minutes/OP-Minutes-20100614.htm
+
+o CPD
+  -> Need funds!
+
+o Downloading Binary Printer Driver
+  -> The first Binary Printer Driver is provided from EPSON and made
+     public by LF!!!
+  -> Next step is to secure it by Digital Signature.
+
+
+*** Action Items ***
+o Confirm CUPS problem: Toratani-san to explain and try persuade Mike
+again.
+
+
+*** Next ***
+
+Aug. 27th (Fri), 2010.
+Place (tentative): The Linux Foundation "Yokohama Nippon Odori Office"
+
+-- Osamu Mihara / Fuji Xerox
