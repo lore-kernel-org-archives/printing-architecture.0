@@ -1,13 +1,11 @@
-Message-ID: <4C3A7EF4.5060109@fujixerox.co.jp>
-Date: Mon, 12 Jul 2010 11:33:24 +0900
-From: Osamu MIHARA <osamu.mihara@fujixerox.co.jp>
+Message-ID: <4C3B55C0.5080302@gmail.com>
+Date: Mon, 12 Jul 2010 19:49:52 +0200
+From: Till Kamppeter <till.kamppeter@gmail.com>
 MIME-Version: 1.0
-References: <OFAE31947E.BEC78AC9-ON4925775B.0030D275-4925775B.00313F52@mta.ricoh.co.jp>
-In-Reply-To: <OFAE31947E.BEC78AC9-ON4925775B.0030D275-4925775B.00313F52@mta.ricoh.co.jp>
-Content-Type: text/plain; charset=ISO-2022-JP
+Content-Type: text/plain; charset=UTF-8; format=flowed
 Content-Transfer-Encoding: 7bit
-Subject: Re: [Printing-architecture] [Printing-japan] OpenPrinting Japan
-	Jul. 2010 meeting minutes
+Subject: [Printing-architecture] REMINDER: OpenPrinting US/Europe monthly
+ call TOMORROW (Tuesday Jul 13)
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -17,70 +15,39 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: printing-japan@lists.linux-foundation.org, printing-architecture@lists.linux-foundation.org
+To: OpenPrinting <printing-architecture@lists.linux-foundation.org>
 
-Translation:
+Hi,
 
-OpenPrinting (Japan) Meeting
-9th July, 2010 @ The Linux Foundation Japan Kiocho-Office
+tomorrow we will have our conference call (see dial-in data below).
 
-Olaf (Avasys), Mihara (Fuji Xerox), Saito (NEC Soft), Ohtani (BBR),
-Miyata (Canon), Chigusa (Ricoh)
+Agenda:
 
-*** Action Items Follow-ups ***
+- My participation on the PWG meeting
+- Report from OP Japan meeting
+- Auto-downloadable printer driver packages: Infrastructure on the
+   OpenPrinting web site complete, Epson provides first signed packages
+   with driver executable.
 
-o Vector API Approval Status
-  - need to decide duration and deadline for Last Call
-  -> Proposal from OPJ:
-     Review deadline: Aug 13th. (1 Month is enough.)
-     Voting in the next week.
+Dial-in data:
 
-o CUPS Problem (STR #3273 http://www.cups.org/str.php?L3273 )
-  Agreed with Till-san that this should be fixed.
-  -> Continue (Toratani-san)
+     July 2010 - US/Europe - Monthly OP Meeting
 
-o Maintenance of GS CUPS raster driver
-  -> Till-san continue maintenance until until we find another
-     maintainer. (Thank you!)
+     - Tuesday 13 July 2010, Daytime
+       - US
+         9am in San Francisco - US PDT (Pacific Daylight Time)
+         10am in Colorado - US MDT (Mountain Daylight Time)
+         11am in Chicago - US CDT (Central Daylight Time)
+         12pm in New York - US EDT (Eastern Daylight Time)
+       - Europe
+         6pm in Berlin - CEST (Central European Summer Time)
 
-
-*** Reveiw reply from Till-san on June 3. ***
-
-o Plan for Completion of the Common Printing Dialog
-  -> Till-san has told KDE team.
-  -> Continue. (need fund...)
-
-o PWG IPP Everywhere Project Charter (PPD Search function)
-  -> Till-san proposed an idea to provide PPD search function as a CUPS
-     library
-  -> If it is difficult to support in CUPS, it is possible to provide
-     as a separate library.
-  -> In any case, standardize is preferable, possibly under LSB.
-     Need to ask opinions from each distro, lead by OpenPrinting???
+    * Main Number (Till Kamppeter, LF, leader)
+       International: +1-218-936-7999
+       Access Code:   491659#
 
 
-*** Review of OP meetings ***
-
-ftp://ftp.pwg.org/pub/pwg/fsg/minutes/OP-Minutes-20100608.htm
-ftp://ftp.pwg.org/pub/pwg/fsg/minutes/OP-Minutes-20100614.htm
-
-o CPD
-  -> Need funds!
-
-o Downloading Binary Printer Driver
-  -> The first Binary Printer Driver is provided from EPSON and made
-     public by LF!!!
-  -> Next step is to secure it by Digital Signature.
+    Till
 
 
-*** Action Items ***
-o Confirm CUPS problem: Toratani-san to explain and try persuade Mike
-again.
 
-
-*** Next ***
-
-Aug. 27th (Fri), 2010.
-Place (tentative): The Linux Foundation "Yokohama Nippon Odori Office"
-
--- Osamu Mihara / Fuji Xerox
