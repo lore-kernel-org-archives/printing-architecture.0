@@ -1,11 +1,10 @@
 MIME-Version: 1.0
-Date: Tue, 13 Jul 2010 16:53:43 -0400
-Message-ID: <AANLkTik7wncfpOHH8RgCtk5TmWDGA6TI8jBglN2sY88L@mail.gmail.com>
+Date: Tue, 13 Jul 2010 17:21:30 -0400
+Message-ID: <AANLkTilU7vUG5JiTyJDbAl0MltthFT5Gz81eWPDcW4iD@mail.gmail.com>
 From: Ira McDonald <blueroofmusic@gmail.com>
 Content-Type: text/plain; charset=ISO-8859-1
 Content-Transfer-Encoding: quoted-printable
-Subject: [Printing-architecture] Last Call - OP Vector Printer Driver
-	API/1.0 - ends 13 August
+Subject: [Printing-architecture] OP Minutes - 13 July 2010
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -15,27 +14,67 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: printing-architecture@lists.linux-foundation.org, Printing-japan <printing-japan@lists.linux-foundation.org>, Till Kamppeter <till.kamppeter@gmail.com>, Osamu MIHARA <osamu.mihara@fujixerox.co.jp>, Ira McDonald <blueroofmusic@gmail.com>
+To: printing-architecture@lists.linux-foundation.org, Ira McDonald <blueroofmusic@gmail.com>, Till Kamppeter <till.kamppeter@gmail.com>
 
-Greetings,
+Minutes from today's Open Printing teleconference are posted at:
 
-Starting today and ending on Friday 13 August 2010, I am pleased to
-announce the Open Printing WG Last Call of the OP Vector Printer
-Driver API/1.0, which is located at:
+  ftp://ftp.pwg.org/pub/pwg/fsg/minutes/OP-Minutes-20100713.htm
 
-  ftp://ftp.pwg.org/pub/pwg/openprinting/vector/opvp-spec-1.0rc6.pdf
+Next OP teleconferences:
 
-Please positively confirm that you have reviewed this specification
-and either (a) have comments or (b) have no comments, as follows:
+(1) August 2010 - US/Europe - Monthly OP Meeting
+    - Note - PWG meeting - 3-6 August 2010 in Bagsvaerd, Denmark
 
-  To: printing-architecture@lists.linux-foundation.org
-  Subject: <Company/Individual> has <no> comments on OP Vector API/1.0
+    - Tuesday 10 August 2010, Daytime
+      - US
+        9am in San Francisco - US PDT (Pacific Daylight Time)
+        10am in Colorado - US MDT (Mountain Daylight Time)
+        11am in Chicago - US CDT (Central Daylight Time)
+        12pm in New York - US EDT (Eastern Daylight Time)
+      - Europe
+        6pm in Berlin - CEST (Central European Summer Time)
 
-Please include both page number and line number for each of
-your comments (they are present in the above PDF file).
+    * Main Number (Till Kamppeter, LF, leader)
+      International: +1-218-936-7999
+      Access Code:   491659#
+
+(2) September 2010 - US/Europe - Monthly OP Meeting
+    - Note - US Labor Day Holiday is Monday 6 September
+
+    - Tuesday 7 September 2010, Daytime
+      - US
+        9am in San Francisco - US PDT (Pacific Daylight Time)
+        10am in Colorado - US MDT (Mountain Daylight Time)
+        11am in Chicago - US CDT (Central Daylight Time)
+        12pm in New York - US EDT (Eastern Daylight Time)
+      - Europe
+        6pm in Berlin - CEST (Central European Summer Time)
+
+    * Main Number (Till Kamppeter, LF, leader)
+      International: +1-218-936-7999
+
+(3) September 2010 - Japan/US/Europe - Quarterly OP Meeting
+    - Note - US Labor Day Holiday is Monday 6 September
+
+    - Monday 13 September 2010, Evening
+      - US
+        4pm in San Francisco - US PDT (Pacific Daylight Time)
+        5pm in Colorado - US MDT (Mountain Daylight Time)
+        6pm in Chicago - US CDT (Central Daylight Time)
+        7pm in New York - US EDT (Eastern Daylight Time)
+
+    - Tuesday 14 September 2010, Morning
+      - Europe
+        1am in Berlin - CEST (Central European Summer Time)
+      - Japan
+        8am in Tokyo - JST (Japan Standard Time)
+
+    * Main Number (Till Kamppeter, LF, leader)
+      International: +1-218-936-7999
+      Access Code:   491659#
 
 Cheers,
-- Ira (Chair Open Printing WG)
+- Ira
 
 Ira McDonald (Musician / Software Architect)
 Chair - Linux Foundation Open Printing WG
