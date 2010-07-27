@@ -1,13 +1,14 @@
-Message-ID: <4C4D78FF.30302@gmail.com>
-Date: Mon, 26 Jul 2010 14:01:03 +0200
-From: Till Kamppeter <till.kamppeter@gmail.com>
+Message-ID: <SNT135-w45C39C2965232868DC80B188A70@phx.gbl>
+Content-Type: multipart/alternative;
+	boundary="_ead5550e-6e4b-4dea-a8ac-d19eb752e8de_"
+From: Shane Lin <shane_lin2000@hotmail.com>
+Date: Tue, 27 Jul 2010 08:49:54 -0700
+In-Reply-To: <4C07C08B.8050807@gmail.com>
+References: <OF1B6EED96.C683C88C-ON49257731.00332DC3-49257731.0033E717@mta.ricoh.co.jp>
+	<4BFF94E6.4080108@gmail.com>, <4C074B5C.9030903@fujixerox.co.jp>,
+	<4C07C08B.8050807@gmail.com>
 MIME-Version: 1.0
-References: <F30723B8678F584CB6A4269E911255CB040AFE0D@m1a.epkowa.co.jp>
-In-Reply-To: <F30723B8678F584CB6A4269E911255CB040AFE0D@m1a.epkowa.co.jp>
-Content-Type: text/plain; charset=UTF-8; format=flowed
-Content-Transfer-Encoding: 7bit
-Subject: Re: [Printing-architecture] To unite "Automatic
- Download/Installation" mechanism.
+Subject: [Printing-architecture] custom GUI
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -17,83 +18,84 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: kota.seki@avasys.jp
-Cc: printing-architecture@lists.linux-foundation.org, twaugh@redhat.com, jsmeix@novell.com
+To: till.kamppeter@gmail.com, printing-architecture@lists.linux-foundation.org
 
-On 07/26/2010 09:44 AM, kota.seki@avasys.jp wrote:
-> Hi All.
->
-> This is my first mail to you.
-> I work for AVASYS Corporation.
->
-> Now we try to realize "Automatic Download/Installation".
-> <http://www.linuxfoundation.org/images/8/81/Driver-auto-download.pdf>
-> We build printer driver using LSB.
-> We've uploaded XML file and link to repository to OpenPrinting DB, and We
-> public driver's repository.
-> And now we are checking "Automatic Download/Installation" possible or not.
->
-> But we have problems about this.
-> OpenPrinting proposed a mechanism about "Automatic Download/Installation".
->
-> In Ubuntu 10.04, it has some bugs but if correct them using small patch file,
-> it is work correct.
->
+--_ead5550e-6e4b-4dea-a8ac-d19eb752e8de_
+Content-Type: text/plain; charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
 
-Ubuntu simply accepted the concept and supplied a client software 
-(Jockey) to do the downloads.
 
-> But in Fedora13, it not works. Because Fedora13 realizes "Automatic
-> Download/Installation" using own mechanism.
-> <https://fedoraproject.org/wiki/Features/AutomaticPrintDriverInstallation>
->
 
-Fedora/Red Hat has developed an own concept which is based on purely 
-using package repositories without using a centralized database. This is 
-mainly intended for Fedora to distribute their own packages of free 
-software printer drivers. We are also looking into adding support for 
-this concept into our packages as an additional access method.
+Dear All=2C
 
-But note that it has a disadvantage against our concept of using the 
-central OpenPrinting database. To find drivers you need the URLs of 
-every manufacturer's/driver supplier's repository, with our concept you 
-only need to search the OpenPrinting database. To make OpenPrinting a 
-one-stop location when using the Fedora/Red Hat concept we would need to 
-carry all driver packages on the OpenPrinting server physically (not 
-only links to them) and then distributions could make the Linux 
-Foundation responsible for the packages.
+=20
 
-> And in OpenSUSE 11.3, Novell say that "Do you sign a legal agreement with
-> Novell to take responsibility?"
-> In the above PDF file at page 6 say that "Manufacturers should sign a legal
-> agreement to take responsibility." But it is not clear.
->   - Who sign with Manufacturers?
->   - How do I sign?
->   - Is detail decided?
->
+(1) Is there a document or a method for adding a custom dialog as a plugin =
+to the current print dialog (not PPD)?
 
-We proceed as described on
+(2) Is there a document described how the GUI and CUPS filter communication=
+ in the Linux? (for example=2C the MAC OSX uses print ticket)
 
-https://www.linuxfoundation.org/collaborate/workgroups/openprinting/writingandpackagingprinterdrivers#Signing_your_packages
+=20
 
-using method 3 in "Build a trusted path to distributions".
+Any suggestion is appreciated.
 
-> These seems each distribution require each requests.
-> (Must we support each distribution mechanism..!?)
-> We want to realize this all distributions using same mechanism.
->
+=20
 
-My intention is that all distributions use the same concept and 
-therefore I have tried to fulfill all the distribution's need with my 
-design, not only providing LSB-based packages in indexed repositories of 
-both RPM and DEB packages but also allow selection with criteria like 
-whether drivers are free software, whether they contain only PPDs or 
-also binary executables, signing, hosting by manufaturer, repository 
-info for integrating packages in the distro's auto-update concepts, ...
+Thanks=2C
 
-> We want to unite the mechanism in this communication.
-> Would we have discussion on this mail?
+=20
 
-Yes, feel free to discuss on this mailing list.
+Shane
 
-    Till
+=20
+
+=20
+ 		 	   		 =20
+_________________________________________________________________
+Hotmail has tools for the New Busy. Search=2C chat and e-mail from your inb=
+ox.
+http://www.windowslive.com/campaign/thenewbusy?ocid=3DPID28326::T:WLMTAGL:O=
+N:WL:en-US:WM_HMP:042010_1=
+
+--_ead5550e-6e4b-4dea-a8ac-d19eb752e8de_
+Content-Type: text/html; charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+<html>
+<head>
+<style><!--
+.hmmessage P
+{
+margin:0px=3B
+padding:0px
+}
+body.hmmessage
+{
+font-size: 10pt=3B
+font-family:Verdana
+}
+--></style>
+</head>
+<body class=3D'hmmessage'>
+<BR>Dear All=2C<BR>
+&nbsp=3B<BR>
+(1) Is there a document or a method&nbsp=3Bfor adding a custom dialog&nbsp=
+=3Bas a plugin to the current print dialog (not PPD)?<BR>
+(2)&nbsp=3BIs there a&nbsp=3Bdocument described&nbsp=3Bhow the GUI and CUPS=
+ filter communication in the Linux? (for example=2C the&nbsp=3BMAC OSX uses=
+ print ticket)<BR>
+&nbsp=3B<BR>
+Any&nbsp=3Bsuggestion is appreciated.<BR>
+&nbsp=3B<BR>
+Thanks=2C<BR>
+&nbsp=3B<BR>
+Shane<BR>
+&nbsp=3B<BR>
+&nbsp=3B<BR> 		 	   		  <br /><hr />Hotmail has tools for the New Busy. Sea=
+rch=2C chat and e-mail from your inbox. <a href=3D'http://www.windowslive.c=
+om/campaign/thenewbusy?ocid=3DPID28326::T:WLMTAGL:ON:WL:en-US:WM_HMP:042010=
+_1' target=3D'_new'>Learn more.</a></body>
+</html>=
+
+--_ead5550e-6e4b-4dea-a8ac-d19eb752e8de_--
