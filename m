@@ -1,10 +1,11 @@
-Message-ID: <4C5052AC.60800@gmail.com>
-Date: Wed, 28 Jul 2010 17:54:20 +0200
+Message-ID: <4C607974.1050609@gmail.com>
+Date: Mon, 09 Aug 2010 23:56:04 +0200
 From: Till Kamppeter <till.kamppeter@gmail.com>
 MIME-Version: 1.0
 Content-Type: text/plain; charset=UTF-8; format=flowed
 Content-Transfer-Encoding: 7bit
-Subject: [Printing-architecture] Slides for next week
+Subject: [Printing-architecture] REMINDER: OpenPrinting US/Europe monthly
+ call TOMORROW (Tuesday August 10)
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -14,10 +15,28 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Ira McDonald <blueroofmusic@gmail.com>, Open Printing <printing-architecture@lists.linux-foundation.org>
+To: Till Kamppeter <till.kamppeter@gmail.com>, OpenPrinting <printing-architecture@lists.linux-foundation.org>
 
 Hi,
 
-anyone has slides for me to present on the PWG meeting next week?
+tomorrow we will have our conference call.
+
+Dial-in data:
+
+     July 2010 - US/Europe - Monthly OP Meeting
+
+     - Tuesday 10 August 2010, Daytime
+       - US
+         9am in San Francisco - US PDT (Pacific Daylight Time)
+         10am in Colorado - US MDT (Mountain Daylight Time)
+         11am in Chicago - US CDT (Central Daylight Time)
+         12pm in New York - US EDT (Eastern Daylight Time)
+       - Europe
+         6pm in Berlin - CEST (Central European Summer Time)
+
+    * Main Number (Till Kamppeter, LF, leader)
+       International: +1-218-936-7999
+       Access Code:   491659#
+
 
     Till
