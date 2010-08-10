@@ -1,11 +1,13 @@
+Message-ID: <4C61818D.4070602@gmail.com>
+Date: Tue, 10 Aug 2010 18:42:53 +0200
+From: Till Kamppeter <till.kamppeter@gmail.com>
 MIME-Version: 1.0
-Date: Tue, 10 Aug 2010 11:00:32 -0400
-Message-ID: <AANLkTik=7BrjdDdTkVR=kGkGw-U0dnXmRVgtkwxn7cNC@mail.gmail.com>
-From: Ira McDonald <blueroofmusic@gmail.com>
-Content-Type: text/plain; charset=ISO-8859-1
-Content-Transfer-Encoding: quoted-printable
-Subject: [Printing-architecture] REMINDER: OpenPrinting US/Europe monthly
-	call TODAY (Tuesday August 10)
+References: <e395be80811270817n502ccd16wf6cc90f85364f5ae@mail.gmail.com>
+In-Reply-To: <e395be80811270817n502ccd16wf6cc90f85364f5ae@mail.gmail.com>
+Content-Type: text/plain; charset=UTF-8; format=flowed
+Content-Transfer-Encoding: 7bit
+Subject: [Printing-architecture] Last OP Meeting - Tue - 10 August 2010 -
+	The Recording
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -15,39 +17,20 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Till Kamppeter <till.kamppeter@gmail.com>, Ira McDonald <blueroofmusic@gmail.com>
-Cc: OpenPrinting <printing-architecture@lists.linux-foundation.org>
+To: Open Printing <printing-architecture@lists.linux-foundation.org>, Printing-japan <printing-japan@lists.linux-foundation.org>
 
 Hi,
 
-OP Architecture call in 1 hour
+I have uploaded the recording of the last OpenPrinting meeting to the
+OpenPrinting server:
 
-Cheers,
-- Ira
+http://www.openprinting.org/download/meetingnotes/op-telecons/OP-Meeting-20100810.mp3
 
-On Mon, Aug 9, 2010 at 5:56 PM, Till Kamppeter <till.kamppeter@gmail.com> w=
-rote:
-> Hi,
->
-> tomorrow we will have our conference call.
->
-> Dial-in data:
->
-> =A0 =A0July 2010 - US/Europe - Monthly OP Meeting
->
-> =A0 =A0- Tuesday 10 August 2010, Daytime
-> =A0 =A0 =A0- US
-> =A0 =A0 =A0 =A09am in San Francisco - US PDT (Pacific Daylight Time)
-> =A0 =A0 =A0 =A010am in Colorado - US MDT (Mountain Daylight Time)
-> =A0 =A0 =A0 =A011am in Chicago - US CDT (Central Daylight Time)
-> =A0 =A0 =A0 =A012pm in New York - US EDT (Eastern Daylight Time)
-> =A0 =A0 =A0- Europe
-> =A0 =A0 =A0 =A06pm in Berlin - CEST (Central European Summer Time)
->
-> =A0 * Main Number (Till Kamppeter, LF, leader)
-> =A0 =A0 =A0International: +1-218-936-7999
-> =A0 =A0 =A0Access Code: =A0 491659#
->
->
-> =A0 Till
->
+In general, recorded meetings I will upload to
+
+http://www.openprinting.org/download/meetingnotes/
+
+    Till
+
+P. S.: The MP3 is 4 MB long, 14 minutes of talking.
+
