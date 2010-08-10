@@ -1,13 +1,11 @@
-Message-ID: <4C61818D.4070602@gmail.com>
-Date: Tue, 10 Aug 2010 18:42:53 +0200
-From: Till Kamppeter <till.kamppeter@gmail.com>
 MIME-Version: 1.0
-References: <e395be80811270817n502ccd16wf6cc90f85364f5ae@mail.gmail.com>
-In-Reply-To: <e395be80811270817n502ccd16wf6cc90f85364f5ae@mail.gmail.com>
-Content-Type: text/plain; charset=UTF-8; format=flowed
-Content-Transfer-Encoding: 7bit
-Subject: [Printing-architecture] Last OP Meeting - Tue - 10 August 2010 -
-	The Recording
+Date: Tue, 10 Aug 2010 12:47:24 -0400
+Message-ID: <AANLkTikf+MFZuATWROSoMch1o9HRDj3nzOXqh2RHkTay@mail.gmail.com>
+From: Ira McDonald <blueroofmusic@gmail.com>
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+Subject: [Printing-architecture] EXTENDED Last Call - OP Vector Printer
+	Driver API/1.0 - ends 20 August
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -17,20 +15,67 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Open Printing <printing-architecture@lists.linux-foundation.org>, Printing-japan <printing-japan@lists.linux-foundation.org>
+To: printing-architecture@lists.linux-foundation.org, Printing-japan <printing-japan@lists.linux-foundation.org>, Till Kamppeter <till.kamppeter@gmail.com>, Osamu MIHARA <osamu.mihara@fujixerox.co.jp>, Ira McDonald <blueroofmusic@gmail.com>
 
 Hi,
 
-I have uploaded the recording of the last OpenPrinting meeting to the
-OpenPrinting server:
+Till and I just decided to extend the OP Last Call of OPVP API
+for one extra week.
 
-http://www.openprinting.org/download/meetingnotes/op-telecons/OP-Meeting-20100810.mp3
+So your comments will be welcome until:
 
-In general, recorded meetings I will upload to
+   Friday 20 August 2010
 
-http://www.openprinting.org/download/meetingnotes/
+Next Steps:
 
-    Till
+(1) OP Japan should review comments during their meeting in late
+      August.
 
-P. S.: The MP3 is 4 MB long, 14 minutes of talking.
+(2) Editors should create a new Stable draft by early September
 
+(3) OP Steering Committee should approve this as OP Standard
+
+(4)  Future LSB versions should reference this OP Standard.
+
+Cheers,
+- Ira (Chair - Open Printing WG)
+
+
+
+On Tue, Jul 13, 2010 at 4:53 PM, Ira McDonald <blueroofmusic@gmail.com> wro=
+te:
+> Greetings,
+>
+> Starting today and ending on Friday 13 August 2010, I am pleased to
+> announce the Open Printing WG Last Call of the OP Vector Printer
+> Driver API/1.0, which is located at:
+>
+> =A0ftp://ftp.pwg.org/pub/pwg/openprinting/vector/opvp-spec-1.0rc6.pdf
+>
+> Please positively confirm that you have reviewed this specification
+> and either (a) have comments or (b) have no comments, as follows:
+>
+> =A0To: printing-architecture@lists.linux-foundation.org
+> =A0Subject: <Company/Individual> has <no> comments on OP Vector API/1.0
+>
+> Please include both page number and line number for each of
+> your comments (they are present in the above PDF file).
+>
+> Cheers,
+> - Ira (Chair Open Printing WG)
+>
+> Ira McDonald (Musician / Software Architect)
+> Chair - Linux Foundation Open Printing WG
+> Co-Chair - TCG Hardcopy WG
+> IETF Designated Expert - IPP & Printer MIB
+> Blue Roof Music/High North Inc
+> http://sites.google.com/site/blueroofmusic
+> http://sites.google.com/site/highnorthinc
+> mailto:blueroofmusic@gmail.com
+> winter:
+> =A0 579 Park Place=A0 Saline, MI=A0 48176
+> =A0 734-944-0094
+> summer:
+> =A0 PO Box 221=A0 Grand Marais, MI 49839
+> =A0 906-494-2434
+>
