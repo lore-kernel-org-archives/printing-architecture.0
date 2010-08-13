@@ -1,13 +1,13 @@
 MIME-Version: 1.0
-In-Reply-To: <AANLkTikf+MFZuATWROSoMch1o9HRDj3nzOXqh2RHkTay@mail.gmail.com>
-References: <AANLkTikf+MFZuATWROSoMch1o9HRDj3nzOXqh2RHkTay@mail.gmail.com>
-Date: Thu, 12 Aug 2010 18:02:55 -0400
-Message-ID: <AANLkTimdX93m6X5CxuwPkGzMVTrYveiO6QOJFjc44VBr@mail.gmail.com>
-From: Ira McDonald <blueroofmusic@gmail.com>
-Content-Type: text/plain; charset=ISO-8859-1
-Content-Transfer-Encoding: quoted-printable
-Subject: Re: [Printing-architecture] EXTENDED Last Call - OP Vector Printer
-	Driver API/1.0 - ends 20 August
+In-Reply-To: <4C6464F3.5050002@gmail.com>
+References: <AANLkTik7wncfpOHH8RgCtk5TmWDGA6TI8jBglN2sY88L@mail.gmail.com>
+	<4C6464F3.5050002@gmail.com>
+Date: Fri, 13 Aug 2010 08:41:28 +0200
+Message-ID: <AANLkTim1neggV9P-unE==ok8m59NHKofAitT36ZzaCxO@mail.gmail.com>
+From: Till Kamppeter <till.kamppeter@gmail.com>
+Content-Type: multipart/alternative; boundary=0015175caad2ccab4e048daec583
+Subject: Re: [Printing-architecture] Last Call - OP Vector Printer Driver
+	API/1.0 - ends 13 August
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -17,63 +17,47 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: printing-architecture@lists.linux-foundation.org, Printing-japan <printing-japan@lists.linux-foundation.org>, Till Kamppeter <till.kamppeter@gmail.com>, Osamu MIHARA <osamu.mihara@fujixerox.co.jp>, Ira McDonald <blueroofmusic@gmail.com>
+To: Ira McDonald <blueroofmusic@gmail.com>
+Cc: printing-architecture@lists.linux-foundation.org, Osamu MIHARA <osamu.mihara@fujixerox.co.jp>, Printing-japan <printing-japan@lists.linux-foundation.org>
 
-Hi,
+--0015175caad2ccab4e048daec583
+Content-Type: text/plain; charset=UTF-8
 
-Remember - you still have one *more* week to send
-in editorial or technical comments on OPVP/1.0.
+There is still one little issue:
 
-Please try to make some time to review this spec.
+The formula for the CTM use is rather awkward. Instead of
 
-I'll have some editorial comments next week myself.
+(x, y) = (x, y) x [ matrix ]
 
-Cheers,
-- Ira (Chair OP WG)
+I would write something like
 
+x = ax + by + c
+y = dx + ey + f
 
-On Tue, Aug 10, 2010 at 12:47 PM, Ira McDonald <blueroofmusic@gmail.com> wr=
-ote:
-> Hi,
+WDYT?
+
+  Till
+
+On 12 Aug 2010 23:17, "Till Kamppeter" <till.kamppeter@gmail.com> wrote:
+> I reviewed the specs and for me all is OK.
 >
-> Till and I just decided to extend the OP Last Call of OPVP API
-> for one extra week.
->
-> So your comments will be welcome until:
->
-> =A0 Friday 20 August 2010
->
-> Next Steps:
->
-> (1) OP Japan should review comments during their meeting in late
-> =A0 =A0 =A0August.
->
-> (2) Editors should create a new Stable draft by early September
->
-> (3) OP Steering Committee should approve this as OP Standard
->
-> (4) =A0Future LSB versions should reference this OP Standard.
->
-> Cheers,
-> - Ira (Chair - Open Printing WG)
+> Till
 >
 >
->
-> On Tue, Jul 13, 2010 at 4:53 PM, Ira McDonald <blueroofmusic@gmail.com> w=
-rote:
+> On 07/13/2010 10:53 PM, Ira McDonald wrote:
 >> Greetings,
 >>
 >> Starting today and ending on Friday 13 August 2010, I am pleased to
 >> announce the Open Printing WG Last Call of the OP Vector Printer
 >> Driver API/1.0, which is located at:
 >>
->> =A0ftp://ftp.pwg.org/pub/pwg/openprinting/vector/opvp-spec-1.0rc6.pdf
+>> ftp://ftp.pwg.org/pub/pwg/openprinting/vector/opvp-spec-1.0rc6.pdf
 >>
 >> Please positively confirm that you have reviewed this specification
 >> and either (a) have comments or (b) have no comments, as follows:
 >>
->> =A0To: printing-architecture@lists.linux-foundation.org
->> =A0Subject: <Company/Individual> has <no> comments on OP Vector API/1.0
+>> To: printing-architecture@lists.linux-foundation.org
+>> Subject:<Company/Individual> has<no> comments on OP Vector API/1.0
 >>
 >> Please include both page number and line number for each of
 >> your comments (they are present in the above PDF file).
@@ -84,16 +68,65 @@ rote:
 >> Ira McDonald (Musician / Software Architect)
 >> Chair - Linux Foundation Open Printing WG
 >> Co-Chair - TCG Hardcopy WG
->> IETF Designated Expert - IPP & Printer MIB
+>> IETF Designated Expert - IPP& Printer MIB
 >> Blue Roof Music/High North Inc
 >> http://sites.google.com/site/blueroofmusic
 >> http://sites.google.com/site/highnorthinc
 >> mailto:blueroofmusic@gmail.com
 >> winter:
->> =A0 579 Park Place=A0 Saline, MI=A0 48176
->> =A0 734-944-0094
+>> 579 Park Place Saline, MI 48176
+>> 734-944-0094
 >> summer:
->> =A0 PO Box 221=A0 Grand Marais, MI 49839
->> =A0 906-494-2434
+>> PO Box 221 Grand Marais, MI 49839
+>> 906-494-2434
 >>
 >
+
+--0015175caad2ccab4e048daec583
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<p>There is still one little issue:</p>
+<p>The formula for the CTM use is rather awkward. Instead of</p>
+<p>(x, y) =3D (x, y) x [ matrix ]</p>
+<p>I would write something like</p>
+<p>x =3D ax + by + c<br>
+y =3D dx + ey + f</p>
+<p>WDYT?</p>
+<p>=C2=A0 Till</p>
+<p>On 12 Aug 2010 23:17, &quot;Till Kamppeter&quot; &lt;<a href=3D"mailto:t=
+ill.kamppeter@gmail.com">till.kamppeter@gmail.com</a>&gt; wrote:<br type=3D=
+"attribution">&gt; I reviewed the specs and for me all is OK.<br>&gt; <br>
+&gt;     Till<br>&gt; <br>&gt; <br>&gt; On 07/13/2010 10:53 PM, Ira McDonal=
+d wrote:<br>&gt;&gt; Greetings,<br>&gt;&gt;<br>&gt;&gt; Starting today and =
+ending on Friday 13 August 2010, I am pleased to<br>&gt;&gt; announce the O=
+pen Printing WG Last Call of the OP Vector Printer<br>
+&gt;&gt; Driver API/1.0, which is located at:<br>&gt;&gt;<br>&gt;&gt;    <a=
+ href=3D"ftp://ftp.pwg.org/pub/pwg/openprinting/vector/opvp-spec-1.0rc6.pdf=
+">ftp://ftp.pwg.org/pub/pwg/openprinting/vector/opvp-spec-1.0rc6.pdf</a><br=
+>
+&gt;&gt;<br>&gt;&gt; Please positively confirm that you have reviewed this =
+specification<br>&gt;&gt; and either (a) have comments or (b) have no comme=
+nts, as follows:<br>&gt;&gt;<br>&gt;&gt;    To: <a href=3D"mailto:printing-=
+architecture@lists.linux-foundation.org">printing-architecture@lists.linux-=
+foundation.org</a><br>
+&gt;&gt;    Subject:&lt;Company/Individual&gt;  has&lt;no&gt;  comments on =
+OP Vector API/1.0<br>&gt;&gt;<br>&gt;&gt; Please include both page number a=
+nd line number for each of<br>&gt;&gt; your comments (they are present in t=
+he above PDF file).<br>
+&gt;&gt;<br>&gt;&gt; Cheers,<br>&gt;&gt; - Ira (Chair Open Printing WG)<br>=
+&gt;&gt;<br>&gt;&gt; Ira McDonald (Musician / Software Architect)<br>&gt;&g=
+t; Chair - Linux Foundation Open Printing WG<br>&gt;&gt; Co-Chair - TCG Har=
+dcopy WG<br>
+&gt;&gt; IETF Designated Expert - IPP&amp;  Printer MIB<br>&gt;&gt; Blue Ro=
+of Music/High North Inc<br>&gt;&gt; <a href=3D"http://sites.google.com/site=
+/blueroofmusic">http://sites.google.com/site/blueroofmusic</a><br>&gt;&gt; =
+<a href=3D"http://sites.google.com/site/highnorthinc">http://sites.google.c=
+om/site/highnorthinc</a><br>
+&gt;&gt; mailto:<a href=3D"mailto:blueroofmusic@gmail.com">blueroofmusic@gm=
+ail.com</a><br>&gt;&gt; winter:<br>&gt;&gt;    579 Park Place  Saline, MI  =
+48176<br>&gt;&gt;    734-944-0094<br>&gt;&gt; summer:<br>&gt;&gt;    PO Box=
+ 221  Grand Marais, MI 49839<br>
+&gt;&gt;    906-494-2434<br>&gt;&gt;<br>&gt; <br></p>
+
+--0015175caad2ccab4e048daec583--
