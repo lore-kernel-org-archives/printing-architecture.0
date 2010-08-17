@@ -1,10 +1,10 @@
-Message-ID: <4C6A2D75.5080309@gmail.com>
-Date: Tue, 17 Aug 2010 08:34:29 +0200
+Message-ID: <4C6A2D99.8020703@gmail.com>
+Date: Tue, 17 Aug 2010 08:35:05 +0200
 From: Till Kamppeter <till.kamppeter@gmail.com>
 MIME-Version: 1.0
 Content-Type: text/plain; charset=UTF-8; format=flowed
 Content-Transfer-Encoding: 7bit
-Subject: [Printing-architecture] ANNOUNCE: Foomatic 4.0.4 released!
+Subject: [Printing-architecture] ANNOUNCE: Foomatic 4.0.5 released!
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
