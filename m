@@ -1,11 +1,11 @@
-Message-ID: <4CAA02BC.5080404@gmail.com>
-Date: Mon, 04 Oct 2010 18:37:16 +0200
+Message-ID: <4CAA0E58.1010008@gmail.com>
+Date: Mon, 04 Oct 2010 19:26:48 +0200
 From: Till Kamppeter <till.kamppeter@gmail.com>
 MIME-Version: 1.0
 Content-Type: text/plain; charset=UTF-8; format=flowed
 Content-Transfer-Encoding: 7bit
-Subject: [Printing-architecture] REMINDER: OpenPrinting US/Europe monthly
- call TOMORROW (Tuesday October 5)
+Subject: [Printing-architecture] MOVED: OpenPrinting US/Europe monthly call
+ NEXT WEEK (Tuesday October 12)
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -19,12 +19,14 @@ To: OpenPrinting <printing-architecture@lists.linux-foundation.org>
 
 Hi,
 
-Tomorrow (in 23 hours, 23 min) we will have our conference call.
+we have moved the conference call to next week, Tuesday, October 12.
+
+Agenda: Common Printing Dialog: Results from meeting in Berlin this Thursday
 
 Dial-in data:
 
     * October 2010 - US/Europe - Monthly OP Meeting
-     - Tuesday 5 October 2010, Daytime
+     - Tuesday 12 October 2010, Daytime
        - US
          9am in San Francisco - US PDT (Pacific Daylight Time)
          10am in Colorado - US MDT (Mountain Daylight Time)
