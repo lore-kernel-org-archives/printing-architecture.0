@@ -1,10 +1,10 @@
 MIME-Version: 1.0
-From: Randy Parker <randy.j.parker@gmail.com>
-Date: Tue, 19 Oct 2010 11:43:23 -0400
-Message-ID: <AANLkTikOYMyHsOkH0ShSrAJaqir=Po7Gak0xOt6r599Q@mail.gmail.com>
-Content-Type: multipart/alternative; boundary=0016e657b6705f591f0492fa28ca
-Subject: [Printing-architecture] Which Layer Should Implement Multi-Color
-	Page Output?
+Date: Sun, 7 Nov 2010 15:25:36 -0500
+Message-ID: <AANLkTintqwAJxkojQxFnTRrMeofbNxjUC_S3Riwu=aZN@mail.gmail.com>
+From: Ira McDonald <blueroofmusic@gmail.com>
+Content-Type: multipart/alternative; boundary=20cf3054acd574892004947c4f02
+Subject: [Printing-architecture] REMINDER: Open Printing US/Europe monthly
+	call (Tuesday November 9)
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -14,91 +14,89 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: printing-architecture <printing-architecture@lists.linux-foundation.org>
+To: printing-architecture@lists.linux-foundation.org, Till Kamppeter <till.kamppeter@gmail.com>, Ira McDonald <blueroofmusic@gmail.com>
 
---0016e657b6705f591f0492fa28ca
+--20cf3054acd574892004947c4f02
 Content-Type: text/plain; charset=ISO-8859-1
 
-I need to print thousands of page-stacks per day of a single-page PDF on
-(say) five or six pages of different colored paper.   For example, I want
-the single page pdf in file 'f.pdf' spit out on six pages: wpyyyw (white,
-pink, yellow*3, white)
+Hi,
 
-I've posted this question on several HP & CUPS forums, but still have no
-idea how to begin. It appears that both PCL5 and PJL are too low level.  But
-'lpr' is too high level: 'lpr -o InputSlot=Tray5 f.pdf -o InputSlot=Tray3
-f.pdf ...' does not work because 'lpr' seems to only allow _one_ "-o
-InputSlot" specification per invocation. Since I need to print 10,000 pages
-per day, issuing 10,000 distinct 'lpr' commands is impossibly slow, not to
-mention suspiciously stupid (because it would re-render the PDF for each of
-my five or six page colors). It is painfully slow because each lpr
-invocation is a distinct print job, which causes my hp4515x 65ppm printer to
-suffer a 4-5 second spool down / spool up cycle. This 'stall' downgrades it
-to 10ppm printer! :-(
+Our next Open Printing WG call will be:
 
-A Kyocera tech guy suggested their Perscribe form facility, but I'd rather
-find the right place in the standard CUPS system.  Maybe in a PPD, by
-creating a bunch of page-stack specific printers (how)?  A filter somewhere?
- A "LP Interface script"?
+    - Tuesday 9 November 2010, Daytime
+      - US
+        9am in San Francisco - US PST (Pacific Standard Time)
+        10am in Colorado - US MST (Mountain Standard Time)
+        11am in Chicago - US CST (Central Standard Time)
+        12pm in New York - US EST (Eastern Standard Time)
+      - Europe
+        6pm in Berlin - CET (Central European Time)
 
-PS - I actually have about 100 page stack patterns, such as the 'wpyyyw'
-example above. I wouldn't mind creating corresponding macros for each, and
-then just picking the macro. I typically have a few dozen to a few hundred
-pages to be printed on one 'stack pattern' before changing to another. My
-app is Ruby on Rails / Ubuntu, and the Ruby CUPS bindings are not great.
-(which is why I've used lpr so far)
+    * Main Number (Till Kamppeter, LF, leader)
+      International: +1-218-936-7999
+      Access Code:   491659#
 
-feel free to reply directly to:
+Main agenda topic will be Common Printing Dialog funding
+and schedule.
 
-randy.j.parker@gmail.com
+Please join us.
 
-if this is off-topic for the list.
+Cheers,
+- Ira
 
---0016e657b6705f591f0492fa28ca
+
+
+Ira McDonald (Musician / Software Architect)
+Chair - Linux Foundation Open Printing WG
+Co-Chair - IEEE-ISTO PWG IPP WG
+Co-Chair - TCG Hardcopy WG
+IETF Designated Expert - IPP & Printer MIB
+Blue Roof Music/High North Inc
+http://sites.google.com/site/blueroofmusic
+http://sites.google.com/site/highnorthinc
+mailto:blueroofmusic@gmail.com
+Christmas through April:
+  579 Park Place  Saline, MI  48176
+  734-944-0094
+May to Christmas:
+  PO Box 221  Grand Marais, MI 49839
+  906-494-2434
+
+--20cf3054acd574892004947c4f02
 Content-Type: text/html; charset=ISO-8859-1
 Content-Transfer-Encoding: quoted-printable
 
-<meta charset=3D"utf-8"><span class=3D"Apple-style-span" style=3D"font-fami=
-ly: &#39;lucida grande&#39;, tahoma, verdana, arial, sans-serif; font-size:=
- 13px; color: rgb(51, 51, 51); ">I need to print thousands of page-stacks p=
-er day of a single-page PDF on (say) five or six pages of different colored=
- paper. =A0 For example, I want the single page pdf in file &#39;f.pdf&#39;=
- spit out on six pages: wpyyyw (white, pink, yellow*3, white)<br>
+Hi,<br><br>Our next Open Printing WG call will be:<br><br>=A0=A0=A0 - Tuesd=
+ay 9 November 2010, Daytime<br>=A0=A0=A0=A0=A0 - US<br>=A0=A0=A0=A0=A0=A0=
+=A0 9am in San Francisco - US PST (Pacific Standard Time)<br>=A0=A0=A0=A0=
+=A0=A0=A0 10am in Colorado - US MST (Mountain Standard Time)<br>
+=A0=A0=A0=A0=A0=A0=A0 11am in Chicago - US CST (Central Standard Time)<br>=
+=A0=A0=A0=A0=A0=A0=A0 12pm in New York - US EST (Eastern Standard Time)<br>=
+=A0=A0=A0=A0=A0 - Europe<br>=A0=A0=A0=A0=A0=A0=A0 6pm in Berlin - CET (Cent=
+ral European Time)<br><br>=A0=A0=A0 * Main Number (Till Kamppeter, LF, lead=
+er)<br>
+=A0=A0=A0=A0=A0 International: +1-218-936-7999<br>=A0=A0=A0=A0=A0 Access Co=
+de:=A0=A0 491659#<br><br>Main agenda topic will be Common Printing Dialog f=
+unding<br>and schedule.<br><br>Please join us.<br><br>Cheers,<br>- Ira<br><=
+br><br><br clear=3D"all">
+Ira McDonald (Musician / Software Architect)<br>Chair - Linux Foundation Op=
+en Printing WG<br>Co-Chair - IEEE-ISTO PWG IPP WG<br>Co-Chair - TCG Hardcop=
+y WG<br>IETF Designated Expert - IPP &amp; Printer MIB<br>Blue Roof Music/H=
+igh North Inc<br>
+<a href=3D"http://sites.google.com/site/blueroofmusic" target=3D"_blank">ht=
+tp://sites.google.com/site/blueroofmusic</a><br><a style=3D"color: rgb(102,=
+ 0, 204);" href=3D"http://sites.google.com/site/highnorthinc" target=3D"_bl=
+ank">http://sites.google.com/site/highnorthinc</a><br>
+mailto:<a href=3D"mailto:blueroofmusic@gmail.com" target=3D"_blank">blueroo=
+fmusic@gmail.com</a><br>Christmas through April:<br>=A0 579 Park Place=A0 S=
+aline, MI=A0 48176<br>=A0 734-944-0094<br>May to Christmas:<br>=A0 PO Box 2=
+21=A0 Grand Marais, MI 49839<br>
+=A0 906-494-2434<div style=3D"display: inline;"></div><div style=3D"display=
+: inline;"></div><div style=3D"display: inline;"></div><br>
+<div style=3D"visibility: hidden; left: -5000px;" id=3D"avg_ls_inline_popup=
+"></div><style type=3D"text/css">#avg_ls_inline_popup{position: absolute;z-=
+index: 9999;padding: 0px 0px;margin-left: 0px;margin-top: 0px;overflow: hid=
+den;word-wrap: break-word;color: black;font-size: 10px;text-align: left;lin=
+e-height: 130%;}</style>
 
-<br>I&#39;ve posted this question on several HP &amp; CUPS forums, but stil=
-l have no idea how to begin. It appears that both PCL5 and PJL are too low =
-level. =A0But &#39;lpr&#39; is too high level: &#39;lpr -o InputSlot=3DTray=
-5 f.pdf -o InputSlot=3DTray3 f.pdf ...&#39; does not work because &#39;lpr&=
-#39; seems to only allow _one_ &quot;-o InputSlot&quot; specification per i=
-nvocation. Since I need to print 10,000 pages per day, issuing 10,000 disti=
-nct &#39;lpr&#39; commands is impossibly slow, not to mention suspiciously =
-stupid (because it would re-render the PDF for each of my five or six page =
-colors). It is painfully slow because each lpr invocation is a distinct pri=
-nt job, which causes my hp4515x 65ppm printer to suffer a 4-5 second spool =
-down / spool up cycle. This &#39;stall&#39; downgrades it to 10ppm printer!=
- :-(</span><div>
-
-<span class=3D"Apple-style-span" style=3D"font-family: &#39;lucida grande&#=
-39;, tahoma, verdana, arial, sans-serif; font-size: 13px; color: rgb(51, 51=
-, 51); "><br></span></div><div><span class=3D"Apple-style-span" style=3D"fo=
-nt-family: &#39;lucida grande&#39;, tahoma, verdana, arial, sans-serif; fon=
-t-size: 13px; color: rgb(51, 51, 51); ">A Kyocera tech guy suggested their =
-Perscribe form facility, but I&#39;d rather find the right place in the sta=
-ndard CUPS system. =A0Maybe in a PPD, by creating a bunch of page-stack spe=
-cific printers (how)? =A0A filter somewhere? =A0A &quot;LP Interface script=
-&quot;?<br>
-
-<br>PS - I actually have about 100 page stack patterns, such as the &#39;wp=
-yyyw&#39; example above. I wouldn&#39;t mind creating corresponding macros =
-for each, and then just picking the macro. I typically have a few dozen to =
-a few hundred pages to be printed on one &#39;stack pattern&#39; before cha=
-nging to another. My app is Ruby on Rails / Ubuntu, and the Ruby CUPS bindi=
-ngs are not great. (which is why I&#39;ve used lpr so far)</span><br clear=
-=3D"all">
-
-<br><div>feel free to reply directly to:=A0</div><div><br>
-<div><a href=3D"mailto:randy.j.parker@gmail.com">randy.j.parker@gmail.com</=
-a></div></div><div><br></div><div>if this is off-topic for the list.</div><=
-/div>
-
---0016e657b6705f591f0492fa28ca--
+--20cf3054acd574892004947c4f02--
