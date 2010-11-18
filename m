@@ -1,14 +1,23 @@
-From: James Cloos <cloos@jhcloos.com>
-In-Reply-To: <4CDC9192.5090900@fujixerox.co.jp> (Osamu MIHARA's message of
-	"Fri, 12 Nov 2010 10:00:02 +0900")
-References: <20101105105012.F03E.5F9CA008@canon.co.jp>
-	<4CDC9192.5090900@fujixerox.co.jp>
-Date: Fri, 12 Nov 2010 14:39:55 -0500
-Message-ID: <m3wroiib4s.fsf@jhcloos.com>
+Message-ID: <4CE55A84.3070006@gmail.com>
+Date: Thu, 18 Nov 2010 17:55:32 +0100
+From: Till Kamppeter <till.kamppeter@gmail.com>
 MIME-Version: 1.0
-Content-Type: text/plain
-Subject: Re: [Printing-architecture] OpenPrintig Japan November 2010 Meeting
-	Minutes in English
+References: <F30723B8678F584CB6A4269E911255CB03396379@m1a.epkowa.co.jp>
+	<4B8241D4.2040207@gmail.com>
+	<F30723B8678F584CB6A4269E911255CB034CE4DE@m1a.epkowa.co.jp>
+	<4B8E4CEF.8040007@gmail.com>
+	<F30723B8678F584CB6A4269E911255CB035D7CF6@m1a.epkowa.co.jp>
+	<4BBBA6A9.5050005@gmail.com>
+	<F30723B8678F584CB6A4269E911255CB0392318F@m1a.epkowa.co.jp>
+	<4BD18655.8060000@gmail.com>
+	<F30723B8678F584CB6A4269E911255CB03BF5E5C@m1a.epkowa.co.jp>
+	<4C091F92.7050102@gmail.com> <4C1284F4.3000707@gmail.com>
+	<4C89CF0C.60003@avasys.jp>
+In-Reply-To: <4C89CF0C.60003@avasys.jp>
+Content-Type: text/plain; charset=UTF-8; format=flowed
+Content-Transfer-Encoding: 7bit
+Subject: [Printing-architecture] Updates for auto-downloadable printer
+	packages
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -18,27 +27,36 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: printing-architecture@lists.linux-foundation.org
-Cc: printing-japan@lists.linux-foundation.org
+To: Olaf Meeuwissen <olaf.meeuwissen@avasys.jp>, yuji.saito@avasys.jp, hidenori.ishii@avasys.jp, =?UTF-8?B?6JCp5Y6fIOizouayuw==?= <kenji.hagiwara@avasys.jp>, Open Printing <printing-architecture@lists.linux-foundation.org>
 
->>>>> "OM" == Osamu MIHARA <osamu.mihara@fujixerox.co.jp> writes:
+Hi,
 
-OM> OpenPrintig Japan November 2010 Meeting Minutes
-OM> - Till-san is suggesting poppler based "pdftoraster" is preferable
-OM> compared with GS based pdftoraster filter.
-OM> - Otani-san is woking on modify poppler based pdftoraster in order
-OM> to support CUPS extensions such as cupsBackSide.
+I have done some updates and fixes for the auto-downloadable driver 
+package creation:
 
-Has anyone looked at a mupdf-based (aka fitz-based) pdftoraster?
+First, I have updated the documentation about creating and uploading the 
+driver packages:
 
-It should be faster and use less ram.
+https://www.linuxfoundation.org/collaborate/workgroups/openprinting/writingandpackagingprinterdrivers
 
-License is gpl, just like poppler and ghostscript.
+In the section "Printer driver design"/"Components and purposes" I have 
+added that the PPD files are also essential part of a driver package and 
+that they need to be designed to comply with Adobe's specs and that they 
+also should make use of the PPD extensions for the Common Printing 
+Dialog and for CUPS. I have also updated the "Testing" section telling 
+that the PPD extension use should be tested with a development snapshot 
+of the Common Printing Dialog.
 
-Git repo is at:
+In the section "Setting up the package repositories" I have added a link 
+to the component assignment rules file for the (already linked) 
+"mkrepodeb" script for creating and indexing Debian package archives.
 
-http://mupdf.com/repos/mupdf.git
+In addition, I have updated "mkrepodeb" fixing some bugs. Please 
+re-download it if you have already used it:
 
--JimC
--- 
-James Cloos <cloos@jhcloos.com>         OpenPGP: 1024D/ED7DAEA6
+http://www.openprinting.org/download/printdriver/debian/mkrepodeb
+
+You do not need to rebuild or re-index any existing package archives.
+
+    Till
+
