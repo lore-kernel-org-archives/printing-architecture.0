@@ -1,15 +1,25 @@
-From: "Hal V. Engel" <hvengel@gmail.com>
-Date: Tue, 30 Nov 2010 14:08:09 -0800
-References: <e395be80811270817n502ccd16wf6cc90f85364f5ae@mail.gmail.com>
-	<201011200024.33623.hvengel@gmail.com> <4CF57392.3010305@gmail.com>
-In-Reply-To: <4CF57392.3010305@gmail.com>
+Content-class: urn:content-classes:message
 MIME-Version: 1.0
-Content-Type: Text/Plain;
-  charset="utf-8"
-Content-Transfer-Encoding: 7bit
-Message-Id: <201011301408.09853.hvengel@gmail.com>
-Subject: Re: [Printing-architecture] Last OP Meeting - Tue - 9 November 2010
-	- The Recording
+Content-Type: text/plain;
+	charset="UTF-8"
+Content-Transfer-Encoding: base64
+Date: Fri, 3 Dec 2010 15:16:16 +0900
+Message-ID: <F30723B8678F584CB6A4269E911255CB04A457B1@m1a.epkowa.co.jp>
+In-Reply-To: <4CE55A84.3070006@gmail.com>
+References: <F30723B8678F584CB6A4269E911255CB03396379@m1a.epkowa.co.jp>
+	<4B8241D4.2040207@gmail.com>
+	<F30723B8678F584CB6A4269E911255CB034CE4DE@m1a.epkowa.co.jp>
+	<4B8E4CEF.8040007@gmail.com>
+	<F30723B8678F584CB6A4269E911255CB035D7CF6@m1a.epkowa.co.jp>
+	<4BBBA6A9.5050005@gmail.com>
+	<F30723B8678F584CB6A4269E911255CB0392318F@m1a.epkowa.co.jp>
+	<4BD18655.8060000@gmail.com>
+	<F30723B8678F584CB6A4269E911255CB03BF5E5C@m1a.epkowa.co.jp>
+	<4C091F92.7050102@gmail.com> <4C1284F4.3000707@gmail.com>
+	<4C89CF0C.60003@avasys.jp> <4CE55A84.3070006@gmail.com>
+From: <yuji.saito@avasys.jp>
+Subject: Re: [Printing-architecture] Updates for auto-downloadable printer
+	packages
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -19,27 +29,33 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Till Kamppeter <till.kamppeter@gmail.com>
-Cc: printing-architecture@lists.linux-foundation.org
+To: till.kamppeter@gmail.com
+Cc: printing-architecture@lists.linux-foundation.org, kenji.hagiwara@avasys.jp
 
-On Tuesday, November 30, 2010 01:58:42 pm Till Kamppeter wrote:
-> On 11/20/2010 09:24 AM, Hal V. Engel wrote:
-> > I think that this assessment is basically correct.  Intel/Meego might be
-> > more likely to respond to this than Nokia.  Also the current CPD is tied
-> > to KDE and I think it would be better to decouple it from KDE and make
-> > it a generic/native Qt app.  This would in the long run make it more
-> > attractive to Nokia/Intel and other Meego vendors while at the same time
-> > supporting KDE.  If anything this should result in wider use of the CPD.
-> > 
-> > I have a contact at Intel who is part of the Meego team.  I am not sure
-> > if he can help but I will contact him to see if there is any interest. 
-> > Probably will not go anywhere but it can't hurt to try.
-> 
-> Hal, did you contact these people? Did you get any answer?
-> 
->     Till
-
-
-I just sent an email a few days ago.  Have not heard anything yet.
-
-Hal
+SGksIFRpbGwuDQoNCi0tLS0tT3JpZ2luYWwgTWVzc2FnZS0tLS0tDQpGcm9tOiBUaWxsIEthbXBw
+ZXRlciBbbWFpbHRvOnRpbGwua2FtcHBldGVyQGdtYWlsLmNvbV0gDQpTZW50OiBGcmlkYXksIE5v
+dmVtYmVyIDE5LCAyMDEwIDE6NTYgQU0NCj4gDQo+IEluIGFkZGl0aW9uLCBJIGhhdmUgdXBkYXRl
+ZCAibWtyZXBvZGViIiBmaXhpbmcgc29tZSBidWdzLiBQbGVhc2UgDQo+IHJlLWRvd25sb2FkIGl0
+IGlmIHlvdSBoYXZlIGFscmVhZHkgdXNlZCBpdDoNCj4gDQo+IGh0dHA6Ly93d3cub3BlbnByaW50
+aW5nLm9yZy9kb3dubG9hZC9wcmludGRyaXZlci9kZWJpYW4vbWtyZXBvZGViDQoNCkkgY2hlY2tl
+ZCB0aGUgZml4ZWQgIm1rcmVwb2RlYiIgc2NyaXB0Lg0KSSBub3RpY2VkIHRoYXQgdGhlIGNvbXBv
+bmVudHMgaW4gdGhlIGRlYiByZXBvc2l0b3J5IGhhdmUgYmVlbiBjaGFuZ2VkLg0KDQpJbiB0aGUg
+b2xkIE9wZW5QcmludGluZyBkZWIgcGFja2FnZSByZXBvc2l0b3J5IChhbmQgaW4gb3VyIGN1cnJl
+bnQNCnJlcG9zaXRvcnlbMV0pLA0KYWxsIGRyaXZlciBwYWNrYWdlcyBoYWQgYmVlbiBpbmNsdWRl
+ZCBpbiB0aGUgIm1haW4iIGNvbXBvbmVudC4NCg0KQnV0IHRoZSBjdXJyZW50IE9wZW5QcmludGlu
+ZyBkZWIgcGFja2FnZSByZXBvc2l0b3J5WzJdIGhhcyA0IGNvbXBvbmVudHMsIGFuZA0KZHJpdmVy
+IHBhY2thZ2VzIHVuZGVyICJtYWluLW5vbmZyZWUiIGFuZCAiY29udHJpYiIgYXJlIG5vdCBpbmNs
+dWRlZCBpbg0KIm1haW4iLg0KICAqIG1haW4NCiAgKiBtYWluLW5vbmZyZWUNCiAgKiBjb250cmli
+DQogICogbHNiZGRrDQoNCkZyb20gd2hhdCB5b3Ugc2FpZCBiZWZvcmUsIEkgdW5kZXJzdG9vZCB0
+aGF0IGluIE9wZW5QcmludGluZyAibWFpbiIgd2lsbCANCmNvbnRhaW4gYWxsIHBhY2thZ2VzIChp
+bmNsdWRpbmcgbm9uLWZyZWUgZHJpdmVyIHBhY2thZ2VzKS4gRGlkIHRoZQ0Kc3BlY2lmaWNhdGlv
+biANCmNoYW5nZT8NCg0KSWYgc28sIGNvdWxkIHlvdSB0ZWxsIG1lIHRoZSBleGFjdCBtZWFuaW5n
+IG9mIHRoZSA0IGNvbXBvbmVudHMgYWJvdmUuIEFsc28sDQppbiANCnRoZSBmdXR1cmUsIEkgd291
+bGQgYXBwcmVjaWF0ZSBpdCBpZiB3ZSBjb3VsZCBiZSBub3RpZmllZCBhaGVhZCBvZiB0aW1lIG9m
+DQphbnkgDQpjaGFuZ2VzIHRoYXQgbWlnaHQgYWZmZWN0IGV4dGVybmFsIHJlcG9zaXRvcnkgbWFp
+bnRhaW5lcnMgbGlrZSB1cy4NCg0KDQpbMV0NCmh0dHA6Ly9saW51eC5hdmFzeXMuanAvZHJpdmVy
+cy9sc2IvZXBzb24taW5ramV0L3N0YWJsZS9kZWJpYW4vZGlzdHMvbHNiMy4yLw0KWzJdIGh0dHA6
+Ly93d3cub3BlbnByaW50aW5nLm9yZy9kb3dubG9hZC9wcmludGRyaXZlci9kZWJpYW4vZGlzdHMv
+bHNiMy4yLw0KDQotLSANCll1amkgU2FpdG8gPHl1amkuc2FpdG9AYXZhc3lzLmpwPg0KTGludXgg
+RHJpdmVyIFRlYW0sIEVTMUcsIEVTIEJ1c2luZXNzIERpdmlzaW9uDQpBVkFTWVMgQ09SUE9SQVRJ
+T04gPGh0dHA6Ly9hdmFzeXMuanAvPg0K
