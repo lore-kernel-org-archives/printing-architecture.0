@@ -1,11 +1,7 @@
-Content-class: urn:content-classes:message
+Message-ID: <4CFD1535.9050009@gmail.com>
+Date: Mon, 06 Dec 2010 17:54:13 +0100
+From: Till Kamppeter <till.kamppeter@gmail.com>
 MIME-Version: 1.0
-Content-Type: text/plain;
-	charset="UTF-8"
-Content-Transfer-Encoding: base64
-Date: Fri, 3 Dec 2010 15:16:16 +0900
-Message-ID: <F30723B8678F584CB6A4269E911255CB04A457B1@m1a.epkowa.co.jp>
-In-Reply-To: <4CE55A84.3070006@gmail.com>
 References: <F30723B8678F584CB6A4269E911255CB03396379@m1a.epkowa.co.jp>
 	<4B8241D4.2040207@gmail.com>
 	<F30723B8678F584CB6A4269E911255CB034CE4DE@m1a.epkowa.co.jp>
@@ -17,7 +13,10 @@ References: <F30723B8678F584CB6A4269E911255CB03396379@m1a.epkowa.co.jp>
 	<F30723B8678F584CB6A4269E911255CB03BF5E5C@m1a.epkowa.co.jp>
 	<4C091F92.7050102@gmail.com> <4C1284F4.3000707@gmail.com>
 	<4C89CF0C.60003@avasys.jp> <4CE55A84.3070006@gmail.com>
-From: <yuji.saito@avasys.jp>
+	<F30723B8678F584CB6A4269E911255CB04A457B1@m1a.epkowa.co.jp>
+In-Reply-To: <F30723B8678F584CB6A4269E911255CB04A457B1@m1a.epkowa.co.jp>
+Content-Type: text/plain; charset=UTF-8; format=flowed
+Content-Transfer-Encoding: 7bit
 Subject: Re: [Printing-architecture] Updates for auto-downloadable printer
 	packages
 List-Id: Printing architecture under linux
@@ -29,33 +28,82 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: till.kamppeter@gmail.com
+To: yuji.saito@avasys.jp
 Cc: printing-architecture@lists.linux-foundation.org, kenji.hagiwara@avasys.jp
 
-SGksIFRpbGwuDQoNCi0tLS0tT3JpZ2luYWwgTWVzc2FnZS0tLS0tDQpGcm9tOiBUaWxsIEthbXBw
-ZXRlciBbbWFpbHRvOnRpbGwua2FtcHBldGVyQGdtYWlsLmNvbV0gDQpTZW50OiBGcmlkYXksIE5v
-dmVtYmVyIDE5LCAyMDEwIDE6NTYgQU0NCj4gDQo+IEluIGFkZGl0aW9uLCBJIGhhdmUgdXBkYXRl
-ZCAibWtyZXBvZGViIiBmaXhpbmcgc29tZSBidWdzLiBQbGVhc2UgDQo+IHJlLWRvd25sb2FkIGl0
-IGlmIHlvdSBoYXZlIGFscmVhZHkgdXNlZCBpdDoNCj4gDQo+IGh0dHA6Ly93d3cub3BlbnByaW50
-aW5nLm9yZy9kb3dubG9hZC9wcmludGRyaXZlci9kZWJpYW4vbWtyZXBvZGViDQoNCkkgY2hlY2tl
-ZCB0aGUgZml4ZWQgIm1rcmVwb2RlYiIgc2NyaXB0Lg0KSSBub3RpY2VkIHRoYXQgdGhlIGNvbXBv
-bmVudHMgaW4gdGhlIGRlYiByZXBvc2l0b3J5IGhhdmUgYmVlbiBjaGFuZ2VkLg0KDQpJbiB0aGUg
-b2xkIE9wZW5QcmludGluZyBkZWIgcGFja2FnZSByZXBvc2l0b3J5IChhbmQgaW4gb3VyIGN1cnJl
-bnQNCnJlcG9zaXRvcnlbMV0pLA0KYWxsIGRyaXZlciBwYWNrYWdlcyBoYWQgYmVlbiBpbmNsdWRl
-ZCBpbiB0aGUgIm1haW4iIGNvbXBvbmVudC4NCg0KQnV0IHRoZSBjdXJyZW50IE9wZW5QcmludGlu
-ZyBkZWIgcGFja2FnZSByZXBvc2l0b3J5WzJdIGhhcyA0IGNvbXBvbmVudHMsIGFuZA0KZHJpdmVy
-IHBhY2thZ2VzIHVuZGVyICJtYWluLW5vbmZyZWUiIGFuZCAiY29udHJpYiIgYXJlIG5vdCBpbmNs
-dWRlZCBpbg0KIm1haW4iLg0KICAqIG1haW4NCiAgKiBtYWluLW5vbmZyZWUNCiAgKiBjb250cmli
-DQogICogbHNiZGRrDQoNCkZyb20gd2hhdCB5b3Ugc2FpZCBiZWZvcmUsIEkgdW5kZXJzdG9vZCB0
-aGF0IGluIE9wZW5QcmludGluZyAibWFpbiIgd2lsbCANCmNvbnRhaW4gYWxsIHBhY2thZ2VzIChp
-bmNsdWRpbmcgbm9uLWZyZWUgZHJpdmVyIHBhY2thZ2VzKS4gRGlkIHRoZQ0Kc3BlY2lmaWNhdGlv
-biANCmNoYW5nZT8NCg0KSWYgc28sIGNvdWxkIHlvdSB0ZWxsIG1lIHRoZSBleGFjdCBtZWFuaW5n
-IG9mIHRoZSA0IGNvbXBvbmVudHMgYWJvdmUuIEFsc28sDQppbiANCnRoZSBmdXR1cmUsIEkgd291
-bGQgYXBwcmVjaWF0ZSBpdCBpZiB3ZSBjb3VsZCBiZSBub3RpZmllZCBhaGVhZCBvZiB0aW1lIG9m
-DQphbnkgDQpjaGFuZ2VzIHRoYXQgbWlnaHQgYWZmZWN0IGV4dGVybmFsIHJlcG9zaXRvcnkgbWFp
-bnRhaW5lcnMgbGlrZSB1cy4NCg0KDQpbMV0NCmh0dHA6Ly9saW51eC5hdmFzeXMuanAvZHJpdmVy
-cy9sc2IvZXBzb24taW5ramV0L3N0YWJsZS9kZWJpYW4vZGlzdHMvbHNiMy4yLw0KWzJdIGh0dHA6
-Ly93d3cub3BlbnByaW50aW5nLm9yZy9kb3dubG9hZC9wcmludGRyaXZlci9kZWJpYW4vZGlzdHMv
-bHNiMy4yLw0KDQotLSANCll1amkgU2FpdG8gPHl1amkuc2FpdG9AYXZhc3lzLmpwPg0KTGludXgg
-RHJpdmVyIFRlYW0sIEVTMUcsIEVTIEJ1c2luZXNzIERpdmlzaW9uDQpBVkFTWVMgQ09SUE9SQVRJ
-T04gPGh0dHA6Ly9hdmFzeXMuanAvPg0K
+On 12/03/2010 07:16 AM, yuji.saito@avasys.jp wrote:
+> Hi, Till.
+>
+> -----Original Message-----
+> From: Till Kamppeter [mailto:till.kamppeter@gmail.com]
+> Sent: Friday, November 19, 2010 1:56 AM
+>>
+>> In addition, I have updated "mkrepodeb" fixing some bugs. Please
+>> re-download it if you have already used it:
+>>
+>> http://www.openprinting.org/download/printdriver/debian/mkrepodeb
+>
+> I checked the fixed "mkrepodeb" script.
+> I noticed that the components in the deb repository have been changed.
+>
+> In the old OpenPrinting deb package repository (and in our current
+> repository[1]),
+> all driver packages had been included in the "main" component.
+>
+> But the current OpenPrinting deb package repository[2] has 4 components, and
+> driver packages under "main-nonfree" and "contrib" are not included in
+> "main".
+>    * main
+>    * main-nonfree
+>    * contrib
+>    * lsbddk
+>
+>  From what you said before, I understood that in OpenPrinting "main" will
+> contain all packages (including non-free driver packages). Did the
+> specification
+> change?
+>
+> If so, could you tell me the exact meaning of the 4 components above. Also,
+> in
+> the future, I would appreciate it if we could be notified ahead of time of
+> any
+> changes that might affect external repository maintainers like us.
+>
+
+On the OpenPrinting web server we want to give the possibility to host 
+packages in different categories, to make it easier for users and 
+distributions to choose the packages to take into account when browsing 
+available package repositories, especially to avoid that users get 
+offered non-free or unsupported packages if they do not want them. The 
+components are the same as distributions usually use:
+
+- main: Fully supported packages under free licenses (on OpenPrinting
+   packages without binary executables and signed packages)
+
+- main-nonfree: As main, but non-free licenses
+
+- contrib: Unsupported packages, especially drivers with binary
+   executables which are not signed packages. Free licenses.
+
+- contrib-nonfree: As contrib, but non-free licenses
+
+- lsbddk: Only needed for development
+
+As principal selection of drivers for a detected printer by the 
+distributions is controlled by the OpenPrinting database, you do not 
+need to use this scheme for packages which you host on your server. 
+Consider the components.lst simply as an example how packages can be 
+sorted into components by rules. You can simply let everything go into 
+your server's main component by having a components.lst like this:
+
+.* main
+
+Important is to set the correct bits in the XML files set: free/non-free 
+license, manufacturer-supplied, printer device IDs, ... and to have the 
+signing correct. This is all correct for your packages. So do not worry. 
+The new script is only to overcome a problem which the old one had with 
+the Debian repository indexing and also to make it easier to update 
+packages in your repository.
+
+    Till
+
