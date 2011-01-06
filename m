@@ -1,12 +1,11 @@
-Message-Id: <0BBB8210-28CA-4F6F-A7DF-F82DEE72A833@mmiworks.net>
-From: peter sikking <peter@mmiworks.net>
-In-Reply-To: <alpine.LNX.2.00.1101061000050.6846@roma.rasena>
-Content-Type: text/plain; charset=US-ASCII; format=flowed; delsp=yes
+Message-ID: <4D2654CD.4010002@gmail.com>
+Date: Fri, 07 Jan 2011 00:48:29 +0100
+From: Till Kamppeter <till.kamppeter@gmail.com>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8; format=flowed
 Content-Transfer-Encoding: 7bit
-Mime-Version: 1.0 (Apple Message framework v936)
-Date: Thu, 6 Jan 2011 19:53:14 +0100
-References: <alpine.LNX.2.00.1101061000050.6846@roma.rasena>
-Subject: Re: [Printing-architecture] Any news regarding colour management?
+Subject: [Printing-architecture] REMINDER: OpenPrinting Japan/US/Europe call
+ on MONDAY/TUESDAY (January 10/11) NEW TIME SCHEME
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -16,35 +15,45 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Kai-Uwe Behrmann <ku.b@gmx.de>
-Cc: Open Printing <printing-architecture@lists.linux-foundation.org>
+To: OpenPrinting <printing-architecture@lists.linux-foundation.org>, Printing-japan <printing-japan@lists.linux-foundation.org>
 
-hey Kai-Uwe,
+Hi,
 
-> Is anyone working on integrating colour management in CPD regarding
->
-> * ICC profile selection,
-> * profile passing back to applications, and maybe
-> * other stuff?
+On the coming Monday/Tuesday we will have our quarterly conference call.
 
+Agenda:
 
-we investigated color management a while ago when we dealt with the
-photo printer cluster, then designed a solution:
+Common Printing Dialog
+  - Roadmap to complete the dialog until middle of 2011
+  - Still no answer of the German government organization on funding
+  - Further funding needed
+  - Presentation of the Common Printing Dialog to printer manufacturers
+    in Japan in March 2011?
+  - Ubuntu Natty: Infrastructure for auto-downloading signed binary
+    printer driver packages ready. First distro which will auto-download
+    binary drivers!
+  - OpenPrinting Summit 2011
 
-<http://wiki.openusability.org/wiki/printing/index.php/Photo_printers_parameter_specifications#Color_Management_and_the_CPD 
- >
+    Till
 
-notice that now that the maximum-complexity solution is done, it is  
-being
-applied to other printer clusters, with the complexity scaled down where
-the printer's product concept demands it.
+Dial-in data:
 
-     --ps
+(1) January 2011 - Japan/US/Europe - Quarterly OP Meeting
 
-         founder + principal interaction architect
-             man + machine interface works
+     - Note: New time scheme: Tue, 4pm in Tokyo (JST)
 
-         http://blog.mmiworks.net: on interaction architecture
+     - Monday 10 January 2011, Evening
+       - US
+         11pm in San Francisco - US PST (Pacific Standard Time)
 
+     - Tuesday 11 January 2011, Morning
+       - US
+         2am in New York - US EST (Eastern Standard Time)
+       - Europe
+         8am in Berlin - CET (Central European Time)
+       - Japan
+         4pm in Tokyo - JST (Japan Standard Time)
 
-
+     * Main Number (Till Kamppeter, LF, leader)
+       International: +1-218-936-7999
+       Access Code:   491659#
