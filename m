@@ -1,5 +1,5 @@
-Message-ID: <4D265AC4.3020501@gmail.com>
-Date: Fri, 07 Jan 2011 01:13:56 +0100
+Message-ID: <4D265C61.2000703@gmail.com>
+Date: Fri, 07 Jan 2011 01:20:49 +0100
 From: Till Kamppeter <till.kamppeter@gmail.com>
 MIME-Version: 1.0
 References: <F30723B8678F584CB6A4269E911255CB03396379@m1a.epkowa.co.jp>
@@ -28,8 +28,8 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: yuji.saito@avasys.jp
-Cc: printing-architecture@lists.linux-foundation.org, kenji.hagiwara@avasys.jp
+To: Open Printing <printing-architecture@lists.linux-foundation.org>, Printing-japan <printing-japan@lists.linux-foundation.org>
+Cc: Martin Pitt <martin.pitt@ubuntu.com>
 
 Hi,
 
@@ -38,7 +38,10 @@ Linux distribution which automatically downloads binary printer driver
 packages from manufacturers via OpenPrinting.
 
 The still missing support for signed packages got added to the 
-third-party hardware driver manager Jockey today. See also
+third-party hardware driver manager Jockey today. Martin Pitt, thank for 
+your great work!
+
+See also
 
 https://blueprints.launchpad.net/ubuntu/+spec/packageselection-desktop-n-automatic-printer-driver-download-should-support-signed-packages
 
@@ -51,17 +54,23 @@ manufacturer-supplied driver packages available via OpenPrinting will
 work out-of-the-box by just plugging them in or setting them up with 
 system-config-printer.
 
-So do not hesitate to add or update driver packages to support your 
-newest models to have always Plug'n'Print.
+So if you are making Linux printer drivers for a printer manufacturer, 
+do not hesitate to add or update driver packages to support your newest 
+models to have always Plug'n'Print. See
 
-For testing, download Ubuntu Natty (a daily CD or an Alpha version) and 
-plug in one of the supported Epson printers or run the command lines
+https://www.linuxfoundation.org/collaborate/workgroups/openprinting/writingandpackagingprinterdrivers
+
+for instructions.
+
+For testing, download Ubuntu Natty (a daily CD or an Alpha version), do 
+a full update to get it to today's state (Jockey must be at least 0.7) 
+and run the command lines:
 
 cupsctl FileDevice=yes
 system-config-printer --setup-printer='file:/tmp/printout' \
 --devid='MFG:Epson;MDL:ME 320;'
 
-if you do not have any suitable printer near you (they emulate the case 
-that system-config-printer has detected an Epson ME 320).
+They emulate the case that system-config-printer has detected an Epson 
+ME 320.
 
     Till
