@@ -1,11 +1,24 @@
-Message-ID: <4D2655B2.5020206@gmail.com>
-Date: Fri, 07 Jan 2011 00:52:18 +0100
+Message-ID: <4D265AC4.3020501@gmail.com>
+Date: Fri, 07 Jan 2011 01:13:56 +0100
 From: Till Kamppeter <till.kamppeter@gmail.com>
 MIME-Version: 1.0
+References: <F30723B8678F584CB6A4269E911255CB03396379@m1a.epkowa.co.jp>
+	<4B8241D4.2040207@gmail.com>
+	<F30723B8678F584CB6A4269E911255CB034CE4DE@m1a.epkowa.co.jp>
+	<4B8E4CEF.8040007@gmail.com>
+	<F30723B8678F584CB6A4269E911255CB035D7CF6@m1a.epkowa.co.jp>
+	<4BBBA6A9.5050005@gmail.com>
+	<F30723B8678F584CB6A4269E911255CB0392318F@m1a.epkowa.co.jp>
+	<4BD18655.8060000@gmail.com>
+	<F30723B8678F584CB6A4269E911255CB03BF5E5C@m1a.epkowa.co.jp>
+	<4C091F92.7050102@gmail.com> <4C1284F4.3000707@gmail.com>
+	<4C89CF0C.60003@avasys.jp> <4CE55A84.3070006@gmail.com>
+	<F30723B8678F584CB6A4269E911255CB04A457B1@m1a.epkowa.co.jp>
+In-Reply-To: <F30723B8678F584CB6A4269E911255CB04A457B1@m1a.epkowa.co.jp>
 Content-Type: text/plain; charset=UTF-8; format=flowed
 Content-Transfer-Encoding: 7bit
-Subject: [Printing-architecture] REMINDER: OpenPrinting US/Europe monthly
- call coming TUESDAY (January 11)
+Subject: [Printing-architecture] Ubuntu Natty the first distribution which
+ does automatic download of binary printer driver packages
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -15,41 +28,40 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: OpenPrinting <printing-architecture@lists.linux-foundation.org>
+To: yuji.saito@avasys.jp
+Cc: printing-architecture@lists.linux-foundation.org, kenji.hagiwara@avasys.jp
 
 Hi,
 
-On the coming Tuesday we will have our conference call.
+Ubuntu Natty (11.04, to be released end of April) will be the first 
+Linux distribution which automatically downloads binary printer driver 
+packages from manufacturers via OpenPrinting.
 
-Agenda:
+The still missing support for signed packages got added to the 
+third-party hardware driver manager Jockey today. See also
 
-* Common Printing Dialog
-   - Roadmap to complete the dialog until middle of 2011
-   - Still no answer of the German government organization on funding
-   - Further funding needed
-   - Presentation of the Common Printing Dialog to printer manufacturers
-     in Japan in March 2011?
-* Ubuntu Natty: Infrastructure for auto-downloading signed binary
-   printer driver packages ready. First distro which will auto-download
-   binary drivers!
-* OpenPrinting Summit 2011
+https://blueprints.launchpad.net/ubuntu/+spec/packageselection-desktop-n-automatic-printer-driver-download-should-support-signed-packages
+
+and
+
+https://bugs.launchpad.net/bugs/604698
+
+This means that on Ubuntu Natty (and newer) printers supported by the 
+manufacturer-supplied driver packages available via OpenPrinting will 
+work out-of-the-box by just plugging them in or setting them up with 
+system-config-printer.
+
+So do not hesitate to add or update driver packages to support your 
+newest models to have always Plug'n'Print.
+
+For testing, download Ubuntu Natty (a daily CD or an Alpha version) and 
+plug in one of the supported Epson printers or run the command lines
+
+cupsctl FileDevice=yes
+system-config-printer --setup-printer='file:/tmp/printout' \
+--devid='MFG:Epson;MDL:ME 320;'
+
+if you do not have any suitable printer near you (they emulate the case 
+that system-config-printer has detected an Epson ME 320).
 
     Till
-
-Dial-in data:
-
-   * January 2011 - US/Europe - Monthly OP Meeting
-
-     - Tuesday 11 January 2011, Daytime
-       - US
-         9am in San Francisco - US PST (Pacific Standard Time)
-         10am in Colorado - US MST (Mountain Standard Time)
-         11am in Chicago - US CST (Central Standard Time)
-         12pm in New York - US EST (Eastern Standard Time)
-       - Europe
-         6pm in Berlin - CET (Central European Time)
-
-     * Main Number (Till Kamppeter, LF, leader)
-       International: +1-218-936-7999
-       Access Code:   491659#
-
