@@ -1,13 +1,11 @@
-Message-ID: <4D2CB0B2.7080000@gmail.com>
-Date: Tue, 11 Jan 2011 20:34:10 +0100
+Message-ID: <4D2CCF71.9070604@gmail.com>
+Date: Tue, 11 Jan 2011 22:45:21 +0100
 From: Till Kamppeter <till.kamppeter@gmail.com>
 MIME-Version: 1.0
-References: <e395be80811270817n502ccd16wf6cc90f85364f5ae@mail.gmail.com>
-In-Reply-To: <e395be80811270817n502ccd16wf6cc90f85364f5ae@mail.gmail.com>
 Content-Type: text/plain; charset=UTF-8; format=flowed
 Content-Transfer-Encoding: 7bit
-Subject: [Printing-architecture] Last OP Meeting - Tue - 11 January 2011 -
-	The Recording
+Subject: [Printing-architecture] OpenPrinting Summit 2011: April 6-8,
+ 2011 in San Francisco, CA (on LF Summit)
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -17,20 +15,37 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Open Printing <printing-architecture@lists.linux-foundation.org>, Printing-japan <printing-japan@lists.linux-foundation.org>
+To: Open Printing <printing-architecture@lists.linux-foundation.org>, Printing-japan <printing-japan@lists.linux-foundation.org>, printing-summit@lists.linux-foundation.org
 
 Hi,
 
-I have uploaded the recording of the last OpenPrinting meeting to the
-OpenPrinting server:
+the next Linux Foundation Collaboration Summit is announced! It will 
+take place at April 6-8, 2011 in San Francisco, CA. We will do the next 
+OpenPrinting Summit in parallel, and directly after the Printing Working 
+Group Meeting at Apple in Cupertino, CA (April 4-6), so you can travel 
+once and attend two important events about printing!
 
-http://www.openprinting.org/download/meetingnotes/op-telecon/OP-Meeting-20110111.mp3
+https://www.linuxfoundation.org/collaborate/workgroups/openprinting/openprinting-summit-san-francisco-2011
 
-In general, recorded meetings I will upload to
+Proposed agenda items:
 
-http://www.openprinting.org/download/meetingnotes/
+     * Short tutorial: Providing signed binary printer driver packages
+       for automatic download (first distribution with automatic
+       download: Ubuntu 11.04 to be released end of April)
+     * Common Printing Dialog - Presentation of the Release Candidate.
+       Dialog to get into the Linux distributions this fall.
+     * Mobile Printing
+     * Color Management - Make use of Ghostscript's new ICC support
+     * PDF Printing Workflow - Nearly completed
+     * Joint meeting with the LSB workgroup
+     * Quality Assurance - New bugs, regression testing, loss of features
+     * 2011's Major Issues in Linux Printing - Update of our discussion
+       of 2006
+
+Reserve the date!
+
+I hope we all will meet in San Francisco in April.
 
     Till
 
-P. S.: The MP3 is 29 MB long, 1 hour and 25 minutes of talking.
 
