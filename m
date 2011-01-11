@@ -1,11 +1,11 @@
-Message-ID: <4D2B890E.5060709@gmail.com>
-Date: Mon, 10 Jan 2011 23:32:46 +0100
+Message-ID: <4D2C0094.1080601@gmail.com>
+Date: Tue, 11 Jan 2011 08:02:44 +0100
 From: Till Kamppeter <till.kamppeter@gmail.com>
 MIME-Version: 1.0
 Content-Type: text/plain; charset=UTF-8; format=flowed
 Content-Transfer-Encoding: 7bit
 Subject: [Printing-architecture] REMINDER: OpenPrinting Japan/US/Europe call
- IN 8 1/2 HOURS on MONDAY/TUESDAY (January 10/11) NEW TIME SCHEME
+ NOW (January 10/11) NEW TIME SCHEME
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -19,8 +19,7 @@ To: OpenPrinting <printing-architecture@lists.linux-foundation.org>, Printing-ja
 
 Hi,
 
-Today/tomorrow (Monday/Tuesday), in 8 1/2 hours from now, we will have 
-our quarterly conference call.
+NOW we will have our quarterly conference call.
 
 Agenda:
 
