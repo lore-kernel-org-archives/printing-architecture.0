@@ -1,11 +1,18 @@
-Message-ID: <4D2CCF71.9070604@gmail.com>
-Date: Tue, 11 Jan 2011 22:45:21 +0100
-From: Till Kamppeter <till.kamppeter@gmail.com>
+Content-class: urn:content-classes:message
 MIME-Version: 1.0
-Content-Type: text/plain; charset=UTF-8; format=flowed
+Content-Type: text/plain;
+	charset="iso-2022-jp"
 Content-Transfer-Encoding: 7bit
-Subject: [Printing-architecture] OpenPrinting Summit 2011: April 6-8,
- 2011 in San Francisco, CA (on LF Summit)
+Date: Fri, 21 Jan 2011 11:36:43 +0900
+Message-ID: <F30723B8678F584CB6A4269E911255CB04E6F468@m1a.epkowa.co.jp>
+In-Reply-To: <4D265C61.2000703@gmail.com>
+References: <F30723B8678F584CB6A4269E911255CB03396379@m1a.epkowa.co.jp><4B8241D4.2040207@gmail.com><F30723B8678F584CB6A4269E911255CB034CE4DE@m1a.epkowa.co.jp><4B8E4CEF.8040007@gmail.com><F30723B8678F584CB6A4269E911255CB035D7CF6@m1a.epkowa.co.jp><4BBBA6A9.5050005@gmail.com><F30723B8678F584CB6A4269E911255CB0392318F@m1a.epkowa.co.jp><4BD18655.8060000@gmail.com><F30723B8678F584CB6A4269E911255CB03BF5E5C@m1a.epkowa.co.jp><4C091F92.7050102@gmail.com>
+	<4C1284F4.3000707@gmail.com><4C89CF0C.60003@avasys.jp>
+	<4CE55A84.3070006@gmail.com><F30723B8678F584CB6A4269E911255CB04A457B1@m1a.epkowa.co.jp>
+	<4D265C61.2000703@gmail.com>
+From: <yuji.saito@avasys.jp>
+Subject: Re: [Printing-architecture] Ubuntu Natty the first distribution
+	which does automatic download of binary printer driver packages
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -15,37 +22,97 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Open Printing <printing-architecture@lists.linux-foundation.org>, Printing-japan <printing-japan@lists.linux-foundation.org>, printing-summit@lists.linux-foundation.org
+To: till.kamppeter@gmail.com, printing-architecture@lists.linux-foundation.org, printing-japan@lists.linux-foundation.org
+Cc: martin.pitt@ubuntu.com
 
-Hi,
+Hello, Till, Martin.
 
-the next Linux Foundation Collaboration Summit is announced! It will 
-take place at April 6-8, 2011 in San Francisco, CA. We will do the next 
-OpenPrinting Summit in parallel, and directly after the Printing Working 
-Group Meeting at Apple in Cupertino, CA (April 4-6), so you can travel 
-once and attend two important events about printing!
+On Fri, 2011-01-07 at 01:20 +0100, Till Kamppeter wrote:
+> Hi,
+>
+> Ubuntu Natty (11.04, to be released end of April) will be the first
+> Linux distribution which automatically downloads binary printer driver
+> packages from manufacturers via OpenPrinting.
 
-https://www.linuxfoundation.org/collaborate/workgroups/openprinting/openprinting-summit-san-francisco-2011
+Thank you for achieving automatic download.
 
-Proposed agenda items:
+I checked in my home, and it works perfectly. I could read driver's
+license, and I could select one from 2 drivers for 1 printer.
 
-     * Short tutorial: Providing signed binary printer driver packages
-       for automatic download (first distribution with automatic
-       download: Ubuntu 11.04 to be released end of April)
-     * Common Printing Dialog - Presentation of the Release Candidate.
-       Dialog to get into the Linux distributions this fall.
-     * Mobile Printing
-     * Color Management - Make use of Ghostscript's new ICC support
-     * PDF Printing Workflow - Nearly completed
-     * Joint meeting with the LSB workgroup
-     * Quality Assurance - New bugs, regression testing, loss of features
-     * 2011's Major Issues in Linux Printing - Update of our discussion
-       of 2006
+But I tried it in my company, it had a problem and didn't work. It was
+because of proxy. Result of my quick analysis, it could work if the
+following 3 points are changed.
 
-Reserve the date!
+1. In system-config-printer (package:
+python-cupshelpers_1.2.3+20100723-0ubuntu13)
+   system-config-printer accesses to OpenPrinting.org. But it did't
+   read "http_proxy". I tried like below, and it could work.
 
-I hope we all will meet in San Francisco in April.
+   (Caution! It is just example. I think proxy information should be
+    acquired from "http_proxy" environment variable.)
+========================================================================
+--- /usr/share/pyshared/cupshelpers/openprinting.py.ORG	2011-01-04
+23:39:02.000000000 +0900
++++ /usr/share/pyshared/cupshelpers/openprinting.py	2011-01-20
+09:58:58.000000000 +0900
+@@ -59,8 +59,9 @@
+         # Send request
+         result = None
+         status = 1
++        myproxies = {'http': 'http://proxy.example.com:port'}
+         try:
+-            conn = urllib.urlopen(self.url);
++            conn = urllib.urlopen(self.url, proxies=myproxies);
+             status = conn.getcode();
+             if (status == 200):
+                 result = conn.read()
+========================================================================
 
-    Till
+2. In jockey (package: jockey-common_0.8-0ubuntu3)
+   Jockey seems to acquire the public key from driver's fingerprint.
+   But gpg command in jockey didn't read "http_proxy".
+   I tried like below, and it could work.
 
+   (Caution! It is just example. I think proxy information should be
+    acquired from "http_proxy" environment variable.)
+========================================================================
+--- /usr/share/pyshared/jockey/oslib.py.ORG	2011-01-20 03:57:54.000000000
++0900
++++ /usr/share/pyshared/jockey/oslib.py	2011-01-20 13:32:36.000000000 +0900
+@@ -436,7 +436,9 @@
+             # the fingerprint
+             gpg = subprocess.Popen(['gpg', '--homedir', gpghome,
+                 '--no-default-keyring', '--primary-keyring',
+default_keyring,
+-                '--keyserver', self.gpg_key_server, '--recv-key', keyid],
++                '--keyserver', self.gpg_key_server,
++                '--keyserver-options', 'http-proxy=http://proxy.example.com:
+port',
++                '--recv-key', keyid],
+                 stdout=subprocess.PIPE, stderr=subprocess.PIPE,
+                 env={'PATH': os.environ.get('PATH', '')})
+             (out, err) = gpg.communicate()
+========================================================================
+   And, in addition, I think it might be better that gpg uses http access
+   to port 80 instead of hkp access by default, considering the users in
+   the enterprise or the organization.
 
+3. In apt-get
+   [System]-[Preferences]-[Network Proxy] (gnome-network-properties)
+   doesn't set proxy for apt, so jockey can't download the driver. Ubuntu
+   10.10 or older, gnome-network-properties could set proxy for apt.
+   I created file like below, and jockey could download the driver.
+========================================================================
+# cat <<EOF > /etc/apt/apt.conf
+Acquire::http::Proxy "http://proxy.example.com:port";
+EOF
+========================================================================
+
+Best regards.
+
+Saito
+
+-- 
+Yuji Saito <yuji.saito@avasys.jp>
+Linux Driver Team, ES1G, ES Business Division
+AVASYS CORPORATION <http://avasys.jp/>
