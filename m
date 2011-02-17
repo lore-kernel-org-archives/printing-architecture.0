@@ -1,11 +1,11 @@
-Message-ID: <4D5DA039.9010907@gmail.com>
-Date: Thu, 17 Feb 2011 23:24:57 +0100
+Message-ID: <4D5DA93A.8060906@gmail.com>
+Date: Fri, 18 Feb 2011 00:03:22 +0100
 From: Till Kamppeter <till.kamppeter@gmail.com>
 MIME-Version: 1.0
 Content-Type: text/plain; charset=UTF-8; format=flowed
 Content-Transfer-Encoding: 7bit
-Subject: [Printing-architecture] Google Summer of Code 2011 - Project ideas
- page for the Linux Foundation online
+Subject: [Printing-architecture] Google Summer of Code 2011 - JTAPI
+	Implementation
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -15,17 +15,20 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Alexey Khoroshilov <khoroshilov@ispras.ru>, "Luis R. Rodriguez" <mcgrof@gmail.com>, Greg KH <greg@kroah.com>, "lsb-discuss@lists.linux-foundation.org" <lsb-discuss@lists.linux-foundation.org>, linux-wireless <linux-wireless@vger.kernel.org>, Open Printing <printing-architecture@lists.linux-foundation.org>, Lars Uebernickel <larsuebernickel@gmx.de>, peter sikking <peter@mmiworks.net>
+To: Open Printing <printing-architecture@lists.linux-foundation.org>
 
 Hi,
 
-I have set up a page for project ideas for the Linux Foundation's 
-participation in the Google Summer of Code 2011:
+as we talked about on our last phone meeting, use of job tickets and 
+therefore JTAPI is very important for IPP Everywhere for mobile, cloud, 
+driver-less, ... printing.
 
-https://www.linuxfoundation.org/collaborate/workgroups/gsoc/google-summer-code-2011
+So I want to ask you to edit the two project idea listings for the JTAPI 
+implementation to advertise them in a better way, so that we succeed to 
+occupy them with good students.
 
-Please add your ideas to the sub-page of your work group. If you have 
-problems mail me with your project idea.
+Simply edit the listings on our project ideas page:
+
+https://www.linuxfoundation.org/collaborate/workgroups/gsoc/2011-gsoc-printing-projects
 
     Till
-
