@@ -1,12 +1,20 @@
-Date: Thu, 24 Feb 2011 20:13:41 +0100 (MET)
-From: Kai-Uwe Behrmann <ku.b@gmx.de>
-In-Reply-To: <AANLkTikLN+qpdaunDz=bSxPj0K+k+W4Gg3JDh3udXj9=@mail.gmail.com>
-Message-ID: <alpine.LNX.2.00.1102241922270.6623@roma.rasena>
+Mime-Version: 1.0 (Apple Message framework v1082)
+Content-Type: text/plain; charset=us-ascii
+From: Chris Murphy <lists@colorremedies.com>
+In-Reply-To: <alpine.LNX.2.00.1102242014250.6623@roma.rasena>
+Date: Thu, 24 Feb 2011 12:21:24 -0700
+Content-Transfer-Encoding: quoted-printable
+Message-Id: <40DAD93C-D5D6-4733-A779-B377AC4A2B3C@colorremedies.com>
 References: <AANLkTikLN+qpdaunDz=bSxPj0K+k+W4Gg3JDh3udXj9=@mail.gmail.com>
-MIME-Version: 1.0
-Content-Type: MULTIPART/MIXED; BOUNDARY="8323584-1077795497-1298574821=:6623"
+	<1FBAD420-6AF8-44A8-B5D5-77FDE617BCB3@mmiworks.net>
+	<9198987E-D9BD-4C2F-B83C-ECB56D1C2E22@colorremedies.com>
+	<AANLkTim5g3dsp4N2E3Tv9e6wR6iqtQu415BWQ=sRkDpL@mail.gmail.com>
+	<FD797C30-7A88-40E3-864E-83E4FBCCC146@colorremedies.com>
+	<AANLkTi=A8Z_H6CXnZizsr_r6zzcWUJZBuxaMDk1_L2ON@mail.gmail.com>
+	<159637EF-273A-4084-B6C9-DE239C7172B0@colorremedies.com>
+	<alpine.LNX.2.00.1102242014250.6623@roma.rasena>
 Subject: Re: [Printing-architecture] Common Printing Dialog and color
- management
+	management
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -16,52 +24,32 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Richard Hughes <hughsient@gmail.com>
+To: Kai-Uwe Behrmann <ku.b@gmx.de>
 Cc: Printing-architecture@lists.linux-foundation.org
 
-  This message is in MIME format.  The first part should be readable text,
-  while the remaining parts are likely unreadable without MIME-aware tools.
-
---8323584-1077795497-1298574821=:6623
-Content-Type: TEXT/PLAIN; charset="utf-8"; format="flowed"
-Content-Transfer-Encoding: 8bit
-
-Am 24.02.11, 14:39 -0000 schrieb Richard Hughes:
-> I've been doing quite a lot of research in to the Common Printing
-> Dialog in the last two days for my colord integration. I'm really not
-> sure where it fits in my color managed architecture plans.
->
-> From my perhaps-naïve point of view, CPD seems to have 3 main problems:
-> 
-> * There hasn't been any code merged in 5 *years*, even though quite a
-> lot of code has already been written.
-> * Neither GTK or KDE seem to want to include a new UI that doesn't
-> match either of their HIG guidelines.
-
-As usual: citation needed. That leads to a contructive dialog.
-Marginalisation is no good style.
-
-> * Every single PPD file on the planet would need to be modified to
-> support the CPD.
-
-You can not be serious about this.
-
-> So basically, I'm not sure what the CPD buys us. Looking at
-> http://wiki.openusability.org/wiki/printing/index.php/Photo_printers_parameter_specifications#Color_Management_and_the_CPD
-> I'm not convinced mixing the color management settings in with the
-> printing options makes a lot of sense either.
-
-CPD runs as a user process. Thus the user relation is first class. While 
-xxxtoraster is a server side process running as user lp. How might lp 
-know, which ICC profile is the actual one and from which user? On 
-which mechanism does the scheme rely on? It was brought up several 
-times. I never read a convincing answere for that question.
 
 
-regards
-Kai-Uwe Behrmann
--- 
-developing for colour management 
-www.behrmann.name + www.oyranos.org
 
---8323584-1077795497-1298574821=:6623--
+On Feb 24, 2011, at 12:18 PM, Kai-Uwe Behrmann wrote:
+
+> Am 24.02.11, 10:52 -0700 schrieb Chris Murphy:
+>> On Feb 24, 2011, at 10:46 AM, Richard Hughes wrote:
+>>> On 24 February 2011 17:41, Chris Murphy <lists@colorremedies.com> =
+wrote:
+>>>> Not a bad punt for now actually....might be best to just leave CMYK =
+untouched.
+>>>=20
+>>> Yup, that was my strategy too.
+>>=20
+>> It's consistent with Windows and Mac OS also. *shrug* And that's not =
+a bad thing in this instance.
+>=20
+> As soon as somewhere in the print path appears a Cmyk default, its a =
+failed assumtion. Not actual robust.
+
+True. It would be wrong almost no matter what. Might as well just punt =
+and make it a pass through color model. Same would be the case for =
+DeviceN, and CMYK is much closer to DeviceN than are RGB and device =
+independent spaces.
+
+Chris Murphy=
