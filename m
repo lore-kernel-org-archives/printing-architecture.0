@@ -1,19 +1,18 @@
-Mime-Version: 1.0 (Apple Message framework v1082)
-Content-Type: text/plain; charset=us-ascii
-From: peter sikking <peter@mmiworks.net>
-In-Reply-To: <AANLkTinZe4Diu5re=s1hHcD9u5E-anZTSuz-XnKY3DwK@mail.gmail.com>
-Date: Thu, 24 Feb 2011 19:31:07 +0100
-Content-Transfer-Encoding: 7bit
-Message-Id: <68C96BC3-E100-458A-9984-4B6E7D25746C@mmiworks.net>
+Date: Thu, 24 Feb 2011 20:18:32 +0100 (MET)
+From: Kai-Uwe Behrmann <ku.b@gmx.de>
+In-Reply-To: <159637EF-273A-4084-B6C9-DE239C7172B0@colorremedies.com>
+Message-ID: <alpine.LNX.2.00.1102242014250.6623@roma.rasena>
 References: <AANLkTikLN+qpdaunDz=bSxPj0K+k+W4Gg3JDh3udXj9=@mail.gmail.com>
 	<1FBAD420-6AF8-44A8-B5D5-77FDE617BCB3@mmiworks.net>
-	<AANLkTim5KTc2n3GyDsL0uAMpHju_kWrbYk9QCwaqyYnF@mail.gmail.com>
-	<DA4E2FD8-85B4-4EAB-B08F-1E1DA7E16E0A@colorremedies.com>
-	<AANLkTin8DogFv-ik-odq95kwF1+unEx7Pdfr9Z8P2+wY@mail.gmail.com>
-	<46331CA1-5D2F-4D21-B951-23D197308812@mmiworks.net>
-	<AANLkTinZe4Diu5re=s1hHcD9u5E-anZTSuz-XnKY3DwK@mail.gmail.com>
+	<9198987E-D9BD-4C2F-B83C-ECB56D1C2E22@colorremedies.com>
+	<AANLkTim5g3dsp4N2E3Tv9e6wR6iqtQu415BWQ=sRkDpL@mail.gmail.com>
+	<FD797C30-7A88-40E3-864E-83E4FBCCC146@colorremedies.com>
+	<AANLkTi=A8Z_H6CXnZizsr_r6zzcWUJZBuxaMDk1_L2ON@mail.gmail.com>
+	<159637EF-273A-4084-B6C9-DE239C7172B0@colorremedies.com>
+MIME-Version: 1.0
+Content-Type: TEXT/PLAIN; charset=US-ASCII; format=flowed
 Subject: Re: [Printing-architecture] Common Printing Dialog and color
-	management
+ management
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -23,25 +22,24 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Richard Hughes <hughsient@gmail.com>
+To: Chris Murphy <lists@colorremedies.com>
 Cc: Printing-architecture@lists.linux-foundation.org
 
-Richard Hughes wrote:
+Am 24.02.11, 10:52 -0700 schrieb Chris Murphy:
+> On Feb 24, 2011, at 10:46 AM, Richard Hughes wrote:
+>> On 24 February 2011 17:41, Chris Murphy <lists@colorremedies.com> wrote:
+>>> Not a bad punt for now actually....might be best to just leave CMYK untouched.
+>>
+>> Yup, that was my strategy too.
+>
+> It's consistent with Windows and Mac OS also. *shrug* And that's not a bad thing in this instance.
 
-> On 24 February 2011 17:59, peter sikking <peter@mmiworks.net> wrote:
->> where on earth did you find that?
-> 
-> The gtk-dialog example in the common-printing-dialog bzr repository.
+As soon as somewhere in the print path appears a Cmyk default, its a 
+failed assumtion. Not actual robust.
 
-
-and the development state of that part of the project is..?
-
-    --ps
-
-        founder + principal interaction architect
-            man + machine interface works
-
-        http://blog.mmiworks.net: on interaction architecture
-
-
+kind regards
+Kai-Uwe Behrmann
+-- 
+developing for colour management 
+www.behrmann.name + www.oyranos.org
 
