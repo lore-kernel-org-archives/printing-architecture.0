@@ -1,11 +1,12 @@
 MIME-Version: 1.0
-In-Reply-To: <DA4E2FD8-85B4-4EAB-B08F-1E1DA7E16E0A@colorremedies.com>
+In-Reply-To: <FD797C30-7A88-40E3-864E-83E4FBCCC146@colorremedies.com>
 References: <AANLkTikLN+qpdaunDz=bSxPj0K+k+W4Gg3JDh3udXj9=@mail.gmail.com>
 	<1FBAD420-6AF8-44A8-B5D5-77FDE617BCB3@mmiworks.net>
-	<AANLkTim5KTc2n3GyDsL0uAMpHju_kWrbYk9QCwaqyYnF@mail.gmail.com>
-	<DA4E2FD8-85B4-4EAB-B08F-1E1DA7E16E0A@colorremedies.com>
-Date: Thu, 24 Feb 2011 17:45:11 +0000
-Message-ID: <AANLkTin8DogFv-ik-odq95kwF1+unEx7Pdfr9Z8P2+wY@mail.gmail.com>
+	<9198987E-D9BD-4C2F-B83C-ECB56D1C2E22@colorremedies.com>
+	<AANLkTim5g3dsp4N2E3Tv9e6wR6iqtQu415BWQ=sRkDpL@mail.gmail.com>
+	<FD797C30-7A88-40E3-864E-83E4FBCCC146@colorremedies.com>
+Date: Thu, 24 Feb 2011 17:46:48 +0000
+Message-ID: <AANLkTi=A8Z_H6CXnZizsr_r6zzcWUJZBuxaMDk1_L2ON@mail.gmail.com>
 From: Richard Hughes <hughsient@gmail.com>
 Content-Type: text/plain; charset=UTF-8
 Subject: Re: [Printing-architecture] Common Printing Dialog and color
@@ -22,19 +23,18 @@ List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-ar
 To: Chris Murphy <lists@colorremedies.com>
 Cc: Printing-architecture@lists.linux-foundation.org
 
-On 24 February 2011 17:34, Chris Murphy <lists@colorremedies.com> wrote:
-> Naturally it needs to fit into the HIG for Gnome and KDE independently...
+On 24 February 2011 17:41, Chris Murphy <lists@colorremedies.com> wrote:
+> ...and not "auto assign" which just makes me want to poke myself in the eye with a stick.
 
-http://people.freedesktop.org/~hughsient/temp/CommonPrintDialog.png
+Heh, you made me laugh out loud.. :-)
 
-I'm not sure there is a HIG rule that isn't being broken in that
-screenshot. The current GTK print dialog isn't perfect by any means,
-but it at least confirms to the HIG and users are familiar with where
-the controls are located.
+> Not a bad punt for now actually....might be best to just leave CMYK untouched.
 
-> If you have rollovers that show a URI for where this profile is located, that could show filename.
+Yup, that was my strategy too.
 
-I'm not sure the filename and path is interesting in any way
-whatsoever. It's just an implementation detail.
+> I'm thinking of users. Not rational beings.
+
+Fair point, but even non-rational beings shouldn't have to understand
+what a fallback profile is used for.
 
 Richard.
