@@ -1,11 +1,11 @@
-Mime-Version: 1.0 (Apple Message framework v1082)
-Content-Type: text/plain; charset=iso-8859-1
-From: peter sikking <peter@mmiworks.net>
-In-Reply-To: <AANLkTikLN+qpdaunDz=bSxPj0K+k+W4Gg3JDh3udXj9=@mail.gmail.com>
-Date: Thu, 24 Feb 2011 16:36:59 +0100
-Content-Transfer-Encoding: quoted-printable
-Message-Id: <1FBAD420-6AF8-44A8-B5D5-77FDE617BCB3@mmiworks.net>
+MIME-Version: 1.0
+In-Reply-To: <1FBAD420-6AF8-44A8-B5D5-77FDE617BCB3@mmiworks.net>
 References: <AANLkTikLN+qpdaunDz=bSxPj0K+k+W4Gg3JDh3udXj9=@mail.gmail.com>
+	<1FBAD420-6AF8-44A8-B5D5-77FDE617BCB3@mmiworks.net>
+Date: Thu, 24 Feb 2011 17:05:26 +0000
+Message-ID: <AANLkTim5KTc2n3GyDsL0uAMpHju_kWrbYk9QCwaqyYnF@mail.gmail.com>
+From: Richard Hughes <hughsient@gmail.com>
+Content-Type: text/plain; charset=UTF-8
 Subject: Re: [Printing-architecture] Common Printing Dialog and color
 	management
 List-Id: Printing architecture under linux
@@ -17,60 +17,44 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Richard Hughes <hughsient@gmail.com>
+To: peter sikking <peter@mmiworks.net>
 Cc: Printing-architecture@lists.linux-foundation.org
 
-Richard Hughes wrote:
+On 24 February 2011 15:36, peter sikking <peter@mmiworks.net> wrote:
+> both KDE and GNOME will happily take the patches.
 
-> I've been doing quite a lot of research in to the Common Printing
-> Dialog in the last two days for my colord integration. I'm really not
-> sure where it fits in my color managed architecture plans.
->=20
-> =46rom my perhaps-na=EFve point of view, CPD seems to have 3 main =
-problems:
->=20
-> * There hasn't been any code merged in 5 *years*, even though quite a
-> lot of code has already been written.
-> * Neither GTK or KDE seem to want to include a new UI that doesn't
-> match either of their HIG guidelines.
+I'm afraid that just isn't true for GNOME. I work quite a bit on GTK
+and GNOME (my boss is Matthias Clasen...), and I can tell you that
+there would be no way such a non-standard looking dialog would be
+merged into such a core part of the toolkit. There would have to be a
+very compelling reason to move the printer dialog out of process as
+this would greatly complicate the printing process. It would also be a
+massive API and ABI break, and considering GTK3 has just released, I
+see quite unlikely.
 
-both KDE and GNOME will happily take the patches. there is a lot of
-enthusiasm for it at both platforms. just not to do the work. so we
-have to get it to work as a large infrastructure project, then it
-can go in.
+> there is a lot of enthusiasm for it at both platforms.
 
-about the HIG: in the spec you are looking at is a KDE/GNOME agnostic
-meta spec, the implementation is done for KDE and GNOME separately,
-fully HIG-compliant.
+But no contributors? No upstream commits in 5 years?
 
-> * Every single PPD file on the planet would need to be modified to
-> support the CPD.
+> about the HIG: in the spec you are looking at is a KDE/GNOME agnostic
+> meta spec, the implementation is done for KDE and GNOME separately,
+> fully HIG-compliant.
 
-Till has ensured that the cpd is backward compatible with any
-(decent) PPD file on the planet. apart from that all major
-printer manufacturers have been planning and gearing up for
-PPD amending that will unlock the full cpd potential.
+It's not a meta-spec, it's a Human Interface Guideline specific to the
+GNOME desktop. If we're making a CPD implementation to work to the
+GNOME HIG, it's not going to look anything like the CPD implementation
+for KDE. So then we're just left with a DBus interface that can't
+actually do anything much more than we could before.
 
-> So basically, I'm not sure what the CPD buys us. Looking at
-> =
-http://wiki.openusability.org/wiki/printing/index.php/Photo_printers_param=
-eter_specifications#Color_Management_and_the_CPD
-> I'm not convinced mixing the color management settings in with the
-> printing options makes a lot of sense either.
+>> So basically, I'm not sure what the CPD buys us. Looking at
+> I am not sure what you mean exactly. please be a bit more
+> precise about what you do not see working, from which perspective
+> (technical, color workflows, or something else).
 
+These are my three target users: http://colord.hughsie.com/profiles.html
 
-now it is getting interesting.
+None of these people would be able to choose an option from a dropdown
+just listing the ICC filenames by filename. And they shouldn't have to
+when we can map from qualifier to icc profile automatically...
 
-I am not sure what you mean exactly. please be a bit more
-precise about what you do not see working, from which perspective
-(technical, color workflows, or something else).
-
-    --ps
-
-        founder + principal interaction architect
-            man + machine interface works
-
-        http://blog.mmiworks.net: on interaction architecture
-
-
-
+Richard.
