@@ -1,16 +1,15 @@
 Mime-Version: 1.0 (Apple Message framework v1082)
 Content-Type: text/plain; charset=us-ascii
-From: Chris Murphy <lists@colorremedies.com>
-In-Reply-To: <AANLkTi=A8Z_H6CXnZizsr_r6zzcWUJZBuxaMDk1_L2ON@mail.gmail.com>
-Date: Thu, 24 Feb 2011 10:52:39 -0700
-Content-Transfer-Encoding: quoted-printable
-Message-Id: <159637EF-273A-4084-B6C9-DE239C7172B0@colorremedies.com>
+From: peter sikking <peter@mmiworks.net>
+In-Reply-To: <AANLkTin8DogFv-ik-odq95kwF1+unEx7Pdfr9Z8P2+wY@mail.gmail.com>
+Date: Thu, 24 Feb 2011 18:59:33 +0100
+Content-Transfer-Encoding: 7bit
+Message-Id: <46331CA1-5D2F-4D21-B951-23D197308812@mmiworks.net>
 References: <AANLkTikLN+qpdaunDz=bSxPj0K+k+W4Gg3JDh3udXj9=@mail.gmail.com>
 	<1FBAD420-6AF8-44A8-B5D5-77FDE617BCB3@mmiworks.net>
-	<9198987E-D9BD-4C2F-B83C-ECB56D1C2E22@colorremedies.com>
-	<AANLkTim5g3dsp4N2E3Tv9e6wR6iqtQu415BWQ=sRkDpL@mail.gmail.com>
-	<FD797C30-7A88-40E3-864E-83E4FBCCC146@colorremedies.com>
-	<AANLkTi=A8Z_H6CXnZizsr_r6zzcWUJZBuxaMDk1_L2ON@mail.gmail.com>
+	<AANLkTim5KTc2n3GyDsL0uAMpHju_kWrbYk9QCwaqyYnF@mail.gmail.com>
+	<DA4E2FD8-85B4-4EAB-B08F-1E1DA7E16E0A@colorremedies.com>
+	<AANLkTin8DogFv-ik-odq95kwF1+unEx7Pdfr9Z8P2+wY@mail.gmail.com>
 Subject: Re: [Printing-architecture] Common Printing Dialog and color
 	management
 List-Id: Printing architecture under linux
@@ -25,40 +24,26 @@ List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-ar
 To: Richard Hughes <hughsient@gmail.com>
 Cc: Printing-architecture@lists.linux-foundation.org
 
-On Feb 24, 2011, at 10:46 AM, Richard Hughes wrote:
+Richard Hughes wrote:
 
-> On 24 February 2011 17:41, Chris Murphy <lists@colorremedies.com> =
-wrote:
->> ...and not "auto assign" which just makes me want to poke myself in =
-the eye with a stick.
->=20
-> Heh, you made me laugh out loud.. :-)
+> http://people.freedesktop.org/~hughsient/temp/CommonPrintDialog.png
+> 
+> I'm not sure there is a HIG rule that isn't being broken in that
+> screenshot.
 
-It's more sensible to put "No Idea" everywhere you'd see "Automatic".
+funny, I did not even recognise that screenshot as having anything
+to do with the cpd design.
+
+where on earth did you find that?
+
+very funny to fuel a discussion based on that.
+
+    --ps
+
+        founder + principal interaction architect
+            man + machine interface works
+
+        http://blog.mmiworks.net: on interaction architecture
 
 
->> Not a bad punt for now actually....might be best to just leave CMYK =
-untouched.
->=20
-> Yup, that was my strategy too.
 
-It's consistent with Windows and Mac OS also. *shrug* And that's not a =
-bad thing in this instance.
-
->=20
->> I'm thinking of users. Not rational beings.
->=20
-> Fair point, but even non-rational beings shouldn't have to understand
-> what a fallback profile is used for.
-
-No, I don't know that it makes sense to spin precious engineering cycles =
-on them either. That's why I'm not a fan of this distinction of "low =
-end, mid end, high end" user and all the different paths and behaviors =
-this implies coding for. I think you build one path, one set of logical =
-structures, it includes all the users. Even a high end user can be a low =
-end user when they print to a color laser printer and don't care about =
-super accuracy. And even a low end user wants to start out with prints =
-that don't look like dog crap out of the gate before they choose some =
-option to make it look "better".
-
-Chris=
