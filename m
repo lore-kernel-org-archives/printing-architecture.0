@@ -1,13 +1,13 @@
-Content-Type: text/plain; charset=us-ascii
-Mime-Version: 1.0 (Apple Message framework v1082)
-From: Chris Murphy <lists@colorremedies.com>
-In-Reply-To: <40F5FF0F-3AAC-4661-9FF0-4568326A2D51@colorremedies.com>
-Date: Thu, 24 Feb 2011 14:42:01 -0700
-Content-Transfer-Encoding: quoted-printable
-Message-Id: <42A75819-F34A-4E8B-A10A-279A60775692@colorremedies.com>
+MIME-Version: 1.0
+In-Reply-To: <42A75819-F34A-4E8B-A10A-279A60775692@colorremedies.com>
 References: <AANLkTikLN+qpdaunDz=bSxPj0K+k+W4Gg3JDh3udXj9=@mail.gmail.com>
 	<alpine.LNX.2.00.1102241922270.6623@roma.rasena>
 	<40F5FF0F-3AAC-4661-9FF0-4568326A2D51@colorremedies.com>
+	<42A75819-F34A-4E8B-A10A-279A60775692@colorremedies.com>
+Date: Thu, 24 Feb 2011 22:08:32 +0000
+Message-ID: <AANLkTimHoS=_59Ew5VhVZ6e0FjL95Sf=xcQermUCDw_y@mail.gmail.com>
+From: Richard Hughes <hughsient@gmail.com>
+Content-Type: text/plain; charset=UTF-8
 Subject: Re: [Printing-architecture] Common Printing Dialog and color
 	management
 List-Id: Printing architecture under linux
@@ -19,16 +19,15 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Printing-architecture@lists.linux-foundation.org
+To: Chris Murphy <lists@colorremedies.com>
+Cc: Printing-architecture@lists.linux-foundation.org
 
-OK I just thought of a reason why you can't always punt and pass through =
-CMYK. It's possible an application will print a CMYK document, and the =
-printer has no idea what CMYK is. In that case you either have to fail =
-the print job, or you have to assume some CMYK space (like FOGRA39 or =
-GRACoL or whatever), and convert to RGB probably sRGB or if there is a =
-*cupsICCProfile convert to that.
+On 24 February 2011 21:42, Chris Murphy <lists@colorremedies.com> wrote:
+> In that case you either have to fail the print job, or you have to assume some CMYK space
 
-So as long as it's CMYK to CMYK, you can pass through. If it's CMYK to =
-RGB you'd need other handling.
+So, in the case of CYMK, it's not just as case where we can "assume
+sRGB" like we can RGB with a clear conscience. It kinda comes back to
+my original question, is this a per-user preference, or a per-system
+policy?
 
-Chris Murphy=
+Richard.
