@@ -1,13 +1,14 @@
 Mime-Version: 1.0 (Apple Message framework v1082)
 Content-Type: text/plain; charset=us-ascii
 From: Chris Murphy <lists@colorremedies.com>
-In-Reply-To: <AANLkTim5KTc2n3GyDsL0uAMpHju_kWrbYk9QCwaqyYnF@mail.gmail.com>
-Date: Thu, 24 Feb 2011 10:34:11 -0700
+In-Reply-To: <AANLkTim5g3dsp4N2E3Tv9e6wR6iqtQu415BWQ=sRkDpL@mail.gmail.com>
+Date: Thu, 24 Feb 2011 10:41:30 -0700
 Content-Transfer-Encoding: quoted-printable
-Message-Id: <DA4E2FD8-85B4-4EAB-B08F-1E1DA7E16E0A@colorremedies.com>
+Message-Id: <FD797C30-7A88-40E3-864E-83E4FBCCC146@colorremedies.com>
 References: <AANLkTikLN+qpdaunDz=bSxPj0K+k+W4Gg3JDh3udXj9=@mail.gmail.com>
 	<1FBAD420-6AF8-44A8-B5D5-77FDE617BCB3@mmiworks.net>
-	<AANLkTim5KTc2n3GyDsL0uAMpHju_kWrbYk9QCwaqyYnF@mail.gmail.com>
+	<9198987E-D9BD-4C2F-B83C-ECB56D1C2E22@colorremedies.com>
+	<AANLkTim5g3dsp4N2E3Tv9e6wR6iqtQu415BWQ=sRkDpL@mail.gmail.com>
 Subject: Re: [Printing-architecture] Common Printing Dialog and color
 	management
 List-Id: Printing architecture under linux
@@ -24,39 +25,49 @@ Cc: Printing-architecture@lists.linux-foundation.org
 
 
 
-On Feb 24, 2011, at 10:05 AM, Richard Hughes wrote:
+On Feb 24, 2011, at 10:33 AM, Richard Hughes wrote:
 
-> It's not a meta-spec, it's a Human Interface Guideline specific to the
-> GNOME desktop. If we're making a CPD implementation to work to the
-> GNOME HIG, it's not going to look anything like the CPD implementation
-> for KDE. So then we're just left with a DBus interface that can't
-> actually do anything much more than we could before.
-
-I think the CPD in the wiki is meant to be a very rudimentary mockup to =
-provide a visual is all. I don't think it's meant to be fixed in stone. =
-Naturally it needs to fit into the HIG for Gnome and KDE independently, =
-and be conscious of how it would be presented on mobile platforms one =
-day in the near future as well. So it can't be using 95% white space =
-like the mockups do. To me, it's understood because it's unworkable as a =
-fixed layout.
-
+> On 24 February 2011 17:23, Chris Murphy <lists@colorremedies.com> =
+wrote:
+>> We need to assume something, what's it going to be? This is probably =
+sRGB for any desktop inkjet printer...
 >=20
->>> So basically, I'm not sure what the CPD buys us. Looking at
->> I am not sure what you mean exactly. please be a bit more
->> precise about what you do not see working, from which perspective
->> (technical, color workflows, or something else).
->=20
-> These are my three target users: =
-http://colord.hughsie.com/profiles.html
->=20
-> None of these people would be able to choose an option from a dropdown
-> just listing the ICC filenames by filename. And they shouldn't have to
-> when we can map from qualifier to icc profile automatically...
+> This is something I've been struggling with for the last couple of
+> days. I think it's sane to assume the default profile to use with
+> untagged content or for a missing device profile is going to be sRGB.
+> Does this even need to be configurable?
 
-Agreed. Also I'll point out we shouldn't list ICC profiles by filename =
-anyway. They have internal names and that's what the user should see. If =
-you have rollovers that show a URI for where this profile is located, =
-that could show filename.
+Probably not. But, if it will be assumed to be sRGB, then the CPD =
+"Printer profile" popup menu should be populated with sRGB IECblahblah =
+blah, and not "auto assign" which just makes me want to poke myself in =
+the eye with a stick.
+
+For CMYK printers, well it's another matter because a default CMYK =
+profile for a printing press might cause problems on a CMYK only inkjet =
+or laser printer or copier. Those are rare workflows, usually it's a =
+customer or canned CMYK profile from a manufacturer, or the print driver =
+will accept incoming RGB and convert internally to CMYK in some magic =
+black box manner. But it's possible we need to consider a CMYK path all =
+the way to the printer: it's legitimate to just make that CMYK path a =
+pass through option. In which case it would be great if the CPD knows =
+already what the application is going to be printing with some metadata =
+(hey it's already getting a thumbnail preview, why not the color space =
+of the image?) and the CPD can say "CMYK Passthrough" for the default =
+"Printer profile" option. Not a bad punt for now actually....might be =
+best to just leave CMYK untouched.
 
 
-Chris Murphy=
+> If yes, is it device-specific, user specific or system specific?
+> Surely if you're worried about the default fallback colorspace, you
+> might as well manually assign the specific output profile to the
+> specific device and then you don't care about the fallback anymore.
+
+I'm thinking of users. Not rational beings. The only reason why I'm =
+considering it at all is because I'm inclined to not consider it at all, =
+and that is often a red flag for missing something important. I don't =
+think it is in this case, I think you can just have your last fall back =
+as sRGB for RGB and CMYK pass through for CMYK. For grayscale - well =
+hmmm, it could go either way. Use the sRGB curve, or leave it as it is.
+
+
+Chris=
