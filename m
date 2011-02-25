@@ -1,7 +1,5 @@
-Message-ID: <4D67A899.8090506@gmail.com>
-Date: Fri, 25 Feb 2011 14:03:21 +0100
-From: Till Kamppeter <till.kamppeter@gmail.com>
-MIME-Version: 1.0
+From: Tim Waugh <twaugh@redhat.com>
+In-Reply-To: <4D67A34D.4020008@gmail.com>
 References: <F30723B8678F584CB6A4269E911255CB0392318F@m1a.epkowa.co.jp>
 	<4BD18655.8060000@gmail.com>
 	<F30723B8678F584CB6A4269E911255CB03BF5E5C@m1a.epkowa.co.jp>
@@ -12,9 +10,13 @@ References: <F30723B8678F584CB6A4269E911255CB0392318F@m1a.epkowa.co.jp>
 	<F30723B8678F584CB6A4269E911255CB04E6F468@m1a.epkowa.co.jp>
 	<20110131104358.GC4406@piware.de> <4D662705.9020803@gmail.com>
 	<F30723B8678F584CB6A4269E911255CB05241E44@m1a.epkowa.co.jp>
-In-Reply-To: <F30723B8678F584CB6A4269E911255CB05241E44@m1a.epkowa.co.jp>
-Content-Type: text/plain; charset=UTF-8; format=flowed
-Content-Transfer-Encoding: 7bit
+	<4D67A34D.4020008@gmail.com>
+Content-Type: multipart/signed; micalg="pgp-sha1";
+	protocol="application/pgp-signature";
+	boundary="=-EhazUEiMNOJl8elZQ7da"
+Date: Fri, 25 Feb 2011 21:26:42 +0000
+Message-ID: <1298669202.5347.0.camel@worm.elk>
+Mime-Version: 1.0
 Subject: Re: [Printing-architecture] Ubuntu Natty the first distribution
  which does automatic download of binary printer driver packages
 List-Id: Printing architecture under linux
@@ -26,47 +28,40 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: yuji.saito@avasys.jp
+To: Till Kamppeter <till.kamppeter@gmail.com>
 Cc: printing-architecture@lists.linux-foundation.org, printing-japan@lists.linux-foundation.org, michael.vogt@ubuntu.com, martin.pitt@ubuntu.com
 
-On 02/25/2011 08:00 AM, yuji.saito@avasys.jp wrote:
-> On Feb 18, I upgraded the system and tested automatic-download in the
-> proxy environment.  But it failed. When I checked the cause of
-> problem, it seems to be the problem not only in the system but also in
-> my test environment.  Now I am still investigating.
->
-> By the way, system-config-printer became 1.3.1, and it disabled debug
-> option "-setup-printer" and "--devid". (It's not a bug but inconvenience
-> for developer, I think.) Therefore I tested with the actual printer.
-> But system-config-printer didn't start when I plugged the printer.
 
-The printer recognition not working for your printer(s) is a bug and so 
-we need to fix it. So I need all details about the detection process. So 
-please go to
+--=-EhazUEiMNOJl8elZQ7da
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
 
-https://wiki.ubuntu.com/DebuggingPrintingProblems
+On Fri, 2011-02-25 at 13:40 +0100, Till Kamppeter wrote:
+> Tim, is there a new way to test the driver selection and=20
+> automatic-download for a given device ID without needing to modify the=
+=20
+> code of system-config-printer and without having the appropriate printer=
+=20
+> physically? Or do I need to re-develop this feature?
 
-and follow especially the instructions of the sections:
+Use: python newprinter.py --with-uri URI
+(requires current git master... I'll do a 1.3.2 release in a week or so)
 
-- USB printer
-- CUPS error_log
+Tim.
+*/
 
-If the printer is network-connected (LAN, WLAN) you have to start 
-system-config-printer manually (System -> Administration -> Printing), 
-click the "Add" button, and choose the printer on the first screen of 
-the add-printer wizard (open the secion for network printers and wait 
-~15 sec for the network scan).
 
-Independent whether the printer is on USB or on the network, also run 
-system-config-printer from the command line with
+--=-EhazUEiMNOJl8elZQ7da
+Content-Type: application/pgp-signature; name="signature.asc"
+Content-Description: This is a digitally signed message part
 
-system-config-printer --debug
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.11 (GNU/Linux)
 
-click "Add", choose the printer and click "Forward". Complete the 
-add-printer wizard, independent whether a driver download happens or 
-not, and send the output in the terminal window (use "Reply to all").
+iD8DBQBNaB6QBLQafZpK2tcRAnXcAJsG9dFAwuU17O4c64Otv8A9wjZBEACeKpUI
+N5enYAhjJLjs8zHEuTFfudQ=
+=A04a
+-----END PGP SIGNATURE-----
 
-Also attach your /var/log/syslog file, to see logs of the hot-plugging 
-of your printer.
+--=-EhazUEiMNOJl8elZQ7da--
 
-    Till
