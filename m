@@ -1,5 +1,5 @@
-Message-ID: <4D681FA8.9080309@gmail.com>
-Date: Fri, 25 Feb 2011 22:31:20 +0100
+Message-ID: <4D68210B.8080604@gmail.com>
+Date: Fri, 25 Feb 2011 22:37:15 +0100
 From: Till Kamppeter <till.kamppeter@gmail.com>
 MIME-Version: 1.0
 References: <F30723B8678F584CB6A4269E911255CB0392318F@m1a.epkowa.co.jp>	
@@ -39,15 +39,9 @@ On 02/25/2011 10:26 PM, Tim Waugh wrote:
 >
 > Use: python newprinter.py --with-uri URI
 > (requires current git master... I'll do a 1.3.2 release in a week or so)
+>
 
-Thank you very much.
-
-And how do I supply a device ID, to simulate the discovery of a given 
-printer model?
-
-Does this also work with an installed copy of s-c-p (using the installed 
-pycups and jockey), like
-
-python /usr/share/system-config-printer/newprinter.py --with-uri URI
+Which patch introduces this functionality? I want to backport it into 
+the s-c-p 1.3.1 of Ubuntu Natty.
 
     Till
