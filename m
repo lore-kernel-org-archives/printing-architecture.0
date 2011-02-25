@@ -1,19 +1,23 @@
-Mime-Version: 1.0 (Apple Message framework v1082)
-Content-Type: text/plain; charset=us-ascii
-From: Chris Murphy <lists@colorremedies.com>
-In-Reply-To: <AANLkTi=yZcKwzCpDVFB8Ufj5hXLfwbbk6zg8vzJ9XdoO@mail.gmail.com>
-Date: Thu, 24 Feb 2011 15:51:41 -0700
-Content-Transfer-Encoding: quoted-printable
-Message-Id: <ACC2A452-CC27-4735-BC0D-1758DDB48D4C@colorremedies.com>
-References: <AANLkTikLN+qpdaunDz=bSxPj0K+k+W4Gg3JDh3udXj9=@mail.gmail.com>
-	<alpine.LNX.2.00.1102241922270.6623@roma.rasena>
-	<40F5FF0F-3AAC-4661-9FF0-4568326A2D51@colorremedies.com>
-	<42A75819-F34A-4E8B-A10A-279A60775692@colorremedies.com>
-	<AANLkTimHoS=_59Ew5VhVZ6e0FjL95Sf=xcQermUCDw_y@mail.gmail.com>
-	<C40A61F6-0EDD-474B-A66D-1EAA40ACF8BF@colorremedies.com>
-	<AANLkTi=yZcKwzCpDVFB8Ufj5hXLfwbbk6zg8vzJ9XdoO@mail.gmail.com>
-Subject: Re: [Printing-architecture] Common Printing Dialog and color
-	management
+Content-class: urn:content-classes:message
+MIME-Version: 1.0
+Content-Type: text/plain;
+	charset="UTF-8"
+Content-Transfer-Encoding: base64
+Date: Fri, 25 Feb 2011 16:00:37 +0900
+Message-ID: <F30723B8678F584CB6A4269E911255CB05241E44@m1a.epkowa.co.jp>
+In-Reply-To: <4D662705.9020803@gmail.com>
+References: <F30723B8678F584CB6A4269E911255CB0392318F@m1a.epkowa.co.jp>
+	<4BD18655.8060000@gmail.com>
+	<F30723B8678F584CB6A4269E911255CB03BF5E5C@m1a.epkowa.co.jp>
+	<4C091F92.7050102@gmail.com> <4C1284F4.3000707@gmail.com>
+	<4C89CF0C.60003@avasys.jp> <4CE55A84.3070006@gmail.com>
+	<F30723B8678F584CB6A4269E911255CB04A457B1@m1a.epkowa.co.jp>
+	<4D265C61.2000703@gmail.com>
+	<F30723B8678F584CB6A4269E911255CB04E6F468@m1a.epkowa.co.jp>
+	<20110131104358.GC4406@piware.de> <4D662705.9020803@gmail.com>
+From: <yuji.saito@avasys.jp>
+Subject: Re: [Printing-architecture] Ubuntu Natty the first distribution
+	which does automatic download of binary printer driver packages
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -23,41 +27,23 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Richard Hughes <hughsient@gmail.com>
-Cc: Printing-architecture@lists.linux-foundation.org
+To: till.kamppeter@gmail.com, martin.pitt@ubuntu.com
+Cc: printing-architecture@lists.linux-foundation.org, printing-japan@lists.linux-foundation.org, michael.vogt@ubuntu.com
 
-
-
-
-On Feb 24, 2011, at 3:43 PM, Richard Hughes wrote:
-
-> On 24 February 2011 22:27, Chris Murphy <lists@colorremedies.com> =
-wrote:
->> In my view any application that lets a user work on CMYK that does =
-not tag its own data is asking for trouble
->=20
-> Isn't any app capable of outputting CMYK going to ask the user for an
-> embedded profile? Outputting CMYK is a pretty power-user feature, and
-> unspecified CMYK isn't really anything useful at all.
-
-Unknown / not necessarily. It's only been in the last few years that =
-Photoshop started embedding ICC profiles in CMYK images by default. It =
-is common in prepress (usually due to emotionally unstable reasons) to =
-strip CMYK profiles from images and save them untagged.
-
-How they became CMYK? Well they can get there by creating a CMYK =
-illustration file from scratch and designing in CMYK. No conversion to =
-CMYK actually occurred. But yes, to display that CMYK image/illustration =
-on an RGB device implies some kind of transform. Whether it's ICC based =
-or not...usually that would be the case. But historically developers =
-have simply used inversion. 100%C is 0%R (100%G+100%B), etc. which gets =
-you really overly saturated CMYK images on screen, completely not color =
-accurate. But you can at least see what you're doing. Recent versions of =
-QuarkXPress work this way I think still, by default. So I can't vouch =
-for apps on Linux, how they will behave with respect to CMYK. They very =
-well may be thinking of plotters and such and never have considered =
-anything other than RGB for display, and therefore just used 1/d =
-conversion.
-
-
-Chris=
+SGksIFRpbGwuDQoNCk9uIFRodSwgMjQgRmViIDIwMTEgMTg6Mzg6MTMgKzA5MDAsICJUaWxsIEth
+bXBwZXRlciIgd3JvdGU6DQo+IFNhaXRvLXNhbiwNCj4gDQo+IGlzIHlvdXIgcHJvYmxlbSBzb2x2
+ZWQgbm93PyBDYW4geW91IG5vdyBhdXRvLWRvd25sb2FkIHRoZSBFcHNvbiBkcml2ZXJzIA0KPiBp
+ZiB5b3UgYXJlIGJlaGluZCBhIHByb3h5Pw0KDQpJJ20gc29ycnkgZm9yIHRoZSBsYXRlIHJlcGx5
+Lg0KDQpPbiBGZWIgMTgsIEkgdXBncmFkZWQgdGhlIHN5c3RlbSBhbmQgdGVzdGVkIGF1dG9tYXRp
+Yy1kb3dubG9hZCBpbiB0aGUNCnByb3h5IGVudmlyb25tZW50LiAgQnV0IGl0IGZhaWxlZC4gV2hl
+biBJIGNoZWNrZWQgdGhlIGNhdXNlIG9mDQpwcm9ibGVtLCBpdCBzZWVtcyB0byBiZSB0aGUgcHJv
+YmxlbSBub3Qgb25seSBpbiB0aGUgc3lzdGVtIGJ1dCBhbHNvIGluDQpteSB0ZXN0IGVudmlyb25t
+ZW50LiAgTm93IEkgYW0gc3RpbGwgaW52ZXN0aWdhdGluZy4NCg0KQnkgdGhlIHdheSwgc3lzdGVt
+LWNvbmZpZy1wcmludGVyIGJlY2FtZSAxLjMuMSwgYW5kIGl0IGRpc2FibGVkIGRlYnVnIA0Kb3B0
+aW9uICItc2V0dXAtcHJpbnRlciIgYW5kICItLWRldmlkIi4gKEl0J3Mgbm90IGEgYnVnIGJ1dCBp
+bmNvbnZlbmllbmNlIA0KZm9yIGRldmVsb3BlciwgSSB0aGluay4pIFRoZXJlZm9yZSBJIHRlc3Rl
+ZCB3aXRoIHRoZSBhY3R1YWwgcHJpbnRlci4gDQpCdXQgc3lzdGVtLWNvbmZpZy1wcmludGVyIGRp
+ZG4ndCBzdGFydCB3aGVuIEkgcGx1Z2dlZCB0aGUgcHJpbnRlci4NCg0KDQpSZWdhcmRzLA0KDQpT
+YWl0bw0KDQotLSANCll1amkgU2FpdG8gPHl1amkuc2FpdG9AYXZhc3lzLmpwPg0KTGludXggRHJp
+dmVyIFRlYW0sIEVTMUcsIEVTIEJ1c2luZXNzIERpdmlzaW9uDQpBVkFTWVMgQ09SUE9SQVRJT04g
+PGh0dHA6Ly9hdmFzeXMuanAvPg0K
