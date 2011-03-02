@@ -1,5 +1,5 @@
-Message-ID: <4D6E8F9A.2070207@gmail.com>
-Date: Wed, 02 Mar 2011 19:42:34 +0100
+Message-ID: <4D6E9A62.8000104@gmail.com>
+Date: Wed, 02 Mar 2011 20:28:34 +0100
 From: Till Kamppeter <till.kamppeter@gmail.com>
 MIME-Version: 1.0
 References: <e395be80811270817n502ccd16wf6cc90f85364f5ae@mail.gmail.com>
@@ -19,12 +19,14 @@ List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-ar
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
 To: Open Printing <printing-architecture@lists.linux-foundation.org>, Printing-japan <printing-japan@lists.linux-foundation.org>
 
+[ Resending due to broken link. ]
+
 Hi,
 
 I have uploaded the recording of the last OpenPrinting meeting to the
 OpenPrinting server:
 
-http://www.openprinting.org/download/meetingnotes/op-telecon/OP-Meeting-20110302.mp3
+http://www.openprinting.org/download/meetingnotes/op-telecons/OP-Meeting-20110302.mp3
 
 In general, recorded meetings I will upload to
 
