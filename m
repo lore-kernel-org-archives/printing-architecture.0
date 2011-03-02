@@ -1,11 +1,13 @@
-Message-ID: <4D6E6B85.1080509@gmail.com>
-Date: Wed, 02 Mar 2011 17:08:37 +0100
+Message-ID: <4D6E8F9A.2070207@gmail.com>
+Date: Wed, 02 Mar 2011 19:42:34 +0100
 From: Till Kamppeter <till.kamppeter@gmail.com>
 MIME-Version: 1.0
+References: <e395be80811270817n502ccd16wf6cc90f85364f5ae@mail.gmail.com>
+In-Reply-To: <e395be80811270817n502ccd16wf6cc90f85364f5ae@mail.gmail.com>
 Content-Type: text/plain; charset=UTF-8; format=flowed
 Content-Transfer-Encoding: 7bit
-Subject: [Printing-architecture] REMINDER: OpenPrinting US/Europe monthly
-	call IN ONE HOUR
+Subject: [Printing-architecture] Last OP Meeting - Wed - 2 March 2011 - The
+	Recording
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -15,41 +17,20 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: OpenPrinting <printing-architecture@lists.linux-foundation.org>
+To: Open Printing <printing-architecture@lists.linux-foundation.org>, Printing-japan <printing-japan@lists.linux-foundation.org>
 
 Hi,
 
-In one hour we will have our conference call.
+I have uploaded the recording of the last OpenPrinting meeting to the
+OpenPrinting server:
 
-Agenda:
+http://www.openprinting.org/download/meetingnotes/op-telecon/OP-Meeting-20110302.mp3
 
-* Joined with the 2nd planning call for the OpenPrinting Summit 2011,
-   therefore on Wednesday
-* Common Printing Dialog
-   - German government organization wants to have the Common Printing
-     Dialog finished for them, without further design and general coding
-     work, with the money they offered.
-   - Funding by additional parties, especially distributions, needed
-   - How to proceed with the dialog if there is no more funding? D-Bus
-     interface only?
-* Project ideas for the Google Summer of Code 2011
-   - How to make JTAPI and other projects more attractive for students?
+In general, recorded meetings I will upload to
+
+http://www.openprinting.org/download/meetingnotes/
 
     Till
 
-Dial-in data:
-
-  * March 2011 - US/Europe - Monthly OP Meeting
-     - Wednesday 2 March 2011, Daytime
-       - US
-         9am in San Francisco - US PST (Pacific Standard Time)
-         10am in Colorado - US MST (Mountain Standard Time)
-         11am in Chicago - US CST (Central Standard Time)
-         12pm in New York - US EST (Eastern Standard Time)
-       - Europe
-         6pm in Berlin - CET (Central European Time)
-
-     * Main Number (Till Kamppeter, LF, leader)
-       International: +1-218-936-7999
-       Access Code:   491659#
+P. S.: The MP3 is 20 MB long, 57 minutes of talking.
 
