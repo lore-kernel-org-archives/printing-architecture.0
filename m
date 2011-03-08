@@ -1,10 +1,14 @@
-Message-ID: <4D76B686.5040600@gmail.com>
-Date: Wed, 09 Mar 2011 00:06:46 +0100
-From: Till Kamppeter <till.kamppeter@gmail.com>
+Content-class: urn:content-classes:message
 MIME-Version: 1.0
-Content-Type: text/plain; charset=UTF-8; format=flowed
-Content-Transfer-Encoding: 7bit
-Subject: [Printing-architecture] Linux Foundation Summit Schedules are out
+Content-Type: text/plain;
+	charset="US-ASCII"
+Content-Transfer-Encoding: quoted-printable
+Date: Tue, 8 Mar 2011 15:29:36 -0800
+Message-ID: <ED4094DE5E8ACD4BBDACA6AD398E608F805C4D@EEAEX03.us.epson.net>
+References: <4D76B686.5040600@gmail.com>
+From: "Petrie, Glen" <glen.petrie@eitc.epson.com>
+Subject: Re: [Printing-architecture] [Printing-summit] Linux Foundation
+	Summit Schedules are out
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -14,24 +18,50 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: "'printing-summit@lists.linux-foundation.org'" <printing-summit@lists.linux-foundation.org>, Open Printing <printing-architecture@lists.linux-foundation.org>
+To: Till Kamppeter <till.kamppeter@gmail.com>, printing-summit@lists.linux-foundation.org, Open Printing <printing-architecture@lists.linux-foundation.org>
 
-Hi,
 
-here are the schedules of the LF Summit:
+< ... snip ... >
 
-http://events.linuxfoundation.org/events/collaboration-summit/schedule
-
-The LSB meeting is during the whole Friday, no other days. There is no 
-desktop-oriented meeting at all and also no Driver Backports meeting. 
-MeeGo is on Thursday and on Friday AM.
-
-This means that we have to schedule the joint meeting with LSB on 
-Friday, as usual in our room due to the call-in service.
-
-Perhaps we could also arrange a joint meeting with MeeGo as part of our 
+Perhaps we could also arrange a joint meeting with MeeGo as part of our=20
 mobile session. WDYT?
 
-For the OpenPrinting Summit we have the Kyoto room on all three days.
+[gwp] What subjects are you thinking about discussing?  I have not been
+following MeeGo; so, some or all of the questions below may already be
+known.
 
-    Till
+Ideas=20
+
+-- What is their print...
+	1. model?
+	2. system?
+	3. path?
+
+-- Is print management ...
+	1. Not required!?=20
+	2. Simple?
+	3. Application supported/implemented?
+	4. CUPS?
+	5. A mini-CUPS? (is that a tea cup(s) :-))
+
+-- Are they wanting ...
+	1. Driver-less printing?
+	2. Printing via the Cloud? (Only)
+	3. GhostScript support?
+	3. All or a combination of the above?
+
+-- What kind of user print interface they are considering; ...
+	1. A simple print button (just print)?
+	2. Smart print buttons?
+	3. A simple print dialog?
+	4. A simple with optional complex print dialog?
+
+-- Any idea if they are considering; ...
+	1. A job-ticket/print-content model?
+	2. PDF print (however it needs to be done)?=20
+	3. Only page (document) image (some call it raster) print?
+	4. All or a combination of the above?
+
+
+< ... snip ... >
+
