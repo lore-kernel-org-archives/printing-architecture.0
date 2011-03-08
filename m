@@ -1,19 +1,13 @@
-From: Olaf Meeuwissen <olaf.meeuwissen@avasys.jp>
-References: <4D265C61.2000703@gmail.com>
-	<F30723B8678F584CB6A4269E911255CB04E6F468@m1a.epkowa.co.jp>
-	<20110131104358.GC4406@piware.de> <4D662705.9020803@gmail.com>
-	<F30723B8678F584CB6A4269E911255CB05241E44@m1a.epkowa.co.jp>
-	<4D67A34D.4020008@gmail.com> <1298669202.5347.0.camel@worm.elk>
-	<4D6D5FD5.4010506@gmail.com> <4D6D6D45.3070907@gmail.com>
-	<87ei6ndyi8.fsf@avasys.jp> <20110304172254.GF30872@piware.de>
-Date: Mon, 07 Mar 2011 10:32:57 +0900
-In-Reply-To: <20110304172254.GF30872@piware.de> (Martin Pitt's message of
-	"Fri, 4 Mar 2011 18:22:54 +0100")
-Message-ID: <87hbbfyat2.fsf@avasys.jp>
+Message-ID: <4D75F5D2.3080002@fujixerox.co.jp>
+Date: Tue, 08 Mar 2011 18:24:34 +0900
+From: Osamu MIHARA <osamu.mihara@fujixerox.co.jp>
 MIME-Version: 1.0
-Content-Type: text/plain; charset=us-ascii
-Subject: Re: [Printing-architecture] Ubuntu Natty the first distribution
-	which does automatic download of binary printer driver packages
+References: <20110307.162933.226790183.sho@bbr.jp>
+In-Reply-To: <20110307.162933.226790183.sho@bbr.jp>
+Content-Type: text/plain; charset=ISO-2022-JP
+Content-Transfer-Encoding: 7bit
+Subject: Re: [Printing-architecture] [Printing-japan] OpenPrintig Japan
+ November 2011 Mar Meeting Minutes
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -23,34 +17,79 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Martin Pitt <martin.pitt@ubuntu.com>
-Cc: printing-architecture@lists.linux-foundation.org, printing-japan@lists.linux-foundation.org, michael.vogt@ubuntu.com, Till Kamppeter <till.kamppeter@gmail.com>
+To: printing-japan@lists.linux-foundation.org, printing-architecture@lists.linux-foundation.org
 
-Martin Pitt <martin.pitt@ubuntu.com> writes:
+*** Meeting Minutes ***
 
-> Hello Olaf,
->
-> Olaf Meeuwissen [2011-03-04 18:29 +0900]:
->>         sock = socket.create_connection((self.host, self.port))
->>         self.sock = ssl.wrap_socket(sock, cert_reqs=ssl.CERT_REQUIRED,
->>                                           ca_certs=self.ca_certs)
->> 
->> The ssl.wrap_socket raises an ssl.SSLError.  What puzzles us is that
->> this method creates a connection to the _proxy_ rather than to the host
->> where the fingerprint resides.
->
-> That indeed sounds strange. For reproducing this, do you have some
-> details about your proxy setup? Is that just a standard squid?
+OpenPrinting Japan
+3/3/2011 15:00-17:00@Linux Foundation Japan Office
 
-Not quite sure what our IT department uses but I'm pretty sure it's not
-just a standard squid.  Actually, I'm almost sure it's not even a squid
-at all.
+Attendees: Miyata (Canon), Toratani (Canon), Ishizaka (NEC Soft),
+Nishihara (Ricoh), Chigusa (Ricoh), Hanamura (Avasys), Otani (BBR),
+Mihara (Fuji Xerox)
 
-> Anyway, now that Till created a bug report for it, I propose we move
-> discussion there, for better record-keeping.
+************************
+o Action Item follow-up
+************************
 
-OK.
--- 
-Olaf Meeuwissen, LPIC-2           FLOSS Engineer -- AVASYS CORPORATION
-FSF Associate Member #1962               Help support software freedom
-                 http://www.fsf.org/jf?referrer=1962
+- Report review result of Vector Spec to the architecture ML (Mihara)
+  --> Not yet done
+
+- Confirm George Liu about detail of "New bugs in printing
+infrastructure chain" (Chigusa)
+
+  * He will summarize the vendor-dependent problems in print subsystems
+    which he have handled.
+  * He would like to propose the development of test suite, based on
+    the above result.
+
+******************************
+o SC Meeting Review (US/EU/JP)
+******************************
+(1) Summit Topics
+  - (See "PDF Work Flow" part below.)
+(2) CPD
+  - no more funds at this time.
+  - releases D-BUS interface part only?
+(3) GSoC Ideas
+(4) PWS Summary
+
+Next meeting - April 12th (Tue) 4:00 JST
+--> OPJ is arranging to hold next OPJ meeting on this day to enable join
+the SC meeting.  At this time, not problem on the schedule.
+
+*****************************
+  LinuxCon Japan (June)
+*****************************
+They are planning give a Debian Desktop Session and making offer OPJ to
+make some sub session on printing.
+
+  --> At this time, we have no idea (no new news to make a presentation)
+
+*****************************
+ PDF Work Flow
+*****************************
+It seems that PDF Work Flow has been committed and worked fine on Ubuntu
+and Debian.
+OPJ would like to propose Till-san to have a session during the Summit
+to report the current status of pdf work flow and promote PDF Work flow
+to other distos (such as Fedora, OpenSUSE).
+It may need to commit the filters into CUPS trunk.
+
+***************************
+ OPFC Web Site (gdevopvp site)
+***************************
+Contents are obsoleted as the gdevopvp has been already incorporated
+into GS.
+
+--> Keep contents but may need to say "OBSOLTED"
+--> Toratani-san will work on this.
+
+*************************
+Action Items
+*************************
+Report review result of Vector Spec (mihara)
+Update OPFC Site (Toratani)
+
+
+-- Osamu Mihara // Fuji Xerox
