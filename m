@@ -1,14 +1,21 @@
-Content-class: urn:content-classes:message
+From: Olaf Meeuwissen <olaf.meeuwissen@avasys.jp>
+References: <4D265C61.2000703@gmail.com>
+	<F30723B8678F584CB6A4269E911255CB04E6F468@m1a.epkowa.co.jp>
+	<20110131104358.GC4406@piware.de> <4D662705.9020803@gmail.com>
+	<F30723B8678F584CB6A4269E911255CB05241E44@m1a.epkowa.co.jp>
+	<4D67A34D.4020008@gmail.com> <1298669202.5347.0.camel@worm.elk>
+	<4D6D5FD5.4010506@gmail.com> <4D6D6D45.3070907@gmail.com>
+	<87ei6ndyi8.fsf@avasys.jp> <20110304172254.GF30872@piware.de>
+	<87hbbfyat2.fsf@avasys.jp>
+Date: Fri, 11 Mar 2011 12:03:13 +0900
+In-Reply-To: <87hbbfyat2.fsf@avasys.jp> (Olaf Meeuwissen's message of "Mon, 07
+	Mar 2011 10:32:57 +0900")
+Message-ID: <87r5aefjf2.fsf@avasys.jp>
 MIME-Version: 1.0
-Content-Type: text/plain;
-	charset="US-ASCII"
-Content-Transfer-Encoding: quoted-printable
-Date: Tue, 8 Mar 2011 15:29:36 -0800
-Message-ID: <ED4094DE5E8ACD4BBDACA6AD398E608F805C4D@EEAEX03.us.epson.net>
-References: <4D76B686.5040600@gmail.com>
-From: "Petrie, Glen" <glen.petrie@eitc.epson.com>
-Subject: Re: [Printing-architecture] [Printing-summit] Linux Foundation
-	Summit Schedules are out
+Content-Type: text/plain; charset=us-ascii
+Subject: Re: [Printing-architecture] [Printing-japan] Ubuntu Natty the first
+	distribution which does automatic download of binary printer
+	driver packages
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -18,50 +25,52 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Till Kamppeter <till.kamppeter@gmail.com>, printing-summit@lists.linux-foundation.org, Open Printing <printing-architecture@lists.linux-foundation.org>
+To: Martin Pitt <martin.pitt@ubuntu.com>
+Cc: printing-architecture@lists.linux-foundation.org, printing-japan@lists.linux-foundation.org, michael.vogt@ubuntu.com
 
+Olaf Meeuwissen <olaf.meeuwissen@avasys.jp> writes:
 
-< ... snip ... >
+> Martin Pitt <martin.pitt@ubuntu.com> writes:
+>> Anyway, now that Till created a bug report for it, I propose we move
+>> discussion there, for better record-keeping.
+>
+> OK.
 
-Perhaps we could also arrange a joint meeting with MeeGo as part of our=20
-mobile session. WDYT?
+# Sorry about not subscribing myself to the bug report.
 
-[gwp] What subjects are you thinking about discussing?  I have not been
-following MeeGo; so, some or all of the questions below may already be
-known.
+Anyway, just wanted to summarize current status here so the OpenPrinting
+people remain in the loop as well.
 
-Ideas=20
+ 1. Fingerprint SSL check does not work behind a proxy
+    We've checked the latest changes and the fingerprint is fetched
+    without any problems.
+    -> https://bugs.launchpad.net/ubuntu/+source/jockey/+bug/729185
 
--- What is their print...
-	1. model?
-	2. system?
-	3. path?
+ 2. GPG keyserver access does not work behind a proxy
+    This has been reported on the mailing list before (IIRC) but after
+    getting the fingerprint correctly, this is the next proxy problem
+    that we hit.
+    -> https://bugs.launchpad.net/ubuntu/+source/jockey/+bug/733023
 
--- Is print management ...
-	1. Not required!?=20
-	2. Simple?
-	3. Application supported/implemented?
-	4. CUPS?
-	5. A mini-CUPS? (is that a tea cup(s) :-))
+ 3. GPG keyserver default port blocked by proxy
+    IIRC, Saito-san has suggested using a keyserver that listens on the
+    HTTP port (rather than the HKP one) on the list and I believe there
+    was a mail saying it got fixed, but the current sources refer to a
+    keyserver that listens on the HKP port.
+    -> https://bugs.launchpad.net/ubuntu/+source/jockey/+bug/733029
 
--- Are they wanting ...
-	1. Driver-less printing?
-	2. Printing via the Cloud? (Only)
-	3. GhostScript support?
-	3. All or a combination of the above?
+ 4. Jockey not called by system-config-printer?
+    We seen some discrepancies in behaviour wrt the automatic printer
+    driver download depending on how the printer was "detected".
+    Connecting a USB printer worked fine.  Running newprinter.py from
+    the command-line is also okay.  However, when trying to add a USB
+    or network printer using system-config-printer nothing happened.
+    As in no attempt to have jockey download a driver was made.
+    I'll submit a bug report against system-config-printer later as I
+    don't have the details handy at the moment.
 
--- What kind of user print interface they are considering; ...
-	1. A simple print button (just print)?
-	2. Smart print buttons?
-	3. A simple print dialog?
-	4. A simple with optional complex print dialog?
-
--- Any idea if they are considering; ...
-	1. A job-ticket/print-content model?
-	2. PDF print (however it needs to be done)?=20
-	3. Only page (document) image (some call it raster) print?
-	4. All or a combination of the above?
-
-
-< ... snip ... >
-
+Hope this helps,
+-- 
+Olaf Meeuwissen, LPIC-2           FLOSS Engineer -- AVASYS CORPORATION
+FSF Associate Member #1962               Help support software freedom
+                 http://www.fsf.org/jf?referrer=1962
