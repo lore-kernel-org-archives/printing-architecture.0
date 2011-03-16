@@ -1,21 +1,11 @@
-Message-ID: <4D7E7EFC.80601@gmail.com>
-Date: Mon, 14 Mar 2011 21:47:56 +0100
-From: Till Kamppeter <till.kamppeter@gmail.com>
+From: John Layt <johnlayt@googlemail.com>
+Date: Wed, 16 Mar 2011 20:32:53 +0000
 MIME-Version: 1.0
-References: <4D265C61.2000703@gmail.com>	<F30723B8678F584CB6A4269E911255CB04E6F468@m1a.epkowa.co.jp>	<20110131104358.GC4406@piware.de>
-	<4D662705.9020803@gmail.com>	<F30723B8678F584CB6A4269E911255CB05241E44@m1a.epkowa.co.jp>	<4D67A34D.4020008@gmail.com>
-	<1298669202.5347.0.camel@worm.elk>	<4D6D5FD5.4010506@gmail.com>
-	<4D6D6D45.3070907@gmail.com>	<87ei6ndyi8.fsf@avasys.jp>
-	<20110304172254.GF30872@piware.de>	<87hbbfyat2.fsf@avasys.jp>
-	<87r5aefjf2.fsf@avasys.jp>	<4D7A4ABB.7030200@gmail.com>
-	<1299862755.2770.25.camel@worm.elk>	<4D7A5FD5.2060006@gmail.com>
-	<4D7B9D9C.4090209@gmail.com> <87ipvmm46v.fsf@avasys.jp>
-In-Reply-To: <87ipvmm46v.fsf@avasys.jp>
-Content-Type: text/plain; charset=UTF-8; format=flowed
+Content-Type: text/plain;
+  charset="us-ascii"
 Content-Transfer-Encoding: 7bit
-Subject: Re: [Printing-architecture] [Printing-japan] Ubuntu Natty the first
- distribution which does automatic download of binary printer	driver
- packages
+Message-Id: <201103162032.54086.johnlayt@googlemail.com>
+Subject: [Printing-architecture] Introductions
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -25,24 +15,22 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Olaf Meeuwissen <olaf.meeuwissen@avasys.jp>
-Cc: printing-architecture@lists.linux-foundation.org, printing-japan@lists.linux-foundation.org, michael.vogt@ubuntu.com, Martin Pitt <martin.pitt@ubuntu.com>
+To: printing-architecture@lists.linux-foundation.org
 
-Olaf, thanks for all the testing.
+Hi,
 
-    Till
+My name is John Layt and I'm the KDE hacker who has had printing support fall 
+into his lap.  As part of that role I've be struggling to get improvements 
+into the Qt printing system with only minor success so far.
 
-On 03/14/2011 10:39 AM, Olaf Meeuwissen wrote:
-> Till Kamppeter<till.kamppeter@gmail.com>  writes:
->
->> I have done test 3 and found a bug. I have fixed it in
->> -0ubuntu6. Please do your tests with that version.
->
-> We've tested this with USB and wired printers and everything works
-> great!  Versions used:
->
->    jockey (0.9.2-0ubuntu3)
->    system-config-printer (1.3.1+20110222-0ubuntu6)
->
-> Thanks!
+I've been in contact with Till about co-operation with KDE around the CPD, but 
+thought I'd drop a short note to introduce myself here.  I'll also be 
+attending the OpenPrinting Summit to discuss how to get the CPD into KDE and 
+Qt, and any other topics like Color Management that may be relevant.
 
+If there's anything you need to know about KDE/Qt or anyone you need an 
+introduction to feel free to ask.
+
+Cheers!
+
+John.
