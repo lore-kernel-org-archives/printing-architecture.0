@@ -1,11 +1,14 @@
-From: John Layt <johnlayt@googlemail.com>
-Date: Wed, 16 Mar 2011 20:32:53 +0000
+Message-ID: <4D8210ED.2070602@gmail.com>
+Date: Thu, 17 Mar 2011 14:47:25 +0100
+From: Till Kamppeter <till.kamppeter@gmail.com>
 MIME-Version: 1.0
-Content-Type: text/plain;
-  charset="us-ascii"
+References: <4D76B686.5040600@gmail.com>
+	<ED4094DE5E8ACD4BBDACA6AD398E608F805C4D@EEAEX03.us.epson.net>
+In-Reply-To: <ED4094DE5E8ACD4BBDACA6AD398E608F805C4D@EEAEX03.us.epson.net>
+Content-Type: text/plain; charset=UTF-8; format=flowed
 Content-Transfer-Encoding: 7bit
-Message-Id: <201103162032.54086.johnlayt@googlemail.com>
-Subject: [Printing-architecture] Introductions
+Subject: Re: [Printing-architecture] [Printing-summit] Linux Foundation
+	Summit Schedules are out
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -15,22 +18,61 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: printing-architecture@lists.linux-foundation.org
+To: "Petrie, Glen" <glen.petrie@eitc.epson.com>
+Cc: Open Printing <printing-architecture@lists.linux-foundation.org>, printing-summit@lists.linux-foundation.org
 
-Hi,
+I have sent a mail to all MeeGo-related LF-Summit participants on the 
+list of LF Summit registrations.
 
-My name is John Layt and I'm the KDE hacker who has had printing support fall 
-into his lap.  As part of that role I've be struggling to get improvements 
-into the Qt printing system with only minor success so far.
+Let us see what they will tell us.
 
-I've been in contact with Till about co-operation with KDE around the CPD, but 
-thought I'd drop a short note to introduce myself here.  I'll also be 
-attending the OpenPrinting Summit to discuss how to get the CPD into KDE and 
-Qt, and any other topics like Color Management that may be relevant.
+    Till
 
-If there's anything you need to know about KDE/Qt or anyone you need an 
-introduction to feel free to ask.
+On 03/09/2011 12:29 AM, Petrie, Glen wrote:
+>
+> <  ... snip ...>
+>
+> Perhaps we could also arrange a joint meeting with MeeGo as part of our
+> mobile session. WDYT?
+>
+> [gwp] What subjects are you thinking about discussing?  I have not been
+> following MeeGo; so, some or all of the questions below may already be
+> known.
+>
+> Ideas
+>
+> -- What is their print...
+> 	1. model?
+> 	2. system?
+> 	3. path?
+>
+> -- Is print management ...
+> 	1. Not required!?
+> 	2. Simple?
+> 	3. Application supported/implemented?
+> 	4. CUPS?
+> 	5. A mini-CUPS? (is that a tea cup(s) :-))
+>
+> -- Are they wanting ...
+> 	1. Driver-less printing?
+> 	2. Printing via the Cloud? (Only)
+> 	3. GhostScript support?
+> 	3. All or a combination of the above?
+>
+> -- What kind of user print interface they are considering; ...
+> 	1. A simple print button (just print)?
+> 	2. Smart print buttons?
+> 	3. A simple print dialog?
+> 	4. A simple with optional complex print dialog?
+>
+> -- Any idea if they are considering; ...
+> 	1. A job-ticket/print-content model?
+> 	2. PDF print (however it needs to be done)?
+> 	3. Only page (document) image (some call it raster) print?
+> 	4. All or a combination of the above?
+>
+>
+> <  ... snip ...>
+>
+>
 
-Cheers!
-
-John.
