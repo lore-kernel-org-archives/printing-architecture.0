@@ -1,12 +1,11 @@
+Message-ID: <4D94E0A4.90806@gmail.com>
+Date: Thu, 31 Mar 2011 22:14:28 +0200
+From: Till Kamppeter <till.kamppeter@gmail.com>
 MIME-Version: 1.0
-In-Reply-To: <4D9387D4.5040505@gmail.com>
-References: <4D9387D4.5040505@gmail.com>
-Date: Wed, 30 Mar 2011 17:22:37 -0400
-Message-ID: <AANLkTi=6T8URcyyo1P1UUMPhim9T++mKaWbFFHe_4uYM@mail.gmail.com>
-From: Ira McDonald <blueroofmusic@gmail.com>
-Content-Type: multipart/alternative; boundary=00151747b956a3c069049fb9c6bc
-Subject: Re: [Printing-architecture] OpenPrinting Summit 2011: Participating
- by phone with screencast
+Content-Type: text/plain; charset="utf-8"; format="flowed"
+Content-Transfer-Encoding: 8bit
+Subject: [Printing-architecture] Google Summer of Code 2011 - Nice project,
+	who wants to mentor it?
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -16,163 +15,155 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Till Kamppeter <till.kamppeter@gmail.com>, Ira McDonald <blueroofmusic@gmail.com>
-Cc: Open Printing <printing-architecture@lists.linux-foundation.org>, "printing-summit@lists.linux-foundation.org" <printing-summit@lists.linux-foundation.org>
+To: Open Printing <printing-architecture@lists.linux-foundation.org>
 
---00151747b956a3c069049fb9c6bc
-Content-Type: text/plain; charset=ISO-8859-1
+Hi,
 
-Hi Everyone,
+the following application with a project idea from a student has 
+arrived. I would much like that this project will get turned reality. It 
+is not one of our work which needs to be done urgently, but it is also 
+something useful. And the student needs it for his department, so 
+another motivation which counts in.
 
-Please note that HP Virtual Rooms only supports *one* browser
-on each operating system:
+So I want to ask all of you, who would like to step up as a mentor for 
+this project?
 
-Windows - IE 6, 7, or 8 (but not IE 9 beta)
-Mac OS X - Safari 2.x or higher
-Linux - Firefox 1.5 or higher (but not Firefox 4)
+    Till
 
-Please take the time to install and *test* HP Virtual Rooms client
-for your system BEFORE the Open Printing Summit.
+P.S.: Please register as mentor for the Linux Foundation on 
+http://www.google-melange.com/ if you want to participate in the 
+selection process or if you want to actually mentor.
 
-Cheers,
-- Ira
+----------
 
-Ira McDonald (Musician / Software Architect)
-Chair - Linux Foundation Open Printing WG
-Co-Chair - IEEE-ISTO PWG IPP WG
-Co-Chair - TCG Hardcopy WG
-IETF Designated Expert - IPP & Printer MIB
-Blue Roof Music/High North Inc
-http://sites.google.com/site/blueroofmusic
-http://sites.google.com/site/highnorthinc
-mailto:blueroofmusic@gmail.com
-Christmas through April:
-  579 Park Place  Saline, MI  48176
-  734-944-0094
-May to Christmas:
-  PO Box 221  Grand Marais, MI 49839
-  906-494-2434
+Ticketed Print Monitoring System
+--------------------------------
+
+Samantha Christoff
+
+Email: firebirdy4 at gmail dot com
+
+Mentor: No mentor assigned
+
+Possible mentors: ???
+
+Short description: Implement a monitored print server in CUPS to allow 
+graduate students and faculty to print to a network of laser printers 
+with a ticketed system hooked up to a monitor server with a front end 
+GUI available on all platforms. This is in order to set printing limits 
+and to meet budget constraints on toner and paper.
+Google Summer of Code Application
+
+Name: Samantha Christoff
+
+University: Arizona State University, dual majoring in Physics and 
+Philosophy, currently a Sophomore
+
+Short Biography:I am a twenty year old pink haired motivated programmer, 
+physicist, philosopher, pop star, with a lot of problems to solve and a 
+lot of math to do it with. I freelance in most of my work and have 
+experience with platforms up and down the board, recently, C++, Grails, 
+and jQuery. I’m a list oriented person who is a bit messy when it comes 
+to keeping office space. You can say I’m a Highly motivated, workaholic 
+with a passion for coffeecake, open source, differential equations and 
+shoes.
 
 
 
-On Wed, Mar 30, 2011 at 3:43 PM, Till Kamppeter <till.kamppeter@gmail.com>wrote:
+IRC Nickname: FinalPhoenix
 
-> Hi,
->
-> as every year and as many of you know, one can participate in the
-> OpenPrinting Summit 2011 also by phone, and as last year we will also
-> have a screencast via HP's Virtual Rooms, so that you can watch the
-> slides. And the slides will also be available as PDF for the case that
-> the screencast does not work for you.
->
-> We will use the same phone number and access code as for the preparation
-> conference calls:
->
-> OpenPrinting Summit room
->     Dial-in number: +1-218-936-7999
->     Access code: 491659#
->
-> To watch the projection while you are on the phone, we are setting up a
-> screencast via HP Virtual Rooms. Go to
->
-> https://www.rooms.hp.com/attend/default.aspx?key=EPJXNR7T8V
->
-> to start receiving our screencast. By clicking the link you get onto a
-> page where you can start watching the screencast and also download the
-> needed client software/browser plug-in. The software is available for
-> Linux, Mac, and Windows. Currently it does not work with Firefox 4, but
-> up to the start of the Summit it can be fixed, please watch out for
-> updates of the client software.
->
-> As an alternative to the screencast you can download the presentation
-> slides via the links in the schedules. Note that you have to advance the
-> slides manually then (but you can go back whenever you want).
->
->    Till
-> _______________________________________________
-> Printing-architecture mailing list
-> Printing-architecture@lists.linux-foundation.org
-> https://lists.linux-foundation.org/mailman/listinfo/printing-architecture
->
 
---00151747b956a3c069049fb9c6bc
-Content-Type: text/html; charset=ISO-8859-1
-Content-Transfer-Encoding: quoted-printable
 
-Hi Everyone,<br><br>Please note that HP Virtual Rooms only supports *one* b=
-rowser<br>on each operating system:<br><br>Windows - IE 6, 7, or 8 (but not=
- IE 9 beta)<br>Mac OS X - Safari 2.x or higher<br>Linux - Firefox 1.5 or hi=
-gher (but not Firefox 4)<br>
-<br>Please take the time to install and *test* HP Virtual Rooms client <br>=
-for your system BEFORE the Open Printing Summit.<br><br>Cheers,<br>- Ira<br=
-><br clear=3D"all">Ira McDonald (Musician / Software Architect)<br>Chair - =
-Linux Foundation Open Printing WG<br>
-Co-Chair - IEEE-ISTO PWG IPP WG<br>Co-Chair - TCG Hardcopy WG<br>IETF Desig=
-nated Expert - IPP &amp; Printer MIB<br>Blue Roof Music/High North Inc<br><=
-a href=3D"http://sites.google.com/site/blueroofmusic" target=3D"_blank">htt=
-p://sites.google.com/site/blueroofmusic</a><br>
-<a style=3D"color:rgb(102, 0, 204)" href=3D"http://sites.google.com/site/hi=
-ghnorthinc" target=3D"_blank">http://sites.google.com/site/highnorthinc</a>=
-<br>mailto:<a href=3D"mailto:blueroofmusic@gmail.com" target=3D"_blank">blu=
-eroofmusic@gmail.com</a><br>
-Christmas through April:<br>=A0 579 Park Place=A0 Saline, MI=A0 48176<br>=
-=A0 734-944-0094<br>May to Christmas:<br>=A0 PO Box 221=A0 Grand Marais, MI=
- 49839<br>=A0 906-494-2434<div style=3D"display:inline"></div><div style=3D=
-"display:inline">
-</div><div style=3D"display:inline"></div><br>
-<br><br><div class=3D"gmail_quote">On Wed, Mar 30, 2011 at 3:43 PM, Till Ka=
-mppeter <span dir=3D"ltr">&lt;<a href=3D"mailto:till.kamppeter@gmail.com">t=
-ill.kamppeter@gmail.com</a>&gt;</span> wrote:<br><blockquote class=3D"gmail=
-_quote" style=3D"margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:=
-1ex;">
-Hi,<br>
-<br>
-as every year and as many of you know, one can participate in the<br>
-OpenPrinting Summit 2011 also by phone, and as last year we will also<br>
-have a screencast via HP&#39;s Virtual Rooms, so that you can watch the<br>
-slides. And the slides will also be available as PDF for the case that<br>
-the screencast does not work for you.<br>
-<br>
-We will use the same phone number and access code as for the preparation<br=
->
-conference calls:<br>
-<br>
-OpenPrinting Summit room<br>
- =A0 =A0 Dial-in number: <a href=3D"tel:%2B1-218-936-7999">+1-218-936-7999<=
-/a><br>
- =A0 =A0 Access code: 491659#<br>
-<br>
-To watch the projection while you are on the phone, we are setting up a<br>
-screencast via HP Virtual Rooms. Go to<br>
-<br>
-<a href=3D"https://www.rooms.hp.com/attend/default.aspx?key=3DEPJXNR7T8V" t=
-arget=3D"_blank">https://www.rooms.hp.com/attend/default.aspx?key=3DEPJXNR7=
-T8V</a><br>
-<br>
-to start receiving our screencast. By clicking the link you get onto a<br>
-page where you can start watching the screencast and also download the<br>
-needed client software/browser plug-in. The software is available for<br>
-Linux, Mac, and Windows. Currently it does not work with Firefox 4, but<br>
-up to the start of the Summit it can be fixed, please watch out for<br>
-updates of the client software.<br>
-<br>
-As an alternative to the screencast you can download the presentation<br>
-slides via the links in the schedules. Note that you have to advance the<br=
->
-slides manually then (but you can go back whenever you want).<br>
-<br>
- =A0 =A0Till<br>
-_______________________________________________<br>
-Printing-architecture mailing list<br>
-<a href=3D"mailto:Printing-architecture@lists.linux-foundation.org">Printin=
-g-architecture@lists.linux-foundation.org</a><br>
-<a href=3D"https://lists.linux-foundation.org/mailman/listinfo/printing-arc=
-hitecture" target=3D"_blank">https://lists.linux-foundation.org/mailman/lis=
-tinfo/printing-architecture</a><br>
-</blockquote></div><br><div style=3D"visibility: hidden; left: -5000px;" id=
-=3D"avg_ls_inline_popup"></div><style type=3D"text/css">#avg_ls_inline_popu=
-p{position: absolute;z-index: 9999;padding: 0px 0px;margin-left: 0px;margin=
--top: 0px;overflow: hidden;word-wrap: break-word;color: black;font-size: 10=
-px;text-align: left;line-height: 130%;}</style>
+Platforms:
 
---00151747b956a3c069049fb9c6bc--
+             1. MacBook Pro 2011 Core i7 8gbs RAM 500gb HDD running 
+MacOSX/Windows  7
+
+2. iMac 24” Summer 2009 8gb RAM  320GB HDD running Ubuntu 10.10/Arch
+
+
+
+Pertinent Languages: C, C++, PHP, CSS, HTML5, jQuery
+
+
+
+Relevant Experience: I code in C and C++ for various academic programs 
+for Physicists and Psychologists, modeling electron microscopy and 
+emergent systems. I use CSS, PHP, HTML5, and jQuery every day for 
+various web design and development work.
+
+
+
+Involvement in the Open Source Community: This will be my first major 
+Open Source Project, I have been a freeloader in the past and would like 
+to correct that.
+
+
+
+Development Idea and Implementation: The idea came from my actual day 
+job. I manage servers and labs at Arizona State University at Coor Hall 
+in the Geography and Urban Planning Department. Due to state budget cuts 
+we have been forced to rely more and more on open source software, 
+however those budget cuts have also affected how much paper and ink we 
+can buy. These budget cuts are felt by most of the faculty, however, the 
+grad students are largely unaware. Our graduate students are good people 
+from all over the world, but they love printing. They love printing so 
+much that they’re bleeding us dry. Often the graduate students will 
+print entire textbooks on laser printers, ten or so copies of 200 page 
+theses, etc. This has become a very big problem and I am supposed to 
+solve it. If I can create a ticketed, monitored print system with user 
+accounts. I can stop these ink-hungry graduate students and perhaps save 
+the day, and the department from further measures like taking on less 
+graduate students, or even worse, cutting the IT budget.
+
+
+
+Expected Achievement:  Create a ticketed, monitored linux print server 
+with a web user interface for both administrators and users on all 
+platforms.
+
+
+
+Why I am suited for this project: I have been involved in the Linux 
+community for five years, and a member of the Linux Users Group at ASU 
+for two. I would like to finally make Linux print servers viable for 
+large organizations and make Linux a friendly way to go in the office. I 
+am well versed in coding in the specific languages needed and C/C++ were 
+part of the first languages I learned six years ago. I have to solve 
+this problem, and I would like the support of the Open Source Community 
+to not only save my department from further measures, but to help other 
+people in similar situations.
+
+
+
+Invested Time: I will be contributing 40 hours a week or more to this 
+problem as it is urgent to the success of my department. Not only is my 
+day job allowing me to do this, but I will be most likely doing the real 
+extensive testing at home in my own environment.
+
+
+
+Rough Schedule of Project Subtasks:
+
+
+
+First two weeks – Planning and Research into the CUPS platform and 
+similar closed source ticketing systems
+
+Seven Weeks – Developing and Implementing a ticket based system to be 
+interpreted by job (i.e. File Name, Size, Number of Pages, When it was 
+printed, from what IP) and sent to a monitoring server where each job is 
+recorded. These jobs will be sent to a database.
+
+Six Weeks – Developing a user database to match up to ticketing system 
+in order to set print limits on users, know which user printed what and 
+how many, etc.
+
+Three Weeks – Developing and Designing a front and back end GUI 
+accessible through the web available on all platforms (Mac/PC/Linux)  in 
+order to install print drivers, see jobs, progress towards page limit, 
+and a back end for administration use, such as a print out of the 
+requested jobs for each printer, who is at their print limit, how many 
+pages are going through each printer, etc.
+
+Two weeks – Debugging, Testing, Implementing.
