@@ -1,13 +1,12 @@
-Message-ID: <4DC1CA3F.3020406@gmail.com>
-Date: Wed, 04 May 2011 23:50:55 +0200
+Message-ID: <4DC1CA91.5050108@gmail.com>
+Date: Wed, 04 May 2011 23:52:17 +0200
 From: Till Kamppeter <till.kamppeter@gmail.com>
 MIME-Version: 1.0
-References: <BANLkTinNcN_A=0JtG=aBSQDw5K_+K+mH1A@mail.gmail.com>
-In-Reply-To: <BANLkTinNcN_A=0JtG=aBSQDw5K_+K+mH1A@mail.gmail.com>
+References: <BANLkTimB4ZE7BWsFsL+ZcP5=+=mHjKWCJQ@mail.gmail.com>
+In-Reply-To: <BANLkTimB4ZE7BWsFsL+ZcP5=+=mHjKWCJQ@mail.gmail.com>
 Content-Type: text/plain; charset=UTF-8; format=flowed
 Content-Transfer-Encoding: 7bit
-Subject: Re: [Printing-architecture] Revised Summary of 2011 Open Printing
-	Summit posted
+Subject: Re: [Printing-architecture] OP Monthly Minutes - 4 May 2011
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -18,12 +17,17 @@ List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subj
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
 To: Ira McDonald <blueroofmusic@gmail.com>
-Cc: printing-architecture@lists.linux-foundation.org, "Petrie,
-	Glen" <glen.petrie@eitc.epson.com>, printing-summit@lists.linux-foundation.org
+Cc: printing-architecture@lists.linux-foundation.org
 
-On 05/04/2011 11:05 PM, Ira McDonald wrote:
-> Updated for attendees and CPD next steps and stored at the same URI:
+On 05/04/2011 09:27 PM, Ira McDonald wrote:
+> Minutes from today's Open Printing monthly teleconference are posted at:
+>
+> ftp://ftp.pwg.org/pub/pwg/fsg/minutes/OP-Minutes-20110111.htm
+> <ftp://ftp.pwg.org/pub/pwg/fsg/minutes/OP-Minutes-20110111.htm>
+>
 
-Thanks. Can you correct my name in the attendees list? Thanks.
+Correction for the link:
+
+ftp://ftp.pwg.org/pub/pwg/fsg/minutes/OP-Minutes-20110504.htm
 
     Till
