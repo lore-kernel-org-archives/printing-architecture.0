@@ -1,13 +1,13 @@
-Message-ID: <4DC1C081.2050903@gmail.com>
-Date: Wed, 04 May 2011 23:09:21 +0200
+Message-ID: <4DC1CA3F.3020406@gmail.com>
+Date: Wed, 04 May 2011 23:50:55 +0200
 From: Till Kamppeter <till.kamppeter@gmail.com>
 MIME-Version: 1.0
-References: <e395be80811270817n502ccd16wf6cc90f85364f5ae@mail.gmail.com>
-In-Reply-To: <e395be80811270817n502ccd16wf6cc90f85364f5ae@mail.gmail.com>
+References: <BANLkTinNcN_A=0JtG=aBSQDw5K_+K+mH1A@mail.gmail.com>
+In-Reply-To: <BANLkTinNcN_A=0JtG=aBSQDw5K_+K+mH1A@mail.gmail.com>
 Content-Type: text/plain; charset=UTF-8; format=flowed
 Content-Transfer-Encoding: 7bit
-Subject: [Printing-architecture] Last OP Meeting - Wed - 4 May 2011 - The
-	Recording
+Subject: Re: [Printing-architecture] Revised Summary of 2011 Open Printing
+	Summit posted
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -17,20 +17,13 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Open Printing <printing-architecture@lists.linux-foundation.org>, Printing-japan <printing-japan@lists.linux-foundation.org>
+To: Ira McDonald <blueroofmusic@gmail.com>
+Cc: printing-architecture@lists.linux-foundation.org, "Petrie,
+	Glen" <glen.petrie@eitc.epson.com>, printing-summit@lists.linux-foundation.org
 
-Hi,
+On 05/04/2011 11:05 PM, Ira McDonald wrote:
+> Updated for attendees and CPD next steps and stored at the same URI:
 
-I have uploaded the recording of the last OpenPrinting meeting to the
-OpenPrinting server:
-
-http://www.openprinting.org/download/meetingnotes/op-telecons/OP-Meeting-20110504.mp3
-
-In general, recorded meetings I will upload to
-
-http://www.openprinting.org/download/meetingnotes/
+Thanks. Can you correct my name in the attendees list? Thanks.
 
     Till
-
-P. S.: The MP3 is 18 MB long, 54 minutes of talking.
-
