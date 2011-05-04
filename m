@@ -1,9 +1,9 @@
 MIME-Version: 1.0
-Date: Wed, 4 May 2011 11:41:39 -0400
-Message-ID: <BANLkTinNxiNkrkZXunPczvCMNP49L5BD7A@mail.gmail.com>
+Date: Wed, 4 May 2011 11:48:40 -0400
+Message-ID: <BANLkTimrHhHYzM-s0duSAf1DDjNh+KaObA@mail.gmail.com>
 From: Ira McDonald <blueroofmusic@gmail.com>
-Content-Type: multipart/alternative; boundary=0015174bdf6ebd0a6904a2751758
-Subject: [Printing-architecture] Summary of 2011 Open Printing Summit posted
+Content-Type: multipart/alternative; boundary=001517473788d5199904a27530f1
+Subject: [Printing-architecture] 2011 OPS - Some next steps for CPD
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -13,28 +13,37 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: printing-architecture@lists.linux-foundation.org, printing-summit@lists.linux-foundation.org, Ira McDonald <blueroofmusic@gmail.com>, "Petrie, Glen" <glen.petrie@eitc.epson.com>, Till Kamppeter <till.kamppeter@gmail.com>
+To: printing-architecture@lists.linux-foundation.org, Till Kamppeter <till.kamppeter@gmail.com>, "Petrie, Glen" <glen.petrie@eitc.epson.com>, Ira McDonald <blueroofmusic@gmail.com>
 
---0015174bdf6ebd0a6904a2751758
+--001517473788d5199904a27530f1
 Content-Type: text/plain; charset=ISO-8859-1
 
 Hi,
 
-I've just posted a summary of the 2011 Open Printing Summit at:
+I'll update the 2011 OPS summary I just posted, but here are some
+next steps I captured from our Common Printing Dialog discussion:
 
-ftp://ftp.pwg.org/pub/pwg/fsg/April2011_OPSummit/Open-Printing-Summit-Summary-20110504.htm
+- Is Linux Foundation in Europe to accept CPD funds from German BSI?
 
-ftp://ftp.pwg.org/pub/pwg/fsg/April2011_OPSummit/Open-Printing-Summit-Summary-20110504.pdf
+- Till/LF to contact German BSI directly
 
-ATTENDEES:
-- In-person please check that you are listed and your name/company is
-spelled right
-- Call-in please check that you are listed
+- Finish CPD DBUS libraries ASAP
 
-Comments?
+- Finish CPD UI for *one* target platform/printer
+
+- Scope the proposed OP Behavior Guidelines spec
+
+- Telecons/email on the proposed OP Behavior Guidelines spec
+
+- Take CPD to Joint Desktop summit in summer 2011
+
+- Take CPD to mobile conferences to stimulate interest
+
+- MOVE FAST - no more 5 years to half-way stage
 
 Cheers,
 - Ira (Open Printing Chair)
+
 
 Ira McDonald (Musician / Software Architect)
 Chair - Linux Foundation Open Printing WG
@@ -52,39 +61,41 @@ May to Christmas:
   PO Box 221  Grand Marais, MI 49839
   906-494-2434
 
---0015174bdf6ebd0a6904a2751758
+--001517473788d5199904a27530f1
 Content-Type: text/html; charset=ISO-8859-1
 Content-Transfer-Encoding: quoted-printable
 
-Hi,<br><br>I&#39;ve just posted a summary of the 2011 Open Printing Summit =
-at:<br><br><a href=3D"ftp://ftp.pwg.org/pub/pwg/fsg/April2011_OPSummit/Open=
--Printing-Summit-Summary-20110504.htm">ftp://ftp.pwg.org/pub/pwg/fsg/April2=
-011_OPSummit/Open-Printing-Summit-Summary-20110504.htm</a><br>
-<br><a href=3D"ftp://ftp.pwg.org/pub/pwg/fsg/April2011_OPSummit/Open-Printi=
-ng-Summit-Summary-20110504.pdf">ftp://ftp.pwg.org/pub/pwg/fsg/April2011_OPS=
-ummit/Open-Printing-Summit-Summary-20110504.pdf</a><br><br>ATTENDEES:<br>
-- In-person please check that you are listed and your name/company is spell=
-ed right<br>- Call-in please check that you are listed<br><br>Comments?<br>=
-<br>Cheers,<br>- Ira (Open Printing Chair)<br><br clear=3D"all">Ira McDonal=
-d (Musician / Software Architect)<br>
-Chair - Linux Foundation Open Printing WG<br>Co-Chair - IEEE-ISTO PWG IPP W=
-G<br>Co-Chair - TCG Hardcopy WG<br>IETF Designated Expert - IPP &amp; Print=
-er MIB<br>Blue Roof Music/High North Inc<br><a href=3D"http://sites.google.=
-com/site/blueroofmusic" target=3D"_blank">http://sites.google.com/site/blue=
-roofmusic</a><br>
-<a style=3D"color:rgb(102, 0, 204)" href=3D"http://sites.google.com/site/hi=
-ghnorthinc" target=3D"_blank">http://sites.google.com/site/highnorthinc</a>=
-<br>mailto:<a href=3D"mailto:blueroofmusic@gmail.com" target=3D"_blank">blu=
-eroofmusic@gmail.com</a><br>
-Christmas through April:<br>=A0 579 Park Place=A0 Saline, MI=A0 48176<br>=
-=A0 734-944-0094<br>May to Christmas:<br>=A0 PO Box 221=A0 Grand Marais, MI=
- 49839<br>=A0 906-494-2434<div style=3D"display:inline"></div><div style=3D=
-"display:inline">
-</div><div style=3D"display:inline"></div><br>
+Hi,<br><br>I&#39;ll update the 2011 OPS summary I just posted, but here are=
+ some<br>next steps I captured from our Common Printing Dialog discussion:<=
+br><br>- Is Linux Foundation in Europe to accept CPD funds from German BSI?=
+<br>
+<br>- Till/LF to contact German BSI directly<br><br>- Finish CPD DBUS libra=
+ries ASAP<br><br>- Finish CPD UI for *one* target platform/printer<br><br>-=
+ Scope the proposed OP Behavior Guidelines spec<br><br>- Telecons/email on =
+the proposed OP Behavior Guidelines spec<br>
+
+<br>- Take CPD to Joint Desktop summit in summer 2011<br><br>- Take CPD to =
+mobile conferences to stimulate interest<br><br>- MOVE FAST - no more 5 yea=
+rs to half-way stage<br><br>Cheers,<br>- Ira (Open Printing Chair)<br>
+<br><br clear=3D"all">Ira McDonald (Musician / Software Architect)<br>Chair=
+ - Linux Foundation Open Printing WG<br>Co-Chair - IEEE-ISTO PWG IPP WG<br>=
+Co-Chair - TCG Hardcopy WG<br>IETF Designated Expert - IPP &amp; Printer MI=
+B<br>
+Blue Roof Music/High North Inc<br><a href=3D"http://sites.google.com/site/b=
+lueroofmusic" target=3D"_blank">http://sites.google.com/site/blueroofmusic<=
+/a><br><a style=3D"color:rgb(102, 0, 204)" href=3D"http://sites.google.com/=
+site/highnorthinc" target=3D"_blank">http://sites.google.com/site/highnorth=
+inc</a><br>
+mailto:<a href=3D"mailto:blueroofmusic@gmail.com" target=3D"_blank">blueroo=
+fmusic@gmail.com</a><br>Christmas through April:<br>=A0 579 Park Place=A0 S=
+aline, MI=A0 48176<br>=A0 734-944-0094<br>May to Christmas:<br>=A0 PO Box 2=
+21=A0 Grand Marais, MI 49839<br>
+=A0 906-494-2434<div style=3D"display:inline"></div><div style=3D"display:i=
+nline"></div><div style=3D"display:inline"></div><br>
 <div style=3D"visibility: hidden; left: -5000px;" id=3D"avg_ls_inline_popup=
 "></div><style type=3D"text/css">#avg_ls_inline_popup{position: absolute;z-=
 index: 9999;padding: 0px 0px;margin-left: 0px;margin-top: 0px;overflow: hid=
 den;word-wrap: break-word;color: black;font-size: 10px;text-align: left;lin=
 e-height: 130%;}</style>
 
---0015174bdf6ebd0a6904a2751758--
+--001517473788d5199904a27530f1--
