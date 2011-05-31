@@ -1,11 +1,11 @@
-Message-ID: <4DE0336A.5060509@gmail.com>
-Date: Sat, 28 May 2011 01:27:38 +0200
+Message-ID: <4DE50FE8.1090205@gmail.com>
+Date: Tue, 31 May 2011 17:57:28 +0200
 From: Till Kamppeter <till.kamppeter@gmail.com>
 MIME-Version: 1.0
 Content-Type: text/plain; charset=UTF-8; format=flowed
 Content-Transfer-Encoding: 7bit
 Subject: [Printing-architecture] REMINDER: OpenPrinting US/Europe monthly
- call coming WEDNESDAY (June 1)
+ call coming TOMORROW (June 1)
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -20,7 +20,7 @@ Cc: David Williams <dwilliams@ricohsv.com>
 
 Hi,
 
-Next week we will have our conference call.
+In 24 hours from now we will have our conference call.
 
 Agenda:
 
