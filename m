@@ -1,11 +1,13 @@
-Message-ID: <4DE65739.6030409@gmail.com>
-Date: Wed, 01 Jun 2011 17:14:01 +0200
+Message-ID: <4DE672CB.2050503@gmail.com>
+Date: Wed, 01 Jun 2011 19:11:39 +0200
 From: Till Kamppeter <till.kamppeter@gmail.com>
 MIME-Version: 1.0
+References: <e395be80811270817n502ccd16wf6cc90f85364f5ae@mail.gmail.com>
+In-Reply-To: <e395be80811270817n502ccd16wf6cc90f85364f5ae@mail.gmail.com>
 Content-Type: text/plain; charset=UTF-8; format=flowed
 Content-Transfer-Encoding: 7bit
-Subject: [Printing-architecture] REMINDER: OpenPrinting US/Europe monthly
- call coming TODAY (June 1)
+Subject: [Printing-architecture] Last OP Meeting - Wed - 1 June 2011 - The
+	Recording
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -15,35 +17,21 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: OpenPrinting <printing-architecture@lists.linux-foundation.org>
+To: Open Printing <printing-architecture@lists.linux-foundation.org>, Printing-japan <printing-japan@lists.linux-foundation.org>
 Cc: David Williams <dwilliams@ricohsv.com>
 
 Hi,
 
-In 45 minutes from now we will have our conference call.
+I have uploaded the recording of the last OpenPrinting meeting to the
+OpenPrinting server:
 
-Agenda:
+http://www.openprinting.org/download/meetingnotes/op-telecons/OP-Meeting-20110601.mp3
 
-* Introduction of David Williams, Ricoh
-* State of the art of Daniel Dressler's Foomatic work
-* More TBD
+In general, recorded meetings I will upload to
+
+http://www.openprinting.org/download/meetingnotes/
 
     Till
 
-Dial-in data:
-
-June 2011 - US/Europe - OP Monthly Meeting
-
-     - Wednesday 1 June 2011, Daytime
-       - US
-         9am in San Francisco - US PDT (Pacific Daylight Time)
-         10am in Colorado - US MDT (Mountain Daylight Time)
-         11am in Chicago - US CDT (Central Daylight Time)
-         12pm in New York - US EDT (Eastern Daylight Time)
-       - Europe
-         6pm in Berlin - CEST (Central European Summer Time)
-
-     * Main Number (Till Kamppeter, LF, leader)
-       International: +1-218-936-7999
-       Access Code:   491659#
+P. S.: The MP3 is 17 MB long, 50 minutes of talking.
 
