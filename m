@@ -1,15 +1,11 @@
 From: John Layt <johnlayt@googlemail.com>
-Date: Wed, 22 Jun 2011 13:47:54 +0100
-References: <BANLkTikbwh8FvT7WHA7W9gKtsPYzxq_bgg@mail.gmail.com>
-	<201106211547.42450.hvengel@gmail.com>
-In-Reply-To: <201106211547.42450.hvengel@gmail.com>
+Date: Wed, 22 Jun 2011 23:49:12 +0100
 MIME-Version: 1.0
-Content-Type: Text/Plain;
-  charset="iso-8859-15"
+Content-Type: text/plain;
+  charset="us-ascii"
 Content-Transfer-Encoding: 7bit
-Message-Id: <201106221347.55372.johnlayt@googlemail.com>
-Subject: Re: [Printing-architecture] Nokia is loaning out N950 devkits,
-	I've applied, does anyone else have meego hardware?
+Message-Id: <201106222349.13063.johnlayt@googlemail.com>
+Subject: [Printing-architecture] Printing in Qt/KDE
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -21,46 +17,36 @@ List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-ar
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
 To: printing-architecture@lists.linux-foundation.org
 
-On Tuesday 21 Jun 2011 23:47:42 Hal V. Engel wrote:
-> On Tuesday, June 21, 2011 02:01:18 PM Daniel Dressler wrote:
-> > I know Intel had dev units of native meego hardware a while ago, did
-> > anyone get one of these? Has anyone had contact with the meego project
-> > or experience with their printing stack?
+Hi,
 
-I haven't looked at Meego, but it appears to have CUPS in the Core Software 
-Platform, but whether that's also in the Mobile profile I don't know. The api 
-would definately be Qt however.
+Apologies for not being very responsive on list to the follow up to the 
+printing summit and CPD, other priorities intervened.
 
-That said, you don't need specific hardware to try out printing in Meego, it 
-runs fine in a VM.  Hardware is really only needed if you're doing stuff that 
-requires the touch-screen or other hardware features.
+You may have heard that Qt have decided the forthcoming Qt 4.8 release will be 
+the last in the Qt4 series and will be followed by Qt5, the first release 
+under the new OpenGovernance development model.  I've just got back from the 
+Qt Contributors Summit where the plans for Qt5 were discussed, including what 
+to do with printing.  You can see some notes from the meeting at 
+http://developer.qt.nokia.com/groups/qt_contributors_summit/wiki/Printing
 
-> I have had a little contact with Intel's Meego team manager but I do not
-> have any technical details.  I am under the impression that Intel sort of
-> backed away from meego when Nokia went with WinPhone.  I do know that
-> Intel stopped hiring programmers to work on meego about that time.
+In summary, Qt do not have the developer resources to make feature changes to 
+printing, but are happy for the community to contribute new features.  For Qt5 
+the existing Qt Printing code will moved into a separate module and put into 
+support mode to allow the community to develop a replacement printing module 
+for inclusion into Qt 5.1 or 5.2.  Basically we've been given a clean sheet 
+for designing a new cross-platform api and feature set, but using the old code 
+as a starting point.  Obviously CPD will come into consideration in the design 
+process.
 
-Well, I know they are hiring people in Oslo from Nokia to work on Qt for 
-Meego, and the story they are telling those of us in the Qt community is they 
-are still as committed as they were before the Elopocalypse.  In fact, they 
-almost seemed relieved that Nokia has backed off as it allows Meego to develop 
-more openly and naturally rather being rushed into the role of saviour of 
-Nokia.
+I plan to start work on this in about 2-3 months after some other Qt5 tasks 
+are completed.  If anyone is interested in working on this, or has ideas on a 
+nice api and class structure I'd be happy to hear from them.
 
-> I would expect that the printing stack at the UI level is the more or less
-> stock Qt components but the lower levels of that stack I don't know.  I am
-> under the impression that the Intel/Nokia deal was that Intel would do all
-> of the apps and UI stuff and Nokia would do all of the systems stuff.
-
-Actually, my impression is it's a mixture, Intel doing the core OS and x86 
-support, Nokia doing arm support and the Qt api to wrap around the core, and 
-both sides using Qt to create their own UX for their own products.  Nokia are 
-certainly not contributing anything to the reference UX's as their one is/was 
-top-secret.
-
-Anyway, directly related to this is that I've just got back from the Qt 
-Contributors Summit where I lead a session on the future of printing in Qt, 
-but I'll start a separate thread for that.
+Moving on to the CPD briefly, I was looking at the api for applications adding 
+extra options to the dialog and it looks like it will be insufficent for 
+current KDE applications that add complex option widgets.  For an example see 
+Gwenview's 'Image Settings' tab.  I'm not sure there's any way such complex 
+requirements could be met using a generic DBus api or cross-toolkit dialog.
 
 Cheers!
 
