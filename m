@@ -1,10 +1,13 @@
-From: peter sikking <peter@mmiworks.net>
-Content-Type: text/plain; charset=utf-8
-Content-Transfer-Encoding: quoted-printable
-Date: Sat, 25 Jun 2011 13:55:45 +0200
-Message-Id: <661A2010-9B1D-412A-BC50-E6BA8C4BFFBF@mmiworks.net>
-Mime-Version: 1.0 (Apple Message framework v1084)
-Subject: [Printing-architecture] on printing and mobile...
+Content-class: urn:content-classes:message
+MIME-Version: 1.0
+Content-Type: text/plain;
+	charset="utf-8"
+Content-Transfer-Encoding: base64
+Date: Mon, 27 Jun 2011 07:10:12 -0700
+Message-ID: <ED4094DE5E8ACD4BBDACA6AD398E608F805DC6@EEAEX03.us.epson.net>
+References: <661A2010-9B1D-412A-BC50-E6BA8C4BFFBF@mmiworks.net>
+From: "Petrie, Glen" <glen.petrie@eitc.epson.com>
+Subject: Re: [Printing-architecture] on printing and mobile...
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -14,89 +17,68 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Open Printing <printing-architecture@lists.linux-foundation.org>
+To: peter sikking <peter@mmiworks.net>, Open Printing <printing-architecture@lists.linux-foundation.org>
 
-hello printing architects,
-
-I am seeing that first tentative steps are taken to explore the
-world of mobile printing UI.
-
-Maybe you did not know this about my firm, m+mi works:
-apart from driving for years printing user interaction
-on the desktop, we have been in mobile for more than 14 years.
-
-This has always been for major mobile brands and major networks.
-The result is that software we designed can be found in more
-than half a billion mobiles. Since 2007 we have worked on the
-fundamentals of touch mobile devices and hybrid touch (touch +
-keys) devices.
-
-These days we work at the level of overall device UI strategies
-and designs, and mentoring the UI designers of our clients.
-
-Combining the above (printing + mobile), I think we are in
-a unique position to give some insight on the theme.
-
-
-The point I really want to get across is that where it comes to
-
-- mobile with keys
-- mobile with touch
-- tablets with touch
-- tablets with keys (amazon kindle)
-
-all of these are separate worlds and none of these is an extension
-or derivative of another.
-
-none of these are an extension or derivative of desktop computing.
-
-The conclusion from this is that designing printing interaction for
-the four platforms above are four separate projects, which is certainly
-separate from the desktop cpd project. Note also that when doing the
-tablets with touch project, you will have to make a separate design
-for 10" and for 7" devices. One size will not fit all, and with touch
-everything is defined in centimeters, not pixels.
-
-Recently we were helping out at the KDE UX sprint,
-
-<http://blog.mmiworks.net/2011/04/kde-ux-sprint-inline-outline.html>
-
-where we talked for hours about this theme. I quote from that post:
-
-"What doe it take to bring the same application to different platforms,
-e.g. desktop, tablet and mobile touch devices? I say: more than just
-different widgets or rearranging screen layouts. The different vibe
-of each platform=E2=80=94the sofa factor of the iPad, being on the move =
-with
-mobile=E2=80=94leads, in my experience, to non=E2=80=91trivial =
-differences
-in UI structure and flows, for the same app."
-
-This links again to an earlier talk I did for a transport industry
-body (hey infrastructure, like printing!):
-
-=
-<http://blog.mmiworks.net/2010/04/public-mobile-transport.html#onthemove>
-
-to quote the punchlines:
-
-- mobile is not a shrunk desktop
-
-- touch is not mobile. neither is it a shrunk desktop
-
-That is the short version of 14 years of experience that I can
-share with you. I hope you can take it in and avoid very costly
-mistakes by structuring 'printing for mobile' in the wrong way,
-or by ignoring the user and interaction aspects of it.
-
-yours sincerely,
-
-    --ps
-
-        founder + principal interaction architect
-            man + machine interface works
-
-        http://blog.mmiworks.net: on interaction architecture
-
-
-
+UGV0ZXIsDQoNClRoYW5rcyBmb3IgaW5wdXRzLiAgSSB3aWxsIGFkZCB0aGVtIHRvIG92ZXJhbGwg
+YWN0aXZpdHkgYW5kIHRvIHRoZSBkZXRhaWxzIG9mIHRoZSBndWlkZWxpbmUuDQoNCkdsZW4NCg0K
+DQotLS0tLU9yaWdpbmFsIE1lc3NhZ2UtLS0tLQ0KRnJvbTogcHJpbnRpbmctYXJjaGl0ZWN0dXJl
+LWJvdW5jZXNAbGlzdHMubGludXgtZm91bmRhdGlvbi5vcmcgW21haWx0bzpwcmludGluZy1hcmNo
+aXRlY3R1cmUtYm91bmNlc0BsaXN0cy5saW51eC1mb3VuZGF0aW9uLm9yZ10gT24gQmVoYWxmIE9m
+IHBldGVyIHNpa2tpbmcNClNlbnQ6IFNhdHVyZGF5LCBKdW5lIDI1LCAyMDExIDQ6NTYgQU0NClRv
+OiBPcGVuIFByaW50aW5nDQpTdWJqZWN0OiBbUHJpbnRpbmctYXJjaGl0ZWN0dXJlXSBvbiBwcmlu
+dGluZyBhbmQgbW9iaWxlLi4uDQoNCmhlbGxvIHByaW50aW5nIGFyY2hpdGVjdHMsDQoNCkkgYW0g
+c2VlaW5nIHRoYXQgZmlyc3QgdGVudGF0aXZlIHN0ZXBzIGFyZSB0YWtlbiB0byBleHBsb3JlIHRo
+ZQ0Kd29ybGQgb2YgbW9iaWxlIHByaW50aW5nIFVJLg0KDQpNYXliZSB5b3UgZGlkIG5vdCBrbm93
+IHRoaXMgYWJvdXQgbXkgZmlybSwgbSttaSB3b3JrczoNCmFwYXJ0IGZyb20gZHJpdmluZyBmb3Ig
+eWVhcnMgcHJpbnRpbmcgdXNlciBpbnRlcmFjdGlvbg0Kb24gdGhlIGRlc2t0b3AsIHdlIGhhdmUg
+YmVlbiBpbiBtb2JpbGUgZm9yIG1vcmUgdGhhbiAxNCB5ZWFycy4NCg0KVGhpcyBoYXMgYWx3YXlz
+IGJlZW4gZm9yIG1ham9yIG1vYmlsZSBicmFuZHMgYW5kIG1ham9yIG5ldHdvcmtzLg0KVGhlIHJl
+c3VsdCBpcyB0aGF0IHNvZnR3YXJlIHdlIGRlc2lnbmVkIGNhbiBiZSBmb3VuZCBpbiBtb3JlDQp0
+aGFuIGhhbGYgYSBiaWxsaW9uIG1vYmlsZXMuIFNpbmNlIDIwMDcgd2UgaGF2ZSB3b3JrZWQgb24g
+dGhlDQpmdW5kYW1lbnRhbHMgb2YgdG91Y2ggbW9iaWxlIGRldmljZXMgYW5kIGh5YnJpZCB0b3Vj
+aCAodG91Y2ggKw0Ka2V5cykgZGV2aWNlcy4NCg0KVGhlc2UgZGF5cyB3ZSB3b3JrIGF0IHRoZSBs
+ZXZlbCBvZiBvdmVyYWxsIGRldmljZSBVSSBzdHJhdGVnaWVzDQphbmQgZGVzaWducywgYW5kIG1l
+bnRvcmluZyB0aGUgVUkgZGVzaWduZXJzIG9mIG91ciBjbGllbnRzLg0KDQpDb21iaW5pbmcgdGhl
+IGFib3ZlIChwcmludGluZyArIG1vYmlsZSksIEkgdGhpbmsgd2UgYXJlIGluDQphIHVuaXF1ZSBw
+b3NpdGlvbiB0byBnaXZlIHNvbWUgaW5zaWdodCBvbiB0aGUgdGhlbWUuDQoNCg0KVGhlIHBvaW50
+IEkgcmVhbGx5IHdhbnQgdG8gZ2V0IGFjcm9zcyBpcyB0aGF0IHdoZXJlIGl0IGNvbWVzIHRvDQoN
+Ci0gbW9iaWxlIHdpdGgga2V5cw0KLSBtb2JpbGUgd2l0aCB0b3VjaA0KLSB0YWJsZXRzIHdpdGgg
+dG91Y2gNCi0gdGFibGV0cyB3aXRoIGtleXMgKGFtYXpvbiBraW5kbGUpDQoNCmFsbCBvZiB0aGVz
+ZSBhcmUgc2VwYXJhdGUgd29ybGRzIGFuZCBub25lIG9mIHRoZXNlIGlzIGFuIGV4dGVuc2lvbg0K
+b3IgZGVyaXZhdGl2ZSBvZiBhbm90aGVyLg0KDQpub25lIG9mIHRoZXNlIGFyZSBhbiBleHRlbnNp
+b24gb3IgZGVyaXZhdGl2ZSBvZiBkZXNrdG9wIGNvbXB1dGluZy4NCg0KVGhlIGNvbmNsdXNpb24g
+ZnJvbSB0aGlzIGlzIHRoYXQgZGVzaWduaW5nIHByaW50aW5nIGludGVyYWN0aW9uIGZvcg0KdGhl
+IGZvdXIgcGxhdGZvcm1zIGFib3ZlIGFyZSBmb3VyIHNlcGFyYXRlIHByb2plY3RzLCB3aGljaCBp
+cyBjZXJ0YWlubHkNCnNlcGFyYXRlIGZyb20gdGhlIGRlc2t0b3AgY3BkIHByb2plY3QuIE5vdGUg
+YWxzbyB0aGF0IHdoZW4gZG9pbmcgdGhlDQp0YWJsZXRzIHdpdGggdG91Y2ggcHJvamVjdCwgeW91
+IHdpbGwgaGF2ZSB0byBtYWtlIGEgc2VwYXJhdGUgZGVzaWduDQpmb3IgMTAiIGFuZCBmb3IgNyIg
+ZGV2aWNlcy4gT25lIHNpemUgd2lsbCBub3QgZml0IGFsbCwgYW5kIHdpdGggdG91Y2gNCmV2ZXJ5
+dGhpbmcgaXMgZGVmaW5lZCBpbiBjZW50aW1ldGVycywgbm90IHBpeGVscy4NCg0KUmVjZW50bHkg
+d2Ugd2VyZSBoZWxwaW5nIG91dCBhdCB0aGUgS0RFIFVYIHNwcmludCwNCg0KPGh0dHA6Ly9ibG9n
+Lm1taXdvcmtzLm5ldC8yMDExLzA0L2tkZS11eC1zcHJpbnQtaW5saW5lLW91dGxpbmUuaHRtbD4N
+Cg0Kd2hlcmUgd2UgdGFsa2VkIGZvciBob3VycyBhYm91dCB0aGlzIHRoZW1lLiBJIHF1b3RlIGZy
+b20gdGhhdCBwb3N0Og0KDQoiV2hhdCBkb2UgaXQgdGFrZSB0byBicmluZyB0aGUgc2FtZSBhcHBs
+aWNhdGlvbiB0byBkaWZmZXJlbnQgcGxhdGZvcm1zLA0KZS5nLiBkZXNrdG9wLCB0YWJsZXQgYW5k
+IG1vYmlsZSB0b3VjaCBkZXZpY2VzPyBJIHNheTogbW9yZSB0aGFuIGp1c3QNCmRpZmZlcmVudCB3
+aWRnZXRzIG9yIHJlYXJyYW5naW5nIHNjcmVlbiBsYXlvdXRzLiBUaGUgZGlmZmVyZW50IHZpYmUN
+Cm9mIGVhY2ggcGxhdGZvcm3igJR0aGUgc29mYSBmYWN0b3Igb2YgdGhlIGlQYWQsIGJlaW5nIG9u
+IHRoZSBtb3ZlIHdpdGgNCm1vYmlsZeKAlGxlYWRzLCBpbiBteSBleHBlcmllbmNlLCB0byBub27i
+gJF0cml2aWFsIGRpZmZlcmVuY2VzDQppbiBVSSBzdHJ1Y3R1cmUgYW5kIGZsb3dzLCBmb3IgdGhl
+IHNhbWUgYXBwLiINCg0KVGhpcyBsaW5rcyBhZ2FpbiB0byBhbiBlYXJsaWVyIHRhbGsgSSBkaWQg
+Zm9yIGEgdHJhbnNwb3J0IGluZHVzdHJ5DQpib2R5IChoZXkgaW5mcmFzdHJ1Y3R1cmUsIGxpa2Ug
+cHJpbnRpbmchKToNCg0KPGh0dHA6Ly9ibG9nLm1taXdvcmtzLm5ldC8yMDEwLzA0L3B1YmxpYy1t
+b2JpbGUtdHJhbnNwb3J0Lmh0bWwjb250aGVtb3ZlPg0KDQp0byBxdW90ZSB0aGUgcHVuY2hsaW5l
+czoNCg0KLSBtb2JpbGUgaXMgbm90IGEgc2hydW5rIGRlc2t0b3ANCg0KLSB0b3VjaCBpcyBub3Qg
+bW9iaWxlLiBuZWl0aGVyIGlzIGl0IGEgc2hydW5rIGRlc2t0b3ANCg0KVGhhdCBpcyB0aGUgc2hv
+cnQgdmVyc2lvbiBvZiAxNCB5ZWFycyBvZiBleHBlcmllbmNlIHRoYXQgSSBjYW4NCnNoYXJlIHdp
+dGggeW91LiBJIGhvcGUgeW91IGNhbiB0YWtlIGl0IGluIGFuZCBhdm9pZCB2ZXJ5IGNvc3RseQ0K
+bWlzdGFrZXMgYnkgc3RydWN0dXJpbmcgJ3ByaW50aW5nIGZvciBtb2JpbGUnIGluIHRoZSB3cm9u
+ZyB3YXksDQpvciBieSBpZ25vcmluZyB0aGUgdXNlciBhbmQgaW50ZXJhY3Rpb24gYXNwZWN0cyBv
+ZiBpdC4NCg0KeW91cnMgc2luY2VyZWx5LA0KDQogICAgLS1wcw0KDQogICAgICAgIGZvdW5kZXIg
+KyBwcmluY2lwYWwgaW50ZXJhY3Rpb24gYXJjaGl0ZWN0DQogICAgICAgICAgICBtYW4gKyBtYWNo
+aW5lIGludGVyZmFjZSB3b3Jrcw0KDQogICAgICAgIGh0dHA6Ly9ibG9nLm1taXdvcmtzLm5ldDog
+b24gaW50ZXJhY3Rpb24gYXJjaGl0ZWN0dXJlDQoNCg0KDQpfX19fX19fX19fX19fX19fX19fX19f
+X19fX19fX19fX19fX19fX19fX19fX19fXw0KUHJpbnRpbmctYXJjaGl0ZWN0dXJlIG1haWxpbmcg
+bGlzdA0KUHJpbnRpbmctYXJjaGl0ZWN0dXJlQGxpc3RzLmxpbnV4LWZvdW5kYXRpb24ub3JnDQpo
+dHRwczovL2xpc3RzLmxpbnV4LWZvdW5kYXRpb24ub3JnL21haWxtYW4vbGlzdGluZm8vcHJpbnRp
+bmctYXJjaGl0ZWN0dXJlDQo=
