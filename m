@@ -1,12 +1,12 @@
 Content-class: urn:content-classes:message
 MIME-Version: 1.0
 Content-Type: multipart/alternative;
-	boundary="----_=_NextPart_001_01CC350E.5C31394B"
-Date: Mon, 27 Jun 2011 14:08:27 -0700
-Message-ID: <ED4094DE5E8ACD4BBDACA6AD398E608F805DCA@EEAEX03.us.epson.net>
+	boundary="----_=_NextPart_001_01CC35A6.93A2E3ED"
+Date: Tue, 28 Jun 2011 08:18:04 -0700
+Message-ID: <ED4094DE5E8ACD4BBDACA6AD398E608F805DCB@EEAEX03.us.epson.net>
 From: "Petrie, Glen" <glen.petrie@eitc.epson.com>
-Subject: [Printing-architecture] Use of binary printer capabilities for
-	mobile
+Subject: [Printing-architecture] Mobile Guideline Print Dialog - more
+	discussion
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -20,7 +20,7 @@ To: Open Printing <printing-architecture@lists.linux-foundation.org>
 
 This is a multi-part message in MIME format.
 
-------_=_NextPart_001_01CC350E.5C31394B
+------_=_NextPart_001_01CC35A6.93A2E3ED
 Content-Type: text/plain;
 	charset="us-ascii"
 Content-Transfer-Encoding: quoted-printable
@@ -29,132 +29,73 @@ All,
 
 =20
 
-I continue address the issues for mobile print in connection with
-LF/OpenPrinting.   The current area-of-interest is printer capabilities.
-
-
-Yes, I could simpley follow the PWG work that will use IPP (Everywhere);
-and, through a series of Pascal/XML data exchanges, the printer
-capabilities can be obtained.  This, however, causes a burden to the
-mobile device and printer to understand and support the IPP and to
-contain dictionary (string) parsers.   While the overhead may be
-acceptable; it is still burdensome. =20
+Using the Binary Printer Capability (for Mobile) data I discussed in my
+last email; we now have a fixed list of attributes and values that any
+mobile print dialog, solution and system can support.  A mobile print
+dialog, solution and system does not need to support the entire list of
+attributes and values but at least there is a finite and fixed list.
 
 =20
 
-The use of PPD files is possible but they have the same complexity as
-above.
+*	With a fixed list of attributes and values it is now possible .
+. .=20
+
+	*	. . . to set the values for predefined print modes.
+	*	. . . to define the set of attribute and value
+constraints (duplex with transparencies).
+	*	. . . to search for printer with a required (needed)
+print capability.
+	*	. . . to write very "tight code" to minimize the print
+solution code footprint.
+	*	. . . to guarantee federation interoperability without
+the need for "interpretation".
+	*	. . . for end users to have a uniform and consistent
+print experience.=20
 
 =20
 
-My proposal, in an attempt to simplify matters, is encode printer
-capabilities, using the JTAPI attributes and values, such that the
-printer capabilities are binary state information (i.e. yes/no or
-have/don't-have or etc).  While this method does not provide the
-infinite (or at least a very large) number of possibilities for every
-possible printer on the market today or will be on the market in the
-future; it does provide sufficient information for 90+% (95+%) of
-printing need from mobile devices.   There is no dictionary (string)
-parsers required.  The binary state capability data can be retrieved
-from numerous sources, including the printer, will minimal overhead and
-is usable by the mobile device OS, application, print manager and print
-dialog.
+Does the fixed list of attributes and values meet most (almost all,
+majority, the 90%, ...) end-user's needs and print intents?
+
+-          I believe this to be true.
 
 =20
 
-I have created a couple of c code header files and following are
-samples.
+Can any "not supported" print intent be done as a best effort?
+
+-          I believe this is NOT true. =20
+
+o       The "not supported" print intents are likely to be unique or
+corner-case print intents and are outside the scope of mobile print.
+
+o       This does not mean an end-user, with/using an existing
+job-ticket (like JDF), can not submit a unique print intent print job.
+It does mean the print dialog, solution and system of the mobile device
+does not provide a mechanism for it.
+
+o       End-user can use to the mobile print dialog, solution and system
+to print the "content" of "not supported" print intents but the print
+out will not be in the final (intended) format.
 
 =20
 
-Example:=20
+Next Steps
 
-    /************************************************************
+-          Identify the remaining job ticket attributes and values not
+associated with printer capabilities (number of copies, etc)
 
-     * StitchingType
+-          Define (based on existing work) the print dialog terms for
+each of the print attributes and values.
 
-     *
+o       These terms can be different than code attribute and value
+names; that is, they may use more common terminology.
 
-     * Whether or not to stitch and where to place the stitch.=20
+-          Define a collection of predefined print modes.
 
-     *=20
+o       Identify the associated (affected) attributes and values for
+each predefined print mode
 
-     ***********************************************************/
-
-    typedef struct=20
-
-    {
-
-       GP_BIT32 FSGJT_ST_NOT_SUPPORTED  : 1;    /* bit 0        */
-
-       GP_BIT32 FSGJT_ST_NONE           : 1;    /* bit 1        */
-
-       GP_BIT32 FSGJT_ST_CORNER         : 1;    /* bit 2        */
-
-       GP_BIT32 FSGJT_ST_SADDLE         : 1;    /* bit 3        */
-
-       GP_BIT32 FSGJT_ST_SIDE           : 1;    /* bit 4        */
-
-    } fsgjt_stitching_type_cap;
-
-=20
-
-In this example of a single attribute, the possible values are
-translated into capability states.  Somewhere (Firmware, cloud, or etc)
-the following is defined
-
-=20
-
-    /****************************************************************/
-
-    /*** StitchingType                                              */
-
-    /*** ---------------------------------------------------------- */
-
-    ptrCap->stitchingTypeCap.FSGJT_ST_NOT_SUPPORTED =3D 0;/* bit 0    */
-
-    ptrCap->stitchingTypeCap.FSGJT_ST_NONE          =3D 0;/* bit 1    */
-
-    ptrCap->stitchingTypeCap.FSGJT_ST_CORNER        =3D 1;/* bit 2    */
-
-    ptrCap->stitchingTypeCap.FSGJT_ST_SADDLE        =3D 1;/* bit 3    */
-
-    ptrCap->stitchingTypeCap.FSGJT_ST_SIDE          =3D 0;/* bit 4    */
-
-=20
-
-Thus, this printer can support corner and saddle stitching.
-
-=20
-
-To make this concept work in general, the extensible feature of the
-JTAPI attribute was removed.  Mobile needs to prints and not worry about
-variations upon variations.  The LF/OpenPrinting should review the now
-fixed list of values for the pervious extensible attributes to determine
-if the list of values needs to be updated.
-
-=20
-
-To make this concept work, I also added MediaSizeCap.   This is a very,
-very short list of the standard media size (A4, letter, legal and 4x6)
-that represents 80% to 90% of printing needs.
-
-=20
-
-But I have also defined another media header file to provide more
-detailed media support.  The first definition defines the size and print
-modes (graphic, text, etc versus draft, normal, high quality).  The
-second extents the media type with the existing JTAPI coating type
-attributes.
-
-=20
-
-Finally, the proposed simplification allow for a much easy print dialog
-and predefined job-ticket implementations.
-
-=20
-
-I will post my c files after I do some additional testing and clean up.
+-          Identify the set of print attribute and value constraints=20
 
 =20
 
@@ -162,14 +103,60 @@ Glen
 
 =20
 
+=20
 
-------_=_NextPart_001_01CC350E.5C31394B
+=20
+
+=20
+
+=20
+
+=20
+
+=20
+
+
+------_=_NextPart_001_01CC35A6.93A2E3ED
 Content-Type: text/html;
 	charset="us-ascii"
 Content-Transfer-Encoding: quoted-printable
 
-<html xmlns:o=3D"urn:schemas-microsoft-com:office:office" =
+<html xmlns:v=3D"urn:schemas-microsoft-com:vml" =
+xmlns:o=3D"urn:schemas-microsoft-com:office:office" =
 xmlns:w=3D"urn:schemas-microsoft-com:office:word" =
+xmlns:x=3D"urn:schemas-microsoft-com:office:excel" =
+xmlns:p=3D"urn:schemas-microsoft-com:office:powerpoint" =
+xmlns:a=3D"urn:schemas-microsoft-com:office:access" =
+xmlns:dt=3D"uuid:C2F41010-65B3-11d1-A29F-00AA00C14882" =
+xmlns:s=3D"uuid:BDC6E3F0-6DA3-11d1-A2A3-00AA00C14882" =
+xmlns:rs=3D"urn:schemas-microsoft-com:rowset" xmlns:z=3D"#RowsetSchema" =
+xmlns:b=3D"urn:schemas-microsoft-com:office:publisher" =
+xmlns:ss=3D"urn:schemas-microsoft-com:office:spreadsheet" =
+xmlns:c=3D"urn:schemas-microsoft-com:office:component:spreadsheet" =
+xmlns:odc=3D"urn:schemas-microsoft-com:office:odc" =
+xmlns:oa=3D"urn:schemas-microsoft-com:office:activation" =
+xmlns:html=3D"http://www.w3.org/TR/REC-html40" =
+xmlns:q=3D"http://schemas.xmlsoap.org/soap/envelope/" =
+xmlns:rtc=3D"http://microsoft.com/officenet/conferencing" =
+xmlns:D=3D"DAV:" xmlns:Repl=3D"http://schemas.microsoft.com/repl/" =
+xmlns:mt=3D"http://schemas.microsoft.com/sharepoint/soap/meetings/" =
+xmlns:x2=3D"http://schemas.microsoft.com/office/excel/2003/xml" =
+xmlns:ppda=3D"http://www.passport.com/NameSpace.xsd" =
+xmlns:ois=3D"http://schemas.microsoft.com/sharepoint/soap/ois/" =
+xmlns:dir=3D"http://schemas.microsoft.com/sharepoint/soap/directory/" =
+xmlns:ds=3D"http://www.w3.org/2000/09/xmldsig#" =
+xmlns:dsp=3D"http://schemas.microsoft.com/sharepoint/dsp" =
+xmlns:udc=3D"http://schemas.microsoft.com/data/udc" =
+xmlns:xsd=3D"http://www.w3.org/2001/XMLSchema" =
+xmlns:sub=3D"http://schemas.microsoft.com/sharepoint/soap/2002/1/alerts/"=
+ xmlns:ec=3D"http://www.w3.org/2001/04/xmlenc#" =
+xmlns:sp=3D"http://schemas.microsoft.com/sharepoint/" =
+xmlns:sps=3D"http://schemas.microsoft.com/sharepoint/soap/" =
+xmlns:xsi=3D"http://www.w3.org/2001/XMLSchema-instance" =
+xmlns:udcs=3D"http://schemas.microsoft.com/data/udc/soap" =
+xmlns:udcxf=3D"http://schemas.microsoft.com/data/udc/xmlfile" =
+xmlns:udcp2p=3D"http://schemas.microsoft.com/data/udc/parttopart" =
+xmlns:st=3D"&#1;" =
 xmlns:st1=3D"urn:schemas-microsoft-com:office:smarttags" =
 xmlns=3D"http://www.w3.org/TR/REC-html40">
 
@@ -192,6 +179,9 @@ st1\:*{behavior:url(#default#ieooui) }
 <!--
  /* Font Definitions */
  @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;}
+@font-face
 	{font-family:Cambria;
 	panose-1:2 4 5 3 5 4 6 3 2 4;}
  /* Style Definitions */
@@ -218,6 +208,52 @@ span.EmailStyle17
 	margin:1.0in 1.25in 1.0in 1.25in;}
 div.Section1
 	{page:Section1;}
+ /* List Definitions */
+ @list l0
+	{mso-list-id:361368029;
+	mso-list-type:hybrid;
+	mso-list-template-ids:151819924 1258873582 67698691 67698693 67698689 =
+67698691 67698693 67698689 67698691 67698693;}
+@list l0:level1
+	{mso-level-start-at:0;
+	mso-level-number-format:bullet;
+	mso-level-text:-;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Cambria;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";}
+@list l0:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Courier New";}
+@list l1
+	{mso-list-id:1533687270;
+	mso-list-type:hybrid;
+	mso-list-template-ids:32550850 67698689 67698691 67698693 67698689 =
+67698691 67698693 67698689 67698691 67698693;}
+@list l1:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l1:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Courier New";}
+ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
 -->
 </style>
 
@@ -237,24 +273,62 @@ font-family:Cambria'><o:p>&nbsp;</o:p></span></font></p>
 
 <p class=3DMsoNormal><font size=3D3 face=3DCambria><span =
 style=3D'font-size:12.0pt;
-font-family:Cambria'>I continue address the issues for mobile print in
-connection with LF/OpenPrinting.&nbsp;&nbsp; The current =
-area-of-interest is
-printer capabilities.&nbsp; <o:p></o:p></span></font></p>
+font-family:Cambria'>Using the Binary Printer Capability (for <st1:City =
+w:st=3D"on"><st1:place
+ w:st=3D"on">Mobile</st1:place></st1:City>) data I discussed in my last =
+email; we
+now have a fixed list of attributes and values that any mobile print =
+dialog,
+solution and system can support.&nbsp; A mobile print dialog, solution =
+and
+system does not need to support the entire list of attributes and values =
+but at
+least there is a finite and fixed list.<o:p></o:p></span></font></p>
 
 <p class=3DMsoNormal><font size=3D3 face=3DCambria><span =
 style=3D'font-size:12.0pt;
-font-family:Cambria'>Yes, I could simpley follow the PWG work that will =
-use IPP
-(Everywhere); and, through a series of Pascal/XML data exchanges, the =
-printer
-capabilities can be obtained.&nbsp; This, however, causes a burden to =
-the
-mobile device and printer to understand and support the IPP and to =
-contain dictionary
-(string) parsers.&nbsp;&nbsp; While the overhead may be acceptable; it =
-is still
-burdensome.&nbsp; <o:p></o:p></span></font></p>
+font-family:Cambria'><o:p>&nbsp;</o:p></span></font></p>
+
+<ul style=3D'margin-top:0in' type=3Ddisc>
+ <li class=3DMsoNormal style=3D'mso-list:l1 level1 lfo1'><font size=3D3 =
+face=3DCambria><span
+     style=3D'font-size:12.0pt;font-family:Cambria'>With a fixed list of
+     attributes and values it is now possible . . . =
+<o:p></o:p></span></font></li>
+ <ul style=3D'margin-top:0in' type=3Dcircle>
+  <li class=3DMsoNormal style=3D'mso-list:l1 level2 lfo1'><font size=3D3
+      face=3DCambria><span =
+style=3D'font-size:12.0pt;font-family:Cambria'>. . . to
+      set the values for predefined print =
+modes.<o:p></o:p></span></font></li>
+  <li class=3DMsoNormal style=3D'mso-list:l1 level2 lfo1'><font size=3D3
+      face=3DCambria><span =
+style=3D'font-size:12.0pt;font-family:Cambria'>. . . to
+      define the set of attribute and value constraints (duplex with =
+transparencies).<o:p></o:p></span></font></li>
+  <li class=3DMsoNormal style=3D'mso-list:l1 level2 lfo1'><font size=3D3
+      face=3DCambria><span =
+style=3D'font-size:12.0pt;font-family:Cambria'>. . . to
+      search for printer with a required (needed) print =
+capability.<o:p></o:p></span></font></li>
+  <li class=3DMsoNormal style=3D'mso-list:l1 level2 lfo1'><font size=3D3
+      face=3DCambria><span =
+style=3D'font-size:12.0pt;font-family:Cambria'>. . . to
+      write very &#8220;tight code&#8221; to minimize the print solution =
+code
+      footprint.<o:p></o:p></span></font></li>
+  <li class=3DMsoNormal style=3D'mso-list:l1 level2 lfo1'><font size=3D3
+      face=3DCambria><span =
+style=3D'font-size:12.0pt;font-family:Cambria'>. . . to guarantee
+      federation interoperability without the need for =
+&#8220;interpretation&#8221;.<o:p></o:p></span></font></li>
+  <li class=3DMsoNormal style=3D'mso-list:l1 level2 lfo1'><font size=3D3
+      face=3DCambria><span =
+style=3D'font-size:12.0pt;font-family:Cambria'>. . . for
+      end users to have a uniform and consistent print experience. =
+<o:p></o:p></span></font></li>
+ </ul>
+</ul>
 
 <p class=3DMsoNormal><font size=3D3 face=3DCambria><span =
 style=3D'font-size:12.0pt;
@@ -262,138 +336,96 @@ font-family:Cambria'><o:p>&nbsp;</o:p></span></font></p>
 
 <p class=3DMsoNormal><font size=3D3 face=3DCambria><span =
 style=3D'font-size:12.0pt;
-font-family:Cambria'>The use of PPD files is possible but they have the =
-same
-complexity as above.<o:p></o:p></span></font></p>
+font-family:Cambria'>Does the fixed list of attributes and values meet =
+most
+(almost all, majority, the 90%, &#8230;) end-user&#8217;s needs and =
+print
+intents?<o:p></o:p></span></font></p>
+
+<p class=3DMsoNormal =
+style=3D'margin-left:.5in;text-indent:-.25in;mso-list:l0 level1 =
+lfo2'><![if !supportLists]><font
+size=3D3 face=3DCambria><span =
+style=3D'font-size:12.0pt;font-family:Cambria'><span
+style=3D'mso-list:Ignore'>-<font size=3D1 face=3D"Times New Roman"><span
+style=3D'font:7.0pt "Times New =
+Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></span></font><![endif]><font face=3DCambria><span
+style=3D'font-family:Cambria'>I believe this to be =
+true.<o:p></o:p></span></font></p>
+
+<p class=3DMsoNormal style=3D'margin-left:.25in'><font size=3D3 =
+face=3DCambria><span
+style=3D'font-size:12.0pt;font-family:Cambria'><o:p>&nbsp;</o:p></span></=
+font></p>
 
 <p class=3DMsoNormal><font size=3D3 face=3DCambria><span =
 style=3D'font-size:12.0pt;
-font-family:Cambria'><o:p>&nbsp;</o:p></span></font></p>
+font-family:Cambria'>Can any &#8220;not supported&#8221; print intent be =
+done as
+a best effort?<o:p></o:p></span></font></p>
 
-<p class=3DMsoNormal><font size=3D3 face=3DCambria><span =
-style=3D'font-size:12.0pt;
-font-family:Cambria'>My proposal, in an attempt to simplify matters, is =
-encode
-printer capabilities, using the JTAPI attributes and values, such that =
-the
-printer capabilities are binary state information (i.e. yes/no or =
-have/don&#8217;t-have
-or etc).&nbsp; While this method does not provide the infinite (or at =
-least a
-very large) number of possibilities for every possible printer on the =
-market
-today or will be on the market in the future; it does provide sufficient
-information for 90+% (95+%) of printing need from mobile devices. =
-&nbsp;&nbsp;There
-is no dictionary (string) parsers required.&nbsp; The binary state =
-capability data
-can be retrieved from numerous sources, including the printer, will =
-minimal
-overhead and is usable by the mobile device OS, application, print =
-manager and
-print dialog.<o:p></o:p></span></font></p>
-
-<p class=3DMsoNormal><font size=3D3 face=3DCambria><span =
-style=3D'font-size:12.0pt;
-font-family:Cambria'><o:p>&nbsp;</o:p></span></font></p>
-
-<p class=3DMsoNormal><font size=3D3 face=3DCambria><span =
-style=3D'font-size:12.0pt;
-font-family:Cambria'>I have created a couple of c code header files and
-following are samples.<o:p></o:p></span></font></p>
-
-<p class=3DMsoNormal><font size=3D3 face=3DCambria><span =
-style=3D'font-size:12.0pt;
-font-family:Cambria'><o:p>&nbsp;</o:p></span></font></p>
-
-<p class=3DMsoNormal><font size=3D3 face=3DCambria><span =
-style=3D'font-size:12.0pt;
-font-family:Cambria'>Example: <o:p></o:p></span></font></p>
-
-<p class=3DMsoNormal><font size=3D1 face=3D"Courier New"><span =
-style=3D'font-size:9.0pt;
-font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;
-/************************************************************<o:p></o:p><=
-/span></font></p>
-
-<p class=3DMsoNormal><font size=3D1 face=3D"Courier New"><span =
-style=3D'font-size:9.0pt;
-font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp; * =
-StitchingType<o:p></o:p></span></font></p>
-
-<p class=3DMsoNormal><font size=3D1 face=3D"Courier New"><span =
-style=3D'font-size:9.0pt;
-font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp; =
-*<o:p></o:p></span></font></p>
-
-<p class=3DMsoNormal><font size=3D1 face=3D"Courier New"><span =
-style=3D'font-size:9.0pt;
-font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp; * Whether or not to =
-stitch
-and where to place the stitch. <o:p></o:p></span></font></p>
-
-<p class=3DMsoNormal><font size=3D1 face=3D"Courier New"><span =
-style=3D'font-size:9.0pt;
-font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp; * =
+<p class=3DMsoNormal =
+style=3D'margin-left:.5in;text-indent:-.25in;mso-list:l0 level1 =
+lfo2'><![if !supportLists]><font
+size=3D3 face=3DCambria><span =
+style=3D'font-size:12.0pt;font-family:Cambria'><span
+style=3D'mso-list:Ignore'>-<font size=3D1 face=3D"Times New Roman"><span
+style=3D'font:7.0pt "Times New =
+Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></span></font><![endif]><font face=3DCambria><span
+style=3D'font-family:Cambria'>I believe this is NOT true.&nbsp; =
 <o:p></o:p></span></font></p>
 
-<p class=3DMsoNormal><font size=3D1 face=3D"Courier New"><span =
-style=3D'font-size:9.0pt;
-font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;
-***********************************************************/<o:p></o:p></=
-span></font></p>
+<p class=3DMsoNormal =
+style=3D'margin-left:1.0in;text-indent:-.25in;mso-list:l0 level2 =
+lfo2'><![if !supportLists]><font
+size=3D3 face=3D"Courier New"><span =
+style=3D'font-size:12.0pt;font-family:"Courier New"'><span
+style=3D'mso-list:Ignore'>o<font size=3D1 face=3D"Times New Roman"><span
+style=3D'font:7.0pt "Times New =
+Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =
+</span></font></span></span></font><![endif]><font
+face=3DCambria><span style=3D'font-family:Cambria'>The &#8220;not =
+supported&#8221;
+print intents are likely to be unique or corner-case print intents and =
+are
+outside the scope of mobile print.<o:p></o:p></span></font></p>
 
-<p class=3DMsoNormal><font size=3D1 face=3D"Courier New"><span =
-style=3D'font-size:9.0pt;
-font-family:"Courier New"'>&nbsp;&nbsp;&nbsp; typedef struct =
-<o:p></o:p></span></font></p>
+<p class=3DMsoNormal =
+style=3D'margin-left:1.0in;text-indent:-.25in;mso-list:l0 level2 =
+lfo2'><![if !supportLists]><font
+size=3D3 face=3D"Courier New"><span =
+style=3D'font-size:12.0pt;font-family:"Courier New"'><span
+style=3D'mso-list:Ignore'>o<font size=3D1 face=3D"Times New Roman"><span
+style=3D'font:7.0pt "Times New =
+Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =
+</span></font></span></span></font><![endif]><font
+face=3DCambria><span style=3D'font-family:Cambria'>This does not mean an =
+end-user,
+with/using an existing job-ticket (like JDF), can not submit a unique =
+print
+intent print job. &nbsp;It does mean the print dialog, solution and =
+system of
+the mobile device does not provide a mechanism for =
+it.<o:p></o:p></span></font></p>
 
-<p class=3DMsoNormal><font size=3D1 face=3D"Courier New"><span =
-style=3D'font-size:9.0pt;
-font-family:"Courier New"'>&nbsp;&nbsp;&nbsp; =
-{<o:p></o:p></span></font></p>
-
-<p class=3DMsoNormal><font size=3D1 face=3D"Courier New"><span =
-style=3D'font-size:9.0pt;
-font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; GP_BIT32
-FSGJT_ST_NOT_SUPPORTED&nbsp; : 1;&nbsp;&nbsp;&nbsp; /* bit
-0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =
-*/<o:p></o:p></span></font></p>
-
-<p class=3DMsoNormal><font size=3D1 face=3D"Courier New"><span =
-style=3D'font-size:9.0pt;
-font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; GP_BIT32
-FSGJT_ST_NONE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=
- :
-1;&nbsp;&nbsp;&nbsp; /* bit 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =
-*/<o:p></o:p></span></font></p>
-
-<p class=3DMsoNormal><font size=3D1 face=3D"Courier New"><span =
-style=3D'font-size:9.0pt;
-font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; GP_BIT32
-FSGJT_ST_CORNER&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :
-1;&nbsp;&nbsp;&nbsp; /* bit 2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =
-*/<o:p></o:p></span></font></p>
-
-<p class=3DMsoNormal><font size=3D1 face=3D"Courier New"><span =
-style=3D'font-size:9.0pt;
-font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; GP_BIT32
-FSGJT_ST_SADDLE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :
-1;&nbsp;&nbsp;&nbsp; /* bit 3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =
-*/<o:p></o:p></span></font></p>
-
-<p class=3DMsoNormal><font size=3D1 face=3D"Courier New"><span =
-style=3D'font-size:9.0pt;
-font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; GP_BIT32
-FSGJT_ST_SIDE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=
- :
-1;&nbsp;&nbsp;&nbsp; /* bit 4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =
-*/<o:p></o:p></span></font></p>
-
-<p class=3DMsoNormal><font size=3D1 face=3D"Courier New"><span =
-style=3D'font-size:9.0pt;
-font-family:"Courier New"'>&nbsp;&nbsp;&nbsp; } =
-fsgjt_stitching_type_cap;<o:p></o:p></span></font></p>
+<p class=3DMsoNormal =
+style=3D'margin-left:1.0in;text-indent:-.25in;mso-list:l0 level2 =
+lfo2'><![if !supportLists]><font
+size=3D3 face=3D"Courier New"><span =
+style=3D'font-size:12.0pt;font-family:"Courier New"'><span
+style=3D'mso-list:Ignore'>o<font size=3D1 face=3D"Times New Roman"><span
+style=3D'font:7.0pt "Times New =
+Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =
+</span></font></span></span></font><![endif]><font
+face=3DCambria><span style=3D'font-family:Cambria'>End-user can use to =
+the mobile
+print dialog, solution and system to print the &#8220;content&#8221; of =
+&#8220;not
+supported&#8221; print intents but the print out will not be in the =
+final
+(intended) format.<o:p></o:p></span></font></p>
 
 <p class=3DMsoNormal><font size=3D3 face=3DCambria><span =
 style=3D'font-size:12.0pt;
@@ -401,144 +433,88 @@ font-family:Cambria'><o:p>&nbsp;</o:p></span></font></p>
 
 <p class=3DMsoNormal><font size=3D3 face=3DCambria><span =
 style=3D'font-size:12.0pt;
-font-family:Cambria'>In this example of a single attribute, the possible =
-values
-are translated into capability states.&nbsp; Somewhere (Firmware, cloud, =
-or
-etc) the following is defined<o:p></o:p></span></font></p>
+font-family:Cambria'>Next Steps<o:p></o:p></span></font></p>
 
-<p class=3DMsoNormal><font size=3D3 face=3DCambria><span =
-style=3D'font-size:12.0pt;
-font-family:Cambria'><o:p>&nbsp;</o:p></span></font></p>
+<p class=3DMsoNormal =
+style=3D'margin-left:.5in;text-indent:-.25in;mso-list:l0 level1 =
+lfo2'><![if !supportLists]><font
+size=3D3 face=3DCambria><span =
+style=3D'font-size:12.0pt;font-family:Cambria'><span
+style=3D'mso-list:Ignore'>-<font size=3D1 face=3D"Times New Roman"><span
+style=3D'font:7.0pt "Times New =
+Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></span></font><![endif]><font face=3DCambria><span
+style=3D'font-family:Cambria'>Identify the remaining job ticket =
+attributes and
+values not associated with printer capabilities (number of copies, =
+etc)<o:p></o:p></span></font></p>
 
-<p class=3DMsoNormal><font size=3D1 face=3D"Courier New"><span =
-style=3D'font-size:9.0pt;
-font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;
-/****************************************************************/<o:p></=
-o:p></span></font></p>
+<p class=3DMsoNormal =
+style=3D'margin-left:.5in;text-indent:-.25in;mso-list:l0 level1 =
+lfo2'><![if !supportLists]><font
+size=3D3 face=3DCambria><span =
+style=3D'font-size:12.0pt;font-family:Cambria'><span
+style=3D'mso-list:Ignore'>-<font size=3D1 face=3D"Times New Roman"><span
+style=3D'font:7.0pt "Times New =
+Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></span></font><![endif]><font face=3DCambria><span
+style=3D'font-family:Cambria'>Define (based on existing work) the print =
+dialog
+terms for each of the print attributes and =
+values.<o:p></o:p></span></font></p>
 
-<p class=3DMsoNormal><font size=3D1 face=3D"Courier New"><span =
-style=3D'font-size:9.0pt;
-font-family:"Courier New"'>&nbsp;&nbsp;&nbsp; /***
-StitchingType&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&=
-nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&n=
-bsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-*/<o:p></o:p></span></font></p>
+<p class=3DMsoNormal =
+style=3D'margin-left:1.0in;text-indent:-.25in;mso-list:l0 level2 =
+lfo2'><![if !supportLists]><font
+size=3D3 face=3D"Courier New"><span =
+style=3D'font-size:12.0pt;font-family:"Courier New"'><span
+style=3D'mso-list:Ignore'>o<font size=3D1 face=3D"Times New Roman"><span
+style=3D'font:7.0pt "Times New =
+Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =
+</span></font></span></span></font><![endif]><font
+face=3DCambria><span style=3D'font-family:Cambria'>These terms can be =
+different
+than code attribute and value names; that is, they may use more common
+terminology.<o:p></o:p></span></font></p>
 
-<p class=3DMsoNormal><font size=3D1 face=3D"Courier New"><span =
-style=3D'font-size:9.0pt;
-font-family:"Courier New"'>&nbsp;&nbsp;&nbsp; /***
----------------------------------------------------------- =
-*/<o:p></o:p></span></font></p>
+<p class=3DMsoNormal =
+style=3D'margin-left:.5in;text-indent:-.25in;mso-list:l0 level1 =
+lfo2'><![if !supportLists]><font
+size=3D3 face=3DCambria><span =
+style=3D'font-size:12.0pt;font-family:Cambria'><span
+style=3D'mso-list:Ignore'>-<font size=3D1 face=3D"Times New Roman"><span
+style=3D'font:7.0pt "Times New =
+Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></span></font><![endif]><font face=3DCambria><span
+style=3D'font-family:Cambria'>Define a collection of predefined print =
+modes.<o:p></o:p></span></font></p>
 
-<p class=3DMsoNormal><font size=3D1 face=3D"Courier New"><span =
-style=3D'font-size:9.0pt;
-font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;
-ptrCap-&gt;stitchingTypeCap.FSGJT_ST_NOT_SUPPORTED =3D 0;/* bit
-0&nbsp;&nbsp;&nbsp; */<o:p></o:p></span></font></p>
+<p class=3DMsoNormal =
+style=3D'margin-left:1.0in;text-indent:-.25in;mso-list:l0 level2 =
+lfo2'><![if !supportLists]><font
+size=3D3 face=3D"Courier New"><span =
+style=3D'font-size:12.0pt;font-family:"Courier New"'><span
+style=3D'mso-list:Ignore'>o<font size=3D1 face=3D"Times New Roman"><span
+style=3D'font:7.0pt "Times New =
+Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =
+</span></font></span></span></font><![endif]><font
+face=3DCambria><span style=3D'font-family:Cambria'>Identify the =
+associated (affected)
+attributes and values for each predefined print =
+mode<o:p></o:p></span></font></p>
 
-<p class=3DMsoNormal><font size=3D1 face=3D"Courier New"><span =
-style=3D'font-size:9.0pt;
-font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;
-ptrCap-&gt;stitchingTypeCap.FSGJT_ST_NONE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&n=
-bsp;&nbsp;&nbsp;&nbsp;
-=3D 0;/* bit 1&nbsp;&nbsp;&nbsp; */<o:p></o:p></span></font></p>
-
-<p class=3DMsoNormal><font size=3D1 face=3D"Courier New"><span =
-style=3D'font-size:9.0pt;
-font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;
-ptrCap-&gt;stitchingTypeCap.FSGJT_ST_CORNER&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=
-&nbsp;&nbsp;
-=3D 1;/* bit 2&nbsp;&nbsp;&nbsp; */<o:p></o:p></span></font></p>
-
-<p class=3DMsoNormal><font size=3D1 face=3D"Courier New"><span =
-style=3D'font-size:9.0pt;
-font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;
-ptrCap-&gt;stitchingTypeCap.FSGJT_ST_SADDLE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=
-&nbsp;&nbsp;
-=3D 1;/* bit 3&nbsp;&nbsp;&nbsp; */<o:p></o:p></span></font></p>
-
-<p class=3DMsoNormal><font size=3D1 face=3D"Courier New"><span =
-style=3D'font-size:9.0pt;
-font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;
-ptrCap-&gt;stitchingTypeCap.FSGJT_ST_SIDE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&n=
-bsp;&nbsp;&nbsp;&nbsp;
-=3D 0;/* bit 4&nbsp;&nbsp;&nbsp; */<o:p></o:p></span></font></p>
-
-<p class=3DMsoNormal><font size=3D3 face=3DCambria><span =
-style=3D'font-size:12.0pt;
-font-family:Cambria'><o:p>&nbsp;</o:p></span></font></p>
-
-<p class=3DMsoNormal><font size=3D3 face=3DCambria><span =
-style=3D'font-size:12.0pt;
-font-family:Cambria'>Thus, this printer can support corner and saddle
-stitching.<o:p></o:p></span></font></p>
-
-<p class=3DMsoNormal><font size=3D3 face=3DCambria><span =
-style=3D'font-size:12.0pt;
-font-family:Cambria'><o:p>&nbsp;</o:p></span></font></p>
-
-<p class=3DMsoNormal><font size=3D3 face=3DCambria><span =
-style=3D'font-size:12.0pt;
-font-family:Cambria'>To make this concept work in general, the =
-extensible feature
-of the JTAPI attribute was removed.&nbsp; <st1:City =
-w:st=3D"on"><st1:place w:st=3D"on">Mobile</st1:place></st1:City>
-needs to prints and not worry about variations upon variations.&nbsp; =
-The
-LF/OpenPrinting should review the now fixed list of values for the =
-pervious
-extensible attributes to determine if the list of values needs to be =
-updated.<o:p></o:p></span></font></p>
-
-<p class=3DMsoNormal><font size=3D3 face=3DCambria><span =
-style=3D'font-size:12.0pt;
-font-family:Cambria'><o:p>&nbsp;</o:p></span></font></p>
-
-<p class=3DMsoNormal><font size=3D3 face=3DCambria><span =
-style=3D'font-size:12.0pt;
-font-family:Cambria'>To make this concept work, I also added
-MediaSizeCap.&nbsp;&nbsp; This is a very, very short list of the =
-standard media
-size (A4, letter, legal and 4x6) that represents 80% to 90% of printing =
-needs.<o:p></o:p></span></font></p>
-
-<p class=3DMsoNormal><font size=3D3 face=3DCambria><span =
-style=3D'font-size:12.0pt;
-font-family:Cambria'><o:p>&nbsp;</o:p></span></font></p>
-
-<p class=3DMsoNormal><font size=3D3 face=3DCambria><span =
-style=3D'font-size:12.0pt;
-font-family:Cambria'>But I have also defined another media header file =
-to
-provide more detailed media support.&nbsp; The first definition defines =
-the
-size and print modes (graphic, text, etc versus draft, normal, high
-quality).&nbsp; The second extents the media type with the existing =
-JTAPI coating
-type attributes.<o:p></o:p></span></font></p>
-
-<p class=3DMsoNormal><font size=3D3 face=3DCambria><span =
-style=3D'font-size:12.0pt;
-font-family:Cambria'>&nbsp;<o:p></o:p></span></font></p>
-
-<p class=3DMsoNormal><font size=3D3 face=3DCambria><span =
-style=3D'font-size:12.0pt;
-font-family:Cambria'>Finally, the proposed simplification allow for a =
-much easy
-print dialog and predefined job-ticket =
-implementations.<o:p></o:p></span></font></p>
-
-<p class=3DMsoNormal><font size=3D3 face=3DCambria><span =
-style=3D'font-size:12.0pt;
-font-family:Cambria'><o:p>&nbsp;</o:p></span></font></p>
-
-<p class=3DMsoNormal><font size=3D3 face=3DCambria><span =
-style=3D'font-size:12.0pt;
-font-family:Cambria'>I will post my c files after I do some additional =
-testing
-and clean up.<o:p></o:p></span></font></p>
+<p class=3DMsoNormal =
+style=3D'margin-left:.5in;text-indent:-.25in;mso-list:l0 level1 =
+lfo2'><![if !supportLists]><font
+size=3D3 face=3DCambria><span =
+style=3D'font-size:12.0pt;font-family:Cambria'><span
+style=3D'mso-list:Ignore'>-<font size=3D1 face=3D"Times New Roman"><span
+style=3D'font:7.0pt "Times New =
+Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></span></span></font><![endif]><font face=3DCambria><span
+style=3D'font-family:Cambria'>Identify the set of print attribute and =
+value
+constraints <o:p></o:p></span></font></p>
 
 <p class=3DMsoNormal><font size=3D3 face=3DCambria><span =
 style=3D'font-size:12.0pt;
@@ -552,10 +528,34 @@ font-family:Cambria'>Glen<o:p></o:p></span></font></p>
 style=3D'font-size:12.0pt;
 font-family:Cambria'><o:p>&nbsp;</o:p></span></font></p>
 
+<p class=3DMsoNormal><font size=3D3 face=3DCambria><span =
+style=3D'font-size:12.0pt;
+font-family:Cambria'><o:p>&nbsp;</o:p></span></font></p>
+
+<p class=3DMsoNormal><font size=3D3 face=3DCambria><span =
+style=3D'font-size:12.0pt;
+font-family:Cambria'><o:p>&nbsp;</o:p></span></font></p>
+
+<p class=3DMsoNormal><font size=3D3 face=3DCambria><span =
+style=3D'font-size:12.0pt;
+font-family:Cambria'><o:p>&nbsp;</o:p></span></font></p>
+
+<p class=3DMsoNormal><font size=3D3 face=3DCambria><span =
+style=3D'font-size:12.0pt;
+font-family:Cambria'><o:p>&nbsp;</o:p></span></font></p>
+
+<p class=3DMsoNormal><font size=3D3 face=3DCambria><span =
+style=3D'font-size:12.0pt;
+font-family:Cambria'><o:p>&nbsp;</o:p></span></font></p>
+
+<p class=3DMsoNormal><font size=3D3 face=3DCambria><span =
+style=3D'font-size:12.0pt;
+font-family:Cambria'><o:p>&nbsp;</o:p></span></font></p>
+
 </div>
 
 </body>
 
 </html>
 
-------_=_NextPart_001_01CC350E.5C31394B--
+------_=_NextPart_001_01CC35A6.93A2E3ED--
