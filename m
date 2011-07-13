@@ -1,11 +1,11 @@
-Message-ID: <4E1790EA.6090606@gmail.com>
-Date: Sat, 09 Jul 2011 01:21:14 +0200
+Message-ID: <4E1DB5A7.6040707@gmail.com>
+Date: Wed, 13 Jul 2011 17:11:35 +0200
 From: Till Kamppeter <till.kamppeter@gmail.com>
 MIME-Version: 1.0
 Content-Type: text/plain; charset=UTF-8; format=flowed
 Content-Transfer-Encoding: 7bit
 Subject: [Printing-architecture] REMINDER: OpenPrinting US/Europe monthly
- call next Wednesday, July 13
+ call TODAY, July 13 in 50 MINUTES
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -19,8 +19,8 @@ To: Open Printing <printing-architecture@lists.linux-foundation.org>, Printing-j
 
 Hi,
 
-I only want to remind you that next Wednesday we will have our monthly 
-meeting.
+I only want to remind you that we will have our monthly meeting in 50 
+minutes from now.
 
 Agenda:
 
