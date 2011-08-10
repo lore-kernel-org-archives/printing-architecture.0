@@ -1,9 +1,10 @@
 MIME-Version: 1.0
-Date: Tue, 9 Aug 2011 17:31:42 -0400
-Message-ID: <CAN40gSsysQAOrW7-OxZsSCRXztib0XmJbTVyNDxxGxUA276MQg@mail.gmail.com>
+Date: Wed, 10 Aug 2011 16:05:36 -0400
+Message-ID: <CAN40gSvZ9kBt2WtfjSBHdU_3ih8Fn9Z7NQY+LmSCQLC9A-do9Q@mail.gmail.com>
 From: Ira McDonald <blueroofmusic@gmail.com>
-Content-Type: multipart/alternative; boundary=20cf30433f782aeddb04aa194a58
-Subject: [Printing-architecture] CORRECTION - OP US/Europe Wed 24 August 2011
+Content-Type: multipart/alternative; boundary=0023545bd0241c854304aa2c346d
+Subject: [Printing-architecture] ANOTHER CHANGE - OP US/Europe Tuesday 16
+	August 2011
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
@@ -15,19 +16,17 @@ List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-ar
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
 To: printing-architecture@lists.linux-foundation.org, Till Kamppeter <till.kamppeter@gmail.com>, Ira McDonald <blueroofmusic@gmail.com>
 
---20cf30433f782aeddb04aa194a58
+--0023545bd0241c854304aa2c346d
 Content-Type: text/plain; charset=ISO-8859-1
 
 Hi,
 
-[NOTE - Changed to accomodate several regular participants]
-
-CORRECTION - in *two* weeks on Wednesday 24 August
-- changed from previous note
+ANOTHER CHANGE - *next* week on Tuesday 16 August
+- changed from both previous notes
 
 (1) August 2011 - US/Europe - OP Monthly Meeting
 
-    - Wednesday 24 August 2011, Daytime
+    - Tuesday 16 August 2011, Daytime
       - US
         9am in San Francisco - US PDT (Pacific Daylight Time)
         10am in Colorado - US MDT (Mountain Daylight Time)
@@ -45,6 +44,7 @@ Agenda is still TBD (CPD, GSoC Foomatic, PWG Job Ticket...)
 Cheers,
 - Ira
 
+
 Ira McDonald (Musician / Software Architect)
 Chair - Linux Foundation Open Printing WG
 Co-Chair - IEEE-ISTO PWG IPP WG
@@ -61,21 +61,21 @@ May to Christmas:
   PO Box 221  Grand Marais, MI 49839
   906-494-2434
 
---20cf30433f782aeddb04aa194a58
+--0023545bd0241c854304aa2c346d
 Content-Type: text/html; charset=ISO-8859-1
 Content-Transfer-Encoding: quoted-printable
 
-Hi,<br><br>[NOTE - Changed to accomodate several regular participants]<br><=
-br>CORRECTION - in *two* weeks on Wednesday 24 August <span></span><br>- ch=
-anged from previous note<br><br>(1) August 2011 - US/Europe - OP Monthly Me=
-eting<br>
+Hi,<br><br>ANOTHER CHANGE - *next* week on Tuesday 16 August <span></span><=
+br>- changed from both previous notes<br><br>(1) August 2011 - US/Europe - =
+OP Monthly Meeting<br>
 
 
-<br>=A0=A0=A0 - Wednesday 24 August 2011, Daytime<br>=A0=A0=A0=A0=A0 - US<b=
-r>=A0=A0=A0=A0=A0=A0=A0 9am in San Francisco - US PDT (Pacific Daylight Tim=
-e)<br>=A0=A0=A0=A0=A0=A0=A0 10am in Colorado - US MDT (Mountain Daylight Ti=
-me)<br>=A0=A0=A0=A0=A0=A0=A0 11am in Chicago - US CDT (Central Daylight Tim=
-e)<br>
+<br>=A0=A0=A0 - Tuesday 16 August 2011, Daytime<br>=A0=A0=A0=A0=A0 - US<br>=
+=A0=A0=A0=A0=A0=A0=A0 9am in San Francisco - US PDT (Pacific Daylight Time)=
+<br>=A0=A0=A0=A0=A0=A0=A0 10am in Colorado - US MDT (Mountain Daylight Time=
+)<br>=A0=A0=A0=A0=A0=A0=A0 11am in Chicago - US CDT (Central Daylight Time)=
+<br>
+
 
 
 =A0=A0=A0=A0=A0=A0=A0 12pm in New York - US EDT (Eastern Daylight Time)<br>=
@@ -85,10 +85,11 @@ LF, leader)<br>=A0=A0=A0=A0=A0 International: <a href=3D"tel:%2B1-218-936-7=
 999" value=3D"+12189367999" target=3D"_blank">+1-218-936-7999</a><br>
 
 
+
 =A0=A0=A0=A0=A0 Access Code:=A0=A0 491659#<br><br>Agenda is still TBD (CPD,=
- GSoC Foomatic, PWG Job Ticket...)<br><br>Cheers,<br>- Ira<br><br clear=3D"=
-all">Ira McDonald (Musician / Software Architect)<br>Chair - Linux Foundati=
-on Open Printing WG<br>
+ GSoC Foomatic, PWG Job Ticket...)<br><br>Cheers,<br>- Ira<br><br><br clear=
+=3D"all">Ira McDonald (Musician / Software Architect)<br>Chair - Linux Foun=
+dation Open Printing WG<br>
 Co-Chair - IEEE-ISTO PWG IPP WG<br>Chair - TCG Embedded Systems Hardcopy SW=
 G<br>IETF Designated Expert - IPP &amp; Printer MIB<br>Blue Roof Music/High=
  North Inc<br><a href=3D"http://sites.google.com/site/blueroofmusic" target=
@@ -108,4 +109,4 @@ index: 9999;padding: 0px 0px;margin-left: 0px;margin-top: 0px;overflow: hid=
 den;word-wrap: break-word;color: black;font-size: 10px;text-align: left;lin=
 e-height: 130%;}</style>
 
---20cf30433f782aeddb04aa194a58--
+--0023545bd0241c854304aa2c346d--
