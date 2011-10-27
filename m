@@ -1,288 +1,610 @@
+Return-Path: <glen.petrie@eitc.epson.com>
+Content-class: urn:content-classes:message
 MIME-Version: 1.0
-In-Reply-To: <CAN40gSsEZ5BpYGqJrzLqTmVsdh-+tD5mMRtXCyAquVziPxSCCg@mail.gmail.com>
-References: <CAN40gSsEZ5BpYGqJrzLqTmVsdh-+tD5mMRtXCyAquVziPxSCCg@mail.gmail.com>
-Date: Fri, 9 Sep 2011 22:35:31 -0600
-Message-ID: <CAGC3nLCA1pXdiTWZiUqMTYeE7=sDyVP_2Fwqo+LNuX1R_zsEmg@mail.gmail.com>
-From: Daniel Dressler <danieru.dressler@gmail.com>
-Content-Type: multipart/alternative; boundary=20cf3042719cfadbb704ac8ed205
-Subject: Re: [Printing-architecture] Agenda OP US/Europe - Wednesday 14
- September 2011
+Content-Type: multipart/alternative;
+	boundary="----_=_NextPart_001_01CC94B4.3ED124EE"
+Date: Thu, 27 Oct 2011 07:25:15 -0700
+Message-ID: <E8C3B9E653C80C48B0951F8494C049A902677F@EEAEX02.us.epson.net>
+From: "Petrie, Glen" <glen.petrie@eitc.epson.com>
+Subject: [Printing-architecture] test - do not reply
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
-List-Unsubscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
+List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=unsubscribe>
-List-Archive: <http://lists.linux-foundation.org/pipermail/printing-architecture>
+List-Archive: <http://lists.linuxfoundation.org/pipermail/printing-architecture/>
 List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
-List-Subscribe: <https://lists.linux-foundation.org/mailman/listinfo/printing-architecture>,
+List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Ira McDonald <blueroofmusic@gmail.com>
-Cc: printing-architecture@lists.linux-foundation.org
+To: printing-architecture@lists.linux-foundation.org
 
---20cf3042719cfadbb704ac8ed205
-Content-Type: text/plain; charset=UTF-8
+This is a multi-part message in MIME format.
 
-Hello
-
-(4) I will not be able to attend due to a comp sci class so I should report
-this now. Not much to report. Till passed me and all the code is where it
-should be. I have two improvements I've assigned myself but I haven't worked
-on them
-yet.
-
-One thing I would like put up for discussion is if the windows (or mac)
-printer api wrapper project should be included in our wishlist. It is
-currently the most ambitious project on the list and I think it should be
-removed for the following reasons:
--. It is outside openprinting's current development projects (jtapi and CPD)
-and our maintenance responsibilities.
--. I would question the feasibility of this project both in the existence of
-a suitable student and the timeframe.
--. This project was proposed several years ago, we was the last time we
-confirmed the availability of the menor and co-mentor?
--. No one has taken it after 3 years, I do not think it is healthy for us to
-roll it over to a fourth year.
-
-I do not want to delete something for deletions sake but I do not think that
-keeping this project on our wishlist helps us. Imagine if we did get the
-prime canidate, familier with window's api and linux's and with decent C(++)
-chops, would we not prefer him working on CPD or Jtapi?
-
-Beyond that, do we want to dedicate resources on a project that rewards
-vendors for not supporting linux, instead of improving the native linux
-experience for users and vendors?
-
-Now sorry for the rant, really I just want approval from openprinting to
-remove the project from our wishlist. It has been up for years with no
-progress, and as time goes on the existence of a suitable student grows ever
-dimmer. We have valuable projects that require manpower, our wishlist should
-focus on those or projects that will improve vendor support.
-
-Speaking of the vendor support projects, has anyone thought of anything? If
-I remember right we needed something that would help debug issues in
-userspace programs. Do we know what sorts of issues epson encountered
-creating their LSB drivers? Has there been any progress with cannon and
-brother?
-
-Daniel
-
-
-
-2011/9/9 Ira McDonald <blueroofmusic@gmail.com>
-
-> Hi,
->
-> Our OP meeting will be *next* week on Wednesday 14 September.
->
->
-> Agenda:
->
-> (1) Status of Common Printing Dialog (Lars Uebernickel)
->
-> (2) Status of independent JTAPI project (Glen Petrie)
->
-> (3) Status of Mobile Print project (Glen Petrie)
->
-> (4) Status of GSoC Foomatic project (Daniel Dressler)
->
-> (5) Status of GSoC Ticketed Print Monitoring System (Danny Brennan)
->
-> (6) Status of GSoC OpenICC Color Management (Till Kamppeter)
->
-> (7) PWG Highlights for Open Printing (Ira McDonald)
->      (a) PWG Raster, IPP Everywhere, IPP JPS3, IPPS URI Scheme
->      - technical content nearly complete
->      - LDAP Printer Schema still to be updated for IPP Everywhere
->
->      (b) PWG Semantic Model Print Job Ticket
->      - for use in existing Cloud products such as Google Cloud Print
->      - defines OPC/ZIP package: job ticket, user data, job receipt (log)
->      - defines standard small subset of required attributes (for Cloud)
->
->      (c) Mapping of PWG Print Job Ticket to/from MSPS, PPD, JDF
->      - PWG PJT to Adobe PPD mapping - draft by Mike Sweet 18 August
->      - PWG PJT to CIP4 JDF mapping - draft by Ira McDonald 22 August
->      - Justin Hutchings (MS Print Program Manager) is working w/ MS legal
->         on copyright issues for PWG references to MSPS(XPS) specs
->
->
-> Dial-in information:
->
-> September 2011 - US/Europe - OP Monthly Meeting
->     - Note - US Labor Day on 5 September
->
->     - Wednesday 14 September 2011, Daytime
->       - US
->         9am in San Francisco - US PDT (Pacific Daylight Time)
->         10am in Colorado - US MDT (Mountain Daylight Time)
->         11am in Chicago - US CDT (Central Daylight Time)
->         12pm in New York - US EDT (Eastern Daylight Time)
->       - Europe
->         6pm in Berlin - CEST (Central European Summer Time)
->
->     * Main Number (Till Kamppeter, LF, leader)
->       International: +1-218-936-7999
->       Access Code:   491659#
->
->
-> Cheers,
-> - Ira
->
-> Ira McDonald (Musician / Software Architect)
-> Chair - Linux Foundation Open Printing WG
-> Co-Chair - IEEE-ISTO PWG IPP WG
-> Chair - TCG Embedded Systems Hardcopy SWG
-> IETF Designated Expert - IPP & Printer MIB
-> Blue Roof Music/High North Inc
-> http://sites.google.com/site/blueroofmusic
-> http://sites.google.com/site/highnorthinc
-> mailto:blueroofmusic@gmail.com
-> Christmas through April:
->   579 Park Place  Saline, MI  48176
->   734-944-0094
-> May to Christmas:
->   PO Box 221  Grand Marais, MI 49839
->   906-494-2434
->
->
-> _______________________________________________
-> Printing-architecture mailing list
-> Printing-architecture@lists.linux-foundation.org
-> https://lists.linux-foundation.org/mailman/listinfo/printing-architecture
->
->
-
---20cf3042719cfadbb704ac8ed205
-Content-Type: text/html; charset=UTF-8
+------_=_NextPart_001_01CC94B4.3ED124EE
+Content-Type: text/plain;
+	charset="us-ascii"
 Content-Transfer-Encoding: quoted-printable
 
-Hello<br><br>(4) I will not be able to attend due to a comp sci class so I =
-should report this now. Not much to report. Till passed me and all the code=
- is where it should be. I have two improvements I&#39;ve assigned myself bu=
-t I haven&#39;t worked on them <br>
-yet.<br><br>One thing I would like put up for discussion is if the windows =
-(or mac) printer api wrapper project should be included in our wishlist. It=
- is currently the most ambitious project on the list and I think it should =
-be removed for the following reasons:<br>
--. It is outside openprinting&#39;s current development projects (jtapi and=
- CPD) and our maintenance responsibilities.<br>-. I would question the feas=
-ibility of this project both in the existence of a suitable student and the=
- timeframe.<br>
--. This project was proposed several years ago, we was the last time we con=
-firmed the availability of the menor and co-mentor?<br>-. No one has taken =
-it after 3 years, I do not think it is healthy for us to roll it over to a =
-fourth year.<br>
-<br>I do not want to delete something for deletions sake but I do not think=
- that keeping this project on our wishlist helps us. Imagine if we did get =
-the prime canidate, familier with window&#39;s api and linux&#39;s and with=
- decent C(++) chops, would we not prefer him working on CPD or Jtapi? <br>
-<br>Beyond that, do we want to dedicate resources on a project that rewards=
- vendors for not supporting linux, instead of improving the native linux ex=
-perience for users and vendors?<br><br>Now sorry for the rant, really I jus=
-t want approval from openprinting to remove the project from our wishlist. =
-It has been up for years with no progress, and as time goes on the existenc=
-e of a suitable student grows ever dimmer. We have valuable projects that r=
-equire manpower, our wishlist should focus on those or projects that will i=
-mprove vendor support.<br>
-<br>Speaking of the vendor support projects, has anyone thought of anything=
-? If I remember right we needed something that would help debug issues in u=
-serspace programs. Do we know what sorts of issues epson encountered creati=
-ng their LSB drivers? Has there been any progress with cannon and brother?<=
-br>
-<br>Daniel<br><br><br><br><div class=3D"gmail_quote">2011/9/9 Ira McDonald =
-<span dir=3D"ltr">&lt;<a href=3D"mailto:blueroofmusic@gmail.com">blueroofmu=
-sic@gmail.com</a>&gt;</span><br><blockquote class=3D"gmail_quote" style=3D"=
-margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex;">
-Hi,<br><br>Our OP meeting will be *next* week on Wednesday 14 September. <s=
-pan></span><br><br><br><span>Agenda</span>:<br>
-
-<br>(1) Status of Common Printing Dialog (Lars Uebernickel)<br><br>(2) Stat=
-us of independent JTAPI project (Glen Petrie)<br>
-<br>(3) Status of Mobile Print project (Glen Petrie)<br><br>
-(4) Status of GSoC Foomatic project (Daniel Dressler)<br>
-<br>(5) Status of GSoC Ticketed Print Monitoring System (Danny Brennan)<br>=
-<br>(6) Status of GSoC OpenICC Color Management (Till Kamppeter)<br>
-
-<br>
-(7) PWG Highlights for Open Printing (Ira McDonald)<br>
-=C2=A0=C2=A0=C2=A0=C2=A0 (a) PWG Raster, IPP Everywhere, IPP JPS3, IPPS URI=
- Scheme <br>
-=C2=A0=C2=A0=C2=A0=C2=A0 - technical content nearly complete<br>=C2=A0=C2=
-=A0=C2=A0=C2=A0 - LDAP Printer Schema still to be updated for IPP Everywher=
-e<br>
-<br>
-=C2=A0=C2=A0=C2=A0=C2=A0 (b) PWG Semantic Model Print Job Ticket<br>
-=C2=A0=C2=A0=C2=A0=C2=A0 - for use in existing Cloud products such as Googl=
-e Cloud Print<br>=C2=A0=C2=A0=C2=A0=C2=A0 - defines OPC/ZIP package: job ti=
-cket, user data, job receipt (log)<br>=C2=A0=C2=A0=C2=A0=C2=A0 - defines st=
-andard small subset of required attributes (for Cloud)<br>
+=20
 
 
-<br>
-=C2=A0=C2=A0=C2=A0=C2=A0 (c) Mapping of PWG Print Job Ticket to/from MSPS, =
-PPD, JDF<br>
-=C2=A0=C2=A0=C2=A0=C2=A0 - PWG PJT to Adobe PPD mapping - draft by Mike Swe=
-et 18 August<br>
-=C2=A0=C2=A0=C2=A0=C2=A0 - PWG PJT to CIP4 JDF mapping - draft by Ira McDon=
-ald 22 August<br>=C2=A0=C2=A0=C2=A0=C2=A0 - Justin Hutchings (MS Print Prog=
-ram Manager) is working w/ MS legal<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=
-=C2=A0 on copyright issues for PWG references to MSPS(XPS) specs<br>
-<br><br>Dial-in information:<br><br>September 2011 - US/Europe - <span>OP</=
-span> Monthly Meeting<br>=C2=A0=C2=A0=C2=A0 - Note - US Labor Day on 5 Sept=
-ember<br>
+------_=_NextPart_001_01CC94B4.3ED124EE
+Content-Type: text/html;
+	charset="us-ascii"
+Content-Transfer-Encoding: quoted-printable
 
+<html xmlns:v=3D"urn:schemas-microsoft-com:vml" =
+xmlns:o=3D"urn:schemas-microsoft-com:office:office" =
+xmlns:w=3D"urn:schemas-microsoft-com:office:word" =
+xmlns=3D"http://www.w3.org/TR/REC-html40">
 
-<br>=C2=A0=C2=A0=C2=A0 - Wednesday 14 September 2011, Daytime<br>=C2=A0=C2=
-=A0=C2=A0=C2=A0=C2=A0 - US<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 9a=
-m in San Francisco - US PDT (Pacific Daylight Time)<br>=C2=A0=C2=A0=C2=A0=
-=C2=A0=C2=A0=C2=A0=C2=A0 10am in Colorado - US MDT (Mountain Daylight Time)=
-<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 11am in Chicago - US CDT (Ce=
-ntral Daylight Time)<br>
+<head>
+<meta http-equiv=3DContent-Type content=3D"text/html; =
+charset=3Dus-ascii">
+<meta name=3DGenerator content=3D"Microsoft Word 11 (filtered medium)">
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Cambria;
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0in;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+h1
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:.25in;
+	text-indent:-.25in;
+	page-break-after:avoid;
+	mso-list:l2 level1 lfo7;
+	font-size:14.0pt;
+	font-family:Cambria;}
+h2
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:.55in;
+	text-indent:-.3in;
+	page-break-after:avoid;
+	mso-list:l1 level2 lfo9;
+	font-size:14.0pt;
+	font-family:Cambria;}
+p.MsoBodyText, li.MsoBodyText, div.MsoBodyText
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:0in;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:purple;
+	text-decoration:underline;}
+p.StyleHeading1NotBoldBlack, li.StyleHeading1NotBoldBlack, =
+div.StyleHeading1NotBoldBlack
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:.55in;
+	text-indent:-.3in;
+	page-break-after:avoid;
+	mso-list:l2 level2 lfo4;
+	font-size:14.0pt;
+	font-family:Cambria;
+	color:black;
+	font-weight:bold;}
+p.styleheading1notboldblack0, li.styleheading1notboldblack0, =
+div.styleheading1notboldblack0
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:.55in;
+	text-indent:-.3in;
+	page-break-after:avoid;
+	mso-list:l2 level2 lfo7;
+	font-size:14.0pt;
+	font-family:Cambria;
+	color:black;
+	font-weight:bold;}
+span.EmailStyle20
+	{mso-style-type:personal-compose;
+	font-family:Cambria;
+	color:windowtext;
+	font-weight:normal;
+	font-style:normal;
+	text-decoration:none none;}
+@page Section1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.25in 1.0in 1.25in;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+ @list l0
+	{mso-list-id:1;
+	mso-list-template-ids:1767813390;}
+@list l0:level1
+	{mso-level-suffix:space;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;
+	mso-ansi-font-size:14.0pt;
+	mso-bidi-font-size:14.0pt;
+	font-family:Cambria;
+	font-variant:normal !important;
+	color:black;
+	text-transform:none;
+	letter-spacing:0pt;
+	mso-ansi-font-weight:normal;
+	mso-bidi-font-weight:normal;
+	mso-ansi-font-style:normal;}
+@list l0:level2
+	{mso-level-text:"%1\.%2\.";
+	mso-level-tab-stop:.55in;
+	mso-level-number-position:left;
+	margin-left:.55in;
+	text-indent:-.3in;
+	mso-ansi-font-size:14.0pt;
+	mso-bidi-font-size:14.0pt;
+	font-family:Cambria;
+	font-variant:normal !important;
+	color:black;
+	text-transform:none;
+	letter-spacing:0pt;
+	mso-ansi-font-weight:normal;
+	mso-bidi-font-weight:normal;
+	mso-ansi-font-style:normal;}
+@list l0:level3
+	{mso-level-text:"%1\.%2\.%3\.";
+	mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	margin-left:.85in;
+	text-indent:-.35in;
+	mso-ansi-font-size:14.0pt;
+	mso-bidi-font-size:14.0pt;
+	font-family:Cambria;
+	font-variant:normal !important;
+	color:black;
+	text-transform:none;
+	letter-spacing:0pt;
+	mso-ansi-font-weight:normal;
+	mso-bidi-font-weight:normal;
+	mso-ansi-font-style:normal;}
+@list l0:level4
+	{mso-level-text:"%1\.%2\.%3\.%4\.";
+	mso-level-tab-stop:1.25in;
+	mso-level-number-position:left;
+	margin-left:1.2in;
+	text-indent:-.45in;
+	mso-ansi-font-size:14.0pt;
+	mso-bidi-font-size:14.0pt;
+	font-family:Cambria;
+	font-variant:normal !important;
+	color:black;
+	text-transform:none;
+	letter-spacing:0pt;
+	mso-ansi-font-weight:normal;
+	mso-bidi-font-weight:normal;
+	mso-ansi-font-style:normal;}
+@list l0:level5
+	{mso-level-text:"%1\.%2\.%3\.%4\.%5\.";
+	mso-level-tab-stop:1.75in;
+	mso-level-number-position:left;
+	margin-left:1.55in;
+	text-indent:-.55in;
+	mso-ansi-font-size:14.0pt;
+	mso-bidi-font-size:14.0pt;
+	font-family:Cambria;
+	font-variant:normal !important;
+	color:black;
+	text-transform:none;
+	letter-spacing:0pt;
+	mso-ansi-font-weight:normal;
+	mso-bidi-font-weight:normal;
+	mso-ansi-font-style:normal;}
+@list l0:level6
+	{mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6\.";
+	mso-level-tab-stop:2.0in;
+	mso-level-number-position:left;
+	margin-left:1.9in;
+	text-indent:-.65in;
+	mso-ansi-font-size:14.0pt;
+	mso-bidi-font-size:14.0pt;
+	font-family:Cambria;
+	font-variant:normal !important;
+	color:black;
+	text-transform:none;
+	letter-spacing:0pt;
+	mso-ansi-font-weight:normal;
+	mso-bidi-font-weight:normal;
+	mso-ansi-font-style:normal;}
+@list l0:level7
+	{mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6\.%7\.";
+	mso-level-tab-stop:2.5in;
+	mso-level-number-position:left;
+	margin-left:2.25in;
+	text-indent:-.75in;
+	mso-ansi-font-size:14.0pt;
+	mso-bidi-font-size:14.0pt;
+	font-family:Cambria;
+	font-variant:normal !important;
+	color:black;
+	text-transform:none;
+	letter-spacing:0pt;
+	mso-ansi-font-weight:normal;
+	mso-bidi-font-weight:normal;
+	mso-ansi-font-style:normal;}
+@list l0:level8
+	{mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6\.%7\.%8\.";
+	mso-level-tab-stop:2.75in;
+	mso-level-number-position:left;
+	margin-left:2.6in;
+	text-indent:-.85in;
+	mso-ansi-font-size:14.0pt;
+	mso-bidi-font-size:14.0pt;
+	font-family:Cambria;
+	font-variant:normal !important;
+	color:black;
+	text-transform:none;
+	letter-spacing:0pt;
+	mso-ansi-font-weight:normal;
+	mso-bidi-font-weight:normal;
+	mso-ansi-font-style:normal;}
+@list l0:level9
+	{mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6\.%7\.%8\.%9\.";
+	mso-level-tab-stop:3.25in;
+	mso-level-number-position:left;
+	margin-left:3.0in;
+	text-indent:-1.0in;
+	mso-ansi-font-size:14.0pt;
+	mso-bidi-font-size:14.0pt;
+	font-family:Cambria;
+	font-variant:normal !important;
+	color:black;
+	text-transform:none;
+	letter-spacing:0pt;
+	mso-ansi-font-weight:normal;
+	mso-bidi-font-weight:normal;
+	mso-ansi-font-style:normal;}
+@list l1
+	{mso-list-id:232006760;
+	mso-list-template-ids:9729752;}
+@list l1:level1
+	{mso-level-suffix:space;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;
+	mso-ansi-font-size:14.0pt;
+	mso-bidi-font-size:14.0pt;
+	font-family:Cambria;
+	font-variant:normal !important;
+	color:black;
+	text-transform:none;
+	letter-spacing:0pt;
+	mso-ansi-font-weight:normal;
+	mso-bidi-font-weight:normal;
+	mso-ansi-font-style:normal;}
+@list l1:level2
+	{mso-level-style-link:"Heading 2";
+	mso-level-suffix:space;
+	mso-level-text:"%1\.%2\.";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:.55in;
+	text-indent:-.3in;
+	mso-ansi-font-size:14.0pt;
+	mso-bidi-font-size:14.0pt;
+	font-family:Cambria;
+	font-variant:normal !important;
+	color:black;
+	text-transform:none;
+	letter-spacing:0pt;
+	mso-ansi-font-weight:normal;
+	mso-bidi-font-weight:normal;
+	mso-ansi-font-style:normal;}
+@list l1:level3
+	{mso-level-reset-level:level1;
+	mso-level-suffix:space;
+	mso-level-text:"%1\.%2\.%3\.";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:.85in;
+	text-indent:-.35in;
+	mso-ansi-font-size:14.0pt;
+	mso-bidi-font-size:14.0pt;
+	font-family:Cambria;
+	font-variant:normal !important;
+	color:black;
+	text-transform:none;
+	letter-spacing:0pt;
+	mso-ansi-font-weight:normal;
+	mso-bidi-font-weight:normal;
+	mso-ansi-font-style:normal;}
+@list l1:level4
+	{mso-level-text:"%1\.%2\.%3\.%4\.";
+	mso-level-tab-stop:1.25in;
+	mso-level-number-position:left;
+	margin-left:1.2in;
+	text-indent:-.45in;
+	mso-ansi-font-size:14.0pt;
+	mso-bidi-font-size:14.0pt;
+	font-family:Cambria;
+	font-variant:normal !important;
+	color:black;
+	text-transform:none;
+	letter-spacing:0pt;
+	mso-ansi-font-weight:normal;
+	mso-bidi-font-weight:normal;
+	mso-ansi-font-style:normal;}
+@list l1:level5
+	{mso-level-text:"%1\.%2\.%3\.%4\.%5\.";
+	mso-level-tab-stop:1.75in;
+	mso-level-number-position:left;
+	margin-left:1.55in;
+	text-indent:-.55in;
+	mso-ansi-font-size:14.0pt;
+	mso-bidi-font-size:14.0pt;
+	font-family:Cambria;
+	font-variant:normal !important;
+	color:black;
+	text-transform:none;
+	letter-spacing:0pt;
+	mso-ansi-font-weight:normal;
+	mso-bidi-font-weight:normal;
+	mso-ansi-font-style:normal;}
+@list l1:level6
+	{mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6\.";
+	mso-level-tab-stop:2.0in;
+	mso-level-number-position:left;
+	margin-left:1.9in;
+	text-indent:-.65in;
+	mso-ansi-font-size:14.0pt;
+	mso-bidi-font-size:14.0pt;
+	font-family:Cambria;
+	font-variant:normal !important;
+	color:black;
+	text-transform:none;
+	letter-spacing:0pt;
+	mso-ansi-font-weight:normal;
+	mso-bidi-font-weight:normal;
+	mso-ansi-font-style:normal;}
+@list l1:level7
+	{mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6\.%7\.";
+	mso-level-tab-stop:2.5in;
+	mso-level-number-position:left;
+	margin-left:2.25in;
+	text-indent:-.75in;
+	mso-ansi-font-size:14.0pt;
+	mso-bidi-font-size:14.0pt;
+	font-family:Cambria;
+	font-variant:normal !important;
+	color:black;
+	text-transform:none;
+	letter-spacing:0pt;
+	mso-ansi-font-weight:normal;
+	mso-bidi-font-weight:normal;
+	mso-ansi-font-style:normal;}
+@list l1:level8
+	{mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6\.%7\.%8\.";
+	mso-level-tab-stop:2.75in;
+	mso-level-number-position:left;
+	margin-left:2.6in;
+	text-indent:-.85in;
+	mso-ansi-font-size:14.0pt;
+	mso-bidi-font-size:14.0pt;
+	font-family:Cambria;
+	font-variant:normal !important;
+	color:black;
+	text-transform:none;
+	letter-spacing:0pt;
+	mso-ansi-font-weight:normal;
+	mso-bidi-font-weight:normal;
+	mso-ansi-font-style:normal;}
+@list l1:level9
+	{mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6\.%7\.%8\.%9\.";
+	mso-level-tab-stop:3.25in;
+	mso-level-number-position:left;
+	margin-left:3.0in;
+	text-indent:-1.0in;
+	mso-ansi-font-size:14.0pt;
+	mso-bidi-font-size:14.0pt;
+	font-family:Cambria;
+	font-variant:normal !important;
+	color:black;
+	text-transform:none;
+	letter-spacing:0pt;
+	mso-ansi-font-weight:normal;
+	mso-bidi-font-weight:normal;
+	mso-ansi-font-style:normal;}
+@list l2
+	{mso-list-id:675117133;
+	mso-list-template-ids:-319017128;}
+@list l2:level1
+	{mso-level-style-link:"Heading 1";
+	mso-level-suffix:space;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;
+	mso-ansi-font-size:14.0pt;
+	mso-bidi-font-size:14.0pt;
+	font-family:Cambria;
+	font-variant:normal !important;
+	color:black;
+	text-transform:none;
+	letter-spacing:0pt;
+	mso-ansi-font-weight:normal;
+	mso-bidi-font-weight:normal;
+	mso-ansi-font-style:normal;}
+@list l2:level2
+	{mso-level-style-link:"Style Heading 1 + Not Bold Black";
+	mso-level-suffix:space;
+	mso-level-text:"%1\.%2\.";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:.55in;
+	text-indent:-.3in;
+	mso-ansi-font-size:14.0pt;
+	mso-bidi-font-size:14.0pt;
+	font-family:Cambria;
+	font-variant:normal !important;
+	color:black;
+	text-transform:none;
+	letter-spacing:0pt;
+	mso-ansi-font-weight:normal;
+	mso-bidi-font-weight:normal;
+	mso-ansi-font-style:normal;}
+@list l2:level3
+	{mso-level-suffix:space;
+	mso-level-text:"%1\.%2\.%3\.";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:.85in;
+	text-indent:-.35in;
+	mso-ansi-font-size:14.0pt;
+	mso-bidi-font-size:14.0pt;
+	font-family:Cambria;
+	font-variant:normal !important;
+	color:black;
+	text-transform:none;
+	letter-spacing:0pt;
+	mso-ansi-font-weight:normal;
+	mso-bidi-font-weight:normal;
+	mso-ansi-font-style:normal;}
+@list l2:level4
+	{mso-level-suffix:space;
+	mso-level-text:"%1\.%2\.%3\.%4\.";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:1.2in;
+	text-indent:-.45in;
+	mso-ansi-font-size:14.0pt;
+	mso-bidi-font-size:14.0pt;
+	font-family:Cambria;
+	font-variant:normal !important;
+	color:black;
+	text-transform:none;
+	letter-spacing:0pt;
+	mso-ansi-font-weight:normal;
+	mso-bidi-font-weight:normal;
+	mso-ansi-font-style:normal;}
+@list l2:level5
+	{mso-level-suffix:space;
+	mso-level-text:"%1\.%2\.%3\.%4\.%5\.";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:1.55in;
+	text-indent:-.55in;
+	mso-ansi-font-size:14.0pt;
+	mso-bidi-font-size:14.0pt;
+	font-family:Cambria;
+	font-variant:normal !important;
+	color:black;
+	text-transform:none;
+	letter-spacing:0pt;
+	mso-ansi-font-weight:normal;
+	mso-bidi-font-weight:normal;
+	mso-ansi-font-style:normal;}
+@list l2:level6
+	{mso-level-suffix:space;
+	mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6\.";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:1.9in;
+	text-indent:-.65in;
+	mso-ansi-font-size:14.0pt;
+	mso-bidi-font-size:14.0pt;
+	font-family:Cambria;
+	font-variant:normal !important;
+	color:black;
+	text-transform:none;
+	letter-spacing:0pt;
+	mso-ansi-font-weight:normal;
+	mso-bidi-font-weight:normal;
+	mso-ansi-font-style:normal;}
+@list l2:level7
+	{mso-level-suffix:space;
+	mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6\.%7\.";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:2.25in;
+	text-indent:-.75in;
+	mso-ansi-font-size:14.0pt;
+	mso-bidi-font-size:14.0pt;
+	font-family:Cambria;
+	font-variant:normal !important;
+	color:black;
+	text-transform:none;
+	letter-spacing:0pt;
+	mso-ansi-font-weight:normal;
+	mso-bidi-font-weight:normal;
+	mso-ansi-font-style:normal;}
+@list l2:level8
+	{mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6\.%7\.%8\.";
+	mso-level-tab-stop:2.75in;
+	mso-level-number-position:left;
+	margin-left:2.6in;
+	text-indent:-.85in;
+	mso-ansi-font-size:14.0pt;
+	mso-bidi-font-size:14.0pt;
+	font-family:Cambria;
+	font-variant:normal !important;
+	color:black;
+	text-transform:none;
+	letter-spacing:0pt;
+	mso-ansi-font-weight:normal;
+	mso-bidi-font-weight:normal;
+	mso-ansi-font-style:normal;}
+@list l2:level9
+	{mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6\.%7\.%8\.%9\.";
+	mso-level-tab-stop:3.25in;
+	mso-level-number-position:left;
+	margin-left:3.0in;
+	text-indent:-1.0in;
+	mso-ansi-font-size:14.0pt;
+	mso-bidi-font-size:14.0pt;
+	font-family:Cambria;
+	font-variant:normal !important;
+	color:black;
+	text-transform:none;
+	letter-spacing:0pt;
+	mso-ansi-font-weight:normal;
+	mso-bidi-font-weight:normal;
+	mso-ansi-font-style:normal;}
+ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+<!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext=3D"edit" spidmax=3D"1026" />
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext=3D"edit">
+  <o:idmap v:ext=3D"edit" data=3D"1" />
+ </o:shapelayout></xml><![endif]-->
+</head>
 
+<body lang=3DEN-US link=3Dblue vlink=3Dpurple>
 
+<div class=3DSection1>
 
+<p class=3DMsoNormal><font size=3D3 face=3DCambria><span =
+style=3D'font-size:12.0pt;
+font-family:Cambria'><o:p>&nbsp;</o:p></span></font></p>
 
+</div>
 
+</body>
 
-=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 12pm in New York - US EDT (Easte=
-rn Daylight Time)<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 - Europe<br>=C2=A0=C2=
-=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 6pm in Berlin - CEST (Central European Su=
-mmer Time)<br><br>=C2=A0=C2=A0=C2=A0 * Main Number (Till Kamppeter, LF, lea=
-der)<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 International: <a href=3D"tel:%2B1-2=
-18-936-7999" value=3D"+12189367999" target=3D"_blank">+1-218-936-7999</a><b=
-r>
+</html>
 
-
-
-
-
-
-=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 Access Code:=C2=A0=C2=A0 491659#<br><br><spa=
-n></span><br>Cheers,<br>- Ira<br><br clear=3D"all">Ira McDonald (Musician /=
- Software Architect)<br>Chair - Linux Foundation Open Printing WG<br>Co-Cha=
-ir - IEEE-ISTO PWG IPP WG<br>Chair - TCG Embedded Systems Hardcopy SWG<br>
-
-IETF Designated Expert - IPP &amp; Printer MIB<br>Blue Roof Music/High Nort=
-h Inc<br><a href=3D"http://sites.google.com/site/blueroofmusic" target=3D"_=
-blank">http://sites.google.com/site/blueroofmusic</a><br><a style=3D"color:=
-rgb(102, 0, 204)" href=3D"http://sites.google.com/site/highnorthinc" target=
-=3D"_blank">http://sites.google.com/site/highnorthinc</a><br>
-
-mailto:<a href=3D"mailto:blueroofmusic@gmail.com" target=3D"_blank">blueroo=
-fmusic@gmail.com</a><br>Christmas through April:<br>=C2=A0 579 Park Place=
-=C2=A0 Saline, MI=C2=A0 48176<br>=C2=A0 <a href=3D"tel:734-944-0094" value=
-=3D"+17349440094" target=3D"_blank">734-944-0094</a><br>
-May to Christmas:<br>=C2=A0 PO Box 221=C2=A0 Grand Marais, MI 49839<br>
-=C2=A0 <a href=3D"tel:906-494-2434" value=3D"+19064942434" target=3D"_blank=
-">906-494-2434</a><div style=3D"display:inline"></div><div style=3D"display=
-:inline"></div><div style=3D"display:inline"></div><div></div><br>
-<br>_______________________________________________<br>
-Printing-architecture mailing list<br>
-<a href=3D"mailto:Printing-architecture@lists.linux-foundation.org">Printin=
-g-architecture@lists.linux-foundation.org</a><br>
-<a href=3D"https://lists.linux-foundation.org/mailman/listinfo/printing-arc=
-hitecture" target=3D"_blank">https://lists.linux-foundation.org/mailman/lis=
-tinfo/printing-architecture</a><br>
-<br></blockquote></div><br>
-
---20cf3042719cfadbb704ac8ed205--
+------_=_NextPart_001_01CC94B4.3ED124EE--
