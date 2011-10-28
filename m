@@ -2,11 +2,11 @@ Return-Path: <glen.petrie@eitc.epson.com>
 Content-class: urn:content-classes:message
 MIME-Version: 1.0
 Content-Type: multipart/alternative;
-	boundary="----_=_NextPart_001_01CC9580.3C57A854"
-Date: Fri, 28 Oct 2011 07:45:28 -0700
-Message-ID: <E8C3B9E653C80C48B0951F8494C049A9026782@EEAEX02.us.epson.net>
-References: <4EA99DFF.3080801@gmail.com>
-	<CAGC3nLAF-dT=wiaSS=yUSgDvcHRSrBoBf_ZMtEhKtWoXhtrpgA@mail.gmail.com>
+	boundary="----_=_NextPart_001_01CC9581.F0C40922"
+Date: Fri, 28 Oct 2011 07:57:40 -0700
+Message-ID: <E8C3B9E653C80C48B0951F8494C049A9026783@EEAEX02.us.epson.net>
+References: <4EA99DFF.3080801@gmail.com><CAGC3nLAF-dT=wiaSS=yUSgDvcHRSrBoBf_ZMtEhKtWoXhtrpgA@mail.gmail.com>
+	<E8C3B9E653C80C48B0951F8494C049A9026782@EEAEX02.us.epson.net>
 From: "Petrie, Glen" <glen.petrie@eitc.epson.com>
 Subject: Re: [Printing-architecture] Moving CUPS filters to OpenPrinting
 List-Id: Printing architecture under linux
@@ -18,15 +18,45 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Daniel Dressler <danieru.dressler@gmail.com>, Till Kamppeter <till.kamppeter@gmail.com>
+To: "Petrie, Glen" <glen.petrie@eitc.epson.com>, Daniel Dressler <danieru.dressler@gmail.com>, Till Kamppeter <till.kamppeter@gmail.com>
 Cc: Open Printing <printing-architecture@lists.linux-foundation.org>
 
 This is a multi-part message in MIME format.
 
-------_=_NextPart_001_01CC9580.3C57A854
+------_=_NextPart_001_01CC9581.F0C40922
 Content-Type: text/plain;
 	charset="us-ascii"
 Content-Transfer-Encoding: quoted-printable
+
+There may be some confusion on my comments at the end of my last email.
+The "dropped filters" are not the one's CUPS will drop but the one Till
+would like to drop.  After reviewing the web site again, I see the
+number of filters may be small overall; so it now becomes of question if
+Till (or others helping Till) have sufficient time to maintain the
+filters.  Perhaps Till should make the decision, since it will more
+directly affects him.
+
+=20
+
+Glen
+
+=20
+
+=20
+
+=20
+
+________________________________
+
+From: printing-architecture-bounces@lists.linux-foundation.org
+[mailto:printing-architecture-bounces@lists.linux-foundation.org] On
+Behalf Of Petrie, Glen
+Sent: Friday, October 28, 2011 7:45 AM
+To: Daniel Dressler; Till Kamppeter
+Cc: Open Printing
+Subject: Re: [Printing-architecture] Moving CUPS filters to OpenPrinting
+
+=20
 
 Hi,
 
@@ -121,7 +151,6 @@ Daniel
 
 
 
-
 2011/10/27 Till Kamppeter <till.kamppeter@gmail.com>
 
 Hi,
@@ -186,7 +215,7 @@ https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture
 =20
 
 
-------_=_NextPart_001_01CC9580.3C57A854
+------_=_NextPart_001_01CC9581.F0C40922
 Content-Type: text/html;
 	charset="us-ascii"
 Content-Transfer-Encoding: quoted-printable
@@ -197,7 +226,7 @@ xmlns:w=3D"urn:schemas-microsoft-com:office:word" =
 xmlns=3D"http://www.w3.org/TR/REC-html40">
 
 <head>
-<meta http-equiv=3DContent-Type content=3D"text/html; =
+<META HTTP-EQUIV=3D"Content-Type" CONTENT=3D"text/html; =
 charset=3Dus-ascii">
 <meta name=3DGenerator content=3D"Microsoft Word 11 (filtered medium)">
 <!--[if !mso]>
@@ -212,20 +241,11 @@ w\:* {behavior:url(#default#VML);}
 <!--
  /* Font Definitions */
  @font-face
-	{font-family:SimSun;
-	panose-1:2 1 6 0 3 1 1 1 1 1;}
-@font-face
-	{font-family:Mangal;
-	panose-1:0 0 4 0 0 0 0 0 0 0;}
-@font-face
 	{font-family:Cambria;
 	panose-1:2 4 5 3 5 4 6 3 2 4;}
 @font-face
 	{font-family:Tahoma;
 	panose-1:2 11 6 4 3 5 4 4 2 4;}
-@font-face
-	{font-family:"\@SimSun";
-	panose-1:2 1 6 0 3 1 1 1 1 1;}
  /* Style Definitions */
  p.MsoNormal, li.MsoNormal, div.MsoNormal
 	{margin:0in;
@@ -239,7 +259,7 @@ h1
 	margin-left:.25in;
 	text-indent:-.25in;
 	page-break-after:avoid;
-	mso-list:l2 level1 lfo4;
+	mso-list:l2 level1 lfo7;
 	font-size:14.0pt;
 	font-family:Cambria;}
 h2
@@ -249,7 +269,7 @@ h2
 	margin-left:.55in;
 	text-indent:-.3in;
 	page-break-after:avoid;
-	mso-list:l1 level2 lfo5;
+	mso-list:l1 level2 lfo9;
 	font-size:14.0pt;
 	font-family:Cambria;}
 p.MsoBodyText, li.MsoBodyText, div.MsoBodyText
@@ -278,7 +298,27 @@ div.StyleHeading1NotBoldBlack
 	font-family:Cambria;
 	color:black;
 	font-weight:bold;}
-span.EmailStyle19
+p.styleheading1notboldblack0, li.styleheading1notboldblack0, =
+div.styleheading1notboldblack0
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:.55in;
+	text-indent:-.3in;
+	page-break-after:avoid;
+	mso-list:l2 level2 lfo7;
+	font-size:14.0pt;
+	font-family:Cambria;
+	color:black;
+	font-weight:bold;}
+span.EmailStyle20
+	{mso-style-type:personal;
+	font-family:Cambria;
+	color:blue;
+	font-weight:normal;
+	font-style:normal;
+	text-decoration:none none;}
+span.EmailStyle21
 	{mso-style-type:personal-reply;
 	font-family:Cambria;
 	color:blue;
@@ -759,6 +799,81 @@ ul
 
 <p class=3DMsoNormal><font size=3D3 color=3Dblue face=3DCambria><span =
 style=3D'font-size:
+12.0pt;font-family:Cambria;color:blue'>There may be some confusion on my =
+comments
+at the end of my last email.&nbsp; The &#8220;dropped filters&#8221; are =
+not the one&#8217;s
+CUPS will drop but the one Till would like to drop.&nbsp; After =
+reviewing the web
+site again, I see the number of filters may be small overall; so it now =
+becomes
+of question if Till (or others helping Till) have sufficient time to =
+maintain
+the filters.&nbsp; Perhaps Till should make the decision, since it will =
+more
+directly affects him.<o:p></o:p></span></font></p>
+
+<p class=3DMsoNormal><font size=3D3 color=3Dblue face=3DCambria><span =
+style=3D'font-size:
+12.0pt;font-family:Cambria;color:blue'><o:p>&nbsp;</o:p></span></font></p=
+>
+
+<p class=3DMsoNormal><font size=3D3 color=3Dblue face=3DCambria><span =
+style=3D'font-size:
+12.0pt;font-family:Cambria;color:blue'>Glen<o:p></o:p></span></font></p>
+
+<p class=3DMsoNormal><font size=3D3 color=3Dblue face=3DCambria><span =
+style=3D'font-size:
+12.0pt;font-family:Cambria;color:blue'>&nbsp;<o:p></o:p></span></font></p=
+>
+
+<p class=3DMsoNormal><font size=3D3 color=3Dblue face=3DCambria><span =
+style=3D'font-size:
+12.0pt;font-family:Cambria;color:blue'><o:p>&nbsp;</o:p></span></font></p=
+>
+
+<p class=3DMsoNormal><font size=3D3 color=3Dblue face=3DCambria><span =
+style=3D'font-size:
+12.0pt;font-family:Cambria;color:blue'><o:p>&nbsp;</o:p></span></font></p=
+>
+
+<div>
+
+<div class=3DMsoNormal align=3Dcenter style=3D'text-align:center'><font =
+size=3D3
+face=3D"Times New Roman"><span style=3D'font-size:12.0pt'>
+
+<hr size=3D2 width=3D"100%" align=3Dcenter tabindex=3D-1>
+
+</span></font></div>
+
+<p class=3DMsoNormal><b><font size=3D2 face=3DTahoma><span =
+style=3D'font-size:10.0pt;
+font-family:Tahoma;font-weight:bold'>From:</span></font></b><font =
+size=3D2
+face=3DTahoma><span style=3D'font-size:10.0pt;font-family:Tahoma'>
+printing-architecture-bounces@lists.linux-foundation.org
+[mailto:printing-architecture-bounces@lists.linux-foundation.org] =
+<b><span
+style=3D'font-weight:bold'>On Behalf Of </span></b>Petrie, Glen<br>
+<b><span style=3D'font-weight:bold'>Sent:</span></b> Friday, October 28, =
+2011
+7:45 AM<br>
+<b><span style=3D'font-weight:bold'>To:</span></b> Daniel Dressler; Till
+Kamppeter<br>
+<b><span style=3D'font-weight:bold'>Cc:</span></b> Open Printing<br>
+<b><span style=3D'font-weight:bold'>Subject:</span></b> Re: =
+[Printing-architecture]
+Moving CUPS filters to OpenPrinting</span></font><o:p></o:p></p>
+
+</div>
+
+<p class=3DMsoNormal><font size=3D3 face=3D"Times New Roman"><span =
+style=3D'font-size:
+12.0pt'><o:p>&nbsp;</o:p></span></font></p>
+
+<p class=3DMsoNormal><font size=3D3 color=3Dblue face=3DCambria><span =
+style=3D'font-size:
 12.0pt;font-family:Cambria;color:blue'>Hi,<o:p></o:p></span></font></p>
 
 <p class=3DMsoNormal><font size=3D3 color=3Dblue face=3DCambria><span =
@@ -778,9 +893,9 @@ style=3D'font-size:
 
 <p class=3DMsoNormal><font size=3D3 color=3Dblue face=3DCambria><span =
 style=3D'font-size:
-12.0pt;font-family:Cambria;color:blue'>While =
-&#8220;openprinting-cups-filters&#8221;
-is descriptive; wouldn&#8217;t &#8220;op-cups-filters&#8221; be =
+12.0pt;font-family:Cambria;color:blue'>While
+&#8220;openprinting-cups-filters&#8221; is descriptive; wouldn&#8217;t
+&#8220;op-cups-filters&#8221; be =
 sufficient?<o:p></o:p></span></font></p>
 
 <p class=3DMsoNormal><font size=3D3 color=3Dblue face=3DCambria><span =
@@ -790,13 +905,12 @@ style=3D'font-size:
 
 <p class=3DMsoNormal><font size=3D3 color=3Dblue face=3DCambria><span =
 style=3D'font-size:
-12.0pt;font-family:Cambria;color:blue'>For the &#8220;other name&#8221; =
-discussion,
-I am not sure they are really &#8220;common&#8221;; they are really just =
-the
-set supported by OpenPrinting. &nbsp;&nbsp;You say are =
-&#8220;&#8221;&#8221;&#8221;extra&#8221;&#8221;&#8221;&#8221;
-or &#8220;&#8221;&#8221;&#8221;extended&#8221;&#8221;&#8221;&#8221;. =
+12.0pt;font-family:Cambria;color:blue'>For the &#8220;other name&#8221;
+discussion, I am not sure they are really &#8220;common&#8221;; they are =
+really
+just the set supported by OpenPrinting. &nbsp;&nbsp;You say are
+&#8220;&#8221;&#8221;&#8221;extra&#8221;&#8221;&#8221;&#8221; or
+&#8220;&#8221;&#8221;&#8221;extended&#8221;&#8221;&#8221;&#8221;. =
 <o:p></o:p></span></font></p>
 
 <p class=3DMsoNormal><font size=3D3 color=3Dblue face=3DCambria><span =
@@ -837,7 +951,7 @@ style=3D'font-size:
 
 <p class=3DMsoNormal><font size=3D3 color=3Dblue face=3DCambria><span =
 style=3D'font-size:
-12.0pt;font-family:Cambria;color:blue'>But I am ok with =
+12.0pt;font-family:Cambria;color:blue'>But I am ok with
 &#8220;op-cups-filters&#8221;<o:p></o:p></span></font></p>
 
 <p class=3DMsoNormal><font size=3D3 color=3Dblue face=3DCambria><span =
@@ -855,12 +969,14 @@ filters&#8221; &#8211;<o:p></o:p></span></font></p>
 style=3D'font-size:
 12.0pt;font-family:Cambria;color:blue'>1.&nbsp; Is the intent is stop
 supporting?&nbsp; If so, then there should one filter set that contains =
-all of &#8220;abandoned&#8221;
-filters.&nbsp; At least someone would have access to the filter; even =
-though reasonability
-for ensuring the work with the latest CUPS is up to the person =
-downloading this
-set of filters and not any other entity.<o:p></o:p></span></font></p>
+all of
+&#8220;abandoned&#8221; filters.&nbsp; At least someone would have =
+access to
+the filter; even though reasonability for ensuring the work with the =
+latest
+CUPS is up to the person downloading this set of filters and not any =
+other
+entity.<o:p></o:p></span></font></p>
 
 <p class=3DMsoNormal><font size=3D3 color=3Dblue face=3DCambria><span =
 style=3D'font-size:
@@ -869,11 +985,10 @@ suggest
 dropping?&nbsp; If the number is small (&lt; 10 say), then the burden to
 continue to support them may be low; however, if the larger, can a list =
 be
-generated of the suggested filters to be dropped.&nbsp; The list is then =
-distributed
-on printing email lists, so that people can provide a feedback on the =
-candidate
-filters to be dropped. <o:p></o:p></span></font></p>
+generated of the suggested filters to be dropped.&nbsp; The list is then
+distributed on printing email lists, so that people can provide a =
+feedback on
+the candidate filters to be dropped. <o:p></o:p></span></font></p>
 
 <p class=3DMsoNormal><font size=3D3 color=3Dblue face=3DCambria><span =
 style=3D'font-size:
@@ -899,10 +1014,10 @@ style=3D'font-size:10.0pt;
 font-family:Tahoma;font-weight:bold'>From:</span></font></b><font =
 size=3D2
 face=3DTahoma><span style=3D'font-size:10.0pt;font-family:Tahoma'>
-printing-architecture-bounces@lists.linux-foundation.org
-[mailto:printing-architecture-bounces@lists.linux-foundation.org] =
-<b><span
-style=3D'font-weight:bold'>On Behalf Of </span></b>Daniel Dressler<br>
+printing-architecture-bounces@lists.linux-foundation.org =
+[mailto:printing-architecture-bounces@lists.linux-foundation.org]
+<b><span style=3D'font-weight:bold'>On Behalf Of </span></b>Daniel =
+Dressler<br>
 <b><span style=3D'font-weight:bold'>Sent:</span></b> Thursday, October =
 27, 2011
 11:38 AM<br>
@@ -949,7 +1064,6 @@ Daniel<br>
 <br>
 *Already taken =3D\<br>
 **In English at least.<br>
-<br>
 <br>
 <o:p></o:p></span></font></p>
 
@@ -1062,4 +1176,4 @@ style=3D'font-size:
 
 </html>
 
-------_=_NextPart_001_01CC9580.3C57A854--
+------_=_NextPart_001_01CC9581.F0C40922--
