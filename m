@@ -1,14 +1,21 @@
-Return-Path: <glen.petrie@eitc.epson.com>
-Content-class: urn:content-classes:message
+Return-Path: <till.kamppeter@gmail.com>
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=gamma;
+	h=message-id:date:from:user-agent:mime-version:to:cc:subject
+	:references:in-reply-to:x-forwarded-message-id:content-type
+	:content-transfer-encoding;
+	bh=PrdIcALtzm5SPSxYLUIQ8LQl4FWYeGAVa8c3ZLCjmXU=;
+	b=MxtmFgvvxIZwzCWS/l1ChgvEO1nJSKtgD1FONU+kp1hpUU0hHbU/rjikGtIUxADK6t
+	O9ptNtFbmuqcH2YJ+SKsVTTghY9IchYwiAmwtmvueL3sgSb4LomIHafUitFFJpDuJbGp
+	N7CSg8sZtgalLUV3j5kjtuMEda/I7jcs89QDw=
+Message-ID: <4EDB49CD.9050908@gmail.com>
+Date: Sun, 04 Dec 2011 11:22:05 +0100
+From: Till Kamppeter <till.kamppeter@gmail.com>
 MIME-Version: 1.0
-Content-Type: multipart/alternative;
-	boundary="----_=_NextPart_001_01CCB078.449F0069"
-Date: Thu, 1 Dec 2011 14:26:28 -0800
-Message-ID: <E8C3B9E653C80C48B0951F8494C049A90267EF@EEAEX02.us.epson.net>
-References: <E8C3B9E653C80C48B0951F8494C049A90267EE@EEAEX02.us.epson.net>
-From: "Petrie, Glen" <glen.petrie@eitc.epson.com>
-Subject: Re: [Printing-architecture] Conceptual Model for Common Mobile
-	Print Dialog (Client)
+References: <4EDAE1F5.1030804@linuxfoundation.org>
+In-Reply-To: <4EDAE1F5.1030804@linuxfoundation.org>
+Content-Type: text/plain; charset=UTF-8; format=flowed
+Content-Transfer-Encoding: 7bit
+Subject: [Printing-architecture] bzr.linuxfoundation.org is live
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>,
@@ -18,689 +25,138 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: printing-architecture@lists.linux-foundation.org
+To: Lars Uebernickel <larsuebernickel@gmx.de>, David Williams <dwilliams@ricohsv.com>, "Chitpadi, Raghavendra" <raghavendra.chitpadi@hp.com>, "Hsu, Ray" <ray.hsu@eitc.epson.com>, Open Printing <printing-architecture@lists.linux-foundation.org>, Daniel Dressler <danieru.dressler@gmail.com>, Didier Raboud <odyx@debian.org>, Yuji Saito <yuji.saito@avasys.jp>
+Cc: Jeff Licquia <jeff@licquia.org>
 
-This is a multi-part message in MIME format.
+Hi,
 
-------_=_NextPart_001_01CCB078.449F0069
-Content-Type: text/plain;
-	charset="us-ascii"
-Content-Transfer-Encoding: quoted-printable
+the BZR repositories of the Linux Foundation, including the ones of 
+OpenPrinting are back live and commit access is possible, too.
 
-Just a note that this model was reviewed by several members of the PWG
-and I believe that will some minor corrections and terminology changed
-(with help from Ira) this model will be copasetic with the PWG.   As the
-model is refined, I hope to stay aligned with the PWG where ever
-possible.=20
+Browser and read-only access works the same way as before with the same 
+URLs including
 
-=20
+http://bzr.openprinting.org/
 
-I hope to discuss this more at the next phone conference.=20
+For commit access the method has changed. See the instructions below and 
+contact Jeff Licquia (CCed) in case of questions.
 
-=20
+    Till
 
-________________________________
+-------- Original Message --------
+Subject: bzr.linuxfoundation.org is live
+Date: Sat, 03 Dec 2011 21:59:01 -0500
+From: Jeff Licquia <licquia@linuxfoundation.org>
+To: lsb-discuss@lists.linux-foundation.org,  Till Kamppeter 
+<till.kamppeter@gmail.com>, Janina Sajka <janina@a11y.org>, 
+pete@a11ysoft.com
+CC: Eric Searcy <eric@linuxfoundation.org>,  Mike Woster 
+<mwoster@linuxfoundation.org>
 
-From: Petrie, Glen=20
-Sent: Thursday, December 01, 2011 11:16 AM
-To: printing-architecture@lists.linux-foundation.org
-Cc: Zehler, Peter; Petrie, Glen
-Subject: Conceptual Model for Common Mobile Print Dialog (Client)
+We've made bzr.linuxfoundation.org live.  Although there are likely to
+be details that still need to be worked out, none of those details
+should affect our ability to continue development on projects.
 
-=20
+Access to bzr projects is divided roughly into three types: the
+unofficial branches, commit/push access to project branches, and
+read-only and browseable access.  We'll take those in reverse order.
 
-All,=20
+Read-Only and Browser Access
+----------------------------
 
-=20
+This is pretty much exactly the same as it was before.  Point a browser
+at bzr.linuxfoundation.org, and you get the loggerhead browser interface.
 
-below is my current conceptual model for Mobile Common Print Dialog.  I
-would like feedback so that I go continue to defining the details.   I
-would also like to discuss it at the next phone conference meeting.=20
+Once you find the path to a repository, you can branch/checkout
+read-only over HTTP, with a command-line something like this:
 
-..................
+bzr checkout http://bzr.linuxfoundation.org/lsb/devel/fhs-spec
 
-=20
+See the bzr documentation for how to work with a read-only checkout, how
+to create a local branch, etc.
 
-=20
+Commit/Push Access
+------------------
 
-=20
+This is very different from before.  PQM is gone, as is SSH access.
+Instead, read-write access is enabled via a new HTTPS interface.
 
-=20
+When you want to make changes for pushing upstream, start with a
+checkout of the branch over HTTPS, like so:
 
+bzr checkout https+urllib://bzr.linuxfoundation.org/lsb/devel/fhs-spec
 
-------_=_NextPart_001_01CCB078.449F0069
-Content-Type: text/html;
-	charset="us-ascii"
-Content-Transfer-Encoding: quoted-printable
+The "+urllib" part is important; bzr can use curl for Web access if it's
+available, but the curl client does not work for authentication.  The
+"+urllib" part tells bzr to never use curl.
 
-<html xmlns:v=3D"urn:schemas-microsoft-com:vml" =
-xmlns:o=3D"urn:schemas-microsoft-com:office:office" =
-xmlns:w=3D"urn:schemas-microsoft-com:office:word" =
-xmlns:st1=3D"urn:schemas-microsoft-com:office:smarttags" =
-xmlns=3D"http://www.w3.org/TR/REC-html40">
+You will be asked for your username and password.  This is the same
+username and password you use to access other Linux Foundation services.
 
-<head>
-<meta http-equiv=3DContent-Type content=3D"text/html; =
-charset=3Dus-ascii">
-<meta name=3DGenerator content=3D"Microsoft Word 11 (filtered medium)">
-<!--[if !mso]>
-<style>
-v\:* {behavior:url(#default#VML);}
-o\:* {behavior:url(#default#VML);}
-w\:* {behavior:url(#default#VML);}
-.shape {behavior:url(#default#VML);}
-</style>
-<![endif]--><o:SmartTagType
- namespaceuri=3D"urn:schemas-microsoft-com:office:smarttags" =
-name=3D"place"/>
-<!--[if !mso]>
-<style>
-st1\:*{behavior:url(#default#ieooui) }
-</style>
-<![endif]-->
-<style>
-<!--
- /* Font Definitions */
- @font-face
-	{font-family:Cambria;
-	panose-1:2 4 5 3 5 4 6 3 2 4;}
-@font-face
-	{font-family:Tahoma;
-	panose-1:2 11 6 4 3 5 4 4 2 4;}
- /* Style Definitions */
- p.MsoNormal, li.MsoNormal, div.MsoNormal
-	{margin:0in;
-	margin-bottom:.0001pt;
-	font-size:12.0pt;
-	font-family:"Times New Roman";}
-h1
-	{margin-top:12.0pt;
-	margin-right:0in;
-	margin-bottom:6.0pt;
-	margin-left:.25in;
-	text-indent:-.25in;
-	page-break-after:avoid;
-	mso-list:l2 level1 lfo2;
-	font-size:14.0pt;
-	font-family:Cambria;}
-h2
-	{margin-top:12.0pt;
-	margin-right:0in;
-	margin-bottom:3.0pt;
-	margin-left:.55in;
-	text-indent:-.3in;
-	page-break-after:avoid;
-	mso-list:l0 level2 lfo3;
-	font-size:14.0pt;
-	font-family:Cambria;}
-p.MsoBodyText, li.MsoBodyText, div.MsoBodyText
-	{margin-top:0in;
-	margin-right:0in;
-	margin-bottom:6.0pt;
-	margin-left:0in;
-	font-size:12.0pt;
-	font-family:"Times New Roman";}
-a:link, span.MsoHyperlink
-	{color:blue;
-	text-decoration:underline;}
-a:visited, span.MsoHyperlinkFollowed
-	{color:purple;
-	text-decoration:underline;}
-p.StyleHeading1NotBoldBlack, li.StyleHeading1NotBoldBlack, =
-div.StyleHeading1NotBoldBlack
-	{margin-top:12.0pt;
-	margin-right:0in;
-	margin-bottom:6.0pt;
-	margin-left:.55in;
-	text-indent:-.3in;
-	page-break-after:avoid;
-	mso-list:l2 level2 lfo1;
-	font-size:14.0pt;
-	font-family:Cambria;
-	color:black;
-	font-weight:bold;}
-p.styleheading1notboldblack0, li.styleheading1notboldblack0, =
-div.styleheading1notboldblack0
-	{margin-top:12.0pt;
-	margin-right:0in;
-	margin-bottom:6.0pt;
-	margin-left:.55in;
-	text-indent:-.3in;
-	page-break-after:avoid;
-	mso-list:l2 level2 lfo2;
-	font-size:14.0pt;
-	font-family:Cambria;
-	color:black;
-	font-weight:bold;}
-span.EmailStyle20
-	{mso-style-type:personal;
-	font-family:Cambria;
-	color:windowtext;
-	font-weight:normal;
-	font-style:normal;
-	text-decoration:none none;}
-span.EmailStyle21
-	{mso-style-type:personal-reply;
-	font-family:Cambria;
-	color:blue;
-	font-weight:normal;
-	font-style:normal;
-	text-decoration:none none;}
-@page Section1
-	{size:8.5in 11.0in;
-	margin:1.0in 1.25in 1.0in 1.25in;}
-div.Section1
-	{page:Section1;}
- /* List Definitions */
- @list l0
-	{mso-list-id:232006760;
-	mso-list-template-ids:9729752;}
-@list l0:level1
-	{mso-level-suffix:space;
-	mso-level-tab-stop:none;
-	mso-level-number-position:left;
-	margin-left:.25in;
-	text-indent:-.25in;
-	mso-ansi-font-size:14.0pt;
-	mso-bidi-font-size:14.0pt;
-	font-family:Cambria;
-	font-variant:normal !important;
-	color:black;
-	text-transform:none;
-	letter-spacing:0pt;
-	mso-ansi-font-weight:normal;
-	mso-bidi-font-weight:normal;
-	mso-ansi-font-style:normal;}
-@list l0:level2
-	{mso-level-style-link:"Heading 2";
-	mso-level-suffix:space;
-	mso-level-text:"%1\.%2\.";
-	mso-level-tab-stop:none;
-	mso-level-number-position:left;
-	margin-left:.55in;
-	text-indent:-.3in;
-	mso-ansi-font-size:14.0pt;
-	mso-bidi-font-size:14.0pt;
-	font-family:Cambria;
-	font-variant:normal !important;
-	color:black;
-	text-transform:none;
-	letter-spacing:0pt;
-	mso-ansi-font-weight:normal;
-	mso-bidi-font-weight:normal;
-	mso-ansi-font-style:normal;}
-@list l0:level3
-	{mso-level-reset-level:level1;
-	mso-level-suffix:space;
-	mso-level-text:"%1\.%2\.%3\.";
-	mso-level-tab-stop:none;
-	mso-level-number-position:left;
-	margin-left:.85in;
-	text-indent:-.35in;
-	mso-ansi-font-size:14.0pt;
-	mso-bidi-font-size:14.0pt;
-	font-family:Cambria;
-	font-variant:normal !important;
-	color:black;
-	text-transform:none;
-	letter-spacing:0pt;
-	mso-ansi-font-weight:normal;
-	mso-bidi-font-weight:normal;
-	mso-ansi-font-style:normal;}
-@list l0:level4
-	{mso-level-text:"%1\.%2\.%3\.%4\.";
-	mso-level-tab-stop:1.25in;
-	mso-level-number-position:left;
-	margin-left:1.2in;
-	text-indent:-.45in;
-	mso-ansi-font-size:14.0pt;
-	mso-bidi-font-size:14.0pt;
-	font-family:Cambria;
-	font-variant:normal !important;
-	color:black;
-	text-transform:none;
-	letter-spacing:0pt;
-	mso-ansi-font-weight:normal;
-	mso-bidi-font-weight:normal;
-	mso-ansi-font-style:normal;}
-@list l0:level5
-	{mso-level-text:"%1\.%2\.%3\.%4\.%5\.";
-	mso-level-tab-stop:1.75in;
-	mso-level-number-position:left;
-	margin-left:1.55in;
-	text-indent:-.55in;
-	mso-ansi-font-size:14.0pt;
-	mso-bidi-font-size:14.0pt;
-	font-family:Cambria;
-	font-variant:normal !important;
-	color:black;
-	text-transform:none;
-	letter-spacing:0pt;
-	mso-ansi-font-weight:normal;
-	mso-bidi-font-weight:normal;
-	mso-ansi-font-style:normal;}
-@list l0:level6
-	{mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6\.";
-	mso-level-tab-stop:2.0in;
-	mso-level-number-position:left;
-	margin-left:1.9in;
-	text-indent:-.65in;
-	mso-ansi-font-size:14.0pt;
-	mso-bidi-font-size:14.0pt;
-	font-family:Cambria;
-	font-variant:normal !important;
-	color:black;
-	text-transform:none;
-	letter-spacing:0pt;
-	mso-ansi-font-weight:normal;
-	mso-bidi-font-weight:normal;
-	mso-ansi-font-style:normal;}
-@list l0:level7
-	{mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6\.%7\.";
-	mso-level-tab-stop:2.5in;
-	mso-level-number-position:left;
-	margin-left:2.25in;
-	text-indent:-.75in;
-	mso-ansi-font-size:14.0pt;
-	mso-bidi-font-size:14.0pt;
-	font-family:Cambria;
-	font-variant:normal !important;
-	color:black;
-	text-transform:none;
-	letter-spacing:0pt;
-	mso-ansi-font-weight:normal;
-	mso-bidi-font-weight:normal;
-	mso-ansi-font-style:normal;}
-@list l0:level8
-	{mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6\.%7\.%8\.";
-	mso-level-tab-stop:2.75in;
-	mso-level-number-position:left;
-	margin-left:2.6in;
-	text-indent:-.85in;
-	mso-ansi-font-size:14.0pt;
-	mso-bidi-font-size:14.0pt;
-	font-family:Cambria;
-	font-variant:normal !important;
-	color:black;
-	text-transform:none;
-	letter-spacing:0pt;
-	mso-ansi-font-weight:normal;
-	mso-bidi-font-weight:normal;
-	mso-ansi-font-style:normal;}
-@list l0:level9
-	{mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6\.%7\.%8\.%9\.";
-	mso-level-tab-stop:3.25in;
-	mso-level-number-position:left;
-	margin-left:3.0in;
-	text-indent:-1.0in;
-	mso-ansi-font-size:14.0pt;
-	mso-bidi-font-size:14.0pt;
-	font-family:Cambria;
-	font-variant:normal !important;
-	color:black;
-	text-transform:none;
-	letter-spacing:0pt;
-	mso-ansi-font-weight:normal;
-	mso-bidi-font-weight:normal;
-	mso-ansi-font-style:normal;}
-@list l1
-	{mso-list-id:329136865;
-	mso-list-type:hybrid;
-	mso-list-template-ids:622208580 2109873162 67698713 67698715 67698703 =
-67698713 67698715 67698703 67698713 67698715;}
-@list l1:level1
-	{mso-level-tab-stop:.75in;
-	mso-level-number-position:left;
-	margin-left:.75in;
-	text-indent:-.25in;}
-@list l1:level2
-	{mso-level-tab-stop:1.0in;
-	mso-level-number-position:left;
-	text-indent:-.25in;}
-@list l1:level3
-	{mso-level-tab-stop:1.5in;
-	mso-level-number-position:left;
-	text-indent:-.25in;}
-@list l1:level4
-	{mso-level-tab-stop:2.0in;
-	mso-level-number-position:left;
-	text-indent:-.25in;}
-@list l1:level5
-	{mso-level-tab-stop:2.5in;
-	mso-level-number-position:left;
-	text-indent:-.25in;}
-@list l1:level6
-	{mso-level-tab-stop:3.0in;
-	mso-level-number-position:left;
-	text-indent:-.25in;}
-@list l1:level7
-	{mso-level-tab-stop:3.5in;
-	mso-level-number-position:left;
-	text-indent:-.25in;}
-@list l1:level8
-	{mso-level-tab-stop:4.0in;
-	mso-level-number-position:left;
-	text-indent:-.25in;}
-@list l1:level9
-	{mso-level-tab-stop:4.5in;
-	mso-level-number-position:left;
-	text-indent:-.25in;}
-@list l2
-	{mso-list-id:675117133;
-	mso-list-template-ids:-319017128;}
-@list l2:level1
-	{mso-level-style-link:"Heading 1";
-	mso-level-suffix:space;
-	mso-level-tab-stop:none;
-	mso-level-number-position:left;
-	margin-left:.25in;
-	text-indent:-.25in;
-	mso-ansi-font-size:14.0pt;
-	mso-bidi-font-size:14.0pt;
-	font-family:Cambria;
-	font-variant:normal !important;
-	color:black;
-	text-transform:none;
-	letter-spacing:0pt;
-	mso-ansi-font-weight:normal;
-	mso-bidi-font-weight:normal;
-	mso-ansi-font-style:normal;}
-@list l2:level2
-	{mso-level-style-link:"Style Heading 1 + Not Bold Black";
-	mso-level-suffix:space;
-	mso-level-text:"%1\.%2\.";
-	mso-level-tab-stop:none;
-	mso-level-number-position:left;
-	margin-left:.55in;
-	text-indent:-.3in;
-	mso-ansi-font-size:14.0pt;
-	mso-bidi-font-size:14.0pt;
-	font-family:Cambria;
-	font-variant:normal !important;
-	color:black;
-	text-transform:none;
-	letter-spacing:0pt;
-	mso-ansi-font-weight:normal;
-	mso-bidi-font-weight:normal;
-	mso-ansi-font-style:normal;}
-@list l2:level3
-	{mso-level-suffix:space;
-	mso-level-text:"%1\.%2\.%3\.";
-	mso-level-tab-stop:none;
-	mso-level-number-position:left;
-	margin-left:.85in;
-	text-indent:-.35in;
-	mso-ansi-font-size:14.0pt;
-	mso-bidi-font-size:14.0pt;
-	font-family:Cambria;
-	font-variant:normal !important;
-	color:black;
-	text-transform:none;
-	letter-spacing:0pt;
-	mso-ansi-font-weight:normal;
-	mso-bidi-font-weight:normal;
-	mso-ansi-font-style:normal;}
-@list l2:level4
-	{mso-level-suffix:space;
-	mso-level-text:"%1\.%2\.%3\.%4\.";
-	mso-level-tab-stop:none;
-	mso-level-number-position:left;
-	margin-left:1.2in;
-	text-indent:-.45in;
-	mso-ansi-font-size:14.0pt;
-	mso-bidi-font-size:14.0pt;
-	font-family:Cambria;
-	font-variant:normal !important;
-	color:black;
-	text-transform:none;
-	letter-spacing:0pt;
-	mso-ansi-font-weight:normal;
-	mso-bidi-font-weight:normal;
-	mso-ansi-font-style:normal;}
-@list l2:level5
-	{mso-level-suffix:space;
-	mso-level-text:"%1\.%2\.%3\.%4\.%5\.";
-	mso-level-tab-stop:none;
-	mso-level-number-position:left;
-	margin-left:1.55in;
-	text-indent:-.55in;
-	mso-ansi-font-size:14.0pt;
-	mso-bidi-font-size:14.0pt;
-	font-family:Cambria;
-	font-variant:normal !important;
-	color:black;
-	text-transform:none;
-	letter-spacing:0pt;
-	mso-ansi-font-weight:normal;
-	mso-bidi-font-weight:normal;
-	mso-ansi-font-style:normal;}
-@list l2:level6
-	{mso-level-suffix:space;
-	mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6\.";
-	mso-level-tab-stop:none;
-	mso-level-number-position:left;
-	margin-left:1.9in;
-	text-indent:-.65in;
-	mso-ansi-font-size:14.0pt;
-	mso-bidi-font-size:14.0pt;
-	font-family:Cambria;
-	font-variant:normal !important;
-	color:black;
-	text-transform:none;
-	letter-spacing:0pt;
-	mso-ansi-font-weight:normal;
-	mso-bidi-font-weight:normal;
-	mso-ansi-font-style:normal;}
-@list l2:level7
-	{mso-level-suffix:space;
-	mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6\.%7\.";
-	mso-level-tab-stop:none;
-	mso-level-number-position:left;
-	margin-left:2.25in;
-	text-indent:-.75in;
-	mso-ansi-font-size:14.0pt;
-	mso-bidi-font-size:14.0pt;
-	font-family:Cambria;
-	font-variant:normal !important;
-	color:black;
-	text-transform:none;
-	letter-spacing:0pt;
-	mso-ansi-font-weight:normal;
-	mso-bidi-font-weight:normal;
-	mso-ansi-font-style:normal;}
-@list l2:level8
-	{mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6\.%7\.%8\.";
-	mso-level-tab-stop:2.75in;
-	mso-level-number-position:left;
-	margin-left:2.6in;
-	text-indent:-.85in;
-	mso-ansi-font-size:14.0pt;
-	mso-bidi-font-size:14.0pt;
-	font-family:Cambria;
-	font-variant:normal !important;
-	color:black;
-	text-transform:none;
-	letter-spacing:0pt;
-	mso-ansi-font-weight:normal;
-	mso-bidi-font-weight:normal;
-	mso-ansi-font-style:normal;}
-@list l2:level9
-	{mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6\.%7\.%8\.%9\.";
-	mso-level-tab-stop:3.25in;
-	mso-level-number-position:left;
-	margin-left:3.0in;
-	text-indent:-1.0in;
-	mso-ansi-font-size:14.0pt;
-	mso-bidi-font-size:14.0pt;
-	font-family:Cambria;
-	font-variant:normal !important;
-	color:black;
-	text-transform:none;
-	letter-spacing:0pt;
-	mso-ansi-font-weight:normal;
-	mso-bidi-font-weight:normal;
-	mso-ansi-font-style:normal;}
-@list l3
-	{mso-list-id:923609856;
-	mso-list-type:hybrid;
-	mso-list-template-ids:701522370 2109873162 67698713 67698715 67698703 =
-67698713 67698715 67698703 67698713 67698715;}
-@list l3:level1
-	{mso-level-tab-stop:.75in;
-	mso-level-number-position:left;
-	margin-left:.75in;
-	text-indent:-.25in;}
-@list l3:level2
-	{mso-level-tab-stop:1.0in;
-	mso-level-number-position:left;
-	text-indent:-.25in;}
-@list l3:level3
-	{mso-level-tab-stop:1.5in;
-	mso-level-number-position:left;
-	text-indent:-.25in;}
-@list l3:level4
-	{mso-level-tab-stop:2.0in;
-	mso-level-number-position:left;
-	text-indent:-.25in;}
-@list l3:level5
-	{mso-level-tab-stop:2.5in;
-	mso-level-number-position:left;
-	text-indent:-.25in;}
-@list l3:level6
-	{mso-level-tab-stop:3.0in;
-	mso-level-number-position:left;
-	text-indent:-.25in;}
-@list l3:level7
-	{mso-level-tab-stop:3.5in;
-	mso-level-number-position:left;
-	text-indent:-.25in;}
-@list l3:level8
-	{mso-level-tab-stop:4.0in;
-	mso-level-number-position:left;
-	text-indent:-.25in;}
-@list l3:level9
-	{mso-level-tab-stop:4.5in;
-	mso-level-number-position:left;
-	text-indent:-.25in;}
-ol
-	{margin-bottom:0in;}
-ul
-	{margin-bottom:0in;}
--->
-</style>
+Access control is basically the same as it was before; if you had commit
+access to a branch before, you should have it now with the new system,
+using the same username as before.
 
-</head>
+NOTE: Because of the security breach, all passwords have been locked. If
+you haven't logged into the Linux Foundation sites since the breach, you
+will need to reset your password.  You can do that here:
 
-<body lang=3DEN-US link=3Dblue vlink=3Dpurple>
+https://admin.linuxfoundation.org/changepassword/
 
-<div class=3DSection1>
+It is possible to encode the username into the checkout URL, to save a
+step.  Use a URL like this:
 
-<p class=3DMsoNormal><font size=3D3 color=3Dblue face=3DCambria><span =
-style=3D'font-size:
-12.0pt;font-family:Cambria;color:blue'>Just a note that this model was =
-reviewed
-by several members of the PWG and I believe that will some minor =
-corrections
-and terminology changed (with help from Ira) this model will be =
-copasetic with the
-PWG.&nbsp;&nbsp; As the model is refined, I hope to stay aligned with =
-the PWG
-where ever possible. <o:p></o:p></span></font></p>
+https+urllib://username@bzr.linuxfoundation.org/...
 
-<p class=3DMsoNormal><font size=3D3 color=3Dblue face=3DCambria><span =
-style=3D'font-size:
-12.0pt;font-family:Cambria;color:blue'><o:p>&nbsp;</o:p></span></font></p=
->
+It is also possible to encode the password into the URL, but PLEASE
+DON'T DO THAT!  There is a more secure facility for remembering the
+password.  Type "bzr help authentication" to learn about using
+authentication.conf to store passwords.
 
-<p class=3DMsoNormal><font size=3D3 color=3Dblue face=3DCambria><span =
-style=3D'font-size:
-12.0pt;font-family:Cambria;color:blue'>I hope to discuss this more at =
-the next
-phone conference. <o:p></o:p></span></font></p>
+Finally, if you have a checkout or branch from before the breach, and
+you'd like to continue to use it without checking it out from scratch,
+see the bzr documentation for the "bzr switch" command.  That can point
+an old branch or checkout to a new location.
 
-<p class=3DMsoNormal><font size=3D3 color=3Dblue face=3DCambria><span =
-style=3D'font-size:
-12.0pt;font-family:Cambria;color:blue'><o:p>&nbsp;</o:p></span></font></p=
->
+Unofficial Repositories
+-----------------------
 
-<div>
+We used to make the "/unofficial" namespace available for the hosting of
+personal or special-purpose branches.  This was possible for anyone with
+SSH access.
 
-<div class=3DMsoNormal align=3Dcenter style=3D'text-align:center'><font =
-size=3D3
-face=3D"Times New Roman"><span style=3D'font-size:12.0pt'>
+Since SSH access is no longer available, these branches have become
+read-only.  They are still available, but users with unofficial branches
+should make sure to back those up, as they will go away at some point in
+the future.
 
-<hr size=3D2 width=3D"100%" align=3Dcenter tabindex=3D-1>
+We're still trying to figure out a decent substitute for the unofficial
+tree.  If you used this facility, your feedback is welcome.
 
-</span></font></div>
+Other Issues
+------------
 
-<p class=3DMsoNormal><b><font size=3D2 face=3DTahoma><span =
-style=3D'font-size:10.0pt;
-font-family:Tahoma;font-weight:bold'>From:</span></font></b><font =
-size=3D2
-face=3DTahoma><span style=3D'font-size:10.0pt;font-family:Tahoma'> =
-Petrie, Glen <br>
-<b><span style=3D'font-weight:bold'>Sent:</span></b> Thursday, December =
-01, 2011
-11:16 AM<br>
-<b><span style=3D'font-weight:bold'>To:</span></b>
-printing-architecture@lists.linux-foundation.org<br>
-<b><span style=3D'font-weight:bold'>Cc:</span></b> Zehler, Peter; =
-Petrie, Glen<br>
-<b><span style=3D'font-weight:bold'>Subject:</span></b> Conceptual Model =
-for Common
-<st1:place w:st=3D"on">Mobile</st1:place> Print Dialog =
-(Client)</span></font><o:p></o:p></p>
+  - No plugins, extensions, special configuration, or whatever has been
+installed other than the minimum to get the above working.  If you used
+some special feature (say, email to a special list for every commit),
+please let me know.
 
-</div>
+  - Creation of new repositories and branches will, for now, require a
+sysadmin.  Let me know if/when you need this.  If this becomes a burden,
+we may look into ways to enable branch creation without sysadmin access.
 
-<p class=3DMsoNormal><font size=3D3 face=3D"Times New Roman"><span =
-style=3D'font-size:
-12.0pt'><o:p>&nbsp;</o:p></span></font></p>
+  - Loggerhead currently prints the wrong URL for its header ("To get
+this branch, use:").  I'm still working on that.
 
-<p class=3DMsoNormal><font size=3D3 face=3DCambria><span =
-style=3D'font-size:12.0pt;
-font-family:Cambria'>All, <o:p></o:p></span></font></p>
+  - As with any new service, I may have got some part wrong.  Let me know
+right away if you experience trouble that isn't mentioned above.
 
-<p class=3DMsoNormal><font size=3D3 face=3DCambria><span =
-style=3D'font-size:12.0pt;
-font-family:Cambria'><o:p>&nbsp;</o:p></span></font></p>
+-- 
+Jeff Licquia
+The Linux Foundation
++1 (317) 915-7441
+licquia@linuxfoundation.org
 
-<p class=3DMsoNormal><font size=3D3 face=3DCambria><span =
-style=3D'font-size:12.0pt;
-font-family:Cambria'>below is my current conceptual model for Mobile =
-Common
-Print Dialog.&nbsp; I would like feedback so that I go continue to =
-defining the
-details.&nbsp;&nbsp; I would also like to discuss it at the next phone
-conference meeting. <o:p></o:p></span></font></p>
+Linux Foundation Events Schedule:  events.linuxfoundation.org
+Linux Foundation Training Schedule: training.linuxfoundation.org
 
-<p class=3DMsoNormal><font size=3D3 color=3Dblue face=3DCambria><span =
-style=3D'font-size:
-12.0pt;font-family:Cambria;color:blue'>&#8230;&#8230;&#8230;&#8230;&#8230=
-;&#8230;</span></font><font
-face=3DCambria><span =
-style=3D'font-family:Cambria'><o:p></o:p></span></font></p>
-
-<p class=3DMsoNormal><font size=3D3 face=3DCambria><span =
-style=3D'font-size:12.0pt;
-font-family:Cambria'><o:p>&nbsp;</o:p></span></font></p>
-
-<p class=3DMsoNormal><font size=3D3 face=3DCambria><span =
-style=3D'font-size:12.0pt;
-font-family:Cambria'><o:p>&nbsp;</o:p></span></font></p>
-
-<p class=3DMsoNormal><font size=3D3 face=3DCambria><span =
-style=3D'font-size:12.0pt;
-font-family:Cambria'><o:p>&nbsp;</o:p></span></font></p>
-
-<p class=3DMsoNormal><font size=3D3 face=3DCambria><span =
-style=3D'font-size:12.0pt;
-font-family:Cambria'><o:p>&nbsp;</o:p></span></font></p>
-
-</div>
-
-</body>
-
-</html>
-
-------_=_NextPart_001_01CCB078.449F0069--
