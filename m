@@ -2,12 +2,12 @@ Return-Path: <till.kamppeter@gmail.com>
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=gamma;
 	h=message-id:date:from:user-agent:mime-version:to:cc:subject
 	:references:in-reply-to:content-type:content-transfer-encoding;
-	bh=3BbUh3BijS8KVEVmoEbAxvfPU2lryxHxuBZRqDqX9/c=;
-	b=oOXc1aXj4Yj4mlo4IHeP3qh+g/oozAgUTaQe2md76c4cg0NA8flAKr1WNLkcIzp+Gz
-	FITNcLCaEdOsverHtc+5536Yy3OWy72Gm6rDupMxGpuAaeGEtf6uaFPLK9aHDPJMpxd+
-	N7hbDE9DZIy32MhtbjU6hrW3flr7w+nXqT4Dg=
-Message-ID: <4EDBFDF0.1030709@gmail.com>
-Date: Mon, 05 Dec 2011 00:10:40 +0100
+	bh=5NYdG+SgOObDOc7M2etdaxMa22ZI2HB/i0vwNd8M6Yo=;
+	b=YaeOkSRQbSHPo0S1UgG79Di5LDmZCbQW8bXxuQrEBMPq+/zw8z1PFBmeXtLANJc6Ya
+	e5J64TSsOukdl9YXiYzxS6FBsbn3L0WKZvTegsYDlH7EWTV3QdIGKmDpJsbRlVvvFX6M
+	HlYkFU9DDW1Lr+JbZicSQaQIzDOjxKg8d7DOQ=
+Message-ID: <4EDF256B.2030909@gmail.com>
+Date: Wed, 07 Dec 2011 09:35:55 +0100
 From: Till Kamppeter <till.kamppeter@gmail.com>
 MIME-Version: 1.0
 References: <4EDAE1F5.1030804@linuxfoundation.org>
@@ -28,6 +28,16 @@ List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-arc
 To: Lars Uebernickel <larsuebernickel@gmx.de>, David Williams <dwilliams@ricohsv.com>, "Chitpadi, Raghavendra" <raghavendra.chitpadi@hp.com>, "Hsu, Ray" <ray.hsu@eitc.epson.com>, Open Printing <printing-architecture@lists.linux-foundation.org>, Daniel Dressler <danieru.dressler@gmail.com>, Didier Raboud <odyx@debian.org>, Yuji Saito <yuji.saito@avasys.jp>
 Cc: Jeff Licquia <jeff@licquia.org>
 
+Correction: The URL in the example is wrong. It must be
+
+https+urllib://till@bzr.linuxfoundation.org/openprinting/foomatic/foomatic-db/
+
+for both "bzr branch" and "bzr push". Note the additional "foomatic" 
+between "openprinting" and "foomatic-db".
+
+    Till
+
+
 On 12/04/2011 10:44 PM, Till Kamppeter wrote:
 >
 > Some additional info:
@@ -45,7 +55,5 @@ On 12/04/2011 10:44 PM, Till Kamppeter wrote:
 > ...
 >
 > Please test and inform Jeff if this does not work.
-
-I have tested this method now and it also works.
-
-    Till
+>
+> Till
