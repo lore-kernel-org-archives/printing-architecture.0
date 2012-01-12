@@ -1,13 +1,19 @@
-Return-Path: <twaugh@redhat.com>
-Message-ID: <1326365475.8483.3.camel@worm.elk>
-From: Tim Waugh <twaugh@redhat.com>
-Date: Thu, 12 Jan 2012 10:51:15 +0000
-In-Reply-To: <4F0E23F2.5010608@gmail.com>
-References: <4F0E23F2.5010608@gmail.com>
-Content-Type: multipart/signed; micalg="pgp-sha1";
-	protocol="application/pgp-signature"; 
-	boundary="=-XcucFB/DMTH4mi2InNE9"
-Mime-Version: 1.0
+Return-Path: <till.kamppeter@gmail.com>
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=gamma;
+	h=message-id:date:from:user-agent:mime-version:to:cc:subject
+	:references:in-reply-to:content-type:content-transfer-encoding;
+	bh=kXAiHAHYTJ8p2ktaNcnwbeGi3qGywLQHzjwN+npLv34=;
+	b=JAaTempQq0basZESzzR1Mtj1d1zIWhDj/7Wl4nHNj2RCG55vy87OxKyaI1OYoZ+5Et
+	bDJvaaOQywKzxOvlAmPztqY+5kH2hA0TrGbJ82UIG1dWWbmZXbsiNhupKcQbaumhoDyo
+	VKsd8gs871XdNxR/cmoBMgkzuzZIoHMiqSTZk=
+Message-ID: <4F0EBF78.1020805@gmail.com>
+Date: Thu, 12 Jan 2012 12:09:44 +0100
+From: Till Kamppeter <till.kamppeter@gmail.com>
+MIME-Version: 1.0
+References: <4F0E23F2.5010608@gmail.com> <1326365475.8483.3.camel@worm.elk>
+In-Reply-To: <1326365475.8483.3.camel@worm.elk>
+Content-Type: text/plain; charset=UTF-8; format=flowed
+Content-Transfer-Encoding: 7bit
 Subject: Re: [Printing-architecture] Removal of features in CUPS
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
@@ -18,47 +24,25 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Till Kamppeter <till.kamppeter@gmail.com>
+To: Tim Waugh <twaugh@redhat.com>
 Cc: Open Printing <printing-architecture@lists.linux-foundation.org>
 
+On 01/12/2012 11:51 AM, Tim Waugh wrote:
+> I think that CUPS Browsing is also being removed in 1.6, leaving Avahi
+> as the sanest of the remaining discovery methods.
+>
+> The current state of the Avahi support patches is that service
+> announcement is working in the scheduler, and service discovery is
+> working in the dnssd backend -- i.e. by manual user intervention.
+>
+> What is currently missing is automatic service discovery in the
+> scheduler, so that shared queues can be discovered by CUPS itself as
+> used to happen with CUPS Browsing.
 
---=-XcucFB/DMTH4mi2InNE9
-Content-Type: text/plain; charset="UTF-8"
-Content-Transfer-Encoding: quoted-printable
+Does libdnssd-based upstream CUPS do automatic service discovery by the 
+scheduler, meaning that your Avahi patch is not yet complete in this 
+sense or is automatic service discovery by the scheduler even not 
+implemented at all upstream, meaning that by removing IPP browsing one 
+of the most important features of CUPS gets lost?
 
-Hi Till,
-
-I think that CUPS Browsing is also being removed in 1.6, leaving Avahi
-as the sanest of the remaining discovery methods.
-
-The current state of the Avahi support patches is that service
-announcement is working in the scheduler, and service discovery is
-working in the dnssd backend -- i.e. by manual user intervention.
-
-What is currently missing is automatic service discovery in the
-scheduler, so that shared queues can be discovered by CUPS itself as
-used to happen with CUPS Browsing.
-
-Tim.
-*/
-
-
---=-XcucFB/DMTH4mi2InNE9
-Content-Type: application/pgp-signature; name="signature.asc"
-Content-Description: This is a digitally signed message part
-Content-Transfer-Encoding: 7bit
-
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.11 (GNU/Linux)
-
-iQEVAwUATw67JO7Fkar03pQsAQLrsQf/aoYLusBhmDzp0iGy0nmosasH3j/rpcIb
-xZa3eoYj1gd0/1hYwdAjIT00XKVOn9RKzNPjsDJtN6QqEVyQsqaJRq+jCL73/47j
-JHY+V9XlQNXTq9daYzPbNLkaLLMR4rtEyj8Hko7upeWKplZUW5xRKoh51AqU3wSj
-WvpcpUMfaO2jjikSmlalj+oQYRN+ov+vzNCIRvz15/XtZdSYWiu1dMAsxi+z55sq
-fcuO0qeLaUtOiC5r5InMM7YcO0NF4wLAyrJt5PjgwPdywgPei9e5wCWlAOZT/G8R
-lPAcD6YoKwuKTYEQjWHNW6wXlF0XnpMyST7ZnyLtxcxe0o7xrdw0VA==
-=366Z
------END PGP SIGNATURE-----
-
---=-XcucFB/DMTH4mi2InNE9--
-
+    Till
