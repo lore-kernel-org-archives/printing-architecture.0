@@ -1,19 +1,14 @@
-Return-Path: <till.kamppeter@gmail.com>
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=gamma;
-	h=message-id:date:from:user-agent:mime-version:to:cc:subject
-	:references:in-reply-to:content-type:content-transfer-encoding;
-	bh=kXAiHAHYTJ8p2ktaNcnwbeGi3qGywLQHzjwN+npLv34=;
-	b=JAaTempQq0basZESzzR1Mtj1d1zIWhDj/7Wl4nHNj2RCG55vy87OxKyaI1OYoZ+5Et
-	bDJvaaOQywKzxOvlAmPztqY+5kH2hA0TrGbJ82UIG1dWWbmZXbsiNhupKcQbaumhoDyo
-	VKsd8gs871XdNxR/cmoBMgkzuzZIoHMiqSTZk=
-Message-ID: <4F0EBF78.1020805@gmail.com>
-Date: Thu, 12 Jan 2012 12:09:44 +0100
-From: Till Kamppeter <till.kamppeter@gmail.com>
-MIME-Version: 1.0
+Return-Path: <twaugh@redhat.com>
+Message-ID: <1326369369.10576.6.camel@worm.elk>
+From: Tim Waugh <twaugh@redhat.com>
+Date: Thu, 12 Jan 2012 11:56:09 +0000
+In-Reply-To: <4F0EBF78.1020805@gmail.com>
 References: <4F0E23F2.5010608@gmail.com> <1326365475.8483.3.camel@worm.elk>
-In-Reply-To: <1326365475.8483.3.camel@worm.elk>
-Content-Type: text/plain; charset=UTF-8; format=flowed
-Content-Transfer-Encoding: 7bit
+	<4F0EBF78.1020805@gmail.com>
+Content-Type: multipart/signed; micalg="pgp-sha1";
+	protocol="application/pgp-signature"; 
+	boundary="=-RP+NrJgf7j2z/s8RH+ox"
+Mime-Version: 1.0
 Subject: Re: [Printing-architecture] Removal of features in CUPS
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
@@ -24,25 +19,48 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Tim Waugh <twaugh@redhat.com>
+To: Till Kamppeter <till.kamppeter@gmail.com>
 Cc: Open Printing <printing-architecture@lists.linux-foundation.org>
 
-On 01/12/2012 11:51 AM, Tim Waugh wrote:
-> I think that CUPS Browsing is also being removed in 1.6, leaving Avahi
-> as the sanest of the remaining discovery methods.
->
-> The current state of the Avahi support patches is that service
-> announcement is working in the scheduler, and service discovery is
-> working in the dnssd backend -- i.e. by manual user intervention.
->
-> What is currently missing is automatic service discovery in the
-> scheduler, so that shared queues can be discovered by CUPS itself as
-> used to happen with CUPS Browsing.
 
-Does libdnssd-based upstream CUPS do automatic service discovery by the 
-scheduler, meaning that your Avahi patch is not yet complete in this 
-sense or is automatic service discovery by the scheduler even not 
-implemented at all upstream, meaning that by removing IPP browsing one 
-of the most important features of CUPS gets lost?
+--=-RP+NrJgf7j2z/s8RH+ox
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
 
-    Till
+On Thu, 2012-01-12 at 12:09 +0100, Till Kamppeter wrote:
+> Does libdnssd-based upstream CUPS do automatic service discovery by the=
+=20
+> scheduler, meaning that your Avahi patch is not yet complete in this=20
+> sense or is automatic service discovery by the scheduler even not=20
+> implemented at all upstream, meaning that by removing IPP browsing one=
+=20
+> of the most important features of CUPS gets lost?
+
+My Avahi patch was a straight port of the existing features in CUPS to
+Avahi.  Upstream CUPS does not currently perform DNS-SD discovery in the
+scheduler but -- given that CUPS Browsing is to be removed -- I expect
+that it will in 1.6.0.
+
+Tim.
+*/
+
+
+--=-RP+NrJgf7j2z/s8RH+ox
+Content-Type: application/pgp-signature; name="signature.asc"
+Content-Description: This is a digitally signed message part
+Content-Transfer-Encoding: 7bit
+
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.11 (GNU/Linux)
+
+iQEVAwUATw7KWe7Fkar03pQsAQJQeAf+Om1W/5pzXAvU8bs9hD5Wf2JOz+KhBsvj
+bH3ZyN22Z2TRItLvoIYPNgas8pEsWdVFyWQVgS8dOiGyYK52pPZXaoZXXaP2h1pK
+TYCRarRmC0d4OyPEyL8ndEKOcv1P4oz2m66iF4a9WG6pB6BTnZ7p6SROqphxp/Jt
+v0+sisnacacAeEwjvX9VbJVW/Fy90NgiE7rH2gdZOfuLbcvQ3ZT9LtnFop4ePbJy
+hmCb4as5W79E3SunVR2M1wN1G5DQ7GJkfipzGc3Kp00aIh+iccugdw8sguV7V4hh
+3asriC7mmhE6DbdL7pArZtTE6mzMR8KDgX410eIb8og+YzeqZpyHBQ==
+=t9Ys
+-----END PGP SIGNATURE-----
+
+--=-RP+NrJgf7j2z/s8RH+ox--
+
