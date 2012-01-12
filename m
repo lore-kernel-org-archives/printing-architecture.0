@@ -1,16 +1,18 @@
-Return-Path: <blueroofmusic@gmail.com>
+Return-Path: <till.kamppeter@gmail.com>
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=gamma;
-	h=mime-version:date:message-id:subject:from:to:content-type;
-	bh=N9iokM5/fGIdxGaq256H9QjGkVgUNr/9y8wMrypHpwo=;
-	b=iFvJn8BxdTER1pSjWBGU4YbW+2jalV9o84Xe4e8aJgROQVxtgrhK3e2fnrrnFClfWE
-	CdJne7tu5Nvld71MaJYXP3yqS7Hw3LiK1JQYom7VDy3MJWY3L7ZUO1lrMdzFzRjeTnlN
-	an3ZfhiTKw4ZtsASbEjqjg1dY3cL5nhWB3QIU=
+	h=message-id:date:from:user-agent:mime-version:to:subject
+	:content-type:content-transfer-encoding;
+	bh=AjF9tAzpAXysOvL9eD8MGzCqVGwVOYHAl/l90AU33tI=;
+	b=UvBPEK4V1WVEUyIsNmY3r9/5J8vOFwWwsTNrAuCpyXvHum4kNsQllKLfkImUT5sgtr
+	31xsnpF8OZr09oAtCOGJuPf1ts1MTWSjtTy3z+5tU8oSgwfQ4eY1wgVm4sciZubA54kO
+	zXFVkLxjd5Ka1APlHeCGjO9OfpZk54RkLbtrM=
+Message-ID: <4F0E23F2.5010608@gmail.com>
+Date: Thu, 12 Jan 2012 01:06:10 +0100
+From: Till Kamppeter <till.kamppeter@gmail.com>
 MIME-Version: 1.0
-Date: Wed, 11 Jan 2012 17:02:55 -0500
-Message-ID: <CAN40gSvsFpJAoDYbBd7=iNz-U7GSL+ouOLWiQRkLoyWD0TAyow@mail.gmail.com>
-From: Ira McDonald <blueroofmusic@gmail.com>
-Content-Type: multipart/alternative; boundary=bcaec53d550d455dba04b647cb5f
-Subject: [Printing-architecture] OP Monthly Minutes (11 January 2012)
+Content-Type: text/plain; charset=UTF-8; format=flowed
+Content-Transfer-Encoding: 7bit
+Subject: [Printing-architecture] Removal of features in CUPS
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>,
@@ -20,122 +22,118 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: printing-architecture@lists.linux-foundation.org, Ira McDonald <blueroofmusic@gmail.com>
-
---bcaec53d550d455dba04b647cb5f
-Content-Type: text/plain; charset=ISO-8859-1
+To: Ira McDonald <blueroofmusic@gmail.com>, Open Printing <printing-architecture@lists.linux-foundation.org>
 
 Hi,
 
-Minutes from today's Open Printing monthly teleconference are posted at:
+as mentioned in the phone meeting Apple/Mike Sweet is dropping features 
+which are important for Linux but not much interesting for Mac OS X. 
+This means that others have to overtake maintainership to assure that 
+printing under Linux continues to work. Even though CUPS is still the 
+best maintained printing environment for Linux/Unix and its core 
+continues as free software project supplied and maintained by Apple.
 
- ftp://ftp.pwg.org/pub/pwg/fsg/minutes/OP-Minutes-20120111.htm
-
-ALL - Please think about OP Summit topics and review list in these minutes.
+Here are the dropped features:
 
 
-Next OP teleconferences:
-(1) February 2012 - US/Europe - OP Monthly Meeting
-    - Note - PWG F2F Meeting 7-9 February at Canon in Irvine, CA
-    - Note - TCG Members Meeting 14-16 February in Las Vegas, NV
+1. Filters go to the new cups-filters project
+---------------------------------------------
 
-    - Wednesday 1 February 2012, Daytime
-      - US
-        9am in San Francisco - US PST (Pacific Standard Time)
-        10am in Colorado - US MST (Mountain Standard Time)
-        11am in Chicago - US CST (Central Standard Time)
-        12pm in New York - US EST (Eastern Standard Time)
-      - Europe
-        6pm in Berlin - CET (Central European Time)
+All filters and backends not used by Mac OS X are dropped. These 
+filters, together with the filters for the PDF printing workflow are now 
+hosted as the cups-filters project at OpenPrinting. For a first release 
+only bannertopdf needs to get finished (by Lars Uebernickel).
 
-(2) March 2012 - US/Europe - OP Monthly Meeting - tentative
-    - Wednesday 7 March 2012, Daytime
-      - US
-        9am in San Francisco - US PST (Pacific Standard Time)
-        10am in Colorado - US MST (Mountain Standard Time)
-        11am in Chicago - US CST (Central Standard Time)
-        12pm in New York - US EST (Eastern Standard Time)
-      - Europe
-        6pm in Berlin - CET (Central European Time)
 
-    * Main Number (Till Kamppeter, LF, leader)
-      International: +1-218-936-7999
-      Access Code:   491659#
+2. The Linux implementation of the USB backend looses attention
+---------------------------------------------------------------
 
-    * Main Number (Till Kamppeter, LF, leader)
-      International: +1-218-936-7999
-      Access Code:   491659#
+USB printers can get accessed with two methods: The usblp kernel module 
+and libusb. The former is the classic way. It is simple: Data is sent to 
+the printer by writing it to a device file as a simple serial data 
+stream. Reading the same device file allows bi-di access, at least for 
+things like reading out ink levels, status, or printer capability 
+information (PJL). It works very well for simple printers, but for 
+multi-function devices (printer/scanner) it is not suitable and 
+manufacturers like HP supply their own backends.
 
-Cheers,
-- Ira
+Formerly, under Unix everything was a file, but now, with printers being 
+more complex, one moves to general USB device access as supplied via 
+libusb. HP's CUPS backend as shipped with HPLIP for example is 
+libusb-based and detaches printers from the usblp kernel module. On HP's 
+multi-function devices one can do things like simultaneous, independent 
+printing and scanning.
 
-Ira McDonald (Musician / Software Architect)
-Chair - Linux Foundation Open Printing WG
-Secretary - IEEE-ISTO Printer Working Group
-Co-Chair - IEEE-ISTO PWG IPP WG
-Co-Chair - TCG Trusted Mobility Solutions WG
-Chair - TCG Embedded Systems Hardcopy SG
-IETF Designated Expert - IPP & Printer MIB
-Blue Roof Music/High North Inc
-http://sites.google.com/site/blueroofmusic
-http://sites.google.com/site/highnorthinc
-mailto:blueroofmusic@gmail.com
-Winter  579 Park Place  Saline, MI  48176  734-944-0094
-Summer  PO Box 221  Grand Marais, MI 49839  906-494-2434
+CUPS added a libusb-based USB backend for Linux to access printers via 
+libusb, but it is not possible to compile and install both the 
+usblp-kernel-module-based one and the libusb-based one at the same time. 
+One has to select one by an option for the "./configure" call. Having 
+usblp loaded makes only the usblp-based backend see the printers and not 
+having the module loaded makes only the libusb-based backend seeing the 
+printers. If the module is loaded and some printers get detached from 
+the module (HPLIP's backend detaches the printer which it accesses), 
+then the not detached printers are visible only by the usblp-based and 
+the detached printers only by the libusb-based backend.
 
---bcaec53d550d455dba04b647cb5f
-Content-Type: text/html; charset=ISO-8859-1
-Content-Transfer-Encoding: quoted-printable
+To avoid any confusion I have taken care that in Ubuntu all USB printer 
+detection and access is always done by both methods to be sure that 
+every printer is accessible. This leads to awkward, complex code 
+especially for the Plug'n'Print part (automatic queue creation) of 
+system-config-printer and for the USB backend of CUPS I have written a 
+patch to use CUPS' code for the two USB backend flavors to get one 
+hybrid USB backend working with both the usblp and libusb methods so 
+that all printers are acessible independent what the usblp kernel module 
+is doing.
 
-Hi, <br><br>Minutes from today&#39;s Open Printing <span>monthly</span> tel=
-econference are posted at:<br>
-<br>
-=A0<a href=3D"ftp://ftp.pwg.org/pub/pwg/fsg/minutes/OP-Minutes-20120111.htm=
-" target=3D"_blank">ftp://ftp.pwg.org/pub/pwg/fsg/minutes/OP-Minutes-201201=
-11.htm</a><br>
-<br>ALL - Please think about OP Summit topics and review list in these minu=
-tes.<br><br><br>
-Next <span>OP</span> teleconferences:<br>(1) February 2012 - US/Europe - OP=
- Monthly Meeting<br>=A0=A0=A0 - Note - PWG F2F Meeting 7-9 February at Cano=
-n in Irvine, CA<br>=A0=A0=A0 - Note - TCG Members Meeting 14-16 February in=
- Las Vegas, NV<br>
-<br>=A0=A0=A0 - Wednesday 1 February 2012, Daytime<br>=A0=A0=A0=A0=A0 - US<=
-br>=A0=A0=A0=A0=A0=A0=A0 9am in San Francisco - US PST (Pacific Standard Ti=
-me)<br>=A0=A0=A0=A0=A0=A0=A0 10am in Colorado - US MST (Mountain Standard T=
-ime)<br>=A0=A0=A0=A0=A0=A0=A0 11am in Chicago - US CST (Central Standard Ti=
-me)<br>
-=A0=A0=A0=A0=A0=A0=A0 12pm in New York - US EST (Eastern Standard Time)<br>=
-=A0=A0=A0=A0=A0 - Europe<br>=A0=A0=A0=A0=A0=A0=A0 6pm in Berlin - CET (Cent=
-ral European Time)<br><br>(2) March 2012 - US/Europe - OP Monthly Meeting -=
- tentative<br>=A0=A0=A0 - Wednesday 7 March 2012, Daytime<br>
-=A0=A0=A0=A0=A0 - US<br>=A0=A0=A0=A0=A0=A0=A0 9am in San Francisco - US PST=
- (Pacific Standard Time)<br>=A0=A0=A0=A0=A0=A0=A0 10am in Colorado - US MST=
- (Mountain Standard Time)<br>=A0=A0=A0=A0=A0=A0=A0 11am in Chicago - US CST=
- (Central Standard Time)<br>=A0=A0=A0=A0=A0=A0=A0 12pm in New York - US EST=
- (Eastern Standard Time)<br>
-=A0=A0=A0=A0=A0 - Europe<br>=A0=A0=A0=A0=A0=A0=A0 6pm in Berlin - CET (Cent=
-ral European Time)<br><br>=A0=A0=A0 * Main Number (Till Kamppeter, LF, lead=
-er)<br>=A0=A0=A0=A0=A0 International: +1-218-936-7999<br>=A0=A0=A0=A0=A0 Ac=
-cess Code:=A0=A0 491659#<br><br>=A0=A0=A0 * Main Number (Till Kamppeter, LF=
-, leader)<br>
-=A0=A0=A0=A0=A0 International: +1-218-936-7999<br>=A0=A0=A0=A0=A0 Access Co=
-de:=A0=A0 491659#<br><br>Cheers,<br>- Ira<br><br clear=3D"all">Ira McDonald=
- (Musician / Software Architect)<br>Chair - Linux Foundation Open Printing =
-WG<br>Secretary - IEEE-ISTO Printer Working Group<br>
-Co-Chair - IEEE-ISTO PWG IPP WG<br>Co-Chair - TCG Trusted Mobility Solution=
-s WG<br>Chair - TCG Embedded Systems Hardcopy SG<br>IETF Designated Expert =
-- IPP &amp; Printer MIB<br>Blue Roof Music/High North Inc<br><a style=3D"co=
-lor:rgb(51,51,255)" href=3D"http://sites.google.com/site/blueroofmusic" tar=
-get=3D"_blank">http://sites.google.com/site/blueroofmusic</a><br>
-<a style=3D"color:rgb(102,0,204)" href=3D"http://sites.google.com/site/high=
-northinc" target=3D"_blank">http://sites.google.com/site/highnorthinc</a><b=
-r>mailto:<a href=3D"mailto:blueroofmusic@gmail.com" target=3D"_blank">bluer=
-oofmusic@gmail.com</a><br>
-Winter=A0 579 Park Place=A0 Saline, MI=A0 48176=A0 734-944-0094<br>Summer=
-=A0 PO Box 221=A0 Grand Marais, MI 49839=A0 906-494-2434<div style=3D"displ=
-ay:inline"></div><div style=3D"display:inline"></div><div style=3D"display:=
-inline"></div><div>
-</div><div></div><div></div><div></div><br>
-<div style id=3D"avg_ls_inline_popup"></div>
+I proposed my patch to CUPS upstream but Mike rejected it and told me to 
+use libusb-only. So in Oneiric I blacklisted the kernel module and built 
+CUPS with the libusb version of the backend, not knowing that this 
+backend was not really ready for prime time. Several smaller bughs I got 
+fixed and issued patched CUPS versions for Oneiric, but now there are 
+still several bug reports, especially also due to the libusb-based 
+backend not being capable of doing bi-dim which is required by some 
+proprietary manufacturer-supplied drivers even for simple printing. I 
+asked Mike whether he could fix that but he told that he has no time and 
+patches are welcome.
 
---bcaec53d550d455dba04b647cb5f--
+So I am currently trying to improve the backend, I never programmed USB 
+stuff before. First I will switch the backend over to use libusb 1.0.x 
+instead of the deprecated 0.1.x which is not maintained any more. After 
+that I will try to get bi-di in.
+
+Any help is welcome.
+
+
+3. CUPS Raster output driver in Ghostscript dropped 5 years ago
+---------------------------------------------------------------
+
+The first piece of code where Mike dropped maintainership was the CUPS 
+Raster output device of Ghostscript. It got into the Ghostscript 
+upstream source code right after my merger of ESP Ghostscript into GPL 
+Ghostscript in the middle of 2007. From then on Mike did not do any 
+change on the CUPS Raster device any more and it was in a rather bad 
+state, crashing a lot. I have worked a lot on it to fix its bugs and to 
+stabilize it. Now it is working really well.
+
+
+4. PPD concept will be dropped in CUPS
+--------------------------------------
+
+If all printers would be IPP Everywhere when CUPS 1.6.0 comes out, there 
+would be no problem, capability and option info comes just 
+out-of-the-printer and drivers are not needed. Unfortunately in real 
+life we have a lot of printers from the good old times before IPP 
+Everywhere and a lot of cheapo printers with rather dumb 
+proprietary-raster-only input which would never be capable of telling 
+about its capabilities in a standard way. So PPDs and PPD handling is 
+still needed. There will be a lot of problems if one cannot place PPD 
+generators in /usr/lib/cups/driver any more and if there is no code in 
+CUPS any more which generates PPDs from .drv files /usr/share/cups/drv.
+
+
+All this someone else has to take care of/maintain now. So a lot of 
+extra work, especially for OpenPrinting. Here anyone is welcome to 
+volunteer, especially a USB expert to get the USB CUPS backend up to the 
+state of the art would be great.
+
+    Till
