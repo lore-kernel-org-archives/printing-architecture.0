@@ -1,15 +1,17 @@
-Return-Path: <twaugh@redhat.com>
-Message-ID: <1326369369.10576.6.camel@worm.elk>
-From: Tim Waugh <twaugh@redhat.com>
-Date: Thu, 12 Jan 2012 11:56:09 +0000
-In-Reply-To: <4F0EBF78.1020805@gmail.com>
-References: <4F0E23F2.5010608@gmail.com> <1326365475.8483.3.camel@worm.elk>
-	<4F0EBF78.1020805@gmail.com>
-Content-Type: multipart/signed; micalg="pgp-sha1";
-	protocol="application/pgp-signature"; 
-	boundary="=-RP+NrJgf7j2z/s8RH+ox"
-Mime-Version: 1.0
-Subject: Re: [Printing-architecture] Removal of features in CUPS
+Return-Path: <blueroofmusic@gmail.com>
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=gamma;
+	h=mime-version:date:message-id:subject:from:to:content-type;
+	bh=fAACQoLLtsvZWXeZ40i8SI5twaCx2GRIqXZClZRLm84=;
+	b=NBrWoNlg4O6gGOMkWMePPllAOB0RO2OdDnym5WraCeMZ17inb+071J9Kw5l1gKkjMd
+	3EUuVC8fnEfB8T5ms5yqM7L49gps/l8knKb33uftV1Y/DhvPdnY14GBBZNwOJ4J27stV
+	7aojwT7/oRSekqRKoJ0bm0ddCuBU5suGlmp9E=
+MIME-Version: 1.0
+Date: Tue, 31 Jan 2012 18:03:25 -0500
+Message-ID: <CAN40gSt37q7qyUALN2hNFf8pQ+2vRL7_8XJ6E8Pp1gVAzB6j=Q@mail.gmail.com>
+From: Ira McDonald <blueroofmusic@gmail.com>
+Content-Type: multipart/alternative; boundary=0016e6d58d616f72b304b7daf84d
+Subject: [Printing-architecture] Agenda - OP US/Europe - Wednesday (1
+	February 2012)
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>,
@@ -19,48 +21,176 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Till Kamppeter <till.kamppeter@gmail.com>
-Cc: Open Printing <printing-architecture@lists.linux-foundation.org>
+To: printing-architecture@lists.linux-foundation.org, Till Kamppeter <till.kamppeter@gmail.com>, Ira McDonald <blueroofmusic@gmail.com>
+
+--0016e6d58d616f72b304b7daf84d
+Content-Type: text/plain; charset=ISO-8859-1
+
+Hi,
+
+Our next Open Printing call will be *tomorrow* Wednesday on 1 February.
+
+Minutes from our last OP call are archived at:
+
+ftp://ftp.pwg.org/pub/pwg/fsg/minutes/OP-Minutes-20120111.htm
 
 
---=-RP+NrJgf7j2z/s8RH+ox
-Content-Type: text/plain; charset="UTF-8"
+Agenda:
+
+(1) Status of Common Printing Dialog (Lars Uebernickel)
+
+(2) Status of Common Mobile Print Client (Glen Petrie)
+
+(3) Agenda for joint PWG / Open Printing Summit (Till, Ira)
+- joint meeting w/ PWG at Apple 23-27 April 2012
+- proposed joint agenda by Mike Sweet:
+
+Tuesday, April 24:
+
+       9:00 - 10:15    PWG Plenary
+       10:30 - 12:00  State of Open Printing
+
+       1:00 - 2:00     State of CUPS
+       2:15 - 3:15     Common Print Dialog
+       3:30 - 5:00     Common Mobile Print Client
+
+Wednesday, April 25:
+
+       9:00 - 12:00   Printing and Color Management
+
+       1:00 - 5:00     IPP Everywhere
+
+Thursday, April 26:
+
+       9:00 - 12:00   Semantic Model
+
+       1:00 - 3:15     CWMP BOF
+       3:30 - 5:00     Workgroup for Imaging Management Solutions
+
+Friday, April 27:
+
+       9:00 - 12:00   Cloud Imaging
+
+       1:00 - 2:00     Future of Linux in the Cloud
+       2:15 - 5:00     Imaging Device Security
+
+(4) PWG Highlights for Open Printing (Ira McDonald)
+     - PWG meeting on 7-9 February at Canon in Irvine, CA
+
+Dial-in information:
+
+February 2012 - US/Europe - OP Monthly Meeting
+
+    - Note - PWG F2F Meeting 7-9 February at Canon in Irvine, CA
+    - Note - TCG Members Meeting 14-16 February in Las Vegas, NV
+
+    - Wednesday 1 February 2012, Daytime
+      - US
+        9am in San Francisco - US PST (Pacific Standard Time)
+        10am in Colorado - US MST (Mountain Standard Time)
+        11am in Chicago - US CST (Central Standard Time)
+        12pm in New York - US EST (Eastern Standard Time)
+      - Europe
+        6pm in Berlin - CET (Central European Time)
+
+    * Main Number (Till Kamppeter, LF, leader)
+      International: +1-218-936-7999
+      Access Code:   491659#
+
+Cheers,
+- Ira
+
+Ira McDonald (Musician / Software Architect)
+Chair - Linux Foundation Open Printing WG
+Secretary - IEEE-ISTO Printer Working Group
+Co-Chair - IEEE-ISTO PWG IPP WG
+Co-Chair - TCG Trusted Mobility Solutions WG
+Chair - TCG Embedded Systems Hardcopy SG
+IETF Designated Expert - IPP & Printer MIB
+Blue Roof Music/High North Inc
+http://sites.google.com/site/blueroofmusic
+http://sites.google.com/site/highnorthinc
+mailto:blueroofmusic@gmail.com
+Winter  579 Park Place  Saline, MI  48176  734-944-0094
+Summer  PO Box 221  Grand Marais, MI 49839  906-494-2434
+
+--0016e6d58d616f72b304b7daf84d
+Content-Type: text/html; charset=ISO-8859-1
 Content-Transfer-Encoding: quoted-printable
 
-On Thu, 2012-01-12 at 12:09 +0100, Till Kamppeter wrote:
-> Does libdnssd-based upstream CUPS do automatic service discovery by the=
-=20
-> scheduler, meaning that your Avahi patch is not yet complete in this=20
-> sense or is automatic service discovery by the scheduler even not=20
-> implemented at all upstream, meaning that by removing IPP browsing one=
-=20
-> of the most important features of CUPS gets lost?
+Hi,<br><br>Our next Open Printing call will be *tomorrow* Wednesday on 1 Fe=
+bruary.<br><br>Minutes from our last OP call are archived at:<br><br><a hre=
+f=3D"ftp://ftp.pwg.org/pub/pwg/fsg/minutes/OP-Minutes-20120111.htm" target=
+=3D"_blank">ftp://ftp.pwg.org/pub/pwg/fsg/minutes/OP-Minutes-20120111.htm</=
+a><br>
 
-My Avahi patch was a straight port of the existing features in CUPS to
-Avahi.  Upstream CUPS does not currently perform DNS-SD discovery in the
-scheduler but -- given that CUPS Browsing is to be removed -- I expect
-that it will in 1.6.0.
+<br><br>Agenda:<br><br>(1) Status of Common Printing Dialog (Lars Uebernick=
+el)<br><br>(2) Status of Common Mobile Print Client (Glen Petrie)<br><br>(3=
+) Agenda for joint PWG / Open Printing Summit (Till, Ira)<br>- joint meetin=
+g w/ PWG at Apple 23-27 April 2012<br>
+- proposed joint agenda by Mike Sweet:<br><br>Tuesday, <span class=3D"il">A=
+pril</span> 24:<br>
+<br>
+ =A0 =A0 =A0 =A09:00 - 10:15 =A0 =A0PWG Plenary<br>
+ =A0 =A0 =A0 =A010:30 - 12:00=A0 State of Open Printing<br>
+<br>
+ =A0 =A0 =A0 =A01:00 - 2:00 =A0 =A0 State of CUPS<br>
+ =A0 =A0 =A0 =A02:15 - 3:15 =A0 =A0 Common Print Dialog<br>
+ =A0 =A0 =A0 =A03:30 - 5:00 =A0 =A0 Common Mobile Print Client<br>
+<br>
+Wednesday, <span class=3D"il">April</span> 25:<br>
+<br>
+ =A0 =A0 =A0 =A09:00 - 12:00 =A0 Printing and Color Management<br>
+<br>
+ =A0 =A0 =A0 =A01:00 - 5:00 =A0 =A0 IPP Everywhere<br>
+<br>
+Thursday, <span class=3D"il">April</span> 26:<br>
+<br>
+ =A0 =A0 =A0 =A09:00 - 12:00 =A0 Semantic Model<br>
+<br>
+ =A0 =A0 =A0 =A01:00 - 3:15 =A0 =A0 CWMP BOF<br>
+ =A0 =A0 =A0 =A03:30 - 5:00 =A0 =A0 Workgroup for Imaging Management Soluti=
+ons<br>
+<br>
+Friday, <span class=3D"il">April</span> 27:<br>
+<br>
+ =A0 =A0 =A0 =A09:00 - 12:00 =A0 Cloud Imaging<br>
+<br>
+ =A0 =A0 =A0 =A01:00 - 2:00 =A0 =A0 Future of Linux in the Cloud<br>
+ =A0 =A0 =A0 =A02:15 - 5:00 =A0 =A0 Imaging Device Security<br><br>(4) PWG =
+Highlights for Open Printing (Ira McDonald)<br>
+=A0=A0=A0=A0 - PWG meeting on 7-9 February at Canon in Irvine, CA<br><br>Di=
+al-in information:<br><br>February 2012 - US/Europe - OP Monthly Meeting<br=
+><br>=A0=A0=A0 - Note - PWG F2F Meeting 7-9 February at Canon in Irvine, CA=
+<br>=A0=A0=A0 - Note - TCG Members Meeting 14-16 February in Las Vegas, NV<=
+br>
+<br>=A0=A0=A0 - Wednesday 1 February 2012, Daytime<br>=A0=A0=A0=A0=A0 - US<=
+br>=A0=A0=A0=A0=A0=A0=A0 9am in San Francisco - US PST (Pacific Standard Ti=
+me)<br>=A0=A0=A0=A0=A0=A0=A0 10am in Colorado - US MST (Mountain Standard T=
+ime)<br>=A0=A0=A0=A0=A0=A0=A0 11am in Chicago - US CST (Central Standard Ti=
+me)<br>
+=A0=A0=A0=A0=A0=A0=A0 12pm in New York - US EST (Eastern Standard Time)<br>=
+=A0=A0=A0=A0=A0 - Europe<br>=A0=A0=A0=A0=A0=A0=A0 6pm in Berlin - CET (Cent=
+ral European Time)<br><br>=A0=A0=A0 * Main Number (Till Kamppeter, LF, lead=
+er)<br>=A0=A0=A0=A0=A0 International: +1-218-936-7999<br>
+=A0=A0=A0=A0=A0 Access Code:=A0=A0 491659#<br><br>Cheers,<br>- Ira<br><br c=
+lear=3D"all">Ira McDonald (Musician / Software Architect)<br>Chair - Linux =
+Foundation Open Printing WG<br>Secretary - IEEE-ISTO Printer Working Group<=
+br>Co-Chair - IEEE-ISTO PWG IPP WG<br>
+Co-Chair - TCG Trusted Mobility Solutions WG<br>Chair - TCG Embedded System=
+s Hardcopy SG<br>IETF Designated Expert - IPP &amp; Printer MIB<br>Blue Roo=
+f Music/High North Inc<br><a style=3D"color:rgb(51,51,255)" href=3D"http://=
+sites.google.com/site/blueroofmusic" target=3D"_blank">http://sites.google.=
+com/site/blueroofmusic</a><br>
+<a style=3D"color:rgb(102,0,204)" href=3D"http://sites.google.com/site/high=
+northinc" target=3D"_blank">http://sites.google.com/site/highnorthinc</a><b=
+r>mailto:<a href=3D"mailto:blueroofmusic@gmail.com" target=3D"_blank">bluer=
+oofmusic@gmail.com</a><br>
+Winter=A0 579 Park Place=A0 Saline, MI=A0 48176=A0 734-944-0094<br>Summer=
+=A0 PO Box 221=A0 Grand Marais, MI 49839=A0 906-494-2434<div style=3D"displ=
+ay:inline"></div><div style=3D"display:inline"></div><div style=3D"display:=
+inline"></div><div>
+</div><div></div><div></div><div></div><br>
+<div style id=3D"avg_ls_inline_popup"></div>
 
-Tim.
-*/
-
-
---=-RP+NrJgf7j2z/s8RH+ox
-Content-Type: application/pgp-signature; name="signature.asc"
-Content-Description: This is a digitally signed message part
-Content-Transfer-Encoding: 7bit
-
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.11 (GNU/Linux)
-
-iQEVAwUATw7KWe7Fkar03pQsAQJQeAf+Om1W/5pzXAvU8bs9hD5Wf2JOz+KhBsvj
-bH3ZyN22Z2TRItLvoIYPNgas8pEsWdVFyWQVgS8dOiGyYK52pPZXaoZXXaP2h1pK
-TYCRarRmC0d4OyPEyL8ndEKOcv1P4oz2m66iF4a9WG6pB6BTnZ7p6SROqphxp/Jt
-v0+sisnacacAeEwjvX9VbJVW/Fy90NgiE7rH2gdZOfuLbcvQ3ZT9LtnFop4ePbJy
-hmCb4as5W79E3SunVR2M1wN1G5DQ7GJkfipzGc3Kp00aIh+iccugdw8sguV7V4hh
-3asriC7mmhE6DbdL7pArZtTE6mzMR8KDgX410eIb8og+YzeqZpyHBQ==
-=t9Ys
------END PGP SIGNATURE-----
-
---=-RP+NrJgf7j2z/s8RH+ox--
-
+--0016e6d58d616f72b304b7daf84d--
