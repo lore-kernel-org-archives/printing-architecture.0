@@ -1,12 +1,10 @@
 Return-Path: <msweet@apple.com>
 MIME-version: 1.0
 Content-type: multipart/alternative;
-	boundary="Boundary_(ID_A5ufaqN4f99WxyR0AUqkzQ)"
+	boundary="Boundary_(ID_nSPBD5+IgGbXLWU7o4757Q)"
 From: Michael Sweet <msweet@apple.com>
-In-reply-to: <CD26E4AD-B675-4850-AAC4-BF07BDA5AA2B@apple.com>
-Date: Fri, 03 Feb 2012 09:09:36 -0800
-Message-id: <7A22A6B8-0C18-4710-B7BA-FA015950317F@apple.com>
-References: <CD26E4AD-B675-4850-AAC4-BF07BDA5AA2B@apple.com>
+Date: Fri, 03 Feb 2012 08:32:27 -0800
+Message-id: <CD26E4AD-B675-4850-AAC4-BF07BDA5AA2B@apple.com>
 Subject: Re: [Printing-architecture] Removal of features in CUPS
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
@@ -20,77 +18,110 @@ List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-arc
 To: printing-architecture@lists.linux-foundation.org
 
 
---Boundary_(ID_A5ufaqN4f99WxyR0AUqkzQ)
+--Boundary_(ID_nSPBD5+IgGbXLWU7o4757Q)
 Content-type: text/plain; CHARSET=US-ASCII
 Content-transfer-encoding: 7BIT
 
-Till Kamppeter wrote:
-> On 01/12/2012 11:51 AM, Tim Waugh wrote:
-> > I think that CUPS Browsing is also being removed in 1.6, leaving Avahi
-> > as the sanest of the remaining discovery methods.
-> >
-> > The current state of the Avahi support patches is that service
-> > announcement is working in the scheduler, and service discovery is
-> > working in the dnssd backend -- i.e. by manual user intervention.
-> >
-> > What is currently missing is automatic service discovery in the
-> > scheduler, so that shared queues can be discovered by CUPS itself as
-> > used to happen with CUPS Browsing.
-> 
-> Does libdnssd-based upstream CUPS do automatic service discovery by the 
-> scheduler, meaning that your Avahi patch is not yet complete in this 
-> sense or is automatic service discovery by the scheduler even not 
-> implemented at all upstream, meaning that by removing IPP browsing one 
-> of the most important features of CUPS gets lost?
+[Sorry, I was just made aware of this message thread or I would have responded sooner since much of this information just isn't correct...]
 
-No, the scheduler does not maintain a constant browse for shared printers - that is done in libcups, and there are new APIs for dealing with dynamically-available printers in CUPS 1.6.  You can also manually add specific shared printers you use, and the CUPS 1.6 web interface will automagically use the "raw" driver for shared printers.
-The only functionality that is lost is the notion of implicit classes.
+Till Kamppeter wrote:
+> ...
+> Here are the dropped features:
+> 
+> 
+> 1. Filters go to the new cups-filters project
+> ---------------------------------------------
+> 
+> All filters and backends not used by Mac OS X are dropped. These 
+> filters, together with the filters for the PDF printing workflow are now 
+> hosted as the cups-filters project at OpenPrinting. For a first release 
+> only bannertopdf needs to get finished (by Lars Uebernickel).
+
+This part is correct and thank you Till for hosting these filters!
+> 2. The Linux implementation of the USB backend looses attention
+> ---------------------------------------------------------------
+
+We continue to develop and support the USB backend, although my personal development time is (unfortunately) quite limited.  I will be integrating Till's libusb 1.0 patch in the near future, so at least the current functionality will be usable with both the old and new libusb.
+
+For bidirectional printing support, we need to adopt the method used for the Darwin/OS X USB backend where there is a separate read thread that just does a bulk-in every 200ms. That provides good latency for drivers that need it while avoiding the performance hit for printers that just return a copy of their 1284 Device ID with status info every time.
+
+Depending on my time constraints and whether libusb 1.0 has the necessary support (I think so, but it has been a while since I looked), we may be able to get bidi support in CUPS 1.6.  The big hurdle was moving to libusb 1.0, and Till has already done that work.
+
+> 4. PPD concept will be dropped in CUPS
+> --------------------------------------
+This is just incorrect.  PPDs are being *deprecated* in CUPS 1.6, but this just means that we will no longer be extending support for PPDs in CUPS.  The APIs are still there, and PPD-based drivers will continue to be supported.
+
+That said, the long-term replacement *is* IPP Everywhere, and to support that we are adding new APIs in CUPS 1.6 (many still just stubs in the current trunk) to deal with dynamic printer availability and capabilities.  The goal is to have IPP equivalents for what we currently provide in the PPD APIs, and in 1.6 they will use the information the scheduler (cupsd) already generates from and maps to PPD files since CUPS 1.4.
+
+CUPS 1.6 is just a baby step towards PPD independence, but the new APIs will allow applications (and the common print dialog) to make the transition so that when we are able to pull the plug they won't notice a thing.  And in the meantime we will be able to support things like media sensing for new printers on the market...
+
 _________________________________________________________
 Michael Sweet, Senior Printing System Engineer, PWG Chair
 
 
---Boundary_(ID_A5ufaqN4f99WxyR0AUqkzQ)
+--Boundary_(ID_nSPBD5+IgGbXLWU7o4757Q)
 Content-type: text/html; CHARSET=US-ASCII
 Content-transfer-encoding: quoted-printable
 
 <html><head></head><body style=3D"word-wrap: break-word; =
--webkit-nbsp-mode: space; -webkit-line-break: after-white-space; ">Till =
-Kamppeter wrote:<div><blockquote type=3D"cite"><span =
+-webkit-nbsp-mode: space; -webkit-line-break: after-white-space; =
+">[Sorry, I was just made aware of this message thread or I would have =
+responded sooner since much of this information just isn't =
+correct...]<div><br></div><div>Till Kamppeter =
+wrote:</div><div><blockquote type=3D"cite"><span =
 class=3D"Apple-style-span" style=3D"font-family: 'Helvetica Neue'; =
-"><pre>On 01/12/2012 11:51 AM, Tim Waugh wrote:
-&gt;<i> I think that CUPS Browsing is also being removed in 1.6, leaving =
-Avahi
-</i>&gt;<i> as the sanest of the remaining discovery methods.
-</i>&gt;<i>
-</i>&gt;<i> The current state of the Avahi support patches is that =
-service
-</i>&gt;<i> announcement is working in the scheduler, and service =
-discovery is
-</i>&gt;<i> working in the dnssd backend -- i.e. by manual user =
-intervention.
-</i>&gt;<i>
-</i>&gt;<i> What is currently missing is automatic service discovery in =
-the
-</i>&gt;<i> scheduler, so that shared queues can be discovered by CUPS =
-itself as
-</i>&gt;<i> used to happen with CUPS Browsing.
-</i>
-Does libdnssd-based upstream CUPS do automatic service discovery by the=20=
+"><pre>...
+Here are the dropped features:
 
-scheduler, meaning that your Avahi patch is not yet complete in this=20
-sense or is automatic service discovery by the scheduler even not=20
-implemented at all upstream, meaning that by removing IPP browsing one=20=
 
-of the most important features of CUPS gets lost?
-</pre></span></blockquote></div><div><span class=3D"Apple-style-span" =
-style=3D"font-family: 'Helvetica Neue'; "><pre>No, the scheduler does =
-not maintain a constant browse for shared printers - that is done in =
-libcups, and there are new APIs for dealing with dynamically-available =
-printers in CUPS 1.6.  You can also manually add specific shared =
-printers you use, and the CUPS 1.6 web interface will automagically use =
-the "raw" driver for shared printers.</pre><pre>The only functionality =
-that is lost is the notion of implicit =
-classes.</pre></span></div><div><div>
+1. Filters go to the new cups-filters project
+---------------------------------------------
+
+All filters and backends not used by Mac OS X are dropped. These=20
+filters, together with the filters for the PDF printing workflow are now=20=
+
+hosted as the cups-filters project at OpenPrinting. For a first release=20=
+
+only bannertopdf needs to get finished (by Lars Uebernickel).
+</pre></span></blockquote><div><br></div>This part is correct and thank =
+you Till for hosting these filters!<br><blockquote type=3D"cite"><span =
+class=3D"Apple-style-span" style=3D"font-family: 'Helvetica Neue'; =
+"><pre>2. The Linux implementation of the USB backend looses attention
+---------------------------------------------------------------
+</pre></span></blockquote><div><br></div>We continue to develop and =
+support the USB backend, although my personal development time is =
+(unfortunately) quite limited. &nbsp;I will be integrating Till's libusb =
+1.0 patch in the near future, so at least the current functionality will =
+be usable with both the old and new libusb.</div><div><br></div><div>For =
+bidirectional printing support, we need to adopt the method used for the =
+Darwin/OS X USB backend where there is a separate read thread that just =
+does a bulk-in every 200ms. That provides good latency for drivers that =
+need it while avoiding the performance hit for printers that just return =
+a copy of their 1284 Device ID with status info every =
+time.</div><div><br></div><div>Depending on my time constraints and =
+whether libusb 1.0 has the necessary support (I think so, but it has =
+been a while since I looked), we may be able to get bidi support in CUPS =
+1.6. &nbsp;The big hurdle was moving to libusb 1.0, and Till has already =
+done that work.</div><div><br></div><div><blockquote type=3D"cite"><span =
+class=3D"Apple-style-span" style=3D"font-family: 'Helvetica Neue'; =
+"><pre>4. PPD concept will be dropped in CUPS
+--------------------------------------
+</pre></span></blockquote><div>This is just incorrect. &nbsp;PPDs are =
+being *deprecated* in CUPS 1.6, but this just means that we will no =
+longer be extending support for PPDs in CUPS. &nbsp;The APIs are still =
+there, and PPD-based drivers will continue to be =
+supported.</div><div><br></div><div>That said, the long-term replacement =
+*is* IPP Everywhere, and to support that we are adding new APIs in CUPS =
+1.6 (many still just stubs in the current trunk) to deal with dynamic =
+printer availability and capabilities. &nbsp;The goal is to have IPP =
+equivalents for what we currently provide in the PPD APIs, and in 1.6 =
+they will use the information the scheduler (cupsd) already generates =
+from and maps to PPD files since CUPS 1.4.</div><div><br></div><div>CUPS =
+1.6 is just a baby step towards PPD independence, but the new APIs will =
+allow applications (and the common print dialog) to make the transition =
+so that when we are able to pull the plug they won't notice a thing. =
+&nbsp;And in the meantime we will be able to support things like media =
+sensing for new printers on the market...</div><div><br></div><div>
 <span class=3D"Apple-style-span" style=3D"border-collapse: separate; =
 color: rgb(0, 0, 0); font-family: 'Andale Mono'; font-style: normal; =
 font-variant: normal; font-weight: normal; letter-spacing: normal; =
@@ -117,4 +148,4 @@ Chair</div></span></span>
 </div>
 <br></div></body></html>=
 
---Boundary_(ID_A5ufaqN4f99WxyR0AUqkzQ)--
+--Boundary_(ID_nSPBD5+IgGbXLWU7o4757Q)--
