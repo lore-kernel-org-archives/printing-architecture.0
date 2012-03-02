@@ -1,17 +1,12 @@
 Return-Path: <twaugh@redhat.com>
-Message-ID: <1330687322.32498.3.camel@rubik>
+Message-ID: <1330689855.32498.25.camel@rubik>
 From: Tim Waugh <twaugh@redhat.com>
-Date: Fri, 02 Mar 2012 11:22:02 +0000
-In-Reply-To: <20120302.185849.486545915.sho@bbr.jp>
-References: <1330610112.28173.5.camel@rubik>
-	<20120302.130333.126929817.sho@bbr.jp>
-	<CAD2FfiGa5qyHQ9q-CT6RcDzQU4Yyov2kxq-nB6cSB21CeivdqA@mail.gmail.com>
-	<20120302.185849.486545915.sho@bbr.jp>
+Date: Fri, 02 Mar 2012 12:04:15 +0000
 Content-Type: multipart/signed; micalg="pgp-sha1";
 	protocol="application/pgp-signature"; 
-	boundary="=-hGbRyvnwQFcjOeLSDtQf"
+	boundary="=-UVUNCt66dkXGeBubOgjk"
 Mime-Version: 1.0
-Subject: Re: [Printing-architecture] pdftopdf
+Subject: [Printing-architecture] XPdf bundling in pdftoopvp as well
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>,
@@ -21,29 +16,27 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Koji Otani <sho@bbr.jp>
-Cc: printing-architecture@lists.linux-foundation.org, till.kamppeter@gmail.com
+To: Open Printing <printing-architecture@lists.linux-foundation.org>
 
 
---=-hGbRyvnwQFcjOeLSDtQf
+--=-UVUNCt66dkXGeBubOgjk
 Content-Type: text/plain; charset="UTF-8"
 Content-Transfer-Encoding: quoted-printable
 
-On Fri, 2012-03-02 at 18:58 +0900, Koji Otani wrote:
-> pdftopdf is linked to libpoppler.
-> And pdftopdf used some modified codes of poppler.
+It looks like the same issue also affects pdftoopvp, although
+mysteriously the Glyph & Cog copyright notices seem to be absent.
 
-So, the parts that are copied from poppler would need explicit security
-maintenance outside of the poppler project.
+I found a security issue in the first file I looked at.
 
-Why do these files need to be copied?  Is there a way the poppler API
-could be changed to avoid the need for this?
+Please can everyone stop bundling bits of xpdf and poppler, both of
+which regularly have security issues discovered?
 
+Thanks,
 Tim.
 */
 
 
---=-hGbRyvnwQFcjOeLSDtQf
+--=-UVUNCt66dkXGeBubOgjk
 Content-Type: application/pgp-signature; name="signature.asc"
 Content-Description: This is a digitally signed message part
 Content-Transfer-Encoding: 7bit
@@ -51,14 +44,14 @@ Content-Transfer-Encoding: 7bit
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.12 (GNU/Linux)
 
-iQEVAwUAT1CtWu7Fkar03pQsAQL7sggAojZVCr/CCBPkqya04FmhQO/LOM2TQacT
-Ny9+e+ku4plVw7WGZmKLfe/QcPno5xko9MSII9LdfqlTZwbRwH8G0a3KO89t+BHI
-8YDeV2xG5/ZGoLZhc7+C80v6DwkFKhlFgzbHlc1tqtjxWGHY+9QhNaW6qnTXCtYi
-NJEzbjgV/94dOzyK+i/OUdknvsAOD/Vzdirj01fEuhablQ8EoQie7/yTVHz2JPFk
-eu7GO3o5zGUptdu0xC70KtuOgz41E1vOqP3/NBtAT65+D197rFwiQgdPRJad/04B
-Z2HEWhrW4MMwcUe5/5If56nSNn06nmIf0PDTmn7zlj6pfAmfrXH4Zw==
-=ddL7
+iQEVAwUAT1C3P+7Fkar03pQsAQJ1KQgAnJysfqGkHiQss+rQk89vAUj4FIg9Qdv+
+qn5uSjjw2CqR03/y4DIP2TnvDxMhbsuksU7agMKaWyctYZVaGpt4S/7rR7ALlj5a
+nw/9kcuP2xXGg2+hNw/BD0gUeOeRuoCcP2qr0VfQGOf9UBgxKTiBqiPLjsGHQKZO
+90/bGeq7tsRHCnTcGYrB5Dx4TMK95500T8U0Ad3sgjI/IUOYuC15S4/pbo5eE8mA
+Q+eYBN8AfwL2eyOLXoijEle1xJ2gk1WLwckhlFtLKo32BhISvYx6Nna5U9vBSC8g
+cLbRzlRUu5vZeK8olqf6aB626LfssiBQHGBi8xu9+K2Pmc+aqdfzMg==
+=OvTE
 -----END PGP SIGNATURE-----
 
---=-hGbRyvnwQFcjOeLSDtQf--
+--=-UVUNCt66dkXGeBubOgjk--
 
