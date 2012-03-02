@@ -1,15 +1,23 @@
-Return-Path: <sho@bbr.jp>
-Date: Fri, 02 Mar 2012 21:08:15 +0900 (JST)
-Message-Id: <20120302.210815.55716582.sho@bbr.jp>
-From: Koji Otani <sho@bbr.jp>
-In-Reply-To: <1330687322.32498.3.camel@rubik>
-References: <CAD2FfiGa5qyHQ9q-CT6RcDzQU4Yyov2kxq-nB6cSB21CeivdqA@mail.gmail.com>
-	<20120302.185849.486545915.sho@bbr.jp>
-	<1330687322.32498.3.camel@rubik>
-Mime-Version: 1.0
-Content-Type: Text/Plain; charset=us-ascii
+Return-Path: <till.kamppeter@gmail.com>
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20120113;
+	h=message-id:date:from:user-agent:mime-version:to:subject:references
+	:in-reply-to:content-type:content-transfer-encoding;
+	bh=v55e9jMQTqJ37hwphFBdBBXu8orN7RpenC+GfblX+bA=;
+	b=mTMYQvt22tTXfojKRak76qdydohtaZEYYPZjNJoEk3ATNImadCuk8S15SwE8qEcIq0
+	C9CU9eSr1iQ666alba5ZDPNivlD1zIypmX7Ejb5UNb6906CAbwn5Obt+oFYQ8xaHYKYy
+	KUwoe6FB0EBcluN2wMDzMPOVoWjPmT9GZZCFM5bsUF4XHvKMsS9efw+E/LiQBaPTrvW6
+	n3shwcSvws+TJaKu7HB3IOceIWQGPI5g601EVwuMEKS4WRfm4ojCFfIsJrGdBDY5tZpg
+	NdhbNM17l278KHETgMT1ArBMM2Bu0haDQA2tlBEv4romh/8zwi1BbD0gOUlz0OoXsRky
+	MvWw==
+Message-ID: <4F50B93D.9020400@gmail.com>
+Date: Fri, 02 Mar 2012 13:12:45 +0100
+From: Till Kamppeter <till.kamppeter@gmail.com>
+MIME-Version: 1.0
+References: <1330689855.32498.25.camel@rubik>
+In-Reply-To: <1330689855.32498.25.camel@rubik>
+Content-Type: text/plain; charset=UTF-8; format=flowed
 Content-Transfer-Encoding: 7bit
-Subject: Re: [Printing-architecture] pdftopdf
+Subject: Re: [Printing-architecture] XPdf bundling in pdftoopvp as well
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>,
@@ -19,25 +27,30 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: twaugh@redhat.com
-Cc: printing-architecture@lists.linux-foundation.org, till.kamppeter@gmail.com
+To: printing-architecture@lists.linux-foundation.org, Koji Otani <sho@bbr.jp>
 
-From: Tim Waugh <twaugh@redhat.com>
-Subject: Re: [Printing-architecture] pdftopdf
-Date: Fri, 02 Mar 2012 11:22:02 +0000
-Message-ID: <1330687322.32498.3.camel@rubik>
+Keeping Otani-san CCed ...
 
-twaugh> On Fri, 2012-03-02 at 18:58 +0900, Koji Otani wrote:
-twaugh> > pdftopdf is linked to libpoppler.
-twaugh> > And pdftopdf used some modified codes of poppler.
-twaugh> 
-twaugh> So, the parts that are copied from poppler would need explicit security
-twaugh> maintenance outside of the poppler project.
-twaugh> 
-twaugh> Why do these files need to be copied?  Is there a way the poppler API
-twaugh> could be changed to avoid the need for this?
-twaugh> 
+    Till
 
-Changes I made are needless for poppler and poppler can't use them.
-I used only a frame of codes in some files.
+On 03/02/2012 01:04 PM, Tim Waugh wrote:
+> It looks like the same issue also affects pdftoopvp, although
+> mysteriously the Glyph&  Cog copyright notices seem to be absent.
+>
+> I found a security issue in the first file I looked at.
+>
+> Please can everyone stop bundling bits of xpdf and poppler, both of
+> which regularly have security issues discovered?
+>
+> Thanks,
+> Tim.
+> */
+>
+>
+>
+>
+> _______________________________________________
+> Printing-architecture mailing list
+> Printing-architecture@lists.linux-foundation.org
+> https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture
 
