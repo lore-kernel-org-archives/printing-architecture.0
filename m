@@ -1,14 +1,16 @@
-Return-Path: <sho@bbr.jp>
-Date: Fri, 02 Mar 2012 18:58:49 +0900 (JST)
-Message-Id: <20120302.185849.486545915.sho@bbr.jp>
-From: Koji Otani <sho@bbr.jp>
-In-Reply-To: <CAD2FfiGa5qyHQ9q-CT6RcDzQU4Yyov2kxq-nB6cSB21CeivdqA@mail.gmail.com>
+Return-Path: <twaugh@redhat.com>
+Message-ID: <1330687322.32498.3.camel@rubik>
+From: Tim Waugh <twaugh@redhat.com>
+Date: Fri, 02 Mar 2012 11:22:02 +0000
+In-Reply-To: <20120302.185849.486545915.sho@bbr.jp>
 References: <1330610112.28173.5.camel@rubik>
 	<20120302.130333.126929817.sho@bbr.jp>
 	<CAD2FfiGa5qyHQ9q-CT6RcDzQU4Yyov2kxq-nB6cSB21CeivdqA@mail.gmail.com>
+	<20120302.185849.486545915.sho@bbr.jp>
+Content-Type: multipart/signed; micalg="pgp-sha1";
+	protocol="application/pgp-signature"; 
+	boundary="=-hGbRyvnwQFcjOeLSDtQf"
 Mime-Version: 1.0
-Content-Type: Text/Plain; charset=iso-8859-1
-Content-Transfer-Encoding: quoted-printable
 Subject: Re: [Printing-architecture] pdftopdf
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
@@ -19,31 +21,44 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: hughsient@gmail.com
+To: Koji Otani <sho@bbr.jp>
 Cc: printing-architecture@lists.linux-foundation.org, till.kamppeter@gmail.com
 
-From: Richard Hughes <hughsient@gmail.com>
-Subject: Re: [Printing-architecture] pdftopdf
-Date: Fri, 2 Mar 2012 09:39:13 +0000
-Message-ID: <CAD2FfiGa5qyHQ9q-CT6RcDzQU4Yyov2kxq-nB6cSB21CeivdqA@mail.g=
-mail.com>
 
-hughsient> On 2 March 2012 04:03, Koji Otani <sho@bbr.jp> wrote:
-hughsient> > Yes, these files have codes copied from poppler.
-hughsient> > pdftopdf uses poppler for what poppler can do.
-hughsient> > Some of these files are copied from poppler to compiles it=
- without
-hughsient> > =A0poppler sourcecode files.
-hughsient> =
+--=-hGbRyvnwQFcjOeLSDtQf
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
 
-hughsient> Shouldn't we just link to libpoppler? Or are the source file=
-s in some
-hughsient> way modified?
-hughsient> =
+On Fri, 2012-03-02 at 18:58 +0900, Koji Otani wrote:
+> pdftopdf is linked to libpoppler.
+> And pdftopdf used some modified codes of poppler.
+
+So, the parts that are copied from poppler would need explicit security
+maintenance outside of the poppler project.
+
+Why do these files need to be copied?  Is there a way the poppler API
+could be changed to avoid the need for this?
+
+Tim.
+*/
 
 
-pdftopdf is linked to libpoppler.
-And pdftopdf used some modified codes of poppler.
-----------
-Koji Otani
+--=-hGbRyvnwQFcjOeLSDtQf
+Content-Type: application/pgp-signature; name="signature.asc"
+Content-Description: This is a digitally signed message part
+Content-Transfer-Encoding: 7bit
+
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.12 (GNU/Linux)
+
+iQEVAwUAT1CtWu7Fkar03pQsAQL7sggAojZVCr/CCBPkqya04FmhQO/LOM2TQacT
+Ny9+e+ku4plVw7WGZmKLfe/QcPno5xko9MSII9LdfqlTZwbRwH8G0a3KO89t+BHI
+8YDeV2xG5/ZGoLZhc7+C80v6DwkFKhlFgzbHlc1tqtjxWGHY+9QhNaW6qnTXCtYi
+NJEzbjgV/94dOzyK+i/OUdknvsAOD/Vzdirj01fEuhablQ8EoQie7/yTVHz2JPFk
+eu7GO3o5zGUptdu0xC70KtuOgz41E1vOqP3/NBtAT65+D197rFwiQgdPRJad/04B
+Z2HEWhrW4MMwcUe5/5If56nSNn06nmIf0PDTmn7zlj6pfAmfrXH4Zw==
+=ddL7
+-----END PGP SIGNATURE-----
+
+--=-hGbRyvnwQFcjOeLSDtQf--
 
