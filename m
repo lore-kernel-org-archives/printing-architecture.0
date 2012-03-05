@@ -2,15 +2,15 @@ Return-Path: <till.kamppeter@gmail.com>
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20120113;
 	h=message-id:date:from:user-agent:mime-version:to:cc:subject
 	:references:in-reply-to:content-type:content-transfer-encoding;
-	bh=bmoQ8gAF4C0M5X1r26FgmkPrtr5UPczh60Autjx72hk=;
-	b=t16IlOqgSdQMD007TKEY/ZOXNHLhNVXNQ5igYi9/FIlwHd/pH5ascjX3Brbi7ybRNb
-	j+N1UGBnagZXo8eV3eT4BN8GFzIQjoaYgxU5oDrZ+6Udg/tPraHc4BHPT3PAruql5qK2
-	J9hX+4/MXKW3Mk4+dirmvUAJa1p0TvosvaiU7XDRli6OtSki8HUJz/GvUopSoC9rlJHu
-	95MWb4C52gUlU06HQVx8clXAZ7fuDfOrB0j2ABTjOc1A1uxtuw+mvv4OVn64u1tpfwNx
-	VRyGwdUvGvK9u3MGfY8r/EVLEyWqnEEccUbU3HqsgEiSC5HKbH4o5nOahMO+Yqe+ekHG
-	DtRg==
-Message-ID: <4F54D580.7090608@gmail.com>
-Date: Mon, 05 Mar 2012 16:02:24 +0100
+	bh=iTd89PX1RO4o58Zz8FWd1eZ4g7Waoy+3IYPjPQnI+As=;
+	b=hJVscVXyPB2/g/6OLLAANGerVJKdsNOfPxT0P5q5LK05fzomg2bZId8W4KEOzmpASR
+	VK/zNSa0ATweivqoMTvcZIepUk7fm1VZD8rvetmOZNSKSpsl/D1Tg8eV5cs1D0rjrQkc
+	5s+RdjKIFoKzvQm4sg0jfJ1CPueUMAcCYxKIgNUsGVQS7SFLEsfqZnoYdzJnDKLDu4Kp
+	GNdgdvIvLbjmAUwVAdXehiJ490y8zIxCCR0me47z+4baUy5pBwm3FSqQ2LSI+fI/0D1L
+	GxatLQI6E8mYuCGwCUVTo/Sp+UvD/AnOXBtY4/G+WnBwT2cf7N5R27op8RQKCSxSmM6D
+	pkWw==
+Message-ID: <4F54D87E.6060801@gmail.com>
+Date: Mon, 05 Mar 2012 16:15:10 +0100
 From: Till Kamppeter <till.kamppeter@gmail.com>
 MIME-Version: 1.0
 References: <1330687322.32498.3.camel@rubik>
@@ -31,17 +31,8 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Koji Otani <sho@bbr.jp>
+To: Koji Otani <sho@bbr.jp>, Albert Astals Cid <aacid@kde.org>
 Cc: printing-architecture@lists.linux-foundation.org
-
-
-Otani-san, for the time being until we succeed to get the Poppler 
-developers to expose the additional APIs for implementing pdftopdf and 
-pdftoopvp, can you update the duplictaed code to the newest file 
-versions available, so that the known vulnerabilities are fixed? Thanks 
-in advance.
-
-    Till
 
 On 03/05/2012 01:14 PM, Tim Waugh wrote:
 > On Sat, 2012-03-03 at 11:33 +0900, Koji Otani wrote:
@@ -68,7 +59,14 @@ On 03/05/2012 01:14 PM, Tim Waugh wrote:
 > Do we know anyone on the poppler development team who could guide us as
 > to what sort of changes they will accept?
 >
-> Tim.
-> */
->
+
+Otani-san, can you provide a list of features which need to get exposed 
+in Poppler so that you can implement the pdftopdf and pdftoopvp filters 
+without code duplication? Please CC Albert Astals Cid (CCed in this 
+mail) when answering.
+
+Albert, could you help us in making more secure and 
+distribution-friendly PDF print filters by adding some APIs to Poppler?
+
+    Till
 
