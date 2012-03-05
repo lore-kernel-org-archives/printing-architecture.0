@@ -1,15 +1,16 @@
 Return-Path: <twaugh@redhat.com>
-Message-ID: <1330949378.9812.3.camel@rubik>
+Message-ID: <1330949656.9812.8.camel@rubik>
 From: Tim Waugh <twaugh@redhat.com>
-Date: Mon, 05 Mar 2012 12:09:38 +0000
-In-Reply-To: <20120302.213857.23722135.sho@bbr.jp>
-References: <1330689855.32498.25.camel@rubik>
-	<20120302.213857.23722135.sho@bbr.jp>
+Date: Mon, 05 Mar 2012 12:14:16 +0000
+In-Reply-To: <20120303.113354.329374074.sho@bbr.jp>
+References: <1330687322.32498.3.camel@rubik>
+	<20120302.210815.55716582.sho@bbr.jp> <1330690418.32498.29.camel@rubik>
+	<20120303.113354.329374074.sho@bbr.jp>
 Content-Type: multipart/signed; micalg="pgp-sha1";
 	protocol="application/pgp-signature"; 
-	boundary="=-l3KDfiW/BkZ/RdWlGY41"
+	boundary="=-d7H9jcwAYNaCG+l4bfFI"
 Mime-Version: 1.0
-Subject: Re: [Printing-architecture] XPdf bundling in pdftoopvp as well
+Subject: Re: [Printing-architecture] pdftopdf
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>,
@@ -20,40 +21,43 @@ List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subj
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
 To: Koji Otani <sho@bbr.jp>
-Cc: printing-architecture@lists.linux-foundation.org
+Cc: printing-architecture@lists.linux-foundation.org, till.kamppeter@gmail.com
 
 
---=-l3KDfiW/BkZ/RdWlGY41
+--=-d7H9jcwAYNaCG+l4bfFI
 Content-Type: text/plain; charset="UTF-8"
 Content-Transfer-Encoding: quoted-printable
 
-On Fri, 2012-03-02 at 21:38 +0900, Koji Otani wrote:
-> From: Tim Waugh <twaugh@redhat.com>
-> Subject: [Printing-architecture] XPdf bundling in pdftoopvp as well
-> Date: Fri, 02 Mar 2012 12:04:15 +0000
-> Message-ID: <1330689855.32498.25.camel@rubik>
->=20
-> twaugh> It looks like the same issue also affects pdftoopvp, although
-> twaugh> mysteriously the Glyph & Cog copyright notices seem to be absent.
-> twaugh>=20
->=20
-> If you say about OPVPOutputdev.cc, pdftoopvp uses SplashOutputdev=20
-> as a template to make a driver of poppler. =20
+On Sat, 2012-03-03 at 11:33 +0900, Koji Otani wrote:
+> Sorry, I'm not good at English.
 
-I do; and there is an overflow in it.
+Your English is fine. :-)
 
-I haven't even looked at pdftoopvp/oprs/*Splash*.cxx, but I expect those
-also have vulnerabilities of one form or another.
+> It seemes that poppler provides parsing and rendering PDF.
+> pdftopdf needs modifying PDF such as number-up, duplicating pages ,
+> inserting empty pages, scaling pages, embedding fonts and producing PDF.
+> When I began to develop poppler, I considered about various things
+> such as limited time, cost, etc. And I decided that I developed pdftopdf
+> outside of poppler. (Developing pdftopdf was funded by a Japanese governm=
+ental=20
+> organization)
+> It may be ok for poppler to include these features as you say.
+> I would appreciate it if you put these features into poppler.
 
-If this code really must be duplicated (and I hope that is not the
-case), there *must* be a plan in place to make sure that security fixes
-in poppler and XPdf get checked for in cups-filters.
+Thanks for explaining.  If poppler doesn't currently expose enough to
+allow pdftopdf to do what it needs to then some work is needed to change
+that, in order to avoid duplication of bugs.
+
+Who knows the pdftopdf/poppler code well enough to do this?
+
+Do we know anyone on the poppler development team who could guide us as
+to what sort of changes they will accept?
 
 Tim.
 */
 
 
---=-l3KDfiW/BkZ/RdWlGY41
+--=-d7H9jcwAYNaCG+l4bfFI
 Content-Type: application/pgp-signature; name="signature.asc"
 Content-Description: This is a digitally signed message part
 Content-Transfer-Encoding: 7bit
@@ -61,14 +65,14 @@ Content-Transfer-Encoding: 7bit
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.12 (GNU/Linux)
 
-iQEVAwUAT1StAu7Fkar03pQsAQKhnAf7B7z5Ry5hw/EREWbplyZRB+y6227624Dr
-E2sYN/e1milEbkDkbqpAfXOc+b9Uz+qxh8aG7/X1yFXUaWx0W46Kk+5Ybj465Ado
-YERozM7LQpER9XVFuftHONaTJQkrOp5SJyOX8PDWfo+UIzSAec4uWQmK3bja2o67
-QJc3KH0PrzitnK/q1XDz6bpczuSWDR1cKlSrf1ZVXRm5+5eCSNrKMMUp3cX9ur3G
-hKosU3ynPVn+8zipY4VU+qk/8YaWCbaqOEKlChD0JHEKfa73SGVnWz8VLpO8xD4P
-6PrDrn4wH0ZPOnNK+YAQb8UG94khvs2QcX2qiLgoysXe7Gr6zSQlYg==
-=1hWY
+iQEVAwUAT1SuGO7Fkar03pQsAQK5GQgAredjpqfuJbMi02B0VRshFJEBki/Kf1Ja
+pk/ug8YAbo7x4V2l1Qvg5SYtbkaYsbSWgcqf0QPH+g/3MWKfh9YqI2cIoSWAuNAm
+wSu+CHmkOsORlUCGjjTKCo0eAUq2zIu1CDnVxBHlt2e+f3aGu2BBele7Rm6jcQy/
+33mouHLO7rt26+GbD2bwqtaS8IgqI+kVSRlzdskXbkGmvoCV7/HfcdrLvGh3+udU
+EH3enwi32+M407aU3PfMB4pyDBzWrDrHnkPDONuVKIWCXPAbbwKt7lTPJ+o4oZCO
+i6BUK23QpTrtuBVowb5XmATTJx1ebGFU76ySn07QPmrwoPTHerCfng==
+=71X4
 -----END PGP SIGNATURE-----
 
---=-l3KDfiW/BkZ/RdWlGY41--
+--=-d7H9jcwAYNaCG+l4bfFI--
 
