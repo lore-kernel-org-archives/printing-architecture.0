@@ -1,19 +1,16 @@
-Return-Path: <jain.avi17@gmail.com>
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20120113;
-	h=mime-version:date:message-id:subject:from:to:content-type;
-	bh=+O2Wck+DZULIdHZMrzopsibWCSAB2ejm9mSokDelXIE=;
-	b=inWGxXTs8NeRD9K70CFL3dMHATPDI5hkmx538BBnGTiT7vEjGF3SG20Dra6LcUtiPJ
-	gI3hDy6qEysIma+plLY9F3W+wPZ5C31ReXHTAwK6uUmPENcWG2ASJhm2N6Q3wlrCkRPe
-	3WLzwj7l82+udFjI6Bpoz3ka5sNj/T+5R7TlfrvCRJr4XDsVPg7rUGUs6HYIyjIJUo3i
-	n6eP3dfn0u0+DeBLgpmCbUQPx8gKAoQjzraLflyUFRbofqk0DSIktrNyp7RxIduGx5sz
-	qIzN1Fa2GwR4rgiIyt9jJF8x6bH5fSM4xDNZMGPDpN/Pnuzu7FkRic3753AFT6Y8zEmq
-	amHw==
-MIME-Version: 1.0
-Date: Wed, 7 Mar 2012 13:47:07 +0530
-Message-ID: <CAMxMTx19=sEa-EQiDekLinhFnKurvrjbujaX7zm7LGe=RnGtdQ@mail.gmail.com>
-From: Avinash Jain <jain.avi17@gmail.com>
-Content-Type: multipart/alternative; boundary=e89a8fb208ce13328904baa2c964
-Subject: Re: [Printing-architecture] Gsoc 2012
+Return-Path: <twaugh@redhat.com>
+Message-ID: <1331113827.3119.7.camel@rubik>
+From: Tim Waugh <twaugh@redhat.com>
+Date: Wed, 07 Mar 2012 09:50:27 +0000
+In-Reply-To: <20120306.144653.295962394.sho@bbr.jp>
+References: <1330689855.32498.25.camel@rubik>
+	<20120302.213857.23722135.sho@bbr.jp> <1330949378.9812.3.camel@rubik>
+	<20120306.144653.295962394.sho@bbr.jp>
+Content-Type: multipart/signed; micalg="pgp-sha1";
+	protocol="application/pgp-signature"; 
+	boundary="=-2wEq8AtWHO2AQ4yl5F4v"
+Mime-Version: 1.0
+Subject: Re: [Printing-architecture] XPdf bundling in pdftoopvp as well
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>,
@@ -23,45 +20,44 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: printing-architecture@lists.linux-foundation.org
+To: Koji Otani <sho@bbr.jp>
+Cc: printing-architecture@lists.linux-foundation.org
 
---e89a8fb208ce13328904baa2c964
-Content-Type: text/plain; charset=ISO-8859-1
 
-Hi, myself Avinash Jain. I am new to GSOC. I want to participate in GSOC
-2012 under this organization. I have good hand on below listing skills. I
-want to start working from now.
-
-Known Skills
-
-1) HTML5/HTML
-2)CSS/CSS3
-3) JavaScript, JQuery
-4) PHP
-5) Mysql. SQLite3
-6) XML
-
-7) C,C++,JAVA, Python, OCTAVE
-
-Please tell me how to start working.
-
--- 
-Regards,
-avinash
-(+91) 9502681447
-
---e89a8fb208ce13328904baa2c964
-Content-Type: text/html; charset=ISO-8859-1
+--=-2wEq8AtWHO2AQ4yl5F4v
+Content-Type: text/plain; charset="UTF-8"
 Content-Transfer-Encoding: quoted-printable
 
-Hi, myself Avinash Jain. I am new to GSOC. I want to participate in GSOC 20=
-12 under this organization. I have good hand on below listing skills. I wan=
-t to start working from now.=A0<div><br></div><div>Known Skills</div><div>
-<br></div><div>1) HTML5/HTML</div><div>2)CSS/CSS3</div><div>3) JavaScript, =
-JQuery</div><div>4) PHP</div><div>5) Mysql. SQLite3</div><div>6) XML</div><=
-div><br></div><div>7) C,C++,JAVA, Python, OCTAVE</div><div><br></div><div>
-Please tell me how to start working.=A0<br clear=3D"all"><div><br></div>-- =
-<br>Regards,<div>avinash</div><div>(+91) 9502681447</div><br>
-</div>
+On Tue, 2012-03-06 at 14:46 +0900, Koji Otani wrote:
+> oprs/*Splash*.cxx are not copied from poppler while they use poppler data=
+.
+> There may have vulnerabilities, but it's not because of copying from
+> poppler. We should fix them in pdftoopvp.
 
---e89a8fb208ce13328904baa2c964--
+OK, that's good.  I haven't audited them so I don't know whether they
+have any security issues.  I just want to make sure that duplication
+from xpdf/poppler is kept to a minimum, or even avoided entirely.
+
+Tim.
+*/
+
+
+--=-2wEq8AtWHO2AQ4yl5F4v
+Content-Type: application/pgp-signature; name="signature.asc"
+Content-Description: This is a digitally signed message part
+Content-Transfer-Encoding: 7bit
+
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.12 (GNU/Linux)
+
+iQEVAwUAT1cvY+7Fkar03pQsAQIANgf/UInVWdL9ooWtuQXQm26n4Ht+qC9vQtWA
+g46tm2+jMrMoTbCp6Wrc2ZlDy8zQE6kKzEzEjWl1yMGux6U2nIOFmPhceJ38tgCO
+tPI18MLjiV9pGd7qQyLsEpKMvfzoEQFWT+2nvkAANHywvwDUt/0JsCcU5l06tcN1
+6aMvtp5CaF9QfRB8BP0r6XObMF2Z/ZsmudV4vnglCYKKKnrKROOjM4/guSi3wG2q
+AdyLesg4425J1/Fr0fL/ByYajVvTLvr9hkpVaurtRN4kIkztUkWqAPsR08Y315yl
+zWAl/vQAijKpckuOV78kZvBWqUpIsG2vMLsnXgabI7EmV3K/ZivxvA==
+=9y/7
+-----END PGP SIGNATURE-----
+
+--=-2wEq8AtWHO2AQ4yl5F4v--
+
