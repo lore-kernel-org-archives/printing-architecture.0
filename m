@@ -1,11 +1,22 @@
-Return-Path: <info@janmatyas.net>
-Message-ID: <4F625F75.6000505@janmatyas.net>
-Date: Thu, 15 Mar 2012 22:30:29 +0100
-From: Jan Matyas <info@janmatyas.net>
+Return-Path: <till.kamppeter@gmail.com>
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20120113;
+	h=message-id:date:from:user-agent:mime-version:to:subject
+	:content-type:content-transfer-encoding;
+	bh=aLPDDqUh8KyfafmFCEPycxnGzSngMHMeHwcS1L9RcC8=;
+	b=aQumAlnAkAU2cavc7fIrQ0cpOLB4JnuE1o9iMfu+iFi0SVysv9qkDin7lNGCVkz/rJ
+	5ZbGFsexF4oLgFcS6PWqnJ2RL+6xKqncjEBdEH1yoo/TXoUyr3wDOWWY7EGY5Ryx7Dvm
+	Nhv2sG7xKRZO9Kjb8pLJDqU1KcZ86cE1iD24yOFluC7zO7c9u58bXfj0elYaBXEYBQr3
+	I6a2cyBmjgVYXljBhASHbs6XuLcQJPV3troehCtHR6ESpOiL7Tk2oz4Vvao+F2GZyEdL
+	XXVkTQgFruKaxrayoK6uwlD2UFsJn/RZKliZr8iuG/iXOc+/O+tCeiQ1AeV0I0ePopFS
+	hW3Q==
+Message-ID: <4F638E40.5030405@gmail.com>
+Date: Fri, 16 Mar 2012 20:02:24 +0100
+From: Till Kamppeter <till.kamppeter@gmail.com>
 MIME-Version: 1.0
-Content-Type: text/plain; charset=ISO-8859-2; format=flowed
+Content-Type: text/plain; charset=UTF-8; format=flowed
 Content-Transfer-Encoding: 7bit
-Subject: [Printing-architecture] Another student interested in GSOC
+Subject: [Printing-architecture] Google Summer of Code 2011 - Project ideas
+ page for the Linux Foundation online
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>,
@@ -15,42 +26,13 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: printing-architecture@lists.linux-foundation.org
+To: Alexey Khoroshilov <khoroshilov@ispras.ru>, "Luis R. Rodriguez" <mcgrof@gmail.com>, Greg KH <greg@kroah.com>, "lsb-discuss@lists.linux-foundation.org" <lsb-discuss@lists.linux-foundation.org>, linux-wireless <linux-wireless@vger.kernel.org>, Open Printing <printing-architecture@lists.linux-foundation.org>
 
-Hello,
+Hi,
 
-I was brought to this maillist by a link from the OpenPrinting GSOC 
-Ideas page 
-(http://www.linuxfoundation.org/collaborate/workgroups/gsoc/2012-gsoc-printing-projects).
+Google has accepted The Linux Foundation again as mentoring organization!
 
-Especially these project ideas sound interesting to me:
+Please spread the news and keep adding project ideas.
 
-* Lightweight tool for manipulation of PDF files for printing
-* Job Ticket API (JTAPI) implementation
-* JTAPI (Job Ticket API) JDF Job-Ticket Implementation
+    Till
 
-Could you please suggest a concrete programming task (e.g. a bugfix, an 
-implementation of a simple feature) that I could take care of before 
-applying for any of the ideas above?  I would like to get familliar with 
-your codebase and see whether I am a competent candidate for any of the 
-mentioned projects.
-
-Personal information
-
--- I'm a student of Brno University of Technology, Faculty of 
-Information Technologies, Czech Republic (http://www.fit.vutbr.cz), 
-currently in my 4th year of studies.
--- My specialization is "Computer and Embedded Systems".
--- I can offer a basic knowledge and overview of various branches of IT, 
-ranging from hardware (FPGAs, MCUs) through both imperative and 
-declarative programming (asm, C, C++, Java, Haskell, ..) to databases 
-and web programming.
--- I am familiar with C programming and with writing portable code. I 
-have experience with programming for various platforms (Win32, Linux, MCUs).
--- I communicate in English fluently.
-
-Thank you for any suggestions.
-
-Best regards,
-
-Jan Matyas
