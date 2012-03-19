@@ -1,14 +1,22 @@
-Return-Path: <lprint-list@thax.hardliners.org>
-Message-ID: <4F63B303.8050004@thax.hardliners.org>
-Date: Fri, 16 Mar 2012 22:39:15 +0100
-From: Tobias Hoffmann <lprint-list@thax.hardliners.org>
+Return-Path: <till.kamppeter@gmail.com>
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20120113;
+	h=message-id:date:from:user-agent:mime-version:to:subject
+	:content-type:content-transfer-encoding;
+	bh=IFm7fyaqe25OAeXu+s5vz9x0nbYG94xTpUqRyhd3zUM=;
+	b=MD8U/cG47VD4xNVj9UxodRjStA4Iw/2mwmdLkrPVchbSBieeKhDK/trs6FSjoaekwr
+	qffV5QjgcBqgQIelE374IialcUKtBAE5mI4p4pOFuMSPvR5xQLz5Ek4ip8vAz3WEUYxe
+	3dX/IKd0XYpfyysiSbtm2sRnRBZ/zi3ex8L7l/Os43hXjZz2WvVCTmMGSwNzh7StbAy1
+	QM4muz3j1OsiSVoQs9jG+ZTRMPOaYTl0KRhHE/1CCeZRsDzpBBOsO8NtkwyEn0IhkBcY
+	9zUXWFZ8pDs+q1oDskbNkE0+xx/9HXchLDtEmVV5nLK+vW1xDq1UbGKtNFTb92XnADlI
+	oEOA==
+Message-ID: <4F67561F.4030902@gmail.com>
+Date: Mon, 19 Mar 2012 16:51:59 +0100
+From: Till Kamppeter <till.kamppeter@gmail.com>
 MIME-Version: 1.0
-References: <4F639287.1040000@gmail.com>
-In-Reply-To: <4F639287.1040000@gmail.com>
-Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Type: text/plain; charset=UTF-8; format=flowed
 Content-Transfer-Encoding: 7bit
-Subject: Re: [Printing-architecture] Google Summer of Code 2012 - The Linux
- Foundation accepted!
+Subject: [Printing-architecture] Google Summer of Code 2012 - Please
+	register as mentor
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>,
@@ -18,33 +26,29 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Till Kamppeter <till.kamppeter@gmail.com>
-Cc: Open Printing <printing-architecture@lists.linux-foundation.org>
+To: Alexey Khoroshilov <khoroshilov@ispras.ru>, "Luis R. Rodriguez" <mcgrof@gmail.com>, Greg KH <greg@kroah.com>, "lsb-discuss@lists.linux-foundation.org" <lsb-discuss@lists.linux-foundation.org>, linux-wireless <linux-wireless@vger.kernel.org>, Open Printing <printing-architecture@lists.linux-foundation.org>
 
-Till Kamppeter wrote:
-> Google has accepted The Linux Foundation again as mentoring organization!
-I've been interested in working on the pdf manipulation tools already 
-back in 2008, when I implemented the pdftoijs and texttopdf filters as 
-GSoC-Project. So I'm quite thrilled to hear, that now, nearly having 
-completed university, I might have the ability to work on them, and 
-participate in GSoC again.
+Hi,
 
-Through work on my low-level pdf library unpdf ( 
-http://code.google.com/p/unpdf/ ) I have gained much knowledge on PDF 
-internals (Adobe's PDF Reference, different PDF versions, etc) and 
-implementation caveats. Although the current unpdf code-base implements 
-enough of the low-level handling (also e.g. including support for 
-encrypted pdfs) to build the desired tools upon, there are a significant 
-number of areas in need of work; another possibility would be to either 
-reimplement only the bare minimum of functionality (i.e. use unpdf, and 
-maybe other pdf libs like iText only as guideline) or use another pdf 
-i/o library as basis (podofo comes to mind, 
-http://podofo.sourceforge.net/ ; a pure C choice with good-looking 
-codebase could be MuPDF, http://mupdf.com/ <http://mupdf.com/>). But 
-theses details can be worked out in time.
-FWIW, I personally would strongly prefer C++0x/C++11 (esp. auto, 
-std::unique_ptr, rvalue references / std::move) for this project, 
-instead of trying to work around language limitations that will not gain 
-us anything in the long term -- if this is possible.
+please register as mentor if you want to mentor or co-mentor a student. 
+If you did not do so yet, please reghister as follows:
 
-  Tobias
+1. If you do not have a Google account yet, get one. The processing of 
+your request is fully automatic, you do not need to wait for anyone to 
+approve.
+
+2. Go to
+
+http://www.google-melange.com/
+
+log in, and click on the "Apply" button under "Mentors: Apply now!". 
+Select "The Linux Foundation" (LF) as your desired mentoring 
+organization and follow the further steps.
+
+3. I will approve your mentorship request shortly.
+
+Jeff, as you are the backup admin, please request mentorship also if you 
+do not intend to mentor.
+
+    Till
+
