@@ -1,20 +1,23 @@
-Return-Path: <aikishugyo@gmail.com>
+Return-Path: <till.kamppeter@gmail.com>
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20120113;
-	h=mime-version:date:message-id:subject:from:to:content-type;
-	bh=UuPw5DQSBEeBDIHaszOkpnfU9ul519hu3oQjW1IN1iA=;
-	b=p6Qh8y2ALZIjaaHTWI0Lbqy7qkm+RwgPmmBAIGeHaaFDj8VouEAhQKc2GZbxzoDcmz
-	2SUR103QxBMe99wMak563sBtdNDXtH5AEEqwea0I7QtToSeDV4/c+M3SkvEkOHbVyavz
-	77sOPgWq5TgX70aNDOtFtS8Y8BTXYNvItalOdj6fRnWwGOqq6aFQGLMc6xW5j3OJ8r4i
-	pjYw9lbcOaF2UdepT9GvX4+7cUcLy4m0XKG25aXSDEkyXxdRlVzqZcM4XSB56SORYkX5
-	9bKxTsleYVFWx9A0Y1uy2fBQrFgV59x99jUTo7rcWfnyhLZd54nJEBUFI9uXEKMm18Yj
-	Ui0Q==
+	h=message-id:date:from:user-agent:mime-version:to:cc:subject
+	:references:in-reply-to:content-type:content-transfer-encoding;
+	bh=lZsmunv5eO25JEO4EZ/f9ESPTd4qJN7dEmq28x9nt8I=;
+	b=uqz83DLb62E43QmSvGyyBR5ipOezlz7Ucs6QziBC7iMmE3mfDYyYrohkCY2LiZq3nG
+	r1K4zjKVS4UIpMR8Kv6KGYh+/L4ykBGh9e3yOBpJLNFXr8hG5Mi8bhSHGjOyCRVqWsRE
+	p1VO6YAsQPDE0naIT1MsXgYYyTAlRySSpkkWlOm6R0ABIUSqkXC7ulSRHgLpJqbLVrrj
+	8YCCKUSYe/+QyURe0lFm8RVnTN/xbVvTmOMmqzhMDmJoUBkHBPvpCYXBgV/3WPiBqcfn
+	XnMdW0xpfczd3du6HzEhP9HPC1Lpxd6oXGDd0/rkI9NVXwOk1GaxB7PhlYV76+eJFFIM
+	8ZnQ==
+Message-ID: <4F7215F0.3010606@gmail.com>
+Date: Tue, 27 Mar 2012 21:33:04 +0200
+From: Till Kamppeter <till.kamppeter@gmail.com>
 MIME-Version: 1.0
-Date: Wed, 28 Mar 2012 02:12:50 +0900
-Message-ID: <CAN0dEZwpGd-sgtxOc=NuGxg3HDVLLSqt9oFqiaSu2u-_rn=gNA@mail.gmail.com>
-From: Gernot Hassenpflug <aikishugyo@gmail.com>
-Content-Type: text/plain; charset=UTF-8
-Subject: [Printing-architecture] Common printing dialog status? ALPS printer
-	option support
+References: <4F625F75.6000505@janmatyas.net>
+In-Reply-To: <4F625F75.6000505@janmatyas.net>
+Content-Type: text/plain; charset=UTF-8; format=flowed
+Content-Transfer-Encoding: 7bit
+Subject: Re: [Printing-architecture] Another student interested in GSOC
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>,
@@ -24,27 +27,59 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: printing-architecture@lists.linux-foundation.org
+To: Jan Matyas <info@janmatyas.net>
+Cc: printing-architecture@lists.linux-foundation.org
 
-Hello,
+The student application period has started. Please apply at 
+http://www.google-melange.com/ for each of your proposed projects. Thanks.
 
-I'm working on supporting printing with Canon inkjets on the
-gutenprint project, where option processing is rather important since
-the PPDs currently expose all options. I also have a keen interest in
-the ALPS series of MicroDry and DyeSublimation printers, which are
-quite different in their options to inkjets and lasers, and where the
-options for the two entirely different printing modes would be
-extremely difficult for users to understand (hence 2 PPDs, one for the
-MicroDry, one for the DyeSublimation mode, is a preferred solution).
+I am looking forward for your participation.
 
-I wonder if this list is appropriate to discuss whether the Common
-Printing Dialog planned capabilities are sufficient to support ALPS
-printers, and if not (I still need to read the API documents
-carefully), if there is a possibility to provide input (and take part
-in development).
+    Till
 
-Currently, the OpenPrinting.org/Linux Foundation forums seem to be
-down, hence my post to this ML.
+On 03/15/2012 10:30 PM, Jan Matyas wrote:
+> Hello,
+>
+> I was brought to this maillist by a link from the OpenPrinting GSOC
+> Ideas page
+> (http://www.linuxfoundation.org/collaborate/workgroups/gsoc/2012-gsoc-printing-projects).
+>
+>
+> Especially these project ideas sound interesting to me:
+>
+> * Lightweight tool for manipulation of PDF files for printing
+> * Job Ticket API (JTAPI) implementation
+> * JTAPI (Job Ticket API) JDF Job-Ticket Implementation
+>
+> Could you please suggest a concrete programming task (e.g. a bugfix, an
+> implementation of a simple feature) that I could take care of before
+> applying for any of the ideas above? I would like to get familliar with
+> your codebase and see whether I am a competent candidate for any of the
+> mentioned projects.
+>
+> Personal information
+>
+> -- I'm a student of Brno University of Technology, Faculty of
+> Information Technologies, Czech Republic (http://www.fit.vutbr.cz),
+> currently in my 4th year of studies.
+> -- My specialization is "Computer and Embedded Systems".
+> -- I can offer a basic knowledge and overview of various branches of IT,
+> ranging from hardware (FPGAs, MCUs) through both imperative and
+> declarative programming (asm, C, C++, Java, Haskell, ..) to databases
+> and web programming.
+> -- I am familiar with C programming and with writing portable code. I
+> have experience with programming for various platforms (Win32, Linux,
+> MCUs).
+> -- I communicate in English fluently.
+>
+> Thank you for any suggestions.
+>
+> Best regards,
+>
+> Jan Matyas
+> _______________________________________________
+> Printing-architecture mailing list
+> Printing-architecture@lists.linux-foundation.org
+> https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture
+>
 
-Best regards,
-Gernot Hassenpflug
