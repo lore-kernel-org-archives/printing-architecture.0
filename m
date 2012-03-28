@@ -1,20 +1,19 @@
 Return-Path: <blueroofmusic@gmail.com>
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20120113;
-	h=mime-version:date:message-id:subject:from:to:cc:content-type;
-	bh=TronuZcDvRcWUpWzsuuAU7kF6C+AdsFeUkDMOI5pki8=;
-	b=FH0dK84Fi3fBmSR7cG4fc7jlsX7hkTRjfoNWvdJs/cly6YYOI9zm41hEjYpqqq9kav
-	4UTh/OlRDSkl9m/rpfvd9X9ZrxNMsagpCqEItqwojEGshBpNG7ex91YMjvNmuclC7B2T
-	S4rh1lZUc/OoHKgsrZsr0WNhUwxhnAWqIDYb9bkZsJaleqs2QOlXkUnK7vvkdbpfeLBg
-	JaCtXlBORAJhPqYjk3Zyb3ckDyqcvxtDPmcEdAClgbDKGCY0OLy2ZKo6OyvNU4Y2ad6t
-	6RKB2dG1AwNYNskvogZhWSH+SGhCkaxT6auZp1hDirlAfYPkOnZA2EQkYcaIyWGpX0nS
-	ir1w==
+	h=mime-version:date:message-id:subject:from:to:content-type;
+	bh=TEfxeuVxcVmMcsOBuYc3IWqdY82xUiZkuG4Uyl3mceE=;
+	b=T2EEOJn+tuq1vzoiA4jFAPB1zPD96KE2dum+KtzJgrxaKE/NuQmySRxpx4DdgnnNxT
+	0bKytPo1w5j5Ab8W6GKt6l2OUtIoGLvp37UqyrKL+UlLP3tpzatV7wUgZOy8EDeDR31I
+	LYiMM7PVezgzIc890hngmTYkrrcmwxc7CXQnLYPqaePiJLJ/92smxpbtizEBpbi6VM4y
+	wuU0IKsO2qWjEj0oVYK+7m3YNIllaWpXZV99Ns6nLzehCTJvEdBoyoY1icfdp59F2VG6
+	q+q2Nv16f+EHl23hYOBpsaRDq1aNs5hv5gXTC+IEOS4JCsOxiR73Mn/SqiNmOLDwTYc2
+	iKzg==
 MIME-Version: 1.0
-Date: Wed, 28 Mar 2012 12:01:17 -0400
-Message-ID: <CAN40gSs5m7X7i=_E2ciMpBLgoG9fmcd+ZKvrbxbwe78Y4A-uAQ@mail.gmail.com>
+Date: Wed, 28 Mar 2012 15:38:13 -0400
+Message-ID: <CAN40gSuYBV51pJ3hmCrbup2XnavgCbVT5JDXqxiuRYDJk78BQw@mail.gmail.com>
 From: Ira McDonald <blueroofmusic@gmail.com>
-Content-Type: multipart/alternative; boundary=00504502d19ab3071b04bc4fb723
-Subject: [Printing-architecture] NOW! Third OpenPrinting Summit planning
-	call coming
+Content-Type: multipart/alternative; boundary=f46d043bdb768db51b04bc52bfa9
+Subject: [Printing-architecture] OPS Preparation minutes (28 March 2012)
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>,
@@ -24,11 +23,97 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Till Kamppeter <till.kamppeter@gmail.com>
-Cc: Open Printing <printing-architecture@lists.linux-foundation.org>, "printing-summit@lists.linux-foundation.org" <printing-summit@lists.linux-foundation.org>
+To: printing-architecture@lists.linux-foundation.org, printing-summit@lists.linux-foundation.org, Ira McDonald <blueroofmusic@gmail.com>
 
---00504502d19ab3071b04bc4fb723
+--f46d043bdb768db51b04bc52bfa9
 Content-Type: text/plain; charset=ISO-8859-1
+
+Hi,
+
+Minutes from today's Open Printing Summit planning call are posted at:
+
+ ftp://ftp.pwg.org/pub/pwg/openprinting/minutes/OP-Summit-Prep-20120328.htm
+
+Note:  New FTP directory - see above
+
+- ACTION - Till - contact Linux Foundation about Glen/Hin-Tak updates
+  to GSoC projects - no website fall-backs allowed until late April
+  - OPEN
+
+- ACTION - Till - contact Ghostscript and other color management folks
+  as presenters (or send slides?)
+  - Michael Vrhel (Artifex, Ghostscript) will attend OPS
+  - OPEN
+
+- ACTION - All - Draft presentation slides/outlines for review 11 April
+  - OPEN
+
+- ACTION - Presenters - tell Till EARLY about any special requirements
+  (e.g., speakers for video, demo printers, etc.)
+  - OPEN
+
+- ACTION - Presenters - send PDF slides to Till EARLY (or upload to OP)
+  (so that participants can download slides as backup for screencast)
+  - OPEN
+
+- ACTION - Ira - draft slides for OP Plenary by 11 April
+  - OPEN
+
+Next OP Conference Calls:
+(1) April 2012 - OPS Preparation
+    - Note - US Daylight Savings Time started on Sunday 11 March 2012
+    - Note - Europe Summer Time started on Sunday 25 March 2012
+
+    - Wednesday 11 April 2012, Daytime
+      - US
+        9am in San Francisco - US PDT (Pacific Daylight Time)
+        10am in Colorado - US MDT (Mountain Daylight Time)
+        11am in Chicago - US CDT (Central Daylight Time)
+        12pm in New York - US EDT (Eastern Daylight Time)
+      - Europe
+        6pm in Berlin - CEST (Central European Summer Time)
+
+    * Main Number (Till Kamppeter, LF, leader)
+      International: +1-218-936-7999
+      Access Code:   491659#
+
+(2) April 2012 - Joint PWG / Open Printing Summit
+    - Note - OPS is NOT hosted by Linux Foundation Collaboration Summit
+
+    - Tuesday to Friday 24-27 April 2012 at Apple in Cupertino, CA
+      - US
+        9am in San Francisco - US PDT (Pacific Daylight Time)
+        10am in Colorado - US MDT (Mountain Daylight Time)
+        11am in Chicago - US CDT (Central Daylight Time)
+        12pm in New York - US EDT (Eastern Daylight Time)
+      - Europe
+        6pm in Berlin - CEST (Central European Summer Time)
+
+    * Main PWG Number (Mike Sweet, Apple, leader)
+      US Toll-Free:  +1-866-469-3239
+      International: +1-650-429-3300
+      Access Code:   By request to Ira McDonald (do NOT publish)
+
+(3) May 2012 - US/Europe - OP Monthly Meeting
+    - Note - Joint PWG/OPS is 24-27 April at Apple in Cupertino, CA
+    - Note - Ubuntu Developer Summit is 7-11 May in Oakland, CA
+    - Note - Ira has a conflict on 16 May
+
+    - Wednesday 23 May 2012, Daytime
+      - US
+        9am in San Francisco - US PDT (Pacific Daylight Time)
+        10am in Colorado - US MDT (Mountain Daylight Time)
+        11am in Chicago - US CDT (Central Daylight Time)
+        12pm in New York - US EDT (Eastern Daylight Time)
+      - Europe
+        6pm in Berlin - CEST (Central European Summer Time)
+
+    * Main Number (Till Kamppeter, LF, leader)
+      International: +1-218-936-7999
+      Access Code:   491659#
+
+Cheers,
+- Ira
 
 Ira McDonald (Musician / Software Architect)
 Chair - Linux Foundation Open Printing WG
@@ -44,45 +129,79 @@ mailto:blueroofmusic@gmail.com
 Winter  579 Park Place  Saline, MI  48176  734-944-0094
 Summer  PO Box 221  Grand Marais, MI 49839  906-494-2434
 
-
-
-On Wed, Mar 28, 2012 at 11:05 AM, Till Kamppeter
-<till.kamppeter@gmail.com>wrote:
-
-> Hi,
->
-> Today (in 1 hour from now) we will have our third planning call for the
-> OpenPrinting Summit.
->
->   Till
->
-> ----------
->
-> Dial-in data:
->
->    - Wednesday 28 March 2012, Daytime
->      - US
->        9am in San Francisco - US PDT (Pacific Daylight Time)
->        10am in Colorado - US MDT (Mountain Daylight Time)
->        11am in Chicago - US CDT (Central Daylight Time)
->        12pm in New York - US EDT (Eastern Daylight Time)
->      - Europe
->        6pm in Berlin - CEST (Central European Summer Time)
->
->    * Main Number (Till Kamppeter, LF, leader)
->      International: +1-218-936-7999
->      Access Code:   491659#
->
->
-
---00504502d19ab3071b04bc4fb723
+--f46d043bdb768db51b04bc52bfa9
 Content-Type: text/html; charset=ISO-8859-1
 Content-Transfer-Encoding: quoted-printable
 
-<br clear=3D"all">Ira McDonald (Musician / Software Architect)<br>Chair - L=
-inux Foundation Open Printing WG<br>Secretary - IEEE-ISTO Printer Working G=
-roup<br>Co-Chair - IEEE-ISTO PWG IPP WG<br>Co-Chair - TCG Trusted Mobility =
-Solutions WG<br>
+Hi, <br><br>Minutes from today&#39;s Open Printing <span>Summit planning ca=
+ll</span> are posted at:<br>
+<br>
+=A0<a href=3D"ftp://ftp.pwg.org/pub/pwg/openprinting/minutes/OP-Summit-Prep=
+-20120328.htm" target=3D"_blank">ftp://ftp.pwg.org/pub/pwg/openprinting/min=
+utes/OP-Summit-Prep-20120328.htm</a><br><br>Note:=A0 New FTP directory - se=
+e above<br>
+<br>- ACTION - Till - contact Linux Foundation about Glen/Hin-Tak updates<b=
+r>=A0 to GSoC projects - no website fall-backs allowed until late April<br>=
+=A0 - OPEN<br><br>- ACTION - Till - contact Ghostscript and other color man=
+agement folks<br>
+=A0 as presenters (or send slides?)<br>=A0 - Michael Vrhel (Artifex, Ghosts=
+cript) will attend OPS<br>=A0 - OPEN<br><br>- ACTION - All - Draft presenta=
+tion slides/outlines for review 11 April<br>=A0 - OPEN<br><br>- ACTION - Pr=
+esenters - tell Till EARLY about any special requirements<br>
+=A0 (e.g., speakers for video, demo printers, etc.)<br>=A0 - OPEN<br>
+<br>- ACTION - Presenters - send PDF slides to Till EARLY (or upload to OP)=
+<br>=A0 (so that participants can download slides as backup for screencast)=
+<br>=A0 - OPEN<br><br>- ACTION - Ira - draft slides for OP Plenary by 11 Ap=
+ril<br>
+=A0 - OPEN<br><br>Next OP Conference Calls:<br>
+(1) April 2012 - OPS Preparation<br>=A0=A0=A0 - Note - US Daylight Savings =
+Time started on Sunday 11 March 2012<br>=A0=A0=A0 - Note - Europe Summer Ti=
+me started on Sunday 25 March 2012<br><br>=A0=A0=A0 - Wednesday 11 April 20=
+12, Daytime<br>
+=A0=A0=A0=A0=A0 - US<br>=A0=A0=A0=A0=A0=A0=A0 9am in San Francisco - US PDT=
+ (Pacific Daylight Time)<br>=A0=A0=A0=A0=A0=A0=A0 10am in Colorado - US MDT=
+ (Mountain Daylight Time)<br>=A0=A0=A0=A0=A0=A0=A0 11am in Chicago - US CDT=
+ (Central Daylight Time)<br>=A0=A0=A0=A0=A0=A0=A0 12pm in New York - US EDT=
+ (Eastern Daylight Time)<br>
+=A0=A0=A0=A0=A0 - Europe<br>=A0=A0=A0=A0=A0=A0=A0 6pm in Berlin - CEST (Cen=
+tral European Summer Time)<br><br>=A0=A0=A0 * Main Number (Till Kamppeter, =
+LF, leader)<br>=A0=A0=A0=A0=A0 International: +1-218-936-7999<br>=A0=A0=A0=
+=A0=A0 Access Code:=A0=A0 491659#<br><br>(2) April 2012 - Joint PWG / Open =
+Printing Summit<br>
+=A0=A0=A0 - Note - OPS is NOT hosted by Linux Foundation Collaboration Summ=
+it<br><br>=A0=A0=A0 - Tuesday to Friday 24-27 April 2012 at Apple in Cupert=
+ino, CA<br>
+=A0=A0=A0=A0=A0 - US<br>=A0=A0=A0=A0=A0=A0=A0 9am in San Francisco - US PDT=
+ (Pacific Daylight Time)<br>=A0=A0=A0=A0=A0=A0=A0 10am in Colorado - US MDT=
+ (Mountain Daylight Time)<br>=A0=A0=A0=A0=A0=A0=A0 11am in Chicago - US CDT=
+ (Central Daylight Time)<br>=A0=A0=A0=A0=A0=A0=A0 12pm in New York - US EDT=
+ (Eastern Daylight Time)<br>
+
+=A0=A0=A0=A0=A0 - Europe<br>=A0=A0=A0=A0=A0=A0=A0 6pm in Berlin - CEST (Cen=
+tral European Summer Time)<br><br>=A0=A0=A0 * Main PWG Number (Mike Sweet, =
+Apple, leader)<br>=A0=A0=A0=A0=A0 US Toll-Free:=A0 <a href=3D"tel:%2B1-866-=
+469-3239" value=3D"+18664693239" target=3D"_blank">+1-866-469-3239</a><br>
+=A0=A0=A0=A0=A0 International: <a href=3D"tel:%2B1-650-429-3300" value=3D"+=
+16504293300" target=3D"_blank">+1-650-429-3300</a><br>=A0=A0=A0=A0=A0 Acces=
+s Code:=A0=A0 By request to Ira McDonald (do NOT publish)<br>
+<br>(3) May 2012 - US/Europe - OP Monthly Meeting<br>=A0=A0=A0 - Note - Joi=
+nt PWG/OPS is 24-27 April at Apple in Cupertino, CA<br>=A0=A0=A0 - Note - U=
+buntu Developer Summit is 7-11 May in Oakland, CA<br>=A0=A0=A0 - Note - Ira=
+ has a conflict on 16 May<br>
+<br>=A0=A0=A0 - Wednesday 23 May 2012, Daytime<br>=A0=A0=A0=A0=A0 - US<br>=
+=A0=A0=A0=A0=A0=A0=A0 9am in San Francisco - US PDT (Pacific Daylight Time)=
+<br>=A0=A0=A0=A0=A0=A0=A0 10am in Colorado - US MDT (Mountain Daylight Time=
+)<br>=A0=A0=A0=A0=A0=A0=A0 11am in Chicago - US CDT (Central Daylight Time)=
+<br>
+=A0=A0=A0=A0=A0=A0=A0 12pm in New York - US EDT (Eastern Daylight Time)<br>=
+=A0=A0=A0=A0=A0 - Europe<br>=A0=A0=A0=A0=A0=A0=A0 6pm in Berlin - CEST (Cen=
+tral European Summer Time)<br><br>=A0=A0=A0 * Main Number (Till Kamppeter, =
+LF, leader)<br>=A0=A0=A0=A0=A0 International: +1-218-936-7999<br>
+=A0=A0=A0=A0=A0 Access Code:=A0=A0 491659#<br><br>Cheers,<br>
+- Ira<br><br clear=3D"all">Ira McDonald (Musician / Software Architect)<br>=
+Chair - Linux Foundation Open Printing WG<br>Secretary - IEEE-ISTO Printer =
+Working Group<br>Co-Chair - IEEE-ISTO PWG IPP WG<br>Co-Chair - TCG Trusted =
+Mobility Solutions WG<br>
 Chair - TCG Embedded Systems Hardcopy SG<br>IETF Designated Expert - IPP &a=
 mp; Printer MIB<br>Blue Roof Music/High North Inc<br><a style=3D"color:rgb(=
 51,51,255)" href=3D"http://sites.google.com/site/blueroofmusic" target=3D"_=
@@ -96,36 +215,5 @@ Winter=A0 579 Park Place=A0 Saline, MI=A0 48176=A0 734-944-0094<br>Summer=
 ay:inline"></div><div style=3D"display:inline"></div><div style=3D"display:=
 inline"></div><div>
 </div><div></div><div></div><div></div><br>
-<br><br><div class=3D"gmail_quote">On Wed, Mar 28, 2012 at 11:05 AM, Till K=
-amppeter <span dir=3D"ltr">&lt;<a href=3D"mailto:till.kamppeter@gmail.com">=
-till.kamppeter@gmail.com</a>&gt;</span> wrote:<br><blockquote class=3D"gmai=
-l_quote" style=3D"margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left=
-:1ex">
-Hi,<br>
-<br>
-Today (in 1 hour from now) we will have our third planning call for the Ope=
-nPrinting Summit.<br>
-<br>
- =A0 Till<br>
-<br>
-----------<br>
-<br>
-Dial-in data:<br>
-<br>
- =A0 =A0- Wednesday 28 March 2012, Daytime<br>
- =A0 =A0 =A0- US<br>
- =A0 =A0 =A0 =A09am in San Francisco - US PDT (Pacific Daylight Time)<br>
- =A0 =A0 =A0 =A010am in Colorado - US MDT (Mountain Daylight Time)<br>
- =A0 =A0 =A0 =A011am in Chicago - US CDT (Central Daylight Time)<br>
- =A0 =A0 =A0 =A012pm in New York - US EDT (Eastern Daylight Time)<br>
- =A0 =A0 =A0- Europe<br>
- =A0 =A0 =A0 =A06pm in Berlin - CEST (Central European Summer Time)<br>
-<br>
- =A0 =A0* Main Number (Till Kamppeter, LF, leader)<br>
- =A0 =A0 =A0International: <a href=3D"tel:%2B1-218-936-7999" value=3D"+1218=
-9367999" target=3D"_blank">+1-218-936-7999</a><br>
- =A0 =A0 =A0Access Code: =A0 491659#<br>
-<br>
-</blockquote></div><br>
 
---00504502d19ab3071b04bc4fb723--
+--f46d043bdb768db51b04bc52bfa9--
