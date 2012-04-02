@@ -1,33 +1,15 @@
-Return-Path: <danieru.dressler@gmail.com>
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20120113;
-	h=mime-version:in-reply-to:references:date:message-id:subject:from:to
-	:cc:content-type;
-	bh=DiNtLtIVuAaqIz48c6lOO5SKbUiKcGfDtOY50gk5W9g=;
-	b=kP8r4YcaPcqLK7vbIm0OrHL2ZnJBhYWk3EaQQMg44df4NgyLYi7Ebxam4BpwWIy2FR
-	cYWgA26NBA2npL9Jf+19WrkW6lgrSK/3Rp7XpIiyRkJ+yWFnFrfiPuov3tuwB6S4W2BE
-	LUv2sqUil9LSwsqxX9vLf79mgx9JGy8vNarvfXxRHB6nSYkqIk/fhcQe2028PggqaOLn
-	9GZJgErZ2Dw4WGtAmDI/Hwhs21OYoF9aXVoP/dUmdI4OAhLSS5ADRHIlksGXGwInHDGc
-	cluAsVwE+67p6lHml15TH4XKYCOFp9Jox0ZjvoLxeORXDX9yDAsUTGGETBgYktaMPY70
-	b9OA==
+Return-Path: <glen.petrie@eitc.epson.com>
+Content-class: urn:content-classes:message
 MIME-Version: 1.0
-In-Reply-To: <CAGC3nLDK3ZxTznwYeUf1yNeW+OuG4PA2BOCgM-=OKXD8iTnbDw@mail.gmail.com>
-References: <CAN40gSuYBV51pJ3hmCrbup2XnavgCbVT5JDXqxiuRYDJk78BQw@mail.gmail.com>
-	<CAGC3nLDxxYjy7ydTqUHncKW9CCLqTiGyP0t-E_Wqf3pob1avDg@mail.gmail.com>
-	<CAN40gSsksMRO2+r8uZ_=VPaxKRbb3GZBdd7WpmPZYGuEcqnSEQ@mail.gmail.com>
-	<E8C3B9E653C80C48B0951F8494C049A938EE7F@EEAEX02.us.epson.net>
-	<CAN40gSuby6vu-=7O5fPLvq_Xh1ZPZGUXBf6oDB+Y424BDkNAVw@mail.gmail.com>
-	<E8C3B9E653C80C48B0951F8494C049A938EED6@EEAEX02.us.epson.net>
-	<CAN40gSv=_hVv92S9pBtYfBg_y_NjqwDE=syGA-hC6UOmMFUELg@mail.gmail.com>
-	<E8C3B9E653C80C48B0951F8494C049A938EEE3@EEAEX02.us.epson.net>
-	<CAGC3nLC=k_5HoLVxXhnXi9xf7qk4SRmULWirzfBgmqJxKVigag@mail.gmail.com>
-	<E8C3B9E653C80C48B0951F8494C049A938EF1C@EEAEX02.us.epson.net>
-	<CAGC3nLDK3ZxTznwYeUf1yNeW+OuG4PA2BOCgM-=OKXD8iTnbDw@mail.gmail.com>
-Date: Mon, 2 Apr 2012 15:26:30 -0600
-Message-ID: <CAGC3nLB1aE9YgsXzrOOZiR55rdRQATsMhUReuXbeVp=EFQsQUw@mail.gmail.com>
-From: Daniel Dressler <danieru.dressler@gmail.com>
-Content-Type: multipart/alternative; boundary=f46d04463126f8d28404bcb8d751
+Content-Type: multipart/alternative;
+	boundary="----_=_NextPart_001_01CD1118.BED1E4BC"
+Date: Mon, 2 Apr 2012 14:37:03 -0700
+Message-ID: <E8C3B9E653C80C48B0951F8494C049A938EF80@EEAEX02.us.epson.net>
+References: <CAN40gSuYBV51pJ3hmCrbup2XnavgCbVT5JDXqxiuRYDJk78BQw@mail.gmail.com><CAGC3nLDxxYjy7ydTqUHncKW9CCLqTiGyP0t-E_Wqf3pob1avDg@mail.gmail.com><CAN40gSsksMRO2+r8uZ_=VPaxKRbb3GZBdd7WpmPZYGuEcqnSEQ@mail.gmail.com><E8C3B9E653C80C48B0951F8494C049A938EE7F@EEAEX02.us.epson.net><CAN40gSuby6vu-=7O5fPLvq_Xh1ZPZGUXBf6oDB+Y424BDkNAVw@mail.gmail.com><E8C3B9E653C80C48B0951F8494C049A938EED6@EEAEX02.us.epson.net><CAN40gSv=_hVv92S9pBtYfBg_y_NjqwDE=syGA-hC6UOmMFUELg@mail.gmail.com><E8C3B9E653C80C48B0951F8494C049A938EEE3@EEAEX02.us.epson.net><CAGC3nLC=k_5HoLVxXhnXi9xf7qk4SRmULWirzfBgmqJxKVigag@mail.gmail.com><E8C3B9E653C80C48B0951F8494C049A938EF1C@EEAEX02.us.epson.net><CAGC3nLDK3ZxTznwYeUf1yNeW+OuG4PA2BOCgM-=OKXD8iTnbDw@mail.gmail.com>
+	<CAGC3nLB1aE9YgsXzrOOZiR55rdRQATsMhUReuXbeVp=EFQsQUw@mail.gmail.com>
+From: "Petrie, Glen" <glen.petrie@eitc.epson.com>
 Subject: Re: [Printing-architecture] [Printing-summit] OPS
- Preparationminutes (28 March 2012)
+	Preparationminutes (28 March 2012)
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>,
@@ -37,1928 +19,908 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: "Petrie, Glen" <glen.petrie@eitc.epson.com>
+To: Daniel Dressler <danieru.dressler@gmail.com>
 Cc: printing-architecture@lists.linux-foundation.org, printing-summit@lists.linux-foundation.org
 
---f46d04463126f8d28404bcb8d751
-Content-Type: text/plain; charset=UTF-8
+This is a multi-part message in MIME format.
+
+------_=_NextPart_001_01CD1118.BED1E4BC
+Content-Type: text/plain;
+	charset="us-ascii"
 Content-Transfer-Encoding: quoted-printable
 
-To continue my last email I wanted to say that I would like it if Glen
-continued to be my mentor. My biggest concern is about code quality and I
-think he can provide the criticism and code review I need to improve.
+The issue with the MJT is if we want to change something, then we need
+to go back to the PWG.   But, unless Ira disagrees, I see no reason to
+change the MJT for this phase of the JTAPI development.    Perhaps, the
+MJT will not exercise all of the functionality of the JTAPI; in that
+case, we will add a "vendor extension" which would actually be a good
+thing, because JTAPI must handle vendor extension at some point.
 
-What exactly is the issue with implementing a micro job ticket backend? It
-was my understanding that MJT would be a simple job ticket format and thus
-a good one to implement as an example/development backend. Is there a
-reason we might need to alter the MJT standard?
+=20
+
+Glen
+
+=20
+
+=20
+
+________________________________
+
+From: printing-architecture-bounces@lists.linux-foundation.org
+[mailto:printing-architecture-bounces@lists.linux-foundation.org] On
+Behalf Of Daniel Dressler
+Sent: Monday, April 02, 2012 2:27 PM
+To: Petrie, Glen
+Cc: printing-architecture@lists.linux-foundation.org;
+printing-summit@lists.linux-foundation.org
+Subject: Re: [Printing-architecture] [Printing-summit] OPS
+Preparationminutes (28 March 2012)
+
+=20
+
+To continue my last email I wanted to say that I would like it if Glen
+continued to be my mentor. My biggest concern is about code quality and
+I think he can provide the criticism and code review I need to improve.=20
+
+What exactly is the issue with implementing a micro job ticket backend?
+It was my understanding that MJT would be a simple job ticket format and
+thus a good one to implement as an example/development backend. Is there
+a reason we might need to alter the MJT standard?
 
 Daniel
 
-2012=E5=B9=B44=E6=9C=882=E6=97=A511:37 Daniel Dressler <danieru.dressler@gm=
-ail.com>:
+=20
 
-> Sorry Glen and everyone, I forgot to reply-all, here is the email I sent
-> an hour ago which only glen received:
->
->
-> Thank you Glen and Ira for having this discussion its been helpful for me
-> and my understanding of jtapi.
->
-> My original understanding of jtapi was I think closer to ira's. That is t=
-o
-> say that producing and consuming a job ticket would be the primary use
-> cases driving jtapi development. A transformation server would then be a
-> bonus feature once we have enough well tested producing/consuming backend
-> plugins.
->
-> I think a scenario where programmers roll their own implementation would
-> be very suboptimal. It would require any programmer who wants to produce =
-a
-> job ticket to learn the standard. The wealth of independent implementatio=
-ns
-> would leave massive room for bugs.
->
-> By concentrating the implementation effort into jtapi we get a library
-> that will handle all the odd cases for all job ticekts for programmers wi=
-th
-> less effort on their part than it would take to produce even the simplest
-> job ticket. This should encourage job ticket adoption and be a win for
-> productivity.
->
-> Sorry I have more to say but it'll have to wait until after my classes.
->
-> Daniel
->
-> 2012=E5=B9=B44=E6=9C=882=E6=97=A511:33 Petrie, Glen <glen.petrie@eitc.eps=
-on.com>:
->
->  ** ** ** ** ** ** **
->>
->> Ok, we will proceed with Ira=E2=80=99s and Daniel=E2=80=99s understandin=
-g.  We make a
->> transform service another day.****
->>
->> ** **
->>
->> Glen****
->>
->> ** **
->>
->> ** **
->>  ------------------------------
->>
->> *From:* Daniel Dressler [mailto:danieru.dressler@gmail.com]
->> *Sent:* Monday, April 02, 2012 9:46 AM
->> *To:* Petrie, Glen
->>
->> *Subject:* Re: [Printing-architecture] [Printing-summit] OPS
->> Preparationminutes (28 March 2012)
->> ****
->>
->>  ** **
->>
->> Thank you Glen and Ira for having this discussion its been helpful for m=
-e
->> and my understanding of jtapi.
->>
->> My original understanding of jtapi was I think closer to ira's. That is
->> to say that producing and consuming a job ticket would be the primary us=
-e
->> cases driving jtapi development. A transformation server would then be a
->> bonus feature once we have enough well tested producing/consuming backen=
-d
->> plugins.
->>
->> I think a scenario where programmers roll their own implementation would
->> be very suboptimal. It would require any programmer who wants to produce=
- a
->> job ticket to learn the standard. The wealth of independent implementati=
-ons
->> would leave massive room for bugs.
->>
->> By concentrating the implementation effort into jtapi we get a library
->> that will handle all the odd cases for all job ticekts for programmers w=
-ith
->> less effort on their part than it would take to produce even the simples=
-t
->> job ticket. This should encourage job ticket adoption and be a win for
->> productivity.
->>
->> Sorry I have more to say but it'll have to wait until after my classes.
->>
->> Daniel
->>
->> ****
->>
->> 2012=E5=B9=B44=E6=9C=882=E6=97=A59:57 Petrie, Glen <glen.petrie@eitc.eps=
-on.com>:****
->>
->> Wow!  I have a different scenario.****
->>
->>  ****
->>
->> I see generation of a Print Job Ticket by a Print Client as a very simpl=
-e
->> process.   Using C-Code as an example; it is nothing more that a collect=
-ion
->> of canned =E2=80=9Cprintf=E2=80=9D statement were the argument are the P=
-rint Intent values
->> expressed in the specific Print Job Ticket =E2=80=9Clanguage=E2=80=9D.  =
- The Print Client
->> only wants to output one Print Job Ticket format, not one of several. **=
-*
->> *
->>
->>  ****
->>
->> I see parsing Print Job Ticket by a Print Service as an equally simple
->> process; although there is a lot of content/data checking.   The Print
->> Service only wants to accept one Print Job Ticket format, not one of
->> several.****
->>
->>  ****
->>
->> The difficult part is when the Print Client Print Job Ticket format does
->> not match the Print Service Print Job Ticket format =E2=80=93 an impedan=
-ce
->> mismatch; thus, JTAPI, provides the impedance matching or a transform
->> service. ****
->>
->>  ****
->>
->> What you are outlining implies that a Print Client or Print Service
->> internally would need to use a set of data structures and definitions th=
-at
->> supports JTAPI, where it may better for the Print Client or Print Servic=
-e
->> to support the Print Job Ticket more directly.   This does lead to the e=
-ver
->> pending problem of =E2=80=9CCommon=E2=80=9D; either a Common Print Clien=
-t or even a Common
->> Print Service.  For a Common Print Client it implies what =E2=80=9CLabel=
-=E2=80=9D or =E2=80=9CName=E2=80=9D
->> and what =E2=80=9Cvalues=E2=80=9D should be displayed.   If JTAPI defini=
-tions, values and
->> names are to be used; then, JTAPI become useful for converting any Print
->> Job Ticket to a common internal format for every one to use.   I like th=
-is
->> idea.****
->>
->>  ****
->>
->> The same concept applies to capabilities information which is based Prin=
-t
->> Job Ticket formats/definitions. ****
->>
->> =3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D****
->>
->> For the GSOC the time constraint, we may only get Print Job Ticket forma=
-t
->> Foo converted to an internal structure.   We can try to both read and wr=
-ite
->> of that Print Job Ticket format. ****
->>
->> =3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D****
->>
->> Since there may be an issue using or modifying MJT (copyright, etc), I
->> will create a very simple MIT license Print Job Ticket format for JTAPI
->> GSOC.   Again, the goal of JTAPI this year is end-to-end code with a ver=
-y
->> well documented set of code that will be used as illustration of
->> implementing JTAPI.   The Print Job Ticket format is not important this
->> year.  Next year or in a separate project, a standardized Print Job Tick=
-et
->> format can be instantiated. ****
->>
->>  ****
->>
->> Glen****
->>
->>  ****
->>
->>  ****
->>  ------------------------------
->>
->> *From:* Ira McDonald [mailto:blueroofmusic@gmail.com]
->> *Sent:* Monday, April 02, 2012 8:12 AM****
->>
->>
->> *To:* Petrie, Glen; Ira McDonald
->> *Cc:* Daniel Dressler; printing-architecture@lists.linux-foundation.org;
->> printing-summit@lists.linux-foundation.org
->> *Subject:* Re: [Printing-architecture] [Printing-summit] OPS
->> Preparationminutes (28 March 2012)****
->>
->>  ****
->>
->> Hi Glen,
->>
->> I agree with you that the *3rd* use case is a Client producing
->> JDF and and PrintService converting it to PJT w/ JTAPI.
->>
->> But the other two use cases (I think the dominant ones)
->> don't involve ANY conversion:
->>
->> (1) Client builds an abstract job ticket using JTAPI and says
->> write it out to a given format.
->>
->> (2) PrintService accepts that concrete job ticket and parses
->> it w/ JTAPI and uses the JTAPI parsed attributes as input
->> to the Scheduler and Interpreter subunits to process the
->> job.
->>
->> Your  3rd use case of conversion of formats can't be
->> demonstrated without at least 2 backends - it's harder,
->> not simpler.
->>
->> For all I care there's a reference only backend that writes
->> out (and reads in/parses) only an internal C struct form
->> of a job ticket.
->>
->> Or writes out MJT, but it That intellectual property and
->> status issues - the spec is PWG copyrighted and it's
->> a whitepaper, not an approved PWG project (that is, we
->> CANNOT modify MJT w/out PWG permission).
->>
->> WDYT?
->>
->> Cheers,
->> - Ira
->>
->>
->>
->> Ira McDonald (Musician / Software Architect)
->> Chair - Linux Foundation Open Printing WG
->> Secretary - IEEE-ISTO Printer Working Group
->> Co-Chair - IEEE-ISTO PWG IPP WG
->> Co-Chair - TCG Trusted Mobility Solutions WG
->> Chair - TCG Embedded Systems Hardcopy SG
->> IETF Designated Expert - IPP & Printer MIB
->> Blue Roof Music/High North Inc
->> http://sites.google.com/site/blueroofmusic
->> http://sites.google.com/site/highnorthinc
->> mailto:blueroofmusic@gmail.com
->> Winter  ****579 Park Place**  **Saline**, **MI**  **48176****
->> 734-944-0094
->> Summer  ****PO Box** 221**  Grand ****Marais**, **MI** **49839****
->> 906-494-2434****
->>
->> ** **
->>
->> 2012/4/2 Petrie, Glen <glen.petrie@eitc.epson.com>****
->>
->> Ira,****
->>
->>  ****
->>
->> I must admit to being totally confused.   I always under the impression
->> that JTAPI was a classic definition of a transform service and not just =
-a
->> job ticket interpreter for a Print Service.    I thought a transform
->> service accepts one document format and product a different document
->> format; which is what I thought JTAPI did.  Example, accept a JDF job
->> ticket and produce a PWG job ticket.  ****
->>
->>  ****
->>
->> What you describe below is what I would call it an interpreter and,
->> maybe, that you have considered JTAPI to be.    Then, at least to me, th=
-e
->> existing JTAPI may not be what is needed.   What is needed is a generic =
-JDF
->> interpreter, a PWG:PJT interpreter, =E2=80=A6; that is, what I called th=
-e front-end
->> to JTAPI.****
->>
->>  ****
->>
->> I always saw the use case as:  A Print Service accepts PWG:PJT but the
->> Print Client produced JDF.   Thus, the either the Print Client or the Pr=
-int
->> Service uses the JTAPI Transform Service to transform JDF to PJT.    The
->> Print Service would already have its own interpreter to parse PWG:PJT in=
-to
->> what ever internal format the Print Service needed or used.   [ I had
->> always hoped that someday we could have a defined a the internal format
->> that everyone would use but I don=E2=80=99t think that will ever happen.=
-]****
->>
->>  ****
->>
->> From my use case, JTAPI would need the ability to transform many possibl=
-e
->> input public and private job ticket formats; JTAPI, itself would have an
->> internally data structure capable of containing content from many input =
-Job
->> Ticket to be able to produce differing output Job Tickets.****
->>
->>  ****
->>
->> I am not sure what to do now.  I may not be the best person to guide the
->> Daniel on the first JTAPI project since I not seem to have the correct
->> understanding.   Ira, perhaps, you should mentor Daniel on the core (the
->> first) JTAPI project so that the actual intent is produced.  I will ment=
-or
->> another student for the second JTAPI project following your=E2=80=99s an=
-d Daniel=E2=80=99s
->> lead. ****
->>
->>  ****
->>
->> Glen****
->>
->>  ****
->>
->>  ****
->>  ------------------------------
->>
->> *From:* Ira McDonald [mailto:blueroofmusic@gmail.com]
->> *Sent:* Sunday, April 01, 2012 9:27 PM
->> *To:* Petrie, Glen; Ira McDonald
->> *Cc:* Daniel Dressler; printing-architecture@lists.linux-foundation.org;
->> printing-summit@lists.linux-foundation.org****
->>
->>
->> *Subject:* Re: [Printing-architecture] [Printing-summit] OPS
->> Preparationminutes (28 March 2012)****
->>
->>  ****
->>
->> Hi Glen,
->>
->> I strongly disagree - this is *not* the OP Job Ticket
->> Transform Service.
->>
->> The first use for a client is to create a NEW job
->> ticket (in the abstract API) and write it out into some
->> concrete format (with a backend).
->>
->> Clients mostly won't modify existing job tickets.
->>
->> And PrintServices will just use JTAPI to parse the
->> job ticket once (in whatever format) and use the
->> values in the actual Interpreter and Scheduler
->> miodules.
->>
->> Conversion of Job Ticket formats is the tertiary
->> use case.
->>
->> Cheers,
->> - Ira
->>
->> Ira McDonald (Musician / Software Architect)
->> Chair - Linux Foundation Open Printing WG
->> Secretary - IEEE-ISTO Printer Working Group
->> Co-Chair - IEEE-ISTO PWG IPP WG
->> Co-Chair - TCG Trusted Mobility Solutions WG
->> Chair - TCG Embedded Systems Hardcopy SG
->> IETF Designated Expert - IPP & Printer MIB
->> Blue Roof Music/High North Inc
->> http://sites.google.com/site/blueroofmusic
->> http://sites.google.com/site/highnorthinc
->> mailto:blueroofmusic@gmail.com
->> Winter  ****579 Park Place**  **Saline**, **MI**  **48176****
->> 734-944-0094
->> Summer  ****PO Box** 221**  Grand ****Marais**, **MI** **49839****
->> 906-494-2434****
->>
->>  ****
->>
->> 2012/3/30 Petrie, Glen <glen.petrie@eitc.epson.com>****
->>
->> Ira, Daniel****
->>
->>  ****
->>
->> Since there seems to be an objection with just using =E2=80=9Cop=E2=80=
-=9D; I don=E2=80=99t
->> believe =E2=80=9Copjt=E2=80=9D is actually correct either.  That is, thi=
-s is not the
->> OpenPrinting Job Ticket; what it is the OpenPrinting Job Ticket Transfor=
-m
->> Service [which fits perfectly with PWG=E2=80=99s definition of a transfo=
-rm
->> service].   So an alternate and more descriptive lettering would be eith=
-er
->> ****
->>
->>  ****
->>
->> =E2=80=9Copjtt=E2=80=9D             =3D open printing job ticket transfo=
-rm****
->>
->> =E2=80=9Copjtts=E2=80=9D           =3D open printing job ticket transfor=
-m service****
->>
->>  ****
->>
->> <The only other suggestion is to change the formal API names (not the
->> prefix) to say JobTicketXXXXXXX and DocObj____.  NO!>****
->>
->>  ****
->>
->> Glen****
->>
->>  ****
->>
->> p.s. ****
->>
->> Please consider that this code will ultimately be reference code; and no=
-t
->> reference code for execution as much as for source code on how to make J=
-ob
->> Ticket back-ends (and front-end).  Having long prefixes for variable,
->> variable types, routine name, etc, makes the code difficult to read,
->> understand and develop.   This is not a schema, a dtd or the like; but a
->> set of APIs that must have a front-end and one or more back-ends.
->>  Namespace conflicts with JTAPI as a transform service are none since th=
-at
->> interface will be determined by the front-end..  Conflicts of actual cod=
-ing
->> of the front-end and back-ends would be very low.   Since back-ends will
->> likely be DLLs, there are not conflicts between back-ends.   My request =
-is
->> that, for this project, the code must be well structured, easy to read,
->> easy to following and strongly commented.   The goal is not the fastest =
-or
->> the fanciest code but code that other will read and use to develop their
->> code.   The code is the instruction manual. ****
->>
->>  ****
->>
->> p.s. ****
->>
->> As the PWG moves forward to MFD=E2=80=99s, the notation of a Job Ticket =
-becomes
->> unclear as to what service the Job Ticket is for.   So the descriptive
->> lettering should be****
->>
->>  ****
->>
->> oppjtt  openprinting print job ticket transform****
->>
->> oppjtts  openprinting print job ticket transform service****
->>
->>  ****
->>
->> or ****
->>
->>  ****
->>
->> The current JTAPIs would have to be extended to support other services.
->>   Naming will be a real big problem then even considering the commonalit=
-y
->> among various service job tickets. ****
->>
->>  ****
->>
->> p.s. ****
->>
->> I did not see any feedback (or I missed it) to my suggested changes to
->> JTAPI headers to OpenPrinting names (prefixes); thus, I assume the
->> preference is to stay to the existing FSG:JTAPI header file.   That is, =
-by
->> all definitions, the correct thing to do.  So I guess it make the
->> discussion of prefix unnecessary.****
->>
->>  ****
->>
->>  ****
->>
->> gwp****
->>
->>  ****
->>
->>  ****
->>
->>  ****
->>
->>  ****
->>
->>  ****
->>  ------------------------------
->>
->> *From:* printing-architecture-bounces@lists.linux-foundation.org [mailto=
-:
->> printing-architecture-bounces@lists.linux-foundation.org] *On Behalf Of =
-*Ira
->> McDonald
->> *Sent:* Wednesday, March 28, 2012 9:18 PM
->> *To:* Daniel Dressler; Ira McDonald
->> *Cc:* printing-architecture@lists.linux-foundation.org;
->> printing-summit@lists.linux-foundation.org
->> *Subject:* Re: [Printing-architecture] [Printing-summit] OPS
->> Preparationminutes (28 March 2012)****
->>
->>  ****
->>
->> Hi Daniel,
->>
->> Comments inline below.
->>
->> Cheers,
->> - Ira****
->>
->> On Wed, Mar 28, 2012 at 7:09 PM, Daniel Dressler <
->> danieru.dressler@gmail.com> wrote:****
->>
->> In response to some comments in the meeting.
->>
->> 1. I would prefer an 'op' prefix to 'fsgjt'. I assume fsgjt means free
->> standards group job ticket? Since the fsg does not exist anymore I think
->> 'op' would avoid confusion. And it is shorter.****
->>
->> Do we know of any namespace conflicts with other op libraries? It's been
->> 5+ years, has this situation changed?****
->>
->>  <ira>
->> The Open Printing Vector API uses 'opvp' as prefix throughout.
->> It's sloppy and amateur coding practice not to use a library
->> specific unique prefix (e.g., 'opjt') for variables and functions.
->>
->> The scope is NOT just OP libraries, but the entire universe of
->> code that might be linked into a vendor or third-party tool.
->> </ira>
->>  ****
->>
->> 2. I will be attending as much of the summit as I can by phone-in, the
->> summit takes place over my finals so I will be missing some sessions.***=
-*
->>
->>  <ira>
->> Understood - we'll be glad to have you when you can attend.
->> </ira>****
->>
->> 3. If the wiki has no history does that mean it is pointless for me to
->> fill in the change log when making edits?****
->>
->>  <ira>
->> Till can hopefully answer this one - we're not any of us happy
->> about the move from a full-function Wiki tool to a limited Wiki
->> tool by the Linux Foundation.
->> </ira>
->>
->> Daniel****
->>
->>  ****
->>
->> 2012=E5=B9=B43=E6=9C=8828=E6=97=A513:38 Ira McDonald <blueroofmusic@gmai=
-l.com>:****
->>
->> Hi,
->>
->> Minutes from today's Open Printing Summit planning call are posted at:
->>
->>
->> ftp://ftp.pwg.org/pub/pwg/openprinting/minutes/OP-Summit-Prep-20120328.h=
-tm
->>
->> Note:  New FTP directory - see above
->>
->> - ACTION - Till - contact Linux Foundation about Glen/Hin-Tak updates
->>   to GSoC projects - no website fall-backs allowed until late April
->>   - OPEN
->>
->> - ACTION - Till - contact Ghostscript and other color management folks
->>   as presenters (or send slides?)
->>   - Michael Vrhel (Artifex, Ghostscript) will attend OPS
->>   - OPEN
->>
->> - ACTION - All - Draft presentation slides/outlines for review 11 April
->>   - OPEN
->>
->> - ACTION - Presenters - tell Till EARLY about any special requirements
->>   (e.g., speakers for video, demo printers, etc.)
->>   - OPEN
->>
->> - ACTION - Presenters - send PDF slides to Till EARLY (or upload to OP)
->>   (so that participants can download slides as backup for screencast)
->>   - OPEN
->>
->> - ACTION - Ira - draft slides for OP Plenary by 11 April
->>   - OPEN
->>
->> Next OP Conference Calls:
->> (1) April 2012 - OPS Preparation
->>     - Note - US Daylight Savings Time started on Sunday 11 March 2012
->>     - Note - Europe Summer Time started on Sunday 25 March 2012
->>
->>     - Wednesday 11 April 2012, Daytime
->>       - US
->>         9am in **San Francisco** - ****US**** PDT (Pacific Daylight Time=
-)
->>         10am in **Colorado** - ****US**** MDT (Mountain Daylight Time)
->>         11am in Chicago - ****US**** CDT (Central Daylight Time)
->>         12pm in **New York** - ****US**** EDT (Eastern Daylight Time)
->>       - **Europe**
->>         6pm in ****Berlin**** - CEST (Central European Summer Time)
->>
->>     * Main Number (Till Kamppeter, LF, leader)
->>       International: +1-218-936-7999
->>       Access Code:   491659#
->>
->> (2) April 2012 - Joint PWG / Open Printing ****Summit****
->>     - Note - OPS is NOT hosted by Linux Foundation Collaboration Summit
->>
->>     - Tuesday to Friday 24-27 April 2012 at Apple in ****Cupertino**, **
->> CA****
->>       - US
->>         9am in **San Francisco** - ****US**** PDT (Pacific Daylight Time=
-)
->>         10am in **Colorado** - ****US**** MDT (Mountain Daylight Time)
->>         11am in Chicago - ****US**** CDT (Central Daylight Time)
->>         12pm in **New York** - ****US**** EDT (Eastern Daylight Time)
->>       - **Europe**
->>         6pm in ****Berlin**** - CEST (Central European Summer Time)
->>
->>     * Main PWG Number (Mike Sweet, Apple, leader)
->>       US Toll-Free:  +1-866-469-3239
->>       International: +1-650-429-3300
->>       Access Code:   By request to Ira McDonald (do NOT publish)
->>
->> (3) May 2012 - US/Europe - OP Monthly Meeting
->>     - Note - Joint PWG/OPS is 24-27 April at Apple in ****Cupertino**, *=
-*
->> CA****
->>     - Note - Ubuntu Developer Summit is 7-11 May in ****Oakland**, **CA*=
-*
->> **
->>     - Note - Ira has a conflict on 16 May
->>
->>     - Wednesday 23 May 2012, Daytime
->>       - US
->>         9am in **San Francisco** - ****US**** PDT (Pacific Daylight Time=
-)
->>         10am in **Colorado** - ****US**** MDT (Mountain Daylight Time)
->>         11am in Chicago - ****US**** CDT (Central Daylight Time)
->>         12pm in **New York** - ****US**** EDT (Eastern Daylight Time)
->>       - **Europe**
->>         6pm in ****Berlin**** - CEST (Central European Summer Time)
->>
->>     * Main Number (Till Kamppeter, LF, leader)
->>       International: +1-218-936-7999
->>       Access Code:   491659#
->>
->> Cheers,
->> - Ira
->>
->> Ira McDonald (Musician / Software Architect)
->> Chair - Linux Foundation Open Printing WG
->> Secretary - IEEE-ISTO Printer Working Group
->> Co-Chair - IEEE-ISTO PWG IPP WG
->> Co-Chair - TCG Trusted Mobility Solutions WG
->> Chair - TCG Embedded Systems Hardcopy SG
->> IETF Designated Expert - IPP & Printer MIB
->> Blue Roof Music/High North Inc
->> http://sites.google.com/site/blueroofmusic
->> http://sites.google.com/site/highnorthinc
->> mailto:blueroofmusic@gmail.com
->> Winter  ****579 Park Place**  **Saline**, **MI**  **48176****
->> 734-944-0094
->> Summer  ****PO Box** 221**  Grand ****Marais**, **MI** **49839****
->> 906-494-2434****
->>
->>  ****
->>
->> _______________________________________________
->> Printing-summit mailing list
->> Printing-summit@lists.linux-foundation.org
->> https://lists.linuxfoundation.org/mailman/listinfo/printing-summit****
->>
->>  ****
->>
->>   ****
->>
->>  ****
->>
->>  ****
->>
->> ** **
->>
->
->
 
---f46d04463126f8d28404bcb8d751
-Content-Type: text/html; charset=UTF-8
+------_=_NextPart_001_01CD1118.BED1E4BC
+Content-Type: text/html;
+	charset="us-ascii"
 Content-Transfer-Encoding: quoted-printable
 
-To continue my last email I wanted to say that I would like it if Glen cont=
-inued to be my mentor. My biggest concern is about code quality and I think=
- he can provide the criticism and code review I need to improve. <br><br>
-What exactly is the issue with implementing a micro job ticket backend? It =
-was my understanding that MJT would be a simple job ticket format and thus =
-a good one to implement as an example/development backend. Is there a reaso=
-n we might need to alter the MJT standard?<br>
-<br>Daniel<br><br><div class=3D"gmail_quote">2012=E5=B9=B44=E6=9C=882=E6=97=
-=A511:37 Daniel Dressler <span dir=3D"ltr">&lt;<a href=3D"mailto:danieru.dr=
-essler@gmail.com" target=3D"_blank">danieru.dressler@gmail.com</a>&gt;</spa=
-n>:<br><blockquote class=3D"gmail_quote" style=3D"margin:0 0 0 .8ex;border-=
-left:1px #ccc solid;padding-left:1ex">
-
-Sorry Glen and everyone, I forgot to reply-all, here is the email I sent an=
- hour ago which only glen received:<div><br><br>Thank you Glen and Ira for =
-having this discussion its been helpful for me and my understanding of jtap=
-i.<br>
-
-
-<br>My
- original understanding of jtapi was I think closer to ira&#39;s. That is t=
-o
- say that producing and consuming a job ticket would be the primary use=20
-cases driving jtapi development. A transformation server would then be a
- bonus feature once we have enough well tested producing/consuming=20
-backend plugins.<br>
-<br>I think a scenario where programmers roll their own implementation=20
-would be very suboptimal. It would require any programmer who wants to=20
-produce a job ticket to learn the standard. The wealth of independent=20
-implementations would leave massive room for bugs.<br>
-<br>By concentrating the implementation effort into jtapi we get a=20
-library that will handle all the odd cases for all job ticekts for=20
-programmers with less effort on their part than it would take to produce
- even the simplest job ticket. This should encourage job ticket adoption
- and be a win for productivity.<br>
-<br>Sorry I have more to say but it&#39;ll have to wait until after my clas=
-ses.<br><br>Daniel<br><br></div><div class=3D"gmail_quote">2012=E5=B9=B44=
-=E6=9C=882=E6=97=A511:33 Petrie, Glen <span dir=3D"ltr">&lt;<a href=3D"mail=
-to:glen.petrie@eitc.epson.com" target=3D"_blank">glen.petrie@eitc.epson.com=
-</a>&gt;</span>:<div>
-
-<div><br>
-<blockquote class=3D"gmail_quote" style=3D"margin:0 0 0 .8ex;border-left:1p=
-x #ccc solid;padding-left:1ex">
-
-
-
-
-
-<u></u>
-<u></u>
-<u></u>
-<u></u>
-<u></u>
-<u></u>
-<u></u>
-
-
-
-
-
-<div link=3D"blue" vlink=3D"blue" lang=3D"EN-US">
-
-<div>
-
-<p class=3D"MsoNormal"><font color=3D"blue" face=3D"Cambria" size=3D"3"><sp=
-an style=3D"font-size:12.0pt;font-family:Cambria;color:blue">Ok, we will pr=
-oceed with Ira=E2=80=99s and
-Daniel=E2=80=99s understanding.=C2=A0 We make a transform service another d=
-ay.<u></u><u></u></span></font></p>
-
-<p class=3D"MsoNormal"><font color=3D"blue" face=3D"Cambria" size=3D"3"><sp=
-an style=3D"font-size:12.0pt;font-family:Cambria;color:blue"><u></u>=C2=A0<=
-u></u></span></font></p>
-
-<p class=3D"MsoNormal"><font color=3D"blue" face=3D"Cambria" size=3D"3"><sp=
-an style=3D"font-size:12.0pt;font-family:Cambria;color:blue">Glen<u></u><u>=
-</u></span></font></p>
-
-<p class=3D"MsoNormal"><font color=3D"blue" face=3D"Cambria" size=3D"3"><sp=
-an style=3D"font-size:12.0pt;font-family:Cambria;color:blue"><u></u>=C2=A0<=
-u></u></span></font></p>
-
-<p class=3D"MsoNormal"><font color=3D"blue" face=3D"Cambria" size=3D"3"><sp=
-an style=3D"font-size:12.0pt;font-family:Cambria;color:blue"><u></u>=C2=A0<=
-u></u></span></font></p>
-
-<div>
-
-<div class=3D"MsoNormal" style=3D"text-align:center" align=3D"center"><font=
- face=3D"Times New Roman" size=3D"3"><span style=3D"font-size:12.0pt">
-
-<hr align=3D"center" size=3D"2" width=3D"100%">
-
-</span></font></div>
-
-<p class=3D"MsoNormal"><b><font face=3D"Tahoma"><span style=3D"font-size:10=
-.0pt;font-family:Tahoma;font-weight:bold">From:</span></font></b><font face=
-=3D"Tahoma"><span style=3D"font-size:10.0pt;font-family:Tahoma"> Daniel Dre=
-ssler
-[mailto:<a href=3D"mailto:danieru.dressler@gmail.com" target=3D"_blank">dan=
-ieru.dressler@gmail.com</a>] <br>
-<b><span style=3D"font-weight:bold">Sent:</span></b> Monday, April 02, 2012=
- 9:46
-AM<br>
-<b><span style=3D"font-weight:bold">To:</span></b> Petrie, Glen</span></fon=
-t></p><div><div><font face=3D"Tahoma"><br>
-<b><span style=3D"font-weight:bold">Subject:</span></b> Re:
-[Printing-architecture] [Printing-summit] OPS Preparationminutes (28 March
-2012)</font></div></div><u></u><u></u><p></p>
-
-</div><div><div>
-
-<p class=3D"MsoNormal"><font face=3D"Times New Roman" size=3D"3"><span styl=
-e=3D"font-size:12.0pt"><u></u>=C2=A0<u></u></span></font></p>
-
-<p class=3D"MsoNormal" style=3D"margin-bottom:12.0pt"><font face=3D"Times N=
-ew Roman" size=3D"3"><span style=3D"font-size:12.0pt">Thank you Glen and Ir=
-a
-for having this discussion its been helpful for me and my understanding of
-jtapi.<br>
-<br>
-My original understanding of jtapi was I think closer to ira&#39;s. That is=
- to say
-that producing and consuming a job ticket would be the primary use cases
-driving jtapi development. A transformation server would then be a bonus
-feature once we have enough well tested producing/consuming backend plugins=
-.<br>
-<br>
-I think a scenario where programmers roll their own implementation would be
-very suboptimal. It would require any programmer who wants to produce a job
-ticket to learn the standard. The wealth of independent implementations wou=
-ld
-leave massive room for bugs.<br>
-<br>
-By concentrating the implementation effort into jtapi we get a library that
-will handle all the odd cases for all job ticekts for programmers with less
-effort on their part than it would take to produce even the simplest job
-ticket. This should encourage job ticket adoption and be a win for
-productivity.<br>
-<br>
-Sorry I have more to say but it&#39;ll have to wait until after my classes.=
-<br>
-<br>
-Daniel<br>
-<br>
-<u></u><u></u></span></font></p>
-
-<div>
-
-<p class=3D"MsoNormal"><font face=3D"Times New Roman" size=3D"3"><span styl=
-e=3D"font-size:12.0pt">2012</span></font><font face=3D"MS Mincho"><span sty=
-le=3D"font-family:&quot;MS Mincho&quot;">=E5=B9=B4</span></font>4<font face=
-=3D"MS Mincho"><span style=3D"font-family:&quot;MS Mincho&quot;">=E6=9C=88<=
-/span></font>2<font face=3D"MS Mincho"><span style=3D"font-family:&quot;MS =
-Mincho&quot;">=E6=97=A5</span></font>9:57
-Petrie, Glen &lt;<a href=3D"mailto:glen.petrie@eitc.epson.com" target=3D"_b=
-lank">glen.petrie@eitc.epson.com</a>&gt;:<u></u><u></u></p>
-
-<div link=3D"blue" vlink=3D"blue">
-
-<div>
-
-<p class=3D"MsoNormal"><font color=3D"blue" face=3D"Cambria" size=3D"3"><sp=
-an style=3D"font-size:12.0pt;font-family:Cambria;color:blue">Wow!=C2=A0 I h=
-ave a different scenario.</span></font><u></u><u></u></p>
-
-<p class=3D"MsoNormal"><font color=3D"blue" face=3D"Cambria" size=3D"3"><sp=
-an style=3D"font-size:12.0pt;font-family:Cambria;color:blue">=C2=A0</span><=
-/font><u></u><u></u></p>
-
-<p class=3D"MsoNormal"><font color=3D"blue" face=3D"Cambria" size=3D"3"><sp=
-an style=3D"font-size:12.0pt;font-family:Cambria;color:blue">I see generati=
-on of a Print Job Ticket by a Print Client as a very
-simple process.=C2=A0=C2=A0 Using C-Code as an example; it is nothing more =
-that
-a collection of canned =E2=80=9Cprintf=E2=80=9D statement were the argument=
- are the Print
-Intent values expressed in the specific Print Job Ticket
-=E2=80=9Clanguage=E2=80=9D.=C2=A0=C2=A0 The Print Client only wants to outp=
-ut one Print Job
-Ticket format, not one of several. </span></font><u></u><u></u></p>
-
-<p class=3D"MsoNormal"><font color=3D"blue" face=3D"Cambria" size=3D"3"><sp=
-an style=3D"font-size:12.0pt;font-family:Cambria;color:blue">=C2=A0</span><=
-/font><u></u><u></u></p>
-
-<p class=3D"MsoNormal"><font color=3D"blue" face=3D"Cambria" size=3D"3"><sp=
-an style=3D"font-size:12.0pt;font-family:Cambria;color:blue">I see parsing =
-Print Job Ticket by a Print Service as an equally simple
-process; although there is a lot of content/data checking. =C2=A0=C2=A0The
-Print Service only wants to accept one Print Job Ticket format, not one of
-several.</span></font><u></u><u></u></p>
-
-<p class=3D"MsoNormal"><font color=3D"blue" face=3D"Cambria" size=3D"3"><sp=
-an style=3D"font-size:12.0pt;font-family:Cambria;color:blue">=C2=A0</span><=
-/font><u></u><u></u></p>
-
-<p class=3D"MsoNormal"><font color=3D"blue" face=3D"Cambria" size=3D"3"><sp=
-an style=3D"font-size:12.0pt;font-family:Cambria;color:blue">The difficult =
-part is when the Print Client Print Job Ticket format
-does not match the Print Service Print Job Ticket format =E2=80=93 an imped=
-ance
-mismatch; thus, JTAPI, provides the impedance matching or a transform servi=
-ce. </span></font><u></u><u></u></p>
-
-<p class=3D"MsoNormal"><font color=3D"blue" face=3D"Cambria" size=3D"3"><sp=
-an style=3D"font-size:12.0pt;font-family:Cambria;color:blue">=C2=A0</span><=
-/font><u></u><u></u></p>
-
-<p class=3D"MsoNormal"><font color=3D"blue" face=3D"Cambria" size=3D"3"><sp=
-an style=3D"font-size:12.0pt;font-family:Cambria;color:blue">What you are o=
-utlining implies that a Print Client or Print Service
-internally would need to use a set of data structures and definitions that
-supports JTAPI, where it may better for the Print Client or Print Service t=
-o
-support the Print Job Ticket more directly.=C2=A0=C2=A0 This does lead to t=
-he
-ever pending problem of =E2=80=9CCommon=E2=80=9D; either a Common Print Cli=
-ent or even a Common
-Print Service.=C2=A0 For a Common Print Client it implies what =E2=80=9CLab=
-el=E2=80=9D or
-=E2=80=9CName=E2=80=9D and what =E2=80=9Cvalues=E2=80=9D should be displaye=
-d. =C2=A0=C2=A0If JTAPI definitions,
-values and names are to be used; then, JTAPI become useful for converting a=
-ny
-Print Job Ticket to a common internal format for every one to use.
-=C2=A0=C2=A0I like this idea.</span></font><u></u><u></u></p>
-
-<p class=3D"MsoNormal"><font color=3D"blue" face=3D"Cambria" size=3D"3"><sp=
-an style=3D"font-size:12.0pt;font-family:Cambria;color:blue">=C2=A0</span><=
-/font><u></u><u></u></p>
-
-<p class=3D"MsoNormal"><font color=3D"blue" face=3D"Cambria" size=3D"3"><sp=
-an style=3D"font-size:12.0pt;font-family:Cambria;color:blue">The same conce=
-pt applies to capabilities information which is based
-Print Job Ticket formats/definitions. </span></font><u></u><u></u></p>
-
-<p class=3D"MsoNormal"><font color=3D"blue" face=3D"Cambria" size=3D"3"><sp=
-an style=3D"font-size:12.0pt;font-family:Cambria;color:blue">=3D=3D=3D=3D=
-=3D=3D=3D=3D=3D=3D=3D=3D</span></font><u></u><u></u></p>
-
-<p class=3D"MsoNormal"><font color=3D"blue" face=3D"Cambria" size=3D"3"><sp=
-an style=3D"font-size:12.0pt;font-family:Cambria;color:blue">For the GSOC t=
-he time constraint, we may only get Print Job Ticket
-format Foo converted to an internal structure.=C2=A0=C2=A0 We can try to bo=
-th
-read and write of that Print Job Ticket format. </span></font><u></u><u></u=
-></p>
-
-<p class=3D"MsoNormal"><font color=3D"blue" face=3D"Cambria" size=3D"3"><sp=
-an style=3D"font-size:12.0pt;font-family:Cambria;color:blue">=3D=3D=3D=3D=
-=3D=3D=3D=3D=3D=3D=3D=3D</span></font><u></u><u></u></p>
-
-<p class=3D"MsoNormal"><font color=3D"blue" face=3D"Cambria" size=3D"3"><sp=
-an style=3D"font-size:12.0pt;font-family:Cambria;color:blue">Since there ma=
-y be an issue using or modifying MJT (copyright,
-etc), I will create a very simple MIT license Print Job Ticket format for J=
-TAPI
-GSOC.=C2=A0=C2=A0 Again, the goal of JTAPI this year is end-to-end code wit=
-h a
-very well documented set of code that will be used as illustration of
-implementing JTAPI.=C2=A0=C2=A0 The Print Job Ticket format is not importan=
-t
-this year.=C2=A0 Next year or in a separate project, a standardized Print J=
-ob Ticket
-format can be instantiated. </span></font><u></u><u></u></p>
-
-<p class=3D"MsoNormal"><font color=3D"blue" face=3D"Cambria" size=3D"3"><sp=
-an style=3D"font-size:12.0pt;font-family:Cambria;color:blue">=C2=A0</span><=
-/font><u></u><u></u></p>
-
-<p class=3D"MsoNormal"><font color=3D"blue" face=3D"Cambria" size=3D"3"><sp=
-an style=3D"font-size:12.0pt;font-family:Cambria;color:blue">Glen</span></f=
-ont><u></u><u></u></p>
-
-<p class=3D"MsoNormal"><font color=3D"blue" face=3D"Cambria" size=3D"3"><sp=
-an style=3D"font-size:12.0pt;font-family:Cambria;color:blue">=C2=A0</span><=
-/font><u></u><u></u></p>
-
-<p class=3D"MsoNormal"><font color=3D"blue" face=3D"Cambria" size=3D"3"><sp=
-an style=3D"font-size:12.0pt;font-family:Cambria;color:blue">=C2=A0</span><=
-/font><u></u><u></u></p>
-
-<div>
-
-<div class=3D"MsoNormal" style=3D"text-align:center" align=3D"center"><font=
- face=3D"Times New Roman" size=3D"3"><span style=3D"font-size:12.0pt">
-
-<hr align=3D"center" size=3D"2" width=3D"100%">
-
-</span></font></div>
-
-<p class=3D"MsoNormal"><b><font face=3D"Tahoma"><span style=3D"font-size:10=
-.0pt;font-family:Tahoma;font-weight:bold">From:</span></font></b><font face=
-=3D"Tahoma"><span style=3D"font-size:10.0pt;font-family:Tahoma"> Ira McDona=
-ld [mailto:<a href=3D"mailto:blueroofmusic@gmail.com" target=3D"_blank">blu=
-eroofmusic@gmail.com</a>]
-<br>
-<b><span style=3D"font-weight:bold">Sent:</span></b> Monday, April 02, 2012=
- 8:12
-AM</span></font><u></u><u></u></p>
-
-<div>
-
-<div>
-
-<p class=3D"MsoNormal"><font face=3D"Tahoma" size=3D"3"><span style=3D"font=
--size:12.0pt;font-family:Tahoma"><br>
-<b><span style=3D"font-weight:bold">To:</span></b> Petrie, Glen; Ira McDona=
-ld<br>
-<b><span style=3D"font-weight:bold">Cc:</span></b> Daniel Dressler; <a href=
-=3D"mailto:printing-architecture@lists.linux-foundation.org" target=3D"_bla=
-nk">printing-architecture@lists.linux-foundation.org</a>;
-<a href=3D"mailto:printing-summit@lists.linux-foundation.org" target=3D"_bl=
-ank">printing-summit@lists.linux-foundation.org</a><br>
-<b><span style=3D"font-weight:bold">Subject:</span></b> Re:
-[Printing-architecture] [Printing-summit] OPS Preparationminutes (28 March
-2012)</span></font><u></u><u></u></p>
-
-</div>
-
-</div>
-
-</div>
-
-<div>
-
-<div>
-
-<p class=3D"MsoNormal"><font face=3D"Times New Roman" size=3D"3"><span styl=
-e=3D"font-size:12.0pt">=C2=A0<u></u><u></u></span></font></p>
-
-<p class=3D"MsoNormal"><font face=3D"Times New Roman" size=3D"3"><span styl=
-e=3D"font-size:12.0pt">Hi Glen,<br>
-<br>
-I agree with you that the *3rd* use case is a Client producing<br>
-JDF and and PrintService converting it to PJT w/ JTAPI.<br>
-<br>
-But the other two use cases (I think the dominant ones)<br>
-don&#39;t involve ANY conversion:<br>
-<br>
-(1) Client builds an abstract job ticket using JTAPI and says<br>
-write it out to a given format.<br>
-<br>
-(2) PrintService accepts that concrete job ticket and parses<br>
-it w/ JTAPI and uses the JTAPI parsed attributes as input<br>
-to the Scheduler and Interpreter subunits to process the<br>
-job.<br>
-<br>
-Your=C2=A0 3rd use case of conversion of formats can&#39;t be<br>
-demonstrated without at least 2 backends - it&#39;s harder,<br>
-not simpler.<br>
-<br>
-For all I care there&#39;s a reference only backend that writes<br>
-out (and reads in/parses) only an internal C struct form<br>
-of a job ticket.=C2=A0 <br>
-<br>
-Or writes out MJT, but it That intellectual property and<br>
-status issues - the spec is PWG copyrighted and it&#39;s<br>
-a whitepaper, not an approved PWG project (that is, we<br>
-CANNOT modify MJT w/out PWG permission).<br>
-<br>
-WDYT?<br>
-<br>
-Cheers,<br>
-- Ira<br>
-<br>
-<br>
-<br clear=3D"all">
-Ira McDonald (Musician / Software Architect)<br>
-Chair - Linux Foundation Open Printing WG<br>
-Secretary - IEEE-ISTO Printer Working Group<br>
-Co-Chair - IEEE-ISTO PWG IPP WG<br>
-Co-Chair - TCG Trusted Mobility Solutions WG<br>
-Chair - TCG Embedded Systems Hardcopy SG<br>
-IETF Designated Expert - IPP &amp; Printer MIB<br>
-Blue Roof Music/High North Inc<br>
-<a href=3D"http://sites.google.com/site/blueroofmusic" target=3D"_blank"><f=
-ont color=3D"#3333ff"><span style=3D"color:#3333ff">http://sites.google.com=
-/site/blueroofmusic</span></font></a><br>
-<a href=3D"http://sites.google.com/site/highnorthinc" target=3D"_blank"><fo=
-nt color=3D"#6600cc"><span style=3D"color:#6600cc">http://sites.google.com/=
-site/highnorthinc</span></font></a><br>
-mailto:<a href=3D"mailto:blueroofmusic@gmail.com" target=3D"_blank">blueroo=
-fmusic@gmail.com</a><br>
-Winter=C2=A0 <u></u><u></u>579 Park Place<u></u>=C2=A0
- <u></u>Saline<u></u>, <u></u>MI<u></u>=C2=A0
- <u></u>48176<u></u><u></u>=C2=A0 <a href=3D"tel:734-944-0094" value=3D"+17=
-349440094" target=3D"_blank">734-944-0094</a><br>
-Summer=C2=A0 <u></u><u></u>PO Box<u></u>
- 221<u></u>=C2=A0 Grand <u></u><u></u>Marais<u></u>,
- <u></u>MI<u></u> <u></u>49839<u></u><u></u>=C2=A0
-<a href=3D"tel:906-494-2434" value=3D"+19064942434" target=3D"_blank">906-4=
-94-2434</a><u></u><u></u></span></font></p>
-
-<p class=3D"MsoNormal" style=3D"margin-bottom:12.0pt"><font face=3D"Times N=
-ew Roman" size=3D"3"><span style=3D"font-size:12.0pt"><u></u>=C2=A0<u></u><=
-/span></font></p>
-
-<div>
-
-<p class=3D"MsoNormal"><font face=3D"Times New Roman" size=3D"3"><span styl=
-e=3D"font-size:12.0pt">2012/4/2 Petrie,
-Glen &lt;<a href=3D"mailto:glen.petrie@eitc.epson.com" target=3D"_blank">gl=
-en.petrie@eitc.epson.com</a>&gt;<u></u><u></u></span></font></p>
-
-<div link=3D"blue" vlink=3D"blue">
-
-<div>
-
-<p class=3D"MsoNormal"><font color=3D"blue" face=3D"Cambria" size=3D"3"><sp=
-an style=3D"font-size:12.0pt;font-family:Cambria;color:blue">Ira,</span></f=
-ont><u></u><u></u></p>
-
-<p class=3D"MsoNormal"><font color=3D"blue" face=3D"Cambria" size=3D"3"><sp=
-an style=3D"font-size:12.0pt;font-family:Cambria;color:blue">=C2=A0</span><=
-/font><u></u><u></u></p>
-
-<p class=3D"MsoNormal"><font color=3D"blue" face=3D"Cambria" size=3D"3"><sp=
-an style=3D"font-size:12.0pt;font-family:Cambria;color:blue">I must admit t=
-o being totally confused.=C2=A0=C2=A0 I always under
-the impression that JTAPI was a classic definition of a transform service a=
-nd
-not just a job ticket interpreter for a Print Service.=C2=A0=C2=A0=C2=A0 I
-thought a transform service accepts one document format and product a diffe=
-rent
-document format; which is what I thought JTAPI did.=C2=A0 Example, accept a=
- JDF
-job ticket and produce a PWG job ticket.=C2=A0 </span></font><u></u><u></u>=
-</p>
-
-<p class=3D"MsoNormal"><font color=3D"blue" face=3D"Cambria" size=3D"3"><sp=
-an style=3D"font-size:12.0pt;font-family:Cambria;color:blue">=C2=A0</span><=
-/font><u></u><u></u></p>
-
-<p class=3D"MsoNormal"><font color=3D"blue" face=3D"Cambria" size=3D"3"><sp=
-an style=3D"font-size:12.0pt;font-family:Cambria;color:blue">What you descr=
-ibe below is what I would call it an interpreter and,
-maybe, that you have considered JTAPI to be. =C2=A0=C2=A0=C2=A0Then, at lea=
-st
-to me, the existing JTAPI may not be what is needed.=C2=A0=C2=A0 What is ne=
-eded
-is a generic JDF interpreter, a PWG:PJT interpreter, =E2=80=A6; that is, wh=
-at I called
-the front-end to JTAPI.</span></font><u></u><u></u></p>
-
-<p class=3D"MsoNormal"><font color=3D"blue" face=3D"Cambria" size=3D"3"><sp=
-an style=3D"font-size:12.0pt;font-family:Cambria;color:blue">=C2=A0</span><=
-/font><u></u><u></u></p>
-
-<p class=3D"MsoNormal"><font color=3D"blue" face=3D"Cambria" size=3D"3"><sp=
-an style=3D"font-size:12.0pt;font-family:Cambria;color:blue">I always saw t=
-he use case as:=C2=A0 A Print Service accepts PWG:PJT
-but the Print Client produced JDF.=C2=A0=C2=A0 Thus, the either the Print
-Client or the Print Service uses the JTAPI Transform Service to transform J=
-DF
-to PJT.=C2=A0 =C2=A0=C2=A0The Print Service would already have its own
-interpreter to parse PWG:PJT into what ever internal format the Print Servi=
-ce
-needed or used. =C2=A0=C2=A0[ I had always hoped that someday we could have=
- a
-defined a the internal format that everyone would use but I don=E2=80=99t t=
-hink that
-will ever happen.]</span></font><u></u><u></u></p>
-
-<p class=3D"MsoNormal"><font color=3D"blue" face=3D"Cambria" size=3D"3"><sp=
-an style=3D"font-size:12.0pt;font-family:Cambria;color:blue">=C2=A0</span><=
-/font><u></u><u></u></p>
-
-<p class=3D"MsoNormal"><font color=3D"blue" face=3D"Cambria" size=3D"3"><sp=
-an style=3D"font-size:12.0pt;font-family:Cambria;color:blue">From my use ca=
-se, JTAPI would need the ability to transform many
-possible input public and private job ticket formats; JTAPI, itself would h=
-ave
-an internally data structure capable of containing content from many input =
-Job
-Ticket to be able to produce differing output Job Tickets.</span></font><u>=
-</u><u></u></p>
-
-<p class=3D"MsoNormal"><font color=3D"blue" face=3D"Cambria" size=3D"3"><sp=
-an style=3D"font-size:12.0pt;font-family:Cambria;color:blue">=C2=A0</span><=
-/font><u></u><u></u></p>
-
-<p class=3D"MsoNormal"><font color=3D"blue" face=3D"Cambria" size=3D"3"><sp=
-an style=3D"font-size:12.0pt;font-family:Cambria;color:blue">I am not sure =
-what to do now.=C2=A0 I may not be the best person to
-guide the Daniel on the first JTAPI project since I not seem to have the
-correct understanding.=C2=A0=C2=A0 Ira, perhaps, you should mentor Daniel o=
-n
-the core (the first) JTAPI project so that the actual intent is produced.=
-=C2=A0
-I will mentor another student for the second JTAPI project following your=
-=E2=80=99s and
-Daniel=E2=80=99s lead. </span></font><u></u><u></u></p>
-
-<p class=3D"MsoNormal"><font color=3D"blue" face=3D"Cambria" size=3D"3"><sp=
-an style=3D"font-size:12.0pt;font-family:Cambria;color:blue">=C2=A0</span><=
-/font><u></u><u></u></p>
-
-<p class=3D"MsoNormal"><font color=3D"blue" face=3D"Cambria" size=3D"3"><sp=
-an style=3D"font-size:12.0pt;font-family:Cambria;color:blue">Glen</span></f=
-ont><u></u><u></u></p>
-
-<p class=3D"MsoNormal"><font color=3D"blue" face=3D"Cambria" size=3D"3"><sp=
-an style=3D"font-size:12.0pt;font-family:Cambria;color:blue">=C2=A0</span><=
-/font><u></u><u></u></p>
-
-<p class=3D"MsoNormal"><font color=3D"blue" face=3D"Cambria" size=3D"3"><sp=
-an style=3D"font-size:12.0pt;font-family:Cambria;color:blue">=C2=A0</span><=
-/font><u></u><u></u></p>
-
-<div>
-
-<div class=3D"MsoNormal" style=3D"text-align:center" align=3D"center"><font=
- face=3D"Times New Roman" size=3D"3"><span style=3D"font-size:12.0pt">
-
-<hr align=3D"center" size=3D"2" width=3D"100%">
-
-</span></font></div>
-
-<p class=3D"MsoNormal"><b><font face=3D"Tahoma"><span style=3D"font-size:10=
-.0pt;font-family:Tahoma;font-weight:bold">From:</span></font></b><font face=
-=3D"Tahoma"><span style=3D"font-size:10.0pt;font-family:Tahoma"> Ira McDona=
-ld [mailto:<a href=3D"mailto:blueroofmusic@gmail.com" target=3D"_blank">blu=
-eroofmusic@gmail.com</a>]
-<br>
-<b><span style=3D"font-weight:bold">Sent:</span></b> Sunday, April 01, 2012=
- 9:27
-PM<br>
-<b><span style=3D"font-weight:bold">To:</span></b> Petrie, Glen; Ira McDona=
-ld<br>
-<b><span style=3D"font-weight:bold">Cc:</span></b> Daniel Dressler; <a href=
-=3D"mailto:printing-architecture@lists.linux-foundation.org" target=3D"_bla=
-nk">printing-architecture@lists.linux-foundation.org</a>;
-<a href=3D"mailto:printing-summit@lists.linux-foundation.org" target=3D"_bl=
-ank">printing-summit@lists.linux-foundation.org</a></span></font><u></u><u>=
-</u></p>
-
-<div>
-
-<div>
-
-<p class=3D"MsoNormal"><font face=3D"Tahoma" size=3D"3"><span style=3D"font=
--size:12.0pt;font-family:Tahoma"><br>
-<b><span style=3D"font-weight:bold">Subject:</span></b> Re:
-[Printing-architecture] [Printing-summit] OPS Preparationminutes (28 March
-2012)</span></font><u></u><u></u></p>
-
-</div>
-
-</div>
-
-</div>
-
-<div>
-
-<div>
-
-<p class=3D"MsoNormal"><font face=3D"Times New Roman" size=3D"3"><span styl=
-e=3D"font-size:12.0pt">=C2=A0<u></u><u></u></span></font></p>
-
-<p class=3D"MsoNormal"><font face=3D"Times New Roman" size=3D"3"><span styl=
-e=3D"font-size:12.0pt">Hi Glen,<br>
-<br>
-I strongly disagree - this is *not* the OP Job Ticket<br>
-Transform Service.<br>
-<br>
-The first use for a client is to create a NEW job<br>
-ticket (in the abstract API) and write it out into some<br>
-concrete format (with a backend).<br>
-<br>
-Clients mostly won&#39;t modify existing job tickets.<br>
-<br>
-And PrintServices will just use JTAPI to parse the<br>
-job ticket once (in whatever format) and use the<br>
-values in the actual Interpreter and Scheduler<br>
-miodules.<br>
-<br>
-Conversion of Job Ticket formats is the tertiary<br>
-use case.<br>
-<br>
-Cheers,<br>
-- Ira<br>
-<br clear=3D"all">
-Ira McDonald (Musician / Software Architect)<br>
-Chair - Linux Foundation Open Printing WG<br>
-Secretary - IEEE-ISTO Printer Working Group<br>
-Co-Chair - IEEE-ISTO PWG IPP WG<br>
-Co-Chair - TCG Trusted Mobility Solutions WG<br>
-Chair - TCG Embedded Systems Hardcopy SG<br>
-IETF Designated Expert - IPP &amp; Printer MIB<br>
-Blue Roof Music/High North Inc<br>
-<a href=3D"http://sites.google.com/site/blueroofmusic" target=3D"_blank"><f=
-ont color=3D"#3333ff"><span style=3D"color:#3333ff">http://sites.google.com=
-/site/blueroofmusic</span></font></a><br>
-<a href=3D"http://sites.google.com/site/highnorthinc" target=3D"_blank"><fo=
-nt color=3D"#6600cc"><span style=3D"color:#6600cc">http://sites.google.com/=
-site/highnorthinc</span></font></a><br>
-mailto:<a href=3D"mailto:blueroofmusic@gmail.com" target=3D"_blank">blueroo=
-fmusic@gmail.com</a><br>
-Winter=C2=A0 <u></u><u></u>579 Park Place<u></u>=C2=A0
- <u></u>Saline<u></u>, <u></u>MI<u></u>=C2=A0
- <u></u>48176<u></u><u></u>=C2=A0 <a href=3D"tel:734-944-0094" value=3D"+17=
-349440094" target=3D"_blank">734-944-0094</a><br>
-Summer=C2=A0 <u></u><u></u>PO Box<u></u>
- 221<u></u>=C2=A0 Grand <u></u><u></u>Marais<u></u>,
- <u></u>MI<u></u> <u></u>49839<u></u><u></u>=C2=A0
-<a href=3D"tel:906-494-2434" value=3D"+19064942434" target=3D"_blank">906-4=
-94-2434</a><u></u><u></u></span></font></p>
-
-<p class=3D"MsoNormal" style=3D"margin-bottom:12.0pt"><font face=3D"Times N=
-ew Roman" size=3D"3"><span style=3D"font-size:12.0pt">=C2=A0<u></u><u></u><=
-/span></font></p>
-
-<div>
-
-<p class=3D"MsoNormal"><font face=3D"Times New Roman" size=3D"3"><span styl=
-e=3D"font-size:12.0pt">2012/3/30 Petrie,
-Glen &lt;<a href=3D"mailto:glen.petrie@eitc.epson.com" target=3D"_blank">gl=
-en.petrie@eitc.epson.com</a>&gt;<u></u><u></u></span></font></p>
-
-<div link=3D"blue" vlink=3D"blue">
-
-<div>
-
-<p class=3D"MsoNormal"><font color=3D"blue" face=3D"Cambria" size=3D"3"><sp=
-an style=3D"font-size:12.0pt;font-family:Cambria;color:blue">Ira, Daniel</s=
-pan></font><u></u><u></u></p>
-
-<p class=3D"MsoNormal"><font color=3D"blue" face=3D"Cambria" size=3D"3"><sp=
-an style=3D"font-size:12.0pt;font-family:Cambria;color:blue">=C2=A0</span><=
-/font><u></u><u></u></p>
-
-<p class=3D"MsoNormal"><font color=3D"blue" face=3D"Cambria" size=3D"3"><sp=
-an style=3D"font-size:12.0pt;font-family:Cambria;color:blue">Since there se=
-ems to be an objection with just using =E2=80=9Cop=E2=80=9D; I don=E2=80=99=
-t
-believe =E2=80=9Copjt=E2=80=9D is actually correct either.=C2=A0 That is, t=
-his is not the OpenPrinting
-Job Ticket; what it is the OpenPrinting Job Ticket Transform Service [which
-fits perfectly with PWG=E2=80=99s definition of a transform service].=C2=A0=
-=C2=A0 So an
-alternate and more descriptive lettering would be either </span></font><u><=
-/u><u></u></p>
-
-<p class=3D"MsoNormal"><font color=3D"blue" face=3D"Cambria" size=3D"3"><sp=
-an style=3D"font-size:12.0pt;font-family:Cambria;color:blue">=C2=A0</span><=
-/font><u></u><u></u></p>
-
-<p class=3D"MsoNormal"><font color=3D"blue" face=3D"Cambria" size=3D"3"><sp=
-an style=3D"font-size:12.0pt;font-family:Cambria;color:blue">=E2=80=9Copjtt=
-=E2=80=9D=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=
-=C2=A0
-=3D open printing job ticket transform</span></font><u></u><u></u></p>
-
-<p class=3D"MsoNormal"><font color=3D"blue" face=3D"Cambria" size=3D"3"><sp=
-an style=3D"font-size:12.0pt;font-family:Cambria;color:blue">=E2=80=9Copjtt=
-s=E2=80=9D=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0
-=3D open printing job ticket transform service</span></font><u></u><u></u><=
-/p>
-
-<p class=3D"MsoNormal"><font color=3D"blue" face=3D"Cambria" size=3D"3"><sp=
-an style=3D"font-size:12.0pt;font-family:Cambria;color:blue">=C2=A0</span><=
-/font><u></u><u></u></p>
-
-<p class=3D"MsoNormal"><font color=3D"blue" face=3D"Cambria" size=3D"3"><sp=
-an style=3D"font-size:12.0pt;font-family:Cambria;color:blue">&lt;The only o=
-ther suggestion is to change the formal API names
-(not the prefix) to say JobTicketXXXXXXX and DocObj____.=C2=A0 NO!&gt;</spa=
-n></font><u></u><u></u></p>
-
-<p class=3D"MsoNormal"><font color=3D"blue" face=3D"Cambria" size=3D"3"><sp=
-an style=3D"font-size:12.0pt;font-family:Cambria;color:blue">=C2=A0</span><=
-/font><u></u><u></u></p>
-
-<p class=3D"MsoNormal"><font color=3D"blue" face=3D"Cambria" size=3D"3"><sp=
-an style=3D"font-size:12.0pt;font-family:Cambria;color:blue">Glen</span></f=
-ont><u></u><u></u></p>
-
-<p class=3D"MsoNormal"><font color=3D"blue" face=3D"Cambria" size=3D"3"><sp=
-an style=3D"font-size:12.0pt;font-family:Cambria;color:blue">=C2=A0</span><=
-/font><u></u><u></u></p>
-
-<p class=3D"MsoNormal"><font color=3D"blue" face=3D"Cambria" size=3D"3"><sp=
-an style=3D"font-size:12.0pt;font-family:Cambria;color:blue">p.s. </span></=
-font><u></u><u></u></p>
-
-<p class=3D"MsoNormal" style=3D"margin-left:.5in"><font color=3D"blue" face=
-=3D"Cambria" size=3D"3"><span style=3D"font-size:12.0pt;font-family:Cambria=
-;color:blue">Please consider that this code will
-ultimately be reference code; and not reference code for execution as much =
-as
-for source code on how to make Job Ticket back-ends (and front-end).
-=C2=A0Having long prefixes for variable, variable types, routine name, etc,
-makes the code difficult to read, understand and develop. =C2=A0=C2=A0This =
-is
-not a schema, a dtd or the like; but a set of APIs that must have a front-e=
-nd
-and one or more back-ends.=C2=A0=C2=A0 =C2=A0Namespace conflicts with JTAPI=
- as
-a transform service are none since that interface will be determined by the=
- front-end..=C2=A0
-Conflicts of actual coding of the front-end and back-ends would be very
-low.=C2=A0=C2=A0 Since back-ends will likely be DLLs, there are not conflic=
-ts
-between back-ends.=C2=A0=C2=A0 My request is that, for this project, the co=
-de
-must be well structured, easy to read, easy to following and strongly
-commented. =C2=A0=C2=A0The goal is not the fastest or the fanciest code but
-code that other will read and use to develop their code. =C2=A0=C2=A0The co=
-de
-is the instruction manual. </span></font><u></u><u></u></p>
-
-<p class=3D"MsoNormal"><font color=3D"blue" face=3D"Cambria" size=3D"3"><sp=
-an style=3D"font-size:12.0pt;font-family:Cambria;color:blue">=C2=A0</span><=
-/font><u></u><u></u></p>
-
-<p class=3D"MsoNormal"><font color=3D"blue" face=3D"Cambria" size=3D"3"><sp=
-an style=3D"font-size:12.0pt;font-family:Cambria;color:blue">p.s. </span></=
-font><u></u><u></u></p>
-
-<p class=3D"MsoNormal" style=3D"margin-left:.5in"><font color=3D"blue" face=
-=3D"Cambria" size=3D"3"><span style=3D"font-size:12.0pt;font-family:Cambria=
-;color:blue">As the PWG moves forward to MFD=E2=80=99s, the
-notation of a Job Ticket becomes unclear as to what service the Job Ticket =
-is
-for.=C2=A0=C2=A0 So the descriptive lettering should be</span></font><u></u=
-><u></u></p>
-
-<p class=3D"MsoNormal" style=3D"margin-left:.5in"><font color=3D"blue" face=
-=3D"Cambria" size=3D"3"><span style=3D"font-size:12.0pt;font-family:Cambria=
-;color:blue">=C2=A0</span></font><u></u><u></u></p>
-
-<p class=3D"MsoNormal" style=3D"margin-left:.5in"><font color=3D"blue" face=
-=3D"Cambria" size=3D"3"><span style=3D"font-size:12.0pt;font-family:Cambria=
-;color:blue">oppjtt=C2=A0 openprinting print job
-ticket transform</span></font><u></u><u></u></p>
-
-<p class=3D"MsoNormal" style=3D"margin-left:.5in"><font color=3D"blue" face=
-=3D"Cambria" size=3D"3"><span style=3D"font-size:12.0pt;font-family:Cambria=
-;color:blue">oppjtts=C2=A0 openprinting print job
-ticket transform service</span></font><u></u><u></u></p>
-
-<p class=3D"MsoNormal" style=3D"margin-left:.5in"><font color=3D"blue" face=
-=3D"Cambria" size=3D"3"><span style=3D"font-size:12.0pt;font-family:Cambria=
-;color:blue">=C2=A0</span></font><u></u><u></u></p>
-
-<p class=3D"MsoNormal" style=3D"margin-left:.5in"><font color=3D"blue" face=
-=3D"Cambria" size=3D"3"><span style=3D"font-size:12.0pt;font-family:Cambria=
-;color:blue">or </span></font><u></u><u></u></p>
-
-<p class=3D"MsoNormal" style=3D"margin-left:.5in"><font color=3D"blue" face=
-=3D"Cambria" size=3D"3"><span style=3D"font-size:12.0pt;font-family:Cambria=
-;color:blue">=C2=A0</span></font><u></u><u></u></p>
-
-<p class=3D"MsoNormal" style=3D"margin-left:.5in"><font color=3D"blue" face=
-=3D"Cambria" size=3D"3"><span style=3D"font-size:12.0pt;font-family:Cambria=
-;color:blue">The current JTAPIs would have to be
-extended to support other services. =C2=A0=C2=A0Naming will be a real big
-problem then even considering the commonality among various service job
-tickets. </span></font><u></u><u></u></p>
-
-<p class=3D"MsoNormal"><font color=3D"blue" face=3D"Cambria" size=3D"3"><sp=
-an style=3D"font-size:12.0pt;font-family:Cambria;color:blue">=C2=A0</span><=
-/font><u></u><u></u></p>
-
-<p class=3D"MsoNormal"><font color=3D"blue" face=3D"Cambria" size=3D"3"><sp=
-an style=3D"font-size:12.0pt;font-family:Cambria;color:blue">p.s. </span></=
-font><u></u><u></u></p>
-
-<p class=3D"MsoNormal" style=3D"margin-left:.5in"><font color=3D"blue" face=
-=3D"Cambria" size=3D"3"><span style=3D"font-size:12.0pt;font-family:Cambria=
-;color:blue">I did not see any feedback (or I missed
-it) to my suggested changes to JTAPI headers to OpenPrinting names (prefixe=
-s);
-thus, I assume the preference is to stay to the existing FSG:JTAPI header
-file.=C2=A0=C2=A0 That is, by all definitions, the correct thing to do.=C2=
-=A0
-So I guess it make the discussion of prefix unnecessary.</span></font><u></=
-u><u></u></p>
-
-<p class=3D"MsoNormal" style=3D"margin-left:.5in"><font color=3D"blue" face=
-=3D"Cambria" size=3D"3"><span style=3D"font-size:12.0pt;font-family:Cambria=
-;color:blue">=C2=A0</span></font><u></u><u></u></p>
-
-<p class=3D"MsoNormal"><font color=3D"blue" face=3D"Cambria" size=3D"3"><sp=
-an style=3D"font-size:12.0pt;font-family:Cambria;color:blue">=C2=A0</span><=
-/font><u></u><u></u></p>
-
-<p class=3D"MsoNormal"><font color=3D"blue" face=3D"Cambria" size=3D"3"><sp=
-an style=3D"font-size:12.0pt;font-family:Cambria;color:blue">gwp</span></fo=
-nt><u></u><u></u></p>
-
-<p class=3D"MsoNormal"><font color=3D"blue" face=3D"Cambria" size=3D"3"><sp=
-an style=3D"font-size:12.0pt;font-family:Cambria;color:blue">=C2=A0</span><=
-/font><u></u><u></u></p>
-
-<p class=3D"MsoNormal"><font color=3D"blue" face=3D"Cambria" size=3D"3"><sp=
-an style=3D"font-size:12.0pt;font-family:Cambria;color:blue">=C2=A0</span><=
-/font><u></u><u></u></p>
-
-<p class=3D"MsoNormal"><font color=3D"blue" face=3D"Cambria" size=3D"3"><sp=
-an style=3D"font-size:12.0pt;font-family:Cambria;color:blue">=C2=A0</span><=
-/font><u></u><u></u></p>
-
-<p class=3D"MsoNormal"><font color=3D"blue" face=3D"Cambria" size=3D"3"><sp=
-an style=3D"font-size:12.0pt;font-family:Cambria;color:blue">=C2=A0</span><=
-/font><u></u><u></u></p>
-
-<p class=3D"MsoNormal"><font color=3D"blue" face=3D"Cambria" size=3D"3"><sp=
-an style=3D"font-size:12.0pt;font-family:Cambria;color:blue">=C2=A0</span><=
-/font><u></u><u></u></p>
-
-<div>
-
-<div class=3D"MsoNormal" style=3D"text-align:center" align=3D"center"><font=
- face=3D"Times New Roman" size=3D"3"><span style=3D"font-size:12.0pt">
-
-<hr align=3D"center" size=3D"2" width=3D"100%">
-
-</span></font></div>
-
-<p class=3D"MsoNormal"><b><font face=3D"Tahoma"><span style=3D"font-size:10=
-.0pt;font-family:Tahoma;font-weight:bold">From:</span></font></b><font face=
-=3D"Tahoma"><span style=3D"font-size:10.0pt;font-family:Tahoma"> <a href=3D=
-"mailto:printing-architecture-bounces@lists.linux-foundation.org" target=3D=
-"_blank">printing-architecture-bounces@lists.linux-foundation.org</a>
-[mailto:<a href=3D"mailto:printing-architecture-bounces@lists.linux-foundat=
-ion.org" target=3D"_blank">printing-architecture-bounces@lists.linux-founda=
-tion.org</a>] <b><span style=3D"font-weight:bold">On Behalf Of </span></b>I=
-ra McDonald<br>
-
-
-
-<b><span style=3D"font-weight:bold">Sent:</span></b> Wednesday, March 28, 2=
-012
-9:18 PM<br>
-<b><span style=3D"font-weight:bold">To:</span></b> Daniel Dressler; Ira McD=
-onald<br>
-<b><span style=3D"font-weight:bold">Cc:</span></b> <a href=3D"mailto:printi=
-ng-architecture@lists.linux-foundation.org" target=3D"_blank">printing-arch=
-itecture@lists.linux-foundation.org</a>;
-<a href=3D"mailto:printing-summit@lists.linux-foundation.org" target=3D"_bl=
-ank">printing-summit@lists.linux-foundation.org</a><br>
-<b><span style=3D"font-weight:bold">Subject:</span></b> Re:
-[Printing-architecture] [Printing-summit] OPS Preparationminutes (28 March
-2012)</span></font><u></u><u></u></p>
-
-</div>
-
-<div>
-
-<div>
-
-<p class=3D"MsoNormal"><font face=3D"Times New Roman" size=3D"3"><span styl=
-e=3D"font-size:12.0pt">=C2=A0<u></u><u></u></span></font></p>
-
-<p class=3D"MsoNormal" style=3D"margin-bottom:12.0pt"><font face=3D"Times N=
-ew Roman" size=3D"3"><span style=3D"font-size:12.0pt">Hi Daniel,<br>
-<br>
-Comments inline below.<br>
-<br>
-Cheers,<br>
-- Ira<u></u><u></u></span></font></p>
-
-<div>
-
-<p class=3D"MsoNormal"><font face=3D"Times New Roman" size=3D"3"><span styl=
-e=3D"font-size:12.0pt">On Wed, Mar 28,
-2012 at 7:09 PM, Daniel Dressler &lt;<a href=3D"mailto:danieru.dressler@gma=
-il.com" target=3D"_blank">danieru.dressler@gmail.com</a>&gt; wrote:<u></u><=
-u></u></span></font></p>
-
-<p class=3D"MsoNormal" style=3D"margin-bottom:12.0pt"><font face=3D"Times N=
-ew Roman" size=3D"3"><span style=3D"font-size:12.0pt">In response to
-some comments in the meeting.<br>
-<br>
-1. I would prefer an &#39;op&#39; prefix to &#39;fsgjt&#39;. I assume fsgjt=
- means free
-standards group job ticket? Since the fsg does not exist anymore I think &#=
-39;op&#39;
-would avoid confusion. And it is shorter.<u></u><u></u></span></font></p>
-
-<blockquote style=3D"border:none;border-left:solid #cccccc 1.0pt;padding:0i=
-n 0in 0in 6.0pt;margin-left:4.8pt;margin-top:5.0pt;margin-right:0in;margin-=
-bottom:5.0pt">
-
-<p class=3D"MsoNormal" style=3D"margin-bottom:12.0pt"><font face=3D"Times N=
-ew Roman" size=3D"3"><span style=3D"font-size:12.0pt">Do we know of any
-namespace conflicts with other op libraries? It&#39;s been 5+ years, has th=
-is
-situation changed?<u></u><u></u></span></font></p>
-
-</blockquote>
-
-<div>
-
-<p class=3D"MsoNormal"><font face=3D"Times New Roman" size=3D"3"><span styl=
-e=3D"font-size:12.0pt">&lt;ira&gt;<br>
-The Open Printing Vector API uses &#39;opvp&#39; as prefix throughout.<br>
-It&#39;s sloppy and amateur coding practice not to use a library <br>
-specific unique prefix (e.g., &#39;opjt&#39;) for variables and functions.<=
-br>
-<br>
-The scope is NOT just OP libraries, but the entire universe of<br>
-code that might be linked into a vendor or third-party tool.<br>
-&lt;/ira&gt;<br>
-=C2=A0<u></u><u></u></span></font></p>
-
-</div>
-
-<blockquote style=3D"border:none;border-left:solid #cccccc 1.0pt;padding:0i=
-n 0in 0in 6.0pt;margin-left:4.8pt;margin-top:5.0pt;margin-right:0in;margin-=
-bottom:5.0pt">
-
-<p class=3D"MsoNormal" style=3D"margin-bottom:12.0pt"><font face=3D"Times N=
-ew Roman" size=3D"3"><span style=3D"font-size:12.0pt">2. I will be
-attending as much of the summit as I can by phone-in, the summit takes plac=
-e
-over my finals so I will be missing some sessions.<u></u><u></u></span></fo=
-nt></p>
-
-</blockquote>
-
-<div>
-
-<p class=3D"MsoNormal" style=3D"margin-bottom:12.0pt"><font face=3D"Times N=
-ew Roman" size=3D"3"><span style=3D"font-size:12.0pt">&lt;ira&gt; <br>
-Understood - we&#39;ll be glad to have you when you can attend.<br>
-&lt;/ira&gt;<u></u><u></u></span></font></p>
-
-</div>
-
-<blockquote style=3D"border:none;border-left:solid #cccccc 1.0pt;padding:0i=
-n 0in 0in 6.0pt;margin-left:4.8pt;margin-top:5.0pt;margin-right:0in;margin-=
-bottom:5.0pt">
-
-<p class=3D"MsoNormal" style=3D"margin-bottom:12.0pt"><font face=3D"Times N=
-ew Roman" size=3D"3"><span style=3D"font-size:12.0pt">3. If the wiki has
-no history does that mean it is pointless for me to fill in the change log =
-when
-making edits?<u></u><u></u></span></font></p>
-
-</blockquote>
-
-<div>
-
-<p class=3D"MsoNormal"><font face=3D"Times New Roman" size=3D"3"><span styl=
-e=3D"font-size:12.0pt">&lt;ira&gt;<br>
-Till can hopefully answer this one - we&#39;re not any of us happy<br>
-about the move from a full-function Wiki tool to a limited Wiki<br>
-tool by the Linux Foundation.<br>
-&lt;/ira&gt;<br>
-<br>
-Daniel<u></u><u></u></span></font></p>
-
-</div>
-
-<blockquote style=3D"border:none;border-left:solid #cccccc 1.0pt;padding:0i=
-n 0in 0in 6.0pt;margin-left:4.8pt;margin-top:5.0pt;margin-right:0in;margin-=
-bottom:5.0pt">
-
-<p class=3D"MsoNormal"><font face=3D"Times New Roman" size=3D"3"><span styl=
-e=3D"font-size:12.0pt">=C2=A0<u></u><u></u></span></font></p>
-
-<div>
-
-<p class=3D"MsoNormal"><font face=3D"Times New Roman" size=3D"3"><span styl=
-e=3D"font-size:12.0pt">2012</span></font><font face=3D"MS Mincho"><span sty=
-le=3D"font-family:&quot;MS Mincho&quot;">=E5=B9=B4</span></font>3<font face=
-=3D"MS Mincho"><span style=3D"font-family:&quot;MS Mincho&quot;">=E6=9C=88<=
-/span></font>28<font face=3D"MS Mincho"><span style=3D"font-family:&quot;MS=
- Mincho&quot;">=E6=97=A5</span></font>13:38 Ira
-McDonald &lt;<a href=3D"mailto:blueroofmusic@gmail.com" target=3D"_blank">b=
-lueroofmusic@gmail.com</a>&gt;:<u></u><u></u></p>
-
-<div>
-
-<div>
-
-<p class=3D"MsoNormal"><font face=3D"Times New Roman" size=3D"3"><span styl=
-e=3D"font-size:12.0pt">Hi, <br>
-<br>
-Minutes from today&#39;s Open Printing Summit planning call are posted at:<=
-br>
-<br>
-=C2=A0<a href=3D"ftp://ftp.pwg.org/pub/pwg/openprinting/minutes/OP-Summit-P=
-rep-20120328.htm" target=3D"_blank">ftp://ftp.pwg.org/pub/pwg/openprinting/=
-minutes/OP-Summit-Prep-20120328.htm</a><br>
-<br>
-Note:=C2=A0 New FTP directory - see above<br>
-<br>
-- ACTION - Till - contact Linux Foundation about Glen/Hin-Tak updates<br>
-=C2=A0 to GSoC projects - no website fall-backs allowed until late April<br=
+<html xmlns:v=3D"urn:schemas-microsoft-com:vml" =
+xmlns:o=3D"urn:schemas-microsoft-com:office:office" =
+xmlns:w=3D"urn:schemas-microsoft-com:office:word" =
+xmlns=3D"http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=3DContent-Type content=3D"text/html; =
+charset=3Dus-ascii">
+<meta name=3DGenerator content=3D"Microsoft Word 11 (filtered medium)">
+<!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style>
+<![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:SimSun;
+	panose-1:2 1 6 0 3 1 1 1 1 1;}
+@font-face
+	{font-family:Mangal;
+	panose-1:0 0 4 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:Cambria;
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Tahoma;
+	panose-1:2 11 6 4 3 5 4 4 2 4;}
+@font-face
+	{font-family:"\@SimSun";
+	panose-1:2 1 6 0 3 1 1 1 1 1;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0in;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+h1
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:.25in;
+	text-indent:-.25in;
+	page-break-after:avoid;
+	mso-list:l2 level1 lfo4;
+	font-size:14.0pt;
+	font-family:Cambria;
+	font-weight:bold;}
+h2
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:.3in;
+	text-indent:-.3in;
+	page-break-after:avoid;
+	mso-list:l3 level2 lfo6;
+	font-size:14.0pt;
+	font-family:Cambria;
+	font-weight:bold;}
+p.MsoBodyText, li.MsoBodyText, div.MsoBodyText
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:0in;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:blue;
+	text-decoration:underline;}
+p
+	{mso-margin-top-alt:auto;
+	margin-right:0in;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+p.StyleHeading1NotBoldBlack, li.StyleHeading1NotBoldBlack, =
+div.StyleHeading1NotBoldBlack
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:.55in;
+	text-indent:-.3in;
+	page-break-after:avoid;
+	mso-list:l2 level2 lfo4;
+	font-size:14.0pt;
+	font-family:Cambria;
+	color:black;
+	font-weight:bold;}
+p.StyleAppendix, li.StyleAppendix, div.StyleAppendix
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:.25in;
+	text-align:justify;
+	text-indent:-.25in;
+	page-break-after:avoid;
+	mso-list:l3 level1 lfo6;
+	font-size:14.0pt;
+	font-family:Cambria;
+	font-weight:bold;}
+span.EmailStyle21
+	{mso-style-type:personal-reply;
+	font-family:Cambria;
+	color:blue;
+	font-weight:normal;
+	font-style:normal;
+	text-decoration:none none;}
+@page Section1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.25in 1.0in 1.25in;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+ @list l0
+	{mso-list-id:1;
+	mso-list-template-ids:1767813390;}
+@list l0:level1
+	{mso-level-suffix:space;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;
+	mso-ansi-font-size:14.0pt;
+	mso-bidi-font-size:14.0pt;
+	font-family:Cambria;
+	font-variant:normal !important;
+	color:black;
+	text-transform:none;
+	letter-spacing:0pt;
+	mso-ansi-font-weight:normal;
+	mso-bidi-font-weight:normal;
+	mso-ansi-font-style:normal;}
+@list l0:level2
+	{mso-level-text:"%1\.%2\.";
+	mso-level-tab-stop:.55in;
+	mso-level-number-position:left;
+	margin-left:.55in;
+	text-indent:-.3in;
+	mso-ansi-font-size:14.0pt;
+	mso-bidi-font-size:14.0pt;
+	font-family:Cambria;
+	font-variant:normal !important;
+	color:black;
+	text-transform:none;
+	letter-spacing:0pt;
+	mso-ansi-font-weight:normal;
+	mso-bidi-font-weight:normal;
+	mso-ansi-font-style:normal;}
+@list l0:level3
+	{mso-level-text:"%1\.%2\.%3\.";
+	mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	margin-left:.85in;
+	text-indent:-.35in;
+	mso-ansi-font-size:14.0pt;
+	mso-bidi-font-size:14.0pt;
+	font-family:Cambria;
+	font-variant:normal !important;
+	color:black;
+	text-transform:none;
+	letter-spacing:0pt;
+	mso-ansi-font-weight:normal;
+	mso-bidi-font-weight:normal;
+	mso-ansi-font-style:normal;}
+@list l0:level4
+	{mso-level-text:"%1\.%2\.%3\.%4\.";
+	mso-level-tab-stop:1.25in;
+	mso-level-number-position:left;
+	margin-left:1.2in;
+	text-indent:-.45in;
+	mso-ansi-font-size:14.0pt;
+	mso-bidi-font-size:14.0pt;
+	font-family:Cambria;
+	font-variant:normal !important;
+	color:black;
+	text-transform:none;
+	letter-spacing:0pt;
+	mso-ansi-font-weight:normal;
+	mso-bidi-font-weight:normal;
+	mso-ansi-font-style:normal;}
+@list l0:level5
+	{mso-level-text:"%1\.%2\.%3\.%4\.%5\.";
+	mso-level-tab-stop:1.75in;
+	mso-level-number-position:left;
+	margin-left:1.55in;
+	text-indent:-.55in;
+	mso-ansi-font-size:14.0pt;
+	mso-bidi-font-size:14.0pt;
+	font-family:Cambria;
+	font-variant:normal !important;
+	color:black;
+	text-transform:none;
+	letter-spacing:0pt;
+	mso-ansi-font-weight:normal;
+	mso-bidi-font-weight:normal;
+	mso-ansi-font-style:normal;}
+@list l0:level6
+	{mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6\.";
+	mso-level-tab-stop:2.0in;
+	mso-level-number-position:left;
+	margin-left:1.9in;
+	text-indent:-.65in;
+	mso-ansi-font-size:14.0pt;
+	mso-bidi-font-size:14.0pt;
+	font-family:Cambria;
+	font-variant:normal !important;
+	color:black;
+	text-transform:none;
+	letter-spacing:0pt;
+	mso-ansi-font-weight:normal;
+	mso-bidi-font-weight:normal;
+	mso-ansi-font-style:normal;}
+@list l0:level7
+	{mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6\.%7\.";
+	mso-level-tab-stop:2.5in;
+	mso-level-number-position:left;
+	margin-left:2.25in;
+	text-indent:-.75in;
+	mso-ansi-font-size:14.0pt;
+	mso-bidi-font-size:14.0pt;
+	font-family:Cambria;
+	font-variant:normal !important;
+	color:black;
+	text-transform:none;
+	letter-spacing:0pt;
+	mso-ansi-font-weight:normal;
+	mso-bidi-font-weight:normal;
+	mso-ansi-font-style:normal;}
+@list l0:level8
+	{mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6\.%7\.%8\.";
+	mso-level-tab-stop:2.75in;
+	mso-level-number-position:left;
+	margin-left:2.6in;
+	text-indent:-.85in;
+	mso-ansi-font-size:14.0pt;
+	mso-bidi-font-size:14.0pt;
+	font-family:Cambria;
+	font-variant:normal !important;
+	color:black;
+	text-transform:none;
+	letter-spacing:0pt;
+	mso-ansi-font-weight:normal;
+	mso-bidi-font-weight:normal;
+	mso-ansi-font-style:normal;}
+@list l0:level9
+	{mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6\.%7\.%8\.%9\.";
+	mso-level-tab-stop:3.25in;
+	mso-level-number-position:left;
+	margin-left:3.0in;
+	text-indent:-1.0in;
+	mso-ansi-font-size:14.0pt;
+	mso-bidi-font-size:14.0pt;
+	font-family:Cambria;
+	font-variant:normal !important;
+	color:black;
+	text-transform:none;
+	letter-spacing:0pt;
+	mso-ansi-font-weight:normal;
+	mso-bidi-font-weight:normal;
+	mso-ansi-font-style:normal;}
+@list l1
+	{mso-list-id:232006760;
+	mso-list-template-ids:-416383970;}
+@list l1:level1
+	{mso-level-suffix:space;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;
+	mso-ansi-font-size:14.0pt;
+	mso-bidi-font-size:14.0pt;
+	font-family:Cambria;
+	font-variant:normal !important;
+	color:black;
+	text-transform:none;
+	letter-spacing:0pt;
+	mso-ansi-font-weight:normal;
+	mso-bidi-font-weight:normal;
+	mso-ansi-font-style:normal;}
+@list l1:level2
+	{mso-level-suffix:space;
+	mso-level-text:"%1\.%2\.";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:.55in;
+	text-indent:-.3in;
+	mso-ansi-font-size:14.0pt;
+	mso-bidi-font-size:14.0pt;
+	font-family:Cambria;
+	font-variant:normal !important;
+	color:black;
+	text-transform:none;
+	letter-spacing:0pt;
+	mso-ansi-font-weight:normal;
+	mso-bidi-font-weight:normal;
+	mso-ansi-font-style:normal;}
+@list l1:level3
+	{mso-level-reset-level:level1;
+	mso-level-suffix:space;
+	mso-level-text:"%1\.%2\.%3\.";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:.85in;
+	text-indent:-.35in;
+	mso-ansi-font-size:14.0pt;
+	mso-bidi-font-size:14.0pt;
+	font-family:Cambria;
+	font-variant:normal !important;
+	color:black;
+	text-transform:none;
+	letter-spacing:0pt;
+	mso-ansi-font-weight:normal;
+	mso-bidi-font-weight:normal;
+	mso-ansi-font-style:normal;}
+@list l1:level4
+	{mso-level-text:"%1\.%2\.%3\.%4\.";
+	mso-level-tab-stop:1.25in;
+	mso-level-number-position:left;
+	margin-left:1.2in;
+	text-indent:-.45in;
+	mso-ansi-font-size:14.0pt;
+	mso-bidi-font-size:14.0pt;
+	font-family:Cambria;
+	font-variant:normal !important;
+	color:black;
+	text-transform:none;
+	letter-spacing:0pt;
+	mso-ansi-font-weight:normal;
+	mso-bidi-font-weight:normal;
+	mso-ansi-font-style:normal;}
+@list l1:level5
+	{mso-level-text:"%1\.%2\.%3\.%4\.%5\.";
+	mso-level-tab-stop:1.75in;
+	mso-level-number-position:left;
+	margin-left:1.55in;
+	text-indent:-.55in;
+	mso-ansi-font-size:14.0pt;
+	mso-bidi-font-size:14.0pt;
+	font-family:Cambria;
+	font-variant:normal !important;
+	color:black;
+	text-transform:none;
+	letter-spacing:0pt;
+	mso-ansi-font-weight:normal;
+	mso-bidi-font-weight:normal;
+	mso-ansi-font-style:normal;}
+@list l1:level6
+	{mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6\.";
+	mso-level-tab-stop:2.0in;
+	mso-level-number-position:left;
+	margin-left:1.9in;
+	text-indent:-.65in;
+	mso-ansi-font-size:14.0pt;
+	mso-bidi-font-size:14.0pt;
+	font-family:Cambria;
+	font-variant:normal !important;
+	color:black;
+	text-transform:none;
+	letter-spacing:0pt;
+	mso-ansi-font-weight:normal;
+	mso-bidi-font-weight:normal;
+	mso-ansi-font-style:normal;}
+@list l1:level7
+	{mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6\.%7\.";
+	mso-level-tab-stop:2.5in;
+	mso-level-number-position:left;
+	margin-left:2.25in;
+	text-indent:-.75in;
+	mso-ansi-font-size:14.0pt;
+	mso-bidi-font-size:14.0pt;
+	font-family:Cambria;
+	font-variant:normal !important;
+	color:black;
+	text-transform:none;
+	letter-spacing:0pt;
+	mso-ansi-font-weight:normal;
+	mso-bidi-font-weight:normal;
+	mso-ansi-font-style:normal;}
+@list l1:level8
+	{mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6\.%7\.%8\.";
+	mso-level-tab-stop:2.75in;
+	mso-level-number-position:left;
+	margin-left:2.6in;
+	text-indent:-.85in;
+	mso-ansi-font-size:14.0pt;
+	mso-bidi-font-size:14.0pt;
+	font-family:Cambria;
+	font-variant:normal !important;
+	color:black;
+	text-transform:none;
+	letter-spacing:0pt;
+	mso-ansi-font-weight:normal;
+	mso-bidi-font-weight:normal;
+	mso-ansi-font-style:normal;}
+@list l1:level9
+	{mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6\.%7\.%8\.%9\.";
+	mso-level-tab-stop:3.25in;
+	mso-level-number-position:left;
+	margin-left:3.0in;
+	text-indent:-1.0in;
+	mso-ansi-font-size:14.0pt;
+	mso-bidi-font-size:14.0pt;
+	font-family:Cambria;
+	font-variant:normal !important;
+	color:black;
+	text-transform:none;
+	letter-spacing:0pt;
+	mso-ansi-font-weight:normal;
+	mso-bidi-font-weight:normal;
+	mso-ansi-font-style:normal;}
+@list l2
+	{mso-list-id:675117133;
+	mso-list-template-ids:-319017128;}
+@list l2:level1
+	{mso-level-style-link:"Heading 1";
+	mso-level-suffix:space;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;
+	mso-ansi-font-size:14.0pt;
+	mso-bidi-font-size:14.0pt;
+	font-family:Cambria;
+	font-variant:normal !important;
+	color:black;
+	text-transform:none;
+	letter-spacing:0pt;
+	mso-ansi-font-weight:normal;
+	mso-bidi-font-weight:normal;
+	mso-ansi-font-style:normal;}
+@list l2:level2
+	{mso-level-style-link:"Style Heading 1 + Not Bold Black";
+	mso-level-suffix:space;
+	mso-level-text:"%1\.%2\.";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:.55in;
+	text-indent:-.3in;
+	mso-ansi-font-size:14.0pt;
+	mso-bidi-font-size:14.0pt;
+	font-family:Cambria;
+	font-variant:normal !important;
+	color:black;
+	text-transform:none;
+	letter-spacing:0pt;
+	mso-ansi-font-weight:normal;
+	mso-bidi-font-weight:normal;
+	mso-ansi-font-style:normal;}
+@list l2:level3
+	{mso-level-suffix:space;
+	mso-level-text:"%1\.%2\.%3\.";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:.85in;
+	text-indent:-.35in;
+	mso-ansi-font-size:14.0pt;
+	mso-bidi-font-size:14.0pt;
+	font-family:Cambria;
+	font-variant:normal !important;
+	color:black;
+	text-transform:none;
+	letter-spacing:0pt;
+	mso-ansi-font-weight:normal;
+	mso-bidi-font-weight:normal;
+	mso-ansi-font-style:normal;}
+@list l2:level4
+	{mso-level-suffix:space;
+	mso-level-text:"%1\.%2\.%3\.%4\.";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:1.2in;
+	text-indent:-.45in;
+	mso-ansi-font-size:14.0pt;
+	mso-bidi-font-size:14.0pt;
+	font-family:Cambria;
+	font-variant:normal !important;
+	color:black;
+	text-transform:none;
+	letter-spacing:0pt;
+	mso-ansi-font-weight:normal;
+	mso-bidi-font-weight:normal;
+	mso-ansi-font-style:normal;}
+@list l2:level5
+	{mso-level-suffix:space;
+	mso-level-text:"%1\.%2\.%3\.%4\.%5\.";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:1.55in;
+	text-indent:-.55in;
+	mso-ansi-font-size:14.0pt;
+	mso-bidi-font-size:14.0pt;
+	font-family:Cambria;
+	font-variant:normal !important;
+	color:black;
+	text-transform:none;
+	letter-spacing:0pt;
+	mso-ansi-font-weight:normal;
+	mso-bidi-font-weight:normal;
+	mso-ansi-font-style:normal;}
+@list l2:level6
+	{mso-level-suffix:space;
+	mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6\.";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:1.9in;
+	text-indent:-.65in;
+	mso-ansi-font-size:14.0pt;
+	mso-bidi-font-size:14.0pt;
+	font-family:Cambria;
+	font-variant:normal !important;
+	color:black;
+	text-transform:none;
+	letter-spacing:0pt;
+	mso-ansi-font-weight:normal;
+	mso-bidi-font-weight:normal;
+	mso-ansi-font-style:normal;}
+@list l2:level7
+	{mso-level-suffix:space;
+	mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6\.%7\.";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:2.25in;
+	text-indent:-.75in;
+	mso-ansi-font-size:14.0pt;
+	mso-bidi-font-size:14.0pt;
+	font-family:Cambria;
+	font-variant:normal !important;
+	color:black;
+	text-transform:none;
+	letter-spacing:0pt;
+	mso-ansi-font-weight:normal;
+	mso-bidi-font-weight:normal;
+	mso-ansi-font-style:normal;}
+@list l2:level8
+	{mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6\.%7\.%8\.";
+	mso-level-tab-stop:2.75in;
+	mso-level-number-position:left;
+	margin-left:2.6in;
+	text-indent:-.85in;
+	mso-ansi-font-size:14.0pt;
+	mso-bidi-font-size:14.0pt;
+	font-family:Cambria;
+	font-variant:normal !important;
+	color:black;
+	text-transform:none;
+	letter-spacing:0pt;
+	mso-ansi-font-weight:normal;
+	mso-bidi-font-weight:normal;
+	mso-ansi-font-style:normal;}
+@list l2:level9
+	{mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6\.%7\.%8\.%9\.";
+	mso-level-tab-stop:3.25in;
+	mso-level-number-position:left;
+	margin-left:3.0in;
+	text-indent:-1.0in;
+	mso-ansi-font-size:14.0pt;
+	mso-bidi-font-size:14.0pt;
+	font-family:Cambria;
+	font-variant:normal !important;
+	color:black;
+	text-transform:none;
+	letter-spacing:0pt;
+	mso-ansi-font-weight:normal;
+	mso-bidi-font-weight:normal;
+	mso-ansi-font-style:normal;}
+@list l3
+	{mso-list-id:1691636573;
+	mso-list-template-ids:1894306706;}
+@list l3:level1
+	{mso-level-style-link:StyleAppendix;
+	mso-level-suffix:space;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;
+	mso-ansi-font-size:14.0pt;
+	mso-bidi-font-size:14.0pt;
+	font-family:Cambria;
+	font-variant:normal !important;
+	color:black;
+	text-transform:none;
+	letter-spacing:0pt;
+	mso-ansi-font-weight:normal;
+	mso-bidi-font-weight:normal;
+	mso-ansi-font-style:normal;}
+@list l3:level2
+	{mso-level-style-link:"Heading 2";
+	mso-level-suffix:space;
+	mso-level-text:"%1\.%2\.";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:.3in;
+	text-indent:-.3in;
+	mso-ansi-font-size:14.0pt;
+	mso-bidi-font-size:14.0pt;
+	font-family:Cambria;
+	font-variant:normal !important;
+	color:black;
+	text-transform:none;
+	letter-spacing:0pt;
+	mso-ansi-font-weight:normal;
+	mso-bidi-font-weight:normal;
+	mso-ansi-font-style:normal;}
+@list l3:level3
+	{mso-level-suffix:space;
+	mso-level-text:"%1\.%2\.%3\.";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:.85in;
+	text-indent:-.35in;
+	mso-ansi-font-size:14.0pt;
+	mso-bidi-font-size:14.0pt;
+	font-family:Cambria;
+	font-variant:normal !important;
+	color:black;
+	text-transform:none;
+	letter-spacing:0pt;
+	mso-ansi-font-weight:normal;
+	mso-bidi-font-weight:normal;
+	mso-ansi-font-style:normal;}
+@list l3:level4
+	{mso-level-suffix:space;
+	mso-level-text:"%1\.%2\.%3\.%4\.";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:1.2in;
+	text-indent:-.45in;
+	mso-ansi-font-size:14.0pt;
+	mso-bidi-font-size:14.0pt;
+	font-family:Cambria;
+	font-variant:normal !important;
+	color:black;
+	text-transform:none;
+	letter-spacing:0pt;
+	mso-ansi-font-weight:normal;
+	mso-bidi-font-weight:normal;
+	mso-ansi-font-style:normal;}
+@list l3:level5
+	{mso-level-suffix:space;
+	mso-level-text:"%1\.%2\.%3\.%4\.%5\.";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:1.55in;
+	text-indent:-.55in;
+	mso-ansi-font-size:14.0pt;
+	mso-bidi-font-size:14.0pt;
+	font-family:Cambria;
+	font-variant:normal !important;
+	color:black;
+	text-transform:none;
+	letter-spacing:0pt;
+	mso-ansi-font-weight:normal;
+	mso-bidi-font-weight:normal;
+	mso-ansi-font-style:normal;}
+@list l3:level6
+	{mso-level-suffix:space;
+	mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6\.";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:1.9in;
+	text-indent:-.65in;
+	mso-ansi-font-size:14.0pt;
+	mso-bidi-font-size:14.0pt;
+	font-family:Cambria;
+	font-variant:normal !important;
+	color:black;
+	text-transform:none;
+	letter-spacing:0pt;
+	mso-ansi-font-weight:normal;
+	mso-bidi-font-weight:normal;
+	mso-ansi-font-style:normal;}
+@list l3:level7
+	{mso-level-suffix:space;
+	mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6\.%7\.";
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:2.25in;
+	text-indent:-.75in;
+	mso-ansi-font-size:14.0pt;
+	mso-bidi-font-size:14.0pt;
+	font-family:Cambria;
+	font-variant:normal !important;
+	color:black;
+	text-transform:none;
+	letter-spacing:0pt;
+	mso-ansi-font-weight:normal;
+	mso-bidi-font-weight:normal;
+	mso-ansi-font-style:normal;}
+@list l3:level8
+	{mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6\.%7\.%8\.";
+	mso-level-tab-stop:2.75in;
+	mso-level-number-position:left;
+	margin-left:2.6in;
+	text-indent:-.85in;
+	mso-ansi-font-size:14.0pt;
+	mso-bidi-font-size:14.0pt;
+	font-family:Cambria;
+	font-variant:normal !important;
+	color:black;
+	text-transform:none;
+	letter-spacing:0pt;
+	mso-ansi-font-weight:normal;
+	mso-bidi-font-weight:normal;
+	mso-ansi-font-style:normal;}
+@list l3:level9
+	{mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6\.%7\.%8\.%9\.";
+	mso-level-tab-stop:3.25in;
+	mso-level-number-position:left;
+	margin-left:3.0in;
+	text-indent:-1.0in;
+	mso-ansi-font-size:14.0pt;
+	mso-bidi-font-size:14.0pt;
+	font-family:Cambria;
+	font-variant:normal !important;
+	color:black;
+	text-transform:none;
+	letter-spacing:0pt;
+	mso-ansi-font-weight:normal;
+	mso-bidi-font-weight:normal;
+	mso-ansi-font-style:normal;}
+ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+<!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext=3D"edit" spidmax=3D"1026" />
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext=3D"edit">
+  <o:idmap v:ext=3D"edit" data=3D"1" />
+ </o:shapelayout></xml><![endif]-->
+</head>
+
+<body lang=3DEN-US link=3Dblue vlink=3Dblue>
+
+<div class=3DSection1>
+
+<p class=3DMsoNormal><font size=3D3 color=3Dblue face=3DCambria><span =
+style=3D'font-size:
+12.0pt;font-family:Cambria;color:blue'>The issue with the MJT is if we =
+want to
+change something, then we need to go back to the PWG.&nbsp;&nbsp; But, =
+unless
+Ira disagrees, I see no reason to change the MJT for this phase of the =
+JTAPI
+development.&nbsp;&nbsp;&nbsp; Perhaps, the MJT will not exercise all of =
+the
+functionality of the JTAPI; in that case, we will add a &#8220;vendor =
+extension&#8221;
+which would actually be a good thing, because JTAPI must handle vendor
+extension at some point.<o:p></o:p></span></font></p>
+
+<p class=3DMsoNormal><font size=3D3 color=3Dblue face=3DCambria><span =
+style=3D'font-size:
+12.0pt;font-family:Cambria;color:blue'><o:p>&nbsp;</o:p></span></font></p=
 >
-=C2=A0 - OPEN<br>
+
+<p class=3DMsoNormal><font size=3D3 color=3Dblue face=3DCambria><span =
+style=3D'font-size:
+12.0pt;font-family:Cambria;color:blue'>Glen<o:p></o:p></span></font></p>
+
+<p class=3DMsoNormal><font size=3D3 color=3Dblue face=3DCambria><span =
+style=3D'font-size:
+12.0pt;font-family:Cambria;color:blue'><o:p>&nbsp;</o:p></span></font></p=
+>
+
+<p class=3DMsoNormal><font size=3D3 color=3Dblue face=3DCambria><span =
+style=3D'font-size:
+12.0pt;font-family:Cambria;color:blue'><o:p>&nbsp;</o:p></span></font></p=
+>
+
+<div>
+
+<div class=3DMsoNormal align=3Dcenter style=3D'text-align:center'><font =
+size=3D3
+face=3D"Times New Roman"><span style=3D'font-size:12.0pt'>
+
+<hr size=3D2 width=3D"100%" align=3Dcenter tabindex=3D-1>
+
+</span></font></div>
+
+<p class=3DMsoNormal><b><font size=3D2 face=3DTahoma><span =
+style=3D'font-size:10.0pt;
+font-family:Tahoma;font-weight:bold'>From:</span></font></b><font =
+size=3D2
+face=3DTahoma><span style=3D'font-size:10.0pt;font-family:Tahoma'> =
+printing-architecture-bounces@lists.linux-foundation.org
+[mailto:printing-architecture-bounces@lists.linux-foundation.org] =
+<b><span
+style=3D'font-weight:bold'>On Behalf Of </span></b>Daniel Dressler<br>
+<b><span style=3D'font-weight:bold'>Sent:</span></b> Monday, April 02, =
+2012 2:27
+PM<br>
+<b><span style=3D'font-weight:bold'>To:</span></b> Petrie, Glen<br>
+<b><span style=3D'font-weight:bold'>Cc:</span></b>
+printing-architecture@lists.linux-foundation.org;
+printing-summit@lists.linux-foundation.org<br>
+<b><span style=3D'font-weight:bold'>Subject:</span></b> Re:
+[Printing-architecture] [Printing-summit] OPS Preparationminutes (28 =
+March
+2012)</span></font><o:p></o:p></p>
+
+</div>
+
+<p class=3DMsoNormal><font size=3D3 face=3D"Times New Roman"><span =
+style=3D'font-size:
+12.0pt'><o:p>&nbsp;</o:p></span></font></p>
+
+<p class=3DMsoNormal style=3D'margin-bottom:12.0pt'><font size=3D3
+face=3D"Times New Roman"><span style=3D'font-size:12.0pt'>To continue my =
+last email
+I wanted to say that I would like it if Glen continued to be my mentor. =
+My
+biggest concern is about code quality and I think he can provide the =
+criticism
+and code review I need to improve. <br>
 <br>
-- ACTION - Till - contact Ghostscript and other color management folks<br>
-=C2=A0 as presenters (or send slides?)<br>
-=C2=A0 - Michael Vrhel (Artifex, Ghostscript) will attend OPS<br>
-=C2=A0 - OPEN<br>
+What exactly is the issue with implementing a micro job ticket backend? =
+It was
+my understanding that MJT would be a simple job ticket format and thus a =
+good
+one to implement as an example/development backend. Is there a reason we =
+might
+need to alter the MJT standard?<br>
 <br>
-- ACTION - All - Draft presentation slides/outlines for review 11 April<br>
-=C2=A0 - OPEN<br>
-<br>
-- ACTION - Presenters - tell Till EARLY about any special requirements<br>
-=C2=A0 (e.g., speakers for video, demo printers, etc.)<br>
-=C2=A0 - OPEN<br>
-<br>
-- ACTION - Presenters - send PDF slides to Till EARLY (or upload to OP)<br>
-=C2=A0 (so that participants can download slides as backup for screencast)<=
-br>
-=C2=A0 - OPEN<br>
-<br>
-- ACTION - Ira - draft slides for OP Plenary by 11 April<br>
-=C2=A0 - OPEN<br>
-<br>
-Next OP Conference Calls:<br>
-(1) April 2012 - OPS Preparation<br>
-=C2=A0=C2=A0=C2=A0 - Note - US Daylight Savings Time started on Sunday 11 M=
-arch
-2012<br>
-=C2=A0=C2=A0=C2=A0 - Note - Europe Summer Time started on Sunday 25 March 2=
-012<br>
-<br>
-=C2=A0=C2=A0=C2=A0 - Wednesday 11 April 2012, Daytime<br>
-=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 - US<br>
-=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 9am in <u></u>San
- Francisco<u></u> - <u></u><u></u>US<u></u><u></u>
-PDT (Pacific Daylight Time)<br>
-=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 10am in <u></u>Colorado<u></u>
-- <u></u><u></u>US<u></u><u></u>
-MDT (Mountain Daylight Time)<br>
-=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 11am in Chicago - <u></u><u></u>=
-US<u></u><u></u> CDT (Central
-Daylight Time)<br>
-=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 12pm in <u></u>New
- York<u></u> - <u></u><u></u>US<u></u><u></u>
-EDT (Eastern Daylight Time)<br>
-=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 - <u></u>Europe<u></u><br>
-=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 6pm in <u></u><u></u>Berlin<u></=
-u><u></u> - CEST (Central European Summer Time)<br>
-<br>
-=C2=A0=C2=A0=C2=A0 * Main Number (Till Kamppeter, LF, leader)<br>
-=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 International: <a href=3D"tel:%2B1-218-936-7=
-999" value=3D"+12189367999" target=3D"_blank">+1-218-936-7999</a><br>
-=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 Access Code:=C2=A0=C2=A0 491659#<br>
-<br>
-(2) April 2012 - Joint PWG / Open Printing <u></u><u></u>Summit<u></u><u></=
-u><br>
-=C2=A0=C2=A0=C2=A0 - Note - OPS is NOT hosted by Linux Foundation Collabora=
-tion
-Summit<br>
-<br>
-=C2=A0=C2=A0=C2=A0 - Tuesday to Friday 24-27 April 2012 at Apple in <u></u>=
-<u></u>Cupertino<u></u>, <u></u>CA<u></u><u></u><br>
-=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 - US<br>
-=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 9am in <u></u>San
- Francisco<u></u> - <u></u><u></u>US<u></u><u></u>
-PDT (Pacific Daylight Time)<br>
-=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 10am in <u></u>Colorado<u></u>
-- <u></u><u></u>US<u></u><u></u>
-MDT (Mountain Daylight Time)<br>
-=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 11am in Chicago - <u></u><u></u>=
-US<u></u><u></u> CDT (Central
-Daylight Time)<br>
-=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 12pm in <u></u>New
- York<u></u> - <u></u><u></u>US<u></u><u></u>
-EDT (Eastern Daylight Time)<br>
-=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 - <u></u>Europe<u></u><br>
-=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 6pm in <u></u><u></u>Berlin<u></=
-u><u></u> - CEST (Central European Summer Time)<br>
-<br>
-=C2=A0=C2=A0=C2=A0 * Main PWG Number (Mike Sweet, Apple, leader)<br>
-=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 US Toll-Free:=C2=A0 <a href=3D"tel:%2B1-866-=
-469-3239" value=3D"+18664693239" target=3D"_blank">+1-866-469-3239</a><br>
-=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 International: <a href=3D"tel:%2B1-650-429-3=
-300" value=3D"+16504293300" target=3D"_blank">+1-650-429-3300</a><br>
-=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 Access Code:=C2=A0=C2=A0 By request to Ira
-McDonald (do NOT publish)<br>
-<br>
-(3) May 2012 - US/Europe - OP Monthly Meeting<br>
-=C2=A0=C2=A0=C2=A0 - Note - Joint PWG/OPS is 24-27 April at Apple in <u></u=
-><u></u>Cupertino<u></u>, <u></u>CA<u></u><u></u><br>
-=C2=A0=C2=A0=C2=A0 - Note - Ubuntu Developer Summit is 7-11 May in <u></u><=
-u></u>Oakland<u></u>, <u></u>CA<u></u><u></u><br>
-=C2=A0=C2=A0=C2=A0 - Note - Ira has a conflict on 16 May<br>
-<br>
-=C2=A0=C2=A0=C2=A0 - Wednesday 23 May 2012, Daytime<br>
-=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 - US<br>
-=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 9am in <u></u>San
- Francisco<u></u> - <u></u><u></u>US<u></u><u></u>
-PDT (Pacific Daylight Time)<br>
-=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 10am in <u></u>Colorado<u></u>
-- <u></u><u></u>US<u></u><u></u>
-MDT (Mountain Daylight Time)<br>
-=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 11am in Chicago - <u></u><u></u>=
-US<u></u><u></u> CDT (Central
-Daylight Time)<br>
-=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 12pm in <u></u>New
- York<u></u> - <u></u><u></u>US<u></u><u></u>
-EDT (Eastern Daylight Time)<br>
-=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 - <u></u>Europe<u></u><br>
-=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 6pm in <u></u><u></u>Berlin<u></=
-u><u></u> - CEST (Central European Summer Time)<br>
-<br>
-=C2=A0=C2=A0=C2=A0 * Main Number (Till Kamppeter, LF, leader)<br>
-=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 International: <a href=3D"tel:%2B1-218-936-7=
-999" value=3D"+12189367999" target=3D"_blank">+1-218-936-7999</a><br>
-=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 Access Code:=C2=A0=C2=A0 491659#<br>
-<br>
-Cheers,<br>
-- Ira<br>
-<br clear=3D"all">
-Ira McDonald (Musician / Software Architect)<br>
-Chair - Linux Foundation Open Printing WG<br>
-Secretary - IEEE-ISTO Printer Working Group<br>
-Co-Chair - IEEE-ISTO PWG IPP WG<br>
-Co-Chair - TCG Trusted Mobility Solutions WG<br>
-Chair - TCG Embedded Systems Hardcopy SG<br>
-IETF Designated Expert - IPP &amp; Printer MIB<br>
-Blue Roof Music/High North Inc<br>
-<a href=3D"http://sites.google.com/site/blueroofmusic" target=3D"_blank"><f=
-ont color=3D"#3333ff"><span style=3D"color:#3333ff">http://sites.google.com=
-/site/blueroofmusic</span></font></a><br>
-<a href=3D"http://sites.google.com/site/highnorthinc" target=3D"_blank"><fo=
-nt color=3D"#6600cc"><span style=3D"color:#6600cc">http://sites.google.com/=
-site/highnorthinc</span></font></a><br>
-mailto:<a href=3D"mailto:blueroofmusic@gmail.com" target=3D"_blank">blueroo=
-fmusic@gmail.com</a><br>
-Winter=C2=A0 <u></u><u></u>579 Park Place<u></u>=C2=A0
- <u></u>Saline<u></u>, <u></u>MI<u></u>=C2=A0
- <u></u>48176<u></u><u></u>=C2=A0 <a href=3D"tel:734-944-0094" value=3D"+17=
-349440094" target=3D"_blank">734-944-0094</a><br>
-Summer=C2=A0 <u></u><u></u>PO Box<u></u>
- 221<u></u>=C2=A0 Grand <u></u><u></u>Marais<u></u>,
- <u></u>MI<u></u> <u></u>49839<u></u><u></u>=C2=A0
-<a href=3D"tel:906-494-2434" value=3D"+19064942434" target=3D"_blank">906-4=
-94-2434</a><u></u><u></u></span></font></p>
+Daniel<o:p></o:p></span></font></p>
 
-<p class=3D"MsoNormal" style=3D"margin-bottom:12.0pt"><font face=3D"Times N=
-ew Roman" size=3D"3"><span style=3D"font-size:12.0pt">=C2=A0<u></u><u></u><=
-/span></font></p>
+<p class=3DMsoNormal><font size=3D3 face=3D"Times New Roman"><span =
+style=3D'font-size:
+12.0pt'><o:p>&nbsp;</o:p></span></font></p>
 
 </div>
 
-</div>
+</body>
 
-<p class=3D"MsoNormal" style=3D"margin-bottom:12.0pt"><font face=3D"Times N=
-ew Roman" size=3D"3"><span style=3D"font-size:12.0pt">_____________________=
-__________________________<br>
-Printing-summit mailing list<br>
-<a href=3D"mailto:Printing-summit@lists.linux-foundation.org" target=3D"_bl=
-ank">Printing-summit@lists.linux-foundation.org</a><br>
-<a href=3D"https://lists.linuxfoundation.org/mailman/listinfo/printing-summ=
-it" target=3D"_blank">https://lists.linuxfoundation.org/mailman/listinfo/pr=
-inting-summit</a><u></u><u></u></span></font></p>
+</html>
 
-</div>
-
-<p class=3D"MsoNormal"><font face=3D"Times New Roman" size=3D"3"><span styl=
-e=3D"font-size:12.0pt">=C2=A0<u></u><u></u></span></font></p>
-
-</blockquote>
-
-</div>
-
-<p class=3D"MsoNormal"><font face=3D"Times New Roman" size=3D"3"><span styl=
-e=3D"font-size:12.0pt">=C2=A0<u></u><u></u></span></font></p>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-<p class=3D"MsoNormal"><font face=3D"Times New Roman" size=3D"3"><span styl=
-e=3D"font-size:12.0pt">=C2=A0<u></u><u></u></span></font></p>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-<p class=3D"MsoNormal"><font face=3D"Times New Roman" size=3D"3"><span styl=
-e=3D"font-size:12.0pt">=C2=A0<u></u><u></u></span></font></p>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-<p class=3D"MsoNormal"><font face=3D"Times New Roman" size=3D"3"><span styl=
-e=3D"font-size:12.0pt"><u></u>=C2=A0<u></u></span></font></p>
-
-</div></div></div>
-
-</div>
-
-
-</blockquote></div></div></div><br>
-</blockquote></div><br>
-
---f46d04463126f8d28404bcb8d751--
+------_=_NextPart_001_01CD1118.BED1E4BC--
