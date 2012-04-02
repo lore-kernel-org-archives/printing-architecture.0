@@ -2,15 +2,15 @@ Return-Path: <danieru.dressler@gmail.com>
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20120113;
 	h=mime-version:in-reply-to:references:date:message-id:subject:from:to
 	:cc:content-type;
-	bh=1oKfIzA4zH0EDn9fZWpde49KU5JfMtRWFE/1ofdHI3M=;
-	b=xTbBNigzHCOiGgtmyfjeU3J4UyaAL8dc2U+R67eY7ONX/9Nk1lRfIiIUNMq/KUmWHb
-	89R4gOkSxB0jJZm8goFTzc3KQnPE46f3EL2gcA0ofM5+qKQsmB6WWNi9gd7iAnQUsvlX
-	V7MDCdL22DQEaeRC3A0YinQ9z8zyX7zH3A5UqthIQwc21Rmj4CB38x0oMhoD8ul3AurE
-	HFlw7BD4hcBO1VdUDbSKn318cKzWx4fiEtxC0Q0tZS/kgc7Wf4Y1BNC3hcKV4TEB/zQJ
-	WX6KPbd6K8LErRdbRQ7cwk3E9n9vxogyeRhZ5r2Yh84Q/tPhJUZKOxDVRV0KhVTD0b+z
-	CXkA==
+	bh=DiNtLtIVuAaqIz48c6lOO5SKbUiKcGfDtOY50gk5W9g=;
+	b=kP8r4YcaPcqLK7vbIm0OrHL2ZnJBhYWk3EaQQMg44df4NgyLYi7Ebxam4BpwWIy2FR
+	cYWgA26NBA2npL9Jf+19WrkW6lgrSK/3Rp7XpIiyRkJ+yWFnFrfiPuov3tuwB6S4W2BE
+	LUv2sqUil9LSwsqxX9vLf79mgx9JGy8vNarvfXxRHB6nSYkqIk/fhcQe2028PggqaOLn
+	9GZJgErZ2Dw4WGtAmDI/Hwhs21OYoF9aXVoP/dUmdI4OAhLSS5ADRHIlksGXGwInHDGc
+	cluAsVwE+67p6lHml15TH4XKYCOFp9Jox0ZjvoLxeORXDX9yDAsUTGGETBgYktaMPY70
+	b9OA==
 MIME-Version: 1.0
-In-Reply-To: <E8C3B9E653C80C48B0951F8494C049A938EF1C@EEAEX02.us.epson.net>
+In-Reply-To: <CAGC3nLDK3ZxTznwYeUf1yNeW+OuG4PA2BOCgM-=OKXD8iTnbDw@mail.gmail.com>
 References: <CAN40gSuYBV51pJ3hmCrbup2XnavgCbVT5JDXqxiuRYDJk78BQw@mail.gmail.com>
 	<CAGC3nLDxxYjy7ydTqUHncKW9CCLqTiGyP0t-E_Wqf3pob1avDg@mail.gmail.com>
 	<CAN40gSsksMRO2+r8uZ_=VPaxKRbb3GZBdd7WpmPZYGuEcqnSEQ@mail.gmail.com>
@@ -21,10 +21,11 @@ References: <CAN40gSuYBV51pJ3hmCrbup2XnavgCbVT5JDXqxiuRYDJk78BQw@mail.gmail.com>
 	<E8C3B9E653C80C48B0951F8494C049A938EEE3@EEAEX02.us.epson.net>
 	<CAGC3nLC=k_5HoLVxXhnXi9xf7qk4SRmULWirzfBgmqJxKVigag@mail.gmail.com>
 	<E8C3B9E653C80C48B0951F8494C049A938EF1C@EEAEX02.us.epson.net>
-Date: Mon, 2 Apr 2012 11:37:48 -0600
-Message-ID: <CAGC3nLDK3ZxTznwYeUf1yNeW+OuG4PA2BOCgM-=OKXD8iTnbDw@mail.gmail.com>
+	<CAGC3nLDK3ZxTznwYeUf1yNeW+OuG4PA2BOCgM-=OKXD8iTnbDw@mail.gmail.com>
+Date: Mon, 2 Apr 2012 15:26:30 -0600
+Message-ID: <CAGC3nLB1aE9YgsXzrOOZiR55rdRQATsMhUReuXbeVp=EFQsQUw@mail.gmail.com>
 From: Daniel Dressler <danieru.dressler@gmail.com>
-Content-Type: multipart/alternative; boundary=e89a8ff253fc1ec62204bcb5a655
+Content-Type: multipart/alternative; boundary=f46d04463126f8d28404bcb8d751
 Subject: Re: [Printing-architecture] [Printing-summit] OPS
  Preparationminutes (28 March 2012)
 List-Id: Printing architecture under linux
@@ -39,64 +40,27 @@ List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-arc
 To: "Petrie, Glen" <glen.petrie@eitc.epson.com>
 Cc: printing-architecture@lists.linux-foundation.org, printing-summit@lists.linux-foundation.org
 
---e89a8ff253fc1ec62204bcb5a655
+--f46d04463126f8d28404bcb8d751
 Content-Type: text/plain; charset=UTF-8
 Content-Transfer-Encoding: quoted-printable
 
-Sorry Glen and everyone, I forgot to reply-all, here is the email I sent an
-hour ago which only glen received:
+To continue my last email I wanted to say that I would like it if Glen
+continued to be my mentor. My biggest concern is about code quality and I
+think he can provide the criticism and code review I need to improve.
 
-Thank you Glen and Ira for having this discussion its been helpful for me
-and my understanding of jtapi.
-
-My original understanding of jtapi was I think closer to ira's. That is to
-say that producing and consuming a job ticket would be the primary use
-cases driving jtapi development. A transformation server would then be a
-bonus feature once we have enough well tested producing/consuming backend
-plugins.
-
-I think a scenario where programmers roll their own implementation would be
-very suboptimal. It would require any programmer who wants to produce a job
-ticket to learn the standard. The wealth of independent implementations
-would leave massive room for bugs.
-
-By concentrating the implementation effort into jtapi we get a library that
-will handle all the odd cases for all job ticekts for programmers with less
-effort on their part than it would take to produce even the simplest job
-ticket. This should encourage job ticket adoption and be a win for
-productivity.
-
-Sorry I have more to say but it'll have to wait until after my classes.
+What exactly is the issue with implementing a micro job ticket backend? It
+was my understanding that MJT would be a simple job ticket format and thus
+a good one to implement as an example/development backend. Is there a
+reason we might need to alter the MJT standard?
 
 Daniel
 
-2012=E5=B9=B44=E6=9C=882=E6=97=A511:33 Petrie, Glen <glen.petrie@eitc.epson=
-.com>:
+2012=E5=B9=B44=E6=9C=882=E6=97=A511:37 Daniel Dressler <danieru.dressler@gm=
+ail.com>:
 
-> ** ** ** ** ** ** **
+> Sorry Glen and everyone, I forgot to reply-all, here is the email I sent
+> an hour ago which only glen received:
 >
-> Ok, we will proceed with Ira=E2=80=99s and Daniel=E2=80=99s understanding=
-.  We make a
-> transform service another day.****
->
-> ** **
->
-> Glen****
->
-> ** **
->
-> ** **
->  ------------------------------
->
-> *From:* Daniel Dressler [mailto:danieru.dressler@gmail.com]
-> *Sent:* Monday, April 02, 2012 9:46 AM
-> *To:* Petrie, Glen
->
-> *Subject:* Re: [Printing-architecture] [Printing-summit] OPS
-> Preparationminutes (28 March 2012)
-> ****
->
->  ** **
 >
 > Thank you Glen and Ira for having this discussion its been helpful for me
 > and my understanding of jtapi.
@@ -126,585 +90,678 @@ th
 >
 > Daniel
 >
-> ****
+> 2012=E5=B9=B44=E6=9C=882=E6=97=A511:33 Petrie, Glen <glen.petrie@eitc.eps=
+on.com>:
 >
-> 2012=E5=B9=B44=E6=9C=882=E6=97=A59:57 Petrie, Glen <glen.petrie@eitc.epso=
-n.com>:****
->
-> Wow!  I have a different scenario.****
->
->  ****
->
-> I see generation of a Print Job Ticket by a Print Client as a very simple
-> process.   Using C-Code as an example; it is nothing more that a collecti=
-on
-> of canned =E2=80=9Cprintf=E2=80=9D statement were the argument are the Pr=
-int Intent values
-> expressed in the specific Print Job Ticket =E2=80=9Clanguage=E2=80=9D.   =
-The Print Client
-> only wants to output one Print Job Ticket format, not one of several. ***=
-*
->
->  ****
->
-> I see parsing Print Job Ticket by a Print Service as an equally simple
-> process; although there is a lot of content/data checking.   The Print
-> Service only wants to accept one Print Job Ticket format, not one of
-> several.****
->
->  ****
->
-> The difficult part is when the Print Client Print Job Ticket format does
-> not match the Print Service Print Job Ticket format =E2=80=93 an impedanc=
+>  ** ** ** ** ** ** **
+>>
+>> Ok, we will proceed with Ira=E2=80=99s and Daniel=E2=80=99s understandin=
+g.  We make a
+>> transform service another day.****
+>>
+>> ** **
+>>
+>> Glen****
+>>
+>> ** **
+>>
+>> ** **
+>>  ------------------------------
+>>
+>> *From:* Daniel Dressler [mailto:danieru.dressler@gmail.com]
+>> *Sent:* Monday, April 02, 2012 9:46 AM
+>> *To:* Petrie, Glen
+>>
+>> *Subject:* Re: [Printing-architecture] [Printing-summit] OPS
+>> Preparationminutes (28 March 2012)
+>> ****
+>>
+>>  ** **
+>>
+>> Thank you Glen and Ira for having this discussion its been helpful for m=
 e
-> mismatch; thus, JTAPI, provides the impedance matching or a transform
-> service. ****
->
->  ****
->
-> What you are outlining implies that a Print Client or Print Service
-> internally would need to use a set of data structures and definitions tha=
+>> and my understanding of jtapi.
+>>
+>> My original understanding of jtapi was I think closer to ira's. That is
+>> to say that producing and consuming a job ticket would be the primary us=
+e
+>> cases driving jtapi development. A transformation server would then be a
+>> bonus feature once we have enough well tested producing/consuming backen=
+d
+>> plugins.
+>>
+>> I think a scenario where programmers roll their own implementation would
+>> be very suboptimal. It would require any programmer who wants to produce=
+ a
+>> job ticket to learn the standard. The wealth of independent implementati=
+ons
+>> would leave massive room for bugs.
+>>
+>> By concentrating the implementation effort into jtapi we get a library
+>> that will handle all the odd cases for all job ticekts for programmers w=
+ith
+>> less effort on their part than it would take to produce even the simples=
 t
-> supports JTAPI, where it may better for the Print Client or Print Service
-> to support the Print Job Ticket more directly.   This does lead to the ev=
-er
-> pending problem of =E2=80=9CCommon=E2=80=9D; either a Common Print Client=
- or even a Common
-> Print Service.  For a Common Print Client it implies what =E2=80=9CLabel=
-=E2=80=9D or =E2=80=9CName=E2=80=9D
-> and what =E2=80=9Cvalues=E2=80=9D should be displayed.   If JTAPI definit=
-ions, values and
-> names are to be used; then, JTAPI become useful for converting any Print
-> Job Ticket to a common internal format for every one to use.   I like thi=
-s
-> idea.****
->
->  ****
->
-> The same concept applies to capabilities information which is based Print
-> Job Ticket formats/definitions. ****
->
-> =3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D****
->
-> For the GSOC the time constraint, we may only get Print Job Ticket format
-> Foo converted to an internal structure.   We can try to both read and wri=
-te
-> of that Print Job Ticket format. ****
->
-> =3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D****
->
-> Since there may be an issue using or modifying MJT (copyright, etc), I
-> will create a very simple MIT license Print Job Ticket format for JTAPI
-> GSOC.   Again, the goal of JTAPI this year is end-to-end code with a very
-> well documented set of code that will be used as illustration of
-> implementing JTAPI.   The Print Job Ticket format is not important this
-> year.  Next year or in a separate project, a standardized Print Job Ticke=
-t
-> format can be instantiated. ****
->
->  ****
->
-> Glen****
->
->  ****
->
->  ****
->  ------------------------------
->
-> *From:* Ira McDonald [mailto:blueroofmusic@gmail.com]
-> *Sent:* Monday, April 02, 2012 8:12 AM****
->
->
-> *To:* Petrie, Glen; Ira McDonald
-> *Cc:* Daniel Dressler; printing-architecture@lists.linux-foundation.org;
-> printing-summit@lists.linux-foundation.org
-> *Subject:* Re: [Printing-architecture] [Printing-summit] OPS
-> Preparationminutes (28 March 2012)****
->
->  ****
->
-> Hi Glen,
->
-> I agree with you that the *3rd* use case is a Client producing
-> JDF and and PrintService converting it to PJT w/ JTAPI.
->
-> But the other two use cases (I think the dominant ones)
-> don't involve ANY conversion:
->
-> (1) Client builds an abstract job ticket using JTAPI and says
-> write it out to a given format.
->
-> (2) PrintService accepts that concrete job ticket and parses
-> it w/ JTAPI and uses the JTAPI parsed attributes as input
-> to the Scheduler and Interpreter subunits to process the
-> job.
->
-> Your  3rd use case of conversion of formats can't be
-> demonstrated without at least 2 backends - it's harder,
-> not simpler.
->
-> For all I care there's a reference only backend that writes
-> out (and reads in/parses) only an internal C struct form
-> of a job ticket.
->
-> Or writes out MJT, but it That intellectual property and
-> status issues - the spec is PWG copyrighted and it's
-> a whitepaper, not an approved PWG project (that is, we
-> CANNOT modify MJT w/out PWG permission).
->
-> WDYT?
->
-> Cheers,
-> - Ira
->
->
->
-> Ira McDonald (Musician / Software Architect)
-> Chair - Linux Foundation Open Printing WG
-> Secretary - IEEE-ISTO Printer Working Group
-> Co-Chair - IEEE-ISTO PWG IPP WG
-> Co-Chair - TCG Trusted Mobility Solutions WG
-> Chair - TCG Embedded Systems Hardcopy SG
-> IETF Designated Expert - IPP & Printer MIB
-> Blue Roof Music/High North Inc
-> http://sites.google.com/site/blueroofmusic
-> http://sites.google.com/site/highnorthinc
-> mailto:blueroofmusic@gmail.com
-> Winter  ****579 Park Place**  **Saline**, **MI**  **48176****
-> 734-944-0094
-> Summer  ****PO Box** 221**  Grand ****Marais**, **MI** **49839****
-> 906-494-2434****
->
-> ** **
->
-> 2012/4/2 Petrie, Glen <glen.petrie@eitc.epson.com>****
->
-> Ira,****
->
->  ****
->
-> I must admit to being totally confused.   I always under the impression
-> that JTAPI was a classic definition of a transform service and not just a
-> job ticket interpreter for a Print Service.    I thought a transform
-> service accepts one document format and product a different document
-> format; which is what I thought JTAPI did.  Example, accept a JDF job
-> ticket and produce a PWG job ticket.  ****
->
->  ****
->
-> What you describe below is what I would call it an interpreter and, maybe=
-,
-> that you have considered JTAPI to be.    Then, at least to me, the existi=
-ng
-> JTAPI may not be what is needed.   What is needed is a generic JDF
-> interpreter, a PWG:PJT interpreter, =E2=80=A6; that is, what I called the=
- front-end
-> to JTAPI.****
->
->  ****
->
-> I always saw the use case as:  A Print Service accepts PWG:PJT but the
-> Print Client produced JDF.   Thus, the either the Print Client or the Pri=
-nt
-> Service uses the JTAPI Transform Service to transform JDF to PJT.    The
-> Print Service would already have its own interpreter to parse PWG:PJT int=
-o
-> what ever internal format the Print Service needed or used.   [ I had
-> always hoped that someday we could have a defined a the internal format
-> that everyone would use but I don=E2=80=99t think that will ever happen.]=
-****
->
->  ****
->
-> From my use case, JTAPI would need the ability to transform many possible
-> input public and private job ticket formats; JTAPI, itself would have an
-> internally data structure capable of containing content from many input J=
-ob
-> Ticket to be able to produce differing output Job Tickets.****
->
->  ****
->
-> I am not sure what to do now.  I may not be the best person to guide the
-> Daniel on the first JTAPI project since I not seem to have the correct
-> understanding.   Ira, perhaps, you should mentor Daniel on the core (the
-> first) JTAPI project so that the actual intent is produced.  I will mento=
-r
-> another student for the second JTAPI project following your=E2=80=99s and=
- Daniel=E2=80=99s
-> lead. ****
->
->  ****
->
-> Glen****
->
->  ****
->
->  ****
->  ------------------------------
->
-> *From:* Ira McDonald [mailto:blueroofmusic@gmail.com]
-> *Sent:* Sunday, April 01, 2012 9:27 PM
-> *To:* Petrie, Glen; Ira McDonald
-> *Cc:* Daniel Dressler; printing-architecture@lists.linux-foundation.org;
-> printing-summit@lists.linux-foundation.org****
->
->
-> *Subject:* Re: [Printing-architecture] [Printing-summit] OPS
-> Preparationminutes (28 March 2012)****
->
->  ****
->
-> Hi Glen,
->
-> I strongly disagree - this is *not* the OP Job Ticket
-> Transform Service.
->
-> The first use for a client is to create a NEW job
-> ticket (in the abstract API) and write it out into some
-> concrete format (with a backend).
->
-> Clients mostly won't modify existing job tickets.
->
-> And PrintServices will just use JTAPI to parse the
-> job ticket once (in whatever format) and use the
-> values in the actual Interpreter and Scheduler
-> miodules.
->
-> Conversion of Job Ticket formats is the tertiary
-> use case.
->
-> Cheers,
-> - Ira
->
-> Ira McDonald (Musician / Software Architect)
-> Chair - Linux Foundation Open Printing WG
-> Secretary - IEEE-ISTO Printer Working Group
-> Co-Chair - IEEE-ISTO PWG IPP WG
-> Co-Chair - TCG Trusted Mobility Solutions WG
-> Chair - TCG Embedded Systems Hardcopy SG
-> IETF Designated Expert - IPP & Printer MIB
-> Blue Roof Music/High North Inc
-> http://sites.google.com/site/blueroofmusic
-> http://sites.google.com/site/highnorthinc
-> mailto:blueroofmusic@gmail.com
-> Winter  ****579 Park Place**  **Saline**, **MI**  **48176****
-> 734-944-0094
-> Summer  ****PO Box** 221**  Grand ****Marais**, **MI** **49839****
-> 906-494-2434****
->
->  ****
->
-> 2012/3/30 Petrie, Glen <glen.petrie@eitc.epson.com>****
->
-> Ira, Daniel****
->
->  ****
->
-> Since there seems to be an objection with just using =E2=80=9Cop=E2=80=9D=
-; I don=E2=80=99t believe
-> =E2=80=9Copjt=E2=80=9D is actually correct either.  That is, this is not =
-the OpenPrinting
-> Job Ticket; what it is the OpenPrinting Job Ticket Transform Service [whi=
-ch
-> fits perfectly with PWG=E2=80=99s definition of a transform service].   S=
-o an
-> alternate and more descriptive lettering would be either ****
->
->  ****
->
-> =E2=80=9Copjtt=E2=80=9D             =3D open printing job ticket transfor=
-m****
->
-> =E2=80=9Copjtts=E2=80=9D           =3D open printing job ticket transform=
- service****
->
->  ****
->
-> <The only other suggestion is to change the formal API names (not the
-> prefix) to say JobTicketXXXXXXX and DocObj____.  NO!>****
->
->  ****
->
-> Glen****
->
->  ****
->
-> p.s. ****
->
-> Please consider that this code will ultimately be reference code; and not
-> reference code for execution as much as for source code on how to make Jo=
-b
-> Ticket back-ends (and front-end).  Having long prefixes for variable,
-> variable types, routine name, etc, makes the code difficult to read,
-> understand and develop.   This is not a schema, a dtd or the like; but a
-> set of APIs that must have a front-end and one or more back-ends.
->  Namespace conflicts with JTAPI as a transform service are none since tha=
-t
-> interface will be determined by the front-end..  Conflicts of actual codi=
-ng
-> of the front-end and back-ends would be very low.   Since back-ends will
-> likely be DLLs, there are not conflicts between back-ends.   My request i=
-s
-> that, for this project, the code must be well structured, easy to read,
-> easy to following and strongly commented.   The goal is not the fastest o=
-r
-> the fanciest code but code that other will read and use to develop their
-> code.   The code is the instruction manual. ****
->
->  ****
->
-> p.s. ****
->
-> As the PWG moves forward to MFD=E2=80=99s, the notation of a Job Ticket b=
-ecomes
-> unclear as to what service the Job Ticket is for.   So the descriptive
-> lettering should be****
->
->  ****
->
-> oppjtt  openprinting print job ticket transform****
->
-> oppjtts  openprinting print job ticket transform service****
->
->  ****
->
-> or ****
->
->  ****
->
-> The current JTAPIs would have to be extended to support other services.
->   Naming will be a real big problem then even considering the commonality
-> among various service job tickets. ****
->
->  ****
->
-> p.s. ****
->
-> I did not see any feedback (or I missed it) to my suggested changes to
-> JTAPI headers to OpenPrinting names (prefixes); thus, I assume the
-> preference is to stay to the existing FSG:JTAPI header file.   That is, b=
-y
-> all definitions, the correct thing to do.  So I guess it make the
-> discussion of prefix unnecessary.****
->
->  ****
->
->  ****
->
-> gwp****
->
->  ****
->
->  ****
->
->  ****
->
->  ****
->
->  ****
->  ------------------------------
->
-> *From:* printing-architecture-bounces@lists.linux-foundation.org [mailto:
-> printing-architecture-bounces@lists.linux-foundation.org] *On Behalf Of *=
-Ira
-> McDonald
-> *Sent:* Wednesday, March 28, 2012 9:18 PM
-> *To:* Daniel Dressler; Ira McDonald
-> *Cc:* printing-architecture@lists.linux-foundation.org;
-> printing-summit@lists.linux-foundation.org
-> *Subject:* Re: [Printing-architecture] [Printing-summit] OPS
-> Preparationminutes (28 March 2012)****
->
->  ****
->
-> Hi Daniel,
->
-> Comments inline below.
->
-> Cheers,
-> - Ira****
->
-> On Wed, Mar 28, 2012 at 7:09 PM, Daniel Dressler <
-> danieru.dressler@gmail.com> wrote:****
->
-> In response to some comments in the meeting.
->
-> 1. I would prefer an 'op' prefix to 'fsgjt'. I assume fsgjt means free
-> standards group job ticket? Since the fsg does not exist anymore I think
-> 'op' would avoid confusion. And it is shorter.****
->
-> Do we know of any namespace conflicts with other op libraries? It's been
-> 5+ years, has this situation changed?****
->
->  <ira>
-> The Open Printing Vector API uses 'opvp' as prefix throughout.
-> It's sloppy and amateur coding practice not to use a library
-> specific unique prefix (e.g., 'opjt') for variables and functions.
->
-> The scope is NOT just OP libraries, but the entire universe of
-> code that might be linked into a vendor or third-party tool.
-> </ira>
->  ****
->
-> 2. I will be attending as much of the summit as I can by phone-in, the
-> summit takes place over my finals so I will be missing some sessions.****
->
->  <ira>
-> Understood - we'll be glad to have you when you can attend.
-> </ira>****
->
-> 3. If the wiki has no history does that mean it is pointless for me to
-> fill in the change log when making edits?****
->
->  <ira>
-> Till can hopefully answer this one - we're not any of us happy
-> about the move from a full-function Wiki tool to a limited Wiki
-> tool by the Linux Foundation.
-> </ira>
->
-> Daniel****
->
->  ****
->
-> 2012=E5=B9=B43=E6=9C=8828=E6=97=A513:38 Ira McDonald <blueroofmusic@gmail=
-.com>:****
->
-> Hi,
->
-> Minutes from today's Open Printing Summit planning call are posted at:
->
->
-> ftp://ftp.pwg.org/pub/pwg/openprinting/minutes/OP-Summit-Prep-20120328.ht=
-m
->
-> Note:  New FTP directory - see above
->
-> - ACTION - Till - contact Linux Foundation about Glen/Hin-Tak updates
->   to GSoC projects - no website fall-backs allowed until late April
->   - OPEN
->
-> - ACTION - Till - contact Ghostscript and other color management folks
->   as presenters (or send slides?)
->   - Michael Vrhel (Artifex, Ghostscript) will attend OPS
->   - OPEN
->
-> - ACTION - All - Draft presentation slides/outlines for review 11 April
->   - OPEN
->
-> - ACTION - Presenters - tell Till EARLY about any special requirements
->   (e.g., speakers for video, demo printers, etc.)
->   - OPEN
->
-> - ACTION - Presenters - send PDF slides to Till EARLY (or upload to OP)
->   (so that participants can download slides as backup for screencast)
->   - OPEN
->
-> - ACTION - Ira - draft slides for OP Plenary by 11 April
->   - OPEN
->
-> Next OP Conference Calls:
-> (1) April 2012 - OPS Preparation
->     - Note - US Daylight Savings Time started on Sunday 11 March 2012
->     - Note - Europe Summer Time started on Sunday 25 March 2012
->
->     - Wednesday 11 April 2012, Daytime
->       - US
->         9am in **San Francisco** - ****US**** PDT (Pacific Daylight Time)
->         10am in **Colorado** - ****US**** MDT (Mountain Daylight Time)
->         11am in Chicago - ****US**** CDT (Central Daylight Time)
->         12pm in **New York** - ****US**** EDT (Eastern Daylight Time)
->       - **Europe**
->         6pm in ****Berlin**** - CEST (Central European Summer Time)
->
->     * Main Number (Till Kamppeter, LF, leader)
->       International: +1-218-936-7999
->       Access Code:   491659#
->
-> (2) April 2012 - Joint PWG / Open Printing ****Summit****
->     - Note - OPS is NOT hosted by Linux Foundation Collaboration Summit
->
->     - Tuesday to Friday 24-27 April 2012 at Apple in ****Cupertino**, **C=
-A
-> ****
->       - US
->         9am in **San Francisco** - ****US**** PDT (Pacific Daylight Time)
->         10am in **Colorado** - ****US**** MDT (Mountain Daylight Time)
->         11am in Chicago - ****US**** CDT (Central Daylight Time)
->         12pm in **New York** - ****US**** EDT (Eastern Daylight Time)
->       - **Europe**
->         6pm in ****Berlin**** - CEST (Central European Summer Time)
->
->     * Main PWG Number (Mike Sweet, Apple, leader)
->       US Toll-Free:  +1-866-469-3239
->       International: +1-650-429-3300
->       Access Code:   By request to Ira McDonald (do NOT publish)
->
-> (3) May 2012 - US/Europe - OP Monthly Meeting
->     - Note - Joint PWG/OPS is 24-27 April at Apple in ****Cupertino**, **
-> CA****
->     - Note - Ubuntu Developer Summit is 7-11 May in ****Oakland**, **CA**=
+>> job ticket. This should encourage job ticket adoption and be a win for
+>> productivity.
+>>
+>> Sorry I have more to say but it'll have to wait until after my classes.
+>>
+>> Daniel
+>>
+>> ****
+>>
+>> 2012=E5=B9=B44=E6=9C=882=E6=97=A59:57 Petrie, Glen <glen.petrie@eitc.eps=
+on.com>:****
+>>
+>> Wow!  I have a different scenario.****
+>>
+>>  ****
+>>
+>> I see generation of a Print Job Ticket by a Print Client as a very simpl=
+e
+>> process.   Using C-Code as an example; it is nothing more that a collect=
+ion
+>> of canned =E2=80=9Cprintf=E2=80=9D statement were the argument are the P=
+rint Intent values
+>> expressed in the specific Print Job Ticket =E2=80=9Clanguage=E2=80=9D.  =
+ The Print Client
+>> only wants to output one Print Job Ticket format, not one of several. **=
 *
-> *
->     - Note - Ira has a conflict on 16 May
+>> *
+>>
+>>  ****
+>>
+>> I see parsing Print Job Ticket by a Print Service as an equally simple
+>> process; although there is a lot of content/data checking.   The Print
+>> Service only wants to accept one Print Job Ticket format, not one of
+>> several.****
+>>
+>>  ****
+>>
+>> The difficult part is when the Print Client Print Job Ticket format does
+>> not match the Print Service Print Job Ticket format =E2=80=93 an impedan=
+ce
+>> mismatch; thus, JTAPI, provides the impedance matching or a transform
+>> service. ****
+>>
+>>  ****
+>>
+>> What you are outlining implies that a Print Client or Print Service
+>> internally would need to use a set of data structures and definitions th=
+at
+>> supports JTAPI, where it may better for the Print Client or Print Servic=
+e
+>> to support the Print Job Ticket more directly.   This does lead to the e=
+ver
+>> pending problem of =E2=80=9CCommon=E2=80=9D; either a Common Print Clien=
+t or even a Common
+>> Print Service.  For a Common Print Client it implies what =E2=80=9CLabel=
+=E2=80=9D or =E2=80=9CName=E2=80=9D
+>> and what =E2=80=9Cvalues=E2=80=9D should be displayed.   If JTAPI defini=
+tions, values and
+>> names are to be used; then, JTAPI become useful for converting any Print
+>> Job Ticket to a common internal format for every one to use.   I like th=
+is
+>> idea.****
+>>
+>>  ****
+>>
+>> The same concept applies to capabilities information which is based Prin=
+t
+>> Job Ticket formats/definitions. ****
+>>
+>> =3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D****
+>>
+>> For the GSOC the time constraint, we may only get Print Job Ticket forma=
+t
+>> Foo converted to an internal structure.   We can try to both read and wr=
+ite
+>> of that Print Job Ticket format. ****
+>>
+>> =3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D****
+>>
+>> Since there may be an issue using or modifying MJT (copyright, etc), I
+>> will create a very simple MIT license Print Job Ticket format for JTAPI
+>> GSOC.   Again, the goal of JTAPI this year is end-to-end code with a ver=
+y
+>> well documented set of code that will be used as illustration of
+>> implementing JTAPI.   The Print Job Ticket format is not important this
+>> year.  Next year or in a separate project, a standardized Print Job Tick=
+et
+>> format can be instantiated. ****
+>>
+>>  ****
+>>
+>> Glen****
+>>
+>>  ****
+>>
+>>  ****
+>>  ------------------------------
+>>
+>> *From:* Ira McDonald [mailto:blueroofmusic@gmail.com]
+>> *Sent:* Monday, April 02, 2012 8:12 AM****
+>>
+>>
+>> *To:* Petrie, Glen; Ira McDonald
+>> *Cc:* Daniel Dressler; printing-architecture@lists.linux-foundation.org;
+>> printing-summit@lists.linux-foundation.org
+>> *Subject:* Re: [Printing-architecture] [Printing-summit] OPS
+>> Preparationminutes (28 March 2012)****
+>>
+>>  ****
+>>
+>> Hi Glen,
+>>
+>> I agree with you that the *3rd* use case is a Client producing
+>> JDF and and PrintService converting it to PJT w/ JTAPI.
+>>
+>> But the other two use cases (I think the dominant ones)
+>> don't involve ANY conversion:
+>>
+>> (1) Client builds an abstract job ticket using JTAPI and says
+>> write it out to a given format.
+>>
+>> (2) PrintService accepts that concrete job ticket and parses
+>> it w/ JTAPI and uses the JTAPI parsed attributes as input
+>> to the Scheduler and Interpreter subunits to process the
+>> job.
+>>
+>> Your  3rd use case of conversion of formats can't be
+>> demonstrated without at least 2 backends - it's harder,
+>> not simpler.
+>>
+>> For all I care there's a reference only backend that writes
+>> out (and reads in/parses) only an internal C struct form
+>> of a job ticket.
+>>
+>> Or writes out MJT, but it That intellectual property and
+>> status issues - the spec is PWG copyrighted and it's
+>> a whitepaper, not an approved PWG project (that is, we
+>> CANNOT modify MJT w/out PWG permission).
+>>
+>> WDYT?
+>>
+>> Cheers,
+>> - Ira
+>>
+>>
+>>
+>> Ira McDonald (Musician / Software Architect)
+>> Chair - Linux Foundation Open Printing WG
+>> Secretary - IEEE-ISTO Printer Working Group
+>> Co-Chair - IEEE-ISTO PWG IPP WG
+>> Co-Chair - TCG Trusted Mobility Solutions WG
+>> Chair - TCG Embedded Systems Hardcopy SG
+>> IETF Designated Expert - IPP & Printer MIB
+>> Blue Roof Music/High North Inc
+>> http://sites.google.com/site/blueroofmusic
+>> http://sites.google.com/site/highnorthinc
+>> mailto:blueroofmusic@gmail.com
+>> Winter  ****579 Park Place**  **Saline**, **MI**  **48176****
+>> 734-944-0094
+>> Summer  ****PO Box** 221**  Grand ****Marais**, **MI** **49839****
+>> 906-494-2434****
+>>
+>> ** **
+>>
+>> 2012/4/2 Petrie, Glen <glen.petrie@eitc.epson.com>****
+>>
+>> Ira,****
+>>
+>>  ****
+>>
+>> I must admit to being totally confused.   I always under the impression
+>> that JTAPI was a classic definition of a transform service and not just =
+a
+>> job ticket interpreter for a Print Service.    I thought a transform
+>> service accepts one document format and product a different document
+>> format; which is what I thought JTAPI did.  Example, accept a JDF job
+>> ticket and produce a PWG job ticket.  ****
+>>
+>>  ****
+>>
+>> What you describe below is what I would call it an interpreter and,
+>> maybe, that you have considered JTAPI to be.    Then, at least to me, th=
+e
+>> existing JTAPI may not be what is needed.   What is needed is a generic =
+JDF
+>> interpreter, a PWG:PJT interpreter, =E2=80=A6; that is, what I called th=
+e front-end
+>> to JTAPI.****
+>>
+>>  ****
+>>
+>> I always saw the use case as:  A Print Service accepts PWG:PJT but the
+>> Print Client produced JDF.   Thus, the either the Print Client or the Pr=
+int
+>> Service uses the JTAPI Transform Service to transform JDF to PJT.    The
+>> Print Service would already have its own interpreter to parse PWG:PJT in=
+to
+>> what ever internal format the Print Service needed or used.   [ I had
+>> always hoped that someday we could have a defined a the internal format
+>> that everyone would use but I don=E2=80=99t think that will ever happen.=
+]****
+>>
+>>  ****
+>>
+>> From my use case, JTAPI would need the ability to transform many possibl=
+e
+>> input public and private job ticket formats; JTAPI, itself would have an
+>> internally data structure capable of containing content from many input =
+Job
+>> Ticket to be able to produce differing output Job Tickets.****
+>>
+>>  ****
+>>
+>> I am not sure what to do now.  I may not be the best person to guide the
+>> Daniel on the first JTAPI project since I not seem to have the correct
+>> understanding.   Ira, perhaps, you should mentor Daniel on the core (the
+>> first) JTAPI project so that the actual intent is produced.  I will ment=
+or
+>> another student for the second JTAPI project following your=E2=80=99s an=
+d Daniel=E2=80=99s
+>> lead. ****
+>>
+>>  ****
+>>
+>> Glen****
+>>
+>>  ****
+>>
+>>  ****
+>>  ------------------------------
+>>
+>> *From:* Ira McDonald [mailto:blueroofmusic@gmail.com]
+>> *Sent:* Sunday, April 01, 2012 9:27 PM
+>> *To:* Petrie, Glen; Ira McDonald
+>> *Cc:* Daniel Dressler; printing-architecture@lists.linux-foundation.org;
+>> printing-summit@lists.linux-foundation.org****
+>>
+>>
+>> *Subject:* Re: [Printing-architecture] [Printing-summit] OPS
+>> Preparationminutes (28 March 2012)****
+>>
+>>  ****
+>>
+>> Hi Glen,
+>>
+>> I strongly disagree - this is *not* the OP Job Ticket
+>> Transform Service.
+>>
+>> The first use for a client is to create a NEW job
+>> ticket (in the abstract API) and write it out into some
+>> concrete format (with a backend).
+>>
+>> Clients mostly won't modify existing job tickets.
+>>
+>> And PrintServices will just use JTAPI to parse the
+>> job ticket once (in whatever format) and use the
+>> values in the actual Interpreter and Scheduler
+>> miodules.
+>>
+>> Conversion of Job Ticket formats is the tertiary
+>> use case.
+>>
+>> Cheers,
+>> - Ira
+>>
+>> Ira McDonald (Musician / Software Architect)
+>> Chair - Linux Foundation Open Printing WG
+>> Secretary - IEEE-ISTO Printer Working Group
+>> Co-Chair - IEEE-ISTO PWG IPP WG
+>> Co-Chair - TCG Trusted Mobility Solutions WG
+>> Chair - TCG Embedded Systems Hardcopy SG
+>> IETF Designated Expert - IPP & Printer MIB
+>> Blue Roof Music/High North Inc
+>> http://sites.google.com/site/blueroofmusic
+>> http://sites.google.com/site/highnorthinc
+>> mailto:blueroofmusic@gmail.com
+>> Winter  ****579 Park Place**  **Saline**, **MI**  **48176****
+>> 734-944-0094
+>> Summer  ****PO Box** 221**  Grand ****Marais**, **MI** **49839****
+>> 906-494-2434****
+>>
+>>  ****
+>>
+>> 2012/3/30 Petrie, Glen <glen.petrie@eitc.epson.com>****
+>>
+>> Ira, Daniel****
+>>
+>>  ****
+>>
+>> Since there seems to be an objection with just using =E2=80=9Cop=E2=80=
+=9D; I don=E2=80=99t
+>> believe =E2=80=9Copjt=E2=80=9D is actually correct either.  That is, thi=
+s is not the
+>> OpenPrinting Job Ticket; what it is the OpenPrinting Job Ticket Transfor=
+m
+>> Service [which fits perfectly with PWG=E2=80=99s definition of a transfo=
+rm
+>> service].   So an alternate and more descriptive lettering would be eith=
+er
+>> ****
+>>
+>>  ****
+>>
+>> =E2=80=9Copjtt=E2=80=9D             =3D open printing job ticket transfo=
+rm****
+>>
+>> =E2=80=9Copjtts=E2=80=9D           =3D open printing job ticket transfor=
+m service****
+>>
+>>  ****
+>>
+>> <The only other suggestion is to change the formal API names (not the
+>> prefix) to say JobTicketXXXXXXX and DocObj____.  NO!>****
+>>
+>>  ****
+>>
+>> Glen****
+>>
+>>  ****
+>>
+>> p.s. ****
+>>
+>> Please consider that this code will ultimately be reference code; and no=
+t
+>> reference code for execution as much as for source code on how to make J=
+ob
+>> Ticket back-ends (and front-end).  Having long prefixes for variable,
+>> variable types, routine name, etc, makes the code difficult to read,
+>> understand and develop.   This is not a schema, a dtd or the like; but a
+>> set of APIs that must have a front-end and one or more back-ends.
+>>  Namespace conflicts with JTAPI as a transform service are none since th=
+at
+>> interface will be determined by the front-end..  Conflicts of actual cod=
+ing
+>> of the front-end and back-ends would be very low.   Since back-ends will
+>> likely be DLLs, there are not conflicts between back-ends.   My request =
+is
+>> that, for this project, the code must be well structured, easy to read,
+>> easy to following and strongly commented.   The goal is not the fastest =
+or
+>> the fanciest code but code that other will read and use to develop their
+>> code.   The code is the instruction manual. ****
+>>
+>>  ****
+>>
+>> p.s. ****
+>>
+>> As the PWG moves forward to MFD=E2=80=99s, the notation of a Job Ticket =
+becomes
+>> unclear as to what service the Job Ticket is for.   So the descriptive
+>> lettering should be****
+>>
+>>  ****
+>>
+>> oppjtt  openprinting print job ticket transform****
+>>
+>> oppjtts  openprinting print job ticket transform service****
+>>
+>>  ****
+>>
+>> or ****
+>>
+>>  ****
+>>
+>> The current JTAPIs would have to be extended to support other services.
+>>   Naming will be a real big problem then even considering the commonalit=
+y
+>> among various service job tickets. ****
+>>
+>>  ****
+>>
+>> p.s. ****
+>>
+>> I did not see any feedback (or I missed it) to my suggested changes to
+>> JTAPI headers to OpenPrinting names (prefixes); thus, I assume the
+>> preference is to stay to the existing FSG:JTAPI header file.   That is, =
+by
+>> all definitions, the correct thing to do.  So I guess it make the
+>> discussion of prefix unnecessary.****
+>>
+>>  ****
+>>
+>>  ****
+>>
+>> gwp****
+>>
+>>  ****
+>>
+>>  ****
+>>
+>>  ****
+>>
+>>  ****
+>>
+>>  ****
+>>  ------------------------------
+>>
+>> *From:* printing-architecture-bounces@lists.linux-foundation.org [mailto=
+:
+>> printing-architecture-bounces@lists.linux-foundation.org] *On Behalf Of =
+*Ira
+>> McDonald
+>> *Sent:* Wednesday, March 28, 2012 9:18 PM
+>> *To:* Daniel Dressler; Ira McDonald
+>> *Cc:* printing-architecture@lists.linux-foundation.org;
+>> printing-summit@lists.linux-foundation.org
+>> *Subject:* Re: [Printing-architecture] [Printing-summit] OPS
+>> Preparationminutes (28 March 2012)****
+>>
+>>  ****
+>>
+>> Hi Daniel,
+>>
+>> Comments inline below.
+>>
+>> Cheers,
+>> - Ira****
+>>
+>> On Wed, Mar 28, 2012 at 7:09 PM, Daniel Dressler <
+>> danieru.dressler@gmail.com> wrote:****
+>>
+>> In response to some comments in the meeting.
+>>
+>> 1. I would prefer an 'op' prefix to 'fsgjt'. I assume fsgjt means free
+>> standards group job ticket? Since the fsg does not exist anymore I think
+>> 'op' would avoid confusion. And it is shorter.****
+>>
+>> Do we know of any namespace conflicts with other op libraries? It's been
+>> 5+ years, has this situation changed?****
+>>
+>>  <ira>
+>> The Open Printing Vector API uses 'opvp' as prefix throughout.
+>> It's sloppy and amateur coding practice not to use a library
+>> specific unique prefix (e.g., 'opjt') for variables and functions.
+>>
+>> The scope is NOT just OP libraries, but the entire universe of
+>> code that might be linked into a vendor or third-party tool.
+>> </ira>
+>>  ****
+>>
+>> 2. I will be attending as much of the summit as I can by phone-in, the
+>> summit takes place over my finals so I will be missing some sessions.***=
+*
+>>
+>>  <ira>
+>> Understood - we'll be glad to have you when you can attend.
+>> </ira>****
+>>
+>> 3. If the wiki has no history does that mean it is pointless for me to
+>> fill in the change log when making edits?****
+>>
+>>  <ira>
+>> Till can hopefully answer this one - we're not any of us happy
+>> about the move from a full-function Wiki tool to a limited Wiki
+>> tool by the Linux Foundation.
+>> </ira>
+>>
+>> Daniel****
+>>
+>>  ****
+>>
+>> 2012=E5=B9=B43=E6=9C=8828=E6=97=A513:38 Ira McDonald <blueroofmusic@gmai=
+l.com>:****
+>>
+>> Hi,
+>>
+>> Minutes from today's Open Printing Summit planning call are posted at:
+>>
+>>
+>> ftp://ftp.pwg.org/pub/pwg/openprinting/minutes/OP-Summit-Prep-20120328.h=
+tm
+>>
+>> Note:  New FTP directory - see above
+>>
+>> - ACTION - Till - contact Linux Foundation about Glen/Hin-Tak updates
+>>   to GSoC projects - no website fall-backs allowed until late April
+>>   - OPEN
+>>
+>> - ACTION - Till - contact Ghostscript and other color management folks
+>>   as presenters (or send slides?)
+>>   - Michael Vrhel (Artifex, Ghostscript) will attend OPS
+>>   - OPEN
+>>
+>> - ACTION - All - Draft presentation slides/outlines for review 11 April
+>>   - OPEN
+>>
+>> - ACTION - Presenters - tell Till EARLY about any special requirements
+>>   (e.g., speakers for video, demo printers, etc.)
+>>   - OPEN
+>>
+>> - ACTION - Presenters - send PDF slides to Till EARLY (or upload to OP)
+>>   (so that participants can download slides as backup for screencast)
+>>   - OPEN
+>>
+>> - ACTION - Ira - draft slides for OP Plenary by 11 April
+>>   - OPEN
+>>
+>> Next OP Conference Calls:
+>> (1) April 2012 - OPS Preparation
+>>     - Note - US Daylight Savings Time started on Sunday 11 March 2012
+>>     - Note - Europe Summer Time started on Sunday 25 March 2012
+>>
+>>     - Wednesday 11 April 2012, Daytime
+>>       - US
+>>         9am in **San Francisco** - ****US**** PDT (Pacific Daylight Time=
+)
+>>         10am in **Colorado** - ****US**** MDT (Mountain Daylight Time)
+>>         11am in Chicago - ****US**** CDT (Central Daylight Time)
+>>         12pm in **New York** - ****US**** EDT (Eastern Daylight Time)
+>>       - **Europe**
+>>         6pm in ****Berlin**** - CEST (Central European Summer Time)
+>>
+>>     * Main Number (Till Kamppeter, LF, leader)
+>>       International: +1-218-936-7999
+>>       Access Code:   491659#
+>>
+>> (2) April 2012 - Joint PWG / Open Printing ****Summit****
+>>     - Note - OPS is NOT hosted by Linux Foundation Collaboration Summit
+>>
+>>     - Tuesday to Friday 24-27 April 2012 at Apple in ****Cupertino**, **
+>> CA****
+>>       - US
+>>         9am in **San Francisco** - ****US**** PDT (Pacific Daylight Time=
+)
+>>         10am in **Colorado** - ****US**** MDT (Mountain Daylight Time)
+>>         11am in Chicago - ****US**** CDT (Central Daylight Time)
+>>         12pm in **New York** - ****US**** EDT (Eastern Daylight Time)
+>>       - **Europe**
+>>         6pm in ****Berlin**** - CEST (Central European Summer Time)
+>>
+>>     * Main PWG Number (Mike Sweet, Apple, leader)
+>>       US Toll-Free:  +1-866-469-3239
+>>       International: +1-650-429-3300
+>>       Access Code:   By request to Ira McDonald (do NOT publish)
+>>
+>> (3) May 2012 - US/Europe - OP Monthly Meeting
+>>     - Note - Joint PWG/OPS is 24-27 April at Apple in ****Cupertino**, *=
+*
+>> CA****
+>>     - Note - Ubuntu Developer Summit is 7-11 May in ****Oakland**, **CA*=
+*
+>> **
+>>     - Note - Ira has a conflict on 16 May
+>>
+>>     - Wednesday 23 May 2012, Daytime
+>>       - US
+>>         9am in **San Francisco** - ****US**** PDT (Pacific Daylight Time=
+)
+>>         10am in **Colorado** - ****US**** MDT (Mountain Daylight Time)
+>>         11am in Chicago - ****US**** CDT (Central Daylight Time)
+>>         12pm in **New York** - ****US**** EDT (Eastern Daylight Time)
+>>       - **Europe**
+>>         6pm in ****Berlin**** - CEST (Central European Summer Time)
+>>
+>>     * Main Number (Till Kamppeter, LF, leader)
+>>       International: +1-218-936-7999
+>>       Access Code:   491659#
+>>
+>> Cheers,
+>> - Ira
+>>
+>> Ira McDonald (Musician / Software Architect)
+>> Chair - Linux Foundation Open Printing WG
+>> Secretary - IEEE-ISTO Printer Working Group
+>> Co-Chair - IEEE-ISTO PWG IPP WG
+>> Co-Chair - TCG Trusted Mobility Solutions WG
+>> Chair - TCG Embedded Systems Hardcopy SG
+>> IETF Designated Expert - IPP & Printer MIB
+>> Blue Roof Music/High North Inc
+>> http://sites.google.com/site/blueroofmusic
+>> http://sites.google.com/site/highnorthinc
+>> mailto:blueroofmusic@gmail.com
+>> Winter  ****579 Park Place**  **Saline**, **MI**  **48176****
+>> 734-944-0094
+>> Summer  ****PO Box** 221**  Grand ****Marais**, **MI** **49839****
+>> 906-494-2434****
+>>
+>>  ****
+>>
+>> _______________________________________________
+>> Printing-summit mailing list
+>> Printing-summit@lists.linux-foundation.org
+>> https://lists.linuxfoundation.org/mailman/listinfo/printing-summit****
+>>
+>>  ****
+>>
+>>   ****
+>>
+>>  ****
+>>
+>>  ****
+>>
+>> ** **
+>>
 >
->     - Wednesday 23 May 2012, Daytime
->       - US
->         9am in **San Francisco** - ****US**** PDT (Pacific Daylight Time)
->         10am in **Colorado** - ****US**** MDT (Mountain Daylight Time)
->         11am in Chicago - ****US**** CDT (Central Daylight Time)
->         12pm in **New York** - ****US**** EDT (Eastern Daylight Time)
->       - **Europe**
->         6pm in ****Berlin**** - CEST (Central European Summer Time)
->
->     * Main Number (Till Kamppeter, LF, leader)
->       International: +1-218-936-7999
->       Access Code:   491659#
->
-> Cheers,
-> - Ira
->
-> Ira McDonald (Musician / Software Architect)
-> Chair - Linux Foundation Open Printing WG
-> Secretary - IEEE-ISTO Printer Working Group
-> Co-Chair - IEEE-ISTO PWG IPP WG
-> Co-Chair - TCG Trusted Mobility Solutions WG
-> Chair - TCG Embedded Systems Hardcopy SG
-> IETF Designated Expert - IPP & Printer MIB
-> Blue Roof Music/High North Inc
-> http://sites.google.com/site/blueroofmusic
-> http://sites.google.com/site/highnorthinc
-> mailto:blueroofmusic@gmail.com
-> Winter  ****579 Park Place**  **Saline**, **MI**  **48176****
-> 734-944-0094
-> Summer  ****PO Box** 221**  Grand ****Marais**, **MI** **49839****
-> 906-494-2434****
->
->  ****
->
-> _______________________________________________
-> Printing-summit mailing list
-> Printing-summit@lists.linux-foundation.org
-> https://lists.linuxfoundation.org/mailman/listinfo/printing-summit****
->
->  ****
->
->   ****
->
->  ****
->
->  ****
->
-> ** **
 >
 
---e89a8ff253fc1ec62204bcb5a655
+--f46d04463126f8d28404bcb8d751
 Content-Type: text/html; charset=UTF-8
 Content-Transfer-Encoding: quoted-printable
 
+To continue my last email I wanted to say that I would like it if Glen cont=
+inued to be my mentor. My biggest concern is about code quality and I think=
+ he can provide the criticism and code review I need to improve. <br><br>
+What exactly is the issue with implementing a micro job ticket backend? It =
+was my understanding that MJT would be a simple job ticket format and thus =
+a good one to implement as an example/development backend. Is there a reaso=
+n we might need to alter the MJT standard?<br>
+<br>Daniel<br><br><div class=3D"gmail_quote">2012=E5=B9=B44=E6=9C=882=E6=97=
+=A511:37 Daniel Dressler <span dir=3D"ltr">&lt;<a href=3D"mailto:danieru.dr=
+essler@gmail.com" target=3D"_blank">danieru.dressler@gmail.com</a>&gt;</spa=
+n>:<br><blockquote class=3D"gmail_quote" style=3D"margin:0 0 0 .8ex;border-=
+left:1px #ccc solid;padding-left:1ex">
+
 Sorry Glen and everyone, I forgot to reply-all, here is the email I sent an=
- hour ago which only glen received:<br><br>Thank you Glen and Ira for havin=
-g this discussion its been helpful for me and my understanding of jtapi.<br=
->
+ hour ago which only glen received:<div><br><br>Thank you Glen and Ira for =
+having this discussion its been helpful for me and my understanding of jtap=
+i.<br>
+
+
 <br>My
  original understanding of jtapi was I think closer to ira&#39;s. That is t=
 o
@@ -722,9 +779,12 @@ programmers with less effort on their part than it would take to produce
  even the simplest job ticket. This should encourage job ticket adoption
  and be a win for productivity.<br>
 <br>Sorry I have more to say but it&#39;ll have to wait until after my clas=
-ses.<br><br>Daniel<br><br><div class=3D"gmail_quote">2012=E5=B9=B44=E6=9C=
-=882=E6=97=A511:33 Petrie, Glen <span dir=3D"ltr">&lt;<a href=3D"mailto:gle=
-n.petrie@eitc.epson.com">glen.petrie@eitc.epson.com</a>&gt;</span>:<br>
+ses.<br><br>Daniel<br><br></div><div class=3D"gmail_quote">2012=E5=B9=B44=
+=E6=9C=882=E6=97=A511:33 Petrie, Glen <span dir=3D"ltr">&lt;<a href=3D"mail=
+to:glen.petrie@eitc.epson.com" target=3D"_blank">glen.petrie@eitc.epson.com=
+</a>&gt;</span>:<div>
+
+<div><br>
 <blockquote class=3D"gmail_quote" style=3D"margin:0 0 0 .8ex;border-left:1p=
 x #ccc solid;padding-left:1ex">
 
@@ -789,12 +849,12 @@ ieru.dressler@gmail.com</a>] <br>
  9:46
 AM<br>
 <b><span style=3D"font-weight:bold">To:</span></b> Petrie, Glen</span></fon=
-t></p><div><div class=3D"h5"><font face=3D"Tahoma"><br>
+t></p><div><div><font face=3D"Tahoma"><br>
 <b><span style=3D"font-weight:bold">Subject:</span></b> Re:
 [Printing-architecture] [Printing-summit] OPS Preparationminutes (28 March
 2012)</font></div></div><u></u><u></u><p></p>
 
-</div><div><div class=3D"h5">
+</div><div><div>
 
 <p class=3D"MsoNormal"><font face=3D"Times New Roman" size=3D"3"><span styl=
 e=3D"font-size:12.0pt"><u></u>=C2=A0<u></u></span></font></p>
@@ -1516,6 +1576,8 @@ ion.org" target=3D"_blank">printing-architecture-bounces@lists.linux-founda=
 tion.org</a>] <b><span style=3D"font-weight:bold">On Behalf Of </span></b>I=
 ra McDonald<br>
 
+
+
 <b><span style=3D"font-weight:bold">Sent:</span></b> Wednesday, March 28, 2=
 012
 9:18 PM<br>
@@ -1896,6 +1958,7 @@ e=3D"font-size:12.0pt"><u></u>=C2=A0<u></u></span></font></p>
 </div>
 
 
+</blockquote></div></div></div><br>
 </blockquote></div><br>
 
---e89a8ff253fc1ec62204bcb5a655--
+--f46d04463126f8d28404bcb8d751--
