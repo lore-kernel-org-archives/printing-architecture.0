@@ -2,11 +2,11 @@ Return-Path: <glen.petrie@eitc.epson.com>
 Content-class: urn:content-classes:message
 MIME-Version: 1.0
 Content-Type: multipart/alternative;
-	boundary="----_=_NextPart_001_01CD10E9.5B115290"
-Date: Mon, 2 Apr 2012 08:57:49 -0700
-Message-ID: <E8C3B9E653C80C48B0951F8494C049A938EEE3@EEAEX02.us.epson.net>
-References: <CAN40gSuYBV51pJ3hmCrbup2XnavgCbVT5JDXqxiuRYDJk78BQw@mail.gmail.com><CAGC3nLDxxYjy7ydTqUHncKW9CCLqTiGyP0t-E_Wqf3pob1avDg@mail.gmail.com><CAN40gSsksMRO2+r8uZ_=VPaxKRbb3GZBdd7WpmPZYGuEcqnSEQ@mail.gmail.com><E8C3B9E653C80C48B0951F8494C049A938EE7F@EEAEX02.us.epson.net><CAN40gSuby6vu-=7O5fPLvq_Xh1ZPZGUXBf6oDB+Y424BDkNAVw@mail.gmail.com><E8C3B9E653C80C48B0951F8494C049A938EED6@EEAEX02.us.epson.net>
-	<CAN40gSv=_hVv92S9pBtYfBg_y_NjqwDE=syGA-hC6UOmMFUELg@mail.gmail.com>
+	boundary="----_=_NextPart_001_01CD10F6.AD8ADB8C"
+Date: Mon, 2 Apr 2012 10:33:09 -0700
+Message-ID: <E8C3B9E653C80C48B0951F8494C049A938EF1C@EEAEX02.us.epson.net>
+References: <CAN40gSuYBV51pJ3hmCrbup2XnavgCbVT5JDXqxiuRYDJk78BQw@mail.gmail.com><CAGC3nLDxxYjy7ydTqUHncKW9CCLqTiGyP0t-E_Wqf3pob1avDg@mail.gmail.com><CAN40gSsksMRO2+r8uZ_=VPaxKRbb3GZBdd7WpmPZYGuEcqnSEQ@mail.gmail.com><E8C3B9E653C80C48B0951F8494C049A938EE7F@EEAEX02.us.epson.net><CAN40gSuby6vu-=7O5fPLvq_Xh1ZPZGUXBf6oDB+Y424BDkNAVw@mail.gmail.com><E8C3B9E653C80C48B0951F8494C049A938EED6@EEAEX02.us.epson.net><CAN40gSv=_hVv92S9pBtYfBg_y_NjqwDE=syGA-hC6UOmMFUELg@mail.gmail.com><E8C3B9E653C80C48B0951F8494C049A938EEE3@EEAEX02.us.epson.net>
+	<CAGC3nLC=k_5HoLVxXhnXi9xf7qk4SRmULWirzfBgmqJxKVigag@mail.gmail.com>
 From: "Petrie, Glen" <glen.petrie@eitc.epson.com>
 Subject: Re: [Printing-architecture] [Printing-summit] OPS
 	Preparationminutes (28 March 2012)
@@ -19,15 +19,50 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Ira McDonald <blueroofmusic@gmail.com>
+To: Daniel Dressler <danieru.dressler@gmail.com>, Ira McDonald <blueroofmusic@gmail.com>
 Cc: printing-architecture@lists.linux-foundation.org, printing-summit@lists.linux-foundation.org
 
 This is a multi-part message in MIME format.
 
-------_=_NextPart_001_01CD10E9.5B115290
+------_=_NextPart_001_01CD10F6.AD8ADB8C
 Content-Type: text/plain;
 	charset="iso-2022-jp"
 Content-Transfer-Encoding: 7bit
+
+Ok, we will proceed with Ira’s and Daniel’s understanding.  We make a transform service another day.
+
+ 
+
+Glen
+
+ 
+
+ 
+
+________________________________
+
+From: Daniel Dressler [mailto:danieru.dressler@gmail.com] 
+Sent: Monday, April 02, 2012 9:46 AM
+To: Petrie, Glen
+Subject: Re: [Printing-architecture] [Printing-summit] OPS Preparationminutes (28 March 2012)
+
+ 
+
+Thank you Glen and Ira for having this discussion its been helpful for me and my understanding of jtapi.
+
+My original understanding of jtapi was I think closer to ira's. That is to say that producing and consuming a job ticket would be the primary use cases driving jtapi development. A transformation server would then be a bonus feature once we have enough well tested producing/consuming backend plugins.
+
+I think a scenario where programmers roll their own implementation would be very suboptimal. It would require any programmer who wants to produce a job ticket to learn the standard. The wealth of independent implementations would leave massive room for bugs.
+
+By concentrating the implementation effort into jtapi we get a library that will handle all the odd cases for all job ticekts for programmers with less effort on their part than it would take to produce even the simplest job ticket. This should encourage job ticket adoption and be a win for productivity.
+
+Sorry I have more to say but it'll have to wait until after my classes.
+
+Daniel
+
+
+
+2012年4月2日9:57 Petrie, Glen <glen.petrie@eitc.epson.com>:
 
 Wow!  I have a different scenario.
 
@@ -71,6 +106,8 @@ ________________________________
 
 From: Ira McDonald [mailto:blueroofmusic@gmail.com] 
 Sent: Monday, April 02, 2012 8:12 AM
+
+
 To: Petrie, Glen; Ira McDonald
 Cc: Daniel Dressler; printing-architecture@lists.linux-foundation.org; printing-summit@lists.linux-foundation.org
 Subject: Re: [Printing-architecture] [Printing-summit] OPS Preparationminutes (28 March 2012)
@@ -127,9 +164,7 @@ mailto:blueroofmusic@gmail.com
 Winter  579 Park Place  Saline, MI  48176  734-944-0094
 Summer  PO Box 221  Grand Marais, MI 49839  906-494-2434
 
-
-
-
+ 
 
 2012/4/2 Petrie, Glen <glen.petrie@eitc.epson.com>
 
@@ -455,16 +490,19 @@ Daniel
 
  
 
+ 
 
-------_=_NextPart_001_01CD10E9.5B115290
+
+------_=_NextPart_001_01CD10F6.AD8ADB8C
 Content-Type: text/html;
 	charset="iso-2022-jp"
 Content-Transfer-Encoding: 7bit
 
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-2022-jp">
 <html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:w="urn:schemas-microsoft-com:office:word" xmlns:st1="urn:schemas-microsoft-com:office:smarttags" xmlns="http://www.w3.org/TR/REC-html40">
 
 <head>
-<meta http-equiv=Content-Type content="text/html; charset=iso-2022-jp">
+
 <meta name=Generator content="Microsoft Word 11 (filtered medium)">
 <!--[if !mso]>
 <style>
@@ -1227,78 +1265,8 @@ ul
 <div class=Section1>
 
 <p class=MsoNormal><font size=3 color=blue face=Cambria><span style='font-size:
-12.0pt;font-family:Cambria;color:blue'>Wow!&nbsp; I have a different scenario.<o:p></o:p></span></font></p>
-
-<p class=MsoNormal><font size=3 color=blue face=Cambria><span style='font-size:
-12.0pt;font-family:Cambria;color:blue'><o:p>&nbsp;</o:p></span></font></p>
-
-<p class=MsoNormal><font size=3 color=blue face=Cambria><span style='font-size:
-12.0pt;font-family:Cambria;color:blue'>I see generation of a Print Job Ticket by
-a Print Client as a very simple process.&nbsp;&nbsp; Using C-Code as an
-example; it is nothing more that a collection of canned “printf” statement were
-the argument are the Print Intent values expressed in the specific Print Job
-Ticket “language”.&nbsp;&nbsp; The Print Client only wants to output one Print
-Job Ticket format, not one of several. <o:p></o:p></span></font></p>
-
-<p class=MsoNormal><font size=3 color=blue face=Cambria><span style='font-size:
-12.0pt;font-family:Cambria;color:blue'><o:p>&nbsp;</o:p></span></font></p>
-
-<p class=MsoNormal><font size=3 color=blue face=Cambria><span style='font-size:
-12.0pt;font-family:Cambria;color:blue'>I see parsing Print Job Ticket by a Print
-Service as an equally simple process; although there is a lot of content/data
-checking. &nbsp;&nbsp;The Print Service only wants to accept one Print Job
-Ticket format, not one of several.<o:p></o:p></span></font></p>
-
-<p class=MsoNormal><font size=3 color=blue face=Cambria><span style='font-size:
-12.0pt;font-family:Cambria;color:blue'><o:p>&nbsp;</o:p></span></font></p>
-
-<p class=MsoNormal><font size=3 color=blue face=Cambria><span style='font-size:
-12.0pt;font-family:Cambria;color:blue'>The difficult part is when the Print Client
-Print Job Ticket format does not match the Print Service Print Job Ticket
-format &#8211; an impedance mismatch; thus, JTAPI, provides the impedance matching or
-a transform service. <o:p></o:p></span></font></p>
-
-<p class=MsoNormal><font size=3 color=blue face=Cambria><span style='font-size:
-12.0pt;font-family:Cambria;color:blue'><o:p>&nbsp;</o:p></span></font></p>
-
-<p class=MsoNormal><font size=3 color=blue face=Cambria><span style='font-size:
-12.0pt;font-family:Cambria;color:blue'>What you are outlining implies that a
-Print Client or Print Service internally would need to use a set of data
-structures and definitions that supports JTAPI, where it may better for the Print
-Client or Print Service to support the Print Job Ticket more
-directly.&nbsp;&nbsp; This does lead to the ever pending problem of “Common”;
-either a Common Print Client or even a Common Print Service.&nbsp; For a Common
-Print Client it implies what “Label” or “Name” and what “values” should be
-displayed. &nbsp;&nbsp;If JTAPI definitions, values and names are to be used;
-then, JTAPI become useful for converting any Print Job Ticket to a common
-internal format for every one to use. &nbsp;&nbsp;I like this idea.<o:p></o:p></span></font></p>
-
-<p class=MsoNormal><font size=3 color=blue face=Cambria><span style='font-size:
-12.0pt;font-family:Cambria;color:blue'><o:p>&nbsp;</o:p></span></font></p>
-
-<p class=MsoNormal><font size=3 color=blue face=Cambria><span style='font-size:
-12.0pt;font-family:Cambria;color:blue'>The same concept applies to capabilities
-information which is based Print Job Ticket formats/definitions. <o:p></o:p></span></font></p>
-
-<p class=MsoNormal><font size=3 color=blue face=Cambria><span style='font-size:
-12.0pt;font-family:Cambria;color:blue'>============<o:p></o:p></span></font></p>
-
-<p class=MsoNormal><font size=3 color=blue face=Cambria><span style='font-size:
-12.0pt;font-family:Cambria;color:blue'>For the GSOC the time constraint, we may
-only get Print Job Ticket format Foo converted to an internal structure.&nbsp;&nbsp;
-We can try to both read and write of that Print Job Ticket format. <o:p></o:p></span></font></p>
-
-<p class=MsoNormal><font size=3 color=blue face=Cambria><span style='font-size:
-12.0pt;font-family:Cambria;color:blue'>============<o:p></o:p></span></font></p>
-
-<p class=MsoNormal><font size=3 color=blue face=Cambria><span style='font-size:
-12.0pt;font-family:Cambria;color:blue'>Since there may be an issue using or modifying
-MJT (copyright, etc), I will create a very simple MIT license Print Job Ticket
-format for JTAPI GSOC.&nbsp;&nbsp; Again, the goal of JTAPI this year is
-end-to-end code with a very well documented set of code that will be used as
-illustration of implementing JTAPI.&nbsp;&nbsp; The Print Job Ticket format is
-not important this year.&nbsp; Next year or in a separate project, a
-standardized Print Job Ticket format can be instantiated. <o:p></o:p></span></font></p>
+12.0pt;font-family:Cambria;color:blue'>Ok, we will proceed with Ira’s and
+Daniel’s understanding.&nbsp; We make a transform service another day.<o:p></o:p></span></font></p>
 
 <p class=MsoNormal><font size=3 color=blue face=Cambria><span style='font-size:
 12.0pt;font-family:Cambria;color:blue'><o:p>&nbsp;</o:p></span></font></p>
@@ -1307,7 +1275,7 @@ standardized Print Job Ticket format can be instantiated. <o:p></o:p></span></fo
 12.0pt;font-family:Cambria;color:blue'>Glen<o:p></o:p></span></font></p>
 
 <p class=MsoNormal><font size=3 color=blue face=Cambria><span style='font-size:
-12.0pt;font-family:Cambria;color:blue'>&nbsp;<o:p></o:p></span></font></p>
+12.0pt;font-family:Cambria;color:blue'><o:p>&nbsp;</o:p></span></font></p>
 
 <p class=MsoNormal><font size=3 color=blue face=Cambria><span style='font-size:
 12.0pt;font-family:Cambria;color:blue'><o:p>&nbsp;</o:p></span></font></p>
@@ -1323,14 +1291,11 @@ face="Times New Roman"><span style='font-size:12.0pt'>
 
 <p class=MsoNormal><b><font size=2 face=Tahoma><span style='font-size:10.0pt;
 font-family:Tahoma;font-weight:bold'>From:</span></font></b><font size=2
-face=Tahoma><span style='font-size:10.0pt;font-family:Tahoma'> Ira McDonald
-[mailto:blueroofmusic@gmail.com] <br>
-<b><span style='font-weight:bold'>Sent:</span></b> Monday, April 02, 2012 8:12
+face=Tahoma><span style='font-size:10.0pt;font-family:Tahoma'> Daniel Dressler
+[mailto:danieru.dressler@gmail.com] <br>
+<b><span style='font-weight:bold'>Sent:</span></b> Monday, April 02, 2012 9:46
 AM<br>
-<b><span style='font-weight:bold'>To:</span></b> Petrie, Glen; Ira McDonald<br>
-<b><span style='font-weight:bold'>Cc:</span></b> Daniel Dressler;
-printing-architecture@lists.linux-foundation.org;
-printing-summit@lists.linux-foundation.org<br>
+<b><span style='font-weight:bold'>To:</span></b> Petrie, Glen<br>
 <b><span style='font-weight:bold'>Subject:</span></b> Re:
 [Printing-architecture] [Printing-summit] OPS Preparationminutes (28 March
 2012)</span></font><o:p></o:p></p>
@@ -1340,8 +1305,196 @@ printing-summit@lists.linux-foundation.org<br>
 <p class=MsoNormal><font size=3 face="Times New Roman"><span style='font-size:
 12.0pt'><o:p>&nbsp;</o:p></span></font></p>
 
+<p class=MsoNormal style='margin-bottom:12.0pt'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>Thank you Glen and Ira
+for having this discussion its been helpful for me and my understanding of
+jtapi.<br>
+<br>
+My original understanding of jtapi was I think closer to ira's. That is to say
+that producing and consuming a job ticket would be the primary use cases
+driving jtapi development. A transformation server would then be a bonus
+feature once we have enough well tested producing/consuming backend plugins.<br>
+<br>
+I think a scenario where programmers roll their own implementation would be
+very suboptimal. It would require any programmer who wants to produce a job
+ticket to learn the standard. The wealth of independent implementations would
+leave massive room for bugs.<br>
+<br>
+By concentrating the implementation effort into jtapi we get a library that
+will handle all the odd cases for all job ticekts for programmers with less
+effort on their part than it would take to produce even the simplest job
+ticket. This should encourage job ticket adoption and be a win for
+productivity.<br>
+<br>
+Sorry I have more to say but it'll have to wait until after my classes.<br>
+<br>
+Daniel<br>
+<br>
+<o:p></o:p></span></font></p>
+
+<div>
+
 <p class=MsoNormal><font size=3 face="Times New Roman"><span style='font-size:
-12.0pt'>Hi Glen,<br>
+12.0pt'>2012</span></font><font face="MS Mincho"><span style='font-family:"MS Mincho"'>年</span></font>4<font
+face="MS Mincho"><span style='font-family:"MS Mincho"'>月</span></font>2<font
+face="MS Mincho"><span style='font-family:"MS Mincho"'>日</span></font>9:57
+Petrie, Glen &lt;<a href="mailto:glen.petrie@eitc.epson.com">glen.petrie@eitc.epson.com</a>&gt;:<o:p></o:p></p>
+
+<div link=blue vlink=blue>
+
+<div>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><font
+size=3 color=blue face=Cambria><span style='font-size:12.0pt;font-family:Cambria;
+color:blue'>Wow!&nbsp; I have a different scenario.</span></font><o:p></o:p></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><font
+size=3 color=blue face=Cambria><span style='font-size:12.0pt;font-family:Cambria;
+color:blue'>&nbsp;</span></font><o:p></o:p></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><font
+size=3 color=blue face=Cambria><span style='font-size:12.0pt;font-family:Cambria;
+color:blue'>I see generation of a Print Job Ticket by a Print Client as a very
+simple process.&nbsp;&nbsp; Using C-Code as an example; it is nothing more that
+a collection of canned “printf” statement were the argument are the Print
+Intent values expressed in the specific Print Job Ticket
+“language”.&nbsp;&nbsp; The Print Client only wants to output one Print Job
+Ticket format, not one of several. </span></font><o:p></o:p></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><font
+size=3 color=blue face=Cambria><span style='font-size:12.0pt;font-family:Cambria;
+color:blue'>&nbsp;</span></font><o:p></o:p></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><font
+size=3 color=blue face=Cambria><span style='font-size:12.0pt;font-family:Cambria;
+color:blue'>I see parsing Print Job Ticket by a Print Service as an equally simple
+process; although there is a lot of content/data checking. &nbsp;&nbsp;The
+Print Service only wants to accept one Print Job Ticket format, not one of
+several.</span></font><o:p></o:p></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><font
+size=3 color=blue face=Cambria><span style='font-size:12.0pt;font-family:Cambria;
+color:blue'>&nbsp;</span></font><o:p></o:p></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><font
+size=3 color=blue face=Cambria><span style='font-size:12.0pt;font-family:Cambria;
+color:blue'>The difficult part is when the Print Client Print Job Ticket format
+does not match the Print Service Print Job Ticket format &#8211; an impedance
+mismatch; thus, JTAPI, provides the impedance matching or a transform service. </span></font><o:p></o:p></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><font
+size=3 color=blue face=Cambria><span style='font-size:12.0pt;font-family:Cambria;
+color:blue'>&nbsp;</span></font><o:p></o:p></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><font
+size=3 color=blue face=Cambria><span style='font-size:12.0pt;font-family:Cambria;
+color:blue'>What you are outlining implies that a Print Client or Print Service
+internally would need to use a set of data structures and definitions that
+supports JTAPI, where it may better for the Print Client or Print Service to
+support the Print Job Ticket more directly.&nbsp;&nbsp; This does lead to the
+ever pending problem of “Common”; either a Common Print Client or even a Common
+Print Service.&nbsp; For a Common Print Client it implies what “Label” or
+“Name” and what “values” should be displayed. &nbsp;&nbsp;If JTAPI definitions,
+values and names are to be used; then, JTAPI become useful for converting any
+Print Job Ticket to a common internal format for every one to use.
+&nbsp;&nbsp;I like this idea.</span></font><o:p></o:p></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><font
+size=3 color=blue face=Cambria><span style='font-size:12.0pt;font-family:Cambria;
+color:blue'>&nbsp;</span></font><o:p></o:p></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><font
+size=3 color=blue face=Cambria><span style='font-size:12.0pt;font-family:Cambria;
+color:blue'>The same concept applies to capabilities information which is based
+Print Job Ticket formats/definitions. </span></font><o:p></o:p></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><font
+size=3 color=blue face=Cambria><span style='font-size:12.0pt;font-family:Cambria;
+color:blue'>============</span></font><o:p></o:p></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><font
+size=3 color=blue face=Cambria><span style='font-size:12.0pt;font-family:Cambria;
+color:blue'>For the GSOC the time constraint, we may only get Print Job Ticket
+format Foo converted to an internal structure.&nbsp;&nbsp; We can try to both
+read and write of that Print Job Ticket format. </span></font><o:p></o:p></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><font
+size=3 color=blue face=Cambria><span style='font-size:12.0pt;font-family:Cambria;
+color:blue'>============</span></font><o:p></o:p></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><font
+size=3 color=blue face=Cambria><span style='font-size:12.0pt;font-family:Cambria;
+color:blue'>Since there may be an issue using or modifying MJT (copyright,
+etc), I will create a very simple MIT license Print Job Ticket format for JTAPI
+GSOC.&nbsp;&nbsp; Again, the goal of JTAPI this year is end-to-end code with a
+very well documented set of code that will be used as illustration of
+implementing JTAPI.&nbsp;&nbsp; The Print Job Ticket format is not important
+this year.&nbsp; Next year or in a separate project, a standardized Print Job Ticket
+format can be instantiated. </span></font><o:p></o:p></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><font
+size=3 color=blue face=Cambria><span style='font-size:12.0pt;font-family:Cambria;
+color:blue'>&nbsp;</span></font><o:p></o:p></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><font
+size=3 color=blue face=Cambria><span style='font-size:12.0pt;font-family:Cambria;
+color:blue'>Glen</span></font><o:p></o:p></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><font
+size=3 color=blue face=Cambria><span style='font-size:12.0pt;font-family:Cambria;
+color:blue'>&nbsp;</span></font><o:p></o:p></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><font
+size=3 color=blue face=Cambria><span style='font-size:12.0pt;font-family:Cambria;
+color:blue'>&nbsp;</span></font><o:p></o:p></p>
+
+<div>
+
+<div class=MsoNormal align=center style='text-align:center'><font size=3
+face="Times New Roman"><span style='font-size:12.0pt'>
+
+<hr size=2 width="100%" align=center>
+
+</span></font></div>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><b><font
+size=2 face=Tahoma><span style='font-size:10.0pt;font-family:Tahoma;font-weight:
+bold'>From:</span></font></b><font size=2 face=Tahoma><span style='font-size:
+10.0pt;font-family:Tahoma'> Ira McDonald [mailto:<a
+href="mailto:blueroofmusic@gmail.com" target="_blank">blueroofmusic@gmail.com</a>]
+<br>
+<b><span style='font-weight:bold'>Sent:</span></b> Monday, April 02, 2012 8:12
+AM</span></font><o:p></o:p></p>
+
+<div>
+
+<div>
+
+<p class=MsoNormal><font size=3 face=Tahoma><span style='font-size:12.0pt;
+font-family:Tahoma'><br>
+<b><span style='font-weight:bold'>To:</span></b> Petrie, Glen; Ira McDonald<br>
+<b><span style='font-weight:bold'>Cc:</span></b> Daniel Dressler; <a
+href="mailto:printing-architecture@lists.linux-foundation.org" target="_blank">printing-architecture@lists.linux-foundation.org</a>;
+<a href="mailto:printing-summit@lists.linux-foundation.org" target="_blank">printing-summit@lists.linux-foundation.org</a><br>
+<b><span style='font-weight:bold'>Subject:</span></b> Re:
+[Printing-architecture] [Printing-summit] OPS Preparationminutes (28 March
+2012)</span></font><o:p></o:p></p>
+
+</div>
+
+</div>
+
+</div>
+
+<div>
+
+<div>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><font
+size=3 face="Times New Roman"><span style='font-size:12.0pt'>&nbsp;<o:p></o:p></span></font></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><font
+size=3 face="Times New Roman"><span style='font-size:12.0pt'>Hi Glen,<br>
 <br>
 I agree with you that the *3rd* use case is a Client producing<br>
 JDF and and PrintService converting it to PJT w/ JTAPI.<br>
@@ -1392,22 +1545,21 @@ color="#6600cc"><span style='color:#6600CC'>http://sites.google.com/site/highnor
 mailto:<a href="mailto:blueroofmusic@gmail.com" target="_blank">blueroofmusic@gmail.com</a><br>
 Winter&nbsp; <st1:address w:st="on"><st1:Street w:st="on">579 Park Place</st1:Street>&nbsp;
  <st1:City w:st="on">Saline</st1:City>, <st1:State w:st="on">MI</st1:State>&nbsp;
- <st1:PostalCode w:st="on">48176</st1:PostalCode></st1:address>&nbsp;
-734-944-0094<br>
+ <st1:PostalCode w:st="on">48176</st1:PostalCode></st1:address>&nbsp; <a
+href="tel:734-944-0094" target="_blank" value="+17349440094">734-944-0094</a><br>
 Summer&nbsp; <st1:address w:st="on"><st1:Street w:st="on">PO Box</st1:Street>
  221</st1:address>&nbsp; Grand <st1:place w:st="on"><st1:City w:st="on">Marais</st1:City>,
  <st1:State w:st="on">MI</st1:State> <st1:PostalCode w:st="on">49839</st1:PostalCode></st1:place>&nbsp;
-906-494-2434<o:p></o:p></span></font></p>
+<a href="tel:906-494-2434" target="_blank" value="+19064942434">906-494-2434</a><o:p></o:p></span></font></p>
 
-<p class=MsoNormal style='margin-bottom:12.0pt'><font size=3
-face="Times New Roman"><span style='font-size:12.0pt'><br>
-<br>
-<o:p></o:p></span></font></p>
+<p class=MsoNormal style='mso-margin-top-alt:auto;margin-bottom:12.0pt'><font
+size=3 face="Times New Roman"><span style='font-size:12.0pt'><o:p>&nbsp;</o:p></span></font></p>
 
 <div>
 
-<p class=MsoNormal><font size=3 face="Times New Roman"><span style='font-size:
-12.0pt'>2012/4/2 Petrie, Glen &lt;<a href="mailto:glen.petrie@eitc.epson.com">glen.petrie@eitc.epson.com</a>&gt;<o:p></o:p></span></font></p>
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><font
+size=3 face="Times New Roman"><span style='font-size:12.0pt'>2012/4/2 Petrie,
+Glen &lt;<a href="mailto:glen.petrie@eitc.epson.com" target="_blank">glen.petrie@eitc.epson.com</a>&gt;<o:p></o:p></span></font></p>
 
 <div link=blue vlink=blue>
 
@@ -1439,7 +1591,7 @@ size=3 color=blue face=Cambria><span style='font-size:12.0pt;font-family:Cambria
 color:blue'>What you describe below is what I would call it an interpreter and,
 maybe, that you have considered JTAPI to be. &nbsp;&nbsp;&nbsp;Then, at least
 to me, the existing JTAPI may not be what is needed.&nbsp;&nbsp; What is needed
-is a generic JDF interpreter, a PWG:PJT interpreter, …; that is, what I called
+is a generic JDF interpreter, a PWG:PJT interpreter, …; that is, what I called
 the front-end to JTAPI.</span></font><o:p></o:p></p>
 
 <p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><font
@@ -1454,7 +1606,7 @@ Client or the Print Service uses the JTAPI Transform Service to transform JDF
 to PJT.&nbsp; &nbsp;&nbsp;The Print Service would already have its own
 interpreter to parse PWG:PJT into what ever internal format the Print Service
 needed or used. &nbsp;&nbsp;[ I had always hoped that someday we could have a
-defined a the internal format that everyone would use but I don’t think that
+defined a the internal format that everyone would use but I don’t think that
 will ever happen.]</span></font><o:p></o:p></p>
 
 <p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><font
@@ -1478,8 +1630,8 @@ color:blue'>I am not sure what to do now.&nbsp; I may not be the best person to
 guide the Daniel on the first JTAPI project since I not seem to have the
 correct understanding.&nbsp;&nbsp; Ira, perhaps, you should mentor Daniel on
 the core (the first) JTAPI project so that the actual intent is produced.&nbsp;
-I will mentor another student for the second JTAPI project following your’s and
-Daniel’s lead. </span></font><o:p></o:p></p>
+I will mentor another student for the second JTAPI project following your’s and
+Daniel’s lead. </span></font><o:p></o:p></p>
 
 <p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><font
 size=3 color=blue face=Cambria><span style='font-size:12.0pt;font-family:Cambria;
@@ -1523,8 +1675,8 @@ href="mailto:printing-architecture@lists.linux-foundation.org" target="_blank">p
 
 <div>
 
-<p class=MsoNormal><font size=3 face=Tahoma><span style='font-size:12.0pt;
-font-family:Tahoma'><br>
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><font
+size=3 face=Tahoma><span style='font-size:12.0pt;font-family:Tahoma'><br>
 <b><span style='font-weight:bold'>Subject:</span></b> Re:
 [Printing-architecture] [Printing-summit] OPS Preparationminutes (28 March
 2012)</span></font><o:p></o:p></p>
@@ -1588,7 +1740,7 @@ Summer&nbsp; <st1:address w:st="on"><st1:Street w:st="on">PO Box</st1:Street>
 <a href="tel:906-494-2434" target="_blank" value="+19064942434">906-494-2434</a><o:p></o:p></span></font></p>
 
 <p class=MsoNormal style='mso-margin-top-alt:auto;margin-bottom:12.0pt'><font
-size=3 face="Times New Roman"><span style='font-size:12.0pt'><o:p>&nbsp;</o:p></span></font></p>
+size=3 face="Times New Roman"><span style='font-size:12.0pt'>&nbsp;<o:p></o:p></span></font></p>
 
 <div>
 
@@ -1610,12 +1762,11 @@ color:blue'>&nbsp;</span></font><o:p></o:p></p>
 
 <p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><font
 size=3 color=blue face=Cambria><span style='font-size:12.0pt;font-family:Cambria;
-color:blue'>Since there seems to be an objection with just using “op”; I don’t
-believe “opjt” is actually correct either.&nbsp; That is, this is not the
-OpenPrinting Job Ticket; what it is the OpenPrinting Job Ticket Transform Service
-[which fits perfectly with PWG’s definition of a transform
-service].&nbsp;&nbsp; So an alternate and more descriptive lettering would be
-either </span></font><o:p></o:p></p>
+color:blue'>Since there seems to be an objection with just using “op”; I don’t
+believe “opjt” is actually correct either.&nbsp; That is, this is not the OpenPrinting
+Job Ticket; what it is the OpenPrinting Job Ticket Transform Service [which
+fits perfectly with PWG’s definition of a transform service].&nbsp;&nbsp; So an
+alternate and more descriptive lettering would be either </span></font><o:p></o:p></p>
 
 <p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><font
 size=3 color=blue face=Cambria><span style='font-size:12.0pt;font-family:Cambria;
@@ -1623,12 +1774,12 @@ color:blue'>&nbsp;</span></font><o:p></o:p></p>
 
 <p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><font
 size=3 color=blue face=Cambria><span style='font-size:12.0pt;font-family:Cambria;
-color:blue'>“opjtt”&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+color:blue'>“opjtt”&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 = open printing job ticket transform</span></font><o:p></o:p></p>
 
 <p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><font
 size=3 color=blue face=Cambria><span style='font-size:12.0pt;font-family:Cambria;
-color:blue'>“opjtts”&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+color:blue'>“opjtts”&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 = open printing job ticket transform service</span></font><o:p></o:p></p>
 
 <p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><font
@@ -1665,14 +1816,14 @@ for source code on how to make Job Ticket back-ends (and front-end).
 makes the code difficult to read, understand and develop. &nbsp;&nbsp;This is
 not a schema, a dtd or the like; but a set of APIs that must have a front-end
 and one or more back-ends.&nbsp;&nbsp; &nbsp;Namespace conflicts with JTAPI as
-a transform service are none since that interface will be determined by the
-front-end..&nbsp; Conflicts of actual coding of the front-end and back-ends
-would be very low.&nbsp;&nbsp; Since back-ends will likely be DLLs, there are
-not conflicts between back-ends.&nbsp;&nbsp; My request is that, for this
-project, the code must be well structured, easy to read, easy to following and
-strongly commented. &nbsp;&nbsp;The goal is not the fastest or the fanciest
-code but code that other will read and use to develop their code.
-&nbsp;&nbsp;The code is the instruction manual. </span></font><o:p></o:p></p>
+a transform service are none since that interface will be determined by the front-end..&nbsp;
+Conflicts of actual coding of the front-end and back-ends would be very
+low.&nbsp;&nbsp; Since back-ends will likely be DLLs, there are not conflicts
+between back-ends.&nbsp;&nbsp; My request is that, for this project, the code
+must be well structured, easy to read, easy to following and strongly
+commented. &nbsp;&nbsp;The goal is not the fastest or the fanciest code but
+code that other will read and use to develop their code. &nbsp;&nbsp;The code
+is the instruction manual. </span></font><o:p></o:p></p>
 
 <p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><font
 size=3 color=blue face=Cambria><span style='font-size:12.0pt;font-family:Cambria;
@@ -1684,7 +1835,7 @@ color:blue'>p.s. </span></font><o:p></o:p></p>
 
 <p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
 margin-left:.5in'><font size=3 color=blue face=Cambria><span style='font-size:
-12.0pt;font-family:Cambria;color:blue'>As the PWG moves forward to MFD’s, the
+12.0pt;font-family:Cambria;color:blue'>As the PWG moves forward to MFD’s, the
 notation of a Job Ticket becomes unclear as to what service the Job Ticket is
 for.&nbsp;&nbsp; So the descriptive lettering should be</span></font><o:p></o:p></p>
 
@@ -1907,9 +2058,9 @@ size=3 face="Times New Roman"><span style='font-size:12.0pt'>&nbsp;<o:p></o:p></
 
 <p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><font
 size=3 face="Times New Roman"><span style='font-size:12.0pt'>2012</span></font><font
-face="MS Mincho"><span style='font-family:"MS Mincho"'>年</span></font>3<font
-face="MS Mincho"><span style='font-family:"MS Mincho"'>月</span></font>28<font
-face="MS Mincho"><span style='font-family:"MS Mincho"'>日</span></font>13:38 Ira
+face="MS Mincho"><span style='font-family:"MS Mincho"'>年</span></font>3<font
+face="MS Mincho"><span style='font-family:"MS Mincho"'>月</span></font>28<font
+face="MS Mincho"><span style='font-family:"MS Mincho"'>日</span></font>13:38 Ira
 McDonald &lt;<a href="mailto:blueroofmusic@gmail.com" target="_blank">blueroofmusic@gmail.com</a>&gt;:<o:p></o:p></p>
 
 <div>
@@ -2115,6 +2266,19 @@ size=3 face="Times New Roman"><span style='font-size:12.0pt'>&nbsp;<o:p></o:p></
 
 </div>
 
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><font
+size=3 face="Times New Roman"><span style='font-size:12.0pt'>&nbsp;<o:p></o:p></span></font></p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
 <p class=MsoNormal><font size=3 face="Times New Roman"><span style='font-size:
 12.0pt'><o:p>&nbsp;</o:p></span></font></p>
 
@@ -2124,4 +2288,4 @@ size=3 face="Times New Roman"><span style='font-size:12.0pt'>&nbsp;<o:p></o:p></
 
 </html>
 
-------_=_NextPart_001_01CD10E9.5B115290--
+------_=_NextPart_001_01CD10F6.AD8ADB8C--
