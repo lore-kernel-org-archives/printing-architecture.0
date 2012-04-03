@@ -1,15 +1,35 @@
-Return-Path: <glen.petrie@eitc.epson.com>
-Content-class: urn:content-classes:message
+Return-Path: <blueroofmusic@gmail.com>
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20120113;
+	h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+	:cc:content-type;
+	bh=oZ1jxnE8tt1lyjPLJeIGqso0iz4tW+1gSvLahnR1I5E=;
+	b=Gl8lY3Rr2wkzGziIPzvWBruhYe0YK8+DGM/iMgY2/oSOB7Zw4uUlgjgZ578gOFXpMm
+	fOY9WvSWQ6t6U3WucuP0fXg8p29GvyiUQB76GO3aBF+SGlqKVXq+GZxRlb/mmQcp0jpn
+	bJTAbQ4lemsVGU8xpv+onorGMOMbqcIofo/yQ8JQ0sLHlem4zzAVRK254FW1WJI2B1bZ
+	fKYhyxhkynACU2FwqER5VqF3xBx7YPHAO0CVXJkm6IAFbyx4k1v47pBqSvt+kqcDfve2
+	Uza0/avZcDqZL+JyTtCdGVqII2PNPRLbBBBDeVR4LfqQcd2H+VnwxRGx6dlJx5uM12r1
+	rlWw==
 MIME-Version: 1.0
-Content-Type: multipart/alternative;
-	boundary="----_=_NextPart_001_01CD1118.BED1E4BC"
-Date: Mon, 2 Apr 2012 14:37:03 -0700
-Message-ID: <E8C3B9E653C80C48B0951F8494C049A938EF80@EEAEX02.us.epson.net>
-References: <CAN40gSuYBV51pJ3hmCrbup2XnavgCbVT5JDXqxiuRYDJk78BQw@mail.gmail.com><CAGC3nLDxxYjy7ydTqUHncKW9CCLqTiGyP0t-E_Wqf3pob1avDg@mail.gmail.com><CAN40gSsksMRO2+r8uZ_=VPaxKRbb3GZBdd7WpmPZYGuEcqnSEQ@mail.gmail.com><E8C3B9E653C80C48B0951F8494C049A938EE7F@EEAEX02.us.epson.net><CAN40gSuby6vu-=7O5fPLvq_Xh1ZPZGUXBf6oDB+Y424BDkNAVw@mail.gmail.com><E8C3B9E653C80C48B0951F8494C049A938EED6@EEAEX02.us.epson.net><CAN40gSv=_hVv92S9pBtYfBg_y_NjqwDE=syGA-hC6UOmMFUELg@mail.gmail.com><E8C3B9E653C80C48B0951F8494C049A938EEE3@EEAEX02.us.epson.net><CAGC3nLC=k_5HoLVxXhnXi9xf7qk4SRmULWirzfBgmqJxKVigag@mail.gmail.com><E8C3B9E653C80C48B0951F8494C049A938EF1C@EEAEX02.us.epson.net><CAGC3nLDK3ZxTznwYeUf1yNeW+OuG4PA2BOCgM-=OKXD8iTnbDw@mail.gmail.com>
+In-Reply-To: <E8C3B9E653C80C48B0951F8494C049A938EF80@EEAEX02.us.epson.net>
+References: <CAN40gSuYBV51pJ3hmCrbup2XnavgCbVT5JDXqxiuRYDJk78BQw@mail.gmail.com>
+	<CAGC3nLDxxYjy7ydTqUHncKW9CCLqTiGyP0t-E_Wqf3pob1avDg@mail.gmail.com>
+	<CAN40gSsksMRO2+r8uZ_=VPaxKRbb3GZBdd7WpmPZYGuEcqnSEQ@mail.gmail.com>
+	<E8C3B9E653C80C48B0951F8494C049A938EE7F@EEAEX02.us.epson.net>
+	<CAN40gSuby6vu-=7O5fPLvq_Xh1ZPZGUXBf6oDB+Y424BDkNAVw@mail.gmail.com>
+	<E8C3B9E653C80C48B0951F8494C049A938EED6@EEAEX02.us.epson.net>
+	<CAN40gSv=_hVv92S9pBtYfBg_y_NjqwDE=syGA-hC6UOmMFUELg@mail.gmail.com>
+	<E8C3B9E653C80C48B0951F8494C049A938EEE3@EEAEX02.us.epson.net>
+	<CAGC3nLC=k_5HoLVxXhnXi9xf7qk4SRmULWirzfBgmqJxKVigag@mail.gmail.com>
+	<E8C3B9E653C80C48B0951F8494C049A938EF1C@EEAEX02.us.epson.net>
+	<CAGC3nLDK3ZxTznwYeUf1yNeW+OuG4PA2BOCgM-=OKXD8iTnbDw@mail.gmail.com>
 	<CAGC3nLB1aE9YgsXzrOOZiR55rdRQATsMhUReuXbeVp=EFQsQUw@mail.gmail.com>
-From: "Petrie, Glen" <glen.petrie@eitc.epson.com>
+	<E8C3B9E653C80C48B0951F8494C049A938EF80@EEAEX02.us.epson.net>
+Date: Tue, 3 Apr 2012 15:43:44 -0400
+Message-ID: <CAN40gSv7pss6zAoFejK=egUpWVtKqOV2etRk08y=Gx--bgYkhg@mail.gmail.com>
+From: Ira McDonald <blueroofmusic@gmail.com>
+Content-Type: multipart/alternative; boundary=f46d044268e655716304bccb8618
 Subject: Re: [Printing-architecture] [Printing-summit] OPS
-	Preparationminutes (28 March 2012)
+ Preparationminutes (28 March 2012)
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>,
@@ -19,908 +39,267 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Daniel Dressler <danieru.dressler@gmail.com>
+To: "Petrie, Glen" <glen.petrie@eitc.epson.com>, Ira McDonald <blueroofmusic@gmail.com>
 Cc: printing-architecture@lists.linux-foundation.org, printing-summit@lists.linux-foundation.org
 
-This is a multi-part message in MIME format.
-
-------_=_NextPart_001_01CD1118.BED1E4BC
-Content-Type: text/plain;
-	charset="us-ascii"
+--f46d044268e655716304bccb8618
+Content-Type: text/plain; charset=windows-1252
 Content-Transfer-Encoding: quoted-printable
 
-The issue with the MJT is if we want to change something, then we need
-to go back to the PWG.   But, unless Ira disagrees, I see no reason to
-change the MJT for this phase of the JTAPI development.    Perhaps, the
-MJT will not exercise all of the functionality of the JTAPI; in that
-case, we will add a "vendor extension" which would actually be a good
-thing, because JTAPI must handle vendor extension at some point.
+Hi,
 
-=20
+The MJT is a *first* draft whitepaper in the PWG - NOT a standard
+or even a working draft in a chartered PWG working group.
 
-Glen
+Nonetheless, that whitepaper carries a PWG copyright (it was a
+public submission by me, the sole author).  So *I* can submit an
+updated draft whitepaper to the PWG at any time.
 
-=20
+But the MJT spec can't just be copied into an Open Printing document
+format and reissued as an OP working draft without a written copyright
+release from PWG.
 
-=20
+MJT covers the most common Job attributes - specifically the subset
+originally defined in IPP/1.0 (RFC 2566 - now obsoleted by RFC 2911).
 
-________________________________
+Cheers,
+- Ira
 
-From: printing-architecture-bounces@lists.linux-foundation.org
-[mailto:printing-architecture-bounces@lists.linux-foundation.org] On
-Behalf Of Daniel Dressler
-Sent: Monday, April 02, 2012 2:27 PM
-To: Petrie, Glen
-Cc: printing-architecture@lists.linux-foundation.org;
-printing-summit@lists.linux-foundation.org
-Subject: Re: [Printing-architecture] [Printing-summit] OPS
-Preparationminutes (28 March 2012)
 
-=20
+Ira McDonald (Musician / Software Architect)
+Chair - Linux Foundation Open Printing WG
+Secretary - IEEE-ISTO Printer Working Group
+Co-Chair - IEEE-ISTO PWG IPP WG
+Co-Chair - TCG Trusted Mobility Solutions WG
+Chair - TCG Embedded Systems Hardcopy SG
+IETF Designated Expert - IPP & Printer MIB
+Blue Roof Music/High North Inc
+http://sites.google.com/site/blueroofmusic
+http://sites.google.com/site/highnorthinc
+mailto:blueroofmusic@gmail.com
+Winter  579 Park Place  Saline, MI  48176  734-944-0094
+Summer  PO Box 221  Grand Marais, MI 49839  906-494-2434
 
-To continue my last email I wanted to say that I would like it if Glen
-continued to be my mentor. My biggest concern is about code quality and
-I think he can provide the criticism and code review I need to improve.=20
 
-What exactly is the issue with implementing a micro job ticket backend?
-It was my understanding that MJT would be a simple job ticket format and
-thus a good one to implement as an example/development backend. Is there
-a reason we might need to alter the MJT standard?
 
+On Mon, Apr 2, 2012 at 5:37 PM, Petrie, Glen <glen.petrie@eitc.epson.com>wr=
+ote:
+
+>  The issue with the MJT is if we want to change something, then we need
+> to go back to the PWG.   But, unless Ira disagrees, I see no reason to
+> change the MJT for this phase of the JTAPI development.    Perhaps, the M=
+JT
+> will not exercise all of the functionality of the JTAPI; in that case, we
+> will add a =93vendor extension=94 which would actually be a good thing, b=
+ecause
+> JTAPI must handle vendor extension at some point.****
+>
+> ** **
+>
+> Glen****
+>
+> ** **
+>
+> ** **
+>  ------------------------------
+>
+> *From:* printing-architecture-bounces@lists.linux-foundation.org [mailto:
+> printing-architecture-bounces@lists.linux-foundation.org] *On Behalf Of *=
 Daniel
+> Dressler
+> *Sent:* Monday, April 02, 2012 2:27 PM
+> *To:* Petrie, Glen
+>
+> *Cc:* printing-architecture@lists.linux-foundation.org;
+> printing-summit@lists.linux-foundation.org
+> *Subject:* Re: [Printing-architecture] [Printing-summit] OPS
+> Preparationminutes (28 March 2012)
+> ****
+>
+>  ** **
+>
+> To continue my last email I wanted to say that I would like it if Glen
+> continued to be my mentor. My biggest concern is about code quality and I
+> think he can provide the criticism and code review I need to improve.
+>
+> What exactly is the issue with implementing a micro job ticket backend? I=
+t
+> was my understanding that MJT would be a simple job ticket format and thu=
+s
+> a good one to implement as an example/development backend. Is there a
+> reason we might need to alter the MJT standard?
+>
+> Daniel****
+>
+> ** **
+>
+> _______________________________________________
+> Printing-summit mailing list
+> Printing-summit@lists.linux-foundation.org
+> https://lists.linuxfoundation.org/mailman/listinfo/printing-summit
+>
+>
 
-=20
-
-
-------_=_NextPart_001_01CD1118.BED1E4BC
-Content-Type: text/html;
-	charset="us-ascii"
+--f46d044268e655716304bccb8618
+Content-Type: text/html; charset=windows-1252
 Content-Transfer-Encoding: quoted-printable
 
-<html xmlns:v=3D"urn:schemas-microsoft-com:vml" =
-xmlns:o=3D"urn:schemas-microsoft-com:office:office" =
-xmlns:w=3D"urn:schemas-microsoft-com:office:word" =
-xmlns=3D"http://www.w3.org/TR/REC-html40">
+Hi,<br><br>The MJT is a *first* draft whitepaper in the PWG - NOT a standar=
+d<br>or even a working draft in a chartered PWG working group.<br><br>Nonet=
+heless, that whitepaper carries a PWG copyright (it was a<br>public submiss=
+ion by me, the sole author).=A0 So *I* can submit an <br>
 
-<head>
-<meta http-equiv=3DContent-Type content=3D"text/html; =
-charset=3Dus-ascii">
-<meta name=3DGenerator content=3D"Microsoft Word 11 (filtered medium)">
-<!--[if !mso]>
-<style>
-v\:* {behavior:url(#default#VML);}
-o\:* {behavior:url(#default#VML);}
-w\:* {behavior:url(#default#VML);}
-.shape {behavior:url(#default#VML);}
-</style>
-<![endif]-->
-<style>
-<!--
- /* Font Definitions */
- @font-face
-	{font-family:SimSun;
-	panose-1:2 1 6 0 3 1 1 1 1 1;}
-@font-face
-	{font-family:Mangal;
-	panose-1:0 0 4 0 0 0 0 0 0 0;}
-@font-face
-	{font-family:Cambria;
-	panose-1:2 4 5 3 5 4 6 3 2 4;}
-@font-face
-	{font-family:Tahoma;
-	panose-1:2 11 6 4 3 5 4 4 2 4;}
-@font-face
-	{font-family:"\@SimSun";
-	panose-1:2 1 6 0 3 1 1 1 1 1;}
- /* Style Definitions */
- p.MsoNormal, li.MsoNormal, div.MsoNormal
-	{margin:0in;
-	margin-bottom:.0001pt;
-	font-size:12.0pt;
-	font-family:"Times New Roman";}
-h1
-	{margin-top:12.0pt;
-	margin-right:0in;
-	margin-bottom:6.0pt;
-	margin-left:.25in;
-	text-indent:-.25in;
-	page-break-after:avoid;
-	mso-list:l2 level1 lfo4;
-	font-size:14.0pt;
-	font-family:Cambria;
-	font-weight:bold;}
-h2
-	{margin-top:12.0pt;
-	margin-right:0in;
-	margin-bottom:3.0pt;
-	margin-left:.3in;
-	text-indent:-.3in;
-	page-break-after:avoid;
-	mso-list:l3 level2 lfo6;
-	font-size:14.0pt;
-	font-family:Cambria;
-	font-weight:bold;}
-p.MsoBodyText, li.MsoBodyText, div.MsoBodyText
-	{margin-top:0in;
-	margin-right:0in;
-	margin-bottom:6.0pt;
-	margin-left:0in;
-	font-size:12.0pt;
-	font-family:"Times New Roman";}
-a:link, span.MsoHyperlink
-	{color:blue;
-	text-decoration:underline;}
-a:visited, span.MsoHyperlinkFollowed
-	{color:blue;
-	text-decoration:underline;}
-p
-	{mso-margin-top-alt:auto;
-	margin-right:0in;
-	mso-margin-bottom-alt:auto;
-	margin-left:0in;
-	font-size:12.0pt;
-	font-family:"Times New Roman";}
-p.StyleHeading1NotBoldBlack, li.StyleHeading1NotBoldBlack, =
-div.StyleHeading1NotBoldBlack
-	{margin-top:12.0pt;
-	margin-right:0in;
-	margin-bottom:6.0pt;
-	margin-left:.55in;
-	text-indent:-.3in;
-	page-break-after:avoid;
-	mso-list:l2 level2 lfo4;
-	font-size:14.0pt;
-	font-family:Cambria;
-	color:black;
-	font-weight:bold;}
-p.StyleAppendix, li.StyleAppendix, div.StyleAppendix
-	{margin-top:12.0pt;
-	margin-right:0in;
-	margin-bottom:6.0pt;
-	margin-left:.25in;
-	text-align:justify;
-	text-indent:-.25in;
-	page-break-after:avoid;
-	mso-list:l3 level1 lfo6;
-	font-size:14.0pt;
-	font-family:Cambria;
-	font-weight:bold;}
-span.EmailStyle21
-	{mso-style-type:personal-reply;
-	font-family:Cambria;
-	color:blue;
-	font-weight:normal;
-	font-style:normal;
-	text-decoration:none none;}
-@page Section1
-	{size:8.5in 11.0in;
-	margin:1.0in 1.25in 1.0in 1.25in;}
-div.Section1
-	{page:Section1;}
- /* List Definitions */
- @list l0
-	{mso-list-id:1;
-	mso-list-template-ids:1767813390;}
-@list l0:level1
-	{mso-level-suffix:space;
-	mso-level-tab-stop:none;
-	mso-level-number-position:left;
-	margin-left:.25in;
-	text-indent:-.25in;
-	mso-ansi-font-size:14.0pt;
-	mso-bidi-font-size:14.0pt;
-	font-family:Cambria;
-	font-variant:normal !important;
-	color:black;
-	text-transform:none;
-	letter-spacing:0pt;
-	mso-ansi-font-weight:normal;
-	mso-bidi-font-weight:normal;
-	mso-ansi-font-style:normal;}
-@list l0:level2
-	{mso-level-text:"%1\.%2\.";
-	mso-level-tab-stop:.55in;
-	mso-level-number-position:left;
-	margin-left:.55in;
-	text-indent:-.3in;
-	mso-ansi-font-size:14.0pt;
-	mso-bidi-font-size:14.0pt;
-	font-family:Cambria;
-	font-variant:normal !important;
-	color:black;
-	text-transform:none;
-	letter-spacing:0pt;
-	mso-ansi-font-weight:normal;
-	mso-bidi-font-weight:normal;
-	mso-ansi-font-style:normal;}
-@list l0:level3
-	{mso-level-text:"%1\.%2\.%3\.";
-	mso-level-tab-stop:1.0in;
-	mso-level-number-position:left;
-	margin-left:.85in;
-	text-indent:-.35in;
-	mso-ansi-font-size:14.0pt;
-	mso-bidi-font-size:14.0pt;
-	font-family:Cambria;
-	font-variant:normal !important;
-	color:black;
-	text-transform:none;
-	letter-spacing:0pt;
-	mso-ansi-font-weight:normal;
-	mso-bidi-font-weight:normal;
-	mso-ansi-font-style:normal;}
-@list l0:level4
-	{mso-level-text:"%1\.%2\.%3\.%4\.";
-	mso-level-tab-stop:1.25in;
-	mso-level-number-position:left;
-	margin-left:1.2in;
-	text-indent:-.45in;
-	mso-ansi-font-size:14.0pt;
-	mso-bidi-font-size:14.0pt;
-	font-family:Cambria;
-	font-variant:normal !important;
-	color:black;
-	text-transform:none;
-	letter-spacing:0pt;
-	mso-ansi-font-weight:normal;
-	mso-bidi-font-weight:normal;
-	mso-ansi-font-style:normal;}
-@list l0:level5
-	{mso-level-text:"%1\.%2\.%3\.%4\.%5\.";
-	mso-level-tab-stop:1.75in;
-	mso-level-number-position:left;
-	margin-left:1.55in;
-	text-indent:-.55in;
-	mso-ansi-font-size:14.0pt;
-	mso-bidi-font-size:14.0pt;
-	font-family:Cambria;
-	font-variant:normal !important;
-	color:black;
-	text-transform:none;
-	letter-spacing:0pt;
-	mso-ansi-font-weight:normal;
-	mso-bidi-font-weight:normal;
-	mso-ansi-font-style:normal;}
-@list l0:level6
-	{mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6\.";
-	mso-level-tab-stop:2.0in;
-	mso-level-number-position:left;
-	margin-left:1.9in;
-	text-indent:-.65in;
-	mso-ansi-font-size:14.0pt;
-	mso-bidi-font-size:14.0pt;
-	font-family:Cambria;
-	font-variant:normal !important;
-	color:black;
-	text-transform:none;
-	letter-spacing:0pt;
-	mso-ansi-font-weight:normal;
-	mso-bidi-font-weight:normal;
-	mso-ansi-font-style:normal;}
-@list l0:level7
-	{mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6\.%7\.";
-	mso-level-tab-stop:2.5in;
-	mso-level-number-position:left;
-	margin-left:2.25in;
-	text-indent:-.75in;
-	mso-ansi-font-size:14.0pt;
-	mso-bidi-font-size:14.0pt;
-	font-family:Cambria;
-	font-variant:normal !important;
-	color:black;
-	text-transform:none;
-	letter-spacing:0pt;
-	mso-ansi-font-weight:normal;
-	mso-bidi-font-weight:normal;
-	mso-ansi-font-style:normal;}
-@list l0:level8
-	{mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6\.%7\.%8\.";
-	mso-level-tab-stop:2.75in;
-	mso-level-number-position:left;
-	margin-left:2.6in;
-	text-indent:-.85in;
-	mso-ansi-font-size:14.0pt;
-	mso-bidi-font-size:14.0pt;
-	font-family:Cambria;
-	font-variant:normal !important;
-	color:black;
-	text-transform:none;
-	letter-spacing:0pt;
-	mso-ansi-font-weight:normal;
-	mso-bidi-font-weight:normal;
-	mso-ansi-font-style:normal;}
-@list l0:level9
-	{mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6\.%7\.%8\.%9\.";
-	mso-level-tab-stop:3.25in;
-	mso-level-number-position:left;
-	margin-left:3.0in;
-	text-indent:-1.0in;
-	mso-ansi-font-size:14.0pt;
-	mso-bidi-font-size:14.0pt;
-	font-family:Cambria;
-	font-variant:normal !important;
-	color:black;
-	text-transform:none;
-	letter-spacing:0pt;
-	mso-ansi-font-weight:normal;
-	mso-bidi-font-weight:normal;
-	mso-ansi-font-style:normal;}
-@list l1
-	{mso-list-id:232006760;
-	mso-list-template-ids:-416383970;}
-@list l1:level1
-	{mso-level-suffix:space;
-	mso-level-tab-stop:none;
-	mso-level-number-position:left;
-	margin-left:.25in;
-	text-indent:-.25in;
-	mso-ansi-font-size:14.0pt;
-	mso-bidi-font-size:14.0pt;
-	font-family:Cambria;
-	font-variant:normal !important;
-	color:black;
-	text-transform:none;
-	letter-spacing:0pt;
-	mso-ansi-font-weight:normal;
-	mso-bidi-font-weight:normal;
-	mso-ansi-font-style:normal;}
-@list l1:level2
-	{mso-level-suffix:space;
-	mso-level-text:"%1\.%2\.";
-	mso-level-tab-stop:none;
-	mso-level-number-position:left;
-	margin-left:.55in;
-	text-indent:-.3in;
-	mso-ansi-font-size:14.0pt;
-	mso-bidi-font-size:14.0pt;
-	font-family:Cambria;
-	font-variant:normal !important;
-	color:black;
-	text-transform:none;
-	letter-spacing:0pt;
-	mso-ansi-font-weight:normal;
-	mso-bidi-font-weight:normal;
-	mso-ansi-font-style:normal;}
-@list l1:level3
-	{mso-level-reset-level:level1;
-	mso-level-suffix:space;
-	mso-level-text:"%1\.%2\.%3\.";
-	mso-level-tab-stop:none;
-	mso-level-number-position:left;
-	margin-left:.85in;
-	text-indent:-.35in;
-	mso-ansi-font-size:14.0pt;
-	mso-bidi-font-size:14.0pt;
-	font-family:Cambria;
-	font-variant:normal !important;
-	color:black;
-	text-transform:none;
-	letter-spacing:0pt;
-	mso-ansi-font-weight:normal;
-	mso-bidi-font-weight:normal;
-	mso-ansi-font-style:normal;}
-@list l1:level4
-	{mso-level-text:"%1\.%2\.%3\.%4\.";
-	mso-level-tab-stop:1.25in;
-	mso-level-number-position:left;
-	margin-left:1.2in;
-	text-indent:-.45in;
-	mso-ansi-font-size:14.0pt;
-	mso-bidi-font-size:14.0pt;
-	font-family:Cambria;
-	font-variant:normal !important;
-	color:black;
-	text-transform:none;
-	letter-spacing:0pt;
-	mso-ansi-font-weight:normal;
-	mso-bidi-font-weight:normal;
-	mso-ansi-font-style:normal;}
-@list l1:level5
-	{mso-level-text:"%1\.%2\.%3\.%4\.%5\.";
-	mso-level-tab-stop:1.75in;
-	mso-level-number-position:left;
-	margin-left:1.55in;
-	text-indent:-.55in;
-	mso-ansi-font-size:14.0pt;
-	mso-bidi-font-size:14.0pt;
-	font-family:Cambria;
-	font-variant:normal !important;
-	color:black;
-	text-transform:none;
-	letter-spacing:0pt;
-	mso-ansi-font-weight:normal;
-	mso-bidi-font-weight:normal;
-	mso-ansi-font-style:normal;}
-@list l1:level6
-	{mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6\.";
-	mso-level-tab-stop:2.0in;
-	mso-level-number-position:left;
-	margin-left:1.9in;
-	text-indent:-.65in;
-	mso-ansi-font-size:14.0pt;
-	mso-bidi-font-size:14.0pt;
-	font-family:Cambria;
-	font-variant:normal !important;
-	color:black;
-	text-transform:none;
-	letter-spacing:0pt;
-	mso-ansi-font-weight:normal;
-	mso-bidi-font-weight:normal;
-	mso-ansi-font-style:normal;}
-@list l1:level7
-	{mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6\.%7\.";
-	mso-level-tab-stop:2.5in;
-	mso-level-number-position:left;
-	margin-left:2.25in;
-	text-indent:-.75in;
-	mso-ansi-font-size:14.0pt;
-	mso-bidi-font-size:14.0pt;
-	font-family:Cambria;
-	font-variant:normal !important;
-	color:black;
-	text-transform:none;
-	letter-spacing:0pt;
-	mso-ansi-font-weight:normal;
-	mso-bidi-font-weight:normal;
-	mso-ansi-font-style:normal;}
-@list l1:level8
-	{mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6\.%7\.%8\.";
-	mso-level-tab-stop:2.75in;
-	mso-level-number-position:left;
-	margin-left:2.6in;
-	text-indent:-.85in;
-	mso-ansi-font-size:14.0pt;
-	mso-bidi-font-size:14.0pt;
-	font-family:Cambria;
-	font-variant:normal !important;
-	color:black;
-	text-transform:none;
-	letter-spacing:0pt;
-	mso-ansi-font-weight:normal;
-	mso-bidi-font-weight:normal;
-	mso-ansi-font-style:normal;}
-@list l1:level9
-	{mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6\.%7\.%8\.%9\.";
-	mso-level-tab-stop:3.25in;
-	mso-level-number-position:left;
-	margin-left:3.0in;
-	text-indent:-1.0in;
-	mso-ansi-font-size:14.0pt;
-	mso-bidi-font-size:14.0pt;
-	font-family:Cambria;
-	font-variant:normal !important;
-	color:black;
-	text-transform:none;
-	letter-spacing:0pt;
-	mso-ansi-font-weight:normal;
-	mso-bidi-font-weight:normal;
-	mso-ansi-font-style:normal;}
-@list l2
-	{mso-list-id:675117133;
-	mso-list-template-ids:-319017128;}
-@list l2:level1
-	{mso-level-style-link:"Heading 1";
-	mso-level-suffix:space;
-	mso-level-tab-stop:none;
-	mso-level-number-position:left;
-	margin-left:.25in;
-	text-indent:-.25in;
-	mso-ansi-font-size:14.0pt;
-	mso-bidi-font-size:14.0pt;
-	font-family:Cambria;
-	font-variant:normal !important;
-	color:black;
-	text-transform:none;
-	letter-spacing:0pt;
-	mso-ansi-font-weight:normal;
-	mso-bidi-font-weight:normal;
-	mso-ansi-font-style:normal;}
-@list l2:level2
-	{mso-level-style-link:"Style Heading 1 + Not Bold Black";
-	mso-level-suffix:space;
-	mso-level-text:"%1\.%2\.";
-	mso-level-tab-stop:none;
-	mso-level-number-position:left;
-	margin-left:.55in;
-	text-indent:-.3in;
-	mso-ansi-font-size:14.0pt;
-	mso-bidi-font-size:14.0pt;
-	font-family:Cambria;
-	font-variant:normal !important;
-	color:black;
-	text-transform:none;
-	letter-spacing:0pt;
-	mso-ansi-font-weight:normal;
-	mso-bidi-font-weight:normal;
-	mso-ansi-font-style:normal;}
-@list l2:level3
-	{mso-level-suffix:space;
-	mso-level-text:"%1\.%2\.%3\.";
-	mso-level-tab-stop:none;
-	mso-level-number-position:left;
-	margin-left:.85in;
-	text-indent:-.35in;
-	mso-ansi-font-size:14.0pt;
-	mso-bidi-font-size:14.0pt;
-	font-family:Cambria;
-	font-variant:normal !important;
-	color:black;
-	text-transform:none;
-	letter-spacing:0pt;
-	mso-ansi-font-weight:normal;
-	mso-bidi-font-weight:normal;
-	mso-ansi-font-style:normal;}
-@list l2:level4
-	{mso-level-suffix:space;
-	mso-level-text:"%1\.%2\.%3\.%4\.";
-	mso-level-tab-stop:none;
-	mso-level-number-position:left;
-	margin-left:1.2in;
-	text-indent:-.45in;
-	mso-ansi-font-size:14.0pt;
-	mso-bidi-font-size:14.0pt;
-	font-family:Cambria;
-	font-variant:normal !important;
-	color:black;
-	text-transform:none;
-	letter-spacing:0pt;
-	mso-ansi-font-weight:normal;
-	mso-bidi-font-weight:normal;
-	mso-ansi-font-style:normal;}
-@list l2:level5
-	{mso-level-suffix:space;
-	mso-level-text:"%1\.%2\.%3\.%4\.%5\.";
-	mso-level-tab-stop:none;
-	mso-level-number-position:left;
-	margin-left:1.55in;
-	text-indent:-.55in;
-	mso-ansi-font-size:14.0pt;
-	mso-bidi-font-size:14.0pt;
-	font-family:Cambria;
-	font-variant:normal !important;
-	color:black;
-	text-transform:none;
-	letter-spacing:0pt;
-	mso-ansi-font-weight:normal;
-	mso-bidi-font-weight:normal;
-	mso-ansi-font-style:normal;}
-@list l2:level6
-	{mso-level-suffix:space;
-	mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6\.";
-	mso-level-tab-stop:none;
-	mso-level-number-position:left;
-	margin-left:1.9in;
-	text-indent:-.65in;
-	mso-ansi-font-size:14.0pt;
-	mso-bidi-font-size:14.0pt;
-	font-family:Cambria;
-	font-variant:normal !important;
-	color:black;
-	text-transform:none;
-	letter-spacing:0pt;
-	mso-ansi-font-weight:normal;
-	mso-bidi-font-weight:normal;
-	mso-ansi-font-style:normal;}
-@list l2:level7
-	{mso-level-suffix:space;
-	mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6\.%7\.";
-	mso-level-tab-stop:none;
-	mso-level-number-position:left;
-	margin-left:2.25in;
-	text-indent:-.75in;
-	mso-ansi-font-size:14.0pt;
-	mso-bidi-font-size:14.0pt;
-	font-family:Cambria;
-	font-variant:normal !important;
-	color:black;
-	text-transform:none;
-	letter-spacing:0pt;
-	mso-ansi-font-weight:normal;
-	mso-bidi-font-weight:normal;
-	mso-ansi-font-style:normal;}
-@list l2:level8
-	{mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6\.%7\.%8\.";
-	mso-level-tab-stop:2.75in;
-	mso-level-number-position:left;
-	margin-left:2.6in;
-	text-indent:-.85in;
-	mso-ansi-font-size:14.0pt;
-	mso-bidi-font-size:14.0pt;
-	font-family:Cambria;
-	font-variant:normal !important;
-	color:black;
-	text-transform:none;
-	letter-spacing:0pt;
-	mso-ansi-font-weight:normal;
-	mso-bidi-font-weight:normal;
-	mso-ansi-font-style:normal;}
-@list l2:level9
-	{mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6\.%7\.%8\.%9\.";
-	mso-level-tab-stop:3.25in;
-	mso-level-number-position:left;
-	margin-left:3.0in;
-	text-indent:-1.0in;
-	mso-ansi-font-size:14.0pt;
-	mso-bidi-font-size:14.0pt;
-	font-family:Cambria;
-	font-variant:normal !important;
-	color:black;
-	text-transform:none;
-	letter-spacing:0pt;
-	mso-ansi-font-weight:normal;
-	mso-bidi-font-weight:normal;
-	mso-ansi-font-style:normal;}
-@list l3
-	{mso-list-id:1691636573;
-	mso-list-template-ids:1894306706;}
-@list l3:level1
-	{mso-level-style-link:StyleAppendix;
-	mso-level-suffix:space;
-	mso-level-tab-stop:none;
-	mso-level-number-position:left;
-	margin-left:.25in;
-	text-indent:-.25in;
-	mso-ansi-font-size:14.0pt;
-	mso-bidi-font-size:14.0pt;
-	font-family:Cambria;
-	font-variant:normal !important;
-	color:black;
-	text-transform:none;
-	letter-spacing:0pt;
-	mso-ansi-font-weight:normal;
-	mso-bidi-font-weight:normal;
-	mso-ansi-font-style:normal;}
-@list l3:level2
-	{mso-level-style-link:"Heading 2";
-	mso-level-suffix:space;
-	mso-level-text:"%1\.%2\.";
-	mso-level-tab-stop:none;
-	mso-level-number-position:left;
-	margin-left:.3in;
-	text-indent:-.3in;
-	mso-ansi-font-size:14.0pt;
-	mso-bidi-font-size:14.0pt;
-	font-family:Cambria;
-	font-variant:normal !important;
-	color:black;
-	text-transform:none;
-	letter-spacing:0pt;
-	mso-ansi-font-weight:normal;
-	mso-bidi-font-weight:normal;
-	mso-ansi-font-style:normal;}
-@list l3:level3
-	{mso-level-suffix:space;
-	mso-level-text:"%1\.%2\.%3\.";
-	mso-level-tab-stop:none;
-	mso-level-number-position:left;
-	margin-left:.85in;
-	text-indent:-.35in;
-	mso-ansi-font-size:14.0pt;
-	mso-bidi-font-size:14.0pt;
-	font-family:Cambria;
-	font-variant:normal !important;
-	color:black;
-	text-transform:none;
-	letter-spacing:0pt;
-	mso-ansi-font-weight:normal;
-	mso-bidi-font-weight:normal;
-	mso-ansi-font-style:normal;}
-@list l3:level4
-	{mso-level-suffix:space;
-	mso-level-text:"%1\.%2\.%3\.%4\.";
-	mso-level-tab-stop:none;
-	mso-level-number-position:left;
-	margin-left:1.2in;
-	text-indent:-.45in;
-	mso-ansi-font-size:14.0pt;
-	mso-bidi-font-size:14.0pt;
-	font-family:Cambria;
-	font-variant:normal !important;
-	color:black;
-	text-transform:none;
-	letter-spacing:0pt;
-	mso-ansi-font-weight:normal;
-	mso-bidi-font-weight:normal;
-	mso-ansi-font-style:normal;}
-@list l3:level5
-	{mso-level-suffix:space;
-	mso-level-text:"%1\.%2\.%3\.%4\.%5\.";
-	mso-level-tab-stop:none;
-	mso-level-number-position:left;
-	margin-left:1.55in;
-	text-indent:-.55in;
-	mso-ansi-font-size:14.0pt;
-	mso-bidi-font-size:14.0pt;
-	font-family:Cambria;
-	font-variant:normal !important;
-	color:black;
-	text-transform:none;
-	letter-spacing:0pt;
-	mso-ansi-font-weight:normal;
-	mso-bidi-font-weight:normal;
-	mso-ansi-font-style:normal;}
-@list l3:level6
-	{mso-level-suffix:space;
-	mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6\.";
-	mso-level-tab-stop:none;
-	mso-level-number-position:left;
-	margin-left:1.9in;
-	text-indent:-.65in;
-	mso-ansi-font-size:14.0pt;
-	mso-bidi-font-size:14.0pt;
-	font-family:Cambria;
-	font-variant:normal !important;
-	color:black;
-	text-transform:none;
-	letter-spacing:0pt;
-	mso-ansi-font-weight:normal;
-	mso-bidi-font-weight:normal;
-	mso-ansi-font-style:normal;}
-@list l3:level7
-	{mso-level-suffix:space;
-	mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6\.%7\.";
-	mso-level-tab-stop:none;
-	mso-level-number-position:left;
-	margin-left:2.25in;
-	text-indent:-.75in;
-	mso-ansi-font-size:14.0pt;
-	mso-bidi-font-size:14.0pt;
-	font-family:Cambria;
-	font-variant:normal !important;
-	color:black;
-	text-transform:none;
-	letter-spacing:0pt;
-	mso-ansi-font-weight:normal;
-	mso-bidi-font-weight:normal;
-	mso-ansi-font-style:normal;}
-@list l3:level8
-	{mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6\.%7\.%8\.";
-	mso-level-tab-stop:2.75in;
-	mso-level-number-position:left;
-	margin-left:2.6in;
-	text-indent:-.85in;
-	mso-ansi-font-size:14.0pt;
-	mso-bidi-font-size:14.0pt;
-	font-family:Cambria;
-	font-variant:normal !important;
-	color:black;
-	text-transform:none;
-	letter-spacing:0pt;
-	mso-ansi-font-weight:normal;
-	mso-bidi-font-weight:normal;
-	mso-ansi-font-style:normal;}
-@list l3:level9
-	{mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6\.%7\.%8\.%9\.";
-	mso-level-tab-stop:3.25in;
-	mso-level-number-position:left;
-	margin-left:3.0in;
-	text-indent:-1.0in;
-	mso-ansi-font-size:14.0pt;
-	mso-bidi-font-size:14.0pt;
-	font-family:Cambria;
-	font-variant:normal !important;
-	color:black;
-	text-transform:none;
-	letter-spacing:0pt;
-	mso-ansi-font-weight:normal;
-	mso-bidi-font-weight:normal;
-	mso-ansi-font-style:normal;}
-ol
-	{margin-bottom:0in;}
-ul
-	{margin-bottom:0in;}
--->
-</style>
-<!--[if gte mso 9]><xml>
- <o:shapedefaults v:ext=3D"edit" spidmax=3D"1026" />
-</xml><![endif]--><!--[if gte mso 9]><xml>
- <o:shapelayout v:ext=3D"edit">
-  <o:idmap v:ext=3D"edit" data=3D"1" />
- </o:shapelayout></xml><![endif]-->
-</head>
+updated draft whitepaper to the PWG at any time.<br><br>But the MJT spec ca=
+n&#39;t just be copied into an Open Printing document <br>format and reissu=
+ed as an OP working draft without a written copyright <br>release from PWG.=
+<br>
 
-<body lang=3DEN-US link=3Dblue vlink=3Dblue>
+<br>MJT covers the most common Job attributes - specifically the subset<br>=
+originally defined in IPP/1.0 (RFC 2566 - now obsoleted by RFC 2911).<br><b=
+r>Cheers,<br>- Ira<br><br><br clear=3D"all">Ira McDonald (Musician / Softwa=
+re Architect)<br>
+Chair - Linux Foundation Open Printing WG<br>Secretary - IEEE-ISTO Printer =
+Working Group<br>
+Co-Chair - IEEE-ISTO PWG IPP WG<br>Co-Chair - TCG Trusted Mobility Solution=
+s WG<br>Chair - TCG Embedded Systems Hardcopy SG<br>IETF Designated Expert =
+- IPP &amp; Printer MIB<br>Blue Roof Music/High North Inc<br><a style=3D"co=
+lor:rgb(51,51,255)" href=3D"http://sites.google.com/site/blueroofmusic" tar=
+get=3D"_blank">http://sites.google.com/site/blueroofmusic</a><br>
 
-<div class=3DSection1>
+<a style=3D"color:rgb(102,0,204)" href=3D"http://sites.google.com/site/high=
+northinc" target=3D"_blank">http://sites.google.com/site/highnorthinc</a><b=
+r>mailto:<a href=3D"mailto:blueroofmusic@gmail.com" target=3D"_blank">bluer=
+oofmusic@gmail.com</a><br>
 
-<p class=3DMsoNormal><font size=3D3 color=3Dblue face=3DCambria><span =
-style=3D'font-size:
-12.0pt;font-family:Cambria;color:blue'>The issue with the MJT is if we =
-want to
-change something, then we need to go back to the PWG.&nbsp;&nbsp; But, =
-unless
-Ira disagrees, I see no reason to change the MJT for this phase of the =
-JTAPI
-development.&nbsp;&nbsp;&nbsp; Perhaps, the MJT will not exercise all of =
-the
-functionality of the JTAPI; in that case, we will add a &#8220;vendor =
-extension&#8221;
-which would actually be a good thing, because JTAPI must handle vendor
-extension at some point.<o:p></o:p></span></font></p>
+Winter=A0 579 Park Place=A0 Saline, MI=A0 48176=A0 <a href=3D"tel:734-944-0=
+094" value=3D"+17349440094" target=3D"_blank">734-944-0094</a><br>Summer=A0=
+ PO Box 221=A0 Grand Marais, MI 49839=A0 <a href=3D"tel:906-494-2434" value=
+=3D"+19064942434" target=3D"_blank">906-494-2434</a><div style=3D"display:i=
+nline">
+</div><div style=3D"display:inline"></div><div style=3D"display:inline"></d=
+iv><div>
+</div><div></div><div></div><div></div><br>
+<br><br><div class=3D"gmail_quote">On Mon, Apr 2, 2012 at 5:37 PM, Petrie, =
+Glen <span dir=3D"ltr">&lt;<a href=3D"mailto:glen.petrie@eitc.epson.com" ta=
+rget=3D"_blank">glen.petrie@eitc.epson.com</a>&gt;</span> wrote:<br><blockq=
+uote class=3D"gmail_quote" style=3D"margin:0 0 0 .8ex;border-left:1px #ccc =
+solid;padding-left:1ex">
 
-<p class=3DMsoNormal><font size=3D3 color=3Dblue face=3DCambria><span =
-style=3D'font-size:
-12.0pt;font-family:Cambria;color:blue'><o:p>&nbsp;</o:p></span></font></p=
->
 
-<p class=3DMsoNormal><font size=3D3 color=3Dblue face=3DCambria><span =
-style=3D'font-size:
-12.0pt;font-family:Cambria;color:blue'>Glen<o:p></o:p></span></font></p>
 
-<p class=3DMsoNormal><font size=3D3 color=3Dblue face=3DCambria><span =
-style=3D'font-size:
-12.0pt;font-family:Cambria;color:blue'><o:p>&nbsp;</o:p></span></font></p=
->
 
-<p class=3DMsoNormal><font size=3D3 color=3Dblue face=3DCambria><span =
-style=3D'font-size:
-12.0pt;font-family:Cambria;color:blue'><o:p>&nbsp;</o:p></span></font></p=
->
+
+
+
+
+
+
+
+<div link=3D"blue" vlink=3D"blue" lang=3D"EN-US">
 
 <div>
 
-<div class=3DMsoNormal align=3Dcenter style=3D'text-align:center'><font =
-size=3D3
-face=3D"Times New Roman"><span style=3D'font-size:12.0pt'>
+<p class=3D"MsoNormal"><font color=3D"blue" face=3D"Cambria" size=3D"3"><sp=
+an style=3D"font-size:12.0pt;font-family:Cambria;color:blue">The issue with=
+ the MJT is if we want to
+change something, then we need to go back to the PWG.=A0=A0 But, unless
+Ira disagrees, I see no reason to change the MJT for this phase of the JTAP=
+I
+development.=A0=A0=A0 Perhaps, the MJT will not exercise all of the
+functionality of the JTAPI; in that case, we will add a =93vendor extension=
+=94
+which would actually be a good thing, because JTAPI must handle vendor
+extension at some point.<u></u><u></u></span></font></p>
 
-<hr size=3D2 width=3D"100%" align=3Dcenter tabindex=3D-1>
+<p class=3D"MsoNormal"><font color=3D"blue" face=3D"Cambria" size=3D"3"><sp=
+an style=3D"font-size:12.0pt;font-family:Cambria;color:blue"><u></u>=A0<u><=
+/u></span></font></p>
+
+<p class=3D"MsoNormal"><font color=3D"blue" face=3D"Cambria" size=3D"3"><sp=
+an style=3D"font-size:12.0pt;font-family:Cambria;color:blue">Glen<u></u><u>=
+</u></span></font></p>
+
+<p class=3D"MsoNormal"><font color=3D"blue" face=3D"Cambria" size=3D"3"><sp=
+an style=3D"font-size:12.0pt;font-family:Cambria;color:blue"><u></u>=A0<u><=
+/u></span></font></p>
+
+<p class=3D"MsoNormal"><font color=3D"blue" face=3D"Cambria" size=3D"3"><sp=
+an style=3D"font-size:12.0pt;font-family:Cambria;color:blue"><u></u>=A0<u><=
+/u></span></font></p>
+
+<div>
+
+<div class=3D"MsoNormal" style=3D"text-align:center" align=3D"center"><font=
+ face=3D"Times New Roman" size=3D"3"><span style=3D"font-size:12.0pt">
+
+<hr align=3D"center" size=3D"2" width=3D"100%">
 
 </span></font></div>
 
-<p class=3DMsoNormal><b><font size=3D2 face=3DTahoma><span =
-style=3D'font-size:10.0pt;
-font-family:Tahoma;font-weight:bold'>From:</span></font></b><font =
-size=3D2
-face=3DTahoma><span style=3D'font-size:10.0pt;font-family:Tahoma'> =
-printing-architecture-bounces@lists.linux-foundation.org
-[mailto:printing-architecture-bounces@lists.linux-foundation.org] =
-<b><span
-style=3D'font-weight:bold'>On Behalf Of </span></b>Daniel Dressler<br>
-<b><span style=3D'font-weight:bold'>Sent:</span></b> Monday, April 02, =
-2012 2:27
+<p class=3D"MsoNormal"><b><font face=3D"Tahoma"><span style=3D"font-size:10=
+.0pt;font-family:Tahoma;font-weight:bold">From:</span></font></b><font face=
+=3D"Tahoma"><span style=3D"font-size:10.0pt;font-family:Tahoma"> <a href=3D=
+"mailto:printing-architecture-bounces@lists.linux-foundation.org" target=3D=
+"_blank">printing-architecture-bounces@lists.linux-foundation.org</a>
+[mailto:<a href=3D"mailto:printing-architecture-bounces@lists.linux-foundat=
+ion.org" target=3D"_blank">printing-architecture-bounces@lists.linux-founda=
+tion.org</a>] <b><span style=3D"font-weight:bold">On Behalf Of </span></b>D=
+aniel Dressler<br>
+
+
+<b><span style=3D"font-weight:bold">Sent:</span></b> Monday, April 02, 2012=
+ 2:27
 PM<br>
-<b><span style=3D'font-weight:bold'>To:</span></b> Petrie, Glen<br>
-<b><span style=3D'font-weight:bold'>Cc:</span></b>
-printing-architecture@lists.linux-foundation.org;
-printing-summit@lists.linux-foundation.org<br>
-<b><span style=3D'font-weight:bold'>Subject:</span></b> Re:
-[Printing-architecture] [Printing-summit] OPS Preparationminutes (28 =
-March
-2012)</span></font><o:p></o:p></p>
+<b><span style=3D"font-weight:bold">To:</span></b> Petrie, Glen</span></fon=
+t></p><div><font face=3D"Tahoma"><br>
+<b><span style=3D"font-weight:bold">Cc:</span></b>
+<a href=3D"mailto:printing-architecture@lists.linux-foundation.org" target=
+=3D"_blank">printing-architecture@lists.linux-foundation.org</a>;
+<a href=3D"mailto:printing-summit@lists.linux-foundation.org" target=3D"_bl=
+ank">printing-summit@lists.linux-foundation.org</a><br>
+<b><span style=3D"font-weight:bold">Subject:</span></b> Re:
+[Printing-architecture] [Printing-summit] OPS Preparationminutes (28 March
+2012)</font></div><u></u><u></u><p></p>
 
 </div>
 
-<p class=3DMsoNormal><font size=3D3 face=3D"Times New Roman"><span =
-style=3D'font-size:
-12.0pt'><o:p>&nbsp;</o:p></span></font></p>
+<p class=3D"MsoNormal"><font face=3D"Times New Roman" size=3D"3"><span styl=
+e=3D"font-size:12.0pt"><u></u>=A0<u></u></span></font></p>
 
-<p class=3DMsoNormal style=3D'margin-bottom:12.0pt'><font size=3D3
-face=3D"Times New Roman"><span style=3D'font-size:12.0pt'>To continue my =
-last email
-I wanted to say that I would like it if Glen continued to be my mentor. =
-My
-biggest concern is about code quality and I think he can provide the =
-criticism
-and code review I need to improve. <br>
+<p class=3D"MsoNormal" style=3D"margin-bottom:12.0pt"><font face=3D"Times N=
+ew Roman" size=3D"3"><span style=3D"font-size:12.0pt">To continue my last e=
+mail
+I wanted to say that I would like it if Glen continued to be my mentor. My
+biggest concern is about code quality and I think he can provide the critic=
+ism
+and code review I need to improve. <br></span></font></p><div><font face=3D=
+"Times New Roman" size=3D"3">
 <br>
-What exactly is the issue with implementing a micro job ticket backend? =
-It was
-my understanding that MJT would be a simple job ticket format and thus a =
-good
-one to implement as an example/development backend. Is there a reason we =
-might
+What exactly is the issue with implementing a micro job ticket backend? It =
+was
+my understanding that MJT would be a simple job ticket format and thus a go=
+od
+one to implement as an example/development backend. Is there a reason we mi=
+ght
 need to alter the MJT standard?<br>
 <br>
-Daniel<o:p></o:p></span></font></p>
+Daniel<u></u><u></u></font></div><p></p>
 
-<p class=3DMsoNormal><font size=3D3 face=3D"Times New Roman"><span =
-style=3D'font-size:
-12.0pt'><o:p>&nbsp;</o:p></span></font></p>
+<p class=3D"MsoNormal"><font face=3D"Times New Roman" size=3D"3"><span styl=
+e=3D"font-size:12.0pt"><u></u>=A0<u></u></span></font></p>
 
 </div>
 
-</body>
+</div>
 
-</html>
 
-------_=_NextPart_001_01CD1118.BED1E4BC--
+<br>_______________________________________________<br>
+Printing-summit mailing list<br>
+<a href=3D"mailto:Printing-summit@lists.linux-foundation.org" target=3D"_bl=
+ank">Printing-summit@lists.linux-foundation.org</a><br>
+<a href=3D"https://lists.linuxfoundation.org/mailman/listinfo/printing-summ=
+it" target=3D"_blank">https://lists.linuxfoundation.org/mailman/listinfo/pr=
+inting-summit</a><br>
+<br></blockquote></div><br>
+
+--f46d044268e655716304bccb8618--
