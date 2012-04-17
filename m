@@ -1,12 +1,21 @@
-Return-Path: <msweet@apple.com>
-MIME-version: 1.0
-Content-type: multipart/alternative;
-	boundary="Boundary_(ID_GD8+QjKTqXibQaZl1o2uaw)"
-From: Michael Sweet <msweet@apple.com>
-Date: Mon, 16 Apr 2012 15:17:23 -0700
-Message-id: <6D1AE704-807E-4ACF-B42E-851F44FB9725@apple.com>
-Subject: [Printing-architecture] NOTICE: Room Change for April 2012 PWG
-	Face-to-Face Meeting
+Return-Path: <till.kamppeter@gmail.com>
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20120113;
+	h=message-id:date:from:user-agent:mime-version:to:subject
+	:content-type:content-transfer-encoding;
+	bh=dvjnqIToNIAUXg/ps67ZDkNoGBJ6pxMRWg716vLMKE8=;
+	b=AWE8T6HjuBN1uxYubDdyWiX5yEtHvlihn5nCmPRrMdNmQMwJcFOtZLg/LF5OeU12vj
+	MwuwMpWYCouhFjbXcfHrYWgXN+fBpcHopHOWmO04qx480zzbZiixZBmc09jRC4PZpqDh
+	FGoEBH3E+xx0b1xl7thxvz8kfwVczzoKLoC52ukFxGp5qyTaMDDX/tRdD4RI4OHajHub
+	0ik4/KV0f/y9PkbMXCJHjSCZZOJvKgWqwrZAsbfS/DAqowukhfmEcLWCHriVhGKASYPl
+	tqB3SFCivWAzzWTLmeMqg65PXbMfFdDvbJDMe13vKl48ryLls4jre0M3Awb2bIjsPtjZ
+	Jm6Q==
+Message-ID: <4F8D9A7C.4080107@gmail.com>
+Date: Tue, 17 Apr 2012 18:29:48 +0200
+From: Till Kamppeter <till.kamppeter@gmail.com>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8; format=flowed
+Content-Transfer-Encoding: 7bit
+Subject: [Printing-architecture] OpenPriunting sessions on the Summit
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>,
@@ -16,91 +25,32 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: printing-architecture@lists.linux-foundation.org
-Cc: Printing-japan <printing-japan@lists.linux-foundation.org>
+To: Open Printing <printing-architecture@lists.linux-foundation.org>, "'printing-summit@lists.linux-foundation.org'" <printing-summit@lists.linux-foundation.org>, Richard Hughes <hughsient@gmail.com>, Kai-Uwe Behrmann <ku.b@gmx.de>
 
+Hi,
 
---Boundary_(ID_GD8+QjKTqXibQaZl1o2uaw)
-Content-type: text/plain; CHARSET=US-ASCII
-Content-transfer-encoding: 7BIT
+there are the following sessions on the Summit which we need to plan:
 
-All,
+- Tue, 10:30AM - 12:00PM 	OpenPrinting Plenary
+- Tue, 02:15PM - 03:15PM 	Common Print Dialog
+- Wed, 09:00AM - 12:00PM 	Printing and Color Management
 
-The April 2012 PWG Face-to-Face Meeting has MOVED to the "Beatles" conference room in the De Anza 3 building (just across the street from the main campus) located at:
+For the OpenPrinting plenary, please post what you like should we talk 
+about, should we present, ...
 
-	10500 N. De Anza Blvd
-	Cupertino, CA 95014
+As the Common Print Dialog development will get postponed again (German 
+Government organization has not yet made available the funds and 
+Canonical has higher priority stuff to do) Lars and me we decided on 
+canceling the Common Print Dialog session. What should we do about the 
+slot? Should we take more time for the Common Mobile Print Client? Or 
+should we perhaps make some kind of brainstorming session to look into 
+what current problems of Linux printing and talk about what 
+OpenPrinting's tasks for the coming years will be?
 
-An updated map and directions have been posted to the meeting page at:
+As far as of now, Michael Vrhel will speak about Ghostscript and Color 
+Management in the color management session.
 
-	http://www.pwg.org/chair/meeting-info/april_2012_cupertino.html
+Richard, Kai-Uwe, could you call in and also report about of the general 
+state-of-the-art of color management for printing under Linux?
 
-________________________________________________________________________
-Michael Sweet, Senior Printing System Engineer, PWG Chair
-
-
---Boundary_(ID_GD8+QjKTqXibQaZl1o2uaw)
-Content-type: text/html; CHARSET=US-ASCII
-Content-transfer-encoding: quoted-printable
-
-<html><head></head><body style=3D"word-wrap: break-word; =
--webkit-nbsp-mode: space; -webkit-line-break: after-white-space; =
-">All,<div><br></div><div>The April 2012 PWG Face-to-Face Meeting has =
-MOVED to&nbsp;the "Beatles" conference room in&nbsp;the De Anza 3 =
-building (just across the street from the main campus) located =
-at:</div><div><br></div><div><span class=3D"Apple-tab-span" =
-style=3D"white-space:pre">	</span>10500 N. De Anza =
-Blvd</div><div><span class=3D"Apple-tab-span" style=3D"white-space:pre">	=
-</span>Cupertino, CA 95014</div><div><br></div><div>An updated map and =
-directions have been posted to the meeting page =
-at:</div><div><br></div><div><span class=3D"Apple-tab-span" =
-style=3D"white-space:pre">	</span><a =
-href=3D"http://www.pwg.org/chair/meeting-info/april_2012_cupertino.html">h=
-ttp://www.pwg.org/chair/meeting-info/april_2012_cupertino.html</a></div><d=
-iv><br></div><div><div>
-<span class=3D"Apple-style-span" style=3D"border-collapse: separate; =
-color: rgb(0, 0, 0); font-family: Geneva; font-style: normal; =
-font-variant: normal; font-weight: normal; letter-spacing: normal; =
-line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: =
-0px; text-transform: none; white-space: normal; widows: 2; word-spacing: =
-0px; -webkit-border-horizontal-spacing: 0px; =
--webkit-border-vertical-spacing: 0px; =
--webkit-text-decorations-in-effect: none; -webkit-text-size-adjust: =
-auto; -webkit-text-stroke-width: 0px; font-size: medium; "><span =
-class=3D"Apple-style-span" style=3D"border-collapse: separate; color: =
-rgb(0, 0, 0); font-family: Geneva; font-style: normal; font-variant: =
-normal; font-weight: normal; letter-spacing: normal; line-height: =
-normal; orphans: 2; text-indent: 0px; text-transform: none; white-space: =
-normal; widows: 2; word-spacing: 0px; -webkit-border-horizontal-spacing: =
-0px; -webkit-border-vertical-spacing: 0px; =
--webkit-text-decorations-in-effect: none; -webkit-text-size-adjust: =
-auto; -webkit-text-stroke-width: 0px; font-size: medium; "><div =
-style=3D"word-wrap: break-word; -webkit-nbsp-mode: space; =
--webkit-line-break: after-white-space; "><span class=3D"Apple-style-span" =
-style=3D"border-collapse: separate; color: rgb(0, 0, 0); font-family: =
-Geneva; font-style: normal; font-variant: normal; font-weight: normal; =
-letter-spacing: normal; line-height: normal; orphans: 2; text-indent: =
-0px; text-transform: none; white-space: normal; widows: 2; word-spacing: =
-0px; -webkit-border-horizontal-spacing: 0px; =
--webkit-border-vertical-spacing: 0px; =
--webkit-text-decorations-in-effect: none; -webkit-text-size-adjust: =
-auto; -webkit-text-stroke-width: 0px; font-size: medium; "><div =
-style=3D"word-wrap: break-word; -webkit-nbsp-mode: space; =
--webkit-line-break: after-white-space; "><span class=3D"Apple-style-span" =
-style=3D"border-collapse: separate; color: rgb(0, 0, 0); font-family: =
-Monaco; font-size: medium; font-style: normal; font-variant: normal; =
-font-weight: normal; letter-spacing: normal; line-height: normal; =
-orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; =
-widows: 2; word-spacing: 0px; -webkit-border-horizontal-spacing: 0px; =
--webkit-border-vertical-spacing: 0px; =
--webkit-text-decorations-in-effect: none; -webkit-text-size-adjust: =
-auto; -webkit-text-stroke-width: 0px; "><div style=3D"word-wrap: =
-break-word; -webkit-nbsp-mode: space; -webkit-line-break: =
-after-white-space; =
-"><div>___________________________________________________________________=
-_____</div><div>Michael Sweet, Senior Printing System Engineer, PWG =
-Chair</div></div></span></div></span></div></span></span>
-</div>
-<br></div></body></html>=
-
---Boundary_(ID_GD8+QjKTqXibQaZl1o2uaw)--
+    Till
