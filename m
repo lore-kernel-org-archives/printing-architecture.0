@@ -1,16 +1,20 @@
-Return-Path: <ku.b@gmx.de>
-Date: Thu, 26 Apr 2012 08:06:59 +0200 (CEST)
-From: Kai-Uwe Behrmann <ku.b@gmx.de>
-In-Reply-To: <1335363815.2535.0.camel@rubik>
-Message-ID: <alpine.LNX.2.00.1204260704580.8774@siras.rasena>
-References: <CA++JLR+st2adL_vf0+rC=OUBFXNqAbTSfrvvoZBtZ_hA_GA56Q@mail.gmail.com>
-	<CA++JLRKGqqLQi_JjkA+ZghwWeN1=jdsivYCPCMB3_J0CLxpfMQ@mail.gmail.com>
-	<4F97B82B.7040306@gmail.com>
-	<CAN40gStH4vSYTEm4syWMUO1j3itm7V7iTE23e+1mFEAWthbjVg@mail.gmail.com>
-	<1335363815.2535.0.camel@rubik>
+Return-Path: <gaurav3184@gmail.com>
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20120113;
+	h=mime-version:from:date:message-id:subject:to:content-type;
+	bh=Qb+LNXPdYFSBk75+JQHlg/M+OicxyWK1oT6cij63pRA=;
+	b=kRgTot1Jn+F+d/eXAFpa92uOcHXy/49y/b4Zc6qQRrbgbn/Ue0SZOhCUkY1MMXKt2n
+	WefryjiLdsdOaR9od0eB5nA4RrC/4Vj7kthla82N68Hy9O30TEDg/xpJMwgb5QkDkX5G
+	na4Z+2trlgQZ4QXi6D+5tLdXyiOzPG+wAYMgv/juZqnp2uoxbIkdz+IJpR7WzD4nJNj9
+	Y9O1eX5keEQaUMbPi2VLmtLaMi/tHkihg8TnSUDF6IJULqzXvXtoqYIfqmLK6AgAPxPp
+	tzf0m7S7d0Sfho/TJm+SxZYx1ZIiYYqOUOsEm3SL8qpMTo+qcZ4fueuRQmf/UFrNRGQN
+	vALg==
 MIME-Version: 1.0
-Content-Type: TEXT/PLAIN; format=flowed; charset=US-ASCII
-Subject: [Printing-architecture] colord profile per-user in CUPS server
+From: Gaurav Sood <gaurav3184@gmail.com>
+Date: Thu, 26 Apr 2012 12:23:28 +0545
+Message-ID: <CAPTpwHWRMELePDeOk8UnKKYg-U1Wgk7=eq0dzB31YrewG0_a5g@mail.gmail.com>
+Content-Type: multipart/alternative; boundary=e89a8ff1c772825c5f04be8f3d38
+Subject: [Printing-architecture] Regarding Custom User Input in Common
+	Printing Dialog box
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>,
@@ -20,27 +24,29 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Tim Waugh <cyberelk11@gmail.com>
-Cc: Open Printing <printing-architecture@lists.linux-foundation.org>
+To: printing-architecture@lists.linux-foundation.org
 
-Tim,
+--e89a8ff1c772825c5f04be8f3d38
+Content-Type: text/plain; charset=ISO-8859-1
 
-the slides from last years colord presentation answere the question,
-which profile will be selected inside CUPS server this way:
+Hi
 
-"Mapping the device to the profile: Preferences are per-user" [1]
+I want to add a password(user can type anything it wants instead of
+"boolean" or "Pick One/many") option in Common Printing Dialog box by
+making changes in PPD file of  a printer. Is It possible to do so if not
+any other method
 
-Your stated during my presentation, that colord is a per system 
-configuration, suggesting that only system profiles will be used inside 
-CUPS server.
+Thanks
 
-How does these both contrary statements go together? Will CUPS see a 
-per user printer profile from colord or not?
+--e89a8ff1c772825c5f04be8f3d38
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
 
-kind regards
-Kai-Uwe Behrmann
--- 
-www.oyranos.org
+Hi<br><br>I want to add a password(user can type anything it wants instead =
+of &quot;boolean&quot; or &quot;Pick One/many&quot;) option in Common Print=
+ing Dialog box by making changes in PPD file of=A0 a printer. Is It possibl=
+e to do so if not any other method<br>
 
-[1] http://www.linuxfoundation.org/collaborate/workgroups/openprinting/openprinting-summit-san-francisco-2011
-     https://www.linuxfoundation.org/sites/main/files/colord.pdf
+<br>Thanks<br>
+
+--e89a8ff1c772825c5f04be8f3d38--
