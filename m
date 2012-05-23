@@ -1,14 +1,19 @@
-Return-Path: <glen.petrie@eitc.epson.com>
-Content-class: urn:content-classes:message
+Return-Path: <blueroofmusic@gmail.com>
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20120113;
+	h=mime-version:date:message-id:subject:from:to:content-type;
+	bh=YPNPmKrgPvUfLWCSoQ5uQO+86Yzq/reqvST7bahEGFc=;
+	b=L9/YCg/IWN+ca/jLOGluP215Z55HuWvP8jAJ5iI/yNZqsw2EUxUvWQSryU4zeHOdMY
+	YRrbJCOJJlw2bMgOkkKvf8/lACbnSeKh+D6Taj4M22HtzRhYD2ZqwPcxaJRRuhtlVP9R
+	dEKbYXaILU5mPbaEXQ5MNwO05Nd6RmUlaCv9pUoibywC9zZGvjyGvJSpjhWTymmpqZQX
+	clF4yztNfzG7ZiA7GWGB5DFU5FivBj/ja7yTj1ts9EGSsW0VDetl3c4tQ04FdJsF2Kh3
+	kwuyEEmqpo1FZq7F6bBytTOIJ2x6yCKleTgosQFg2y64XFhOibnskvgl9JOxdO+eppZf
+	1QjA==
 MIME-Version: 1.0
-Content-Type: multipart/alternative;
-	boundary="----_=_NextPart_001_01CD390D.7EA27111"
-Date: Wed, 23 May 2012 10:57:17 -0700
-Message-ID: <E8C3B9E653C80C48B0951F8494C049A9442321@EEAEX02.us.epson.net>
-References: <CAN40gSstUgsJC1nGZPS4AoGuqAxTP7i_=tCLUuR3o7WB_=nUGw@mail.gmail.com><4FBD0432.80008@gmail.com><4FBD0BAC.5090306@gmail.com><E8C3B9E653C80C48B0951F8494C049A94422F9@EEAEX02.us.epson.net><5EA5C835-0568-4EBF-B240-83723056B2BE@apple.com>
-	<CAN40gSsEDgz7EEcNO9ZFfvp2N-vd8oTOyMAmB9AzwbEcDCX8+g@mail.gmail.com>
-From: "Petrie, Glen" <glen.petrie@eitc.epson.com>
-Subject: Re: [Printing-architecture] CANCELED: OP US/Europe - TODAY
+Date: Wed, 23 May 2012 14:58:38 -0400
+Message-ID: <CAN40gSsy7GqWXQ4YSu_1817XWK99aKaeMNp_u1RprimcaY7n0A@mail.gmail.com>
+From: Ira McDonald <blueroofmusic@gmail.com>
+Content-Type: multipart/alternative; boundary=0016e6dede3a18c2e104c0b8b957
+Subject: [Printing-architecture] Agenda - OP US/Europe - 13 June 2012
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>,
@@ -18,37 +23,90 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Ira McDonald <blueroofmusic@gmail.com>, Michael Sweet <msweet@apple.com>
-Cc: printing-architecture@lists.linux-foundation.org, Till Kamppeter <till.kamppeter@gmail.com>
+To: printing-architecture@lists.linux-foundation.org, Ira McDonald <blueroofmusic@gmail.com>
 
-This is a multi-part message in MIME format.
-
-------_=_NextPart_001_01CD390D.7EA27111
-Content-Type: text/plain;
-	charset="us-ascii"
+--0016e6dede3a18c2e104c0b8b957
+Content-Type: text/plain; charset=windows-1252
 Content-Transfer-Encoding: quoted-printable
-
-June 13 will work for me.=20
-
-=20
-
-________________________________
-
-From: Ira McDonald [mailto:blueroofmusic@gmail.com]=20
-Sent: Wednesday, May 23, 2012 10:48 AM
-To: Michael Sweet; Ira McDonald
-Cc: Petrie, Glen; Till Kamppeter;
-printing-architecture@lists.linux-foundation.org
-Subject: Re: [Printing-architecture] CANCELED: OP US/Europe - TODAY
-
-=20
 
 Hi,
 
-Sorry for missing our OP call - I had to take my wife Nancy
-to the emergency room (out-of-town) with severe bronchitis.
+Our next Open Printing call will be on Wednesday 13 June.
 
-The only week in June that I could attend would be 13 June.
+
+Minutes of last OP Summit Preparation call are archived at:
+
+  ftp://ftp.pwg.org/pub/pwg/openprinting/minutes/OP-Summit-Prep-20120411.ht=
+m
+
+
+Agenda of Joint PWG/OP Summit w/ links to all presentations:
+
+  http://www.pwg.org/chair/meeting-info/april_2012_cupertino.html
+
+
+Agenda:
+
+(1) Status of Google Summer of Code 2012
+- GSoC 2012 home page
+  http://www.google-melange.com/gsoc/events/google/gsoc2012
+
+- GSoc 2012 projects
+  - Daniel Dressler - JTAPI Library
+    - Mentor - Glen Petrie
+  - Tobias Hoffmann - PDF Filter and tools
+    - Mentor =96 Till Kamppeter
+  - Jannes Jeising - OP website enhancements
+    - Mentors =96 Till Kamppeter, Eric Searcy, Jeff Licquia
+
+- GSoC 2012 development
+  - student coding started on Monday 21 May 2012
+  - mentor mid-term evaluations on 9-13 July 2012
+  - student 'pencils down' on Monday 20 August 2012
+  - mentor final evaluations end on Friday 24 August 2012
+  - GSoC announces final results on Monday 27 August 2012
+  - students submit code samples on Friday 31 August 2012
+
+(2) Status of Common Mobile Print Client (Glen)
+- progress and mid-term plans
+
+(3) Next Steps after Open Printing Summit (Till, Ira)
+- Slides from Future of OP session at Summit
+
+ftp://ftp.pwg.org/pub/pwg/openprinting/summits/April2012_OPSummit/op-future=
+-april-2012.pdf
+
+ftp://ftp.pwg.org/pub/pwg/openprinting/summits/April2012_OPSummit/open-prin=
+ting-architecture-sweet-2012.pdf
+- Common Mobile Print Client
+- Lightweight Print Service Model
+- Integrated Security
+- Mobile printing architecture extensions - Fedora printerd, CUPS, etc.
+
+(4) PWG Highlights for Open Printing (Ira McDonald)
+- Next PWG F2F is 5-7 June at Xerox in Webster, NY
+  http://www.pwg.org/chair/meeting-info/june_2012_webster.html
+
+
+Dial-in information:
+
+June 2012 - US/Europe - OP Monthly Meeting
+
+    - Note - Next PWG F2F is 5-7 June at Xerox in Webster, NY
+    - Note - Next TCG Members Meeting is 18-22 June in Madrid, Spain
+
+    - Wednesday 13 June 2012, Daytime
+      - US
+        9am in San Francisco - US PDT (Pacific Daylight Time)
+        10am in Colorado - US MDT (Mountain Daylight Time)
+        11am in Chicago - US CDT (Central Daylight Time)
+        12pm in New York - US EDT (Eastern Daylight Time)
+      - Europe
+        6pm in Berlin - CEST (Central European Summer Time)
+
+    * Main Number (Till Kamppeter, LF, leader)
+      International: +1-218-936-7999
+      Access Code:   491659#
 
 Cheers,
 - Ira
@@ -63,1111 +121,96 @@ Chair - TCG Embedded Systems Hardcopy SG
 IETF Designated Expert - IPP & Printer MIB
 Blue Roof Music/High North Inc
 http://sites.google.com/site/blueroofmusic
-<http://sites.google.com/site/blueroofmusic>=20
 http://sites.google.com/site/highnorthinc
-<http://sites.google.com/site/highnorthinc>=20
 mailto:blueroofmusic@gmail.com
 Winter  579 Park Place  Saline, MI  48176  734-944-0094
 Summer  PO Box 221  Grand Marais, MI 49839  906-494-2434
 
-
-
-
-
-On Wed, May 23, 2012 at 12:45 PM, Michael Sweet <msweet@apple.com>
-wrote:
-
-June 6 is in the middle of the PWG F2F (and in particular IPP
-Everywhere...)
-
-
-On May 23, 2012, at 9:14 AM, Petrie, Glen wrote:
-
-> Sorry Till, my last phone meeting ran over time.
->
-> I am not available on May 30th.
->
-> I suggest June 6 th.
->
-> Glen
->
->
-> -----Original Message-----
-> From: printing-architecture-bounces@lists.linux-foundation.org
-> [mailto:printing-architecture-bounces@lists.linux-foundation.org] On
-> Behalf Of Till Kamppeter
-> Sent: Wednesday, May 23, 2012 9:09 AM
-> To: Ira McDonald
-> Cc: printing-architecture@lists.linux-foundation.org
-> Subject: [Printing-architecture] CANCELED: OP US/Europe - TODAY
->
-> Only Lars called in. So we cancel for this week.
->
-> Should we have the meeting next week, May 30? Or is this too close to
-> the June meeting?
->
->    Till
->
->
-> On 05/23/2012 05:37 PM, Till Kamppeter wrote:
->> Hi,
->>
->> in 30 minutes we have our phone meeting.
->>
->> Till
->>
->> ----------
->>
->> May 2012 - US/Europe - OP Monthly Meeting
->> - Note - Joint PWG/OPS is 24-27 April at Apple in Cupertino, CA
->> - Note - Ubuntu Developer Summit is 7-11 May in Oakland, CA
->> - Note - Ira has a conflict on 16 May
->>
->> - Wednesday 23 May 2012, Daytime
->> - US
->> 9am in San Francisco - US PDT (Pacific Daylight Time)
->> 10am in Colorado - US MDT (Mountain Daylight Time)
->> 11am in Chicago - US CDT (Central Daylight Time)
->> 12pm in New York - US EDT (Eastern Daylight Time)
->> - Europe
->> 6pm in Berlin - CEST (Central European Summer Time)
->>
->> * Main Number (Till Kamppeter, LF, leader)
->> International: +1-218-936-7999 <tel:%2B1-218-936-7999>=20
->> Access Code: 491659#
->>
->
-> _______________________________________________
-> Printing-architecture mailing list
-> Printing-architecture@lists.linux-foundation.org
->
-https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture
-> _______________________________________________
-> Printing-architecture mailing list
-> Printing-architecture@lists.linux-foundation.org
->
-https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture
-
-________________________________________________________________________
-Michael Sweet, Senior Printing System Engineer, PWG Chair
-
-=20
-
-
-------_=_NextPart_001_01CD390D.7EA27111
-Content-Type: text/html;
-	charset="us-ascii"
+--0016e6dede3a18c2e104c0b8b957
+Content-Type: text/html; charset=windows-1252
 Content-Transfer-Encoding: quoted-printable
 
-<html xmlns:v=3D"urn:schemas-microsoft-com:vml" =
-xmlns:o=3D"urn:schemas-microsoft-com:office:office" =
-xmlns:w=3D"urn:schemas-microsoft-com:office:word" =
-xmlns:st1=3D"urn:schemas-microsoft-com:office:smarttags" =
-xmlns=3D"http://www.w3.org/TR/REC-html40">
+Hi,<br><br>Our next Open Printing call will be on Wednesday 13 June.<br><br=
+><br>Minutes of last OP Summit Preparation call are archived at:<br><br>=A0=
+ <a href=3D"ftp://ftp.pwg.org/pub/pwg/openprinting/minutes/OP-Summit-Prep-2=
+0120411.htm" target=3D"_blank">ftp://ftp.pwg.org/pub/pwg/openprinting/minut=
+es/OP-Summit-Prep-20120411.htm</a><br>
 
-<head>
-<META HTTP-EQUIV=3D"Content-Type" CONTENT=3D"text/html; =
-charset=3Dus-ascii">
-<meta name=3DGenerator content=3D"Microsoft Word 11 (filtered medium)">
-<!--[if !mso]>
-<style>
-v\:* {behavior:url(#default#VML);}
-o\:* {behavior:url(#default#VML);}
-w\:* {behavior:url(#default#VML);}
-.shape {behavior:url(#default#VML);}
-</style>
-<![endif]--><o:SmartTagType
- namespaceuri=3D"urn:schemas-microsoft-com:office:smarttags" =
-name=3D"country-region"/>
-<o:SmartTagType =
-namespaceuri=3D"urn:schemas-microsoft-com:office:smarttags"
- name=3D"place"/>
-<o:SmartTagType =
-namespaceuri=3D"urn:schemas-microsoft-com:office:smarttags"
- name=3D"Street"/>
-<o:SmartTagType =
-namespaceuri=3D"urn:schemas-microsoft-com:office:smarttags"
- name=3D"PostalCode"/>
-<o:SmartTagType =
-namespaceuri=3D"urn:schemas-microsoft-com:office:smarttags"
- name=3D"State"/>
-<o:SmartTagType =
-namespaceuri=3D"urn:schemas-microsoft-com:office:smarttags"
- name=3D"City"/>
-<o:SmartTagType =
-namespaceuri=3D"urn:schemas-microsoft-com:office:smarttags"
- name=3D"address"/>
-<!--[if !mso]>
-<style>
-st1\:*{behavior:url(#default#ieooui) }
-</style>
-<![endif]-->
-<style>
-<!--
- /* Font Definitions */
- @font-face
-	{font-family:SimSun;
-	panose-1:2 1 6 0 3 1 1 1 1 1;}
-@font-face
-	{font-family:Mangal;
-	panose-1:0 0 4 0 0 0 0 0 0 0;}
-@font-face
-	{font-family:Cambria;
-	panose-1:2 4 5 3 5 4 6 3 2 4;}
-@font-face
-	{font-family:Tahoma;
-	panose-1:2 11 6 4 3 5 4 4 2 4;}
-@font-face
-	{font-family:"\@SimSun";
-	panose-1:2 1 6 0 3 1 1 1 1 1;}
- /* Style Definitions */
- p.MsoNormal, li.MsoNormal, div.MsoNormal
-	{margin:0in;
-	margin-bottom:.0001pt;
-	font-size:12.0pt;
-	font-family:"Times New Roman";}
-h1
-	{margin-top:12.0pt;
-	margin-right:0in;
-	margin-bottom:6.0pt;
-	margin-left:.25in;
-	text-indent:-.25in;
-	page-break-after:avoid;
-	mso-list:l2 level1 lfo4;
-	font-size:14.0pt;
-	font-family:Cambria;}
-h2
-	{margin-top:12.0pt;
-	margin-right:0in;
-	margin-bottom:3.0pt;
-	margin-left:.3in;
-	text-indent:-.3in;
-	page-break-after:avoid;
-	mso-list:l3 level2 lfo6;
-	font-size:14.0pt;
-	font-family:Cambria;}
-p.MsoBodyText, li.MsoBodyText, div.MsoBodyText
-	{margin-top:0in;
-	margin-right:0in;
-	margin-bottom:6.0pt;
-	margin-left:0in;
-	font-size:12.0pt;
-	font-family:"Times New Roman";}
-a:link, span.MsoHyperlink
-	{color:blue;
-	text-decoration:underline;}
-a:visited, span.MsoHyperlinkFollowed
-	{color:blue;
-	text-decoration:underline;}
-p.StyleHeading1NotBoldBlack, li.StyleHeading1NotBoldBlack, =
-div.StyleHeading1NotBoldBlack
-	{margin-top:12.0pt;
-	margin-right:0in;
-	margin-bottom:6.0pt;
-	margin-left:.55in;
-	text-indent:-.3in;
-	page-break-after:avoid;
-	mso-list:l2 level2 lfo4;
-	font-size:14.0pt;
-	font-family:Cambria;
-	color:black;
-	font-weight:bold;}
-p.StyleAppendix, li.StyleAppendix, div.StyleAppendix
-	{margin-top:12.0pt;
-	margin-right:0in;
-	margin-bottom:6.0pt;
-	margin-left:.25in;
-	text-align:justify;
-	text-indent:-.25in;
-	page-break-after:avoid;
-	mso-list:l3 level1 lfo6;
-	font-size:14.0pt;
-	font-family:Cambria;
-	font-weight:bold;}
-span.EmailStyle20
-	{mso-style-type:personal-reply;
-	font-family:Cambria;
-	color:blue;
-	font-weight:normal;
-	font-style:normal;
-	text-decoration:none none;}
-@page Section1
-	{size:8.5in 11.0in;
-	margin:1.0in 1.25in 1.0in 1.25in;}
-div.Section1
-	{page:Section1;}
- /* List Definitions */
- @list l0
-	{mso-list-id:1;
-	mso-list-template-ids:1767813390;}
-@list l0:level1
-	{mso-level-suffix:space;
-	mso-level-tab-stop:none;
-	mso-level-number-position:left;
-	margin-left:.25in;
-	text-indent:-.25in;
-	mso-ansi-font-size:14.0pt;
-	mso-bidi-font-size:14.0pt;
-	font-family:Cambria;
-	font-variant:normal !important;
-	color:black;
-	text-transform:none;
-	letter-spacing:0pt;
-	mso-ansi-font-weight:normal;
-	mso-bidi-font-weight:normal;
-	mso-ansi-font-style:normal;}
-@list l0:level2
-	{mso-level-text:"%1\.%2\.";
-	mso-level-tab-stop:.55in;
-	mso-level-number-position:left;
-	margin-left:.55in;
-	text-indent:-.3in;
-	mso-ansi-font-size:14.0pt;
-	mso-bidi-font-size:14.0pt;
-	font-family:Cambria;
-	font-variant:normal !important;
-	color:black;
-	text-transform:none;
-	letter-spacing:0pt;
-	mso-ansi-font-weight:normal;
-	mso-bidi-font-weight:normal;
-	mso-ansi-font-style:normal;}
-@list l0:level3
-	{mso-level-text:"%1\.%2\.%3\.";
-	mso-level-tab-stop:1.0in;
-	mso-level-number-position:left;
-	margin-left:.85in;
-	text-indent:-.35in;
-	mso-ansi-font-size:14.0pt;
-	mso-bidi-font-size:14.0pt;
-	font-family:Cambria;
-	font-variant:normal !important;
-	color:black;
-	text-transform:none;
-	letter-spacing:0pt;
-	mso-ansi-font-weight:normal;
-	mso-bidi-font-weight:normal;
-	mso-ansi-font-style:normal;}
-@list l0:level4
-	{mso-level-text:"%1\.%2\.%3\.%4\.";
-	mso-level-tab-stop:1.25in;
-	mso-level-number-position:left;
-	margin-left:1.2in;
-	text-indent:-.45in;
-	mso-ansi-font-size:14.0pt;
-	mso-bidi-font-size:14.0pt;
-	font-family:Cambria;
-	font-variant:normal !important;
-	color:black;
-	text-transform:none;
-	letter-spacing:0pt;
-	mso-ansi-font-weight:normal;
-	mso-bidi-font-weight:normal;
-	mso-ansi-font-style:normal;}
-@list l0:level5
-	{mso-level-text:"%1\.%2\.%3\.%4\.%5\.";
-	mso-level-tab-stop:1.75in;
-	mso-level-number-position:left;
-	margin-left:1.55in;
-	text-indent:-.55in;
-	mso-ansi-font-size:14.0pt;
-	mso-bidi-font-size:14.0pt;
-	font-family:Cambria;
-	font-variant:normal !important;
-	color:black;
-	text-transform:none;
-	letter-spacing:0pt;
-	mso-ansi-font-weight:normal;
-	mso-bidi-font-weight:normal;
-	mso-ansi-font-style:normal;}
-@list l0:level6
-	{mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6\.";
-	mso-level-tab-stop:2.0in;
-	mso-level-number-position:left;
-	margin-left:1.9in;
-	text-indent:-.65in;
-	mso-ansi-font-size:14.0pt;
-	mso-bidi-font-size:14.0pt;
-	font-family:Cambria;
-	font-variant:normal !important;
-	color:black;
-	text-transform:none;
-	letter-spacing:0pt;
-	mso-ansi-font-weight:normal;
-	mso-bidi-font-weight:normal;
-	mso-ansi-font-style:normal;}
-@list l0:level7
-	{mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6\.%7\.";
-	mso-level-tab-stop:2.5in;
-	mso-level-number-position:left;
-	margin-left:2.25in;
-	text-indent:-.75in;
-	mso-ansi-font-size:14.0pt;
-	mso-bidi-font-size:14.0pt;
-	font-family:Cambria;
-	font-variant:normal !important;
-	color:black;
-	text-transform:none;
-	letter-spacing:0pt;
-	mso-ansi-font-weight:normal;
-	mso-bidi-font-weight:normal;
-	mso-ansi-font-style:normal;}
-@list l0:level8
-	{mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6\.%7\.%8\.";
-	mso-level-tab-stop:2.75in;
-	mso-level-number-position:left;
-	margin-left:2.6in;
-	text-indent:-.85in;
-	mso-ansi-font-size:14.0pt;
-	mso-bidi-font-size:14.0pt;
-	font-family:Cambria;
-	font-variant:normal !important;
-	color:black;
-	text-transform:none;
-	letter-spacing:0pt;
-	mso-ansi-font-weight:normal;
-	mso-bidi-font-weight:normal;
-	mso-ansi-font-style:normal;}
-@list l0:level9
-	{mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6\.%7\.%8\.%9\.";
-	mso-level-tab-stop:3.25in;
-	mso-level-number-position:left;
-	margin-left:3.0in;
-	text-indent:-1.0in;
-	mso-ansi-font-size:14.0pt;
-	mso-bidi-font-size:14.0pt;
-	font-family:Cambria;
-	font-variant:normal !important;
-	color:black;
-	text-transform:none;
-	letter-spacing:0pt;
-	mso-ansi-font-weight:normal;
-	mso-bidi-font-weight:normal;
-	mso-ansi-font-style:normal;}
-@list l1
-	{mso-list-id:232006760;
-	mso-list-template-ids:-416383970;}
-@list l1:level1
-	{mso-level-suffix:space;
-	mso-level-tab-stop:none;
-	mso-level-number-position:left;
-	margin-left:.25in;
-	text-indent:-.25in;
-	mso-ansi-font-size:14.0pt;
-	mso-bidi-font-size:14.0pt;
-	font-family:Cambria;
-	font-variant:normal !important;
-	color:black;
-	text-transform:none;
-	letter-spacing:0pt;
-	mso-ansi-font-weight:normal;
-	mso-bidi-font-weight:normal;
-	mso-ansi-font-style:normal;}
-@list l1:level2
-	{mso-level-suffix:space;
-	mso-level-text:"%1\.%2\.";
-	mso-level-tab-stop:none;
-	mso-level-number-position:left;
-	margin-left:.55in;
-	text-indent:-.3in;
-	mso-ansi-font-size:14.0pt;
-	mso-bidi-font-size:14.0pt;
-	font-family:Cambria;
-	font-variant:normal !important;
-	color:black;
-	text-transform:none;
-	letter-spacing:0pt;
-	mso-ansi-font-weight:normal;
-	mso-bidi-font-weight:normal;
-	mso-ansi-font-style:normal;}
-@list l1:level3
-	{mso-level-reset-level:level1;
-	mso-level-suffix:space;
-	mso-level-text:"%1\.%2\.%3\.";
-	mso-level-tab-stop:none;
-	mso-level-number-position:left;
-	margin-left:.85in;
-	text-indent:-.35in;
-	mso-ansi-font-size:14.0pt;
-	mso-bidi-font-size:14.0pt;
-	font-family:Cambria;
-	font-variant:normal !important;
-	color:black;
-	text-transform:none;
-	letter-spacing:0pt;
-	mso-ansi-font-weight:normal;
-	mso-bidi-font-weight:normal;
-	mso-ansi-font-style:normal;}
-@list l1:level4
-	{mso-level-text:"%1\.%2\.%3\.%4\.";
-	mso-level-tab-stop:1.25in;
-	mso-level-number-position:left;
-	margin-left:1.2in;
-	text-indent:-.45in;
-	mso-ansi-font-size:14.0pt;
-	mso-bidi-font-size:14.0pt;
-	font-family:Cambria;
-	font-variant:normal !important;
-	color:black;
-	text-transform:none;
-	letter-spacing:0pt;
-	mso-ansi-font-weight:normal;
-	mso-bidi-font-weight:normal;
-	mso-ansi-font-style:normal;}
-@list l1:level5
-	{mso-level-text:"%1\.%2\.%3\.%4\.%5\.";
-	mso-level-tab-stop:1.75in;
-	mso-level-number-position:left;
-	margin-left:1.55in;
-	text-indent:-.55in;
-	mso-ansi-font-size:14.0pt;
-	mso-bidi-font-size:14.0pt;
-	font-family:Cambria;
-	font-variant:normal !important;
-	color:black;
-	text-transform:none;
-	letter-spacing:0pt;
-	mso-ansi-font-weight:normal;
-	mso-bidi-font-weight:normal;
-	mso-ansi-font-style:normal;}
-@list l1:level6
-	{mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6\.";
-	mso-level-tab-stop:2.0in;
-	mso-level-number-position:left;
-	margin-left:1.9in;
-	text-indent:-.65in;
-	mso-ansi-font-size:14.0pt;
-	mso-bidi-font-size:14.0pt;
-	font-family:Cambria;
-	font-variant:normal !important;
-	color:black;
-	text-transform:none;
-	letter-spacing:0pt;
-	mso-ansi-font-weight:normal;
-	mso-bidi-font-weight:normal;
-	mso-ansi-font-style:normal;}
-@list l1:level7
-	{mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6\.%7\.";
-	mso-level-tab-stop:2.5in;
-	mso-level-number-position:left;
-	margin-left:2.25in;
-	text-indent:-.75in;
-	mso-ansi-font-size:14.0pt;
-	mso-bidi-font-size:14.0pt;
-	font-family:Cambria;
-	font-variant:normal !important;
-	color:black;
-	text-transform:none;
-	letter-spacing:0pt;
-	mso-ansi-font-weight:normal;
-	mso-bidi-font-weight:normal;
-	mso-ansi-font-style:normal;}
-@list l1:level8
-	{mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6\.%7\.%8\.";
-	mso-level-tab-stop:2.75in;
-	mso-level-number-position:left;
-	margin-left:2.6in;
-	text-indent:-.85in;
-	mso-ansi-font-size:14.0pt;
-	mso-bidi-font-size:14.0pt;
-	font-family:Cambria;
-	font-variant:normal !important;
-	color:black;
-	text-transform:none;
-	letter-spacing:0pt;
-	mso-ansi-font-weight:normal;
-	mso-bidi-font-weight:normal;
-	mso-ansi-font-style:normal;}
-@list l1:level9
-	{mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6\.%7\.%8\.%9\.";
-	mso-level-tab-stop:3.25in;
-	mso-level-number-position:left;
-	margin-left:3.0in;
-	text-indent:-1.0in;
-	mso-ansi-font-size:14.0pt;
-	mso-bidi-font-size:14.0pt;
-	font-family:Cambria;
-	font-variant:normal !important;
-	color:black;
-	text-transform:none;
-	letter-spacing:0pt;
-	mso-ansi-font-weight:normal;
-	mso-bidi-font-weight:normal;
-	mso-ansi-font-style:normal;}
-@list l2
-	{mso-list-id:675117133;
-	mso-list-template-ids:-319017128;}
-@list l2:level1
-	{mso-level-style-link:"Heading 1";
-	mso-level-suffix:space;
-	mso-level-tab-stop:none;
-	mso-level-number-position:left;
-	margin-left:.25in;
-	text-indent:-.25in;
-	mso-ansi-font-size:14.0pt;
-	mso-bidi-font-size:14.0pt;
-	font-family:Cambria;
-	font-variant:normal !important;
-	color:black;
-	text-transform:none;
-	letter-spacing:0pt;
-	mso-ansi-font-weight:normal;
-	mso-bidi-font-weight:normal;
-	mso-ansi-font-style:normal;}
-@list l2:level2
-	{mso-level-style-link:"Style Heading 1 + Not Bold Black";
-	mso-level-suffix:space;
-	mso-level-text:"%1\.%2\.";
-	mso-level-tab-stop:none;
-	mso-level-number-position:left;
-	margin-left:.55in;
-	text-indent:-.3in;
-	mso-ansi-font-size:14.0pt;
-	mso-bidi-font-size:14.0pt;
-	font-family:Cambria;
-	font-variant:normal !important;
-	color:black;
-	text-transform:none;
-	letter-spacing:0pt;
-	mso-ansi-font-weight:normal;
-	mso-bidi-font-weight:normal;
-	mso-ansi-font-style:normal;}
-@list l2:level3
-	{mso-level-suffix:space;
-	mso-level-text:"%1\.%2\.%3\.";
-	mso-level-tab-stop:none;
-	mso-level-number-position:left;
-	margin-left:.85in;
-	text-indent:-.35in;
-	mso-ansi-font-size:14.0pt;
-	mso-bidi-font-size:14.0pt;
-	font-family:Cambria;
-	font-variant:normal !important;
-	color:black;
-	text-transform:none;
-	letter-spacing:0pt;
-	mso-ansi-font-weight:normal;
-	mso-bidi-font-weight:normal;
-	mso-ansi-font-style:normal;}
-@list l2:level4
-	{mso-level-suffix:space;
-	mso-level-text:"%1\.%2\.%3\.%4\.";
-	mso-level-tab-stop:none;
-	mso-level-number-position:left;
-	margin-left:1.2in;
-	text-indent:-.45in;
-	mso-ansi-font-size:14.0pt;
-	mso-bidi-font-size:14.0pt;
-	font-family:Cambria;
-	font-variant:normal !important;
-	color:black;
-	text-transform:none;
-	letter-spacing:0pt;
-	mso-ansi-font-weight:normal;
-	mso-bidi-font-weight:normal;
-	mso-ansi-font-style:normal;}
-@list l2:level5
-	{mso-level-suffix:space;
-	mso-level-text:"%1\.%2\.%3\.%4\.%5\.";
-	mso-level-tab-stop:none;
-	mso-level-number-position:left;
-	margin-left:1.55in;
-	text-indent:-.55in;
-	mso-ansi-font-size:14.0pt;
-	mso-bidi-font-size:14.0pt;
-	font-family:Cambria;
-	font-variant:normal !important;
-	color:black;
-	text-transform:none;
-	letter-spacing:0pt;
-	mso-ansi-font-weight:normal;
-	mso-bidi-font-weight:normal;
-	mso-ansi-font-style:normal;}
-@list l2:level6
-	{mso-level-suffix:space;
-	mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6\.";
-	mso-level-tab-stop:none;
-	mso-level-number-position:left;
-	margin-left:1.9in;
-	text-indent:-.65in;
-	mso-ansi-font-size:14.0pt;
-	mso-bidi-font-size:14.0pt;
-	font-family:Cambria;
-	font-variant:normal !important;
-	color:black;
-	text-transform:none;
-	letter-spacing:0pt;
-	mso-ansi-font-weight:normal;
-	mso-bidi-font-weight:normal;
-	mso-ansi-font-style:normal;}
-@list l2:level7
-	{mso-level-suffix:space;
-	mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6\.%7\.";
-	mso-level-tab-stop:none;
-	mso-level-number-position:left;
-	margin-left:2.25in;
-	text-indent:-.75in;
-	mso-ansi-font-size:14.0pt;
-	mso-bidi-font-size:14.0pt;
-	font-family:Cambria;
-	font-variant:normal !important;
-	color:black;
-	text-transform:none;
-	letter-spacing:0pt;
-	mso-ansi-font-weight:normal;
-	mso-bidi-font-weight:normal;
-	mso-ansi-font-style:normal;}
-@list l2:level8
-	{mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6\.%7\.%8\.";
-	mso-level-tab-stop:2.75in;
-	mso-level-number-position:left;
-	margin-left:2.6in;
-	text-indent:-.85in;
-	mso-ansi-font-size:14.0pt;
-	mso-bidi-font-size:14.0pt;
-	font-family:Cambria;
-	font-variant:normal !important;
-	color:black;
-	text-transform:none;
-	letter-spacing:0pt;
-	mso-ansi-font-weight:normal;
-	mso-bidi-font-weight:normal;
-	mso-ansi-font-style:normal;}
-@list l2:level9
-	{mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6\.%7\.%8\.%9\.";
-	mso-level-tab-stop:3.25in;
-	mso-level-number-position:left;
-	margin-left:3.0in;
-	text-indent:-1.0in;
-	mso-ansi-font-size:14.0pt;
-	mso-bidi-font-size:14.0pt;
-	font-family:Cambria;
-	font-variant:normal !important;
-	color:black;
-	text-transform:none;
-	letter-spacing:0pt;
-	mso-ansi-font-weight:normal;
-	mso-bidi-font-weight:normal;
-	mso-ansi-font-style:normal;}
-@list l3
-	{mso-list-id:1691636573;
-	mso-list-template-ids:1894306706;}
-@list l3:level1
-	{mso-level-style-link:StyleAppendix;
-	mso-level-suffix:space;
-	mso-level-tab-stop:none;
-	mso-level-number-position:left;
-	margin-left:.25in;
-	text-indent:-.25in;
-	mso-ansi-font-size:14.0pt;
-	mso-bidi-font-size:14.0pt;
-	font-family:Cambria;
-	font-variant:normal !important;
-	color:black;
-	text-transform:none;
-	letter-spacing:0pt;
-	mso-ansi-font-weight:normal;
-	mso-bidi-font-weight:normal;
-	mso-ansi-font-style:normal;}
-@list l3:level2
-	{mso-level-style-link:"Heading 2";
-	mso-level-suffix:space;
-	mso-level-text:"%1\.%2\.";
-	mso-level-tab-stop:none;
-	mso-level-number-position:left;
-	margin-left:.3in;
-	text-indent:-.3in;
-	mso-ansi-font-size:14.0pt;
-	mso-bidi-font-size:14.0pt;
-	font-family:Cambria;
-	font-variant:normal !important;
-	color:black;
-	text-transform:none;
-	letter-spacing:0pt;
-	mso-ansi-font-weight:normal;
-	mso-bidi-font-weight:normal;
-	mso-ansi-font-style:normal;}
-@list l3:level3
-	{mso-level-suffix:space;
-	mso-level-text:"%1\.%2\.%3\.";
-	mso-level-tab-stop:none;
-	mso-level-number-position:left;
-	margin-left:.85in;
-	text-indent:-.35in;
-	mso-ansi-font-size:14.0pt;
-	mso-bidi-font-size:14.0pt;
-	font-family:Cambria;
-	font-variant:normal !important;
-	color:black;
-	text-transform:none;
-	letter-spacing:0pt;
-	mso-ansi-font-weight:normal;
-	mso-bidi-font-weight:normal;
-	mso-ansi-font-style:normal;}
-@list l3:level4
-	{mso-level-suffix:space;
-	mso-level-text:"%1\.%2\.%3\.%4\.";
-	mso-level-tab-stop:none;
-	mso-level-number-position:left;
-	margin-left:1.2in;
-	text-indent:-.45in;
-	mso-ansi-font-size:14.0pt;
-	mso-bidi-font-size:14.0pt;
-	font-family:Cambria;
-	font-variant:normal !important;
-	color:black;
-	text-transform:none;
-	letter-spacing:0pt;
-	mso-ansi-font-weight:normal;
-	mso-bidi-font-weight:normal;
-	mso-ansi-font-style:normal;}
-@list l3:level5
-	{mso-level-suffix:space;
-	mso-level-text:"%1\.%2\.%3\.%4\.%5\.";
-	mso-level-tab-stop:none;
-	mso-level-number-position:left;
-	margin-left:1.55in;
-	text-indent:-.55in;
-	mso-ansi-font-size:14.0pt;
-	mso-bidi-font-size:14.0pt;
-	font-family:Cambria;
-	font-variant:normal !important;
-	color:black;
-	text-transform:none;
-	letter-spacing:0pt;
-	mso-ansi-font-weight:normal;
-	mso-bidi-font-weight:normal;
-	mso-ansi-font-style:normal;}
-@list l3:level6
-	{mso-level-suffix:space;
-	mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6\.";
-	mso-level-tab-stop:none;
-	mso-level-number-position:left;
-	margin-left:1.9in;
-	text-indent:-.65in;
-	mso-ansi-font-size:14.0pt;
-	mso-bidi-font-size:14.0pt;
-	font-family:Cambria;
-	font-variant:normal !important;
-	color:black;
-	text-transform:none;
-	letter-spacing:0pt;
-	mso-ansi-font-weight:normal;
-	mso-bidi-font-weight:normal;
-	mso-ansi-font-style:normal;}
-@list l3:level7
-	{mso-level-suffix:space;
-	mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6\.%7\.";
-	mso-level-tab-stop:none;
-	mso-level-number-position:left;
-	margin-left:2.25in;
-	text-indent:-.75in;
-	mso-ansi-font-size:14.0pt;
-	mso-bidi-font-size:14.0pt;
-	font-family:Cambria;
-	font-variant:normal !important;
-	color:black;
-	text-transform:none;
-	letter-spacing:0pt;
-	mso-ansi-font-weight:normal;
-	mso-bidi-font-weight:normal;
-	mso-ansi-font-style:normal;}
-@list l3:level8
-	{mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6\.%7\.%8\.";
-	mso-level-tab-stop:2.75in;
-	mso-level-number-position:left;
-	margin-left:2.6in;
-	text-indent:-.85in;
-	mso-ansi-font-size:14.0pt;
-	mso-bidi-font-size:14.0pt;
-	font-family:Cambria;
-	font-variant:normal !important;
-	color:black;
-	text-transform:none;
-	letter-spacing:0pt;
-	mso-ansi-font-weight:normal;
-	mso-bidi-font-weight:normal;
-	mso-ansi-font-style:normal;}
-@list l3:level9
-	{mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6\.%7\.%8\.%9\.";
-	mso-level-tab-stop:3.25in;
-	mso-level-number-position:left;
-	margin-left:3.0in;
-	text-indent:-1.0in;
-	mso-ansi-font-size:14.0pt;
-	mso-bidi-font-size:14.0pt;
-	font-family:Cambria;
-	font-variant:normal !important;
-	color:black;
-	text-transform:none;
-	letter-spacing:0pt;
-	mso-ansi-font-weight:normal;
-	mso-bidi-font-weight:normal;
-	mso-ansi-font-style:normal;}
-ol
-	{margin-bottom:0in;}
-ul
-	{margin-bottom:0in;}
--->
-</style>
-<!--[if gte mso 9]><xml>
- <o:shapedefaults v:ext=3D"edit" spidmax=3D"1026" />
-</xml><![endif]--><!--[if gte mso 9]><xml>
- <o:shapelayout v:ext=3D"edit">
-  <o:idmap v:ext=3D"edit" data=3D"1" />
- </o:shapelayout></xml><![endif]-->
-</head>
+<br><br>Agenda of Joint PWG/OP Summit w/ links to all presentations:<br><br=
+>=A0 <a href=3D"http://www.pwg.org/chair/meeting-info/april_2012_cupertino.=
+html" target=3D"_blank">http://www.pwg.org/chair/meeting-info/april_2012_cu=
+pertino.html</a><br>
+<br><br>
+Agenda:<br><br>(1) Status of Google Summer of Code 2012<br>- GSoC 2012 home=
+ page<br>=A0 <a href=3D"http://www.google-melange.com/gsoc/events/google/gs=
+oc2012" target=3D"_blank">http://www.google-melange.com/gsoc/events/google/=
+gsoc2012</a><br>
+<br>- GSoc 2012 projects<br>
+=A0 - Daniel Dressler - JTAPI Library<br>=A0=A0=A0 - Mentor - Glen Petrie<b=
+r>=A0 - Tobias Hoffmann - PDF Filter and tools<br>=A0=A0=A0 - Mentor =96 Ti=
+ll Kamppeter<br>=A0 - Jannes Jeising - OP website enhancements<br>=A0=A0=A0=
+ - Mentors =96 Till Kamppeter, Eric Searcy, Jeff Licquia<br>
 
-<body lang=3DEN-US link=3Dblue vlink=3Dblue>
+<br>- GSoC 2012 development<br>=A0 - student coding started on Monday 21 Ma=
+y 2012<br>=A0 - mentor mid-term evaluations on 9-13 July 2012<br>=A0 - stud=
+ent &#39;pencils down&#39; on Monday 20 August 2012<br>=A0 - mentor final e=
+valuations end on Friday 24 August 2012<br>
 
-<div class=3DSection1>
+=A0 - GSoC announces final results on Monday 27 August 2012<br>=A0 - studen=
+ts submit code samples on Friday 31 August 2012<br><br>(2) Status of Common=
+ Mobile Print Client (Glen)<br>- progress and mid-term plans<br><br>(3) Nex=
+t Steps after Open Printing Summit (Till, Ira)<br>
+- Slides from Future of OP session at Summit<br>
+=A0 <a href=3D"ftp://ftp.pwg.org/pub/pwg/openprinting/summits/April2012_OPS=
+ummit/op-future-april-2012.pdf" target=3D"_blank">ftp://ftp.pwg.org/pub/pwg=
+/openprinting/summits/April2012_OPSummit/op-future-april-2012.pdf</a><br>=
+=A0 <a href=3D"ftp://ftp.pwg.org/pub/pwg/openprinting/summits/April2012_OPS=
+ummit/open-printing-architecture-sweet-2012.pdf" target=3D"_blank">ftp://ft=
+p.pwg.org/pub/pwg/openprinting/summits/April2012_OPSummit/open-printing-arc=
+hitecture-sweet-2012.pdf</a><br>
 
-<p class=3DMsoNormal><font size=3D3 color=3Dblue face=3DCambria><span =
-style=3D'font-size:
-12.0pt;font-family:Cambria;color:blue'>June 13 will work for me. =
-<o:p></o:p></span></font></p>
-
-<p class=3DMsoNormal><font size=3D3 color=3Dblue face=3DCambria><span =
-style=3D'font-size:
-12.0pt;font-family:Cambria;color:blue'><o:p>&nbsp;</o:p></span></font></p=
->
-
-<div>
-
-<div class=3DMsoNormal align=3Dcenter style=3D'text-align:center'><font =
-size=3D3
-face=3D"Times New Roman"><span style=3D'font-size:12.0pt'>
-
-<hr size=3D2 width=3D"100%" align=3Dcenter tabindex=3D-1>
-
-</span></font></div>
-
-<p class=3DMsoNormal><b><font size=3D2 face=3DTahoma><span =
-style=3D'font-size:10.0pt;
-font-family:Tahoma;font-weight:bold'>From:</span></font></b><font =
-size=3D2
-face=3DTahoma><span style=3D'font-size:10.0pt;font-family:Tahoma'> Ira =
-McDonald
-[mailto:blueroofmusic@gmail.com] <br>
-<b><span style=3D'font-weight:bold'>Sent:</span></b> Wednesday, May 23, =
-2012
-10:48 AM<br>
-<b><span style=3D'font-weight:bold'>To:</span></b> Michael Sweet; Ira =
-McDonald<br>
-<b><span style=3D'font-weight:bold'>Cc:</span></b> Petrie, Glen; Till =
-Kamppeter;
-printing-architecture@lists.linux-foundation.org<br>
-<b><span style=3D'font-weight:bold'>Subject:</span></b> Re:
-[Printing-architecture] CANCELED: OP US/Europe - =
-TODAY</span></font><o:p></o:p></p>
-
-</div>
-
-<p class=3DMsoNormal><font size=3D3 face=3D"Times New Roman"><span =
-style=3D'font-size:
-12.0pt'><o:p>&nbsp;</o:p></span></font></p>
-
-<p class=3DMsoNormal><font size=3D3 face=3D"Times New Roman"><span =
-style=3D'font-size:
-12.0pt'>Hi,<br>
+- Common Mobile Print Client<br>- Lightweight Print Service Model<br>- Inte=
+grated Security<br>- Mobile printing architecture extensions - Fedora print=
+erd, CUPS, etc.<br><br>(4) PWG Highlights for Open Printing (Ira McDonald)<=
+br>
+- Next PWG F2F is 5-7 June at Xerox in Webster, NY<br>=A0 <a href=3D"http:/=
+/www.pwg.org/chair/meeting-info/june_2012_webster.html">http://www.pwg.org/=
+chair/meeting-info/june_2012_webster.html</a><br><br><br>Dial-in informatio=
+n:<br>
+<br>June 2012 - US/Europe - OP Monthly Meeting<br><br>=A0=A0=A0 - Note - Ne=
+xt PWG F2F is 5-7 June at Xerox in Webster, NY<br>=A0=A0=A0 - Note - Next T=
+CG Members Meeting is 18-22 June in Madrid, Spain<br><br>=A0=A0=A0 - Wednes=
+day 13 June 2012, Daytime<br>
+=A0=A0=A0=A0=A0 - US<br>=A0=A0=A0=A0=A0=A0=A0 9am in San Francisco - US PDT=
+ (Pacific Daylight Time)<br>=A0=A0=A0=A0=A0=A0=A0 10am in Colorado - US MDT=
+ (Mountain Daylight Time)<br>=A0=A0=A0=A0=A0=A0=A0 11am in Chicago - US CDT=
+ (Central Daylight Time)<br>=A0=A0=A0=A0=A0=A0=A0 12pm in New York - US EDT=
+ (Eastern Daylight Time)<br>
+=A0=A0=A0=A0=A0 - Europe<br>=A0=A0=A0=A0=A0=A0=A0 6pm in Berlin - CEST (Cen=
+tral European Summer Time)<br><br>=A0=A0=A0 * Main Number (Till Kamppeter, =
+LF, leader)<br>=A0=A0=A0=A0=A0 International: +1-218-936-7999<br>=A0=A0=A0=
+=A0=A0 Access Code:=A0=A0 491659#<br><br>Cheers,<br>
+- Ira<br clear=3D"all"><br><br>Ira McDonald (Musician / Software Architect)=
 <br>
-Sorry for missing our OP call - I had to take my wife Nancy<br>
-to the emergency room (out-of-town) with severe bronchitis.<br>
-<br>
-The only week in June that I could attend would be 13 June.<br>
-<br>
-Cheers,<br>
-- Ira<br>
-<br>
-<br clear=3Dall>
-Ira McDonald (Musician / Software Architect)<br>
-Chair - Linux Foundation Open Printing WG<br>
-Secretary - IEEE-ISTO Printer Working Group<br>
-Co-Chair - IEEE-ISTO PWG IPP WG<br>
-Co-Chair - TCG Trusted Mobility Solutions WG<br>
-Chair - TCG Embedded Systems Hardcopy SG<br>
-IETF Designated Expert - IPP &amp; Printer MIB<br>
-Blue Roof Music/High North Inc<br>
-<a href=3D"http://sites.google.com/site/blueroofmusic" =
-target=3D"_blank"><font
-color=3D"#3333ff"><span =
-style=3D'color:#3333FF'>http://sites.google.com/site/blueroofmusic</span>=
-</font></a><br>
-<a href=3D"http://sites.google.com/site/highnorthinc" =
-target=3D"_blank"><font
-color=3D"#6600cc"><span =
-style=3D'color:#6600CC'>http://sites.google.com/site/highnorthinc</span><=
-/font></a><br>
-mailto:<a href=3D"mailto:blueroofmusic@gmail.com" =
-target=3D"_blank">blueroofmusic@gmail.com</a><br>
-Winter&nbsp; <st1:address w:st=3D"on"><st1:Street w:st=3D"on">579 Park =
-Place</st1:Street>&nbsp;
- <st1:City w:st=3D"on">Saline</st1:City>, <st1:State =
-w:st=3D"on">MI</st1:State>&nbsp;
- <st1:PostalCode w:st=3D"on">48176</st1:PostalCode></st1:address>&nbsp;
-734-944-0094<br>
-Summer&nbsp; <st1:address w:st=3D"on"><st1:Street w:st=3D"on">PO =
-Box</st1:Street>
- 221</st1:address>&nbsp; Grand <st1:place w:st=3D"on"><st1:City =
-w:st=3D"on">Marais</st1:City>,
- <st1:State w:st=3D"on">MI</st1:State> <st1:PostalCode =
-w:st=3D"on">49839</st1:PostalCode></st1:place>&nbsp;
-906-494-2434<o:p></o:p></span></font></p>
+Chair - Linux Foundation Open Printing WG<br>Secretary - IEEE-ISTO Printer =
+Working Group<br>Co-Chair - IEEE-ISTO PWG IPP WG<br>Co-Chair - TCG Trusted =
+Mobility Solutions WG<br>Chair - TCG Embedded Systems Hardcopy SG<br>IETF D=
+esignated Expert - IPP &amp; Printer MIB<br>
 
-<p class=3DMsoNormal style=3D'margin-bottom:12.0pt'><font size=3D3
-face=3D"Times New Roman"><span style=3D'font-size:12.0pt'><br>
-<br>
-<o:p></o:p></span></font></p>
+Blue Roof Music/High North Inc<br><a style=3D"color:rgb(51,51,255)" href=3D=
+"http://sites.google.com/site/blueroofmusic" target=3D"_blank">http://sites=
+.google.com/site/blueroofmusic</a><br><a style=3D"color:rgb(102,0,204)" hre=
+f=3D"http://sites.google.com/site/highnorthinc" target=3D"_blank">http://si=
+tes.google.com/site/highnorthinc</a><br>
 
-<div>
+mailto:<a href=3D"mailto:blueroofmusic@gmail.com" target=3D"_blank">blueroo=
+fmusic@gmail.com</a><br>Winter=A0 579 Park Place=A0 Saline, MI=A0 48176=A0 =
+<a href=3D"tel:734-944-0094" value=3D"+17349440094" target=3D"_blank">734-9=
+44-0094</a><br>
+Summer=A0 PO Box 221=A0 Grand Marais, MI 49839=A0 <a href=3D"tel:906-494-24=
+34" value=3D"+19064942434" target=3D"_blank">906-494-2434</a><div style=3D"=
+display:inline">
+</div><div style=3D"display:inline"></div><div style=3D"display:inline"></d=
+iv><div></div><div></div><div></div><div></div><br>
 
-<p class=3DMsoNormal><font size=3D3 face=3D"Times New Roman"><span =
-style=3D'font-size:
-12.0pt'>On Wed, May 23, 2012 at 12:45 PM, Michael Sweet &lt;<a
-href=3D"mailto:msweet@apple.com" =
-target=3D"_blank">msweet@apple.com</a>&gt; =
-wrote:<o:p></o:p></span></font></p>
-
-<p class=3DMsoNormal><font size=3D3 face=3D"Times New Roman"><span =
-style=3D'font-size:
-12.0pt'>June 6 is in the middle of the PWG F2F (and in particular IPP =
-Everywhere...)<o:p></o:p></span></font></p>
-
-<div>
-
-<div>
-
-<p class=3DMsoNormal style=3D'margin-bottom:12.0pt'><font size=3D3
-face=3D"Times New Roman"><span style=3D'font-size:12.0pt'><br>
-On May 23, 2012, at 9:14 AM, Petrie, Glen wrote:<br>
-<br>
-&gt; Sorry Till, my last phone meeting ran over time.<br>
-&gt;<br>
-&gt; I am not available on May 30th.<br>
-&gt;<br>
-&gt; I suggest June 6 th.<br>
-&gt;<br>
-&gt; Glen<br>
-&gt;<br>
-&gt;<br>
-&gt; -----Original Message-----<br>
-&gt; From: <a
-href=3D"mailto:printing-architecture-bounces@lists.linux-foundation.org">=
-printing-architecture-bounces@lists.linux-foundation.org</a><br>
-&gt; [mailto:<a
-href=3D"mailto:printing-architecture-bounces@lists.linux-foundation.org">=
-printing-architecture-bounces@lists.linux-foundation.org</a>]
-On<br>
-&gt; Behalf Of Till Kamppeter<br>
-&gt; Sent: Wednesday, May 23, 2012 9:09 AM<br>
-&gt; To: Ira McDonald<br>
-&gt; Cc: <a =
-href=3D"mailto:printing-architecture@lists.linux-foundation.org">printing=
--architecture@lists.linux-foundation.org</a><br>
-&gt; Subject: [Printing-architecture] CANCELED: OP US/Europe - TODAY<br>
-&gt;<br>
-&gt; Only Lars called in. So we cancel for this week.<br>
-&gt;<br>
-&gt; Should we have the meeting next week, May 30? Or is this too close =
-to<br>
-&gt; the June meeting?<br>
-&gt;<br>
-&gt; &nbsp; &nbsp;Till<br>
-&gt;<br>
-&gt;<br>
-&gt; On 05/23/2012 05:37 PM, Till Kamppeter wrote:<br>
-&gt;&gt; Hi,<br>
-&gt;&gt;<br>
-&gt;&gt; in 30 minutes we have our phone meeting.<br>
-&gt;&gt;<br>
-&gt;&gt; Till<br>
-&gt;&gt;<br>
-&gt;&gt; ----------<br>
-&gt;&gt;<br>
-&gt;&gt; May 2012 - US/Europe - OP Monthly Meeting<br>
-&gt;&gt; - Note - Joint PWG/OPS is 24-27 April at Apple in <st1:place =
-w:st=3D"on"><st1:City
- w:st=3D"on">Cupertino</st1:City>, <st1:State =
-w:st=3D"on">CA</st1:State></st1:place><br>
-&gt;&gt; - Note - Ubuntu Developer Summit is 7-11 May in <st1:place =
-w:st=3D"on"><st1:City
- w:st=3D"on">Oakland</st1:City>, <st1:State =
-w:st=3D"on">CA</st1:State></st1:place><br>
-&gt;&gt; - Note - Ira has a conflict on 16 May<br>
-&gt;&gt;<br>
-&gt;&gt; - Wednesday 23 May 2012, Daytime<br>
-&gt;&gt; - US<br>
-&gt;&gt; 9am in <st1:City w:st=3D"on">San Francisco</st1:City> - =
-<st1:country-region
-w:st=3D"on"><st1:place w:st=3D"on">US</st1:place></st1:country-region> =
-PDT (Pacific
-Daylight Time)<br>
-&gt;&gt; 10am in <st1:State w:st=3D"on">Colorado</st1:State> - =
-<st1:country-region
-w:st=3D"on"><st1:place w:st=3D"on">US</st1:place></st1:country-region> =
-MDT
-(Mountain Daylight Time)<br>
-&gt;&gt; 11am in Chicago - <st1:country-region w:st=3D"on"><st1:place =
-w:st=3D"on">US</st1:place></st1:country-region>
-CDT (Central Daylight Time)<br>
-&gt;&gt; 12pm in <st1:State w:st=3D"on">New York</st1:State> - =
-<st1:country-region
-w:st=3D"on"><st1:place w:st=3D"on">US</st1:place></st1:country-region> =
-EDT (Eastern
-Daylight Time)<br>
-&gt;&gt; - <st1:place w:st=3D"on">Europe</st1:place><br>
-&gt;&gt; 6pm in <st1:State w:st=3D"on"><st1:place =
-w:st=3D"on">Berlin</st1:place></st1:State>
-- CEST (Central European Summer Time)<br>
-&gt;&gt;<br>
-&gt;&gt; * Main Number (Till Kamppeter, LF, leader)<br>
-&gt;&gt; International: <a href=3D"tel:%2B1-218-936-7999" =
-value=3D"+12189367999">+1-218-936-7999</a><br>
-&gt;&gt; Access Code: 491659#<br>
-&gt;&gt;<br>
-&gt;<br>
-&gt; _______________________________________________<br>
-&gt; Printing-architecture mailing list<br>
-&gt; <a =
-href=3D"mailto:Printing-architecture@lists.linux-foundation.org">Printing=
--architecture@lists.linux-foundation.org</a><br>
-&gt; <a
-href=3D"https://lists.linuxfoundation.org/mailman/listinfo/printing-archi=
-tecture"
-target=3D"_blank">https://lists.linuxfoundation.org/mailman/listinfo/prin=
-ting-architecture</a><br>
-&gt; _______________________________________________<br>
-&gt; Printing-architecture mailing list<br>
-&gt; <a =
-href=3D"mailto:Printing-architecture@lists.linux-foundation.org">Printing=
--architecture@lists.linux-foundation.org</a><br>
-&gt; <a
-href=3D"https://lists.linuxfoundation.org/mailman/listinfo/printing-archi=
-tecture"
-target=3D"_blank">https://lists.linuxfoundation.org/mailman/listinfo/prin=
-ting-architecture</a><o:p></o:p></span></font></p>
-
-</div>
-
-</div>
-
-<p class=3DMsoNormal style=3D'margin-bottom:12.0pt'><font size=3D3
-face=3D"Times New Roman"><span =
-style=3D'font-size:12.0pt'>______________________________________________=
-__________________________<br>
-Michael Sweet, Senior Printing System Engineer, PWG =
-Chair<o:p></o:p></span></font></p>
-
-</div>
-
-<p class=3DMsoNormal><font size=3D3 face=3D"Times New Roman"><span =
-style=3D'font-size:
-12.0pt'><o:p>&nbsp;</o:p></span></font></p>
-
-</div>
-
-</body>
-
-</html>
-
-------_=_NextPart_001_01CD390D.7EA27111--
+--0016e6dede3a18c2e104c0b8b957--
