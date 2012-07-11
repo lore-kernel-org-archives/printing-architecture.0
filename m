@@ -2,22 +2,22 @@ Return-Path: <till.kamppeter@gmail.com>
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20120113;
 	h=message-id:date:from:user-agent:mime-version:to:subject:references
 	:in-reply-to:content-type:content-transfer-encoding;
-	bh=puPNTGVjhfmV3SN967UzmbuzUAPJR0YbD4tyNV8ZI9A=;
-	b=v6RrpMuCQKOikJY6IDUMnIfKU/GlTl0X450ST6ybQFHLY6hs4Seq4Ja1pXi5YUJHZt
-	IWPnCbcwj6XnWa6g353KhGvChp3o0w0UR6TwJ4+egLvjTmrh1O0A48oWTbkucqgvaMA2
-	9ul0pzPYk2DLxfK0UtAnYtzxVo+Je5u9FEwmlcv1aZ1mC8u9tG0ValAIAfwgHskCrQlG
-	HX893SHUhB04ML2ujD19R5phXcdxyMhMcmS2lJDFdwq2roeLKJ0E6+5jcWYX6U33p+2s
-	hcTrDCSqDEMzeDmDFwSrWM0J6glGO/3mu9MJDL0JQyqABO6oM3MJyHIGGQvq406C0gUD
-	j6AQ==
-Message-ID: <4FFC70BE.7050008@gmail.com>
-Date: Tue, 10 Jul 2012 20:13:18 +0200
+	bh=PHVgU98JCN+7l+Gil+PUeQ+m571nAkQZ+WnSlouWTOw=;
+	b=C378rqoSYzwEAI6PE+WIjVuY3cduLE/yGW5q+IupJJYa8zOdzPDvGsEo/QI/dAUGJa
+	GxJbarT7T7JXz60rWLUpcZ5sHq+ZEb9y4Q9zy/CCC8Z3KufCqIZX/uLDd6YtWKVsa1il
+	6ILEGd7iVYFghr97yS1Lzm7GvGpDmGMv51xgQW9H6LAWZ6oyS8zX3szsVzO7dNfrSS8A
+	l+wLwwFNQwrnJu58NSuMs6ffIUKGslLV+fUVYyE44mMath5ly9VbkniLUeln/cda/s8P
+	TEkjKlfR19GWxostk/ij+qH6OdtFSRLtn8RgG2njiX75s4O6wgR8UOfSK2av2STxGtG7
+	PWDQ==
+Message-ID: <4FFD860B.3060706@gmail.com>
+Date: Wed, 11 Jul 2012 15:56:27 +0200
 From: Till Kamppeter <till.kamppeter@gmail.com>
 MIME-Version: 1.0
 References: <CAN40gSstUgsJC1nGZPS4AoGuqAxTP7i_=tCLUuR3o7WB_=nUGw@mail.gmail.com>
 In-Reply-To: <CAN40gSstUgsJC1nGZPS4AoGuqAxTP7i_=tCLUuR3o7WB_=nUGw@mail.gmail.com>
 Content-Type: text/plain; charset=UTF-8; format=flowed
 Content-Transfer-Encoding: 7bit
-Subject: [Printing-architecture] REMINDER: OP US/Europe - TOMORROW
+Subject: [Printing-architecture] CANCELED: OP US/Europe - TODAY
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>,
@@ -31,9 +31,8 @@ To: printing-architecture@lists.linux-foundation.org
 
 Hi,
 
-in around 22 hours we have our phone meeting.
-
-Note that Ira will not be participating tomorrow.
+as Ira cannot participate and Lars seems also not to be present. So we 
+will send out a report by e-mail.
 
     Till
 
