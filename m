@@ -2,22 +2,23 @@ Return-Path: <till.kamppeter@gmail.com>
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20120113;
 	h=message-id:date:from:user-agent:mime-version:to:subject:references
 	:in-reply-to:content-type:content-transfer-encoding;
-	bh=5aQL3nnTCa8htj8KC5hNo57ehM6DGRcETTfw0gbsU60=;
-	b=lsDqEs8r7xjiFAQOpxFo/7xPVGTjBJDGR9totwaNL6A4soB7mAK99JBtE1PfMH/ZoE
-	JunYT+J9lIYRhxvi8J3/v6Fe+uc2d8W0bIfIyUCKyueevGLEWvDCmi3esZ5Nt0pgsdvG
-	AjFwTH38tDHf/oDrQxcpxpFUj7VjHopfDl30SieA2WbGY57MqP06etr8uhaXe7gjT8tg
-	4AwpBwi83YUvJHj+CbGYKZ2nuhJUu/i2ycQELOGlufOzeH8uWZDi+NYcjyFwOSPXJNK9
-	IbwQu3FPwkLSGXnUtgYU9FuI/2g8mhd4tI01O4TC81oj+JO3tJzMYQoePYO2YLOMCLWu
-	VaMQ==
-Message-ID: <50462C27.6060708@gmail.com>
-Date: Tue, 04 Sep 2012 18:28:23 +0200
+	bh=w9hIiCLD+v13KdW2xklZV9vQgGY3RU8ObY61PiluHgo=;
+	b=oCNcUZd3rWsnEFo7+8zW9VmyXgIjPYFfwhaIoeTag+rxtZ56Qrth0GfMgyWDGax6Db
+	VLqtKA3C1D6XMrUBKV3TZCeHC5CVnmXe0ohKUQgGI0K5SycTBj/1EzZUNY1/FNjdJjsD
+	VidSQztdGDw2asdYouxj0VPWQPaWmNqCHa2SU0I/NRxYRfXBi+G/0hknc05b5yKsuS8f
+	nO7h9VA8lYYx+Xioqoy5Sukanlu8VzWswpCGIN4HM/AOwOr/iIchKnLtiRV+eIQsi5NT
+	e25sfFf0ZrOvsNZTXYfohtESc/I+0vDbLd275KhAchTqNWd2b0RGBZcqlcdmNTU3Qof5
+	3YMQ==
+Message-ID: <50478893.9090401@gmail.com>
+Date: Wed, 05 Sep 2012 19:14:59 +0200
 From: Till Kamppeter <till.kamppeter@gmail.com>
 MIME-Version: 1.0
-References: <CAN40gSstUgsJC1nGZPS4AoGuqAxTP7i_=tCLUuR3o7WB_=nUGw@mail.gmail.com>
-In-Reply-To: <CAN40gSstUgsJC1nGZPS4AoGuqAxTP7i_=tCLUuR3o7WB_=nUGw@mail.gmail.com>
+References: <e395be80811270817n502ccd16wf6cc90f85364f5ae@mail.gmail.com>
+In-Reply-To: <e395be80811270817n502ccd16wf6cc90f85364f5ae@mail.gmail.com>
 Content-Type: text/plain; charset=UTF-8; format=flowed
 Content-Transfer-Encoding: 7bit
-Subject: [Printing-architecture] OP US/Europe phone meeting - TOMORROW
+Subject: [Printing-architecture] Last OP Meeting - Wed - 5 September 2012 -
+	The Recording
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>,
@@ -27,29 +28,20 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: printing-architecture@lists.linux-foundation.org
+To: Open Printing <printing-architecture@lists.linux-foundation.org>, Printing-japan <printing-japan@lists.linux-foundation.org>
 
 Hi,
 
-in around 23:30 hours we have our phone meeting.
+I have uploaded the recording of the last OpenPrinting meeting to the
+OpenPrinting server:
+
+http://www.openprinting.org/download/meetingnotes/op-telecons/OP-Meeting-20120905.mp3
+
+In general, recorded meetings I will upload to
+
+http://www.openprinting.org/download/meetingnotes/
 
     Till
 
-----------
-
-September 2012 - US/Europe - OP Monthly Meeting
-
-    - Wednesday 06 September 2012, Daytime
-       - US
-         9am in San Francisco - US PDT (Pacific Daylight Time)
-         10am in Colorado - US MDT (Mountain Daylight Time)
-         11am in Chicago - US CDT (Central Daylight Time)
-         12pm in New York - US EDT (Eastern Daylight Time)
-       - Europe
-         6pm in Berlin - CEST (Central European Summer Time)
-
-     * Main Number (Till Kamppeter, LF, leader)
-       International: +1-218-936-7999
-       Access Code:   491659#
-
+P. S.: The MP3 is 21 MB long, 1 hour of talking.
 
