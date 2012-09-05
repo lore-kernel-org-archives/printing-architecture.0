@@ -1,24 +1,20 @@
-Return-Path: <till.kamppeter@gmail.com>
+Return-Path: <danieru.dressler@gmail.com>
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20120113;
-	h=message-id:date:from:user-agent:mime-version:to:subject:references
-	:in-reply-to:content-type:content-transfer-encoding;
-	bh=w9hIiCLD+v13KdW2xklZV9vQgGY3RU8ObY61PiluHgo=;
-	b=oCNcUZd3rWsnEFo7+8zW9VmyXgIjPYFfwhaIoeTag+rxtZ56Qrth0GfMgyWDGax6Db
-	VLqtKA3C1D6XMrUBKV3TZCeHC5CVnmXe0ohKUQgGI0K5SycTBj/1EzZUNY1/FNjdJjsD
-	VidSQztdGDw2asdYouxj0VPWQPaWmNqCHa2SU0I/NRxYRfXBi+G/0hknc05b5yKsuS8f
-	nO7h9VA8lYYx+Xioqoy5Sukanlu8VzWswpCGIN4HM/AOwOr/iIchKnLtiRV+eIQsi5NT
-	e25sfFf0ZrOvsNZTXYfohtESc/I+0vDbLd275KhAchTqNWd2b0RGBZcqlcdmNTU3Qof5
-	3YMQ==
-Message-ID: <50478893.9090401@gmail.com>
-Date: Wed, 05 Sep 2012 19:14:59 +0200
-From: Till Kamppeter <till.kamppeter@gmail.com>
+	h=mime-version:date:message-id:subject:from:to:content-type;
+	bh=Gip0wGGFPkQJwQvT+rYslUdCcjAlv/nfCmjUzHBE3Mw=;
+	b=vJBUlyLYs6ZbStpxH5R5MCfX91dn+yrvrLTtu9RWOnJph8QtaNWmJ2s1WXmLS/oEGc
+	wO/wEIVFTRurLrdZfiePIPEKPYl54eQgwFCMGsJXUonpjjkws9rigcCY24U/STAfd9c9
+	vDOJQ6D/Mv9+USvQydAVWVEE27mchlH1LpDAY1N/WUry8Q+mrA8Q2LLSiGF704P4oVEr
+	LkBK1/VgRbBf7z8vvnl6MMQ6NsRX4qu/wZxvh+XvwY3dTbQ+W3FU8cgNeVKZG7+nIMs6
+	OfT2vbjcZwDZECmoSstij4zFgTSxG53Mvv4d9zBhmaaRmkaCs7stHBkZ4tJ82T6pDC6p
+	gb9A==
 MIME-Version: 1.0
-References: <e395be80811270817n502ccd16wf6cc90f85364f5ae@mail.gmail.com>
-In-Reply-To: <e395be80811270817n502ccd16wf6cc90f85364f5ae@mail.gmail.com>
-Content-Type: text/plain; charset=UTF-8; format=flowed
-Content-Transfer-Encoding: 7bit
-Subject: [Printing-architecture] Last OP Meeting - Wed - 5 September 2012 -
-	The Recording
+Date: Wed, 5 Sep 2012 15:13:50 -0600
+Message-ID: <CAGC3nLABhNf0hrZKk_Hs6qZmGQe7t=dE1uH-A-1t0KVB4YtsoQ@mail.gmail.com>
+From: Daniel Dressler <danieru.dressler@gmail.com>
+Content-Type: text/plain; charset=UTF-8
+Subject: [Printing-architecture] An overview of libjtapi status + "Is anyone
+	interested in an intern?"
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>,
@@ -28,20 +24,52 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Open Printing <printing-architecture@lists.linux-foundation.org>, Printing-japan <printing-japan@lists.linux-foundation.org>
+To: Open Printing <printing-architecture@lists.linux-foundation.org>
 
-Hi,
+Hello everyone
 
-I have uploaded the recording of the last OpenPrinting meeting to the
-OpenPrinting server:
+Sorry I missed the conference call. Listening to the recording I
+noticed some questions about where libjtapi is and what I plan to do
+in regards to libjtapi going forward.
 
-http://www.openprinting.org/download/meetingnotes/op-telecons/OP-Meeting-20120905.mp3
+Libjtapi is hosted in a linux foundation bazaar repository (
+bzr.linuxfoundation.org/loggerhead/openprinting/libjtapi/ ). It has
+one full set of backends for a libjtapi specific format. This
+development job ticket format, which I have named devjt, is very light
+and isn't parsed so much as it is interpreted. Libjtapi with devjt
+supports all aspects of jtapi. Thus libjtapi is technically in
+compliance with jtapi's definition of jtapi implementation.
 
-In general, recorded meetings I will upload to
+Codebase wise libjtapi is pure C89 and only depends on the standard
+library. There are no memory leaks, tested by valgrind, and all error
+conditions are handled.
 
-http://www.openprinting.org/download/meetingnotes/
+Even with just the backends for devjt, libjtapi is already useful for
+development and prototyping. One development group could use libjtapi
+with devjt while another group developed the proper libjtapi backend.
+For prototyping libjtapi has every feature needed to prototype a job
+ticket based printing workflow.
 
-    Till
+A pwg job ticket backend is the obvious next milestone. A student with
+some C experience should not have any problems implementing a pwg::jt
+backend so it could be a GSoC next year. Before then I have to propose
+some small changes to jtapi, just to make a slight api change
+official.
 
-P. S.: The MP3 is 21 MB long, 1 hour of talking.
+I'm entering my third year of university so next summer will be my
+last. I would like to continue libjtapi, it took 7 years for jtapi to
+get implemented and I fear IPP Everywhere is moving to fast for
+another 7 year wait. By 2019 I expect most people who need jtpai will
+have reinvented the wheel. I also want to have the experience of
+working in an office environment. Thus sometime within a few month
+I'll go through the list of companies contributing to pwg and see if
+any would be interested in having an intern work for them on a pwg job
+ticket backend next summer. I applied for a fall internship with
+Google and got an interview but I'd prefer to be working on libjtapi
+next summer. California sounds nice but I think the world needs
+libjtapi.
 
+This time last year I gave a definite promise to work on libjtapi but
+this time I cannot say for sure what I'll be doing next year.
+
+Daniel
