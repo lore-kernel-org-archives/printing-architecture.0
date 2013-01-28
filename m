@@ -3,24 +3,20 @@ DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20120113;
 	h=x-received:message-id:date:from:user-agent:mime-version:to:cc
 	:subject:references:in-reply-to:content-type
 	:content-transfer-encoding;
-	bh=NOGSL91lPbX08E3i3282IJlvtLONBlaEOaskERmfZ0Q=;
-	b=N68TomwffdnKQ1UPt6sifTGX95ZgEnH61CA/UU5yoTNBc1WaJRzWpFmv+skb6NQiY5
-	Ph92f/OtI2wQCkODooSQHvWK58steS28x2whL2SkFN2XR6ujIOLfnw9CG6x5923QDWaM
-	SVSbERTcI0ImvkAcsrwZ4xFKiJSKR2PHZiRZ2Azjs47pFTSmE/8DRAyMb0Bn5ygP/Yfg
-	0Sz9l5ndYVDJ2R33Kl2g3rDSWL52quZA/kvt7zLoWEwRsVdy1hFJChl/SZkdUrDYIJO6
-	JIgns/W5PbeYJEeIXHrXk9Z0dtr4L0uEl4ajhYt5li8tmi5RyftpYXIF72LVvzyNMBR5
-	2jMA==
-Message-ID: <5106368B.8000202@gmail.com>
-Date: Mon, 28 Jan 2013 09:27:55 +0100
+	bh=ErsSdBbHFc8p6j21TuqDVfW2ORzTnzOZPxDJaAJR8/g=;
+	b=ySJhAqlNjmkKf2GxMNvmwidb69UN6MrAH7upTdmv8INwIB/75BG1jzLUjBk5iuqKCu
+	8iTxDsANzn8ZGeMi2knyWONUFMSJGb/E0BXUFPb/mpSBZD7yWh13HBhSSNby1o6JpPur
+	DUDC6W3wk1RL4gYiqgkeCIR2gnlldoWSW0Gqi+CjUSPwK43LZv0xINFvmOty9WYVMx8B
+	trvZjwJzmMdH/N0uJJxDvKFhJ+9HOinuVW8vP+J44pJLKdt9iA/T4L/6OarhNpdBIVAf
+	rOADVQC5l5xLjUoQd9Z8Wk8zmHLBpC/2GdhnjX+r+DtyhGzk/XKccjUVqJvyNOd/vaE1
+	WH/A==
+Message-ID: <5106EB81.3050001@gmail.com>
+Date: Mon, 28 Jan 2013 22:20:01 +0100
 From: Till Kamppeter <till.kamppeter@gmail.com>
 MIME-Version: 1.0
 References: <50EDBBC6.4090408@gmail.com>
 	<CCF496C9-2B07-4A25-AC1F-72D12F118A61@apple.com>
-	<50EECE29.7090803@gmail.com>
-	<2A930EB8-185F-400A-8E12-100CE389351D@apple.com>
-	<5105433A.10808@gmail.com>
-	<839698D5-BD71-4662-8ADA-8157542EEB89@apple.com>
-In-Reply-To: <839698D5-BD71-4662-8ADA-8157542EEB89@apple.com>
+In-Reply-To: <CCF496C9-2B07-4A25-AC1F-72D12F118A61@apple.com>
 Content-Type: text/plain; charset=UTF-8; format=flowed
 Content-Transfer-Encoding: 7bit
 Subject: Re: [Printing-architecture] IPP Everywhere: How to make CUPS queue
@@ -37,14 +33,45 @@ List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-arc
 To: Michael Sweet <msweet@apple.com>
 Cc: Open Printing <printing-architecture@lists.linux-foundation.org>
 
-On 01/28/2013 03:10 AM, Michael Sweet wrote:
-> While there currently are no PWG Raster to xyx filters, it is unlikely that they would be used since clients will almost certainly prefer sending PDF or JPEG (less work).
+On 01/09/2013 08:53 PM, Michael Sweet wrote:
+> Till,
 >
-> (but feel free to file a bug on cups.org and I'll add it to the list of things to do - PWG Raster to xyz will be super-easy)
+> Responses inline...
+>
+> On Jan 9, 2013, at 1:49 PM, Till Kamppeter <till.kamppeter@gmail.com> wrote:
+>> ...
+>> 1. How to print from a Linux machine to an IPP Everywhere printer?
+>> ------------------------------------------------------------------
+>> ...
+>
+> Currently the only way to do this is to query the printer and generate a PPD file from the data. Then add the queue.  All of the generated PPDs should contain:
+>
+>      *cupsFilter2: "application/vnd.cups-raster image/pwg-raster 100 rastertopwg"
+>
+> Printers with PDF support should list:
+>
+>      *cupsFilter2: "application/vnd.cups-pdf application/pdf 0 -"
+>
+> Printers with JPEG support should list:
+>
+>      *cupsFilter2: "image/jpeg image/jpeg 0 -"
+>
+> I have this on my to-do list for CUPS, but thus far haven't had the time to write it...
 
-Feature request added as
+I have seen in the source of the IPP backend that for PDF and all image 
+formats the IPP attributes are carried on to the IPP printer. So this 
+means that for PDF, JPEG, and PWG Raster the PPD simply needs to have 
+the option and choice names being the ones of the IPP attributes 
+reported back by the Get-Printer-Attributes request and no PostScript 
+code needs to get assigned to the choices. Am I right? Will CUPS supply 
+all atributes on the filter/backend command line then?
 
-https://www.cups.org/str.php?L4266
+Another problem would be some PPD options where the Adobe specs impose 
+certain option and choice names, like PageSize, InputSlot, Duplex, 
+OutputBin, Resolution, ... How do I proceed with these options?
+
+Can I "translate" the IPP attributes somehow into PostScript commands so 
+that I can also generate PPDs for PostScript printers?
 
     Till
 
