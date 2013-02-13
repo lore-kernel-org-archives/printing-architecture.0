@@ -1,19 +1,19 @@
 Return-Path: <blueroofmusic@gmail.com>
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20120113;
 	h=mime-version:x-received:date:message-id:subject:from:to
-	:content-type; bh=vF+6SdIt72aXndaZ2N3tmAleVOsGk/imqW3FzFBPQhY=;
-	b=I0nBHZ3Qxlsbsq4Mc/3BHI+JHyiorjbUiGj4ioAAUWFVsWOe+CLPBhX+iMEQMNt6lL
-	wJ8/C+glFuYeOo+63tXjGy9sutqh1YKi1rWtHEuIwYoIYQ0E5oFPZ8dsTN3erIP2Aeak
-	kX5YGhHSNVsP0LA2j/n+0QNTtNLi9mE04oLnztoA2gU8hGl5FXrNAc36yISM17X3Ihez
-	qDfxZXSYlNDui4DBiILAFFPsXZZ/VhiiS8NvEV801y3U17qWc5+ltBg9rrNeigS91tR7
-	e6QAFFV1TqcLEViSAq87e0wwNqE3Q+gIr15wm8bsW+AP/ulVMeEzb3JqrL4VAwkqa/EB
-	PM5w==
+	:content-type; bh=zMtZrH/UkvEhPBsNdTCSlehJUaqNDj0cH7E523O1Rp0=;
+	b=TFh5wFIu+Jz6s3wP+T22fW6uLXThWxlu+5YkvBgoTFCD986x4Pl+8aY4bvW2exXPzF
+	3OIFjj8FQ8u3YLxq5oXMWxnmGM32H9ov8qXoSIO5tss6fP5zhYPyn0mmIhKArQ1usdk/
+	4hpfjQmjlVSFZEpjVTL122tSAIZu2J+qsD/svlaOLTREQ0wxOkRfBxxmldFuKXN+p0lc
+	eatv3Bhh2oWuDPLv5OW3hfla3jSXGCjChA2YCuupMFqkEbh0Zk88MHbQI9fawAKgg0kG
+	PxIW58ytSnued3DoG16MwTFrY95bQYy39ccXLpg/iJvDLceI2cHg7ODSuf7NOtSVPkxb
+	Qngg==
 MIME-Version: 1.0
-Date: Wed, 13 Feb 2013 16:44:07 -0500
-Message-ID: <CAN40gSuSqckCnCv35g+Lr4vmUrFTid8f_ysOSSELOtO9ipt1Jw@mail.gmail.com>
+Date: Wed, 13 Feb 2013 17:08:02 -0500
+Message-ID: <CAN40gSvnkq93JTjPPYDMcek8mMO9UA=r73NbTj4PsDNHND517A@mail.gmail.com>
 From: Ira McDonald <blueroofmusic@gmail.com>
-Content-Type: multipart/alternative; boundary=e89a8f502ddeb0996604d5a20ae5
-Subject: [Printing-architecture] Link to last year's PWG/OP Summit agenda
+Content-Type: multipart/alternative; boundary=e89a8f502dde383abb04d5a2606e
+Subject: [Printing-architecture] OP Minutes (13 February 2013)
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>,
@@ -23,19 +23,73 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: printing-architecture@lists.linux-foundation.org, Till Kamppeter <till.kamppeter@gmail.com>, Ira McDonald <blueroofmusic@gmail.com>
+To: printing-architecture@lists.linux-foundation.org, Ira McDonald <blueroofmusic@gmail.com>
 
---e89a8f502ddeb0996604d5a20ae5
+--e89a8f502dde383abb04d5a2606e
 Content-Type: text/plain; charset=ISO-8859-1
 
 Hi,
 
-For planning purposes for this year's joint PWG/OPS on 14-17 May:
+Minutes from today's Open Printing call are posted at:
 
-  http://www.pwg.org/chair/meeting-info/april_2012_cupertino.html
+  ftp://ftp.pwg.org/pub/pwg/openprinting/minutes/OP-Minutes-20130213.htm
+
+
+REMINDER - Joint PWG / Open Printing Summit
+- 14-17 May 2013 at Apple in Cupertino, CA
+  - confirmed by Mike Sweet, Apple, and PWG Steering Committee
+
+
+- ACTION - All - send email w/ GSoC 2013 project ideas - one paragraph
+  - OPEN
+
+- ACTION - Ira to send link to last year's joint PWG/OPS agenda
+  - CLOSED - sent to OP mailing list
+  - http://www.pwg.org/chair/meeting-info/april_2012_cupertino.html
+
+- ACTION - All - Send email comments and OPS topic suggestions
+  - OPEN
+
+- ACTION - Mike - write draft joint agenda by mid-March
+  - OPEN
+
+
+Next OP Conference Calls:
+
+(1) March 2013 - US/Europe - OP Monthly Meeting
+    - Note - US Daylight Savings Time starts 10 March 2013
+    - Note - Europe Summer Time starts 31 March 2013
+
+    - Wednesday 6 March 2013, Daytime
+      - US
+        9am in San Francisco - US PST (Pacific Standard Time)
+        10am in Colorado - US MST (Mountain Standard Time)
+        11am in Chicago - US CST (Central Standard Time)
+        12pm in New York - US EST (Eastern Standard Time)
+      - Europe
+        6pm in Berlin - CET (Central European Time)
+
+    * Main Number (Till Kamppeter, LF, leader)
+      International: +1-218-936-7999
+      Access Code:   491659#
+
+(2) April 2013 - US/Europe - OP Monthly Meeting (tentative)
+    - Wednesday 3 April 2013, Daytime
+      - US
+        9am in San Francisco - US PDT (Pacific Daylight Time)
+        10am in Colorado - US MDT (Mountain Daylight Time)
+        11am in Chicago - US CDT (Central Daylight Time)
+        12pm in New York - US EDT (Eastern Daylight Time)
+      - Europe
+        6pm in Berlin - CEST (Central European Summer Time)
+
+    * Main Number (Till Kamppeter, LF, leader)
+      International: +1-218-936-7999
+      Access Code:   491659#
 
 Cheers,
 - Ira
+
 
 Ira McDonald (Musician / Software Architect)
 Chair - Linux Foundation Open Printing WG
@@ -51,30 +105,66 @@ mailto:blueroofmusic@gmail.com
 Winter  579 Park Place  Saline, MI  48176  734-944-0094
 Summer  PO Box 221  Grand Marais, MI 49839  906-494-2434
 
---e89a8f502ddeb0996604d5a20ae5
+--e89a8f502dde383abb04d5a2606e
 Content-Type: text/html; charset=ISO-8859-1
 Content-Transfer-Encoding: quoted-printable
 
-Hi,<br><br>For planning purposes for this year&#39;s joint PWG/OPS on 14-17=
- May:<br><br>=A0 <a href=3D"http://www.pwg.org/chair/meeting-info/april_201=
-2_cupertino.html">http://www.pwg.org/chair/meeting-info/april_2012_cupertin=
-o.html</a><br>
-<br>Cheers,<br>- Ira<br><br clear=3D"all"><div>Ira McDonald (Musician / Sof=
-tware Architect)<br>Chair - Linux Foundation Open Printing WG<br>Secretary =
-- IEEE-ISTO Printer Working Group<br>Co-Chair - IEEE-ISTO PWG IPP WG<br>Co-=
-Chair - TCG Trusted Mobility Solutions WG<br>
-Chair - TCG Embedded Systems Hardcopy SG<br>IETF Designated Expert - IPP &a=
-mp; Printer MIB<br>Blue Roof Music/High North Inc<br><a style=3D"color:rgb(=
-51,51,255)" href=3D"http://sites.google.com/site/blueroofmusic" target=3D"_=
-blank">http://sites.google.com/site/blueroofmusic</a><br>
-<a style=3D"color:rgb(102,0,204)" href=3D"http://sites.google.com/site/high=
-northinc" target=3D"_blank">http://sites.google.com/site/highnorthinc</a><b=
-r>mailto:<a href=3D"mailto:blueroofmusic@gmail.com" target=3D"_blank">bluer=
-oofmusic@gmail.com</a><br>
-Winter=A0 579 Park Place=A0 Saline, MI=A0 48176=A0 734-944-0094<br>Summer=
-=A0 PO Box 221=A0 Grand Marais, MI 49839=A0 906-494-2434<br><br><div style=
-=3D"display:inline"></div><div style=3D"display:inline"></div><div style=3D=
-"display:inline"></div>
-<div></div><div></div><div></div><div></div></div>
+Hi, <br><br><span><span class=3D"il">Minutes</span></span> from today&#39;s=
+ Open Printing<span> call</span> are posted at:<br>
+<br>
+=A0 <a href=3D"ftp://ftp.pwg.org/pub/pwg/openprinting/minutes/OP-Minutes-20=
+130213.htm" target=3D"_blank">ftp://ftp.pwg.org/pub/pwg/openprinting/minute=
+s/OP-Minutes-20130213.htm</a><br><br><br>REMINDER - Joint PWG / Open Printi=
+ng Summit<br>
 
---e89a8f502ddeb0996604d5a20ae5--
+- 14-17 May 2013 at Apple in Cupertino, CA<br>=A0 - confirmed by Mike Sweet=
+, Apple, and PWG Steering Committee<br><br><br>- ACTION - All - send email =
+w/ GSoC 2013 project ideas - one paragraph<br>=A0 - OPEN<br><br>- ACTION - =
+Ira to send link to last year&#39;s joint PWG/OPS agenda<br>
+=A0 - CLOSED - sent to OP mailing list<br>=A0 - <a href=3D"http://www.pwg.o=
+rg/chair/meeting-info/april_2012_cupertino.html">http://www.pwg.org/chair/m=
+eeting-info/april_2012_cupertino.html</a><br><br>- ACTION - All - Send emai=
+l comments and OPS topic suggestions<br>
+=A0 - OPEN<br><br>- ACTION - Mike - write draft joint agenda by mid-March<b=
+r>=A0 - OPEN<br><br><br>Next <span><span class=3D"il">OP</span></span> Conf=
+erence Calls:<br><br>(1) March 2013 - US/Europe - OP Monthly Meeting<br>=A0=
+=A0=A0 - Note - US Daylight Savings Time starts 10 March 2013<br>
+=A0=A0=A0 - Note - Europe Summer Time starts 31 March 2013<br><br>=A0=A0=A0=
+ - Wednesday 6 March 2013, Daytime<br>=A0=A0=A0=A0=A0 - US<br>=A0=A0=A0=A0=
+=A0=A0=A0 9am in San Francisco - US PST (Pacific Standard Time)<br>=A0=A0=
+=A0=A0=A0=A0=A0 10am in Colorado - US MST (Mountain Standard Time)<br>
+=A0=A0=A0=A0=A0=A0=A0 11am in Chicago - US CST (Central Standard Time)<br>=
+=A0=A0=A0=A0=A0=A0=A0 12pm in New York - US EST (Eastern Standard Time)<br>=
+=A0=A0=A0=A0=A0 - Europe<br>=A0=A0=A0=A0=A0=A0=A0 6pm in Berlin - CET (Cent=
+ral European Time)<br><br>=A0=A0=A0 * Main Number (Till Kamppeter, LF, lead=
+er)<br>
+=A0=A0=A0=A0=A0 International: +1-218-936-7999<br>=A0=A0=A0=A0=A0 Access Co=
+de:=A0=A0 491659#<br><br>(2) April 2013 - US/Europe - OP Monthly Meeting (t=
+entative)<br>=A0=A0=A0 - Wednesday 3 April 2013, Daytime<br>=A0=A0=A0=A0=A0=
+ - US<br>=A0=A0=A0=A0=A0=A0=A0 9am in San Francisco - US PDT (Pacific Dayli=
+ght Time)<br>
+=A0=A0=A0=A0=A0=A0=A0 10am in Colorado - US MDT (Mountain Daylight Time)<br=
+>=A0=A0=A0=A0=A0=A0=A0 11am in Chicago - US CDT (Central Daylight Time)<br>=
+=A0=A0=A0=A0=A0=A0=A0 12pm in New York - US EDT (Eastern Daylight Time)<br>=
+=A0=A0=A0=A0=A0 - Europe<br>=A0=A0=A0=A0=A0=A0=A0 6pm in Berlin - CEST (Cen=
+tral European Summer Time)<br>
+<br>=A0=A0=A0 * Main Number (Till Kamppeter, LF, leader)<br>=A0=A0=A0=A0=A0=
+ International: +1-218-936-7999<br>=A0=A0=A0=A0=A0 Access Code:=A0=A0 49165=
+9#<br><br>Cheers,<br>- Ira<br><br><br><div>Ira McDonald (Musician / Softwar=
+e Architect)<br>Chair - Linux Foundation Open Printing WG<br>
+Secretary - IEEE-ISTO Printer Working Group<br>Co-Chair - IEEE-ISTO PWG IPP=
+ WG<br>Co-Chair - TCG Trusted Mobility Solutions WG<br>Chair - TCG Embedded=
+ Systems Hardcopy SG<br>IETF Designated Expert - IPP &amp; Printer MIB<br>
+Blue Roof Music/High North Inc<br><a style=3D"color:rgb(51,51,255)" href=3D=
+"http://sites.google.com/site/blueroofmusic" target=3D"_blank">http://sites=
+.google.com/site/blueroofmusic</a><br><a style=3D"color:rgb(102,0,204)" hre=
+f=3D"http://sites.google.com/site/highnorthinc" target=3D"_blank">http://si=
+tes.google.com/site/highnorthinc</a><br>
+mailto:<a href=3D"mailto:blueroofmusic@gmail.com" target=3D"_blank">blueroo=
+fmusic@gmail.com</a><br>Winter=A0 579 Park Place=A0 Saline, MI=A0 48176=A0 =
+734-944-0094<br>Summer=A0 PO Box 221=A0 Grand Marais, MI 49839=A0 906-494-2=
+434<br><br><div style=3D"display:inline">
+</div><div style=3D"display:inline"></div><div style=3D"display:inline"></d=
+iv><div></div><div></div><div></div><div></div></div>
+
+--e89a8f502dde383abb04d5a2606e--
