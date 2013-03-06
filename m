@@ -1,21 +1,24 @@
-Return-Path: <hughsient@gmail.com>
+Return-Path: <till.kamppeter@gmail.com>
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20120113;
-	h=mime-version:x-received:in-reply-to:references:date:message-id
-	:subject:from:to:cc:content-type;
-	bh=M4dF/Wk7YU3Bs//5PUbXW31JSdYFBTB2BAyZXg4gCSo=;
-	b=rLlvVHd1sDh1E4OR9twulhgtUU85hwM2r+Q960rAjqht41RM6hf69h/iPqJ8bd07xG
-	6XR1yRUmQtaH4SIRtHwaXQzW5HUwIubrLP3e+Kp4iO+skFpfWBG9NLsxJLxSGYOZbc8t
-	z/oYtbO1YCvLPAhsaqpyMZr/+uaCeu0uhPloqeCpIHn/HQqqay1SRuKkPl0bSaCH2Ko8
-	7ZRlbgvza9eDhW7KH50dPATQTJo3wo5ygHphyW8IGl/+dZzVUomQJEMBnqjn/3bCZi3I
-	SyFViHwZgCvcG0+32VOUrnz4klCSf0YsvYWq2khb5qgoQQw6J0iXCgfQpvuFQW15niz9
-	Yk0g==
+	h=x-received:message-id:date:from:user-agent:mime-version:to:cc
+	:subject:references:in-reply-to:content-type
+	:content-transfer-encoding;
+	bh=Roosq7OeEozC+MQ6k5VAXPxJ++wrrRZ5yYpia/A/yfo=;
+	b=yunZp9f1i7zMUHfhVvcmjW0ZQiA9588KYdK5s9kd/Fw6pOFGVkuNPznkxqCvGT/QCt
+	DJjLpSIq28XZtIVaymAZBy5g9vU+zSXM9Tat3wVU7SiOuyJPgdpvetEP/KC38GowyN/g
+	Xcte7jG8JS4AOyxLBnmkJRTVYTdjnhcGEXWE/uDDLu5Tv3GEpRLwEtXSQaCRWADJlPGd
+	zs56/VZOkwwBCW+ToUEOufaszhDqjqbyEN5g+3L7+F2nrUqs4yBwBjsIUaUsU5rDG5D0
+	T8sZbEU2Yt1rNgKvmAXGfbbluAL57BjsU35FDv1jy5HK+ikjNL9WJpgU5vFqB+H4tQx9
+	JaoA==
+Message-ID: <51378924.7000208@gmail.com>
+Date: Wed, 06 Mar 2013 19:21:24 +0100
+From: Till Kamppeter <till.kamppeter@gmail.com>
 MIME-Version: 1.0
-In-Reply-To: <51378495.4020500@gmail.com>
 References: <51378495.4020500@gmail.com>
-Date: Wed, 6 Mar 2013 18:04:40 +0000
-Message-ID: <CAD2FfiGn+BLDeNNMeLc4Cojxuv6EnVQFWGy2gnxv0nk9N3HDuA@mail.gmail.com>
-From: Richard Hughes <hughsient@gmail.com>
+	<CAD2FfiGn+BLDeNNMeLc4Cojxuv6EnVQFWGy2gnxv0nk9N3HDuA@mail.gmail.com>
+In-Reply-To: <CAD2FfiGn+BLDeNNMeLc4Cojxuv6EnVQFWGy2gnxv0nk9N3HDuA@mail.gmail.com>
 Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 7bit
 Subject: Re: [Printing-architecture] Changes in Ubuntu
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
@@ -26,19 +29,28 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Till Kamppeter <till.kamppeter@gmail.com>
+To: Richard Hughes <hughsient@gmail.com>
 Cc: Open Printing <printing-architecture@lists.linux-foundation.org>
 
-On 6 March 2013 18:01, Till Kamppeter <till.kamppeter@gmail.com> wrote:
-> Currently, the most important project of Canonical is to bring Ubuntu
-> onto mobile devices, phones and tablets
+On 03/06/2013 07:04 PM, Richard Hughes wrote:
+>> The RIP on mobile will be Poppler, as Poppler is already there for the
+>> PDF viewer, mobile apps will never send PostScript jobs, color
+>> management is not yet implemented on mobile
+> 
+> I guess Canonical is going to do the work to make Poppler color managed, right?
 
-...
+One of my work items of the UDS session is asking CM experts about the
+way to get Poppler color-managed. Canonical has no color managers
+aboard, unfortunately.
 
-> The RIP on mobile will be Poppler, as Poppler is already there for the
-> PDF viewer, mobile apps will never send PostScript jobs, color
-> management is not yet implemented on mobile
+What's on currently at Poppler is that there are patches for color
+management available but under the Poppler developers there are no color
+managers able to review them. So I ask you and all the other CM experts
+to review the patches so that they make it quickly into a Poppler
+release. This does not only help for mobile but also to get a more
+reliable PostScript printer driver on all form factors.
 
-I guess Canonical is going to do the work to make Poppler color managed, right?
+See also from minute 31:00 onward in the session video.
 
-Richard.
+   Till
+
