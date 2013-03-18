@@ -1,23 +1,24 @@
-Return-Path: <till.kamppeter@gmail.com>
+Return-Path: <hughsient@gmail.com>
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20120113;
-	h=x-received:message-id:date:from:user-agent:mime-version:to:subject
-	:references:in-reply-to:content-type:content-transfer-encoding;
-	bh=j/ZxtcGb3rH5zUH/9AJCI0c2OQvOR5u7skVPKvlcB+A=;
-	b=pSDCg/UzhOfB0S1QEafTSaco98R1/AW9e2l7Duh5NfL9VrffzPT215ixhCh1m1pVFJ
-	niFwvuL0/5rqJvVYPjOd8zSMNs9pAXXxLAHrVUGKFccQcGXAXWm1ZTOiF/ZXvuscZBgq
-	Pq6LxW0lDT7QvRSmQ5i57QgJkCMxy4p8SWe35YR+FyiVMvWf/bZVnzvORbgYsxu3Z+M3
-	Y6u8p8CDP0CQBTgGjbibwIeOLVILQ6LVBzbV0URb6RI36nayKRwRn8fvHtgTtY19L907
-	pM1Hfw8UBlQ8THBJbUwKg6KOD2knoxe48dBZQELVSPQlB4FQlhbqsfn7nGAE8sXzbv8r
-	Qhtw==
-Message-ID: <51379CB5.3060400@gmail.com>
-Date: Wed, 06 Mar 2013 20:44:53 +0100
-From: Till Kamppeter <till.kamppeter@gmail.com>
+	h=mime-version:x-received:in-reply-to:references:date:message-id
+	:subject:from:to:cc:content-type;
+	bh=ArdrEivYCy5sMOcQcM3otbkT0rm8zzowcDuadWYNeBU=;
+	b=y8v/AK1Tb22FoLNz0oM+2TryMC0cehp4xy6TYWbSFRdWHAQVYjSZefmSkch3yFd1ae
+	sK2NJ17zIwNRpg9TkYalRtcXHWYPBzBUS+s05Q+hW3v8bPN4/gNdx+j/8Leuj0S9B3uk
+	8/c1GMgmuTOmGEEOa6QbIJrUO5TqZ2qurRpEKQ5Cru4pQUFRpVzzP3YHs3tOUqI2MzX3
+	xDc0YJZeUMgWHrTdhz0ftzWWqIbYG7R9QkatV6w+NbzUUQDyOQeYXVyQbHVbz6xZ8Vgw
+	kp91XmGlO/0l5lsVbeSZ6aqZDHGhjYJ4BSPa8dRgZ0ojXdvEfJazBppsH4aaImLkSmus
+	lt5g==
 MIME-Version: 1.0
-References: <CAN40gSv636O2KHsg5OfaB5oJJ8XF27M9nUGev-5wO5K9MpCQKA@mail.gmail.com>
-In-Reply-To: <CAN40gSv636O2KHsg5OfaB5oJJ8XF27M9nUGev-5wO5K9MpCQKA@mail.gmail.com>
+In-Reply-To: <51378924.7000208@gmail.com>
+References: <51378495.4020500@gmail.com>
+	<CAD2FfiGn+BLDeNNMeLc4Cojxuv6EnVQFWGy2gnxv0nk9N3HDuA@mail.gmail.com>
+	<51378924.7000208@gmail.com>
+Date: Mon, 18 Mar 2013 13:11:04 +0000
+Message-ID: <CAD2FfiGBty0z62dMD3jDNE=Zj=aHAV1vCFZHm0BbXkmj3vYsxg@mail.gmail.com>
+From: Richard Hughes <hughsient@gmail.com>
 Content-Type: text/plain; charset=UTF-8
-Content-Transfer-Encoding: 7bit
-Subject: Re: [Printing-architecture] OP Minutes (6 March 2013)
+Subject: Re: [Printing-architecture] Changes in Ubuntu
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>,
@@ -27,18 +28,17 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: printing-architecture@lists.linux-foundation.org
+To: Till Kamppeter <till.kamppeter@gmail.com>
+Cc: Open Printing <printing-architecture@lists.linux-foundation.org>
 
-On 03/06/2013 08:37 PM, Ira McDonald wrote:
-> (2) May 2013 - US/Europe - OP Monthly Meeting (tentative)
->     - Note - 1 May 2013 is a holiday in Europe
-> 
->     - Note - Ubuntu Developer Summit in SF, CA - 6-10 May 2013
-> 
+On 6 March 2013 18:21, Till Kamppeter <till.kamppeter@gmail.com> wrote:
+> So I ask you and all the other CM experts
+> to review the patches so that they make it quickly into a Poppler
+> release. This does not only help for mobile but also to get a more
+> reliable PostScript printer driver on all form factors.
 
-There will be no UDS in SF, but there will probably be the second
-virtual UDS in that week (see my mail note of Ubuntu changes today).
+Fedora uses Ghostscript, and has no plans to move to Poppler. It
+probably makes me sound like a jerk, but I really think Canonical
+needs to fund the work themselves.
 
-   Till
-
-
+Richard
