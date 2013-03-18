@@ -1,24 +1,22 @@
-Return-Path: <hughsient@gmail.com>
+Return-Path: <till.kamppeter@gmail.com>
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20120113;
-	h=mime-version:x-received:in-reply-to:references:date:message-id
-	:subject:from:to:cc:content-type;
-	bh=ArdrEivYCy5sMOcQcM3otbkT0rm8zzowcDuadWYNeBU=;
-	b=y8v/AK1Tb22FoLNz0oM+2TryMC0cehp4xy6TYWbSFRdWHAQVYjSZefmSkch3yFd1ae
-	sK2NJ17zIwNRpg9TkYalRtcXHWYPBzBUS+s05Q+hW3v8bPN4/gNdx+j/8Leuj0S9B3uk
-	8/c1GMgmuTOmGEEOa6QbIJrUO5TqZ2qurRpEKQ5Cru4pQUFRpVzzP3YHs3tOUqI2MzX3
-	xDc0YJZeUMgWHrTdhz0ftzWWqIbYG7R9QkatV6w+NbzUUQDyOQeYXVyQbHVbz6xZ8Vgw
-	kp91XmGlO/0l5lsVbeSZ6aqZDHGhjYJ4BSPa8dRgZ0ojXdvEfJazBppsH4aaImLkSmus
-	lt5g==
+	h=x-received:message-id:date:from:user-agent:mime-version:to:subject
+	:content-type:content-transfer-encoding;
+	bh=j3U24+ztQosoIYMkGju+ILCP8yWd/1BkPwbEUOF1X7A=;
+	b=jMrBecEidVzGjNVogirtoUm97b9jsCUErVS/IELCXXqMRCOm3vEOaRrLL297oCWX9w
+	x9Daz7fjar/tLBm3A6uQpUiGrzQS9QEhldueOBIOQMq0npz5QBg3qr01Z2z5T4OUZ/gO
+	wxJwIiQHK1Ik45wskeDYb53yAwxgF3Y6H1InkZWLBoHGeQPbXZMfW6s8vsf1rz27C1+6
+	n5fSruuciOezLvIGQ65ougPEQ5UezpzUyjGL48/n0EOKHnHTdwFzL2P72QeDxIfsLL4E
+	qPKbDqp0kqKh/n4G9RJvogBZ1YxtDhjCHioqt5b0abvoaUt7kq4DHf9yRaxJJifSDRbK
+	SYqQ==
+Message-ID: <5147585A.9030801@gmail.com>
+Date: Mon, 18 Mar 2013 19:09:30 +0100
+From: Till Kamppeter <till.kamppeter@gmail.com>
 MIME-Version: 1.0
-In-Reply-To: <51378924.7000208@gmail.com>
-References: <51378495.4020500@gmail.com>
-	<CAD2FfiGn+BLDeNNMeLc4Cojxuv6EnVQFWGy2gnxv0nk9N3HDuA@mail.gmail.com>
-	<51378924.7000208@gmail.com>
-Date: Mon, 18 Mar 2013 13:11:04 +0000
-Message-ID: <CAD2FfiGBty0z62dMD3jDNE=Zj=aHAV1vCFZHm0BbXkmj3vYsxg@mail.gmail.com>
-From: Richard Hughes <hughsient@gmail.com>
 Content-Type: text/plain; charset=UTF-8
-Subject: Re: [Printing-architecture] Changes in Ubuntu
+Content-Transfer-Encoding: 7bit
+Subject: [Printing-architecture] Google Summer of Code 2013 - Project ideas
+ page for the Linux Foundation online
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>,
@@ -28,17 +26,17 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Till Kamppeter <till.kamppeter@gmail.com>
-Cc: Open Printing <printing-architecture@lists.linux-foundation.org>
+To: Alexey Khoroshilov <khoroshilov@ispras.ru>, "Luis R. Rodriguez" <mcgrof@gmail.com>, Greg KH <greg@kroah.com>, "lsb-discuss@lists.linux-foundation.org" <lsb-discuss@lists.linux-foundation.org>, linux-wireless <linux-wireless@vger.kernel.org>, Open Printing <printing-architecture@lists.linux-foundation.org>
 
-On 6 March 2013 18:21, Till Kamppeter <till.kamppeter@gmail.com> wrote:
-> So I ask you and all the other CM experts
-> to review the patches so that they make it quickly into a Poppler
-> release. This does not only help for mobile but also to get a more
-> reliable PostScript printer driver on all form factors.
+Hi,
 
-Fedora uses Ghostscript, and has no plans to move to Poppler. It
-probably makes me sound like a jerk, but I really think Canonical
-needs to fund the work themselves.
+I have set up a page for project ideas for the Linux Foundation's
+participation in the Google Summer of Code 2013:
 
-Richard
+https://www.linuxfoundation.org/collaborate/workgroups/gsoc/google-summer-code-2013
+
+Please add your ideas to the sub-page of your work group. If you have
+problems mail me with your project idea.
+
+   Till
+
