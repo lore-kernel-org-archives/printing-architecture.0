@@ -1,19 +1,20 @@
-Return-Path: <blueroofmusic@gmail.com>
+Return-Path: <till.kamppeter@gmail.com>
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20120113;
-	h=mime-version:x-received:date:message-id:subject:from:to
-	:content-type; bh=TyRB+yizxFI46d+LdN2su5badHGTX9jTJNcYVKdxlNg=;
-	b=Yxv3SMlsa47mvdftHeyt+JggqxSChGjbOwjDYNXxmRaPfptCkQwKXP5XjJO8WL7gRy
-	gzSFGCPloiP7RcE+TGlHCactCkMlIG+jZ9w9RudeC2zgjr15E4bU1nDC9QS5eSJaesUF
-	kNi28nvFpHlx9RgRqoAlQSHowFwRk7yyk5OOrD3xwxzoS8q7GbdFhhHFZqoAlzw+7n3b
-	2l3ruF2mdx3YKs7Q1ab01VSDxjENxpGJbLPLrxgkD6PvRueeaDMeht4+dh9htW13Bl+y
-	62SIlkf5B2XLYxXRseYpQCtKeFVauck5/KjkF42pJOyKdnj2Jf6rCnspqA2d8bqiOXdh
-	aGPA==
+	h=x-received:message-id:date:from:user-agent:mime-version:to:subject
+	:content-type; bh=WPiyW6EXvKnxlqjJGcA95LtEuk1GFTXT6nDDYHRkzhQ=;
+	b=fvvog/BZWGKwznS9jbfuQLNKpwj9C8dWjpkDMY3bIIueLTNcp36XTlr/I0gEnx9XAu
+	oCbIt3orO9QET1eCfcU/8MAG1MNeG2C5D1+Sj0G7jT/cLt2VQ4DwxoKsNz92ejiwDgZd
+	Em5LuagriH9lefQbIeh9gHbsDI97YmjyQf7Cx9hUQl4SaYNcQmxK8sOGTSuCISXJ4SIz
+	AmUlZ9Rae6YbOhzkO5l+Ji12p775G8AMq+GHDkd0pd4VcGx82TIm+XLGDho68tR1PyxA
+	nOmA8kPn40gYglc3QtvusP/2XdID6156RUXHZ2RbPJlmyoNcjUDJB9hEtlAx3jCbg95L
+	o32g==
+Message-ID: <516DCFAF.3000601@gmail.com>
+Date: Wed, 17 Apr 2013 00:24:47 +0200
+From: Till Kamppeter <till.kamppeter@gmail.com>
 MIME-Version: 1.0
-Date: Mon, 15 Apr 2013 19:47:34 -0400
-Message-ID: <CAN40gSvfj0d9Mk_oraXmkJE7bJvGJ3+2vFUJ7SqV9ydn7w25HA@mail.gmail.com>
-From: Ira McDonald <blueroofmusic@gmail.com>
-Content-Type: multipart/alternative; boundary=047d7bd758b07f089404da6ee0e5
-Subject: [Printing-architecture] OP US/Europe - Wed 17 April
+Content-Type: multipart/mixed; boundary="------------020302060202070109020308"
+Subject: [Printing-architecture] REMINDER: OP US/Europe - Wed 17 April -
+ TOMORROW in 17:30 HOURS FROM NOW
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>,
@@ -25,13 +26,19 @@ List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-arc
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
 To: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>, Ira McDonald <blueroofmusic@gmail.com>
 
---047d7bd758b07f089404da6ee0e5
-Content-Type: text/plain; charset=ISO-8859-1
+This is a multi-part message in MIME format.
+--------------020302060202070109020308
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 7bit
 
 Hi,
 
 We have rescheduled our OP Monthly call for this
 Wednesday!
+
+It is tomorrow, in 17:30 hours from now.
+
+   Till
 
 April 2013 - US/Europe - OP Monthly Meeting
     - Wednesday 17 April 2013, Daytime
@@ -63,47 +70,20 @@ IETF Designated Expert - IPP & Printer MIB
 Blue Roof Music/High North Inc
 http://sites.google.com/site/blueroofmusic
 http://sites.google.com/site/highnorthinc
-mailto:blueroofmusic@gmail.com
+mailto:blueroofmusic@gmail.com <mailto:blueroofmusic@gmail.com>
 Winter  579 Park Place  Saline, MI  48176  734-944-0094
 Summer  PO Box 221  Grand Marais, MI 49839  906-494-2434
 
---047d7bd758b07f089404da6ee0e5
-Content-Type: text/html; charset=ISO-8859-1
-Content-Transfer-Encoding: quoted-printable
 
-<div dir=3D"ltr"><div><div><div>Hi,<br><br>We have rescheduled our OP Month=
-ly call for this<br>Wednesday!<br><br>April 2013 - US/Europe - OP Monthly M=
-eeting<br>
-=A0 =A0 - Wednesday 17 April 2013, Daytime<br>
-=A0 =A0 =A0 - US<br>
-=A0 =A0 =A0 =A0 9am in San Francisco - US PDT (Pacific Daylight Time)<br>
-=A0 =A0 =A0 =A0 10am in Colorado - US MDT (Mountain Daylight Time)<br>
-=A0 =A0 =A0 =A0 11am in Chicago - US CDT (Central Daylight Time)<br>
-=A0 =A0 =A0 =A0 12pm in New York - US EDT (Eastern Daylight Time)<br>
-=A0 =A0 =A0 - Europe<br>
-=A0 =A0 =A0 =A0 6pm in Berlin - CEST (Central European Summer Time)<br>
-<br>
-=A0 =A0 * Main Number (Till Kamppeter, LF, leader)<br>
-=A0 =A0 =A0 International: +1-619-326-2730 (new number)<br>
-=A0 =A0 =A0 Access Code: =A0 491659#<br><br></div>Please join us.<br><br></=
-div>Cheers,<br></div>- Ira <br><br><br><div><div><div>
-<div>Ira McDonald (Musician / Software Architect)<br>Chair - Linux Foundati=
-on Open Printing WG<br>Secretary - IEEE-ISTO Printer Working Group<br>Co-Ch=
-air - IEEE-ISTO PWG IPP WG<br>Co-Chair - TCG Trusted Mobility Solutions WG<=
-br>
-Chair - TCG Embedded Systems Hardcopy SG<br>IETF Designated Expert - IPP &a=
-mp; Printer MIB<br>Blue Roof Music/High North Inc<br><a style=3D"color:rgb(=
-51,51,255)" href=3D"http://sites.google.com/site/blueroofmusic" target=3D"_=
-blank">http://sites.google.com/site/blueroofmusic</a><br>
-<a style=3D"color:rgb(102,0,204)" href=3D"http://sites.google.com/site/high=
-northinc" target=3D"_blank">http://sites.google.com/site/highnorthinc</a><b=
-r>mailto:<a href=3D"mailto:blueroofmusic@gmail.com" target=3D"_blank">bluer=
-oofmusic@gmail.com</a><br>
-Winter=A0 579 Park Place=A0 Saline, MI=A0 48176=A0 734-944-0094<br>Summer=
-=A0 PO Box 221=A0 Grand Marais, MI 49839=A0 906-494-2434<br><br><div style=
-=3D"display:inline"></div><div style=3D"display:inline"></div><div style=3D=
-"display:inline"></div>
-<div></div><div></div><div></div><div></div></div>
-</div></div></div></div>
+--------------020302060202070109020308
+Content-Type: text/plain; charset=UTF-8;
+ name="Attached Message Part"
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment;
+ filename="Attached Message Part"
 
---047d7bd758b07f089404da6ee0e5--
+X19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX18KUHJpbnRp
+bmctYXJjaGl0ZWN0dXJlIG1haWxpbmcgbGlzdApQcmludGluZy1hcmNoaXRlY3R1cmVAbGlz
+dHMubGludXgtZm91bmRhdGlvbi5vcmcKaHR0cHM6Ly9saXN0cy5saW51eGZvdW5kYXRpb24u
+b3JnL21haWxtYW4vbGlzdGluZm8vcHJpbnRpbmctYXJjaGl0ZWN0dXJlCgo=
+--------------020302060202070109020308--
