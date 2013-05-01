@@ -1,19 +1,22 @@
-Return-Path: <blueroofmusic@gmail.com>
+Return-Path: <naruoga@gmail.com>
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20120113;
 	h=mime-version:x-received:date:message-id:subject:from:to
-	:content-type; bh=un9qFvsKhWweZ9FtkWvWiuTuIGlMWEkrccKc07Fra64=;
-	b=ZUlBIXnHqgceUicdjYMfxuazRdl+B9iPoCPHpSEnuMIcB6N51eTdaI1qVooE4TLIcG
-	hKX0ok95E5w59WwHUyqAlqKKMQKk5VQW0VxAUim/eW5mQwW4lXvpTECSLRu+Ba73sqoo
-	d88opV7yw0lCdZ23GSh8G8F8t3OJW2NxO3hPgn+6Teuyvl79p0hJfdRRSxOrh7UGBJJW
-	FF9rgI+fcyoe34UU6+1z1manZEUIUqeGxvGS75rQyLwHhlYz+YuFcAeeVKxid++v3YSi
-	12OjunJMqf3Q5v/34e9V4vgt8pU9S2gqB1qfdmp7macstVPUFkzabWhlHqOb61cYj4vZ
-	sX0Q==
+	:content-type:content-transfer-encoding;
+	bh=5ovcZwHxAQgyYvoe5GD9HGhJ8x5tns+rW3rkcQ2ym5g=;
+	b=f2RT24ake9GnvCJTY9RSFgqLSIyppyFwtHMnrgD2VBvr6//SKtpiml0UrKip0QOF45
+	UARZl8O7fUyCsvzPBMdH4nbMh+/sQVq3fRNusm/86CeTs/Wg+IYV1UWJGDb3ZpULChS+
+	ZYyD4Ln8BDo1TKBbICSQcGPIbHGzi3hCkHk1t/FQljkU3atzEUM5K5l9w8Ebp41bDM/Z
+	MwiT8miQxqnouhtt/Ad2IEK4EheBVl4+ILQYxWuTznp/bkTdNO5vTTHYgjXc5L4z8o84
+	MjsHdx6IgbKz8m666EN5tKJg8oFS0Ek1AtM7fvS9ubuVYFCQRidr+L3ZyXWrEZa1xPgH
+	C6ZQ==
 MIME-Version: 1.0
-Date: Wed, 17 Apr 2013 23:02:02 -0400
-Message-ID: <CAN40gSuPsfa92b+yyH6CRPZ6s_MxD7S-F3vChcr29gS=+KMgtg@mail.gmail.com>
-From: Ira McDonald <blueroofmusic@gmail.com>
-Content-Type: multipart/alternative; boundary=089e013cc482ac5e6c04da99d369
-Subject: [Printing-architecture] OP Minutes (17 April 2013)
+Date: Wed, 1 May 2013 11:00:47 +0900
+Message-ID: <CA+PBKyJOi9y-jcs5O98vvNDUcmzB=NpdLtym1eXc0KcroL8FCg@mail.gmail.com>
+From: Naruhiko Ogasawara <naruoga@gmail.com>
+Content-Type: text/plain; charset=ISO-2022-JP
+Content-Transfer-Encoding: 7bit
+Subject: [Printing-architecture] Minutes of Meeting: OpenPrinting Japan
+	April 2013
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>,
@@ -23,114 +26,176 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>, Ira McDonald <blueroofmusic@gmail.com>
+To: printing-japan@lists.linux-foundation.org, printing-architecture@lists.linux-foundation.org
 
---089e013cc482ac5e6c04da99d369
-Content-Type: text/plain; charset=ISO-8859-1
+For non-Japanese readers,
 
-Hi,
+English version is below. Please scrool down.
 
-Minutes from today's Open Printing call are posted at:
+-
+日時：4月24日(水) 15:00 - 17:00
+場所：The Linux Foundation殿 日本大通りオフィス
 
-  ftp://ftp.pwg.org/pub/pwg/openprinting/minutes/OP-Minutes-20130417.htm
+アクションアイテム：
+ - ベクター仕様確認結果
+   ML（architecture) にて報告する（三原さん）
+ - OPFC Web siteの更新（虎谷さん）
+ - PPD 制約解決検討
+   - まずは LibreOffice で受け付けてもらうことを優先(小笠原)
+ - CUPSテスト印刷で日本語入りだと文字化けする問題
+   Rarilngリリース版でもチェックし必要に応じ報告(小笠原)
+
+議題：
+○アクションアイテム確認：
+ - ベクター仕様確認結果
+   ML（architecture) にて報告する：まだ（三原さん）
+ - OPFC Web siteの更新：未だ（虎谷さん）
+ - PPD 制約解決検討
+   →別議題として議論
+ - CUPSテスト印刷で日本語入りだと文字化けする問題をレポートする(小笠原)
+   →進捗なし
+
+○OpenPrinting US|Europe Minutes確認
+   ftp://ftp.pwg.org/pub/pwg/openprinting/minutes/
+   - GSoC のテーマ確認
+     http://www.linuxfoundation.org/collaborate/workgroups
+            /gsoc/google-summer-code-2013-openprinting-projects
+     - 確認したところ MuPDF の CJK や色管理について問題あり。
+       GSoC のサイトでは Mobile に MuPDF が推奨できるような書き方が
+       されているが、OPJ としては現状だと厳しい旨報告する。(小笠原)
+     - PDF の色管理についての情報を OPJ でシェアする (大谷)
+       -> メールにてシェア済。
+           http://lists.linuxfoundation.org/pipermail/printing-japan/2013-April/002783.html
+           カラーマネジメントの問題： http://www.color.org/version4ready.xalter
+           CJK の問題：
+               1)縦書きができない
+               2)utf-8 or utf-32をサポートしていない
+               3)utf-16のときサロゲートペアに対応できていない
+             ただし 2) はPDFの仕様上 Predefined CMap に存在しないので
+             バグとは言い切れない。ただ、gs も Poppler も対応している
+   - Priting Summit
+       http://www.linuxfoundation.org/collaborate/workgroups
+        /openprinting/openprinting-summitpwg-meeting-cupertino-2013
+     - 小笠原は参加予定
+
+○Architecture ML に投稿された Ubuntu Touch ネタと
+   Ubuntu BluePrint のチェック
+     https://blueprints.launchpad.net/ubuntu/+spec
+             /client-1305-printing-stack-with-mobile-in-mind
+   - 日本側としては JPEG サポートがあるから OK でよい？
+   - 問題があったら各ベンダーから働きかける
+
+○PPD 制約解決検討
+   - 現状のバグレポート (*) は書き方が良くなかったようで反応なし
+   - リコーさんで出た不具合のケース（デフォルトの選択肢で制約
+     されてしまうため、選択肢がないものと見えてしまう）が良さそう
+     - バグ情報をいただく (千種さん)
+     - バグ情報を元に、より不具合であるとわかりやすく書き直す。
+       fdo#62700 はduplicate として drop する (小笠原)
+     - バグを新たに起票したら、開発MLにProposalを投げる(小笠原)
+
+     (*) https://bugs.freedesktop.org/show_bug.cgi?id=62700
+
+- テスト印刷で日本語が化ける問題
+ - 進展なし
+ - Ubuntu Raring のリリース版でも治っていなかったらレポートする
+   (小笠原)
+
+次回：
+2013年6月14(金)  15:00 - 17:00
+The Linux Foundation殿 日本大通りオフィス
+-----------------------------------
+[English]
+
+Date/Time: 24th April 2013  15:00-17:00 (JST)
+Venue: The Linux Foundation Japan Yokohama Office
+
+Action Items:
+ - Post result of vector spec confirmation (mihara)
+ - Update OPFC Web site (toratani)
+ - PPD UI Constraints problem
+   - Report to LibreOffice first (ogasawara)
+ - Report the issue that test print is not correct if printer
+information has Japanese
+   Check Ubuntu Raring environment and report if it's not solved yet (ogasawara)
 
 
-REMINDER - Joint PWG / Open Printing Summit
-- 14-17 May 2013 at Apple in Cupertino, CA
-  - confirmed by Mike Sweet, Apple, and PWG Steering Committee
+Details:
 
-ACTION - Till - send OPS invitations and ask speakers for their topics
-- OPEN
-
-
-Next OP Conference Calls:
-
-(1) May 2013 - US/Europe - OP Monthly Meeting
-    - Note - 1 May 2013 is a holiday in Europe
-
-    - Note - Ubuntu Developer Summit Online - 14-16 May 2013
-
-    - Wednesday 8 May 2013, Daytime
-      - US
-        9am in San Francisco - US PDT (Pacific Daylight Time)
-        10am in Colorado - US MDT (Mountain Daylight Time)
-        11am in Chicago - US CDT (Central Daylight Time)
-        12pm in New York - US EDT (Eastern Daylight Time)
-      - Europe
-        6pm in Berlin - CEST (Central European Summer Time)
-
-    * Main Number (Till Kamppeter, LF, leader)
-      International: +1-619-326-2730 (new number)
-      Access Code:   491659#
-
-Cheers,
-- Ira
+1. Action items follow-ups
+ - Post result of vector spec confirmation (mihara) - not yet
+ - Update OPFC Web site (toratani) - not yet
+ - PPD UI Constraints problem
+   -> discuss about #4
+ - Report the issue that test print is not correct if printer
+information has Japanese
+   - not yet, but development phase of Raring is finished
+     check current status and report if latest raring still have same
+issue (ogasawara)
 
 
-Ira McDonald (Musician / Software Architect)
-Chair - Linux Foundation Open Printing WG
-Secretary - IEEE-ISTO Printer Working Group
-Co-Chair - IEEE-ISTO PWG IPP WG
-Co-Chair - TCG Trusted Mobility Solutions WG
-Chair - TCG Embedded Systems Hardcopy SG
-IETF Designated Expert - IPP & Printer MIB
-Blue Roof Music/High North Inc
-http://sites.google.com/site/blueroofmusic
-http://sites.google.com/site/highnorthinc
-mailto:blueroofmusic@gmail.com
-Winter  579 Park Place  Saline, MI  48176  734-944-0094
-Summer  PO Box 221  Grand Marais, MI 49839  906-494-2434
+2. Review OpenPrinting US|Europe Minutes
+   ftp://ftp.pwg.org/pub/pwg/openprinting/minutes/
 
---089e013cc482ac5e6c04da99d369
-Content-Type: text/html; charset=ISO-8859-1
-Content-Transfer-Encoding: quoted-printable
+   - Check themes of GSoC
+     http://www.linuxfoundation.org/collaborate/workgroups
+            /gsoc/google-summer-code-2013-openprinting-projects
+     - MuPDF seems lack of functionality about CM and CJK
+       Need more investigation about this (ohtani)
+         -> DONE. see the mail below (Japanese)
+           http://lists.linuxfoundation.org/pipermail/printing-japan/2013-April/002783.html
+           Issue about CM： see the PDF in the page;
+http://www.color.org/version4ready.xalter
+           Issue about CJK：
+               1) Tategaki (up-to-down writing) does not working
+               2) PDF with UTF-8 or UTF-32 seems not to be supported.
+               3) With UTF-16, MuPDF can't handle surrogate pair right.
 
-<div dir=3D"ltr">Hi, <br><br><span><span><span><span class=3D"">Minutes</sp=
-an></span></span></span> from today&#39;s Open Printing<span> call</span> a=
-re posted at:<br>
-<br>
-=A0 <a href=3D"ftp://ftp.pwg.org/pub/pwg/openprinting/minutes/OP-Minutes-20=
-130417.htm" target=3D"_blank">ftp://ftp.pwg.org/pub/pwg/openprinting/minute=
-s/OP-Minutes-20130417.htm</a><br><br><br>REMINDER - Joint PWG / Open Printi=
-ng Summit<br>
+            As a specification of PDF, UTF-8 and UTF-32 are not included
+            in PreDefined CMap because we can't to say this issue as BUG,
+            but Ghostscript and Poppler can handles these well.
+
+       - From OPJ side, we have no problem if we should not migrate from
+         GS / Poppler to MuPDF
+
+   - Priting Summit
+       http://www.linuxfoundation.org/collaborate/workgroups
+        /openprinting/openprinting-summitpwg-meeting-cupertino-2013
+     -  Ogasawara will attend
+
+3. Review Ubuntu Touch related e-main in Printing-Architecture
+    and Ubuntu Blueprints:
+     https://blueprints.launchpad.net/ubuntu/+spec
+             /client-1305-printing-stack-with-mobile-in-mind
+   - Japanese PDLs support is missing, but we can use JPEG instead?
+   - It will be vender-specific issue.
 
 
+4. PPD UI Constraints investigation
+   - Ogasawara wrote a report to LibreOffice fdo#62700
+     https://bugs.freedesktop.org/show_bug.cgi?id=62700
+     - But nothing response yet; this report might not be good for developers
+   - The story should be change; it's not BUG but INCONSIDERABLE
+     SPECIFICATION.
+   - Most annoying case is that a DEFAULT selection hide another selection
+     without any notice (in RICOH case).
+     - Tell the detail of the report (chigusa -> ogasawara)
+       -> DONE:
+     - Rewrite the report (ogasawara) and review it (OPJ members)
+     - File new bug in fdo and drop fdo#62700 as a duplicated (ogasawara)
+     - Send a proposal mail to developer ML of LibreOffice after the report will
+       be filed (ogasawara)
 
-- 14-17 May 2013 at Apple in Cupertino, CA<br>=A0 - confirmed by Mike Sweet=
-, Apple, and PWG Steering Committee<br><br>ACTION - Till - send <span class=
-=3D"">OPS</span> invitations and ask speakers for their topics<br>
-- OPEN<br><br><br>Next <span><span><span><span class=3D"">OP</span></span><=
-/span></span> Conference Calls:<br><br>(1) May 2013 - US/Europe - OP Monthl=
-y Meeting<br>=A0=A0=A0 - Note - 1 May 2013 is a holiday in Europe<br><br>=
-=A0=A0=A0 - Note - Ubuntu Developer Summit Online - 14-16 May 2013<br>
-<br>=A0=A0=A0 - Wednesday 8 May 2013, Daytime<br>=A0=A0=A0=A0=A0 - US<br>=
-=A0=A0=A0=A0=A0=A0=A0 9am in San Francisco - US PDT (Pacific Daylight Time)=
-<br>=A0=A0=A0=A0=A0=A0=A0 10am in Colorado - US MDT (Mountain Daylight Time=
-)<br>=A0=A0=A0=A0=A0=A0=A0 11am in Chicago - US CDT (Central Daylight Time)=
-<br>
-=A0=A0=A0=A0=A0=A0=A0 12pm in New York - US EDT (Eastern Daylight Time)<br>=
-=A0=A0=A0=A0=A0 - Europe<br>=A0=A0=A0=A0=A0=A0=A0 6pm in Berlin - CEST (Cen=
-tral European Summer Time)<br><br>=A0=A0=A0 * Main Number (Till Kamppeter, =
-LF, leader)<br>=A0=A0=A0=A0=A0 International: +1-619-326-2730 (new number)<=
-br>
-=A0=A0=A0=A0=A0 Access Code:=A0=A0 491659#<br><br>Cheers,<br>- Ira<br><br><=
-br><div>Ira McDonald (Musician / Software Architect)<br>Chair - Linux Found=
-ation Open Printing WG<br>Secretary - IEEE-ISTO Printer Working Group<br>Co=
--Chair - IEEE-ISTO PWG IPP WG<br>
-Co-Chair - TCG Trusted Mobility Solutions WG<br>Chair - TCG Embedded System=
-s Hardcopy SG<br>IETF Designated Expert - IPP &amp; Printer MIB<br>Blue Roo=
-f Music/High North Inc<br><a style=3D"color:rgb(51,51,255)" href=3D"http://=
-sites.google.com/site/blueroofmusic" target=3D"_blank">http://sites.google.=
-com/site/blueroofmusic</a><br>
-<a style=3D"color:rgb(102,0,204)" href=3D"http://sites.google.com/site/high=
-northinc" target=3D"_blank">http://sites.google.com/site/highnorthinc</a><b=
-r>mailto:<a href=3D"mailto:blueroofmusic@gmail.com" target=3D"_blank">bluer=
-oofmusic@gmail.com</a><br>
-Winter=A0 579 Park Place=A0 Saline, MI=A0 48176=A0 734-944-0094<br>Summer=
-=A0 PO Box 221=A0 Grand Marais, MI 49839=A0 906-494-2434<br><br><div style=
-=3D"display:inline"></div><div style=3D"display:inline"></div><div style=3D=
-"display:inline"></div>
-<div></div><div></div><div></div><div></div></div>
-</div>
+5. Test print issue with Japanese printer information
+   - not yet, but development phase of Raring is finished
+   - might be a problem (or specification?) of bannertopdf filter
+   - check current status and report if latest raring still have same
+issue (ogasawara)
 
---089e013cc482ac5e6c04da99d369--
+Next meeting (planned)：
+Datet/Time: 14th June 2013 (Fri)  15:00 - 17:00 JST
+Venue: The Linux Foundation Japan Yokohama Office
+
+[EOM]
+--
+Naruhiko Ogasawara (naruoga@gmail.com)
