@@ -1,22 +1,19 @@
-Return-Path: <anton.kirilenko.rosa@gmail.com>
+Return-Path: <naruoga@gmail.com>
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20120113;
-	h=x-received:message-id:date:from:user-agent:mime-version:to:subject
-	:content-type:content-transfer-encoding;
-	bh=RHW4jYlmSG186anVX/824GTkP2OJQ1MfSIWxf8fTJno=;
-	b=Y9stE+lsMvAV5lGSG8h8K9fKeoHUmnb8yoSD9YYkl4xV4Gg/qtmwVUptH8Xk7g9kgO
-	t7aRqzPOfvNY+T6TgvHQCJ9gIDXFQ1JPy2SM3RE9KLng8qXw2H3ZWZOKcqWismPFn7My
-	ZQv0SqJVwz7EzlCrlJsGlbemHqhUJBzvNW+fLmq3o5GESzxOeOsLYTXjQro6DB7I7xMN
-	+DKt+d15dKaU73qx/hB96pnMp6dVEI5FWgCBrPS9uHvemKjgDCPXGCiOQcKzpSPefVsB
-	zWIK9NU9UEuqrNysUMZAKrxWoxLnZo3vUZGCHtDf+1y7pXZxuJPhZY0G7vF9CqfZnZQ7
-	eLZw==
-Message-ID: <518A70BA.30504@gmail.com>
-Date: Wed, 08 May 2013 19:35:22 +0400
-From: Anton Kirilenko <anton.kirilenko.rosa@gmail.com>
+	h=mime-version:x-received:date:message-id:subject:from:to
+	:content-type; bh=VKszrubMBEXMFq1aBWzaHjdoOW/x8YaT2yzq+L2+4os=;
+	b=IsAQTPYKR/sCXVJx4SMBSIsSC0ryrwGd08fxYhqCPfOfkYORz+i7xXX8tVD5IWRlXD
+	NEeUVoODPwxMZMpHXUOwnL0lY4gNaMMYU2NA3A2DhYGHWjw1AgsSajfZxED6YIFWMRh4
+	FBYQpA3vpFnRgNC6FrGGrwnQpcid1orplUccpx3GU1PioLPrv2R/LAmU0V40MPIT96g7
+	GXHUhkx0Ui96MY6lSYmcc5om+3M65Za/DfsbGqt3Q/5SOvZqVXE6TEkbl0XhOKTGLNCb
+	QgC1H2z5kyC14gLyntjdSeOOMTEycyS8y2/0desSrurwAi3OcBTFCT+BBBU7iU9HMMzL
+	VO1Q==
 MIME-Version: 1.0
-Content-Type: text/plain; charset=ISO-8859-1; format=flowed
-Content-Transfer-Encoding: 7bit
-Subject: [Printing-architecture] Setting up a local copy of the OpenPrinting
-	database
+Date: Wed, 15 May 2013 03:43:48 +0900
+Message-ID: <CA+PBKyLF+9b5qd0_i-qyy6HYeRhdQT20bedacfO7PmJCa5smqQ@mail.gmail.com>
+From: Naruhiko Ogasawara <naruoga@gmail.com>
+Content-Type: text/plain; charset=ISO-8859-1
+Subject: [Printing-architecture] OpenPrinting Web site update
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>,
@@ -26,37 +23,34 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Printing-architecture@lists.linux-foundation.org
+To: printing-architecture@lists.linux-foundation.org
 
-Hi all,
+Hi Till, OpenPrinting guys,
 
-Before my question, let me introduce myself a little - my name is Anton 
-Kirilenko, I am currently a student of Moscow Institute of Physics and 
-Technology and I have applied for a GSoC 2013 OpenPrinting project 
-devoted to Open Printing web site improvements ("web application for 
-printer and driver administration").
+I've just checked OpenPrinting Web site:
+http://www.linuxfoundation.org/collaborate/workgroups/openprinting
 
-While selection of the GSoC projects is ongoing, I would like to get 
-familiar with the web site code (and hope that my proposal will be 
-accepted, but even if it is not - I think such an experience will be 
-useful for me).
+And found some problems.
+I'm not sure they should be correct or not, but just itemize.
 
-I've got the current site code from bazaar 
-(http://bzr.linuxfoundation.org/openprinting/misc/printing-new-devel/), 
-but for proper functionality I need a local copy of the database.
-
-I can definitely see SQL scripts in the "maint/scripts" folder that can 
-create the database itself (I guess), but I also need the data. It looks 
-like scripts from that folder can be also used to populate the db using 
-some data, but are there any instructions how to use them? Or maybe it 
-is possible to just get a mysql dump of the database from somewhere and 
-use it locally for my purposes?
-
-(I am a newbie in OpenPrinting projects, so sorry if my questions are a 
-little stupid - feel free to point me to any documentation if it exists 
-but I've failed to find it).
+# Sorry I should say in the OpenPrinting Plenary track, but I lost
+# a timing.
 
 
+1. Do you have any plan to recover our forum?
+   http://forums.openprinting.org/
+   This was great forum lead by communities to talk about cross-
+   distro printing problems, but unfortunately have dead since 2
+   years before.
+
+2. Our tutorial:
+   http://www.linuxfoundation.org/collaborate/workgroups/openprinting/database/cupsprintingtutorial
+   seems only has a historic meaning, because most of all distros
+   already CUPS as a default, and the two link following "Read
+   it here..." point wrong place (LSB page).
+   I think this page should rewrite as cross-distro howto, for
+   example generalized how to report the CUPS bug.
+
+Thanks,
 --
-Regards,
-Anton.
+Naruhiko Ogasawara (naruoga@gmail.com)
