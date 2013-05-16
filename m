@@ -2,21 +2,21 @@ Return-Path: <till.kamppeter@gmail.com>
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20120113;
 	h=x-received:message-id:date:from:user-agent:mime-version:to:cc
 	:subject:content-type:content-transfer-encoding;
-	bh=7JuefEby0yHg8XOkAYjmISJehKT5+IAqmr7hhijJ2mw=;
-	b=ooBQkF7XtOHVdVewciRZfNDN09lbfEF+fgjIebwOb/mxCN6FZtkFJ4iPzd5OGc27nB
-	IfCc+XeabHvJL8DFG1145fKtPPxMbyJNGOodJyvcJI0hXgZY6FvwAbeXbQ1QoWEdj419
-	T4p5Hv0qwgx9lqSPZlyWujcHNZ5hfCLSh30V/er068lJ1mm06UoRSTTGTFBooOyartS5
-	/MdTWYGAnvmt3G87p3b0VKbogk1CCBGlqvOIuayCcfJHMUru27lrYECyebms6UXuHghT
-	8eF7lRt0CNeP0jpBEOvAjeHRNyhXiQbBXsi2VPdHdL4tcDx9ZIEZNJdl+AfBz1ecKrrK
-	/8DQ==
-Message-ID: <5194EC9B.7030904@gmail.com>
-Date: Thu, 16 May 2013 16:26:35 +0200
+	bh=6kG17hqqz/DTX/CRXD2gIivR0KW3eiADOobLPJmpFeg=;
+	b=abXVPAKcL8MCUdhMZn5OElAzPZXyAe2wW0U1onSe2unCPuQeHhJwHXkc525u7BYNW7
+	eVyjA2LfHUumclzY/EPcBx5iTOg5NPsMFz65dfaIiOnuJSt7ongQHFM/0jQAw6SkO05q
+	rFJksw3CAeORAV40nI3ElcHvdkPNfqvgtEsFOuON2YNn4UsGAKLSZhqwUoX6vgKp5DNu
+	9rzcWuUMCc1gJ5dCKAY12tC7XD3wTsQhFzZb+iTt0dxLhreTxUmZuEa4WUVAFV7PhBmD
+	yMjbqiwrCKTHZ3LF7ljj5LAFLLxWhF8m2zJHoOrzterX+MUkDTD2nHbTkINdFC0NB9O/
+	BWeg==
+Message-ID: <519537F0.8020405@gmail.com>
+Date: Thu, 16 May 2013 21:48:00 +0200
 From: Till Kamppeter <till.kamppeter@gmail.com>
 MIME-Version: 1.0
 Content-Type: text/plain; charset=UTF-8
 Content-Transfer-Encoding: 7bit
-Subject: [Printing-architecture] Integration of MuPDF in the CUPS printing
-	workflow
+Subject: [Printing-architecture] Some suggestions for the DNS-SD (Bonjour)
+ printer support in the dialog
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>,
@@ -26,46 +26,49 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Robin Watts <robin.watts@artifex.com>
-Cc: Open Printing <printing-architecture@lists.linux-foundation.org>, "Marcos H. Woehrmann" <marcos.woehrmann@artifex.com>, Michael Vrhel <michael.vrhel@artifex.com>
+To: Marek Kasik <mkasik@redhat.com>
+Cc: Open Printing <printing-architecture@lists.linux-foundation.org>
 
 Hi,
 
-as talked about yesterday on the OpenPrinting Summit in the
-Ghostscript/MuPDF session, I am sending here the information about what
-has to be done to make the cups-filters package supporting MuPDF as PDF
-renderer (and optionally as PDF manipulator).
+this is a follow-up to the discussion I had with you about the direct
+discovery of IPP printers via Bonjour by the new GTK print dialog and
+how the dialog submits jobs to these printers.
 
-As I have posted this work as a project idea for the GHoogle Summer of
-Code (see
-http://www.linuxfoundation.org/collaborate/workgroups/gsoc/google-summer-code-2013-openprinting-projects)
-I cite my posting below. It contains a list of the filters to be changed
-in the last paragraph.
+First, as I said, the job needs to get spooled somehow, so that it does
+not block the client app in case of a large job or the printer suddenly
+not continuing to take data (paper out, disappearing on network, ...).
+Preferably this should be done by CUPS (creating a temporary queue) so
+that the user can control the job (hold, cancel, ...) by the system's
+job viewer.
+
+On the other side, not every user is allowed to create CUPS queues,
+meaning that for these printers to work generally, the dialog would need
+to spool by itself, meaning that the job does not appear in the job
+viewer and the user has the hassle of different methods of controlling
+his print jobs.
+
+Probably the best way is really the system service cups-browsed for
+discovering, setting up, and taking down Bonjour/IPP network printers
+then, and not the dialog ...
+
+But the good side of the discovery of IPP printers via the print dialog
+is that one does not need PPD files. cups-browsed has to generate a PPD
+file to make the print dialog list the options of the CUPS queue
+genberated by cups-browsed.
+
+Mike, WDYT? As I understand all this, local spooling is needed for every
+Bonjour-discovered IPP printer as it can suddenly disappear or stop
+taking data. Am I right? So if the dialog sends jobs directly to a
+remote printer/print server, it can easily block. Is this correct?
+
+Marek, another important thing: To do IPP printer discovery and polling
+capabilities from IPP printers correctly, the PWG has created the "Best
+Practices" document:
+
+ftp://ftp.pwg.org/pub/pwg/ipp/wd/wd-ipp-bestp10-20130513-rev.pdf
+
+This gives valuable hints, especially for getting the correct option set
+and to handle conflicts of the option settings.
 
    Till
-
-----------
-
-The cups-filters project at OpenPrinting (included in all Linux
-distributions using CUPS 1.6.x or newer) provides the filters needed to
-convert the print job output of desktop applications (usually PDF) into
-the printer's native language or into the universal CUPS/PWG-Raster
-format as input for a separate printer driver. It also provides the
-pdftopdf filter to apply page management (N pages per sheet, selected
-pages, even/odd pages for manual duplex, mirror for iron-on sheets, ...)
-to the PDF data stream.
-
-A central part to make this work is a PDF renderer and many of the
-filters are simply wrappers about a PDF renderer. Currently,
-cups-filters supports Ghostscript and Poppler as PDF renderer. With this
-project we want to add support for MuPDF as it is a more lightweight
-renderer made by Artifex, the printing specialists who already made
-Ghostscript. This is especially interesting for mobile devices with
-limited meomory, mass storage, and CPU resources.
-
-The student will have to modify all filters which need a PDF renderer
-(pdftops, pdftoraster, pdftoijs, pdftoopvp, perhaps also pdftopdf) to
-add support for MuPDF without dropping the existing support for
-Ghostscript and Poppler. Switching between the renderers should be able
-at run time, to make binary packages of cups-filters suitable for
-systems of different form factors.
