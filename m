@@ -1,24 +1,14 @@
-Return-Path: <till.kamppeter@gmail.com>
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20120113;
-	h=x-received:message-id:date:from:user-agent:mime-version:to:cc
-	:subject:references:in-reply-to:content-type
-	:content-transfer-encoding;
-	bh=cFxJv7UKxmj4NMmXS+W8pkCmICjwiUIjxd50jm44Rps=;
-	b=J171axkDibcjVx28A8qXmNmFYtaQ+iwK4JJAME3m/fiIFtBt/18EQWz8+zVuWAsnEx
-	UhapYHDkOcNwd1SKGAtlPjCEThs2AGZxRFacDKF03ADThhuKKWoIP7Dd29OikJfxO3Fp
-	djysXliZZe011Mz4F8MLgeQysTfj0gmxPRy0kwTMPufpu0DMhufjkeDknc1lxBB0kTYd
-	xzeC0sbJH6NF49t3OxPwknUk1BJiZE2qTQQJO45LCeFrTECK2zqN2GW2iPBftyhKEt3b
-	V6SNT4f5oal1tMBT3S9vknzU+AzLJ4iuYGhxGo57OPRnbvAJ8FRG31puKeQN11y+VhDa
-	Oz9g==
-Message-ID: <5195DA7B.2040501@gmail.com>
-Date: Fri, 17 May 2013 09:21:31 +0200
-From: Till Kamppeter <till.kamppeter@gmail.com>
-MIME-Version: 1.0
+Return-Path: <twaugh@redhat.com>
+Message-ID: <1368784965.9612.0.camel@rubik>
+From: Tim Waugh <twaugh@redhat.com>
+Date: Fri, 17 May 2013 11:02:45 +0100
+In-Reply-To: <FDC917F9-BB2B-4117-9F4A-D817841E5AE8@apple.com>
 References: <519537F0.8020405@gmail.com>
 	<FDC917F9-BB2B-4117-9F4A-D817841E5AE8@apple.com>
-In-Reply-To: <FDC917F9-BB2B-4117-9F4A-D817841E5AE8@apple.com>
-Content-Type: text/plain; charset=UTF-8
-Content-Transfer-Encoding: 7bit
+Content-Type: multipart/signed; micalg="pgp-sha1";
+	protocol="application/pgp-signature"; 
+	boundary="=-NUbJhClb1bSny26G76LS"
+Mime-Version: 1.0
 Subject: Re: [Printing-architecture] Some suggestions for the DNS-SD
  (Bonjour) printer support in the dialog
 List-Id: Printing architecture under linux
@@ -31,24 +21,43 @@ List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subj
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
 To: Michael Sweet <msweet@apple.com>
-Cc: Open Printing <printing-architecture@lists.linux-foundation.org>, Marek Kasik <mkasik@redhat.com>
+Cc: Open Printing <printing-architecture@lists.linux-foundation.org>, Marek Kasik <mkasik@redhat.com>, Till Kamppeter <till.kamppeter@gmail.com>
 
-On 05/17/2013 07:32 AM, Michael Sweet wrote:
-> 
-> cups-browsed is an interesting stop-gap solution, but I really, *really* don't think you want to be doing what you are doing - resolving a printer will wake it up.  Doing it on every computer will cause a LOT of network traffic and generally NOT provide a good user experience.
-> 
 
-What cups-browsed is doing is as soon as avahi-daemon reports an IPP
-printer check whether it is a CUPS queue or a network printer and in the
-case of a network printer do a get-printer-attributes IPP request. This
-does not wake up my printers out of sleep mode. The printers tested here are
+--=-NUbJhClb1bSny26G76LS
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
 
-- HP Officejet Pro 8500 A910
-- HP LaserJet P3005
-- HP Color LaserJet CM3530 MFP
+On Thu, 2013-05-16 at 22:32 -0700, Michael Sweet wrote:
+> You need some sort of local spooling, but it need not be cupsd doing
+> the spooling. Consider writing a small DBUS-based spooler that
+> provides UI for monitoring and canceling the job.  This spooler could
+> also handle the basic conversion from PDF to PWG Raster and could
+> despool to cupsd or direct to a printer.
 
-Also the printers get polled only once, not repeatedly, either when
-cups-browsed starts or when the printer is turned on.
+This, in fact, was almost precisely the plan for the "printservice"
+project, currently stalled. :-(
 
-   Till
+Tim.
+*/
+
+
+--=-NUbJhClb1bSny26G76LS
+Content-Type: application/pgp-signature; name="signature.asc"
+Content-Description: This is a digitally signed message part
+Content-Transfer-Encoding: 7bit
+
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.13 (GNU/Linux)
+
+iQEVAwUAUZYARe7Fkar03pQsAQK1FwgAuymuXPull3EHeZCn6KmqlEAoIfVKHSW5
+0Z1+L2vMSQ0okprwLE+VGLlCCoxuMtDNdPyCHcskVgXkGj60l8N2vLX8Nd2eLrJb
+Wfwpx5C5UuEAX9DIFOmUxx/PTiXfWK/tm0OVuTA7UjdyMUEUFz03bEth2z05RhXW
+JHA1Hfd1VD2dGadGg+xoV7o9Kt1UPlJ9sbK79vICvAwjWbp0dMJz3sjvGl1ET0MQ
+60pwrpexQNk2gLX88IUAw4H5rtF+q4WFxmYMsYxSaXwXS1z+d1SPpdkyZrB3xxBD
+EhVgk1b6trqbsecY1C9tgV3/WkT7tBYXB24yEoVEr67ZhpDwMxjX4A==
+=V1D9
+-----END PGP SIGNATURE-----
+
+--=-NUbJhClb1bSny26G76LS--
 
