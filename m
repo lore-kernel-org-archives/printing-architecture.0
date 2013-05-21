@@ -2,10 +2,11 @@ Return-Path: <glen.petrie@eitc.epson.com>
 Content-class: urn:content-classes:message
 MIME-Version: 1.0
 Content-Type: multipart/alternative;
-	boundary="----_=_NextPart_001_01CE5648.BD06955B"
-Date: Tue, 21 May 2013 10:29:24 -0700
-Message-ID: <E8C3B9E653C80C48B0951F8494C049A98E9A60@EEAEX02.us.epson.net>
+	boundary="----_=_NextPart_001_01CE564B.EB304DDB"
+Date: Tue, 21 May 2013 10:52:10 -0700
+Message-ID: <E8C3B9E653C80C48B0951F8494C049A98E9A61@EEAEX02.us.epson.net>
 References: <E8C3B9E653C80C48B0951F8494C049A98E9A5F@EEAEX02.us.epson.net>
+	<E8C3B9E653C80C48B0951F8494C049A98E9A60@EEAEX02.us.epson.net>
 From: "Petrie, Glen" <glen.petrie@eitc.epson.com>
 Subject: Re: [Printing-architecture] Common Mobile Print Client software
 List-Id: Printing architecture under linux
@@ -18,14 +19,38 @@ List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subj
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
 To: "Petrie, Glen" <glen.petrie@eitc.epson.com>, Till Kamppeter <till.kamppeter@gmail.com>
-Cc: printing-architecture@lists.linux-foundation.org
+Cc: printing-architecture@lists.linux-foundation.org, mfd@pwg.org
 
 This is a multi-part message in MIME format.
 
-------_=_NextPart_001_01CE5648.BD06955B
+------_=_NextPart_001_01CE564B.EB304DDB
 Content-Type: text/plain;
 	charset="us-ascii"
 Content-Transfer-Encoding: quoted-printable
+
+Till,
+
+=20
+
+I added the PWG/PJT code.  The tool is incomplete but is a good start.
+
+=20
+
+Glen
+
+=20
+
+=20
+
+________________________________
+
+From: Petrie, Glen=20
+Sent: Tuesday, May 21, 2013 10:29 AM
+To: Petrie, Glen; Till Kamppeter
+Cc: printing-architecture@lists.linux-foundation.org
+Subject: RE: [Printing-architecture] Common Mobile Print Client software
+
+=20
 
 Till,
 
@@ -80,7 +105,7 @@ Glen
 =20
 
 
-------_=_NextPart_001_01CE5648.BD06955B
+------_=_NextPart_001_01CE564B.EB304DDB
 Content-Type: text/html;
 	charset="us-ascii"
 Content-Transfer-Encoding: quoted-printable
@@ -91,7 +116,7 @@ xmlns:w=3D"urn:schemas-microsoft-com:office:word" =
 xmlns=3D"http://www.w3.org/TR/REC-html40">
 
 <head>
-<META HTTP-EQUIV=3D"Content-Type" CONTENT=3D"text/html; =
+<meta http-equiv=3DContent-Type content=3D"text/html; =
 charset=3Dus-ascii">
 <meta name=3DGenerator content=3D"Microsoft Word 11 (filtered medium)">
 <!--[if !mso]>
@@ -230,7 +255,7 @@ div.styleheading1notboldblack0
 	margin-left:.55in;
 	text-indent:-.3in;
 	page-break-after:avoid;
-	mso-list:l1 level2 lfo5;
+	mso-list:l1 level2 lfo7;
 	font-size:14.0pt;
 	font-family:Cambria;
 	color:black;
@@ -244,7 +269,7 @@ p.styleappendix0, li.styleappendix0, div.styleappendix0
 	text-justify:inter-ideograph;
 	text-indent:-.25in;
 	page-break-after:avoid;
-	mso-list:l3 level1 lfo6;
+	mso-list:l3 level1 lfo8;
 	font-size:14.0pt;
 	font-family:Cambria;
 	font-weight:bold;}
@@ -256,7 +281,7 @@ div.stylenumberednormalitalicblack0
 	margin-left:.05pt;
 	text-indent:-.25in;
 	line-height:18.0pt;
-	mso-list:l0 level1 lfo7;
+	mso-list:l0 level1 lfo9;
 	font-size:12.0pt;
 	font-family:"Times New Roman";
 	color:black;
@@ -270,7 +295,7 @@ div.stylenumberednormalleft025firstline0topnobor0
 	margin-left:54.05pt;
 	text-indent:-.25in;
 	line-height:18.0pt;
-	mso-list:l2 level1 lfo8;
+	mso-list:l2 level1 lfo10;
 	font-size:12.0pt;
 	font-family:"Times New Roman";}
 p.stylenumberednormalblackleft025firstline0top0, =
@@ -284,14 +309,83 @@ div.stylenumberednormalblackleft025firstline0top0
 	font-size:12.0pt;
 	font-family:"Times New Roman";
 	color:black;}
-span.EmailStyle28
+p.styleheading1notboldblack00, li.styleheading1notboldblack00, =
+div.styleheading1notboldblack00
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:.55in;
+	text-indent:-.3in;
+	page-break-after:avoid;
+	mso-list:l1 level2 lfo5;
+	font-size:14.0pt;
+	font-family:Cambria;
+	color:black;
+	font-weight:bold;}
+p.styleappendix00, li.styleappendix00, div.styleappendix00
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:.25in;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	text-indent:-.25in;
+	page-break-after:avoid;
+	mso-list:l3 level1 lfo6;
+	font-size:14.0pt;
+	font-family:Cambria;
+	font-weight:bold;}
+p.stylenumberednormalitalicblack00, li.stylenumberednormalitalicblack00, =
+div.stylenumberednormalitalicblack00
+	{margin-top:6.0pt;
+	margin-right:0in;
+	margin-bottom:8.0pt;
+	margin-left:.05pt;
+	text-indent:-.25in;
+	line-height:18.0pt;
+	mso-list:l0 level1 lfo11;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	color:black;
+	font-style:italic;}
+p.stylenumberednormalleft025firstline0topnobor00, =
+li.stylenumberednormalleft025firstline0topnobor00, =
+div.stylenumberednormalleft025firstline0topnobor00
+	{margin-top:6.0pt;
+	margin-right:0in;
+	margin-bottom:8.0pt;
+	margin-left:54.05pt;
+	text-indent:-.25in;
+	line-height:18.0pt;
+	mso-list:l2 level1 lfo12;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+p.stylenumberednormalblackleft025firstline0top00, =
+li.stylenumberednormalblackleft025firstline0top00, =
+div.stylenumberednormalblackleft025firstline0top00
+	{margin-top:6.0pt;
+	margin-right:0in;
+	margin-bottom:8.0pt;
+	margin-left:0in;
+	line-height:18.0pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	color:black;}
+span.EmailStyle33
 	{mso-style-type:personal;
 	font-family:Cambria;
 	color:windowtext;
 	font-weight:normal;
 	font-style:normal;
 	text-decoration:none none;}
-span.EmailStyle29
+span.EmailStyle34
+	{mso-style-type:personal;
+	font-family:Cambria;
+	color:blue;
+	font-weight:normal;
+	font-style:normal;
+	text-decoration:none none;}
+span.EmailStyle35
 	{mso-style-type:personal-reply;
 	font-family:Cambria;
 	color:blue;
@@ -729,9 +823,9 @@ style=3D'font-size:
 
 <p class=3DMsoNormal><font size=3D3 color=3Dblue face=3DCambria><span =
 style=3D'font-size:
-12.0pt;color:blue'>I added the Preview code.&nbsp; There is not much =
-code here but I
-thought I would post it.<o:p></o:p></span></font></p>
+12.0pt;color:blue'>I added the PWG/PJT code.&nbsp; The tool is =
+incomplete but
+is a good start.<o:p></o:p></span></font></p>
 
 <p class=3DMsoNormal><font size=3D3 color=3Dblue face=3DCambria><span =
 style=3D'font-size:
@@ -764,7 +858,72 @@ style=3D'font-size:12.0pt;font-family:"Times New Roman"'>
 style=3D'font-size:10.0pt;
 font-family:Tahoma;font-weight:bold'>From:</span></font></b><font =
 size=3D2
-face=3DTahoma><span style=3D'font-size:10.0pt;font-family:Tahoma'>
+face=3DTahoma><span style=3D'font-size:10.0pt;font-family:Tahoma'> =
+Petrie, Glen <br>
+<b><span style=3D'font-weight:bold'>Sent:</span></b> Tuesday, May 21, =
+2013 10:29
+AM<br>
+<b><span style=3D'font-weight:bold'>To:</span></b> Petrie, Glen; Till =
+Kamppeter<br>
+<b><span style=3D'font-weight:bold'>Cc:</span></b>
+printing-architecture@lists.linux-foundation.org<br>
+<b><span style=3D'font-weight:bold'>Subject:</span></b> RE: =
+[Printing-architecture]
+Common Mobile Print Client software</span></font><font face=3D"Times New =
+Roman"><span
+style=3D'font-family:"Times New Roman"'><o:p></o:p></span></font></p>
+
+</div>
+
+<p class=3DMsoNormal><font size=3D3 face=3DCambria><span =
+style=3D'font-size:12.0pt'><o:p>&nbsp;</o:p></span></font></p>
+
+<p class=3DMsoNormal><font size=3D3 color=3Dblue face=3DCambria><span =
+style=3D'font-size:
+12.0pt;color:blue'>Till,<o:p></o:p></span></font></p>
+
+<p class=3DMsoNormal><font size=3D3 color=3Dblue face=3DCambria><span =
+style=3D'font-size:
+12.0pt;color:blue'><o:p>&nbsp;</o:p></span></font></p>
+
+<p class=3DMsoNormal><font size=3D3 color=3Dblue face=3DCambria><span =
+style=3D'font-size:
+12.0pt;color:blue'>I added the Preview code.&nbsp; There is not much =
+code here
+but I thought I would post it.<o:p></o:p></span></font></p>
+
+<p class=3DMsoNormal><font size=3D3 color=3Dblue face=3DCambria><span =
+style=3D'font-size:
+12.0pt;color:blue'><o:p>&nbsp;</o:p></span></font></p>
+
+<p class=3DMsoNormal><font size=3D3 color=3Dblue face=3DCambria><span =
+style=3D'font-size:
+12.0pt;color:blue'>Glen<o:p></o:p></span></font></p>
+
+<p class=3DMsoNormal><font size=3D3 color=3Dblue face=3DCambria><span =
+style=3D'font-size:
+12.0pt;color:blue'><o:p>&nbsp;</o:p></span></font></p>
+
+<p class=3DMsoNormal><font size=3D3 color=3Dblue face=3DCambria><span =
+style=3D'font-size:
+12.0pt;color:blue'><o:p>&nbsp;</o:p></span></font></p>
+
+<div>
+
+<div class=3DMsoNormal align=3Dcenter style=3D'text-align:center'><font =
+size=3D3
+face=3D"Times New Roman"><span =
+style=3D'font-size:12.0pt;font-family:"Times New Roman"'>
+
+<hr size=3D2 width=3D"100%" align=3Dcenter tabindex=3D-1>
+
+</span></font></div>
+
+<p class=3DMsoNormal><b><font size=3D2 face=3DTahoma><span =
+style=3D'font-size:10.0pt;
+font-family:Tahoma;font-weight:bold'>From:</span></font></b><font =
+size=3D2
+face=3DTahoma><span style=3D'font-size:10.0pt;font-family:Tahoma'> =
 printing-architecture-bounces@lists.linux-foundation.org
 [mailto:printing-architecture-bounces@lists.linux-foundation.org] =
 <b><span
@@ -802,14 +961,14 @@ software
 provides only a skeleton of the GUI and is based on JTAPI objects, =
 elements and
 values.&nbsp;&nbsp; I would suggest converting JTAPI objects, elements =
-and values
-to the PWG/PJT objects, elements and values.&nbsp;&nbsp;&nbsp; I hope to =
-post
-the PWG/PJT content as C-code very soon. &nbsp;&nbsp;Also based on the =
-slides
-from last year, I developed a skeleton for the Common Mobile Print =
-Preview;
-which I will try to publish. <o:p></o:p></span></font></p>
+and
+values to the PWG/PJT objects, elements and values.&nbsp;&nbsp;&nbsp; I =
+hope to
+post the PWG/PJT content as C-code very soon. &nbsp;&nbsp;Also based on =
+the
+slides from last year, I developed a skeleton for the Common Mobile =
+Print
+Preview; which I will try to publish. <o:p></o:p></span></font></p>
 
 <p class=3DMsoNormal><font size=3D3 face=3DCambria><span =
 style=3D'font-size:12.0pt'><o:p>&nbsp;</o:p></span></font></p>
@@ -836,4 +995,4 @@ style=3D'font-size:12.0pt'><o:p>&nbsp;</o:p></span></font></p>
 
 </html>
 
-------_=_NextPart_001_01CE5648.BD06955B--
+------_=_NextPart_001_01CE564B.EB304DDB--
