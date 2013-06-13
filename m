@@ -1,21 +1,23 @@
 Return-Path: <till.kamppeter@gmail.com>
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20120113;
-	h=message-id:date:from:user-agent:mime-version:to:cc:subject
-	:references:in-reply-to:content-type:content-transfer-encoding;
-	bh=LJexecIin9Cel6ppBYhZ5VF48appH1EqW52N/0rny50=;
-	b=CjQm+HQirO6xlJKqg8m+vW5VCi1dO9kVp530Icdu/ldrpvxDoOz0LgLMwF1jeA/Lq/
-	sat1fyF1uc2L3sxYpOC/wEvZ7QotSh6FgCK6zALK3MknlmFCO4/G/YUYXrKoyw6A8TF8
-	wsDPbg8Q0WSbf61ugBTOclnSD/Lz3H2cIsiSn5wLU9omdx3kSiI7C7KuC6i26iLCWjfx
-	BbUN7pf76YvHMcvwHKvbuDREHI5D4TaQmwdU8zUZnlGtYrzJjXzRfE6V+uHjeu98jURr
-	zhOXIE+Y6upfz+FV9RfBJ4sPIdUP9k5d+z4kDWCW8nBSoDegQ2teMNIp0aBsX8q80OmT
-	qOHQ==
-Message-ID: <51B99888.2040406@gmail.com>
-Date: Thu, 13 Jun 2013 12:01:44 +0200
+	h=message-id:date:from:user-agent:mime-version:to:subject:references
+	:in-reply-to:content-type:content-transfer-encoding;
+	bh=t0Oun7jwBcJb3xEVpzKHRIxXdUV1dieyGNIzzdbcZlM=;
+	b=Pl0lbdXEsa4zsThtfgwrTcf+LH6zWUfziOpL5RZkH8aHeY3OWZgpBMtH5FR57YqGHx
+	9xV6CnTREeDkqFZN/4hz03WFnz2BQ48pItAZsN2cjjHU5NI/dgJvxLg1DKu633kcXEkD
+	wtoEVoNT6C6lniHuPo2/0kTjmS7PFLynTXwhcWHRkCvdTsCVgerfAUd5ebiZtraBO5sV
+	vAmOeY/YO3IUrTRre7iIcc/JQ3kyZKkbwteQQTNXp5P4tKDG1+E4X2kqns4DNshSVaVi
+	fb/GYOihcdyFT+aRZGX2Y0AaYWkMKQb++BvzEeWZShVKKx15I+F/p5GLmZgY4MFHwMI3
+	vJrQ==
+Message-ID: <51B99AD7.1090005@gmail.com>
+Date: Thu, 13 Jun 2013 12:11:35 +0200
 From: Till Kamppeter <till.kamppeter@gmail.com>
 MIME-Version: 1.0
-References: <519537F0.8020405@gmail.com>
-	<FDC917F9-BB2B-4117-9F4A-D817841E5AE8@apple.com>
-In-Reply-To: <FDC917F9-BB2B-4117-9F4A-D817841E5AE8@apple.com>
+References: <519537F0.8020405@gmail.com> <51962BA7.4030304@redhat.com>
+	<2414543F-1C84-41CA-A4C5-4FC127532B73@apple.com>
+	<51967371.5080508@gmail.com>
+	<D36BAB03-9A91-42E9-A994-DC0D3C6C254D@apple.com>
+In-Reply-To: <D36BAB03-9A91-42E9-A994-DC0D3C6C254D@apple.com>
 Content-Type: text/plain; charset=UTF-8
 Content-Transfer-Encoding: 7bit
 Subject: Re: [Printing-architecture] Some suggestions for the DNS-SD
@@ -29,17 +31,28 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Michael Sweet <msweet@apple.com>
-Cc: Open Printing <printing-architecture@lists.linux-foundation.org>, Marek Kasik <mkasik@redhat.com>
+To: Michael Sweet <msweet@apple.com>, Open Printing <printing-architecture@lists.linux-foundation.org>, Marek Kasik <mkasik@redhat.com>
 
-On 05/17/2013 07:32 AM, Michael Sweet wrote:
-> You need some sort of local spooling, but it need not be cupsd doing the spooling. Consider writing a small DBUS-based spooler that provides UI for monitoring and canceling the job.  This spooler could also handle the basic conversion from PDF to PWG Raster and could despool to cupsd or direct to a printer.
+During the discussion I asked this:
 
-This would mean to resemble large parts of CUPS (spooling, filtering,
-but not networking) for a per-user/per-app printing system, needing a
-lot of maintenance/development man power, and extra resources on mobile
-devices.
+On 05/18/2013 08:29 AM, Michael Sweet wrote:
+>> If I create a raw CUPS queue, can I send a job to it with special IPP
+>> attributes so that CUPS applies a filter chain? This way I could make
+>> cups-browsed only create raw queues to avoit IPP polling and the dialog
+>> then could poll the printer's capabilities when the User selects the
+>> printer, create the option panel PPD-less and send the job with IPP
+>> attributes for the options and for making CUPS applying filters to get
+>> the output into the format needed by the printer.
+>> 
+
+Is this possible with CUPS?
+
+Then CUPS could work as spooler and filter when the exact printer
+capabilities are only discovered at the moment when the user selects the
+printer for a job via the print dialog. cups-browsed creates only a raw
+queue on the Bonjour discovery of a printer to avoid waking up the
+printer and complete capabilities are polled via IPP only if the user
+selects a printer in the dialog and the dialog has to show the option panel.
 
    Till
-
 
