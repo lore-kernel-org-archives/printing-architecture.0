@@ -2,20 +2,20 @@ Return-Path: <till.kamppeter@gmail.com>
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20120113;
 	h=message-id:date:from:user-agent:mime-version:to:cc:subject
 	:references:in-reply-to:content-type:content-transfer-encoding;
-	bh=CVEHtvNSe5dFTeJFopjZbOvbOkCUNQFB8KFDRL2ygtE=;
-	b=pwY3lAuGXRlMk2f8jhzawueBEy0eQ3gtje1bRT7H/N7Uuiy2Y6dQmqH9Jo3Qm/b6jv
-	dgWU5bht7ayWWBHi1LWooXTWG4+vACae7XKccwVRcZBjfHavty25mjd4Xj8BDupVfitb
-	I0s8z59lKONswxHx31jmnC5Cbj2DMRYDiQUyXJejICb3mXsR/b7GvWoNnrBAeWmd/C1Y
-	kuSQO1VA8jrtxAC1KEApaVMc1fOhi9g72cWhd6E2qJ95B9dqTZ0WD+eps962uNgy/3/9
-	nbQwQTmwLmyOaTRS9qug0xZQOnUPd2UgDTdC5Sn5/UmgDK1ePkqPAQzK1S+3r4aslQNA
-	+cQA==
-Message-ID: <51B997DA.6070904@gmail.com>
-Date: Thu, 13 Jun 2013 11:58:50 +0200
+	bh=LJexecIin9Cel6ppBYhZ5VF48appH1EqW52N/0rny50=;
+	b=CjQm+HQirO6xlJKqg8m+vW5VCi1dO9kVp530Icdu/ldrpvxDoOz0LgLMwF1jeA/Lq/
+	sat1fyF1uc2L3sxYpOC/wEvZ7QotSh6FgCK6zALK3MknlmFCO4/G/YUYXrKoyw6A8TF8
+	wsDPbg8Q0WSbf61ugBTOclnSD/Lz3H2cIsiSn5wLU9omdx3kSiI7C7KuC6i26iLCWjfx
+	BbUN7pf76YvHMcvwHKvbuDREHI5D4TaQmwdU8zUZnlGtYrzJjXzRfE6V+uHjeu98jURr
+	zhOXIE+Y6upfz+FV9RfBJ4sPIdUP9k5d+z4kDWCW8nBSoDegQ2teMNIp0aBsX8q80OmT
+	qOHQ==
+Message-ID: <51B99888.2040406@gmail.com>
+Date: Thu, 13 Jun 2013 12:01:44 +0200
 From: Till Kamppeter <till.kamppeter@gmail.com>
 MIME-Version: 1.0
-References: <519537F0.8020405@gmail.com> <51962BA7.4030304@redhat.com>
-	<2414543F-1C84-41CA-A4C5-4FC127532B73@apple.com>
-In-Reply-To: <2414543F-1C84-41CA-A4C5-4FC127532B73@apple.com>
+References: <519537F0.8020405@gmail.com>
+	<FDC917F9-BB2B-4117-9F4A-D817841E5AE8@apple.com>
+In-Reply-To: <FDC917F9-BB2B-4117-9F4A-D817841E5AE8@apple.com>
 Content-Type: text/plain; charset=UTF-8
 Content-Transfer-Encoding: 7bit
 Subject: Re: [Printing-architecture] Some suggestions for the DNS-SD
@@ -32,12 +32,13 @@ List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-arc
 To: Michael Sweet <msweet@apple.com>
 Cc: Open Printing <printing-architecture@lists.linux-foundation.org>, Marek Kasik <mkasik@redhat.com>
 
-On 05/17/2013 04:23 PM, Michael Sweet wrote:
-> Also, CUPS 1.6 and later have CUPS APIs for efficiently browsing for and getting printer capabilities.  I don't know what your requirements are for CUPS versions, but that would save a lot of code right there...
+On 05/17/2013 07:32 AM, Michael Sweet wrote:
+> You need some sort of local spooling, but it need not be cupsd doing the spooling. Consider writing a small DBUS-based spooler that provides UI for monitoring and canceling the job.  This spooler could also handle the basic conversion from PDF to PWG Raster and could despool to cupsd or direct to a printer.
 
-I have looked into the new APIs of CUPS 1.7.x and for example for
-getting the possible/available paper sizes of a printer and IPP request
-takes place. This still needs waking up the printer.
+This would mean to resemble large parts of CUPS (spooling, filtering,
+but not networking) for a per-user/per-app printing system, needing a
+lot of maintenance/development man power, and extra resources on mobile
+devices.
 
    Till
 
