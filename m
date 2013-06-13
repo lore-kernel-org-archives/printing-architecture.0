@@ -3,12 +3,12 @@ MIME-version: 1.0
 Content-transfer-encoding: 7BIT
 Content-type: text/plain; CHARSET=US-ASCII
 From: Michael Sweet <msweet@apple.com>
-In-reply-to: <51B997DA.6070904@gmail.com>
-Date: Thu, 13 Jun 2013 07:18:40 -0400
-Message-id: <86EA801F-A308-43C8-9459-A64B4950625A@apple.com>
-References: <519537F0.8020405@gmail.com> <51962BA7.4030304@redhat.com>
-	<2414543F-1C84-41CA-A4C5-4FC127532B73@apple.com>
-	<51B997DA.6070904@gmail.com>
+In-reply-to: <51B99888.2040406@gmail.com>
+Date: Thu, 13 Jun 2013 07:25:14 -0400
+Message-id: <D58FE099-79EB-4E3D-904F-B09F4D787B89@apple.com>
+References: <519537F0.8020405@gmail.com>
+	<FDC917F9-BB2B-4117-9F4A-D817841E5AE8@apple.com>
+	<51B99888.2040406@gmail.com>
 Subject: Re: [Printing-architecture] Some suggestions for the DNS-SD
  (Bonjour) printer support in the dialog
 List-Id: Printing architecture under linux
@@ -25,15 +25,19 @@ Cc: Open Printing <printing-architecture@lists.linux-foundation.org>, Marek Kasi
 
 Till,
 
-On 2013-06-13, at 5:58 AM, Till Kamppeter <till.kamppeter@gmail.com> wrote:
-> On 05/17/2013 04:23 PM, Michael Sweet wrote:
->> Also, CUPS 1.6 and later have CUPS APIs for efficiently browsing for and getting printer capabilities.  I don't know what your requirements are for CUPS versions, but that would save a lot of code right there...
+On 2013-06-13, at 6:01 AM, Till Kamppeter <till.kamppeter@gmail.com> wrote:
+> On 05/17/2013 07:32 AM, Michael Sweet wrote:
+>> You need some sort of local spooling, but it need not be cupsd doing the spooling. Consider writing a small DBUS-based spooler that provides UI for monitoring and canceling the job.  This spooler could also handle the basic conversion from PDF to PWG Raster and could despool to cupsd or direct to a printer.
 > 
-> I have looked into the new APIs of CUPS 1.7.x and for example for
-> getting the possible/available paper sizes of a printer and IPP request
-> takes place. This still needs waking up the printer.
+> This would mean to resemble large parts of CUPS (spooling, filtering,
+> but not networking) for a per-user/per-app printing system, needing a
+> lot of maintenance/development man power, and extra resources on mobile
+> devices.
 
-Indeed, but that doesn't happen until you ask for the information, which is presumably after the user has selected the printer and intents to use it...  We never fetch the information for a browsed printer until it is actually "used".
+
+One of the things I'll be working on post-1.7 is a generic IPP service API that can be used to implement custom spoolers, lightweight print services on NAS boxes, etc. The same API could be used as the basis of a user session print service that interfaces directly with IPP printers and talks to a local cupsd for USB and other legacy queues, or to (for example) implement a service on top of, say, Gutenprint to provide an IPP Everywhere gateway to raster drivers (one possible post-PPD future).
+
+The key is re-use of the core CUPS bits (we've already had a lot of success with that at Apple) and abstracting away the common service/spooler aspects so that the only maintenance you have is for the small bits of glue code you use.
 
 _________________________________________________________
 Michael Sweet, Senior Printing System Engineer, PWG Chair
