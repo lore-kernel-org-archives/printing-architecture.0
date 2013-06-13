@@ -2,24 +2,20 @@ Return-Path: <till.kamppeter@gmail.com>
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20120113;
 	h=message-id:date:from:user-agent:mime-version:to:cc:subject
 	:references:in-reply-to:content-type:content-transfer-encoding;
-	bh=Hg07ChKAkM16ZIIc9Qn2j/teYswICFzupDKWsVbv5i0=;
-	b=Qg/l3HZiWY4T0kKgmAVPAUWQoFyhWGtHNDLfjt1Q102Z8GaBszGqXl8QJ2f+GGp0Vz
-	51T6Q3tPRObhzYstnj/mqfjyoCcEfsVaFf+9B8JKWzdp0mAFLLGUb6ih626vA9X0cuQO
-	18e2qzS40SQr26dkAe5wUlXeK0DFBZmqs+VMQCnxUfLMd7/jmEW1mJ726D3IaWbFd6cG
-	J0NTooSYQM2pDWCm8/kRIUUNYizceKNFuP4kCNzxkdarYrCa2OhmK8iSR6hTdocVO7jp
-	6lrbZlAYeRM9vqnP6T5PgKM/Bp/oUUze0tQE9lSMxt0iRCPPzSr3naA+wnDJucWo+tiZ
-	sFpw==
-Message-ID: <51B8FBA7.6060502@gmail.com>
-Date: Thu, 13 Jun 2013 00:52:23 +0200
+	bh=CVEHtvNSe5dFTeJFopjZbOvbOkCUNQFB8KFDRL2ygtE=;
+	b=pwY3lAuGXRlMk2f8jhzawueBEy0eQ3gtje1bRT7H/N7Uuiy2Y6dQmqH9Jo3Qm/b6jv
+	dgWU5bht7ayWWBHi1LWooXTWG4+vACae7XKccwVRcZBjfHavty25mjd4Xj8BDupVfitb
+	I0s8z59lKONswxHx31jmnC5Cbj2DMRYDiQUyXJejICb3mXsR/b7GvWoNnrBAeWmd/C1Y
+	kuSQO1VA8jrtxAC1KEApaVMc1fOhi9g72cWhd6E2qJ95B9dqTZ0WD+eps962uNgy/3/9
+	nbQwQTmwLmyOaTRS9qug0xZQOnUPd2UgDTdC5Sn5/UmgDK1ePkqPAQzK1S+3r4aslQNA
+	+cQA==
+Message-ID: <51B997DA.6070904@gmail.com>
+Date: Thu, 13 Jun 2013 11:58:50 +0200
 From: Till Kamppeter <till.kamppeter@gmail.com>
 MIME-Version: 1.0
-References: <519537F0.8020405@gmail.com>
-	<FDC917F9-BB2B-4117-9F4A-D817841E5AE8@apple.com>
-	<5195DA7B.2040501@gmail.com>
-	<2A8076E6-4CB7-4F70-A92B-AF1F9F0F3FE0@apple.com>
-	<m361yfsvhh.fsf@carbon.jhcloos.org>
-	<B5705E2C-0C03-4BA3-9A37-D13B1654F869@apple.com>
-In-Reply-To: <B5705E2C-0C03-4BA3-9A37-D13B1654F869@apple.com>
+References: <519537F0.8020405@gmail.com> <51962BA7.4030304@redhat.com>
+	<2414543F-1C84-41CA-A4C5-4FC127532B73@apple.com>
+In-Reply-To: <2414543F-1C84-41CA-A4C5-4FC127532B73@apple.com>
 Content-Type: text/plain; charset=UTF-8
 Content-Transfer-Encoding: 7bit
 Subject: Re: [Printing-architecture] Some suggestions for the DNS-SD
@@ -34,30 +30,15 @@ List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subj
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
 To: Michael Sweet <msweet@apple.com>
-Cc: Open Printing <printing-architecture@lists.linux-foundation.org>, Marek Kasik <mkasik@redhat.com>, James Cloos <cloos@jhcloos.com>
+Cc: Open Printing <printing-architecture@lists.linux-foundation.org>, Marek Kasik <mkasik@redhat.com>
 
-On 05/19/2013 08:08 AM, Michael Sweet wrote:
-> 
-> The reason I mention DBUS is that it a simple way to implement a per-user spooler that provides "temporary" print queues.  This could also be part of cupsd (it used to be for CUPS browsing), but I want to be careful not to re-introduce the problems of CUPS browsing.
-> 
-> The key is that auto-adding every printer you see has a huge overhead and isn't particularly useful for the user when there are more than a few printers - how many printers does one user print to in the typical case?  Browsing and adding-on-first-use is a much better solution since then you just manage those printers you use on a particular system.
+On 05/17/2013 04:23 PM, Michael Sweet wrote:
+> Also, CUPS 1.6 and later have CUPS APIs for efficiently browsing for and getting printer capabilities.  I don't know what your requirements are for CUPS versions, but that would save a lot of code right there...
 
-What about cups-browsed offering a D-Bus service to create a temporary
-print queue, queue creation being triggered when a Bonjour-discovered
-network printer is selected in the print dialog and "Print" is selected.
-Queues are removed if they stay for a time X without job (preferred), on
-another D-Bus command, or on shutdown of cups-browsed. These queues get
-visible for other users, but this is no problem if they look the same in
-the other user's print dialog then. The job of the other user gets into
-the same temporary queue then and correctly waits until the first user's
-job finishes.
-
-This would make all print spooling be done by CUPS and not require any
-extra per-user or per-dialog spooler. Also if different users send jobs
-shortly one after the other, the jobs get correctly queued and cannot
-mix up.
-
-WDYT?
+I have looked into the new APIs of CUPS 1.7.x and for example for
+getting the possible/available paper sizes of a printer and IPP request
+takes place. This still needs waking up the printer.
 
    Till
+
 
