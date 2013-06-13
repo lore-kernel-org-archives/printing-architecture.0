@@ -2,21 +2,24 @@ Return-Path: <till.kamppeter@gmail.com>
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20120113;
 	h=message-id:date:from:user-agent:mime-version:to:cc:subject
 	:references:in-reply-to:content-type:content-transfer-encoding;
-	bh=UFKGYBBGhaMAuOkWtvA0Uk9kUn6I2QO3Btn2d30Jkio=;
-	b=ONhrtQuLmN3x5/bzoreYCOrtV9fOSVCqtLcGh76G66fT4QzfIE0NAposBwAUqr2aF3
-	+/wihOQqeSzDo3/LU4Qn/xDJVsmONZdFsAa6UooD99lLGpMIVNpe6Vj/ljn8R4QTNBEl
-	GYB/4iOl0ETsFvgN0Z0o2i7kquyfwlQIH8oCh6Y+U4+KkjOMXBOy16+jRuUtdMCEP0OO
-	CKe0xOZUF56YiGbHdKxbmNS2whTIXvxx8i/NDP3jiBmvVutsLzKRsWB4y9nvQdr/4IQh
-	s3bDhYfXh3EeOFV88vusVovoWD314aGzc1pp860zNLuNu36MA+lZydmhSokqy52WTKHp
-	bxbQ==
-Message-ID: <51B9B91A.6010609@gmail.com>
-Date: Thu, 13 Jun 2013 14:20:42 +0200
+	bh=V9YXQ0Nbsl1WXJjndwAlu52FRrIgU16JKgWC39HIUjc=;
+	b=DmDicQ/Jp957/qr7hilFjvgJkEc1fR2h8ncWF0NFwm3buoU7uOz2wg8GtyQtdLQPa7
+	Z51U8AbjpBqIDdjvwUTzSXclDf9LrERJw43iPYLyUZ6rWCRJx77hiQegvlot1Eu7ePEz
+	TJZp61wIMJfRom3ZuhPKzKy3iNAZckYHtDVXoz4sApeB98jD8+TAQ8etU36r9TgapiK/
+	GWuzARzytQYS/amXaJR4Bh2VI/6HMMCu00Rbdiq0Vr0jCT29SXkfs4z/3uOjlaOy+4LU
+	Q18a0CTzlm9uI8u6ZxVFnq+S9J4B8RKKC8MSqIVx1wAM/0ZgAr2G7IhglelO45ChPuHQ
+	Qt/w==
+Message-ID: <51B9BFDD.50305@gmail.com>
+Date: Thu, 13 Jun 2013 14:49:33 +0200
 From: Till Kamppeter <till.kamppeter@gmail.com>
 MIME-Version: 1.0
-References: <519537F0.8020405@gmail.com>
-	<FDC917F9-BB2B-4117-9F4A-D817841E5AE8@apple.com>
-	<51B99888.2040406@gmail.com> <1371123741.31435.2.camel@rubik>
-In-Reply-To: <1371123741.31435.2.camel@rubik>
+References: <519537F0.8020405@gmail.com> <51962BA7.4030304@redhat.com>
+	<2414543F-1C84-41CA-A4C5-4FC127532B73@apple.com>
+	<51967371.5080508@gmail.com>
+	<D36BAB03-9A91-42E9-A994-DC0D3C6C254D@apple.com>
+	<51B99AD7.1090005@gmail.com>
+	<2E6F3E0A-2BC0-42E6-83E9-FFB185353242@apple.com>
+In-Reply-To: <2E6F3E0A-2BC0-42E6-83E9-FFB185353242@apple.com>
 Content-Type: text/plain; charset=UTF-8
 Content-Transfer-Encoding: 7bit
 Subject: Re: [Printing-architecture] Some suggestions for the DNS-SD
@@ -30,30 +33,28 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Tim Waugh <twaugh@redhat.com>
+To: Michael Sweet <msweet@apple.com>
 Cc: Open Printing <printing-architecture@lists.linux-foundation.org>, Marek Kasik <mkasik@redhat.com>
 
-On 06/13/2013 01:42 PM, Tim Waugh wrote:
-> On Thu, 2013-06-13 at 12:01 +0200, Till Kamppeter wrote:
->> This would mean to resemble large parts of CUPS (spooling, filtering,
->> but not networking) for a per-user/per-app printing system
+On 06/13/2013 01:39 PM, Michael Sweet wrote:
 > 
-> My idea (printservice) for this was:
-> 1. Avoid spooling altogether, just send job direct to network queue
-> (this is often another spooler in any case)
-
-Should be the case for laser printers with built-in network connection,
-I don't know how it is with inkjets. Or does IPP Everywhere also require
-spooling space inside the printer?
-
-> 2. Avoid most filtering by requiring jobs to be application/pdf and
-> requiring that allowable network queues support application/pdf.
+> The issue here is that the other end will need to support the file formats and options you are passing.  If you supply a local PPD then cupsd will convert into a format that the other end can handle.
 > 
 
-As IPP Everywhere has only PWG Raster as required format (the others are
-optional), we need at least a pdftoraster filter, but this one filter is
-already much better than having device-specific drivers and data fo
-1000s of printers.
+Here one could easily restrict the support to printers with standard
+PDLs so that a handful of filters is enough. Then one sends always PDF
+and tell by IPP attributes which output format and which option
+settings. So what one needs is the right IPP attributes to tell CUPS the
+output format (instead of needing it hard-coded in a PPD).
+
+Would be great if CUPS is capable of this, but if not, I have an idea.
+One would need a pdftoany filter which calls first pdftopdf (if pdftopdf
+is installed, we could leave it out on mobile) and then one of
+pdftoraster+rastertopwg, pdftops, nothing, gstopxl,
+pdftoraster+rastertopcl, depending on what output format was requested
+by an option (IPP attribute). Problem is how to make the queue using
+this filter without having a PPD with hard-coded paper sizes (perhaps
+System V interface script?).
 
    Till
 
