@@ -1,25 +1,14 @@
-Return-Path: <till.kamppeter@gmail.com>
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20120113;
-	h=message-id:date:from:user-agent:mime-version:to:subject:references
-	:in-reply-to:content-type:content-transfer-encoding;
-	bh=t0Oun7jwBcJb3xEVpzKHRIxXdUV1dieyGNIzzdbcZlM=;
-	b=Pl0lbdXEsa4zsThtfgwrTcf+LH6zWUfziOpL5RZkH8aHeY3OWZgpBMtH5FR57YqGHx
-	9xV6CnTREeDkqFZN/4hz03WFnz2BQ48pItAZsN2cjjHU5NI/dgJvxLg1DKu633kcXEkD
-	wtoEVoNT6C6lniHuPo2/0kTjmS7PFLynTXwhcWHRkCvdTsCVgerfAUd5ebiZtraBO5sV
-	vAmOeY/YO3IUrTRre7iIcc/JQ3kyZKkbwteQQTNXp5P4tKDG1+E4X2kqns4DNshSVaVi
-	fb/GYOihcdyFT+aRZGX2Y0AaYWkMKQb++BvzEeWZShVKKx15I+F/p5GLmZgY4MFHwMI3
-	vJrQ==
-Message-ID: <51B99AD7.1090005@gmail.com>
-Date: Thu, 13 Jun 2013 12:11:35 +0200
-From: Till Kamppeter <till.kamppeter@gmail.com>
-MIME-Version: 1.0
+Return-Path: <msweet@apple.com>
+MIME-version: 1.0
+Content-transfer-encoding: 7BIT
+Content-type: text/plain; CHARSET=US-ASCII
+From: Michael Sweet <msweet@apple.com>
+In-reply-to: <51B997DA.6070904@gmail.com>
+Date: Thu, 13 Jun 2013 07:18:40 -0400
+Message-id: <86EA801F-A308-43C8-9459-A64B4950625A@apple.com>
 References: <519537F0.8020405@gmail.com> <51962BA7.4030304@redhat.com>
 	<2414543F-1C84-41CA-A4C5-4FC127532B73@apple.com>
-	<51967371.5080508@gmail.com>
-	<D36BAB03-9A91-42E9-A994-DC0D3C6C254D@apple.com>
-In-Reply-To: <D36BAB03-9A91-42E9-A994-DC0D3C6C254D@apple.com>
-Content-Type: text/plain; charset=UTF-8
-Content-Transfer-Encoding: 7bit
+	<51B997DA.6070904@gmail.com>
 Subject: Re: [Printing-architecture] Some suggestions for the DNS-SD
  (Bonjour) printer support in the dialog
 List-Id: Printing architecture under linux
@@ -31,28 +20,21 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Michael Sweet <msweet@apple.com>, Open Printing <printing-architecture@lists.linux-foundation.org>, Marek Kasik <mkasik@redhat.com>
+To: Till Kamppeter <till.kamppeter@gmail.com>
+Cc: Open Printing <printing-architecture@lists.linux-foundation.org>, Marek Kasik <mkasik@redhat.com>
 
-During the discussion I asked this:
+Till,
 
-On 05/18/2013 08:29 AM, Michael Sweet wrote:
->> If I create a raw CUPS queue, can I send a job to it with special IPP
->> attributes so that CUPS applies a filter chain? This way I could make
->> cups-browsed only create raw queues to avoit IPP polling and the dialog
->> then could poll the printer's capabilities when the User selects the
->> printer, create the option panel PPD-less and send the job with IPP
->> attributes for the options and for making CUPS applying filters to get
->> the output into the format needed by the printer.
->> 
+On 2013-06-13, at 5:58 AM, Till Kamppeter <till.kamppeter@gmail.com> wrote:
+> On 05/17/2013 04:23 PM, Michael Sweet wrote:
+>> Also, CUPS 1.6 and later have CUPS APIs for efficiently browsing for and getting printer capabilities.  I don't know what your requirements are for CUPS versions, but that would save a lot of code right there...
+> 
+> I have looked into the new APIs of CUPS 1.7.x and for example for
+> getting the possible/available paper sizes of a printer and IPP request
+> takes place. This still needs waking up the printer.
 
-Is this possible with CUPS?
+Indeed, but that doesn't happen until you ask for the information, which is presumably after the user has selected the printer and intents to use it...  We never fetch the information for a browsed printer until it is actually "used".
 
-Then CUPS could work as spooler and filter when the exact printer
-capabilities are only discovered at the moment when the user selects the
-printer for a job via the print dialog. cups-browsed creates only a raw
-queue on the Bonjour discovery of a printer to avoid waking up the
-printer and complete capabilities are polled via IPP only if the user
-selects a printer in the dialog and the dialog has to show the option panel.
-
-   Till
+_________________________________________________________
+Michael Sweet, Senior Printing System Engineer, PWG Chair
 
