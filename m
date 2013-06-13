@@ -1,27 +1,18 @@
-Return-Path: <till.kamppeter@gmail.com>
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20120113;
-	h=message-id:date:from:user-agent:mime-version:to:cc:subject
-	:references:in-reply-to:content-type:content-transfer-encoding;
-	bh=V9YXQ0Nbsl1WXJjndwAlu52FRrIgU16JKgWC39HIUjc=;
-	b=DmDicQ/Jp957/qr7hilFjvgJkEc1fR2h8ncWF0NFwm3buoU7uOz2wg8GtyQtdLQPa7
-	Z51U8AbjpBqIDdjvwUTzSXclDf9LrERJw43iPYLyUZ6rWCRJx77hiQegvlot1Eu7ePEz
-	TJZp61wIMJfRom3ZuhPKzKy3iNAZckYHtDVXoz4sApeB98jD8+TAQ8etU36r9TgapiK/
-	GWuzARzytQYS/amXaJR4Bh2VI/6HMMCu00Rbdiq0Vr0jCT29SXkfs4z/3uOjlaOy+4LU
-	Q18a0CTzlm9uI8u6ZxVFnq+S9J4B8RKKC8MSqIVx1wAM/0ZgAr2G7IhglelO45ChPuHQ
-	Qt/w==
-Message-ID: <51B9BFDD.50305@gmail.com>
-Date: Thu, 13 Jun 2013 14:49:33 +0200
-From: Till Kamppeter <till.kamppeter@gmail.com>
-MIME-Version: 1.0
-References: <519537F0.8020405@gmail.com> <51962BA7.4030304@redhat.com>
-	<2414543F-1C84-41CA-A4C5-4FC127532B73@apple.com>
-	<51967371.5080508@gmail.com>
-	<D36BAB03-9A91-42E9-A994-DC0D3C6C254D@apple.com>
-	<51B99AD7.1090005@gmail.com>
-	<2E6F3E0A-2BC0-42E6-83E9-FFB185353242@apple.com>
-In-Reply-To: <2E6F3E0A-2BC0-42E6-83E9-FFB185353242@apple.com>
-Content-Type: text/plain; charset=UTF-8
-Content-Transfer-Encoding: 7bit
+Return-Path: <msweet@apple.com>
+MIME-version: 1.0
+Content-transfer-encoding: 7BIT
+Content-type: text/plain; CHARSET=US-ASCII
+From: Michael Sweet <msweet@apple.com>
+In-reply-to: <51B8FBA7.6060502@gmail.com>
+Date: Thu, 13 Jun 2013 10:05:49 -0400
+Message-id: <8A55BD79-B2CA-4306-BABA-497F53FAC9B0@apple.com>
+References: <519537F0.8020405@gmail.com>
+	<FDC917F9-BB2B-4117-9F4A-D817841E5AE8@apple.com>
+	<5195DA7B.2040501@gmail.com>
+	<2A8076E6-4CB7-4F70-A92B-AF1F9F0F3FE0@apple.com>
+	<m361yfsvhh.fsf@carbon.jhcloos.org>
+	<B5705E2C-0C03-4BA3-9A37-D13B1654F869@apple.com>
+	<51B8FBA7.6060502@gmail.com>
 Subject: Re: [Printing-architecture] Some suggestions for the DNS-SD
  (Bonjour) printer support in the dialog
 List-Id: Printing architecture under linux
@@ -33,28 +24,44 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Michael Sweet <msweet@apple.com>
-Cc: Open Printing <printing-architecture@lists.linux-foundation.org>, Marek Kasik <mkasik@redhat.com>
+To: Till Kamppeter <till.kamppeter@gmail.com>
+Cc: Open Printing <printing-architecture@lists.linux-foundation.org>, Marek Kasik <mkasik@redhat.com>, James Cloos <cloos@jhcloos.com>
 
-On 06/13/2013 01:39 PM, Michael Sweet wrote:
+Till,
+
+This would be a fine solution until cupsd (or some standard intermediary) does it.
+
+The DBUS service would need to be a system-level service (root or a user account in one of the CUPS system groups) in order for it to auto-add/remove queues, but otherwise it would do the trick.
+
+
+On 2013-06-12, at 6:52 PM, Till Kamppeter <till.kamppeter@gmail.com> wrote:
+
+> On 05/19/2013 08:08 AM, Michael Sweet wrote:
+>> 
+>> The reason I mention DBUS is that it a simple way to implement a per-user spooler that provides "temporary" print queues.  This could also be part of cupsd (it used to be for CUPS browsing), but I want to be careful not to re-introduce the problems of CUPS browsing.
+>> 
+>> The key is that auto-adding every printer you see has a huge overhead and isn't particularly useful for the user when there are more than a few printers - how many printers does one user print to in the typical case?  Browsing and adding-on-first-use is a much better solution since then you just manage those printers you use on a particular system.
 > 
-> The issue here is that the other end will need to support the file formats and options you are passing.  If you supply a local PPD then cupsd will convert into a format that the other end can handle.
+> What about cups-browsed offering a D-Bus service to create a temporary
+> print queue, queue creation being triggered when a Bonjour-discovered
+> network printer is selected in the print dialog and "Print" is selected.
+> Queues are removed if they stay for a time X without job (preferred), on
+> another D-Bus command, or on shutdown of cups-browsed. These queues get
+> visible for other users, but this is no problem if they look the same in
+> the other user's print dialog then. The job of the other user gets into
+> the same temporary queue then and correctly waits until the first user's
+> job finishes.
+> 
+> This would make all print spooling be done by CUPS and not require any
+> extra per-user or per-dialog spooler. Also if different users send jobs
+> shortly one after the other, the jobs get correctly queued and cannot
+> mix up.
+> 
+> WDYT?
+> 
+>   Till
 > 
 
-Here one could easily restrict the support to printers with standard
-PDLs so that a handful of filters is enough. Then one sends always PDF
-and tell by IPP attributes which output format and which option
-settings. So what one needs is the right IPP attributes to tell CUPS the
-output format (instead of needing it hard-coded in a PPD).
-
-Would be great if CUPS is capable of this, but if not, I have an idea.
-One would need a pdftoany filter which calls first pdftopdf (if pdftopdf
-is installed, we could leave it out on mobile) and then one of
-pdftoraster+rastertopwg, pdftops, nothing, gstopxl,
-pdftoraster+rastertopcl, depending on what output format was requested
-by an option (IPP attribute). Problem is how to make the queue using
-this filter without having a PPD with hard-coded paper sizes (perhaps
-System V interface script?).
-
-   Till
+_________________________________________________________
+Michael Sweet, Senior Printing System Engineer, PWG Chair
 
