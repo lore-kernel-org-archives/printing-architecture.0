@@ -1,22 +1,14 @@
-Return-Path: <cloos@jhcloos.com>
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=jhcloos.com;
-	s=ore13; t=1371517032;
-	bh=Hui/nmSZ7VqlXaEdjYDHDngq5qoj+dvdeLhWYGU4Z1M=;
-	h=From:To:Cc:Subject:In-Reply-To:References:Date:From;
-	b=VsGkBK9bWVCstmNEjNQtvlphAIfSq0xt04KbPG4rZSdD/Xu/F9ns2qNtkNVSM+39h
-	Tdd4W0z1s/KyyNYw7LAsWz6GsW8DmMJwQjV0CASbmiCeaKdRc5V1vP29vz6TRQ6Ltw
-	z5i+4vIplUhGPUoe94BXkAHn/0Dy+qV349FuJjrJygQ==
-From: James Cloos <cloos@jhcloos.com>
-In-Reply-To: <CAN40gSva+8P8ha-ABh5exQfd5VDVsA7prxj0ct33J2t52rLHTA@mail.gmail.com>
-	(Ira McDonald's message of "Mon, 17 Jun 2013 20:45:07 -0400")
+Return-Path: <msweet@apple.com>
+MIME-version: 1.0
+Content-transfer-encoding: 7BIT
+Content-type: text/plain; CHARSET=US-ASCII
+From: Michael Sweet <msweet@apple.com>
+In-reply-to: <m34ncw46lj.fsf@carbon.jhcloos.org>
+Date: Tue, 18 Jun 2013 07:49:48 -0400
+Message-id: <6E56AA29-A827-4F39-BD22-57B48270ACA3@apple.com>
 References: <m34ncw46lj.fsf@carbon.jhcloos.org>
-	<CAN40gSva+8P8ha-ABh5exQfd5VDVsA7prxj0ct33J2t52rLHTA@mail.gmail.com>
-Date: Mon, 17 Jun 2013 20:55:57 -0400
-Message-ID: <m3sj0g2q4p.fsf@carbon.jhcloos.org>
-MIME-Version: 1.0
-Content-Type: text/plain
-Subject: Re: [Printing-architecture] On the Continued Need for PostScript
-	Workflows
+Subject: Re: [Printing-architecture] On the Continued Need for
+	PostScript	Workflows
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>,
@@ -26,46 +18,53 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Ira McDonald <blueroofmusic@gmail.com>
-Cc: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>
+To: James Cloos <cloos@jhcloos.com>
+Cc: printing-architecture@lists.linux-foundation.org
 
->>>>> "IM" == Ira McDonald <blueroofmusic@gmail.com> writes:
+James,
 
-IM> (1) PostScript filters aren't going to be maintained in CUPS in the future
-IM> (as far as I know)
+On 2013-06-17, at 8:14 PM, James Cloos <cloos@jhcloos.com> wrote:
+> ...
+> PostScript files exist; they do not magically disappear just because PDF
+> is available.
 
-When I asked Michael whether cups would continue to include the pstops
-filter, he replied that it would.
+Agreed, however PostScript is increasingly in the minority.
 
-IM> (2) PWG IPP Everywhere (the only open standard mobile printing
-IM> protocol) abandons PostScript entirely and requires PDF
+> PostScript printers are still more common than PDF printers.
 
-IPP everywhere printers will take years to replace the existing ps
-printers, as I noted.  Maybe ten to twenty years from now the existing
-(and about-to-be-deployed) ps printers will be gone.
+Most PostScript printers also support PDF these days.  In fact, this year saw the introduction of some printers that support PDF but *not* PostScript.  And of course MOST printers sold in the last 20 years have had neither PostScript nor PDF support...
 
-IM> (3) Of the recent printers that I'm aware of, more are supporting
-IM> native PDF than native PostScript
+> ...
+> When printing an existing ps file -- including when printing from
+> programs which can generate ps but not pdf -- the postscript MUST be
+> modified only by pstops when sending on to a ps printer, or MUST be
+> rendered directly to a raster format when printing to printers which
+> require raster input.
 
-Not according to the ad copy I have read.
+For the "printing PS to a PS printer case", the existing CUPS pstops filter should be the clear winner in cupsd's eyes - both the relative cost and number of filters are lower than a pstopdf | pdftopdf | pdftops route, and pstops isn't going anywhere.
 
-IM> (4) PostScript is deservedly disliked by government standards agencies
-IM> around the world because of how easily it can be exploited for security
-IM> attacks
+As for rasterization, generally people are using Ghostscript to generate their raster data which supports both PDF and PostScript input directly - no intermediate PDF there. (On the Mac PS gets converted to PDF by Adobe's own PostScript distiller, which Apple licenses, and then rasterized by CoreGraphics' PDF engine...)
 
-Nonetheless, if the printer is ps the job has to be submitted as ps.
+> Conversions can only cause damage.
 
-IM> I agree that PostScript files won't go away, but they are being increasingly
-IM> converted at the *source* content provider to PDF for interoperability.
+Please leave the FUD at the door.
 
-And when they are converted at the source, that is fine.
+> Artifex refuses to ensure that gs' pdfwriter generates device indepen-
+> dent colour when given a source file with device independent colour
+> (evidently it is a large job for which they do not have a paying
+> customer).  Cf the relevant WONTFIXes.
 
-I tried to be specific that it is *in the cups filters* that ps never
-should be converted into pdf.
+We need to convert the input document into something the printer will accept.  If the printer accepts PostScript, we pass it through, adding any printer options along the way with pstops.
 
-Don't get me wrong.  I *love* ipp-everywhere.  But the existing printers
-do not go away overnight.  And many seem to last forever.
+If the printer needs PDF or raster data, we have to interpret the PostScript file. In the case of "device independent color", that will likely get converted to the printer's native color space (or the color space it or the driver advertises for that purpose anyways), otherwise you'll get some *really* strange looking output.
 
--JimC
--- 
-James Cloos <cloos@jhcloos.com>         OpenPGP: 1024D/ED7DAEA6
+> And it is not always even possible to convert jobs which use postscript
+> as a language into equivilent PDF.  The formats are just too different.
+
+The core difference is that PostScript is a true programming language with a (relatively) well-defined graphics language, while PDF is just a (relatively) well-defined graphics language.  PDF provides a superset of the PostScript graphics language, and PDF color management, imaging handling, and transparency support are far superior to PostScript.
+
+In any case, pstops is not going anywhere and is the preferred filter for PostScript printing to a PostScript printer.  If any distro has changed that preference, please file a bug with the corresponding distro.
+
+_________________________________________________________
+Michael Sweet, Senior Printing System Engineer, PWG Chair
+
