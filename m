@@ -1,14 +1,15 @@
 Return-Path: <msweet@apple.com>
 MIME-version: 1.0
-Content-transfer-encoding: 7BIT
-Content-type: text/plain; CHARSET=US-ASCII
+Content-type: multipart/alternative;
+	boundary="Boundary_(ID_blVvN4BxbIA4RBcnolKJnw)"
 From: Michael Sweet <msweet@apple.com>
-In-reply-to: <m34ncw46lj.fsf@carbon.jhcloos.org>
-Date: Tue, 18 Jun 2013 07:49:48 -0400
-Message-id: <6E56AA29-A827-4F39-BD22-57B48270ACA3@apple.com>
+In-reply-to: <CAN40gSva+8P8ha-ABh5exQfd5VDVsA7prxj0ct33J2t52rLHTA@mail.gmail.com>
+Date: Tue, 18 Jun 2013 08:13:44 -0400
+Message-id: <505B6FA1-E206-4A6B-87D6-D44BD3C15C5B@apple.com>
 References: <m34ncw46lj.fsf@carbon.jhcloos.org>
-Subject: Re: [Printing-architecture] On the Continued Need for
-	PostScript	Workflows
+	<CAN40gSva+8P8ha-ABh5exQfd5VDVsA7prxj0ct33J2t52rLHTA@mail.gmail.com>
+Subject: Re: [Printing-architecture] On the Continued Need for PostScript
+ Workflows
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>,
@@ -18,53 +19,135 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: James Cloos <cloos@jhcloos.com>
-Cc: printing-architecture@lists.linux-foundation.org
+To: Ira McDonald <blueroofmusic@gmail.com>
+Cc: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>, James Cloos <cloos@jhcloos.com>
 
-James,
 
-On 2013-06-17, at 8:14 PM, James Cloos <cloos@jhcloos.com> wrote:
-> ...
-> PostScript files exist; they do not magically disappear just because PDF
-> is available.
+--Boundary_(ID_blVvN4BxbIA4RBcnolKJnw)
+Content-type: text/plain; CHARSET=US-ASCII
+Content-transfer-encoding: 7BIT
 
-Agreed, however PostScript is increasingly in the minority.
+Ira,
 
-> PostScript printers are still more common than PDF printers.
+On 2013-06-17, at 8:45 PM, Ira McDonald <blueroofmusic@gmail.com> wrote:
+> Hi James,
+> 
+> I sympathize with your concerns, but...
+> 
+> (1) PostScript filters aren't going to be maintained in CUPS in the future
+> (as far as I know)
 
-Most PostScript printers also support PDF these days.  In fact, this year saw the introduction of some printers that support PDF but *not* PostScript.  And of course MOST printers sold in the last 20 years have had neither PostScript nor PDF support...
+This isn't exactly correct.
 
-> ...
-> When printing an existing ps file -- including when printing from
-> programs which can generate ps but not pdf -- the postscript MUST be
-> modified only by pstops when sending on to a ps printer, or MUST be
-> rendered directly to a raster format when printing to printers which
-> require raster input.
+The CUPS PPD APIs were deprecated in CUPS 1.6 in favor of new APIs based on IPP Everywhere that better abstract the implementation details of printers and drivers in the system.  In fact, the current implementation is (internally) based on PPDs, as that is how CUPS does printer drivers.
 
-For the "printing PS to a PS printer case", the existing CUPS pstops filter should be the clear winner in cupsd's eyes - both the relative cost and number of filters are lower than a pstopdf | pdftopdf | pdftops route, and pstops isn't going anywhere.
+The goal is to eliminate dependence on PPD files, not to eliminate PostScript printing specifically, because PPDs are (and always were) a limiting factor in supporting printer features in CUPS.  The last update to the PPD spec was in 1996 - printers (and how they are used) have changed a LOT since then...
 
-As for rasterization, generally people are using Ghostscript to generate their raster data which supports both PDF and PostScript input directly - no intermediate PDF there. (On the Mac PS gets converted to PDF by Adobe's own PostScript distiller, which Apple licenses, and then rasterized by CoreGraphics' PDF engine...)
+Once applications and drivers no longer depend on the CUPS PPD API, we can work to separate the PPD API and PostScript printer support so that it can be maintained in parallel to any non-PS support.
 
-> Conversions can only cause damage.
+> (2) PWG IPP Everywhere (the only open standard mobile printing protocol)
+> abandons PostScript entirely and requires PDF
 
-Please leave the FUD at the door.
+Just to be clear: IPP Everywhere does not forbid PostScript, and in fact is completely silent on support for it.  I suspect that future IPP Everywhere printers may offer PostScript support as part of the "legacy" language support for older OS's.
 
-> Artifex refuses to ensure that gs' pdfwriter generates device indepen-
-> dent colour when given a source file with device independent colour
-> (evidently it is a large job for which they do not have a paying
-> customer).  Cf the relevant WONTFIXes.
+> (3) Of the recent printers that I'm aware of, more are supporting native PDF
+> than native PostScript
 
-We need to convert the input document into something the printer will accept.  If the printer accepts PostScript, we pass it through, adding any printer options along the way with pstops.
+My view of the products coming out does show some new products that are PDF-only vs. PDF + PostScript.  The combo products typically use a RIP (internal or external) that supports both with a common rendering backend, usually with an intermediate display list representation (for banding).
 
-If the printer needs PDF or raster data, we have to interpret the PostScript file. In the case of "device independent color", that will likely get converted to the printer's native color space (or the color space it or the driver advertises for that purpose anyways), otherwise you'll get some *really* strange looking output.
+Most printers are still raster-only, but there are some new printers in the sub-$250 price point that are offering PDF support now...
 
-> And it is not always even possible to convert jobs which use postscript
-> as a language into equivilent PDF.  The formats are just too different.
+> (4) PostScript is deservedly disliked by government standards agencies 
+> around the world because of how easily it can be exploited for security
+> attacks
 
-The core difference is that PostScript is a true programming language with a (relatively) well-defined graphics language, while PDF is just a (relatively) well-defined graphics language.  PDF provides a superset of the PostScript graphics language, and PDF color management, imaging handling, and transparency support are far superior to PostScript.
-
-In any case, pstops is not going anywhere and is the preferred filter for PostScript printing to a PostScript printer.  If any distro has changed that preference, please file a bug with the corresponding distro.
+In the realm of security, PDF has its share of issues as well.  I avoid slinging the security arrow because of that...
 
 _________________________________________________________
 Michael Sweet, Senior Printing System Engineer, PWG Chair
 
+
+--Boundary_(ID_blVvN4BxbIA4RBcnolKJnw)
+Content-type: text/html; CHARSET=US-ASCII
+Content-transfer-encoding: quoted-printable
+
+<html><head><meta http-equiv=3D"Content-Type" content=3D"text/html =
+charset=3Diso-8859-1"></head><body style=3D"word-wrap: break-word; =
+-webkit-nbsp-mode: space; -webkit-line-break: after-white-space; =
+">Ira,<div><br><div><div>On 2013-06-17, at 8:45 PM, Ira McDonald &lt;<a =
+href=3D"mailto:blueroofmusic@gmail.com">blueroofmusic@gmail.com</a>&gt; =
+wrote:</div><blockquote type=3D"cite"><div =
+dir=3D"ltr"><div><div><div><div><div><div><div><div><div><div><div>Hi =
+James,<br><br></div>I sympathize with your concerns, =
+but...<br><br></div>(1) PostScript filters aren't going to be maintained =
+in CUPS in the future<br>
+</div>(as far as I =
+know)<br></div></div></div></div></div></div></div></div></div></blockquot=
+e><div><br></div>This isn't exactly =
+correct.</div><div><br></div><div>The CUPS PPD APIs were deprecated in =
+CUPS 1.6 in favor of new APIs based on IPP Everywhere that better =
+abstract the implementation details of printers and drivers in the =
+system. &nbsp;In fact, the current implementation is (internally) based =
+on PPDs, as that is how CUPS does printer =
+drivers.</div><div><br></div><div>The goal is to eliminate dependence on =
+PPD files, not to eliminate PostScript printing specifically, because =
+PPDs are (and always were) a limiting factor in supporting printer =
+features in CUPS. &nbsp;The last update to the PPD spec was in 1996 - =
+printers (and how they are used) have changed a LOT since =
+then...</div><div><br></div><div>Once applications and drivers no longer =
+depend on the CUPS PPD API, we can work to separate the PPD API and =
+PostScript printer support so that it can be maintained in parallel to =
+any non-PS support.</div><div><br></div><div><blockquote =
+type=3D"cite"><div dir=3D"ltr"><div><div><div><div><div><div><div>(2) =
+PWG IPP Everywhere (the only open standard mobile printing =
+protocol)<br></div>abandons PostScript entirely and requires =
+PDF<br></div></div></div></div></div></div></div></blockquote><div><br></d=
+iv><div>Just to be clear: IPP Everywhere does not forbid PostScript, and =
+in fact is completely silent on support for it. &nbsp;I suspect that =
+future IPP Everywhere printers may offer PostScript support as part of =
+the "legacy" language support for older =
+OS's.</div><div><br></div></div><div><blockquote type=3D"cite"><div =
+dir=3D"ltr"><div><div><div><div><div>(3) Of the recent printers that I'm =
+aware of, more are supporting native PDF<br>
+than native =
+PostScript<br></div></div></div></div></div></div></blockquote><div><br></=
+div>My view of the products coming out does show some new products that =
+are PDF-only vs. PDF + PostScript. &nbsp;The combo products typically =
+use a RIP (internal or external) that supports both with a common =
+rendering backend, usually with an intermediate display list =
+representation (for banding).</div><div><br></div><div>Most printers are =
+still raster-only, but there are some new printers in the sub-$250 price =
+point that are offering PDF support =
+now...</div><div><br></div><div><blockquote type=3D"cite"><div =
+dir=3D"ltr"><div><div><div><div>(4) PostScript is deservedly disliked by =
+government standards agencies <br></div>around the world because of how =
+easily it can be exploited for =
+security<br>attacks<br></div></div></div></div></blockquote><div><br></div=
+>In the realm of security, PDF has its share of issues as well. &nbsp;I =
+avoid slinging the security arrow because of that...</div><br><div>
+<span class=3D"Apple-style-span" style=3D"border-collapse: separate; =
+color: rgb(0, 0, 0); font-family: 'Andale Mono'; font-style: normal; =
+font-variant: normal; font-weight: normal; letter-spacing: normal; =
+line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: =
+0px; text-transform: none; white-space: normal; widows: 2; word-spacing: =
+0px; -webkit-border-horizontal-spacing: 0px; =
+-webkit-border-vertical-spacing: 0px; =
+-webkit-text-decorations-in-effect: none; -webkit-text-size-adjust: =
+auto; -webkit-text-stroke-width: 0px;  "><span class=3D"Apple-style-span" =
+style=3D"border-collapse: separate; color: rgb(0, 0, 0); font-family: =
+'Andale Mono'; font-style: normal; font-variant: normal; font-weight: =
+normal; letter-spacing: normal; line-height: normal; orphans: 2; =
+text-align: -webkit-auto; text-indent: 0px; text-transform: none; =
+white-space: normal; widows: 2; word-spacing: 0px; =
+-webkit-border-horizontal-spacing: 0px; -webkit-border-vertical-spacing: =
+0px; -webkit-text-decorations-in-effect: none; -webkit-text-size-adjust: =
+auto; -webkit-text-stroke-width: 0px;  "><div style=3D"word-wrap: =
+break-word; -webkit-nbsp-mode: space; -webkit-line-break: =
+after-white-space; =
+">_________________________________________________________<br>Michael =
+Sweet, Senior Printing System&nbsp;Engineer, PWG =
+Chair</div></span></span>
+</div>
+<br></div></body></html>=
+
+--Boundary_(ID_blVvN4BxbIA4RBcnolKJnw)--
