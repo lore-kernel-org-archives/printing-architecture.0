@@ -1,18 +1,17 @@
-Return-Path: <msweet@apple.com>
-MIME-version: 1.0
-Content-transfer-encoding: 7BIT
-Content-type: text/plain; CHARSET=US-ASCII
-From: Michael Sweet <msweet@apple.com>
-In-reply-to: <51CA141F.2060609@gmail.com>
-Date: Tue, 25 Jun 2013 20:48:25 -0400
-Message-id: <856FEB2A-C2BC-4C08-9E2D-E5AD34DD191A@apple.com>
-References: <m34ncw46lj.fsf@carbon.jhcloos.org>
-	<6E56AA29-A827-4F39-BD22-57B48270ACA3@apple.com>
-	<m3txktzpf2.fsf@carbon.jhcloos.org>
-	<55D4A897-5D56-4ADB-B183-379512FB2631@apple.com>
-	<51CA141F.2060609@gmail.com>
-Subject: Re: [Printing-architecture] On the Continued Need for PostScript
- Workflows
+Return-Path: <cloos@jhcloos.com>
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=jhcloos.com;
+	s=ore13; t=1372365532;
+	bh=n4mPmQbRJlxUvkjnb1KX7Yv142CNjz9YOYu6jhMXbW0=;
+	h=From:To:Subject:Date:From;
+	b=ZiRkHJH6VpLDcadUjTItUED/PSJ5Qqr+PplJ+alzFD6TlFhBBWFmmndGBnwNFJAxQ
+	LXa84bItg4OivqyKPTJPRNBIcUlQNueXogg7Mku81ECuEq94gyXyThjJLDY4muoh7L
+	b3B7sgxNV1d/o78ZE08rz/xmCwiGHuQQuvsqW4XnRBQ==
+From: James Cloos <cloos@jhcloos.com>
+Date: Thu, 27 Jun 2013 16:37:36 -0400
+Message-ID: <m3obarguhi.fsf@carbon.jhcloos.org>
+MIME-Version: 1.0
+Content-Type: text/plain
+Subject: [Printing-architecture] cups svn
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>,
@@ -22,57 +21,21 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Till Kamppeter <till.kamppeter@gmail.com>
-Cc: printing-architecture@lists.linux-foundation.org, James Cloos <cloos@jhcloos.com>
+To: printing-architecture@lists.linux-foundation.org
 
-Till,
+I posted a tar of my svnsync copy of the cups repo at:
 
-Great news all around, thank you!
+  http://jhcloos.com/t/cups/cups-svnsync.tar.xz
 
+in case anyone wants to host it.
 
-On 2013-06-25, at 6:05 PM, Till Kamppeter <till.kamppeter@gmail.com> wrote:
+I synced the other http://svn.easysw.com/public/$FOO repos as well,
+and can upload tar(5)s of those, too, if desired.
 
-> On 06/20/2013 03:29 PM, Michael Sweet wrote:
->> James,
->> 
->> Please file a bug against the OpenPrinting filters:
->> 
->>    https://bugs.launchpad.net/ubuntu/+source/cups-filters
->> 
->> When submitting a PostScript file to a PostScript printer, the preferred filter should be pstops.  The PDF filters should only get involved for non-PostScript print jobs.
->> 
-> 
-> James has filed it as
-> 
-> https://bugs.linuxfoundation.org/show_bug.cgi?id=1138
-> 
-> and I have fixed it now in the BZR repo. Will be included in
-> cups-filters 1.0.35.
-> 
->> 
->> Till,
->> 
->> Can you update the OpenPrinting landing page to provide some common links near the top, including things like:
->> 
->>    Reporting Bugs
->>    Downloading the current version
->>    Documentation
->>    Mailing lists
->> 
->> Right now everything is pretty buried and I can't even say whether the link I've provided above is correct for reporting bugs...
->> 
-> 
-> Done:
-> 
-> https://www.linuxfoundation.org/collaborate/workgroups/openprinting/cups-filters
-> 
-> and linked from appropriate places on the front page
-> 
-> http://www.openprinting.org/
-> 
->   Till
-> 
+The tar.xz is about 100M, the repo expands to about 272M.
 
-_________________________________________________________
-Michael Sweet, Senior Printing System Engineer, PWG Chair
+They synced daily until servpath (and thus easysw) fell off the net.
 
+-JimC
+-- 
+James Cloos <cloos@jhcloos.com>         OpenPGP: 1024D/ED7DAEA6
