@@ -1,24 +1,18 @@
-Return-Path: <till.kamppeter@gmail.com>
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20120113;
-	h=message-id:date:from:user-agent:mime-version:to:subject:references
-	:in-reply-to:content-type:content-transfer-encoding;
-	bh=FsMaIVw4eMVR9DMooLJUbf8CQLX54T15Jg9av2+gm88=;
-	b=VyhEWSxmFjjOlOaZ2DM+K1Tj/ccTx9R9YDcpgKDR6v3WqYdmfamiGgJWpLYqK2zdBP
-	xd6Jq98Qqd5JLwCok1TgD03QBGSs2Y6G1mZMw4XqUvAaWTN3aFPAD+LBSaToEV8odJEY
-	07EkdKK4go8s4UZaysMUh9GpQp1mgZIbd+QXdrDpRiyY5wKRhC0Y233/vkk1oajmH76s
-	j0+gOHGituEfrahSci/aCkT4g+euOS2PAQ1ssZGqOgeEZgOPS5w4fKFtc8/i9iVKhjqE
-	Kx5tj+IMelrLVf/HeyMvxfJTcx8jluLNfDME0bDmdb7eRXpEcRIg0+G5y7CB+vV7Omx3
-	DmgQ==
-Message-ID: <51DDBC20.40807@gmail.com>
-Date: Wed, 10 Jul 2013 21:55:12 +0200
-From: Till Kamppeter <till.kamppeter@gmail.com>
-MIME-Version: 1.0
-References: <e395be80811270817n502ccd16wf6cc90f85364f5ae@mail.gmail.com>
-In-Reply-To: <e395be80811270817n502ccd16wf6cc90f85364f5ae@mail.gmail.com>
-Content-Type: text/plain; charset=UTF-8
-Content-Transfer-Encoding: 7bit
-Subject: [Printing-architecture] Last OP Meeting - Wed - 10 July 2013 - The
-	Recording
+Return-Path: <twaugh@redhat.com>
+Message-ID: <1373532534.14725.3.camel@rubik>
+From: Tim Waugh <twaugh@redhat.com>
+Date: Thu, 11 Jul 2013 09:48:54 +0100
+In-Reply-To: <FF2054C7-A4B4-4709-8267-D6D202DC0BCE@apple.com>
+References: <51DC8343.4020104@gmail.com>
+	<8CA7D32C-A551-482E-9F26-9C1909D74736@apple.com>
+	<843B55ED-9D7F-4ECD-B50B-272848E9649B@apple.com>
+	<51DD7DB2.4070808@gmail.com>
+	<FF2054C7-A4B4-4709-8267-D6D202DC0BCE@apple.com>
+Content-Type: multipart/signed; micalg="pgp-sha1";
+	protocol="application/pgp-signature"; 
+	boundary="=-ymUZeG18hA9iKcFQYrzD"
+Mime-Version: 1.0
+Subject: Re: [Printing-architecture] Options in /etc/cups/printers.conf
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>,
@@ -28,20 +22,45 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Open Printing <printing-architecture@lists.linux-foundation.org>, Printing-japan <printing-japan@lists.linux-foundation.org>
+To: Michael Sweet <msweet@apple.com>
+Cc: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>, Till Kamppeter <till.kamppeter@gmail.com>
 
-Hi,
 
-I have uploaded the recording of the last OpenPrinting meeting to the
-OpenPrinting server:
+--=-ymUZeG18hA9iKcFQYrzD
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
 
-http://www.openprinting.org/download/meetingnotes/op-telecons/OP-Meeting-20130710.mp3
+On Wed, 2013-07-10 at 11:47 -0400, Michael Sweet wrote:=20
+> Also, I now have an official GIT mirror of live SVN up at:
+>=20
+>     http://www.cups.org/cups.git
+>=20
+> I will be posting information on the download page shortly...
 
-In general, recorded meetings I will upload to
+This only has history starting from May this year.  Is there any plan to
+have a single git repository containing all of the SVN history, like the
+one I have at http://twaugh.fedorapeople.org/cups-avahi.git?
 
-http://www.openprinting.org/download/meetingnotes/
+Tim.
+*/
 
-   Till
 
-P. S.: The MP3 is 9 MB long, 27 minutes of talking.
+--=-ymUZeG18hA9iKcFQYrzD
+Content-Type: application/pgp-signature; name="signature.asc"
+Content-Description: This is a digitally signed message part
+Content-Transfer-Encoding: 7bit
+
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.13 (GNU/Linux)
+
+iQEVAwUAUd5xdnlVEo2joavTAQJptQgAnk+TA4D5fA6KHSQUx7j4+/v61GErCgQH
+4RrV37y5wbr8Gn8nF2e1l25zRjA56P8qTXO8oTsDeZ57dTpeg50QWI8I6viKAbLq
+mlGXXL28IyyxrhIVLggfG10XZ3DZfnF3YsyEmgl0/6qURdxf/+AqUzIzgrpKlqC7
+Imnn5QtWqpyvo+NynmhbCnVqtDTFFwVyV31xfTduZVYylSS322C0M79poxmAa4YI
+KrlC12GBeBV4g3KmjvsFL2C0omlk2Em9pRxVdQZGCQ/xI/RjtcHg+0w9+rbhsBue
++ECXVqKPgFVY4mMpzn4WRslqpOZNzBJJudgOoLBpNrnmpqRbzDGwwQ==
+=QMil
+-----END PGP SIGNATURE-----
+
+--=-ymUZeG18hA9iKcFQYrzD--
 
