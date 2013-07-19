@@ -1,17 +1,24 @@
-Return-Path: <msweet@apple.com>
-MIME-version: 1.0
-Content-transfer-encoding: 7BIT
-Content-type: text/plain; CHARSET=US-ASCII
-From: Michael Sweet <msweet@apple.com>
-In-reply-to: <51E858BE.8090009@gmail.com>
-Date: Thu, 18 Jul 2013 19:44:26 -0400
-Message-id: <28BC5C41-0570-40E3-96B8-1B8BD672DD14@apple.com>
-References: <D87733EE-8A2E-4F85-9978-715E38D8A22F@apple.com>
-	<51E82B1D.7070007@gmail.com>
-	<9CB486A0-27B4-4A4C-8017-05A9DD56C978@apple.com>
-	<51E858BE.8090009@gmail.com>
-Subject: Re: [Printing-architecture] RFC: Patch for (libusb-based) USB
- backend for quirks files
+Return-Path: <till.kamppeter@gmail.com>
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20120113;
+	h=message-id:date:from:user-agent:mime-version:to:cc:subject
+	:references:in-reply-to:content-type:content-transfer-encoding;
+	bh=oNMlfBQpa3lnq23RXQ9wrnWIASj1Rqlvh52PbVOZcFo=;
+	b=fDeeiYhXEPnHOfbyQT8pDdg2Yc2Q2D47P0Qy6eXHrLSPWtZaeVv/LcEmrmLVpbVrws
+	D0k4v6dAhmiatEC1/e3KCzppJxXN1qH13clrky+tDal6HbonRKZxMQyFUPqCSoILFtNC
+	y17jkcklIDvWQEVnsfBm0J2c5efNux/pKdMqOA4OY5zfwO+jGrFYRi1qLt4Lvpt3nEcA
+	PXfAobBqVRwbyb4xT3xMhSAnMw/zbSvceoXDU1DkaKxKbMFj1IORCyD/rksP7tu0T/rq
+	azDItiz0GyK9kB+4On8MqtrbWiAcV+irzK4cXUNuTBYx+aWriCKZJxBdYt7mfTG25woK
+	jW3g==
+Message-ID: <51E96197.1090606@gmail.com>
+Date: Fri, 19 Jul 2013 17:56:07 +0200
+From: Till Kamppeter <till.kamppeter@gmail.com>
+MIME-Version: 1.0
+References: <1373588081.84939.YahooMailBasic@web172301.mail.ir2.yahoo.com>
+In-Reply-To: <1373588081.84939.YahooMailBasic@web172301.mail.ir2.yahoo.com>
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 7bit
+Subject: Re: [Printing-architecture] Fujixerox M205B linux driver Re: Fwd:
+ Vendor WIN32 (or Mac OS X) drivers made available to Linux applications
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>,
@@ -21,61 +28,63 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Till Kamppeter <till.kamppeter@gmail.com>
-Cc: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>, Gutenprint Mailing List <gimp-print-devel@lists.sourceforge.net>
+To: htl10@users.sourceforge.net
+Cc: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>, Discussion for the driver API subgroup <printing-driver@lists.linux-foundation.org>, Tim Tsang <tsang.tim@gmail.com>
 
-Till,
+Hin-Tak, for me it looks like that Tim does not only want to get his
+printer working but he wants to work on the old project idea of creating
+something ndiswrapper like for using Windows printer drivers under Linux.
 
-On 2013-07-18, at 5:06 PM, Till Kamppeter <till.kamppeter@gmail.com> wrote:
-> On 07/18/2013 09:05 PM, Michael Sweet wrote:
->> Till,
->> 
->> On 2013-07-18, at 1:51 PM, Till Kamppeter <till.kamppeter@gmail.com> wrote:
->>> ...
->>> What I would like to see is the possibility to have quirk rules (or at
->>> least blacklisting) also for other backends.
->> 
->> Such as?
->> 
+   Till
+
+
+On 07/12/2013 02:14 AM, Hin-Tak Leung wrote:
+> In general, private one-to-one e-mails of this nature from strangers are quite unwelcomed. Please always CC a relevant mailing list (or two). Also the linux foundation listing is for GSoC and any communication should involve one of the open-source communities, and it is for exactly that reason that private one-to-one e-mails are unwelcomed.
 > 
-> There printers claiming to support IPP but they do not work with the
-> "ipp" backend. If one would blacklist them for the IPP backend, they
-> would automatically get used with the "socket" or "lpd" backend.
-
-Not sure how we would do that automatically; unless you are using Bonjour to find the printers, there is no way for the IPP or SNMP backends to know whether they can redirect to LPD or socket.  And for Bonjour the priority in the TXT record can already be used to prefer LPD or socket (most older printers with buggy IPP stacks do anyways)
-
->>> Also the prossibility to
->>> prioritize backends via a directory of files would be great.
->> 
->> The problem with priorities are:
->> 
->> 1. How do you identify identical devices?
+> A quick 5-minute examination of the windows driver of the Fujixerox M205B tells me that its B/W printing is jbig-based, within a PJL wrapper.
+> Most of the interrogation of the printer status is by PJL commands like the HP printers, but actual printing does not work like HP. Somebody who has jbig related programming experience may be able to get some sort of linux print filter working reasonably quickly.
 > 
-> For USB by the device ID and the serial number, for network by
-> determining the printer's IP address. We assume that in production
-> environments no printer is connected by network and by USB at the same time.
-
-In order to get the printer's IP addresses (yes, multiple ones) you need to resolve it. For Bonjour that means waking the printer up (or all printers, in the case of discovery). For obvious reasons I (and all of Apple) is against that kind of solution.
-
->> 2. Whose priority wins? (the user's priority, the manufacturer's priority, the developer's priority, the system's priority, the site's priority?)
->> 
+> --------------------------------------------
+> On Fri, 12/7/13, Hin-Tak Leung <hintak.leung@gmail.com> wrote:
 > 
-> Default would be the degree of sophistication (or usefulness?) of the
-> backends: IPP > Socket > LPD. Ech backend gets a priority index, for
-> example 300 for IPP, 200 for Socket, and 100 for LPD. Quirk rule files
-> could for given printer models blacklist them for a backend or change
-> the priority index for a backend. Third-party backends could place
-> themselves in the default priority order by having their own priority index.
-
-Really, I don't want to encourage more network backends for special protocols that vendors think they need.  I'd much rather see any special backends (should they actually be needed) report special device IDs that can be used to match them to their corresponding driver.  And printers that need to use special protocols should not advertise support for any of the standard protocols since they obviously don't work.
-
-> Quirk rules could also activate workarounds for incompatible printers in
-> the IPP backend.
-
-Um, no.  I'm quite done adding workarounds for broken IPP implementations.  Every workaround makes it harder to maintain the backend, and in 1.6 I did a sweep and removed all but a couple of the most common and least costly to support.
-
-Moreover, most printers that support IPP also support firmware upgrades, so we can't have a simple quirks file approach to workaround bugs anyways - you'd need to know the firmware name/version (sometimes available via SNMP, hopefully available in the near future over IPP) as well as the make-and-model information.  The same can't be said for USB printers which is why I am OK with the quirks list.
-
-_________________________________________________________
-Michael Sweet, Senior Printing System Engineer, PWG Chair
+>  Subject: Fwd: Vendor WIN32 (or Mac OS X) drivers made available to Linux applications
+>  To: "Hin-Tak Leung" <htl10@users.sourceforge.net>
+>  Date: Friday, 12 July, 2013, 0:56
+>  
+>  
+>  
+>  ---------- Forwarded
+>  message ----------
+>  From: Tim Tsang
+>  <tsang.tim@gmail.com>
+>  
+>  Date: Thu, Feb 14, 2013 at 1:22 AM
+>  Subject: Vendor WIN32 (or Mac OS X) drivers made available
+>  to Linux applications
+> 
+>  
+>  
+>  Hi Hin Tak
+>  
+>  Good morning. I've found your contact
+>  information from linuxfoundation.org,
+>  and I would like to volunteer to make Win32 print drivers
+>  available to Linux applications.
+>  
+>  
+>  Please let me know how I can get started on it. I
+>  have a Fujixerox M205B printer which I would like to utilise
+>  in my Ubuntu environment. I like to use this opportunity to
+>  contribute both to the community and myself once this is
+>  done.
+>  
+>  
+>  Looking forward to your response
+>  Yours
+>  Tim Tsang
+>  
+>  
+> 
+> 
+> 
 
