@@ -1,24 +1,24 @@
-Return-Path: <msweet@apple.com>
-MIME-version: 1.0
-Content-transfer-encoding: 7BIT
-Content-type: text/plain; CHARSET=US-ASCII
-From: Michael Sweet <msweet@apple.com>
-In-reply-to: <51EFA853.8030501@redhat.com>
-Date: Wed, 24 Jul 2013 07:39:37 -0400
-Message-id: <DAF84F05-8CAC-4D00-9B6C-3EF4B0A99D9B@apple.com>
-References: <51ED6BDA.2080206@redhat.com> <51ED6CC4.1040501@redhat.com>
-	<0C413B5E-6225-4CF7-BF17-8E164B520D7E@apple.com>
-	<1374570518.4832.2.camel@rubik>
-	<C01D5828-4CCD-4A70-8549-B976AE80DF4C@apple.com>
-	<51EE90D7.9070607@gmail.com>
-	<AB1EE3DA-E24E-489D-B1A8-FED07237D651@apple.com>
-	<51EEBF83.2090006@gmail.com>
-	<14E6A268-7B57-4F95-9384-647E0A8D3C47@apple.com>
-	<51EECDF8.9070209@gmail.com>
-	<000AC9EF-2754-4A7D-805B-4832B50EB57A@apple.com>
-	<51EEECD8.4030002@gmail.com> <51EFA853.8030501@redhat.com>
-Subject: Re: [Printing-architecture] printers.conf frequently gets truncated
- to zero length after unclean shutdowns
+Return-Path: <till.kamppeter@gmail.com>
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20120113;
+	h=message-id:date:from:user-agent:mime-version:to:subject:references
+	:in-reply-to:content-type:content-transfer-encoding;
+	bh=LCRX0LWxtJEuKz3z+VOUDk975Hb2PRQNXyUjn9MSuSg=;
+	b=B0PdacqZOqQlkycZrpvkRH+oZsQaIDKfpQRVjigkvVlMx+4i9zWfWl1Vgxq+HvP0Ol
+	WJRvxbHjUJard4xUPFd/fdbRj5ksnAXyHhVeqr7totx9bFeoQtk1LR3kLD7kciLOs09H
+	4HeU+gBAv4tMGDxcviluV8epEyLL5UyGtSi2AQ7MbAF0S6LedFxpVKTxWHDdDiEknKnU
+	8R0ZlcRLsNkuYFuiTrncTUPMXd4fWndHGYZNWhjEWcZr0AwQrJ0ZGtsk1vj+aFobpQty
+	kPtVjeH3vE1Doe1D2cncsu/K5XbHwTXWw/ympKT+fnEpmbCtTYcnlmQk1kGYLpDMe2Lk
+	ideQ==
+Message-ID: <51F13A55.9060405@gmail.com>
+Date: Thu, 25 Jul 2013 16:46:45 +0200
+From: Till Kamppeter <till.kamppeter@gmail.com>
+MIME-Version: 1.0
+References: <51BA5B58.3080208@gmail.com>
+In-Reply-To: <51BA5B58.3080208@gmail.com>
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 7bit
+Subject: Re: [Printing-architecture] Concept for PPD-less CUPS-spooled
+ printing on Bonjour-discovered network printers
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>,
@@ -28,39 +28,167 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Jiri Popelka <jpopelka@redhat.com>
-Cc: printing-architecture@lists.linux-foundation.org, Steve Bergman <sbergman27@gmail.com>, Eric Sandeen <sandeen@redhat.com>, Till Kamppeter <till.kamppeter@gmail.com>
+To: Open Printing <printing-architecture@lists.linux-foundation.org>, Marek Kasik <mkasik@redhat.com>, Michael Sweet <msweet@apple.com>
 
-Jiri,
+Some time ago, I have presented my concept for PPD-less printing on
+Bonjour-detected IPP printers.
 
-Yes, that would be the alternative, although we need to be careful - delete the last printer and then do a clean shutdown.  If we don't do anything about it, starting up cupsd might load a previous printers.conf file with old printer definitions but without the associates PPDs so you'd have a bunch of "zombie" raw queues...
+Now I am working on implementing this. I have made gstoraster working
+PPD-less, by getting page size, resolution, color space, duplex, ... via
+the 5th command line argument (sent from the client along with the job
+as IPP attributes, with the same option and choice names as reported by
+the printer via IPP).
 
-Assuming that calling fsync will fix the truncated file issue on Linux (at least), let's focus on *that* and see where it takes us.
+But I am running into the following problem:
 
-And just to make sure this problem goes away for good in the future, I've filed the following bug to track changes in cupsd to how we persist printer/class configuration:
+The document to be printed has varying page sizes, so the one size
+supplied as IPP attribute is only a default value for the case that the
+sizes are not specified in the input document. Currently, the "cups"
+output device of Ghostscript compares each page of the document with the
+page sizes listed in the PPD (Ghostscript reads the PPD for that) and
+selects the best-fitting page size from the PPD.
 
-    <rdar://problem/14532427> cups.org: CUPS 2.0 - separate configuration from state and persist configuration across crashes
+Now without having a PPD the list of the supported/available paper sizes
+on the printer can only be requested from the printer via IPP. The
+client has already done this to display the available options in the
+print dialog and to know the printer capabilities for generating the job
+PDF file correctly.Now there are three possibilities:
 
-My goal (and I've added corresponding comments to the bug) is to move away from the monolithic printers.conf and classes.conf files to separate configuration and state files.  Not only will this minimize the likelihood of a crash causing complete loss of all print queues, but it will also allow us the luxury of using fsync (and whatever other platform-specific incantation) to ensure that the infrequently-changing configuration bits are carefully persisted.  I haven't made any specific implementation decisions yet (do we use a database engine like SQLite, separate files per queue, file versioning, etc.) but I *do* want to speed up cupsd startup with large numbers of queues and address transient queues for IPP Everywhere/AirPrint.
+1. The client sends only pages with sizes valid for the printer, so that
+the server does not need to check. This does not allow simply sending an
+arbitrary PDF file at CUPS. A PDF viewer has to prepare the print jobs
+appropriately.
+
+2. The client has to send a full list of the supported/available paper
+sizes (name, size, tray, ...) to the server along with the job, so that
+the server can use this list instead of a PPD file. In this case, what
+is the syntax of the key=value pairs which I have to send as IPP
+attributes together with the job?
+
+3. The pdftoippprinter filter requests the printer's capabilities from
+the printer by itselfaccessing the printer via IPP. Should a filter do
+that should it do it somehow through the IPP backend of CUPS? Is it
+possible to do this through the IPP backend of CUPS?
+
+WDYT? How should one proceed here?
+
+(1) is probably the easiest for the server side, (3) would allow to let
+arbirary clients to send jobs, even clients which do not poll
+capabilities from the printer and send no or only generic attributes as
+the filter could set decent defaults in such a case.
+
+   Till
 
 
-On 2013-07-24, at 6:11 AM, Jiri Popelka <jpopelka@redhat.com> wrote:
-
-> As I mentioned in the initial mail, I've had a patch
-> https://bugzilla.redhat.com/attachment.cgi?id=776945
-> which makes cupsdOpenConfFile() read filename.O in case filename is truncated to zero.
-> Previously the filename.O was read only if filename had not existed.
-> Wouldn't that be an alternative ?
+On 06/14/2013 01:52 AM, Till Kamppeter wrote:
+> Hi,
 > 
-> --
-> Jiri
+> after some discussion in the "Some suggestions for the DNS-SD (Bonjour)
+> printer support in the dialog" thread I have now found a concept for
+> printing on Bonjour-discovered IPP network printers.
 > 
-> On 07/23/2013 10:51 PM, Till Kamppeter wrote:
->> As a measure of automatic recovery one could perhaps let the startup
->> script of CUPS check whether printers.conf is zero length and if so,
->> copy printers.conf.O to printers.conf.
+> Requirements are:
 > 
-
-_________________________________________________________
-Michael Sweet, Senior Printing System Engineer, PWG Chair
+>  - Printer should be listed in the print dialog
+>  - Printer in power-save mode should not be woken up by solely
+>     o Entering the (W)LAN with a running client device
+>     o Booting a client device
+>     o Logging in on a client device
+>     o Opening the print dialog from any application
+>  - Printer capabilities, especially paper sizes should be shown at
+>    least when the user selects the printer in the print dialog
+>  - Jobs should be sent with the printer capabilities taken into account
+>    and accompanied by user-selected settings
+>  - Jobs should be spooled locally with the standard methods of CUPS, so
+>    that jobs, also of different users, get correctly queued, and
+>    already existing job managers can be used to handle (kill, move,
+>    ...) the jobs.
+>  - CUPS 1.6.x and newer should be supported without patching CUPS
+> 
+> I have found a concept which can be implemented in cups-filters and the
+> print dialogs and can be applied immediately in the next release of all
+> current Linux distributions (not needing to wait for feature additions
+> to CUPS):
+> 
+> Requirement is that all jobs are sent in PDF and only IPP printers which
+> do Bonjour broadcasting and understand at least one of the common
+> standard languages PDF, PostScript, PWG Raster (= IPP Everywhere), PCL
+> XL, PCL 5c/e.
+> 
+> Central part is the pdftoippprinter wrappper filter. This filter has the
+> following properties:
+> 
+>  - Input format is only PDF
+>  - If the pdftopdf filter is installed, pdftoippprinter passes the
+>    input data through pdftopdf first, passing on the options of the 5th
+>    command line argument, this way number-up, page-ranges, ... are
+>    supported, but also low-footprint configurations without pdftopdf
+>    are possible.
+>  - Following the option "output-format" the following filters to
+>    generate the output format are selected:
+>     o output-format=application/pdf: No additional filter
+>     o output-format=application/postscript: pdftops
+>     o output-format=image/pwg-raster: (pdf/gs)toraster + rastertopwg
+>     o output-format=application/vnd.cups-pclxl: gstopxl
+>     o output-format=application/vnd.cups-pcl:
+>       (pdf/gs)toraster + rastertopclx/hpcups
+>   Presence of the filters for the selected format is checked and path
+>   only executed if filters are present.
+> - Other standard-IPP/PWG options are accepted to control common
+>   settings like paper size, tray, resolution, quality, color/gray, ...
+> 
+> For each discovered IPP printer (which is not a non-raw remote CUPS
+> queue) cups-browsed auto-creates a print queue with pdftoippprinter as
+> System V interface script (the command line syntax of CUPS filters and
+> System V interface scripts is the same). This way we can make a CUPS
+> queue with filtering but without need of a PPD, as a PPD requires the
+> definition of at least one paper size and as we cannot IPP-poll the
+> printer (waking it up) we do not know its paper sizes. The
+> "output-format" option can already be set on queue creation as the
+> printer's input formats are listed in the text record. so queue creation
+> will be done with the equivalent of
+> 
+> lpadmin -p ... -E -v ... -i /usr/lib/cups/filter/pdftoippprinter
+>   -o output-format-default=image/pwg-raster
+> 
+> On most printers A4/Letter printing would even already work on such a
+> queue by sending a PDF file without any option settings.
+> 
+> The print dialog lists this queue (and it would also discover this
+> printer via Bonjour) and the user selects it. The dialog queries the
+> printer's capabilities via IPP from the printer (not from the local
+> CUPS) at the first of the following events:
+> 
+>  - The dialog wants to display a preview
+>  - The user makes the options screen getting displayed
+>  - The user clicks "Print".
+> 
+> If none of the events occurs, for example if the user clicks "Cancel" or
+> selects another printer, the printer does not get queried.
+> 
+> If the user clicks "Print", the user-selected settings (or the defaults
+> if the user did not change anything) are sent as IPP attributes
+> (options) in standard IPP/PWG format along with the PDF job to the CUPS
+> queue. The pdftoippprinter filter runs the filter chain appropriate to
+> the printer's input format and applies the options (getting them through
+> the 5th command line argument).
+> 
+> Notes for Linux distros:
+> 
+> - Security frameworks like AppArmor or SELinux can block System V
+>   interface scripts as this concept was never used in distros.
+>   Execution of files in /etc/cups/interfaces/ must get allowed (and
+>   this directory must be created). For quick tests in Debian or Ubuntu
+>   run "sudo aa-complain cupsd" to deactivate AppArmor for CUPS.
+> - Creating a queue with an interface script copies the script into
+>   a config file (all under /etc/ is considered config file) and so an
+>   update of the cups-filters package improving or fixing pdftoippprinter
+>   would make existing queues missing the fix. Here I could create a
+>   trivial wrapper which does nothing else than calling the real
+>   pdftoippprinter filter and create all queues with this wrapper.
+> 
+> WDYT?
+> 
+>    Till
+> 
 
