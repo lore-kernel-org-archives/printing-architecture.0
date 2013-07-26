@@ -1,24 +1,22 @@
-Return-Path: <till.kamppeter@gmail.com>
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20120113;
-	h=message-id:date:from:user-agent:mime-version:to:subject:references
-	:in-reply-to:content-type:content-transfer-encoding;
-	bh=LCRX0LWxtJEuKz3z+VOUDk975Hb2PRQNXyUjn9MSuSg=;
-	b=B0PdacqZOqQlkycZrpvkRH+oZsQaIDKfpQRVjigkvVlMx+4i9zWfWl1Vgxq+HvP0Ol
-	WJRvxbHjUJard4xUPFd/fdbRj5ksnAXyHhVeqr7totx9bFeoQtk1LR3kLD7kciLOs09H
-	4HeU+gBAv4tMGDxcviluV8epEyLL5UyGtSi2AQ7MbAF0S6LedFxpVKTxWHDdDiEknKnU
-	8R0ZlcRLsNkuYFuiTrncTUPMXd4fWndHGYZNWhjEWcZr0AwQrJ0ZGtsk1vj+aFobpQty
-	kPtVjeH3vE1Doe1D2cncsu/K5XbHwTXWw/ympKT+fnEpmbCtTYcnlmQk1kGYLpDMe2Lk
-	ideQ==
-Message-ID: <51F13A55.9060405@gmail.com>
-Date: Thu, 25 Jul 2013 16:46:45 +0200
-From: Till Kamppeter <till.kamppeter@gmail.com>
-MIME-Version: 1.0
-References: <51BA5B58.3080208@gmail.com>
-In-Reply-To: <51BA5B58.3080208@gmail.com>
-Content-Type: text/plain; charset=UTF-8
-Content-Transfer-Encoding: 7bit
-Subject: Re: [Printing-architecture] Concept for PPD-less CUPS-spooled
- printing on Bonjour-discovered network printers
+Return-Path: <msweet@apple.com>
+MIME-version: 1.0
+Content-type: multipart/mixed; boundary="Boundary_(ID_uQ7ztIiNLv/DjKaJPl5NzA)"
+From: Michael Sweet <msweet@apple.com>
+In-reply-to: <000AC9EF-2754-4A7D-805B-4832B50EB57A@apple.com>
+Date: Fri, 26 Jul 2013 17:36:12 -0400
+Message-id: <8F0DB4FE-3641-4495-A918-5A50918F158D@apple.com>
+References: <51ED6BDA.2080206@redhat.com> <51ED6CC4.1040501@redhat.com>
+	<0C413B5E-6225-4CF7-BF17-8E164B520D7E@apple.com>
+	<1374570518.4832.2.camel@rubik>
+	<C01D5828-4CCD-4A70-8549-B976AE80DF4C@apple.com>
+	<51EE90D7.9070607@gmail.com>
+	<AB1EE3DA-E24E-489D-B1A8-FED07237D651@apple.com>
+	<51EEBF83.2090006@gmail.com>
+	<14E6A268-7B57-4F95-9384-647E0A8D3C47@apple.com>
+	<51EECDF8.9070209@gmail.com>
+	<000AC9EF-2754-4A7D-805B-4832B50EB57A@apple.com>
+Subject: Re: [Printing-architecture] printers.conf frequently gets truncated
+ to zero length after unclean shutdowns
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>,
@@ -28,167 +26,194 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Open Printing <printing-architecture@lists.linux-foundation.org>, Marek Kasik <mkasik@redhat.com>, Michael Sweet <msweet@apple.com>
-
-Some time ago, I have presented my concept for PPD-less printing on
-Bonjour-detected IPP printers.
-
-Now I am working on implementing this. I have made gstoraster working
-PPD-less, by getting page size, resolution, color space, duplex, ... via
-the 5th command line argument (sent from the client along with the job
-as IPP attributes, with the same option and choice names as reported by
-the printer via IPP).
-
-But I am running into the following problem:
-
-The document to be printed has varying page sizes, so the one size
-supplied as IPP attribute is only a default value for the case that the
-sizes are not specified in the input document. Currently, the "cups"
-output device of Ghostscript compares each page of the document with the
-page sizes listed in the PPD (Ghostscript reads the PPD for that) and
-selects the best-fitting page size from the PPD.
-
-Now without having a PPD the list of the supported/available paper sizes
-on the printer can only be requested from the printer via IPP. The
-client has already done this to display the available options in the
-print dialog and to know the printer capabilities for generating the job
-PDF file correctly.Now there are three possibilities:
-
-1. The client sends only pages with sizes valid for the printer, so that
-the server does not need to check. This does not allow simply sending an
-arbitrary PDF file at CUPS. A PDF viewer has to prepare the print jobs
-appropriately.
-
-2. The client has to send a full list of the supported/available paper
-sizes (name, size, tray, ...) to the server along with the job, so that
-the server can use this list instead of a PPD file. In this case, what
-is the syntax of the key=value pairs which I have to send as IPP
-attributes together with the job?
-
-3. The pdftoippprinter filter requests the printer's capabilities from
-the printer by itselfaccessing the printer via IPP. Should a filter do
-that should it do it somehow through the IPP backend of CUPS? Is it
-possible to do this through the IPP backend of CUPS?
-
-WDYT? How should one proceed here?
-
-(1) is probably the easiest for the server side, (3) would allow to let
-arbirary clients to send jobs, even clients which do not poll
-capabilities from the printer and send no or only generic attributes as
-the filter could set decent defaults in such a case.
-
-   Till
+To: Steve Bergman <sbergman27@gmail.com>
+Cc: Eric Sandeen <sandeen@redhat.com>, "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>
 
 
-On 06/14/2013 01:52 AM, Till Kamppeter wrote:
-> Hi,
+--Boundary_(ID_uQ7ztIiNLv/DjKaJPl5NzA)
+Content-type: text/plain; CHARSET=US-ASCII
+Content-transfer-encoding: 7BIT
+
+All,
+
+Here is the proposed change that adds a "SyncOnClose" directive to the cups-files.conf file:
+
+
+--Boundary_(ID_uQ7ztIiNLv/DjKaJPl5NzA)
+Content-type: application/octet-stream; name=rdar14523043.patch
+Content-transfer-encoding: 7bit
+Content-disposition: attachment; filename=rdar14523043.patch
+
+Index: conf/cups-files.conf.in
+===================================================================
+--- conf/cups-files.conf.in	(revision 11192)
++++ conf/cups-files.conf.in	(working copy)
+@@ -8,6 +8,9 @@
+ # List of events that are considered fatal errors for the scheduler...
+ #FatalErrors @CUPS_FATAL_ERRORS@
+
++# Do we call fsync() after writing configuration or status files?
++#SyncOnClose No
++
+ # Default user and group for filters/backends/helper programs; this cannot be
+ # any user or group that resolves to ID 0 for security reasons...
+ #User @CUPS_USER@
+Index: doc/help/ref-cups-files-conf.html.in
+===================================================================
+--- doc/help/ref-cups-files-conf.html.in	(revision 11192)
++++ doc/help/ref-cups-files-conf.html.in	(working copy)
+@@ -429,6 +429,31 @@
+ default server directory is <VAR>/etc/cups</VAR>.</P>
+
+
++<H2 CLASS="title"><SPAN CLASS="info">CUPS 1.6.4</SPAN><A NAME="SyncOnClose">SyncOnClose</A></H2>
++
++<H3>Examples</H3>
++
++<PRE CLASS="command">
++SyncOnClose No
++SyncOnClose Yes
++</PRE>
++
++<H3>Description</H3>
++
++<P>The <CODE>SyncOnClose</CODE> directive determines whether the scheduler
++flushes changes to configuration and state files to disk. The default is
++<CODE>No</CODE> which relies on the operating system to schedule a suitable
++time to write changes to disk.</P>
++
++<BLOCKQUOTE><B>Note:</B>
++
++<P>Setting <CODE>SyncOnClose</CODE> to <CODE>Yes</CODE> makes the scheduler use the <CODE>fsync(2)</CODE> system call to write all changes to disk, however the drive or network file system server may still delay writing data to disk. Do not depend on this functionality to prevent data loss in the event of unexpected hardware failure.</P>
++
++<P>Enabling <CODE>SyncOnClose</CODE> may also cause the scheduler to periodically become unresponsive while it waits for changes to be written.</P>
++
++</BLOCKQUOTE>
++
++
+ <H2 CLASS="title"><A NAME="SystemGroup">SystemGroup</A></H2>
+
+ <H3>Examples</H3>
+Index: man/cups-files.conf.man.in
+===================================================================
+--- man/cups-files.conf.man.in	(revision 11192)
++++ man/cups-files.conf.man.in	(working copy)
+@@ -122,6 +122,12 @@
+ .br
+ Specifies the directory where the server configuration files can be found.
+ .TP 5
++SyncOnClose Yes
++.TP 5
++SyncOnClose No
++Specifies whether the scheduler calls \fIfsync(2)\fR after writing configuration
++or state files. The default is No.
++.TP 5
+ SystemGroup group-name [group-name ...]
+ .br
+ Specifies the group(s) to use for System class authentication.
+Index: scheduler/conf.c
+===================================================================
+--- scheduler/conf.c	(revision 11192)
++++ scheduler/conf.c	(working copy)
+@@ -174,6 +174,7 @@
+   { "ServerRoot",		&ServerRoot,		CUPSD_VARTYPE_PATHNAME },
+   { "SMBConfigFile",		&SMBConfigFile,		CUPSD_VARTYPE_STRING },
+   { "StateDir",			&StateDir,		CUPSD_VARTYPE_STRING },
++  { "SyncOnClose",		&SyncOnClose,		CUPSD_VARTYPE_BOOLEAN },
+ #ifdef HAVE_AUTHORIZATION_H
+   { "SystemGroupAuthKey",	&SystemGroupAuthKey,	CUPSD_VARTYPE_STRING },
+ #endif /* HAVE_AUTHORIZATION_H */
+@@ -734,6 +735,7 @@
+   ReloadTimeout	           = DEFAULT_KEEPALIVE;
+   RootCertDuration         = 300;
+   StrictConformance        = FALSE;
++  SyncOnClose              = FALSE;
+   Timeout                  = DEFAULT_TIMEOUT;
+   WebInterface             = CUPS_DEFAULT_WEBIF;
+
+Index: scheduler/conf.h
+===================================================================
+--- scheduler/conf.h	(revision 11192)
++++ scheduler/conf.h	(working copy)
+@@ -172,6 +172,8 @@
+ 					/* Which errors are fatal? */
+ 			StrictConformance	VALUE(FALSE),
+ 					/* Require strict IPP conformance? */
++			SyncOnClose		VALUE(FALSE),
++					/* Call fsync() when closing files? */
+ 			LogFilePerm		VALUE(0644);
+ 					/* Permissions for log files */
+ VAR cupsd_loglevel_t	LogLevel		VALUE(CUPSD_LOG_WARN);
+Index: scheduler/file.c
+===================================================================
+--- scheduler/file.c	(revision 11192)
++++ scheduler/file.c	(working copy)
+@@ -109,6 +109,29 @@
+
+
+  /*
++  * Synchronize changes to disk if SyncOnClose is enabled.
++  */
++
++  if (SyncOnClose)
++  {
++    if (cupsFileFlush(fp))
++    {
++      cupsdLogMessage(CUPSD_LOG_ERROR, "Unable to write changes to \"%s\": %s",
++		      filename, strerror(errno));
++      cupsFileClose(fp);
++      return (-1);
++    }
++
++    if (fsync(cupsFileNumber(fp)))
++    {
++      cupsdLogMessage(CUPSD_LOG_ERROR, "Unable to sync changes to \"%s\": %s",
++		      filename, strerror(errno));
++      cupsFileClose(fp);
++      return (-1);
++    }
++  }
++
++ /*
+   * First close the file...
+   */
+
+
+--Boundary_(ID_uQ7ztIiNLv/DjKaJPl5NzA)
+Content-type: text/plain; CHARSET=US-ASCII
+Content-transfer-encoding: 7BIT
+
+
+
+As I mentioned before the default is off (SyncOnClose No), and I included a big disclaimer on its use in the HTML documentation.
+
+Let me know if you have any feedback - this will be included in CUPS 1.6.4 and 1.7.0.
+
+
+On Jul 23, 2013, at 3:01 PM, Michael Sweet <msweet@apple.com> wrote:
+
+> I can make sure that the changes apply cleanly to 1.6.x and are included in the final 1.6.x release (1.6.4).  Beyond that, yes, you'll need to coordinate with your distro of choice or edit and compile yourself.
 > 
-> after some discussion in the "Some suggestions for the DNS-SD (Bonjour)
-> printer support in the dialog" thread I have now found a concept for
-> printing on Bonjour-discovered IPP network printers.
 > 
-> Requirements are:
+> On 2013-07-23, at 2:39 PM, Steve Bergman <sbergman27@gmail.com> wrote:
 > 
->  - Printer should be listed in the print dialog
->  - Printer in power-save mode should not be woken up by solely
->     o Entering the (W)LAN with a running client device
->     o Booting a client device
->     o Logging in on a client device
->     o Opening the print dialog from any application
->  - Printer capabilities, especially paper sizes should be shown at
->    least when the user selects the printer in the print dialog
->  - Jobs should be sent with the printer capabilities taken into account
->    and accompanied by user-selected settings
->  - Jobs should be spooled locally with the standard methods of CUPS, so
->    that jobs, also of different users, get correctly queued, and
->    already existing job managers can be used to handle (kill, move,
->    ...) the jobs.
->  - CUPS 1.6.x and newer should be supported without patching CUPS
+>> On 07/23/2013 01:16 PM, Michael Sweet wrote:
+>>> In this case the unrealistic expectation is that if you pull the plug on a running system that you won't lose any data.  Systems that offer that level of assurance are designed accordingly and generally include some form of backup power that will allow pending writes to complete.
+>> 
+>> That flies in the face of the 12 years of experience I have with the same workloads running under ext3. And running under ext4/delalloc or xfs, cups should be able to do even better for both performance and reliability if it does things right.
+>> 
+>> But that's all just spilled milk over the dam now. Most all current Unix/Linux filesystems now require fsync in order to provide sane integrity guarantees. That's just a fact of life that we've all got to live with. If offering a fix in the next major CUPS release is the best you're willing to do, then it is, at least, better than nothing at all. Thank you, at least, for that much.
+>> 
+>> This moves the focus to convincing the CUPS package maintainers of existing distros to patch their pre-1.7 versions with the necessary functionality. Which is kind of where I started. So back to the RH Bugzilla thread...
+>> 
+>> -Steve
 > 
-> I have found a concept which can be implemented in cups-filters and the
-> print dialogs and can be applied immediately in the next release of all
-> current Linux distributions (not needing to wait for feature additions
-> to CUPS):
-> 
-> Requirement is that all jobs are sent in PDF and only IPP printers which
-> do Bonjour broadcasting and understand at least one of the common
-> standard languages PDF, PostScript, PWG Raster (= IPP Everywhere), PCL
-> XL, PCL 5c/e.
-> 
-> Central part is the pdftoippprinter wrappper filter. This filter has the
-> following properties:
-> 
->  - Input format is only PDF
->  - If the pdftopdf filter is installed, pdftoippprinter passes the
->    input data through pdftopdf first, passing on the options of the 5th
->    command line argument, this way number-up, page-ranges, ... are
->    supported, but also low-footprint configurations without pdftopdf
->    are possible.
->  - Following the option "output-format" the following filters to
->    generate the output format are selected:
->     o output-format=application/pdf: No additional filter
->     o output-format=application/postscript: pdftops
->     o output-format=image/pwg-raster: (pdf/gs)toraster + rastertopwg
->     o output-format=application/vnd.cups-pclxl: gstopxl
->     o output-format=application/vnd.cups-pcl:
->       (pdf/gs)toraster + rastertopclx/hpcups
->   Presence of the filters for the selected format is checked and path
->   only executed if filters are present.
-> - Other standard-IPP/PWG options are accepted to control common
->   settings like paper size, tray, resolution, quality, color/gray, ...
-> 
-> For each discovered IPP printer (which is not a non-raw remote CUPS
-> queue) cups-browsed auto-creates a print queue with pdftoippprinter as
-> System V interface script (the command line syntax of CUPS filters and
-> System V interface scripts is the same). This way we can make a CUPS
-> queue with filtering but without need of a PPD, as a PPD requires the
-> definition of at least one paper size and as we cannot IPP-poll the
-> printer (waking it up) we do not know its paper sizes. The
-> "output-format" option can already be set on queue creation as the
-> printer's input formats are listed in the text record. so queue creation
-> will be done with the equivalent of
-> 
-> lpadmin -p ... -E -v ... -i /usr/lib/cups/filter/pdftoippprinter
->   -o output-format-default=image/pwg-raster
-> 
-> On most printers A4/Letter printing would even already work on such a
-> queue by sending a PDF file without any option settings.
-> 
-> The print dialog lists this queue (and it would also discover this
-> printer via Bonjour) and the user selects it. The dialog queries the
-> printer's capabilities via IPP from the printer (not from the local
-> CUPS) at the first of the following events:
-> 
->  - The dialog wants to display a preview
->  - The user makes the options screen getting displayed
->  - The user clicks "Print".
-> 
-> If none of the events occurs, for example if the user clicks "Cancel" or
-> selects another printer, the printer does not get queried.
-> 
-> If the user clicks "Print", the user-selected settings (or the defaults
-> if the user did not change anything) are sent as IPP attributes
-> (options) in standard IPP/PWG format along with the PDF job to the CUPS
-> queue. The pdftoippprinter filter runs the filter chain appropriate to
-> the printer's input format and applies the options (getting them through
-> the 5th command line argument).
-> 
-> Notes for Linux distros:
-> 
-> - Security frameworks like AppArmor or SELinux can block System V
->   interface scripts as this concept was never used in distros.
->   Execution of files in /etc/cups/interfaces/ must get allowed (and
->   this directory must be created). For quick tests in Debian or Ubuntu
->   run "sudo aa-complain cupsd" to deactivate AppArmor for CUPS.
-> - Creating a queue with an interface script copies the script into
->   a config file (all under /etc/ is considered config file) and so an
->   update of the cups-filters package improving or fixing pdftoippprinter
->   would make existing queues missing the fix. Here I could create a
->   trivial wrapper which does nothing else than calling the real
->   pdftoippprinter filter and create all queues with this wrapper.
-> 
-> WDYT?
-> 
->    Till
+> _________________________________________________________
+> Michael Sweet, Senior Printing System Engineer, PWG Chair
 > 
 
+_________________________________________________________
+Michael Sweet, Senior Printing System Engineer, PWG Chair
+
+
+--Boundary_(ID_uQ7ztIiNLv/DjKaJPl5NzA)--
