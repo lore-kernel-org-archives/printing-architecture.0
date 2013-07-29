@@ -3,23 +3,12 @@ MIME-version: 1.0
 Content-transfer-encoding: 7BIT
 Content-type: text/plain; CHARSET=US-ASCII
 From: Michael Sweet <msweet@apple.com>
-In-reply-to: <51F2F05E.3000207@redhat.com>
-Date: Fri, 26 Jul 2013 18:10:24 -0400
-Message-id: <EF71AD3C-FAE9-4B96-BB61-2530227E1889@apple.com>
-References: <51ED6BDA.2080206@redhat.com> <51ED6CC4.1040501@redhat.com>
-	<0C413B5E-6225-4CF7-BF17-8E164B520D7E@apple.com>
-	<1374570518.4832.2.camel@rubik>
-	<C01D5828-4CCD-4A70-8549-B976AE80DF4C@apple.com>
-	<51EE90D7.9070607@gmail.com>
-	<AB1EE3DA-E24E-489D-B1A8-FED07237D651@apple.com>
-	<51EEBF83.2090006@gmail.com>
-	<14E6A268-7B57-4F95-9384-647E0A8D3C47@apple.com>
-	<51EECDF8.9070209@gmail.com>
-	<000AC9EF-2754-4A7D-805B-4832B50EB57A@apple.com>
-	<8F0DB4FE-3641-4495-A918-5A50918F158D@apple.com>
-	<51F2F05E.3000207@redhat.com>
-Subject: Re: [Printing-architecture] printers.conf frequently gets truncated
- to zero length after unclean shutdowns
+In-reply-to: <51F13A55.9060405@gmail.com>
+Date: Mon, 29 Jul 2013 10:25:13 -0400
+Message-id: <6A18C146-3FB8-4E02-89B9-6C5404C45F6C@apple.com>
+References: <51BA5B58.3080208@gmail.com> <51F13A55.9060405@gmail.com>
+Subject: Re: [Printing-architecture] Concept for PPD-less CUPS-spooled
+ printing on Bonjour-discovered network printers
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>,
@@ -29,17 +18,40 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Eric Sandeen <sandeen@redhat.com>
-Cc: Steve Bergman <sbergman27@gmail.com>, "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>
+To: Till Kamppeter <till.kamppeter@gmail.com>
+Cc: Open Printing <printing-architecture@lists.linux-foundation.org>, Marek Kasik <mkasik@redhat.com>
 
-Eric,
+Till,
 
-On Jul 26, 2013, at 5:55 PM, Eric Sandeen <sandeen@redhat.com> wrote:
+On 2013-07-25, at 10:46 AM, Till Kamppeter <till.kamppeter@gmail.com> wrote:
 > ...
-> Otherwise, this seems good.  The icing on the cake would be to fsync the parent dir after the renames are done...
+> 1. The client sends only pages with sizes valid for the printer, so that
+> the server does not need to check. This does not allow simply sending an
+> arbitrary PDF file at CUPS. A PDF viewer has to prepare the print jobs
+> appropriately.
 
+Generally speaking, this is the approach we take in Apple OS's, with arbitrary PDF files getting scaled/centered/rotated to the default media if any rasterization occurs.
 
-Yeah, but then we start getting into the really-OS-and-filesystem-specific code. I'm happy to incorporate Linux-specific code if you provide it, but I know for sure that a simple open+fsync+close of directories doesn't work in general - the only portable way I know of is sync(2), which is a sledgehammer...
+> 2. The client has to send a full list of the supported/available paper
+> sizes (name, size, tray, ...) to the server along with the job, so that
+> the server can use this list instead of a PPD file. In this case, what
+> is the syntax of the key=value pairs which I have to send as IPP
+> attributes together with the job?
+
+I don't see the client sending any printer capability information to the server with a job; it *might* provide a list of supported sizes (media-supported) or collections (media-col-database) when configuring a local queue, but in general I think it is better for the server to grab its own copy (as needed).
+
+For current CUPS the way you pass this configuration information is with a PPD file. Future versions of CUPS might adopt a different format, e.g. IPP attributes in a file.
+
+> 3. The pdftoippprinter filter requests the printer's capabilities from
+> the printer by itselfaccessing the printer via IPP. Should a filter do
+> that should it do it somehow through the IPP backend of CUPS? Is it
+> possible to do this through the IPP backend of CUPS?
+
+No.
+
+> WDYT? How should one proceed here?
+
+If you are printing through cupsd, you need a PPD.  If you are implementing some other kind of spooler, have the client pass the printer URI and default media size/color mode/type/resolution info.
 
 _________________________________________________________
 Michael Sweet, Senior Printing System Engineer, PWG Chair
