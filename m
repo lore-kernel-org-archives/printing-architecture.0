@@ -1,17 +1,22 @@
-Return-Path: <msweet@apple.com>
-MIME-version: 1.0
-Content-transfer-encoding: 7BIT
-Content-type: text/plain; CHARSET=US-ASCII
-From: Michael Sweet <msweet@apple.com>
-In-reply-to: <20130803011708.GA4773@shaftnet.org>
-Date: Mon, 05 Aug 2013 10:48:41 -0400
-Message-id: <3E79CFAC-56AE-4941-A48E-EBE1BBA2E871@apple.com>
-References: <D87733EE-8A2E-4F85-9978-715E38D8A22F@apple.com>
-	<20130801145448.GA10904@shaftnet.org>
-	<1F1FE64F-8ADB-45C4-89E7-687D4E6AD086@apple.com>
-	<20130803011708.GA4773@shaftnet.org>
-Subject: Re: [Printing-architecture] [Gimp-print-devel] RFC: Patch for
- (libusb-based) USB backend for quirks files
+Return-Path: <till.kamppeter@gmail.com>
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20120113;
+	h=message-id:date:from:user-agent:mime-version:to:subject
+	:content-type:content-transfer-encoding;
+	bh=OsfrDt0alsfVs04h/a7Lr0ji4v7wDvhHY/xypKvcU1c=;
+	b=vc1ne3tQt/lYHb4WMW8sWwU7xifL82s+o08tvSNa9wOup4ZfRHRuHR1rjwiRFiad1x
+	/jII7lM6BXCDKL8O7eKGAzlSdKH4KkuABqG5SPdnKgbr8bkuc8Znx4c7+W98MYTjVt8t
+	FZwtWTSmo6d+M5YfwQiozl1t8iC4V+0Ormypw62nntDmSy8D8qCrmT9X9lO8H09xpUxA
+	3D4vjl3Dle+xgyRogoB19eB8h4Y1bHX8BawXHXzf4+ODygUm5AT0xFo6V9xFyrelX3E0
+	/aiemkf01Pp/zfCFpcF33DSUHQI2QTndKZGiPc/Hp6+h9Z31FqIKTxw/TGrUSL3XEjyU
+	tGBQ==
+Message-ID: <52001C3B.8090602@gmail.com>
+Date: Mon, 05 Aug 2013 23:42:19 +0200
+From: Till Kamppeter <till.kamppeter@gmail.com>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8; format=flowed
+Content-Transfer-Encoding: 7bit
+Subject: [Printing-architecture] cups-browsed - What to do if client.conf
+	redirects to remote CUPS
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>,
@@ -21,38 +26,28 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: "Gutenprint (formerly Gimp-Print) printer driver development" <gimp-print-devel@lists.sourceforge.net>
-Cc: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>
+To: Open Printing <printing-architecture@lists.linux-foundation.org>, Michael Sweet <msweet@apple.com>
 
-Sorry, too much happening at the moment and I forgot that the USB quirks stuff is part of 1.6.4, not 1.6.3.  1.6.4 will be coming out "soon".
+Hi,
 
+cups-browsed works well browsing printer broadcasts from remote servers 
+and auto-adding local raw queues pointing to these printers as long as 
+CUPS clients are not redirected to remote servers via /etc/cups/client.conf.
 
-On 2013-08-02, at 9:17 PM, Solomon Peachy <pizza@shaftnet.org> wrote:
+If there is such a re-direction, cups-browsed does not make much sense, 
+as it cannot manipulate CUPS queues on a remote server. It can even 
+misbehave, as
 
-> On Thu, Aug 01, 2013 at 10:57:36AM -0400, Michael Sweet wrote:
->> The necessary changes are part of CUPS 1.6.3 and 1.7rc1 that were 
->> released on the 11th.
-> 
-> Either I am being more special than usual, or the necessary changes 
-> didn't make it into either of those releases.  Neither none seems to 
-> have support for an external usb quirks file, unless the committed code 
-> is radically different from the patch you posted here.
-> 
-> - Solomon
-> -- 
-> Solomon Peachy        		       pizza at shaftnet dot org
-> Delray Beach, FL                          ^^ (email/xmpp) ^^
-> Quidquid latine dictum sit, altum viditur.
-> ------------------------------------------------------------------------------
-> Get your SQL database under version control now!
-> Version control is standard for application code, but databases havent 
-> caught up. So what steps can you take to put your SQL databases under 
-> version control? Why should you start doing it? Read more to find out.
-> http://pubads.g.doubleclick.net/gampad/clk?id=49501711&iu=/4140/ostg.clktrk_______________________________________________
-> Gimp-print-devel mailing list
-> Gimp-print-devel@lists.sourceforge.net
-> https://lists.sourceforge.net/lists/listinfo/gimp-print-devel
+https://bugs.launchpad.net/ubuntu/+source/cups-filters/+bug/1207203
 
-_________________________________________________________
-Michael Sweet, Senior Printing System Engineer, PWG Chair
+shows.
 
+What I would like to do is to make cups-browsed always connecting to the 
+local CUPS daemon, ignoring any client.conf setting. Is this easily 
+possible?
+
+Or should I better simply on the first failed attempt to add or remove a 
+print queue make cups-browsed shutting down and enter a stand-by loop 
+until the cupsServer() output changes?
+
+    Till
