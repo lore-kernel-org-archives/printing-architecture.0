@@ -1,20 +1,14 @@
-Return-Path: <korobkin@gmail.com>
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20120113;
-	h=mime-version:sender:from:date:message-id:subject:to:content-type;
-	bh=icxfv9qTpoi7kdAWG9gdF65VGbHtQvrjNVy2rhbwvoU=;
-	b=BNuMpcPjHwA9QKjcr56iBxXqRsoZaba4sfEXqfvou39X5Ajmv4lSQas1Bf+XhYaPiL
-	zxO8T+3Vpk4/2h/fvjryQNfdSCeYH/4y3iEG8Hj2X33yTdznEGDaY7kNWQxWlT7vLkV8
-	2XPpL246Zm/grcROpWQnbwMHrxY8s7tjbNENpOKyk0nDD+IHpt/YQhaCFgkQ9uAgr/bA
-	zvz7lBp05nXpc+2nut7D9YeKHw86xN8/1Jjin94jBophQCKiZqRVXzEhGfF4DVqoicte
-	pjlbeWb5aQW3C9z8KxDHWRTmTHvr55jYTlNEx3t463vHZThBoVTWwv03OriSblAb4zQ3
-	89Kg==
+Return-Path: <doug@uq.edu.au>
+From: Douglas Kosovic <doug@uq.edu.au>
+Date: Tue, 20 Aug 2013 01:58:24 +0000
+Message-ID: <8026EEC9EAE19F4B93AB8BBF100DB3637211A3@UQEXMDA3.soe.uq.edu.au>
+References: <CA+3RNfg+ezs0oFeSGdGsf1-8K+3V6j5gRY8tBM=fUhX6A5V+mw@mail.gmail.com>
+In-Reply-To: <CA+3RNfg+ezs0oFeSGdGsf1-8K+3V6j5gRY8tBM=fUhX6A5V+mw@mail.gmail.com>
+Content-Language: en-US
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: base64
 MIME-Version: 1.0
-Sender: korobkin@gmail.com
-From: Alex Korobkin <korobkin+op@gmail.com>
-Date: Mon, 19 Aug 2013 20:04:52 -0400
-Message-ID: <CA+3RNfg+ezs0oFeSGdGsf1-8K+3V6j5gRY8tBM=fUhX6A5V+mw@mail.gmail.com>
-Content-Type: multipart/alternative; boundary=047d7bf0c6648dc60e04e455cf10
-Subject: [Printing-architecture] CUPS printserver + Mac clients?
+Subject: Re: [Printing-architecture] CUPS printserver + Mac clients?
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>,
@@ -24,37 +18,38 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: printing-architecture@lists.linux-foundation.org
+To: Alex Korobkin <korobkin+op@gmail.com>
+Cc: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>
 
---047d7bf0c6648dc60e04e455cf10
-Content-Type: text/plain; charset=UTF-8
-
-Hi all,
-
-I'm curious, what is the current paradigm for Mac clients to discover and
-add printers on an enterprise network, if the printers are managed by a
-central CUPS printserver. As I see it, CUPS on Mac OS X 10.7+ doesn't
-support neither BrowsePoll, nor client.conf redirection.
-
-DNS-SD records? Anything else that I might be missing?
-Thanks
--Alex
-
---047d7bf0c6648dc60e04e455cf10
-Content-Type: text/html; charset=UTF-8
-Content-Transfer-Encoding: quoted-printable
-
-<div dir=3D"ltr">Hi all,=C2=A0<br><div class=3D"gmail_quote"><div dir=3D"lt=
-r"><div><br></div><div>I&#39;m curious, what is the current paradigm for Ma=
-c clients to discover and add printers on an enterprise network, if the pri=
-nters are managed by a central CUPS printserver. As I see it, CUPS on Mac O=
-S X 10.7+ doesn&#39;t support neither BrowsePoll, nor client.conf redirecti=
-on.=C2=A0</div>
-
-
-<div><br></div><div>DNS-SD records? Anything else that I might be missing?=
-=C2=A0</div><div>Thanks</div><span class=3D"HOEnZb"><font color=3D"#888888"=
-><div>-Alex</div></font></span></div>
-</div><br></div>
-
---047d7bf0c6648dc60e04e455cf10--
+SGkgQWxleCwNCg0KPiBJJ20gY3VyaW91cywgd2hhdCBpcyB0aGUgY3VycmVudCBwYXJhZGlnbSBm
+b3IgTWFjIGNsaWVudHMgdG8gZGlzY292ZXIgYW5kIGFkZA0KPiBwcmludGVycyBvbiBhbiBlbnRl
+cnByaXNlIG5ldHdvcmssIGlmIHRoZSBwcmludGVycyBhcmUgbWFuYWdlZCBieSBhIGNlbnRyYWwN
+Cj4gQ1VQUyBwcmludHNlcnZlci4gQXMgSSBzZWUgaXQsIENVUFMgb24gTWFjIE9TIFggMTAuNysg
+ZG9lc24ndCBzdXBwb3J0IG5laXRoZXINCj4gQnJvd3NlUG9sbCwgbm9yIGNsaWVudC5jb25mIHJl
+ZGlyZWN0aW9uLg0KPiANCj4gRE5TLVNEIHJlY29yZHM/DQoNCkF0IG15IHdvcmtwbGFjZSB3ZSBh
+cmUgdXNpbmcgV2lkZSBBcmVhIEJvbmpvdXIgdG8gYWR2ZXJ0aXNlIDE1MCBDVVBTIHByaW50IHF1
+ZXVlcyB0aGF0IGFyZSBhY2Nlc3NpYmxlIGFjcm9zcyAyMCBWTEFOUyBhbmQgVlBOLg0KDQpGb3Ig
+dGhlIEROUy1TRCByZWNvcmRzLCBJIHdyb3RlIGEgcHl0aG9uLWN1cHMgc2NyaXB0IHRoYXQgcXVl
+cmllcyBhIHNwZWNpZmllZCBDVVBTIHNlcnZlciBhbmQgZHVtcHMgYSBwYXJ0aWFsIEROUyB6b25l
+IGZpbGUgd2hpY2ggY29udGFpbnMgdGhlIHJlY29yZHMgZm9yIGFsbCB0aGUgc2hhcmVkIHF1ZXVl
+cyBhbmQgY2xhc3Nlcy9wb29scy4gSSBjYW4gbWFrZSB0aGUgc2NyaXB0IGF2YWlsYWJsZSBzb21l
+d2hlcmUgaWYgeW91IGFyZSBpbnRlcmVzdGVkLg0KCQ0KT24gdGhlIHByaW50IHNlcnZlciAoQ1VQ
+UyAxLjYuMyBvbiBMaW51eCksIEknbSB1c2luZyBzbGlnaHRseSBtb2RpZmllZCBQUEQgZmlsZXMg
+ZnJvbSBPUyBYIDEwLjggKGlmIGF2YWlsYWJsZSBmb3IgdGhlIHByaW50ZXIpLCB0aGUgYWR2YW50
+YWdlIGJlaW5nIHRoYXQgb24gdGhlIE9TIFggY2xpZW50cywgdGhlIGNvcnJlc3BvbmRpbmcgZHJp
+dmVyICh3aGljaCBoYXMgdGhlIGN1c3RvbSBwYW5lbHMgYW5kIGljb25zKSB3aWxsIGJlIGF1dG9t
+YXRpY2FsbHkgZG93bmxvYWRlZCBmcm9tIEFwcGxlIFVwZGF0ZXMsIGJ1dCBzdGlsbCB1c2UgdGhl
+IHByZWNvbmZpZ3VyZWQgUFBEIGZpbGUgZnJvbSB0aGUgcHJpbnQgc2VydmVyLiBUaGUgUFBEIGZp
+bGUgbW9kaWZpY2F0aW9ucyBpbmNsdWRlIHRoZSBmb2xsb3dpbmcgbGluZXM6DQoNCipjdXBzRmls
+dGVyOiAiYXBwbGljYXRpb24vdm5kLmN1cHMtcG9zdHNjcmlwdCAwIC0iDQoqY3Vwc0ZpbHRlcjog
+ImFwcGxpY2F0aW9uL3ZuZC5jdXBzLWNvbW1hbmQgMCBjb21tYW5kdG9wcyINCipjdXBzQ29tbWFu
+ZHM6ICJBdXRvQ29uZmlndXJlIFByaW50U2VsZlRlc3RQYWdlIFJlcG9ydExldmVscyINCg0KSSBh
+bHNvIGFkZCBhICoxMjg0RGV2aWNlSUQgbGluZSB0byBoZWxwIHdpdGggYXV0by1zZWxlY3Rpbmcg
+dGhlIGNvcnJlY3QgUFBEIHdoZW4gY29uZmlndXJpbmcgdGhlIHByaW50IHF1ZXVlcy4gVGhlcmUg
+YXJlIHNvbWUgb3RoZXIgY3VzdG9tIG1vZGlmaWNhdGlvbnMgSSBzb21ldGltZXMgZG8sIGJ1dCBp
+dCB2YXJpZXMgZnJvbSBwcmludGVyIHRvIHByaW50ZXIuDQoNCj4gQW55dGhpbmcgZWxzZSB0aGF0
+IEkgbWlnaHQgYmUgbWlzc2luZz8NCg0KSSB0aGluayB0aGVyZSBhcmUgc29tZSBPUyBYIFNlcnZl
+ciBiYXNlZCBvcHRpb25zIHRoYXQgYWxsb3cgcHVzaGluZyBjb25maWd1cmF0aW9ucyBvdXQgdG8g
+T1MgWCBjbGllbnRzLCBidXQgdGhleSB3ZXJlbid0IHByYWN0aWNhbCBpbiBvdXIgY2FzZSBhcyB3
+ZSBoYXZlIG1hbnkgdmlzaXRvciBhbmQgcGVyc29uYWwgTWFjcyB0aGF0IGNhbid0IGJlIG1hbmFn
+ZWQuDQoNCg0KQ2hlZXJzLA0KRG91Zw0KDQo=
