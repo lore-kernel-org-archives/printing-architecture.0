@@ -1,13 +1,12 @@
-Return-Path: <doug@uq.edu.au>
-From: Douglas Kosovic <doug@uq.edu.au>
-Date: Tue, 20 Aug 2013 01:58:24 +0000
-Message-ID: <8026EEC9EAE19F4B93AB8BBF100DB3637211A3@UQEXMDA3.soe.uq.edu.au>
+Return-Path: <msweet@apple.com>
+MIME-version: 1.0
+Content-type: multipart/alternative;
+	boundary="Boundary_(ID_DKpMShKMtCXrYmpOpDb8Qw)"
+From: Michael Sweet <msweet@apple.com>
+In-reply-to: <CA+3RNfg+ezs0oFeSGdGsf1-8K+3V6j5gRY8tBM=fUhX6A5V+mw@mail.gmail.com>
+Date: Mon, 19 Aug 2013 22:31:53 -0400
+Message-id: <6E05B503-89A5-40B5-B81F-C1E6FAAA1638@apple.com>
 References: <CA+3RNfg+ezs0oFeSGdGsf1-8K+3V6j5gRY8tBM=fUhX6A5V+mw@mail.gmail.com>
-In-Reply-To: <CA+3RNfg+ezs0oFeSGdGsf1-8K+3V6j5gRY8tBM=fUhX6A5V+mw@mail.gmail.com>
-Content-Language: en-US
-Content-Type: text/plain; charset="utf-8"
-Content-Transfer-Encoding: base64
-MIME-Version: 1.0
 Subject: Re: [Printing-architecture] CUPS printserver + Mac clients?
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
@@ -19,37 +18,95 @@ List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subj
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
 To: Alex Korobkin <korobkin+op@gmail.com>
-Cc: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>
+Cc: printing-architecture@lists.linux-foundation.org
 
-SGkgQWxleCwNCg0KPiBJJ20gY3VyaW91cywgd2hhdCBpcyB0aGUgY3VycmVudCBwYXJhZGlnbSBm
-b3IgTWFjIGNsaWVudHMgdG8gZGlzY292ZXIgYW5kIGFkZA0KPiBwcmludGVycyBvbiBhbiBlbnRl
-cnByaXNlIG5ldHdvcmssIGlmIHRoZSBwcmludGVycyBhcmUgbWFuYWdlZCBieSBhIGNlbnRyYWwN
-Cj4gQ1VQUyBwcmludHNlcnZlci4gQXMgSSBzZWUgaXQsIENVUFMgb24gTWFjIE9TIFggMTAuNysg
-ZG9lc24ndCBzdXBwb3J0IG5laXRoZXINCj4gQnJvd3NlUG9sbCwgbm9yIGNsaWVudC5jb25mIHJl
-ZGlyZWN0aW9uLg0KPiANCj4gRE5TLVNEIHJlY29yZHM/DQoNCkF0IG15IHdvcmtwbGFjZSB3ZSBh
-cmUgdXNpbmcgV2lkZSBBcmVhIEJvbmpvdXIgdG8gYWR2ZXJ0aXNlIDE1MCBDVVBTIHByaW50IHF1
-ZXVlcyB0aGF0IGFyZSBhY2Nlc3NpYmxlIGFjcm9zcyAyMCBWTEFOUyBhbmQgVlBOLg0KDQpGb3Ig
-dGhlIEROUy1TRCByZWNvcmRzLCBJIHdyb3RlIGEgcHl0aG9uLWN1cHMgc2NyaXB0IHRoYXQgcXVl
-cmllcyBhIHNwZWNpZmllZCBDVVBTIHNlcnZlciBhbmQgZHVtcHMgYSBwYXJ0aWFsIEROUyB6b25l
-IGZpbGUgd2hpY2ggY29udGFpbnMgdGhlIHJlY29yZHMgZm9yIGFsbCB0aGUgc2hhcmVkIHF1ZXVl
-cyBhbmQgY2xhc3Nlcy9wb29scy4gSSBjYW4gbWFrZSB0aGUgc2NyaXB0IGF2YWlsYWJsZSBzb21l
-d2hlcmUgaWYgeW91IGFyZSBpbnRlcmVzdGVkLg0KCQ0KT24gdGhlIHByaW50IHNlcnZlciAoQ1VQ
-UyAxLjYuMyBvbiBMaW51eCksIEknbSB1c2luZyBzbGlnaHRseSBtb2RpZmllZCBQUEQgZmlsZXMg
-ZnJvbSBPUyBYIDEwLjggKGlmIGF2YWlsYWJsZSBmb3IgdGhlIHByaW50ZXIpLCB0aGUgYWR2YW50
-YWdlIGJlaW5nIHRoYXQgb24gdGhlIE9TIFggY2xpZW50cywgdGhlIGNvcnJlc3BvbmRpbmcgZHJp
-dmVyICh3aGljaCBoYXMgdGhlIGN1c3RvbSBwYW5lbHMgYW5kIGljb25zKSB3aWxsIGJlIGF1dG9t
-YXRpY2FsbHkgZG93bmxvYWRlZCBmcm9tIEFwcGxlIFVwZGF0ZXMsIGJ1dCBzdGlsbCB1c2UgdGhl
-IHByZWNvbmZpZ3VyZWQgUFBEIGZpbGUgZnJvbSB0aGUgcHJpbnQgc2VydmVyLiBUaGUgUFBEIGZp
-bGUgbW9kaWZpY2F0aW9ucyBpbmNsdWRlIHRoZSBmb2xsb3dpbmcgbGluZXM6DQoNCipjdXBzRmls
-dGVyOiAiYXBwbGljYXRpb24vdm5kLmN1cHMtcG9zdHNjcmlwdCAwIC0iDQoqY3Vwc0ZpbHRlcjog
-ImFwcGxpY2F0aW9uL3ZuZC5jdXBzLWNvbW1hbmQgMCBjb21tYW5kdG9wcyINCipjdXBzQ29tbWFu
-ZHM6ICJBdXRvQ29uZmlndXJlIFByaW50U2VsZlRlc3RQYWdlIFJlcG9ydExldmVscyINCg0KSSBh
-bHNvIGFkZCBhICoxMjg0RGV2aWNlSUQgbGluZSB0byBoZWxwIHdpdGggYXV0by1zZWxlY3Rpbmcg
-dGhlIGNvcnJlY3QgUFBEIHdoZW4gY29uZmlndXJpbmcgdGhlIHByaW50IHF1ZXVlcy4gVGhlcmUg
-YXJlIHNvbWUgb3RoZXIgY3VzdG9tIG1vZGlmaWNhdGlvbnMgSSBzb21ldGltZXMgZG8sIGJ1dCBp
-dCB2YXJpZXMgZnJvbSBwcmludGVyIHRvIHByaW50ZXIuDQoNCj4gQW55dGhpbmcgZWxzZSB0aGF0
-IEkgbWlnaHQgYmUgbWlzc2luZz8NCg0KSSB0aGluayB0aGVyZSBhcmUgc29tZSBPUyBYIFNlcnZl
-ciBiYXNlZCBvcHRpb25zIHRoYXQgYWxsb3cgcHVzaGluZyBjb25maWd1cmF0aW9ucyBvdXQgdG8g
-T1MgWCBjbGllbnRzLCBidXQgdGhleSB3ZXJlbid0IHByYWN0aWNhbCBpbiBvdXIgY2FzZSBhcyB3
-ZSBoYXZlIG1hbnkgdmlzaXRvciBhbmQgcGVyc29uYWwgTWFjcyB0aGF0IGNhbid0IGJlIG1hbmFn
-ZWQuDQoNCg0KQ2hlZXJzLA0KRG91Zw0KDQo=
+
+--Boundary_(ID_DKpMShKMtCXrYmpOpDb8Qw)
+Content-type: text/plain; CHARSET=US-ASCII
+Content-transfer-encoding: 7BIT
+
+Mac clients need DNS-SD records, either traditional DNS or mDNS (Bonjour).  You can also add printers manually via the IP printer pane in Add Printer (CTRL click to customize the toolbar...)
+
+CUPS browsing, BrowsePoll, and client,conf stopped working in 10.7 thanks to application sandboxing, and in 10.8 we dropped support for them completely (client.conf is still supported on non-Mac platforms for the time being...)
+
+
+On 2013-08-19, at 8:04 PM, Alex Korobkin <korobkin+op@gmail.com> wrote:
+
+> Hi all, 
+> 
+> I'm curious, what is the current paradigm for Mac clients to discover and add printers on an enterprise network, if the printers are managed by a central CUPS printserver. As I see it, CUPS on Mac OS X 10.7+ doesn't support neither BrowsePoll, nor client.conf redirection. 
+> 
+> DNS-SD records? Anything else that I might be missing? 
+> Thanks
+> -Alex
+> 
+> _______________________________________________
+> Printing-architecture mailing list
+> Printing-architecture@lists.linux-foundation.org
+> https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture
+
+_________________________________________________________
+Michael Sweet, Senior Printing System Engineer, PWG Chair
+
+
+--Boundary_(ID_DKpMShKMtCXrYmpOpDb8Qw)
+Content-type: text/html; CHARSET=US-ASCII
+Content-transfer-encoding: quoted-printable
+
+<html><head><meta http-equiv=3D"Content-Type" content=3D"text/html =
+charset=3Dus-ascii"></head><body style=3D"word-wrap: break-word; =
+-webkit-nbsp-mode: space; -webkit-line-break: after-white-space; ">Mac =
+clients need DNS-SD records, either traditional DNS or mDNS (Bonjour). =
+&nbsp;You can also add printers manually via the IP printer pane in Add =
+Printer (CTRL click to customize the toolbar...)<div><br></div><div>CUPS =
+browsing, BrowsePoll, and client,conf stopped working in 10.7 thanks to =
+application sandboxing, and in 10.8 we dropped support for them =
+completely (client.conf is still supported on non-Mac platforms for the =
+time being...)</div><div><br></div><div><br><div><div>On 2013-08-19, at =
+8:04 PM, Alex Korobkin &lt;<a =
+href=3D"mailto:korobkin+op@gmail.com">korobkin+op@gmail.com</a>&gt; =
+wrote:</div><br class=3D"Apple-interchange-newline"><blockquote =
+type=3D"cite"><div dir=3D"ltr">Hi all,&nbsp;<br><div =
+class=3D"gmail_quote"><div dir=3D"ltr"><div><br></div><div>I'm curious, =
+what is the current paradigm for Mac clients to discover and add =
+printers on an enterprise network, if the printers are managed by a =
+central CUPS printserver. As I see it, CUPS on Mac OS X 10.7+ doesn't =
+support neither BrowsePoll, nor client.conf redirection.&nbsp;</div>
+
+
+<div><br></div><div>DNS-SD records? Anything else that I might be =
+missing?&nbsp;</div><div>Thanks</div><span class=3D"HOEnZb"><font =
+color=3D"#888888">-Alex</font></span></div>
+</div><br></div>
+_______________________________________________<br>Printing-architecture =
+mailing list<br><a =
+href=3D"mailto:Printing-architecture@lists.linux-foundation.org">Printing-=
+architecture@lists.linux-foundation.org</a><br>https://lists.linuxfoundati=
+on.org/mailman/listinfo/printing-architecture<br></blockquote></div><br><d=
+iv>
+<span class=3D"Apple-style-span" style=3D"border-collapse: separate; =
+color: rgb(0, 0, 0); font-family: 'Andale Mono'; font-style: normal; =
+font-variant: normal; font-weight: normal; letter-spacing: normal; =
+line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: =
+0px; text-transform: none; white-space: normal; widows: 2; word-spacing: =
+0px; -webkit-border-horizontal-spacing: 0px; =
+-webkit-border-vertical-spacing: 0px; =
+-webkit-text-decorations-in-effect: none; -webkit-text-size-adjust: =
+auto; -webkit-text-stroke-width: 0px;  "><span class=3D"Apple-style-span" =
+style=3D"border-collapse: separate; color: rgb(0, 0, 0); font-family: =
+'Andale Mono'; font-style: normal; font-variant: normal; font-weight: =
+normal; letter-spacing: normal; line-height: normal; orphans: 2; =
+text-align: -webkit-auto; text-indent: 0px; text-transform: none; =
+white-space: normal; widows: 2; word-spacing: 0px; =
+-webkit-border-horizontal-spacing: 0px; -webkit-border-vertical-spacing: =
+0px; -webkit-text-decorations-in-effect: none; -webkit-text-size-adjust: =
+auto; -webkit-text-stroke-width: 0px;  "><div style=3D"word-wrap: =
+break-word; -webkit-nbsp-mode: space; -webkit-line-break: =
+after-white-space; =
+">_________________________________________________________<br>Michael =
+Sweet, Senior Printing System&nbsp;Engineer, PWG =
+Chair</div></span></span>
+</div>
+<br></div></body></html>=
+
+--Boundary_(ID_DKpMShKMtCXrYmpOpDb8Qw)--
