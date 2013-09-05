@@ -1,13 +1,20 @@
-Return-Path: <msweet@apple.com>
-MIME-version: 1.0
-Content-type: multipart/alternative;
-	boundary="Boundary_(ID_DKpMShKMtCXrYmpOpDb8Qw)"
-From: Michael Sweet <msweet@apple.com>
-In-reply-to: <CA+3RNfg+ezs0oFeSGdGsf1-8K+3V6j5gRY8tBM=fUhX6A5V+mw@mail.gmail.com>
-Date: Mon, 19 Aug 2013 22:31:53 -0400
-Message-id: <6E05B503-89A5-40B5-B81F-C1E6FAAA1638@apple.com>
-References: <CA+3RNfg+ezs0oFeSGdGsf1-8K+3V6j5gRY8tBM=fUhX6A5V+mw@mail.gmail.com>
-Subject: Re: [Printing-architecture] CUPS printserver + Mac clients?
+Return-Path: <till.kamppeter@gmail.com>
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20120113;
+	h=message-id:date:from:user-agent:mime-version:to:subject
+	:content-type; bh=SmPTbpNnIxkxKRgkIe7n8qXZJFF0AXAO9Erqy7Tw68I=;
+	b=nTNa36AKPpsp9d/aa46QX+5d18KxiHXqpOcS5KZgA25oJDlxUwAfXnksZbmCIRg2jj
+	BK7jI8upUW9fNeVIRJRrTJnydEK+kPXG8CO4PtSKysm8ShL4U7v0ft+XKfwENoGYUSH0
+	zoLE0isJw/gJ2UmI3KE0j7bylf1IyACEwD3TArOTdVOQ04t2aF5ihD2rq8+2n+pwXCXZ
+	2ici8zJnpMRQMi4JYD7IIBThpfGCyNAP8sRav8YCqauBY6bQzGjRLafwn/yQH57Dhehc
+	KxGrHwxoOf2NyBnKX1rgBUGfHtp8A6ZcweSzWzBce5uW7Z2NRZvjXB8J2VX8cLGzeWuZ
+	xiAw==
+Message-ID: <5228F4E5.8030203@gmail.com>
+Date: Thu, 05 Sep 2013 23:17:25 +0200
+From: Till Kamppeter <till.kamppeter@gmail.com>
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="------------040200090504070305000501"
+Subject: [Printing-architecture] Fix for STR #4187 incomplete,
+	missing part attached
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>,
@@ -17,96 +24,77 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Alex Korobkin <korobkin+op@gmail.com>
-Cc: printing-architecture@lists.linux-foundation.org
+To: Michael Sweet <msweet@apple.com>, Open Printing <printing-architecture@lists.linux-foundation.org>, Didier Raboud <odyx@debian.org>
+
+This is a multi-part message in MIME format.
+--------------040200090504070305000501
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Hi,
+
+it seems that if a CUPS client (like the print dialog of LibreOffice)
+stays connected to CUPS for a long time, the connection can get dropped
+and the client does not reconnect.
+
+This is handled by the following Ubuntu bug report:
+
+https://bugs.launchpad.net/ubuntu/+source/libreoffice/+bug/1020048
+
+and also upstream by the following report in the former STR system:
+
+http://www.cups.org/str.php?L4187
+
+The STR was considered fixed by applying a patch, but the reporter of
+the Ubuntu bug has found out that another patch is needed to complete
+the fix. See comment #37 in the Ubuntu report:
+
+https://bugs.launchpad.net/ubuntu/+source/libreoffice/+bug/1020048/comments/37
+
+The current CUPS 1.7.0rc1 has this "else" part but there is still
+missing that "if" has also to close the connection when the result of
+the recv() function is zero, meaning EOF, which happens when the server
+terminates the connection.-
+
+The attached patch adds this missing part.
+
+In comment #44 of the Ubuntu report it is confirmed that this missing
+piece applied fixes the problem completely:
+
+https://bugs.launchpad.net/ubuntu/+source/libreoffice/+bug/1020048/comments/44
+
+Can you apply this patch to the final CUPS 1.7.0? Thanks.
+
+   Till
 
 
---Boundary_(ID_DKpMShKMtCXrYmpOpDb8Qw)
-Content-type: text/plain; CHARSET=US-ASCII
-Content-transfer-encoding: 7BIT
+--------------040200090504070305000501
+Content-Type: text/x-patch;
+ name="handle-server-terminating-connection.patch"
+Content-Transfer-Encoding: 7bit
+Content-Disposition: attachment;
+ filename="handle-server-terminating-connection.patch"
 
-Mac clients need DNS-SD records, either traditional DNS or mDNS (Bonjour).  You can also add printers manually via the IP printer pane in Add Printer (CTRL click to customize the toolbar...)
+--- a/cups/request.c
++++ b/cups/request.c
+@@ -1018,13 +1018,14 @@
+       */
+ 
+       char ch;				/* Connection check byte */
++      int n;
+ 
+ #ifdef WIN32
+-      if (recv(cg->http->fd, &ch, 1, MSG_PEEK) < 0 &&
+-          WSAGetLastError() != WSAEWOULDBLOCK)
++      if ((n = recv(cg->http->fd, &ch, 1, MSG_PEEK) == 0) ||
++          (n < 0 && WSAGetLastError() != WSAEWOULDBLOCK))
+ #else
+-      if (recv(cg->http->fd, &ch, 1, MSG_PEEK | MSG_DONTWAIT) < 0 &&
+-          errno != EWOULDBLOCK)
++      if ((n = recv(cg->http->fd, &ch, 1, MSG_PEEK | MSG_DONTWAIT) == 0) ||
++	  (n < 0 && errno != EWOULDBLOCK))
+ #endif /* WIN32 */
+       {
+        /*
 
-CUPS browsing, BrowsePoll, and client,conf stopped working in 10.7 thanks to application sandboxing, and in 10.8 we dropped support for them completely (client.conf is still supported on non-Mac platforms for the time being...)
-
-
-On 2013-08-19, at 8:04 PM, Alex Korobkin <korobkin+op@gmail.com> wrote:
-
-> Hi all, 
-> 
-> I'm curious, what is the current paradigm for Mac clients to discover and add printers on an enterprise network, if the printers are managed by a central CUPS printserver. As I see it, CUPS on Mac OS X 10.7+ doesn't support neither BrowsePoll, nor client.conf redirection. 
-> 
-> DNS-SD records? Anything else that I might be missing? 
-> Thanks
-> -Alex
-> 
-> _______________________________________________
-> Printing-architecture mailing list
-> Printing-architecture@lists.linux-foundation.org
-> https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture
-
-_________________________________________________________
-Michael Sweet, Senior Printing System Engineer, PWG Chair
-
-
---Boundary_(ID_DKpMShKMtCXrYmpOpDb8Qw)
-Content-type: text/html; CHARSET=US-ASCII
-Content-transfer-encoding: quoted-printable
-
-<html><head><meta http-equiv=3D"Content-Type" content=3D"text/html =
-charset=3Dus-ascii"></head><body style=3D"word-wrap: break-word; =
--webkit-nbsp-mode: space; -webkit-line-break: after-white-space; ">Mac =
-clients need DNS-SD records, either traditional DNS or mDNS (Bonjour). =
-&nbsp;You can also add printers manually via the IP printer pane in Add =
-Printer (CTRL click to customize the toolbar...)<div><br></div><div>CUPS =
-browsing, BrowsePoll, and client,conf stopped working in 10.7 thanks to =
-application sandboxing, and in 10.8 we dropped support for them =
-completely (client.conf is still supported on non-Mac platforms for the =
-time being...)</div><div><br></div><div><br><div><div>On 2013-08-19, at =
-8:04 PM, Alex Korobkin &lt;<a =
-href=3D"mailto:korobkin+op@gmail.com">korobkin+op@gmail.com</a>&gt; =
-wrote:</div><br class=3D"Apple-interchange-newline"><blockquote =
-type=3D"cite"><div dir=3D"ltr">Hi all,&nbsp;<br><div =
-class=3D"gmail_quote"><div dir=3D"ltr"><div><br></div><div>I'm curious, =
-what is the current paradigm for Mac clients to discover and add =
-printers on an enterprise network, if the printers are managed by a =
-central CUPS printserver. As I see it, CUPS on Mac OS X 10.7+ doesn't =
-support neither BrowsePoll, nor client.conf redirection.&nbsp;</div>
-
-
-<div><br></div><div>DNS-SD records? Anything else that I might be =
-missing?&nbsp;</div><div>Thanks</div><span class=3D"HOEnZb"><font =
-color=3D"#888888">-Alex</font></span></div>
-</div><br></div>
-_______________________________________________<br>Printing-architecture =
-mailing list<br><a =
-href=3D"mailto:Printing-architecture@lists.linux-foundation.org">Printing-=
-architecture@lists.linux-foundation.org</a><br>https://lists.linuxfoundati=
-on.org/mailman/listinfo/printing-architecture<br></blockquote></div><br><d=
-iv>
-<span class=3D"Apple-style-span" style=3D"border-collapse: separate; =
-color: rgb(0, 0, 0); font-family: 'Andale Mono'; font-style: normal; =
-font-variant: normal; font-weight: normal; letter-spacing: normal; =
-line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: =
-0px; text-transform: none; white-space: normal; widows: 2; word-spacing: =
-0px; -webkit-border-horizontal-spacing: 0px; =
--webkit-border-vertical-spacing: 0px; =
--webkit-text-decorations-in-effect: none; -webkit-text-size-adjust: =
-auto; -webkit-text-stroke-width: 0px;  "><span class=3D"Apple-style-span" =
-style=3D"border-collapse: separate; color: rgb(0, 0, 0); font-family: =
-'Andale Mono'; font-style: normal; font-variant: normal; font-weight: =
-normal; letter-spacing: normal; line-height: normal; orphans: 2; =
-text-align: -webkit-auto; text-indent: 0px; text-transform: none; =
-white-space: normal; widows: 2; word-spacing: 0px; =
--webkit-border-horizontal-spacing: 0px; -webkit-border-vertical-spacing: =
-0px; -webkit-text-decorations-in-effect: none; -webkit-text-size-adjust: =
-auto; -webkit-text-stroke-width: 0px;  "><div style=3D"word-wrap: =
-break-word; -webkit-nbsp-mode: space; -webkit-line-break: =
-after-white-space; =
-">_________________________________________________________<br>Michael =
-Sweet, Senior Printing System&nbsp;Engineer, PWG =
-Chair</div></span></span>
-</div>
-<br></div></body></html>=
-
---Boundary_(ID_DKpMShKMtCXrYmpOpDb8Qw)--
+--------------040200090504070305000501--
