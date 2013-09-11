@@ -1,20 +1,19 @@
 Return-Path: <blueroofmusic@gmail.com>
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20120113;
 	h=mime-version:date:message-id:subject:from:to:content-type;
-	bh=2AvDaMsG/Q6L5iz+cM0KW7d7bhv3NLP8mYa6pH/9UIM=;
-	b=GAdwq148aEOeVXZpMDDj150p+cnOUjhqpOJeeH0HXBmVKWmbcdMqJwmwq21r7vZLCq
-	gQPGbdGJz5JY1QGgCZ4Zq9qdqB2R1b0kQNfvlv+ZAz7ZNlWTVnqT6St1exV9fEU8meiO
-	JrYKw0TMLDXOgE7cH4lycYhevBhH2URX1valf4PE7ySS3frcKGV0gKFH3SPAjtGinoUP
-	S8+/ulxHt+jveJopIHbwDFQoJ/TWocvuNpptz+3cbKf7+7K/wAUtzmvoGE3FVdMjFrZq
-	+0yEY75IsnqhoODbtLCnLFWu0IiarbfU2sIQOYTwWxqIuKfKoW37MeEcZTWKAjgCwGaw
-	Qt2g==
+	bh=06EQKC4sKwghUUVt2BX+r/K63F2cfEULaC6UCstQqNE=;
+	b=Kyrr0hz8651EMe7SaRAZH+FUaDAxsl6DXYTaM9NXbAgNeTEuqtuDzLdLO8/GmqW1ID
+	sq9+XKuV+chBkSMDw1pOVRQZKiVTC083+4tNYFTKkp0RQwni3yJXATZmW+80Sk8GvSxN
+	u0an0c3btFd+MSJnCPu+HGCfKidC5WRCrlsr0vRU0kG7yVS/IjOXHK57IL7G8xBMemFG
+	XkgdcOjz4w3H+lXZbQmQMA4gw051JNelIcbBlMEP7/kULxnWGJFLdJKlBPkpjhFzpWjP
+	/09wCMFfMYfi+QO2C28s0xeHRX6JQZKBToToard4zgSpx0RP04me+HlD9DnBhjbfVH8S
+	QlqA==
 MIME-Version: 1.0
-Date: Tue, 10 Sep 2013 16:31:19 -0400
-Message-ID: <CAN40gSuj3H14MMp56sf1ywEWMU2YFTr+Vva_GHgBuf3kqc0Amw@mail.gmail.com>
+Date: Wed, 11 Sep 2013 13:24:41 -0400
+Message-ID: <CAN40gSvAZGHh5xxh-dAzWAaMGAYL0HVXf6+nCVHxAetkokMzHw@mail.gmail.com>
 From: Ira McDonald <blueroofmusic@gmail.com>
-Content-Type: multipart/alternative; boundary=047d7b2e451a27d94c04e60d6369
-Subject: [Printing-architecture] REMINDER - OP US/Europe - Wed 11 September
-	2013
+Content-Type: multipart/alternative; boundary=089e0149beac8da3e704e61ee528
+Subject: [Printing-architecture] OP Minutes (11 September 2013)
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>,
@@ -26,15 +25,29 @@ List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-arc
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
 To: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>, Ira McDonald <blueroofmusic@gmail.com>
 
---047d7b2e451a27d94c04e60d6369
+--089e0149beac8da3e704e61ee528
 Content-Type: text/plain; charset=ISO-8859-1
 
 Hi,
 
-Reminder that our monthly Open Printing US/Europe call will be
-tomorrow:
+Minutes from today's Open Printing call are posted at:
 
-    - Wednesday 11 September 2013, Daytime
+  ftp://ftp.pwg.org/pub/pwg/openprinting/minutes/OP-Minutes-20130911.htm
+
+*** 2014 Joint PWG / Open Printing Summit ***
+- Joint PWG/OPS at Cupertino, CA (hosted by Apple) - 13-16 May 2014
+  - http://www.pwg.org/chair/meeting-info/meetings.html
+  - *** Add to your calendar ***
+
+Actions:
+- ACTION - Glen/Till/Ira - Continue email and mock-up of OP website
+
+Next OP Conference Calls:
+(1) October 2013 - US/Europe - OP Monthly Meeting
+    - Note - 22-24 October 2013 is PWG Meeting in Cupertino, CA
+    - Note - 21-25 October 2013 is TCG meeting in Osaka, Japan
+
+    - Wednesday 2 October 2013, Daytime
       - US
         9am in San Francisco - US PDT (Pacific Daylight Time)
         10am in Colorado - US MDT (Mountain Daylight Time)
@@ -42,6 +55,37 @@ tomorrow:
         12pm in New York - US EDT (Eastern Daylight Time)
       - Europe
         6pm in Berlin - CEST (Central European Summer Time)
+
+    * Main Number (Till Kamppeter, LF, leader)
+      International: +1-619-326-2730 (new number)
+      Access Code:   491659#
+
+(2) November 2013 - US/Europe - OP Monthly Meeting (tentative)
+    - Note - European Summer Time ends on 27 October 2013
+    - Note - US Daylight Savings Time ends on 2 November 2013
+
+    - Wednesday 6 November 2013, Daytime
+      - US
+        9am in San Francisco - US PST (Pacific Standard Time)
+        10am in Colorado - US MST (Mountain Standard Time)
+        11am in Chicago - US CST (Central Standard Time)
+        12pm in New York - US EST (Eastern Standard Time)
+      - Europe
+        6pm in Berlin - CET (Central European Time)
+
+    * Main Number (Till Kamppeter, LF, leader)
+      International: +1-619-326-2730 (new number)
+      Access Code:   491659#
+
+(3) December 2013 - US/Europe - OP Monthly Meeting (tentative)
+    - Wednesday 4 December 2013, Daytime
+      - US
+        9am in San Francisco - US PST (Pacific Standard Time)
+        10am in Colorado - US MST (Mountain Standard Time)
+        11am in Chicago - US CST (Central Standard Time)
+        12pm in New York - US EST (Eastern Standard Time)
+      - Europe
+        6pm in Berlin - CET (Central European Time)
 
     * Main Number (Till Kamppeter, LF, leader)
       International: +1-619-326-2730 (new number)
@@ -65,41 +109,85 @@ mailto:blueroofmusic@gmail.com
 Winter  579 Park Place  Saline, MI  48176  734-944-0094
 Summer  PO Box 221  Grand Marais, MI 49839  906-494-2434
 
---047d7b2e451a27d94c04e60d6369
+--089e0149beac8da3e704e61ee528
 Content-Type: text/html; charset=ISO-8859-1
 Content-Transfer-Encoding: quoted-printable
 
-<div dir=3D"ltr"><div><div><div><div>Hi,<br><br></div>Reminder that our mon=
-thly Open Printing US/Europe call will be<br></div>tomorrow:<br><br>=A0=A0=
-=A0 - Wednesday 11 September 2013, Daytime<br>=A0=A0=A0=A0=A0 - US<br>=A0=
-=A0=A0=A0=A0=A0=A0 9am in San Francisco - US PDT (Pacific Daylight Time)<br=
->
-=A0=A0=A0=A0=A0=A0=A0 10am in Colorado - US MDT (Mountain Daylight Time)<br=
->=A0=A0=A0=A0=A0=A0=A0 11am in Chicago - US CDT (Central Daylight Time)<br>=
+<div dir=3D"ltr"><div><div><div>Hi, <br><br><span><span><span><span><span><=
+span><span class=3D"">Minutes</span></span></span></span></span></span></sp=
+an> from today&#39;s Open Printing<span> call</span> are <span><span><span =
+class=3D"">posted</span></span></span> at:<br>
+
+
+<br>
+=A0 <a href=3D"ftp://ftp.pwg.org/pub/pwg/openprinting/minutes/OP-Minutes-20=
+130911.htm" target=3D"_blank">ftp://ftp.pwg.org/pub/pwg/openprinting/minute=
+s/OP-Minutes-20130911.htm</a><br><br>*** 2014 Joint PWG / Open Printing Sum=
+mit ***<br>
+
+
+- Joint PWG/<span><span class=3D"">OPS</span></span> at Cupertino, CA (host=
+ed by Apple) - 13-16 May 2014<br>=A0 - <a href=3D"http://www.pwg.org/chair/=
+meeting-info/meetings.html" target=3D"_blank">http://www.pwg.org/chair/meet=
+ing-info/meetings.html</a><br>
+
+=A0 - *** Add to your calendar ***<br>
+<br>Actions:<br>- ACTION - Glen/Till/Ira - Continue email and mock-up of OP=
+ website<br><br></div>Next OP Conference Calls:<br>(1) October 2013 - US/Eu=
+rope - OP Monthly Meeting<br>=A0=A0=A0 - Note - 22-24 October 2013 is PWG M=
+eeting in Cupertino, CA<br>
+=A0=A0=A0 - Note - 21-25 October 2013 is TCG meeting in Osaka, Japan<br><br=
+>=A0=A0=A0 - Wednesday 2 October 2013, Daytime<br>=A0=A0=A0=A0=A0 - US<br>=
+=A0=A0=A0=A0=A0=A0=A0 9am in San Francisco - US PDT (Pacific Daylight Time)=
+<br>=A0=A0=A0=A0=A0=A0=A0 10am in Colorado - US MDT (Mountain Daylight Time=
+)<br>
+=A0=A0=A0=A0=A0=A0=A0 11am in Chicago - US CDT (Central Daylight Time)<br>=
 =A0=A0=A0=A0=A0=A0=A0 12pm in New York - US EDT (Eastern Daylight Time)<br>=
 =A0=A0=A0=A0=A0 - Europe<br>=A0=A0=A0=A0=A0=A0=A0 6pm in Berlin - CEST (Cen=
-tral European Summer Time)<br>
+tral European Summer Time)<br><br>=A0=A0=A0 * Main Number (Till Kamppeter, =
+LF, leader)<br>
+=A0=A0=A0=A0=A0 International: +1-619-326-2730 (new number)<br>=A0=A0=A0=A0=
+=A0 Access Code:=A0=A0 491659#<br><br>(2) November 2013 - US/Europe - OP Mo=
+nthly Meeting (tentative)<br>=A0=A0=A0 - Note - European Summer Time ends o=
+n 27 October 2013<br>=A0=A0=A0 - Note - US Daylight Savings Time ends on 2 =
+November 2013<br>
+<br>=A0=A0=A0 - Wednesday 6 November 2013, Daytime<br>=A0=A0=A0=A0=A0 - US<=
+br>=A0=A0=A0=A0=A0=A0=A0 9am in San Francisco - US PST (Pacific Standard Ti=
+me)<br>=A0=A0=A0=A0=A0=A0=A0 10am in Colorado - US MST (Mountain Standard T=
+ime)<br>=A0=A0=A0=A0=A0=A0=A0 11am in Chicago - US CST (Central Standard Ti=
+me)<br>
+=A0=A0=A0=A0=A0=A0=A0 12pm in New York - US EST (Eastern Standard Time)<br>=
+=A0=A0=A0=A0=A0 - Europe<br>=A0=A0=A0=A0=A0=A0=A0 6pm in Berlin - CET (Cent=
+ral European Time)<br><br>=A0=A0=A0 * Main Number (Till Kamppeter, LF, lead=
+er)<br>=A0=A0=A0=A0=A0 International: +1-619-326-2730 (new number)<br>
+=A0=A0=A0=A0=A0 Access Code:=A0=A0 491659#<br><br>(3) December 2013 - US/Eu=
+rope - OP Monthly Meeting (tentative)<br>=A0=A0=A0 - Wednesday 4 December 2=
+013, Daytime<br>=A0=A0=A0=A0=A0 - US<br>=A0=A0=A0=A0=A0=A0=A0 9am in San Fr=
+ancisco - US PST (Pacific Standard Time)<br>
+=A0=A0=A0=A0=A0=A0=A0 10am in Colorado - US MST (Mountain Standard Time)<br=
+>=A0=A0=A0=A0=A0=A0=A0 11am in Chicago - US CST (Central Standard Time)<br>=
+=A0=A0=A0=A0=A0=A0=A0 12pm in New York - US EST (Eastern Standard Time)<br>=
+=A0=A0=A0=A0=A0 - Europe<br>=A0=A0=A0=A0=A0=A0=A0 6pm in Berlin - CET (Cent=
+ral European Time)<br>
 <br>=A0=A0=A0 * Main Number (Till Kamppeter, LF, leader)<br>=A0=A0=A0=A0=A0=
  International: +1-619-326-2730 (new number)<br>=A0=A0=A0=A0=A0 Access Code=
-:=A0=A0 491659#<br><br></div>Cheers,<br></div>- Ira<br><br><br clear=3D"all=
-"><div><div><div><div><div><div>
-<div>Ira McDonald (Musician / Software Architect)<br>Chair - Linux Foundati=
-on Open Printing WG<br>Secretary - IEEE-ISTO Printer Working Group<br>Co-Ch=
-air - IEEE-ISTO PWG IPP WG<br>Co-Chair - TCG Trusted Mobility Solutions WG<=
-br>
-Chair - TCG Embedded Systems Hardcopy SG<br>IETF Designated Expert - IPP &a=
-mp; Printer MIB<br>Blue Roof Music/High North Inc<br><a style=3D"color:rgb(=
-51,51,255)" href=3D"http://sites.google.com/site/blueroofmusic" target=3D"_=
-blank">http://sites.google.com/site/blueroofmusic</a><br>
-<a style=3D"color:rgb(102,0,204)" href=3D"http://sites.google.com/site/high=
-northinc" target=3D"_blank">http://sites.google.com/site/highnorthinc</a><b=
-r>mailto:<a href=3D"mailto:blueroofmusic@gmail.com" target=3D"_blank">bluer=
-oofmusic@gmail.com</a><br>
-Winter=A0 579 Park Place=A0 Saline, MI=A0 48176=A0 734-944-0094<br>Summer=
-=A0 PO Box 221=A0 Grand Marais, MI 49839=A0 906-494-2434<br><br><div style=
-=3D"display:inline"></div><div style=3D"display:inline"></div><div style=3D=
-"display:inline"></div>
-<div></div><div></div><div></div><div></div></div>
-</div></div></div></div></div></div></div>
+:=A0=A0 491659#<br><br></div>Cheers,<br></div>- Ira<br><br><div><div><div><=
+br><div>Ira McDonald (Musician / Software Architect)<br>
+Chair - Linux Foundation Open Printing WG<br>Secretary - IEEE-ISTO Printer =
+Working Group<br>Co-Chair - IEEE-ISTO PWG IPP WG<br>Co-Chair - TCG Trusted =
+Mobility Solutions WG<br>Chair - TCG Embedded Systems Hardcopy SG<br>IETF D=
+esignated Expert - IPP &amp; Printer MIB<br>
+Blue Roof Music/High North Inc<br><a style=3D"color:rgb(51,51,255)" href=3D=
+"http://sites.google.com/site/blueroofmusic" target=3D"_blank">http://sites=
+.google.com/site/blueroofmusic</a><br><a style=3D"color:rgb(102,0,204)" hre=
+f=3D"http://sites.google.com/site/highnorthinc" target=3D"_blank">http://si=
+tes.google.com/site/highnorthinc</a><br>
+mailto:<a href=3D"mailto:blueroofmusic@gmail.com" target=3D"_blank">blueroo=
+fmusic@gmail.com</a><br>Winter=A0 579 Park Place=A0 Saline, MI=A0 48176=A0 =
+734-944-0094<br>Summer=A0 PO Box 221=A0 Grand Marais, MI 49839=A0 906-494-2=
+434<br><br><div style=3D"display:inline">
+</div><div style=3D"display:inline"></div><div style=3D"display:inline"></d=
+iv><div></div><div></div><div></div><div></div></div>
+</div></div></div></div>
 
---047d7b2e451a27d94c04e60d6369--
+--089e0149beac8da3e704e61ee528--
