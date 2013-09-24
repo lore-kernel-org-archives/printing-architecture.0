@@ -1,23 +1,11 @@
-Return-Path: <korobkin@gmail.com>
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20120113;
-	h=mime-version:sender:in-reply-to:references:from:date:message-id
-	:subject:to:cc:content-type;
-	bh=Jo23GOJcw25M9qlS/1BlFcch0hZcAEM+kCZ7FvTYzkw=;
-	b=jUIXGguzXFaBR4lMKjR3i0jQdcIgzuAI4vAwHK6VXVRE5qbzPZ6kjjCnt0iSHeXmYX
-	y56x6DeT9BHaMYtdvjCRPKx+bhKQ5uki9bs8CNJ2CxUn5IY5UbaJLOfjwF4co/TjQsIi
-	oNWRkqYBp4cCdwo1VqSP4IoiWVudw8WM5Q77TtyCEznSrEv/hwtXnw2nBs2vgFMFVAKk
-	w7/LHFDFZtteiE6rjp1WhXCrjkm0m2flTXwihKi8WD6EWj/oK1jlB273BZ1D+86g29uq
-	1FnEsLwLxDxrpIx3PrPaATx4YhHLo7TRR1bICZNHAc1YNWPBPpAeq0P6wkGHZMf/Dk/H
-	bE5w==
-MIME-Version: 1.0
-Sender: korobkin@gmail.com
-In-Reply-To: <523A2166.8080004@googlemail.com>
-References: <523A2166.8080004@googlemail.com>
-From: Alex Korobkin <korobkin+op@gmail.com>
-Date: Thu, 19 Sep 2013 14:10:55 -0400
-Message-ID: <CA+3RNfg4RxHMwo=VdzxC04HjQ8br_c6ocGED-DhZqf9PQvDW-Q@mail.gmail.com>
-Content-Type: multipart/alternative; boundary=047d7b10cfc5da6f7604e6c07a22
-Subject: Re: [Printing-architecture] windows, samba, cups, color and BW
+Return-Path: <msweet@apple.com>
+MIME-version: 1.0
+Content-type: multipart/alternative;
+	boundary="Boundary_(ID_G7z+oDAiLFcfgMkcu2XX2w)"
+From: Michael Sweet <msweet@apple.com>
+Date: Tue, 24 Sep 2013 12:47:03 -0400
+Message-id: <86D7B6CC-E6E0-4620-91D4-DB9A3ABD1534@apple.com>
+Subject: [Printing-architecture] CUPS 1.6.4
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>,
@@ -27,138 +15,98 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Christian <chanlists@googlemail.com>
-Cc: printing-architecture@lists.linux-foundation.org
-
---047d7b10cfc5da6f7604e6c07a22
-Content-Type: text/plain; charset=UTF-8
-
-Hi Christian,
-
-I have the same setup, but I didn't notice this problem before.
-You see, radio buttons on the "Paper / Quality" tab simply tell Windows
-apps to render print jobs in color or b&w. At the same time, "Color mode"
-within the Advanced page actually inserts a PostScript command into the job
-that tells Ricoh printer to print in color or in b&w mode, regardless of
-the contents of the job.
-
-I think it is a bug in Adobe Reader: it doesn't honor color/b&w radio
-buttons in the printer settings at all. However, if you look under
-Properties button of the Print dialog in Reader, there is a "Print in
-grayscale" checkbox. You can tell your users to use that one instead of
-going all the way to Advanced options.
+To: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>
 
 
-2013/9/18 Christian <chanlists@googlemail.com>
+--Boundary_(ID_G7z+oDAiLFcfgMkcu2XX2w)
+Content-type: text/plain; charset=windows-1252
+Content-transfer-encoding: quoted-printable
 
-> Dear list,
->
-> I have CUPS 1.5.3 running under Debian wheezy. I use Samba, cupsaddsmb
-> and the Microsoft windows postscript printer driver for windows (7)
-> clients. I have a printer (RICOH Aficio MP C3502, could post PPD) which
-> is a rather big network multifunction device. From linux, everything
-> works fine. For windows, printing via samba, I have set up a special raw
-> queue in CUPS using appropriate Filter definitions in the PPD, and from
-> the logs, I can confirm that no filtering of the postscript is being
-> done on the linux side. From windows clients, using e. g. MSWORD, all of
-> the printer options (staple, B+W vs. color, ...) are available and work
-> as far as I can tell.
->
-> The only exception is printing from Adobe Reader under Windows. Most of
-> the options are honored, except the "Color vs. B + W" option. Under the
-> "Paper / Quality" tab in the printer options, there is a set of two
-> radio buttons with little pictures next to them for Color vs. Black +
-> White. Those do not work for me.
->
-> I can only get it to print B + W from Adobe reader under windows if,
-> rather than using those buttons, I go into "Advanced..." and then chose
-> "Color Mode: Black and White" in the list of printer options. I know
-> this, but it could be confusing to our users...
->
-> So I'd like to understand the background better, and why only Adobe
-> Reader does this, and whether this behavior can be fixed, e. g. by PPD
-> hacking or other tricks...
->
-> Sorry to ask here, but the "forums" link is dysfunctional. Let me know
-> if I can help. Best,
->
-> Christian
-> _______________________________________________
-> Printing-architecture mailing list
-> Printing-architecture@lists.linux-foundation.org
-> https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture
->
+CUPS 1.6.4 is now available for download from:
 
---047d7b10cfc5da6f7604e6c07a22
-Content-Type: text/html; charset=UTF-8
-Content-Transfer-Encoding: quoted-printable
+	http://www.cups.org/software.php
 
-<div dir=3D"ltr">Hi Christian,=C2=A0<div><br></div><div>I have the same set=
-up, but I didn&#39;t notice this problem before.=C2=A0</div><div>You see, r=
-adio buttons on the &quot;Paper / Quality&quot; tab simply tell Windows app=
-s to render print jobs in color or b&amp;w. At the same time, &quot;Color m=
-ode&quot; within the Advanced page actually inserts a PostScript command in=
-to the job that tells Ricoh printer to print in color or in b&amp;w mode, r=
-egardless of the contents of the job.<br>
+The new release fixes some minor printing issues, add support for USB =
+"quirks" files on Linux, and adds a new cupsd SyncOnClose directive. =
+Changes include:
 
-</div><div><br></div><div>I think it is a bug in Adobe Reader: it doesn&#39=
-;t honor color/b&amp;w radio buttons in the printer settings at all. Howeve=
-r, if you look under Properties button of the Print dialog in Reader, there=
- is a &quot;Print in grayscale&quot; checkbox. You can tell your users to u=
-se that one instead of going all the way to Advanced options.=C2=A0</div>
+	=95 Removed some duplicate size definitions for some ISO sizes =
+that were causing problems (<rdar://problem/14722721>)
+	=95 The IPP backend did not add the "last-document" attribute =
+(<rdar://problem/114660379>)
+	=95 Added a SyncOnClose directive to cups-files.conf to force =
+cupsd to call fsync before closing any configuration/state files it =
+writes (<rdar://problem/14523043>)
+	=95 Added USB quirk rule for Lexmark E238 =
+(<rdar://problem/14493054>)
+	=95 Closed server connections were still not always detected =
+(<rdar://problem/14484313>)
+	=95 The libusb-based USB backend now loads its list of quirks =
+from files in /usr/share/cups/usb instead of using a hardcoded table =
+(<rdar://problem/14442769>)
+	=95 The scheduler did not properly register ICC color profiles =
+with colord (<rdar://problem/14455625>)
 
-</div><div class=3D"gmail_extra"><br><br><div class=3D"gmail_quote">2013/9/=
-18 Christian <span dir=3D"ltr">&lt;<a href=3D"mailto:chanlists@googlemail.c=
-om" target=3D"_blank">chanlists@googlemail.com</a>&gt;</span><br><blockquot=
-e class=3D"gmail_quote" style=3D"margin:0 0 0 .8ex;border-left:1px #ccc sol=
-id;padding-left:1ex">
+Enjoy!
+_________________________________________________________
+Michael Sweet, Senior Printing System Engineer, PWG Chair
 
-Dear list,<br>
-<br>
-I have CUPS 1.5.3 running under Debian wheezy. I use Samba, cupsaddsmb<br>
-and the Microsoft windows postscript printer driver for windows (7)<br>
-clients. I have a printer (RICOH Aficio MP C3502, could post PPD) which<br>
-is a rather big network multifunction device. From linux, everything<br>
-works fine. For windows, printing via samba, I have set up a special raw<br=
->
-queue in CUPS using appropriate Filter definitions in the PPD, and from<br>
-the logs, I can confirm that no filtering of the postscript is being<br>
-done on the linux side. From windows clients, using e. g. MSWORD, all of<br=
->
-the printer options (staple, B+W vs. color, ...) are available and work<br>
-as far as I can tell.<br>
-<br>
-The only exception is printing from Adobe Reader under Windows. Most of<br>
-the options are honored, except the &quot;Color vs. B + W&quot; option. Und=
-er the<br>
-&quot;Paper / Quality&quot; tab in the printer options, there is a set of t=
-wo<br>
-radio buttons with little pictures next to them for Color vs. Black +<br>
-White. Those do not work for me.<br>
-<br>
-I can only get it to print B + W from Adobe reader under windows if,<br>
-rather than using those buttons, I go into &quot;Advanced...&quot; and then=
- chose<br>
-&quot;Color Mode: Black and White&quot; in the list of printer options. I k=
-now<br>
-this, but it could be confusing to our users...<br>
-<br>
-So I&#39;d like to understand the background better, and why only Adobe<br>
-Reader does this, and whether this behavior can be fixed, e. g. by PPD<br>
-hacking or other tricks...<br>
-<br>
-Sorry to ask here, but the &quot;forums&quot; link is dysfunctional. Let me=
- know<br>
-if I can help. Best,<br>
-<br>
-Christian<br>
-_______________________________________________<br>
-Printing-architecture mailing list<br>
-<a href=3D"mailto:Printing-architecture@lists.linux-foundation.org">Printin=
-g-architecture@lists.linux-foundation.org</a><br>
-<a href=3D"https://lists.linuxfoundation.org/mailman/listinfo/printing-arch=
-itecture" target=3D"_blank">https://lists.linuxfoundation.org/mailman/listi=
-nfo/printing-architecture</a><br>
-</blockquote></div><br></div>
 
---047d7b10cfc5da6f7604e6c07a22--
+--Boundary_(ID_G7z+oDAiLFcfgMkcu2XX2w)
+Content-type: text/html; charset=windows-1252
+Content-transfer-encoding: quoted-printable
+
+<html><head><meta http-equiv=3D"Content-Type" content=3D"text/html =
+charset=3Dwindows-1252"></head><body style=3D"word-wrap: break-word; =
+-webkit-nbsp-mode: space; -webkit-line-break: after-white-space;">CUPS =
+1.6.4 is now available for download from:<div><br></div><div><span =
+class=3D"Apple-tab-span" style=3D"white-space:pre">	</span><a =
+href=3D"http://www.cups.org/software.php">http://www.cups.org/software.php=
+</a><br><div><br></div><div>The new release fixes some minor printing =
+issues, add support for USB "quirks" files on&nbsp;Linux, and adds a new =
+cupsd SyncOnClose directive. Changes include:<br><br><div><span =
+class=3D"Apple-tab-span" style=3D"white-space:pre">	</span>=95 =
+Removed some duplicate size definitions for some ISO sizes that were =
+causing&nbsp;problems =
+(&lt;rdar://problem/14722721&gt;)<br></div><div><span =
+class=3D"Apple-tab-span" style=3D"white-space:pre">	</span>=95 The =
+IPP backend did not add the "last-document" =
+attribute&nbsp;(&lt;rdar://problem/114660379&gt;)<br></div><div><span =
+class=3D"Apple-tab-span" style=3D"white-space:pre">	</span>=95 Added =
+a SyncOnClose directive to cups-files.conf to force cupsd to call =
+fsync&nbsp;before closing any configuration/state files it writes =
+(&lt;rdar://problem/14523043&gt;)<br></div><div><span =
+class=3D"Apple-tab-span" style=3D"white-space:pre">	</span>=95 Added =
+USB quirk rule for Lexmark E238 =
+(&lt;rdar://problem/14493054&gt;)<br></div><div><span =
+class=3D"Apple-tab-span" style=3D"white-space:pre">	</span>=95 =
+Closed server connections were still not always =
+detected&nbsp;(&lt;rdar://problem/14484313&gt;)<br></div><div><span =
+class=3D"Apple-tab-span" style=3D"white-space:pre">	</span>=95 The =
+libusb-based USB backend now loads its list of quirks from files =
+in&nbsp;/usr/share/cups/usb instead of using a hardcoded =
+table&nbsp;(&lt;rdar://problem/14442769&gt;)<br></div><div><span =
+class=3D"Apple-tab-span" style=3D"white-space:pre">	</span>=95 The =
+scheduler did not properly register ICC color profiles with =
+colord&nbsp;(&lt;rdar://problem/14455625&gt;)<br></div><div><br></div>Enjo=
+y!<br><div>
+<span class=3D"Apple-style-span" style=3D"border-collapse: separate; =
+border-spacing: 0px;"><span class=3D"Apple-style-span" =
+style=3D"border-collapse: separate; color: rgb(0, 0, 0); font-family: =
+'Andale Mono'; font-style: normal; font-variant: normal; font-weight: =
+normal; letter-spacing: normal; line-height: normal; orphans: 2; =
+text-align: -webkit-auto; text-indent: 0px; text-transform: none; =
+white-space: normal; widows: 2; word-spacing: 0px; =
+-webkit-border-horizontal-spacing: 0px; -webkit-border-vertical-spacing: =
+0px; -webkit-text-decorations-in-effect: none; -webkit-text-size-adjust: =
+auto; -webkit-text-stroke-width: 0px;  "><div style=3D"word-wrap: =
+break-word; -webkit-nbsp-mode: space; -webkit-line-break: =
+after-white-space; =
+">_________________________________________________________<br>Michael =
+Sweet, Senior Printing System&nbsp;Engineer, PWG =
+Chair</div></span></span>
+</div>
+
+<br></div></div></body></html>=
+
+--Boundary_(ID_G7z+oDAiLFcfgMkcu2XX2w)--
