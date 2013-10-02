@@ -1,16 +1,24 @@
-Return-Path: <msweet@apple.com>
-MIME-version: 1.0
-Content-transfer-encoding: 7BIT
-Content-type: text/plain; CHARSET=US-ASCII
-From: Michael Sweet <msweet@apple.com>
-In-reply-to: <d6228f0d4116c057ef2fe2d6fa30bcbf@raboud.com>
-Date: Wed, 02 Oct 2013 08:53:25 -0400
-Message-id: <58C324CB-36CE-410B-9350-E64104D9D503@apple.com>
-References: <524A9360.3010402@localhost.localdomain>
-	<D35B622B-9999-4BFB-859C-398BF13731C3@apple.com>
-	<d6228f0d4116c057ef2fe2d6fa30bcbf@raboud.com>
-Subject: Re: [Printing-architecture] CUPS "make test" dependent on
-	cups-filters
+Return-Path: <till.kamppeter@gmail.com>
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20120113;
+	h=message-id:date:from:user-agent:mime-version:to:subject:references
+	:in-reply-to:content-type:content-transfer-encoding;
+	bh=ZPMMN/le/z4B+g0zv6FRSC4LXCX7RTta9cmO2H5ei+I=;
+	b=YgXymn9wzmx2U5sxqS7V1ygmxfjeHfZUUtUCCWj2IifJW8WRkuEoUwXYQX3tZxFa68
+	sI781XPpirem2Dc4/g3CDnF5y/y+hOtZCxdPPVb5/EOAe3ZiECJlbhre53uH6Kok6A8/
+	v+6R9IScZV5LOcsdpQO8Br+An5YxdjUqAFB+4gyulmpN+I7rcQRL6GftuMcBKFVMyuOd
+	IeeTYm9PuRRFkZ/xXbtaVhNWyzrmbdw12UDS2XJGov+7VyF0yNcrdiKRtLIrXk6OQiRj
+	mkhQYzWPN0oYOM930AmJwqdvK5uS01QLmZEP7pxCO3EY/ok8/Z8A+0iXX9pnrzkHDfNE
+	p2aw==
+Message-ID: <524C4A98.9090307@gmail.com>
+Date: Wed, 02 Oct 2013 18:32:24 +0200
+From: Till Kamppeter <till.kamppeter@gmail.com>
+MIME-Version: 1.0
+References: <e395be80811270817n502ccd16wf6cc90f85364f5ae@mail.gmail.com>
+In-Reply-To: <e395be80811270817n502ccd16wf6cc90f85364f5ae@mail.gmail.com>
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 7bit
+Subject: [Printing-architecture] Last OP Meeting - Wed - 2 Oct 2013 - The
+	Recording
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>,
@@ -20,17 +28,20 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Didier Raboud <odyx@debian.org>
-Cc: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>, 712237@bugs.debian.org, Till Kamppeter <till.kamppeter@gmail.com>
+To: Open Printing <printing-architecture@lists.linux-foundation.org>, Printing-japan <printing-japan@lists.linux-foundation.org>
 
-Didier,
+Hi,
 
-On Oct 2, 2013, at 3:14 AM, Didier Raboud <odyx@debian.org> wrote:
-> ...
-> Indeed, thanks. Marking the related Debian bugreport as such and CC'ing it. That said, it's quite hard to keep track without having an access to that rdar:// system.
+I have uploaded the recording of the last OpenPrinting meeting to the
+OpenPrinting server:
 
-I feel your pain and have been pressuring the folks that are doing the security audit of the new cups.org server to sign off on it so I can put the public bug reporter back online.  It is a major pain in the butt for me as well, I assure you!
+http://www.openprinting.org/download/meetingnotes/op-telecons/OP-Meeting-20131002.mp3
 
-_________________________________________________________
-Michael Sweet, Senior Printing System Engineer, PWG Chair
+In general, recorded meetings I will upload to
+
+http://www.openprinting.org/download/meetingnotes/
+
+   Till
+
+P. S.: The MP3 is 5 MB long, 15 minutes of talking.
 
