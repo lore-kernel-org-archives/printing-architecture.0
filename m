@@ -1,19 +1,18 @@
-Return-Path: <blueroofmusic@gmail.com>
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20120113;
-	h=mime-version:from:date:message-id:subject:to:content-type;
-	bh=lfNSAtO6FbowZ5yOBlNx2hvV++EWswBjg76EeVtOk4Q=;
-	b=PHumVlbAXmS63srW0vRBaSu62QknbCCxiP6/DJDcZNF2AB6MVNdZV/qTQab0Qwqo/j
-	as+8RHlGVjZDAgtHrXtnNeYeBmK2L0wUgmTn3G0ZbPdnn2f45OmvpWRzxq9ga1wUvulM
-	LhHLqpGB+DbL1mSzLCT4P0xocC1QWcWHEW5eyVtxMENHf8/eoTyRN20xaP2W/OQ/nmnQ
-	L41CHKeqL37YUGZFOabOt0/t7eknk0cju/ccuLOGwT99OkUrOAonmYsLgBMXYN2QA/lW
-	zuPDKy6DVZuhIojvbOhJQS+guLo91hsKZE62Qsawzx0beUVbTRr9oFpPkL6lFxJN/0az
-	cWEA==
-MIME-Version: 1.0
-From: Ira McDonald <blueroofmusic@gmail.com>
-Date: Wed, 2 Oct 2013 12:48:07 -0400
-Message-ID: <CAN40gSs61QFpNp6MSByNNPCdWGV5gbWuPHkgVkzgdio4tTvOaw@mail.gmail.com>
-Content-Type: multipart/alternative; boundary=90e6ba614a96a3409d04e7c4d614
-Subject: [Printing-architecture] OP Minutes (2 October 2013)
+Return-Path: <msweet@apple.com>
+MIME-version: 1.0
+Content-transfer-encoding: 7BIT
+Content-type: text/plain; CHARSET=US-ASCII
+From: Michael Sweet <msweet@apple.com>
+In-reply-to: <03102013191944.598ea3df7caa@desktop.copernicus.demon.co.uk>
+Date: Thu, 03 Oct 2013 15:11:24 -0400
+Message-id: <7BD96D42-8011-4F34-8B8A-555A10AB6E30@apple.com>
+References: <524A9360.3010402@localhost.localdomain>
+	<D35B622B-9999-4BFB-859C-398BF13731C3@apple.com>
+	<d6228f0d4116c057ef2fe2d6fa30bcbf@raboud.com>
+	<58C324CB-36CE-410B-9350-E64104D9D503@apple.com>
+	<03102013191944.598ea3df7caa@desktop.copernicus.demon.co.uk>
+Subject: Re: [Printing-architecture] Bug#712237: CUPS "make test" dependent
+	on cups-filters
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>,
@@ -23,161 +22,30 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>, Ira McDonald <blueroofmusic@gmail.com>
+To: Brian Potkin <claremont102@gmail.com>
+Cc: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>, 712237@bugs.debian.org, Didier Raboud <odyx@debian.org>, Till Kamppeter <till.kamppeter@gmail.com>
 
---90e6ba614a96a3409d04e7c4d614
-Content-Type: text/plain; charset=ISO-8859-1
+Brian,
 
-Hi,
+On Oct 3, 2013, at 3:01 PM, Brian Potkin <claremont102@gmail.com> wrote:
+> ...
+> The str newsgroup/mailing list was excellent. I do hope it returns; its
+> absence makes it very difficult to triage reported bugs in CUPS itself.
+> It is sorely missed as a source of information on which to base advice
+> and decisions.
 
-Minutes from today's Open Printing call are posted at:
+It *is* coming back.  Just waiting on the right people at Apple to sign off on putting the new server live... :/
 
-  ftp://ftp.pwg.org/pub/pwg/openprinting/minutes/OP-Minutes-20131002.htm
+> Also - what about cups.general? My last mail from it was on 20th April
+> of this year. It too provided a source of sound information with many
+> knowledgeable people posting there; CUPS would be all the poorer without
+> it. Does its reappearence really require a security audit; especially
+> one which has lasted this length of time?
 
-*** 2014 Joint PWG / Open Printing Summit ***
-- Joint PWG/OPS at Cupertino, CA (hosted by Apple) - 13-16 May 2014
-  - http://www.pwg.org/chair/meeting-info/meetings.html
-  - *** Add to your calendar ***
+Unfortunately, since it involves running mailman and a mail server, yes.
 
-Next OP US/Europe Conference Calls:
+The old NNTP interface (cups.general, cups.bugs, etc.) will not be returning, we will just have mailman-based mailing lists going forward...
 
-(1) November 2013 - US/Europe - OP Monthly Meeting
-    - Note - European Summer Time ends on 27 October 2013
-    - Note - US Daylight Savings Time ends on 2 November 2013
+_________________________________________________________
+Michael Sweet, Senior Printing System Engineer, PWG Chair
 
-    - Wednesday 6 November 2013, Daytime
-      - US
-        9am in San Francisco - US PST (Pacific Standard Time)
-        10am in Colorado - US MST (Mountain Standard Time)
-        11am in Chicago - US CST (Central Standard Time)
-        12pm in New York - US EST (Eastern Standard Time)
-      - Europe
-        6pm in Berlin - CET (Central European Time)
-
-    * Main Number (Till Kamppeter, LF, leader)
-      International: +1-619-326-2730 (new number)
-      Access Code:   491659#
-
-(2) December 2013 - US/Europe - OP Monthly Meeting (tentative)
-    - Wednesday 4 December 2013, Daytime
-      - US
-        9am in San Francisco - US PST (Pacific Standard Time)
-        10am in Colorado - US MST (Mountain Standard Time)
-        11am in Chicago - US CST (Central Standard Time)
-        12pm in New York - US EST (Eastern Standard Time)
-      - Europe
-        6pm in Berlin - CET (Central European Time)
-
-    * Main Number (Till Kamppeter, LF, leader)
-      International: +1-619-326-2730 (new number)
-      Access Code:   491659#
-
-Cheers,
-- Ira
-
-
-Ira McDonald (Musician / Software Architect)
-Chair - Linux Foundation Open Printing WG
-Secretary - IEEE-ISTO Printer Working Group
-Co-Chair - IEEE-ISTO PWG IPP WG
-Co-Chair - TCG Trusted Mobility Solutions WG
-Chair - TCG Embedded Systems Hardcopy SG
-IETF Designated Expert - IPP & Printer MIB
-Blue Roof Music/High North Inc
-http://sites.google.com/site/blueroofmusic
-http://sites.google.com/site/highnorthinc
-mailto:blueroofmusic@gmail.com
-Winter  579 Park Place  Saline, MI  48176  734-944-0094
-Summer  PO Box 221  Grand Marais, MI 49839  906-494-2434
-
---90e6ba614a96a3409d04e7c4d614
-Content-Type: text/html; charset=ISO-8859-1
-Content-Transfer-Encoding: quoted-printable
-
-<div dir=3D"ltr"><div><div><div>Hi, <br><br><span><span><span><span><span><=
-span><span><span class=3D"">Minutes</span></span></span></span></span></spa=
-n></span></span> from today&#39;s Open Printing<span> call</span> are <span=
-><span><span><span class=3D"">posted</span></span></span></span> at:<br>
-
-
-
-
-<br>
-=A0 <a href=3D"ftp://ftp.pwg.org/pub/pwg/openprinting/minutes/OP-Minutes-20=
-131002.htm" target=3D"_blank">ftp://ftp.pwg.org/pub/pwg/openprinting/minute=
-s/OP-Minutes-20131002.htm</a><br><br>*** 2014 Joint PWG / Open Printing Sum=
-mit ***<br>
-
-
-
-
-- Joint PWG/<span><span><span class=3D"">OPS</span></span></span> at Cupert=
-ino, CA (hosted by Apple) - 13-16 May 2014<br>=A0 - <a href=3D"http://www.p=
-wg.org/chair/meeting-info/meetings.html" target=3D"_blank">http://www.pwg.o=
-rg/chair/meeting-info/meetings.html</a><br>
-
-
-
-=A0 - *** Add to your calendar ***<br>
-<br></div>Next <span class=3D"">OP</span> US/Europe Conference Calls:<br><b=
-r>(1) November 2013 - US/Europe - <span class=3D"">OP</span> Monthly Meetin=
-g<br>=A0=A0=A0 - Note - European Summer Time ends on 27 October 2013<br>=A0=
-=A0=A0 - Note - US Daylight Savings Time ends on 2 November 2013<br>
-
-
-<br>=A0=A0=A0 - Wednesday 6 November 2013, Daytime<br>=A0=A0=A0=A0=A0 - US<=
-br>=A0=A0=A0=A0=A0=A0=A0 9am in San Francisco - US PST (Pacific Standard Ti=
-me)<br>=A0=A0=A0=A0=A0=A0=A0 10am in Colorado - US MST (Mountain Standard T=
-ime)<br>=A0=A0=A0=A0=A0=A0=A0 11am in Chicago - US CST (Central Standard Ti=
-me)<br>
-
-
-=A0=A0=A0=A0=A0=A0=A0 12pm in New York - US EST (Eastern Standard Time)<br>=
-=A0=A0=A0=A0=A0 - Europe<br>=A0=A0=A0=A0=A0=A0=A0 6pm in Berlin - CET (Cent=
-ral European Time)<br><br>=A0=A0=A0 * Main Number (Till Kamppeter, LF, lead=
-er)<br>=A0=A0=A0=A0=A0 International: <a href=3D"tel:%2B1-619-326-2730" val=
-ue=3D"+16193262730" target=3D"_blank">+1-619-326-2730</a> (new number)<br>
-
-
-=A0=A0=A0=A0=A0 Access Code:=A0=A0 491659#<br><br>(2) December 2013 - US/Eu=
-rope - <span class=3D"">OP</span> Monthly Meeting (tentative)<br>=A0=A0=A0 =
-- Wednesday 4 December 2013, Daytime<br>=A0=A0=A0=A0=A0 - US<br>=A0=A0=A0=
-=A0=A0=A0=A0 9am in San Francisco - US PST (Pacific Standard Time)<br>
-
-
-=A0=A0=A0=A0=A0=A0=A0 10am in Colorado - US MST (Mountain Standard Time)<br=
->=A0=A0=A0=A0=A0=A0=A0 11am in Chicago - US CST (Central Standard Time)<br>=
-=A0=A0=A0=A0=A0=A0=A0 12pm in New York - US EST (Eastern Standard Time)<br>=
-=A0=A0=A0=A0=A0 - Europe<br>=A0=A0=A0=A0=A0=A0=A0 6pm in Berlin - CET (Cent=
-ral European Time)<br>
-
-
-<br>=A0=A0=A0 * Main Number (Till Kamppeter, LF, leader)<br>=A0=A0=A0=A0=A0=
- International: <a href=3D"tel:%2B1-619-326-2730" value=3D"+16193262730" ta=
-rget=3D"_blank">+1-619-326-2730</a> (new number)<br>=A0=A0=A0=A0=A0 Access =
-Code:=A0=A0 491659#<br><br></div>
-
-Cheers,<br></div>- Ira<br><br><br><div>Ira McDonald (Musician / Software Ar=
-chitect)<br>Chair - Linux Foundation Open Printing WG<br>Secretary - IEEE-I=
-STO Printer Working Group<br>Co-Chair - IEEE-ISTO PWG IPP WG<br>Co-Chair - =
-TCG Trusted Mobility Solutions WG<br>
-
-Chair - TCG Embedded Systems Hardcopy SG<br>IETF Designated Expert - IPP &a=
-mp; Printer MIB<br>Blue Roof Music/High North Inc<br><a style=3D"color:rgb(=
-51,51,255)" href=3D"http://sites.google.com/site/blueroofmusic" target=3D"_=
-blank">http://sites.google.com/site/blueroofmusic</a><br>
-
-<a style=3D"color:rgb(102,0,204)" href=3D"http://sites.google.com/site/high=
-northinc" target=3D"_blank">http://sites.google.com/site/highnorthinc</a><b=
-r>mailto:<a href=3D"mailto:blueroofmusic@gmail.com" target=3D"_blank">bluer=
-oofmusic@gmail.com</a><br>
-
-Winter=A0 579 Park Place=A0 Saline, MI=A0 48176=A0 734-944-0094<br>Summer=
-=A0 PO Box 221=A0 Grand Marais, MI 49839=A0 906-494-2434<br><br><div style=
-=3D"display:inline"></div><div style=3D"display:inline"></div><div style=3D=
-"display:inline"></div>
-
-<div></div><div></div><div></div><div></div></div>
-</div>
-
---90e6ba614a96a3409d04e7c4d614--
