@@ -1,23 +1,13 @@
-Return-Path: <danieru.dressler@gmail.com>
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20120113;
-	h=mime-version:in-reply-to:references:date:message-id:subject:from:to
-	:cc:content-type;
-	bh=wmrKW0VeqxMmI/JMsNWZW1N2/QfyThs5b9PoGUwIH9s=;
-	b=kZkCjBTErqoBbSWVAEGGdc60XiTjVClXHmzHg0lcZijbA+1g0ZOMszjeCs5h+WTpef
-	tMUAJ6NlvFR/m3IUMgjY3UgtgkIOHgKYbYKwf+ubkQW82W7ADcBXsQtAqOKCdl+aeOYM
-	v71MPaWEGnzawf3OFTXZhBZ7p2KFMmnuwHRCk7+fjOdN6GxziJY8q09h9sgLH8tJMu5y
-	+oRwkQKyY26PYYQ1QtFcjXNl6qWsvyMmUYYMWqs9Zwwt/GFwidzKcbD5/XYYtwHjIirF
-	HuZpI3Y4c8ytx/Xceh3cRa0jhqespUoVXdmg2TLxKUsSIDtzEM2zPWfu4s76Cy4jOMiF
-	Y0WQ==
-MIME-Version: 1.0
-In-Reply-To: <CAN40gSv9w8xe00moKCni=L6w+48jPjiNwNy9r3ftB8mtMfqL1g@mail.gmail.com>
-References: <CAN40gSv9w8xe00moKCni=L6w+48jPjiNwNy9r3ftB8mtMfqL1g@mail.gmail.com>
-Date: Sun, 27 Oct 2013 13:53:31 -0600
-Message-ID: <CAGC3nLCxX_3HpTXeccETq=kHBiWYzAX+w=2DhqAEOrK2oFTNPA@mail.gmail.com>
-From: Daniel Dressler <danieru.dressler@gmail.com>
-Content-Type: text/plain; charset=UTF-8
-Subject: Re: [Printing-architecture] OP folks - we need an WS-Discovery
- prototype for IPP Everywhere
+Return-Path: <msweet@apple.com>
+MIME-version: 1.0
+Content-type: text/plain; charset=iso-8859-1
+From: Michael Sweet <msweet@apple.com>
+In-reply-to: <1382715382.32506.5.camel@rubik>
+Date: Mon, 28 Oct 2013 11:30:12 -0400
+Content-transfer-encoding: quoted-printable
+Message-id: <ACCCE59B-5C71-4FB6-A618-18B5621DBC0D@apple.com>
+References: <1382715382.32506.5.camel@rubik>
+Subject: Re: [Printing-architecture] [patch] cups-1.7.0: job history fix
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>,
@@ -27,68 +17,59 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Ira McDonald <blueroofmusic@gmail.com>
+To: Tim Waugh <twaugh@redhat.com>
 Cc: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>
 
-Hello Ira
+Tim,
 
-I would like to work on this project. Is there anyone else interested?
-We could collaborate and since we are dealing with a test suite I
-would appreciate someone to watch for edge cases I might miss.
+Thanks, I filed this as:
 
-One issue I am concerned with is testing our test suite. I am going to
-guess that CUPS does not support WSD and I do not think Windows does
-support IPPE yet either. Is there by any chance a company developing a
-WSD && IPPE printer which could lend me a printer? I can sign an NDA
-if needed. The final test suite would of course test both printers and
-spoolers but I'd appreciate an outside thing to test against so I'm
-not writing blind.
+    <rdar://problem/15331639> cups.org: Regression in auto-debug logging
 
-Daniel
+That said, your proposed fix actually isn't safe either - the Fortify =
+strcpy stuff in glibc effectively converts the strcpy to a strlcpy, so =
+the code will break if you happen to compile using the =
+-D_FORTIFY_SOURCE=3D2 compiler option.
 
-2013/10/27 Ira McDonald <blueroofmusic@gmail.com>:
+I will follow up with a memcpy-based fix.
+
+Thanks for reporting this!
+
+(and we are 1 electronic signature away from getting cups.org's bug =
+tracker back online...)
+
+
+On Oct 25, 2013, at 11:36 AM, Tim Waugh <twaugh@redhat.com> wrote:
+
 > Hi,
->
-> Here's a request for Open Printing community help from IEEE-ISTO
-> Printer Working Group, per our face-to-face meeting last week.
->
-> Since IPP Everywhere printers *must* support both DNS-SD (Bonjour)
-> and WS-Discovery for service discovery by clients, our PWG effort to
-> finish up the tools for free vendor IPP Everywhere Self-Certification has
-> one gap.
->
-> We need a volunteer to write a tool to capture printer-specific attributes
-> for WS-Discovery, for example using the gsoap toolkit or the the free (but
-> Windows-only) Microsoft WSD Debug tool (which can be scripted).
->
-> See details in chapters 4 and 9 of IPP Everywhere (PWG 5100.14):
->
->   ftp://ftp.pwg.org/pub/pwg/candidates/cs-ippeve10-20130128-5100.14.pdf
->
-> If anyone in the Open Printing community can help, please reply to this
-> mailing list or to me privately, if you wish.
->
-> Cheers,
-> - Ira (PWG Secretary and IPP WG Co-Chair hats on)
->
->
-> Ira McDonald (Musician / Software Architect)
-> Chair - Linux Foundation Open Printing WG
-> Secretary - IEEE-ISTO Printer Working Group
-> Co-Chair - IEEE-ISTO PWG IPP WG
-> Co-Chair - TCG Trusted Mobility Solutions WG
-> Chair - TCG Embedded Systems Hardcopy SG
-> IETF Designated Expert - IPP & Printer MIB
-> Blue Roof Music/High North Inc
-> http://sites.google.com/site/blueroofmusic
-> http://sites.google.com/site/highnorthinc
-> mailto:blueroofmusic@gmail.com
-> Winter  579 Park Place  Saline, MI  48176  734-944-0094
-> Summer  PO Box 221  Grand Marais, MI 49839  906-494-2434
->
->
-> _______________________________________________
+>=20
+> While playing around with a logging enhancement=B9 I discovered a bug =
+in
+> the job history code. It was introduced some time after the public
+> source repository was taken off-line, so I don't know what the
+> motivation for the change was.
+>=20
+> A cups_joblog_t declares 'char message[1]' for the message, and is
+> allocated with enough storage for the intended message. However, the
+> message is copied in with strlcpy, with a limit of
+> sizeof(cups_joblog_t->message). As a result, the message is =
+severely(!)
+> truncated.
+>=20
+> The fix is to undo the change as attached.
+>=20
+> Tim.
+> */
+>=20
+> =B9 =
+http://cyberelk.net/tim/2013/10/25/cups-adding-support-for-system-journal/=
+
+> <cups-jobhistory.patch>_______________________________________________
 > Printing-architecture mailing list
 > Printing-architecture@lists.linux-foundation.org
-> https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture
->
+> =
+https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture
+
+_________________________________________________________
+Michael Sweet, Senior Printing System Engineer, PWG Chair
+
