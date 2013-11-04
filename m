@@ -1,12 +1,24 @@
-Return-Path: <twaugh@redhat.com>
-Message-ID: <1383567790.3894.4.camel@rubik>
-From: Tim Waugh <twaugh@redhat.com>
-Date: Mon, 04 Nov 2013 12:23:10 +0000
-Content-Type: multipart/signed; micalg="pgp-sha1";
-	protocol="application/pgp-signature"; 
-	boundary="=-SdvNSobwe5rO6O6QtLgp"
-Mime-Version: 1.0
-Subject: [Printing-architecture] cups-browsed: how to treat rejecting queues?
+Return-Path: <till.kamppeter@gmail.com>
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20120113;
+	h=message-id:date:from:user-agent:mime-version:to:subject:references
+	:in-reply-to:content-type:content-transfer-encoding;
+	bh=L47o9R8p9Up34EpAxjX3afhRdKgHs1BYDsB2ZRqKRRE=;
+	b=UD9UZCc96EeUHegHX5V8fuUfjpd9AMDLwoN7n8kG48KazntUpeOTtSWiL9qKWuLIcX
+	H343rZkKcPFnFfYsDHs913IURJ86659ldzN4HkwZLlV3v0F6VDZYDbH1nxYX4AeWZfWJ
+	GiiIOQPZ9cKqI3mRWnDTjPB3upeTLmoxMnIJrDV8XE5zjHmQOZTZ7w2ovMTuUo5hvM49
+	XeRxYd6WlxEO+rmRjnx/QmHnaw5akXMx2HADEHTSDvx0+XKtAsnAjwqKBHEZdsSYoNeK
+	ERe8WyGkJN/Yl/KKhTNISEB6xjAtErjmE8afrdlWJEkHmQ2GwYHWFOb+gqMaH2CCwQh/
+	a0Lw==
+Message-ID: <52779F4C.5070909@gmail.com>
+Date: Mon, 04 Nov 2013 14:21:16 +0100
+From: Till Kamppeter <till.kamppeter@gmail.com>
+MIME-Version: 1.0
+References: <1383567790.3894.4.camel@rubik>
+In-Reply-To: <1383567790.3894.4.camel@rubik>
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 7bit
+Subject: Re: [Printing-architecture] cups-browsed: how to treat rejecting
+	queues?
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>,
@@ -16,46 +28,33 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Open Printing <printing-architecture@lists.linux-foundation.org>
-Cc: Till Kamppeter <till.kamppeter@gmail.com>
+To: Tim Waugh <twaugh@redhat.com>, Open Printing <printing-architecture@lists.linux-foundation.org>
 
+Tim, one can solve the problem, cups-browsed updates queues on changes
+in the Bonjour record from the server (but not sure whether on all
+changes). Rejecting jobs is encoded in the printer-type TXT field, by
+the 0x80000 bit. See /usr/include/cups/cups.h, CUPS_PRINTER_REJECTING
+constant.
 
---=-SdvNSobwe5rO6O6QtLgp
-Content-Type: text/plain; charset="UTF-8"
-Content-Transfer-Encoding: quoted-printable
+So it should be possible to implement that the cups-browsed queue
+follows the accepting bit of its remote queue.
 
-When cups-browsed creates local queues to forward jobs to remote queues,
-I wonder how it should treat queues that are not accepting jobs? The way
-cupsd used to behave was to copy the remote printer's state to the local
-implicit queue, but cups-browsed is not structured in that way: it
-doesn't update the queues it creates.
+   Till
 
-The problem with the current behaviour is that the GTK+ print dialog
-will allow a queue rejecting jobs to be selected.
-
-See also discussion of this for Fedora:
-  https://bugzilla.redhat.com/show_bug.cgi?id=3D1025263
-
-Tim.
-*/
-
-
---=-SdvNSobwe5rO6O6QtLgp
-Content-Type: application/pgp-signature; name="signature.asc"
-Content-Description: This is a digitally signed message part
-Content-Transfer-Encoding: 7bit
-
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.15 (GNU/Linux)
-
-iQEVAwUAUneRrnlVEo2joavTAQJdUwf+LM50y313Grt2mG0Nxozevwft/Xoc9aus
-Cfg6GnJLwKoVWPCgk/CjfVfawEY3zA3BqCGHHKEjWPeFNrpzYRi2WiyAsxHTbOT/
-by0qJCx626WH/4eJ4EJqAh6Wxv+Uhu7qKcS8q7B7MeiJ7Q3O/OXGGZ81FDgWAmSt
-b0XqxustXNXGHmrtVkrIAJblDajDWPnIsiNfDrMe4RW2cOS6wfN7ZEgiUrGJzLtw
-Pnqizb4SFjtbghu0ziJOObfHNNViZes7zSex/IaYLeZmM9sc7hDrKyYop4nMdp7Z
-XClSbAKWkwWsNaBSzcGWBGp03TPk6egpfj8nmxu/SQyyzFvjrQ4oZw==
-=L8MZ
------END PGP SIGNATURE-----
-
---=-SdvNSobwe5rO6O6QtLgp--
+On 11/04/2013 01:23 PM, Tim Waugh wrote:
+> When cups-browsed creates local queues to forward jobs to remote queues,
+> I wonder how it should treat queues that are not accepting jobs? The way
+> cupsd used to behave was to copy the remote printer's state to the local
+> implicit queue, but cups-browsed is not structured in that way: it
+> doesn't update the queues it creates.
+> 
+> The problem with the current behaviour is that the GTK+ print dialog
+> will allow a queue rejecting jobs to be selected.
+> 
+> See also discussion of this for Fedora:
+>   https://bugzilla.redhat.com/show_bug.cgi?id=1025263
+> 
+> Tim.
+> */
+> 
 
