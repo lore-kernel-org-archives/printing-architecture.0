@@ -1,13 +1,24 @@
-Return-Path: <twaugh@redhat.com>
-Message-ID: <1383759129.10582.11.camel@rubik>
-From: Tim Waugh <twaugh@redhat.com>
-Date: Wed, 06 Nov 2013 17:32:09 +0000
-Content-Type: multipart/signed; micalg="pgp-sha1";
-	protocol="application/pgp-signature"; 
-	boundary="=-O3LN/DsMzBjSehVxslVa"
-Mime-Version: 1.0
-Subject: [Printing-architecture] [patch] cups-filters 1.0.41: gstoraster
-	needs dbus
+Return-Path: <till.kamppeter@gmail.com>
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20120113;
+	h=message-id:date:from:user-agent:mime-version:to:subject:references
+	:in-reply-to:content-type:content-transfer-encoding;
+	bh=jZ2DpZVCqUDggBxrFzICo/UV3vWQwr9J3nWKu3kIHG8=;
+	b=g3dsdNVtVuY69Q/YYipQBOjO7cGzjIoX/wYMYKj7MdxBEU+AFYzrtH9Swmfq7hNjJj
+	WrYTCWuhQe0oiQ0UrfI2BKLo4uvXJS7ImMPpUF3YCrPqdgxKqQBZpjUuUwTBCS9K5saX
+	s4bi0qeCGkYS0jz8/g60R3ssuIgbfHvApQ4lLTcQPEZo4iZgwLZXJYQM649XWIhB87S6
+	GZikgVdfgocelqkwfn/z0Kn9tbox3v/uKkdrYG/5i7nVJoekbH/zdVpONqgDJ0sqpPLn
+	cp7MGP6340am3mubVBiCHNNn2+/ZiTteFUaj5d7ZyK3ang4gLjd4o7K7Rq8T2X1wNDKl
+	89AA==
+Message-ID: <527AA2C9.4070709@gmail.com>
+Date: Wed, 06 Nov 2013 21:12:57 +0100
+From: Till Kamppeter <till.kamppeter@gmail.com>
+MIME-Version: 1.0
+References: <1383759129.10582.11.camel@rubik>
+In-Reply-To: <1383759129.10582.11.camel@rubik>
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 7bit
+Subject: Re: [Printing-architecture] [patch] cups-filters 1.0.41: gstoraster
+ needs dbus
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>,
@@ -17,94 +28,33 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Open Printing <printing-architecture@lists.linux-foundation.org>
+To: Tim Waugh <twaugh@redhat.com>, Open Printing <printing-architecture@lists.linux-foundation.org>
 
+Thank you for the patch, I have found the problem independently today
+and have fixed it (in rev. 7121).
 
---=-O3LN/DsMzBjSehVxslVa
-Content-Type: multipart/mixed; boundary="=-K/R+bOXB/bPbQQfBW/lz"
+By the way, today I have moved foomatic-rip (the one with obsolete
+spooler support removed in this year's GSoC) into cups-filters. The
+foomatic-filters package is obsolete now.
 
+   Till
 
---=-K/R+bOXB/bPbQQfBW/lz
-Content-Type: text/plain; charset="UTF-8"
-Content-Transfer-Encoding: quoted-printable
-
-This patch fixes gstoraster, which uses dbus for colord support.
-Previously, it was being built without dbus and so colord support was
-missing.
-
-Original bug report:
-  https://bugzilla.redhat.com/show_bug.cgi?id=3D1026928
-
-Tim.
-*/
-
-
---=-K/R+bOXB/bPbQQfBW/lz
-Content-Disposition: attachment; filename="cups-filters-dbus.patch"
-Content-Transfer-Encoding: base64
-Content-Type: text/x-patch; name="cups-filters-dbus.patch"; charset="UTF-8"
-
-ZGlmZiAtdXAgY3Vwcy1maWx0ZXJzLTEuMC40MS9NYWtlZmlsZS5hbS5kYnVzIGN1cHMtZmlsdGVy
-cy0xLjAuNDEvTWFrZWZpbGUuYW0NCi0tLSBjdXBzLWZpbHRlcnMtMS4wLjQxL01ha2VmaWxlLmFt
-LmRidXMJMjAxMy0xMC0yNSAxNDoxMjo1Ni4wMDAwMDAwMDAgKzAxMDANCisrKyBjdXBzLWZpbHRl
-cnMtMS4wLjQxL01ha2VmaWxlLmFtCTIwMTMtMTEtMDYgMTc6MTY6NTguNTA0MjM0NjE5ICswMDAw
-DQpAQCAtNDc0LDkgKzQ3NCwxMSBAQCBnc3RvcmFzdGVyX1NPVVJDRVMgPSBcDQogCWN1cHNmaWx0
-ZXJzL3Jhc3Rlci5oDQogZ3N0b3Jhc3Rlcl9DRkxBR1MgPSBcDQogCSQoQ1VQU19DRkxBR1MpIFwN
-CisJJChEQlVTX0NGTEFHUykgXA0KIAktSSQoc3JjZGlyKS9jdXBzZmlsdGVycy8NCiBnc3RvcmFz
-dGVyX0xEQUREID0gXA0KIAkkKENVUFNfTElCUykgXA0KKwkkKERCVVNfTElCUykgXA0KIAlsaWJj
-dXBzZmlsdGVycy5sYQ0KIA0KIGltYWdldG9wZGZfU09VUkNFUyA9IFwNCmRpZmYgLXVwIGN1cHMt
-ZmlsdGVycy0xLjAuNDEvY29uZmlnLmguaW4uZGJ1cyBjdXBzLWZpbHRlcnMtMS4wLjQxL2NvbmZp
-Zy5oLmluDQpkaWZmIC11cCBjdXBzLWZpbHRlcnMtMS4wLjQxL2NvbmZpZ3VyZS5hYy5kYnVzIGN1
-cHMtZmlsdGVycy0xLjAuNDEvY29uZmlndXJlLmFjDQotLS0gY3Vwcy1maWx0ZXJzLTEuMC40MS9j
-b25maWd1cmUuYWMuZGJ1cwkyMDEzLTEwLTMwIDA3OjIxOjQ0LjAwMDAwMDAwMCArMDAwMA0KKysr
-IGN1cHMtZmlsdGVycy0xLjAuNDEvY29uZmlndXJlLmFjCTIwMTMtMTEtMDYgMTc6MjM6MDcuNjE5
-OTIxMDc5ICswMDAwDQpAQCAtMTE0LDYgKzExNCwxOCBAQCBBWF9DT01QQVJFX1ZFUlNJT04oWyRD
-VVBTX1ZFUlNJT05dLFtndF0sDQogQUNfREVGSU5FKFBERlRPUERGLCBbXSwgW05lZWRlZCBmb3Ig
-cGRmdG9wZGYgZmlsdGVyIGNvbXBpbGF0aW9uXSkNCiBBQ19ERUZJTkVfRElSKEJBTk5FUlRPUERG
-X0RBVEFESVIsICJ7Q1VQU19EQVRBRElSfS9kYXRhIiwgW0RpcmVjdG9yeSB3aGVyZSBiYW5uZXJ0
-b3BkZiBmaW5kcyBpdHMgZGF0YSBmaWxlcyAoUERGIHRlbXBsYXRlcyldKQ0KIA0KK2RubCBEQnVz
-IHN1cHBvcnQNCitEQlVTX0NGTEFHUz0iIg0KK0RCVVNfTElCUz0iIg0KK0FDX0FSR19FTkFCTEUo
-W2RidXNdLCBBQ19IRUxQX1NUUklORyhbLS1kaXNhYmxlLWRidXNdLA0KKyAgICBbRG8gbm90IHVz
-ZSBkYnVzIHRvIGNvbW11bmljYXRlIHdpdGggZXh0ZXJuYWwgc2VydmljZXNdKSkNCitpZiB0ZXN0
-ICIkZW5hYmxlX2RidXMiICE9ICJubyI7IHRoZW4NCisgICAgICAgIFBLR19DSEVDS19NT0RVTEVT
-KERCVVMsIFtkYnVzLTFdLCBbSEFWRV9EQlVTPS1ESEFWRV9EQlVTXSkNCisgICAgICAgIEFDX0RF
-RklORShbSEFWRV9EQlVTXSwgW10sIFtEZWZpbmVzIGlmIGRidXMgaXMgYXZhaWxhYmxlLl0pDQor
-ZmkNCitBQ19TVUJTVChEQlVTX0NGTEFHUykNCitBQ19TVUJTVChEQlVTX0xJQlMpDQorDQogQUNf
-U0VBUkNIX0xJQlMoW2Rsb3Blbl0sDQogCVtkbF0sDQogCVtBU19JRihbdGVzdCAiJGFjX2N2X3Nl
-YXJjaF9kbG9wZW4iICE9ICJub25lIHJlcXVpcmVkIl0sIFsNCkBAIC02NDAsNiArNjUyLDcgQEAg
-QnVpbGQgY29uZmlndXJhdGlvbjoNCiAJcGhwLWNvbmZpZzogICAgICAke3dpdGhfcGhwX2NvbmZp
-Z30NCiAJdGVzdC1mb250OiAgICAgICAke3dpdGhfdGVzdF9mb250X3BhdGh9DQogCXRpZmY6ICAg
-ICAgICAgICAgJHt3aXRoX3RpZmZ9DQorCWRidXM6ICAgICAgICAgICAgJHtIQVZFX0RCVVN9DQog
-CWF2YWhpOiAgICAgICAgICAgJHtlbmFibGVfYXZhaGl9DQogCWJyb3dzaW5nOiAgICAgICAgJHt3
-aXRoX2Jyb3dzZXJlbW90ZXByb3RvY29sc30NCiAJd2Vycm9yOiAgICAgICAgICAke2VuYWJsZV93
-ZXJyb3J9DQpkaWZmIC11cCBjdXBzLWZpbHRlcnMtMS4wLjQxL2ZpbHRlci9jb2xvcmQuYy5kYnVz
-IGN1cHMtZmlsdGVycy0xLjAuNDEvZmlsdGVyL2NvbG9yZC5jDQotLS0gY3Vwcy1maWx0ZXJzLTEu
-MC40MS9maWx0ZXIvY29sb3JkLmMuZGJ1cwkyMDEzLTA3LTI5IDIwOjEyOjQyLjAwMDAwMDAwMCAr
-MDEwMA0KKysrIGN1cHMtZmlsdGVycy0xLjAuNDEvZmlsdGVyL2NvbG9yZC5jCTIwMTMtMTEtMDYg
-MTc6MTY6NTguNTA1MjM0NjIzICswMDAwDQpAQCAtMzIsNiArMzIsOCBAQCBNSVQgT3BlbiBTb3Vy
-Y2UgTGljZW5zZSAgLSAgaHR0cDovL3d3dy5vDQogI2luY2x1ZGUgPHN0ZGlvLmg+DQogI2luY2x1
-ZGUgPHN5cy90eXBlcy5oPg0KIA0KKyNpbmNsdWRlICJjb25maWcuaCINCisNCiAjaWZkZWYgSEFW
-RV9EQlVTDQogICAjaW5jbHVkZSA8ZGJ1cy9kYnVzLmg+DQogI2VuZGlmDQo=
-
-
---=-K/R+bOXB/bPbQQfBW/lz--
-
---=-O3LN/DsMzBjSehVxslVa
-Content-Type: application/pgp-signature; name="signature.asc"
-Content-Description: This is a digitally signed message part
-Content-Transfer-Encoding: 7bit
-
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.15 (GNU/Linux)
-
-iQEVAwUAUnp9GnlVEo2joavTAQLHsQf9GHMEaXYnFjYwTSGwPMzLJ9qA3XxpRqVb
-hOWo+3GnA1PQtHFCIIs4lvqcXzzWgCYkqoLGrOV+EnQKkMU6rN33wVC6uiomHlUS
-8CxlmLwiwQcpXc6r6z2aAYRiNAMjvwUjg6jmbzwFDSaVB62V/LgrjF7un9QUj47l
-4ytoLzImuad5Eb9jGQbImj+RQruz9mWXmX9AKCeP+rzqoRaDIG1qmP8G9DTYMAm+
-LL6oCrPs9ISja4Tadc7hCrMBFckH0vwr2HUmiTO8k7kt2SsyspcpUhAQ50IZH13W
-MiT5TyF+6SdfGsyAyl76tV8zI5blw1+TzDQUDhKUxr9jJcPo1BpKDw==
-=hxpu
------END PGP SIGNATURE-----
-
---=-O3LN/DsMzBjSehVxslVa--
+On 11/06/2013 06:32 PM, Tim Waugh wrote:
+> This patch fixes gstoraster, which uses dbus for colord support.
+> Previously, it was being built without dbus and so colord support was
+> missing.
+> 
+> Original bug report:
+>   https://bugzilla.redhat.com/show_bug.cgi?id=1026928
+> 
+> Tim.
+> */
+> 
+> 
+> 
+> _______________________________________________
+> Printing-architecture mailing list
+> Printing-architecture@lists.linux-foundation.org
+> https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture
+> 
 
