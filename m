@@ -1,15 +1,14 @@
-Return-Path: <twaugh@redhat.com>
-Message-ID: <1384339124.2286.3.camel@rubik>
-From: Tim Waugh <twaugh@redhat.com>
-Date: Wed, 13 Nov 2013 10:38:44 +0000
-In-Reply-To: <5282AA4D.9010201@gmail.com>
+Return-Path: <msweet@apple.com>
+MIME-version: 1.0
+Content-type: text/plain; charset=windows-1252
+From: Michael Sweet <msweet@apple.com>
+In-reply-to: <1384339124.2286.3.camel@rubik>
+Date: Wed, 13 Nov 2013 09:52:27 -0500
+Content-transfer-encoding: quoted-printable
+Message-id: <CBCFE5EE-A97F-4732-8EDC-A0F7E4145389@apple.com>
 References: <51BA5B58.3080208@gmail.com> <5270DD07.4080601@gmail.com>
 	<B68BB93E-6180-44CE-BEDA-3A499C72D823@apple.com>
-	<5282AA4D.9010201@gmail.com>
-Content-Type: multipart/signed; micalg="pgp-sha1";
-	protocol="application/pgp-signature"; 
-	boundary="=-qAKhSWl0xepR/kCTslwB"
-Mime-Version: 1.0
+	<5282AA4D.9010201@gmail.com> <1384339124.2286.3.camel@rubik>
 Subject: Re: [Printing-architecture] Concept for PPD-less CUPS-spooled
  printing on Bonjour-discovered network printers
 List-Id: Printing architecture under linux
@@ -21,47 +20,61 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Till Kamppeter <till.kamppeter@gmail.com>
-Cc: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>, John Layt <john@layt.net>, Marek Kasik <mkasik@redhat.com>
+To: Tim Waugh <twaugh@redhat.com>
+Cc: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>, John Layt <john@layt.net>, Marek Kasik <mkasik@redhat.com>, Till Kamppeter <till.kamppeter@gmail.com>
+
+Tim,
+
+WRT GTK+ and blocking APIs in general, it is really really hard to get =
+away from blocking behavior when you are dealing with networking.  The =
+strategy we opted for was to support timeouts and asynchronous =
+cancellation of blocking/semi-blocking calls so that applications and =
+toolkits can wrap those calls appropriately.
+
+Ideally everyone would adopt Grand Dispatch (patches were provided to =
+the GCC folks a long time ago) which essentially adds singletons =
+(blocks) to C/C++/ObjC along with lighter-weight threads and basic =
+scheduling queues (async for running blocks on parallels threads and =
+sync for serializing a series of blocks on a particular thread).  This =
+greatly simplifies thread management and offers a compelling replacement =
+for callback functions, thus the support in libcups for them=85
+
+But in the meantime, GTK+ and others should be doing printer discovery =
+and queries on a separate thread from the main thread, otherwise they =
+WILL block even if every API CUPS provided was =93non-blocking=94 - =
+networks are unpredictable.
+
+For the record, we *did* consider making cupsGetDests run a background =
+thread doing the equivalent of cupsEnumDests so that callers would get a =
+current snapshot of the available printers.  However, doing it without =
+having the application =93opt in=94 would cause a lot of problems for =
+programs like Firefox that think it is OK to unload a dynamic library =
+like libcups that is not designed for such use (few are), and providing =
+an opt-in method (cupsStartEnumDests or something like that) isn=92t =
+much better - code changes are still required, so why not just use the =
+new API in the first place?
 
 
---=-qAKhSWl0xepR/kCTslwB
-Content-Type: text/plain; charset="UTF-8"
-Content-Transfer-Encoding: quoted-printable
+On Nov 13, 2013, at 5:38 AM, Tim Waugh <twaugh@redhat.com> wrote:
 
-On Tue, 2013-11-12 at 23:23 +0100, Till Kamppeter wrote:
-> Another question is whether cupsEnumDests() can run in parallel with
-> other, independent services, in my case Tim Waugh's backward
-> compatibility CUPS browsing/broadcasting.
+> On Tue, 2013-11-12 at 23:23 +0100, Till Kamppeter wrote:
+>> Another question is whether cupsEnumDests() can run in parallel with
+>> other, independent services, in my case Tim Waugh's backward
+>> compatibility CUPS browsing/broadcasting.
+>=20
+> It isn't meant to. The BrowsePoll and Browsing(send) support is for
+> legacy sites, and Browsing(recv) is a stop-gap until all the dialogs =
+use
+> cupsEnumDests() or the equivalent. For GTK+, it uses its own
+> implementation (as cupsEnumDests is blocking -- Mike, please stop
+> writing blocking interfaces ;-) ). For Qt, I've written a patch to use
+> cupsEnumDests():
+> https://bugzilla.redhat.com/show_bug.cgi?id=3D980952
+>=20
+> Tim.
+> */
+>=20
 
-It isn't meant to. The BrowsePoll and Browsing(send) support is for
-legacy sites, and Browsing(recv) is a stop-gap until all the dialogs use
-cupsEnumDests() or the equivalent. For GTK+, it uses its own
-implementation (as cupsEnumDests is blocking -- Mike, please stop
-writing blocking interfaces ;-) ). For Qt, I've written a patch to use
-cupsEnumDests():
-https://bugzilla.redhat.com/show_bug.cgi?id=3D980952
-
-Tim.
-*/
-
-
---=-qAKhSWl0xepR/kCTslwB
-Content-Type: application/pgp-signature; name="signature.asc"
-Content-Description: This is a digitally signed message part
-Content-Transfer-Encoding: 7bit
-
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.15 (GNU/Linux)
-
-iQEVAwUAUoNWtHlVEo2joavTAQJTGwgAk/2KARwlOb7I+8J9TR+mwJcsfr8DXG18
-WIbhMCkuto8VL2xH+H8EtnD33DF1S9vZu9qhPZFhiw9GNiM72H01vmGho7spQfEX
-OQ82Wv4/bbsJ/9vk+2V2YGteHMby6JCbuccpwzoGzhmHj7Mj0/w8aWGwISsyzCg4
-zOrJFMphDJbA6hFz+T+wjBhez5pOYmKDnWX0IjLDhbRyYokdHzmj+oHTqfNZ5V3C
-pAJCZGRtubwuxlLoE56OQ5XSBDUNkIkoUIEy7oR3Rvdrq06PdAn0aSikfb2kPggH
-As17ERsO4kJ8ttWQgQp9/0ZZRiNpKUtBPZ2Sxdi6mPRYjUb6vHuitQ==
-=P5cn
------END PGP SIGNATURE-----
-
---=-qAKhSWl0xepR/kCTslwB--
+_______________________________________________________________
+Michael Sweet, Senior Printing System Engineer, PWG Chair
 
