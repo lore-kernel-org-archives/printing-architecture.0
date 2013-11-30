@@ -1,13 +1,20 @@
-Return-Path: <twaugh@redhat.com>
-Message-ID: <1385726905.2659.6.camel@rubik>
-From: Tim Waugh <twaugh@redhat.com>
-Date: Fri, 29 Nov 2013 12:08:25 +0000
-Content-Type: multipart/signed; micalg="pgp-sha1";
-	protocol="application/pgp-signature"; 
-	boundary="=-I2x+ecFDAd1CHOs+HmCG"
-Mime-Version: 1.0
-Subject: [Printing-architecture] [patch] CUPS 1.7.0: fix corrupted output
-	for USB printers
+Return-Path: <blueroofmusic@gmail.com>
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20120113;
+	h=mime-version:from:date:message-id:subject:to:content-type;
+	bh=8YZWXNzYptuw/WfUCt+Ra+s303T1w+ZJhOqKzCiuC1g=;
+	b=f3x1meID5EyXf72SiCArEGk/GC4z1y5U2Nz0Nr8CmZnM3s7u8URn+P9NjawId3RLsL
+	OicXuz0QP/QL8iF8U9QYiMyl2sGgB+hgS9ihKX/K7Tox9RLOAssusm65Hh0xxJY662+s
+	ck43m2U97ee2/ol8ZIQ6Bx7j53guimJRdUxPb6P1kWFldjDxs8vIA4uyV9G4Nj9Nm9jl
+	02X44UgecYidHXwwJdWIn581L5NXXPboga4ge47HF54hWeSKzwF5IHwBFP1jHkx+NNlD
+	H4E60DUSTea+Lh6tz9Tvs5MeYwpVpn7nfHRzTyIJnwyj6y3NSR25e2qLJPfHJhDym3RF
+	KPBA==
+MIME-Version: 1.0
+From: Ira McDonald <blueroofmusic@gmail.com>
+Date: Sat, 30 Nov 2013 17:42:47 -0500
+Message-ID: <CAN40gSvQ2-qK7X2cm32APGF0Kc1q_cOgZb3Zy8YmVxeNdVgjRQ@mail.gmail.com>
+Content-Type: multipart/alternative; boundary=001a1134c792b026cc04ec6cabab
+Subject: [Printing-architecture] REMINDER - OP US/Europe - Wed 4 December
+	2013
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>,
@@ -17,85 +24,88 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>
+To: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>, Ira McDonald <blueroofmusic@gmail.com>
+
+--001a1134c792b026cc04ec6cabab
+Content-Type: text/plain; charset=ISO-8859-1
+
+Hi,
+
+Reminder that our monthly Open Printing US/Europe call will be
+this Wednesday:
+
+    - Wednesday 4 December 2013, Daytime
+      - US
+        9am in San Francisco - US PST (Pacific Standard Time)
+        10am in Colorado - US MST (Mountain Standard Time)
+        11am in Chicago - US CST (Central Standard Time)
+        12pm in New York - US EST (Eastern Standard Time)
+      - Europe
+        6pm in Berlin - CET (Central European Time)
+
+    * Main Number (Till Kamppeter, LF, leader)
+      International: +1-619-326-2730 (new number)
+      Access Code:   491659#
+
+Cheers,
+- Ira
 
 
---=-I2x+ecFDAd1CHOs+HmCG
-Content-Type: multipart/mixed; boundary="=-lOqyq0maV5pvAw/j4NPA"
+Ira McDonald (Musician / Software Architect)
+Co-Chair - TCG Trusted Mobility Solutions WG
+Chair - Linux Foundation Open Printing WG
+Secretary - IEEE-ISTO Printer Working Group
+Co-Chair - IEEE-ISTO PWG Internet Printing Protocol WG
+IETF Designated Expert - IPP & Printer MIB
+Blue Roof Music / High North Inc
+http://sites.google.com/site/blueroofmusic
+http://sites.google.com/site/highnorthinc
+mailto: blueroofmusic@gmail.com
+Winter  579 Park Place  Saline, MI  48176  734-944-0094
+Summer  PO Box 221  Grand Marais, MI 49839  906-494-2434
 
-
---=-lOqyq0maV5pvAw/j4NPA
-Content-Type: text/plain; charset="UTF-8"
+--001a1134c792b026cc04ec6cabab
+Content-Type: text/html; charset=ISO-8859-1
 Content-Transfer-Encoding: quoted-printable
 
-When using the usb backend, if a usb-1 printer connected to a usb-2 hub
-runs out of paper during the job the print output will be corrupted.
-https://bugzilla.redhat.com/show_bug.cgi?id=3D1026914
+<div dir=3D"ltr"><div><div><div><div>Hi,<br><br></div>Reminder that our mon=
+thly Open Printing US/Europe call will be<br></div>this Wednesday:<br><br>=
+=A0=A0=A0 - Wednesday 4 December 2013, Daytime<br>=A0=A0=A0=A0=A0 - US<br>=
+=A0=A0=A0=A0=A0=A0=A0 9am in San Francisco - US PST (Pacific Standard Time)=
+<br>
 
-This is due to using a 60 second timeout for the libusb_bulk_transfer()
-call. Timeout handling and retries are not reliable in every case, as
-described here:
-https://bugzilla.redhat.com/show_bug.cgi?id=3D1035863
+=A0=A0=A0=A0=A0=A0=A0 10am in Colorado - US MST (Mountain Standard Time)<br=
+>=A0=A0=A0=A0=A0=A0=A0 11am in Chicago - US CST (Central Standard Time)<br>=
+=A0=A0=A0=A0=A0=A0=A0 12pm in New York - US EST (Eastern Standard Time)<br>=
+=A0=A0=A0=A0=A0 - Europe<br>=A0=A0=A0=A0=A0=A0=A0 6pm in Berlin - CET (Cent=
+ral European Time)<br>
 
-Quoting from that report:
-=3D=3D>
-So TL;DR: this a known and unfixable problem, and the solution is to
-simply not cancel transfers (by setting a timeout) and then decide you
-want to finish the transfer after all. Either decide you want to really
-cancel the transfer, or just wait for it to finish normally.
-<=3D=3D
+<br>=A0=A0=A0 * Main Number (Till Kamppeter, LF, leader)<br>=A0=A0=A0=A0=A0=
+ International: +1-619-326-2730 (new number)<br>=A0=A0=A0=A0=A0 Access Code=
+:=A0=A0 491659#<br><br></div>Cheers,<br></div>- Ira<br><br><br><div><div><d=
+iv><div><div><div><div dir=3D"ltr">
 
-Patch attached to change the timeout to 0 to wait indefinitely.
+Ira McDonald (Musician / Software Architect)<br>Co-Chair - TCG Trusted Mobi=
+lity Solutions WG<br>Chair - Linux Foundation Open Printing WG<br>Secretary=
+ - IEEE-ISTO Printer Working Group<br>Co-Chair - IEEE-ISTO PWG Internet Pri=
+nting Protocol WG<br>
 
-Tim.
-*/
+IETF Designated Expert - IPP &amp; Printer MIB<br>Blue Roof Music / High No=
+rth Inc<br><a style=3D"color:rgb(51,51,255)" href=3D"http://sites.google.co=
+m/site/blueroofmusic" target=3D"_blank">http://sites.google.com/site/bluero=
+ofmusic</a><br>
 
+<a style=3D"color:rgb(102,0,204)" href=3D"http://sites.google.com/site/high=
+northinc" target=3D"_blank">http://sites.google.com/site/highnorthinc</a><b=
+r>mailto: <a href=3D"mailto:blueroofmusic@gmail.com" target=3D"_blank">blue=
+roofmusic@gmail.com</a><br>
 
---=-lOqyq0maV5pvAw/j4NPA
-Content-Disposition: attachment; filename="cups-usb-timeout.patch"
-Content-Type: text/x-patch; name="cups-usb-timeout.patch"; charset="UTF-8"
-Content-Transfer-Encoding: base64
+Winter=A0 579 Park Place=A0 Saline, MI=A0 48176=A0 734-944-0094<br>Summer=
+=A0 PO Box 221=A0 Grand Marais, MI 49839=A0 906-494-2434<br><br><div style=
+=3D"display:inline"></div><div style=3D"display:inline"></div><div style=3D=
+"display:inline"></div>
 
-ZGlmZiAtdXAgY3Vwcy0xLjcuMC9iYWNrZW5kL3VzYi1saWJ1c2IuYy51c2ItdGltZW91dCBjdXBz
-LTEuNy4wL2JhY2tlbmQvdXNiLWxpYnVzYi5jDQotLS0gY3Vwcy0xLjcuMC9iYWNrZW5kL3VzYi1s
-aWJ1c2IuYy51c2ItdGltZW91dAkyMDEzLTA3LTE3IDE2OjUxOjQzLjAwMDAwMDAwMCArMDEwMA0K
-KysrIGN1cHMtMS43LjAvYmFja2VuZC91c2ItbGlidXNiLmMJMjAxMy0xMS0yOCAxNjo0NDowMy43
-ODUxMjQwMTUgKzAwMDANCkBAIC00OTYsNyArNDk2LDcgQEAgcHJpbnRfZGV2aWNlKGNvbnN0IGNo
-YXIgKnVyaSwJCS8qIEkgLSBEZQ0KIAlpb3N0YXR1cyA9IGxpYnVzYl9idWxrX3RyYW5zZmVyKGcu
-cHJpbnRlci0+aGFuZGxlLA0KIAkJCQkJZy5wcmludGVyLT53cml0ZV9lbmRwLA0KIAkJCQkJcHJp
-bnRfYnVmZmVyLCBnLnByaW50X2J5dGVzLA0KLQkJCQkJJmJ5dGVzLCA2MDAwMCk7DQorCQkJCQkm
-Ynl0ZXMsIDApOw0KICAgICAgICAvKg0KIAkqIElnbm9yZSB0aW1lb3V0IGVycm9ycywgYnV0IHJl
-dGFpbiB0aGUgbnVtYmVyIG9mIGJ5dGVzIHdyaXR0ZW4gdG8NCiAJKiBhdm9pZCBzZW5kaW5nIGR1
-cGxpY2F0ZSBkYXRhLi4uDQpAQCAtNTE5LDcgKzUxOSw3IEBAIHByaW50X2RldmljZShjb25zdCBj
-aGFyICp1cmksCQkvKiBJIC0gRGUNCiAJICBpb3N0YXR1cyA9IGxpYnVzYl9idWxrX3RyYW5zZmVy
-KGcucHJpbnRlci0+aGFuZGxlLA0KIAkJCQkJICBnLnByaW50ZXItPndyaXRlX2VuZHAsDQogCQkJ
-CQkgIHByaW50X2J1ZmZlciwgZy5wcmludF9ieXRlcywNCi0JCQkJCSAgJmJ5dGVzLCA2MDAwMCk7
-DQorCQkJCQkgICZieXRlcywgMCk7DQogCX0NCiANCiAgICAgICAgLyoNCkBAIC01MzQsNyArNTM0
-LDcgQEAgcHJpbnRfZGV2aWNlKGNvbnN0IGNoYXIgKnVyaSwJCS8qIEkgLSBEZQ0KIAkgIGlvc3Rh
-dHVzID0gbGlidXNiX2J1bGtfdHJhbnNmZXIoZy5wcmludGVyLT5oYW5kbGUsDQogCQkJCQkgIGcu
-cHJpbnRlci0+d3JpdGVfZW5kcCwNCiAJCQkJCSAgcHJpbnRfYnVmZmVyLCBnLnByaW50X2J5dGVz
-LA0KLQkJCQkJICAmYnl0ZXMsIDYwMDAwKTsNCisJCQkJCSAgJmJ5dGVzLCAwKTsNCiAgICAgICAg
-IH0NCiANCiAJaWYgKGlvc3RhdHVzKQ0K
+<div></div><div></div><div></div><div></div></div></div>
+</div></div></div></div></div></div>
 
-
---=-lOqyq0maV5pvAw/j4NPA--
-
---=-I2x+ecFDAd1CHOs+HmCG
-Content-Type: application/pgp-signature; name="signature.asc"
-Content-Description: This is a digitally signed message part
-Content-Transfer-Encoding: 7bit
-
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.15 (GNU/Linux)
-
-iQEVAwUAUpiDuXlVEo2joavTAQIlWQf/ZIp2aDqr8eDu+0Qv3zhaRDL9HJSeKpJk
-bvJ2TqBa+d9UQlP+ymVmN1lIrvp1E1fYgv97SHPnhkntAJPiJKQw+/g94GqMifVy
-UkgUAdBtZWQ798PUAKIkZNzHaItAWPEucm9JCG/q72DK312pGDKI2geZ+r/vIi0l
-9HMAmSF+HrKm0halRhdEUlNvWqTSocKmQZnSEuHQuKs2ojaVsM4CI8U/gAMnsOOC
-fA1+HzcaSew0tT6j0Y7rFBKLscJ7kMg+6SjdcndiAnyLoZKwwMfpUZWRVNoZjs0P
-KbL5VekuiKG+Ev4Kwkm5HYLZGpANV10lQpEyclXEKPjED6JxAOx1/Q==
-=kpBw
------END PGP SIGNATURE-----
-
---=-I2x+ecFDAd1CHOs+HmCG--
-
+--001a1134c792b026cc04ec6cabab--
