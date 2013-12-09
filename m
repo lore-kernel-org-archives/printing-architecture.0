@@ -1,25 +1,17 @@
-Return-Path: <till.kamppeter@gmail.com>
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20120113;
-	h=message-id:date:from:user-agent:mime-version:to:cc:subject
-	:references:in-reply-to:content-type:content-transfer-encoding;
-	bh=5EXocdy+ejXR7Z/iWjYGTzMJsnltCw1McJ8drtoLgGI=;
-	b=WDOpJs1iH7ZrW1gvEN+2ZLk0j32Ak6+2hwH5OctAPPRUp0wP04nuVixaY380/lK9i3
-	p3cI5w3HQRRdlQkMTBkpoAVlyC7Hyx/eWGE/8EnzuR08gRYU10ZkQI6vj0nO2T/n7EIl
-	mOvhh6nPcyX+TtxPxnsg7RYqrQ936Bgsm6mzsZt7a2bAr+bc3J8pdx5s19FLd03lQLzP
-	8Bv4PdxG28xm/w+1qGETxeF5JyNLjGqVS+WkBmjj1QpbGFY+cXHjnhlel6fujXizTFy1
-	Rdw0O3pJBHUBn2ruW7RbqtB4wWAk7zBaFdVR7WUFVwOeFajhRRr8UG6tSXX18o5/gjBN
-	5/Mg==
-Message-ID: <52A5F0B8.7030409@gmail.com>
-Date: Mon, 09 Dec 2013 17:32:56 +0100
-From: Till Kamppeter <till.kamppeter@gmail.com>
-MIME-Version: 1.0
-References: <52A101D4.40107@gmail.com>
-	<CAOTiGeV0wWsZ6nJhb2D+QjHQ0iVDof+TvVQPRMy=0QdR75K7Fw@mail.gmail.com>
-In-Reply-To: <CAOTiGeV0wWsZ6nJhb2D+QjHQ0iVDof+TvVQPRMy=0QdR75K7Fw@mail.gmail.com>
-Content-Type: text/plain; charset=UTF-8
-Content-Transfer-Encoding: 7bit
-Subject: Re: [Printing-architecture] What should the "landscape" and
- "orientation-requested" options exactly do?
+Return-Path: <a.makhalkin@samsung.com>
+MIME-version: 1.0
+Content-type: multipart/alternative;
+	boundary="Boundary_(ID_8HAZBXhNf81KGdGCV4NyoA)"
+Message-id: <52A5F6D3.5020806@samsung.com>
+Date: Mon, 09 Dec 2013 20:58:59 +0400
+From: Andrey Makhalkin <a.makhalkin@samsung.com>
+References: <52A5C869.8000800@samsung.com>
+	<9F98834E-0215-4B3D-AEF8-5C50AEDF5EA6@apple.com>
+	<52A5DD36.6030100@samsung.com>
+	<74485B22-F574-4CCC-8EF3-317F755DADAD@apple.com>
+In-reply-to: <74485B22-F574-4CCC-8EF3-317F755DADAD@apple.com>
+Subject: Re: [Printing-architecture] Different Collate option handling in
+ pdftopdf and pstops
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>,
@@ -29,37 +21,66 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Tobias Hoffmann <lprint-list@thax.hardliners.org>
-Cc: Open Printing <printing-architecture@lists.linux-foundation.org>
+To: Michael Sweet <msweet@apple.com>
+Cc: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>, Mikhail Elhimov <mikhail.elhimov@samsung.com>
 
-On 12/07/2013 12:01 AM, Tobias Hoffmann wrote:
-> I don't think so.
-> E.g. for N-up, fitplot, adding of borders the pdftopdf filter looks at
-> the final destination size. This size is determined by page-size,
-> *together* with orientation-requested. pdftopdf also makes sure that
-> filters like pdftoXYZ only get portrait pdfs as input, so that these can
-> rasterize from to bottom and get the correct raster pixel ordering
-> without thinking about rotations (e.g. an inkjet still prints along the
-> short edge, regardless whether the input is landscape or not).
-> 
-> Two examples with texttopdf:
-> 1)  A4, portrait: output pdf has (roughly) 21x29 cm, pdftopdf keeps it,
-> pdftoijs renders (e.g.) 1000x1400 pixel output "image" for the printer.
-> 2)  A4, landscape: output pdf has 29x21 cm, pdftopdf rotates it (in the
-> ppd-specified normal_landscape direction), pdftoijs renders 1000x1400
-> pixels.
-> 
->   Tobias
-> 
+This is a multi-part message in MIME format.
 
-Thank you very much for your help. So now the handling of "landscape"
-and "orientation-requested" in cups-filters should be correct: ...topdf
-filters use it for generating layout, pdftopdf for n-up and fitplot. My
-recent test files also show that pdftopdf does not break anything when
-landscape" or "orientation-requested" is supplied and not n-up or fitplot.
+--Boundary_(ID_8HAZBXhNf81KGdGCV4NyoA)
+Content-type: text/plain; CHARSET=US-ASCII
+Content-transfer-encoding: 7BIT
 
-Tobias, can you also have a look into fixing the handling of collate by
-pdftopdf (see the other thread on this list)? Thanks.
+Michael,
 
-   Till
+I have created a bug report:
 
+https://bugs.launchpad.net/ubuntu/+source/cups-filters/+bug/1259240
+
+ 
+On 12/09/2013 07:53 PM, Michael Sweet wrote:
+> Andrey,
+>
+> OK, then that is clearly a pdftopdf bug then, which you can report here:
+>
+>     https://bugs.launchpad.net/ubuntu/+source/cups-filters
+>
+>
+
+
+--Boundary_(ID_8HAZBXhNf81KGdGCV4NyoA)
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: 8bit
+
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+  </head>
+  <body bgcolor="#FFFFFF" text="#000000">
+    <div class="moz-cite-prefix">Michael,<br>
+      <br>
+      I have created a bug report:<br>
+      <br>
+      <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+      <a
+href="https://bugs.launchpad.net/ubuntu/+source/cups-filters/+bug/1259240">https://bugs.launchpad.net/ubuntu/+source/cups-filters/+bug/1259240</a><br>
+      <br>
+       <br>
+      On 12/09/2013 07:53 PM, Michael Sweet wrote:<br>
+    </div>
+    <blockquote
+      cite="mid:74485B22-F574-4CCC-8EF3-317F755DADAD@apple.com"
+      type="cite">
+      <pre wrap="">Andrey,
+
+OK, then that is clearly a pdftopdf bug then, which you can report here:
+
+    <a class="moz-txt-link-freetext" href="https://bugs.launchpad.net/ubuntu/+source/cups-filters">https://bugs.launchpad.net/ubuntu/+source/cups-filters</a>
+
+</pre>
+      <br>
+    </blockquote>
+    <br>
+  </body>
+</html>
+
+--Boundary_(ID_8HAZBXhNf81KGdGCV4NyoA)--
