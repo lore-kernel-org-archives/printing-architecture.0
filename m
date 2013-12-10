@@ -1,17 +1,20 @@
-Return-Path: <a.makhalkin@samsung.com>
-MIME-version: 1.0
-Content-type: multipart/alternative;
-	boundary="Boundary_(ID_8HAZBXhNf81KGdGCV4NyoA)"
-Message-id: <52A5F6D3.5020806@samsung.com>
-Date: Mon, 09 Dec 2013 20:58:59 +0400
-From: Andrey Makhalkin <a.makhalkin@samsung.com>
-References: <52A5C869.8000800@samsung.com>
-	<9F98834E-0215-4B3D-AEF8-5C50AEDF5EA6@apple.com>
-	<52A5DD36.6030100@samsung.com>
-	<74485B22-F574-4CCC-8EF3-317F755DADAD@apple.com>
-In-reply-to: <74485B22-F574-4CCC-8EF3-317F755DADAD@apple.com>
-Subject: Re: [Printing-architecture] Different Collate option handling in
- pdftopdf and pstops
+Return-Path: <franz.pfoertsch@googlemail.com>
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+	d=googlemail.com; s=20120113;
+	h=mime-version:date:message-id:subject:from:to:content-type;
+	bh=ua2jEUK8XyEFUVX4UvKQDM7/zMybNpnzCHz42WToeMA=;
+	b=iPTJ8BTna7jtlsZSsGRFZRxPwJn+uhbHMjfANs9ZG6n6iCiX+zk41MsRHH1zMduiHE
+	/HAX0HBCUQA2SmMoo8yjjXdxD2W/bAH1Y1191mKTMQEczTmT81OGHwIDMoidL1yC81i3
+	SnRNruwsXfjE8bq5N/3rJ/SE8CKepekd/5jUKXi8L4hRXBV2BKTIBzmUinByIEmD15r0
+	JHcESinJnHJvozixeFSdC7fpAXZcc/B2EID8ktyqSG+fn3pnxd47cXllzs4o673YfOoY
+	BJ60WVkliKb0XQ5exa91fYrL9NAR6RAz1p58hx8ATKdomJUhns6lEiMZZtMfAhwUnatL
+	NMUw==
+MIME-Version: 1.0
+Date: Tue, 10 Dec 2013 23:32:05 +0100
+Message-ID: <CAHUm6-nBiqbF6yA+0GiDc=vAHe+-5sTM5sBgS87x+BvwE6rvXg@mail.gmail.com>
+From: =?ISO-8859-1?Q?Franz_Pf=F6rtsch?= <franz.pfoertsch@googlemail.com>
+Content-Type: multipart/alternative; boundary=047d7b15b21ba5e0b604ed35aed7
+Subject: [Printing-architecture] Mainfeatures of cups 1.7.0
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>,
@@ -21,66 +24,40 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Michael Sweet <msweet@apple.com>
-Cc: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>, Mikhail Elhimov <mikhail.elhimov@samsung.com>
+To: printing-architecture@lists.linux-foundation.org
 
-This is a multi-part message in MIME format.
+--047d7b15b21ba5e0b604ed35aed7
+Content-Type: text/plain; charset=ISO-8859-1
 
---Boundary_(ID_8HAZBXhNf81KGdGCV4NyoA)
-Content-type: text/plain; CHARSET=US-ASCII
-Content-transfer-encoding: 7BIT
+Hello cups 1.7.0 is out since 24th of october,
 
-Michael,
+the mainfeatures should be paid, PIN, and release printing and automatic
+support for data compression.
 
-I have created a bug report:
+at www.cups.org there is no detailed information about this features.
 
-https://bugs.launchpad.net/ubuntu/+source/cups-filters/+bug/1259240
+I am very interested on these.
 
- 
-On 12/09/2013 07:53 PM, Michael Sweet wrote:
-> Andrey,
->
-> OK, then that is clearly a pdftopdf bug then, which you can report here:
->
->     https://bugs.launchpad.net/ubuntu/+source/cups-filters
->
->
+are there any printing machines available which uses the compression
+features?
 
+please give me any kind of information about this functions.
 
---Boundary_(ID_8HAZBXhNf81KGdGCV4NyoA)
-Content-Type: text/html; charset="utf-8"
-Content-Transfer-Encoding: 8bit
+regards
+Franz
 
-<html>
-  <head>
-    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
-  </head>
-  <body bgcolor="#FFFFFF" text="#000000">
-    <div class="moz-cite-prefix">Michael,<br>
-      <br>
-      I have created a bug report:<br>
-      <br>
-      <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-      <a
-href="https://bugs.launchpad.net/ubuntu/+source/cups-filters/+bug/1259240">https://bugs.launchpad.net/ubuntu/+source/cups-filters/+bug/1259240</a><br>
-      <br>
-       <br>
-      On 12/09/2013 07:53 PM, Michael Sweet wrote:<br>
-    </div>
-    <blockquote
-      cite="mid:74485B22-F574-4CCC-8EF3-317F755DADAD@apple.com"
-      type="cite">
-      <pre wrap="">Andrey,
+--047d7b15b21ba5e0b604ed35aed7
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
 
-OK, then that is clearly a pdftopdf bug then, which you can report here:
+<div dir=3D"ltr"><div><div><div><div><div><div>Hello cups 1.7.0 is out sinc=
+e 24th of october,<br><br></div>the mainfeatures should be paid, PIN, and r=
+elease printing and automatic support for data compression.<br><br></div>at=
+ <a href=3D"http://www.cups.org">www.cups.org</a> there is no detailed info=
+rmation about this features.<br>
+<br></div>I am very interested on these.<br><br></div>are there any printin=
+g machines available which uses the compression features?<br><br></div>plea=
+se give me any kind of information about this functions.<br><br>regards<br>
+</div>Franz<br></div>
 
-    <a class="moz-txt-link-freetext" href="https://bugs.launchpad.net/ubuntu/+source/cups-filters">https://bugs.launchpad.net/ubuntu/+source/cups-filters</a>
-
-</pre>
-      <br>
-    </blockquote>
-    <br>
-  </body>
-</html>
-
---Boundary_(ID_8HAZBXhNf81KGdGCV4NyoA)--
+--047d7b15b21ba5e0b604ed35aed7--
