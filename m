@@ -1,13 +1,13 @@
-Return-Path: <twaugh@redhat.com>
-Message-ID: <1387214818.12274.33.camel@rubik>
-From: Tim Waugh <twaugh@redhat.com>
-Date: Mon, 16 Dec 2013 17:26:58 +0000
-In-Reply-To: <52AF35A2.6060804@gmail.com>
+Return-Path: <msweet@apple.com>
+MIME-version: 1.0
+Content-transfer-encoding: 7BIT
+Content-type: text/plain; CHARSET=US-ASCII
+From: Michael Sweet <msweet@apple.com>
+In-reply-to: <1387214818.12274.33.camel@rubik>
+Date: Mon, 16 Dec 2013 12:54:44 -0500
+Message-id: <2F134E47-1770-43E0-9DC9-61D1E3066A08@apple.com>
 References: <1387213857.12274.26.camel@rubik> <52AF35A2.6060804@gmail.com>
-Content-Type: multipart/signed; micalg="pgp-sha1";
-	protocol="application/pgp-signature"; 
-	boundary="=-KF2NQ8VcI9jg6HEm3QQj"
-Mime-Version: 1.0
+	<1387214818.12274.33.camel@rubik>
 Subject: Re: [Printing-architecture] Useful utility: cups-filter-check
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
@@ -18,51 +18,23 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Till Kamppeter <till.kamppeter@gmail.com>
-Cc: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>
+To: Tim Waugh <twaugh@redhat.com>
+Cc: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>, Till Kamppeter <till.kamppeter@gmail.com>
 
+Tim,
 
---=-KF2NQ8VcI9jg6HEm3QQj
-Content-Type: text/plain; charset="UTF-8"
-Content-Transfer-Encoding: quoted-printable
+On Dec 16, 2013, at 12:26 PM, Tim Waugh <twaugh@redhat.com> wrote:
+> ...
+> Incidentally, while playing around with it I noticed the only route from
+> application/vnd.adobe-reader-postscript -> application/vnd.cups-pdf is
+> via image/tiff. Is that intentional? I expect any printer capable of
+> handling PDF can also handle PostScript, and that path works fine at
+> less cost.
 
-On Mon, 2013-12-16 at 18:17 +0100, Till Kamppeter wrote:
-> Should we perhaps make this part of cups-filters?
+I'm guessing the reason for this is Adobe's stupid enforcement of PDF form content protection - some forms can't be processed by Ghostscript or Adobe's own PS distiller to generate PDF because of restrictions that are placed in the PostScript code.  But it is A-OK to RIP the content for printing/export to an image... :/
 
-Yes, sure -- or Michael Sweet's suggestion of enhancing cupsfilter would
-also be fine. It's quite nice to be able to loop over all of the
-configured MIME types though. I guess it can be done in a shell script
-(reading *.types)... it just might not be very pretty:
+But yes, if the printer reports support for PostScript then application/vnd.adobe-reader-postscript should go to application/vnd.cups-postscript without a side-trip through TIFF and PDF...
 
-grep '^[^[:space:]#]' /usr/share/cups/mime/mime.types | (while read t;
-do set $t; echo $1; done) | sort
-
-Incidentally, while playing around with it I noticed the only route from
-application/vnd.adobe-reader-postscript -> application/vnd.cups-pdf is
-via image/tiff. Is that intentional? I expect any printer capable of
-handling PDF can also handle PostScript, and that path works fine at
-less cost.
-
-Tim.
-*/
-
-
---=-KF2NQ8VcI9jg6HEm3QQj
-Content-Type: application/pgp-signature; name="signature.asc"
-Content-Description: This is a digitally signed message part
-Content-Transfer-Encoding: 7bit
-
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.15 (GNU/Linux)
-
-iQEVAwUAUq834nlVEo2joavTAQLdKQgAnjnK5OBzEEHWPWALyNzQ12YDtzXdq64y
-lzBLoR0GXd/DpatCpTnW8yx3BOAYDtjkstGFd1o71cy3wCoCUWIpIR7d3X2Q1sAp
-Recbs99RgajlnQNHZNTUGI3OGUG9XigHrH2OuNajIDsATWMY0p0xinzd52D6JL4I
-PP5ybUrbiLPkuV0wU/n72gyiRkh3cF5O3yrHe2W1RcexHhAYpF9ydkNcUFH2mksZ
-di5wLqSodq2VuQs3Gu6lRrtYnJUhLW1cJvY6jZsg3MdwiG3LJHpkpBdQfGQyWQM9
-h5vWg4OtTv9OQ3PyLegwy6qpfjGasMR++Uepz49j11bdmlqyMCL1tg==
-=/mhm
------END PGP SIGNATURE-----
-
---=-KF2NQ8VcI9jg6HEm3QQj--
+_______________________________________________________________
+Michael Sweet, Senior Printing System Engineer, PWG Chair
 
