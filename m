@@ -1,12 +1,23 @@
-Return-Path: <twaugh@redhat.com>
-Message-ID: <1387213857.12274.26.camel@rubik>
-From: Tim Waugh <twaugh@redhat.com>
-Date: Mon, 16 Dec 2013 17:10:57 +0000
-Content-Type: multipart/signed; micalg="pgp-sha1";
-	protocol="application/pgp-signature"; 
-	boundary="=-1ZYp95pSP4w7NhbSKJu1"
-Mime-Version: 1.0
-Subject: [Printing-architecture] Useful utility: cups-filter-check
+Return-Path: <till.kamppeter@gmail.com>
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20120113;
+	h=message-id:date:from:user-agent:mime-version:to:subject:references
+	:in-reply-to:content-type:content-transfer-encoding;
+	bh=CmnuvrqqTaSRHOo9ujg1mxREYbN5EQWgRamV8lb9q+A=;
+	b=zDEbElNsBKKsHN4fzBuoMRKgW/lxvjgC5RUA/CZTYaRKYUqPfpH/+D8hvwbC70X0QP
+	wZrKDLa5TMPH3SJLTSw4X+/TvZKUPni5qDxWmT9e6W4DwYYvd1bZosmvFLq2E4OkZBNY
+	mQc+zbsj9BivbzwVr0DytLwib2jq7BB6MxdDe0r7l2V9JLfRiovscfuuVV4VfoxtwLIQ
+	FlF6k6zC443JoTw7W8rQ/EOUrXA8PlaP52mv4JHn2HvztKWORFp0CqrbPDUbhjQpxyFy
+	yAFzXL8sho+cohLQ6AkF1FmEFcvmq+lnG59jupvfT99tZnwpdZAWp452KnTXUSD5fPAR
+	FKNQ==
+Message-ID: <52AF35A2.6060804@gmail.com>
+Date: Mon, 16 Dec 2013 18:17:22 +0100
+From: Till Kamppeter <till.kamppeter@gmail.com>
+MIME-Version: 1.0
+References: <1387213857.12274.26.camel@rubik>
+In-Reply-To: <1387213857.12274.26.camel@rubik>
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 7bit
+Subject: Re: [Printing-architecture] Useful utility: cups-filter-check
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>,
@@ -16,45 +27,33 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>
+To: Tim Waugh <twaugh@redhat.com>, "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>
 
+Should we perhaps make this part of cups-filters?
 
---=-1ZYp95pSP4w7NhbSKJu1
-Content-Type: text/plain; charset="UTF-8"
-Content-Transfer-Encoding: quoted-printable
+   Till
 
-Hi,
-
-Last week I put together a small program to simply display the filter
-pipelines that would be used for each configured input format and each
-likely output format (CUPS raster, PostScript, PDF).
-
-This is useful for sanity-checking changes to CUPS filter costs, to
-check whether changes to pipelines are intentional or accidental.
-
-It's based on testmime.c and is very simple. See what you think:
-  https://gitorious.org/cups-filter-check
-
-Tim.
-*/
-
-
---=-1ZYp95pSP4w7NhbSKJu1
-Content-Type: application/pgp-signature; name="signature.asc"
-Content-Description: This is a digitally signed message part
-Content-Transfer-Encoding: 7bit
-
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.15 (GNU/Linux)
-
-iQEVAwUAUq80IXlVEo2joavTAQKMKAf/XGXKJYA5Js5EE0IfaVvEw4qX4sKIVJ/2
-F+qMX0USRsZbIsS5khns2dNhOAmxlAkhL2UCAIj6f9S5flNwOLclklG3X0ymREXV
-XehqXDtDb1iBBZ1MLfmUEnwR0wAaCLQYg/YFZsj5/5XQBJyOR5ZaK3U+rMXiR9gr
-W2NIIJHgl3pTpuUAV7/6C+aWcBVez1g0Wn1XGtxbyuUSL5PbIsMNhmi9gl8vIzQm
-LfnB30UxMfW36Z+1a/DzAxin1RgPNDQEHrcnfl1HJtl2pdoAHgbT20pl+hXuaQoA
-YsMWLSooYRnLaaa1SU6jpSUozw5uT2GZBumnyVysYc30LEdVxThFsQ==
-=Mm5p
------END PGP SIGNATURE-----
-
---=-1ZYp95pSP4w7NhbSKJu1--
+On 12/16/2013 06:10 PM, Tim Waugh wrote:
+> Hi,
+> 
+> Last week I put together a small program to simply display the filter
+> pipelines that would be used for each configured input format and each
+> likely output format (CUPS raster, PostScript, PDF).
+> 
+> This is useful for sanity-checking changes to CUPS filter costs, to
+> check whether changes to pipelines are intentional or accidental.
+> 
+> It's based on testmime.c and is very simple. See what you think:
+>   https://gitorious.org/cups-filter-check
+> 
+> Tim.
+> */
+> 
+> 
+> 
+> _______________________________________________
+> Printing-architecture mailing list
+> Printing-architecture@lists.linux-foundation.org
+> https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture
+> 
 
