@@ -1,24 +1,22 @@
-Return-Path: <till.kamppeter@gmail.com>
+Return-Path: <korobkin@gmail.com>
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20120113;
-	h=message-id:date:from:user-agent:mime-version:to:cc:subject
-	:references:in-reply-to:content-type:content-transfer-encoding;
-	bh=bFy5zSWAbSryJ99RVveg2Jvqd1B9DfwkY+iAPvWzSzc=;
-	b=WW9D+FhsuPmQP1Xf5SmSr8TzWSvonjQRx8dvUGFxzdW/CZqJ0MqVgJy1mKCZhh6mhK
-	4ZHWC6ksS85jw9kQpCKC3kwnaY5dUNhV8GV4wPCPJYfNCgSCMS5MxxY8W52duqiSyM3h
-	aBbnYJRmVc7oZWp8jCkQRyYycWlT5arpE5Hso/0JstQlP94LnskojyaHLgGmtVTS1mVA
-	9fB3h2Stu+E+KrCnzNv49FxcD9s6IaToOMgjNibYe6Qbkn+oTgGAEt+NqvWVXOqGhVu1
-	AclSxGnk6NhyUDShGeftpBjvi/bRr/RxiqJIPNOmaYOajrXRfjVcyl1GVgUc5VL6zjTf
-	VntQ==
-Message-ID: <52BD9CC2.3030409@gmail.com>
-Date: Fri, 27 Dec 2013 16:29:06 +0100
-From: Till Kamppeter <till.kamppeter@gmail.com>
+	h=mime-version:sender:in-reply-to:references:from:date:message-id
+	:subject:to:cc:content-type;
+	bh=Yz/3apFkh49i9X12NPRVdi72E9fVst1LOkC6Mkmg70A=;
+	b=ab9K7fovpS49NNzYn8i4sbvEanc27URnfdVegmB5p3Eon4GtoziGlUHO1xTf3mMdvd
+	n5FyKmi8fLb6c2ONpwJZU7gLEMV0FZYX/oK47aAjHbXHRiMGNv2h3neyclfdQILEpkIN
+	FQXoGWt3WZqXhfhpHrMSICsXrz+qRF0euvW0FLuR5AC1rmPLejB4tLIhYQ4jFYHHY8ah
+	p00w20JYw1p/J6yRmaVkhCagEfFApg0k9Lk8nLWjwSBcYIbC3q2r9OIXyR58OHOifTg7
+	4AAktPGOjTLamxjU0Btrq1iRenyrB2kSwIUsmrKrOr1tYew2ZjmbEXWBcsht/pYAnNoT
+	x0VQ==
 MIME-Version: 1.0
-References: <1387213857.12274.26.camel@rubik> <52AF35A2.6060804@gmail.com>
-	<1387214818.12274.33.camel@rubik>
-	<2F134E47-1770-43E0-9DC9-61D1E3066A08@apple.com>
-In-Reply-To: <2F134E47-1770-43E0-9DC9-61D1E3066A08@apple.com>
-Content-Type: text/plain; charset=UTF-8
-Content-Transfer-Encoding: 7bit
+Sender: korobkin@gmail.com
+In-Reply-To: <1387213857.12274.26.camel@rubik>
+References: <1387213857.12274.26.camel@rubik>
+From: Alex Korobkin <korobkin+op@gmail.com>
+Date: Fri, 27 Dec 2013 14:55:14 -0500
+Message-ID: <CA+3RNfi=pVNw=rHnGN80Td8YG-j2usCJhdZGbsaQqcy=6VspSg@mail.gmail.com>
+Content-Type: multipart/alternative; boundary=e89a8fb208883ac5ed04ee897a01
 Subject: Re: [Printing-architecture] Useful utility: cups-filter-check
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
@@ -29,42 +27,73 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Michael Sweet <msweet@apple.com>, Tim Waugh <twaugh@redhat.com>
+To: Tim Waugh <twaugh@redhat.com>
 Cc: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>
 
-On 12/16/2013 06:54 PM, Michael Sweet wrote:
-> Tim,
-> 
-> On Dec 16, 2013, at 12:26 PM, Tim Waugh <twaugh@redhat.com> wrote:
->> ...
->> Incidentally, while playing around with it I noticed the only route from
->> application/vnd.adobe-reader-postscript -> application/vnd.cups-pdf is
->> via image/tiff. Is that intentional? I expect any printer capable of
->> handling PDF can also handle PostScript, and that path works fine at
->> less cost.
-> 
-> I'm guessing the reason for this is Adobe's stupid enforcement of PDF form content protection - some forms can't be processed by Ghostscript or Adobe's own PS distiller to generate PDF because of restrictions that are placed in the PostScript code.  But it is A-OK to RIP the content for printing/export to an image... :/
+--e89a8fb208883ac5ed04ee897a01
+Content-Type: text/plain; charset=UTF-8
+
+I'd love to have this in the cups-filters package. Great idea.
+
+
+2013/12/16 Tim Waugh <twaugh@redhat.com>
+
+> Hi,
+>
+> Last week I put together a small program to simply display the filter
+> pipelines that would be used for each configured input format and each
+> likely output format (CUPS raster, PostScript, PDF).
+>
+> This is useful for sanity-checking changes to CUPS filter costs, to
+> check whether changes to pipelines are intentional or accidental.
+>
+> It's based on testmime.c and is very simple. See what you think:
+>   https://gitorious.org/cups-filter-check
+>
+> Tim.
+> */
+>
+>
+> _______________________________________________
+> Printing-architecture mailing list
+> Printing-architecture@lists.linux-foundation.org
+> https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture
+>
 >
 
-For going this way I suggest to go
+--e89a8fb208883ac5ed04ee897a01
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
 
-PostScript --gstoraster-> CUPS Raster --rastertopdf-> PDF ...
+<div dir=3D"ltr">I&#39;d love to have this in the cups-filters package. Gre=
+at idea.=C2=A0</div><div class=3D"gmail_extra"><br><br><div class=3D"gmail_=
+quote">2013/12/16 Tim Waugh <span dir=3D"ltr">&lt;<a href=3D"mailto:twaugh@=
+redhat.com" target=3D"_blank">twaugh@redhat.com</a>&gt;</span><br>
 
-as first, imagetopdf/imagetoraster supports only single-page TIFF and
-HPLIPs pstotiff filter only produces monochrome low-res TIFF for faxing.
+<blockquote class=3D"gmail_quote" style=3D"margin:0 0 0 .8ex;border-left:1p=
+x #ccc solid;padding-left:1ex">Hi,<br>
+<br>
+Last week I put together a small program to simply display the filter<br>
+pipelines that would be used for each configured input format and each<br>
+likely output format (CUPS raster, PostScript, PDF).<br>
+<br>
+This is useful for sanity-checking changes to CUPS filter costs, to<br>
+check whether changes to pipelines are intentional or accidental.<br>
+<br>
+It&#39;s based on testmime.c and is very simple. See what you think:<br>
+=C2=A0 <a href=3D"https://gitorious.org/cups-filter-check" target=3D"_blank=
+">https://gitorious.org/cups-filter-check</a><br>
+<br>
+Tim.<br>
+*/<br>
+<br>
+<br>_______________________________________________<br>
+Printing-architecture mailing list<br>
+<a href=3D"mailto:Printing-architecture@lists.linux-foundation.org">Printin=
+g-architecture@lists.linux-foundation.org</a><br>
+<a href=3D"https://lists.linuxfoundation.org/mailman/listinfo/printing-arch=
+itecture" target=3D"_blank">https://lists.linuxfoundation.org/mailman/listi=
+nfo/printing-architecture</a><br>
+<br></blockquote></div><br></div>
 
-rastertopdf needs to get created anyway for making CUPS a complete IPP
-Everywhere implementation, as IPP Everywhere printers need to take PWG
-Raster as input format. See
-
-http://www.cups.org/str.php?L4266
-
-> But yes, if the printer reports support for PostScript then application/vnd.adobe-reader-postscript should go to application/vnd.cups-postscript without a side-trip through TIFF and PDF...
-
-Yes, this I already cover in cups-filters,
-application/vnd.adobe-reader-postscript is converted into
-application/vnd.cups-postscript through pstops, without PDF detour.
-
-   Till
-
-
+--e89a8fb208883ac5ed04ee897a01--
