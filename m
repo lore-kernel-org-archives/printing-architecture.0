@@ -1,14 +1,20 @@
-Return-Path: <msweet@apple.com>
-MIME-version: 1.0
-Content-type: multipart/alternative;
-	boundary="Boundary_(ID_OJvz1qSpSzzmN4/Au2xU5w)"
-From: Michael Sweet <msweet@apple.com>
-In-reply-to: <CA+3RNfi=pVNw=rHnGN80Td8YG-j2usCJhdZGbsaQqcy=6VspSg@mail.gmail.com>
-Date: Wed, 01 Jan 2014 21:34:27 -0500
-Message-id: <40BD2E0E-609E-4AA4-B7EE-13A95AEAB329@apple.com>
-References: <1387213857.12274.26.camel@rubik>
-	<CA+3RNfi=pVNw=rHnGN80Td8YG-j2usCJhdZGbsaQqcy=6VspSg@mail.gmail.com>
-Subject: Re: [Printing-architecture] Useful utility: cups-filter-check
+Return-Path: <blueroofmusic@gmail.com>
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20120113;
+	h=mime-version:from:date:message-id:subject:to:content-type;
+	bh=iy5oDkH1vK7fAsVGGcqcNbBPWGfek0QreSHNRTwFdWo=;
+	b=GMKBFqbIrPxKQwIsbqvCD0gwQNdNRB49S605xuO0y1RjVEw8ieL2it/NnDw+FVsHi6
+	XwCrgxMptWSyKxQmS5RtAcHUx4wNHOgJPmnL5Xl1WfkqSEaUomkADVZ+tCoPxGaiJ6uN
+	QNGOeMdmf5OjJCIhSCEr28rLxuD9VmfqtI8GSQ1GUJyQ4UYAJGHr6HrAVuoEj6vEIaQH
+	W7vKm4OYQZGr/+HGYcoUDScg6CVIKWOhteqBVDiv8Ujmhg4MzBRFl9bWeOotjmsJzyIH
+	pnlDE25iID5MbTiuW/P0UBoqHFZzpPE83KbCYLNAEemzkGbHWKCH5HIXM8LI5Wu0LxMz
+	cbIA==
+MIME-Version: 1.0
+From: Ira McDonald <blueroofmusic@gmail.com>
+Date: Sun, 5 Jan 2014 12:07:00 -0500
+Message-ID: <CAN40gSsmt9HfdWXQgBLW4suMgAzbEj+Z_oErDUAajoYw73pDaA@mail.gmail.com>
+Content-Type: multipart/alternative; boundary=089e013a110214337704ef3c2d4d
+Subject: [Printing-architecture] OP US/Europe call - Tuesday 7 January 2014
+	- NEW DATE & TIME
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>,
@@ -18,87 +24,156 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Alex Korobkin <korobkin+op@gmail.com>
-Cc: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>
+To: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>, Ira McDonald <blueroofmusic@gmail.com>
 
+--089e013a110214337704ef3c2d4d
+Content-Type: text/plain; charset=ISO-8859-1
 
---Boundary_(ID_OJvz1qSpSzzmN4/Au2xU5w)
-Content-type: text/plain; CHARSET=US-ASCII
-Content-transfer-encoding: 7BIT
+On Wed, Dec 18, 2013 at 6:07 PM, Ira McDonald <blueroofmusic@gmail.com>wrote:
 
-All,
-
-I filed CUPS STR #4325 to track adding this to the cupsfilter command:
-
-    https://www.cups.org/str.php?L4325
-
-
-On Dec 27, 2013, at 2:55 PM, Alex Korobkin <korobkin+op@gmail.com> wrote:
-
-> I'd love to have this in the cups-filters package. Great idea. 
-> 
-> 
-> 2013/12/16 Tim Waugh <twaugh@redhat.com>
 > Hi,
-> 
-> Last week I put together a small program to simply display the filter
-> pipelines that would be used for each configured input format and each
-> likely output format (CUPS raster, PostScript, PDF).
-> 
-> This is useful for sanity-checking changes to CUPS filter costs, to
-> check whether changes to pipelines are intentional or accidental.
-> 
-> It's based on testmime.c and is very simple. See what you think:
->   https://gitorious.org/cups-filter-check
-> 
-> Tim.
-> */
-> 
-> 
-> _______________________________________________
-> Printing-architecture mailing list
-> Printing-architecture@lists.linux-foundation.org
-> https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture
-> 
-> 
-> _______________________________________________
-> Printing-architecture mailing list
-> Printing-architecture@lists.linux-foundation.org
-> https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture
+>
+> [Due to other standards meeting conflicts with our Wednesday
+> OP US/Europe monthly calls]
+>
+> We have permanently moved our OP US/Europe monthly calls
+> to *Tuesday* and *one hour later*:
+>
+> (1) January 2014 - US/Europe - OP Monthly Meeting
+>     - NEW DAY & TIME
+>     - Tuesday 7 January 2014, Daytime
+>       - US
+>         10am in San Francisco - US PST (Pacific Standard Time)
+>         11am in Colorado - US MST (Mountain Standard Time)
+>         12pm in Chicago - US CST (Central Standard Time)
+>         1pm in New York - US EST (Eastern Standard Time)
+>       - Europe
+>         7pm in Berlin - CET (Central European Time)
+>
+>     * Main Number (Till Kamppeter, LF, leader)
+>       International: +1-619-326-2730 (new number)
+>       Access Code:   491659#
+>
+> (2) February 2014 - US/Europe - OP Monthly Meeting (tentative)
+>     - Note - PWG Meeting in Irvine, CA - 4-6 February 2014
+>     - Note - TCG Meeting in Salt Lake City, UT - 10-14 February 2014
+>
+>     - NEW DAY & TIME
+>     - Tuesday 18 February 2014, Daytime
+>       - US
+>         10am in San Francisco - US PST (Pacific Standard Time)
+>         11am in Colorado - US MST (Mountain Standard Time)
+>         12pm in Chicago - US CST (Central Standard Time)
+>         1pm in New York - US EST (Eastern Standard Time)
+>       - Europe
+>         7pm in Berlin - CET (Central European Time)
+>
+>     * Main Number (Till Kamppeter, LF, leader)
+>       International: +1-619-326-2730 (new number)
+>       Access Code:   491659#
+>
+> Cheers,
+> - Ira
+>
+>
+> Ira McDonald (Musician / Software Architect)
+> Co-Chair - TCG Trusted Mobility Solutions WG
+> Chair - Linux Foundation Open Printing WG
+> Secretary - IEEE-ISTO Printer Working Group
+> Co-Chair - IEEE-ISTO PWG Internet Printing Protocol WG
+> IETF Designated Expert - IPP & Printer MIB
+> Blue Roof Music / High North Inc
+> http://sites.google.com/site/blueroofmusic
+> http://sites.google.com/site/highnorthinc
+> mailto: blueroofmusic@gmail.com
+> Winter  579 Park Place  Saline, MI  48176  734-944-0094
+> Summer  PO Box 221  Grand Marais, MI 49839  906-494-2434
+>
+>
 
-_________________________________________________________
-Michael Sweet, Senior Printing System Engineer, PWG Chair
+--089e013a110214337704ef3c2d4d
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><div class=3D"gmail_extra"><br><div class=3D"gmail_quote">=
+On Wed, Dec 18, 2013 at 6:07 PM, Ira McDonald <span dir=3D"ltr">&lt;<a href=
+=3D"mailto:blueroofmusic@gmail.com" target=3D"_blank">blueroofmusic@gmail.c=
+om</a>&gt;</span> wrote:<br>
+
+<blockquote class=3D"gmail_quote" style=3D"margin:0 0 0 .8ex;border-left:1p=
+x #ccc solid;padding-left:1ex"><div dir=3D"ltr"><div><div><div>Hi,<br><br><=
+/div><div>[Due to other standards meeting conflicts with our Wednesday <br>=
+OP US/Europe monthly calls]<br>
+
+<br></div>We have permanently moved our OP US/Europe monthly calls<br>to *T=
+uesday* and *one hour later*:<br>
+<br>(1) January 2014 - US/Europe - OP Monthly Meeting<br></div><div>=A0=A0=
+=A0 - NEW DAY &amp; TIME<br></div><div>=A0=A0=A0 - Tuesday 7 January 2014, =
+Daytime<br>=A0=A0=A0=A0=A0 - US<br>=A0=A0=A0=A0=A0=A0=A0 10am in San Franci=
+sco - US PST (Pacific Standard Time)<br>
 
 
---Boundary_(ID_OJvz1qSpSzzmN4/Au2xU5w)
-Content-type: text/html; CHARSET=US-ASCII
-Content-transfer-encoding: 7BIT
+=A0=A0=A0=A0=A0=A0=A0 11am in Colorado - US MST (Mountain Standard Time)<br=
+>=A0=A0=A0=A0=A0=A0=A0 12pm in Chicago - US CST (Central Standard Time)<br>=
+=A0=A0=A0=A0=A0=A0=A0 1pm in New York - US EST (Eastern Standard Time)<br>=
+=A0=A0=A0=A0=A0 - Europe<br>=A0=A0=A0=A0=A0=A0=A0 7pm in Berlin - CET (Cent=
+ral European Time)<br>
 
-<html><head><meta http-equiv="Content-Type" content="text/html charset=us-ascii"></head><body style="word-wrap: break-word; -webkit-nbsp-mode: space; -webkit-line-break: after-white-space;">All,<div><br></div><div>I filed CUPS STR #4325 to track adding this to the cupsfilter command:<div><br></div><div>&nbsp; &nbsp; <a href="https://www.cups.org/str.php?L4325">https://www.cups.org/str.php?L4325</a></div><div><br></div><div><br><div><div>On Dec 27, 2013, at 2:55 PM, Alex Korobkin &lt;<a href="mailto:korobkin+op@gmail.com">korobkin+op@gmail.com</a>&gt; wrote:</div><br class="Apple-interchange-newline"><blockquote type="cite"><div dir="ltr">I'd love to have this in the cups-filters package. Great idea.&nbsp;</div><div class="gmail_extra"><br><br><div class="gmail_quote">2013/12/16 Tim Waugh <span dir="ltr">&lt;<a href="mailto:twaugh@redhat.com" target="_blank">twaugh@redhat.com</a>&gt;</span><br>
 
-<blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex">Hi,<br>
-<br>
-Last week I put together a small program to simply display the filter<br>
-pipelines that would be used for each configured input format and each<br>
-likely output format (CUPS raster, PostScript, PDF).<br>
-<br>
-This is useful for sanity-checking changes to CUPS filter costs, to<br>
-check whether changes to pipelines are intentional or accidental.<br>
-<br>
-It's based on testmime.c and is very simple. See what you think:<br>
-&nbsp; <a href="https://gitorious.org/cups-filter-check" target="_blank">https://gitorious.org/cups-filter-check</a><br>
-<br>
-Tim.<br>
-*/<br>
-<br>
-<br>_______________________________________________<br>
-Printing-architecture mailing list<br>
-<a href="mailto:Printing-architecture@lists.linux-foundation.org">Printing-architecture@lists.linux-foundation.org</a><br>
-<a href="https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture" target="_blank">https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture</a><br>
-<br></blockquote></div><br></div>
-_______________________________________________<br>Printing-architecture mailing list<br><a href="mailto:Printing-architecture@lists.linux-foundation.org">Printing-architecture@lists.linux-foundation.org</a><br>https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture<br></blockquote></div><br><div>
-<span class="Apple-style-span" style="border-collapse: separate; border-spacing: 0px;"><span class="Apple-style-span" style="border-collapse: separate; color: rgb(0, 0, 0); font-family: 'Andale Mono'; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-border-horizontal-spacing: 0px; -webkit-border-vertical-spacing: 0px; -webkit-text-decorations-in-effect: none; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px;  "><div style="word-wrap: break-word; -webkit-nbsp-mode: space; -webkit-line-break: after-white-space; ">_________________________________________________________<br>Michael Sweet, Senior Printing System&nbsp;Engineer, PWG Chair</div></span></span>
-</div>
-<br></div></div></body></html>
+<br>=A0=A0=A0 * Main Number (Till Kamppeter, LF, leader)<br>=A0=A0=A0=A0=A0=
+ International: <a href=3D"tel:%2B1-619-326-2730" value=3D"+16193262730" ta=
+rget=3D"_blank">+1-619-326-2730</a> (new number)<br>=A0=A0=A0=A0=A0 Access =
+Code:=A0=A0 491659#<br><br>(2) February 2014 - US/Europe - OP Monthly Meeti=
+ng (tentative)<br>
 
---Boundary_(ID_OJvz1qSpSzzmN4/Au2xU5w)--
+=A0=A0=A0 - Note - PWG Meeting in Irvine, CA - 4-6 February 2014<br>
+=A0=A0=A0 - Note - TCG Meeting in Salt Lake City, UT - 10-14 February 2014<=
+br><br>=A0=A0=A0 - NEW DAY &amp; TIME<br>=A0=A0=A0 - Tuesday 18 February 20=
+14, Daytime<br>=A0=A0=A0=A0=A0 - US<br>=A0=A0=A0=A0=A0=A0=A0 10am in San Fr=
+ancisco - US PST (Pacific Standard Time)<br>
+
+
+=A0=A0=A0=A0=A0=A0=A0 11am in Colorado - US MST (Mountain Standard Time)<br=
+>=A0=A0=A0=A0=A0=A0=A0 12pm in Chicago - US CST (Central Standard Time)<br>=
+=A0=A0=A0=A0=A0=A0=A0 1pm in New York - US EST (Eastern Standard Time)<br>=
+=A0=A0=A0=A0=A0 - Europe<br>=A0=A0=A0=A0=A0=A0=A0 7pm in Berlin - CET (Cent=
+ral European Time)<br>
+
+
+<br>=A0=A0=A0 * Main Number (Till Kamppeter, LF, leader)<br>=A0=A0=A0=A0=A0=
+ International: <a href=3D"tel:%2B1-619-326-2730" value=3D"+16193262730" ta=
+rget=3D"_blank">+1-619-326-2730</a> (new number)<br>=A0=A0=A0=A0=A0 Access =
+Code:=A0=A0 491659#<br><br></div>
+
+Cheers,<br></div>- Ira<br><br><br clear=3D"all"><div><div><div><div><div><d=
+iv>
+<div dir=3D"ltr">Ira McDonald (Musician / Software Architect)<br>Co-Chair -=
+ TCG Trusted Mobility Solutions WG<br>Chair - Linux Foundation Open Printin=
+g WG<br>Secretary - IEEE-ISTO Printer Working Group<br>Co-Chair - IEEE-ISTO=
+ PWG Internet Printing Protocol WG<br>
+
+
+IETF Designated Expert - IPP &amp; Printer MIB<br>Blue Roof Music / High No=
+rth Inc<br><a style=3D"color:rgb(51,51,255)" href=3D"http://sites.google.co=
+m/site/blueroofmusic" target=3D"_blank">http://sites.google.com/site/bluero=
+ofmusic</a><br>
+
+
+<a style=3D"color:rgb(102,0,204)" href=3D"http://sites.google.com/site/high=
+northinc" target=3D"_blank">http://sites.google.com/site/highnorthinc</a><b=
+r>mailto: <a href=3D"mailto:blueroofmusic@gmail.com" target=3D"_blank">blue=
+roofmusic@gmail.com</a><br>
+
+
+Winter=A0 579 Park Place=A0 Saline, MI=A0 48176=A0 <a href=3D"tel:734-944-0=
+094" value=3D"+17349440094" target=3D"_blank">734-944-0094</a><br>Summer=A0=
+ PO Box 221=A0 Grand Marais, MI 49839=A0 <a href=3D"tel:906-494-2434" value=
+=3D"+19064942434" target=3D"_blank">906-494-2434</a><br>
+
+<br><div style=3D"display:inline"></div><div style=3D"display:inline"></div=
+><div style=3D"display:inline"></div>
+<div></div><div></div><div></div><div></div></div></div>
+</div></div></div></div></div></div>
+</blockquote></div><br></div></div>
+
+--089e013a110214337704ef3c2d4d--
