@@ -1,20 +1,15 @@
-Return-Path: <blueroofmusic@gmail.com>
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20120113;
-	h=mime-version:from:date:message-id:subject:to:content-type;
-	bh=iy5oDkH1vK7fAsVGGcqcNbBPWGfek0QreSHNRTwFdWo=;
-	b=GMKBFqbIrPxKQwIsbqvCD0gwQNdNRB49S605xuO0y1RjVEw8ieL2it/NnDw+FVsHi6
-	XwCrgxMptWSyKxQmS5RtAcHUx4wNHOgJPmnL5Xl1WfkqSEaUomkADVZ+tCoPxGaiJ6uN
-	QNGOeMdmf5OjJCIhSCEr28rLxuD9VmfqtI8GSQ1GUJyQ4UYAJGHr6HrAVuoEj6vEIaQH
-	W7vKm4OYQZGr/+HGYcoUDScg6CVIKWOhteqBVDiv8Ujmhg4MzBRFl9bWeOotjmsJzyIH
-	pnlDE25iID5MbTiuW/P0UBoqHFZzpPE83KbCYLNAEemzkGbHWKCH5HIXM8LI5Wu0LxMz
-	cbIA==
-MIME-Version: 1.0
-From: Ira McDonald <blueroofmusic@gmail.com>
-Date: Sun, 5 Jan 2014 12:07:00 -0500
-Message-ID: <CAN40gSsmt9HfdWXQgBLW4suMgAzbEj+Z_oErDUAajoYw73pDaA@mail.gmail.com>
-Content-Type: multipart/alternative; boundary=089e013a110214337704ef3c2d4d
-Subject: [Printing-architecture] OP US/Europe call - Tuesday 7 January 2014
-	- NEW DATE & TIME
+Return-Path: <msweet@apple.com>
+MIME-version: 1.0
+Content-type: multipart/signed;
+	boundary="Apple-Mail=_F3E82B51-EBED-4BC6-8ACC-B2D1767C4576";
+	protocol="application/pkcs7-signature"; micalg=sha1
+From: Michael Sweet <msweet@apple.com>
+In-reply-to: <979A345E-EBF2-46D5-B656-F102220A6A3F@apple.com>
+Date: Mon, 06 Jan 2014 13:16:45 -0500
+Message-id: <67D8CB82-8030-4E81-976D-DA4D53FDB2CE@apple.com>
+References: <979A345E-EBF2-46D5-B656-F102220A6A3F@apple.com>
+Subject: Re: [Printing-architecture] RFC: Who uses Digest authentication
+	with	CUPS anymore?
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>,
@@ -24,156 +19,152 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>, Ira McDonald <blueroofmusic@gmail.com>
+To: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>
 
---089e013a110214337704ef3c2d4d
-Content-Type: text/plain; charset=ISO-8859-1
 
-On Wed, Dec 18, 2013 at 6:07 PM, Ira McDonald <blueroofmusic@gmail.com>wrote:
-
-> Hi,
->
-> [Due to other standards meeting conflicts with our Wednesday
-> OP US/Europe monthly calls]
->
-> We have permanently moved our OP US/Europe monthly calls
-> to *Tuesday* and *one hour later*:
->
-> (1) January 2014 - US/Europe - OP Monthly Meeting
->     - NEW DAY & TIME
->     - Tuesday 7 January 2014, Daytime
->       - US
->         10am in San Francisco - US PST (Pacific Standard Time)
->         11am in Colorado - US MST (Mountain Standard Time)
->         12pm in Chicago - US CST (Central Standard Time)
->         1pm in New York - US EST (Eastern Standard Time)
->       - Europe
->         7pm in Berlin - CET (Central European Time)
->
->     * Main Number (Till Kamppeter, LF, leader)
->       International: +1-619-326-2730 (new number)
->       Access Code:   491659#
->
-> (2) February 2014 - US/Europe - OP Monthly Meeting (tentative)
->     - Note - PWG Meeting in Irvine, CA - 4-6 February 2014
->     - Note - TCG Meeting in Salt Lake City, UT - 10-14 February 2014
->
->     - NEW DAY & TIME
->     - Tuesday 18 February 2014, Daytime
->       - US
->         10am in San Francisco - US PST (Pacific Standard Time)
->         11am in Colorado - US MST (Mountain Standard Time)
->         12pm in Chicago - US CST (Central Standard Time)
->         1pm in New York - US EST (Eastern Standard Time)
->       - Europe
->         7pm in Berlin - CET (Central European Time)
->
->     * Main Number (Till Kamppeter, LF, leader)
->       International: +1-619-326-2730 (new number)
->       Access Code:   491659#
->
-> Cheers,
-> - Ira
->
->
-> Ira McDonald (Musician / Software Architect)
-> Co-Chair - TCG Trusted Mobility Solutions WG
-> Chair - Linux Foundation Open Printing WG
-> Secretary - IEEE-ISTO Printer Working Group
-> Co-Chair - IEEE-ISTO PWG Internet Printing Protocol WG
-> IETF Designated Expert - IPP & Printer MIB
-> Blue Roof Music / High North Inc
-> http://sites.google.com/site/blueroofmusic
-> http://sites.google.com/site/highnorthinc
-> mailto: blueroofmusic@gmail.com
-> Winter  579 Park Place  Saline, MI  48176  734-944-0094
-> Summer  PO Box 221  Grand Marais, MI 49839  906-494-2434
->
->
-
---089e013a110214337704ef3c2d4d
-Content-Type: text/html; charset=ISO-8859-1
+--Apple-Mail=_F3E82B51-EBED-4BC6-8ACC-B2D1767C4576
 Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain;
+	charset=us-ascii
 
-<div dir=3D"ltr"><div class=3D"gmail_extra"><br><div class=3D"gmail_quote">=
-On Wed, Dec 18, 2013 at 6:07 PM, Ira McDonald <span dir=3D"ltr">&lt;<a href=
-=3D"mailto:blueroofmusic@gmail.com" target=3D"_blank">blueroofmusic@gmail.c=
-om</a>&gt;</span> wrote:<br>
+*Ping*
 
-<blockquote class=3D"gmail_quote" style=3D"margin:0 0 0 .8ex;border-left:1p=
-x #ccc solid;padding-left:1ex"><div dir=3D"ltr"><div><div><div>Hi,<br><br><=
-/div><div>[Due to other standards meeting conflicts with our Wednesday <br>=
-OP US/Europe monthly calls]<br>
+FWIW, this is CUPS STR #4321:
 
-<br></div>We have permanently moved our OP US/Europe monthly calls<br>to *T=
-uesday* and *one hour later*:<br>
-<br>(1) January 2014 - US/Europe - OP Monthly Meeting<br></div><div>=A0=A0=
-=A0 - NEW DAY &amp; TIME<br></div><div>=A0=A0=A0 - Tuesday 7 January 2014, =
-Daytime<br>=A0=A0=A0=A0=A0 - US<br>=A0=A0=A0=A0=A0=A0=A0 10am in San Franci=
-sco - US PST (Pacific Standard Time)<br>
+    https://www.cups.org/str.php?L4321
 
 
-=A0=A0=A0=A0=A0=A0=A0 11am in Colorado - US MST (Mountain Standard Time)<br=
->=A0=A0=A0=A0=A0=A0=A0 12pm in Chicago - US CST (Central Standard Time)<br>=
-=A0=A0=A0=A0=A0=A0=A0 1pm in New York - US EST (Eastern Standard Time)<br>=
-=A0=A0=A0=A0=A0 - Europe<br>=A0=A0=A0=A0=A0=A0=A0 7pm in Berlin - CET (Cent=
-ral European Time)<br>
+On Dec 19, 2013, at 12:08 PM, Michael Sweet <msweet@apple.com> wrote:
+
+> All,
+>=20
+> CUPS has supported Digest authentication since CUPS 1.1b4.  Originally =
+we added it to provide a more secure authentication method when we =
+didn't support TLS, UNIX domain sockets, or PAM. But today we *do* =
+support those things, making Digest an oddball in the grand scheme of =
+things.  Password and account management is awkward and has to happen on =
+the server using the "lppasswd" command (which you have to make setuid =
+if you choose to use it...)
+>=20
+> I'd like to get your collected feedback on removing Digest support =
+from cupsd and the lppasswd command in CUPS 2.0.  We'd still leave =
+client support in place so Digest authentication with a CUPS 1.x server =
+would continue to work.
+>=20
+> People upgrading their servers to 2.0 would also need to configure =
+their systems to use the "digestfile" PAM module =
+(http://digest.sourceforge.net) and create a TLS certificate, as needed. =
+ Authentication against the Digest password file would use HTTP Basic =
+(basically the same as "AuthType BasicDigest" in CUPS 1.x) and be 100% =
+compatible with prior CUPS releases.
+>=20
+> Thoughts?
+>=20
+> _________________________________________________________
+> Michael Sweet, Senior Printing System Engineer, PWG Chair
+>=20
+> _______________________________________________
+> Printing-architecture mailing list
+> Printing-architecture@lists.linux-foundation.org
+> =
+https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture
+
+_________________________________________________________
+Michael Sweet, Senior Printing System Engineer, PWG Chair
 
 
-<br>=A0=A0=A0 * Main Number (Till Kamppeter, LF, leader)<br>=A0=A0=A0=A0=A0=
- International: <a href=3D"tel:%2B1-619-326-2730" value=3D"+16193262730" ta=
-rget=3D"_blank">+1-619-326-2730</a> (new number)<br>=A0=A0=A0=A0=A0 Access =
-Code:=A0=A0 491659#<br><br>(2) February 2014 - US/Europe - OP Monthly Meeti=
-ng (tentative)<br>
+--Apple-Mail=_F3E82B51-EBED-4BC6-8ACC-B2D1767C4576
+Content-Disposition: attachment;
+	filename=smime.p7s
+Content-Type: application/pkcs7-signature;
+	name=smime.p7s
+Content-Transfer-Encoding: base64
 
-=A0=A0=A0 - Note - PWG Meeting in Irvine, CA - 4-6 February 2014<br>
-=A0=A0=A0 - Note - TCG Meeting in Salt Lake City, UT - 10-14 February 2014<=
-br><br>=A0=A0=A0 - NEW DAY &amp; TIME<br>=A0=A0=A0 - Tuesday 18 February 20=
-14, Daytime<br>=A0=A0=A0=A0=A0 - US<br>=A0=A0=A0=A0=A0=A0=A0 10am in San Fr=
-ancisco - US PST (Pacific Standard Time)<br>
+MIAGCSqGSIb3DQEHAqCAMIACAQExCzAJBgUrDgMCGgUAMIAGCSqGSIb3DQEHAQAAoIIPJTCCBN0w
+ggPFoAMCAQICEHGS++YZX6xNEoV0cTSiGKcwDQYJKoZIhvcNAQEFBQAwezELMAkGA1UEBhMCR0Ix
+GzAZBgNVBAgMEkdyZWF0ZXIgTWFuY2hlc3RlcjEQMA4GA1UEBwwHU2FsZm9yZDEaMBgGA1UECgwR
+Q29tb2RvIENBIExpbWl0ZWQxITAfBgNVBAMMGEFBQSBDZXJ0aWZpY2F0ZSBTZXJ2aWNlczAeFw0w
+NDAxMDEwMDAwMDBaFw0yODEyMzEyMzU5NTlaMIGuMQswCQYDVQQGEwJVUzELMAkGA1UECBMCVVQx
+FzAVBgNVBAcTDlNhbHQgTGFrZSBDaXR5MR4wHAYDVQQKExVUaGUgVVNFUlRSVVNUIE5ldHdvcmsx
+ITAfBgNVBAsTGGh0dHA6Ly93d3cudXNlcnRydXN0LmNvbTE2MDQGA1UEAxMtVVROLVVTRVJGaXJz
+dC1DbGllbnQgQXV0aGVudGljYXRpb24gYW5kIEVtYWlsMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8A
+MIIBCgKCAQEAsjmFpPJ9q0E7YkY3rs3BYHW8OWX5ShpHornMSMxqmNVNNRm5pELlzkniii8efNIx
+B8dOtINknS4p1aJkxIW9hVE1eaROaJB7HHqkkqgX8pgV8pPMyaQylbsMTzC9mKALi+VuG6JG+ni8
+om+rWV6lL8/K2m2qL+usobNqqrcuZzWLeeEeaYji5kbNoKXqvgvOdjp6Dpvq/NonWz1zHyLmSGHG
+TPNpsaguG7bUMSAsvIKKjqQOpdeJQ/wWWq8dcdcRWdq6hw2v+vPhwvCkxWeM1tZUOt4KpLoDd7Nl
+yP0e03RiqhjKaJMeoYV+9Udly/hNVyh00jT/MLbu9mIwFIws6wIDAQABo4IBJzCCASMwHwYDVR0j
+BBgwFoAUoBEKIz6W8Qfs4q8p74Klf9AwpLQwHQYDVR0OBBYEFImCZ33EnSZwAEu0UEh83j2uBG59
+MA4GA1UdDwEB/wQEAwIBBjAPBgNVHRMBAf8EBTADAQH/MB0GA1UdJQQWMBQGCCsGAQUFBwMCBggr
+BgEFBQcDBDARBgNVHSAECjAIMAYGBFUdIAAwewYDVR0fBHQwcjA4oDagNIYyaHR0cDovL2NybC5j
+b21vZG9jYS5jb20vQUFBQ2VydGlmaWNhdGVTZXJ2aWNlcy5jcmwwNqA0oDKGMGh0dHA6Ly9jcmwu
+Y29tb2RvLm5ldC9BQUFDZXJ0aWZpY2F0ZVNlcnZpY2VzLmNybDARBglghkgBhvhCAQEEBAMCAQYw
+DQYJKoZIhvcNAQEFBQADggEBAJ2Vyzy4fqUJxB6/C8LHdo45PJTGEKpPDMngq4RdiVTgZTvzbRx8
+NywlVF+WIfw3hJGdFdwUT4HPVB1rbEVgxy35l1FM+WbKPKCCjKbI8OLp1Er57D9Wyd12jMOCAU9s
+APMeGmF0BEcDqcZAV5G8ZSLFJ2dPV9tkWtmNH7qGL/QGrpxp7en0zykX2OBKnxogL5dMUbtGB8SK
+N04g4wkxaMeexIud6H4RvDJoEJYRmETYKlFgTYjrdDrfQwYyyDlWjDoRUtNBpEMD9O3vMyfbOeAU
+TibJ2PU54om4k123KSZB6rObroP8d3XK6Mq1/uJlSmM+RMTQw16Hc6mYHK9/FX8wggUaMIIEAqAD
+AgECAhBtGeqnGU9qMyLmIjJ6qnHeMA0GCSqGSIb3DQEBBQUAMIGuMQswCQYDVQQGEwJVUzELMAkG
+A1UECBMCVVQxFzAVBgNVBAcTDlNhbHQgTGFrZSBDaXR5MR4wHAYDVQQKExVUaGUgVVNFUlRSVVNU
+IE5ldHdvcmsxITAfBgNVBAsTGGh0dHA6Ly93d3cudXNlcnRydXN0LmNvbTE2MDQGA1UEAxMtVVRO
+LVVTRVJGaXJzdC1DbGllbnQgQXV0aGVudGljYXRpb24gYW5kIEVtYWlsMB4XDTExMDQyODAwMDAw
+MFoXDTIwMDUzMDEwNDgzOFowgZMxCzAJBgNVBAYTAkdCMRswGQYDVQQIExJHcmVhdGVyIE1hbmNo
+ZXN0ZXIxEDAOBgNVBAcTB1NhbGZvcmQxGjAYBgNVBAoTEUNPTU9ETyBDQSBMaW1pdGVkMTkwNwYD
+VQQDEzBDT01PRE8gQ2xpZW50IEF1dGhlbnRpY2F0aW9uIGFuZCBTZWN1cmUgRW1haWwgQ0EwggEi
+MA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCShIRbS1eY1F4vi6ThQMijU1hfZmXxMk73nzJ9
+VdB4TFW3QpTg+SdxB8XGaaS5MsTxQBqQzCdWYn8XtXFpruUgG+TLY15gyqJB9mrho/+43x9IbWVD
+jCouK2M4d9+xF6zC2oIC1tQyatRnbyATj1w1+uVUgK/YcQodNwoCUFNslR2pEBS0mZVZEjH/CaLS
+TNxS297iQAFbSGjdxUq04O0kHzqvcV8H46y/FDuwJXFoPfQP1hdYRhWBPGiLi4MPbXohV+Y0sNsy
+fuNK4aVScmQmkU6lkg//4LFg/RpvaFGZY40ai6XMQpubfSJj06mg/M6ekN9EGfRcWzW6FvOnm//B
+AgMBAAGjggFLMIIBRzAfBgNVHSMEGDAWgBSJgmd9xJ0mcABLtFBIfN49rgRufTAdBgNVHQ4EFgQU
+ehNOAHRbxnhjZCfBL+KgW7x5xXswDgYDVR0PAQH/BAQDAgEGMBIGA1UdEwEB/wQIMAYBAf8CAQAw
+EQYDVR0gBAowCDAGBgRVHSAAMFgGA1UdHwRRME8wTaBLoEmGR2h0dHA6Ly9jcmwudXNlcnRydXN0
+LmNvbS9VVE4tVVNFUkZpcnN0LUNsaWVudEF1dGhlbnRpY2F0aW9uYW5kRW1haWwuY3JsMHQGCCsG
+AQUFBwEBBGgwZjA9BggrBgEFBQcwAoYxaHR0cDovL2NydC51c2VydHJ1c3QuY29tL1VUTkFkZFRy
+dXN0Q2xpZW50X0NBLmNydDAlBggrBgEFBQcwAYYZaHR0cDovL29jc3AudXNlcnRydXN0LmNvbTAN
+BgkqhkiG9w0BAQUFAAOCAQEAhda+eFdVbTN/RFL+QtUGqAEDgIr7DbL9Sr/2r0FJ9RtaxdKtG3Nu
+PukmfOZMmMEwKN/L+0I8oSU+CnXW0D05hmbRoZu1TZtvryhsHa/l6nRaqNqxwPF1ei+eupN5yv7i
+kR5WdLL4jdPgQ3Ib7Y/9YDkgR/uLrzplSDyYPaUlv73vYOBJ5RbI6z9Dg/Dg7g3B080zX5vQvWBq
+szv++tTJOjwf7Zv/m0kzvkIpOYPuM2kugp1FTahp2oAbHj3SGl18R5mlmwhtEpmG1l1XBxunML5L
+SUS4kH7K0Xk467Qz+qA6XSZYnmFVGLQh1ZnV4ENAQjC+6qXnlNKw/vN1+X9u5zCCBSIwggQKoAMC
+AQICEQDlB7dXxclLEedquPvGX8CGMA0GCSqGSIb3DQEBBQUAMIGTMQswCQYDVQQGEwJHQjEbMBkG
+A1UECBMSR3JlYXRlciBNYW5jaGVzdGVyMRAwDgYDVQQHEwdTYWxmb3JkMRowGAYDVQQKExFDT01P
+RE8gQ0EgTGltaXRlZDE5MDcGA1UEAxMwQ09NT0RPIENsaWVudCBBdXRoZW50aWNhdGlvbiBhbmQg
+U2VjdXJlIEVtYWlsIENBMB4XDTEzMTIxNzAwMDAwMFoXDTE0MTIxNzIzNTk1OVowITEfMB0GCSqG
+SIb3DQEJARYQbXN3ZWV0QGFwcGxlLmNvbTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEB
+ANdvQYZRCVzc0wIYvIOn/0Pv7zUwuIvbAfM/W3FyemqZx3fdKxX4WxN2x5NC3hhBHGrUWirJH7rl
+6It12bGQ61uHAK5jsJikV5k+mOYjZaKNIKxj0uYIk3MKQmsmM8t3nddq5mp2mxwV/U7AFPTz1fgh
+dkqTb/NkHY5eA8KqksaeqwfMgoaiGVeCUhptWnXosca8PAkb+i9u5rEok5zgY+QP0IuWLJENfA4q
+dEMsH+OAwMGOv9fNCgcdapFnjeSYaj70m6qUiq446+8a2rhUsEUKQayOMgjnm2bgUuNx7pOvs/Jg
+zIlZoTz/llmE1HWREGzSjRnLWwQ98fspfeZWA+8CAwEAAaOCAeAwggHcMB8GA1UdIwQYMBaAFHoT
+TgB0W8Z4Y2QnwS/ioFu8ecV7MB0GA1UdDgQWBBTtKBJoG9kxZisTqJg4+wr12l4stjAOBgNVHQ8B
+Af8EBAMCBaAwDAYDVR0TAQH/BAIwADAgBgNVHSUEGTAXBggrBgEFBQcDBAYLKwYBBAGyMQEDBQIw
+EQYJYIZIAYb4QgEBBAQDAgUgMEYGA1UdIAQ/MD0wOwYMKwYBBAGyMQECAQEBMCswKQYIKwYBBQUH
+AgEWHWh0dHBzOi8vc2VjdXJlLmNvbW9kby5uZXQvQ1BTMFcGA1UdHwRQME4wTKBKoEiGRmh0dHA6
+Ly9jcmwuY29tb2RvY2EuY29tL0NPTU9ET0NsaWVudEF1dGhlbnRpY2F0aW9uYW5kU2VjdXJlRW1h
+aWxDQS5jcmwwgYgGCCsGAQUFBwEBBHwwejBSBggrBgEFBQcwAoZGaHR0cDovL2NydC5jb21vZG9j
+YS5jb20vQ09NT0RPQ2xpZW50QXV0aGVudGljYXRpb25hbmRTZWN1cmVFbWFpbENBLmNydDAkBggr
+BgEFBQcwAYYYaHR0cDovL29jc3AuY29tb2RvY2EuY29tMBsGA1UdEQQUMBKBEG1zd2VldEBhcHBs
+ZS5jb20wDQYJKoZIhvcNAQEFBQADggEBABg5KLQK5u9gGI75u+vYH/i6uMDKlpTILO/r/FpN2ibq
+pwAB2ln9oKvPIA1/r3o+DBC87TqnlJAiPW4ADFHpRmqlprb0Tu9p98nP/wl5tBZjEP8dY4iH0TB3
+B2r9JHwRwwJQ20CqJpuCn9dmvL215sZSqvJfluVlIcAQCLxp3ZKMIC2pNKitswdjjHduaKuj2TMe
+xrzMtrRGRtFF9pcMcnsqE2QtJUqXPV7/M4WT2yRUmI4ThPt9O9fmPH2ku52hdb6t4qXvwdQSkDHt
+xo3J/Vc/jDR2/feedDhQmG0V9j6tHsuG6bVVhcGiWnSmSoPfg13FlQwlxZTyFtiMZ2jILyoxggOu
+MIIDqgIBATCBqTCBkzELMAkGA1UEBhMCR0IxGzAZBgNVBAgTEkdyZWF0ZXIgTWFuY2hlc3RlcjEQ
+MA4GA1UEBxMHU2FsZm9yZDEaMBgGA1UEChMRQ09NT0RPIENBIExpbWl0ZWQxOTA3BgNVBAMTMENP
+TU9ETyBDbGllbnQgQXV0aGVudGljYXRpb24gYW5kIFNlY3VyZSBFbWFpbCBDQQIRAOUHt1fFyUsR
+52q4+8ZfwIYwCQYFKw4DAhoFAKCCAdkwGAYJKoZIhvcNAQkDMQsGCSqGSIb3DQEHATAcBgkqhkiG
+9w0BCQUxDxcNMTQwMTA2MTgxNjQ2WjAjBgkqhkiG9w0BCQQxFgQULaNOvBhQxQyfyG2XGsIvtk2W
+AdowgboGCSsGAQQBgjcQBDGBrDCBqTCBkzELMAkGA1UEBhMCR0IxGzAZBgNVBAgTEkdyZWF0ZXIg
+TWFuY2hlc3RlcjEQMA4GA1UEBxMHU2FsZm9yZDEaMBgGA1UEChMRQ09NT0RPIENBIExpbWl0ZWQx
+OTA3BgNVBAMTMENPTU9ETyBDbGllbnQgQXV0aGVudGljYXRpb24gYW5kIFNlY3VyZSBFbWFpbCBD
+QQIRAOUHt1fFyUsR52q4+8ZfwIYwgbwGCyqGSIb3DQEJEAILMYGsoIGpMIGTMQswCQYDVQQGEwJH
+QjEbMBkGA1UECBMSR3JlYXRlciBNYW5jaGVzdGVyMRAwDgYDVQQHEwdTYWxmb3JkMRowGAYDVQQK
+ExFDT01PRE8gQ0EgTGltaXRlZDE5MDcGA1UEAxMwQ09NT0RPIENsaWVudCBBdXRoZW50aWNhdGlv
+biBhbmQgU2VjdXJlIEVtYWlsIENBAhEA5Qe3V8XJSxHnarj7xl/AhjANBgkqhkiG9w0BAQEFAASC
+AQBdiD1mHJNQ9YP5ximAXrZ6GfWwblHxRkOp9JpglZdtenSP+ITQoDigUt+4a4INF4GfGCpb6i2k
+fQT2kWp1bsAH3bzCF8OZY9fyMcGl7VNHpOTwBAagpGXGgPRKTdsEROrXC2JTfvbrDepGL32E7xE8
+8/e36Bimq2mBWCMmf5dwQwDK8zKgUZZFI6whR0z/sEsJ32rD+VNClWqY10IkTsefqm2Sym8G+yf3
+8Z90hqPOs+8AiJtQpUlGqWPZvfqMLdPbEJwmWYgTfAor/jXqYVMDzzrg1QtZ7ygOwt8OGiS01f4L
+vj9k9BFn43HZCBee9KmhR/VB7fO48bG3nUNK4eQmAAAAAAAA
 
-
-=A0=A0=A0=A0=A0=A0=A0 11am in Colorado - US MST (Mountain Standard Time)<br=
->=A0=A0=A0=A0=A0=A0=A0 12pm in Chicago - US CST (Central Standard Time)<br>=
-=A0=A0=A0=A0=A0=A0=A0 1pm in New York - US EST (Eastern Standard Time)<br>=
-=A0=A0=A0=A0=A0 - Europe<br>=A0=A0=A0=A0=A0=A0=A0 7pm in Berlin - CET (Cent=
-ral European Time)<br>
-
-
-<br>=A0=A0=A0 * Main Number (Till Kamppeter, LF, leader)<br>=A0=A0=A0=A0=A0=
- International: <a href=3D"tel:%2B1-619-326-2730" value=3D"+16193262730" ta=
-rget=3D"_blank">+1-619-326-2730</a> (new number)<br>=A0=A0=A0=A0=A0 Access =
-Code:=A0=A0 491659#<br><br></div>
-
-Cheers,<br></div>- Ira<br><br><br clear=3D"all"><div><div><div><div><div><d=
-iv>
-<div dir=3D"ltr">Ira McDonald (Musician / Software Architect)<br>Co-Chair -=
- TCG Trusted Mobility Solutions WG<br>Chair - Linux Foundation Open Printin=
-g WG<br>Secretary - IEEE-ISTO Printer Working Group<br>Co-Chair - IEEE-ISTO=
- PWG Internet Printing Protocol WG<br>
-
-
-IETF Designated Expert - IPP &amp; Printer MIB<br>Blue Roof Music / High No=
-rth Inc<br><a style=3D"color:rgb(51,51,255)" href=3D"http://sites.google.co=
-m/site/blueroofmusic" target=3D"_blank">http://sites.google.com/site/bluero=
-ofmusic</a><br>
-
-
-<a style=3D"color:rgb(102,0,204)" href=3D"http://sites.google.com/site/high=
-northinc" target=3D"_blank">http://sites.google.com/site/highnorthinc</a><b=
-r>mailto: <a href=3D"mailto:blueroofmusic@gmail.com" target=3D"_blank">blue=
-roofmusic@gmail.com</a><br>
-
-
-Winter=A0 579 Park Place=A0 Saline, MI=A0 48176=A0 <a href=3D"tel:734-944-0=
-094" value=3D"+17349440094" target=3D"_blank">734-944-0094</a><br>Summer=A0=
- PO Box 221=A0 Grand Marais, MI 49839=A0 <a href=3D"tel:906-494-2434" value=
-=3D"+19064942434" target=3D"_blank">906-494-2434</a><br>
-
-<br><div style=3D"display:inline"></div><div style=3D"display:inline"></div=
-><div style=3D"display:inline"></div>
-<div></div><div></div><div></div><div></div></div></div>
-</div></div></div></div></div></div>
-</blockquote></div><br></div></div>
-
---089e013a110214337704ef3c2d4d--
+--Apple-Mail=_F3E82B51-EBED-4BC6-8ACC-B2D1767C4576--
