@@ -1,17 +1,24 @@
-Return-Path: <cloos@jhcloos.com>
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=jhcloos.com;
-	s=ore13; t=1389132419;
-	bh=d6VQRhxPf7wUNd2YOhs05pEUv64ofjV+mSTc39tHJoY=;
-	h=From:To:Subject:Date:From;
-	b=YollvVIoq65ZDDf+RlATtMArX8mFUWToN4a6BajKaCXfBq3oRUE0n/0GOTMmkVzmc
-	07T8rKtb9COTiQ1YE0b1b24dJxW1PtM9bWL8XWgpLgra2LRUuMwWPAJJyuvUs/MUBL
-	ecHzqtKTdirfnqkWfhS5tk/Ozd4utVzbnDD36Y8K6oQ==
-From: James Cloos <cloos@jhcloos.com>
-Date: Tue, 07 Jan 2014 17:01:08 -0500
-Message-ID: <m34n5fo3ia.fsf@carbon.jhcloos.org>
+Return-Path: <till.kamppeter@gmail.com>
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20120113;
+	h=message-id:date:from:user-agent:mime-version:to:subject:references
+	:in-reply-to:content-type:content-transfer-encoding;
+	bh=xoQteBaKXRzb5jnXi+obh1YZyjdUwDz4tI12fpEAzDM=;
+	b=nnFhTOvlR1fYgJeqzBs3Dc2r/oJICCVnhpKXqy6vzVSMcWLWZ1Y3+3nl407b2qJlG9
+	XxfKgTL9mlS0V1uHLNe+g9Q/VOEr5Bx/7/FQBo6DIDxeP5nV59SFuBXnZ4AeUgPprAkq
+	D3GG2KW/WoGO3NL265mdMM79H7vX8MZM6bFijWB8D0r/TP6FaQ60RHr2ogV9eTIjI9f8
+	mQq7a+J2X2x34VIAfwndq+Fq4v8z3RzZM0dYCfYkfsMYBIVrvHeuGf7ImgonPacAgteb
+	Y1h/n46G36jRLjyWCz0eYmXd5k3XKCOq4D9Nd6kh+6iVz0pILPc0Twku9E9zShEMFADY
+	eCXQ==
+Message-ID: <52CC8C5A.3010905@gmail.com>
+Date: Wed, 08 Jan 2014 00:23:06 +0100
+From: Till Kamppeter <till.kamppeter@gmail.com>
 MIME-Version: 1.0
-Content-Type: text/plain
-Subject: [Printing-architecture] ProcessColorModel, when using pdf2ps
+References: <e395be80811270817n502ccd16wf6cc90f85364f5ae@mail.gmail.com>
+In-Reply-To: <e395be80811270817n502ccd16wf6cc90f85364f5ae@mail.gmail.com>
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 7bit
+Subject: [Printing-architecture] Last OP Meeting - Tue - 7 Jan 2014 - The
+	Recording
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>,
@@ -21,33 +28,20 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: printing-architecture@lists.linux-foundation.org
+To: Open Printing <printing-architecture@lists.linux-foundation.org>, Printing-japan <printing-japan@lists.linux-foundation.org>
 
-It looks like the filter chains should, when using pdf2ps, specify a
-Process Color Model for the conversion appropriate for the printer and
-relevant print job options.
+Hi,
 
-When printing to a monochrome printer, -sProcessColorModel=DeviceGray
-When printing to a CMYK printer,   -sProcessColorModel=DeviceCMYK
-And if RGB PS printers exist,  -sProcessColorModel=DeviceRGB
+I have uploaded the recording of the last OpenPrinting meeting to the
+OpenPrinting server:
 
-GS's default for ps2write (and pdfwrite) is DeviceRGB.
+http://www.openprinting.org/download/meetingnotes/op-telecons/OP-Meeting-20140107.mp3
 
-This will help ensure that tranparency doesn't interfere with colour
-(such as turning grayscale into full colour) and may help avoid issues
-with more complex jobs.
+In general, recorded meetings I will upload to
 
-PPD values such as ColorDevice, DefaultColorSpace and ColorModel can be
-the basis of the choice.
+http://www.openprinting.org/download/meetingnotes/
 
-Also, if pstops is to be called next, it may insert a /ProcessColorModel
-setpagedevice call; the pdftops filter could check for that and use the
--s option if it calls pdf2ps for the conversion.  (Many manufacturer
-ppds use that technique with private ppd entries.)
+   Till
 
-Posted here so that it can see some discussion.
-
--JimC
---
-James Cloos <cloos@jhcloos.com>         OpenPGP: 1024D/ED7DAEA6
+P. S.: The MP3 is 14 MB long, 42 minutes of talking.
 
