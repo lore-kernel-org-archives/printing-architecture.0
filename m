@@ -1,11 +1,23 @@
-Return-Path: <shane_lin2000@hotmail.com>
-Message-ID: <SNT149-W14813CFD43AB9543F81B488A70@phx.gbl>
-Content-Type: multipart/alternative;
-	boundary="_30c2f535-1bde-41c8-9927-7ee311c65919_"
-From: Shane Lin <shane_lin2000@hotmail.com>
-Date: Wed, 22 Jan 2014 09:45:57 -0800
+Return-Path: <till.kamppeter@gmail.com>
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20120113;
+	h=message-id:date:from:user-agent:mime-version:to:subject:references
+	:in-reply-to:content-type:content-transfer-encoding;
+	bh=RZDnnbLinqMoPXjgsgEOgyr1JUC6168QzERfS8G8AYk=;
+	b=YglP3UEPVUbBlTAvhPg8h2npW5lt+MB/EVZu6jmCbfS5gty1RtQVKhMvxehAIduB0p
+	TZ19GpDnQ2v+6ahkmleWxt5rxJhR3Lkg2lT3FbRJUAVfE588suv4oi+vaHZ17MUtG90n
+	bXwxQ/92U7BWlShiOiy92RPpDuD/vO/twaMLkwnQnImoIynHuOh9r+6eWNa28W/tC/XC
+	yanT4a/VRB8LtoPGBEEgzDB4RxD96PZ9RyJBE+FaPxbb/aUqTA8BCOZcEq4hfDc8ldb1
+	KHKJzvA6VKPdtleYs19Ni5iWETvbMVBP/M3L9ESP4io6iFIKsr0XK4JnjVXHR4+HIFFh
+	bvBw==
+Message-ID: <52E00F63.3060001@gmail.com>
+Date: Wed, 22 Jan 2014 19:35:15 +0100
+From: Till Kamppeter <till.kamppeter@gmail.com>
 MIME-Version: 1.0
-Subject: [Printing-architecture] CUPS Raster filter Question
+References: <SNT149-W14813CFD43AB9543F81B488A70@phx.gbl>
+In-Reply-To: <SNT149-W14813CFD43AB9543F81B488A70@phx.gbl>
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 7bit
+Subject: Re: [Printing-architecture] CUPS Raster filter Question
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>,
@@ -15,48 +27,42 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>
+To: printing-architecture@lists.linux-foundation.org
 
---_30c2f535-1bde-41c8-9927-7ee311c65919_
-Content-Type: text/plain; charset="iso-8859-1"
-Content-Transfer-Encoding: quoted-printable
+On 01/22/2014 06:45 PM, Shane Lin wrote:
+> Dear List,
+>  
+> Are there other filters (other than the gstoraster) can generate CUPS
+> raster in the Ubuntu system? What should I do to use them if there is any?
+> 
+> Thanks,
+>  
+> Shane
 
-Dear List=2C
-=20
-Are there other filters (other than the gstoraster) can generate CUPS raste=
-r in the Ubuntu system? What should I do to use them if there is any?
+Applications usually send print jobs in PDF, leading to a
 
-Thanks=2C
-=20
-Shane
+pdftopdf -> gstoraster -> rasterto...
 
+filter chain. gstoraster which uses Ghostscript can be replaced by
+pdftoraster which is Poppler-based:
 
-=20
- 		 	   		  =
+pdftopdf -> pdftoraster -> rasterto...
 
---_30c2f535-1bde-41c8-9927-7ee311c65919_
-Content-Type: text/html; charset="iso-8859-1"
-Content-Transfer-Encoding: quoted-printable
+This can be done by editing the file
+/usr/share/cups/mime/cupsfilters.convs, changing the line
 
-<html>
-<head>
-<style><!--
-.hmmessage P
-{
-margin:0px=3B
-padding:0px
-}
-body.hmmessage
-{
-font-size: 12pt=3B
-font-family:Calibri
-}
---></style></head>
-<body class=3D'hmmessage'><div dir=3D'ltr'>Dear List=2C<BR>&nbsp=3B<BR>Are =
-there other filters (other than the gstoraster) can generate CUPS raster in=
- the Ubuntu system? What should I do to use them if there is any?<BR><br>Th=
-anks=2C<BR>&nbsp=3B<BR>Shane<BR><br><br>&nbsp=3B<BR> 		 	   		  </div></bod=
-y>
-</html>=
+application/vnd.cups-pdf        application/vnd.cups-raster     100
+pdftoraster
 
---_30c2f535-1bde-41c8-9927-7ee311c65919_--
+to
+
+application/vnd.cups-pdf        application/vnd.cups-raster     98
+pdftoraster
+
+Then gstoraster is not used any more but always pdftoraster instead.
+
+There is also an imagetoraster filter which converts many image formats
+into CUPS Raster, but this does not work with multi-page jobs.
+
+   Till
+
