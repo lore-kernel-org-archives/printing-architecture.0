@@ -2,24 +2,23 @@ Return-Path: <till.kamppeter@gmail.com>
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20120113;
 	h=message-id:date:from:user-agent:mime-version:to:subject:references
 	:in-reply-to:content-type:content-transfer-encoding;
-	bh=wexPwoVHmi1+NZj0pknpDGD1u3jUXElJyU1i1jcDB3A=;
-	b=SXv1UqWPLJo0DMa6whKqrnVXUeY4BbZJLrf5OJyKsaSxB7F39Wmrd3z7ZcZX3M2ZV3
-	a1o19flKYQ2tIv+0yA1QJ76+sTOTkEikGcUnAnTW0+u/VOvkAtDgMrjh1erm5WIqS3e9
-	L27pO4kgr01wfwbth4luQ4thAJffqCKdEx9xdo8W9RMfmJZ0hZX3+W5YMDmBKHcupSuO
-	NoyFh9uD8kXaljVmBjXf5Fr8zHPQ99yo6pp2gNS49m8sQI47z+kjpoPIqLZgTMOr/LY0
-	+G28uXgzgcRibbjbTGvbL7oBcAv6Y9lJMIVrOy3ZYC6TszOwPDl1vBrma/5Hj33YG2cD
-	Ta6g==
-Message-ID: <52E0290B.3050502@gmail.com>
-Date: Wed, 22 Jan 2014 21:24:43 +0100
+	bh=qydWSFXgcBjmuS+yrWPzl57cv1CrySZVXselK4IbPlI=;
+	b=haHpQIkKOCESEXEio611LtT4BwajWv7550jUEdqUK/Voef2XF8aB1f/xAWI4RMVFCt
+	xQuLOjQ1TtM3izDv4H/2heIJJUbpiUbVk6XUGjcQnm97JIjhjx2qUd0Qv878x9relJHl
+	89aKqPi5KptKxym4d0dXsBHe325fv9AXOP6Hz61e8JIoTE8tplNnqLRwyBop+7aLlOAW
+	Ol5MJyebqGnLdgZi/ukWGO2jJZTwWX1GceCUNOKY5BHRfZIxcn+UEEw3TwmZrcl1BWwf
+	auRidnlM9VJl3Ib6EzUfQWT9vBFjIxujHrqxRMfo8PPPmg92R16smXoWX6oUK6rQZ5/9
+	pB9w==
+Message-ID: <52F36B42.1060405@gmail.com>
+Date: Thu, 06 Feb 2014 12:00:18 +0100
 From: Till Kamppeter <till.kamppeter@gmail.com>
 MIME-Version: 1.0
-References: <SNT149-W14813CFD43AB9543F81B488A70@phx.gbl>,
-	<52E00F63.3060001@gmail.com>
-	<SNT149-W407B16F7728BAD7D8B9D8488A70@phx.gbl>
-In-Reply-To: <SNT149-W407B16F7728BAD7D8B9D8488A70@phx.gbl>
-Content-Type: text/plain; charset=UTF-8
+References: <1391601767.6086.YahooMailBasic@web172303.mail.ir2.yahoo.com>
+In-Reply-To: <1391601767.6086.YahooMailBasic@web172303.mail.ir2.yahoo.com>
+Content-Type: text/plain; charset=UTF-8; format=flowed
 Content-Transfer-Encoding: 7bit
-Subject: Re: [Printing-architecture] CUPS Raster filter Question
+Subject: Re: [Printing-architecture] GSoC,
+	& printing & not-so-printing projects.
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>,
@@ -29,98 +28,40 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Shane Lin <shane_lin2000@hotmail.com>, "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>
+To: htl10@users.sourceforge.net, "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>, Printing-japan <printing-japan@lists.linux-foundation.org>, "printing-summit@lists.linux-foundation.org" <printing-summit@lists.linux-foundation.org>, Ira McDonald <blueroofmusic@gmail.com>
 
-There is perhaps a bug in the Document viewer or the GTK print dialog,
-sending an incorrect option for the custom paper size. It has to send
-"PageSize=Custom.<width>x<length><unit>", with <width> being replaced by
-the width of the paper, <length> by the length, and <unit> by the unit
-in which the width and the length are expressed ("in", "cm", "mm",
-"pt"). If the unit is omitted the default unit "pt" (PostScript points,
-1/72 inch) is used.
+Thank you very much for the good news, Hin-Tak, please add your project 
+ideas to the appropriate workgroup's idea list, or post the 
+copy-and-paste-ready text here on the list(s).
 
-There were already reports that "PageSize=Custom" or
-"PageSize=Custom.Custom.<width>x<length><unit>" got sent.
+    Till
 
-Please follow the instructions of the section "CUPS error_log" on
-https://wiki.ubuntu.com/DebuggingPrintingProblems and see in the
-error_log what gets actually sent.
-
-   Till
-
-
-On 01/22/2014 08:58 PM, Shane Lin wrote:
+On 05.02.2014 13:02, Hin-Tak Leung wrote:
 > Hi Till,
-> 
-> I tried to resolved the printing from the "Document Viewer" with custom
-> paper size issue. Currently, if I open a PDF file in the Ubuntu 12.04
-> and print with a custom paper size, I always get the "Unrecoverable
-> error: rangecheck in setpagedevice". I did not see the CUPS raster get
-> generated. Other page sizes printed ok.
-> 
-> I think my PPD for the page size should be good. it works well with the
-> PS printer. 
-> 
-> I thought using different filter may resolve the issue. But it looks
-> like Poppler-based titer did not resolve the issue. 
-> 
-> Do you have any suggestion?
-> 
-> Thanks,
-> 
-> Shane
-> 
-> 
-> 
-> 
-> 
-> <http://www.windowslive-hotmail.com/betathanks/?locale=en-us&ocid=TXT_PROED_thanks_HMWL_thanks_gifts_0507#>
-> 
->> Date: Wed, 22 Jan 2014 19:35:15 +0100
->> From: till.kamppeter@gmail.com
->> To: printing-architecture@lists.linux-foundation.org
->> Subject: Re: [Printing-architecture] CUPS Raster filter Question
->>
->> On 01/22/2014 06:45 PM, Shane Lin wrote:
->> > Dear List,
->> >
->> > Are there other filters (other than the gstoraster) can generate CUPS
->> > raster in the Ubuntu system? What should I do to use them if there
-> is any?
->> >
->> > Thanks,
->> >
->> > Shane
->>
->> Applications usually send print jobs in PDF, leading to a
->>
->> pdftopdf -> gstoraster -> rasterto...
->>
->> filter chain. gstoraster which uses Ghostscript can be replaced by
->> pdftoraster which is Poppler-based:
->>
->> pdftopdf -> pdftoraster -> rasterto...
->>
->> This can be done by editing the file
->> /usr/share/cups/mime/cupsfilters.convs, changing the line
->>
->> application/vnd.cups-pdf application/vnd.cups-raster 100
->> pdftoraster
->>
->> to
->>
->> application/vnd.cups-pdf application/vnd.cups-raster 98
->> pdftoraster
->>
->> Then gstoraster is not used any more but always pdftoraster instead.
->>
->> There is also an imagetoraster filter which converts many image formats
->> into CUPS Raster, but this does not work with multi-page jobs.
->>
->> Till
->>
->> _______________________________________________
->> Printing-architecture mailing list
->> Printing-architecture@lists.linux-foundation.org
->> https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture
+>
+> GSoC application for organizations has just started. I assume you'll put in an application
+> again as per usual?
+>
+> I have mentioned once or twice before that ddiwrapper (using wine + extra bits to run
+> windows printer drivers) is due for an update from recent DIB developments; also there
+> are newer windows (8!) as well as 64-bit windows become common
+> since what was 32-bit XP/2000 era technology. One other interesting recent
+> development is http://www.darlinghq.org/ - which probaby means using Mac OS X printer
+> drivers might be a possibility - so I think you could update the project descriptions, etc a bit.
+>
+> Also, one very important thing - I don't read e-mails to my gmail account often
+> (mostly for automating patch submissions, etc!), and contact should always be
+> the sourceforge address, and *most important*, all GSoC or not-GSoC-related queries
+> *must* CC one of the mailing lists. I cannot emphasize this often enough.
+>
+> Just co-incidentally, these last few weeks saw an alternative HFS+ (i.e. Mac OS X file system,
+> important for dual booting linux+OSX) journalling implementation
+> emerging - and it just landed in Andrew Morton's tree. - That was the failed GSoC
+> project I took on two years ago. I have had some discussion on kernel fs-devel
+> about adapting actual Apple code via fuse - linux's file-system-in-userand - for
+> inter-operability. So that's another not-printing GSoC project one might advertise on.
+>
+> Hin-Tak
+>
+>
 
