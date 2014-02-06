@@ -2,15 +2,15 @@ Return-Path: <till.kamppeter@gmail.com>
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20120113;
 	h=message-id:date:from:user-agent:mime-version:to:subject:references
 	:in-reply-to:content-type:content-transfer-encoding;
-	bh=qydWSFXgcBjmuS+yrWPzl57cv1CrySZVXselK4IbPlI=;
-	b=haHpQIkKOCESEXEio611LtT4BwajWv7550jUEdqUK/Voef2XF8aB1f/xAWI4RMVFCt
-	xQuLOjQ1TtM3izDv4H/2heIJJUbpiUbVk6XUGjcQnm97JIjhjx2qUd0Qv878x9relJHl
-	89aKqPi5KptKxym4d0dXsBHe325fv9AXOP6Hz61e8JIoTE8tplNnqLRwyBop+7aLlOAW
-	Ol5MJyebqGnLdgZi/ukWGO2jJZTwWX1GceCUNOKY5BHRfZIxcn+UEEw3TwmZrcl1BWwf
-	auRidnlM9VJl3Ib6EzUfQWT9vBFjIxujHrqxRMfo8PPPmg92R16smXoWX6oUK6rQZ5/9
-	pB9w==
-Message-ID: <52F36B42.1060405@gmail.com>
-Date: Thu, 06 Feb 2014 12:00:18 +0100
+	bh=mG2+K6FqHTYdFLxwdneonBe+xAB/RM2ekjdWRX2KYaA=;
+	b=qvoRMKDPHmCqjA9g2cKaFSrpE8bzyxaIspyqQeCJR5zQceXAfwbFeZ5k3DzYw9OsrH
+	ApE2Oierilj8l8OPSpF9cVAp2J5WHzP/2oZIZql8qZ5P5jovL5BVGKrp0aqwZGvU8+V5
+	65RlwzWojo2ZCFqzQ208EQi+BocJDlSCck8J4Q3dapOUIQbX2qYy6fssSUL7jayO96Yz
+	sFsDLTp5b6LtHAowS9Sr+H1CnPNxFZXu1QZGzWpoVwPa6METYSbikB3ztwo/IFgTcvPE
+	Y3lubRSKpZ+rX6vaiCiBzbsIj9+lWnp5Jw1nLIb/2eWbFskQeMW8VCgb15v37jly9fjj
+	Q/fw==
+Message-ID: <52F3B405.4040203@gmail.com>
+Date: Thu, 06 Feb 2014 17:10:45 +0100
 From: Till Kamppeter <till.kamppeter@gmail.com>
 MIME-Version: 1.0
 References: <1391601767.6086.YahooMailBasic@web172303.mail.ir2.yahoo.com>
@@ -30,9 +30,8 @@ List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-arc
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
 To: htl10@users.sourceforge.net, "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>, Printing-japan <printing-japan@lists.linux-foundation.org>, "printing-summit@lists.linux-foundation.org" <printing-summit@lists.linux-foundation.org>, Ira McDonald <blueroofmusic@gmail.com>
 
-Thank you very much for the good news, Hin-Tak, please add your project 
-ideas to the appropriate workgroup's idea list, or post the 
-copy-and-paste-ready text here on the list(s).
+Hin-Tak, I have put up the ideas list for OpenPrinting now. please 
+update the ddiwrapper project appropriately.
 
     Till
 
