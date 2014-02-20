@@ -1,24 +1,21 @@
-Return-Path: <till.kamppeter@gmail.com>
+Return-Path: <korobkin@gmail.com>
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20120113;
-	h=message-id:date:from:user-agent:mime-version:to:subject:references
-	:in-reply-to:content-type:content-transfer-encoding;
-	bh=7iPRrfGiZiy/ytpnIgvwHa53NkppEEJ6CEQVI2PytUE=;
-	b=wNJwTRaiUqxIlG2ZBM2Be01APjA+1VxBmxHzuGCAK7sKS6rjG+LDbQX05+MVDSh7C1
-	zx2FqAjivcuttdVBar5gfMJzIMls2WSRC1iB/jNDRP9f+pfFYzZNZMiHCRVUHzcs85xb
-	ukOVRJG3XlBMMJcQCNPb78Tpm5tvezqh2TqsB/ZuteJYe3963gVXe6TgsCKdbdN3C7xS
-	M98VSXtRD9rr0kddBf4oeGLq9dbuAGqoBwg9UBnvvRBtgzkI1hkjS46xqfq+zIXZuMgs
-	AYbJ99DYPsebTkQqLdJUJ5JqEsYccc1XzTxkGjlgv/FES4SeCBimDf89lTqj9z9JpX97
-	SXiw==
-Message-ID: <5303ADE9.1060207@gmail.com>
-Date: Tue, 18 Feb 2014 20:00:57 +0100
-From: Till Kamppeter <till.kamppeter@gmail.com>
+	h=mime-version:sender:from:date:message-id:subject:to:content-type;
+	bh=nJ5zAHyTEI6QbdolqwvufxO5C/aMqsN3LaayVzqBz/o=;
+	b=NPVYzXz1NGEpu4POJGP9KORN+O6pnBBcdbhvfOSDX7hISoZ8LK8gW0Jw8ZOKMIRCkD
+	mLN+odbISvA1Q3Zl2qUKMeRPMUOZeImMHBOMT454qaYg6H/MjlbAxcKPFgntK8MPwa1N
+	29SxueGCe6ApxEtlOTBCwmiMvCBKxDbbeFya7popDzHQy/GATsb4PfsDkyQJ8Vmse64Z
+	j+BQQFZQ1WI6orhIFS9TX7KmtnuNTmLc93mBv46Eq+7LCpq5kESyAkhtNr/vru/NtuTq
+	Sb4+UYDMeTd2bMbVW6nzb/gIUyPqyqG7Ofc4yanbsSq8BJp5uexrIM6vI4UWnnuNjYzq
+	TpNw==
 MIME-Version: 1.0
-References: <e395be80811270817n502ccd16wf6cc90f85364f5ae@mail.gmail.com>
-In-Reply-To: <e395be80811270817n502ccd16wf6cc90f85364f5ae@mail.gmail.com>
-Content-Type: text/plain; charset=UTF-8
-Content-Transfer-Encoding: 7bit
-Subject: [Printing-architecture] Last OP Meeting - Tue - 18 Feb 2014 - The
-	Recording
+Sender: korobkin@gmail.com
+From: Alex Korobkin <korobkin+op@gmail.com>
+Date: Thu, 20 Feb 2014 14:28:57 -0500
+Message-ID: <CA+3RNfjX0BX2Zb76PkKFGouUenRCoiHGqiaLM8h3Ah9iCghNeA@mail.gmail.com>
+Content-Type: multipart/alternative; boundary=20cf3011e0e3711c8d04f2db8528
+Subject: [Printing-architecture] Printing with Java to CUPS TLS-encrypted
+	printserver?
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>,
@@ -28,20 +25,38 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Open Printing <printing-architecture@lists.linux-foundation.org>, Printing-japan <printing-japan@lists.linux-foundation.org>
+To: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>
 
-Hi,
+--20cf3011e0e3711c8d04f2db8528
+Content-Type: text/plain; charset=UTF-8
 
-I have uploaded the recording of the last OpenPrinting meeting to the
-OpenPrinting server:
+Hi all,
 
-http://www.openprinting.org/download/meetingnotes/op-telecons/OP-Meeting-20140218.mp3
+Does anyone know how to print from a Java application to a print-server
+that has "Encryption Required" set? Upon connection, printserver asks
+client to upgrade to TLS-encrypted connection, and neither cups4j, nor jspi
+seem to support it.
 
-In general, recorded meetings I will upload to
+Is there any other Java library that supports TLS-encrypted printing?
 
-http://www.openprinting.org/download/meetingnotes/
+-- 
+-Alex
 
-   Till
+--20cf3011e0e3711c8d04f2db8528
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
 
-P. S.: The MP3 is 11 MB long, 32 minutes of talking.
+<div dir=3D"ltr">Hi all,=C2=A0<div><br></div><div>Does anyone know how to p=
+rint from a Java application to a print-server that has &quot;Encryption Re=
+quired&quot; set? Upon connection, printserver asks client to upgrade to TL=
+S-encrypted connection, and neither cups4j, nor jspi seem to support it.=C2=
+=A0</div>
 
+<div><br></div><div>Is there any other Java library that supports TLS-encry=
+pted printing?<br clear=3D"all"><div><br></div>-- <br><div dir=3D"ltr">-Ale=
+x</div>
+</div>
+
+</div>
+
+--20cf3011e0e3711c8d04f2db8528--
