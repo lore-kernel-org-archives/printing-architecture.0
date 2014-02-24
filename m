@@ -1,19 +1,16 @@
-Return-Path: <blueroofmusic@gmail.com>
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20120113;
-	h=mime-version:from:date:message-id:subject:to:content-type;
-	bh=EiK1TzhIJqj3GjNC9sxcUs/3UiidIqxX+5R+YbLVpKU=;
-	b=MhFEBIet+5a4pNPyM+60AAYAsKrjDeM8kLqj4M+Q6iRDtosobNJcWRg6mXO1dfPI19
-	MdkLuPEhGC8WOz65dw+y4kIx0gfpy2FaW2Zxg/9utbh97/h3zrz4lU5Ng2VYEZScFmOt
-	RVHALvsgb7jo+a1fJ3xAY80GTrDovZovzQhNhsK0Nxz6alpeMjWxa4drxLQCYBcBFHw+
-	inphVy4YLuib3B3zB9CcP7sCkT7TlXAdqkRuhP55Lbaja4IakvLCFORWY9087uZGtF9R
-	7nb77+cm4gTwsPEf311GGRWX6jA6iclblqxS0w2FgcdV5dZv9WS0/LcedaMk4vMpVZhZ
-	RkbQ==
-MIME-Version: 1.0
-From: Ira McDonald <blueroofmusic@gmail.com>
-Date: Sun, 23 Feb 2014 12:04:57 -0500
-Message-ID: <CAN40gSs8kGsrmkAN=USHce_xPAtqtAqX1MzDeG7DmczvbUemKg@mail.gmail.com>
-Content-Type: multipart/alternative; boundary=001a1136b35a08047504f315dc20
-Subject: [Printing-architecture] OP Minutes (18 February 2014)
+Return-Path: <msweet@apple.com>
+MIME-version: 1.0
+Content-type: multipart/signed;
+	boundary="Apple-Mail=_663E6290-61D4-490F-BDE4-D82CCF10C823";
+	protocol="application/pkcs7-signature"; micalg=sha1
+From: Michael Sweet <msweet@apple.com>
+In-reply-to: <m3txbr4o45.fsf@carbon.jhcloos.org>
+Date: Mon, 24 Feb 2014 07:54:36 -0500
+Message-id: <9576314E-B688-420E-825D-523F6ABFB7D3@apple.com>
+References: <CAN40gSsVN9bXYQqkewazZToBXn7v4icsJQbMpw0F=S+YZ40woA@mail.gmail.com>
+	<m3txbr4o45.fsf@carbon.jhcloos.org>
+Subject: Re: [Printing-architecture] How to add IPP over USB printer support
+ to Linux?
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>,
@@ -23,200 +20,140 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>, Ira McDonald <blueroofmusic@gmail.com>
+To: James Cloos <cloos@jhcloos.com>
+Cc: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>, Jeff Licquia <jeff@licquia.org>, Till Kamppeter <till.kamppeter@gmail.com>
 
---001a1136b35a08047504f315dc20
-Content-Type: text/plain; charset=ISO-8859-1
 
-Hi,
-
-Minutes from this week's Open Printing call are posted at:
-
-  ftp://ftp.pwg.org/pub/pwg/openprinting/minutes/OP-Minutes-20140218.htm
-
-*** NEW Date/Venue - 2014 Joint PWG / Open Printing Summit ***
-*** Change your calendar ***
-- Joint PWG/OPS in Toronto, Canada (hotel venue) - 12-15 August 2014
-  - http://www.pwg.org/chair/meeting-info/meetings.html
-
-Action Items:
-- ACTION - Ira - discuss change of OPS venue w/ PWG Steering Committee
-  - DONE - 19 February - Ira sent note to Mike Sweet
-  - 20 February - Mike Sweet sent update to Printing Architecture list
-    after PWG Steering Committee discussion
-
-- ACTION - Ira and Till - Reach out to OP Japan, other OP members,
-  and speakers to attend 2014 Open Printing Summit *in person*
-  - DONE - 7 January - Ira sent note to OP Japan and OP Summit lists
-
-- ACTION - Ira - check w/ Mike Sweet and Jeff Licquia about IPP over USB
-  in Linux Kernel
-  - OPEN
-
-- ACTION - Ira - check w/ Mike Sweet and Jeff Licquia about IPP over USB
-  support in Linux
-  - DONE - 18 February - Ira sent note to Mike Sweet
-  - 18 February - Mike Sweet replied that IPP over USB is NOT currently
-    supported in Linux - need proxy to arbitrate USB-connected printers
-
-- ACTION - Ira - start discussion of IPP over USB support in Linux
-  - DONE - 18 February - Ira sent note to Printing Architecture list
-
-Next OP US/Europe Conference Calls:
-
-(1) March 2014 - US/Europe - OP Monthly Meeting
-    - NEW DAY & TIME
-    - Tuesday 4 March 2014, Daytime
-      - US
-        10am in San Francisco - US PST (Pacific Standard Time)
-        11am in Colorado - US MST (Mountain Standard Time)
-        12pm in Chicago - US CST (Central Standard Time)
-        1pm in New York - US EST (Eastern Standard Time)
-      - Europe
-        7pm in Berlin - CET (Central European Time)
-
-    * Main Number (Till Kamppeter, LF, leader)
-      International: +1-619-326-2730 (new number)
-      Access Code:   491659#
-
-(2) April 2014 - US/Europe - OP Monthly Meeting (tentative)
-    - Note - US Daylight time starts on 9 March 2014
-    - Note - European Summer time starts on 30 March 2014
-
-    - NEW DAY & TIME
-    - Tuesday 1 April 2014, Daytime
-      - US
-        10am in San Francisco - US PDT (Pacific Daylight Time)
-        11am in Colorado - US MDT (Mountain Daylight Time)
-        12pm in Chicago - US CDT (Central Daylight Time)
-        1pm in New York - US EDT (Eastern Daylight Time)
-      - Europe
-        7pm in Berlin - CEST (Central European Summer Time)
-
-    * Main Number (Till Kamppeter, LF, leader)
-      International: +1-619-326-2730 (new number)
-      Access Code:   491659#
-
-Cheers,
-- Ira
-
-Ira McDonald (Musician / Software Architect)
-Co-Chair - TCG Trusted Mobility Solutions WG
-Chair - Linux Foundation Open Printing WG
-Secretary - IEEE-ISTO Printer Working Group
-Co-Chair - IEEE-ISTO PWG Internet Printing Protocol WG
-IETF Designated Expert - IPP & Printer MIB
-Blue Roof Music / High North Inc
-http://sites.google.com/site/blueroofmusic
-http://sites.google.com/site/highnorthinc
-mailto: blueroofmusic@gmail.com
-Winter  579 Park Place  Saline, MI  48176  734-944-0094
-Summer  PO Box 221  Grand Marais, MI 49839  906-494-2434
-
---001a1136b35a08047504f315dc20
-Content-Type: text/html; charset=ISO-8859-1
+--Apple-Mail=_663E6290-61D4-490F-BDE4-D82CCF10C823
 Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain;
+	charset=us-ascii
 
-<div dir=3D"ltr"><div><div><div><div>Hi, <br><br><span><span><span><span><s=
-pan><span><span><span><span>Minutes</span></span></span></span></span></spa=
-n></span></span></span> from this week&#39;s Open Printing<span> call</span=
-> are <span><span><span><span><span>posted</span></span></span></span></spa=
-n> at:<br>
+James,
 
+Putting it in the USB backend would greatly increase the complexity of =
+that backend without actually enabling things like the embedded web =
+interface of the printer and other IPP and HTTP services offered by =
+these printers over USB.  Also, while the IPP API in libcups can handle =
+alternate IO paths, the HTTP API is tied to sockets, so any =
+implementation inside the USB backend would need to provide its own mini =
+HTTP API to send requests and receive responses over USB.
 
-
-
-
-
-
-<br>
-=A0 <a href=3D"ftp://ftp.pwg.org/pub/pwg/openprinting/minutes/OP-Minutes-20=
-140218.htm" target=3D"_blank">ftp://ftp.pwg.org/pub/pwg/openprinting/minute=
-s/OP-Minutes-20140218.htm</a><br><br>*** NEW Date/Venue - 2014 Joint PWG / =
-Open Printing Summit ***<br>
-
-*** Change your calendar ***<br>
-
-
+On OS X we have a launchd service (launch-on-demand) that is setup when =
+a printer is connected and removed when disconnected. This service =
+basically acts as a proxy or gateway between IP connections and the USB =
+interfaces offered by the printer (minimum requirement is 2 interfaces, =
+which looks to be the limit for most printers in the foreseeable future =
+thanks to the SoCs they use...), and the service arbitrates access from =
+multiple IPP/HTTP clients to that limited number of IP interfaces.
 
 
 
-- Joint PWG/OPS in Toronto, Canada (hotel venue) - 12-15 August 2014<br>=A0=
- - <a href=3D"http://www.pwg.org/chair/meeting-info/meetings.html">http://w=
-ww.pwg.org/chair/meeting-info/meetings.html</a><br><br></div>Action Items:<=
-br>
+On Feb 22, 2014, at 2:12 AM, James Cloos <cloos@jhcloos.com> wrote:
 
-- ACTION - Ira - discuss change of OPS venue w/ PWG Steering Committee<br>=
-=A0 - DONE - 19 February - Ira sent note to Mike Sweet<br>=A0 - 20 February=
- - Mike Sweet sent update to Printing Architecture list<br>=A0=A0=A0 after =
-PWG Steering Committee discussion<br>
+> Does it really need a daemon, and not just proto 4 support in =
+cups/backend/usb?
+>=20
+> -JimC
+> --
+> James Cloos <cloos@jhcloos.com>         OpenPGP: 1024D/ED7DAEA6
 
-<br>- ACTION - Ira and Till - Reach out to OP Japan, other OP members,<br>=
-=A0 and speakers to attend 2014 Open Printing Summit *in person*<br>=A0 - D=
-ONE - 7 January - Ira sent note to OP Japan and OP Summit lists<br><br>- AC=
-TION - Ira - check w/ Mike Sweet and Jeff Licquia about IPP over USB<br>
+_________________________________________________________
+Michael Sweet, Senior Printing System Engineer, PWG Chair
 
-=A0 in Linux Kernel<br></div>=A0 - OPEN<br><br>- ACTION - Ira - check w/ Mi=
-ke Sweet and Jeff Licquia about IPP over USB<br>=A0 support in Linux<br>=A0=
- - DONE - 18 February - Ira sent note to Mike Sweet<br>=A0 - 18 February - =
-Mike Sweet replied that IPP over USB is NOT currently<br>
 
-=A0=A0=A0 supported in Linux - need proxy to arbitrate USB-connected printe=
-rs<br><br>- ACTION - Ira - start discussion of IPP over USB support in Linu=
-x<br>=A0 - DONE - 18 February - Ira sent note to Printing Architecture list=
-<br>
+--Apple-Mail=_663E6290-61D4-490F-BDE4-D82CCF10C823
+Content-Disposition: attachment;
+	filename=smime.p7s
+Content-Type: application/pkcs7-signature;
+	name=smime.p7s
+Content-Transfer-Encoding: base64
 
-<br>Next OP US/Europe Conference Calls:<br><br>(1) March 2014 - US/Europe -=
- OP Monthly Meeting<br>=A0=A0=A0 - NEW DAY &amp; TIME<br>=A0=A0=A0 - Tuesda=
-y 4 March 2014, Daytime<br>=A0=A0=A0=A0=A0 - US<br>=A0=A0=A0=A0=A0=A0=A0 10=
-am in San Francisco - US PST (Pacific Standard Time)<br>
+MIAGCSqGSIb3DQEHAqCAMIACAQExCzAJBgUrDgMCGgUAMIAGCSqGSIb3DQEHAQAAoIIPJTCCBN0w
+ggPFoAMCAQICEHGS++YZX6xNEoV0cTSiGKcwDQYJKoZIhvcNAQEFBQAwezELMAkGA1UEBhMCR0Ix
+GzAZBgNVBAgMEkdyZWF0ZXIgTWFuY2hlc3RlcjEQMA4GA1UEBwwHU2FsZm9yZDEaMBgGA1UECgwR
+Q29tb2RvIENBIExpbWl0ZWQxITAfBgNVBAMMGEFBQSBDZXJ0aWZpY2F0ZSBTZXJ2aWNlczAeFw0w
+NDAxMDEwMDAwMDBaFw0yODEyMzEyMzU5NTlaMIGuMQswCQYDVQQGEwJVUzELMAkGA1UECBMCVVQx
+FzAVBgNVBAcTDlNhbHQgTGFrZSBDaXR5MR4wHAYDVQQKExVUaGUgVVNFUlRSVVNUIE5ldHdvcmsx
+ITAfBgNVBAsTGGh0dHA6Ly93d3cudXNlcnRydXN0LmNvbTE2MDQGA1UEAxMtVVROLVVTRVJGaXJz
+dC1DbGllbnQgQXV0aGVudGljYXRpb24gYW5kIEVtYWlsMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8A
+MIIBCgKCAQEAsjmFpPJ9q0E7YkY3rs3BYHW8OWX5ShpHornMSMxqmNVNNRm5pELlzkniii8efNIx
+B8dOtINknS4p1aJkxIW9hVE1eaROaJB7HHqkkqgX8pgV8pPMyaQylbsMTzC9mKALi+VuG6JG+ni8
+om+rWV6lL8/K2m2qL+usobNqqrcuZzWLeeEeaYji5kbNoKXqvgvOdjp6Dpvq/NonWz1zHyLmSGHG
+TPNpsaguG7bUMSAsvIKKjqQOpdeJQ/wWWq8dcdcRWdq6hw2v+vPhwvCkxWeM1tZUOt4KpLoDd7Nl
+yP0e03RiqhjKaJMeoYV+9Udly/hNVyh00jT/MLbu9mIwFIws6wIDAQABo4IBJzCCASMwHwYDVR0j
+BBgwFoAUoBEKIz6W8Qfs4q8p74Klf9AwpLQwHQYDVR0OBBYEFImCZ33EnSZwAEu0UEh83j2uBG59
+MA4GA1UdDwEB/wQEAwIBBjAPBgNVHRMBAf8EBTADAQH/MB0GA1UdJQQWMBQGCCsGAQUFBwMCBggr
+BgEFBQcDBDARBgNVHSAECjAIMAYGBFUdIAAwewYDVR0fBHQwcjA4oDagNIYyaHR0cDovL2NybC5j
+b21vZG9jYS5jb20vQUFBQ2VydGlmaWNhdGVTZXJ2aWNlcy5jcmwwNqA0oDKGMGh0dHA6Ly9jcmwu
+Y29tb2RvLm5ldC9BQUFDZXJ0aWZpY2F0ZVNlcnZpY2VzLmNybDARBglghkgBhvhCAQEEBAMCAQYw
+DQYJKoZIhvcNAQEFBQADggEBAJ2Vyzy4fqUJxB6/C8LHdo45PJTGEKpPDMngq4RdiVTgZTvzbRx8
+NywlVF+WIfw3hJGdFdwUT4HPVB1rbEVgxy35l1FM+WbKPKCCjKbI8OLp1Er57D9Wyd12jMOCAU9s
+APMeGmF0BEcDqcZAV5G8ZSLFJ2dPV9tkWtmNH7qGL/QGrpxp7en0zykX2OBKnxogL5dMUbtGB8SK
+N04g4wkxaMeexIud6H4RvDJoEJYRmETYKlFgTYjrdDrfQwYyyDlWjDoRUtNBpEMD9O3vMyfbOeAU
+TibJ2PU54om4k123KSZB6rObroP8d3XK6Mq1/uJlSmM+RMTQw16Hc6mYHK9/FX8wggUaMIIEAqAD
+AgECAhBtGeqnGU9qMyLmIjJ6qnHeMA0GCSqGSIb3DQEBBQUAMIGuMQswCQYDVQQGEwJVUzELMAkG
+A1UECBMCVVQxFzAVBgNVBAcTDlNhbHQgTGFrZSBDaXR5MR4wHAYDVQQKExVUaGUgVVNFUlRSVVNU
+IE5ldHdvcmsxITAfBgNVBAsTGGh0dHA6Ly93d3cudXNlcnRydXN0LmNvbTE2MDQGA1UEAxMtVVRO
+LVVTRVJGaXJzdC1DbGllbnQgQXV0aGVudGljYXRpb24gYW5kIEVtYWlsMB4XDTExMDQyODAwMDAw
+MFoXDTIwMDUzMDEwNDgzOFowgZMxCzAJBgNVBAYTAkdCMRswGQYDVQQIExJHcmVhdGVyIE1hbmNo
+ZXN0ZXIxEDAOBgNVBAcTB1NhbGZvcmQxGjAYBgNVBAoTEUNPTU9ETyBDQSBMaW1pdGVkMTkwNwYD
+VQQDEzBDT01PRE8gQ2xpZW50IEF1dGhlbnRpY2F0aW9uIGFuZCBTZWN1cmUgRW1haWwgQ0EwggEi
+MA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCShIRbS1eY1F4vi6ThQMijU1hfZmXxMk73nzJ9
+VdB4TFW3QpTg+SdxB8XGaaS5MsTxQBqQzCdWYn8XtXFpruUgG+TLY15gyqJB9mrho/+43x9IbWVD
+jCouK2M4d9+xF6zC2oIC1tQyatRnbyATj1w1+uVUgK/YcQodNwoCUFNslR2pEBS0mZVZEjH/CaLS
+TNxS297iQAFbSGjdxUq04O0kHzqvcV8H46y/FDuwJXFoPfQP1hdYRhWBPGiLi4MPbXohV+Y0sNsy
+fuNK4aVScmQmkU6lkg//4LFg/RpvaFGZY40ai6XMQpubfSJj06mg/M6ekN9EGfRcWzW6FvOnm//B
+AgMBAAGjggFLMIIBRzAfBgNVHSMEGDAWgBSJgmd9xJ0mcABLtFBIfN49rgRufTAdBgNVHQ4EFgQU
+ehNOAHRbxnhjZCfBL+KgW7x5xXswDgYDVR0PAQH/BAQDAgEGMBIGA1UdEwEB/wQIMAYBAf8CAQAw
+EQYDVR0gBAowCDAGBgRVHSAAMFgGA1UdHwRRME8wTaBLoEmGR2h0dHA6Ly9jcmwudXNlcnRydXN0
+LmNvbS9VVE4tVVNFUkZpcnN0LUNsaWVudEF1dGhlbnRpY2F0aW9uYW5kRW1haWwuY3JsMHQGCCsG
+AQUFBwEBBGgwZjA9BggrBgEFBQcwAoYxaHR0cDovL2NydC51c2VydHJ1c3QuY29tL1VUTkFkZFRy
+dXN0Q2xpZW50X0NBLmNydDAlBggrBgEFBQcwAYYZaHR0cDovL29jc3AudXNlcnRydXN0LmNvbTAN
+BgkqhkiG9w0BAQUFAAOCAQEAhda+eFdVbTN/RFL+QtUGqAEDgIr7DbL9Sr/2r0FJ9RtaxdKtG3Nu
+PukmfOZMmMEwKN/L+0I8oSU+CnXW0D05hmbRoZu1TZtvryhsHa/l6nRaqNqxwPF1ei+eupN5yv7i
+kR5WdLL4jdPgQ3Ib7Y/9YDkgR/uLrzplSDyYPaUlv73vYOBJ5RbI6z9Dg/Dg7g3B080zX5vQvWBq
+szv++tTJOjwf7Zv/m0kzvkIpOYPuM2kugp1FTahp2oAbHj3SGl18R5mlmwhtEpmG1l1XBxunML5L
+SUS4kH7K0Xk467Qz+qA6XSZYnmFVGLQh1ZnV4ENAQjC+6qXnlNKw/vN1+X9u5zCCBSIwggQKoAMC
+AQICEQDlB7dXxclLEedquPvGX8CGMA0GCSqGSIb3DQEBBQUAMIGTMQswCQYDVQQGEwJHQjEbMBkG
+A1UECBMSR3JlYXRlciBNYW5jaGVzdGVyMRAwDgYDVQQHEwdTYWxmb3JkMRowGAYDVQQKExFDT01P
+RE8gQ0EgTGltaXRlZDE5MDcGA1UEAxMwQ09NT0RPIENsaWVudCBBdXRoZW50aWNhdGlvbiBhbmQg
+U2VjdXJlIEVtYWlsIENBMB4XDTEzMTIxNzAwMDAwMFoXDTE0MTIxNzIzNTk1OVowITEfMB0GCSqG
+SIb3DQEJARYQbXN3ZWV0QGFwcGxlLmNvbTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEB
+ANdvQYZRCVzc0wIYvIOn/0Pv7zUwuIvbAfM/W3FyemqZx3fdKxX4WxN2x5NC3hhBHGrUWirJH7rl
+6It12bGQ61uHAK5jsJikV5k+mOYjZaKNIKxj0uYIk3MKQmsmM8t3nddq5mp2mxwV/U7AFPTz1fgh
+dkqTb/NkHY5eA8KqksaeqwfMgoaiGVeCUhptWnXosca8PAkb+i9u5rEok5zgY+QP0IuWLJENfA4q
+dEMsH+OAwMGOv9fNCgcdapFnjeSYaj70m6qUiq446+8a2rhUsEUKQayOMgjnm2bgUuNx7pOvs/Jg
+zIlZoTz/llmE1HWREGzSjRnLWwQ98fspfeZWA+8CAwEAAaOCAeAwggHcMB8GA1UdIwQYMBaAFHoT
+TgB0W8Z4Y2QnwS/ioFu8ecV7MB0GA1UdDgQWBBTtKBJoG9kxZisTqJg4+wr12l4stjAOBgNVHQ8B
+Af8EBAMCBaAwDAYDVR0TAQH/BAIwADAgBgNVHSUEGTAXBggrBgEFBQcDBAYLKwYBBAGyMQEDBQIw
+EQYJYIZIAYb4QgEBBAQDAgUgMEYGA1UdIAQ/MD0wOwYMKwYBBAGyMQECAQEBMCswKQYIKwYBBQUH
+AgEWHWh0dHBzOi8vc2VjdXJlLmNvbW9kby5uZXQvQ1BTMFcGA1UdHwRQME4wTKBKoEiGRmh0dHA6
+Ly9jcmwuY29tb2RvY2EuY29tL0NPTU9ET0NsaWVudEF1dGhlbnRpY2F0aW9uYW5kU2VjdXJlRW1h
+aWxDQS5jcmwwgYgGCCsGAQUFBwEBBHwwejBSBggrBgEFBQcwAoZGaHR0cDovL2NydC5jb21vZG9j
+YS5jb20vQ09NT0RPQ2xpZW50QXV0aGVudGljYXRpb25hbmRTZWN1cmVFbWFpbENBLmNydDAkBggr
+BgEFBQcwAYYYaHR0cDovL29jc3AuY29tb2RvY2EuY29tMBsGA1UdEQQUMBKBEG1zd2VldEBhcHBs
+ZS5jb20wDQYJKoZIhvcNAQEFBQADggEBABg5KLQK5u9gGI75u+vYH/i6uMDKlpTILO/r/FpN2ibq
+pwAB2ln9oKvPIA1/r3o+DBC87TqnlJAiPW4ADFHpRmqlprb0Tu9p98nP/wl5tBZjEP8dY4iH0TB3
+B2r9JHwRwwJQ20CqJpuCn9dmvL215sZSqvJfluVlIcAQCLxp3ZKMIC2pNKitswdjjHduaKuj2TMe
+xrzMtrRGRtFF9pcMcnsqE2QtJUqXPV7/M4WT2yRUmI4ThPt9O9fmPH2ku52hdb6t4qXvwdQSkDHt
+xo3J/Vc/jDR2/feedDhQmG0V9j6tHsuG6bVVhcGiWnSmSoPfg13FlQwlxZTyFtiMZ2jILyoxggOu
+MIIDqgIBATCBqTCBkzELMAkGA1UEBhMCR0IxGzAZBgNVBAgTEkdyZWF0ZXIgTWFuY2hlc3RlcjEQ
+MA4GA1UEBxMHU2FsZm9yZDEaMBgGA1UEChMRQ09NT0RPIENBIExpbWl0ZWQxOTA3BgNVBAMTMENP
+TU9ETyBDbGllbnQgQXV0aGVudGljYXRpb24gYW5kIFNlY3VyZSBFbWFpbCBDQQIRAOUHt1fFyUsR
+52q4+8ZfwIYwCQYFKw4DAhoFAKCCAdkwGAYJKoZIhvcNAQkDMQsGCSqGSIb3DQEHATAcBgkqhkiG
+9w0BCQUxDxcNMTQwMjI0MTI1NDM2WjAjBgkqhkiG9w0BCQQxFgQU7imCT00k2yfaR7EHFJXydArR
+VVEwgboGCSsGAQQBgjcQBDGBrDCBqTCBkzELMAkGA1UEBhMCR0IxGzAZBgNVBAgTEkdyZWF0ZXIg
+TWFuY2hlc3RlcjEQMA4GA1UEBxMHU2FsZm9yZDEaMBgGA1UEChMRQ09NT0RPIENBIExpbWl0ZWQx
+OTA3BgNVBAMTMENPTU9ETyBDbGllbnQgQXV0aGVudGljYXRpb24gYW5kIFNlY3VyZSBFbWFpbCBD
+QQIRAOUHt1fFyUsR52q4+8ZfwIYwgbwGCyqGSIb3DQEJEAILMYGsoIGpMIGTMQswCQYDVQQGEwJH
+QjEbMBkGA1UECBMSR3JlYXRlciBNYW5jaGVzdGVyMRAwDgYDVQQHEwdTYWxmb3JkMRowGAYDVQQK
+ExFDT01PRE8gQ0EgTGltaXRlZDE5MDcGA1UEAxMwQ09NT0RPIENsaWVudCBBdXRoZW50aWNhdGlv
+biBhbmQgU2VjdXJlIEVtYWlsIENBAhEA5Qe3V8XJSxHnarj7xl/AhjANBgkqhkiG9w0BAQEFAASC
+AQBSklz5acFdPXHRxCZccS8/9xSVbEYxo+lzT67rBoZ+B0XaqXK1dJsNBL0CTJMHuPtrWXfCzJho
+8jBByCMsdZ9/Td4QRt3FK5hLLLk6jsbEr7UQSM3KuK64e3R4FrcyUocF40c/JCncFXeUml/Q2ZjS
+PlVe/YLiDPivTNTOYY8v8qik8dHOQCgyOP7ZiNXFjbpJImhRNjXNV/7Cyjg4WoR+NeJORDJ6x4Wr
+RqoS1ky13/IX31Bzm8JdzNCRa/PJuCTh+wOFNBaIej8JC+RwTRbmj9dLkp8uMhfg8qkqnGf6xh01
+AAJHOW6eVVdPc1sf67+kUPkd2nXyVv6gy3Xi5lMiAAAAAAAA
 
-=A0=A0=A0=A0=A0=A0=A0 11am in Colorado - US MST (Mountain Standard Time)<br=
->=A0=A0=A0=A0=A0=A0=A0 12pm in Chicago - US CST (Central Standard Time)<br>=
-=A0=A0=A0=A0=A0=A0=A0 1pm in New York - US EST (Eastern Standard Time)<br>=
-=A0=A0=A0=A0=A0 - Europe<br>=A0=A0=A0=A0=A0=A0=A0 7pm in Berlin - CET (Cent=
-ral European Time)<br>
-
-<br>=A0=A0=A0 * Main Number (Till Kamppeter, LF, leader)<br>=A0=A0=A0=A0=A0=
- International: +1-619-326-2730 (new number)<br>=A0=A0=A0=A0=A0 Access Code=
-:=A0=A0 491659#<br><br>(2) April 2014 - US/Europe - OP Monthly Meeting (ten=
-tative)<br>=A0=A0=A0 - Note - US Daylight time starts on 9 March 2014<br>
-
-=A0=A0=A0 - Note - European Summer time starts on 30 March 2014<br><br>=A0=
-=A0=A0 - NEW DAY &amp; TIME<br>=A0=A0=A0 - Tuesday 1 April 2014, Daytime<br=
->=A0=A0=A0=A0=A0 - US<br>=A0=A0=A0=A0=A0=A0=A0 10am in San Francisco - US P=
-DT (Pacific Daylight Time)<br>=A0=A0=A0=A0=A0=A0=A0 11am in Colorado - US M=
-DT (Mountain Daylight Time)<br>
-
-=A0=A0=A0=A0=A0=A0=A0 12pm in Chicago - US CDT (Central Daylight Time)<br>=
-=A0=A0=A0=A0=A0=A0=A0 1pm in New York - US EDT (Eastern Daylight Time)<br>=
-=A0=A0=A0=A0=A0 - Europe<br>=A0=A0=A0=A0=A0=A0=A0 7pm in Berlin - CEST (Cen=
-tral European Summer Time)<br><br>=A0=A0=A0 * Main Number (Till Kamppeter, =
-LF, leader)<br>
-
-=A0=A0=A0=A0=A0 International: +1-619-326-2730 (new number)<br>=A0=A0=A0=A0=
-=A0 Access Code:=A0=A0 491659#<br><br></div>Cheers,<br></div>- Ira<br><br><=
-div><div><div><div dir=3D"ltr">Ira McDonald (Musician / Software Architect)=
-<br>Co-Chair - TCG Trusted Mobility Solutions WG<br>
-
-Chair - Linux Foundation Open Printing WG<br>Secretary - IEEE-ISTO Printer =
-Working Group<br>Co-Chair - IEEE-ISTO PWG Internet Printing Protocol WG<br>=
-IETF Designated Expert - IPP &amp; Printer MIB<br>Blue Roof Music / High No=
-rth Inc<br>
-
-<a style=3D"color:rgb(51,51,255)" href=3D"http://sites.google.com/site/blue=
-roofmusic" target=3D"_blank">http://sites.google.com/site/blueroofmusic</a>=
-<br><a style=3D"color:rgb(102,0,204)" href=3D"http://sites.google.com/site/=
-highnorthinc" target=3D"_blank">http://sites.google.com/site/highnorthinc</=
-a><br>
-
-mailto: <a href=3D"mailto:blueroofmusic@gmail.com" target=3D"_blank">bluero=
-ofmusic@gmail.com</a><br>Winter=A0 579 Park Place=A0 Saline, MI=A0 48176=A0=
- 734-944-0094<br>Summer=A0 PO Box 221=A0 Grand Marais, MI 49839=A0 906-494-=
-2434<br><br><div style=3D"display:inline">
-
-</div><div style=3D"display:inline"></div><div style=3D"display:inline"></d=
-iv><div></div><div></div><div></div><div></div></div></div>
-</div></div></div>
-
---001a1136b35a08047504f315dc20--
+--Apple-Mail=_663E6290-61D4-490F-BDE4-D82CCF10C823--
