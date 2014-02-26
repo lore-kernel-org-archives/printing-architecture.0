@@ -1,21 +1,18 @@
 Return-Path: <msweet@apple.com>
 MIME-version: 1.0
 Content-type: multipart/signed;
-	boundary="Apple-Mail=_5EA79531-B84C-40C5-89EE-B5ADC8FC53FD";
+	boundary="Apple-Mail=_D295959D-690A-4247-8A88-7C58DBC3953B";
 	protocol="application/pkcs7-signature"; micalg=sha1
 From: Michael Sweet <msweet@apple.com>
-In-reply-to: <m37g8iztjl.fsf@carbon.jhcloos.org>
-Date: Tue, 25 Feb 2014 20:12:40 -0500
-Message-id: <3681F0A9-BF21-428B-ADFB-97515DDDF408@apple.com>
-References: <51DC8343.4020104@gmail.com>
-	<8CA7D32C-A551-482E-9F26-9C1909D74736@apple.com>
-	<843B55ED-9D7F-4ECD-B50B-272848E9649B@apple.com>
-	<51DD7DB2.4070808@gmail.com>
-	<FF2054C7-A4B4-4709-8267-D6D202DC0BCE@apple.com>
-	<1373532534.14725.3.camel@rubik>
-	<0B81606D-48D0-451E-9575-C5ECF92704D0@apple.com>
-	<m37g8iztjl.fsf@carbon.jhcloos.org>
-Subject: Re: [Printing-architecture] Options in /etc/cups/printers.conf
+In-reply-to: <m3ios2zums.fsf@carbon.jhcloos.org>
+Date: Tue, 25 Feb 2014 20:27:01 -0500
+Message-id: <6755723C-26A1-40C1-B1BF-EB99A6A0483E@apple.com>
+References: <CAN40gSsVN9bXYQqkewazZToBXn7v4icsJQbMpw0F=S+YZ40woA@mail.gmail.com>
+	<m3txbr4o45.fsf@carbon.jhcloos.org>
+	<9576314E-B688-420E-825D-523F6ABFB7D3@apple.com>
+	<m3ios2zums.fsf@carbon.jhcloos.org>
+Subject: Re: [Printing-architecture] How to add IPP over USB printer support
+ to Linux?
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>,
@@ -26,54 +23,104 @@ List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subj
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
 To: James Cloos <cloos@jhcloos.com>
-Cc: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>, Till Kamppeter <till.kamppeter@gmail.com>
+Cc: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>, Till Kamppeter <till.kamppeter@gmail.com>, Jeff Licquia <jeff@licquia.org>
 
 
---Apple-Mail=_5EA79531-B84C-40C5-89EE-B5ADC8FC53FD
+--Apple-Mail=_D295959D-690A-4247-8A88-7C58DBC3953B
 Content-Transfer-Encoding: quoted-printable
 Content-Type: text/plain;
 	charset=us-ascii
 
 James,
 
-I did end up discovering how to combine the history of both =
-repositories.
+On Feb 25, 2014, at 5:37 PM, James Cloos <cloos@jhcloos.com> wrote:
+> ...
+> I expect any implementation of the idea would move some of the code =
+from
+> the http backend into a .c file to be shared with the http and usb =
+backends.
 
-Now I am just resolving some issues with the two active SVN branches not =
-updating their corresponding Git branches - I can get one to update but =
-not the other (so trunk is tracking properly but the 1.7 branch =
-isn't...)
+Please don't.  The HTTP state engine is quite complex and is always =
+getting small bug fixes and improvements. Having a separate copy means =
+you need to track all of those fixes and improvements in your own copy, =
+and speaking from experience we don't want to do that (that's one of the =
+reasons why the Ghostscript and PDF stuff is now maintained in one place =
+rather than us bundling our own copies of those programs in CUPS...)
 
+> MS> On OS X we have a launchd service (launch-on-demand) that is setup
+> MS> when a printer is connected and removed when disconnected.
+>=20
+> I didn't get from your previous post that it launches on demand (as
+> opposed to always running, monitoring usb changes, and linking to any
+> proto 4 print endpoints as they appear).
 
-On Feb 25, 2014, at 6:00 PM, James Cloos <cloos@jhcloos.com> wrote:
+On OS X there is a process that manages device connect/disconnect =
+(similar to the udev stuff on Linux), and that creates lauunchd =
+"services" that are associated with a given USB printer.  Those jobs are =
+launch on demand (whenever somebody tries to connect to the service on =
+its dedicated port), at which point the ippusbd process manages access =
+to the printer until all clients go away, at which point it exits (after =
+a suitable idle timeout) to let launchd listen for new connections.
 
->>>>>> "MS" =3D=3D Michael Sweet <msweet@apple.com> writes:
+> I agree that that is a good general solution.  I only thought that
+> adding proto 4 to usb would be a quicker first step.
+
+Unfortunately, it really doesn't buy you much of anything over the =
+existing proto 1/2 support, and it would likely break scanning for MFPs =
+(since the same endpoints get shared between IPP USB and the vendor =
+interfaces for scanning).
+
+> MS> This service basically acts as a proxy or gateway between IP
+> MS> connections and the USB interfaces offered by the printer (minimum
+> MS> requirement is 2 interfaces, which looks to be the limit for most
+> MS> printers in the foreseeable future thanks to the SoCs they =
+use...),
 >=20
-> MS> If you know of some GIT-fu that will allow me to push the SVN =
-history
-> MS> from the old repository onto the new one (or start with =
-easysw.com's
-> MS> SVN repo and then overlay and track new changes from the apple.com =
-SVN
-> MS> repo) then I'll be happy to rebuild the GIT mirror.
+> Interesting.  I see that the spec requires at least two, but wasn't
+> aware more than two are unlikely in the wild.
+
+Yes, it basically is a limitation of the SoCs that vendors are using, =
+which typically only support a maximum of 5 endpoints divvied up for the =
+interfaces; each IPP USB interface needs a pair of endpoints (for =
+bulk-in and bulk-out).
+
+> MS> and the service arbitrates access from multiple IPP/HTTP clients =
+to
+> MS> that limited number of IP interfaces.
 >=20
-> It is probably doable.  Publishing a git repo with the the old data in
-> parallel with the current repo would help get the surgery planned.
->=20
-> Also, it is possible to update www.cups.org to support git's smart
-> git/http protocol?  (Cf the man page for git-http-backend.  It runs
-> as a CGI.)  It would improve clones and pulls, as well as provide
-> users with progress info akin to that seem when using git:// URIs.
->=20
-> -JimC
-> --
-> James Cloos <cloos@jhcloos.com>         OpenPGP: 1024D/ED7DAEA6
+> I don't know about bsd, but with most linux dists udev rules would
+> enable the start/quit on demand semantic.
+
+Actually, udev gets you connect/disconnect.  Conceptually you could have =
+a mini-daemon that runs as long as the printer is connected - systemd =
+would allow that to be optimized further so that you don't have the =
+process overhead when the printer is not being used.
+
+> I presume libusb provides enough access to the usb protocol upon which
+> to write such a daemon.
+
+Yes.
+
+> It will need kernel support to show up as a network interface.  =
+Perhaps
+> the same support the ppp daemons use?  Or tun/tap?
+
+No, you don't need a network interface.  You need to listen for =
+connections on a TCP port, and then proxy the requests and responses to =
+an "idle" IPP USB interface.  So, perhaps you reserve a block of ports =
+from 4000 to 4015 (I have no idea if those are free in practice) and =
+then assign a port to each attached printer.  The IPP backend then just =
+connects to localhost:4000 to print to the first printer, localhost:4001 =
+for the second, etc.
+
+The listen can be on the loopback interface or the "any" address to =
+support simple USB printer sharing through IPP USB.
 
 _________________________________________________________
 Michael Sweet, Senior Printing System Engineer, PWG Chair
 
 
---Apple-Mail=_5EA79531-B84C-40C5-89EE-B5ADC8FC53FD
+--Apple-Mail=_D295959D-690A-4247-8A88-7C58DBC3953B
 Content-Disposition: attachment;
 	filename=smime.p7s
 Content-Type: application/pkcs7-signature;
@@ -153,18 +200,18 @@ MIIDqgIBATCBqTCBkzELMAkGA1UEBhMCR0IxGzAZBgNVBAgTEkdyZWF0ZXIgTWFuY2hlc3RlcjEQ
 MA4GA1UEBxMHU2FsZm9yZDEaMBgGA1UEChMRQ09NT0RPIENBIExpbWl0ZWQxOTA3BgNVBAMTMENP
 TU9ETyBDbGllbnQgQXV0aGVudGljYXRpb24gYW5kIFNlY3VyZSBFbWFpbCBDQQIRAOUHt1fFyUsR
 52q4+8ZfwIYwCQYFKw4DAhoFAKCCAdkwGAYJKoZIhvcNAQkDMQsGCSqGSIb3DQEHATAcBgkqhkiG
-9w0BCQUxDxcNMTQwMjI2MDExMjQwWjAjBgkqhkiG9w0BCQQxFgQUIsI4iBohLu2rQYPtejPfh03C
-9HAwgboGCSsGAQQBgjcQBDGBrDCBqTCBkzELMAkGA1UEBhMCR0IxGzAZBgNVBAgTEkdyZWF0ZXIg
+9w0BCQUxDxcNMTQwMjI2MDEyNzAyWjAjBgkqhkiG9w0BCQQxFgQU4Krm+xY8APC9wMqeuR2uQNpM
+JJYwgboGCSsGAQQBgjcQBDGBrDCBqTCBkzELMAkGA1UEBhMCR0IxGzAZBgNVBAgTEkdyZWF0ZXIg
 TWFuY2hlc3RlcjEQMA4GA1UEBxMHU2FsZm9yZDEaMBgGA1UEChMRQ09NT0RPIENBIExpbWl0ZWQx
 OTA3BgNVBAMTMENPTU9ETyBDbGllbnQgQXV0aGVudGljYXRpb24gYW5kIFNlY3VyZSBFbWFpbCBD
 QQIRAOUHt1fFyUsR52q4+8ZfwIYwgbwGCyqGSIb3DQEJEAILMYGsoIGpMIGTMQswCQYDVQQGEwJH
 QjEbMBkGA1UECBMSR3JlYXRlciBNYW5jaGVzdGVyMRAwDgYDVQQHEwdTYWxmb3JkMRowGAYDVQQK
 ExFDT01PRE8gQ0EgTGltaXRlZDE5MDcGA1UEAxMwQ09NT0RPIENsaWVudCBBdXRoZW50aWNhdGlv
 biBhbmQgU2VjdXJlIEVtYWlsIENBAhEA5Qe3V8XJSxHnarj7xl/AhjANBgkqhkiG9w0BAQEFAASC
-AQB6t/ZOQIHnw+Q2cOjvilq8G4LA6j38d5dUhE+aqq6HQvXMW2mZyFJNa1i1eQ3ISHMKGHpsG+PQ
-tCrEmifj7v772ahtgGh/rv9ENCeOLVy/RWsawikTockYB79tirIKeMTDL19gMwpNIT0NZ1hs+CbY
-wyUQ922krf7qZI9VWYmNX68N5zGlCf9V8lTiDJhUK7KIbiiAdyr2vBBY5cTFn42WfoZdFVzFR8+M
-OcjjJes+Qw6dUEbUAX+Ogx+8y+snPrTOlATGIjZOdrsuBJgLNy98RWQB4vmyW6RCNNRV3urOxI3c
-ATnJUypeVA9LYda/A7Xe35vN+tPNAnmW9NGslJrDAAAAAAAA
+AQB6KcvEKqASzzefF0gvAQzp6IINVNnKDVwAc35S/9Mp1ZSG4c1skrezXlPYwY0CM8TchC4e9ebk
+c9JKMDXxZlgacTW0WM91/ORYihOj4Nv5+3jK1Z57ZcYDNWWksTfv78NljLPI307BdEPR+csctqod
+kU1hS0VKEVnDM1wISxHfgIw8x1/WZmdmqFv0Bp1pPU5n3B3a13p1WpDkC31VnO55KBLOttBRhd9p
+XJZZ1/+4OJn8qfMEd5UNH54UbUvjrM2DQDAjiFIWOAL/EGVggrHoBer4SmJ32gKVqb1Kmgn0TNMJ
+oozGbJC/qZjDVJpQg2anSj2ZEPlQj6ohyHpDB/gcAAAAAAAA
 
---Apple-Mail=_5EA79531-B84C-40C5-89EE-B5ADC8FC53FD--
+--Apple-Mail=_D295959D-690A-4247-8A88-7C58DBC3953B--
