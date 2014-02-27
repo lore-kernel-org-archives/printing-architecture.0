@@ -1,17 +1,26 @@
-Return-Path: <msweet@apple.com>
-MIME-version: 1.0
-Content-type: multipart/signed;
-	boundary="Apple-Mail=_689261DB-15AB-4FBF-B687-CA33073A451E";
-	protocol="application/pkcs7-signature"; micalg=sha1
-From: Michael Sweet <msweet@apple.com>
-In-reply-to: <20140226230247.GA8283@kroah.com>
-Date: Wed, 26 Feb 2014 19:05:46 -0500
-Message-id: <1A785707-19A7-43D8-8B21-98707C89AFCC@apple.com>
+Return-Path: <crimola@gmail.com>
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20120113;
+	h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+	:cc:content-type;
+	bh=nkSB+slj4BPa8TrcUk2rlKlmwk/8wBuBPEgR9Qxs0gk=;
+	b=EYNoF9pcY4NZP7aNqKSZ10dOhb9myWxiicL/xaIUtWzmw23ualvtxMhegUhKBIXmJO
+	gEkEptYa4E/fxI3j4idum3Bw4x22Bclgx4nCjE7v0lWVxNKGheAcCc4pzAxai5Vr0JSo
+	Ks0/hQhK0uEYf78G8MXwrHm5MQWFcB4L22u5zxsSzFaCZgnLJRRiALI13YM4ldnfrHf+
+	EyUNUTRzU2WIcUu5gw2kTRCDtyZbMl1nkQ6Ld/IWnHND+cewkBneawvUann8bOtoqOQH
+	cNEkxYUwhu4d7ESTTN3wqA6pNHUmyz/KHJ2OFZK7nt2lQHVeqNsi9iVFOwCeT4gMKRDY
+	IvCQ==
+MIME-Version: 1.0
+In-Reply-To: <1A785707-19A7-43D8-8B21-98707C89AFCC@apple.com>
 References: <530CCC53.8070007@gmail.com>
 	<3F2A4315-4F2C-4BB1-BC9C-67B6F6BCD3A3@apple.com>
 	<20140226014714.GA8346@kroah.com>
 	<8E2929D6-4A60-4D27-9012-5250503D9B51@apple.com>
 	<20140226230247.GA8283@kroah.com>
+	<1A785707-19A7-43D8-8B21-98707C89AFCC@apple.com>
+Date: Wed, 26 Feb 2014 18:33:02 -0800
+Message-ID: <CAEzcFASVGm8brh_=DB25Ys25d=htLjwBCUpw_sYxAYSzw0ZvyQ@mail.gmail.com>
+From: Carlos Rimola <crimola@gmail.com>
+Content-Type: multipart/alternative; boundary=001a1133fd10f9d6fa04f35a239f
 Subject: Re: [Printing-architecture] Google Summer of Code 2014 -
  IPP-over-USB printer support - Joint project idea for OpenPrinting and the
  kernel
@@ -24,151 +33,227 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Greg KH <greg@kroah.com>
-Cc: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>, Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>, kernelnewbies@kernelnewbies.org, Linus Torvalds <torvalds@linux-foundation.org>, Till Kamppeter <till.kamppeter@gmail.com>
+To: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>, Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>, kernelnewbies@kernelnewbies.org
+Cc: Till Kamppeter <till.kamppeter@gmail.com>
+
+--001a1133fd10f9d6fa04f35a239f
+Content-Type: text/plain; charset=ISO-8859-1
+
+Hi All,
+
+I have some quick and general questions regarding IPP over USB ("IPP USB"
+for short). Some are related to Till's proposed project "Google Summer of
+Code 2014 - IPP-over-USB printer support". Any help and feedback will be
+greatly welcomed. I should mention that I am in favor of the proposed
+project for this event.
+
+Assumptions (please confirm or correct):
+
+1) This first one may be obvious but to be sure - I am assuming that we are
+referring to IPP USB as defined in the "USB Print Interface Class IPP
+Protocol Specification Revision 1.0" dated 12/5/2012 and published by
+USB-IF and authored by HP's Smith Kennedy and Andrew R. Mitchell. I'll
+refer to it as the "IPP USB Spec".
+
+2) As I understand the IPP USB Spec, there is NO network interface, NOR
+TCP/IP involved. The Communication Protocol to be used between Host and
+Device (Printer) is *purely HTTP + IPP directly over USB*. A place where
+this is noted is section 6.2 - "HTTP Headers" which states the following:
+
+*Since there is NO network interface connection, NO DNS hostnames or IP
+addresses, and NO TCP port numbers associated with USB connection, the
+requirements of the HTTP Host field is addressed by requiring that the
+value of this header MUST be "localhost".*
+
+Please correct me if I am wrong on either of these assumptions.
 
 
---Apple-Mail=_689261DB-15AB-4FBF-B687-CA33073A451E
+Questions:
+
+1) I know the Spec is already cast in stone but I would like to understand
+what function HTTP serves and if it is only used for identifying "Host:
+localhost" and the "/ipp/printer" path? In other words, could pure IPP
+Requests/Responses and IPP expected format "Print Data" have sufficed?
+
+ 2) Section 3.2 "Interface Set" paragraph 2 states that "All IPP USB capable
+Print class interfaces provided by a device MUST be functionally equal from
+an IPP operation or HTTP perspective.  In other words, any IPP operation or
+resource path that is valid over one IPP USB interface MUST be
+reachable viaany and
+all of the IPP USB interfaces."
+
+Does this imply that, for example, a Request from the host can be sent over
+one interface (I/F #1) and the response received over a different interface
+(e.g., I/F #2)?
+
+3) The last question is much simpler but would be helpful to an implementor
+- what specific printers (manufacturer, line and model) *on the
+market*support IPP USB? I have seen references to HP Photosmart and
+OfficeJet but
+no model given. Similarly, what Host(s) on the market, including OS and
+version, support the IPP USB protocol with these Printers?
+
+Knowing this would be helpful to implement and test either device and/or
+host support.
+
+I look forward to your reply and discussing the project further.
+
+
+Thanks!
+
+
+Carlos Rimola
+
+Software Developer
+
+crimola@gmail.com
+
+408-508-8339
+
+--001a1133fd10f9d6fa04f35a239f
+Content-Type: text/html; charset=ISO-8859-1
 Content-Transfer-Encoding: quoted-printable
-Content-Type: text/plain;
-	charset=us-ascii
 
-Greg,
+<div dir=3D"ltr">Hi All,<div><br></div><div>I have some quick and general q=
+uestions regarding IPP over USB (&quot;IPP USB&quot; for short). Some are r=
+elated to Till&#39;s proposed project &quot;<font face=3D"arial, helvetica,=
+ sans-serif">Google Summer of Code 2014 - IPP-over-USB printer support</fon=
+t>&quot;. Any help and feedback will be greatly welcomed. I should mention =
+that I am in favor of the proposed project for this event.</div>
+<div><br></div><div><p style=3D"font-family:arial,sans-serif;font-size:13px=
+">Assumptions (please confirm or correct):</p><p style=3D"font-family:arial=
+,sans-serif;font-size:13px">1) This first one may be obvious but to be sure=
+ - I am assuming that we are referring to IPP USB as defined in the &quot;U=
+SB Print Interface Class IPP Protocol Specification Revision 1.0&quot; date=
+d 12/5/2012 and published by USB-IF and=A0authored by HP&#39;s Smith Kenned=
+y and Andrew R. Mitchell. I&#39;ll refer to it as the &quot;IPP USB Spec&qu=
+ot;.</p>
+<p style=3D"font-family:arial,sans-serif;font-size:13px">2) As I understand=
+ the IPP USB Spec, there is NO network interface, NOR TCP/IP involved. The =
+Communication Protocol to be used between Host and Device (Printer) is=A0<i=
+>purely HTTP + IPP directly over USB</i>. A place where this is noted is se=
+ction 6.2 - &quot;HTTP Headers&quot; which states the following:</p>
+<p style=3D"font-family:arial,sans-serif;font-size:13px"><i>Since there is =
+NO network interface connection, NO DNS hostnames or IP addresses, and NO T=
+CP port numbers associated with USB connection, the requirements of the HTT=
+P Host field is addressed by requiring that the value of this header MUST b=
+e &quot;localhost&quot;.</i></p>
+<p style=3D"font-family:arial,sans-serif;font-size:13px">Please correct me =
+if I am wrong on either of these assumptions.<br></p><p style=3D"font-famil=
+y:arial,sans-serif;font-size:13px"><br></p><p style=3D"font-family:arial,sa=
+ns-serif;font-size:13px">
+Questions:</p><p style=3D"font-family:arial,sans-serif;font-size:13px">1) I=
+ know the Spec is already cast in stone but I would like to understand what=
+ function HTTP serves and if it is only used for identifying &quot;Host: lo=
+calhost&quot; and the &quot;/ipp/printer&quot; path? In other words, could =
+pure IPP Requests/Responses and IPP expected format &quot;Print Data&quot; =
+have sufficed?<br>
+</p><p><font face=3D"arial, sans-serif" style=3D"font-size:13px">=A02) Sect=
+ion 3.2 &quot;Interface Set&quot; paragraph 2 states that &quot;</font><spa=
+n style=3D"font-size:small;font-family:arial;letter-spacing:-0.05pt">All</s=
+pan><span style=3D"font-size:small;font-family:arial"> IPP USB</span><span =
+style=3D"font-size:small;font-family:arial;letter-spacing:-0.05pt"> capable=
+</span><span style=3D"font-size:small;font-family:arial;letter-spacing:-0.1=
+pt"> </span><span style=3D"font-size:small;font-family:arial;letter-spacing=
+:-0.05pt">Print</span><span style=3D"font-size:small;font-family:arial">
+class</span><span style=3D"font-size:small;font-family:arial;letter-spacing=
+:0.1pt"> </span><span style=3D"font-size:small;font-family:arial;letter-spa=
+cing:-0.05pt">interfaces provided</span><span style=3D"font-size:small;font=
+-family:arial"> by</span><span style=3D"font-size:small;font-family:arial;l=
+etter-spacing:-0.15pt"> </span><span style=3D"font-size:small;font-family:a=
+rial">a</span><span style=3D"font-size:small;font-family:arial;letter-spaci=
+ng:0.05pt"> </span><span style=3D"font-size:small;font-family:arial;letter-=
+spacing:-0.05pt">device</span><span style=3D"font-size:small;font-family:ar=
+ial;letter-spacing:0.15pt"> </span><span style=3D"font-size:small;font-fami=
+ly:arial;letter-spacing:-0.05pt">MUST</span><span style=3D"font-size:small;=
+font-family:arial">
+be</span><span style=3D"font-size:small;font-family:arial;letter-spacing:-0=
+.05pt"> functionally</span><span style=3D"font-size:small;font-family:arial=
+;letter-spacing:3.65pt"> </span><span style=3D"font-size:small;font-family:=
+arial;letter-spacing:-0.05pt">equal</span><span style=3D"font-size:small;fo=
+nt-family:arial;letter-spacing:-0.1pt"> </span><span style=3D"font-size:sma=
+ll;font-family:arial;letter-spacing:-0.05pt">from</span><span style=3D"font=
+-size:small;font-family:arial;letter-spacing:0.05pt"> </span><span style=3D=
+"font-size:small;font-family:arial">an</span><span style=3D"font-size:small=
+;font-family:arial;letter-spacing:-0.1pt"> </span><span style=3D"font-size:=
+small;font-family:arial">IPP</span><span style=3D"font-size:small;font-fami=
+ly:arial;letter-spacing:-0.1pt"> </span><span style=3D"font-size:small;font=
+-family:arial;letter-spacing:-0.05pt">operation</span><span style=3D"font-s=
+ize:small;font-family:arial">
+or </span><span style=3D"font-size:small;font-family:arial;letter-spacing:-=
+0.05pt">HTTP</span><span style=3D"font-size:small;font-family:arial;letter-=
+spacing:-0.1pt"> </span><span style=3D"font-size:small;font-family:arial;le=
+tter-spacing:-0.05pt">perspective.</span><span style=3D"font-size:small;fon=
+t-family:arial">=A0 </span><span style=3D"font-size:small;font-family:arial=
+">In </span><span style=3D"font-size:small;font-family:arial;letter-spacing=
+:-0.05pt">other</span><span style=3D"font-size:small;font-family:arial">
+</span><span style=3D"font-size:small;font-family:arial;letter-spacing:-0.0=
+5pt">words,</span><span style=3D"font-size:small;font-family:arial;letter-s=
+pacing:0.2pt"> </span><span style=3D"font-size:small;font-family:arial">any=
+</span><span style=3D"font-size:small;font-family:arial;letter-spacing:-0.1=
+pt"> </span><span style=3D"font-size:small;font-family:arial">IPP </span><s=
+pan style=3D"font-size:small;font-family:arial;letter-spacing:-0.05pt">oper=
+ation</span><span style=3D"font-size:small;font-family:arial;letter-spacing=
+:-0.1pt">
+</span><span style=3D"font-size:small;font-family:arial">or</span><span sty=
+le=3D"font-size:small;font-family:arial;letter-spacing:3.05pt"> </span><spa=
+n style=3D"font-size:small;font-family:arial">resource</span><span style=3D=
+"font-size:small;font-family:arial;letter-spacing:-0.1pt"> </span><span sty=
+le=3D"font-size:small;font-family:arial">path </span><span style=3D"font-si=
+ze:small;font-family:arial;letter-spacing:-0.05pt">that</span><span style=
+=3D"font-size:small;font-family:arial">
+is </span><span style=3D"font-size:small;font-family:arial;letter-spacing:-=
+0.05pt">valid</span><span style=3D"font-size:small;font-family:arial"> </sp=
+an><span style=3D"font-size:small;font-family:arial;letter-spacing:-0.05pt"=
+>over</span><span style=3D"font-size:small;font-family:arial"> one</span><s=
+pan style=3D"font-size:small;font-family:arial;letter-spacing:-0.1pt"> </sp=
+an><span style=3D"font-size:small;font-family:arial">IPP</span><span style=
+=3D"font-size:small;font-family:arial;letter-spacing:-0.1pt"> </span><span =
+style=3D"font-size:small;font-family:arial">USB</span><span style=3D"font-s=
+ize:small;font-family:arial;letter-spacing:-0.1pt"> </span><span style=3D"f=
+ont-size:small;font-family:arial;letter-spacing:-0.05pt">interface</span><s=
+pan style=3D"font-size:small;font-family:arial;letter-spacing:-0.1pt">
+</span><span style=3D"font-size:small;font-family:arial;letter-spacing:-0.0=
+5pt">MUST</span><span style=3D"font-size:small;font-family:arial;letter-spa=
+cing:0.25pt"> </span><span style=3D"font-size:small;font-family:arial">be</=
+span><span style=3D"font-size:small;font-family:arial;letter-spacing:-0.1pt=
+"> </span><span style=3D"font-size:small;font-family:arial;letter-spacing:-=
+0.05pt">reachable</span><span style=3D"font-size:small;font-family:arial;le=
+tter-spacing:-0.1pt">
+</span><span style=3D"font-size:small;font-family:arial;letter-spacing:-0.0=
+5pt">via</span><span style=3D"font-size:small;font-family:arial"> any and=
+=A0</span><font face=3D"arial, helvetica, sans-serif">all<span style=3D"let=
+ter-spacing:-0.05pt"> of</span><span style=3D"letter-spacing:0.1pt"> </span=
+><span style=3D"letter-spacing:-0.05pt">the</span>
+<span style=3D"letter-spacing:-0.05pt">IPP</span> <span style=3D"letter-spa=
+cing:-0.05pt">USB</span> interfaces.&quot;</font></p><p><font face=3D"arial=
+, helvetica, sans-serif">Does this imply that, for example, a Request from =
+the host can be sent over one interface (I/F #1) and the response received =
+over a different interface (e.g., I/F #2)?</font></p>
+<p style=3D"font-family:arial,sans-serif;font-size:13px">3) The last questi=
+on is much simpler but would be helpful to an implementor - what specific p=
+rinters (manufacturer, line and model) <i>on the market</i> support IPP USB=
+? I have seen references to HP Photosmart and OfficeJet but no model given.=
+ Similarly, what Host(s) on the market, including OS and version, support t=
+he IPP USB protocol with these Printers?</p>
+<p style=3D"font-family:arial,sans-serif;font-size:13px">Knowing this would=
+ be helpful to implement and test either device and/or host support.</p><p =
+style=3D"font-family:arial,sans-serif;font-size:13px">I look forward to you=
+r reply and discussing the project further.</p>
+<p style=3D"font-family:arial,sans-serif;font-size:13px"><br></p><p style=
+=3D"font-family:arial,sans-serif;font-size:13px">Thanks!</p><p style=3D"fon=
+t-family:arial,sans-serif;font-size:13px"><br></p><p style=3D"font-size:13p=
+x"><font face=3D"georgia, serif" style=3D"background-color:rgb(243,243,243)=
+" color=3D"#0000ff">Carlos Rimola</font></p>
+<p style=3D"font-size:13px"><font face=3D"georgia, serif" style=3D"backgrou=
+nd-color:rgb(243,243,243)" color=3D"#0000ff">Software Developer</font></p><=
+p style=3D"font-size:13px"><font face=3D"georgia, serif" style=3D"backgroun=
+d-color:rgb(243,243,243)" color=3D"#0000ff"><a href=3D"mailto:crimola@gmail=
+.com">crimola@gmail.com</a></font></p>
+<p style=3D"font-size:13px"><span id=3D"gc-number-11" class=3D"gc-cs-link" =
+title=3D"Call with Google Voice"><font face=3D"georgia, serif"><span id=3D"=
+gc-number-12" class=3D"gc-cs-link" title=3D"Call with Google Voice">408-508=
+-8339</span></font></span></p>
+</div></div>
 
-We already unload the usblp driver - it isn't compatible with most of =
-the multifunction printers out there today...
-
-
-On Feb 26, 2014, at 6:02 PM, Greg KH <greg@kroah.com> wrote:
-
-> On Tue, Feb 25, 2014 at 08:56:23PM -0500, Michael Sweet wrote:
->> Greg,
->>=20
->> On Feb 25, 2014, at 8:47 PM, Greg KH <greg@kroah.com> wrote:
->>> ...
->>> So you want to do this as a userspace library talking directly to =
-the
->>> USB device through usbfs/libusb?  Or should the kernel provide a =
-basic
->>> "pipe-like" functionality to the hardware to make it easier for =
-things
->>> to be queued up to the device?
->>=20
->> libusb is enough.
->>=20
->>> Is there a pointer to the spec somewhere so that I can see what is
->>> needed here?
->>=20
->> http://www.usb.org/developers/devclass_docs
->=20
-> In reading the spec, it looks like some kernel code will have to be
-> written, as the default configuration for the printer device will =
-cause
-> the usblp driver to bind to the device.  Are you thinking that libusb
-> will just unbind the printer driver and take over from there?  Why not
-> just use the kernel driver to expose another device node and have cups
-> talk to that?
->=20
-> thanks,
->=20
-> greg k-h
-
-_________________________________________________________
-Michael Sweet, Senior Printing System Engineer, PWG Chair
-
-
---Apple-Mail=_689261DB-15AB-4FBF-B687-CA33073A451E
-Content-Disposition: attachment;
-	filename=smime.p7s
-Content-Type: application/pkcs7-signature;
-	name=smime.p7s
-Content-Transfer-Encoding: base64
-
-MIAGCSqGSIb3DQEHAqCAMIACAQExCzAJBgUrDgMCGgUAMIAGCSqGSIb3DQEHAQAAoIIPJTCCBN0w
-ggPFoAMCAQICEHGS++YZX6xNEoV0cTSiGKcwDQYJKoZIhvcNAQEFBQAwezELMAkGA1UEBhMCR0Ix
-GzAZBgNVBAgMEkdyZWF0ZXIgTWFuY2hlc3RlcjEQMA4GA1UEBwwHU2FsZm9yZDEaMBgGA1UECgwR
-Q29tb2RvIENBIExpbWl0ZWQxITAfBgNVBAMMGEFBQSBDZXJ0aWZpY2F0ZSBTZXJ2aWNlczAeFw0w
-NDAxMDEwMDAwMDBaFw0yODEyMzEyMzU5NTlaMIGuMQswCQYDVQQGEwJVUzELMAkGA1UECBMCVVQx
-FzAVBgNVBAcTDlNhbHQgTGFrZSBDaXR5MR4wHAYDVQQKExVUaGUgVVNFUlRSVVNUIE5ldHdvcmsx
-ITAfBgNVBAsTGGh0dHA6Ly93d3cudXNlcnRydXN0LmNvbTE2MDQGA1UEAxMtVVROLVVTRVJGaXJz
-dC1DbGllbnQgQXV0aGVudGljYXRpb24gYW5kIEVtYWlsMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8A
-MIIBCgKCAQEAsjmFpPJ9q0E7YkY3rs3BYHW8OWX5ShpHornMSMxqmNVNNRm5pELlzkniii8efNIx
-B8dOtINknS4p1aJkxIW9hVE1eaROaJB7HHqkkqgX8pgV8pPMyaQylbsMTzC9mKALi+VuG6JG+ni8
-om+rWV6lL8/K2m2qL+usobNqqrcuZzWLeeEeaYji5kbNoKXqvgvOdjp6Dpvq/NonWz1zHyLmSGHG
-TPNpsaguG7bUMSAsvIKKjqQOpdeJQ/wWWq8dcdcRWdq6hw2v+vPhwvCkxWeM1tZUOt4KpLoDd7Nl
-yP0e03RiqhjKaJMeoYV+9Udly/hNVyh00jT/MLbu9mIwFIws6wIDAQABo4IBJzCCASMwHwYDVR0j
-BBgwFoAUoBEKIz6W8Qfs4q8p74Klf9AwpLQwHQYDVR0OBBYEFImCZ33EnSZwAEu0UEh83j2uBG59
-MA4GA1UdDwEB/wQEAwIBBjAPBgNVHRMBAf8EBTADAQH/MB0GA1UdJQQWMBQGCCsGAQUFBwMCBggr
-BgEFBQcDBDARBgNVHSAECjAIMAYGBFUdIAAwewYDVR0fBHQwcjA4oDagNIYyaHR0cDovL2NybC5j
-b21vZG9jYS5jb20vQUFBQ2VydGlmaWNhdGVTZXJ2aWNlcy5jcmwwNqA0oDKGMGh0dHA6Ly9jcmwu
-Y29tb2RvLm5ldC9BQUFDZXJ0aWZpY2F0ZVNlcnZpY2VzLmNybDARBglghkgBhvhCAQEEBAMCAQYw
-DQYJKoZIhvcNAQEFBQADggEBAJ2Vyzy4fqUJxB6/C8LHdo45PJTGEKpPDMngq4RdiVTgZTvzbRx8
-NywlVF+WIfw3hJGdFdwUT4HPVB1rbEVgxy35l1FM+WbKPKCCjKbI8OLp1Er57D9Wyd12jMOCAU9s
-APMeGmF0BEcDqcZAV5G8ZSLFJ2dPV9tkWtmNH7qGL/QGrpxp7en0zykX2OBKnxogL5dMUbtGB8SK
-N04g4wkxaMeexIud6H4RvDJoEJYRmETYKlFgTYjrdDrfQwYyyDlWjDoRUtNBpEMD9O3vMyfbOeAU
-TibJ2PU54om4k123KSZB6rObroP8d3XK6Mq1/uJlSmM+RMTQw16Hc6mYHK9/FX8wggUaMIIEAqAD
-AgECAhBtGeqnGU9qMyLmIjJ6qnHeMA0GCSqGSIb3DQEBBQUAMIGuMQswCQYDVQQGEwJVUzELMAkG
-A1UECBMCVVQxFzAVBgNVBAcTDlNhbHQgTGFrZSBDaXR5MR4wHAYDVQQKExVUaGUgVVNFUlRSVVNU
-IE5ldHdvcmsxITAfBgNVBAsTGGh0dHA6Ly93d3cudXNlcnRydXN0LmNvbTE2MDQGA1UEAxMtVVRO
-LVVTRVJGaXJzdC1DbGllbnQgQXV0aGVudGljYXRpb24gYW5kIEVtYWlsMB4XDTExMDQyODAwMDAw
-MFoXDTIwMDUzMDEwNDgzOFowgZMxCzAJBgNVBAYTAkdCMRswGQYDVQQIExJHcmVhdGVyIE1hbmNo
-ZXN0ZXIxEDAOBgNVBAcTB1NhbGZvcmQxGjAYBgNVBAoTEUNPTU9ETyBDQSBMaW1pdGVkMTkwNwYD
-VQQDEzBDT01PRE8gQ2xpZW50IEF1dGhlbnRpY2F0aW9uIGFuZCBTZWN1cmUgRW1haWwgQ0EwggEi
-MA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCShIRbS1eY1F4vi6ThQMijU1hfZmXxMk73nzJ9
-VdB4TFW3QpTg+SdxB8XGaaS5MsTxQBqQzCdWYn8XtXFpruUgG+TLY15gyqJB9mrho/+43x9IbWVD
-jCouK2M4d9+xF6zC2oIC1tQyatRnbyATj1w1+uVUgK/YcQodNwoCUFNslR2pEBS0mZVZEjH/CaLS
-TNxS297iQAFbSGjdxUq04O0kHzqvcV8H46y/FDuwJXFoPfQP1hdYRhWBPGiLi4MPbXohV+Y0sNsy
-fuNK4aVScmQmkU6lkg//4LFg/RpvaFGZY40ai6XMQpubfSJj06mg/M6ekN9EGfRcWzW6FvOnm//B
-AgMBAAGjggFLMIIBRzAfBgNVHSMEGDAWgBSJgmd9xJ0mcABLtFBIfN49rgRufTAdBgNVHQ4EFgQU
-ehNOAHRbxnhjZCfBL+KgW7x5xXswDgYDVR0PAQH/BAQDAgEGMBIGA1UdEwEB/wQIMAYBAf8CAQAw
-EQYDVR0gBAowCDAGBgRVHSAAMFgGA1UdHwRRME8wTaBLoEmGR2h0dHA6Ly9jcmwudXNlcnRydXN0
-LmNvbS9VVE4tVVNFUkZpcnN0LUNsaWVudEF1dGhlbnRpY2F0aW9uYW5kRW1haWwuY3JsMHQGCCsG
-AQUFBwEBBGgwZjA9BggrBgEFBQcwAoYxaHR0cDovL2NydC51c2VydHJ1c3QuY29tL1VUTkFkZFRy
-dXN0Q2xpZW50X0NBLmNydDAlBggrBgEFBQcwAYYZaHR0cDovL29jc3AudXNlcnRydXN0LmNvbTAN
-BgkqhkiG9w0BAQUFAAOCAQEAhda+eFdVbTN/RFL+QtUGqAEDgIr7DbL9Sr/2r0FJ9RtaxdKtG3Nu
-PukmfOZMmMEwKN/L+0I8oSU+CnXW0D05hmbRoZu1TZtvryhsHa/l6nRaqNqxwPF1ei+eupN5yv7i
-kR5WdLL4jdPgQ3Ib7Y/9YDkgR/uLrzplSDyYPaUlv73vYOBJ5RbI6z9Dg/Dg7g3B080zX5vQvWBq
-szv++tTJOjwf7Zv/m0kzvkIpOYPuM2kugp1FTahp2oAbHj3SGl18R5mlmwhtEpmG1l1XBxunML5L
-SUS4kH7K0Xk467Qz+qA6XSZYnmFVGLQh1ZnV4ENAQjC+6qXnlNKw/vN1+X9u5zCCBSIwggQKoAMC
-AQICEQDlB7dXxclLEedquPvGX8CGMA0GCSqGSIb3DQEBBQUAMIGTMQswCQYDVQQGEwJHQjEbMBkG
-A1UECBMSR3JlYXRlciBNYW5jaGVzdGVyMRAwDgYDVQQHEwdTYWxmb3JkMRowGAYDVQQKExFDT01P
-RE8gQ0EgTGltaXRlZDE5MDcGA1UEAxMwQ09NT0RPIENsaWVudCBBdXRoZW50aWNhdGlvbiBhbmQg
-U2VjdXJlIEVtYWlsIENBMB4XDTEzMTIxNzAwMDAwMFoXDTE0MTIxNzIzNTk1OVowITEfMB0GCSqG
-SIb3DQEJARYQbXN3ZWV0QGFwcGxlLmNvbTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEB
-ANdvQYZRCVzc0wIYvIOn/0Pv7zUwuIvbAfM/W3FyemqZx3fdKxX4WxN2x5NC3hhBHGrUWirJH7rl
-6It12bGQ61uHAK5jsJikV5k+mOYjZaKNIKxj0uYIk3MKQmsmM8t3nddq5mp2mxwV/U7AFPTz1fgh
-dkqTb/NkHY5eA8KqksaeqwfMgoaiGVeCUhptWnXosca8PAkb+i9u5rEok5zgY+QP0IuWLJENfA4q
-dEMsH+OAwMGOv9fNCgcdapFnjeSYaj70m6qUiq446+8a2rhUsEUKQayOMgjnm2bgUuNx7pOvs/Jg
-zIlZoTz/llmE1HWREGzSjRnLWwQ98fspfeZWA+8CAwEAAaOCAeAwggHcMB8GA1UdIwQYMBaAFHoT
-TgB0W8Z4Y2QnwS/ioFu8ecV7MB0GA1UdDgQWBBTtKBJoG9kxZisTqJg4+wr12l4stjAOBgNVHQ8B
-Af8EBAMCBaAwDAYDVR0TAQH/BAIwADAgBgNVHSUEGTAXBggrBgEFBQcDBAYLKwYBBAGyMQEDBQIw
-EQYJYIZIAYb4QgEBBAQDAgUgMEYGA1UdIAQ/MD0wOwYMKwYBBAGyMQECAQEBMCswKQYIKwYBBQUH
-AgEWHWh0dHBzOi8vc2VjdXJlLmNvbW9kby5uZXQvQ1BTMFcGA1UdHwRQME4wTKBKoEiGRmh0dHA6
-Ly9jcmwuY29tb2RvY2EuY29tL0NPTU9ET0NsaWVudEF1dGhlbnRpY2F0aW9uYW5kU2VjdXJlRW1h
-aWxDQS5jcmwwgYgGCCsGAQUFBwEBBHwwejBSBggrBgEFBQcwAoZGaHR0cDovL2NydC5jb21vZG9j
-YS5jb20vQ09NT0RPQ2xpZW50QXV0aGVudGljYXRpb25hbmRTZWN1cmVFbWFpbENBLmNydDAkBggr
-BgEFBQcwAYYYaHR0cDovL29jc3AuY29tb2RvY2EuY29tMBsGA1UdEQQUMBKBEG1zd2VldEBhcHBs
-ZS5jb20wDQYJKoZIhvcNAQEFBQADggEBABg5KLQK5u9gGI75u+vYH/i6uMDKlpTILO/r/FpN2ibq
-pwAB2ln9oKvPIA1/r3o+DBC87TqnlJAiPW4ADFHpRmqlprb0Tu9p98nP/wl5tBZjEP8dY4iH0TB3
-B2r9JHwRwwJQ20CqJpuCn9dmvL215sZSqvJfluVlIcAQCLxp3ZKMIC2pNKitswdjjHduaKuj2TMe
-xrzMtrRGRtFF9pcMcnsqE2QtJUqXPV7/M4WT2yRUmI4ThPt9O9fmPH2ku52hdb6t4qXvwdQSkDHt
-xo3J/Vc/jDR2/feedDhQmG0V9j6tHsuG6bVVhcGiWnSmSoPfg13FlQwlxZTyFtiMZ2jILyoxggOu
-MIIDqgIBATCBqTCBkzELMAkGA1UEBhMCR0IxGzAZBgNVBAgTEkdyZWF0ZXIgTWFuY2hlc3RlcjEQ
-MA4GA1UEBxMHU2FsZm9yZDEaMBgGA1UEChMRQ09NT0RPIENBIExpbWl0ZWQxOTA3BgNVBAMTMENP
-TU9ETyBDbGllbnQgQXV0aGVudGljYXRpb24gYW5kIFNlY3VyZSBFbWFpbCBDQQIRAOUHt1fFyUsR
-52q4+8ZfwIYwCQYFKw4DAhoFAKCCAdkwGAYJKoZIhvcNAQkDMQsGCSqGSIb3DQEHATAcBgkqhkiG
-9w0BCQUxDxcNMTQwMjI3MDAwNTQ3WjAjBgkqhkiG9w0BCQQxFgQUkyZJM1rTb5WN/4eTXx2cgLri
-ZjkwgboGCSsGAQQBgjcQBDGBrDCBqTCBkzELMAkGA1UEBhMCR0IxGzAZBgNVBAgTEkdyZWF0ZXIg
-TWFuY2hlc3RlcjEQMA4GA1UEBxMHU2FsZm9yZDEaMBgGA1UEChMRQ09NT0RPIENBIExpbWl0ZWQx
-OTA3BgNVBAMTMENPTU9ETyBDbGllbnQgQXV0aGVudGljYXRpb24gYW5kIFNlY3VyZSBFbWFpbCBD
-QQIRAOUHt1fFyUsR52q4+8ZfwIYwgbwGCyqGSIb3DQEJEAILMYGsoIGpMIGTMQswCQYDVQQGEwJH
-QjEbMBkGA1UECBMSR3JlYXRlciBNYW5jaGVzdGVyMRAwDgYDVQQHEwdTYWxmb3JkMRowGAYDVQQK
-ExFDT01PRE8gQ0EgTGltaXRlZDE5MDcGA1UEAxMwQ09NT0RPIENsaWVudCBBdXRoZW50aWNhdGlv
-biBhbmQgU2VjdXJlIEVtYWlsIENBAhEA5Qe3V8XJSxHnarj7xl/AhjANBgkqhkiG9w0BAQEFAASC
-AQAQ7/w8iret+O4v18yYw9PWwPxYsDuymdgifbVgP45zCmECb0tzDjYNrjih8WLDlkjveCIvKs7g
-v8MCMANK+rnrZBn9caXnTCUvBir1bjZHh8NQm/1cLq5FGLgIM6awR5920leUnWXx3LqQUjI3fFZr
-30nqSrDsPBeY/i81bKTGwZBr8OY9uS8gCE9tnnxeFVx76X/7GlaiA9xON/8zsuQ1viAmUoBfQD/s
-q57C23FZaGlKsW7Tv0Z+Z5SKg63sEjtxthOMED9cWgNV9zKtJ8oWVsVSZJF0HLkpt5j3r+EcbpSI
-0urXjT2VCJK95EPgyEiUWJk1pFZBJFtBFWV44tZLAAAAAAAA
-
---Apple-Mail=_689261DB-15AB-4FBF-B687-CA33073A451E--
+--001a1133fd10f9d6fa04f35a239f--
