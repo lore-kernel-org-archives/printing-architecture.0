@@ -1,24 +1,15 @@
-Return-Path: <msweet@apple.com>
-MIME-version: 1.0
-Content-type: multipart/signed;
-	boundary="Apple-Mail=_89424305-9DBC-485D-BE32-1A962BA8F749";
-	protocol="application/pkcs7-signature"; micalg=sha1
-From: Michael Sweet <msweet@apple.com>
-In-reply-to: <CAEzcFAS8LWcT+jH80Zeb-j+8bJDDoHoencERY7=zdBzeBSV09A@mail.gmail.com>
-Date: Thu, 27 Feb 2014 14:29:20 -0500
-Message-id: <F5FDC839-E328-4A25-AA34-AD2E3DF7DBAC@apple.com>
-References: <530CCC53.8070007@gmail.com>
-	<3F2A4315-4F2C-4BB1-BC9C-67B6F6BCD3A3@apple.com>
-	<20140226014714.GA8346@kroah.com>
-	<8E2929D6-4A60-4D27-9012-5250503D9B51@apple.com>
-	<20140226230247.GA8283@kroah.com>
-	<1A785707-19A7-43D8-8B21-98707C89AFCC@apple.com>
-	<CAEzcFASVGm8brh_=DB25Ys25d=htLjwBCUpw_sYxAYSzw0ZvyQ@mail.gmail.com>
-	<93BF1B5B-19A0-4C58-8D0D-C9B966AA44D7@apple.com>
-	<CAEzcFAS8LWcT+jH80Zeb-j+8bJDDoHoencERY7=zdBzeBSV09A@mail.gmail.com>
-Subject: Re: [Printing-architecture] Google Summer of Code 2014 -
- IPP-over-USB printer support - Joint project idea for OpenPrinting and the
- kernel
+Return-Path: <shane_lin2000@hotmail.com>
+Message-ID: <SNT149-W67DC3FA37B65755B27B94988830@phx.gbl>
+Content-Type: multipart/alternative;
+	boundary="_fbc2426a-be0d-4c23-8f7f-b085c7069461_"
+From: Shane Lin <shane_lin2000@hotmail.com>
+Date: Thu, 27 Feb 2014 11:51:17 -0800
+In-Reply-To: <SNT149-W25462F1606C32C3AB734B488800@phx.gbl>
+References: <SNT149-W14813CFD43AB9543F81B488A70@phx.gbl>, ,
+	<52E00F63.3060001@gmail.com>,
+	<SNT149-W25462F1606C32C3AB734B488800@phx.gbl>
+MIME-Version: 1.0
+Subject: Re: [Printing-architecture] MediaPosition on RHEL 5.0
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>,
@@ -28,524 +19,137 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Carlos Rimola <crimola@gmail.com>
-Cc: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>, Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>, Till Kamppeter <till.kamppeter@gmail.com>, kernelnewbies@kernelnewbies.org
+To: "till.kamppeter@gmail.com" <till.kamppeter@gmail.com>, "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>
 
-
---Apple-Mail=_89424305-9DBC-485D-BE32-1A962BA8F749
-Content-Type: multipart/alternative;
-	boundary="Apple-Mail=_F4B3ADA1-E811-45FF-AF53-62FD34A8BFFB"
-
-
---Apple-Mail=_F4B3ADA1-E811-45FF-AF53-62FD34A8BFFB
+--_fbc2426a-be0d-4c23-8f7f-b085c7069461_
+Content-Type: text/plain; charset="iso-8859-1"
 Content-Transfer-Encoding: quoted-printable
-Content-Type: text/plain;
-	charset=iso-8859-1
 
-Carlos,
-
-Any Mac running OS X 10.9 supports IPP USB; note that we have a bunch of =
-pending bug fixes (sorry, can't say when the fixes will be released...) =
-that address issues found in testing with multiple vendors' =
-implementations of IPP USB, but the current 10.9.2 will work with all of =
-the HP printers mentioned below.
-
-
-On Feb 27, 2014, at 2:23 PM, Carlos Rimola <crimola@gmail.com> wrote:
-
-> Michael,
->=20
-> Thanks for the comprehensive response to my questions on IPP USB and =
-confirming my assumptions.=20
->=20
-> The only remaining question I have for the list at this time is - are =
-there any Hosts, including model, OS and OS version (or other S/W =
-requirements), presently available on the market (or otherwise) which =
-support IPP USB as per the Specification?
->=20
-> Thanks again,
->=20
-> Carlos Rimola
->=20
->=20
-> On Thu, Feb 27, 2014 at 7:37 AM, Michael Sweet <msweet@apple.com> =
-wrote:
-> Carlos,
->=20
-> On Feb 26, 2014, at 9:33 PM, Carlos Rimola <crimola@gmail.com> wrote:
->> Hi All,
->>=20
->> I have some quick and general questions regarding IPP over USB ("IPP =
-USB" for short). Some are related to Till's proposed project "Google =
-Summer of Code 2014 - IPP-over-USB printer support". Any help and =
-feedback will be greatly welcomed. I should mention that I am in favor =
-of the proposed project for this event.
->>=20
->> Assumptions (please confirm or correct):
->>=20
->> 1) This first one may be obvious but to be sure - I am assuming that =
-we are referring to IPP USB as defined in the "USB Print Interface Class =
-IPP Protocol Specification Revision 1.0" dated 12/5/2012 and published =
-by USB-IF and authored by HP's Smith Kennedy and Andrew R. Mitchell. =
-I'll refer to it as the "IPP USB Spec".
->>=20
-> Correct.
->> 2) As I understand the IPP USB Spec, there is NO network interface, =
-NOR TCP/IP involved. The Communication Protocol to be used between Host =
-and Device (Printer) is purely HTTP + IPP directly over USB. A place =
-where this is noted is section 6.2 - "HTTP Headers" which states the =
-following:
->>=20
->> Since there is NO network interface connection, NO DNS hostnames or =
-IP addresses, and NO TCP port numbers associated with USB connection, =
-the requirements of the HTTP Host field is addressed by requiring that =
-the value of this header MUST be "localhost".
->>=20
->> Please correct me if I am wrong on either of these assumptions.
->>=20
->=20
-> Correct (a port number can be passed by the "client" over USB to allow =
-gateways/proxies to work...)
->> Questions:
->>=20
->> 1) I know the Spec is already cast in stone but I would like to =
-understand what function HTTP serves and if it is only used for =
-identifying "Host: localhost" and the "/ipp/printer" path? In other =
-words, could pure IPP Requests/Responses and IPP expected format "Print =
-Data" have sufficed?
->=20
-> While you might get away with that for simple IPP messages, that =
-wouldn't work for document data since IPP by itself has no framing or =
-other niceties - you'd never know when the data ended.
->=20
-> Also, the HTTP portion is used for the embedded web server, doing =
-firmware updates, and so forth.
->>=20
->>  2) Section 3.2 "Interface Set" paragraph 2 states that "All IPP USB =
-capable Print class interfaces provided by a device MUST be functionally =
-equal from an IPP operation or HTTP perspective.  In other words, any =
-IPP operation or resource path that is valid over one IPP USB interface =
-MUST be reachable via any and all of the IPP USB interfaces."
->>=20
->> Does this imply that, for example, a Request from the host can be =
-sent over one interface (I/F #1) and the response received over a =
-different interface (e.g., I/F #2)?
->>=20
-> No, each interface is an independent channel to the printer.
->=20
-> The reason for this requirement is to prevent having an IPP USB =
-endpoint just for printing, and another just for scanning, and so forth. =
- Effectively IPP USB defines an interface protocol that allows arbitrary =
-HTTP and IPP requests to be performed.
->> 3) The last question is much simpler but would be helpful to an =
-implementor - what specific printers (manufacturer, line and model) on =
-the market support IPP USB? I have seen references to HP Photosmart and =
-OfficeJet but no model given. Similarly, what Host(s) on the market, =
-including OS and version, support the IPP USB protocol with these =
-Printers?
->>=20
-> Here is the latest list we have from HP:
->=20
->     Deskjet 3520
->     Envy 120
->     Envy 4500
->     Envy 5530
->     Officejet 3620
->     Officejet 4630
->     Officejet 7610
->     Officejet Pro 276 MFP
->     Officejet Pro X576 dw
->     Photosmart 5520
->     Photosmart 6520
->     Photosmart 7520
->=20
-> I know of four other manufacturers that either have shipping products =
-or will soon be shipping - will post here when I can do so publicly...
->=20
-> _________________________________________________________
-> Michael Sweet, Senior Printing System Engineer, PWG Chair
->=20
->=20
-
-_________________________________________________________
-Michael Sweet, Senior Printing System Engineer, PWG Chair
+All=2C
+=20
+The "ghostscript-8.70-15.el5_9.3.x86_64.rpm" fixed the issue.
+=20
+Thanks=2C
+=20
+Shane
+=20
 
 
---Apple-Mail=_F4B3ADA1-E811-45FF-AF53-62FD34A8BFFB
+
+
+=20
+From: shane_lin2000@hotmail.com
+To: till.kamppeter@gmail.com=3B printing-architecture@lists.linux-foundatio=
+n.org
+Date: Wed=2C 26 Feb 2014 14:07:50 -0800
+Subject: [Printing-architecture] MediaPosition on RHEL 5.0
+
+=0A=
+=0A=
+=0A=
+
+All=2C
+I have a question for the MediaPosition on RHEL 5.0:
+When I check the cups raster file on the RHEL 5.0=2C it looks like the Medi=
+aPosition is always 0 on the cups raster header. The MediaPosition shows co=
+rrectly (same as the value selected in the *InputSlot in the PPD) on the RH=
+EL 5.10. Is this the issue in the "pstoraster" filter on the RHEL 5.0?
+Any suggestion?=20
+Thanks=2C
+Shane
+
+
+
+
+
+ 		 	   		  =0A=
+
+_______________________________________________=0A=
+Printing-architecture mailing list=0A=
+Printing-architecture@lists.linux-foundation.org=0A=
+https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture 		=
+ 	   		  =
+
+--_fbc2426a-be0d-4c23-8f7f-b085c7069461_
+Content-Type: text/html; charset="iso-8859-1"
 Content-Transfer-Encoding: quoted-printable
-Content-Type: text/html;
-	charset=iso-8859-1
 
-<html><head><meta http-equiv=3D"Content-Type" content=3D"text/html =
-charset=3Diso-8859-1"></head><body style=3D"word-wrap: break-word; =
--webkit-nbsp-mode: space; -webkit-line-break: =
-after-white-space;">Carlos,<div><br></div><div>Any Mac running OS X 10.9 =
-supports IPP USB; note that we have a bunch of pending bug fixes (sorry, =
-can't say when the fixes will be released...) that address issues found =
-in testing with multiple vendors' implementations of IPP USB, but the =
-current 10.9.2 will work with all of the HP printers mentioned =
-below.</div><div><br></div><div><br></div><div><div><div>On Feb 27, =
-2014, at 2:23 PM, Carlos Rimola &lt;<a =
-href=3D"mailto:crimola@gmail.com">crimola@gmail.com</a>&gt; =
-wrote:</div><br class=3D"Apple-interchange-newline"><blockquote =
-type=3D"cite"><div dir=3D"ltr">Michael,<div><br></div><div>Thanks for =
-the comprehensive response to my questions on IPP USB and confirming my =
-assumptions.&nbsp;</div><div><br></div><div>The only remaining question =
-I have for the list at this time is - are there any Hosts, including =
-model, OS and OS version (or other S/W requirements), presently =
-available on the market (or otherwise) which support IPP USB as per the =
-Specification?</div>
-<div><br></div><div>Thanks again,</div><div><br></div><div>Carlos =
-Rimola</div></div><div class=3D"gmail_extra"><br><br><div =
-class=3D"gmail_quote">On Thu, Feb 27, 2014 at 7:37 AM, Michael Sweet =
-<span dir=3D"ltr">&lt;<a href=3D"mailto:msweet@apple.com" =
-target=3D"_blank">msweet@apple.com</a>&gt;</span> wrote:<br>
-<blockquote class=3D"gmail_quote" style=3D"margin:0 0 0 =
-.8ex;border-left:1px #ccc solid;padding-left:1ex"><div =
-style=3D"word-wrap:break-word">Carlos,<div><br><div><div =
-class=3D""><div>On Feb 26, 2014, at 9:33 PM, Carlos Rimola &lt;<a =
-href=3D"mailto:crimola@gmail.com" =
-target=3D"_blank">crimola@gmail.com</a>&gt; wrote:</div>
-<blockquote type=3D"cite"><div dir=3D"ltr">Hi All,<div><br></div><div>I =
-have some quick and general questions regarding IPP over USB ("IPP USB" =
-for short). Some are related to Till's proposed project "<font =
-face=3D"arial, helvetica, sans-serif">Google Summer of Code 2014 - =
-IPP-over-USB printer support</font>". Any help and feedback will be =
-greatly welcomed. I should mention that I am in favor of the proposed =
-project for this event.</div>
+<html>
+<head>
+<style><!--
+.hmmessage P
+{
+margin:0px=3B
+padding:0px
+}
+body.hmmessage
+{
+font-size: 12pt=3B
+font-family:Calibri
+}
+--></style></head>
+<body class=3D'hmmessage'><div dir=3D'ltr'><font color=3D"#000000">All=2C</=
+font><BR><font color=3D"#000000"></font>&nbsp=3B<BR><font color=3D"#000000"=
+>The "</font><font color=3D"#000000"><span style=3D'color: rgb(31=2C 73=2C =
+125)=3B font-family: "Calibri"=2C"sans-serif"=3B font-size: 11pt=3B mso-far=
+east-font-family: PMingLiU=3B mso-fareast-theme-font: minor-fareast=3B mso-=
+bidi-font-family: "Times New Roman"=3B mso-ansi-language: EN-US=3B mso-fare=
+ast-language: ZH-TW=3B mso-bidi-language: AR-SA=3B'>ghostscript-8.70-15.el5=
+_9.3.x86_64.rpm" fixed the issue.</span></font><BR><span style=3D'color: rg=
+b(31=2C 73=2C 125)=3B font-family: "Calibri"=2C"sans-serif"=3B font-size: 1=
+1pt=3B mso-fareast-font-family: PMingLiU=3B mso-fareast-theme-font: minor-f=
+areast=3B mso-bidi-font-family: "Times New Roman"=3B mso-ansi-language: EN-=
+US=3B mso-fareast-language: ZH-TW=3B mso-bidi-language: AR-SA=3B'><font col=
+or=3D"#000000"></font></span>&nbsp=3B<BR><span style=3D'color: rgb(31=2C 73=
+=2C 125)=3B font-family: "Calibri"=2C"sans-serif"=3B font-size: 11pt=3B mso=
+-fareast-font-family: PMingLiU=3B mso-fareast-theme-font: minor-fareast=3B =
+mso-bidi-font-family: "Times New Roman"=3B mso-ansi-language: EN-US=3B mso-=
+fareast-language: ZH-TW=3B mso-bidi-language: AR-SA=3B'><font color=3D"#000=
+000">Thanks=2C</font></span><BR><span style=3D'color: rgb(31=2C 73=2C 125)=
+=3B font-family: "Calibri"=2C"sans-serif"=3B font-size: 11pt=3B mso-fareast=
+-font-family: PMingLiU=3B mso-fareast-theme-font: minor-fareast=3B mso-bidi=
+-font-family: "Times New Roman"=3B mso-ansi-language: EN-US=3B mso-fareast-=
+language: ZH-TW=3B mso-bidi-language: AR-SA=3B'><font color=3D"#000000"></f=
+ont></span>&nbsp=3B<BR><span style=3D'color: rgb(31=2C 73=2C 125)=3B font-f=
+amily: "Calibri"=2C"sans-serif"=3B font-size: 11pt=3B mso-fareast-font-fami=
+ly: PMingLiU=3B mso-fareast-theme-font: minor-fareast=3B mso-bidi-font-fami=
+ly: "Times New Roman"=3B mso-ansi-language: EN-US=3B mso-fareast-language: =
+ZH-TW=3B mso-bidi-language: AR-SA=3B'><font color=3D"#000000">Shane</font><=
+/span><BR><span style=3D'color: rgb(31=2C 73=2C 125)=3B font-family: "Calib=
+ri"=2C"sans-serif"=3B font-size: 11pt=3B mso-fareast-font-family: PMingLiU=
+=3B mso-fareast-theme-font: minor-fareast=3B mso-bidi-font-family: "Times N=
+ew Roman"=3B mso-ansi-language: EN-US=3B mso-fareast-language: ZH-TW=3B mso=
+-bidi-language: AR-SA=3B'></span>&nbsp=3B<BR><br><br><br><br>&nbsp=3B<BR><d=
+iv><hr id=3D"stopSpelling">From: shane_lin2000@hotmail.com<br>To: till.kamp=
+peter@gmail.com=3B printing-architecture@lists.linux-foundation.org<br>Date=
+: Wed=2C 26 Feb 2014 14:07:50 -0800<br>Subject: [Printing-architecture] Med=
+iaPosition on RHEL 5.0<br><br>=0A=
+=0A=
+<style><!--=0A=
+.ExternalClass .ecxhmmessage P {=0A=
+padding:0px=3B=0A=
+}=0A=
+=0A=
+.ExternalClass body.ecxhmmessage {=0A=
+font-size:12pt=3B=0A=
+font-family:Calibri=3B=0A=
+}=0A=
+=0A=
+--></style>=0A=
+<div dir=3D"ltr"><br>All=2C<div><br></div><div>I have a question for the Me=
+diaPosition on RHEL 5.0:</div><div><br></div><div>When I check the cups ras=
+ter file on the RHEL 5.0=2C it looks like the MediaPosition is always 0 on =
+the cups raster header. The MediaPosition shows correctly (same as the valu=
+e selected in the *InputSlot in the PPD) on the RHEL 5.10. Is this the issu=
+e in the "pstoraster" filter on the RHEL 5.0?</div><div><br></div><div>Any =
+suggestion?&nbsp=3B</div><div><br></div><div>Thanks=2C</div><div><br></div>=
+<div>Shane</div><div><br></div><div><br></div><div><br></div><div><br></div=
+><div><br></div><div><br></div> 		 	   		  </div>=0A=
+<br>_______________________________________________=0A=
+Printing-architecture mailing list=0A=
+Printing-architecture@lists.linux-foundation.org=0A=
+https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture</d=
+iv> 		 	   		  </div></body>
+</html>=
 
-<div><br></div><div><p =
-style=3D"font-family:arial,sans-serif;font-size:13px">Assumptions =
-(please confirm or correct):</p><p =
-style=3D"font-family:arial,sans-serif;font-size:13px">1) This first one =
-may be obvious but to be sure - I am assuming that we are referring to =
-IPP USB as defined in the "USB Print Interface Class IPP Protocol =
-Specification Revision 1.0" dated 12/5/2012 and published by USB-IF =
-and&nbsp;authored by HP's Smith Kennedy and Andrew R. Mitchell. I'll =
-refer to it as the "IPP USB Spec".</p>
-</div></div></blockquote></div>Correct.</div><div><div =
-class=3D""><blockquote type=3D"cite"><div dir=3D"ltr"><p =
-style=3D"font-family:arial,sans-serif;font-size:13px">2) As I understand =
-the IPP USB Spec, there is NO network interface, NOR TCP/IP involved. =
-The Communication Protocol to be used between Host and Device (Printer) =
-is&nbsp;<i>purely HTTP + IPP directly over USB</i>. A place where this =
-is noted is section 6.2 - "HTTP Headers" which states the =
-following:</p><p =
-style=3D"font-family:arial,sans-serif;font-size:13px"><i>Since there is =
-NO network interface connection, NO DNS hostnames or IP addresses, and =
-NO TCP port numbers associated with USB connection, the requirements of =
-the HTTP Host field is addressed by requiring that the value of this =
-header MUST be "localhost".</i></p><p =
-style=3D"font-family:arial,sans-serif;font-size:13px">Please correct me =
-if I am wrong on either of these =
-assumptions.<br></p></div></blockquote><div><br></div></div>Correct (a =
-port number can be passed by the "client" over USB to allow =
-gateways/proxies to work...)</div>
-<div><div class=3D""><blockquote type=3D"cite"><div dir=3D"ltr"><p =
-style=3D"font-family:arial,sans-serif;font-size:13px">Questions:</p><p =
-style=3D"font-family:arial,sans-serif;font-size:13px">1) I know the Spec =
-is already cast in stone but I would like to understand what function =
-HTTP serves and if it is only used for identifying "Host: localhost" and =
-the "/ipp/printer" path? In other words, could pure IPP =
-Requests/Responses and IPP expected format "Print Data" have =
-sufficed?<br>
-</p></div></blockquote></div><div>While you might get away with that for =
-simple IPP messages, that wouldn't work for document data since IPP by =
-itself has no framing or other niceties - you'd never know when the data =
-ended.</div>
-<div><br></div><div>Also, the HTTP portion is used for the embedded web =
-server, doing firmware updates, and so forth.</div><div =
-class=3D""><blockquote type=3D"cite"><div dir=3D"ltr"><div =
-style=3D"font-family: arial, sans-serif; font-size: 13px;">
-
-<br class=3D"webkit-block-placeholder"></div><p><font face=3D"arial, =
-sans-serif" style=3D"font-size:13px">&nbsp;2) Section 3.2 "Interface =
-Set" paragraph 2 states that "</font><span =
-style=3D"font-size:small;font-family:arial;letter-spacing:-0.05pt">All</sp=
-an><span style=3D"font-size:small;font-family:arial"> IPP =
-USB</span><span =
-style=3D"font-size:small;font-family:arial;letter-spacing:-0.05pt"> =
-capable</span><span =
-style=3D"font-size:small;font-family:arial;letter-spacing:-0.1pt"> =
-</span><span =
-style=3D"font-size:small;font-family:arial;letter-spacing:-0.05pt">Print</=
-span><span style=3D"font-size:small;font-family:arial">
-class</span><span =
-style=3D"font-size:small;font-family:arial;letter-spacing:0.1pt"> =
-</span><span =
-style=3D"font-size:small;font-family:arial;letter-spacing:-0.05pt">interfa=
-ces provided</span><span style=3D"font-size:small;font-family:arial"> =
-by</span><span =
-style=3D"font-size:small;font-family:arial;letter-spacing:-0.15pt"> =
-</span><span style=3D"font-size:small;font-family:arial">a</span><span =
-style=3D"font-size:small;font-family:arial;letter-spacing:0.05pt"> =
-</span><span =
-style=3D"font-size:small;font-family:arial;letter-spacing:-0.05pt">device<=
-/span><span =
-style=3D"font-size:small;font-family:arial;letter-spacing:0.15pt"> =
-</span><span =
-style=3D"font-size:small;font-family:arial;letter-spacing:-0.05pt">MUST</s=
-pan><span style=3D"font-size:small;font-family:arial">
-be</span><span =
-style=3D"font-size:small;font-family:arial;letter-spacing:-0.05pt"> =
-functionally</span><span =
-style=3D"font-size:small;font-family:arial;letter-spacing:3.65pt"> =
-</span><span =
-style=3D"font-size:small;font-family:arial;letter-spacing:-0.05pt">equal</=
-span><span =
-style=3D"font-size:small;font-family:arial;letter-spacing:-0.1pt"> =
-</span><span =
-style=3D"font-size:small;font-family:arial;letter-spacing:-0.05pt">from</s=
-pan><span =
-style=3D"font-size:small;font-family:arial;letter-spacing:0.05pt"> =
-</span><span style=3D"font-size:small;font-family:arial">an</span><span =
-style=3D"font-size:small;font-family:arial;letter-spacing:-0.1pt"> =
-</span><span style=3D"font-size:small;font-family:arial">IPP</span><span =
-style=3D"font-size:small;font-family:arial;letter-spacing:-0.1pt"> =
-</span><span =
-style=3D"font-size:small;font-family:arial;letter-spacing:-0.05pt">operati=
-on</span><span style=3D"font-size:small;font-family:arial">
-or </span><span =
-style=3D"font-size:small;font-family:arial;letter-spacing:-0.05pt">HTTP</s=
-pan><span =
-style=3D"font-size:small;font-family:arial;letter-spacing:-0.1pt"> =
-</span><span =
-style=3D"font-size:small;font-family:arial;letter-spacing:-0.05pt">perspec=
-tive.</span><span style=3D"font-size:small;font-family:arial">&nbsp; =
-</span><span style=3D"font-size:small;font-family:arial">In </span><span =
-style=3D"font-size:small;font-family:arial;letter-spacing:-0.05pt">other</=
-span><span style=3D"font-size:small;font-family:arial">
-</span><span =
-style=3D"font-size:small;font-family:arial;letter-spacing:-0.05pt">words,<=
-/span><span =
-style=3D"font-size:small;font-family:arial;letter-spacing:0.2pt"> =
-</span><span style=3D"font-size:small;font-family:arial">any</span><span =
-style=3D"font-size:small;font-family:arial;letter-spacing:-0.1pt"> =
-</span><span style=3D"font-size:small;font-family:arial">IPP =
-</span><span =
-style=3D"font-size:small;font-family:arial;letter-spacing:-0.05pt">operati=
-on</span><span =
-style=3D"font-size:small;font-family:arial;letter-spacing:-0.1pt">
-</span><span style=3D"font-size:small;font-family:arial">or</span><span =
-style=3D"font-size:small;font-family:arial;letter-spacing:3.05pt"> =
-</span><span =
-style=3D"font-size:small;font-family:arial">resource</span><span =
-style=3D"font-size:small;font-family:arial;letter-spacing:-0.1pt"> =
-</span><span style=3D"font-size:small;font-family:arial">path =
-</span><span =
-style=3D"font-size:small;font-family:arial;letter-spacing:-0.05pt">that</s=
-pan><span style=3D"font-size:small;font-family:arial">
-is </span><span =
-style=3D"font-size:small;font-family:arial;letter-spacing:-0.05pt">valid</=
-span><span style=3D"font-size:small;font-family:arial"> </span><span =
-style=3D"font-size:small;font-family:arial;letter-spacing:-0.05pt">over</s=
-pan><span style=3D"font-size:small;font-family:arial"> one</span><span =
-style=3D"font-size:small;font-family:arial;letter-spacing:-0.1pt"> =
-</span><span style=3D"font-size:small;font-family:arial">IPP</span><span =
-style=3D"font-size:small;font-family:arial;letter-spacing:-0.1pt"> =
-</span><span style=3D"font-size:small;font-family:arial">USB</span><span =
-style=3D"font-size:small;font-family:arial;letter-spacing:-0.1pt"> =
-</span><span =
-style=3D"font-size:small;font-family:arial;letter-spacing:-0.05pt">interfa=
-ce</span><span =
-style=3D"font-size:small;font-family:arial;letter-spacing:-0.1pt">
-</span><span =
-style=3D"font-size:small;font-family:arial;letter-spacing:-0.05pt">MUST</s=
-pan><span =
-style=3D"font-size:small;font-family:arial;letter-spacing:0.25pt"> =
-</span><span style=3D"font-size:small;font-family:arial">be</span><span =
-style=3D"font-size:small;font-family:arial;letter-spacing:-0.1pt"> =
-</span><span =
-style=3D"font-size:small;font-family:arial;letter-spacing:-0.05pt">reachab=
-le</span><span =
-style=3D"font-size:small;font-family:arial;letter-spacing:-0.1pt">
-</span><span =
-style=3D"font-size:small;font-family:arial;letter-spacing:-0.05pt">via</sp=
-an><span style=3D"font-size:small;font-family:arial"> any =
-and&nbsp;</span><font face=3D"arial, helvetica, sans-serif">all<span =
-style=3D"letter-spacing:-0.05pt"> of</span><span =
-style=3D"letter-spacing:0.1pt"> </span><span =
-style=3D"letter-spacing:-0.05pt">the</span>
-<span style=3D"letter-spacing:-0.05pt">IPP</span> <span =
-style=3D"letter-spacing:-0.05pt">USB</span> =
-interfaces."</font></p><p><font face=3D"arial, helvetica, =
-sans-serif">Does this imply that, for example, a Request from the host =
-can be sent over one interface (I/F #1) and the response received over a =
-different interface (e.g., I/F #2)?</font></p>
-</div></blockquote></div>No, each interface is an independent channel to =
-the printer.</div><div><br></div><div>The reason for this requirement is =
-to prevent having an IPP USB endpoint just for printing, and another =
-just for scanning, and so forth. &nbsp;Effectively IPP USB defines an =
-interface protocol that allows arbitrary HTTP and IPP requests to be =
-performed.</div>
-<div><div class=3D""><blockquote type=3D"cite"><div dir=3D"ltr"><p =
-style=3D"font-family:arial,sans-serif;font-size:13px">3) The last =
-question is much simpler but would be helpful to an implementor - what =
-specific printers (manufacturer, line and model) <i>on the market</i> =
-support IPP USB? I have seen references to HP Photosmart and OfficeJet =
-but no model given. Similarly, what Host(s) on the market, including OS =
-and version, support the IPP USB protocol with these Printers?</p>
-</div></blockquote></div>Here is the latest list we have from =
-HP:</div><div><br></div><div><span =
-style=3D"font-family:Menlo-Regular">&nbsp; &nbsp; Deskjet 3520</span><br =
-style=3D"font-family:Menlo-Regular"><span =
-style=3D"font-family:Menlo-Regular">&nbsp; &nbsp; Envy 120</span><br =
-style=3D"font-family:Menlo-Regular">
-<span style=3D"font-family:Menlo-Regular">&nbsp; &nbsp; Envy =
-4500</span><br style=3D"font-family:Menlo-Regular"><span =
-style=3D"font-family:Menlo-Regular">&nbsp; &nbsp; Envy 5530</span><br =
-style=3D"font-family:Menlo-Regular"><span =
-style=3D"font-family:Menlo-Regular">&nbsp; &nbsp; Officejet =
-3620</span><br style=3D"font-family:Menlo-Regular">
-<div><span style=3D"font-family:Menlo-Regular">&nbsp; &nbsp; Officejet =
-4630</span><br style=3D"font-family:Menlo-Regular"></div><span =
-style=3D"font-family:Menlo-Regular"></span><span =
-style=3D"font-family:Menlo-Regular">&nbsp; &nbsp; Officejet =
-7610</span><br style=3D"font-family:Menlo-Regular">
-<div><span style=3D"font-family:Menlo-Regular">&nbsp; &nbsp; Officejet =
-Pro 276 MFP</span></div><div><span =
-style=3D"font-family:Menlo-Regular">&nbsp; &nbsp; Officejet Pro X576 =
-dw</span><br style=3D"font-family:Menlo-Regular"></div><div><span =
-style=3D"font-family:Menlo-Regular">&nbsp; &nbsp; Photosmart =
-5520</span></div>
-<span style=3D"font-family:Menlo-Regular">&nbsp; &nbsp; Photosmart =
-6520</span><br style=3D"font-family:Menlo-Regular"><span =
-style=3D"font-family:Menlo-Regular">&nbsp; &nbsp; Photosmart =
-7520</span><br style=3D"font-family:Menlo-Regular"></div><div><br>
-</div><div>I know of four other manufacturers that either have shipping =
-products or will soon be shipping - will post here when I can do so =
-publicly...</div><div class=3D""><br><div>
-<span style=3D"border-collapse:separate;font-family:'Andale =
-Mono';border-spacing:0px"><span =
-style=3D"text-indent:0px;letter-spacing:normal;font-variant:normal;text-al=
-ign:-webkit-auto;font-style:normal;font-weight:normal;line-height:normal;b=
-order-collapse:separate;text-transform:none;white-space:normal;font-family=
-:'Andale Mono';word-spacing:0px"><div style=3D"word-wrap:break-word">
-_________________________________________________________<br>Michael =
-Sweet, Senior Printing System&nbsp;Engineer, PWG =
-Chair</div></span></span>
-</div>
-<br></div></div></div></blockquote></div><br></div>
-</blockquote></div><br><div>
-<span class=3D"Apple-style-span" style=3D"border-collapse: separate; =
-color: rgb(0, 0, 0); font-family: 'Andale Mono'; font-style: normal; =
-font-variant: normal; font-weight: normal; letter-spacing: normal; =
-line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: =
-0px; text-transform: none; white-space: normal; widows: 2; word-spacing: =
-0px; -webkit-border-horizontal-spacing: 0px; =
--webkit-border-vertical-spacing: 0px; =
--webkit-text-decorations-in-effect: none; -webkit-text-size-adjust: =
-auto; -webkit-text-stroke-width: 0px;  "><span class=3D"Apple-style-span" =
-style=3D"border-collapse: separate; color: rgb(0, 0, 0); font-family: =
-'Andale Mono'; font-style: normal; font-variant: normal; font-weight: =
-normal; letter-spacing: normal; line-height: normal; orphans: 2; =
-text-align: -webkit-auto; text-indent: 0px; text-transform: none; =
-white-space: normal; widows: 2; word-spacing: 0px; =
--webkit-border-horizontal-spacing: 0px; -webkit-border-vertical-spacing: =
-0px; -webkit-text-decorations-in-effect: none; -webkit-text-size-adjust: =
-auto; -webkit-text-stroke-width: 0px;  "><div style=3D"word-wrap: =
-break-word; -webkit-nbsp-mode: space; -webkit-line-break: =
-after-white-space; =
-">_________________________________________________________<br>Michael =
-Sweet, Senior Printing System&nbsp;Engineer, PWG =
-Chair</div></span></span>
-</div>
-<br></div></body></html>=
-
---Apple-Mail=_F4B3ADA1-E811-45FF-AF53-62FD34A8BFFB--
-
---Apple-Mail=_89424305-9DBC-485D-BE32-1A962BA8F749
-Content-Disposition: attachment;
-	filename=smime.p7s
-Content-Type: application/pkcs7-signature;
-	name=smime.p7s
-Content-Transfer-Encoding: base64
-
-MIAGCSqGSIb3DQEHAqCAMIACAQExCzAJBgUrDgMCGgUAMIAGCSqGSIb3DQEHAQAAoIIPJTCCBN0w
-ggPFoAMCAQICEHGS++YZX6xNEoV0cTSiGKcwDQYJKoZIhvcNAQEFBQAwezELMAkGA1UEBhMCR0Ix
-GzAZBgNVBAgMEkdyZWF0ZXIgTWFuY2hlc3RlcjEQMA4GA1UEBwwHU2FsZm9yZDEaMBgGA1UECgwR
-Q29tb2RvIENBIExpbWl0ZWQxITAfBgNVBAMMGEFBQSBDZXJ0aWZpY2F0ZSBTZXJ2aWNlczAeFw0w
-NDAxMDEwMDAwMDBaFw0yODEyMzEyMzU5NTlaMIGuMQswCQYDVQQGEwJVUzELMAkGA1UECBMCVVQx
-FzAVBgNVBAcTDlNhbHQgTGFrZSBDaXR5MR4wHAYDVQQKExVUaGUgVVNFUlRSVVNUIE5ldHdvcmsx
-ITAfBgNVBAsTGGh0dHA6Ly93d3cudXNlcnRydXN0LmNvbTE2MDQGA1UEAxMtVVROLVVTRVJGaXJz
-dC1DbGllbnQgQXV0aGVudGljYXRpb24gYW5kIEVtYWlsMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8A
-MIIBCgKCAQEAsjmFpPJ9q0E7YkY3rs3BYHW8OWX5ShpHornMSMxqmNVNNRm5pELlzkniii8efNIx
-B8dOtINknS4p1aJkxIW9hVE1eaROaJB7HHqkkqgX8pgV8pPMyaQylbsMTzC9mKALi+VuG6JG+ni8
-om+rWV6lL8/K2m2qL+usobNqqrcuZzWLeeEeaYji5kbNoKXqvgvOdjp6Dpvq/NonWz1zHyLmSGHG
-TPNpsaguG7bUMSAsvIKKjqQOpdeJQ/wWWq8dcdcRWdq6hw2v+vPhwvCkxWeM1tZUOt4KpLoDd7Nl
-yP0e03RiqhjKaJMeoYV+9Udly/hNVyh00jT/MLbu9mIwFIws6wIDAQABo4IBJzCCASMwHwYDVR0j
-BBgwFoAUoBEKIz6W8Qfs4q8p74Klf9AwpLQwHQYDVR0OBBYEFImCZ33EnSZwAEu0UEh83j2uBG59
-MA4GA1UdDwEB/wQEAwIBBjAPBgNVHRMBAf8EBTADAQH/MB0GA1UdJQQWMBQGCCsGAQUFBwMCBggr
-BgEFBQcDBDARBgNVHSAECjAIMAYGBFUdIAAwewYDVR0fBHQwcjA4oDagNIYyaHR0cDovL2NybC5j
-b21vZG9jYS5jb20vQUFBQ2VydGlmaWNhdGVTZXJ2aWNlcy5jcmwwNqA0oDKGMGh0dHA6Ly9jcmwu
-Y29tb2RvLm5ldC9BQUFDZXJ0aWZpY2F0ZVNlcnZpY2VzLmNybDARBglghkgBhvhCAQEEBAMCAQYw
-DQYJKoZIhvcNAQEFBQADggEBAJ2Vyzy4fqUJxB6/C8LHdo45PJTGEKpPDMngq4RdiVTgZTvzbRx8
-NywlVF+WIfw3hJGdFdwUT4HPVB1rbEVgxy35l1FM+WbKPKCCjKbI8OLp1Er57D9Wyd12jMOCAU9s
-APMeGmF0BEcDqcZAV5G8ZSLFJ2dPV9tkWtmNH7qGL/QGrpxp7en0zykX2OBKnxogL5dMUbtGB8SK
-N04g4wkxaMeexIud6H4RvDJoEJYRmETYKlFgTYjrdDrfQwYyyDlWjDoRUtNBpEMD9O3vMyfbOeAU
-TibJ2PU54om4k123KSZB6rObroP8d3XK6Mq1/uJlSmM+RMTQw16Hc6mYHK9/FX8wggUaMIIEAqAD
-AgECAhBtGeqnGU9qMyLmIjJ6qnHeMA0GCSqGSIb3DQEBBQUAMIGuMQswCQYDVQQGEwJVUzELMAkG
-A1UECBMCVVQxFzAVBgNVBAcTDlNhbHQgTGFrZSBDaXR5MR4wHAYDVQQKExVUaGUgVVNFUlRSVVNU
-IE5ldHdvcmsxITAfBgNVBAsTGGh0dHA6Ly93d3cudXNlcnRydXN0LmNvbTE2MDQGA1UEAxMtVVRO
-LVVTRVJGaXJzdC1DbGllbnQgQXV0aGVudGljYXRpb24gYW5kIEVtYWlsMB4XDTExMDQyODAwMDAw
-MFoXDTIwMDUzMDEwNDgzOFowgZMxCzAJBgNVBAYTAkdCMRswGQYDVQQIExJHcmVhdGVyIE1hbmNo
-ZXN0ZXIxEDAOBgNVBAcTB1NhbGZvcmQxGjAYBgNVBAoTEUNPTU9ETyBDQSBMaW1pdGVkMTkwNwYD
-VQQDEzBDT01PRE8gQ2xpZW50IEF1dGhlbnRpY2F0aW9uIGFuZCBTZWN1cmUgRW1haWwgQ0EwggEi
-MA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCShIRbS1eY1F4vi6ThQMijU1hfZmXxMk73nzJ9
-VdB4TFW3QpTg+SdxB8XGaaS5MsTxQBqQzCdWYn8XtXFpruUgG+TLY15gyqJB9mrho/+43x9IbWVD
-jCouK2M4d9+xF6zC2oIC1tQyatRnbyATj1w1+uVUgK/YcQodNwoCUFNslR2pEBS0mZVZEjH/CaLS
-TNxS297iQAFbSGjdxUq04O0kHzqvcV8H46y/FDuwJXFoPfQP1hdYRhWBPGiLi4MPbXohV+Y0sNsy
-fuNK4aVScmQmkU6lkg//4LFg/RpvaFGZY40ai6XMQpubfSJj06mg/M6ekN9EGfRcWzW6FvOnm//B
-AgMBAAGjggFLMIIBRzAfBgNVHSMEGDAWgBSJgmd9xJ0mcABLtFBIfN49rgRufTAdBgNVHQ4EFgQU
-ehNOAHRbxnhjZCfBL+KgW7x5xXswDgYDVR0PAQH/BAQDAgEGMBIGA1UdEwEB/wQIMAYBAf8CAQAw
-EQYDVR0gBAowCDAGBgRVHSAAMFgGA1UdHwRRME8wTaBLoEmGR2h0dHA6Ly9jcmwudXNlcnRydXN0
-LmNvbS9VVE4tVVNFUkZpcnN0LUNsaWVudEF1dGhlbnRpY2F0aW9uYW5kRW1haWwuY3JsMHQGCCsG
-AQUFBwEBBGgwZjA9BggrBgEFBQcwAoYxaHR0cDovL2NydC51c2VydHJ1c3QuY29tL1VUTkFkZFRy
-dXN0Q2xpZW50X0NBLmNydDAlBggrBgEFBQcwAYYZaHR0cDovL29jc3AudXNlcnRydXN0LmNvbTAN
-BgkqhkiG9w0BAQUFAAOCAQEAhda+eFdVbTN/RFL+QtUGqAEDgIr7DbL9Sr/2r0FJ9RtaxdKtG3Nu
-PukmfOZMmMEwKN/L+0I8oSU+CnXW0D05hmbRoZu1TZtvryhsHa/l6nRaqNqxwPF1ei+eupN5yv7i
-kR5WdLL4jdPgQ3Ib7Y/9YDkgR/uLrzplSDyYPaUlv73vYOBJ5RbI6z9Dg/Dg7g3B080zX5vQvWBq
-szv++tTJOjwf7Zv/m0kzvkIpOYPuM2kugp1FTahp2oAbHj3SGl18R5mlmwhtEpmG1l1XBxunML5L
-SUS4kH7K0Xk467Qz+qA6XSZYnmFVGLQh1ZnV4ENAQjC+6qXnlNKw/vN1+X9u5zCCBSIwggQKoAMC
-AQICEQDlB7dXxclLEedquPvGX8CGMA0GCSqGSIb3DQEBBQUAMIGTMQswCQYDVQQGEwJHQjEbMBkG
-A1UECBMSR3JlYXRlciBNYW5jaGVzdGVyMRAwDgYDVQQHEwdTYWxmb3JkMRowGAYDVQQKExFDT01P
-RE8gQ0EgTGltaXRlZDE5MDcGA1UEAxMwQ09NT0RPIENsaWVudCBBdXRoZW50aWNhdGlvbiBhbmQg
-U2VjdXJlIEVtYWlsIENBMB4XDTEzMTIxNzAwMDAwMFoXDTE0MTIxNzIzNTk1OVowITEfMB0GCSqG
-SIb3DQEJARYQbXN3ZWV0QGFwcGxlLmNvbTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEB
-ANdvQYZRCVzc0wIYvIOn/0Pv7zUwuIvbAfM/W3FyemqZx3fdKxX4WxN2x5NC3hhBHGrUWirJH7rl
-6It12bGQ61uHAK5jsJikV5k+mOYjZaKNIKxj0uYIk3MKQmsmM8t3nddq5mp2mxwV/U7AFPTz1fgh
-dkqTb/NkHY5eA8KqksaeqwfMgoaiGVeCUhptWnXosca8PAkb+i9u5rEok5zgY+QP0IuWLJENfA4q
-dEMsH+OAwMGOv9fNCgcdapFnjeSYaj70m6qUiq446+8a2rhUsEUKQayOMgjnm2bgUuNx7pOvs/Jg
-zIlZoTz/llmE1HWREGzSjRnLWwQ98fspfeZWA+8CAwEAAaOCAeAwggHcMB8GA1UdIwQYMBaAFHoT
-TgB0W8Z4Y2QnwS/ioFu8ecV7MB0GA1UdDgQWBBTtKBJoG9kxZisTqJg4+wr12l4stjAOBgNVHQ8B
-Af8EBAMCBaAwDAYDVR0TAQH/BAIwADAgBgNVHSUEGTAXBggrBgEFBQcDBAYLKwYBBAGyMQEDBQIw
-EQYJYIZIAYb4QgEBBAQDAgUgMEYGA1UdIAQ/MD0wOwYMKwYBBAGyMQECAQEBMCswKQYIKwYBBQUH
-AgEWHWh0dHBzOi8vc2VjdXJlLmNvbW9kby5uZXQvQ1BTMFcGA1UdHwRQME4wTKBKoEiGRmh0dHA6
-Ly9jcmwuY29tb2RvY2EuY29tL0NPTU9ET0NsaWVudEF1dGhlbnRpY2F0aW9uYW5kU2VjdXJlRW1h
-aWxDQS5jcmwwgYgGCCsGAQUFBwEBBHwwejBSBggrBgEFBQcwAoZGaHR0cDovL2NydC5jb21vZG9j
-YS5jb20vQ09NT0RPQ2xpZW50QXV0aGVudGljYXRpb25hbmRTZWN1cmVFbWFpbENBLmNydDAkBggr
-BgEFBQcwAYYYaHR0cDovL29jc3AuY29tb2RvY2EuY29tMBsGA1UdEQQUMBKBEG1zd2VldEBhcHBs
-ZS5jb20wDQYJKoZIhvcNAQEFBQADggEBABg5KLQK5u9gGI75u+vYH/i6uMDKlpTILO/r/FpN2ibq
-pwAB2ln9oKvPIA1/r3o+DBC87TqnlJAiPW4ADFHpRmqlprb0Tu9p98nP/wl5tBZjEP8dY4iH0TB3
-B2r9JHwRwwJQ20CqJpuCn9dmvL215sZSqvJfluVlIcAQCLxp3ZKMIC2pNKitswdjjHduaKuj2TMe
-xrzMtrRGRtFF9pcMcnsqE2QtJUqXPV7/M4WT2yRUmI4ThPt9O9fmPH2ku52hdb6t4qXvwdQSkDHt
-xo3J/Vc/jDR2/feedDhQmG0V9j6tHsuG6bVVhcGiWnSmSoPfg13FlQwlxZTyFtiMZ2jILyoxggOu
-MIIDqgIBATCBqTCBkzELMAkGA1UEBhMCR0IxGzAZBgNVBAgTEkdyZWF0ZXIgTWFuY2hlc3RlcjEQ
-MA4GA1UEBxMHU2FsZm9yZDEaMBgGA1UEChMRQ09NT0RPIENBIExpbWl0ZWQxOTA3BgNVBAMTMENP
-TU9ETyBDbGllbnQgQXV0aGVudGljYXRpb24gYW5kIFNlY3VyZSBFbWFpbCBDQQIRAOUHt1fFyUsR
-52q4+8ZfwIYwCQYFKw4DAhoFAKCCAdkwGAYJKoZIhvcNAQkDMQsGCSqGSIb3DQEHATAcBgkqhkiG
-9w0BCQUxDxcNMTQwMjI3MTkyOTIxWjAjBgkqhkiG9w0BCQQxFgQU1/jWcmSeEPRwzoC+VOd1AbUf
-UAkwgboGCSsGAQQBgjcQBDGBrDCBqTCBkzELMAkGA1UEBhMCR0IxGzAZBgNVBAgTEkdyZWF0ZXIg
-TWFuY2hlc3RlcjEQMA4GA1UEBxMHU2FsZm9yZDEaMBgGA1UEChMRQ09NT0RPIENBIExpbWl0ZWQx
-OTA3BgNVBAMTMENPTU9ETyBDbGllbnQgQXV0aGVudGljYXRpb24gYW5kIFNlY3VyZSBFbWFpbCBD
-QQIRAOUHt1fFyUsR52q4+8ZfwIYwgbwGCyqGSIb3DQEJEAILMYGsoIGpMIGTMQswCQYDVQQGEwJH
-QjEbMBkGA1UECBMSR3JlYXRlciBNYW5jaGVzdGVyMRAwDgYDVQQHEwdTYWxmb3JkMRowGAYDVQQK
-ExFDT01PRE8gQ0EgTGltaXRlZDE5MDcGA1UEAxMwQ09NT0RPIENsaWVudCBBdXRoZW50aWNhdGlv
-biBhbmQgU2VjdXJlIEVtYWlsIENBAhEA5Qe3V8XJSxHnarj7xl/AhjANBgkqhkiG9w0BAQEFAASC
-AQCBWiThi8Q9vUB+wHXA/BFHAT/YP5mmMm42rRALGWMuTHIfgTEGkdHvZCg0FqHCD0e0ZjtDahQE
-m1xAQzTa9RfZz+tXk+DCk3MaHYUtyvq3SL4XlGjm79shvssAEsq75UHIj3YkY66INSBkv1F1lgvI
-J8zNIgFB9csMcrhFzLbJaTL+uD2y6iD9sX4GevUy5NCIEE6WPa+DvmeZqmX7pwcaWSc193zLMf1N
-vVuBO95iUMqYD9kRmZ5VvroJpCojuRpV2E/Jswb50cC92nx+zBp3Ak4UPzUYrt6oG6+piEE89/Am
-19hutfA7TxEDpjVdijcFSDaj1EvreaiwjGZXrhVmAAAAAAAA
-
---Apple-Mail=_89424305-9DBC-485D-BE32-1A962BA8F749--
+--_fbc2426a-be0d-4c23-8f7f-b085c7069461_--
