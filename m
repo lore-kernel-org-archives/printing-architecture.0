@@ -1,26 +1,14 @@
-Return-Path: <msweet@apple.com>
-MIME-version: 1.0
-Content-type: multipart/signed;
-	boundary="Apple-Mail=_A693E699-FC87-4AC7-8B62-A7050261FBD0";
-	protocol="application/pkcs7-signature"; micalg=sha1
-From: Michael Sweet <msweet@apple.com>
-In-reply-to: <CAEzcFAQOcvnoGd9Vvmc9V5Qeut3fO09AA4vANKFt6i1-gUKZDQ@mail.gmail.com>
-Date: Tue, 04 Mar 2014 20:00:42 -0500
-Message-id: <6E0B2DB2-BA81-4EDC-89A6-41D0E7937CBF@apple.com>
-References: <530CCC53.8070007@gmail.com>
-	<3F2A4315-4F2C-4BB1-BC9C-67B6F6BCD3A3@apple.com>
-	<20140226014714.GA8346@kroah.com>
-	<8E2929D6-4A60-4D27-9012-5250503D9B51@apple.com>
-	<20140226230247.GA8283@kroah.com>
-	<1A785707-19A7-43D8-8B21-98707C89AFCC@apple.com>
-	<CAEzcFASVGm8brh_=DB25Ys25d=htLjwBCUpw_sYxAYSzw0ZvyQ@mail.gmail.com>
-	<93BF1B5B-19A0-4C58-8D0D-C9B966AA44D7@apple.com>
-	<CAEzcFAS8LWcT+jH80Zeb-j+8bJDDoHoencERY7=zdBzeBSV09A@mail.gmail.com>
-	<F5FDC839-E328-4A25-AA34-AD2E3DF7DBAC@apple.com>
-	<CAEzcFAQOcvnoGd9Vvmc9V5Qeut3fO09AA4vANKFt6i1-gUKZDQ@mail.gmail.com>
-Subject: Re: [Printing-architecture] Google Summer of Code 2014 -
- IPP-over-USB printer support - Joint project idea for OpenPrinting and the
- kernel
+Return-Path: <osamu.mihara@fujixerox.co.jp>
+From: fx MIHARA OSAMU <osamu.mihara@fujixerox.co.jp>
+Date: Wed, 12 Mar 2014 13:54:25 +0900
+Message-ID: <531FE881.9030004@fujixerox.co.jp>
+References: <20131029085007.B6D0.5F9CA008@canon.co.jp>
+	<52FB3A33.6010506@fujixerox.co.jp>
+In-Reply-To: <52FB3A33.6010506@fujixerox.co.jp>
+Content-Type: multipart/signed; protocol="application/pkcs7-signature";
+	micalg=sha1; boundary="------------ms000902040708020700000701"
+MIME-Version: 1.0
+Subject: [Printing-architecture] Meeting Minutes OPJ Feb. 2014
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>,
@@ -30,215 +18,195 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Carlos Rimola <crimola@gmail.com>
-Cc: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>, Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>, Till Kamppeter <till.kamppeter@gmail.com>, kernelnewbies@kernelnewbies.org
+To: "printing-japan@lists.linux-foundation.org" <printing-japan@lists.linux-foundation.org>, "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>
 
-
---Apple-Mail=_A693E699-FC87-4AC7-8B62-A7050261FBD0
-Content-Type: multipart/alternative;
-	boundary="Apple-Mail=_7C4ADDF8-65EA-4A23-9D94-F5E8DF7F3BCD"
-
-
---Apple-Mail=_7C4ADDF8-65EA-4A23-9D94-F5E8DF7F3BCD
+--------------ms000902040708020700000701
+Content-Type: text/plain; charset=UTF-8
 Content-Transfer-Encoding: quoted-printable
-Content-Type: text/plain;
-	charset=iso-8859-1
 
-Carlos,
+Hi,
 
-On Mar 4, 2014, at 5:28 PM, Carlos Rimola <crimola@gmail.com> wrote:
-> Hello All,
->=20
-> I have a couple of "simple" follow-up questions on IPP USB =
-(IPP-over-USB) "Host device" support:
->=20
-> Is IPP USB designed to support connecting and printing from a device =
-like a tablet or smartphone (e.g., iPad, iPhone, Etc.) directly =
-connected to a printer over USB?
+Here is the meeting minutes of the last OPJ meeting.
+Sorry to delay posting.
 
-Honestly, no.  Who would want to tether their mobile device to print =
-something?
+Date: 2014-2-12 15:00-17:00 JST
+Place: Fuji Xerox R&D Squre in Yokohama Minato-Mirai
+participants: Toratani (Canon), Ohtani (BBR), Chigusa (Ricoh),
 
-Wi-Fi (and soon Wi-Fi Direct) offer ways of printing from mobile devices =
-to these same printers (most of which already have Wi-Fi and/or Ethernet =
-interfaces...)
+	Ogasawara (MIS), Owa (Fuji Xerox), Mihara (Fuji Xerox)
 
-> ...
-> Or is IPP USB designed only for Hosts like Linux or Mac acting as =
-print servers/gateways for these, and other, devices?
+(1) Successor of the Coordinator
 
-It is mainly for existing desktop/portable/personal =
-server/NAS/other-embedded usage that currently relies on the old USB =
-printer class protocol and printer drivers.  The (hopefully not too) =
-long term goal is to eliminate the need for printer drivers, much as =
-today you don't need a special driver for a USB keyboard or mouse.  (and =
-like keyboards and mice you might still get some software from the =
-vendor to provide additional functionality, but generally you'll be able =
-to just plug a printer in and print something without installing extra =
-software...)
+Making it a rotating basis
 
-For IPP USB in particular I think we'll see adoption by NAS and other =
-network boxes that already provide primitive printer sharing.
+   Canon (next) ->BBR->FX->Ricoh->Canon...
 
-_________________________________________________________
-Michael Sweet, Senior Printing System Engineer, PWG Chair
+Meeting Place: LFJ (contact Yasufuku-san, Cc to Sato-san)
+
+(2) Future Plan
+
+Meeting (offline) will be done twice a year (June and December).
+
+Printing summits are usually held in April or May.  (next: May 13 to 16)
+To review the outcome from the summits, next meeting will be in June.
+
+Till: please let us know the agenda of the meeting when it is available.
+
+UPDATE: The meeting will be shifted to August.
+
+Currently we have no major problem on Linux printing.  As to specific
+troubles, we can report them to development teams.
+
+(3) OP US/Europe
+
+Reviewed meeting minutes for Nov. 2013, and Jan 2014
+
+OP Monthly US|Europe Minutes - 13 November 2013
+ftp://ftp.pwg.org/pub/pwg/openprinting/minutes/OP-Minutes-20131113.htm
+
+OP Monthly US|Europe Minutes - 7 January 2014
+ftp://ftp.pwg.org/pub/pwg/openprinting/minutes/OP-Minutes-20140107.htm
+
+(4) Action Items
+
+- http://opfc.sourceforge.jp/ close -> Toratani-san,
+
+- Resolve PPD restriction - Ogasawara-san (cont.)
+
+- Issue - Japanese texts are corrupted in CUPS test printing (Ogasawara)
+
+  Reported as LP #1196986. No progress so far.
+
+https://bugs.launchpad.net/ubuntu/+source/cups-filters/+bug/1196986
+<https://bugs.launchpad.net/ubuntu/+source/cups-filters/+bug/1196986>
+      Till asked Lars to check.
+      Ogasawara-san checked with Saucy by not fixed yet.
+      May need to send patches...
 
 
---Apple-Mail=_7C4ADDF8-65EA-4A23-9D94-F5E8DF7F3BCD
-Content-Transfer-Encoding: quoted-printable
-Content-Type: text/html;
-	charset=iso-8859-1
 
-<html><head><meta http-equiv=3D"Content-Type" content=3D"text/html =
-charset=3Diso-8859-1"></head><body style=3D"word-wrap: break-word; =
--webkit-nbsp-mode: space; -webkit-line-break: =
-after-white-space;">Carlos,<div><br><div><div>On Mar 4, 2014, at 5:28 =
-PM, Carlos Rimola &lt;<a =
-href=3D"mailto:crimola@gmail.com">crimola@gmail.com</a>&gt; =
-wrote:</div><blockquote type=3D"cite"><div dir=3D"ltr">Hello =
-All,<div><br></div><div>I have a couple of "simple" follow-up questions =
-on IPP USB (IPP-over-USB) "Host device" support:<br><br>Is IPP USB =
-designed to support connecting and printing from a device like a tablet =
-or smartphone (e.g., iPad, iPhone, Etc.) directly connected to a printer =
-over USB?</div></div></blockquote><div><br></div>Honestly, no. &nbsp;Who =
-would want to tether their mobile device to print =
-something?</div><div><br></div><div>Wi-Fi (and soon Wi-Fi Direct) offer =
-ways of printing from mobile devices to these same printers (most of =
-which already have Wi-Fi and/or Ethernet =
-interfaces...)</div><div><br><blockquote type=3D"cite"><div dir=3D"ltr">
-<div>...</div><div>Or is IPP USB designed only for Hosts like Linux or =
-Mac acting as print servers/gateways for these, and other, =
-devices?<br></div></div></blockquote><div><br></div></div>It is mainly =
-for existing desktop/portable/personal server/NAS/other-embedded usage =
-that currently relies on the old USB printer class protocol and printer =
-drivers. &nbsp;The (hopefully not too) long term goal is to eliminate =
-the need for printer drivers, much as today you don't need a special =
-driver for a USB keyboard or mouse. &nbsp;(and like keyboards and mice =
-you might still get some software from the vendor to provide additional =
-functionality, but generally you'll be able to just plug a printer in =
-and print something without installing extra =
-software...)</div><div><br></div><div>For IPP USB in particular I think =
-we'll see adoption by NAS and other network boxes that already provide =
-primitive printer sharing.</div><div><br></div><div><div>
-<span class=3D"Apple-style-span" style=3D"border-collapse: separate; =
-color: rgb(0, 0, 0); font-family: 'Andale Mono'; font-style: normal; =
-font-variant: normal; font-weight: normal; letter-spacing: normal; =
-line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: =
-0px; text-transform: none; white-space: normal; widows: 2; word-spacing: =
-0px; -webkit-border-horizontal-spacing: 0px; =
--webkit-border-vertical-spacing: 0px; =
--webkit-text-decorations-in-effect: none; -webkit-text-size-adjust: =
-auto; -webkit-text-stroke-width: 0px;  "><span class=3D"Apple-style-span" =
-style=3D"border-collapse: separate; color: rgb(0, 0, 0); font-family: =
-'Andale Mono'; font-style: normal; font-variant: normal; font-weight: =
-normal; letter-spacing: normal; line-height: normal; orphans: 2; =
-text-align: -webkit-auto; text-indent: 0px; text-transform: none; =
-white-space: normal; widows: 2; word-spacing: 0px; =
--webkit-border-horizontal-spacing: 0px; -webkit-border-vertical-spacing: =
-0px; -webkit-text-decorations-in-effect: none; -webkit-text-size-adjust: =
-auto; -webkit-text-stroke-width: 0px;  "><div style=3D"word-wrap: =
-break-word; -webkit-nbsp-mode: space; -webkit-line-break: =
-after-white-space; =
-">_________________________________________________________<br>Michael =
-Sweet, Senior Printing System&nbsp;Engineer, PWG =
-Chair</div></span></span>
-</div>
-<br></div></body></html>=
+-- Osamu MIHARA / Fuji Xerox Co., Ltd.
 
---Apple-Mail=_7C4ADDF8-65EA-4A23-9D94-F5E8DF7F3BCD--
+  * Japanese - detected
+  * Japanese
+  * English
 
---Apple-Mail=_A693E699-FC87-4AC7-8B62-A7050261FBD0
-Content-Disposition: attachment;
-	filename=smime.p7s
-Content-Type: application/pkcs7-signature;
-	name=smime.p7s
+  * Japanese
+  * English
+
+ <javascript:void(0);>
+
+  * Japanese
+  * English
+
+--=20
+  =E4=B8=89=E5=8E=9F =E4=BF=AE // =E5=AF=8C=E5=A3=AB=E3=82=BC=E3=83=AD=E3=
+=83=83=E3=82=AF=E3=82=B9=E6=A0=AA=E5=BC=8F=E4=BC=9A=E7=A4=BE--
+  =E4=B8=89=E5=8E=9F =E4=BF=AE // =E5=AF=8C=E5=A3=AB=E3=82=BC=E3=83=AD=E3=
+=83=83=E3=82=AF=E3=82=B9=E6=A0=AA=E5=BC=8F=E4=BC=9A=E7=A4=BE--
+  =E4=B8=89=E5=8E=9F =E4=BF=AE // =E5=AF=8C=E5=A3=AB=E3=82=BC=E3=83=AD=E3=
+=83=83=E3=82=AF=E3=82=B9=E6=A0=AA=E5=BC=8F=E4=BC=9A=E7=A4=BE--
+  =E4=B8=89=E5=8E=9F =E4=BF=AE // =E5=AF=8C=E5=A3=AB=E3=82=BC=E3=83=AD=E3=
+=83=83=E3=82=AF=E3=82=B9=E6=A0=AA=E5=BC=8F=E4=BC=9A=E7=A4=BE--
+  =E4=B8=89=E5=8E=9F =E4=BF=AE // =E5=AF=8C=E5=A3=AB=E3=82=BC=E3=83=AD=E3=
+=83=83=E3=82=AF=E3=82=B9=E6=A0=AA=E5=BC=8F=E4=BC=9A=E7=A4=BE--
+  =E4=B8=89=E5=8E=9F =E4=BF=AE // =E5=AF=8C=E5=A3=AB=E3=82=BC=E3=83=AD=E3=
+=83=83=E3=82=AF=E3=82=B9=E6=A0=AA=E5=BC=8F=E4=BC=9A=E7=A4=BE--
+  =E4=B8=89=E5=8E=9F =E4=BF=AE // =E5=AF=8C=E5=A3=AB=E3=82=BC=E3=83=AD=E3=
+=83=83=E3=82=AF=E3=82=B9=E6=A0=AA=E5=BC=8F=E4=BC=9A=E7=A4=BE--
+  =E4=B8=89=E5=8E=9F =E4=BF=AE // =E5=AF=8C=E5=A3=AB=E3=82=BC=E3=83=AD=E3=
+=83=83=E3=82=AF=E3=82=B9=E6=A0=AA=E5=BC=8F=E4=BC=9A=E7=A4=BE--
+  =E4=B8=89=E5=8E=9F =E4=BF=AE // =E5=AF=8C=E5=A3=AB=E3=82=BC=E3=83=AD=E3=
+=83=83=E3=82=AF=E3=82=B9=E6=A0=AA=E5=BC=8F=E4=BC=9A=E7=A4=BE--
+  =E4=B8=89=E5=8E=9F =E4=BF=AE // =E5=AF=8C=E5=A3=AB=E3=82=BC=E3=83=AD=E3=
+=83=83=E3=82=AF=E3=82=B9=E6=A0=AA=E5=BC=8F=E4=BC=9A=E7=A4=BE--
+  =E4=B8=89=E5=8E=9F =E4=BF=AE // =E5=AF=8C=E5=A3=AB=E3=82=BC=E3=83=AD=E3=
+=83=83=E3=82=AF=E3=82=B9=E6=A0=AA=E5=BC=8F=E4=BC=9A=E7=A4=BE--
+  =E4=B8=89=E5=8E=9F =E4=BF=AE // =E5=AF=8C=E5=A3=AB=E3=82=BC=E3=83=AD=E3=
+=83=83=E3=82=AF=E3=82=B9=E6=A0=AA=E5=BC=8F=E4=BC=9A=E7=A4=BE--
+  =E4=B8=89=E5=8E=9F =E4=BF=AE // =E5=AF=8C=E5=A3=AB=E3=82=BC=E3=83=AD=E3=
+=83=83=E3=82=AF=E3=82=B9=E6=A0=AA=E5=BC=8F=E4=BC=9A=E7=A4=BE
+
+
+--------------ms000902040708020700000701
+Content-Type: application/pkcs7-signature; name="smime.p7s"
 Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="smime.p7s"
+Content-Description: S/MIME Cryptographic Signature
 
-MIAGCSqGSIb3DQEHAqCAMIACAQExCzAJBgUrDgMCGgUAMIAGCSqGSIb3DQEHAQAAoIIPJTCCBN0w
-ggPFoAMCAQICEHGS++YZX6xNEoV0cTSiGKcwDQYJKoZIhvcNAQEFBQAwezELMAkGA1UEBhMCR0Ix
-GzAZBgNVBAgMEkdyZWF0ZXIgTWFuY2hlc3RlcjEQMA4GA1UEBwwHU2FsZm9yZDEaMBgGA1UECgwR
-Q29tb2RvIENBIExpbWl0ZWQxITAfBgNVBAMMGEFBQSBDZXJ0aWZpY2F0ZSBTZXJ2aWNlczAeFw0w
-NDAxMDEwMDAwMDBaFw0yODEyMzEyMzU5NTlaMIGuMQswCQYDVQQGEwJVUzELMAkGA1UECBMCVVQx
-FzAVBgNVBAcTDlNhbHQgTGFrZSBDaXR5MR4wHAYDVQQKExVUaGUgVVNFUlRSVVNUIE5ldHdvcmsx
-ITAfBgNVBAsTGGh0dHA6Ly93d3cudXNlcnRydXN0LmNvbTE2MDQGA1UEAxMtVVROLVVTRVJGaXJz
-dC1DbGllbnQgQXV0aGVudGljYXRpb24gYW5kIEVtYWlsMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8A
-MIIBCgKCAQEAsjmFpPJ9q0E7YkY3rs3BYHW8OWX5ShpHornMSMxqmNVNNRm5pELlzkniii8efNIx
-B8dOtINknS4p1aJkxIW9hVE1eaROaJB7HHqkkqgX8pgV8pPMyaQylbsMTzC9mKALi+VuG6JG+ni8
-om+rWV6lL8/K2m2qL+usobNqqrcuZzWLeeEeaYji5kbNoKXqvgvOdjp6Dpvq/NonWz1zHyLmSGHG
-TPNpsaguG7bUMSAsvIKKjqQOpdeJQ/wWWq8dcdcRWdq6hw2v+vPhwvCkxWeM1tZUOt4KpLoDd7Nl
-yP0e03RiqhjKaJMeoYV+9Udly/hNVyh00jT/MLbu9mIwFIws6wIDAQABo4IBJzCCASMwHwYDVR0j
-BBgwFoAUoBEKIz6W8Qfs4q8p74Klf9AwpLQwHQYDVR0OBBYEFImCZ33EnSZwAEu0UEh83j2uBG59
-MA4GA1UdDwEB/wQEAwIBBjAPBgNVHRMBAf8EBTADAQH/MB0GA1UdJQQWMBQGCCsGAQUFBwMCBggr
-BgEFBQcDBDARBgNVHSAECjAIMAYGBFUdIAAwewYDVR0fBHQwcjA4oDagNIYyaHR0cDovL2NybC5j
-b21vZG9jYS5jb20vQUFBQ2VydGlmaWNhdGVTZXJ2aWNlcy5jcmwwNqA0oDKGMGh0dHA6Ly9jcmwu
-Y29tb2RvLm5ldC9BQUFDZXJ0aWZpY2F0ZVNlcnZpY2VzLmNybDARBglghkgBhvhCAQEEBAMCAQYw
-DQYJKoZIhvcNAQEFBQADggEBAJ2Vyzy4fqUJxB6/C8LHdo45PJTGEKpPDMngq4RdiVTgZTvzbRx8
-NywlVF+WIfw3hJGdFdwUT4HPVB1rbEVgxy35l1FM+WbKPKCCjKbI8OLp1Er57D9Wyd12jMOCAU9s
-APMeGmF0BEcDqcZAV5G8ZSLFJ2dPV9tkWtmNH7qGL/QGrpxp7en0zykX2OBKnxogL5dMUbtGB8SK
-N04g4wkxaMeexIud6H4RvDJoEJYRmETYKlFgTYjrdDrfQwYyyDlWjDoRUtNBpEMD9O3vMyfbOeAU
-TibJ2PU54om4k123KSZB6rObroP8d3XK6Mq1/uJlSmM+RMTQw16Hc6mYHK9/FX8wggUaMIIEAqAD
-AgECAhBtGeqnGU9qMyLmIjJ6qnHeMA0GCSqGSIb3DQEBBQUAMIGuMQswCQYDVQQGEwJVUzELMAkG
-A1UECBMCVVQxFzAVBgNVBAcTDlNhbHQgTGFrZSBDaXR5MR4wHAYDVQQKExVUaGUgVVNFUlRSVVNU
-IE5ldHdvcmsxITAfBgNVBAsTGGh0dHA6Ly93d3cudXNlcnRydXN0LmNvbTE2MDQGA1UEAxMtVVRO
-LVVTRVJGaXJzdC1DbGllbnQgQXV0aGVudGljYXRpb24gYW5kIEVtYWlsMB4XDTExMDQyODAwMDAw
-MFoXDTIwMDUzMDEwNDgzOFowgZMxCzAJBgNVBAYTAkdCMRswGQYDVQQIExJHcmVhdGVyIE1hbmNo
-ZXN0ZXIxEDAOBgNVBAcTB1NhbGZvcmQxGjAYBgNVBAoTEUNPTU9ETyBDQSBMaW1pdGVkMTkwNwYD
-VQQDEzBDT01PRE8gQ2xpZW50IEF1dGhlbnRpY2F0aW9uIGFuZCBTZWN1cmUgRW1haWwgQ0EwggEi
-MA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCShIRbS1eY1F4vi6ThQMijU1hfZmXxMk73nzJ9
-VdB4TFW3QpTg+SdxB8XGaaS5MsTxQBqQzCdWYn8XtXFpruUgG+TLY15gyqJB9mrho/+43x9IbWVD
-jCouK2M4d9+xF6zC2oIC1tQyatRnbyATj1w1+uVUgK/YcQodNwoCUFNslR2pEBS0mZVZEjH/CaLS
-TNxS297iQAFbSGjdxUq04O0kHzqvcV8H46y/FDuwJXFoPfQP1hdYRhWBPGiLi4MPbXohV+Y0sNsy
-fuNK4aVScmQmkU6lkg//4LFg/RpvaFGZY40ai6XMQpubfSJj06mg/M6ekN9EGfRcWzW6FvOnm//B
-AgMBAAGjggFLMIIBRzAfBgNVHSMEGDAWgBSJgmd9xJ0mcABLtFBIfN49rgRufTAdBgNVHQ4EFgQU
-ehNOAHRbxnhjZCfBL+KgW7x5xXswDgYDVR0PAQH/BAQDAgEGMBIGA1UdEwEB/wQIMAYBAf8CAQAw
-EQYDVR0gBAowCDAGBgRVHSAAMFgGA1UdHwRRME8wTaBLoEmGR2h0dHA6Ly9jcmwudXNlcnRydXN0
-LmNvbS9VVE4tVVNFUkZpcnN0LUNsaWVudEF1dGhlbnRpY2F0aW9uYW5kRW1haWwuY3JsMHQGCCsG
-AQUFBwEBBGgwZjA9BggrBgEFBQcwAoYxaHR0cDovL2NydC51c2VydHJ1c3QuY29tL1VUTkFkZFRy
-dXN0Q2xpZW50X0NBLmNydDAlBggrBgEFBQcwAYYZaHR0cDovL29jc3AudXNlcnRydXN0LmNvbTAN
-BgkqhkiG9w0BAQUFAAOCAQEAhda+eFdVbTN/RFL+QtUGqAEDgIr7DbL9Sr/2r0FJ9RtaxdKtG3Nu
-PukmfOZMmMEwKN/L+0I8oSU+CnXW0D05hmbRoZu1TZtvryhsHa/l6nRaqNqxwPF1ei+eupN5yv7i
-kR5WdLL4jdPgQ3Ib7Y/9YDkgR/uLrzplSDyYPaUlv73vYOBJ5RbI6z9Dg/Dg7g3B080zX5vQvWBq
-szv++tTJOjwf7Zv/m0kzvkIpOYPuM2kugp1FTahp2oAbHj3SGl18R5mlmwhtEpmG1l1XBxunML5L
-SUS4kH7K0Xk467Qz+qA6XSZYnmFVGLQh1ZnV4ENAQjC+6qXnlNKw/vN1+X9u5zCCBSIwggQKoAMC
-AQICEQDlB7dXxclLEedquPvGX8CGMA0GCSqGSIb3DQEBBQUAMIGTMQswCQYDVQQGEwJHQjEbMBkG
-A1UECBMSR3JlYXRlciBNYW5jaGVzdGVyMRAwDgYDVQQHEwdTYWxmb3JkMRowGAYDVQQKExFDT01P
-RE8gQ0EgTGltaXRlZDE5MDcGA1UEAxMwQ09NT0RPIENsaWVudCBBdXRoZW50aWNhdGlvbiBhbmQg
-U2VjdXJlIEVtYWlsIENBMB4XDTEzMTIxNzAwMDAwMFoXDTE0MTIxNzIzNTk1OVowITEfMB0GCSqG
-SIb3DQEJARYQbXN3ZWV0QGFwcGxlLmNvbTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEB
-ANdvQYZRCVzc0wIYvIOn/0Pv7zUwuIvbAfM/W3FyemqZx3fdKxX4WxN2x5NC3hhBHGrUWirJH7rl
-6It12bGQ61uHAK5jsJikV5k+mOYjZaKNIKxj0uYIk3MKQmsmM8t3nddq5mp2mxwV/U7AFPTz1fgh
-dkqTb/NkHY5eA8KqksaeqwfMgoaiGVeCUhptWnXosca8PAkb+i9u5rEok5zgY+QP0IuWLJENfA4q
-dEMsH+OAwMGOv9fNCgcdapFnjeSYaj70m6qUiq446+8a2rhUsEUKQayOMgjnm2bgUuNx7pOvs/Jg
-zIlZoTz/llmE1HWREGzSjRnLWwQ98fspfeZWA+8CAwEAAaOCAeAwggHcMB8GA1UdIwQYMBaAFHoT
-TgB0W8Z4Y2QnwS/ioFu8ecV7MB0GA1UdDgQWBBTtKBJoG9kxZisTqJg4+wr12l4stjAOBgNVHQ8B
-Af8EBAMCBaAwDAYDVR0TAQH/BAIwADAgBgNVHSUEGTAXBggrBgEFBQcDBAYLKwYBBAGyMQEDBQIw
-EQYJYIZIAYb4QgEBBAQDAgUgMEYGA1UdIAQ/MD0wOwYMKwYBBAGyMQECAQEBMCswKQYIKwYBBQUH
-AgEWHWh0dHBzOi8vc2VjdXJlLmNvbW9kby5uZXQvQ1BTMFcGA1UdHwRQME4wTKBKoEiGRmh0dHA6
-Ly9jcmwuY29tb2RvY2EuY29tL0NPTU9ET0NsaWVudEF1dGhlbnRpY2F0aW9uYW5kU2VjdXJlRW1h
-aWxDQS5jcmwwgYgGCCsGAQUFBwEBBHwwejBSBggrBgEFBQcwAoZGaHR0cDovL2NydC5jb21vZG9j
-YS5jb20vQ09NT0RPQ2xpZW50QXV0aGVudGljYXRpb25hbmRTZWN1cmVFbWFpbENBLmNydDAkBggr
-BgEFBQcwAYYYaHR0cDovL29jc3AuY29tb2RvY2EuY29tMBsGA1UdEQQUMBKBEG1zd2VldEBhcHBs
-ZS5jb20wDQYJKoZIhvcNAQEFBQADggEBABg5KLQK5u9gGI75u+vYH/i6uMDKlpTILO/r/FpN2ibq
-pwAB2ln9oKvPIA1/r3o+DBC87TqnlJAiPW4ADFHpRmqlprb0Tu9p98nP/wl5tBZjEP8dY4iH0TB3
-B2r9JHwRwwJQ20CqJpuCn9dmvL215sZSqvJfluVlIcAQCLxp3ZKMIC2pNKitswdjjHduaKuj2TMe
-xrzMtrRGRtFF9pcMcnsqE2QtJUqXPV7/M4WT2yRUmI4ThPt9O9fmPH2ku52hdb6t4qXvwdQSkDHt
-xo3J/Vc/jDR2/feedDhQmG0V9j6tHsuG6bVVhcGiWnSmSoPfg13FlQwlxZTyFtiMZ2jILyoxggOu
-MIIDqgIBATCBqTCBkzELMAkGA1UEBhMCR0IxGzAZBgNVBAgTEkdyZWF0ZXIgTWFuY2hlc3RlcjEQ
-MA4GA1UEBxMHU2FsZm9yZDEaMBgGA1UEChMRQ09NT0RPIENBIExpbWl0ZWQxOTA3BgNVBAMTMENP
-TU9ETyBDbGllbnQgQXV0aGVudGljYXRpb24gYW5kIFNlY3VyZSBFbWFpbCBDQQIRAOUHt1fFyUsR
-52q4+8ZfwIYwCQYFKw4DAhoFAKCCAdkwGAYJKoZIhvcNAQkDMQsGCSqGSIb3DQEHATAcBgkqhkiG
-9w0BCQUxDxcNMTQwMzA1MDEwMDQyWjAjBgkqhkiG9w0BCQQxFgQU8yBJrO3wejEEH0gG4jnHdKJ7
-0U4wgboGCSsGAQQBgjcQBDGBrDCBqTCBkzELMAkGA1UEBhMCR0IxGzAZBgNVBAgTEkdyZWF0ZXIg
-TWFuY2hlc3RlcjEQMA4GA1UEBxMHU2FsZm9yZDEaMBgGA1UEChMRQ09NT0RPIENBIExpbWl0ZWQx
-OTA3BgNVBAMTMENPTU9ETyBDbGllbnQgQXV0aGVudGljYXRpb24gYW5kIFNlY3VyZSBFbWFpbCBD
-QQIRAOUHt1fFyUsR52q4+8ZfwIYwgbwGCyqGSIb3DQEJEAILMYGsoIGpMIGTMQswCQYDVQQGEwJH
-QjEbMBkGA1UECBMSR3JlYXRlciBNYW5jaGVzdGVyMRAwDgYDVQQHEwdTYWxmb3JkMRowGAYDVQQK
-ExFDT01PRE8gQ0EgTGltaXRlZDE5MDcGA1UEAxMwQ09NT0RPIENsaWVudCBBdXRoZW50aWNhdGlv
-biBhbmQgU2VjdXJlIEVtYWlsIENBAhEA5Qe3V8XJSxHnarj7xl/AhjANBgkqhkiG9w0BAQEFAASC
-AQCZgndurfG08NKVF7XVifzwGmIUlNiC53PPemay9J4P9YX9vhcp+bonBixu3L6r5a6frIRnbWq+
-vjEkUP+k+gdAarpgLE9Q7/TQKxjvV/eg+wAkCWaaskBKAe8TRBDYVeeaAJ7B3OyT5CVEnBB+Vudt
-N/rminZD7vLrEWYuLlXq7KgWMLOtFzQ6gljzhjE8r8JfhEDGVugasgAnFsVEHHyXQyqPTz+Mf1NJ
-PgOXV85PTTiIXW1EgNcqYCZNCpzCQFZq9AgsOuBHgvDQpaljpLFdY96lYTaJ6SOR4REv9Ctr6wh7
-BkDW/iJe2Q7PGeamraKABfSGUopPvpx0plOO0Ta9AAAAAAAA
-
---Apple-Mail=_A693E699-FC87-4AC7-8B62-A7050261FBD0--
+MIAGCSqGSIb3DQEHAqCAMIACAQExCzAJBgUrDgMCGgUAMIAGCSqGSIb3DQEHAQAAoIIMdzCC
+BBEwggL5oAMCAQICCQF7rYNftJH9JjANBgkqhkiG9w0BAQUFADBRMQswCQYDVQQGEwJKUDET
+MBEGA1UEChMKRnVqaSBYZXJveDEtMCsGA1UEAxMkRnVqaSBYZXJveCBDZXJ0aWZpY2F0aW9u
+IEF1dGhvcml0eSAyMB4XDTEyMDYyMDE1MDAwMFoXDTIxMDMzMTEwNDMwNFowQTELMAkGA1UE
+BhMCSlAxEzARBgNVBAoTCkZ1amkgWGVyb3gxHTAbBgNVBAMTFEZ1amkgWGVyb3ggWG5ldCBD
+QSAyMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAx3xQ2oJM8Rcz/2l78owe6gy6
+h7UQ2TQopyMNhGyTEdwFXKwZGm+HDOkO6fXVDP14+8YUOcXDNxqcaAvIYItl/B6L0lFDs/b2
+3uzzABFM0rLiH/ZOHrQsB56JppPZTK54JSF9lvi49GIVr+XGjm7DKmov/d2/ioi4wZDPhy/Z
+qrbARMGlQHy8cKrpMCdU7dxiW6ZYwYR6emyJYWLAnbsz9whuFP9rLOsFHx1nfqErNfJ85nSy
+CHCtmnTEeqfVze9opQCz06NRXnVlXLf3Wikf103ot2IRLYrFJooFmLGPGtCc40koOBhdzUSd
+puAMHK0L2FY7VS5hdVFBYyn+/GCxRQIDAQABo4H7MIH4MAsGA1UdDwQEAwIBBjAdBgNVHQ4E
+FgQUkz0798WvXsYFzoKQCL7LwFCW0/IwHwYDVR0jBBgwFoAUAbrUkmEPtxbp6DMUiuRcicRc
+sZYwWQYDVR0gBFIwUDBOBgsrBgEEAYIpAQUBDDA/MD0GCCsGAQUFBwIBFjFodHRwOi8vd3d3
+LmZ1aml4ZXJveC5jby5qcC9wcm9kdWN0L2NhcC9meGNhMi5odG1sMBIGA1UdEwEB/wQIMAYB
+Af8CAQAwOgYDVR0fBDMwMTAvoC2gK4YpaHR0cDovL2NhcHMuZnVqaXhlcm94LmNvLmpwL2Ny
+bC9meGNhMi5jcmwwDQYJKoZIhvcNAQEFBQADggEBAGQ9q0j09jBY0K0J/QWy6WGHkLE+qSVD
+So2JPcg4H7HdWzcMOJO92FSJcG13g/IhSfVwzSJCZ+ElE+YUXNKoiBBq/kC7t9g7CzVu0dO2
+bLkYvG/ioWR6/7P4tP67+u8U7O992PNOJK9/dXTSwv3OEJgd+snErm0y+/sub7Axv4ifsK65
+RNucDjr0lWSTWL5Qu9Ptrj+l163aYoz7raL5EWNvkbc1jgvIKUMT02qrxEhfGtW6sUcEBWVX
+DciYK81xxkD98YrabDh5eEusjGKMpLpJh4uzuWvSNs3QDuaFTTYERV59EzmpIgdPu8chPnTJ
+kgyzJ10Tzw07uSI6PCXNheUwggQoMIIDEKADAgECAgQSubDXMA0GCSqGSIb3DQEBBQUAMFAx
+CzAJBgNVBAYTAkpQMRgwFgYDVQQKEw9TRUNPTSBUcnVzdC5uZXQxJzAlBgNVBAsTHlNlY3Vy
+aXR5IENvbW11bmljYXRpb24gUm9vdENBMTAeFw0xMTAzMzExMDQzMDRaFw0yMTAzMzExMDQz
+MDRaMFExCzAJBgNVBAYTAkpQMRMwEQYDVQQKEwpGdWppIFhlcm94MS0wKwYDVQQDEyRGdWpp
+IFhlcm94IENlcnRpZmljYXRpb24gQXV0aG9yaXR5IDIwggEiMA0GCSqGSIb3DQEBAQUAA4IB
+DwAwggEKAoIBAQDFRB7Xl/6BF8rrsy2caSd0H2s8CNx5LrzwR7zq6z6M+z2X7PgUHu0RUi1F
+gJuNEo4kTcrwMGdYYz+YU7ipSXVsGND3CH92Anq3Bbz3PdhuPWx8dBPnc30WiOHbNjM68MEP
+P4IO6U2Cj9C4CJLig/nUgOqa1QGMb+7obGbms8sgtrRjbSIcsjY11s/7GLP3kiw48mKBAmX7
+wQRzc8uAmGHhvbsXKMfbf0xASnNVmts8l5sSzE9eRjguXKEao2tkjVCOhrRHdbAiUS914M3O
+vIUsf2j7+GQST4MVQHg8SlnAO9FWSyzA0RhZNcnC1xOou+1FJdRJ95JthuPLzIlBZunLAgMB
+AAGjggEHMIIBAzAdBgNVHQ4EFgQUAbrUkmEPtxbp6DMUiuRcicRcsZYwHwYDVR0jBBgwFoAU
+oHNJmWjchVtl45soL1efvTO8B0gwEgYDVR0TAQH/BAgwBgEB/wIBATAOBgNVHQ8BAf8EBAMC
+AQYwSQYDVR0fBEIwQDA+oDygOoY4aHR0cDovL3JlcG9zaXRvcnkuc2Vjb210cnVzdC5uZXQv
+U0MtUm9vdDEvU0NSb290MUNSTC5jcmwwUgYDVR0gBEswSTBHBgoqgwiMmxtkhwUBMDkwNwYI
+KwYBBQUHAgEWK2h0dHBzOi8vcmVwb3NpdG9yeS5zZWNvbXRydXN0Lm5ldC9TQy1Sb290MS8w
+DQYJKoZIhvcNAQEFBQADggEBALOr+Mzp/IRBwq5C94PzZqI+dirqN6xvo7G8DWbfRgtlTvO5
+6soSZV41gmTiU1cJ5ryHVpeNkYg3jKEkj+ILbgy5CE0oa9vPNpBn4g1gL1Aouz8fEidIq/UZ
+mpKh/xR084LO5L+SWWt1QqXAps6h99k0xgBxZEPXDMB+zK+JOAYe+nLGk59jPxTOct3We+E/
+WjshVx8UAJgnuVRMk6RyMMtBO3ebpb4P9mVj+Vs67C7rXUqUq8gCt2jLmn/0LAS0NTOHAbJJ
+OlNcACD07C6DYqVsX0c5NhHCZIUB1V0AJtJ4ltcvI0tQNF8wzSi2r64zkaBRSnvug0cI5FuS
+DU6Va7YwggQyMIIDGqADAgECAgh7dCFeST9GIjANBgkqhkiG9w0BAQUFADBBMQswCQYDVQQG
+EwJKUDETMBEGA1UEChMKRnVqaSBYZXJveDEdMBsGA1UEAxMURnVqaSBYZXJveCBYbmV0IENB
+IDIwHhcNMTIxMjEyMjMyOTM2WhcNMTQxMjExMDE0NDE2WjBJMQswCQYDVQQGEwJKUDEdMBsG
+A1UEChMURnVqaSBYZXJveCBDby4sIEx0ZC4xGzAZBgNVBAMTEjI4MDEzIE9zYW11IE1paGFy
+YTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBALjRNu8QxgYLgX2HlsIHF6DqyC8d
+kOwYZWiabAjwEO9TL18xkXdanZyY6Zu9uHu0LjrrzSLSxwAsToJ5W0GF5TQ44W5NuYhqwzNA
+fjOlwR40ysQQvTWgvlRJcWFzZ6/Ba2wC31tVXU6odAU4iZjDxY4CZY9k56CGTLmpvL+xSkKZ
+l27gYbl+BOzci2hIGpE/L8UgIy5O0sXAosJ0E4lIc2FB20ctKpgjQ+Vrg4SiZlf7J0SF+8xF
+QD/pI4Sfk9ijXRBhQxsWRFxGuBhHwYPfVOGbKWwXJ/RYxp1K3tHkJOUW+JenSLW1G/9srafW
+dl98IaOUbqz9eLjpr+tNsyrezqsCAwEAAaOCASQwggEgMB8GA1UdIwQYMBaAFJM9O/fFr17G
+Bc6CkAi+y8BQltPyMAkGA1UdEwQCMAAwPgYDVR0fBDcwNTAzoDGgL4YtaHR0cDovL2NhcHMu
+ZnVqaXhlcm94LmNvLmpwL2NybC9meHhuZXRjYTIuY3JsMB0GA1UdJQQWMBQGCCsGAQUFBwME
+BggrBgEFBQcDAjALBgNVHQ8EBAMCBaAwXQYDVR0gBFYwVDBSBgsrBgEEAYIpAQUBETBDMEEG
+CCsGAQUFBwIBFjVodHRwOi8vd3d3LmZ1aml4ZXJveC5jby5qcC9wcm9kdWN0L2NhcC9meHhu
+ZXRjYTIuaHRtbDAnBgNVHREEIDAegRxvc2FtdS5taWhhcmFAZnVqaXhlcm94LmNvLmpwMA0G
+CSqGSIb3DQEBBQUAA4IBAQAPW/Tx7M2sQVZ9CR0tcbRyI8tOVB1Qh62CbTbzBGsZKuLpSlqf
+IyN1LQvgnO5nub+I5HiEVPwcYEcrxt7qiCv2ivyMgk64WJ5+b7edlfSTk0QF1DURUSxCf/ez
+wggHweSD+GC6OTsFjHycxHcWaM6sG/UXJtQJRRNwRB+Iu25/5JdB4mhyEuhUbS2hQ51fH1+V
+erQ/R3YCjLi4bmYtOfJqEkVuO3uy9chApgkA/g1+oidklrz24Dlh2aw5TGho4RURwQ2myeNx
+2fdViaDBTd5jlpDNnTX9uU98k/Zb2pvzhcXm8WDJwmL2xYwSPbnV2RhNsj48fH1YSqkECyWj
+CpGGMYIDATCCAv0CAQEwTTBBMQswCQYDVQQGEwJKUDETMBEGA1UEChMKRnVqaSBYZXJveDEd
+MBsGA1UEAxMURnVqaSBYZXJveCBYbmV0IENBIDICCHt0IV5JP0YiMAkGBSsOAwIaBQCgggGJ
+MBgGCSqGSIb3DQEJAzELBgkqhkiG9w0BBwEwHAYJKoZIhvcNAQkFMQ8XDTE0MDMxMjA0NTQy
+NVowIwYJKoZIhvcNAQkEMRYEFEBZPUaTmCeDdj0bGcQrZZ5PwsRDMFwGCSsGAQQBgjcQBDFP
+ME0wQTELMAkGA1UEBhMCSlAxEzARBgNVBAoTCkZ1amkgWGVyb3gxHTAbBgNVBAMTFEZ1amkg
+WGVyb3ggWG5ldCBDQSAyAgh7dCFeST9GIjBeBgsqhkiG9w0BCRACCzFPoE0wQTELMAkGA1UE
+BhMCSlAxEzARBgNVBAoTCkZ1amkgWGVyb3gxHTAbBgNVBAMTFEZ1amkgWGVyb3ggWG5ldCBD
+QSAyAgh7dCFeST9GIjBsBgkqhkiG9w0BCQ8xXzBdMAsGCWCGSAFlAwQBKjALBglghkgBZQME
+AQIwCgYIKoZIhvcNAwcwDgYIKoZIhvcNAwICAgCAMA0GCCqGSIb3DQMCAgFAMAcGBSsOAwIH
+MA0GCCqGSIb3DQMCAgEoMA0GCSqGSIb3DQEBAQUABIIBAGsV2Zs02lQnXq1QfuEnBJcWuX+w
+VrvxEQ5YHIu84GsJL4ML59rlR8ifuzc5cLWfF642v/lpqi8eu2+HGOycuRO/KRKqNH3xLLcN
+y5N8LRLg/l5ejhgkCB2MlSd1i0abgDcRF1laUZvHolRclVK3I+SdISH1YqRjusyaYgxwYVkz
+HypEnm7tWjXV2ys03Xd3MCBlMgOdSGUQ/4WvcuTo0F0NJ1bF4jNPutZ/AcAUPKR7UdrOD6M2
+19I0w5cYDWr9DgNE4F1U0X8ARxyGyXpj7PfWeRLu+nIPnFEyjELzbFjso4oAt/HxLZevtnMR
+nPrp3OJDe3qDtxY3nu9JHb1IQP4AAAAAAAA=
+--------------ms000902040708020700000701--
