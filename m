@@ -1,24 +1,17 @@
-Return-Path: <till.kamppeter@gmail.com>
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20120113;
-	h=message-id:date:from:user-agent:mime-version:to:subject:references
-	:in-reply-to:content-type:content-transfer-encoding;
-	bh=rxVqS41NQ2jzyVgAzsqc0bjmVxY5ueV8DFjEg+HpURE=;
-	b=rFMPTMa1jcqaJjoxpf64EIhQKqTFMSa/8CWylD/3XSvPoxQUBjm4i+niUcPwgPE82R
-	dMFSGJebKTWxtXkri4Fl6Lj1phEDLfS0Oq4mVof4D7FD5xgoNBlaX9mTXF0at5g5MrEZ
-	37S61qtTU6mBQVzATFRRlyy22qRxcpRXPJXfKxtyh1Pghnaxnx1dEuZIcB7AqM2HZymc
-	ojC5aKcUvo0dkxFkfsPBGPnq/5yKDRoZNqo+aSZHTGj9szaVHW2a+6JoX3n9ygX9UTgM
-	1BbdnJfzXW7Up1vk34m7SE9KBYhQ/AMEvmSe5iMbMClGJpKSnFtQVUpJPMedbfzBRZVc
-	zD3A==
-Message-ID: <537E2388.9070002@gmail.com>
-Date: Thu, 22 May 2014 18:19:20 +0200
-From: Till Kamppeter <till.kamppeter@gmail.com>
+Return-Path: <cloos@jhcloos.com>
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=jhcloos.com;
+	s=ore14; t=1401529226;
+	bh=GPUU1MMCUwrImm1uqy12r1QtzOgVHd12VhHFcgiIXHs=;
+	h=From:To:Subject:Date:From;
+	b=dZLMPqQYqGnjzyQxkNqT2FzNNAtoMrdfDrDUZznQCwF0XSKNihbB80/L2Zu70Sgn7
+	PJddkL0hrQGUzY1CCHt4nQwhKRCbz5xYhcCBjnEVyblDKKjgfcZrneJtrXdVqmkyyf
+	CeukQ1HgZX6JWlG9pR4enmGhVrA4FnrbnEZRc1kA=
+From: James Cloos <cloos@jhcloos.com>
+Date: Sat, 31 May 2014 05:30:35 -0400
+Message-ID: <m3wqd2b8h7.fsf@carbon.jhcloos.org>
 MIME-Version: 1.0
-References: <e395be80811270817n502ccd16wf6cc90f85364f5ae@mail.gmail.com>
-In-Reply-To: <e395be80811270817n502ccd16wf6cc90f85364f5ae@mail.gmail.com>
-Content-Type: text/plain; charset=UTF-8
-Content-Transfer-Encoding: 7bit
-Subject: [Printing-architecture] Last OP Meeting - Tue - 20 May 2014 - The
-	Recording
+Content-Type: text/plain
+Subject: [Printing-architecture] pwgtoraster vs calibrated spaces
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>,
@@ -28,20 +21,38 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Open Printing <printing-architecture@lists.linux-foundation.org>, Printing-japan <printing-japan@lists.linux-foundation.org>
+To: printing-architecture@lists.linux-foundation.org
 
-Hi,
+I was wrong about sGray.  It turns out that sGray is not defined as
+having the same curve as sRGB, but rather it always has gamma 2.2.
 
-I have uploaded the recording of the last OpenPrinting meeting to the
-OpenPrinting server:
+The cupsraster document says srgb gamma/whitepoint, and the pwg raster
+doc says srgb grayscale.  But everything else I've found says 2.2.
+And it seems a D50 illuminate.
 
-http://www.openprinting.org/download/meetingnotes/op-telecons/OP-Meeting-20140520.mp3
+That being said, this colorspace dictionary:
 
-In general, recorded meetings I will upload to
+[ /CalGray 
+  <<  /WhitePoint [ 0.96420288 1.0 0.82490540 ] 
+      /Gamma 2.2 
+  >> 
+]
 
-http://www.openprinting.org/download/meetingnotes/
+in stead of /DeviceGray should work for converting sGray pages to pdf.
 
-   Till
+For AdobeRGB, you can use this:
 
-P. S.: The MP3 is 12 MB long, 35 minutes of talking.
+[ /CalRGB
+  << /WhitePoint [ 0.95045471 1.0 1.08905029 ]
+     /Gamma [ 2.2 2.2 2.2 ]
+  >>
+endobj
 
+For sRGB, though, you'll have to embed the icc file.
+
+AFAICT, put the space in an object and specify a ref to that object
+where you currently specify /DeviceRGB, usw.
+
+-JimC
+--
+James Cloos <cloos@jhcloos.com>         OpenPGP: 0x997A9F17ED7DAEA6
