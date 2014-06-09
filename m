@@ -1,14 +1,20 @@
-Return-Path: <ku.b-list@gmx.de>
-Message-ID: <53905B8C.5090906@gmx.de>
-Date: Thu, 05 Jun 2014 13:59:08 +0200
-From: Kai-Uwe Behrmann <ku.b-list@gmx.de>
+Return-Path: <blueroofmusic@gmail.com>
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20120113;
+	h=mime-version:from:date:message-id:subject:to:content-type;
+	bh=vXR2rQwz55UJhUHbOMD6JuAT6khJvK4LWuWPPisXoh0=;
+	b=zXv2QW7GoKdo/UdF4nJZnzxrO3pU+V8HVNL7VoNyLuD9eQwzLu2EHr6c8WVh4C7T7q
+	NhAZtUR1PQP0501zv+GnAZKtMdN0Xo2hZ8JY1hPPRYj3HfjUZzWnJfjqB9tP/8/lYAD8
+	FUrR/nsL2/LOo3Ln20C2ejn558qlhstvVH97+0peXT1QiyqENENavaFta1eerKn2yusr
+	Wbuu1LnsdK1m9jMAFcOJiaDKJT+hCECZ9xbc4PGGkh583lTENncwG77vlfAHh+U0dYTl
+	hf8FFJCg2pidsag3RSaQmdHGmdVNdYIeqQRNotK9144vvEkJo89JQjt+feu6gc9M0LIu
+	Q9Jw==
 MIME-Version: 1.0
-References: <m3wqd2b8h7.fsf@carbon.jhcloos.org>	<m3oayc85fp.fsf@carbon.jhcloos.org>	<750B2F70-F6EC-42C6-93A9-C552193EFE8E@apple.com>	<m361kj88z0.fsf@carbon.jhcloos.org>	<3E7B815C-6CBE-4A7C-91B7-6212130BA254@apple.com>	<m3zjhv6sle.fsf@carbon.jhcloos.org>	<m38upe4ya7.fsf@carbon.jhcloos.org>
-	<538DB6C0.60507@gmx.de> <m3k38v1zg7.fsf@carbon.jhcloos.org>
-In-Reply-To: <m3k38v1zg7.fsf@carbon.jhcloos.org>
-Content-Type: multipart/alternative;
-	boundary="------------060506070407050301030607"
-Subject: Re: [Printing-architecture] pwgtoraster vs calibrated spaces
+From: Ira McDonald <blueroofmusic@gmail.com>
+Date: Sun, 8 Jun 2014 21:29:01 -0400
+Message-ID: <CAN40gStGTnZpvh4iOc=9RrRo_NacmK5sJahh9ZyFRAiQx2YFJg@mail.gmail.com>
+Content-Type: multipart/alternative; boundary=001a1134cb12024f9104fb5d24b9
+Subject: [Printing-architecture] REMINDER: OP US/Europe - Tuesday 10 June
+	2014
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>,
@@ -18,110 +24,92 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: James Cloos <cloos@jhcloos.com>
-Cc: printing-architecture@lists.linux-foundation.org
+To: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>, Ira McDonald <blueroofmusic@gmail.com>, Till Kamppeter <till.kamppeter@gmail.com>, Daniel Dressler <danieru.dressler@gmail.com>
 
-This is a multi-part message in MIME format.
---------------060506070407050301030607
-Content-Type: text/plain; charset=ISO-8859-15
-Content-Transfer-Encoding: 7bit
+--001a1134cb12024f9104fb5d24b9
+Content-Type: text/plain; charset=UTF-8
 
-Am 05.06.2014 11:23, schrieb James Cloos:
->>>>>> "KB" == Kai-Uwe Behrmann <ku.b-list@gmx.de> writes:
-> KB> Data Color Space: Unknown 'sGra' = 73477261
->
-> So Data Color Space is a 32bit int, then?
+Hi,
 
-Yes, big endian.
-http://www.color.org/ICC_Minor_Revision_for_Web.pdf
-6.1.5 Color Space signature
-grayData
-'GRAY'
-47524159h
-uInt32Number
+Reminder of our next OP US/Europe call this Tuesday - main topic
+is joint PWG / Open Printing Summit in August.
 
->
-> Fixed.
->
-> As I wrote, I based this on the xml conversion of the sRGB shipped with
-> Argyll.
->
-> Are the viewingConditionsType and measurementType sections of value?
+June 2014 - US/Europe - OP Monthly Meeting
+    - NEW DAY & TIME
+    - Tuesday 10 June 2014, Daytime (moved from 3 June)
+      - US
+        10am in San Francisco - US PDT (Pacific Daylight Time)
+        11am in Colorado - US MDT (Mountain Daylight Time)
+        12pm in Chicago - US CDT (Central Daylight Time)
+        1pm in New York - US EDT (Eastern Daylight Time)
+      - Europe
+        7pm in Berlin - CEST (Central European Summer Time)
 
-Not many software uses these tags. Can not test. Otherwiese they should
-be fine in plain copying.
+    * Main Number (Till Kamppeter, LF, leader)
+      International: +1-619-326-2730 (new number)
+      Access Code:   491659#
 
-kind regards
-Kai-Uwe
+Cheers,
+- Ira
 
---------------060506070407050301030607
-Content-Type: text/html; charset=ISO-8859-15
-Content-Transfer-Encoding: 7bit
+Ira McDonald (Musician / Software Architect)
+Co-Chair - TCG Trusted Mobility Solutions WG
+Chair - Linux Foundation Open Printing WG
+Secretary - IEEE-ISTO Printer Working Group
+Co-Chair - IEEE-ISTO PWG Internet Printing Protocol WG
+IETF Designated Expert - IPP & Printer MIB
+Blue Roof Music / High North Inc
+http://sites.google.com/site/blueroofmusic
+http://sites.google.com/site/highnorthinc
+mailto: blueroofmusic@gmail.com
+Winter  579 Park Place  Saline, MI  48176  734-944-0094
+Summer  PO Box 221  Grand Marais, MI 49839  906-494-2434
 
-<html>
-  <head>
-    <meta content="text/html; charset=ISO-8859-15"
-      http-equiv="Content-Type">
-  </head>
-  <body text="#000000" bgcolor="#FFFFFF">
-    <div class="moz-cite-prefix">Am 05.06.2014 11:23, schrieb James
-      Cloos:<br>
-    </div>
-    <blockquote cite="mid:m3k38v1zg7.fsf@carbon.jhcloos.org" type="cite">
-      <blockquote type="cite">
-        <blockquote type="cite">
-          <blockquote type="cite">
-            <blockquote type="cite">
-              <blockquote type="cite">
-                <pre wrap="">"KB" == Kai-Uwe Behrmann <a class="moz-txt-link-rfc2396E" href="mailto:ku.b-list@gmx.de">&lt;ku.b-list@gmx.de&gt;</a> writes:
-</pre>
-              </blockquote>
-            </blockquote>
-          </blockquote>
-        </blockquote>
-      </blockquote>
-      <pre wrap="">
-KB&gt; Data Color Space: Unknown 'sGra' = 73477261
+--001a1134cb12024f9104fb5d24b9
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
 
-So Data Color Space is a 32bit int, then?</pre>
-    </blockquote>
-    <br>
-    Yes, big endian.<br>
-    <a class="moz-txt-link-freetext" href="http://www.color.org/ICC_Minor_Revision_for_Web.pdf">http://www.color.org/ICC_Minor_Revision_for_Web.pdf</a><br>
-    6.1.5 Color Space signature<br>
-    <div dir="ltr" style="font-size: 16.4px; font-family: sans-serif;
-      left: 181.667px; top: 954.866px; transform: rotate(0deg)
-      scale(0.958176, 1); transform-origin: 0% 0% 0px;" data-angle="0"
-      data-font-name="Helvetica" data-canvas-width="68.03047841758728">grayData</div>
-    <div dir="ltr" style="font-size: 16.4px; font-family: sans-serif;
-      left: 601.667px; top: 954.866px; transform: rotate(0deg)
-      scale(1.07116, 1); transform-origin: 0% 0% 0px;" data-angle="0"
-      data-font-name="Helvetica" data-canvas-width="54.70055872764588">&#8216;GRAY&#8217;</div>
-    <div dir="ltr" style="font-size: 16.4px; font-family: sans-serif;
-      left: 721.667px; top: 954.866px; transform: rotate(0deg)
-      scale(0.924486, 1); transform-origin: 0% 0% 0px;" data-angle="0"
-      data-font-name="Helvetica" data-canvas-width="83.2037580646515">47524159h<br>
-      uInt32Number<br>
-    </div>
-    <br>
-    <blockquote cite="mid:m3k38v1zg7.fsf@carbon.jhcloos.org" type="cite">
-      <pre wrap="">
+<div dir=3D"ltr"><div><div><div>Hi,<br><br></div>Reminder of our next OP US=
+/Europe call this Tuesday - main topic<br></div><div>is joint PWG / Open Pr=
+inting Summit in August.<br></div><div><br>June 2014 - US/Europe - OP Month=
+ly Meeting<br>
 
-Fixed.
+=C2=A0=C2=A0=C2=A0 - NEW DAY &amp; TIME<br>=C2=A0=C2=A0=C2=A0 - Tuesday 10 =
+June 2014, Daytime (moved from 3 June)<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 - =
+US<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 10am in San Francisco - US=
+ PDT (Pacific Daylight Time)<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 =
+11am in Colorado - US MDT (Mountain Daylight Time)<br>
 
-As I wrote, I based this on the xml conversion of the sRGB shipped with
-Argyll.
+=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 12pm in Chicago - US CDT (Centra=
+l Daylight Time)<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 1pm in New Y=
+ork - US EDT (Eastern Daylight Time)<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 - Eu=
+rope<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 7pm in Berlin - CEST (Ce=
+ntral European Summer Time)<br><br>=C2=A0=C2=A0=C2=A0 * Main Number (Till K=
+amppeter, LF, leader)<br>
 
-Are the viewingConditionsType and measurementType sections of value?
-</pre>
-    </blockquote>
-    <br>
-    Not many software uses these tags. Can not test. Otherwiese they
-    should be fine in plain copying.<br>
-    <br>
-    kind regards<br>
-    Kai-Uwe<br>
-  </body>
-</html>
+=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 International: +1-619-326-2730 (new number)<=
+br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 Access Code:=C2=A0=C2=A0 491659#<br><br><=
+/div>Cheers,<br></div>- Ira<br><br clear=3D"all"><div><div><div><div><div><=
+div dir=3D"ltr">Ira McDonald (Musician / Software Architect)<br>
 
---------------060506070407050301030607--
+Co-Chair - TCG Trusted Mobility Solutions WG<br>Chair - Linux Foundation Op=
+en Printing WG<br>Secretary - IEEE-ISTO Printer Working Group<br>Co-Chair -=
+ IEEE-ISTO PWG Internet Printing Protocol WG<br>IETF Designated Expert - IP=
+P &amp; Printer MIB<br>
+
+Blue Roof Music / High North Inc<br><a style=3D"color:rgb(51,51,255)" href=
+=3D"http://sites.google.com/site/blueroofmusic" target=3D"_blank">http://si=
+tes.google.com/site/blueroofmusic</a><br><a style=3D"color:rgb(102,0,204)" =
+href=3D"http://sites.google.com/site/highnorthinc" target=3D"_blank">http:/=
+/sites.google.com/site/highnorthinc</a><br>
+
+mailto: <a href=3D"mailto:blueroofmusic@gmail.com" target=3D"_blank">bluero=
+ofmusic@gmail.com</a><br>Winter=C2=A0 579 Park Place=C2=A0 Saline, MI=C2=A0=
+ 48176=C2=A0 734-944-0094<br>Summer=C2=A0 PO Box 221=C2=A0 Grand Marais, MI=
+ 49839=C2=A0 906-494-2434<br><br><div style=3D"display:inline">
+
+</div><div style=3D"display:inline"></div><div style=3D"display:inline"></d=
+iv><div></div><div></div><div></div><div></div></div></div>
+</div></div></div></div></div>
+
+--001a1134cb12024f9104fb5d24b9--
