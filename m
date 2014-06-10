@@ -1,20 +1,19 @@
 Return-Path: <blueroofmusic@gmail.com>
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20120113;
 	h=mime-version:from:date:message-id:subject:to:content-type;
-	bh=vXR2rQwz55UJhUHbOMD6JuAT6khJvK4LWuWPPisXoh0=;
-	b=zXv2QW7GoKdo/UdF4nJZnzxrO3pU+V8HVNL7VoNyLuD9eQwzLu2EHr6c8WVh4C7T7q
-	NhAZtUR1PQP0501zv+GnAZKtMdN0Xo2hZ8JY1hPPRYj3HfjUZzWnJfjqB9tP/8/lYAD8
-	FUrR/nsL2/LOo3Ln20C2ejn558qlhstvVH97+0peXT1QiyqENENavaFta1eerKn2yusr
-	Wbuu1LnsdK1m9jMAFcOJiaDKJT+hCECZ9xbc4PGGkh583lTENncwG77vlfAHh+U0dYTl
-	hf8FFJCg2pidsag3RSaQmdHGmdVNdYIeqQRNotK9144vvEkJo89JQjt+feu6gc9M0LIu
-	Q9Jw==
+	bh=q8xY4vdsGWIN5dXJe6Ui6rBbx4h3CRbG1xRVKbRS388=;
+	b=UhtGsEmrFoMCL50Vozf9jn2NNwVnUdRI1SrqEFxevq98oKqGxZsgz+bUQy8ZXtEADl
+	S/wu3EIJM0rjwTvCTVJ8k68IoAOi3hwdVpkfTQirsFaPm+mXeet1U7C+I+M2p3AGoBxN
+	f3KkBL/XtCcVkxhnmholfYHu1S27nAJcbT2n1Csj1EgAKAGwzQAvzoTADFV1aHWNNWo6
+	pU9GUoYcpQAgtaj1HA5x/4ZDXkVVCykPUHi1ogA2YhBMaWlH9jBdWfOpgyqykvogPGVY
+	M+X2YQ/+997v0QxKzA6ZN1xQrv+Fts/m5xf9HN3zNQpgP+QfI5ptppnpHckjd9G0k3AL
+	TgLw==
 MIME-Version: 1.0
 From: Ira McDonald <blueroofmusic@gmail.com>
-Date: Sun, 8 Jun 2014 21:29:01 -0400
-Message-ID: <CAN40gStGTnZpvh4iOc=9RrRo_NacmK5sJahh9ZyFRAiQx2YFJg@mail.gmail.com>
-Content-Type: multipart/alternative; boundary=001a1134cb12024f9104fb5d24b9
-Subject: [Printing-architecture] REMINDER: OP US/Europe - Tuesday 10 June
-	2014
+Date: Tue, 10 Jun 2014 17:50:18 -0400
+Message-ID: <CAN40gSs98xKunSZPP9Awib55Yqa3yw4UTt0hnmc8D-EWe7L4Pg@mail.gmail.com>
+Content-Type: multipart/alternative; boundary=089e011604ba88530a04fb82517d
+Subject: [Printing-architecture] OP Minutes (10 June 2014)
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>,
@@ -24,19 +23,33 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>, Ira McDonald <blueroofmusic@gmail.com>, Till Kamppeter <till.kamppeter@gmail.com>, Daniel Dressler <danieru.dressler@gmail.com>
+To: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>, Ira McDonald <blueroofmusic@gmail.com>
 
---001a1134cb12024f9104fb5d24b9
+--089e011604ba88530a04fb82517d
 Content-Type: text/plain; charset=UTF-8
 
 Hi,
 
-Reminder of our next OP US/Europe call this Tuesday - main topic
-is joint PWG / Open Printing Summit in August.
+Minutes from this week's Open Printing call are posted at:
 
-June 2014 - US/Europe - OP Monthly Meeting
+  ftp://ftp.pwg.org/pub/pwg/openprinting/minutes/OP-Minutes-20140610.htm
+
+- Joint PWG/OPS in Toronto, Canada (Hilton Garden) - 12-15 August 2014
+  - http://www.pwg.org/chair/meeting-info/august_2014_toronto.html
+
+Action Items:
+
+- ACTION - Ira and Till - invite speakers for OP Summit topics
+  - OPEN
+
+Next OP US/Europe Conference Calls:
+
+(1) July 2014 - US/Europe - OP Monthly Meeting
+    - Note - Joint PWG/OPS in Toronto, Canada - 12-15 August 2014
+    - Note - extra OP Summit planning calls may be scheduled in July
+
     - NEW DAY & TIME
-    - Tuesday 10 June 2014, Daytime (moved from 3 June)
+    - Tuesday 8 July 2014, Daytime (moved from 1 July)
       - US
         10am in San Francisco - US PDT (Pacific Daylight Time)
         11am in Colorado - US MDT (Mountain Daylight Time)
@@ -48,6 +61,13 @@ June 2014 - US/Europe - OP Monthly Meeting
     * Main Number (Till Kamppeter, LF, leader)
       International: +1-619-326-2730 (new number)
       Access Code:   491659#
+
+(2) July 2014 - OP Summit planning calls (tentative)
+- Note - extra OP Summit planning calls may be scheduled in July
+
+(3) August 2014 - 2014 Joint PWG / Open Printing Summit
+- Joint PWG/OPS in Toronto, Canada (Hilton Garden) - 12-15 August 2014
+  - http://www.pwg.org/chair/meeting-info/august_2014_toronto.html
 
 Cheers,
 - Ira
@@ -65,32 +85,76 @@ mailto: blueroofmusic@gmail.com
 Winter  579 Park Place  Saline, MI  48176  734-944-0094
 Summer  PO Box 221  Grand Marais, MI 49839  906-494-2434
 
---001a1134cb12024f9104fb5d24b9
+--089e011604ba88530a04fb82517d
 Content-Type: text/html; charset=UTF-8
 Content-Transfer-Encoding: quoted-printable
 
-<div dir=3D"ltr"><div><div><div>Hi,<br><br></div>Reminder of our next OP US=
-/Europe call this Tuesday - main topic<br></div><div>is joint PWG / Open Pr=
-inting Summit in August.<br></div><div><br>June 2014 - US/Europe - OP Month=
-ly Meeting<br>
+<div dir=3D"ltr"><div><div><div>Hi, <br><br><span><span><span><span><span><=
+span><span><span><span><span><span><span class=3D"">Minutes</span></span></=
+span></span></span></span></span></span></span></span></span></span> from t=
+his week&#39;s Open Printing<span> call</span> are <span><span><span><span>=
+<span><span><span><span class=3D"">posted</span></span></span></span></span=
+></span></span></span> at:<br>
 
-=C2=A0=C2=A0=C2=A0 - NEW DAY &amp; TIME<br>=C2=A0=C2=A0=C2=A0 - Tuesday 10 =
-June 2014, Daytime (moved from 3 June)<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 - =
-US<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 10am in San Francisco - US=
- PDT (Pacific Daylight Time)<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 =
-11am in Colorado - US MDT (Mountain Daylight Time)<br>
 
-=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 12pm in Chicago - US CDT (Centra=
-l Daylight Time)<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 1pm in New Y=
-ork - US EDT (Eastern Daylight Time)<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 - Eu=
-rope<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 7pm in Berlin - CEST (Ce=
-ntral European Summer Time)<br><br>=C2=A0=C2=A0=C2=A0 * Main Number (Till K=
-amppeter, LF, leader)<br>
 
-=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 International: +1-619-326-2730 (new number)<=
-br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 Access Code:=C2=A0=C2=A0 491659#<br><br><=
-/div>Cheers,<br></div>- Ira<br><br clear=3D"all"><div><div><div><div><div><=
-div dir=3D"ltr">Ira McDonald (Musician / Software Architect)<br>
+
+
+
+
+
+
+
+
+<br>
+=C2=A0 <a href=3D"ftp://ftp.pwg.org/pub/pwg/openprinting/minutes/OP-Minutes=
+-20140610.htm" target=3D"_blank">ftp://ftp.pwg.org/pub/pwg/openprinting/min=
+utes/OP-Minutes-20140610.htm</a><br>
+
+
+
+
+
+<br>- Joint PWG/<span class=3D"">OPS</span> in Toronto, Canada (Hilton Gard=
+en) - 12-15 August 2014<br>=C2=A0 - <a href=3D"http://www.pwg.org/chair/mee=
+ting-info/august_2014_toronto.html" target=3D"_blank">http://www.pwg.org/ch=
+air/meeting-info/august_2014_toronto.html</a><br>
+
+
+
+<br></div>
+Action Items:<br><br>- ACTION - Ira and Till - invite speakers for <span cl=
+ass=3D"">OP</span> Summit topics<br>=C2=A0 - OPEN<br><br>Next <span><span c=
+lass=3D"">OP</span></span> US/Europe Conference Calls:<br><br>(1) July 2014=
+ - US/Europe - OP Monthly Meeting<br>
+
+=C2=A0=C2=A0=C2=A0 - Note - Joint PWG/OPS in Toronto, Canada - 12-15 August=
+ 2014<br>=C2=A0=C2=A0=C2=A0 - Note - extra OP Summit planning calls may be =
+scheduled in July<br><br>=C2=A0=C2=A0=C2=A0 - NEW DAY &amp; TIME<br>=C2=A0=
+=C2=A0=C2=A0 - Tuesday 8 July 2014, Daytime (moved from 1 July)<br>
+
+=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 - US<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=
+=C2=A0 10am in San Francisco - US PDT (Pacific Daylight Time)<br>=C2=A0=C2=
+=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 11am in Colorado - US MDT (Mountain Dayli=
+ght Time)<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 12pm in Chicago - U=
+S CDT (Central Daylight Time)<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=
+ 1pm in New York - US EDT (Eastern Daylight Time)<br>
+
+=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 - Europe<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=
+=C2=A0=C2=A0 7pm in Berlin - CEST (Central European Summer Time)<br><br>=C2=
+=A0=C2=A0=C2=A0 * Main Number (Till Kamppeter, LF, leader)<br>=C2=A0=C2=A0=
+=C2=A0=C2=A0=C2=A0 International: +1-619-326-2730 (new number)<br>=C2=A0=C2=
+=A0=C2=A0=C2=A0=C2=A0 Access Code:=C2=A0=C2=A0 491659#<br>
+<br>
+(2) July 2014 - OP Summit planning calls (tentative)<br>- Note - extra OP S=
+ummit planning calls may be scheduled in July<br><br>(3) August 2014 - 2014=
+ Joint PWG / Open Printing Summit<br>- Joint PWG/OPS in Toronto, Canada (Hi=
+lton Garden) - 12-15 August 2014<br>
+
+=C2=A0 - <a href=3D"http://www.pwg.org/chair/meeting-info/august_2014_toron=
+to.html">http://www.pwg.org/chair/meeting-info/august_2014_toronto.html</a>=
+<br><br></div>Cheers,<br></div>- Ira<br><br><div><div><div><div dir=3D"ltr"=
+>Ira McDonald (Musician / Software Architect)<br>
 
 Co-Chair - TCG Trusted Mobility Solutions WG<br>Chair - Linux Foundation Op=
 en Printing WG<br>Secretary - IEEE-ISTO Printer Working Group<br>Co-Chair -=
@@ -110,6 +174,6 @@ ofmusic@gmail.com</a><br>Winter=C2=A0 579 Park Place=C2=A0 Saline, MI=C2=A0=
 
 </div><div style=3D"display:inline"></div><div style=3D"display:inline"></d=
 iv><div></div><div></div><div></div><div></div></div></div>
-</div></div></div></div></div>
+</div></div></div>
 
---001a1134cb12024f9104fb5d24b9--
+--089e011604ba88530a04fb82517d--
