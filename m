@@ -1,28 +1,14 @@
-Return-Path: <msweet@apple.com>
-DKIM-Signature: v=1; a=rsa-sha256; d=apple.com; s=mailout2048s;
-	c=relaxed/simple; 
-	q=dns/txt; i=@apple.com; t=1402575465; x=2266489065;
-	h=From:Sender:Reply-To:Subject:Date:Message-id:To:Cc:MIME-version:Content-type:
-	Content-transfer-encoding:Content-ID:Content-Description:Resent-Date:Resent-From:
-	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-reply-to:References:List-Id:
-	List-Help:List-Unsubscribe:List-Subscribe:List-Post:List-Owner:List-Archive;
-	bh=j0auozDid4gfVi2Ht7WR1jW9thUTFExXMeKvpnIaBmI=;
-	b=xiVuh9s9OCMek09JBxrDDLdQpQMQAKHc0WGXriKYM9psfKy7+m7wfpXVeoiG06o6
-	IYw+ynSsRtx4lH6c1XyU6521NGOzexPFsz089C75vXaw4PIYACl1N70y2oDaWXzX
-	2B+3TYFDoCQR74cxNMtcLwJF7tUs8y6iXzmS7qUWaLcQNcl3lBM9uyWUSzZTdJhV
-	K3FwFOqmNrhdpqwTp+PK8SILQWIbtIiKb/FX5e1kVlndtCT+yuQZMe4ekGQ+jKn8
-	qfdJuVlZlQdL9nmXA+yXOL7FAU6dVxCLKFqQBSlvpIdVBCYP9v7uAxCaosyEVITI
-	GzmjAIjuFVDhdHkk0WshKA==;
-MIME-version: 1.0
-Content-transfer-encoding: 7BIT
-Content-type: text/plain; CHARSET=US-ASCII
-From: Michael Sweet <msweet@apple.com>
-In-reply-to: <53997D3F.2060803@gmail.com>
-Date: Thu, 12 Jun 2014 08:17:42 -0400
-Message-id: <ACB4085B-27D1-4426-8F1F-77C899EBC607@apple.com>
+Return-Path: <lists@colorremedies.com>
+Content-Type: text/plain; charset=us-ascii
+Mime-Version: 1.0 (Mac OS X Mail 6.6 \(1510\))
+From: Chris Murphy <lists@colorremedies.com>
+In-Reply-To: <53997D3F.2060803@gmail.com>
+Date: Thu, 12 Jun 2014 11:06:48 -0600
+Content-Transfer-Encoding: quoted-printable
+Message-Id: <2E97E8D0-4017-4415-B5DA-0F7E8090D950@colorremedies.com>
 References: <53997D3F.2060803@gmail.com>
 Subject: Re: [Printing-architecture] "no-color-management" not a good idea
- for a name of a boolean CUPS option
+	for a name of a boolean CUPS option
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>,
@@ -33,27 +19,58 @@ List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subj
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
 To: Till Kamppeter <till.kamppeter@gmail.com>
-Cc: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>
+Cc: Open Printing <printing-architecture@lists.linux-foundation.org>
 
-Till,
 
-On Jun 12, 2014, at 6:13 AM, Till Kamppeter <till.kamppeter@gmail.com> wrote:
-> ...
+On Jun 12, 2014, at 4:13 AM, Till Kamppeter <till.kamppeter@gmail.com> =
+wrote:
+
+> Hi,
+>=20
+> I have encountered a problem with the "no-color-management" and
+> cupsGetOption() not be able to recognize that the user has supplied =
+"-o
+> no-color-management" on the command line.
+>=20
+> If you have an arbitrary boolean option in CUPS filters or backends,
+> like "xxx" the variants
+>=20
+>   -o xxx
+>   -o xxx=3D1
+>   -o xxx=3Don
+>   -o xxx=3Dyes
+>   -o xxx=3Dtrue
+>=20
+> are supposed to let it be interpreted as set and
+>=20
+>   -o noxxx
+>   -o xxx=3D0
+>   -o xxx=3Doff
+>   -o xxx=3Dno
+>   -o xxx=3Dfalse
+>=20
 > let it be interpreted as not set. To support the "-o noxxx" case
 > cupsGetOption() seems to split a "no" in the beginning of the name off
-> if there is no '='. Therefore "no-color-management=" works but
+> if there is no '=3D'. Therefore "no-color-management=3D" works but
 > "no-color-management" not. The latter is probably interpreted as
-> "-color-management=false".
-> 
+> "-color-management=3Dfalse".
+>=20
 > Mike, am I right with this?
-
-Yes.
-
+>=20
 > So I suggest something like "calibration-mode", "cm-calibration-mode",
 > "cm-calibration", or similar.
 
-Or just use "color-managemnt" as the option so you can specify "nocolor-management" or "color-management=false".  The filter will see "nocolor-management".
+I agree that color management is too general a term and it's confusing =
+what it means. So it's useful in the form of cm- to make it easier to =
+find color management related switches, but the switches themselves have =
+separate names:
 
-_________________________________________________________
-Michael Sweet, Senior Printing System Engineer, PWG Chair
+cm-linearization
+cm-calibration
+cm-ICC
+cm-3DLUT
 
+And so on, each with a Boolean value.=20
+
+
+Chris Murphy=
