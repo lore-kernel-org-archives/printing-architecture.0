@@ -1,22 +1,27 @@
-Return-Path: <till.kamppeter@gmail.com>
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20120113;
-	h=message-id:date:from:user-agent:mime-version:to:cc:subject
-	:references:in-reply-to:content-type:content-transfer-encoding;
-	bh=40KDuwfMd08SUaJYC8L5TzKhSVx6bNOwixzkQ/Ro3lw=;
-	b=Rpyl+/1bYcxhtCY2BdKkiiWsKZt+JC5QaiJ79mX0wxs1gNQH9fnPVJQZSoNK2dDP3o
-	RVC4RAadcu+S8RUVWD19tgEAzNghwAZQUzeQ50idd7MYt2EA1milNAEjvQzE0R5n1EP8
-	YS8x9+hFSleX27Fe43ksNv8JpJMYGAp+hCGADUVNAatyuzVkpT8uJ6RP7Jn9i8tJx1Ng
-	NhyVplRBEzD2uiTtbrVevghsnrK0cK2DzhDu0d9uPs7/k++8U27Lj56dGdr2Isi6hWI9
-	nOhl59vi/Wzy3olaQ9lDZtqyOJwx+PV0D1P+mSFQki+DDf/tbHo1auuiJ4xiCajT++yQ
-	3JSQ==
-Message-ID: <53A9C50D.4000306@gmail.com>
-Date: Tue, 24 Jun 2014 20:35:57 +0200
-From: Till Kamppeter <till.kamppeter@gmail.com>
-MIME-Version: 1.0
-References: <m38up3ymxw.fsf@carbon.jhcloos.org>
-In-Reply-To: <m38up3ymxw.fsf@carbon.jhcloos.org>
-Content-Type: text/plain; charset=UTF-8
-Content-Transfer-Encoding: 7bit
+Return-Path: <msweet@apple.com>
+DKIM-Signature: v=1; a=rsa-sha256; d=apple.com; s=mailout2048s;
+	c=relaxed/simple; 
+	q=dns/txt; i=@apple.com; t=1403636782; x=2267550382;
+	h=From:Sender:Reply-To:Subject:Date:Message-id:To:Cc:MIME-version:Content-type:
+	Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-reply-to:References:List-Id:
+	List-Help:List-Unsubscribe:List-Subscribe:List-Post:List-Owner:List-Archive;
+	bh=IMTVmSE+ApJ7jNljwH2iodTii3nFfKWHNC88n2DHBvQ=;
+	b=Y03fItuoM4pMEPoA9c2T0Mwo0CL/8wOzqpycNne3I2120WFA9jf/vS6KZlvZGzk5
+	zwrBhTofJhempfB6oZaxbs40xx4YDRJydbpoKYEBTniZDv0i5Wk85F/WzBW0WU2N
+	wX3nzPwCtBzO4VWeftSIkDETSQmcHCzIuLe8PiDH1Yh1zC3humsnTk08vVje+aL5
+	yKEMKc+hEkS+OjK7WPnmJf7SDx5jAq9Lj98B85UoECMWfzZWPxWD6S1r3jDeaFWT
+	4b28ln4sTrgZ8LcYU2vQ70+ReaMwG19Uf6LMTi3Ce+37ZJ4oiN+1XOeu3aIJps2Y
+	yDHf+6e1VuumNtMbunjluA==;
+MIME-version: 1.0
+Content-type: multipart/signed;
+	boundary="Apple-Mail=_454E6631-19C9-4CF0-9277-83997EF85822";
+	protocol="application/pkcs7-signature"; micalg=sha1
+From: Michael Sweet <msweet@apple.com>
+In-reply-to: <53A9C50D.4000306@gmail.com>
+Date: Tue, 24 Jun 2014 15:06:22 -0400
+Message-id: <B8CEB731-2C01-4D1D-9B72-EC02A9CDFE44@apple.com>
+References: <m38up3ymxw.fsf@carbon.jhcloos.org> <53A9C50D.4000306@gmail.com>
 Subject: Re: [Printing-architecture] ippusbd license
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
@@ -27,30 +32,155 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: James Cloos <cloos@jhcloos.com>
-Cc: Open Printing <printing-architecture@lists.linux-foundation.org>
+To: Till Kamppeter <till.kamppeter@gmail.com>
+Cc: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>, James Cloos <cloos@jhcloos.com>
 
-On 06/12/2014 02:45 AM, James Cloos wrote:
-> I though I sent a note about this earlier, but it looks like i did not.
-> 
-> When Daniel and I spoke before coding started, he said he wants to
-> release the code under GPL3.
-> 
-> Given cups' and cups-filters' licensing, is that acceptable to LF?
-> 
 
-I am free in licensing the code of the OpenPrinting projects. LF is not
-requiring anything special.
+--Apple-Mail=_454E6631-19C9-4CF0-9277-83997EF85822
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain;
+	charset=us-ascii
 
-> Even though I am a GNU maintainer, and thus support gpl3, I was
-> concerned about the compatibility issues, but could not dissuade him.
-> 
+Till,
 
-GPL3 or GPL3+ is OK for me if it does not conflict with the use of any
-of the libraries used by ippusbxd.
+GPL3 is fine when linking against libcups (LGPL2).  I'm not 100% sure =
+about the other libraries he'll need to use.
 
-I suggest to get some more opinions on the printing-architecture list.
-Therefore I am CCing the list now.
+That said, I am not a fan of the GPL3 and would prefer this be released =
+under GPL2.
 
-   Till
 
+On Jun 24, 2014, at 2:35 PM, Till Kamppeter <till.kamppeter@gmail.com> =
+wrote:
+
+> On 06/12/2014 02:45 AM, James Cloos wrote:
+>> I though I sent a note about this earlier, but it looks like i did =
+not.
+>>=20
+>> When Daniel and I spoke before coding started, he said he wants to
+>> release the code under GPL3.
+>>=20
+>> Given cups' and cups-filters' licensing, is that acceptable to LF?
+>>=20
+>=20
+> I am free in licensing the code of the OpenPrinting projects. LF is =
+not
+> requiring anything special.
+>=20
+>> Even though I am a GNU maintainer, and thus support gpl3, I was
+>> concerned about the compatibility issues, but could not dissuade him.
+>>=20
+>=20
+> GPL3 or GPL3+ is OK for me if it does not conflict with the use of any
+> of the libraries used by ippusbxd.
+>=20
+> I suggest to get some more opinions on the printing-architecture list.
+> Therefore I am CCing the list now.
+>=20
+>   Till
+>=20
+> _______________________________________________
+> Printing-architecture mailing list
+> Printing-architecture@lists.linux-foundation.org
+> =
+https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture
+
+_________________________________________________________
+Michael Sweet, Senior Printing System Engineer, PWG Chair
+
+
+--Apple-Mail=_454E6631-19C9-4CF0-9277-83997EF85822
+Content-Disposition: attachment;
+	filename=smime.p7s
+Content-Type: application/pkcs7-signature;
+	name=smime.p7s
+Content-Transfer-Encoding: base64
+
+MIAGCSqGSIb3DQEHAqCAMIACAQExCzAJBgUrDgMCGgUAMIAGCSqGSIb3DQEHAQAAoIIPJTCCBN0w
+ggPFoAMCAQICEHGS++YZX6xNEoV0cTSiGKcwDQYJKoZIhvcNAQEFBQAwezELMAkGA1UEBhMCR0Ix
+GzAZBgNVBAgMEkdyZWF0ZXIgTWFuY2hlc3RlcjEQMA4GA1UEBwwHU2FsZm9yZDEaMBgGA1UECgwR
+Q29tb2RvIENBIExpbWl0ZWQxITAfBgNVBAMMGEFBQSBDZXJ0aWZpY2F0ZSBTZXJ2aWNlczAeFw0w
+NDAxMDEwMDAwMDBaFw0yODEyMzEyMzU5NTlaMIGuMQswCQYDVQQGEwJVUzELMAkGA1UECBMCVVQx
+FzAVBgNVBAcTDlNhbHQgTGFrZSBDaXR5MR4wHAYDVQQKExVUaGUgVVNFUlRSVVNUIE5ldHdvcmsx
+ITAfBgNVBAsTGGh0dHA6Ly93d3cudXNlcnRydXN0LmNvbTE2MDQGA1UEAxMtVVROLVVTRVJGaXJz
+dC1DbGllbnQgQXV0aGVudGljYXRpb24gYW5kIEVtYWlsMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8A
+MIIBCgKCAQEAsjmFpPJ9q0E7YkY3rs3BYHW8OWX5ShpHornMSMxqmNVNNRm5pELlzkniii8efNIx
+B8dOtINknS4p1aJkxIW9hVE1eaROaJB7HHqkkqgX8pgV8pPMyaQylbsMTzC9mKALi+VuG6JG+ni8
+om+rWV6lL8/K2m2qL+usobNqqrcuZzWLeeEeaYji5kbNoKXqvgvOdjp6Dpvq/NonWz1zHyLmSGHG
+TPNpsaguG7bUMSAsvIKKjqQOpdeJQ/wWWq8dcdcRWdq6hw2v+vPhwvCkxWeM1tZUOt4KpLoDd7Nl
+yP0e03RiqhjKaJMeoYV+9Udly/hNVyh00jT/MLbu9mIwFIws6wIDAQABo4IBJzCCASMwHwYDVR0j
+BBgwFoAUoBEKIz6W8Qfs4q8p74Klf9AwpLQwHQYDVR0OBBYEFImCZ33EnSZwAEu0UEh83j2uBG59
+MA4GA1UdDwEB/wQEAwIBBjAPBgNVHRMBAf8EBTADAQH/MB0GA1UdJQQWMBQGCCsGAQUFBwMCBggr
+BgEFBQcDBDARBgNVHSAECjAIMAYGBFUdIAAwewYDVR0fBHQwcjA4oDagNIYyaHR0cDovL2NybC5j
+b21vZG9jYS5jb20vQUFBQ2VydGlmaWNhdGVTZXJ2aWNlcy5jcmwwNqA0oDKGMGh0dHA6Ly9jcmwu
+Y29tb2RvLm5ldC9BQUFDZXJ0aWZpY2F0ZVNlcnZpY2VzLmNybDARBglghkgBhvhCAQEEBAMCAQYw
+DQYJKoZIhvcNAQEFBQADggEBAJ2Vyzy4fqUJxB6/C8LHdo45PJTGEKpPDMngq4RdiVTgZTvzbRx8
+NywlVF+WIfw3hJGdFdwUT4HPVB1rbEVgxy35l1FM+WbKPKCCjKbI8OLp1Er57D9Wyd12jMOCAU9s
+APMeGmF0BEcDqcZAV5G8ZSLFJ2dPV9tkWtmNH7qGL/QGrpxp7en0zykX2OBKnxogL5dMUbtGB8SK
+N04g4wkxaMeexIud6H4RvDJoEJYRmETYKlFgTYjrdDrfQwYyyDlWjDoRUtNBpEMD9O3vMyfbOeAU
+TibJ2PU54om4k123KSZB6rObroP8d3XK6Mq1/uJlSmM+RMTQw16Hc6mYHK9/FX8wggUaMIIEAqAD
+AgECAhBtGeqnGU9qMyLmIjJ6qnHeMA0GCSqGSIb3DQEBBQUAMIGuMQswCQYDVQQGEwJVUzELMAkG
+A1UECBMCVVQxFzAVBgNVBAcTDlNhbHQgTGFrZSBDaXR5MR4wHAYDVQQKExVUaGUgVVNFUlRSVVNU
+IE5ldHdvcmsxITAfBgNVBAsTGGh0dHA6Ly93d3cudXNlcnRydXN0LmNvbTE2MDQGA1UEAxMtVVRO
+LVVTRVJGaXJzdC1DbGllbnQgQXV0aGVudGljYXRpb24gYW5kIEVtYWlsMB4XDTExMDQyODAwMDAw
+MFoXDTIwMDUzMDEwNDgzOFowgZMxCzAJBgNVBAYTAkdCMRswGQYDVQQIExJHcmVhdGVyIE1hbmNo
+ZXN0ZXIxEDAOBgNVBAcTB1NhbGZvcmQxGjAYBgNVBAoTEUNPTU9ETyBDQSBMaW1pdGVkMTkwNwYD
+VQQDEzBDT01PRE8gQ2xpZW50IEF1dGhlbnRpY2F0aW9uIGFuZCBTZWN1cmUgRW1haWwgQ0EwggEi
+MA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCShIRbS1eY1F4vi6ThQMijU1hfZmXxMk73nzJ9
+VdB4TFW3QpTg+SdxB8XGaaS5MsTxQBqQzCdWYn8XtXFpruUgG+TLY15gyqJB9mrho/+43x9IbWVD
+jCouK2M4d9+xF6zC2oIC1tQyatRnbyATj1w1+uVUgK/YcQodNwoCUFNslR2pEBS0mZVZEjH/CaLS
+TNxS297iQAFbSGjdxUq04O0kHzqvcV8H46y/FDuwJXFoPfQP1hdYRhWBPGiLi4MPbXohV+Y0sNsy
+fuNK4aVScmQmkU6lkg//4LFg/RpvaFGZY40ai6XMQpubfSJj06mg/M6ekN9EGfRcWzW6FvOnm//B
+AgMBAAGjggFLMIIBRzAfBgNVHSMEGDAWgBSJgmd9xJ0mcABLtFBIfN49rgRufTAdBgNVHQ4EFgQU
+ehNOAHRbxnhjZCfBL+KgW7x5xXswDgYDVR0PAQH/BAQDAgEGMBIGA1UdEwEB/wQIMAYBAf8CAQAw
+EQYDVR0gBAowCDAGBgRVHSAAMFgGA1UdHwRRME8wTaBLoEmGR2h0dHA6Ly9jcmwudXNlcnRydXN0
+LmNvbS9VVE4tVVNFUkZpcnN0LUNsaWVudEF1dGhlbnRpY2F0aW9uYW5kRW1haWwuY3JsMHQGCCsG
+AQUFBwEBBGgwZjA9BggrBgEFBQcwAoYxaHR0cDovL2NydC51c2VydHJ1c3QuY29tL1VUTkFkZFRy
+dXN0Q2xpZW50X0NBLmNydDAlBggrBgEFBQcwAYYZaHR0cDovL29jc3AudXNlcnRydXN0LmNvbTAN
+BgkqhkiG9w0BAQUFAAOCAQEAhda+eFdVbTN/RFL+QtUGqAEDgIr7DbL9Sr/2r0FJ9RtaxdKtG3Nu
+PukmfOZMmMEwKN/L+0I8oSU+CnXW0D05hmbRoZu1TZtvryhsHa/l6nRaqNqxwPF1ei+eupN5yv7i
+kR5WdLL4jdPgQ3Ib7Y/9YDkgR/uLrzplSDyYPaUlv73vYOBJ5RbI6z9Dg/Dg7g3B080zX5vQvWBq
+szv++tTJOjwf7Zv/m0kzvkIpOYPuM2kugp1FTahp2oAbHj3SGl18R5mlmwhtEpmG1l1XBxunML5L
+SUS4kH7K0Xk467Qz+qA6XSZYnmFVGLQh1ZnV4ENAQjC+6qXnlNKw/vN1+X9u5zCCBSIwggQKoAMC
+AQICEQDlB7dXxclLEedquPvGX8CGMA0GCSqGSIb3DQEBBQUAMIGTMQswCQYDVQQGEwJHQjEbMBkG
+A1UECBMSR3JlYXRlciBNYW5jaGVzdGVyMRAwDgYDVQQHEwdTYWxmb3JkMRowGAYDVQQKExFDT01P
+RE8gQ0EgTGltaXRlZDE5MDcGA1UEAxMwQ09NT0RPIENsaWVudCBBdXRoZW50aWNhdGlvbiBhbmQg
+U2VjdXJlIEVtYWlsIENBMB4XDTEzMTIxNzAwMDAwMFoXDTE0MTIxNzIzNTk1OVowITEfMB0GCSqG
+SIb3DQEJARYQbXN3ZWV0QGFwcGxlLmNvbTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEB
+ANdvQYZRCVzc0wIYvIOn/0Pv7zUwuIvbAfM/W3FyemqZx3fdKxX4WxN2x5NC3hhBHGrUWirJH7rl
+6It12bGQ61uHAK5jsJikV5k+mOYjZaKNIKxj0uYIk3MKQmsmM8t3nddq5mp2mxwV/U7AFPTz1fgh
+dkqTb/NkHY5eA8KqksaeqwfMgoaiGVeCUhptWnXosca8PAkb+i9u5rEok5zgY+QP0IuWLJENfA4q
+dEMsH+OAwMGOv9fNCgcdapFnjeSYaj70m6qUiq446+8a2rhUsEUKQayOMgjnm2bgUuNx7pOvs/Jg
+zIlZoTz/llmE1HWREGzSjRnLWwQ98fspfeZWA+8CAwEAAaOCAeAwggHcMB8GA1UdIwQYMBaAFHoT
+TgB0W8Z4Y2QnwS/ioFu8ecV7MB0GA1UdDgQWBBTtKBJoG9kxZisTqJg4+wr12l4stjAOBgNVHQ8B
+Af8EBAMCBaAwDAYDVR0TAQH/BAIwADAgBgNVHSUEGTAXBggrBgEFBQcDBAYLKwYBBAGyMQEDBQIw
+EQYJYIZIAYb4QgEBBAQDAgUgMEYGA1UdIAQ/MD0wOwYMKwYBBAGyMQECAQEBMCswKQYIKwYBBQUH
+AgEWHWh0dHBzOi8vc2VjdXJlLmNvbW9kby5uZXQvQ1BTMFcGA1UdHwRQME4wTKBKoEiGRmh0dHA6
+Ly9jcmwuY29tb2RvY2EuY29tL0NPTU9ET0NsaWVudEF1dGhlbnRpY2F0aW9uYW5kU2VjdXJlRW1h
+aWxDQS5jcmwwgYgGCCsGAQUFBwEBBHwwejBSBggrBgEFBQcwAoZGaHR0cDovL2NydC5jb21vZG9j
+YS5jb20vQ09NT0RPQ2xpZW50QXV0aGVudGljYXRpb25hbmRTZWN1cmVFbWFpbENBLmNydDAkBggr
+BgEFBQcwAYYYaHR0cDovL29jc3AuY29tb2RvY2EuY29tMBsGA1UdEQQUMBKBEG1zd2VldEBhcHBs
+ZS5jb20wDQYJKoZIhvcNAQEFBQADggEBABg5KLQK5u9gGI75u+vYH/i6uMDKlpTILO/r/FpN2ibq
+pwAB2ln9oKvPIA1/r3o+DBC87TqnlJAiPW4ADFHpRmqlprb0Tu9p98nP/wl5tBZjEP8dY4iH0TB3
+B2r9JHwRwwJQ20CqJpuCn9dmvL215sZSqvJfluVlIcAQCLxp3ZKMIC2pNKitswdjjHduaKuj2TMe
+xrzMtrRGRtFF9pcMcnsqE2QtJUqXPV7/M4WT2yRUmI4ThPt9O9fmPH2ku52hdb6t4qXvwdQSkDHt
+xo3J/Vc/jDR2/feedDhQmG0V9j6tHsuG6bVVhcGiWnSmSoPfg13FlQwlxZTyFtiMZ2jILyoxggOu
+MIIDqgIBATCBqTCBkzELMAkGA1UEBhMCR0IxGzAZBgNVBAgTEkdyZWF0ZXIgTWFuY2hlc3RlcjEQ
+MA4GA1UEBxMHU2FsZm9yZDEaMBgGA1UEChMRQ09NT0RPIENBIExpbWl0ZWQxOTA3BgNVBAMTMENP
+TU9ETyBDbGllbnQgQXV0aGVudGljYXRpb24gYW5kIFNlY3VyZSBFbWFpbCBDQQIRAOUHt1fFyUsR
+52q4+8ZfwIYwCQYFKw4DAhoFAKCCAdkwGAYJKoZIhvcNAQkDMQsGCSqGSIb3DQEHATAcBgkqhkiG
+9w0BCQUxDxcNMTQwNjI0MTkwNjIyWjAjBgkqhkiG9w0BCQQxFgQUx5ac6HGGIxJDAkWI+5TKzP5p
+8P4wgboGCSsGAQQBgjcQBDGBrDCBqTCBkzELMAkGA1UEBhMCR0IxGzAZBgNVBAgTEkdyZWF0ZXIg
+TWFuY2hlc3RlcjEQMA4GA1UEBxMHU2FsZm9yZDEaMBgGA1UEChMRQ09NT0RPIENBIExpbWl0ZWQx
+OTA3BgNVBAMTMENPTU9ETyBDbGllbnQgQXV0aGVudGljYXRpb24gYW5kIFNlY3VyZSBFbWFpbCBD
+QQIRAOUHt1fFyUsR52q4+8ZfwIYwgbwGCyqGSIb3DQEJEAILMYGsoIGpMIGTMQswCQYDVQQGEwJH
+QjEbMBkGA1UECBMSR3JlYXRlciBNYW5jaGVzdGVyMRAwDgYDVQQHEwdTYWxmb3JkMRowGAYDVQQK
+ExFDT01PRE8gQ0EgTGltaXRlZDE5MDcGA1UEAxMwQ09NT0RPIENsaWVudCBBdXRoZW50aWNhdGlv
+biBhbmQgU2VjdXJlIEVtYWlsIENBAhEA5Qe3V8XJSxHnarj7xl/AhjANBgkqhkiG9w0BAQEFAASC
+AQCJ01x2xrPHQ1TsRx9AoXVtFrSORXXqkAbS3pbEcZeAlXYZPnA8o5Jez3UrHGM7pUGauCwg0F/b
+rnNK4VfXrMcljUwg8NVuqfmrTBLM9A56JjI6VtAC3C2z9JHOlmg3WnDzoWd9a0y1AKvKjcz/Rx0V
+QnwWAOJQoZm4BSzjT/GKyUgFThvm+A99k8mS2jk1NV7ywCrY2SFOlECcjMIs3fDtGpUT/Gbptshu
+rckNNU7WpzPu9IS7cN848z9cui0ann3H4iNeShy3sZMRhPJ8oV62F+2CVQxhmdiyZ6Hc1bZvVMLd
+eJFB/MWqCGnusqcwyclmyoFf61AD9cf/VIBbvaPwAAAAAAAA
+
+--Apple-Mail=_454E6631-19C9-4CF0-9277-83997EF85822--
