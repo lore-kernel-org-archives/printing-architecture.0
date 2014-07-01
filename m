@@ -1,21 +1,23 @@
-Return-Path: <pdewacht@gmail.com>
+Return-Path: <till.kamppeter@gmail.com>
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20120113;
-	h=message-id:date:from:user-agent:mime-version:to:subject
-	:content-type:content-transfer-encoding;
-	bh=k5uIHW41zwAEC8RESh0DBAdAbQfzr02hsMscSfykgrQ=;
-	b=lPs0Z8yhOGI/dXap3zw+Nox1TCntJW+JJaRARwitca92g/2Q8Kpln3ku8ZUW8WzOYa
-	8+PpXyni5VhNjBSAn9IELPK2uasVrGi39Xccbrhz343QeREn2yiLULzKhYJ1QZTBPH4r
-	eeKVMzqzCvB3H5dQqxCjDsi7odeROg827zF+6Rb00Jp60e5/tZ94s+ibl++zcW3SKRyU
-	jLkUgjqvoqdLrD3h+qSd7/ScwXXe+DWHDKDsS6kbfoQuAwR4WFl1DI4ACGs64TvrV6VQ
-	Us+yr+/B+3t0JvNeDQQCf39eezpCa3OFtSVFGdZS7LdKU3V2fMlxtPiHpBbtNIh09K0T
-	wisQ==
-Message-ID: <53B1D5B1.6020105@gmail.com>
-Date: Mon, 30 Jun 2014 23:25:05 +0200
-From: Peter De Wachter <pdewacht@gmail.com>
+	h=message-id:date:from:user-agent:mime-version:to:subject:references
+	:in-reply-to:content-type:content-transfer-encoding;
+	bh=2WFCfCgoc2yNn0oA+1ZHHr5HzCTIEQARRuWTefWmpSw=;
+	b=UvW2uSFMjoBFGjAmU4+ubsZ5Sh/dX+TgsfywJjjH/1WqKc8pt89jyrXcq656QoI+8e
+	DCE8JlCgBm3BW+1hz+Y0ehWpp4yfcRnohCThOAM/qeTUjzEUTII4gkCRjsz0tvpmoREK
+	iMIqaPoAUXBIQNFkQxO+YKjBs1huh6PoW1DM95YeQ/2v1l2euM2ltkO32VMNZTffOegD
+	Ri3bW3A3eqH+trgFH4GkUX8TJ5Ll/05LIH+AcsF7HUMlcuCpWhSz+B2TksaP1P2Sb1m7
+	dlbZQnbpGJrsZmtLABm8bPAZs30FuOYrYSmYrM02UD1krK1iriUKOmHmMOaAtu5rQXE2
+	B48g==
+Message-ID: <53B2E7FF.8040007@gmail.com>
+Date: Tue, 01 Jul 2014 18:55:27 +0200
+From: Till Kamppeter <till.kamppeter@gmail.com>
 MIME-Version: 1.0
+References: <53B1D5B1.6020105@gmail.com>
+In-Reply-To: <53B1D5B1.6020105@gmail.com>
 Content-Type: text/plain; charset=UTF-8
 Content-Transfer-Encoding: 7bit
-Subject: [Printing-architecture] New driver for Brother laser printers
+Subject: Re: [Printing-architecture] New driver for Brother laser printers
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>,
@@ -27,12 +29,33 @@ List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-arc
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
 To: printing-architecture@lists.linux-foundation.org
 
-I'd like to announce a new driver, a cups raster filter, for Brother
-monochrome laser printers. This driver is designed for the DCP-7030,
-which previously wasn't supported by open source drivers, and I've had a
-report it works with the DCP-7065DN as well.
+Peter, thank you very much for the new driver.
 
-It's available here: https://github.com/pdewacht/brlaser
+I have listed the driver on OpenPrinting now so that more people (and
+also distros) will find it.
 
-Cheers,
-Peter De Wachter
+You find the entry here:
+
+http://www.openprinting.org/driver/brlaser/
+
+I hope also that some users will try it on printers which are not in the
+driver's printer list to get more printers working.
+
+   Till
+
+On 06/30/2014 11:25 PM, Peter De Wachter wrote:
+> I'd like to announce a new driver, a cups raster filter, for Brother
+> monochrome laser printers. This driver is designed for the DCP-7030,
+> which previously wasn't supported by open source drivers, and I've had a
+> report it works with the DCP-7065DN as well.
+> 
+> It's available here: https://github.com/pdewacht/brlaser
+> 
+> Cheers,
+> Peter De Wachter
+> _______________________________________________
+> Printing-architecture mailing list
+> Printing-architecture@lists.linux-foundation.org
+> https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture
+> 
+
