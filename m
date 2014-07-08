@@ -1,26 +1,22 @@
 Return-Path: <blueroofmusic@gmail.com>
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20120113;
 	h=mime-version:in-reply-to:references:from:date:message-id:subject:to
-	:cc:content-type;
-	bh=hmJTivYpsDWOSJogFV0syULgMU4WRXuM6U0AL/jtGno=;
-	b=pBYW7LU21f/k9SCBAhRFgUtmMNfqLkhV2BNbu+GwmO8cOPxhW/MXpeNNkDqlQot03H
-	MjyVvRyASZgMxmRBZi349C3EbH7PGH0oqHmXjUKH/x2qyi5jKRGcOg5dpN+Yyq/AHSKT
-	lCThAMEPjlrINF6Ce3xFBarMlKfabYuUKIl9TpcNxYPkTzuJVE5uNDHiu14v46Gwd9ML
-	t1dIgBjinLzCtBH4+53ZT/WozIhs+YoNUm0CPhyCErE89fGBGLF1RZWY+LnT2wPYYZHd
-	+uSCp63Q2AnWR+RNXMwejqCBXVLg2CM/QiIm9TcQxZwTKYo8d8TycDGVJZd+HiJE8DfN
-	Of9Q==
+	:content-type; bh=BQhsthcoTzCSQj3P8yH+FMhQkgJvZWCokuXTsMV6g20=;
+	b=H2kFrEL58BpMbOhMSwrrxPzZF3xd1BeWPE6+hoqpuBTFgyMkTEL+Zi7nUEZec9S5V9
+	u7Jt+S2UqIRe0YJML6+YAea07yKiNkRj8K13f29YRAUEInm8Z8TO5FZO8QQr+MnR0fWv
+	7/L/A2oA+4Obp+BlDOUIj1KCJ7kE4YmsNan5ZkIOj5T5bD+xyQRhYCT+yB7fP0Sifu5f
+	NOVaKtY5cykH/gHCtdVcAEvPRfxezCIA6lxq45lhdFS6BWwXEkVY7MTcXm3FsXgCRhZR
+	o53e7A5ZaNZAST3DlH5KeCUdjfUWMnk5pmBkY0pTNl9FVKkI24ghxYgaIy2g6NTq3lm2
+	iGYA==
 MIME-Version: 1.0
-In-Reply-To: <1404834680.9852.20.camel@pascal.home.net>
-References: <1404748055.11220.7.camel@pascal.home.net>
-	<CAN40gSuqu1=Y0jq6ZS+hiiJ=T4L0-Ui+JK7cBb93KjWpu9tG+Q@mail.gmail.com>
-	<ABD15507-E7F6-484D-974C-BFC0B69CF5B8@apple.com>
-	<CAN40gSs5nCeUkxQ6aOcpX--keVKhPMZGVnfnADoxGCyYbPX1Kg@mail.gmail.com>
-	<1404834680.9852.20.camel@pascal.home.net>
+In-Reply-To: <CAN40gStRn3qyUqMvoshCEMSGzbMmEZcap0duhdfDjEFYw2Sj6g@mail.gmail.com>
+References: <CAN40gStRn3qyUqMvoshCEMSGzbMmEZcap0duhdfDjEFYw2Sj6g@mail.gmail.com>
 From: Ira McDonald <blueroofmusic@gmail.com>
-Date: Tue, 8 Jul 2014 12:05:15 -0400
-Message-ID: <CAN40gSuwY2MArtg1v4MmLruwgosMgtfBy4iT5zodmv5k5CGDng@mail.gmail.com>
-Content-Type: multipart/alternative; boundary=485b397dd03d0be40b04fdb0c3fa
-Subject: Re: [Printing-architecture] CUPS and color management
+Date: Tue, 8 Jul 2014 12:06:54 -0400
+Message-ID: <CAN40gSv5=n2vcVWTicAmaM0H5xk88o2YCwxq5Tk6x5QviMvq1A@mail.gmail.com>
+Content-Type: multipart/alternative; boundary=047d7b4141100cc2c004fdb0c93d
+Subject: Re: [Printing-architecture] REMINDER: OP US/Europe - Tuesday 8 July
+	2014
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>,
@@ -30,127 +26,137 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Pascal Obry <pascal@obry.net>, Joseph Simon <jsimon383@gmail.com>, Ira McDonald <blueroofmusic@gmail.com>
-Cc: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>
+To: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>, Ira McDonald <blueroofmusic@gmail.com>, Till Kamppeter <till.kamppeter@gmail.com>, Daniel Dressler <danieru.dressler@gmail.com>
 
---485b397dd03d0be40b04fdb0c3fa
+--047d7b4141100cc2c004fdb0c93d
 Content-Type: text/plain; charset=UTF-8
 
-Hi Joe,
+Hi,
 
-Can you answer Pascal's question below, please?
+REMINDER - one hour until OP monthly call.
 
 Cheers,
 - Ira
 
 
 
-On Tue, Jul 8, 2014 at 11:51 AM, Pascal Obry <pascal@obry.net> wrote:
+On Mon, Jul 7, 2014 at 10:34 AM, Ira McDonald <blueroofmusic@gmail.com>
+wrote:
 
+> Hi,
 >
-> Hi Ira,
-> > Rev. 7225 of 'cups-filters' now replaces "no-color-management" with
-> > "cm-calibration" for the bool option. So the following commands should
-> > work without the added '=' symbol, and will disable ICC profile
-> > management:
-> >
-> >
-> > $ rastertopdf 1 foo bar 1 "cm-calibration" input.ras >>output.pdf
-> >
-> > $ foomatic-rip -p foo -o cm-calibration
-> >
-> >
-> > Joe Simon
+> Reminder of our next OP US/Europe call this Tuesday - main topic
+> is joint PWG / Open Printing Summit in August.
 >
-> Hum... I'm new to CUPS :) So how does that translate in terms of CUPS
-> API?
+>     - Note - Joint PWG/OPS in Toronto, Canada - 12-15 August 2014
+>     - Note - extra OP Summit planning calls may be scheduled in July
 >
-> Is the cm-calibration just a regular option?
+>     - NEW DAY & TIME
+>     - Tuesday 8 July 2014, Daytime (moved from 1 July)
+>       - US
+>         10am in San Francisco - US PDT (Pacific Daylight Time)
+>         11am in Colorado - US MDT (Mountain Daylight Time)
+>         12pm in Chicago - US CDT (Central Daylight Time)
+>         1pm in New York - US EDT (Eastern Daylight Time)
+>       - Europe
+>         7pm in Berlin - CEST (Central European Summer Time)
 >
-> So, should I just do:
->
->   num_options = cupsAddOption("cm-calibration",
->                               "false",
->                               num_options, &options);
->
-> And pass num_optionss & options to cupsPrintFile()?
+>     * Main Number (Till Kamppeter, LF, leader)
+>       International: +1-619-326-2730 (new number)
+>       Access Code:   491659#
 >
 > Cheers,
-> Pascal.
-> --
->   Pascal Obry /  Magny Les Hameaux (78)
+> - Ira
 >
->   The best way to travel is by means of imagination
->
->   http://v2p.fr.eu.org
->   http://www.obry.net
->
->   gpg --keyserver keys.gnupg.net --recv-key F949BD3B
+> Ira McDonald (Musician / Software Architect)
+> Co-Chair - TCG Trusted Mobility Solutions WG
+> Chair - Linux Foundation Open Printing WG
+> Secretary - IEEE-ISTO Printer Working Group
+> Co-Chair - IEEE-ISTO PWG Internet Printing Protocol WG
+> IETF Designated Expert - IPP & Printer MIB
+> Blue Roof Music / High North Inc
+> http://sites.google.com/site/blueroofmusic
+> http://sites.google.com/site/highnorthinc
+> mailto: blueroofmusic@gmail.com
+> Winter  579 Park Place  Saline, MI  48176  734-944-0094
+> Summer  PO Box 221  Grand Marais, MI 49839  906-494-2434
 >
 >
 
---485b397dd03d0be40b04fdb0c3fa
+--047d7b4141100cc2c004fdb0c93d
 Content-Type: text/html; charset=UTF-8
 Content-Transfer-Encoding: quoted-printable
 
-<div dir=3D"ltr"><div><div><div>Hi Joe,<br><br></div>Can you answer Pascal&=
-#39;s question below, please?<br><br></div>Cheers,<br></div>- Ira<br><br><d=
-iv class=3D"gmail_extra"><br clear=3D"all"><br><div class=3D"gmail_quote">O=
-n Tue, Jul 8, 2014 at 11:51 AM, Pascal Obry <span dir=3D"ltr">&lt;<a href=
-=3D"mailto:pascal@obry.net" target=3D"_blank">pascal@obry.net</a>&gt;</span=
-> wrote:<br>
+<div dir=3D"ltr"><div><div><div>Hi,<br><br></div>REMINDER - one hour until =
+OP monthly call.<br><br></div>Cheers,<br></div>- Ira<br><div class=3D"gmail=
+_extra"><div><div dir=3D"ltr"><br><div style=3D"display:inline"></div><div =
+style=3D"display:inline">
 
-<blockquote class=3D"gmail_quote" style=3D"margin:0 0 0 .8ex;border-left:1p=
-x #ccc solid;padding-left:1ex"><br>
-Hi Ira,<br>
-<div class=3D"">&gt; Rev. 7225 of &#39;cups-filters&#39; now replaces &quot=
-;no-color-management&quot; with<br>
-&gt; &quot;cm-calibration&quot; for the bool option. So the following comma=
-nds should<br>
-&gt; work without the added &#39;=3D&#39; symbol, and will disable ICC prof=
-ile<br>
-&gt; management:<br>
-&gt;<br>
-&gt;<br>
-&gt; $ rastertopdf 1 foo bar 1 &quot;cm-calibration&quot; input.ras &gt;&gt=
-;output.pdf<br>
-&gt;<br>
-&gt; $ foomatic-rip -p foo -o cm-calibration<br>
-&gt;<br>
-&gt;<br>
-&gt; Joe Simon<br>
-<br>
-</div>Hum... I&#39;m new to CUPS :) So how does that translate in terms of =
-CUPS<br>
-API?<br>
-<br>
-Is the cm-calibration just a regular option?<br>
-<br>
-So, should I just do:<br>
-<br>
-=C2=A0 num_options =3D cupsAddOption(&quot;cm-calibration&quot;,<br>
-=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
-=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 &quot;false&quot;,<br>
-=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
-=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 num_options, &amp;options);<br>
-<br>
-And pass num_optionss &amp; options to cupsPrintFile()?<br>
-<br>
-Cheers,<br>
-Pascal.<br>
-<div class=3D"HOEnZb"><div class=3D"h5">--<br>
-=C2=A0 Pascal Obry / =C2=A0Magny Les Hameaux (78)<br>
-<br>
-=C2=A0 The best way to travel is by means of imagination<br>
-<br>
-=C2=A0 <a href=3D"http://v2p.fr.eu.org" target=3D"_blank">http://v2p.fr.eu.=
-org</a><br>
-=C2=A0 <a href=3D"http://www.obry.net" target=3D"_blank">http://www.obry.ne=
-t</a><br>
-<br>
-=C2=A0 gpg --keyserver <a href=3D"http://keys.gnupg.net" target=3D"_blank">=
-keys.gnupg.net</a> --recv-key F949BD3B<br>
-<br>
-</div></div></blockquote></div><br></div></div>
+</div><div style=3D"display:inline"></div><div></div><div></div><div></div>=
+<div></div></div></div>
+<br><br><div class=3D"gmail_quote">On Mon, Jul 7, 2014 at 10:34 AM, Ira McD=
+onald <span dir=3D"ltr">&lt;<a href=3D"mailto:blueroofmusic@gmail.com" targ=
+et=3D"_blank">blueroofmusic@gmail.com</a>&gt;</span> wrote:<br><blockquote =
+class=3D"gmail_quote" style=3D"margin:0 0 0 .8ex;border-left:1px #ccc solid=
+;padding-left:1ex">
 
---485b397dd03d0be40b04fdb0c3fa--
+<div dir=3D"ltr"><div><div>Hi,<br><br>Reminder of our next OP US/Europe cal=
+l this Tuesday - main topic<br>is joint PWG / Open Printing Summit in Augus=
+t.<br></div><div><br>=C2=A0=C2=A0=C2=A0 - Note - Joint PWG/OPS in Toronto, =
+Canada - 12-15 August 2014<br>
+
+
+=C2=A0=C2=A0=C2=A0 - Note - extra OP Summit planning calls may be scheduled=
+ in July<br><br>=C2=A0=C2=A0=C2=A0 - NEW DAY &amp; TIME<br>=C2=A0=C2=A0=C2=
+=A0 - Tuesday 8 July 2014, Daytime (moved from 1 July)<br>=C2=A0=C2=A0=C2=
+=A0=C2=A0=C2=A0 - US<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 10am in =
+San Francisco - US PDT (Pacific Daylight Time)<br>
+
+
+=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 11am in Colorado - US MDT (Mount=
+ain Daylight Time)<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 12pm in Ch=
+icago - US CDT (Central Daylight Time)<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=
+=A0=C2=A0 1pm in New York - US EDT (Eastern Daylight Time)<br>=C2=A0=C2=A0=
+=C2=A0=C2=A0=C2=A0 - Europe<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 7=
+pm in Berlin - CEST (Central European Summer Time)<br>
+
+
+<br>=C2=A0=C2=A0=C2=A0 * Main Number (Till Kamppeter, LF, leader)<br>=C2=A0=
+=C2=A0=C2=A0=C2=A0=C2=A0 International: <a href=3D"tel:%2B1-619-326-2730" v=
+alue=3D"+16193262730" target=3D"_blank">+1-619-326-2730</a> (new number)<br=
+>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 Access Code:=C2=A0=C2=A0 491659#<br><br></d=
+iv>
+
+Cheers,<br></div>- Ira<br><br clear=3D"all"><div><div><div><div dir=3D"ltr"=
+>
+Ira McDonald (Musician / Software Architect)<br>Co-Chair - TCG Trusted Mobi=
+lity Solutions WG<br>Chair - Linux Foundation Open Printing WG<br>Secretary=
+ - IEEE-ISTO Printer Working Group<br>Co-Chair - IEEE-ISTO PWG Internet Pri=
+nting Protocol WG<br>
+
+
+IETF Designated Expert - IPP &amp; Printer MIB<br>Blue Roof Music / High No=
+rth Inc<br><a style=3D"color:rgb(51,51,255)" href=3D"http://sites.google.co=
+m/site/blueroofmusic" target=3D"_blank">http://sites.google.com/site/bluero=
+ofmusic</a><br>
+
+
+<a style=3D"color:rgb(102,0,204)" href=3D"http://sites.google.com/site/high=
+northinc" target=3D"_blank">http://sites.google.com/site/highnorthinc</a><b=
+r>mailto: <a href=3D"mailto:blueroofmusic@gmail.com" target=3D"_blank">blue=
+roofmusic@gmail.com</a><br>
+
+
+Winter=C2=A0 579 Park Place=C2=A0 Saline, MI=C2=A0 48176=C2=A0 <a href=3D"t=
+el:734-944-0094" value=3D"+17349440094" target=3D"_blank">734-944-0094</a><=
+br>Summer=C2=A0 PO Box 221=C2=A0 Grand Marais, MI 49839=C2=A0 <a href=3D"te=
+l:906-494-2434" value=3D"+19064942434" target=3D"_blank">906-494-2434</a><b=
+r>
+
+<br><div style=3D"display:inline"></div><div style=3D"display:inline"></div=
+><div style=3D"display:inline"></div>
+<div></div><div></div><div></div><div></div></div></div>
+</div></div></div>
+</blockquote></div><br></div></div>
+
+--047d7b4141100cc2c004fdb0c93d--
