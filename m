@@ -1,24 +1,12 @@
-Return-Path: <till.kamppeter@gmail.com>
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20120113;
-	h=message-id:date:from:user-agent:mime-version:to:subject:references
-	:in-reply-to:content-type:content-transfer-encoding;
-	bh=eOZ+MzeY3I7CCMnHx9zMooi2R2hzwwLTv7Iwvc6xnnY=;
-	b=x76pZXrdszOk6hBcS8c2tROBRf6ETuNhBBFPebBoA4qEuFvSArsoLeeEewyO4zdHiV
-	TY9yTdAOv5lm/zsuWc6KaFxnmjOAjX4jQ8HP/rO6JNuA7aHYN5IIu1HXkoXkOEN1Vc4L
-	XRIwUwN2ISnkEeTViCvvHvVefA1TVaszTxoW2NUWKo5QsQlt0vYDUgi4GHLlsfowDfbg
-	j7eEccHRMrWYaKeRFSTbPZUMX1xn+vPFN+rT6bgh/T2GWfNylM6yHY1/aXUJiB5uyvqP
-	fArqMREepz9XJKJVRLoaJKp102p4tFuvMMmNDVd3LLB99Rs2mJDJ/b/XHaVWyhj69VP0
-	6omQ==
-Message-ID: <53BEBA6A.30304@gmail.com>
-Date: Thu, 10 Jul 2014 18:08:10 +0200
-From: Till Kamppeter <till.kamppeter@gmail.com>
-MIME-Version: 1.0
-References: <e395be80811270817n502ccd16wf6cc90f85364f5ae@mail.gmail.com>
-In-Reply-To: <e395be80811270817n502ccd16wf6cc90f85364f5ae@mail.gmail.com>
-Content-Type: text/plain; charset=UTF-8
-Content-Transfer-Encoding: 7bit
-Subject: [Printing-architecture] Last OP Meeting - Tue - 8 Jul 2014 - The
-	Recording
+Return-Path: <twaugh@redhat.com>
+Message-ID: <1405506739.2713.12.camel@rubik>
+From: Tim Waugh <twaugh@redhat.com>
+Date: Wed, 16 Jul 2014 11:32:19 +0100
+Content-Type: multipart/signed; micalg="pgp-sha1";
+	protocol="application/pgp-signature"; 
+	boundary="=-8l79YVz3wpsXB3k4KQ4j"
+Mime-Version: 1.0
+Subject: [Printing-architecture] CUPS: fail-over without load-balancing
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>,
@@ -28,20 +16,63 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Open Printing <printing-architecture@lists.linux-foundation.org>, Printing-japan <printing-japan@lists.linux-foundation.org>
+To: Open Printing <printing-architecture@lists.linux-foundation.org>
 
-Hi,
 
-I have uploaded the recording of the last OpenPrinting meeting to the
-OpenPrinting server:
+--=-8l79YVz3wpsXB3k4KQ4j
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
 
-http://www.openprinting.org/download/meetingnotes/op-telecons/OP-Meeting-20140708.mp3
+Hello!
 
-In general, recorded meetings I will upload to
+I'm investigating how to implement fail-over for CUPS, but without
+having load-balancing as a side effect.
 
-http://www.openprinting.org/download/meetingnotes/
+The usual way of implementing fail-over is simply to use classes, so
+that printers are used round-robin fashion.
 
-   Till
+However, I'd like to implement fail-over as follows:
 
-P. S.: The MP3 is 19 MB long, 55 minutes of talking.
+Each class will have one active printer accepting jobs, and a fail-over
+printer not accepting jobs. When all is well, only the active printer
+will be in use.
+
+When the active printer fails, a daemon will spot this and start the
+fail-over printer accepting jobs.
+
+This is planned to be accomplished by having the daemon subscribe to
+notifications. When it sees a notification that a printer has been
+disabled due to a job failure, it will look for classes containing that
+printer but no other accepting printers.
+
+For each of these classes, it will look for a printer with a 'failover'
+attribute and set it to accept queues. It will also move any jobs queued
+for the failed printer over to the newly-accepting printer.
+
+Does this sound like the best approach? Is it something that would be
+best implemented as part of CUPS, or cups-filters, or a standalone
+project?
+
+Tim.
+*/
+
+
+--=-8l79YVz3wpsXB3k4KQ4j
+Content-Type: application/pgp-signature; name="signature.asc"
+Content-Description: This is a digitally signed message part
+Content-Transfer-Encoding: 7bit
+
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2
+
+iQEVAwUAU8ZUtXlVEo2joavTAQLa8AgAncoXpjlzCAeErMLc2Z+keoAtiHWF9iBa
+SyovMzM1grhm0uiPofClSO8Mh6lsHdvNmEtbi2/kMAUpvqTKVO3zOjj+gl2y/IsK
+MRpLn+O5DoIO+MrjEktUnuXysqD/D5uVB1wzfgLGLqJV5G92x/BUUBc0dXQNNALS
+qslmIlFGOSQARLZwD4v+cAjRjGRlavyilvd38k4c9vs6IKbCwwUmW+x/ngW2nVqH
+DydutM3zng8VNhlnGe2cZexSKUKwoyb3RIt2Itp3ZOa9pgixpXgKPtxF/UE81bq9
+pLKik/FAOcEsfaM2pM3/VOcvuBR/DmFdCiiA+aiuvwd+hU8+XUVwWw==
+=jVWz
+-----END PGP SIGNATURE-----
+
+--=-8l79YVz3wpsXB3k4KQ4j--
 
