@@ -2,15 +2,15 @@ Return-Path: <till.kamppeter@gmail.com>
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20120113;
 	h=message-id:date:from:user-agent:mime-version:to:subject:references
 	:in-reply-to:content-type:content-transfer-encoding;
-	bh=iBJxcZybXEqrr3x7L8wB0wfTJlK76BIhPx6sMeuO4HU=;
-	b=w5Wxw4ute+VbKK9hn3Qc/gOcyr1fmz96HuoQx74dSa/uBNm6jPO5iEP+e6pByJkuj9
-	KKYAYZ7Y0Q0bwyKyLHGw8Scn+vd2dZDKu5aQHpeWLeRQGazjMU8s1Hhm7RcR6NUgAACn
-	iNR8nHPO6efXAWSZ2pJ+jmqtZ4GTKq1BSenpN85r4PKjYS9j/W6MhzeDjbbJmwwRPlO4
-	oFzRNDgPYcUP/5jEzbuIL9M3TosayZVDIdXnbTBTlr4PEOob8wyFqVPtaItk3DD0SfpD
-	iVg2TNw69tunGP7l9F+YYdX4R31gf1P8eSSWf1nZKpeMRNtwtzT2lrxnAZhsOH7ffC6X
-	UCfA==
-Message-ID: <53F3CB94.8050500@gmail.com>
-Date: Wed, 20 Aug 2014 00:11:32 +0200
+	bh=fxrhFDNJk5X6dSqmoSEEhJ35uL5HOgFK+boTmpDdd2I=;
+	b=g2XKDnExbDEpmyUZEUfoOObD3c4WksTsU4TqOsmxkMtsT0a5hf2LPxjGTlGjw16/R8
+	c1acVvpvmB6a48tdfjyYTZF3rOn0WuIWic0q9Uj8t5N+M95N8T4MEh82zIaeYxSQSGOp
+	4wRXzz3CHitHIPJY00O0os8SU3BBg2beSsaWR0xu0KuPt21+VFi+NEBK8jF+iT5oldWQ
+	nTbEIxrDI2/IjBDHIdGhvudFSoNmEgtZ5bMK6Japy1SncvtkmkE/em8m3U1DV8YkiIRc
+	qEDZpUvZ5gNNgXLX2xToYbLajAbj1IE8ZFAqSNm7MOjCcm2QPykJRdFkYNnna3wP6Pvr
+	2uIw==
+Message-ID: <53F3CC78.1040500@gmail.com>
+Date: Wed, 20 Aug 2014 00:15:20 +0200
 From: Till Kamppeter <till.kamppeter@gmail.com>
 MIME-Version: 1.0
 References: <e395be80811270817n502ccd16wf6cc90f85364f5ae@mail.gmail.com>
@@ -43,5 +43,5 @@ http://www.openprinting.org/download/meetingnotes/
 
    Till
 
-P. S.: The MP3 is 19 MB long, 55 minutes of talking.
+P. S.: The MP3 is 11 MB long, 32 minutes of talking.
 
