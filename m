@@ -1,11 +1,13 @@
 Return-Path: <pascal@obry.net>
-Message-ID: <1411402800.8537.59.camel@obry.net>
+Message-ID: <1411403192.8537.62.camel@obry.net>
 From: Pascal Obry <pascal@obry.net>
-Date: Mon, 22 Sep 2014 18:20:00 +0200
+Date: Mon, 22 Sep 2014 18:26:32 +0200
+In-Reply-To: <1411402800.8537.59.camel@obry.net>
+References: <1411402800.8537.59.camel@obry.net>
 Content-Type: text/plain; charset="UTF-8"
 Content-Transfer-Encoding: quoted-printable
 Mime-Version: 1.0
-Subject: [Printing-architecture] question about profile/driver
+Subject: Re: [Printing-architecture] question about profile/driver
 Reply-To: pascal@obry.net
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
@@ -19,24 +21,10 @@ List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-arc
 To: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>
 
 
-I've been printing on an Epson 3880 (CUPS+gutenprint driver) since more
-than a year with an home made ICC profile on a GNU/Debian sid machine.
-
-Today I have found that my pictures where not correct regarding color
-rendering. After checking again and again all my parameters I have
-decided to print my 3 color charts to recalibrate and indeed the colors
-are not identical (more saturated, but not uniformly the blue and red
-seems more saturated) than in my first charts that I had kept around.
-
-So, my question... Is this expected? Does some color rendering have been
-changed recently on the driver?
-
-Any hints?
+Sorry, just wanted to add that I'm using CUPS 1.7.5 and Gutenprint
+5.2.10.
 
 Regards,
-
-PS: I'm ok to recalibrate, I just wanted to raise this issue to be sure
-this is expected and there is not something more fishy (bug?) around.
 
 --=20
   Pascal Obry /  Magny Les Hameaux (78)
