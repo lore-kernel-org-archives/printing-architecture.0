@@ -1,9 +1,10 @@
 Return-Path: <pascal@obry.net>
-Message-ID: <1411403192.8537.62.camel@obry.net>
+Message-ID: <1412013631.15605.54.camel@obry.net>
 From: Pascal Obry <pascal@obry.net>
-Date: Mon, 22 Sep 2014 18:26:32 +0200
-In-Reply-To: <1411402800.8537.59.camel@obry.net>
+Date: Mon, 29 Sep 2014 20:00:31 +0200
+In-Reply-To: <1411403192.8537.62.camel@obry.net>
 References: <1411402800.8537.59.camel@obry.net>
+	<1411403192.8537.62.camel@obry.net>
 Content-Type: text/plain; charset="UTF-8"
 Content-Transfer-Encoding: quoted-printable
 Mime-Version: 1.0
@@ -21,10 +22,39 @@ List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-arc
 To: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>
 
 
-Sorry, just wanted to add that I'm using CUPS 1.7.5 and Gutenprint
-5.2.10.
+Responding to myself with some more data that should help. This could be
+a cups-filter issue.
 
-Regards,
+I have printed the same picture (I have even verified the MD5 of the tif
+file to be sure) from an old Ubuntu box and the picture looks ok there.
+I'm printing on both computers using GNOME eog and I have double
+(triple) checked that all parameters are identical.
+
+So wrong print with:
+   CUPS 1.7.5
+   gutenprint 5.2.10
+
+Correct output with:
+   CUPS 1.7.2-0ubuntu1.2
+   gutenprint 5.2.10~pre2-0ubuntu2
+
+Any idea? Do you need more data?
+
+I have also done a diff of the .ppd files to ensure nothing wrong was
+there:
+
+>  diff epson_3880.ppd /etc/cups/ppd/Epson_Stylus_Pro_3880.ppd=20
+> 18c18
+> < *FileVersion:       "5.2.10-pre2"
+> ---
+> > *FileVersion:       "5.2.10"
+> 26c26
+> < *NickName:      "Epson Stylus Pro 3880 - CUPS+Gutenprint
+v5.2.10-pre2"
+> ---
+> > *NickName:      "Epson Stylus Pro 3880 - CUPS+Gutenprint v5.2.10"
+
+Thanks,
 
 --=20
   Pascal Obry /  Magny Les Hameaux (78)
