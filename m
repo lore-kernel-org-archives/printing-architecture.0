@@ -1,27 +1,12 @@
-Return-Path: <msweet@apple.com>
-DKIM-Signature: v=1; a=rsa-sha256; d=apple.com; s=mailout2048s;
-	c=relaxed/simple; 
-	q=dns/txt; i=@apple.com; t=1412076688; x=2275990288;
-	h=From:Sender:Reply-To:Subject:Date:Message-id:To:Cc:MIME-version:Content-type:
-	Content-transfer-encoding:Content-ID:Content-Description:Resent-Date:Resent-From:
-	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-reply-to:References:List-Id:
-	List-Help:List-Unsubscribe:List-Subscribe:List-Post:List-Owner:List-Archive;
-	bh=bMYeX4PAYBM9/QdpPafjJ7DE8Mon025b4DQsNsRSxDM=;
-	b=bouL+56F+fqsbAcInOeuH6n9Ia53/iuBbccmUerBYlnyiZpZm2U+so/l9Gx/DG1c
-	cRux/gJw7h99vl9gRv2ZMhNV6c2bFJHEFNVXaBsTGyqFtRWP5HLFgi7+dGKREoDo
-	PaUdI+Hgu2x/sZ5/7N3pZBEpUCvhQEgen770KYdb006PAG2DOm/Od+rCROZgANXM
-	7xMfBsx0liKT31wCsXh0NuwAz/eUYK1TjCTSLCeUEUTMK27hu0RBju8FKn+4sbIf
-	iDRJ9Oy6+anROPqrahlR1CXDiCr3pvonPSU5EYMEz6q/GLVOvwXpMrK0syLi+6hv
-	rHSa19XwrfqTghV2krIT3g==;
-MIME-version: 1.0
-Content-transfer-encoding: 7BIT
-Content-type: text/plain; CHARSET=US-ASCII
-From: Michael Sweet <msweet@apple.com>
-In-reply-to: <542A8535.4050602@gmail.com>
-Date: Tue, 30 Sep 2014 07:31:28 -0400
-Message-id: <7948AB2C-721B-4A76-A876-963BA2C94EF7@apple.com>
-References: <542A8535.4050602@gmail.com>
-Subject: Re: [Printing-architecture] Mopria
+Return-Path: <pascal@obry.net>
+Message-ID: <1412092717.5614.61.camel@obry.net>
+From: Pascal Obry <pascal@obry.net>
+Date: Tue, 30 Sep 2014 17:58:37 +0200
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+Mime-Version: 1.0
+Subject: [Printing-architecture] bug report about color management
+Reply-To: pascal@obry.net
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>,
@@ -31,38 +16,35 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Till Kamppeter <till.kamppeter@gmail.com>
-Cc: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>
+To: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>
 
-Till,
 
-> On Sep 30, 2014, at 6:25 AM, Till Kamppeter <till.kamppeter@gmail.com> wrote:
-> 
-> Hi,
-> 
-> got this link today:
-> 
-> http://www.mopria.org/
-> 
-> It is all about standardized mobile printing. Is this known inside the
-> PWG? It was not talked about on the Summit.
+After discussion on the gimp-print-devel@ mailing-list I've been
+redirected here.
 
-Yes, it is known.
+I've found out that the regression (as reported in my previous message
+on this mailing-list) about the color management support on GNU/Debian
+has been introduced between CUPS 1.7.5-1 and 1.7.5-2. The ColorManaged
+CUPS option has been renamed CM-Calibration.
 
-The Mopria Alliance is mainly a marketing organization for Android printing over Wi-Fi.  It uses IPP Everywhere for infrastructure networks and P2P Print Services (a subset of IPP Everywhere) for Wi-Fi Direct.
+So it looks like a patch rejected by Apple/CUPS.org is bundled with
+GNU/Debian CUPS package starting with the second build of CUPS 1.7.5.
 
-The Mopria Alliance is a closed (members-only) organization.  When they originally were formed, they did reach out to the PWG and make some presentations at F2F meetings.  However, since they will not allow us to put those presentations online and the PWG's bylaws require everything we do to be openly available, we have not had a Mopria presentation in almost a year.  (the invitation for Mopria to participate remains open, under the terms of the PWG IP policy, and we are trying to setup a formal liaison with them...)
+The side effect is that this "destroy" the color-management and the
+prints are really bad. For the record I'm printing on GNU/Linux since at
+least 2 years with an home made ICC profile.
 
-> And another question: How is a printer identified as IPP Everywhere or
-> as accepting PWG Raster? What has to be in the device ID (in the CMD:
-> field)? What has to be in the Bonjour TXT record?
+How to proceed? Do you confirm this is a bug?
 
-An IPP Everywhere printer reports 'ipp-everywhere' in the "ipp-features-supported" Printer attribute.
+Thanks,
 
-At the Bonjour level, it registers the _print subtype and reports "image/pwg-raster" in the "pdl" key.
+--=20
+  Pascal Obry /  Magny Les Hameaux (78)
 
-In the 1284 Device ID you can look for "PWGRaster" in the CMD field.
+  The best way to travel is by means of imagination
 
-_________________________________________________________
-Michael Sweet, Senior Printing System Engineer, PWG Chair
+  http://v2p.fr.eu.org
+  http://www.obry.net
+
+  gpg --keyserver keys.gnupg.net --recv-key F949BD3B
 
