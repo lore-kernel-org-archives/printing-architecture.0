@@ -1,15 +1,21 @@
-Return-Path: <pascal@obry.net>
-Message-ID: <1412013631.15605.54.camel@obry.net>
-From: Pascal Obry <pascal@obry.net>
-Date: Mon, 29 Sep 2014 20:00:31 +0200
-In-Reply-To: <1411403192.8537.62.camel@obry.net>
-References: <1411402800.8537.59.camel@obry.net>
-	<1411403192.8537.62.camel@obry.net>
-Content-Type: text/plain; charset="UTF-8"
-Content-Transfer-Encoding: quoted-printable
-Mime-Version: 1.0
-Subject: Re: [Printing-architecture] question about profile/driver
-Reply-To: pascal@obry.net
+Return-Path: <till.kamppeter@gmail.com>
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20120113;
+	h=message-id:date:from:user-agent:mime-version:to:subject
+	:content-type:content-transfer-encoding;
+	bh=sjgKAp9Y62YjterOOKhUpoThVc4QHgvz7MT7CR6PgeI=;
+	b=xfa1f/AQqMoE+e+kWt36zeiHwT+c7cR0WN5NCsyqs8NGP2eeklS0F7oShFoK2jOgEs
+	A3RSEiBic6MlMCov2BT1PdKjPFZzMOAW0dDWlWVnKP9NuRK1nu9O2PCeHbTXwYNdQP+g
+	NO0lYAcenrQsBRmqvFsE5TxwVfS+D69KYtEzl33OX4X6/aD6L6OoD17gJlnvzdFmhs67
+	865jLuCDDXj0mUE2nYsz4am57G5rbX4JGSzqZXoWGI3dOxto2aQTavJL1U7YofNksw5p
+	wQ/FzZu4mDesjcCAApFn7nPgeLp/hKDDH84BQVo6+XihYQ351yFUcoIyC5ACKQ1+RdLr
+	fqeA==
+Message-ID: <542A8535.4050602@gmail.com>
+Date: Tue, 30 Sep 2014 12:25:57 +0200
+From: Till Kamppeter <till.kamppeter@gmail.com>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: 7bit
+Subject: [Printing-architecture] Mopria
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>,
@@ -19,50 +25,19 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>
+To: Open Printing <printing-architecture@lists.linux-foundation.org>
 
+Hi,
 
-Responding to myself with some more data that should help. This could be
-a cups-filter issue.
+got this link today:
 
-I have printed the same picture (I have even verified the MD5 of the tif
-file to be sure) from an old Ubuntu box and the picture looks ok there.
-I'm printing on both computers using GNOME eog and I have double
-(triple) checked that all parameters are identical.
+http://www.mopria.org/
 
-So wrong print with:
-   CUPS 1.7.5
-   gutenprint 5.2.10
+It is all about standardized mobile printing. Is this known inside the
+PWG? It was not talked about on the Summit.
 
-Correct output with:
-   CUPS 1.7.2-0ubuntu1.2
-   gutenprint 5.2.10~pre2-0ubuntu2
+And another question: How is a printer identified as IPP Everywhere or
+as accepting PWG Raster? What has to be in the device ID (in the CMD:
+field)? What has to be in the Bonjour TXT record?
 
-Any idea? Do you need more data?
-
-I have also done a diff of the .ppd files to ensure nothing wrong was
-there:
-
->  diff epson_3880.ppd /etc/cups/ppd/Epson_Stylus_Pro_3880.ppd=20
-> 18c18
-> < *FileVersion:       "5.2.10-pre2"
-> ---
-> > *FileVersion:       "5.2.10"
-> 26c26
-> < *NickName:      "Epson Stylus Pro 3880 - CUPS+Gutenprint
-v5.2.10-pre2"
-> ---
-> > *NickName:      "Epson Stylus Pro 3880 - CUPS+Gutenprint v5.2.10"
-
-Thanks,
-
---=20
-  Pascal Obry /  Magny Les Hameaux (78)
-
-  The best way to travel is by means of imagination
-
-  http://v2p.fr.eu.org
-  http://www.obry.net
-
-  gpg --keyserver keys.gnupg.net --recv-key F949BD3B
-
+   Till
