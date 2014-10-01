@@ -1,17 +1,26 @@
-Return-Path: <doug@uq.edu.au>
-From: Douglas Kosovic <doug@uq.edu.au>
-Date: Wed, 1 Oct 2014 14:55:45 +0000
-Message-ID: <46517E4B-F7AB-471C-A36D-1B281E952DC8@uq.edu.au>
+Return-Path: <blueroofmusic@gmail.com>
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20120113;
+	h=mime-version:in-reply-to:references:from:date:message-id:subject:to
+	:cc:content-type;
+	bh=LuUGcPtNXeHAeq2rjgPMgPlmLn/7Sieot8tJv48wlRE=;
+	b=mfvgSF14CzAjkXQmO2HHi9dOpT33y5cqmq0EvY4lgEV3SO3KYQX5SRHnFkl3oVGeYR
+	pEptVJByytYNTfq/98FteWoWidpU0tsgsQl3au6l0OkRoxW7aPgv3ahs+rK08lbE9FZN
+	C4Y97xYRARH/RI8mQ0zwmxIJnK4GUCyN6lP3U+stSF6rMJhhhJS9o19Q0AOvlQMhdsm/
+	wVmmdRuxQCwt1S+tJAtTivCc+h8mGENwSi4Ogjm4OZeHypqhOTAIlsMHJfUczu2bPGgx
+	vDSPrw2KSi4r5Z/YrzJ5pKu7zQoZDVQdttP56FJUI+PQdMxTG5COuSz2/xP4qAyDQN78
+	D4iw==
+MIME-Version: 1.0
+In-Reply-To: <46517E4B-F7AB-471C-A36D-1B281E952DC8@uq.edu.au>
 References: <542A8535.4050602@gmail.com>
 	<7948AB2C-721B-4A76-A876-963BA2C94EF7@apple.com>
 	<542C03C3.2000805@gmail.com>
 	<5367C603-0F23-4FF7-B032-BEE8E69136CE@apple.com>
 	<542C0AA6.8060202@gmail.com>
-In-Reply-To: <542C0AA6.8060202@gmail.com>
-Content-Language: en-US
-Content-Type: multipart/alternative;
-	boundary="_000_46517E4BF7AB471CA36D1B281E952DC8uqeduau_"
-MIME-Version: 1.0
+	<46517E4B-F7AB-471C-A36D-1B281E952DC8@uq.edu.au>
+From: Ira McDonald <blueroofmusic@gmail.com>
+Date: Wed, 1 Oct 2014 11:08:19 -0400
+Message-ID: <CAN40gSt7-r+95kiQGdQN3qDei5FAJcj82JjaBCob2G==v1+VTg@mail.gmail.com>
+Content-Type: multipart/alternative; boundary=047d7b5d348cfee1da05045ddf97
 Subject: Re: [Printing-architecture] Mopria
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
@@ -22,97 +31,191 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>
+To: Douglas Kosovic <doug@uq.edu.au>
+Cc: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>
 
---_000_46517E4BF7AB471CA36D1B281E952DC8uqeduau_
-Content-Type: text/plain; charset="utf-8"
-Content-Transfer-Encoding: base64
+--047d7b5d348cfee1da05045ddf97
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
 
-DQpPbiAyIE9jdCAyMDE0LCBhdCAxMjowNyBhbSwgVGlsbCBLYW1wcGV0ZXIgPHRpbGwua2FtcHBl
-dGVyQGdtYWlsLmNvbTxtYWlsdG86dGlsbC5rYW1wcGV0ZXJAZ21haWwuY29tPj4gd3JvdGU6DQoN
-ClNvIFBDTE0gaGFzIG5vdGhpbmcgdG8gZG8gd2l0aCBQQ0wgYW5kIGl0IGlzIGEgcHJvcHJpZXRh
-cnkgcHJvdG9jb2wgc29sZA0KdG8gT1MgdmVuZG9ycyBieSB0aGUgV2ktRmkgQWxsaWFuY2U/IFRv
-IGJlIHBhaWQgZWl0aGVyIGRpcmVjdGx5IG9yIGJ5DQp0aGUgbWVtYmVyc2hpcCBmZWU/DQoNCg0K
-RXh0cmFjdCBmcm9tIHRoZSBVUzIwMTMwMTAwNDg2IEExIHBhdGVudCBhcHBsaWNhdGlvbiAoIGh0
-dHBzOi8vd3d3Lmdvb2dsZS5jb20vcGF0ZW50cy9VUzIwMTMwMTAwNDg2ICkgOg0KDQpUbyBjcmVh
-dGUgYSBzdHJlYW1hYmxlIFBERiBkb2N1bWVudCwgYSBuZXcgcHJvdG9jb2wgY2FsbGVkIFByaW50
-ZXIgQ29udHJvbCBMYW5ndWFnZeKAlE1vYmlsZSAoUENMbSkgaGFzIGJlZW4gY3JlYXRlZC4gUENM
-bSBoYXMgYmVlbiBkZXZlbG9wZWQgdXNpbmcgYSBzdWJzZXQgb2YgdGhlIFBERiBncmFtbWFyLiBQ
-Q0xtIGFsbG93cyBmb3IgY29uc3VtcHRpb24gb2YgdGhlIHByaW50IGZpbGVzIGJ5IGFsbCBQREYg
-MS40IG9yIGxhdGVyIGNvbXBsaWFudCBkZXZpY2VzIGFuZCBhbGxvd3MgZm9yIGJvdGggcHJpbnRp
-bmcgYW5kIHZpZXdpbmcgb2YgdGhlIHJhc3Rlcml6ZWQgcGFnZXMuIFBDTG0gbWF5IGV4Y2x1ZGUg
-YSBudW1iZXIgb2YgUERGIGdyYW1tYXIgY29uc3RydWN0cyBpbmNsdWRpbmcgdGV4dCwgdmVjdG9y
-LCBpbWFnZXMsIHBhdHRlcm5zLCB0cmFuc3BhcmVuY3kgYW5kIGJsZW5kaW5nIGluc3RydWN0aW9u
-cy4gVGhlIGV4Y2x1c2lvbiBvZiB0aGVzZSBjb21tYW5kcyBtYWtlcyBQQ0xtIGRldGVybWluaXN0
-aWMgYmVjYXVzZSBjb21tYW5kcyB0aGF0IGNvdWxkIGJlIHJldHJvYWN0aXZlbHkgYXBwbGllZCB0
-byBkYXRhIHdoaWNoIGhhcyBhbHJlYWR5IGJlZW4gc3RyZWFtZWQgaGF2ZSBiZWVuIGVsaW1pbmF0
-ZWQuIFRoaXMgYWxsb3dzIHByaW50ZXJzIHRvIGJlZ2luIHByaW50aW5nIGFzIHNvb24gYXMgdGhl
-IFBDTG0gZGF0YSBzdHJlYW0gYmVnaW5zIHRvIGJlIHJlY2VpdmVkLiBUaGlzIG1pbmltaXplcyB0
-aGUgYW1vdW50IG9mIG1lbW9yeSBhbmQgY29tcHV0YXRpb24gcmVxdWlyZWQgYnkgdGhlIHByaW50
-ZXIgYW5kIGFsbG93cyBsb3cgZW5kIHByaW50ZXJzIHRvIGVmZmVjdGl2ZWx5IHByaW50IGxhcmdl
-IGRvY3VtZW50cy4NCg0KDQoNCkRvdWcNCg0K
+Hi,
 
---_000_46517E4BF7AB471CA36D1B281E952DC8uqeduau_
-Content-Type: text/html; charset="utf-8"
-Content-ID: <1B8E94E4BBA724469462E7392DC5709D@exchange.uq.edu.au>
-Content-Transfer-Encoding: base64
+Hmm - interesting synopsis in that patent application - IANAL.
 
-PGh0bWw+DQo8aGVhZD4NCjxtZXRhIGh0dHAtZXF1aXY9IkNvbnRlbnQtVHlwZSIgY29udGVudD0i
-dGV4dC9odG1sOyBjaGFyc2V0PXV0Zi04Ij4NCjwvaGVhZD4NCjxib2R5IHN0eWxlPSJ3b3JkLXdy
-YXA6IGJyZWFrLXdvcmQ7IC13ZWJraXQtbmJzcC1tb2RlOiBzcGFjZTsgLXdlYmtpdC1saW5lLWJy
-ZWFrOiBhZnRlci13aGl0ZS1zcGFjZTsiIGNsYXNzPSIiPg0KPGJyIGNsYXNzPSIiPg0KPGRpdj4N
-CjxibG9ja3F1b3RlIHR5cGU9ImNpdGUiIGNsYXNzPSIiPg0KPGRpdiBjbGFzcz0iIj5PbiAyIE9j
-dCAyMDE0LCBhdCAxMjowNyBhbSwgVGlsbCBLYW1wcGV0ZXIgJmx0OzxhIGhyZWY9Im1haWx0bzp0
-aWxsLmthbXBwZXRlckBnbWFpbC5jb20iIGNsYXNzPSIiPnRpbGwua2FtcHBldGVyQGdtYWlsLmNv
-bTwvYT4mZ3Q7IHdyb3RlOjwvZGl2Pg0KPGRpdiBjbGFzcz0iIj48YnIgY2xhc3M9IiI+DQpTbyBQ
-Q0xNIGhhcyBub3RoaW5nIHRvIGRvIHdpdGggUENMIGFuZCBpdCBpcyBhIHByb3ByaWV0YXJ5IHBy
-b3RvY29sIHNvbGQ8YnIgY2xhc3M9IiI+DQp0byBPUyB2ZW5kb3JzIGJ5IHRoZSBXaS1GaSBBbGxp
-YW5jZT8gVG8gYmUgcGFpZCBlaXRoZXIgZGlyZWN0bHkgb3IgYnk8YnIgY2xhc3M9IiI+DQp0aGUg
-bWVtYmVyc2hpcCBmZWU/PGJyIGNsYXNzPSIiPg0KPC9kaXY+DQo8L2Jsb2NrcXVvdGU+DQo8YnIg
-Y2xhc3M9IiI+DQo8L2Rpdj4NCjxkaXY+PGJyIGNsYXNzPSIiPg0KPC9kaXY+DQo8ZGl2PkV4dHJh
-Y3QgZnJvbSB0aGUmbmJzcDs8c3BhbiBzdHlsZT0iY29sb3I6IHJnYigzNCwgMzQsIDM0KTsgZm9u
-dC1mYW1pbHk6IEFyaWFsLCBzYW5zLXNlcmlmOyBmb250LXNpemU6IDEzcHg7IGJhY2tncm91bmQt
-Y29sb3I6IHJnYigyNDUsIDI0NSwgMjQ1KTsiIGNsYXNzPSIiPlVTMjAxMzAxMDA0ODYgQTE8L3Nw
-YW4+Jm5ic3A7cGF0ZW50IGFwcGxpY2F0aW9uICgmbmJzcDs8YSBocmVmPSJodHRwczovL3d3dy5n
-b29nbGUuY29tL3BhdGVudHMvVVMyMDEzMDEwMDQ4NiIgY2xhc3M9IiI+aHR0cHM6Ly93d3cuZ29v
-Z2xlLmNvbS9wYXRlbnRzL1VTMjAxMzAxMDA0ODY8L2E+Jm5ic3A7KQ0KIDo8L2Rpdj4NCjxkaXY+
-PGJyIGNsYXNzPSIiPg0KPC9kaXY+DQo8ZGl2PjxzcGFuIHN0eWxlPSJjb2xvcjogcmdiKDM0LCAz
-NCwgMzQpOyBmb250LWZhbWlseTogQXJpYWwsIHNhbnMtc2VyaWY7IGZvbnQtc2l6ZTogMTNweDsg
-bGluZS1oZWlnaHQ6IDIxLjMzMzMzMzk2OTExNjIxcHg7IGJhY2tncm91bmQtY29sb3I6IHJnYigy
-NTUsIDI1NSwgMjU1KTsiIGNsYXNzPSIiPlRvIGNyZWF0ZSBhIHN0cmVhbWFibGUgUERGIGRvY3Vt
-ZW50LCBhIG5ldyBwcm90b2NvbCBjYWxsZWQgUHJpbnRlciBDb250cm9sIExhbmd1YWdl4oCUTW9i
-aWxlDQogKFBDTG0pIGhhcyBiZWVuIGNyZWF0ZWQuIFBDTG0gaGFzIGJlZW4gZGV2ZWxvcGVkIHVz
-aW5nIGEgc3Vic2V0IG9mIHRoZSBQREYgZ3JhbW1hci4gUENMbSBhbGxvd3MgZm9yIGNvbnN1bXB0
-aW9uIG9mIHRoZSBwcmludCBmaWxlcyBieSBhbGwgUERGIDEuNCBvciBsYXRlciBjb21wbGlhbnQg
-ZGV2aWNlcyBhbmQgYWxsb3dzIGZvciBib3RoIHByaW50aW5nIGFuZCB2aWV3aW5nIG9mIHRoZSBy
-YXN0ZXJpemVkIHBhZ2VzLiBQQ0xtIG1heSBleGNsdWRlDQogYSBudW1iZXIgb2YgUERGIGdyYW1t
-YXIgY29uc3RydWN0cyBpbmNsdWRpbmcgdGV4dCwgdmVjdG9yLCBpbWFnZXMsIHBhdHRlcm5zLCB0
-cmFuc3BhcmVuY3kgYW5kIGJsZW5kaW5nIGluc3RydWN0aW9ucy4gVGhlIGV4Y2x1c2lvbiBvZiB0
-aGVzZSBjb21tYW5kcyBtYWtlcyBQQ0xtIGRldGVybWluaXN0aWMgYmVjYXVzZSBjb21tYW5kcyB0
-aGF0IGNvdWxkIGJlIHJldHJvYWN0aXZlbHkgYXBwbGllZCB0byBkYXRhIHdoaWNoIGhhcyBhbHJl
-YWR5IGJlZW4NCiBzdHJlYW1lZCBoYXZlIGJlZW4gZWxpbWluYXRlZC4gVGhpcyBhbGxvd3MgcHJp
-bnRlcnMgdG8gYmVnaW4gcHJpbnRpbmcgYXMgc29vbiBhcyB0aGUgUENMbSBkYXRhIHN0cmVhbSBi
-ZWdpbnMgdG8gYmUgcmVjZWl2ZWQuIFRoaXMgbWluaW1pemVzIHRoZSBhbW91bnQgb2YgbWVtb3J5
-IGFuZCBjb21wdXRhdGlvbiByZXF1aXJlZCBieSB0aGUgcHJpbnRlciBhbmQgYWxsb3dzIGxvdyBl
-bmQgcHJpbnRlcnMgdG8gZWZmZWN0aXZlbHkgcHJpbnQgbGFyZ2UNCiBkb2N1bWVudHMuPC9zcGFu
-PjwvZGl2Pg0KPGRpdj48c3BhbiBzdHlsZT0iY29sb3I6IHJnYigzNCwgMzQsIDM0KTsgZm9udC1m
-YW1pbHk6IEFyaWFsLCBzYW5zLXNlcmlmOyBmb250LXNpemU6IDEzcHg7IGxpbmUtaGVpZ2h0OiAy
-MS4zMzMzMzM5NjkxMTYyMXB4OyBiYWNrZ3JvdW5kLWNvbG9yOiByZ2IoMjU1LCAyNTUsIDI1NSk7
-IiBjbGFzcz0iIj48YnIgY2xhc3M9IiI+DQo8L3NwYW4+PC9kaXY+DQo8ZGl2PjxzcGFuIHN0eWxl
-PSJjb2xvcjogcmdiKDM0LCAzNCwgMzQpOyBmb250LWZhbWlseTogQXJpYWwsIHNhbnMtc2VyaWY7
-IGZvbnQtc2l6ZTogMTNweDsgbGluZS1oZWlnaHQ6IDIxLjMzMzMzMzk2OTExNjIxcHg7IGJhY2tn
-cm91bmQtY29sb3I6IHJnYigyNTUsIDI1NSwgMjU1KTsiIGNsYXNzPSIiPjxiciBjbGFzcz0iIj4N
-Cjwvc3Bhbj48L2Rpdj4NCjxkaXY+PHNwYW4gc3R5bGU9ImNvbG9yOiByZ2IoMzQsIDM0LCAzNCk7
-IGZvbnQtZmFtaWx5OiBBcmlhbCwgc2Fucy1zZXJpZjsgZm9udC1zaXplOiAxM3B4OyBsaW5lLWhl
-aWdodDogMjEuMzMzMzMzOTY5MTE2MjFweDsgYmFja2dyb3VuZC1jb2xvcjogcmdiKDI1NSwgMjU1
-LCAyNTUpOyIgY2xhc3M9IiI+PGJyIGNsYXNzPSIiPg0KPC9zcGFuPjwvZGl2Pg0KPGRpdj48c3Bh
-biBzdHlsZT0iY29sb3I6IHJnYigzNCwgMzQsIDM0KTsgZm9udC1mYW1pbHk6IEFyaWFsLCBzYW5z
-LXNlcmlmOyBmb250LXNpemU6IDEzcHg7IGxpbmUtaGVpZ2h0OiAyMS4zMzMzMzM5NjkxMTYyMXB4
-OyBiYWNrZ3JvdW5kLWNvbG9yOiByZ2IoMjU1LCAyNTUsIDI1NSk7IiBjbGFzcz0iIj5Eb3VnPC9z
-cGFuPjwvZGl2Pg0KPGRpdj48c3BhbiBzdHlsZT0iY29sb3I6IHJnYigzNCwgMzQsIDM0KTsgZm9u
-dC1mYW1pbHk6IEFyaWFsLCBzYW5zLXNlcmlmOyBmb250LXNpemU6IDEzcHg7IGxpbmUtaGVpZ2h0
-OiAyMS4zMzMzMzM5NjkxMTYyMXB4OyBiYWNrZ3JvdW5kLWNvbG9yOiByZ2IoMjU1LCAyNTUsIDI1
-NSk7IiBjbGFzcz0iIj48YnIgY2xhc3M9IiI+DQo8L3NwYW4+PC9kaXY+DQo8L2JvZHk+DQo8L2h0
-bWw+DQo=
+But 10 years ago, with an Adobe primary editor, the IEEE-ISTO PWG
+published the open standard PDF: Image Streamable (PDF/is):
 
---_000_46517E4BF7AB471CA36D1B281E952DC8uqeduau_--
+http://ftp.pwg.org/pub/pwg/candidates/cs-ifxpdfis10-20040315-5102.3.pdf
+
+Cheers,
+- Ira
+
+
+
+Ira McDonald (Musician / Software Architect)
+Co-Chair - TCG Trusted Mobility Solutions WG
+Chair - Linux Foundation Open Printing WG
+Secretary - IEEE-ISTO Printer Working Group
+Co-Chair - IEEE-ISTO PWG Internet Printing Protocol WG
+IETF Designated Expert - IPP & Printer MIB
+Blue Roof Music / High North Inc
+http://sites.google.com/site/blueroofmusic
+http://sites.google.com/site/highnorthinc
+mailto: blueroofmusic@gmail.com
+Winter  579 Park Place  Saline, MI  48176  734-944-0094
+Summer  PO Box 221  Grand Marais, MI 49839  906-494-2434
+
+
+On Wed, Oct 1, 2014 at 10:55 AM, Douglas Kosovic <doug@uq.edu.au> wrote:
+
+>
+>  On 2 Oct 2014, at 12:07 am, Till Kamppeter <till.kamppeter@gmail.com>
+> wrote:
+>
+> So PCLM has nothing to do with PCL and it is a proprietary protocol sold
+> to OS vendors by the Wi-Fi Alliance? To be paid either directly or by
+> the membership fee?
+>
+>
+>
+>  Extract from the US20130100486 A1 patent application (
+> https://www.google.com/patents/US20130100486 ) :
+>
+>  To create a streamable PDF document, a new protocol called Printer
+> Control Language=E2=80=94Mobile (PCLm) has been created. PCLm has been de=
+veloped
+> using a subset of the PDF grammar. PCLm allows for consumption of the pri=
+nt
+> files by all PDF 1.4 or later compliant devices and allows for both
+> printing and viewing of the rasterized pages. PCLm may exclude a number o=
+f
+> PDF grammar constructs including text, vector, images, patterns,
+> transparency and blending instructions. The exclusion of these commands
+> makes PCLm deterministic because commands that could be retroactively
+> applied to data which has already been streamed have been eliminated. Thi=
+s
+> allows printers to begin printing as soon as the PCLm data stream begins =
+to
+> be received. This minimizes the amount of memory and computation required
+> by the printer and allows low end printers to effectively print large
+> documents.
+>
+>
+>
+>  Doug
+>
+>
+> _______________________________________________
+> Printing-architecture mailing list
+> Printing-architecture@lists.linux-foundation.org
+> https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture
+>
+>
+
+--047d7b5d348cfee1da05045ddf97
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><div><div><div><div><div>Hi,<br><br></div>Hmm - interestin=
+g synopsis in that patent application - IANAL.<br><br></div>But 10 years ag=
+o, with an Adobe primary editor, the IEEE-ISTO PWG<br></div>published the o=
+pen standard PDF: Image Streamable (PDF/is):<br><br><a href=3D"http://ftp.p=
+wg.org/pub/pwg/candidates/cs-ifxpdfis10-20040315-5102.3.pdf">http://ftp.pwg=
+.org/pub/pwg/candidates/cs-ifxpdfis10-20040315-5102.3.pdf</a><br><br></div>=
+Cheers,<br></div>- Ira<br><br><div><div><br></div></div></div><div class=3D=
+"gmail_extra"><br clear=3D"all"><div><div dir=3D"ltr">Ira McDonald (Musicia=
+n / Software Architect)<br>Co-Chair - TCG Trusted Mobility Solutions WG<br>=
+Chair - Linux Foundation Open Printing WG<br>Secretary - IEEE-ISTO Printer =
+Working Group<br>Co-Chair - IEEE-ISTO PWG Internet Printing Protocol WG<br>=
+IETF Designated Expert - IPP &amp; Printer MIB<br>Blue Roof Music / High No=
+rth Inc<br><a style=3D"color:rgb(51,51,255)" href=3D"http://sites.google.co=
+m/site/blueroofmusic" target=3D"_blank">http://sites.google.com/site/bluero=
+ofmusic</a><br><a style=3D"color:rgb(102,0,204)" href=3D"http://sites.googl=
+e.com/site/highnorthinc" target=3D"_blank">http://sites.google.com/site/hig=
+hnorthinc</a><br>mailto: <a href=3D"mailto:blueroofmusic@gmail.com" target=
+=3D"_blank">blueroofmusic@gmail.com</a><br>Winter=C2=A0 579 Park Place=C2=
+=A0 Saline, MI=C2=A0 48176=C2=A0 734-944-0094<br>Summer=C2=A0 PO Box 221=C2=
+=A0 Grand Marais, MI 49839=C2=A0 906-494-2434<br><br><div style=3D"display:=
+inline"></div><div style=3D"display:inline"></div><div style=3D"display:inl=
+ine"></div><div></div><div></div><div></div><div></div></div></div>
+<br><div class=3D"gmail_quote">On Wed, Oct 1, 2014 at 10:55 AM, Douglas Kos=
+ovic <span dir=3D"ltr">&lt;<a href=3D"mailto:doug@uq.edu.au" target=3D"_bla=
+nk">doug@uq.edu.au</a>&gt;</span> wrote:<br><blockquote class=3D"gmail_quot=
+e" style=3D"margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex">
+
+
+
+<div style=3D"word-wrap:break-word"><span class=3D"">
+<br>
+<div>
+<blockquote type=3D"cite">
+<div>On 2 Oct 2014, at 12:07 am, Till Kamppeter &lt;<a href=3D"mailto:till.=
+kamppeter@gmail.com" target=3D"_blank">till.kamppeter@gmail.com</a>&gt; wro=
+te:</div>
+<div><br>
+So PCLM has nothing to do with PCL and it is a proprietary protocol sold<br=
+>
+to OS vendors by the Wi-Fi Alliance? To be paid either directly or by<br>
+the membership fee?<br>
+</div>
+</blockquote>
+<br>
+</div>
+<div><br>
+</div>
+</span><div>Extract from the=C2=A0<span style=3D"color:rgb(34,34,34);font-f=
+amily:Arial,sans-serif;font-size:13px;background-color:rgb(245,245,245)">US=
+20130100486 A1</span>=C2=A0patent application (=C2=A0<a href=3D"https://www=
+.google.com/patents/US20130100486" target=3D"_blank">https://www.google.com=
+/patents/US20130100486</a>=C2=A0)
+ :</div>
+<div><br>
+</div>
+<div><span style=3D"color:rgb(34,34,34);font-family:Arial,sans-serif;font-s=
+ize:13px;line-height:21.33333396911621px;background-color:rgb(255,255,255)"=
+>To create a streamable PDF document, a new protocol called Printer Control=
+ Language=E2=80=94Mobile
+ (PCLm) has been created. PCLm has been developed using a subset of the PDF=
+ grammar. PCLm allows for consumption of the print files by all PDF 1.4 or =
+later compliant devices and allows for both printing and viewing of the ras=
+terized pages. PCLm may exclude
+ a number of PDF grammar constructs including text, vector, images, pattern=
+s, transparency and blending instructions. The exclusion of these commands =
+makes PCLm deterministic because commands that could be retroactively appli=
+ed to data which has already been
+ streamed have been eliminated. This allows printers to begin printing as s=
+oon as the PCLm data stream begins to be received. This minimizes the amoun=
+t of memory and computation required by the printer and allows low end prin=
+ters to effectively print large
+ documents.</span></div>
+<div><span style=3D"color:rgb(34,34,34);font-family:Arial,sans-serif;font-s=
+ize:13px;line-height:21.33333396911621px;background-color:rgb(255,255,255)"=
+><br>
+</span></div>
+<div><span style=3D"color:rgb(34,34,34);font-family:Arial,sans-serif;font-s=
+ize:13px;line-height:21.33333396911621px;background-color:rgb(255,255,255)"=
+><br>
+</span></div>
+<div><span style=3D"color:rgb(34,34,34);font-family:Arial,sans-serif;font-s=
+ize:13px;line-height:21.33333396911621px;background-color:rgb(255,255,255)"=
+><br>
+</span></div>
+<div><span style=3D"color:rgb(34,34,34);font-family:Arial,sans-serif;font-s=
+ize:13px;line-height:21.33333396911621px;background-color:rgb(255,255,255)"=
+>Doug</span></div>
+<div><span style=3D"color:rgb(34,34,34);font-family:Arial,sans-serif;font-s=
+ize:13px;line-height:21.33333396911621px;background-color:rgb(255,255,255)"=
+><br>
+</span></div>
+</div>
+
+<br>_______________________________________________<br>
+Printing-architecture mailing list<br>
+<a href=3D"mailto:Printing-architecture@lists.linux-foundation.org">Printin=
+g-architecture@lists.linux-foundation.org</a><br>
+<a href=3D"https://lists.linuxfoundation.org/mailman/listinfo/printing-arch=
+itecture" target=3D"_blank">https://lists.linuxfoundation.org/mailman/listi=
+nfo/printing-architecture</a><br>
+<br></blockquote></div><br></div>
+
+--047d7b5d348cfee1da05045ddf97--
