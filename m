@@ -1,28 +1,25 @@
-Return-Path: <msweet@apple.com>
-DKIM-Signature: v=1; a=rsa-sha256; d=apple.com; s=mailout2048s;
-	c=relaxed/simple; 
-	q=dns/txt; i=@apple.com; t=1412452127; x=2276365727;
-	h=From:Sender:Reply-To:Subject:Date:Message-id:To:Cc:MIME-version:Content-type:
-	Content-transfer-encoding:Content-ID:Content-Description:Resent-Date:Resent-From:
-	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-reply-to:References:List-Id:
-	List-Help:List-Unsubscribe:List-Subscribe:List-Post:List-Owner:List-Archive;
-	bh=OSEl5pdCGqscn9Aqj9iBeH6HSDam4cNXQ0k+tyg6jWs=;
-	b=igfxCro1EjvoS/ffzFOeoQDsAk4frXEX+ZN7CCjY8tQ5tXO2PLTVZAvvicPCIdqV
-	fwC0YWqkpkJiIra/F/BOEFTyCK+kAy7IBnRMuXB0ZrirDRq+BI2aLbq4tMUF0isZ
-	qWVMySwt36KHdpU6FBIDircy/O+DAdYBBwV27QjvN8Zi2v6Kys0/9/d/TLkM/nv8
-	Sc+1eekz0MymCUTI4ZTKkRXYJXEsTyIOtcbCeeOmvANivyxD/S7RtNVtKrLURyVR
-	kRxGgJf06X8Q0mu2l12Lntm/JjHfUVtafm+Zko0RZ6pOOSqy6wR5qmeHZa9AoEE7
-	Qqvehz8uiAJJ9eQ1bUMC8w==;
-MIME-version: 1.0
-Content-transfer-encoding: 7BIT
-Content-type: text/plain; CHARSET=US-ASCII
-From: Michael Sweet <msweet@apple.com>
-In-reply-to: <CA+3RNfgR9Ucx+mQezWVwi8XMCF-4EBtFV5bukKOsTfZsTBZURw@mail.gmail.com>
-Date: Sat, 04 Oct 2014 15:48:45 -0400
-Message-id: <34701921-5F04-411C-B35C-78CED619AAC3@apple.com>
+Return-Path: <korobkin@gmail.com>
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20120113;
+	h=mime-version:sender:in-reply-to:references:from:date:message-id
+	:subject:to:cc:content-type;
+	bh=GYiUXAztD22otdw+0FziWmZzCh2WJnzPQzyMf1F8rqk=;
+	b=GbV68cxOs88TS7RzQANQoRAdWtoe2+t1KoAPW4iW919VUf4TqEo/ecqcqCxBo3F7oe
+	Hl1kwAC3tN2CYF5p8b4FWdA/4pzZmJduW4CdqGMZ1HUykIG0unmcuebgh16C8rTuVohK
+	HZOQ+oYGfwlu8BS3I2dxhxDUxM5Gqz3FI7B6kZuhcirT/uM6nhu4RhPHJ73tLbCbQk6H
+	PKktAKHog7aLqpSZI2moGTYfewIUbCS/IADVGpU3QUW/bAkSLcC0duwR5LFoLKLquZy+
+	C9jmmq35fS2k2yLLK2Y2RxRd7O9hq1QazPQPHvpfecFACA8coSdTiX8Q/UG4geteym7I
+	NcOg==
+MIME-Version: 1.0
+Sender: korobkin@gmail.com
+In-Reply-To: <54304ED0.5000809@thax.hardliners.org>
 References: <CA+3RNfiMXAVRKoFH8XD+YyWatt-Fc+mKMGkAQyQPJ=8_SX9T3g@mail.gmail.com>
 	<5B66FA40-ED1E-461E-B00F-D5CD6C7DBC30@apple.com>
 	<CA+3RNfgR9Ucx+mQezWVwi8XMCF-4EBtFV5bukKOsTfZsTBZURw@mail.gmail.com>
+	<54304ED0.5000809@thax.hardliners.org>
+From: Alex Korobkin <korobkin+op@gmail.com>
+Date: Sun, 5 Oct 2014 00:58:43 -0400
+Message-ID: <CA+3RNfibQ1=RVN1XV8NuF9TX-6UB-oT3LVjm_N4vJ38Spa4m8A@mail.gmail.com>
+Content-Type: multipart/alternative; boundary=089e011619324ea0150504a5d3bf
 Subject: Re: [Printing-architecture] Number of copies in pure PDF workflow
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
@@ -33,56 +30,116 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Alex Korobkin <korobkin+op@gmail.com>
+To: Tobias Hoffmann <lprint-list@thax.hardliners.org>
 Cc: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>
 
-Alex,
+--089e011619324ea0150504a5d3bf
+Content-Type: text/plain; charset=UTF-8
 
-You'll have to confirm with Till, but AFAIK the pdftopdf filter doesn't support PJL options.
+Hi Tobias,
 
-Naturally the socket backend cannot provide out-of-band job ticket information, but the IPP backend *can*.  (that goes back to my comment about IPP Everywhere)
+Thanks for the explanation. Directives pdftopdfJCLCopies and Copies sound
+promising, there is a mention of them in README [1], but that's all, I
+couldn't find any other documentation.
 
-> On Oct 4, 2014, at 1:36 PM, Alex Korobkin <korobkin+op@gmail.com> wrote:
-> 
-> Hi Michael, 
-> 
-> Sorry, I should have been more clear with my question. I'm asking about OpenPrinting PDF workflow [1], where client sends a PDF, and CUPS uses just two filters for the job: pdftopdf and a socket/ipp to send the PDF directly to the printer. No conversion to raster is happening: client sends a PDF, printer receives a PDF. 
-> 
-> cups-filters package ships with a couple of sample PPDs [2], [3] that basically allow for inserting PJL commands into the job to change its most common options: tray, duplex, etc. 
-> 
-> I'm trying to find out whether making manual copies via cupsManualCopies is the only way to handle the number of copies. Can pdftopdf or CUPS insert PJL SET COPIES=X into the job? Can CUPS set the number of copies via IPP commands? There is also some code in pdftopdf_jcl.cc [4] that is dealing with a Copies directive in a PPD, but I don't quite understand what it does. 
-> 
-> [1] http://www.linuxfoundation.org/collaborate/workgroups/openprinting/pdf_as_standard_print_job_format
-> [2] http://bzr.linuxfoundation.org/loggerhead/openprinting/cups-filters/annotate/head:/ppd/HP-Color_LaserJet_CM3530_MFP-PDF.ppd
-> [3] http://bzr.linuxfoundation.org/loggerhead/openprinting/cups-filters/annotate/head:/ppd/Fuji_Xerox-DocuPrint_CM305_df-PDF.ppd
-> [4] http://bzr.linuxfoundation.org/loggerhead/openprinting/cups-filters/annotate/head:/filter/pdftopdf/pdftopdf_jcl.cc#L35
-> 
-> 2014-10-04 11:40 GMT-04:00 Michael Sweet <msweet@apple.com>:
-> Alex,
-> 
-> > On Oct 3, 2014, at 3:28 PM, Alex Korobkin <korobkin+op@gmail.com> wrote:
-> >
-> > Hi all,
-> >
-> > I'm looking at example PPDs for pure PDF workflow, and all of them have
-> > cupsManualCopies: true
-> >
-> > Why is that? Is it impossible to tell printer to print a number of copies with pure PDF workflow?
-> > Maybe pdftopdf can inject @PJL SET COPIES=X into the file?
-> 
-> No, that wouldn't work since the PDF-to-raster filters don't support PJL and (for that matter) most PDF printers do not support PJL.
-> 
-> cupsManualCopies is there because the destination doesn't support generating copies of its own.  If it does, then cupsManualCopies won't be in the PPD - in the case of IPP Everywhere printers the copy count is passed in the job ticket when we create the job from the IPP backend.
-> 
-> _________________________________________________________
-> Michael Sweet, Senior Printing System Engineer, PWG Chair
-> 
-> 
-> 
-> 
-> -- 
-> -Alex
+Do you happen to see a PPD with these options being used? I'd like to see
+an example, but cannot find any.
 
-_________________________________________________________
-Michael Sweet, Senior Printing System Engineer, PWG Chair
+[1]
+http://bzr.linuxfoundation.org/loggerhead/openprinting/cups-filters/annotate/head:/README#L1021
 
+2014-10-04 15:47 GMT-04:00 Tobias Hoffmann <lprint-list@thax.hardliners.org>
+:
+
+> On 04/10/14 19:36, Alex Korobkin wrote:
+>
+>> cups-filters package ships with a couple of sample PPDs [2], [3] that
+>> basically allow for inserting PJL commands into the job to change its most
+>> common options: tray, duplex, etc.
+>> I'm trying to find out whether making manual copies via cupsManualCopies
+>> is the only way to handle the number of copies. Can pdftopdf or CUPS insert
+>> PJL SET COPIES=X into the job?
+>>
+> Yes (for resonably recent versions). But the string "PJL SET COPIES" (or
+> whatever the printer needs) has to come *from the PPD*. Also the emit-jcl
+> must not be disabled in pdftopdf's arguments (mostly relevant when pdftopdf
+> is NOT the last filter).
+>
+>  Can CUPS set the number of copies via IPP commands? There is also some
+>> code in pdftopdf_jcl.cc [4] that is dealing with a Copies directive in a
+>> PPD, but I don't quite understand what it does.
+>>
+> If the PPD does not specify cupsManualCopies, then the JCL commands *for
+> that particular printer* have to be specified in the PPD.
+> Also keep in mind that the device might not support deviceCopies for
+> certain collate settings; the PPD has to contain the necessary "logic" for
+> that, too.
+>
+> From [4] it follows that certain PPD Attributes /can/ be necessary for
+> deviceCopies:
+>   *JCLToPDFInterpreter, *pdftopdfJCLBegin, *pdftopdfJCLCopies, Copies
+>
+>   Tobias
+>
+
+
+
+-- 
+-Alex
+
+--089e011619324ea0150504a5d3bf
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">Hi Tobias,=C2=A0<div><br></div><div>Thanks for the explana=
+tion. Directives pdftopdfJCLCopies and Copies sound promising, there is a m=
+ention of them in README [1], but that&#39;s all, I couldn&#39;t find any o=
+ther documentation.=C2=A0</div><div><br></div><div>Do you happen to see a P=
+PD with these options being used? I&#39;d like to see an example, but canno=
+t find any.=C2=A0</div><div><br></div><div>[1]=C2=A0<a href=3D"http://bzr.l=
+inuxfoundation.org/loggerhead/openprinting/cups-filters/annotate/head:/READ=
+ME#L1021">http://bzr.linuxfoundation.org/loggerhead/openprinting/cups-filte=
+rs/annotate/head:/README#L1021</a></div></div><div class=3D"gmail_extra"><b=
+r><div class=3D"gmail_quote">2014-10-04 15:47 GMT-04:00 Tobias Hoffmann <sp=
+an dir=3D"ltr">&lt;<a href=3D"mailto:lprint-list@thax.hardliners.org" targe=
+t=3D"_blank">lprint-list@thax.hardliners.org</a>&gt;</span>:<br><blockquote=
+ class=3D"gmail_quote" style=3D"margin:0 0 0 .8ex;border-left:1px #ccc soli=
+d;padding-left:1ex"><span class=3D"">On 04/10/14 19:36, Alex Korobkin wrote=
+:<br>
+<blockquote class=3D"gmail_quote" style=3D"margin:0 0 0 .8ex;border-left:1p=
+x #ccc solid;padding-left:1ex">
+cups-filters package ships with a couple of sample PPDs [2], [3] that basic=
+ally allow for inserting PJL commands into the job to change its most commo=
+n options: tray, duplex, etc.<br>
+I&#39;m trying to find out whether making manual copies via cupsManualCopie=
+s is the only way to handle the number of copies. Can pdftopdf or CUPS inse=
+rt PJL SET COPIES=3DX into the job?<br>
+</blockquote></span>
+Yes (for resonably recent versions). But the string &quot;PJL SET COPIES&qu=
+ot; (or whatever the printer needs) has to come *from the PPD*. Also the em=
+it-jcl must not be disabled in pdftopdf&#39;s arguments (mostly relevant wh=
+en pdftopdf is NOT the last filter).<span class=3D""><br>
+<br>
+<blockquote class=3D"gmail_quote" style=3D"margin:0 0 0 .8ex;border-left:1p=
+x #ccc solid;padding-left:1ex">
+Can CUPS set the number of copies via IPP commands? There is also some code=
+ in pdftopdf_jcl.cc [4] that is dealing with a Copies directive in a PPD, b=
+ut I don&#39;t quite understand what it does.<br>
+</blockquote></span>
+If the PPD does not specify cupsManualCopies, then the JCL commands *for th=
+at particular printer* have to be specified in the PPD.<br>
+Also keep in mind that the device might not support deviceCopies for certai=
+n collate settings; the PPD has to contain the necessary &quot;logic&quot; =
+for that, too.<br>
+<br>
+From [4] it follows that certain PPD Attributes /can/ be necessary for devi=
+ceCopies:<br>
+=C2=A0 *JCLToPDFInterpreter, *pdftopdfJCLBegin, *pdftopdfJCLCopies, Copies<=
+span class=3D"HOEnZb"><font color=3D"#888888"><br>
+<br>
+=C2=A0 Tobias<br>
+</font></span></blockquote></div><br><br clear=3D"all"><div><br></div>-- <b=
+r><div dir=3D"ltr">-Alex</div>
+</div>
+
+--089e011619324ea0150504a5d3bf--
