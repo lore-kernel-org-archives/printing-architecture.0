@@ -1,31 +1,27 @@
-Return-Path: <till.kamppeter@gmail.com>
+Return-Path: <korobkin@gmail.com>
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20120113;
-	h=message-id:date:from:user-agent:mime-version:to:cc:subject
-	:references:in-reply-to:content-type:content-transfer-encoding;
-	bh=M0it8jdKC/ps2QO51RJhDBsKNjTqWzooYaUmmShCYkY=;
-	b=NOtf3wRTH+9mCW8tMnrFCuaXjryI8HpSf30Fv7VW7lHVJB1fqn534bsZqNFjhbViQs
-	fTWjmCkiYNUiSzAqSCgn8Wa2+xDvTN/3M/DXxlZ9PHQSkcxTT/5Bo1M40XsNNEaG1C8G
-	2bcgsq71dwc9YuuVlhiSS1mowogECfHu7qKSS3bNTdJ/xuR9V9yic8/SjSXNZRCQSt4o
-	3BY74zkTull58K3lDR9Pz4tq5o/0PukGXkyuEFLuyuBGXBKKlsc29FB11jMS5YNYPZ1p
-	CuKK2vV8d/sleo/OIcOKRB9VmVo8+FgZYXz5BBDGzUHm315ShpDlG1JwG9O2AuqoBEcd
-	FG4A==
-Message-ID: <5433D8C5.1010700@gmail.com>
-Date: Tue, 07 Oct 2014 14:12:53 +0200
-From: Till Kamppeter <till.kamppeter@gmail.com>
+	h=mime-version:sender:in-reply-to:references:from:date:message-id
+	:subject:to:cc:content-type;
+	bh=Yx4fKUJl5QW1S6kVr21CCfXgmMQQTYcX2lMHVFgiq7w=;
+	b=XDANHbCACDtYdX4CvUHoetoDte+NmanHfC9hL5f8nB09MhFMnfWxsaJWwK9nsmvVPl
+	MimZGD7jibiAThkSvwTg3JyrTmXnnTdAYNbH1X+FblggvhRR83ljLzOHSEyjSz5rIH6/
+	exFeVfruQQrbKXsCTQ91yZDWp04bzEle6Me5v19j0LP9Wx6R9kyOho3E93Mn5Z3N6Rcn
+	g3OSnUpoNsZr6hAxC+eXZGtuILZb0qOVLDeNjz3Jk3jmqcycnBPJp0vbPIazZdfSADHU
+	WiMh4MHIJDTGBd3De3jC+ewWvykYsZRrJVb0TuSMEeTruZDq+N7ziqaP4oekeEgIA4BM
+	6+OA==
 MIME-Version: 1.0
+Sender: korobkin@gmail.com
+In-Reply-To: <CA+3RNfj6twoEN9y0k+dfxeQ+14jVyE_Tz9Fe5fdQSmOKcbg=_Q@mail.gmail.com>
 References: <CA+3RNfiMXAVRKoFH8XD+YyWatt-Fc+mKMGkAQyQPJ=8_SX9T3g@mail.gmail.com>
 	<5B66FA40-ED1E-461E-B00F-D5CD6C7DBC30@apple.com>
 	<CA+3RNfgR9Ucx+mQezWVwi8XMCF-4EBtFV5bukKOsTfZsTBZURw@mail.gmail.com>
 	<34701921-5F04-411C-B35C-78CED619AAC3@apple.com>
-	<CA+3RNfgzaD28Gcy4N=k_=jJMsQ9Ao1i8fSiRpeU3VHvXoxx4fw@mail.gmail.com>
-	<23226792-DB2B-467B-A3F3-015D81C6A31B@apple.com>
-	<CA+3RNfgwqWxqc6D4Fe1fC8--xy0pV_c4SDHukwpwrC+N=G=WpA@mail.gmail.com>
-	<0392028E-75B3-45B1-8826-3886A5EEC7E9@apple.com>
-	<5433D336.1070205@gmail.com>
-	<0E925EEB-00F2-42DD-9600-DAACBFDF2DC4@apple.com>
-In-Reply-To: <0E925EEB-00F2-42DD-9600-DAACBFDF2DC4@apple.com>
-Content-Type: text/plain; charset=utf-8
-Content-Transfer-Encoding: 7bit
+	<5432910A.4030500@gmail.com>
+	<CA+3RNfj6twoEN9y0k+dfxeQ+14jVyE_Tz9Fe5fdQSmOKcbg=_Q@mail.gmail.com>
+From: Alex Korobkin <korobkin+op@gmail.com>
+Date: Tue, 7 Oct 2014 10:06:16 -0400
+Message-ID: <CA+3RNfi12RuMZRLH0UrHO2R2XeF8+oFrXwbj4DH4GhOvgmTVaQ@mail.gmail.com>
+Content-Type: multipart/alternative; boundary=20cf303b44072ad5a80504d5b5e0
 Subject: Re: [Printing-architecture] Number of copies in pure PDF workflow
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
@@ -36,36 +32,133 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Michael Sweet <msweet@apple.com>
+To: Till Kamppeter <till.kamppeter@gmail.com>
 Cc: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>
 
-On 10/07/2014 01:55 PM, Michael Sweet wrote:
-> Till,
-> 
->> On Oct 7, 2014, at 7:49 AM, Till Kamppeter <till.kamppeter@gmail.com> wrote:
+--20cf303b44072ad5a80504d5b5e0
+Content-Type: text/plain; charset=UTF-8
+
+Till,
+
+I'm not sure if you noticed my question there, sorry for bugging you, but I
+have no one else to ask.
+
+Do you know what should be added to a JCL-based PPD in order make pdftopdf
+to generate hardware copies on a PDF printer?
+
+
+2014-10-06 10:06 GMT-04:00 Alex Korobkin <korobkin+op@gmail.com>:
+
+> Hi Till,
+>
+> You're right, JCLToPDFInterpreter is already set in the example PPDs
+> shipped with cups-filters [1].
+> But what needs to be added to those PPDs to have printers make copies in
+> hardware instead of cupsManualCopies?
+> There seem to be some code for it in pdftopdf [2], but it is unclear what
+> exactly needs to be in the PPD for it to work.
+>
+> [1]
+> http://bzr.linuxfoundation.org/loggerhead/openprinting/cups-filters/annotate/head:/ppd/HP-Color_LaserJet_CM3530_MFP-PDF.ppd
+> [2]
+> http://bzr.linuxfoundation.org/loggerhead/openprinting/cups-filters/annotate/head:/filter/pdftopdf/pdftopdf_jcl.cc#L35
+>
+>
+> 2014-10-06 8:54 GMT-04:00 Till Kamppeter <till.kamppeter@gmail.com>:
+>
+> On 10/04/2014 09:48 PM, Michael Sweet wrote:
+>> > Alex,
+>> >
+>> > You'll have to confirm with Till, but AFAIK the pdftopdf filter doesn't
+>> support PJL options.
+>> >
 >>
->> On 10/06/2014 05:32 PM, Michael Sweet wrote:
->>> Alex,
->>>
->>> The cupsFilter2 keyword has a different value syntax:
->>>
->>>    *cupsFilter2: "src/type dst/type cost filter"
->>>
->>> For a PDF printer you want:
->>>
->>>    *cupsFilter2: "application/pdf application/vnd.cups-pdf 10 pdftopdf"
->>>
+>> pdftopdf adds PJL if the printer is a PDF printer. The printer is
+>> considered a PDF printer if there is a "*JCLToPDFInterpreter:" line in
+>> the PPD file.
 >>
->> What do I have to add to a /usr/share/cups/drv/*.drv filr to generate a
->> cupsFilter2 line? "Filter" only generates cupsFilter lines.
+>>    Till
 >>
->> Or do I need to create completely static PPD files?
-> 
-> Attribute cupsFilter2 "" "src/type dst/type cost filter"
+>>
+>> _______________________________________________
+>> Printing-architecture mailing list
+>> Printing-architecture@lists.linux-foundation.org
+>> https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture
+>>
+>
+>
+>
+> --
+> -Alex
 >
 
-Thanks, I ended up with this, too. I only thought that there is perhaps
-something specific.
 
-   Till
 
+-- 
+-Alex
+
+--20cf303b44072ad5a80504d5b5e0
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">Till,=C2=A0<div><br></div><div>I&#39;m not sure if you not=
+iced my question there, sorry for bugging you, but I have no one else to as=
+k.=C2=A0</div><div><br></div><div>Do you know what should be added to a JCL=
+-based PPD in order make pdftopdf to generate hardware copies on a PDF prin=
+ter?=C2=A0</div><div><br></div></div><div class=3D"gmail_extra"><br><div cl=
+ass=3D"gmail_quote">2014-10-06 10:06 GMT-04:00 Alex Korobkin <span dir=3D"l=
+tr">&lt;<a href=3D"mailto:korobkin+op@gmail.com" target=3D"_blank">korobkin=
++op@gmail.com</a>&gt;</span>:<br><blockquote class=3D"gmail_quote" style=3D=
+"margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex"><div dir=3D=
+"ltr">Hi Till,=C2=A0<div><br></div><div>You&#39;re right,=C2=A0JCLToPDFInte=
+rpreter is already set in the example PPDs shipped with cups-filters [1].=
+=C2=A0</div><div>But what needs to be added to those PPDs to have printers =
+make copies in hardware instead of cupsManualCopies?=C2=A0</div><div>There =
+seem to be some code for it in pdftopdf [2], but it is unclear what exactly=
+ needs to be in the PPD for it to work.=C2=A0</div><div><br></div><div>[1]=
+=C2=A0<a href=3D"http://bzr.linuxfoundation.org/loggerhead/openprinting/cup=
+s-filters/annotate/head:/ppd/HP-Color_LaserJet_CM3530_MFP-PDF.ppd" target=
+=3D"_blank">http://bzr.linuxfoundation.org/loggerhead/openprinting/cups-fil=
+ters/annotate/head:/ppd/HP-Color_LaserJet_CM3530_MFP-PDF.ppd</a></div><div>=
+<div dir=3D"ltr" style=3D"font-family:arial,sans-serif;font-size:13px">[2]=
+=C2=A0<a href=3D"http://bzr.linuxfoundation.org/loggerhead/openprinting/cup=
+s-filters/annotate/head:/filter/pdftopdf/pdftopdf_jcl.cc#L35" target=3D"_bl=
+ank">http://bzr.linuxfoundation.org/loggerhead/openprinting/cups-filters/an=
+notate/head:/filter/pdftopdf/pdftopdf_jcl.cc#L35</a></div></div><div><br></=
+div></div><div class=3D"gmail_extra"><br><div class=3D"gmail_quote">2014-10=
+-06 8:54 GMT-04:00 Till Kamppeter <span dir=3D"ltr">&lt;<a href=3D"mailto:t=
+ill.kamppeter@gmail.com" target=3D"_blank">till.kamppeter@gmail.com</a>&gt;=
+</span>:<div><div class=3D"h5"><br><blockquote class=3D"gmail_quote" style=
+=3D"margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex"><span>On=
+ 10/04/2014 09:48 PM, Michael Sweet wrote:<br>
+&gt; Alex,<br>
+&gt;<br>
+&gt; You&#39;ll have to confirm with Till, but AFAIK the pdftopdf filter do=
+esn&#39;t support PJL options.<br>
+&gt;<br>
+<br>
+</span>pdftopdf adds PJL if the printer is a PDF printer. The printer is<br=
+>
+considered a PDF printer if there is a &quot;*JCLToPDFInterpreter:&quot; li=
+ne in<br>
+the PPD file.<br>
+<span><font color=3D"#888888"><br>
+=C2=A0 =C2=A0Till<br>
+</font></span><div><div><br>
+<br>
+_______________________________________________<br>
+Printing-architecture mailing list<br>
+<a href=3D"mailto:Printing-architecture@lists.linux-foundation.org" target=
+=3D"_blank">Printing-architecture@lists.linux-foundation.org</a><br>
+<a href=3D"https://lists.linuxfoundation.org/mailman/listinfo/printing-arch=
+itecture" target=3D"_blank">https://lists.linuxfoundation.org/mailman/listi=
+nfo/printing-architecture</a><br>
+</div></div></blockquote></div></div></div><span class=3D"HOEnZb"><font col=
+or=3D"#888888"><br><br clear=3D"all"><div><br></div>-- <br><div dir=3D"ltr"=
+>-Alex</div>
+</font></span></div>
+</blockquote></div><br><br clear=3D"all"><div><br></div>-- <br><div dir=3D"=
+ltr">-Alex</div>
+</div>
+
+--20cf303b44072ad5a80504d5b5e0--
