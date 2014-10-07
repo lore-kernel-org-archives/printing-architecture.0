@@ -1,8 +1,25 @@
-Return-Path: <lprint-list@thax.hardliners.org>
-Message-ID: <54345EF9.5010405@thax.hardliners.org>
-Date: Tue, 07 Oct 2014 23:45:29 +0200
-From: Tobias Hoffmann <lprint-list@thax.hardliners.org>
-MIME-Version: 1.0
+Return-Path: <msweet@apple.com>
+DKIM-Signature: v=1; a=rsa-sha256; d=apple.com; s=mailout2048s;
+	c=relaxed/simple; 
+	q=dns/txt; i=@apple.com; t=1412721642; x=2276635242;
+	h=From:Sender:Reply-To:Subject:Date:Message-id:To:Cc:MIME-version:Content-type:
+	Content-transfer-encoding:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-reply-to:References:List-Id:
+	List-Help:List-Unsubscribe:List-Subscribe:List-Post:List-Owner:List-Archive;
+	bh=ZTqFxgRstKzh0XBQdR5MYITOXaQsZQ+X/NzG5CsOvPQ=;
+	b=wD94pliLtLBysFFIZr6hKM0EGw4HlaO7oaN0aTrHOf/TudZN/agvbUPnMjCrdZOE
+	8hlOlGEXZZSs9fAlsHfSfFKiKvZ/G+VxXIUXXDRuTgJNIYPVzwIcbkye+WkiZyyC
+	1oo0/gNoqGhkN+zrqbAdt/nA/PWo+jG5piHhk9hzw6w8I34zYq9PxPkEO4aa3vnV
+	YbLtbWsqSzM1mXCluJ8xGigKpF8Vy4SAZA0C51VQnBCNZ9wrXhu9dZ/Rq7xuSXLA
+	sbx8vJANq2YGmnBBA8ilCluzFP/pHPKKK4iJLmGLDnWIYxyzJsLhMUNCh5fJnyVF
+	AMtOv4ipTwIRKTxs8QSM2w==;
+MIME-version: 1.0
+Content-transfer-encoding: 7BIT
+Content-type: text/plain; CHARSET=US-ASCII
+From: Michael Sweet <msweet@apple.com>
+In-reply-to: <54344707.4080604@gmail.com>
+Date: Tue, 07 Oct 2014 18:40:39 -0400
+Message-id: <BD370003-7D7F-4AE6-8B5F-7EB88945FC00@apple.com>
 References: <CA+3RNfiMXAVRKoFH8XD+YyWatt-Fc+mKMGkAQyQPJ=8_SX9T3g@mail.gmail.com>
 	<5B66FA40-ED1E-461E-B00F-D5CD6C7DBC30@apple.com>
 	<CA+3RNfgR9Ucx+mQezWVwi8XMCF-4EBtFV5bukKOsTfZsTBZURw@mail.gmail.com>
@@ -10,10 +27,6 @@ References: <CA+3RNfiMXAVRKoFH8XD+YyWatt-Fc+mKMGkAQyQPJ=8_SX9T3g@mail.gmail.com>
 	<5432910A.4030500@gmail.com>
 	<CA+3RNfj6twoEN9y0k+dfxeQ+14jVyE_Tz9Fe5fdQSmOKcbg=_Q@mail.gmail.com>
 	<54344707.4080604@gmail.com>
-	<CA+3RNfj8JFdQHekjs0gQ_z8_dxPFk-qL-dGzzJtp8ACBB0KhHg@mail.gmail.com>
-In-Reply-To: <CA+3RNfj8JFdQHekjs0gQ_z8_dxPFk-qL-dGzzJtp8ACBB0KhHg@mail.gmail.com>
-Content-Type: multipart/alternative;
-	boundary="------------050202060902010400040302"
 Subject: Re: [Printing-architecture] Number of copies in pure PDF workflow
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
@@ -24,106 +37,25 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Alex Korobkin <korobkin+op@gmail.com>
-Cc: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>, Till Kamppeter <till.kamppeter@gmail.com>
+To: Till Kamppeter <till.kamppeter@gmail.com>
+Cc: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>
 
-This is a multi-part message in MIME format.
---------------050202060902010400040302
-Content-Type: text/plain; charset=ISO-8859-1; format=flowed
-Content-Transfer-Encoding: 7bit
+Till,
 
-On 07/10/14 23:18, Alex Korobkin wrote:
-> 2014-10-07 16:03 GMT-04:00 Till Kamppeter <till.kamppeter@gmail.com 
-> <mailto:till.kamppeter@gmail.com>>:
->
->     pdftopdf uses cupsManualCopies. If cupsManualCopies is set in the PPD
->     software copies are done, otherwise hardware copies. If the printer
->     supports PJL, an appropriate command to generate the copies is
->     added to
->     the PJL header.
->
->
-> Till, I've just tested it again on my PDF printer and PJL-based PPD, 
-> and pdftopdf creates software copies regardless of the value of 
-> cupsManualCopies. Shouldn't it insert PJL SET COPIES=X when 
-> cupsManualCopies is False or not present?
->
+> On Oct 7, 2014, at 4:03 PM, Till Kamppeter <till.kamppeter@gmail.com> wrote:
+> ...
+> How can I make pdftopdf add an IPP attribute to the job which generates
+> the copies with the attribute being passed on to the printer by the IPP
+> backend (when output format is set to PDF or PWG Raster by a cupsFilter2
+> keyword in the PPD.
 
-I'm not sure what exactly is happening in your setup.
-Maybe your PPD is missing something (- and I'm not an expert for PPD/PJL)?
-Maybe you don't have a recent cups-filters (>= 1.0.34)?
-Maybe you're hitting some edge-cases that are not handled correctly in 
-the current code?
+You don't have control over that; if the output format (FINAL_CONTENT_TYPE) is application/pdf, application/vnd.cups-pdf, or image/*, then the backend will generate suitable IPP Job Template attributes based on the PPD.
 
-AFAIK no-one else has reported a problem with PJL in a pure pdf 
-workflow, and I can't find an obvious flaw in the code which deals with 
-PJL in pdftopdf. The code is also basically copied over from the old 
-pdftopdf implementation (cups-filters <=1.0.20); if your PPD does hw 
-copy with the old implementation, but not with >=1.0.34, I will probably 
-be able to fix that.
+> And for PPD-less printing, how do I set the FINAL_CONTENT_TYPE there? Is
+> it possible to do it out of a System V interface script?
 
-   Tobias
+Through the CUPS filter chain, you don't.  A queue using an interface script will NEVER send IPP Job Template attributes. (interface scripts are strictly for backwards compatibility and their days are numbered...)
 
+_________________________________________________________
+Michael Sweet, Senior Printing System Engineer, PWG Chair
 
---------------050202060902010400040302
-Content-Type: text/html; charset=ISO-8859-1
-Content-Transfer-Encoding: 7bit
-
-<html>
-  <head>
-    <meta content="text/html; charset=ISO-8859-1"
-      http-equiv="Content-Type">
-  </head>
-  <body bgcolor="#FFFFFF" text="#000000">
-    On 07/10/14 23:18, Alex Korobkin wrote:
-    <blockquote
-cite="mid:CA+3RNfj8JFdQHekjs0gQ_z8_dxPFk-qL-dGzzJtp8ACBB0KhHg@mail.gmail.com"
-      type="cite">
-      <div dir="ltr">2014-10-07 16:03 GMT-04:00 Till Kamppeter <span
-          dir="ltr">&lt;<a moz-do-not-send="true"
-            href="mailto:till.kamppeter@gmail.com" target="_blank">till.kamppeter@gmail.com</a>&gt;</span>:<br>
-        <div class="gmail_extra">
-          <div class="gmail_quote">
-            <blockquote class="gmail_quote" style="margin:0 0 0
-              .8ex;border-left:1px #ccc solid;padding-left:1ex"><span
-                class=""></span>pdftopdf uses cupsManualCopies. If
-              cupsManualCopies is set in the PPD<br>
-              software copies are done, otherwise hardware copies. If
-              the printer<br>
-              supports PJL, an appropriate command to generate the
-              copies is added to<br>
-              the PJL header.<br>
-            </blockquote>
-            <div><br>
-            </div>
-            <div>Till, I've just tested it again on my PDF printer and
-              PJL-based PPD, and pdftopdf creates software copies
-              regardless of the value of cupsManualCopies. Shouldn't it
-              insert PJL SET COPIES=X when cupsManualCopies is False or
-              not present?</div>
-            <br>
-          </div>
-        </div>
-      </div>
-    </blockquote>
-    <br>
-    I'm not sure what exactly is happening in your setup. <br>
-    Maybe your PPD is missing something (- and I'm not an expert for
-    PPD/PJL)?<br>
-    Maybe you don't have a recent cups-filters (&gt;= 1.0.34)?<br>
-    Maybe you're hitting some edge-cases that are not handled correctly
-    in the current code?<br>
-    <br>
-    AFAIK no-one else has reported a problem with PJL in a pure pdf workflow,
-    and I can't find an obvious flaw in the code which deals with PJL in
-    pdftopdf. The code is also basically copied over from the old
-    pdftopdf implementation (cups-filters &lt;=1.0.20); if your PPD does
-    hw copy with the old implementation, but not with &gt;=1.0.34, I
-    will probably be able to fix that.<br>
-    <br>
-    &nbsp; Tobias<br>
-    <br>
-  </body>
-</html>
-
---------------050202060902010400040302--
