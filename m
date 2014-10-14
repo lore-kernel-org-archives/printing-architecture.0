@@ -1,17 +1,8 @@
-Return-Path: <korobkin@gmail.com>
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20120113;
-	h=mime-version:sender:in-reply-to:references:from:date:message-id
-	:subject:to:cc:content-type;
-	bh=qajzfert9s3FXM78McOL5GBXS9GKCZeZ/hC9abDJrY0=;
-	b=PhCxvWX0A9f/TEpkzewYQcFmRy2pEPUE8ntavVZcvUlfphZwiwamYfAwvOWcZK/OCd
-	+sCZfOClDwSxpAXS0DVigK3ZmtgB4C58HPWVMknyTLPm20yPrfweGkR0n0Q/c7VzZVpa
-	dwnYTZ9P8IDoNzpRGvHhoyUKm59ESHQWOW92397v4Era1SU+uMx10tLK31nc7XkjKBOT
-	FpOnkFaB4g0FtYTb828r4jhj3pMo4YrQdJJaUS3iN9x2bOpyC7u9bZ7RILE/KLkmHnBl
-	TWP53XRAffsyZpMhlSrFLjULNIQnHEFwUUmLmY0RmKPGr/LYEF0Azvh7iPjve4/oG4YU
-	lhBQ==
+Return-Path: <lprint-list@thax.hardliners.org>
+Message-ID: <543D9108.6050307@thax.hardliners.org>
+Date: Tue, 14 Oct 2014 23:09:28 +0200
+From: Tobias Hoffmann <lprint-list@thax.hardliners.org>
 MIME-Version: 1.0
-Sender: korobkin@gmail.com
-In-Reply-To: <5438486E.9050201@gmail.com>
 References: <CA+3RNfiMXAVRKoFH8XD+YyWatt-Fc+mKMGkAQyQPJ=8_SX9T3g@mail.gmail.com>
 	<5B66FA40-ED1E-461E-B00F-D5CD6C7DBC30@apple.com>
 	<CA+3RNfgR9Ucx+mQezWVwi8XMCF-4EBtFV5bukKOsTfZsTBZURw@mail.gmail.com>
@@ -26,10 +17,10 @@ References: <CA+3RNfiMXAVRKoFH8XD+YyWatt-Fc+mKMGkAQyQPJ=8_SX9T3g@mail.gmail.com>
 	<5435A44F.7080504@thax.hardliners.org>
 	<CA+3RNfiAna118VGc=zLoRsyNTc5oGcynhMNy3UJRG7dNrHmWWw@mail.gmail.com>
 	<54383C34.6020108@thax.hardliners.org> <5438486E.9050201@gmail.com>
-From: Alex Korobkin <korobkin+op@gmail.com>
-Date: Tue, 14 Oct 2014 15:17:55 -0400
-Message-ID: <CA+3RNfgZtn64UZZEX5uYRK=CyDEoS3Ly+gvkQCL20TMys6XKnA@mail.gmail.com>
-Content-Type: multipart/alternative; boundary=089e013a15d085d42b050566e0df
+	<CA+3RNfgZtn64UZZEX5uYRK=CyDEoS3Ly+gvkQCL20TMys6XKnA@mail.gmail.com>
+In-Reply-To: <CA+3RNfgZtn64UZZEX5uYRK=CyDEoS3Ly+gvkQCL20TMys6XKnA@mail.gmail.com>
+Content-Type: multipart/alternative;
+	boundary="------------060203010600010801030603"
 Subject: Re: [Printing-architecture] Number of copies in pure PDF workflow
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
@@ -40,64 +31,135 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Till Kamppeter <till.kamppeter@gmail.com>
-Cc: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>
+To: Alex Korobkin <korobkin+op@gmail.com>
+Cc: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>, Till Kamppeter <till.kamppeter@gmail.com>
 
---089e013a15d085d42b050566e0df
-Content-Type: text/plain; charset=UTF-8
+This is a multi-part message in MIME format.
+--------------060203010600010801030603
+Content-Type: text/plain; charset=UTF-8; format=flowed
+Content-Transfer-Encoding: 7bit
 
-Till,
-
-2014-10-10 16:58 GMT-04:00 Till Kamppeter <till.kamppeter@gmail.com>:
-
-> One must check whether modern GNOME/GTK/KDE/Qt/LibreOffice dialogs
-> support the PPD extensions for numerical options,if so and if it is
-> guaranteed that the print queue is not accessed from other platforms,
+On 14/10/14 21:17, Alex Korobkin wrote:
+> Till,
 >
+> 2014-10-10 16:58 GMT-04:00 Till Kamppeter <till.kamppeter@gmail.com 
+> <mailto:till.kamppeter@gmail.com>>:
+>
+>     One must check whether modern GNOME/GTK/KDE/Qt/LibreOffice dialogs
+>     support the PPD extensions for numerical options,if so and if it is
+>     guaranteed that the print queue is not accessed from other platforms,
+>
+>
+> This PPD will be used by Cloud Print, command line, and other 
+> non-Gnome/non-KDE apps, so having a custom Copies dialog is not the 
+> best idea.
+>
+> Shouldn't pdftopdf just insert PJL SET COPIES=X without any related 
+> code in PPD? PJL SET COPIES seems to be a standard PJL command.
 
-This PPD will be used by Cloud Print, command line, and other
-non-Gnome/non-KDE apps, so having a custom Copies dialog is not the best
-idea.
+First, the current "solution" does not require knowledge knowledge of 
+the particular JCL used. Everything comes from the PPD.
+Now, pstops does contain PJL-specific workarouds for certain printers, 
+but looks at ppd->jcl_begin to determine if the JCL is the known PJL.
 
-Shouldn't pdftopdf just insert PJL SET COPIES=X without any related code in
-PPD? PJL SET COPIES seems to be a standard PJL command.
+But, as far as I understand the current jcl-insertion code in pdftopdf, 
+it will actually *replace* the "Copies" widget under "Advanced" with the 
+copies-value from the usual UI location. But the replacement only 
+happens after "ENTER LANGUAGE"... so when you use OrderDependency to 
+move it before, the
+replacement has not happened...
 
-We should tell print dialog designers that if the PPD has an option
-> named "Copies" to not show it but to send the selection of the normal
-> copiews facility of the dialog as the choice for this option.
+This means:
+1) Current design of JCL in pdftopdf is flawed. It's not clear (to me) 
+how it should be changed.
+2) If the PPD specifies the JCL to be used, I'm not sure how the PPD 
+should specify "@PJL SET COPIES=X" for unlimited X. Till did mention 
+some PPD-extensions that could allow this, but I don't understand yet, 
+where the chosen value should be inserted into the JCL-command template 
+(You certainly would not want "...=%d" in the PPD and then use printf on 
+that...).
+3) Or we hard-code a PJL exception into pdftopdf.
 
+And I do prefer a solution that works the same for both Foomatic and 
+native PDF printers / PPDs.
 
+   Tobias
 
--- 
--Alex
+--------------060203010600010801030603
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: 8bit
 
---089e013a15d085d42b050566e0df
-Content-Type: text/html; charset=UTF-8
-Content-Transfer-Encoding: quoted-printable
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+  </head>
+  <body bgcolor="#FFFFFF" text="#000000">
+    On 14/10/14 21:17, Alex Korobkin wrote:
+    <blockquote
+cite="mid:CA+3RNfgZtn64UZZEX5uYRK=CyDEoS3Ly+gvkQCL20TMys6XKnA@mail.gmail.com"
+      type="cite">
+      <div dir="ltr">
+        <div class="gmail_extra">
+          <div class="gmail_quote">Till,</div>
+          <div class="gmail_quote"><br>
+          </div>
+          <div class="gmail_quote">2014-10-10 16:58 GMT-04:00 Till
+            Kamppeter <span dir="ltr">&lt;<a moz-do-not-send="true"
+                href="mailto:till.kamppeter@gmail.com" target="_blank">till.kamppeter@gmail.com</a>&gt;</span>:<br>
+            <blockquote class="gmail_quote" style="margin:0px 0px 0px
+0.8ex;border-left-width:1px;border-left-color:rgb(204,204,204);border-left-style:solid;padding-left:1ex">One
+              must check whether modern GNOME/GTK/KDE/Qt/LibreOffice
+              dialogs<br>
+              support the PPD extensions for numerical options,if so and
+              if it is<br>
+              guaranteed that the print queue is not accessed from other
+              platforms,<br>
+            </blockquote>
+            <div><br>
+            </div>
+            <div>This PPD will be used by Cloud Print, command line, and
+              other non-Gnome/non-KDE apps, so having a custom Copies
+              dialog is not the best idea. </div>
+            <div><br>
+            </div>
+            <div>Shouldn't pdftopdf just insert PJL SET COPIES=X without
+              any related code in PPD? PJL SET COPIES seems to be a
+              standard PJL command. <br>
+            </div>
+          </div>
+        </div>
+      </div>
+    </blockquote>
+    <br>
+    First, the current "solution" does not require knowledge knowledge
+    of the particular JCL used. Everything comes from the PPD.<br>
+    Now, pstops does contain PJL-specific workarouds for certain
+    printers, but looks at ppd-&gt;jcl_begin to determine if the JCL is
+    the known PJL.<br>
+    <br>
+    But, as far as I understand the current jcl-insertion code in
+    pdftopdf, it will actually *replace* the "Copies" widget under
+    "Advanced" with the copies-value from the usual UI location. But the
+    replacement only happens after "ENTER LANGUAGE"... so when you use
+    OrderDependency to move it before, the <br>
+    replacement has not happened...<br>
+    <br>
+    This means:<br>
+    1) Current design of JCL in pdftopdf is flawed. It's not clear (to
+    me) how it should be changed.<br>
+    2) If the PPD specifies the JCL to be used, I'm not sure how the PPD
+    should specify "@PJL SET COPIES=X" for unlimited X. Till did mention
+    some PPD-extensions that could allow this, but I don't understand
+    yet, where the chosen value should be inserted into the JCL-command
+    template (You certainly would not want "...=%d" in the PPD and then
+    use printf on that...).<br>
+    3) Or we hard-code a PJL exception into pdftopdf.<br>
+    <br>
+    And I do prefer a solution that works the same for both Foomatic and
+    native PDF printers / PPDs.<br>
+    <br>
+      Tobias<br>
+  </body>
+</html>
 
-<div dir=3D"ltr"><div class=3D"gmail_extra"><div class=3D"gmail_quote">Till=
-,</div><div class=3D"gmail_quote"><br></div><div class=3D"gmail_quote">2014=
--10-10 16:58 GMT-04:00 Till Kamppeter <span dir=3D"ltr">&lt;<a href=3D"mail=
-to:till.kamppeter@gmail.com" target=3D"_blank">till.kamppeter@gmail.com</a>=
-&gt;</span>:<br><blockquote class=3D"gmail_quote" style=3D"margin:0px 0px 0=
-px 0.8ex;border-left-width:1px;border-left-color:rgb(204,204,204);border-le=
-ft-style:solid;padding-left:1ex">One must check whether modern GNOME/GTK/KD=
-E/Qt/LibreOffice dialogs<br>
-support the PPD extensions for numerical options,if so and if it is<br>
-guaranteed that the print queue is not accessed from other platforms,<br></=
-blockquote><div><br></div><div>This PPD will be used by Cloud Print, comman=
-d line, and other non-Gnome/non-KDE apps, so having a custom Copies dialog =
-is not the best idea.=C2=A0</div><div><br></div><div>Shouldn&#39;t pdftopdf=
- just insert PJL SET COPIES=3DX without any related code in PPD?=C2=A0PJL S=
-ET COPIES seems to be a standard PJL command.=C2=A0</div><div><br></div><bl=
-ockquote class=3D"gmail_quote" style=3D"margin:0px 0px 0px 0.8ex;border-lef=
-t-width:1px;border-left-color:rgb(204,204,204);border-left-style:solid;padd=
-ing-left:1ex">We should tell print dialog designers that if the PPD has an =
-option<br>
-named &quot;Copies&quot; to not show it but to send the selection of the no=
-rmal<br>
-copiews facility of the dialog as the choice for this option.</blockquote><=
-div><br></div></div><div><br></div>-- <br><div dir=3D"ltr">-Alex</div>
-</div></div>
-
---089e013a15d085d42b050566e0df--
+--------------060203010600010801030603--
