@@ -1,18 +1,17 @@
-Return-Path: <till.kamppeter@gmail.com>
+Return-Path: <korobkin@gmail.com>
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20120113;
-	h=message-id:date:from:user-agent:mime-version:to:cc:subject
-	:references:in-reply-to:content-type:content-transfer-encoding;
-	bh=75zZ9RT7M9DKOZQ+YPWkNiO1faen5U9MRDAOMVqETEM=;
-	b=rjq4gN7YHZ213J7E1R/sn9lg4MMZtA6CQQJnM7KmqmXAZ3NwDkUe5gzWWy+Wczl6Vw
-	fPbr3bVrIVdIcQHhViaaU3jQ/+WsADO1JEdB8YqAsCvvYjlbjnqPxQWxtNBbZbA+lzte
-	Klp8hMGJOTuoGZBCikwIDBGoDF34pLz1rQOWVP3YDyGx0QqKJoQzymd1NG+3ev9Zso+1
-	VxnekuaKrOHKzuft4QBOMcVblhmoRj2s0PPF9CRR5hfLXL4yt4Uh/3WzdmMTBUPpmhdf
-	78lL9iK62IN/Q0eun16QGf/dQ3KVHYh1v7Kdu6oERTsrjIbB7I3i2ruAsP0/fxF++3e5
-	RSBg==
-Message-ID: <5438486E.9050201@gmail.com>
-Date: Fri, 10 Oct 2014 22:58:22 +0200
-From: Till Kamppeter <till.kamppeter@gmail.com>
+	h=mime-version:sender:in-reply-to:references:from:date:message-id
+	:subject:to:cc:content-type;
+	bh=qajzfert9s3FXM78McOL5GBXS9GKCZeZ/hC9abDJrY0=;
+	b=PhCxvWX0A9f/TEpkzewYQcFmRy2pEPUE8ntavVZcvUlfphZwiwamYfAwvOWcZK/OCd
+	+sCZfOClDwSxpAXS0DVigK3ZmtgB4C58HPWVMknyTLPm20yPrfweGkR0n0Q/c7VzZVpa
+	dwnYTZ9P8IDoNzpRGvHhoyUKm59ESHQWOW92397v4Era1SU+uMx10tLK31nc7XkjKBOT
+	FpOnkFaB4g0FtYTb828r4jhj3pMo4YrQdJJaUS3iN9x2bOpyC7u9bZ7RILE/KLkmHnBl
+	TWP53XRAffsyZpMhlSrFLjULNIQnHEFwUUmLmY0RmKPGr/LYEF0Azvh7iPjve4/oG4YU
+	lhBQ==
 MIME-Version: 1.0
+Sender: korobkin@gmail.com
+In-Reply-To: <5438486E.9050201@gmail.com>
 References: <CA+3RNfiMXAVRKoFH8XD+YyWatt-Fc+mKMGkAQyQPJ=8_SX9T3g@mail.gmail.com>
 	<5B66FA40-ED1E-461E-B00F-D5CD6C7DBC30@apple.com>
 	<CA+3RNfgR9Ucx+mQezWVwi8XMCF-4EBtFV5bukKOsTfZsTBZURw@mail.gmail.com>
@@ -26,10 +25,11 @@ References: <CA+3RNfiMXAVRKoFH8XD+YyWatt-Fc+mKMGkAQyQPJ=8_SX9T3g@mail.gmail.com>
 	<CA+3RNfjSMOmxf89XPW2vMf2SBXo7aJE+CREG99ACd0Kz0LQ3tQ@mail.gmail.com>
 	<5435A44F.7080504@thax.hardliners.org>
 	<CA+3RNfiAna118VGc=zLoRsyNTc5oGcynhMNy3UJRG7dNrHmWWw@mail.gmail.com>
-	<54383C34.6020108@thax.hardliners.org>
-In-Reply-To: <54383C34.6020108@thax.hardliners.org>
-Content-Type: text/plain; charset=utf-8
-Content-Transfer-Encoding: 7bit
+	<54383C34.6020108@thax.hardliners.org> <5438486E.9050201@gmail.com>
+From: Alex Korobkin <korobkin+op@gmail.com>
+Date: Tue, 14 Oct 2014 15:17:55 -0400
+Message-ID: <CA+3RNfgZtn64UZZEX5uYRK=CyDEoS3Ly+gvkQCL20TMys6XKnA@mail.gmail.com>
+Content-Type: multipart/alternative; boundary=089e013a15d085d42b050566e0df
 Subject: Re: [Printing-architecture] Number of copies in pure PDF workflow
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
@@ -40,158 +40,64 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Tobias Hoffmann <lprint-list@thax.hardliners.org>, Alex Korobkin <korobkin+op@gmail.com>
+To: Till Kamppeter <till.kamppeter@gmail.com>
 Cc: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>
 
-On 10/10/2014 10:06 PM, Tobias Hoffmann wrote:
-> On 10/10/14 20:38, Alex Korobkin wrote:
->>
->>     *pdftopdfJCLCopies 1: "@PJL SET COPIES=1"
->>     *pdftopdfJCLCopies 2: "@PJL SET COPIES=2"
->>     *pdftopdfJCLCopies 3: "@PJL SET COPIES=3"
->>
->>
->> Does it mean that I need to have 300 lines of this if a customer wants
->> to be able to print up to 300 copies? Is there a better way to specify
->> a keyword for arbitrary number of copies?
-> 
-> I don't know. How do PPDs for real PostScript printers (i.e. not
-> Foomatic) with hardware copying look like?
-> 
+--089e013a15d085d42b050566e0df
+Content-Type: text/plain; charset=UTF-8
 
-Problem of Adobe's PPD format is that it only supports enumerated choice
-options and boolean options, no numerical options. Foomatic and CUPS
-have PPD extensions for numerical options, but for backward
-compatibility with non-CUPS/Foomatic clients there is always a number of
-explicitly enumerated choices in a numerical option in the PPD, in case
-of "Copies" a list for each possible number of copies, usually from 1 to
-99. One must check whether modern GNOME/GTK/KDE/Qt/LibreOffice dialogs
-support the PPD extensions for numerical options,if so and if it is
-guaranteed that the print queue is not accessed from other platforms,
-one could leave out the explicitly listed choices, or simply raise the
-maximum without adding the appropriate choices. One could also think
-that if someone wants to print more than 100 copies that it is good
-enough to only be able to choose multiples of 10 (like 240 copies, not
-243 copies) if the print dialog cannot cope with the PPD extensions and
-needs the fallback choices.
+Till,
 
->> Also, it doesn't really work as expected. If I add these lines to the
->> PPD, "@PJL SET COPIES=3" is added after @PJL ENTER LANGUAGE = PDF
->> statement and becomes a part of PDF (and ignored). Why is it added there?
-> 
-> Ok, I see. This truly doesn't seem to make much sense, even with my
-> limited understanding of PJL...
-> I'm not sure why Koji Otani wrote it like that, or whether this order
-> was purposely chosen.
-> Are there PPDs which depend on this (strange) ordering?
+2014-10-10 16:58 GMT-04:00 Till Kamppeter <till.kamppeter@gmail.com>:
+
+> One must check whether modern GNOME/GTK/KDE/Qt/LibreOffice dialogs
+> support the PPD extensions for numerical options,if so and if it is
+> guaranteed that the print queue is not accessed from other platforms,
 >
 
-No, this ordering is wrong, the @PJL ENTER LANGUAGE = PDF should always
-come last. If this is not the case, the filter has a bug, probably
-already introduced by Koji Otani (CCing him).
+This PPD will be used by Cloud Print, command line, and other
+non-Gnome/non-KDE apps, so having a custom Copies dialog is not the best
+idea.
 
->> if it were a UI element, I'd add OrderDependency keyword, but it is
->> not and the keyword doesn't work. 
->>
->>>     If pdftopdf is capable of inserting a comment about the number of
->>>     copies requested, it should be able to insert this command as
->>>     well, what do you think?
->>
->>     It obviously is able. And *Copies seems to be usual way to handle
->>     Hardware-Copies for PS based printers. pdftopdf (and imagetopdf !)
->>     allows you to use this mechanism even for PDF based printers, too.
->>     I'm not sure about the "Number of Copies" dialog you were talking
->>     about ... I have not tried it myself ... but if you are correct,
->>     it will either also appear for PS based PPDs which allow hardware
->>     copies, or they are somehow able to reuse the existing GUI field
->>     for that (you might have to ask someone more familiar with PPDs
->>     about that) ... or your printing dialog fails to handle the
->>     *Copies attribute in a sensible way?
->>
->>     Either way, pdftopdf has little to do with your issue.
->>
->>
->> I would disagree here. in a PDF to PS workflow hardware copies code is
->> added by the last filter, pstops.
-> 
-> Yes, that's what I would expect.
-> I took a look into what pstops.c does beside of generic PPD handling,
-> and I found this:
-> 
->>    /*
->>     * Tell the document processor the copy and duplex options
->>     * that are required...
->>     */
->>
->>     doc_printf(doc, "%%%%Requirements: numcopies(%d)%s%s\n", doc->copies,
->>                doc->collate ? " collate" : "",
->>                Duplex ? " duplex" : "");
->>
->>    /*
->>     * Apple uses RBI comments for various non-PPD options...
->>     */
->>
->>     doc_printf(doc, "%%RBINumCopies: %d\n", doc->copies);
->>   }
-> and
->>     doc_printf(doc, "%%RBIBeginNonPPDFeature: *NumCopies %d\n",
->> doc->copies);
->>     doc_printf(doc,
->>                "%d/languagelevel where{pop languagelevel 2
->> ge}{false}ifelse\n"
->>                "{1 dict begin/NumCopies exch def currentdict end "
->>                "setpagedevice}\n"
->>                "{userdict/#copies 3 -1 roll put}ifelse\n", doc->copies);
->>     doc_puts(doc, "%RBIEndNonPPDFeature\n");
-> 
-> But foomatic based filters use *Copies in their PPD instead.... with the
-> rather dumb "let's repeat the line for 1...100 copies".
-
-See my remarks about this above.
-
-> I've seen a
-> similar approach in one other PPD (for a real postscript printer, IIRC)
-> on the web; the only difference was, that it used *JCLOpenUI instead of
-> *OpenUI, etc.
->
-
-AFAIK *JCLOpenUI only tells that the code to insert is PJL and not
-PostScript, otherwise it behaves as a normal *OpenUI optionm: Widget for
-it in the print dialog, default value, user's choice, ...
-
-> You wrote in one of your earlier mails:
->> Making a "Number of Copies" dialog doesn't seem to be a great idea,
->> because users will never notice that. They will keep setting the
->> number of copies in the usual place in GUI.
-> 
-> Are you basically saying that Foomatic-PPDs "breaks" the GUI in the same
-> way as using *Copies for pdftopdf?
-> Does using *Copies with pdftopdf actually work -- or isn't it actually
-> suffering from the same ordering problem you described for
-> *pdftopdfJCLCopies?
-> 
+Shouldn't pdftopdf just insert PJL SET COPIES=X without any related code in
+PPD? PJL SET COPIES seems to be a standard PJL command.
 
 We should tell print dialog designers that if the PPD has an option
-named "Copies" to not show it but to send the selection of the normal
-copiews facility of the dialog as the choice for this option.
-
->> Now that pdftopdf is the only filter in the chain, it needs to insert
->> hardware copies code into the chain, otherwise this whole idea of the
->> pure PDF workflow is futile: everyone would be forced to use
->> cupsManualCopies and won't be able to use stapling or punching
->> correctly, for example.
-> 
-> I do agree that pdftopdf has to add the hardware copies code.
-> And, as you have see, Koji Otani has implement PPD-based JCL-insertion
-> in pdftopdf and imagetopdf.
-> But now you are suggesting that this implementation is basically
-> broken-by-design (?).
-> What is your proposed change wrt. to the already existing
-> implementation/design?
-> 
->   Tobias
-> 
+> named "Copies" to not show it but to send the selection of the normal
+> copiews facility of the dialog as the choice for this option.
 
 
-   Till
 
+-- 
+-Alex
+
+--089e013a15d085d42b050566e0df
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><div class=3D"gmail_extra"><div class=3D"gmail_quote">Till=
+,</div><div class=3D"gmail_quote"><br></div><div class=3D"gmail_quote">2014=
+-10-10 16:58 GMT-04:00 Till Kamppeter <span dir=3D"ltr">&lt;<a href=3D"mail=
+to:till.kamppeter@gmail.com" target=3D"_blank">till.kamppeter@gmail.com</a>=
+&gt;</span>:<br><blockquote class=3D"gmail_quote" style=3D"margin:0px 0px 0=
+px 0.8ex;border-left-width:1px;border-left-color:rgb(204,204,204);border-le=
+ft-style:solid;padding-left:1ex">One must check whether modern GNOME/GTK/KD=
+E/Qt/LibreOffice dialogs<br>
+support the PPD extensions for numerical options,if so and if it is<br>
+guaranteed that the print queue is not accessed from other platforms,<br></=
+blockquote><div><br></div><div>This PPD will be used by Cloud Print, comman=
+d line, and other non-Gnome/non-KDE apps, so having a custom Copies dialog =
+is not the best idea.=C2=A0</div><div><br></div><div>Shouldn&#39;t pdftopdf=
+ just insert PJL SET COPIES=3DX without any related code in PPD?=C2=A0PJL S=
+ET COPIES seems to be a standard PJL command.=C2=A0</div><div><br></div><bl=
+ockquote class=3D"gmail_quote" style=3D"margin:0px 0px 0px 0.8ex;border-lef=
+t-width:1px;border-left-color:rgb(204,204,204);border-left-style:solid;padd=
+ing-left:1ex">We should tell print dialog designers that if the PPD has an =
+option<br>
+named &quot;Copies&quot; to not show it but to send the selection of the no=
+rmal<br>
+copiews facility of the dialog as the choice for this option.</blockquote><=
+div><br></div></div><div><br></div>-- <br><div dir=3D"ltr">-Alex</div>
+</div></div>
+
+--089e013a15d085d42b050566e0df--
