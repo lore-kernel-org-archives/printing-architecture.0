@@ -1,10 +1,9 @@
 Return-Path: <lprint-list@thax.hardliners.org>
-Message-ID: <543EC4C3.4020405@thax.hardliners.org>
-Date: Wed, 15 Oct 2014 21:02:27 +0200
+Message-ID: <543EC814.1060700@thax.hardliners.org>
+Date: Wed, 15 Oct 2014 21:16:36 +0200
 From: Tobias Hoffmann <lprint-list@thax.hardliners.org>
 MIME-Version: 1.0
 References: <CA+3RNfiMXAVRKoFH8XD+YyWatt-Fc+mKMGkAQyQPJ=8_SX9T3g@mail.gmail.com>
-	<34701921-5F04-411C-B35C-78CED619AAC3@apple.com>
 	<5432910A.4030500@gmail.com>
 	<CA+3RNfj6twoEN9y0k+dfxeQ+14jVyE_Tz9Fe5fdQSmOKcbg=_Q@mail.gmail.com>
 	<54344707.4080604@gmail.com>
@@ -20,7 +19,8 @@ References: <CA+3RNfiMXAVRKoFH8XD+YyWatt-Fc+mKMGkAQyQPJ=8_SX9T3g@mail.gmail.com>
 	<543E5168.9010108@thax.hardliners.org> <543E72C7.3090603@gmail.com>
 	<543E9F5F.8090106@thax.hardliners.org>
 	<CA+3RNfhYNr3sp1Hccv_F8x4pWFd+i02ZcyGfxBxAev+SVkAFMw@mail.gmail.com>
-In-Reply-To: <CA+3RNfhYNr3sp1Hccv_F8x4pWFd+i02ZcyGfxBxAev+SVkAFMw@mail.gmail.com>
+	<543EC4C3.4020405@thax.hardliners.org>
+In-Reply-To: <543EC4C3.4020405@thax.hardliners.org>
 Content-Type: text/plain; charset=UTF-8; format=flowed
 Content-Transfer-Encoding: 7bit
 Subject: Re: [Printing-architecture] Number of copies in pure PDF workflow
@@ -36,25 +36,36 @@ List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-arc
 To: Alex Korobkin <korobkin+op@gmail.com>
 Cc: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>, Till Kamppeter <till.kamppeter@gmail.com>
 
-On 15/10/14 19:06, Alex Korobkin wrote:
-> Till, your patch works for me, at least for pure PDF workflow. I 
-> haven't tested all cases yet, just a JCL-based PPD and a PDF printing.
+Some more comments ... below.
+
+On 15/10/14 21:02, Tobias Hoffmann wrote:
+> On 15/10/14 19:06, Alex Korobkin wrote:
+>> Till, your patch works for me, at least for pure PDF workflow. I 
+>> haven't tested all cases yet, just a JCL-based PPD and a PDF printing.
+>>
+>> Tobias, I haven't tested your patch. Is it different from Till's patch?
+>>
 >
-> Tobias, I haven't tested your patch. Is it different from Till's patch?
->
+> Till's patch only reached me after if sent mine, but, the basic idea 
+> is obviously the same.
+> My patch
+> 1) also fixes an existing issue of memory ownership when ppd->jcl_ps 
+> is replaced
+> 2) will only insert @PCL SET COPIES, when jcl_begin uses the known PJL 
+> begin sequence (copied from what pstops does wrt. to PCL).
 
-Till's patch only reached me after if sent mine, but, the basic idea is 
-obviously the same.
-My patch
-1) also fixes an existing issue of memory ownership when ppd->jcl_ps is 
-replaced
-2) will only insert @PCL SET COPIES, when jcl_begin uses the known PJL 
-begin sequence (copied from what pstops does wrt. to PCL).
+That should be tested.
 
-3) but it does not handle *Copies specially. That did not seem that 
-important to me; it probably makes some  sense for the 
-"*JCLToPDFInterpreter exists, but it's not PCL" case.
+> 3) but it does not handle *Copies specially. That did not seem that 
+> important to me; it probably makes some  sense for the 
+> "*JCLToPDFInterpreter exists, but it's not PCL" case.
 
-IMO a final patch should include 1) and 2), and might also include 3).
+Specifically, what happens here is: The "Extended Settings" UI element's 
+(generated for *Copies) value is replaced by the generic copies UI 
+setting. I don't think it's that good of an idea, esp. as Foomatic-PPDs 
+(which are about the only PPDs that use Copies) will not the PJL 
+insertion feature from pdftopdf ... and thus will not have their UI 
+value replaced. But IF printer dialogs handle *Copies specially, for 
+Foomatic, then no code is needed in pdftopdf, as well...
 
    Tobias
