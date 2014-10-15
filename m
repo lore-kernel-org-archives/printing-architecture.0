@@ -1,6 +1,6 @@
 Return-Path: <lprint-list@thax.hardliners.org>
-Message-ID: <543D9108.6050307@thax.hardliners.org>
-Date: Tue, 14 Oct 2014 23:09:28 +0200
+Message-ID: <543E5168.9010108@thax.hardliners.org>
+Date: Wed, 15 Oct 2014 12:50:16 +0200
 From: Tobias Hoffmann <lprint-list@thax.hardliners.org>
 MIME-Version: 1.0
 References: <CA+3RNfiMXAVRKoFH8XD+YyWatt-Fc+mKMGkAQyQPJ=8_SX9T3g@mail.gmail.com>
@@ -18,9 +18,10 @@ References: <CA+3RNfiMXAVRKoFH8XD+YyWatt-Fc+mKMGkAQyQPJ=8_SX9T3g@mail.gmail.com>
 	<CA+3RNfiAna118VGc=zLoRsyNTc5oGcynhMNy3UJRG7dNrHmWWw@mail.gmail.com>
 	<54383C34.6020108@thax.hardliners.org> <5438486E.9050201@gmail.com>
 	<CA+3RNfgZtn64UZZEX5uYRK=CyDEoS3Ly+gvkQCL20TMys6XKnA@mail.gmail.com>
-In-Reply-To: <CA+3RNfgZtn64UZZEX5uYRK=CyDEoS3Ly+gvkQCL20TMys6XKnA@mail.gmail.com>
+	<543D9108.6050307@thax.hardliners.org>
+In-Reply-To: <543D9108.6050307@thax.hardliners.org>
 Content-Type: multipart/alternative;
-	boundary="------------060203010600010801030603"
+	boundary="------------080108070909010402040202"
 Subject: Re: [Printing-architecture] Number of copies in pure PDF workflow
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
@@ -35,57 +36,63 @@ To: Alex Korobkin <korobkin+op@gmail.com>
 Cc: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>, Till Kamppeter <till.kamppeter@gmail.com>
 
 This is a multi-part message in MIME format.
---------------060203010600010801030603
+--------------080108070909010402040202
 Content-Type: text/plain; charset=UTF-8; format=flowed
 Content-Transfer-Encoding: 7bit
 
-On 14/10/14 21:17, Alex Korobkin wrote:
-> Till,
+On 14/10/14 23:09, Tobias Hoffmann wrote:
+> On 14/10/14 21:17, Alex Korobkin wrote:
+>> Shouldn't pdftopdf just insert PJL SET COPIES=X without any related 
+>> code in PPD? PJL SET COPIES seems to be a standard PJL command.
 >
-> 2014-10-10 16:58 GMT-04:00 Till Kamppeter <till.kamppeter@gmail.com 
-> <mailto:till.kamppeter@gmail.com>>:
->
->     One must check whether modern GNOME/GTK/KDE/Qt/LibreOffice dialogs
->     support the PPD extensions for numerical options,if so and if it is
->     guaranteed that the print queue is not accessed from other platforms,
->
->
-> This PPD will be used by Cloud Print, command line, and other 
-> non-Gnome/non-KDE apps, so having a custom Copies dialog is not the 
-> best idea.
->
-> Shouldn't pdftopdf just insert PJL SET COPIES=X without any related 
-> code in PPD? PJL SET COPIES seems to be a standard PJL command.
 
-First, the current "solution" does not require knowledge knowledge of 
-the particular JCL used. Everything comes from the PPD.
-Now, pstops does contain PJL-specific workarouds for certain printers, 
-but looks at ppd->jcl_begin to determine if the JCL is the known PJL.
+Hmm, the biggest problem seems to be that everything from ppd->jcl_begin 
+(i.e. for PCL: "\033%-12345X@") until ppd->jcl_ps (set to 
+*JCLToPDFInterpreter in pdftopdf, i.e."ENTER LANGUAGE") is written by 
+cups's ppdEmitJCL() function.
+As far as I understand it, this are the options:
 
-But, as far as I understand the current jcl-insertion code in pdftopdf, 
-it will actually *replace* the "Copies" widget under "Advanced" with the 
-copies-value from the usual UI location. But the replacement only 
-happens after "ENTER LANGUAGE"... so when you use OrderDependency to 
-move it before, the
-replacement has not happened...
+a) stick to what cups provides in terms of PPD settings (and probably 
+move the Copies replacement code before ppdEmitJCL),
 
-This means:
-1) Current design of JCL in pdftopdf is flawed. It's not clear (to me) 
-how it should be changed.
-2) If the PPD specifies the JCL to be used, I'm not sure how the PPD 
-should specify "@PJL SET COPIES=X" for unlimited X. Till did mention 
-some PPD-extensions that could allow this, but I don't understand yet, 
-where the chosen value should be inserted into the JCL-command template 
-(You certainly would not want "...=%d" in the PPD and then use printf on 
-that...).
-3) Or we hard-code a PJL exception into pdftopdf.
+b) patch cups, namely ppdEmitJCL() in emit.c.
+   As cups does detect PCL as JCL here and sets "JOB NAME", "DISPLAY" or 
+"RDYMSG DISPLAY" that would be the best place to add PJL SET COPIES.
+   But this will affect all PPDs with JCL, e.g. when pure PostScript is 
+used... and, in case the patch is not accepted upstream, cups-filters 
+has to ship it(?)
 
-And I do prefer a solution that works the same for both Foomatic and 
-native PDF printers / PPDs.
+c) do not use ppdEmitJCL at all. We would loose e.g. JOB NAME, but have 
+better control over the output...
+   If you don't set *JCLToPDFInterpreter, and use *pdftopdfJCLBegin, 
+together with more pdftopdfJCL* keywords, this could work. The current 
+emitJCLOptions implementation does not insert newlines, though. I'm not 
+sure if the PPD value could instead contain it, instead...
+   I think Koji Otani only used the pdftopdfJCL* insertion to pass stuff 
+to pdftoopvp, in a format that only used one line, separated by ";".
+   One of his examples is:
+>   *OpenUI *PageSize/Page Size: PickOne
+>   *DefaultPageSize: A4
+>   *PageSize A4/A4:
+>   *pdftopdfJCLPageSize A4/A4: "PS=A4;"
+>   *PageSize Letter/US Letter:
+>   *pdftopdfJCLPageSize Letter/US Letter: "PS=LT;"
+>   *CloseUI: *PageSize
+   I do not understand his original design fully, yet.
+
+d) We can try a hacky workaround: In pdftopdf_jcl.c, emitPreamble(), set 
+ppd->jcl_ps to an empty string. Then ppdEmitJCL will not skip JCL 
+processing all together, but it also will not write ENTER LANGUAGE at 
+the end. But it will result in an empty line. Would that be a problem in 
+PCL? After that we can write SET COPIES and ENTER LANGUAGE ourselves.
+Or something like ppd->jcl_ps=concat("...SET COPIES...\n", 
+JCLToPDFInterpreter->value) ?
+
+And yes, Till basically has to decide how to proceed.
 
    Tobias
 
---------------060203010600010801030603
+--------------080108070909010402040202
 Content-Type: text/html; charset="utf-8"
 Content-Transfer-Encoding: 8bit
 
@@ -94,72 +101,77 @@ Content-Transfer-Encoding: 8bit
     <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
   </head>
   <body bgcolor="#FFFFFF" text="#000000">
-    On 14/10/14 21:17, Alex Korobkin wrote:
-    <blockquote
-cite="mid:CA+3RNfgZtn64UZZEX5uYRK=CyDEoS3Ly+gvkQCL20TMys6XKnA@mail.gmail.com"
+    On 14/10/14 23:09, Tobias Hoffmann wrote:
+    <blockquote cite="mid:543D9108.6050307@thax.hardliners.org"
       type="cite">
-      <div dir="ltr">
-        <div class="gmail_extra">
-          <div class="gmail_quote">Till,</div>
-          <div class="gmail_quote"><br>
-          </div>
-          <div class="gmail_quote">2014-10-10 16:58 GMT-04:00 Till
-            Kamppeter <span dir="ltr">&lt;<a moz-do-not-send="true"
-                href="mailto:till.kamppeter@gmail.com" target="_blank">till.kamppeter@gmail.com</a>&gt;</span>:<br>
-            <blockquote class="gmail_quote" style="margin:0px 0px 0px
-0.8ex;border-left-width:1px;border-left-color:rgb(204,204,204);border-left-style:solid;padding-left:1ex">One
-              must check whether modern GNOME/GTK/KDE/Qt/LibreOffice
-              dialogs<br>
-              support the PPD extensions for numerical options,if so and
-              if it is<br>
-              guaranteed that the print queue is not accessed from other
-              platforms,<br>
-            </blockquote>
-            <div><br>
-            </div>
-            <div>This PPD will be used by Cloud Print, command line, and
-              other non-Gnome/non-KDE apps, so having a custom Copies
-              dialog is not the best idea. </div>
-            <div><br>
-            </div>
-            <div>Shouldn't pdftopdf just insert PJL SET COPIES=X without
-              any related code in PPD? PJL SET COPIES seems to be a
-              standard PJL command. <br>
-            </div>
+      <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+      On 14/10/14 21:17, Alex Korobkin wrote:
+      <blockquote
+cite="mid:CA+3RNfgZtn64UZZEX5uYRK=CyDEoS3Ly+gvkQCL20TMys6XKnA@mail.gmail.com"
+        type="cite">
+        <div dir="ltr">
+          <div class="gmail_extra">
+            <div class="gmail_quote"> </div>
+            Shouldn't pdftopdf just insert PJL SET COPIES=X without any
+            related code in PPD? PJL SET COPIES seems to be a standard
+            PJL command. <br>
           </div>
         </div>
-      </div>
+      </blockquote>
+      <br>
     </blockquote>
     <br>
-    First, the current "solution" does not require knowledge knowledge
-    of the particular JCL used. Everything comes from the PPD.<br>
-    Now, pstops does contain PJL-specific workarouds for certain
-    printers, but looks at ppd-&gt;jcl_begin to determine if the JCL is
-    the known PJL.<br>
+    Hmm, the biggest problem seems to be that everything from
+    ppd-&gt;jcl_begin (i.e. for PCL: "\033%-12345X@") until
+    ppd-&gt;jcl_ps (set to *JCLToPDFInterpreter in pdftopdf, i.e."ENTER
+    LANGUAGE") is written by cups's ppdEmitJCL() function.<br>
+    As far as I understand it, this are the options:<br>
     <br>
-    But, as far as I understand the current jcl-insertion code in
-    pdftopdf, it will actually *replace* the "Copies" widget under
-    "Advanced" with the copies-value from the usual UI location. But the
-    replacement only happens after "ENTER LANGUAGE"... so when you use
-    OrderDependency to move it before, the <br>
-    replacement has not happened...<br>
+    a) stick to what cups provides in terms of PPD settings (and
+    probably move the Copies replacement code before ppdEmitJCL),<br>
     <br>
-    This means:<br>
-    1) Current design of JCL in pdftopdf is flawed. It's not clear (to
-    me) how it should be changed.<br>
-    2) If the PPD specifies the JCL to be used, I'm not sure how the PPD
-    should specify "@PJL SET COPIES=X" for unlimited X. Till did mention
-    some PPD-extensions that could allow this, but I don't understand
-    yet, where the chosen value should be inserted into the JCL-command
-    template (You certainly would not want "...=%d" in the PPD and then
-    use printf on that...).<br>
-    3) Or we hard-code a PJL exception into pdftopdf.<br>
+    b) patch cups, namely ppdEmitJCL() in emit.c.<br>
+      As cups does detect PCL as JCL here and sets "JOB NAME", "DISPLAY"
+    or "RDYMSG DISPLAY" that would be the best place to add PJL SET
+    COPIES.<br>
+      But this will affect all PPDs with JCL, e.g. when pure PostScript
+    is used... and, in case the patch is not accepted upstream,
+    cups-filters has to ship it(?)<br>
     <br>
-    And I do prefer a solution that works the same for both Foomatic and
-    native PDF printers / PPDs.<br>
+    c) do not use ppdEmitJCL at all. We would loose e.g. JOB NAME, but
+    have better control over the output...<br>
+      If you don't set *JCLToPDFInterpreter, and use *pdftopdfJCLBegin,
+    together with more pdftopdfJCL* keywords, this could work. The
+    current emitJCLOptions implementation does not insert newlines,
+    though. I'm not sure if the PPD value could instead contain it,
+    instead...<br>
+      I think Koji Otani only used the pdftopdfJCL* insertion to pass
+    stuff to pdftoopvp, in a format that only used one line, separated
+    by ";".<br>
+      One of his examples is:<br>
+    <blockquote type="cite">  *OpenUI *PageSize/Page Size: PickOne<br>
+        *DefaultPageSize: A4<br>
+        *PageSize A4/A4:<br>
+        *pdftopdfJCLPageSize A4/A4: "PS=A4;"<br>
+        *PageSize Letter/US Letter:<br>
+        *pdftopdfJCLPageSize Letter/US Letter: "PS=LT;"<br>
+        *CloseUI: *PageSize<br>
+    </blockquote>
+      I do not understand his original design fully, yet.<br>
+    <br>
+    d) We can try a hacky workaround: In pdftopdf_jcl.c, emitPreamble(),
+    set ppd-&gt;jcl_ps to an empty string. Then ppdEmitJCL will not skip
+    JCL processing all together, but it also will not write ENTER
+    LANGUAGE at the end. But it will result in an empty line. Would that
+    be a problem in PCL? After that we can write SET COPIES and ENTER
+    LANGUAGE ourselves. <br>
+    Or something like ppd-&gt;jcl_ps=concat("...SET COPIES...\n",
+    JCLToPDFInterpreter-&gt;value) ?<br>
+      <br>
+    And yes, Till basically has to decide how to proceed. <br>
     <br>
       Tobias<br>
   </body>
 </html>
 
---------------060203010600010801030603--
+--------------080108070909010402040202--
