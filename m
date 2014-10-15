@@ -1,17 +1,7 @@
-Return-Path: <till.kamppeter@gmail.com>
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20120113;
-	h=message-id:date:from:user-agent:mime-version:to:cc:subject
-	:references:in-reply-to:content-type;
-	bh=ybYhNgfNVG3ParNvRdplaS0C2mfxf3VA5g0mwdNwd9w=;
-	b=hoWd4dsuSiRxYAwMFRNVTS24E1CHIBcHNECpun/SLrIWnsKLV+ULyyj4ShvFsw8eyP
-	ksWRzU4YSavr5ctvS6kTkNJCfU1AlaxiKxOp53y+Bl+diPkLYzslUI4sIg7yrnSjFfG4
-	goUMXlzacl/nvAmQk0HIqrRUlFITPoJmRsvAwxe+7B7tBaE/Fa32LpSS3t01MsA5/DJV
-	wokzBl+XugmYKBFtBanMjXD50yAEOeD+0RSlOp73lFHeJasaH+nxghyuB6g+HjA0p47j
-	l1uRYiVqBAoPB0YaORe4PP11HCJHTQI2sFcHbNbJV6di+uO5TMtvibIobj1UwzpRe80e
-	GvaA==
-Message-ID: <543E9E08.7080307@gmail.com>
-Date: Wed, 15 Oct 2014 18:17:12 +0200
-From: Till Kamppeter <till.kamppeter@gmail.com>
+Return-Path: <lprint-list@thax.hardliners.org>
+Message-ID: <543E9F5F.8090106@thax.hardliners.org>
+Date: Wed, 15 Oct 2014 18:22:55 +0200
+From: Tobias Hoffmann <lprint-list@thax.hardliners.org>
 MIME-Version: 1.0
 References: <CA+3RNfiMXAVRKoFH8XD+YyWatt-Fc+mKMGkAQyQPJ=8_SX9T3g@mail.gmail.com>
 	<5B66FA40-ED1E-461E-B00F-D5CD6C7DBC30@apple.com>
@@ -31,7 +21,7 @@ References: <CA+3RNfiMXAVRKoFH8XD+YyWatt-Fc+mKMGkAQyQPJ=8_SX9T3g@mail.gmail.com>
 	<543D9108.6050307@thax.hardliners.org>
 	<543E5168.9010108@thax.hardliners.org> <543E72C7.3090603@gmail.com>
 In-Reply-To: <543E72C7.3090603@gmail.com>
-Content-Type: multipart/mixed; boundary="------------080006050106000607060200"
+Content-Type: multipart/mixed; boundary="------------030704090805050702070703"
 Subject: Re: [Printing-architecture] Number of copies in pure PDF workflow
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
@@ -42,66 +32,109 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Tobias Hoffmann <lprint-list@thax.hardliners.org>, Alex Korobkin <korobkin+op@gmail.com>
+To: Till Kamppeter <till.kamppeter@gmail.com>
 Cc: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>
 
 This is a multi-part message in MIME format.
---------------080006050106000607060200
-Content-Type: text/plain; charset="utf-8"
-Content-Transfer-Encoding: 8bit
+--------------030704090805050702070703
+Content-Type: text/plain; charset=UTF-8; format=flowed
+Content-Transfer-Encoding: 7bit
 
-On 10/15/2014 03:12 PM, Till Kamppeter wrote:
+On 15/10/14 15:12, Till Kamppeter wrote:
+> b) patch cups, namely ppdEmitJCL() in emit.c.
+>    As cups does detect PCL as JCL here and sets "JOB NAME", "DISPLAY" or
+> "RDYMSG DISPLAY" that would be the best place to add PJL SET COPIES.
+>    But this will affect all PPDs with JCL, e.g. when pure PostScript is
+> used... and, in case the patch is not accepted upstream, cups-filters
+> has to ship it(?)
+>
+> I will not ship patches for CUPS in the cups-filters upstream package.
+> You could post an upstream bug report/feature request on CUPS
+> (http://www.cups.org/str.php) to let the ppdEmitJCL() function add "PJL
+> SET COPIES=X" with the number of copies taken from the command line
+> arguments (4th argument, see "man filter").
+
+Patching upstream would unfortunately require changing the function 
+signature of ppdEmitJCL() -- or adding a new ppdEmitJCL2 function. And 
+that would be for a deprecated API...
+
+> We must look into whether we
+> should generally add "PJL SET COPIES=X", or only under certain
+> conditions (is another copy generation method supposed to be used?
+> Should we have some PPD keyword to turn it on or off?).
+
+I don't know...?
+
+>
+>> c) do not use ppdEmitJCL at all. We would loose e.g. JOB NAME, but have
+>> better control over the output...
+> Do you mean using the not very elegant method to copy the code of the
+> function into cups-filters and modify it there?
+
+Simply put ... yes.
+
+
 > 2. setting ppd->jcl_ps=concat("...SET COPIES...\n",
 > JCLToPDFInterpreter->value)
-> 
+Attached a (untested) first patch to pdftopdf:
+param.deviceCopies will always be 1 for ppd->manual_copies, so SET 
+COPIES is only inserted when *cupsManualCopies is not set and more than 
+1 copy is requested.
 
-I tried this route and got it to actually work with the attached patch.
-I have also taken into account to not duplicate "SET COPIES=..." if the
-PPD has a "Copies" option (but a ΅Copies" option is not recommended in
-the PPD as it is confusing and now not needed any more). The patch is
-rather simple.
+Please review.
 
-Please try it out and see whether it works on your printer. If your PPD
-has a "Copies" option, try removing it.
+> Also make the above-mentioned feature request for CUPS to discuss the
+> SET COPIES in the ppdEmitJCL() of CUPS.
+>
+See my comment above.
 
-And anyone reading this, please tell whether the patch is OK or can
-cause problems in certain situations.
-
-   Till
+   Tobias
 
 
---------------080006050106000607060200
+--------------030704090805050702070703
 Content-Type: text/x-patch;
- name="pdftopdf-pjl-copies.patch"
+ name="pjlcopies-v1.patch"
 Content-Transfer-Encoding: 7bit
 Content-Disposition: attachment;
- filename="pdftopdf-pjl-copies.patch"
+ filename="pjlcopies-v1.patch"
 
-=== modified file 'filter/pdftopdf/pdftopdf_jcl.cc'
 --- filter/pdftopdf/pdftopdf_jcl.cc	2012-10-18 17:03:24 +0000
-+++ filter/pdftopdf/pdftopdf_jcl.cc	2014-10-15 15:58:54 +0000
-@@ -135,8 +135,20 @@
-        ppdEmitJCL() actually adds JCL based on the presence on 
++++ filter/pdftopdf/pdftopdf_jcl.cc	2014-10-15 16:01:41 +0000
+@@ -128,6 +128,8 @@
+   ppdEmit(ppd,stdout,PPD_ORDER_EXIT);
+ 
+   if (param.emitJCL) {
++     char *old_jcl_ps = ppd->jcl_ps;
++
+     /* pdftopdf only adds JCL to the job if the printer is a native PDF
+        printer and the PPD is for this mode, having the "*JCLToPDFInterpreter:"
+        keyword. We need to read this keyword manually from the PPD and replace
+@@ -136,13 +138,23 @@
         "*JCLToPDFInterpreter:". */
      ppd_attr_t *attr;
-+    char buf[1024];
-+    snprintf(buf,sizeof(buf),"%d",param.deviceCopies);
      if ( (attr=ppdFindAttr(ppd,"JCLToPDFInterpreter",NULL)) != NULL) {
 -      ppd->jcl_ps=strdup(attr->value);
-+      if (param.deviceCopies > 1) {
-+	if (ppdFindOption(ppd,"Copies") != NULL) {
-+	  ppdMarkOption(ppd,"Copies",buf);
-+	  ppd->jcl_ps=strdup(attr->value);
-+	} else {
-+	  snprintf(buf, sizeof(buf), "@PJL SET COPIES=%d<0A>%s",
-+		   param.deviceCopies, attr->value);
-+	  ppd->jcl_ps = buf;
-+	}
-+      } else
-+	ppd->jcl_ps=strdup(attr->value);
-       ppd_decode(ppd->jcl_ps);
+-      ppd_decode(ppd->jcl_ps);
++      if ( (param.deviceCopies>1)&&(strncmp(ppd->jcl_begin, "\033%-12345X@", 10)==0) ) { // PJL
++        const size_t size=strlen(attr->value)+1+30;
++        ppd->jcl_ps=(char *)malloc(size*sizeof(char));
++        snprintf(ppd->jcl_ps, size, "@PJL SET COPIES=%d\n%s",param.deviceCopies,attr->value);
++        ppd_decode(ppd->jcl_ps); // will not change SET COPIES
++      } else {
++        ppd->jcl_ps=strdup(attr->value);
++        ppd_decode(ppd->jcl_ps);
++      }
      } else {
        ppd->jcl_ps=NULL;
+     }
+     ppdEmitJCL(ppd,stdout,param.jobId,param.user,param.title);
+     emitJCLOptions(stdout,ppd,param.deviceCopies);
++
++    free(ppd->jcl_ps);
++    ppd->jcl_ps = old_jcl_ps; // cups uses pool allocator, not free()
+   }
+ }
+ // }}}
 
 
---------------080006050106000607060200--
+--------------030704090805050702070703--
