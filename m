@@ -1,19 +1,9 @@
-Return-Path: <korobkin@gmail.com>
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20120113;
-	h=mime-version:sender:in-reply-to:references:from:date:message-id
-	:subject:to:cc:content-type;
-	bh=+zgVdxWP+wqimTjmV3FZjXewrPazC62QTH92Nc6Srzk=;
-	b=KRSgMaLzhrm43kMsETfHRIjmdoQ9F/eLIlRDi9bQObaCzuxFvSv7G7eRLV8G1GWQDQ
-	9Wp49R4ylQWAHhruEBgdgvvzbv1jRHZ0+d3qQCD0YwRqzlpD81a6vbfD9puu2EKReOY6
-	5hU1kwWYwUTK59PIwpreLbEXcNxZyIKI579lrPjZ2KhAtbjW9Kbj1L4X7PAx/7H2KDob
-	OfAe9l3t/iQmpt0g0+qbRTpiZ4rhNq9+DjuiXmfyU7RBYVgFfgqRhvdD8Hp01GAD2Kpl
-	O5iUsETszRu6e7pEVuS5AkTbysB4fWH1qt+ZC0/MWlCh5zplUCh0qFCeGcYq30iMmJvm
-	dKhw==
+Return-Path: <lprint-list@thax.hardliners.org>
+Message-ID: <544031BA.502@thax.hardliners.org>
+Date: Thu, 16 Oct 2014 22:59:38 +0200
+From: Tobias Hoffmann <lprint-list@thax.hardliners.org>
 MIME-Version: 1.0
-Sender: korobkin@gmail.com
-In-Reply-To: <543ECACE.7080108@thax.hardliners.org>
 References: <CA+3RNfiMXAVRKoFH8XD+YyWatt-Fc+mKMGkAQyQPJ=8_SX9T3g@mail.gmail.com>
-	<CA+3RNfgR9Ucx+mQezWVwi8XMCF-4EBtFV5bukKOsTfZsTBZURw@mail.gmail.com>
 	<34701921-5F04-411C-B35C-78CED619AAC3@apple.com>
 	<5432910A.4030500@gmail.com>
 	<CA+3RNfj6twoEN9y0k+dfxeQ+14jVyE_Tz9Fe5fdQSmOKcbg=_Q@mail.gmail.com>
@@ -30,10 +20,9 @@ References: <CA+3RNfiMXAVRKoFH8XD+YyWatt-Fc+mKMGkAQyQPJ=8_SX9T3g@mail.gmail.com>
 	<543E5168.9010108@thax.hardliners.org>
 	<543E72C7.3090603@gmail.com> <543E9E08.7080307@gmail.com>
 	<543ECACE.7080108@thax.hardliners.org>
-From: Alex Korobkin <korobkin+op@gmail.com>
-Date: Thu, 16 Oct 2014 12:52:47 -0400
-Message-ID: <CA+3RNfiZRC5yh_shoCvKOCtz54kTXhL3zL8XCfHXMOXECx6qqw@mail.gmail.com>
-Content-Type: multipart/alternative; boundary=001a113cde843717b605058d1513
+	<CA+3RNfiZRC5yh_shoCvKOCtz54kTXhL3zL8XCfHXMOXECx6qqw@mail.gmail.com>
+In-Reply-To: <CA+3RNfiZRC5yh_shoCvKOCtz54kTXhL3zL8XCfHXMOXECx6qqw@mail.gmail.com>
+Content-Type: multipart/mixed; boundary="------------080801080405050801080307"
 Subject: Re: [Printing-architecture] Number of copies in pure PDF workflow
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
@@ -44,102 +33,68 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Tobias Hoffmann <lprint-list@thax.hardliners.org>
+To: Alex Korobkin <korobkin+op@gmail.com>
 Cc: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>, Till Kamppeter <till.kamppeter@gmail.com>
 
---001a113cde843717b605058d1513
-Content-Type: text/plain; charset=UTF-8
+This is a multi-part message in MIME format.
+--------------080801080405050801080307
+Content-Type: text/plain; charset=UTF-8; format=flowed
+Content-Transfer-Encoding: 7bit
 
-Tobias,
-
-Thanks for your attention to details. I was testing your patch this morning
-and found out one additional thing.
-If multiple pages are printed, they will come out non-collated. However,
-when collate is on, just one copy is printed.
-
-Turns out, there should be one additional line for collate to work with
-multiple copies and multiple pages:
-PJL SET QTY=X
-
-Could you please modify your patch to generate two lines at once: PJL SET
-COPIES=X and PJL SET QTY=X?
-
-2014-10-15 15:28 GMT-04:00 Tobias Hoffmann <lprint-list@thax.hardliners.org>
-:
-
-> On 15/10/14 18:17, Till Kamppeter wrote:
+On 16/10/14 18:52, Alex Korobkin wrote:
+> Turns out, there should be one additional line for collate to work 
+> with multiple copies and multiple pages:
+> PJL SET QTY=X
 >
->> And anyone reading this, please tell whether the patch is OK or can cause
->> problems in certain situations.
->>
->
-> One more thing I forgot:
-> In case imagetopdf is called as the last filter, and pdftopdf is not used,
-> it will have to be patched, too.
-> (imagetops containes explicit code for hardware copies in PS, because it
-> could be the last filter -- not sure if that's still the case for PDF).
->
-> And a minor correction to my earlier mail:
->
->> 2) will only insert @PCL SET COPIES, when jcl_begin uses the known PJL
->> begin sequence (copied from what pstops does wrt. to PCL).
->>
-> To be more precise: Copied from cups/emit.c (which is what pstops uses).
->
->   Tobias
->
->
->
+> Could you please modify your patch to generate two lines at once: PJL 
+> SET COPIES=X and PJL SET QTY=X?
+The attached patch does that. It's based on BZR rev. 7299, which already 
+includes the SET COPIES modifications (Till also posted the 
+corresponding .patch, earlier).
+
+I did some research, though... and it seem that (only) "SET COPIES" 
+should be used for non-collated and only(!) "SET QTY" should be used for 
+collated duplicates.
+Please do try whether just SET QTY is enough:
+           if (param.deviceCollate) {
+             snprintf(ppd->jcl_ps, size, "@PJL SET QTY=%d\n%s",
+                    param.deviceCopies, attr->value);
+          } else {
+          [...]
+
+   Tobias
 
 
--- 
--Alex
 
---001a113cde843717b605058d1513
-Content-Type: text/html; charset=UTF-8
-Content-Transfer-Encoding: quoted-printable
 
-<div dir=3D"ltr">Tobias,=C2=A0<div><br></div><div>Thanks for your attention=
- to details. I was testing your patch this morning and found out one additi=
-onal thing.=C2=A0</div><div>If multiple pages are printed, they will come o=
-ut non-collated. However, when collate is on, just one copy is printed.=C2=
-=A0</div><div><br></div><div>Turns out, there should be one additional line=
- for collate to work with multiple copies and multiple pages:</div><div>PJL=
- SET QTY=3DX</div><div><br></div><div>Could you please modify your patch to=
- generate two lines at once: PJL SET COPIES=3DX and PJL SET QTY=3DX?</div><=
-/div><div class=3D"gmail_extra"><br><div class=3D"gmail_quote">2014-10-15 1=
-5:28 GMT-04:00 Tobias Hoffmann <span dir=3D"ltr">&lt;<a href=3D"mailto:lpri=
-nt-list@thax.hardliners.org" target=3D"_blank">lprint-list@thax.hardliners.=
-org</a>&gt;</span>:<br><blockquote class=3D"gmail_quote" style=3D"margin:0 =
-0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex"><span class=3D"">On 1=
-5/10/14 18:17, Till Kamppeter wrote:<br>
-<blockquote class=3D"gmail_quote" style=3D"margin:0 0 0 .8ex;border-left:1p=
-x #ccc solid;padding-left:1ex">
-And anyone reading this, please tell whether the patch is OK or can cause p=
-roblems in certain situations.<br>
-</blockquote>
-<br></span>
-One more thing I forgot:<br>
-In case imagetopdf is called as the last filter, and pdftopdf is not used, =
-it will have to be patched, too.<br>
-(imagetops containes explicit code for hardware copies in PS, because it co=
-uld be the last filter -- not sure if that&#39;s still the case for PDF).<b=
-r>
-<br>
-And a minor correction to my earlier mail:<span class=3D""><br>
-<blockquote class=3D"gmail_quote" style=3D"margin:0 0 0 .8ex;border-left:1p=
-x #ccc solid;padding-left:1ex">
-2) will only insert @PCL SET COPIES, when jcl_begin uses the known PJL begi=
-n sequence (copied from what pstops does wrt. to PCL). <br>
-</blockquote></span>
-To be more precise: Copied from cups/emit.c (which is what pstops uses).<sp=
-an class=3D"HOEnZb"><font color=3D"#888888"><br>
-<br>
-=C2=A0 Tobias<br>
-<br>
-<br>
-</font></span></blockquote></div><br><br clear=3D"all"><div><br></div>-- <b=
-r><div dir=3D"ltr">-Alex</div>
-</div>
+--------------080801080405050801080307
+Content-Type: text/x-patch;
+ name="pjlcollate-v1.patch"
+Content-Transfer-Encoding: 7bit
+Content-Disposition: attachment;
+ filename="pjlcollate-v1.patch"
 
---001a113cde843717b605058d1513--
+--- filter/pdftopdf/pdftopdf_jcl.cc	2014-10-16 15:48:05 +0000
++++ filter/pdftopdf/pdftopdf_jcl.cc	2014-10-16 20:45:01 +0000
+@@ -150,10 +150,15 @@
+       if (param.deviceCopies > 1 && devicecopies_done == 0 && // HW copies
+ 	  strncmp(ppd->jcl_begin, "\033%-12345X@", 10) == 0) { // PJL
+ 	/* Add a PJL command to implement the hardware copies */
+-        const size_t size=strlen(attr->value)+1+30;
++        const size_t size=strlen(attr->value)+1+60;
+         ppd->jcl_ps=(char *)malloc(size*sizeof(char));
+-        snprintf(ppd->jcl_ps, size, "@PJL SET COPIES=%d\n%s",
+-		 param.deviceCopies, attr->value);
++        if (param.deviceCollate) {
++          snprintf(ppd->jcl_ps, size, "@PJL SET COPIES=%d\n@PJL SET QTY=%d\n%s",
++                   param.deviceCopies, param.deviceCopies, attr->value);
++        } else {
++          snprintf(ppd->jcl_ps, size, "@PJL SET COPIES=%d\n%s",
++                   param.deviceCopies, attr->value);
++        }
+       } else
+ 	ppd->jcl_ps=strdup(attr->value);
+       ppd_decode(ppd->jcl_ps);
+
+
+--------------080801080405050801080307--
