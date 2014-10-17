@@ -1,21 +1,19 @@
-Return-Path: <korobkin@gmail.com>
+Return-Path: <till.kamppeter@gmail.com>
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20120113;
-	h=mime-version:sender:in-reply-to:references:from:date:message-id
-	:subject:to:cc:content-type;
-	bh=/hpnG85a3HmCqBeZ/Q3M6se8I7YiSVIzFcj+mV/NXO0=;
-	b=ipm5LnybGlidehDbB3ReGP0kIRPQOyzRzhOTndwA0fSEDR0ioHECgcIxS9LegIVaEM
-	onaqg/1hxlHnjLD3q4GusV5t6ZMaJ9LqpGyzMFEh/3nm/WGM6QkrchEvkVcoYnfYhjH9
-	a0crK7Mdwl+tNobSwkECXxXu72z4S8FgiX0xblJ7894BWSWNVW/2+uMGRLJXcHNcu3Bk
-	8y8a8jA35HTQvRrCkRfT1I3icX2SgKpVbLHgNkmaTLwiQyNLE56R0XiA2o9/KPy3L+lj
-	is2AnaBTkqB3WOyULGUKrjrYVaZmruWXNMM/B//C0Hvdxg1PHlNLDsdBCSAm5Nk5lBe1
-	z8Kg==
+	h=message-id:date:from:user-agent:mime-version:to:cc:subject
+	:references:in-reply-to:content-type;
+	bh=/Mdf9hIqQgrZFcsstIqPgzez9elI7QwiHgSWqZa7b1g=;
+	b=uF8aT667+5Cb4zyALgJdJ4ED62RrWu1DDCw+5BmzSf4FfeudLk6Rj6o7S7DEiJOxsC
+	BgVluPP0j3mblF8X+gkEjtfzm9YNK9hEjjomdNCpmMYDUex5U2FEx6I8lenmIg3ObcXB
+	9y7pTQ8kP86/Mt6Muqr74vqjnJsJjEKclmcS54ckhD9DbVa+mA+CDoj3npyMmDtvzxnM
+	uNlTF6DYIUxAMfMxv80rZR6LN9FpIHzAtlBi2OfAKaTApotAOt7PmpsZWMMKA/XEd8QR
+	zmxmrY5o0Ji9zX4Ut6vYRkioDM6mzT27d1kzforjT+nE37dW4jsUvmnGNd1mKLNkUNTU
+	3PXQ==
+Message-ID: <5441466D.8070003@gmail.com>
+Date: Fri, 17 Oct 2014 18:40:13 +0200
+From: Till Kamppeter <till.kamppeter@gmail.com>
 MIME-Version: 1.0
-Sender: korobkin@gmail.com
-In-Reply-To: <544031BA.502@thax.hardliners.org>
 References: <CA+3RNfiMXAVRKoFH8XD+YyWatt-Fc+mKMGkAQyQPJ=8_SX9T3g@mail.gmail.com>
-	<34701921-5F04-411C-B35C-78CED619AAC3@apple.com>
-	<5432910A.4030500@gmail.com>
-	<CA+3RNfj6twoEN9y0k+dfxeQ+14jVyE_Tz9Fe5fdQSmOKcbg=_Q@mail.gmail.com>
 	<54344707.4080604@gmail.com>
 	<CA+3RNfj8JFdQHekjs0gQ_z8_dxPFk-qL-dGzzJtp8ACBB0KhHg@mail.gmail.com>
 	<54345EF9.5010405@thax.hardliners.org> <54350A8E.1010406@gmail.com>
@@ -31,10 +29,9 @@ References: <CA+3RNfiMXAVRKoFH8XD+YyWatt-Fc+mKMGkAQyQPJ=8_SX9T3g@mail.gmail.com>
 	<543ECACE.7080108@thax.hardliners.org>
 	<CA+3RNfiZRC5yh_shoCvKOCtz54kTXhL3zL8XCfHXMOXECx6qqw@mail.gmail.com>
 	<544031BA.502@thax.hardliners.org>
-From: Alex Korobkin <korobkin+op@gmail.com>
-Date: Fri, 17 Oct 2014 12:22:56 -0400
-Message-ID: <CA+3RNfic7_2J2DZ9TKZWKAK_CEGQfiTQ7k1sMFoL23YCsyKHzQ@mail.gmail.com>
-Content-Type: multipart/alternative; boundary=089e014950104ed5b50505a0c860
+	<CA+3RNfic7_2J2DZ9TKZWKAK_CEGQfiTQ7k1sMFoL23YCsyKHzQ@mail.gmail.com>
+In-Reply-To: <CA+3RNfic7_2J2DZ9TKZWKAK_CEGQfiTQ7k1sMFoL23YCsyKHzQ@mail.gmail.com>
+Content-Type: multipart/mixed; boundary="------------090102070800070109040804"
 Subject: Re: [Printing-architecture] Number of copies in pure PDF workflow
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
@@ -45,96 +42,88 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Tobias Hoffmann <lprint-list@thax.hardliners.org>
-Cc: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>, Till Kamppeter <till.kamppeter@gmail.com>
+To: Alex Korobkin <korobkin+op@gmail.com>, Tobias Hoffmann <lprint-list@thax.hardliners.org>
+Cc: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>
 
---089e014950104ed5b50505a0c860
-Content-Type: text/plain; charset=UTF-8
+This is a multi-part message in MIME format.
+--------------090102070800070109040804
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: 7bit
 
-Works beautifully, thank you. And thanks for digging up the exact rules of
-QTY and COPIES application.
+Thank you very much.
+
+Pushed the attached additional patch to the BZR repo (rev. 7300).
+
+   Till
+
+On 10/17/2014 06:22 PM, Alex Korobkin wrote:
+> Works beautifully, thank you. And thanks for digging up the exact rules
+> of QTY and COPIES application. 
+> 
+> 
+> 2014-10-16 16:59 GMT-04:00 Tobias Hoffmann
+> <lprint-list@thax.hardliners.org <mailto:lprint-list@thax.hardliners.org>>:
+> 
+>     On 16/10/14 18:52, Alex Korobkin wrote:
+> 
+>         Turns out, there should be one additional line for collate to
+>         work with multiple copies and multiple pages:
+>         PJL SET QTY=X
+> 
+>         Could you please modify your patch to generate two lines at
+>         once: PJL SET COPIES=X and PJL SET QTY=X?
+> 
+>     The attached patch does that. It's based on BZR rev. 7299, which
+>     already includes the SET COPIES modifications (Till also posted the
+>     corresponding .patch, earlier).
+> 
+>     I did some research, though... and it seem that (only) "SET COPIES"
+>     should be used for non-collated and only(!) "SET QTY" should be used
+>     for collated duplicates.
+>     Please do try whether just SET QTY is enough:
+>               if (param.deviceCollate) {
+>                 snprintf(ppd->jcl_ps, size, "@PJL SET QTY=%d\n%s",
+>                        param.deviceCopies, attr->value);
+>              } else {
+>              [...]
+> 
+>       Tobias
+> 
+> 
+> 
+> 
+> 
+> 
+> -- 
+> -Alex
 
 
-2014-10-16 16:59 GMT-04:00 Tobias Hoffmann <lprint-list@thax.hardliners.org>
-:
+--------------090102070800070109040804
+Content-Type: text/x-patch;
+ name="pjlcollate-v2.patch"
+Content-Transfer-Encoding: 7bit
+Content-Disposition: attachment;
+ filename="pjlcollate-v2.patch"
 
-> On 16/10/14 18:52, Alex Korobkin wrote:
->
->> Turns out, there should be one additional line for collate to work with
->> multiple copies and multiple pages:
->> PJL SET QTY=X
->>
->> Could you please modify your patch to generate two lines at once: PJL SET
->> COPIES=X and PJL SET QTY=X?
->>
-> The attached patch does that. It's based on BZR rev. 7299, which already
-> includes the SET COPIES modifications (Till also posted the corresponding
-> .patch, earlier).
->
-> I did some research, though... and it seem that (only) "SET COPIES" should
-> be used for non-collated and only(!) "SET QTY" should be used for collated
-> duplicates.
-> Please do try whether just SET QTY is enough:
->           if (param.deviceCollate) {
->             snprintf(ppd->jcl_ps, size, "@PJL SET QTY=%d\n%s",
->                    param.deviceCopies, attr->value);
->          } else {
->          [...]
->
->   Tobias
->
->
->
->
+=== modified file 'filter/pdftopdf/pdftopdf_jcl.cc'
+--- filter/pdftopdf/pdftopdf_jcl.cc	2014-10-16 15:48:05 +0000
++++ filter/pdftopdf/pdftopdf_jcl.cc	2014-10-17 16:37:10 +0000
+@@ -152,8 +152,13 @@
+ 	/* Add a PJL command to implement the hardware copies */
+         const size_t size=strlen(attr->value)+1+30;
+         ppd->jcl_ps=(char *)malloc(size*sizeof(char));
+-        snprintf(ppd->jcl_ps, size, "@PJL SET COPIES=%d\n%s",
+-		 param.deviceCopies, attr->value);
++        if (param.deviceCollate) {
++          snprintf(ppd->jcl_ps, size, "@PJL SET QTY=%d\n%s",
++                   param.deviceCopies, attr->value);
++        } else {
++          snprintf(ppd->jcl_ps, size, "@PJL SET COPIES=%d\n%s",
++                   param.deviceCopies, attr->value);
++        }
+       } else
+ 	ppd->jcl_ps=strdup(attr->value);
+       ppd_decode(ppd->jcl_ps);
 
 
--- 
--Alex
-
---089e014950104ed5b50505a0c860
-Content-Type: text/html; charset=UTF-8
-Content-Transfer-Encoding: quoted-printable
-
-<div dir=3D"ltr">Works beautifully, thank you. And thanks for digging up th=
-e exact rules of QTY and COPIES application.=C2=A0<div><br></div></div><div=
- class=3D"gmail_extra"><br><div class=3D"gmail_quote">2014-10-16 16:59 GMT-=
-04:00 Tobias Hoffmann <span dir=3D"ltr">&lt;<a href=3D"mailto:lprint-list@t=
-hax.hardliners.org" target=3D"_blank">lprint-list@thax.hardliners.org</a>&g=
-t;</span>:<br><blockquote class=3D"gmail_quote" style=3D"margin:0 0 0 .8ex;=
-border-left:1px #ccc solid;padding-left:1ex"><span class=3D"">On 16/10/14 1=
-8:52, Alex Korobkin wrote:<br>
-<blockquote class=3D"gmail_quote" style=3D"margin:0 0 0 .8ex;border-left:1p=
-x #ccc solid;padding-left:1ex">
-Turns out, there should be one additional line for collate to work with mul=
-tiple copies and multiple pages:<br>
-PJL SET QTY=3DX<br>
-<br>
-Could you please modify your patch to generate two lines at once: PJL SET C=
-OPIES=3DX and PJL SET QTY=3DX?<br>
-</blockquote></span>
-The attached patch does that. It&#39;s based on BZR rev. 7299, which alread=
-y includes the SET COPIES modifications (Till also posted the corresponding=
- .patch, earlier).<br>
-<br>
-I did some research, though... and it seem that (only) &quot;SET COPIES&quo=
-t; should be used for non-collated and only(!) &quot;SET QTY&quot; should b=
-e used for collated duplicates.<br>
-Please do try whether just SET QTY is enough:<br>
-=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 if (param.deviceCollate) {<br>
-=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 snprintf(ppd-&gt;jcl_ps, size, &q=
-uot;@PJL SET QTY=3D%d\n%s&quot;,<br>
-=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0param.=
-deviceCopies, attr-&gt;value);<br>
-=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0} else {<br>
-=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0[...]<span class=3D"HOEnZb"><font color=
-=3D"#888888"><br>
-<br>
-=C2=A0 Tobias<br>
-<br>
-<br>
-<br>
-</font></span></blockquote></div><br><br clear=3D"all"><div><br></div>-- <b=
-r><div dir=3D"ltr">-Alex</div>
-</div>
-
---089e014950104ed5b50505a0c860--
+--------------090102070800070109040804--
