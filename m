@@ -1,41 +1,20 @@
-Return-Path: <korobkin@gmail.com>
+Return-Path: <blueroofmusic@gmail.com>
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20120113;
-	h=mime-version:sender:in-reply-to:references:from:date:message-id
-	:subject:to:cc:content-type;
-	bh=k5MP+Y2F6CkXCQZYoNQhTN+Bzf7SYiySIUs8eOW0VK4=;
-	b=e3YnDYxCWaIUYkxVynaWXiDXTu9TsAiYCSPGw1aRQChyJFYiN0ghkalP/U9tGxtVJI
-	66nx/VkMI2NrWnTmlCvFIWbjREGihFguIkndDH/1P4ffqGMKPUMm+e8Drmcq5kkM0MBF
-	3kqmXNRPe7J7S5TcjWZamcHpZ38hWy5hBKBGMs6HDdAvXk4T0x9BYgYCRigD/wQfrx7t
-	7gyw57oqPWQtPDeYQ0i76QgfOvVGyENC3VS8R+snsfRCLzs6Wrk26LqKXeLA0YM11Oea
-	5t2/mm0cefO/uGiJO4bD6GxsZdxMHEQMkgm2U0ILXwrQL2Nw9Bkvy4Zj2XO4If997t+C
-	LwTw==
+	h=mime-version:from:date:message-id:subject:to:content-type;
+	bh=KJT4eROHxK/ELUQJHoFGWOd4fZ0NjSWU0Twlbz8EU68=;
+	b=h0e3dx75mtnPewq1VgO2EGdQWH4q0hRCIzQ3KqJMbiqSl4F1jhAOEbWGJ3nkQDBbjl
+	TP9qo503hsbLYlEj+iyA5Bm6YckXdoB2MjZhcntnciFxiHwbqhYIooFY8FkwYcyyztGB
+	ov/KDgD1S8xhJjUX2MwtVsBsULJRuaNvv/eYHv//eKLEMzXMY+07/N8ZISG5HATfmwOa
+	CHep6tFoddb2ldzNKRXu98DTn7di6hDVB9CrRU/kYNw/vuOobIYGzXITakEMXDtzSmtU
+	4aqzZZQUaTGXn5LyDFPUjaU98qQuFPHXAnyFTmnzeZYHBNuVC662mghTCS4U6JRON//X
+	saMQ==
 MIME-Version: 1.0
-Sender: korobkin@gmail.com
-In-Reply-To: <544570E2.9060405@gmail.com>
-References: <CA+3RNfiMXAVRKoFH8XD+YyWatt-Fc+mKMGkAQyQPJ=8_SX9T3g@mail.gmail.com>
-	<54354CDA.50401@thax.hardliners.org>
-	<CA+3RNfjSMOmxf89XPW2vMf2SBXo7aJE+CREG99ACd0Kz0LQ3tQ@mail.gmail.com>
-	<5435A44F.7080504@thax.hardliners.org>
-	<CA+3RNfiAna118VGc=zLoRsyNTc5oGcynhMNy3UJRG7dNrHmWWw@mail.gmail.com>
-	<54383C34.6020108@thax.hardliners.org> <5438486E.9050201@gmail.com>
-	<CA+3RNfgZtn64UZZEX5uYRK=CyDEoS3Ly+gvkQCL20TMys6XKnA@mail.gmail.com>
-	<543D9108.6050307@thax.hardliners.org>
-	<543E5168.9010108@thax.hardliners.org>
-	<543E72C7.3090603@gmail.com> <543E9E08.7080307@gmail.com>
-	<543ECACE.7080108@thax.hardliners.org>
-	<CA+3RNfiZRC5yh_shoCvKOCtz54kTXhL3zL8XCfHXMOXECx6qqw@mail.gmail.com>
-	<544031BA.502@thax.hardliners.org>
-	<CA+3RNfic7_2J2DZ9TKZWKAK_CEGQfiTQ7k1sMFoL23YCsyKHzQ@mail.gmail.com>
-	<5441466D.8070003@gmail.com>
-	<CA+3RNfiGm6R0SL_VsBoLsocfL-AXQrbxw1zR98HWtBcBFygxGQ@mail.gmail.com>
-	<5445384E.6030405@gmail.com>
-	<CA+3RNfgLSifDG6sW1x=1yL=hveJ_=mrkVz6Qmf-VdXbkTtXCTg@mail.gmail.com>
-	<544570E2.9060405@gmail.com>
-From: Alex Korobkin <korobkin+op@gmail.com>
-Date: Mon, 20 Oct 2014 17:18:45 -0400
-Message-ID: <CA+3RNfj4r36Rn4=oJtRGPhHggWgT=qvEN8BpdfBUrzkX0SB5rQ@mail.gmail.com>
-Content-Type: multipart/alternative; boundary=089e013a15d0ce86480505e1439d
-Subject: Re: [Printing-architecture] Number of copies in pure PDF workflow
+From: Ira McDonald <blueroofmusic@gmail.com>
+Date: Tue, 11 Nov 2014 09:32:53 -0500
+Message-ID: <CAN40gSvnfHjd5HPorZkOY9YUi0P6c_q0OiaVnet74jnX7vVXMQ@mail.gmail.com>
+Content-Type: multipart/alternative; boundary=047d7bacb9dcbea4440507962863
+Subject: [Printing-architecture] REMINDER: OP US/Europe - Wednesday 12
+	November 2014
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>,
@@ -45,90 +24,92 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Till Kamppeter <till.kamppeter@gmail.com>
-Cc: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>
+To: printing-architecture@lists.linux-foundation.org, Till Kamppeter <till.kamppeter@gmail.com>, Ira McDonald <blueroofmusic@gmail.com>
 
---089e013a15d0ce86480505e1439d
+--047d7bacb9dcbea4440507962863
 Content-Type: text/plain; charset=UTF-8
 
-Thank you Till, it seems to be working.
+Reminder of our next OP US/Europe call this Wednesday.
 
-2014-10-20 16:30 GMT-04:00 Till Kamppeter <till.kamppeter@gmail.com>:
+    - Note - PWG in Waltham, MA (Conexant is host) - 4-6 November 2014
+    - Note - Europe Summer Time ended 26 October 2014
+    - Note - US Daylight Savings Time ended 2 November 2014
+    - Note - Ira's birthday is Tuesday 11 November 2014 - day off for OP
+Chair
 
-> imagetopdf pushed as rev. 7301 to the BZR (patch also attached). Please
-> test.
->
->    Till
->
-> On 10/20/2014 07:28 PM, Alex Korobkin wrote:
-> > Yes, pdftopdf works nicely!
-> >
-> > 2014-10-20 12:29 GMT-04:00 Till Kamppeter <till.kamppeter@gmail.com
-> > <mailto:till.kamppeter@gmail.com>>:
-> >
-> >     On 10/20/2014 06:23 PM, Alex Korobkin wrote:
-> >     > Thanks Till.
-> >     > Will the same patch be added to imagetopdf?
-> >     >
-> >
-> >     If this is all working for you now I will also add it to imagetopdf.
-> >
-> >        Till
-> >
-> >
-> >
-> >
-> > --
-> > -Alex
->
->
+    - Wednesday 12 November 2014, Daytime - ONE TIME day-of-week change
+      - US
+        10am in San Francisco - US PST (Pacific Standard Time)
+        11am in Colorado - US MST (Mountain Standard Time)
+        12pm in Chicago - US CST (Central Standard Time)
+        1pm in New York - US EST (Eastern Standard Time)
+      - Europe
+        7pm in Berlin - CET (Central European Time)
 
+    * Main Number (Till Kamppeter, LF, leader)
+      International: +1-619-326-2730 (new number)
+      Access Code:   491659#
 
--- 
--Alex
+    * Main Number (Till Kamppeter, LF, leader)
+      International: +1-619-326-2730 (new number)
+      Access Code:   491659#
 
---089e013a15d0ce86480505e1439d
+Cheers,
+- Ira
+
+Ira McDonald (Musician / Software Architect)
+Co-Chair - TCG Trusted Mobility Solutions WG
+Chair - Linux Foundation Open Printing WG
+Secretary - IEEE-ISTO Printer Working Group
+Co-Chair - IEEE-ISTO PWG Internet Printing Protocol WG
+IETF Designated Expert - IPP & Printer MIB
+Blue Roof Music / High North Inc
+http://sites.google.com/site/blueroofmusic
+http://sites.google.com/site/highnorthinc
+mailto: blueroofmusic@gmail.com
+Winter  579 Park Place  Saline, MI  48176  734-944-0094
+Summer  PO Box 221  Grand Marais, MI 49839  906-494-2434
+
+--047d7bacb9dcbea4440507962863
 Content-Type: text/html; charset=UTF-8
 Content-Transfer-Encoding: quoted-printable
 
-<div dir=3D"ltr">Thank you Till, it seems to be working.=C2=A0</div><div cl=
-ass=3D"gmail_extra"><br><div class=3D"gmail_quote">2014-10-20 16:30 GMT-04:=
-00 Till Kamppeter <span dir=3D"ltr">&lt;<a href=3D"mailto:till.kamppeter@gm=
-ail.com" target=3D"_blank">till.kamppeter@gmail.com</a>&gt;</span>:<br><blo=
-ckquote class=3D"gmail_quote" style=3D"margin:0 0 0 .8ex;border-left:1px #c=
-cc solid;padding-left:1ex">imagetopdf pushed as rev. 7301 to the BZR (patch=
- also attached). Please<br>
-test.<br>
-<br>
-=C2=A0 =C2=A0Till<br>
-<span class=3D""><br>
-On 10/20/2014 07:28 PM, Alex Korobkin wrote:<br>
-&gt; Yes, pdftopdf works nicely!<br>
-&gt;<br>
-&gt; 2014-10-20 12:29 GMT-04:00 Till Kamppeter &lt;<a href=3D"mailto:till.k=
-amppeter@gmail.com">till.kamppeter@gmail.com</a><br>
-</span>&gt; &lt;mailto:<a href=3D"mailto:till.kamppeter@gmail.com">till.kam=
-ppeter@gmail.com</a>&gt;&gt;:<br>
-<div class=3D"HOEnZb"><div class=3D"h5">&gt;<br>
-&gt;=C2=A0 =C2=A0 =C2=A0On 10/20/2014 06:23 PM, Alex Korobkin wrote:<br>
-&gt;=C2=A0 =C2=A0 =C2=A0&gt; Thanks Till.<br>
-&gt;=C2=A0 =C2=A0 =C2=A0&gt; Will the same patch be added to imagetopdf?<br=
->
-&gt;=C2=A0 =C2=A0 =C2=A0&gt;<br>
-&gt;<br>
-&gt;=C2=A0 =C2=A0 =C2=A0If this is all working for you now I will also add =
-it to imagetopdf.<br>
-&gt;<br>
-&gt;=C2=A0 =C2=A0 =C2=A0 =C2=A0 Till<br>
-&gt;<br>
-&gt;<br>
-&gt;<br>
-&gt;<br>
-&gt; --<br>
-&gt; -Alex<br>
-<br>
-</div></div></blockquote></div><br><br clear=3D"all"><div><br></div>-- <br>=
-<div dir=3D"ltr">-Alex</div>
-</div>
+<span><span>Reminder</span></span> of our next <span><span>OP</span></span>=
+ US/Europe call this Wednesday.<br><br>=C2=A0=C2=A0=C2=A0 - Note - PWG in W=
+altham, MA (Conexant is host) - 4-6 November 2014<br>=C2=A0=C2=A0=C2=A0 - N=
+ote - Europe Summer Time ended 26 October 2014<br>=C2=A0=C2=A0=C2=A0 - Note=
+ - US Daylight Savings Time ended 2 November 2014<br>=C2=A0=C2=A0=C2=A0 - N=
+ote - Ira&#39;s birthday is Tuesday 11 November 2014 - day off for OP Chair=
+<br><br>=C2=A0=C2=A0=C2=A0 - Wednesday 12 November 2014, Daytime - ONE TIME=
+ day-of-week change<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 - US<br>=C2=A0=C2=A0=
+=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 10am in San Francisco - US PST (Pacific Stan=
+dard Time)<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 11am in Colorado -=
+ US MST (Mountain Standard Time)<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=
+=A0 12pm in Chicago - US CST (Central Standard Time)<br>=C2=A0=C2=A0=C2=A0=
+=C2=A0=C2=A0=C2=A0=C2=A0 1pm in New York - US EST (Eastern Standard Time)<b=
+r>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 - Europe<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=
+=C2=A0=C2=A0 7pm in Berlin - CET (Central European Time)<br><br>=C2=A0=C2=
+=A0=C2=A0 * Main Number (Till Kamppeter, LF, leader)<br>=C2=A0=C2=A0=C2=A0=
+=C2=A0=C2=A0 International: +1-619-326-2730 (new number)<br>=C2=A0=C2=A0=C2=
+=A0=C2=A0=C2=A0 Access Code:=C2=A0=C2=A0 491659#<br><br>=C2=A0=C2=A0=C2=A0 =
+* Main Number (Till Kamppeter, LF, leader)<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=
+=A0 International: <a href=3D"tel:%2B1-619-326-2730" value=3D"+16193262730"=
+ target=3D"_blank">+1-619-326-2730</a> (new number)<br>=C2=A0=C2=A0=C2=A0=
+=C2=A0=C2=A0 Access Code:=C2=A0=C2=A0 491659#<br><br>Cheers,<br>- Ira<br><b=
+r><div><div class=3D"gmail_signature"><div dir=3D"ltr">Ira McDonald (Musici=
+an / Software Architect)<br>Co-Chair - TCG Trusted Mobility Solutions WG<br=
+>Chair - Linux Foundation Open Printing WG<br>Secretary - IEEE-ISTO Printer=
+ Working Group<br>Co-Chair - IEEE-ISTO PWG Internet Printing Protocol WG<br=
+>IETF Designated Expert - IPP &amp; Printer MIB<br>Blue Roof Music / High N=
+orth Inc<br><a style=3D"color:rgb(51,51,255)" href=3D"http://sites.google.c=
+om/site/blueroofmusic" target=3D"_blank">http://sites.google.com/site/bluer=
+oofmusic</a><br><a style=3D"color:rgb(102,0,204)" href=3D"http://sites.goog=
+le.com/site/highnorthinc" target=3D"_blank">http://sites.google.com/site/hi=
+ghnorthinc</a><br>mailto: <a href=3D"mailto:blueroofmusic@gmail.com" target=
+=3D"_blank">blueroofmusic@gmail.com</a><br>Winter=C2=A0 579 Park Place=C2=
+=A0 Saline, MI=C2=A0 48176=C2=A0 734-944-0094<br>Summer=C2=A0 PO Box 221=C2=
+=A0 Grand Marais, MI 49839=C2=A0 906-494-2434<br><br><div style=3D"display:=
+inline"></div><div style=3D"display:inline"></div><div style=3D"display:inl=
+ine"></div><div></div><div></div><div></div><div></div></div></div></div>
 
---089e013a15d0ce86480505e1439d--
+--047d7bacb9dcbea4440507962863--
