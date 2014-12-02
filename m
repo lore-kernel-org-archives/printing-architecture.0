@@ -1,27 +1,15 @@
-Return-Path: <msweet@apple.com>
-DKIM-Signature: v=1; a=rsa-sha256; d=apple.com; s=mailout2048s;
-	c=relaxed/simple; 
-	q=dns/txt; i=@apple.com; t=1417538176; x=2281451776;
-	h=From:Sender:Reply-To:Subject:Date:Message-id:To:Cc:MIME-version:Content-type:
-	Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:Resent-From:
-	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:List-Id:
-	List-Help:List-Unsubscribe:List-Subscribe:List-Post:List-Owner:List-Archive;
-	bh=NBh1H0Mv2TiB/p/erzyB/mtsqHLgEIXKVSWCttAU7mU=;
-	b=JFpWbllInuuvO+a9jbO9/TFleNwD20ZlpJ2JTeEfax6fVunGL5rICy7IAAEE1YA5
-	ceXnWAeBbbaMgxS0pxnEgwj+934Q2TCpK5qbei/9dAHaRNlvBV8ORpYxgrdFQIcV
-	CIsexf1bAm4sQfIZdcY7MPA0drrDKdi68Vs+Bd+7avMPqbsxzPdBZD5F9If1caF3
-	Y+Pdt+lH6SG4Epms0F3RUfXNUcW6uVJYlSAHgc89ARqn5GjbWb01VOYXvbyt9xCk
-	fmS91AtH3D9jwgXAn53Onido9aqIF2tzzxsIcdSgFh6M7Bfr3swwFB+AIRcPC3n1
-	8rEQLixGhm0HqWsUsEYa1w==;
-From: Michael Sweet <msweet@apple.com>
-Content-type: multipart/signed;
-	boundary="Apple-Mail=_84657F79-9D38-453F-B990-DB4EF3E6B310";
-	protocol="application/pkcs7-signature"; micalg=sha1
-Date: Tue, 02 Dec 2014 11:35:58 -0500
-Message-id: <8ACDAB6F-4D54-4AA5-9C08-51D013D0CB39@apple.com>
-MIME-version: 1.0 (Mac OS X Mail 8.1 \(1993\))
-Subject: [Printing-architecture] CUPS STR #4521: Unexplained high CPU use by
-	cupsd on Linux...
+Return-Path: <pascal@obry.net>
+Message-ID: <1417549437.5922.28.camel@obry.net>
+From: Pascal Obry <pascal@obry.net>
+Date: Tue, 02 Dec 2014 20:43:57 +0100
+In-Reply-To: <8ACDAB6F-4D54-4AA5-9C08-51D013D0CB39@apple.com>
+References: <8ACDAB6F-4D54-4AA5-9C08-51D013D0CB39@apple.com>
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+Mime-Version: 1.0
+Subject: Re: [Printing-architecture] CUPS STR #4521: Unexplained high CPU
+ use by cupsd on Linux...
+Reply-To: pascal@obry.net
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>,
@@ -33,117 +21,33 @@ List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-arc
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
 To: printing-architecture@lists.linux-foundation.org
 
-
---Apple-Mail=_84657F79-9D38-453F-B990-DB4EF3E6B310
-Content-Transfer-Encoding: quoted-printable
-Content-Type: text/plain;
-	charset=us-ascii
-
-All,
-
-We've received several bug reports about cupsd using 100% CPU, either on =
+Le mardi 02 d=C3=A9cembre 2014 =C3=A0 11:35 -0500, Michael Sweet a =C3=A9cr=
+it :=20
+> All,
+>=20
+> We've received several bug reports about cupsd using 100% CPU, either on =
 startup or after connecting/turning on a printer:
+>=20
+>     https://www.cups.org/str.php?L4521
+>=20
+> I cannot reproduce myself, but was hoping someone more familiar with all =
+of the helper programs running on Linux might be able to shed some light on=
+ this?
 
-    https://www.cups.org/str.php?L4521
+Isn't this that the issue with the /tmp filling bug?
 
-I cannot reproduce myself, but was hoping someone more familiar with all =
-of the helper programs running on Linux might be able to shed some light =
-on this?
+https://bugs.launchpad.net/ubuntu/+source/system-config-printer/+bug/115639=
+8
 
-_________________________________________________________
-Michael Sweet, Senior Printing System Engineer, PWG Chair
+There was a similar bug reported on Debian.
 
+--=20
+  Pascal Obry /  Magny Les Hameaux (78)
 
---Apple-Mail=_84657F79-9D38-453F-B990-DB4EF3E6B310
-Content-Disposition: attachment;
-	filename=smime.p7s
-Content-Type: application/pkcs7-signature;
-	name=smime.p7s
-Content-Transfer-Encoding: base64
+  The best way to travel is by means of imagination
 
-MIAGCSqGSIb3DQEHAqCAMIACAQExCzAJBgUrDgMCGgUAMIAGCSqGSIb3DQEHAQAAoIIO0jCCBIow
-ggNyoAMCAQICECf06hH0eobEbp27bqkXBwcwDQYJKoZIhvcNAQEFBQAwbzELMAkGA1UEBhMCU0Ux
-FDASBgNVBAoTC0FkZFRydXN0IEFCMSYwJAYDVQQLEx1BZGRUcnVzdCBFeHRlcm5hbCBUVFAgTmV0
-d29yazEiMCAGA1UEAxMZQWRkVHJ1c3QgRXh0ZXJuYWwgQ0EgUm9vdDAeFw0wNTA2MDcwODA5MTBa
-Fw0yMDA1MzAxMDQ4MzhaMIGuMQswCQYDVQQGEwJVUzELMAkGA1UECBMCVVQxFzAVBgNVBAcTDlNh
-bHQgTGFrZSBDaXR5MR4wHAYDVQQKExVUaGUgVVNFUlRSVVNUIE5ldHdvcmsxITAfBgNVBAsTGGh0
-dHA6Ly93d3cudXNlcnRydXN0LmNvbTE2MDQGA1UEAxMtVVROLVVTRVJGaXJzdC1DbGllbnQgQXV0
-aGVudGljYXRpb24gYW5kIEVtYWlsMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAsjmF
-pPJ9q0E7YkY3rs3BYHW8OWX5ShpHornMSMxqmNVNNRm5pELlzkniii8efNIxB8dOtINknS4p1aJk
-xIW9hVE1eaROaJB7HHqkkqgX8pgV8pPMyaQylbsMTzC9mKALi+VuG6JG+ni8om+rWV6lL8/K2m2q
-L+usobNqqrcuZzWLeeEeaYji5kbNoKXqvgvOdjp6Dpvq/NonWz1zHyLmSGHGTPNpsaguG7bUMSAs
-vIKKjqQOpdeJQ/wWWq8dcdcRWdq6hw2v+vPhwvCkxWeM1tZUOt4KpLoDd7NlyP0e03RiqhjKaJMe
-oYV+9Udly/hNVyh00jT/MLbu9mIwFIws6wIDAQABo4HhMIHeMB8GA1UdIwQYMBaAFK29mHo0tCb3
-+sQmVO8DveAky1QaMB0GA1UdDgQWBBSJgmd9xJ0mcABLtFBIfN49rgRufTAOBgNVHQ8BAf8EBAMC
-AQYwDwYDVR0TAQH/BAUwAwEB/zB7BgNVHR8EdDByMDigNqA0hjJodHRwOi8vY3JsLmNvbW9kb2Nh
-LmNvbS9BZGRUcnVzdEV4dGVybmFsQ0FSb290LmNybDA2oDSgMoYwaHR0cDovL2NybC5jb21vZG8u
-bmV0L0FkZFRydXN0RXh0ZXJuYWxDQVJvb3QuY3JsMA0GCSqGSIb3DQEBBQUAA4IBAQAZ2IkRbyis
-pgCi54fBm5AD236hEv0e8+LwAamUVEJrmgnEoG3XkJIEA2Z5Q3H8+G+v23ZF4jcaPd3kWQR4rBz0
-g0bzes9bhHIt5UbBuhgRKfPLSXmHPLptBZ2kbWhPrXIUNqi5sf2/z3/wpGqUNVCPz4FtVbHdWTBK
-322gnGQfSXzvNrv042n0+DmPWq1LhTq3Du3Tzw1EovsEv+QvcI4l+1pUBrPQxLxtjftzMizpm4Qk
-LdZ/kXpoAlAfDj9N6cz1u2fo3BwuO/xOzf4CjuOoEwqlJkRl6RDyTVKnrtw+ymsyXEFs/vVdoOr/
-0fqbhlhtPZZH5f4ulQTCAMyOofK7MIIFGjCCBAKgAwIBAgIQbRnqpxlPajMi5iIyeqpx3jANBgkq
-hkiG9w0BAQUFADCBrjELMAkGA1UEBhMCVVMxCzAJBgNVBAgTAlVUMRcwFQYDVQQHEw5TYWx0IExh
-a2UgQ2l0eTEeMBwGA1UEChMVVGhlIFVTRVJUUlVTVCBOZXR3b3JrMSEwHwYDVQQLExhodHRwOi8v
-d3d3LnVzZXJ0cnVzdC5jb20xNjA0BgNVBAMTLVVUTi1VU0VSRmlyc3QtQ2xpZW50IEF1dGhlbnRp
-Y2F0aW9uIGFuZCBFbWFpbDAeFw0xMTA0MjgwMDAwMDBaFw0yMDA1MzAxMDQ4MzhaMIGTMQswCQYD
-VQQGEwJHQjEbMBkGA1UECBMSR3JlYXRlciBNYW5jaGVzdGVyMRAwDgYDVQQHEwdTYWxmb3JkMRow
-GAYDVQQKExFDT01PRE8gQ0EgTGltaXRlZDE5MDcGA1UEAxMwQ09NT0RPIENsaWVudCBBdXRoZW50
-aWNhdGlvbiBhbmQgU2VjdXJlIEVtYWlsIENBMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKC
-AQEAkoSEW0tXmNReL4uk4UDIo1NYX2Zl8TJO958yfVXQeExVt0KU4PkncQfFxmmkuTLE8UAakMwn
-VmJ/F7Vxaa7lIBvky2NeYMqiQfZq4aP/uN8fSG1lQ4wqLitjOHffsReswtqCAtbUMmrUZ28gE49c
-NfrlVICv2HEKHTcKAlBTbJUdqRAUtJmVWRIx/wmi0kzcUtve4kABW0ho3cVKtODtJB86r3FfB+Os
-vxQ7sCVxaD30D9YXWEYVgTxoi4uDD216IVfmNLDbMn7jSuGlUnJkJpFOpZIP/+CxYP0ab2hRmWON
-GoulzEKbm30iY9OpoPzOnpDfRBn0XFs1uhbzp5v/wQIDAQABo4IBSzCCAUcwHwYDVR0jBBgwFoAU
-iYJnfcSdJnAAS7RQSHzePa4Ebn0wHQYDVR0OBBYEFHoTTgB0W8Z4Y2QnwS/ioFu8ecV7MA4GA1Ud
-DwEB/wQEAwIBBjASBgNVHRMBAf8ECDAGAQH/AgEAMBEGA1UdIAQKMAgwBgYEVR0gADBYBgNVHR8E
-UTBPME2gS6BJhkdodHRwOi8vY3JsLnVzZXJ0cnVzdC5jb20vVVROLVVTRVJGaXJzdC1DbGllbnRB
-dXRoZW50aWNhdGlvbmFuZEVtYWlsLmNybDB0BggrBgEFBQcBAQRoMGYwPQYIKwYBBQUHMAKGMWh0
-dHA6Ly9jcnQudXNlcnRydXN0LmNvbS9VVE5BZGRUcnVzdENsaWVudF9DQS5jcnQwJQYIKwYBBQUH
-MAGGGWh0dHA6Ly9vY3NwLnVzZXJ0cnVzdC5jb20wDQYJKoZIhvcNAQEFBQADggEBAIXWvnhXVW0z
-f0RS/kLVBqgBA4CK+w2y/Uq/9q9BSfUbWsXSrRtzbj7pJnzmTJjBMCjfy/tCPKElPgp11tA9OYZm
-0aGbtU2bb68obB2v5ep0WqjascDxdXovnrqTecr+4pEeVnSy+I3T4ENyG+2P/WA5IEf7i686ZUg8
-mD2lJb+972DgSeUWyOs/Q4Pw4O4NwdPNM1+b0L1garM7/vrUyTo8H+2b/5tJM75CKTmD7jNpLoKd
-RU2oadqAGx490hpdfEeZpZsIbRKZhtZdVwcbpzC+S0lEuJB+ytF5OOu0M/qgOl0mWJ5hVRi0IdWZ
-1eBDQEIwvuql55TSsP7zdfl/bucwggUiMIIECqADAgECAhEA5Qe3V8XJSxHnarj7xl/AhjANBgkq
-hkiG9w0BAQUFADCBkzELMAkGA1UEBhMCR0IxGzAZBgNVBAgTEkdyZWF0ZXIgTWFuY2hlc3RlcjEQ
-MA4GA1UEBxMHU2FsZm9yZDEaMBgGA1UEChMRQ09NT0RPIENBIExpbWl0ZWQxOTA3BgNVBAMTMENP
-TU9ETyBDbGllbnQgQXV0aGVudGljYXRpb24gYW5kIFNlY3VyZSBFbWFpbCBDQTAeFw0xMzEyMTcw
-MDAwMDBaFw0xNDEyMTcyMzU5NTlaMCExHzAdBgkqhkiG9w0BCQEWEG1zd2VldEBhcHBsZS5jb20w
-ggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDXb0GGUQlc3NMCGLyDp/9D7+81MLiL2wHz
-P1txcnpqmcd33SsV+FsTdseTQt4YQRxq1FoqyR+65eiLddmxkOtbhwCuY7CYpFeZPpjmI2WijSCs
-Y9LmCJNzCkJrJjPLd53XauZqdpscFf1OwBT089X4IXZKk2/zZB2OXgPCqpLGnqsHzIKGohlXglIa
-bVp16LHGvDwJG/ovbuaxKJOc4GPkD9CLliyRDXwOKnRDLB/jgMDBjr/XzQoHHWqRZ43kmGo+9Juq
-lIquOOvvGtq4VLBFCkGsjjII55tm4FLjce6Tr7PyYMyJWaE8/5ZZhNR1kRBs0o0Zy1sEPfH7KX3m
-VgPvAgMBAAGjggHgMIIB3DAfBgNVHSMEGDAWgBR6E04AdFvGeGNkJ8Ev4qBbvHnFezAdBgNVHQ4E
-FgQU7SgSaBvZMWYrE6iYOPsK9dpeLLYwDgYDVR0PAQH/BAQDAgWgMAwGA1UdEwEB/wQCMAAwIAYD
-VR0lBBkwFwYIKwYBBQUHAwQGCysGAQQBsjEBAwUCMBEGCWCGSAGG+EIBAQQEAwIFIDBGBgNVHSAE
-PzA9MDsGDCsGAQQBsjEBAgEBATArMCkGCCsGAQUFBwIBFh1odHRwczovL3NlY3VyZS5jb21vZG8u
-bmV0L0NQUzBXBgNVHR8EUDBOMEygSqBIhkZodHRwOi8vY3JsLmNvbW9kb2NhLmNvbS9DT01PRE9D
-bGllbnRBdXRoZW50aWNhdGlvbmFuZFNlY3VyZUVtYWlsQ0EuY3JsMIGIBggrBgEFBQcBAQR8MHow
-UgYIKwYBBQUHMAKGRmh0dHA6Ly9jcnQuY29tb2RvY2EuY29tL0NPTU9ET0NsaWVudEF1dGhlbnRp
-Y2F0aW9uYW5kU2VjdXJlRW1haWxDQS5jcnQwJAYIKwYBBQUHMAGGGGh0dHA6Ly9vY3NwLmNvbW9k
-b2NhLmNvbTAbBgNVHREEFDASgRBtc3dlZXRAYXBwbGUuY29tMA0GCSqGSIb3DQEBBQUAA4IBAQAY
-OSi0CubvYBiO+bvr2B/4urjAypaUyCzv6/xaTdom6qcAAdpZ/aCrzyANf696PgwQvO06p5SQIj1u
-AAxR6UZqpaa29E7vaffJz/8JebQWYxD/HWOIh9Ewdwdq/SR8EcMCUNtAqiabgp/XZry9tebGUqry
-X5blZSHAEAi8ad2SjCAtqTSorbMHY4x3bmiro9kzHsa8zLa0RkbRRfaXDHJ7KhNkLSVKlz1e/zOF
-k9skVJiOE4T7fTvX5jx9pLudoXW+reKl78HUEpAx7caNyf1XP4w0dv33nnQ4UJhtFfY+rR7Lhum1
-VYXBolp0pkqD34NdxZUMJcWU8hbYjGdoyC8qMYIDrjCCA6oCAQEwgakwgZMxCzAJBgNVBAYTAkdC
-MRswGQYDVQQIExJHcmVhdGVyIE1hbmNoZXN0ZXIxEDAOBgNVBAcTB1NhbGZvcmQxGjAYBgNVBAoT
-EUNPTU9ETyBDQSBMaW1pdGVkMTkwNwYDVQQDEzBDT01PRE8gQ2xpZW50IEF1dGhlbnRpY2F0aW9u
-IGFuZCBTZWN1cmUgRW1haWwgQ0ECEQDlB7dXxclLEedquPvGX8CGMAkGBSsOAwIaBQCgggHZMBgG
-CSqGSIb3DQEJAzELBgkqhkiG9w0BBwEwHAYJKoZIhvcNAQkFMQ8XDTE0MTIwMjE2MzU1OFowIwYJ
-KoZIhvcNAQkEMRYEFD8a9h92XiuTIZF+WPHCfXozjbJqMIG6BgkrBgEEAYI3EAQxgawwgakwgZMx
-CzAJBgNVBAYTAkdCMRswGQYDVQQIExJHcmVhdGVyIE1hbmNoZXN0ZXIxEDAOBgNVBAcTB1NhbGZv
-cmQxGjAYBgNVBAoTEUNPTU9ETyBDQSBMaW1pdGVkMTkwNwYDVQQDEzBDT01PRE8gQ2xpZW50IEF1
-dGhlbnRpY2F0aW9uIGFuZCBTZWN1cmUgRW1haWwgQ0ECEQDlB7dXxclLEedquPvGX8CGMIG8Bgsq
-hkiG9w0BCRACCzGBrKCBqTCBkzELMAkGA1UEBhMCR0IxGzAZBgNVBAgTEkdyZWF0ZXIgTWFuY2hl
-c3RlcjEQMA4GA1UEBxMHU2FsZm9yZDEaMBgGA1UEChMRQ09NT0RPIENBIExpbWl0ZWQxOTA3BgNV
-BAMTMENPTU9ETyBDbGllbnQgQXV0aGVudGljYXRpb24gYW5kIFNlY3VyZSBFbWFpbCBDQQIRAOUH
-t1fFyUsR52q4+8ZfwIYwDQYJKoZIhvcNAQEBBQAEggEAEGIMuz1JFuP67+NsZwp9I18q2a3xccuY
-DMdvkALrkhY0qfcZGuI0tOozLua1zmzFOSaqj/qSc/sidbp3ThSERn66OjaRqEt6mqiDoXmYwM2i
-DxfwQdWRMJk42wjWcx4mQA8mLuO5HsIHjG+hOB2WFJ01GfXNH/lV1JD2zDCd+ltcLoxU5AWUanP7
-/AbsxlPHygtoMSBjQfH1+xJYdedGw5NkrjmYH9kfCnPGiuUta7wBkFQtoxAl1YyFWval9dxacIXq
-nScd27tGCNmleBlS5erVVqEuhcovC2PFcOa6D//bP+F0nYeYLDN28H9RDx1bfX8n88IiueRYLPEl
-/M2o4AAAAAAAAA==
---Apple-Mail=_84657F79-9D38-453F-B990-DB4EF3E6B310--
+  http://v2p.fr.eu.org
+  http://www.obry.net
+
+  gpg --keyserver keys.gnupg.net --recv-key F949BD3B
+
