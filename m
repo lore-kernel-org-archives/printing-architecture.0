@@ -1,23 +1,24 @@
-Return-Path: <blueroofmusic@gmail.com>
+Return-Path: <till.kamppeter@gmail.com>
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20120113;
-	h=mime-version:in-reply-to:references:from:date:message-id:subject:to
-	:content-type; bh=4E97oTed77Xfw+NmeRxPz2T8d8fYIPdz5gf3I4lHCtQ=;
-	b=VfgRoU/Tb3paFM8RuLx1K9ScjP9SNbyFQzO2CAFDwD1EmrgSveXmQb8Q7YI0lhpsei
-	gsgXglN2VW2U9GRa5BvZmyFhmd7J1EBMsRKUCqRWPGy0+pfmsS3Eau3wX+aESMAT8+zr
-	7Vq4qybqfGAv18/HKi4iEnlV6rPyUTN/qBm6/95rVaNCnpblb0OQB/X8qjpV3e9f5iqL
-	IamIBU3myEm06S7U8Q4tMBMWJAE3AzJk6+9ic+s3eJhjF3zyN2FOHIOVtjkTwRheA8Z7
-	kUUnifaM3KMkUekEuAheAvZ2JHXYcn1e2hEL/BIjf7zHi3NLCQDTSLO4jcRV0seWdsYx
-	K7Gg==
+	h=message-id:date:from:user-agent:mime-version:to:subject:references
+	:in-reply-to:content-type:content-transfer-encoding;
+	bh=bUzLNszsvMb3z4pmFFJYRlVle0V+Mt80qTTL2PbxfnE=;
+	b=b+aUfFMo6rO4lefG1+fPoF4Ila00+1ufYBfhEsCmuV8MLh6Qo5uMm0c3V3+3FzgUf0
+	l+qtqYA9yPGA494tVUO1hymPTtRCLR1QxxAh8MVx+m6u6e3Lmv0fuWgJ/ShgjcmddEA8
+	1BmjitAVvQgqKNSICIr8k4cYKKqNyNxIcX89MO05yZQb9MS3onNNbjiLaAMgEY3Rhhu0
+	rK6uZYIhbXYYR0O9Tfh9q+crLr0phr0xwCj73fwv0q7FgBejsK0XR3OXgJ+PMUFW8Txy
+	nCltjfouAZA1gfCP5PHA7xsRlyjWxKjswrGZzyNES4WwQRTzj9mCA3g0UEQf8+AA1rjh
+	d8wQ==
+Message-ID: <54874687.6020505@gmail.com>
+Date: Tue, 09 Dec 2014 19:59:19 +0100
+From: Till Kamppeter <till.kamppeter@gmail.com>
 MIME-Version: 1.0
-In-Reply-To: <CAN40gSucjCUM9bPdpu9frD1LQjGtKn6z2EbBWD1SiSHntEs+ag@mail.gmail.com>
-References: <CAN40gSuZARu8mwu5u63Qrm+GSrbWC+fWUgdJbhnuYpiQgGTntg@mail.gmail.com>
-	<CAN40gSucjCUM9bPdpu9frD1LQjGtKn6z2EbBWD1SiSHntEs+ag@mail.gmail.com>
-From: Ira McDonald <blueroofmusic@gmail.com>
-Date: Tue, 9 Dec 2014 11:23:14 -0500
-Message-ID: <CAN40gSvO+=M=PLyAPMBwHrFfDiVDsSC-Fiavtb1QveaKUgmrQQ@mail.gmail.com>
-Content-Type: multipart/alternative; boundary=047d7b86df70facb6b0509caf698
-Subject: Re: [Printing-architecture] RESCHEDULED: OP US/Europe - Tuesday 9
-	December 2014
+References: <e395be80811270817n502ccd16wf6cc90f85364f5ae@mail.gmail.com>
+In-Reply-To: <e395be80811270817n502ccd16wf6cc90f85364f5ae@mail.gmail.com>
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: 7bit
+Subject: [Printing-architecture] Last OP Meeting - Tue - 7 Oct 2014 - The
+	Recording
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>,
@@ -27,128 +28,20 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: printing-architecture@lists.linux-foundation.org, Till Kamppeter <till.kamppeter@gmail.com>, Ira McDonald <blueroofmusic@gmail.com>
-
---047d7b86df70facb6b0509caf698
-Content-Type: text/plain; charset=UTF-8
+To: Open Printing <printing-architecture@lists.linux-foundation.org>, Printing-japan <printing-japan@lists.linux-foundation.org>
 
 Hi,
 
-REMINDER - we will meet in 90 minutes.
+I have uploaded the recording of the last OpenPrinting meeting to the
+OpenPrinting server:
 
-Cheers,
-- Ira
+http://www.openprinting.org/download/meetingnotes/op-telecons/OP-Meeting-20141007.mp3
 
-On Sun, Dec 7, 2014 at 11:07 PM, Ira McDonald <blueroofmusic@gmail.com>
-wrote:
+In general, recorded meetings I will upload to
 
-> Hi,
->
-> REMINDER
->
-> Cheers,
-> - Ira
->
->
->
-> On Sun, Nov 30, 2014 at 11:11 AM, Ira McDonald <blueroofmusic@gmail.com>
-> wrote:
->
->> Hi,
->>
->> We have rescheduled our next OP US/Europe call to the second Tuesday of
->> December.
->> Please join us!
->>
->>     - Note - select topics for April Joint PWG/OPS
->>     - Note - no PWG or TCG meetings in December
->>
->>     - Tuesday 9 December 2014, Daytime
->>       - US
->>         10am in San Francisco - US PST (Pacific Standard Time)
->>         11am in Colorado - US MST (Mountain Standard Time)
->>         12pm in Chicago - US CST (Central Standard Time)
->>         1pm in New York - US EST (Eastern Standard Time)
->>       - Europe
->>         7pm in Berlin - CET (Central European Time)
->>
->>     * Main Number (Till Kamppeter, LF, leader)
->>       International: +1-619-326-2730 (new number)
->>       Access Code:   491659#
->>
->> Cheers,
->> - Ira
->>
->> Ira McDonald (Musician / Software Architect)
->> Co-Chair - TCG Trusted Mobility Solutions WG
->> Chair - Linux Foundation Open Printing WG
->> Secretary - IEEE-ISTO Printer Working Group
->> Co-Chair - IEEE-ISTO PWG Internet Printing Protocol WG
->> IETF Designated Expert - IPP & Printer MIB
->> Blue Roof Music / High North Inc
->> http://sites.google.com/site/blueroofmusic
->> http://sites.google.com/site/highnorthinc
->> mailto: blueroofmusic@gmail.com
->> Winter  579 Park Place  Saline, MI  48176  734-944-0094
->> Summer  PO Box 221  Grand Marais, MI 49839  906-494-2434
->>
->>
->
+http://www.openprinting.org/download/meetingnotes/
 
---047d7b86df70facb6b0509caf698
-Content-Type: text/html; charset=UTF-8
-Content-Transfer-Encoding: quoted-printable
+   Till
 
-<br clear=3D"all"><div><div class=3D"gmail_signature"><div dir=3D"ltr">Hi,<=
-br><br><div style=3D"display:inline"></div><div style=3D"display:inline"></=
-div><div style=3D"display:inline"></div><div></div><div></div><div></div><d=
-iv></div></div></div></div>
-REMINDER - we will meet in 90 minutes.<br><br>Cheers,<br>- Ira<br><br><div =
-class=3D"gmail_quote">On Sun, Dec 7, 2014 at 11:07 PM, Ira McDonald <span d=
-ir=3D"ltr">&lt;<a href=3D"mailto:blueroofmusic@gmail.com" target=3D"_blank"=
->blueroofmusic@gmail.com</a>&gt;</span> wrote:<br><blockquote class=3D"gmai=
-l_quote" style=3D"margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left=
-:1ex">Hi,<br><br>REMINDER<br><br>Cheers,<br>- Ira<div class=3D"HOEnZb"><div=
- class=3D"h5"><br><br clear=3D"all">
-<br><div class=3D"gmail_quote">On Sun, Nov 30, 2014 at 11:11 AM, Ira McDona=
-ld <span dir=3D"ltr">&lt;<a href=3D"mailto:blueroofmusic@gmail.com" target=
-=3D"_blank">blueroofmusic@gmail.com</a>&gt;</span> wrote:<br><blockquote cl=
-ass=3D"gmail_quote" style=3D"margin:0 0 0 .8ex;border-left:1px #ccc solid;p=
-adding-left:1ex">Hi,<br><br>We have rescheduled <span><span></span></span>o=
-ur next <span><span>OP</span></span> US/Europe call to the second Tuesday o=
-f December.<br>Please join us!<br><br>=C2=A0=C2=A0=C2=A0 - Note - select to=
-pics for April Joint PWG/OPS<br>=C2=A0=C2=A0=C2=A0 - Note - no PWG or TCG m=
-eetings in December<br><br>=C2=A0=C2=A0=C2=A0 - Tuesday 9 December 2014, Da=
-ytime<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 - US<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=
-=A0=C2=A0=C2=A0 10am in San Francisco - US PST (Pacific Standard Time)<br>=
-=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 11am in Colorado - US MST (Mount=
-ain Standard Time)<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 12pm in Ch=
-icago - US CST (Central Standard Time)<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=
-=A0=C2=A0 1pm in New York - US EST (Eastern Standard Time)<br>=C2=A0=C2=A0=
-=C2=A0=C2=A0=C2=A0 - Europe<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 7=
-pm in Berlin - CET (Central European Time)<br><br>=C2=A0=C2=A0=C2=A0 * Main=
- Number (Till Kamppeter, LF, leader)<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 Inte=
-rnational: <a href=3D"tel:%2B1-619-326-2730" value=3D"+16193262730" target=
-=3D"_blank">+1-619-326-2730</a> (new number)<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=
-=A0 Access Code:=C2=A0=C2=A0 491659#<br><br>Cheers,<br>- Ira<br><br><div><d=
-iv><div dir=3D"ltr">Ira McDonald (Musician / Software Architect)<br>Co-Chai=
-r - TCG Trusted Mobility Solutions WG<br>Chair - Linux Foundation Open Prin=
-ting WG<br>Secretary - IEEE-ISTO Printer Working Group<br>Co-Chair - IEEE-I=
-STO PWG Internet Printing Protocol WG<br>IETF Designated Expert - IPP &amp;=
- Printer MIB<br>Blue Roof Music / High North Inc<br><a style=3D"color:rgb(5=
-1,51,255)" href=3D"http://sites.google.com/site/blueroofmusic" target=3D"_b=
-lank">http://sites.google.com/site/blueroofmusic</a><br><a style=3D"color:r=
-gb(102,0,204)" href=3D"http://sites.google.com/site/highnorthinc" target=3D=
-"_blank">http://sites.google.com/site/highnorthinc</a><br>mailto: <a href=
-=3D"mailto:blueroofmusic@gmail.com" target=3D"_blank">blueroofmusic@gmail.c=
-om</a><br>Winter=C2=A0 579 Park Place=C2=A0 Saline, MI=C2=A0 48176=C2=A0 <a=
- href=3D"tel:734-944-0094" value=3D"+17349440094" target=3D"_blank">734-944=
--0094</a><br>Summer=C2=A0 PO Box 221=C2=A0 Grand Marais, MI 49839=C2=A0 <a =
-href=3D"tel:906-494-2434" value=3D"+19064942434" target=3D"_blank">906-494-=
-2434</a><br><br><div style=3D"display:inline"></div><div style=3D"display:i=
-nline"></div><div style=3D"display:inline"></div><div></div><div></div><div=
-></div><div></div></div></div></div>
-</blockquote></div><br>
-</div></div></blockquote></div><br>
+P. S.: The MP3 is 3 MB long, 11 minutes of talking.
 
---047d7b86df70facb6b0509caf698--
