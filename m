@@ -1,28 +1,20 @@
-Return-Path: <till.kamppeter@gmail.com>
+Return-Path: <blueroofmusic@gmail.com>
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20120113;
-	h=message-id:date:from:user-agent:mime-version:to:cc:subject
-	:references:in-reply-to:content-type:content-transfer-encoding;
-	bh=qvkBMqgjX53bWgMfwsMjNWls0Zd/lHb5VLOtg9e328g=;
-	b=ZuqfgubsMVCfTWJFBA66EXJXU6COJ4VkaVPAkWzevGV7tEzd50x8iQHxv+iWhYKsCR
-	velrzQlcknTa1gvSsvQ2zrfknIpI/5sWqgENW8RreIohVk5g85CCKKUyjrLz3/5xQ/PL
-	nslLRpevq4Hnhe3snrFL5jrMQEYMxMpuRzPMsbTeF6IdUBaie7uJiOGxPkri/5kq+PnV
-	JJyYCBFTfxDgG02dCkgpPyn5CnB/LtN7kYbENbn9w0BnSZWllzddtGwofaaEYHZplQr4
-	rj8PTyY+LCATzcKNJulj8tVVE9A679gdU+h+11mzTjCvHHY9IZhwgXHZ+KzFClX1jQOY
-	zjTA==
-Message-ID: <54C7C052.30306@gmail.com>
-Date: Tue, 27 Jan 2015 14:44:02 -0200
-From: Till Kamppeter <till.kamppeter@gmail.com>
+	h=mime-version:from:date:message-id:subject:to:content-type;
+	bh=oe0AAdu++GTvmqaBoMJvXoaMT72lCWLBn7soWmwYY3E=;
+	b=Z1ExvVAx2Zj0bEo/EPMCQIl5zUJSeh/ME9FIiM2mL9Ez2kuU9/AEiV0VdxgAEeZVHC
+	qTGmcZQzPbXncDlYg5oaS4wjAOdHd6/KyBGtxWlxmlc1fwg7OPKis/ByW+PRdDUPbmuD
+	RRh3+6M9ai1bHYT2z22tsCx6r6k2XIm8gawCUowVyJnYAAVMu2YSwM0pYczFPRsMCcGt
+	FVsLE7BOPrxjQlPrptDk8vpMyKjvn11aS7kLWy+hYX0uIuYA2+EFY5mp+UtKvppJ6VK1
+	tulqoc7BNcJaXzqkChy+JvDnAEE8V3BgkX6eNvOVxbaJwWbu37msN7zY0Kb2Fd5KmDCj
+	pCfw==
 MIME-Version: 1.0
-References: <54C65044.7030501@gmail.com>
-	<CAN40gStNSnXwgw7r-cdXHGiLk10LPQj2Uq1qYh+CmRjZNuO-bg@mail.gmail.com>
-	<BFBB8879-FEAD-4797-8ADC-7EEF6A810E19@apple.com>
-	<54C79494.20402@gmail.com>
-	<CAN40gSvS+q2Sd61TqF62tHo5a=GkcsUjcxXi7mFZBTm0zZJF6Q@mail.gmail.com>
-In-Reply-To: <CAN40gSvS+q2Sd61TqF62tHo5a=GkcsUjcxXi7mFZBTm0zZJF6Q@mail.gmail.com>
-Content-Type: text/plain; charset=utf-8; format=flowed
-Content-Transfer-Encoding: 7bit
-Subject: Re: [Printing-architecture] Projects for GSoC 2015: Implementing
- PWG standards
+From: Ira McDonald <blueroofmusic@gmail.com>
+Date: Sun, 8 Feb 2015 19:37:59 -0500
+Message-ID: <CAN40gSuLrNnJ+F8+r0bpTqvQmSqp7S-1SqyXTzM5bP910-dBvA@mail.gmail.com>
+Content-Type: multipart/alternative; boundary=f46d043be0989a504d050e9cfcf0
+Subject: [Printing-architecture] REMINDER: OP US/Europe - Tuesday 10
+	February 2015
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>,
@@ -32,73 +24,82 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Ira McDonald <blueroofmusic@gmail.com>
-Cc: "printing-architecture@lists.linux-foundation.org" <Printing-architecture@lists.linux-foundation.org>
+To: printing-architecture@lists.linux-foundation.org, Till Kamppeter <till.kamppeter@gmail.com>, Ira McDonald <blueroofmusic@gmail.com>
 
-On 27.01.2015 14:01, Ira McDonald wrote:
-> Hi Till,
->
-> I'm not sure that there are recent IPP standards that are suitable for
-> GSoC 2015
-> projects.
->
+--f46d043be0989a504d050e9cfcf0
+Content-Type: text/plain; charset=UTF-8
 
-So then I will simply re-post what did not get taken last year.
+Hi,
 
-> I have reservations about SANE, because it competes with new IPP Scan
-> Service,
-> but doesn't add any value (that I can see).
+Reminder of our next OP US/Europe call this Tuesday:
 
-The value is that common scan frontends (simple-scan, X-Sane, scan 
-functionality of LibreOffice, ...) can be used with IPP scanners.
+    - Note - continue recruiting OPS speakers for April Joint PWG/OPS
+    - Note - PWG Meeting in El Segundo, CA (Xerox host) - 3-5 February
+    - Note - Trusted Computing Group in San Diego, CA - 23-27 February
 
->
-> IPP Everywhere self-certification is moving forward, but slower than we
-> all hoped.
->
+    - Tuesday 10 February 2015, Daytime
+      - US
+        10am in San Francisco - US PST (Pacific Standard Time)
+        11am in Colorado - US MST (Mountain Standard Time)
+        12pm in Chicago - US CST (Central Standard Time)
+        1pm in New York - US EST (Eastern Standard Time)
+      - Europe
+        7pm in Berlin - CET (Central Europe Time)
 
-And I do not see where this would benefit from a GSoC project.
+    * Main Number (Till Kamppeter, LF, leader)
+      International: +1-619-326-2730 (new number)
+      Access Code:   491659#
 
-> IPP Finishings 2.0, IPP FaxOut, IPP Scan are all good technology, but
-> much too
-> new to be widely deployed in shipping printers.
->
+Cheers,
+- Ira
+Ira McDonald (Musician / Software Architect)
+Co-Chair - TCG Trusted Mobility Solutions WG
+Chair - Linux Foundation Open Printing WG
+Secretary - IEEE-ISTO Printer Working Group
+Co-Chair - IEEE-ISTO PWG Internet Printing Protocol WG
+IETF Designated Expert - IPP & Printer MIB
+Blue Roof Music / High North Inc
+http://sites.google.com/site/blueroofmusic
+http://sites.google.com/site/highnorthinc
+mailto: blueroofmusic@gmail.com
+Winter  579 Park Place  Saline, MI  48176  734-944-0094
+Summer  PO Box 221  Grand Marais, MI 49839  906-494-2434
 
-Are the standard ready for use? Is it only the manufacturers not 
-adopting them? If the standard is ready and at least one somewhat 
-available device on the market it should already be enough for a GSoC 
-project (at least if there is a good chance of wide adoption in the near 
-future).
+--f46d043be0989a504d050e9cfcf0
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
 
-> IPP MSN 2.0 (Media Standardized Names) does do important extensions to
-> media properties that would be worth reflecting in client print UIs, but
-> it might be hard to get
-> a student excited about more complete and accurate media properties.
->
+<span><span>Hi,<br><br>Reminder</span></span> of our next <span><span><span=
+ class=3D"il">OP</span></span></span> US/Europe call this Tuesday:<br><br>=
+=C2=A0=C2=A0=C2=A0 - Note - continue recruiting OPS speakers for April Join=
+t PWG/OPS<br>=C2=A0=C2=A0=C2=A0 - Note - PWG Meeting in El Segundo, CA (Xer=
+ox host) - 3-5 February<br>=C2=A0=C2=A0=C2=A0 - Note - Trusted Computing Gr=
+oup in San Diego, CA - 23-27 February<br><br>=C2=A0=C2=A0=C2=A0 - Tuesday 1=
+0 February 2015, Daytime<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 - US<br>=C2=A0=
+=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 10am in San Francisco - US PST (Pacifi=
+c Standard Time)<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 11am in Colo=
+rado - US MST (Mountain Standard Time)<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=
+=A0=C2=A0 12pm in Chicago - US CST (Central Standard Time)<br>=C2=A0=C2=A0=
+=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 1pm in New York - US EST (Eastern Standard T=
+ime)<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 - Europe<br>=C2=A0=C2=A0=C2=A0=C2=A0=
+=C2=A0=C2=A0=C2=A0 7pm in Berlin - CET (Central Europe Time)<br><br>=C2=A0=
+=C2=A0=C2=A0 * Main Number (Till Kamppeter, LF, leader)<br>=C2=A0=C2=A0=C2=
+=A0=C2=A0=C2=A0 International: +1-619-326-2730 (new number)<br>=C2=A0=C2=A0=
+=C2=A0=C2=A0=C2=A0 Access Code:=C2=A0=C2=A0 491659#<br><br>Cheers,<br>- Ira=
+<div><div class=3D"gmail_signature"><div dir=3D"ltr">Ira McDonald (Musician=
+ / Software Architect)<br>Co-Chair - TCG Trusted Mobility Solutions WG<br>C=
+hair - Linux Foundation Open Printing WG<br>Secretary - IEEE-ISTO Printer W=
+orking Group<br>Co-Chair - IEEE-ISTO PWG Internet Printing Protocol WG<br>I=
+ETF Designated Expert - IPP &amp; Printer MIB<br>Blue Roof Music / High Nor=
+th Inc<br><a style=3D"color:rgb(51,51,255)" href=3D"http://sites.google.com=
+/site/blueroofmusic" target=3D"_blank">http://sites.google.com/site/blueroo=
+fmusic</a><br><a style=3D"color:rgb(102,0,204)" href=3D"http://sites.google=
+.com/site/highnorthinc" target=3D"_blank">http://sites.google.com/site/high=
+northinc</a><br>mailto: <a href=3D"mailto:blueroofmusic@gmail.com" target=
+=3D"_blank">blueroofmusic@gmail.com</a><br>Winter=C2=A0 579 Park Place=C2=
+=A0 Saline, MI=C2=A0 48176=C2=A0 734-944-0094<br>Summer=C2=A0 PO Box 221=C2=
+=A0 Grand Marais, MI 49839=C2=A0 906-494-2434<br><br><div style=3D"display:=
+inline"></div><div style=3D"display:inline"></div><div style=3D"display:inl=
+ine"></div><div></div><div></div><div></div><div></div></div></div></div>
 
-This looks like some of the boring thingies which one can get only done 
-if one pays someone for it. And if one is not able to find students to 
-make a Common Print Dialog then one will never, ever find one for this.
-
-> IPP JPS3 (Job and Printer Extensions Set 3) is full of good stuff - high
-> value
-> new attributes include "ipp-features-supported", "job-contraints-supported",
-> "media-source-supported", "preferred-attributes-supported",
-> "printer-geo-location", "printer-get-attributes-supported", "printer-icons",
-> "printer-mandatory-job-attributes", and "printer-supply".  Many of these are
-> required by the subsequent IPP Everywhere spec, but it's IPP Everywhere
-> that will be the impetus for widespread adoption, I think.
->
-
-This is what could perhaps make up a project, like "Extend 
-system-config-printer to poll printer capabilities and features via IPP 
-based on IPP JPS3)".
-
-> We should talk about GSoC 2015 more after next week's PWG F2F meeting.
->
-
-OK, you could also talk about the GSoC as possible implementation 
-platform for standards on the meeting.
-
-    Till
-
+--f46d043be0989a504d050e9cfcf0--
