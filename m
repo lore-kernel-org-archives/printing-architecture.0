@@ -1,22 +1,10 @@
-Return-Path: <till.kamppeter@gmail.com>
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20120113;
-	h=message-id:date:from:user-agent:mime-version:to:subject
-	:content-type:content-transfer-encoding;
-	bh=wInhvbdgulsrs6uU6o4GK2n8iOaN7G6F53rHsMuixxU=;
-	b=vYv8IyRIqtTl0QgA82vmtXxQs8dlaOpGrX2asH4YMMRuDldIEFY9yZnG48LvaSyHcf
-	OVYc0gQJyLgUM0DkdPxAgO1lJ1vmXAjBlyf9xMDEXhlchUzkhtf2zNtgc98cGTmGnGpI
-	hsv6BmyRxGTFSIOkSN0aG3zhJk/7Ti+40pvz1poOjL/OtzT4VK0Ql80K8w6PmqJ3SLMH
-	bpn9uUSvlC+nCQbOEmFi2RTT3mWJzwj5wbfJNc07LgwVqc8LIKAYRjbrz+Y3wZob16cP
-	mFld46gcqKlAHRlCaN7mIc9bnjZLk8KwbO8zhdjRg87Nktfom3w4ANg2iR392RNAS5ho
-	3XnA==
-Message-ID: <54F5F359.3020901@gmail.com>
-Date: Tue, 03 Mar 2015 18:46:01 +0100
-From: Till Kamppeter <till.kamppeter@gmail.com>
+Return-Path: <aveekb@lexmark.com>
 MIME-Version: 1.0
-Content-Type: text/plain; charset=utf-8
-Content-Transfer-Encoding: 7bit
-Subject: [Printing-architecture] Google Summer of Code 2015 - We were not
-	selected this year
+From: Aveek Basu <aveekb@lexmark.com>
+Date: Wed, 4 Mar 2015 18:39:24 +0530
+Message-ID: <CAMmetfSxV-v1B1wPYHfH33zgqQAbYASkbwpTfySEWLqPceTX1A@mail.gmail.com>
+Content-Type: multipart/alternative; boundary=001a113d53763c762c0510762a0f
+Subject: [Printing-architecture] Slot request for presentation during summit.
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>,
@@ -26,13 +14,33 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Alexey Khoroshilov <khoroshilov@ispras.ru>, "Luis R. Rodriguez" <mcgrof@gmail.com>, Greg KH <greg@kroah.com>, "lsb-discuss@lists.linux-foundation.org" <lsb-discuss@lists.linux-foundation.org>, linux-wireless <linux-wireless@vger.kernel.org>, Open Printing <printing-architecture@lists.linux-foundation.org>
+To: Printing-architecture@lists.linux-foundation.org
+Cc: Sajal Pal <pals@lexmark.com>, Till Kamppeter <till.kamppeter@gmail.com>
 
-Hi,
+--001a113d53763c762c0510762a0f
+Content-Type: text/plain; charset=UTF-8
 
-unfortunately, the Linux Foundation was not selected as mentoring
-organization by Google this year. So we cannot run student projects
-funded by Google this year.
+Hi All,
+        This is Aveek Basu from Lexmark.I am going to participate in the
+Open Printing Summit to be held on 28th April at Cupertino.I would request
+you to allow me a       20 minutes slot during the summit to present some
+slides on behalf of Lexmark.Please let me know in case you require some
+other information.
 
-   Till
 
+Regards,
+Aveek
+
+--001a113d53763c762c0510762a0f
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">Hi All,<div>=C2=A0 =C2=A0 =C2=A0 =C2=A0 This is Aveek Basu=
+ from Lexmark.I am going to participate in the Open Printing Summit to be h=
+eld on 28th April at Cupertino.I would request you to allow me a =C2=A0 =C2=
+=A0 =C2=A0 20 minutes slot during the summit to present some slides on beha=
+lf of Lexmark.Please let me know in case you require some other information=
+.</div><div><br></div><div><br></div><div>Regards,</div><div>Aveek</div></d=
+iv>
+
+--001a113d53763c762c0510762a0f--
