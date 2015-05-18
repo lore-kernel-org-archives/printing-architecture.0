@@ -1,20 +1,19 @@
 Return-Path: <blueroofmusic@gmail.com>
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20120113;
 	h=mime-version:from:date:message-id:subject:to:content-type;
-	bh=oubDEosIkacHNUt8XyLmB3g/hNJtw16AjoeYOXyLc1g=;
-	b=eHJLwi6YlHhqjmJTKbEUOie/rRFgmp+WHRymuXnC9yoTBtgfKPgvbB0ysdWH7rRm1u
-	2xcgemwAy5cj/lX69K67DVjfDtC05WyliwofA24D79gDt0Rw0Uim4xq+blS8Fff6Z+KH
-	9bguT+SY3UEGy7JBNsBWU0ONm5eOAuRtuoPeKBTelqZIE6mzGs00OHeGsd45hwjlcwyU
-	3/JC5aagJfalpzx1XWyAfewX4uhxjcbVhvBXoc6+yGxY+pSzekwlITl9LcOE3RLlO8xn
-	nfg9tHeZy41njQkYxvpr8tKUzNez3kmLVa3vTdwl7iDJV6xUufkPEy1gea7M/WoDOgrZ
-	N5UQ==
+	bh=8gLTjOiFSnV6z8l2Xx8DKLBIQmEpRQJ9axbC0hlIJv0=;
+	b=b6SlSWd0+GD3HbkFKVwzlRUrKypALz5XoXOsNGPZhoY5NSF8xxzJ+KM4icFQ+armJy
+	w5CrQDx1hbDbVtg9rDchjQJmc/AkDJX3hUQ1L88kp5GZMfg4+ImJ5P9kIpfA1pptLhyt
+	szZgUgeDv1Y7++TUKwU4FN7v2Pffr/h2CTyQd5x1aauw3EWwA7E5HYUTjKIwmMKtY1ik
+	9tO6KMt0WK33CxqXVX2K2Z1BZgs/uK2Y6FTernBWixU+ko5+fZXYrS+BG7ok/Kmuua8e
+	BFmNL0gAbokxdBzlrmllrbfZMl7b3+nmFDP6Sus7HpwhqdFusoqlIDdc/Du2ZpICfKQG
+	m6Ug==
 MIME-Version: 1.0
 From: Ira McDonald <blueroofmusic@gmail.com>
-Date: Wed, 13 May 2015 21:13:04 -0400
-Message-ID: <CAN40gSuQBSipUKROKnChGGOgm+ZkVohfHHwbKhUJYvYhrqErmA@mail.gmail.com>
-Content-Type: multipart/alternative; boundary=f46d043be1c02e584c0516006f1e
-Subject: [Printing-architecture] Moving OP Calls one hour later starting in
-	June
+Date: Mon, 18 May 2015 18:52:12 -0400
+Message-ID: <CAN40gSs7f-seTXq=Yga0ibZ7GWZfVxZgXz7geuRfdMcRQUg0zw@mail.gmail.com>
+Content-Type: multipart/alternative; boundary=f46d0435c018a32dae0516630c1b
+Subject: [Printing-architecture] OP Minutes (12 May 2015)
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>,
@@ -26,33 +25,79 @@ List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-arc
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
 To: printing-architecture@lists.linux-foundation.org, Till Kamppeter <till.kamppeter@gmail.com>, Ira McDonald <blueroofmusic@gmail.com>
 
---f46d043be1c02e584c0516006f1e
+--f46d0435c018a32dae0516630c1b
 Content-Type: text/plain; charset=UTF-8
 
 Hi,
 
-To facilitate more participation, Till and I have agreed to move the
-regular OP monthly calls
-one hour later (e.g., to 2pm US Eastern time).
+NOTE:  NEW TIME - one hour later, starting in June 2015
 
-Note that the US and Europe go *back* to standard time in October/November,
-while most
-cities in Brazil go *forward* to summer time in October/November.  So there
-is a *two hour*
-shift of the relative Brazil time from the US time (the reference OP call
-time by tradition).
 
-We will attempt to avoid scheduling calls that fall within the disjoint
-dates of summer and winter
-time changes in the US, Europe, and Brazil in October/November and
-February/March in order
-to minimize confusion for everyone.
+Minutes from last week's Open Printing call are posted at:
 
-See forthcoming minutes from OP call this Tuesday and early reminder for
-June call.
+  http://ftp.pwg.org/pub/pwg/openprinting/minutes/OP-Minutes-20150310.htm
+<ftp://ftp.pwg.org/pub/pwg/openprinting/minutes/OP-Minutes-20150512.htm>
+
+
+Action Items:
+
+None
+
+
+Next OP US/Europe/Brazil Conference Calls:
+
+(1) June 2015 - US/Europe/Brazil - OP Monthly Meeting
+    - NOTE - new time - one hour later!
+
+    - Tuesday 9 June 2015, Daytime
+      - US
+        11am in San Francisco - US PDT (Pacific Daylight Time)
+        12pm in Colorado - US MDT (Mountain Daylight Time)
+        1pm in Chicago - US CDT (Central Daylight Time)
+        2pm in New York - US EDT (Eastern Daylight Time)
+      - Europe
+        8pm in Berlin - CEST (Central Europe Summer Time)
+      - Brazil
+        3pm in Belo Horizonte - BRT (Brasilia Time)
+
+    US:  +1 559-546-1301
+    Germany:  +49 (0) 221 98203421
+    Brazil:  +55 61 4040-4460
+    Japan:  +81 (0) 3-5050-5070
+    Participant Access Code:  622393#
+
+    (note that local numbers for many other countries are available,
+    also cellphone apps, VOIP support, etc. - please email Till for
+    details)
+
+(2) July 2015 - US/Europe/Brazil - OP Monthly Meeting (tentative)
+    - NOTE - new time - one hour later!
+
+    - Tuesday 7 July 2015, Daytime
+      - US
+        11am in San Francisco - US PDT (Pacific Daylight Time)
+        12pm in Colorado - US MDT (Mountain Daylight Time)
+        1pm in Chicago - US CDT (Central Daylight Time)
+        2pm in New York - US EDT (Eastern Daylight Time)
+      - Europe
+        8pm in Berlin - CEST (Central Europe Summer Time)
+      - Brazil
+        3pm in Belo Horizonte - BRT (Brasilia Time)
+
+    US:  +1 559-546-1301
+    Germany:  +49 (0) 221 98203421
+    Brazil:  +55 61 4040-4460
+    Japan:  +81 (0) 3-5050-5070
+    Participant Access Code:  622393#
+
+    (note that local numbers for many other countries are available,
+    also cellphone apps, VOIP support, etc. - please email Till for
+    details)
+
 
 Cheers,
 - Ira
+
 
 Ira McDonald (Musician / Software Architect)
 Co-Chair - TCG Trusted Mobility Solutions WG
@@ -67,35 +112,97 @@ mailto: blueroofmusic@gmail.com
 Winter  579 Park Place  Saline, MI  48176  734-944-0094
 Summer  PO Box 221  Grand Marais, MI 49839  906-494-2434
 
---f46d043be1c02e584c0516006f1e
+--f46d0435c018a32dae0516630c1b
 Content-Type: text/html; charset=UTF-8
 Content-Transfer-Encoding: quoted-printable
 
-Hi,<br><br>To facilitate more participation, Till and I have agreed to move=
- the regular OP monthly calls<br>one hour later (e.g., to 2pm US Eastern ti=
-me).<br><br>Note that the US and Europe go *back* to standard time in Octob=
-er/November, while most<br>cities in Brazil go *forward* to summer time in =
-October/November.=C2=A0 So there is a *two hour*<br>shift of the relative B=
-razil time from the US time (the reference OP call time by tradition).<br><=
-br>We will attempt to avoid scheduling calls that fall within the disjoint =
-dates of summer and winter <br>time changes in the US, Europe, and Brazil i=
-n October/November and February/March in order<br>to minimize confusion for=
- everyone.<br><br>See forthcoming minutes from OP call this Tuesday and ear=
-ly reminder for June call.<br><br>Cheers,<br>- Ira<br><br clear=3D"all"><di=
-v><div class=3D"gmail_signature"><div dir=3D"ltr">Ira McDonald (Musician / =
-Software Architect)<br>Co-Chair - TCG Trusted Mobility Solutions WG<br>Chai=
-r - Linux Foundation Open Printing WG<br>Secretary - IEEE-ISTO Printer Work=
-ing Group<br>Co-Chair - IEEE-ISTO PWG Internet Printing Protocol WG<br>IETF=
- Designated Expert - IPP &amp; Printer MIB<br>Blue Roof Music / High North =
-Inc<br><a style=3D"color:rgb(51,51,255)" href=3D"http://sites.google.com/si=
-te/blueroofmusic" target=3D"_blank">http://sites.google.com/site/blueroofmu=
-sic</a><br><a style=3D"color:rgb(102,0,204)" href=3D"http://sites.google.co=
-m/site/highnorthinc" target=3D"_blank">http://sites.google.com/site/highnor=
-thinc</a><br>mailto: <a href=3D"mailto:blueroofmusic@gmail.com" target=3D"_=
-blank">blueroofmusic@gmail.com</a><br>Winter=C2=A0 579 Park Place=C2=A0 Sal=
-ine, MI=C2=A0 48176=C2=A0 734-944-0094<br>Summer=C2=A0 PO Box 221=C2=A0 Gra=
-nd Marais, MI 49839=C2=A0 906-494-2434<br><br><div style=3D"display:inline"=
-></div><div style=3D"display:inline"></div><div style=3D"display:inline"></=
-div><div></div><div></div><div></div><div></div></div></div></div>
+<div><div>Hi, <br><br>NOTE:=C2=A0 NEW TIME - one hour later, starting in Ju=
+ne 2015<br><br><br><span><span><span><span><span><span><span><span><span><s=
+pan><span><span><span><span><span><span><span><span><span><span class=3D"il=
+">Minutes</span></span></span></span></span></span></span></span></span></s=
+pan></span></span></span></span></span></span></span></span></span></span> =
+from last week&#39;s Open Printing<span> call</span> are <span><span><span>=
+<span><span><span><span><span><span><span><span><span><span class=3D"il">po=
+sted</span></span></span></span></span></span></span></span></span></span><=
+/span></span></span> at:<br>
 
---f46d043be1c02e584c0516006f1e--
+
+
+
+
+
+
+
+
+
+
+
+<br>
+=C2=A0 <a href=3D"ftp://ftp.pwg.org/pub/pwg/openprinting/minutes/OP-Minutes=
+-20150512.htm" target=3D"_blank">http://ftp.pwg.org/pub/pwg/openprinting/<s=
+pan class=3D"il">minutes</span>/<span class=3D"il">OP</span>-<span class=3D=
+"il">Minutes</span>-20150310.htm</a><br>
+
+
+
+
+
+</div><div><br><br></div>
+Action Items:<br><br></div>None<br><br><br>Next <span><span><span><span><sp=
+an><span><span><span><span><span class=3D"il">OP</span></span></span></span=
+></span></span></span></span></span></span> US/Europe/Brazil Conference Cal=
+ls:<br><br>(1) June 2015 - US/Europe/Brazil - OP Monthly Meeting<br>=C2=A0=
+=C2=A0=C2=A0 - NOTE - new time - one hour later!<br><br>=C2=A0=C2=A0=C2=A0 =
+- Tuesday 9 June 2015, Daytime<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 - US<br>=
+=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 11am in San Francisco - US PDT (=
+Pacific Daylight Time)<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 12pm i=
+n Colorado - US MDT (Mountain Daylight Time)<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=
+=A0=C2=A0=C2=A0 1pm in Chicago - US CDT (Central Daylight Time)<br>=C2=A0=
+=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 2pm in New York - US EDT (Eastern Dayl=
+ight Time)<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 - Europe<br>=C2=A0=C2=A0=C2=A0=
+=C2=A0=C2=A0=C2=A0=C2=A0 8pm in Berlin - CEST (Central Europe Summer Time)<=
+br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 - Brazil<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=
+=A0=C2=A0=C2=A0 3pm in Belo Horizonte - BRT (Brasilia Time)<br><br>=C2=A0=
+=C2=A0=C2=A0 US:=C2=A0 +1 559-546-1301<br>=C2=A0=C2=A0=C2=A0 Germany:=C2=A0=
+ +49 (0) 221 98203421<br>=C2=A0=C2=A0=C2=A0 Brazil:=C2=A0 +55 61 4040-4460<=
+br>=C2=A0=C2=A0=C2=A0 Japan:=C2=A0 +81 (0) 3-5050-5070<br>=C2=A0=C2=A0=C2=
+=A0 Participant Access Code:=C2=A0 622393#<br><br>=C2=A0=C2=A0=C2=A0 (note =
+that local numbers for many other countries are available, <br>=C2=A0=C2=A0=
+=C2=A0 also cellphone apps, VOIP support, etc. - please email Till for <br>=
+=C2=A0=C2=A0=C2=A0 details)<br><br>(2) July 2015 - US/Europe/Brazil - OP Mo=
+nthly Meeting (tentative)<br>=C2=A0=C2=A0=C2=A0 - NOTE - new time - one hou=
+r later!<br><br>=C2=A0=C2=A0=C2=A0 - Tuesday 7 July 2015, Daytime<br>=C2=A0=
+=C2=A0=C2=A0=C2=A0=C2=A0 - US<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=
+ 11am in San Francisco - US PDT (Pacific Daylight Time)<br>=C2=A0=C2=A0=C2=
+=A0=C2=A0=C2=A0=C2=A0=C2=A0 12pm in Colorado - US MDT (Mountain Daylight Ti=
+me)<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 1pm in Chicago - US CDT (=
+Central Daylight Time)<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 2pm in=
+ New York - US EDT (Eastern Daylight Time)<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=
+=A0 - Europe<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 8pm in Berlin - =
+CEST (Central Europe Summer Time)<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 - Brazi=
+l<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 3pm in Belo Horizonte - BRT=
+ (Brasilia Time)<br><br>=C2=A0=C2=A0=C2=A0 US:=C2=A0 +1 559-546-1301<br>=C2=
+=A0=C2=A0=C2=A0 Germany:=C2=A0 +49 (0) 221 98203421<br>=C2=A0=C2=A0=C2=A0 B=
+razil:=C2=A0 +55 61 4040-4460<br>=C2=A0=C2=A0=C2=A0 Japan:=C2=A0 +81 (0) 3-=
+5050-5070<br>=C2=A0=C2=A0=C2=A0 Participant Access Code:=C2=A0 622393#<br><=
+br>=C2=A0=C2=A0=C2=A0 (note that local numbers for many other countries are=
+ available, <br>=C2=A0=C2=A0=C2=A0 also cellphone apps, VOIP support, etc. =
+- please email Till for <br>=C2=A0=C2=A0=C2=A0 details)<br><br><br>Cheers,<=
+br>- Ira<br><br><br><div><div class=3D"gmail_signature"><div dir=3D"ltr">Ir=
+a McDonald (Musician / Software Architect)<br>Co-Chair - TCG Trusted Mobili=
+ty Solutions WG<br>Chair - Linux Foundation Open Printing WG<br>Secretary -=
+ IEEE-ISTO Printer Working Group<br>Co-Chair - IEEE-ISTO PWG Internet Print=
+ing Protocol WG<br>IETF Designated Expert - IPP &amp; Printer MIB<br>Blue R=
+oof Music / High North Inc<br><a style=3D"color:rgb(51,51,255)" href=3D"htt=
+p://sites.google.com/site/blueroofmusic" target=3D"_blank">http://sites.goo=
+gle.com/site/blueroofmusic</a><br><a style=3D"color:rgb(102,0,204)" href=3D=
+"http://sites.google.com/site/highnorthinc" target=3D"_blank">http://sites.=
+google.com/site/highnorthinc</a><br>mailto: <a href=3D"mailto:blueroofmusic=
+@gmail.com" target=3D"_blank">blueroofmusic@gmail.com</a><br>Winter=C2=A0 5=
+79 Park Place=C2=A0 Saline, MI=C2=A0 48176=C2=A0 734-944-0094<br>Summer=C2=
+=A0 PO Box 221=C2=A0 Grand Marais, MI 49839=C2=A0 906-494-2434<br><br><div =
+style=3D"display:inline"></div><div style=3D"display:inline"></div><div sty=
+le=3D"display:inline"></div><div></div><div></div><div></div><div></div></d=
+iv></div></div>
+
+--f46d0435c018a32dae0516630c1b--
