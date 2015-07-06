@@ -1,20 +1,21 @@
 Return-Path: <blueroofmusic@gmail.com>
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20120113;
 	h=mime-version:in-reply-to:references:from:date:message-id:subject:to
-	:content-type; bh=6PWKTy90J857V75sDMW+uS3mzAXK7cHX9bB8UlIpAME=;
-	b=OTEe2SbMYlDF6P/4c6v0ovmTrn5IJgRA6sxND9RFzriebF38fUQ3myKAS+2+4L3VWx
-	Be67rBhpPJA9l4zNCHeYXtCaxEblAMmJa52r1SUK5/lxKbz51S1mxiA1nxgElBbRihLk
-	bxJvfGP5GYbiwb+xDBIiEDsQSinRvCNgJtPvXskYvGSl7a+l1jUGnmlfK0bIoRSbS+S8
-	wKNN7Xa6sddLeW681gG8rLPlbb5IiROchUPKI7O+wF5Qw2PLTbmyJhQTZHWJwcjaKDd/
-	HjPIR5FNfrzr9u9JjdzOY3cF4rZSV5mIfdMyfYDImiQe3KUppWXs9AcHWmruI/lDBRi2
-	uGmQ==
+	:content-type; bh=rWDT8aYyqi0cbD17/MXT0de5zHo5Ir47D3975c/Dvt8=;
+	b=j6HmvqCjh5SNqFa7BKHNjG32KeX6UttZPkM5+sm74VvPsDxBzJ7xI6Cu5QBsNwdlYU
+	b54uWWuNStPQDG+G0TZ9/UVTpAVsZAjjiuv0sGmdJ3597ABb/SxBpTV5IF7o1wH8lDy8
+	bqhUIjyAyqDH5CV4iQYyHU0SfgdjTu8JAww0eSKfYrMdjSvL004MRJNQhbxhzkqwRG7U
+	aXjFXD/uV1QZNgGIJqcK9MwXbA/rphNB4DxdARnswMULMbxF4GuQMBMJZ9j65/6IJ8sx
+	GhtxxhaI2UbsBfllkM5vLI4jPfZO1VTJHYTqhnXjeyoMk0Z/tf8qkZO+NpH0sTFq7kSc
+	jsPQ==
 MIME-Version: 1.0
-In-Reply-To: <CAN40gSsNXRtiM9WVQ9wex=mrF-ecvKRUDsJnRiDNKe_6r738vw@mail.gmail.com>
+In-Reply-To: <CAN40gSvaBzy8N32+Jn+AYcKb3sxdwUSoWhqEXan-+xTP6oeA-g@mail.gmail.com>
 References: <CAN40gSsNXRtiM9WVQ9wex=mrF-ecvKRUDsJnRiDNKe_6r738vw@mail.gmail.com>
+	<CAN40gSvaBzy8N32+Jn+AYcKb3sxdwUSoWhqEXan-+xTP6oeA-g@mail.gmail.com>
 From: Ira McDonald <blueroofmusic@gmail.com>
-Date: Mon, 6 Jul 2015 08:39:03 -0400
-Message-ID: <CAN40gSvaBzy8N32+Jn+AYcKb3sxdwUSoWhqEXan-+xTP6oeA-g@mail.gmail.com>
-Content-Type: multipart/alternative; boundary=f46d0435c034fb9e60051a343135
+Date: Mon, 6 Jul 2015 19:45:11 -0400
+Message-ID: <CAN40gSvARH-D-HhUxo8KkzQ6XXWX5BiE1-KwLuCEtMKdJsjgGQ@mail.gmail.com>
+Content-Type: multipart/alternative; boundary=f46d0435c034402c1b051a3d80af
 Subject: Re: [Printing-architecture] REMINDER - OP Call Tuesday (7 July
 	2015) - NEW TIME
 List-Id: Printing architecture under linux
@@ -28,69 +29,82 @@ List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-arc
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
 To: printing-architecture@lists.linux-foundation.org, Till Kamppeter <till.kamppeter@gmail.com>, Ira McDonald <blueroofmusic@gmail.com>
 
---f46d0435c034fb9e60051a343135
+--f46d0435c034402c1b051a3d80af
 Content-Type: text/plain; charset=UTF-8
 
-On Tue, Jun 30, 2015 at 1:01 PM, Ira McDonald <blueroofmusic@gmail.com>
+On Mon, Jul 6, 2015 at 8:39 AM, Ira McDonald <blueroofmusic@gmail.com>
 wrote:
 
-> Hi,
->
-> We have moved our regular monthly OP teleconferences to a NEW TIME
-> that is one hour later on Tuesdays:
->
-> July 2015 - US/Europe/Brazil - OP Monthly Meeting (tentative)
->
->     - NOTE - new time - one hour later!
->     - NOTE - skipping week of US Independence Day holiday
->
->     - Tuesday 7 July 2015, Daytime
->       - US
->         11am in San Francisco - US PDT (Pacific Daylight Time)
->         12pm in Colorado - US MDT (Mountain Daylight Time)
->         1pm in Chicago - US CDT (Central Daylight Time)
->         2pm in New York - US EDT (Eastern Daylight Time)
->       - Europe
->         8pm in Berlin - CEST (Central Europe Summer Time)
->       - Brazil
->         3pm in Belo Horizonte - BRT (Brasilia Time)
->
->     US:  +1 559-546-1301
->     Germany:  +49 (0) 221 98203421
->     Brazil:  +55 61 4040-4460
->     Japan:  +81 (0) 3-5050-5070
->     Participant Access Code:  622393#
->
->     (note that local numbers for many other countries are available,
->     also cellphone apps, VOIP support, etc. - please email Till for
->     details)
->
-> Please join us!
->
-> Cheers,
-> - Ira
 >
 >
-> Ira McDonald (Musician / Software Architect)
-> Co-Chair - TCG Trusted Mobility Solutions WG
-> Chair - Linux Foundation Open Printing WG
-> Secretary - IEEE-ISTO Printer Working Group
-> Co-Chair - IEEE-ISTO PWG Internet Printing Protocol WG
-> IETF Designated Expert - IPP & Printer MIB
-> Blue Roof Music / High North Inc
-> http://sites.google.com/site/blueroofmusic
-> http://sites.google.com/site/highnorthinc
-> mailto: blueroofmusic@gmail.com
-> Winter  579 Park Place  Saline, MI  48176  734-944-0094
-> Summer  PO Box 221  Grand Marais, MI 49839  906-494-2434
+> On Tue, Jun 30, 2015 at 1:01 PM, Ira McDonald <blueroofmusic@gmail.com>
+> wrote:
 >
+>> Hi,
+>>
+>> We have moved our regular monthly OP teleconferences to a NEW TIME
+>> that is one hour later on Tuesdays:
+>>
+>> July 2015 - US/Europe/Brazil - OP Monthly Meeting (tentative)
+>>
+>>     - NOTE - new time - one hour later!
+>>     - NOTE - skipping week of US Independence Day holiday
+>>
+>>     - Tuesday 7 July 2015, Daytime
+>>       - US
+>>         11am in San Francisco - US PDT (Pacific Daylight Time)
+>>         12pm in Colorado - US MDT (Mountain Daylight Time)
+>>         1pm in Chicago - US CDT (Central Daylight Time)
+>>         2pm in New York - US EDT (Eastern Daylight Time)
+>>       - Europe
+>>         8pm in Berlin - CEST (Central Europe Summer Time)
+>>       - Brazil
+>>         3pm in Belo Horizonte - BRT (Brasilia Time)
+>>
+>>     US:  +1 559-546-1301
+>>     Germany:  +49 (0) 221 98203421
+>>     Brazil:  +55 61 4040-4460
+>>     Japan:  +81 (0) 3-5050-5070
+>>     Participant Access Code:  622393#
+>>
+>>     (note that local numbers for many other countries are available,
+>>     also cellphone apps, VOIP support, etc. - please email Till for
+>>     details)
+>>
+>> Please join us!
+>>
+>> Cheers,
+>> - Ira
+>>
+>>
+>> Ira McDonald (Musician / Software Architect)
+>> Co-Chair - TCG Trusted Mobility Solutions WG
+>> Chair - Linux Foundation Open Printing WG
+>> Secretary - IEEE-ISTO Printer Working Group
+>> Co-Chair - IEEE-ISTO PWG Internet Printing Protocol WG
+>> IETF Designated Expert - IPP & Printer MIB
+>> Blue Roof Music / High North Inc
+>> http://sites.google.com/site/blueroofmusic
+>> http://sites.google.com/site/highnorthinc
+>> mailto: blueroofmusic@gmail.com
+>> Winter  579 Park Place  Saline, MI  48176  734-944-0094
+>> Summer  PO Box 221  Grand Marais, MI 49839  906-494-2434
+>>
+>>
 >
 
---f46d0435c034fb9e60051a343135
+--f46d0435c034402c1b051a3d80af
 Content-Type: text/html; charset=UTF-8
 Content-Transfer-Encoding: quoted-printable
 
-<br>
+<div><div class=3D"gmail_signature"><div dir=3D"ltr"><div style=3D"display:=
+inline"></div><div style=3D"display:inline"></div><div style=3D"display:inl=
+ine"></div><div></div><div></div><div></div><div></div></div></div></div>
+<br><div class=3D"gmail_quote">On Mon, Jul 6, 2015 at 8:39 AM, Ira McDonald=
+ <span dir=3D"ltr">&lt;<a href=3D"mailto:blueroofmusic@gmail.com" target=3D=
+"_blank">blueroofmusic@gmail.com</a>&gt;</span> wrote:<br><blockquote class=
+=3D"gmail_quote" style=3D"margin:0 0 0 .8ex;border-left:1px #ccc solid;padd=
+ing-left:1ex"><div class=3D"HOEnZb"><div class=3D"h5"><br>
 <br><div class=3D"gmail_quote">On Tue, Jun 30, 2015 at 1:01 PM, Ira McDonal=
 d <span dir=3D"ltr">&lt;<a href=3D"mailto:blueroofmusic@gmail.com" target=
 =3D"_blank">blueroofmusic@gmail.com</a>&gt;</span> wrote:<br><blockquote cl=
@@ -140,5 +154,6 @@ c@gmail.com</a><br>Winter=C2=A0 579 Park Place=C2=A0 Saline, MI=C2=A0 48176=
 "display:inline"></div><div style=3D"display:inline"></div><div></div><div>=
 </div><div></div><div></div></div></div></div>
 </blockquote></div><br>
+</div></div></blockquote></div><br>
 
---f46d0435c034fb9e60051a343135--
+--f46d0435c034402c1b051a3d80af--
