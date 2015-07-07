@@ -1,11 +1,19 @@
-Return-Path: <jsmeix@suse.de>
-Date: Tue, 7 Jul 2015 10:47:54 +0200 (CEST)
-From: Johannes Meixner <jsmeix@suse.de>
-In-Reply-To: <559B2849.7060907@gmail.com>
-Message-ID: <alpine.LNX.2.00.1507070851290.23307@nelson.suse.de>
+Return-Path: <cloos@jhcloos.com>
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=jhcloos.com;
+	s=ore14; t=1436271179;
+	bh=3nZIzZOoEJJgDV7NLXiq8uFyWu4z2EK2t9tCqfMj9hg=;
+	h=From:To:Cc:Subject:In-Reply-To:References:Date:From;
+	b=qZj9/EsF03TNylDX4hqKcSlJjFyXPEOQ01PNFa/ERmkXIlJ0i0cVg0AIb1Mhiz1vB
+	5ojxJHK2zvi7KG0uwkhUDxWv+Sr9eMCiNGKCAeu7Dhi7Ht+Ur2dTsqsYCEMl/IaO/I
+	G0HAujfWufcDlp2MCAVXi85m7p2cb9fsYTjX+TKs=
+From: James Cloos <cloos@jhcloos.com>
+In-Reply-To: <559B2849.7060907@gmail.com> (Till Kamppeter's message of "Mon,
+	06 Jul 2015 22:15:53 -0300")
 References: <559B2849.7060907@gmail.com>
+Date: Tue, 07 Jul 2015 08:10:30 -0400
+Message-ID: <m3egkk5ft5.fsf@carbon.jhcloos.org>
 MIME-Version: 1.0
-Content-Type: TEXT/PLAIN; charset=US-ASCII; format=flowed
+Content-Type: text/plain
 Subject: Re: [Printing-architecture] Upstream future of ippusbxd
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
@@ -19,87 +27,25 @@ List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-arc
 To: Till Kamppeter <till.kamppeter@gmail.com>
 Cc: Open Printing <printing-architecture@lists.linux-foundation.org>, Debian-printing@lists.debian.org
 
-
-Hello,
-
-On Jul 6 22:15 Till Kamppeter wrote (excerpt):
-> ippusbxd is a daemon to support IPP-over-USB printing
-...
-> I am thinking about joining it into the cups-filters
-> upstream package to not have too many tiny packages
-> to make up the complete printing stack
-
-What would be a real drawback of "many tiny packages"?
-
-Personally I would prefer "many tiny packages"
-because I favour the traditional KISS principle
-(to be read here as "keep it small and simple").
-
-A consequence of the KISS principle is to keep separated
-things separated.
-
-"Keep separated things separated" is what I actually
-would like to have. For me it does not matter how big
-(or small) one single separated thing is.
-
-The basic reason why I think that separated things
-should be kept separated is that this makes it much
-easier to maintain all of them.
-
-I think it is easier to find volunteers who like to work
-on a single piece of their current personal interest
-when that piece of interest is provided as a separated
-piece of software that is (relavtively) easy to understand.
-In particular compile-time requirements are smaller for
-separated things which makes it easier to work on them
-(the edit->compile->install->test cycle is simpler).
-
-In contrast a big (possibly convoluted) all-in-one monster
-needs an universal genius who likes to tame such a beast.
-
-When separated things are kept separated it requires that
-interdependencies between those things are maintained.
-This is more work but it ensures that interdependencies
-are kept obvious. When separated things are kept separated
-one cannot accidentally make convoluted code full of hidden
-interdependencies that nobody understands after some time
-(i.e. where a fix here lets it break there).
-
-I assume ippusbxd is separated from the current cups-filters
-software so that - from my point of view - ippusbxd should
-be provided in its own "tiny package".
-
-For example - as far as I know - also cups-browsed is
-separated from the rest of the cups-filters software
-so that cups-browsed should be split from cups-filters
-into its own "tiny package".
-
-Also the backends in cups-filters are probably separated
-from the rest so that they could be split into their own
-"cups-backends" package. Strictly speaking each backend is
-separated from the other backends but having a separated
-package for each of them would be stretching it too far
-(cf. GNU coreutils).
-
-Assume different separated things all need some common
-funcionality (e.g. think about some common funcionality
-how to interact with CUPS). Then it would be cleaner when
-the common funcionality is not implemented independently
-in each of the separated things but split out into a
-separated "common funcionality" thing (e.g. a run-time
-library or as common source like Gnulib).
-
-Furthermore I assume that what starts as "tiny package"
-will grow over the time because usually more and more
-functionality will be added so that "tiny packages"
-usually become "normal packages".
-Imagine the final result when each of them would grow
-inside a single "all-in-one package".
+>>>>> "TK" == Till Kamppeter <till.kamppeter@gmail.com> writes:
 
 
-Kind Regards
-Johannes Meixner
+TK> I am thinking about joining [ippusbxd] into the cups-filters
+TK> upstream package to not have too many tiny packages to make up the
+TK> complete printing stack and cups-filters contains all
+TK> manufacturer-independent software for communication with printers
+TK> which is not part of CUPS itself.
+
+Be sure, if you do, to note the licensing issues for all of those who
+packages cups-filters for distributions.
+
+And also make sure that nothing which derrives from Mike's code ever
+inter-links with anythig which derrives from Daniel's, since the
+licenses are incompatible.  (GPL2 vs Apache2).
+
+(As mentor, I advised Daniel that the licence should be compatible with
+cups.  He refused.)
+
+-JimC
 -- 
-SUSE LINUX GmbH - GF: Felix Imendoerffer, Jane Smithard,
-Dilip Upmanyu, Graham Norton - HRB 21284 (AG Nuernberg)
-
+James Cloos <cloos@jhcloos.com>         OpenPGP: 0x997A9F17ED7DAEA6
