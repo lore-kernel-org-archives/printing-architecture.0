@@ -1,11 +1,13 @@
-Return-Path: <jsmeix@suse.de>
-Date: Tue, 7 Jul 2015 16:16:11 +0200 (CEST)
-From: Johannes Meixner <jsmeix@suse.de>
-In-Reply-To: <m3egkk5ft5.fsf@carbon.jhcloos.org>
-Message-ID: <alpine.LNX.2.00.1507071604010.29822@nelson.suse.de>
-References: <559B2849.7060907@gmail.com> <m3egkk5ft5.fsf@carbon.jhcloos.org>
-MIME-Version: 1.0
-Content-Type: TEXT/PLAIN; charset=US-ASCII; format=flowed
+Return-Path: <twaugh@redhat.com>
+Message-ID: <1436283224.3308.2.camel@redhat.com>
+From: Tim Waugh <twaugh@redhat.com>
+Date: Tue, 07 Jul 2015 16:33:44 +0100
+In-Reply-To: <559B2849.7060907@gmail.com>
+References: <559B2849.7060907@gmail.com>
+Content-Type: multipart/signed; micalg="pgp-sha1";
+	protocol="application/pgp-signature"; 
+	boundary="=-uqX4HJiOkwU8B0CjXlJc"
+Mime-Version: 1.0
 Subject: Re: [Printing-architecture] Upstream future of ippusbxd
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
@@ -16,45 +18,44 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: James Cloos <cloos@jhcloos.com>
-Cc: Open Printing <printing-architecture@lists.linux-foundation.org>, Debian-printing@lists.debian.org, Till Kamppeter <till.kamppeter@gmail.com>
+To: Till Kamppeter <till.kamppeter@gmail.com>, Debian-printing@lists.debian.org, Open Printing <printing-architecture@lists.linux-foundation.org>
 
 
-Hello,
+--=-uqX4HJiOkwU8B0CjXlJc
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
 
-On Jul 7 08:10 James Cloos wrote (excerpt):
->>>>>> "TK" == Till Kamppeter <till.kamppeter@gmail.com> writes:
->
-> TK> I am thinking about joining [ippusbxd] into the cups-filters
-> TK> upstream package to not have too many tiny packages to make up the
-> TK> complete printing stack and cups-filters contains all
-> TK> manufacturer-independent software for communication with printers
-> TK> which is not part of CUPS itself.
->
-> Be sure, if you do, to note the licensing issues for all of those who
-> packages cups-filters for distributions.
->
-> And also make sure that nothing which derrives from Mike's code ever
-> inter-links with anythig which derrives from Daniel's, since the
-> licenses are incompatible.  (GPL2 vs Apache2).
+On Mon, 2015-07-06 at 22:15 -0300, Till Kamppeter wrote:
+> I am thinking about joining it into the cups-filters upstream package
+> to not have too many tiny packages to make up the complete printing
+> stack and cups-filters contains all manufacturer-independent software=20
+> for communication with printers which is not part of CUPS itself.
 
-As far as I know (but I am not a lawyer) the crucial terms here are
-"mere aggregation" versus "combining two modules into one program"
-in the GPL2, see
-https://www.gnu.org/licenses/old-licenses/gpl-2.0-faq.html#MereAggregation
+I don't really have a strong opinion either way. Having it in its own
+package would be fine for me, but if you want to put it in cups-filters
+I'd be OK with that too.
 
-As far as I know (but I am not a lawyer) it does not make a difference
-when GPL2 sources and sources with an incompatible license are in one
-same tarball versus when they are in different tarballs.
+What I would definitely prefer is to have it hosted in git not bzr. :-)
 
-As far as I know (but I am not a lawyer) one can have GPL2 sources
-and sources with an incompatible license in one same tarball without
-causing a GPL2 license issue when both parts are separate programs.
+Tim.
+*/
 
+--=-uqX4HJiOkwU8B0CjXlJc
+Content-Type: application/pgp-signature; name="signature.asc"
+Content-Description: This is a digitally signed message part
+Content-Transfer-Encoding: 7bit
 
-Kind Regards
-Johannes Meixner
--- 
-SUSE LINUX GmbH - GF: Felix Imendoerffer, Jane Smithard,
-Dilip Upmanyu, Graham Norton - HRB 21284 (AG Nuernberg)
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1
+
+iQEcBAABAgAGBQJVm/FYAAoJELfCDQeUkepjrdIIAJDl7hyNBL07ielFRXYE1+wR
+rRuqxPvunz/L38U74pVimh8kHy1BxIj0wZL77AkHXtDucKfQ0sxIssurHTUNzg4W
+JbsrBu3aQEbj9lrlqDMm8MIjX3tWb59ZGbxilUAHLxZPVOojbllFSMyXZeo2TPPe
+iwfLuhKgIGAGpGHYLzrk4hRW0RB8cti1HRdi8eUbTiAWZ5anhX+qrBVttWw/wXPk
+J4/DG2UFbYIrplv7tL7Pa3QrlhfzX144dBc6Jc3+uV6Tx2TOoxCqzzVtY9MrrFXq
+4JIZFpi0GBQSHYJ9uiRlQaGs2XB8K4QoofE/cVqr0nJ9HPpehRRkmtIZ2+zg6ow=
+=q4PD
+-----END PGP SIGNATURE-----
+
+--=-uqX4HJiOkwU8B0CjXlJc--
 
