@@ -1,19 +1,22 @@
-Return-Path: <blueroofmusic@gmail.com>
+Return-Path: <till.kamppeter@gmail.com>
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20120113;
-	h=mime-version:from:date:message-id:subject:to:content-type;
-	bh=JWdioN8vx2MKdyAyYgVVoa9R/SLQvs0HwSr9ycb6P20=;
-	b=a7TCH31XPvUmM+wGgl0ywzkw1tXxbIbDTNkiFpVXJ4mG0/i8Ce7180fnggk0CNq/ZM
-	uLCXYuHojviUBvx64oJnVjnzkD9e/Q9Tlmgfhwq+msLym4IZNOBNAKKgDzIN6y31C6bF
-	JBIsL43dJIx7mHe/jB8IXhCenX0vqAAJ55PQwK66GRSErg6BJD1+/8DWOq5aPofFjgiD
-	K0e6ked4k+A2TO3i+UBcxGrQJNtl9OoECz1H1kUJ74IfbjotipQzcFN5H13B6/h+qU5P
-	kYTcfgObt3RxTGWbpuKh128LOmS9o0rDN7HeMkL6mSHeOSpzPD2BZItOQ7gBeOpbXAOW
-	8ctQ==
+	h=to:cc:from:subject:message-id:date:user-agent:mime-version
+	:content-type:content-transfer-encoding;
+	bh=lEl9q5JaO97RyneVHCochI17+JLKt0NuibGkcpg1Bc4=;
+	b=BHVfhuVWUYRPxWXLzrl7O4/V7eXr8761mi/z9lbboHyYtAcdyxxxN+83gioZTsjKng
+	j7kFC2g29r++uz2JyeVN9DJ48Z+B6iu3VF13KJEhfgE9Mzym0JpHjYUrzF54FMlCQPUQ
+	WBNu24F5XqqDiJRvDxJu+A2yrymCWQO31dCgP18VJAfwksFoViVvCp7u16ccnjQp8K9d
+	JNhDvR5tN7K4pzIUBLcdksxqXy9tWUP24hAVWqIyu3IXpHMyCi9MOS1qU2+Ke5ktmXEd
+	WXnWcGqmuJxn3X51GZKfuCheyhLxN8RZMtHtFK9oDQpzqSkjVPAm4qunlKkH0l+kf6ib
+	L/2w==
+From: Till Kamppeter <till.kamppeter@gmail.com>
+Message-ID: <55F30A6F.5000403@gmail.com>
+Date: Fri, 11 Sep 2015 14:07:59 -0300
 MIME-Version: 1.0
-From: Ira McDonald <blueroofmusic@gmail.com>
-Date: Thu, 3 Sep 2015 14:53:03 -0400
-Message-ID: <CAN40gSscDgT+CwFZ7VANoiRvDuDrpdmYLdnu7y=f25SZutbnDw@mail.gmail.com>
-Content-Type: multipart/alternative; boundary=001a1140cd0020494e051edc4cc2
-Subject: [Printing-architecture] OP Minutes (1 September 2015)
+Content-Type: text/plain; charset=utf-8; format=flowed
+Content-Transfer-Encoding: 7bit
+Subject: [Printing-architecture] Communication between IPP printer and "ipp"
+	CUPS backend
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>,
@@ -23,192 +26,120 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>, Till Kamppeter <till.kamppeter@gmail.com>, Ira McDonald <blueroofmusic@gmail.com>
+To: Open Printing <printing-architecture@lists.linux-foundation.org>, "The CUPS developer list." <cups-devel@cups.org>
+Cc: Daniel Dressler <danieru.dressler@gmail.com>
 
---001a1140cd0020494e051edc4cc2
-Content-Type: text/plain; charset=UTF-8
+[ Cross-posting because I do not know ehich list is the better for
+   this ]
 
 Hi,
 
-Minutes from this week's Open Printing call are posted at:
+I have overtaken maintainership on the ippusbxd IPP-over-USB support 
+daemon (hosted now here: https://github.com/tillkamppeter/ippusbxd/).
 
-  http://ftp.pwg.org/pub/pwg/openprinting/minutes/OP-Minutes-20150901.htm
+Now I have done several tests and bug fixes using the HP DeskJet Ink 
+Advantage 2540, a USB multi-function device which also does IPP via WiFi 
+and via IPP-over-USB.
 
+The printer prints reliably via WiFi, conventional USB (using "hp" 
+backend of HPLIP) and when doing IPP-over-USB but printing with ipptool 
+and not with the "ipp" CUPS backend. With the "ipp" CUPS backend I can 
+print something like 3 or 4 one-page LibreOffice jobs and then the 
+printer stops working, whereas with ipptool I do not get it stopping. It 
+prints and prints and prints, ...
 
-Action Items:
+The difference between the "ipp" backend and ipptool is what 
+communication happens between the client and the printer. ipptool sends 
+the job without any other communication in parallel until the job is 
+completely sent out and the answer (with job URI/ID) is received. The 
+"ipp" tool does a lot of conversations in parallel, like checking the 
+progress of the job, the ink levels, ... I have already tried to add 
+"&waitjob=false" to the device URI for using the "ipp" backend, making 
+the backend stop as soon as the job is sent and communicate less this 
+way, but I still get the printer stopping in a middle of a job.
 
-None
+By the way, command line of ipptool is
 
+ipptool ipp://localhost:60000/ipp/print -d 
+filetype=application/octet-stream -d filename=`pwd`/printout-bashrc.gz 
+print-job.test
 
-Next OP US/Europe/Brazil Conference Calls:
+The file printout-bashrc.gz is the result of printing ~/.bashrc with 
+CUPS and HPLIP but capturing the output into a file and "gzip"ping it.
 
-(1) October 2015 - US/Europe/Brazil - OP Monthly Meeting
-    - NOTE - summer times shift before November meeting
+In the "ipp" backend case I use an HPLIP-PPD-based CUPS queue with a 
+device URI like
 
-    - Tuesday 6 October 2015, Daytime
-      - US
-        11am in San Francisco - US PDT (Pacific Daylight Time)
-        12pm in Colorado - US MDT (Mountain Daylight Time)
-        1pm in Chicago - US CDT (Central Daylight Time)
-        2pm in New York - US EDT (Eastern Daylight Time)
-      - Europe
-        8pm in Berlin - CEST (Central Europe Summer Time)
-      - Brazil
-        3pm in Belo Horizonte - BRT (Brasilia Time)
+ipp://localhost:60000/ipp/print
 
-    US:  +1 559-546-1301
-    Germany:  +49 (0) 221 98203421
-    Brazil:  +55 61 4040-4460
-    Japan:  +81 (0) 3-5050-5070
-    Participant Access Code:  622393#
+or
 
-    (note that local numbers for many other countries are available,
-    also cellphone apps, VOIP support, etc. - please email Till for
-    details)
+ipp://localhost:60000/ipp/print&waitjob=false
 
-(2) November 2015 - US/Europe/Brazil - OP Monthly Meeting (tentative)
-    - NOTE - Brazil shifts 2 hours later - due to reversed summer times
-    - NOTE - Brazil starts Summer Time on 18 October 2015
+In both cases ippusbxd is binding to port 60000 on localhost on both 
+IPv4 and IPv6, running with the command line
 
-    - NOTE - Europe ends Daylight Savings Time on 25 October 2015
-    - NOTE - US ends Daylight Savings Time on 1 November 2015
+./ippusbxd -d -v 03f0 -m c211 -s BR54BFB02C05XK -P 60000 2>&1 | tee log
 
-    - NOTE - PWG in Lexington, KY (Lexmark host) - 3-5 November 2015
+The codes after -v, -m, and -s are printer specific, they are USB vendor 
+ID, USB product ID, and the serial number. -P is for requesting port 
+60000 and -d makes ippusbxd in the foreground with debug output.
 
-    - Tuesday 10 November 2015, Daytime
-      - US
-        11am in San Francisco - US PST (Pacific Standard Time)
-        12pm in Colorado - US MST (Mountain Standard Time)
-        1pm in Chicago - US CST (Central Standard Time)
-        2pm in New York - US EST (Eastern Standard Time)
-      - Europe
-        8pm in Berlin - CET (Central Europe Time)
-      - Brazil
-        5pm in Belo Horizonte - BRST (Brasilia Summer Time)
+I am using my 1.22 release of ippusbxd.
 
-    US:  +1 559-546-1301
-    Germany:  +49 (0) 221 98203421
-    Brazil:  +55 61 4040-4460
-    Japan:  +81 (0) 3-5050-5070
-    Participant Access Code:  622393#
+ippusbxd starts in a loop waiting for requests from the client on 
+localhost:60000. If a request comes in it starts a thread for it, 
+immediately continuing to listen for further requests, allowing several 
+requests to be handled in parallel. The request handler thread starts a 
+conversation with the printer, passing on the client's request to the 
+printer via USB and waiting for the printer's answer on USB, passing it 
+on to the client on localhost:60000. It repeats in a loop if the client 
+continues the communication sending new packets until the client stops.
 
-    (note that local numbers for many other countries are available,
-    also cellphone apps, VOIP support, etc. - please email Till for
-    details)
+One sees in the debug output that printing via the "ipp" backend 
+generates something like three or four parallel conversations, one being 
+the transfer of the job data. ipptool establishes only one single 
+conversation.
 
+If everything is OK (job gets completely printed) every client's request 
+receives an answer from the printer and a conversation always ends with 
+an answer from the printer. All communication except the upload of the 
+print job data into the printer is done vis Content-Length, the data 
+upload is done via Chunked. The data transfer is answered with the job 
+URI and ID.
 
-Cheers,
-- Ira
+If the printer stops, the page (in case of multiple pages the last page) 
+is printed only half-way. In the debug info one can see that the full 
+job data got uploaded and the closing blob for an HTTP package in 
+chunked mode (30 0d 0a 0d 0a, "0\r\n\r\n") is also sent, but the printer 
+never answers to this. The thread carrying this conversation is waiting 
+until timing out. Parallel conversations still continue to happen. If 
+the device URI is without "&waitjob=false" the job does not get 
+dequeued. The printer never finishes printing the page and after some 
+minutes it times out internally, ejecting the half-printed page.
 
-Ira McDonald (Musician / Software Architect)
-Co-Chair - TCG Trusted Mobility Solutions WG
-Chair - Linux Foundation Open Printing WG
-Secretary - IEEE-ISTO Printer Working Group
-Co-Chair - IEEE-ISTO PWG Internet Printing Protocol WG
-IETF Designated Expert - IPP & Printer MIB
-Blue Roof Music / High North Inc
-http://sites.google.com/site/blueroofmusic
-http://sites.google.com/site/highnorthinc
-mailto: blueroofmusic@gmail.com
-Winter  579 Park Place  Saline, MI  48176  734-944-0094
-Summer  PO Box 221  Grand Marais, MI 49839  906-494-2434
+This kind of stop does only happen with ippusbxd, not when printing via 
+WiFi.
 
---001a1140cd0020494e051edc4cc2
-Content-Type: text/html; charset=UTF-8
-Content-Transfer-Encoding: quoted-printable
+Now my question is whether I do everything correctly, especially whether 
+the assumption that communication with an IPP printer is actually always 
+started by a request from the client which gets answered by the printer 
+and then continuing this way until the conversation ends with the answer 
+of the printer, allowing several of these conversations in parallel?
 
-<div dir=3D"ltr"><div><div><div><div>Hi, <br><br><span><span><span><span><s=
-pan><span><span><span><span><span><span><span><span><span><span><span><span=
-><span><span><span><span><span>Minutes</span></span></span></span></span></=
-span></span></span></span></span></span></span></span></span></span></span>=
-</span></span></span></span></span></span> from this week&#39;s Open Printi=
-ng<span> call</span> are <span><span><span><span><span><span><span><span><s=
-pan><span><span><span><span><span><span>posted</span></span></span></span><=
-/span></span></span></span></span></span></span></span></span></span></span=
-> at:<br>
+Is there no way for example that the printer can start a conversation 
+and if I ignore that (have no loop listening on the USB of the printer 
+and grabbing the data there) a printer-internal, small buffer fills up 
+and the printer blocks? And if I grab data from the printer's USB, do I 
+have to answer to prevent the printer from blocking? Can one set the 
+printer into a mode not starting such conversations?
 
+Is there a limit of parallel conversations and the "ipp" backend perhaps 
+exceeds it? Can I check somehow before starting a conversation whether 
+there is still "a slot free"?
 
+Any other idea what can be happening here?
 
+Thanks in advance.
 
-
-
-
-
-
-
-
-
-<br>
-=C2=A0 <a href=3D"http://ftp.pwg.org/pub/pwg/openprinting/minutes/OP-Minute=
-s-20150901.htm" target=3D"_blank">http://ftp.pwg.org/pub/pwg/openprinting/m=
-inutes/OP-Minutes-20150901.htm</a><br>
-
-
-
-
-
-</div><div><br><br></div>
-Action Items:<br><br></div>None<br><br><br>Next <span><span><span><span><sp=
-an><span><span><span><span><span><span><span>OP</span></span></span></span>=
-</span></span></span></span></span></span></span></span> US/Europe/Brazil C=
-onference Calls:<br><br>(1) October 2015 - US/Europe/Brazil - OP Monthly Me=
-eting<br>=C2=A0=C2=A0=C2=A0 - NOTE - summer times shift before November mee=
-ting<br><br>=C2=A0=C2=A0=C2=A0 - Tuesday 6 October 2015, Daytime<br>=C2=A0=
-=C2=A0=C2=A0=C2=A0=C2=A0 - US<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=
- 11am in San Francisco - US PDT (Pacific Daylight Time)<br>=C2=A0=C2=A0=C2=
-=A0=C2=A0=C2=A0=C2=A0=C2=A0 12pm in Colorado - US MDT (Mountain Daylight Ti=
-me)<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 1pm in Chicago - US CDT (=
-Central Daylight Time)<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 2pm in=
- New York - US EDT (Eastern Daylight Time)<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=
-=A0 - Europe<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 8pm in Berlin - =
-CEST (Central Europe Summer Time)<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 - Brazi=
-l<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 3pm in Belo Horizonte - BRT=
- (Brasilia Time)<br><br>=C2=A0=C2=A0=C2=A0 US:=C2=A0 +1 559-546-1301<br>=C2=
-=A0=C2=A0=C2=A0 Germany:=C2=A0 +49 (0) 221 98203421<br>=C2=A0=C2=A0=C2=A0 B=
-razil:=C2=A0 +55 61 4040-4460<br>=C2=A0=C2=A0=C2=A0 Japan:=C2=A0 +81 (0) 3-=
-5050-5070<br>=C2=A0=C2=A0=C2=A0 Participant Access Code:=C2=A0 622393#<br><=
-br>=C2=A0=C2=A0=C2=A0 (note that local numbers for many other countries are=
- available, <br>=C2=A0=C2=A0=C2=A0 also cellphone apps, VOIP support, etc. =
-- please email Till for <br>=C2=A0=C2=A0=C2=A0 details)<br><br>(2) November=
- 2015 - US/Europe/Brazil - OP Monthly Meeting (tentative)<br>=C2=A0=C2=A0=
-=C2=A0 - NOTE - Brazil shifts 2 hours later - due to reversed summer times<=
-br>=C2=A0=C2=A0=C2=A0 - NOTE - Brazil starts Summer Time on 18 October 2015=
-<br><br>=C2=A0=C2=A0=C2=A0 - NOTE - Europe ends Daylight Savings Time on 25=
- October 2015<br>=C2=A0=C2=A0=C2=A0 - NOTE - US ends Daylight Savings Time =
-on 1 November 2015<br><br>=C2=A0=C2=A0=C2=A0 - NOTE - PWG in Lexington, KY =
-(Lexmark host) - 3-5 November 2015<br><br>=C2=A0=C2=A0=C2=A0 - Tuesday 10 N=
-ovember 2015, Daytime<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 - US<br>=C2=A0=C2=
-=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 11am in San Francisco - US PST (Pacific S=
-tandard Time)<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 12pm in Colorad=
-o - US MST (Mountain Standard Time)<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=
-=C2=A0 1pm in Chicago - US CST (Central Standard Time)<br>=C2=A0=C2=A0=C2=
-=A0=C2=A0=C2=A0=C2=A0=C2=A0 2pm in New York - US EST (Eastern Standard Time=
-)<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 - Europe<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=
-=A0=C2=A0=C2=A0 8pm in Berlin - CET (Central Europe Time)<br>=C2=A0=C2=A0=
-=C2=A0=C2=A0=C2=A0 - Brazil<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 5=
-pm in Belo Horizonte - BRST (Brasilia Summer Time)<br><br>=C2=A0=C2=A0=C2=
-=A0 US:=C2=A0 +1 559-546-1301<br>=C2=A0=C2=A0=C2=A0 Germany:=C2=A0 +49 (0) =
-221 98203421<br>=C2=A0=C2=A0=C2=A0 Brazil:=C2=A0 +55 61 4040-4460<br>=C2=A0=
-=C2=A0=C2=A0 Japan:=C2=A0 +81 (0) 3-5050-5070<br>=C2=A0=C2=A0=C2=A0 Partici=
-pant Access Code:=C2=A0 622393#<br><br>=C2=A0=C2=A0=C2=A0 (note that local =
-numbers for many other countries are available, <br>=C2=A0=C2=A0=C2=A0 also=
- cellphone apps, VOIP support, etc. - please email Till for <br>=C2=A0=C2=
-=A0=C2=A0 details)<br><br><br></div>Cheers,<br></div>- Ira<br><br><div><div=
-><div><div class=3D"gmail_signature"><div dir=3D"ltr">Ira McDonald (Musicia=
-n / Software Architect)<br>Co-Chair - TCG Trusted Mobility Solutions WG<br>=
-Chair - Linux Foundation Open Printing WG<br>Secretary - IEEE-ISTO Printer =
-Working Group<br>Co-Chair - IEEE-ISTO PWG Internet Printing Protocol WG<br>=
-IETF Designated Expert - IPP &amp; Printer MIB<br>Blue Roof Music / High No=
-rth Inc<br><a style=3D"color:rgb(51,51,255)" href=3D"http://sites.google.co=
-m/site/blueroofmusic" target=3D"_blank">http://sites.google.com/site/bluero=
-ofmusic</a><br><a style=3D"color:rgb(102,0,204)" href=3D"http://sites.googl=
-e.com/site/highnorthinc" target=3D"_blank">http://sites.google.com/site/hig=
-hnorthinc</a><br>mailto: <a href=3D"mailto:blueroofmusic@gmail.com" target=
-=3D"_blank">blueroofmusic@gmail.com</a><br>Winter=C2=A0 579 Park Place=C2=
-=A0 Saline, MI=C2=A0 48176=C2=A0 734-944-0094<br>Summer=C2=A0 PO Box 221=C2=
-=A0 Grand Marais, MI 49839=C2=A0 906-494-2434<br><br><div style=3D"display:=
-inline"></div><div style=3D"display:inline"></div><div style=3D"display:inl=
-ine"></div><div></div><div></div><div></div><div></div></div></div></div>
-</div></div></div>
-
---001a1140cd0020494e051edc4cc2--
+    Till
