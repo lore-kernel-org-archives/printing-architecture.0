@@ -1,14 +1,11 @@
-Return-Path: <doug@uq.edu.au>
-From: Douglas Kosovic <doug@uq.edu.au>
-Date: Wed, 23 Sep 2015 05:30:27 +0000
-Message-ID: <b1369b280796437dafe4df2ddab10885@uq-exmbx3.soe.uq.edu.au>
-References: <C94797B6E346CF4BAB0CF528FBA520CA0E199575@DM1PRD7301MB031.mgdir.irco.com>
-In-Reply-To: <C94797B6E346CF4BAB0CF528FBA520CA0E199575@DM1PRD7301MB031.mgdir.irco.com>
-Content-Language: en-US
-Content-Type: multipart/alternative;
-	boundary="_000_b1369b280796437dafe4df2ddab10885uqexmbx3soeuqeduau_"
+Return-Path: <wcolburn@nrao.edu>
+Date: Mon, 28 Sep 2015 14:41:10 -0600
+From: "William D. Colburn" <wcolburn@nrao.edu>
+Message-ID: <20150928204110.GA28669@zia.aoc.nrao.edu>
 MIME-Version: 1.0
-Subject: Re: [Printing-architecture] No package 'lcms' found  cups-filter
+Content-Type: multipart/mixed; boundary="T4sUOijqQbZv57TR"
+Content-Disposition: inline
+Subject: [Printing-architecture] poppler troubles
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>,
@@ -18,239 +15,101 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: David Collins <DavidD.Collins@irco.com>, "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>
-
---_000_b1369b280796437dafe4df2ddab10885uqexmbx3soeuqeduau_
-Content-Type: text/plain; charset="us-ascii"
-Content-Transfer-Encoding: quoted-printable
-
-Hi David,
-
-You've probably worked out by now, but you also need the lcms2-devel packag=
-e to be installed also.
-
-$ rpm -qa "lcms2*"
-lcms2-2.7-1.el7.x86_64
-lcms2-devel-2.7-1.el7.x86_64
-
-To get the very latest version of CUPS and dependencies, I usually rebuild =
-the RPMs from the Fedora rawhide source RPMs, e.g. :
-
-wget https://dl.fedoraproject.org/pub/fedora/linux/development/rawhide/sour=
-ce/SRPMS/c/cups-filters-1.0.76-1.fc24.src.rpm
-
-rpmbuild --rebuild cups-filters-1.0.76-1.fc24.src.rpm
-
-
-
-Cheers,
-Doug
-
-From: printing-architecture-bounces@lists.linux-foundation.org [mailto:prin=
-ting-architecture-bounces@lists.linux-foundation.org] On Behalf Of Collins,=
- David
-Sent: Friday, 18 September 2015 12:22 AM
 To: printing-architecture@lists.linux-foundation.org
-Subject: [Printing-architecture] No package 'lcms' found cups-filter
-
-I'm getting this error:  checking for LCMS...  configure:  error:  Package =
-requirements (lcms) were not met.  I can't figure out why it's not picking =
-up the package as I've got this package installed.
-
-* Using Oracle Linux 7   3.8.13-55.1.6.e17uek.x86_64
-* Cups-filter(latest)  cups-filter-1.0-20150819
-
-############################################
-rpm -qa |grep lcms
-lcms2-2.5-4.e17.x86_64
-
-I've also tried the source code and installed lcms2-2.7.
-
-Anyone have any recommendations?  Thanks for any help!
 
 
+--T4sUOijqQbZv57TR
+Content-Type: text/plain; charset=us-ascii
+Content-Disposition: inline
 
+I'm trying to compile the latest version of cups/cups-filters for rhel6.
+I'm compiling with gcc 5.2.0, and to get as far as I am, I have to edit
+the configure-generated makefile in cups-filters to change -std=gnu99 to
+-std=gnu11.  After that, it all falls apart when it tries to use
+poppler.  A couple of warnings about long long appear, and then this:
 
-________________________________
+In file included from filter/pdftoopvp/oprs/OPRS.cxx:44:0:
+filter/pdftoopvp/oprs/OPVPSplashXPath.h: In constructor 'OPVPSplashXPath::OPVPSplashXPath()':
+filter/pdftoopvp/oprs/OPVPSplashXPath.h:33:21: error: no matching function for call to 'SplashXPath::SplashXPath()'
+   OPVPSplashXPath() {};
+                     ^
+In file included from filter/pdftoopvp/oprs/OPVPSplashXPath.h:8:0,
+                 from filter/pdftoopvp/oprs/OPRS.cxx:44:
+/home/anotheruvula/cups-filters/target/include/poppler/splash/SplashXPath.h:84:3: note: candidate: SplashXPath::SplashXPath(SplashXPath*)
+   SplashXPath(SplashXPath *xPath);
+   ^
+/home/anotheruvula/cups-filters/target/include/poppler/splash/SplashXPath.h:84:3: note:   candidate expects 1 argument, 0 provided
+  
+I'll attach my build script for cups/cups-filters.  The gcc-5.2.0 comes
+from the PATH early on.  Any insight or help would be greatly appreciated.
 
-The information contained in this message is privileged and intended only f=
-or the recipients named. If the reader is not a representative of the inten=
-ded recipient, any review, dissemination or copying of this message or the =
-information it contains is prohibited. If you have received this message in=
- error, please immediately notify the sender, and delete the original messa=
-ge and attachments.
+--Schlake
 
---_000_b1369b280796437dafe4df2ddab10885uqexmbx3soeuqeduau_
-Content-Type: text/html; charset="us-ascii"
+--T4sUOijqQbZv57TR
+Content-Type: application/x-sh
+Content-Disposition: attachment; filename="build.sh"
 Content-Transfer-Encoding: quoted-printable
 
-<html xmlns:v=3D"urn:schemas-microsoft-com:vml" xmlns:o=3D"urn:schemas-micr=
-osoft-com:office:office" xmlns:w=3D"urn:schemas-microsoft-com:office:word" =
-xmlns:m=3D"http://schemas.microsoft.com/office/2004/12/omml" xmlns=3D"http:=
-//www.w3.org/TR/REC-html40">
-<head>
-<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dus-ascii"=
->
-<meta name=3D"Generator" content=3D"Microsoft Word 15 (filtered medium)">
-<!--[if !mso]><style>v\:* {behavior:url(#default#VML);}
-o\:* {behavior:url(#default#VML);}
-w\:* {behavior:url(#default#VML);}
-.shape {behavior:url(#default#VML);}
-</style><![endif]--><style><!--
-/* Font Definitions */
-@font-face
-	{font-family:"Cambria Math";
-	panose-1:2 4 5 3 5 4 6 3 2 4;}
-@font-face
-	{font-family:Calibri;
-	panose-1:2 15 5 2 2 2 4 3 2 4;}
-/* Style Definitions */
-p.MsoNormal, li.MsoNormal, div.MsoNormal
-	{margin:0cm;
-	margin-bottom:.0001pt;
-	font-size:11.0pt;
-	font-family:"Calibri",sans-serif;}
-a:link, span.MsoHyperlink
-	{mso-style-priority:99;
-	color:blue;
-	text-decoration:underline;}
-a:visited, span.MsoHyperlinkFollowed
-	{mso-style-priority:99;
-	color:purple;
-	text-decoration:underline;}
-p.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph
-	{mso-style-priority:34;
-	margin-top:0cm;
-	margin-right:0cm;
-	margin-bottom:0cm;
-	margin-left:36.0pt;
-	margin-bottom:.0001pt;
-	font-size:11.0pt;
-	font-family:"Calibri",sans-serif;}
-span.EmailStyle18
-	{mso-style-type:personal;
-	font-family:"Calibri",sans-serif;
-	color:windowtext;}
-span.EmailStyle19
-	{mso-style-type:personal-reply;
-	font-family:"Calibri",sans-serif;
-	color:#1F497D;}
-.MsoChpDefault
-	{mso-style-type:export-only;
-	font-size:10.0pt;}
-@page WordSection1
-	{size:612.0pt 792.0pt;
-	margin:72.0pt 72.0pt 72.0pt 72.0pt;}
-div.WordSection1
-	{page:WordSection1;}
---></style><!--[if gte mso 9]><xml>
-<o:shapedefaults v:ext=3D"edit" spidmax=3D"1026" />
-</xml><![endif]--><!--[if gte mso 9]><xml>
-<o:shapelayout v:ext=3D"edit">
-<o:idmap v:ext=3D"edit" data=3D"1" />
-</o:shapelayout></xml><![endif]-->
-</head>
-<body lang=3D"EN-US" link=3D"blue" vlink=3D"purple">
-<div class=3D"WordSection1">
-<p class=3D"MsoNormal"><span style=3D"color:#1F497D">Hi David,<o:p></o:p></=
-span></p>
-<p class=3D"MsoNormal"><span style=3D"color:#1F497D"><o:p>&nbsp;</o:p></spa=
-n></p>
-<p class=3D"MsoNormal"><span style=3D"color:#1F497D">You&#8217;ve probably =
-worked out by now, but you also need the lcms2-devel package to be installe=
-d also.<o:p></o:p></span></p>
-<p class=3D"MsoNormal"><span style=3D"color:#1F497D"><o:p>&nbsp;</o:p></spa=
-n></p>
-<p class=3D"MsoNormal"><span style=3D"color:#1F497D">$ rpm -qa &quot;lcms2*=
-&quot;<o:p></o:p></span></p>
-<p class=3D"MsoNormal"><span style=3D"color:#1F497D">lcms2-2.7-1.el7.x86_64=
-<o:p></o:p></span></p>
-<p class=3D"MsoNormal"><span style=3D"color:#1F497D">lcms2-devel-2.7-1.el7.=
-x86_64<o:p></o:p></span></p>
-<p class=3D"MsoNormal"><span style=3D"color:#1F497D"><o:p>&nbsp;</o:p></spa=
-n></p>
-<p class=3D"MsoNormal"><span style=3D"color:#1F497D">To get the very latest=
- version of CUPS and dependencies, I usually rebuild the RPMs from the Fedo=
-ra rawhide source RPMs, e.g. :<o:p></o:p></span></p>
-<p class=3D"MsoNormal"><span style=3D"color:#1F497D"><o:p>&nbsp;</o:p></spa=
-n></p>
-<p class=3D"MsoNormal"><span style=3D"color:#1F497D">wget <a href=3D"https:=
-//dl.fedoraproject.org/pub/fedora/linux/development/rawhide/source/SRPMS/c/=
-cups-filters-1.0.76-1.fc24.src.rpm">
-https://dl.fedoraproject.org/pub/fedora/linux/development/rawhide/source/SR=
-PMS/c/cups-filters-1.0.76-1.fc24.src.rpm</a><o:p></o:p></span></p>
-<p class=3D"MsoNormal"><span style=3D"color:#1F497D"><o:p>&nbsp;</o:p></spa=
-n></p>
-<p class=3D"MsoNormal"><span style=3D"color:#1F497D">rpmbuild --rebuild cup=
-s-filters-1.0.76-1.fc24.src.rpm<o:p></o:p></span></p>
-<p class=3D"MsoNormal"><span style=3D"color:#1F497D"><o:p>&nbsp;</o:p></spa=
-n></p>
-<p class=3D"MsoNormal"><span style=3D"color:#1F497D"><o:p>&nbsp;</o:p></spa=
-n></p>
-<p class=3D"MsoNormal"><span style=3D"color:#1F497D"><o:p>&nbsp;</o:p></spa=
-n></p>
-<p class=3D"MsoNormal"><span style=3D"color:#1F497D">Cheers,<o:p></o:p></sp=
-an></p>
-<p class=3D"MsoNormal"><span style=3D"color:#1F497D">Doug<o:p></o:p></span>=
-</p>
-<p class=3D"MsoNormal"><span style=3D"color:#1F497D"><o:p>&nbsp;</o:p></spa=
-n></p>
-<div>
-<div style=3D"border:none;border-top:solid #E1E1E1 1.0pt;padding:3.0pt 0cm =
-0cm 0cm">
-<p class=3D"MsoNormal"><b>From:</b> printing-architecture-bounces@lists.lin=
-ux-foundation.org [mailto:printing-architecture-bounces@lists.linux-foundat=
-ion.org]
-<b>On Behalf Of </b>Collins, David<br>
-<b>Sent:</b> Friday, 18 September 2015 12:22 AM<br>
-<b>To:</b> printing-architecture@lists.linux-foundation.org<br>
-<b>Subject:</b> [Printing-architecture] No package 'lcms' found cups-filter=
-<o:p></o:p></p>
-</div>
-</div>
-<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
-<p class=3D"MsoNormal">I&#8217;m getting this error:&nbsp; checking for LCM=
-S&#8230;&nbsp; configure:&nbsp; error:&nbsp; Package requirements (lcms) we=
-re not met.&nbsp; I can&#8217;t figure out why it&#8217;s not picking up th=
-e package as I&#8217;ve got this package installed.<o:p></o:p></p>
-<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
-<p class=3D"MsoNormal">* Using Oracle Linux 7 &nbsp;&nbsp;3.8.13-55.1.6.e17=
-uek.x86_64<o:p></o:p></p>
-<p class=3D"MsoNormal">* Cups-filter(latest)&nbsp; cups-filter-1.0-20150819=
-<o:p></o:p></p>
-<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
-<p class=3D"MsoNormal">############################################<o:p></o=
-:p></p>
-<p class=3D"MsoNormal">rpm &#8211;qa |grep lcms<o:p></o:p></p>
-<p class=3D"MsoNormal">lcms2-2.5-4.e17.x86_64<o:p></o:p></p>
-<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
-<p class=3D"MsoNormal">I&#8217;ve also tried the source code and installed =
-lcms2-2.7.&nbsp; <o:p>
-</o:p></p>
-<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
-<p class=3D"MsoNormal">Anyone have any recommendations?&nbsp; Thanks for an=
-y help!<o:p></o:p></p>
-<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
-<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
-<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
-<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ti=
-mes New Roman&quot;,serif"><o:p>&nbsp;</o:p></span></p>
-<div class=3D"MsoNormal" align=3D"center" style=3D"text-align:center"><span=
- style=3D"font-size:12.0pt;font-family:&quot;Times New Roman&quot;,serif">
-<hr size=3D"2" width=3D"100%" align=3D"center">
-</span></div>
-<p class=3D"MsoNormal"><span style=3D"font-size:7.5pt;font-family:&quot;Ari=
-al&quot;,sans-serif;color:gray"><br>
-The information contained in this message is privileged and intended only f=
-or the recipients named. If the reader is not a representative of the inten=
-ded recipient, any review, dissemination or copying of this message or the =
-information it contains is prohibited.
- If you have received this message in error, please immediately notify the =
-sender, and delete the original message and attachments.</span><span style=
-=3D"font-size:12.0pt;font-family:&quot;Times New Roman&quot;,serif"><o:p></=
-o:p></span></p>
-</div>
-</body>
-</html>
-
---_000_b1369b280796437dafe4df2ddab10885uqexmbx3soeuqeduau_--
+#!/bin/sh=0A=0ASTART=3D`pwd`=0ATARGETHOME=3D`pwd`/target=0A=0A##=0A## stuff=
+ to find all the pieces needed=0A##=0APATH=3D${TARGETHOME}/bin:/usr/local/c=
+ompilers/gcc-5.2.0/bin:$PATH=0Aexport PATH=0ACFLAGS=3D"-I${TARGETHOME}/incl=
+ude"=0Aexport CFLAGS=0A=0A##=0A## are these needed?=0A##=0A#LDFLAGS=3D"-L${=
+TARGETHOME}/lib -L${TARGETHOME}/lib64"=0A#export LDFLAGS=0A#LIBRARY_PATH=3D=
+${TARGETHOME}/lib:${TARGETHOME}/lib64:/usr/local/compilers/gcc-5.2.0/lib64:=
+/usr/local/compilers/gcc-5.2.0/lib:/lib64:/lib=0A#export LIBRARY_PATH=0A=0A=
+##=0A## pkg-config for side-compiling things=0A##=0APKG_CONFIG_PATH=3D${TAR=
+GETHOME}/lib/pkgconfig/:${TARGETHOME}/share/pkgconfig=0Aexport PKG_CONFIG_P=
+ATH=0A=0A##=0A## version section=0A##=0ACUPSVER=3D2.1.0=0AFILTERSVER=3D1.0.=
+76=0AGLIBMJR=3D2.46=0AGLIBMNR=3D0=0AGLIBVER=3D${GLIBMJR}.${GLIBMNR}=0ALIBFF=
+IVER=3D3.2.1=0ALCMSVER=3D2.7=0AIJSVER=3D0.35=0APOPPLERVER=3D0.36.0=0AOPENJP=
+EGVER=3D2.1.0=0AQPDFVER=3D5.1.3=0AXPDFVER=3D3.04=0A=0A##=0A## download sect=
+ion=0A##=0A[ ! -f cups-filters-${FILTERSVER}.tar.xz ] && wget http://openpr=
+inting.org/download/cups-filters/cups-filters-${FILTERSVER}.tar.xz=0A[ ! -f=
+ glib-${GLIBMJR}.${GLIBMNR}.tar.xz ] && wget http://ftp.gnome.org/pub/GNOME=
+/sources/glib/${GLIBMJR}/glib-${GLIBVER}.tar.xz=0A[ ! -f libffi-${LIBFFIVER=
+}.tar.gz ] && wget ftp://sourceware.org/pub/libffi/libffi-${LIBFFIVER}.tar.=
+gz=0A[ ! -f lcms2-${LCMSVER}.tar.gz ] && wget http://downloads.sourceforge.=
+net/project/lcms/lcms/${LCMSVER}/lcms2-${LCMSVER}.tar.gz=0A[ ! -f ijs-${IJS=
+VER}.tar.gz ] && wget https://www.openprinting.org/download/ijs/download/ij=
+s-${IJSVER}.tar.gz=0A[ ! -f poppler-${POPPLERVER}.tar.xz ] && wget http://p=
+oppler.freedesktop.org/poppler-${POPPLERVER}.tar.xz=0A[ ! -f openjpeg-${OPE=
+NJPEGVER}.tar.gz ] && wget http://downloads.sourceforge.net/openjpeg.mirror=
+/openjpeg-${OPENJPEGVER}.tar.gz=0A[ ! -f qpdf-${QPDFVER}.tar.gz ] && wget h=
+ttp://downloads.sourceforge.net/project/qpdf/qpdf/${QPDFVER}/qpdf-${QPDFVER=
+}.tar.gz=0A[ ! -f cups-${CUPSVER}-source.tar.bz2 ] && wget http://www.cups.=
+org/software/2.1.0/cups-${CUPSVER}-source.tar.bz2=0A[ ! -f xpdf-${XPDFVER}.=
+tar.gz ] && wget ftp://ftp.foolabs.com/pub/xpdf/xpdf-${XPDFVER}.tar.gz=0A=
+=0Axpdf()=0A{=0A  cd ${START}=0A  rm -rf xpdf-${XPDFVER}=0A  tar xvf xpdf-$=
+{XPDFVER}.tar.gz=0A  cd xpdf-${XPDFVER}=0A  configure --prefix=3D${TARGETHO=
+ME}=0A  make=0A  make install=0A}=0A=0Acups()=0A{=0A  cd ${START}=0A  rm -r=
+f cups-${CUPSVER}=0A  tar xvf cups-${CUPSVER}-source.tar.bz2=0A  cd cups-${=
+CUPSVER}=0A  configure --prefix=3D${TARGETHOME}=0A  make=0A  make install=
+=0A}=0A=0Afilters()=0A{=0A  cd ${START}=0A  rm -rf cups-filters-${FILTERSVE=
+R}=0A  tar xvf cups-filters-${FILTERSVER}.tar.xz=0A  cd cups-filters-${FILT=
+ERSVER}=0A  configure --prefix=3D${TARGETHOME}=0A  sed -i 's/-std=3Dgnu99/-=
+std=3Dgnu11/' Makefile=0A  make=0A  make install=0A}=0A=0Alibffi()=0A{=0A  =
+cd ${START}=0A  rm -rf libffi-3.2.1=0A  tar xvf libffi-3.2.1.tar.gz=0A  cd =
+libffi-3.2.1=0A  ./configure --prefix=3D${TARGETHOME}=0A  make -j 10=0A  ma=
+ke install=0A}=0A=0Aglib2()=0A{=0A  cd ${START}=0A  rm -rf glib-${GLIBVER}=
+=0A  tar xvf glib-${GLIBVER}.tar.xz=0A  cd glib-${GLIBVER}=0A  CFLAGS=3D ./=
+configure --prefix=3D${TARGETHOME}=0A  make -j 10 install=0A}=0A=0Alcms()=
+=0A{=0A  cd ${START}=0A  rm -rf lcms2-${LCMSVER}=0A  tar xvf lcms2-${LCMSVE=
+R}.tar.gz=0A  cd lcms2-${LCMSVER}=0A  ./configure --prefix=3D${TARGETHOME}=
+=0A  make -j 10 install=0A}=0A=0Aijs()=0A{=0A  cd ${START}=0A  rm -rf ijs-$=
+{IJSVER}=0A  tar xvf ijs-${IJSVER}.tar.gz=0A  cd ijs-${IJSVER}=0A  ./config=
+ure --prefix=3D${TARGETHOME}=0A  make -j 10 install=0A}=0A=0Apoppler()=0A{=
+=0A  cd ${START}=0A  rm -rf poppler-${POPPLERVER}=0A  tar xvf poppler-${POP=
+PLERVER}.tar.xz=0A  cd poppler-${POPPLERVER}=0A  ./configure --prefix=3D${T=
+ARGETHOME} --enable-poppler-cpp --enable-xpdf-headers=0A  make -j 10 instal=
+l=0A}=0A=0Aopenjpeg()=0A{=0A  cd ${START}=0A  rm -rf openjpeg-${OPENJPEGVER=
+}=0A  tar xvf openjpeg-${OPENJPEGVER}.tar.gz=0A  cd openjpeg-${OPENJPEGVER}=
+=0A  cmake -DCMAKE_INSTALL_PREFIX=3D${TARGETHOME} .=0A  make install=0A}=0A=
+=0Aqpdf()=0A{=0A  cd ${START}=0A  rm -rf qpdf-${QPDFVER}=0A  tar xvf qpdf-$=
+{QPDFVER}.tar.gz=0A  cd qpdf-${QPDFVER}=0A  ./configure --prefix=3D${TARGET=
+HOME}=0A  make -j 10 install=0A}=0A=0Arm -rf ${TARGETHOME} *.out=0Alibffi >=
+ ${START}/00libffi.out 2>&1=0Aglib2 > ${START}/01glib2.out 2>&1=0Alcms > ${=
+START}/02lcms.out 2>&1=0Aijs > ${START}/03ijs.out 2>&1=0Aopenjpeg > ${START=
+}/04openjpeg.out 2>&1=0Apoppler > ${START}/05poppler.out 2>&1=0Aqpdf > ${ST=
+ART}/06qpdf.out 2>&1=0Axpdf > ${START}/07xpdf.out 2>&1=0Acups > ${START}/08=
+cups.out 2>&1=0Afilters > ${START}/09filters.out 2>&1=0A=0A=0A=0A
+--T4sUOijqQbZv57TR--
