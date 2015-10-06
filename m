@@ -1,23 +1,23 @@
 Return-Path: <till.kamppeter@gmail.com>
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20120113;
-	h=subject:to:references:from:message-id:date:user-agent:mime-version
+	h=from:subject:to:references:message-id:date:user-agent:mime-version
 	:in-reply-to:content-type:content-transfer-encoding;
-	bh=R5RztpNCklm40v9UAHb+by8+DeMU4PB6vppj6Ttk110=;
-	b=MPGeJQKn6vcKZwX0R98bFQU2urkozXxHPaxvmGULLWhZIII9cUbCJM9aw29P3DV03Y
-	8nmcHGCPfkyYVVnf3mASFb1OBniFAKnu1+9mYJGYpwXIesBD0vrgJKGifYQ4S8CbAEpx
-	NrjLWQvL7FXaVASe7DoiH526a3jw4si5Fxuio4IOSliTbiD+qXcPydLsT2fwsnZWzzDF
-	q76PGGl/yLTeub/cDTv8+SqSqrsexw6wWrr1wY1fu+TCmaKqSU6WY9sNo1lkdsi70k8v
-	WXvftqnE+s6MUShfBMM8PQCKzRVIxoXCsFBRLSrD5vI3miQCOP2Cz3/F6M5puioBCOpG
-	TtGw==
-References: <CAN40gSscDgT+CwFZ7VANoiRvDuDrpdmYLdnu7y=f25SZutbnDw@mail.gmail.com>
+	bh=F4lP3RlGEv6ZOnHhdT9ZnqJwfk1MQHNc60VI26BkHKs=;
+	b=p0APgRqN0AmIGEgMwJozGpOAM/EyJSXs6vSY4xNtKJbI06ExfQ6CtUQLBu4Ni2wcOq
+	OQE4vXVsaQPru1aVTP2QoA5PEhLk+wIhgRFEf+uevGTiywPd/UwENJu7B2eJc9BLiUnY
+	nzqQRnT2YfS3g+bdkVImBDV/VBL7g3Tby+1ZETHoZXzq1R7hCJICLyXPAzh3hbM3/s17
+	QN4UWp0tclJ0hJgSGnd7+oPWmlzO4Yn9iVd3DkJ4M8M7gJRjKMpYzhVZiu6kNOqJL6Uo
+	sYYAJM2+OeeLln3QywEfOB2Z+bZKpS2/AdUauTbKG1cRM4Mto7AqD1QLRjG3k3ppuyEw
+	BEmg==
 From: Till Kamppeter <till.kamppeter@gmail.com>
-Message-ID: <56140DA3.3010900@gmail.com>
-Date: Tue, 6 Oct 2015 15:06:27 -0300
+References: <CAN40gSscDgT+CwFZ7VANoiRvDuDrpdmYLdnu7y=f25SZutbnDw@mail.gmail.com>
+Message-ID: <56140F8E.40806@gmail.com>
+Date: Tue, 6 Oct 2015 15:14:38 -0300
 MIME-Version: 1.0
 In-Reply-To: <CAN40gSscDgT+CwFZ7VANoiRvDuDrpdmYLdnu7y=f25SZutbnDw@mail.gmail.com>
 Content-Type: text/plain; charset=utf-8; format=flowed
 Content-Transfer-Encoding: 7bit
-Subject: [Printing-architecture] REMINDER: OP telecon NOW
+Subject: [Printing-architecture] CANCELLED: OP telecon today
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>,
@@ -29,7 +29,9 @@ List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-arc
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
 To: Ira McDonald <blueroofmusic@gmail.com>, "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>
 
+No one showed up ...
 
+    Till
 
 On 09/03/2015 03:53 PM, Ira McDonald wrote:
 > Next OP US/Europe/Brazil Conference Calls:
