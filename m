@@ -1,23 +1,25 @@
-Return-Path: <aikishugyo@gmail.com>
+Return-Path: <till.kamppeter@gmail.com>
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20120113;
-	h=mime-version:in-reply-to:references:from:date:message-id:subject:to
-	:cc:content-type;
-	bh=tRm4DemfD6Va7gRiTXtJZWofJGgmOo0GhJmuCqM8X+s=;
-	b=l+sxw6C5Pn9PYzwL5EehCdW1t0qgX1xwWN1s1fJoQVqJOKOCBSBH2wnX2p4Qyw4B48
-	KN3fUx5XONJdyUmNrqLVkONgZdkEjIG3CoTZI3pEf3iNYeKtZTN38rioTVd7+LNerY6j
-	Tcb9SfJt228Eo+Gb+pnissAGBDxo3pMr5Z8uzSJ/2bODzU3XDxlDVVARrHD+sh9SOJW+
-	/fcjYMCWMhO5JYc4KNxWyc/St2tKpZDdNBDE8lNSinGAdk+L6Hn3j9ljg1A5I+/EfhdH
-	3IJviO33wWzeOl53u0ha9If2mm/ht7Fr7ekqLO3Yy+zInuphp6VXCedTQUrRn+NtcGX9
-	qNyA==
+	h=subject:to:references:cc:from:message-id:date:user-agent
+	:mime-version:in-reply-to:content-type:content-transfer-encoding;
+	bh=gKwBMT4lbMhZVFZpTggpGgZbjqnZ14WE+0ZywQijwWg=;
+	b=zlFm+xcWgypmYVc0W/9CjPSNnAGuMoi78d0IKLV319Ry9gGOI3CNTgSdx8PaVZBtyU
+	WFJFmFjV5/mHqasZc73/2zlXqHaeaFZA1NP+p5EKJizvD+UFJpIaP5zx68/+VmGyvBS6
+	P4zJZyYZAG0hZqir8kz2jXkANfDZcQD4A6tbsnZwqrurVUzhP3u4Q5m33SWI76uX6ajF
+	IWdV+KNo2V5OS6FEudSoS/nlhSGlpWbXz4m0gxJax2X0DzWR1+c/bLkkoG6JamdwcZU+
+	sr024sNDJJnhmeZxnpwqIh8laMvLO9eHCb5AF0YpuA2/7zOpJ5ykqJf7YIr3p188+y9l
+	JF3g==
+References: <561AB144.3080203@gmail.com>
+	<2E3F6574-2E2F-4906-9DCA-FA283EC0E729@web.de>
+From: Till Kamppeter <till.kamppeter@gmail.com>
+Message-ID: <563923B3.8090702@gmail.com>
+Date: Tue, 3 Nov 2015 19:14:27 -0200
 MIME-Version: 1.0
-In-Reply-To: <CAN0dEZwT8xT4UpBfAntjBLe5DY8-7VRJSJXUMx1sGHoacC+TSg@mail.gmail.com>
-References: <562FEA3C.9080003@gmail.com>
-	<CAN0dEZwT8xT4UpBfAntjBLe5DY8-7VRJSJXUMx1sGHoacC+TSg@mail.gmail.com>
-From: Gernot Hassenpflug <aikishugyo@gmail.com>
-Date: Wed, 28 Oct 2015 06:45:36 +0900
-Message-ID: <CAN0dEZw0JivTSyHH05g30U_RyCCA_6MwvHJeRrAYU16AR_wrVg@mail.gmail.com>
-Content-Type: text/plain; charset=UTF-8
-Subject: Re: [Printing-architecture] Are there really XPS-only printers?
+In-Reply-To: <2E3F6574-2E2F-4906-9DCA-FA283EC0E729@web.de>
+Content-Type: text/plain; charset="utf-8"; format="flowed"
+Content-Transfer-Encoding: 8bit
+Subject: Re: [Printing-architecture] Driver for native XPS printers urgently
+	needed
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>,
@@ -27,45 +29,16 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Till Kamppeter <till.kamppeter@gmail.com>
-Cc: Open Printing <printing-architecture@lists.linux-foundation.org>
+To: Helge Blischke <helgeblischke@web.de>
+Cc: Open Printing <printing-architecture@lists.linux-foundation.org>, gs-devel@ghostscript.com, "The CUPS user discussion list." <cups@cups.org>
 
-On Wed, Oct 28, 2015 at 6:29 AM, Gernot Hassenpflug
-<aikishugyo@gmail.com> wrote:
-> On Wed, Oct 28, 2015 at 6:18 AM, Till Kamppeter
-> <till.kamppeter@gmail.com> wrote:
->> Hi,
->>
->> I would like to know whether there are really printers which understand only
->> XPS (plus some secret proprietary protocols) and no PDF, PostScript, PWG
->> Raster, ...?
-> /../
->> If there are such printers can someone give a list of models here so that I
->> could perhaps get hold on one? Thanks in advance.
->
-> Hello Till,
->
-> Please see the thread I began earlier this month on the CUPS mailing
-> list, in it I gave the results of my research.
-> Virtually all Konica Minolta printers/all-in-ones have native XPS
-> interpreters (since about 1997?).
+On 10/11/2015 04:43 PM, Helge Blischke wrote:
+> –trying to change the color model from the RGB default causes a
+> "rangecheck in .putdeviceprops“ error
+> in Ghostscript (gs 9.16)
 
-Sorry, that should be 2007.
+Please report a Ghostscript bug on http://bugs.ghostscript.com/ and post 
+the link to it here. Thanks.
 
-> And I gave several examples, if you go to the specs of those, you will
-> see they are GDI and XPS only.
-> Others may indeed have other PDL support as well, but certainly many
-> only have XPS as an option apart from host-based printing.
-> Here an overview regarding Vista:
-> http://www.biz.konicaminolta.com/technologies/vista_compatibility/
+    Till
 
-Another press release, with the initial models the XPS interpreter was
-released on:
-http://www.konicaminolta.ba/bs/poslovna-rjesenja/o-nama/press-centar/arhiva-saopstenja-2007/press-single/article/konica-minolta-announces-support-for-microsoft-windows-vista-xps-printing-and-wsd-protocols-11.html
-
-http://kmbs.konicaminolta.us/kmbs/about/news-events/news-releases/News/konica%20minolta%20next%20generation%20bizhub%20mfps%20demonstrate%20support%20for%20windows%20vista%20xps%20printing%20and%20wsd%20protocols
-
-In the CUPS ML thread I had found a similar announcement, but a different link.
-
-Regards,
-Gernot Hassenpflug
