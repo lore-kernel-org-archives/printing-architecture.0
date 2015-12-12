@@ -2,19 +2,19 @@ Return-Path: <till.kamppeter@gmail.com>
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20120113;
 	h=subject:to:references:from:message-id:date:user-agent:mime-version
 	:in-reply-to:content-type:content-transfer-encoding;
-	bh=MLu/uRi9XaCApunoZAFKaFWg+5Jd5NYjETt8/W9tAR8=;
-	b=fS36pBgtoxnzRTXuEy4FkDahTuq1nQG3ek4ZfHD4lBkzSl3G7R7gUXREivnIpP1Tf+
-	Y50sCeEGVwNqL1FAb+Tg5PU/6WCmsdZPEMxWFqMJkRYAFDRwqAlSON/L3LIx93nJkqZl
-	KnlGsBeE1lWhddjBkO56IfnXEdlH5IYvQLEEyLzbUOUA57DPwl5RitjFmu1L7XRAOK58
-	BqqbLmhEeuTCXr4uyB2R4srS50SYXJdbF8lNqZUBZDooXKf0YIga0V71JGcRpkNauZ3E
-	t0nRkm98nicLwinMjRkywNC6DmslhJXRP23/z8slYshY7wS0bdY46pBpt1ULRq2J+LdS
-	aQ1Q==
-References: <20151212083605.GX2764@var.home> <566C0ACD.2040305@gmail.com>
+	bh=fEm3s+QBUQfEM/3cVlJ2dNL086DPCSJwQoeNEGQ4yZk=;
+	b=YLUXeK6cOfpINu0L0Gzr62jF8KgfPmHJIE6NGcBFjE0Goc0/lhW6QeRX2eobXP0LsF
+	HImn9A9rRwanpLc/niUeICS1ILq3Vnyv7Ns/J9weVeQCnZFqHLI6fTLj3lZY1kMWI3ts
+	y3PutIelBnw63TN52LhG9uKsXoiyLpoXDuE8KJRjx/P66DMClbzeB/2ebXXAUS8M0/Gp
+	Ux6gHlDu3JcEkvRbIO4kHClKIEG6hxlTvlRHGD+ss9sBHU7PT8kNAtM4dIXDEeWcdDfc
+	t50caCwz/Do6Q3fzCn6ccuqc+flvuD2OudfMDT/a2ZFvwzNA7OUpOr/XoW6vuuENF5/7
+	M3cw==
+References: <20151212083605.GX2764@var.home>
 From: Till Kamppeter <till.kamppeter@gmail.com>
-Message-ID: <566C0D61.9070201@gmail.com>
-Date: Sat, 12 Dec 2015 10:04:49 -0200
+Message-ID: <566C3682.8060501@gmail.com>
+Date: Sat, 12 Dec 2015 13:00:18 -0200
 MIME-Version: 1.0
-In-Reply-To: <566C0ACD.2040305@gmail.com>
+In-Reply-To: <20151212083605.GX2764@var.home>
 Content-Type: text/plain; charset=utf-8; format=flowed
 Content-Transfer-Encoding: 7bit
 Subject: Re: [Printing-architecture] Contributing braille embosser support
@@ -29,62 +29,17 @@ List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-arc
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
 To: Samuel Thibault <samuel.thibault@ens-lyon.org>, printing-architecture@lists.linux-foundation.org
 
+On 12/12/2015 06:36 AM, Samuel Thibault wrote:
+>> >and drivers/index/ubrlto4dot.c. For what are these
+>> >files used, especially what does drivers/index/ubrlto4dot.c do?
+> This file is used to generate the translation table in
+> drivers/index/imageubrltoindexv[34].  I felt it was good to integrate it
+> as "source code" for them, even if actually running the generation in
+> Makefile is more tedious than really useful.
+>
 
-I have committed your changes now, but pleas fix the translations. Thanks.
+Added the drivers/index/ubrlto4dot.c to cups-filters now and documented 
+the fact in README.
 
     Till
-
-On 12/12/2015 09:53 AM, Till Kamppeter wrote:
-> Thanks, the problems I mentioned are solved by the patches, but the new
-> fr-braille.po file has some problems (output of cupstestppd):
->
->        **FAIL**  Bad UTF-8 "fr" translation string for option Edge.
->        **FAIL**  Bad UTF-8 "fr" translation string for option
-> IndexFirmwareVersio
-> n.
->        **FAIL**  Bad UTF-8 "fr" translation string for option
-> IndexFirmwareVersio
-> n, choice 102000.
->        **FAIL**  Bad UTF-8 "fr" translation string for option
-> IndexFirmwareVersio
-> n, choice 103000.
->        **FAIL**  Bad UTF-8 "fr" translation string for option
-> IndexTable, choice
-> 1.
->        **FAIL**  Bad UTF-8 "fr" translation string for option
-> IndexTable, choice
-> 2.
->        **FAIL**  Bad UTF-8 "fr" translation string for option
-> IndexTable, choice
-> 3.
->        **FAIL**  Bad UTF-8 "fr" translation string for option
-> IndexTable, choice 4.
->
-> Can you fix that?
->
->     Till
->
->
-> On 12/12/2015 06:36 AM, Samuel Thibault wrote:
->> Actually they could even be merged, that'd be better since otherwise
->> there would be a lot of duplication.  I have attached the resulting
->> merge.
->>
->
-> [...]
->
->>> - The Generic embosser PPD file passes cupstestppd, the files for the
->>> Index
->>> printers not. The error message is:
->>>
->>> **FAIL**  Multiple occurrences of option IndexTable choice name 24.
->>>
->>> and indeed the option "IndexTable" has two choices with "24" as short
->>> name.
->>
->> Oops... I must admit I didn't test polish & dutch braille since I speak
->> them and don't have an index4 device :)  I have attached a patch.
->>
->
->
 
