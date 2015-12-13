@@ -1,13 +1,23 @@
-Return-Path: <SRS0=Z9Xl=MO=ens-lyon.org=samuel.thibault@bounce.ens-lyon.org>
-Date: Sun, 13 Dec 2015 19:59:43 +0100
-From: Samuel Thibault <samuel.thibault@ens-lyon.org>
-Message-ID: <20151213185943.GR2765@var.home>
+Return-Path: <till.kamppeter@gmail.com>
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20120113;
+	h=subject:to:references:from:message-id:date:user-agent:mime-version
+	:in-reply-to:content-type:content-transfer-encoding;
+	bh=6ePxip4qoGXmrdZCuMGZUOcQqfXnuahnvjoJ4G2dhvY=;
+	b=RbYIKQZnoUIwuzbHhqn2IBJptKtgSMna/6voPYvDLXSi44ghbbtIQU3pld9m/rSlws
+	ebB4ehDxELtSHOldnlvusLn3Edx3oe+UvK7eDfNfGXNN3XTlBrt9OINb4xlNTLRBzbH3
+	JXinVJN6kcvmlqV8pYRlTazgu4lzlC37deIb8cF1JET2iLrraqfTn5Vh36D5s6LE1+XK
+	Lvaoy5jB5LenYYnFXviafexUxUPmor9g7kKoBZoBzXkdY6LeZOrdrNMQXOawFLMAErO2
+	F9q3Pewma2/WuTxs2xXPst2Bq3yxTAcLRoLXytqt9DJIjMgO/cIxdqrEFU8cJIYEEeHA
+	Lstg==
 References: <20151212083605.GX2764@var.home> <566C0ACD.2040305@gmail.com>
-	<20151213024001.GR2765@var.home>
+	<20151213024001.GR2765@var.home> <20151213185943.GR2765@var.home>
+From: Till Kamppeter <till.kamppeter@gmail.com>
+Message-ID: <566DCA40.2020709@gmail.com>
+Date: Sun, 13 Dec 2015 17:42:56 -0200
 MIME-Version: 1.0
-Content-Type: multipart/mixed; boundary="Bn2rw/3z4jIqBvZU"
-Content-Disposition: inline
-In-Reply-To: <20151213024001.GR2765@var.home>
+In-Reply-To: <20151213185943.GR2765@var.home>
+Content-Type: text/plain; charset=utf-8; format=flowed
+Content-Transfer-Encoding: 7bit
 Subject: Re: [Printing-architecture] Contributing braille embosser support
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
@@ -18,39 +28,20 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Till Kamppeter <till.kamppeter@gmail.com>, printing-architecture@lists.linux-foundation.org
+To: Samuel Thibault <samuel.thibault@ens-lyon.org>, printing-architecture@lists.linux-foundation.org
 
+On 12/13/2015 04:59 PM, Samuel Thibault wrote:
+> Hello,
+>
+> One thing I forgot to document about Index embossers firmware version,
+> here is a patch.
+>
+> Samuel
+>
 
---Bn2rw/3z4jIqBvZU
-Content-Type: text/plain; charset=us-ascii
-Content-Disposition: inline
+Committed.
 
-Hello,
+Thank you very much.
 
-One thing I forgot to document about Index embossers firmware version,
-here is a patch.
+    Till
 
-Samuel
-
---Bn2rw/3z4jIqBvZU
-Content-Type: text/plain; charset=us-ascii
-Content-Disposition: attachment; filename=patch
-
-=== modified file 'README'
---- README	2015-12-12 14:57:57 +0000
-+++ README	2015-12-13 18:58:29 +0000
-@@ -1628,6 +1628,11 @@ lp -o "GraphicDotDistance=160" file.png
- 
- to select 1.6mm dots spacing
- 
-+Troubleshooting: if your embosser starts every document with spurious
-+"TM0,BM0,IM0,OM0" or "TM0,BI0", your embosser is most probably still using an
-+old 10.20 firmware.  Please either reflash the embosser with a firmware version
-+10.30 or above, or select the 10.20 firmware version in the "index" panel of the
-+cups printer options.
- 
- ----------------------
- Braille output options
-
-
---Bn2rw/3z4jIqBvZU--
