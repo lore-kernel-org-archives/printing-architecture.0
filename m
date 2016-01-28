@@ -1,21 +1,23 @@
 Return-Path: <till.kamppeter@gmail.com>
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20120113;
-	h=to:from:subject:message-id:date:user-agent:mime-version
-	:content-type:content-transfer-encoding;
-	bh=0hKepbUrAK9Qf+7FHknxFnsjAF7wWCEx8Z9agSjKiRI=;
-	b=HN4QW9AIE1rwgEnb2bI/D4ItXF1heTm/KIUaP1BgZvx4tirqFnJuZqbyN4ZeWoHeP7
-	oxsI60fnouVQKr5OnxYhauPtwhNGXU0Xlc1jzyDvZmaPK8dWxJiYa6FkbobvWLaK9sNV
-	jITFCqIAqLlF9hyQKRiTFALcoHkHivSf4j5D7UQrxXnAL9RcaVLcrfhi2bGcuU2kF9Zi
-	rfXaAvO2E6Doz4iQKEfloVb/uzSyGMwJAJO5UrVEOuT+x7opl7Tt838c3SdSD4rIKY11
-	Qb0h7nUSM2gaBa1YqYX5r1EtQrYVXVDYyCUHF43bcSk0X+CA6UzGx9XawLskK+xpbQ4i
-	/hHQ==
+	h=subject:to:references:from:message-id:date:user-agent:mime-version
+	:in-reply-to:content-type:content-transfer-encoding;
+	bh=5JkoeUX92+ZP0wdr+TOSjSUdo+i+UjKWxbGsa2m4nVU=;
+	b=coBQ6VBTTV7/qw0wJ9W4XoI102zTDyWnhXibrFa5PPq+9sAseleHlUL3KVoichPFjw
+	XRSGYiTkCBL3uXGPsHgPVheNoWjMCMs9npuBPc4oGyz1QaL9auOvjX6Jc5vXNlIvKBB3
+	00x0p+xKDszWHlKXLeaI5sI8uyBLt+X58IaiMVX6Np4b0UNy72pHVNtcQkTwvCkfSjFl
+	dzdrnqoQZhDajt7ufZL4295bcGe048IrAQUCS9kOy+uOaIlhAPsRI8GitSw32eWs8AfW
+	tRDWZu1KjfAxdIX1SBwn/fPUkVUubaJ+49DpDddxXGrULYoHLFvUqd5e/El1KudVHNNJ
+	i1Zw==
+References: <56AA8129.5080601@gmail.com>
 From: Till Kamppeter <till.kamppeter@gmail.com>
-Message-ID: <56AA8129.5080601@gmail.com>
-Date: Thu, 28 Jan 2016 18:59:21 -0200
+Message-ID: <56AAA1DC.40201@gmail.com>
+Date: Thu, 28 Jan 2016 21:18:52 -0200
 MIME-Version: 1.0
+In-Reply-To: <56AA8129.5080601@gmail.com>
 Content-Type: text/plain; charset=utf-8; format=flowed
 Content-Transfer-Encoding: 7bit
-Subject: [Printing-architecture] OpenPrinting Summit 2016 - Ten years of
+Subject: Re: [Printing-architecture] OpenPrinting Summit 2016 - Ten years of
 	OpenPrinting Summits
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
@@ -28,20 +30,17 @@ List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-arc
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
 To: Open Printing <printing-architecture@lists.linux-foundation.org>
 
-Hi,
-
-end of April (26-28) we will have the next joint PWG/OpenPrinting Summit 
-at HP in Boise, ID. This will be the 10th anniversary of OpenPrinting 
-Summits.
-
-So to be able to invite people I would like to set up a web page at 
-OpenPrinting (we should also create one at the PWG) and have some 
-outline of an agenda.
-
-So I want to ask you, especially Mike and Ira, to write up an outline of 
-an agenda.
-
-Ira also told that he will contact people who attended on 2006 and for 
-that I have sent a list of participants in 2006 plus a group photo to him.
+I have contacted Michael Vrhel from Ghostscript via IRC and he will 
+attend. He lives in Seattle and it is only 1:20h of flight for him.
 
     Till
+
+
+On 01/28/2016 06:59 PM, Till Kamppeter wrote:
+> Hi,
+>
+> end of April (26-28) we will have the next joint PWG/OpenPrinting Summit
+> at HP in Boise, ID. This will be the 10th anniversary of OpenPrinting
+> Summits.
+[...]
+
