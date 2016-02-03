@@ -2,16 +2,16 @@ Return-Path: <till.kamppeter@gmail.com>
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20120113;
 	h=from:subject:to:message-id:date:user-agent:mime-version
 	:content-type:content-transfer-encoding;
-	bh=l60CX6kPjxUQHHV/WGVx/zrh8KwWjbmO7U0mzaVjacU=;
-	b=BMERpit1syLUpFbSQ2ErgNNRmoYUe2kTVaOXs31dwYtnXpvbN+wTzcKezuuDTyPsGi
-	RC933Pdf4E4ZxtZZo79cRNY3pYNLca4bVhOPTatFM5BcRDhaCnc1/kLcJr+x7nnfjjlq
-	zikXhy3cBzSInBMKAICj92oKrwyWQYVLVINRqB+w0L7GVC2sI34PJP3wfeCIo9erYed7
-	Spa0t8ZF+l94coKKYsXjzoAkajNhoSACG3xjrCzYAb8UhJCDW0iIfSQ74J0jLwXomgnG
-	LCiTHn8RkSwowEMa6Lx67IaGlhH8dp5E2FVofLi7a8oHp7A+6uciJfxCyzv9eUDLZy6d
-	vktA==
+	bh=/qAU4SoYzlTSfK1+pjC1UVd2U7vTiXzJeExA7xyEsWs=;
+	b=Rw9TkKJsrMnBxKziDfDkNEoncnpaiIvepg65WM03aekDMesdltNmSZL4bjl2o7yBaV
+	EFt+rYl8kA68SK7ubNiz4DfayJ+LcZw7SlPolxduK7cfxbQwRsFF6ttYnir6LYpIqlTH
+	FkjnKlVqOFve/5WBCAUnwzEY9W6vk7+SF/sO/PTsBJiZsE70cOvAnPNHs7u8NEaFmRuw
+	VrdmyVaWBzNOyU6LSzSaZAm+VhrgpHmEOrMIX4faowhz0G3S2dCOsiC6SECrHreK7eFE
+	O63M40IDUeDqAJTztK4GQaMJOh4gm5DZdn80om5Lkg8TI2+jkSFqr544QVpLpMcm1Gal
+	JmQA==
 From: Till Kamppeter <till.kamppeter@gmail.com>
-Message-ID: <56B14E0E.3050401@gmail.com>
-Date: Tue, 2 Feb 2016 22:47:10 -0200
+Message-ID: <56B15750.5040409@gmail.com>
+Date: Tue, 2 Feb 2016 23:26:40 -0200
 MIME-Version: 1.0
 Content-Type: text/plain; charset=utf-8; format=flowed
 Content-Transfer-Encoding: 7bit
@@ -26,7 +26,7 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Ulrich Wehner <Ulrich.Wehner@ricoh-usa.com>, Open Printing <printing-architecture@lists.linux-foundation.org>
+To: Robert Krawitz <rlk@alum.mit.edu>, Open Printing <printing-architecture@lists.linux-foundation.org>
 
 Hi,
 
@@ -34,8 +34,9 @@ end of April (26-28) we will have the next joint PWG
 Meeting/OpenPrinting Summit at HP in Boise, ID. This will be the 10th 
 anniversary of OpenPrinting Summits.
 
-You have kindly helped out with the great venue for the OpenPrinting 
-Summit Spring 2006 at Lanier in Atlanta.
+You have done great work with Gutenprint making Epson inkjets and many 
+other printers a great choice on Linux and Mac OS X and we have met on 
+the first Summit, the OpenPrinting Summit Spring 2006 at Lanier in Atlanta.
 
 So I invite you to attend (and perhaps also to speak) on this year's Summit.
 
