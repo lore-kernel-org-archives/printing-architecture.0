@@ -1,17 +1,17 @@
 Return-Path: <till.kamppeter@gmail.com>
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20120113;
-	h=to:cc:from:subject:message-id:date:user-agent:mime-version
+	h=from:subject:to:message-id:date:user-agent:mime-version
 	:content-type:content-transfer-encoding;
-	bh=2IH2naxZnPbyXu3kMl2TRdtf5Qyy5iPLOrhTgu+MDxw=;
-	b=ozyVPMKtWIOEfQOP0ZIVkoG4s9EKWjpzE5CQ4FZvPHBeq7s/OOBh+PRJQ3JIU/Y5Iw
-	f+Xjf2kLTUFWtd8B0E5AqbalbyarFHC830bixNXApWY+0HqFDMhG+pbk9G5rUkMo079z
-	PMUk/BmsAY5iYIFXpBxuesYnrJ210Tap47XMlA+me/hp+pbQ8STqzbUpEENyRZAIovjj
-	6H/d0UsxwFLXaId4UrL9zQbCZ/QUXrBPSLvng9uIBy4LQKrR6yWYtE8Wg3+f5QNSjOgr
-	ItWyo4OF1sgHkH4Yvb+HbRSKByPAKF7dcbGad31TJlZ+L0uKraTi+W+f8E+DjXmGl83L
-	UGcQ==
+	bh=l60CX6kPjxUQHHV/WGVx/zrh8KwWjbmO7U0mzaVjacU=;
+	b=BMERpit1syLUpFbSQ2ErgNNRmoYUe2kTVaOXs31dwYtnXpvbN+wTzcKezuuDTyPsGi
+	RC933Pdf4E4ZxtZZo79cRNY3pYNLca4bVhOPTatFM5BcRDhaCnc1/kLcJr+x7nnfjjlq
+	zikXhy3cBzSInBMKAICj92oKrwyWQYVLVINRqB+w0L7GVC2sI34PJP3wfeCIo9erYed7
+	Spa0t8ZF+l94coKKYsXjzoAkajNhoSACG3xjrCzYAb8UhJCDW0iIfSQ74J0jLwXomgnG
+	LCiTHn8RkSwowEMa6Lx67IaGlhH8dp5E2FVofLi7a8oHp7A+6uciJfxCyzv9eUDLZy6d
+	vktA==
 From: Till Kamppeter <till.kamppeter@gmail.com>
-Message-ID: <56B14348.9080006@gmail.com>
-Date: Tue, 2 Feb 2016 22:01:12 -0200
+Message-ID: <56B14E0E.3050401@gmail.com>
+Date: Tue, 2 Feb 2016 22:47:10 -0200
 MIME-Version: 1.0
 Content-Type: text/plain; charset=utf-8; format=flowed
 Content-Transfer-Encoding: 7bit
@@ -26,8 +26,7 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Jeff Licquia <jeff@licquia.org>
-Cc: Open Printing <printing-architecture@lists.linux-foundation.org>, Mats Wichmann <mats@wichmann.us>
+To: Ulrich Wehner <Ulrich.Wehner@ricoh-usa.com>, Open Printing <printing-architecture@lists.linux-foundation.org>
 
 Hi,
 
@@ -35,9 +34,8 @@ end of April (26-28) we will have the next joint PWG
 Meeting/OpenPrinting Summit at HP in Boise, ID. This will be the 10th 
 anniversary of OpenPrinting Summits.
 
-One of the achievements of the Summits is the addition of printing to 
-the LSB, especially to allow for distribution-independent binary printer 
-driver packages (which Epson is actually publishing).
+You have kindly helped out with the great venue for the OpenPrinting 
+Summit Spring 2006 at Lanier in Atlanta.
 
 So I invite you to attend (and perhaps also to speak) on this year's Summit.
 
