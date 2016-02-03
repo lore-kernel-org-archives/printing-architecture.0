@@ -1,24 +1,22 @@
 Return-Path: <till.kamppeter@gmail.com>
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20120113;
-	h=from:subject:to:references:message-id:date:user-agent:mime-version
-	:in-reply-to:content-type:content-transfer-encoding;
-	bh=6UUAgoF6zOIeMhdxTuy2L/Z0cIYlgWHAfSPtDKTy2Ds=;
-	b=09aZpp8WBXtG7WqFC4sRD2FhWwcEugBpy+SPbDzaKizJSFPqhMojTgTyMfl+10v1K5
-	USw9Bphf+mwpaMArIGCVMiRVT2hC4eYB+75vKo7//aXFlqvhhCWqMVD7Mvl6vUcp07Ky
-	klm5q9rPJOuS/iz6SWF9jeZRoGZY3NKjf00hSBC8tvEeJx9NUpiTGEfCWCeDwU4i682I
-	U3DURqcEFPJGkvf/tsLNFjbp1V+984/Rv6RRSsXXqDgEtIsxKo7CuwHy43P6Shw98GFI
-	fvkmuL18whlGwK+ipjyWNhQPIWRCZdwAm9x5LY4H585w6O2qt5cPBAAwm8ETFonGCkfy
-	6N4Q==
+	h=to:cc:from:subject:message-id:date:user-agent:mime-version
+	:content-type:content-transfer-encoding;
+	bh=2IH2naxZnPbyXu3kMl2TRdtf5Qyy5iPLOrhTgu+MDxw=;
+	b=rNKcNb0QiJDGbKNT8Jet4lQwaf0SCvKdUhAU1OoqYrXCEIavZY5bg8eWK2utI4zHr4
+	8LswUCacJINojeBqRPy2Z2m2wLmNd+lnEv0C4ZueY8isnx3vD6Nz0QB/CDgNWiH2/pXA
+	aXRbljDqT1SVAJ56KU++W6rTmEkiuCjDpOztWRKxKpGA9EusETrZOQbLUPYThMOEeXB4
+	Om6oy4gGjgh9Wi/bE9B9xYGYZt2b5UQojXBAUn03/xHnzBOW/I2d8+G3EZXzmf/8rVDF
+	NXYWHx/3ksRmeGMBEtE3+F9xD4rFK+iQY2PL52fuRqtrNfO1D1SZ9BQdLMEUaIGx3EYg
+	1N+g==
 From: Till Kamppeter <till.kamppeter@gmail.com>
-References: <e395be80811270817n502ccd16wf6cc90f85364f5ae@mail.gmail.com>
-Message-ID: <56B10FB2.5090304@gmail.com>
-Date: Tue, 2 Feb 2016 18:21:06 -0200
+Message-ID: <56B14333.1090706@gmail.com>
+Date: Tue, 2 Feb 2016 22:00:51 -0200
 MIME-Version: 1.0
-In-Reply-To: <e395be80811270817n502ccd16wf6cc90f85364f5ae@mail.gmail.com>
 Content-Type: text/plain; charset=utf-8; format=flowed
 Content-Transfer-Encoding: 7bit
-Subject: [Printing-architecture] Last OP Meeting - Tue - 2 Feb 2016 - The
-	Recording
+Subject: [Printing-architecture] OpenPrinting Summit 2016 - Ten years of
+	OpenPrinting Summits
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>,
@@ -28,20 +26,22 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Open Printing <printing-architecture@lists.linux-foundation.org>, Printing-japan <printing-japan@lists.linux-foundation.org>
+To: Jeff Licquia <jeff@licquia.org>
+Cc: Open Printing <printing-architecture@lists.linux-foundation.org>, Mats Wichmann <mats@wichmann.us>
 
 Hi,
 
-I have uploaded the recording of the last OpenPrinting meeting to the
-OpenPrinting server:
+end of April (26-28) we will have the next joint PWG 
+Meeting/OpenPrinting Summit at HP in Boise, ID. This will be the 10th 
+anniversary of OpenPrinting Summits.
 
-http://www.openprinting.org/download/meetingnotes/op-telecons/OP-Meeting-20160202.mp3
+One of the achievements of the Summits is the addition of printing to 
+the LSB, especially to allow for distribution-independent binary printer 
+driver packages (which Epson is actually publishing).
 
-In general, recorded meetings I will upload to
+So I invite you to attend (and perhaps also to speak) on this year's Summit.
 
-http://www.openprinting.org/download/meetingnotes/
+I appreciate if at least one of you could attend personally, but it is 
+also possible to call in, and also even to speak via the phone.
 
     Till
-
-P. S.: The MP3 is 13 MB long, 27 minutes of talking.
-
