@@ -1,22 +1,22 @@
 Return-Path: <till.kamppeter@gmail.com>
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20120113;
-	h=to:cc:from:subject:message-id:date:user-agent:mime-version
-	:content-type:content-transfer-encoding;
-	bh=PmODEHx7i23RVEETubpe5rB9mpGmpREZM+3x/aXWhSY=;
-	b=uJQ7HgzS294GqPyggNRFgoPY/99UhEr0YJicGFwnLn9snzI8hGX2OFdT4Cqv8E707n
-	pWVXUqsOlcyDBLBtm017uish0nHf62XDrlO492KfX6igaw3ybqiVQiqQJbyc2oCc6pOl
-	MZYG7ZgOcgz88B4v73JfU0Iynseyz25q2JswIk7wRb8cWXA0nGaNd8BYB5LAyS3uMJ1u
-	T3x1KpbIQun0z5z6T5J5yD32KFGWwpqilxnDIoKPMT+/kIvr/c/Q/3D2RuTJCwOuQlVS
-	aeyUF9tTGk6dxH1NJoBsdatBEKYop5k7cSZoekm7PXb9/iCoH5Ur1kbOquLnFdloy2ED
-	2Tbw==
+	h=from:subject:to:message-id:date:user-agent:mime-version
+	:content-transfer-encoding;
+	bh=LSplqawdRs4X2LMxCYiMWKZBChSzQHF4zFM3PFScU8w=;
+	b=McJbuVPoBfbJnuDLd5DgI3o+aNGt+QL6gZrkXuQKKBAw5vzAxQWpFqUB69H9IMVHll
+	9R/qJRR+/TU7c1zOAGTEQywPhexaIlKWOFB2gWHs2CaKBOjjipKLE5a7KZflbP3loKCO
+	csr4MGQFKcZz+RRTfSkMLleDZAN2MjnajZQd9TZzH7HzTzL/u3QI+BXx6A/rPrnUBTQJ
+	tfI3zsKdUshhj5LTxDy+9CC3fKE7V6fBaJEjt84vSAq/zpoj7KSw13/UoqOguH0OCRrl
+	kube0i0P5j+xeEa0RNBZHmo8Pu41UPHtvwspy9ditxJCuXu19KwfgqEvLSdOhF13sGVv
+	3v5w==
 From: Till Kamppeter <till.kamppeter@gmail.com>
-Message-ID: <56C72858.30506@gmail.com>
-Date: Fri, 19 Feb 2016 12:36:08 -0200
+Message-ID: <56D4B8DB.5000901@gmail.com>
+Date: Mon, 29 Feb 2016 18:32:11 -0300
 MIME-Version: 1.0
 Content-Type: text/plain; charset=utf-8; format=flowed
 Content-Transfer-Encoding: 7bit
-Subject: [Printing-architecture] OpenPrinting Front Page - No obvious way to
- get to content like printer databse, developer resources ...
+Subject: [Printing-architecture] Google Summer of Code 2016 - The Linux
+ Foundation is accepted as mentoring organization!
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>,
@@ -26,17 +26,19 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Eric Searcy <eric@linuxfoundation.org>, Jeff Licquia <jeff@licquia.org>, "C. Craig Ross" <ccr@linuxfoundation.org>
-Cc: Open Printing <printing-architecture@lists.linux-foundation.org>
+To: Alexey Khoroshilov <khoroshilov@ispras.ru>, "Luis R. Rodriguez" <mcgrof@gmail.com>, Greg KH <greg@kroah.com>, "lsb-discuss@lists.linux-foundation.org" <lsb-discuss@lists.linux-foundation.org>, linux-wireless <linux-wireless@vger.kernel.org>, Open Printing <printing-architecture@lists.linux-foundation.org>
 
 Hi,
 
-it is nice to have an automatic reflector for content changes on the 
-front page of OpenPrinting, but there is no obvious way to get to the 
-permanent content of OpenPrinting. Especially to things like the printer 
-database, pages with info for developers, or about printing-related 
-software (cups-filters, Foomatic, ...).
+we are accepted as mentoring organization again!
 
-I did not find out how to change this, therefore I am asking for your help.
+So please advertise our participation to find students and add more
+project ideas to the ideas page:
+
+https://www.linuxfoundation.org/collaborate/workgroups/gsoc/google-summer-code-2016
+
+Please add your ideas to the sub-page of your work group. If you have
+problems mail me with your project idea.
 
     Till
+
