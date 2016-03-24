@@ -1,21 +1,22 @@
-Return-Path: <computersforpeace@gmail.com>
+Return-Path: <till.kamppeter@gmail.com>
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20120113;
-	h=date:from:to:cc:subject:message-id:mime-version:content-disposition
-	:user-agent; bh=tM3ajRgoaROxF92jSr/+5oGn16zfXNVVhTsGHNWISHo=;
-	b=02phOOlzesxmBnoGHh5FrZ7rBxzYypV58M7dWK7EIHLUuVpPsCT76SKiNc8PV73d/t
-	CbwyviFDqP34d2hhtd+DQJgkZpUkTyECLjTPUDCKugcP81f7cRerOtd5bnA4l53XLKtn
-	l4fNuAUtgn5pCJnkPj1DFVGjblQgKNqOLx/KPDdhGHM3LhWpp5FwF6jOOxEePDFn4tge
-	lY1g7Ik3yh7r4C7ni/ahVBlKs/TdFbQ61QZq5TlYLEykwU1R0u8mmxjSL90m8MBg9wzz
-	yJ1BZYOCRyT1e7aS6P3L4M1pJkIrSdwOThVph2juezFGvRQgFTHXBMN1jUmAGyvxxeeG
-	f4KQ==
-Date: Tue, 22 Mar 2016 13:40:34 -0700
-From: Brian Norris <computersforpeace@gmail.com>
-Message-ID: <20160322204034.GA96488@google.com>
+	h=from:subject:to:message-id:date:user-agent:mime-version
+	:content-transfer-encoding;
+	bh=XR93seq3ex5ymrQ+rSFcjTUxC9Z/oM4B6uc9v54ohps=;
+	b=se2KcT5wVRnGdmxkpGPTwhNEATxykEkGlH/dSLgx5jDq8pzMbxygf4lXdgX29PAAsP
+	oxrEFq4xqxZB65TJ3837j95EzHOrBSZEXEZg0q45WdJQb9C36mPHUGawt3IbVppX7XrX
+	7/mkGVvjkjY2g9v3rHhxWFC2argz1oUdr5q2HXsFG/J1H/S9ywimQSUsuyvobHoNbZjq
+	abprDRnqcSqzCqs56Ec1BhWBHqpNUEXntFhE43yLrP2nKxZyB0TP9mcZ/CSIdVx8Pqqc
+	/a/c1BbmbUsY0T5rQ2HlSovvUeG8zBXcjYIRGl9eeKpP6nlgF83AtZCViW4NB3JRh34p
+	0gcw==
+From: Till Kamppeter <till.kamppeter@gmail.com>
+Message-ID: <56F4266B.4060605@gmail.com>
+Date: Thu, 24 Mar 2016 14:39:55 -0300
 MIME-Version: 1.0
-Content-Type: text/plain; charset=us-ascii
-Content-Disposition: inline
-Subject: [Printing-architecture] [cups-filters] using cups-browsed for
-	DNS-SD/IPP discovery
+Content-Type: text/plain; charset=utf-8; format=flowed
+Content-Transfer-Encoding: 7bit
+Subject: [Printing-architecture] Google Summer of Code 2016 - Many new
+	applications
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>,
@@ -25,71 +26,33 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: printing-architecture@lists.linux-foundation.org
-Cc: till.kamppeter@gmail.com
+To: Alexey Khoroshilov <khoroshilov@ispras.ru>, "Luis R. Rodriguez" <mcgrof@gmail.com>, Greg KH <greg@kroah.com>, "lsb-discuss@lists.linux-foundation.org" <lsb-discuss@lists.linux-foundation.org>, linux-wireless <linux-wireless@vger.kernel.org>, Open Printing <printing-architecture@lists.linux-foundation.org>
 
 Hi,
 
-I'm looking at the features of cups-browsed to see if I would want to
-use it for my purposes, and I ran across a really confusing piece of
-logic in the source code:
+tomorrow the student application period will end. Up to now we got 22 
+applications, where many lokk interesting and some really strange.
 
-    if (!pdl || pdl[0] == '\0' ||
-        (!strcasestr(pdl, "application/postscript") &&
-         !strcasestr(pdl, "application/pdf") &&
-         !strcasestr(pdl, "image/pwg-raster") &&
-         ((!strcasestr(pdl, "application/vnd.hp-PCL") &&
-           !strcasestr(pdl, "application/PCL") &&
-           !strcasestr(pdl, "application/x-pcl")) ||
-          ((strncasecmp(make_model, "HP", 2) ||
-            strncasecmp(make_model, "Hewlett Packard", 15) ||
-            strncasecmp(make_model, "Hewlett-Packard", 15)) &&
-           !strcasestr(make_model, "LaserJet") &&
-           !strcasestr(make_model, "Mopier"))) &&
-         !strcasestr(pdl, "application/vnd.hp-PCLXL"))) {
-      debug_printf("cups-browsed: Cannot create remote printer %s (%s) as its PDLs are not known, ignoring this printer.\n",
-                   p->name, p->uri);
-      goto fail;
-    }
+Most are for the kernel, many for LSB, and I had also some luck getting 
+3 for OpenPrinting.
 
-First of all, can anyone explain exactly what the block about HP is
-really supposed to be doing? I can't honestly figure it out.
+Please everyone of you, have a look whether there are proposals which 
+you like to mentor, click the "WANT TO MENTOR" button on appropriate 
+ones, and remeber the students to complete their applications if they 
+are still marked "incomplete" (they must submit a final PDF). Only 
+complete applications can get accepted and they do not auto-complete at 
+the deadline.
 
-But at any rate, I don't see how it could be correct. Particularly, this
-clause is always true (at most one of the comparisons will return 0), so
-why is it there?
+So please remember the students interesting to you to complete their 
+applications to do not loose them.
 
-           (strncasecmp(make_model, "HP", 2) ||
-            strncasecmp(make_model, "Hewlett Packard", 15) ||
-            strncasecmp(make_model, "Hewlett-Packard", 15))
+If you got this e-mail but are not registered as mentor but want to see 
+the applications, please tell me so that I can invite you as mentor. You 
+can read the applications then and step up to mentor a student, but you 
+are not required to mentor a student then.
 
-Seems like at a minimum, this block should be corrected to actually
-produce the status of "is this an HP model." e.g., does the following
-diff make sense?
+Note that tomorrow is a national holiday in many countries, so please 
+send out any reminders, comments, ... today.
 
-=== modified file 'utils/cups-browsed.c'
---- utils/cups-browsed.c	2016-02-10 14:18:28 +0000
-+++ utils/cups-browsed.c	2016-03-22 20:25:19 +0000
-@@ -2784,8 +2784,8 @@
- 	 ((!strcasestr(pdl, "application/vnd.hp-PCL") &&
- 	   !strcasestr(pdl, "application/PCL") &&
- 	   !strcasestr(pdl, "application/x-pcl")) ||
--	  ((strncasecmp(make_model, "HP", 2) ||
--	    strncasecmp(make_model, "Hewlett Packard", 15) ||
-+	  ((strncasecmp(make_model, "HP", 2) &&
-+	    strncasecmp(make_model, "Hewlett Packard", 15) &&
- 	    strncasecmp(make_model, "Hewlett-Packard", 15)) &&
- 	   !strcasestr(make_model, "LaserJet") &&
- 	   !strcasestr(make_model, "Mopier"))) &&
+    Till
 
-But I still don't feel like that's really what's intended, so an answer
-to my first question would be the most helpful.
-
-Now, besides the correctness of this logic, is this aspect of the daemon
-something that people regularly use? I see that it's installed on many
-Linux distributions, but it seems like it isn't really exercised for
-Bonjour/DNS-SD discovery unless someone modifies the default
-cups-browsed.conf to have 'CreateIPPPrinterQueues Yes'.
-
-Regards,
-Brian
