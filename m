@@ -1,22 +1,20 @@
-Return-Path: <till.kamppeter@gmail.com>
+Return-Path: <blueroofmusic@gmail.com>
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20120113;
-	h=from:subject:to:message-id:date:user-agent:mime-version
-	:content-transfer-encoding;
-	bh=XR93seq3ex5ymrQ+rSFcjTUxC9Z/oM4B6uc9v54ohps=;
-	b=se2KcT5wVRnGdmxkpGPTwhNEATxykEkGlH/dSLgx5jDq8pzMbxygf4lXdgX29PAAsP
-	oxrEFq4xqxZB65TJ3837j95EzHOrBSZEXEZg0q45WdJQb9C36mPHUGawt3IbVppX7XrX
-	7/mkGVvjkjY2g9v3rHhxWFC2argz1oUdr5q2HXsFG/J1H/S9ywimQSUsuyvobHoNbZjq
-	abprDRnqcSqzCqs56Ec1BhWBHqpNUEXntFhE43yLrP2nKxZyB0TP9mcZ/CSIdVx8Pqqc
-	/a/c1BbmbUsY0T5rQ2HlSovvUeG8zBXcjYIRGl9eeKpP6nlgF83AtZCViW4NB3JRh34p
-	0gcw==
-From: Till Kamppeter <till.kamppeter@gmail.com>
-Message-ID: <56F4266B.4060605@gmail.com>
-Date: Thu, 24 Mar 2016 14:39:55 -0300
+	h=mime-version:from:date:message-id:subject:to;
+	bh=GOD2z7coVP/iHrVKnJ8p8Z9xhcl/PmjzsNMbcuFhx0Q=;
+	b=YcqdJJZ5cvOYKiJByTmhyEJcnDnWRcb+hY0OONIglzSieaB1gohCdiQocxRZt7s9vV
+	9dE4NEGpO/Ai7hYhRqh8Vl2IevBFrbeHbVCfHDH4T8PHxTm5KaMz0ta28M39KDwN6GoF
+	tZH4MV4mJTrpxcmEXSKIG7Q5CQ3p8RBQCigC3StWKboFPDRLSPiANR6Apca62VzRJQUa
+	2zh9aShC4TM3hfcA4QLUWAAfKaYsozTJ/JIhzuOPvPXn/cQCtNyI8hhtxKCYE3r1yiSW
+	ZS7rT+hz7hVGPeyByp3ZMjxUHJg8MCJe+yui38t4OFrFsmRzcKpsPTMPzH3PxjWGvO6Y
+	tSVg==
 MIME-Version: 1.0
-Content-Type: text/plain; charset=utf-8; format=flowed
-Content-Transfer-Encoding: 7bit
-Subject: [Printing-architecture] Google Summer of Code 2016 - Many new
-	applications
+From: Ira McDonald <blueroofmusic@gmail.com>
+Date: Fri, 25 Mar 2016 11:18:36 -0400
+Message-ID: <CAN40gSvuqwCKFSGEBDEncr_O+NRxC3Nr7Ne0cxcP+xweQ9vSCg@mail.gmail.com>
+Content-Type: multipart/alternative; boundary=001a113edd44db463c052ee1142c
+Subject: [Printing-architecture] Fwd: IPP Everywhere Printer
+	Self-Certification submissions now open
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>,
@@ -26,33 +24,67 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Alexey Khoroshilov <khoroshilov@ispras.ru>, "Luis R. Rodriguez" <mcgrof@gmail.com>, Greg KH <greg@kroah.com>, "lsb-discuss@lists.linux-foundation.org" <lsb-discuss@lists.linux-foundation.org>, linux-wireless <linux-wireless@vger.kernel.org>, Open Printing <printing-architecture@lists.linux-foundation.org>
+To: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>, Ira McDonald <blueroofmusic@gmail.com>
 
-Hi,
+--001a113edd44db463c052ee1142c
+Content-Type: text/plain; charset=UTF-8
 
-tomorrow the student application period will end. Up to now we got 22 
-applications, where many lokk interesting and some really strange.
+---------- Forwarded message ----------
+From: Michael Sweet <msweet@apple.com>
+Date: Fri, Mar 25, 2016 at 10:51 AM
+Subject: [PWG-Announce] IPP Everywhere Printer Self-Certification
+submissions now open
+To: PWG Announcements <pwg-announce@pwg.org>
 
-Most are for the kernel, many for LSB, and I had also some luck getting 
-3 for OpenPrinting.
 
-Please everyone of you, have a look whether there are proposals which 
-you like to mentor, click the "WANT TO MENTOR" button on appropriate 
-ones, and remeber the students to complete their applications if they 
-are still marked "incomplete" (they must submit a final PDF). Only 
-complete applications can get accepted and they do not auto-complete at 
-the deadline.
+All,
 
-So please remember the students interesting to you to complete their 
-applications to do not loose them.
+The IPP Everywhere Printer Self-Certification submission page is now live
+on the PWG web site at:
 
-If you got this e-mail but are not registered as mentor but want to see 
-the applications, please tell me so that I can invite you as mentor. You 
-can read the applications then and step up to mentor a student, but you 
-are not required to mentor a student then.
+    https://www.pwg.org/ippeveselfcert
 
-Note that tomorrow is a national holiday in many countries, so please 
-send out any reminders, comments, ... today.
+Once we have some submissions we will make the corresponding printer list
+page live as well.
 
-    Till
+_________________________________________________________
+Michael Sweet, Senior Printing System Engineer
 
+_______________________________________________
+pwg-announce mailing list
+pwg-announce@pwg.org
+https://www.pwg.org/mailman/listinfo/pwg-announce
+
+--001a113edd44db463c052ee1142c
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><br><div class=3D"gmail_quote">---------- Forwarded messag=
+e ----------<br>From: <b class=3D"gmail_sendername">Michael Sweet</b> <span=
+ dir=3D"ltr">&lt;<a href=3D"mailto:msweet@apple.com">msweet@apple.com</a>&g=
+t;</span><br>Date: Fri, Mar 25, 2016 at 10:51 AM<br>Subject: [PWG-Announce]=
+ IPP Everywhere Printer Self-Certification submissions now open<br>To: PWG =
+Announcements &lt;<a href=3D"mailto:pwg-announce@pwg.org">pwg-announce@pwg.=
+org</a>&gt;<br><br><br>All,<br>
+<br>
+The IPP Everywhere Printer Self-Certification submission page is now live o=
+n the PWG web site at:<br>
+<br>
+=C2=A0 =C2=A0 <a href=3D"https://www.pwg.org/ippeveselfcert" rel=3D"norefer=
+rer" target=3D"_blank">https://www.pwg.org/ippeveselfcert</a><br>
+<br>
+Once we have some submissions we will make the corresponding printer list p=
+age live as well.<br>
+<br>
+_________________________________________________________<br>
+Michael Sweet, Senior Printing System Engineer<br>
+<br>
+_______________________________________________<br>
+pwg-announce mailing list<br>
+<a href=3D"mailto:pwg-announce@pwg.org">pwg-announce@pwg.org</a><br>
+<a href=3D"https://www.pwg.org/mailman/listinfo/pwg-announce" rel=3D"norefe=
+rrer" target=3D"_blank">https://www.pwg.org/mailman/listinfo/pwg-announce</=
+a><br>
+</div><br></div>
+
+--001a113edd44db463c052ee1142c--
