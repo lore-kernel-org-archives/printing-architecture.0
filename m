@@ -1,22 +1,23 @@
 Return-Path: <till.kamppeter@gmail.com>
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20120113;
-	h=subject:to:references:from:message-id:date:user-agent:mime-version
-	:in-reply-to:content-transfer-encoding;
-	bh=8NGMKJuiGui5Run5DEftnD2PiYojmVC2D1kXdx+toGY=;
-	b=uFs4hmM0KOsFWl9hLnMeF0aKT0WT+eBux5OucpeVyFtd6t6Nvotuw/dprop84dxS6n
-	VijNaJnwZvdnOlcsJ02thOE0KJKmE25GpXrcthC5/I/HzO1PBgiWhSvY4ouiRWmzPTXr
-	Ka3h5rq5KYsSxCPFGKb3pWkecCoq5D7bPvVjdVudcIQ/U3fDybqCofo55oNid8ONa8Ft
-	UAlY32Z3xPKVvmSwdBHNw9MwrENVa++mP9fjt4vAXazHJEmzW7oMIsK/svAblWE7EakM
-	5CW7eyp3QEDGYxNmJgddPJ4Q4txIsIk+4flRTmTelkx7TIMqtnBSv5S9Y9lFmIBd35dk
-	lk0g==
+	h=subject:to:references:cc:from:message-id:date:user-agent
+	:mime-version:in-reply-to:content-transfer-encoding;
+	bh=4fypZSV0eeo6QDCJxJK4meuxPVf32Enp3NnAe04umUE=;
+	b=Xsl+mUD01ddbClqdNFtVXDPDwrPk+UN0aLg2ovKrMnP+e4kpCcg1fV9RWvNHfilYwy
+	PnCV+dR2oYocok8P/+yWodd0+KJMg0HiVJXwEkMGNqwzwDMXbcpz/slJn3cJnpRuNmYT
+	EtTpz2SPMSpH8JdWAUuAcH73DsAW9c8oow3TLbkVkgS17nSm+luK1JzQC5okjm/r/hYP
+	lirqcuUIi6yDL/64mpbLiel5RadxCsDkAXq2WXfViak8nMQSyzhKcoJP4BHDMuWtb09h
+	wmbvmizC742Pzt3l9FZ5qeIZSgd6UvSXKFzO16RTi8M7VZMD3W72/mswuZ894+/b6W5o
+	tXnA==
 References: <56F4266B.4060605@gmail.com> <1943931458892174@web3o.yandex.ru>
 	<56F5D04A.20506@gmail.com> <56F5D11B.7000803@gmail.com>
 	<56F6E651.9090200@ispras.ru>
+	<CAB=NE6WL5OnJTYi99dbuOyh0cenM7NcajfKHQDnbYKYBn67owQ@mail.gmail.com>
 From: Till Kamppeter <till.kamppeter@gmail.com>
-Message-ID: <56F6EA26.4090600@gmail.com>
-Date: Sat, 26 Mar 2016 16:59:34 -0300
+Message-ID: <56F6EA55.405@gmail.com>
+Date: Sat, 26 Mar 2016 17:00:21 -0300
 MIME-Version: 1.0
-In-Reply-To: <56F6E651.9090200@ispras.ru>
+In-Reply-To: <CAB=NE6WL5OnJTYi99dbuOyh0cenM7NcajfKHQDnbYKYBn67owQ@mail.gmail.com>
 Content-Type: text/plain; charset=utf-8; format=flowed
 Content-Transfer-Encoding: 7bit
 Subject: Re: [Printing-architecture] [lsb-discuss] Google Summer of Code
@@ -30,23 +31,15 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Alexey Khoroshilov <khoroshilov@ispras.ru>, Evgeny Novikov <novikov@ispras.ru>, "Luis R. Rodriguez" <mcgrof@gmail.com>, Greg KH <greg@kroah.com>, "lsb-discuss@lists.linux-foundation.org" <lsb-discuss@lists.linux-foundation.org>, linux-wireless <linux-wireless@vger.kernel.org>, Open Printing <printing-architecture@lists.linux-foundation.org>, chris holcombe <chris.holcombe@canonical.com>, Chris MacNaughton <chris.macnaughton@canonical.com>
+To: "Luis R. Rodriguez" <mcgrof@gmail.com>, Alexey Khoroshilov <khoroshilov@ispras.ru>, "backports@vger.kernel.org" <backports@vger.kernel.org>, Steven Rostedt <rostedt@goodmis.org>
+Cc: "lsb-discuss@lists.linux-foundation.org" <lsb-discuss@lists.linux-foundation.org>, Evgeny Novikov <novikov@ispras.ru>, Greg KH <greg@kroah.com>, linux-wireless <linux-wireless@vger.kernel.org>, Chris MacNaughton <chris.macnaughton@canonical.com>, Open Printing <printing-architecture@lists.linux-foundation.org>, chris holcombe <chris.holcombe@canonical.com>
 
-On 03/26/2016 04:43 PM, Alexey Khoroshilov wrote:
+On 03/26/2016 04:49 PM, Luis R. Rodriguez wrote:
+> I just hit "want to mentor" for the backports one by Cristina-Gabriela Moraru.
 >
-> We have got 4 good proposals in LSB category that make sense to mark
-> with STAR:
-> https://summerofcode.withgoogle.com/dashboard/organization/6564234674569216/proposal/4529048004853760/
->
-> https://summerofcode.withgoogle.com/dashboard/organization/6564234674569216/proposal/6570505653977088/
->
-> https://summerofcode.withgoogle.com/dashboard/organization/6564234674569216/proposal/4921876094648320/
->
-> https://summerofcode.withgoogle.com/dashboard/organization/6564234674569216/proposal/4646236401434624/
+>    Luis
 >
 
-All starred now.
+OK. I marked this with a star now.
 
     Till
-
-
