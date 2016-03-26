@@ -1,28 +1,16 @@
-Return-Path: <till.kamppeter@gmail.com>
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20120113;
-	h=subject:to:references:cc:from:message-id:date:user-agent
-	:mime-version:in-reply-to:content-transfer-encoding;
-	bh=ADz6jgzqMDdjIoTV2OC2ncVbNLB6l/3inYpRdpIkBfM=;
-	b=pFsi811PNK91YCD1CO93YNx8WSLrH4NRB4MrpbpM0LO1GHKg7P2235/2dEYuAzOjtM
-	378vb43Ff4Fem9ytv6NxpNkHRS7aruGgMTm4CRdxYCnfJFWwup5m68i+Yv7vkMV4pVfG
-	RE5LOV2V9Cj0mPv+Yi+28cdr3Sre8fuN8NBUmaRJw0RJ9oNO2H0413vHwr2G9EvtzsXo
-	PwOb2z3FVMM+y3hX6IYC5RGDHKItnz6kBBFfhIptiJJgDacZe28C2O9H2Vtwfv5pLr8k
-	GO4R2w3c6wr5eZYRKzCjL24IFuB4rT0L5hINHT7pWsZRG86LSyCi2bKumV8fg7vDAYpM
-	LpZg==
-References: <56F4266B.4060605@gmail.com> <1943931458892174@web3o.yandex.ru>
-	<56F5D04A.20506@gmail.com> <56F5D11B.7000803@gmail.com>
-	<20160326001803.GB15767@kroah.com> <56F5DA55.6030802@gmail.com>
-	<20160326141540.GA4104@kroah.com> <56F69BDC.7050900@gmail.com>
-	<20160326170409.GA27584@kroah.com>
-From: Till Kamppeter <till.kamppeter@gmail.com>
-Message-ID: <56F6CFD6.1020109@gmail.com>
-Date: Sat, 26 Mar 2016 15:07:18 -0300
+Return-Path: <m.weghorn@posteo.de>
+References: <56F6A4D2.8080801@posteo.de>
+	<CAD2FfiHCxH7W3VfcvFt3o=9iO4Bu2PEjqKmhcJt3FNkj4JRfrA@mail.gmail.com>
+	<CAM1DM6nYKfkH0TvePysc5zu35WVrwZ3xO8EruQOw0RpFGgKe1Q@mail.gmail.com>
+From: Michael Weghorn <m.weghorn@posteo.de>
+Message-ID: <56F6D29E.3090603@posteo.de>
+Date: Sat, 26 Mar 2016 19:19:10 +0100
 MIME-Version: 1.0
-In-Reply-To: <20160326170409.GA27584@kroah.com>
-Content-Type: text/plain; charset=utf-8; format=flowed
-Content-Transfer-Encoding: 7bit
-Subject: Re: [Printing-architecture] [lsb-discuss] Google Summer of Code
-	2016 - Many new applications
+In-Reply-To: <CAM1DM6nYKfkH0TvePysc5zu35WVrwZ3xO8EruQOw0RpFGgKe1Q@mail.gmail.com>
+Content-Type: text/plain; charset=windows-1252
+Content-Transfer-Encoding: 8bit
+Subject: Re: [Printing-architecture] Status and future of the Common
+ Printing Dialog (CPD)
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>,
@@ -32,38 +20,52 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Greg KH <greg@kroah.com>
-Cc: "lsb-discuss@lists.linux-foundation.org" <lsb-discuss@lists.linux-foundation.org>, Evgeny Novikov <novikov@ispras.ru>, linux-wireless <linux-wireless@vger.kernel.org>, Chris MacNaughton <chris.macnaughton@canonical.com>, "Luis R. Rodriguez" <mcgrof@gmail.com>, Open Printing <printing-architecture@lists.linux-foundation.org>, chris holcombe <chris.holcombe@canonical.com>, Alexey Khoroshilov <khoroshilov@ispras.ru>
+To: printing-architecture@lists.linux-foundation.org
 
-On 03/26/2016 02:04 PM, Greg KH wrote:
-> Please mark these as "ignored" because they are really not even valid
-> applications:
->
-> 	https://summerofcode.withgoogle.com/dashboard/organization/6564234674569216/proposal/6700817021140992/
-> 	https://summerofcode.withgoogle.com/dashboard/organization/6564234674569216/proposal/6384381044195328/
-> 	https://summerofcode.withgoogle.com/dashboard/organization/6564234674569216/proposal/5181271886004224/
-> 	https://summerofcode.withgoogle.com/dashboard/organization/6564234674569216/proposal/6626850369437696/
-> 	https://summerofcode.withgoogle.com/dashboard/organization/6564234674569216/proposal/4823798872276992/
->
->
+Thank you for your quick replies.
 
-Done.
+If neither GTK+ nor Qt are planning to support the CPD, this does not
+sound like it had a very bright future.
 
-> That should complete all applications in the "kernel" category.  There
-> are a bunch of CELF and "QEMU with Rust" applications that I know
-> nothing about, and there doesn't seem to be a category for.  I'm
-> assuming someone else is going to review / mentor those.
->
+Maybe it might be a good idea to add some note about the current status
+in the CPD section on the website so that other people looking at it can
+quickly get an idea of it.
 
-These project ideas are from Chris Holcombe and Chris MacNaughton. They 
-have to decide about them.
+Are there possibly other plans/ideas to provide a more consistent user
+experience in printing dialogs across various applications?
+The current situation with so many different printing dialogs (e.g. GTK,
+KDE, LibreOffice, Java, several applications having their one one's,
+...) that look differently and have a different set of features does not
+seem optimal to me.
 
-> If there's anything else I need to do here, becides try to find a
-> co-mentor, please let me know.
->
+Also, from a developer's point of view it is non-optimal when adding a
+new feature or fixing a bug potentially requires making that change
+several times in totally different code bases (I only know LibreOffice,
+Qt 4 and GTK)...
 
-I am grateful if you could enter as co-mentor, especially if there is 
-any kernel project now which has only one mentor.
+Best regards,
+Michael
 
-    Till
-
+On 2016-03-26 18:01, John Layt wrote:
+> On 26 March 2016 at 15:42, Richard Hughes <hughsient@gmail.com> wrote:
+>> On 26 March 2016 at 15:03, Michael Weghorn <m.weghorn@posteo.de> wrote:
+>>> Could somebody possibly say something about the current status of the
+>>> Common Printing Dialog?
+>>
+>> Last time I spoke to the GTK maintainers and the GNOME Design team
+>> there was a total lack of support for the project.
+>>
+>> Richard
+> 
+> While the usual Qt policy is to use the host platform facilities where
+> available, Qt has no interest in using CPD either, at least not in the
+> architecture proposed. There were too many implementation issues and
+> no funding for the required cross-platform architectural changes that
+> Qt would have required.
+> 
+> John.
+> _______________________________________________
+> Printing-architecture mailing list
+> Printing-architecture@lists.linux-foundation.org
+> https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture
+> 
