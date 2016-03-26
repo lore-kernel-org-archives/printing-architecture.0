@@ -1,25 +1,28 @@
-Return-Path: <johnlayt@googlemail.com>
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
-	d=googlemail.com; s=20120113;
-	h=mime-version:sender:in-reply-to:references:date:message-id:subject
-	:from:to; bh=FKTtV9+4vQYfTHesIIWR6FeMywA+obVJAXFD4vzd370=;
-	b=oHbzjmdzCNDOXsE4NGePDg3aAxJBpwukW5YhzGd/XICTLndxYn4kiyIT5+QRKaxWug
-	qUfF8JCRIEiPwFuYndgpQ0QocMnzMu7Xh3bKvnx36EKZuiLt5pF/BsjPDpwE+43hHNUM
-	QAJXJvPWshYtQtSq2N/Ddl5d0mRi6PbTUJ1pkxUJ5Zr/6cYzscuH3H15x6zSySQBJWXK
-	3pHNydZzwi6UVZHm8j1038HoR5oBWtGNDThIg22kHtag3+5BtpTN+xzpOOSVZ3qOL1lG
-	2R9Er8mYF5DrOxbKEq/ml1N2hdqb17TwV97WqXMHkc9jHKKoVCyWH9K038pKZ4FSUCUj
-	zVOw==
+Return-Path: <till.kamppeter@gmail.com>
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20120113;
+	h=subject:to:references:cc:from:message-id:date:user-agent
+	:mime-version:in-reply-to:content-transfer-encoding;
+	bh=ADz6jgzqMDdjIoTV2OC2ncVbNLB6l/3inYpRdpIkBfM=;
+	b=pFsi811PNK91YCD1CO93YNx8WSLrH4NRB4MrpbpM0LO1GHKg7P2235/2dEYuAzOjtM
+	378vb43Ff4Fem9ytv6NxpNkHRS7aruGgMTm4CRdxYCnfJFWwup5m68i+Yv7vkMV4pVfG
+	RE5LOV2V9Cj0mPv+Yi+28cdr3Sre8fuN8NBUmaRJw0RJ9oNO2H0413vHwr2G9EvtzsXo
+	PwOb2z3FVMM+y3hX6IYC5RGDHKItnz6kBBFfhIptiJJgDacZe28C2O9H2Vtwfv5pLr8k
+	GO4R2w3c6wr5eZYRKzCjL24IFuB4rT0L5hINHT7pWsZRG86LSyCi2bKumV8fg7vDAYpM
+	LpZg==
+References: <56F4266B.4060605@gmail.com> <1943931458892174@web3o.yandex.ru>
+	<56F5D04A.20506@gmail.com> <56F5D11B.7000803@gmail.com>
+	<20160326001803.GB15767@kroah.com> <56F5DA55.6030802@gmail.com>
+	<20160326141540.GA4104@kroah.com> <56F69BDC.7050900@gmail.com>
+	<20160326170409.GA27584@kroah.com>
+From: Till Kamppeter <till.kamppeter@gmail.com>
+Message-ID: <56F6CFD6.1020109@gmail.com>
+Date: Sat, 26 Mar 2016 15:07:18 -0300
 MIME-Version: 1.0
-Sender: johnlayt@googlemail.com
-In-Reply-To: <CAD2FfiHCxH7W3VfcvFt3o=9iO4Bu2PEjqKmhcJt3FNkj4JRfrA@mail.gmail.com>
-References: <56F6A4D2.8080801@posteo.de>
-	<CAD2FfiHCxH7W3VfcvFt3o=9iO4Bu2PEjqKmhcJt3FNkj4JRfrA@mail.gmail.com>
-Date: Sat, 26 Mar 2016 17:01:13 +0000
-Message-ID: <CAM1DM6nYKfkH0TvePysc5zu35WVrwZ3xO8EruQOw0RpFGgKe1Q@mail.gmail.com>
-From: John Layt <jlayt@kde.org>
-Content-Type: text/plain; charset=UTF-8
-Subject: Re: [Printing-architecture] Status and future of the Common
- Printing Dialog (CPD)
+In-Reply-To: <20160326170409.GA27584@kroah.com>
+Content-Type: text/plain; charset=utf-8; format=flowed
+Content-Transfer-Encoding: 7bit
+Subject: Re: [Printing-architecture] [lsb-discuss] Google Summer of Code
+	2016 - Many new applications
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>,
@@ -29,22 +32,38 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Open Printing <printing-architecture@lists.linux-foundation.org>
+To: Greg KH <greg@kroah.com>
+Cc: "lsb-discuss@lists.linux-foundation.org" <lsb-discuss@lists.linux-foundation.org>, Evgeny Novikov <novikov@ispras.ru>, linux-wireless <linux-wireless@vger.kernel.org>, Chris MacNaughton <chris.macnaughton@canonical.com>, "Luis R. Rodriguez" <mcgrof@gmail.com>, Open Printing <printing-architecture@lists.linux-foundation.org>, chris holcombe <chris.holcombe@canonical.com>, Alexey Khoroshilov <khoroshilov@ispras.ru>
 
-On 26 March 2016 at 15:42, Richard Hughes <hughsient@gmail.com> wrote:
-> On 26 March 2016 at 15:03, Michael Weghorn <m.weghorn@posteo.de> wrote:
->> Could somebody possibly say something about the current status of the
->> Common Printing Dialog?
+On 03/26/2016 02:04 PM, Greg KH wrote:
+> Please mark these as "ignored" because they are really not even valid
+> applications:
 >
-> Last time I spoke to the GTK maintainers and the GNOME Design team
-> there was a total lack of support for the project.
+> 	https://summerofcode.withgoogle.com/dashboard/organization/6564234674569216/proposal/6700817021140992/
+> 	https://summerofcode.withgoogle.com/dashboard/organization/6564234674569216/proposal/6384381044195328/
+> 	https://summerofcode.withgoogle.com/dashboard/organization/6564234674569216/proposal/5181271886004224/
+> 	https://summerofcode.withgoogle.com/dashboard/organization/6564234674569216/proposal/6626850369437696/
+> 	https://summerofcode.withgoogle.com/dashboard/organization/6564234674569216/proposal/4823798872276992/
 >
-> Richard
+>
 
-While the usual Qt policy is to use the host platform facilities where
-available, Qt has no interest in using CPD either, at least not in the
-architecture proposed. There were too many implementation issues and
-no funding for the required cross-platform architectural changes that
-Qt would have required.
+Done.
 
-John.
+> That should complete all applications in the "kernel" category.  There
+> are a bunch of CELF and "QEMU with Rust" applications that I know
+> nothing about, and there doesn't seem to be a category for.  I'm
+> assuming someone else is going to review / mentor those.
+>
+
+These project ideas are from Chris Holcombe and Chris MacNaughton. They 
+have to decide about them.
+
+> If there's anything else I need to do here, becides try to find a
+> co-mentor, please let me know.
+>
+
+I am grateful if you could enter as co-mentor, especially if there is 
+any kernel project now which has only one mentor.
+
+    Till
+
