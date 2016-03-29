@@ -1,16 +1,27 @@
-Return-Path: <peter@mmiworks.net>
-Content-Type: text/plain; charset=windows-1252
-Mime-Version: 1.0 (Mac OS X Mail 7.3 \(1878.6\))
-From: peter sikking <peter@mmiworks.net>
-In-Reply-To: <CAD2FfiHY4Z040wCiWYbA+WhV1tQDUcjSwzEhogpkoXrX_=9yRg@mail.gmail.com>
-Date: Tue, 29 Mar 2016 13:36:14 +0200
-Content-Transfer-Encoding: quoted-printable
-Message-Id: <9D8EBC58-B0EF-451A-A3E9-3869725B82E3@mmiworks.net>
+Return-Path: <hughsient@gmail.com>
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20120113;
+	h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+	:cc:content-transfer-encoding;
+	bh=c5RqwYJr0cxXSGO9tmsAZfazvRvUxDYCbs4vC59nEoM=;
+	b=DC/vgZA75gtF0fBNDxc4I/P9U64wQx0Gx4bagB1qvT2mGVQPNhhFN0cHSmhiVqzI/l
+	n6aO/0MR8MlgeJh+XM0IqPXptb6Jvh/dvyIM1dzPWPVdgmcDnVYL9wRSK6uDO25mFetk
+	J8oWHZs5AAXssfesMILrEtgbaTil5R5SdEN3WCFiC4N86d+oCtuH1CD94jyIHLxMaRjw
+	uxr0ZpmEVOBX3vLxiF2FTbAclwCWRnJYA3Dq5VwmVZskojgIByGdpM8Wdr5wmuqFPuI8
+	TIIxAK/rP4pePsLcqQ3HbZLrBrrrSIqds/eoT4IedV3bjGybc8VfhL56+WSUYFh8Pscc
+	PD3g==
+MIME-Version: 1.0
+In-Reply-To: <9D8EBC58-B0EF-451A-A3E9-3869725B82E3@mmiworks.net>
 References: <56F6A4D2.8080801@posteo.de>
 	<B8C7B89F-7C26-44DC-8756-40462551859F@mmiworks.net>
 	<CAD2FfiHY4Z040wCiWYbA+WhV1tQDUcjSwzEhogpkoXrX_=9yRg@mail.gmail.com>
+	<9D8EBC58-B0EF-451A-A3E9-3869725B82E3@mmiworks.net>
+Date: Tue, 29 Mar 2016 13:19:57 +0100
+Message-ID: <CAD2FfiE6XGBAv6ZvBQk-N-waOJQLLO-YY5oKUSEvxmjO2t1GLA@mail.gmail.com>
+From: Richard Hughes <hughsient@gmail.com>
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
 Subject: Re: [Printing-architecture] Status and future of the Common
-	Printing Dialog (CPD)
+ Printing Dialog (CPD)
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>,
@@ -20,68 +31,43 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Richard Hughes <hughsient@gmail.com>
+To: peter sikking <peter@mmiworks.net>
 Cc: Open Printing <printing-architecture@lists.linux-foundation.org>
 
-Richard Hughes wrote:
+On 29 March 2016 at 12:36, peter sikking <peter@mmiworks.net> wrote:
+> it became really clear at the beginning of the project, and got
+> conformed again and again that that maximum the desktop
+> environments would do for an infrastructure project (large
+> amount of abstract and complicated work that has to deal with
+> =E2=80=98everything for everyone=E2=80=99) like printing was to take deli=
+very
+> of our design work and reference implementation.
 
->> it was just that the parties who would reap all the value of
->> this would not support it with what matters: budget. having
->> paid for a good part of the design work out of my own pocket,
->> that riled me.
->=20
-> I always was a bit confused by this; did you expect the desktop
-> environments to take your design work and reference implementation
+Do you have any references for this? I've been familiar with GTK and
+GNOME for a long time and I didn't see anything like this.
 
-it became really clear at the beginning of the project, and got
-conformed again and again that that maximum the desktop
-environments would do for an infrastructure project (large
-amount of abstract and complicated work that has to deal with
-=91everything for everyone=92) like printing was to take delivery
-of our design work and reference implementation.
+> I have already commented on the willingness to work on this
+> project. you have to think of assigning multiple people-years
+> of your very best interaction designers (not the average ones,
+> not the pixel-pushing designers) to do this.
 
-I have literally seen people involved run away from us at
-the mention of the words printing dialogs.
+Right, but that's putting the cart before the horse. Who was the
+customer? An easier-to-use print dialog might help a vendor designing
+printers sell more hardware, or it might help a software support
+company like Red Hat sell more subscriptions. If you simply say that
+something could be improved (and I agree, print dialogs can be
+improved) and then designing something that's foreign to desktop,
+toolkits and applications it's going to be a tough sell. Spending
+several hundred thousands of dollars on design and implementation
+before identifying the revenue stream seems, well, naive.
 
-> and donate some unknown amount of money to you for your time?
+In the meantime, the GNOME designers designed something different[1]
+which suited the design style for GNOME, e.g. using GtkSwitch to make
+it easy to use on touchscreens. I think it's completely fine to have
+different dialogs on KDE and GNOME, and even on applications for the
+same desktop as long as they have been designed to be easy to use for
+the specific use cases the application cares about.
 
+Richard
 
-we never asked compensation for services delivered in the past.
-
-we grew, over the years, very weary of the combination of the
-demand for shipping that finished reference implementation
-(cool, this is not a hobby, or something) and that fact that
-everyone is paid to be in linux printing (else quite a few
-would not be =92there=92)=85 except for the people working on the
-print dialog.
-
-so we decided to change that.
-
-> Surely doing the work and then saying "here, you should use this" to =
-the desktop projects each with design teams of their own was never going =
-to go well.
-
-I have already commented on the willingness to work on this
-project. you have to think of assigning multiple people-years
-of your very best interaction designers (not the average ones,
-not the pixel-pushing designers) to do this.
-
-I would also like to point out that your sentence above exactly
-describes a gold-plated pull request; the essence of F/LOSS.
-
-last, I feel that this is anachronistic; =91desktop projects each
-with design teams=92 in, say, the core period of 2006=969? that kind
-of thing has only come together in a serious, and effective, way
-over the last few years=97on the GNOME side.
-
-on the KDE side: seriously, interaction designers? ever?
-not what I hear through the openUsability channels.
-
-    --ps
-
-        designs interaction for creatives +
-        solutions with a wide impact on society
-
-        teacher, mentor, author, lecturer
-        http://mmiworks.net/peter
-
+[1] https://wiki.gnome.org/Design/OS/Printing
