@@ -1,13 +1,21 @@
-Return-Path: <m.weghorn@posteo.de>
-References: <56F6A4D2.8080801@posteo.de>
-	<B8C7B89F-7C26-44DC-8756-40462551859F@mmiworks.net>
-From: Michael Weghorn <m.weghorn@posteo.de>
-Message-ID: <56F98AE7.7060705@posteo.de>
-Date: Mon, 28 Mar 2016 21:49:59 +0200
+Return-Path: <hughsient@gmail.com>
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20120113;
+	h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+	:cc; bh=lnjA92r8TqZ+2R8zMtIfNXCCHUmuv5/RHLaYCP4ADs8=;
+	b=DoX6Y0EzfG8h4efWPOEDSrF7haUq871Ch50a/HKMSikZOxNari179POAWLJcaF4Hzu
+	HBPSLWxWwbRMH194999rkWv+0FXWBBJnDA7MZS5GmOXtfagvePh1LPkfhYMx6tDqQX/j
+	kmbplhnHamHA0XVuz1OdRk3hIiYKA3sczI+weOuLkOVS+1gJz11IoDf3fM13uQGBk5la
+	5lhoaWRDBypW6RANKDSS1dd6hv3mXMc1InzPlCeSw7uclYEMMo4sfT6QF7bnccLJs62r
+	Bs2WMTa635TNZzL/MO/DVXBtZsByb7an6YNZ3hzKcGLCxW8hqq7zIXJ6UYqTXXM000Xc
+	KilA==
 MIME-Version: 1.0
 In-Reply-To: <B8C7B89F-7C26-44DC-8756-40462551859F@mmiworks.net>
-Content-Type: text/plain; charset="windows-1252"
-Content-Transfer-Encoding: quoted-printable
+References: <56F6A4D2.8080801@posteo.de>
+	<B8C7B89F-7C26-44DC-8756-40462551859F@mmiworks.net>
+Date: Tue, 29 Mar 2016 10:23:41 +0100
+Message-ID: <CAD2FfiHY4Z040wCiWYbA+WhV1tQDUcjSwzEhogpkoXrX_=9yRg@mail.gmail.com>
+From: Richard Hughes <hughsient@gmail.com>
+Content-Type: text/plain; charset=UTF-8
 Subject: Re: [Printing-architecture] Status and future of the Common
  Printing Dialog (CPD)
 List-Id: Printing architecture under linux
@@ -20,60 +28,19 @@ List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subj
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
 To: peter sikking <peter@mmiworks.net>
-Cc: printing-architecture@lists.linux-foundation.org
+Cc: Open Printing <printing-architecture@lists.linux-foundation.org>
 
-Hi Peter,
-
-thank you very much for your reply. It helps me to understand better how
-things around the CPD developed and why things are as they are now.
-
-Thank you also for your advice regarding different designs for desktop,
-mobile and tablet. That confirms my impression that the Common Mobile
-Print Dialog might not be the right thing for us now on the desktop.
-
-Regards,
-Michael
-
-On 2016-03-27 18:04, peter sikking wrote:
-> hi Michael,
->=20
->> Could somebody possibly say something about the current status of the
->> Common Printing Dialog? Is further activity planned or has it been
->> abandoned?
->=20
-> I led the interaction design work on that project, which again
-> led and directed the implementation. I guess you have read all
-> my blog posts, linked from [1].
->=20
-> work on the CPD seized years ago. 2011 sounds about right.
->=20
-> all the right people were in place, had done substantial
-> amounts (some even a ton) of work on it (usability, design,
-> implementation) and were ready to move forward. there was
-> serious work left to do in the design, followed by development.
->=20
+On 27 March 2016 at 17:04, peter sikking <peter@mmiworks.net> wrote:
 > it was just that the parties who would reap all the value of
 > this would not support it with what matters: budget. having
 > paid for a good part of the design work out of my own pocket,
 > that riled me.
->=20
-> when canonical did a hostile fork of the project, all the able
-> people walked away and then there was=85 (nothing for all I know).
->=20
-> ps Micheal: desktop, mobile (keys & touch) and tablet are 4 different
-> worlds for interaction designers. for your desktop context, you need
-> desktop designs.
->=20
-> [1]
-> http://www.linuxfoundation.org/collaborate/workgroups/openprinting/common=
-printingdialog
->=20
->=20
->     --ps
->=20
->         designs interaction for creatives +
->         solutions with a wide impact on society
->=20
->         teacher, mentor, author, lecturer
->         http://mmiworks.net/peter
->=20
+
+I always was a bit confused by this; did you expect the desktop
+environments to take your design work and reference implementation and
+donate some unknown amount of money to you for your time? Surely doing
+the work and then saying "here, you should use this" to the desktop
+projects each with design teams of their own was never going to go
+well.
+
+Richard
