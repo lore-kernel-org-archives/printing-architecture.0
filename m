@@ -1,18 +1,29 @@
-Return-Path: <peter@mmiworks.net>
-Content-Type: text/plain; charset=windows-1252
-Mime-Version: 1.0 (Mac OS X Mail 7.3 \(1878.6\))
-From: peter sikking <peter@mmiworks.net>
-In-Reply-To: <CAD2FfiE6XGBAv6ZvBQk-N-waOJQLLO-YY5oKUSEvxmjO2t1GLA@mail.gmail.com>
-Date: Tue, 29 Mar 2016 20:41:02 +0200
-Content-Transfer-Encoding: quoted-printable
-Message-Id: <34CED4B9-2CBE-49F4-A910-6901550752F6@mmiworks.net>
-References: <56F6A4D2.8080801@posteo.de>
-	<B8C7B89F-7C26-44DC-8756-40462551859F@mmiworks.net>
-	<CAD2FfiHY4Z040wCiWYbA+WhV1tQDUcjSwzEhogpkoXrX_=9yRg@mail.gmail.com>
-	<9D8EBC58-B0EF-451A-A3E9-3869725B82E3@mmiworks.net>
-	<CAD2FfiE6XGBAv6ZvBQk-N-waOJQLLO-YY5oKUSEvxmjO2t1GLA@mail.gmail.com>
-Subject: Re: [Printing-architecture] Status and future of the Common
-	Printing Dialog (CPD)
+Return-Path: <till.kamppeter@gmail.com>
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20120113;
+	h=subject:to:references:cc:from:message-id:date:user-agent
+	:mime-version:in-reply-to:content-transfer-encoding;
+	bh=y2RPHwnS1P0a12uhNIRUeNsaNwjQ2T4n4k1izYaTXjU=;
+	b=AoD2mKgjwVsSZqEDnCJ0pGzNEW0BWpcDUMJfpw3Zce/j1V9N82Ljpo6YGZHYoBQG6t
+	UIH8dfUGoseCtFRgdg+u+tFzEw+IgZ2Vnkg1q58IOi2LH1gcuZR+53wyXQ6vagvdf2Vn
+	cOPd0f5Rgp4fVlBo4U7IRNYJlHRUFZoggTaUSJ1MY2zgp7z/3OMh+vn5mbajn/Rh/Cr0
+	BMaSuhTpgcdY6JRuaIRteVOXt5WqtZHE+3gL+fwZlMEjaFVauybd15MW6pf8H+CjOwI7
+	slu9qnR++C0zuftXUnOMDUeI2V48cd2shRpYYUBGGb8yfxQxYv008NKaPOqZKMbdIuB7
+	BJHA==
+References: <56F4266B.4060605@gmail.com> <1943931458892174@web3o.yandex.ru>
+	<56F5D04A.20506@gmail.com> <56F5D11B.7000803@gmail.com>
+	<20160326001803.GB15767@kroah.com> <56F5DA55.6030802@gmail.com>
+	<20160326141540.GA4104@kroah.com> <56F69BDC.7050900@gmail.com>
+	<20160326170409.GA27584@kroah.com> <56F6CFD6.1020109@gmail.com>
+	<20160328144214.GA10444@kroah.com>
+From: Till Kamppeter <till.kamppeter@gmail.com>
+Message-ID: <56FC1C17.70703@gmail.com>
+Date: Wed, 30 Mar 2016 15:33:59 -0300
+MIME-Version: 1.0
+In-Reply-To: <20160328144214.GA10444@kroah.com>
+Content-Type: text/plain; charset=utf-8; format=flowed
+Content-Transfer-Encoding: 7bit
+Subject: Re: [Printing-architecture] [lsb-discuss] Google Summer of Code
+	2016 - Many new applications
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>,
@@ -22,92 +33,28 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Richard Hughes <hughsient@gmail.com>
-Cc: Open Printing <printing-architecture@lists.linux-foundation.org>
+To: Greg KH <greg@kroah.com>
+Cc: "lsb-discuss@lists.linux-foundation.org" <lsb-discuss@lists.linux-foundation.org>, Evgeny Novikov <novikov@ispras.ru>, linux-wireless <linux-wireless@vger.kernel.org>, Chris MacNaughton <chris.macnaughton@canonical.com>, "Luis R. Rodriguez" <mcgrof@gmail.com>, Open Printing <printing-architecture@lists.linux-foundation.org>, chris holcombe <chris.holcombe@canonical.com>, Alexey Khoroshilov <khoroshilov@ispras.ru>
 
-Richard Hughes wrote:
+On 03/28/2016 11:42 AM, Greg KH wrote:
+> On Sat, Mar 26, 2016 at 03:07:18PM -0300, Till Kamppeter wrote:
+>>> If there's anything else I need to do here, becides try to find a
+>>> co-mentor, please let me know.
+>>>
+>>
+>> I am grateful if you could enter as co-mentor, especially if there is any
+>> kernel project now which has only one mentor.
+>
+> I don't understand, we only have one kernel project with one proposed
+> mentor (me) right now, are we requiring all projects to have 2 mentors
+> now?  I've never done it that way in the past...
 
->> that maximum the desktop
->> environments would do for an infrastructure project (large
->> amount of abstract and complicated work that has to deal with
->> =91everything for everyone=92) like printing was to take delivery
->> of our design work and reference implementation.
->=20
-> Do you have any references for this? I've been familiar with GTK and
-> GNOME for a long time and I didn't see anything like this.
+Generally, a single person can mentor a student, but if something 
+unforeseen happens to a mentor, there is a backup. The backup mentor 
+actually does not need to mentor as long as there is all OK with the 
+primary mentor. He only needs to "WANT TO MENTOR" to later on be able to 
+do the evaluations if the primary mentor is not able to do so.
 
-I have no paper trail at hand. I suspect more of it
-will be in Till=92s mail folders than mine.
+    Till
 
-and quite a bit was in personal contact.
-
-but in the meanwhile, between these two posts of today I am
-having vivid flashbacks of how this was not subtle at all.
-
-I am reliving conversations with some of the man players
-(Till, Jan, Lars, Kate) and everywhere this phrase =92they
-just want us to send them the patches=92 occurs.
-
->> I have already commented on the willingness to work on this
->> project. you have to think of assigning multiple people-years
->> of your very best interaction designers (not the average ones,
->> not the pixel-pushing designers) to do this.
->=20
-> Right, but that's putting the cart before the horse. Who was the
-> customer?
-
-it was an evolving story:
-
-the people of openUsability got, a little before my involvement,
-basically begged by KDE to step in (KDE had no printing at all
-then, thanks to one of those breaking-everything lib upgrades).
-
-when I got involved a little later (lexington) it was some of
-the printer manufacturers who absolutely wanted something done.
-top quote: =93this linux dialog situation is costing us a lot of money.=94=
-
-(that must have been the GNOME one, that one worked at that time.)
-
-we did not make up that printing needed a redesign, we were
-just answering the cries for help.
-
-later it was made really clear by the printer manufacturers
-that software is for them nothing but a cost, and linux is a
-2% market. OK, understand.
-
-we then identified the corporations whose user base prints 100%
-of the time on a linux desktop: the large linux distributions.
-but they thought, just as everybody else: =91infrastructure? the
-government can pay for that.=92
-
-our work was then actually sponsored by a real government department
-for a while. then they wanted to play this game of chicken too,
-and decided, like everybody else, that the =91linux government=92
-could pay for it. that one was found lacking.
-
-
-> Spending
-> several hundred thousands of dollars on design and implementation
-> before identifying the revenue stream seems, well, naive.
-
-we did not answer the calls for help to make money. I can now
-identify that it was attractive to me for the =91wide impact on
-society=92 factor, that drives me all these years.
-
-if that impact could have been achieved, say at the end of 2009,
-with the help of many enthusiastic (paid) collaborators, I would
-have never thought about my firm=92s work needing funding.
-
-but help and enthusiasm does not come naturally to infrastructure.
-
-and once we got less naive, we had to stop being naive.
-
-
-    --ps
-
-        designs interaction for creatives +
-        solutions with a wide impact on society
-
-        teacher, mentor, author, lecturer
-        http://mmiworks.net/peter
 
