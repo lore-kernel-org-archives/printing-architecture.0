@@ -1,19 +1,24 @@
-Return-Path: <blueroofmusic@gmail.com>
+Return-Path: <computersforpeace@gmail.com>
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20120113;
-	h=mime-version:from:date:message-id:subject:to;
-	bh=L9vF9qdLZqpZyygdlbxLPmcsQYkVU0muYBr4xL7jimw=;
-	b=Jb33bz2qoqvs+OiEXgrDVyfeSlXtZBHLBnNr6Mf2HMKK/V3Fbg8Fp/afZgkcVcykIP
-	PIuuCh7ZLHq4xpBgveRYIMppm2Sj7sFuomYR/BXbnvpQ3qdfHQraFLEzYFPZ6IPtO6F2
-	IJI3pSAeE8L5nTTrfsmHq59AOfKZIRCN+svdKYHsVohvv2SfkG68wsrPLE61kWWz18WR
-	NxVtuXBIq1KU1oXHmy3DnHaU3FiFYlXdEKa+xlT7+QcsjTzDZezU4xtEzWUshbitQtsE
-	wtg1BPSwFZQBXcFEkiUH8ZA3/i8qViPG1FqY0+IWG4z0LaI2vOBwgJuGp11jWkCc8Sth
-	gstg==
+	h=date:from:to:cc:subject:message-id:references:mime-version
+	:content-disposition:in-reply-to:user-agent;
+	bh=vroE1oFvIVAOkYkzVEGaFRhT8EVsoWw1p0IOdVMvH8Y=;
+	b=Z64pIX8ugF9iLfRkMGXmlZOi2dHtr07CjLxmR1SrUGt5MfE0xHcapgbpmXuqQCGI0u
+	aclfYhWhs/yto5sgcuQlIPZKFde5uCpVdJjsN4rBT6f3rFBG7ak2xE9os77UX2apZs1a
+	JvEin2QUBa6EA4qOpbBykKtIgzRdNYQIpmBd3x0CoVmbtGe0eqPRmA4io6/n98Q7cntS
+	TCVhHROME/kBKp76uaOy9c71aTDZtL9PETyNP1Q1q0cxBirfjd8CI+JX56t7XN4OO02+
+	IyBTsL3/kKw751N0PjMCoXUTWHSZ6sJBz19N36CBOBpdJdghk8WD0LG6xqXlSSpUcC7u
+	0Zeg==
+Date: Mon, 11 Apr 2016 09:51:43 -0700
+From: Brian Norris <computersforpeace@gmail.com>
+Message-ID: <20160411165143.GA15308@localhost>
+References: <20160322204034.GA96488@google.com>
 MIME-Version: 1.0
-From: Ira McDonald <blueroofmusic@gmail.com>
-Date: Mon, 11 Apr 2016 08:33:45 -0400
-Message-ID: <CAN40gSuRFFrVQ_4jSiyAuNTy6836o=5pJh1dRwo1G84X-_KWTg@mail.gmail.com>
-Content-Type: multipart/alternative; boundary=001a11c1d3429930d1053034c26e
-Subject: [Printing-architecture] OP Minutes (5 April 2016)
+Content-Type: text/plain; charset=us-ascii
+Content-Disposition: inline
+In-Reply-To: <20160322204034.GA96488@google.com>
+Subject: Re: [Printing-architecture] [cups-filters] using cups-browsed for
+	DNS-SD/IPP discovery
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>,
@@ -23,177 +28,74 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>, Till Kamppeter <till.kamppeter@gmail.com>, Ira McDonald <blueroofmusic@gmail.com>
+To: printing-architecture@lists.linux-foundation.org
+Cc: till.kamppeter@gmail.com
 
---001a11c1d3429930d1053034c26e
-Content-Type: text/plain; charset=UTF-8
+Ping? Should I just file a bug for these sort of questions?
 
-Hi,
-
-Minutes from last week's Open Printing call are posted at:
-
-  http://ftp.pwg.org/pub/pwg/openprinting/minutes/OP-Minutes-20160405.htm
-
-
-Action Items:
-
-None
-
-
-Next OP US/Europe/Brazil Conference Calls:
-
-(1) May 2016 - US/Europe/Brazil - OP Monthly Meeting
-    - Tuesday 10 May 2015, Daytime
-      - US
-        9am in San Francisco - US PDT (Pacific Daylight Time)
-        10am in Colorado - US MDT (Mountain Daylight Time)
-        11am in Chicago - US CDT (Central Daylight Time)
-        12pm in New York - US EDT (Eastern Daylight Time)
-      - Europe
-        6pm in Berlin - CEST (Central Europe Summer Time)
-      - Brazil
-        1pm in Belo Horizonte - BRT (Brasilia Time)
-
-    US:  +1 641-715-3814 - NEW NUMBER in US started in November 2015
-    Germany:  +49 (0) 221 98203421
-    Brazil:  +55 61 4040-4460
-    Japan:  +81 (0) 3-5050-5070
-    Participant Access Code:  622393#
-
-    (note that local numbers for many other countries are available,
-    also cellphone apps, VOIP support, etc. - please email Till for
-    details)
-
-(2) June 2016 - US/Europe/Brazil - OP Monthly Meeting (tentative)
-    - Tuesday 7 June 2015, Daytime
-      - US
-        9am in San Francisco - US PDT (Pacific Daylight Time)
-        10am in Colorado - US MDT (Mountain Daylight Time)
-        11am in Chicago - US CDT (Central Daylight Time)
-        12pm in New York - US EDT (Eastern Daylight Time)
-      - Europe
-        6pm in Berlin - CEST (Central Europe Summer Time)
-      - Brazil
-        1pm in Belo Horizonte - BRT (Brasilia Time)
-
-    US:  +1 641-715-3814 - NEW NUMBER in US started in November 2015
-    Germany:  +49 (0) 221 98203421
-    Brazil:  +55 61 4040-4460
-    Japan:  +81 (0) 3-5050-5070
-    Participant Access Code:  622393#
-
-    (note that local numbers for many other countries are available,
-    also cellphone apps, VOIP support, etc. - please email Till for
-    details)
-
-Cheers,
-- Ira
-
-
-Ira McDonald (Musician / Software Architect)
-Co-Chair - TCG Trusted Mobility Solutions WG
-Chair - Linux Foundation Open Printing WG
-Secretary - IEEE-ISTO Printer Working Group
-Co-Chair - IEEE-ISTO PWG Internet Printing Protocol WG
-IETF Designated Expert - IPP & Printer MIB
-Blue Roof Music / High North Inc
-http://sites.google.com/site/blueroofmusic
-http://sites.google.com/site/highnorthinc
-mailto: blueroofmusic@gmail.com
-Winter  579 Park Place  Saline, MI  48176  734-944-0094
-Summer  PO Box 221  Grand Marais, MI 49839  906-494-2434
-
---001a11c1d3429930d1053034c26e
-Content-Type: text/html; charset=UTF-8
-Content-Transfer-Encoding: quoted-printable
-
-<div dir=3D"ltr"><div><div><div><div><div>Hi, <br><br></div><div><span><spa=
-n><span><span><span><span><span><span><span><span><span><span><span><span><=
-span><span><span><span><span><span><span><span><span>Minutes</span></span><=
-/span></span></span></span></span></span></span></span></span></span></span=
-></span></span></span></span></span></span></span></span></span></span> fro=
-m last week&#39;s Open Printing<span> call</span> are <span><span><span><sp=
-an><span><span><span><span><span><span><span><span><span><span><span><span>=
-posted</span></span></span></span></span></span></span></span></span></span=
-></span></span></span></span></span></span> at:<br>
-
-
-
-
-
-
-
-
-
-
-
-
-<br>
-=C2=A0 <a href=3D"http://ftp.pwg.org/pub/pwg/openprinting/minutes/OP-Minute=
-s-20160405.htm" target=3D"_blank">http://ftp.pwg.org/pub/pwg/openprinting/m=
-inutes/OP-Minutes-20160405.htm</a><br>
-
-
-
-
-
-</div><div><br><br></div>
-Action Items:<br></div><br></div><div>None<br></div><br><br>Next <span><spa=
-n><span><span><span><span><span><span><span><span><span><span><span>OP</spa=
-n></span></span></span></span></span></span></span></span></span></span></s=
-pan></span> US/Europe/Brazil Conference Calls:<br><br>(1) May 2016 - US/Eur=
-ope/Brazil - OP Monthly Meeting<br>=C2=A0=C2=A0=C2=A0 - Tuesday 10 May 2015=
-, Daytime<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 - US<br>=C2=A0=C2=A0=C2=A0=C2=
-=A0=C2=A0=C2=A0=C2=A0 9am in San Francisco - US PDT (Pacific Daylight Time)=
-<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 10am in Colorado - US MDT (M=
-ountain Daylight Time)<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 11am i=
-n Chicago - US CDT (Central Daylight Time)<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=
-=A0=C2=A0=C2=A0 12pm in New York - US EDT (Eastern Daylight Time)<br>=C2=A0=
-=C2=A0=C2=A0=C2=A0=C2=A0 - Europe<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=
-=C2=A0 6pm in Berlin - CEST (Central Europe Summer Time)<br>=C2=A0=C2=A0=C2=
-=A0=C2=A0=C2=A0 - Brazil<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 1pm =
-in Belo Horizonte - BRT (Brasilia Time)<br><br>=C2=A0=C2=A0=C2=A0 US:=C2=A0=
- +1 641-715-3814 - NEW NUMBER in US started in November 2015<br>=C2=A0=C2=
-=A0=C2=A0 Germany:=C2=A0 +49 (0) 221 98203421<br>=C2=A0=C2=A0=C2=A0 Brazil:=
-=C2=A0 +55 61 4040-4460<br>=C2=A0=C2=A0=C2=A0 Japan:=C2=A0 +81 (0) 3-5050-5=
-070<br>=C2=A0=C2=A0=C2=A0 Participant Access Code:=C2=A0 622393#<br><br>=C2=
-=A0=C2=A0=C2=A0 (note that local numbers for many other countries are avail=
-able, <br>=C2=A0=C2=A0=C2=A0 also cellphone apps, VOIP support, etc. - plea=
-se email Till for <br>=C2=A0=C2=A0=C2=A0 details)<br><br>(2) June 2016 - US=
-/Europe/Brazil - OP Monthly Meeting (tentative)<br>=C2=A0=C2=A0=C2=A0 - Tue=
-sday 7 June 2015, Daytime<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 - US<br>=C2=A0=
-=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 9am in San Francisco - US PDT (Pacific=
- Daylight Time)<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 10am in Color=
-ado - US MDT (Mountain Daylight Time)<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=
-=A0=C2=A0 11am in Chicago - US CDT (Central Daylight Time)<br>=C2=A0=C2=A0=
-=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 12pm in New York - US EDT (Eastern Daylight =
-Time)<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 - Europe<br>=C2=A0=C2=A0=C2=A0=C2=
-=A0=C2=A0=C2=A0=C2=A0 6pm in Berlin - CEST (Central Europe Summer Time)<br>=
-=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 - Brazil<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=
-=C2=A0=C2=A0 1pm in Belo Horizonte - BRT (Brasilia Time)<br><br>=C2=A0=C2=
-=A0=C2=A0 US:=C2=A0 +1 641-715-3814 - NEW NUMBER in US started in November =
-2015<br>=C2=A0=C2=A0=C2=A0 Germany:=C2=A0 +49 (0) 221 98203421<br>=C2=A0=C2=
-=A0=C2=A0 Brazil:=C2=A0 +55 61 4040-4460<br>=C2=A0=C2=A0=C2=A0 Japan:=C2=A0=
- +81 (0) 3-5050-5070<br>=C2=A0=C2=A0=C2=A0 Participant Access Code:=C2=A0 6=
-22393#<br><br>=C2=A0=C2=A0=C2=A0 (note that local numbers for many other co=
-untries are available, <br>=C2=A0=C2=A0=C2=A0 also cellphone apps, VOIP sup=
-port, etc. - please email Till for <br>=C2=A0=C2=A0=C2=A0 details)<br><br><=
-/div>Cheers,<br></div>- Ira<br><br><div><div><br><div><div class=3D"gmail_s=
-ignature"><div dir=3D"ltr">Ira McDonald (Musician / Software Architect)<br>=
-Co-Chair - TCG Trusted Mobility Solutions WG<br>Chair - Linux Foundation Op=
-en Printing WG<br>Secretary - IEEE-ISTO Printer Working Group<br>Co-Chair -=
- IEEE-ISTO PWG Internet Printing Protocol WG<br>IETF Designated Expert - IP=
-P &amp; Printer MIB<br>Blue Roof Music / High North Inc<br><a style=3D"colo=
-r:rgb(51,51,255)" href=3D"http://sites.google.com/site/blueroofmusic" targe=
-t=3D"_blank">http://sites.google.com/site/blueroofmusic</a><br><a style=3D"=
-color:rgb(102,0,204)" href=3D"http://sites.google.com/site/highnorthinc" ta=
-rget=3D"_blank">http://sites.google.com/site/highnorthinc</a><br>mailto: <a=
- href=3D"mailto:blueroofmusic@gmail.com" target=3D"_blank">blueroofmusic@gm=
-ail.com</a><br>Winter=C2=A0 579 Park Place=C2=A0 Saline, MI=C2=A0 48176=C2=
-=A0 734-944-0094<br>Summer=C2=A0 PO Box 221=C2=A0 Grand Marais, MI 49839=C2=
-=A0 906-494-2434<br><br><div style=3D"display:inline"></div><div style=3D"d=
-isplay:inline"></div><div style=3D"display:inline"></div><div></div><div></=
-div><div></div><div></div></div></div></div>
-</div></div></div>
-
---001a11c1d3429930d1053034c26e--
+On Tue, Mar 22, 2016 at 01:40:34PM -0700, Brian Norris wrote:
+> Hi,
+> 
+> I'm looking at the features of cups-browsed to see if I would want to
+> use it for my purposes, and I ran across a really confusing piece of
+> logic in the source code:
+> 
+>     if (!pdl || pdl[0] == '\0' ||
+>         (!strcasestr(pdl, "application/postscript") &&
+>          !strcasestr(pdl, "application/pdf") &&
+>          !strcasestr(pdl, "image/pwg-raster") &&
+>          ((!strcasestr(pdl, "application/vnd.hp-PCL") &&
+>            !strcasestr(pdl, "application/PCL") &&
+>            !strcasestr(pdl, "application/x-pcl")) ||
+>           ((strncasecmp(make_model, "HP", 2) ||
+>             strncasecmp(make_model, "Hewlett Packard", 15) ||
+>             strncasecmp(make_model, "Hewlett-Packard", 15)) &&
+>            !strcasestr(make_model, "LaserJet") &&
+>            !strcasestr(make_model, "Mopier"))) &&
+>          !strcasestr(pdl, "application/vnd.hp-PCLXL"))) {
+>       debug_printf("cups-browsed: Cannot create remote printer %s (%s) as its PDLs are not known, ignoring this printer.\n",
+>                    p->name, p->uri);
+>       goto fail;
+>     }
+> 
+> First of all, can anyone explain exactly what the block about HP is
+> really supposed to be doing? I can't honestly figure it out.
+> 
+> But at any rate, I don't see how it could be correct. Particularly, this
+> clause is always true (at most one of the comparisons will return 0), so
+> why is it there?
+> 
+>            (strncasecmp(make_model, "HP", 2) ||
+>             strncasecmp(make_model, "Hewlett Packard", 15) ||
+>             strncasecmp(make_model, "Hewlett-Packard", 15))
+> 
+> Seems like at a minimum, this block should be corrected to actually
+> produce the status of "is this an HP model." e.g., does the following
+> diff make sense?
+> 
+> === modified file 'utils/cups-browsed.c'
+> --- utils/cups-browsed.c	2016-02-10 14:18:28 +0000
+> +++ utils/cups-browsed.c	2016-03-22 20:25:19 +0000
+> @@ -2784,8 +2784,8 @@
+>  	 ((!strcasestr(pdl, "application/vnd.hp-PCL") &&
+>  	   !strcasestr(pdl, "application/PCL") &&
+>  	   !strcasestr(pdl, "application/x-pcl")) ||
+> -	  ((strncasecmp(make_model, "HP", 2) ||
+> -	    strncasecmp(make_model, "Hewlett Packard", 15) ||
+> +	  ((strncasecmp(make_model, "HP", 2) &&
+> +	    strncasecmp(make_model, "Hewlett Packard", 15) &&
+>  	    strncasecmp(make_model, "Hewlett-Packard", 15)) &&
+>  	   !strcasestr(make_model, "LaserJet") &&
+>  	   !strcasestr(make_model, "Mopier"))) &&
+> 
+> But I still don't feel like that's really what's intended, so an answer
+> to my first question would be the most helpful.
+> 
+> Now, besides the correctness of this logic, is this aspect of the daemon
+> something that people regularly use? I see that it's installed on many
+> Linux distributions, but it seems like it isn't really exercised for
+> Bonjour/DNS-SD discovery unless someone modifies the default
+> cups-browsed.conf to have 'CreateIPPPrinterQueues Yes'.
+> 
+> Regards,
+> Brian
