@@ -1,7 +1,15 @@
-Return-Path: <marius.predut@intel.com>
-From: "Predut, Marius" <marius.predut@intel.com>
-Date: Mon, 9 May 2016 11:31:14 +0000
-Message-ID: <0E2B2CA4D522C14FBE8646D789EF72A01C54FE44@IRSMSX103.ger.corp.intel.com>
+Return-Path: <blueroofmusic@gmail.com>
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20120113;
+	h=mime-version:in-reply-to:references:from:date:message-id:subject:to
+	:cc; bh=R5KzlZbn7BCcyjJzGbC0rBDEo3y1qFlh5IYYJjMcbhY=;
+	b=bAsLvQi4/Fuo8CyDMQewj/I0MTHLA5R1z6XFuXIuR7sy0Chj97/wCewCUdey/fgStE
+	55dzTFZmUrPuI0v01q7AgqpStm42OB8ZtwG1b19SPJtiWgWby+s9PQ3bpgc7ZTT04q3w
+	lp/URvA974KZsD/maixC6jr2jO5eH9QzS2og4jn1J7X/0hDqdIsH3yOZOlPfcjPud2Ro
+	3OayYwY7AFzmEP+fyq9NSCL06RKIzjbi/2AP2znkxKOMjQ80B1gdwikYDNI2hfFtrRSR
+	P0Wh+DzCe/D1S25JismxpqhhSZow3XmpsFDAoEYUhcgT2kEiEkWJw34Dzfg08fpJ8oBC
+	Yzcg==
+MIME-Version: 1.0
+In-Reply-To: <0E2B2CA4D522C14FBE8646D789EF72A01C54FE44@IRSMSX103.ger.corp.intel.com>
 References: <0E2B2CA4D522C14FBE8646D789EF72A01C53EB99@IRSMSX104.ger.corp.intel.com>
 	<alpine.LNX.2.00.1605041044230.19729@nelson.suse.de>
 	<0E2B2CA4D522C14FBE8646D789EF72A01C54D6C1@IRSMSX103.ger.corp.intel.com>
@@ -10,11 +18,11 @@ References: <0E2B2CA4D522C14FBE8646D789EF72A01C53EB99@IRSMSX104.ger.corp.intel.c
 	<alpine.LNX.2.00.1605091023180.24937@nelson.suse.de>
 	<0E2B2CA4D522C14FBE8646D789EF72A01C54FD8C@IRSMSX103.ger.corp.intel.com>
 	<CAN40gStysaS6PjoE9zDrCchFDXvk7evfVc-euD0EaTn89Hamzw@mail.gmail.com>
-In-Reply-To: <CAN40gStysaS6PjoE9zDrCchFDXvk7evfVc-euD0EaTn89Hamzw@mail.gmail.com>
-Content-Language: en-US
-Content-Type: multipart/alternative;
-	boundary="_000_0E2B2CA4D522C14FBE8646D789EF72A01C54FE44IRSMSX103gercor_"
-MIME-Version: 1.0
+	<0E2B2CA4D522C14FBE8646D789EF72A01C54FE44@IRSMSX103.ger.corp.intel.com>
+From: Ira McDonald <blueroofmusic@gmail.com>
+Date: Mon, 9 May 2016 07:49:58 -0400
+Message-ID: <CAN40gSuZPQv3furaXZveYhmjs+Hf3twFOqyRC22+P6z3LVk1wA@mail.gmail.com>
+Content-Type: multipart/alternative; boundary=94eb2c09b1949903ef05326769d7
 Subject: Re: [Printing-architecture] snmp - average-toner-coverage per page
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
@@ -25,268 +33,444 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Ira McDonald <blueroofmusic@gmail.com>
+To: "Predut, Marius" <marius.predut@intel.com>, Ira McDonald <blueroofmusic@gmail.com>
 Cc: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>
 
---_000_0E2B2CA4D522C14FBE8646D789EF72A01C54FE44IRSMSX103gercor_
-Content-Type: text/plain; charset="utf-8"
-Content-Transfer-Encoding: base64
+--94eb2c09b1949903ef05326769d7
+Content-Type: text/plain; charset=UTF-8
 
-SGkgSXJhLA0KDQpIbW0gLiB0aGFua3MgZm9yIHRoaXMgY2xhcmlmaWNhdGlvbiA6DQpBbHNvIEkg
-c3VwcG9zZWQgIGdldHRpbmcgdGhlIHByaW50aW5nIHN0cmVhbSBkaXJlY3RseSBmcm9tIHByaW50
-ZXIgYnkgUExDL1BKTCBvciBTTk1QIG9yIG90aGVyIGNoYW5uZWwgaXMgbm90IHBvc3NpYmxlLg0K
-QnV0IHNvbWUgY291bnRlcnMgdGhhdCByZWZlciB0byB0aGUgZWZmZWN0aXZlIGFyZWEgcHJpbnRl
-ZCBjYW4gYmUgcXVlcmllZCBzb21laG93Pw0KDQpUaGFua3MNCm1hcml1cw0KDQpGcm9tOiBJcmEg
-TWNEb25hbGQgW21haWx0bzpibHVlcm9vZm11c2ljQGdtYWlsLmNvbV0NClNlbnQ6IE1vbmRheSwg
-TWF5IDA5LCAyMDE2IDE6NTQgUE0NClRvOiBQcmVkdXQsIE1hcml1czsgSXJhIE1jRG9uYWxkDQpD
-YzogSm9oYW5uZXMgTWVpeG5lcjsgcHJpbnRpbmctYXJjaGl0ZWN0dXJlQGxpc3RzLmxpbnV4LWZv
-dW5kYXRpb24ub3JnDQpTdWJqZWN0OiBSZTogW1ByaW50aW5nLWFyY2hpdGVjdHVyZV0gc25tcCAt
-IGF2ZXJhZ2UtdG9uZXItY292ZXJhZ2UgcGVyIHBhZ2UNCg0KSGksDQpTcGVha2luZyBhcyB0aGUg
-cHJpbWFyeSBlZGl0b3Igb2YgSUVURiBQcmludGVyIE1JQiB2MiAoUkZDIDM4MDUpOg0KQ291bnRl
-ciB1bml0cyBpbiB0aGUgUHJpbnRlciBNSUIgYXJlIGRldGVybWluZWQgYnkgdGhlIGltcGxlbWVu
-dGF0aW9uDQphbmQgY2Fubm90IGJlIGNoYW5nZWQgcmVtb3RlbHkuDQpFdmVyIHNpbmNlIElFVEYg
-UHJpbnRlciBNSUIgdjEgKFJGQyAxNzU5KSwgaXQgaGFzIGJlZW4gdHJ1ZSB0aGF0IGEgZ2l2ZW4N
-ClByaW50ZXIgY2FuIHVwZGF0ZSB3b3JrIGNvdW50ZXJzIHdoZW5ldmVyIHRoZSBpbXBsZW1lbnRh
-dGlvbiBjaG9vc2VzDQooZm9yIGV4YW1wbGUsIG9ubHkgYXQgdGhlIGNvbXBsZXRpb24gb2YgYW4g
-ZW50aXJlIGpvYikuICBUaGVyZSBoYXMgbmV2ZXINCmJlZW4gYSByZXF1aXJlbWVudCB0aGF0IGEg
-UHJpbnRlciBtdXN0IHVwZGF0ZSB3b3JrIGNvdW50ZXJzIGF0IGV2ZXJ5DQpwYWdlLg0KU2ltcGx5
-IHB1dCAtIHlvdSBjYW4ndCBnZXQgdGhlcmUgZnJvbSBoZXJlLg0KQ2hlZXJzLA0KLSBJcmENCg0K
-SXJhIE1jRG9uYWxkIChNdXNpY2lhbiAvIFNvZnR3YXJlIEFyY2hpdGVjdCkNCkNvLUNoYWlyIC0g
-VENHIFRydXN0ZWQgTW9iaWxpdHkgU29sdXRpb25zIFdHDQpDaGFpciAtIExpbnV4IEZvdW5kYXRp
-b24gT3BlbiBQcmludGluZyBXRw0KU2VjcmV0YXJ5IC0gSUVFRS1JU1RPIFByaW50ZXIgV29ya2lu
-ZyBHcm91cA0KQ28tQ2hhaXIgLSBJRUVFLUlTVE8gUFdHIEludGVybmV0IFByaW50aW5nIFByb3Rv
-Y29sIFdHDQpJRVRGIERlc2lnbmF0ZWQgRXhwZXJ0IC0gSVBQICYgUHJpbnRlciBNSUINCkJsdWUg
-Um9vZiBNdXNpYyAvIEhpZ2ggTm9ydGggSW5jDQpodHRwOi8vc2l0ZXMuZ29vZ2xlLmNvbS9zaXRl
-L2JsdWVyb29mbXVzaWMNCmh0dHA6Ly9zaXRlcy5nb29nbGUuY29tL3NpdGUvaGlnaG5vcnRoaW5j
-DQptYWlsdG86IGJsdWVyb29mbXVzaWNAZ21haWwuY29tPG1haWx0bzpibHVlcm9vZm11c2ljQGdt
-YWlsLmNvbT4NCldpbnRlciAgNTc5IFBhcmsgUGxhY2UgIFNhbGluZSwgTUkgIDQ4MTc2ICA3MzQt
-OTQ0LTAwOTQNClN1bW1lciAgUE8gQm94IDIyMSAgR3JhbmQgTWFyYWlzLCBNSSA0OTgzOSAgOTA2
-LTQ5NC0yNDM0DQoNCk9uIE1vbiwgTWF5IDksIDIwMTYgYXQgNTo0MiBBTSwgUHJlZHV0LCBNYXJp
-dXMgPG1hcml1cy5wcmVkdXRAaW50ZWwuY29tPG1haWx0bzptYXJpdXMucHJlZHV0QGludGVsLmNv
-bT4+IHdyb3RlOg0KPiAtLS0tLU9yaWdpbmFsIE1lc3NhZ2UtLS0tLQ0KPiBGcm9tOiBKb2hhbm5l
-cyBNZWl4bmVyIFttYWlsdG86anNtZWl4QHN1c2UuZGU8bWFpbHRvOmpzbWVpeEBzdXNlLmRlPl0N
-Cj4gU2VudDogTW9uZGF5LCBNYXkgMDksIDIwMTYgMTE6NDAgQU0NCj4gVG86IFByZWR1dCwgTWFy
-aXVzDQo+IENjOiBwcmludGluZy1hcmNoaXRlY3R1cmVAbGlzdHMubGludXgtZm91bmRhdGlvbi5v
-cmc8bWFpbHRvOnByaW50aW5nLWFyY2hpdGVjdHVyZUBsaXN0cy5saW51eC1mb3VuZGF0aW9uLm9y
-Zz4NCj4gU3ViamVjdDogUkU6IFtQcmludGluZy1hcmNoaXRlY3R1cmVdIHNubXAgLSBhdmVyYWdl
-LXRvbmVyLWNvdmVyYWdlIHBlciBwYWdlDQo+DQo+DQo+IEhlbGxvLA0KPg0KPiBPbiBNYXkgNSAy
-MDo1MyBQcmVkdXQsIE1hcml1cyB3cm90ZSAoZXhjZXJwdCk6DQo+ID4+Pj4gNC4gR2V0IHRoZSBQ
-b3N0U2NyaXB0IHN0cmVhbSB3aGlsZSBwcmludCBqb2IgZmlsdGVyaW5nDQo+ID4+Pj4gICAgIGFu
-ZCBhbmFseXplIGl0Lg0KPiAuLi4NCj4gPiBJIGRvbid0IGhhdmUgYWNjZXNzIHRvIHRoZSBkb2N1
-bWVudCBzZW50IGZvciBwcmludA0KPg0KPiBUaGVuIHlvdSBjYW5ub3QgYW5hbHl6ZSB0aGUgUG9z
-dFNjcmlwdCBzdHJlYW0uDQo+DQo+ID4gSSBuZWVkIGEgc29sdXRpb24gdG8gcXVlcnkgdGhlIGNv
-dW50ZXIgcHJpbnRlciBhbmQgY29tcG91bmQgc29tZWhvdw0KPiA+IHRoZSB3YW50ZWQgdmFsdWUg
-KGFuIGVzdGltYXRlIHRvbmVyIHNwZW50IGZvciBwYWdlKSBGb3IgZXhhbXBsZSBpZiBJDQo+ID4g
-a25vdyBlZmZlY3RpdmUgYXJlYSBwcmludGVkIG9uIGEgcGFnZSBJIGNhbiBlc3RpbWF0ZSB0aGUg
-Y292ZXJhZ2UNCj4gPiBwZXJjZW50Lg0KPiA+IFRoZSBwcmludGVyICBoYXZlIGFuIElQIGFkZHJl
-c3MuDQo+ID4NCj4gPiBTbywgZG8geW91IGhhdmUvc2VlIG90aGVyIHNvbHV0aW9uIGhlcmUgPw0K
-Pg0KPiBJIGFtIGFmcmFpZCwgSSBkbyBub3Qgc2VlIGFub3RoZXIgc29sdXRpb24gZXhjZXB0IHRv
-IHF1ZXJ5IHRoZSBuZXR3b3JrDQo+IHByaW50ZXIgaXRzZWxmIHZpYSBTTk1QLg0KPg0KPiBJIHRo
-aW5rIHdoZW4geW91IGNhbiBvbmx5IGFjY2VzcyBhIG5ldHdvcmsgcHJpbnRlciBpdHNlbGYsIHlv
-dSBjYW4gb25seSBxdWVyeQ0KPiBpdHMgaW50ZXJuYWwgY291bnRlcnMvdmFsdWVzIHZpYSBTTk1Q
-Lg0KPg0KPiBJIGRvIG5vdCBrbm93IGlmIHVzdWFsIG5ldHdvcmsgcHJpbnRlcnMgbWFpbnRhaW4g
-YW4gaW50ZXJuYWwgY291bnRlci92YWx1ZQ0KPiB0aGF0IGNhbiBiZSB1c2VkIHRvIGNhbGN1bGF0
-ZSB0aGUgYXZlcmFnZSB0b25lci1jb3ZlcmFnZSBwZXIgcGFnZS4NCk9uZSBpZGVhIGNhbiBiZSB0
-byBjb3VudHMgcGl4ZWxzIG9uIGVhY2ggcGFnZSwNCmRpdmlkZXMgcGl4ZWwgY291bnQgYnkgcGl4
-ZWxzIHBvc3NpYmxlIG9uIGEgcGFnZSB0byBnaXZlIHRoZSBwZXJjZW50YWdlIG9mIGNvdmVyYWdl
-LA0KIGFuZCBrZWVwcyBhIHJvbGxpbmcgYXZlcmFnZSBwZXJjZW50IHdlaWdodGVkIGJ5IGFyZWEg
-cHJpbnRlZC4NCkJ1dCBJIGRvbid0IGtub3cgaWYgU05NUCBjYW4gZ2l2ZSBtZSB0aGlzIGNvdW50
-ZXJzLg0KVGhpcyBwcmludGVyIFJGQyAgaHR0cHM6Ly90b29scy5pZXRmLm9yZy9odG1sL3JmYzM4
-MDUNCkRvbid0IGhlbHAgbWUgdG9vIG11Y2guDQooT0lEUyB0aGF0IGNhbiBiZSBpbnRlcmVzdGlu
-ZyBpbiB0aGlzIGNvbnRleHQgOiBzb21laG93IHRoaXMgT0lEUyBjYW4gYmUgdXNlZCA6IHBydE1h
-cmtlclN1cHBsaWVzR3JvdXAgcHJ0TWFya2VyQ291bnRlclVuaXQgcHJ0TWFya2VyTGlmZUNvdW50
-DQpCdXQgSSBkb24ndCBrbm93IGhvdyB0byBkZWFsIHdpdGgpDQo+DQo+IE9ubHkgRllJOg0KPiBG
-b3Igc29tZSBwb3NzaWJsZSBpc3N1ZXMgdGhhdCBJIG5vdGljZWQgcmVnYXJkaW5nIFNOTVAgd2l0
-aCBuZXR3b3JrDQo+IHByaW50ZXJzLCB5b3UgbWF5IGhhdmUgYSBsb29rIGF0DQo+IGh0dHBzOi8v
-ZW4ub3BlbnN1c2Uub3JnL1NEQjpQcmludGVyX0FjY291bnRpbmcNCj4NCj4NCj4gS2luZCBSZWdh
-cmRzDQo+IEpvaGFubmVzIE1laXhuZXINCj4gLS0NCj4gU1VTRSBMSU5VWCBHbWJIIC0gR0Y6IEZl
-bGl4IEltZW5kb2VyZmZlciwgSmFuZSBTbWl0aGFyZCwgR3JhaGFtIE5vcnRvbiAtDQo+IEhSQiAy
-MTI4NCAoQUcgTnVlcm5iZXJnKQ0KDQpfX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19f
-X19fX19fX19fX19fXw0KUHJpbnRpbmctYXJjaGl0ZWN0dXJlIG1haWxpbmcgbGlzdA0KUHJpbnRp
-bmctYXJjaGl0ZWN0dXJlQGxpc3RzLmxpbnV4LWZvdW5kYXRpb24ub3JnPG1haWx0bzpQcmludGlu
-Zy1hcmNoaXRlY3R1cmVAbGlzdHMubGludXgtZm91bmRhdGlvbi5vcmc+DQpodHRwczovL2xpc3Rz
-LmxpbnV4Zm91bmRhdGlvbi5vcmcvbWFpbG1hbi9saXN0aW5mby9wcmludGluZy1hcmNoaXRlY3R1
-cmUNCg0K
+Hi Marius,
 
---_000_0E2B2CA4D522C14FBE8646D789EF72A01C54FE44IRSMSX103gercor_
-Content-Type: text/html; charset="utf-8"
-Content-Transfer-Encoding: base64
+If the printer supports IPP (Internet Printing Protocol) - over 99% of all
+new
+network printers do so - then it's a security violation to retrieve the
+document
+content from the printer.  But neither IPP nor the standard PWG Counter MIB
+will let you determine coverage for an individual print job.
 
-PGh0bWwgeG1sbnM6dj0idXJuOnNjaGVtYXMtbWljcm9zb2Z0LWNvbTp2bWwiIHhtbG5zOm89InVy
-bjpzY2hlbWFzLW1pY3Jvc29mdC1jb206b2ZmaWNlOm9mZmljZSIgeG1sbnM6dz0idXJuOnNjaGVt
-YXMtbWljcm9zb2Z0LWNvbTpvZmZpY2U6d29yZCIgeG1sbnM6bT0iaHR0cDovL3NjaGVtYXMubWlj
-cm9zb2Z0LmNvbS9vZmZpY2UvMjAwNC8xMi9vbW1sIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcv
-VFIvUkVDLWh0bWw0MCI+DQo8aGVhZD4NCjxtZXRhIGh0dHAtZXF1aXY9IkNvbnRlbnQtVHlwZSIg
-Y29udGVudD0idGV4dC9odG1sOyBjaGFyc2V0PXV0Zi04Ij4NCjxtZXRhIG5hbWU9IkdlbmVyYXRv
-ciIgY29udGVudD0iTWljcm9zb2Z0IFdvcmQgMTQgKGZpbHRlcmVkIG1lZGl1bSkiPg0KPHN0eWxl
-PjwhLS0NCi8qIEZvbnQgRGVmaW5pdGlvbnMgKi8NCkBmb250LWZhY2UNCgl7Zm9udC1mYW1pbHk6
-Q2FsaWJyaTsNCglwYW5vc2UtMToyIDE1IDUgMiAyIDIgNCAzIDIgNDt9DQpAZm9udC1mYWNlDQoJ
-e2ZvbnQtZmFtaWx5OlRhaG9tYTsNCglwYW5vc2UtMToyIDExIDYgNCAzIDUgNCA0IDIgNDt9DQov
-KiBTdHlsZSBEZWZpbml0aW9ucyAqLw0KcC5Nc29Ob3JtYWwsIGxpLk1zb05vcm1hbCwgZGl2Lk1z
-b05vcm1hbA0KCXttYXJnaW46MGluOw0KCW1hcmdpbi1ib3R0b206LjAwMDFwdDsNCglmb250LXNp
-emU6MTIuMHB0Ow0KCWZvbnQtZmFtaWx5OiJUaW1lcyBOZXcgUm9tYW4iLCJzZXJpZiI7fQ0KYTps
-aW5rLCBzcGFuLk1zb0h5cGVybGluaw0KCXttc28tc3R5bGUtcHJpb3JpdHk6OTk7DQoJY29sb3I6
-Ymx1ZTsNCgl0ZXh0LWRlY29yYXRpb246dW5kZXJsaW5lO30NCmE6dmlzaXRlZCwgc3Bhbi5Nc29I
-eXBlcmxpbmtGb2xsb3dlZA0KCXttc28tc3R5bGUtcHJpb3JpdHk6OTk7DQoJY29sb3I6cHVycGxl
-Ow0KCXRleHQtZGVjb3JhdGlvbjp1bmRlcmxpbmU7fQ0Kc3Bhbi5FbWFpbFN0eWxlMTcNCgl7bXNv
-LXN0eWxlLXR5cGU6cGVyc29uYWwtcmVwbHk7DQoJZm9udC1mYW1pbHk6IkNhbGlicmkiLCJzYW5z
-LXNlcmlmIjsNCgljb2xvcjojMUY0OTdEO30NCi5Nc29DaHBEZWZhdWx0DQoJe21zby1zdHlsZS10
-eXBlOmV4cG9ydC1vbmx5Ow0KCWZvbnQtZmFtaWx5OiJDYWxpYnJpIiwic2Fucy1zZXJpZiI7fQ0K
-QHBhZ2UgV29yZFNlY3Rpb24xDQoJe3NpemU6OC41aW4gMTEuMGluOw0KCW1hcmdpbjoxLjBpbiAx
-LjBpbiAxLjBpbiAxLjBpbjt9DQpkaXYuV29yZFNlY3Rpb24xDQoJe3BhZ2U6V29yZFNlY3Rpb24x
-O30NCi0tPjwvc3R5bGU+PCEtLVtpZiBndGUgbXNvIDldPjx4bWw+DQo8bzpzaGFwZWRlZmF1bHRz
-IHY6ZXh0PSJlZGl0IiBzcGlkbWF4PSIxMDI2IiAvPg0KPC94bWw+PCFbZW5kaWZdLS0+PCEtLVtp
-ZiBndGUgbXNvIDldPjx4bWw+DQo8bzpzaGFwZWxheW91dCB2OmV4dD0iZWRpdCI+DQo8bzppZG1h
-cCB2OmV4dD0iZWRpdCIgZGF0YT0iMSIgLz4NCjwvbzpzaGFwZWxheW91dD48L3htbD48IVtlbmRp
-Zl0tLT4NCjwvaGVhZD4NCjxib2R5IGxhbmc9IkVOLVVTIiBsaW5rPSJibHVlIiB2bGluaz0icHVy
-cGxlIj4NCjxkaXYgY2xhc3M9IldvcmRTZWN0aW9uMSI+DQo8cCBjbGFzcz0iTXNvTm9ybWFsIj48
-c3BhbiBzdHlsZT0iZm9udC1zaXplOjExLjBwdDtmb250LWZhbWlseTomcXVvdDtDYWxpYnJpJnF1
-b3Q7LCZxdW90O3NhbnMtc2VyaWYmcXVvdDs7Y29sb3I6IzFGNDk3RCI+SGkgSXJhLDxvOnA+PC9v
-OnA+PC9zcGFuPjwvcD4NCjxwIGNsYXNzPSJNc29Ob3JtYWwiPjxzcGFuIHN0eWxlPSJmb250LXNp
-emU6MTEuMHB0O2ZvbnQtZmFtaWx5OiZxdW90O0NhbGlicmkmcXVvdDssJnF1b3Q7c2Fucy1zZXJp
-ZiZxdW90Oztjb2xvcjojMUY0OTdEIj48bzpwPiZuYnNwOzwvbzpwPjwvc3Bhbj48L3A+DQo8cCBj
-bGFzcz0iTXNvTm9ybWFsIj48c3BhbiBzdHlsZT0iZm9udC1zaXplOjExLjBwdDtmb250LWZhbWls
-eTomcXVvdDtDYWxpYnJpJnF1b3Q7LCZxdW90O3NhbnMtc2VyaWYmcXVvdDs7Y29sb3I6IzFGNDk3
-RCI+SG1tIC4gdGhhbmtzIGZvciB0aGlzIGNsYXJpZmljYXRpb24gOjxvOnA+PC9vOnA+PC9zcGFu
-PjwvcD4NCjxwIGNsYXNzPSJNc29Ob3JtYWwiPjxzcGFuIHN0eWxlPSJmb250LXNpemU6MTEuMHB0
-O2ZvbnQtZmFtaWx5OiZxdW90O0NhbGlicmkmcXVvdDssJnF1b3Q7c2Fucy1zZXJpZiZxdW90Oztj
-b2xvcjojMUY0OTdEIj5BbHNvIEkgc3VwcG9zZWQgJm5ic3A7Z2V0dGluZyB0aGUgcHJpbnRpbmcg
-c3RyZWFtIGRpcmVjdGx5IGZyb20gcHJpbnRlciBieSBQTEMvUEpMIG9yIFNOTVAgb3Igb3RoZXIg
-Y2hhbm5lbCBpcyBub3QgcG9zc2libGUuPG86cD48L286cD48L3NwYW4+PC9wPg0KPHAgY2xhc3M9
-Ik1zb05vcm1hbCI+PHNwYW4gc3R5bGU9ImZvbnQtc2l6ZToxMS4wcHQ7Zm9udC1mYW1pbHk6JnF1
-b3Q7Q2FsaWJyaSZxdW90OywmcXVvdDtzYW5zLXNlcmlmJnF1b3Q7O2NvbG9yOiMxRjQ5N0QiPkJ1
-dCBzb21lIGNvdW50ZXJzIHRoYXQgcmVmZXIgdG8gdGhlIGVmZmVjdGl2ZSBhcmVhIHByaW50ZWQg
-Y2FuIGJlIHF1ZXJpZWQgc29tZWhvdz88bzpwPjwvbzpwPjwvc3Bhbj48L3A+DQo8cCBjbGFzcz0i
-TXNvTm9ybWFsIj48c3BhbiBzdHlsZT0iZm9udC1zaXplOjExLjBwdDtmb250LWZhbWlseTomcXVv
-dDtDYWxpYnJpJnF1b3Q7LCZxdW90O3NhbnMtc2VyaWYmcXVvdDs7Y29sb3I6IzFGNDk3RCI+PG86
-cD4mbmJzcDs8L286cD48L3NwYW4+PC9wPg0KPHAgY2xhc3M9Ik1zb05vcm1hbCI+PHNwYW4gc3R5
-bGU9ImZvbnQtc2l6ZToxMS4wcHQ7Zm9udC1mYW1pbHk6JnF1b3Q7Q2FsaWJyaSZxdW90OywmcXVv
-dDtzYW5zLXNlcmlmJnF1b3Q7O2NvbG9yOiMxRjQ5N0QiPlRoYW5rczxvOnA+PC9vOnA+PC9zcGFu
-PjwvcD4NCjxwIGNsYXNzPSJNc29Ob3JtYWwiPjxzcGFuIHN0eWxlPSJmb250LXNpemU6MTEuMHB0
-O2ZvbnQtZmFtaWx5OiZxdW90O0NhbGlicmkmcXVvdDssJnF1b3Q7c2Fucy1zZXJpZiZxdW90Oztj
-b2xvcjojMUY0OTdEIj5tYXJpdXM8bzpwPjwvbzpwPjwvc3Bhbj48L3A+DQo8cCBjbGFzcz0iTXNv
-Tm9ybWFsIj48c3BhbiBzdHlsZT0iZm9udC1zaXplOjExLjBwdDtmb250LWZhbWlseTomcXVvdDtD
-YWxpYnJpJnF1b3Q7LCZxdW90O3NhbnMtc2VyaWYmcXVvdDs7Y29sb3I6IzFGNDk3RCI+PG86cD4m
-bmJzcDs8L286cD48L3NwYW4+PC9wPg0KPGRpdiBzdHlsZT0iYm9yZGVyOm5vbmU7Ym9yZGVyLWxl
-ZnQ6c29saWQgYmx1ZSAxLjVwdDtwYWRkaW5nOjBpbiAwaW4gMGluIDQuMHB0Ij4NCjxkaXY+DQo8
-ZGl2IHN0eWxlPSJib3JkZXI6bm9uZTtib3JkZXItdG9wOnNvbGlkICNCNUM0REYgMS4wcHQ7cGFk
-ZGluZzozLjBwdCAwaW4gMGluIDBpbiI+DQo8cCBjbGFzcz0iTXNvTm9ybWFsIj48YSBuYW1lPSJf
-X19fX3JlcGx5c2VwYXJhdG9yIj48L2E+PGI+PHNwYW4gc3R5bGU9ImZvbnQtc2l6ZToxMC4wcHQ7
-Zm9udC1mYW1pbHk6JnF1b3Q7VGFob21hJnF1b3Q7LCZxdW90O3NhbnMtc2VyaWYmcXVvdDsiPkZy
-b206PC9zcGFuPjwvYj48c3BhbiBzdHlsZT0iZm9udC1zaXplOjEwLjBwdDtmb250LWZhbWlseTom
-cXVvdDtUYWhvbWEmcXVvdDssJnF1b3Q7c2Fucy1zZXJpZiZxdW90OyI+IElyYSBNY0RvbmFsZCBb
-bWFpbHRvOmJsdWVyb29mbXVzaWNAZ21haWwuY29tXQ0KPGJyPg0KPGI+U2VudDo8L2I+IE1vbmRh
-eSwgTWF5IDA5LCAyMDE2IDE6NTQgUE08YnI+DQo8Yj5Ubzo8L2I+IFByZWR1dCwgTWFyaXVzOyBJ
-cmEgTWNEb25hbGQ8YnI+DQo8Yj5DYzo8L2I+IEpvaGFubmVzIE1laXhuZXI7IHByaW50aW5nLWFy
-Y2hpdGVjdHVyZUBsaXN0cy5saW51eC1mb3VuZGF0aW9uLm9yZzxicj4NCjxiPlN1YmplY3Q6PC9i
-PiBSZTogW1ByaW50aW5nLWFyY2hpdGVjdHVyZV0gc25tcCAtIGF2ZXJhZ2UtdG9uZXItY292ZXJh
-Z2UgcGVyIHBhZ2U8bzpwPjwvbzpwPjwvc3Bhbj48L3A+DQo8L2Rpdj4NCjwvZGl2Pg0KPHAgY2xh
-c3M9Ik1zb05vcm1hbCI+PG86cD4mbmJzcDs8L286cD48L3A+DQo8ZGl2Pg0KPGRpdj4NCjxkaXY+
-DQo8ZGl2Pg0KPGRpdj4NCjxkaXY+DQo8ZGl2Pg0KPGRpdj4NCjxkaXY+DQo8ZGl2Pg0KPGRpdj4N
-CjxkaXY+DQo8cCBjbGFzcz0iTXNvTm9ybWFsIiBzdHlsZT0ibWFyZ2luLWJvdHRvbToxMi4wcHQi
-PkhpLDxvOnA+PC9vOnA+PC9wPg0KPC9kaXY+DQo8cCBjbGFzcz0iTXNvTm9ybWFsIiBzdHlsZT0i
-bWFyZ2luLWJvdHRvbToxMi4wcHQiPlNwZWFraW5nIGFzIHRoZSBwcmltYXJ5IGVkaXRvciBvZiBJ
-RVRGIFByaW50ZXIgTUlCIHYyIChSRkMgMzgwNSk6PG86cD48L286cD48L3A+DQo8L2Rpdj4NCjxw
-IGNsYXNzPSJNc29Ob3JtYWwiPkNvdW50ZXIgdW5pdHMgaW4gdGhlIFByaW50ZXIgTUlCIGFyZSBk
-ZXRlcm1pbmVkIGJ5IHRoZSBpbXBsZW1lbnRhdGlvbjxvOnA+PC9vOnA+PC9wPg0KPC9kaXY+DQo8
-cCBjbGFzcz0iTXNvTm9ybWFsIiBzdHlsZT0ibWFyZ2luLWJvdHRvbToxMi4wcHQiPmFuZCBjYW5u
-b3QgYmUgY2hhbmdlZCByZW1vdGVseS48bzpwPjwvbzpwPjwvcD4NCjwvZGl2Pg0KPHAgY2xhc3M9
-Ik1zb05vcm1hbCI+RXZlciBzaW5jZSBJRVRGIFByaW50ZXIgTUlCIHYxIChSRkMgMTc1OSksIGl0
-IGhhcyBiZWVuIHRydWUgdGhhdCBhIGdpdmVuPG86cD48L286cD48L3A+DQo8L2Rpdj4NCjxwIGNs
-YXNzPSJNc29Ob3JtYWwiPlByaW50ZXIgY2FuIHVwZGF0ZSB3b3JrIGNvdW50ZXJzIHdoZW5ldmVy
-IHRoZSBpbXBsZW1lbnRhdGlvbiBjaG9vc2VzPG86cD48L286cD48L3A+DQo8L2Rpdj4NCjxwIGNs
-YXNzPSJNc29Ob3JtYWwiPihmb3IgZXhhbXBsZSwgb25seSBhdCB0aGUgY29tcGxldGlvbiBvZiBh
-biBlbnRpcmUgam9iKS4mbmJzcDsgVGhlcmUgaGFzIG5ldmVyPG86cD48L286cD48L3A+DQo8L2Rp
-dj4NCjxwIGNsYXNzPSJNc29Ob3JtYWwiPmJlZW4gYSByZXF1aXJlbWVudCB0aGF0IGEgUHJpbnRl
-ciBtdXN0IHVwZGF0ZSB3b3JrIGNvdW50ZXJzIGF0IGV2ZXJ5PG86cD48L286cD48L3A+DQo8L2Rp
-dj4NCjxwIGNsYXNzPSJNc29Ob3JtYWwiIHN0eWxlPSJtYXJnaW4tYm90dG9tOjEyLjBwdCI+cGFn
-ZS48bzpwPjwvbzpwPjwvcD4NCjwvZGl2Pg0KPHAgY2xhc3M9Ik1zb05vcm1hbCIgc3R5bGU9Im1h
-cmdpbi1ib3R0b206MTIuMHB0Ij5TaW1wbHkgcHV0IC0geW91IGNhbid0IGdldCB0aGVyZSBmcm9t
-IGhlcmUuPG86cD48L286cD48L3A+DQo8L2Rpdj4NCjxwIGNsYXNzPSJNc29Ob3JtYWwiPkNoZWVy
-cyw8bzpwPjwvbzpwPjwvcD4NCjwvZGl2Pg0KPHAgY2xhc3M9Ik1zb05vcm1hbCIgc3R5bGU9Im1h
-cmdpbi1ib3R0b206MTIuMHB0Ij4tIElyYTxvOnA+PC9vOnA+PC9wPg0KPC9kaXY+DQo8ZGl2Pg0K
-PHAgY2xhc3M9Ik1zb05vcm1hbCI+PGJyIGNsZWFyPSJhbGwiPg0KPG86cD48L286cD48L3A+DQo8
-ZGl2Pg0KPGRpdj4NCjxkaXY+DQo8cCBjbGFzcz0iTXNvTm9ybWFsIiBzdHlsZT0ibWFyZ2luLWJv
-dHRvbToxMi4wcHQiPklyYSBNY0RvbmFsZCAoTXVzaWNpYW4gLyBTb2Z0d2FyZSBBcmNoaXRlY3Qp
-PGJyPg0KQ28tQ2hhaXIgLSBUQ0cgVHJ1c3RlZCBNb2JpbGl0eSBTb2x1dGlvbnMgV0c8YnI+DQpD
-aGFpciAtIExpbnV4IEZvdW5kYXRpb24gT3BlbiBQcmludGluZyBXRzxicj4NClNlY3JldGFyeSAt
-IElFRUUtSVNUTyBQcmludGVyIFdvcmtpbmcgR3JvdXA8YnI+DQpDby1DaGFpciAtIElFRUUtSVNU
-TyBQV0cgSW50ZXJuZXQgUHJpbnRpbmcgUHJvdG9jb2wgV0c8YnI+DQpJRVRGIERlc2lnbmF0ZWQg
-RXhwZXJ0IC0gSVBQICZhbXA7IFByaW50ZXIgTUlCPGJyPg0KQmx1ZSBSb29mIE11c2ljIC8gSGln
-aCBOb3J0aCBJbmM8YnI+DQo8YSBocmVmPSJodHRwOi8vc2l0ZXMuZ29vZ2xlLmNvbS9zaXRlL2Js
-dWVyb29mbXVzaWMiIHRhcmdldD0iX2JsYW5rIj48c3BhbiBzdHlsZT0iY29sb3I6IzMzMzNGRiI+
-aHR0cDovL3NpdGVzLmdvb2dsZS5jb20vc2l0ZS9ibHVlcm9vZm11c2ljPC9zcGFuPjwvYT48YnI+
-DQo8YSBocmVmPSJodHRwOi8vc2l0ZXMuZ29vZ2xlLmNvbS9zaXRlL2hpZ2hub3J0aGluYyIgdGFy
-Z2V0PSJfYmxhbmsiPjxzcGFuIHN0eWxlPSJjb2xvcjojNjYwMENDIj5odHRwOi8vc2l0ZXMuZ29v
-Z2xlLmNvbS9zaXRlL2hpZ2hub3J0aGluYzwvc3Bhbj48L2E+PGJyPg0KbWFpbHRvOiA8YSBocmVm
-PSJtYWlsdG86Ymx1ZXJvb2ZtdXNpY0BnbWFpbC5jb20iIHRhcmdldD0iX2JsYW5rIj5ibHVlcm9v
-Zm11c2ljQGdtYWlsLmNvbTwvYT48YnI+DQpXaW50ZXImbmJzcDsgNTc5IFBhcmsgUGxhY2UmbmJz
-cDsgU2FsaW5lLCBNSSZuYnNwOyA0ODE3NiZuYnNwOyA3MzQtOTQ0LTAwOTQ8YnI+DQpTdW1tZXIm
-bmJzcDsgUE8gQm94IDIyMSZuYnNwOyBHcmFuZCBNYXJhaXMsIE1JIDQ5ODM5Jm5ic3A7IDkwNi00
-OTQtMjQzNDxvOnA+PC9vOnA+PC9wPg0KPC9kaXY+DQo8L2Rpdj4NCjwvZGl2Pg0KPHAgY2xhc3M9
-Ik1zb05vcm1hbCI+PG86cD4mbmJzcDs8L286cD48L3A+DQo8ZGl2Pg0KPHAgY2xhc3M9Ik1zb05v
-cm1hbCI+T24gTW9uLCBNYXkgOSwgMjAxNiBhdCA1OjQyIEFNLCBQcmVkdXQsIE1hcml1cyAmbHQ7
-PGEgaHJlZj0ibWFpbHRvOm1hcml1cy5wcmVkdXRAaW50ZWwuY29tIiB0YXJnZXQ9Il9ibGFuayI+
-bWFyaXVzLnByZWR1dEBpbnRlbC5jb208L2E+Jmd0OyB3cm90ZTo8bzpwPjwvbzpwPjwvcD4NCjxw
-IGNsYXNzPSJNc29Ob3JtYWwiPiZndDsgLS0tLS1PcmlnaW5hbCBNZXNzYWdlLS0tLS08YnI+DQom
-Z3Q7IEZyb206IEpvaGFubmVzIE1laXhuZXIgW21haWx0bzo8YSBocmVmPSJtYWlsdG86anNtZWl4
-QHN1c2UuZGUiPmpzbWVpeEBzdXNlLmRlPC9hPl08YnI+DQomZ3Q7IFNlbnQ6IE1vbmRheSwgTWF5
-IDA5LCAyMDE2IDExOjQwIEFNPGJyPg0KJmd0OyBUbzogUHJlZHV0LCBNYXJpdXM8YnI+DQomZ3Q7
-IENjOiA8YSBocmVmPSJtYWlsdG86cHJpbnRpbmctYXJjaGl0ZWN0dXJlQGxpc3RzLmxpbnV4LWZv
-dW5kYXRpb24ub3JnIj5wcmludGluZy1hcmNoaXRlY3R1cmVAbGlzdHMubGludXgtZm91bmRhdGlv
-bi5vcmc8L2E+PGJyPg0KJmd0OyBTdWJqZWN0OiBSRTogW1ByaW50aW5nLWFyY2hpdGVjdHVyZV0g
-c25tcCAtIGF2ZXJhZ2UtdG9uZXItY292ZXJhZ2UgcGVyIHBhZ2U8YnI+DQomZ3Q7PGJyPg0KJmd0
-Ozxicj4NCiZndDsgSGVsbG8sPGJyPg0KJmd0Ozxicj4NCiZndDsgT24gTWF5IDUgMjA6NTMgUHJl
-ZHV0LCBNYXJpdXMgd3JvdGUgKGV4Y2VycHQpOjxicj4NCiZndDsgJmd0OyZndDsmZ3Q7Jmd0OyA0
-LiBHZXQgdGhlIFBvc3RTY3JpcHQgc3RyZWFtIHdoaWxlIHByaW50IGpvYiBmaWx0ZXJpbmc8YnI+
-DQomZ3Q7ICZndDsmZ3Q7Jmd0OyZndDsmbmJzcDsgJm5ic3A7ICZuYnNwO2FuZCBhbmFseXplIGl0
-Ljxicj4NCiZndDsgLi4uPGJyPg0KJmd0OyAmZ3Q7IEkgZG9uJ3QgaGF2ZSBhY2Nlc3MgdG8gdGhl
-IGRvY3VtZW50IHNlbnQgZm9yIHByaW50PGJyPg0KJmd0Ozxicj4NCiZndDsgVGhlbiB5b3UgY2Fu
-bm90IGFuYWx5emUgdGhlIFBvc3RTY3JpcHQgc3RyZWFtLjxicj4NCiZndDs8YnI+DQomZ3Q7ICZn
-dDsgSSBuZWVkIGEgc29sdXRpb24gdG8gcXVlcnkgdGhlIGNvdW50ZXIgcHJpbnRlciBhbmQgY29t
-cG91bmQgc29tZWhvdzxicj4NCiZndDsgJmd0OyB0aGUgd2FudGVkIHZhbHVlIChhbiBlc3RpbWF0
-ZSB0b25lciBzcGVudCBmb3IgcGFnZSkgRm9yIGV4YW1wbGUgaWYgSTxicj4NCiZndDsgJmd0OyBr
-bm93IGVmZmVjdGl2ZSBhcmVhIHByaW50ZWQgb24gYSBwYWdlIEkgY2FuIGVzdGltYXRlIHRoZSBj
-b3ZlcmFnZTxicj4NCiZndDsgJmd0OyBwZXJjZW50Ljxicj4NCiZndDsgJmd0OyBUaGUgcHJpbnRl
-ciZuYnNwOyBoYXZlIGFuIElQIGFkZHJlc3MuPGJyPg0KJmd0OyAmZ3Q7PGJyPg0KJmd0OyAmZ3Q7
-IFNvLCBkbyB5b3UgaGF2ZS9zZWUgb3RoZXIgc29sdXRpb24gaGVyZSA/PGJyPg0KJmd0Ozxicj4N
-CiZndDsgSSBhbSBhZnJhaWQsIEkgZG8gbm90IHNlZSBhbm90aGVyIHNvbHV0aW9uIGV4Y2VwdCB0
-byBxdWVyeSB0aGUgbmV0d29yazxicj4NCiZndDsgcHJpbnRlciBpdHNlbGYgdmlhIFNOTVAuPGJy
-Pg0KJmd0Ozxicj4NCiZndDsgSSB0aGluayB3aGVuIHlvdSBjYW4gb25seSBhY2Nlc3MgYSBuZXR3
-b3JrIHByaW50ZXIgaXRzZWxmLCB5b3UgY2FuIG9ubHkgcXVlcnk8YnI+DQomZ3Q7IGl0cyBpbnRl
-cm5hbCBjb3VudGVycy92YWx1ZXMgdmlhIFNOTVAuPGJyPg0KJmd0Ozxicj4NCiZndDsgSSBkbyBu
-b3Qga25vdyBpZiB1c3VhbCBuZXR3b3JrIHByaW50ZXJzIG1haW50YWluIGFuIGludGVybmFsIGNv
-dW50ZXIvdmFsdWU8YnI+DQomZ3Q7IHRoYXQgY2FuIGJlIHVzZWQgdG8gY2FsY3VsYXRlIHRoZSBh
-dmVyYWdlIHRvbmVyLWNvdmVyYWdlIHBlciBwYWdlLjxicj4NCk9uZSBpZGVhIGNhbiBiZSB0byBj
-b3VudHMgcGl4ZWxzIG9uIGVhY2ggcGFnZSw8YnI+DQpkaXZpZGVzIHBpeGVsIGNvdW50IGJ5IHBp
-eGVscyBwb3NzaWJsZSBvbiBhIHBhZ2UgdG8gZ2l2ZSB0aGUgcGVyY2VudGFnZSBvZiBjb3ZlcmFn
-ZSw8YnI+DQombmJzcDthbmQga2VlcHMgYSByb2xsaW5nIGF2ZXJhZ2UgcGVyY2VudCB3ZWlnaHRl
-ZCBieSBhcmVhIHByaW50ZWQuPGJyPg0KQnV0IEkgZG9uJ3Qga25vdyBpZiBTTk1QIGNhbiBnaXZl
-IG1lIHRoaXMgY291bnRlcnMuPGJyPg0KVGhpcyBwcmludGVyIFJGQyZuYnNwOyA8YSBocmVmPSJo
-dHRwczovL3Rvb2xzLmlldGYub3JnL2h0bWwvcmZjMzgwNSIgdGFyZ2V0PSJfYmxhbmsiPmh0dHBz
-Oi8vdG9vbHMuaWV0Zi5vcmcvaHRtbC9yZmMzODA1PC9hPjxicj4NCkRvbid0IGhlbHAgbWUgdG9v
-IG11Y2guPGJyPg0KKE9JRFMgdGhhdCBjYW4gYmUgaW50ZXJlc3RpbmcgaW4gdGhpcyBjb250ZXh0
-IDogc29tZWhvdyB0aGlzIE9JRFMgY2FuIGJlIHVzZWQgOiBwcnRNYXJrZXJTdXBwbGllc0dyb3Vw
-IHBydE1hcmtlckNvdW50ZXJVbml0IHBydE1hcmtlckxpZmVDb3VudDxicj4NCkJ1dCBJIGRvbid0
-IGtub3cgaG93IHRvIGRlYWwgd2l0aCk8bzpwPjwvbzpwPjwvcD4NCjxkaXY+DQo8ZGl2Pg0KPHAg
-Y2xhc3M9Ik1zb05vcm1hbCI+Jmd0Ozxicj4NCiZndDsgT25seSBGWUk6PGJyPg0KJmd0OyBGb3Ig
-c29tZSBwb3NzaWJsZSBpc3N1ZXMgdGhhdCBJIG5vdGljZWQgcmVnYXJkaW5nIFNOTVAgd2l0aCBu
-ZXR3b3JrPGJyPg0KJmd0OyBwcmludGVycywgeW91IG1heSBoYXZlIGEgbG9vayBhdDxicj4NCiZn
-dDsgPGEgaHJlZj0iaHR0cHM6Ly9lbi5vcGVuc3VzZS5vcmcvU0RCOlByaW50ZXJfQWNjb3VudGlu
-ZyIgdGFyZ2V0PSJfYmxhbmsiPmh0dHBzOi8vZW4ub3BlbnN1c2Uub3JnL1NEQjpQcmludGVyX0Fj
-Y291bnRpbmc8L2E+PGJyPg0KJmd0Ozxicj4NCiZndDs8YnI+DQomZ3Q7IEtpbmQgUmVnYXJkczxi
-cj4NCiZndDsgSm9oYW5uZXMgTWVpeG5lcjxicj4NCiZndDsgLS08YnI+DQomZ3Q7IFNVU0UgTElO
-VVggR21iSCAtIEdGOiBGZWxpeCBJbWVuZG9lcmZmZXIsIEphbmUgU21pdGhhcmQsIEdyYWhhbSBO
-b3J0b24gLTxicj4NCiZndDsgSFJCIDIxMjg0IChBRyBOdWVybmJlcmcpPGJyPg0KPGJyPg0KX19f
-X19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX188YnI+DQpQcmludGlu
-Zy1hcmNoaXRlY3R1cmUgbWFpbGluZyBsaXN0PGJyPg0KPGEgaHJlZj0ibWFpbHRvOlByaW50aW5n
-LWFyY2hpdGVjdHVyZUBsaXN0cy5saW51eC1mb3VuZGF0aW9uLm9yZyI+UHJpbnRpbmctYXJjaGl0
-ZWN0dXJlQGxpc3RzLmxpbnV4LWZvdW5kYXRpb24ub3JnPC9hPjxicj4NCjxhIGhyZWY9Imh0dHBz
-Oi8vbGlzdHMubGludXhmb3VuZGF0aW9uLm9yZy9tYWlsbWFuL2xpc3RpbmZvL3ByaW50aW5nLWFy
-Y2hpdGVjdHVyZSIgdGFyZ2V0PSJfYmxhbmsiPmh0dHBzOi8vbGlzdHMubGludXhmb3VuZGF0aW9u
-Lm9yZy9tYWlsbWFuL2xpc3RpbmZvL3ByaW50aW5nLWFyY2hpdGVjdHVyZTwvYT48bzpwPjwvbzpw
-PjwvcD4NCjwvZGl2Pg0KPC9kaXY+DQo8L2Rpdj4NCjxwIGNsYXNzPSJNc29Ob3JtYWwiPjxvOnA+
-Jm5ic3A7PC9vOnA+PC9wPg0KPC9kaXY+DQo8L2Rpdj4NCjwvZGl2Pg0KPC9ib2R5Pg0KPC9odG1s
-Pg0K
+Cheers,
+- Ira
 
---_000_0E2B2CA4D522C14FBE8646D789EF72A01C54FE44IRSMSX103gercor_--
+
+Ira McDonald (Musician / Software Architect)
+Co-Chair - TCG Trusted Mobility Solutions WG
+Chair - Linux Foundation Open Printing WG
+Secretary - IEEE-ISTO Printer Working Group
+Co-Chair - IEEE-ISTO PWG Internet Printing Protocol WG
+IETF Designated Expert - IPP & Printer MIB
+Blue Roof Music / High North Inc
+http://sites.google.com/site/blueroofmusic
+http://sites.google.com/site/highnorthinc
+mailto: blueroofmusic@gmail.com
+Winter  579 Park Place  Saline, MI  48176  734-944-0094
+Summer  PO Box 221  Grand Marais, MI 49839  906-494-2434
+
+
+On Mon, May 9, 2016 at 7:31 AM, Predut, Marius <marius.predut@intel.com>
+wrote:
+
+> Hi Ira,
+>
+>
+>
+> Hmm . thanks for this clarification :
+>
+> Also I supposed  getting the printing stream directly from printer by
+> PLC/PJL or SNMP or other channel is not possible.
+>
+> But some counters that refer to the effective area printed can be queried
+> somehow?
+>
+>
+>
+> Thanks
+>
+> marius
+>
+>
+>
+> *From:* Ira McDonald [mailto:blueroofmusic@gmail.com]
+> *Sent:* Monday, May 09, 2016 1:54 PM
+> *To:* Predut, Marius; Ira McDonald
+> *Cc:* Johannes Meixner; printing-architecture@lists.linux-foundation.org
+> *Subject:* Re: [Printing-architecture] snmp - average-toner-coverage per
+> page
+>
+>
+>
+> Hi,
+>
+> Speaking as the primary editor of IETF Printer MIB v2 (RFC 3805):
+>
+> Counter units in the Printer MIB are determined by the implementation
+>
+> and cannot be changed remotely.
+>
+> Ever since IETF Printer MIB v1 (RFC 1759), it has been true that a given
+>
+> Printer can update work counters whenever the implementation chooses
+>
+> (for example, only at the completion of an entire job).  There has never
+>
+> been a requirement that a Printer must update work counters at every
+>
+> page.
+>
+> Simply put - you can't get there from here.
+>
+> Cheers,
+>
+> - Ira
+>
+>
+> Ira McDonald (Musician / Software Architect)
+> Co-Chair - TCG Trusted Mobility Solutions WG
+> Chair - Linux Foundation Open Printing WG
+> Secretary - IEEE-ISTO Printer Working Group
+> Co-Chair - IEEE-ISTO PWG Internet Printing Protocol WG
+> IETF Designated Expert - IPP & Printer MIB
+> Blue Roof Music / High North Inc
+> http://sites.google.com/site/blueroofmusic
+> http://sites.google.com/site/highnorthinc
+> mailto: blueroofmusic@gmail.com
+> Winter  579 Park Place  Saline, MI  48176  734-944-0094
+> Summer  PO Box 221  Grand Marais, MI 49839  906-494-2434
+>
+>
+>
+> On Mon, May 9, 2016 at 5:42 AM, Predut, Marius <marius.predut@intel.com>
+> wrote:
+>
+> > -----Original Message-----
+> > From: Johannes Meixner [mailto:jsmeix@suse.de]
+> > Sent: Monday, May 09, 2016 11:40 AM
+> > To: Predut, Marius
+> > Cc: printing-architecture@lists.linux-foundation.org
+> > Subject: RE: [Printing-architecture] snmp - average-toner-coverage per
+> page
+> >
+> >
+> > Hello,
+> >
+> > On May 5 20:53 Predut, Marius wrote (excerpt):
+> > >>>> 4. Get the PostScript stream while print job filtering
+> > >>>>     and analyze it.
+> > ...
+> > > I don't have access to the document sent for print
+> >
+> > Then you cannot analyze the PostScript stream.
+> >
+> > > I need a solution to query the counter printer and compound somehow
+> > > the wanted value (an estimate toner spent for page) For example if I
+> > > know effective area printed on a page I can estimate the coverage
+> > > percent.
+> > > The printer  have an IP address.
+> > >
+> > > So, do you have/see other solution here ?
+> >
+> > I am afraid, I do not see another solution except to query the network
+> > printer itself via SNMP.
+> >
+> > I think when you can only access a network printer itself, you can only
+> query
+> > its internal counters/values via SNMP.
+> >
+> > I do not know if usual network printers maintain an internal
+> counter/value
+> > that can be used to calculate the average toner-coverage per page.
+> One idea can be to counts pixels on each page,
+> divides pixel count by pixels possible on a page to give the percentage of
+> coverage,
+>  and keeps a rolling average percent weighted by area printed.
+> But I don't know if SNMP can give me this counters.
+> This printer RFC  https://tools.ietf.org/html/rfc3805
+> Don't help me too much.
+> (OIDS that can be interesting in this context : somehow this OIDS can be
+> used : prtMarkerSuppliesGroup prtMarkerCounterUnit prtMarkerLifeCount
+> But I don't know how to deal with)
+>
+> >
+> > Only FYI:
+> > For some possible issues that I noticed regarding SNMP with network
+> > printers, you may have a look at
+> > https://en.opensuse.org/SDB:Printer_Accounting
+> >
+> >
+> > Kind Regards
+> > Johannes Meixner
+> > --
+> > SUSE LINUX GmbH - GF: Felix Imendoerffer, Jane Smithard, Graham Norton -
+> > HRB 21284 (AG Nuernberg)
+>
+> _______________________________________________
+> Printing-architecture mailing list
+> Printing-architecture@lists.linux-foundation.org
+> https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture
+>
+>
+>
+
+--94eb2c09b1949903ef05326769d7
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><div><div><div><div><div><div>Hi Marius,<br><br></div>If t=
+he printer supports IPP (Internet Printing Protocol) - over 99% of all new<=
+br></div>network printers do so - then it&#39;s a security violation to ret=
+rieve the document<br></div>content from the printer.=C2=A0 But neither IPP=
+ nor the standard PWG Counter MIB <br></div>will let you determine coverage=
+ for an individual print job.<br><br></div>Cheers,<br></div>- Ira<br><br></=
+div><div class=3D"gmail_extra"><br clear=3D"all"><div><div class=3D"gmail_s=
+ignature"><div dir=3D"ltr">Ira McDonald (Musician / Software Architect)<br>=
+Co-Chair - TCG Trusted Mobility Solutions WG<br>Chair - Linux Foundation Op=
+en Printing WG<br>Secretary - IEEE-ISTO Printer Working Group<br>Co-Chair -=
+ IEEE-ISTO PWG Internet Printing Protocol WG<br>IETF Designated Expert - IP=
+P &amp; Printer MIB<br>Blue Roof Music / High North Inc<br><a style=3D"colo=
+r:rgb(51,51,255)" href=3D"http://sites.google.com/site/blueroofmusic" targe=
+t=3D"_blank">http://sites.google.com/site/blueroofmusic</a><br><a style=3D"=
+color:rgb(102,0,204)" href=3D"http://sites.google.com/site/highnorthinc" ta=
+rget=3D"_blank">http://sites.google.com/site/highnorthinc</a><br>mailto: <a=
+ href=3D"mailto:blueroofmusic@gmail.com" target=3D"_blank">blueroofmusic@gm=
+ail.com</a><br>Winter=C2=A0 579 Park Place=C2=A0 Saline, MI=C2=A0 48176=C2=
+=A0 734-944-0094<br>Summer=C2=A0 PO Box 221=C2=A0 Grand Marais, MI 49839=C2=
+=A0 906-494-2434<br><br><div style=3D"display:inline"></div><div style=3D"d=
+isplay:inline"></div><div style=3D"display:inline"></div><div></div><div></=
+div><div></div><div></div></div></div></div>
+<br><div class=3D"gmail_quote">On Mon, May 9, 2016 at 7:31 AM, Predut, Mari=
+us <span dir=3D"ltr">&lt;<a href=3D"mailto:marius.predut@intel.com" target=
+=3D"_blank">marius.predut@intel.com</a>&gt;</span> wrote:<br><blockquote cl=
+ass=3D"gmail_quote" style=3D"margin:0 0 0 .8ex;border-left:1px #ccc solid;p=
+adding-left:1ex">
+
+
+
+
+
+<div link=3D"blue" vlink=3D"purple" lang=3D"EN-US">
+<div>
+<p class=3D"MsoNormal"><span style=3D"font-size:11.0pt;font-family:&quot;Ca=
+libri&quot;,&quot;sans-serif&quot;;color:#1f497d">Hi Ira,<u></u><u></u></sp=
+an></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:11.0pt;font-family:&quot;Ca=
+libri&quot;,&quot;sans-serif&quot;;color:#1f497d"><u></u>=C2=A0<u></u></spa=
+n></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:11.0pt;font-family:&quot;Ca=
+libri&quot;,&quot;sans-serif&quot;;color:#1f497d">Hmm . thanks for this cla=
+rification :<u></u><u></u></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:11.0pt;font-family:&quot;Ca=
+libri&quot;,&quot;sans-serif&quot;;color:#1f497d">Also I supposed =C2=A0get=
+ting the printing stream directly from printer by PLC/PJL or SNMP or other =
+channel is not possible.<u></u><u></u></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:11.0pt;font-family:&quot;Ca=
+libri&quot;,&quot;sans-serif&quot;;color:#1f497d">But some counters that re=
+fer to the effective area printed can be queried somehow?<u></u><u></u></sp=
+an></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:11.0pt;font-family:&quot;Ca=
+libri&quot;,&quot;sans-serif&quot;;color:#1f497d"><u></u>=C2=A0<u></u></spa=
+n></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:11.0pt;font-family:&quot;Ca=
+libri&quot;,&quot;sans-serif&quot;;color:#1f497d">Thanks<u></u><u></u></spa=
+n></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:11.0pt;font-family:&quot;Ca=
+libri&quot;,&quot;sans-serif&quot;;color:#1f497d">marius<u></u><u></u></spa=
+n></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:11.0pt;font-family:&quot;Ca=
+libri&quot;,&quot;sans-serif&quot;;color:#1f497d"><u></u>=C2=A0<u></u></spa=
+n></p>
+<div style=3D"border:none;border-left:solid blue 1.5pt;padding:0in 0in 0in =
+4.0pt">
+<div>
+<div style=3D"border:none;border-top:solid #b5c4df 1.0pt;padding:3.0pt 0in =
+0in 0in">
+<p class=3D"MsoNormal"><a name=3D"m_5251785071555810555______replyseparator=
+"></a><b><span style=3D"font-size:10.0pt;font-family:&quot;Tahoma&quot;,&qu=
+ot;sans-serif&quot;">From:</span></b><span style=3D"font-size:10.0pt;font-f=
+amily:&quot;Tahoma&quot;,&quot;sans-serif&quot;"> Ira McDonald [mailto:<a h=
+ref=3D"mailto:blueroofmusic@gmail.com" target=3D"_blank">blueroofmusic@gmai=
+l.com</a>]
+<br>
+<b>Sent:</b> Monday, May 09, 2016 1:54 PM<br>
+<b>To:</b> Predut, Marius; Ira McDonald<br>
+<b>Cc:</b> Johannes Meixner; <a href=3D"mailto:printing-architecture@lists.=
+linux-foundation.org" target=3D"_blank">printing-architecture@lists.linux-f=
+oundation.org</a><br>
+<b>Subject:</b> Re: [Printing-architecture] snmp - average-toner-coverage p=
+er page<u></u><u></u></span></p>
+</div>
+</div><div><div class=3D"h5">
+<p class=3D"MsoNormal"><u></u>=C2=A0<u></u></p>
+<div>
+<div>
+<div>
+<div>
+<div>
+<div>
+<div>
+<div>
+<div>
+<div>
+<div>
+<div>
+<p class=3D"MsoNormal" style=3D"margin-bottom:12.0pt">Hi,<u></u><u></u></p>
+</div>
+<p class=3D"MsoNormal" style=3D"margin-bottom:12.0pt">Speaking as the prima=
+ry editor of IETF Printer MIB v2 (RFC 3805):<u></u><u></u></p>
+</div>
+<p class=3D"MsoNormal">Counter units in the Printer MIB are determined by t=
+he implementation<u></u><u></u></p>
+</div>
+<p class=3D"MsoNormal" style=3D"margin-bottom:12.0pt">and cannot be changed=
+ remotely.<u></u><u></u></p>
+</div>
+<p class=3D"MsoNormal">Ever since IETF Printer MIB v1 (RFC 1759), it has be=
+en true that a given<u></u><u></u></p>
+</div>
+<p class=3D"MsoNormal">Printer can update work counters whenever the implem=
+entation chooses<u></u><u></u></p>
+</div>
+<p class=3D"MsoNormal">(for example, only at the completion of an entire jo=
+b).=C2=A0 There has never<u></u><u></u></p>
+</div>
+<p class=3D"MsoNormal">been a requirement that a Printer must update work c=
+ounters at every<u></u><u></u></p>
+</div>
+<p class=3D"MsoNormal" style=3D"margin-bottom:12.0pt">page.<u></u><u></u></=
+p>
+</div>
+<p class=3D"MsoNormal" style=3D"margin-bottom:12.0pt">Simply put - you can&=
+#39;t get there from here.<u></u><u></u></p>
+</div>
+<p class=3D"MsoNormal">Cheers,<u></u><u></u></p>
+</div>
+<p class=3D"MsoNormal" style=3D"margin-bottom:12.0pt">- Ira<u></u><u></u></=
+p>
+</div>
+<div>
+<p class=3D"MsoNormal"><br clear=3D"all">
+<u></u><u></u></p>
+<div>
+<div>
+<div>
+<p class=3D"MsoNormal" style=3D"margin-bottom:12.0pt">Ira McDonald (Musicia=
+n / Software Architect)<br>
+Co-Chair - TCG Trusted Mobility Solutions WG<br>
+Chair - Linux Foundation Open Printing WG<br>
+Secretary - IEEE-ISTO Printer Working Group<br>
+Co-Chair - IEEE-ISTO PWG Internet Printing Protocol WG<br>
+IETF Designated Expert - IPP &amp; Printer MIB<br>
+Blue Roof Music / High North Inc<br>
+<a href=3D"http://sites.google.com/site/blueroofmusic" target=3D"_blank"><s=
+pan style=3D"color:#3333ff">http://sites.google.com/site/blueroofmusic</spa=
+n></a><br>
+<a href=3D"http://sites.google.com/site/highnorthinc" target=3D"_blank"><sp=
+an style=3D"color:#6600cc">http://sites.google.com/site/highnorthinc</span>=
+</a><br>
+mailto: <a href=3D"mailto:blueroofmusic@gmail.com" target=3D"_blank">bluero=
+ofmusic@gmail.com</a><br>
+Winter=C2=A0 579 Park Place=C2=A0 Saline, MI=C2=A0 48176=C2=A0 <a href=3D"t=
+el:734-944-0094" value=3D"+17349440094" target=3D"_blank">734-944-0094</a><=
+br>
+Summer=C2=A0 PO Box 221=C2=A0 Grand Marais, MI 49839=C2=A0 <a href=3D"tel:9=
+06-494-2434" value=3D"+19064942434" target=3D"_blank">906-494-2434</a><u></=
+u><u></u></p>
+</div>
+</div>
+</div>
+<p class=3D"MsoNormal"><u></u>=C2=A0<u></u></p>
+<div>
+<p class=3D"MsoNormal">On Mon, May 9, 2016 at 5:42 AM, Predut, Marius &lt;<=
+a href=3D"mailto:marius.predut@intel.com" target=3D"_blank">marius.predut@i=
+ntel.com</a>&gt; wrote:<u></u><u></u></p>
+<p class=3D"MsoNormal">&gt; -----Original Message-----<br>
+&gt; From: Johannes Meixner [mailto:<a href=3D"mailto:jsmeix@suse.de" targe=
+t=3D"_blank">jsmeix@suse.de</a>]<br>
+&gt; Sent: Monday, May 09, 2016 11:40 AM<br>
+&gt; To: Predut, Marius<br>
+&gt; Cc: <a href=3D"mailto:printing-architecture@lists.linux-foundation.org=
+" target=3D"_blank">printing-architecture@lists.linux-foundation.org</a><br=
+>
+&gt; Subject: RE: [Printing-architecture] snmp - average-toner-coverage per=
+ page<br>
+&gt;<br>
+&gt;<br>
+&gt; Hello,<br>
+&gt;<br>
+&gt; On May 5 20:53 Predut, Marius wrote (excerpt):<br>
+&gt; &gt;&gt;&gt;&gt; 4. Get the PostScript stream while print job filterin=
+g<br>
+&gt; &gt;&gt;&gt;&gt;=C2=A0 =C2=A0 =C2=A0and analyze it.<br>
+&gt; ...<br>
+&gt; &gt; I don&#39;t have access to the document sent for print<br>
+&gt;<br>
+&gt; Then you cannot analyze the PostScript stream.<br>
+&gt;<br>
+&gt; &gt; I need a solution to query the counter printer and compound someh=
+ow<br>
+&gt; &gt; the wanted value (an estimate toner spent for page) For example i=
+f I<br>
+&gt; &gt; know effective area printed on a page I can estimate the coverage=
+<br>
+&gt; &gt; percent.<br>
+&gt; &gt; The printer=C2=A0 have an IP address.<br>
+&gt; &gt;<br>
+&gt; &gt; So, do you have/see other solution here ?<br>
+&gt;<br>
+&gt; I am afraid, I do not see another solution except to query the network=
+<br>
+&gt; printer itself via SNMP.<br>
+&gt;<br>
+&gt; I think when you can only access a network printer itself, you can onl=
+y query<br>
+&gt; its internal counters/values via SNMP.<br>
+&gt;<br>
+&gt; I do not know if usual network printers maintain an internal counter/v=
+alue<br>
+&gt; that can be used to calculate the average toner-coverage per page.<br>
+One idea can be to counts pixels on each page,<br>
+divides pixel count by pixels possible on a page to give the percentage of =
+coverage,<br>
+=C2=A0and keeps a rolling average percent weighted by area printed.<br>
+But I don&#39;t know if SNMP can give me this counters.<br>
+This printer RFC=C2=A0 <a href=3D"https://tools.ietf.org/html/rfc3805" targ=
+et=3D"_blank">https://tools.ietf.org/html/rfc3805</a><br>
+Don&#39;t help me too much.<br>
+(OIDS that can be interesting in this context : somehow this OIDS can be us=
+ed : prtMarkerSuppliesGroup prtMarkerCounterUnit prtMarkerLifeCount<br>
+But I don&#39;t know how to deal with)<u></u><u></u></p>
+<div>
+<div>
+<p class=3D"MsoNormal">&gt;<br>
+&gt; Only FYI:<br>
+&gt; For some possible issues that I noticed regarding SNMP with network<br=
+>
+&gt; printers, you may have a look at<br>
+&gt; <a href=3D"https://en.opensuse.org/SDB:Printer_Accounting" target=3D"_=
+blank">https://en.opensuse.org/SDB:Printer_Accounting</a><br>
+&gt;<br>
+&gt;<br>
+&gt; Kind Regards<br>
+&gt; Johannes Meixner<br>
+&gt; --<br>
+&gt; SUSE LINUX GmbH - GF: Felix Imendoerffer, Jane Smithard, Graham Norton=
+ -<br>
+&gt; HRB 21284 (AG Nuernberg)<br>
+<br>
+_______________________________________________<br>
+Printing-architecture mailing list<br>
+<a href=3D"mailto:Printing-architecture@lists.linux-foundation.org" target=
+=3D"_blank">Printing-architecture@lists.linux-foundation.org</a><br>
+<a href=3D"https://lists.linuxfoundation.org/mailman/listinfo/printing-arch=
+itecture" target=3D"_blank">https://lists.linuxfoundation.org/mailman/listi=
+nfo/printing-architecture</a><u></u><u></u></p>
+</div>
+</div>
+</div>
+<p class=3D"MsoNormal"><u></u>=C2=A0<u></u></p>
+</div>
+</div></div></div>
+</div>
+</div>
+
+</blockquote></div><br></div>
+
+--94eb2c09b1949903ef05326769d7--
