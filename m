@@ -1,24 +1,22 @@
 Return-Path: <till.kamppeter@gmail.com>
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20120113;
-	h=from:subject:to:references:message-id:date:user-agent:mime-version
-	:in-reply-to:content-transfer-encoding;
-	bh=xaZ9eFQzIZ+wqW9Uez9gA02KMxkt+1jr2FTXCemp0Tk=;
-	b=DvRlMG3TQZTWu3GFhqDy2ryWRpUTZqmZ3Oz5G5gsu+xNmh4f5+eBC9yoervtfXUSVR
-	AkQD8Tv9+qf3vDPwL9CAFRNAA2CdK5fxGz1ffQoKoKBPVZawdSqSkxtk2vZdEdY3qttI
-	0WvkiHbWEDfQXtpD4JQikcWTTFen9k0EHM4hXjhpNWbsmgc+Qme5q/w8JGpcaUV9dvzt
-	ri1UOaKMAUp/Hrjt5+YJhKNPgVQctBMcq8IcpE6QQxw9SlWBnQxfXKVe+ywx7ILlfeeh
-	5qD3sQRaeLLRQUqwkhtg/idheirIljAMjV1/9yaUbqhhEz34j3ZO/MvxSoi8AeoNsXto
-	g8Gw==
+	h=from:subject:to:message-id:date:user-agent:mime-version
+	:content-transfer-encoding;
+	bh=KhuIljUgbh38HJ7lo7GorUy8v7KmViGwluHc6gG0rgw=;
+	b=YwdhAy8tU4kqH7oQcm2ltI4zAPR84DeISYeUpP9vZKfeIacV9s0Rf0ArW2/m7PAQA1
+	frBdK0rBfk5HqPubeSS7sE7K+EXACfY2RCqoiEOHwekiI2SMyrdebm0BgTbZQl9exjtT
+	AMLnSXYEgqtUxACh5jSCqOvtHEcpQYayyFQoYD6mQMXOHTks1GT+FkPgnW/DEH5rtokT
+	K6+PX0+zC53oOYaI4wEML1JEyKfv/AquK8Wp4ZHiEr0vJj9+Hirm1TJQAX7TEQtQGrea
+	0JduuPB2g4V5SAMGIvQCWo2/bCxbxZMjnxsc7z1dkkGMyugjJJaW2wcq/pQeQiJpby98
+	8LJA==
 From: Till Kamppeter <till.kamppeter@gmail.com>
-References: <e395be80811270817n502ccd16wf6cc90f85364f5ae@mail.gmail.com>
-Message-ID: <57603ECA.1060509@gmail.com>
-Date: Tue, 14 Jun 2016 14:28:42 -0300
+Message-ID: <57608B02.1040802@gmail.com>
+Date: Tue, 14 Jun 2016 19:53:54 -0300
 MIME-Version: 1.0
-In-Reply-To: <e395be80811270817n502ccd16wf6cc90f85364f5ae@mail.gmail.com>
 Content-Type: text/plain; charset=utf-8; format=flowed
 Content-Transfer-Encoding: 7bit
-Subject: [Printing-architecture] Last OP Meeting - Tue - 14 Jun 2016 - The
-	Recording
+Subject: [Printing-architecture] CUPS 2.2.x drops interface scripts - How to
+ create filtered queues without PPD
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>,
@@ -28,20 +26,43 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Open Printing <printing-architecture@lists.linux-foundation.org>, Printing-japan <printing-japan@lists.linux-foundation.org>
+To: "The CUPS user discussion list." <cups@cups.org>, Open Printing <printing-architecture@lists.linux-foundation.org>
 
 Hi,
 
-I have uploaded the recording of the last OpenPrinting meeting to the
-OpenPrinting server:
+I have seen now the new features list of the first beta of the CUPS 
+2.2.x series and one of the changes is
 
-http://www.openprinting.org/download/meetingnotes/op-telecons/OP-Meeting-20160614.mp3
+	- Interface scripts are no longer supported for security reasons
+	  (<rdar://problem/23135640>)
 
-In general, recorded meetings I will upload to
+System V interface scripts give a possibility to create filtered print 
+queues without PPD.
 
-http://www.openprinting.org/download/meetingnotes/
+I make use of this in cups-filters. If cups-browsed discovers an IPP 
+network printer (with "CreateIPPPrinterQueues Yes" in cups-browsed.conf) 
+and is not able to gather enough info via IPP for making a PPD for this 
+printer, it creates a queue with interface script, the script calling 
+the filter sys5ippprinter which in turn calls all filters to convert the 
+input format (PDF, JPEG, or PWG Raster) into the printer's native format 
+(PWG Raster, PDF, PostScript, PCL-XL, or PCL 5c/e).
+
+By the way, PPD files are also on the way to get deprecated.
+
+Now I have some questions about what to do:
+
+- How will I do non-raw (filtered) queues without PPD files?
+
+- Or should cups-browsed always generate PPD files, using certain
+   default values for capability info which it is not able to obtain
+   from the printer?
+
+- What were the security reasons leading to remove the interface script
+   support from CUPS? It seems that this got only discussed internally
+   at Apple.
+
+- And if there are neither interface scripts nor PPD files (probably
+   this requires all printers being IPP Everywhere), how will CUPS
+   determine which filters to run?
 
     Till
-
-P. S.: The MP3 is 22 MB long, 48 minutes of talking.
-
