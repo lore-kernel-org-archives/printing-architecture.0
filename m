@@ -1,21 +1,28 @@
-Return-Path: <till.kamppeter@gmail.com>
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20120113;
-	h=to:cc:from:subject:message-id:date:user-agent:mime-version
-	:content-transfer-encoding;
-	bh=sRrVq07unlTwWWULfJDnBDIZtT/HhFSZ7eWTLUnoofo=;
-	b=abtOemYYAyCol0KZdNoTX2XeUP6/dSY84Do/yx6vRl0q/sHsd+9x/4GgsJHcLL5hYc
-	colWOkKJqeeAY1auxLcQCH55VtXj4YVFQtRy8nVl6+v5BW3qDXtTl3H5BmuMrVUtKk+0
-	grZC3XoBsBP0A21T8yDlqSe3GiZxKQtatosRWLTMmPm653FTM/9CxNL/xUV5PlXpP35L
-	Pm0G3BUW2Zzje7IvGpjWt5rvOAHQ1zwDgwgpumBb7T7YDJlJHziOw3GiBNjwbf587KWN
-	siXpt8nh+C0KLTCC+fOCqxsOUSJ+yHWQG5QcSivgZvTTxfVAxb188IyhwwtmkscQtEPJ
-	Bz2Q==
-From: Till Kamppeter <till.kamppeter@gmail.com>
-Message-ID: <57851B1A.8010700@gmail.com>
-Date: Tue, 12 Jul 2016 13:30:18 -0300
-MIME-Version: 1.0
-Content-Type: text/plain; charset=utf-8; format=flowed
-Content-Transfer-Encoding: 7bit
-Subject: [Printing-architecture] Hosting of OpenPrinting
+Return-Path: <msweet@apple.com>
+DKIM-Signature: v=1; a=rsa-sha256; d=apple.com; s=mailout2048s;
+	c=relaxed/simple; 
+	q=dns/txt; i=@apple.com; t=1468367204; x=2332280804;
+	h=From:Sender:Reply-To:Subject:Date:Message-id:To:Cc:MIME-version:Content-type:
+	Content-transfer-encoding:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-reply-to:References:List-Id:
+	List-Help:List-Unsubscribe:List-Subscribe:List-Post:List-Owner:List-Archive;
+	bh=sAC10GeiYjyrPjqJ6fccae2Ka6BNoo6blLqWmfmm3hA=;
+	b=SBqVgWyOnvo8gPVmDZWvGBLj5grdIpm5odj5lr6n6EpTLsCFYWuzGLcFYW5L/kj5
+	dlHyohDSh6h0JnGykazZOTat58Dkl7pfXK51AJ+80CuMY0DPxdXvWmOBG/7LpBkK
+	PPNYo+B98xWEj1ZU6XwdnLTsDCp6Ip7VUpROGQuXFjK99Mo2HZLtYb7YX86ZcMrf
+	uWWfXfFRNr6PdipRS/v6raiO9QRxJyBHaTL8luIFjtAwva1UaKMo8MhpNXg8ZFdL
+	PCEJdjhn1KX/RmYMJ6F8fYNeibSZaB1DhOFxPK46zhlD+R+X9DoVV8BuhbiNQSHr
+	u7MfU9Jxd5rTtrOtRawSvg==;
+Sender: msweet@apple.com
+MIME-version: 1.0 (Mac OS X Mail 9.3 \(3124\))
+Content-type: text/plain; charset=us-ascii
+From: Michael Sweet <msweet@apple.com>
+In-reply-to: <57851B1A.8010700@gmail.com>
+Date: Tue, 12 Jul 2016 19:46:42 -0400
+Content-transfer-encoding: quoted-printable
+Message-id: <FF2B8169-ED56-4C5C-9549-40A1CA3D92A6@apple.com>
+References: <57851B1A.8010700@gmail.com>
+Subject: Re: [Printing-architecture] Hosting of OpenPrinting
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>,
@@ -25,40 +32,31 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Open Printing <printing-architecture@lists.linux-foundation.org>
-Cc: Matthew Morikawa <Matthew.Morikawa@dda.kyocera.com>
+To: Till Kamppeter <till.kamppeter@gmail.com>
+Cc: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>, Matthew Morikawa <Matthew.Morikawa@dda.kyocera.com>
 
-Hi,
+Till,
 
-for the time being until I will (hopefully) come around with the call 
-next week, I will give you all something to think about and a call for help.
-
-It is about the web hosting of OpenPrinting. You now that we are hosted 
-at the Linux Foundation currently. And with the Linux Foundation there 
-are problems, in the form that I do not get any help by the system 
-admins any more. The front page (www.openprinting.org) is messed up and 
-I cannot change it any more. Therefore I asked the help desk already 
-several times and never got an answer.
-
-So for me it seems that the best is to move.
-
-For the BZR repositories I am thinking about converting to GIT and use 
-GIThub. CUPS and many other projects are already there. I would also 
+> On Jul 12, 2016, at 12:30 PM, Till Kamppeter =
+<till.kamppeter@gmail.com> wrote:
+> ...
+> For the BZR repositories I am thinking about converting to GIT and use =
+GIThub. CUPS and many other projects are already there. I would also =
 handle the bug tracking there.
+>=20
+> What does not work on GIThub (or does it already?) is to have a =
+general LAMP (Linux, Apache, MySQL, PHP/Python/Perl) server to run the =
+database and also the documentation, mailing lists, announcements, ... I =
+think I would drop the forums then and go back to mailing lists.
 
-What does not work on GIThub (or does it already?) is to have a general 
-LAMP (Linux, Apache, MySQL, PHP/Python/Perl) server to run the database 
-and also the documentation, mailing lists, announcements, ... I think I 
-would drop the forums then and go back to mailing lists.
+Github does not provide full support for this sort of thing, although =
+IIRC SourceForge.net *does* (along with mailing lists, issue tracker, =
+etc.)
 
-Perhaps the PWG could help me?
+> Perhaps the PWG could help me?
 
-A problem would be the domain www.openprinting.org, to get it moved from 
-the Linux Foundation to the new place. Or should we perhaps rename the 
-project as a last mean.
+There would definitely be legal issues to consider.
 
-I appreciate any kind of help.
-
-    Till
-
+_________________________________________________________
+Michael Sweet, Senior Printing System Engineer
 
