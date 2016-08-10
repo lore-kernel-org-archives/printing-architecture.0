@@ -1,22 +1,24 @@
 Return-Path: <till.kamppeter@gmail.com>
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20120113;
-	h=from:subject:to:message-id:date:user-agent:mime-version
-	:content-transfer-encoding;
-	bh=/bZvvvitTcBaefppZL+MAZPRox4fOKXRKOUGa1CHFiU=;
-	b=brFsh0UdD+4I9nWLK3BIkrt0K4Pxwf41/ADI2sfhskNKag7sykG8lRAAuM7eCFYBD0
-	B71lSMJXO38rDQvHLJo2OTCYuonFmBOSLfSqcxTtuK5ggOTCBYvc+zueVRJaQZHwfsnu
-	EreiIOs+0iRckzGr4NBFiLBb3X0XYi5l+wH3HVDBki+O8cAGuXoaipL5ka10wONzcPwa
-	hFWMdrwyCZWlDKtThQO1Ko3o4usAg9RZhVi4WqEGmJynGeijbsglO3jvQICWTPF+1LY3
-	TqVJ8HGyZBDS+7V5ldTOcwL+iChvDd2sVr3m8VTjk91W3iH3CIo3u0iEls9Jn0x4TTBI
-	hmjg==
+	h=from:subject:to:references:message-id:date:user-agent:mime-version
+	:in-reply-to:content-transfer-encoding;
+	bh=kBSN7V4fuCbfO5mLuImbHP/Mn+yN6/u6tZyRPv343qU=;
+	b=IjxKR1DH8PuO66897Aurr15AnQ8hDJk7WeqR041+MYvicqDnPLw66Fe0KE4gkWiaRE
+	6Wk3ubGN9u9xiIcNlqMQH4AlRXJvqAF+iAVo3JwViSXMY+0ZK+iQNPQaVMgmJcU35M2n
+	1Glft30bv7EfpaacAZmk3AtRScJLaNH/pWQF9oiBr34k5bBell0heUJFkXKXGV9TxKYj
+	f9fQci0W7eQCoObPJfTWJwkmGCVyNz84YlfoC+O7ryocehf6kCS6y/JbFv5tijZ6fELR
+	vTPyzbHqGpwL4OSauO/ai/Vs5nVNgIht6WujdgECQtHv0jRSSjpsjCryA8TzOY1+/QC9
+	7xPw==
 From: Till Kamppeter <till.kamppeter@gmail.com>
-Message-ID: <9556e237-4936-98d3-ec27-9976577ed55e@gmail.com>
-Date: Tue, 9 Aug 2016 17:55:39 -0300
+References: <e395be80811270817n502ccd16wf6cc90f85364f5ae@mail.gmail.com>
+Message-ID: <028a2706-ec67-6a41-893e-372473e6e40c@gmail.com>
+Date: Tue, 9 Aug 2016 23:13:49 -0300
 MIME-Version: 1.0
+In-Reply-To: <e395be80811270817n502ccd16wf6cc90f85364f5ae@mail.gmail.com>
 Content-Type: text/plain; charset=utf-8; format=flowed
 Content-Transfer-Encoding: 7bit
-Subject: [Printing-architecture] Google Summer of Code 2016 - Who wants to
-	attend the Mentor Summit
+Subject: [Printing-architecture] Last OP Meeting - Tue - 9 Aug 2016 - The
+	Recording
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>,
@@ -26,16 +28,20 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Alexey Khoroshilov <khoroshilov@ispras.ru>, "Luis R. Rodriguez" <mcgrof@gmail.com>, Greg KH <greg@kroah.com>, "lsb-discuss@lists.linux-foundation.org" <lsb-discuss@lists.linux-foundation.org>, linux-wireless <linux-wireless@vger.kernel.org>, Open Printing <printing-architecture@lists.linux-foundation.org>, chris holcombe <chris.holcombe@canonical.com>, Chris MacNaughton <chris.macnaughton@canonical.com>, =?UTF-8?Q?Jan-Simon_M=c3=b6ller?= <jsmoeller@linuxfoundation.org>
+To: Open Printing <printing-architecture@lists.linux-foundation.org>, Printing-japan <printing-japan@lists.linux-foundation.org>
 
 Hi,
 
-as every year there is a Mentor Summit at Google in Mountain View, 
-California. Two of the mentors or org admins of each organization can 
-participate and Google pays the hotel plus 2200 USD (in total for the 
-two) to cover travel expenses.
+I have uploaded the recording of the last OpenPrinting meeting to the
+OpenPrinting server:
 
-So please tell if you want to attand. Thanks.
+http://www.openprinting.org/download/meetingnotes/op-telecons/OP-Meeting-20160809.mp3
 
-    Till
+In general, recorded meetings I will upload to
+
+http://www.openprinting.org/download/meetingnotes/
+
+     Till
+
+P. S.: The MP3 is 20 MB long, 43 minutes of talking.
 
