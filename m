@@ -1,24 +1,20 @@
-Return-Path: <till.kamppeter@gmail.com>
+Return-Path: <chunlinyao@gmail.com>
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20120113;
-	h=from:subject:to:references:message-id:date:user-agent:mime-version
-	:in-reply-to:content-transfer-encoding;
-	bh=kBSN7V4fuCbfO5mLuImbHP/Mn+yN6/u6tZyRPv343qU=;
-	b=IjxKR1DH8PuO66897Aurr15AnQ8hDJk7WeqR041+MYvicqDnPLw66Fe0KE4gkWiaRE
-	6Wk3ubGN9u9xiIcNlqMQH4AlRXJvqAF+iAVo3JwViSXMY+0ZK+iQNPQaVMgmJcU35M2n
-	1Glft30bv7EfpaacAZmk3AtRScJLaNH/pWQF9oiBr34k5bBell0heUJFkXKXGV9TxKYj
-	f9fQci0W7eQCoObPJfTWJwkmGCVyNz84YlfoC+O7ryocehf6kCS6y/JbFv5tijZ6fELR
-	vTPyzbHqGpwL4OSauO/ai/Vs5nVNgIht6WujdgECQtHv0jRSSjpsjCryA8TzOY1+/QC9
-	7xPw==
-From: Till Kamppeter <till.kamppeter@gmail.com>
-References: <e395be80811270817n502ccd16wf6cc90f85364f5ae@mail.gmail.com>
-Message-ID: <028a2706-ec67-6a41-893e-372473e6e40c@gmail.com>
-Date: Tue, 9 Aug 2016 23:13:49 -0300
-MIME-Version: 1.0
-In-Reply-To: <e395be80811270817n502ccd16wf6cc90f85364f5ae@mail.gmail.com>
-Content-Type: text/plain; charset=utf-8; format=flowed
-Content-Transfer-Encoding: 7bit
-Subject: [Printing-architecture] Last OP Meeting - Tue - 9 Aug 2016 - The
-	Recording
+	h=from:content-transfer-encoding:subject:message-id:date:to
+	:mime-version; bh=JBX3KJNtOy4BDvhqvdOMYQ4PfdHnn/yvAEM8nZLZ8R8=;
+	b=ykPQtXPc6VtUdpDgTaaMe4Pma03RDnA0TtZxGAA31OnxqWjZXCzMMKUbpsWnNVUIcl
+	nOYuGfWlhPpXMTkSd+mcO19zH96P2gZytEfoPh5FImOEbxLj87dnFF8DMtQgb1imri+t
+	97r5dqiNjtsZgM593SumEW8251QX1NVwz5PUlGloNCqF0usSALOLQ5dcN16ozYbG5GE+
+	SWImnRQRTghcNzR1rnOJsU8TgAsapqSO/eb3fFwogjcP9LE8uAVatUQuGsY8q7zQAXdv
+	lMToRWksoAGy6EhQjc13v1Sx0+i7XOHaxubkQ8ut+XkHF4ZT+rGTDe4igdRJSC7OM0bv
+	0buw==
+From: YaoCL <chunlinyao@gmail.com>
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+Message-Id: <F6B3A5F7-EFB6-4A0B-9927-C9FEB97D05EA@gmail.com>
+Date: Fri, 12 Aug 2016 19:13:36 +0800
+Mime-Version: 1.0 (Mac OS X Mail 9.3 \(3124\))
+Subject: [Printing-architecture] better support for 203dpi label printer
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>,
@@ -28,20 +24,21 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Open Printing <printing-architecture@lists.linux-foundation.org>, Printing-japan <printing-japan@lists.linux-foundation.org>
+To: printing-architecture@lists.linux-foundation.org
 
-Hi,
+Hi
 
-I have uploaded the recording of the last OpenPrinting meeting to the
-OpenPrinting server:
+CUPS support 203dpi label printer, when print from pdf to label printer, =
+cups use gstoraster to rasterlizing pdf.
+as discussed in <http://bugs.ghostscript.com/show_bug.cgi?id=3D696758> =
+due to low resolution of 203dpi and any-part-of-pixel rule,
+the produced barcode may scannable. Ghostscript has a operator to =
+control center-of-pixel rule  or any-part-of-pixel rule, which is `0 =
+.setfilladjust`.
+I tested a pdf with and without this operator, and checked the result =
+raster files. with this operator the barcode is more accurate.
 
-http://www.openprinting.org/download/meetingnotes/op-telecons/OP-Meeting-20160809.mp3
+Can we add a option to enable or disable this adjustment?
 
-In general, recorded meetings I will upload to
-
-http://www.openprinting.org/download/meetingnotes/
-
-     Till
-
-P. S.: The MP3 is 20 MB long, 43 minutes of talking.
-
+=E2=80=94
+YaoCL=
