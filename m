@@ -1,24 +1,25 @@
-Return-Path: <chunlinyao@gmail.com>
+Return-Path: <till.kamppeter@gmail.com>
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20120113;
-	h=mime-version:subject:from:in-reply-to:date
-	:content-transfer-encoding:message-id:references:to;
-	bh=lFhdTkOKrAyJAE1y+ht5J7XxWYeIR1Y1S9pq6M/vqdI=;
-	b=cBgcQftdAsixUT6ev1MSoxKIgm42RRs13BLEjHe2b19V0FbTukHKflpPvxmHhviT6o
-	ugTxBJdO/wao11HLqDMvmGl0XDHotfS4RUQQ4E8rpE8WElPYlcz/TXo1ybYzBSygDzhR
-	+GLynwtf2t//HgeY/hRYjURiv5EkLhTp4M6alwJHMxXfkoAA5XHVLGgFx4aEYzH/+J2Y
-	P6t6SF2H1q/ZUXZPtkThk7ARryjOMNUXjvzcB/J5+EhRDq1ZL3rF9EeJAfA/j6VZcCMe
-	gPg7NmcOjNl5/d/8AI22MBUarr+4/AEoCA887+M+AUcKf+pfXqANrvEyCc7ym90u961B
-	iqlA==
-Content-Type: text/plain; charset=utf-8
-Mime-Version: 1.0 (Mac OS X Mail 9.3 \(3124\))
-From: YaoCL <chunlinyao@gmail.com>
-In-Reply-To: <m3vaz5oqpl.fsf@carbon.jhcloos.org>
-Date: Sat, 13 Aug 2016 07:27:37 +0800
-Content-Transfer-Encoding: quoted-printable
-Message-Id: <882B54A8-FB8D-46BF-AB10-364BBBC487BE@gmail.com>
+	h=subject:to:references:from:message-id:date:user-agent:mime-version
+	:in-reply-to:content-transfer-encoding;
+	bh=zXLVN0e++JCb2OuZQ43mpq0gpE6Uj91E0wCCqwXAt10=;
+	b=p+kHEEVh/BJUXaAY7+49XXRhumUghPiH3NT60rDUuusFDT2eG/sP/Xvl0lMruvs9Qj
+	BUD9NX706ejrTpLFjBsR46CJRgZ2zOsP86rWYyhANHyaHWXRXB6/ACUd38xoHILdAk18
+	sXgVfINRuEhCFjfq3jQeeYfrPySLqLj8x12Q5r14wYWw2LT2SPixfJ8it2HpDsIFTBhA
+	TYoe/XQsQDxlFBu5fAl141ySKyJLazKOhmWs1VZCpjpsh8XTQ2CSnpsf8GSCs9TvGlfq
+	t7hb90ZdAfzNegZMKNaAixmo1c+bR/WBY2TRg/PQypHJjlL6PtBcKRGFqDbKsd+7BeE+
+	m5UA==
 References: <F6B3A5F7-EFB6-4A0B-9927-C9FEB97D05EA@gmail.com>
 	<ba613dc1-0c9e-8859-d77c-a8bcd0f173f8@gmail.com>
 	<m3vaz5oqpl.fsf@carbon.jhcloos.org>
+	<882B54A8-FB8D-46BF-AB10-364BBBC487BE@gmail.com>
+From: Till Kamppeter <till.kamppeter@gmail.com>
+Message-ID: <69d9c76e-394e-604c-5ba8-7ed15d8aa453@gmail.com>
+Date: Fri, 12 Aug 2016 21:04:11 -0300
+MIME-Version: 1.0
+In-Reply-To: <882B54A8-FB8D-46BF-AB10-364BBBC487BE@gmail.com>
+Content-Type: text/plain; charset="utf-8"; format="flowed"
+Content-Transfer-Encoding: 8bit
 Subject: Re: [Printing-architecture] better support for 203dpi label printer
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
@@ -31,26 +32,26 @@ List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-arc
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
 To: printing-architecture@lists.linux-foundation.org
 
+On 08/12/2016 08:27 PM, YaoCL wrote:
+>
+>> 在 2016年8月13日，上午1:13，James Cloos <cloos@jhcloos.com> 写道：
+>>
+>> Adding 0 .setfilladjust to a postscript job should be done just like how
+>> the ps2ps filter adds snippets from ppd files.
+>>
+>> For rendering pdf w/ gs, I'd expect:
+>>
+>>    -c '0 .setfilladjust'
+>>
+>> is required.  Yes?
+>
+> Yes, append this to gs command line is required. I tested with this method.
+> I created a pdf with 0.125mm width parallel lines, render in 203.2 dpi, with `-c ‘0 .setfilladjust’`
+> It generate perfect result. 0.125mm is dot size in 203.2 dpi.
 
-> =E5=9C=A8 2016=E5=B9=B48=E6=9C=8813=E6=97=A5=EF=BC=8C=E4=B8=8A=E5=8D=881=
-:13=EF=BC=8CJames Cloos <cloos@jhcloos.com> =E5=86=99=E9=81=93=EF=BC=9A
->=20
-> Adding 0 .setfilladjust to a postscript job should be done just like =
-how
-> the ps2ps filter adds snippets from ppd files.
->=20
-> For rendering pdf w/ gs, I'd expect:
->=20
->    -c '0 .setfilladjust'
->=20
-> is required.  Yes?
+Will we also have to make sure that CUPS, cups-filters, and Ghostscript 
+use always floating point numbers for dpi resolutions?
 
-Yes, append this to gs command line is required. I tested with this =
-method.
-I created a pdf with 0.125mm width parallel lines, render in 203.2 dpi, =
-with `-c =E2=80=980 .setfilladjust=E2=80=99`
-It generate perfect result. 0.125mm is dot size in 203.2 dpi.=20
+    Till
 
-=E2=80=94
-YaoCL
 
