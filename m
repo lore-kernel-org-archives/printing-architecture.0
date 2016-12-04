@@ -1,15 +1,19 @@
-Return-Path: <samuel.thibault@ens-lyon.org>
-Date: Tue, 29 Nov 2016 20:30:00 +0100
-From: Samuel Thibault <samuel.thibault@ens-lyon.org>
-Message-ID: <20161129193000.GG2918@var.home>
-References: <20151209102736.GC16751@var.bordeaux.inria.fr>
-	<20161127185441.GG18656@var.home>
+Return-Path: <blueroofmusic@gmail.com>
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20120113;
+	h=mime-version:from:date:message-id:subject:to;
+	bh=+y5j/nSF71Zp057kxWau+7SgpZrSVlCsa5u0M6oSjVc=;
+	b=ryp+omZQkgJgViSlz0/nNPCoGMg2eAKCny4fghXPDpuWebfv93hj6329vFZwOIleKE
+	Lv7FLKwkCNqsNjoeJLQ6NdK3Hx0/NtKdd+xNNXgIjfHTNFmX/d/k3Axu2du8INjfrec8
+	BTfYhZTXjek49dwFt4B8UTH8TUKc5+vmnA5lliqmzxZPynkJsYqgzEGwQTobI9OaPnmD
+	hIe8LP2rH7UdR0a6VRR7Ae++ZdUNEVLf8kELB93YHYJWubPmC9r0auxrt2IE0oKW5Vqc
+	/2Bm7TJgwhX4rfkuBfusqW2g3AvIYlLz9dbzXX6tMlqkSeXbOuPt0qmzMDTlBnMIXg+o
+	+rzQ==
 MIME-Version: 1.0
-Content-Type: multipart/mixed; boundary="9amGYk9869ThD9tj"
-Content-Disposition: inline
-Content-Transfer-Encoding: 8bit
-In-Reply-To: <20161127185441.GG18656@var.home>
-Subject: Re: [Printing-architecture] Contributing braille embosser support
+From: Ira McDonald <blueroofmusic@gmail.com>
+Date: Sun, 4 Dec 2016 12:28:57 -0500
+Message-ID: <CAN40gSua-ZfXZL6JTLTLkMNUXu46P0av=kFc71TVZdUMRBx+yw@mail.gmail.com>
+Content-Type: multipart/alternative; boundary=001a1140ecb0c87d540542d8822f
+Subject: [Printing-architecture] REMINDER - OP Call Tuesday (6 December 2016)
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>,
@@ -19,270 +23,95 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: printing-architecture@lists.linux-foundation.org
+To: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>, Till Kamppeter <till.kamppeter@gmail.com>, Matthew Morikawa <Matthew.Morikawa@dda.kyocera.com>, Ira McDonald <blueroofmusic@gmail.com>
 
+--001a1140ecb0c87d540542d8822f
+Content-Type: text/plain; charset=UTF-8
 
---9amGYk9869ThD9tj
-Content-Type: text/plain; charset=us-ascii
-Content-Disposition: inline
+Please join us for our OP US/Europe/Brazil conference call:
 
-Hello,
+(1) December 2016 - US/Europe/Brazil - OP Monthly Meeting
+    - Tuesday 6 December 2016, Daytime
+      - US
+        9am in San Francisco - US PST (Pacific Standard Time)
+        10am in Colorado - US MST (Mountain Standard Time)
+        11am in Chicago - US CST (Central Standard Time)
+        12pm in New York - US EST (Eastern Standard Time)
+      - Europe
+        6pm in Berlin - CET (Central Europe Time)
+      - Brazil
+        3pm in Belo Horizonte - BRST (Brasilia Summer Time)
 
-This is an update for the Index braille driver, to add support for text
-margins.
+    US:  +1 641-715-3814 <%28641%29%20715-3814>
+    Germany:  +49 (0) 221 98203421 <+49%20221%2098203421>
+    Brazil:  +55 61 4040-4460 <+55%2061%204040-4460>
+    Japan:  +81 (0) 3-5050-5070 <+81%203-5050-5070>
+    Participant Access Code:  622393#
 
-Samuel
+    (note that local numbers for many other countries are available,
+    also cellphone apps, VOIP support, etc. - please email Till for
+    details
 
---9amGYk9869ThD9tj
-Content-Type: text/plain; charset="iso-8859-1"
-Content-Disposition: attachment; filename=patch
+Cheers,
+- Ira
+
+Ira McDonald (Musician / Software Architect)
+Co-Chair - TCG Trusted Mobility Solutions WG
+Chair - Linux Foundation Open Printing WG
+Secretary - IEEE-ISTO Printer Working Group
+Co-Chair - IEEE-ISTO PWG Internet Printing Protocol WG
+IETF Designated Expert - IPP & Printer MIB
+Blue Roof Music / High North Inc
+http://sites.google.com/site/blueroofmusic
+http://sites.google.com/site/highnorthinc
+mailto: blueroofmusic@gmail.com
+Jan-April: 579 Park Place  Saline, MI  48176  734-944-0094
+May-Dec: PO Box 221  Grand Marais, MI 49839  906-494-2434
+
+--001a1140ecb0c87d540542d8822f
+Content-Type: text/html; charset=UTF-8
 Content-Transfer-Encoding: quoted-printable
 
-=3D=3D=3D modified file 'filter/braille/drivers/index/index.defs'
---- filter/braille/drivers/index/index.defs	2015-12-12 02:11:10 +0000
-+++ filter/braille/drivers/index/index.defs	2016-11-27 20:30:23 +0000
-@@ -1,5 +1,5 @@
- //=20
--// Copyright (c) 2015 Samuel Thibault <samuel.thibault@ens-lyon.org>
-+// Copyright (c) 2015-2016 Samuel Thibault <samuel.thibault@ens-lyon.org>
- //=20
- // Permission is hereby granted, free of charge, to any person obtaining a=
- copy
- // of this software and associated documentation files (the "Software"), t=
-o deal
-@@ -56,3 +56,70 @@ Group "Braille"
-   Choice "3/User-defined Table 3" ""
-   Choice "4/User-defined Table 4" ""
-=20
-+Option "TopMargin/Top margin" PickOne AnySetup 10
-+  Choice "0" ""
-+  Choice "1" ""
-+  *Choice "2" ""
-+  Choice "3" ""
-+  Choice "4" ""
-+  Choice "5" ""
-+  Choice "6" ""
-+  Choice "7" ""
-+  Choice "8" ""
-+  Choice "9" ""
-+  Choice "10" ""
-+
-+Option "BottomMargin/Bottom margin" PickOne AnySetup 10
-+  Choice "0" ""
-+  Choice "1" ""
-+  *Choice "2" ""
-+  Choice "3" ""
-+  Choice "4" ""
-+  Choice "5" ""
-+  Choice "6" ""
-+  Choice "7" ""
-+  Choice "8" ""
-+  Choice "9" ""
-+  Choice "10" ""
-+
-+Option "InnerMargin/Inner margin" PickOne AnySetup 10
-+  Choice "0" ""
-+  Choice "1" ""
-+  *Choice "2" ""
-+  Choice "3" ""
-+  Choice "4" ""
-+  Choice "5" ""
-+  Choice "6" ""
-+  Choice "7" ""
-+  Choice "8" ""
-+  Choice "9" ""
-+  Choice "10" ""
-+
-+Option "OuterMargin/Outer margin" PickOne AnySetup 10
-+  Choice "0" ""
-+  Choice "1" ""
-+  *Choice "2" ""
-+  Choice "3" ""
-+  Choice "4" ""
-+  Choice "5" ""
-+  Choice "6" ""
-+  Choice "7" ""
-+  Choice "8" ""
-+  Choice "9" ""
-+  Choice "10" ""
-+
-+Option "PageNumber/Page Number" PickOne AnySetup 10
-+  Choice "None/None" ""
-+  Choice "Top/Top-middle" ""
-+  Choice "TopLeft/Top-left" ""
-+  Choice "TopRight/Top-right" ""
-+  Choice "Bottom/Bottom-middle" ""
-+  Choice "BottomLeft/Bottom-left" ""
-+  Choice "BottomRight/Bottom-right" ""
-+
-+UIConstraints "*TopMargin 0 *PageNumber Top"
-+UIConstraints "*TopMargin 0 *PageNumber TopLeft"
-+UIConstraints "*TopMargin 0 *PageNumber TopRight"
-+UIConstraints "*BottomMargin 0 *PageNumber Bottom"
-+UIConstraints "*BottomMargin 0 *PageNumber BottomLeft"
-+UIConstraints "*BottomMargin 0 *PageNumber BottomRight"
+<div dir=3D"ltr"><div><div>Please join us for our <span>OP</span> US/Europe=
+/Brazil conference call:<br><br>(1) December 2016 - US/Europe/Brazil - OP M=
+onthly Meeting<br>=C2=A0=C2=A0=C2=A0 - Tuesday 6 December 2016, Daytime<br>=
+=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 - US<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=
+=C2=A0 9am in San Francisco - US PST (Pacific Standard Time)<br>=C2=A0=C2=
+=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 10am in Colorado - US MST (Mountain Stand=
+ard Time)<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 11am in Chicago - U=
+S CST (Central Standard Time)<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=
+ 12pm in New York - US EST (Eastern Standard Time)<br>=C2=A0=C2=A0=C2=A0=C2=
+=A0=C2=A0 - Europe<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 6pm in Ber=
+lin - CET (Central Europe Time)<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 - Brazil<=
+br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 3pm in Belo Horizonte - BRST =
+(Brasilia Summer Time)<br><br>=C2=A0=C2=A0=C2=A0 US:=C2=A0 <a href=3D"tel:%=
+28641%29%20715-3814" value=3D"+16417153814" target=3D"_blank">+1 641-715-38=
+14</a><br>=C2=A0=C2=A0=C2=A0 Germany:=C2=A0 <a href=3D"tel:+49%20221%209820=
+3421" value=3D"+4922198203421" target=3D"_blank">+49 (0) 221 98203421</a><b=
+r>=C2=A0=C2=A0=C2=A0 Brazil:=C2=A0 <a href=3D"tel:+55%2061%204040-4460" val=
+ue=3D"+556140404460" target=3D"_blank">+55 61 4040-4460</a><br>=C2=A0=C2=A0=
+=C2=A0 Japan:=C2=A0 <a href=3D"tel:+81%203-5050-5070" value=3D"+81350505070=
+" target=3D"_blank">+81 (0) 3-5050-5070</a><br>=C2=A0=C2=A0=C2=A0 Participa=
+nt Access Code:=C2=A0 622393#<br><br>=C2=A0=C2=A0=C2=A0 (note that local nu=
+mbers for many other countries are available, <br>=C2=A0=C2=A0=C2=A0 also c=
+ellphone apps, VOIP support, etc. - please email Till for <br>=C2=A0=C2=A0=
+=C2=A0 details<br><br></div>Cheers,<br></div>- Ira<br><br><div><div><div><d=
+iv class=3D"gmail_signature"><div dir=3D"ltr"><div><div dir=3D"ltr">Ira McD=
+onald (Musician / Software Architect)<br>Co-Chair - TCG Trusted Mobility So=
+lutions WG<br>Chair - Linux Foundation Open Printing WG<br>Secretary - IEEE=
+-ISTO Printer Working Group<br>Co-Chair - IEEE-ISTO PWG Internet Printing P=
+rotocol WG<br>IETF Designated Expert - IPP &amp; Printer MIB<br>Blue Roof M=
+usic / High North Inc<br><a style=3D"color:rgb(51,51,255)" href=3D"http://s=
+ites.google.com/site/blueroofmusic" target=3D"_blank">http://sites.google.c=
+om/site/blueroofmusic</a><br><a style=3D"color:rgb(102,0,204)" href=3D"http=
+://sites.google.com/site/highnorthinc" target=3D"_blank">http://sites.googl=
+e.com/site/highnorthinc</a><br>mailto: <a href=3D"mailto:blueroofmusic@gmai=
+l.com" target=3D"_blank">blueroofmusic@gmail.com</a><br>Jan-April: 579 Park=
+ Place=C2=A0 Saline, MI=C2=A0 48176=C2=A0 734-944-0094<br>May-Dec: PO Box 2=
+21=C2=A0 Grand Marais, MI 49839=C2=A0 906-494-2434<br><br><div style=3D"dis=
+play:inline"></div><div style=3D"display:inline"></div><div style=3D"displa=
+y:inline"></div><div></div><div></div><div></div><div></div></div></div></d=
+iv></div></div>
+</div></div></div>
 
-=3D=3D=3D modified file 'filter/braille/drivers/index/index.sh.in'
---- filter/braille/drivers/index/index.sh.in	2015-12-12 02:11:10 +0000
-+++ filter/braille/drivers/index/index.sh.in	2016-11-27 20:47:11 +0000
-@@ -1,5 +1,5 @@
- #
--# Copyright (c) 2015 Samuel Thibault <samuel.thibault@ens-lyon.org>
-+# Copyright (c) 2015-2016 Samuel Thibault <samuel.thibault@ens-lyon.org>
- #=20
- # Permission is hereby granted, free of charge, to any person obtaining a =
-copy
- # of this software and associated documentation files (the "Software"), to=
- deal
-@@ -28,6 +28,7 @@ FIRMWARE=3D$(getOptionNumber IndexFirmware
- FOLDING=3D$(getOption IndexFolding)
- TABLE=3D$(getOptionNumber IndexTable)
- MULTIPLEIMPACT=3D$(getOptionNumber IndexMultipleImpact)
-+PAGENUMBER=3D$(getOption PageNumber)
-=20
- # Convert from 100th of mm to Inch fraction
- mmToIndexIn () {
-@@ -71,7 +72,7 @@ mmToIndexIn () {
- commonOptions() {
-   INIT=3D
-   # Disable options we don't want: first line offset and page numbering
--  INIT+=3D,FO0,PN0
-+  INIT+=3D,FO0
-=20
-   # Support hardware-assisted multiple copies
-   if [ $NB !=3D 1 ]
-@@ -82,7 +83,7 @@ commonOptions() {
-   INIT+=3D,MI$MULTIPLEIMPACT
-=20
-   # Support page folding
--  case $FOLDING in
-+  case "$FOLDING" in
-     Single)  INIT+=3D,DP1 ;;
-     Double)  INIT+=3D,DP2 ;;
-     SingleZ) INIT+=3D,DP5 ;;
-@@ -101,11 +102,22 @@ commonOptions() {
-     320) INIT+=3D,TD2 ;;
-     *)   printf "ERROR: unsupported '%s' text dot distance\n" "$TEXTDOTDIS=
-TANCE" >&2 ; exit 1 ;;
-   esac
--  case $GRAPHICDOTDISTANCE in
-+  case "$GRAPHICDOTDISTANCE" in
-     160) INIT+=3D,GD2 ;;
-     200) INIT+=3D,GD0 ;;
-     250) INIT+=3D,GD1 ;;
--    *)   printf "ERROR: unsupported '%s'graphic dot distance\n" "$GRAPHICD=
-OTDISTANCE" >&2 ; exit 1 ;;
-+    *)   printf "ERROR: unsupported '%s' graphic dot distance\n" "$GRAPHIC=
-DOTDISTANCE" >&2 ; exit 1 ;;
-+  esac
-+
-+  case "$PAGENUMBER" in
-+    None)        INIT+=3D,PN0 ;;
-+    Top)         INIT+=3D,PN1 ;;
-+    TopLeft)     INIT+=3D,PN2 ;;
-+    TopRight)    INIT+=3D,PN3 ;;
-+    Bottom)      INIT+=3D,PN4 ;;
-+    BottomLeft)  INIT+=3D,PN5 ;;
-+    BottomRight) INIT+=3D,PN6 ;;
-+    *)   echo "ERROR: unsupported $PAGENUMBER page number" >&2 ; exit 1 ;;
-   esac
-=20
-   echo "$INIT"
-
-=3D=3D=3D modified file 'filter/braille/drivers/index/indexv3.sh.in'
---- filter/braille/drivers/index/indexv3.sh.in	2015-12-12 02:11:10 +0000
-+++ filter/braille/drivers/index/indexv3.sh.in	2016-11-29 19:29:11 +0000
-@@ -1,5 +1,5 @@
- #
--# Copyright (c) 2015 Samuel Thibault <samuel.thibault@ens-lyon.org>
-+# Copyright (c) 2015-2016 Samuel Thibault <samuel.thibault@ens-lyon.org>
- #=20
- # Permission is hereby granted, free of charge, to any person obtaining a =
-copy
- # of this software and associated documentation files (the "Software"), to=
- deal
-@@ -33,7 +33,7 @@ then
-   INIT=3D$'\033'D
-=20
-   # Disable margins
--  INIT+=3DTM0,BM0,IM0,OM0
-+  INIT+=3DTM$TOPMARGIN,BM$BOTTOMMARGIN,IM$INNERMARGIN,OM$OUTERMARGIN
-=20
-   # Trying to disable banner page seems to pose problems
-   #INIT+=3D,BP
-
-=3D=3D=3D modified file 'filter/braille/drivers/index/indexv4.sh.in'
---- filter/braille/drivers/index/indexv4.sh.in	2015-12-12 02:11:10 +0000
-+++ filter/braille/drivers/index/indexv4.sh.in	2016-11-29 19:29:12 +0000
-@@ -1,5 +1,5 @@
- #
--# Copyright (c) 2015 Samuel Thibault <samuel.thibault@ens-lyon.org>
-+# Copyright (c) 2015-2016 Samuel Thibault <samuel.thibault@ens-lyon.org>
- #=20
- # Permission is hereby granted, free of charge, to any person obtaining a =
-copy
- # of this software and associated documentation files (the "Software"), to=
- deal
-@@ -30,7 +30,7 @@ then
-   INIT=3D$'\033'D
-=20
-   # Disable margins
--  INIT+=3DTM0,BI0
-+  INIT+=3DTM$TOPMARGIN,BI$INNERMARGIN
-=20
-   # Common options
-   INIT+=3D"$(setCommonOptions)"
-
-=3D=3D=3D modified file 'filter/braille/filters/cups-braille.sh.in'
---- filter/braille/filters/cups-braille.sh.in	2016-04-10 17:20:32 +0000
-+++ filter/braille/filters/cups-braille.sh.in	2016-11-27 20:35:31 +0000
-@@ -144,7 +144,7 @@ case "$PAGESIZE" in
-     ;;
- esac
-=20
--#=A0TODO: hardcoded margin
-+#=A0TODO: hardcoded embosser margin
- PRINTABLEWIDTH=3D$((PAGEWIDTH - 1000))
- PRINTABLEHEIGHT=3D$((PAGEHEIGHT - 1000))
-=20
-@@ -167,9 +167,30 @@ esac
- TEXTDOTS=3D$(getOptionNumber TextDots)
- LINESPACING=3D$(getOptionNumber LineSpacing)
-=20
-+# Cell dimension, including spacing
-+TEXTCELLWIDTH=3D$(( $TEXTDOTDISTANCE + $TEXTCELLDISTANCE ))
-+TEXTCELLHEIGHT=3D$(( $TEXTDOTDISTANCE * ($TEXTDOTS / 2 - 1) + $LINESPACING=
- ))
-+
-+if [ "$(getOption TopMargin)" =3D "" ]
-+then
-+  # No margin
-+  TEXTAREAWIDTH=3D$PRINTABLEWIDTH
-+  TEXTAREAHEIGHT=3D$PRINTABLEHEIGHT
-+else
-+  # Margins in cells
-+  TOPMARGIN=3D$(getOptionNumber TopMargin)
-+  BOTTOMMARGIN=3D$(getOptionNumber BottomMargin)
-+  INNERMARGIN=3D$(getOptionNumber InnerMargin)
-+  OUTERMARGIN=3D$(getOptionNumber OuterMargin)
-+ =20
-+  # Subtract margins from printable area
-+  TEXTAREAWIDTH=3D$(( $PRINTABLEWIDTH - ($INNERMARGIN + $OUTERMARGIN) * $T=
-EXTCELLWIDTH ))
-+  TEXTAREAHEIGHT=3D$(( $PRINTABLEHEIGHT - ($TOPMARGIN + $BOTTOMMARGIN) * $=
-TEXTCELLHEIGHT ))
-+fi
-+
- # Compute number of printable cells according to page width and height
--TEXTWIDTH=3D$(( ($PRINTABLEWIDTH + $TEXTCELLDISTANCE) / ($TEXTDOTDISTANCE =
-+ $TEXTCELLDISTANCE) ))
--TEXTHEIGHT=3D$(( ($PRINTABLEHEIGHT + $LINESPACING) / ($TEXTDOTDISTANCE * (=
-$TEXTDOTS / 2 - 1) + $LINESPACING) ))
-+TEXTWIDTH=3D$(( ($TEXTAREAWIDTH + $TEXTCELLDISTANCE) / $TEXTCELLWIDTH  ))
-+TEXTHEIGHT=3D$(( ($TEXTAREAHEIGHT + $LINESPACING) / $TEXTCELLHEIGHT ))
-=20
- #
- # Graphic spacing
-
-
---9amGYk9869ThD9tj--
+--001a1140ecb0c87d540542d8822f--
