@@ -1,21 +1,24 @@
 Return-Path: <till.kamppeter@gmail.com>
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
-	h=to:from:subject:message-id:date:user-agent:mime-version
-	:content-transfer-encoding;
-	bh=N5z5ZfQ7GaVGaz6ui+DHFI79S0Sm8o3AHHwgQQLuYKQ=;
-	b=BIeXUUciPzLXeeqEoayC18fyuaTwLJJro4eSdJ5AkDdP/VrSQ3bAAVamEq70IaKWEH
-	sR63qoWC2s49TCjP3dwNN/1+pdn5uZBCbiL/fPbS+q7xQxfGP93TPXly1ZdBu4Tv0KvH
-	pPrIqJp6c7aNagjYtl1TyO9XdSbPU1cMRvdP69CltmfhM6Cttt2UN7QqSlUYJaIqNdwV
-	svk8nkqiIhc6oyWYQwB9PmytIfqxe8eL4Q82g0yjTxkPEmu6Hgd9+sbFn/ETx6FvGxiH
-	jYaJgmI405XpMeKApcBlv4K3b842aIbVg44lF2TU5dYa4A/moyXgCP9FijMVHJI8NAEO
-	EWRQ==
+	h=subject:to:references:from:message-id:date:user-agent:mime-version
+	:in-reply-to:content-transfer-encoding;
+	bh=Oak5ek53ZWK8S//O7D0J4Sq/A3Tb9QiK/ktUjEiq84A=;
+	b=Di+RBn/0f+BbcKFm6cJ4rNVNLAS05CaarAQ+5hTqGEXTFub625F/BmMEH49kX1GjF+
+	7s4sxnfzEYyjO07iz0FsvMpTk49rIMbqmxz1sWHcOvZ2E2O4KBds67ILdHpp8Wdy9LK4
+	3oL94dHVorAMXsn+FFRfCCLaKfN9WBusShxX11UFh0neDu6ewuBu62h5yVyU8MD2pRSx
+	ZNgU8ehIb6I1yP7CodfZ5DEYxMG58pVhKXhddZIQmcqGgbTpJb1P0AO0lRp9jy6j6Og4
+	wKwGJGmxvTsO5dXtw/nQb2XFvh1zrOfVXFUtIldVpldM6jW+FE4h0bE34W+zBlV57Bxl
+	VIrg==
+References: <c8eab08c-255b-c00d-a4dd-320f362a04a3@gmail.com>
+	<A18DDFC9-8572-442A-ABFF-60FFA167E2D3@apple.com>
 From: Till Kamppeter <till.kamppeter@gmail.com>
-Message-ID: <c8eab08c-255b-c00d-a4dd-320f362a04a3@gmail.com>
-Date: Tue, 3 Jan 2017 14:26:09 -0200
+Message-ID: <589105e7-3986-7904-2344-9e8ee9f45974@gmail.com>
+Date: Tue, 3 Jan 2017 14:49:20 -0200
 MIME-Version: 1.0
+In-Reply-To: <A18DDFC9-8572-442A-ABFF-60FFA167E2D3@apple.com>
 Content-Type: text/plain; charset=utf-8; format=flowed
 Content-Transfer-Encoding: 7bit
-Subject: [Printing-architecture] IPP Scanning: GSoC project for a SANE
+Subject: Re: [Printing-architecture] IPP Scanning: GSoC project for a SANE
  module for IPP-based driverless scanning?
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
@@ -26,39 +29,46 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Open Printing <printing-architecture@lists.linux-foundation.org>
+To: Michael Sweet <msweet@apple.com>, Open Printing <printing-architecture@lists.linux-foundation.org>
 
-Hi,
+[ Posting back to printing-architecture list ]
 
-a great, driverless 2017 to everyone, everywhere!
+On 01/03/2017 02:31 PM, Michael Sweet wrote:
+>> <mailto:till.kamppeter@gmail.com>> wrote:
 
-After having done a lot of work on driverless (IPP Everywhere, AirPrint) 
-printing with cups-filters and ippusbxd, especially to make both IPP 
-network printers and IPP-over-USB printers get set up automatically with 
-an auto-generated PPD file, I was also thinking about driverless scanning.
+[...]
 
-So I looked around on the PWG web site and found the document about IPP 
-scanning:
+>> Is the IPP scanning standard already an approved standard?
+>
+> Yes, otherwise it wouldn't have been assigned a PWG standard number...
+>
 
-http://ftp.pwg.org/pub/pwg/candidates/cs-ippscan10-20140918-5100.17.pdf
+OK. Thanks.
 
-and this looks promising, information based on which one could write a 
-SANE driver. And at SANE no one tried up to now:
+>> Are there already scanners or multi-function printers which do IPP
+>> scanning?
+>
+> Nobody has come forward to report on this, and I haven't seen any in the
+> wild.  It was prototyped by Xerox...
+>
 
-http://www.sane-project.org/
+Let's hope they will come out with devices any time soon.
 
-I think about putting up a GSoC project for that.
+>> Is there a list of models?
+>>
+>> Is there some free software which emulates an IPP scanner (like the
+>> ippserver utility of CUPS emulates an IPP Everywhere printer)?
+>
+> Not at present.
+>
 
-As my driverless-printing-capable IPP printers do not seem to offer IPP 
-scanning, I want to know how far we are with IPP scanning currently.
-
-Is the IPP scanning standard already an approved standard?
-
-Are there already scanners or multi-function printers which do IPP scanning?
-
-Is there a list of models?
-
-Is there some free software which emulates an IPP scanner (like the 
-ippserver utility of CUPS emulates an IPP Everywhere printer)?
+So a feature request for CUPS' "ippserver" utility would be to make it 
+emulate a multi-function printer with scanner (possibility to 
+activate/deactivate the print and scan functions of the virtual IPP 
+device by command line options). One could have a directory with 
+printable files on the machine running ippserver and if a client scans 
+it gets files from this directory.
 
     Till
+
+
