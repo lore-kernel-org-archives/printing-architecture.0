@@ -1,24 +1,22 @@
 Return-Path: <till.kamppeter@gmail.com>
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
-	h=from:subject:to:references:message-id:date:user-agent:mime-version
-	:in-reply-to:content-transfer-encoding;
-	bh=uRsY07dyN6Xdz/NIDZaO4qHSZusQd+ga9zWh6jHLFAE=;
-	b=VZsdwc42DzDLvGWedia+nTnBVpGmX6XpPoRK/fvVv6OSLSO5AzNnDPcT8MTTz/7Cdb
-	qwSJJJH2RxaVn9ebD/YPE4DMalsObkdA61d96E8/JUpGGpAqZA+zXRbJT+cy/JaDP6ea
-	3tZIdbtCtiatGewoVS1MMLQ2LFpvwNAF68bQ38mAksx/421R2TrQNr30sD1W1jNSaJxl
-	q3kUON3H3DRrW/jHEZlCuU4vfsxUZ7157wJDL3eUfLKKMHVBOEkLSJrQJR3cpB0vlk0W
-	RdaMaxil5X7RVCK8Gm1sKn3TatO/9GnU9CINOSexF8IsMB8zpWOhRv5FGtmXICMADCUa
-	AVFA==
+	h=from:subject:to:message-id:date:user-agent:mime-version
+	:content-transfer-encoding;
+	bh=MGx6PTSnqWoH0mjUh5xCkt5Py2L47pcMsbedNZHoJLA=;
+	b=lefSvIntwEJHPpSgL3uZetzMfTpZUruRPViAmpJnJDJxbWWclH6LDuIDFtZNI9w0yy
+	Egz+Yf+/Tn9RCceyX9OMvuZvtaM6Y6EovHk1x41Tv7YFr6pfYYNdW86q3ryPGI2dKEJ9
+	Kb4Me56vg7UphSVP+Fy6h4aGV0MlwNXUk/fTruOriSthGhC6IZq8QbzFdzaIx1guWLlP
+	kG65LhWoymoUSasXnBitEz148i4RD8bSXc9tVRiNEK77XRsZN5sfazsD+I6zu5ALPyLg
+	Vuhb6Q5BkkZfPrj+hFvJv6x2qtWCSsWnUP/JDt8umdlvMr2gKmUXUAvbchSjDToA935u
+	F2Ww==
 From: Till Kamppeter <till.kamppeter@gmail.com>
-References: <e395be80811270817n502ccd16wf6cc90f85364f5ae@mail.gmail.com>
-Message-ID: <962eeaa0-d68f-0dc3-bd01-bc59468026ff@gmail.com>
-Date: Tue, 10 Jan 2017 16:10:32 -0200
+Message-ID: <169b38fe-ff8e-8a49-a163-8016418a410b@gmail.com>
+Date: Fri, 13 Jan 2017 12:18:44 -0200
 MIME-Version: 1.0
-In-Reply-To: <e395be80811270817n502ccd16wf6cc90f85364f5ae@mail.gmail.com>
 Content-Type: text/plain; charset=utf-8; format=flowed
 Content-Transfer-Encoding: 7bit
-Subject: [Printing-architecture] Last OP Meeting - Tue - 10 Jan 2017 - The
-	Recording
+Subject: [Printing-architecture] Google Summer of Code 2017 - Project ideas
+ page for the Linux Foundation online
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>,
@@ -28,20 +26,27 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Open Printing <printing-architecture@lists.linux-foundation.org>, Printing-japan <printing-japan@lists.linux-foundation.org>
+To: Alexey Khoroshilov <khoroshilov@ispras.ru>, "Luis R. Rodriguez" <mcgrof@gmail.com>, Greg KH <greg@kroah.com>, "lsb-discuss@lists.linux-foundation.org" <lsb-discuss@lists.linux-foundation.org>, linux-wireless <linux-wireless@vger.kernel.org>, Open Printing <printing-architecture@lists.linux-foundation.org>, dl9pf@gmx.de
 
 Hi,
 
-I have uploaded the recording of the last OpenPrinting meeting to the
-OpenPrinting server:
+I have set up a page for project ideas for the Linux Foundation's
+participation in the Google Summer of Code 2017:
 
-http://www.openprinting.org/download/meetingnotes/op-telecons/OP-Meeting-20170110.mp3
+https://wiki.linuxfoundation.org/gsoc/google-summer-code-2017
 
-In general, recorded meetings I will upload to
+Please add your ideas to the sub-page of your work group. If you have
+problems mail me with your project idea.
 
-http://www.openprinting.org/download/meetingnotes/
+ From this year on the ideas list is in the Linux Foundation Wiki. AFAIK 
+it is enough to have a Linux Foundation web site account to be able to 
+edit and there is no requirement of a special group membership.
 
-      Till
+Please also take into account that the deadline for our application as 
+mentoring organization is Feb 9 and after that Google will evaluate the 
+applications. So have your ideas (at least most of them, ideas can be 
+posted up to the student application deadline) in by then to raise our 
+chances to get accepted.
 
-P. S.: The MP3 is 22 MB long, 46 minutes of talking.
+    Till
 
