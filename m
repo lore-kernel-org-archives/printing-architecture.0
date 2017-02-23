@@ -1,19 +1,13 @@
-Return-Path: <blueroofmusic@gmail.com>
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
-	h=mime-version:from:date:message-id:subject:to;
-	bh=hhGlrtJEU4UkAfZRiX5qwVfYqc8veEjd6/0l+o89jfY=;
-	b=DItQHd09DJmPr1Rl2Wpfk4Ss2aEaz/JZ6LiUjL3mnbzeQsj0AqGSSsMQ+NI5eYpkNr
-	EZxGRqmGMUA3hJfL/EcJrpv/nBebPWLzWHPFWsMObDDFAKNQLxgKd4AIg+95s5lO1e2z
-	vcUjBdoDF3CWOfPUR9/PgBE6v4/l8ibOIP9vn1HmXnvwUFGfwCWjSC+kC3Kuv7kzPoSb
-	t6M9GlDglzCbg+A6dLXw9etrBABzzRzuqM26aNWdyvG3kE+7J7XBSZGrUVyC1SLfZlyE
-	d8ih22stl3D6rMv+gZiqhGuq/xrHG+gvzJwPPDxUqbFoaDCqTAOWps/uoLIOnnIEhX+N
-	EHAQ==
+Return-Path: <samuel.thibault@ens-lyon.org>
+Date: Thu, 23 Feb 2017 20:13:02 +0100
+From: Samuel Thibault <samuel.thibault@ens-lyon.org>
+Message-ID: <20170223191302.5frq7gtvuaavgehd@var.youpi.perso.aquilenet.fr>
 MIME-Version: 1.0
-From: Ira McDonald <blueroofmusic@gmail.com>
-Date: Mon, 6 Feb 2017 15:39:24 -0500
-Message-ID: <CAN40gSub10ETfGyT_4ddrRN+nw+qzG0A4XqZfdHAcqCFaN3i3A@mail.gmail.com>
-Content-Type: multipart/alternative; boundary=001a11422604b213500547e2a177
-Subject: [Printing-architecture] CANCELED - OP Call Tuesday (7 February 2017)
+Content-Type: multipart/mixed; boundary="cx7ehcdr3lbxo5zw"
+Content-Disposition: inline
+Content-Transfer-Encoding: 8bit
+Subject: [Printing-architecture] Contributing margin support for braille
+	embosser support
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>,
@@ -23,161 +17,410 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>, Till Kamppeter <till.kamppeter@gmail.com>, Ira McDonald <blueroofmusic@gmail.com>
-
---001a11422604b213500547e2a177
-Content-Type: text/plain; charset=UTF-8
-
-Hi,
-
-OP Monthly call is CANCELED for February 2017.
-
-We'll resume in March.
-
-Cheers,
-- Ira
+To: printing-architecture@lists.linux-foundation.org
 
 
-Ira McDonald (Musician / Software Architect)
-Co-Chair - TCG Trusted Mobility Solutions WG
-Chair - Linux Foundation Open Printing WG
-Secretary - IEEE-ISTO Printer Working Group
-Co-Chair - IEEE-ISTO PWG Internet Printing Protocol WG
-IETF Designated Expert - IPP & Printer MIB
-Blue Roof Music / High North Inc
-http://sites.google.com/site/blueroofmusic
-http://sites.google.com/site/highnorthinc
-mailto: blueroofmusic@gmail.com
-Jan-April: 579 Park Place  Saline, MI  48176  734-944-0094
-May-Dec: PO Box 221  Grand Marais, MI 49839  906-494-2434
+--cx7ehcdr3lbxo5zw
+Content-Type: text/plain; charset=us-ascii
+Content-Disposition: inline
 
+Hello,
 
-On Sun, Feb 5, 2017 at 4:12 PM, Ira McDonald <blueroofmusic@gmail.com>
-wrote:
+This is an update for the braille drivers, to add support for text
+margins.
 
-> Hi,
->
-> Please join us for our OP US/Europe/Brazil conference call:
->
-> (1) February 2017 - US/Europe/Brazil - OP Monthly Meeting
->     - Note - 6-10 February is Trusted Computing Group in San Diego, CA
->     - Note - 14-15 February is PWG F2F at Apple in Sunnyvale, CA
->     - Note - Brasilia Summer Time ends on 19 February 2017
->     - Tuesday 7 February 2017, Daytime (tentative)
->       - US
->         9am in San Francisco - US PST (Pacific Standard Time)
->         10am in Colorado - US MST (Mountain Standard Time)
->         11am in Chicago - US CST (Central Standard Time)
->         12pm in New York - US EST (Eastern Standard Time)
->       - Europe
->         6pm in Berlin - CET (Central Europe Time)
->       - Brazil
->         3pm in Belo Horizonte - BRT (Brasilia Summer Time)
->
->     US:  +1 641-715-3814 <(641)%20715-3814>
->     Germany:  +49 (0) 221 98203421 <+49%20221%2098203421>
->     Brazil:  +55 61 4040-4460 <+55%2061%204040-4460>
->     Japan:  +81 (0) 3-5050-5070 <+81%203-5050-5070>
->     Participant Access Code:  622393#
->
->     (note that local numbers for many other countries are available,
->     also cellphone apps, VOIP support, etc. - please email Till for
->     details)
->
-> Cheers,
-> - Ira
->
-> Ira McDonald (Musician / Software Architect)
-> Co-Chair - TCG Trusted Mobility Solutions WG
-> Chair - Linux Foundation Open Printing WG
-> Secretary - IEEE-ISTO Printer Working Group
-> Co-Chair - IEEE-ISTO PWG Internet Printing Protocol WG
-> IETF Designated Expert - IPP & Printer MIB
-> Blue Roof Music / High North Inc
-> http://sites.google.com/site/blueroofmusic
-> http://sites.google.com/site/highnorthinc
-> mailto: blueroofmusic@gmail.com
-> Jan-April: 579 Park Place  Saline, MI  48176  734-944-0094
-> <(734)%20944-0094>
-> May-Dec: PO Box 221  Grand Marais, MI 49839  906-494-2434
-> <(906)%20494-2434>
->
->
+Samuel
 
---001a11422604b213500547e2a177
-Content-Type: text/html; charset=UTF-8
+--cx7ehcdr3lbxo5zw
+Content-Type: text/plain; charset="iso-8859-1"
+Content-Disposition: attachment; filename=patch
 Content-Transfer-Encoding: quoted-printable
 
-<div dir=3D"ltr"><div><div><div><div>Hi,<br><br></div>OP Monthly call is CA=
-NCELED for February 2017.<br><br></div>We&#39;ll resume in March.<br><br></=
-div>Cheers,<br></div>- Ira<br><br><div class=3D"gmail_extra"><br clear=3D"a=
-ll"><div><div class=3D"gmail_signature" data-smartmail=3D"gmail_signature">=
-<div dir=3D"ltr"><div><div dir=3D"ltr">Ira McDonald (Musician / Software Ar=
-chitect)<br>Co-Chair - TCG Trusted Mobility Solutions WG<br>Chair - Linux F=
-oundation Open Printing WG<br>Secretary - IEEE-ISTO Printer Working Group<b=
-r>Co-Chair - IEEE-ISTO PWG Internet Printing Protocol WG<br>IETF Designated=
- Expert - IPP &amp; Printer MIB<br>Blue Roof Music / High North Inc<br><a s=
-tyle=3D"color:rgb(51,51,255)" href=3D"http://sites.google.com/site/blueroof=
-music" target=3D"_blank">http://sites.google.com/site/blueroofmusic</a><br>=
-<a style=3D"color:rgb(102,0,204)" href=3D"http://sites.google.com/site/high=
-northinc" target=3D"_blank">http://sites.google.com/site/highnorthinc</a><b=
-r>mailto: <a href=3D"mailto:blueroofmusic@gmail.com" target=3D"_blank">blue=
-roofmusic@gmail.com</a><br>Jan-April: 579 Park Place=C2=A0 Saline, MI=C2=A0=
- 48176=C2=A0 734-944-0094<br>May-Dec: PO Box 221=C2=A0 Grand Marais, MI 498=
-39=C2=A0 906-494-2434<br><br><div style=3D"display:inline"></div><div style=
-=3D"display:inline"></div><div style=3D"display:inline"></div><div></div><d=
-iv></div><div></div><div></div></div></div></div></div></div>
-<br><div class=3D"gmail_quote">On Sun, Feb 5, 2017 at 4:12 PM, Ira McDonald=
- <span dir=3D"ltr">&lt;<a href=3D"mailto:blueroofmusic@gmail.com" target=3D=
-"_blank">blueroofmusic@gmail.com</a>&gt;</span> wrote:<br><blockquote class=
-=3D"gmail_quote" style=3D"margin:0 0 0 .8ex;border-left:1px #ccc solid;padd=
-ing-left:1ex"><div dir=3D"ltr"><div><div>Hi,<br><br>Please join us for our =
-<span>OP</span> US/Europe/Brazil conference call:<br><br>(1) February 2017 =
-- US/Europe/Brazil - OP Monthly Meeting<br>=C2=A0=C2=A0=C2=A0 - Note - 6-10=
- February is Trusted Computing Group in San Diego, CA<br>=C2=A0=C2=A0=C2=A0=
- - Note - 14-15 February is PWG F2F at Apple in Sunnyvale, CA<br>=C2=A0=C2=
-=A0=C2=A0 - Note - Brasilia Summer Time ends on 19 February 2017<br>=C2=A0=
-=C2=A0=C2=A0 - Tuesday 7 February 2017, Daytime (tentative)<br>=C2=A0=C2=A0=
-=C2=A0=C2=A0=C2=A0 - US<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 9am i=
-n San Francisco - US PST (Pacific Standard Time)<br>=C2=A0=C2=A0=C2=A0=C2=
-=A0=C2=A0=C2=A0=C2=A0 10am in Colorado - US MST (Mountain Standard Time)<br=
->=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 11am in Chicago - US CST (Centr=
-al Standard Time)<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 12pm in New=
- York - US EST (Eastern Standard Time)<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 - =
-Europe<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 6pm in Berlin - CET (C=
-entral Europe Time)<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 - Brazil<br>=C2=A0=C2=
-=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 3pm in Belo Horizonte - BRT (Brasilia Sum=
-mer Time)<br><br>=C2=A0=C2=A0=C2=A0 US:=C2=A0 <a href=3D"tel:(641)%20715-38=
-14" value=3D"+16417153814" target=3D"_blank">+1 641-715-3814</a><br>=C2=A0=
-=C2=A0=C2=A0 Germany:=C2=A0 <a href=3D"tel:+49%20221%2098203421" value=3D"+=
-4922198203421" target=3D"_blank">+49 (0) 221 98203421</a><br>=C2=A0=C2=A0=
-=C2=A0 Brazil:=C2=A0 <a href=3D"tel:+55%2061%204040-4460" value=3D"+5561404=
-04460" target=3D"_blank">+55 61 4040-4460</a><br>=C2=A0=C2=A0=C2=A0 Japan:=
-=C2=A0 <a href=3D"tel:+81%203-5050-5070" value=3D"+81350505070" target=3D"_=
-blank">+81 (0) 3-5050-5070</a><br>=C2=A0=C2=A0=C2=A0 Participant Access Cod=
-e:=C2=A0 622393#<br><br>=C2=A0=C2=A0=C2=A0 (note that local numbers for man=
-y other countries are available, <br>=C2=A0=C2=A0=C2=A0 also cellphone apps=
-, VOIP support, etc. - please email Till for <br>=C2=A0=C2=A0=C2=A0 details=
-) <br><br></div>Cheers,<br></div>- Ira<br><br><div><div><div><div class=3D"=
-m_-7849430959578721068gmail_signature"><div dir=3D"ltr"><div><div dir=3D"lt=
-r">Ira McDonald (Musician / Software Architect)<br>Co-Chair - TCG Trusted M=
-obility Solutions WG<br>Chair - Linux Foundation Open Printing WG<br>Secret=
-ary - IEEE-ISTO Printer Working Group<br>Co-Chair - IEEE-ISTO PWG Internet =
-Printing Protocol WG<br>IETF Designated Expert - IPP &amp; Printer MIB<br>B=
-lue Roof Music / High North Inc<br><a style=3D"color:rgb(51,51,255)" href=
-=3D"http://sites.google.com/site/blueroofmusic" target=3D"_blank">http://si=
-tes.google.com/site/<wbr>blueroofmusic</a><br><a style=3D"color:rgb(102,0,2=
-04)" href=3D"http://sites.google.com/site/highnorthinc" target=3D"_blank">h=
-ttp://sites.google.com/site/<wbr>highnorthinc</a><br>mailto: <a href=3D"mai=
-lto:blueroofmusic@gmail.com" target=3D"_blank">blueroofmusic@gmail.com</a><=
-br>Jan-April: 579 Park Place=C2=A0 Saline, MI=C2=A0 48176=C2=A0 <a href=3D"=
-tel:(734)%20944-0094" value=3D"+17349440094" target=3D"_blank">734-944-0094=
-</a><br>May-Dec: PO Box 221=C2=A0 Grand Marais, MI 49839=C2=A0 <a href=3D"t=
-el:(906)%20494-2434" value=3D"+19064942434" target=3D"_blank">906-494-2434<=
-/a><br><br><div style=3D"display:inline"></div><div style=3D"display:inline=
-"></div><div style=3D"display:inline"></div><div></div><div></div><div></di=
-v><div></div></div></div></div></div></div>
-</div></div></div>
-</blockquote></div><br></div></div>
+=3D=3D=3D modified file 'drv/generic-brf.drv'
+--- drv/generic-brf.drv	2015-12-12 12:02:53 +0000
++++ drv/generic-brf.drv	2017-02-23 18:53:28 +0000
+@@ -1,5 +1,5 @@
+ //=20
+-// Copyright (c) 2015 Samuel Thibault <samuel.thibault@ens-lyon.org>
++// Copyright (c) 2015, 2017 Samuel Thibault <samuel.thibault@ens-lyon.org>
+ //=20
+ // Permission is hereby granted, free of charge, to any person obtaining a=
+ copy
+ // of this software and associated documentation files (the "Software"), t=
+o deal
+@@ -64,5 +64,57 @@ Option "SendSUB/Send Sub (^Z)" Boolean A
+   *Choice "True/Yes" ""
+   Choice "False/No" ""
+=20
++Option "TopMargin/Top margin" PickOne AnySetup 10
++  Choice "0" ""
++  Choice "1" ""
++  *Choice "2" ""
++  Choice "3" ""
++  Choice "4" ""
++  Choice "5" ""
++  Choice "6" ""
++  Choice "7" ""
++  Choice "8" ""
++  Choice "9" ""
++  Choice "10" ""
++
++Option "BottomMargin/Bottom margin" PickOne AnySetup 10
++  Choice "0" ""
++  Choice "1" ""
++  *Choice "2" ""
++  Choice "3" ""
++  Choice "4" ""
++  Choice "5" ""
++  Choice "6" ""
++  Choice "7" ""
++  Choice "8" ""
++  Choice "9" ""
++  Choice "10" ""
++
++Option "LeftMargin/Left margin" PickOne AnySetup 10
++  Choice "0" ""
++  Choice "1" ""
++  *Choice "2" ""
++  Choice "3" ""
++  Choice "4" ""
++  Choice "5" ""
++  Choice "6" ""
++  Choice "7" ""
++  Choice "8" ""
++  Choice "9" ""
++  Choice "10" ""
++
++Option "RightMargin/Right margin" PickOne AnySetup 10
++  Choice "0" ""
++  Choice "1" ""
++  *Choice "2" ""
++  Choice "3" ""
++  Choice "4" ""
++  Choice "5" ""
++  Choice "6" ""
++  Choice "7" ""
++  Choice "8" ""
++  Choice "9" ""
++  Choice "10" ""
++
+ ModelName "Braille embosser"
+ PCFileName "gen-brf.ppd"
 
---001a11422604b213500547e2a177--
+=3D=3D=3D modified file 'filter/braille/drivers/generic/brftoembosser.in'
+--- filter/braille/drivers/generic/brftoembosser.in	2015-12-12 02:11:10 +00=
+00
++++ filter/braille/drivers/generic/brftoembosser.in	2017-02-23 19:08:34 +00=
+00
+@@ -1,7 +1,7 @@
+ #!/bin/bash
+=20
+ #
+-# Copyright (c) 2015 Samuel Thibault <samuel.thibault@ens-lyon.org>
++# Copyright (c) 2015, 2017 Samuel Thibault <samuel.thibault@ens-lyon.org>
+ #=20
+ # Permission is hereby granted, free of charge, to any person obtaining a =
+copy
+ # of this software and associated documentation files (the "Software"), to=
+ deal
+@@ -47,11 +47,34 @@ fi
+ SENDFF=3D$(getOption SendFF)
+ SENDSUB=3D$(getOption SendSUB)
+=20
++TOPMARGIN=3D$(getOptionNumber TopMargin)
++LEFTMARGIN=3D$(getOptionNumber LeftMargin)
++
+ echo "INFO: Writing text to generic embosser" >&2
+=20
+ while [ $NB -gt 0 ]
+ do
+-  < "$FILE" sed -e 's/^$/'$'\015''/' -e 's/\([^'$'\015'']\)$/\1'$'\015''/'
++  # Produce top margin
++  if [ -n "$TOPMARGIN" ]; then
++    while [ $TOPMARGIN -gt 0 ]
++    do
++      echo
++      TOPMARGIN=3D$(($TOPMARGIN - 1))
++    done
++  fi
++  LEFTSPACES=3D""
++  if [ -n "$LEFTMARGIN" ]; then
++    while [ $LEFTMARGIN -gt 0 ]
++    do
++      LEFTSPACES=3D"$LEFTSPACES "
++      LEFTMARGIN=3D$(($LEFTMARGIN - 1))
++    done
++  fi
++
++  < "$FILE" \
++    sed -e "s/^/$LEFTSPACES/" \
++        -e 's/^$/'$'\015''/' \
++        -e 's/\([^'$'\015'']\)$/\1'$'\015''/'
+  =20
+   if [ "$SENDFF" =3D True ]
+   then
+
+=3D=3D=3D modified file 'filter/braille/drivers/index/index.defs'
+--- filter/braille/drivers/index/index.defs	2015-12-12 02:11:10 +0000
++++ filter/braille/drivers/index/index.defs	2017-02-23 18:53:28 +0000
+@@ -1,5 +1,5 @@
+ //=20
+-// Copyright (c) 2015 Samuel Thibault <samuel.thibault@ens-lyon.org>
++// Copyright (c) 2015-2016 Samuel Thibault <samuel.thibault@ens-lyon.org>
+ //=20
+ // Permission is hereby granted, free of charge, to any person obtaining a=
+ copy
+ // of this software and associated documentation files (the "Software"), t=
+o deal
+@@ -56,3 +56,70 @@ Group "Braille"
+   Choice "3/User-defined Table 3" ""
+   Choice "4/User-defined Table 4" ""
+=20
++Option "TopMargin/Top margin" PickOne AnySetup 10
++  Choice "0" ""
++  Choice "1" ""
++  *Choice "2" ""
++  Choice "3" ""
++  Choice "4" ""
++  Choice "5" ""
++  Choice "6" ""
++  Choice "7" ""
++  Choice "8" ""
++  Choice "9" ""
++  Choice "10" ""
++
++Option "BottomMargin/Bottom margin" PickOne AnySetup 10
++  Choice "0" ""
++  Choice "1" ""
++  *Choice "2" ""
++  Choice "3" ""
++  Choice "4" ""
++  Choice "5" ""
++  Choice "6" ""
++  Choice "7" ""
++  Choice "8" ""
++  Choice "9" ""
++  Choice "10" ""
++
++Option "InnerMargin/Inner margin" PickOne AnySetup 10
++  Choice "0" ""
++  Choice "1" ""
++  *Choice "2" ""
++  Choice "3" ""
++  Choice "4" ""
++  Choice "5" ""
++  Choice "6" ""
++  Choice "7" ""
++  Choice "8" ""
++  Choice "9" ""
++  Choice "10" ""
++
++Option "OuterMargin/Outer margin" PickOne AnySetup 10
++  Choice "0" ""
++  Choice "1" ""
++  *Choice "2" ""
++  Choice "3" ""
++  Choice "4" ""
++  Choice "5" ""
++  Choice "6" ""
++  Choice "7" ""
++  Choice "8" ""
++  Choice "9" ""
++  Choice "10" ""
++
++Option "PageNumber/Page Number" PickOne AnySetup 10
++  Choice "None/None" ""
++  Choice "Top/Top-middle" ""
++  Choice "TopLeft/Top-left" ""
++  Choice "TopRight/Top-right" ""
++  Choice "Bottom/Bottom-middle" ""
++  Choice "BottomLeft/Bottom-left" ""
++  Choice "BottomRight/Bottom-right" ""
++
++UIConstraints "*TopMargin 0 *PageNumber Top"
++UIConstraints "*TopMargin 0 *PageNumber TopLeft"
++UIConstraints "*TopMargin 0 *PageNumber TopRight"
++UIConstraints "*BottomMargin 0 *PageNumber Bottom"
++UIConstraints "*BottomMargin 0 *PageNumber BottomLeft"
++UIConstraints "*BottomMargin 0 *PageNumber BottomRight"
+
+=3D=3D=3D modified file 'filter/braille/drivers/index/index.sh.in'
+--- filter/braille/drivers/index/index.sh.in	2015-12-12 02:11:10 +0000
++++ filter/braille/drivers/index/index.sh.in	2017-02-23 18:53:28 +0000
+@@ -1,5 +1,5 @@
+ #
+-# Copyright (c) 2015 Samuel Thibault <samuel.thibault@ens-lyon.org>
++# Copyright (c) 2015-2016 Samuel Thibault <samuel.thibault@ens-lyon.org>
+ #=20
+ # Permission is hereby granted, free of charge, to any person obtaining a =
+copy
+ # of this software and associated documentation files (the "Software"), to=
+ deal
+@@ -28,6 +28,7 @@ FIRMWARE=3D$(getOptionNumber IndexFirmware
+ FOLDING=3D$(getOption IndexFolding)
+ TABLE=3D$(getOptionNumber IndexTable)
+ MULTIPLEIMPACT=3D$(getOptionNumber IndexMultipleImpact)
++PAGENUMBER=3D$(getOption PageNumber)
+=20
+ # Convert from 100th of mm to Inch fraction
+ mmToIndexIn () {
+@@ -71,7 +72,7 @@ mmToIndexIn () {
+ commonOptions() {
+   INIT=3D
+   # Disable options we don't want: first line offset and page numbering
+-  INIT+=3D,FO0,PN0
++  INIT+=3D,FO0
+=20
+   # Support hardware-assisted multiple copies
+   if [ $NB !=3D 1 ]
+@@ -82,7 +83,7 @@ commonOptions() {
+   INIT+=3D,MI$MULTIPLEIMPACT
+=20
+   # Support page folding
+-  case $FOLDING in
++  case "$FOLDING" in
+     Single)  INIT+=3D,DP1 ;;
+     Double)  INIT+=3D,DP2 ;;
+     SingleZ) INIT+=3D,DP5 ;;
+@@ -101,11 +102,22 @@ commonOptions() {
+     320) INIT+=3D,TD2 ;;
+     *)   printf "ERROR: unsupported '%s' text dot distance\n" "$TEXTDOTDIS=
+TANCE" >&2 ; exit 1 ;;
+   esac
+-  case $GRAPHICDOTDISTANCE in
++  case "$GRAPHICDOTDISTANCE" in
+     160) INIT+=3D,GD2 ;;
+     200) INIT+=3D,GD0 ;;
+     250) INIT+=3D,GD1 ;;
+-    *)   printf "ERROR: unsupported '%s'graphic dot distance\n" "$GRAPHICD=
+OTDISTANCE" >&2 ; exit 1 ;;
++    *)   printf "ERROR: unsupported '%s' graphic dot distance\n" "$GRAPHIC=
+DOTDISTANCE" >&2 ; exit 1 ;;
++  esac
++
++  case "$PAGENUMBER" in
++    None)        INIT+=3D,PN0 ;;
++    Top)         INIT+=3D,PN1 ;;
++    TopLeft)     INIT+=3D,PN2 ;;
++    TopRight)    INIT+=3D,PN3 ;;
++    Bottom)      INIT+=3D,PN4 ;;
++    BottomLeft)  INIT+=3D,PN5 ;;
++    BottomRight) INIT+=3D,PN6 ;;
++    *)   echo "ERROR: unsupported $PAGENUMBER page number" >&2 ; exit 1 ;;
+   esac
+=20
+   echo "$INIT"
+
+=3D=3D=3D modified file 'filter/braille/drivers/index/indexv3.sh.in'
+--- filter/braille/drivers/index/indexv3.sh.in	2015-12-12 02:11:10 +0000
++++ filter/braille/drivers/index/indexv3.sh.in	2017-02-23 18:53:28 +0000
+@@ -1,5 +1,5 @@
+ #
+-# Copyright (c) 2015 Samuel Thibault <samuel.thibault@ens-lyon.org>
++# Copyright (c) 2015-2016 Samuel Thibault <samuel.thibault@ens-lyon.org>
+ #=20
+ # Permission is hereby granted, free of charge, to any person obtaining a =
+copy
+ # of this software and associated documentation files (the "Software"), to=
+ deal
+@@ -33,7 +33,7 @@ then
+   INIT=3D$'\033'D
+=20
+   # Disable margins
+-  INIT+=3DTM0,BM0,IM0,OM0
++  INIT+=3DTM$TOPMARGIN,BM$BOTTOMMARGIN,IM$INNERMARGIN,OM$OUTERMARGIN
+=20
+   # Trying to disable banner page seems to pose problems
+   #INIT+=3D,BP
+
+=3D=3D=3D modified file 'filter/braille/drivers/index/indexv4.sh.in'
+--- filter/braille/drivers/index/indexv4.sh.in	2015-12-12 02:11:10 +0000
++++ filter/braille/drivers/index/indexv4.sh.in	2017-02-23 18:53:28 +0000
+@@ -1,5 +1,5 @@
+ #
+-# Copyright (c) 2015 Samuel Thibault <samuel.thibault@ens-lyon.org>
++# Copyright (c) 2015-2016 Samuel Thibault <samuel.thibault@ens-lyon.org>
+ #=20
+ # Permission is hereby granted, free of charge, to any person obtaining a =
+copy
+ # of this software and associated documentation files (the "Software"), to=
+ deal
+@@ -30,7 +30,7 @@ then
+   INIT=3D$'\033'D
+=20
+   # Disable margins
+-  INIT+=3DTM0,BI0
++  INIT+=3DTM$TOPMARGIN,BI$INNERMARGIN
+=20
+   # Common options
+   INIT+=3D"$(setCommonOptions)"
+
+=3D=3D=3D modified file 'filter/braille/filters/cups-braille.sh.in'
+--- filter/braille/filters/cups-braille.sh.in	2016-04-10 17:20:32 +0000
++++ filter/braille/filters/cups-braille.sh.in	2017-02-23 19:03:06 +0000
+@@ -1,5 +1,5 @@
+ #
+-# Copyright (c) 2015-2016 Samuel Thibault <samuel.thibault@ens-lyon.org>
++# Copyright (c) 2015-2017 Samuel Thibault <samuel.thibault@ens-lyon.org>
+ #=20
+ # Permission is hereby granted, free of charge, to any person obtaining a =
+copy
+ # of this software and associated documentation files (the "Software"), to=
+ deal
+@@ -144,7 +144,7 @@ case "$PAGESIZE" in
+     ;;
+ esac
+=20
+-#=A0TODO: hardcoded margin
++#=A0TODO: hardcoded embosser margin
+ PRINTABLEWIDTH=3D$((PAGEWIDTH - 1000))
+ PRINTABLEHEIGHT=3D$((PAGEHEIGHT - 1000))
+=20
+@@ -167,9 +167,38 @@ esac
+ TEXTDOTS=3D$(getOptionNumber TextDots)
+ LINESPACING=3D$(getOptionNumber LineSpacing)
+=20
++# Cell dimension, including spacing
++TEXTCELLWIDTH=3D$(( $TEXTDOTDISTANCE + $TEXTCELLDISTANCE ))
++TEXTCELLHEIGHT=3D$(( $TEXTDOTDISTANCE * ($TEXTDOTS / 2 - 1) + $LINESPACING=
+ ))
++
++if [ "$(getOption TopMargin)" =3D "" ]
++then
++  # No margin
++  TEXTAREAWIDTH=3D$PRINTABLEWIDTH
++  TEXTAREAHEIGHT=3D$PRINTABLEHEIGHT
++else
++  # Margins in cells
++  TOPMARGIN=3D$(getOptionNumber TopMargin)
++  BOTTOMMARGIN=3D$(getOptionNumber BottomMargin)
++  if [ "$(getOption InnerMargin)" =3D "" ]
++  then
++    LEFTMARGIN=3D$(getOptionNumber LeftMargin)
++    RIGHTMARGIN=3D$(getOptionNumber RightMargin)
++    WIDTHMARGIN=3D$(( $LEFTMARGIN + $RIGHTMARGIN ))
++  else
++    INNERMARGIN=3D$(getOptionNumber InnerMargin)
++    OUTERMARGIN=3D$(getOptionNumber OuterMargin)
++    WIDTHMARGIN=3D$(( $INNERMARGIN + $OUTERMARGIN ))
++  fi
++   =20
++  # Subtract margins from printable area
++  TEXTAREAWIDTH=3D$(( $PRINTABLEWIDTH - $WIDTHMARGIN * $TEXTCELLWIDTH ))
++  TEXTAREAHEIGHT=3D$(( $PRINTABLEHEIGHT - ($TOPMARGIN + $BOTTOMMARGIN) * $=
+TEXTCELLHEIGHT ))
++fi
++
+ # Compute number of printable cells according to page width and height
+-TEXTWIDTH=3D$(( ($PRINTABLEWIDTH + $TEXTCELLDISTANCE) / ($TEXTDOTDISTANCE =
++ $TEXTCELLDISTANCE) ))
+-TEXTHEIGHT=3D$(( ($PRINTABLEHEIGHT + $LINESPACING) / ($TEXTDOTDISTANCE * (=
+$TEXTDOTS / 2 - 1) + $LINESPACING) ))
++TEXTWIDTH=3D$(( ($TEXTAREAWIDTH + $TEXTCELLDISTANCE) / $TEXTCELLWIDTH  ))
++TEXTHEIGHT=3D$(( ($TEXTAREAHEIGHT + $LINESPACING) / $TEXTCELLHEIGHT ))
+=20
+ #
+ # Graphic spacing
+
+
+--cx7ehcdr3lbxo5zw--
