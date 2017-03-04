@@ -1,16 +1,26 @@
-Return-Path: <samuel.thibault@ens-lyon.org>
-Date: Sat, 4 Mar 2017 22:13:16 +0100
-From: Samuel Thibault <samuel.thibault@ens-lyon.org>
-Message-ID: <20170304211316.ja5eyuv3733qadyo@var.youpi.perso.aquilenet.fr>
+Return-Path: <till.kamppeter@gmail.com>
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
+	h=subject:to:references:from:message-id:date:user-agent:mime-version
+	:in-reply-to:content-transfer-encoding;
+	bh=IBsNuQR5FBFPuBoEMqb7dGrUX3vyzNWtU454pti2Lgc=;
+	b=jImByYUXhUHfR9UUBBl0L1ZicDUBDoFRVW98qrb4a2k8SLsgW6qO766EYISiI/4qRp
+	Z2yi3MqODh3x8PDLeglHiDWJTpyg0htkBUKj5VYTi7P2xoKp+uNSbW9sqMdy+QAjCqk+
+	Mut2RlZBwYEr8ShkIzWqS45PJ/ZHriDySm5Rc1UF38ODRXT7W9ykvngE1zTJ0j6wWOb4
+	6B4ZpWS2RxLGFAbCKJQ5f3rjQFbB9u+AfKuwez7+M0CqJFzNcEqRlKfTLujnDciedGpy
+	PYXish9gcvh15SQYZjzNK9EQ2ZbMGPYyXe34YPGOefg8dKCK7qDONbhM0CndcOCj6MKD
+	v/hA==
 References: <20170226185712.jzs2ohpyvugl3dve@var.youpi.perso.aquilenet.fr>
 	<20170227230811.iyzvbno6qjizmwgq@var.youpi.perso.aquilenet.fr>
+	<20170304211316.ja5eyuv3733qadyo@var.youpi.perso.aquilenet.fr>
+From: Till Kamppeter <till.kamppeter@gmail.com>
+Message-ID: <933da9d1-463f-2ec5-0f80-de5d5de72065@gmail.com>
+Date: Sat, 4 Mar 2017 20:22:17 -0300
 MIME-Version: 1.0
-Content-Type: multipart/mixed; boundary="3dguy4lt2gafgduv"
-Content-Disposition: inline
-Content-Transfer-Encoding: 8bit
-In-Reply-To: <20170227230811.iyzvbno6qjizmwgq@var.youpi.perso.aquilenet.fr>
+In-Reply-To: <20170304211316.ja5eyuv3733qadyo@var.youpi.perso.aquilenet.fr>
+Content-Type: text/plain; charset=utf-8; format=flowed
+Content-Transfer-Encoding: 7bit
 Subject: Re: [Printing-architecture] Complete table list for braille
-	embosser support
+ embosser support
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>,
@@ -20,54 +30,20 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: printing-architecture@lists.linux-foundation.org
+To: Samuel Thibault <samuel.thibault@ens-lyon.org>, printing-architecture@lists.linux-foundation.org
+
+On 03/04/2017 06:13 PM, Samuel Thibault wrote:
+> Hello,
+>
+> It seems the encoding of the patch wasn't correct (unfortunately I had
+> set my mailer to use latin1 whenever that's enough, I have now disabled
+> that).
+>
+> The attached patch fixes the encoding of
+> filter/braille/filters/liblouis1.defs.gen.in
+
+I have applied the correction, thank you very much.
+
+    Till
 
 
---3dguy4lt2gafgduv
-Content-Type: text/plain; charset=us-ascii
-Content-Disposition: inline
-
-Hello,
-
-It seems the encoding of the patch wasn't correct (unfortunately I had
-set my mailer to use latin1 whenever that's enough, I have now disabled
-that).
-
-The attached patch fixes the encoding of
-filter/braille/filters/liblouis1.defs.gen.in
-
-Samuel
-
---3dguy4lt2gafgduv
-Content-Type: text/plain; charset="utf-8"
-Content-Disposition: attachment; filename=patch
-Content-Transfer-Encoding: 8bit
-
-=== modified file 'filter/braille/filters/liblouis1.defs.gen.in'
---- filter/braille/filters/liblouis1.defs.gen.in	2017-03-03 22:08:47 +0000
-+++ filter/braille/filters/liblouis1.defs.gen.in	2017-03-04 21:09:58 +0000
-@@ -110,9 +110,9 @@ echo '  Choice "Locale-g3/Default for la
-       "fi-fi-8dot")	LANGUAGE=Finnish DESC="8dot" ;;
-       "fi-fi")		LANGUAGE=Finnish DESC="6dot" ;;
-       "fr-2007")	LANGUAGE=French DESC="2007" ;;
--      "fr-bfu-comp6")	LANGUAGE=French DESC="Braille Fran�ais Unifi� computer 6 dots" ;;
--      "fr-bfu-comp8")	LANGUAGE=French DESC="Braille Fran�ais Unifi� computer 8 dots" ;;
--      "fr-bfu-g2")	LANGUAGE=French DESC="Braille Fran�ais Unifi� grade 2" ;;
-+      "fr-bfu-comp6")	LANGUAGE=French DESC="Braille Français Unifié computer 6 dots" ;;
-+      "fr-bfu-comp8")	LANGUAGE=French DESC="Braille Français Unifié computer 8 dots" ;;
-+      "fr-bfu-g2")	LANGUAGE=French DESC="Braille Français Unifié grade 2" ;;
-       "fr-ca-g1")	LANGUAGE=French LOCATION=Canada DESC="grade 1" ;;
-       "Fr-Ca-g2")	LANGUAGE=French LOCATION=Canada DESC="grade 2" ;;
-       "fr-fr-g1")	LANGUAGE=French LOCATION=France DESC="grade 1" ;;
-@@ -236,7 +236,7 @@ echo '  Choice "Locale-g3/Default for la
-   	fr_FR)	LANGUAGE=French ;;
-   	hu_HU)	LANGUAGE=Hungarian ;;
-   	it_IT)	LANGUAGE=Italian ;;
--  	nb_NO)	LANGUAGE="Norwegian Bokm�l" ;;
-+  	nb_NO)	LANGUAGE="Norwegian Bokmål" ;;
-   	nl_NL)	LANGUAGE=Dutch ;;
-   	nn_NO)	LANGUAGE="Norwegian Nynorsk" ;;
-   	pl_PL)	LANGUAGE=Polish ;;
-
-
---3dguy4lt2gafgduv--
