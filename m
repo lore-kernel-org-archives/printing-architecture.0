@@ -1,19 +1,21 @@
-Return-Path: <theo.stoican@gmail.com>
+Return-Path: <blueroofmusic@gmail.com>
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
-	h=mime-version:from:date:message-id:subject:to;
-	bh=k+QaBWXxqKNzF7gDB3d/AN164ZizFHgv0HsumzBhS0Q=;
-	b=LWo8v6kjhjlHx/Y5jgm+Z/aDlrP93SZxre7Furjkw8pwBVfwi7jnAbf95Nc53V5iuh
-	QKNSyAV5liZ46UgSWjs6J0AnueGO7aD0bLTS2gtkVYcyx6rJ5TQj8uCPcbSJpduyAapw
-	smx8WCKfvJpTosY7vIevBtJGjVAdgnTUiCnvR5aX3B6t3QK2NFn5Yu4T+gN/GCUl8Z9U
-	ZQ9eqdEqtrh9NNqa3sZDdZ+X41T/k7vWeiYlwcreJk/7xJq43Z2fqbXOnMsAu77wktAb
-	O0+14//elM0icssgcr5nxyeKfkGavrAgutu+PeDRNp8tZ8TJXqbMQJtWFRsnKc0xVhdD
-	iY1g==
+	h=mime-version:in-reply-to:references:from:date:message-id:subject:to; 
+	bh=kIJFqs6YFSo7fH4DetTduMRvy8HpHg/Hle/GUTyJQUM=;
+	b=fdC3ZL5LdmgWMupK0oYLLNyVRq4c9cX9BdZmD6sGofFMNMEEhzYuFcSthsbfPP+UYa
+	1APPQd8vhNPHNclwHO6+alzQMYUkQJgxs8sFoI1tOwyLfXalFBFjRUNAtQFVtM01FE3N
+	32GrfuVHd/ZqEzifE7F4rkGZYVWKmXxr+mKZzvObIFOxD2bbx4Xj99zRmMCZdl/vJcU3
+	GSJ5AOEI24D/H8FrTHnOXDisJ/Tu/0uNkQ/DNuuDtBCevDYYDiPxMf6sGc5rjpxdUwQg
+	c1BJcRT0WFBCDSQ9iUhQSvp7Nv+8SKYbLJPHl1fWLHOZZ4rNtcR4AxORCu8ovv0iO4Fi
+	8/mA==
 MIME-Version: 1.0
-From: Theodor Stoican <theo.stoican@gmail.com>
-Date: Sun, 12 Mar 2017 15:12:52 +0200
-Message-ID: <CAEUM=ier+PCNiF=xkpaPTExz_+w-7Br7dZJz9axp44BecXyqfQ@mail.gmail.com>
-Content-Type: multipart/alternative; boundary=001a11465c8e2e4a95054a885ac0
-Subject: [Printing-architecture] Introduction
+In-Reply-To: <025D3ABD-199F-421A-9265-6F960135A3B7@sn3rd.com>
+References: <025D3ABD-199F-421A-9265-6F960135A3B7@sn3rd.com>
+From: Ira McDonald <blueroofmusic@gmail.com>
+Date: Mon, 13 Mar 2017 17:33:58 -0400
+Message-ID: <CAN40gSs6cKgrPspcY71MgnBP=VuQGhNxL0LsqNDOpLbugrxtzw@mail.gmail.com>
+Content-Type: multipart/alternative; boundary=f403045eadbe520595054aa37975
+Subject: [Printing-architecture] Fwd: [TLS] WGLC: draft-ietf-tls-tls13-19
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>,
@@ -23,42 +25,66 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: printing-architecture@lists.linux-foundation.org
+To: MPWG <mobilewg@trustedcomputinggroup.org>, "tms_wg@trustedcomputinggroup.org" <tms_wg@trustedcomputinggroup.org>, "tnc@trustedcomputinggroup.org" <tnc@trustedcomputinggroup.org>, "ipp@pwg.org" <ipp@pwg.org>, "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>, Ira McDonald <blueroofmusic@gmail.com>
 
---001a11465c8e2e4a95054a885ac0
+--f403045eadbe520595054aa37975
 Content-Type: text/plain; charset=UTF-8
 
 Hi,
 
-I am a third year student from Politehnica University of Bucharest. I have
-already talked to Till about a GSoC project within OpenPrinting
-(Google Cloud Print: Desktop-integrated solution for registering local CUPS
-printers)
-and got accustomed with several concepts that relate to this project
-(including Google Cloud Print and CUPS queues). However, I am
-willing to do something more in order to get used with OpenPrinting in
-general. I checked out the bug tracking systems for several issues
-(within cups-filters, for instance) but found only some old ones. Can
-someone tell me if there are any "newcomer" stuff that I can have
-a look at?
+IETF TLS WG last call through 03/27 on TLS/1.3, first new TLS version
+in 10 years!
 
-Thank you,
-Theodor
+Cheers,
+- Ira
 
---001a11465c8e2e4a95054a885ac0
+
+---------- Forwarded message ----------
+From: Sean Turner <sean@sn3rd.com>
+Date: Mon, Mar 13, 2017 at 1:30 PM
+Subject: [TLS] WGLC: draft-ietf-tls-tls13-19
+To: "<tls@ietf.org>" <tls@ietf.org>
+
+
+This is a working group last call announcement for draft-ietf-tls-tls13-19,
+to run through March 27.  Please send your reviews to the list as soon as
+possible so we can prepare for any discussion of open issues at IETF 98 in
+Chicago.
+
+Thanks,
+J&S
+_______________________________________________
+TLS mailing list
+TLS@ietf.org
+https://www.ietf.org/mailman/listinfo/tls
+
+--f403045eadbe520595054aa37975
 Content-Type: text/html; charset=UTF-8
 Content-Transfer-Encoding: quoted-printable
 
-<div dir=3D"ltr">Hi,<div><br></div><div>I am a third year student from Poli=
-tehnica University of Bucharest. I have already talked to Till about a GSoC=
- project within OpenPrinting</div><div>(Google Cloud Print: Desktop-integra=
-ted solution for registering local CUPS printers)</div><div>and got accusto=
-med with several concepts that relate to this project (including Google Clo=
-ud Print and CUPS queues). However, I am=C2=A0</div><div>willing to do some=
-thing more in order to get used with OpenPrinting in general. I checked out=
- the bug tracking systems for several issues</div><div>(within cups-filters=
-, for instance) but found only some old ones. Can someone tell me if there =
-are any &quot;newcomer&quot; stuff that I can have</div><div>a look at?</di=
-v><div><br></div><div>Thank you,</div><div>Theodor</div></div>
+<div dir=3D"ltr"><div class=3D"gmail_signature" data-smartmail=3D"gmail_sig=
+nature"><div dir=3D"ltr"><div><div>Hi,<br><br></div><div>IETF TLS WG last c=
+all through 03/27 on TLS/1.3, first new TLS version<br></div><div>in 10 yea=
+rs!<br><br></div><div>Cheers,<br></div><div>- Ira<br><br></div></div></div>=
+</div>
+<br><div class=3D"gmail_quote">---------- Forwarded message ----------<br>F=
+rom: <b class=3D"gmail_sendername">Sean Turner</b> <span dir=3D"ltr">&lt;<a=
+ href=3D"mailto:sean@sn3rd.com">sean@sn3rd.com</a>&gt;</span><br>Date: Mon,=
+ Mar 13, 2017 at 1:30 PM<br>Subject: [TLS] WGLC: draft-ietf-tls-tls13-19<br=
+>To: &quot;&lt;<a href=3D"mailto:tls@ietf.org">tls@ietf.org</a>&gt;&quot; &=
+lt;<a href=3D"mailto:tls@ietf.org">tls@ietf.org</a>&gt;<br><br><br>This is =
+a working group last call announcement for draft-ietf-tls-tls13-19, to run =
+through March 27.=C2=A0 Please send your reviews to the list as soon as pos=
+sible so we can prepare for any discussion of open issues at IETF 98 in Chi=
+cago.<br>
+<br>
+Thanks,<br>
+J&amp;S<br>
+______________________________<wbr>_________________<br>
+TLS mailing list<br>
+<a href=3D"mailto:TLS@ietf.org">TLS@ietf.org</a><br>
+<a href=3D"https://www.ietf.org/mailman/listinfo/tls" rel=3D"noreferrer" ta=
+rget=3D"_blank">https://www.ietf.org/mailman/<wbr>listinfo/tls</a><br>
+</div><br></div>
 
---001a11465c8e2e4a95054a885ac0--
+--f403045eadbe520595054aa37975--
