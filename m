@@ -1,26 +1,24 @@
 Return-Path: <till.kamppeter@gmail.com>
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
-	h=subject:to:references:cc:from:message-id:date:user-agent
-	:mime-version:in-reply-to:content-transfer-encoding;
-	bh=reGAfgAfhR/e6mjcB2pYKKfsJNax+xL7116raKEH5ts=;
-	b=P+SfXPvmXFJ/4SdQTslwfdz15DYI9HqoLD70gxlCY6pQHPKrQEp83SlJQAC2JacvmU
-	H56ZoFoDxUQY8PyDEg6huDc/0YYf2OeR8o1JxcSfmAtnwfjfNbXJCKdzioKoocqfCgra
-	caGxFe5ubqQH8+Oq0CNTWA35cEPqLv7LLb27izPvuwc3mytIZe8kEk/xpDd1AiN+eabh
-	38eAHZZtVsz3DPWpWhmJzQ1b2chOhiQPH6+JQBYurf2Q/KLKc+mn4BWtNIqX7LPsu/7l
-	5mgVmKPtw3XCYVkNyqZvxd1pL3W4C0iyXveVttfMjd30kShxvkGGWI6vjpxaoULHBofq
-	tiXA==
-References: <CAN40gSs9SarpwSQ1gtHPpUHSDJ6FmsNL5wCdJM8iz32gSWx1dA@mail.gmail.com>
-	<CAN40gSvwkWci_F+sEvTMi=iOWnkRdodWwpSs4=2UF2DB98NJAw@mail.gmail.com>
-	<CAKSHSL4YYhF2GkoDxv6dagAt3J_sNsF2gvpFwA2d73NXy5HPBw@mail.gmail.com>
+	h=from:subject:to:references:message-id:date:user-agent:mime-version
+	:in-reply-to:content-transfer-encoding;
+	bh=VZyamDZsSp+eDagqsJ9kfBYycmzgY4ZGiiRSC1LBQl4=;
+	b=fihJUxEWVpf1MqoNRtW37w546UpaC/Umq4sWfSMpWRbyEB+5PF/j9bmga6h41/2omU
+	wVET09oDfOEA/JPIz+QMThn8eF4Lo7e/EBgLv0YjznYqXxcr20+MmDR0fjSmuxwXMIad
+	NfsK1xO0sSfYUvJQ2MFwaTuSHKCY1ijJZU18mBWUyaRgjxUHLU7LUHbLLkqfhkeZRCJH
+	jCa8QsUOBOkp3heBJoO4+CM4k2ykZvRoKsj8a4CP1kWSU9L+9uMABrJ2N+tSg4mbYARs
+	wDLpgOL9UMNocT6AC2eYGpgS92JV4xstfO1d+VROYN9YXIZPvRQAXtxnnQDKn/HYmhwD
+	R4RQ==
 From: Till Kamppeter <till.kamppeter@gmail.com>
-Message-ID: <fc163ad0-7ad9-f727-fd1b-23bcf6a5d15c@gmail.com>
-Date: Tue, 11 Apr 2017 12:48:50 -0300
+References: <e395be80811270817n502ccd16wf6cc90f85364f5ae@mail.gmail.com>
+Message-ID: <eac7efb9-a2b5-17c0-0768-fa053c533a6d@gmail.com>
+Date: Tue, 11 Apr 2017 17:48:20 -0300
 MIME-Version: 1.0
-In-Reply-To: <CAKSHSL4YYhF2GkoDxv6dagAt3J_sNsF2gvpFwA2d73NXy5HPBw@mail.gmail.com>
+In-Reply-To: <e395be80811270817n502ccd16wf6cc90f85364f5ae@mail.gmail.com>
 Content-Type: text/plain; charset=utf-8; format=flowed
 Content-Transfer-Encoding: 7bit
-Subject: Re: [Printing-architecture] REMINDER - OP Call Tuesday (11 April
-	2017)
+Subject: [Printing-architecture] Last OP Meeting - Tue - 11 Apr 2017 - The
+	Recording
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>,
@@ -30,21 +28,20 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Aveek Basu <basu.aveek@gmail.com>, Ira McDonald <blueroofmusic@gmail.com>
-Cc: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>
+To: Open Printing <printing-architecture@lists.linux-foundation.org>, Printing-japan <printing-japan@lists.linux-foundation.org>
 
-On 04/11/2017 12:35 PM, Aveek Basu wrote:
-> Hi Ira \ Till,
->
-> Is there any way, I can connect from India using a Toll free number?
->
+Hi,
 
-There is no Indian national or toll-free number, but there is an app for 
-smartphones to call in via VoIP. So if you have WiFi or a fast 3G/4G 
-connection where you are, you can call in with the app.
+I have uploaded the recording of the last OpenPrinting meeting to the
+OpenPrinting server:
 
-At least under Android it is called FCCI Dialer.
+http://www.openprinting.org/download/meetingnotes/op-telecons/OP-Meeting-20170411.mp3
 
-I use this app for calling in from Brazil and it works.
+In general, recorded meetings I will upload to
 
-    Till
+http://www.openprinting.org/download/meetingnotes/
+
+      Till
+
+P. S.: The MP3 is 19 MB long, 40 minutes of talking.
+
