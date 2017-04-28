@@ -1,19 +1,23 @@
 Return-Path: <blueroofmusic@gmail.com>
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
-	h=mime-version:from:date:message-id:subject:to;
-	bh=omZegCduJNlzIpeYApW01BE4BONLK+V6LWI38UaZkbk=;
-	b=a5i7UmDUpBquCWzHNImb0LimZ7wMuUmEqWPqxOrEZ8ahc9NpOk2Krntwwp5RKUfRMZ
-	9SdoKe1mA3gR6J9fWABvErDYerHHCwJNxVX8/fVC00A1vxOrQH2GyURKFCW282R5mpFV
-	33fQ16Sr9KP7MdSaQMT1NyGhLUnMQ+eBXTUIcm9r5qutdV/TFmEaplDVJ3s+1/JlEc8l
-	qo/C/GIb5Agm9OO522v/UJjICJNPBlQvVHo7Aoj4ln+Mg7uigrFhJwlmbIowA8sQDHyT
-	9zWmpNtdH2V8WtL5W/R7ZjVvk5iux4fkVk/AxgDL/GVaveJKQPyqOlsp/MAB+0dLph+r
-	BHtw==
+	h=mime-version:in-reply-to:references:from:date:message-id:subject:to; 
+	bh=8sldmOl+yHxgnSDVq9oruLqQESz1CnhWPakWL1W5UrA=;
+	b=bb2WRQo2cD7a9P5E4X23iI+tsDtXg9khJb1479OfDvhGi9EVcLWF2JNXCkSfJ47VJb
+	mERbEuWoB6sy77QS+hBTwEU3zdSyk/RnuYIlnYexKY0LX1dfxgpaRY84vH1xKi/xQ4Pi
+	WpoZUgvulEl3XKu9vEeOkFCyDANwEZnRr9SpCF5J7ruURdw64L4cWogFcWImS0v3J1Qk
+	cAAZgRhEfInHf23DcxtIkWA5xE7brOfO0XlLiNXXavcAKT24zfPv78FOQr3YfmJXF0by
+	jitC+xPX4rsdMrGafoPeKYU/OLs45OwAKb6ycZo55hTxvFIZaJo1AHyIEi4Y174ZP5Iq
+	R9hA==
 MIME-Version: 1.0
+In-Reply-To: <886724B5-7D4A-493A-9D8E-75A0A39B7A9E@sn3rd.com>
+References: <149341259318.2983.2602850409414765461.idtracker@ietfa.amsl.com>
+	<886724B5-7D4A-493A-9D8E-75A0A39B7A9E@sn3rd.com>
 From: Ira McDonald <blueroofmusic@gmail.com>
-Date: Thu, 20 Apr 2017 15:46:32 -0400
-Message-ID: <CAN40gSuPEG7P3OiATvn+rvkNSpAuFs1OJpJN9hRWO1RG3Ue5Ug@mail.gmail.com>
-Content-Type: multipart/alternative; boundary=f4030435488c0de35f054d9e6788
-Subject: [Printing-architecture] OP Minutes (11 April 2017)
+Date: Fri, 28 Apr 2017 17:15:30 -0400
+Message-ID: <CAN40gStgS_aPKSQhqM-SvV0A2AHZ1kAdcYYfy+zDaXA_hriVnA@mail.gmail.com>
+Content-Type: multipart/alternative; boundary=001a1148881efd27de054e40939b
+Subject: [Printing-architecture] Fwd: [TLS] Fwd: Publication has been
+	requested for draft-ietf-tls-tls13-20
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>,
@@ -23,195 +27,122 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>, Ira McDonald <blueroofmusic@gmail.com>
+To: "ipp@pwg.org" <ipp@pwg.org>, "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>, Ira McDonald <blueroofmusic@gmail.com>
 
---f4030435488c0de35f054d9e6788
+--001a1148881efd27de054e40939b
 Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
 
 Hi,
 
-Minutes from last week's Open Printing call are posted at:
-
-
-http://ftp.pwg.org/pub/pwg/liaison/openprinting/minutes/OP-Minutes-20170411.htm
-
-
-Action Items:
-
-none
-
-
-Next OP US/Europe/Brazil Conference Calls:
-
-(1) May 2017 - US/Europe/Brazil - OP Monthly Meeting (tentative)
-    - Note - Joint PWG/OP Summit as Virtual F2F is on 2-4 May 2017
-    - Tuesday 9 May 2017, Daytime
-      - US
-        9am in San Francisco - US PDT (Pacific Daylight Time)
-        10am in Colorado - US MDT (Mountain Daylight Time)
-        11am in Chicago - US CDT (Central Daylight Time)
-        12pm in New York - US EDT (Eastern Daylight Time)
-      - Europe
-        6pm in Berlin - CEST (Central Europe Summer Time)
-      - Brazil
-        1pm in Belo Horizonte - BRT (Brasilia Time)
-
-    US:  +1 641-715-3814
-    Germany:  +49 (0) 221 98203421
-    Brazil:  +55 61 4040-4460
-    Japan:  +81 (0) 3-5050-5070
-    Participant Access Code:  622393#
-
-    (note that local numbers for many other countries are available,
-    also cellphone apps, VOIP support, etc. - please email Till for
-    details)
-
-(2) June 2017 - US/Europe/Brazil - OP Monthly Meeting (tentative)
-    - Tuesday 6 June 2017, Daytime
-      - US
-        9am in San Francisco - US PDT (Pacific Daylight Time)
-        10am in Colorado - US MDT (Mountain Daylight Time)
-        11am in Chicago - US CDT (Central Daylight Time)
-        12pm in New York - US EDT (Eastern Daylight Time)
-      - Europe
-        6pm in Berlin - CEST (Central Europe Summer Time)
-      - Brazil
-        1pm in Belo Horizonte - BRT (Brasilia Time)
-
-(3) July 2017 - US/Europe/Brazil - OP Monthly Meeting (tentative)
-    - Note - US Independence Day holiday is on 4 July 2017
-    - Tuesday 11 July 2017, Daytime
-      - US
-        9am in San Francisco - US PDT (Pacific Daylight Time)
-        10am in Colorado - US MDT (Mountain Daylight Time)
-        11am in Chicago - US CDT (Central Daylight Time)
-        12pm in New York - US EDT (Eastern Daylight Time)
-      - Europe
-        6pm in Berlin - CEST (Central Europe Summer Time)
-      - Brazil
-        1pm in Belo Horizonte - BRT (Brasilia Time)
-
+TLS/1.3 now going to Area Director review and then IETF Last Call.  Update
+specs
+imminently (TLS/1.2, RFC 5246, is 9 years old now).
 
 Cheers,
 - Ira
 
-Ira McDonald (Musician / Software Architect)
-Co-Chair - TCG Trusted Mobility Solutions WG
-Chair - Linux Foundation Open Printing WG
-Secretary - IEEE-ISTO Printer Working Group
-Co-Chair - IEEE-ISTO PWG Internet Printing Protocol WG
-IETF Designated Expert - IPP & Printer MIB
-Blue Roof Music / High North Inc
-http://sites.google.com/site/blueroofmusic
-http://sites.google.com/site/highnorthinc
-mailto: blueroofmusic@gmail.com
-Jan-April: 579 Park Place  Saline, MI  48176  734-944-0094
-May-Dec: PO Box 221  Grand Marais, MI 49839  906-494-2434
 
---f4030435488c0de35f054d9e6788
+---------- Forwarded message ----------
+From: Sean Turner <sean@sn3rd.com>
+Date: Fri, Apr 28, 2017 at 5:00 PM
+Subject: [TLS] Fwd: Publication has been requested for
+draft-ietf-tls-tls13-20
+To: "<tls@ietf.org>" <tls@ietf.org>
+
+
+Note that I=E2=80=99ve requested Kathleen begin her AD review.
+
+For those not in the know about IETF process, there=E2=80=99s still a two-w=
+eek IETF
+LC after Kathleen=E2=80=99s review so if anything earth shattering gets unc=
+overed
+we can still address it before it gets to the IESG.
+
+spt
+
+Begin forwarded message:
+
+*From: *Sean Turner <sean@sn3rd.com>
+*Subject: **Publication has been requested for draft-ietf-tls-tls13-20*
+*Date: *April 28, 2017 at 16:49:53 EDT
+*To: *<Kathleen.Moriarty.ietf@gmail.com>
+*Cc: *Sean Turner <sean@sn3rd.com>, iesg-secretary@ietf.org,
+tls-chairs@ietf.org, sean@sn3rd.com
+
+Sean Turner has requested publication of draft-ietf-tls-tls13-20 as
+Proposed Standard on behalf of the TLS working group.
+
+Please verify the document's state at https://datatracker.ietf.org/
+doc/draft-ietf-tls-tls13/
+
+
+
+_______________________________________________
+TLS mailing list
+TLS@ietf.org
+https://www.ietf.org/mailman/listinfo/tls
+
+--001a1148881efd27de054e40939b
 Content-Type: text/html; charset=UTF-8
 Content-Transfer-Encoding: quoted-printable
 
-<div dir=3D"ltr"><div><div>Hi, <br><br></div><div><span><span><span><span><=
-span><span><span><span><span><span><span><span><span><span><span><span><spa=
-n><span><span><span><span><span><span><span class=3D"gmail-m_44378239308900=
-95150gmail-m_-681379959383614342gmail-m_7818885144891878450gmail-m_58962936=
-92365239151gmail-m_7484771893033705782m_7416439913013906919gmail-il"><span =
-class=3D"gmail-m_4437823930890095150gmail-il">Minutes</span></span></span><=
-/span></span></span></span></span></span></span></span></span></span></span=
-></span></span></span></span></span></span></span></span></span></span></sp=
-an> from last week&#39;s Open Printing<span> call</span> are <span><span><s=
-pan><span><span><span><span><span><span><span><span><span><span><span><span=
-><span>posted</span></span></span></span></span></span></span></span></span=
-></span></span></span></span></span></span></span> at:<br>
+<div dir=3D"ltr"><div><div class=3D"gmail_signature"><div dir=3D"ltr"><div>=
+<div dir=3D"ltr"><div><div>Hi,<br><br></div>TLS/1.3 now going to Area Direc=
+tor review and then IETF Last Call.=C2=A0 Update specs<br></div>imminently =
+(TLS/1.2, RFC 5246, is 9 years old now).<br><div dir=3D"ltr"><br></div><div=
+>Cheers,<br></div>- Ira<br><br><div style=3D"display:inline"></div><div sty=
+le=3D"display:inline"></div><div style=3D"display:inline"></div><div></div>=
+<div></div><div></div><div></div></div></div></div></div></div>
+<br><div class=3D"gmail_quote">---------- Forwarded message ----------<br>F=
+rom: <b class=3D"gmail_sendername">Sean Turner</b> <span dir=3D"ltr">&lt;<a=
+ href=3D"mailto:sean@sn3rd.com">sean@sn3rd.com</a>&gt;</span><br>Date: Fri,=
+ Apr 28, 2017 at 5:00 PM<br>Subject: [TLS] Fwd: Publication has been reques=
+ted for draft-ietf-tls-tls13-20<br>To: &quot;&lt;<a href=3D"mailto:tls@ietf=
+.org">tls@ietf.org</a>&gt;&quot; &lt;<a href=3D"mailto:tls@ietf.org">tls@ie=
+tf.org</a>&gt;<br><br><br><div style=3D"overflow-wrap: break-word;"><div>No=
+te that I=E2=80=99ve requested Kathleen begin her AD review.<div><br></div>=
+<div>For those not in the know about IETF process, there=E2=80=99s still a =
+two-week IETF LC after Kathleen=E2=80=99s review so if anything earth shatt=
+ering gets uncovered we can still address it before it gets to the IESG.<di=
+v><br></div><div>spt</div><div><br></div></div><blockquote type=3D"cite"><d=
+iv>Begin forwarded message:</div><br class=3D"gmail-m_4372998033446507037Ap=
+ple-interchange-newline"><div style=3D"margin:0px"><span style=3D"font-fami=
+ly:-webkit-system-font,helvetica neue,helvetica,sans-serif;color:rgb(0,0,0)=
+"><b>From: </b></span><span style=3D"font-family:-webkit-system-font,helvet=
+ica neue,helvetica,sans-serif">Sean Turner &lt;<a href=3D"mailto:sean@sn3rd=
+.com" target=3D"_blank">sean@sn3rd.com</a>&gt;<br></span></div><div style=
+=3D"margin:0px"><span style=3D"font-family:-webkit-system-font,helvetica ne=
+ue,helvetica,sans-serif;color:rgb(0,0,0)"><b>Subject: </b></span><span styl=
+e=3D"font-family:-webkit-system-font,helvetica neue,helvetica,sans-serif"><=
+b>Publication has been requested for draft-ietf-tls-tls13-20</b><br></span>=
+</div><div style=3D"margin:0px"><span style=3D"font-family:-webkit-system-f=
+ont,helvetica neue,helvetica,sans-serif;color:rgb(0,0,0)"><b>Date: </b></sp=
+an><span style=3D"font-family:-webkit-system-font,helvetica neue,helvetica,=
+sans-serif">April 28, 2017 at 16:49:53 EDT<br></span></div><div style=3D"ma=
+rgin:0px"><span style=3D"font-family:-webkit-system-font,helvetica neue,hel=
+vetica,sans-serif;color:rgb(0,0,0)"><b>To: </b></span><span style=3D"font-f=
+amily:-webkit-system-font,helvetica neue,helvetica,sans-serif">&lt;<a href=
+=3D"mailto:Kathleen.Moriarty.ietf@gmail.com" target=3D"_blank">Kathleen.Mor=
+iarty.ietf@gmail.<wbr>com</a>&gt;<br></span></div><div style=3D"margin:0px"=
+><span style=3D"font-family:-webkit-system-font,helvetica neue,helvetica,sa=
+ns-serif;color:rgb(0,0,0)"><b>Cc: </b></span><span style=3D"font-family:-we=
+bkit-system-font,helvetica neue,helvetica,sans-serif">Sean Turner &lt;<a hr=
+ef=3D"mailto:sean@sn3rd.com" target=3D"_blank">sean@sn3rd.com</a>&gt;, <a h=
+ref=3D"mailto:iesg-secretary@ietf.org" target=3D"_blank">iesg-secretary@iet=
+f.org</a>, <a href=3D"mailto:tls-chairs@ietf.org" target=3D"_blank">tls-cha=
+irs@ietf.org</a>, <a href=3D"mailto:sean@sn3rd.com" target=3D"_blank">sean@=
+sn3rd.com</a><br></span></div><br><div><div>Sean Turner has requested publi=
+cation of draft-ietf-tls-tls13-20 as Proposed Standard on behalf of the TLS=
+ working group.<br><br>Please verify the document&#39;s state at <a href=3D=
+"https://datatracker.ietf.org/doc/draft-ietf-tls-tls13/" target=3D"_blank">=
+https://datatracker.ietf.org/<wbr>doc/draft-ietf-tls-tls13/</a><br><br></di=
+v></div></blockquote></div><br></div><br>______________________________<wbr=
+>_________________<br>
+TLS mailing list<br>
+<a href=3D"mailto:TLS@ietf.org">TLS@ietf.org</a><br>
+<a href=3D"https://www.ietf.org/mailman/listinfo/tls" rel=3D"noreferrer" ta=
+rget=3D"_blank">https://www.ietf.org/mailman/<wbr>listinfo/tls</a><br>
+<br></div><br></div>
 
-
-
-
-
-
-
-
-
-
-
-
-<br>
-=C2=A0 <a href=3D"http://ftp.pwg.org/pub/pwg/liaison/openprinting/minutes/O=
-P-Minutes-20170411.htm" target=3D"_blank">http://ftp.pwg.org/pub/pwg/liaiso=
-n/openprinting/minutes/OP-Minutes-20170411.htm</a><br>
-
-
-
-
-
-</div><div><br><br></div>
-Action Items:<br><br></div>none<br><div><div><br><br>Next <span><span><span=
-><span><span><span><span><span><span><span><span><span><span><span class=3D=
-"gmail-m_4437823930890095150gmail-m_-681379959383614342gmail-m_781888514489=
-1878450gmail-m_5896293692365239151gmail-m_7484771893033705782m_741643991301=
-3906919gmail-il"><span class=3D"gmail-m_4437823930890095150gmail-il">OP</sp=
-an></span></span></span></span></span></span></span></span></span></span></=
-span></span></span></span> US/Europe/Brazil Conference Calls:<br><br>(1) Ma=
-y 2017 - US/Europe/Brazil - OP Monthly Meeting (tentative)<br>=C2=A0=C2=A0=
-=C2=A0 - Note - Joint PWG/OP Summit as Virtual F2F is on 2-4 May 2017<br>=
-=C2=A0=C2=A0=C2=A0 - Tuesday 9 May 2017, Daytime<br>=C2=A0=C2=A0=C2=A0=C2=
-=A0=C2=A0 - US<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 9am in San Fra=
-ncisco - US PDT (Pacific Daylight Time)<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=
-=C2=A0=C2=A0 10am in Colorado - US MDT (Mountain Daylight Time)<br>=C2=A0=
-=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 11am in Chicago - US CDT (Central Dayl=
-ight Time)<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 12pm in New York -=
- US EDT (Eastern Daylight Time)<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 - Europe<=
-br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 6pm in Berlin - CEST (Central=
- Europe Summer Time)<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 - Brazil<br>=C2=A0=
-=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 1pm in Belo Horizonte - BRT (Brasilia =
-Time)<br><br>=C2=A0=C2=A0=C2=A0 US:=C2=A0 +1 641-715-3814<br>=C2=A0=C2=A0=
-=C2=A0 Germany:=C2=A0 +49 (0) 221 98203421<br>=C2=A0=C2=A0=C2=A0 Brazil:=C2=
-=A0 +55 61 4040-4460<br>=C2=A0=C2=A0=C2=A0 Japan:=C2=A0 +81 (0) 3-5050-5070=
-<br>=C2=A0=C2=A0=C2=A0 Participant Access Code:=C2=A0 622393#<br><br>=C2=A0=
-=C2=A0=C2=A0 (note that local numbers for many other countries are availabl=
-e,<br>=C2=A0=C2=A0=C2=A0 also cellphone apps, VOIP support, etc. - please e=
-mail Till for<br>=C2=A0=C2=A0=C2=A0 details) <br><br>(2) June 2017 - US/Eur=
-ope/Brazil - OP Monthly Meeting (tentative)<br>=C2=A0=C2=A0=C2=A0 - Tuesday=
- 6 June 2017, Daytime<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 - US<br>=C2=A0=C2=
-=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 9am in San Francisco - US PDT (Pacific Da=
-ylight Time)<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 10am in Colorado=
- - US MDT (Mountain Daylight Time)<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=
-=C2=A0 11am in Chicago - US CDT (Central Daylight Time)<br>=C2=A0=C2=A0=C2=
-=A0=C2=A0=C2=A0=C2=A0=C2=A0 12pm in New York - US EDT (Eastern Daylight Tim=
-e)<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 - Europe<br>=C2=A0=C2=A0=C2=A0=C2=A0=
-=C2=A0=C2=A0=C2=A0 6pm in Berlin - CEST (Central Europe Summer Time)<br>=C2=
-=A0=C2=A0=C2=A0=C2=A0=C2=A0 - Brazil<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=
-=A0=C2=A0 1pm in Belo Horizonte - BRT (Brasilia Time)<br><br>(3) July 2017 =
-- US/Europe/Brazil - OP Monthly Meeting (tentative)<br>=C2=A0=C2=A0=C2=A0 -=
- Note - US Independence Day holiday is on 4 July 2017<br>=C2=A0=C2=A0=C2=A0=
- - Tuesday 11 July 2017, Daytime<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 - US<br>=
-=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 9am in San Francisco - US PDT (P=
-acific Daylight Time)<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 10am in=
- Colorado - US MDT (Mountain Daylight Time)<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=
-=A0=C2=A0=C2=A0 11am in Chicago - US CDT (Central Daylight Time)<br>=C2=A0=
-=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 12pm in New York - US EDT (Eastern Day=
-light Time)<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 - Europe<br>=C2=A0=C2=A0=C2=
-=A0=C2=A0=C2=A0=C2=A0=C2=A0 6pm in Berlin - CEST (Central Europe Summer Tim=
-e)<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 - Brazil<br>=C2=A0=C2=A0=C2=A0=C2=A0=
-=C2=A0=C2=A0=C2=A0 1pm in Belo Horizonte - BRT (Brasilia Time)<br><br><br><=
-/div><div>Cheers,<br></div><div>- Ira<br><br></div><div><div><div class=3D"=
-gmail_signature"><div dir=3D"ltr"><div><div dir=3D"ltr">Ira McDonald (Music=
-ian / Software Architect)<br>Co-Chair - TCG Trusted Mobility Solutions WG<b=
-r>Chair - Linux Foundation Open Printing WG<br>Secretary - IEEE-ISTO Printe=
-r Working Group<br>Co-Chair - IEEE-ISTO PWG Internet Printing Protocol WG<b=
-r>IETF Designated Expert - IPP &amp; Printer MIB<br>Blue Roof Music / High =
-North Inc<br><a style=3D"color:rgb(51,51,255)" href=3D"http://sites.google.=
-com/site/blueroofmusic" target=3D"_blank">http://sites.google.com/site/blue=
-roofmusic</a><br><a style=3D"color:rgb(102,0,204)" href=3D"http://sites.goo=
-gle.com/site/highnorthinc" target=3D"_blank">http://sites.google.com/site/h=
-ighnorthinc</a><br>mailto: <a href=3D"mailto:blueroofmusic@gmail.com" targe=
-t=3D"_blank">blueroofmusic@gmail.com</a><br>Jan-April: 579 Park Place=C2=A0=
- Saline, MI=C2=A0 48176=C2=A0 734-944-0094<br>May-Dec: PO Box 221=C2=A0 Gra=
-nd Marais, MI 49839=C2=A0 906-494-2434<br><br><div style=3D"display:inline"=
-></div><div style=3D"display:inline"></div><div style=3D"display:inline"></=
-div><div></div><div></div><div></div><div></div></div></div></div></div></d=
-iv>
-</div></div></div>
-
---f4030435488c0de35f054d9e6788--
+--001a1148881efd27de054e40939b--
