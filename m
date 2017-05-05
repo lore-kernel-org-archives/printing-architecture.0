@@ -1,20 +1,21 @@
-Return-Path: <blueroofmusic@gmail.com>
+Return-Path: <till.kamppeter@gmail.com>
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
-	h=mime-version:from:date:message-id:subject:to;
-	bh=X/NWVf5CbN8ZBsN4jY2TUB1+GqvggawSRPZWRusBguA=;
-	b=ZphecIasX5giErD+3pdLEmXoMe28KUTs/7pZOgBOa0WTEOx7ptRAW+FvYFpManfDlp
-	13mMbr5aXoBJ5IkJmDMBiREVn02fAU6pjkXOCT2Drksfx8MmVERsw/Cx5dM2SWMj1QNu
-	12HWL6iRKjDthahOnXEYg0Aw9pPer+MWh2GUy6KUtV/+9oLYriThBI/HivoKMkY+G4wZ
-	vOcSlQx0lyHSWZtPOpvSVdyGLHr2iH90HZ8aYtcXyw60JmpNGz883TY64zTqJoDz/J8s
-	Q5/pK1jVcusKhF6mxKulgFMp2Q4k3QU0PAC7IiOmcxgYXfGL2rCvojEFlif/yIAUvwK3
-	63HA==
+	h=to:from:subject:cc:message-id:date:user-agent:mime-version
+	:content-transfer-encoding;
+	bh=8MMvPjBBRsZKO77rxHhyRpOGqx+M7HN8wwzixYPrzso=;
+	b=BDxHqdu+vPiQgfaWvg0ig7CwNjM8dkVbSiJeFfm67ZXoA0AgrT0PilDpP+75Oz9xXn
+	GCvXmmkfdAFk9ARxEvMeY+oaJqDo9DA7tgpd3ntFdM3ONtZtErBiv6EDMJ+Lycl2Xzua
+	6k4nEdjqByp0u557+T0ilXNYSm21Eg6h91BVqP7o7Qx9rYMmVL8vWUBxZurmpxU5wq03
+	Im6N0/4e6QwrguNqxo0IO6YS5QpQJKBhjELf2bTPzYNAA3CLJXwO92KPhvyPrjP2inE4
+	hC9ALxP7uEk3ikZkXHCmx2L14al3s3T7rYS7R8lPq6cF1hxzJ+z8sF/9o/RkuqcaEwde
+	3b/w==
+From: Till Kamppeter <till.kamppeter@gmail.com>
+Message-ID: <c94374fd-2e9b-f401-d2ea-0b827c3696e1@gmail.com>
+Date: Thu, 4 May 2017 21:55:02 -0300
 MIME-Version: 1.0
-From: Ira McDonald <blueroofmusic@gmail.com>
-Date: Tue, 2 May 2017 10:32:58 -0400
-Message-ID: <CAN40gSu1khkhtnODr7RdXNXMA2AmqCBxQ62bACpTx_jf=1z1rg@mail.gmail.com>
-Content-Type: multipart/alternative; boundary=94eb2c05d50ec40787054e8b6bd3
-Subject: [Printing-architecture] Fwd: US NIST Draft Whitepaper: Profiles for
- the Lightweight Cryptography Standardization Process
+Content-Type: text/plain; charset=utf-8; format=flowed
+Content-Transfer-Encoding: 7bit
+Subject: [Printing-architecture] Some info about WiFi Direct Print and PCLm
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>,
@@ -24,121 +25,70 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: "ipp@pwg.org" <ipp@pwg.org>, "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>, Ira McDonald <blueroofmusic@gmail.com>
+To: Open Printing <printing-architecture@lists.linux-foundation.org>
+Cc: Aveek Basu <aveek.basu@lexmark.com>
 
---94eb2c05d50ec40787054e8b6bd3
-Content-Type: text/plain; charset=UTF-8
+Hi,
 
----------- Forwarded message ----------
-From: Mouha, Nicky W. (IntlAssoc) <nicky.mouha@nist.gov>
-Date: Tue, May 2, 2017 at 10:06 AM
-Subject: [Lwc-forum] Draft Whitepaper: Profiles for the Lightweight
-Cryptography Standardization Process
-To: LWC-forum <LWC-forum@nist.gov>
+after the discussion on the OpenPrinting Summit I have googled for WiFi 
+Direct and PCLm.
+
+WiFi Direct services are services on devices which have their own mini 
+access point so that no WiFi router/access point/infrastructure is 
+needed. A WiFi-capable PC, phone, tablet, ... connects to such a device 
+via WiFi, preferably using WPS. Devices are typically TVs, media 
+servers, cameras, and printers.
+
+Printers provide the WiFi Direct Print service. The client connects to 
+the printer-internal access point and then the printer is available as 
+IPP 2.0 printers with known PDL to the client, to provide driverless 
+printing.
+
+Minimum required PDLs are one of PWG Raster and PCLm.
+
+What is added to the driverless printing we have discussed before is 
+that the printer provides a WiFi AP and so works without need of network 
+infrastructure.
+
+What I have found is a spec package, which can be downloaded throgh this 
+link:
+
+https://www.wi-fi.org/downloads-registered-guest/Wi-Fi_Peer-to-Peer_Services_Technical_Spec_Package_v1.2.zip/29561
+
+You need to fill a form to agree to the license, but there is no cost 
+and no need to be member of the WiFi alliance.
+
+Due to the fact that you have to agree to the license or due to the fact 
+that several PDFs are zipped together, Google does not find anything of 
+the content of these files.
+
+It contains PDFs with specs of WiFi Direct in general and also of 
+specific services, one PDF about WiFi Direct Print.
+
+I had a quick look into the PDF about WiFi Direct Print and saw what I 
+have described in the beginning of this mail. In addition, there are 
+descriptions of the specs, including of PCLm.
+
+PCLm is, as we have already talked about, a simplified PDF which only 
+contains raster images for each page, and it has the table of contents 
+in the beginning, not at the end (to get streamable). For me it looks 
+like that a person with knowledge in PDF could be able to generate PCLm 
+with the info there.
+
+With this we could implement support for WiFi Direct Print, and having a 
+rastertopclm filter in place we could also test whether we can print on 
+Mopria printers in PCLm.
+
+Aveek, Danny, perhaps one could add to the IPP backend for the print 
+dialog a facility which discovers WiFi Direct printers, connect to them, 
+and list them too? Once connected they are IPP printers.
+
+    Till
 
 
-Dear subscribers of the NIST Lightweight Crypto forum,
 
 
 
-NIST announces the Draft Whitepaper "Profiles for the Lightweight
-Cryptography Standardization Process." This document describes the first
-two profiles for NIST's lightweight cryptography project. Profile I
-provides authenticated encryption with associated data (AEAD) and hashing
-functionalities for both hardware-oriented and software-oriented
-constrained environments. Profile II provides AEAD only in
-hardware-oriented constrained environments.
 
 
 
-The final versions of these profiles will be the foundation of submission
-requirements for the first algorithms in NIST's lightweight cryptography
-portfolio.
-
-The scope of NIST's Lightweight Cryptography project is defined in NISTIR
-8114: https://doi.org/10.6028/NIST.IR.8114
-
-
-
-The Draft Whitepaper, along with instructions on how to send comments, can
-be found here:  http://csrc.nist.gov/publications/drafts/
-whitepapers/2017/profiles-lwc-std-proc-draft.pdf
-
-
-
-Comments are due by: *June 16, 2017*
-
-
-
-Additional information on the Lightweight Cryptography standardization
-process can be found here: https://beta.csrc.nist.gov/projects/lightweight-
-cryptography
-
-
-
-Sincerely,
-
-Nicky
-
-On behalf of the Lightweight Crypto Team
-
-
-
-_______________________________________________
-Lwc-forum mailing list
-Lwc-forum@nist.gov
-
---94eb2c05d50ec40787054e8b6bd3
-Content-Type: text/html; charset=UTF-8
-Content-Transfer-Encoding: quoted-printable
-
-<div dir=3D"ltr"><div><div class=3D"gmail_signature" data-smartmail=3D"gmai=
-l_signature"><div dir=3D"ltr"><div><div dir=3D"ltr"><div style=3D"display:i=
-nline"></div><div style=3D"display:inline"></div><div style=3D"display:inli=
-ne"></div><div></div><div></div><div></div><div></div></div></div></div></d=
-iv></div>
-<br><div class=3D"gmail_quote">---------- Forwarded message ----------<br>F=
-rom: <b class=3D"gmail_sendername">Mouha, Nicky W. (IntlAssoc)</b> <span di=
-r=3D"ltr">&lt;<a href=3D"mailto:nicky.mouha@nist.gov">nicky.mouha@nist.gov<=
-/a>&gt;</span><br>Date: Tue, May 2, 2017 at 10:06 AM<br>Subject: [Lwc-forum=
-] Draft Whitepaper: Profiles for the Lightweight Cryptography Standardizati=
-on Process<br>To: LWC-forum &lt;<a href=3D"mailto:LWC-forum@nist.gov">LWC-f=
-orum@nist.gov</a>&gt;<br><br><br><div link=3D"#0563C1" vlink=3D"#954F72" la=
-ng=3D"EN-US"><div class=3D"m_2417535390931778787WordSection1"><p class=3D"M=
-soNormal">Dear subscribers of the NIST Lightweight Crypto forum,<u></u><u><=
-/u></p><p class=3D"MsoNormal"><u></u>=C2=A0<u></u></p><p class=3D"MsoNormal=
-">NIST announces the Draft Whitepaper &quot;Profiles for the Lightweight Cr=
-yptography Standardization Process.&quot; This document describes the first=
- two profiles for NIST&#39;s lightweight cryptography project. Profile I pr=
-ovides authenticated encryption with associated data (AEAD) and hashing fun=
-ctionalities for both hardware-oriented and software-oriented constrained e=
-nvironments. Profile II provides AEAD only in hardware-oriented constrained=
- environments. <u></u><u></u></p><p class=3D"MsoNormal">=C2=A0<u></u><u></u=
-></p><p class=3D"MsoNormal">The final versions of these profiles will be th=
-e foundation of submission requirements for the first algorithms in NIST&#3=
-9;s lightweight cryptography portfolio.<u></u><u></u></p><p class=3D"MsoNor=
-mal"> <u></u><u></u></p><p class=3D"MsoNormal">The scope of NIST&#39;s Ligh=
-tweight Cryptography project is defined in NISTIR 8114: <a href=3D"https://=
-doi.org/10.6028/NIST.IR.8114" target=3D"_blank">https://doi.org/10.6028/NIS=
-T.<wbr>IR.8114</a><u></u><u></u></p><p class=3D"MsoNormal"><u></u>=C2=A0<u>=
-</u></p><p class=3D"MsoNormal">The Draft Whitepaper, along with instruction=
-s on how to send comments, can be found here:=C2=A0 <a href=3D"http://csrc.=
-nist.gov/publications/drafts/whitepapers/2017/profiles-lwc-std-proc-draft.p=
-df" target=3D"_blank">http://csrc.nist.gov/<wbr>publications/drafts/<wbr>wh=
-itepapers/2017/profiles-lwc-<wbr>std-proc-draft.pdf</a><u></u><u></u></p><p=
- class=3D"MsoNormal"><u></u>=C2=A0<u></u></p><p class=3D"MsoNormal">Comment=
-s are due by: <b>June 16, 2017</b><u></u><u></u></p><p class=3D"MsoNormal">=
-<u></u>=C2=A0<u></u></p><p class=3D"MsoNormal">Additional information on th=
-e Lightweight Cryptography standardization process can be found here: <a hr=
-ef=3D"https://beta.csrc.nist.gov/projects/lightweight-cryptography" target=
-=3D"_blank">https://beta.csrc.nist.gov/<wbr>projects/lightweight-<wbr>crypt=
-ography</a><u></u><u></u></p><p class=3D"MsoNormal"><u></u>=C2=A0<u></u></p=
-><p class=3D"MsoNormal">Sincerely,<u></u><u></u></p><p class=3D"MsoNormal">=
-Nicky<u></u><u></u></p><p class=3D"MsoNormal">On behalf of the Lightweight =
-Crypto Team<u></u><u></u></p><p class=3D"MsoNormal"><u></u>=C2=A0<u></u></p=
-></div></div><br>______________________________<wbr>_________________<br>
-Lwc-forum mailing list<br>
-<a href=3D"mailto:Lwc-forum@nist.gov">Lwc-forum@nist.gov</a><br></div><br><=
-/div>
-
---94eb2c05d50ec40787054e8b6bd3--
