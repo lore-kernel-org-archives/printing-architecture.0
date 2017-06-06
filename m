@@ -1,24 +1,25 @@
-Return-Path: <aveekb@lexmark.com>
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
-	d=lexmark-com.20150623.gappssmtp.com; s=20150623;
-	h=mime-version:in-reply-to:references:from:date:message-id:subject:to
-	:cc; bh=2wLO9DonMVCuPICuvgMuj4uNX9F1IZM2G/hGmRemEDM=;
-	b=TE9P2k+LWKO0tm1wH0Z8Pp+8DNcJMTu+sacT3YQ1tLIC3fgidLYUo/hcd7adnQmSAf
-	+fe6wZohytbSTUbPjnWuoZM6eAOmsH+5wTg/cTciOFDP/F3Z3B5kIXWblbOZNcpr8DTg
-	tPv24nqmTyJ+FIBPUGKWZ9NegzKHdrzUQcCZ/Of7K5lZFK2bSIgn0jxGbOkXZnGTJa59
-	9royjFFcycgUH+wZrcEoCcpSwSIdQ9zjWnbV4itjjndq0gnqtX1EE3CYCrtKQqn5xD1N
-	t4SaCqE2+6OBDOxn8UX6qME1HnTpKzhRIWVpRUq4Yg3yPEIgwBYZfVorWH/0rJKFfgiu
-	aseg==
+Return-Path: <till.kamppeter@gmail.com>
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
+	h=from:subject:to:references:message-id:date:user-agent:mime-version
+	:in-reply-to:content-language:content-transfer-encoding;
+	bh=J4M94/3B8KedihztdHaWuGILa0knBySLa+BEgHfumzs=;
+	b=qGULFt63wln9tK/8X3+LnM6eF81YWoJYogV9XqXO2CCOBoHuSj2JdTRlfKLpbAmX46
+	Y15QSNiag4fJyTHeHqznEt1xmW9gyJrENFfWtwEIwI0FBz+4fn5SKmKbdmfd2dUA0crN
+	YFyxPGL+9/fEaj+7Y1flwYHd1K+1i/lHpSgkJ0aQsvrdJbSqUwcMZjhHlGt+VLQ7sqyC
+	keakIh+8GJxmCM3Ypg9NsrWFZN5CNAyPjMaBtLUxAHiSNm3w3+VdSFsVy4PII4efVbSj
+	85I/4hK3RH+gtBh9JxIz2EN/o/UhSJ+tCyDCrsBAQOXCP2SrmpXc1CWakjSGQhRfNkWb
+	GQdw==
+From: Till Kamppeter <till.kamppeter@gmail.com>
+References: <e395be80811270817n502ccd16wf6cc90f85364f5ae@mail.gmail.com>
+Message-ID: <6e9bfbd5-0b64-abfd-06ac-d59e51417b02@gmail.com>
+Date: Tue, 6 Jun 2017 14:40:56 -0300
 MIME-Version: 1.0
-In-Reply-To: <CAN40gSvf8CnnGsVdMcTp7AvMDNoY-q4E4WHP3Wa58cRrYQgnwA@mail.gmail.com>
-References: <CAN40gSvQJ6U_uyQt_09R9TYcSCDUwM-YG1zthvnuv_B=-u-7kA@mail.gmail.com>
-	<CAN40gSvf8CnnGsVdMcTp7AvMDNoY-q4E4WHP3Wa58cRrYQgnwA@mail.gmail.com>
-From: Aveek Basu <aveek.basu@lexmark.com>
-Date: Tue, 6 Jun 2017 22:35:34 +0530
-Message-ID: <CAMmetfRNct5r6F5wiV7m7ASM-2se3AwHN7WFpQPAsm8yPdu3XA@mail.gmail.com>
-Content-Type: multipart/alternative; boundary="001a113f9644fab6f305514da191"
-Subject: Re: [Printing-architecture] [NOW] REMINDER - OP Call Tuesday (6
-	June 2017)
+In-Reply-To: <e395be80811270817n502ccd16wf6cc90f85364f5ae@mail.gmail.com>
+Content-Type: text/plain; charset=utf-8; format=flowed
+Content-Language: en-GB
+Content-Transfer-Encoding: 7bit
+Subject: [Printing-architecture] Last OP Meeting - Tue - 6 Jun 2017 - The
+	Recording
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>,
@@ -28,272 +29,21 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Ira McDonald <blueroofmusic@gmail.com>
-Cc: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>, Aveek Basu <basu.aveek@gmail.com>, Till Kamppeter <till.kamppeter@gmail.com>
+To: Open Printing <printing-architecture@lists.linux-foundation.org>, Printing-japan <printing-japan@lists.linux-foundation.org>
 
---001a113f9644fab6f305514da191
-Content-Type: text/plain; charset="UTF-8"
+Hi,
 
-Ira,
+I have uploaded the recording of the last OpenPrinting meeting to the
+OpenPrinting server:
 
-I tried connecting in but I did face the same issues connecting through the
-android app as I faced last time. I will be working with Till on this
-regards so that I can connect from next call.
+http://www.openprinting.org/download/meetingnotes/op-telecons/OP-Meeting-20170606.mp3
+http://www.openprinting.org/download/meetingnotes/op-telecons/OP-Meeting-20170606a.mp3
 
+In general, recorded meetings I will upload to
 
-Regards,
-Aveek
+http://www.openprinting.org/download/meetingnotes/
 
-On Tue, Jun 6, 2017 at 9:50 PM, Ira McDonald <blueroofmusic@gmail.com>
-wrote:
+      Till
 
-> Hi,
->
-> Bridge just dropped.  I have called back in to the bridge and am waiting.
->
-> Till - you got disconnected apparently.
->
-> Cheers,
-> - Ira
->
->
-> Ira McDonald (Musician / Software Architect)
-> Co-Chair - TCG Trusted Mobility Solutions WG
-> Chair - Linux Foundation Open Printing WG
-> Secretary - IEEE-ISTO Printer Working Group
-> Co-Chair - IEEE-ISTO PWG Internet Printing Protocol WG
-> IETF Designated Expert - IPP & Printer MIB
-> Blue Roof Music / High North Inc
-> http://sites.google.com/site/blueroofmusic
-> http://sites.google.com/site/highnorthinc
-> mailto: blueroofmusic@gmail.com
-> Jan-April: 579 Park Place  Saline, MI  48176  734-944-0094
-> <(734)%20944-0094>
-> May-Dec: PO Box 221  Grand Marais, MI 49839  906-494-2434
-> <(906)%20494-2434>
->
->
-> On Tue, Jun 6, 2017 at 12:06 PM, Ira McDonald <blueroofmusic@gmail.com>
-> wrote:
->
->> Hi,
->>
->> I just got on the conference bridge a couple of minutes late, but
->> nobody else is here.
->>
->> Are you folks joining?
->>
->> Cheers,
->> - Ira
->>
->>
->> Ira McDonald (Musician / Software Architect)
->> Co-Chair - TCG Trusted Mobility Solutions WG
->> Chair - Linux Foundation Open Printing WG
->> Secretary - IEEE-ISTO Printer Working Group
->> Co-Chair - IEEE-ISTO PWG Internet Printing Protocol WG
->> IETF Designated Expert - IPP & Printer MIB
->> Blue Roof Music / High North Inc
->> http://sites.google.com/site/blueroofmusic
->> http://sites.google.com/site/highnorthinc
->> mailto: blueroofmusic@gmail.com
->> Jan-April: 579 Park Place  Saline, MI  48176  734-944-0094
->> <(734)%20944-0094>
->> May-Dec: PO Box 221  Grand Marais, MI 49839  906-494-2434
->> <(906)%20494-2434>
->>
->>
->> On Mon, Jun 5, 2017 at 10:04 AM, Ira McDonald <blueroofmusic@gmail.com>
->> wrote:
->>
->>> Hi,
->>>
->>> Please join us for our OP US/Europe/Brazil conference call:
->>>
->>> (1) June 2017 - US/Europe/Brazil - OP Monthly Meeting (tentative)
->>>
->>>     - Tuesday 6 June 2017, Daytime
->>>       - US
->>>         9am in San Francisco - US PDT (Pacific Daylight Time)
->>>         10am in Colorado - US MDT (Mountain Daylight Time)
->>>         11am in Chicago - US CDT (Central Daylight Time)
->>>         12pm in New York - US EDT (Eastern Daylight Time)
->>>       - Europe
->>>         6pm in Berlin - CEST (Central Europe Summer Time)
->>>       - Brazil
->>>         1pm in Belo Horizonte - BRT (Brasilia Time)
->>>
->>>     US:  +1 641-715-3814 <(641)%20715-3814>
->>>     Germany:  +49 (0) 221 98203421 <+49%20221%2098203421>
->>>     Brazil:  +55 61 4040-4460 <+55%2061%204040-4460>
->>>     Japan:  +81 (0) 3-5050-5070 <+81%203-5050-5070>
->>>     Participant Access Code:  622393#
->>>
->>>     (note that local numbers for many other countries are available,
->>>     also cellphone apps, VOIP support, etc. - please email Till for
->>>     details)
->>>
->>> Cheers,
->>> - Ira
->>>
->>> Ira McDonald (Musician / Software Architect)
->>> Co-Chair - TCG Trusted Mobility Solutions WG
->>> Chair - Linux Foundation Open Printing WG
->>> Secretary - IEEE-ISTO Printer Working Group
->>> Co-Chair - IEEE-ISTO PWG Internet Printing Protocol WG
->>> IETF Designated Expert - IPP & Printer MIB
->>> Blue Roof Music / High North Inc
->>> http://sites.google.com/site/blueroofmusic
->>> http://sites.google.com/site/highnorthinc
->>> mailto: blueroofmusic@gmail.com
->>> Jan-April: 579 Park Place  Saline, MI  48176  734-944-0094
->>> <(734)%20944-0094>
->>> May-Dec: PO Box 221  Grand Marais, MI 49839  906-494-2434
->>> <(906)%20494-2434>
->>>
->>>
->>
->
-> _______________________________________________
-> Printing-architecture mailing list
-> Printing-architecture@lists.linux-foundation.org
-> https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture
->
->
+P. S.: The MP3s are 16 MB long, 35 minutes of talking.
 
-
--- 
-Regards,
-Aveek
-
---001a113f9644fab6f305514da191
-Content-Type: text/html; charset="UTF-8"
-Content-Transfer-Encoding: quoted-printable
-
-<div dir=3D"ltr">Ira,<div><br></div><div>I tried connecting in but I did fa=
-ce the same issues connecting through the android app as I faced last time.=
- I will be working with Till on this regards so that I can connect from nex=
-t call.</div><div><br></div><div><br></div><div>Regards,</div><div>Aveek</d=
-iv></div><div class=3D"gmail_extra"><br><div class=3D"gmail_quote">On Tue, =
-Jun 6, 2017 at 9:50 PM, Ira McDonald <span dir=3D"ltr">&lt;<a href=3D"mailt=
-o:blueroofmusic@gmail.com" target=3D"_blank">blueroofmusic@gmail.com</a>&gt=
-;</span> wrote:<br><blockquote class=3D"gmail_quote" style=3D"margin:0 0 0 =
-.8ex;border-left:1px #ccc solid;padding-left:1ex"><div dir=3D"ltr"><div><di=
-v><div><div>Hi,<br><br></div>Bridge just dropped.=C2=A0 I have called back =
-in to the bridge and am waiting.<br><br></div>Till - you got disconnected a=
-pparently.<br><br></div>Cheers,<br></div>- Ira<br><br></div><div class=3D"g=
-mail_extra"><br clear=3D"all"><div><div class=3D"m_-9128098465181514979gmai=
-l_signature" data-smartmail=3D"gmail_signature"><div dir=3D"ltr"><div><div =
-dir=3D"ltr">Ira McDonald (Musician / Software Architect)<br>Co-Chair - TCG =
-Trusted Mobility Solutions WG<br>Chair - Linux Foundation Open Printing WG<=
-br>Secretary - IEEE-ISTO Printer Working Group<br>Co-Chair - IEEE-ISTO PWG =
-Internet Printing Protocol WG<br>IETF Designated Expert - IPP &amp; Printer=
- MIB<br>Blue Roof Music / High North Inc<br><a style=3D"color:rgb(51,51,255=
-)" href=3D"http://sites.google.com/site/blueroofmusic" target=3D"_blank">ht=
-tp://sites.google.com/site/<wbr>blueroofmusic</a><br><a style=3D"color:rgb(=
-102,0,204)" href=3D"http://sites.google.com/site/highnorthinc" target=3D"_b=
-lank">http://sites.google.com/site/<wbr>highnorthinc</a><br>mailto: <a href=
-=3D"mailto:blueroofmusic@gmail.com" target=3D"_blank">blueroofmusic@gmail.c=
-om</a><br>Jan-April: 579 Park Place=C2=A0 Saline, MI=C2=A0 48176=C2=A0 <a h=
-ref=3D"tel:(734)%20944-0094" value=3D"+17349440094" target=3D"_blank">734-9=
-44-0094</a><br>May-Dec: PO Box 221=C2=A0 Grand Marais, MI 49839=C2=A0 <a hr=
-ef=3D"tel:(906)%20494-2434" value=3D"+19064942434" target=3D"_blank">906-49=
-4-2434</a><br><br><div style=3D"display:inline"></div><div style=3D"display=
-:inline"></div><div style=3D"display:inline"></div><div></div><div></div><d=
-iv></div><div></div></div></div></div></div></div>
-<br><div class=3D"gmail_quote">On Tue, Jun 6, 2017 at 12:06 PM, Ira McDonal=
-d <span dir=3D"ltr">&lt;<a href=3D"mailto:blueroofmusic@gmail.com" target=
-=3D"_blank">blueroofmusic@gmail.com</a>&gt;</span> wrote:<br><blockquote cl=
-ass=3D"gmail_quote" style=3D"margin:0 0 0 .8ex;border-left:1px #ccc solid;p=
-adding-left:1ex"><div dir=3D"ltr"><div><div><div><div><div>Hi,<br><br></div=
->I just got on the conference bridge a couple of minutes late, but<br></div=
->nobody else is here.<br><br></div>Are you folks joining?<br><br></div>Chee=
-rs,<br></div>- Ira<br><br><div><div><div><div><div><div><div class=3D"gmail=
-_extra"><span><br clear=3D"all"><div><div class=3D"m_-9128098465181514979m_=
-7100682277695878118gmail_signature" data-smartmail=3D"gmail_signature"><div=
- dir=3D"ltr"><div><div dir=3D"ltr">Ira McDonald (Musician / Software Archit=
-ect)<br>Co-Chair - TCG Trusted Mobility Solutions WG<br>Chair - Linux Found=
-ation Open Printing WG<br>Secretary - IEEE-ISTO Printer Working Group<br>Co=
--Chair - IEEE-ISTO PWG Internet Printing Protocol WG<br>IETF Designated Exp=
-ert - IPP &amp; Printer MIB<br>Blue Roof Music / High North Inc<br><a style=
-=3D"color:rgb(51,51,255)" href=3D"http://sites.google.com/site/blueroofmusi=
-c" target=3D"_blank">http://sites.google.com/site/b<wbr>lueroofmusic</a><br=
-><a style=3D"color:rgb(102,0,204)" href=3D"http://sites.google.com/site/hig=
-hnorthinc" target=3D"_blank">http://sites.google.com/site/h<wbr>ighnorthinc=
-</a><br>mailto: <a href=3D"mailto:blueroofmusic@gmail.com" target=3D"_blank=
-">blueroofmusic@gmail.com</a><br>Jan-April: 579 Park Place=C2=A0 Saline, MI=
-=C2=A0 48176=C2=A0 <a href=3D"tel:(734)%20944-0094" value=3D"+17349440094" =
-target=3D"_blank">734-944-0094</a><br>May-Dec: PO Box 221=C2=A0 Grand Marai=
-s, MI 49839=C2=A0 <a href=3D"tel:(906)%20494-2434" value=3D"+19064942434" t=
-arget=3D"_blank">906-494-2434</a><br><br><div style=3D"display:inline"></di=
-v><div style=3D"display:inline"></div><div style=3D"display:inline"></div><=
-div></div><div></div><div></div><div></div></div></div></div></div></div>
-<br></span><div><div class=3D"m_-9128098465181514979h5"><div class=3D"gmail=
-_quote">On Mon, Jun 5, 2017 at 10:04 AM, Ira McDonald <span dir=3D"ltr">&lt=
-;<a href=3D"mailto:blueroofmusic@gmail.com" target=3D"_blank">blueroofmusic=
-@gmail.com</a>&gt;</span> wrote:<br><blockquote class=3D"gmail_quote" style=
-=3D"margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex"><div dir=
-=3D"ltr">Hi,<br><br>Please join us for our <span>OP</span> US/Europe/Brazil=
- conference call:<div><br>(1) June 2017 - US/Europe/Brazil - OP Monthly Mee=
-ting (tentative)
-<pre>    - Tuesday 6 June 2017, Daytime
-      - US
-        9am in San Francisco - US PDT (Pacific Daylight Time)
-        10am in Colorado - US MDT (Mountain Daylight Time)
-        11am in Chicago - US CDT (Central Daylight Time)
-        12pm in New York - US EDT (Eastern Daylight Time)
-      - Europe
-        6pm in Berlin - CEST (Central Europe Summer Time)
-      - Brazil
-        1pm in Belo Horizonte - BRT (Brasilia Time)
-
-    US:  <a href=3D"tel:(641)%20715-3814" value=3D"+16417153814" target=3D"=
-_blank">+1 641-715-3814</a>
-    Germany:  <a href=3D"tel:+49%20221%2098203421" value=3D"+4922198203421"=
- target=3D"_blank">+49 (0) 221 98203421</a>
-    Brazil:  <a href=3D"tel:+55%2061%204040-4460" value=3D"+556140404460" t=
-arget=3D"_blank">+55 61 4040-4460</a>
-    Japan:  <a href=3D"tel:+81%203-5050-5070" value=3D"+81350505070" target=
-=3D"_blank">+81 (0) 3-5050-5070</a>
-    Participant Access Code:  622393#
-
-    (note that local numbers for many other countries are available,
-    also cellphone apps, VOIP support, etc. - please email Till for
-    details)=20
-</pre><div><div class=3D"m_-9128098465181514979m_7100682277695878118m_59377=
-05547317827717gmail_signature"><div dir=3D"ltr"><div><div>Cheers,<br></div>=
-<div>- Ira<br></div><div dir=3D"ltr"><br>Ira McDonald (Musician / Software =
-Architect)<br>Co-Chair - TCG Trusted Mobility Solutions WG<br>Chair - Linux=
- Foundation Open Printing WG<br>Secretary - IEEE-ISTO Printer Working Group=
-<br>Co-Chair - IEEE-ISTO PWG Internet Printing Protocol WG<br>IETF Designat=
-ed Expert - IPP &amp; Printer MIB<br>Blue Roof Music / High North Inc<br><a=
- style=3D"color:rgb(51,51,255)" href=3D"http://sites.google.com/site/bluero=
-ofmusic" target=3D"_blank">http://sites.google.com/site/b<wbr>lueroofmusic<=
-/a><br><a style=3D"color:rgb(102,0,204)" href=3D"http://sites.google.com/si=
-te/highnorthinc" target=3D"_blank">http://sites.google.com/site/h<wbr>ighno=
-rthinc</a><br>mailto: <a href=3D"mailto:blueroofmusic@gmail.com" target=3D"=
-_blank">blueroofmusic@gmail.com</a><br>Jan-April: 579 Park Place=C2=A0 Sali=
-ne, MI=C2=A0 48176=C2=A0 <a href=3D"tel:(734)%20944-0094" value=3D"+1734944=
-0094" target=3D"_blank">734-944-0094</a><br>May-Dec: PO Box 221=C2=A0 Grand=
- Marais, MI 49839=C2=A0 <a href=3D"tel:(906)%20494-2434" value=3D"+19064942=
-434" target=3D"_blank">906-494-2434</a><br><br><div style=3D"display:inline=
-"></div><div style=3D"display:inline"></div><div style=3D"display:inline"><=
-/div><div></div><div></div><div></div><div></div></div></div></div></div></=
-div>
-</div></div>
-</blockquote></div><br></div></div></div></div></div></div></div></div></di=
-v></div>
-</blockquote></div><br></div>
-<br>______________________________<wbr>_________________<br>
-Printing-architecture mailing list<br>
-<a href=3D"mailto:Printing-architecture@lists.linux-foundation.org">Printin=
-g-architecture@lists.<wbr>linux-foundation.org</a><br>
-<a href=3D"https://lists.linuxfoundation.org/mailman/listinfo/printing-arch=
-itecture" rel=3D"noreferrer" target=3D"_blank">https://lists.linuxfoundatio=
-n.<wbr>org/mailman/listinfo/printing-<wbr>architecture</a><br>
-<br></blockquote></div><br><br clear=3D"all"><div><br></div>-- <br><div cla=
-ss=3D"gmail_signature" data-smartmail=3D"gmail_signature"><div dir=3D"ltr">=
-Regards,<div>Aveek</div></div></div>
-</div>
-
---001a113f9644fab6f305514da191--
