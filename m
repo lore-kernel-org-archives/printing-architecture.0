@@ -1,25 +1,20 @@
 Return-Path: <blueroofmusic@gmail.com>
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
-	h=mime-version:in-reply-to:references:from:date:message-id:subject:to
-	:cc; bh=g8mkBurP2VOfoEetpz7LNahRO3qf4vTabxtGcNvCO7I=;
-	b=tJ+s831eKHm3+nK54Jsh30lP0wlL1d5Yrmdjz6zmQZhcSD6tbXporWlcmd/sOfoJ4m
-	c8GnjJked0oFcZjFvje5ix3ElRxcUCYtSBRn9cVGiFhm7yCT1ag3dnQQOOb5wEdi4G5l
-	DyAuYMGPBt5U5DuopA3aqmt13e37qZ6eHTRwhgBqo7roNXuyiTS7DEVx1SVlkx0Z79Gv
-	emzFUbfJfniBuBTMeldKnQmK4hd0BlIi2mpIgziwD0T3dpC44lU9bnFoXl63NZ7tgtFl
-	e9+bQm3D5cefi+6jLQhVyvGDZu6vM1wxc6wuD8riVgLFtN8WSjuJIf8/Ebq3wlaKUd+0
-	w7bw==
+	h=mime-version:from:date:message-id:subject:to;
+	bh=78Iy1odZxnC/XbtbfhAvj7xJhpIMX84JHKyySGyzifM=;
+	b=o3A+iMRlDfrIVFtZNNHdL+Wa7j522ZHyI4ksUrdpiHFuFcZ8CQXFgEUT5V52RBxhx1
+	Hqry10cy0eyJQphBzJ84BOJYhWnakRv4SjjgVbDj/59M49N+bPOUPjeUvtUA2CK2UtVR
+	q0zh1Fdm+RtMEPj9/3QNDA3QXiE47CzY20OrP75xVdHEvXUczdvm9U+4DnXOVtehW+uj
+	C4XU2pnZZPl1RcNI43iBfeOhyvxz7vpDaNA+N/fZmI9mD2BOmKtu2F3Plqd1by+vC80H
+	LKCx9z3d4oHg+y6AOT/ooLwpza6ApodUCBxjvWWQHYUSUuc8IL2mhYATRF9VYXyeAQfv
+	aE8Q==
 MIME-Version: 1.0
-In-Reply-To: <CAAwj3i2xP_NydNVnWCE6BVvAzEa9acNr+B0qxWhAHZrege6=cQ@mail.gmail.com>
-References: <CAN40gSvjU7xeZ7c8ouxzVYiWrFqM0MU0wYtyOVTAgwaZcj0NAQ@mail.gmail.com>
-	<CAAwj3i13ok-Py3nq7gPm6p=ZGQuZQyfFbRtX+2J5WhCQ4W-5sw@mail.gmail.com>
-	<CAAwj3i0kC87BJH_6kxyHVmipEcutdVY9eu1tGRNc9p5DEL0Fkw@mail.gmail.com>
-	<CAAwj3i2xP_NydNVnWCE6BVvAzEa9acNr+B0qxWhAHZrege6=cQ@mail.gmail.com>
 From: Ira McDonald <blueroofmusic@gmail.com>
-Date: Tue, 12 Sep 2017 10:12:14 -0400
-Message-ID: <CAN40gSsRobcif-sBnF=5gadDo0SnNKVhhiGOghUm1rxOnzAHww@mail.gmail.com>
-Content-Type: multipart/alternative; boundary="001a11478a38874e7e0558fea205"
-Subject: Re: [Printing-architecture] Reminder: MOVED - OP Call Tuesday (12
-	September 2017)
+Date: Tue, 12 Sep 2017 10:31:21 -0400
+Message-ID: <CAN40gSu=n3hmxvvNjQabRFvNuzx==z58=7705DSKqYeQeMnioQ@mail.gmail.com>
+Content-Type: multipart/alternative; boundary="001a11429fa2e27d8e0558fee62d"
+Subject: [Printing-architecture] CANCELED: OP Call Tuesday (12 September
+	2017)
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>,
@@ -29,20 +24,18 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Till Kamppeter <till.kamppeter@gmail.com>, Ira McDonald <blueroofmusic@gmail.com>
-Cc: Open Printing <printing-architecture@lists.linux-foundation.org>, Aveek Basu <aveek.basu@lexmark.com>
+To: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>, Till Kamppeter <till.kamppeter@gmail.com>, Danny Brennan <brennand@us.ibm.com>, Aveek Basu <aveek.basu@lexmark.com>
 
---001a11478a38874e7e0558fea205
+--001a11429fa2e27d8e0558fee62d
 Content-Type: text/plain; charset="UTF-8"
 
-Hi Till,
+Hi,
 
-OK.
+Due to schedule conflicts, we have canceled today's OP monthly call.
+We may decide to reschedule for next week (19 September) or we may
+skip of OP monthly call for September.
 
-We could move the meeting out to next week, if you like, rather than
-skipping?
-
-WDYT?
+Thanks for your patience.
 
 Cheers,
 - Ira
@@ -62,19 +55,9 @@ Jan-April: 579 Park Place  Saline, MI  48176  734-944-0094
 May-Dec: PO Box 221  Grand Marais, MI 49839  906-494-2434
 
 
-On Tue, Sep 12, 2017 at 7:29 AM, Till Kamppeter <till.kamppeter@gmail.com>
+On Mon, Sep 11, 2017 at 11:02 AM, Ira McDonald <blueroofmusic@gmail.com>
 wrote:
 
-> Hi,
->
-> I will not be able to make it to the call, so I suggest to skip for this
-> month. I will write a monthly report though.
->
->    Till
->
->
-> On Sep 11, 2017 12:02 PM, "Ira McDonald" <blueroofmusic@gmail.com> wrote:
->
 >
 > On Mon, Sep 4, 2017 at 4:10 PM, Ira McDonald <blueroofmusic@gmail.com>
 > wrote:
@@ -119,23 +102,23 @@ wrote:
 >> http://sites.google.com/site/blueroofmusic
 >> http://sites.google.com/site/highnorthinc
 >> mailto: blueroofmusic@gmail.com
->> Jan-April: 579 Park Place  Saline, MI  48176
->> <https://maps.google.com/?q=579+Park+Place%C2%A0+Saline,+MI%C2%A0+48176%C2%A0+734&entry=gmail&source=g>
->> 734-944-0094 <(734)%20944-0094>
+>> Jan-April: 579 Park Place  Saline, MI  48176  734-944-0094
+>> <(734)%20944-0094>
 >> May-Dec: PO Box 221  Grand Marais, MI 49839  906-494-2434
 >> <(906)%20494-2434>
 >>
 >>
 >
->
 
---001a11478a38874e7e0558fea205
+--001a11429fa2e27d8e0558fee62d
 Content-Type: text/html; charset="UTF-8"
 Content-Transfer-Encoding: quoted-printable
 
-<div dir=3D"ltr"><div><div><div><div><div>Hi Till,<br><br></div>OK.<br><br>=
-</div>We could move the meeting out to next week, if you like, rather than =
-skipping?<br><br></div>WDYT?<br><br></div>Cheers,<br></div>- Ira<br><br></d=
+<div dir=3D"ltr"><div><div><div><div><div><div>Hi,<br><br></div>Due to sche=
+dule conflicts, we have canceled today&#39;s OP monthly call.<br></div>We m=
+ay decide to reschedule for next week (19 September) or we may<br></div>ski=
+p of OP monthly call for September.<br><br></div>Thanks for your patience.<=
+br><br></div>Cheers,<br></div>- Ira<br><br><div><div><div><div><div><div><d=
 iv><div class=3D"gmail_extra"><br clear=3D"all"><div><div class=3D"gmail_si=
 gnature" data-smartmail=3D"gmail_signature"><div dir=3D"ltr"><div><div dir=
 =3D"ltr">Ira McDonald (Musician / Software Architect)<br>Co-Chair - TCG Tru=
@@ -153,26 +136,15 @@ ay-Dec: PO Box 221=C2=A0 Grand Marais, MI 49839=C2=A0 906-494-2434<br><br><=
 div style=3D"display:inline"></div><div style=3D"display:inline"></div><div=
  style=3D"display:inline"></div><div></div><div></div><div></div><div></div=
 ></div></div></div></div></div>
-<br><div class=3D"gmail_quote">On Tue, Sep 12, 2017 at 7:29 AM, Till Kamppe=
-ter <span dir=3D"ltr">&lt;<a href=3D"mailto:till.kamppeter@gmail.com" targe=
-t=3D"_blank">till.kamppeter@gmail.com</a>&gt;</span> wrote:<br><blockquote =
-class=3D"gmail_quote" style=3D"margin:0 0 0 .8ex;border-left:1px #ccc solid=
-;padding-left:1ex"><div dir=3D"auto">Hi,<div dir=3D"auto"><br></div><div di=
-r=3D"auto">I will not be able to make it to the call, so I suggest to skip =
-for this month. I will write a monthly report though.</div><span class=3D"H=
-OEnZb"><font color=3D"#888888"><div dir=3D"auto"><br></div><div dir=3D"auto=
-">=C2=A0 =C2=A0Till</div><div dir=3D"auto"><br></div></font></span></div><d=
-iv class=3D"HOEnZb"><div class=3D"h5"><div class=3D"gmail_extra"><br><div c=
-lass=3D"gmail_quote">On Sep 11, 2017 12:02 PM, &quot;Ira McDonald&quot; &lt=
-;<a href=3D"mailto:blueroofmusic@gmail.com" target=3D"_blank">blueroofmusic=
-@gmail.com</a>&gt; wrote:<br type=3D"attribution"><blockquote class=3D"m_-3=
-987433259149973165quote" style=3D"margin:0 0 0 .8ex;border-left:1px #ccc so=
-lid;padding-left:1ex"><div dir=3D"ltr"><div class=3D"gmail_extra"><div><div=
- class=3D"m_-3987433259149973165m_-8302569745734027592gmail_signature" data=
--smartmail=3D"gmail_signature"><div dir=3D"ltr"><div><div dir=3D"ltr"><div =
-style=3D"display:inline"></div><div style=3D"display:inline"></div><div sty=
-le=3D"display:inline"></div><div></div><div></div><div></div><div></div></d=
-iv></div></div></div></div>
+<br><div class=3D"gmail_quote">On Mon, Sep 11, 2017 at 11:02 AM, Ira McDona=
+ld <span dir=3D"ltr">&lt;<a href=3D"mailto:blueroofmusic@gmail.com" target=
+=3D"_blank">blueroofmusic@gmail.com</a>&gt;</span> wrote:<br><blockquote cl=
+ass=3D"gmail_quote" style=3D"margin:0 0 0 .8ex;border-left:1px #ccc solid;p=
+adding-left:1ex"><div dir=3D"ltr"><div class=3D"gmail_extra"><div><div clas=
+s=3D"m_-9190525037916152431gmail_signature" data-smartmail=3D"gmail_signatu=
+re"><div dir=3D"ltr"><div><div dir=3D"ltr"><div style=3D"display:inline"></=
+div><div style=3D"display:inline"></div><div style=3D"display:inline"></div=
+><div></div><div></div><div></div><div></div></div></div></div></div></div>
 <br><div class=3D"gmail_quote">On Mon, Sep 4, 2017 at 4:10 PM, Ira McDonald=
  <span dir=3D"ltr">&lt;<a href=3D"mailto:blueroofmusic@gmail.com" target=3D=
 "_blank">blueroofmusic@gmail.com</a>&gt;</span> wrote:<br><blockquote class=
@@ -202,30 +174,28 @@ f=3D"tel:+49%20221%2098203421" value=3D"+4922198203421" target=3D"_blank">+=
 =C2=A0 (note that local numbers for many other countries are available,<br>=
 =C2=A0=C2=A0=C2=A0 also cellphone apps, VOIP support, etc. - please email T=
 ill for<br>=C2=A0=C2=A0=C2=A0 details)<br><br></div>Cheers,<br></div>- Ira<=
-br><br><div><div><div><div class=3D"m_-3987433259149973165m_-83025697457340=
-27592m_6416261092953258735gmail_signature"><div dir=3D"ltr"><div><div dir=
-=3D"ltr">Ira McDonald (Musician / Software Architect)<br>Co-Chair - TCG Tru=
-sted Mobility Solutions WG<br>Chair - Linux Foundation Open Printing WG<br>=
-Secretary - IEEE-ISTO Printer Working Group<br>Co-Chair - IEEE-ISTO PWG Int=
-ernet Printing Protocol WG<br>IETF Designated Expert - IPP &amp; Printer MI=
-B<br>Blue Roof Music / High North Inc<br><a style=3D"color:rgb(51,51,255)" =
-href=3D"http://sites.google.com/site/blueroofmusic" target=3D"_blank">http:=
-//sites.google.com/site/b<wbr>lueroofmusic</a><br><a style=3D"color:rgb(102=
-,0,204)" href=3D"http://sites.google.com/site/highnorthinc" target=3D"_blan=
-k">http://sites.google.com/site/h<wbr>ighnorthinc</a><br>mailto: <a href=3D=
-"mailto:blueroofmusic@gmail.com" target=3D"_blank">blueroofmusic@gmail.com<=
-/a><br>Jan-April: <a href=3D"https://maps.google.com/?q=3D579+Park+Place%C2=
-%A0+Saline,+MI%C2%A0+48176%C2%A0+734&amp;entry=3Dgmail&amp;source=3Dg" targ=
-et=3D"_blank">579 Park Place=C2=A0 Saline, MI=C2=A0 48176=C2=A0 </a><a href=
-=3D"tel:(734)%20944-0094" value=3D"+17349440094" target=3D"_blank">734-944-=
-0094</a><br>May-Dec: PO Box 221=C2=A0 Grand Marais, MI 49839=C2=A0 <a href=
-=3D"tel:(906)%20494-2434" value=3D"+19064942434" target=3D"_blank">906-494-=
-2434</a><br><br><div style=3D"display:inline"></div><div style=3D"display:i=
-nline"></div><div style=3D"display:inline"></div><div></div><div></div><div=
-></div><div></div></div></div></div></div></div>
+br><br><div><div><div><div class=3D"m_-9190525037916152431m_641626109295325=
+8735gmail_signature"><div dir=3D"ltr"><div><div dir=3D"ltr">Ira McDonald (M=
+usician / Software Architect)<br>Co-Chair - TCG Trusted Mobility Solutions =
+WG<br>Chair - Linux Foundation Open Printing WG<br>Secretary - IEEE-ISTO Pr=
+inter Working Group<br>Co-Chair - IEEE-ISTO PWG Internet Printing Protocol =
+WG<br>IETF Designated Expert - IPP &amp; Printer MIB<br>Blue Roof Music / H=
+igh North Inc<br><a style=3D"color:rgb(51,51,255)" href=3D"http://sites.goo=
+gle.com/site/blueroofmusic" target=3D"_blank">http://sites.google.com/site/=
+b<wbr>lueroofmusic</a><br><a style=3D"color:rgb(102,0,204)" href=3D"http://=
+sites.google.com/site/highnorthinc" target=3D"_blank">http://sites.google.c=
+om/site/h<wbr>ighnorthinc</a><br>mailto: <a href=3D"mailto:blueroofmusic@gm=
+ail.com" target=3D"_blank">blueroofmusic@gmail.com</a><br>Jan-April: 579 Pa=
+rk Place=C2=A0 Saline, MI=C2=A0 48176=C2=A0 <a href=3D"tel:(734)%20944-0094=
+" value=3D"+17349440094" target=3D"_blank">734-944-0094</a><br>May-Dec: PO =
+Box 221=C2=A0 Grand Marais, MI 49839=C2=A0 <a href=3D"tel:(906)%20494-2434"=
+ value=3D"+19064942434" target=3D"_blank">906-494-2434</a><br><br><div styl=
+e=3D"display:inline"></div><div style=3D"display:inline"></div><div style=
+=3D"display:inline"></div><div></div><div></div><div></div><div></div></div=
+></div></div></div></div>
 </div></div></div>
 </blockquote></div><br></div></div>
-</blockquote></div><br></div>
-</div></div></blockquote></div><br></div>
+</blockquote></div><br></div></div></div></div></div></div></div></div></di=
+v>
 
---001a11478a38874e7e0558fea205--
+--001a11429fa2e27d8e0558fee62d--
