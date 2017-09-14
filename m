@@ -1,24 +1,14 @@
-Return-Path: <till.kamppeter@gmail.com>
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
-	h=subject:to:references:from:message-id:date:user-agent:mime-version
-	:in-reply-to:content-language:content-transfer-encoding;
-	bh=LIEdDWJghomIKPOOjiTdr5rgbQ0Y50qWmdtESC0GjvE=;
-	b=tyS7p+gwhCCLuiL5n0XCxEeLl0uopWRKJQqx30k7smo04DDQkYrfcbnsKRQann1fxZ
-	4ZBsu9hcan3GdFwRQHdX9xpXmlNcENC0FU/Sx3TGbFdGfOIRuRetzgL01P7XQ43Od8FD
-	2M0KcuLz0K7kIKcZC4i9rfnkZ2Cv5F8MIHah4Lze4uT+JX5q0Mt4N0TasdH6MUP4RJUZ
-	l5H8rpvZ0KknXK6ABh7W/iQI79aCvMYz5uNT9XdAGfElpInoEpLYMzsRTeGCPMY7ztDQ
-	sGco+pwG7oHOsn3dwO1lLU1L/t5zEVmqfp1GUdjYsYznFw/FDzDIzY7CJh8tM+iBvP+Z
-	HXfQ==
+Return-Path: <samuel.thibault@ens-lyon.org>
+Date: Thu, 14 Sep 2017 23:33:29 +0200
+From: Samuel Thibault <samuel.thibault@ens-lyon.org>
+Message-ID: <20170914213329.jmx3ujph6ps5z2cr@var.youpi.perso.aquilenet.fr>
 References: <20170914174009.hs6uhfcyzauzmd6m@var.youpi.perso.aquilenet.fr>
-From: Till Kamppeter <till.kamppeter@gmail.com>
-Message-ID: <2639aaac-7d16-c8b6-e3af-7684b1e5881b@gmail.com>
-Date: Thu, 14 Sep 2017 18:04:40 -0300
 MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="u7rwisgtv5vt5gj6"
+Content-Disposition: inline
 In-Reply-To: <20170914174009.hs6uhfcyzauzmd6m@var.youpi.perso.aquilenet.fr>
-Content-Type: text/plain; charset=utf-8; format=flowed
-Content-Language: en-GB
-Content-Transfer-Encoding: 7bit
-Subject: Re: [Printing-architecture] [PATCH] Fix graphical braille margins
+Subject: [Printing-architecture] [PATCH] round graphical braille images to
+	braille cell
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>,
@@ -30,13 +20,34 @@ List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-arc
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
 To: printing-architecture@lists.linux-foundation.org
 
-On 09/14/2017 02:40 PM, Samuel Thibault wrote:
-> In Index graphical mode we need to disable the text margins, since they
-> come in the way there too.
-> Also, we should always add a 1.6mm margin for taking into account the
-> width of dots.
 
-Applied. Thank you very much for the patch.
+--u7rwisgtv5vt5gj6
+Content-Type: text/plain; charset=us-ascii
+Content-Disposition: inline
 
-    Till
+Embossers would typically need a round number of cells to emboss, so
+round the graphical area to a multiple of 2x4.
 
+Samuel
+
+--u7rwisgtv5vt5gj6
+Content-Type: text/plain; charset=us-ascii
+Content-Disposition: attachment; filename=patch
+
+=== modified file 'filter/braille/filters/cups-braille.sh.in'
+--- filter/braille/filters/cups-braille.sh.in	2017-09-14 21:00:51 +0000
++++ filter/braille/filters/cups-braille.sh.in	2017-09-14 21:31:21 +0000
+@@ -207,8 +207,8 @@ TEXTHEIGHT=$(( ($TEXTAREAHEIGHT + $LINES
+ # Compute number of printable cells according to page size
+ # Take into account that dots have a width.
+ GRAPHICDOTDISTANCE=$(getOptionNumber GraphicDotDistance)
+-GRAPHICWIDTH=$(( ($PRINTABLEWIDTH - 160) / $GRAPHICDOTDISTANCE ))
+-GRAPHICHEIGHT=$(( ($PRINTABLEHEIGHT - 160) / $GRAPHICDOTDISTANCE ))
++GRAPHICWIDTH=$(( ( ($PRINTABLEWIDTH - 160) / $GRAPHICDOTDISTANCE ) / 2 * 2 ))
++GRAPHICHEIGHT=$(( ( ($PRINTABLEHEIGHT - 160) / $GRAPHICDOTDISTANCE ) / 4 * 4 ))
+ 
+ #
+ # Text translation
+
+
+--u7rwisgtv5vt5gj6--
