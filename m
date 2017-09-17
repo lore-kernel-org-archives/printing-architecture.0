@@ -1,12 +1,13 @@
 Return-Path: <samuel.thibault@ens-lyon.org>
-Date: Sun, 17 Sep 2017 16:07:54 +0200
+Date: Sun, 17 Sep 2017 19:05:58 +0200
 From: Samuel Thibault <samuel.thibault@ens-lyon.org>
-Message-ID: <20170917140754.le77npp2qrgz5yaf@var.youpi.perso.aquilenet.fr>
+Message-ID: <20170917170558.3r3ab653lubxhlzt@var.youpi.perso.aquilenet.fr>
 MIME-Version: 1.0
-Content-Type: multipart/mixed; boundary="qqdv7hnticefgtps"
+Content-Type: multipart/mixed; boundary="xdzco7qm3psevsdo"
 Content-Disposition: inline
 Content-Transfer-Encoding: 8bit
-Subject: [Printing-architecture] [PATCH] braille: update french translation
+Subject: [Printing-architecture] [PATCH] braille: add margins in graphical
+	mode
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>,
@@ -19,90 +20,248 @@ List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-arc
 To: printing-architecture@lists.linux-foundation.org
 
 
---qqdv7hnticefgtps
+--xdzco7qm3psevsdo
 Content-Type: text/plain; charset=us-ascii
 Content-Disposition: inline
 
-This updates the french translation for braille options.
+Hello,
+
+This adds support for margins in graphical mode, defaulting them to 15
+points (a bit more than 5mm).
 
 Samuel
 
---qqdv7hnticefgtps
+--xdzco7qm3psevsdo
 Content-Type: text/plain; charset="utf-8"
-Content-Disposition: attachment; filename=patch
+Content-Disposition: attachment; filename=margins
 Content-Transfer-Encoding: 8bit
 
-=== modified file 'filter/braille/drivers/common/fr-braille.po'
---- filter/braille/drivers/common/fr-braille.po	2017-09-11 23:40:36 +0000
-+++ filter/braille/drivers/common/fr-braille.po	2017-09-17 14:06:40 +0000
-@@ -43,14 +43,35 @@ msgstr "Transcription Braille"
- msgid "None"
- msgstr "Aucune"
+---
+ filter/braille/drivers/common/fr-braille.po |   12 ++++++
+ filter/braille/filters/cups-braille.sh.in   |   53 +++++++++++++++++++++++-----
+ filter/braille/filters/imagemagick.defs     |   41 +++++++++++++++++++++
+ filter/braille/filters/imagetobrf.in        |   14 ++++---
+ filter/braille/filters/vectortobrf.in       |   12 +++---
+ 5 files changed, 113 insertions(+), 19 deletions(-)
+
+--- a/filter/braille/filters/imagemagick.defs
++++ b/filter/braille/filters/imagemagick.defs
+@@ -79,3 +79,44 @@ Option "CannyUpper/CannyUpper" PickOne A
+   *Choice "30/30" ""
+   Choice "40/40" ""
+   Choice "50/50" ""
++
++Option "page-top/Graphical top margin" PickOne AnySetup 10.0
++  Choice "0/0" ""
++  Choice "5/5" ""
++  Choice "10/10" ""
++  *Choice "15/15" ""
++  Choice "20/20" ""
++  Choice "25/25" ""
++  Attribute Custompage-top True ""
++  Attribute ParamCustompage-top Points "1 int 1 999"
++
++Option "page-bottom/Graphical bottom margin" PickOne AnySetup 10.0
++  Choice "0/0" ""
++  Choice "5/5" ""
++  Choice "10/10" ""
++  *Choice "15/15" ""
++  Choice "20/20" ""
++  Choice "25/25" ""
++  Attribute Custompage-bottom True ""
++  Attribute ParamCustompage-bottom Points "1 int 1 999"
++
++Option "page-left/Graphical left margin" PickOne AnySetup 10.0
++  Choice "0/0" ""
++  Choice "5/5" ""
++  Choice "10/10" ""
++  *Choice "15/15" ""
++  Choice "20/20" ""
++  Choice "25/25" ""
++  Attribute Custompage-left True ""
++  Attribute ParamCustompage-left Points "1 int 1 999"
++
++Option "page-right/Graphical right margin" PickOne AnySetup 10.0
++  Choice "0/0" ""
++  Choice "5/5" ""
++  Choice "10/10" ""
++  *Choice "15/15" ""
++  Choice "20/20" ""
++  Choice "25/25" ""
++  Attribute Custompage-right True ""
++  Attribute ParamCustompage-right Points "1 int 1 999"
++
+--- a/filter/braille/drivers/common/fr-braille.po
++++ b/filter/braille/drivers/common/fr-braille.po
+@@ -100,6 +100,18 @@ msgstr "Marge extérieure"
+ msgid "Page number"
+ msgstr "Numéro de page"
  
--msgid "Additional Braille transcription"
--msgstr "Transcription Braille additionnelle"
-+msgid "Additional Braille transcription (2)"
-+msgstr "Transcription Braille additionnelle (2)"
++msgid "Graphical top margin"
++msgstr "Marge graphique haut"
 +
-+msgid "Additional Braille transcription (3)"
-+msgstr "Transcription Braille additionnelle (3)"
++msgid "Graphical bottom margin"
++msgstr "Marge graphique bas"
 +
-+msgid "Additional Braille transcription (4)"
-+msgstr "Transcription Braille additionnelle (4)"
++msgid "Graphical left margin"
++msgstr "Marge graphique gauche"
 +
-+msgid "Default for language"
-+msgstr "Par défaut pour la langue"
-+
-+msgid "Default for language grade 0"
-+msgstr "Par défaut pour la langue grade 0"
-+
-+msgid "Default for language grade 1"
-+msgstr "Par défaut pour la langue grade 1"
-+
-+msgid "Default for language grade 2"
-+msgstr "Par défaut pour la langue grade 2"
-+
-+msgid "Default for language grade 3"
-+msgstr "Par défaut pour la langue grade 3"
- 
- msgid "Text dot distance"
- msgstr "Distance points texte"
- 
- msgid "Text dots"
--msgstr "Points text"
-+msgstr "Points texte"
- 
- msgid "8 dots"
- msgstr "8 points"
-@@ -64,6 +85,21 @@ msgstr "Distance points graphique"
- msgid "Line spacing"
- msgstr "Espacement de ligne"
- 
-+msgid "Top margin"
-+msgstr "Marge haut"
-+
-+msgid "Bottom margin"
-+msgstr "Marge bas"
-+
-+msgid "Inner margin"
-+msgstr "Marge intérieure"
-+
-+msgid "Outer margin"
-+msgstr "Marge extérieure"
-+
-+msgid "Page number"
-+msgstr "Numéro de page"
++msgid "Graphical right margin"
++msgstr "Marge graphique droite"
 +
  msgid "Image conversion"
  msgstr "Conversion d'image"
  
-@@ -184,5 +220,5 @@ msgstr "Table 3 définie par l'utilisate
- msgid "User-defined Table 4"
- msgstr "Table 4 définie par l'utilisateur"
+--- a/filter/braille/filters/cups-braille.sh.in
++++ b/filter/braille/filters/cups-braille.sh.in
+@@ -75,6 +75,7 @@ getOption () {
+ getOptionNumber () {
+   OPTION=$1
+   VALUE=$(getOption $OPTION)
++  VALUE=${VALUE#Custom.}
+   case "$VALUE" in
+     [0-9]*) ;;
+     *) printf "ERROR: Option $OPTION must be a number, got '%s'\n" "$VALUE" >&2
+@@ -144,8 +145,9 @@ case "$PAGESIZE" in
+     ;;
+ esac
  
--msgid "Multiple impact"
-+msgid "Multiple Impact"
- msgstr "Impact multiple"
++# Margins as announced by embosser
+ HWMARGINS=$(getAttribute HWMargins)
+-printf "DEBUG: HW margins are $HWMARGINS\n" >&2
++echo "DEBUG: HW margins are $HWMARGINS" >&2
+ HWMARGIN_LEFT="${HWMARGINS%% *}"
+ HWMARGINS="${HWMARGINS#* }"
+ HWMARGIN_BOTTOM="${HWMARGINS%% *}"
+@@ -182,11 +184,25 @@ MARGIN_RIGHT=$(points2mm "$HWMARGIN_RIGH
+ MARGIN_TOP=$(points2mm "$HWMARGIN_TOP")
+ MARGIN_BOTTOM=$(points2mm "$HWMARGIN_BOTTOM")
+ 
+-printf "DEBUG: margins are left $MARGIN_LEFT right $MARGIN_RIGHT top $MARGIN_TOP bottom $MARGIN_BOTTOM\n" >&2
+-
+-PRINTABLEWIDTH=$((PAGEWIDTH - $MARGIN_LEFT - $MARGIN_RIGHT))
+-PRINTABLEHEIGHT=$((PAGEHEIGHT - $MARGIN_TOP - $MARGIN_BOTTOM))
++# Margins requested by user
++PAGE_LEFT=$(points2mm $(getOptionNumber page-left))
++PAGE_RIGHT=$(points2mm $(getOptionNumber page-right))
++PAGE_TOP=$(points2mm $(getOptionNumber page-top))
++PAGE_BOTTOM=$(points2mm $(getOptionNumber page-bottom))
++
++[ -n "$PAGE_LEFT"   -a "$MARGIN_LEFT"   -le "$PAGE_LEFT"   ] || PAGE_LEFT=$MARGIN_LEFT
++[ -n "$PAGE_RIGHT"  -a "$MARGIN_RIGHT"  -le "$PAGE_RIGHT"  ] || PAGE_RIGHT=$MARGIN_RIGHT
++[ -n "$PAGE_TOP"    -a "$MARGIN_TOP"    -le "$PAGE_TOP"    ] || PAGE_TOP=$MARGIN_TOP
++[ -n "$PAGE_BOTTOM" -a "$MARGIN_BOTTOM" -le "$PAGE_BOTTOM" ] || PAGE_BOTTOM=$MARGIN_BOTTOM
++
++echo "DEBUG: hard margins are left $MARGIN_LEFT right $MARGIN_RIGHT top $MARGIN_TOP bottom $MARGIN_BOTTOM" >&2
++echo "DEBUG: graphical margins are left $PAGE_LEFT right $PAGE_RIGHT top $PAGE_TOP bottom $PAGE_BOTTOM" >&2
++
++# This is the hardware-printable area
++PRINTABLEWIDTH=$(($PAGEWIDTH - $MARGIN_LEFT - $MARGIN_RIGHT))
++PRINTABLEHEIGHT=$(($PAGEHEIGHT - $MARGIN_TOP - $MARGIN_BOTTOM))
+ 
++echo "DEBUG: printable area is ${PRINTABLEWIDTH}x${PRINTABLEHEIGHT}" >&2
+ 
+ #
+ # Text spacing
+@@ -244,10 +260,31 @@ TEXTHEIGHT=$(( ($TEXTAREAHEIGHT + $LINES
+ #
+ 
+ # Compute number of printable cells according to page size
+-# Take into account that dots have a width.
+ GRAPHICDOTDISTANCE=$(getOptionNumber GraphicDotDistance)
+-GRAPHICWIDTH=$(( ( ($PRINTABLEWIDTH - 160) / $GRAPHICDOTDISTANCE ) / 2 * 2 ))
+-GRAPHICHEIGHT=$(( ( ($PRINTABLEHEIGHT - 160) / $GRAPHICDOTDISTANCE ) / 4 * 4 ))
++
++# This is the total area we will send to the embosser
++TOTALGRAPHICWIDTH=$(( ( ($PRINTABLEWIDTH - 160) / $GRAPHICDOTDISTANCE ) / 2 * 2 ))
++TOTALGRAPHICHEIGHT=$(( ( ($PRINTABLEHEIGHT - 160) / $GRAPHICDOTDISTANCE ) / 4 * 4 ))
++
++echo "DEBUG: total graphical: ${TOTALGRAPHICWIDTH}x${TOTALGRAPHICHEIGHT}" >&2
++
++# This is how many dots we have to introduce to respect at least the software left+top margin
++GRAPHICHOFFSET=$(( ($PAGE_LEFT - $MARGIN_LEFT + $GRAPHICDOTDISTANCE - 1) / $GRAPHICDOTDISTANCE ))
++GRAPHICVOFFSET=$(( ($PAGE_TOP - $MARGIN_TOP + $GRAPHICDOTDISTANCE - 1) / $GRAPHICDOTDISTANCE ))
++
++echo "DEBUG: graphical offset: ${GRAPHICHOFFSET}x${GRAPHICVOFFSET}" >&2
++
++# This is the resulting actual margin
++GRAPHICLEFTMARGIN=$(( $MARGIN_LEFT + $GRAPHICHOFFSET * $GRAPHICDOTDISTANCE ))
++GRAPHICTOPMARGIN=$(( $MARGIN_TOP + $GRAPHICVOFFSET * $GRAPHICDOTDISTANCE ))
++
++echo "DEBUG: rounded graphical top-left corner margin: ${GRAPHICLEFTMARGIN}x${GRAPHICTOPMARGIN}" >&2
++
++# Then compute how many dots we can afford until reaching the software right+bottom margin
++GRAPHICWIDTH=$(( ( ( $PAGEWIDTH - $GRAPHICLEFTMARGIN - $PAGE_RIGHT ) - 160) / $GRAPHICDOTDISTANCE ))
++GRAPHICHEIGHT=$(( ( ( $PAGEHEIGHT - $GRAPHICTOPMARGIN - $PAGE_BOTTOM ) - 160) / $GRAPHICDOTDISTANCE ))
++
++echo "DEBUG: resulting graphical area: ${GRAPHICWIDTH}x${GRAPHICHEIGHT}" >&2
+ 
+ #
+ # Text translation
+--- a/filter/braille/filters/imagetobrf.in
++++ b/filter/braille/filters/imagetobrf.in
+@@ -70,10 +70,12 @@ case "$ROTATE" in
+     ;;
+ esac
+ 
++PAGE="-page ${TOTALGRAPHICWIDTH}x${TOTALGRAPHICHEIGHT}+${GRAPHICHOFFSET}+${GRAPHICVOFFSET}"
++
+ RESIZE=$(getOption Resize)
+ case "$RESIZE" in
+   True|true) RESIZE="-size ${GRAPHICWIDTH}x${GRAPHICHEIGHT} -resize ${GRAPHICWIDTH}x${GRAPHICHEIGHT}" ;;
+-  False|false) RESIZE="-crop ${GRAPHICWIDTH}x${GRAPHICHEIGHT}+0+0" ;;
++  False|false) RESIZE="-crop ${GRAPHICWIDTH}x${GRAPHICHEIGHT}+${GRAPHICHOFFSET}+${GRAPHICVOFFSET}" ;;
+   *)
+     printf "ERROR: Option Resize must either True or False, got '%s'\n" "$RESIZE" >&2
+     exit 1
+@@ -98,16 +100,16 @@ case $EDGE in
+     ;;
+ esac
+ 
+-RENDER_CALL="convert $WORK -rotate $ROTATE $RESIZE - $OUTPUT_FORMAT:-"
++RENDER_CALL="convert $WORK -rotate $ROTATE $PAGE $RESIZE -flatten - $OUTPUT_FORMAT:-"
+ 
+ # Now proceeed
+ echo "INFO: Converting image" 1>&2
+ if [ -z "$FILE" ]
+ then
+-  printf "DEBUG: Calling $RENDER_CALL from stdin\n" 1>&2
+-  $RENDER_CALL | sed -e '/^Width: [0-9]*$/,/^$/d' 
++  printf "DEBUG: Calling %s from stdin\n" "$RENDER_CALL" 1>&2
++  $RENDER_CALL | sed -e '/^\(Width\|X\|Y\): [0-9]*$/,/^$/d'
+ else
+-  printf "DEBUG: Calling $RENDER_CALL on '%s'\n" "$FILE" 1>&2
+-  $RENDER_CALL < "$FILE" | sed -e '/^Width: [0-9]*$/,/^$/d' 
++  printf "DEBUG: Calling %s on '%s'\n" "$RENDER_CALL" "$FILE" 1>&2
++  $RENDER_CALL < "$FILE" | sed -e '/^\(Width\|X\|Y\): [0-9]*$/,/^$/d'
+ fi
+ echo "INFO: Ready" >&2
+--- a/filter/braille/filters/vectortobrf.in
++++ b/filter/braille/filters/vectortobrf.in
+@@ -54,17 +54,19 @@ case "$NEGATE" in
+     ;;
+ esac
+ 
++PAGE="-page ${TOTALGRAPHICWIDTH}x${TOTALGRAPHICHEIGHT}+${GRAPHICHOFFSET}+${GRAPHICVOFFSET}"
++
+ GS_CALL="gs -q -dDEVICEWIDTHPOINTS=${GRAPHICWIDTH} -dDEVICEHEIGHTPOINTS=${GRAPHICHEIGHT} -noantialias -dTextAlphaBits=1 -dGraphicsAlphaBits=1 -dSAFER -dBATCH -dNOPAUSE -sDEVICE=pngmono -dFitPage -r72 -sOutputFile=-"
+-RENDER_CALL="convert $NEGATE - $OUTPUT_FORMAT:-"
++RENDER_CALL="convert $NEGATE $PAGE -flatten - $OUTPUT_FORMAT:-"
+ 
+ # Now proceeed
+ echo "INFO: Converting image" 1>&2
+ if [ -z "$FILE" ]
+ then
+-  printf "DEBUG: Calling $GS_CALL and $RENDER_CALL from stdin\n" 1>&2
+-  $GS_CALL - | sed -e '/-noantialias/d' | $RENDER_CALL | sed -e '/^Width: [0-9]*$/,/^$/d'
++  printf "DEBUG: Calling %s and %s from stdin\n" "$GS_CALL" "$RENDER_CALL" 1>&2
++  $GS_CALL - | sed -e '/-noantialias/d' | $RENDER_CALL | sed -e '/^\(Width\|X\|Y\): [0-9]*$/,/^$/d'
+ else
+-  printf "DEBUG: Calling $GS_CALL and $RENDER_CALL on '%s'\n" "$FILE" 1>&2
+-  $GS_CALL "$FILE" | sed -e '/-noantialias/d' | $RENDER_CALL | sed -e '/^Width: [0-9]*$/,/^$/d' 
++  printf "DEBUG: Calling %s and %s on '%s'\n" "$GS_CALL" "$RENDER_CALL" "$FILE" 1>&2
++  $GS_CALL "$FILE" | sed -e '/-noantialias/d' | $RENDER_CALL | sed -e '/^\(Width\|X\|Y\): [0-9]*$/,/^$/d'
+ fi
+ echo "INFO: Ready" >&2
 
-
---qqdv7hnticefgtps--
+--xdzco7qm3psevsdo--
