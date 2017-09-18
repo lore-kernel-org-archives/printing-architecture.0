@@ -1,11 +1,28 @@
-Return-Path: <samuel.thibault@ens-lyon.org>
-Date: Sun, 17 Sep 2017 19:08:08 +0200
-From: Samuel Thibault <samuel.thibault@ens-lyon.org>
-Message-ID: <20170917170808.i6etyuroihmayqyq@var.youpi.perso.aquilenet.fr>
-MIME-Version: 1.0
-Content-Type: multipart/mixed; boundary="ve6yucrpa3gv67k3"
-Content-Disposition: inline
-Subject: [Printing-architecture] [PATCH] braille: add mirror option
+Return-Path: <msweet@apple.com>
+DKIM-Signature: v=1; a=rsa-sha256; d=apple.com; s=mailout2048s;
+	c=relaxed/simple; q=dns/txt; i=@apple.com; t=1505700499;
+	h=From:Sender:Reply-To:Subject:Date:Message-id:To:Cc:MIME-version:Content-type:
+	Content-transfer-encoding:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-reply-to:References:List-Id:
+	List-Help:List-Unsubscribe:List-Subscribe:List-Post:List-Owner:List-Archive;
+	bh=FvYZP+rBcdKWZt3TgEznRwTOycr0DVS3qqF54C8S9Go=;
+	b=idUMYFtLHCyVEiWZCB/wnwiiQu33F9LU9ywCFy+RWY0E8u8Hw+InB1eFmO81SO4g
+	lvcjSTcxuOAR+EbFizo9UGaTxO9hBzZp2PGyXpNQVWgqPEJHnGRfMAmV4jBzX6sL
+	wVFMg3jI9eo8/8FUPVKGwaMt91CPpMecH0SxfCgGS8xpDxrp4Ovce5AR6ymptN3q
+	0+qP8nQ9Fhf9mVAKSK+HI0AqjRcwxzu5euBOAcByYmeaNuSGSODff9zHVTL0B37y
+	9e3blMw0VypoycKljGe3hbhHGSCdWylVBPaFnl/+aXv3eXipmKqWlhBXv79ID5KT
+	MHaoiYo8A1f1gRQHhaGaVA==;
+MIME-version: 1.0
+Content-transfer-encoding: 7BIT
+Content-type: text/plain; CHARSET=US-ASCII
+Sender: msweet@apple.com
+From: Michael Sweet <msweet@apple.com>
+In-reply-to: <20170917170717.umcyh6ss7lzvevtz@var.youpi.perso.aquilenet.fr>
+Date: Sun, 17 Sep 2017 22:08:10 -0400
+Message-id: <BC320CE1-5213-4003-B275-E05C594D79B3@apple.com>
+References: <20170917170717.umcyh6ss7lzvevtz@var.youpi.perso.aquilenet.fr>
+Subject: Re: [Printing-architecture] [PATCH] braille: rename Resize option
+ to fitplot
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>,
@@ -15,81 +32,25 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: printing-architecture@lists.linux-foundation.org
+To: Samuel Thibault <samuel.thibault@ens-lyon.org>
+Cc: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>
+
+You should be using the IPP print-scaling option instead - fitplot has been deprecated for many years...
 
 
---ve6yucrpa3gv67k3
-Content-Type: text/plain; charset=us-ascii
-Content-Disposition: inline
+> On Sep 17, 2017, at 1:07 PM, Samuel Thibault <samuel.thibault@ens-lyon.org> wrote:
+> 
+> Re,
+> 
+> This renames the internal cups name of the Resize option to the standard
+> well-known and well-documented fitplot option.
+> 
+> Samuel
+> <fitplot.txt>_______________________________________________
+> Printing-architecture mailing list
+> Printing-architecture@lists.linux-foundation.org
+> https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture
 
-Re,
+_________________________________________________________
+Michael Sweet, Senior Printing System Engineer
 
-This adds a mirror option for graphical output.
-
-Samuel
-
---ve6yucrpa3gv67k3
-Content-Type: text/plain; charset=us-ascii
-Content-Disposition: attachment; filename=mirror
-
----
- filter/braille/drivers/common/fr-braille.po |    3 +++
- filter/braille/filters/imagemagick.defs     |    4 ++++
- filter/braille/filters/imagetobrf.in        |   12 +++++++++++-
- 3 files changed, 18 insertions(+), 1 deletion(-)
-
---- a/filter/braille/drivers/common/fr-braille.po
-+++ b/filter/braille/drivers/common/fr-braille.po
-@@ -118,6 +118,9 @@ msgstr "Conversion d'image"
- msgid "Resize"
- msgstr "Retailler"
- 
-+msgid "Mirror"
-+msgstr "Miroir"
-+
- msgid "Rotation"
- msgstr "Rotation"
- 
---- a/filter/braille/filters/imagemagick.defs
-+++ b/filter/braille/filters/imagemagick.defs
-@@ -41,6 +41,10 @@ Option "fitplot/Resize" Boolean AnySetup
-   *Choice "True/Yes" ""
-   Choice "False/No" ""
- 
-+Option "mirror/Mirror" Boolean AnySetup 10
-+  Choice "True/Yes" ""
-+  *Choice "False/No" ""
-+
- Option "Edge/Edge detection" PickOne AnySetup 10
-   Choice "None/None"   ""
-   Choice "Edge/Simple" ""
---- a/filter/braille/filters/imagetobrf.in
-+++ b/filter/braille/filters/imagetobrf.in
-@@ -70,6 +70,16 @@ case "$ROTATE" in
-     ;;
- esac
- 
-+MIRROR=$(getOption mirror)
-+case "$MIRROR" in
-+  True|true)   MIRROR="-flop" ;;
-+  False|false) MIRROR="" ;;
-+  *)
-+    printf "ERROR: Option mirror must either True or False, got '%s'\n" "$MIRROR" >&2
-+    exit 1
-+    ;;
-+esac
-+
- PAGE="-page ${TOTALGRAPHICWIDTH}x${TOTALGRAPHICHEIGHT}+${GRAPHICHOFFSET}+${GRAPHICVOFFSET}"
- 
- RESIZE=$(getOption fitplot)
-@@ -100,7 +110,7 @@ case $EDGE in
-     ;;
- esac
- 
--RENDER_CALL="convert $WORK -rotate $ROTATE $PAGE $RESIZE -flatten - $OUTPUT_FORMAT:-"
-+RENDER_CALL="convert $WORK -rotate $ROTATE $PAGE $RESIZE $MIRROR -flatten - $OUTPUT_FORMAT:-"
- 
- # Now proceeed
- echo "INFO: Converting image" 1>&2
-
---ve6yucrpa3gv67k3--
