@@ -1,20 +1,25 @@
-Return-Path: <blueroofmusic@gmail.com>
+Return-Path: <till.kamppeter@gmail.com>
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
-	h=mime-version:from:date:message-id:subject:to;
-	bh=LVE3Sb1ZMJVuwOQ7IEnqQ3aEywrqaes9RgbWxntWF+Y=;
-	b=gcTKraAiKvEsxII3QJfEjEDB+FITIrP4VvzqdJ9PH6lmVU9Wdn2Q4fVGKdl8h/QWXY
-	Gj3LduOoP9r/eNSxUjHsLOwf+wKC5u17P8wfgfKyJDrIZhNJJUNN/rq4MrJpLBtKVjPM
-	61ezyfsr87KSOTOAsUZ9wYxfJfHPuxccbJMMTfOu/9tfWSyaVeC43GNwkPz9oJBvShfS
-	xGKEIc2/5eII3fQRkRlQcwple+4AQ5gjWP6YfWHlZ8hjfaJwGTaxQlsVZ3TcxsmZAewX
-	0GeayoK/ia22Kj4fPG4m+lIDNcMDuK79Vt0neCVTqlGFmfly+MLyvSkzaIbvIWNRFv54
-	9GpA==
+	h=subject:from:to:cc:references:message-id:date:user-agent
+	:mime-version:in-reply-to:content-language:content-transfer-encoding;
+	bh=LZx528axDT26CErZedJOujI3QDKpGQXOBFhCHmriSe4=;
+	b=uMYvjuP7oWCdE9l2NY7O6eDJc7Tf588XBD+rm2rDWxRj01YYPWZ/MLQ0MU4urY7c/8
+	Q5o6hQMnvg8IusVHD8wBhsm4aGBLvSM8AqYnvQ7CBXdVRlzV1mXPqE/JWeUhTkRQk3/5
+	wC3V6iIbDRRqDuNO6sUXeG5dBsZ+7RhKTih7BXZJgcIE9fIjBf9qGyyY/ZCTX5DlDU5n
+	aE9Bs3zEIZ2GJFh7Xbzy4c78t6wcf719XZ/3EH0axX7zvHeSWbyAPVPPTd6ls82TRKgq
+	O6ew+KRMtaI8uEfMul7YwB8DDg06jzJ4oHvNmWA0zv9FshC3A0dy6dvoFd9tdOl6JSMU
+	HyOA==
+From: Till Kamppeter <till.kamppeter@gmail.com>
+References: <41a1f0b5-ff8b-47ed-c024-698f4b3525d5@gmail.com>
+Message-ID: <7d77ba75-2721-40b1-dc70-26e3ea98fb1d@gmail.com>
+Date: Tue, 26 Sep 2017 16:00:30 -0400
 MIME-Version: 1.0
-From: Ira McDonald <blueroofmusic@gmail.com>
-Date: Tue, 26 Sep 2017 11:09:06 -0400
-Message-ID: <CAN40gStHDt3fvwVF-LsdDvsrkFwBpkpQ5n3O3EhCUG5wBJ355Q@mail.gmail.com>
-Content-Type: multipart/alternative; boundary="089e08e53c29a43f63055a190fab"
-Subject: [Printing-architecture] Reminder: MOVED - OP Call Tuesday (10
-	October 2017)
+In-Reply-To: <41a1f0b5-ff8b-47ed-c024-698f4b3525d5@gmail.com>
+Content-Type: text/plain; charset=utf-8; format=flowed
+Content-Language: en-GB
+Content-Transfer-Encoding: 7bit
+Subject: Re: [Printing-architecture] OpenPrinting code repositories in GIT
+	format
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>,
@@ -24,101 +29,131 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>, Till Kamppeter <till.kamppeter@gmail.com>, Danny Brennan <brennand@us.ibm.com>, Aveek Basu <aveek.basu@lexmark.com>, Ira McDonald <blueroofmusic@gmail.com>
-
---089e08e53c29a43f63055a190fab
-Content-Type: text/plain; charset="UTF-8"
+To: Open Printing <printing-architecture@lists.linux-foundation.org>, Michael Sweet <msweet@apple.com>, Aveek Basu <aveek.basu@lexmark.com>
+Cc: Nilanjana Lodh <nilanjanalodh@gmail.com>, Abhijeet Dubey <dubey.abhijeet09@gmail.com>, Jeff Licquia <licquia@linuxfoundation.org>, Jeff Licquia <jeff@licquia.org>
 
 Hi,
 
-Please join us for our next OP US/Europe/Brazil conference call which has
-been MOVED to the second week of October:
+another suggestion is Launchpad (launchpad.net), the service created by 
+Canonical, mainly for Ubuntu, but any other independent project can use 
+it (like for example HPLIP from HP).
 
-(1) October 2017 - US/Europe/Brazil - OP Monthly Meeting
-    - Note - TCG in Vancouver, BC, Canada on 23-26 October 2017
-    - Tuesday 10 October 2017, Daytime
-      - US
-        9am in San Francisco - US PDT (Pacific Daylight Time)
-        10am in Colorado - US MDT (Mountain Daylight Time)
-        11am in Chicago - US CDT (Central Daylight Time)
-        12pm in New York - US EDT (Eastern Daylight Time)
-      - Europe
-        6pm in Berlin - CEST (Central Europe Summer Time)
-      - Brazil
-        1pm in Belo Horizonte - BRT (Brasilia Time)
+Launchpad supports so-called project groups to join projects (would be 
+OpenPrinting" in our case). The projects would be the upstream sources: 
+cups-filters, foomatic-db, foomatic-db-engine, ippusbxd, ... and 
+Nilanjana's new projects. As a Launchpad user (and the owner of the 
+OpenPrinting project group) I can create projects and add them to the 
+project group.
 
-    US:  +1 641-715-3814 <%28641%29%20715-3814>
-    Germany:  +49 (0) 221 98203421 <+49%20221%2098203421>
-    Brazil:  +55 61 4040-4460 <+55%2061%204040-4460>
-    Japan:  +81 (0) 3-5050-5070 <+81%203-5050-5070>
-    Participant Access Code:  622393#
+GIT as VCS is supported. There is also a way that users can suggest 
+branches to get merged into the upstream repo, like GitHub's pull requests.
 
-    (note that local numbers for many other countries are available,
-    also cellphone apps, VOIP support, etc. - please email Till for
-    details)
+The bug tracker is much more sophisticated, and it supports attaching 
+all kinds of files.
 
-Cheers,
-- Ira
+There are also many other development helpers: Blueprints, translations, 
+questions, ...
 
-Ira McDonald (Musician / Software Architect)
-Co-Chair - TCG Trusted Mobility Solutions WG
-Chair - Linux Foundation Open Printing WG
-Secretary - IEEE-ISTO Printer Working Group
-Co-Chair - IEEE-ISTO PWG Internet Printing Protocol WG
-IETF Designated Expert - IPP & Printer MIB
-Blue Roof Music / High North Inc
-http://sites.google.com/site/blueroofmusic
-http://sites.google.com/site/highnorthinc
-mailto: blueroofmusic@gmail.com
-Jan-April: 579 Park Place  Saline, MI  48176  734-944-0094
-May-Dec: PO Box 221  Grand Marais, MI 49839  906-494-2434
+For code series, milestones, and releases can be defined.
 
---089e08e53c29a43f63055a190fab
-Content-Type: text/html; charset="UTF-8"
-Content-Transfer-Encoding: quoted-printable
+Bugs can get linked with all of this.
 
-<div dir=3D"ltr"><div><div><div>Hi,<br><br></div>Please join us for our <sp=
-an>next OP</span> US/Europe/Brazil conference call which has been MOVED to =
-the second week of October:<br><br>(1) October 2017 - US/Europe/Brazil - OP=
- Monthly Meeting<br>=C2=A0=C2=A0=C2=A0 - Note - TCG in Vancouver, BC, Canad=
-a on 23-26 October 2017<br>=C2=A0=C2=A0=C2=A0 - Tuesday 10 October 2017, Da=
-ytime<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 - US<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=
-=A0=C2=A0=C2=A0 9am in San Francisco - US PDT (Pacific Daylight Time)<br>=
-=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 10am in Colorado - US MDT (Mount=
-ain Daylight Time)<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 11am in Ch=
-icago - US CDT (Central Daylight Time)<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=
-=A0=C2=A0 12pm in New York - US EDT (Eastern Daylight Time)<br>=C2=A0=C2=A0=
-=C2=A0=C2=A0=C2=A0 - Europe<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 6=
-pm in Berlin - CEST (Central Europe Summer Time)<br>=C2=A0=C2=A0=C2=A0=C2=
-=A0=C2=A0 - Brazil<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 1pm in Bel=
-o Horizonte - BRT (Brasilia Time)<br><br>=C2=A0=C2=A0=C2=A0 US:=C2=A0 <a hr=
-ef=3D"tel:%28641%29%20715-3814" value=3D"+16417153814" target=3D"_blank">+1=
- 641-715-3814</a><br>=C2=A0=C2=A0=C2=A0 Germany:=C2=A0 <a href=3D"tel:+49%2=
-0221%2098203421" value=3D"+4922198203421" target=3D"_blank">+49 (0) 221 982=
-03421</a><br>=C2=A0=C2=A0=C2=A0 Brazil:=C2=A0 <a href=3D"tel:+55%2061%20404=
-0-4460" value=3D"+556140404460" target=3D"_blank">+55 61 4040-4460</a><br>=
-=C2=A0=C2=A0=C2=A0 Japan:=C2=A0 <a href=3D"tel:+81%203-5050-5070" value=3D"=
-+81350505070" target=3D"_blank">+81 (0) 3-5050-5070</a><br>=C2=A0=C2=A0=C2=
-=A0 Participant Access Code:=C2=A0 622393#<br><br>=C2=A0=C2=A0=C2=A0 (note =
-that local numbers for many other countries are available,<br>=C2=A0=C2=A0=
-=C2=A0 also cellphone apps, VOIP support, etc. - please email Till for<br>=
-=C2=A0=C2=A0=C2=A0 details)<br><br></div>Cheers,<br></div>- Ira<br><br><div=
-><div><div><div><div><div class=3D"gmail_signature"><div dir=3D"ltr"><div><=
-div dir=3D"ltr">Ira McDonald (Musician / Software Architect)<br>Co-Chair - =
-TCG Trusted Mobility Solutions WG<br>Chair - Linux Foundation Open Printing=
- WG<br>Secretary - IEEE-ISTO Printer Working Group<br>Co-Chair - IEEE-ISTO =
-PWG Internet Printing Protocol WG<br>IETF Designated Expert - IPP &amp; Pri=
-nter MIB<br>Blue Roof Music / High North Inc<br><a style=3D"color:rgb(51,51=
-,255)" href=3D"http://sites.google.com/site/blueroofmusic" target=3D"_blank=
-">http://sites.google.com/site/blueroofmusic</a><br><a style=3D"color:rgb(1=
-02,0,204)" href=3D"http://sites.google.com/site/highnorthinc" target=3D"_bl=
-ank">http://sites.google.com/site/highnorthinc</a><br>mailto: <a href=3D"ma=
-ilto:blueroofmusic@gmail.com" target=3D"_blank">blueroofmusic@gmail.com</a>=
-<br>Jan-April: 579 Park Place=C2=A0 Saline, MI=C2=A0 48176=C2=A0 734-944-00=
-94<br>May-Dec: PO Box 221=C2=A0 Grand Marais, MI 49839=C2=A0 906-494-2434<b=
-r><br><div style=3D"display:inline"></div><div style=3D"display:inline"></d=
-iv><div style=3D"display:inline"></div><div></div><div></div><div></div><di=
-v></div></div></div></div></div></div>
-</div></div></div></div></div>
+WDYT about hosting on Launcpad?
 
---089e08e53c29a43f63055a190fab--
+    Till
+
+
+
+On 08/30/2017 06:10 PM, Till Kamppeter wrote:
+> Hi,
+> 
+> with the Google Summer of Code 2017 we got three new free software 
+> projects added to OpenPrinting. Nilanjana Lodh (CCed) wrote two of these 
+> projects to improve the print dialogs of GUI applications.
+> 
+> The projects do not provide any GUI, but they make it possible to 
+> separate the the dialog's interaction with local printing systems (like 
+> CUPS) or network print services (like Google Cloud Print) from the 
+> dialog itself using a frontend/backend architecture with the dislog 
+> being the frontend and for each print technology (currently CUPS, Google 
+> Cloud Print, ...) a backend. All print dialogs (currently GTK, Qt, 
+> LibreOffice) will use the same backends and so adding a print technology 
+> in the future will be much easier, in the ideal case the print service 
+> provider supplies the appropriate backend for his service.
+> 
+> One of the projects is a pair of frontend and backend libraries to make 
+> it easy to write backends and supporting print dialogs. The libraries 
+> hide away the D-Bus interface between frontend and backend and the 
+> mechanisms to find and invoke all the backends.
+> 
+> The other project is the CUPS backend without which the whole effort 
+> would be worthless.
+> 
+> See Nilanjana's work here:
+> 
+> https://nilanjanalodh.github.io/common-print-dialog-gsoc17/
+> 
+> Abhijeet Dubey (also CCed) has implemented the Google Cloud Print 
+> backend, making Google Cloud Print available to all supporting print 
+> dialogs.
+> 
+> His work you can find here:
+> 
+> https://github.com/dracarys09/gcp-backend/wiki/1.-Google-Summer-of-Code-2017-%7C-Common-Printing-Dialog 
+> 
+> 
+> These three projects need to be hosted as pat of OpenPrinting and, as 
+> GIT turned to be the standard VCS in GIT format. And once thinking about 
+> project hosting I am also thinking about converting cups-filters from 
+> BZR to GIT and also move ippusbxd into OpenPrinting. ippusbxd is 
+> currently hosted in my personal GitHub:
+> 
+> https://github.com/tillkamppeter/ippusbxd
+> 
+> Now my question is how to do all this hosting to also have it somehow 
+> unified and not each project hosted in a different way.
+> 
+> There are two approaches:
+> 
+> Hosting on the OpenPrinting/Linux Foundation web site
+> -----------------------------------------------------
+> 
+> Pros:
+> 
+> - OpenPrinting is part of the Linux Foundation, and the LF has the 
+> hosting facilities, without any commercial interests.
+> - All code on the web sites of the Linux Foundation (or at least what is 
+> used by OpenPrinting) is free software
+> - The Bugzilla bug tracker is an established system with a lot of 
+> functionality, especially allows binary attachments (very important for 
+> printing)
+> 
+> Cons:
+> 
+> - A new project GIT repo needs to get created by the sys admins of the LF.
+> - There is a large community of GitHub users, for whom contributing to 
+> projects on GitHub is easy (report bugs, post pull requests, ...), but 
+> projects outside GitHub are not that easy (need to create LF account, ...).
+> 
+> 
+> Hosting on GitHub
+> -----------------
+> 
+> Pros:
+> 
+> - Using the de-facto standard of hosting with a large user community
+> - As a user one can easily create a new repository for a new project
+> - Pull requests allow easy contributing
+> 
+> Cons:
+> 
+> - Site software is proprietary
+> - Run by a commercial company which could easily cease the service
+> - The issue tracker only allows plain-text attachments. How to attach 
+> print sample files or similar.
+> 
+> Now I would like to hear some opinions of you all on how we should host 
+> the OpenPrinting projects.
+> 
+>     Till
+
