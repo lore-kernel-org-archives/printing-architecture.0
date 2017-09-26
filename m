@@ -1,19 +1,25 @@
-Return-Path: <blueroofmusic@gmail.com>
+Return-Path: <till.kamppeter@gmail.com>
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
-	h=mime-version:from:date:message-id:subject:to;
-	bh=fN8zzRnm71jeCNG7D7dskUhRsnPVY65RqyHMk7NErIU=;
-	b=eHvkh6vJQyNiElWQTKZpBHI3gUOCQ9gwtBe9oq72AoE/ICMSYb5DvADoloaASX4cbH
-	jhlfhxqnyXyZTqVIaLdf8zOAIxfe3qx2jT1nG3kxGLdZZA3gsTdLDUIPfo758UX3Zad6
-	vV15ih1nz2e/yVzcrTk+iaxholFl/Jj/Krr3HJSOvG08aqkG8NikVFdCQI7ratB/3MIL
-	K5K8VqjbzBYm3Ar6vdbq2HQaCKgJ+GOOrEzBj6UIJLb97tSqeMApfNVrXjuMxC1Q6PJ6
-	1xV7vwGzy3+0LqibsMtWbU19BCPh5KJ64bQoFaditq4M/JdvZEICBEK31EtB+E15ezBi
-	IHnw==
+	h=subject:to:references:from:message-id:date:user-agent:mime-version
+	:in-reply-to:content-language:content-transfer-encoding;
+	bh=/45U+rkY/CV80VWdtI9NL4OzOmAhKoXBQ93qC1m+s08=;
+	b=tazSTD7UZ6XJCHkW1ow1UxxBLFixpf4JKES6Uo+7JE28rs7i4nU1jcZJFo9EJuxuqW
+	BmPA/v109+AVJLqH/ORSJWAe5XsdCUiE4kM9B2fRcY1A94tqSv4KLZHr/y3yj+Yb71Bu
+	YQdwUAjLCbrt8mpZav/AQ2YTQURLPny3CGJLQN4J987gVGAJZPIVpGt8SL7irqeFi0KG
+	Q3j8E8b3tELMBTAbm/3R+ZZ7aIMpOJinnzM6OT25lsCaZcJwTc6EijXvPxq3S1Aw7Igs
+	O1AfSwMg4GgKjtSlsqTJmrCR/xIb55NCDYazFeYkdV9AVo6c8eIi8Nn5jTkNUrfhxjPK
+	R1WQ==
+References: <CAN40gSvoHmjZFCDvvoD6m0k=Ps88f1Q8SJiLCqjG_C1MjRP3uA@mail.gmail.com>
+From: Till Kamppeter <till.kamppeter@gmail.com>
+Message-ID: <46c7587b-b518-3496-5938-158b13eb89fa@gmail.com>
+Date: Tue, 26 Sep 2017 10:29:01 -0400
 MIME-Version: 1.0
-From: Ira McDonald <blueroofmusic@gmail.com>
-Date: Tue, 26 Sep 2017 10:22:42 -0400
-Message-ID: <CAN40gSvoHmjZFCDvvoD6m0k=Ps88f1Q8SJiLCqjG_C1MjRP3uA@mail.gmail.com>
-Content-Type: multipart/alternative; boundary="94eb2c0554e8bc2974055a18698f"
-Subject: [Printing-architecture] Can we delay OP monthly call to 10 October?
+In-Reply-To: <CAN40gSvoHmjZFCDvvoD6m0k=Ps88f1Q8SJiLCqjG_C1MjRP3uA@mail.gmail.com>
+Content-Type: text/plain; charset=utf-8; format=flowed
+Content-Language: en-GB
+Content-Transfer-Encoding: 7bit
+Subject: Re: [Printing-architecture] Can we delay OP monthly call to 10
+	October?
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>,
@@ -23,58 +29,15 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>, Till Kamppeter <till.kamppeter@gmail.com>, Danny Brennan <brennand@us.ibm.com>, Aveek Basu <aveek.basu@lexmark.com>, Ira McDonald <blueroofmusic@gmail.com>
+To: Ira McDonald <blueroofmusic@gmail.com>, "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>, Danny Brennan <brennand@us.ibm.com>, Aveek Basu <aveek.basu@lexmark.com>
 
---94eb2c0554e8bc2974055a18698f
-Content-Type: text/plain; charset="UTF-8"
+On 09/26/2017 10:22 AM, Ira McDonald wrote:
+> Hi,
+> 
+> I have a major Chrysler deadline on Wednesday 4 October
+> and would prefer to delay our OP call by a week.
 
-Hi,
+No problem. Let us do it on the 10th.
 
-I have a major Chrysler deadline on Wednesday 4 October
-and would prefer to delay our OP call by a week.
+    Till
 
-WDYT?
-
-Cheers
-- Ira
-
-Ira McDonald (Musician / Software Architect)
-Co-Chair - TCG Trusted Mobility Solutions WG
-Chair - Linux Foundation Open Printing WG
-Secretary - IEEE-ISTO Printer Working Group
-Co-Chair - IEEE-ISTO PWG Internet Printing Protocol WG
-IETF Designated Expert - IPP & Printer MIB
-Blue Roof Music / High North Inc
-http://sites.google.com/site/blueroofmusic
-http://sites.google.com/site/highnorthinc
-mailto: blueroofmusic@gmail.com
-Jan-April: 579 Park Place  Saline, MI  48176  734-944-0094
-May-Dec: PO Box 221  Grand Marais, MI 49839  906-494-2434
-
---94eb2c0554e8bc2974055a18698f
-Content-Type: text/html; charset="UTF-8"
-Content-Transfer-Encoding: quoted-printable
-
-<div dir=3D"ltr"><div><div><div><div><div>Hi,<br><br></div>I have a major C=
-hrysler deadline on Wednesday 4 October<br></div>and would prefer to delay =
-our OP call by a week.<br><br></div>WDYT?<br><br></div>Cheers<br></div>- Ir=
-a<br><br clear=3D"all"><div><div><div><div><div><div><div><div class=3D"gma=
-il_signature" data-smartmail=3D"gmail_signature"><div dir=3D"ltr"><div><div=
- dir=3D"ltr">Ira McDonald (Musician / Software Architect)<br>Co-Chair - TCG=
- Trusted Mobility Solutions WG<br>Chair - Linux Foundation Open Printing WG=
-<br>Secretary - IEEE-ISTO Printer Working Group<br>Co-Chair - IEEE-ISTO PWG=
- Internet Printing Protocol WG<br>IETF Designated Expert - IPP &amp; Printe=
-r MIB<br>Blue Roof Music / High North Inc<br><a style=3D"color:rgb(51,51,25=
-5)" href=3D"http://sites.google.com/site/blueroofmusic" target=3D"_blank">h=
-ttp://sites.google.com/site/blueroofmusic</a><br><a style=3D"color:rgb(102,=
-0,204)" href=3D"http://sites.google.com/site/highnorthinc" target=3D"_blank=
-">http://sites.google.com/site/highnorthinc</a><br>mailto: <a href=3D"mailt=
-o:blueroofmusic@gmail.com" target=3D"_blank">blueroofmusic@gmail.com</a><br=
->Jan-April: 579 Park Place=C2=A0 Saline, MI=C2=A0 48176=C2=A0 734-944-0094<=
-br>May-Dec: PO Box 221=C2=A0 Grand Marais, MI 49839=C2=A0 906-494-2434<br><=
-br><div style=3D"display:inline"></div><div style=3D"display:inline"></div>=
-<div style=3D"display:inline"></div><div></div><div></div><div></div><div><=
-/div></div></div></div></div></div>
-</div></div></div></div></div></div></div>
-
---94eb2c0554e8bc2974055a18698f--
