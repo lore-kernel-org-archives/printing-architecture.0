@@ -1,28 +1,27 @@
-Return-Path: <msweet@apple.com>
-DKIM-Signature: v=1; a=rsa-sha256; d=apple.com; s=mailout2048s;
-	c=relaxed/simple; q=dns/txt; i=@apple.com; t=1506535087;
-	h=From:Sender:Reply-To:Subject:Date:Message-id:To:Cc:MIME-version:Content-type:
-	Content-transfer-encoding:Content-ID:Content-Description:Resent-Date:Resent-From:
-	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-reply-to:References:List-Id:
-	List-Help:List-Unsubscribe:List-Subscribe:List-Post:List-Owner:List-Archive;
-	bh=tqECNi6etjiFADjsHzvgPBk3PW0USQgiQ66Uhw+We88=;
-	b=i3171IKTMBmxLi72iT06Acg0GMS06Rlplz/oQJibD+LiCCjhsF0ytLUkVl3PsRD1
-	bqDsqSWtcYtKp2T4lWUZm92bLFyPeSGD6yd11VF8uaiKqsjTBmp1P8BWy/CtwUoG
-	jaH3ausQD7dzdX+DkoaZca8XW9YjTBDzt9qV1rGPTxvO8wjfTL7CYnZA5ZbBoAPE
-	+0uuiARhqQlkY+ulPYtgyWeR4MP2ju4T9Avu9SYa/2hQFIOnDJmsFFHlxzvUXCU7
-	xLuXEmDX8/seGPQ37a2hiFrqJtdN17tBM9i0KD3unxl0OK8H40DaXUj3pDejYPK7
-	mH1xgXNL32Blf89XUXs57w==;
-MIME-version: 1.0
-Content-transfer-encoding: 7BIT
-Content-type: text/plain; CHARSET=US-ASCII
-Sender: msweet@apple.com
-From: Michael Sweet <msweet@apple.com>
-In-reply-to: <CA+3RNfhNgNFupp3AboQc8vi2FZiitRRtoK8schu4JCqTK6M8VQ@mail.gmail.com>
-Date: Wed, 27 Sep 2017 13:58:05 -0400
-Message-id: <D869C264-319C-45AC-B102-986F1EF3FF4D@apple.com>
-References: <CA+3RNfhNgNFupp3AboQc8vi2FZiitRRtoK8schu4JCqTK6M8VQ@mail.gmail.com>
-Subject: Re: [Printing-architecture] IPP Shared Infrastructure Extensions
- (INFRA)
+Return-Path: <till.kamppeter@gmail.com>
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
+	h=subject:to:cc:references:from:message-id:date:user-agent
+	:mime-version:in-reply-to:content-language:content-transfer-encoding;
+	bh=eQAOc6aGw3zJq4lrEegqlBeNf2KmJi+PbJtOQ0LliDQ=;
+	b=ht/iafH74VZW2EtdQxQbMiiZaGzzeNrAesmPpW9GeBPEMMVfSFryUJUb/LUulkfRP4
+	6N+eDplh6+1XwfY49aKKQgXNw7P6nmW4nl5UI93BlrYzvhBBHoVZ6Fip4IGS5ZWH4jEs
+	ggMldD5bAwtRvdyfN8qok6E3kR++Rk8nCOISJEfr5eWm5lHvM9C1Az2iqAoBsvknrU3Y
+	uw2POqxqKoUPTy+M+fIs7qm6KqKbMbYoS09Smkncki/ngNG2N1iquba60ey/qqKJRGtf
+	/wcrDwFX96cRyP6EEQhqQcHvfyagxPzMxCagWbAPXAPYojFZDvxWqBJGwLwD8XBsDgS5
+	n3ew==
+References: <41a1f0b5-ff8b-47ed-c024-698f4b3525d5@gmail.com>
+	<7d77ba75-2721-40b1-dc70-26e3ea98fb1d@gmail.com>
+	<BC20E3C6-5FC2-4E3C-B943-2A2429A7D149@apple.com>
+From: Till Kamppeter <till.kamppeter@gmail.com>
+Message-ID: <75c175f0-eedd-8db5-6aed-989b08c9715a@gmail.com>
+Date: Tue, 3 Oct 2017 14:57:33 -0300
+MIME-Version: 1.0
+In-Reply-To: <BC20E3C6-5FC2-4E3C-B943-2A2429A7D149@apple.com>
+Content-Type: text/plain; charset=utf-8; format=flowed
+Content-Language: en-GB
+Content-Transfer-Encoding: 7bit
+Subject: Re: [Printing-architecture] OpenPrinting code repositories in GIT
+	format
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>,
@@ -32,37 +31,47 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Alex Korobkin <korobkin+op@gmail.com>
-Cc: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>
+To: Michael Sweet <msweet@apple.com>
+Cc: Abhijeet Dubey <dubey.abhijeet09@gmail.com>, Aveek Basu <aveek.basu@lexmark.com>, Jeff Licquia <licquia@linuxfoundation.org>, Jeff Licquia <jeff@licquia.org>, "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>, Nilanjana Lodh <nilanjanalodh@gmail.com>
 
-Alex,
+Finally decided on setting up the repos on GitHub as Linux Foundation 
+admins want to get rid of the BZR repos and suggested to move to GitHub. 
+The site for the repos is
 
-It was precisely written to address cloud and split-network infrastructure issues.  I did some (private) prototyping back when we did the spec, and some of that work is present in the current ippsample project maintained by the PWG/Apple at:
+https://github.com/OpenPrinting
 
-    https://github.com/istopwg/ippsample
+now.
 
-I still haven't finished adding IPP INFRA support to the ippsample project yet (lack of time) but ultimately we want to have a more robust publicly-available sample implementation available to show how to do it efficiently.
+The print-dialog-related projects, ippusbxd, and Snappy packaging of the 
+printing stack are there now, cups-filters, Foomatic, ... will follow soon.
 
-(I believe there are some commercial "release printing" solutions coming that will use IPP INFRA as well, although nothing that has been released AFAIK...)
+Thank you very much for all your answers.
+
+    Till
 
 
-> On Sep 27, 2017, at 1:32 PM, Alex Korobkin <korobkin+op@gmail.com> wrote:
+On 09/26/2017 05:04 PM, Michael Sweet wrote:
+> Till,
 > 
-> Hi all, 
+> No objections.
 > 
-> There is this interesting design of a cloud-like infrastructure called "IPP Shared Infrastructure Extensions", http://ftp.pwg.org/pub/pwg/candidates/cs-ippinfra10-20150619-5100.18.pdf
 > 
-> Have you heard of anyone actually implementing that? 
-> 
-> In general, I'm curious how people handle shared printers in the world of public networks and no direct connection between a printer and a user's device. That doc looks like an answer. 
-> 
-> -- 
-> -Alex
-> _______________________________________________
-> Printing-architecture mailing list
-> Printing-architecture@lists.linux-foundation.org
-> https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture
-
-_________________________________________________________
-Michael Sweet, Senior Printing System Engineer
-
+>> On Sep 26, 2017, at 4:00 PM, Till Kamppeter <till.kamppeter@gmail.com> wrote:
+>>
+>> Hi,
+>>
+>> another suggestion is Launchpad (launchpad.net), the service created by Canonical, mainly for Ubuntu, but any other independent project can use it (like for example HPLIP from HP).
+>>
+>> Launchpad supports so-called project groups to join projects (would be OpenPrinting" in our case). The projects would be the upstream sources: cups-filters, foomatic-db, foomatic-db-engine, ippusbxd, ... and Nilanjana's new projects. As a Launchpad user (and the owner of the OpenPrinting project group) I can create projects and add them to the project group.
+>>
+>> GIT as VCS is supported. There is also a way that users can suggest branches to get merged into the upstream repo, like GitHub's pull requests.
+>>
+>> The bug tracker is much more sophisticated, and it supports attaching all kinds of files.
+>>
+>> There are also many other development helpers: Blueprints, translations, questions, ...
+>>
+>> For code series, milestones, and releases can be defined.
+>>
+>> Bugs can get linked with all of this.
+>>
+>> WDYT about hosting on Launcpad?
