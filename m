@@ -1,15 +1,20 @@
-Return-Path: <brennand@us.ibm.com>
-In-Reply-To: <e2160435-5b86-f9dd-9250-f5961605213b@gmail.com>
-From: "Danny Brennan" <brennand@us.ibm.com>
-Date: Mon, 16 Oct 2017 00:57:29 +0000
+Return-Path: <blueroofmusic@gmail.com>
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
+	h=mime-version:from:date:message-id:subject:to;
+	bh=jsx7/7W2tph0E6MerqhiscKLk4xlJayUkOI2D9DW/xs=;
+	b=aOMXbEkyex2Cc7Izxof5taM/4jdIkXxZYmcerHA/pGMrUBri7omBaJDkO+LrWk2ccV
+	SyEgkuqO8RMrd7D0RT9901En15eeiWzgHBrwWjM0Xz+ZLgsoBY/F4AxUBYLPSiayJN1S
+	YJ3S7ZjmA9EUmC5s/UYOIFdwKmAfc51hOcvgSy7pyi+g8dL+MKKjCnox08p6KQ4rVCIC
+	LNq1j2mwqROdQB9J7BrpEQlH+3m1vlXp6ucJEHSCw4K3Yi8FX0PKM7LFdBuPN9VBTYBy
+	htdMBW+ZPrSjDlPYBajp2yYVuOpwRYa2kMq4AcfF+SmEVmVakHupchzVd3ljWCQWJpUz
+	fe/Q==
 MIME-Version: 1.0
-References: <e2160435-5b86-f9dd-9250-f5961605213b@gmail.com>,
-	<CAN40gSuFaqE6jkap6G+UFxOB+=S=UJj28r3M1BJ7X_dCe-BLZg@mail.gmail.com>
-Content-Transfer-Encoding: quoted-printable
-Content-Type: text/html; charset=UTF-8
-Message-Id: <OF259DD8C1.499809DD-ON002581BB.000543A3-002581BB.000543A6@notes.na.collabserv.com>
-Subject: Re: [Printing-architecture] Request to move November OP call to 14
-	November
+From: Ira McDonald <blueroofmusic@gmail.com>
+Date: Mon, 16 Oct 2017 07:48:36 -0400
+Message-ID: <CAN40gSuR=k6M05-ZLx=4qwKs1ca=V7=H=WSxTutVSKTFeHdBKw@mail.gmail.com>
+Content-Type: multipart/alternative; boundary="001a11479f90741846055ba89727"
+Subject: [Printing-architecture] Reminder: MOVED - OP Call Tuesday (14
+	November 2017)
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>,
@@ -19,78 +24,105 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: till.kamppeter@gmail.com
-Cc: aveek.basu@lexmark.com, printing-architecture@lists.linux-foundation.org
+To: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>, Till Kamppeter <till.kamppeter@gmail.com>, Danny Brennan <brennand@us.ibm.com>, Aveek Basu <aveek.basu@lexmark.com>, Ira McDonald <blueroofmusic@gmail.com>
 
-<div class=3D"socmaildefaultfont" dir=3D"ltr" style=3D"font-family:Arial, H=
-elvetica, sans-serif;font-size:10.5pt" ><div dir=3D"ltr" >Ira/Till...</div>
-<div dir=3D"ltr" >&nbsp;</div>
-<div dir=3D"ltr" >no problem here either</div>
-<div dir=3D"ltr" >&nbsp;</div>
-<div dir=3D"ltr" >danny</div>
-<div dir=3D"ltr" >&nbsp;</div>
-<div dir=3D"ltr" ><div class=3D"socmaildefaultfont" dir=3D"ltr" style=3D"fo=
-nt-family:Arial, Helvetica, sans-serif;font-size:10.5pt" ><div class=3D"soc=
-maildefaultfont" dir=3D"ltr" style=3D"font-family:Arial, Helvetica, sans-se=
-rif;font-size:10.5pt" ><div class=3D"socmaildefaultfont" dir=3D"ltr" style=
-=3D"font-family:Arial, Helvetica, sans-serif;font-size:10.5pt" ><div class=
-=3D"socmaildefaultfont" dir=3D"ltr" style=3D"font-family:Arial;font-size:10=
-.5pt" ><div class=3D"socmaildefaultfont" dir=3D"ltr" style=3D"font-family:A=
-rial;font-size:10.5pt" ><div dir=3D"ltr" ><br><font size=3D"2" face=3D"Defa=
-ult Sans Serif,Verdana,Arial,Helvetica,sans-serif" ><font size=3D"2" face=
-=3D"Default Sans Serif,Verdana,Arial,Helvetica,sans-serif" >***************=
-*****************************************<br>Danny M Brennan<br>GTS Service=
-s Delivery<br>Strategic Outsourcing Delivery<br>IBM UNIX RFS<br>IBM LNX RFS=
-</font></font></div>
-<div dir=3D"ltr" ><font size=3D"2" face=3D"Default Sans Serif,Verdana,Arial=
-,Helvetica,sans-serif" ><font size=3D"2" face=3D"Default Sans Serif,Verdana=
-,Arial,Helvetica,sans-serif" >IBM LNX ENG<br>Corona, CA 92881<br>Cell: 951-=
-796-5762<br>E-mail: brennand@us.ibm.com<br>E-mail: mdannyb@linux.com<br>GSo=
-C Mentor 2010 - 2017 Linux Foundation<br>http://www.google-melange.com/gsoc=
-/homepage/google/gsoc2017<br>IEEE Senior Member - Foothill Section</font></=
-font></div>
-<div dir=3D"ltr" ><font size=3D"2" face=3D"Default Sans Serif,Verdana,Arial=
-,Helvetica,sans-serif" ><font size=3D"2" face=3D"Default Sans Serif,Verdana=
-,Arial,Helvetica,sans-serif" >http://ewh.ieee.org/r6/foothill<br>IEEE Print=
-er Working Group - Individual Contributor</font></font></div>
-<div dir=3D"ltr" ><font size=3D"2" face=3D"Default Sans Serif,Verdana,Arial=
-,Helvetica,sans-serif" ><font size=3D"2" face=3D"Default Sans Serif,Verdana=
-,Arial,Helvetica,sans-serif" >http://www.pwg.org/index.html<br>IEEE PWG Co-=
-Chair - WIMS and PMP Working Groups<br><a href=3D"http://www.pwg.org/wims/i=
-ndex.html" >http://www.pwg.org/wims/index.html</a></font></font></div>
-<div dir=3D"ltr" ><font size=3D"2" face=3D"Default Sans Serif,Verdana,Arial=
-,Helvetica,sans-serif" ><font size=3D"2" face=3D"Default Sans Serif,Verdana=
-,Arial,Helvetica,sans-serif" >IETF Individual Contributor - San Fransisco, =
-CA Chapter<br><a href=3D"https://connect.isoc.org" >https://connect.isoc.or=
-g</a><br>IRC: freenode,mdannyb</font></font></div>
-<div dir=3D"ltr" ><div class=3D"card-td wide small-contact zoom-content" ><=
-div class=3D"zoomurl-item  editable-field" ><span style=3D"font-size:0.857e=
-m;" ><span style=3D"font-family: Verdana,Geneva,sans-serif;" ><span class=
-=3D"field-text" ><a class=3D"field-text" href=3D"https://ibm.webex.com/join=
-/brennand" target=3D"=5Fblank" >https://ibm.webex.com/join/brennand</a></sp=
-an></span></span></div></div><font size=3D"2" face=3D"Default Sans Serif,Ve=
-rdana,Arial,Helvetica,sans-serif" ><font size=3D"2" face=3D"Default Sans Se=
-rif,Verdana,Arial,Helvetica,sans-serif" >**********************************=
-**********************</font></font></div></div></div></div></div></div></d=
-iv>
-<div dir=3D"ltr" >&nbsp;</div>
-<div dir=3D"ltr" >&nbsp;</div>
-<blockquote data-history-content-modified=3D"1" dir=3D"ltr" style=3D"border=
--left:solid #aaaaaa 2px; margin-left:5px; padding-left:5px; direction:ltr; =
-margin-right:0px" >----- Original message -----<br>From: Till Kamppeter &lt=
-;till.kamppeter@gmail.com&gt;<br>To: Ira McDonald &lt;blueroofmusic@gmail.c=
-om&gt;, "printing-architecture@lists.linux-foundation.org" &lt;printing-arc=
-hitecture@lists.linux-foundation.org&gt;, Danny Brennan &lt;brennand@us.ibm=
-.com&gt;, Aveek Basu &lt;aveek.basu@lexmark.com&gt;<br>Cc:<br>Subject: Re: =
-Request to move November OP call to 14 November<br>Date: Sun, Oct 15, 2017 =
-3:26 PM<br>&nbsp;
-<div><font size=3D"2" face=3D"Default Monospace,Courier New,Courier,monospa=
-ce" >On 10/15/2017 01:29 PM, Ira McDonald wrote:<br>&gt; Hi,<br>&gt;<br>&gt=
-; Chrysler and SAE meetings both overlap OP call on 7 November.<br>&gt;<br>=
-&gt; Since the next PWG meeting has changed to a Virtual F2F on<br>&gt; 15-=
-16 November, travel is not an issue, so I suggest that we move<br>&gt; our =
-OP call one week later to 14 November.<br>&gt;<br>&gt; WDYT?<br><br>OK with=
- me, no problem.<br><br>&nbsp;&nbsp; &nbsp;Till</font><br>&nbsp;</div></blo=
-ckquote>
-<div dir=3D"ltr" >&nbsp;</div></div><BR>
+--001a11479f90741846055ba89727
+Content-Type: text/plain; charset="UTF-8"
 
+Hi,
+
+Please join us for our next OP US/Europe/Brazil conference call which has
+been MOVED to the second week of November:
+
+(1) November 2017 - US/Europe/Brazil - OP Monthly Meeting
+    - Note - Brazil Summer Time starts on 15 October 2017
+    - Note - European Summer Time ends on 29 October 2017
+    - Note - US Daylight Savings Time ends on 5 November 2017
+    - Note - PWG Virtual F2F (PWG Host via WebEx) on 15-16 November 2017
+    - Note - IETF 100 in Singapore on 11-17 November 2017
+    - Tuesday 14 November 2017, Daytime
+      - US
+        9am in San Francisco - US PST (Pacific Standard Time)
+        10am in Colorado - US MST (Mountain Standard Time)
+        11am in Chicago - US CST (Central Standard Time)
+        12pm in New York - US EST (Eastern Standard Time)
+      - Europe
+        6pm in Berlin - CET (Central Europe Time)
+      - Brazil
+        3pm in Belo Horizonte - BRST (Brasilia Summer Time)
+
+    US:  +1 641-715-3814
+    Germany:  +49 (0) 221 98203421
+    Brazil:  +55 61 4040-4460
+    Japan:  +81 (0) 3-5050-5070
+    Participant Access Code:  622393#
+
+    (note that local numbers for many other countries are available,
+    also cellphone apps, VOIP support, etc. - please email Till for
+    details)
+.
+Cheers,
+- Ira
+
+Ira McDonald (Musician / Software Architect)
+Co-Chair - TCG Trusted Mobility Solutions WG
+Chair - Linux Foundation Open Printing WG
+Secretary - IEEE-ISTO Printer Working Group
+Co-Chair - IEEE-ISTO PWG Internet Printing Protocol WG
+IETF Designated Expert - IPP & Printer MIB
+Blue Roof Music / High North Inc
+http://sites.google.com/site/blueroofmusic
+http://sites.google.com/site/highnorthinc
+mailto: blueroofmusic@gmail.com
+Jan-April: 579 Park Place  Saline, MI  48176  734-944-0094
+May-Dec: PO Box 221  Grand Marais, MI 49839  906-494-2434
+
+--001a11479f90741846055ba89727
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><div><div><div>Hi,<br><br></div>Please join us for our <sp=
+an>next OP</span> US/Europe/Brazil conference call which has been MOVED to =
+the second week of November:<br><br>(1) November 2017 - US/Europe/Brazil - =
+OP Monthly Meeting<br>=C2=A0=C2=A0=C2=A0 - Note - Brazil Summer Time starts=
+ on 15 October 2017<br>=C2=A0=C2=A0=C2=A0 - Note - European Summer Time end=
+s on 29 October 2017<br>=C2=A0=C2=A0=C2=A0 - Note - US Daylight Savings Tim=
+e ends on 5 November 2017<br>=C2=A0=C2=A0=C2=A0 - Note - PWG Virtual F2F (P=
+WG Host via WebEx) on 15-16 November 2017<br>=C2=A0=C2=A0=C2=A0 - Note - IE=
+TF 100 in Singapore on 11-17 November 2017<br>=C2=A0=C2=A0=C2=A0 - Tuesday =
+14 November 2017, Daytime<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 - US<br>=C2=A0=
+=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 9am in San Francisco - US PST (Pacific=
+ Standard Time)<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 10am in Color=
+ado - US MST (Mountain Standard Time)<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=
+=A0=C2=A0 11am in Chicago - US CST (Central Standard Time)<br>=C2=A0=C2=A0=
+=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 12pm in New York - US EST (Eastern Standard =
+Time)<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 - Europe<br>=C2=A0=C2=A0=C2=A0=C2=
+=A0=C2=A0=C2=A0=C2=A0 6pm in Berlin - CET (Central Europe Time)<br>=C2=A0=
+=C2=A0=C2=A0=C2=A0=C2=A0 - Brazil<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=
+=C2=A0 3pm in Belo Horizonte - BRST (Brasilia Summer Time)<br><br>=C2=A0=C2=
+=A0=C2=A0 US:=C2=A0 +1 641-715-3814<br>=C2=A0=C2=A0=C2=A0 Germany:=C2=A0 +4=
+9 (0) 221 98203421<br>=C2=A0=C2=A0=C2=A0 Brazil:=C2=A0 +55 61 4040-4460<br>=
+=C2=A0=C2=A0=C2=A0 Japan:=C2=A0 +81 (0) 3-5050-5070<br>=C2=A0=C2=A0=C2=A0 P=
+articipant Access Code:=C2=A0 622393#<br><br>=C2=A0=C2=A0=C2=A0 (note that =
+local numbers for many other countries are available,<br>=C2=A0=C2=A0=C2=A0=
+ also cellphone apps, VOIP support, etc. - please email Till for<br>=C2=A0=
+=C2=A0=C2=A0 details) <br>.<br></div>Cheers,<br></div>- Ira<br><br clear=3D=
+"all"><div><div><div><div class=3D"gmail_signature"><div dir=3D"ltr"><div><=
+div dir=3D"ltr">Ira McDonald (Musician / Software Architect)<br>Co-Chair - =
+TCG Trusted Mobility Solutions WG<br>Chair - Linux Foundation Open Printing=
+ WG<br>Secretary - IEEE-ISTO Printer Working Group<br>Co-Chair - IEEE-ISTO =
+PWG Internet Printing Protocol WG<br>IETF Designated Expert - IPP &amp; Pri=
+nter MIB<br>Blue Roof Music / High North Inc<br><a style=3D"color:rgb(51,51=
+,255)" href=3D"http://sites.google.com/site/blueroofmusic" target=3D"_blank=
+">http://sites.google.com/site/blueroofmusic</a><br><a style=3D"color:rgb(1=
+02,0,204)" href=3D"http://sites.google.com/site/highnorthinc" target=3D"_bl=
+ank">http://sites.google.com/site/highnorthinc</a><br>mailto: <a href=3D"ma=
+ilto:blueroofmusic@gmail.com" target=3D"_blank">blueroofmusic@gmail.com</a>=
+<br>Jan-April: 579 Park Place=C2=A0 Saline, MI=C2=A0 48176=C2=A0 734-944-00=
+94<br>May-Dec: PO Box 221=C2=A0 Grand Marais, MI 49839=C2=A0 906-494-2434<b=
+r><br><div style=3D"display:inline"></div><div style=3D"display:inline"></d=
+iv><div style=3D"display:inline"></div><div></div><div></div><div></div><di=
+v></div></div></div></div></div></div>
+</div></div></div>
+
+--001a11479f90741846055ba89727--
