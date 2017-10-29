@@ -1,12 +1,12 @@
 Return-Path: <samuel.thibault@ens-lyon.org>
-Date: Wed, 25 Oct 2017 23:33:27 +0200
+Date: Sun, 29 Oct 2017 22:25:54 +0100
 From: Samuel Thibault <samuel.thibault@ens-lyon.org>
-Message-ID: <20171025213327.bu2dreaqd3bge3cu@var.youpi.perso.aquilenet.fr>
+Message-ID: <20171029212554.volqq54tg5a7gmhz@var.youpi.perso.aquilenet.fr>
 MIME-Version: 1.0
-Content-Type: multipart/mixed; boundary="ctaffr66l6b2f3it"
+Content-Type: multipart/mixed; boundary="5ib3bzmy4nvmyiaf"
 Content-Disposition: inline
-Subject: [Printing-architecture] [PATCH] index braille: advertise V5
-	embossers
+Subject: [Printing-architecture] [PATCH] braille: fix computation with old
+	bash
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>,
@@ -19,60 +19,37 @@ List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-arc
 To: printing-architecture@lists.linux-foundation.org
 
 
---ctaffr66l6b2f3it
+--5ib3bzmy4nvmyiaf
 Content-Type: text/plain; charset=us-ascii
 Content-Disposition: inline
 
 Hello,
 
-Index V5 embossers are compatible with the V4 protocol so we don't need
-driver changes, we just need to advertise the support.
+Old bash does not like quotes in $(("123" + 0)) , the attached patch
+removes these unneeded quotes.
 
 Samuel
 
---ctaffr66l6b2f3it
+--5ib3bzmy4nvmyiaf
 Content-Type: text/plain; charset=us-ascii
 Content-Disposition: attachment; filename=patch
 
-=== modified file 'drv/indexv4.drv'
---- drv/indexv4.drv	2017-09-16 22:05:24 +0000
-+++ drv/indexv4.drv	2017-10-25 21:31:18 +0000
-@@ -82,7 +82,7 @@ Group "Braille"
- // Basic-D
- //
- {
--  ModelName "Basic-D V4"
-+  ModelName "Basic-D V4/V5"
-   PCFileName "ibasicd4.ppd"
+=== modified file 'filter/braille/filters/cups-braille.sh.in'
+--- filter/braille/filters/cups-braille.sh.in	2017-09-18 01:44:55 +0000
++++ filter/braille/filters/cups-braille.sh.in	2017-10-29 21:14:42 +0000
+@@ -173,9 +173,9 @@ points2mm() {
+   FRAC_POINTS="$INT_POINTS$FRAC_POINTS"
+   # Then we can compute conversion
+   # We round up to be safe
+-  FRAC_INCH=$((("$FRAC_POINTS" + 71) / 72))
+-  FRAC_CM=$((("$FRAC_INCH" * 254 + 99) / 100))
+-  HUNDRENDTH_MM=$((("$FRAC_CM" + 999999999999) / 1000000000000))
++  FRAC_INCH=$((($FRAC_POINTS + 71) / 72))
++  FRAC_CM=$((($FRAC_INCH * 254 + 99) / 100))
++  HUNDRENDTH_MM=$((($FRAC_CM + 999999999999) / 1000000000000))
+   echo $HUNDRENDTH_MM
+ }
  
-   MaxSize 325mm 10m
-@@ -100,7 +100,7 @@ Group "Braille"
- // Basic-S
- //
- {
--  ModelName "Basic-S V4"
-+  ModelName "Basic-S V4/V5"
-   PCFileName "ibasics4.ppd"
- 
-   MaxSize 325mm 10m
-@@ -111,7 +111,7 @@ Group "Braille"
- // Everest-D
- //
- {
--  ModelName "Everest-D V4"
-+  ModelName "Everest-D V4/V5"
-   PCFileName "ieveres4.ppd"
- 
-   MaxSize 297mm 10m
-@@ -127,7 +127,7 @@ Group "Braille"
- // Braille Box
- //
- {
--  ModelName "Braille Box V4"
-+  ModelName "Braille Box V4/V5"
-   PCFileName "ibrlbox4.ppd"
- 
-   MaxSize 297mm 10m
 
 
---ctaffr66l6b2f3it--
+--5ib3bzmy4nvmyiaf--
