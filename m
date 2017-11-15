@@ -1,19 +1,15 @@
-Return-Path: <blueroofmusic@gmail.com>
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
-	h=mime-version:from:date:message-id:subject:to;
-	bh=VuQyAbiAXbCVcct2Ijq2CDk8bg6JEDU++KyEoDBFQ0g=;
-	b=iQPv6HG8fDDBXRVjISpGe4hYIg6xuzyq/r5wLHNo2ha0YUv2YuF7DBkQOZS3nmVdnK
-	Otg3ggqEi4TknzlTwSzvyrgHWMZbUzPa1YLeXD2iF3AAgIUDkO5XpKxdiKufuNp/Nbj+
-	GJ9L+tlV5yDR9sB8/8DR6/YS58iYVNHQwmQ9j2dEyvZlQXDRBtu/ZM1Zg5JC6H15+JhQ
-	zbFPX9Mfs2DzJwi9MRdjMfWVJEIkfLCQRQspL0SdC919HfbbPacviata0+uNjFv7jbWy
-	PqxEv+A2BPCbHTiBWA+B8YEc1yoJPsIqGiy8XTfvN5ouhWW7EAihph22fvbGZshSxz2d
-	8W8w==
+Return-Path: <pizza@stuffed.shaftnet.org>
+Date: Wed, 15 Nov 2017 15:44:24 -0500
+From: Solomon Peachy <pizza@shaftnet.org>
+Message-ID: <20171115204424.GA29468@shaftnet.org>
+References: <7be55082-0911-5282-733c-d7670603e16a@gmail.com>
 MIME-Version: 1.0
-From: Ira McDonald <blueroofmusic@gmail.com>
-Date: Tue, 14 Nov 2017 12:17:19 -0500
-Message-ID: <CAN40gSt3Woif95W1+UOLCi9kT+ey40G+r9JUG0v_kCc+HkKBfw@mail.gmail.com>
-Content-Type: multipart/alternative; boundary="94eb2c0e44e06b5727055df49038"
-Subject: [Printing-architecture] CANCELED: OP Call Tuesday (14 November 2017)
+Content-Type: multipart/signed; micalg=pgp-sha1;
+	protocol="application/pgp-signature"; boundary="Qxx1br4bt0+wmkIi"
+Content-Disposition: inline
+In-Reply-To: <7be55082-0911-5282-733c-d7670603e16a@gmail.com>
+Subject: Re: [Printing-architecture] Need of Printer Drivers for Modern
+ Printers
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>,
@@ -23,117 +19,123 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>, Till Kamppeter <till.kamppeter@gmail.com>, Danny Brennan <brennand@us.ibm.com>, Aveek Basu <aveek.basu@lexmark.com>, Ira McDonald <blueroofmusic@gmail.com>
-
---94eb2c0e44e06b5727055df49038
-Content-Type: text/plain; charset="UTF-8"
-
-Hi,
-
-My apologies for not sending an OP meeting reminder (2nd week).
-
-My preceding Chrysler meeting ran overtime, and I was 7 minutes
-late calling the OP bridge and found no else had joined.
-
-Tomorrow and the next day are our PWG Virtual F2F meeting.
-I'll forward Smith's F2F summary and links to PWG Plenary,
-IDS WG, and IPP WG minutes after the meeting.
-
-Our next monthly OP call will be:
-
-(1) December 2017 - US/Europe/Brazil - OP Monthly Meeting
-    - Tuesday 5 December 2017, Daytime
-      - US
-        9am in San Francisco - US PST (Pacific Standard Time)
-        10am in Colorado - US MST (Mountain Standard Time)
-        11am in Chicago - US CST (Central Standard Time)
-        12pm in New York - US EST (Eastern Standard Time)
-      - Europe
-        6pm in Berlin - CET (Central Europe Time)
-      - Brazil
-        3pm in Belo Horizonte - BRST (Brasilia Summer Time)
-
-    US:  +1 641-715-3814 <(641)%20715-3814>
-    Germany:  +49 (0) 221 98203421 <+49%20221%2098203421>
-    Brazil:  +55 61 4040-4460 <+55%2061%204040-4460>
-    Japan:  +81 (0) 3-5050-5070 <+81%203-5050-5070>
-    Participant Access Code:  622393#
-
-    (note that local numbers for many other countries are available,
-    also cellphone apps, VOIP support, etc. - please email Till for
-    details)
-
-Thanks for your patience.
-
-Cheers,
-- Ira
+To: Till Kamppeter <till.kamppeter@gmail.com>
+Cc: Open Printing <printing-architecture@lists.linux-foundation.org>
 
 
-Ira McDonald (Musician / Software Architect)
-Co-Chair - TCG Trusted Mobility Solutions WG
-Chair - Linux Foundation Open Printing WG
-Secretary - IEEE-ISTO Printer Working Group
-Co-Chair - IEEE-ISTO PWG Internet Printing Protocol WG
-IETF Designated Expert - IPP & Printer MIB
-Blue Roof Music / High North Inc
-http://sites.google.com/site/blueroofmusic
-http://sites.google.com/site/highnorthinc
-mailto: blueroofmusic@gmail.com
-Jan-April: 579 Park Place  Saline, MI  48176  734-944-0094
-May-Dec: PO Box 221  Grand Marais, MI 49839  906-494-2434
-
---94eb2c0e44e06b5727055df49038
-Content-Type: text/html; charset="UTF-8"
+--Qxx1br4bt0+wmkIi
+Content-Type: text/plain; charset=us-ascii
+Content-Disposition: inline
 Content-Transfer-Encoding: quoted-printable
 
-<div dir=3D"ltr"><div><div><div><div><div><div><div>Hi,<br><br></div>My apo=
-logies for not sending an OP meeting reminder (2nd week). <br></div><div><b=
-r></div><div>My preceding Chrysler meeting ran overtime, and I was 7 minute=
-s <br></div><div>late calling the OP bridge and found no else had joined.<b=
-r></div></div></div><br></div>Tomorrow and the next day are our PWG Virtual=
- F2F meeting.<br></div>I&#39;ll forward Smith&#39;s F2F summary and links t=
-o PWG Plenary,</div><div>IDS WG, and IPP WG minutes after the meeting.</div=
-><div><br></div><div>Our next monthly OP call will be:</div><div><br></div>=
-<div>(1) December 2017 - US/Europe/Brazil - OP Monthly Meeting<br>=C2=A0=C2=
-=A0=C2=A0 - Tuesday 5 December 2017, Daytime<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=
-=A0 - US<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 9am in San Francisco=
- - US PST (Pacific Standard Time)<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=
-=C2=A0 10am in Colorado - US MST (Mountain Standard Time)<br>=C2=A0=C2=A0=
-=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 11am in Chicago - US CST (Central Standard T=
-ime)<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 12pm in New York - US ES=
-T (Eastern Standard Time)<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 - Europe<br>=C2=
-=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 6pm in Berlin - CET (Central Europe=
- Time)<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 - Brazil<br>=C2=A0=C2=A0=C2=A0=C2=
-=A0=C2=A0=C2=A0=C2=A0 3pm in Belo Horizonte - BRST (Brasilia Summer Time)<b=
-r><br>=C2=A0=C2=A0=C2=A0 US:=C2=A0 <a href=3D"tel:(641)%20715-3814" value=
-=3D"+16417153814" target=3D"_blank">+1 641-715-3814</a><br>=C2=A0=C2=A0=C2=
-=A0 Germany:=C2=A0 <a href=3D"tel:+49%20221%2098203421" value=3D"+492219820=
-3421" target=3D"_blank">+49 (0) 221 98203421</a><br>=C2=A0=C2=A0=C2=A0 Braz=
-il:=C2=A0 <a href=3D"tel:+55%2061%204040-4460" value=3D"+556140404460" targ=
-et=3D"_blank">+55 61 4040-4460</a><br>=C2=A0=C2=A0=C2=A0 Japan:=C2=A0 <a hr=
-ef=3D"tel:+81%203-5050-5070" value=3D"+81350505070" target=3D"_blank">+81 (=
-0) 3-5050-5070</a><br>=C2=A0=C2=A0=C2=A0 Participant Access Code:=C2=A0 622=
-393#<br><br>=C2=A0=C2=A0=C2=A0 (note that local numbers for many other coun=
-tries are available,<br>=C2=A0=C2=A0=C2=A0 also cellphone apps, VOIP suppor=
-t, etc. - please email Till for<br>=C2=A0=C2=A0=C2=A0 details)</div><div><b=
-r>Thanks for your patience.</div><div><br></div><div>Cheers,</div><div>- Ir=
-a</div><div><br></div><div><br></div><div><div><div><div><div><div><div><di=
-v><div><div><div><div class=3D"gmail_signature"><div dir=3D"ltr"><div><div =
-dir=3D"ltr">Ira McDonald (Musician / Software Architect)<br>Co-Chair - TCG =
-Trusted Mobility Solutions WG<br>Chair - Linux Foundation Open Printing WG<=
-br>Secretary - IEEE-ISTO Printer Working Group<br>Co-Chair - IEEE-ISTO PWG =
-Internet Printing Protocol WG<br>IETF Designated Expert - IPP &amp; Printer=
- MIB<br>Blue Roof Music / High North Inc<br><a style=3D"color:rgb(51,51,255=
-)" href=3D"http://sites.google.com/site/blueroofmusic" target=3D"_blank">ht=
-tp://sites.google.com/site/blueroofmusic</a><br><a style=3D"color:rgb(102,0=
-,204)" href=3D"http://sites.google.com/site/highnorthinc" target=3D"_blank"=
->http://sites.google.com/site/highnorthinc</a><br>mailto: <a href=3D"mailto=
-:blueroofmusic@gmail.com" target=3D"_blank">blueroofmusic@gmail.com</a><br>=
-Jan-April: 579 Park Place=C2=A0 Saline, MI=C2=A0 48176=C2=A0 734-944-0094<b=
-r>May-Dec: PO Box 221=C2=A0 Grand Marais, MI 49839=C2=A0 906-494-2434<br><b=
-r><div style=3D"display:inline"></div><div style=3D"display:inline"></div><=
-div style=3D"display:inline"></div><div></div><div></div><div></div><div></=
-div></div></div></div></div></div>
-</div></div></div></div></div></div></div></div></div></div></div>
+On Fri, Nov 10, 2017 at 04:09:39PM -0200, Till Kamppeter wrote:
+> 1. If a manufacturer equips a modern printer with network printing or even
+> IPP support, would they nowadays not go straight-away and make this print=
+er
+> support driverless printing? This would mean that mean that if drivers are
+> needed for new printers, they are only needed for USB-only printers.
 
---94eb2c0e44e06b5727055df49038--
+Logically, yes.  But only for truly new printer models...
+
+> 2. How is the situation with USB-only printers? Is it getting common to
+> equip them with IPP-over-USB? Or is it still more common that these print=
+ers
+> get designed for use with drivers.
+
+In the dyesub space I inhabit, the newer consumer-focused printers are=20
+wifi-enabled, but they're not quite IPP-Everywhere.  Instead they're=20
+typically intended to interface with smartphone apps (not generic=20
+printing plugins!) Even on Windows they still require a native driver=20
+to use the printer via wifi.  (One of the ones I have natively speaks=20
+the Microsoft "WS-Print" protocol.  Fun..)
+
+Putting aside the consumer gear and into the more professional market,=20
+nearly none of those are natively wifi yet, although several=20
+manufacturers have come out with bolt-on network/wifi print servers of=20
+one sort or another.  I know at least one is built on top of CUPS/avahi,=20
+so in theory it already has IPP everywhere support for free, but the=20
+norm is still to use a proprietary smartphone app or bulk upload using=20
+FTP or SMB or whatever.  Nothing truly universal/generic yet.
+
+This is even more stark with the USB connectivity. I have yet to see an=20
+IPP-over-USB dyesub printer, even in the consumer space, but that's not=20
+too surprising given multi-year product family lifecycles (even if they=20
+refresh the models, the underlying engine doesn't get updated often)
+
+The pro market is more of the same, with decade-long product=20
+lifecycles. They care about forwards compatibility so the models tend to=20
+have similar communication/driver requirements (barring minor tweaks=20
+here and there).  The idea is to allow users to migrate to newer=20
+printers with only minimal (if any) software changes.
+
+This is especially true as you move into the higher-end or more=20
+specialized printers; in that space users more usually ignore the OS=20
+printer driver and have their applications tie into a=20
+manufacturer/family-specific SDK that allow a very high degree of fine=20
+control over printer settings and output.  (Or if no SDK is available,=20
+they will just directly emit native printer commands)
+
+In that space, any notion of "driverless printing" is a joke.  :)
+
+> 3. If we offer a concept for distribution-independent printer driver
+> packages in Linux and drivers are not needed any more for modern printers
+> bur they are still needed for legacy printers, would manufacturers publish
+> driver packages for their legacy printers?
+
+For Linux?  I highly doubt it.  It's still challenging to get non-PS=20
+printer makers to acknowledge that Linux even exists.  Instead, with=20
+only a few notable exceptions, it falls on the somewhat more motivated=20
+(if not outright demented) members community to reverse engineer things=20
+and come up with native drivers.
+
+Not so coincidentally, this reverse-engineering-of-printers work is=20
+something I do for fun and occasional profit.  Sometimes I get=20
+[un]official help from the manufacturers, but usually it's done on my=20
+own time and dime.
+
+The results all end up in Gutenprint.  FWIW, I'm currently exploring the=20
+feasibility of creating a native IPP frontend to Gutenprint.  It would=20
+allow for some seriously cool functionality, but would also be a lot of=20
+work, as we'd have to re-create a lot of the functionality we=20
+traditionally relied on CUPS for (eg spooling, logging, option=20
+parsing/etc, UI, and so on..).
+
+And on that same token, IMO it would be quite valuable to create a=20
+Gunenprint snap to go with the CUPS snap you created, or perhaps even=20
+bundling it directly in there.
+
+> 4. Or are there certain printer classes (home, small office, big network,
+> ...) where driverless printing or printing with driver is preferred?
+
+See above -- Once you move away from traditional office-type printing=20
+tasks (ie business use on normal paper) and low-volume home printing,=20
+printers tend to not only rely much more heavily on custom drivers, but=20
+the higher-end/specialization you go, the more likely users forego a=20
+tradidional "driver" altogether and instead rely on a dedicated RIP or=20
+SDK that is closely tied to a specific printer family.
+
+> Can someone, especially someone from the printer manufacturers tell about
+> what the current situation is?
+
+I can't speak for any manufacturers; I can't even claim to be terribly=20
+knowledgeable outside of what dyesub printers tend to use, be they=20
+consumer or pro-oriented.  But I hope my ramblings will at least be=20
+useful.
+
+ - Solomon
+--=20
+Solomon Peachy			       pizza at shaftnet dot org
+Coconut Creek, FL                          ^^ (email/xmpp) ^^
+Quidquid latine dictum sit, altum videtur.
+
+--Qxx1br4bt0+wmkIi
+Content-Type: application/pgp-signature; name="signature.asc"
+
+-----BEGIN PGP SIGNATURE-----
+
+iEYEABECAAYFAloMpyYACgkQPuLgii2759Bl2QCgnE1N8rvvS/ESNf0S+Bf1r++7
+43MAoLu0MXyttDI2cCXZa0cu7ESls/tJ
+=vVPU
+-----END PGP SIGNATURE-----
+
+--Qxx1br4bt0+wmkIi--
