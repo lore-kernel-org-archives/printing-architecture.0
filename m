@@ -1,19 +1,25 @@
-Return-Path: <blueroofmusic@gmail.com>
+Return-Path: <korobkin@gmail.com>
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
-	h=mime-version:from:date:message-id:subject:to;
-	bh=rvkvVtv+sMTQtk/zqQZFZAtHp/CLK7YYH+blyEN3N0k=;
-	b=ZnXKc1+IfJrwrtEJrqsYi9yM1xrBl84BDZG68RimUcSpNHBElAyFO87hWK0FtCPWP4
-	vfFhFYJ78fvvdRaKY1+R9ouFjl2IuxPLsRyGTLnlytAsJ8lWfRHHnRIe4A7DGUr7DPGk
-	OtjjE6T4IJuRtitEyh5i33nkCwLwBwmBs9opcCHSIhcpPWU+lK9GgA1NbJiRX2L95EfK
-	+khZRqr31AH9UVYVCV5vupj/yQjEsOvliL7cVUYV72KNBaI8K2h18jUrYBe03FjocCW5
-	sOA3izaGpn6ytyipLxFLCzdgMgXsEgIfr7guE2P6cPOCJO6dR9re9WIuGjAObJvAcvJQ
-	fsig==
+	h=mime-version:sender:in-reply-to:references:from:date:message-id
+	:subject:to:cc;
+	bh=mLQQ9LIV+8/kspu8WOw63jklxnq5IJKpfNuPyCXno5k=;
+	b=MqZ1VGstE6bsKqCRoyC14dYoQn7GS3GxNl0GZnzlg9djP3mZmgSpRhLL0k0DRc0wf4
+	ZhV+3ymsejIGArWcAIA5dJktMe4jDOi7BpiB6dit9UN8Uv6vk7CxOmJWKaibZGZmiG6h
+	da4LSRgkPF+iOmw4ItES5YbsjFLZ3O0tHcff2era8l3tY6LAwyM3C90xRcgVheMjvVrK
+	uDwwNTnx23QNbpY0Zepvx4gKSADcspiIttFwysGp0XoidaPTwDHeRujx7cf5pVm81yHe
+	EfJKnIxT0hpbbctdYpWltxgMPNrZQ8UTi6zZuJklVaVoRtoUBpWkbhyYKuinFdnhUtRi
+	7pew==
 MIME-Version: 1.0
-From: Ira McDonald <blueroofmusic@gmail.com>
-Date: Mon, 4 Dec 2017 10:59:50 -0500
-Message-ID: <CAN40gSvX0FZaGPA-Zz+zPOH_dpTvwX0J2rYpqK-6Oei-93Nx1g@mail.gmail.com>
-Content-Type: multipart/alternative; boundary="089e08266e0831a9f8055f85d0ca"
-Subject: [Printing-architecture] Reminder: OP Call Tuesday (5 December 2017)
+Sender: korobkin@gmail.com
+In-Reply-To: <D869C264-319C-45AC-B102-986F1EF3FF4D@apple.com>
+References: <CA+3RNfhNgNFupp3AboQc8vi2FZiitRRtoK8schu4JCqTK6M8VQ@mail.gmail.com>
+	<D869C264-319C-45AC-B102-986F1EF3FF4D@apple.com>
+From: Alex Korobkin <korobkin+op@gmail.com>
+Date: Mon, 4 Dec 2017 17:21:10 -0500
+Message-ID: <CA+3RNfhzLeqKCTS1QOovw=jOp94QBKKNkbLQAEzFW2KZC-hrjw@mail.gmail.com>
+Content-Type: multipart/alternative; boundary="001a114b6b6ce9b165055f8b235a"
+Subject: Re: [Printing-architecture] IPP Shared Infrastructure Extensions
+	(INFRA)
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>,
@@ -23,96 +29,144 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>, Till Kamppeter <till.kamppeter@gmail.com>, Danny Brennan <brennand@us.ibm.com>, Aveek Basu <aveek.basu@lexmark.com>, Ira McDonald <blueroofmusic@gmail.com>
+To: Michael Sweet <msweet@apple.com>
+Cc: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>
 
---089e08266e0831a9f8055f85d0ca
+--001a114b6b6ce9b165055f8b235a
 Content-Type: text/plain; charset="UTF-8"
 
-Hi,
+Thank you Michael.
 
-Please join us for our next OP US/Europe/Brazil conference call tomorrow:
+Is there a way for IPP/IPP Everywhere printer to pull jobs from print
+server, instead of server pushing them to the printer? For example, we tell
+the printer to periodically check this server/proxy for waiting jobs, so
+that it could download and print them.
 
-(1) December 2017 - US/Europe/Brazil - OP Monthly Meeting
-.nf
-    - Tuesday 5 December 2017, Daytime
-      - US
-        9am in San Francisco - US PST (Pacific Standard Time)
-        10am in Colorado - US MST (Mountain Standard Time)
-        11am in Chicago - US CST (Central Standard Time)
-        12pm in New York - US EST (Eastern Standard Time)
-      - Europe
-        6pm in Berlin - CET (Central Europe Time)
-      - Brazil
-        3pm in Belo Horizonte - BRST (Brasilia Summer Time)
+It seems like it would fit nicely into this IPP INFRA idea, but I don't see
+it mentioned. I got an impression that the only method is to push jobs to
+the printer (from Proxy or from a print server).
 
-    US:  +1 641-715-3814
-    Germany:  +49 (0) 221 98203421
-    Brazil:  +55 61 4040-4460
-    Japan:  +81 (0) 3-5050-5070
-    Participant Access Code:  622393#
+On Wed, Sep 27, 2017 at 1:58 PM, Michael Sweet <msweet@apple.com> wrote:
 
-    (note that local numbers for many other countries are available,
-    also cellphone apps, VOIP support, etc. - please email Till for
-    details)
+> Alex,
+>
+> It was precisely written to address cloud and split-network infrastructure
+> issues.  I did some (private) prototyping back when we did the spec, and
+> some of that work is present in the current ippsample project maintained by
+> the PWG/Apple at:
+>
+>     https://github.com/istopwg/ippsample
+>
+> I still haven't finished adding IPP INFRA support to the ippsample project
+> yet (lack of time) but ultimately we want to have a more robust
+> publicly-available sample implementation available to show how to do it
+> efficiently.
+>
+> (I believe there are some commercial "release printing" solutions coming
+> that will use IPP INFRA as well, although nothing that has been released
+> AFAIK...)
+>
+>
+> > On Sep 27, 2017, at 1:32 PM, Alex Korobkin <korobkin+op@gmail.com>
+> wrote:
+> >
+> > Hi all,
+> >
+> > There is this interesting design of a cloud-like infrastructure called
+> "IPP Shared Infrastructure Extensions", http://ftp.pwg.org/pub/pwg/
+> candidates/cs-ippinfra10-20150619-5100.18.pdf
+> >
+> > Have you heard of anyone actually implementing that?
+> >
+> > In general, I'm curious how people handle shared printers in the world
+> of public networks and no direct connection between a printer and a user's
+> device. That doc looks like an answer.
+> >
+> > --
+> > -Alex
+> > _______________________________________________
+> > Printing-architecture mailing list
+> > Printing-architecture@lists.linux-foundation.org
+> > https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture
+>
+> _________________________________________________________
+> Michael Sweet, Senior Printing System Engineer
+>
+>
 
-Cheers,
-- Ira
 
+-- 
+-Alex
 
-Ira McDonald (Musician / Software Architect)
-Co-Chair - TCG Trusted Mobility Solutions WG
-Chair - Linux Foundation Open Printing WG
-Secretary - IEEE-ISTO Printer Working Group
-Co-Chair - IEEE-ISTO PWG Internet Printing Protocol WG
-IETF Designated Expert - IPP & Printer MIB
-Blue Roof Music / High North Inc
-http://sites.google.com/site/blueroofmusic
-http://sites.google.com/site/highnorthinc
-mailto: blueroofmusic@gmail.com
-Jan-April: 579 Park Place  Saline, MI  48176  734-944-0094
-May-Dec: PO Box 221  Grand Marais, MI 49839  906-494-2434
-
---089e08266e0831a9f8055f85d0ca
+--001a114b6b6ce9b165055f8b235a
 Content-Type: text/html; charset="UTF-8"
 Content-Transfer-Encoding: quoted-printable
 
-<div dir=3D"ltr"><div><div><div>Hi,<br><br></div>Please join us for our <sp=
-an>next <span class=3D"gmail-il">OP</span></span> US/Europe/Brazil conferen=
-ce <span class=3D"gmail-il">call</span> tomorrow:<br><br>(1) December 2017 =
-- US/Europe/Brazil - OP Monthly Meeting<br>.nf<br>=C2=A0=C2=A0=C2=A0 - Tues=
-day 5 December 2017, Daytime<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 - US<br>=C2=
-=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 9am in San Francisco - US PST (Paci=
-fic Standard Time)<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 10am in Co=
-lorado - US MST (Mountain Standard Time)<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=
-=C2=A0=C2=A0 11am in Chicago - US CST (Central Standard Time)<br>=C2=A0=C2=
-=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 12pm in New York - US EST (Eastern Standa=
-rd Time)<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 - Europe<br>=C2=A0=C2=A0=C2=A0=
-=C2=A0=C2=A0=C2=A0=C2=A0 6pm in Berlin - CET (Central Europe Time)<br>=C2=
-=A0=C2=A0=C2=A0=C2=A0=C2=A0 - Brazil<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=
-=A0=C2=A0 3pm in Belo Horizonte - BRST (Brasilia Summer Time)<br><br>=C2=A0=
-=C2=A0=C2=A0 US:=C2=A0 +1 641-715-3814<br>=C2=A0=C2=A0=C2=A0 Germany:=C2=A0=
- +49 (0) 221 98203421<br>=C2=A0=C2=A0=C2=A0 Brazil:=C2=A0 +55 61 4040-4460<=
-br>=C2=A0=C2=A0=C2=A0 Japan:=C2=A0 +81 (0) 3-5050-5070<br>=C2=A0=C2=A0=C2=
-=A0 Participant Access Code:=C2=A0 622393#<br><br>=C2=A0=C2=A0=C2=A0 (note =
-that local numbers for many other countries are available,<br>=C2=A0=C2=A0=
-=C2=A0 also cellphone apps, VOIP support, etc. - please email Till for<br>=
-=C2=A0=C2=A0=C2=A0 details)<br><br></div>Cheers,<br></div>- Ira<br><br><br>=
-<div><div><div><div class=3D"gmail_signature"><div dir=3D"ltr"><div><div di=
-r=3D"ltr">Ira McDonald (Musician / Software Architect)<br>Co-Chair - TCG Tr=
-usted Mobility Solutions WG<br>Chair - Linux Foundation Open Printing WG<br=
->Secretary - IEEE-ISTO Printer Working Group<br>Co-Chair - IEEE-ISTO PWG In=
-ternet Printing Protocol WG<br>IETF Designated Expert - IPP &amp; Printer M=
-IB<br>Blue Roof Music / High North Inc<br><a style=3D"color:rgb(51,51,255)"=
- href=3D"http://sites.google.com/site/blueroofmusic" target=3D"_blank">http=
-://sites.google.com/site/blueroofmusic</a><br><a style=3D"color:rgb(102,0,2=
-04)" href=3D"http://sites.google.com/site/highnorthinc" target=3D"_blank">h=
-ttp://sites.google.com/site/highnorthinc</a><br>mailto: <a href=3D"mailto:b=
-lueroofmusic@gmail.com" target=3D"_blank">blueroofmusic@gmail.com</a><br>Ja=
-n-April: 579 Park Place=C2=A0 Saline, MI=C2=A0 48176=C2=A0 734-944-0094<br>=
-May-Dec: PO Box 221=C2=A0 Grand Marais, MI 49839=C2=A0 906-494-2434<br><br>=
-<div style=3D"display:inline"></div><div style=3D"display:inline"></div><di=
-v style=3D"display:inline"></div><div></div><div></div><div></div><div></di=
-v></div></div></div></div></div>
-</div></div></div>
+<div dir=3D"ltr">Thank you Michael.=C2=A0<div><br></div><div>Is there a way=
+ for IPP/IPP Everywhere printer to pull jobs from print server, instead of =
+server pushing them to the printer? For example, we tell the printer to per=
+iodically check this server/proxy for waiting jobs, so that it could downlo=
+ad and print them.=C2=A0</div><div><br></div><div>It seems like it would fi=
+t nicely into this IPP INFRA idea, but I don&#39;t see it mentioned. I got =
+an impression that the only method is to push jobs to the printer (from Pro=
+xy or from a print server).=C2=A0</div></div><div class=3D"gmail_extra"><br=
+><div class=3D"gmail_quote">On Wed, Sep 27, 2017 at 1:58 PM, Michael Sweet =
+<span dir=3D"ltr">&lt;<a href=3D"mailto:msweet@apple.com" target=3D"_blank"=
+>msweet@apple.com</a>&gt;</span> wrote:<br><blockquote class=3D"gmail_quote=
+" style=3D"margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex">A=
+lex,<br>
+<br>
+It was precisely written to address cloud and split-network infrastructure =
+issues.=C2=A0 I did some (private) prototyping back when we did the spec, a=
+nd some of that work is present in the current ippsample project maintained=
+ by the PWG/Apple at:<br>
+<br>
+=C2=A0 =C2=A0 <a href=3D"https://github.com/istopwg/ippsample" rel=3D"noref=
+errer" target=3D"_blank">https://github.com/istopwg/<wbr>ippsample</a><br>
+<br>
+I still haven&#39;t finished adding IPP INFRA support to the ippsample proj=
+ect yet (lack of time) but ultimately we want to have a more robust publicl=
+y-available sample implementation available to show how to do it efficientl=
+y.<br>
+<br>
+(I believe there are some commercial &quot;release printing&quot; solutions=
+ coming that will use IPP INFRA as well, although nothing that has been rel=
+eased AFAIK...)<br>
+<div><div class=3D"h5"><br>
+<br>
+&gt; On Sep 27, 2017, at 1:32 PM, Alex Korobkin &lt;<a href=3D"mailto:korob=
+kin%2Bop@gmail.com">korobkin+op@gmail.com</a>&gt; wrote:<br>
+&gt;<br>
+&gt; Hi all,<br>
+&gt;<br>
+&gt; There is this interesting design of a cloud-like infrastructure called=
+ &quot;IPP Shared Infrastructure Extensions&quot;, <a href=3D"http://ftp.pw=
+g.org/pub/pwg/candidates/cs-ippinfra10-20150619-5100.18.pdf" rel=3D"norefer=
+rer" target=3D"_blank">http://ftp.pwg.org/pub/pwg/<wbr>candidates/cs-ippinf=
+ra10-<wbr>20150619-5100.18.pdf</a><br>
+&gt;<br>
+&gt; Have you heard of anyone actually implementing that?<br>
+&gt;<br>
+&gt; In general, I&#39;m curious how people handle shared printers in the w=
+orld of public networks and no direct connection between a printer and a us=
+er&#39;s device. That doc looks like an answer.<br>
+&gt;<br>
+&gt; --<br>
+&gt; -Alex<br>
+</div></div>&gt; ______________________________<wbr>_________________<br>
+&gt; Printing-architecture mailing list<br>
+&gt; <a href=3D"mailto:Printing-architecture@lists.linux-foundation.org">Pr=
+inting-architecture@lists.<wbr>linux-foundation.org</a><br>
+&gt; <a href=3D"https://lists.linuxfoundation.org/mailman/listinfo/printing=
+-architecture" rel=3D"noreferrer" target=3D"_blank">https://lists.linuxfoun=
+dation.<wbr>org/mailman/listinfo/printing-<wbr>architecture</a><br>
+<br>
+______________________________<wbr>___________________________<br>
+Michael Sweet, Senior Printing System Engineer<br>
+<br>
+</blockquote></div><br><br clear=3D"all"><div><br></div>-- <br><div class=
+=3D"gmail_signature" data-smartmail=3D"gmail_signature"><div dir=3D"ltr">-A=
+lex</div></div>
+</div>
 
---089e08266e0831a9f8055f85d0ca--
+--001a114b6b6ce9b165055f8b235a--
