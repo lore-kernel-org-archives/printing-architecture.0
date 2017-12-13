@@ -3,16 +3,16 @@ DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
 	d=obry-net.20150623.gappssmtp.com; s=20150623;
 	h=message-id:subject:from:to:cc:date:in-reply-to:references
 	:mime-version:content-transfer-encoding;
-	bh=htPav/SNeJrhIItYWYWE/yY3GwcareVuL4oePF9CoTc=;
-	b=FwcZjYTWw3drsnfIsqQ1a1uKmSO5vXJlZf1bWe3Tn+IoNXDihCKbs4H+xhcL/Azuq9
-	n+LGoKATYKzyT/kISLtk6BE6dgdCVJSlxFPeItDRH/yEcUL+qAnNKWK1R1l8RqbDiyiD
-	5W2fjAUlggxElvNdxjrTsafWT4rD6VDpEEnKHnQlMa/rYdakNRtMf/VGrWNeDWxdo2La
-	iWorZPFecQp/SzQy7ek9z5GnsSzUTT6oXdshxDQ4GEznC6eK5OUnVJW+GjlVZmMylwZ+
-	wlK/x9UTsIPnDIJjVwlsMbSLNPj5+GqF1Hos1UHofgY8r2DJjb1lgrHCPMm5sDFM8xCW
-	XD+g==
-Message-ID: <1513196707.2462.38.camel@obry.net>
+	bh=ViLfq/r77uxiWRFzSsW27YlrqSsOqhw2WlmiCMItfFc=;
+	b=qv1nhTnP7ReUPfobjPPWRDu/VR/3l0c5et5/6yDYpAZKJ1JUsj7uiRU0ejEb1Yf04F
+	MQZ0reClcyFixaf40bMDjCDnVbFGMgWWiZDPZDcCUOfdLyYudvHIKw8+0aYdGXeDvHG/
+	H8TNWeHxgWGt3V6tvM1rwqXH7Tl/3SIuk2se1EVjdMio2UpA5AxJWEtMokRETSsKrh3X
+	Y4J2sMBrMt4Nq1yTk/oTovrMp5vTTccUjx4C5LksqUGwYqc2AueXVY1TU5OXVXU1ckm0
+	EqM32WsIDVevmelSR4/jrT0QjzKc3hmsRVO7HJvis51Xo9om7Z2G4e2C2CjKLVFbmhhT
+	DYeA==
+Message-ID: <1513204278.2462.45.camel@obry.net>
 From: Pascal Obry <pascal@obry.net>
-Date: Wed, 13 Dec 2017 21:25:07 +0100
+Date: Wed, 13 Dec 2017 23:31:18 +0100
 In-Reply-To: <4C3DF113-A35B-4D88-8A3C-0E5A699BB41C@apple.com>
 References: <1404294158.28244.1.camel@pascal.home.net>
 	<1513184881.2462.20.camel@obry.net>
@@ -37,32 +37,29 @@ List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-arc
 To: Michael Sweet <msweet@apple.com>
 Cc: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>
 
-Michael,
+Hello Michael,
 
-> First, make sure you've gotten a copy of the attributes from the
-> device with cupsCopyDestInfo.
+Making progress, I just found out that I can retrieve the attributes
+when using cupsGetDestWithURI() but not cupsGetDests() and
+cupsGetDest() if CUPS_DEST_FLAGS_DEVICE is used.
 
-Right, this is done on my code.
+That is:
 
-> Second, make sure your printer actually reports the media types
-> separately; the following command will show:
-> 
->     ipptool -tv PRINTER-URI get-printer-attributes.test | grep media-
-> type-supported
+    cups_dest_t *dests;
+    int num_dests = cupsGetDests(&dests);
+    cups_dest_t *dest = cupsGetDest(printer_name, NULL, num_dests, dests);
 
-$ ipptool -tv http://localhost:631/printers/Epson_Stylus_Pro_3880 get-printer-attributes.test | grep media-type-supported
-        media-type-supported (1setOf keyword) =
-stationery,postcard,photographic-glossy,transparency,envelope,back-
-film,photographic-matte,matte-heavy,stationery-inkjet,stationery-
-coated,photo,photographic-glossy,semigloss,luster,archival-matte,water-
-color-radiant,photographic-glossy,ilford,color-life,other
+Does not work, as reported previously cupsFindDestSupported returns
+null. But I can list attributes with:
 
-> (the CUPS media APIs help insulate you from dealing with these things
-> BTW...)
+    cups_dest_t *dest = cupsGetDestWithURI(NULL, printer_uri);
 
-I'm certainly missing some information here. I've only worked with the
-PPD API, so all this is new to me and I do not find lot of
-documentation around.
+Yet, the localized is still not working. So I'm not sure how to move
+away from PPD API for media-type. This is quite important to have the
+proper paper names listed here.
+
+I have tried for an Epson 3880 with the gutenprint driver or the
+turboprint driver. Do you see something I'm missing?
 
 Thanks,
 
