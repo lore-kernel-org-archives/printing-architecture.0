@@ -1,39 +1,20 @@
-Return-Path: <msweet@apple.com>
-DKIM-Signature: v=1; a=rsa-sha256; d=apple.com; s=mailout2048s;
-	c=relaxed/simple; q=dns/txt; i=@apple.com; t=1514864688;
-	h=From:Sender:Reply-To:Subject:Date:Message-id:To:Cc:MIME-version:Content-type:
-	Content-transfer-encoding:Content-ID:Content-Description:Resent-Date:Resent-From:
-	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-reply-to:References:List-Id:
-	List-Help:List-Unsubscribe:List-Subscribe:List-Post:List-Owner:List-Archive;
-	bh=4fFFm4VfEW8HhLDnk81Gg/VPx9yet2ARreo1/9DkbNM=;
-	b=3cRuMs3wvX/cLPACCdCJhQozlfVgq2ZYn5UikgXzc2eRaE41lNJdnuK8/UkJLqGu
-	L2wtid5Xn8ohXS/L96B8x+AJ+DOJ3Nigv1h2iW32aO3F/zYQLgbp07iCo3XBulU8
-	dJA7xUdjqjG44mUj/5DiMz9lFSo+S6K8aBHAmLT7NB9pZN5N0qv0vP266SC84UMv
-	F463qS+DjEK9eSz2phhYOCth7OOV/dsaoFhZUaRY+ErUiyQHT2nWTSeoEGKBlsxE
-	y8sIClk5IweUlcyRXVFCk/osGJKVAgrLiGNP6QGJVbIkTzfsR98rekzsR+3tvUnL
-	+nNZ2p2mbtH/1d+Igj3FjQ==;
-MIME-version: 1.0
-Content-transfer-encoding: 7BIT
-Content-type: text/plain; CHARSET=US-ASCII
-Sender: msweet@apple.com
-From: Michael Sweet <msweet@apple.com>
-In-reply-to: <1514798347.2381.36.camel@obry.net>
-Date: Mon, 01 Jan 2018 22:44:46 -0500
-Message-id: <F5511DE2-C3E6-417C-BB06-8C59A0B73403@apple.com>
-References: <1404294158.28244.1.camel@pascal.home.net>
-	<1513184881.2462.20.camel@obry.net>
-	<E8206D91-E58D-426A-A666-2186AD8C3047@apple.com>
-	<1513189960.2462.29.camel@obry.net>
-	<7C9470F2-1453-469F-B71E-3B7499A44CED@apple.com>
-	<1513192373.2462.33.camel@obry.net>
-	<4C3DF113-A35B-4D88-8A3C-0E5A699BB41C@apple.com>
-	<1513204278.2462.45.camel@obry.net>
-	<CA+9ZNicGERJ38dBhN7abEXaC30wPRbkNuzWF8Oo09VEpjh5pqQ@mail.gmail.com>
-	<1E61ADED-A678-4953-8533-8818C39FA63E@apple.com>
-	<1514644818.2747.67.camel@obry.net>
-	<6CDDA660-B1D5-48E5-9F7E-4C5C80A70861@apple.com>
-	<1514798347.2381.36.camel@obry.net>
-Subject: Re: [Printing-architecture] CUPS and Borderless
+Return-Path: <blueroofmusic@gmail.com>
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
+	h=mime-version:from:date:message-id:subject:to;
+	bh=hqjvsQYN5ClSCMQuq+IdwzeqWQvijEBBkeU54lI6cVY=;
+	b=liMjbMVreIBnKGaLz5MVXKkNo41qEcYQcLQQgGzxZRUmj+vaL5ubg+v6uez6hPqv30
+	IYc43dB0RutcoXIfnA/HApM86PBQ/a+dqVqtGjWnUdwg+n2mvv+cSx+j7q4XFTTN/3HP
+	dHIyt0Wia9ZpkE579FZDd9qVR4kPRrWwyxhaezGwhiFqoaLXUSOAEb08vYzVg0yN3Jwe
+	XFrorYaKkqDsvJO69I4ApaPSd3QFJgyJNVzEjmPnVEAEGA4rI9ycjuBLSVNp49JXFI41
+	QHA8Z/DBBCZIRpeyTgVbrVxJe4nNgCsMcEh0EaDuuWxUU4fqVaGQzpcoRBA9dFcgfshK
+	17/A==
+MIME-Version: 1.0
+From: Ira McDonald <blueroofmusic@gmail.com>
+Date: Tue, 2 Jan 2018 23:00:21 -0500
+Message-ID: <CAN40gSstQyRQSNxc2cjy1c1SZuhL_fscM-W-9M=B8feExfHwCA@mail.gmail.com>
+Content-Type: multipart/alternative; boundary="001a11417d2c4c007a0561d742e9"
+Subject: [Printing-architecture] Reminder: OP Call Tuesday (9 January 2018)
+	- NEW TIME!
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>,
@@ -43,34 +24,100 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Pascal Obry <pascal@obry.net>
-Cc: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>
+To: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>, Till Kamppeter <till.kamppeter@gmail.com>, Danny Brennan <brennand@us.ibm.com>, Aveek Basu <aveek.basu@lexmark.com>, Ira McDonald <blueroofmusic@gmail.com>
 
-Pascal,
+--001a11417d2c4c007a0561d742e9
+Content-Type: text/plain; charset="UTF-8"
 
-Make sure you are testing with the latest CUPS code - I've fixed a bunch of bugs in the media code, particularly with the Gutenprint PPDs.
+Hi,
 
+Please join us for our next OP US/Europe/Brazil conference call:
 
-> On Jan 1, 2018, at 4:19 AM, Pascal Obry <pascal@obry.net> wrote:
-> 
-> 
-> Michael,
-> 
->> You can use the cupsGetDestMedia* APIs with the
->> CUPS_MEDIA_FLAGS_BORDERLESS flags value.
-> 
-> I tried that already, but when using CUPS_MEDIA_FLAGS_BORDERLESS for
-> the Epson 3880 gutenprint driver I get 0 media.
-> 
-> -- 
->  Pascal Obry /  Magny Les Hameaux (78)
-> 
->  The best way to travel is by means of imagination
-> 
->  http://www.obry.net
-> 
->  gpg --keyserver keys.gnupg.net --recv-key F949BD3B
+(1) January 2018 - US/Europe/Brazil/India - OP Monthly Meeting
+    - NOTE - new meeting time one hour later!
+    - Tuesday 9 January 2018, Daytime
+      - US
+        10am in San Francisco - US PST (Pacific Standard Time)
+        11am in Colorado - US MST (Mountain Standard Time)
+        12am in Chicago - US CST (Central Standard Time)
+        1pm in New York - US EST (Eastern Standard Time)
+      - Europe
+        7pm in Berlin - CET (Central Europe Time)
+      - Brazil
+        4pm in Belo Horizonte - BRST (Brasilia Summer Time)
+      - India
+        11:30pm in New Delhi - IST (India Standard Time)
 
-_________________________________________________________
-Michael Sweet, Senior Printing System Engineer
+    US:  +1 641-715-3814
+    Germany:  +49 (0) 221 98203421
+    Brazil:  +55 61 4040-4460
+    Japan:  +81 (0) 3-5050-5070
+    Participant Access Code:  622393#
 
+    (note that local numbers for many other countries are available,
+    also cellphone apps, VOIP support, etc. - please email Till for
+    details)
+
+Cheers,
+- Ira
+
+Ira McDonald (Musician / Software Architect)
+Co-Chair - TCG Trusted Mobility Solutions WG
+Chair - Linux Foundation Open Printing WG
+Secretary - IEEE-ISTO Printer Working Group
+Co-Chair - IEEE-ISTO PWG Internet Printing Protocol WG
+IETF Designated Expert - IPP & Printer MIB
+Blue Roof Music / High North Inc
+http://sites.google.com/site/blueroofmusic
+http://sites.google.com/site/highnorthinc
+mailto: blueroofmusic@gmail.com
+Jan-April: 579 Park Place  Saline, MI  48176  734-944-0094
+May-Dec: PO Box 221  Grand Marais, MI 49839  906-494-2434
+
+--001a11417d2c4c007a0561d742e9
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><div><div><div>Hi,<br><br></div>Please join us for our <sp=
+an>next <span class=3D"gmail-m_-1747967659674004436gmail-il">OP</span></spa=
+n> US/Europe/Brazil conference <span class=3D"gmail-m_-1747967659674004436g=
+mail-il">call</span>:<br><br>(1) January 2018 - US/Europe/Brazil/India - OP=
+ Monthly Meeting<br>=C2=A0=C2=A0=C2=A0 - NOTE - new meeting time one hour l=
+ater!<br>=C2=A0=C2=A0=C2=A0 - Tuesday 9 January 2018, Daytime<br>=C2=A0=C2=
+=A0=C2=A0=C2=A0=C2=A0 - US<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 10=
+am in San Francisco - US PST (Pacific Standard Time)<br>=C2=A0=C2=A0=C2=A0=
+=C2=A0=C2=A0=C2=A0=C2=A0 11am in Colorado - US MST (Mountain Standard Time)=
+<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 12am in Chicago - US CST (Ce=
+ntral Standard Time)<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 1pm in N=
+ew York - US EST (Eastern Standard Time)<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 =
+- Europe<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 7pm in Berlin - CET =
+(Central Europe Time)<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 - Brazil<br>=C2=A0=
+=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 4pm in Belo Horizonte - BRST (Brasilia=
+ Summer Time)<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 - India<br>=C2=A0=C2=A0=C2=
+=A0=C2=A0=C2=A0=C2=A0=C2=A0 11:30pm in New Delhi - IST (India Standard Time=
+)<br><br>=C2=A0=C2=A0=C2=A0 US:=C2=A0 +1 641-715-3814<br>=C2=A0=C2=A0=C2=A0=
+ Germany:=C2=A0 +49 (0) 221 98203421<br>=C2=A0=C2=A0=C2=A0 Brazil:=C2=A0 +5=
+5 61 4040-4460<br>=C2=A0=C2=A0=C2=A0 Japan:=C2=A0 +81 (0) 3-5050-5070<br>=
+=C2=A0=C2=A0=C2=A0 Participant Access Code:=C2=A0 622393#<br><br>=C2=A0=C2=
+=A0=C2=A0 (note that local numbers for many other countries are available,<=
+br>=C2=A0=C2=A0=C2=A0 also cellphone apps, VOIP support, etc. - please emai=
+l Till for<br>=C2=A0=C2=A0=C2=A0 details) <br><br></div>Cheers,<br></div>- =
+Ira<br><div><div><br><div><div class=3D"gmail_signature"><div dir=3D"ltr"><=
+div><div dir=3D"ltr">Ira McDonald (Musician / Software Architect)<br>Co-Cha=
+ir - TCG Trusted Mobility Solutions WG<br>Chair - Linux Foundation Open Pri=
+nting WG<br>Secretary - IEEE-ISTO Printer Working Group<br>Co-Chair - IEEE-=
+ISTO PWG Internet Printing Protocol WG<br>IETF Designated Expert - IPP &amp=
+; Printer MIB<br>Blue Roof Music / High North Inc<br><a style=3D"color:rgb(=
+51,51,255)" href=3D"http://sites.google.com/site/blueroofmusic" target=3D"_=
+blank">http://sites.google.com/site/blueroofmusic</a><br><a style=3D"color:=
+rgb(102,0,204)" href=3D"http://sites.google.com/site/highnorthinc" target=
+=3D"_blank">http://sites.google.com/site/highnorthinc</a><br>mailto: <a hre=
+f=3D"mailto:blueroofmusic@gmail.com" target=3D"_blank">blueroofmusic@gmail.=
+com</a><br>Jan-April: 579 Park Place=C2=A0 Saline, MI=C2=A0 48176=C2=A0 734=
+-944-0094<br>May-Dec: PO Box 221=C2=A0 Grand Marais, MI 49839=C2=A0 906-494=
+-2434<br><br><div style=3D"display:inline"></div><div style=3D"display:inli=
+ne"></div><div style=3D"display:inline"></div><div></div><div></div><div></=
+div><div></div></div></div></div></div></div>
+</div></div></div>
+
+--001a11417d2c4c007a0561d742e9--
