@@ -1,23 +1,21 @@
-Return-Path: <till.kamppeter@gmail.com>
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
-	h=from:subject:to:message-id:date:user-agent:mime-version
-	:content-language:content-transfer-encoding;
-	bh=/zBb/pIFz1t2j97Ip0Hz2HooixDQUAPLJVpUowX7SlI=;
-	b=tsFoaDFGrhYN72M4VHNMh0LIflSjIJxzRKAuN2/ggllngE8bKhkYl8OQ4vdqpU5cV+
-	KIRk2ybW0Xv+qruldtNTx2IzmN+Lite1ZTBIF7dHuMw+H4BcLJA3Ma4BxxlWNQ28tN73
-	S8Ua68A5BkhqF5jHTnfvQgMramZ1GtUi/pXXX7lMr9Z4Mfyb0LtylAD/7N7umJvMWj2/
-	ue1eRwrXJdyOOmO4I4Mif3eC/1HoG5EljcqFTbXrFk9Uto9KMkuGlWvhpHPMSNeO8wU/
-	dvDogmIFFJIY5OHvLAl84c0jgpg/JLBrFxSkScByS/S5lQGKDpR2AnFuuDv/mgqOz8fM
-	BZVA==
-From: Till Kamppeter <till.kamppeter@gmail.com>
-Message-ID: <3d45f9e8-0c83-ae44-855e-e3550cefb5df@gmail.com>
-Date: Thu, 18 Jan 2018 10:59:14 -0200
+Return-Path: <aveekb@lexmark.com>
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+	d=lexmark.com; s=lxk-google;
+	h=mime-version:from:date:message-id:subject:to:cc;
+	bh=47J0Zg0pj5WxmVvi+xixN1Ty1fhuWfDQG3SIgmHPoPo=;
+	b=PXL9bklJsNg+ZgUDyRaYh7XJUBRYf1T4BqBotNndmfWinfBe5nnoKxS0bNVDdlkLIo
+	oErhrjAowHi6JdZS1R763jpGBTYbEk+x18skAtw+csXRinoHG/9Xz84uuRDa1WWl86R2
+	vNbb/mVSS+B4ovJeuYoMZFkwNZ5DKFdFSNT5+/wVSqSbykBZRyChhBdCoYfYBT8cULgj
+	1MGygMTbNy44drLBCeTuibxijWCz0lY+mEl8DKfhngsiaFqneB/ml4xvFksZA6yiFfT5
+	vPSunoRUET17AkX2IABzGoY89DVC+EsHd6xD4acfZwUfV5DQzTLLNacni6vh+DjDVdk3
+	tmkQ==
 MIME-Version: 1.0
-Content-Type: text/plain; charset=utf-8; format=flowed
-Content-Language: en-GB
-Content-Transfer-Encoding: 7bit
-Subject: [Printing-architecture] Google Summer of Code 2018 - Project ideas
- page for the Linux Foundation online
+From: Aveek Basu <aveek.basu@lexmark.com>
+Date: Wed, 31 Jan 2018 20:44:58 +0530
+Message-ID: <CAMmetfRJ5yCcuk9_Ccq=U63zvwhbfY1piNKAAyBg34wrJpMBDg@mail.gmail.com>
+Content-Type: multipart/alternative; boundary="94eb2c0b0f2a7cff46056413f2f2"
+Subject: [Printing-architecture] Mentors Required for Open Printing GSoC
+	2018 projects.
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>,
@@ -27,26 +25,50 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Alexey Khoroshilov <khoroshilov@ispras.ru>, "Luis R. Rodriguez" <mcgrof@gmail.com>, Greg KH <greg@kroah.com>, "lsb-discuss@lists.linux-foundation.org" <lsb-discuss@lists.linux-foundation.org>, linux-wireless <linux-wireless@vger.kernel.org>, Open Printing <printing-architecture@lists.linux-foundation.org>, dl9pf@gmx.de
+To: Open Printing <printing-architecture@lists.linux-foundation.org>
+Cc: Till Kamppeter <till.kamppeter@gmail.com>
 
-Hi,
+--94eb2c0b0f2a7cff46056413f2f2
+Content-Type: text/plain; charset="UTF-8"
 
-I have set up a page for project ideas for the Linux Foundation's
-participation in the Google Summer of Code 2018:
+Hi All,
 
-https://wiki.linuxfoundation.org/gsoc/google-summer-code-2018
+Like every year, this year also myself and Till are organizing the Google
+Summer Of Code Projects for Linux Foundation. There are a couple of
+interesting project on this year's list with regards to Open Printing:
 
-Please add your ideas to the sub-page of your work group. If you have
-problems mail me with your project idea.
+https://wiki.linuxfoundation.org/gsoc/google-summer-code-2018-openprinting-projects
 
-The ideas list is in the Linux Foundation Wiki. If you want to edit, 
-please tell me and I give you edit rights.
 
-Please also take into account that the deadline for our application as 
-mentoring organization is Jan 23 and after that Google will evaluate the 
-applications. So have your ideas (at least most of them, ideas can be 
-posted up to the student application deadline) in by then to raise our 
-chances to get accepted.
+Already there is bunch of talented students who are interested in working
+on these projects. We require your help in mentoring these students. It
+will be of great help if you could please help us in mentoring these
+students to deliver some great projects.
 
-    Till
 
+
+-- 
+Regards,
+Aveek
+
+--94eb2c0b0f2a7cff46056413f2f2
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">Hi All,<div><br></div><div>Like every year, this year also=
+ myself and Till are organizing the Google Summer Of Code Projects for Linu=
+x Foundation. There are a couple of interesting project on this year&#39;s =
+list with regards to Open Printing:=C2=A0</div><div><br></div><div><a href=
+=3D"https://wiki.linuxfoundation.org/gsoc/google-summer-code-2018-openprint=
+ing-projects">https://wiki.linuxfoundation.org/gsoc/google-summer-code-2018=
+-openprinting-projects</a></div><div><br></div><div><br></div><div>Already =
+there is bunch of talented students who are interested in working on these =
+projects. We require your help in mentoring these students. It will be of g=
+reat help if you could please help us in mentoring these students to delive=
+r some great projects.</div><div><br></div><div><div><span style=3D"color:r=
+gb(0,0,0);font-size:12.8px"><br></span></div><div><span style=3D"color:rgb(=
+0,0,0);font-size:12.8px"><br></span></div>-- <br><div class=3D"gmail_signat=
+ure"><div dir=3D"ltr">Regards,<div>Aveek</div></div></div>
+</div></div>
+
+--94eb2c0b0f2a7cff46056413f2f2--
