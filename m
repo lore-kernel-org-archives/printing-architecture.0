@@ -1,12 +1,22 @@
-Return-Path: <brennand@us.ibm.com>
-In-Reply-To: <CAAwj3i0SJZWQOoHEpExfj+MNFUQrW+FVan2fS8xB7ky4ZvY99w@mail.gmail.com>
-From: "Danny Brennan" <brennand@us.ibm.com>
-Date: Tue, 6 Feb 2018 17:58:34 +0000
+Return-Path: <blueroofmusic@gmail.com>
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
+	h=mime-version:in-reply-to:references:from:date:message-id:subject:to
+	:cc; bh=FHvXESylCe4vYnv8WFN811uErW8Dca067BfDkXBKt/c=;
+	b=aZQ6Yaqvkk6BYHAsxfZOff6mVu4IKPUGo+Oz/jhcLOShJmMRBWWOmUeNOGBqSNGuPk
+	3Z9hk73Qam2yxBwFM7DBrMoAnEBRVKpac7t5sZmHM79F/MM6D3AqqBtRcRh8LBqqJBaX
+	nVMRIh6rNGvCS9ZqTkdYOfcAHVA7H/EMQdzJFcPx7yvPlhEwfqE0yAly/MUBTlYubmig
+	gryzFboU7DxE9275TzOFF3FIhfvQwNBhc8MQgr232FDuL365FKI/MdTDJuT7XROYdg6P
+	YDdwXAZ2t6taS2QXUKx/EvCexGKI1nHju6tRpuxH1GR6WmYnq0Ww4zs7Sgr5OJNmnpCZ
+	bDnQ==
 MIME-Version: 1.0
-References: <CAAwj3i0SJZWQOoHEpExfj+MNFUQrW+FVan2fS8xB7ky4ZvY99w@mail.gmail.com>,
-	<CAN40gStkAX-ug6xPNESJLBXmmSTLeybBWwk=c8DMTHWZssNJtw@mail.gmail.com>
-Content-Type: multipart/related; boundary="=_related 0062BF060025822C_="
-Message-Id: <OF54F9DC99.321A28A8-ON0025822C.0062BF03-0025822C.0062BF0C@notes.na.collabserv.com>
+In-Reply-To: <OF54F9DC99.321A28A8-ON0025822C.0062BF03-0025822C.0062BF0C@notes.na.collabserv.com>
+References: <CAN40gStkAX-ug6xPNESJLBXmmSTLeybBWwk=c8DMTHWZssNJtw@mail.gmail.com>
+	<CAAwj3i0SJZWQOoHEpExfj+MNFUQrW+FVan2fS8xB7ky4ZvY99w@mail.gmail.com>
+	<OF54F9DC99.321A28A8-ON0025822C.0062BF03-0025822C.0062BF0C@notes.na.collabserv.com>
+From: Ira McDonald <blueroofmusic@gmail.com>
+Date: Tue, 6 Feb 2018 13:02:19 -0500
+Message-ID: <CAN40gSspz6+14pJuBBpMGkD=c0KBEVKsp671JGLrc+dKU9B_6Q@mail.gmail.com>
+Content-Type: multipart/related; boundary="f403043ada1016554405648efc59"
 Subject: Re: [Printing-architecture] REMINDER: OP call today (02/06/18)
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
@@ -17,149 +27,356 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: till.kamppeter@gmail.com
-Cc: aveek.basu@lexmark.com, printing-architecture@lists.linux-foundation.org
+To: Danny Brennan <brennand@us.ibm.com>, Ira McDonald <blueroofmusic@gmail.com>
+Cc: Aveek Basu <aveek.basu@lexmark.com>, "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>, Till Kamppeter <till.kamppeter@gmail.com>
+
+--f403043ada1016554405648efc59
+Content-Type: multipart/alternative; boundary="f403043ada1016554205648efc58"
+
+--f403043ada1016554205648efc58
+Content-Type: text/plain; charset="UTF-8"
+
+Hi,
+
+YES - we'll move the call out a week (I'll send a notice in a moment).
+
+Till and Danny - please take care of yourselves and we'll talk next week
+(also a much better time for me).
+
+All - if you can, you might call-in to PWG Virtual F2F on Wednesday
+and Thursday this week (times are all in US Pacific - beware):
+
+http://www.pwg.org/chair/meeting-info/february-2018-virtual.html
+
+Cheers,
+- Ira
 
 
---=_related 0062BF060025822C_=
+Ira McDonald (Musician / Software Architect)
+Co-Chair - TCG Trusted Mobility Solutions WG
+Chair - Linux Foundation Open Printing WG
+Secretary - IEEE-ISTO Printer Working Group
+Co-Chair - IEEE-ISTO PWG Internet Printing Protocol WG
+IETF Designated Expert - IPP & Printer MIB
+Blue Roof Music / High North Inc
+http://sites.google.com/site/blueroofmusic
+http://sites.google.com/site/highnorthinc
+mailto: blueroofmusic@gmail.com
+Jan-April: 579 Park Place  Saline, MI  48176  734-944-0094
+May-Dec: PO Box 221  Grand Marais, MI 49839  906-494-2434
+
+
+On Tue, Feb 6, 2018 at 12:58 PM, Danny Brennan <brennand@us.ibm.com> wrote:
+
+> Till....
+>
+> I'm good with that....I'm still dealing with the flu :-(
+>
+> danny
+>
+>
+> ********************************************************
+> Danny M Brennan
+> GTS Services Delivery
+> Strategic Outsourcing Delivery
+> IBM UNIX RFS
+> IBM LNX RFS
+> IBM LNX ENG
+> Corona, CA 92881
+> Cell: 951-796-5762 <(951)%20796-5762>
+> E-mail: brennand@us.ibm.com
+> E-mail: mdannyb@linux.com
+> GSoC Mentor 2010 - 2017 Linux Foundation
+> http://www.google-melange.com/gsoc/homepage/google/gsoc2017
+> IEEE Senior Member - Foothill Section
+> http://ewh.ieee.org/r6/foothill
+> IEEE Printer Working Group - Individual Contributor
+> http://www.pwg.org/index.html
+> IEEE PWG Co-Chair - WIMS and PMP Working Groups
+> http://www.pwg.org/wims/index.html
+> IETF Individual Contributor - San Fransisco, CA Chapter
+> https://connect.isoc.org
+> IRC: freenode,mdannyb
+> https://ibm.webex.com/join/brennand
+> ********************************************************
+>
+>
+>
+> ----- Original message -----
+> From: Till Kamppeter <till.kamppeter@gmail.com>
+> To: Ira McDonald <blueroofmusic@gmail.com>, "printing-architecture@lists.
+> linux-foundation.org" <printing-architecture@lists.linux-foundation.org>,
+> Aveek Basu <aveek.basu@lexmark.com>, Danny Brennan <brennand@us.ibm.com>
+> Cc:
+> Subject: Re: REMINDER: OP call today (02/06/18)
+> Date: Tue, Feb 6, 2018 9:53 AM
+>
+> Could we move this meeting out for a week, as I am just recovering from
+> a severe flu. Thanks.
+>
+> Subject next week would be which sessions we will do on the Summit.
+>
+>     Till
+>
+>
+> On 02/06/2018 04:57 PM, Ira McDonald wrote:
+> > (1) February 2018 - US/Europe/Brazil/India - OP Monthly Meeting
+> >      - Note - Brazil Summer Time ends on 18 February 2018
+> >      - Note - PWG Virtual F2F (PWG Host via WebEx) - 7-8 February 2018
+> >      - Tuesday 6 February 2018, Daytime
+> >        - US
+> >          10am in San Francisco - US PST (Pacific Standard Time)
+> >          11am in Colorado - US MST (Mountain Standard Time)
+> >          12am in Chicago - US CST (Central Standard Time)
+> >          1pm in New York - US EST (Eastern Standard Time)
+> >        - Europe
+> >          7pm in Berlin - CET (Central Europe Time)
+> >        - Brazil
+> >          4pm in Belo Horizonte - BRST (Brasilia Summer Time)
+> >        - India
+> >          11:30pm in New Delhi - IST (India Standard Time)
+> >
+> >      US: +1 641-715-3814 <(641)%20715-3814> <tel:(641)%20715-3814>
+> >      Germany: +49 (0) 221 98203421 <+49%20221%2098203421>
+> <tel:+49%20221%2098203421>
+> >      Brazil: +55 61 4040-4460 <+55%2061%204040-4460>
+> <tel:+55%2061%204040-4460>
+> >      Japan: +81 (0) 3-5050-5070 <+81%203-5050-5070>
+> <tel:+81%203-5050-5070>
+> >      Participant Access Code:  622393#
+> >
+> >      (note that local numbers for many other countries are available,
+> >      also cellphone apps, VOIP support, etc. - please email Till for
+> >      details)
+> >
+> > Cheers,
+> > - Ira
+> >
+> > Ira McDonald (Musician / Software Architect)
+> > Co-Chair - TCG Trusted Mobility Solutions WG
+> > Chair - Linux Foundation Open Printing WG
+> > Secretary - IEEE-ISTO Printer Working Group
+> > Co-Chair - IEEE-ISTO PWG Internet Printing Protocol WG
+> > IETF Designated Expert - IPP & Printer MIB
+> > Blue Roof Music / High North Inc
+> > https://urldefense.proofpoint.com/v2/url?u=http-3A__sites.
+> google.com_site_blueroofmusic&d=DwIBaQ&c=jf_iaSHvJObTbx-siA1ZOg&r=aQ_
+> k4229NksvNYO3FAT4nXrmHtw1gFSknpgviHH7K_w&m=qj3n1HiwJuBDoKLalwCzjomUgKSz6t
+> JkSSUrpKB3iOA&s=acP64OpVeDBAiRQzhXmhgbzxPD5EvHcwKV3o1CIyeuQ&e=
+> > https://urldefense.proofpoint.com/v2/url?u=http-3A__sites.
+> google.com_site_highnorthinc&d=DwIBaQ&c=jf_iaSHvJObTbx-siA1ZOg&r=aQ_
+> k4229NksvNYO3FAT4nXrmHtw1gFSknpgviHH7K_w&m=qj3n1HiwJuBDoKLalwCzjomUgKSz6t
+> JkSSUrpKB3iOA&s=08v-23A83JSOvtdN7woXSua_sboH01AZkjcmfgvduTQ&e=
+> > mailto: blueroofmusic@gmail.com <mailto:blueroofmusic@gmail.com
+> <blueroofmusic@gmail.com>>
+> > Jan-April: 579 Park Place  Saline, MI  48176  734-944-0094
+> <(734)%20944-0094>
+> > May-Dec: PO Box 221  Grand Marais, MI 49839  906-494-2434
+> <(906)%20494-2434>
+> >
+>
+>
+>
+>
+>
+
+--f403043ada1016554205648efc58
+Content-Type: text/html; charset="UTF-8"
 Content-Transfer-Encoding: quoted-printable
-Content-Type: text/html; charset=UTF-8
 
-<div class=3D"socmaildefaultfont" dir=3D"ltr" style=3D"font-family:Arial, H=
-elvetica, sans-serif;font-size:10.5pt" ><div dir=3D"ltr" >Till....</div>
-<div dir=3D"ltr" >&nbsp;</div>
-<div dir=3D"ltr" >I'm good with that....I'm still dealing with the flu :-(<=
-/div>
-<div dir=3D"ltr" >&nbsp;</div>
-<div dir=3D"ltr" >danny</div>
-<div dir=3D"ltr" >&nbsp;</div>
-<div dir=3D"ltr" ><div class=3D"socmaildefaultfont" dir=3D"ltr" style=3D"fo=
-nt-family:Arial, Helvetica, sans-serif;font-size:10.5pt" ><div class=3D"soc=
-maildefaultfont" dir=3D"ltr" style=3D"font-family:Arial, Helvetica, sans-se=
-rif;font-size:10.5pt" ><div class=3D"socmaildefaultfont" dir=3D"ltr" style=
-=3D"font-family:Arial, Helvetica, sans-serif;font-size:10.5pt" ><div class=
-=3D"socmaildefaultfont" dir=3D"ltr" style=3D"font-family:Arial;font-size:10=
-.5pt" ><div class=3D"socmaildefaultfont" dir=3D"ltr" style=3D"font-family:A=
-rial;font-size:10.5pt" ><div dir=3D"ltr" ><br><font size=3D"2" face=3D"Verd=
-ana,Arial,Helvetica,sans-serif" ><font size=3D"2" face=3D"Default Sans Seri=
-f,Verdana,Arial,Helvetica,sans-serif" ><font size=3D"2" face=3D"Default San=
-s Serif,Verdana,Arial,Helvetica,sans-serif" >******************************=
-**************************<br>Danny M Brennan<br>GTS Services Delivery<br>S=
-trategic Outsourcing Delivery<br>IBM UNIX RFS<br>IBM LNX RFS</font></font><=
-/font></div>
-<div dir=3D"ltr" ><font size=3D"2" face=3D"Verdana,Arial,Helvetica,sans-ser=
-if" ><font size=3D"2" face=3D"Default Sans Serif,Verdana,Arial,Helvetica,sa=
-ns-serif" ><font size=3D"2" face=3D"Default Sans Serif,Verdana,Arial,Helvet=
-ica,sans-serif" >IBM LNX ENG<br>Corona, CA 92881<br>Cell: 951-796-5762<br>E=
--mail: brennand@us.ibm.com<br>E-mail: mdannyb@linux.com<br>GSoC Mentor 2010=
- - 2017 Linux Foundation<br>http://www.google-melange.com/gsoc/homepage/goo=
-gle/gsoc2017<br>IEEE Senior Member - Foothill Section</font></font></font><=
-/div>
-<div dir=3D"ltr" ><font size=3D"2" face=3D"Verdana,Arial,Helvetica,sans-ser=
-if" ><font size=3D"2" face=3D"Default Sans Serif,Verdana,Arial,Helvetica,sa=
-ns-serif" ><font size=3D"2" face=3D"Default Sans Serif,Verdana,Arial,Helvet=
-ica,sans-serif" >http://ewh.ieee.org/r6/foothill<br>IEEE Printer Working Gr=
-oup - Individual Contributor</font></font></font></div>
-<div dir=3D"ltr" ><font size=3D"2" face=3D"Verdana,Arial,Helvetica,sans-ser=
-if" ><font size=3D"2" face=3D"Default Sans Serif,Verdana,Arial,Helvetica,sa=
-ns-serif" ><font size=3D"2" face=3D"Default Sans Serif,Verdana,Arial,Helvet=
-ica,sans-serif" >http://www.pwg.org/index.html<br>IEEE PWG Co-Chair - WIMS =
-and PMP Working Groups<br><a href=3D"http://www.pwg.org/wims/index.html" >h=
-ttp://www.pwg.org/wims/index.html</a></font></font></font></div>
-<div dir=3D"ltr" ><font size=3D"2" face=3D"Verdana,Arial,Helvetica,sans-ser=
-if" ><font size=3D"2" face=3D"Default Sans Serif,Verdana,Arial,Helvetica,sa=
-ns-serif" ><font size=3D"2" face=3D"Default Sans Serif,Verdana,Arial,Helvet=
-ica,sans-serif" >IETF Individual Contributor - San Fransisco, CA Chapter<br=
-><a href=3D"https://connect.isoc.org" >https://connect.isoc.org</a><br>IRC:=
- freenode,mdannyb</font></font></font></div>
-<div dir=3D"ltr" ><div class=3D"card-td wide small-contact zoom-content" ><=
-div class=3D"zoomurl-item  editable-field" ><font size=3D"2" face=3D"Verdan=
-a,Arial,Helvetica,sans-serif" ><span style=3D"font-size:0.857em;" ><span st=
-yle=3D"font-family: Verdana,Geneva,sans-serif;" ><span class=3D"field-text"=
- ><a class=3D"field-text" href=3D"https://ibm.webex.com/join/brennand" targ=
-et=3D"=5Fblank" >https://ibm.webex.com/join/brennand</a></span></span></spa=
-n><br><img src=3D"cid:image001.jpg@01D16251.1924A500"  width=3D"152" height=
-=3D"159" ></font></div></div><font size=3D"2" face=3D"Verdana,Arial,Helveti=
-ca,sans-serif" ><font size=3D"2" face=3D"Default Sans Serif,Verdana,Arial,H=
-elvetica,sans-serif" ><font size=3D"2" face=3D"Default Sans Serif,Verdana,A=
-rial,Helvetica,sans-serif" >***********************************************=
-*********</font></font></font></div></div></div></div></div></div></div>
-<div dir=3D"ltr" >&nbsp;</div>
-<div dir=3D"ltr" >&nbsp;</div>
-<blockquote data-history-content-modified=3D"1" dir=3D"ltr" style=3D"border=
--left:solid #aaaaaa 2px; margin-left:5px; padding-left:5px; direction:ltr; =
-margin-right:0px" >----- Original message -----<br>From: Till Kamppeter &lt=
-;till.kamppeter@gmail.com&gt;<br>To: Ira McDonald &lt;blueroofmusic@gmail.c=
-om&gt;, "printing-architecture@lists.linux-foundation.org" &lt;printing-arc=
-hitecture@lists.linux-foundation.org&gt;, Aveek Basu &lt;aveek.basu@lexmark=
-.com&gt;, Danny Brennan &lt;brennand@us.ibm.com&gt;<br>Cc:<br>Subject: Re: =
-REMINDER: OP call today (02/06/18)<br>Date: Tue, Feb 6, 2018 9:53 AM<br>&nb=
-sp;
-<div><font size=3D"2" face=3D"Default Monospace,Courier New,Courier,monospa=
-ce" >Could we move this meeting out for a week, as I am just recovering fro=
-m<br>a severe flu. Thanks.<br><br>Subject next week would be which sessions=
- we will do on the Summit.<br><br>&nbsp;&nbsp; &nbsp;Till<br><br><br>On 02/=
-06/2018 04:57 PM, Ira McDonald wrote:<br>&gt; (1) February 2018 - US/Europe=
-/Brazil/India - OP Monthly Meeting<br>&gt; &nbsp; &nbsp; &nbsp;- Note - Bra=
-zil Summer Time ends on 18 February 2018<br>&gt; &nbsp; &nbsp; &nbsp;- Note=
- - PWG Virtual F2F (PWG Host via WebEx) - 7-8 February 2018<br>&gt; &nbsp; =
-&nbsp; &nbsp;- Tuesday 6 February 2018, Daytime<br>&gt; &nbsp; &nbsp; &nbsp=
-; &nbsp;- US<br>&gt; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;10am in San Francisc=
-o - US PST (Pacific Standard Time)<br>&gt; &nbsp; &nbsp; &nbsp; &nbsp; &nbs=
-p;11am in Colorado - US MST (Mountain Standard Time)<br>&gt; &nbsp; &nbsp; =
-&nbsp; &nbsp; &nbsp;12am in Chicago - US CST (Central Standard Time)<br>&gt=
-; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;1pm in New York - US EST (Eastern Stand=
-ard Time)<br>&gt; &nbsp; &nbsp; &nbsp; &nbsp;- Europe<br>&gt; &nbsp; &nbsp;=
- &nbsp; &nbsp; &nbsp;7pm in Berlin - CET (Central Europe Time)<br>&gt; &nbs=
-p; &nbsp; &nbsp; &nbsp;- Brazil<br>&gt; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;4=
-pm in Belo Horizonte - BRST (Brasilia Summer Time)<br>&gt; &nbsp; &nbsp; &n=
-bsp; &nbsp;- India<br>&gt; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;11:30pm in New=
- Delhi - IST (India Standard Time)<br>&gt;<br>&gt; &nbsp; &nbsp; &nbsp;US: =
-+1 641-715-3814 &lt;tel:(641)%20715-3814&gt;<br>&gt; &nbsp; &nbsp; &nbsp;Ge=
-rmany: +49 (0) 221 98203421 &lt;tel:+49%20221%2098203421&gt;<br>&gt; &nbsp;=
- &nbsp; &nbsp;Brazil: +55 61 4040-4460 &lt;tel:+55%2061%204040-4460&gt;<br>=
-&gt; &nbsp; &nbsp; &nbsp;Japan: +81 (0) 3-5050-5070 &lt;tel:+81%203-5050-50=
-70&gt;<br>&gt; &nbsp; &nbsp; &nbsp;Participant Access Code: &nbsp;622393#<b=
-r>&gt;<br>&gt; &nbsp; &nbsp; &nbsp;(note that local numbers for many other =
-countries are available,<br>&gt; &nbsp; &nbsp; &nbsp;also cellphone apps, V=
-OIP support, etc. - please email Till for<br>&gt; &nbsp; &nbsp; &nbsp;detai=
-ls)<br>&gt;<br>&gt; Cheers,<br>&gt; - Ira<br>&gt;<br>&gt; Ira McDonald (Mus=
-ician / Software Architect)<br>&gt; Co-Chair - TCG Trusted Mobility Solutio=
-ns WG<br>&gt; Chair - Linux Foundation Open Printing WG<br>&gt; Secretary -=
- IEEE-ISTO Printer Working Group<br>&gt; Co-Chair - IEEE-ISTO PWG Internet =
-Printing Protocol WG<br>&gt; IETF Designated Expert - IPP &amp; Printer MIB=
-<br>&gt; Blue Roof Music / High North Inc<br>&gt; <a href=3D"https://urldef=
-ense.proofpoint.com/v2/url?u=3Dhttp-3A=5F=5Fsites.google.com=5Fsite=5Fbluer=
-oofmusic&amp;d=3DDwIBaQ&amp;c=3Djf=5FiaSHvJObTbx-siA1ZOg&amp;r=3DaQ=5Fk4229=
-NksvNYO3FAT4nXrmHtw1gFSknpgviHH7K=5Fw&amp;m=3Dqj3n1HiwJuBDoKLalwCzjomUgKSz6=
-tJkSSUrpKB3iOA&amp;s=3DacP64OpVeDBAiRQzhXmhgbzxPD5EvHcwKV3o1CIyeuQ&amp;e=3D=
-" target=3D"=5Fblank" >https://urldefense.proofpoint.com/v2/url?u=3Dhttp-3A=
-=5F=5Fsites.google.com=5Fsite=5Fblueroofmusic&amp;d=3DDwIBaQ&amp;c=3Djf=5Fi=
-aSHvJObTbx-siA1ZOg&amp;r=3DaQ=5Fk4229NksvNYO3FAT4nXrmHtw1gFSknpgviHH7K=5Fw&=
-amp;m=3Dqj3n1HiwJuBDoKLalwCzjomUgKSz6tJkSSUrpKB3iOA&amp;s=3DacP64OpVeDBAiRQ=
-zhXmhgbzxPD5EvHcwKV3o1CIyeuQ&amp;e=3D</a><br>&gt; <a href=3D"https://urldef=
-ense.proofpoint.com/v2/url?u=3Dhttp-3A=5F=5Fsites.google.com=5Fsite=5Fhighn=
-orthinc&amp;d=3DDwIBaQ&amp;c=3Djf=5FiaSHvJObTbx-siA1ZOg&amp;r=3DaQ=5Fk4229N=
-ksvNYO3FAT4nXrmHtw1gFSknpgviHH7K=5Fw&amp;m=3Dqj3n1HiwJuBDoKLalwCzjomUgKSz6t=
-JkSSUrpKB3iOA&amp;s=3D08v-23A83JSOvtdN7woXSua=5FsboH01AZkjcmfgvduTQ&amp;e=
-=3D" target=3D"=5Fblank" >https://urldefense.proofpoint.com/v2/url?u=3Dhttp=
--3A=5F=5Fsites.google.com=5Fsite=5Fhighnorthinc&amp;d=3DDwIBaQ&amp;c=3Djf=
-=5FiaSHvJObTbx-siA1ZOg&amp;r=3DaQ=5Fk4229NksvNYO3FAT4nXrmHtw1gFSknpgviHH7K=
-=5Fw&amp;m=3Dqj3n1HiwJuBDoKLalwCzjomUgKSz6tJkSSUrpKB3iOA&amp;s=3D08v-23A83J=
-SOvtdN7woXSua=5FsboH01AZkjcmfgvduTQ&amp;e=3D</a><br>&gt; mailto: blueroofmu=
-sic@gmail.com &lt;<a href=3D"mailto:blueroofmusic@gmail.com" target=3D"=5Fb=
-lank" >mailto:blueroofmusic@gmail.com</a>&gt;<br>&gt; Jan-April: 579 Park P=
-lace &nbsp;Saline, MI &nbsp;48176 &nbsp;734-944-0094<br>&gt; May-Dec: PO Bo=
-x 221 &nbsp;Grand Marais, MI 49839 &nbsp;906-494-2434<br>&gt;</font><br>&nb=
-sp;</div></blockquote>
-<div dir=3D"ltr" >&nbsp;</div></div>
-<BR>
+<div dir=3D"ltr"><div><div><div><div><div>Hi,<br><br></div>YES - we&#39;ll =
+move the call out a week (I&#39;ll send a notice in a moment).<br><br></div=
+>Till and Danny - please take care of yourselves and we&#39;ll talk next we=
+ek<br></div>(also a much better time for me).<br><br></div><div>All - if yo=
+u can, you might call-in to PWG Virtual F2F on Wednesday<br></div><div>and =
+Thursday this week (times are all in US Pacific - beware):<br><br><a href=
+=3D"http://www.pwg.org/chair/meeting-info/february-2018-virtual.html">http:=
+//www.pwg.org/chair/meeting-info/february-2018-virtual.html</a><br><br></di=
+v>Cheers,<br></div>- Ira<br><br></div><div class=3D"gmail_extra"><br clear=
+=3D"all"><div><div class=3D"gmail_signature" data-smartmail=3D"gmail_signat=
+ure"><div dir=3D"ltr"><div><div dir=3D"ltr">Ira McDonald (Musician / Softwa=
+re Architect)<br>Co-Chair - TCG Trusted Mobility Solutions WG<br>Chair - Li=
+nux Foundation Open Printing WG<br>Secretary - IEEE-ISTO Printer Working Gr=
+oup<br>Co-Chair - IEEE-ISTO PWG Internet Printing Protocol WG<br>IETF Desig=
+nated Expert - IPP &amp; Printer MIB<br>Blue Roof Music / High North Inc<br=
+><a style=3D"color:rgb(51,51,255)" href=3D"http://sites.google.com/site/blu=
+eroofmusic" target=3D"_blank">http://sites.google.com/site/blueroofmusic</a=
+><br><a style=3D"color:rgb(102,0,204)" href=3D"http://sites.google.com/site=
+/highnorthinc" target=3D"_blank">http://sites.google.com/site/highnorthinc<=
+/a><br>mailto: <a href=3D"mailto:blueroofmusic@gmail.com" target=3D"_blank"=
+>blueroofmusic@gmail.com</a><br>Jan-April: 579 Park Place=C2=A0 Saline, MI=
+=C2=A0 48176=C2=A0 734-944-0094<br>May-Dec: PO Box 221=C2=A0 Grand Marais, =
+MI 49839=C2=A0 906-494-2434<br><br><div style=3D"display:inline"></div><div=
+ style=3D"display:inline"></div><div style=3D"display:inline"></div><div></=
+div><div></div><div></div><div></div></div></div></div></div></div>
+<br><div class=3D"gmail_quote">On Tue, Feb 6, 2018 at 12:58 PM, Danny Brenn=
+an <span dir=3D"ltr">&lt;<a href=3D"mailto:brennand@us.ibm.com" target=3D"_=
+blank">brennand@us.ibm.com</a>&gt;</span> wrote:<br><blockquote class=3D"gm=
+ail_quote" style=3D"margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-le=
+ft:1ex"><div class=3D"m_5657397106385966547socmaildefaultfont" dir=3D"ltr" =
+style=3D"font-family:Arial,Helvetica,sans-serif;font-size:10.5pt"><div dir=
+=3D"ltr">Till....</div>
+<div dir=3D"ltr">=C2=A0</div>
+<div dir=3D"ltr">I&#39;m good with that....I&#39;m still dealing with the f=
+lu :-(</div>
+<div dir=3D"ltr">=C2=A0</div>
+<div dir=3D"ltr">danny</div>
+<div dir=3D"ltr">=C2=A0</div>
+<div dir=3D"ltr"><div class=3D"m_5657397106385966547socmaildefaultfont" dir=
+=3D"ltr" style=3D"font-family:Arial,Helvetica,sans-serif;font-size:10.5pt">=
+<div class=3D"m_5657397106385966547socmaildefaultfont" dir=3D"ltr" style=3D=
+"font-family:Arial,Helvetica,sans-serif;font-size:10.5pt"><div class=3D"m_5=
+657397106385966547socmaildefaultfont" dir=3D"ltr" style=3D"font-family:Aria=
+l,Helvetica,sans-serif;font-size:10.5pt"><div class=3D"m_565739710638596654=
+7socmaildefaultfont" dir=3D"ltr" style=3D"font-family:Arial;font-size:10.5p=
+t"><div class=3D"m_5657397106385966547socmaildefaultfont" dir=3D"ltr" style=
+=3D"font-family:Arial;font-size:10.5pt"><div dir=3D"ltr"><br><font size=3D"=
+2" face=3D"Verdana,Arial,Helvetica,sans-serif"><font size=3D"2" face=3D"Def=
+ault Sans Serif,Verdana,Arial,Helvetica,sans-serif"><font size=3D"2" face=
+=3D"Default Sans Serif,Verdana,Arial,Helvetica,sans-serif">****************=
+**************<wbr>**************************<br>Danny M Brennan<br>GTS Ser=
+vices Delivery<br>Strategic Outsourcing Delivery<br>IBM UNIX RFS<br>IBM LNX=
+ RFS</font></font></font></div>
+<div dir=3D"ltr"><font size=3D"2" face=3D"Verdana,Arial,Helvetica,sans-seri=
+f"><font size=3D"2" face=3D"Default Sans Serif,Verdana,Arial,Helvetica,sans=
+-serif"><font size=3D"2" face=3D"Default Sans Serif,Verdana,Arial,Helvetica=
+,sans-serif">IBM LNX ENG<br>Corona, CA 92881<br>Cell: <a href=3D"tel:(951)%=
+20796-5762" value=3D"+19517965762" target=3D"_blank">951-796-5762</a><br>E-=
+mail: <a href=3D"mailto:brennand@us.ibm.com" target=3D"_blank">brennand@us.=
+ibm.com</a><br>E-mail: <a href=3D"mailto:mdannyb@linux.com" target=3D"_blan=
+k">mdannyb@linux.com</a><br>GSoC Mentor 2010 - 2017 Linux Foundation<br><a =
+href=3D"http://www.google-melange.com/gsoc/homepage/google/gsoc2017" target=
+=3D"_blank">http://www.google-melange.com/<wbr>gsoc/homepage/google/gsoc201=
+7</a><br>IEEE Senior Member - Foothill Section</font></font></font></div>
+<div dir=3D"ltr"><font size=3D"2" face=3D"Verdana,Arial,Helvetica,sans-seri=
+f"><font size=3D"2" face=3D"Default Sans Serif,Verdana,Arial,Helvetica,sans=
+-serif"><font size=3D"2" face=3D"Default Sans Serif,Verdana,Arial,Helvetica=
+,sans-serif"><a href=3D"http://ewh.ieee.org/r6/foothill" target=3D"_blank">=
+http://ewh.ieee.org/r6/<wbr>foothill</a><br>IEEE Printer Working Group - In=
+dividual Contributor</font></font></font></div>
+<div dir=3D"ltr"><font size=3D"2" face=3D"Verdana,Arial,Helvetica,sans-seri=
+f"><font size=3D"2" face=3D"Default Sans Serif,Verdana,Arial,Helvetica,sans=
+-serif"><font size=3D"2" face=3D"Default Sans Serif,Verdana,Arial,Helvetica=
+,sans-serif"><a href=3D"http://www.pwg.org/index.html" target=3D"_blank">ht=
+tp://www.pwg.org/index.html</a><br>IEEE PWG Co-Chair - WIMS and PMP Working=
+ Groups<br><a href=3D"http://www.pwg.org/wims/index.html" target=3D"_blank"=
+>http://www.pwg.org/wims/index.<wbr>html</a></font></font></font></div>
+<div dir=3D"ltr"><font size=3D"2" face=3D"Verdana,Arial,Helvetica,sans-seri=
+f"><font size=3D"2" face=3D"Default Sans Serif,Verdana,Arial,Helvetica,sans=
+-serif"><font size=3D"2" face=3D"Default Sans Serif,Verdana,Arial,Helvetica=
+,sans-serif">IETF Individual Contributor - San Fransisco, CA Chapter<br><a =
+href=3D"https://connect.isoc.org" target=3D"_blank">https://connect.isoc.or=
+g</a><br>IRC: freenode,mdannyb</font></font></font></div>
+<div dir=3D"ltr"><div class=3D"m_5657397106385966547card-td m_5657397106385=
+966547wide m_5657397106385966547small-contact m_5657397106385966547zoom-con=
+tent"><div class=3D"m_5657397106385966547zoomurl-item m_5657397106385966547=
+editable-field"><font size=3D"2" face=3D"Verdana,Arial,Helvetica,sans-serif=
+"><span style=3D"font-size:0.857em"><span style=3D"font-family:Verdana,Gene=
+va,sans-serif"><span class=3D"m_5657397106385966547field-text"><a class=3D"=
+m_5657397106385966547field-text" href=3D"https://ibm.webex.com/join/brennan=
+d" target=3D"_blank">https://ibm.webex.com/join/<wbr>brennand</a></span></s=
+pan></span><br><img src=3D"cid:image001.jpg@01D16251.1924A500" width=3D"152=
+" height=3D"159"></font></div></div><font size=3D"2" face=3D"Verdana,Arial,=
+Helvetica,sans-serif"><font size=3D"2" face=3D"Default Sans Serif,Verdana,A=
+rial,Helvetica,sans-serif"><font size=3D"2" face=3D"Default Sans Serif,Verd=
+ana,Arial,Helvetica,sans-serif">******************************<wbr>********=
+******************</font></font></font></div></div></div></div></div></div>=
+</div>
+<div dir=3D"ltr">=C2=A0</div>
+<div dir=3D"ltr">=C2=A0</div>
+<blockquote dir=3D"ltr" style=3D"border-left:solid #aaaaaa 2px;margin-left:=
+5px;padding-left:5px;direction:ltr;margin-right:0px"><div><div class=3D"h5"=
+>----- Original message -----<br>From: Till Kamppeter &lt;<a href=3D"mailto=
+:till.kamppeter@gmail.com" target=3D"_blank">till.kamppeter@gmail.com</a>&g=
+t;<br>To: Ira McDonald &lt;<a href=3D"mailto:blueroofmusic@gmail.com" targe=
+t=3D"_blank">blueroofmusic@gmail.com</a>&gt;, &quot;<a href=3D"mailto:print=
+ing-architecture@lists.linux-foundation.org" target=3D"_blank">printing-arc=
+hitecture@lists.<wbr>linux-foundation.org</a>&quot; &lt;<a href=3D"mailto:p=
+rinting-architecture@lists.linux-foundation.org" target=3D"_blank">printing=
+-architecture@lists.<wbr>linux-foundation.org</a>&gt;, Aveek Basu &lt;<a hr=
+ef=3D"mailto:aveek.basu@lexmark.com" target=3D"_blank">aveek.basu@lexmark.c=
+om</a>&gt;, Danny Brennan &lt;<a href=3D"mailto:brennand@us.ibm.com" target=
+=3D"_blank">brennand@us.ibm.com</a>&gt;<br>Cc:<br>Subject: Re: REMINDER: OP=
+ call today (02/06/18)<br>Date: Tue, Feb 6, 2018 9:53 AM<br>=C2=A0
+</div></div><div><font size=3D"2" face=3D"Default Monospace,Courier New,Cou=
+rier,monospace"><div><div class=3D"h5">Could we move this meeting out for a=
+ week, as I am just recovering from<br>a severe flu. Thanks.<br><br>Subject=
+ next week would be which sessions we will do on the Summit.<br><br>=C2=A0=
+=C2=A0 =C2=A0Till<br><br><br>On 02/06/2018 04:57 PM, Ira McDonald wrote:<br=
+>&gt; (1) February 2018 - US/Europe/Brazil/India - OP Monthly Meeting<br>&g=
+t; =C2=A0 =C2=A0 =C2=A0- Note - Brazil Summer Time ends on 18 February 2018=
+<br>&gt; =C2=A0 =C2=A0 =C2=A0- Note - PWG Virtual F2F (PWG Host via WebEx) =
+- 7-8 February 2018<br>&gt; =C2=A0 =C2=A0 =C2=A0- Tuesday 6 February 2018, =
+Daytime<br>&gt; =C2=A0 =C2=A0 =C2=A0 =C2=A0- US<br>&gt; =C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 =C2=A010am in San Francisco - US PST (Pacific Standard Time)<br>=
+&gt; =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A011am in Colorado - US MST (Mountain =
+Standard Time)<br>&gt; =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A012am in Chicago - =
+US CST (Central Standard Time)<br>&gt; =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A01p=
+m in New York - US EST (Eastern Standard Time)<br>&gt; =C2=A0 =C2=A0 =C2=A0=
+ =C2=A0- Europe<br>&gt; =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A07pm in Berlin - C=
+ET (Central Europe Time)<br>&gt; =C2=A0 =C2=A0 =C2=A0 =C2=A0- Brazil<br>&gt=
+; =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A04pm in Belo Horizonte - BRST (Brasilia =
+Summer Time)<br>&gt; =C2=A0 =C2=A0 =C2=A0 =C2=A0- India<br>&gt; =C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 =C2=A011:30pm in New Delhi - IST (India Standard Time)<br=
+>&gt;<br>&gt; =C2=A0 =C2=A0 =C2=A0US: <a href=3D"tel:(641)%20715-3814" valu=
+e=3D"+16417153814" target=3D"_blank">+1 641-715-3814</a> &lt;tel:(641)%2071=
+5-3814&gt;<br>&gt; =C2=A0 =C2=A0 =C2=A0Germany: <a href=3D"tel:+49%20221%20=
+98203421" value=3D"+4922198203421" target=3D"_blank">+49 (0) 221 98203421</=
+a> &lt;tel:+49%20221%2098203421&gt;<br>&gt; =C2=A0 =C2=A0 =C2=A0Brazil: <a =
+href=3D"tel:+55%2061%204040-4460" value=3D"+556140404460" target=3D"_blank"=
+>+55 61 4040-4460</a> &lt;tel:+55%2061%204040-4460&gt;<br>&gt; =C2=A0 =C2=
+=A0 =C2=A0Japan: <a href=3D"tel:+81%203-5050-5070" value=3D"+81350505070" t=
+arget=3D"_blank">+81 (0) 3-5050-5070</a> &lt;tel:+81%203-5050-5070&gt;<br>&=
+gt; =C2=A0 =C2=A0 =C2=A0Participant Access Code: =C2=A0622393#<br>&gt;<br>&=
+gt; =C2=A0 =C2=A0 =C2=A0(note that local numbers for many other countries a=
+re available,<br>&gt; =C2=A0 =C2=A0 =C2=A0also cellphone apps, VOIP support=
+, etc. - please email Till for<br>&gt; =C2=A0 =C2=A0 =C2=A0details)<br>&gt;=
+<br>&gt; Cheers,<br>&gt; - Ira<br>&gt;<br>&gt; Ira McDonald (Musician / Sof=
+tware Architect)<br>&gt; Co-Chair - TCG Trusted Mobility Solutions WG<br>&g=
+t; Chair - Linux Foundation Open Printing WG<br>&gt; Secretary - IEEE-ISTO =
+Printer Working Group<br>&gt; Co-Chair - IEEE-ISTO PWG Internet Printing Pr=
+otocol WG<br>&gt; IETF Designated Expert - IPP &amp; Printer MIB<br>&gt; Bl=
+ue Roof Music / High North Inc<br></div></div>&gt; <a href=3D"https://urlde=
+fense.proofpoint.com/v2/url?u=3Dhttp-3A__sites.google.com_site_blueroofmusi=
+c&amp;d=3DDwIBaQ&amp;c=3Djf_iaSHvJObTbx-siA1ZOg&amp;r=3DaQ_k4229NksvNYO3FAT=
+4nXrmHtw1gFSknpgviHH7K_w&amp;m=3Dqj3n1HiwJuBDoKLalwCzjomUgKSz6tJkSSUrpKB3iO=
+A&amp;s=3DacP64OpVeDBAiRQzhXmhgbzxPD5EvHcwKV3o1CIyeuQ&amp;e=3D" target=3D"_=
+blank">https://urldefense.proofpoint.<wbr>com/v2/url?u=3Dhttp-3A__sites.<wb=
+r>google.com_site_blueroofmusic&amp;<wbr>d=3DDwIBaQ&amp;c=3Djf_iaSHvJObTbx-=
+<wbr>siA1ZOg&amp;r=3DaQ_<wbr>k4229NksvNYO3FAT4nXrmHtw1gFSkn<wbr>pgviHH7K_w&=
+amp;m=3D<wbr>qj3n1HiwJuBDoKLalwCzjomUgKSz6t<wbr>JkSSUrpKB3iOA&amp;s=3D<wbr>=
+acP64OpVeDBAiRQzhXmhgbzxPD5EvH<wbr>cwKV3o1CIyeuQ&amp;e=3D</a><br>&gt; <a hr=
+ef=3D"https://urldefense.proofpoint.com/v2/url?u=3Dhttp-3A__sites.google.co=
+m_site_highnorthinc&amp;d=3DDwIBaQ&amp;c=3Djf_iaSHvJObTbx-siA1ZOg&amp;r=3Da=
+Q_k4229NksvNYO3FAT4nXrmHtw1gFSknpgviHH7K_w&amp;m=3Dqj3n1HiwJuBDoKLalwCzjomU=
+gKSz6tJkSSUrpKB3iOA&amp;s=3D08v-23A83JSOvtdN7woXSua_sboH01AZkjcmfgvduTQ&amp=
+;e=3D" target=3D"_blank">https://urldefense.proofpoint.<wbr>com/v2/url?u=3D=
+http-3A__sites.<wbr>google.com_site_highnorthinc&amp;<wbr>d=3DDwIBaQ&amp;c=
+=3Djf_iaSHvJObTbx-<wbr>siA1ZOg&amp;r=3DaQ_<wbr>k4229NksvNYO3FAT4nXrmHtw1gFS=
+kn<wbr>pgviHH7K_w&amp;m=3D<wbr>qj3n1HiwJuBDoKLalwCzjomUgKSz6t<wbr>JkSSUrpKB=
+3iOA&amp;s=3D08v-<wbr>23A83JSOvtdN7woXSua_<wbr>sboH01AZkjcmfgvduTQ&amp;e=3D=
+</a><span class=3D""><br>&gt; mailto: <a href=3D"mailto:blueroofmusic@gmail=
+.com" target=3D"_blank">blueroofmusic@gmail.com</a> &lt;<a href=3D"mailto:b=
+lueroofmusic@gmail.com" target=3D"_blank">mailto:blueroofmusic@gmail.<wbr>c=
+om</a>&gt;<br>&gt; Jan-April: 579 Park Place =C2=A0Saline, MI =C2=A048176 =
+=C2=A0<a href=3D"tel:(734)%20944-0094" value=3D"+17349440094" target=3D"_bl=
+ank">734-944-0094</a><br>&gt; May-Dec: PO Box 221 =C2=A0Grand Marais, MI 49=
+839 =C2=A0<a href=3D"tel:(906)%20494-2434" value=3D"+19064942434" target=3D=
+"_blank">906-494-2434</a><br>&gt;</span></font><br>=C2=A0</div></blockquote=
+>
+<div dir=3D"ltr">=C2=A0</div></div>
+<br>
+</blockquote></div><br></div>
 
---=_related 0062BF060025822C_=
+--f403043ada1016554205648efc58--
+
+--f403043ada1016554405648efc59
 Content-Type: image/jpeg; name="Image.image001.jpg@01D16251.1924A500.jpg"
-Content-Disposition: inline; filename="Image.image001.jpg@01D16251.1924A500.jpg"
-Content-ID: <image001.jpg@01D16251.1924A500>
+Content-Disposition: inline; 
+	filename="Image.image001.jpg@01D16251.1924A500.jpg"
 Content-Transfer-Encoding: base64
+Content-ID: <image001.jpg@01D16251.1924A500>
+X-Attachment-Id: e8e135a7c0728a75_0.1
 
 /9j/4AAQSkZJRgABAQEAeAB4AAD/4QBaRXhpZgAATU0AKgAAAAgABQMBAAUAAAABAAAASgMDAAEA
 AAABAAAAAFEQAAEAAAABAQAAAFERAAQAAAABAAASdFESAAQAAAABAAASdAAAAAAAAYagAACxj//b
@@ -305,7 +522,4 @@ fRRRXnmgUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFAHj/wC07+yt/wALxtZr/RL7w/on
 if8A4lMiT6roP9o2F3PpesW2rabNdrbzWl9N9jnhuDBEl9FAGv7hpYpw2yuQ/ZW/YaufhR8TPEXj
 3xPL4PtNV8W+ILnxjL4T8L6FBHoGj63dWkVpNqiXNzG97PqhthNay3sL2VvdRzSyNp8U00zv9H0U
 AFFFFAH/2Q==
-
-
---=_related 0062BF060025822C_=--
-
+--f403043ada1016554405648efc59--
