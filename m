@@ -1,23 +1,22 @@
-Return-Path: <aveekb@lexmark.com>
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
-	d=lexmark.com; s=lxk-google;
-	h=mime-version:in-reply-to:references:from:date:message-id:subject:to
-	:cc; bh=Z5tWgXqf79NrxT0Ujh5xCvqLwlJZqPsHGyttFSRYwHU=;
-	b=Wdrc15wRmf5Zotbi3FX9Jk5p7K0SK6wK7yb3qDVi/RGonWR+ct1Qt1PQTbtjuHMTo8
-	RaPhzlM+apzSO00Y0ugMXNLOX6Kc5VBM8uxpsnnXpSIM+CnAd4Y857W2jBsReLgzf4jZ
-	X+Ka93PtD3AoeB9xp3/YyTRombhZu7w0DK/R+MpcRbB4S5s/QlDmvVqAUhTlU9vGviZ7
-	HyIK+4lSKyb+I1ebNYhxQyTDamBf5JXcc88mcoKms6YEPnKQE84BvXWc8n4QwD+MenqB
-	dVqXdHrPNzKXaLuft9sjtZjFwlpq0jL/idpMmmS/P+PWz4fs7FMB5S95VidI5+43EXPH
-	ZmAA==
+Return-Path: <blueroofmusic@gmail.com>
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
+	h=mime-version:in-reply-to:references:from:date:message-id:subject:to; 
+	bh=uAWw5Ro98b70s4Yq50q5kHEmHffBVQOMyq3IQkFU1Yo=;
+	b=unkWyBpab7F1LBUz/C0HWkHniaqCSE1Pj3L47i8sMqUUJu1LWExYajVPdMviccbPfC
+	QCs9GlwhzZhaQ16/6PE0c1klxtUWyKkejl25/4bKCLTDK0hkAd1wmSFXAnJc4vx1dbVY
+	BUuNTxJu5GbCXEIDFvxa+CAJIpeDA6aOmtmKBjzkZG9ZQtfjy61nv8Fo5Uc3dIEI5ipI
+	Qe9Ns14yJOMoeZclizD0OznyzNVMfNpWgdbr130iK6yqpp6aPni4nQhc9k4xsUHUop/n
+	GRwbE/VM21wYgjAA5B03q0x/f95GmAOjvsbP+syyF9SB80LvfVeN+3ayelJxpWUUg/lA
+	oChQ==
 MIME-Version: 1.0
-In-Reply-To: <CAMmetfRJ5yCcuk9_Ccq=U63zvwhbfY1piNKAAyBg34wrJpMBDg@mail.gmail.com>
-References: <CAMmetfRJ5yCcuk9_Ccq=U63zvwhbfY1piNKAAyBg34wrJpMBDg@mail.gmail.com>
-From: Aveek Basu <aveek.basu@lexmark.com>
-Date: Tue, 13 Feb 2018 00:59:26 +0530
-Message-ID: <CAMmetfTY3dxYivJ97SLdG3SR-9FKSZDnSjuYZozgtVPfwh_4Qw@mail.gmail.com>
-Content-Type: multipart/alternative; boundary="001a1140ff2aa5f15f056508e60d"
-Subject: Re: [Printing-architecture] Mentors Required for Open Printing GSoC
-	2018 projects.
+In-Reply-To: <63589893-8D25-4780-BEA1-BEA7F29F4B7B@hp.com>
+References: <63589893-8D25-4780-BEA1-BEA7F29F4B7B@hp.com>
+From: Ira McDonald <blueroofmusic@gmail.com>
+Date: Thu, 15 Feb 2018 14:29:46 -0500
+Message-ID: <CAN40gStU9F4=OMoWU51v3xBvSTSbS=GOYeQyYcVq5m_G4=ksxQ@mail.gmail.com>
+Content-Type: multipart/alternative; boundary="94eb2c12524a519c98056545416b"
+Subject: [Printing-architecture] Fwd: [PWG-Announce] PWG February 2018
+	Face-to-Face Meeting Summary
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>,
@@ -27,91 +26,110 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Open Printing <printing-architecture@lists.linux-foundation.org>
-Cc: Till Kamppeter <till.kamppeter@gmail.com>
+To: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>, Till Kamppeter <till.kamppeter@gmail.com>, Aveek Basu <aveek.basu@lexmark.com>, Danny Brennan <brennand@us.ibm.com>, Ira McDonald <blueroofmusic@gmail.com>
 
---001a1140ff2aa5f15f056508e60d
+--94eb2c12524a519c98056545416b
 Content-Type: text/plain; charset="UTF-8"
 
-Hi All,
-
-This is to inform you that Linux Foundation has been accepted as a
-Mentoring Org for GSoC 2018 as well. We are still looking for mentors who
-can help our students. More the number of mentors more will be the number
-of projects that we will be able to deliver.
-
-Looking forward to all your help and support in mentoring the students.
+---------- Forwarded message ----------
+From: Kennedy, Smith (Wireless & Standards Architec) <smith.kennedy@hp.com>
+Date: Thu, Feb 15, 2018 at 11:51 AM
+Subject: [PWG-Announce] PWG February 2018 Face-to-Face Meeting Summary
+To: PWG Announcements Reflector <pwg-announce@pwg.org>
 
 
+Greetings,
 
+Thanks to all attendees of the PWG February 2018 virtual Face-to-Face
+Meeting for their presence and contributions! A summary is now available
+for those who might have missed it.
 
-Regards,
-Aveek
+PWG February 2018 Face-to-Face Meeting Summary - Printer Working Group
+<http://www.pwg.org/blog/pwg-februrary-2018-F2F-summary.html>
 
-On Wed, Jan 31, 2018 at 8:44 PM, Aveek Basu <aveek.basu@lexmark.com> wrote:
+Our next Face-to-Face meeting is May 15-17, 2018. Details are on the PWG
+Meetings page <http://www.pwg.org/chair/meeting-info/meetings.html>. We
+hope to see you there!
 
-> Hi All,
->
-> Like every year, this year also myself and Till are organizing the Google
-> Summer Of Code Projects for Linux Foundation. There are a couple of
-> interesting project on this year's list with regards to Open Printing:
->
-> https://wiki.linuxfoundation.org/gsoc/google-summer-code-
-> 2018-openprinting-projects
->
->
-> Already there is bunch of talented students who are interested in working
-> on these projects. We require your help in mentoring these students. It
-> will be of great help if you could please help us in mentoring these
-> students to deliver some great projects.
->
->
->
-> --
-> Regards,
-> Aveek
->
+Smith
+
+/**
+    Smith Kennedy
+    Wireless & Standards Architect - IPG-PPS
+    Standards - IEEE ISTO PWG / Bluetooth SIG / Wi-Fi Alliance / NFC Forum
+/ USB-IF
+    Chair, IEEE ISTO Printer Working Group
+    HP Inc.
+*/
 
 
 
--- 
-Regards,
-Aveek
 
---001a1140ff2aa5f15f056508e60d
+_______________________________________________
+pwg-announce mailing list
+pwg-announce@pwg.org
+https://www.pwg.org/mailman/listinfo/pwg-announce
+
+--94eb2c12524a519c98056545416b
 Content-Type: text/html; charset="UTF-8"
 Content-Transfer-Encoding: quoted-printable
 
-<div dir=3D"ltr">Hi All,<div><br></div><div>This is to inform you that Linu=
-x Foundation has been accepted as a Mentoring Org for GSoC 2018 as well. We=
- are still looking for mentors who can help our students. More the number o=
-f mentors more will be the number of projects that we will be able to deliv=
-er.=C2=A0</div><div><br></div><div>Looking forward to all your help and sup=
-port in mentoring the students.</div><div><br></div><div><br></div><div><br=
-></div><div><br></div><div>Regards,</div><div>Aveek</div><div class=3D"gmai=
-l_extra"><br><div class=3D"gmail_quote">On Wed, Jan 31, 2018 at 8:44 PM, Av=
-eek Basu <span dir=3D"ltr">&lt;<a href=3D"mailto:aveek.basu@lexmark.com" ta=
-rget=3D"_blank">aveek.basu@lexmark.com</a>&gt;</span> wrote:<br><blockquote=
- class=3D"gmail_quote" style=3D"margin:0px 0px 0px 0.8ex;border-left:1px so=
-lid rgb(204,204,204);padding-left:1ex"><div dir=3D"ltr">Hi All,<div><br></d=
-iv><div>Like every year, this year also myself and Till are organizing the =
-Google Summer Of Code Projects for Linux Foundation. There are a couple of =
-interesting project on this year&#39;s list with regards to Open Printing:=
-=C2=A0</div><div><br></div><div><a href=3D"https://wiki.linuxfoundation.org=
-/gsoc/google-summer-code-2018-openprinting-projects" target=3D"_blank">http=
-s://wiki.linuxfoundation.<wbr>org/gsoc/google-summer-code-<wbr>2018-openpri=
-nting-projects</a></div><div><br></div><div><br></div><div>Already there is=
- bunch of talented students who are interested in working on these projects=
-. We require your help in mentoring these students. It will be of great hel=
-p if you could please help us in mentoring these students to deliver some g=
-reat projects.</div><span class=3D"gmail-HOEnZb"><font color=3D"#888888"><d=
-iv><br></div><div><div><span style=3D"color:rgb(0,0,0);font-size:12.8px"><b=
-r></span></div><div><span style=3D"color:rgb(0,0,0);font-size:12.8px"><br><=
-/span></div>-- <br><div class=3D"gmail-m_-8286456135205618330gmail_signatur=
-e"><div dir=3D"ltr">Regards,<div>Aveek</div></div></div>
-</div></font></span></div>
-</blockquote></div><br><br clear=3D"all"><div><br></div>-- <br><div class=
-=3D"gmail_signature"><div dir=3D"ltr">Regards,<div>Aveek</div></div></div>
-</div></div>
+<div dir=3D"ltr"><div><div class=3D"gmail_signature" data-smartmail=3D"gmai=
+l_signature"><div dir=3D"ltr"><div><div dir=3D"ltr"><div style=3D"display:i=
+nline"></div><div style=3D"display:inline"></div><div style=3D"display:inli=
+ne"></div><div></div><div></div><div></div><div></div></div></div></div></d=
+iv></div>
+<br><div class=3D"gmail_quote">---------- Forwarded message ----------<br>F=
+rom: <b class=3D"gmail_sendername">Kennedy, Smith (Wireless  &amp; Standard=
+s Architec)</b> <span dir=3D"ltr">&lt;<a href=3D"mailto:smith.kennedy@hp.co=
+m">smith.kennedy@hp.com</a>&gt;</span><br>Date: Thu, Feb 15, 2018 at 11:51 =
+AM<br>Subject: [PWG-Announce] PWG February 2018 Face-to-Face Meeting Summar=
+y<br>To: PWG Announcements Reflector &lt;<a href=3D"mailto:pwg-announce@pwg=
+.org">pwg-announce@pwg.org</a>&gt;<br><br><br>
 
---001a1140ff2aa5f15f056508e60d--
+
+
+<div style=3D"word-wrap:break-word;line-break:after-white-space">
+Greetings,
+<div><br>
+</div>
+<div>Thanks to all attendees of the=C2=A0PWG February 2018 virtual Face-to-=
+Face Meeting for their presence and contributions! A summary is now availab=
+le for those who might have missed it.</div>
+<div><br>
+</div>
+<div><a href=3D"http://www.pwg.org/blog/pwg-februrary-2018-F2F-summary.html=
+" target=3D"_blank">PWG February 2018 Face-to-Face Meeting Summary - Printe=
+r Working Group</a></div>
+<div><br>
+</div>
+<div>Our next Face-to-Face meeting is May 15-17, 2018. Details are on the=
+=C2=A0<a href=3D"http://www.pwg.org/chair/meeting-info/meetings.html" targe=
+t=3D"_blank">PWG Meetings page</a>. We hope to see you there!</div>
+<div><br>
+<div>Smith<br>
+<br>
+/**<br>
+=C2=A0 =C2=A0 Smith Kennedy<br>
+=C2=A0 =C2=A0 Wireless &amp; Standards Architect - IPG-PPS<br>
+=C2=A0 =C2=A0 Standards - IEEE ISTO PWG / Bluetooth SIG / Wi-Fi Alliance / =
+NFC Forum / USB-IF<br>
+=C2=A0 =C2=A0 Chair, IEEE ISTO Printer Working Group<br>
+=C2=A0 =C2=A0 HP Inc.<br>
+*/<br>
+<br>
+<br>
+</div>
+<br>
+</div>
+</div>
+
+<br>______________________________<wbr>_________________<br>
+pwg-announce mailing list<br>
+<a href=3D"mailto:pwg-announce@pwg.org">pwg-announce@pwg.org</a><br>
+<a href=3D"https://www.pwg.org/mailman/listinfo/pwg-announce" rel=3D"norefe=
+rrer" target=3D"_blank">https://www.pwg.org/mailman/<wbr>listinfo/pwg-annou=
+nce</a><br>
+<br></div><br></div>
+
+--94eb2c12524a519c98056545416b--
