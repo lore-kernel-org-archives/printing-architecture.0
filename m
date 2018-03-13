@@ -1,19 +1,19 @@
 Return-Path: <blueroofmusic@gmail.com>
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
 	h=mime-version:from:date:message-id:subject:to;
-	bh=E1xNUx1hhkbCTW8hGMEC7IvPRmtes3gAu/f3yqJIY5k=;
-	b=DOucctuTKJ2NAVVORVpdpCgGke9GXNuJLg845BXxd6Q/Li97j2GI9f8E2qskWyRIut
-	oFZrLNqKVtdA9zfEktbVKrg/PNbnA1VmvlVjR5jdGcw/I4v2BfxBK5vFOShSdqF4Gg1u
-	S1pm8Cu6+bm0gKohm12YcaW+oaKCPI3NF6Bpt6MqBTR+hvCY/OaKTBJVGN0JDAZIu4Wj
-	3Prq+k6/GYkfGafUqyb/JQVyi8OXoi3CQxcub6wHmzu8+Z8+2v5c5jv+yEFLfvb/NZ3Z
-	H7C839Iph0au1x1SLcIkq/Qo2JQnKJmS+8oAGdU2Yn85Ll+9kvTQ4rJzUcLtzvEm9kis
-	D/tA==
+	bh=V5ojUW/itsgBm1xVnHtv4E58c+60Y4z0d1N28vzKPC0=;
+	b=Bw6+lj+X46g89Lx3p25eimW5TY4lpriZ0a3GI9PDoxxJy/PNip8OgaQ/iDIE1T2BdJ
+	T+uul9uOHflFRsI5cEGMgjWEVeQd82+GUzEkwIm8nYdj+yP+XGJxraSfRYywdEztAxbo
+	qeS/2p3gkUM2rpTNymDSBdSznaJE8awJCaA/eBJKoxWy0Xymm/rzFJ5I+2IwzIncqmx0
+	NDxHag3H0eGYDpPG3Uhq4OJwwsxQOAAZhAf7lZL0KtBIvlG8Jx6sit/GiOI+Erx18n+f
+	yzsexQwJXYfLDzfgIfk4tab7GY/coEa6XJwDlefxuENiErg8ZAr1+Up7m5sHN9j5dyts
+	bvjA==
 MIME-Version: 1.0
 From: Ira McDonald <blueroofmusic@gmail.com>
-Date: Sat, 24 Feb 2018 17:32:46 -0500
-Message-ID: <CAN40gSvjWYCO=ZNSk4EZCswn+EpMhtL+ujdhmFvHy=1Hwf9o5Q@mail.gmail.com>
-Content-Type: multipart/alternative; boundary="94eb2c07481c5a70b50565fcdca1"
-Subject: [Printing-architecture] OP Minutes (13 February 2018)
+Date: Mon, 12 Mar 2018 20:52:19 -0400
+Message-ID: <CAN40gSuuzNDuD+dr-OdwDGYyt1azeP0yQPOKt5bnbFo=7e4uGQ@mail.gmail.com>
+Content-Type: multipart/alternative; boundary="000000000000ea452b056740acac"
+Subject: [Printing-architecture] REMINDER: OP call tomorrow (03/13/18)
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>,
@@ -23,27 +23,12 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>, Till Kamppeter <till.kamppeter@gmail.com>, Danny Brennan <brennand@us.ibm.com>, Aveek Basu <aveek.basu@lexmark.com>, Ira McDonald <blueroofmusic@gmail.com>
+To: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>, Till Kamppeter <till.kamppeter@gmail.com>, Aveek Basu <aveek.basu@lexmark.com>, Danny Brennan <brennand@us.ibm.com>, Ira McDonald <blueroofmusic@gmail.com>
 
---94eb2c07481c5a70b50565fcdca1
+--000000000000ea452b056740acac
 Content-Type: text/plain; charset="UTF-8"
 
- Hi,
-
-Minutes from our last Open Printing call are posted at:
-
-
-http://ftp.pwg.org/pub/pwg/liaison/openprinting/minutes/OP-Minutes-20180213.htm
-
-
-Action Items:
-
-  None
-
-
-Next OP US/Europe/Brazil/India Conference Calls:
-
-(1) March 2018 - US/Europe/Brazil/India - OP Monthly Meeting
+ (1) March 2018 - US/Europe/Brazil/India - OP Monthly Meeting
     - Note - Brazil Summer Time ends on 18 February 2018
     - Note - US Daylight Savings Time starts on 12 March 2018
     - Note - Europe Summer Time starts on 26 March 2018
@@ -63,65 +48,15 @@ March 2018
       - India
         11:30pm in New Delhi - IST (India Standard Time)
 
-    US:  +1 641-715-3814
-    Germany:  +49 (0) 221 98203421
-    Brazil:  +55 61 4040-4460
-    Japan:  +81 (0) 3-5050-5070
+    US:  +1 641-715-3814 <(641)%20715-3814>
+    Germany:  +49 (0) 221 98203421 <+49%20221%2098203421>
+    Brazil:  +55 61 4040-4460 <+55%2061%204040-4460>
+    Japan:  +81 (0) 3-5050-5070 <+81%203-5050-5070>
     Participant Access Code:  622393#
 
     (note that local numbers for many other countries are available,
     also cellphone apps, VOIP support, etc. - please email Till for
     details)
-
-(2) April 2018 - US/Europe/Brazil/India - OP Monthly Meeting (tentative)
-    - Tuesday 3 April 2018, Daytime
-      - US
-        10am in San Francisco - US PDT (Pacific Daylight Time)
-        11am in Colorado - US MDT (Mountain Daylight Time)
-        12am in Chicago - US CDT (Central Daylight Time)
-        1pm in New York - US EDT (Eastern Daylight Time)
-      - Europe
-        7pm in Berlin - CEST (Central Europe Summer Time)
-      - Brazil
-        2pm in Belo Horizonte - BRT (Brasilia Time)
-      - India
-        10:30pm in New Delhi - IST (India Standard Time)
-
-    US:  +1 641-715-3814
-    Germany:  +49 (0) 221 98203421
-    Brazil:  +55 61 4040-4460
-    Japan:  +81 (0) 3-5050-5070
-    Participant Access Code:  622393#
-
-    (note that local numbers for many other countries are available,
-    also cellphone apps, VOIP support, etc. - please email Till for
-    details)
-
-(3) May 2018 - US/Europe/Brazil/India - OP Monthly Meeting (tentative)
-    - Note - Joint PWG/Open Printing Summit in Sunnyvale, CA - 15-17 May
-    - Tuesday 3 April 2018, Daytime
-      - US
-        10am in San Francisco - US PDT (Pacific Daylight Time)
-        11am in Colorado - US MDT (Mountain Daylight Time)
-        12am in Chicago - US CDT (Central Daylight Time)
-        1pm in New York - US EDT (Eastern Daylight Time)
-      - Europe
-        7pm in Berlin - CEST (Central Europe Summer Time)
-      - Brazil
-        2pm in Belo Horizonte - BRT (Brasilia Time)
-      - India
-        10:30pm in New Delhi - IST (India Standard Time)
-
-    US:  +1 641-715-3814
-    Germany:  +49 (0) 221 98203421
-    Brazil:  +55 61 4040-4460
-    Japan:  +81 (0) 3-5050-5070
-    Participant Access Code:  622393#
-
-    (note that local numbers for many other countries are available,
-    also cellphone apps, VOIP support, etc. - please email Till for
-    details)
-
 
 Cheers,
 - Ira
@@ -140,146 +75,58 @@ mailto: blueroofmusic@gmail.com
 Jan-April: 579 Park Place  Saline, MI  48176  734-944-0094
 May-Dec: PO Box 221  Grand Marais, MI 49839  906-494-2434
 
---94eb2c07481c5a70b50565fcdca1
+--000000000000ea452b056740acac
 Content-Type: text/html; charset="UTF-8"
 Content-Transfer-Encoding: quoted-printable
 
 <div dir=3D"ltr"><div><div>
-<div><div>Hi, <br><br></div><div><span><span><span><span><span><span><span>=
-<span><span><span><span><span><span><span><span><span><span><span><span><sp=
-an><span><span><span><span class=3D"gmail-m_-309151344415276828gmail-m_-279=
-9441903750312663gmail-m_8879919866472623741gmail-m_6247121733015438196gmail=
--m_-45336563860668868gmail-m_-7696371708218007806gmail-m_466265913179792911=
-8gmail-m_4437823930890095150gmail-m_-681379959383614342gmail-m_781888514489=
-1878450gmail-m_5896293692365239151gmail-m_7484771893033705782m_741643991301=
-3906919gmail-il"><span class=3D"gmail-m_-309151344415276828gmail-m_-2799441=
-903750312663gmail-m_8879919866472623741gmail-m_6247121733015438196gmail-m_-=
-45336563860668868gmail-m_-7696371708218007806gmail-m_4662659131797929118gma=
-il-m_4437823930890095150gmail-il"><span class=3D"gmail-il">Minutes</span></=
-span></span></span></span></span></span></span></span></span></span></span>=
-</span></span></span></span></span></span></span></span></span></span></spa=
-n></span></span></span> from our last Open Printing<span> call</span> are <=
-span><span><span><span><span><span><span><span><span><span><span><span><spa=
-n><span><span><span>posted</span></span></span></span></span></span></span>=
-</span></span></span></span></span></span></span></span></span> at:<br>
+(1) March 2018 - US/Europe/Brazil/India - OP Monthly Meeting<br>=C2=A0=C2=
+=A0=C2=A0 - Note - Brazil Summer Time ends on 18 February 2018<br>=C2=A0=C2=
+=A0=C2=A0 - Note - US Daylight Savings Time starts on 12 March 2018<br>=C2=
+=A0=C2=A0=C2=A0 - Note - Europe Summer Time starts on 26 March 2018<br>=C2=
+=A0=C2=A0=C2=A0 - Note - Trusted Computing Group in Portland, OR - 26 Febru=
+ary to 1 March 2018<br>=C2=A0=C2=A0=C2=A0 - Note - IETF 101 in London, UK -=
+ 18-23 March 2018<br>=C2=A0=C2=A0=C2=A0 - Tuesday 13 March 2018, Daytime<br=
+>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 - US<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=
+=A0=C2=A0 10am in San Francisco - US PDT (Pacific Daylight Time)<br>=C2=A0=
+=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 11am in Colorado - US MDT (Mountain Da=
+ylight Time)<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 12am in Chicago =
+- US CDT (Central Daylight Time)<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=
+=A0 1pm in New York - US EDT (Eastern Daylight Time)<br>=C2=A0=C2=A0=C2=A0=
+=C2=A0=C2=A0 - Europe<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 6pm in =
+Berlin - CET (Central Europe Time)<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 - Braz=
+il<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 2pm in Belo Horizonte - BR=
+T (Brasilia Time)<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 - India<br>=C2=A0=C2=A0=
+=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 11:30pm in New Delhi - IST (India Standard T=
+ime)<br><br>=C2=A0=C2=A0=C2=A0 US:=C2=A0 <a href=3D"tel:(641)%20715-3814" v=
+alue=3D"+16417153814" target=3D"_blank">+1 641-715-3814</a><br>=C2=A0=C2=A0=
+=C2=A0 Germany:=C2=A0 <a href=3D"tel:+49%20221%2098203421" value=3D"+492219=
+8203421" target=3D"_blank">+49 (0) 221 98203421</a><br>=C2=A0=C2=A0=C2=A0 B=
+razil:=C2=A0 <a href=3D"tel:+55%2061%204040-4460" value=3D"+556140404460" t=
+arget=3D"_blank">+55 61 4040-4460</a><br>=C2=A0=C2=A0=C2=A0 Japan:=C2=A0 <a=
+ href=3D"tel:+81%203-5050-5070" value=3D"+81350505070" target=3D"_blank">+8=
+1 (0) 3-5050-5070</a><br>=C2=A0=C2=A0=C2=A0 Participant Access Code:=C2=A0 =
+622393#<br><br>=C2=A0=C2=A0=C2=A0 (note that local numbers for many other c=
+ountries are available,<br>=C2=A0=C2=A0=C2=A0 also cellphone apps, VOIP sup=
+port, etc. - please email Till for<br>=C2=A0=C2=A0=C2=A0 details)=20
 
-
-
-
-
-
-
-
-
-
-
-
-<br>
-=C2=A0 <a href=3D"http://ftp.pwg.org/pub/pwg/liaison/openprinting/minutes/O=
-P-Minutes-20180213.htm" target=3D"_blank">http://ftp.pwg.org/pub/pwg/liaiso=
-n/openprinting/minutes/OP-Minutes-20180213.htm</a><br>
-
-
-
-
-
-</div><div><br><br></div>
-Action Items:<br><br></div>=C2=A0 None<br><br><br>Next <span><span><span><s=
-pan><span><span><span><span><span><span><span><span><span><span class=3D"gm=
-ail-m_-309151344415276828gmail-m_-2799441903750312663gmail-m_88799198664726=
-23741gmail-m_6247121733015438196gmail-m_-45336563860668868gmail-m_-76963717=
-08218007806gmail-m_4662659131797929118gmail-m_4437823930890095150gmail-m_-6=
-81379959383614342gmail-m_7818885144891878450gmail-m_5896293692365239151gmai=
-l-m_7484771893033705782m_7416439913013906919gmail-il"><span class=3D"gmail-=
-m_-309151344415276828gmail-m_-2799441903750312663gmail-m_887991986647262374=
-1gmail-m_6247121733015438196gmail-m_-45336563860668868gmail-m_-769637170821=
-8007806gmail-m_4662659131797929118gmail-m_4437823930890095150gmail-il"><spa=
-n class=3D"gmail-il">OP</span></span></span></span></span></span></span></s=
-pan></span></span></span></span></span></span></span></span> US/Europe/Braz=
-il/India Conference Calls:
-
-<br><br>(1) March 2018 - US/Europe/Brazil/India - OP Monthly Meeting<br>=C2=
-=A0=C2=A0=C2=A0 - Note - Brazil Summer Time ends on 18 February 2018<br>=C2=
-=A0=C2=A0=C2=A0 - Note - US Daylight Savings Time starts on 12 March 2018<b=
-r>=C2=A0=C2=A0=C2=A0 - Note - Europe Summer Time starts on 26 March 2018<br=
->=C2=A0=C2=A0=C2=A0 - Note - Trusted Computing Group in Portland, OR - 26 F=
-ebruary to 1 March 2018<br>=C2=A0=C2=A0=C2=A0 - Note - IETF 101 in London, =
-UK - 18-23 March 2018<br>=C2=A0=C2=A0=C2=A0 - Tuesday 13 March 2018, Daytim=
-e<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 - US<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=
-=C2=A0=C2=A0 10am in San Francisco - US PDT (Pacific Daylight Time)<br>=C2=
-=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 11am in Colorado - US MDT (Mountain=
- Daylight Time)<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 12am in Chica=
-go - US CDT (Central Daylight Time)<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=
-=C2=A0 1pm in New York - US EDT (Eastern Daylight Time)<br>=C2=A0=C2=A0=C2=
-=A0=C2=A0=C2=A0 - Europe<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 6pm =
-in Berlin - CET (Central Europe Time)<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 - B=
-razil<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 2pm in Belo Horizonte -=
- BRT (Brasilia Time)<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 - India<br>=C2=A0=C2=
-=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 11:30pm in New Delhi - IST (India Standar=
-d Time)<br><br>=C2=A0=C2=A0=C2=A0 US:=C2=A0 +1 641-715-3814<br>=C2=A0=C2=A0=
-=C2=A0 Germany:=C2=A0 +49 (0) 221 98203421<br>=C2=A0=C2=A0=C2=A0 Brazil:=C2=
-=A0 +55 61 4040-4460<br>=C2=A0=C2=A0=C2=A0 Japan:=C2=A0 +81 (0) 3-5050-5070=
-<br>=C2=A0=C2=A0=C2=A0 Participant Access Code:=C2=A0 622393#<br><br>=C2=A0=
-=C2=A0=C2=A0 (note that local numbers for many other countries are availabl=
-e,<br>=C2=A0=C2=A0=C2=A0 also cellphone apps, VOIP support, etc. - please e=
-mail Till for<br>=C2=A0=C2=A0=C2=A0 details) <br><br>(2) April 2018 - US/Eu=
-rope/Brazil/India - OP Monthly Meeting (tentative)<br>=C2=A0=C2=A0=C2=A0 - =
-Tuesday 3 April 2018, Daytime<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 - US<br>=C2=
-=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 10am in San Francisco - US PDT (Pac=
-ific Daylight Time)<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 11am in C=
-olorado - US MDT (Mountain Daylight Time)<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=
-=C2=A0=C2=A0 12am in Chicago - US CDT (Central Daylight Time)<br>=C2=A0=C2=
-=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 1pm in New York - US EDT (Eastern Dayligh=
-t Time)<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 - Europe<br>=C2=A0=C2=A0=C2=A0=C2=
-=A0=C2=A0=C2=A0=C2=A0 7pm in Berlin - CEST (Central Europe Summer Time)<br>=
-=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 - Brazil<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=
-=C2=A0=C2=A0 2pm in Belo Horizonte - BRT (Brasilia Time)<br>=C2=A0=C2=A0=C2=
-=A0=C2=A0=C2=A0 - India<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 10:30=
-pm in New Delhi - IST (India Standard Time)<br><br>=C2=A0=C2=A0=C2=A0 US:=
-=C2=A0 +1 641-715-3814<br>=C2=A0=C2=A0=C2=A0 Germany:=C2=A0 +49 (0) 221 982=
-03421<br>=C2=A0=C2=A0=C2=A0 Brazil:=C2=A0 +55 61 4040-4460<br>=C2=A0=C2=A0=
-=C2=A0 Japan:=C2=A0 +81 (0) 3-5050-5070<br>=C2=A0=C2=A0=C2=A0 Participant A=
-ccess Code:=C2=A0 622393#<br><br>=C2=A0=C2=A0=C2=A0 (note that local number=
-s for many other countries are available,<br>=C2=A0=C2=A0=C2=A0 also cellph=
-one apps, VOIP support, etc. - please email Till for<br>=C2=A0=C2=A0=C2=A0 =
-details) <br><br>(3) May 2018 - US/Europe/Brazil/India - OP Monthly Meeting=
- (tentative)<br>=C2=A0=C2=A0=C2=A0 - Note - Joint PWG/Open Printing Summit =
-in Sunnyvale, CA - 15-17 May<br>=C2=A0=C2=A0=C2=A0 - Tuesday 3 April 2018, =
-Daytime<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 - US<br>=C2=A0=C2=A0=C2=A0=C2=A0=
-=C2=A0=C2=A0=C2=A0 10am in San Francisco - US PDT (Pacific Daylight Time)<b=
-r>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 11am in Colorado - US MDT (Mou=
-ntain Daylight Time)<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 12am in =
-Chicago - US CDT (Central Daylight Time)<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=
-=C2=A0=C2=A0 1pm in New York - US EDT (Eastern Daylight Time)<br>=C2=A0=C2=
-=A0=C2=A0=C2=A0=C2=A0 - Europe<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=
-=A0 7pm in Berlin - CEST (Central Europe Summer Time)<br>=C2=A0=C2=A0=C2=A0=
-=C2=A0=C2=A0 - Brazil<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 2pm in =
-Belo Horizonte - BRT (Brasilia Time)<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 - In=
-dia<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 10:30pm in New Delhi - IS=
-T (India Standard Time)<br><br>=C2=A0=C2=A0=C2=A0 US:=C2=A0 +1 641-715-3814=
-<br>=C2=A0=C2=A0=C2=A0 Germany:=C2=A0 +49 (0) 221 98203421<br>=C2=A0=C2=A0=
-=C2=A0 Brazil:=C2=A0 +55 61 4040-4460<br>=C2=A0=C2=A0=C2=A0 Japan:=C2=A0 +8=
-1 (0) 3-5050-5070<br>=C2=A0=C2=A0=C2=A0 Participant Access Code:=C2=A0 6223=
-93#<br><br>=C2=A0=C2=A0=C2=A0 (note that local numbers for many other count=
-ries are available,<br>=C2=A0=C2=A0=C2=A0 also cellphone apps, VOIP support=
-, etc. - please email Till for<br>=C2=A0=C2=A0=C2=A0 details)<br><br><br></=
-div>Cheers,<br></div>- Ira<br><br><div><div><br clear=3D"all"><div><div cla=
-ss=3D"gmail_signature"><div dir=3D"ltr"><div><div dir=3D"ltr">Ira McDonald =
-(Musician / Software Architect)<br>Co-Chair - TCG Trusted Mobility Solution=
-s WG<br>Chair - Linux Foundation Open Printing WG<br>Secretary - IEEE-ISTO =
-Printer Working Group<br>Co-Chair - IEEE-ISTO PWG Internet Printing Protoco=
-l WG<br>IETF Designated Expert - IPP &amp; Printer MIB<br>Blue Roof Music /=
- High North Inc<br><a style=3D"color:rgb(51,51,255)" href=3D"http://sites.g=
-oogle.com/site/blueroofmusic" target=3D"_blank">http://sites.google.com/sit=
-e/blueroofmusic</a><br><a style=3D"color:rgb(102,0,204)" href=3D"http://sit=
-es.google.com/site/highnorthinc" target=3D"_blank">http://sites.google.com/=
-site/highnorthinc</a><br>mailto: <a href=3D"mailto:blueroofmusic@gmail.com"=
- target=3D"_blank">blueroofmusic@gmail.com</a><br>Jan-April: 579 Park Place=
-=C2=A0 Saline, MI=C2=A0 48176=C2=A0 734-944-0094<br>May-Dec: PO Box 221=C2=
-=A0 Grand Marais, MI 49839=C2=A0 906-494-2434<br><br><div style=3D"display:=
-inline"></div><div style=3D"display:inline"></div><div style=3D"display:inl=
-ine"></div><div></div><div></div><div></div><div></div></div></div></div></=
-div></div>
+<br><br></div>Cheers,<br></div>- Ira<br><br><br clear=3D"all"><div><div><di=
+v><div class=3D"gmail_signature" data-smartmail=3D"gmail_signature"><div di=
+r=3D"ltr"><div><div dir=3D"ltr">Ira McDonald (Musician / Software Architect=
+)<br>Co-Chair - TCG Trusted Mobility Solutions WG<br>Chair - Linux Foundati=
+on Open Printing WG<br>Secretary - IEEE-ISTO Printer Working Group<br>Co-Ch=
+air - IEEE-ISTO PWG Internet Printing Protocol WG<br>IETF Designated Expert=
+ - IPP &amp; Printer MIB<br>Blue Roof Music / High North Inc<br><a style=3D=
+"color:rgb(51,51,255)" href=3D"http://sites.google.com/site/blueroofmusic" =
+target=3D"_blank">http://sites.google.com/site/blueroofmusic</a><br><a styl=
+e=3D"color:rgb(102,0,204)" href=3D"http://sites.google.com/site/highnorthin=
+c" target=3D"_blank">http://sites.google.com/site/highnorthinc</a><br>mailt=
+o: <a href=3D"mailto:blueroofmusic@gmail.com" target=3D"_blank">blueroofmus=
+ic@gmail.com</a><br>Jan-April: 579 Park Place=C2=A0 Saline, MI=C2=A0 48176=
+=C2=A0 734-944-0094<br>May-Dec: PO Box 221=C2=A0 Grand Marais, MI 49839=C2=
+=A0 906-494-2434<br><br><div style=3D"display:inline"></div><div style=3D"d=
+isplay:inline"></div><div style=3D"display:inline"></div><div></div><div></=
+div><div></div><div></div></div></div></div></div></div>
 </div></div></div>
 
---94eb2c07481c5a70b50565fcdca1--
+--000000000000ea452b056740acac--
