@@ -1,20 +1,20 @@
 Return-Path: <blueroofmusic@gmail.com>
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
 	h=mime-version:from:date:message-id:subject:to;
-	bh=S7kbtlAo62XNCmzQOge70uOMbI3dSmQl0yY46GuDLpM=;
-	b=inuaJX3HebN7qEhdJaZrY0gda4OfqRiuavc2V9QtDDgHHcLDn8M2mU/YAJAzyAoCMI
-	X7TdGUy5z5qjfWZmOHB1BeJZQmoPAHghqA7d+qYIebCHYyMvQK+l7ok39bX46n2b+NGf
-	OFFqzdiikaYemJG5qWZi9YMxBrp3usr1tQPOWPUnaF8N5aZ9dMs0LS94jjthRrTppTDo
-	1QGSSTCLT5SPOsGAmJPVa1Mec06du+t7zOi6afAB2loBdogvie3FT8IRMlQlcYLuNMQ3
-	pXqm9mVb5V9nDcHFKlQbXZX0zhhqTzmv+JP8qlS0XZjIDMpPz2RTX/fkmPtGwDh7ZUp+
-	FRSw==
+	bh=PXZevQFhUcqUngw5L610ho5IyQrAEvQggWuIS67NIwc=;
+	b=BFjqyDp4TnPb21RUpH4Re4XzQ1ElVx5Av31otpbQUcRcRMM5hHGHrQMRTASOPkRhk/
+	ICGkSHwi9BwxbqcQb332RokbFkcx448lHkIS/DqK5NO55QyezxppmbP2gehyJFSvR6Ja
+	8I1rKpDyXgBJxC0kuAm/YbJ4ddU/BxvFX/EE1vAOYLio5AsXYgE0xMolUF1rqXCZ0rVY
+	JYQVaC+yjlR/PPkNe9nY1XtYlDxYN2fAqdY7F/d/8hUQ/uhPzuXc3aIcDVvVrvI02+Rz
+	PwEDcX3Z5gSXqA3E9pgOnlQ8oz1+y/SNxuS/k8jzD0XMDv6z4Wv4BDXrowSV94Dx6qXL
+	heGw==
 MIME-Version: 1.0
 From: Ira McDonald <blueroofmusic@gmail.com>
-Date: Sun, 5 Aug 2018 20:52:27 -0400
-Message-ID: <CAN40gSsh681iahFcuNBXZe1FA6EDDweO9k_rwAuzDijQrcaN0w@mail.gmail.com>
-Content-Type: multipart/alternative; boundary="00000000000039dcc70572b9b21f"
-Subject: [Printing-architecture] REMINDER: OP call on Tuesday (14 August
-	2018)
+Date: Thu, 9 Aug 2018 12:23:49 -0400
+Message-ID: <CAN40gSv3nc92CmWNTaxWh5+Nji3U8OtxXM_k3j+mVbei+i6f4w@mail.gmail.com>
+Content-Type: multipart/alternative; boundary="000000000000968ac30573030eda"
+Subject: [Printing-architecture] Proposal for 2019 Joint PWG/OP Summit in
+	Lexington, KY
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>,
@@ -26,42 +26,23 @@ List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-arc
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
 To: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>, Till Kamppeter <till.kamppeter@gmail.com>, Danny Brennan <brennand@us.ibm.com>, Aveek Basu <aveek.basu@lexmark.com>, Ira McDonald <blueroofmusic@gmail.com>
 
---00000000000039dcc70572b9b21f
+--000000000000968ac30573030eda
 Content-Type: text/plain; charset="UTF-8"
 
 Hi,
 
-Please join us.
+[Per PWG Steering Committee meeting on 08/06/18]
 
-(1) August 2018 - US/Europe/Brazil/India - OP Monthly Meeting
-    - Note - Ira on travel on 7 August
-    - Note - PWG Virtual F2F (PWG Host) - 15-16 August 2018
-    - Tuesday 14 August 2018, Daytime
-      - US
-        10am in San Francisco - US PDT (Pacific Daylight Time)
-        11am in Colorado - US MDT (Mountain Daylight Time)
-        12am in Chicago - US CDT (Central Daylight Time)
-        1pm in New York - US EDT (Eastern Daylight Time)
-      - Europe
-        7pm in Berlin - CEST (Central Europe Summer Time)
-      - Brazil
-        2pm in Belo Horizonte - BRT (Brasilia Time)
-      - India
-        10:30pm in New Delhi - IST (India Standard Time)
+Would OP folks like to have our  2019 Joint PWG/OP Summit in May at
+Lexmark in Lexington, KY?
 
-    US:  +1 641-715-3814
-    Germany:  +49 (0) 221 98203421
-    Brazil:  +55 61 4040-4460
-    Japan:  +81 (0) 3-5050-5070
-    Participant Access Code:  622393#
+There are many non-stop flights to Lexington from Chicago, Detroit,
+Atlanta, and New York.
 
-    (note that local numbers for many other countries are available,
-    also cellphone apps, VOIP support, etc. - please email Till for
-    details)
+WDYT?
 
 Cheers,
 - Ira
-
 
 Ira McDonald (Musician / Software Architect)
 Co-Chair - TCG Trusted Mobility Solutions WG
@@ -76,51 +57,34 @@ mailto: blueroofmusic@gmail.com
 Jan-April: 579 Park Place  Saline, MI  48176  734-944-0094
 May-Dec: PO Box 221  Grand Marais, MI 49839  906-494-2434
 
---00000000000039dcc70572b9b21f
+--000000000000968ac30573030eda
 Content-Type: text/html; charset="UTF-8"
 Content-Transfer-Encoding: quoted-printable
 
-<div dir=3D"ltr"><div>Hi,</div><div><br></div><div>Please join us.</div><di=
-v><br></div><div>
-(1) August 2018 - US/Europe/Brazil/India - OP Monthly Meeting <br>=C2=A0=C2=
-=A0=C2=A0 - Note - Ira on travel on 7 August<br>=C2=A0=C2=A0=C2=A0 - Note -=
- PWG Virtual F2F (PWG Host) - 15-16 August 2018<br>=C2=A0=C2=A0=C2=A0 - Tue=
-sday 14 August 2018, Daytime<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 - US<br>=C2=
-=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 10am in San Francisco - US PDT (Pac=
-ific Daylight Time)<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 11am in C=
-olorado - US MDT (Mountain Daylight Time)<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=
-=C2=A0=C2=A0 12am in Chicago - US CDT (Central Daylight Time)<br>=C2=A0=C2=
-=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 1pm in New York - US EDT (Eastern Dayligh=
-t Time)<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 - Europe<br>=C2=A0=C2=A0=C2=A0=C2=
-=A0=C2=A0=C2=A0=C2=A0 7pm in Berlin - CEST (Central Europe Summer Time)<br>=
-=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 - Brazil<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=
-=C2=A0=C2=A0 2pm in Belo Horizonte - BRT (Brasilia Time)<br>=C2=A0=C2=A0=C2=
-=A0=C2=A0=C2=A0 - India<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 10:30=
-pm in New Delhi - IST (India Standard Time)<br><br>=C2=A0=C2=A0=C2=A0 US:=
-=C2=A0 +1 641-715-3814<br>=C2=A0=C2=A0=C2=A0 Germany:=C2=A0 +49 (0) 221 982=
-03421<br>=C2=A0=C2=A0=C2=A0 Brazil:=C2=A0 +55 61 4040-4460<br>=C2=A0=C2=A0=
-=C2=A0 Japan:=C2=A0 +81 (0) 3-5050-5070<br>=C2=A0=C2=A0=C2=A0 Participant A=
-ccess Code:=C2=A0 622393#<br><br>=C2=A0=C2=A0=C2=A0 (note that local number=
-s for many other countries are available,<br>=C2=A0=C2=A0=C2=A0 also cellph=
-one apps, VOIP support, etc. - please email Till for<br>=C2=A0=C2=A0=C2=A0 =
-details)=C2=A0</div><div><br></div><div>Cheers,</div><div>- Ira</div><div><=
-br></div><div><br></div><div><div><div class=3D"gmail_signature" data-smart=
-mail=3D"gmail_signature"><div dir=3D"ltr"><div><div dir=3D"ltr">Ira McDonal=
-d (Musician / Software Architect)<br>Co-Chair - TCG Trusted Mobility Soluti=
-ons WG<br>Chair - Linux Foundation Open Printing WG<br>Secretary - IEEE-IST=
-O Printer Working Group<br>Co-Chair - IEEE-ISTO PWG Internet Printing Proto=
-col WG<br>IETF Designated Expert - IPP &amp; Printer MIB<br>Blue Roof Music=
- / High North Inc<br><a style=3D"color:rgb(51,51,255)" href=3D"http://sites=
-.google.com/site/blueroofmusic" target=3D"_blank">http://sites.google.com/s=
-ite/blueroofmusic</a><br><a style=3D"color:rgb(102,0,204)" href=3D"http://s=
-ites.google.com/site/highnorthinc" target=3D"_blank">http://sites.google.co=
-m/site/highnorthinc</a><br>mailto: <a href=3D"mailto:blueroofmusic@gmail.co=
-m" target=3D"_blank">blueroofmusic@gmail.com</a><br>Jan-April: 579 Park Pla=
-ce=C2=A0 Saline, MI=C2=A0 48176=C2=A0 734-944-0094<br>May-Dec: PO Box 221=
-=C2=A0 Grand Marais, MI 49839=C2=A0 906-494-2434<br><br><div style=3D"displ=
-ay:inline"></div><div style=3D"display:inline"></div><div style=3D"display:=
-inline"></div><div></div><div></div><div></div><div></div></div></div></div=
-></div></div>
+<div dir=3D"ltr"><div>Hi,</div><div><br></div><div>[Per PWG Steering Commit=
+tee meeting on 08/06/18]<br></div><div><br></div><div><span style=3D"backgr=
+ound-color:rgb(255,255,0)">Would OP folks like to have our=C2=A0 2019 Joint=
+ PWG/OP Summit in May at <br></span></div><div><span style=3D"background-co=
+lor:rgb(255,255,0)">Lexmark in Lexington, KY?</span></div><div><br></div><d=
+iv>There are many non-stop flights to Lexington from Chicago, Detroit,</div=
+><div>Atlanta, and New York.</div><div><br></div><div>WDYT?<br></div><div><=
+br></div><div>Cheers,<br></div><div>- Ira<br></div><div><br></div><div><div=
+><div class=3D"gmail_signature"><div dir=3D"ltr"><div><div dir=3D"ltr">Ira =
+McDonald (Musician / Software Architect)<br>Co-Chair - TCG Trusted Mobility=
+ Solutions WG<br>Chair - Linux Foundation Open Printing WG<br>Secretary - I=
+EEE-ISTO Printer Working Group<br>Co-Chair - IEEE-ISTO PWG Internet Printin=
+g Protocol WG<br>IETF Designated Expert - IPP &amp; Printer MIB<br>Blue Roo=
+f Music / High North Inc<br><a style=3D"color:rgb(51,51,255)" href=3D"http:=
+//sites.google.com/site/blueroofmusic" target=3D"_blank">http://sites.googl=
+e.com/site/blueroofmusic</a><br><a style=3D"color:rgb(102,0,204)" href=3D"h=
+ttp://sites.google.com/site/highnorthinc" target=3D"_blank">http://sites.go=
+ogle.com/site/highnorthinc</a><br>mailto: <a href=3D"mailto:blueroofmusic@g=
+mail.com" target=3D"_blank">blueroofmusic@gmail.com</a><br>Jan-April: 579 P=
+ark Place=C2=A0 Saline, MI=C2=A0 48176=C2=A0 734-944-0094<br>May-Dec: PO Bo=
+x 221=C2=A0 Grand Marais, MI 49839=C2=A0 906-494-2434<br><br><div style=3D"=
+display:inline"></div><div style=3D"display:inline"></div><div style=3D"dis=
+play:inline"></div><div></div><div></div><div></div><div></div></div></div>=
+</div></div></div>
 </div></div>
 
---00000000000039dcc70572b9b21f--
+--000000000000968ac30573030eda--
