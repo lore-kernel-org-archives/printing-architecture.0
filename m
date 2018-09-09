@@ -1,14 +1,20 @@
-Return-Path: <brennand@us.ibm.com>
+Return-Path: <blueroofmusic@gmail.com>
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
+	h=mime-version:from:date:message-id:subject:to;
+	bh=eFpurDqz1qgjerWGIrQ2Qae9stLFZ7erx99S9KVSJZE=;
+	b=IC+KxTh7rq53hoYReIww9zluuN5qS1YVqD6Ex11Dy8ysXTsv1tbn09NHP/RHuvAN6l
+	dsiqp/abn+bkTPkmxAv/dDCOV5jBEun055GcLuIeXYEzVW+5hOQphDvQJbKQ2A4KG9gY
+	Nq5wJZOMVJS4QFeDQQ9gEXaD5tw1ZWd2GQjRv28vAhFkfRM+vODWejPZTLNuWKwOBBVF
+	Kw4AI84uglOPraEb1a8ofcu96hmTBvihCzeeGGw9DIPxTqgoEBYe4hShGyrIMivsCigy
+	/Dgii0P+uVZBTiNadE1Vl9IecpvSTkC/mqMRaRdTAq2861v+Elok0ewQ9pYdjMvLTqA3
+	c/wA==
 MIME-Version: 1.0
-In-Reply-To: <81c97d8b-b87c-d0f2-51dc-95ab2b96de43@gmail.com>
-From: "Danny Brennan" <brennand@us.ibm.com>
-Date: Sun, 9 Sep 2018 21:25:37 +0000
-Message-Id: <OF38FF63A0.31843355-ON00258303.0075B39D-1536528337343@notes.na.collabserv.com>
-Content-type: multipart/alternative;
-	boundary="0__=8FBB0990DFE6350D8f9e8a93df938690918c8FBB0990DFE6350D"
-Content-Disposition: inline
-Subject: Re: [Printing-architecture] Proposal to move OP call out to next
-	week (18 September)
+From: Ira McDonald <blueroofmusic@gmail.com>
+Date: Sun, 9 Sep 2018 19:18:09 -0400
+Message-ID: <CAN40gSvJ70njMKey1azMpfyaJ9WU73ybp5=bmLP9EHRcWeZ0Xw@mail.gmail.com>
+Content-Type: multipart/alternative; boundary="00000000000094477e05757872c7"
+Subject: [Printing-architecture] CANCELED: OP call Tuesday (11 September
+	2018)
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>,
@@ -18,90 +24,98 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Till Kamppeter <till.kamppeter@gmail.com>
-Cc: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>, Aveek Basu <aveek.basu@lexmark.com>
+To: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>, Till Kamppeter <till.kamppeter@gmail.com>, Aveek Basu <aveek.basu@lexmark.com>, Danny Brennan <brennand@us.ibm.com>, Ira McDonald <blueroofmusic@gmail.com>
+
+--00000000000094477e05757872c7
+Content-Type: text/plain; charset="UTF-8"
+
+Hi,
+
+Canceled due to schedule conflicts.
+
+One next monthly OP call will be:
+
+(1) October - US/Europe/Brazil/India - OP Monthly Meeting
+    - Note - Trusted Computing Group in Lisbon, Portual - 15-19 October 2018
+    - Note - US Standard Time starts 4 November 2018
+    - Note - Central Europe Time starts 28 October 2018
+    - Note - Brasilia Summer Time (BRST) starts 4 November 2018
+    - Tuesday 2 October 2018, Daytime
+      - Bluejeans.com web conference to be announced
+      - US
+        10am in San Francisco - US PDT (Pacific Daylight Time)
+        11am in Colorado - US MDT (Mountain Daylight Time)
+        12am in Chicago - US CDT (Central Daylight Time)
+        1pm in New York - US EDT (Eastern Daylight Time)
+      - Europe
+        7pm in Berlin - CEST (Central Europe Summer Time)
+      - Brazil
+        2pm in Belo Horizonte - BRT (Brasilia Time)
+      - India
+        10:30pm in New Delhi - IST (India Standard Time)
+
+Cheers,
+- Ira
 
 
---0__=8FBB0990DFE6350D8f9e8a93df938690918c8FBB0990DFE6350D
+Ira McDonald (Musician / Software Architect)
+Co-Chair - TCG Trusted Mobility Solutions WG
+Chair - Linux Foundation Open Printing WG
+Secretary - IEEE-ISTO Printer Working Group
+Co-Chair - IEEE-ISTO PWG Internet Printing Protocol WG
+IETF Designated Expert - IPP & Printer MIB
+Blue Roof Music / High North Inc
+http://sites.google.com/site/blueroofmusic
+http://sites.google.com/site/highnorthinc
+mailto: blueroofmusic@gmail.com
+Jan-April: 579 Park Place  Saline, MI  48176  734-944-0094
+May-Dec: PO Box 221  Grand Marais, MI 49839  906-494-2434
+
+--00000000000094477e05757872c7
+Content-Type: text/html; charset="UTF-8"
 Content-Transfer-Encoding: quoted-printable
-Content-type: text/plain; charset=US-ASCII
 
+<div dir=3D"ltr"><div><span class=3D"gmail-il">Hi,</span></div><div><span c=
+lass=3D"gmail-il"><br></span></div><div><span class=3D"gmail-il">Canceled</=
+span> due to schedule conflicts.</div><div><br></div><div>One next monthly =
+OP call will be:</div><div><br></div><div>(1) October - US/Europe/Brazil/In=
+dia - <span class=3D"gmail-il">OP</span> Monthly Meeting<br>=C2=A0=C2=A0=C2=
+=A0 - Note - Trusted Computing Group in Lisbon, Portual - 15-19 October 201=
+8<br>=C2=A0=C2=A0=C2=A0 - Note - US Standard Time starts 4 November 2018<br=
+>=C2=A0=C2=A0=C2=A0 - Note - Central Europe Time starts 28 October 2018<br>=
+=C2=A0=C2=A0=C2=A0 - Note - Brasilia Summer Time (BRST) starts 4 November 2=
+018<br>=C2=A0=C2=A0=C2=A0 - Tuesday 2 October 2018, Daytime<br>=C2=A0=C2=A0=
+=C2=A0=C2=A0=C2=A0 - Bluejeans.com web conference to be announced<br>=C2=A0=
+=C2=A0=C2=A0=C2=A0=C2=A0 - US<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=
+ 10am in San Francisco - US PDT (Pacific Daylight Time)<br>=C2=A0=C2=A0=C2=
+=A0=C2=A0=C2=A0=C2=A0=C2=A0 11am in Colorado - US MDT (Mountain Daylight Ti=
+me)<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 12am in Chicago - US CDT =
+(Central Daylight Time)<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 1pm i=
+n New York - US EDT (Eastern Daylight Time)<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=
+=A0 - Europe<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 7pm in Berlin - =
+CEST (Central Europe Summer Time)<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 - Brazi=
+l<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 2pm in Belo Horizonte - BRT=
+ (Brasilia Time)<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 - India<br>=C2=A0=C2=A0=
+=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 10:30pm in New Delhi - IST (India Standard T=
+ime) <br></div><div><br></div><div>Cheers,</div><div>- Ira<br></div><div><b=
+r></div><div><br>=20
 
-Folks...
+</div><div><div><div><div dir=3D"ltr" class=3D"gmail_signature" data-smartm=
+ail=3D"gmail_signature"><div dir=3D"ltr"><div><div dir=3D"ltr">Ira McDonald=
+ (Musician / Software Architect)<br>Co-Chair - TCG Trusted Mobility Solutio=
+ns WG<br>Chair - Linux Foundation Open Printing WG<br>Secretary - IEEE-ISTO=
+ Printer Working Group<br>Co-Chair - IEEE-ISTO PWG Internet Printing Protoc=
+ol WG<br>IETF Designated Expert - IPP &amp; Printer MIB<br>Blue Roof Music =
+/ High North Inc<br><a style=3D"color:rgb(51,51,255)" href=3D"http://sites.=
+google.com/site/blueroofmusic" target=3D"_blank">http://sites.google.com/si=
+te/blueroofmusic</a><br><a style=3D"color:rgb(102,0,204)" href=3D"http://si=
+tes.google.com/site/highnorthinc" target=3D"_blank">http://sites.google.com=
+/site/highnorthinc</a><br>mailto: <a href=3D"mailto:blueroofmusic@gmail.com=
+" target=3D"_blank">blueroofmusic@gmail.com</a><br>Jan-April: 579 Park Plac=
+e=C2=A0 Saline, MI=C2=A0 48176=C2=A0 734-944-0094<br>May-Dec: PO Box 221=C2=
+=A0 Grand Marais, MI 49839=C2=A0 906-494-2434<br><br><div style=3D"display:=
+inline"></div><div style=3D"display:inline"></div><div style=3D"display:inl=
+ine"></div><div></div><div></div><div></div><div></div></div></div></div></=
+div></div></div></div></div>
 
-I agree...lets cancel for Sept....
-
-Danny
-
-Danny Brennan
-GTS Services Delivery
-IBM-Kaiser Unix Steady State
-Linux/AIX 2nd/3rd/4th Level Support
-Corona CA, 92881
-Cell 951-796-5762
-brennand@us.ibm.com
-mdannyb@linux.com
-
-Sent from my iPad
-
-> On Sep 9, 2018, at 13:04, Till Kamppeter <till.kamppeter@gmail.com>
-wrote:
->
->> On 09/09/18 21:44, Ira McDonald wrote:
->> Hi,
->>
->> Hmm...well I can't attend an OP call this Tuesday (Nancy and I will be
->> on the road south
->> for Nancy's mom's funeral).
->>
->> So we could only keep the September OP call by moving it to the last
->> week of September
->> (which is bad for me with FCA scheduled deliverables).
->>
->
-> Would also be only one or two weeks before the October meeting.
->
->> Should we just cancel September OP call and meeting in October?
->
-> So let us cancel it.
->
->    Till
->
-
---0__=8FBB0990DFE6350D8f9e8a93df938690918c8FBB0990DFE6350D
-Content-Transfer-Encoding: quoted-printable
-Content-type: text/html; charset=US-ASCII
-Content-Disposition: inline
-
-<html><body><p><font size=3D"2">Folks...<br></font><font size=3D"2"><br></f=
-ont><font size=3D"2">I agree...lets cancel for Sept....<br></font><font siz=
-e=3D"2"><br></font><font size=3D"2">Danny<br></font><font size=3D"2"><br></=
-font><font size=3D"2">Danny Brennan<br></font><font size=3D"2">GTS Services=
- Delivery<br></font><font size=3D"2">IBM-Kaiser Unix Steady State<br></font=
-><font size=3D"2">Linux/AIX 2nd/3rd/4th Level Support<br></font><font size=
-=3D"2">Corona CA, 92881<br></font><font size=3D"2">Cell 951-796-5762<br></f=
-ont><font size=3D"2">brennand@us.ibm.com<br></font><font size=3D"2">mdannyb=
-@linux.com<br></font><font size=3D"2"><br></font><font size=3D"2">Sent from=
- my iPad<br></font><font size=3D"2"><br></font><font size=3D"2">&gt; On Sep=
- 9, 2018, at 13:04, Till Kamppeter &lt;till.kamppeter@gmail.com&gt; wrote:<=
-br></font><font size=3D"2">&gt; <br></font><font size=3D"2">&gt;&gt; On 09/=
-09/18 21:44, Ira McDonald wrote:<br></font><font size=3D"2">&gt;&gt; Hi,<br=
-></font><font size=3D"2">&gt;&gt; <br></font><font size=3D"2">&gt;&gt; Hmm.=
-..well I can't attend an OP call this Tuesday (Nancy and I will be <br></fo=
-nt><font size=3D"2">&gt;&gt; on the road south<br></font><font size=3D"2">&=
-gt;&gt; for Nancy's mom's funeral).<br></font><font size=3D"2">&gt;&gt; <br=
-></font><font size=3D"2">&gt;&gt; So we could only keep the September OP ca=
-ll by moving it to the last <br></font><font size=3D"2">&gt;&gt; week of Se=
-ptember<br></font><font size=3D"2">&gt;&gt; (which is bad for me with FCA s=
-cheduled deliverables).<br></font><font size=3D"2">&gt;&gt; <br></font><fon=
-t size=3D"2">&gt; <br></font><font size=3D"2">&gt; Would also be only one o=
-r two weeks before the October meeting.<br></font><font size=3D"2">&gt; <br=
-></font><font size=3D"2">&gt;&gt; Should we just cancel September OP call a=
-nd meeting in October?<br></font><font size=3D"2">&gt; <br></font><font siz=
-e=3D"2">&gt; So let us cancel it.<br></font><font size=3D"2">&gt; <br></fon=
-t><font size=3D"2">&gt;    Till<br></font><font size=3D"2">&gt; <br></font>=
-<BR>
-</body></html>
-
---0__=8FBB0990DFE6350D8f9e8a93df938690918c8FBB0990DFE6350D--
-
+--00000000000094477e05757872c7--
