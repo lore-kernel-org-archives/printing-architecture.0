@@ -1,18 +1,20 @@
-Return-Path: <b.candler@pobox.com>
-DKIM-Signature: v=1; a=rsa-sha1; c=relaxed; d=pobox.com; h=to:from
-	:subject:message-id:date:mime-version:content-type; s=sasl; bh=+
-	bRwrX7ueKoUdg7kBgpaSEGRZQ4=; b=m96gMN3B1AfFtPx+ARZVYzedyxyVxKZ96
-	4xW9CF7eT749tJgtwAzkNzmh7hL4e/usZyXXR6L2t6s0Adm14cX3k9MOCbf160Uh
-	ht8FgCMgsi7XWKwyI4vvaPgYsc/uhCO0BOekbNby7CSP5r/+cYgF40YkyraAXomt
-	Bg3pIoMbVo=
-From: Brian Candler <b.candler@pobox.com>
-Message-ID: <95e1b8ce-0281-ec50-ce4a-6eaf0fa0e57d@pobox.com>
-Date: Wed, 7 Nov 2018 14:09:49 +0000
+Return-Path: <blueroofmusic@gmail.com>
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
+	h=mime-version:from:date:message-id:subject:to;
+	bh=OrzKHumss9Ugy3bg0LTM0tulGjXRiSeIBL6/oOohiyY=;
+	b=bV7dN6cdFoYA61/ELgMnH90nZsgq2vrivk+kPmBbF4fkezo0XLFu50bIKR7/o0egAD
+	MW1dLaT9hSYUXrgsDgd/SJr8+0EGzqlV97haziIfkeIaYte4Z0Q7QxpDtmKTwMvLH+8/
+	7anWisNR3FNgfMkCTwjgWHCfEdB1irBHqLxcU1Mj+6pgnfiuXMJHP2IuFyQSMr2XbA0h
+	XT4KxK3Oc/XMeBw82dELvSTcZ3i6mj21HW8IsGN53+DocWx7jPsPVzFq09g6kc+AD1Gx
+	iuNqlFU+3cK9Nu+r1N4kROZsUH8D+C4P2k1WSO2iJ+noPIvWoOGhN+I2vDKWJn5AIOpW
+	nBoA==
 MIME-Version: 1.0
-Content-Type: multipart/alternative;
-	boundary="------------363C1298F15D9F9A1C0ED26B"
-Content-Language: en-US
-Subject: [Printing-architecture] How the set the PATH for filters?
+From: Ira McDonald <blueroofmusic@gmail.com>
+Date: Mon, 12 Nov 2018 19:41:33 -0500
+Message-ID: <CAN40gSv8AbFzQuxGS-oUAM3QWDc0coyvum_DchKaR9rNnW8q6A@mail.gmail.com>
+Content-Type: multipart/alternative; boundary="000000000000873ba7057a8110ed"
+Subject: [Printing-architecture] REMINDER - OP call Tuesday (13 November
+	2018)
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>,
@@ -22,115 +24,95 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: printing-architecture@lists.linux-foundation.org
+To: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>, Aveek Basu <aveek.basu@lexmark.com>, Till Kamppeter <till.kamppeter@gmail.com>, Danny Brennan <brennand@us.ibm.com>, Ira McDonald <blueroofmusic@gmail.com>
 
-This is a multi-part message in MIME format.
---------------363C1298F15D9F9A1C0ED26B
-Content-Type: text/plain; charset=utf-8; format=flowed
-Content-Transfer-Encoding: 7bit
+--000000000000873ba7057a8110ed
+Content-Type: text/plain; charset="UTF-8"
 
-I am trying to run foomatic-filters under macOS 10.14.1.
+Hi,
 
-One problem is that the executables spawned by foomatic are installed by 
-homebrew under /usr/local/bin, but this directory does not appear in the 
-$PATH when the filters are run.
+Aveek - please schedule the Bluejeans call tomorrow - thanks!
 
-D [07/Nov/2018:13:00:36 +0000] [Job 350] /bin/bash: pdftops: command not 
-found
-D [07/Nov/2018:13:00:36 +0000] [Job 350] pdf-to-ps exited with status 127
+(1) November - US/Europe/Brazil/India - OP Monthly Meeting
+    - Note - IEEE 1609 F2F in San Diego, CA - 5-6 November 2018
+    - Note - PWG Virtual F2F (PWG Host) - 14-15 November 2018
+    - Note - US Standard Time starts 4 November 2018
+    - Note - Central Europe Time starts 28 October 2018
+    - Note - Brasilia Summer Time (BRST) starts 4 November 2018
+    - Tuesday 13 November 2018, Daytime
+      - Bluejeans.com web conference to be announced
+      - US
+        10am in San Francisco - US PST (Pacific Standard Time)
+        11am in Colorado - US MST (Mountain Standard Time)
+        12am in Chicago - US CST (Central Standard Time)
+        1pm in New York - US EST (Eastern Standard Time)
+      - Europe
+        7pm in Berlin - CET (Central Europe Time)
+      - Brazil
+        4pm in Belo Horizonte - BRST (Brasilia Summer Time)
+      - India
+        11:30pm in New Delhi - IST (India Standard Time)
 
-I can the PATH set for filters does not include /usr/local/bin, in 
-standard debug logs:
+Cheers,
+- Ira
 
-D [07/Nov/2018:13:00:36 +0000] [Job 350] 
-envp[10]="PATH=/usr/libexec/cups/filter:/usr/bin:/usr/sbin:/bin:/usr/b
-in"
+Ira McDonald (Musician / Software Architect)
+Co-Chair - TCG Trusted Mobility Solutions WG
+Chair - Linux Foundation Open Printing WG
+Secretary - IEEE-ISTO Printer Working Group
+Co-Chair - IEEE-ISTO PWG Internet Printing Protocol WG
+IETF Designated Expert - IPP & Printer MIB
+Blue Roof Music / High North Inc
+http://sites.google.com/site/blueroofmusic
+http://sites.google.com/site/highnorthinc
+mailto: blueroofmusic@gmail.com
+Jan-April: 579 Park Place  Saline, MI  48176  734-944-0094
+May-Dec: PO Box 221  Grand Marais, MI 49839  906-494-2434
 
-My question is, how can I change this PATH? The cups documentation 
-<https://opensource.apple.com/source/cups/cups-33/doc/spm.html> says:
-
-"Every filter receives a fixed set of environment variables that can be 
-used by the filter
-...
-
-  * |PATH|- The execution path exported to the filter"
-
-- but not how to change it.
-
-Workaround: symlink the binaries into /usr/libexec/cups/filter/; also 
-needed to set "Sandboxing Relaxed" in /etc/cups/cups-filter.conf.
-
-Thanks,
-
-Brian.
-
-
---------------363C1298F15D9F9A1C0ED26B
-Content-Type: text/html; charset=utf-8
+--000000000000873ba7057a8110ed
+Content-Type: text/html; charset="UTF-8"
 Content-Transfer-Encoding: quoted-printable
 
-<html>
-  <head>
+<div dir=3D"ltr"><div>Hi,</div><div><br></div><div>Aveek - please schedule =
+the Bluejeans call tomorrow - thanks!<br></div><div><br></div><div>
+(1) November - US/Europe/Brazil/India - <span class=3D"gmail-il">OP</span> =
+Monthly Meeting<br>=C2=A0=C2=A0=C2=A0 - Note - IEEE 1609 F2F in San Diego, =
+CA - 5-6 November 2018<br>=C2=A0=C2=A0=C2=A0 - Note - PWG Virtual F2F (PWG =
+Host) - 14-15 November 2018<br>=C2=A0=C2=A0=C2=A0 - Note - US Standard Time=
+ starts 4 November 2018<br>=C2=A0=C2=A0=C2=A0 - Note - Central Europe Time =
+starts 28 October 2018<br>=C2=A0=C2=A0=C2=A0 - Note - Brasilia Summer Time =
+(BRST) starts 4 November 2018<br>=C2=A0=C2=A0=C2=A0 - Tuesday 13 November 2=
+018, Daytime<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 - Bluejeans.com web conferen=
+ce to be announced<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 - US<br>=C2=A0=C2=A0=
+=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 10am in San Francisco - US PST (Pacific Stan=
+dard Time)<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 11am in Colorado -=
+ US MST (Mountain Standard Time)<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=
+=A0 12am in Chicago - US CST (Central Standard Time)<br>=C2=A0=C2=A0=C2=A0=
+=C2=A0=C2=A0=C2=A0=C2=A0 1pm in New York - US EST (Eastern Standard Time)<b=
+r>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 - Europe<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=
+=C2=A0=C2=A0 7pm in Berlin - CET (Central Europe Time)<br>=C2=A0=C2=A0=C2=
+=A0=C2=A0=C2=A0 - Brazil<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 4pm =
+in Belo Horizonte - BRST (Brasilia Summer Time)<br>=C2=A0=C2=A0=C2=A0=C2=A0=
+=C2=A0 - India<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 11:30pm in New=
+ Delhi - IST (India Standard Time)=20
 
-    <meta http-equiv=3D"content-type" content=3D"text/html; charset=3Dutf=
--8">
-  </head>
-  <body text=3D"#000000" bgcolor=3D"#FFFFFF">
-    <p>I am trying to run foomatic-filters under macOS 10.14.1.</p>
-    <p>One problem is that the executables spawned by foomatic are
-      installed by homebrew under /usr/local/bin, but this directory
-      does not appear in the $PATH when the filters are run.<br>
-    </p>
-    <p>D [07/Nov/2018:13:00:36 +0000] [Job 350] /bin/bash: pdftops:
-      command not found<br>
-      D [07/Nov/2018:13:00:36 +0000] [Job 350] pdf-to-ps exited with
-      status 127</p>
-    <p>I can the PATH set for filters does not include /usr/local/bin,
-      in standard debug logs:<br>
-    </p>
-    <p>D [07/Nov/2018:13:00:36 +0000] [Job 350]
-      envp[10]=3D"PATH=3D/usr/libexec/cups/filter:/usr/bin:/usr/sbin:/bin=
-:/usr/b<br>
-      in"<br>
-    </p>
-    My question is, how can I change this PATH? The <a
-      moz-do-not-send=3D"true"
-      href=3D"https://opensource.apple.com/source/cups/cups-33/doc/spm.ht=
-ml">cups
-      documentation</a> says:<br>
-    <br>
-    "<span style=3D"color: rgb(0, 0, 0); font-family: serif; font-size:
-      medium; font-style: normal; font-variant-ligatures: normal;
-      font-variant-caps: normal; font-weight: 400; letter-spacing:
-      normal; orphans: 2; text-align: start; text-indent: 0px;
-      text-transform: none; white-space: normal; widows: 2;
-      word-spacing: 0px; -webkit-text-stroke-width: 0px;
-      background-color: rgb(255, 255, 255); text-decoration-style:
-      initial; text-decoration-color: initial; display: inline
-      !important; float: none;">Every filter receives a fixed set of
-      environment variables that can be used by the filter<br>
-      ...<br>
-    </span>
-    <ul style=3D"color: rgb(0, 0, 0); font-family: serif; font-size:
-      medium; font-style: normal; font-variant-ligatures: normal;
-      font-variant-caps: normal; font-weight: 400; letter-spacing:
-      normal; orphans: 2; text-align: start; text-indent: 0px;
-      text-transform: none; white-space: normal; widows: 2;
-      word-spacing: 0px; -webkit-text-stroke-width: 0px;
-      text-decoration-style: initial; text-decoration-color: initial;">
-      <li><code>PATH</code><span>=C2=A0</span>- The execution path export=
-ed
-        to the filter"</li>
-    </ul>
-    <p>- but not how to change it.</p>
-    <p>Workaround: symlink the binaries into /usr/libexec/cups/filter/;
-      also needed to set "Sandboxing Relaxed" in
-      /etc/cups/cups-filter.conf.<br>
-    </p>
-    <p>Thanks,</p>
-    <p>Brian.<br>
-    </p>
-  </body>
-</html>
+</div><div><br></div><div>Cheers,</div><div>- Ira</div><div><br></div><div>=
+<div><div dir=3D"ltr" class=3D"gmail_signature" data-smartmail=3D"gmail_sig=
+nature"><div dir=3D"ltr"><div><div dir=3D"ltr">Ira McDonald (Musician / Sof=
+tware Architect)<br>Co-Chair - TCG Trusted Mobility Solutions WG<br>Chair -=
+ Linux Foundation Open Printing WG<br>Secretary - IEEE-ISTO Printer Working=
+ Group<br>Co-Chair - IEEE-ISTO PWG Internet Printing Protocol WG<br>IETF De=
+signated Expert - IPP &amp; Printer MIB<br>Blue Roof Music / High North Inc=
+<br><a style=3D"color:rgb(51,51,255)" href=3D"http://sites.google.com/site/=
+blueroofmusic" target=3D"_blank">http://sites.google.com/site/blueroofmusic=
+</a><br><a style=3D"color:rgb(102,0,204)" href=3D"http://sites.google.com/s=
+ite/highnorthinc" target=3D"_blank">http://sites.google.com/site/highnorthi=
+nc</a><br>mailto: <a href=3D"mailto:blueroofmusic@gmail.com" target=3D"_bla=
+nk">blueroofmusic@gmail.com</a><br>Jan-April: 579 Park Place=C2=A0 Saline, =
+MI=C2=A0 48176=C2=A0 734-944-0094<br>May-Dec: PO Box 221=C2=A0 Grand Marais=
+, MI 49839=C2=A0 906-494-2434<br><br><div style=3D"display:inline"></div><d=
+iv style=3D"display:inline"></div><div style=3D"display:inline"></div><div>=
+</div><div></div><div></div><div></div></div></div></div></div></div></div>=
+</div>
 
---------------363C1298F15D9F9A1C0ED26B--
+--000000000000873ba7057a8110ed--
