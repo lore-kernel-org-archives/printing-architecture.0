@@ -1,23 +1,18 @@
-Return-Path: <till.kamppeter@gmail.com>
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
-	h=from:subject:to:cc:message-id:date:user-agent:mime-version
-	:content-language:content-transfer-encoding;
-	bh=fPk72At9mv6VZZaId+SWoodoIdFQDrNoQpH/JvdT6s8=;
-	b=bEP6EN0rfcQrBtrw4NBRyWe0sCThJs5kfu/n6+pHoJEZZUzA6c+jSKmyEQBbmzB/zV
-	LdXozvmyfS6+ZmrDpixIllwCUy5i6TZWjcyNtq0mRWXqGwOJpNm7tizIfKcQyorz+IMi
-	wBLo5HLIoXnVSpmt/ilD7Al6iRQ1qFuxXZZGbk8MKfSTfKJwdqmPF/pkkkMgZgiP+tLy
-	xoY8CD1BcXxz59ivx72IPyNKDi90arnuEeFxzA36AQsz2DiA+Om+1SET0nLAaYBO6Uc1
-	bfaertPNy1Zcv7rs9Yjbh5uVJTeZE/1sWKiSNmhiRMuRUxHHZITUaWAJ3IwvOZwMeq9p
-	zJkg==
-From: Till Kamppeter <till.kamppeter@gmail.com>
-Message-ID: <6c4b4cf5-748e-7f7a-8f90-b34084ed4c2b@gmail.com>
-Date: Mon, 14 Jan 2019 23:57:47 +0100
+Return-Path: <zdohnal@redhat.com>
+References: <CAN40gSubUV9Y3dfNwU+xKSy=N92nffkdPMoSkoDpzq_Vd54D6A@mail.gmail.com>
+	<649CD791-CA34-4AD0-A58B-3C0113410831@apple.com>
+	<a323cfb1-6937-f621-ba7e-696a856b257a@gmail.com>
+	<b031d1f0-2da0-c484-2075-04b3badc9d6a@redhat.com>
+	<b28db535-0705-a673-1e32-6a772559cdac@gmail.com>
+From: Zdenek Dohnal <zdohnal@redhat.com>
+Message-ID: <4d020a9a-acc1-606f-cb40-ae6439ec68bf@redhat.com>
+Date: Tue, 15 Jan 2019 13:33:13 +0100
 MIME-Version: 1.0
-Content-Type: text/plain; charset=utf-8; format=flowed
-Content-Language: en-US
-Content-Transfer-Encoding: 7bit
-Subject: [Printing-architecture] Google Summer of Code 2019 - Project ideas
- page for the Linux Foundation online
+In-Reply-To: <b28db535-0705-a673-1e32-6a772559cdac@gmail.com>
+Content-Type: multipart/signed; micalg=pgp-sha256;
+	protocol="application/pgp-signature";
+	boundary="SgC4VMHc4IwoHV3yWhctn31apiRKQ1lFu"
+Subject: Re: [Printing-architecture] OP Minutes (9 January)
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>,
@@ -27,33 +22,120 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Alexey Khoroshilov <khoroshilov@ispras.ru>, "Luis R. Rodriguez" <mcgrof@gmail.com>, Jeff Licquia <jeff@licquia.org>, linux-wireless <linux-wireless@vger.kernel.org>, Open Printing <printing-architecture@lists.linux-foundation.org>, dl9pf@gmx.de, Mats Wichmann <mats@wichmann.us>, Denis Silakov <silakov@ispras.ru>, =?UTF-8?Q?Jan-Simon_M=c3=b6ller?= <jsmoeller@linuxfoundation.org>, Daniel Baluta <daniel.baluta@gmail.com>, Vadim Mutilin <mutilin@ispras.ru>, Lukas Bulwahn <lukas.bulwahn@gmail.com>, Ira McDonald <blueroofmusic@gmail.com>, Michael Sweet <msweet@apple.com>, Tobias Hoffmann <smilingthax@googlemail.com>, Jay Berkenbilt <ejb@ql.org>, Nicholas Mc Guire <der.herr@hofr.at>, Matt Germonprez <germonprez@gmail.com>, Philippe Ombredanne <pombredanne@nexb.com>, Gary O'Neall <garysourceauditor@gmail.com>
-Cc: Aveek Basu <aveek.basu@lexmark.com>
+To: Till Kamppeter <till.kamppeter@gmail.com>, Michal Sekletar <msekleta@redhat.com>
+Cc: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>, Aveek Basu <aveek.basu@lexmark.com>
 
-Hi,
+This is an OpenPGP/MIME signed message (RFC 4880 and 3156)
+--SgC4VMHc4IwoHV3yWhctn31apiRKQ1lFu
+Content-Type: multipart/mixed; boundary="qvUEVeXRyg5VlrWF3mrDpANNViJEC7HDg";
+ protected-headers="v1"
+From: Zdenek Dohnal <zdohnal@redhat.com>
+To: Till Kamppeter <till.kamppeter@gmail.com>,
+ Michal Sekletar <msekleta@redhat.com>
+Cc: Michael Sweet <msweet@apple.com>, Ira McDonald <blueroofmusic@gmail.com>,
+ "printing-architecture@lists.linux-foundation.org"
+ <printing-architecture@lists.linux-foundation.org>,
+ Aveek Basu <aveek.basu@lexmark.com>
+Message-ID: <4d020a9a-acc1-606f-cb40-ae6439ec68bf@redhat.com>
+Subject: Re: [Printing-architecture] OP Minutes (9 January)
+References: <CAN40gSubUV9Y3dfNwU+xKSy=N92nffkdPMoSkoDpzq_Vd54D6A@mail.gmail.com>
+ <649CD791-CA34-4AD0-A58B-3C0113410831@apple.com>
+ <a323cfb1-6937-f621-ba7e-696a856b257a@gmail.com>
+ <b031d1f0-2da0-c484-2075-04b3badc9d6a@redhat.com>
+ <b28db535-0705-a673-1e32-6a772559cdac@gmail.com>
+In-Reply-To: <b28db535-0705-a673-1e32-6a772559cdac@gmail.com>
 
-I have set up a page for project ideas for the Linux Foundation's
-participation in the Google Summer of Code 2019:
+--qvUEVeXRyg5VlrWF3mrDpANNViJEC7HDg
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+Content-Language: en-US
 
-https://wiki.linuxfoundation.org/gsoc/google-summer-code-2019
 
-Please add your ideas to the sub-page of your work group. Also remove 
-project ideas which are already done in one of the previous years or not 
-needed any more and make sure that all contact info is up-to-date and 
-all links are working.
+On 1/14/19 6:50 PM, Till Kamppeter wrote:
+> On 14/01/2019 17:51, Zdenek Dohnal wrote:
+>> 2) Avahi upstream maintenance
+>>
+>> =C2=A0=C2=A0=C2=A0 Michal and several other people tried to convince T=
+rent to pass
+>> ownership to someone else (Michal knew about two people, who would lik=
+e
+>> to take Avahi project at that time) about two years ago, because Trent=
 
-If you have problems mail me with your project ideas and other editing 
-wishes.
+>> seemed to do not have time for the project. But Trent did not want to
+>> give away the upstream project. Currently Michal fixes Avahi issues
+>> downstream in Fedora/RHEL.
+>>
+>> Is there a way how to solve the situation? Cloning the project is not
+>> optimal, because Trent's github repo is still the first obvious choice=
 
-The ideas list is in the Linux Foundation Wiki. If you want to edit and 
-did not have the edit rights already from previous years, please tell me 
-and I give you edit rights. I need your Linux Foundation user name for 
-that and the e-mail address associated with this account for this.
+>> when you google 'avahi github'.
+>
+> As Debian does not accept carrying patches distro only with upstream
+> not taking them and also as it is very awkward if all distros have to
+> carry the same patch due to upstream not caring, and naturally also an
+> integral part of the OS needs solid upstream maintainership, this is
+> an unbearable situation.
+I agree. We have the similar policy in RHEL/Fedora, but in reality there
+still are several downstream patches due dead/unresponsive upstreams or
+for OS specific changes...
+>
+> It would be great if someone could convince Trent to accept a
+> co-maintainer who also can directly commit to and also issue releases
+> of Avahi.
+IMO it was other alternative what Michal tried.
+> If Trent refuses this, I see as the only solution the forking of the
+> project. This is the usual way how one handles these situations.
+Michal, was the forking of avahi project in consideration at that time?
+>
+> The current official Avahi repo is
+>
+> https://github.com/lathiat/avahi/
+>
+> so it is under the personal domain of Trent and not a project domain
+> as for example
+>
+> https://github.com/openprinting/
+>
+> where cups-filters, ippusbxd and others are.
+>
+> So I checked
+>
+> https://github.com/avahi/
+>
+> and there is something which has nothing to do with Avahi. We should
+> ask the owner whether he could move his GitHub activity to another
+> name to free avahi for us and then we put our fork of Avahi there.
+>
+> If this does not work out I suggest to host the Avahi fork on GitLab.
+>
+> Or should we fork Avahi under a new name then?
+>
+> =C2=A0=C2=A0 Till
 
-Please also take into account that the deadline for our application as 
-mentoring organization is Feb 6 and after that Google will evaluate the 
-applications. So have your ideas (at least most of them, ideas can be 
-posted up to the student application deadline) in by then to raise our 
-chances to get accepted.
+--=20
+Zdenek Dohnal
+Associate Software Engineer
+Red Hat Czech - Brno TPB-C
 
-    Till
+
+
+--qvUEVeXRyg5VlrWF3mrDpANNViJEC7HDg--
+
+--SgC4VMHc4IwoHV3yWhctn31apiRKQ1lFu
+Content-Type: application/pgp-signature; name="signature.asc"
+Content-Description: OpenPGP digital signature
+Content-Disposition: attachment; filename="signature.asc"
+
+-----BEGIN PGP SIGNATURE-----
+
+iQEzBAEBCAAdFiEEettYIDyl8EbygCWyFapqf01CJ9cFAlw90woACgkQFapqf01C
+J9f4/AgAxf7j4RehnfxWrXINB0pJPXX4YWVM6SUSH/2EaVA9v6I4dWafB+QmqYgo
+tu2zaWGtneUrjtAYA8HTuC6kRgUncIavWXdALCFVwiTAhxTuKErA7r3yUWEkMrth
+os0usozav/qPZX0yrnOyVrnyIBRN9MMH2lJJwPpUiVjv7chzQTEarTfpPuNyUfjI
+8LDZhLTbdb8HFC6ltX0zfIn8LVO0IsWYcQNhwdxPPdeVMh28MSUpXRP1fLx4XlUZ
+BDRvfaVcL5Et0a9CfLH30sRmOOdYhns3vPbH3NYTv8gDFYl2uOUTCN+gEd6RPSz1
+56/6/rKa3LNizG/HZmNJlmvvq8+Cjg==
+=C/AM
+-----END PGP SIGNATURE-----
+
+--SgC4VMHc4IwoHV3yWhctn31apiRKQ1lFu--
