@@ -1,22 +1,22 @@
-Return-Path: <blueroofmusic@gmail.com>
+Return-Path: <till.kamppeter@gmail.com>
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
-	h=mime-version:references:in-reply-to:from:date:message-id:subject:to; 
-	bh=2FlAE5ludPLmMQCaGtOmWKiycyfiMKgs+7TGRMkP+uo=;
-	b=oM2b3rO5Wi9FPALW4zmXcasLz8SIZUmdXmsYUx83EsOoNCKA99uV6f1q+zkuz7AzS6
-	g5jVn9rpkqojFkAba71o++29YGWpAGsQQL5CrD3hHCEYxSGLs/FwoFQFZKvSUpiVaG3l
-	PdCQBEpFHGFp+pmusCiUZCVSQbSH+e7UgC/sMhRSTLiAxE56WB8KbXsHda2QcZzbLaHu
-	FsINf+fa5+Q9aOtxpWlTP8woFGE/vfpaXagUV8pxLeTNVAFFFYcgt62dtVx3ZVYLk0eS
-	In422EI5QkEj/yiTmdHbIPn5GF+saQk6+CB2qnmLt78fnm5aYEobu1f56/lMj+EVcs+L
-	iSjw==
+	h=from:subject:to:cc:message-id:date:user-agent:mime-version
+	:content-language:content-transfer-encoding;
+	bh=cPviPpUyHS+R3ZVxovq4Q6c3XW/SKNtmRxGttqSAygY=;
+	b=jynVxcU+XXm93LQM8WYyYEe1o5D7BTjq7Ies543mr93SPGbSxcQhhXVWfzldVMq+Pt
+	FjOvC95I2ESqzhowTCV4tF++wCI8wG13y7huDjtat3J083ZoaRks8I3DHoM9D2vJPRMF
+	vXeHRLXseFDjj0MAcmTnnWhpUTN1AWIfJdGjByWQnNZBwBujHOJn3Z01sKHLUsvpe8nh
+	S8+5iYyYISN2SpEPX9ajNrgtQRVrPG0+HqntmSYwm5nTAm/j+cRsc75zztdDhxk9KgIQ
+	5tDGVOu6Cy6JKEO50RnRqof8//HKNOCGJ+fpuPl0cSrIsZys+svJG56D9R1XG/V7W0AY
+	poKw==
+From: Till Kamppeter <till.kamppeter@gmail.com>
+Message-ID: <4dab880a-b033-0b58-7114-cb7af3e2a0a9@gmail.com>
+Date: Wed, 13 Feb 2019 19:14:20 +0100
 MIME-Version: 1.0
-References: <CAN40gSuiyT+vqBNEqcD3hLEb8+b4HN3nnfeM+O5LsaXKOxZppQ@mail.gmail.com>
-In-Reply-To: <CAN40gSuiyT+vqBNEqcD3hLEb8+b4HN3nnfeM+O5LsaXKOxZppQ@mail.gmail.com>
-From: Ira McDonald <blueroofmusic@gmail.com>
-Date: Tue, 12 Feb 2019 13:04:54 -0500
-Message-ID: <CAN40gSuKS98dAjKoqwDy0k4YNri42BgLhR+nJbxAdRFSmv1kpw@mail.gmail.com>
-Content-Type: multipart/alternative; boundary="000000000000ead0870581b6433c"
-Subject: [Printing-architecture] REMINDER [Now!] - OP call Tuesday (12
-	February 2019)
+Content-Type: text/plain; charset=utf-8; format=flowed
+Content-Language: en-US
+Content-Transfer-Encoding: 7bit
+Subject: [Printing-architecture] OpenPrinting News
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>,
@@ -26,166 +26,198 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>, Till Kamppeter <till.kamppeter@gmail.com>, Aveek Basu <basu.aveek@gmail.com>, Danny Brennan <brennand@us.ibm.com>, Ira McDonald <blueroofmusic@gmail.com>
-
---000000000000ead0870581b6433c
-Content-Type: text/plain; charset="UTF-8"
+To: Ira McDonald <blueroofmusic@gmail.com>
+Cc: Aveek Basu <aveek.basu@lexmark.com>, Open Printing <printing-architecture@lists.linux-foundation.org>
 
 Hi,
 
-The Bluejeans link is:
+here is the newest development of the last month.
 
-https://bluejeans.com/532482392/1770?src=calendarLink
-<https://www.google.com/url?q=https%3A%2F%2Fbluejeans.com%2F532482392%2F1770%3Fsrc%3DcalendarLink&sa=D&usd=2&usg=AFQjCNGFmKdsLrJxb7aHh25BxcBC0YvVkg>
+    Till
 
-The *correct* meeting code (not displayed to me just now) is:
-
-Phone Dial-in
-+1.408.740.7256 (US (San Jose))
-+1.888.240.2560 (US Toll Free)
-+1.408.317.9253 (US (Primary, San Jose))
-Global Numbers: http://bluejeans.com/numbers
-<https://www.google.com/url?q=http%3A%2F%2Fbluejeans.com%2Fnumbers&sa=D&usd=2&usg=AFQjCNEyT-hD__MSaqbEE2gnG9QglKUlYw>
-Meeting ID: 532 482 392
-
-Cheers,
-- Ira
-Ira McDonald (Musician / Software Architect)
-Co-Chair - TCG Trusted Mobility Solutions WG
-Co-Chair - TCG Metadata Access Protocol SG
-Chair - Linux Foundation Open Printing WG
-Secretary - IEEE-ISTO Printer Working Group
-Co-Chair - IEEE-ISTO PWG Internet Printing Protocol WG
-IETF Designated Expert - IPP & Printer MIB
-Blue Roof Music / High North Inc
-http://sites.google.com/site/blueroofmusic
-http://sites.google.com/site/highnorthinc
-mailto: blueroofmusic@gmail.com
-PO Box 221  Grand Marais, MI 49839  906-494-2434
+----------
 
 
+Google Summer of Code 2019
+--------------------------
 
-On Sun, Feb 10, 2019 at 12:45 PM Ira McDonald <blueroofmusic@gmail.com>
-wrote:
+The org application of the Linux Foundation is submitted and on Feb 26 
+we will know whether we got accepted by Google.
 
-> Hi,
->
-> See Bluejeans call invitation just mailed out.
->
-> (1) February - US/Europe/Brazil/India - OP Monthly Meeting
->     - Tuesday 12 February 2019, Daytime
->       - Note - IEEE 1609 F2F (Qualcomm Host) in San Diego, CA - 6-7
-> February 2019
->       - Note - PWG Virtual F2F (PWG Host) - 13-14 February 2019
->       - Note - BRST (Brasilia Summer Time) ends 17 February 2019
->       - Bluejeans.com web conference to be announced
->       - US
->         10am in San Francisco - US PST (Pacific Standard Time)
->         11am in Colorado - US MST (Mountain Standard Time)
->         12am in Chicago - US CST (Central Standard Time)
->         1pm in New York - US EST (Eastern Standard Time)
->       - Europe
->         7pm in Berlin - CET (Central Europe Time)
->       - Brazil
->         4pm in Belo Horizonte - BRST (Brasilia Summer Time)
->       - India
->         11:30pm in New Delhi - IST (India Standard Time)
->
-> Cheers,
-> - Ira
->
-> Ira McDonald (Musician / Software Architect)
-> Co-Chair - TCG Trusted Mobility Solutions WG
-> Co-Chair - TCG Metadata Access Protocol SG
-> Chair - Linux Foundation Open Printing WG
-> Secretary - IEEE-ISTO Printer Working Group
-> Co-Chair - IEEE-ISTO PWG Internet Printing Protocol WG
-> IETF Designated Expert - IPP & Printer MIB
-> Blue Roof Music / High North Inc
-> http://sites.google.com/site/blueroofmusic
-> http://sites.google.com/site/highnorthinc
-> mailto: blueroofmusic@gmail.com
-> PO Box 221  Grand Marais, MI 49839  906-494-2434
->
->
+Avahi
+-----
 
---000000000000ead0870581b6433c
-Content-Type: text/html; charset="UTF-8"
-Content-Transfer-Encoding: quoted-printable
+Also Red Hat is bumping into the fact that Avahi is unmaintained 
+upstream, see discussion as answer to our minutes from last month:
 
-<div dir=3D"ltr"><div dir=3D"ltr"><div>Hi,</div><div><br></div><div>The Blu=
-ejeans link is:</div><div><br></div><div>
-<a href=3D"https://www.google.com/url?q=3Dhttps%3A%2F%2Fbluejeans.com%2F532=
-482392%2F1770%3Fsrc%3DcalendarLink&amp;sa=3DD&amp;usd=3D2&amp;usg=3DAFQjCNG=
-FmKdsLrJxb7aHh25BxcBC0YvVkg" target=3D"_blank">https://bluejeans.com/532482=
-392/1770?src=3DcalendarLink</a> <br></div><div><br></div><div>The *correct*=
- meeting code (not displayed to me just now) is:</div><div><br></div><div>
-Phone Dial-in <br></div><div>+1.408.740.7256 (US (San Jose)) <br></div><div=
->+1.888.240.2560 (US Toll Free) <br></div><div>+1.408.317.9253 (US (Primary=
-, San Jose)) <br></div><div>Global Numbers: <a href=3D"https://www.google.c=
-om/url?q=3Dhttp%3A%2F%2Fbluejeans.com%2Fnumbers&amp;sa=3DD&amp;usd=3D2&amp;=
-usg=3DAFQjCNEyT-hD__MSaqbEE2gnG9QglKUlYw" target=3D"_blank">http://bluejean=
-s.com/numbers</a> <br></div><div>Meeting ID: 532 482 392 <br></div><div><br=
-></div><div>Cheers,</div><div>- Ira<br></div><div dir=3D"ltr"><div><div dir=
-=3D"ltr" class=3D"gmail_signature"><div dir=3D"ltr"><div><div dir=3D"ltr"><=
-div><div dir=3D"ltr"><div><div dir=3D"ltr">Ira McDonald (Musician / Softwar=
-e Architect)<br>Co-Chair - TCG Trusted Mobility Solutions WG</div><div>Co-C=
-hair - TCG Metadata Access Protocol SG<br></div><div dir=3D"ltr">Chair - Li=
-nux Foundation Open Printing WG<br>Secretary - IEEE-ISTO Printer Working Gr=
-oup<br>Co-Chair - IEEE-ISTO PWG Internet Printing Protocol WG<br>IETF Desig=
-nated Expert - IPP &amp; Printer MIB<br>Blue Roof Music / High North Inc<br=
-><a style=3D"color:rgb(51,51,255)" href=3D"http://sites.google.com/site/blu=
-eroofmusic" target=3D"_blank">http://sites.google.com/site/blueroofmusic</a=
-><br><a style=3D"color:rgb(102,0,204)" href=3D"http://sites.google.com/site=
-/highnorthinc" target=3D"_blank">http://sites.google.com/site/highnorthinc<=
-/a><br>mailto: <a href=3D"mailto:blueroofmusic@gmail.com" target=3D"_blank"=
->blueroofmusic@gmail.com</a><br>PO Box 221=C2=A0 Grand Marais, MI 49839=C2=
-=A0 906-494-2434<br><br><div style=3D"display:inline"></div><div style=3D"d=
-isplay:inline"></div><div style=3D"display:inline"></div><div></div><div></=
-div><div></div><div></div></div></div></div></div></div></div></div></div><=
-/div><br></div><br><div class=3D"gmail_quote"><div dir=3D"ltr" class=3D"gma=
-il_attr">On Sun, Feb 10, 2019 at 12:45 PM Ira McDonald &lt;<a href=3D"mailt=
-o:blueroofmusic@gmail.com">blueroofmusic@gmail.com</a>&gt; wrote:<br></div>=
-<blockquote class=3D"gmail_quote" style=3D"margin:0px 0px 0px 0.8ex;border-=
-left:1px solid rgb(204,204,204);padding-left:1ex"><div dir=3D"ltr"><div>Hi,=
-</div><div><br></div><div>See Bluejeans call invitation just mailed out.<br=
-></div><div dir=3D"ltr"><br></div><div dir=3D"ltr">(1) February - US/Europe=
-/Brazil/India - OP Monthly Meeting<br>=C2=A0=C2=A0=C2=A0 - Tuesday 12 Febru=
-ary 2019, Daytime<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 - Note - IEEE 1609 F2F =
-(Qualcomm Host) in San Diego, CA - 6-7 February 2019<br>=C2=A0=C2=A0=C2=A0=
-=C2=A0=C2=A0 - Note - PWG Virtual F2F (PWG Host) - 13-14 February 2019<br>=
-=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 - Note - BRST (Brasilia Summer Time) ends 17=
- February 2019<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 - Bluejeans.com web confer=
-ence to be announced<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 - US<br>=C2=A0=C2=A0=
-=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 10am in San Francisco - US PST (Pacific Stan=
-dard Time)<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 11am in Colorado -=
- US MST (Mountain Standard Time)<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=
-=A0 12am in Chicago - US CST (Central Standard Time)<br>=C2=A0=C2=A0=C2=A0=
-=C2=A0=C2=A0=C2=A0=C2=A0 1pm in New York - US EST (Eastern Standard Time)<b=
-r>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 - Europe<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=
-=C2=A0=C2=A0 7pm in Berlin - CET (Central Europe Time)<br>=C2=A0=C2=A0=C2=
-=A0=C2=A0=C2=A0 - Brazil<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 4pm =
-in Belo Horizonte - BRST (Brasilia Summer Time)<br>=C2=A0=C2=A0=C2=A0=C2=A0=
-=C2=A0 - India<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 11:30pm in New=
- Delhi - IST (India Standard Time)=C2=A0</div><div dir=3D"ltr"><br></div><d=
-iv>Cheers,</div><div>- Ira<br></div><div dir=3D"ltr"><br clear=3D"all"><div=
-><div dir=3D"ltr" class=3D"gmail-m_-4030431137720015559gmail_signature"><di=
-v dir=3D"ltr"><div><div dir=3D"ltr"><div><div dir=3D"ltr"><div><div dir=3D"=
-ltr">Ira McDonald (Musician / Software Architect)<br>Co-Chair - TCG Trusted=
- Mobility Solutions WG</div><div>Co-Chair - TCG Metadata Access Protocol SG=
-<br></div><div dir=3D"ltr">Chair - Linux Foundation Open Printing WG<br>Sec=
-retary - IEEE-ISTO Printer Working Group<br>Co-Chair - IEEE-ISTO PWG Intern=
-et Printing Protocol WG<br>IETF Designated Expert - IPP &amp; Printer MIB<b=
-r>Blue Roof Music / High North Inc<br><a style=3D"color:rgb(51,51,255)" hre=
-f=3D"http://sites.google.com/site/blueroofmusic" target=3D"_blank">http://s=
-ites.google.com/site/blueroofmusic</a><br><a style=3D"color:rgb(102,0,204)"=
- href=3D"http://sites.google.com/site/highnorthinc" target=3D"_blank">http:=
-//sites.google.com/site/highnorthinc</a><br>mailto: <a href=3D"mailto:bluer=
-oofmusic@gmail.com" target=3D"_blank">blueroofmusic@gmail.com</a><br>PO Box=
- 221=C2=A0 Grand Marais, MI 49839=C2=A0 906-494-2434<br><br><div style=3D"d=
-isplay:inline"></div><div style=3D"display:inline"></div><div style=3D"disp=
-lay:inline"></div><div></div><div></div><div></div><div></div></div></div><=
-/div></div></div></div></div></div></div></div></div>
-</blockquote></div></div></div>
+https://lists.linuxfoundation.org/pipermail/printing-architecture/2019/thread.html
+https://lists.linuxfoundation.org/pipermail/printing-architecture/2019/003653.html
+https://lists.linuxfoundation.org/pipermail/printing-architecture/2019/003654.html
+https://lists.linuxfoundation.org/pipermail/printing-architecture/2019/003655.html
+https://lists.linuxfoundation.org/pipermail/printing-architecture/2019/003656.html
+https://lists.linuxfoundation.org/pipermail/printing-architecture/2019/003657.html
+https://lists.linuxfoundation.org/pipermail/printing-architecture/2019/003659.html
 
---000000000000ead0870581b6433c--
+Michael Sweet writes:
+
+----------
+A bug was filed against CUPS last month requesting that we start 
+supporting systemd's new mDNS resolver (which apparently is replacing 
+the use of Avahi in systemd?!?):
+
+     https://github.com/apple/cups/issues/5452
+
+I pushed back since there does not appear to be a way to browse DNS-SD 
+SRV records and there is no interface for registering services outside 
+of systemd configuration files.  But that might be a future alternative 
+to Avahi should they extend the current interfaces to support it...
+----------
+
+Zdenek Dohnal from Red Hat writes:
+
+----------
+I talked about both issues with Michal Sekletar, which is systemd and
+avahi maintainer for RHEL and the situation is following:
+
+1) systemd-resolved as successor of nss-mdns module:
+
+     As far as Michal knows, systemd-resolved is not currently meant as
+successor of nss-mdns module + avahi since it does not support service
+browsing as Mike found out. If it will in the future, he does not know
+right now (probably how avahi situation will turn up...).
+
+2) Avahi upstream maintenance
+
+    Michal and several other people tried to convince Trent to pass
+ownership to someone else (Michal knew about two people, who would like
+to take Avahi project at that time) about two years ago, because Trent
+seemed to do not have time for the project. But Trent did not want to
+give away the upstream project. Currently Michal fixes Avahi issues
+downstream in Fedora/RHEL.
+----------
+
+My suggestion:
+
+----------
+As Debian does not accept carrying patches distro only with upstream not
+taking them and also as it is very awkward if all distros have to carry
+the same patch due to upstream not caring, and naturally also an
+integral part of the OS needs solid upstream maintainership, this is an
+unbearable situation.
+
+It would be great if someone could convince Trent to accept a
+co-maintainer who also can directly commit to and also issue releases of
+Avahi. If Trent refuses this, I see as the only solution the forking of
+the project. This is the usual way how one handles these situations.
+
+The current official Avahi repo is
+
+https://github.com/lathiat/avahi/
+
+so it is under the personal domain of Trent and not a project domain as
+for example
+
+https://github.com/openprinting/
+
+where cups-filters, ippusbxd and others are.
+
+So I checked
+
+https://github.com/avahi/
+
+and there is something which has nothing to do with Avahi. We should ask
+the owner whether he could move his GitHub activity to another name to
+free avahi for us and then we put our fork of Avahi there.
+
+If this does not work out I suggest to host the Avahi fork on GitLab.
+
+Or should we fork Avahi under a new name then?
+----------
+
+According to Zdenek, Michal tried this with the co-maintainership already.
+
+Seems that Trent is refusing any cooperation or completely ignoring the 
+project.
+
+My suggestion is to fork the project and use one of the locations 
+suggested by me, but who should be the upstream maintainer then.
+
+
+CUPS
+----
+
+No new releases.
+
+When working on this cups-filters bug report
+
+https://github.com/OpenPrinting/cups-filters/issues/22
+
+I discovered that CUPS uses 4 different variants of the 
+get-printer-attributes IPP request at 4 places, so for one and the same 
+printer 4 different PPD files can get generated, depending on the method 
+how one creates a print queue for the driverless IPP printer. I have 
+reported this to CUPS as a bug and Mike has fixed it on both 2.2.x and 
+2.3.x.
+
+See
+
+https://github.com/apple/cups/issues/5484
+
+
+cups-filters
+------------
+
+Currently released is 1.22.0.
+
+ From this release on the pdftopdf filter flattens interactive PDF forms 
+and annotations internally, using QPDF, instead of calling external 
+utilities. This especially eliminates slowing factors as additional 
+piping of the data and unneeded use of PDF interpreters. Using external 
+utilities for flattening is still possible in case of problems. In 
+addition, a crash bug in cups-browsed got fixed and compatibility of the 
+filters with Poppler 0.72 assured.
+
+The form-flattening with QPDF was already planned 2 years ago as GSoC 
+project, but the student did not complete his work. Jay Berkenbilt, 
+upstream maintainer of QPDF, completed the work (the code is practically 
+completely in QPDF), released a new version of QPDF with this included, 
+and told me what to call from pdftopdf during the new-year break. Note 
+that Jay is doing all that voluntarily. Also Tobias Hoffmann, former 
+GSoC student and mentor, helped on this.
+
+The next release will (1.22.1) will still happen before Ubuntu's Feature 
+Freeze (Feb 21) and mainly switch the get-printer-attributes IPP calls 
+to the way how CUPS does it now.
+
+CHANGES IN V1.22.1
+
+	- cups-browsed, driverless: When polling the printer's
+           capabilities via get-printer-attributes IPP request for
+           driverless printing, use the attributes "all" and
+           "media-col-database". Without "all" some printers do not
+           report "urf-supported" and without "media-col-database" not
+           all paper size and marging info gets reported (Issue #22,
+           Pull request #86, CUPS issue #5484).
+	- braille: Document how to rework output before
+	  embossing. Thanks to Samuel Thibault for this patch (Pull
+	  request #90).
+
+CHANGES IN V1.22.0
+
+	- pdftopdf: Use QPDF for flattening interactive PDF forms
+	  (Issues #2, #23, #36, Pull request #88).
+	- pdftopdf: Fixed bug of closing temporary file prematurely
+	  when external PDF form flattening utilities fail (Thanks to
+	  Tobias Hoffmann for finding this, see pull request #88).
+	- pdftoopvp: More fixes for building with Poppler 0.72
+	  (Pull request #83, Issue #75).
+	- pdftoraster, pdftoijs, pdftoopvp: Removed support for
+	  Poppler 0.18 (Pull request #83).
+	- cups-browsed: Fixed crash in applying the BrowseFilter
+	  cups-browsed.conf directives (Debian bug #916765).
+
+
+ippusbxd
+--------
+
+No further news.
