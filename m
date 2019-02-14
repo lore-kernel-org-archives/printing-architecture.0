@@ -1,26 +1,16 @@
-Return-Path: <msweet@apple.com>
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=apple.com;
-	h=mime-version :
-	content-type : sender : subject : from : in-reply-to : date : cc :
-	message-id : references : to; s=20180706;
-	bh=Fl2OnV8oH/2RFvS8WbE3T5aG98WHUrSMor6nl+tZ3Zw=;
-	b=EzbAi+qkfmTnBey+EQ34y6J4hb0/69wJbdSCDe9hWwyTq0rL+Px50MF5Jf0CsEFi+I2p
-	BdW27NrAMAm6L7WmLJLvtlKWRpiSxkm5GETDeX9aREEFZXXqisa4nVVFoOmvSuKfA2YW
-	7VaNmzKXSG/7jRyTsIdGGD2AH5M/WgxyQIqMBP6mMiQn2qVrJ7xAR79dmXcOHNIGNsHe
-	DwmhDG93Ack1KdWOipHv24neZDtJbnqPqEF0aNWHqP2JjszdUEHzrt033LIBT1j2x4lA
-	G7UR6jOFY3CE+bMYWeZvahbro6c3uxCL70Ah3DbUPU7zT20mSX4DEQ2MANwxyYh7Xnsi
-	qw== 
-MIME-version: 1.0
-Content-type: multipart/alternative;
-	boundary="Boundary_(ID_12evRCh5+BaawvtA7LLY8A)"
-Sender: msweet@apple.com
-From: Michael Sweet <msweet@apple.com>
-In-reply-to: <aeeb7c9d-b8b9-ade7-88a3-7d9b1e3b87c7@gmail.com>
-Date: Wed, 13 Feb 2019 16:43:22 -0500
-Message-id: <E151ABF4-6D7C-4A3A-87E4-42375A5A200C@apple.com>
+Return-Path: <zdohnal@redhat.com>
 References: <4dab880a-b033-0b58-7114-cb7af3e2a0a9@gmail.com>
 	<B921DDE3-418B-4B32-8C83-1486476D31C1@apple.com>
 	<aeeb7c9d-b8b9-ade7-88a3-7d9b1e3b87c7@gmail.com>
+	<20190213235604.GE28869@shaftnet.org>
+From: Zdenek Dohnal <zdohnal@redhat.com>
+Message-ID: <3f463111-bf84-0611-bec1-45cef7864404@redhat.com>
+Date: Thu, 14 Feb 2019 09:34:51 +0100
+MIME-Version: 1.0
+In-Reply-To: <20190213235604.GE28869@shaftnet.org>
+Content-Type: multipart/signed; micalg=pgp-sha256;
+	protocol="application/pgp-signature";
+	boundary="wxsACPrnUJzPgCDma3RQwto8s6ce3vtIn"
 Subject: Re: [Printing-architecture] OpenPrinting News
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
@@ -31,116 +21,125 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Till Kamppeter <till.kamppeter@gmail.com>
-Cc: Aveek Basu <aveek.basu@lexmark.com>, "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>
+To: printing-architecture@lists.linux-foundation.org
+
+This is an OpenPGP/MIME signed message (RFC 4880 and 3156)
+--wxsACPrnUJzPgCDma3RQwto8s6ce3vtIn
+Content-Type: multipart/mixed; boundary="tfldlXXcjarZhdVIJC3FiYt7n6ExboPN2";
+ protected-headers="v1"
+From: Zdenek Dohnal <zdohnal@redhat.com>
+To: printing-architecture@lists.linux-foundation.org
+Message-ID: <3f463111-bf84-0611-bec1-45cef7864404@redhat.com>
+Subject: Re: [Printing-architecture] OpenPrinting News
+References: <4dab880a-b033-0b58-7114-cb7af3e2a0a9@gmail.com>
+ <B921DDE3-418B-4B32-8C83-1486476D31C1@apple.com>
+ <aeeb7c9d-b8b9-ade7-88a3-7d9b1e3b87c7@gmail.com>
+ <20190213235604.GE28869@shaftnet.org>
+In-Reply-To: <20190213235604.GE28869@shaftnet.org>
+
+--tfldlXXcjarZhdVIJC3FiYt7n6ExboPN2
+Content-Type: multipart/alternative;
+ boundary="------------55C6D71464A878B34C39B5C1"
+Content-Language: en-US
+
+This is a multi-part message in MIME format.
+--------------55C6D71464A878B34C39B5C1
+Content-Type: text/plain; charset=windows-1252
+Content-Transfer-Encoding: quoted-printable
+
+On 2/14/19 12:56 AM, Solomon Peachy wrote:
+> On Wed, Feb 13, 2019 at 10:26:29PM +0100, Till Kamppeter wrote:
+>> By the way, who is the original author of Avahi?
+> None other than Lennart Pottering.  :)
+Yes :)
+>
+>  - Solomon
+>
+> _______________________________________________
+> Printing-architecture mailing list
+> Printing-architecture@lists.linux-foundation.org
+> https://lists.linuxfoundation.org/mailman/listinfo/printing-architectur=
+e
+
+--=20
+Zdenek Dohnal
+Associate Software Engineer
+Red Hat Czech - Brno TPB-C
 
 
---Boundary_(ID_12evRCh5+BaawvtA7LLY8A)
-Content-type: text/plain; CHARSET=US-ASCII
-Content-transfer-encoding: 7BIT
+--------------55C6D71464A878B34C39B5C1
+Content-Type: text/html; charset=windows-1252
+Content-Transfer-Encoding: quoted-printable
 
-Till,
+<html>
+  <head>
+    <meta http-equiv=3D"Content-Type" content=3D"text/html;
+      charset=3Dwindows-1252">
+  </head>
+  <body text=3D"#000000" bgcolor=3D"#FFFFFF">
+    <div class=3D"moz-cite-prefix">On 2/14/19 12:56 AM, Solomon Peachy
+      wrote:<br>
+    </div>
+    <blockquote type=3D"cite"
+      cite=3D"mid:20190213235604.GE28869@shaftnet.org">
+      <pre class=3D"moz-quote-pre" wrap=3D"">On Wed, Feb 13, 2019 at 10:2=
+6:29PM +0100, Till Kamppeter wrote:
+</pre>
+      <blockquote type=3D"cite">
+        <pre class=3D"moz-quote-pre" wrap=3D"">By the way, who is the ori=
+ginal author of Avahi?
+</pre>
+      </blockquote>
+      <pre class=3D"moz-quote-pre" wrap=3D"">
+None other than Lennart Pottering.  :)</pre>
+    </blockquote>
+    Yes :)<br>
+    <blockquote type=3D"cite"
+      cite=3D"mid:20190213235604.GE28869@shaftnet.org">
+      <pre class=3D"moz-quote-pre" wrap=3D"">
 
-Hard to say since none of the source files have copyright statements, but the Git history and wayback machine shows it is probably Lennart Poettering:
+ - Solomon
+</pre>
+      <br>
+      <fieldset class=3D"mimeAttachmentHeader"></fieldset>
+      <pre class=3D"moz-quote-pre" wrap=3D"">____________________________=
+___________________
+Printing-architecture mailing list
+<a class=3D"moz-txt-link-abbreviated" href=3D"mailto:Printing-architectur=
+e@lists.linux-foundation.org">Printing-architecture@lists.linux-foundatio=
+n.org</a>
+<a class=3D"moz-txt-link-freetext" href=3D"https://lists.linuxfoundation.=
+org/mailman/listinfo/printing-architecture">https://lists.linuxfoundation=
+=2Eorg/mailman/listinfo/printing-architecture</a>
+</pre>
+    </blockquote>
+    <pre class=3D"moz-signature" cols=3D"72">--=20
+Zdenek Dohnal
+Associate Software Engineer
+Red Hat Czech - Brno TPB-C
+</pre>
+  </body>
+</html>
 
-    http://web.archive.org/web/20061010201810/http://www.avahi.org/wiki/AvahiCommunity#People
+--------------55C6D71464A878B34C39B5C1--
 
+--tfldlXXcjarZhdVIJC3FiYt7n6ExboPN2--
 
-> On Feb 13, 2019, at 4:26 PM, Till Kamppeter <till.kamppeter@gmail.com> wrote:
-> 
-> On 13/02/2019 21:34, Michael Sweet wrote:
->> Till,
->>> On Feb 13, 2019, at 1:14 PM, Till Kamppeter <till.kamppeter@gmail.com <mailto:till.kamppeter@gmail.com>> wrote:
->>> ...
->>> According to Zdenek, Michal tried this with the co-maintainership already.
->>> 
->>> Seems that Trent is refusing any cooperation or completely ignoring the project.
->>> 
->>> My suggestion is to fork the project and use one of the locations suggested by me, but who should be the upstream maintainer then.
->> Well, if you fork and put the fork under openprinting, then you can give access to the various Linux packagers of Avahi and let them merge any bug fixes, etc. there at least.  And then *if* Trent starts maintaining Avahi again and accepting pull requests you can easily get those changes back to him...
-> 
-> I could do so and I can imagine that the distros will adopt this, but important is that I am not able to do the full upstream maintainer work. I cannot swallow all free software projects which are somehow needed for printing to work but given up upstream.
-> 
-> As interim upstream maintainer of Avahi I could do things like assign commit rights to distro package maintainers, do releases, perhaps also merge pull requests, but I cannot move forward the development. Here I need contributors (for example distro packagers) who create the code (or mentor a GSoC student on an Avahi project, the slot I could provide).
-> 
-> By the way, who is the original author of Avahi?
-> 
->   Till
+--wxsACPrnUJzPgCDma3RQwto8s6ce3vtIn
+Content-Type: application/pgp-signature; name="signature.asc"
+Content-Description: OpenPGP digital signature
+Content-Disposition: attachment; filename="signature.asc"
 
-_________________________________________________________
-Michael Sweet, Senior Printing System Engineer
+-----BEGIN PGP SIGNATURE-----
 
+iQEzBAEBCAAdFiEEettYIDyl8EbygCWyFapqf01CJ9cFAlxlKCwACgkQFapqf01C
+J9cCXAf+Jc3hPKaYf9xLXl8b7uzBKlBHc+SyiCcKGAak7s0GMpEnOgICn2aLSL8t
+svEGvxv+hN1wp0MbLIeQSGua2RkDe6McC4rGrXptPPgWzaaZl+hdABbQACQaTyPJ
+xLI2se/biwqjuhy9bL17OwZ6Dcze2JMcoGArqRMNLc7V6edHFJcmfz9tZ/O4PgfR
+Vnm7YBMqaNKj1BEUN3eIXYUaLhD4EcaLeECzJa7ABBmsTiYzMkjSjSvLk70E1y8k
+3GUIIJOVnpqb3dsGvciIiaBHXqsLGnRKhtSbUZSHul77fYePDlaCWAUZt5EBxvEH
+rfiBZWeQ6iGlDdBoiqNkHvCwWjuesQ==
+=u+KO
+-----END PGP SIGNATURE-----
 
---Boundary_(ID_12evRCh5+BaawvtA7LLY8A)
-Content-type: text/html; CHARSET=US-ASCII
-Content-transfer-encoding: quoted-printable
-
-<html><head><meta http-equiv=3D"Content-Type" content=3D"text/html; =
-charset=3Dus-ascii"></head><body style=3D"word-wrap: break-word; =
--webkit-nbsp-mode: space; line-break: after-white-space;" =
-class=3D"">Till,<div class=3D""><br class=3D""></div><div class=3D"">Hard =
-to say since none of the source files have copyright statements, but the =
-Git history and wayback machine shows it is probably&nbsp;Lennart =
-Poettering:</div><div class=3D""><br class=3D""></div><div =
-class=3D"">&nbsp; &nbsp; <a =
-href=3D"http://web.archive.org/web/20061010201810/http://www.avahi.org/wik=
-i/AvahiCommunity#People" =
-class=3D"">http://web.archive.org/web/20061010201810/http://www.avahi.org/=
-wiki/AvahiCommunity#People</a></div><div class=3D""><br =
-class=3D""></div><div class=3D""><div><br class=3D""><blockquote =
-type=3D"cite" class=3D""><div class=3D"">On Feb 13, 2019, at 4:26 PM, =
-Till Kamppeter &lt;<a href=3D"mailto:till.kamppeter@gmail.com" =
-class=3D"">till.kamppeter@gmail.com</a>&gt; wrote:</div><br =
-class=3D"Apple-interchange-newline"><div class=3D""><div class=3D"">On =
-13/02/2019 21:34, Michael Sweet wrote:<br class=3D""><blockquote =
-type=3D"cite" class=3D"">Till,<br class=3D""><blockquote type=3D"cite" =
-class=3D"">On Feb 13, 2019, at 1:14 PM, Till Kamppeter &lt;<a =
-href=3D"mailto:till.kamppeter@gmail.com" =
-class=3D"">till.kamppeter@gmail.com</a> &lt;<a =
-href=3D"mailto:till.kamppeter@gmail.com" =
-class=3D"">mailto:till.kamppeter@gmail.com</a>&gt;&gt; wrote:<br =
-class=3D"">...<br class=3D"">According to Zdenek, Michal tried this with =
-the co-maintainership already.<br class=3D""><br class=3D"">Seems that =
-Trent is refusing any cooperation or completely ignoring the project.<br =
-class=3D""><br class=3D"">My suggestion is to fork the project and use =
-one of the locations suggested by me, but who should be the upstream =
-maintainer then.<br class=3D""></blockquote>Well, if you fork and put =
-the fork under openprinting, then you can give access to the various =
-Linux packagers of Avahi and let them merge any bug fixes, etc. there at =
-least. &nbsp;And then *if* Trent starts maintaining Avahi again and =
-accepting pull requests you can easily get those changes back to =
-him...<br class=3D""></blockquote><br class=3D"">I could do so and I can =
-imagine that the distros will adopt this, but important is that I am not =
-able to do the full upstream maintainer work. I cannot swallow all free =
-software projects which are somehow needed for printing to work but =
-given up upstream.<br class=3D""><br class=3D"">As interim upstream =
-maintainer of Avahi I could do things like assign commit rights to =
-distro package maintainers, do releases, perhaps also merge pull =
-requests, but I cannot move forward the development. Here I need =
-contributors (for example distro packagers) who create the code (or =
-mentor a GSoC student on an Avahi project, the slot I could provide).<br =
-class=3D""><br class=3D"">By the way, who is the original author of =
-Avahi?<br class=3D""><br class=3D""> &nbsp;&nbsp;Till<br =
-class=3D""></div></div></blockquote></div><br class=3D""><div class=3D"">
-<span class=3D"Apple-style-span" style=3D"border-collapse: separate; =
-color: rgb(0, 0, 0); font-family: &quot;Andale Mono&quot;; =
-font-variant-ligatures: normal; font-variant-east-asian: normal; =
-font-variant-position: normal; line-height: normal; border-spacing: 0px; =
--webkit-text-decorations-in-effect: none;"><div style=3D"word-wrap: =
-break-word; -webkit-nbsp-mode: space; -webkit-line-break: =
-after-white-space;" class=3D""><span class=3D"Apple-style-span" =
-style=3D"border-collapse: separate; color: rgb(0, 0, 0); font-family: =
-'Andale Mono'; font-style: normal; font-variant: normal; font-weight: =
-normal; letter-spacing: normal; line-height: normal; orphans: 2; =
-text-align: -webkit-auto; text-indent: 0px; text-transform: none; =
-white-space: normal; widows: 2; word-spacing: 0px; border-spacing: 0px; =
--webkit-text-decorations-in-effect: none; -webkit-text-stroke-width: =
-0px;"><div style=3D"word-wrap: break-word; -webkit-nbsp-mode: space; =
--webkit-line-break: after-white-space;" =
-class=3D"">_________________________________________________________<br =
-class=3D"">Michael Sweet, Senior Printing =
-System&nbsp;Engineer</div></span></div></span>
-</div>
-<br class=3D""></div></body></html>=
-
---Boundary_(ID_12evRCh5+BaawvtA7LLY8A)--
+--wxsACPrnUJzPgCDma3RQwto8s6ce3vtIn--
