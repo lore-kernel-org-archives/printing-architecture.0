@@ -1,19 +1,22 @@
-Return-Path: <blueroofmusic@gmail.com>
+Return-Path: <till.kamppeter@gmail.com>
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
-	h=mime-version:from:date:message-id:subject:to;
-	bh=jjsD15N6UsssZ5SPyv4thjeMcU6NPMo99qtJBxtMWgE=;
-	b=SUiX8TVHsZYx25pjXtDl/rTm8RPPhC02qkaf8co8fgf/8u99C23YB/gwJS/65qH0Yn
-	kpXxKYaaYd4GiP4RprDOf+H5tCwNulyOhuR0WumqNGFCb4uYR/ZS7YCMggJGCrovweuQ
-	wEbpV9r8m1fnI5tEhloycRkrAlDCm6foHPPUu8xtO92kALRZuUuDkufOTeZAhghT4tWL
-	X2sGU+ofrRmrgiaP2lvazHUDRdmj6JsJH8rXpab8XjINEPH6ypzueNtGxrEXvIswrtJM
-	bo9WxtT4oHJui6lKJAov0jUdnc/JpcXKSweQB6mlySk52jggtoIeLjg9s72mNF65UAjX
-	TWpQ==
+	h=from:subject:to:cc:message-id:date:user-agent:mime-version
+	:content-language:content-transfer-encoding;
+	bh=3cyiJDnb0TfDdo7xvskKpEN7DfdRPdEYRCS2B9yNFM0=;
+	b=hemeQxl9osORAwcG6OW2FtKD/AATtazT5Vcad3RK5R2uEkMyTKsIvPHkp5J2EfnsSi
+	Q/cnfrRfBs8CSCtYJ0N8QBIQecVUjW1I1IkuVsQiu0Of4DQLiUhNVv+jcLbUmUUT3O8d
+	kKFRUTxku4bnwAmpSLXJ8uy7AgjwcA4WTRC2yEeMeUIFV/PHFxFkzEvjYA4LhDPtfsOp
+	VmWyo8rrp5gHQcwAx/jWYbZxykjZRleXdnzJs7CVKjOLUw06AFPtPst+2sDm+GcEgTWD
+	y56k8iwzZRn53gZ17RP1nV6njqR42SlW+tVb2XpRHjYZ3v6LqwtoBJbT3IXx5OLDM026
+	n1cA==
+From: Till Kamppeter <till.kamppeter@gmail.com>
+Message-ID: <0cc9d7c6-1822-2909-b943-afac787750ed@gmail.com>
+Date: Wed, 6 Mar 2019 15:55:48 +0100
 MIME-Version: 1.0
-From: Ira McDonald <blueroofmusic@gmail.com>
-Date: Mon, 4 Mar 2019 18:24:50 -0500
-Message-ID: <CAN40gSuZqp0WHmF59+dGQVwrhor_ZBuq9Msj4VqnGPR+nVrmWA@mail.gmail.com>
-Content-Type: multipart/alternative; boundary="000000000000f2485605834d10d2"
-Subject: [Printing-architecture] REMINDER - OP call Tuesday (5 March 2019)
+Content-Type: text/plain; charset=utf-8; format=flowed
+Content-Language: en-US
+Content-Transfer-Encoding: 7bit
+Subject: [Printing-architecture] OpenPrinting News
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>,
@@ -23,93 +26,134 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>, Till Kamppeter <till.kamppeter@gmail.com>, Aveek Basu <basu.aveek@gmail.com>, Danny Brennan <brennand@us.ibm.com>, Ira McDonald <blueroofmusic@gmail.com>
-
---000000000000f2485605834d10d2
-Content-Type: text/plain; charset="UTF-8"
+To: Ira McDonald <blueroofmusic@gmail.com>
+Cc: Aveek Basu <aveek.basu@lexmark.com>, Open Printing <printing-architecture@lists.linux-foundation.org>
 
 Hi,
 
-See Bluejeans call invitation just mailed out.
+here is the newest development of the last month.
 
-Note:  I will have a hard stop after the first 30 minutes tomorrow.
+    Till
 
-(1) March - US/Europe/Brazil/India - OP Monthly Meeting
-    - Tuesday 5 March 2019, Daytime
-      - Note - BRST (Brasilia Summer Time) ends 17 February 2019
-      - Note - US EDT (Eastern Daylight Time) starts 10 March 2019
-      - Note - EU CEST (Central Europe Summer Time) starts 31 March 2019
-      - Bluejeans.com web conference to be announced
-      - US
-        10am in San Francisco - US PST (Pacific Standard Time)
-        11am in Colorado - US MST (Mountain Standard Time)
-        12am in Chicago - US CST (Central Standard Time)
-        1pm in New York - US EST (Eastern Standard Time)
-      - Europe
-        7pm in Berlin - CET (Central Europe Time)
-      - Brazil
-        3pm in Belo Horizonte - BRT (Brasilia Time)
-      - India
-        11:30pm in New Delhi - IST (India Standard Time)
+----------
 
-Cheers,
-- Ira
 
-Ira McDonald (Musician / Software Architect)
-Co-Chair - TCG Trusted Mobility Solutions WG
-Co-Chair - TCG Metadata Access Protocol SG
-Chair - Linux Foundation Open Printing WG
-Secretary - IEEE-ISTO Printer Working Group
-Co-Chair - IEEE-ISTO PWG Internet Printing Protocol WG
-IETF Designated Expert - IPP & Printer MIB
-Blue Roof Music / High North Inc
-http://sites.google.com/site/blueroofmusic
-http://sites.google.com/site/highnorthinc
-mailto: blueroofmusic@gmail.com
-PO Box 221  Grand Marais, MI 49839  906-494-2434
+Google Summer of Code 2019
+--------------------------
 
---000000000000f2485605834d10d2
-Content-Type: text/html; charset="UTF-8"
-Content-Transfer-Encoding: quoted-printable
+The Linux Foundation
 
-<div dir=3D"ltr"><div dir=3D"ltr"><div>Hi,</div><div><br></div><div>
-See Bluejeans call invitation just mailed out.</div><div><br></div><div>Not=
-e:=C2=A0 I will have a hard stop after the first 30 minutes tomorrow.<br></=
-div><div><br></div><div>(1) March - US/Europe/Brazil/India - OP Monthly Mee=
-ting<br>=C2=A0=C2=A0=C2=A0 - Tuesday 5 March 2019, Daytime<br>=C2=A0=C2=A0=
-=C2=A0=C2=A0=C2=A0 - Note - BRST (Brasilia Summer Time) ends 17 February 20=
-19<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 - Note - US EDT (Eastern Daylight Time=
-) starts 10 March 2019<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 - Note - EU CEST (=
-Central Europe Summer Time) starts 31 March 2019<br>=C2=A0=C2=A0=C2=A0=C2=
-=A0=C2=A0 - Bluejeans.com web conference to be announced<br>=C2=A0=C2=A0=C2=
-=A0=C2=A0=C2=A0 - US<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 10am in =
-San Francisco - US PST (Pacific Standard Time)<br>=C2=A0=C2=A0=C2=A0=C2=A0=
-=C2=A0=C2=A0=C2=A0 11am in Colorado - US MST (Mountain Standard Time)<br>=
-=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 12am in Chicago - US CST (Centra=
-l Standard Time)<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 1pm in New Y=
-ork - US EST (Eastern Standard Time)<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 - Eu=
-rope<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 7pm in Berlin - CET (Cen=
-tral Europe Time)<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 - Brazil<br>=C2=A0=C2=
-=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 3pm in Belo Horizonte - BRT (Brasilia Tim=
-e)<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 - India<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=
-=A0=C2=A0=C2=A0 11:30pm in New Delhi - IST (India Standard Time)</div><div>=
-<br></div><div>Cheers,</div><div>- Ira</div><div><br></div><div><div><div d=
-ir=3D"ltr" class=3D"gmail_signature"><div dir=3D"ltr"><div><div dir=3D"ltr"=
-><div><div dir=3D"ltr"><div><div dir=3D"ltr">Ira McDonald (Musician / Softw=
-are Architect)<br>Co-Chair - TCG Trusted Mobility Solutions WG</div><div>Co=
--Chair - TCG Metadata Access Protocol SG<br></div><div dir=3D"ltr">Chair - =
-Linux Foundation Open Printing WG<br>Secretary - IEEE-ISTO Printer Working =
-Group<br>Co-Chair - IEEE-ISTO PWG Internet Printing Protocol WG<br>IETF Des=
-ignated Expert - IPP &amp; Printer MIB<br>Blue Roof Music / High North Inc<=
-br><a style=3D"color:rgb(51,51,255)" href=3D"http://sites.google.com/site/b=
-lueroofmusic" target=3D"_blank">http://sites.google.com/site/blueroofmusic<=
-/a><br><a style=3D"color:rgb(102,0,204)" href=3D"http://sites.google.com/si=
-te/highnorthinc" target=3D"_blank">http://sites.google.com/site/highnorthin=
-c</a><br>mailto: <a href=3D"mailto:blueroofmusic@gmail.com" target=3D"_blan=
-k">blueroofmusic@gmail.com</a><br>PO Box 221=C2=A0 Grand Marais, MI 49839=
-=C2=A0 906-494-2434<br><br><div style=3D"display:inline"></div><div style=
-=3D"display:inline"></div><div style=3D"display:inline"></div><div></div><d=
-iv></div><div></div><div></div></div></div></div></div></div></div></div></=
-div></div></div></div></div>
+Avahi
+-----
 
---000000000000f2485605834d10d2--
+Trent Lloyd is one of the original authors of Avahi (the other is 
+Lennart Poettering), which makes it more difficult to take the project 
+away from him.
+
+I was on a Canonical meeting for a week where the different engineering 
+teams of Canonical meet. There I have met Trent in person and talked 
+with him about the issue and he told it is no problem for him to merge 
+the patch. I met him on the first day of the meeting and he promised to 
+still apply the patch during the meeting week but he did not.
+
+Now I have sent two weekly reminder e-mails and he did not even answer.
+
+So on the OpenPrinting Summit we must see with the Google guys how they 
+will do the ippusbxd and Printer Applications (local discovery) on 
+Chrome OS and perhaps overtake this to Linux.
+
+
+Kurt Pfeifle (kurt dot pfeifle at gmail dot com, the person who made me 
+finding CUPS back in 2000 and getting what I am now) writes on the 
+OpenPrinting mailing list:
+
+----------
+On Thu, Feb 14, 2019 at 1:17 AM Solomon Peachy <pizza@shaftnet.org> wrote:
+
+     On Wed, Feb 13, 2019 at 10:26:29PM +0100, Till Kamppeter wrote:
+     > By the way, who is the original author of Avahi?
+
+     None other than Lennart Pottering.  :)
+
+      - Solomon
+
+
+This is not correct.
+
+Avahi was initially created by Trend Lloyd in early 2004. He was 
+certainly inspired by Apple's Bonjour, which unfortunately was not Open 
+Source initially, so there as a strong motivation to implement a FOSS 
+ZeroConf stack, since all of the relevant specs (mDNS + DNS-SD) were 
+already there at IETF, and open.
+
+Later that same year Lennart Poettering started a similar project to 
+implement mDNS/DNS-SD functionality called "FlexMDNS".
+
+Both projects united and merged their code bases sometime in 2005. 
+Though I have no idea which of the two guys wrote more lines of code 
+that still exists in today's code base, Poettering surely had a heavy 
+impact on today's Avahi.
+
+Apple released Bonjour as Open Source software under the Apache License 
+only in 2006.
+
+Avahi's name certainly was Trend's decision, and he started his 
+implementation half a year before Poettering.
+
+Poettering's last commit into Avahi's GitHub code was in Sept  2012. 
+Trend's last commit was 10 days ago. The last time Trend merged a major 
+pull request was in August 2018. See 
+https://github.com/lathiat/avahi/commits?author=lathiat.
+
+  According to https://github.com/lathiat Trend works for Canonical.
+----------
+
+
+CUPS
+----
+
+No new releases.
+
+
+cups-filters
+------------
+
+Currently released is 1.22.1.
+
+Bug fix release, mainly to let the get-printer-attributes IPP requests 
+for auto-generating PPD files for driverless IPP printing use the same 
+attributes as CUPS uses. There are also some small enhancements for 
+Braille support.
+
+
+CHANGES IN V1.22.2
+
+	- cups-browsed: Do not do IPP request for printer-is-shared
+           option for remote cups queues with CUPS 2.2.x and newer
+           (Pull request #91).
+	- cups-browsed: Fix crash bug when reading "Cluster"
+	  directive from configuration file (Issue #94).
+	- driverless: Updated man page as now also Mopria and
+	  Wi-Fi Direct printers are supported. Mentioned also
+	  ippusbxd.
+
+CHANGES IN V1.22.1
+
+	- braille: Use sort command with LC_ALL=C for reproducibility
+	  of the genrated files, needed for distribution packaging.
+	- cups-browsed, driverless: When polling the printer's
+           capabilities via get-printer-attributes IPP request for
+           driverless printing, use the attributes "all" and
+           "media-col-database". Without "all" some printers do not
+           report "urf-supported" and without "media-col-database" not
+           all paper size and marging info gets reported (Issue #22,
+           Pull request #86, CUPS issue #5484).
+	- braille: Document how to rework output before
+	  embossing. Thanks to Samuel Thibault for this patch (Pull
+	  request #90).
+
+
+ippusbxd
+--------
+
+No further news.
