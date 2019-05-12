@@ -1,22 +1,25 @@
 Return-Path: <till.kamppeter@gmail.com>
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
-	h=from:subject:to:cc:message-id:date:user-agent:mime-version
-	:content-language:content-transfer-encoding;
-	bh=+nlC9Sp7bYjcT4b9Hr+571cUs7AJKwnlADySgxuUfHk=;
-	b=vVPtOJlpiAvjVlmryABagMh7VdAynXozalLVTZFtps4VhrkDpKhn+UZgJ66bJ/9gDR
-	Bs+bP6nxfmFWtrKemlRnRWKV4s14St7r8S3bPzY8CI906J79Ua2wc1RVjpsi8KOjCbo7
-	8TgbTCj6LmbRPmp+lNGuGFokriwfWEtQ0pX6nYMdJ7rnAhL3TdxsudcIy/wHAa2xwHkE
-	xkUFsPVXFdJiXdatRDHBSCAaEX67Mu3CWIsXnJycz26bPk3g6ItNLkUPN8UW0V0OhkgP
-	uQJdFxfbcc6a0fXq+fap9m+StUADggcDqGk5cx13r7dfCs7ZmfKwcLHarJ89YjJUZYeg
-	uY+Q==
+	h=subject:to:cc:references:from:message-id:date:user-agent
+	:mime-version:in-reply-to:content-language:content-transfer-encoding;
+	bh=ICOB9sAHOLIKsS6hk2bIEigwxodtWkxbewt8rcvMRD4=;
+	b=pA1w73vF6fQKcMPZr3NKaMRaxXO1pIPTQsMeKVXwSu8IQbFRwA0unSKEQQ4B94WaLW
+	zosHACBB1DCLq2rrNkw3HC+H3vkLXcNFmmuX4ubpotxzfeIFjVYPPld0YAkTzwRkzUPN
+	bGNMelr5oOcVZ3vnDYIyTqTe8J4XMwJgYada3rhSk69iQf7xKchdYhuiHJih1rj7PNu2
+	TPxndqhkOBlVW/mJ6U3s+kqWQRWzDaO7hV7fiCdjnJXU9P0tYH3he6Q/N4C2JUuaePfv
+	AuSVA2BXgD+bm2LSCs6fzXpqGJrzEE0tz3ncJpl9qZbpfsyaL/E6JWOOIliWrCFDRXNY
+	NULw==
+References: <763bec17-f576-00cd-8633-c07e1b039003@gmail.com>
+	<20190512181559.GA2312@c720-r342378>
 From: Till Kamppeter <till.kamppeter@gmail.com>
-Message-ID: <763bec17-f576-00cd-8633-c07e1b039003@gmail.com>
-Date: Sun, 12 May 2019 18:03:03 +0200
+Message-ID: <69a81966-5a01-10f7-b607-e6c5b4b7db33@gmail.com>
+Date: Sun, 12 May 2019 20:48:46 +0200
 MIME-Version: 1.0
+In-Reply-To: <20190512181559.GA2312@c720-r342378>
 Content-Type: text/plain; charset=utf-8; format=flowed
 Content-Language: en-US
 Content-Transfer-Encoding: 7bit
-Subject: [Printing-architecture] OpenPrinting News
+Subject: Re: [Printing-architecture] OpenPrinting News
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>,
@@ -26,272 +29,17 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Ira McDonald <blueroofmusic@gmail.com>
+To: Matthias Apitz <guru@unixarea.de>
 Cc: Aveek Basu <aveek.basu@lexmark.com>, Open Printing <printing-architecture@lists.linux-foundation.org>
 
-Hi,
+On 12/05/2019 20:15, Matthias Apitz wrote:
+> I updated last week to 2.3b8 and found this issue fixed. But, I can't
+> see it in the list of 2.3b8 fixes. Any idea?
 
-here is the newest development of the last month.
+These lists are simple copy and paste of the upstream ChangeLog 
+(CHANGES.md) of CUPS, not only the one of 2.3b8 in this mail but also 
+for 2.3b6 and 2.3b7 in earlier mails to this list. If your fix does not 
+appear in none of them, please ask on the CUPS mailing list (see 
+http://www.cups.org/).
 
     Till
-
-----------
-
-
-Google Summer of Code 2019
---------------------------
-
-Google has distributed the slots and officially announced the accepted 
-proposals. The Linux Foundation has got all the 12 requested slots, so 
-we can have all our 5 selected students working for OpenPrinting.
-
-1. Generic Framework to turn legacy drivers consisting of CUPS filters 
-and PPDs into Printer Applications
-
-Student: Dheeraj Yadav
-Mentor: Till Kamppeter
-
-2. Improve the pdftoraster filter to not use undocumented/unstable APIs 
-of Poppler
-
-Student: Tanmay Anand
-Mentor: Sahil Arora
-
-3. IPP: ipptool test suite updates for IPP errata updates
-
-Student: Sharad Shukla
-Mentors: Smith Kennedy, Ira McDonald, Danny Brennan
-
-4. ipptool test suite for IPP System Service
-
-Student: Aakash Lahoti
-Mentors: Smith Kennedy, Ira McDonald, Danny Brennan
-
-5. Turn the scp-dbus-service of system-config-printer into C
-
-Student: Sobhan Mondal
-Mentors: Zdenek Dohnal
-
-The students who had assignments during the selection process are 
-currently finishing them and they also partially started to work on 
-their projects.
-
-
-Avahi
------
-
-Not continued yet by Trent as he has still urgent work to do.
-
-
-OpenPrinting web site
----------------------
-
-Not much done here as the 2019 students workded on cups-filters issues 
-which they got as assignments during the selection process, started also 
-on work for the actual GSoC project and had exams at school.
-
-Sahil is currentyly re-initiating the process.
-
-
-CUPS
-----
-
-2.3b8 released.
-
-CUPS 2.3b8 is another bug fix release.
-
-Changes in CUPS v2.3b8
-----------------------
-
-- Media size matching now uses a tolerance of 0.5mm (rdar://33822024)
-- The lpadmin command would hang with a bad PPD file (rdar://41495016)
-- Fixed a potential crash bug in cups-driverd (rdar://46625579)
-- Fixed a performance regression with large PPDs (rdar://47040759)
-- Fixed a memory reallocation bug in HTTP header value expansion
-   (rdar://problem/50000749)
-- Restored minimal support for the `Emulators` keyword in PPD files to
-   allow old Samsung printer drivers to continue to work (Issue #5562)
-- The scheduler did not encode octetString values like "job-password"
-   correctly for the print filters (Issue #5558)
-- The `cupsCheckDestSupported` function did not check octetString values
-   correctly (Issue #5557)
-- Added support for `UserAgentTokens` directive in "client.conf" (Issue
-   #5555)
-- Updated the systemd service file for cupsd (Issue #5551)
-- The `ippValidateAttribute` function did not catch all instances of
-   invalid UTF-8 strings (Issue #5509)
-- Fixed an issue with the self-signed certificates generated by GNU TLS
-   (Issue #5506)
-- Fixed a potential memory leak when reading at the end of a file (Issue
-   #5473)
-- Fixed potential unaligned accesses in the string pool (Issue #5474)
-- Fixed a potential memory leak when loading a PPD file (Issue #5475)
-- Added a USB quirks rule for the Lexmark E120n (Issue #5478)
-- Updated the USB quirks rule for Zebra label printers (Issue #5395)
-- Fixed a compile error on Linux (Issue #5483)
-- The lpadmin command, web interface, and scheduler all queried an IPP
-   Everywhere printer differently, resulting in different PPDs for the
-   same printer (Issue #5484)
-- The web interface no longer provides access to the log files (Issue
-   #5513)
-- Non-Kerberized printing to Windows via IPP was broken (Issue #5515)
-- Eliminated use of private headers and some deprecated macOS APIs
-   (Issue #5516)
-- The scheduler no longer stops a printer if an error occurs when a job
-   is canceled or aborted (Issue #5517)
-- Added a USB quirks rule for the DYMO 450 Turbo (Issue #5521)
-- Added a USB quirks rule for Xerox printers (Issue #5523)
-- The scheduler's self-signed certificate did not include all of the
-   alternate names for the server when using GNU TLS (Issue #5525)
-- Fixed compiler warnings with newer versions of GCC (Issue #5532, Issue
-   #5533)
-- Fixed some PPD caching and IPP Everywhere PPD accounting/password bugs
-   (Issue #5535)
-- Fixed `PreserveJobHistory` bug with time values (Issue #5538)
-- The scheduler no longer advertises the HTTP methods it supports (Issue
-   #5540)
-- Localization updates (Issue #5461, Issues #5471, Issue #5481, Issue
-   #5486, Issue #5489, Issue #5491, Issue #5492, Issue #5493, Issue
-   #5494, Issue #5495, Issue #5497, Issue #5499, Issue #5500, Issue
-   #5501, Issue #5504)
-- The scheduler did not always idle exit as quickly as it could.
-- Added a new `ippeveprinter` command based on the old ippserver sample
-   code.
-
-2.22.11 released.
-
-CUPS 2.2.11 is a bug fix release that addresses issues in the scheduler, 
-IPP Everywhere support, CUPS library, and USB printer support.
-
-Changes in CUPS v2.2.11
------------------------
-
-- Running ppdmerge with the same input and output filenames did not work
-   as advertised (Issue #5455)
-- Fixed a potential memory leak when reading at the end of a file (Issue
-   #5473)
-- Fixed potential unaligned accesses in the string pool (Issue #5474)
-- Fixed a potential memory leak when loading a PPD file (Issue #5475)
-- Added a USB quirks rule for the Lexmark E120n (Issue #5478)
-- Updated the USB quirks rule for Zebra label printers (Issue #5395)
-- Fixed a compile error on Linux (Issue #5483)
-- The lpadmin command, web interface, and scheduler all queried an IPP
-   Everywhere printer differently, resulting in different PPDs for the
-   same printer (Issue #5484)
-- Fixed an issue with the self-signed certificates generated by GNU TLS
-   (Issue #5506)
-- The `ippValidateAttribute` function did not catch all instances of
-   invalid UTF-8 strings (Issue #5509)
-- Non-Kerberized printing to Windows via IPP was broken (Issue #5515)
-- The scheduler no longer stops a printer if an error occurs when a job
-   is canceled or aborted (Issue #5517)
-- Added a USB quirks rule for the DYMO 450 Turbo (Issue #5521)
-- Added a USB quirks rule for Xerox printers (Issue #5523)
-- The scheduler's self-signed certificate did not include all of the
-   alternate names for the server when using GNU TLS (Issue #5525)
-- Fixed compiler warnings with newer versions of GCC (Issue #5532, Issue
-   #5533)
-- Fixed some PPD caching and IPP Everywhere PPD accounting/password bugs
-   (Issue #5535)
-- Fixed `PreserveJobHistory` bug with time values (Issue #5538)
-- Media size matching now uses a tolerance of 0.5mm (rdar://33822024)
-- The lpadmin command would hang with a bad PPD file (rdar://41495016)
-- Fixed a potential crash bug in cups-driverd (rdar://46625579)
-- Fixed a performance regression with large PPDs (rdar://47040759)
-- The scheduler did not always idle exit as quickly as it could.
-
-
-cups-filters
-------------
-
-Currently released is 1.22.5.
-
-1.22.5 is also the cups-filters release in Ubuntu 19.04 (Disco).
-
-Deepak Patankar has finished his GSoC 2018 project of auto-selection
-of the destination printer by job content and options with cups-browsed. 
-Together with this he has also made cups-browsed not downloading PPD 
-files of remote CUPS queues from the servers any more and treating 
-remote CUPS queues and native IPP network printers equally, working 
-towards the deprecation of PPD files.
-
-He has posted a pull request with all his code:
-
-https://github.com/OpenPrinting/cups-filters/pull/116
-
-Before merging this pull request I will release 1.22.6 with all the bug 
-fixes which came together during the last month and also with some fixes 
-coming up in the next days of the last assignments getting finished.
-
-After that I will merge the pull request and after some testing release 
-1.23.0 as the next feature release ending a feature-less year for 
-cups-browsed.
-
-1.22.5:
-
-Bug fix release, to make foomatic-rip working with Ghostscript 9.27 and 
-later.
-
-CHANGES IN V1.22.6
-
-	- Build system: ENABLE_DRIVERLESS got only defined with CUPS
-	  1.6 and newer, not with older CUPS versions (Issue #111).
-	- pdftopdf, imagetopdf, imagetoraster: Silenced compiler
-           warnings.
-	- cups-browsed, driverless: Replaced httpConnect() calls by
-	  httpConnect2() calls as the former CUPS library function is
-	  deprecated.
-	- Build system: Compile everything using the CUPS libraries
-	  with '-D_PPD_DEPRECATED=""' for the time being until the
-	  deprecated PPD API calls get replaced, to stop the flooding
-	  with PPD API deprecation warnings making more important
-	  warnings being overlooked.
-	- cups-browsed: When removing a local queue on shutdown or
-	  when DNS-SD reports the printer as disappeared check whether
-	  the local queue got overwritten by an external process as
-	  sometimes the shutdown or disappearing event comes too close
-	  for cups-browsed receiving a printer-modified notification
-	  from CUPS before (Ubuntu bug #1731417).
-
-CHANGES IN V1.22.5
-
-	- foomatic-rip: Changed Ghostscript call to count pages in a
-	  PDF file to use "runpdfbegin" and not the undocumented
-	  Ghostscript internal "pdfdict", so that it works with
-	  Ghostscript 9.27 and later (Debian bug #926576, Arch Linux
-	  bug #62251).
-
-
-ippusbxd
---------
-
-On the Summit I have talked about the following two issues in ippusbxd 
-with Sean Kau from Google (and also mailed to David Valleau from Google, 
-no answer yet):
-
-First, if I have a printer/scanner multi-function device connected via 
-USB and ippusbxd is connected to it I can print perfectly, driverless 
-via IPP, but I cannot scan as, unfortunately, the industry did not adopt 
-the PWG driverless IPP scanning standard yet. And if I want to scan via 
-a classic SANE driver accessing via USB conventionally, it does not work 
-because ippusbxd occupies all USB interfaces/channels.
-
-So I am asking whether one could modify ippusbxd to dynamically occupy 
-channels, so that, at least when no print job is running, one can scan 
-the conventional USB/SANE way. Is this possible?
-
-One should note that not all multi-function devices have a scanning UI 
-in their admin web interface and that these UIs are rather restricted 
-compared to typical SANE frontends.
-
-The second issue is
-
-https://github.com/tillkamppeter/ippusbxd/pull/12
-
-Adding Support for Unix Domain Sockets
-
-I have asked whether this is still used in Chrome OS? If so, I asked for 
-re-posting this pull request to the now official repo 
-https://github.com/OpenPrinting/ippusbxd of ippusbxd.
-
-No actual changes on the code.
