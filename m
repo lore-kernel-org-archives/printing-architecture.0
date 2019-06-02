@@ -1,16 +1,19 @@
-Return-Path: <zdohnal@redhat.com>
-References: <a6b09ce3-c0ef-c273-7887-0daa4ec52edc@redhat.com>
-	<12e132cd-2029-aba3-7406-8b2a4299d772@gmail.com>
-From: Zdenek Dohnal <zdohnal@redhat.com>
-Message-ID: <f1ec8fd4-e98d-441b-523e-25b3ba5af9f1@redhat.com>
-Date: Thu, 23 May 2019 08:48:04 +0200
+Return-Path: <blueroofmusic@gmail.com>
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
+	h=mime-version:from:date:message-id:subject:to;
+	bh=iCD1/vLFiV+wMKheLze2p3onmQqkjQZrn3WJGd4RbmQ=;
+	b=j8kxU55kenJpkg6gbRxQpyJCRvHfuZNCRtJPjGgGXVfuXZNOpVYCc9xT4z8E+zYMdh
+	g+6OPlYhrLfr/MczJYBfJa6MexrcKoD3OghlBI3ldR9FHL6OvRxSN9TIh2fOAk7RXuTX
+	31Rev5ParP/2ur7CjzYJX/Cigk9mzRPJDQLTLP7Mc4jUBV+ki4c7ax9ABafW7I8mt0vC
+	hSA9ivy3asZXH5Y4sUnyH9shbnehG7D3JDFs+NgJ8Ar+BrSoQTCB5WP+H5jcLQsjJtI8
+	liSbd5N90qhDphOcXtQ+ErLpxwAu4tsAqqqgpYdX0YyaWghhiKENpAK9xSEvHNqL1XD1
+	au7Q==
 MIME-Version: 1.0
-In-Reply-To: <12e132cd-2029-aba3-7406-8b2a4299d772@gmail.com>
-Content-Type: multipart/signed; micalg=pgp-sha256;
-	protocol="application/pgp-signature";
-	boundary="ihqcgOwgUfvd8KnNsf1DLhuJYUffzyRpO"
-Subject: Re: [Printing-architecture] RHEL 8 and system-config-printer GUI
- removal
+From: Ira McDonald <blueroofmusic@gmail.com>
+Date: Sun, 2 Jun 2019 17:23:50 -0400
+Message-ID: <CAN40gSthODd7omV4Yo9_SkXcqmXAvEHEUYq4sCpxb9MzEYDZow@mail.gmail.com>
+Content-Type: multipart/alternative; boundary="000000000000831ba5058a5ddc02"
+Subject: [Printing-architecture] REMINDER - OP call Tuesday (4 June 2019)
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>,
@@ -20,123 +23,92 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Till Kamppeter <till.kamppeter@gmail.com>, "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>
+To: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>, Aveek Basu <basu.aveek@gmail.com>, Till Kamppeter <till.kamppeter@gmail.com>, Danny Brennan <brennand@us.ibm.com>, Ira McDonald <blueroofmusic@gmail.com>
 
-This is an OpenPGP/MIME signed message (RFC 4880 and 3156)
---ihqcgOwgUfvd8KnNsf1DLhuJYUffzyRpO
-Content-Type: multipart/mixed; boundary="4j8NKcRKRpuwazH6hpTbNXvXB7VB50pTd";
- protected-headers="v1"
-From: Zdenek Dohnal <zdohnal@redhat.com>
-To: Till Kamppeter <till.kamppeter@gmail.com>,
- "printing-architecture@lists.linux-foundation.org"
- <printing-architecture@lists.linux-foundation.org>
-Message-ID: <f1ec8fd4-e98d-441b-523e-25b3ba5af9f1@redhat.com>
-Subject: Re: [Printing-architecture] RHEL 8 and system-config-printer GUI
- removal
-References: <a6b09ce3-c0ef-c273-7887-0daa4ec52edc@redhat.com>
- <12e132cd-2029-aba3-7406-8b2a4299d772@gmail.com>
-In-Reply-To: <12e132cd-2029-aba3-7406-8b2a4299d772@gmail.com>
+--000000000000831ba5058a5ddc02
+Content-Type: text/plain; charset="UTF-8"
 
---4j8NKcRKRpuwazH6hpTbNXvXB7VB50pTd
-Content-Type: text/plain; charset=utf-8
+Hi,
+
+See Bluejeans call invitation just mailed out.
+
+(1) June - US/Europe/Brazil/India - OP Monthly Meeting
+   - Tuesday 4 June 2019, Daytime
+      - Bluejeans.com web conference to be announced
+      - US
+        10am in San Francisco - US PDT (Pacific Daylight Time)
+        11am in Colorado - US MDT (Mountain Daylight Time)
+        12am in Chicago - US CDT (Central Daylight Time)
+        1pm in New York - US EDT (Eastern Daylight Time)
+      - Europe
+        7pm in Berlin - CEST (Central Europe Summer Time)
+      - Brazil
+        2pm in Belo Horizonte - BRT (Brasilia Time)
+      - India
+        10:30pm in New Delhi - IST (India Standard Time)
+
+Cheers,
+- Ira
+
+PS - If we miss this one, we'll have to delay until 25 June, because I
+will be on the road Tuesday 11 June and in an IEEE 1609 meeting
+on Tuesday 18 June.
+
+Ira McDonald (Musician / Software Architect)
+Co-Chair - TCG Trusted Mobility Solutions WG
+Co-Chair - TCG Metadata Access Protocol SG
+Chair - Linux Foundation Open Printing WG
+Secretary - IEEE-ISTO Printer Working Group
+Co-Chair - IEEE-ISTO PWG Internet Printing Protocol WG
+IETF Designated Expert - IPP & Printer MIB
+Blue Roof Music / High North Inc
+http://sites.google.com/site/blueroofmusic
+http://sites.google.com/site/highnorthinc
+mailto: blueroofmusic@gmail.com
+PO Box 221  Grand Marais, MI 49839  906-494-2434
+
+--000000000000831ba5058a5ddc02
+Content-Type: text/html; charset="UTF-8"
 Content-Transfer-Encoding: quoted-printable
-Content-Language: en-US
 
+<div dir=3D"ltr"><div>Hi,</div><div><br></div><div>
+See Bluejeans call invitation just mailed out. <br></div><div><br></div><di=
+v>(1) June - US/Europe/Brazil/India - OP Monthly Meeting </div>=C2=A0=C2=A0=
+ - Tuesday 4 June 2019, Daytime<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 - Bluejea=
+ns.com web conference to be announced<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 - U=
+S<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 10am in San Francisco - US =
+PDT (Pacific Daylight Time)<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 1=
+1am in Colorado - US MDT (Mountain Daylight Time)<br>=C2=A0=C2=A0=C2=A0=C2=
+=A0=C2=A0=C2=A0=C2=A0 12am in Chicago - US CDT (Central Daylight Time)<br>=
+=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 1pm in New York - US EDT (Easter=
+n Daylight Time)<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 - Europe<br>=C2=A0=C2=A0=
+=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 7pm in Berlin - CEST (Central Europe Summer =
+Time)<br>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 - Brazil<br>=C2=A0=C2=A0=C2=A0=C2=
+=A0=C2=A0=C2=A0=C2=A0 2pm in Belo Horizonte - BRT (Brasilia Time)<br>=C2=A0=
+=C2=A0=C2=A0=C2=A0=C2=A0 - India<br><div>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=
+=A0=C2=A0 10:30pm in New Delhi - IST (India Standard Time) <br></div><div><=
+br></div><div>Cheers,</div><div>- Ira</div><div><br></div><div>
+<div>PS - If we miss this one, we&#39;ll have to delay until 25 June, becau=
+se I <br></div><div>will be on the road Tuesday 11 June and in an IEEE 1609=
+ meeting</div><div>on Tuesday 18 June.</div><div><br></div>
 
-On 5/20/19 2:08 PM, Till Kamppeter wrote:
-> On 20/05/2019 12:43, Zdenek Dohnal wrote:
->> Hi all,
->>
->> Red Hat released new RHEL major version, 8, where desktop team and
->> cockpit team led initiative for removal of GUIs system-config-* projec=
-ts
->> like system-config-printer.
->>
->> These teams decided that GNOME control center for clients and CUPS web=
+</div><div><div dir=3D"ltr" class=3D"m_6123718456658977859gmail_signature" =
+data-smartmail=3D"gmail_signature"><div dir=3D"ltr"><div><div dir=3D"ltr"><=
+div><div dir=3D"ltr"><div><div dir=3D"ltr">Ira McDonald (Musician / Softwar=
+e Architect)<br>Co-Chair - TCG Trusted Mobility Solutions WG</div><div>Co-C=
+hair - TCG Metadata Access Protocol SG<br></div><div dir=3D"ltr">Chair - Li=
+nux Foundation Open Printing WG<br>Secretary - IEEE-ISTO Printer Working Gr=
+oup<br>Co-Chair - IEEE-ISTO PWG Internet Printing Protocol WG<br>IETF Desig=
+nated Expert - IPP &amp; Printer MIB<br>Blue Roof Music / High North Inc<br=
+><a style=3D"color:rgb(51,51,255)" href=3D"http://sites.google.com/site/blu=
+eroofmusic" target=3D"_blank">http://sites.google.com/site/blueroofmusic</a=
+><br><a style=3D"color:rgb(102,0,204)" href=3D"http://sites.google.com/site=
+/highnorthinc" target=3D"_blank">http://sites.google.com/site/highnorthinc<=
+/a><br>mailto: <a href=3D"mailto:blueroofmusic@gmail.com" target=3D"_blank"=
+>blueroofmusic@gmail.com</a><br>PO Box 221=C2=A0 Grand Marais, MI 49839=C2=
+=A0 906-494-2434<br><br><div style=3D"display:inline"></div><div style=3D"d=
+isplay:inline"></div><div style=3D"display:inline"></div><div></div><div></=
+div><div></div><div></div></div></div></div></div></div></div></div></div><=
+/div></div>
 
->> interface (or cockpit using CUPS web interface) for servers are valid
->> alternatives, so system-config-printer GUI is not needed. The library
->> for dbus methods used by control-center, scp-dbus-service and udev
->> subpackage (tools for automatic printer installation) stay in the
->> release.
->>
->
-> With this and with the conversion of scp-dbus-service to C which will
-> (hopefully) happen this summer we could split system-config-printer
-> into 2 projects, one would be the core part, completely in C
-> (/lib/udev/udev-configure-printer is already in C) and the other would
-> be the GUI, continuing in Python. We can try to get the student to
-> also convert /lib/udev/udev-add-printer).
->
->> Because of that development (work priorities were shifted) I would lik=
-e
->> to ask if someone would be interested in working in cooperation as
->> system-config-printer upstream - for GUI part especially, where there =
-is
->> request for IPP everywhere support. I'm trying to at least maintain th=
-e
->> project, but unfortunately I cannot find much time to implement new
->> features in the present.
->
-> Ubuntu also uses GNOME Control Center as default printer setup GUI and
-> so a default installation of Ubuntu Desktop also does not contain the
-> system-config-printer GUI (The Debian packages are split
-> appropriately), so Ubuntu also does not make use of the
-> system-config-printer GUI.
->
-> SUSE is also not using the system-config-printer GUI. Server users are
-> using the CUPS web interface, as with Red Hat, desktop users use YaST,
-> it is unmaintained, should it not suffice any more, one could perhaps
-> recommend GNOME Control Center there, too.
->
-> So with this one question for me is which distros will continue using
-> the system-config-printer GUI, so that we should ask there whether
-> they would overtake maintainership.
->
-> If you want to get the hosting out of your personal GitHub (and also
-> out of Red Hat) we can move system-config-printer into the
-> OpenPrinting GitHub,
-Ok, we can do that. I would like to still have commit access though, so
-I could help with some issues+merging. I'll initiate the process next
-Monday.
-> at least in the Core (C) part I would also contribute stuff=20
-Actually I thought I gave you commit access to s-c-p.
-> and for sure I will also open GSoC projects.
->
-> For the GUI (Python) part it depends on which and how many distros
-> want it. It is simply only one, they could host and maintain it
-> themselves. A hosting on OpenPrinting makes sense as if a maintainer
-> abandons it it does not need to get re-hosted when anotherone takes
-> on. I simply change commit permissions.
-Sounds reasonable, thank you for the help!
->
->
-> =C2=A0=C2=A0 Till
-
---=20
-Zdenek Dohnal
-Software Engineer
-Red Hat Czech - Brno TPB-C
-
-
-
---4j8NKcRKRpuwazH6hpTbNXvXB7VB50pTd--
-
---ihqcgOwgUfvd8KnNsf1DLhuJYUffzyRpO
-Content-Type: application/pgp-signature; name="signature.asc"
-Content-Description: OpenPGP digital signature
-Content-Disposition: attachment; filename="signature.asc"
-
------BEGIN PGP SIGNATURE-----
-
-iQEzBAEBCAAdFiEEettYIDyl8EbygCWyFapqf01CJ9cFAlzmQiQACgkQFapqf01C
-J9eSGggArP+rq0TZkQH7OcwvUqKljR1ZnFqzEcVBazQGtWbn4qlVTeZY0x0kgSRZ
-Pm/5inZaineQcwY9njwO3/DX/VS0LEfhLU5Br1gZ3KJJkiDgkBqHmFKaZ6SyPWtk
-wjbhmd//VHieoPvraIl4GjKn/8/r3dFBPKOdGTvk2ZuyhtOSmqRk5zybdkpgtgpN
-8j0Wtvwb0BBk19RH2dPCrx64aiK+lvZYBzWfpIMiZftXiRnlzTClduNeZi2S7pBZ
-kqFO8qK62itpwYzHidH/8XoEOzBIjZMt/ZvQG5b7yMBld2QlVbrcu4RnzKJwh/gg
-PO4TtziDAA8OaImEn6DvmwtHxHTG/w==
-=6UzT
------END PGP SIGNATURE-----
-
---ihqcgOwgUfvd8KnNsf1DLhuJYUffzyRpO--
+--000000000000831ba5058a5ddc02--
