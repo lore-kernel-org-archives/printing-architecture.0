@@ -1,26 +1,19 @@
-Return-Path: <msweet@apple.com>
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=apple.com;
-	h=sender : content-type
-	: mime-version : subject : from : in-reply-to : date : cc :
-	content-transfer-encoding : message-id : references : to; s=20180706;
-	bh=eskc3k+RveRCdNnc9p8uLEFZYkVNvcudbonYLueGxtI=;
-	b=T3eg1LLwmfV1QboxGcdToc/B/v7ULlmR0qizMm7U5bOz12IdNu4Tsm92xu+bG9e3r+PQ
-	X2+WFdmJGvzgyNMbMrzO0f437I++pIdoIaczw7PF8bJ8RSVVgwDbEg/I1M+Hq5Ys9ez2
-	ptgXFcMh8j1EDnAHL5tTb11FILT1FwZsHIhg2qvdqODkY9Y7Cw6Vqh9+96HvkUr/jfBm
-	SSi/P4bDFObCFWCWeQPfq8fvEV1xsTuj6I9mVU7RpAWFw+gB4Qq1sMl4kDYIXWNzbMh6
-	C4n81IymeZ7RTs8truNtV+DUF4BgH2hqnQ1IUR/X403ScXVXNZOiPUVrgoehUS4PqIaz
-	HQ== 
-Sender: msweet@apple.com
-Content-type: text/plain; charset=us-ascii
-MIME-version: 1.0 (Mac OS X Mail 13.0 \(3570.1\))
-From: Michael Sweet <msweet@apple.com>
-In-reply-to: <a3fb698b-4b5a-6489-4c06-9ac3e4b219e0@gmail.com>
-Date: Fri, 02 Aug 2019 17:38:12 -0400
-Content-transfer-encoding: quoted-printable
-Message-id: <CBC22B5F-D257-4D9B-922A-2C790BF94A02@apple.com>
-References: <a3fb698b-4b5a-6489-4c06-9ac3e4b219e0@gmail.com>
-Subject: Re: [Printing-architecture] DNS-SD advertising of local services
-	on	Linux
+Return-Path: <blueroofmusic@gmail.com>
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
+	h=mime-version:from:date:message-id:subject:to;
+	bh=L9HK7JFA6yzy9KB3E3xAPWiIs72kGppOqBdTJS+X9ho=;
+	b=OT/adHOqvQ9q6b7zZxya7HBn8YyZhMrEunf9qjgloojdd3FsmXryYdceUzudFP1oRY
+	Y5ayLtUcn1sDTkeajTDlMZBIuGwXXzGxZ2MZLmPoKI/w63+TH4JWjTkEFYPhQqlXv4ox
+	Xoco9cq9SW8a6i5RI81syJe9sFb5s0p/uGvPWNv/xQI4/0h2PZ0UJsUjL60hYxQkdLrP
+	IkDU1AbBxUM0yDEWcMvojuRweG4Q2+4igG5sUEFP+Tt7fPfof97AZnlm7Ii46NIPHlLq
+	/969DltKRNM71TAafSPvC7NkMz16zJkVbMje/F8BwjYuX4LOfvmFOtfP2kifFi+hx3Pe
+	mktw==
+MIME-Version: 1.0
+From: Ira McDonald <blueroofmusic@gmail.com>
+Date: Sun, 4 Aug 2019 19:59:58 -0400
+Message-ID: <CAN40gSvV6TRQDQtyPet_-qZ5T-f5Y6FAdgYcYgp4r+H6su7t=w@mail.gmail.com>
+Content-Type: multipart/alternative; boundary="00000000000050281e058f535987"
+Subject: [Printing-architecture] REMINDER: OP Monthly Call (08/06/19)
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>,
@@ -30,134 +23,79 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Till Kamppeter <till.kamppeter@gmail.com>
-Cc: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>, Rithvik Patibandla <rithvikp98@gmail.com>, Michal Sekletar <msekleta@redhat.com>
+To: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>, Till Kamppeter <till.kamppeter@gmail.com>, Aveek Basu <basu.aveek@gmail.com>, Danny Brennan <brennand@us.ibm.com>, Ira McDonald <blueroofmusic@gmail.com>
 
-Till,
+--00000000000050281e058f535987
+Content-Type: text/plain; charset="UTF-8"
 
-Avahi needs to support "localhost" for the loopback interface, for all =
-of the reasons you've discovered.
+Hi,
 
-In addition, if Avahi returned 127.0.0.1 as one of the addresses for a =
-.local lookup, that would cause some serious security problems when =
-machine A looks up machine B ("b.local") and gets its own loopback =
-address - by returning localhost ("localhost.") that security issue is =
-avoided.
+(1) August - US/Europe/Brazil/India - OP Monthly Meeting
+   - Tuesday 6 August 2019, Daytime
+      - Bluejeans.com web conference to be announced
+      - Note - PWG Virtual F2F (PWG Host) is 28-30 August 2019 online
+      - US
+        10am in San Francisco - US PDT (Pacific Daylight Time)
+        11am in Colorado - US MDT (Mountain Daylight Time)
+        12am in Chicago - US CDT (Central Daylight Time)
+        1pm in New York - US EDT (Eastern Daylight Time)
+      - Europe
+        7pm in Berlin - CEST (Central Europe Summer Time)
+      - Brazil
+        2pm in Belo Horizonte - BRT (Brasilia Time)
+      - India
+        10:30pm in New Delhi - IST (India Standard Time)
 
+Cheers,
+- Ira
+Ira McDonald (Musician / Software Architect)
+Co-Chair - TCG Trusted Mobility Solutions WG
+Co-Chair - TCG Metadata Access Protocol SG
+Chair - Linux Foundation Open Printing WG
+Secretary - IEEE-ISTO Printer Working Group
+Co-Chair - IEEE-ISTO PWG Internet Printing Protocol WG
+IETF Designated Expert - IPP & Printer MIB
+Blue Roof Music / High North Inc
+http://sites.google.com/site/blueroofmusic
+http://sites.google.com/site/highnorthinc
+mailto: blueroofmusic@gmail.com
+PO Box 221  Grand Marais, MI 49839  906-494-2434
 
+--00000000000050281e058f535987
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
 
-> On Aug 2, 2019, at 1:57 pm, Till Kamppeter <till.kamppeter@gmail.com> =
-wrote:
->=20
-> Hi,
->=20
-> the development on IPP driverless printing standards and there =
-implementation has created the demand of DNS-SD-advertising local =
-services (on localhost).
->=20
-> At first there is IPP-over-USB, the standard for driverless printing =
-on USB printers. For this a daemon on the host machine, ippusbxd =
-emulates an IPP printer, and as USB printers are usually visible and =
-accessible only on the machine where they are connected to, ippusbxd =
-does the DNS-SD advertising of the printer (which is a requirement of =
-the driverless IPP printing standards) only on the local machine, under =
-the host name "localhost" and therefore via the "lo" network interface, =
-the loopback interface.
->=20
-> The same will happen for Printer Applications (Dheeraj Yadav is =
-working on a framework to convert legacy drivers in this year's GSoC). =
-If there is a USB (or parallel, or serial, or proprietary local =
-connection, ...) printer which does not do driverless, so requires a =
-driver, will get a Printer Application which emulates an IPP printer and =
-passes on the jobs to the actual printer. It again will advertise itself =
-on "localhost" as it is for a locally connected printer.
->=20
-> On Linux, DNS-SD (mDNS, Bonjour, Zero-Conf) broadcasting is done by =
-Avahi (https://github.com/lathiat/avahi/) and in its currently released =
-version Avahi does not support advertising services on "localhost" via =
-the loopback device and so it does not advertise the above-mentioned =
-services and whe letting these services advertise on other interfaces =
-they appear in the whole network behind the interface, effectively =
-sharing the printer on the network.
->=20
-> Therefore I have created a simple patch (together with Rithvik =
-Patibandla, former GSoC student for OpenPrinting) to add appropriate =
-support to Avahi. I have created a first part which actually added the =
-loopback interface support but the reported DNS-SD records for the =
-service via the loopback device show the correct 127.0.0.1 IP address =
-but the machine's network host name and not "localhost" as hostname. A =
-client picking up this record and using the hostname for building the =
-printer URi would end up not being able to access the printer. Rithvik =
-then added a second part to the patch to correct the host name to =
-"localhost".
->=20
-> I have published the patch first in the README of ippusbxd:
->=20
-> https://github.com/OpenPrinting/ippusbxd/blob/master/readme.md
->=20
-> and posted it to an Issue report to Avahi:
->=20
-> https://github.com/lathiat/avahi/issues/125
->=20
-> Trent Lloyd, upstream maintainer and one of the original authors of =
-Avahi is very much involved in his day job, unfortunately, and so he =
-needed a rather long time to answer the request, even being the original =
-poster of the Issue.
->=20
-> On March 28 this year he finally gave his first opinion about the =
-patch telling that he would only accept my part of the patch which =
-actually adds the loopback support and not Rithvik's which corrects the =
-"localhost" host name. He tells that the exception handling has to be =
-done by CUPS and not by Avahi. See Trent's first comment of March 28.
->=20
-> While fixing a bug in cups-browsed =
-(https://github.com/OpenPrinting/cups-filters/issues/136, reported by =
-Dheeraj) I have investigated the Avahi case more and came to the =
-conclusion that the host name has to get fixed in Avahi.
->=20
-> As Trent also told in his first comment on March 28, a service is =
-reported on each network interface it is available on separately and =
-independently (my investigations resulted in each combination of network =
-interface (lo, eth0, wlan1, ...), service type (IPP, IPPS), and network =
-address protocol (IPv4, IPv6)). Each reported record contains service =
-name, service type, domain, interface, host name, IP address, address =
-protocol, port, and optionally a TXT record with service-specific =
-content. It must always be possible to talk to the service using the =
-interface/IP/port or interface/hostname/port combo of this record.
->=20
-> This usually works, assuming that the printer does not report its =
-presence on an interface/service type/address protocol combo where it =
-does not actually listen on. On all non-loopback interfaces the network =
-host name is valid and resolves to the IP on the appropriate interface, =
-only with the loopback DNS-SD record this does not work if only my and =
-not Rithvik's part of the Avahi patch is applied, as the record then has =
-the network host name as hostname and not "localhost" and the network =
-host name never resolves to the 127.0.0.1 (or ::1) IP address.
->=20
-> As this would not only happen with CUPS as client but also with any =
-other client trying to connect to a local service this should be fixed =
-in Avahi in my opinion.
->=20
-> See my comments from July 31 to August 2 on
->=20
-> https://github.com/lathiat/avahi/issues/125
->=20
-> for more info.
->=20
-> Now I would like to ask Michael Sweet and also the networking experts =
-here what would be the best to solve this problem so that we can have =
-all IPP driverless printing standards correctly working on Linux.
->=20
-> Thanks in advance.
->=20
->   Till
->=20
-> _______________________________________________
-> Printing-architecture mailing list
-> Printing-architecture@lists.linux-foundation.org
-> =
-https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture
+<div dir=3D"ltr"><div>Hi,</div><div><br></div><div>
+(1) August - US/Europe/Brazil/India - OP Monthly Meeting<br>=C2=A0 =C2=A0- =
+Tuesday 6 August 2019, Daytime<br>=C2=A0 =C2=A0 =C2=A0 - Bluejeans.com web =
+conference to be announced<br>=C2=A0 =C2=A0 =C2=A0 - Note - PWG Virtual F2F=
+ (PWG Host) is 28-30 August 2019 online<br>=C2=A0 =C2=A0 =C2=A0 - US<br>=C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 10am in San Francisco - US PDT (Pacific Daylight T=
+ime)<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 11am in Colorado - US MDT (Mountain Day=
+light Time)<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 12am in Chicago - US CDT (Centra=
+l Daylight Time)<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 1pm in New York - US EDT (E=
+astern Daylight Time)<br>=C2=A0 =C2=A0 =C2=A0 - Europe<br>=C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 7pm in Berlin - CEST (Central Europe Summer Time)<br>=C2=A0 =C2=
+=A0 =C2=A0 - Brazil<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 2pm in Belo Horizonte - =
+BRT (Brasilia Time)<br>=C2=A0 =C2=A0 =C2=A0 - India<br>=C2=A0 =C2=A0 =C2=A0=
+ =C2=A0 10:30pm in New Delhi - IST (India Standard Time)</div><div><br></di=
+v><div>Cheers,</div><div>- Ira<br></div><div><div><div dir=3D"ltr" class=3D=
+"gmail_signature" data-smartmail=3D"gmail_signature"><div dir=3D"ltr"><div>=
+<div dir=3D"ltr"><div><div dir=3D"ltr"><div><div dir=3D"ltr">Ira McDonald (=
+Musician / Software Architect)<br>Co-Chair - TCG Trusted Mobility Solutions=
+ WG</div><div>Co-Chair - TCG Metadata Access Protocol SG<br></div><div dir=
+=3D"ltr">Chair - Linux Foundation Open Printing WG<br>Secretary - IEEE-ISTO=
+ Printer Working Group<br>Co-Chair - IEEE-ISTO PWG Internet Printing Protoc=
+ol WG<br>IETF Designated Expert - IPP &amp; Printer MIB<br>Blue Roof Music =
+/ High North Inc<br><a style=3D"color:rgb(51,51,255)" href=3D"http://sites.=
+google.com/site/blueroofmusic" target=3D"_blank">http://sites.google.com/si=
+te/blueroofmusic</a><br><a style=3D"color:rgb(102,0,204)" href=3D"http://si=
+tes.google.com/site/highnorthinc" target=3D"_blank">http://sites.google.com=
+/site/highnorthinc</a><br>mailto: <a href=3D"mailto:blueroofmusic@gmail.com=
+" target=3D"_blank">blueroofmusic@gmail.com</a><br>PO Box 221=C2=A0 Grand M=
+arais, MI 49839=C2=A0 906-494-2434<br><br><div style=3D"display:inline"></d=
+iv><div style=3D"display:inline"></div><div style=3D"display:inline"></div>=
+<div></div><div></div><div></div><div></div></div></div></div></div></div><=
+/div></div></div></div></div></div>
 
-_________________________________________________________
-Michael Sweet, Senior Printing System Engineer
-
+--00000000000050281e058f535987--
