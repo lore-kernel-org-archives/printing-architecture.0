@@ -1,19 +1,21 @@
 Return-Path: <blueroofmusic@gmail.com>
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
-	h=mime-version:from:date:message-id:subject:to;
-	bh=L9HK7JFA6yzy9KB3E3xAPWiIs72kGppOqBdTJS+X9ho=;
-	b=OT/adHOqvQ9q6b7zZxya7HBn8YyZhMrEunf9qjgloojdd3FsmXryYdceUzudFP1oRY
-	Y5ayLtUcn1sDTkeajTDlMZBIuGwXXzGxZ2MZLmPoKI/w63+TH4JWjTkEFYPhQqlXv4ox
-	Xoco9cq9SW8a6i5RI81syJe9sFb5s0p/uGvPWNv/xQI4/0h2PZ0UJsUjL60hYxQkdLrP
-	IkDU1AbBxUM0yDEWcMvojuRweG4Q2+4igG5sUEFP+Tt7fPfof97AZnlm7Ii46NIPHlLq
-	/969DltKRNM71TAafSPvC7NkMz16zJkVbMje/F8BwjYuX4LOfvmFOtfP2kifFi+hx3Pe
-	mktw==
+	h=mime-version:references:in-reply-to:from:date:message-id:subject:to; 
+	bh=2LHdBhpu4UnEQ3TuqLOhRRmqcsUPh8MfcNW3zD5t72k=;
+	b=aFmi4LKldaQxPcAyQVxJbY8evTRmQf49jZepRNxVtM3wDQPIvqxGuQLVlJztE7DGct
+	PQ8RyItBb7RK2oQZCl0iS9efSuXBtIV/zeOMWlF/zkEJzJvNZASwbKzjkO2AO2Mwxn5t
+	VayqaWcUrbsmFDav4B6iphkS0LvXHF6f+st0Oz6/Kintx1CoTrQncdI630mt5rwOQnlN
+	YQo3OvXmlBcPiD5JfUJhgCmVy2AYBMF+bPYmPFcKKo6zk+T590OrQEo3tyZ0uAxKok7T
+	YX5LsiX7IDKJN8HJwNKUSpc10VXKEhu5hgOjpqqnRXYEQDukBavk/L93dem/O3X0KL6H
+	Ee2A==
 MIME-Version: 1.0
+References: <CAN40gSvV6TRQDQtyPet_-qZ5T-f5Y6FAdgYcYgp4r+H6su7t=w@mail.gmail.com>
+In-Reply-To: <CAN40gSvV6TRQDQtyPet_-qZ5T-f5Y6FAdgYcYgp4r+H6su7t=w@mail.gmail.com>
 From: Ira McDonald <blueroofmusic@gmail.com>
-Date: Sun, 4 Aug 2019 19:59:58 -0400
-Message-ID: <CAN40gSvV6TRQDQtyPet_-qZ5T-f5Y6FAdgYcYgp4r+H6su7t=w@mail.gmail.com>
-Content-Type: multipart/alternative; boundary="00000000000050281e058f535987"
-Subject: [Printing-architecture] REMINDER: OP Monthly Call (08/06/19)
+Date: Tue, 6 Aug 2019 07:24:05 -0400
+Message-ID: <CAN40gSt4vY9fHe3WHG_HJ=gNYeUHkBmGbb_pcP-0nt1D7LQ38Q@mail.gmail.com>
+Content-Type: multipart/alternative; boundary="000000000000aaf816058f710530"
+Subject: Re: [Printing-architecture] REMINDER: OP Monthly Call (08/06/19)
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>,
@@ -25,29 +27,16 @@ List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-arc
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
 To: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>, Till Kamppeter <till.kamppeter@gmail.com>, Aveek Basu <basu.aveek@gmail.com>, Danny Brennan <brennand@us.ibm.com>, Ira McDonald <blueroofmusic@gmail.com>
 
---00000000000050281e058f535987
+--000000000000aaf816058f710530
 Content-Type: text/plain; charset="UTF-8"
 
 Hi,
 
-(1) August - US/Europe/Brazil/India - OP Monthly Meeting
-   - Tuesday 6 August 2019, Daytime
-      - Bluejeans.com web conference to be announced
-      - Note - PWG Virtual F2F (PWG Host) is 28-30 August 2019 online
-      - US
-        10am in San Francisco - US PDT (Pacific Daylight Time)
-        11am in Colorado - US MDT (Mountain Daylight Time)
-        12am in Chicago - US CDT (Central Daylight Time)
-        1pm in New York - US EDT (Eastern Daylight Time)
-      - Europe
-        7pm in Berlin - CEST (Central Europe Summer Time)
-      - Brazil
-        2pm in Belo Horizonte - BRT (Brasilia Time)
-      - India
-        10:30pm in New Delhi - IST (India Standard Time)
+Later today.  Talk to you soon.
 
 Cheers,
 - Ira
+
 Ira McDonald (Musician / Software Architect)
 Co-Chair - TCG Trusted Mobility Solutions WG
 Co-Chair - TCG Metadata Access Protocol SG
@@ -61,11 +50,74 @@ http://sites.google.com/site/highnorthinc
 mailto: blueroofmusic@gmail.com
 PO Box 221  Grand Marais, MI 49839  906-494-2434
 
---00000000000050281e058f535987
+
+
+On Sun, Aug 4, 2019 at 7:59 PM Ira McDonald <blueroofmusic@gmail.com> wrote:
+
+> Hi,
+>
+> (1) August - US/Europe/Brazil/India - OP Monthly Meeting
+>    - Tuesday 6 August 2019, Daytime
+>       - Bluejeans.com web conference to be announced
+>       - Note - PWG Virtual F2F (PWG Host) is 28-30 August 2019 online
+>       - US
+>         10am in San Francisco - US PDT (Pacific Daylight Time)
+>         11am in Colorado - US MDT (Mountain Daylight Time)
+>         12am in Chicago - US CDT (Central Daylight Time)
+>         1pm in New York - US EDT (Eastern Daylight Time)
+>       - Europe
+>         7pm in Berlin - CEST (Central Europe Summer Time)
+>       - Brazil
+>         2pm in Belo Horizonte - BRT (Brasilia Time)
+>       - India
+>         10:30pm in New Delhi - IST (India Standard Time)
+>
+> Cheers,
+> - Ira
+> Ira McDonald (Musician / Software Architect)
+> Co-Chair - TCG Trusted Mobility Solutions WG
+> Co-Chair - TCG Metadata Access Protocol SG
+> Chair - Linux Foundation Open Printing WG
+> Secretary - IEEE-ISTO Printer Working Group
+> Co-Chair - IEEE-ISTO PWG Internet Printing Protocol WG
+> IETF Designated Expert - IPP & Printer MIB
+> Blue Roof Music / High North Inc
+> http://sites.google.com/site/blueroofmusic
+> http://sites.google.com/site/highnorthinc
+> mailto: blueroofmusic@gmail.com
+> PO Box 221  Grand Marais, MI 49839  906-494-2434
+>
+>
+
+--000000000000aaf816058f710530
 Content-Type: text/html; charset="UTF-8"
 Content-Transfer-Encoding: quoted-printable
 
-<div dir=3D"ltr"><div>Hi,</div><div><br></div><div>
+<div dir=3D"ltr"><div>Hi,</div><div><br></div><div>Later today.=C2=A0 Talk =
+to you soon.</div><div><br></div><div>Cheers,</div><div>- Ira</div><div><br=
+></div><div><div><div dir=3D"ltr" class=3D"gmail_signature" data-smartmail=
+=3D"gmail_signature"><div dir=3D"ltr"><div><div dir=3D"ltr"><div><div dir=
+=3D"ltr"><div><div dir=3D"ltr">Ira McDonald (Musician / Software Architect)=
+<br>Co-Chair - TCG Trusted Mobility Solutions WG</div><div>Co-Chair - TCG M=
+etadata Access Protocol SG<br></div><div dir=3D"ltr">Chair - Linux Foundati=
+on Open Printing WG<br>Secretary - IEEE-ISTO Printer Working Group<br>Co-Ch=
+air - IEEE-ISTO PWG Internet Printing Protocol WG<br>IETF Designated Expert=
+ - IPP &amp; Printer MIB<br>Blue Roof Music / High North Inc<br><a style=3D=
+"color:rgb(51,51,255)" href=3D"http://sites.google.com/site/blueroofmusic" =
+target=3D"_blank">http://sites.google.com/site/blueroofmusic</a><br><a styl=
+e=3D"color:rgb(102,0,204)" href=3D"http://sites.google.com/site/highnorthin=
+c" target=3D"_blank">http://sites.google.com/site/highnorthinc</a><br>mailt=
+o: <a href=3D"mailto:blueroofmusic@gmail.com" target=3D"_blank">blueroofmus=
+ic@gmail.com</a><br>PO Box 221=C2=A0 Grand Marais, MI 49839=C2=A0 906-494-2=
+434<br><br><div style=3D"display:inline"></div><div style=3D"display:inline=
+"></div><div style=3D"display:inline"></div><div></div><div></div><div></di=
+v><div></div></div></div></div></div></div></div></div></div></div><br></di=
+v></div><br><div class=3D"gmail_quote"><div dir=3D"ltr" class=3D"gmail_attr=
+">On Sun, Aug 4, 2019 at 7:59 PM Ira McDonald &lt;<a href=3D"mailto:blueroo=
+fmusic@gmail.com">blueroofmusic@gmail.com</a>&gt; wrote:<br></div><blockquo=
+te class=3D"gmail_quote" style=3D"margin:0px 0px 0px 0.8ex;border-left:1px =
+solid rgb(204,204,204);padding-left:1ex"><div dir=3D"ltr"><div>Hi,</div><di=
+v><br></div><div>
 (1) August - US/Europe/Brazil/India - OP Monthly Meeting<br>=C2=A0 =C2=A0- =
 Tuesday 6 August 2019, Daytime<br>=C2=A0 =C2=A0 =C2=A0 - Bluejeans.com web =
 conference to be announced<br>=C2=A0 =C2=A0 =C2=A0 - Note - PWG Virtual F2F=
@@ -80,22 +132,23 @@ astern Daylight Time)<br>=C2=A0 =C2=A0 =C2=A0 - Europe<br>=C2=A0 =C2=A0 =C2=
 BRT (Brasilia Time)<br>=C2=A0 =C2=A0 =C2=A0 - India<br>=C2=A0 =C2=A0 =C2=A0=
  =C2=A0 10:30pm in New Delhi - IST (India Standard Time)</div><div><br></di=
 v><div>Cheers,</div><div>- Ira<br></div><div><div><div dir=3D"ltr" class=3D=
-"gmail_signature" data-smartmail=3D"gmail_signature"><div dir=3D"ltr"><div>=
-<div dir=3D"ltr"><div><div dir=3D"ltr"><div><div dir=3D"ltr">Ira McDonald (=
-Musician / Software Architect)<br>Co-Chair - TCG Trusted Mobility Solutions=
- WG</div><div>Co-Chair - TCG Metadata Access Protocol SG<br></div><div dir=
-=3D"ltr">Chair - Linux Foundation Open Printing WG<br>Secretary - IEEE-ISTO=
- Printer Working Group<br>Co-Chair - IEEE-ISTO PWG Internet Printing Protoc=
-ol WG<br>IETF Designated Expert - IPP &amp; Printer MIB<br>Blue Roof Music =
-/ High North Inc<br><a style=3D"color:rgb(51,51,255)" href=3D"http://sites.=
-google.com/site/blueroofmusic" target=3D"_blank">http://sites.google.com/si=
-te/blueroofmusic</a><br><a style=3D"color:rgb(102,0,204)" href=3D"http://si=
-tes.google.com/site/highnorthinc" target=3D"_blank">http://sites.google.com=
-/site/highnorthinc</a><br>mailto: <a href=3D"mailto:blueroofmusic@gmail.com=
-" target=3D"_blank">blueroofmusic@gmail.com</a><br>PO Box 221=C2=A0 Grand M=
-arais, MI 49839=C2=A0 906-494-2434<br><br><div style=3D"display:inline"></d=
-iv><div style=3D"display:inline"></div><div style=3D"display:inline"></div>=
-<div></div><div></div><div></div><div></div></div></div></div></div></div><=
-/div></div></div></div></div></div>
+"gmail-m_4550607655525502074gmail_signature"><div dir=3D"ltr"><div><div dir=
+=3D"ltr"><div><div dir=3D"ltr"><div><div dir=3D"ltr">Ira McDonald (Musician=
+ / Software Architect)<br>Co-Chair - TCG Trusted Mobility Solutions WG</div=
+><div>Co-Chair - TCG Metadata Access Protocol SG<br></div><div dir=3D"ltr">=
+Chair - Linux Foundation Open Printing WG<br>Secretary - IEEE-ISTO Printer =
+Working Group<br>Co-Chair - IEEE-ISTO PWG Internet Printing Protocol WG<br>=
+IETF Designated Expert - IPP &amp; Printer MIB<br>Blue Roof Music / High No=
+rth Inc<br><a style=3D"color:rgb(51,51,255)" href=3D"http://sites.google.co=
+m/site/blueroofmusic" target=3D"_blank">http://sites.google.com/site/bluero=
+ofmusic</a><br><a style=3D"color:rgb(102,0,204)" href=3D"http://sites.googl=
+e.com/site/highnorthinc" target=3D"_blank">http://sites.google.com/site/hig=
+hnorthinc</a><br>mailto: <a href=3D"mailto:blueroofmusic@gmail.com" target=
+=3D"_blank">blueroofmusic@gmail.com</a><br>PO Box 221=C2=A0 Grand Marais, M=
+I 49839=C2=A0 906-494-2434<br><br><div style=3D"display:inline"></div><div =
+style=3D"display:inline"></div><div style=3D"display:inline"></div><div></d=
+iv><div></div><div></div><div></div></div></div></div></div></div></div></d=
+iv></div></div></div></div>
+</blockquote></div>
 
---00000000000050281e058f535987--
+--000000000000aaf816058f710530--
