@@ -1,21 +1,22 @@
-Return-Path: <blueroofmusic@gmail.com>
+Return-Path: <till.kamppeter@gmail.com>
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
-	h=mime-version:references:in-reply-to:from:date:message-id:subject:to; 
-	bh=2LHdBhpu4UnEQ3TuqLOhRRmqcsUPh8MfcNW3zD5t72k=;
-	b=aFmi4LKldaQxPcAyQVxJbY8evTRmQf49jZepRNxVtM3wDQPIvqxGuQLVlJztE7DGct
-	PQ8RyItBb7RK2oQZCl0iS9efSuXBtIV/zeOMWlF/zkEJzJvNZASwbKzjkO2AO2Mwxn5t
-	VayqaWcUrbsmFDav4B6iphkS0LvXHF6f+st0Oz6/Kintx1CoTrQncdI630mt5rwOQnlN
-	YQo3OvXmlBcPiD5JfUJhgCmVy2AYBMF+bPYmPFcKKo6zk+T590OrQEo3tyZ0uAxKok7T
-	YX5LsiX7IDKJN8HJwNKUSpc10VXKEhu5hgOjpqqnRXYEQDukBavk/L93dem/O3X0KL6H
-	Ee2A==
+	h=from:subject:to:cc:message-id:date:user-agent:mime-version
+	:content-language:content-transfer-encoding;
+	bh=2FSXomXjc0D8H36qIEOHSDxzeXhIhXf0jkD/6RZTm7s=;
+	b=pgnveyCSdqEYZcq61KlQRRDR5Vhi9AnDxBD0KeSOTSo4gAyHte79vp7XsRcTbUwmuz
+	P+ebfL1AeMaAjTWWIqetZKf197n4MyI0gQSvyr93nt3h4Gq9Y+KZsJ4k0DTMi412GlKK
+	gAAj4nTRAA2/m2qbOx4GsZiiojTd2dX4E+gPj04MgyAUbzTpomOJY+NqlSVfPBpjJSek
+	NPZgNQUfAXv3qDHN17iYuzw2dgNcfS/aQBGtbF5zb+VcrqpfEk94u4NF6JqckcwvW47K
+	DVN2LGsleuWZsDei5056rc2U8e6FcB40w+R/9whZAORh//k7lLEzNt8B6THwlLQJtitQ
+	+0rg==
+From: Till Kamppeter <till.kamppeter@gmail.com>
+Message-ID: <7520afb5-933f-f1d2-76fe-143eeddc6675@gmail.com>
+Date: Wed, 7 Aug 2019 14:44:25 +0200
 MIME-Version: 1.0
-References: <CAN40gSvV6TRQDQtyPet_-qZ5T-f5Y6FAdgYcYgp4r+H6su7t=w@mail.gmail.com>
-In-Reply-To: <CAN40gSvV6TRQDQtyPet_-qZ5T-f5Y6FAdgYcYgp4r+H6su7t=w@mail.gmail.com>
-From: Ira McDonald <blueroofmusic@gmail.com>
-Date: Tue, 6 Aug 2019 07:24:05 -0400
-Message-ID: <CAN40gSt4vY9fHe3WHG_HJ=gNYeUHkBmGbb_pcP-0nt1D7LQ38Q@mail.gmail.com>
-Content-Type: multipart/alternative; boundary="000000000000aaf816058f710530"
-Subject: Re: [Printing-architecture] REMINDER: OP Monthly Call (08/06/19)
+Content-Type: text/plain; charset="utf-8"; format="flowed"
+Content-Language: en-US
+Content-Transfer-Encoding: 8bit
+Subject: [Printing-architecture] OpenPrinting News
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>,
@@ -25,130 +26,258 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>, Till Kamppeter <till.kamppeter@gmail.com>, Aveek Basu <basu.aveek@gmail.com>, Danny Brennan <brennand@us.ibm.com>, Ira McDonald <blueroofmusic@gmail.com>
-
---000000000000aaf816058f710530
-Content-Type: text/plain; charset="UTF-8"
+To: Ira McDonald <blueroofmusic@gmail.com>
+Cc: Aveek Basu <aveek.basu@lexmark.com>, Open Printing <printing-architecture@lists.linux-foundation.org>
 
 Hi,
 
-Later today.  Talk to you soon.
+here is the newest development of the last 2 months.
 
-Cheers,
-- Ira
+    Till
 
-Ira McDonald (Musician / Software Architect)
-Co-Chair - TCG Trusted Mobility Solutions WG
-Co-Chair - TCG Metadata Access Protocol SG
-Chair - Linux Foundation Open Printing WG
-Secretary - IEEE-ISTO Printer Working Group
-Co-Chair - IEEE-ISTO PWG Internet Printing Protocol WG
-IETF Designated Expert - IPP & Printer MIB
-Blue Roof Music / High North Inc
-http://sites.google.com/site/blueroofmusic
-http://sites.google.com/site/highnorthinc
-mailto: blueroofmusic@gmail.com
-PO Box 221  Grand Marais, MI 49839  906-494-2434
+----------
 
 
+Google Summer of Code 2019
+--------------------------
 
-On Sun, Aug 4, 2019 at 7:59 PM Ira McDonald <blueroofmusic@gmail.com> wrote:
+Second evaluations are done now GSoC coding will end in around 3 weeks.
 
-> Hi,
->
-> (1) August - US/Europe/Brazil/India - OP Monthly Meeting
->    - Tuesday 6 August 2019, Daytime
->       - Bluejeans.com web conference to be announced
->       - Note - PWG Virtual F2F (PWG Host) is 28-30 August 2019 online
->       - US
->         10am in San Francisco - US PDT (Pacific Daylight Time)
->         11am in Colorado - US MDT (Mountain Daylight Time)
->         12am in Chicago - US CDT (Central Daylight Time)
->         1pm in New York - US EDT (Eastern Daylight Time)
->       - Europe
->         7pm in Berlin - CEST (Central Europe Summer Time)
->       - Brazil
->         2pm in Belo Horizonte - BRT (Brasilia Time)
->       - India
->         10:30pm in New Delhi - IST (India Standard Time)
->
-> Cheers,
-> - Ira
-> Ira McDonald (Musician / Software Architect)
-> Co-Chair - TCG Trusted Mobility Solutions WG
-> Co-Chair - TCG Metadata Access Protocol SG
-> Chair - Linux Foundation Open Printing WG
-> Secretary - IEEE-ISTO Printer Working Group
-> Co-Chair - IEEE-ISTO PWG Internet Printing Protocol WG
-> IETF Designated Expert - IPP & Printer MIB
-> Blue Roof Music / High North Inc
-> http://sites.google.com/site/blueroofmusic
-> http://sites.google.com/site/highnorthinc
-> mailto: blueroofmusic@gmail.com
-> PO Box 221  Grand Marais, MI 49839  906-494-2434
->
->
+The 5 students for OpenPrinting have all passed, but from all the 11 for 
+the Linux Foundation 2 have failed.
 
---000000000000aaf816058f710530
-Content-Type: text/html; charset="UTF-8"
-Content-Transfer-Encoding: quoted-printable
+Dheeraj has already succeeded to make a Printer Application from HPLIP 
+and now his task is to get a general framework which allows easy 
+packaging of any classic printer driver package as a Printer Application.
 
-<div dir=3D"ltr"><div>Hi,</div><div><br></div><div>Later today.=C2=A0 Talk =
-to you soon.</div><div><br></div><div>Cheers,</div><div>- Ira</div><div><br=
-></div><div><div><div dir=3D"ltr" class=3D"gmail_signature" data-smartmail=
-=3D"gmail_signature"><div dir=3D"ltr"><div><div dir=3D"ltr"><div><div dir=
-=3D"ltr"><div><div dir=3D"ltr">Ira McDonald (Musician / Software Architect)=
-<br>Co-Chair - TCG Trusted Mobility Solutions WG</div><div>Co-Chair - TCG M=
-etadata Access Protocol SG<br></div><div dir=3D"ltr">Chair - Linux Foundati=
-on Open Printing WG<br>Secretary - IEEE-ISTO Printer Working Group<br>Co-Ch=
-air - IEEE-ISTO PWG Internet Printing Protocol WG<br>IETF Designated Expert=
- - IPP &amp; Printer MIB<br>Blue Roof Music / High North Inc<br><a style=3D=
-"color:rgb(51,51,255)" href=3D"http://sites.google.com/site/blueroofmusic" =
-target=3D"_blank">http://sites.google.com/site/blueroofmusic</a><br><a styl=
-e=3D"color:rgb(102,0,204)" href=3D"http://sites.google.com/site/highnorthin=
-c" target=3D"_blank">http://sites.google.com/site/highnorthinc</a><br>mailt=
-o: <a href=3D"mailto:blueroofmusic@gmail.com" target=3D"_blank">blueroofmus=
-ic@gmail.com</a><br>PO Box 221=C2=A0 Grand Marais, MI 49839=C2=A0 906-494-2=
-434<br><br><div style=3D"display:inline"></div><div style=3D"display:inline=
-"></div><div style=3D"display:inline"></div><div></div><div></div><div></di=
-v><div></div></div></div></div></div></div></div></div></div></div><br></di=
-v></div><br><div class=3D"gmail_quote"><div dir=3D"ltr" class=3D"gmail_attr=
-">On Sun, Aug 4, 2019 at 7:59 PM Ira McDonald &lt;<a href=3D"mailto:blueroo=
-fmusic@gmail.com">blueroofmusic@gmail.com</a>&gt; wrote:<br></div><blockquo=
-te class=3D"gmail_quote" style=3D"margin:0px 0px 0px 0.8ex;border-left:1px =
-solid rgb(204,204,204);padding-left:1ex"><div dir=3D"ltr"><div>Hi,</div><di=
-v><br></div><div>
-(1) August - US/Europe/Brazil/India - OP Monthly Meeting<br>=C2=A0 =C2=A0- =
-Tuesday 6 August 2019, Daytime<br>=C2=A0 =C2=A0 =C2=A0 - Bluejeans.com web =
-conference to be announced<br>=C2=A0 =C2=A0 =C2=A0 - Note - PWG Virtual F2F=
- (PWG Host) is 28-30 August 2019 online<br>=C2=A0 =C2=A0 =C2=A0 - US<br>=C2=
-=A0 =C2=A0 =C2=A0 =C2=A0 10am in San Francisco - US PDT (Pacific Daylight T=
-ime)<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 11am in Colorado - US MDT (Mountain Day=
-light Time)<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 12am in Chicago - US CDT (Centra=
-l Daylight Time)<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 1pm in New York - US EDT (E=
-astern Daylight Time)<br>=C2=A0 =C2=A0 =C2=A0 - Europe<br>=C2=A0 =C2=A0 =C2=
-=A0 =C2=A0 7pm in Berlin - CEST (Central Europe Summer Time)<br>=C2=A0 =C2=
-=A0 =C2=A0 - Brazil<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 2pm in Belo Horizonte - =
-BRT (Brasilia Time)<br>=C2=A0 =C2=A0 =C2=A0 - India<br>=C2=A0 =C2=A0 =C2=A0=
- =C2=A0 10:30pm in New Delhi - IST (India Standard Time)</div><div><br></di=
-v><div>Cheers,</div><div>- Ira<br></div><div><div><div dir=3D"ltr" class=3D=
-"gmail-m_4550607655525502074gmail_signature"><div dir=3D"ltr"><div><div dir=
-=3D"ltr"><div><div dir=3D"ltr"><div><div dir=3D"ltr">Ira McDonald (Musician=
- / Software Architect)<br>Co-Chair - TCG Trusted Mobility Solutions WG</div=
-><div>Co-Chair - TCG Metadata Access Protocol SG<br></div><div dir=3D"ltr">=
-Chair - Linux Foundation Open Printing WG<br>Secretary - IEEE-ISTO Printer =
-Working Group<br>Co-Chair - IEEE-ISTO PWG Internet Printing Protocol WG<br>=
-IETF Designated Expert - IPP &amp; Printer MIB<br>Blue Roof Music / High No=
-rth Inc<br><a style=3D"color:rgb(51,51,255)" href=3D"http://sites.google.co=
-m/site/blueroofmusic" target=3D"_blank">http://sites.google.com/site/bluero=
-ofmusic</a><br><a style=3D"color:rgb(102,0,204)" href=3D"http://sites.googl=
-e.com/site/highnorthinc" target=3D"_blank">http://sites.google.com/site/hig=
-hnorthinc</a><br>mailto: <a href=3D"mailto:blueroofmusic@gmail.com" target=
-=3D"_blank">blueroofmusic@gmail.com</a><br>PO Box 221=C2=A0 Grand Marais, M=
-I 49839=C2=A0 906-494-2434<br><br><div style=3D"display:inline"></div><div =
-style=3D"display:inline"></div><div style=3D"display:inline"></div><div></d=
-iv><div></div><div></div><div></div></div></div></div></div></div></div></d=
-iv></div></div></div></div>
-</blockquote></div>
+See his work on GitHub:
 
---000000000000aaf816058f710530--
+https://github.com/dheeraj135/Printer-Applications-Framework
+https://github.com/dheeraj135/Printer-Application-Snaps
+
+Tanmay has finished the original task with which he has entered the GSoc 
+already at the first evaluation round. His work of changing the 
+pdftoraster filter of cups-filters to use only documented, stable APIs 
+of Poppler is already integrated in cups-filters and released in version 
+1.25.1 of cups-filters (see below).
+
+Now he is working on the adapter backend for the GTK-3.x print dialog to 
+use the Common Print Dialog Backends (CPDB). Maintainership got 
+overtaken by Dongxu Li now.
+
+The other OpenPrinting Students seem to do well, too, according to the 
+second evaluation and mail traffic between Sharad and Mike Sweet.
+
+Aveek Basu and me, we will attend the GSoC Mentor Summit in Munich this 
+year, October 17-20.
+
+
+Avahi
+-----
+
+Dheeraj has reported a bug in cups-browsed caused by the several network 
+interfaces reporting one and the same service via DNS-SD 
+(https://github.com/OpenPrinting/cups-filters/issues/136) and this made 
+me put some more thoughts on the Avahi problem. See my last posts on the 
+Avahi issue
+
+https://github.com/lathiat/avahi/issues/125
+
+and also my posts on the Printing Architecture mailing list
+
+https://lists.linuxfoundation.org/pipermail/printing-architecture/2019/003718.html
+https://lists.linuxfoundation.org/pipermail/printing-architecture/2019/003720.html
+https://lists.linuxfoundation.org/pipermail/printing-architecture/2019/003719.html
+
+In his only answer to my patch (in April) Trent Lloyd tells that he 
+would accept my first part of the patch which adds the support for 
+advertising services on the loopback interface ("lo", host name 
+"localhost") but not the second part (contributed by Rithvik) which 
+makes the DNS-SD records coming from the loopback ingterface using 
+"localhost" as the host name and not the machines network host name as 
+then Avahi would make an exception for the loopback interface.
+
+But as each DNS-SD record has to be consistent by itself and independent 
+of the others (even independent of the others for the same service) in 
+my opinion the records from loopback should carry the "localhost" host 
+name, as otherwise a client would build URIs using the network host name 
+and this does never resolve to the local 127.0.0.1 / ::1 IP address, 
+making pure local services like ippusbxd not working and letting data 
+intended for local use only detour through the external network when a 
+network IP gets used (privacy and resource usage problems). This would 
+especially get a problem when drivers for USB printers are distributed 
+as Printer Applications.
+
+I posted on the Printing Architecture mailing list then and Michael 
+Sweet answered, being also of my opinion and not of Trent's, he also 
+says that Avahi should deliver the DNS-SD record of the loopback (“lo”) 
+interface with the “localhost” host name.
+
+I asked Mike to post on the Avahi issue on GitHub but he did not do so yet.
+
+Not further answer by Trent yet as he has still urgent work to do in his 
+day job.
+
+
+OpenPrinting web site
+---------------------
+
+No further news.
+
+
+CUPS
+----
+
+2.3.0rc1 released.
+
+The state of the art of Apple's licensing has still to be determined.
+
+Changes in CUPS v2.3.0
+----------------------
+
+- Documentation updates (Issue #5604)
+- Fixed a bug in the scheduler job cleanup code (Issue #5588)
+- Fixed builds when there is no TLS library (Issue #5590)
+- Eliminated some new GCC compiler warnings (Issue #5591)
+- Removed dead code from the scheduler (Issue #5593)
+- "make" failed with GZIP options (Issue #5595)
+- Fixed potential excess logging from the scheduler when removing job
+   files (Issue #5597)
+- Fixed a NULL pointer dereference bug in `httpGetSubField2` (Issue
+   #5598)
+- Added FIPS-140 workarounds for GNU TLS (Issue #5601, Issue #5622)
+- The scheduler no longer provides a default value for the description
+   (Issue #5603)
+- The scheduler now logs jobs held for authentication using the error
+   level so it is clear what happened (Issue #5604)
+- The `lpadmin` command did not always update the PPD file for changes
+   to the `cupsIPPSupplies` and `cupsSNMPSupplies` keywords (Issue #5610)
+- The scheduler now uses both the group's membership list as well as the
+   various OS-specific membership functions to determine whether a user
+   belongs to a named group (Issue #5613)
+- Added USB quirks rule for HP LaserJet 1015 (Issue #5617)
+- Fixed some PPD parser issues (Issue #5623, Issue #5624)
+- Fixed an issue with unsupported "sides" values in the IPP backend
+   (rdar://51775322)
+- The scheduler would restart continuously when idle and printers were
+   not shared (rdar://52561199)
+- Fixed an issue with `EXPECT !name WITH-VALUE ...` tests.
+- Fixed a command ordering issue in the Zebra ZPL driver.
+- Fixed a memory leak in `ppdOpen`.
+
+
+Changes in CUPS v2.3rc1
+-----------------------
+
+- The `cups-config` script no longer adds extra libraries when linking
+   against shared libraries (Issue #5261)
+- The supplied example print documents have been optimized for size
+   (Issue #5529)
+- The `cupsctl` command now prevents setting "cups-files.conf"
+   directives (Issue #5530)
+- The "forbidden" message in the web interface is now explained (Issue
+   #5547)
+- The footer in the web interface covered some content on small displays
+   (Issue #5574)
+- The libusb-based USB backend now enforces read limits, improving print
+   speed in many cases (Issue #5583)
+- The `ippeveprinter` command now looks for print commands in the
+   "command" subdirectory.
+- The `ipptool` command now supports `$date-current` and `$date-start`
+   variables to insert the current and starting date and time values, as
+   well as ISO-8601 relative time values such as "PT30S" for 30 seconds
+   in the future.
+
+No changes on 2.2.x branch.
+
+
+cups-filters
+------------
+
+Currently released is 1.25.1.
+
+1.25.2:
+
+Improved cups-browsed's handling of the DNS-SD records of advertised 
+local and remote IPP print services. Especially make sure that local 
+queues do not get already removed when the service on a single network 
+interface disappears (for example Wi-Fi turned off) while still present 
+on other interfaces. Also let local services preferably be accessed 
+through the loopback ("localhost") interface to avoid data leaks into 
+the network.
+
+1.25.1:
+
+Bug fix release for the filters, mainly for the new pdftoraster filter.
+
+1.25.0:
+
+In this release the pdftoraster filter is changed to only use 
+stable/documented APIs of Poppler (Tanmay Anand's Google Summer of Code 
+2019 project) and the deprecated, Poppler-based filters pdftoijs and 
+pdftoopvp are finally completely removed. Now Poppler is only used for 
+the pdftoraster filter. Poppler's unstable/internal APIs are nowhere 
+used any more in cups-filters.
+
+CHANGES IN V1.25.2
+
+	- cups-browsed: Added note to cups-browsed.conf and man page
+	  about IP-based URIs depending on the network interface used.
+	- cups-browsed: For each DNS-SD-discovered printer register
+	  each DNS-SD discovery instance with network interface,
+	  family, and IPP type. When DNS-SD messages of instances
+	  disappearing show up, only unregister this instance and
+	  remove the printer only if no instance is left. This
+	  prevents a local queue of a still available printer being
+	  removed when Wi-Fi (= one interface) is turned off (Issue
+	  #136).
+	- cups-browsed: If a remote printer is served from the local
+	  machine, prefer the "localhost"/loopback interface URI.
+	- cups-browsed: If a remote printer is discovered more than
+	  once, use the new instance only if it has no downgrades and
+	  at least one upgrade compared to the old one. Features
+	  currently compared are IPP/IPPS, loopback interface or not,
+	  and discovery via CUPS legacy/LDAP/DNS-SD.
+	- cups-browsed: If an Avahi-discovered entry comes through the
+	  "lo" interface, always use the host name "localhost". Use
+	  IP addresses instead of host names only if explicitly
+	  requested.
+	- cups-browsed: Consider remote printer entries also as from
+	  the same printer if one has the local machine's network name
+	  and the other "localhost" as host name (Issue #136).
+
+CHANGES IN V1.25.1
+
+	- imagetopdf: Fixed crash when no PPD file was supplied (Pull
+	  request #133).
+	- pdftoraster: Fixed offset issues leading to segmentation
+	  faults (Issue #131, Pull request #132).
+	- pdftoraster: Added anti-aliasing for better raster image
+	  quality (Pull request #129).
+	- pdftoraster: Added graceful handling of zero-page input
+	  (Issue #117, Pull request #127).
+
+CHANGES IN V1.25.0
+
+	- pdftoijs, pdftoopvp: Removed these deprecated filters
+	  completely as there is no demand for them any more. They
+	  also used unstable, undocumented APIs of Poppler.
+	- pdftoraster: Changed from using unstable, undocumented APIs
+	  of Poppler to stable, documented ones, to improve
+	  maintainability of this filter, and with it of the
+	  cups-filters package. Thanks to Tanmay Anand for
+	  contributing this as his Google Summer of Code 2019 project.
+	- libcupsfilters: Added support for color spaces CMY and RGBW
+	  when using filters without PPD file (mainly for development
+	  and debugging, option "print-color-mode" with values
+	  "cmy-XX" and "rgbw-XX" with XX being the number of bits per
+	  color).
+
+
+ippusbxd
+--------
+
+David Valleau from Google tells that ippusbxd works well on HP, Canon, 
+and Epson printers under Chrome OS.
+
+No code changes.
