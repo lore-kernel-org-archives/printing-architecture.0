@@ -1,22 +1,19 @@
-Return-Path: <till.kamppeter@gmail.com>
+Return-Path: <blueroofmusic@gmail.com>
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
-	h=from:subject:to:cc:message-id:date:user-agent:mime-version
-	:content-language:content-transfer-encoding;
-	bh=2FSXomXjc0D8H36qIEOHSDxzeXhIhXf0jkD/6RZTm7s=;
-	b=pgnveyCSdqEYZcq61KlQRRDR5Vhi9AnDxBD0KeSOTSo4gAyHte79vp7XsRcTbUwmuz
-	P+ebfL1AeMaAjTWWIqetZKf197n4MyI0gQSvyr93nt3h4Gq9Y+KZsJ4k0DTMi412GlKK
-	gAAj4nTRAA2/m2qbOx4GsZiiojTd2dX4E+gPj04MgyAUbzTpomOJY+NqlSVfPBpjJSek
-	NPZgNQUfAXv3qDHN17iYuzw2dgNcfS/aQBGtbF5zb+VcrqpfEk94u4NF6JqckcwvW47K
-	DVN2LGsleuWZsDei5056rc2U8e6FcB40w+R/9whZAORh//k7lLEzNt8B6THwlLQJtitQ
-	+0rg==
-From: Till Kamppeter <till.kamppeter@gmail.com>
-Message-ID: <7520afb5-933f-f1d2-76fe-143eeddc6675@gmail.com>
-Date: Wed, 7 Aug 2019 14:44:25 +0200
+	h=mime-version:from:date:message-id:subject:to;
+	bh=LqRj2ZWC+4HIwF2B1eAlMx2V3ocClWU7idsqjfdpEgw=;
+	b=tu3NdXtul6IdFLE8a/36ns1UXK3QRorhpbMJfoCM3GspiJmwNfpexqyNetM8FSnGPD
+	TYvZAhtcD5A8nsyqqV4ncqYKYMYfCpmm/+dmWtwtgAHNd5XWBNa/Omn/AuM13QLBwgmf
+	jl9gSjQHFDw+JBseNHTAjP8Z3O7YyHlAVRp+FeUkbonSrwykokSpyHGxegRoX7zzbsTq
+	2FAGRGRmg731uUyDNih7TnbKh3As6CTCv9xMmR4ctZcx6ZzRMhq+tqdMPqnRUfQm6xnr
+	zcCijcp7h9ZF0jLZ8NpsYwh53coSHMQsl2Vb1/NrS3BoXzQCNx+naROxjEbvlJgZldE2
+	RTjA==
 MIME-Version: 1.0
-Content-Type: text/plain; charset="utf-8"; format="flowed"
-Content-Language: en-US
-Content-Transfer-Encoding: 8bit
-Subject: [Printing-architecture] OpenPrinting News
+From: Ira McDonald <blueroofmusic@gmail.com>
+Date: Fri, 9 Aug 2019 11:39:32 -0400
+Message-ID: <CAN40gStGKfgGUiC_+wb_P8rYhnAROHPoxmBEx5CxwxrG=551wg@mail.gmail.com>
+Content-Type: multipart/alternative; boundary="000000000000beb904058fb0fba9"
+Subject: [Printing-architecture] OP Minutes (6 August 2019)
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>,
@@ -26,258 +23,332 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Ira McDonald <blueroofmusic@gmail.com>
-Cc: Aveek Basu <aveek.basu@lexmark.com>, Open Printing <printing-architecture@lists.linux-foundation.org>
+To: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>, Ira McDonald <blueroofmusic@gmail.com>
 
-Hi,
+--000000000000beb904058fb0fba9
+Content-Type: text/plain; charset="UTF-8"
 
-here is the newest development of the last 2 months.
+ Hi,
 
-    Till
-
-----------
+Minutes from our last OpenPrinting call are posted at:
 
 
-Google Summer of Code 2019
---------------------------
-
-Second evaluations are done now GSoC coding will end in around 3 weeks.
-
-The 5 students for OpenPrinting have all passed, but from all the 11 for 
-the Linux Foundation 2 have failed.
-
-Dheeraj has already succeeded to make a Printer Application from HPLIP 
-and now his task is to get a general framework which allows easy 
-packaging of any classic printer driver package as a Printer Application.
-
-See his work on GitHub:
-
-https://github.com/dheeraj135/Printer-Applications-Framework
-https://github.com/dheeraj135/Printer-Application-Snaps
-
-Tanmay has finished the original task with which he has entered the GSoc 
-already at the first evaluation round. His work of changing the 
-pdftoraster filter of cups-filters to use only documented, stable APIs 
-of Poppler is already integrated in cups-filters and released in version 
-1.25.1 of cups-filters (see below).
-
-Now he is working on the adapter backend for the GTK-3.x print dialog to 
-use the Common Print Dialog Backends (CPDB). Maintainership got 
-overtaken by Dongxu Li now.
-
-The other OpenPrinting Students seem to do well, too, according to the 
-second evaluation and mail traffic between Sharad and Mike Sweet.
-
-Aveek Basu and me, we will attend the GSoC Mentor Summit in Munich this 
-year, October 17-20.
+http://ftp.pwg.org/pub/pwg/liaison/openprinting/minutes/OP-Minutes-20190806.htm
 
 
-Avahi
------
+Next OP US/Europe/Brazil/India Conference Calls:
 
-Dheeraj has reported a bug in cups-browsed caused by the several network 
-interfaces reporting one and the same service via DNS-SD 
-(https://github.com/OpenPrinting/cups-filters/issues/136) and this made 
-me put some more thoughts on the Avahi problem. See my last posts on the 
-Avahi issue
+Note:  EU voted (26 March 2019) to permanently end daylight savings time in
+2021
+https://www.timeanddate.com/news/time/eu-votes-scrap-dst.html
 
-https://github.com/lathiat/avahi/issues/125
+Note:  Brazil permanently ended daylight savings time on 17 February 2019
+https://www.timeanddate.com/time/change/brazil/belo-horizonte
 
-and also my posts on the Printing Architecture mailing list
+(1) September - US/Europe/Brazil/India - OP Monthly Meeting
+      - Tuesday 3 September 2019, Daytime
+      - Note - US Labor Day is 2 September 2019
+      - Note - Linux Plumbers Conference is 9-11 September 2019 in Lisbon,
+Portugal
+      - Note - OP Mini-Conference is 10 September 2019 at 10am-1:30pm WEST
+      - US
+        10am in San Francisco - US PDT (Pacific Daylight Time)
+        11am in Colorado - US MDT (Mountain Daylight Time)
+        12am in Chicago - US CDT (Central Daylight Time)
+        1pm in New York - US EDT (Eastern Daylight Time)
+      - Europe
+        7pm in Berlin - CEST (Central Europe Summer Time)
+      - Brazil
+        2pm in Belo Horizonte - BRT (Brasilia Time)
+      - India
+        10:30pm in New Delhi - IST (India Standard Time)
 
-https://lists.linuxfoundation.org/pipermail/printing-architecture/2019/003718.html
-https://lists.linuxfoundation.org/pipermail/printing-architecture/2019/003720.html
-https://lists.linuxfoundation.org/pipermail/printing-architecture/2019/003719.html
+(2) October - US/Europe/Brazil/India - OP Monthly Meeting (tentative)
+   - Tuesday 1 October 2019, Daytime
+      - Bluejeans.com web conference to be announced
+      - US
+        10am in San Francisco - US PDT (Pacific Daylight Time)
+        11am in Colorado - US MDT (Mountain Daylight Time)
+        12am in Chicago - US CDT (Central Daylight Time)
+        1pm in New York - US EDT (Eastern Daylight Time)
+      - Europe
+        7pm in Berlin - CEST (Central Europe Summer Time)
+      - Brazil
+        2pm in Belo Horizonte - BRT (Brasilia Time)
+      - India
+        10:30pm in New Delhi - IST (India Standard Time)
 
-In his only answer to my patch (in April) Trent Lloyd tells that he 
-would accept my first part of the patch which adds the support for 
-advertising services on the loopback interface ("lo", host name 
-"localhost") but not the second part (contributed by Rithvik) which 
-makes the DNS-SD records coming from the loopback ingterface using 
-"localhost" as the host name and not the machines network host name as 
-then Avahi would make an exception for the loopback interface.
-
-But as each DNS-SD record has to be consistent by itself and independent 
-of the others (even independent of the others for the same service) in 
-my opinion the records from loopback should carry the "localhost" host 
-name, as otherwise a client would build URIs using the network host name 
-and this does never resolve to the local 127.0.0.1 / ::1 IP address, 
-making pure local services like ippusbxd not working and letting data 
-intended for local use only detour through the external network when a 
-network IP gets used (privacy and resource usage problems). This would 
-especially get a problem when drivers for USB printers are distributed 
-as Printer Applications.
-
-I posted on the Printing Architecture mailing list then and Michael 
-Sweet answered, being also of my opinion and not of Trent's, he also 
-says that Avahi should deliver the DNS-SD record of the loopback (“lo”) 
-interface with the “localhost” host name.
-
-I asked Mike to post on the Avahi issue on GitHub but he did not do so yet.
-
-Not further answer by Trent yet as he has still urgent work to do in his 
-day job.
-
-
-OpenPrinting web site
----------------------
-
-No further news.
-
-
-CUPS
-----
-
-2.3.0rc1 released.
-
-The state of the art of Apple's licensing has still to be determined.
-
-Changes in CUPS v2.3.0
-----------------------
-
-- Documentation updates (Issue #5604)
-- Fixed a bug in the scheduler job cleanup code (Issue #5588)
-- Fixed builds when there is no TLS library (Issue #5590)
-- Eliminated some new GCC compiler warnings (Issue #5591)
-- Removed dead code from the scheduler (Issue #5593)
-- "make" failed with GZIP options (Issue #5595)
-- Fixed potential excess logging from the scheduler when removing job
-   files (Issue #5597)
-- Fixed a NULL pointer dereference bug in `httpGetSubField2` (Issue
-   #5598)
-- Added FIPS-140 workarounds for GNU TLS (Issue #5601, Issue #5622)
-- The scheduler no longer provides a default value for the description
-   (Issue #5603)
-- The scheduler now logs jobs held for authentication using the error
-   level so it is clear what happened (Issue #5604)
-- The `lpadmin` command did not always update the PPD file for changes
-   to the `cupsIPPSupplies` and `cupsSNMPSupplies` keywords (Issue #5610)
-- The scheduler now uses both the group's membership list as well as the
-   various OS-specific membership functions to determine whether a user
-   belongs to a named group (Issue #5613)
-- Added USB quirks rule for HP LaserJet 1015 (Issue #5617)
-- Fixed some PPD parser issues (Issue #5623, Issue #5624)
-- Fixed an issue with unsupported "sides" values in the IPP backend
-   (rdar://51775322)
-- The scheduler would restart continuously when idle and printers were
-   not shared (rdar://52561199)
-- Fixed an issue with `EXPECT !name WITH-VALUE ...` tests.
-- Fixed a command ordering issue in the Zebra ZPL driver.
-- Fixed a memory leak in `ppdOpen`.
+(3) November - US/Europe/Brazil/India - OP Monthly Meeting (tentative)
+   - Tuesday 5 November 2019, Daytime
+      - Bluejeans.com web conference to be announced
+      - Europe Summer Time ends 27 October
+      - US Daylight Savings Time ends 3 November 2019
+      - Brazil Daylight Savings Time ended 17 February 2019 (final change)
+      - US
+        10am in San Francisco - US PST (Pacific Standard Time)
+        11am in Colorado - US MST (Mountain Standard Time)
+        12am in Chicago - US CST (Central Standard Time)
+        1pm in New York - US EST (Eastern Standard Time)
+      - Europe
+        7pm in Berlin - CET (Central Europe Time)
+      - Brazil
+        3pm in Belo Horizonte - BRT (Brasilia Time)
+      - India
+        11:30pm in New Delhi - IST (India Standard Time)
 
 
-Changes in CUPS v2.3rc1
------------------------
+Cheers,
+- Ira
 
-- The `cups-config` script no longer adds extra libraries when linking
-   against shared libraries (Issue #5261)
-- The supplied example print documents have been optimized for size
-   (Issue #5529)
-- The `cupsctl` command now prevents setting "cups-files.conf"
-   directives (Issue #5530)
-- The "forbidden" message in the web interface is now explained (Issue
-   #5547)
-- The footer in the web interface covered some content on small displays
-   (Issue #5574)
-- The libusb-based USB backend now enforces read limits, improving print
-   speed in many cases (Issue #5583)
-- The `ippeveprinter` command now looks for print commands in the
-   "command" subdirectory.
-- The `ipptool` command now supports `$date-current` and `$date-start`
-   variables to insert the current and starting date and time values, as
-   well as ISO-8601 relative time values such as "PT30S" for 30 seconds
-   in the future.
+Ira McDonald (Musician / Software Architect)
+Co-Chair - TCG Trusted Mobility Solutions WG
+Co-Chair - TCG Metadata Access Protocol SG
+Chair - Linux Foundation Open Printing WG
+Secretary - IEEE-ISTO Printer Working Group
+Co-Chair - IEEE-ISTO PWG Internet Printing Protocol WG
+IETF Designated Expert - IPP & Printer MIB
+Blue Roof Music / High North Inc
+http://sites.google.com/site/blueroofmusic
+http://sites.google.com/site/highnorthinc
+mailto: blueroofmusic@gmail.com
+PO Box 221  Grand Marais, MI 49839  906-494-2434
 
-No changes on 2.2.x branch.
+--000000000000beb904058fb0fba9
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">
+<div><span><span><span><span><span><span><span><span><span><span><span><spa=
+n><span><span><span><span><span><span><span><span><span><span><span><span c=
+lass=3D"gmail-m_-1158711912255117676gmail-m_1776318710614632045gmail-m_-475=
+6575891241312417gmail-m_2117374153625731833gmail-m_-3445782083850589417gmai=
+l-m_2713804236676126735gmail-m_3306039714731842870gmail-m_19382045503081730=
+04gmail-m_143227704813022973gmail-m_8026677298455142025gmail-m_391023638632=
+8534355gmail-m_9066534496284299746gmail-m_4346366972293637117gmail-m_297373=
+7917277585369gmail-m_4244161235814952814gmail-m_-1437717217799848893gmail-m=
+_-309151344415276828gmail-m_-2799441903750312663gmail-m_8879919866472623741=
+gmail-m_6247121733015438196gmail-m_-45336563860668868gmail-m_-7696371708218=
+007806gmail-m_4662659131797929118gmail-m_4437823930890095150gmail-m_-681379=
+959383614342gmail-m_7818885144891878450gmail-m_5896293692365239151gmail-m_7=
+484771893033705782m_7416439913013906919gmail-il"><span class=3D"gmail-m_-11=
+58711912255117676gmail-m_1776318710614632045gmail-m_-4756575891241312417gma=
+il-m_2117374153625731833gmail-m_-3445782083850589417gmail-m_271380423667612=
+6735gmail-m_3306039714731842870gmail-m_1938204550308173004gmail-m_143227704=
+813022973gmail-m_8026677298455142025gmail-m_3910236386328534355gmail-m_9066=
+534496284299746gmail-m_4346366972293637117gmail-m_2973737917277585369gmail-=
+m_4244161235814952814gmail-m_-1437717217799848893gmail-m_-30915134441527682=
+8gmail-m_-2799441903750312663gmail-m_8879919866472623741gmail-m_62471217330=
+15438196gmail-m_-45336563860668868gmail-m_-7696371708218007806gmail-m_46626=
+59131797929118gmail-m_4437823930890095150gmail-il"><span class=3D"gmail-m_-=
+1158711912255117676gmail-m_1776318710614632045gmail-m_-4756575891241312417g=
+mail-m_2117374153625731833gmail-m_-3445782083850589417gmail-m_2713804236676=
+126735gmail-m_3306039714731842870gmail-m_1938204550308173004gmail-m_1432277=
+04813022973gmail-m_8026677298455142025gmail-m_3910236386328534355gmail-m_90=
+66534496284299746gmail-m_4346366972293637117gmail-m_2973737917277585369gmai=
+l-m_4244161235814952814gmail-m_-1437717217799848893gmail-il"><span class=3D=
+"gmail-m_-1158711912255117676gmail-m_1776318710614632045gmail-m_-4756575891=
+241312417gmail-m_2117374153625731833gmail-m_-3445782083850589417gmail-m_271=
+3804236676126735gmail-m_3306039714731842870gmail-m_1938204550308173004gmail=
+-m_143227704813022973gmail-m_8026677298455142025gmail-m_3910236386328534355=
+gmail-m_9066534496284299746gmail-m_4346366972293637117gmail-il">Hi,</span><=
+/span></span></span></span></span></span></span></span></span></span></span=
+></span></span></span></span></span></span></span></span></span></span></sp=
+an></span></span></span></span></div><div><span><span><span><span><span><sp=
+an><span><span><span><span><span><span><span><span><span><span><span><span>=
+<span><span><span><span><span><span class=3D"gmail-m_-1158711912255117676gm=
+ail-m_1776318710614632045gmail-m_-4756575891241312417gmail-m_21173741536257=
+31833gmail-m_-3445782083850589417gmail-m_2713804236676126735gmail-m_3306039=
+714731842870gmail-m_1938204550308173004gmail-m_143227704813022973gmail-m_80=
+26677298455142025gmail-m_3910236386328534355gmail-m_9066534496284299746gmai=
+l-m_4346366972293637117gmail-m_2973737917277585369gmail-m_42441612358149528=
+14gmail-m_-1437717217799848893gmail-m_-309151344415276828gmail-m_-279944190=
+3750312663gmail-m_8879919866472623741gmail-m_6247121733015438196gmail-m_-45=
+336563860668868gmail-m_-7696371708218007806gmail-m_4662659131797929118gmail=
+-m_4437823930890095150gmail-m_-681379959383614342gmail-m_781888514489187845=
+0gmail-m_5896293692365239151gmail-m_7484771893033705782m_741643991301390691=
+9gmail-il"><span class=3D"gmail-m_-1158711912255117676gmail-m_1776318710614=
+632045gmail-m_-4756575891241312417gmail-m_2117374153625731833gmail-m_-34457=
+82083850589417gmail-m_2713804236676126735gmail-m_3306039714731842870gmail-m=
+_1938204550308173004gmail-m_143227704813022973gmail-m_8026677298455142025gm=
+ail-m_3910236386328534355gmail-m_9066534496284299746gmail-m_434636697229363=
+7117gmail-m_2973737917277585369gmail-m_4244161235814952814gmail-m_-14377172=
+17799848893gmail-m_-309151344415276828gmail-m_-2799441903750312663gmail-m_8=
+879919866472623741gmail-m_6247121733015438196gmail-m_-45336563860668868gmai=
+l-m_-7696371708218007806gmail-m_4662659131797929118gmail-m_4437823930890095=
+150gmail-il"><span class=3D"gmail-m_-1158711912255117676gmail-m_17763187106=
+14632045gmail-m_-4756575891241312417gmail-m_2117374153625731833gmail-m_-344=
+5782083850589417gmail-m_2713804236676126735gmail-m_3306039714731842870gmail=
+-m_1938204550308173004gmail-m_143227704813022973gmail-m_8026677298455142025=
+gmail-m_3910236386328534355gmail-m_9066534496284299746gmail-m_4346366972293=
+637117gmail-m_2973737917277585369gmail-m_4244161235814952814gmail-m_-143771=
+7217799848893gmail-il"><span class=3D"gmail-m_-1158711912255117676gmail-m_1=
+776318710614632045gmail-m_-4756575891241312417gmail-m_2117374153625731833gm=
+ail-m_-3445782083850589417gmail-m_2713804236676126735gmail-m_33060397147318=
+42870gmail-m_1938204550308173004gmail-m_143227704813022973gmail-m_802667729=
+8455142025gmail-m_3910236386328534355gmail-m_9066534496284299746gmail-m_434=
+6366972293637117gmail-il"><br></span></span></span></span></span></span></s=
+pan></span></span></span></span></span></span></span></span></span></span><=
+/span></span></span></span></span></span></span></span></span></span></div>=
+<div dir=3D"ltr"><span><span><span><span><span><span><span><span><span><spa=
+n><span><span><span><span><span><span><span><span><span><span><span><span><=
+span><span class=3D"gmail-m_-1158711912255117676gmail-m_1776318710614632045=
+gmail-m_-4756575891241312417gmail-m_2117374153625731833gmail-m_-34457820838=
+50589417gmail-m_2713804236676126735gmail-m_3306039714731842870gmail-m_19382=
+04550308173004gmail-m_143227704813022973gmail-m_8026677298455142025gmail-m_=
+3910236386328534355gmail-m_9066534496284299746gmail-m_4346366972293637117gm=
+ail-m_2973737917277585369gmail-m_4244161235814952814gmail-m_-14377172177998=
+48893gmail-m_-309151344415276828gmail-m_-2799441903750312663gmail-m_8879919=
+866472623741gmail-m_6247121733015438196gmail-m_-45336563860668868gmail-m_-7=
+696371708218007806gmail-m_4662659131797929118gmail-m_4437823930890095150gma=
+il-m_-681379959383614342gmail-m_7818885144891878450gmail-m_5896293692365239=
+151gmail-m_7484771893033705782m_7416439913013906919gmail-il"><span class=3D=
+"gmail-m_-1158711912255117676gmail-m_1776318710614632045gmail-m_-4756575891=
+241312417gmail-m_2117374153625731833gmail-m_-3445782083850589417gmail-m_271=
+3804236676126735gmail-m_3306039714731842870gmail-m_1938204550308173004gmail=
+-m_143227704813022973gmail-m_8026677298455142025gmail-m_3910236386328534355=
+gmail-m_9066534496284299746gmail-m_4346366972293637117gmail-m_2973737917277=
+585369gmail-m_4244161235814952814gmail-m_-1437717217799848893gmail-m_-30915=
+1344415276828gmail-m_-2799441903750312663gmail-m_8879919866472623741gmail-m=
+_6247121733015438196gmail-m_-45336563860668868gmail-m_-7696371708218007806g=
+mail-m_4662659131797929118gmail-m_4437823930890095150gmail-il"><span class=
+=3D"gmail-m_-1158711912255117676gmail-m_1776318710614632045gmail-m_-4756575=
+891241312417gmail-m_2117374153625731833gmail-m_-3445782083850589417gmail-m_=
+2713804236676126735gmail-m_3306039714731842870gmail-m_1938204550308173004gm=
+ail-m_143227704813022973gmail-m_8026677298455142025gmail-m_3910236386328534=
+355gmail-m_9066534496284299746gmail-m_4346366972293637117gmail-m_2973737917=
+277585369gmail-m_4244161235814952814gmail-m_-1437717217799848893gmail-il"><=
+span class=3D"gmail-m_-1158711912255117676gmail-m_1776318710614632045gmail-=
+m_-4756575891241312417gmail-m_2117374153625731833gmail-m_-34457820838505894=
+17gmail-m_2713804236676126735gmail-m_3306039714731842870gmail-m_19382045503=
+08173004gmail-m_143227704813022973gmail-m_8026677298455142025gmail-m_391023=
+6386328534355gmail-m_9066534496284299746gmail-m_4346366972293637117gmail-il=
+">Minutes</span></span></span></span></span></span></span></span></span></s=
+pan></span></span></span></span></span></span></span></span></span></span><=
+/span></span></span></span></span></span></span> from our last OpenPrinting=
+<span> call</span> are <span><span><span><span><span><span><span><span><spa=
+n><span><span><span><span><span><span><span>posted</span></span></span></sp=
+an></span></span></span></span></span></span></span></span></span></span></=
+span></span> at:<br>
 
 
-cups-filters
-------------
-
-Currently released is 1.25.1.
-
-1.25.2:
-
-Improved cups-browsed's handling of the DNS-SD records of advertised 
-local and remote IPP print services. Especially make sure that local 
-queues do not get already removed when the service on a single network 
-interface disappears (for example Wi-Fi turned off) while still present 
-on other interfaces. Also let local services preferably be accessed 
-through the loopback ("localhost") interface to avoid data leaks into 
-the network.
-
-1.25.1:
-
-Bug fix release for the filters, mainly for the new pdftoraster filter.
-
-1.25.0:
-
-In this release the pdftoraster filter is changed to only use 
-stable/documented APIs of Poppler (Tanmay Anand's Google Summer of Code 
-2019 project) and the deprecated, Poppler-based filters pdftoijs and 
-pdftoopvp are finally completely removed. Now Poppler is only used for 
-the pdftoraster filter. Poppler's unstable/internal APIs are nowhere 
-used any more in cups-filters.
-
-CHANGES IN V1.25.2
-
-	- cups-browsed: Added note to cups-browsed.conf and man page
-	  about IP-based URIs depending on the network interface used.
-	- cups-browsed: For each DNS-SD-discovered printer register
-	  each DNS-SD discovery instance with network interface,
-	  family, and IPP type. When DNS-SD messages of instances
-	  disappearing show up, only unregister this instance and
-	  remove the printer only if no instance is left. This
-	  prevents a local queue of a still available printer being
-	  removed when Wi-Fi (= one interface) is turned off (Issue
-	  #136).
-	- cups-browsed: If a remote printer is served from the local
-	  machine, prefer the "localhost"/loopback interface URI.
-	- cups-browsed: If a remote printer is discovered more than
-	  once, use the new instance only if it has no downgrades and
-	  at least one upgrade compared to the old one. Features
-	  currently compared are IPP/IPPS, loopback interface or not,
-	  and discovery via CUPS legacy/LDAP/DNS-SD.
-	- cups-browsed: If an Avahi-discovered entry comes through the
-	  "lo" interface, always use the host name "localhost". Use
-	  IP addresses instead of host names only if explicitly
-	  requested.
-	- cups-browsed: Consider remote printer entries also as from
-	  the same printer if one has the local machine's network name
-	  and the other "localhost" as host name (Issue #136).
-
-CHANGES IN V1.25.1
-
-	- imagetopdf: Fixed crash when no PPD file was supplied (Pull
-	  request #133).
-	- pdftoraster: Fixed offset issues leading to segmentation
-	  faults (Issue #131, Pull request #132).
-	- pdftoraster: Added anti-aliasing for better raster image
-	  quality (Pull request #129).
-	- pdftoraster: Added graceful handling of zero-page input
-	  (Issue #117, Pull request #127).
-
-CHANGES IN V1.25.0
-
-	- pdftoijs, pdftoopvp: Removed these deprecated filters
-	  completely as there is no demand for them any more. They
-	  also used unstable, undocumented APIs of Poppler.
-	- pdftoraster: Changed from using unstable, undocumented APIs
-	  of Poppler to stable, documented ones, to improve
-	  maintainability of this filter, and with it of the
-	  cups-filters package. Thanks to Tanmay Anand for
-	  contributing this as his Google Summer of Code 2019 project.
-	- libcupsfilters: Added support for color spaces CMY and RGBW
-	  when using filters without PPD file (mainly for development
-	  and debugging, option "print-color-mode" with values
-	  "cmy-XX" and "rgbw-XX" with XX being the number of bits per
-	  color).
 
 
-ippusbxd
---------
 
-David Valleau from Google tells that ippusbxd works well on HP, Canon, 
-and Epson printers under Chrome OS.
 
-No code changes.
+
+
+
+
+
+
+<br>
+=C2=A0 <a href=3D"http://ftp.pwg.org/pub/pwg/liaison/openprinting/minutes/O=
+P-Minutes-20190806.htm" target=3D"_blank">http://ftp.pwg.org/pub/pwg/liaiso=
+n/openprinting/minutes/OP-Minutes-20190806.htm</a><br><br></div><div dir=3D=
+"ltr"><br></div><div dir=3D"ltr">
+Next <span><span><span><span><span><span><span><span><span><span><span><spa=
+n><span><span class=3D"gmail-m_-1158711912255117676gmail-m_1776318710614632=
+045gmail-m_-4756575891241312417gmail-m_2117374153625731833gmail-m_-34457820=
+83850589417gmail-m_2713804236676126735gmail-m_3306039714731842870gmail-m_19=
+38204550308173004gmail-m_143227704813022973gmail-m_8026677298455142025gmail=
+-m_3910236386328534355gmail-m_9066534496284299746gmail-m_434636697229363711=
+7gmail-m_2973737917277585369gmail-m_-9009147911283959335gmail-m_-1437717217=
+799848893gmail-m_-309151344415276828gmail-m_-2799441903750312663gmail-m_887=
+9919866472623741gmail-m_6247121733015438196gmail-m_-45336563860668868gmail-=
+m_-7696371708218007806gmail-m_4662659131797929118gmail-m_443782393089009515=
+0gmail-m_-681379959383614342gmail-m_7818885144891878450gmail-m_589629369236=
+5239151gmail-m_7484771893033705782m_7416439913013906919gmail-il"><span clas=
+s=3D"gmail-m_-1158711912255117676gmail-m_1776318710614632045gmail-m_-475657=
+5891241312417gmail-m_2117374153625731833gmail-m_-3445782083850589417gmail-m=
+_2713804236676126735gmail-m_3306039714731842870gmail-m_1938204550308173004g=
+mail-m_143227704813022973gmail-m_8026677298455142025gmail-m_391023638632853=
+4355gmail-m_9066534496284299746gmail-m_4346366972293637117gmail-m_297373791=
+7277585369gmail-m_-9009147911283959335gmail-m_-1437717217799848893gmail-m_-=
+309151344415276828gmail-m_-2799441903750312663gmail-m_8879919866472623741gm=
+ail-m_6247121733015438196gmail-m_-45336563860668868gmail-m_-769637170821800=
+7806gmail-m_4662659131797929118gmail-m_4437823930890095150gmail-il"><span c=
+lass=3D"gmail-m_-1158711912255117676gmail-m_1776318710614632045gmail-m_-475=
+6575891241312417gmail-m_2117374153625731833gmail-m_-3445782083850589417gmai=
+l-m_2713804236676126735gmail-m_3306039714731842870gmail-m_19382045503081730=
+04gmail-m_143227704813022973gmail-m_8026677298455142025gmail-m_391023638632=
+8534355gmail-m_9066534496284299746gmail-m_4346366972293637117gmail-m_297373=
+7917277585369gmail-m_-9009147911283959335gmail-m_-1437717217799848893gmail-=
+il"><span class=3D"gmail-m_-1158711912255117676gmail-m_1776318710614632045g=
+mail-m_-4756575891241312417gmail-m_2117374153625731833gmail-m_-344578208385=
+0589417gmail-m_2713804236676126735gmail-m_3306039714731842870gmail-m_193820=
+4550308173004gmail-m_143227704813022973gmail-m_8026677298455142025gmail-m_3=
+910236386328534355gmail-m_9066534496284299746gmail-m_4346366972293637117gma=
+il-il">OP</span></span></span></span></span></span></span></span></span></s=
+pan></span></span></span></span></span></span></span> US/Europe/Brazil/Indi=
+a Conference Calls: <br></div><div dir=3D"ltr"><br></div><div dir=3D"ltr">N=
+ote: =C2=A0EU voted (26 March 2019) to permanently end daylight savings tim=
+e in 2021 <br><a href=3D"https://www.timeanddate.com/news/time/eu-votes-scr=
+ap-dst.html">https://www.timeanddate.com/news/time/eu-votes-scrap-dst.html<=
+/a><br><br>Note: =C2=A0Brazil permanently ended daylight savings time on 17=
+ February 2019<br><a href=3D"https://www.timeanddate.com/time/change/brazil=
+/belo-horizonte">https://www.timeanddate.com/time/change/brazil/belo-horizo=
+nte</a></div><div dir=3D"ltr"><br></div><div dir=3D"ltr">(1) September - US=
+/Europe/Brazil/India - OP Monthly Meeting<br>=C2=A0 =C2=A0 =C2=A0 - Tuesday=
+ 3 September 2019, Daytime<br>=C2=A0 =C2=A0 =C2=A0 - Note - US Labor Day is=
+ 2 September 2019<br>=C2=A0 =C2=A0 =C2=A0 - Note - Linux Plumbers Conferenc=
+e is 9-11 September 2019 in Lisbon, Portugal<br>=C2=A0 =C2=A0 =C2=A0 - Note=
+ - OP Mini-Conference is 10 September 2019 at 10am-1:30pm WEST<br>=C2=A0 =
+=C2=A0 =C2=A0 - US<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 10am in San Francisco - U=
+S PDT (Pacific Daylight Time)<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 11am in Colora=
+do - US MDT (Mountain Daylight Time)<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 12am in=
+ Chicago - US CDT (Central Daylight Time)<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 1p=
+m in New York - US EDT (Eastern Daylight Time)<br>=C2=A0 =C2=A0 =C2=A0 - Eu=
+rope<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 7pm in Berlin - CEST (Central Europe Su=
+mmer Time)<br>=C2=A0 =C2=A0 =C2=A0 - Brazil<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+2pm in Belo Horizonte - BRT (Brasilia Time)<br>=C2=A0 =C2=A0 =C2=A0 - India=
+<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 10:30pm in New Delhi - IST (India Standard =
+Time)</div><div dir=3D"ltr"><br></div><div dir=3D"ltr">(2) October - US/Eur=
+ope/Brazil/India - OP Monthly Meeting (tentative)<br>=C2=A0 =C2=A0- Tuesday=
+ 1 October 2019, Daytime<br>=C2=A0 =C2=A0 =C2=A0 - Bluejeans.com web confer=
+ence to be announced<br>=C2=A0 =C2=A0 =C2=A0 - US<br>=C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 10am in San Francisco - US PDT (Pacific Daylight Time)<br>=C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 11am in Colorado - US MDT (Mountain Daylight Time)<br>=C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 12am in Chicago - US CDT (Central Daylight Time)<b=
+r>=C2=A0 =C2=A0 =C2=A0 =C2=A0 1pm in New York - US EDT (Eastern Daylight Ti=
+me)<br>=C2=A0 =C2=A0 =C2=A0 - Europe<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 7pm in =
+Berlin - CEST (Central Europe Summer Time)<br>=C2=A0 =C2=A0 =C2=A0 - Brazil=
+<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 2pm in Belo Horizonte - BRT (Brasilia Time)=
+<br>=C2=A0 =C2=A0 =C2=A0 - India<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 10:30pm in =
+New Delhi - IST (India Standard Time)</div><div dir=3D"ltr"><br></div><div =
+dir=3D"ltr">(3) November - US/Europe/Brazil/India - OP Monthly Meeting (ten=
+tative)<br>=C2=A0 =C2=A0- Tuesday 5 November 2019, Daytime<br>=C2=A0 =C2=A0=
+ =C2=A0 - Bluejeans.com web conference to be announced<br>=C2=A0 =C2=A0 =C2=
+=A0 - Europe Summer Time ends 27 October<br>=C2=A0 =C2=A0 =C2=A0 - US Dayli=
+ght Savings Time ends 3 November 2019<br>=C2=A0 =C2=A0 =C2=A0 - Brazil Dayl=
+ight Savings Time ended 17 February 2019 (final change)<br>=C2=A0 =C2=A0 =
+=C2=A0 - US<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 10am in San Francisco - US PST (=
+Pacific Standard Time)<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 11am in Colorado - US=
+ MST (Mountain Standard Time)<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 12am in Chicag=
+o - US CST (Central Standard Time)<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 1pm in Ne=
+w York - US EST (Eastern Standard Time)<br>=C2=A0 =C2=A0 =C2=A0 - Europe<br=
+>=C2=A0 =C2=A0 =C2=A0 =C2=A0 7pm in Berlin - CET (Central Europe Time)<br>=
+=C2=A0 =C2=A0 =C2=A0 - Brazil<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 3pm in Belo Ho=
+rizonte - BRT (Brasilia Time)<br>=C2=A0 =C2=A0 =C2=A0 - India<br>=C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 11:30pm in New Delhi - IST (India Standard Time)</div><di=
+v dir=3D"ltr"><br></div><div dir=3D"ltr"><br></div><div>Cheers,</div><div>-=
+ Ira</div><div></div><div dir=3D"ltr"><br></div>
+
+<div><div dir=3D"ltr" class=3D"gmail_signature" data-smartmail=3D"gmail_sig=
+nature"><div dir=3D"ltr"><div><div dir=3D"ltr"><div><div dir=3D"ltr"><div><=
+div dir=3D"ltr">Ira McDonald (Musician / Software Architect)<br>Co-Chair - =
+TCG Trusted Mobility Solutions WG</div><div>Co-Chair - TCG Metadata Access =
+Protocol SG<br></div><div dir=3D"ltr">Chair - Linux Foundation Open Printin=
+g WG<br>Secretary - IEEE-ISTO Printer Working Group<br>Co-Chair - IEEE-ISTO=
+ PWG Internet Printing Protocol WG<br>IETF Designated Expert - IPP &amp; Pr=
+inter MIB<br>Blue Roof Music / High North Inc<br><a style=3D"color:rgb(51,5=
+1,255)" href=3D"http://sites.google.com/site/blueroofmusic" target=3D"_blan=
+k">http://sites.google.com/site/blueroofmusic</a><br><a style=3D"color:rgb(=
+102,0,204)" href=3D"http://sites.google.com/site/highnorthinc" target=3D"_b=
+lank">http://sites.google.com/site/highnorthinc</a><br>mailto: <a href=3D"m=
+ailto:blueroofmusic@gmail.com" target=3D"_blank">blueroofmusic@gmail.com</a=
+><br>PO Box 221=C2=A0 Grand Marais, MI 49839=C2=A0 906-494-2434<br><br><div=
+ style=3D"display:inline"></div><div style=3D"display:inline"></div><div st=
+yle=3D"display:inline"></div><div></div><div></div><div></div><div></div></=
+div></div></div></div></div></div></div></div></div></div>
+
+--000000000000beb904058fb0fba9--
