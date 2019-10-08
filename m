@@ -1,13 +1,22 @@
-Return-Path: <brennand@us.ibm.com>
-From: "Danny Brennan - brennand@us.ibm.com" <brennand@us.ibm.com>
-Date: Tue, 8 Oct 2019 14:35:52 +0000
-Message-ID: <F4F9FD07-F852-4C99-95B5-A9E651525AAF@us.ibm.com>
-References: <CAN40gSswQZCX56WjaSLuh41Ytp0Qzr92a7NSupuo6E7bk5Q7Yw@mail.gmail.com>
-In-Reply-To: <CAN40gSswQZCX56WjaSLuh41Ytp0Qzr92a7NSupuo6E7bk5Q7Yw@mail.gmail.com>
-Content-Language: en-US
-Content-Type: multipart/alternative;
-	boundary="_000_F4F9FD07F8524C9995B5A9E651525AAFusibmcom_"
+Return-Path: <blueroofmusic@gmail.com>
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
+	h=mime-version:references:in-reply-to:from:date:message-id:subject:to
+	:cc; bh=MWBAPp4yoMFvL4kJe65hTzrJey3+05idbNjUu5Jt/VE=;
+	b=NjFm/2QBxcc4zgyubIXSLNduSLnOPNpBxBY01Ga0uIHvtjN8AFpjt3Cyqdayi1dDGf
+	awWwIqpqerc3zR1T2HSyWEBF4pAHzJgHMMo8JsPh2AN78QEuIdcrL48kFy1TLfE1Alio
+	w5UGIBMY9CjgmutbOwPOntim4xoGC+udg/aT+xbDO6CSsj8NmbAxDg58kAKBKx7mvUCV
+	FPK9LaFEaXHGSZKMDIkTqYuKF4HnIBGzFkDIbYV+Se0APW+RskoIxdmUKyD3xzovPwUJ
+	6CGlTiT5RBBnXScyEKAsPDZ6HhhQGaA6cfMNusVuIVjXaKxoOCRkc9+yxjCpzKAn10K+
+	NAdQ==
 MIME-Version: 1.0
+References: <CAN40gSswQZCX56WjaSLuh41Ytp0Qzr92a7NSupuo6E7bk5Q7Yw@mail.gmail.com>
+	<F4F9FD07-F852-4C99-95B5-A9E651525AAF@us.ibm.com>
+	<CAKSHSL4VvD7LYmGEKTMu89Eg2-_2VoPa9Zi7yQry6-Ym_cjZAw@mail.gmail.com>
+In-Reply-To: <CAKSHSL4VvD7LYmGEKTMu89Eg2-_2VoPa9Zi7yQry6-Ym_cjZAw@mail.gmail.com>
+From: Ira McDonald <blueroofmusic@gmail.com>
+Date: Tue, 8 Oct 2019 11:23:29 -0400
+Message-ID: <CAN40gSvLmhadmAyG0S9akA7iPH+kxSfCiR=hCOoN5hLafLpddg@mail.gmail.com>
+Content-Type: multipart/alternative; boundary="000000000000df90b2059467c01e"
 Subject: Re: [Printing-architecture] REMINDER: OP Monthly call (10/08/19)
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
@@ -18,118 +27,281 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Ira McDonald <blueroofmusic@gmail.com>
-Cc: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>, Aveek Basu <basu.aveek@gmail.com>, Till Kamppeter <till.kamppeter@gmail.com>
+To: Aveek Basu <basu.aveek@gmail.com>, Ira McDonald <blueroofmusic@gmail.com>
+Cc: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>, Till Kempeter <till.kamppeter@gmail.com>
 
---_000_F4F9FD07F8524C9995B5A9E651525AAFusibmcom_
-Content-Type: text/plain; charset="utf-8"
-Content-Transfer-Encoding: base64
+--000000000000df90b2059467c01e
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
 
-SGV5IElyYQ0KDQpuZXh0IHdlZWsgaXMgZ29vZC4uLi5mb2xsb3dpbmcgd2VlayBJ4oCZbSBpbiBT
-ZWF0dGxlDQoNCkRhbm55DQpTZW50IGZyb20gbXkgaVBob25lDQoNCk9uIE9jdCA4LCAyMDE5LCBh
-dCAwNzoyMiwgSXJhIE1jRG9uYWxkIDxibHVlcm9vZm11c2ljQGdtYWlsLmNvbT4gd3JvdGU6DQoN
-Cu+7vw0KSGksDQoNCkF2ZWVrIGFuZCBEYW5ueSAtIHdvdWxkIHlvdSBib3RoIGJlIGFibGUgdG8g
-Y2FsbCBpbiBuZXh0IHdlZWsgKDEwLzE1LzE5KT8NCklmIHNvLCB3ZSBzaG91bGQgZ28gYWhlYWQg
-YW5kIGhhdmUgb3VyIE9QIG1vbnRobHkgY2FsbC4NCg0KVGhlIHdlZWsgYWZ0ZXIgKDEwLzIyLzE5
-KSwgSSdsbCBiZSB0cmF2ZWxpbmcgYWxsIGRheSBhbmQgY291bGRuJ3QgY2FsbCBpbi4NCg0KTGF0
-ZXIgdGhhbiB0aGF0LCB3ZSBzaG91bGQganVzdCBhaW0gZm9yIE5vdmVtYmVyLCBJIHRoaW5rLg0K
-DQpXRFlUPw0KDQpDaGVlcnMsDQotIElyYQ0KDQpJcmEgTWNEb25hbGQgKE11c2ljaWFuIC8gU29m
-dHdhcmUgQXJjaGl0ZWN0KQ0KQ28tQ2hhaXIgLSBUQ0cgVHJ1c3RlZCBNb2JpbGl0eSBTb2x1dGlv
-bnMgV0cNCkNvLUNoYWlyIC0gVENHIE1ldGFkYXRhIEFjY2VzcyBQcm90b2NvbCBTRw0KQ2hhaXIg
-LSBMaW51eCBGb3VuZGF0aW9uIE9wZW4gUHJpbnRpbmcgV0cNClNlY3JldGFyeSAtIElFRUUtSVNU
-TyBQcmludGVyIFdvcmtpbmcgR3JvdXANCkNvLUNoYWlyIC0gSUVFRS1JU1RPIFBXRyBJbnRlcm5l
-dCBQcmludGluZyBQcm90b2NvbCBXRw0KSUVURiBEZXNpZ25hdGVkIEV4cGVydCAtIElQUCAmIFBy
-aW50ZXIgTUlCDQpCbHVlIFJvb2YgTXVzaWMgLyBIaWdoIE5vcnRoIEluYw0KaHR0cDovL3NpdGVz
-Lmdvb2dsZS5jb20vc2l0ZS9ibHVlcm9vZm11c2ljPGh0dHBzOi8vdXJsZGVmZW5zZS5wcm9vZnBv
-aW50LmNvbS92Mi91cmw/dT1odHRwLTNBX19zaXRlcy5nb29nbGUuY29tX3NpdGVfYmx1ZXJvb2Zt
-dXNpYyZkPUR3TUZhUSZjPWpmX2lhU0h2Sk9iVGJ4LXNpQTFaT2cmcj1hUV9rNDIyOU5rc3ZOWU8z
-RkFUNG5Ycm1IdHcxZ0ZTa25wZ3ZpSEg3S193Jm09M3pUMjFVNDN4dkxpVjYxQXFwWHJYeC1EaERv
-NWgzeVhuWGdXMkhmNHloMCZzPTI2M25jbWlhcEFKYl9GTlVWMzdjWUFEY3ltUEpLakYzSy0yTjRY
-VGVlNTQmZT0+DQpodHRwOi8vc2l0ZXMuZ29vZ2xlLmNvbS9zaXRlL2hpZ2hub3J0aGluYzxodHRw
-czovL3VybGRlZmVuc2UucHJvb2Zwb2ludC5jb20vdjIvdXJsP3U9aHR0cC0zQV9fc2l0ZXMuZ29v
-Z2xlLmNvbV9zaXRlX2hpZ2hub3J0aGluYyZkPUR3TUZhUSZjPWpmX2lhU0h2Sk9iVGJ4LXNpQTFa
-T2cmcj1hUV9rNDIyOU5rc3ZOWU8zRkFUNG5Ycm1IdHcxZ0ZTa25wZ3ZpSEg3S193Jm09M3pUMjFV
-NDN4dkxpVjYxQXFwWHJYeC1EaERvNWgzeVhuWGdXMkhmNHloMCZzPThfWjFyZHRkYW55YS1pMDhl
-cnVsbkE3NUVTTVJudXhmbEw2VkRGWEt0ck0mZT0+DQptYWlsdG86IGJsdWVyb29mbXVzaWNAZ21h
-aWwuY29tPG1haWx0bzpibHVlcm9vZm11c2ljQGdtYWlsLmNvbT4NClBPIEJveCAyMjEgIEdyYW5k
-IE1hcmFpcywgTUkgNDk4MzkgIDkwNi00OTQtMjQzNA0KDQoNCg0KT24gVHVlLCBPY3QgOCwgMjAx
-OSBhdCA5OjE3IEFNIFRpbGwgS2FtcHBldGVyIDx0aWxsLmthbXBwZXRlckBnbWFpbC5jb208bWFp
-bHRvOnRpbGwua2FtcHBldGVyQGdtYWlsLmNvbT4+IHdyb3RlOg0KT24gMDgvMTAvMjAxOSAwMjoz
-OCwgSXJhIE1jRG9uYWxkIHdyb3RlOg0KPiBIaSwNCj4NCj4gTm90IGF0IG15IG1haW4gbWFjaGlu
-ZS4gIEknbGwgc2VuZCB0aGUgQmx1ZWplYW5zDQo+IGludml0YXRpb24gdG9tb3Jyb3cgbW9ybmlu
-Zy4NCg0KVW5mb3J0dW5hdGVseSwgSSB3aWxsIGFsc28gbm90IGJlIGFibGUgdG8gY2FsbCBpbiB0
-aGlzIGFuZCBuZXh0IHdlZWssDQpidXQgSSBoYXZlIHB1dCB1cCB0aGUgbmV3cyBub3csIGluIGEg
-bmV3IGZvcm1hdDoNCg0KaHR0cHM6Ly9vcGVucHJpbnRpbmcuZ2l0aHViLmlvL09wZW5QcmludGlu
-Zy1OZXdzLU9jdG9iZXItMjAxOS88aHR0cHM6Ly91cmxkZWZlbnNlLnByb29mcG9pbnQuY29tL3Yy
-L3VybD91PWh0dHBzLTNBX19vcGVucHJpbnRpbmcuZ2l0aHViLmlvX09wZW5QcmludGluZy0yRE5l
-d3MtMkRPY3RvYmVyLTJEMjAxOV8mZD1Ed01GYVEmYz1qZl9pYVNIdkpPYlRieC1zaUExWk9nJnI9
-YVFfazQyMjlOa3N2TllPM0ZBVDRuWHJtSHR3MWdGU2tucGd2aUhIN0tfdyZtPTN6VDIxVTQzeHZM
-aVY2MUFxcFhyWHgtRGhEbzVoM3lYblhnVzJIZjR5aDAmcz1wdE8zNUVHZDk0dFp5SnlvLXpzOEdz
-TzFGOXI0aVBFY196MzVSMURKMFpNJmU9Pg0KDQogICAgVGlsbA0K
+Hi,
 
---_000_F4F9FD07F8524C9995B5A9E651525AAFusibmcom_
-Content-Type: text/html; charset="utf-8"
-Content-ID: <E36635222C6E5547BE7F0A0E1E8DFE75@gmx.ibm.com>
-Content-Transfer-Encoding: base64
-X-Proofpoint-UnRewURL: 3 URL's were un-rewritten
+Hmm...
 
-PGh0bWw+DQo8aGVhZD4NCjxtZXRhIGh0dHAtZXF1aXY9IkNvbnRlbnQtVHlwZSIgY29udGVudD0i
-dGV4dC9odG1sOyBjaGFyc2V0PXV0Zi04Ij4NCjwvaGVhZD4NCjxib2R5IGRpcj0iYXV0byI+DQpI
-ZXkgSXJhJm5ic3A7DQo8ZGl2Pjxicj4NCjwvZGl2Pg0KPGRpdj5uZXh0IHdlZWsgaXMgZ29vZC4u
-Li5mb2xsb3dpbmcgd2VlayBJ4oCZbSBpbiBTZWF0dGxlJm5ic3A7PGJyPg0KPGJyPg0KRGFubnk8
-YnI+DQo8ZGl2IGRpcj0ibHRyIj5TZW50IGZyb20gbXkgaVBob25lPC9kaXY+DQo8ZGl2IGRpcj0i
-bHRyIj48YnI+DQo8YmxvY2txdW90ZSB0eXBlPSJjaXRlIj5PbiBPY3QgOCwgMjAxOSwgYXQgMDc6
-MjIsIElyYSBNY0RvbmFsZCAmbHQ7Ymx1ZXJvb2ZtdXNpY0BnbWFpbC5jb20mZ3Q7IHdyb3RlOjxi
-cj4NCjxicj4NCjwvYmxvY2txdW90ZT4NCjwvZGl2Pg0KPGJsb2NrcXVvdGUgdHlwZT0iY2l0ZSI+
-DQo8ZGl2IGRpcj0ibHRyIj7vu78NCjxkaXYgZGlyPSJsdHIiPg0KPGRpdj5IaSw8L2Rpdj4NCjxk
-aXY+PGJyPg0KPC9kaXY+DQo8ZGl2PkF2ZWVrIGFuZCBEYW5ueSAtIHdvdWxkIHlvdSBib3RoIGJl
-IGFibGUgdG8gY2FsbCBpbiBuZXh0IHdlZWsgKDEwLzE1LzE5KT88L2Rpdj4NCjxkaXY+SWYgc28s
-IHdlIHNob3VsZCBnbyBhaGVhZCBhbmQgaGF2ZSBvdXIgT1AgbW9udGhseSBjYWxsLjwvZGl2Pg0K
-PGRpdj48YnI+DQo8L2Rpdj4NCjxkaXY+VGhlIHdlZWsgYWZ0ZXIgKDEwLzIyLzE5KSwgSSdsbCBi
-ZSB0cmF2ZWxpbmcgYWxsIGRheSBhbmQgY291bGRuJ3QgY2FsbCBpbi48L2Rpdj4NCjxkaXY+PGJy
-Pg0KPC9kaXY+DQo8ZGl2PkxhdGVyIHRoYW4gdGhhdCwgd2Ugc2hvdWxkIGp1c3QgYWltIGZvciBO
-b3ZlbWJlciwgSSB0aGluay48L2Rpdj4NCjxkaXY+PGJyPg0KPC9kaXY+DQo8ZGl2PldEWVQ/PC9k
-aXY+DQo8ZGl2Pjxicj4NCjwvZGl2Pg0KPGRpdj5DaGVlcnMsPC9kaXY+DQo8ZGl2Pi0gSXJhPC9k
-aXY+DQo8ZGl2Pjxicj4NCjwvZGl2Pg0KPGRpdj4NCjxkaXY+DQo8ZGl2IGRpcj0ibHRyIiBjbGFz
-cz0iZ21haWxfc2lnbmF0dXJlIiBkYXRhLXNtYXJ0bWFpbD0iZ21haWxfc2lnbmF0dXJlIj4NCjxk
-aXYgZGlyPSJsdHIiPg0KPGRpdj4NCjxkaXYgZGlyPSJsdHIiPg0KPGRpdj4NCjxkaXYgZGlyPSJs
-dHIiPg0KPGRpdj4NCjxkaXYgZGlyPSJsdHIiPklyYSBNY0RvbmFsZCAoTXVzaWNpYW4gLyBTb2Z0
-d2FyZSBBcmNoaXRlY3QpPGJyPg0KQ28tQ2hhaXIgLSBUQ0cgVHJ1c3RlZCBNb2JpbGl0eSBTb2x1
-dGlvbnMgV0c8L2Rpdj4NCjxkaXY+Q28tQ2hhaXIgLSBUQ0cgTWV0YWRhdGEgQWNjZXNzIFByb3Rv
-Y29sIFNHPGJyPg0KPC9kaXY+DQo8ZGl2IGRpcj0ibHRyIj5DaGFpciAtIExpbnV4IEZvdW5kYXRp
-b24gT3BlbiBQcmludGluZyBXRzxicj4NClNlY3JldGFyeSAtIElFRUUtSVNUTyBQcmludGVyIFdv
-cmtpbmcgR3JvdXA8YnI+DQpDby1DaGFpciAtIElFRUUtSVNUTyBQV0cgSW50ZXJuZXQgUHJpbnRp
-bmcgUHJvdG9jb2wgV0c8YnI+DQpJRVRGIERlc2lnbmF0ZWQgRXhwZXJ0IC0gSVBQICZhbXA7IFBy
-aW50ZXIgTUlCPGJyPg0KQmx1ZSBSb29mIE11c2ljIC8gSGlnaCBOb3J0aCBJbmM8YnI+DQo8YSBz
-dHlsZT0iY29sb3I6cmdiKDUxLDUxLDI1NSkiIGhyZWY9Imh0dHA6Ly9zaXRlcy5nb29nbGUuY29t
-L3NpdGUvYmx1ZXJvb2ZtdXNpYyIgdGFyZ2V0PSJfYmxhbmsiPmh0dHA6Ly9zaXRlcy5nb29nbGUu
-Y29tL3NpdGUvYmx1ZXJvb2ZtdXNpYzwvYT48YnI+DQo8YSBzdHlsZT0iY29sb3I6cmdiKDEwMiww
-LDIwNCkiIGhyZWY9Imh0dHA6Ly9zaXRlcy5nb29nbGUuY29tL3NpdGUvaGlnaG5vcnRoaW5jIiB0
-YXJnZXQ9Il9ibGFuayI+aHR0cDovL3NpdGVzLmdvb2dsZS5jb20vc2l0ZS9oaWdobm9ydGhpbmM8
-L2E+PGJyPg0KbWFpbHRvOiA8YSBocmVmPSJtYWlsdG86Ymx1ZXJvb2ZtdXNpY0BnbWFpbC5jb20i
-IHRhcmdldD0iX2JsYW5rIj5ibHVlcm9vZm11c2ljQGdtYWlsLmNvbTwvYT48YnI+DQpQTyBCb3gg
-MjIxJm5ic3A7IEdyYW5kIE1hcmFpcywgTUkgNDk4MzkmbmJzcDsgOTA2LTQ5NC0yNDM0PGJyPg0K
-PGJyPg0KPGRpdiBzdHlsZT0iZGlzcGxheTppbmxpbmUiPjwvZGl2Pg0KPGRpdiBzdHlsZT0iZGlz
-cGxheTppbmxpbmUiPjwvZGl2Pg0KPGRpdiBzdHlsZT0iZGlzcGxheTppbmxpbmUiPjwvZGl2Pg0K
-PGRpdj48L2Rpdj4NCjxkaXY+PC9kaXY+DQo8ZGl2PjwvZGl2Pg0KPGRpdj48L2Rpdj4NCjwvZGl2
-Pg0KPC9kaXY+DQo8L2Rpdj4NCjwvZGl2Pg0KPC9kaXY+DQo8L2Rpdj4NCjwvZGl2Pg0KPC9kaXY+
-DQo8L2Rpdj4NCjxicj4NCjwvZGl2Pg0KPC9kaXY+DQo8YnI+DQo8ZGl2IGNsYXNzPSJnbWFpbF9x
-dW90ZSI+DQo8ZGl2IGRpcj0ibHRyIiBjbGFzcz0iZ21haWxfYXR0ciI+T24gVHVlLCBPY3QgOCwg
-MjAxOSBhdCA5OjE3IEFNIFRpbGwgS2FtcHBldGVyICZsdDs8YSBocmVmPSJtYWlsdG86dGlsbC5r
-YW1wcGV0ZXJAZ21haWwuY29tIj50aWxsLmthbXBwZXRlckBnbWFpbC5jb208L2E+Jmd0OyB3cm90
-ZTo8YnI+DQo8L2Rpdj4NCjxibG9ja3F1b3RlIGNsYXNzPSJnbWFpbF9xdW90ZSIgc3R5bGU9Im1h
-cmdpbjowcHggMHB4IDBweCAwLjhleDtib3JkZXItbGVmdDoxcHggc29saWQgcmdiKDIwNCwyMDQs
-MjA0KTtwYWRkaW5nLWxlZnQ6MWV4Ij4NCk9uIDA4LzEwLzIwMTkgMDI6MzgsIElyYSBNY0RvbmFs
-ZCB3cm90ZTo8YnI+DQomZ3Q7IEhpLDxicj4NCiZndDsgPGJyPg0KJmd0OyBOb3QgYXQgbXkgbWFp
-biBtYWNoaW5lLiZuYnNwOyBJJ2xsIHNlbmQgdGhlIEJsdWVqZWFuczxicj4NCiZndDsgaW52aXRh
-dGlvbiB0b21vcnJvdyBtb3JuaW5nLjxicj4NCjxicj4NClVuZm9ydHVuYXRlbHksIEkgd2lsbCBh
-bHNvIG5vdCBiZSBhYmxlIHRvIGNhbGwgaW4gdGhpcyBhbmQgbmV4dCB3ZWVrLCA8YnI+DQpidXQg
-SSBoYXZlIHB1dCB1cCB0aGUgbmV3cyBub3csIGluIGEgbmV3IGZvcm1hdDo8YnI+DQo8YnI+DQo8
-YSBocmVmPSJodHRwczovL29wZW5wcmludGluZy5naXRodWIuaW8vT3BlblByaW50aW5nLU5ld3Mt
-T2N0b2Jlci0yMDE5LyIgcmVsPSJub3JlZmVycmVyIiB0YXJnZXQ9Il9ibGFuayI+aHR0cHM6Ly9v
-cGVucHJpbnRpbmcuZ2l0aHViLmlvL09wZW5QcmludGluZy1OZXdzLU9jdG9iZXItMjAxOS88L2E+
-PGJyPg0KPGJyPg0KJm5ic3A7ICZuYnNwOyBUaWxsPGJyPg0KPC9ibG9ja3F1b3RlPg0KPC9kaXY+
-DQo8L2Rpdj4NCjwvYmxvY2txdW90ZT4NCjwvZGl2Pg0KPC9ib2R5Pg0KPC9odG1sPg0K
+I suggest that Danny and I go ahead and hold our OP Monthly call TODAY.
+Then I'll generate some minutes (including extensive PWG IPP document
+status updates and Till's monthly CUPS Filters news from last month and
+this month).
 
---_000_F4F9FD07F8524C9995B5A9E651525AAFusibmcom_--
+We can then hold our November OP Monthly call on 11/05/19 as planned.
 
+All - WDYT?
+
+Cheers,
+- Ira
+
+Ira McDonald (Musician / Software Architect)
+Co-Chair - TCG Trusted Mobility Solutions WG
+Co-Chair - TCG Metadata Access Protocol SG
+Chair - Linux Foundation Open Printing WG
+Secretary - IEEE-ISTO Printer Working Group
+Co-Chair - IEEE-ISTO PWG Internet Printing Protocol WG
+IETF Designated Expert - IPP & Printer MIB
+Blue Roof Music / High North Inc
+http://sites.google.com/site/blueroofmusic
+http://sites.google.com/site/highnorthinc
+mailto: blueroofmusic@gmail.com
+PO Box 221  Grand Marais, MI 49839  906-494-2434
+
+
+
+On Tue, Oct 8, 2019 at 11:12 AM Aveek Basu <basu.aveek@gmail.com> wrote:
+
+> Ira,
+>
+> I am sorry I will be traveling next week. It will not be possible to
+> attend next week as well.
+>
+> Regards,
+> Aveek
+>
+> On Tue, 8 Oct, 2019, 8:06 PM Danny Brennan - brennand@us.ibm.com, <
+> brennand@us.ibm.com> wrote:
+>
+>> Hey Ira
+>>
+>> next week is good....following week I=E2=80=99m in Seattle
+>>
+>> Danny
+>> Sent from my iPhone
+>>
+>> On Oct 8, 2019, at 07:22, Ira McDonald <blueroofmusic@gmail.com> wrote:
+>>
+>> =EF=BB=BF
+>> Hi,
+>>
+>> Aveek and Danny - would you both be able to call in next week (10/15/19)=
+?
+>> If so, we should go ahead and have our OP monthly call.
+>>
+>> The week after (10/22/19), I'll be traveling all day and couldn't call i=
+n.
+>>
+>> Later than that, we should just aim for November, I think.
+>>
+>> WDYT?
+>>
+>> Cheers,
+>> - Ira
+>>
+>> Ira McDonald (Musician / Software Architect)
+>> Co-Chair - TCG Trusted Mobility Solutions WG
+>> Co-Chair - TCG Metadata Access Protocol SG
+>> Chair - Linux Foundation Open Printing WG
+>> Secretary - IEEE-ISTO Printer Working Group
+>> Co-Chair - IEEE-ISTO PWG Internet Printing Protocol WG
+>> IETF Designated Expert - IPP & Printer MIB
+>> Blue Roof Music / High North Inc
+>> http://sites.google.com/site/blueroofmusic
+>> http://sites.google.com/site/highnorthinc
+>> mailto: blueroofmusic@gmail.com
+>> PO Box 221  Grand Marais, MI 49839  906-494-2434
+>>
+>>
+>>
+>> On Tue, Oct 8, 2019 at 9:17 AM Till Kamppeter <till.kamppeter@gmail.com>
+>> wrote:
+>>
+>>> On 08/10/2019 02:38, Ira McDonald wrote:
+>>> > Hi,
+>>> >
+>>> > Not at my main machine.  I'll send the Bluejeans
+>>> > invitation tomorrow morning.
+>>>
+>>> Unfortunately, I will also not be able to call in this and next week,
+>>> but I have put up the news now, in a new format:
+>>>
+>>> https://openprinting.github.io/OpenPrinting-News-October-2019/
+>>>
+>>>     Till
+>>>
+>>
+
+--000000000000df90b2059467c01e
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><div>Hi,</div><div><br></div><div>Hmm...</div><div><br></d=
+iv><div>I suggest that Danny and I go ahead and hold our OP Monthly call <s=
+pan style=3D"background-color:rgb(255,255,0)">TODAY.</span></div><div>Then =
+I&#39;ll generate some minutes (including extensive PWG IPP document</div><=
+div>status updates and Till&#39;s monthly CUPS Filters news from last month=
+ and</div><div>this month).</div><div><br></div><div>We can then hold our <=
+span style=3D"background-color:rgb(255,255,0)">November OP Monthly call on =
+11/05/19</span> as planned.</div><div><br></div><div><span style=3D"backgro=
+und-color:rgb(255,255,0)">All - WDYT?</span></div><div><br></div><div>Cheer=
+s,</div><div>- Ira</div><div><br></div><div><div><div dir=3D"ltr" class=3D"=
+gmail_signature" data-smartmail=3D"gmail_signature"><div dir=3D"ltr"><div><=
+div dir=3D"ltr"><div><div dir=3D"ltr"><div><div dir=3D"ltr">Ira McDonald (M=
+usician / Software Architect)<br>Co-Chair - TCG Trusted Mobility Solutions =
+WG</div><div>Co-Chair - TCG Metadata Access Protocol SG<br></div><div dir=
+=3D"ltr">Chair - Linux Foundation Open Printing WG<br>Secretary - IEEE-ISTO=
+ Printer Working Group<br>Co-Chair - IEEE-ISTO PWG Internet Printing Protoc=
+ol WG<br>IETF Designated Expert - IPP &amp; Printer MIB<br>Blue Roof Music =
+/ High North Inc<br><a style=3D"color:rgb(51,51,255)" href=3D"http://sites.=
+google.com/site/blueroofmusic" target=3D"_blank">http://sites.google.com/si=
+te/blueroofmusic</a><br><a style=3D"color:rgb(102,0,204)" href=3D"http://si=
+tes.google.com/site/highnorthinc" target=3D"_blank">http://sites.google.com=
+/site/highnorthinc</a><br>mailto: <a href=3D"mailto:blueroofmusic@gmail.com=
+" target=3D"_blank">blueroofmusic@gmail.com</a><br>PO Box 221=C2=A0 Grand M=
+arais, MI 49839=C2=A0 906-494-2434<br><br><div style=3D"display:inline"></d=
+iv><div style=3D"display:inline"></div><div style=3D"display:inline"></div>=
+<div></div><div></div><div></div><div></div></div></div></div></div></div><=
+/div></div></div></div><br></div></div><br><div class=3D"gmail_quote"><div =
+dir=3D"ltr" class=3D"gmail_attr">On Tue, Oct 8, 2019 at 11:12 AM Aveek Basu=
+ &lt;<a href=3D"mailto:basu.aveek@gmail.com">basu.aveek@gmail.com</a>&gt; w=
+rote:<br></div><blockquote class=3D"gmail_quote" style=3D"margin:0px 0px 0p=
+x 0.8ex;border-left:1px solid rgb(204,204,204);padding-left:1ex"><div dir=
+=3D"auto">Ira,<div dir=3D"auto"><br></div><div dir=3D"auto">I am sorry I wi=
+ll be traveling next week. It will not be possible to attend next week as w=
+ell.=C2=A0</div><div dir=3D"auto"><br></div><div dir=3D"auto">Regards,=C2=
+=A0</div><div dir=3D"auto">Aveek</div></div><br><div class=3D"gmail_quote">=
+<div dir=3D"ltr" class=3D"gmail_attr">On Tue, 8 Oct, 2019, 8:06 PM Danny Br=
+ennan - <a href=3D"mailto:brennand@us.ibm.com" target=3D"_blank">brennand@u=
+s.ibm.com</a>, &lt;<a href=3D"mailto:brennand@us.ibm.com" target=3D"_blank"=
+>brennand@us.ibm.com</a>&gt; wrote:<br></div><blockquote class=3D"gmail_quo=
+te" style=3D"margin:0px 0px 0px 0.8ex;border-left:1px solid rgb(204,204,204=
+);padding-left:1ex">
+
+
+
+<div dir=3D"auto">
+Hey Ira=C2=A0
+<div><br>
+</div>
+<div>next week is good....following week I=E2=80=99m in Seattle=C2=A0<br>
+<br>
+Danny<br>
+<div dir=3D"ltr">Sent from my iPhone</div>
+<div dir=3D"ltr"><br>
+<blockquote type=3D"cite">On Oct 8, 2019, at 07:22, Ira McDonald &lt;<a hre=
+f=3D"mailto:blueroofmusic@gmail.com" rel=3D"noreferrer" target=3D"_blank">b=
+lueroofmusic@gmail.com</a>&gt; wrote:<br>
+<br>
+</blockquote>
+</div>
+<blockquote type=3D"cite">
+<div dir=3D"ltr">=EF=BB=BF
+<div dir=3D"ltr">
+<div>Hi,</div>
+<div><br>
+</div>
+<div>Aveek and Danny - would you both be able to call in next week (10/15/1=
+9)?</div>
+<div>If so, we should go ahead and have our OP monthly call.</div>
+<div><br>
+</div>
+<div>The week after (10/22/19), I&#39;ll be traveling all day and couldn&#3=
+9;t call in.</div>
+<div><br>
+</div>
+<div>Later than that, we should just aim for November, I think.</div>
+<div><br>
+</div>
+<div>WDYT?</div>
+<div><br>
+</div>
+<div>Cheers,</div>
+<div>- Ira</div>
+<div><br>
+</div>
+<div>
+<div>
+<div dir=3D"ltr">
+<div dir=3D"ltr">
+<div>
+<div dir=3D"ltr">
+<div>
+<div dir=3D"ltr">
+<div>
+<div dir=3D"ltr">Ira McDonald (Musician / Software Architect)<br>
+Co-Chair - TCG Trusted Mobility Solutions WG</div>
+<div>Co-Chair - TCG Metadata Access Protocol SG<br>
+</div>
+<div dir=3D"ltr">Chair - Linux Foundation Open Printing WG<br>
+Secretary - IEEE-ISTO Printer Working Group<br>
+Co-Chair - IEEE-ISTO PWG Internet Printing Protocol WG<br>
+IETF Designated Expert - IPP &amp; Printer MIB<br>
+Blue Roof Music / High North Inc<br>
+<a style=3D"color:rgb(51,51,255)" href=3D"http://sites.google.com/site/blue=
+roofmusic" rel=3D"noreferrer" target=3D"_blank">http://sites.google.com/sit=
+e/blueroofmusic</a><br>
+<a style=3D"color:rgb(102,0,204)" href=3D"http://sites.google.com/site/high=
+northinc" rel=3D"noreferrer" target=3D"_blank">http://sites.google.com/site=
+/highnorthinc</a><br>
+mailto: <a href=3D"mailto:blueroofmusic@gmail.com" rel=3D"noreferrer" targe=
+t=3D"_blank">blueroofmusic@gmail.com</a><br>
+PO Box 221=C2=A0 Grand Marais, MI 49839=C2=A0 906-494-2434<br>
+<br>
+<div style=3D"display:inline"></div>
+<div style=3D"display:inline"></div>
+<div style=3D"display:inline"></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<br>
+</div>
+</div>
+<br>
+<div class=3D"gmail_quote">
+<div dir=3D"ltr" class=3D"gmail_attr">On Tue, Oct 8, 2019 at 9:17 AM Till K=
+amppeter &lt;<a href=3D"mailto:till.kamppeter@gmail.com" rel=3D"noreferrer"=
+ target=3D"_blank">till.kamppeter@gmail.com</a>&gt; wrote:<br>
+</div>
+<blockquote class=3D"gmail_quote" style=3D"margin:0px 0px 0px 0.8ex;border-=
+left:1px solid rgb(204,204,204);padding-left:1ex">
+On 08/10/2019 02:38, Ira McDonald wrote:<br>
+&gt; Hi,<br>
+&gt; <br>
+&gt; Not at my main machine.=C2=A0 I&#39;ll send the Bluejeans<br>
+&gt; invitation tomorrow morning.<br>
+<br>
+Unfortunately, I will also not be able to call in this and next week, <br>
+but I have put up the news now, in a new format:<br>
+<br>
+<a href=3D"https://openprinting.github.io/OpenPrinting-News-October-2019/" =
+rel=3D"noreferrer noreferrer" target=3D"_blank">https://openprinting.github=
+.io/OpenPrinting-News-October-2019/</a><br>
+<br>
+=C2=A0 =C2=A0 Till<br>
+</blockquote>
+</div>
+</div>
+</blockquote>
+</div>
+</div>
+
+</blockquote></div>
+</blockquote></div>
+
+--000000000000df90b2059467c01e--
