@@ -1,27 +1,19 @@
-Return-Path: <pizza@stuffed.shaftnet.org>
-DKIM-Filter: OpenDKIM Filter v2.11.0 stuffed.shaftnet.org xA8DXeXU010159
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=shaftnet.org;
-	s=default; t=1573220020;
-	bh=eLHIpXdA9ARn74nTpv02MDHiUDrzHXH9j+VBOvcI2Yw=;
-	h=Date:From:To:Cc:Subject:References:In-Reply-To:From;
-	b=gdKvNIi6b1kSrjH3H58DfuTkS3nZcgvpMvH3uG5s2irxwTAYy8iKgUsZUyHicQn6g
-	cVGPXx9CoEkxZkDa19eD4SbCaKKLgIa6nnNQq0uIw7D9bc9v2bI+EX4eMfwpwSkFmB
-	L62DEWZLxntFqBhnIhZjpIqEEf5BhTLmOo9OkK3w=
-Date: Fri, 8 Nov 2019 08:33:39 -0500
-From: Solomon Peachy <pizza@shaftnet.org>
-Message-ID: <20191108133339.GK26703@shaftnet.org>
-References: <49db06cd-6ae8-1a6b-2a05-011762d98797@gmail.com>
-	<20191107164901.GB5070@shaftnet.org>
-	<a04a9c9f-4c05-0cb7-7fb6-9d13f631a866@gmail.com>
-	<20191108020631.GJ26703@shaftnet.org>
-	<20191108115751.54932beb@workstation64.local>
+Return-Path: <blueroofmusic@gmail.com>
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
+	h=mime-version:from:date:message-id:subject:to;
+	bh=aaqsLGfvdq/T6bYJtwzdvaOOPX0nOVPVmcNWgOG3JCQ=;
+	b=cguSKB0lAE0E5sJMMKTXqb5Q+P3JDYum6iB9omVjoFaZV7qzAwYJyiQOmUVNTKGNIm
+	tK/cM5eNYj5CbUx18MO0+vy3Q9oVXwyozKWmjeWLt5oVTKTN3GRwplsEQkQnk0KMciHq
+	OIIfEMKO1M707Dm7ithVi6438Hlye0AGgKaS/bN+gh1RxrN56SHzwr5IDBA9CltwGEhm
+	D451EBV0W1vM4a5q7TLvbzIyWXVRalW0Hv0vP9Tq8d/nJm1mcuBkvoLbxMvQ88Wk8l9O
+	TDHX4FX/MUDBJkWwrPfWx7dtc25p7vcyz7jBqpIB8vVGoPARBArT3kRjkBg0uZjzwJ1Q
+	tpdQ==
 MIME-Version: 1.0
-Content-Type: multipart/signed; micalg=pgp-sha1;
-	protocol="application/pgp-signature"; boundary="A2x6GFCQWVc4i5ud"
-Content-Disposition: inline
-In-Reply-To: <20191108115751.54932beb@workstation64.local>
-Subject: Re: [Printing-architecture] Upcoming work for OpenPrinting: Printer
- (Scanner) Applications and IPP System Service
+From: Ira McDonald <blueroofmusic@gmail.com>
+Date: Fri, 8 Nov 2019 11:09:23 -0500
+Message-ID: <CAN40gSv+=Bku-Y1rTrwLyck4qoL7F+a=vCsvzQgBhwAkqUYSmw@mail.gmail.com>
+Content-Type: multipart/alternative; boundary="0000000000001491460596d802a9"
+Subject: [Printing-architecture] OP Minutes (5 November 2019)
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>,
@@ -31,44 +23,172 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Andreas Radke <andreas.radke@mailbox.org>
-Cc: printing-architecture@lists.linux-foundation.org
+To: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>, Till Kamppeter <till.kamppeter@gmail.com>, Aveek Basu <basu.aveek@gmail.com>, Danny Brennan <brennand@us.ibm.com>, Ira McDonald <blueroofmusic@gmail.com>
+
+--0000000000001491460596d802a9
+Content-Type: text/plain; charset="UTF-8"
+
+Hi,
+
+Minutes from our last OpenPrinting call are posted at:
 
 
---A2x6GFCQWVc4i5ud
-Content-Type: text/plain; charset=us-ascii
-Content-Disposition: inline
+http://ftp.pwg.org/pub/pwg/liaison/openprinting/minutes/OP-Minutes-20191105.htm
+
+
+Next OP US/Europe/Brazil/India Conference Calls:
+
+(1) December - US/Europe/Brazil/India - OP Monthly Meeting
+   - Tuesday 3 December 2019, Daytime
+      - Bluejeans.com web conference to be announced
+      - US
+        10am in San Francisco - US PST (Pacific Standard Time)
+        11am in Colorado - US MST (Mountain Standard Time)
+        12am in Chicago - US CST (Central Standard Time)
+        1pm in New York - US EST (Eastern Standard Time)
+      - Europe
+        7pm in Berlin - CET (Central Europe Time)
+      - Brazil
+        3pm in Belo Horizonte - BRT (Brasilia Time)
+      - India
+        11:30pm in New Delhi - IST (India Standard Time)
+
+(2) January - US/Europe/Brazil/India - OP Monthly Meeting (tentative)
+   - Tuesday 7 January 2020, Daytime
+      - Bluejeans.com web conference to be announced
+      - US
+        10am in San Francisco - US PST (Pacific Standard Time)
+        11am in Colorado - US MST (Mountain Standard Time)
+        12am in Chicago - US CST (Central Standard Time)
+        1pm in New York - US EST (Eastern Standard Time)
+      - Europe
+        7pm in Berlin - CET (Central Europe Time)
+      - Brazil
+        3pm in Belo Horizonte - BRT (Brasilia Time)
+      - India
+        11:30pm in New Delhi - IST (India Standard Time)
+
+(3) February - US/Europe/Brazil/India - OP Monthly Meeting (tentative)
+   - Tuesday 4 February 2020, Daytime
+      - Bluejeans.com web conference to be announced
+      - US
+        10am in San Francisco - US PST (Pacific Standard Time)
+        11am in Colorado - US MST (Mountain Standard Time)
+        12am in Chicago - US CST (Central Standard Time)
+        1pm in New York - US EST (Eastern Standard Time)
+      - Europe
+        7pm in Berlin - CET (Central Europe Time)
+      - Brazil
+        3pm in Belo Horizonte - BRT (Brasilia Time)
+      - India
+        11:30pm in New Delhi - IST (India Standard Time)
+
+Cheers,
+- Ira
+
+Ira McDonald (Musician / Software Architect)
+Co-Chair - TCG Trusted Mobility Solutions WG
+Co-Chair - TCG Metadata Access Protocol SG
+Chair - Linux Foundation Open Printing WG
+Secretary - IEEE-ISTO Printer Working Group
+Co-Chair - IEEE-ISTO PWG Internet Printing Protocol WG
+IETF Designated Expert - IPP & Printer MIB
+Blue Roof Music / High North Inc
+http://sites.google.com/site/blueroofmusic
+http://sites.google.com/site/highnorthinc
+mailto: blueroofmusic@gmail.com
+PO Box 221  Grand Marais, MI 49839  906-494-2434
+
+--0000000000001491460596d802a9
+Content-Type: text/html; charset="UTF-8"
 Content-Transfer-Encoding: quoted-printable
 
-On Fri, Nov 08, 2019 at 11:57:51AM +0100, Andreas Radke wrote:
-> When cups 2.4.x will be out I will probably disable any ppd driven
-> driver support in Arch. Just to stop people using closed source driver
-> and to push open standards. Anything else will probably go into our
-> community maintained unsupported AUR repositories.
+<div dir=3D"ltr"><div>Hi,</div><div><br></div><div>
+<div dir=3D"ltr"><span><span><span><span><span><span><span><span><span><spa=
+n><span><span><span><span><span><span><span><span><span><span><span><span><=
+span><span><span><span><span>Minutes</span></span></span></span></span></sp=
+an></span></span></span></span></span></span></span></span></span></span></=
+span></span></span></span></span></span></span></span></span></span></span>=
+ from our last OpenPrinting<span> call</span> are <span><span><span><span><=
+span><span><span><span><span><span><span><span><span><span><span><span>post=
+ed</span></span></span></span></span></span></span></span></span></span></s=
+pan></span></span></span></span></span> at:<br>
 
-It's not proprietary drivers I'm concerned about -- There's a _huge_=20
-install base of SMB-exported or native networked PCL/PS+PPD printers,=20
-and MajorDistros(tm) can't get away with just dropping legacy CUPS=20
-before there is a JustWorking(tm) alternative folks' existing printers.
 
-The goal ahead is good, and very much achievable, but as Till's original=20
-email laid out, it's a pretty long road and we're not exactly drowning=20
-in manpower...
 
- - Solomon
---=20
-Solomon Peachy			       pizza at shaftnet dot org
-High Springs, FL                          ^^ (email/xmpp) ^^
-Quidquid latine dictum sit, altum videtur.
 
---A2x6GFCQWVc4i5ud
-Content-Type: application/pgp-signature; name="signature.asc"
 
------BEGIN PGP SIGNATURE-----
 
-iF0EABECAB0WIQR2UQuVfi4HbxEN7SQ+4uCKLbvn0AUCXcVusgAKCRA+4uCKLbvn
-0BR1AJ4vhYaguDNtY9cVUZkKcjbOeESchwCdFKkeyXS/5viqSnb/iIO223vvWRE=
-=jQxx
------END PGP SIGNATURE-----
 
---A2x6GFCQWVc4i5ud--
+
+
+
+
+
+<br>
+=C2=A0 <a href=3D"http://ftp.pwg.org/pub/pwg/liaison/openprinting/minutes/O=
+P-Minutes-20191105.htm" target=3D"_blank">http://ftp.pwg.org/pub/pwg/liaiso=
+n/openprinting/minutes/OP-Minutes-20191105.htm</a><br><br></div><div dir=3D=
+"ltr"><br></div><div dir=3D"ltr">
+Next <span><span><span><span><span><span><span><span><span><span><span><spa=
+n><span><span><span><span><span>OP</span></span></span></span></span></span=
+></span></span></span></span></span></span></span></span></span></span></sp=
+an> US/Europe/Brazil/India Conference Calls: <br></div><div dir=3D"ltr"><br=
+></div><div dir=3D"ltr">(1) December - US/Europe/Brazil/India - OP Monthly =
+Meeting<br>=C2=A0 =C2=A0- Tuesday 3 December 2019, Daytime<br>=C2=A0 =C2=A0=
+ =C2=A0 - Bluejeans.com web conference to be announced<br>=C2=A0 =C2=A0 =C2=
+=A0 - US<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 10am in San Francisco - US PST (Pac=
+ific Standard Time)<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 11am in Colorado - US MS=
+T (Mountain Standard Time)<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 12am in Chicago -=
+ US CST (Central Standard Time)<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 1pm in New Y=
+ork - US EST (Eastern Standard Time)<br>=C2=A0 =C2=A0 =C2=A0 - Europe<br>=
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 7pm in Berlin - CET (Central Europe Time)<br>=
+=C2=A0 =C2=A0 =C2=A0 - Brazil<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 3pm in Belo Ho=
+rizonte - BRT (Brasilia Time)<br>=C2=A0 =C2=A0 =C2=A0 - India<br>=C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 11:30pm in New Delhi - IST (India Standard Time)<br><br>(=
+2) January - US/Europe/Brazil/India - OP Monthly Meeting (tentative)<br>=C2=
+=A0 =C2=A0- Tuesday 7 January 2020, Daytime<br>=C2=A0 =C2=A0 =C2=A0 - Bluej=
+eans.com web conference to be announced<br>=C2=A0 =C2=A0 =C2=A0 - US<br>=C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 10am in San Francisco - US PST (Pacific Standard T=
+ime)<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 11am in Colorado - US MST (Mountain Sta=
+ndard Time)<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 12am in Chicago - US CST (Centra=
+l Standard Time)<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 1pm in New York - US EST (E=
+astern Standard Time)<br>=C2=A0 =C2=A0 =C2=A0 - Europe<br>=C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 7pm in Berlin - CET (Central Europe Time)<br>=C2=A0 =C2=A0 =C2=
+=A0 - Brazil<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 3pm in Belo Horizonte - BRT (Br=
+asilia Time)<br>=C2=A0 =C2=A0 =C2=A0 - India<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0=
+ 11:30pm in New Delhi - IST (India Standard Time)<br><br>(3) February - US/=
+Europe/Brazil/India - OP Monthly Meeting (tentative)<br>=C2=A0 =C2=A0- Tues=
+day 4 February 2020, Daytime<br>=C2=A0 =C2=A0 =C2=A0 - Bluejeans.com web co=
+nference to be announced<br>=C2=A0 =C2=A0 =C2=A0 - US<br>=C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 10am in San Francisco - US PST (Pacific Standard Time)<br>=C2=A0=
+ =C2=A0 =C2=A0 =C2=A0 11am in Colorado - US MST (Mountain Standard Time)<br=
+>=C2=A0 =C2=A0 =C2=A0 =C2=A0 12am in Chicago - US CST (Central Standard Tim=
+e)<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 1pm in New York - US EST (Eastern Standar=
+d Time)<br>=C2=A0 =C2=A0 =C2=A0 - Europe<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 7pm=
+ in Berlin - CET (Central Europe Time)<br>=C2=A0 =C2=A0 =C2=A0 - Brazil<br>=
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 3pm in Belo Horizonte - BRT (Brasilia Time)<br>=
+=C2=A0 =C2=A0 =C2=A0 - India<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 11:30pm in New =
+Delhi - IST (India Standard Time)</div>
+
+</div><div><div><div dir=3D"ltr" class=3D"gmail_signature" data-smartmail=
+=3D"gmail_signature"><div dir=3D"ltr"><div><div dir=3D"ltr"><div><div dir=
+=3D"ltr"><div><div dir=3D"ltr"><br></div><div>Cheers,</div><div>- Ira</div>=
+<div><br></div><div dir=3D"ltr">Ira McDonald (Musician / Software Architect=
+)<br>Co-Chair - TCG Trusted Mobility Solutions WG</div><div>Co-Chair - TCG =
+Metadata Access Protocol SG<br></div><div dir=3D"ltr">Chair - Linux Foundat=
+ion Open Printing WG<br>Secretary - IEEE-ISTO Printer Working Group<br>Co-C=
+hair - IEEE-ISTO PWG Internet Printing Protocol WG<br>IETF Designated Exper=
+t - IPP &amp; Printer MIB<br>Blue Roof Music / High North Inc<br><a style=
+=3D"color:rgb(51,51,255)" href=3D"http://sites.google.com/site/blueroofmusi=
+c" target=3D"_blank">http://sites.google.com/site/blueroofmusic</a><br><a s=
+tyle=3D"color:rgb(102,0,204)" href=3D"http://sites.google.com/site/highnort=
+hinc" target=3D"_blank">http://sites.google.com/site/highnorthinc</a><br>ma=
+ilto: <a href=3D"mailto:blueroofmusic@gmail.com" target=3D"_blank">blueroof=
+music@gmail.com</a><br>PO Box 221=C2=A0 Grand Marais, MI 49839=C2=A0 906-49=
+4-2434<br><br><div style=3D"display:inline"></div><div style=3D"display:inl=
+ine"></div><div style=3D"display:inline"></div><div></div><div></div><div><=
+/div><div></div></div></div></div></div></div></div></div></div></div></div=
+></div>
+
+--0000000000001491460596d802a9--
