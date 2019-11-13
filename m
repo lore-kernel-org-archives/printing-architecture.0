@@ -1,31 +1,23 @@
-Return-Path: <msweet@apple.com>
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=apple.com;
-	h=sender : content-type
-	: mime-version : subject : from : in-reply-to : date : cc :
-	content-transfer-encoding : message-id : references : to; s=20180706;
-	bh=M/zp2LxJ10qaf/UpI3Mjh7HyOYbIESux2Ibh9pq8vAM=;
-	b=nwdYnRLDN4QtYJVt7wKauVPKUkke/8MMh2b/DNoTN+6HG8DbMBbS5KvveUrftgghuK3I
-	lIj9oi53LlhIbmZtouhutkpbQCT3DRvFmqFMTiNYS2xaMi34LhrdFHkdn0JArgQXmkJC
-	zQ99MZfjXeMskXctOg93Sfs5+BI51ANdrw4/5B6Nqfo5Cl5dLAtzwXo24dhmuJtXExlC
-	qYfgfKHV7rzAnfC6Dp95IKA3gxZiT8CEG261ADucIpBZuFlbEPWIXSIui1wupWEByou9
-	GIM9l+S55owb7ncWP37ozEiu9ay2sCNKtnj3ICmWFk8DGNSlojxGfCL/w2/VTwDYWRmm
-	ow== 
-Sender: msweet@apple.com
-Content-type: text/plain; charset=us-ascii
-MIME-version: 1.0 (Mac OS X Mail 13.0 \(3601.0.10\))
-From: Michael Sweet <msweet@apple.com>
-In-reply-to: <20191108133339.GK26703@shaftnet.org>
-Date: Fri, 08 Nov 2019 12:15:01 -0500
-Content-transfer-encoding: quoted-printable
-Message-id: <D99190EF-1B3A-4EAB-803A-E16952414C6C@apple.com>
-References: <49db06cd-6ae8-1a6b-2a05-011762d98797@gmail.com>
-	<20191107164901.GB5070@shaftnet.org>
-	<a04a9c9f-4c05-0cb7-7fb6-9d13f631a866@gmail.com>
-	<20191108020631.GJ26703@shaftnet.org>
-	<20191108115751.54932beb@workstation64.local>
-	<20191108133339.GK26703@shaftnet.org>
-Subject: Re: [Printing-architecture] Upcoming work for OpenPrinting: Printer
- (Scanner) Applications and IPP System Service
+Return-Path: <till.kamppeter@gmail.com>
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
+	h=to:from:subject:message-id:date:user-agent:mime-version
+	:content-language:content-transfer-encoding;
+	bh=H7+FVzlJmlFzsu3TUfnap4mTs+IxteCrpnsO8gzDmC0=;
+	b=CpMNxERkwGm4x2Cir6aAsFw9f9STPTBNRUTWIzPHcCD3b5ozlAvhd3zsnwMnvk+Pyd
+	XpBHJbTxPcxEmDB6KXMlVirG0eVDroMQ7E44F8g0rn43Q9T/FrooMYxXuVWbK2DTnO1D
+	oegAhoEWMS+0/5OjlVA6mJ+iR3r3dw1eug+gmuz2gfwIKwkBhutKUCiMAF4lAo0InIwn
+	pmiJYCWt9TysX1nEPHmuye6hIU6EtQhRjhLCqB7++HQA9zfkYupZ1Tnr4lGwAUoO4BUb
+	zY+4vA6ZCCnhGuOP1l28PPLivtoPI7g4XtjGjL/FZzUlPpzKUoHA9A6d8wNe2q4sFdbw
+	le2Q==
+From: Till Kamppeter <till.kamppeter@gmail.com>
+Message-ID: <02265d8c-8678-5edb-be08-a948d5ee9dcb@gmail.com>
+Date: Wed, 13 Nov 2019 12:27:02 +0100
+MIME-Version: 1.0
+Content-Type: text/plain; charset=utf-8; format=flowed
+Content-Language: en-US
+Content-Transfer-Encoding: 7bit
+Subject: [Printing-architecture] PWG Raster format (IPP Everywhere) not
+	reliable
 List-Id: Printing architecture under linux
 	<printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>,
@@ -35,35 +27,48 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>,
 	<mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Solomon Peachy <pizza@shaftnet.org>
-Cc: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>
+To: Open Printing <printing-architecture@lists.linux-foundation.org>
 
-Solomon,
+Hi,
 
-> On Nov 8, 2019, at 8:33 AM, Solomon Peachy <pizza@shaftnet.org> wrote:
->=20
-> On Fri, Nov 08, 2019 at 11:57:51AM +0100, Andreas Radke wrote:
->> When cups 2.4.x will be out I will probably disable any ppd driven
->> driver support in Arch. Just to stop people using closed source =
-driver
->> and to push open standards. Anything else will probably go into our
->> community maintained unsupported AUR repositories.
->=20
-> It's not proprietary drivers I'm concerned about -- There's a _huge_=20=
+recently, I saw several bug reports where certain printer models advertise to 
+understand PWG Raster but in fact are not able to print this format. Fortunately 
+all IPP-Everywhere/Mopria/Wi-Fi-Direct printers also do AirPrint and so one can 
+print in Apple Raster which reliably works.
 
-> install base of SMB-exported or native networked PCL/PS+PPD printers,=20=
+The bug reports are
 
-> and MajorDistros(tm) can't get away with just dropping legacy CUPS=20
-> before there is a JustWorking(tm) alternative folks' existing =
-printers.
+https://github.com/apple/cups/issues/5238
+    Create PPD file from get-printer-attributes
+    (Printer: Canon Pixma Pro 10)
 
-Even at Apple, we are quite aware that some of our customers depend on =
-SMB printing.  Our focus is on enterprise-class printers (so PostScript =
-and PCL) which can largely be supported using "generic" drivers already, =
-which means something like ippeveprinter (running as the logged-in user, =
-which has the side benefit of cleaning up Kerberos support) to act as =
-the software that talks to the SMB server.
+https://github.com/OpenPrinting/cups-filters/pull/168
+    Epson ET-7700 does not support image/pwg-raster
 
-_________________________________________________________
-Michael Sweet, Senior Printing System Engineer
+https://github.com/OpenPrinting/cups-filters/issues/171
+    Attribute differences
+    (Printer: Epson Workforce WF-2630)
 
+All these got solved by modifying the PPD generators of CUPS and cups-filters so 
+that if a printer supports both Apple Raster and PWG Raster that the printing 
+gets done in Apple Raster.
+
+This bug report can have the same reason:
+
+https://bugs.launchpad.net/ubuntu/+source/cups/+bug/1850127
+    Unable to print with Brother printer since upgrade to Ubuntu 19.10
+    (Printer: Brother HL-L8260CDW)
+
+It got solved by a printer firmware update and it is also not clear by the 
+attached files whether it was actually tried to print in PWG Raster.
+
+This makes the impression that the implementation of PWG Raster support in many 
+printers is buggy and so IPP Everywhere and generally driverless IPP printing 
+standards using PWG Raster is not reliable. And PWG Raster was created as a free 
+and open standard format for driverless printing.
+
+I think this should get escalated to the PWG and especially better verification 
+methods for PWG Raster creation and consumption should get introduced, and 
+firmware updates issued for existing printers.
+
+    Till
