@@ -1,20 +1,19 @@
 Return-Path: <blueroofmusic@gmail.com>
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
  h=mime-version:from:date:message-id:subject:to;
- bh=FwCEN/3iJxZbrs9vxhCuxf1IVxn90jTuusCaj9P+tMY=;
- b=ms82HVEkrGmo3Tm7VMhoqT9hHSDkx8LLcu9JAKCbDwYB0FK2q3i3UwFW72lmcUS6IL
- wh08gVWArxZGJ1H1K3FKVRQe8gFq0pltMKyXiiwdg4trqvV9G5rpd9ShUP70nMSukKLF
- QZl1+9SRVzGgAffbd+aY1Doo2hRZOORTnakAQ5gM9J15VCT1K0ZfW82qM3rbrcVRhla7
- 94PeaVlGUeJi9Y4eeA4J7IGNTSRVwW1aTexq+uldNAW4jxYm230KWJRknS0zI+h89CoY
- nNt+pIJIZX0Y+tPAD4uuD4wu8y3av1sgTs/yLOd+Q2gnuFN37jULnmyRxZCz9m/N3bzf
- Yxig==
+ bh=2hRPwCluDLauZzLEABJyyiaVaQWXx52sLNEGv2/14pE=;
+ b=G8uaGoC/NuH3nCNKQabaJ2SSbyd+I0VKsI+WtZ4sx/owLJ9jbqQhnsKZhq9syb8Kef
+ +FhZVqCKYom7rercUMzbQuunwATgCCXRd3xLOLbO5nzEYG8kb6Z9GtFALBcULQ3g/YvS
+ qENgstVI+tnKg8jb6s+Ehx+VXzcfu++NfEVuwLpUHhmyftHAG6ywARHF6SMm4ATnm4PG
+ e8J47qWtv9gI8prsX6oJl5r/zPg92eOq/TtytzSvxzHPn9o+dp9SSH3FW7JyDlr2yTB+
+ grb+OByFTl8HUq8pxFdb7ttCr0yN2a0WTRexRXtT2AACL9B2QT/8WIBU+iIMrgrsvDDX
+ j0Dw==
 MIME-Version: 1.0
 From: Ira McDonald <blueroofmusic@gmail.com>
-Date: Sat, 30 Nov 2019 13:04:56 -0500
-Message-ID: <CAN40gSuCK33dC=-+0TkTNZ_ETeJFJ6dhuTLnGs8Upbfta=bAOw@mail.gmail.com>
-Content-Type: multipart/alternative; boundary="000000000000cdf5c40598942f0b"
-Subject: [Printing-architecture] RESCHEDULE: OP Monthly Calls (December 2019
-	thru February 2020)
+Date: Mon, 9 Dec 2019 11:40:23 -0500
+Message-ID: <CAN40gSuL7OwtcM0LDqf8NQt9LtCoA9DMJzZbc4q5AwFkRd3o=Q@mail.gmail.com>
+Content-Type: multipart/alternative; boundary="0000000000000befba0599480ebb"
+Subject: [Printing-architecture] REMINDER: OP Monthly call Tuesday (12/10/19)
 List-Id: Printing architecture under linux
  <printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>, 
@@ -26,19 +25,12 @@ List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-arc
  <mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
 To: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>, Till Kamppeter <till.kamppeter@gmail.com>, Aveek Basu <basu.aveek@gmail.com>, Danny Brennan <brennand@us.ibm.com>, Ira McDonald <blueroofmusic@gmail.com>
 
---000000000000cdf5c40598942f0b
+--0000000000000befba0599480ebb
 Content-Type: text/plain; charset="UTF-8"
 
-Hi,
+ Hi,
 
-Due to various schedule conflicts, we're moving our December, January, and
-February calls all out to second weeks of months.
-
-Note:  Ira *may* be on the road in the second week of December.  If so, the
-December OP monthly call *may* be canceled.  Please watch for email
-updates.
-
-Next OP US/Europe/Brazil/India Conference Calls:
+Our  next OP US/Europe/Brazil/India call will be tomorrow:
 
 (1) December - US/Europe/Brazil/India - OP Monthly Meeting
    - Tuesday 10 December 2019, Daytime
@@ -55,39 +47,9 @@ Next OP US/Europe/Brazil/India Conference Calls:
       - India
         11:30pm in New Delhi - IST (India Standard Time)
 
-(2) January - US/Europe/Brazil/India - OP Monthly Meeting (tentative)
-   - Tuesday 14 January 2020, Daytime
-      - Bluejeans.com web conference to be announced
-      - US
-        10am in San Francisco - US PST (Pacific Standard Time)
-        11am in Colorado - US MST (Mountain Standard Time)
-        12am in Chicago - US CST (Central Standard Time)
-        1pm in New York - US EST (Eastern Standard Time)
-      - Europe
-        7pm in Berlin - CET (Central Europe Time)
-      - Brazil
-        3pm in Belo Horizonte - BRT (Brasilia Time)
-      - India
-        11:30pm in New Delhi - IST (India Standard Time)
-
-(3) February - US/Europe/Brazil/India - OP Monthly Meeting (tentative)
-   - Tuesday 11 February 2020, Daytime
-      - Bluejeans.com web conference to be announced
-      - Note - 4-5 February 2020 - PWG Virtual F2F
-      - US
-        10am in San Francisco - US PST (Pacific Standard Time)
-        11am in Colorado - US MST (Mountain Standard Time)
-        12am in Chicago - US CST (Central Standard Time)
-        1pm in New York - US EST (Eastern Standard Time)
-      - Europe
-        7pm in Berlin - CET (Central Europe Time)
-      - Brazil
-        3pm in Belo Horizonte - BRT (Brasilia Time)
-      - India
-        11:30pm in New Delhi - IST (India Standard Time)
-
 Cheers,
 - Ira
+
 Ira McDonald (Musician / Software Architect)
 Co-Chair - TCG Trusted Mobility Solutions WG
 Co-Chair - TCG Metadata Access Protocol SG
@@ -101,86 +63,47 @@ http://sites.google.com/site/highnorthinc
 mailto: blueroofmusic@gmail.com
 PO Box 221  Grand Marais, MI 49839  906-494-2434
 
---000000000000cdf5c40598942f0b
+--0000000000000befba0599480ebb
 Content-Type: text/html; charset="UTF-8"
 Content-Transfer-Encoding: quoted-printable
 
-<div dir=3D"ltr"><div>Hi,</div><div><br></div><div><span style=3D"backgroun=
-d-color:rgb(255,255,0)">Due to various schedule conflicts, we&#39;re moving=
- our December, January, and</span></div><div><span style=3D"background-colo=
-r:rgb(255,255,0)">February calls all out to second weeks of months.</span><=
-/div><div><span style=3D"background-color:rgb(255,255,0)"><br></span></div>=
-<div><span style=3D"background-color:rgb(255,255,0)">Note:=C2=A0 Ira *may* =
-be on the road in the second week of December.=C2=A0 If so, the <br></span>=
-</div><div><span style=3D"background-color:rgb(255,255,0)">December OP mont=
-hly call *may* be canceled.=C2=A0 Please watch for email</span></div><div><=
-span style=3D"background-color:rgb(255,255,0)">updates.</span></div><div><b=
-r></div><div>
-<div><div dir=3D"ltr">
-Next <span><span><span><span><span><span><span><span><span><span><span><spa=
-n><span><span><span><span><span>OP</span></span></span></span></span></span=
-></span></span></span></span></span></span></span></span></span></span></sp=
-an> US/Europe/Brazil/India Conference Calls: <br></div><div dir=3D"ltr"><br=
-></div><div dir=3D"ltr">(1) December - US/Europe/Brazil/India - OP Monthly =
-Meeting<br>=C2=A0 =C2=A0- Tuesday 10 December 2019, Daytime<br>=C2=A0 =C2=
-=A0 =C2=A0 - Bluejeans.com web conference to be announced<br>=C2=A0 =C2=A0 =
-=C2=A0 - US<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 10am in San Francisco - US PST (=
-Pacific Standard Time)<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 11am in Colorado - US=
- MST (Mountain Standard Time)<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 12am in Chicag=
-o - US CST (Central Standard Time)<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 1pm in Ne=
-w York - US EST (Eastern Standard Time)<br>=C2=A0 =C2=A0 =C2=A0 - Europe<br=
->=C2=A0 =C2=A0 =C2=A0 =C2=A0 7pm in Berlin - CET (Central Europe Time)<br>=
-=C2=A0 =C2=A0 =C2=A0 - Brazil<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 3pm in Belo Ho=
-rizonte - BRT (Brasilia Time)<br>=C2=A0 =C2=A0 =C2=A0 - India<br>=C2=A0 =C2=
-=A0 =C2=A0 =C2=A0 11:30pm in New Delhi - IST (India Standard Time)<br><br>(=
-2) January - US/Europe/Brazil/India - OP Monthly Meeting (tentative)<br>=C2=
-=A0 =C2=A0- Tuesday 14 January 2020, Daytime<br>=C2=A0 =C2=A0 =C2=A0 - Blue=
-jeans.com web conference to be announced<br>=C2=A0 =C2=A0 =C2=A0 - US<br>=
-=C2=A0 =C2=A0 =C2=A0 =C2=A0 10am in San Francisco - US PST (Pacific Standar=
-d Time)<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 11am in Colorado - US MST (Mountain =
-Standard Time)<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 12am in Chicago - US CST (Cen=
-tral Standard Time)<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 1pm in New York - US EST=
- (Eastern Standard Time)<br>=C2=A0 =C2=A0 =C2=A0 - Europe<br>=C2=A0 =C2=A0 =
-=C2=A0 =C2=A0 7pm in Berlin - CET (Central Europe Time)<br>=C2=A0 =C2=A0 =
-=C2=A0 - Brazil<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 3pm in Belo Horizonte - BRT =
-(Brasilia Time)<br>=C2=A0 =C2=A0 =C2=A0 - India<br>=C2=A0 =C2=A0 =C2=A0 =C2=
-=A0 11:30pm in New Delhi - IST (India Standard Time)<br><br>(3) February - =
-US/Europe/Brazil/India - OP Monthly Meeting (tentative)<br>=C2=A0 =C2=A0- T=
-uesday 11 February 2020, Daytime<br>=C2=A0 =C2=A0 =C2=A0 - Bluejeans.com we=
-b conference to be announced</div><div>=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0 - Not=
-e - 4-5 February 2020 - PWG Virtual F2F<br></div><div dir=3D"ltr">=C2=A0 =
-=C2=A0 =C2=A0 - US<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 10am in San Francisco - U=
-S PST (Pacific Standard Time)<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 11am in Colora=
-do - US MST (Mountain Standard Time)<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 12am in=
- Chicago - US CST (Central Standard Time)<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 1p=
-m in New York - US EST (Eastern Standard Time)<br>=C2=A0 =C2=A0 =C2=A0 - Eu=
-rope<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 7pm in Berlin - CET (Central Europe Tim=
-e)<br>=C2=A0 =C2=A0 =C2=A0 - Brazil<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 3pm in B=
-elo Horizonte - BRT (Brasilia Time)<br>=C2=A0 =C2=A0 =C2=A0 - India<br>=C2=
-=A0 =C2=A0 =C2=A0 =C2=A0 11:30pm in New Delhi - IST (India Standard Time)</=
-div>
+<div dir=3D"ltr">
+<div>Hi,</div><div><br></div><div dir=3D"ltr">
+Our=C2=A0 next <span><span><span><span><span><span><span><span><span><span>=
+<span><span><span><span><span><span><span>OP</span></span></span></span></s=
+pan></span></span></span></span></span></span></span></span></span></span><=
+/span></span> US/Europe/Brazil/India call will be tomorrow:<br></div><div d=
+ir=3D"ltr"><br></div><div dir=3D"ltr">(1) December - US/Europe/Brazil/India=
+ - OP Monthly Meeting<br>=C2=A0 =C2=A0- Tuesday 10 December 2019, Daytime<b=
+r>=C2=A0 =C2=A0 =C2=A0 - Bluejeans.com web conference to be announced<br>=
+=C2=A0 =C2=A0 =C2=A0 - US<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 10am in San Franci=
+sco - US PST (Pacific Standard Time)<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 11am in=
+ Colorado - US MST (Mountain Standard Time)<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+12am in Chicago - US CST (Central Standard Time)<br>=C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 1pm in New York - US EST (Eastern Standard Time)<br>=C2=A0 =C2=A0 =
+=C2=A0 - Europe<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 7pm in Berlin - CET (Central=
+ Europe Time)<br>=C2=A0 =C2=A0 =C2=A0 - Brazil<br>=C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 3pm in Belo Horizonte - BRT (Brasilia Time)<br>=C2=A0 =C2=A0 =C2=A0 - I=
+ndia<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 11:30pm in New Delhi - IST (India Stand=
+ard Time)</div><div dir=3D"ltr"><br></div><div>Cheers,</div><div>- Ira</div=
+><div><br></div>
 
-</div><div><div><div dir=3D"ltr"><div dir=3D"ltr"><div><div dir=3D"ltr"><di=
-v><div dir=3D"ltr"><div><div dir=3D"ltr"><br></div><div>Cheers,</div><div>-=
- Ira</div></div></div></div></div></div></div></div></div></div>
+<div><div dir=3D"ltr" class=3D"gmail_signature" data-smartmail=3D"gmail_sig=
+nature"><div dir=3D"ltr"><div><div dir=3D"ltr"><div><div dir=3D"ltr"><div><=
+div dir=3D"ltr">Ira McDonald (Musician / Software Architect)<br>Co-Chair - =
+TCG Trusted Mobility Solutions WG</div><div>Co-Chair - TCG Metadata Access =
+Protocol SG<br></div><div dir=3D"ltr">Chair - Linux Foundation Open Printin=
+g WG<br>Secretary - IEEE-ISTO Printer Working Group<br>Co-Chair - IEEE-ISTO=
+ PWG Internet Printing Protocol WG<br>IETF Designated Expert - IPP &amp; Pr=
+inter MIB<br>Blue Roof Music / High North Inc<br><a style=3D"color:rgb(51,5=
+1,255)" href=3D"http://sites.google.com/site/blueroofmusic" target=3D"_blan=
+k">http://sites.google.com/site/blueroofmusic</a><br><a style=3D"color:rgb(=
+102,0,204)" href=3D"http://sites.google.com/site/highnorthinc" target=3D"_b=
+lank">http://sites.google.com/site/highnorthinc</a><br>mailto: <a href=3D"m=
+ailto:blueroofmusic@gmail.com" target=3D"_blank">blueroofmusic@gmail.com</a=
+><br>PO Box 221=C2=A0 Grand Marais, MI 49839=C2=A0 906-494-2434<br><br><div=
+ style=3D"display:inline"></div><div style=3D"display:inline"></div><div st=
+yle=3D"display:inline"></div><div></div><div></div><div></div><div></div></=
+div></div></div></div></div></div></div></div></div></div>
 
-</div><div><div><div dir=3D"ltr" class=3D"gmail_signature" data-smartmail=
-=3D"gmail_signature"><div dir=3D"ltr"><div><div dir=3D"ltr"><div><div dir=
-=3D"ltr"><div><div dir=3D"ltr">Ira McDonald (Musician / Software Architect)=
-<br>Co-Chair - TCG Trusted Mobility Solutions WG</div><div>Co-Chair - TCG M=
-etadata Access Protocol SG<br></div><div dir=3D"ltr">Chair - Linux Foundati=
-on Open Printing WG<br>Secretary - IEEE-ISTO Printer Working Group<br>Co-Ch=
-air - IEEE-ISTO PWG Internet Printing Protocol WG<br>IETF Designated Expert=
- - IPP &amp; Printer MIB<br>Blue Roof Music / High North Inc<br><a style=3D=
-"color:rgb(51,51,255)" href=3D"http://sites.google.com/site/blueroofmusic" =
-target=3D"_blank">http://sites.google.com/site/blueroofmusic</a><br><a styl=
-e=3D"color:rgb(102,0,204)" href=3D"http://sites.google.com/site/highnorthin=
-c" target=3D"_blank">http://sites.google.com/site/highnorthinc</a><br>mailt=
-o: <a href=3D"mailto:blueroofmusic@gmail.com" target=3D"_blank">blueroofmus=
-ic@gmail.com</a><br>PO Box 221=C2=A0 Grand Marais, MI 49839=C2=A0 906-494-2=
-434<br><br><div style=3D"display:inline"></div><div style=3D"display:inline=
-"></div><div style=3D"display:inline"></div><div></div><div></div><div></di=
-v><div></div></div></div></div></div></div></div></div></div></div></div></=
-div>
-
---000000000000cdf5c40598942f0b--
+--0000000000000befba0599480ebb--
