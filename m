@@ -2,21 +2,21 @@ Return-Path: <till.kamppeter@gmail.com>
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
  h=from:subject:to:message-id:date:user-agent:mime-version
  :content-language:content-transfer-encoding;
- bh=UUrJF9SPJzURydhIHS19sJQPnphkHxBjNy8LakukPVk=;
- b=JbImcx98zIOILsMv8CXc7ez58Mmw1eD+seDedzdNpEdeDq/8ELlK0KvQPadgTQQPat
- a4/mDxrXS2Ju+kBa7nC7DC7HpdcsTLqtJY8i1UvYM3N5lGDo68q+byURdl+l5wJLDmn/
- gRDSRqeY/14pFXCd3mAv/P+TveBkypI6DXxfPL4gzRZ0fkau1YMBUXq4ulHlj3lNGDTR
- mD0VEoNivfxSmvEdX3dvoV1jdtB9APvXar+hWptkB9ZWVEx5WciHZbt+bb1N/+g/4cVI
- QGF1wJF3AFAjvuUAppExAZQVGr9h+PpO+JjQrK106jISCOesfy2M0rEW9JQ/UJF9XIL6
- gIjg==
+ bh=0/O46lEpCPpwfKkPCSujocUSwH6RQ+S/Xb1hULS3HG0=;
+ b=aGkkEYYw44Fy8ie1Cqa+DIdk4FVgHrKN1Y5AjLoEt6XCgyp+6qVsx4XgfXZAbOd6Wp
+ HXNoUo94NbevmL9JCx8cq90zxuSaxyLv5QI93pX+0c3dfnKLEzJKaPV0Q3Ag/hmhuwFT
+ FeIiDk21MuYZnvbVuTqA93j8aRVVx51NsYG/O0BuP8zn3XPns+Qt+3u/92Z8sEN2ICGc
+ 5CSVDzGTTTGez2VFwBa9plfq0yuSw2bhbuolEh8pKbBMMY0bDk2tjZd2NcGBE6kHLoJf
+ lXpP4OHwwuivwlRBDKhAqC3OqJZJ/SAhn3t39U5ktFxacTLvjoh3TRWTqtNIDhhq00wg
+ pjVA==
 From: Till Kamppeter <till.kamppeter@gmail.com>
-Message-ID: <8b1744e2-7bff-c84d-90f9-71b727a2babe@gmail.com>
-Date: Sun, 16 Feb 2020 21:37:36 +0100
+Message-ID: <5e760477-badd-5723-c5a4-ba57b5794e8f@gmail.com>
+Date: Mon, 17 Feb 2020 12:19:01 +0100
 MIME-Version: 1.0
 Content-Type: text/plain; charset=utf-8; format=flowed
 Content-Language: en-US
 Content-Transfer-Encoding: 7bit
-Subject: [Printing-architecture] cups-filters 1.27.1 released!
+Subject: [Printing-architecture] OpenPrinting News
 List-Id: Printing architecture under linux
  <printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>, 
@@ -26,17 +26,14 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>, 
  <mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Open Printing <printing-architecture@lists.linux-foundation.org>
+To: Ira McDonald <blueroofmusic@gmail.com>, Aveek Basu <aveek.basu@lexmark.com>, Open Printing <printing-architecture@lists.linux-foundation.org>
 
 Hi,
 
-Bug fix release: All filters support zero-page jobs now, option and 
-choice names in PPDs are changed to work around a bug in CUPS when 
-generating IPP attributes, cups-browsed creates queues for all emote IPP 
-printers by default, and several smaller fixes in the filters
+I have posted the newest development of the last month on our web site now.
 
 Here we go:
 
-https://openprinting.github.io/cups-filters-1.27.1-released/
+https://openprinting.github.io/OpenPrinting-News-February-2020/
 
     Till
