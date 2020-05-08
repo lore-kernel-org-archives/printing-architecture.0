@@ -1,35 +1,19 @@
-Return-Path: <leonardo@schenkel.net>
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=schenkel.net;
- s=MBO0001; t=1588322943;
- h=from:from:reply-to:subject:subject:date:date:message-id:message-id:
- to:to:cc:mime-version:mime-version:content-type:content-type:
- content-transfer-encoding:content-transfer-encoding;
- bh=QosGvmRxHdJhq0ujo0FUZu4JEwIqnA7xSlwLmpsOd/M=;
- b=kd+D+xufcb72e2Z6YX3IrvU6rAKkl9Vur4alW+OL8brFpBORrCz1x6IzFQlSPPTtG6fBAv
- KXCJlJgXafADvoA6MHmxJ9Gjsj5Krbt/oq0mkQIsLCFFdYTelu7Rl96GpHffVCE4qknrMp
- cXmgIhoDECppoPkLx1qkg1Y5KXBJfZBK2Rw0X1gIUNVLeFEBCrIfiG7V7tbccvcayB1g0b
- 2olZ4qB5ev3rtO4TGJsJ+czGwIRqV9yNIkXE07TS5aYd5Y71ej3/Jw7W6kAeqTjcBqYkDQ
- 6tHo4iZjX8MG3p3J1n9bKWjKIX10uos+mlNOQ+jj9dGGoXhAYkI6pAxfj6akrg==
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=schenkel.net;
- s=mail; t=1588322941;
- h=from:from:reply-to:subject:subject:date:date:message-id:message-id:
- to:to:cc:mime-version:mime-version:content-type:content-type:
- content-transfer-encoding:content-transfer-encoding;
- bh=QosGvmRxHdJhq0ujo0FUZu4JEwIqnA7xSlwLmpsOd/M=;
- b=M5Pn/RtPj67ycWBrK/99XB0N/KXbnzrU78iRI0Lx8pMz0hUU0rWHerDCif5l8+o8qvlasQ
- XU8765dN+y34N6NJMhqLox5zW3rqXkmzuaS96u8fnS6QuuQB60lCTDIyZkq+zfR53IYfNC
- sKCqa7kp4dG2KNxev9TdLsatymTiUYRwNBRl8HP/tCF/XKAgHGITedSUEN8IxVMjLEH7Do
- D5UDFlFmTuIIrMt9jbYXZhHPKG7gzsyZYRt53kohnqa2aB2muFMxreLNdcn5cawTHdwIj4
- ix2i/YPKgMCRIWgHo8pRlJfWESUiH1WxVI1tHFq4/9slt2cSo2shVMJgE7ytpQ==
-From: Leonardo Brondani Schenkel <leonardo@schenkel.net>
-Message-ID: <c45e2d11-d468-2f08-9c64-9d2340e098f6@schenkel.net>
-Date: Fri, 1 May 2020 10:49:00 +0200
+Return-Path: <blueroofmusic@gmail.com>
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
+ h=mime-version:from:date:message-id:subject:to;
+ bh=qlkCu0gLpwBGqJWF1J6jhKvrg597jkW5H3KsYOOngsY=;
+ b=WQT+jLtwm+STSpb5xIF3XcP9hcfZw2KpscpeMvA55p4PxKvK4wgRdxelmqLgAp162s
+ 3RCI8AqPV7jK9DDML/Cz9mtyVSqVE71edo0eGiDI++3dE97UtEku3/wOj2hDnzApdAju
+ BJaDEiydMWiFXpJ9ZGVQ2Jh2T4wL7nvu3NmDZGBS4l9TRinNShEGGjF1AovnkxZIlf9e
+ +7SX+f9/Rw0OTyI9W7mm4SaBOU7U+vqfAn8WWfrLet8G6VD1gSvz9rzFAps9GdYtPJ0B
+ urVi7U7IqAeZVx4pZen2j1fDZzFQ5QvfPZmLidQMhNhhipW8NIOYIYaDjINXiJg21SZ3
+ pMqw==
 MIME-Version: 1.0
-Content-Type: text/plain; charset=utf-8; format=flowed
-Content-Language: en-US
-Content-Transfer-Encoding: 7bit
-Subject: [Printing-architecture] Why doesn't driverless copy remote PPD
-	options?
+From: Ira McDonald <blueroofmusic@gmail.com>
+Date: Fri, 8 May 2020 13:28:30 -0400
+Message-ID: <CAN40gStqbBhqYydGA58qmcrQuUHFfSeFDbXK+L8BXUCht5DXrw@mail.gmail.com>
+Content-Type: multipart/alternative; boundary="000000000000395e2105a52654c6"
+Subject: [Printing-architecture] OP Summit Minutes (5 May 2020)
 List-Id: Printing architecture under linux
  <printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>, 
@@ -39,37 +23,69 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>, 
  <mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: printing-architecture@lists.linux-foundation.org
+To: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>, "Kennedy, Smith (Wireless Architect)" <smith.kennedy@hp.com>, Jeremy Leber <jlleber@lexmark.com>, Alan Sukert <ansukert49@outlook.com>, Ira McDonald <blueroofmusic@gmail.com>
 
-Hi all,
+--000000000000395e2105a52654c6
+Content-Type: text/plain; charset="UTF-8"
 
-I have read https://wiki.debian.org/CUPSDriverlessPrinting and 
-surrounding wiki pages (which I found very helpful, by the way). I think 
-I've managed to get a good grasp about how a modern CUPS setup should 
-work, and the differences between CUPS' "everywhere" and cups-filters' 
-"driverless" PPD generators.
+Hi,
 
-I'm still confused about a particular detail, though.
+Minutes from our OpenPrinting Summit at the annual Joint PWG/OP
+meeting are posted at:
 
-I have an old printer (meaning: not supporting AirPrint or IPP 
-everywhere) locally connected to a CUPS server (2.2.10). I use the 
-Gutenprint printer drivers. The shared CUPS queue supports all the types 
-necessary for a "everywhere" or "driverless" setup in clients. My 
-desktop computer is running 'cups-browsed' (1.27.4-1) which auto-setups 
-a queue using 'drvless.ppd'. I can print through it. So far so good.
 
-However, what I don't understand is why aren't the PPD options available 
-in the server (the ones exposed by Gutenprint, and very comprehensive) 
-copied over and available in my local queue? I only see generic (and 
-fewer) options for paper size, resolution, etc. When using macOS as a 
-client I noticed that it does copy the server options in the client PPD, 
-which is great. So I am wondering why 'driverless' does not do the same? 
-Is this a deliberate design decision? Or is my set-up broken somehow?
+http://ftp.pwg.org/pub/pwg/liaison/openprinting/minutes/OP-Summit-Minutes-20200505.htm
 
-This current behaviour decreases the usefulness of cups-browsed quite a 
-lot, because if I need to control those non-exposed options I'm forced 
-to print directly to the remote queue via a print dialog that does 
-discovery.
+Many thanks to Mike Sweet for taking minutes of highlights.  Many thanks
+to all of the presenters.
 
-Thank you,
-Leonardo.
+Cheers,
+- Ira
+
+Ira McDonald (Musician / Software Architect)
+Co-Chair - TCG Trusted Mobility Solutions WG
+Co-Chair - TCG Metadata Access Protocol SG
+Chair - Linux Foundation Open Printing WG
+Secretary - IEEE-ISTO Printer Working Group
+Co-Chair - IEEE-ISTO PWG Internet Printing Protocol WG
+IETF Designated Expert - IPP & Printer MIB
+Blue Roof Music / High North Inc
+http://sites.google.com/site/blueroofmusic
+http://sites.google.com/site/highnorthinc
+mailto: blueroofmusic@gmail.com
+(permanent) PO Box 221  Grand Marais, MI 49839  906-494-2434
+
+--000000000000395e2105a52654c6
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><div>Hi,</div><div><br></div><div>Minutes from our OpenPri=
+nting Summit at the annual Joint PWG/OP</div><div>meeting are posted at:</d=
+iv><div></div><div>
+<br>
+=C2=A0 <a href=3D"http://ftp.pwg.org/pub/pwg/liaison/openprinting/minutes/O=
+P-Summit-Minutes-20200505.htm" target=3D"_blank">http://ftp.pwg.org/pub/pwg=
+/liaison/openprinting/minutes/OP-Summit-Minutes-20200505.htm</a>
+
+</div><div><div><div dir=3D"ltr" data-smartmail=3D"gmail_signature"><div di=
+r=3D"ltr"><div><div dir=3D"ltr"><div><div dir=3D"ltr"><div><div dir=3D"ltr"=
+><div><div dir=3D"ltr"><div><div dir=3D"ltr"><div><div dir=3D"ltr"><div><di=
+v dir=3D"ltr"><div><div dir=3D"ltr"><br></div><div>Many thanks to Mike Swee=
+t for taking minutes of highlights.=C2=A0 Many thanks</div><div>to all of t=
+he presenters.</div><div><br></div><div>Cheers,</div><div>- Ira</div><div><=
+br></div><div dir=3D"ltr">Ira McDonald (Musician / Software Architect)<br>C=
+o-Chair - TCG Trusted Mobility Solutions WG</div><div>Co-Chair - TCG Metada=
+ta Access Protocol SG<br></div><div dir=3D"ltr">Chair - Linux Foundation Op=
+en Printing WG<br>Secretary - IEEE-ISTO Printer Working Group<br>Co-Chair -=
+ IEEE-ISTO PWG Internet Printing Protocol WG<br>IETF Designated Expert - IP=
+P &amp; Printer MIB<br>Blue Roof Music / High North Inc<br><a style=3D"colo=
+r:rgb(51,51,255)" href=3D"http://sites.google.com/site/blueroofmusic" targe=
+t=3D"_blank">http://sites.google.com/site/blueroofmusic</a><br><a style=3D"=
+color:rgb(102,0,204)" href=3D"http://sites.google.com/site/highnorthinc" ta=
+rget=3D"_blank">http://sites.google.com/site/highnorthinc</a><br>mailto: <a=
+ href=3D"mailto:blueroofmusic@gmail.com" target=3D"_blank">blueroofmusic@gm=
+ail.com</a><br>(permanent) PO Box 221=C2=A0 Grand Marais, MI 49839=C2=A0 90=
+6-494-2434</div></div></div></div></div></div></div></div></div></div></div=
+></div></div></div></div></div></div></div></div></div></div>
+
+--000000000000395e2105a52654c6--
