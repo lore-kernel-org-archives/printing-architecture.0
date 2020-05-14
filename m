@@ -1,21 +1,22 @@
 Return-Path: <blueroofmusic@gmail.com>
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
  h=mime-version:references:in-reply-to:from:date:message-id:subject:to;
- bh=EZ1sZQpcaed9cLNshlIcJToaAo51+Cce/PlBpUSUXWg=;
- b=lfVGk4DmJoo4nkk/TM+UJFcXBXJbl+wGkPcOlaURNFmZdz7CYR5IAr/4N04o1rGXCZ
- vKwFFVv353eLZXmFJE3fgDo9u5Lc6OSWbtwzHr8Itql/OkFNjf1FVBT4E80ByRt4BFv+
- crOLkUFxK9GSCDCOL/Nxq9A9Ey3iWG1Od/ZUrZSLPAT5g9cssF9+eby6lcUVMx2tRK3I
- H2zM7v/ZwRGf2O2QrFqUEYUdqoVDjYiJe1j++smhZpBKIRXst8LelzPuGwKv48TDRO+g
- U6lHDwK795tS/zUT9cNxjnbF/Z6id9ibszpckQv20U+j859MxZkmw9SUFV1mXE+mlkWb
- A+mg==
+ bh=vCAMZnd2JSCm60uyYzCAFjyUHX/Mwpr8bgE4P/trCPE=;
+ b=lhpdyS/oudunmgFkmg2A/ahmJewqNpXc6pYsIUmlf9FGjbVoEZbpQpyh1unxCcrjrf
+ C6kL9M64XAx7RQk7ZktzUwCa3qWzzKJDF4uivCHVrlpkmQmAvDYdLHckJe97H/3HVwo+
+ 4sbDLOBE1r3NLB2iC3fcuWIPZJ2zEY1FpzxoOhgrZgLD7OYDjrl0jyVlFohYKaAnFxMB
+ Dh7zJNOWDZrkXKnnh3kQ4cDV1HnGVsfSj8rDj9LGBWpAl2y9qsqkcJvxGZDleV6T/EEC
+ TYJ/Ka4UF2WPv6ww3nw9FUKYtPS4wF9qjjhDJ3G1bzB2c8ZpMr2gWp4GaQJ3OrCGmmEl
+ CYTg==
 MIME-Version: 1.0
-References: <CAN40gSsNrao0+DFEWp-b5gPcvzC5woQr+y5_LCM5PQE+4qa70g@mail.gmail.com>
-In-Reply-To: <CAN40gSsNrao0+DFEWp-b5gPcvzC5woQr+y5_LCM5PQE+4qa70g@mail.gmail.com>
+References: <784100EC-8BCD-41AB-8756-71066FC22CDA@hp.com>
+In-Reply-To: <784100EC-8BCD-41AB-8756-71066FC22CDA@hp.com>
 From: Ira McDonald <blueroofmusic@gmail.com>
-Date: Tue, 12 May 2020 12:49:27 -0400
-Message-ID: <CAN40gStFPo9Ek3+mKycRh23+7Tttck6_mFE2Ku-QaM2ZA=CHhg@mail.gmail.com>
-Content-Type: multipart/alternative; boundary="000000000000d9e70005a5763fc6"
-Subject: [Printing-architecture] NOW:OP Monthly Call on 05/12/20
+Date: Thu, 14 May 2020 17:29:32 -0400
+Message-ID: <CAN40gSur7DcZexJyOaxosBrD1Tq48NOa+Vizy-rtD6Gs5+zn-A@mail.gmail.com>
+Content-Type: multipart/mixed; boundary="0000000000004e4d7205a5a265a5"
+Subject: [Printing-architecture] Fwd: [PWG-Announce] PWG May 2020 Virtual
+	Face-to-Face Meeting - Summary
 List-Id: Printing architecture under linux
  <printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>, 
@@ -25,91 +26,121 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>, 
  <mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>, Till Kamppeter <till.kamppeter@gmail.com>, Aveek Basu <basu.aveek@gmail.com>, Danny Brennan <brennand@us.ibm.com>, Ira McDonald <blueroofmusic@gmail.com>
+To: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>, Ira McDonald <blueroofmusic@gmail.com>
 
---000000000000d9e70005a5763fc6
+--0000000000004e4d7205a5a265a5
+Content-Type: multipart/alternative; boundary="0000000000004e4d7005a5a265a3"
+
+--0000000000004e4d7005a5a265a3
 Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
 
-On Sun, May 10, 2020 at 3:16 PM Ira McDonald <blueroofmusic@gmail.com>
-wrote:
+FYI - Smith's excellent summary of Joint PWG/OP Summit last week.
 
-> Hi,
->
-> Our next regular monthly call will be on Tuesday
->
->    - Tuesday 12 May 2020, Daytime
->       - Bluejeans.com web conference to be announced
->       - Note - Joint PWG/OP Virtual F2F (PWG Host) - 5-7 May 2020
->       - US
->         10am in San Francisco - US PDT (Pacific Daylight Time)
->         11am in Colorado - US MDT (Mountain Daylight Time)
->         12am in Chicago - US CDT (Central Daylight Time)
->         1pm in New York - US EDT (Eastern Daylight Time)
->       - Europe
->         7pm in Berlin - CEST (Central Europe Summer Time)
->       - Brazil
->         2pm in Belo Horizonte - BRT (Brasilia Time)
->       - India
->         10:30pm in New Delhi - IST (India Standard Time)
->
-> Cheers,
-> - Ira
->
-> Ira McDonald (Musician / Software Architect)
-> Co-Chair - TCG Trusted Mobility Solutions WG
-> Co-Chair - TCG Metadata Access Protocol SG
-> Chair - Linux Foundation Open Printing WG
-> Secretary - IEEE-ISTO Printer Working Group
-> Co-Chair - IEEE-ISTO PWG Internet Printing Protocol WG
-> IETF Designated Expert - IPP & Printer MIB
-> Blue Roof Music / High North Inc
-> http://sites.google.com/site/blueroofmusic
-> http://sites.google.com/site/highnorthinc
-> mailto: blueroofmusic@gmail.com
-> (permanent) PO Box 221  Grand Marais, MI 49839  906-494-2434
->
 
---000000000000d9e70005a5763fc6
+---------- Forwarded message ---------
+From: Kennedy, Smith (Wireless & IPP Standards) via pwg-announce <
+pwg-announce@pwg.org>
+Date: Thu, May 14, 2020 at 5:22 PM
+Subject: [PWG-Announce] PWG May 2020 Virtual Face-to-Face Meeting - Summary
+To: PWG Announcements Reflector <pwg-announce@pwg.org>
+
+
+Greetings,
+
+The PWG held its May 2020 Virtual Face-to-Face Meeting
+<https://www.pwg.org/chair/meeting-info/may-2020-virtual.html> on May 5-8,
+2020 via WebEx teleconferences. This event was held in collaboration with
+Linux Foundation OpenPrinting Workgroup. Sessions were presented by both
+organizations over the event=E2=80=98s 3 days. Representatives from Apple, =
+Artifex,
+Canon, Canonical, Google, Gutenprint, High North, HP Inc., Kyocera,
+Lakeside Robotics, Lexmark, Qualcomm, Red Hat, Ricoh, TIC, TCS and
+Xerox attended the meetings, as well as several independent individuals.
+Attendees reviewed work in progress, including drafts of a number of
+in-progress specifications, and discussed liaisons with partner groups. Her=
+e
+is a summary of the proceedings.
+<https://ftp.pwg.org/pub/pwg/www/blog/pwg-may-2020-F2F-summary.html>
+
+Cheers,
+
+Smith
+
+/**
+    Smith Kennedy
+    Chair, IEEE ISTO Printer Working Group
+*/
+
+
+_______________________________________________
+pwg-announce mailing list
+pwg-announce@pwg.org
+https://www.pwg.org/mailman/listinfo/pwg-announce
+
+--0000000000004e4d7005a5a265a3
 Content-Type: text/html; charset="UTF-8"
 Content-Transfer-Encoding: quoted-printable
 
-<div dir=3D"ltr"><br><div class=3D"gmail_quote"><div dir=3D"ltr" class=3D"g=
-mail_attr">On Sun, May 10, 2020 at 3:16 PM Ira McDonald &lt;<a href=3D"mail=
-to:blueroofmusic@gmail.com">blueroofmusic@gmail.com</a>&gt; wrote:<br></div=
-><blockquote class=3D"gmail_quote" style=3D"margin:0px 0px 0px 0.8ex;border=
--left:1px solid rgb(204,204,204);padding-left:1ex"><div dir=3D"ltr"><div>Hi=
-,</div><div><br></div><div>
-Our next regular monthly call will be on Tuesday</div><div><br></div><div>=
-=C2=A0=C2=A0 - Tuesday 12 May 2020, Daytime<br>=C2=A0 =C2=A0 =C2=A0 - Bluej=
-eans.com web conference to be announced<br>=C2=A0 =C2=A0 =C2=A0 - Note - Jo=
-int PWG/OP Virtual F2F (PWG Host) - 5-7 May 2020<br>=C2=A0 =C2=A0 =C2=A0 - =
-US<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 10am in San Francisco - US PDT (Pacific D=
-aylight Time)<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 11am in Colorado - US MDT (Mou=
-ntain Daylight Time)<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 12am in Chicago - US CD=
-T (Central Daylight Time)<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 1pm in New York - =
-US EDT (Eastern Daylight Time)<br>=C2=A0 =C2=A0 =C2=A0 - Europe<br>=C2=A0 =
-=C2=A0 =C2=A0 =C2=A0 7pm in Berlin - CEST (Central Europe Summer Time)<br>=
-=C2=A0 =C2=A0 =C2=A0 - Brazil<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 2pm in Belo Ho=
-rizonte - BRT (Brasilia Time)<br>=C2=A0 =C2=A0 =C2=A0 - India<br>=C2=A0 =C2=
-=A0 =C2=A0 =C2=A0 10:30pm in New Delhi - IST (India Standard Time)</div><di=
-v><br></div><div>Cheers,</div><div>- Ira</div><div><br></div><div><div><div=
- dir=3D"ltr"><div dir=3D"ltr"><div><div dir=3D"ltr"><div><div dir=3D"ltr"><=
-div><div dir=3D"ltr"><div><div dir=3D"ltr"><div><div dir=3D"ltr"><div><div =
-dir=3D"ltr"><div><div dir=3D"ltr"><div><div dir=3D"ltr">Ira McDonald (Music=
-ian / Software Architect)<br>Co-Chair - TCG Trusted Mobility Solutions WG</=
-div><div>Co-Chair - TCG Metadata Access Protocol SG<br></div><div dir=3D"lt=
-r">Chair - Linux Foundation Open Printing WG<br>Secretary - IEEE-ISTO Print=
-er Working Group<br>Co-Chair - IEEE-ISTO PWG Internet Printing Protocol WG<=
-br>IETF Designated Expert - IPP &amp; Printer MIB<br>Blue Roof Music / High=
- North Inc<br><a style=3D"color:rgb(51,51,255)" href=3D"http://sites.google=
-.com/site/blueroofmusic" target=3D"_blank">http://sites.google.com/site/blu=
-eroofmusic</a><br><a style=3D"color:rgb(102,0,204)" href=3D"http://sites.go=
-ogle.com/site/highnorthinc" target=3D"_blank">http://sites.google.com/site/=
-highnorthinc</a><br>mailto: <a href=3D"mailto:blueroofmusic@gmail.com" targ=
-et=3D"_blank">blueroofmusic@gmail.com</a><br>(permanent) PO Box 221=C2=A0 G=
-rand Marais, MI 49839=C2=A0 906-494-2434</div></div></div></div></div></div=
-></div></div></div></div></div></div></div></div></div></div></div></div></=
-div></div></div>
-</blockquote></div></div>
+<div dir=3D"ltr"><div>FYI - Smith&#39;s excellent summary of Joint PWG/OP S=
+ummit last week.</div><div><br></div><div><br><div class=3D"gmail_quote"><d=
+iv dir=3D"ltr" class=3D"gmail_attr">---------- Forwarded message ---------<=
+br>From: <b class=3D"gmail_sendername" dir=3D"auto">Kennedy, Smith (Wireles=
+s &amp; IPP Standards) via pwg-announce</b> <span dir=3D"auto">&lt;<a href=
+=3D"mailto:pwg-announce@pwg.org">pwg-announce@pwg.org</a>&gt;</span><br>Dat=
+e: Thu, May 14, 2020 at 5:22 PM<br>Subject: [PWG-Announce] PWG May 2020 Vir=
+tual Face-to-Face Meeting - Summary<br>To: PWG Announcements Reflector &lt;=
+<a href=3D"mailto:pwg-announce@pwg.org">pwg-announce@pwg.org</a>&gt;<br></d=
+iv><br><br><div style=3D"word-wrap:break-word;line-break:after-white-space"=
+>Greetings,<div><br></div><div>The PWG held its=C2=A0<a href=3D"https://www=
+.pwg.org/chair/meeting-info/may-2020-virtual.html" target=3D"_blank">May 20=
+20 Virtual Face-to-Face Meeting</a>=C2=A0on May 5-8, 2020 via WebEx=C2=A0te=
+leconferences. This event was held in collaboration with Linux Foundation O=
+penPrinting=C2=A0Workgroup. Sessions were presented by both organizations o=
+ver the event=E2=80=98s 3 days.=C2=A0Representatives from Apple, Artifex, C=
+anon, Canonical, Google, Gutenprint, High North, HP=C2=A0Inc., Kyocera, Lak=
+eside Robotics, Lexmark, Qualcomm, Red Hat, Ricoh, TIC, TCS and Xerox=C2=A0=
+attended the meetings, as well as several independent individuals. Attendee=
+s reviewed work=C2=A0in progress, including drafts of a number of in-progre=
+ss specifications, and discussed=C2=A0liaisons with partner groups.=C2=A0<a=
+ href=3D"https://ftp.pwg.org/pub/pwg/www/blog/pwg-may-2020-F2F-summary.html=
+" target=3D"_blank">Here is a summary of the proceedings.</a></div><div><br=
+></div><div>Cheers,</div><div><br><div>
+Smith<br><br>/**<br>=C2=A0 =C2=A0 Smith Kennedy<br>=C2=A0 =C2=A0 Chair, IEE=
+E ISTO Printer Working=C2=A0Group<br>*/<br><br>
 
---000000000000d9e70005a5763fc6--
+</div>
+<br></div></div>_______________________________________________<br>
+pwg-announce mailing list<br>
+<a href=3D"mailto:pwg-announce@pwg.org" target=3D"_blank">pwg-announce@pwg.=
+org</a><br>
+<a href=3D"https://www.pwg.org/mailman/listinfo/pwg-announce" rel=3D"norefe=
+rrer" target=3D"_blank">https://www.pwg.org/mailman/listinfo/pwg-announce</=
+a><br>
+</div></div></div>
+
+--0000000000004e4d7005a5a265a3--
+
+--0000000000004e4d7205a5a265a5
+Content-Type: text/plain; charset="US-ASCII"; name="signature.asc"
+Content-Disposition: attachment; filename="signature.asc"
+Content-Transfer-Encoding: base64
+Content-ID: <1721516b20961a8e03b1>
+X-Attachment-Id: 1721516b20961a8e03b1
+
+LS0tLS1CRUdJTiBQR1AgU0lHTkFUVVJFLS0tLS0NCg0KaVFJekJBRUJDQUFkRmlFRVg0VE0vRTJQ
+cjdsVFp6eTJxc2tiS0xEVzFOMEZBbDY5dG5VQUNna1Fxc2tiS0xEVw0KMU4wdkVnLytMSHNGTUVi
+amdmZW91Yk56NUJYM3BIQktHN09rQ2hLdmRKRGVEZkhCY3ZkQVo1a0h4SjkrS043Vg0KSVJFdnpO
+Q0htdVJHNVdqRzZpSWJZeSthU2xhUU5HTWxLUDhoc3BnQ2cxZ2VlTjNST2dNQXg5K2x2dXBsS0d6
+Mg0KcWpRUW9CY3NaQmVpUzFsSmNHeTBEWk5USjlyRjFBZkg3dzQ1QUJUcVMrQWt1aWlVd0hSNUpk
+L3ZjTFdwUG1Fdg0KTi9mZ3AwOEMyNHlQSUw0Yzcxb1NYUHJaQnM4MFFtWkFMQWlGNFljWXZFUjdU
+QU4rcWNGeFR4SE5TUmV1S3Bhbg0KWGJlYUJTWE11QlhKZGM3N3RzaVVUT2N5aTBQemh4U0NxR3ph
+S0tGRDRodVJzT0E1blJLZGk3ZmphZ1NIT2pqRA0KUm05cE14UERmQnJtcVhnK2dSQkd6LytnekN2
+dFUzQXVtQVpCQjNRQW84Nm10Vitya0pYS1FOL3Nsd0dHVmJoZw0KWDFnWVJ4RXJYMXZQdWlhMFJ4
+aEhwQXFRQy9udzRZQ1J2cm4yNnRZWlpLeTV1ejNLQ25FdlNWc21ydmozdmFTWQ0KLzRhemRIZDZy
+dlNWT3dpNUFkdTJGSnMyN1hRazQ5TVg3NWM3OE0wcWNIYy9TaEFpUnlvK3NLeldGZFdRU0E0eg0K
+Y1VwdWZyNStDTkt5bUtsV0ZnZXEvbmpiNjl3UGx2Z2NpbTlTWWw1RlhiNlM0TFRUQU9JQU9nN0RD
+VkZ4OWYrRQ0KSVRJVlVkTFljZmJQbkwwalZ0SXJKMFlWNWdZQ3YvMmdlYzMxRGwyWjlrMmVaSHhO
+R2tQbGpvOGVDSUU4VWE1Ug0KelpDdGl5bWFEOWFKdUk1bjdUWFNjSTlycnU0Yk1Ma1NrWnBPdXV5
+dy9IY2lLL2dWWWZBPQ0KPXdaQ3UNCi0tLS0tRU5EIFBHUCBTSUdOQVRVUkUtLS0tLQ0K
+--0000000000004e4d7205a5a265a5--
