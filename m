@@ -1,22 +1,19 @@
 Return-Path: <blueroofmusic@gmail.com>
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
- h=mime-version:references:in-reply-to:from:date:message-id:subject:to;
- bh=ajIIrsSjmn1jqhIRhGtVhFVtUgywwBCiGLwn/g58rrA=;
- b=XJ5SBITAtHGS1gQtF578t5Twe0B+TKLfrh6/tUlJNCA2XuhvMXolT5ui0mL7Okyqjd
- aZM1k+cdEmEu45utPAe1oJBRbR767KD0raKPl774y75OH4JH3t/Z1+bzYYHnGN/IbEQL
- jBwJWLgR1K2W5BtpreEbFeZRqILzLk13TywePczyy32s+r34Y1/cDpnujLstVBw+RyIC
- HJ2gZnJg9aHNZEmLNbzyMa50Ao+10nss4E9yn21Q4X6OblyGiKrFnhN8cb+m3VTy2jG/
- TjnQuJWOl+DMiWILD4qVucGP31HdqZ6uMlYGlxiBqwC97y46m1Kw2TQYtx3AVzn3RGad
- BcWA==
+ h=mime-version:from:date:message-id:subject:to;
+ bh=PLtDzP4COhTC0HwSh/BGn9rqvgSFllKxAaYoyfsxI0w=;
+ b=iaW9f/yySNs1IjUQ0TIpUrrAs4TKYPrtgG3uEd+MQRH6qXDxzM4F80bH2qWLLU+uwd
+ 819Axevmppy0NCX6t/SFQwhnlXhoE69blMsBwpnwFo7nLp0szGl+iSkhaUcmobGKtENl
+ LbxtEQHq3qSYKPIPqeaLSSxVspE33tLPNgTdj9sDsQ4fStAODeJa145TXqfwNrAWFJgH
+ jCVKrq176aOyRv97mEhIWg0CzPcMPpkYAxzLijQq0CTbYv7PvRPm2L0FhNc8i8H7SXwL
+ AH48F0O8rbK0OA2LJPWNKxM579hLG0b65/2fu8EUbW0uED1ybbbsp2JPx1CUcMtUMDvW
+ h0cw==
 MIME-Version: 1.0
-References: <FEDC424B-70B6-4545-BB2B-5C02A98BC1D3@msweet.org>
-In-Reply-To: <FEDC424B-70B6-4545-BB2B-5C02A98BC1D3@msweet.org>
 From: Ira McDonald <blueroofmusic@gmail.com>
-Date: Tue, 9 Jun 2020 11:23:51 -0400
-Message-ID: <CAN40gSuNg8GDquBYBj+CMhM4V60s399feaDoAyVDMhiN+E2dhQ@mail.gmail.com>
-Content-Type: multipart/alternative; boundary="0000000000003f5e3905a7a85191"
-Subject: [Printing-architecture] Fwd: [IPP] IPP Approved: IPP System Service
-	Discovery v1.0
+Date: Fri, 3 Jul 2020 14:24:04 -0400
+Message-ID: <CAN40gSuRS35TW1CeayYJywj7Eycqcc5oktWifqx48=1jWkkRAA@mail.gmail.com>
+Content-Type: multipart/alternative; boundary="00000000000002f59005a98da24c"
+Subject: [Printing-architecture] REMINDER:OP Monthly Call on 07/07/20
 List-Id: Printing architecture under linux
  <printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>, 
@@ -26,76 +23,100 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>, 
  <mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>, Ira McDonald <blueroofmusic@gmail.com>
+To: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>, Till Kamppeter <till.kamppeter@gmail.com>, Aveek Basu <basu.aveek@gmail.com>, Danny Brennan <brennand@us.ibm.com>, Ira McDonald <blueroofmusic@gmail.com>
 
---0000000000003f5e3905a7a85191
+--00000000000002f59005a98da24c
 Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
 
----------- Forwarded message ---------
-From: Michael Sweet via ipp <ipp@pwg.org>
-Date: Tue, Jun 9, 2020 at 10:40 AM
-Subject: [IPP] IPP Approved: IPP System Service Discovery v1.0
-To: PWG IPP Workgroup <ipp@pwg.org>
+ Hi,
+
+Our next regular monthly call will be on Tuesday
+
+   - Tuesday 7 July 2020, Daytime
+      - Bluejeans.com web conference to be announced
+      - Note - US Independence Day holiday - 4 July 2020
+      - Note - ISO TC22/SC32/WG12 Virtual F2F 13-17 July 2020
+      - Note - IETF 108 Virtual F2F =E2=80=93 25-31 July 2020
+      - US
+        10am in San Francisco - US PDT (Pacific Daylight Time)
+        11am in Colorado - US MDT (Mountain Daylight Time)
+        12am in Chicago - US CDT (Central Daylight Time)
+        1pm in New York - US EDT (Eastern Daylight Time)
+      - Europe
+        7pm in Berlin - CEST (Central Europe Summer Time)
+      - Brazil
+        2pm in Belo Horizonte - BRT (Brasilia Time)
+      - India
+        10:30pm in New Delhi - IST (India Standard Time)
+
+Cheers,
+- Ira
 
 
-The IPP System Service Discovery v1.0 registration document has been
-approved by the IPP workgroup. This registration defines an IPP attribute
-and DNS-SD service type to support discovery of IPP System Services (PWG
-5100.22).
+*Ira McDonald (Musician / Software Architect)Co-Chair - TCG Trusted
+Mobility Solutions WG*
 
-The published registration can be found at:
-
-
-https://ftp.pwg.org/pub/pwg/ipp/registrations/reg-ippsysdisc10-20200604.docx
-
-https://ftp.pwg.org/pub/pwg/ipp/registrations/reg-ippsysdisc10-20200604.pdf
-
-________________________
-Michael Sweet
+*Co-Chair - TCG Metadata Access Protocol SG*
 
 
 
-_______________________________________________
-ipp mailing list
-ipp@pwg.org
-https://www.pwg.org/mailman/listinfo/ipp
 
---0000000000003f5e3905a7a85191
+
+
+
+
+*Chair - Linux Foundation Open Printing WGSecretary - IEEE-ISTO Printer
+Working GroupCo-Chair - IEEE-ISTO PWG Internet Printing Protocol WGIETF
+Designated Expert - IPP & Printer MIBBlue Roof Music / High North
+Inchttp://sites.google.com/site/blueroofmusic
+<http://sites.google.com/site/blueroofmusic>http://sites.google.com/site/hi=
+ghnorthinc
+<http://sites.google.com/site/highnorthinc>mailto: blueroofmusic@gmail.com
+<blueroofmusic@gmail.com>(permanent) PO Box 221  Grand Marais, MI 49839
+906-494-2434*
+
+--00000000000002f59005a98da24c
 Content-Type: text/html; charset="UTF-8"
 Content-Transfer-Encoding: quoted-printable
 
-<div dir=3D"ltr"><br clear=3D"all"><br><div class=3D"gmail_quote"><div dir=
-=3D"ltr" class=3D"gmail_attr">---------- Forwarded message ---------<br>Fro=
-m: <b class=3D"gmail_sendername" dir=3D"auto">Michael Sweet via ipp</b> <sp=
-an dir=3D"auto">&lt;<a href=3D"mailto:ipp@pwg.org">ipp@pwg.org</a>&gt;</spa=
-n><br>Date: Tue, Jun 9, 2020 at 10:40 AM<br>Subject: [IPP] IPP Approved: IP=
-P System Service Discovery v1.0<br>To: PWG IPP Workgroup &lt;<a href=3D"mai=
-lto:ipp@pwg.org">ipp@pwg.org</a>&gt;<br></div><br><br>The IPP System Servic=
-e Discovery v1.0 registration document has been approved by the IPP workgro=
-up. This registration defines an IPP attribute and DNS-SD service type to s=
-upport discovery of IPP System Services (PWG 5100.22).<br>
-<br>
-The published registration can be found at:<br>
-<br>
-=C2=A0 =C2=A0 =C2=A0 =C2=A0 <a href=3D"https://ftp.pwg.org/pub/pwg/ipp/regi=
-strations/reg-ippsysdisc10-20200604.docx" rel=3D"noreferrer" target=3D"_bla=
-nk">https://ftp.pwg.org/pub/pwg/ipp/registrations/reg-ippsysdisc10-20200604=
-.docx</a><br>
-=C2=A0 =C2=A0 =C2=A0 =C2=A0 <a href=3D"https://ftp.pwg.org/pub/pwg/ipp/regi=
-strations/reg-ippsysdisc10-20200604.pdf" rel=3D"noreferrer" target=3D"_blan=
-k">https://ftp.pwg.org/pub/pwg/ipp/registrations/reg-ippsysdisc10-20200604.=
-pdf</a><br>
-<br>
-________________________<br>
-Michael Sweet<br>
-<br>
-<br>
-<br>
-_______________________________________________<br>
-ipp mailing list<br>
-<a href=3D"mailto:ipp@pwg.org" target=3D"_blank">ipp@pwg.org</a><br>
-<a href=3D"https://www.pwg.org/mailman/listinfo/ipp" rel=3D"noreferrer" tar=
-get=3D"_blank">https://www.pwg.org/mailman/listinfo/ipp</a><br>
-</div></div>
+<div dir=3D"ltr"><div>
+<div>Hi,</div><div><br></div><div>
+Our next regular monthly call will be on Tuesday</div>
 
---0000000000003f5e3905a7a85191--
+</div><div><br></div><div>=C2=A0=C2=A0 - Tuesday 7 July 2020, Daytime</div>=
+=C2=A0 =C2=A0 =C2=A0 - Bluejeans.com web conference to be announced<br>=C2=
+=A0 =C2=A0 =C2=A0 - Note - US Independence Day holiday - 4 July 2020<br>=C2=
+=A0 =C2=A0 =C2=A0 - Note - ISO TC22/SC32/WG12 Virtual F2F 13-17 July 2020<b=
+r>=C2=A0 =C2=A0 =C2=A0 - Note - IETF 108 Virtual F2F =E2=80=93 25-31 July 2=
+020<br>=C2=A0 =C2=A0 =C2=A0 - US<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 10am in San=
+ Francisco - US PDT (Pacific Daylight Time)<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+11am in Colorado - US MDT (Mountain Daylight Time)<br>=C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 12am in Chicago - US CDT (Central Daylight Time)<br>=C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 1pm in New York - US EDT (Eastern Daylight Time)<br>=C2=A0 =
+=C2=A0 =C2=A0 - Europe<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 7pm in Berlin - CEST =
+(Central Europe Summer Time)<br>=C2=A0 =C2=A0 =C2=A0 - Brazil<br>=C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 2pm in Belo Horizonte - BRT (Brasilia Time)<br>=C2=A0 =C2=
+=A0 =C2=A0 - India<br><div>=C2=A0 =C2=A0 =C2=A0 =C2=A0 10:30pm in New Delhi=
+ - IST (India Standard Time)</div><div><br></div><div>Cheers,</div><div>- I=
+ra</div><div><br></div><div><div dir=3D"ltr" class=3D"gmail_signature" data=
+-smartmail=3D"gmail_signature"><div dir=3D"ltr"><div><div dir=3D"ltr"><div>=
+<div dir=3D"ltr"><div><div dir=3D"ltr"><div><div dir=3D"ltr"><div><div dir=
+=3D"ltr"><div><div dir=3D"ltr"><div><div dir=3D"ltr"><div><div dir=3D"ltr">=
+<i><font size=3D"1">Ira McDonald (Musician / Software Architect)<br>Co-Chai=
+r - TCG Trusted Mobility Solutions WG</font></i></div><div><i><font size=3D=
+"1">Co-Chair - TCG Metadata Access Protocol SG<br></font></i></div><div dir=
+=3D"ltr"><i><font size=3D"1">Chair - Linux Foundation Open Printing WG<br>S=
+ecretary - IEEE-ISTO Printer Working Group<br>Co-Chair - IEEE-ISTO PWG Inte=
+rnet Printing Protocol WG<br>IETF Designated Expert - IPP &amp; Printer MIB=
+<br>Blue Roof Music / High North Inc<br><a style=3D"color:rgb(51,51,255)" h=
+ref=3D"http://sites.google.com/site/blueroofmusic" target=3D"_blank">http:/=
+/sites.google.com/site/blueroofmusic</a><br><a style=3D"color:rgb(102,0,204=
+)" href=3D"http://sites.google.com/site/highnorthinc" target=3D"_blank">htt=
+p://sites.google.com/site/highnorthinc</a><br>mailto: <a href=3D"mailto:blu=
+eroofmusic@gmail.com" target=3D"_blank">blueroofmusic@gmail.com</a><br>(per=
+manent) PO Box 221=C2=A0 Grand Marais, MI 49839=C2=A0 906-494-2434</font></=
+i></div></div></div></div></div></div></div></div></div></div></div></div><=
+/div></div></div></div></div></div></div></div>
+
+--00000000000002f59005a98da24c--
