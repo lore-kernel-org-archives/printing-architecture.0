@@ -1,22 +1,23 @@
-Return-Path: <blueroofmusic@gmail.com>
+Return-Path: <till.kamppeter@gmail.com>
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
- h=mime-version:references:in-reply-to:from:date:message-id:subject:to;
- bh=eKLG5fh9u0FMCGS8xhUDOuE22NgEkhxyEQptpnB7+Lc=;
- b=qnmm6OGcWK8LvYwtrnYDkkf45oqE6kom2eiK80JCKXqD0HCyQdD6l/jb8MjPaw47x7
- wddgk1G511rvFYlj/ZlNv/L912BObwuMVU7i+nCLhTJ1ps5sAgANTuWaBLXvrpY6mKUc
- gIrb3PhWfHVAa1UHPe5EcoDxOWgs3nXrF87ORMovwemKyrpHgn4h9xfuj/gvW/mwbou5
- Pebs51NKM19eW5CWpRL3UGhrNA0u8FJ+Xol9BSbul7YS/Nz0qJsejmL2ElqFvOJ1rDod
- HTiY58DPM2uVTabZcdnAZ6XIKl5OjzEjBwc7ssWs6Hd07TklXuUXa+NWk16U3maKjCqg
- OdZg==
+ h=to:cc:from:subject:message-id:date:user-agent:mime-version
+ :content-language:content-transfer-encoding;
+ bh=4zAeufa3GX5ayK8Ujdly9TpFXPBZsWOjKRRjrO5zJiU=;
+ b=Hjo72b5gQKZDIUmS2MQngm/5filOCLeAe2bL9iFcDYr1+U/9z/duGtsKJEUBX0RalQ
+ TeUzJtSFQi2G5nXa5ngrENpNb6Qz5cOxuEmgWMqq81olRdc/JSZ4JrhcEL6r4g1LXT8V
+ DBhiFMXv/S4XziErUGgcJbMRR5Y7/oC1cL7g5pkODAkKjI2R6iH8cxJ68V/1FvGyiUQK
+ O0PNzaQ6GQ7SJ//3FChH2enX1Ea2Gd/i1AJmkNoxMFUk4ntIs313LSjDdKeGozQUJXws
+ FfWp3lAjtIA3FTcBhJIQQ829Zt38WLyMXSA7XxtG1AUZVNdwlCY25dvUigjxiNxh8duh
+ W3hQ==
+From: Till Kamppeter <till.kamppeter@gmail.com>
+Message-ID: <6fae827a-3644-798a-034b-45edea3829c1@gmail.com>
+Date: Thu, 9 Jul 2020 13:28:53 +0200
 MIME-Version: 1.0
-References: <CAN40gSuRS35TW1CeayYJywj7Eycqcc5oktWifqx48=1jWkkRAA@mail.gmail.com>
- <CAN40gSteDeA6y=+ty4cNGbcDUWmrtxPfNEXfZstpi01grPfVzA@mail.gmail.com>
-In-Reply-To: <CAN40gSteDeA6y=+ty4cNGbcDUWmrtxPfNEXfZstpi01grPfVzA@mail.gmail.com>
-From: Ira McDonald <blueroofmusic@gmail.com>
-Date: Tue, 7 Jul 2020 12:59:23 -0400
-Message-ID: <CAN40gSsnAWZ5_-sUzCA3BJmvPcLaL_n3R2m_WU1wNTiqnx=ChA@mail.gmail.com>
-Content-Type: multipart/alternative; boundary="000000000000847b8605a9dcea70"
-Subject: [Printing-architecture] NOW! OP Monthly Call on 07/07/20
+Content-Type: text/plain; charset=utf-8; format=flowed
+Content-Language: en-US
+Content-Transfer-Encoding: 7bit
+Subject: [Printing-architecture] Printer Applications: Retro-fitting classic
+	printer drivers - libppd
 List-Id: Printing architecture under linux
  <printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>, 
@@ -26,134 +27,72 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>, 
  <mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>, Till Kamppeter <till.kamppeter@gmail.com>, Aveek Basu <basu.aveek@gmail.com>, Danny Brennan <brennand@us.ibm.com>, Ira McDonald <blueroofmusic@gmail.com>
+To: Michael Sweet <msweet@msweet.org>, Jai Luthra <luthrajaiji@gmail.com>, Sambhav Dusad <sambhavdusad24@gmail.com>
+Cc: Open Printing <printing-architecture@lists.linux-foundation.org>, Aveek Basu <basu.aveek@gmail.com>
 
---000000000000847b8605a9dcea70
-Content-Type: text/plain; charset="UTF-8"
-Content-Transfer-Encoding: quoted-printable
+Michael, Jai, Sambhav,
 
-On Tue, Jul 7, 2020 at 9:23 AM Ira McDonald <blueroofmusic@gmail.com> wrote=
-:
+first, thanks a lot to you all for working on PAPPL to make the base for 
+Printer Applications.
 
-> Hi,
->
-> TODAY in 3 1/2 hours.
->
-> Cheers,
-> - Ira
->
->
-> On Fri, Jul 3, 2020 at 2:24 PM Ira McDonald <blueroofmusic@gmail.com>
-> wrote:
->
->> Hi,
->>
->> Our next regular monthly call will be on Tuesday
->>
->>    - Tuesday 7 July 2020, Daytime
->>       - Bluejeans.com web conference to be announced
->>       - Note - US Independence Day holiday - 4 July 2020
->>       - Note - ISO TC22/SC32/WG12 Virtual F2F 13-17 July 2020
->>       - Note - IETF 108 Virtual F2F =E2=80=93 25-31 July 2020
->>       - US
->>         10am in San Francisco - US PDT (Pacific Daylight Time)
->>         11am in Colorado - US MDT (Mountain Daylight Time)
->>         12am in Chicago - US CDT (Central Daylight Time)
->>         1pm in New York - US EDT (Eastern Daylight Time)
->>       - Europe
->>         7pm in Berlin - CEST (Central Europe Summer Time)
->>       - Brazil
->>         2pm in Belo Horizonte - BRT (Brasilia Time)
->>       - India
->>         10:30pm in New Delhi - IST (India Standard Time)
->>
->> Cheers,
->> - Ira
->>
->>
->> *Ira McDonald (Musician / Software Architect)Co-Chair - TCG Trusted
->> Mobility Solutions WG*
->>
->> *Co-Chair - TCG Metadata Access Protocol SG*
->>
->>
->>
->>
->>
->>
->>
->>
->> *Chair - Linux Foundation Open Printing WGSecretary - IEEE-ISTO Printer
->> Working GroupCo-Chair - IEEE-ISTO PWG Internet Printing Protocol WGIETF
->> Designated Expert - IPP & Printer MIBBlue Roof Music / High North
->> Inchttp://sites.google.com/site/blueroofmusic
->> <http://sites.google.com/site/blueroofmusic>http://sites.google.com/site=
-/highnorthinc
->> <http://sites.google.com/site/highnorthinc>mailto: blueroofmusic@gmail.c=
-om
->> <blueroofmusic@gmail.com>(permanent) PO Box 221  Grand Marais, MI 49839
->> 906-494-2434*
->>
->
+While I am waiting for the CUPS Snap to get integrated in the snapd 
+environment and put up in the Snap Store, I am working on cups-filters 
+to provide valuable code for Printer Applications.
 
---000000000000847b8605a9dcea70
-Content-Type: text/html; charset="UTF-8"
-Content-Transfer-Encoding: quoted-printable
+One important point for the CUPS Snap is that it does not support 
+classic printer drivers, consisting of PPD files and filters. So for 
+using it as default CUPS implementation in a Linux distribution, all 
+existing printer drivers need to get turned into Printer Applications, 
+and this with a minimum effort of coding.
 
-<div dir=3D"ltr"><div dir=3D"ltr"><br></div><br><div class=3D"gmail_quote">=
-<div dir=3D"ltr" class=3D"gmail_attr">On Tue, Jul 7, 2020 at 9:23 AM Ira Mc=
-Donald &lt;<a href=3D"mailto:blueroofmusic@gmail.com">blueroofmusic@gmail.c=
-om</a>&gt; wrote:<br></div><blockquote class=3D"gmail_quote" style=3D"margi=
-n:0px 0px 0px 0.8ex;border-left:1px solid rgb(204,204,204);padding-left:1ex=
-"><div dir=3D"ltr"><div>Hi,</div><div><br></div><div>TODAY in 3 1/2 hours.<=
-br></div><div><div><div dir=3D"ltr"><div dir=3D"ltr"><div><div dir=3D"ltr">=
-<div><div dir=3D"ltr"><div><div dir=3D"ltr"><div><div dir=3D"ltr"><div><div=
- dir=3D"ltr"><div><div dir=3D"ltr"><div><div dir=3D"ltr"><div><br></div><di=
-v>Cheers,</div><div>- Ira<br></div></div></div></div></div></div></div></di=
-v></div></div></div></div></div></div></div></div></div></div><br></div></d=
-iv><br><div class=3D"gmail_quote"><div dir=3D"ltr" class=3D"gmail_attr">On =
-Fri, Jul 3, 2020 at 2:24 PM Ira McDonald &lt;<a href=3D"mailto:blueroofmusi=
-c@gmail.com" target=3D"_blank">blueroofmusic@gmail.com</a>&gt; wrote:<br></=
-div><blockquote class=3D"gmail_quote" style=3D"margin:0px 0px 0px 0.8ex;bor=
-der-left:1px solid rgb(204,204,204);padding-left:1ex"><div dir=3D"ltr"><div=
->
-<div>Hi,</div><div><br></div><div>
-Our next regular monthly call will be on Tuesday</div>
+Most of them (probably all except Gutenprint) are difficult to get 
+converted by their original authors, as they do not maintain the drivers 
+any more, supported printers are old and no one want to code for that 
+any more, driver is simply only a big bunch of PPD files, no code, 
+driver is proprietary, closed source, ...
 
-</div><div><br></div><div>=C2=A0=C2=A0 - Tuesday 7 July 2020, Daytime</div>=
-=C2=A0 =C2=A0 =C2=A0 - Bluejeans.com web conference to be announced<br>=C2=
-=A0 =C2=A0 =C2=A0 - Note - US Independence Day holiday - 4 July 2020<br>=C2=
-=A0 =C2=A0 =C2=A0 - Note - ISO TC22/SC32/WG12 Virtual F2F 13-17 July 2020<b=
-r>=C2=A0 =C2=A0 =C2=A0 - Note - IETF 108 Virtual F2F =E2=80=93 25-31 July 2=
-020<br>=C2=A0 =C2=A0 =C2=A0 - US<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 10am in San=
- Francisco - US PDT (Pacific Daylight Time)<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 =
-11am in Colorado - US MDT (Mountain Daylight Time)<br>=C2=A0 =C2=A0 =C2=A0 =
-=C2=A0 12am in Chicago - US CDT (Central Daylight Time)<br>=C2=A0 =C2=A0 =
-=C2=A0 =C2=A0 1pm in New York - US EDT (Eastern Daylight Time)<br>=C2=A0 =
-=C2=A0 =C2=A0 - Europe<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 7pm in Berlin - CEST =
-(Central Europe Summer Time)<br>=C2=A0 =C2=A0 =C2=A0 - Brazil<br>=C2=A0 =C2=
-=A0 =C2=A0 =C2=A0 2pm in Belo Horizonte - BRT (Brasilia Time)<br>=C2=A0 =C2=
-=A0 =C2=A0 - India<br><div>=C2=A0 =C2=A0 =C2=A0 =C2=A0 10:30pm in New Delhi=
- - IST (India Standard Time)</div><div><br></div><div>Cheers,</div><div>- I=
-ra</div><div><br></div><div><div dir=3D"ltr"><div dir=3D"ltr"><div><div dir=
-=3D"ltr"><div><div dir=3D"ltr"><div><div dir=3D"ltr"><div><div dir=3D"ltr">=
-<div><div dir=3D"ltr"><div><div dir=3D"ltr"><div><div dir=3D"ltr"><div><div=
- dir=3D"ltr"><i><font size=3D"1">Ira McDonald (Musician / Software Architec=
-t)<br>Co-Chair - TCG Trusted Mobility Solutions WG</font></i></div><div><i>=
-<font size=3D"1">Co-Chair - TCG Metadata Access Protocol SG<br></font></i><=
-/div><div dir=3D"ltr"><i><font size=3D"1">Chair - Linux Foundation Open Pri=
-nting WG<br>Secretary - IEEE-ISTO Printer Working Group<br>Co-Chair - IEEE-=
-ISTO PWG Internet Printing Protocol WG<br>IETF Designated Expert - IPP &amp=
-; Printer MIB<br>Blue Roof Music / High North Inc<br><a style=3D"color:rgb(=
-51,51,255)" href=3D"http://sites.google.com/site/blueroofmusic" target=3D"_=
-blank">http://sites.google.com/site/blueroofmusic</a><br><a style=3D"color:=
-rgb(102,0,204)" href=3D"http://sites.google.com/site/highnorthinc" target=
-=3D"_blank">http://sites.google.com/site/highnorthinc</a><br>mailto: <a hre=
-f=3D"mailto:blueroofmusic@gmail.com" target=3D"_blank">blueroofmusic@gmail.=
-com</a><br>(permanent) PO Box 221=C2=A0 Grand Marais, MI 49839=C2=A0 906-49=
-4-2434</font></i></div></div></div></div></div></div></div></div></div></di=
-v></div></div></div></div></div></div></div></div></div></div>
-</blockquote></div>
-</blockquote></div></div>
+So we need a way to retro-fit these drivers by wrapping them into 
+Printer Applications with lowest coding effort possible and if needed 
+also without needing to modify the original driver executables.
 
---000000000000847b8605a9dcea70--
+This works best if we use the driver's PPD files inside the Printer 
+Application and so we need to handle PPD files, also after the PPD 
+handling support got removed from CUPS and especially libcups.
+
+To avoid that we have to invent the wheel again, writing a lot of 
+handling code for a totally obsolete file format, I have grabbed all the 
+PPD handling functions from libcups (current GitHub state, CUPS 2.3.3) 
+and put them into the new libppd which I have added to cups-filters.
+
+It has the following properties:
+
+- All PPD-handling-related functions from libcups (except loading the 
+PPD from a CUPS queue) are overtaken
+- Also the CUPS-private functions related to PPDs are overtaken and 
+added to libppd's public API.
+- Other private or internal functions are overtaken from libcups as they 
+are needed for the PPD-related functions to work. They are not added to 
+the API.
+- Some functions of tools and utilities like ippeveprinter and ippeveps 
+are overtaken.
+- All API functions have names starting with "ppd" and written in 
+camel-case, some needed to get renamed for that.
+- libppd is separate from libcupsfilters, so it does not need to get 
+included in a Printer Application which uses functionality of 
+cups-filters but does not use PPD files
+
+NOTE: This is NOT to encourage printer driver developers to continue to 
+create new PPD files for new printers. It is ONLY for retro-fitting 
+existing classic CUPS drivers and PostScript PPD files. There will be no 
+further development on the library's code, especially no new PPD format 
+extensions.
+
+The next release of cups-filters, 1.28.0, will contain libppd for the 
+first time. It is already, shortly before completion for 1.28.0 in the 
+GitHub repository, in the ppd/ subdirectory:
+
+https://github.com/OpenPrinting/cups-filters/
+
+I hope this will help for a smooth transition to snapped CUPS.
+
+    Till
