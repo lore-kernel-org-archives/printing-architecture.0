@@ -1,19 +1,23 @@
-Return-Path: <blueroofmusic@gmail.com>
+Return-Path: <till.kamppeter@gmail.com>
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
- h=mime-version:from:date:message-id:subject:to;
- bh=2PD1PWrYGRyJKNLldiNQ6v9UAla6PLT3WWgsUo3YeaA=;
- b=jETaM6UXjP/2ndOTVXkUSvdsyikl2iU1syFfd+3yqoaTSV4gNpKkRr5CRKiqEfpBCR
- lqnN/ddJcEzKRnAg12yR0xE5U6pOsQ6AAnfy3rJyPWq3DHcwbwoiTP0BRb916eunowgl
- BUJP+nhb6wfeN0WmXvv3nfwqyQEXNqEoXv9OFtFqskHdBGOOy1J1vMttqh3c2WiO6nVj
- uV8geDwNM8GNz+/aWPRNsgshXc+Aj1u6TPgdtd4boseJowWAtnKy6QTRfx45QCyd9wek
- HcN42j0PAT+6dbPVoYTpfvtsdcChVR+k9yvcPxIMs9TggHJ4jxUw+d8Gz5u3wpcl1Ihc
- 1b8w==
+ h=to:from:subject:message-id:date:user-agent:mime-version
+ :content-language:content-transfer-encoding;
+ bh=BED9t++++bB0a8XF07L8h5k2YV4142cbAea9vByg1Gg=;
+ b=eIurrFMGE3n+ZulAOAhkxvi1IEWLvutoLEqumNfVczkzIm7PajJXIkq2g7/qMLoIdj
+ FT0wDr6pnAm35VHBo1ejd9ZyetpfOUFGkSOZS8gUeYnN3Vmi8fHenX6qGUlIaWP64/ku
+ NbmFveZo5KHr7UBNIEa6WZeZ81wybTeL/0eg1MlVeywD9w1EafY5CgzWTeRRKVjvSPTW
+ apNJU2fx1r83sgvrqNXuMaa6VwnqgVYi+Lszwb3z+mZDpo5gPHhxx5yZ9+UUAP1nXvuu
+ 4Ug5F9KpU9cRC3ewirFYQ/yVa2An2raIUGY1wQv7qYhxvYu3w27obkT1IaZk/qsqIGyi
+ E69g==
+From: Till Kamppeter <till.kamppeter@gmail.com>
+Message-ID: <199c8f6d-b38a-fc14-526c-3201c473788b@gmail.com>
+Date: Sat, 18 Jul 2020 00:06:54 +0200
 MIME-Version: 1.0
-From: Ira McDonald <blueroofmusic@gmail.com>
-Date: Sun, 12 Jul 2020 18:37:57 -0400
-Message-ID: <CAN40gSu=EzY8+D6Rjy6dGugUmweMo3ou=HtMwhNK31a9BmqttA@mail.gmail.com>
-Content-Type: multipart/alternative; boundary="0000000000007bc7b905aa463a28"
-Subject: [Printing-architecture] OP Minutes (7 July 2020)
+Content-Type: text/plain; charset=utf-8; format=flowed
+Content-Language: en-US
+Content-Transfer-Encoding: 7bit
+Subject: [Printing-architecture] Printer Applications: Retro-fitting classic
+	drivers
 List-Id: Printing architecture under linux
  <printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>, 
@@ -23,199 +27,144 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>, 
  <mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>, Ira McDonald <blueroofmusic@gmail.com>
+To: Michael Sweet <msweet@msweet.org>, Jai Luthra <luthrajaiji@gmail.com>, Sambhav Dusad <sambhavdusad24@gmail.com>, Aveek Basu <basu.aveek@gmail.com>, Open Printing <printing-architecture@lists.linux-foundation.org>
 
---0000000000007bc7b905aa463a28
-Content-Type: text/plain; charset="UTF-8"
+Hi,
 
- Hi,
+in the last days I have studied how to make PAPPL-based Printer 
+Applications from already existing classic CUPS drivers, consisting of 
+filters and PPD files, especially the special case of PostScript 
+printers for which I have the manufacturer's PPD file.
 
-Minutes from our last OpenPrinting call are posted at:
+At first I have looked into this sample Printer Application for PCL 
+3/4/5c/e printers:
 
+https://github.com/michaelrsweet/hp-printer-app/
 
-http://ftp.pwg.org/pub/pwg/liaison/openprinting/minutes/OP-Minutes-20200707.htm
+This is a simple Printer Application using libpappl:
 
+https://github.com/michaelrsweet/pappl/
 
-Next OP US/Europe/Brazil/India Conference Calls:
+It does not use PPD files and it also does not seem to query the actual 
+printer for its properties in any form, probably because there is no 
+standard way to query arbitrary PCL printers, there are even older 
+models with only uni-directional (send job into black hole) communication.
 
-(1) August - US/Europe/Brazil/India - OP Monthly Meeting
-   - Tuesday 11 August 2020, Daytime
-      - Bluejeans.com web conference to be announced
-      - Note - IEEE 1609 Virtual F2F - 4-5 August 2020
-      - Note - PWG Virtual F2F - 25-27 August 2020
-      - US
-        10am in San Francisco - US PDT (Pacific Daylight Time)
-        11am in Colorado - US MDT (Mountain Daylight Time)
-        12am in Chicago - US CDT (Central Daylight Time)
-        1pm in New York - US EDT (Eastern Daylight Time)
-      - Europe
-        7pm in Berlin - CEST (Central Europe Summer Time)
-      - Brazil
-        2pm in Belo Horizonte - BRT (Brasilia Time)
-      - India
-        10:30pm in New Delhi - IST (India Standard Time)
+There are simply three sub-drivers to choose from, DeskJet, LaserJet, 
+and Generic PCL, the driver code seems to come from the sample drivers 
+in CUPS (rastertohp?).
 
-(2) September - US/Europe/Brazil/India - OP Monthly Meeting (tentative)
-   - Tuesday 1 September 2020, Daytime
-      - Bluejeans.com web conference to be announced
-      - Note - US Labor Day holiday - 7 September 2020
-      - US
-        10am in San Francisco - US PDT (Pacific Daylight Time)
-        11am in Colorado - US MDT (Mountain Daylight Time)
-        12am in Chicago - US CDT (Central Daylight Time)
-        1pm in New York - US EDT (Eastern Daylight Time)
-      - Europe
-        7pm in Berlin - CEST (Central Europe Summer Time)
-      - Brazil
-        2pm in Belo Horizonte - BRT (Brasilia Time)
-      - India
-        10:30pm in New Delhi - IST (India Standard Time)
+As PostScript is a high-level/vector-graphics PDL and also many other 
+legacy drivers are based on a built-in Ghostscript driver I want the 
+legacy-driver-import Printer Application to take simply only PDF as 
+input format and convert this to the printer's native (often 
+proprietary) PDL.
 
-(3) October - US/Europe/Brazil/India - OP Monthly Meeting (tentative)
-   - Tuesday 20 October 2020, Daytime
-      - Bluejeans.com web conference to be announced
-      - Note - IEEE 1609 Virtual F2F - 6 October 2020
-      - Note - TCG Virtual F2F 12-16 October 2020
-      - Note - EU Summer Time ends 25 October 2020
-      - Note - US Daylight Time ends 1 November 2020
-      - US
-        10am in San Francisco - US PDT (Pacific Daylight Time)
-        11am in Colorado - US MDT (Mountain Daylight Time)
-        12am in Chicago - US CDT (Central Daylight Time)
-        1pm in New York - US EDT (Eastern Daylight Time)
-      - Europe
-        7pm in Berlin - CEST (Central Europe Summer Time)
-      - Brazil
-        2pm in Belo Horizonte - BRT (Brasilia Time)
-      - India
-        10:30pm in New Delhi - IST (India Standard Time)
+This made me thinking of that PAPPL would need PDF support and so I 
+discovered the feature request for PDF support in PAPPL:
 
-Cheers,
-- Ira
+https://github.com/michaelrsweet/pappl/issues/3
 
+There I had some discussion with Michael and Jai. PDF support IN PAPPL 
+seems to have license issues with currently available PDF interpreters 
+but one can simply drop ones own filters into PAPPL as callback 
+functions, including one which turns PDF input into the printer's own 
+format in a single run. One does not need to follow the page-wise 
+functions as used by the sample PCL driver.
 
+So I am currently looking into starting the driver retro-fit Printer 
+Application with a one which supports PostScript printers with PPD files.
 
-*Ira McDonald (Musician / Software Architect)Co-Chair - TCG Trusted
-Mobility Solutions WG*
+The Printer Application should get all capability info from the PPD file 
+and insert code from the PPD file options into the PostScript output 
+stream to control the printer.
 
-*Co-Chair - TCG Metadata Access Protocol SG*
+To handle the PPD files I have created libppd from the PPD handling 
+functions of libcups:
 
+https://github.com/OpenPrinting/cups-filters/tree/master/ppd
 
+and added it to cups-filters. It contains also the new API function 
+ppdLoadAttributes() which I have grabbed from CUPS' ippeveprinter to 
+generate the response to a get-printer-attributes request from the PPD 
+and the new API function ppdGetOptions() taken from CUPS ippeveps to 
+turn IPP attributes accompanying a print job into PPD option settings.
 
+The filter to drop into the PAPPL workflow (via 
+papplSystemAddMIMEFilter() function) would turn PDF into PostScript 
+first, using either the pdftops filter of cups-filters or call 
+Ghostscript or Poppler's pdftops directly. I prefer the pdftops filter 
+as it is full of quirk workarounds for buggy PostScript interpreters in 
+the printers. I have also seen that Michael is doing it exactly this way 
+in ippeveps.
 
+The PostScript output needs to get the PostScript code snippets and JCL 
+commands of the PPD file inserted, according to the option settings 
+(determined with ppdGetOptions(). Here there are two independent pieces 
+of code in CUPS, the pstops filter (which is also called by pdftops in 
+the usual CUPS workflow) or the ippeveps utility. pstops is more 
+sophisticated, doing all page management options which pdftopdf also 
+does and especially the page-ranges option to its full extent (allowing 
+to list more than one range and also single pages). ippeveps is simpler, 
+probably taking into account that all incoming jobs also ran through 
+CUPS and cups-filters.
 
+I want to continue the discussion about the design of such a Printer 
+Application here, as it is off-topic for the PDF-support feature request 
+for PAPPL.
 
+PAPPL needs to know the destination file format which should go to the 
+printer (driver_data.format) and Michael told that it should be set to
+"application/postscript". For a PostScript printer this looks 
+principally OK for me, but if the incoming job is PostScript, a 
+PDF-to-PostScript filter would not get called and so all massaging on 
+the PostScript not done, the job printed raw. Here Michael's suggestion 
+is to let the filter only convert PDF into PostScript but the PPD's 
+commands only be inserted by the driver_data.print function, a function 
+for transfering the full job to the printer.
 
+I have some doubts and questions:
 
-*Chair - Linux Foundation Open Printing WGSecretary - IEEE-ISTO Printer
-Working GroupCo-Chair - IEEE-ISTO PWG Internet Printing Protocol WGIETF
-Designated Expert - IPP & Printer MIBBlue Roof Music / High North
-Inchttp://sites.google.com/site/blueroofmusic
-<http://sites.google.com/site/blueroofmusic>http://sites.google.com/site/highnorthinc
-<http://sites.google.com/site/highnorthinc>mailto: blueroofmusic@gmail.com
-<blueroofmusic@gmail.com>(permanent) PO Box 221  Grand Marais, MI 49839
-906-494-2434*
+1. If I import a driver for a non-PostScript printer, for which I have a 
+CUPS filter which takes PDF as input (for example foomatic-rip) and a 
+PPD file I will proceed similarly, starting with adding a filter to turn 
+PDF into the printer's native PDL using the papplSystemAddMIMEFilter() 
+function of PAPPL. This time the filter has to do everything to get the 
+printer-ready output. The driver_data.print function will not have to do 
+anything any more but simply pass on the data. My question here is to 
+what I have to set driver_data.format, the output format is an unknown, 
+binary, proprietary format and I can assume that I never get an incoming 
+job in that format. What do I have to set as the output format MIME type 
+here?
 
---0000000000007bc7b905aa463a28
-Content-Type: text/html; charset="UTF-8"
-Content-Transfer-Encoding: quoted-printable
+2. In CUPS world all incoming PDF gets massaged by pdftopdf, especially 
+at first all filled forms and annotations get flattened by a highly 
+sophisticated functionality of libqpdf and after that page management 
+options (page-ranges, page-set, number-up, ...) get applied. Has a 
+Printer Application which accepts PDF (application/pdf, not 
+application/vnd.cups-pdf) as input format to apply all of the 
+functionality of pdftopdf? Or can we assume that the Printer Application 
+gets its PDF ALWAYS from CUPS and so we can be sure that the incoming 
+PDF is print-ready?
 
-<div dir=3D"ltr">
-<div>Hi,</div><div><br></div><div>
-<div dir=3D"ltr"><span><span><span><span><span><span><span><span><span><spa=
-n><span><span><span><span><span><span><span><span><span><span><span><span><=
-span><span><span><span><span><span>Minutes</span></span></span></span></spa=
-n></span></span></span></span></span></span></span></span></span></span></s=
-pan></span></span></span></span></span></span></span></span></span></span><=
-/span></span> from our last OpenPrinting<span> call</span> are <span><span>=
-<span><span><span><span><span><span><span><span><span><span><span><span><sp=
-an><span>posted</span></span></span></span></span></span></span></span></sp=
-an></span></span></span></span></span></span></span> at:<br>
+3. I assume that for PostScript printers the functionality of pdftops 
+cannot be omitted, as here we are working around many shortcomings and 
+bugs in PostScript interpreters of several printer manufacturers.
 
+4. What is the needed sophistication of the inserting of PPD commands 
+and code into a PostScript stream for PostScript printers? Do we need 
+the pstops filter's full functionality or is the functionality of 
+ippeveps good enough?
 
+5. What determines which input formats a PAPPL-based Printer Application 
+accepts? Can we suppress unwished formats, for example PostScript for a 
+PostScript Printer Application (which has driver_data.format set to 
+PostScript) so that we force the use of the PDF-to-PostScript filter 
+with all its quirk magic?
 
+Plans for these Printer Applications are also printer auto setup (Jai?) 
+and having all PPD options configurable in the web interface, even if 
+they do not translate into IPP attributes, so that all functionality of 
+the printer (or driver) is conserved (Sambhav?).
 
-
-
-
-
-
-
-
-
-<br>
-=C2=A0 <a href=3D"http://ftp.pwg.org/pub/pwg/liaison/openprinting/minutes/O=
-P-Minutes-20200707.htm" target=3D"_blank">http://ftp.pwg.org/pub/pwg/liaiso=
-n/openprinting/minutes/OP-Minutes-20200707.htm</a><br><br></div><div dir=3D=
-"ltr"><br></div><div dir=3D"ltr">
-Next <span><span><span><span><span><span><span><span><span><span><span><spa=
-n><span><span><span><span><span><span>OP</span></span></span></span></span>=
-</span></span></span></span></span></span></span></span></span></span></spa=
-n></span></span> US/Europe/Brazil/India Conference Calls: <br></div><div di=
-r=3D"ltr"><br></div><div dir=3D"ltr">(1) August - US/Europe/Brazil/India - =
-OP Monthly Meeting<br>=C2=A0 =C2=A0- Tuesday 11 August 2020, Daytime<br>=C2=
-=A0 =C2=A0 =C2=A0 - Bluejeans.com web conference to be announced<br>=C2=A0 =
-=C2=A0 =C2=A0 - Note - IEEE 1609 Virtual F2F - 4-5 August 2020<br>=C2=A0 =
-=C2=A0 =C2=A0 - Note - PWG Virtual F2F - 25-27 August 2020<br>=C2=A0 =C2=A0=
- =C2=A0 - US<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 10am in San Francisco - US PDT =
-(Pacific Daylight Time)<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 11am in Colorado - U=
-S MDT (Mountain Daylight Time)<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 12am in Chica=
-go - US CDT (Central Daylight Time)<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 1pm in N=
-ew York - US EDT (Eastern Daylight Time)<br>=C2=A0 =C2=A0 =C2=A0 - Europe<b=
-r>=C2=A0 =C2=A0 =C2=A0 =C2=A0 7pm in Berlin - CEST (Central Europe Summer T=
-ime)<br>=C2=A0 =C2=A0 =C2=A0 - Brazil<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 2pm in=
- Belo Horizonte - BRT (Brasilia Time)<br>=C2=A0 =C2=A0 =C2=A0 - India<br>=
-=C2=A0 =C2=A0 =C2=A0 =C2=A0 10:30pm in New Delhi - IST (India Standard Time=
-)<br><br>(2) September - US/Europe/Brazil/India - OP Monthly Meeting (tenta=
-tive)<br>=C2=A0=C2=A0 - Tuesday 1 September 2020, Daytime<br>=C2=A0 =C2=A0 =
-=C2=A0 - Bluejeans.com web conference to be announced<br>=C2=A0 =C2=A0 =C2=
-=A0 - Note - US Labor Day holiday - 7 September 2020<br>=C2=A0 =C2=A0 =C2=
-=A0 - US<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 10am in San Francisco - US PDT (Pac=
-ific Daylight Time)<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 11am in Colorado - US MD=
-T (Mountain Daylight Time)<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 12am in Chicago -=
- US CDT (Central Daylight Time)<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 1pm in New Y=
-ork - US EDT (Eastern Daylight Time)<br>=C2=A0 =C2=A0 =C2=A0 - Europe<br>=
-=C2=A0 =C2=A0 =C2=A0 =C2=A0 7pm in Berlin - CEST (Central Europe Summer Tim=
-e)<br>=C2=A0 =C2=A0 =C2=A0 - Brazil<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 2pm in B=
-elo Horizonte - BRT (Brasilia Time)<br>=C2=A0 =C2=A0 =C2=A0 - India<br>=C2=
-=A0 =C2=A0 =C2=A0 =C2=A0 10:30pm in New Delhi - IST (India Standard Time)<b=
-r><br>(3) October - US/Europe/Brazil/India - OP Monthly Meeting (tentative)=
-<br>=C2=A0 =C2=A0- Tuesday 20 October 2020, Daytime<br>=C2=A0 =C2=A0 =C2=A0=
- - Bluejeans.com web conference to be announced<br>=C2=A0 =C2=A0 =C2=A0 - N=
-ote - IEEE 1609 Virtual F2F - 6 October 2020<br>=C2=A0 =C2=A0 =C2=A0 - Note=
- - TCG Virtual F2F 12-16 October 2020<br>=C2=A0 =C2=A0 =C2=A0 - Note - EU S=
-ummer Time ends 25 October 2020<br>=C2=A0 =C2=A0 =C2=A0 - Note - US Dayligh=
-t Time ends 1 November 2020<br>=C2=A0 =C2=A0 =C2=A0 - US<br>=C2=A0 =C2=A0 =
-=C2=A0 =C2=A0 10am in San Francisco - US PDT (Pacific Daylight Time)<br>=C2=
-=A0 =C2=A0 =C2=A0 =C2=A0 11am in Colorado - US MDT (Mountain Daylight Time)=
-<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 12am in Chicago - US CDT (Central Daylight =
-Time)<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 1pm in New York - US EDT (Eastern Dayl=
-ight Time)<br>=C2=A0 =C2=A0 =C2=A0 - Europe<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 =
-7pm in Berlin - CEST (Central Europe Summer Time)<br>=C2=A0 =C2=A0 =C2=A0 -=
- Brazil<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 2pm in Belo Horizonte - BRT (Brasili=
-a Time)<br>=C2=A0 =C2=A0 =C2=A0 - India<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 10:3=
-0pm in New Delhi - IST (India Standard Time)</div><div dir=3D"ltr"><br></di=
-v><div>Cheers,</div><div>- Ira</div><div><br></div><div dir=3D"ltr"><br></d=
-iv></div>
-
-<div><div dir=3D"ltr" class=3D"gmail_signature" data-smartmail=3D"gmail_sig=
-nature"><div dir=3D"ltr"><div><div dir=3D"ltr"><div><div dir=3D"ltr"><div><=
-div dir=3D"ltr"><div><div dir=3D"ltr"><div><div dir=3D"ltr"><div><div dir=
-=3D"ltr"><div><div dir=3D"ltr"><div><div dir=3D"ltr"><i><font size=3D"1">Ir=
-a McDonald (Musician / Software Architect)<br>Co-Chair - TCG Trusted Mobili=
-ty Solutions WG</font></i></div><div><i><font size=3D"1">Co-Chair - TCG Met=
-adata Access Protocol SG<br></font></i></div><div dir=3D"ltr"><i><font size=
-=3D"1">Chair - Linux Foundation Open Printing WG<br>Secretary - IEEE-ISTO P=
-rinter Working Group<br>Co-Chair - IEEE-ISTO PWG Internet Printing Protocol=
- WG<br>IETF Designated Expert - IPP &amp; Printer MIB<br>Blue Roof Music / =
-High North Inc<br><a style=3D"color:rgb(51,51,255)" href=3D"http://sites.go=
-ogle.com/site/blueroofmusic" target=3D"_blank">http://sites.google.com/site=
-/blueroofmusic</a><br><a style=3D"color:rgb(102,0,204)" href=3D"http://site=
-s.google.com/site/highnorthinc" target=3D"_blank">http://sites.google.com/s=
-ite/highnorthinc</a><br>mailto: <a href=3D"mailto:blueroofmusic@gmail.com" =
-target=3D"_blank">blueroofmusic@gmail.com</a><br>(permanent) PO Box 221=C2=
-=A0 Grand Marais, MI 49839=C2=A0 906-494-2434</font></i></div></div></div><=
-/div></div></div></div></div></div></div></div></div></div></div></div></di=
-v></div></div></div></div>
-
---0000000000007bc7b905aa463a28--
+    Till
