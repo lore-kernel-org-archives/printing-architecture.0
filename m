@@ -2,25 +2,29 @@ Return-Path: <till.kamppeter@gmail.com>
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
  h=subject:to:cc:references:from:message-id:date:user-agent
  :mime-version:in-reply-to:content-language:content-transfer-encoding;
- bh=+4syOYmvdG2UDuss4CcWz78BzOcg748+OF0jyRLUrsU=;
- b=rdETau0LCKLTgkFLmV8j93vpwWu2YQG/sKkYgrmfhr9uTiJSaZmtTCTC7laucWqzje
- yw5rjafqFmxdhM/HSGQpmRPlkAa4fPUJIIR+joUMKrYwb7IPT1bs7+XskI6jPsyedpJz
- kORzmeH18yP614rbhWiCMxWd3U/7S8LF3GsdN0sx6fRJOCyeD2pIgNInCgK4L1BWpzpR
- ZvRasq/oVjLLkJiEefJd7MWBlPpR2UDG9czf6toWKO7Wp3yJJObsnD0sZEyN4CqvEOl1
- pPWQQgitffJQi0TXJbmNBeX2bIlf0IieAcv1B7KAptjdraKCScMHWEjyvGNGMx/UOi0D
- YVvA==
+ bh=XW4H9tGO13FSeSTTNcQnIM/c82Wjv0eEX1E1mN38Chg=;
+ b=aQAeYf0JaYYGL+uMR2wQ607Scv1LGytkZpW9p1vIueftRci2kfSGOOyVV3VIwFGp5k
+ H5uEjxYGtFpaRF52ml40pXkguG/gjDsslRfPc6SCosrGYakoWXBKlrXIGjpZO6Jj7G/W
+ ck8UoLcwf6jVyBoSJVBAj3DuJG+IDmoc6OqYU6OPiAM+jT1mRigHB2XqLp3ftrzhnXZC
+ T+JLHop7wSIGhzQpoJIrmipL8q/72vZJLtRhjooIZ8l81R9kLtOolpCOvNhPOlvY+1Mh
+ vH2S9uTFje2Tn3poTbZ3Agjm8QzuGLT4pvUoi/LwCVNIg9FSHHGW2O+CwL+hMyvr5ugD
+ hWog==
 References: <6e976771-0ca9-1ded-bc7c-bfc00979e68f@gmail.com>
- <e3c06595-f150-02e6-5d44-f7565a620b3c@redhat.com>
+ <c4e910ab-ba48-9200-aa48-45d1eeeecf45@redhat.com>
+ <ce086f37-e6b2-2a6d-c292-c6bb95d2532b@gmail.com>
+ <64171bfe-d62f-86f8-3c97-2a2391836f1a@redhat.com>
+ <8d2201e1-0f47-0b09-0348-f44c7ab16a7b@gmail.com>
+ <81d778b8-a608-032c-9c59-88c12984f3b5@redhat.com>
 From: Till Kamppeter <till.kamppeter@gmail.com>
-Message-ID: <601c2697-04ff-0b0e-2def-75a9c82485ca@gmail.com>
-Date: Wed, 29 Jul 2020 17:43:51 +0200
+Message-ID: <61a884a7-71ba-6485-fc76-a5c7972203de@gmail.com>
+Date: Wed, 29 Jul 2020 18:13:06 +0200
 MIME-Version: 1.0
-In-Reply-To: <e3c06595-f150-02e6-5d44-f7565a620b3c@redhat.com>
-Content-Type: text/plain; charset=utf-8; format=flowed
+In-Reply-To: <81d778b8-a608-032c-9c59-88c12984f3b5@redhat.com>
+Content-Type: text/plain; charset="utf-8"; format="flowed"
 Content-Language: en-US
-Content-Transfer-Encoding: 7bit
+Content-Transfer-Encoding: 8bit
 Subject: Re: [Printing-architecture] GTK Print Dialog: Modern IPP printing
-	environments cause problems
+ environments cause problems
 List-Id: Printing architecture under linux
  <printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>, 
@@ -30,89 +34,81 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>, 
  <mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Marek Kasik <mkasik@redhat.com>
+To: Marek Kasik <mkasik@redhat.com>, Zdenek Dohnal <zdohnal@redhat.com>
 Cc: Aveek Basu <basu.aveek@gmail.com>, Open Printing <printing-architecture@lists.linux-foundation.org>, Rithvik Patibandla <rithvikp98@gmail.com>, Rithvik Patibandla <rithp9@gmail.com>
 
-On 29/07/2020 17:10, Marek Kasik wrote:
-> You've seen all the communication I had with him this year. He hasn't 
-> sent me a code which would compile.
+On 29/07/2020 17:35, Marek Kasik wrote:
+> 
+> Yes, it does an IPP request on the printer for these attributes:
+> 
+>      "printer-name",
+>      "printer-uri-supported",
+>      "member-uris",
+>      "printer-location",
+>      "printer-info",
+>      "printer-state-message",
+>      "printer-state-reasons",
+>      "printer-state",
+>      "queued-job-count",
+>      "printer-is-accepting-jobs",
+>      "job-sheets-supported",
+>      "job-sheets-default",
+>      "printer-type",
+>      "auth-info-required",
+>      "number-up-default",
+>      "ipp-versions-supported",
+>      "multiple-document-handling-supported",
+>      "copies-supported",
+>      "number-up-supported",
+>      "media-col-default",
+>      "media-col-supported",
+>      "media-default",
+>      "media-size-supported",
+>      "media-supported",
+>      "media-left-margin-supported",
+>      "media-right-margin-supported",
+>      "media-bottom-margin-supported",
+>      "media-top-margin-supported",
+>      "sides-default",
+>      "sides-supported",
+>      "output-bin-default",
+>      "output-bin-supported"
 >
 
-I did not realize that it was so bad. Before I put him with some other 
-mentor to do CPDB he did a good job on filters for me. There are 
-students whose imagination of programming is typing code without ever 
-trying to build and run it, but I did not know that he was like that.
+You could simply try "all" and "media-col-database", this is what
 
->> Is there any worthwhile outcome which could be the base for someone 
->> else to continue and complete the work?
->>
->> Are there any plans to add CPDB support independent of Tanmay?
-> I don't have a plan to integrate CPDB in Gtk now. I plan to implement 
-> the temporary queues support there.
+/usr/share/cups/ipptool/get-printer-attributes-2.0.test
+
+does. This is also what I do in libcupsfilters so that "driverless" and 
+cups-browsed can create PPDs.
+
+> Gtk has its own http-based facility to handle IPP requests so it does 
+> not call CUPS API for this.
+
+Why that, is it not easier to simply use libcups? What is the specialty 
+of this code and where is it located in the source code of GTK?
+
+> The URI is composed of protocol, address, port and resource path of the 
+> discovered printer now.
 > 
 
-No problem, if you get the dialog working correctly with the new CUPS 
-API it would be great. As the dialog has easy-to-dro-in backend modules, 
-we can find someone writing such a module and testing it, and post it as 
-a Feature Request when it is ready.
+OK, should be correct. Please compare with CUPS output ("lpstat -l -e", 
+"lpinfo -l -v").
 
-> It would be good to have an IPP operation defined for cupsEnumDests() in 
-> CUPS. We have a good mechanism which handles these in non-blocking manner.
->
+> However, for the temporary queues there is an issue. How to get names 
+> and URIs of those printers without calling the cupsEnumDests()? I can 
+> emulate the way the CUPS creates them from the Avahi data but it would 
+> be better to get those via an IPP operation.
 
-So you do not want to use the new CUPS API because it is not 
-asynchronous? I think one could help oneself creating asynchronous 
-wrapper functions. AFAIR CPDB wraps it asynchronously. You can can start 
-an asynchronous printer list process with CPDB and while the dialog is 
-open and active the printer entries from all CPDB backends, including 
-the one for the new CUPS API, are rolling in.
-
-> This is because I've implemented it in 2013 and the local queues were 
-> added to CUPS at 2016. What were the options at that time?
-> I've implemented it so that it worked with the printer from you, the HP 
-> CP3525. It also worked with CUPS published printers.
-> There were some bugs over the years but I've tried to fix most of them.
-> Unfortunately I've got a printer which claims IPP capability but I'm not 
-> able to print on it over ipptool, this makes me think that I could try 
-> the local queue feature of CUPS.
-> 
->
-
-As CUPS has this local queue feature, and it is actually working, you 
-should use it in the print dialog, using the new CUPS API. Ideally, if 
-CUPS adds a new feature, print dialogs should updated to support it. If 
-you think the CUPS development pace is too fast for keeping up with it 
-in GTK, simply add CPDB support and we from OpenPrinting will care of 
-the rest.
-
-It would be great if I do not need to supply cups-browsed as a daemon to 
-retro-fit the GTK print dialog with modern CUPS by the daemon providing 
-the old interface. I would love to have Ubuntu shipping with 
-cups-browsed not running by default.
-
-And please do not make the GTK print dialog bypass CUPS when printing on 
-IPP printers.
-
-> This was a bug I think I've fixed at the end of 2019.
-> 
->> GTK dialog backends on the system are the following:
-> 
-> What gtk3 version is this?
-
-Version 3.24.20
-
-If this does not contain the fix, can you tell me which GIT commits have 
-to be added as distro patch?
-
-till@till-x1yoga:~/Downloads$ dpkg -l libgtk-3-0:amd64
-Desired=Unknown/Install/Remove/Purge/Hold
-| 
-Status=Not/Inst/Conf-files/Unpacked/halF-conf/Half-inst/trig-aWait/Trig-pend
-|/ Err?=(none)/Reinst-required (Status,Err: uppercase=bad)
-||/ Name             Version          Architecture Description
-+++-================-================-============-============================>
-ii  libgtk-3-0:amd64 3.24.20-0ubuntu1 amd64        GTK graphical user 
-interface>
-till@till-x1yoga:~/Downloads$
+You probably mean the CUPS URIs to talk to the temporary CUPS queues, as 
+the device URIs of the physical printers are derivable from the DNS-SD 
+record (protocol://host:port/TXT-"rp"-field). The CUPS URI is always 
+ipp(s)://cups-host:cups-port/printers/queue-name. So you have to find 
+the correct queue name here, which would match the output of "lpstat 
+-e". Best is to check through the source code of CUPS, this is what I do 
+in such cases, but AFAIK it is the DNS-SD service name with each group 
+of non-alphanumeric characters replaced by a single '_', no change in 
+upper/lower case and no removal of a trailing underscore (Michael, am I 
+right? Which function in the CUPS source does this?).
 
     Till
