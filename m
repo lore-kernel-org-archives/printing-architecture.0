@@ -1,26 +1,22 @@
 Return-Path: <till.kamppeter@gmail.com>
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
- h=subject:to:cc:references:from:message-id:date:user-agent
- :mime-version:in-reply-to:content-language:content-transfer-encoding;
- bh=ZeTL3dl7WJOJOrbwV3CU8UdWFa7ncB+sO27fTd1xc9s=;
- b=RpwzxbO1QdLJiKLyNAzqmkgg7e4W3DLLe/H/KgfHD7uu+oKqpmZ5w9cxLxnYnLtuzN
- 9sNwuPCeGh/1XaPwDDBNAfgiwBwDaGw9pA3hbFgFSqA/LZ+SC7uaxJc7ldmg0/2xmrrs
- 0GfdnZUQvsyZhcEjUdjHrf4wjf2VGGSXd57mF/NupeLbKvUwWSE0AwuKX8Odq3LI3Rnq
- h3bYKX8X2ILLV461+HaEMFTl9G/dy/M0o79LOCtoaN6J1kEcZJiEOL3+74Hd5zeLSbFX
- jeH19Yt5vazAd3U0LKqu4vXHzrtyPCqQ7h1WaWI6m+Gba3gGv37n3VQCwnYYBIt75eBh
- 8cLg==
-References: <304a299b-b4d8-2553-7e65-31e2cda6156c@gmail.com>
- <a0b417ce-0e4d-1f18-f755-4b94d2ad61f0@redhat.com>
+ h=to:from:subject:cc:message-id:date:user-agent:mime-version
+ :content-language:content-transfer-encoding;
+ bh=IEd2v8Z9FQ/uvZ64o+3zTPQ7zkiD80sKeCz+gHwnfdk=;
+ b=TLJWzPYnIQK5dGIP2w/xvNvX9GQdvrhiATnYryk/lGCt2PEDJ7mCMkErPEAG9b2Ltj
+ fL2nhwuVJSrJ/csNHIYOQkp5uIMbtrKIFB3nR8JngsBjv7dXLTrSWlAXWyrbs+0aYjUx
+ kdULa0p86Kt3YQOqEbMNN5k/RpyD8zZTy/9SlJ2sS9bvw06z9aTq1slvdg95sPnhbWjX
+ gB2jM8aXyPeO39ILdimit5KzRV99+DSzGmoClJ0GyqUWbDvnqkso1R/AQVu4+shP2Y3v
+ UvlgPXmgsuq0c79weh7M0SOZyPsdnxEAcG2smgfClS1nxOSFE42AQWo7f58CT9Q7CXY4
+ 576A==
 From: Till Kamppeter <till.kamppeter@gmail.com>
-Message-ID: <b4e4f197-499d-dd8f-8936-c64a6a839ff4@gmail.com>
-Date: Tue, 4 Aug 2020 12:42:06 +0200
+Message-ID: <d157a0d9-6cc4-39e2-b06f-710daeac0483@gmail.com>
+Date: Sat, 8 Aug 2020 00:05:05 +0200
 MIME-Version: 1.0
-In-Reply-To: <a0b417ce-0e4d-1f18-f755-4b94d2ad61f0@redhat.com>
 Content-Type: text/plain; charset=utf-8; format=flowed
 Content-Language: en-US
 Content-Transfer-Encoding: 7bit
-Subject: Re: [Printing-architecture] Filter Functions - Getting years of
- development in cups-filters into Printer Applications
+Subject: [Printing-architecture] Printer Application for PostScript printers
 List-Id: Printing architecture under linux
  <printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>, 
@@ -30,63 +26,174 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>, 
  <mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Zdenek Dohnal <zdohnal@redhat.com>
-Cc: printing-architecture@lists.linux-foundation.org
+To: Open Printing <printing-architecture@lists.linux-foundation.org>, Michael Sweet <msweet@msweet.org>, Jai Luthra <luthrajaiji@gmail.com>, Sambhav Dusad <sambhavdusad24@gmail.com>
+Cc: Aveek Basu <basu.aveek@gmail.com>, dipanshu verma <dipanshu.career@gmail.com>
 
-On 04/08/2020 12:19, Zdenek Dohnal wrote:
-> Hi Till and Mike,
-> 
-> thank you for your work on printer applications!
-> 
-> I have concerns about printing performance with filter functions instead
-> of the current filtering, which uses separate executables.
-> 
+Hi,
 
-[...]
+I have worked towards a PAPPL-based Printer Application for PostScript 
+printers, where one usually has a PPD supplied by the printer's 
+manufacturer. Many of these you find in foomatic-db on OpenPrinting, but 
+in the first approach I only want to consider those without 
+"*cupsFilter(2): ..." lines, meaning that these are native PostScript 
+PPDs without CUPS or Foomatic extensions.
 
-> 
-> Isn't it possible to stay with external executables in printer
-> applications? Or the performance will be even better than the current
-> filtering?
+The code which I have created to implement this is all available in the 
+cups-filters package, current state of GIT Master:
 
-You probably mean that filters as external executable have parallelized, 
-so that while the first filter, pdftopdf for flattening the filled forms 
-and applying N-up, is still working, the second filter, pdftops already 
-starts turning the PDF into PostScript, and the third filter, pstops (in 
-current cups-filters started by pdftops) already starts inserting option 
-PostScript code from the PPD as soon as the first PostScript bits come 
-out of Ghostscript.
+https://github.com/OpenPrinting/cups-filters
 
-In the filter function scenario this parallelization will still take 
-place. a main process will fork a sub-process for each individual filter 
-and these processes are piped together to get one filter's output to the 
-next filter's input. So the individual filters run in separate processes 
-on separate CPU cores in parallel.
 
-What is optimized or improved is that the filters and the caller are now 
-the same executable. Options do not need to be converted into one long 
-string (5th command line argument) or into environment variables and by 
-the sub process back into the needed internal data structures. CUPS 
-option lists and even IPP job and printer attributes structures can get 
-passed on to the filter function directly. Also a PPD file (in case of 
-retro-fitting Printer Applications) does not need to be loaded from the 
-disk by each individual filter and parsed into the CUPS PPD data 
-structure, but instead, the data structure is generated once by the 
-caller (it has to do it anyway to generate the get-printer-attributes 
-IPP response), and directly passed on to the filters. Also any overhead 
-of launching an external program with its command line is eliminated.
+libppd
+------
 
-In addition, the filter functions are also more easy to use for 
-scanning, in Scanner Applications.
+PPD handling for retro-fitting all kinds of classic drivers is done by 
+libppd, all functions from libcups, ppd-private.h added to public API 
+ppd.h, source in ppd/ subdirectory. See also
 
-Even CUPS performance can be improved: Instead of having a separate 
-wrapper executable for each filter function, making cups-filters looking 
-exactly the same as before for CUPS, one can create a universal filter 
-executable which takes the input and output data from the environment 
-(supplied by CUPS), calculates the chain of filter functions and calls 
-them in forked processes, again loading and parsing PPD and options only 
-once. Assuming that CUPS only handles the formats for driverless 
-printing CUPS will work with this one single filter and a single MIME 
-conversion rule for all supported input and output formats.
+https://github.com/OpenPrinting/cups-filters/blob/master/ppd/README.md
+
+Two functions are added to libppd, to make the creation of Printer 
+Applications for retro-fitting classic drivers easier:
+
+'ppdLoadAttributes()' - Load IPP attributes from a PPD file.
+
+This function creates a set of IPP attributes to answer 
+get-printer-attributes IPP requests from clients. This function is based 
+on load_ppd_attributes() in ippeveprinter from CUPS.
+
+'ppdGetOptions()' - Get the PPD options corresponding to the IPP Job
+                     Template attributes for a printer with given PPD and
+                     given printer attributes (generated by
+                     ppdLoadAttributes()).
+
+This function takes the IPP attributes coming along with a print job and 
+converts them into PPD options, so that the correct PostScript snippets 
+from the PPD can get inserted. This function is based on get_options() 
+in ippeveps from CUPS.
+
+
+libcupsfilters
+--------------
+
+I have started to convert the CUPS filters into functions, the so-called 
+filter functions:
+
+https://lists.linuxfoundation.org/pipermail/printing-architecture/2020/003842.html
+
+This way the filters can get easily called as functions, and parameters 
+are supplied in a common data structure, data streams are specified by 
+file descriptors, and all filter functions have the same argument 
+scheme. This allows easy chaining of them (supplying the chain as an 
+array of functions would be possible, the chaining filter function I 
+have not implemented yet) and generally supplying them as callback 
+functions.
+
+Logging is also flexible as the logging is done via a callback function. 
+A callback function to use the filter functions in classic CUPS filters 
+is supplied as cups_logfunc() in cupsfilters/filter.c.
+
+To start and to support the PostScript Printer Application I have 
+converted pstops (from CUPS) and pdftops (from cups-filters). the code 
+is in the files cupsfilters/pstops.c and cupsfilters/pdftops.c, the 
+headers in cupsfilters/filter.h.
+
+All filter functions will be implemented in the libcupsfilters library.
+
+Later I will add build time options to allow building libcupsfilters 
+also without libppd and/or without libqpdf (and then without the filter 
+functions needing these libs). This allows to build cups-filters needed 
+for the individual Printer Application Snap.
+
+The Printer Application is supposed to take PDF as input format, as this 
+is one of the standard formats of driverless printing and also the 
+standard format in which CUPS supplies jobs. So one can provide a 
+PDF-to-PostScript filter by creating a function calls the pdftops() 
+filter function (which in turn calls the pstops() filter function for 
+insering the PostScript code of the PPD into the output PostScript 
+stream and also adding JCL). Before calling pdftops() this function has 
+to call ppdGetOptions() to convert the job's attributes into PPD option 
+settings. This function is added to the Printer Application by the 
+papplSystemAddMIMEFilter() function of PAPPL.
+
+One could also add a filter for PostScript input which calls only the 
+pstops() filter function, but I am in doubt whether there are really 
+clients sending PostScript to a Printer Application, CUPS would send 
+PDF, and I think iOS clients would also send PDF.
+
+An example for calling a filter function is the filterCUPSWrapper() 
+function in cupsfilters/filter.c which allows easy calling of a filter 
+function as a classic CUPS filter, see also filter/pdftops.c and 
+filter/pstops.c. Another example is the call of pstops() in the 
+pdftops() filter function cupsfilters/pdftops.c.
+
+
+
+So I have everything to answer a client's get-printer-attributes() IPP 
+request and to process a job.
+
+The PostScript Printer Application should have the following properties:
+
+- It should auto-discover and auto-setup supported printers (using the 
+correct PPD), so that the user usually does not need to do more than 
+install the Printer Application and connect and turn on his printer.
+
+- The Snap should contain a collection of an arbitrary number of PPD 
+files, either the files themselves or a highly compressed 
+self-extracting pyppd archive (https://github.com/OpenPrinting/pyppd).
+
+- The web interface of the Snap should also allow manually adding print 
+queues, for example with Generic PostScript PPD, for allowing 
+alternative default option settings, and also for the user supplying a 
+PPD via web form upload. Also blocking selected printer against 
+auto-setup would be great (for example if you want to use your 
+PostScript + PDF printer in driverless PDF mode).
+
+When seeing the PCL sample Printer Application
+
+https://github.com/michaelrsweet/hp-printer-app/
+
+and also after some discussion:
+
+Printer Applications: Retro-fitting classic drivers
+https://lists.linuxfoundation.org/pipermail/printing-architecture/2020/003823.html
+
+PostScript printers without PPD files?
+https://lists.linuxfoundation.org/pipermail/printing-architecture/2020/003826.html
+
+Canceling jobs in Printer Applications
+https://lists.linuxfoundation.org/pipermail/printing-architecture/2020/003831.html
+
+Filter Functions - Getting years of development in cups-filters into 
+Printer Applications
+https://lists.linuxfoundation.org/pipermail/printing-architecture/2020/003842.html
+
+I can now imagine how to manage the treating of a job, but what did not 
+get clear to me is where the (auto) setup of the print queues will go 
+in, where the discovered printer is checked against the PPD repository.
+
+Michael, Jai, could you help me here?
+
+In the PCL Printer Application there is a call
+
+papplSystemSetPrintDrivers(system, (int)(sizeof(names) / 
+sizeof(names[0])), names, desc, pcl_callback, "hp_printer_app");
+
+in the pcl_setup() function, supplying the pcl_callback() function and 
+the pcl_callback() has driver_attrs as an output parameter. Is this what 
+the Printer Application will answer to get-printer-attributes requests 
+from clients? And pcl_setup() is supposed to populate it? Does this mean 
+that I have to call the ppdLoadAttributes() function in the equivalent 
+function in the PostScript Printer Application and assign its output to 
+driver_attrs?
+
+Or where do I have to call ppdLoadAttributes()?
+
+Michael, Jai, could you help me here?
+
+This would be the first retro-fit Printer Application for classic 
+drivers. Further retro-fit Printer Applications for Foomatic, CUPS 
+Raster drivers, ... will probably get much easier.
 
     Till
+
