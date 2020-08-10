@@ -1,25 +1,19 @@
-Return-Path: <till.kamppeter@gmail.com>
+Return-Path: <blueroofmusic@gmail.com>
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
- h=subject:from:to:references:message-id:date:user-agent:mime-version
- :in-reply-to:content-language:content-transfer-encoding;
- bh=WTXaIccHqmEuKsNNp2LUs4jeyxOcNGgewQGC8kr0Aog=;
- b=SxGIN59pG0CymI39IJYIBkMLADhUk4Jd98DnCvmIzFvsEe00PppX57pEXLUf+KTpEk
- VVkfWHaK80ooa2+Z5RMh4QhTqWqpC21VkXfQKlB/i769GkSVC6O34QGnPVPFoNxApy5e
- IuVOrAw1f47tuxakBU15EgdRlHVScOjbsSaCFQyhug3gTyDCCSqE5lTeVEWNFlOdMOiM
- uGd4fiEJBgtjXy+NDTu+CI7NQi6myr7d0v7GekyPf+r88i1WS4uDdTnSDPZ/jbUcivyX
- pezlCp7EdiYk5226kpxV92ZXvvgVDfHixTY/YLz/lTYxhzvahFIx8zexDXiLlLweNjEB
- mqdA==
-From: Till Kamppeter <till.kamppeter@gmail.com>
-References: <304a299b-b4d8-2553-7e65-31e2cda6156c@gmail.com>
-Message-ID: <9d6b78d1-1f09-9d58-d08a-af3b72540d43@gmail.com>
-Date: Mon, 10 Aug 2020 14:05:53 +0200
+ h=mime-version:from:date:message-id:subject:to;
+ bh=NR5/qMhzsbbU0i9+pHY5zyjtXAoRgMmvtXjUBqaGsSU=;
+ b=ZYwrRP1c/otL5Ek+/BCPwnvKKFyEEU2rCaGNGgX53klh3z6SHDdaa95XtdT1fQHwqS
+ cUn+A9PRwZMxs1zULMIvWBXaqQtje2mYgXifbfseH4ex4BrFhVKKoJVywCDRLiiUde96
+ s/FLfe8AwgMaml/sgYpnZXe6vZouLVm9M0WMzlA2qAraelgXV53aSXe4CW2VFuC/Mryv
+ yeIZlmCnjq8UXQIlCxnadObv+uJ4aVYdzxg7687IWyuCMDxulw5NeX7LH0sNlp8BDAkm
+ Vbhbf3GcyZ6mnLzmKwzIqMsFJz3m8foZwpaEWza2KtwTrHW/OUa8JqvsRh6GqyGmtwTe
+ Wf4g==
 MIME-Version: 1.0
-In-Reply-To: <304a299b-b4d8-2553-7e65-31e2cda6156c@gmail.com>
-Content-Type: text/plain; charset=utf-8; format=flowed
-Content-Language: en-US
-Content-Transfer-Encoding: 7bit
-Subject: Re: [Printing-architecture] Filter Functions - Getting years of
- development in cups-filters into Printer Applications
+From: Ira McDonald <blueroofmusic@gmail.com>
+Date: Mon, 10 Aug 2020 09:28:21 -0400
+Message-ID: <CAN40gStsYeTzM+VA36YR_wVs_Pbmr4MvmxVCdKN33sz9Hrs=pw@mail.gmail.com>
+Content-Type: multipart/alternative; boundary="0000000000008b53d805ac85eee1"
+Subject: [Printing-architecture] REMINDER:OP Monthly Call on 08/11/20
 List-Id: Printing architecture under linux
  <printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>, 
@@ -29,93 +23,97 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>, 
  <mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Open Printing <printing-architecture@lists.linux-foundation.org>, Michael Sweet <msweet@msweet.org>, Jai Luthra <luthrajaiji@gmail.com>, Sambhav Dusad <sambhavdusad24@gmail.com>, Sahil Arora <sahilarora.535@gmail.com>, Vikrant Malik <vikrant@iitk.ac.in>, Dipanshu Verma <dipanshu.career@gmail.com>, Alexander Pevzner <pzz@apevzner.com>, Nidhi Jain <12njain06@gmail.com>, Aveek Basu <basu.aveek@gmail.com>, Deepak Patankar <patankardeepak04@gmail.com>
+To: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>, Till Kamppeter <till.kamppeter@gmail.com>, Aveek Basu <basu.aveek@gmail.com>, Danny Brennan <brennand@us.ibm.com>, Ira McDonald <blueroofmusic@gmail.com>
 
-The conversion of the CUPS filters into filter functions is on the way. 
-I have converted pstops and pdftops, Vikrant is currently converting his 
-pclmtoraster filter and Jai is working on rastertops.
+--0000000000008b53d805ac85eee1
+Content-Type: text/plain; charset="UTF-8"
 
-To make sure that filter functions work as intended I want to post here 
-some guidelines for contributors.
+ Hi,
 
-Please keep the following points in mind when converting:
+Our next regular monthly call will be on Tuesday
 
+   - Tuesday 11 August 2020, Daytime
+      - Bluejeans.com web conference to be announced
+      - Note - IEEE 1609 Virtual F2F - 4-5 August 2020
+      - Note - PWG Virtual F2F - 25-27 August 2020
+      - US
+        10am in San Francisco - US PDT (Pacific Daylight Time)
+        11am in Colorado - US MDT (Mountain Daylight Time)
+        12am in Chicago - US CDT (Central Daylight Time)
+        1pm in New York - US EDT (Eastern Daylight Time)
+      - Europe
+        7pm in Berlin - CEST (Central Europe Summer Time)
+      - Brazil
+        2pm in Belo Horizonte - BRT (Brasilia Time)
+      - India
+        10:30pm in New Delhi - IST (India Standard Time)
 
-1. The "filter_data_t *data" argument of a filter function provides info 
-about the printer, the job, and the logging function. It does not 
-provide info about how an individual filter is used. If chaining filters 
-for one job, each filter gets a pointer into the same data record here.
-
-2. The "void *parameters" argument is individual to each filter call and 
-it is not pre-structured by the API. One can put here what is useful for 
-each filter, and in a typical job it can happen that one filter function 
-is called twice in the chain, but with different parameters settings. As 
-an example I plan to replace the gstoraster, gstopxl, and gstopdf CUPS 
-filters by one ghostscript() filter function which takes the output 
-format (Raster, PCL-XL, PDF) as parameter.
-
-3. Filter functions should never output to stdout or stderr in 
-hard-coded way and not take data from stdin in hard-coded way. They 
-always have to take the job data from their inputfd and put out the 
-resulting data to their outputfd, actual streaming is preferred to boost 
-performance and parallelization of chained filters.
-
-4. Logging should never go right to stderr but always into the logging 
-function. Control terms (like "PAGE: 1 1") should not get removed and 
-they should also go to the logging function, but with the 
-FILTER_LOGLEVEL_CONTROL log level, so that the filter can be 
-retro-fitted to CUPS. Actual log meesages for CUPS need to get their 
-prefix removed and sent to the log function with a log level equivalent 
-to the removed prefix. See the cups_logfunc() function in 
-cupsfilters/filter.c
-
-5. After the filter's files are moved from filter/ into the cupsfilters/ 
-directory and converted, in their old place in filter/ a new file with 
-filter's name is put but containing the minimum code for calling the 
-filter function as CUPS filter, see filter/pstops.c and filter/pdftops.c.
-
-6. For PPD handling, do not use libcups as the PPD handling functions in 
-libcups will go away in a later CUPS version. Use libppd of 
-cups-filters, with "#include <ppd/ppd.h>". I have also moved the 
-functions of libcups' ppd-private.h into the public API.
-
-7. A Printer Application linking libcupsfilters can run several jobs in 
-parallel, as separate threads or forked sub processes. This means that 
-the filter functions must work in parallel, being thread-safe. So please 
-check whether this is OK with global variables and/or namespace {...} 
-which you are using.
+Cheers,
+- Ira
 
 
-The planned filter chaining filter function will take as its parameters 
-an array of a structure where each element contains a filter function 
-plus the parameters for the filter function's call in this place. The 
-filter's data record will be the same for the chaining filter function 
-and all filter functions called by it. The chaining function will pass 
-the job data through all the filter functions listed in the array, in 
-order, and output the result.
 
-I have also already planned a function with which taking option settings 
-from job/printer IPP attributes can easily get done and which can be 
-easily added to already converted filters, so do not worry for now when 
-your conversion is not using the supplied IPP attributes.
+*Ira McDonald (Musician / Software Architect)Co-Chair - TCG Trusted
+Mobility Solutions WG*
 
-I will soon post when new resources/tools/functions for filter functions 
-are implemented.
-
-    Till
+*Co-Chair - TCG Metadata Access Protocol SG*
 
 
-On 03/08/2020 15:27, Till Kamppeter wrote:
-> TL;DR: Another step towards cups-filters 2.0: Filter functions
 
-[...]
 
-> Therefore I have started working on a new filter concept for 
-> cups-filters 2.0 (coming soon), the filter functions. The plan is to 
-> turn every filter into a filter function, available in libcupsfilters. 
-> The functions have a common interface and a common data structure to 
-> supply job and printer properties to them. Additional functions will be 
-> created to call a given chain of filter functions or to find out a 
-> suitable filter chain for a given job.
 
-[...]
+
+
+
+*Chair - Linux Foundation Open Printing WGSecretary - IEEE-ISTO Printer
+Working GroupCo-Chair - IEEE-ISTO PWG Internet Printing Protocol WGIETF
+Designated Expert - IPP & Printer MIBBlue Roof Music / High North
+Inchttp://sites.google.com/site/blueroofmusic
+<http://sites.google.com/site/blueroofmusic>http://sites.google.com/site/highnorthinc
+<http://sites.google.com/site/highnorthinc>mailto: blueroofmusic@gmail.com
+<blueroofmusic@gmail.com>(permanent) PO Box 221  Grand Marais, MI 49839
+906-494-2434*
+
+--0000000000008b53d805ac85eee1
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">
+<div>Hi,</div><div><br></div><div>
+Our next regular monthly call will be on Tuesday</div>
+
+<div><br></div><div>=C2=A0=C2=A0 - Tuesday 11 August 2020, Daytime<br>=C2=
+=A0 =C2=A0 =C2=A0 - Bluejeans.com web conference to be announced<br>=C2=A0 =
+=C2=A0 =C2=A0 - Note - IEEE 1609 Virtual F2F - 4-5 August 2020<br>=C2=A0 =
+=C2=A0 =C2=A0 - Note - PWG Virtual F2F - 25-27 August 2020<br>=C2=A0 =C2=A0=
+ =C2=A0 - US<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 10am in San Francisco - US PDT =
+(Pacific Daylight Time)<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 11am in Colorado - U=
+S MDT (Mountain Daylight Time)<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 12am in Chica=
+go - US CDT (Central Daylight Time)<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 1pm in N=
+ew York - US EDT (Eastern Daylight Time)<br>=C2=A0 =C2=A0 =C2=A0 - Europe<b=
+r>=C2=A0 =C2=A0 =C2=A0 =C2=A0 7pm in Berlin - CEST (Central Europe Summer T=
+ime)<br>=C2=A0 =C2=A0 =C2=A0 - Brazil<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 2pm in=
+ Belo Horizonte - BRT (Brasilia Time)<br>=C2=A0 =C2=A0 =C2=A0 - India<br>=
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 10:30pm in New Delhi - IST (India Standard Time=
+)</div><div><br></div><div>Cheers,</div><div>- Ira</div><div><br></div><div=
+><br></div><div><div dir=3D"ltr" class=3D"gmail_signature" data-smartmail=
+=3D"gmail_signature"><div dir=3D"ltr"><div><div dir=3D"ltr"><div><div dir=
+=3D"ltr"><div><div dir=3D"ltr"><div><div dir=3D"ltr"><div><div dir=3D"ltr">=
+<div><div dir=3D"ltr"><div><div dir=3D"ltr"><div><div dir=3D"ltr"><i><font =
+size=3D"1">Ira McDonald (Musician / Software Architect)<br>Co-Chair - TCG T=
+rusted Mobility Solutions WG</font></i></div><div><i><font size=3D"1">Co-Ch=
+air - TCG Metadata Access Protocol SG<br></font></i></div><div dir=3D"ltr">=
+<i><font size=3D"1">Chair - Linux Foundation Open Printing WG<br>Secretary =
+- IEEE-ISTO Printer Working Group<br>Co-Chair - IEEE-ISTO PWG Internet Prin=
+ting Protocol WG<br>IETF Designated Expert - IPP &amp; Printer MIB<br>Blue =
+Roof Music / High North Inc<br><a style=3D"color:rgb(51,51,255)" href=3D"ht=
+tp://sites.google.com/site/blueroofmusic" target=3D"_blank">http://sites.go=
+ogle.com/site/blueroofmusic</a><br><a style=3D"color:rgb(102,0,204)" href=
+=3D"http://sites.google.com/site/highnorthinc" target=3D"_blank">http://sit=
+es.google.com/site/highnorthinc</a><br>mailto: <a href=3D"mailto:blueroofmu=
+sic@gmail.com" target=3D"_blank">blueroofmusic@gmail.com</a><br>(permanent)=
+ PO Box 221=C2=A0 Grand Marais, MI 49839=C2=A0 906-494-2434</font></i></div=
+></div></div></div></div></div></div></div></div></div></div></div></div></=
+div></div></div></div></div></div></div>
+
+--0000000000008b53d805ac85eee1--
