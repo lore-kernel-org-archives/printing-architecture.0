@@ -1,22 +1,13 @@
-Return-Path: <till.kamppeter@gmail.com>
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
- h=from:subject:to:message-id:date:user-agent:mime-version
- :content-language:content-transfer-encoding;
- bh=adovMfpS1rIB3SxscRtui8ATNwhLULBPac65k8k6Onc=;
- b=b7Ay/ca6n+6k6fj/8qaj+IG7uW8p/HcxoliH4Mnt2Tfben/gP6MCExbAhfrvYFcsGf
- qqVFQaSYpeneTHAFL4bVgPx1pYUzegSSXVYA6sV0TnMt0teWWFCqNhiv7t+NimQAiP3Y
- 9Gkqh9g1O3ATWQW6l4SHvuAKSKa3omsQkmMcbypkF8FPI4T63esvKvg7eqj2aUkxEsn2
- FLp6Hc/aTodCCO3/v+GKMsbRn7Zi41K1JwtACFx1pIRy6KY8bJMEtk/3Z4AMTldX1aBN
- 0OGXqYexthznIe8JVL83Vi/nXYOfnc4S72RThYoKWQzVTjkzq1HTVB3EKjlYlU+p7X3Q
- g1Lg==
-From: Till Kamppeter <till.kamppeter@gmail.com>
-Message-ID: <b9b25328-27b3-4008-8ec0-bac7aa1f0b67@gmail.com>
-Date: Fri, 14 Aug 2020 08:29:59 +0200
+Return-Path: <jsmeix@suse.de>
 MIME-Version: 1.0
-Content-Type: text/plain; charset=utf-8; format=flowed
-Content-Language: en-US
+Content-Type: text/plain; charset=US-ASCII;
+ format=flowed
 Content-Transfer-Encoding: 7bit
-Subject: [Printing-architecture] OpenPrinting News
+Date: Fri, 14 Aug 2020 10:47:42 +0200
+From: Johannes Meixner <jsmeix@suse.de>
+Message-ID: <b632639fbe44c484b718bfb5ff5c8f57@suse.de>
+Subject: [Printing-architecture] Will IPP printer devices and Printer
+	Applications obsolete the cupsd?
 List-Id: Printing architecture under linux
  <printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>, 
@@ -26,14 +17,49 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>, 
  <mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Ira McDonald <blueroofmusic@gmail.com>, Aveek Basu <aveek.basu@lexmark.com>, Open Printing <printing-architecture@lists.linux-foundation.org>
+To: printing-architecture@lists.linux-foundation.org
 
-Hi,
 
-I have posted the newest development of the last month on our web site now.
+Hello,
 
-Here we go:
+I have a general question:
 
-https://openprinting.github.io/OpenPrinting-News-August-2020/
+Will IPP printer devices and Printer Applications obsolete the cupsd?
 
-    Till
+My current understanding about future Linux printing is that
+"printing targets" (i.e. whereto clients send what to print)
+will be only IPP servers
+either as IPP server running inside an IPP printer device
+or as IPP server running in a Printer Application
+and
+clients autodetect the "printing targets" via DNS-SD
+(mostly indirectly via a DNS-SD listener like Avahi)
+and then
+clients communicate via IPP directly with a "printing target"
+to get the actual printing done.
+
+The cupsd is also an IPP server
+but when clients communicate directly with
+IPP printer devices or Printer Applications
+I wonder what is left as use case to have a cupsd running?
+
+Or in other words:
+When filters and backends are dropped from CUPS
+what would be still left to do for a cupsd?
+I.e. what service would a cupsd still provide then?
+Cf.
+https://www.cups.org/doc/man-filter.html
+and
+https://www.cups.org/doc/man-backend.html
+that read (excerpt)
+"CUPS printer drivers and backends are deprecated and
+will no longer be supported in a future feature release of CUPS"
+
+
+Kind Regards
+Johannes Meixner
+-- 
+SUSE Software Solutions Germany GmbH
+Maxfeldstr. 5 - 90409 Nuernberg - Germany
+(HRB 36809, AG Nuernberg) GF: Felix Imendoerffer
+
