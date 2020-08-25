@@ -1,24 +1,22 @@
-Return-Path: <zdohnal@redhat.com>
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=redhat.com;
- s=mimecast20190719; t=1597644010;
- h=from:from:reply-to:subject:subject:date:date:message-id:message-id:
- to:to:cc:cc:mime-version:mime-version:content-type:content-type:
- in-reply-to:in-reply-to:references:references:autocrypt:autocrypt;
- bh=CfQvAw7mq97Clt5dptw7AqVlfp6jKpL1gn/TJgx+irA=;
- b=HfCPIDej3viubAiYcUi4hslejkxT4g46RSc25P0+IbB1Qf7weE2rAVOSaYEatMQaaTx0mM
- VXw7o+0OeJWEJ9NxpmDNmt98hGTjXF3H/PLtnL0DwN2hZLQzqImT6I81Rumkks2vWhvr6b
- 7FhXXsF/koSN12mR4kzF6wvf5OBy37I=
-References: <b9b25328-27b3-4008-8ec0-bac7aa1f0b67@gmail.com>
- <981b69fe-6611-ac9c-23ae-8019ca01ed28@gmail.com>
-From: Zdenek Dohnal <zdohnal@redhat.com>
-Message-ID: <85bab82b-5502-8272-aaca-b1e9ddb385ee@redhat.com>
-Date: Mon, 17 Aug 2020 08:00:00 +0200
+Return-Path: <till.kamppeter@gmail.com>
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
+ h=from:subject:to:message-id:date:user-agent:mime-version
+ :content-language:content-transfer-encoding;
+ bh=u8IJ5WdgwjWu2JvJ/rdYUD7yuDywLZgneZbVjim5guw=;
+ b=M/8FKwumxt6kYi/VJ7CqRrdpHDVWOsWBWE0UwmnJPlABTNnfV6JYhcmHSQZWNQfab8
+ QT3Pq4O+bOl3N/9mA/6oJ2vebuVMjDIjuDPuB/GrLISbK6VPRKiV/F2MKTzpYq+3S9NE
+ aOEAX6DqGMSiIRJ0Ml3SM84CpdWkoSIA1lLXKBOXqzsf9lYtR8wErkuvPaJw3z8qjjuy
+ V5Gk485e5BjzbWCfa74CGLD0Z+vjO9AsdRHqArQNwanZRe6xFr8aSaE8RiihPZQi6ZbN
+ KAGGmvxCbD6iRlJLD2DrItsuYiR9NeXUyDK+ciF1Q+Kw9t0F2EZ1vsttBF9Rx5ngsPoH
+ z4vw==
+From: Till Kamppeter <till.kamppeter@gmail.com>
+Message-ID: <05c8d2b3-b4be-1983-aaf8-6848dd516757@gmail.com>
+Date: Tue, 25 Aug 2020 19:44:57 +0200
 MIME-Version: 1.0
-In-Reply-To: <981b69fe-6611-ac9c-23ae-8019ca01ed28@gmail.com>
-Content-Type: multipart/signed; micalg=pgp-sha256;
- protocol="application/pgp-signature";
- boundary="2gNPZFZ1I1GqthgFcT1uhMREvPtiTGm9H"
-Subject: Re: [Printing-architecture] OpenPrinting News
+Content-Type: text/plain; charset="utf-8"; format="flowed"
+Content-Language: en-US
+Content-Transfer-Encoding: 8bit
+Subject: [Printing-architecture] cups-filters 1.28.0 released!
 List-Id: Printing architecture under linux
  <printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>, 
@@ -28,82 +26,21 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>, 
  <mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Till Kamppeter <till.kamppeter@gmail.com>
-Cc: Aveek Basu <aveek.basu@lexmark.com>, Open Printing <printing-architecture@lists.linux-foundation.org>
+To: Open Printing <printing-architecture@lists.linux-foundation.org>
 
-This is an OpenPGP/MIME signed message (RFC 4880 and 3156)
---2gNPZFZ1I1GqthgFcT1uhMREvPtiTGm9H
-Content-Type: multipart/mixed; boundary="uxcHM7aPv92uLAeXzRgrM4yjEzB3Q33ck"
+Hi,
 
---uxcHM7aPv92uLAeXzRgrM4yjEzB3Q33ck
-Content-Type: text/plain; charset=utf-8
-Content-Transfer-Encoding: quoted-printable
-Content-Language: en-US
+Feature release (probably the last one before 2.0.0) which adds IPP Fax 
+Out support, IPPS support, and a command line option to reveal satndard 
+IPP URIs to the “driverless” utility, added log file size limitation and 
+command line options to control what happens to generated queues on 
+shutdown to cups-browsed, fixed several bugs when printing PostScript 
+input files, several bugs and memory leaks in cups-browsed, crashes on 
+the presence of certain fonts, and many more fixes.
+ontributors
 
-Hi all,
+Here we go:
 
-just one little update:
+https://github.com/OpenPrinting/cups-filters/releases/tag/1.28.0
 
-- lprint is on its way to Fedora
-https://bugzilla.redhat.com/show_bug.cgi?id=3D1867587 - I plan to do an
-update for F32+
-
-On 8/14/20 1:42 PM, Till Kamppeter wrote:
-> I have done two little updates in my August news post, after getting
-> hints from Alexander Pevzner (thanks a lot):
->
-> 1. ippusbxd is deprecated now. After Linux distributions switching to
-> the better ipp-usb, Chrome OS has created their own ippusb_bridge in
-> Rust:
->
-> https://github.com/dgreid/platform2/tree/master/ippusb_bridge
->
-> 2. sane-airscan is now in updates-testing repository for Fedora 32
->
-> =C2=A0=C2=A0 Till
->
->
-> On 14/08/2020 08:29, Till Kamppeter wrote:
->> Hi,
->>
->> I have posted the newest development of the last month on our web
->> site now.
->>
->> Here we go:
->>
->> https://openprinting.github.io/OpenPrinting-News-August-2020/
->>
->> =C2=A0=C2=A0=C2=A0 Till
-> _______________________________________________
-> Printing-architecture mailing list
-> Printing-architecture@lists.linux-foundation.org
-> https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture
-
---=20
-Zdenek Dohnal
-Software Engineer
-Red Hat Czech - Brno TPB-C
-
-
-
---uxcHM7aPv92uLAeXzRgrM4yjEzB3Q33ck--
-
---2gNPZFZ1I1GqthgFcT1uhMREvPtiTGm9H
-Content-Type: application/pgp-signature; name="signature.asc"
-Content-Description: OpenPGP digital signature
-Content-Disposition: attachment; filename="signature.asc"
-
------BEGIN PGP SIGNATURE-----
-
-iQEzBAEBCAAdFiEEettYIDyl8EbygCWyFapqf01CJ9cFAl86HOEACgkQFapqf01C
-J9f69Af/Sao3wWtb+X+N98XoC++TkfZC8inqRLWyslFx5EiW9f2sXFJHFnO2102/
-0p0bPRpuJnqsh26qCd1H20DVtMp8UkjBuekqvm8FtoHraqC3GM7G7y1o1oGuREX3
-K+s8aPkudoB/Fi2vkpMxSvWQgvmszxhcI02Yzh/P5TlMTMd34raFV3Rpjm1b9ka6
-82vhH88ygejxuYMZk7xgZvYi1Ol6jVpAsVsFjR/NtaDC5FmEBW0Dk/j1ur23rQ7d
-o+S6adpQU7EmtdM7d6D6kAKvv++1kzTNnYArR9WZD0yNazcRZCV0x0vBA3JgCKna
-RPmC4hIE8R5CiWW6zcrbbSyBtuvhOQ==
-=iJq9
------END PGP SIGNATURE-----
-
---2gNPZFZ1I1GqthgFcT1uhMREvPtiTGm9H--
-
+    Till
