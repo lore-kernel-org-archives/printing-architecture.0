@@ -1,22 +1,23 @@
 Return-Path: <till.kamppeter@gmail.com>
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
- h=from:subject:to:message-id:date:user-agent:mime-version
+ h=to:from:subject:message-id:date:user-agent:mime-version
  :content-language:content-transfer-encoding;
- bh=W/QFGQdz8NLt/MrQfQEcvsvckIa5bjGFWc+0wmrQ8qw=;
- b=q4b4e7I2Uu277uIvC0bNObNRlAIlNUyaf7Tg3vxJz0DyDZ18kzcoWxj7cKI/E72G+s
- 94xKFazsiSPChrREpRDOyCipAMvYlF/r7CmQnvBF94cbv2eqC93vVb277UKONVSSaDHu
- UlDqq51nLctC8KBDr7hdSJD9xzMhJRbfCeC8J3CKLn3DxUghKKwegffWzXGj7zrTJgku
- 5qRDH/seInPvP0cYMjbMDiJ3nciN7kbW2XwVMmBQQiwN42r27jiLc8ev3H2hLQFR8AXf
- O0vMYkbLl9o/HTpRFRK2nY5bfpQC+4YItJqoGLIz73/IkgIeiFPIn7uC3adswW1p65al
- oMsA==
+ bh=/Vxd2kVlUCZ2y9ugkREKZvic7acSw8diGXtYsqwJ+JE=;
+ b=tWwuUkKcZrXQTORy8Jwe/vO2rvqYendBBDGQp9FPlrYUo67WnkIlwKTm8v9S8dRIXr
+ ez75kcZuLpb+KsQ8/J1lVygwBVCxw/rApt8i5NvWo0dPqoN1nK4KyTh934BoNaIUAnMU
+ V5+KAjVrXy9xoYs2UQo1zy+HmaiLndDeYGEWo//fYfIv+ndW+S1X10I5BC1MKdsE/18x
+ ZyTzFDE98oJTCbo91R/iG4hC8XH0xNREL8Y/LbmJE6+9GtIysHJ8v9im7YB2LbjD7ckv
+ RWW/9QrGAtkKbB2GH95FTvQ9VapunkgvbBsKjB+LV7Env0PZJLwx4Ww5NjW0JkohxXsr
+ TOKA==
 From: Till Kamppeter <till.kamppeter@gmail.com>
-Message-ID: <40d40511-657f-ca03-68dc-65247549b4c1@gmail.com>
-Date: Thu, 27 Aug 2020 00:17:58 +0200
+Message-ID: <3a0cc280-e44c-7876-e751-982c8b98ae4b@gmail.com>
+Date: Thu, 27 Aug 2020 20:59:23 +0200
 MIME-Version: 1.0
-Content-Type: text/plain; charset=utf-8; format=flowed
+Content-Type: text/plain; charset="utf-8"; format="flowed"
 Content-Language: en-US
-Content-Transfer-Encoding: 7bit
-Subject: [Printing-architecture] cups-filters 1.28.0 released!
+Content-Transfer-Encoding: 8bit
+Subject: [Printing-architecture] Free Live stream on YouTube: OpenPrinting
+ Microconference on Linux Plumbers Conference 2020
 List-Id: Printing architecture under linux
  <printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>, 
@@ -30,11 +31,66 @@ To: Open Printing <printing-architecture@lists.linux-foundation.org>
 
 Hi,
 
-Bug fix release to fix several bugs in the new IPP Fax Out support by 
-the "driverless" utility and also to fix some minor issues.
+as ome of you have already read on or web site, we are having a 
+microconference on the (all virtual) Linux Plumbers 2020.
 
-Here we go:
+Everyone not being so lucky to have a ticket for the conference, here 
+are links to live streams of all sessions (recordings of past sessions) 
+on YouTube:
 
-https://github.com/OpenPrinting/cups-filters/releases/tag/1.28.1
+https://linuxplumbersconf.org/event/7/page/100-watch-live-free
+
+Tomorrow, right before our session also the link for our session will 
+get activated.
+
+The session takes place
+
+Friday, August 28 from 2pm - 6pm UTC
+
+More info here:
+
+https://openprinting.github.io/OpenPrinting-Microconference-on-Linux-Plumbers-Conference-2020/
+
+So have a look on how it will go on with printing and scanning with free 
+software.
 
     Till
+
+
+----------
+
+OpenPrinting Microconference on Linux Plumbers Conference 2020
+--------------------------------------------------------------
+
+As already back in 2019 we are holding a Microconference on the Linux 
+Plumbers 2020, this year in …
+
+… the wider Internet!! Yes, due to COVID-19 it is all virtual this time, 
+no travelling, no 12 hours with a mask in an airplane full of people. 
+But also no nice sights and delicious restaurants, not tourist-guiding 
+my co-workers with the help of my knowledge of the Portuguese language 
+through a nice city.
+
+But it has also one big advantage: It is much easier to get the desired 
+speakers, as one does not need to get their travel funded. So we will 
+have Michael Sweet, Ira McDonald, Aveek Basu, Alexander Pevzner, and 
+Rithvik Patibandla on our virtual stage, and me naturally, too.
+
+We will talk about the following subjects:
+
+- Printer Applications - A new way to print in Linux
+- IPP scan (or virtual MF device) server (Scanner Application)
+- 3D Printing
+- IPP Fax Out - A new reality
+- Designing and Packaging Printer and Scanner Drivers
+
+The conference takes place from Monday, August 24 to Friday, August 28, 
+every day from 2pm - 6pm UTC. Our day will be the Friday, August 28, 
+with our microconference to span all the 4 hours. Everyone is invited to 
+visit us.
+
+If you are actually attending the Linux Plumbers Conference, please 
+visit the OpenPrinting MC on Friday and participate in the discussion of 
+the future of printing and scanning. If you are not registered, please 
+listen in via YouTube Live Stream for free. The links to the YouTube 
+streams will appear on this page shortly before the sessions start.
