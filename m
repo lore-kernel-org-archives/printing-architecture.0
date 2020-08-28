@@ -1,23 +1,20 @@
-Return-Path: <till.kamppeter@gmail.com>
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
- h=to:from:subject:message-id:date:user-agent:mime-version
- :content-language:content-transfer-encoding;
- bh=/Vxd2kVlUCZ2y9ugkREKZvic7acSw8diGXtYsqwJ+JE=;
- b=tWwuUkKcZrXQTORy8Jwe/vO2rvqYendBBDGQp9FPlrYUo67WnkIlwKTm8v9S8dRIXr
- ez75kcZuLpb+KsQ8/J1lVygwBVCxw/rApt8i5NvWo0dPqoN1nK4KyTh934BoNaIUAnMU
- V5+KAjVrXy9xoYs2UQo1zy+HmaiLndDeYGEWo//fYfIv+ndW+S1X10I5BC1MKdsE/18x
- ZyTzFDE98oJTCbo91R/iG4hC8XH0xNREL8Y/LbmJE6+9GtIysHJ8v9im7YB2LbjD7ckv
- RWW/9QrGAtkKbB2GH95FTvQ9VapunkgvbBsKjB+LV7Env0PZJLwx4Ww5NjW0JkohxXsr
- TOKA==
-From: Till Kamppeter <till.kamppeter@gmail.com>
-Message-ID: <3a0cc280-e44c-7876-e751-982c8b98ae4b@gmail.com>
-Date: Thu, 27 Aug 2020 20:59:23 +0200
+Return-Path: <zdohnal@redhat.com>
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=redhat.com;
+ s=mimecast20190719; t=1598590287;
+ h=from:from:reply-to:subject:subject:date:date:message-id:message-id:
+ to:to:cc:mime-version:mime-version:content-type:content-type:autocrypt:autocrypt;
+ bh=z6VCv2aAhzTb1Yek7f4qW288fWttbqtW4YEgQRScSso=;
+ b=WL4qpNL0+Fiv6SK2UdjJcL9uYEy16IO6HvNNbzXXTgko6iG8At1K1eHTghkoOzmNF2opJ5
+ XBEmaxUWuRUW6y3m0Rzqk90X+rK0DTKvq1R2pzE9mDGBrfRZB/d/Qs7M/aRHYk68dSroZb
+ DFzdzwViQgGK3DlNXu7b+7pvScXCY50=
+From: Zdenek Dohnal <zdohnal@redhat.com>
+Message-ID: <347c59d7-1adf-c4c0-5eee-9b279b66793a@redhat.com>
+Date: Fri, 28 Aug 2020 06:51:21 +0200
 MIME-Version: 1.0
-Content-Type: text/plain; charset="utf-8"; format="flowed"
-Content-Language: en-US
-Content-Transfer-Encoding: 8bit
-Subject: [Printing-architecture] Free Live stream on YouTube: OpenPrinting
- Microconference on Linux Plumbers Conference 2020
+Content-Type: multipart/signed; micalg=pgp-sha256;
+ protocol="application/pgp-signature";
+ boundary="XAs5NUnXr84becjEMmFKBif8DZaihAo1P"
+Subject: [Printing-architecture] lprint shipped in Fedora 32+
 List-Id: Printing architecture under linux
  <printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>, 
@@ -27,70 +24,55 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>, 
  <mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Open Printing <printing-architecture@lists.linux-foundation.org>
+To: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>
+
+This is an OpenPGP/MIME signed message (RFC 4880 and 3156)
+--XAs5NUnXr84becjEMmFKBif8DZaihAo1P
+Content-Type: multipart/mixed; boundary="adWodTHggTXhJFuFY1JjzYTLXykMBcNop"
+
+--adWodTHggTXhJFuFY1JjzYTLXykMBcNop
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+Content-Language: en-US
 
 Hi,
 
-as ome of you have already read on or web site, we are having a 
-microconference on the (all virtual) Linux Plumbers 2020.
+since packaging sane-airscan in Fedora made into monthly status, I would
+like to announce lprint project is now available in Fedora 32 and later.
 
-Everyone not being so lucky to have a ticket for the conference, here 
-are links to live streams of all sessions (recordings of past sessions) 
-on YouTube:
+I'm planning to package goipp, ipp-usb and pappl in the near future and
+investigate how CUPS snap works on Fedora+look into flatpack possibilities.
 
-https://linuxplumbersconf.org/event/7/page/100-watch-live-free
-
-Tomorrow, right before our session also the link for our session will 
-get activated.
-
-The session takes place
-
-Friday, August 28 from 2pm - 6pm UTC
-
-More info here:
-
-https://openprinting.github.io/OpenPrinting-Microconference-on-Linux-Plumbers-Conference-2020/
-
-So have a look on how it will go on with printing and scanning with free 
-software.
-
-    Till
+Have a nice day and stay safe,
 
 
-----------
+Zdenek
 
-OpenPrinting Microconference on Linux Plumbers Conference 2020
---------------------------------------------------------------
+--=20
+Zdenek Dohnal
+Software Engineer
+Red Hat Czech - Brno TPB-C
 
-As already back in 2019 we are holding a Microconference on the Linux 
-Plumbers 2020, this year in …
 
-… the wider Internet!! Yes, due to COVID-19 it is all virtual this time, 
-no travelling, no 12 hours with a mask in an airplane full of people. 
-But also no nice sights and delicious restaurants, not tourist-guiding 
-my co-workers with the help of my knowledge of the Portuguese language 
-through a nice city.
 
-But it has also one big advantage: It is much easier to get the desired 
-speakers, as one does not need to get their travel funded. So we will 
-have Michael Sweet, Ira McDonald, Aveek Basu, Alexander Pevzner, and 
-Rithvik Patibandla on our virtual stage, and me naturally, too.
+--adWodTHggTXhJFuFY1JjzYTLXykMBcNop--
 
-We will talk about the following subjects:
+--XAs5NUnXr84becjEMmFKBif8DZaihAo1P
+Content-Type: application/pgp-signature; name="signature.asc"
+Content-Description: OpenPGP digital signature
+Content-Disposition: attachment; filename="signature.asc"
 
-- Printer Applications - A new way to print in Linux
-- IPP scan (or virtual MF device) server (Scanner Application)
-- 3D Printing
-- IPP Fax Out - A new reality
-- Designing and Packaging Printer and Scanner Drivers
+-----BEGIN PGP SIGNATURE-----
 
-The conference takes place from Monday, August 24 to Friday, August 28, 
-every day from 2pm - 6pm UTC. Our day will be the Friday, August 28, 
-with our microconference to span all the 4 hours. Everyone is invited to 
-visit us.
+iQEzBAEBCAAdFiEEettYIDyl8EbygCWyFapqf01CJ9cFAl9IjUkACgkQFapqf01C
+J9d84Qf/YbYV6Ty5pnyl743I3R/6q65uZT3jAgzUyJ1+ftl1FvldTltnEBEtU2t+
+TA5rx6LEJt8u+mHfiEH1X13kXUtkGTzWbbbm68D7y00HZfwjHNkHBFaWaVpKj6hS
+WOEabS8s95rYtave+UxjAjXcr8aoN2s0w/G1c1xpJ60WHBh0O3KdUrATkSPuKOJs
+G9URQjtv6XGuTlE0GbBAxi4s58avT1vdACwJAZLa9fb4YhzNtMM67pN7mdbbQQL/
+W4PdtltmT4ZEY5+yxrQuPCWLOR0FLwMP8+1ojnTtNlCBX2tvn/aJ1X44NVllWDWi
+yHHVDhb2QlNox/wbRGSRqQIiNQgNVA==
+=QF0n
+-----END PGP SIGNATURE-----
 
-If you are actually attending the Linux Plumbers Conference, please 
-visit the OpenPrinting MC on Friday and participate in the discussion of 
-the future of printing and scanning. If you are not registered, please 
-listen in via YouTube Live Stream for free. The links to the YouTube 
-streams will appear on this page shortly before the sessions start.
+--XAs5NUnXr84becjEMmFKBif8DZaihAo1P--
+
