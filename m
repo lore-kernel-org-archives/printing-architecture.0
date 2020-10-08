@@ -1,23 +1,22 @@
-Return-Path: <pzz@apevzner.com>
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=apevzner-com.20150623.gappssmtp.com; s=20150623;
- h=to:from:subject:message-id:date:user-agent:mime-version
+Return-Path: <till.kamppeter@gmail.com>
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
+ h=from:subject:to:message-id:date:user-agent:mime-version
  :content-language:content-transfer-encoding;
- bh=4HmNv+ERA6ru8iwxfK83YNBJ+cSNxoUOYD0I/fBtmMM=;
- b=t8uOteOcVQjkWCnm3LVUkIY2k/NwSatTfNaolZECUmO6JmPSOQSDHW6g6Mye981XdJ
- IAzGPWf+ZyMRFJpEiSF3iu6+rQ1kbwEgL0OJexHrY4QxWM7mX3MvrCkC8pn2yWSpm6yp
- 9Dam+My3fmtnAUzbmP7laQ82cIDYdqXKD+ajO3xFqxlIsO9yzVG4JtwZdyDvMHa8eNY8
- wzbsqCvvaJfv5xWIwmIvY6BSPBIe/J+ZO+uH0WskF9wLsALfTpbB9RPejW+Ah9l40Xj0
- UHorBtqIl5qolV9bDUALu03OdVZ7uhZpxPfqYqSyWsgNhmGThURs8msaAhi+G1T0klvl
- NYog==
-From: Alexander Pevzner <pzz@apevzner.com>
-Message-ID: <87302aca-8a63-03c4-e5d6-544182267c61@apevzner.com>
-Date: Tue, 6 Oct 2020 00:22:23 +0300
+ bh=jx2+b/v6+kXf1pDb4C9T5LC4f6r4d5GK/XLR+PfQoO8=;
+ b=HRKwEZlIIeFmX2vJQPr4axCQ7hNpWnX7Nydg5s7KPTz+2ZhRX6q3RsQxZGfsR6zx0K
+ 4edgSAEOuNuzn05nGgb6DhIC3vvWsy7XVHF6aEoLDuWtF81zVlNcd8RoW3SiVSTvUWc0
+ RYXoN0XVJC+JaviYkBFItXlmvZfq94Qulj7sW3PteXcGw/7qW10eJ1sgX3VUEyfsA2df
+ FAJOXcMAjPIwEqrI+sDqonl+qKOhOmdw7qNZ0DivjaZdTEa84L6HZuowinLL9ycnzdnw
+ FTWF7VTDSARLEBYX+PcB6GKAAUyFtyYYnKmMTaeZVK1XKgpNaJWOhaVoWlUFq8fV8o4H
+ yYBw==
+From: Till Kamppeter <till.kamppeter@gmail.com>
+Message-ID: <e1fbc4c3-a623-a240-e7e7-badc9b4ec974@gmail.com>
+Date: Thu, 8 Oct 2020 12:44:09 +0200
 MIME-Version: 1.0
 Content-Type: text/plain; charset=utf-8; format=flowed
 Content-Language: en-US
 Content-Transfer-Encoding: 7bit
-Subject: [Printing-architecture] ipp-usb 0.9.14 announce
+Subject: [Printing-architecture] cups-filters 1.28.4 released!
 List-Id: Printing architecture under linux
  <printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>, 
@@ -31,21 +30,11 @@ To: Open Printing <printing-architecture@lists.linux-foundation.org>
 
 Hi,
 
-I've just released ipp-usb version 0.9.14
+Bug fix release, mainly to solve CUPS performance problems caused by the 
+IPP fax support of the "driverless" utility
 
-This new release adds a concept of "quirks" files. As some hardware 
-requires a special handling, these hardware-specific quirks are not 
-longer hard-coded into the executable, but instead are configured via 
-set of editable quirks files, placed into the /usr/share/ipp-usb/quirks/ 
-directory
+Here we go:
 
-HP Laser MFP 135a device is blacklisted. This strange device has IPP 
-over USB interfaces (class 7, subclass 1, protocol 4), and even responds 
-to HTTP requests sent to these interfaces, but to all requests it 
-responds with "HTTP 404 Not Found" status, so making IPP-over-USB 
-effectively not functional. Blacklisting this device prevents ipp-usb 
-from blocking legacy USB drivers to access the hardware.
+https://github.com/OpenPrinting/cups-filters/releases/tag/1.28.4
 
--- 
-
-	Wishes, Alexander Pevzner (pzz@apevzner.com)
+    Till
