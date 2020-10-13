@@ -2,21 +2,21 @@ Return-Path: <till.kamppeter@gmail.com>
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
  h=from:subject:to:message-id:date:user-agent:mime-version
  :content-language:content-transfer-encoding;
- bh=jx2+b/v6+kXf1pDb4C9T5LC4f6r4d5GK/XLR+PfQoO8=;
- b=HRKwEZlIIeFmX2vJQPr4axCQ7hNpWnX7Nydg5s7KPTz+2ZhRX6q3RsQxZGfsR6zx0K
- 4edgSAEOuNuzn05nGgb6DhIC3vvWsy7XVHF6aEoLDuWtF81zVlNcd8RoW3SiVSTvUWc0
- RYXoN0XVJC+JaviYkBFItXlmvZfq94Qulj7sW3PteXcGw/7qW10eJ1sgX3VUEyfsA2df
- FAJOXcMAjPIwEqrI+sDqonl+qKOhOmdw7qNZ0DivjaZdTEa84L6HZuowinLL9ycnzdnw
- FTWF7VTDSARLEBYX+PcB6GKAAUyFtyYYnKmMTaeZVK1XKgpNaJWOhaVoWlUFq8fV8o4H
- yYBw==
+ bh=ohLu5asg1wHUAbJgejZH7/iMwrUGlbvjfJfDXhU8RCI=;
+ b=MiiJjJvhEC2X68In0JBsYbkxUdFoKeyjHnEG9I565bLkpSTGAghojhunWOGKhvCWeB
+ Y/wjCgiL9Rdw8xmKoVSuamD4U6qNCs3dWP1JKdn8eMe5ThgnP8m/0H0zOMNtRAu7bovI
+ 7eOpmiVMSoRAjR7ZeXOcpctqYZl79IkaXuA9gzp1voE0vqcaGlHuLp7VyM8NND+IxtCe
+ JJj95IXtUqH4Pf7nnpzDBeBWMEZOuGCXXnVQaem23sGoAbfltsx3FK4ckXV5ooyP9t4c
+ xdfK3Pg6N8dCIIvm3KJ900G4bHf26b62ql4g/92G1/XpRGbVsbguimXWDaiTPCv8HOkc
+ 0bCw==
 From: Till Kamppeter <till.kamppeter@gmail.com>
-Message-ID: <e1fbc4c3-a623-a240-e7e7-badc9b4ec974@gmail.com>
-Date: Thu, 8 Oct 2020 12:44:09 +0200
+Message-ID: <57fb422c-bdcb-c089-b681-e60c0a33727f@gmail.com>
+Date: Tue, 13 Oct 2020 17:39:07 +0200
 MIME-Version: 1.0
 Content-Type: text/plain; charset=utf-8; format=flowed
 Content-Language: en-US
 Content-Transfer-Encoding: 7bit
-Subject: [Printing-architecture] cups-filters 1.28.4 released!
+Subject: [Printing-architecture] cups-filters 1.28.5 released!
 List-Id: Printing architecture under linux
  <printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>, 
@@ -30,11 +30,10 @@ To: Open Printing <printing-architecture@lists.linux-foundation.org>
 
 Hi,
 
-Bug fix release, mainly to solve CUPS performance problems caused by the 
-IPP fax support of the "driverless" utility
+Bug fix release for a quick, potential crasher correction in cups-browsed
 
 Here we go:
 
-https://github.com/OpenPrinting/cups-filters/releases/tag/1.28.4
+https://github.com/OpenPrinting/cups-filters/releases/tag/1.28.5
 
     Till
