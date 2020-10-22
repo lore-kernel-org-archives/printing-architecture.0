@@ -1,23 +1,20 @@
-Return-Path: <blueroofmusic@gmail.com>
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
- h=mime-version:references:in-reply-to:from:date:message-id:subject:to
- :cc; bh=Pee25lPa+ax/VxockSGwsFVlFinm8eXyE784C43P7I8=;
- b=B3JsZT4F30mFh4vu7DJe9uICEzysDEdEsRIwDLcrfmF1axpe4YKC7NYkybuu9Mn3fY
- NQZi7wpa6N615Z0+0R3WepBgCuGjPsoIewVui/8ahCFwn2LYnqzYvcNxS04s1XSGiDtd
- ogUc6cPrGMQj4pN/qZ5S4LQmu1fSeTDUwoNmpUF9lp3panh1CNu8xxcSxU03l90BHTUm
- 6G4s8t20eLszq8TcBsYriGVlKl6lTq1iRpb9YzIs0VJAkHhS5DumO4vIt8H/Ozve0fag
- JBypXsMQtq3ZY7IfyCZ0uPX1AE3myFOGrY/bMtlapVawLjP5l6ngoMcfsTl15WMAeQj0
- ZtHA==
+Return-Path: <andrea.croci@gmx.de>
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=gmx.net;
+ s=badeba3b8450; t=1603333900;
+ bh=LSdTRa1Gew9LMJEi8CEVwYo2WCVdkqVU/nz6HhZm+XI=;
+ h=X-UI-Sender-Class:To:From:Subject:Date;
+ b=D74ffX3eG0t1cUb7H5LPMmAFrILrIZJgpt6lHvNztJKcI+YsMu5amjJHFOdgEbWRL
+ eU+K78bW0xWBbMQnH2P7sg2P+cg8srAUNzLymKgB54iwtCEb2pWGX5u0KJGnjHauY/
+ JOUBu45hbdl5yvs1njo7szE5RzYD5velrySnsqE8=
+From: Andrea Croci <andrea.croci@gmx.de>
+Message-ID: <3aaf4a2b-b7b4-7d98-ed9a-8347646b5923@gmx.de>
+Date: Thu, 22 Oct 2020 04:31:39 +0200
 MIME-Version: 1.0
-References: <f46bf16f-d469-cd4e-698e-525481cc98f6@redhat.com>
- <90443F3C-FBAE-4CF6-B34B-55887A90F11D@msweet.org>
-In-Reply-To: <90443F3C-FBAE-4CF6-B34B-55887A90F11D@msweet.org>
-From: Ira McDonald <blueroofmusic@gmail.com>
-Date: Wed, 21 Oct 2020 20:48:55 -0400
-Message-ID: <CAN40gSuSTBfPHichG9Qi4fCRyG+DSgdxK1f8Q73c5-FrxvM8_Q@mail.gmail.com>
-Content-Type: multipart/alternative; boundary="000000000000d24fd105b237d497"
-Subject: Re: [Printing-architecture] IPP Validate-Job operation and its
- implementation in CUPS
+Content-Type: multipart/alternative;
+ boundary="------------59DE72DC5681733625A902A9"
+Content-Language: en-US
+Subject: [Printing-architecture] Installing foomatic removes packages in
+	Ubuntu 20.04
 List-Id: Printing architecture under linux
  <printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>, 
@@ -27,181 +24,171 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>, 
  <mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Michael Sweet <msweet@msweet.org>, Ira McDonald <blueroofmusic@gmail.com>
-Cc: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>, "The CUPS developer list." <cups-devel@cups.org>, "The CUPS user discussion list." <cups@cups.org>
+To: printing-architecture@lists.linux-foundation.org
 
---000000000000d24fd105b237d497
-Content-Type: text/plain; charset="UTF-8"
-
-Hi,
-
-Note that IPP/2.0 reducing Validate-Job from REQUIRED is a known technical
-error.
-
-IPP/2.0 (or any other later IPP spec) CANNOT reduce any REQUIRED operation
-conformance from IETF Standard IPP/1.1 (STD92/RFC 8010/RFC 8011).
-
-Cheers,
-- Ira
-
-*Ira McDonald (Musician / Software Architect)*
-
-*Chair - SAE Trust Anchors and Authentication TF*
-*Co-Chair - TCG Trusted Mobility Solutions WG*
-
-*Co-Chair - TCG Metadata Access Protocol SG*
-
-
-
-
-
-
-
-
-*Chair - Linux Foundation Open Printing WGSecretary - IEEE-ISTO Printer
-Working GroupCo-Chair - IEEE-ISTO PWG Internet Printing Protocol WGIETF
-Designated Expert - IPP & Printer MIBBlue Roof Music / High North
-Inchttp://sites.google.com/site/blueroofmusic
-<http://sites.google.com/site/blueroofmusic>http://sites.google.com/site/highnorthinc
-<http://sites.google.com/site/highnorthinc>mailto: blueroofmusic@gmail.com
-<blueroofmusic@gmail.com>(permanent) PO Box 221  Grand Marais, MI 49839
-906-494-2434*
-
-
-On Wed, Oct 21, 2020 at 4:49 PM Michael Sweet <msweet@msweet.org> wrote:
-
-> Zdenek,
->
-> > On Oct 21, 2020, at 9:18 AM, Zdenek Dohnal <zdohnal@redhat.com> wrote:
-> > ...
-> > In this email I would like to ask if there can be a way how to work
-> around such printer issues within CUPS, which can be aligned with RFC and
-> PWG standards, and can be merged into OpenPrinting/cups project.
->
-> Aside from maybe retrying the Validate-Job request if it fails the first
-> time, I'm not sure
->
-> > I have several ideas:
-> >
-> > 1) Validate-Job operation is 'only' recommended since IPP 2.0, so the
-> backend would have printed only warning if Validate-Job failed and the IPP
-> protocol used for communication is 2.0 or newer
->
-> Actually, while Validate-Job was listed as RECOMMENDED in IPP 2.0, IPP
-> Everywhere restores it to REQUIRED, just as STD 92 has required it going
-> all the way back to the IPP/1.0 experimental version.
->
-> > 2) configurable retries for Validate-Job operation - this idea came up
-> from printer behavior (Validate-Job works after N retries) and from
-> knowledge there are already configurable variables in backends via device
-> uri
->
-> I'd rather it be automatic - either retry the Validate-Job operation or
-> just move on to printing without validation.
->
-> > 3) define a specific IPP_STATUS_* enum variable for failing
-> Validate-Job, let the backend fail if ipp_status is that variable and let
-> error-policy handle the possible retry
->
-> I'm not keen on "supporting" broken behavior.  Usually I've tried to
-> "gracefully degrade" in these situations, which would basically mean option
-> 2 without the retry (just attempt to validate and continue if we don't get
-> a valid response.
->
-> ________________________
-> Michael Sweet
->
->
->
-> _______________________________________________
-> Printing-architecture mailing list
-> Printing-architecture@lists.linux-foundation.org
-> https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture
->
-
---000000000000d24fd105b237d497
-Content-Type: text/html; charset="UTF-8"
+This is a multi-part message in MIME format.
+--------------59DE72DC5681733625A902A9
+Content-Type: text/plain; charset=utf-8; format=flowed
 Content-Transfer-Encoding: quoted-printable
 
-<div dir=3D"ltr"><div>Hi,</div><div><br></div><div>Note that IPP/2.0 reduci=
-ng Validate-Job from REQUIRED is a known technical error.</div><div><br></d=
-iv><div>IPP/2.0 (or any other later IPP spec) CANNOT reduce any REQUIRED op=
-eration</div><div>conformance from IETF Standard IPP/1.1 (STD92/RFC 8010/RF=
-C 8011).</div><div><br></div><div>Cheers,</div><div>- Ira</div><div><br></d=
-iv><div><div><div dir=3D"ltr" class=3D"gmail_signature" data-smartmail=3D"g=
-mail_signature"><div dir=3D"ltr"><div><div dir=3D"ltr"><div><div dir=3D"ltr=
-"><div><div dir=3D"ltr"><div><div dir=3D"ltr"><div><div dir=3D"ltr"><div><d=
-iv dir=3D"ltr"><div><div dir=3D"ltr"><div><div dir=3D"ltr"><i><font size=3D=
-"1">Ira McDonald (Musician / Software Architect)</font></i></div><div><i><f=
-ont size=3D"1">Chair - SAE Trust Anchors and Authentication TF<br></font></=
-i></div><div dir=3D"ltr"><i><font size=3D"1">Co-Chair - TCG Trusted Mobilit=
-y Solutions WG</font></i></div><div><i><font size=3D"1">Co-Chair - TCG Meta=
-data Access Protocol SG<br></font></i></div><div dir=3D"ltr"><i><font size=
-=3D"1">Chair - Linux Foundation Open Printing WG<br>Secretary - IEEE-ISTO P=
-rinter Working Group<br>Co-Chair - IEEE-ISTO PWG Internet Printing Protocol=
- WG<br>IETF Designated Expert - IPP &amp; Printer MIB<br>Blue Roof Music / =
-High North Inc<br><a style=3D"color:rgb(51,51,255)" href=3D"http://sites.go=
-ogle.com/site/blueroofmusic" target=3D"_blank">http://sites.google.com/site=
-/blueroofmusic</a><br><a style=3D"color:rgb(102,0,204)" href=3D"http://site=
-s.google.com/site/highnorthinc" target=3D"_blank">http://sites.google.com/s=
-ite/highnorthinc</a><br>mailto: <a href=3D"mailto:blueroofmusic@gmail.com" =
-target=3D"_blank">blueroofmusic@gmail.com</a><br>(permanent) PO Box 221=C2=
-=A0 Grand Marais, MI 49839=C2=A0 906-494-2434</font></i></div></div></div><=
-/div></div></div></div></div></div></div></div></div></div></div></div></di=
-v></div></div></div><br></div></div><br><div class=3D"gmail_quote"><div dir=
-=3D"ltr" class=3D"gmail_attr">On Wed, Oct 21, 2020 at 4:49 PM Michael Sweet=
- &lt;<a href=3D"mailto:msweet@msweet.org">msweet@msweet.org</a>&gt; wrote:<=
-br></div><blockquote class=3D"gmail_quote" style=3D"margin:0px 0px 0px 0.8e=
-x;border-left:1px solid rgb(204,204,204);padding-left:1ex">Zdenek,<br>
-<br>
-&gt; On Oct 21, 2020, at 9:18 AM, Zdenek Dohnal &lt;<a href=3D"mailto:zdohn=
-al@redhat.com" target=3D"_blank">zdohnal@redhat.com</a>&gt; wrote:<br>
-&gt; ...<br>
-&gt; In this email I would like to ask if there can be a way how to work ar=
-ound such printer issues within CUPS, which can be aligned with RFC and PWG=
- standards, and can be merged into OpenPrinting/cups project.<br>
-<br>
-Aside from maybe retrying the Validate-Job request if it fails the first ti=
-me, I&#39;m not sure <br>
-<br>
-&gt; I have several ideas:<br>
-&gt; <br>
-&gt; 1) Validate-Job operation is &#39;only&#39; recommended since IPP 2.0,=
- so the backend would have printed only warning if Validate-Job failed and =
-the IPP protocol used for communication is 2.0 or newer<br>
-<br>
-Actually, while Validate-Job was listed as RECOMMENDED in IPP 2.0, IPP Ever=
-ywhere restores it to REQUIRED, just as STD 92 has required it going all th=
-e way back to the IPP/1.0 experimental version.<br>
-<br>
-&gt; 2) configurable retries for Validate-Job operation - this idea came up=
- from printer behavior (Validate-Job works after N retries) and from knowle=
-dge there are already configurable variables in backends via device uri<br>
-<br>
-I&#39;d rather it be automatic - either retry the Validate-Job operation or=
- just move on to printing without validation.<br>
-<br>
-&gt; 3) define a specific IPP_STATUS_* enum variable for failing Validate-J=
-ob, let the backend fail if ipp_status is that variable and let error-polic=
-y handle the possible retry<br>
-<br>
-I&#39;m not keen on &quot;supporting&quot; broken behavior.=C2=A0 Usually I=
-&#39;ve tried to &quot;gracefully degrade&quot; in these situations, which =
-would basically mean option 2 without the retry (just attempt to validate a=
-nd continue if we don&#39;t get a valid response.<br>
-<br>
-________________________<br>
-Michael Sweet<br>
-<br>
-<br>
-<br>
-_______________________________________________<br>
-Printing-architecture mailing list<br>
-<a href=3D"mailto:Printing-architecture@lists.linux-foundation.org" target=
-=3D"_blank">Printing-architecture@lists.linux-foundation.org</a><br>
-<a href=3D"https://lists.linuxfoundation.org/mailman/listinfo/printing-arch=
-itecture" rel=3D"noreferrer" target=3D"_blank">https://lists.linuxfoundatio=
-n.org/mailman/listinfo/printing-architecture</a><br>
-</blockquote></div>
+Hello,
 
---000000000000d24fd105b237d497--
+I have a Canon printer MF746Cx which is behaving funny under both Ubuntu
+18.04 and 20.04: when printing two-sided, some pages are shifted to the
+right and the printout is cutoff. The even funnier part is that it does
+so with pdf, odt and docx files, but not with all of them and not always
+on the same pages. For instance I have an 8-pages pdf where pages 4, 5,
+6 and 8 get shifted if I print the whole document, but if I only print
+those pages, they don't get shifted.
+
+I installed the printer with the UFR II driver I downloaded from the
+Canon website and there are other drivers there. I wanted to try the PCL
+and the PS drivers, to see if anything changes. But when I use these
+drivers and print the same document (or any document for that matter), I
+get the error "Stopped filters error". I opened the PPD files of these
+drivers and it seems to me, for what I can understand, that the UFR II
+prints using Ghostscript directly, whereas the other drivers invoke some
+foomatic command. I thought maybe the problem is with foomatic and
+wanted to try (re)installing it. However the following happens:
+
+    /sudo apt install foomatic-filters foomatic-db//
+    //Reading package lists... Done//
+    //Building dependency tree //
+    //Reading state information... Done//
+    //The following packages were automatically installed and are no
+    longer required://
+    //=C2=A0 at hplip-data libfontembed1 libgutenprint-common libgutenprin=
+t9//
+    //=C2=A0 libimagequant0 libjpeg62 liblouisutdml-bin liblouisutdml-data
+    liblouisutdml9//
+    //=C2=A0 libncurses5 libsane-hpaio libtinfo5 lsb-core lsb-security
+    ncurses-term pax//
+    //=C2=A0 python3-olefile python3-pil python3-renderpm python3-reportla=
+b//
+    //=C2=A0 python3-reportlab-accel//
+    //Use 'sudo apt autoremove' to remove them.//
+    //The following additional packages will be installed://
+    //=C2=A0 foomatic-db-engine//
+    //Suggested packages://
+    //=C2=A0 hplip hplip-cups cups-filters foomatic-db-gutenprint//
+    //Recommended packages://
+    //=C2=A0 cups//
+    //The following packages will be REMOVED://
+    //=C2=A0 bluez-cups cnrdrvcups-ufr2-uk cups cups-filters
+    epson-inkjet-printer-escpr//
+    //=C2=A0 epson-pc-fax epson-printer-utility foomatic-db-compressed-ppd=
+s
+    hplip//
+    //=C2=A0 indicator-printers lsb lsb-printing printer-driver-gutenprint=
+//
+    //=C2=A0 printer-driver-hpcups printer-driver-splix ubuntu-desktop//
+    //=C2=A0 ubuntu-desktop-minimal//
+    //The following NEW packages will be installed://
+    //=C2=A0 foomatic-db foomatic-db-engine foomatic-filters//
+    //0 upgraded, 3 newly installed, 17 to remove and 0 not upgraded.//
+    //Need to get 898 kB of archives.//
+    //After this operation, 140 MB disk space will be freed.//
+    //Do you want to continue? [Y/n]/
+
+I find it odd that it wants to remove CUPS and then recommends to
+install it again/. /I find it maybe even odder that it uninstalls
+"ubuntu-desktop" and all the other things. I didn't do it yet because I
+don't want to break my system.
+
+Should I answer "yes" and then reinstall the uninstalled packages?
+
+Thanks,
+
+Andrea
+//
+
+
+--------------59DE72DC5681733625A902A9
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+<html>
+  <head>
+
+    <meta http-equiv=3D"content-type" content=3D"text/html; charset=3DUTF-=
+8">
+  </head>
+  <body>
+    <p>Hello,</p>
+    <p>I have a Canon printer MF746Cx which is behaving funny under both
+      Ubuntu 18.04 and 20.04: when printing two-sided, some pages are
+      shifted to the right and the printout is cutoff. The even funnier
+      part is that it does so with pdf, odt and docx files, but not with
+      all of them and not always on the same pages. For instance I have
+      an 8-pages pdf where pages 4, 5, 6 and 8 get shifted if I print
+      the whole document, but if I only print those pages, they don't
+      get shifted.</p>
+    <p>I installed the printer with the UFR II driver I downloaded from
+      the Canon website and there are other drivers there. I wanted to
+      try the PCL and the PS drivers, to see if anything changes. But
+      when I use these drivers and print the same document (or any
+      document for that matter), I get the error "Stopped filters
+      error". I opened the PPD files of these drivers and it seems to
+      me, for what I can understand, that the UFR II prints using
+      Ghostscript directly, whereas the other drivers invoke some
+      foomatic command. I thought maybe the problem is with foomatic and
+      wanted to try (re)installing it. However the following happens:</p>
+    <blockquote>
+      <p><i>sudo apt install foomatic-filters foomatic-db</i><i><br>
+        </i><i>Reading package lists... Done</i><i><br>
+        </i><i>Building dependency tree=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=
+=A0 </i><i><br>
+        </i><i>Reading state information... Done</i><i><br>
+        </i><i>The following packages were automatically installed and
+          are no longer required:</i><i><br>
+        </i><i>=C2=A0 at hplip-data libfontembed1 libgutenprint-common
+          libgutenprint9</i><i><br>
+        </i><i>=C2=A0 libimagequant0 libjpeg62 liblouisutdml-bin
+          liblouisutdml-data liblouisutdml9</i><i><br>
+        </i><i>=C2=A0 libncurses5 libsane-hpaio libtinfo5 lsb-core
+          lsb-security ncurses-term pax</i><i><br>
+        </i><i>=C2=A0 python3-olefile python3-pil python3-renderpm
+          python3-reportlab</i><i><br>
+        </i><i>=C2=A0 python3-reportlab-accel</i><i><br>
+        </i><i>Use 'sudo apt autoremove' to remove them.</i><i><br>
+        </i><i>The following additional packages will be installed:</i><i>=
+<br>
+        </i><i>=C2=A0 foomatic-db-engine</i><i><br>
+        </i><i>Suggested packages:</i><i><br>
+        </i><i>=C2=A0 hplip hplip-cups cups-filters foomatic-db-gutenprint=
+</i><i><br>
+        </i><i>Recommended packages:</i><i><br>
+        </i><i>=C2=A0 cups</i><i><br>
+        </i><i>The following packages will be REMOVED:</i><i><br>
+        </i><i>=C2=A0 bluez-cups cnrdrvcups-ufr2-uk cups cups-filters
+          epson-inkjet-printer-escpr</i><i><br>
+        </i><i>=C2=A0 epson-pc-fax epson-printer-utility
+          foomatic-db-compressed-ppds hplip</i><i><br>
+        </i><i>=C2=A0 indicator-printers lsb lsb-printing
+          printer-driver-gutenprint</i><i><br>
+        </i><i>=C2=A0 printer-driver-hpcups printer-driver-splix
+          ubuntu-desktop</i><i><br>
+        </i><i>=C2=A0 ubuntu-desktop-minimal</i><i><br>
+        </i><i>The following NEW packages will be installed:</i><i><br>
+        </i><i>=C2=A0 foomatic-db foomatic-db-engine foomatic-filters</i><=
+i><br>
+        </i><i>0 upgraded, 3 newly installed, 17 to remove and 0 not
+          upgraded.</i><i><br>
+        </i><i>Need to get 898 kB of archives.</i><i><br>
+        </i><i>After this operation, 140 MB disk space will be freed.</i><=
+i><br>
+        </i><i>Do you want to continue? [Y/n]</i></p>
+    </blockquote>
+    <p>I find it odd that it wants to remove CUPS and then recommends to
+      install it again<i>. </i>I find it maybe even odder that it
+      uninstalls "ubuntu-desktop" and all the other things. I didn't do
+      it yet because I don't want to break my system.</p>
+    <p>Should I answer "yes" and then reinstall the uninstalled
+      packages?</p>
+    <p>Thanks,</p>
+    <p>Andrea<br>
+      <i></i></p>
+  </body>
+</html>
+
+--------------59DE72DC5681733625A902A9--
