@@ -1,19 +1,22 @@
-Return-Path: <msweet@msweet.org>
-Content-Type: text/plain;
-	charset=us-ascii
-Mime-Version: 1.0 (Mac OS X Mail 13.4 \(3608.120.23.2.4\))
-From: Michael Sweet <msweet@msweet.org>
-In-Reply-To: <46318bff-36e7-fcf4-19de-d5ed75fcac35@apevzner.com>
-Date: Thu, 22 Oct 2020 17:56:31 -0400
-Content-Transfer-Encoding: quoted-printable
-Message-Id: <8C681DFC-701F-4370-AD3E-CD15160B06DE@msweet.org>
-References: <f46bf16f-d469-cd4e-698e-525481cc98f6@redhat.com>
- <90443F3C-FBAE-4CF6-B34B-55887A90F11D@msweet.org>
- <9e45b8ca-0bde-12bb-5555-e469bdd27852@apevzner.com>
- <35F1D87E-67D6-424E-AD36-7F8C035A69E1@msweet.org>
- <46318bff-36e7-fcf4-19de-d5ed75fcac35@apevzner.com>
-Subject: Re: [Printing-architecture] IPP Validate-Job operation and its
- implementation in CUPS
+Return-Path: <till.kamppeter@gmail.com>
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
+ h=from:subject:to:message-id:date:user-agent:mime-version
+ :content-language:content-transfer-encoding;
+ bh=22mtDZbX5wl5X/nXD/03BdV4GlMd4iRkHZdGEhLKy4Y=;
+ b=BwttbPjXHF+4TMHSfyQccbdfd+x1B69pcK0ZRXC4x0a2T2+BMpX9z4WFDY+ccfyi0K
+ H7V6hs2HOLNdZOtiDV1DGQGGenebVnPN+LgP1M6uoTvvH11QyMI5FPLvSwR+FSPwnk4c
+ AptWlEMa4ntQGuVL330lKMZ2c+ZYV5JYtLoms/H/mjN43y6gn0olc2FHilXM5rgp0K2Y
+ MKKCMSKj/tEw3u+sxx9wvpz2jMPMfkVblAI4KBH++uG7zb+Ot94ik5oIDCyL7k1NgPbi
+ +VE+KqaHBLx+6gnJRI03rQgJ/mvVW8ossljz3NBjbn2lNzunKcAqjeR1oNateCZYcuy8
+ IJGQ==
+From: Till Kamppeter <till.kamppeter@gmail.com>
+Message-ID: <41d6ef0b-c09b-97d0-f379-7128a2e8f83d@gmail.com>
+Date: Mon, 26 Oct 2020 20:54:08 +0100
+MIME-Version: 1.0
+Content-Type: text/plain; charset=utf-8; format=flowed
+Content-Language: en-US
+Content-Transfer-Encoding: 7bit
+Subject: [Printing-architecture] OpenPrinting News
 List-Id: Printing architecture under linux
  <printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>, 
@@ -23,32 +26,14 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>, 
  <mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Alexander Pevzner <pzz@apevzner.com>
-Cc: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>
+To: Ira McDonald <blueroofmusic@gmail.com>, Aveek Basu <aveek.basu@lexmark.com>, Open Printing <printing-architecture@lists.linux-foundation.org>
 
-Alexander,
+Hi,
 
-> On Oct 22, 2020, at 5:39 PM, Alexander Pevzner <pzz@apevzner.com> =
-wrote:
->=20
-> Michael.
->=20
-> On 10/22/20 11:33 PM, Michael Sweet wrote:
->> Validate-Job is a necessary step in some managed/paid printing =
-configurations - you'll get back a per-job authorization code that need =
-to be used with Print-Job.
->> It is also a recommended step in both IPP Implementor's Guides...
->=20
-> Thank you for the explanation. And yet another question, what will =
-CUPS do, if printer doesn't understand Expect: 100-continue header?
+I have posted the newest development of the last month on our web site now.
 
-CUPS times out the expectation after 1 second, continuing the print job =
-(and assuming there won't be an authentication challenge).  Fortunately, =
-most printers support Expect, but if they don't there isn't a large =
-penalty.
+Here we go:
 
-________________________
-Michael Sweet
+https://openprinting.github.io/OpenPrinting-News-October-2020/
 
-
-
+    Till
