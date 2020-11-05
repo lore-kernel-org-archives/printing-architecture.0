@@ -1,20 +1,23 @@
 Return-Path: <zdohnal@redhat.com>
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=redhat.com;
- s=mimecast20190719; t=1604574572;
+ s=mimecast20190719; t=1604576442;
  h=from:from:reply-to:subject:subject:date:date:message-id:message-id:
- to:to:cc:mime-version:mime-version:content-type:content-type:autocrypt:autocrypt;
- bh=xUnb9qv1Xiii4Mfsqa0YctZheOOETQHT2BJpzDAhmhI=;
- b=J5kUNtNV6eTdvA3X8IFpYzZLhAvdgtc73eFGrwM0CeJPg+Hb8tMB3AZLBUos3YnhGy+T+/
- zal0Qfgeh+sSc5cClFZ4vobVYnPbftCZz7DeuhMaSFDvsgg5X1L6WXcjhTnG3Wmu4ZUq+y
- 0t0eftgo84YZjaXtZLPR2FKd5HmWZeA=
+ to:to:cc:mime-version:mime-version:content-type:content-type:
+ in-reply-to:in-reply-to:references:references:autocrypt:autocrypt;
+ bh=CFYyyfvJoM0BHnl1+I4Lqh3QYU8ZaaEBUqGaHlNgnfo=;
+ b=gWVcIZdVve+t6XfGKOMr3mHDORBy0CNSp+BKUvdPddw2D7Wj6ybEM6Pjl5xMuupbgKkRQx
+ kiq58kqmG4s4Xyzzg86ZOJ0xXEDta7PLJE63J9IN6FF/cYF1+T1qnh9t17FsLufUgQsxim
+ rwzTucHgVLWRPuMNWboINnRrOVZU6bQ=
+References: <ed686ce5-3251-3541-e11b-8d01614db9c8@redhat.com>
 From: Zdenek Dohnal <zdohnal@redhat.com>
-Message-ID: <ed686ce5-3251-3541-e11b-8d01614db9c8@redhat.com>
-Date: Thu, 5 Nov 2020 12:09:25 +0100
+Message-ID: <7c2f1c1c-f4ec-f0b6-ca4c-94307f6cc628@redhat.com>
+Date: Thu, 5 Nov 2020 12:40:33 +0100
 MIME-Version: 1.0
+In-Reply-To: <ed686ce5-3251-3541-e11b-8d01614db9c8@redhat.com>
 Content-Type: multipart/signed; micalg=pgp-sha256;
  protocol="application/pgp-signature";
- boundary="NS1kmRuJpK4DxpKIKnxqkif2T1SJgpJNn"
-Subject: [Printing-architecture] system-config-printer 1.15.13 released!
+ boundary="CFZ5bWYbdq3IjcPBj0fVsUtxLrcxTgwGx"
+Subject: Re: [Printing-architecture] system-config-printer 1.5.13 released!
 List-Id: Printing architecture under linux
  <printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>, 
@@ -24,41 +27,58 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>, 
  <mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>
+To: printing-architecture@lists.linux-foundation.org
 
 This is an OpenPGP/MIME signed message (RFC 4880 and 3156)
---NS1kmRuJpK4DxpKIKnxqkif2T1SJgpJNn
-Content-Type: multipart/mixed; boundary="GzmlSR944odpIEXX0Uw9DK4pbEwBkWfHT";
+--CFZ5bWYbdq3IjcPBj0fVsUtxLrcxTgwGx
+Content-Type: multipart/mixed; boundary="YJsrqkNtCSMr6iHRNRs5O1IY4EJgLZxrI";
  protected-headers="v1"
 From: Zdenek Dohnal <zdohnal@redhat.com>
-To: "printing-architecture@lists.linux-foundation.org"
- <printing-architecture@lists.linux-foundation.org>
-Message-ID: <ed686ce5-3251-3541-e11b-8d01614db9c8@redhat.com>
-Subject: system-config-printer 1.15.13 released!
+To: printing-architecture@lists.linux-foundation.org
+Message-ID: <7c2f1c1c-f4ec-f0b6-ca4c-94307f6cc628@redhat.com>
+Subject: Re: system-config-printer 1.5.13 released!
+References: <ed686ce5-3251-3541-e11b-8d01614db9c8@redhat.com>
+In-Reply-To: <ed686ce5-3251-3541-e11b-8d01614db9c8@redhat.com>
 
---GzmlSR944odpIEXX0Uw9DK4pbEwBkWfHT
+--YJsrqkNtCSMr6iHRNRs5O1IY4EJgLZxrI
 Content-Type: multipart/mixed;
- boundary="------------D51D29308698FF6226DC58FE"
+ boundary="------------81D1D7767D149EF889809ACF"
 Content-Language: en-US
 
 This is a multi-part message in MIME format.
---------------D51D29308698FF6226DC58FE
+--------------81D1D7767D149EF889809ACF
 Content-Type: multipart/alternative;
- boundary="------------2CCEFB54D0BDD6455A79F820"
+ boundary="------------E8C50DC4C5D2A18DC825BEE0"
 
---------------2CCEFB54D0BDD6455A79F820
+--------------E8C50DC4C5D2A18DC825BEE0
 Content-Type: text/plain; charset=utf-8
 Content-Transfer-Encoding: quoted-printable
 
-Hi all,
+The version is 1.5.13, the tag I created is wrong.
 
+Sorry for the mistake.
 
-the release 1.5.13 contains updated translations from Weblate and bug
-fixes since the last release.
-
-My thanks to all contributors!
-
-Please enjoy!
+On 11/5/20 12:09 PM, Zdenek Dohnal wrote:
+>
+> Hi all,
+>
+>
+> the release 1.5.13 contains updated translations from Weblate and bug
+> fixes since the last release.
+>
+> My thanks to all contributors!
+>
+> Please enjoy!
+>
+> --=20
+> Zdenek Dohnal
+> Software Engineer
+> Red Hat Czech - Brno TPB-C
+>
+> _______________________________________________
+> Printing-architecture mailing list
+> Printing-architecture@lists.linux-foundation.org
+> https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture
 
 --=20
 Zdenek Dohnal
@@ -66,27 +86,54 @@ Software Engineer
 Red Hat Czech - Brno TPB-C
 
 
---------------2CCEFB54D0BDD6455A79F820
+--------------E8C50DC4C5D2A18DC825BEE0
 Content-Type: text/html; charset=utf-8
 Content-Transfer-Encoding: quoted-printable
 
 <html>
   <head>
-
-    <meta http-equiv=3D"content-type" content=3D"text/html; charset=3DUTF-8=
+    <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3DUTF-8=
 ">
   </head>
   <body>
-    <div class=3D"markdown-body">
-      <p>Hi all,<br>
-      </p>
-      <p><br>
-      </p>
-      <p>the release 1.5.13 contains updated translations from Weblate
-        and bug fixes since the last release.</p>
-      <p>My thanks to all contributors!</p>
-      <p>Please enjoy!</p>
+    <p>The version is 1.5.13, the tag I created is wrong.</p>
+    <p>Sorry for the mistake.<br>
+    </p>
+    <div class=3D"moz-cite-prefix">On 11/5/20 12:09 PM, Zdenek Dohnal
+      wrote:<br>
     </div>
+    <blockquote type=3D"cite"
+      cite=3D"mid:ed686ce5-3251-3541-e11b-8d01614db9c8@redhat.com">
+      <meta http-equiv=3D"content-type" content=3D"text/html; charset=3DUTF=
+-8">
+      <div class=3D"markdown-body">
+        <p>Hi all,<br>
+        </p>
+        <p><br>
+        </p>
+        <p>the release 1.5.13 contains updated translations from Weblate
+          and bug fixes since the last release.</p>
+        <p>My thanks to all contributors!</p>
+        <p>Please enjoy!</p>
+      </div>
+      <pre class=3D"moz-signature" cols=3D"72">--=20
+Zdenek Dohnal
+Software Engineer
+Red Hat Czech - Brno TPB-C
+</pre>
+      <br>
+      <fieldset class=3D"mimeAttachmentHeader"></fieldset>
+      <pre class=3D"moz-quote-pre" wrap=3D"">______________________________=
+_________________
+Printing-architecture mailing list
+<a class=3D"moz-txt-link-abbreviated" href=3D"mailto:Printing-architecture@=
+lists.linux-foundation.org">Printing-architecture@lists.linux-foundation.or=
+g</a>
+<a class=3D"moz-txt-link-freetext" href=3D"https://lists.linuxfoundation.or=
+g/mailman/listinfo/printing-architecture">https://lists.linuxfoundation.org=
+/mailman/listinfo/printing-architecture</a>
+</pre>
+    </blockquote>
     <pre class=3D"moz-signature" cols=3D"72">--=20
 Zdenek Dohnal
 Software Engineer
@@ -95,9 +142,9 @@ Red Hat Czech - Brno TPB-C
   </body>
 </html>
 
---------------2CCEFB54D0BDD6455A79F820--
+--------------E8C50DC4C5D2A18DC825BEE0--
 
---------------D51D29308698FF6226DC58FE
+--------------81D1D7767D149EF889809ACF
 Content-Type: application/pgp-keys;
  name="OpenPGP_0x15AA6A7F4D4227D7.asc"
 Content-Transfer-Encoding: quoted-printable
@@ -236,25 +283,25 @@ peO53ul5Eb8zavTdtyOUdgKhUwt7OvS0onRNv+QZurdmYaerzmNW70p2KVGfzf4gCwaOK70=3D
 =3D2Huw
 -----END PGP PUBLIC KEY BLOCK-----
 
---------------D51D29308698FF6226DC58FE--
+--------------81D1D7767D149EF889809ACF--
 
---GzmlSR944odpIEXX0Uw9DK4pbEwBkWfHT--
+--YJsrqkNtCSMr6iHRNRs5O1IY4EJgLZxrI--
 
---NS1kmRuJpK4DxpKIKnxqkif2T1SJgpJNn
+--CFZ5bWYbdq3IjcPBj0fVsUtxLrcxTgwGx
 Content-Type: application/pgp-signature; name="OpenPGP_signature.asc"
 Content-Description: OpenPGP digital signature
 Content-Disposition: attachment; filename="OpenPGP_signature"
 
 -----BEGIN PGP SIGNATURE-----
 
-wsB5BAABCAAjFiEEettYIDyl8EbygCWyFapqf01CJ9cFAl+j3WUFAwAAAAAACgkQFapqf01CJ9fu
-wQgAoxayHP18SF0JELJxH/Uvi674Eh2capUWXHG+PEHEr0oS6ky7vQA87wcak16M+wlXsC28uuGY
-T41BvakUfwLm1nyew/i6ymB1RTAe7S+xHPgfjthsuuMRsPwh2tBTCubfwL5c+WwBlhwyE+8T4vHn
-HIfphdYT9y+qUwxbwDgBfy4rEvgh7VK3A3bK7cgXLz/UK3D3hfwZZ7P8Vc4i4iyyyHd6EigmQDzG
-919k8CBite07FBm60mOGEtKfI6/HzdoaivdYha8AVY0DyYf3nIyuQHmv5eGps4dAsvS5eL79jWLp
-fUFUGFtL04DJvwQZupHWZaltL9EpAkDw2PCIoTlpCg==
-=SQjW
+wsB5BAABCAAjFiEEettYIDyl8EbygCWyFapqf01CJ9cFAl+j5LEFAwAAAAAACgkQFapqf01CJ9dY
+gggAp06SpWfhk2dzYgZf+9L/a7dznHOXRom9MO/fgmypXM5icjQLWyqUCImP4lc61KTJKq30srf3
+lxnfJi81ghrAAUtaERenamuj++DAUIUHZaeVd+CivKq4AUWMJ3+7YJXdGlLBPbExXY+sX4q05hYs
+lULzEEJyoDvn44F3uJfwAlrF6WxWKsFl8u0Fu6EjAtbGxXOHtVAs6pvbN7yee8NnJxvo7jgihw4u
+8HuBbfxL2y5PCdPv2NLImYAzNJZp1ek7C08225w0u3jVKPrM6/dG9eOeSDafMucAofC4BD35RYPg
+g6yosJe09bjky6ha/rsDhcW5/LhdSZpRsl6bkJbjvA==
+=UNff
 -----END PGP SIGNATURE-----
 
---NS1kmRuJpK4DxpKIKnxqkif2T1SJgpJNn--
+--CFZ5bWYbdq3IjcPBj0fVsUtxLrcxTgwGx--
 
