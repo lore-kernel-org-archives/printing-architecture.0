@@ -1,23 +1,19 @@
-Return-Path: <zdohnal@redhat.com>
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=redhat.com;
- s=mimecast20190719; t=1604576442;
- h=from:from:reply-to:subject:subject:date:date:message-id:message-id:
- to:to:cc:mime-version:mime-version:content-type:content-type:
- in-reply-to:in-reply-to:references:references:autocrypt:autocrypt;
- bh=CFYyyfvJoM0BHnl1+I4Lqh3QYU8ZaaEBUqGaHlNgnfo=;
- b=gWVcIZdVve+t6XfGKOMr3mHDORBy0CNSp+BKUvdPddw2D7Wj6ybEM6Pjl5xMuupbgKkRQx
- kiq58kqmG4s4Xyzzg86ZOJ0xXEDta7PLJE63J9IN6FF/cYF1+T1qnh9t17FsLufUgQsxim
- rwzTucHgVLWRPuMNWboINnRrOVZU6bQ=
-References: <ed686ce5-3251-3541-e11b-8d01614db9c8@redhat.com>
-From: Zdenek Dohnal <zdohnal@redhat.com>
-Message-ID: <7c2f1c1c-f4ec-f0b6-ca4c-94307f6cc628@redhat.com>
-Date: Thu, 5 Nov 2020 12:40:33 +0100
+Return-Path: <blueroofmusic@gmail.com>
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
+ h=mime-version:from:date:message-id:subject:to;
+ bh=zjUEqu3HOKtD4Q+tTEnEqHneOaxIBMFnuN1YMKsE+as=;
+ b=r99dTwK3Ragy35nYPhbT1BXkL/ImHMId5tbMRmxZJ0kv6isdmVwenaydEvySYV3nQS
+ 096w49yD1kns0QCwpsKZVp4zBHLbDSNru1TUhlC1N/EttXeaJ2+bDs8SoP2zhUg8RLvd
+ yjJQ3CvoVzqwsWAxq9qNuh231g+EMmKpCxLk5qaH/fBAEGh6zyakLB281dq0+9uQytdZ
+ zjyJoggzGixJDPBIB5I4ThUleRrOJBEsr6J2Uv9XloV9Pll0uF41wzJVEDs9lQBHVKkX
+ vciamyUsV1kh784Af/r0o4xLHBLkjvTwdT4wkn+Dw4RgiTUvhWuFc4Z9Lbipnhl4OaBJ
+ 084A==
 MIME-Version: 1.0
-In-Reply-To: <ed686ce5-3251-3541-e11b-8d01614db9c8@redhat.com>
-Content-Type: multipart/signed; micalg=pgp-sha256;
- protocol="application/pgp-signature";
- boundary="CFZ5bWYbdq3IjcPBj0fVsUtxLrcxTgwGx"
-Subject: Re: [Printing-architecture] system-config-printer 1.5.13 released!
+From: Ira McDonald <blueroofmusic@gmail.com>
+Date: Mon, 9 Nov 2020 09:49:02 -0500
+Message-ID: <CAN40gSt4oN6W-BD-Cf0wH3cneMSByDiqePAK131Xyrb0Dmjhew@mail.gmail.com>
+Content-Type: multipart/alternative; boundary="00000000000090313305b3adaa58"
+Subject: [Printing-architecture] REMINDER:OP Monthly Call on 11/10/20
 List-Id: Printing architecture under linux
  <printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>, 
@@ -27,281 +23,108 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>, 
  <mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: printing-architecture@lists.linux-foundation.org
+To: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>, Till Kamppeter <till.kamppeter@gmail.com>, Aveek Basu <basu.aveek@gmail.com>, Danny Brennan <brennand@us.ibm.com>, Ira McDonald <blueroofmusic@gmail.com>
 
-This is an OpenPGP/MIME signed message (RFC 4880 and 3156)
---CFZ5bWYbdq3IjcPBj0fVsUtxLrcxTgwGx
-Content-Type: multipart/mixed; boundary="YJsrqkNtCSMr6iHRNRs5O1IY4EJgLZxrI";
- protected-headers="v1"
-From: Zdenek Dohnal <zdohnal@redhat.com>
-To: printing-architecture@lists.linux-foundation.org
-Message-ID: <7c2f1c1c-f4ec-f0b6-ca4c-94307f6cc628@redhat.com>
-Subject: Re: system-config-printer 1.5.13 released!
-References: <ed686ce5-3251-3541-e11b-8d01614db9c8@redhat.com>
-In-Reply-To: <ed686ce5-3251-3541-e11b-8d01614db9c8@redhat.com>
+--00000000000090313305b3adaa58
+Content-Type: text/plain; charset="UTF-8"
 
---YJsrqkNtCSMr6iHRNRs5O1IY4EJgLZxrI
-Content-Type: multipart/mixed;
- boundary="------------81D1D7767D149EF889809ACF"
-Content-Language: en-US
+Hi,
 
-This is a multi-part message in MIME format.
---------------81D1D7767D149EF889809ACF
-Content-Type: multipart/alternative;
- boundary="------------E8C50DC4C5D2A18DC825BEE0"
+Our next regular monthly call will be on Tuesday
 
---------------E8C50DC4C5D2A18DC825BEE0
-Content-Type: text/plain; charset=utf-8
+    - Tuesday 3 November 2020, Daytime
+      - ONE TIME WebEx web conference was announced
+      - Note - EU Summer Time ends 25 October 2020
+      - Note - US Daylight Time ends 1 November 2020
+      - Note - US NIST MPTS Virtual Workshop - 2-4 November 2020
+      - Note - PWG Virtual F2F - 10-12 November 2020
+      - Note - ISO TC22/SC32/WG12 Bi-Weekly - 10 November 2020
+      - Note - IETF 109 Virtual F2F - 16-20 November 2020
+      - Note - ISO TC22/SC32/WG12 Bi-Weekly - 24 November 2020
+      - US
+        10am in San Francisco - US PST (Pacific Standard Time)
+        11am in Colorado - US MST (Mountain Standard Time)
+        12am in Chicago - US CST (Central Standard Time)
+        1pm in New York - US EST (Eastern Standard Time)
+      - Europe
+        7pm in Berlin - CET (Central Europe Time)
+      - Brazil
+        3pm in Belo Horizonte - BRT (Brasilia Time)
+      - India
+        11:30pm in New Delhi - IST (India Standard Time)
+
+Stay safe,
+- Ira
+
+
+*Ira McDonald (Musician / Software Architect)*
+
+*Chair - SAE Trust Anchors and Authentication TF*
+*Co-Chair - TCG Trusted Mobility Solutions WG*
+
+*Co-Chair - TCG Metadata Access Protocol SG*
+
+
+
+
+
+
+
+
+*Chair - Linux Foundation Open Printing WGSecretary - IEEE-ISTO Printer
+Working GroupCo-Chair - IEEE-ISTO PWG Internet Printing Protocol WGIETF
+Designated Expert - IPP & Printer MIBBlue Roof Music / High North
+Inchttp://sites.google.com/site/blueroofmusic
+<http://sites.google.com/site/blueroofmusic>http://sites.google.com/site/highnorthinc
+<http://sites.google.com/site/highnorthinc>mailto: blueroofmusic@gmail.com
+<blueroofmusic@gmail.com>(permanent) PO Box 221  Grand Marais, MI 49839
+906-494-2434*
+
+--00000000000090313305b3adaa58
+Content-Type: text/html; charset="UTF-8"
 Content-Transfer-Encoding: quoted-printable
 
-The version is 1.5.13, the tag I created is wrong.
+<div dir=3D"ltr"><div>Hi,</div><div><br></div><div>
+Our next regular monthly call will be on Tuesday <br></div><div><br></div><=
+div>=C2=A0 =C2=A0 - Tuesday 3 November 2020, Daytime<br>=C2=A0 =C2=A0 =C2=
+=A0 - ONE TIME WebEx web conference was announced<br>=C2=A0 =C2=A0 =C2=A0 -=
+ Note - EU Summer Time ends 25 October 2020<br>=C2=A0 =C2=A0 =C2=A0 - Note =
+- US Daylight Time ends 1 November 2020<br>=C2=A0 =C2=A0 =C2=A0 - Note - US=
+ NIST MPTS Virtual Workshop - 2-4 November 2020<br>=C2=A0 =C2=A0 =C2=A0 - N=
+ote - PWG Virtual F2F - 10-12 November 2020<br>=C2=A0 =C2=A0 =C2=A0 - Note =
+- ISO TC22/SC32/WG12 Bi-Weekly - 10 November 2020<br>=C2=A0 =C2=A0 =C2=A0 -=
+ Note - IETF 109 Virtual F2F - 16-20 November 2020<br>=C2=A0 =C2=A0 =C2=A0 =
+- Note - ISO TC22/SC32/WG12 Bi-Weekly - 24 November 2020<br>=C2=A0 =C2=A0 =
+=C2=A0 - US<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 10am in San Francisco - US PST (=
+Pacific Standard Time)<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 11am in Colorado - US=
+ MST (Mountain Standard Time)<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 12am in Chicag=
+o - US CST (Central Standard Time)<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 1pm in Ne=
+w York - US EST (Eastern Standard Time)<br>=C2=A0 =C2=A0 =C2=A0 - Europe<br=
+>=C2=A0 =C2=A0 =C2=A0 =C2=A0 7pm in Berlin - CET (Central Europe Time)<br>=
+=C2=A0 =C2=A0 =C2=A0 - Brazil<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 3pm in Belo Ho=
+rizonte - BRT (Brasilia Time)<br>=C2=A0 =C2=A0 =C2=A0 - India<br>=C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 11:30pm in New Delhi - IST (India Standard Time)</div><di=
+v><br></div><div>Stay safe,</div><div>- Ira</div><div><br></div><div><br></=
+div><div><div><div dir=3D"ltr" class=3D"gmail_signature" data-smartmail=3D"=
+gmail_signature"><div dir=3D"ltr"><div><div dir=3D"ltr"><div><div dir=3D"lt=
+r"><div><div dir=3D"ltr"><div><div dir=3D"ltr"><div><div dir=3D"ltr"><div><=
+div dir=3D"ltr"><div><div dir=3D"ltr"><div><div dir=3D"ltr"><i><font size=
+=3D"1">Ira McDonald (Musician / Software Architect)</font></i></div><div><i=
+><font size=3D"1">Chair - SAE Trust Anchors and Authentication TF<br></font=
+></i></div><div dir=3D"ltr"><i><font size=3D"1">Co-Chair - TCG Trusted Mobi=
+lity Solutions WG</font></i></div><div><i><font size=3D"1">Co-Chair - TCG M=
+etadata Access Protocol SG<br></font></i></div><div dir=3D"ltr"><i><font si=
+ze=3D"1">Chair - Linux Foundation Open Printing WG<br>Secretary - IEEE-ISTO=
+ Printer Working Group<br>Co-Chair - IEEE-ISTO PWG Internet Printing Protoc=
+ol WG<br>IETF Designated Expert - IPP &amp; Printer MIB<br>Blue Roof Music =
+/ High North Inc<br><a style=3D"color:rgb(51,51,255)" href=3D"http://sites.=
+google.com/site/blueroofmusic" target=3D"_blank">http://sites.google.com/si=
+te/blueroofmusic</a><br><a style=3D"color:rgb(102,0,204)" href=3D"http://si=
+tes.google.com/site/highnorthinc" target=3D"_blank">http://sites.google.com=
+/site/highnorthinc</a><br>mailto: <a href=3D"mailto:blueroofmusic@gmail.com=
+" target=3D"_blank">blueroofmusic@gmail.com</a><br>(permanent) PO Box 221=
+=C2=A0 Grand Marais, MI 49839=C2=A0 906-494-2434</font></i></div></div></di=
+v></div></div></div></div></div></div></div></div></div></div></div></div><=
+/div></div></div></div></div></div>
 
-Sorry for the mistake.
-
-On 11/5/20 12:09 PM, Zdenek Dohnal wrote:
->
-> Hi all,
->
->
-> the release 1.5.13 contains updated translations from Weblate and bug
-> fixes since the last release.
->
-> My thanks to all contributors!
->
-> Please enjoy!
->
-> --=20
-> Zdenek Dohnal
-> Software Engineer
-> Red Hat Czech - Brno TPB-C
->
-> _______________________________________________
-> Printing-architecture mailing list
-> Printing-architecture@lists.linux-foundation.org
-> https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture
-
---=20
-Zdenek Dohnal
-Software Engineer
-Red Hat Czech - Brno TPB-C
-
-
---------------E8C50DC4C5D2A18DC825BEE0
-Content-Type: text/html; charset=utf-8
-Content-Transfer-Encoding: quoted-printable
-
-<html>
-  <head>
-    <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3DUTF-8=
-">
-  </head>
-  <body>
-    <p>The version is 1.5.13, the tag I created is wrong.</p>
-    <p>Sorry for the mistake.<br>
-    </p>
-    <div class=3D"moz-cite-prefix">On 11/5/20 12:09 PM, Zdenek Dohnal
-      wrote:<br>
-    </div>
-    <blockquote type=3D"cite"
-      cite=3D"mid:ed686ce5-3251-3541-e11b-8d01614db9c8@redhat.com">
-      <meta http-equiv=3D"content-type" content=3D"text/html; charset=3DUTF=
--8">
-      <div class=3D"markdown-body">
-        <p>Hi all,<br>
-        </p>
-        <p><br>
-        </p>
-        <p>the release 1.5.13 contains updated translations from Weblate
-          and bug fixes since the last release.</p>
-        <p>My thanks to all contributors!</p>
-        <p>Please enjoy!</p>
-      </div>
-      <pre class=3D"moz-signature" cols=3D"72">--=20
-Zdenek Dohnal
-Software Engineer
-Red Hat Czech - Brno TPB-C
-</pre>
-      <br>
-      <fieldset class=3D"mimeAttachmentHeader"></fieldset>
-      <pre class=3D"moz-quote-pre" wrap=3D"">______________________________=
-_________________
-Printing-architecture mailing list
-<a class=3D"moz-txt-link-abbreviated" href=3D"mailto:Printing-architecture@=
-lists.linux-foundation.org">Printing-architecture@lists.linux-foundation.or=
-g</a>
-<a class=3D"moz-txt-link-freetext" href=3D"https://lists.linuxfoundation.or=
-g/mailman/listinfo/printing-architecture">https://lists.linuxfoundation.org=
-/mailman/listinfo/printing-architecture</a>
-</pre>
-    </blockquote>
-    <pre class=3D"moz-signature" cols=3D"72">--=20
-Zdenek Dohnal
-Software Engineer
-Red Hat Czech - Brno TPB-C
-</pre>
-  </body>
-</html>
-
---------------E8C50DC4C5D2A18DC825BEE0--
-
---------------81D1D7767D149EF889809ACF
-Content-Type: application/pgp-keys;
- name="OpenPGP_0x15AA6A7F4D4227D7.asc"
-Content-Transfer-Encoding: quoted-printable
-Content-Disposition: attachment;
- filename="OpenPGP_0x15AA6A7F4D4227D7.asc"
-
------BEGIN PGP PUBLIC KEY BLOCK-----
-
-xsBNBFbZeMIBCADLGScYlbdbhspY7PL46UYJ1GGROaK887NCRJUU4IhHcLWxp7RIURUVT6yrEY0=
-L
-dRck5GzzF5M/VovU/9IAdEdDk5MaPT/K2MELK4fdLTyNAGfJjSzYLVdPac6JyxUg4CRPjqtfBcC=
-2
-k7ddQ+cxNJN1Fk2dokApST+0yzLwRmdZQAhky3pQZBStfNlXxHQ4XRTGOhiDZkNar5DB8Fakb2P=
-/
-wUDSZX2J1eE4uVb3xZAyVAgzYkeOMCuU8aEqDZCWeKh+pWfdYU4ZOkS6f/P+svIocv13Xz1Fzsp=
-X
-i/0bp0mgjz5bLkSzNnMvX6LXR8tbMj/D82O+RSH0eNYvMazkTM0pABEBAAHNQFpkZW5layBEb2h=
-u
-YWwgKEFzc29jaWF0ZSBTb2Z0d2FyZSBFbmdpbmVlcikgPHpkb2huYWxAcmVkaGF0LmNvbT7CwHg=
-E
-EwECACICGwMGCwkIBwMCBhUIAgkKCwQWAgMBAh4BAheABQJbs4XwAAoJEBWqan9NQifXPpUH/3S=
-O
-LxBbeMtt5BYIKZFKeKzdd1zK0On1ng92frPlxlshYkC/aZwiqPDz8sB9Y14QmeiGI2Esdtw1she=
-N
-hsqT+FIkhqCU0GevFv30uHpdZLEwyIXasTmm7M/mahEON8pLhYTpc4UVL9S5j0/nO8c8GAGARHY=
-5
-0zjNhnqAauKR8CzCWIi8L6apdlF3RBxIya/+bezvqfhMN3gZmyCMhU17ZStL1Pg4g9mQjHYDo0v=
-x
-RHP2O9xnXTJenoY6edg/0+brIypUu6K70J7dTHySsZxd03vRECZq4ZVRxUyrgjWemdd7D92Yaw1=
-t
-9Z8FiCB3K6osTjUv2ZLhEeHbpt6r46KYHNnCRgQTEQIABgUCWEAQzQAKCRBf8G8puh4BOzS/AJ9=
-b
-6dI4Bv7r4Wo9Kk+pAG6sg89H/wCdGWfCjRdw2nxGf4wp9eukeZzOHvfCwFwEEAECAAYFAlg+79k=
-A
-CgkQ2OHADgduhAviqggAnWdENr/s9CCsvHIanpruqC8zHKX2Pdpan5A8pgtIz2I3ANcI1eHh4ZK=
-y
-s04MbK/dmyaUGZGpdPSi7OPsSN3PexxE7vsHV0KFCoFvPVdMEpVetwbQyyt5Du7aLHXRXn/hUyF=
-R
-mt4/yfLay3kTn4lgg4Xnx1AyybK5Bt3Xk6q95/Yrnu6i06XeK4sgQTOuHU/RKGx9y7K6ZhDkTqZ=
-W
-wRY/BY9F5tUyyuIm6weeUIedz2AU7Fvzqzp0aW35J72ucIfkCJTtDhQJJikWilqnjw4eZikTM/K=
-V
-HNh+jTKHl3CD1+lKgouEWTMU5OYNYVZedFrh3GkBcLVLuw/FqJY88X4Cn8LAXAQQAQgABgUCWFQ=
-W
-UAAKCRC5NrdHJYkzWP8QCACa9nADVSXUlT8zrA5ecVxx33LvVPk+Muapw+FgfIXSJQarYkrzf1S=
-n
-hDUE7FBxfS6RZY57fhEYfkEnka2sg34t5CCRFwzrez3Sy70cSWLsWVHl3l7zfypAESQ9zHvvFft=
-p
-+G8Zkj7BRv8b9zZSIaef0zhAQOUCmUhzUIQBCypyBCr1QZxvv+vFxUgTjBbDHDRwiwMq0LkHyEN=
-r
-w2vPA5uOkMBoskXuRPS5UEbRZrRyqwX1UuuK+OK+Y07YiFJVZ8VeQuXrsub8w9XyH1VSGPO6UuD=
-P
-HxoprDGFzvdpBMNjzI4TtpmjDlVTBWQNLYSSyhKMMGmu1VfTVhe+z8x1YIutwsBcBBMBCAAGBQJ=
-Y
-V9WbAAoJEMWIetUdnzwtO5cH+QHSLvp0NSQm4F3UhJ5qftORq8FDI5Aha49EH7auLq/hV3N7cGn=
-m
-ZKJKcrsr/EAopBDZt3MvUp37q1eqaeVJ7osMndNhPG1QSksa1Wn5X/NIQtBHkp+tRx9OnhkF/Fe=
-P
-gNT9RELJW0DH94ai5IE6QzRbdgWMJIXFpFrj5A4SbSDt8+P4b97nJnidRaDw957RW4vaQQYss0k=
-o
-0dQeNuvRn4WvFfszP0bn2kEy2cmmg5QBH1G0H4UfPGcidpica0PfRxIDwA1lAtTxNmS1NrwiBbC=
-R
-NJv5UqDTirmb/Y/l3ZogY3VZsuDexhgjbaZYiQxjuY3jaawPG9DMab7nSJZrdW7CwVwEEwEIAAY=
-F
-AlhAG/oACgkQXgo6wF/WSvVJUBAAiRHwfI5hQG5NK8jtJ0+YVJ6hfSMiBlnPuv9sU31B0QiU1KT=
-b
-yGoeKwWN824TMvSuwIN4KK4+09AM7FuAK/IYBLNddznnQ9odSZ1mG5Ht7TaxSjz/3mWyuQ7BM03=
-O
-rcucpziFpf2OI8qsU3SX6Dkw80l4U7puyIoxPymsrUvCRhqhP6S3yZjb4i8yhVjNfEuJeFERDS9=
-2
-Un9LXrYPuvsImo6V/b5A7k98Wm3yWpjHjGgGZZsgzDp1bqmxOJbHnZr3uXLstwjMNy/KNCMRDYE=
-4
-jNl0bT8NP058IubCvuUjk9efEMMTvszFZKXlWDdRHqvAzuwiboJrma5SH2scwLX3051KzPNRLFo=
-g
-pv9/L1ATCnpHAkTav/wnfyWh10pAW+M11KEABrbwCf916hsebRZv2ea6uF/gpXrh90FVupXdM7G=
-o
-Xmo0LvBQHnN44GHUl6lcqJdKnOJLQDQ050cK2logMAZVKbUX34KOuGfvgMR+PPoPP1BCa+HC78Y=
-v
-oOvzuvxbvm3UShnbcHGXBNxNhcxYJbP4EfKy0Qjb1HqOXrjBT19dDuPtn/lqgyGfYkcoar4eyzK=
-M
-DyueIUgFrg4QA74R54mrvW/IYlu5+mZKqO38IVmASBz2DtD2DRqtrxA/BvnZUGEv4h/TxBxFzEA=
-F
-AtHCiysOacTXnvpgW6q4sBlfQgfCwHoEEAEIACQFAlg+9s8DBQJ4GYY8W14+XStbQC5dcmVkaGF=
-0
-XC5jb20+JAAACgkQjH07+2XGyXMvKAf/RX5iJERSS0mKJe4lp4hsdwfbZAoShueJdk+/Obvpu5+=
-1
-DKqCFs9Nl5LFcsNxV1QYeWrvNgKmJoOL5g/ro1yXZzgdcIXUtTlKO6LS0stxpFKYDZl8hfmMAYp=
-w
-s1CktDCiSdbgTsRzXWwgP2Gg6vpLaxd8eyBHaJ+FqiP7mzqW+7oa0rbA3GANc6r+Bxa/gDIfeh5=
-L
-zT39VdhEdS9MnjRKp6Ua5VgjCk1Up18INAU4gYcBzIcBOtnYYPWRGIGHVJ2AayQgRGG83POsO+K=
-8
-F7dBMAvevFBOfmlieU8wW7aySza5Zmg4iWbBZ4icJmtPf+9LBeSSs5CwVkCWhJoU4ro77cLAfgQ=
-T
-AQIAKAUCVtl4wgIbAwUJAeEzgAYLCQgHAwIGFQgCCQoLBBYCAwECHgECF4AACgkQFapqf01CJ9f=
-N
-mAf+JDEF4AsAH1+0UEhUkaH1hM4FPWKr3nw4kfSfy8Pwlfro1idg4YgkNsyIWMw7MSycxnz/fNe=
-p
-7Nx8orPOipzRK49nJNPdl265JsXBHQmKTizawsUPqwMWyLbkW30bYdbKCqeEjzl1CdHdQuMf/ru=
-a
-HbS4vzRiADNyKVS0fz8EBPbrv/goIfOmTzfa8yJEsef8UYNryk5dc+no2HXcy3Pe2XyDmb+FdUr=
-J
-+OA9vJpadMpKNoOgTSyR9ZmQvj6CC20iJYWKQxsqXdfdmWmqzAn9AaKZF2umdwyD5uzbigH40hm=
-r
-3qAue4VZ0xh89P7LmHL8PeXIhwl19yZ8EVLRGKAfxsLAeAQTAQIAIgIbAwYLCQgHAwIGFQgCCQo=
-L
-BBYCAwECHgECF4AFAlhrm+EACgkQFapqf01CJ9eeDwf/eTK6jK4/AzzEizPXqBCFis9gG+yh2vO=
-L
-1gvXeMkpjqB/4X8hEXKOCpSIGhziZ3F0Nt6XTOkLrBvya9szlS4xBafsqePGsAQCdbdrykkrQmU=
-v
-s7Er8OkbYG4dnHwLKnb+q0/orLmII6Qu99cEqRICGdHTdTmYR4Pqf9y1IxyxONAjWUBIanphZns=
-M
-R8r6eAgbn7Ky5B+KyxZ+U5+aFRElDhPFtiuNQ33KNIVwSS+vcJDOB2PA7c77bKl0PIq5fs7I9vO=
-N
-hxMJL6At9IHhyNSGcX7/ecFoVeHO2466nsIlEybTD+A8O8662FDXbaT71ZfyNWay4121MfW/JQu=
-3
-hDJ8k87ATQRW2XjCAQgArdEQCzfbASdoA1+WEQGmL3KT6mQYIKTWOtly6SyruQZ1kTZOKlqN0z4=
-w
-o+1ntPDK6wDPZ/Xqy7zB0VbakZq6KRxQVnRyFzMIeXyuBCKEbomWkQGwjbvzDcNfDZnAL8Jt4me=
-S
-/OhXiX/cKZEwFyvmkY3bXyUeb9GFVcvsDUMOmetxrww73yd7UEOXi6xiRR51srTdpQnNpGAWcby=
-m
-Oy9OvuKXvKBpwk5diuZfhW4J13EhIxIDW1lQd2Va/F5Ng/SlkyI+tYTYPpZtMSBZgLgbmXuZdXW=
-z
-MCQw5Pf8bThDnX4xl5XWLTJE4F2Y1NS8tVJGsJmiJJfzmjWGLdzWksE7bQARAQABwsBfBBgBAgA=
-J
-AhsMBQJYa5vhAAoJEBWqan9NQifXkPMH/2X2ZY+mqZpGQ3NKlFwTWAMLnWtLWuMBYaz3zVdHKfK=
-O
-45b+aZ40AOVR72thEjbdQ8oDE6q9G4Bwzw3iWQsYfNHQX3TRFcFqWsngRp0HSZpkhRSyrnOw76j=
-f
-yKrHycVJ6OKwUdll4Km3fTk7YbqYT/sXkkbH1IA33iZoClvHClEAwsK7fhTFJRPMe2Ah0gzKQOH=
-/
-XNMLP+9WUuvdMZZyi0HFrT2UkDBnp8U2ZsxVWWgmxAfoMImH18oDCqBYhHXDkX5mQfnTaGdanKe=
-9
-peO53ul5Eb8zavTdtyOUdgKhUwt7OvS0onRNv+QZurdmYaerzmNW70p2KVGfzf4gCwaOK70=3D
-=3D2Huw
------END PGP PUBLIC KEY BLOCK-----
-
---------------81D1D7767D149EF889809ACF--
-
---YJsrqkNtCSMr6iHRNRs5O1IY4EJgLZxrI--
-
---CFZ5bWYbdq3IjcPBj0fVsUtxLrcxTgwGx
-Content-Type: application/pgp-signature; name="OpenPGP_signature.asc"
-Content-Description: OpenPGP digital signature
-Content-Disposition: attachment; filename="OpenPGP_signature"
-
------BEGIN PGP SIGNATURE-----
-
-wsB5BAABCAAjFiEEettYIDyl8EbygCWyFapqf01CJ9cFAl+j5LEFAwAAAAAACgkQFapqf01CJ9dY
-gggAp06SpWfhk2dzYgZf+9L/a7dznHOXRom9MO/fgmypXM5icjQLWyqUCImP4lc61KTJKq30srf3
-lxnfJi81ghrAAUtaERenamuj++DAUIUHZaeVd+CivKq4AUWMJ3+7YJXdGlLBPbExXY+sX4q05hYs
-lULzEEJyoDvn44F3uJfwAlrF6WxWKsFl8u0Fu6EjAtbGxXOHtVAs6pvbN7yee8NnJxvo7jgihw4u
-8HuBbfxL2y5PCdPv2NLImYAzNJZp1ek7C08225w0u3jVKPrM6/dG9eOeSDafMucAofC4BD35RYPg
-g6yosJe09bjky6ha/rsDhcW5/LhdSZpRsl6bkJbjvA==
-=UNff
------END PGP SIGNATURE-----
-
---CFZ5bWYbdq3IjcPBj0fVsUtxLrcxTgwGx--
-
+--00000000000090313305b3adaa58--
