@@ -1,19 +1,22 @@
-Return-Path: <blueroofmusic@gmail.com>
+Return-Path: <till.kamppeter@gmail.com>
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
- h=mime-version:from:date:message-id:subject:to;
- bh=zrl5yiVnZmdELEWq5uk56EqvQArROmajMnmubI57wJk=;
- b=r3RjukvJGdQBkKNqjimc/JG74Vr4CbIcPbJ5NO7GZDJWQ2LdCK1kttPfBZCRbEuBGB
- fTwwrWAbZ3ELFMiHG6891uuha/1vZMior0D7VP5Mbivv4gA+VS3rWtVDWMlJn+cvNZgT
- v5L6hhlJYqa2yNM4e/+UDjZAVskFqgb4nNQdBwpB4+7FPclgq8C4HXcZhne0tTyIHLlH
- cOw5fkEDnprjRTQjRclmMDCxHyzYIvg1/3hYwIfZQuotXQ3yHTsfmb9kUsbXQQBd8B+1
- r5DQKuGNV6o1JUVl6R9BMUWRUZXs/vDyHHRwCcvYUIbRcJrv8Ws/ndIGhf96ps2tQlQU
- 6hQg==
+ h=from:subject:to:message-id:date:user-agent:mime-version
+ :content-language:content-transfer-encoding;
+ bh=znGVwKRpAt8uGsrIW0e3iYO+NFxnY9LCQ1sdraog6sU=;
+ b=GZ9YS9Phomm3Mt1lIiZcf9R+qhfqCJ2Ht4KoLIVgDQpAy9Nimzy3qG7Q+VIZ0Ny/wy
+ VWEe8DTZlaVI+VG8Ir21iJQc/IMRkd78MsjcVpGL+y+2OSJbVJUylJWOa+bXc+PsOdMU
+ 41v4RmS3o5tcwofwRdR66kEMZ03rut/HIj6q7nU+fjQMH7qezv0XRd6FO9b5UETSoHHE
+ h9m9flBllUZSt8HEe6jjy9iDjC5KGBqeBb6iuUFk1wigEzNIinYhUe6e6rDmNpkXVMlf
+ HCvwG/n0MvWaV9uU5N6DBduNfa4nM8SW+AUyvswngUcQNLpwdtS9vqLzaD9+qQUhGi1W
+ A9VA==
+From: Till Kamppeter <till.kamppeter@gmail.com>
+Message-ID: <e23a65eb-47b7-5e4b-06e9-1597b7f02595@gmail.com>
+Date: Wed, 2 Dec 2020 17:55:15 +0100
 MIME-Version: 1.0
-From: Ira McDonald <blueroofmusic@gmail.com>
-Date: Tue, 1 Dec 2020 13:40:03 -0500
-Message-ID: <CAN40gStv=QLdFOZ_R_c7AFpSAa=3-GGm99igY_ot8Xo++Z4nwQ@mail.gmail.com>
-Content-Type: multipart/alternative; boundary="0000000000006372bd05b56b7577"
-Subject: [Printing-architecture] RESCHEDULE: OP Monthly Call on 12/08/20
+Content-Type: text/plain; charset=utf-8; format=flowed
+Content-Language: en-US
+Content-Transfer-Encoding: 7bit
+Subject: [Printing-architecture] cups-filters 1.28.6 released!
 List-Id: Printing architecture under linux
  <printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>, 
@@ -23,99 +26,18 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>, 
  <mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>, Till Kamppeter <till.kamppeter@gmail.com>, Aveek Basu <basu.aveek@gmail.com>, Danny Brennan <brennand@us.ibm.com>, Ira McDonald <blueroofmusic@gmail.com>
+To: Open Printing <printing-architecture@lists.linux-foundation.org>
 
---0000000000006372bd05b56b7577
-Content-Type: text/plain; charset="UTF-8"
+Hi,
 
- Hi,
+Bug fix release, fixing lots of memory leaks in cups-browsed, fixed 
+cups-browsed hanging several seconds when there are local print queue 
+with invalid DNS-SD-based URIs, several fixes on the PPD generator for 
+IPP printers, taken from OpenPrinting's fork of CUPS, and fixing bugs on 
+foomatic-rip
 
-Our next regular monthly call will be on Tuesday
+Here we go:
 
-(1) December - US/Europe/Brazil/India - OP Monthly Meeting
-    - Tuesday 8 December 2020, Daytime
-      - WebEx conference has been announced
-      - Note - ISO TC22/SC32/WG12 Virtual F2F - 7-11 December 2020
-      - US
-        10am in San Francisco - US PST (Pacific Standard Time)
-        11am in Colorado - US MST (Mountain Standard Time)
-        12am in Chicago - US CST (Central Standard Time)
-        1pm in New York - US EST (Eastern Standard Time)
-      - Europe
-        7pm in Berlin - CET (Central Europe Time)
-      - Brazil
-        3pm in Belo Horizonte - BRT (Brasilia Time)
-      - India
-        11:30pm in New Delhi - IST (India Standard Time)
+https://github.com/OpenPrinting/cups-filters/releases/tag/1.28.6
 
-Cheers,
-- Ira
-*Ira McDonald (Musician / Software Architect)*
-
-*Chair - SAE Trust Anchors and Authentication TF*
-*Co-Chair - TCG Trusted Mobility Solutions WG*
-
-*Co-Chair - TCG Metadata Access Protocol SG*
-
-
-
-
-
-
-
-
-*Chair - Linux Foundation Open Printing WGSecretary - IEEE-ISTO Printer
-Working GroupCo-Chair - IEEE-ISTO PWG Internet Printing Protocol WGIETF
-Designated Expert - IPP & Printer MIBBlue Roof Music / High North
-Inchttp://sites.google.com/site/blueroofmusic
-<http://sites.google.com/site/blueroofmusic>http://sites.google.com/site/highnorthinc
-<http://sites.google.com/site/highnorthinc>mailto: blueroofmusic@gmail.com
-<blueroofmusic@gmail.com>(permanent) PO Box 221  Grand Marais, MI 49839
-906-494-2434*
-
---0000000000006372bd05b56b7577
-Content-Type: text/html; charset="UTF-8"
-Content-Transfer-Encoding: quoted-printable
-
-<div dir=3D"ltr">
-<div>Hi,</div><div><br></div><div>
-Our next regular monthly call will be on Tuesday <br></div><div><br></div><=
-div>(1) December - US/Europe/Brazil/India - OP Monthly Meeting<br>=C2=A0 =
-=C2=A0 - <span style=3D"background-color:rgb(255,255,0)">Tuesday 8 December=
- 2020, Daytime</span><br>=C2=A0 =C2=A0 =C2=A0 - WebEx conference has been a=
-nnounced<br>=C2=A0 =C2=A0 =C2=A0 - Note - ISO TC22/SC32/WG12 Virtual F2F - =
-7-11 December 2020<br>=C2=A0 =C2=A0 =C2=A0 - US<br>=C2=A0 =C2=A0 =C2=A0 =C2=
-=A0 10am in San Francisco - US PST (Pacific Standard Time)<br>=C2=A0 =C2=A0=
- =C2=A0 =C2=A0 11am in Colorado - US MST (Mountain Standard Time)<br>=C2=A0=
- =C2=A0 =C2=A0 =C2=A0 12am in Chicago - US CST (Central Standard Time)<br>=
-=C2=A0 =C2=A0 =C2=A0 =C2=A0 1pm in New York - US EST (Eastern Standard Time=
-)<br>=C2=A0 =C2=A0 =C2=A0 - Europe<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 7pm in Be=
-rlin - CET (Central Europe Time)<br>=C2=A0 =C2=A0 =C2=A0 - Brazil<br>=C2=A0=
- =C2=A0 =C2=A0 =C2=A0 3pm in Belo Horizonte - BRT (Brasilia Time)<br>=C2=A0=
- =C2=A0 =C2=A0 - India<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 11:30pm in New Delhi =
-- IST (India Standard Time)</div><div><br></div><div>Cheers,</div><div>- Ir=
-a</div>
-
-<div><div dir=3D"ltr" class=3D"gmail_signature" data-smartmail=3D"gmail_sig=
-nature"><div dir=3D"ltr"><div><div dir=3D"ltr"><div><div dir=3D"ltr"><div><=
-div dir=3D"ltr"><div><div dir=3D"ltr"><div><div dir=3D"ltr"><div><div dir=
-=3D"ltr"><div><div dir=3D"ltr"><div><div dir=3D"ltr"><i><font size=3D"1">Ir=
-a McDonald (Musician / Software Architect)</font></i></div><div><i><font si=
-ze=3D"1">Chair - SAE Trust Anchors and Authentication TF<br></font></i></di=
-v><div dir=3D"ltr"><i><font size=3D"1">Co-Chair - TCG Trusted Mobility Solu=
-tions WG</font></i></div><div><i><font size=3D"1">Co-Chair - TCG Metadata A=
-ccess Protocol SG<br></font></i></div><div dir=3D"ltr"><i><font size=3D"1">=
-Chair - Linux Foundation Open Printing WG<br>Secretary - IEEE-ISTO Printer =
-Working Group<br>Co-Chair - IEEE-ISTO PWG Internet Printing Protocol WG<br>=
-IETF Designated Expert - IPP &amp; Printer MIB<br>Blue Roof Music / High No=
-rth Inc<br><a style=3D"color:rgb(51,51,255)" href=3D"http://sites.google.co=
-m/site/blueroofmusic" target=3D"_blank">http://sites.google.com/site/bluero=
-ofmusic</a><br><a style=3D"color:rgb(102,0,204)" href=3D"http://sites.googl=
-e.com/site/highnorthinc" target=3D"_blank">http://sites.google.com/site/hig=
-hnorthinc</a><br>mailto: <a href=3D"mailto:blueroofmusic@gmail.com" target=
-=3D"_blank">blueroofmusic@gmail.com</a><br>(permanent) PO Box 221=C2=A0 Gra=
-nd Marais, MI 49839=C2=A0 906-494-2434</font></i></div></div></div></div></=
-div></div></div></div></div></div></div></div></div></div></div></div></div=
-></div></div></div>
-
---0000000000006372bd05b56b7577--
+    Till
