@@ -1,19 +1,19 @@
 Return-Path: <blueroofmusic@gmail.com>
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
  h=mime-version:from:date:message-id:subject:to;
- bh=vXu/miw5ELTkwXJFLUPXAGHdeEYn2UctD0KPP5xesEg=;
- b=t83DZTmEZiKshS0NFzgVwck6qMx+KZzLM5efvctM6SOd570bArzZLEBiBJNvl1kSNc
- i2ZytOXu3GvqzY4Bkqcp/fT/rkty4sB4KAd2sFShndC2MCVhtGJfdjqezDhFDHOf33f9
- Vx3KJr36QLBqENROsOitR3+z78b8HydG2xr6RgXxs+sJcjfOqoVRT7sF7mFUc1TnyTZt
- OWno+wb1Gy1LqepzkkhNjnVdotN1D4Ptw0DKRCSV6aIfQdG+ZzTp7iEcT7QRZIa93VOh
- /oe6nWgGDKH4CsggqWuLzehec3XYTAGznQMjwwWOR5VuRYrL12qPnOrgexEBBc/EQoCX
- secA==
+ bh=SBU/UCWZ/EWNdVkjeJhrTUw3Pf3V92t0et1QGPcX4CA=;
+ b=tKEFSFYXc5ENdJ9fPmE594p7ELJBqX329z5WLDSPWZP61Hc9kl6qutOmslyi2N+Ie0
+ RBVTl4QyKrgRBsl53oGlGNbPLLlw6QL8UN++GKA4jzNUDoLsdULTPjL/XrSX0Gto1fyZ
+ DuSqc4E+pJCwpnqJVLzRgERAlQyE2d0wFRxUM/w/7CvxDPV2xWdCCaRdT/tKnTh5vCTX
+ yJHwUbW7cPmCczZWN2vRmkoiHyoUlFdaB9znoTz4UidP1aP7CrjMjMHPJxa5AKa4f0Po
+ T+JcDZ/SqmLmksU5eG9IRQWc94VjtpNyDMKo9fOnHx/bYWKM4BBQj4/WOogRg0EBj4T6
+ x1fw==
 MIME-Version: 1.0
 From: Ira McDonald <blueroofmusic@gmail.com>
-Date: Thu, 31 Dec 2020 16:39:30 -0500
-Message-ID: <CAN40gSsdiz9uqr-tU3qqVKuCf+yi8zX-YcyfkRz9Lv9PFo8HtQ@mail.gmail.com>
-Content-Type: multipart/alternative; boundary="00000000000021602005b7c9769a"
-Subject: [Printing-architecture] REMINDER: OP Monthly Call on 01/05/21
+Date: Sat, 2 Jan 2021 13:17:20 -0500
+Message-ID: <CAN40gSvGbtiBReG-vF-+DH0pe2CnMQkVujg+ES+SCoxjekTG=Q@mail.gmail.com>
+Content-Type: multipart/alternative; boundary="0000000000002045a405b7eedf50"
+Subject: [Printing-architecture] RESCHEDULE: OP Monthly Call on 01/12/21
 List-Id: Printing architecture under linux
  <printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>, 
@@ -25,15 +25,15 @@ List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-arc
  <mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
 To: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>, Aveek Basu <basu.aveek@gmail.com>, Till Kamppeter <till.kamppeter@gmail.com>, Danny Brennan <brennand@us.ibm.com>, Ira McDonald <blueroofmusic@gmail.com>
 
---00000000000021602005b7c9769a
+--0000000000002045a405b7eedf50
 Content-Type: text/plain; charset="UTF-8"
 
  Hi,
 
-Our next regular monthly call will be on Tuesday
+Our next regular monthly call has been rescheduled to a week later:
 
 (1) January - US/Europe/Brazil/India - OP Monthly Meeting
-    - Tuesday 5 January 2021, Daytime
+    - Tuesday 12 January 2021, Daytime
       - Web conference to be announced
       - Note - ISO TC22/SC32/WG12 Weekly - 12 January 2021
       - US
@@ -75,16 +75,16 @@ Inchttp://sites.google.com/site/blueroofmusic
 <blueroofmusic@gmail.com>(permanent) PO Box 221  Grand Marais, MI 49839
 906-494-2434*
 
---00000000000021602005b7c9769a
+--0000000000002045a405b7eedf50
 Content-Type: text/html; charset="UTF-8"
 Content-Transfer-Encoding: quoted-printable
 
 <div dir=3D"ltr">
 <div>Hi,</div><div><br></div><div>
-Our next regular monthly call will be on Tuesday </div>
+Our next regular monthly call has been rescheduled to a week later: </div>
 
 <div><br></div><div>(1) January - US/Europe/Brazil/India - OP Monthly Meeti=
-ng<br>=C2=A0 =C2=A0 - Tuesday 5 January 2021, Daytime<br>=C2=A0 =C2=A0 =C2=
+ng<br>=C2=A0 =C2=A0 - Tuesday 12 January 2021, Daytime<br>=C2=A0 =C2=A0 =C2=
 =A0 - Web conference to be announced<br>=C2=A0 =C2=A0 =C2=A0 - Note - ISO T=
 C22/SC32/WG12 Weekly - 12 January 2021<br>=C2=A0 =C2=A0 =C2=A0 - US<br>=C2=
 =A0 =C2=A0 =C2=A0 =C2=A0 10am in San Francisco - US PST (Pacific Standard T=
@@ -96,26 +96,28 @@ astern Standard Time)<br>=C2=A0 =C2=A0 =C2=A0 - Europe<br>=C2=A0 =C2=A0 =C2=
 =A0 - Brazil<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 3pm in Belo Horizonte - BRT (Br=
 asilia Time)<br>=C2=A0 =C2=A0 =C2=A0 - India<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0=
  11:30pm in New Delhi - IST (India Standard Time)</div><div><br></div><div>=
-Cheers,</div><div>- Ira</div><div><br></div><div><br></div><div><div dir=3D=
-"ltr" class=3D"gmail_signature" data-smartmail=3D"gmail_signature"><div dir=
-=3D"ltr"><div><div dir=3D"ltr"><div><div dir=3D"ltr"><div><div dir=3D"ltr">=
-<div><div dir=3D"ltr"><div><div dir=3D"ltr"><div><div dir=3D"ltr"><div><div=
- dir=3D"ltr"><div><div dir=3D"ltr"><i><font size=3D"1">Ira McDonald (Musici=
-an / Software Architect)</font></i></div><div><i><font size=3D"1">Chair - S=
-AE Trust Anchors and Authentication TF<br></font></i></div><div dir=3D"ltr"=
-><i><font size=3D"1">Co-Chair - TCG Trusted Mobility Solutions WG</font></i=
-></div><div><i><font size=3D"1">Co-Chair - TCG Metadata Access Protocol SG<=
-br></font></i></div><div dir=3D"ltr"><i><font size=3D"1">Chair - Linux Foun=
-dation Open Printing WG<br>Secretary - IEEE-ISTO Printer Working Group<br>C=
-o-Chair - IEEE-ISTO PWG Internet Printing Protocol WG<br>IETF Designated Ex=
-pert - IPP &amp; Printer MIB<br>Blue Roof Music / High North Inc<br><a styl=
-e=3D"color:rgb(51,51,255)" href=3D"http://sites.google.com/site/blueroofmus=
-ic" target=3D"_blank">http://sites.google.com/site/blueroofmusic</a><br><a =
-style=3D"color:rgb(102,0,204)" href=3D"http://sites.google.com/site/highnor=
-thinc" target=3D"_blank">http://sites.google.com/site/highnorthinc</a><br>m=
-ailto: <a href=3D"mailto:blueroofmusic@gmail.com" target=3D"_blank">blueroo=
-fmusic@gmail.com</a><br>(permanent) PO Box 221=C2=A0 Grand Marais, MI 49839=
-=C2=A0 906-494-2434</font></i></div></div></div></div></div></div></div></d=
-iv></div></div></div></div></div></div></div></div></div></div></div></div>
+Cheers,</div><div>- Ira</div>
 
---00000000000021602005b7c9769a--
+<div><br></div><div><br></div><div><div dir=3D"ltr" class=3D"gmail_signatur=
+e" data-smartmail=3D"gmail_signature"><div dir=3D"ltr"><div><div dir=3D"ltr=
+"><div><div dir=3D"ltr"><div><div dir=3D"ltr"><div><div dir=3D"ltr"><div><d=
+iv dir=3D"ltr"><div><div dir=3D"ltr"><div><div dir=3D"ltr"><div><div dir=3D=
+"ltr"><i><font size=3D"1">Ira McDonald (Musician / Software Architect)</fon=
+t></i></div><div><i><font size=3D"1">Chair - SAE Trust Anchors and Authenti=
+cation TF<br></font></i></div><div dir=3D"ltr"><i><font size=3D"1">Co-Chair=
+ - TCG Trusted Mobility Solutions WG</font></i></div><div><i><font size=3D"=
+1">Co-Chair - TCG Metadata Access Protocol SG<br></font></i></div><div dir=
+=3D"ltr"><i><font size=3D"1">Chair - Linux Foundation Open Printing WG<br>S=
+ecretary - IEEE-ISTO Printer Working Group<br>Co-Chair - IEEE-ISTO PWG Inte=
+rnet Printing Protocol WG<br>IETF Designated Expert - IPP &amp; Printer MIB=
+<br>Blue Roof Music / High North Inc<br><a style=3D"color:rgb(51,51,255)" h=
+ref=3D"http://sites.google.com/site/blueroofmusic" target=3D"_blank">http:/=
+/sites.google.com/site/blueroofmusic</a><br><a style=3D"color:rgb(102,0,204=
+)" href=3D"http://sites.google.com/site/highnorthinc" target=3D"_blank">htt=
+p://sites.google.com/site/highnorthinc</a><br>mailto: <a href=3D"mailto:blu=
+eroofmusic@gmail.com" target=3D"_blank">blueroofmusic@gmail.com</a><br>(per=
+manent) PO Box 221=C2=A0 Grand Marais, MI 49839=C2=A0 906-494-2434</font></=
+i></div></div></div></div></div></div></div></div></div></div></div></div><=
+/div></div></div></div></div></div></div></div>
+
+--0000000000002045a405b7eedf50--
