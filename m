@@ -1,21 +1,22 @@
 Return-Path: <blueroofmusic@gmail.com>
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
  h=mime-version:references:in-reply-to:from:date:message-id:subject:to;
- bh=Iviv9EDuo/iKVEl6DnizB/KPm1+5aiguikNsf8eqwzI=;
- b=BA1rn5SRv5g+0E1nsjIrmfheL1N16KN0zW+eVP/TYabJPteB2ZfecE85IRTJran5lj
- jVykL2S7opB5fCTnV/WySvsF816jI2wYO+HyneNqNtoTHl9cvavklWwLvI+9XEuQ/2j1
- yOmIba/jP249DmMPr2zBXZNfxUA/j1cD8NA0hzd3Dax+STQfwy5w4weJYBUp6MqwjUIm
- YgC/lZtU7QGCkhhUOJZdYZt+rknFuXIXjXX/zcD/1alNWJolxFjyCDmWvVIhCqVbNtk7
- VuLhpfEmFfx9ny0FJPdqF3c7ZIQvmGNNjTiowPHash8C/QKU+tM0yQMNsyRMjSYNRGIa
- PDXw==
+ bh=BdjHwbKczGUygqh4TjLXIFSv0cC97iDER9GWiB6Ve0E=;
+ b=GtS9w3bCH3yIJFYZ1aWXfmeiv/83VYySngU7QfRE0/apOOSI1Ia9ElFvBCpCSqg1l5
+ J5Eh6dS1TEFIWuDPx/tCx7Y6tr5Bk5CljBB02eJEDhnuQ+7399xynRta9OI86CRCd8qO
+ Bq+tSr3Vx6jwD8nmxNrqCBU3u+eFkg9H8AJCV9+evvaAurDUyWGIU5gkYjWAS3Ubux5o
+ j1bcp0qeS0ExMGvsUu0VwTTjYH1E0YqUmwL1lBx7oK3XBP3IdRP7B97J9C9pzR5fLh1v
+ 9NCHvSYYzDtH3mJmvBGh1IPFKDwZfynKn7IMq8zQLT1ad3Oq1b3qV/iHAnXw9K939CYJ
+ 31Qw==
 MIME-Version: 1.0
 References: <CAN40gSsyNjpNP1Ygsr1JyQ0By0eiOE6jx6U3WysJVWfX9z3NzA@mail.gmail.com>
-In-Reply-To: <CAN40gSsyNjpNP1Ygsr1JyQ0By0eiOE6jx6U3WysJVWfX9z3NzA@mail.gmail.com>
+ <CAN40gSu=SP4gj2BeNkamF0BVjGm1J2g_R=f7X+zEi5jG1p7euA@mail.gmail.com>
+In-Reply-To: <CAN40gSu=SP4gj2BeNkamF0BVjGm1J2g_R=f7X+zEi5jG1p7euA@mail.gmail.com>
 From: Ira McDonald <blueroofmusic@gmail.com>
-Date: Mon, 1 Feb 2021 17:29:16 -0500
-Message-ID: <CAN40gSu=SP4gj2BeNkamF0BVjGm1J2g_R=f7X+zEi5jG1p7euA@mail.gmail.com>
-Content-Type: multipart/alternative; boundary="00000000000021290405ba4de307"
-Subject: Re: [Printing-architecture] REMINDER: OP Monthly Call on 02/02/21
+Date: Tue, 2 Feb 2021 13:00:06 -0500
+Message-ID: <CAN40gSuhhq+0t6+MB96UnXO8TkW-eJ5PbFMkXU2Y-0+O2M4LUQ@mail.gmail.com>
+Content-Type: multipart/alternative; boundary="0000000000007a84d605ba5e3e16"
+Subject: [Printing-architecture] NOW! REMINDER: OP Monthly Call on 02/02/21
 List-Id: Printing architecture under linux
  <printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>, 
@@ -27,73 +28,87 @@ List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-arc
  <mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
 To: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>, Till Kamppeter <till.kamppeter@gmail.com>, Aveek Basu <basu.aveek@gmail.com>, Danny Brennan <brennand@us.ibm.com>, Ira McDonald <blueroofmusic@gmail.com>
 
---00000000000021290405ba4de307
+--0000000000007a84d605ba5e3e16
 Content-Type: text/plain; charset="UTF-8"
 
-TOMORROW!
+On Mon, Feb 1, 2021 at 5:29 PM Ira McDonald <blueroofmusic@gmail.com> wrote:
 
-On Fri, Jan 29, 2021 at 5:31 PM Ira McDonald <blueroofmusic@gmail.com>
-wrote:
+> TOMORROW!
+>
+> On Fri, Jan 29, 2021 at 5:31 PM Ira McDonald <blueroofmusic@gmail.com>
+> wrote:
+>
+>> Hi,
+>>
+>> Our next regular monthly call will be next Tuesday:
+>>
+>> (1) February - US/Europe/Brazil/India - OP Monthly Meeting
+>>     - Tuesday 2 February 2021, Daytime
+>>       - Web conference to be announced
+>>       - Note - PWG Virtual F2F - 9-11 February 2021
+>>       - Note - TCG Members Meeting Virtual F2F - 22-26 February 2021
+>>       - Note - IEEE 1609 Virtual F2F - 23-24 February 2021
+>>       - US
+>>         10am in San Francisco - US PST (Pacific Standard Time)
+>>         11am in Colorado - US MST (Mountain Standard Time)
+>>         12am in Chicago - US CST (Central Standard Time)
+>>         1pm in New York - US EST (Eastern Standard Time)
+>>       - Europe
+>>         7pm in Berlin - CET (Central Europe Time)
+>>       - Brazil
+>>         3pm in Belo Horizonte - BRT (Brasilia Time)
+>>       - India
+>>         11:30pm in New Delhi - IST (India Standard Time)
+>>
+>> Cheers,
+>> - Ira
+>>
+>> *Ira McDonald (Musician / Software Architect)*
+>>
+>> *Chair - SAE Trust Anchors and Authentication TF*
+>> *Co-Chair - TCG Trusted Mobility Solutions WG*
+>>
+>> *Co-Chair - TCG Metadata Access Protocol SG*
+>>
+>>
+>>
+>>
+>>
+>>
+>>
+>>
+>> *Chair - Linux Foundation Open Printing WGSecretary - IEEE-ISTO Printer
+>> Working GroupCo-Chair - IEEE-ISTO PWG Internet Printing Protocol WGIETF
+>> Designated Expert - IPP & Printer MIBBlue Roof Music / High North
+>> Inchttp://sites.google.com/site/blueroofmusic
+>> <http://sites.google.com/site/blueroofmusic>http://sites.google.com/site/highnorthinc
+>> <http://sites.google.com/site/highnorthinc>mailto: blueroofmusic@gmail.com
+>> <blueroofmusic@gmail.com>(permanent) PO Box 221  Grand Marais, MI 49839
+>> 906-494-2434*
+>>
+>
 
-> Hi,
->
-> Our next regular monthly call will be next Tuesday:
->
-> (1) February - US/Europe/Brazil/India - OP Monthly Meeting
->     - Tuesday 2 February 2021, Daytime
->       - Web conference to be announced
->       - Note - PWG Virtual F2F - 9-11 February 2021
->       - Note - TCG Members Meeting Virtual F2F - 22-26 February 2021
->       - Note - IEEE 1609 Virtual F2F - 23-24 February 2021
->       - US
->         10am in San Francisco - US PST (Pacific Standard Time)
->         11am in Colorado - US MST (Mountain Standard Time)
->         12am in Chicago - US CST (Central Standard Time)
->         1pm in New York - US EST (Eastern Standard Time)
->       - Europe
->         7pm in Berlin - CET (Central Europe Time)
->       - Brazil
->         3pm in Belo Horizonte - BRT (Brasilia Time)
->       - India
->         11:30pm in New Delhi - IST (India Standard Time)
->
-> Cheers,
-> - Ira
->
-> *Ira McDonald (Musician / Software Architect)*
->
-> *Chair - SAE Trust Anchors and Authentication TF*
-> *Co-Chair - TCG Trusted Mobility Solutions WG*
->
-> *Co-Chair - TCG Metadata Access Protocol SG*
->
->
->
->
->
->
->
->
-> *Chair - Linux Foundation Open Printing WGSecretary - IEEE-ISTO Printer
-> Working GroupCo-Chair - IEEE-ISTO PWG Internet Printing Protocol WGIETF
-> Designated Expert - IPP & Printer MIBBlue Roof Music / High North
-> Inchttp://sites.google.com/site/blueroofmusic
-> <http://sites.google.com/site/blueroofmusic>http://sites.google.com/site/highnorthinc
-> <http://sites.google.com/site/highnorthinc>mailto: blueroofmusic@gmail.com
-> <blueroofmusic@gmail.com>(permanent) PO Box 221  Grand Marais, MI 49839
-> 906-494-2434*
->
-
---00000000000021290405ba4de307
+--0000000000007a84d605ba5e3e16
 Content-Type: text/html; charset="UTF-8"
 Content-Transfer-Encoding: quoted-printable
 
-<div dir=3D"ltr"><font size=3D"4">TOMORROW!</font><br></div><br><div class=
-=3D"gmail_quote"><div dir=3D"ltr" class=3D"gmail_attr">On Fri, Jan 29, 2021=
- at 5:31 PM Ira McDonald &lt;<a href=3D"mailto:blueroofmusic@gmail.com">blu=
-eroofmusic@gmail.com</a>&gt; wrote:<br></div><blockquote class=3D"gmail_quo=
-te" style=3D"margin:0px 0px 0px 0.8ex;border-left:1px solid rgb(204,204,204=
-);padding-left:1ex"><div dir=3D"ltr"><div>Hi,</div><div><br></div><div>
+<div dir=3D"ltr"><div dir=3D"ltr"><br clear=3D"all"><div><div dir=3D"ltr" c=
+lass=3D"gmail_signature" data-smartmail=3D"gmail_signature"><div dir=3D"ltr=
+"><div><div dir=3D"ltr"><div><div dir=3D"ltr"><div><div dir=3D"ltr"><div><d=
+iv dir=3D"ltr"><div><div dir=3D"ltr"><div><div dir=3D"ltr"><div><div dir=3D=
+"ltr"><div><br></div></div></div></div></div></div></div></div></div></div>=
+</div></div></div></div></div></div></div></div><br></div><br><div class=3D=
+"gmail_quote"><div dir=3D"ltr" class=3D"gmail_attr">On Mon, Feb 1, 2021 at =
+5:29 PM Ira McDonald &lt;<a href=3D"mailto:blueroofmusic@gmail.com">blueroo=
+fmusic@gmail.com</a>&gt; wrote:<br></div><blockquote class=3D"gmail_quote" =
+style=3D"margin:0px 0px 0px 0.8ex;border-left:1px solid rgb(204,204,204);pa=
+dding-left:1ex"><div dir=3D"ltr"><font size=3D"4">TOMORROW!</font><br></div=
+><br><div class=3D"gmail_quote"><div dir=3D"ltr" class=3D"gmail_attr">On Fr=
+i, Jan 29, 2021 at 5:31 PM Ira McDonald &lt;<a href=3D"mailto:blueroofmusic=
+@gmail.com" target=3D"_blank">blueroofmusic@gmail.com</a>&gt; wrote:<br></d=
+iv><blockquote class=3D"gmail_quote" style=3D"margin:0px 0px 0px 0.8ex;bord=
+er-left:1px solid rgb(204,204,204);padding-left:1ex"><div dir=3D"ltr"><div>=
+Hi,</div><div><br></div><div>
 Our next regular monthly call will be next Tuesday:</div><div><br></div><di=
 v>(1) February - US/Europe/Brazil/India - OP Monthly Meeting<br>=C2=A0 =C2=
 =A0 - Tuesday 2 February 2021, Daytime<br>=C2=A0 =C2=A0 =C2=A0 - Web confer=
@@ -132,5 +147,6 @@ ic@gmail.com</a><br>(permanent) PO Box 221=C2=A0 Grand Marais, MI 49839=C2=
 </div></div></div></div></div></div></div></div></div></div></div></div></d=
 iv>
 </blockquote></div>
+</blockquote></div></div>
 
---00000000000021290405ba4de307--
+--0000000000007a84d605ba5e3e16--
