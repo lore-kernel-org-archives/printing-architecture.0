@@ -1,22 +1,23 @@
-Return-Path: <till.kamppeter@gmail.com>
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
- h=from:subject:to:message-id:date:user-agent:mime-version
- :content-language:content-transfer-encoding;
- bh=HRPI9TJfkYHFKIADzFSFrP9hpDwz21DecQhKR3nN6xY=;
- b=NHOhBQtdNwliMar3jphmBbPYHmGe63GXkhNX9xXwcG+RqLviHwzdei3WqQPed/+Nij
- jzeZgMD9ly0UQsw4GYaWWL4pWVm7NMcnlVK3PyQv8sfpncRc6UbM6s7roqy+uYuO42fc
- DQGX2LxyqsSx2dvCqej5aHrXr7++1cSNfG6orPIUZLP4uObql/ZsiJhagt9ZCjlvSfMP
- M1WKBlRR5FBGfxFx8tHqRpn9G8/Vd/M3uZnPrRU+kOkAjbFy/1jT1K6X2+NuOV45F2Be
- zLYX8PgRtMlJPxR89PjksmC+5SiNJZ9zGuLOYzdoqLDdLgo0PvhgLzcVfcc7YOyr7p2B
- GP7Q==
-From: Till Kamppeter <till.kamppeter@gmail.com>
-Message-ID: <aac876e1-0b57-9701-d157-48584a711e70@gmail.com>
-Date: Tue, 9 Feb 2021 00:13:31 +0100
+Return-Path: <zdohnal@redhat.com>
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=redhat.com;
+ s=mimecast20190719; t=1612936901;
+ h=from:from:reply-to:subject:subject:date:date:message-id:message-id:
+ to:to:cc:mime-version:mime-version:content-type:content-type:
+ in-reply-to:in-reply-to:references:references;
+ bh=UAXDc8TcbW9pEUWQJpgao2ocQmgyy8/H2DPOeLRjpqQ=;
+ b=bS5w2kkeqBZqcKPqBypwT6z4tlmTrmhWf75saVl5O0BNnCHRmW+VitkSAZT5NOljjGWV52
+ hH1I95i7UQkKpWuwHEzFHZ7T8rw8Wc3WLuEkFF0Gc0aY6mgMC8VhBN3dHvhMzOmzM78Lo4
+ ZNcH+UU4BuGuX2cyRyh4tdjsqqwAW9w=
+References: <aac876e1-0b57-9701-d157-48584a711e70@gmail.com>
+From: Zdenek Dohnal <zdohnal@redhat.com>
+Message-ID: <79d83ba0-c535-af52-bed5-a99f34345401@redhat.com>
+Date: Wed, 10 Feb 2021 07:01:33 +0100
 MIME-Version: 1.0
-Content-Type: text/plain; charset=utf-8; format=flowed
-Content-Language: en-US
-Content-Transfer-Encoding: 7bit
-Subject: [Printing-architecture] OpenPrinting News
+In-Reply-To: <aac876e1-0b57-9701-d157-48584a711e70@gmail.com>
+Content-Type: multipart/signed; micalg=pgp-sha256;
+ protocol="application/pgp-signature";
+ boundary="i1mHZrNx4n9gJqYGGvGy1CKWeDdbtEJ19"
+Subject: Re: [Printing-architecture] OpenPrinting News
 List-Id: Printing architecture under linux
  <printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>, 
@@ -26,14 +27,75 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>, 
  <mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Ira McDonald <blueroofmusic@gmail.com>, Aveek Basu <aveek.basu@lexmark.com>, Open Printing <printing-architecture@lists.linux-foundation.org>
+To: printing-architecture@lists.linux-foundation.org
 
-Hi,
+This is an OpenPGP/MIME signed message (RFC 4880 and 3156)
+--i1mHZrNx4n9gJqYGGvGy1CKWeDdbtEJ19
+Content-Type: multipart/mixed; boundary="kHm19ikTEC6Mp26gPIRalU4EBHbTgI4LG";
+ protected-headers="v1"
+From: Zdenek Dohnal <zdohnal@redhat.com>
+To: printing-architecture@lists.linux-foundation.org
+Message-ID: <79d83ba0-c535-af52-bed5-a99f34345401@redhat.com>
+Subject: Re: [Printing-architecture] OpenPrinting News
+References: <aac876e1-0b57-9701-d157-48584a711e70@gmail.com>
+In-Reply-To: <aac876e1-0b57-9701-d157-48584a711e70@gmail.com>
 
-I have posted the newest development of the last month on our web site now.
+--kHm19ikTEC6Mp26gPIRalU4EBHbTgI4LG
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+Content-Language: en-US
 
-Here we go:
+Hi Till,
 
-https://openprinting.github.io/OpenPrinting-News-February-2021/
+thank you for news!
 
-    Till
+I'll copy the scp-dbus-service idea from 2020 to this year - let's see
+if there is a student interested in it.
+
+Have a nice day,
+
+Zdenek
+
+On 2/9/21 12:13 AM, Till Kamppeter wrote:
+> Hi,
+>
+> I have posted the newest development of the last month on our web site
+> now.
+>
+> Here we go:
+>
+> https://openprinting.github.io/OpenPrinting-News-February-2021/
+>
+> =C2=A0=C2=A0 Till
+> _______________________________________________
+> Printing-architecture mailing list
+> Printing-architecture@lists.linux-foundation.org
+> https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture
+>
+--=20
+Zdenek Dohnal
+Software Engineer
+Red Hat Czech - Brno TPB-C
+
+
+
+--kHm19ikTEC6Mp26gPIRalU4EBHbTgI4LG--
+
+--i1mHZrNx4n9gJqYGGvGy1CKWeDdbtEJ19
+Content-Type: application/pgp-signature; name="OpenPGP_signature.asc"
+Content-Description: OpenPGP digital signature
+Content-Disposition: attachment; filename="OpenPGP_signature"
+
+-----BEGIN PGP SIGNATURE-----
+
+wsB5BAABCAAjFiEEettYIDyl8EbygCWyFapqf01CJ9cFAmAjdr0FAwAAAAAACgkQFapqf01CJ9eE
+gAf/Qj3S9UJ0yt0hHOcHey/f52+W6Hfr8FdH6E1Z7YcSCGGrQRR23Rm+IZ7ZI6utHhNTTx3fGVW5
+93xp2Zn2hH0vQcn0LMg+90y1/6grmRGN9Fk06EAAOjiAbhgk3XeVnM71UKd2SBXLOAsW5Iz9Udn6
+yYQVCqcdkksnneeFn2l0SLBG1ozVPu6db2ZvrH0HfijjaagEINIdqn4b29w8CK1vt5IXmFxP55tA
+Ezot6encV86kJNGn9F48CBPapdIJWx3/wJqNkozJHSTmrdvR0bC6DitzGOBX0ERsyElx0kdEiOaF
+pMs4WKmY/RtpSVYNXfaPISHBrAU4ALYiDpm0NXil3w==
+=BVZh
+-----END PGP SIGNATURE-----
+
+--i1mHZrNx4n9gJqYGGvGy1CKWeDdbtEJ19--
+
