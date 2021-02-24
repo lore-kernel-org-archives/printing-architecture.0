@@ -1,23 +1,26 @@
-Return-Path: <pizza@stuffed.shaftnet.org>
-DKIM-Filter: OpenDKIM Filter v2.11.0 stuffed.shaftnet.org 11OCmG4t474229
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=shaftnet.org;
- s=default; t=1614170897;
- bh=Jdgaui9jljuPWzNg3J/F/x87sUKJaRl1/rroCMncNug=;
- h=Date:From:To:Cc:Subject:References:In-Reply-To:From;
- b=frJfeC5AFAFwszHcPdXEpA9tKintSCf36J2GO7U+AyLovwmwq+IPWoCj9QiMhAMJM
- TJj8Os8lxD3jir6djkf97zKj0/HaPkuGGjBTDdAqSLRT7BHK3gZhYDS01OycUOulNu
- gfobJJIoayOoJAdNi+Po3f71trL2fFLed8Te0Xwc=
-Date: Wed, 24 Feb 2021 07:48:16 -0500
-From: Solomon Peachy <pizza@shaftnet.org>
-Message-ID: <YDZLEKxaIVrpLm4E@shaftnet.org>
+Return-Path: <till.kamppeter@gmail.com>
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
+ h=subject:to:references:from:message-id:date:user-agent:mime-version
+ :in-reply-to:content-language:content-transfer-encoding;
+ bh=9U27YzuX5TvyZwR+8GFTL1ZS3YxBDQZhKIJ92b1ErA8=;
+ b=p+Bm+UMJyvboEYvUtvALYMReHLvN/4/Ok9kZCLGPo+k+aZUxtzJmFKT3M78g9oMUxg
+ ILMOtWxfPLNxuSoNuPyp2p3bidSCLKLmdG0nMX4Xp2moYNnCztbYxeYd7AEaIwSooPbq
+ 2+2kLIjeelnfvNrbEl1/OzQoOSh7GncYr54tzbFPAciX+fETqXFSvY+2L7IH9HkfODsD
+ UO8Rdf9heLlqYiTphkhrX53PE/+I1KSJc+nzclE7K7fPuYXlTNs1to0RmDLetuS/A8cG
+ Sw6YZMjC5JVxgqlxrcz21vlEqgZduBdGbBlnGEkD5Y9XtKOIBVVojw5wlplrjWD/+XsS
+ HnBw==
 References: <12af8541-3113-341d-6b7f-d7393203368f@gmail.com>
  <949aea1f-a0f0-df47-1538-d7782f5350ab@redhat.com>
  <66430674-dc47-4a81-406b-aedefc065a37@gmail.com>
+ <bcc4538ef1b6e8ef9395dda295f00eac@suse.de>
+From: Till Kamppeter <till.kamppeter@gmail.com>
+Message-ID: <4978914c-e66a-3084-251f-4b72ad364eaf@gmail.com>
+Date: Wed, 24 Feb 2021 14:51:12 +0100
 MIME-Version: 1.0
-Content-Type: multipart/signed; micalg=pgp-sha512;
- protocol="application/pgp-signature"; boundary="yaIB0r+2exwt6nEe"
-Content-Disposition: inline
-In-Reply-To: <66430674-dc47-4a81-406b-aedefc065a37@gmail.com>
+In-Reply-To: <bcc4538ef1b6e8ef9395dda295f00eac@suse.de>
+Content-Type: text/plain; charset="utf-8"; format="flowed"
+Content-Language: en-US
+Content-Transfer-Encoding: 8bit
 Subject: Re: [Printing-architecture] Automatic printer setup with Printer
  Applications
 List-Id: Printing architecture under linux
@@ -29,76 +32,29 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>, 
  <mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Till Kamppeter <till.kamppeter@gmail.com>
-Cc: Open Printing <printing-architecture@lists.linux-foundation.org>, Jai Luthra <luthrajaiji@gmail.com>
+To: Johannes Meixner <jsmeix@suse.de>, printing-architecture@lists.linux-foundation.org, Zdenek Dohnal <zdohnal@redhat.com>, Michael Sweet <msweet@msweet.org>, Jai Luthra <luthrajaiji@gmail.com>
 
+On 24/02/2021 13:01, Johannes Meixner wrote:
+> 
+> if I understand it correctly the basic idea behind is
+> that for printer setup inside a container
+> (I use 'container' as generic name for any isolated environment
+>   that has no direct access to the outer world e.g. also chroot)
+> udev-configure-printer acts as proxy for outer world access.
+>
 
---yaIB0r+2exwt6nEe
-Content-Type: text/plain; charset=us-ascii
-Content-Disposition: inline
-Content-Transfer-Encoding: quoted-printable
+No, each container (Printer Application) has access to the printers and 
+with the two methods I described can observe whether a printer is coming 
+or going.
 
-On Wed, Feb 24, 2021 at 12:25:48PM +0100, Till Kamppeter wrote:
-> udev-configure-printer will need an interface at all Printer Applications
-> where it can send a device ID and the Printer Application answers back
-> whether it supports this printer (with driver name), and that without the
-> Printer Application talking to the physical printers.=20
+The central utility is to avoid that each installed container is queries 
+a newly connected printer at the same time, overloading the printer, 
+having race conditions who gets an answer and who not, ... The central 
+utility would query the newly connected printer once and then talk to 
+one container to create a print queue.
 
-I wanted to add a comment here -- We need to think about what happens if=20
-multiple applications claim to support the printer, either because more=20
-than one genuinely does, or because of wildcard catch-all rules for=20
-"generic PCL" (or whatever) that could bind to any device exporting a=20
-USB Printer Class endpoint, much like the current CUPS backend.
+Note that the containers do are not able to talk to each other to 
+negotiate which one gets the printer, they even do not know about the 
+presence of their competitors for a given printer.
 
-The CUPS backend supports a blacklist so it can exclude printers, but=20
-given that printer applications can't drop files outside their sandbox,=20
-a new mechanism would need to be devised. =20
-
-> Great would be if a Printer Application also could report back support=20
-> level (generic, third-party, manufacturer, ...). It could perhaps also=20
-> prioritize unknown Printer Applications as they are most probably from=20
-> the manufacturer and not from the distro.
-
-I don't know if there's any reasonable priority rules we could apply=20
-that would always yield the "correct" choice.  Except perhaps to put=20
-"generic" options at the bottom, but even if those generic options are=20
-the only ones available, the odds are they won't actually function=20
-properly anyway.
-
-BTW, current (RHEL/Fedora) distro practice is to extract the complete=20
-list of supported printers at "printer driver packaging" time, and use=20
-that to figure out what package needs to be installed at runtime.  IIRC=20
-this exclusively uses IEEE1284 IDs.
-
-And as a depressing data point, Gutenprint only has IEEE1284 IDs for=20
-about 15% of its supported models, and USB VID/PIDs for about 3%.  So a=20
-mechanism to auto-match based on the Manufacturer & Model strings out of=20
-the USB or IEEE1284 descriptors would still be a good idea..
-
- - Solomon
---=20
-Solomon Peachy			      pizza at shaftnet dot org (email&xmpp)
-                                      @pizza:shaftnet dot org   (matrix)
-High Springs, FL                      speachy (freenode)
-
---yaIB0r+2exwt6nEe
-Content-Type: application/pgp-signature; name="signature.asc"
-
------BEGIN PGP SIGNATURE-----
-
-iQIzBAABCgAdFiEE3H5Sx9DyiyB5hnENrGLLO/XVulEFAmA2Sw0ACgkQrGLLO/XV
-ulF49g/9G9bjPa1OOk+OajiXnZF/ViLPvjppKpSVlXxDXpznQFQZbXwT70bSqdFy
-ZjcxXgi/XJpC8eqevDBS9kSRFMIvA1BX1m0j9U5BwezoViHaxEA03DkcCEYZdDLJ
-bzjO1p/XXmA0XSUeupiKgpkaIENR96hQ/6Nwf0BnEJ7QRUG2KFQtd5vGWov3/wwn
-mMYIgHPdf/BZWv+6wDh1irco+GBzDTkSd2MN0/hYRTXZA44Hsyn+ixbS3Z6v84j7
-swbkUw5ZEO35WYf1LxSytdf/3jIYpPyjEQf4uS5IEYaYLXF7QQGLf59ilpAgVxIl
-BAzJEEJ2MKVNN85YG5+Sba2wCw3J8Pa63Cfqt5SWkW772ULPdrp4QBSxQA6YFcjI
-7VU76rrv1hlOC1Z/GPK7MyFwcjpL0Qib3awwBXv+9FPbVLObP0SnvPK5BwLtJWIW
-ZHSJ46Qp1xYW5uOyTcHHZbQKRS717FdnKwaBSTREz2hurtPpIMvAwBEBiGPzG+3M
-0cTEuPD689hQSslmnyCNDuBLnEW+DbQxdJHXPF+gskZvzTRGVOmTKA2ipYFU/DGL
-nsbDBsb7iBQIUSejuT+Y2E9PF92p6UV9Tfko4ZCryW9clSchLh0qPh1iTA9o3qCE
-rif0Fg/xOM2TZewJ8s+9AXPN2VircqH20Be0s8Xv7PNPIWrgINc=
-=57Zz
------END PGP SIGNATURE-----
-
---yaIB0r+2exwt6nEe--
+    Till
