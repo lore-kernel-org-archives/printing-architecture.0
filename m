@@ -1,27 +1,28 @@
-Return-Path: <pizza@stuffed.shaftnet.org>
-DKIM-Filter: OpenDKIM Filter v2.11.0 stuffed.shaftnet.org 11PEseBo1589794
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=shaftnet.org;
- s=default; t=1614264880;
- bh=Wvbdmu9YNtO+ffsOQL9UuHmChPHme64VuUPBJjyEBcI=;
- h=Date:From:To:Cc:Subject:References:In-Reply-To:From;
- b=J2g6FXxeUf12emlIG9oYvlC8tl3XoEpiVo0uAfHz/D+jKtdVW9nJw5oWbEyiVg70A
- V7ggqaKaIjNjegMSgEEDfmkv1p2DXMnHSIobLy86YU4WeIJVXiqqvwzcaM+rIv3jyy
- x4TadJpXLxFkbAxxYfBi43zC7MpyqU5BZXaLJN1w=
-Date: Thu, 25 Feb 2021 09:54:39 -0500
-From: Solomon Peachy <pizza@shaftnet.org>
-Message-ID: <YDe6L+I0u65ncSXP@shaftnet.org>
+Return-Path: <till.kamppeter@gmail.com>
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
+ h=subject:to:cc:references:from:message-id:date:user-agent
+ :mime-version:in-reply-to:content-language:content-transfer-encoding;
+ bh=kvB3w7QuYXz87zxTktt0DxciiJDnSsYIMv0qcyEH+Q0=;
+ b=aCeJHmkrNuzbfTjXfbINdnSAej+W65B+uFth1JqHJutOICkhYWIHMaYrRz5/PFxxoH
+ 7PVVSqzOyh8GBlTNY7UvYKx5fEBRRgUPc3ITyCiizp5JGROwKVC1Piy6FlNk/Lo1OC99
+ RE+sQzCnyiks3tFuODjMw6wpExzxUQJ7vo3g6XXJkWUXT1UhMunsl9sma+wYAUpfGcjT
+ 0CAKVK7jujk33iMuoU8xmmxb3nX11ao1tqJdDnqjvPbnT6URRqXMSOSCdLnvUkK9LO4y
+ ALxyV3WFzCIdKSp9l/grK5171fe1n8QZDo8lGSXGGv/8zJ6crFgTUK2lR4xCos01eg2k
+ argQ==
 References: <12af8541-3113-341d-6b7f-d7393203368f@gmail.com>
- <949aea1f-a0f0-df47-1538-d7782f5350ab@redhat.com>
- <66430674-dc47-4a81-406b-aedefc065a37@gmail.com>
- <YDZLEKxaIVrpLm4E@shaftnet.org>
- <e9d76903-993c-7fd7-3a8d-809c176cc931@redhat.com>
+ <1099419D-7CC7-448C-84B1-5C35D75F7A03@msweet.org>
+ <b6f4687d-fe34-c3e7-d378-a07405dc936e@redhat.com>
+ <1AF4A2E5-31EC-4B89-97E1-C181FF4ED4DF@msweet.org>
+From: Till Kamppeter <till.kamppeter@gmail.com>
+Message-ID: <03848a6c-7fb8-50c7-6ad9-80df4b36e97e@gmail.com>
+Date: Thu, 25 Feb 2021 16:24:58 +0100
 MIME-Version: 1.0
-Content-Type: multipart/signed; micalg=pgp-sha512;
- protocol="application/pgp-signature"; boundary="/IbP4U1VN2ntrUMo"
-Content-Disposition: inline
-In-Reply-To: <e9d76903-993c-7fd7-3a8d-809c176cc931@redhat.com>
+In-Reply-To: <1AF4A2E5-31EC-4B89-97E1-C181FF4ED4DF@msweet.org>
+Content-Type: text/plain; charset=windows-1252; format=flowed
+Content-Language: en-US
+Content-Transfer-Encoding: 7bit
 Subject: Re: [Printing-architecture] Automatic printer setup with Printer
- Applications
+	Applications
 List-Id: Printing architecture under linux
  <printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>, 
@@ -31,63 +32,28 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>, 
  <mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Zdenek Dohnal <zdohnal@redhat.com>
-Cc: Open Printing <printing-architecture@lists.linux-foundation.org>, Jai Luthra <luthrajaiji@gmail.com>, Till Kamppeter <till.kamppeter@gmail.com>
+To: Michael Sweet <msweet@msweet.org>, Zdenek Dohnal <zdohnal@redhat.com>
+Cc: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>, Jai Luthra <luthrajaiji@gmail.com>
 
+On 25/02/2021 14:33, Michael Sweet wrote:
+> Actually, I don't think you're going to find as many broken IPP-USB printers as you think since all but the first couple HP models  implemented IPP-USB to get AirPrint certification, which means it got tested extensively... :)
+>
 
---/IbP4U1VN2ntrUMo
-Content-Type: text/plain; charset=us-ascii
-Content-Disposition: inline
-Content-Transfer-Encoding: quoted-printable
+When I see bug reports on OpenPrinting or Ubuntu on non-working 
+IPP-over-USB printers they are usually HP, probably these old printers 
+which you mean.
 
-On Thu, Feb 25, 2021 at 09:28:47AM +0100, Zdenek Dohnal wrote:
-> Solomon, I'm sorry if it is an obvious fact, but I don't know it - would
-> you mind me asking why IEEE1284 IDs aren't used so much in drivers?
+> 
+> Up to you, but I would expect some user confirmation before installing any software on my computer...
+>
 
-I can't comment on manufacturer-supplied/supported drivers, but speaking=20
-of my own experience with Gutenprint we can't use what we don't know=20
-about.  The tooling that could take advantage of those IDs to=20
-provide automagic printer setup didn't exist until relatively [1]=20
-recently, and by then it was a bit too late..
+Simply some pop-up like "Found Acme LaserStar 1000+. Install Acme 
+Printer Application?" would be enough.
 
-And much like we've seen multiple distinct models with identical USB=20
-VID/PIDs, I've also seen distinct models that share identical IEEE1284=20
-IDs. [2] And then there's the iManufacturer/iModel/iSerial strings that=20
-may or may not match what's in the 1284 data or what's silkscreened onto=20
-the printer itself..
+> 
+> Why?  The printer application can just be run with the "autoadd" sub-command, no need to link against PAPPL for that.
 
-=2E..Like everything else involving printing, it's a complete mess.
+Or if you do not want to call an external executable via command line, 
+do IPP with libcups to create the queue (with driver selection "auto").
 
-(Of the stuff in Gutenprint, about a quarter of the IEEE1284 IDs, and=20
- all of the USB VID/PIDs, were added by myself.)
-
-[1] ie about a decade ago.=20
-[2] They are in the same family, but the PDL is barely incompatible..
-
- - Solomon
---=20
-Solomon Peachy			      pizza at shaftnet dot org (email&xmpp)
-                                      @pizza:shaftnet dot org   (matrix)
-High Springs, FL                      speachy (freenode)
-
---/IbP4U1VN2ntrUMo
-Content-Type: application/pgp-signature; name="signature.asc"
-
------BEGIN PGP SIGNATURE-----
-
-iQIzBAABCgAdFiEE3H5Sx9DyiyB5hnENrGLLO/XVulEFAmA3ui0ACgkQrGLLO/XV
-ulEjfBAAopt+ehDK+rNSuL2n1R4myUy/xt6q1CK9B+Sn8mgVhT6toTOEOquPGE5w
-sfmvfEAEQNeMW69vXeJD2Mz7mJYwWpqVjhO2hwDjthR1DabS0Te4UlEDxjoMO07I
-NrvS7nkIv6aaRVzeJr8V+FE6O3MESRR215yQycuoa0rSM16oR9yAe2T/zpvFuU+i
-dDKP2YY+bveKKKoVuZIgjkz1pKUsdTVDUiLlisPk4u1rYrhCUMOVqKWTAwFwhy87
-DImrfZAiPH+QX2I4lwcFylLYdD/1pf5o9s10nsRolHYsZmm1lb7Li1hL+n4Z23rQ
-t4Fz5O7HO3f6ceK+Wfya39LTqy175leyO1pcC1XKCj1taLrwhhHySpWld8g3iEm2
-UB+saQJu7Oa21xP7ATqwdZtNf6NeMck1Ed/TamQoRxyVN4PA5Q9z5l/AaMtVvNnS
-fNqW7EB1zIzIX1l8pRn47S4mmof1RqIYWvrhUK4cR/bH3F0kokDXaeE9A6jAmMvV
-sJSGPzwltMjn0a0BT/k7JlyZq6HipZ3UceOeUa63AviHshEmkvwCvL1nLEKp9Kmh
-eeWlaKnEij4OFYm82xBV9+w9AUIKltkG3C+i4UKy9Jou6n6EdjVYGqP1nrxCwFLP
-PkabQDdLFlelqy+S5Oui5cbgIYv+g7EdS6a8hNUVOCdv9qdulZc=
-=32Lz
------END PGP SIGNATURE-----
-
---/IbP4U1VN2ntrUMo--
+    Till
