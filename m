@@ -1,30 +1,18 @@
-Return-Path: <till.kamppeter@gmail.com>
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
- h=subject:to:references:from:message-id:date:user-agent:mime-version
- :in-reply-to:content-language:content-transfer-encoding;
- bh=Vmd/FCLCp3QXFNjq39pjgQn+WQifkwwDc1ia08KpBJ0=;
- b=VV4akZMYKXgwKRZ8AEQoYC7bxbSvVE3Ic8X5QYqKSJlR3NSJnI7uFo910zZJq9ha+x
- Av7sQQUyN+EnnDlTTJvqIl2cR1ZdpSWeLqOH6KYwqi/X09LRob7H3/V7N91Hoo9/Dzt4
- ucb691NEREpR2e2SOrYZbmVmb8jIiTD8yc/7l7KzWUWVB9jVmYH7hGcprAy0WEKpNlBn
- lrhbinSX0M70eqBd4NbzrAih4Oz45+g+LcBwIKlniTMB6hdcr5sYlfA+dBV5WafnrWt5
- PQOo9WB6OUhrnc20li7e5r/W9iMLef/VSwAUV5VzZmwq39rt9fNzlMoPDQiErF5FXIfo
- 346Q==
+Return-Path: <msweet@msweet.org>
+Content-Type: multipart/signed;
+ boundary="Apple-Mail=_263AEF45-48BD-4D65-94B4-934A57B479E6";
+ protocol="application/pgp-signature"; micalg=pgp-sha512
+Mime-Version: 1.0 (Mac OS X Mail 14.0 \(3654.60.0.2.21\))
+From: Michael Sweet <msweet@msweet.org>
+In-Reply-To: <4c554835-e8f7-3399-098d-11718beb020c@gmail.com>
+Date: Thu, 25 Feb 2021 08:43:20 -0500
+Message-Id: <10CF8536-388D-4202-AD36-D93D64574F54@msweet.org>
 References: <12af8541-3113-341d-6b7f-d7393203368f@gmail.com>
- <949aea1f-a0f0-df47-1538-d7782f5350ab@redhat.com>
- <66430674-dc47-4a81-406b-aedefc065a37@gmail.com>
- <bcc4538ef1b6e8ef9395dda295f00eac@suse.de>
- <4978914c-e66a-3084-251f-4b72ad364eaf@gmail.com>
- <4cd209b5fc90aa7ccfc8e1a7c380f982@suse.de>
-From: Till Kamppeter <till.kamppeter@gmail.com>
-Message-ID: <cf2af7c1-186a-3643-2563-0fea0d6dfa6b@gmail.com>
-Date: Thu, 25 Feb 2021 14:37:55 +0100
-MIME-Version: 1.0
-In-Reply-To: <4cd209b5fc90aa7ccfc8e1a7c380f982@suse.de>
-Content-Type: text/plain; charset=utf-8; format=flowed
-Content-Language: en-US
-Content-Transfer-Encoding: 7bit
+ <1099419D-7CC7-448C-84B1-5C35D75F7A03@msweet.org>
+ <b6f4687d-fe34-c3e7-d378-a07405dc936e@redhat.com>
+ <4c554835-e8f7-3399-098d-11718beb020c@gmail.com>
 Subject: Re: [Printing-architecture] Automatic printer setup with Printer
- Applications
+	Applications
 List-Id: Printing architecture under linux
  <printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>, 
@@ -34,99 +22,73 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>, 
  <mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Johannes Meixner <jsmeix@suse.de>, printing-architecture@lists.linux-foundation.org, Michael Sweet <msweet@msweet.org>, Jai Luthra <luthrajaiji@gmail.com>, Zdenek Dohnal <zdohnal@redhat.com>
+To: Till Kamppeter <till.kamppeter@gmail.com>
+Cc: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>, Jai Luthra <luthrajaiji@gmail.com>
 
-On 25/02/2021 11:30, Johannes Meixner wrote:
-> 
-> Hello,
-> 
-> I have a general understanding problem and questions
-> regarding how Printer Applications are meant to work.
-> 
-> In
-> https://openprinting.github.io/upcoming-technologies/01-printer-application/ 
-> 
-> I understand that a Printer Application emulates
-> a driverless IPP printer so that a printer device
-> appears to "others" as IPP Everywhere printer
-> which means "others" detect and communicate with
-> that (emulated) IPP Everywhere printer via network.
-> 
-> Basically a Printer Application "wraps" a printer device
-> into an IPP Everywhere network printer.
-> 
-> What I do not understand is how a Printer Application
-> detects and communicates with its associated
-> actual printer device
-> 
-> For example printers that have both a USB interface
-> and a network interface with several network protocols
-> like TCP socket, LPD, (dumb) IPP (no IPP Everywhere).
-> 
-> How does a Printer Application implement
-> detection and communication with such devices?
-> 
-> Does each and every Printer Application implement
-> it for each and every combination of methods?
-> 
-> Or in other words:
-> In traditional CUPS device detection and communication
-> was separated from the "driver" functionality by having
-> separated CUPS backends for different access methods
-> that are also separated from the other CUPS filters.
-> How is that done with Printer Applications?
-> 
-> 
 
-Each Printer Application contains the filter and backend functionality 
-for the printers it supports.
+--Apple-Mail=_263AEF45-48BD-4D65-94B4-934A57B479E6
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain;
+	charset=us-ascii
 
-The PostScript Printer Application which I have developed for example 
-contains functionality to connect to USB printers and to TCP socket 
-printers via appropriate device functions in PAPPL. PAPPL (and so also 
-my Printer Application) does not support LPD and dumb IPP, as all known 
-network printers also support TCP socket (and this is usually more 
-reliable than the two others). PAPPL also supports discovery, via libusb 
-for USB printers and both via DNS-SD and SNMP for TCP Socket.
+Till,
 
-The filtering from a driverless-typical standard format (PDF, Apple 
-Raster, PWG Raster, JPG) to the printer's native format is also done by 
-the Printer Application. For my PostScript application I use the code of 
-the pdftops and pstops CUPS filters (converted into filter functions in 
-libcupsfilters of cups-filters 2.x) and additional functions (using 
-libppd of cups-filters 2.x) to convert PAPPL's raster data streams to 
-PostScript.
+> On Feb 25, 2021, at 4:24 AM, Till Kamppeter <till.kamppeter@gmail.com> =
+wrote:
+> ...
+> Central repositories, like the Snap Store would need some =
+hardware-signature-based search, see
+>=20
+> =
+https://forum.snapcraft.io/t/hardware-associated-snaps-snap-store-search-b=
+y-hardware-signature/
 
-To get the emulated IPP printer one needs to create a print queue in the 
-Printer Application, via web interface, command line, or IPP.
+That is certainly one approach, and if Canonical is going to provide =
+some general support for finding snaps that support particular hardware =
+(not just printers) then it makes sense.
 
-> I am really not a container expert so I may ask obvious things:
-> 
-> I do not understand how a Printer Application that runs inside
-> a container "has access" to printer devices that exist outside
-> of the container - i.e. how something inside a container
-> "has access" to e.g. USB device nodes that should normally
-> be only accessible from the container host system?
-> 
-> Or in other words:
-> If "just installing" a containerized Printer Application
-> makes USB device nodes on the container host system
-> "just accessible" from within the container
-> I would consider this as a major security violation.
-> When I install a containerized application I would expect
-> that there are no automated holes in its isolation.
-> I think all holes in container isolation require explicit
-> user confirmation (at least I hope this is the standard).
-> E.g. I may have two USB printers (perhaps even two same models)
-> and I may want to allow access from within a containerized
-> Printer Application to only one exactly specified printer.
-> 
+That said, the number of printer applications is not likely to be huge =
+(LPrint, hp-printer-app, and ps-printer-app make 3, and potential future =
+HP-LIP and Gutenprint printer applications make 5), so even if you just =
+maintained files with the latest "app-name drivers" output you'd be able =
+to do a good job of mapping printers to printer applications.
 
-The containers are not completely closed. They have controlled 
-connections to the outside, so-called interfaces. A Printer Application 
-always has interfaces to open a port on the network, to register its 
-services on DNS-SD, to provide a UNIX socket, and in addition, to access 
-the printer hardware it supports, usually access to USB, to the network 
-as a client, and perhaps also to UDEV.
+Remember, Printer Applications are addressing a short term (~10 year?) =
+need to support legacy printers, at which point the primary users will =
+be "experts" that wouldn't use the default printer application/IPP =
+Everywhere support anyways.  New printers almost universally support IPP =
+(the outliers being for "experts").
 
-    Till
+________________________
+Michael Sweet
+
+
+
+
+--Apple-Mail=_263AEF45-48BD-4D65-94B4-934A57B479E6
+Content-Transfer-Encoding: 7bit
+Content-Disposition: attachment;
+	filename=signature.asc
+Content-Type: application/pgp-signature;
+	name=signature.asc
+Content-Description: Message signed with OpenPGP
+
+-----BEGIN PGP SIGNATURE-----
+Comment: GPGTools - https://gpgtools.org
+
+iQIzBAEBCgAdFiEEkIbDzcZsP1Y8+PQFvmfHXsgfMkQFAmA3qXgACgkQvmfHXsgf
+MkQdUhAAk2mI4CcOQEynwzx3UcYeCfDrwZl/2tOL+I3RZzVpZDlfcI0WkRA+Gt76
+yEvL/A0BV+aMI6C5o2rA1tJJsqRQEzpoqXz9GnXroSqici16pnANoDjt6kPoOiQG
+S1suFo3ecOlhOi5SlGaTblse+alCl4a9U7y4r8ig9X9NhH6DNX6Xl+Ow0i6DFfF9
+B4OY3ANOGq7IOmgPV6dgAsMkqSZf0IOe0KS9A5jWA2AsjFZ0F2ZlI9Y6WPBnEOzU
+F5ByWxJ8Iq9zXeysJrRxZuZmgfSYMUB4YMWjG7jXVlUIL6XuE6zow79wrPwEuFVk
+mX3ZQ1/Dd3lRcMxLOsdvtwl/q7/AGiKCyixGfrmIBpOD5OUDDn7QKUPljsdAagy8
+WOL0tw/s+yR1zgmStStXoAiIYpgFJ3FoIUX0fK5g2R2yRSIXiNG3UKIeIU8PgWsT
+xyPYz1+s4/ImjtWPertw2k4e3d/5LFixGRKsJULwphPULH3MZvwDYAwVieyDd13h
+UHQVFZlbTvQmX4yRu9yQyarBc2ZtDTQKbv1OX8Kl4XiHqqEP3K9Vw/oSBYekHv+v
+hwTHZzFY0JTX4FeYsS1bRf718PNV6QFg4FploOt5iGx1r/1FsSZuQCrkakI9sGVF
+VtmW7lxygEsPhQBTuJWibhYMI3wo+weRoDEFqSrLrBPzoKh5Aj0=
+=sq9l
+-----END PGP SIGNATURE-----
+
+--Apple-Mail=_263AEF45-48BD-4D65-94B4-934A57B479E6--
