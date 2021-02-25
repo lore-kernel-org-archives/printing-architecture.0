@@ -1,17 +1,27 @@
-Return-Path: <msweet@msweet.org>
-Content-Type: text/plain;
-	charset=us-ascii
-Mime-Version: 1.0 (Mac OS X Mail 14.0 \(3654.60.0.2.21\))
-From: Michael Sweet <msweet@msweet.org>
-In-Reply-To: <03848a6c-7fb8-50c7-6ad9-80df4b36e97e@gmail.com>
-Date: Thu, 25 Feb 2021 10:30:55 -0500
-Content-Transfer-Encoding: quoted-printable
-Message-Id: <E1F3F31C-A2DF-4BCE-826A-FC4282F77670@msweet.org>
+Return-Path: <till.kamppeter@gmail.com>
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
+ h=subject:to:cc:references:from:message-id:date:user-agent
+ :mime-version:in-reply-to:content-language:content-transfer-encoding;
+ bh=2z6YOYenBZM/vhLpblnw7mXtaA7OJPV1sNuTHI7sZ1E=;
+ b=X3TRsLmfdvwjARmR1DxOAivf7634JPWEVSQ+/M2zBR2KthU08oyhNGLbE2PjXinFn3
+ cDEz3Sqr2iADqd0D9hs2W1V0gbIEpDib4RkzeqUV3O0l2fKaiCZ8D338H9PsUgt33HkU
+ HmbKwFPyocLaBBtUt9p/tgWHi2To7ht/vtt0kRld0w1wGqrTZKGGefLehJl4ZzRtka65
+ mPLiCwumd9SB9ppvn+Uq1bTU989w319xkb4BJpOXGK+FlzsD6wA9cXEGsnkWJtpeoimi
+ 1HCR1WNISh8N5/yNdrvPtp1/wDDp8P0u+KfxxcaY73t1jP9wmfKCWS10DgFNk1wT6AUr
+ mAGw==
 References: <12af8541-3113-341d-6b7f-d7393203368f@gmail.com>
  <1099419D-7CC7-448C-84B1-5C35D75F7A03@msweet.org>
  <b6f4687d-fe34-c3e7-d378-a07405dc936e@redhat.com>
- <1AF4A2E5-31EC-4B89-97E1-C181FF4ED4DF@msweet.org>
- <03848a6c-7fb8-50c7-6ad9-80df4b36e97e@gmail.com>
+ <4c554835-e8f7-3399-098d-11718beb020c@gmail.com>
+ <10CF8536-388D-4202-AD36-D93D64574F54@msweet.org>
+From: Till Kamppeter <till.kamppeter@gmail.com>
+Message-ID: <f72fa2a3-55e4-d98d-f7c2-fd755ede365a@gmail.com>
+Date: Thu, 25 Feb 2021 20:39:44 +0100
+MIME-Version: 1.0
+In-Reply-To: <10CF8536-388D-4202-AD36-D93D64574F54@msweet.org>
+Content-Type: text/plain; charset=windows-1252; format=flowed
+Content-Language: en-US
+Content-Transfer-Encoding: 7bit
 Subject: Re: [Printing-architecture] Automatic printer setup with Printer
 	Applications
 List-Id: Printing architecture under linux
@@ -23,46 +33,50 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>, 
  <mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Till Kamppeter <till.kamppeter@gmail.com>
+To: Michael Sweet <msweet@msweet.org>
 Cc: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>, Jai Luthra <luthrajaiji@gmail.com>
 
-Till,
+On 25/02/2021 14:43, Michael Sweet wrote:
+> That is certainly one approach, and if Canonical is going to provide some general support for finding snaps that support particular hardware (not just printers) then it makes sense.
+> 
+> That said, the number of printer applications is not likely to be huge (LPrint, hp-printer-app, and ps-printer-app make 3, and potential future HP-LIP and Gutenprint printer applications make 5), so even if you just maintained files with the latest "app-name drivers" output you'd be able to do a good job of mapping printers to printer applications.
+> 
 
-> On Feb 25, 2021, at 10:24 AM, Till Kamppeter =
-<till.kamppeter@gmail.com> wrote:
->=20
-> On 25/02/2021 14:33, Michael Sweet wrote:
->> Actually, I don't think you're going to find as many broken IPP-USB =
-printers as you think since all but the first couple HP models  =
-implemented IPP-USB to get AirPrint certification, which means it got =
-tested extensively... :)
->>=20
->=20
-> When I see bug reports on OpenPrinting or Ubuntu on non-working =
-IPP-over-USB printers they are usually HP, probably these old printers =
-which you mean.
->=20
->> Up to you, but I would expect some user confirmation before =
-installing any software on my computer...
->>=20
->=20
-> Simply some pop-up like "Found Acme LaserStar 1000+. Install Acme =
-Printer Application?" would be enough.
+First, there will come more Printer Application, one will be the 
+Foomatic/Ghostscript/Unmaintained-Legacy one, a SANE legacy one, then 
+there is probably also a Braille embosser one, and some for (2-3) for 
+other maintained drivers. In addition to that some manufacturers will 
+put up some for their specialty printers.
 
-Agreed, potentially with a prompt for the admin password.  Not that I =
-expect malware in the snap store (for example), but we don't want to =
-make it an obvious target.
+For the maintained ones there can often appear updates with new models.
 
->> Why?  The printer application can just be run with the "autoadd" =
-sub-command, no need to link against PAPPL for that.
->=20
-> Or if you do not want to call an external executable via command line, =
-do IPP with libcups to create the queue (with driver selection "auto").
+So maintaining model indices of the Printer Applications externally and 
+having them in packages which the distros ship is not a good idea. A 
+standard way to get the model list out of a running Printer Application 
+is already a good step. As we talked about earlier we can expand the 
+"app-name drivers" with options so that you can get a more 
+machine-readable list and device IDs.
 
-The challenge there is to find the right socket to talk to... :/
+For keeping up with not installed but available Printer Applications I 
+think hardware-signature-based search in the Snap Store would be the 
+best solution.
 
-________________________
-Michael Sweet
+> Remember, Printer Applications are addressing a short term (~10 year?) need to support legacy printers, at which point the primary users will be "experts" that wouldn't use the default printer application/IPP Everywhere support anyways.  New printers almost universally support IPP (the outliers being for "experts").
 
+So one should not need to invest too much time for their perfect 
+integration.
 
+Hardware-signature-based search in the Snap Store is not only for 
+Printer Applications, and in other hardware categories drivers or 
+otherwise hardware-related Snaps could be more common.
 
+A GUI application/GNOME Control Center module which lists available 
+Printer Application and provides buttons to their web interfaces, 
+auto-add, IPP System Service, ... could be made as general user-oriented 
+DNS-SD service lister, where the user also easily finds web interfaces 
+for routers, access points, smart home devices, ...
+
+Only the USB auto-setup tool is something more transitional which 
+perhaps could go away in 10 years or so.
+
+    Till
