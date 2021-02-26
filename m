@@ -1,14 +1,15 @@
 Return-Path: <jsmeix@suse.de>
 MIME-Version: 1.0
-Date: Fri, 26 Feb 2021 10:17:25 +0100
+Date: Fri, 26 Feb 2021 11:03:34 +0100
 From: Johannes Meixner <jsmeix@suse.de>
-In-Reply-To: <9b91cd9c-2766-dcd8-89e2-f7fed0072319@gmail.com>
+In-Reply-To: <YDe6L+I0u65ncSXP@shaftnet.org>
 References: <12af8541-3113-341d-6b7f-d7393203368f@gmail.com>
  <949aea1f-a0f0-df47-1538-d7782f5350ab@redhat.com>
  <66430674-dc47-4a81-406b-aedefc065a37@gmail.com>
- <YDZLEKxaIVrpLm4E@shaftnet.org> <9d87166cb02c637e30e7d165c8293275@suse.de>
- <9b91cd9c-2766-dcd8-89e2-f7fed0072319@gmail.com>
-Message-ID: <226dd237ebac1b695eec291314ae22e3@suse.de>
+ <YDZLEKxaIVrpLm4E@shaftnet.org>
+ <e9d76903-993c-7fd7-3a8d-809c176cc931@redhat.com>
+ <YDe6L+I0u65ncSXP@shaftnet.org>
+Message-ID: <821b4df56f518b8d2cc38ce846e8cc48@suse.de>
 Content-Type: text/plain; charset=US-ASCII;
  format=flowed
 Content-Transfer-Encoding: 7bit
@@ -26,51 +27,41 @@ List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-arc
 To: printing-architecture@lists.linux-foundation.org
 
 
-Hello,
+Hello
 
-On 2021-02-24 18:23, Till Kamppeter wrote:
-> On 24/02/2021 15:01, Johannes Meixner wrote:
->> 
->> I took me some longer time of experience what works
->> reasonably well in practice out there in real world
->> how to auto-match based on the manufacturer & model
->> strings which is the only data that is always there.
+On 2021-02-25 15:54, Solomon Peachy wrote (excerpts):
 > 
-> I go a similar way, matching by make and model
+> And much like we've seen multiple distinct models with
+> identical USB VID/PIDs, I've also seen distinct models
+> that share identical IEEE1284 IDs. [2]
+> And then there's the iManufacturer/iModel/iSerial strings
+> that may or may not match what's in the 1284 data
+> or what's silkscreened onto the printer itself..
+> ...Like everything else involving printing, it's a complete mess.
 ...
-> What I do is taking the observed make and model,
-> normalizing it to some form
-...
-> The names in the list of supported models
-> I normalize the same way.
+> [2] They are in the same family, but the PDL is barely incompatible..
 
-I did same i.e.
-normalizing make and model what the system reports and
-normalizing make and model in the PPDs in the same way,
-then some "fuzzy match" to get a list of PPDs
-that "somehow match" the reported make and model
-with some "special sorting" to put the "somehow best match"
-on top of that list and
-finally show that list to the user so he can select one.
+for some (older) examples that "similar looking model names"
+do not mean "same driver works" see the part about
+"It is crucial to have exact model names!" in
+https://en.opensuse.org/SDB:Purchasing_a_Printer_and_Compatibility
 
-In automated setup case the topmost entry of that list
-is used.
+I do not agree that everything involving printing is a complete mess
+but I do fully agree that model->driver matching is a complete mess
+from which follows "automated printer setup is a complete mess"
+so my personal conclusion is:
 
-I vaguely described that in
-https://en.opensuse.org/YaST_Printer#Driver
+Stay away from automated printer setup
+(unless you like complete mess ;-)
 
-By the way 1:
-For my general point of view about
-"Automated Printer Configuration" see
-https://en.opensuse.org/YaST_Printer#Automated_Printer_Configuration
-versus the subsequent section
-"Manual Printer Configuration with the YaST Printer Module"
-therein.
-
-By the way 2:
-In practice the current "YaST Printer Module" is dead code, cf.
-https://bugzilla.suse.com/show_bug.cgi?id=1175341#c1
-I wished those who make the decisions would finally let it RIP.
+I am looking forward to the future where proper
+IPP (Everywhere) printer devices provide all what is needed
+(including spooling and handling many clients simultaneously)
+so neither printer drivers (and their setup)
+nor spooling services (and their setup)
+are needed any longer.
+Only clients that properly talk IPP directly to
+IPP printer devices that properly provide IPP.
 
 
 Kind Regards
