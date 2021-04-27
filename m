@@ -1,17 +1,23 @@
-Return-Path: <msweet@msweet.org>
-Content-Type: text/plain;
-	charset=us-ascii
-Mime-Version: 1.0 (Mac OS X Mail 14.0 \(3654.60.0.2.21\))
-From: Michael Sweet <msweet@msweet.org>
-In-Reply-To: <d66bd61c-4a20-fb0c-9efb-83cae46febe1@gmail.com>
-Date: Tue, 20 Apr 2021 12:42:55 -0400
-Content-Transfer-Encoding: quoted-printable
-Message-Id: <A794D575-259C-4315-9CC8-7D7F4385C70D@msweet.org>
-References: <da1e3969-fb49-7fd7-1728-f18759afc3c2@apevzner.com>
- <A48C14A9-A2BE-4A1C-8F91-9C0D85A98051@msweet.org>
- <d66bd61c-4a20-fb0c-9efb-83cae46febe1@gmail.com>
-Subject: Re: [Printing-architecture] Mopria has published the eSCL protocol
- specification
+Return-Path: <till.kamppeter@gmail.com>
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
+ h=to:from:subject:message-id:date:user-agent:mime-version
+ :content-language:content-transfer-encoding;
+ bh=wpyNYChUfF1/djVMCv07MWZsmzB5tQ3x6GtVV4vIIbc=;
+ b=KzdlnOuCbXx4brU6j/ujDtdpApMrvha2yHvjKXLQsMlRFLmX380pH+6im6MUv+++0G
+ SmtpXaoKZRuD29njYdq6RHbJejUcgJO1fhbUpltpnx+ujhZW5snydrY2+fjSlKiKX1PF
+ RW8Cd7duA7DdG6d7L+REdUj8QTwjw52qOz/+uRwK9F8WWuQgOSMij8/QU7nJEKrhDnCy
+ AR1YZfbuvHLdhKkiTPhfFAmOBuQ4mwJvD0KnQrUXbLqd+4c7WCXbz3SsZ7n0NQN8Rn+Z
+ PH8bV7pH7DFgOtayImM0+g3pZKdPNHR83vvXKrfrT9XA9+Xfx5kxVypYXmqYIazD8wIB
+ 9qfg==
+From: Till Kamppeter <till.kamppeter@gmail.com>
+Message-ID: <8c101e3b-2f80-666c-db86-05b7dd170a7c@gmail.com>
+Date: Tue, 27 Apr 2021 19:46:09 +0200
+MIME-Version: 1.0
+Content-Type: text/plain; charset=utf-8; format=flowed
+Content-Language: en-US
+Content-Transfer-Encoding: 7bit
+Subject: [Printing-architecture] Human-readable strings for standard IPP
+ options/choices/attributes/propertirs
 List-Id: Printing architecture under linux
  <printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>, 
@@ -21,72 +27,31 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>, 
  <mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Till Kamppeter <till.kamppeter@gmail.com>
-Cc: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>
+To: Open Printing <printing-architecture@lists.linux-foundation.org>
 
-Till,
+Hi,
 
-I think I've made my position clear.  Until the industry adopts IPP =
-Scan, there is little point in pushing for it, and eSCL is what new MFPs =
-implement.
+while I was looking through the code of the PPD file generators in CUPS 
+and cups-filters for creating CUPS queues for driverless IPP printers I 
+wa thinking about where the human-readable strings for the PPD files 
+(and also for print dialogs) come from and whether one could also 
+generate PPD files translated into non-English languages.
 
-Andrew Mitchell (HP) tried to do an IPP Scan before AirPrint adopted =
-eSCL, and then a couple years later Pete Zehler finished the current IPP =
-Scan to convince Mopria to use IPP for scanning instead of eSCL, but =
-since Apple had already adopted eSCL for AirPrint it was a losing =
-battle.
+I have also seen that printers supply human-readable strings for options 
+and choices via the URL listed in the printer-strings-uri IPP attribute, 
+but these strings are only for the options and choices which are not IPP 
+or PWG standard.
 
-There are new discussions between Microsoft and the PWG concerning cloud =
-scanning, and since they adopted IPP for their Universal Print Service =
-(part of the cloud-based Azure ActiveDirectory work) they may decide =
-they want to use IPP Scan for that, but things are so early in =
-discussions I wouldn't keep your hopes up!
+Seeing this I thought that the wide majority of IPP attributes, options, 
+choices, and properties ar IPP/PWG standardized, and so they should 
+always be well served by the same human-readable strings, independent of 
+operating system, desktop, or other client software being used.
 
-IMHO our efforts are best focused on supporting eSCL.  If, in the =
-future, IPP Scan gets a place at the table then we can support that =
-protocol as well.
+So it would be great to have some central repository for these strings 
+for any operating system and application software to use when working 
+with IPP printers. Is there something like that? Was susch a thing 
+already discussed at the PWG? Or is every OS or application developer 
+supposed to "invent" his own, personal set of human-readable strings for 
+standard IPP attributes?
 
-
-> On Apr 20, 2021, at 12:13 PM, Till Kamppeter =
-<till.kamppeter@gmail.com> wrote:
->=20
-> Question is now whether we should implement the new architecture of =
-Scanner Applications/sandboxable scanner drivers with eSCL or whether we =
-should use IPP Scan.
->=20
-> eSCL is probably easier to implement, as we have sane-airscan =
-containing all client code and AirSane containing the server code, both =
-needing to get updated to fully comply with the public eSCL standard and =
-their code being moved into (a) library/ies, so that one can easily =
-integrate it with PAPPL. No need to implement a new protocol completely =
-from scratch.
->=20
-> On the other side with IPP Scan we have more consistency as all the =
-rest (printing, IPP System Service) is also IPP.
->=20
-> WDYT?
->=20
->   Till
->=20
->=20
-> On 19/04/2021 20:38, Michael Sweet wrote:
->> Alexander,
->> Thanks for letting us know!
->>> On Apr 19, 2021, at 1:17 PM, Alexander Pevzner <pzz@apevzner.com> =
-wrote:
->>>=20
->>> Hi,
->>>=20
->>> Mopria has published the eSCL protocol specification:
->>>=20
->>>    https://mopria.org/spec-download
->>>=20
->>> Basically, it's the same as scanning part of Apple AirPrint (Bonjour =
-scanning).
->=20
-
-________________________
-Michael Sweet
-
-
-
+    Till
