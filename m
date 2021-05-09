@@ -1,12 +1,14 @@
-Return-Path: <msweet@msweet.org>
-Content-Type: text/plain;
-	charset=us-ascii
-Mime-Version: 1.0 (Mac OS X Mail 14.0 \(3654.100.0.2.11\))
-From: Michael Sweet <msweet@msweet.org>
-In-Reply-To: <YJdH6p4ePqKSATLL@shaftnet.org>
-Date: Sat, 8 May 2021 22:54:49 -0400
-Content-Transfer-Encoding: quoted-printable
-Message-Id: <1501D827-9DF0-45D4-87C6-FB9953C7BF1B@msweet.org>
+Return-Path: <till.kamppeter@gmail.com>
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
+ h=subject:to:cc:references:from:message-id:date:user-agent
+ :mime-version:in-reply-to:content-language:content-transfer-encoding;
+ bh=00W0r6Xlc0y5XrlfpJ88QP8oQFPBfjd3TIdZ3UCFfSM=;
+ b=pn8KNULTu/k44enGGIQhEYm6X74kmzB72PRa68ZRXi8aaRpKGRZZ7pT0t7ZvTMzhlX
+ QsrM5BZkNIa8xvpc/wIMTQyY6AQeJYbYgxZMatCdIJUKNHy8xBJN2CL/G1JD4taIvcmK
+ rUZ0bnekRgBD42Af8zS+imvcxQsDZjRP/Gpuqu8Aks2JhMosdTiKZzZCz2wDOnZzJ1QA
+ DIoRhyEU1dICPh/XyFfew+/2HUDVbop0E61Kdv/QV+NQbVtGpStbEDPcfdAOybkrvxUx
+ dlXxVpFhoq10CKI0+iTDFj204Hi3EU3IR4tpHvb3OLQ7Wm6buiLE6CmZ3UTxlIoaBjSi
+ OcLA==
 References: <8c101e3b-2f80-666c-db86-05b7dd170a7c@gmail.com>
  <FC123AED-25FA-4E37-9957-29565F89DC1D@msweet.org>
  <e8060298-8b2b-94d9-3eaf-1386cbc9543c@gmail.com>
@@ -17,6 +19,15 @@ References: <8c101e3b-2f80-666c-db86-05b7dd170a7c@gmail.com>
  <YJckMlum0aC3moQO@shaftnet.org>
  <E783C6F3-AF3B-41C3-9432-88E23AF907D7@msweet.org>
  <YJdH6p4ePqKSATLL@shaftnet.org>
+ <1501D827-9DF0-45D4-87C6-FB9953C7BF1B@msweet.org>
+From: Till Kamppeter <till.kamppeter@gmail.com>
+Message-ID: <1a37c322-5ca3-727b-583f-2b6bc78e44e2@gmail.com>
+Date: Sun, 9 May 2021 10:20:57 +0200
+MIME-Version: 1.0
+In-Reply-To: <1501D827-9DF0-45D4-87C6-FB9953C7BF1B@msweet.org>
+Content-Type: text/plain; charset=utf-8; format=flowed
+Content-Language: en-US
+Content-Transfer-Encoding: 7bit
 Subject: Re: [Printing-architecture] Make use of extended color spaces on
  IPP printers
 List-Id: Printing architecture under linux
@@ -28,43 +39,28 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>, 
  <mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Solomon Peachy <pizza@shaftnet.org>
-Cc: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>, Jay Berkenbilt <ejb@ql.org>, Vikrant Malik <vikrant@iitk.ac.in>, Till Kamppeter <till.kamppeter@gmail.com>
+To: Michael Sweet <msweet@msweet.org>, Solomon Peachy <pizza@shaftnet.org>
+Cc: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>, Jay Berkenbilt <ejb@ql.org>, Vikrant Malik <vikrant@iitk.ac.in>
 
-Solomon,
+On 09/05/2021 04:54, Michael Sweet wrote:
+> 
+> PWG Raster (and Apple Raster) are "last-mile" formats.  The color space is explicitly defined by the Printer (sometimes with ICC profiles, particularly for Device RGB), and the Client is responsible for providing raster data in a supported color space.
 
-> On May 8, 2021, at 10:24 PM, Solomon Peachy <pizza@shaftnet.org> =
-wrote:
-> ...
-> Excellent.  But I'm thinking more of folks trying to print something=20=
+If the printer supports the following (according to urf-supported):
 
-> from a random app on their their iOS or Android devices.  Having a =
-rich=20
-> standard doesn't help when the client implementations are all=20
-> differently brain-dead. :)
+- sGray (does this come from "W8"?)
+- DeviceGray
+- sRGB
+- AdobeRGB
+- DeviceRGB
 
-Well, at least on iOS you'll find that the whole system is wired up for =
-ICC-based color management, just as on macOS.  As for Android, I =
-heartily agree!
+What does this exactly mean? I asume that Raster input files need to 
+match one of these color spaces and in the Raster header the actually 
+used color space must be specified. Am I right?
 
->> Second, it isn't a weakness to support well-known RGB color spaces=20
->> along with a device RGB color space.=20
->=20
-> I'm sorry, that's not what I was trying to say.
->=20
-> The "weakness" is that the PWG raster format doesn't have a way to=20
-> self-describe what "Device RGB" means, unlike more standalone image=20
-> formats (eg jpeg, png, tiff) that have a standard method to embed ICC=20=
+Now for DeviceRGB (and DeviceGray) I assume that here the data is 
+required in the printer's native color space. Am I right? But can I do 
+true driverless printing with this? Can I download the printer's ICC 
+profiles from the printer? And if yes, by which URL?
 
-> profiles.
-
-PWG Raster (and Apple Raster) are "last-mile" formats.  The color space =
-is explicitly defined by the Printer (sometimes with ICC profiles, =
-particularly for Device RGB), and the Client is responsible for =
-providing raster data in a supported color space.
-
-________________________
-Michael Sweet
-
-
-
+    Till
