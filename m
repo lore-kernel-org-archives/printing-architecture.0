@@ -2,30 +2,27 @@ Return-Path: <till.kamppeter@gmail.com>
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
  h=subject:to:cc:references:from:message-id:date:user-agent
  :mime-version:in-reply-to:content-language:content-transfer-encoding;
- bh=00W0r6Xlc0y5XrlfpJ88QP8oQFPBfjd3TIdZ3UCFfSM=;
- b=pn8KNULTu/k44enGGIQhEYm6X74kmzB72PRa68ZRXi8aaRpKGRZZ7pT0t7ZvTMzhlX
- QsrM5BZkNIa8xvpc/wIMTQyY6AQeJYbYgxZMatCdIJUKNHy8xBJN2CL/G1JD4taIvcmK
- rUZ0bnekRgBD42Af8zS+imvcxQsDZjRP/Gpuqu8Aks2JhMosdTiKZzZCz2wDOnZzJ1QA
- DIoRhyEU1dICPh/XyFfew+/2HUDVbop0E61Kdv/QV+NQbVtGpStbEDPcfdAOybkrvxUx
- dlXxVpFhoq10CKI0+iTDFj204Hi3EU3IR4tpHvb3OLQ7Wm6buiLE6CmZ3UTxlIoaBjSi
- OcLA==
+ bh=eM9tzKEJYKw1PYHSUgaEW9TvrLKEjt6/aNK7dd8J4Yg=;
+ b=fSUZ+oNYfTSFJx/TVUIXku7+RTgTCTJvlbbGmh3FbPDvsXQ4j9i0ZxaZSS7lBMzCA8
+ aI3M3CjdcwkNIjgf7zFq7RvYBM8dESAvArR1YVe+JRqcWH8zagG2w1zenIy/U9xKpRPR
+ p0IpadIf6g8WQgs+jjAiTqzEgCetn2a5d2QGweOpx/3FTPOBegAZxjNTVyyW8ZlZoz3F
+ 6wd0Ai/DgkRdYllinZPrrh37hx2qIGQuvebvqGrqJv2G3F2PBcZbqXnWAhBdWaW5Xy2S
+ mXHJj8ffw9aTrRUznBmD5HvrhJejCIKhIbuzFZ5jjo4Hw9wFdDiGV2E00rqW8vidh3AM
+ /Lcg==
 References: <8c101e3b-2f80-666c-db86-05b7dd170a7c@gmail.com>
  <FC123AED-25FA-4E37-9957-29565F89DC1D@msweet.org>
  <e8060298-8b2b-94d9-3eaf-1386cbc9543c@gmail.com>
  <29E8A83D-5BBB-49AA-83A6-4B3EB765828A@msweet.org>
  <9db67beb-7ca2-249c-88e4-ead29d19ce63@gmail.com>
  <FC95906E-6085-4121-AEA8-9E53613872AD@msweet.org>
- <fdd1654d-8dd6-9eb8-e41d-dcf786c559d1@gmail.com>
- <YJckMlum0aC3moQO@shaftnet.org>
- <E783C6F3-AF3B-41C3-9432-88E23AF907D7@msweet.org>
- <YJdH6p4ePqKSATLL@shaftnet.org>
- <1501D827-9DF0-45D4-87C6-FB9953C7BF1B@msweet.org>
+ <54eda145-936b-a920-b645-66a104b23ad4@gmail.com>
+ <YJc9BYPyXoSyi8X/@shaftnet.org>
 From: Till Kamppeter <till.kamppeter@gmail.com>
-Message-ID: <1a37c322-5ca3-727b-583f-2b6bc78e44e2@gmail.com>
-Date: Sun, 9 May 2021 10:20:57 +0200
+Message-ID: <46c7d30c-b28d-1585-e4b6-49aa22b9efc2@gmail.com>
+Date: Sun, 9 May 2021 11:20:57 +0200
 MIME-Version: 1.0
-In-Reply-To: <1501D827-9DF0-45D4-87C6-FB9953C7BF1B@msweet.org>
-Content-Type: text/plain; charset=utf-8; format=flowed
+In-Reply-To: <YJc9BYPyXoSyi8X/@shaftnet.org>
+Content-Type: text/plain; charset=windows-1252; format=flowed
 Content-Language: en-US
 Content-Transfer-Encoding: 7bit
 Subject: Re: [Printing-architecture] Make use of extended color spaces on
@@ -39,28 +36,64 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>, 
  <mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Michael Sweet <msweet@msweet.org>, Solomon Peachy <pizza@shaftnet.org>
+To: Solomon Peachy <pizza@shaftnet.org>, Michael Sweet <msweet@msweet.org>
 Cc: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>, Jay Berkenbilt <ejb@ql.org>, Vikrant Malik <vikrant@iitk.ac.in>
 
-On 09/05/2021 04:54, Michael Sweet wrote:
+
+
+On 09/05/2021 03:38, Solomon Peachy wrote:
+>> 7. As the PPD generator does not add choices for the extended color modes to
+>> the ColorModel option (see (1)) we need to somehow add the info of how to
+>> upgrade the color depth and color space for print-quality=high in (3) and
+>> which is the highest color depth/space supported by the printer for (5). So
+>> we let the PPD generator add a line like "*cupsHighQuality: 16bit,AdobeRGB"
+>> (exact content depends on what the printer supports).
 > 
-> PWG Raster (and Apple Raster) are "last-mile" formats.  The color space is explicitly defined by the Printer (sometimes with ICC profiles, particularly for Device RGB), and the Client is responsible for providing raster data in a supported color space.
+> It is is mistake to think about colorspace conversions in terms of
+> "print quality" and as such something that can be "upgraded". Instead,
+> one should think about it in terms of "correctness".
+> 
 
-If the printer supports the following (according to urf-supported):
+OK< then I will only upgrade from 8 to 16 bit (for the rasterizing of a 
+standard vector-graphics-PDF) when the user requests "high" quality and 
+the printer supports it.
 
-- sGray (does this come from "W8"?)
-- DeviceGray
-- sRGB
-- AdobeRGB
-- DeviceRGB
+My problem now is the following use cases:
 
-What does this exactly mean? I asume that Raster input files need to 
-match one of these color spaces and in the Raster header the actually 
-used color space must be specified. Am I right?
+1. A user wants to print photos in best possible (wide gammut) color 
+reproduction quality. So he either sets his camera to produce AdobeRGB 
+JPEGs or he shoots RAW and saves the processed RAW images in 
+16-bit-per-color AdobeRGB. He sends his images out of his photo 
+editor/manager to the printer, but the application sends print jobs in 
+PDF. So we get a raster-only PDF with the raster data embedded being 
+16-bit AdobeRGB (assuming that the printer supports it as the 
+application's print dialog does a get-printer-attributes request and so 
+knows what the printer supports).
 
-Now for DeviceRGB (and DeviceGray) I assume that here the data is 
-required in the printer's native color space. Am I right? But can I do 
-true driverless printing with this? Can I download the printer's ICC 
-profiles from the printer? And if yes, by which URL?
+In this case in the CUPS filtering process we have to discover at first 
+whether the incoming PDF is raster-only. In this case we would not 
+render it but pass it through pclmtoraster to extract the raster data 
+with its color space info (AdobeRGB). We do not convert this to sRGB or 
+anything else, but pass on a Raster file in AdobeRGB.
+
+Question here: Do we need to discover that the PDF is raster-only and 
+then use pclmtoraster? Or can we simply do the standard rendering 
+(GhostScript, Poppler, or MuPDF) and tell the renderer (by command line 
+for example) that we want AdobeRGB output? Would the renderer pass on 
+the AdobeRGB data without conversion, especially not doing AdobeRGB -> 
+sRGB -> AdobeRGB?
+
+
+2. Another user wants to write a review of mobile phone providers, 
+containing pictures and logos of the candidates (one of them is 
+T-Mobile). In order to avoid the providers feeling stepped on their toes 
+he wants to have best color reproduction. So he creates the print output 
+(which is in PDF) in AdobeRGB as he knows that the printer supports it.
+
+My question: Now how can the CUPS filters auto-discover that the PDF is 
+in AdobeRGB and therefore the PDF needs to get rasterized in AdobeRGB? 
+Is there some tool for that? Some special call of GhostScript or QPDF? 
+Or can I uncompress the PDF and then search it for "/ColorSpace" keys? 
+Also how to rasterize if there are some sRGB and some AdobeRGB pieces in it?
 
     Till
