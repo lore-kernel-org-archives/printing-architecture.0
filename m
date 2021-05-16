@@ -1,27 +1,19 @@
-Return-Path: <msweet@msweet.org>
-Content-Type: text/plain;
-	charset=us-ascii
-Mime-Version: 1.0 (Mac OS X Mail 14.0 \(3654.100.0.2.11\))
-From: Michael Sweet <msweet@msweet.org>
-In-Reply-To: <9bbc006e-da7a-26a8-bb8c-58e928ec2424@gmail.com>
-Date: Sun, 9 May 2021 21:08:31 -0400
-Content-Transfer-Encoding: quoted-printable
-Message-Id: <A7E0C108-41F6-40F8-96B5-677389C44389@msweet.org>
-References: <8c101e3b-2f80-666c-db86-05b7dd170a7c@gmail.com>
- <FC123AED-25FA-4E37-9957-29565F89DC1D@msweet.org>
- <e8060298-8b2b-94d9-3eaf-1386cbc9543c@gmail.com>
- <29E8A83D-5BBB-49AA-83A6-4B3EB765828A@msweet.org>
- <9db67beb-7ca2-249c-88e4-ead29d19ce63@gmail.com>
- <FC95906E-6085-4121-AEA8-9E53613872AD@msweet.org>
- <54eda145-936b-a920-b645-66a104b23ad4@gmail.com>
- <YJc9BYPyXoSyi8X/@shaftnet.org>
- <46c7d30c-b28d-1585-e4b6-49aa22b9efc2@gmail.com>
- <2427DA0B-9BB7-462B-A29E-0A3366E504A3@msweet.org>
- <d98786f1-b8ce-4530-715d-d507b2110baa@gmail.com>
- <22E3C15E-13D2-42B5-9384-4637E8033E93@msweet.org>
- <9bbc006e-da7a-26a8-bb8c-58e928ec2424@gmail.com>
-Subject: Re: [Printing-architecture] Make use of extended color spaces on
- IPP printers
+Return-Path: <blueroofmusic@gmail.com>
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
+ h=mime-version:from:date:message-id:subject:to;
+ bh=mmJpmntEe9vOVTprB0kMsl8u1pSMNm7v+zbFQ8mEj3Y=;
+ b=Bb0pk9UlxQZ7US7obXHnR8taSNSn9fge7KYa6eNUaTHHcLrLEPwmZYLbDEZTVzM2GE
+ 6eCh1vo0Nq72yAK2mWozRU4/8l5AVuYM8OAaY6XBAc+3RR6+CcVXk6apwW2bZcW4fRmL
+ V4QgpSvpStOTiKc1cNACYdMLBwCn27huKjngfPtJJ4NernO76Dn2rs9PvOaSQcGKMKG9
+ IutWgAY7Nf/sJV/CxbOZBAUR04eyeXOL0kNd2pE6kJiQCuRkFeWYr+LtfWOgyz80tyzl
+ EqsN/MLVhmbYwMYVQBQlLFG5cKbHf/Z0FCtGNHzYw4/n1QHTEFpuGgs0aYTykD4Fz1gB
+ veKQ==
+MIME-Version: 1.0
+From: Ira McDonald <blueroofmusic@gmail.com>
+Date: Sun, 16 May 2021 12:17:51 -0400
+Message-ID: <CAN40gSsW7RSJQny1RYT2HNrjJNCDdgrf=iRfXduCU6p1+EQUkg@mail.gmail.com>
+Content-Type: multipart/alternative; boundary="0000000000009b215305c274d23e"
+Subject: [Printing-architecture] OP Summit Minutes (4 May 2021)
 List-Id: Printing architecture under linux
  <printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>, 
@@ -31,30 +23,89 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>, 
  <mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Till Kamppeter <till.kamppeter@gmail.com>
-Cc: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>, Jay Berkenbilt <ejb@ql.org>, Vikrant Malik <vikrant@iitk.ac.in>
+To: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>, "Kennedy, Smith (Wireless Architect)" <smith.kennedy@hp.com>, Jeremy O'Donoghue <jodonogh@qti.qualcomm.com>, Ira McDonald <blueroofmusic@gmail.com>, Till Kamppeter <till.kamppeter@gmail.com>, Aveek Basu <basu.aveek@gmail.com>
 
-TIll,
+--0000000000009b215305c274d23e
+Content-Type: text/plain; charset="UTF-8"
 
-> On May 9, 2021, at 5:31 PM, Till Kamppeter <till.kamppeter@gmail.com> =
-wrote:
-> ...
-> be specified/approximated (e.g. "CalRGB" is approximately sRGB and =
-"CalGray" is approximately sGray).
->>=20
->=20
-> Are their more "variants" of sRGB and AdobeRGB? Is this documented =
-somewhere? I hope this does not get arbitrarily complicated to rasterize =
-a vector PDF into the desired color space.
+ Hi,
 
-No, just that sRGB is approximated with RGB primaries and a 2.2 gamma =
-curve vs. the official ICC profile, or using the CalRGB/CalGray =
-colorspace.  Similarly, AdobeRGB can be approximated using its primaries =
-and the 2.2 gamma curve vs. the official ICC profile.  And then there =
-are multiple sRGB and AdobeRGB profiles for different ICC versions...
-
-________________________
-Michael Sweet
+Minutes from our OpenPrinting Summit at the annual Joint PWG/OP
+meeting are posted at:
 
 
+http://ftp.pwg.org/pub/pwg/liaison/openprinting/minutes/OP-Summit-Minutes-20210504.htm
 
+Many thanks to all of the presenters and participants.
+
+Cheers,
+- Ira
+
+*Ira McDonald (Musician / Software Architect)*
+
+*Chair - SAE Trust Anchors and Authentication TF*
+*Co-Chair - TCG Trusted Mobility Solutions WG*
+
+*Co-Chair - TCG Metadata Access Protocol SG*
+
+
+
+
+
+
+
+
+*Chair - Linux Foundation Open Printing WGSecretary - IEEE-ISTO Printer
+Working GroupCo-Chair - IEEE-ISTO PWG Internet Printing Protocol WGIETF
+Designated Expert - IPP & Printer MIBBlue Roof Music / High North
+Inchttp://sites.google.com/site/blueroofmusic
+<http://sites.google.com/site/blueroofmusic>http://sites.google.com/site/highnorthinc
+<http://sites.google.com/site/highnorthinc>mailto: blueroofmusic@gmail.com
+<blueroofmusic@gmail.com>(permanent) PO Box 221  Grand Marais, MI 49839
+906-494-2434*
+
+--0000000000009b215305c274d23e
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><div>
+<div>Hi,</div><div><br></div><div><span class=3D"gmail-il">Minutes</span> f=
+rom our OpenPrinting <span class=3D"gmail-il">Summit</span> at the annual J=
+oint PWG/<span class=3D"gmail-il">OP</span></div><div>meeting are posted at=
+:</div><div>
+<br>
+=C2=A0 <a href=3D"http://ftp.pwg.org/pub/pwg/liaison/openprinting/minutes/O=
+P-Summit-Minutes-20210504.htm" target=3D"_blank">http://ftp.pwg.org/pub/pwg=
+/liaison/openprinting/minutes/OP-Summit-Minutes-20210504.htm</a>
+
+</div><div><div><div dir=3D"ltr"><div dir=3D"ltr"><div><div dir=3D"ltr"><di=
+v><div dir=3D"ltr"><div><div dir=3D"ltr"><div><div dir=3D"ltr"><div><div di=
+r=3D"ltr"><div><div dir=3D"ltr"><div><div dir=3D"ltr"><div><div dir=3D"ltr"=
+><br></div><div><span class=3D"gmail-il"></span>Many thanks to all of the p=
+resenters and participants.<br></div><div><br></div><div>Cheers,</div><div>=
+- Ira</div></div></div></div></div></div></div></div></div></div></div></di=
+v></div></div></div></div></div></div></div></div>
+
+</div><div><br></div><div><div dir=3D"ltr" class=3D"gmail_signature" data-s=
+martmail=3D"gmail_signature"><div dir=3D"ltr"><div><div dir=3D"ltr"><div><d=
+iv dir=3D"ltr"><div><div dir=3D"ltr"><div><div dir=3D"ltr"><div><div dir=3D=
+"ltr"><div><div dir=3D"ltr"><div><div dir=3D"ltr"><div><div dir=3D"ltr"><i>=
+<font size=3D"1">Ira McDonald (Musician / Software Architect)</font></i></d=
+iv><div><i><font size=3D"1">Chair - SAE Trust Anchors and Authentication TF=
+<br></font></i></div><div dir=3D"ltr"><i><font size=3D"1">Co-Chair - TCG Tr=
+usted Mobility Solutions WG</font></i></div><div><i><font size=3D"1">Co-Cha=
+ir - TCG Metadata Access Protocol SG<br></font></i></div><div dir=3D"ltr"><=
+i><font size=3D"1">Chair - Linux Foundation Open Printing WG<br>Secretary -=
+ IEEE-ISTO Printer Working Group<br>Co-Chair - IEEE-ISTO PWG Internet Print=
+ing Protocol WG<br>IETF Designated Expert - IPP &amp; Printer MIB<br>Blue R=
+oof Music / High North Inc<br><a style=3D"color:rgb(51,51,255)" href=3D"htt=
+p://sites.google.com/site/blueroofmusic" target=3D"_blank">http://sites.goo=
+gle.com/site/blueroofmusic</a><br><a style=3D"color:rgb(102,0,204)" href=3D=
+"http://sites.google.com/site/highnorthinc" target=3D"_blank">http://sites.=
+google.com/site/highnorthinc</a><br>mailto: <a href=3D"mailto:blueroofmusic=
+@gmail.com" target=3D"_blank">blueroofmusic@gmail.com</a><br>(permanent) PO=
+ Box 221=C2=A0 Grand Marais, MI 49839=C2=A0 906-494-2434</font></i></div></=
+div></div></div></div></div></div></div></div></div></div></div></div></div=
+></div></div></div></div></div></div>
+
+--0000000000009b215305c274d23e--
