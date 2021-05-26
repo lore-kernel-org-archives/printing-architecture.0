@@ -1,29 +1,23 @@
-Return-Path: <till.kamppeter@gmail.com>
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
- h=subject:from:to:cc:references:message-id:date:user-agent
- :mime-version:in-reply-to:content-language:content-transfer-encoding;
- bh=ixKiw2Zz65CJ/mERySdBNoyIbkA+2FbWdmkxNuoytE8=;
- b=NiEoc/Tcb+Bbmkvz/5Gg0TDniM1wVsi+7n3SCdEZtzv/chVoVsG/QN6DOdBpCZACSi
- WbRpmn5b1OqUADZ/YJ6z6iVauYw5rmj63QsNYRK+UHG3EAUjkqsS4NXbUCHuCQRgC4t+
- EBnv6wh41TLmteEcDTsGzZo+3Gvm7Q6zLWVX6CSDPuoJIkBTJLyHodrxaYgbMyqsSXsX
- cIom/1/AsZkWqQG3WYuCXZ0oYLzjlqCRZ4V3WfzLHkvLUDQY7riOLJBjkX2dxKUR10Cr
- ccfsRt/+28C4jJgBujdaFMHiAtdxN5ov4d03ggV3yI5zZ09UCyNGcqXfGhKYLCarFCsJ
- KyKg==
-From: Till Kamppeter <till.kamppeter@gmail.com>
-References: <8c101e3b-2f80-666c-db86-05b7dd170a7c@gmail.com>
- <FC123AED-25FA-4E37-9957-29565F89DC1D@msweet.org>
- <e8060298-8b2b-94d9-3eaf-1386cbc9543c@gmail.com>
- <29E8A83D-5BBB-49AA-83A6-4B3EB765828A@msweet.org>
- <9db67beb-7ca2-249c-88e4-ead29d19ce63@gmail.com>
-Message-ID: <77ef2788-e8ba-8240-523f-6969a43ef81e@gmail.com>
-Date: Tue, 25 May 2021 19:43:55 +0200
+Return-Path: <zdohnal@redhat.com>
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=redhat.com;
+ s=mimecast20190719; t=1622006467;
+ h=from:from:reply-to:subject:subject:date:date:message-id:message-id:
+ to:to:cc:cc:mime-version:mime-version:content-type:content-type:
+ in-reply-to:in-reply-to:references:references;
+ bh=XjrAWQbjSMKsRE2D03pdE4DYj7sisu5JSkMuzFJQ7xc=;
+ b=NglUcsxh4YMjUhS4cyTCNjsUZOilJmSQE2clk0wfLA7L6pHB2XKAuHH8Cmm+wARQLIu1iv
+ yUtCmVtYOfLLbwHdZ/I3QWi6YDHLktYCMKdngFbF2NeDI+EgRdyP6whtwd9NnxOSrZ2uvy
+ ehPT5xM9yAPaOf4ipjwSq0ekpoay8sQ=
+References: <CAKSHSL5ZqmtJvMkrYWXtzHk1-qHKsxDx6oPht0w02yZmbKwm9Q@mail.gmail.com>
+From: Zdenek Dohnal <zdohnal@redhat.com>
+Message-ID: <12dfd861-442c-e4f7-6229-96528a2f7948@redhat.com>
+Date: Wed, 26 May 2021 07:20:54 +0200
 MIME-Version: 1.0
-In-Reply-To: <9db67beb-7ca2-249c-88e4-ead29d19ce63@gmail.com>
-Content-Type: text/plain; charset="utf-8"; format="flowed"
-Content-Language: en-US
-Content-Transfer-Encoding: 8bit
-Subject: Re: [Printing-architecture] Make use of extended color spaces on
-	IPP printers
+In-Reply-To: <CAKSHSL5ZqmtJvMkrYWXtzHk1-qHKsxDx6oPht0w02yZmbKwm9Q@mail.gmail.com>
+Content-Type: multipart/signed; micalg=pgp-sha256;
+ protocol="application/pgp-signature";
+ boundary="IrwZh1szxWx8WGTkKqevkd1C0xhvyjzli"
+Subject: Re: [Printing-architecture] Welcome to Open Printing.
 List-Id: Printing architecture under linux
  <printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>, 
@@ -33,275 +27,175 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>, 
  <mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>
-Cc: Jay Berkenbilt <ejb@ql.org>, Vikrant Malik <vikrant@iitk.ac.in>
+To: pranshukharkwal08@gmail.com, pratyush.ranjan911@gmail.com, Bhavna Kosta <bhavnakosta2020@gmail.com>, DK18 <divyasheelk@gmail.com>, Suraj Kulriya <surajkulriya@gmail.com>
+Cc: Kate Stewart <kstewart@linuxfoundation.org>, "Kennedy,
+ Smith (Wireless Architect)" <smith.kennedy@hp.com>, Aveek Basu <basu.aveek@gmail.com>, Jeff Licquia <licquia@linuxfoundation.org>, Deepak Patankar <patankardeepak04@gmail.com>, Sambhav Dusad <sambhavdusad24@gmail.com>, Rithvik Patibandla <rithvikp98@gmail.com>, Till Kempeter <till.kamppeter@gmail.com>, Open Printing <printing-architecture@lists.linux-foundation.org>, Jai Luthra <luthrajaiji@gmail.com>
 
-I have now committed my first approach of auto-selection of the color 
-space and depth in cups-filters:
+This is an OpenPGP/MIME signed message (RFC 4880 and 3156)
+--IrwZh1szxWx8WGTkKqevkd1C0xhvyjzli
+Content-Type: multipart/mixed; boundary="1GCEDJEfRUSeELyKK24SjSaY0FGbj4nGy";
+ protected-headers="v1"
+From: Zdenek Dohnal <zdohnal@redhat.com>
+To: pranshukharkwal08@gmail.com, pratyush.ranjan911@gmail.com,
+ Bhavna Kosta <bhavnakosta2020@gmail.com>, DK18 <divyasheelk@gmail.com>,
+ Suraj Kulriya <surajkulriya@gmail.com>
+Cc: Till Kempeter <till.kamppeter@gmail.com>,
+ dhiraj yadav <dhirajyadav135@gmail.com>, Jai Luthra <luthrajaiji@gmail.com>,
+ Ira McDonald <blueroofmusic@gmail.com>, Michael Sweet <msweet@msweet.org>,
+ Sambhav Dusad <sambhavdusad24@gmail.com>,
+ Deepak Patankar <patankardeepak04@gmail.com>,
+ Sahil Arora <sahilarora.535@gmail.com>,
+ Rithvik Patibandla <rithvikp98@gmail.com>,
+ "Kennedy, Smith (Wireless Architect)" <smith.kennedy@hp.com>,
+ Open Printing <printing-architecture@lists.linux-foundation.org>,
+ Jeff Licquia <licquia@linuxfoundation.org>,
+ Kate Stewart <kstewart@linuxfoundation.org>,
+ Aveek Basu <basu.aveek@gmail.com>
+Message-ID: <12dfd861-442c-e4f7-6229-96528a2f7948@redhat.com>
+Subject: Re: Welcome to Open Printing.
+References: <CAKSHSL5ZqmtJvMkrYWXtzHk1-qHKsxDx6oPht0w02yZmbKwm9Q@mail.gmail.com>
+In-Reply-To: <CAKSHSL5ZqmtJvMkrYWXtzHk1-qHKsxDx6oPht0w02yZmbKwm9Q@mail.gmail.com>
 
-Here is the commit:
+--1GCEDJEfRUSeELyKK24SjSaY0FGbj4nGy
+Content-Type: multipart/alternative;
+ boundary="------------7E182EBCC3185D23CEBC7BF8"
+Content-Language: en-US
 
-https://github.com/OpenPrinting/cups-filters/commit/b06d489
+This is a multi-part message in MIME format.
+--------------7E182EBCC3185D23CEBC7BF8
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
 
-The basic principles are:
+Hi all,
 
-- Depending on the output format (PWG or Apple Raster) the printer IPP
-   attribute pwg-raster-document-type-supported or urf-supported is used
-   to determine which color space/color depth combos are available.
-- A color space of sGray, sRGB, AdobeRGB, Device... is selected
-   depending on input data, presence of a custom ICC profile, desire to
-   print in color, gray, or bi-level (print-color-mode job attribute).
-- If the requested color space is available it gets selected, otherwise
-   the default color space is chosen: For color printing (or if no mono
-   color space is available) AdobeRGB if available otherwise sRGB, for
-   mono printing sGray.
-- Within the selected color space the lowest color depth (usually 8 bit
-   per color) is chosen, if print-quality is set to "high" the highest
-   color depth (16-bit if available).
+welcome to the Open Printing community! I wish you all the best!
 
-My commit implements this only for the ghostscript() filter function 
-(gstoraster CUPS filter) for now, but commonly used code is in separater 
-library function so other filter functions are easy to update, too.
+I try to help Mike and Till on CUPS and cups-filters, so don't be scared
+if I answer on your PRs :)
 
-This is implemented for both using the filter function PPD-less, based 
-on printer and job IPP attributes and as CUPS filter with a PPD file 
-generated by the PPD generator of libcupsfilters (for example via the 
-"driverless" utility) for a driverless IPP printer.
-
-The generated PPD files are appropriately changed, by including both 
-pwg-raster-document-type-supported and urf-supported IPP attributes of 
-the printer as PPD attributes ("*cupsPwgRasterDocumentTypeSupported" and 
-"*cupsUrfSupported") and by the "ColorModel" option now mirroring the 
-print-color-mode IPP attribute, listing the choices from 
-print-color-mode-supported, and not including pseudo-PostScript code any 
-more as these parameters now get auto-selected by the filter. Formerly, 
-the PPD generator created one "ColorModel" choice for each color 
-space/depth combo for manual selection.
-
-The ghostscript() filter function currently does not pre-check the 
-content of incoming PDF files for best choice of color space, the color 
-space requested from the color space selector function 
-(cupsRasterSetColorSpace() in cupsfilters/raster.c) is always the 
-default color space. Only if there is a custom color profilea Device... 
-color space is requested.
-
-Ghostscript is called with both "-dUsePDFX3Profile" and 
-"-sOutputICCProfile=..." where Ghostscript's standard ICC profiles for 
-sGray, sRGB, and AdobeRGB are used if no custom profile is specified.
-
-There is most probably room for improvement, any hints are welcome.
-
-Also more filter functions (...toraster) will be moved over.
-
-    Till
+Looking forward to working with you!
 
 
-On 07/05/2021 20:52, Till Kamppeter wrote:
-> 
-> TL;DR: Some doubts about supporting extended color depth and color spaces:
->   - How to discover if a page in a PDF is 8/16-bit color/grayscale
->     sRGB/Adobe RGB?
->   - How important is Adobe RGB for printing? If a printer advertises that
->     it supports it, is it worthwhile for us to support jobs in Adobe RGB?
->   - How is all this influenced by the "print-content-optimize" setting?
-> 
-> 
-> I want to make it possible to make use of the support for extended color 
-> spaces of driverless IPP printers (or Printer Applications).
-> 
-> IPP allows the user to only select from the following color modes for a 
-> job (list taken from PAPPL, actually available modes advertised in the
-> "print-color-mode-supported" IPP attribute):
-> 
->    'auto'               - Automatic color/monochrome print mode
->    'auto-monochrome'    - Automatic monochrome/process mono print mode
->    'bi-level'           - B&W (threshold) print mode
->    'color'              - Full color print mode
->    'monochrome'         - Grayscale print mode using 1 color
->    'process-monochrome' - Grayscale print mode using multiple colors
-> 
-> On mono/grayscale printers there is no 'auto-monochrome' and 'color'
-> 
-> Printers support some extended color space modes, at least for raster 
-> input, as advertised in the "urf-supported" attribute for Apple Raster, 
-> and the "pwg-raster-document-type-supported" attribute for PWG Raster. 
-> The extensions are:
-> 
->   - 16 bit per color instead of 8 bit per color in color or grayscale
->   - Adobe RGB instead of sRGB in color
-> 
-> These extensions should be used depending on the input data from the 
-> client and depending on the "print-content-optimize" setting for the job.
-> 
-> Now I am looking into implementing this in cups-filters.
-> 
-> To control the use of the extensions based on the input data we need to 
-> find out the color depth of the input and also if it is perhaps Adobe 
-> RGB instead of sRGB.
-> 
-> For raster input data (Apple Raster or PWG Raster this info should be in 
-> the raster header and we should simply take care to keep color space and 
-> depth on any needed conversion, only exception is to convert to 
-> grayscale or (dithered) bi-level if the user requests it via 
-> print-color-mode attribute.
-> 
-> As the client knows the printer attributes we expect that it only sends 
-> raster data of (extended) color spaces which we support.
-> 
-> More complicated is if for example CUPS receives a PDF job from a user 
-> application, as here CUPS has to convert the PDF into the best possible 
-> raster format for the printer. If the printer understands PDF, we pass 
-> on the input PDF (only apply pdftopdf filter) and assume that the 
-> printer to print it in the best possible quality.
-> 
-> So being left with converting PDF to raster, here we would need to know 
-> which color space and color depth the resulting raster data needs to 
-> have so that the PDF's content is best reproduced but no unneeded 
-> overhead is produced. To do so, we need to know of the color depth and 
-> color space of the graphical elements of the PDF to get the maximum one 
-> for each page (and naturally we should only produce raster which the 
-> printer supports).
-> 
-> So my question to the PDF experts here (Jay? Vikrant? Sahil?), how can I 
-> determine from a page in a PDF file
-> 
-> - which maximum color depth is needed to reproduce it?
-> 
-> - is the PDF page sRGB or Adobe RGB?
-> 
-> For raster-only PDFs (coming from a photo manager/editor or a scanner, 
-> or PCLm) it is probably trivial, and one could make this working in 
-> pclmtoraster.
-> 
-> More complex it gets for actual raster graphics. Or does color depth in 
-> the vector graphics of PDFs not exist and gets only introduced with 
-> rasterization?
-> 
-> And how relevant is actually Adobe RGB for printing? I assume that ALL 
-> driverless IPP printers do sRGB and so if the input file is sRGB one 
-> lets get it printed in sRGB.
-> 
-> But for some reason some printers support printing Adobe RGB (and for 
-> the JPEG output of EVERY digital camera you can choose between sRGB and 
-> Adobe RGB). So if the input PDF is Adobe RGB we need to discover that 
-> and take care that the raster is also Adobe RGB. I hope I am right.
-> 
-> And how is all this influenced by the setting of "print-content-optimize"?
-> 
->     Till
-> 
-> 
-> On 28/04/2021 13:43, Michael Sweet wrote:
->> Till,
->>
->> With IPP you *don't* select color spaces as user options as those are 
->> artifacts of the file format and not part of the job ticket.
->>
->> Realistically, the best thing to do is use the 
->> "print-content-optimize" value ('auto', 'graphic', 'photo', 'text', 
->> 'text-and-graphic') and/or the original document format (e.g. printing 
->> an image means default to photo mode, etc.) and then (if sending 
->> raster data) choosing an appropriate 
->> "pwg-raster-document-type-supported"/"urf-supported" value (which is 
->> where you will find the color spaces and bit depths that the printer 
->> supports). The current CUPS PPD generator uses these to generate 
->> ColorModel choices, which is how we let the user choose a color mode 
->> today.
->>
->> In the future we should hide that implementation detail (maybe exposed 
->> under "expert controls"?) since it is confusing for a lot of users.  
->> Moreover, it is possible for a smart PDF RIP will detect the kind of 
->> colors being used in a PDF document and choose an appropriate raster 
->> color space and bit depth when rendering a page.
->>
->> I know there are going to be people that scream, "I need to have 
->> absolute control over every aspect of my printing!"  But that kind of 
->> control doesn't belong in the printing system or in the main UI - it 
->> belongs in the Printer Application (or printer, in the case of an IPP 
->> Everywhere/AirPrint printer) because those are device 
->> process/calibration settings that are explicitly *not* part of the IPP 
->> model.  IPP has always been about specifying intent (*what* you want) 
->> and not process (*how* to do it).
->>
->>
->>> On Apr 28, 2021, at 4:17 AM, Till Kamppeter 
->>> <till.kamppeter@gmail.com> wrote:
->>>
->>> I have found one problem. For the color modes IPP has only the 
->>> following choices:
->>>
->>> "print-color-mode" = "Print Color Mode";
->>> "print-color-mode.auto" = "Automatic";
->>> "print-color-mode.auto-monochrome" = "Auto Monochrome";
->>> "print-color-mode.bi-level" = "Text";
->>> "print-color-mode.color" = "Color";
->>> "print-color-mode.highlight" = "Highlight";
->>> "print-color-mode.monochrome" = "Monochrome";
->>> "print-color-mode.process-bi-level" = "Process Text";
->>> "print-color-mode.process-monochrome" = "Process Monochrome";
->>>
->>> Apple Raster and PWG Raster support more modes though, especially 
->>> with 16 bit instead of 8 bit color depth, "device" color modes and 
->>> Adobe RGB instead of sRGB. Are there standard strings for these? And 
->>> where do I find them?
->>>
->>>    Till
->>>
->>> On 27/04/2021 20:02, Michael Sweet wrote:
->>>> Till,
->>>> The CUPS repository already contains a nearly-complete set of these, 
->>>> and they came from the IPP Registry project's exported strings from 
->>>> the IANA IPP registry.
->>>>      https://github.com/OpenPrinting/cups/tree/master/locale
->>>>      https://github.com/istopwg/ippregistry/tree/master/localizations
->>>> The PWG maintains a copy of the English strings (I've tried a few 
->>>> times to get localizations for other languages without much success) 
->>>> on their FTP server (also served by HTTP/HTTPS):
->>>>      https://ftp.pwg.org/pub/pwg/ipp/examples/ipp.pot
->>>>      https://ftp.pwg.org/pub/pwg/ipp/examples/ipp.strings
->>>>> On Apr 27, 2021, at 1:46 PM, Till Kamppeter 
->>>>> <till.kamppeter@gmail.com> wrote:
->>>>>
->>>>> Hi,
->>>>>
->>>>> while I was looking through the code of the PPD file generators in 
->>>>> CUPS and cups-filters for creating CUPS queues for driverless IPP 
->>>>> printers I wa thinking about where the human-readable strings for 
->>>>> the PPD files (and also for print dialogs) come from and whether 
->>>>> one could also generate PPD files translated into non-English 
->>>>> languages.
->>>>>
->>>>> I have also seen that printers supply human-readable strings for 
->>>>> options and choices via the URL listed in the printer-strings-uri 
->>>>> IPP attribute, but these strings are only for the options and 
->>>>> choices which are not IPP or PWG standard.
->>>>>
->>>>> Seeing this I thought that the wide majority of IPP attributes, 
->>>>> options, choices, and properties ar IPP/PWG standardized, and so 
->>>>> they should always be well served by the same human-readable 
->>>>> strings, independent of operating system, desktop, or other client 
->>>>> software being used.
->>>>>
->>>>> So it would be great to have some central repository for these 
->>>>> strings for any operating system and application software to use 
->>>>> when working with IPP printers. Is there something like that? Was 
->>>>> susch a thing already discussed at the PWG? Or is every OS or 
->>>>> application developer supposed to "invent" his own, personal set of 
->>>>> human-readable strings for standard IPP attributes?
->>>>>
->>>>>    Till
->>>>> _______________________________________________
->>>>> Printing-architecture mailing list
->>>>> Printing-architecture@lists.linux-foundation.org
->>>>> https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture 
->>>>>
->>>>>
->>>> ________________________
->>>> Michael Sweet
->>>
->>
->> ________________________
->> Michael Sweet
->>
->>
->>
+Zdenek Dohnal (zdohnal)
+
+RHEL/Fedora printing maintainer
+
+On 5/21/21 5:21 PM, Aveek Basu wrote:
+> Dear Students,
+>
+> Welcome to the Open Printing community. Congratulations on being
+> selected for Google Summer Of Code 2021. Wishing you all the=C2=A0best an=
+d
+> looking forward to some great coding days ahead. Let us work as a team
+> and aim at making printing in Linux a far better experience.
+>
+> It would be great if you could introduce yourself in the group with
+> the following details.
+>
+> *Institute:*
+> *Brief About Yourself:*
+> *Area of Interest:*
+> *Your Pic:*
+> --=20
+>
+> Regards,
+> Aveek
+> Org Admin
+
+--=20
+Zdenek Dohnal
+Software Engineer
+Red Hat Czech - Brno TPB-C
+
+
+--------------7E182EBCC3185D23CEBC7BF8
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+<html>
+  <head>
+    <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3DUTF-8=
+">
+  </head>
+  <body>
+    <p>Hi all,</p>
+    <p>welcome to the Open Printing community! I wish you all the best!</p>
+    <p>I try to help Mike and Till on CUPS and cups-filters, so don't be
+      scared if I answer on your PRs :)</p>
+    <p>Looking forward to working with you!</p>
+    <p><br>
+    </p>
+    <p>Zdenek Dohnal (zdohnal)</p>
+    <p>RHEL/Fedora printing maintainer<br>
+    </p>
+    <div class=3D"moz-cite-prefix">On 5/21/21 5:21 PM, Aveek Basu wrote:<br=
+>
+    </div>
+    <blockquote type=3D"cite"
+cite=3D"mid:CAKSHSL5ZqmtJvMkrYWXtzHk1-qHKsxDx6oPht0w02yZmbKwm9Q@mail.gmail.=
+com">
+      <meta http-equiv=3D"content-type" content=3D"text/html; charset=3DUTF=
+-8">
+      <div dir=3D"ltr">Dear Students,
+        <div><br>
+        </div>
+        <div>Welcome to the Open Printing community. Congratulations on
+          being selected for Google Summer Of Code 2021. Wishing you all
+          the=C2=A0best and looking forward to some great coding days ahead=
+.
+          Let us work as a team and aim at making printing in Linux a
+          far better experience.<br>
+          <div>
+            <div><br>
+            </div>
+            <div>It would be great if you could introduce yourself in
+              the group with the following details.</div>
+            <div><br>
+            </div>
+            <div><b>Institute:</b></div>
+            <div><b>Brief About Yourself:</b></div>
+            <div><b>Area of Interest:</b></div>
+            <div><b>Your Pic:</b></div>
+            -- <br>
+            <div dir=3D"ltr" class=3D"gmail_signature"
+              data-smartmail=3D"gmail_signature">
+              <div dir=3D"ltr"><br>
+                <div>Regards,</div>
+                <div>Aveek</div>
+                <div>Org Admin</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </blockquote>
+    <pre class=3D"moz-signature" cols=3D"72">--=20
+Zdenek Dohnal
+Software Engineer
+Red Hat Czech - Brno TPB-C
+</pre>
+  </body>
+</html>
+
+--------------7E182EBCC3185D23CEBC7BF8--
+
+--1GCEDJEfRUSeELyKK24SjSaY0FGbj4nGy--
+
+--IrwZh1szxWx8WGTkKqevkd1C0xhvyjzli
+Content-Type: application/pgp-signature; name="OpenPGP_signature.asc"
+Content-Description: OpenPGP digital signature
+Content-Disposition: attachment; filename="OpenPGP_signature"
+
+-----BEGIN PGP SIGNATURE-----
+
+wsB5BAABCAAjFiEEettYIDyl8EbygCWyFapqf01CJ9cFAmCt2rYFAwAAAAAACgkQFapqf01CJ9en
+4Af8Dvw1uZFCNKuBq2vUTgMXTXYVAJG8mchI7BYasdo0t6mRWOKhwsF7YgN8IobolaylwWAl1FYd
+PHWVPibNcmATWOhpegJlncHnq43j+fyZ7M0fl1d+1p/hINx5kNsWnGa8XQIrXWGSEGmnpr79Uroy
+VKTRf5/C4oyleyUO8wKACQtHiui7Omw9UsDq8WHfodevgEzsLp4qE0TYlifvf5zzw2V8ZH6wPOH1
+CDnJGf/5ivBg0zJ4nuGNo5fousR8UsehG+Dxx4TVwBZr9oXMZ632SK3q8x5oWU0X89WqF9UTdWav
+M1F346tYio7avEb6o8U471ObHPHmIrZxrhUzvTnsIA==
+=UDEu
+-----END PGP SIGNATURE-----
+
+--IrwZh1szxWx8WGTkKqevkd1C0xhvyjzli--
+
