@@ -1,19 +1,34 @@
-Return-Path: <blueroofmusic@gmail.com>
+Return-Path: <till.kamppeter@gmail.com>
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
- h=mime-version:from:date:message-id:subject:to;
- bh=3VTgbVBK5et+/H8kmRK/JWMd447fSOgQw7YLK0iXdow=;
- b=WtClJMSerKfnw5QaFCP7nTWPKClDozmfPIg/cAESpDCoM7suOZEohMBvo3FrNryTk3
- G2Re5m7CtIN5YMYlaPDGaCD9hMymy9O57VP5rg+4PAazFpXO3Yu06/T74kEXNsNLMg4b
- FaEYZ6/9aO70NU0F/+PaTUeyPEpwwkyDagko4swpSQSts3J9ZRfnxf7ltr+4bsWkFc/V
- +B+gtER53DOp0K5sprt+JvbLrf5I+MUCZGvN98bArtOgeLb8ngLW2HRkOz1JpuHNCf0Q
- hosz6lF+nK+APN4mUDoWqvov18yx9vWkbOhmGMe2AHoR9/6h1fR6P9knnrtZFozaiMxu
- UE1g==
+ h=subject:to:cc:references:from:message-id:date:user-agent
+ :mime-version:in-reply-to:content-language:content-transfer-encoding;
+ bh=pg8yTdfbXuWpknMi+CpRi03AqpBPHux06c9efiQMn+8=;
+ b=m8YE1RhMQEaL3rXSvX7pHL1OrXwE/K0kH29nIcRGMRuCdmaAqExrlzQWDK3N6xZYJT
+ IKfYv8iGlNoE4Z+/ML3zqzMmJepVi5EXR6osfCbGVXTDNq+sJE0EEa1/O5BcDOacgMVc
+ PGtIqqVlGQpgRft1CNbiXCoJPKG6vz30rYssUGxYF57Lp8KOc6a5EiX1whjPihI8vXb4
+ RW05Q30g3PNLnPb/Fg2IJSQzA7BwYJAOuP1a/zN69mv4G2J2xItTzp16zyafM8wLeeYw
+ J8p0+NWl9Jh5CM5j9naYsalwRbD98RryJcegeFv23npXdWrKpHFVNangakfuhKKodtD0
+ C3hA==
+References: <8c101e3b-2f80-666c-db86-05b7dd170a7c@gmail.com>
+ <FC123AED-25FA-4E37-9957-29565F89DC1D@msweet.org>
+ <e8060298-8b2b-94d9-3eaf-1386cbc9543c@gmail.com>
+ <29E8A83D-5BBB-49AA-83A6-4B3EB765828A@msweet.org>
+ <9db67beb-7ca2-249c-88e4-ead29d19ce63@gmail.com>
+ <FC95906E-6085-4121-AEA8-9E53613872AD@msweet.org>
+ <54eda145-936b-a920-b645-66a104b23ad4@gmail.com>
+ <YJc9BYPyXoSyi8X/@shaftnet.org>
+ <46c7d30c-b28d-1585-e4b6-49aa22b9efc2@gmail.com>
+ <2427DA0B-9BB7-462B-A29E-0A3366E504A3@msweet.org>
+From: Till Kamppeter <till.kamppeter@gmail.com>
+Message-ID: <aae2e939-01a4-bdee-ddc7-940e93351eec@gmail.com>
+Date: Thu, 27 May 2021 20:04:30 +0200
 MIME-Version: 1.0
-From: Ira McDonald <blueroofmusic@gmail.com>
-Date: Thu, 27 May 2021 10:48:48 -0400
-Message-ID: <CAN40gStE25tevA7ez=Yy237vZDABOKTN8vyvBH4cy22XPgsw5g@mail.gmail.com>
-Content-Type: multipart/alternative; boundary="0000000000000953d605c350dc3b"
-Subject: [Printing-architecture] OP monthly call on 22 June 2021 now CANCELED
+In-Reply-To: <2427DA0B-9BB7-462B-A29E-0A3366E504A3@msweet.org>
+Content-Type: text/plain; charset=utf-8; format=flowed
+Content-Language: en-US
+Content-Transfer-Encoding: 7bit
+Subject: Re: [Printing-architecture] Make use of extended color spaces on
+ IPP printers
 List-Id: Printing architecture under linux
  <printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>, 
@@ -23,71 +38,67 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>, 
  <mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>, Ira McDonald <blueroofmusic@gmail.com>
+To: Michael Sweet <msweet@msweet.org>
+Cc: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>, Jay Berkenbilt <ejb@ql.org>, Vikrant Malik <vikrant@iitk.ac.in>
 
---0000000000000953d605c350dc3b
-Content-Type: text/plain; charset="UTF-8"
+As discussed on the gs-devel mailing list
 
-Hi,
+https://ghostscript.com/pipermail/gs-devel/2021-May/010456.html
 
-Unfortunately, I now have primary international standards conferences
-on every Tuesday in June (yesterday the ISO WG12 Software Update
-committee extended their June meeting to span 21 June to 2 July).
+we came to the conclusion that for PDF files for which we do not know 
+the color space the data comes in we default to sRGB in general, and 
+default only to AdobeRGB if it is available in 16-bit per color and high 
+color depth is requested via print-quality=high, as most PDFs are sRGB 
+and if we convert sRGB to AdobeRGB with only 8 bit color depth, we can 
+easily get ugly color banding.
 
-Cheers,
-- Ira
+Now I have questions about raster input files, either images or 
+raster-only PDFs:
 
-*Ira McDonald (Musician / Software Architect)*
+If I look into the source code of the pclmtoraster filter of 
+cups-filters (cupsfilters/pclmtoraster.cxx) I see that when readin the 
+embedded bitmaps from a PDF file there only occur /DeviceGray, 
+/DeviceRGB, and /DeviceCMYK color spaces. How do I determine whether I 
+have sRGB or AdobeRGB? Vikrant?Ans what is the default/IPP/PWG-standard 
+color space of /DeviceCMYK?
 
-*Chair - SAE Trust Anchors and Authentication TF*
-*Co-Chair - TCG Trusted Mobility Solutions WG*
+Also, if I have images (JPEG, TIFF, PNG, ...) how do I know which coloe 
+space they are? imagetoraster seems not to determin whether images are 
+sRGB or AdobeRGB.
 
-*Co-Chair - TCG Metadata Access Protocol SG*
+    Till
 
-
-
-
-
-
-
-
-*Chair - Linux Foundation Open Printing WGSecretary - IEEE-ISTO Printer
-Working GroupCo-Chair - IEEE-ISTO PWG Internet Printing Protocol WGIETF
-Designated Expert - IPP & Printer MIBBlue Roof Music / High North
-Inchttp://sites.google.com/site/blueroofmusic
-<http://sites.google.com/site/blueroofmusic>http://sites.google.com/site/highnorthinc
-<http://sites.google.com/site/highnorthinc>mailto: blueroofmusic@gmail.com
-<blueroofmusic@gmail.com>(permanent) PO Box 221  Grand Marais, MI 49839
-906-494-2434*
-
---0000000000000953d605c350dc3b
-Content-Type: text/html; charset="UTF-8"
-Content-Transfer-Encoding: quoted-printable
-
-<div dir=3D"ltr"><div>Hi,</div><div><br></div><div>Unfortunately, I now hav=
-e primary international standards conferences</div><div>on every Tuesday in=
- June (yesterday the ISO WG12 Software Update <br></div><div>committee exte=
-nded their June meeting to span 21 June to 2 July).</div><div><br></div><di=
-v>Cheers,</div><div>- Ira</div><div><br></div><div><div><div dir=3D"ltr" cl=
-ass=3D"gmail_signature" data-smartmail=3D"gmail_signature"><div dir=3D"ltr"=
-><div><div dir=3D"ltr"><div><div dir=3D"ltr"><div><div dir=3D"ltr"><div><di=
-v dir=3D"ltr"><div><div dir=3D"ltr"><div><div dir=3D"ltr"><div><div dir=3D"=
-ltr"><div><div dir=3D"ltr"><i><font size=3D"1">Ira McDonald (Musician / Sof=
-tware Architect)</font></i></div><div><i><font size=3D"1">Chair - SAE Trust=
- Anchors and Authentication TF<br></font></i></div><div dir=3D"ltr"><i><fon=
-t size=3D"1">Co-Chair - TCG Trusted Mobility Solutions WG</font></i></div><=
-div><i><font size=3D"1">Co-Chair - TCG Metadata Access Protocol SG<br></fon=
-t></i></div><div dir=3D"ltr"><i><font size=3D"1">Chair - Linux Foundation O=
-pen Printing WG<br>Secretary - IEEE-ISTO Printer Working Group<br>Co-Chair =
-- IEEE-ISTO PWG Internet Printing Protocol WG<br>IETF Designated Expert - I=
-PP &amp; Printer MIB<br>Blue Roof Music / High North Inc<br><a style=3D"col=
-or:rgb(51,51,255)" href=3D"http://sites.google.com/site/blueroofmusic" targ=
-et=3D"_blank">http://sites.google.com/site/blueroofmusic</a><br><a style=3D=
-"color:rgb(102,0,204)" href=3D"http://sites.google.com/site/highnorthinc" t=
-arget=3D"_blank">http://sites.google.com/site/highnorthinc</a><br>mailto: <=
-a href=3D"mailto:blueroofmusic@gmail.com" target=3D"_blank">blueroofmusic@g=
-mail.com</a><br>(permanent) PO Box 221=C2=A0 Grand Marais, MI 49839=C2=A0 9=
-06-494-2434</font></i></div></div></div></div></div></div></div></div></div=
-></div></div></div></div></div></div></div></div></div></div></div></div>
-
---0000000000000953d605c350dc3b--
+On 09/05/2021 15:49, Michael Sweet wrote:
+> Till,
+> 
+>> On May 9, 2021, at 5:20 AM, Till Kamppeter <till.kamppeter@gmail.com> wrote:
+>> ...
+>> 1. A user wants to print photos in best possible (wide gammut) color reproduction quality. So he either sets his camera to produce AdobeRGB JPEGs or he shoots RAW and saves the processed RAW images in 16-bit-per-color AdobeRGB. He sends his images out of his photo editor/manager to the printer, but the application sends print jobs in PDF. So we get a raster-only PDF with the raster data embedded being 16-bit AdobeRGB (assuming that the printer supports it as the application's print dialog does a get-printer-attributes request and so knows what the printer supports).
+> 
+> The best solution here is to look at the image color space and try to match it to the closest printer-supported color space.
+> 
+>> In this case in the CUPS filtering process we have to discover at first whether the incoming PDF is raster-only. In this case we would not render it but pass it through pclmtoraster to extract the raster data with its color space info (AdobeRGB). We do not convert this to sRGB or anything else, but pass on a Raster file in AdobeRGB.
+> 
+> Again, you want to look at the input data to determine its color space, and then pass it through or convert as needed.
+> 
+>> Question here: Do we need to discover that the PDF is raster-only and then use pclmtoraster? Or can we simply do the standard rendering (GhostScript, Poppler, or MuPDF) and tell the renderer (by command line for example) that we want AdobeRGB output? Would the renderer pass on the AdobeRGB data without conversion, especially not doing AdobeRGB -> sRGB -> AdobeRGB?
+> 
+> Ideally we want whatever converts the file to know the input color space(s) and the printer's supported color spaces.  Then we can make a semi-intelligent decision about the color space that preserves as much of the original data as possible.
+> 
+>> 2. Another user wants to write a review of mobile phone providers, containing pictures and logos of the candidates (one of them is T-Mobile). In order to avoid the providers feeling stepped on their toes he wants to have best color reproduction. So he creates the print output (which is in PDF) in AdobeRGB as he knows that the printer supports it.
+> 
+> Again, if the source images are sRGB, it is best to stay in sRGB until the last possible moment.
+> 
+>> My question: Now how can the CUPS filters auto-discover that the PDF is in AdobeRGB and therefore the PDF needs to get rasterized in AdobeRGB? Is there some tool for that? Some special call of GhostScript or QPDF? Or can I uncompress the PDF and then search it for "/ColorSpace" keys? Also how to rasterize if there are some sRGB and some AdobeRGB pieces in it?
+> 
+> Images are almost always embedded as objects in the PDF file and references in the content streams, so as to take best advantage of the available compression filters that PDF offers.  The typical exceptions are small icons or logos that wouldn't benefit from this treatment and probably wouldn't be adversely affected by an incorrect choice about color space (so long as the RIP does ICC).
+> 
+> Therefore, you can examine the embedded image objects (all of the current tools provide utilities for extracting them) as a hint to what color space might be best if you have to choose between AdobeRGB and sRGB.
+> 
+> That said, if you have a printer ICC profile and the printer supports device RGB (or device gray), then *that* is the best color space for the "last mile" to the printer.
+> 
+> ________________________
+> Michael Sweet
+> 
+> 
+> 
