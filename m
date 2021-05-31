@@ -1,44 +1,19 @@
-Return-Path: <till.kamppeter@gmail.com>
+Return-Path: <blueroofmusic@gmail.com>
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
- h=subject:to:cc:references:from:message-id:date:user-agent
- :mime-version:in-reply-to:content-language:content-transfer-encoding;
- bh=NQM9ezIRp398bhZgHsgzc1BLP8YSfWCVaU6JF1gYoXw=;
- b=mcmABJC8Femb6r5VbIxCIAhmbBBJL7d1T7hRYyCBvPJb5E6aO7KkJ0yOFHqpXVsoIC
- 21ZcP1bJruJicmgEjMnEH1CMWQL+xtUoGLnQl0iAzfdIHICUA50VMEznCLpChzlYDTqU
- VEgjuInBxOX3RwdJcLwuDg++FDIjQYnrQyKuk8qNx62/rCo6TjAYwNjozeEcZglSUnuh
- X+xojG0qJAjyCysvXK1WVeckgoZqLl4jGc2QklwMPIPUV69iOVJ29fxHqgKJxboubXjM
- n4k92nCMZFyTTi4hHMcjCKVmx28cg4kPH2AxZG3mInj+7ex+2KmYPYFU8TWAHcYaal+0
- /DRw==
-References: <8c101e3b-2f80-666c-db86-05b7dd170a7c@gmail.com>
- <29E8A83D-5BBB-49AA-83A6-4B3EB765828A@msweet.org>
- <9db67beb-7ca2-249c-88e4-ead29d19ce63@gmail.com>
- <FC95906E-6085-4121-AEA8-9E53613872AD@msweet.org>
- <54eda145-936b-a920-b645-66a104b23ad4@gmail.com>
- <YJc9BYPyXoSyi8X/@shaftnet.org>
- <46c7d30c-b28d-1585-e4b6-49aa22b9efc2@gmail.com>
- <2427DA0B-9BB7-462B-A29E-0A3366E504A3@msweet.org>
- <aae2e939-01a4-bdee-ddc7-940e93351eec@gmail.com>
- <4FDD96B5-A0D7-4CF7-A0E4-4D116FE73607@msweet.org>
- <320a8f00-338a-8ec8-8019-22f6ecd1d4ec@gmail.com>
- <15F0BA1D-9205-4659-A1D7-EB41F9F6F110@msweet.org>
- <b9219a65-4bcd-2e7c-56e2-31a5c2c9be3e@gmail.com>
- <63629EAE-235A-4FB9-8721-884E9E163036@msweet.org>
- <8592364a-15e6-41c3-ab0e-757b3aedfed7@gmail.com>
- <BCD48324-66DA-4F55-8FCD-154C8FC0E49D@msweet.org>
- <d5082b23-8eb7-be84-db5c-42bdde3ba5ac@canonical.com>
- <41E99F46-2F6C-4368-A03F-D575EB838E8E@msweet.org>
- <056c7830-1a00-2111-9e9a-8f125a397de8@gmail.com>
- <F2D0FCD2-39B9-460F-B332-13319BF64BC9@msweet.org>
-From: Till Kamppeter <till.kamppeter@gmail.com>
-Message-ID: <178e06de-ad94-ae37-3304-b20b85ccadf0@gmail.com>
-Date: Mon, 31 May 2021 21:38:10 +0200
+ h=mime-version:from:date:message-id:subject:to;
+ bh=9yj0w8qTOadK6dpg6ZqcnKhRlgou2shpk7aYxZO41QY=;
+ b=A3i5XxRwQ4PHNIGHsl2j9v2noaOBvXhHB3Xkrlujf1lJGPbRuRNjG3yAMibw+aVgP7
+ YFqNyuAZj4IHaedI1JiHETosCpbjm22YCMJfrz0AIDw4Re/9fvWVVJ6ii/0YUFtu0fTJ
+ pitRRi3JNBoAX6VS1eaYp09/fi4ezlwpbCbxfVDG/361rVChiwnqB14ic2b4hwwn2Xu8
+ L4WDB4jNe0UCab3UmT2kjjEZHv/QQKCOH7okp1eq7vi80T1WMqDFZnibkr6NjBoT3Vel
+ aM6uW3QMx5bCg77Zr6c8oXmXQQmSrrxYUfkFDGnQtcnS7Is4aosCQ7C147ydBrNJQlsC
+ nkJw==
 MIME-Version: 1.0
-In-Reply-To: <F2D0FCD2-39B9-460F-B332-13319BF64BC9@msweet.org>
-Content-Type: text/plain; charset=utf-8; format=flowed
-Content-Language: en-US
-Content-Transfer-Encoding: 7bit
-Subject: Re: [Printing-architecture] Make use of extended color spaces on
- IPP printers
+From: Ira McDonald <blueroofmusic@gmail.com>
+Date: Mon, 31 May 2021 15:38:11 -0400
+Message-ID: <CAN40gSu7cKsEfXBt184+37mxGtHWE7jmwytP0N6QRT7UkcTxgw@mail.gmail.com>
+Content-Type: multipart/alternative; boundary="0000000000006ddafe05c3a55eef"
+Subject: [Printing-architecture] OP Minutes (18 May 2021)
 List-Id: Printing architecture under linux
  <printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>, 
@@ -48,31 +23,182 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>, 
  <mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Michael Sweet <msweet@msweet.org>
-Cc: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>, Jay Berkenbilt <ejb@ql.org>, Vikrant Malik <vikrant@iitk.ac.in>
+To: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>, Ira McDonald <blueroofmusic@gmail.com>
+
+--0000000000006ddafe05c3a55eef
+Content-Type: text/plain; charset="UTF-8"
+
+ Hi,
+
+Minutes from our last OpenPrinting call are posted at:
+
+
+http://ftp.pwg.org/pub/pwg/liaison/openprinting/minutes/OP-Minutes-20210518.htm
+
+
+Next OP US/Europe/Brazil/India Conference Calls:
+
+(1) June - US/Europe/Brazil/India - OP Monthly Meeting
+    - Tuesday 22 June 2021, Daytime - CANCELED due to TC22/SC32/WG12
+conference
+      - Note - ISO TC22/SC32/WG12 Virtual F2F - 21 June to 2 July 2021 -
+Ira to attend
+
+(2) July - US/Europe/Brazil/India - OP Monthly Meeting
+    - Tuesday 13 July 2021, Daytime
+      - Web conference to be announced
+      - Note - ISO TC22/SC32/WG12 Virtual F2F - 21 June to 2 July 2021
+      - Note - IETF 111 Virtual F2F - 26-30 July 2021
+      - US
+        10am in San Francisco - US PDT (Pacific Daylight Time)
+        11am in Colorado - US MDT (Mountain Daylight Time)
+        12am in Chicago - US CDT (Central Daylight Time)
+        1pm in New York - US EDT (Eastern Daylight Time)
+      - Europe
+        7pm in Berlin - CEST (Central Europe Summer Time)
+      - Brazil
+        2pm in Belo Horizonte - BRT (Brasilia Time)
+      - India
+        10:30pm in New Delhi - IST (India Standard Time)
+
+(3) August - US/Europe/Brazil/India - OP Monthly Meeting (tentative)
+    - Tuesday 10 August 2021, Daytime
+      - Web conference to be announced
+      - Note - PWG Virtual F2F - 17-19 August 2021
+      - Note - ISO TC22/SC32/WG12 Virtual F2F - 23-27 August 2021 - Ira to
+attend
+      - US
+        10am in San Francisco - US PDT (Pacific Daylight Time)
+        11am in Colorado - US MDT (Mountain Daylight Time)
+        12am in Chicago - US CDT (Central Daylight Time)
+        1pm in New York - US EDT (Eastern Daylight Time)
+      - Europe
+        7pm in Berlin - CEST (Central Europe Summer Time)
+      - Brazil
+        2pm in Belo Horizonte - BRT (Brasilia Time)
+      - India
+        10:30pm in New Delhi - IST (India Standard Time)
+
+
+Cheers,
+- Ira
+
+*Ira McDonald (Musician / Software Architect)*
+
+*Chair - SAE Trust Anchors and Authentication TF*
+*Co-Chair - TCG Trusted Mobility Solutions WG*
+
+*Co-Chair - TCG Metadata Access Protocol SG*
 
 
 
-On 31/05/2021 20:13, Michael Sweet wrote:
-> Till,
-> 
->> On May 31, 2021, at 11:03 AM, Till Kamppeter <till.kamppeter@gmail.com> wrote:
->> ...
->> Do you know which Linux applications generate correct PDF files?
-> 
-> Sorry, I did some quick testing and wasn't able to find a single Linux application that does things properly...  Maybe we can fix that...
 
-How would you fix that in CUPS/cups-filters?
 
-For me it looks like a bug in the PDF generators in the applications, 
-meaning that one has to report this for every PDF generator. Cairo 
-probably covers a lot of applications, but for example specialized photo 
-applications (darktable, RawTherapee, ...) probably have their own PDF 
-generators, and they all have this bug.
 
-It is really a bug as the applications send PDF files where the printing 
-system cannot determine which is the color space actually used and so it 
-cannot correctly reproduce the colors on a printer and use the most 
-suitable of the color spaces which the printer offers.
 
-    Till
+
+*Chair - Linux Foundation Open Printing WGSecretary - IEEE-ISTO Printer
+Working GroupCo-Chair - IEEE-ISTO PWG Internet Printing Protocol WGIETF
+Designated Expert - IPP & Printer MIBBlue Roof Music / High North
+Inchttp://sites.google.com/site/blueroofmusic
+<http://sites.google.com/site/blueroofmusic>http://sites.google.com/site/highnorthinc
+<http://sites.google.com/site/highnorthinc>mailto: blueroofmusic@gmail.com
+<blueroofmusic@gmail.com>(permanent) PO Box 221  Grand Marais, MI 49839
+906-494-2434*
+
+--0000000000006ddafe05c3a55eef
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">
+<div>Hi,</div><div><br></div><div>
+<div dir=3D"ltr"><span><span><span><span><span><span><span><span><span><spa=
+n><span><span><span><span><span><span><span><span><span><span><span><span><=
+span><span><span><span><span><span><span><span><span><span><span class=3D"g=
+mail-il">Minutes</span></span></span></span></span></span></span></span></s=
+pan></span></span></span></span></span></span></span></span></span></span><=
+/span></span></span></span></span></span></span></span></span></span></span=
+></span></span></span> from our last OpenPrinting<span> call</span> are <sp=
+an><span><span><span><span><span><span><span><span><span><span><span><span>=
+<span><span><span>posted</span></span></span></span></span></span></span></=
+span></span></span></span></span></span></span></span></span> at:<br>
+
+
+
+
+
+
+
+
+
+
+
+
+<br>
+=C2=A0 <a href=3D"http://ftp.pwg.org/pub/pwg/liaison/openprinting/minutes/O=
+P-Minutes-20210518.htm" target=3D"_blank">http://ftp.pwg.org/pub/pwg/liaiso=
+n/openprinting/minutes/OP-Minutes-20210518.htm</a><br><br></div><div dir=3D=
+"ltr"><br></div><div dir=3D"ltr">
+Next <span><span><span><span><span><span><span><span><span><span><span><spa=
+n><span><span><span><span><span><span><span><span><span><span><span class=
+=3D"gmail-il">OP</span></span></span></span></span></span></span></span></s=
+pan></span></span></span></span></span></span></span></span></span></span><=
+/span></span></span></span> US/Europe/Brazil/India Conference Calls: <br></=
+div><div dir=3D"ltr"><br></div><div dir=3D"ltr">(1) June - US/Europe/Brazil=
+/India - OP Monthly Meeting<br>=C2=A0 =C2=A0 - Tuesday 22 June 2021, Daytim=
+e - CANCELED due to TC22/SC32/WG12 conference<br>=C2=A0 =C2=A0 =C2=A0 - Not=
+e - ISO TC22/SC32/WG12 Virtual F2F - 21 June to 2 July 2021 - Ira to attend=
+<br><br>(2) July - US/Europe/Brazil/India - OP Monthly Meeting<br>=C2=A0 =
+=C2=A0 - Tuesday 13 July 2021, Daytime<br>=C2=A0 =C2=A0 =C2=A0 - Web confer=
+ence to be announced<br>=C2=A0 =C2=A0 =C2=A0 - Note - ISO TC22/SC32/WG12 Vi=
+rtual F2F - 21 June to 2 July 2021<br>=C2=A0 =C2=A0 =C2=A0 - Note - IETF 11=
+1 Virtual F2F - 26-30 July 2021<br>=C2=A0 =C2=A0 =C2=A0 - US<br>=C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 10am in San Francisco - US PDT (Pacific Daylight Time)<br=
+>=C2=A0 =C2=A0 =C2=A0 =C2=A0 11am in Colorado - US MDT (Mountain Daylight T=
+ime)<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 12am in Chicago - US CDT (Central Dayli=
+ght Time)<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 1pm in New York - US EDT (Eastern =
+Daylight Time)<br>=C2=A0 =C2=A0 =C2=A0 - Europe<br>=C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 7pm in Berlin - CEST (Central Europe Summer Time)<br>=C2=A0 =C2=A0 =C2=
+=A0 - Brazil<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 2pm in Belo Horizonte - BRT (Br=
+asilia Time)<br>=C2=A0 =C2=A0 =C2=A0 - India<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0=
+ 10:30pm in New Delhi - IST (India Standard Time)<br></div><div dir=3D"ltr"=
+><br></div><div dir=3D"ltr">(3) August - US/Europe/Brazil/India - OP Monthl=
+y Meeting (tentative)<br>=C2=A0 =C2=A0 - Tuesday 10 August 2021, Daytime<br=
+>=C2=A0 =C2=A0 =C2=A0 - Web conference to be announced<br>=C2=A0 =C2=A0 =C2=
+=A0 - Note - PWG Virtual F2F - 17-19 August 2021<br>=C2=A0 =C2=A0 =C2=A0 - =
+Note - ISO TC22/SC32/WG12 Virtual F2F - 23-27 August 2021 - Ira to attend<b=
+r>=C2=A0 =C2=A0 =C2=A0 - US<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 10am in San Fran=
+cisco - US PDT (Pacific Daylight Time)<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 11am =
+in Colorado - US MDT (Mountain Daylight Time)<br>=C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 12am in Chicago - US CDT (Central Daylight Time)<br>=C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 1pm in New York - US EDT (Eastern Daylight Time)<br>=C2=A0 =C2=
+=A0 =C2=A0 - Europe<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 7pm in Berlin - CEST (Ce=
+ntral Europe Summer Time)<br>=C2=A0 =C2=A0 =C2=A0 - Brazil<br>=C2=A0 =C2=A0=
+ =C2=A0 =C2=A0 2pm in Belo Horizonte - BRT (Brasilia Time)<br>=C2=A0 =C2=A0=
+ =C2=A0 - India<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 10:30pm in New Delhi - IST (=
+India Standard Time)</div><div dir=3D"ltr"><br></div><div dir=3D"ltr"><br><=
+/div><div>Cheers,</div><div>- Ira</div><div><br></div></div>
+
+<div><div dir=3D"ltr" class=3D"gmail_signature" data-smartmail=3D"gmail_sig=
+nature"><div dir=3D"ltr"><div><div dir=3D"ltr"><div><div dir=3D"ltr"><div><=
+div dir=3D"ltr"><div><div dir=3D"ltr"><div><div dir=3D"ltr"><div><div dir=
+=3D"ltr"><div><div dir=3D"ltr"><div><div dir=3D"ltr"><i><font size=3D"1">Ir=
+a McDonald (Musician / Software Architect)</font></i></div><div><i><font si=
+ze=3D"1">Chair - SAE Trust Anchors and Authentication TF<br></font></i></di=
+v><div dir=3D"ltr"><i><font size=3D"1">Co-Chair - TCG Trusted Mobility Solu=
+tions WG</font></i></div><div><i><font size=3D"1">Co-Chair - TCG Metadata A=
+ccess Protocol SG<br></font></i></div><div dir=3D"ltr"><i><font size=3D"1">=
+Chair - Linux Foundation Open Printing WG<br>Secretary - IEEE-ISTO Printer =
+Working Group<br>Co-Chair - IEEE-ISTO PWG Internet Printing Protocol WG<br>=
+IETF Designated Expert - IPP &amp; Printer MIB<br>Blue Roof Music / High No=
+rth Inc<br><a style=3D"color:rgb(51,51,255)" href=3D"http://sites.google.co=
+m/site/blueroofmusic" target=3D"_blank">http://sites.google.com/site/bluero=
+ofmusic</a><br><a style=3D"color:rgb(102,0,204)" href=3D"http://sites.googl=
+e.com/site/highnorthinc" target=3D"_blank">http://sites.google.com/site/hig=
+hnorthinc</a><br>mailto: <a href=3D"mailto:blueroofmusic@gmail.com" target=
+=3D"_blank">blueroofmusic@gmail.com</a><br>(permanent) PO Box 221=C2=A0 Gra=
+nd Marais, MI 49839=C2=A0 906-494-2434</font></i></div></div></div></div></=
+div></div></div></div></div></div></div></div></div></div></div></div></div=
+></div></div></div>
+
+--0000000000006ddafe05c3a55eef--
