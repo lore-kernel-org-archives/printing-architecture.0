@@ -1,23 +1,34 @@
-Return-Path: <till.kamppeter@gmail.com>
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
- h=to:cc:from:subject:message-id:date:user-agent:mime-version
- :content-language:content-transfer-encoding;
- bh=yRLGpUqQqy7dPpwJn00IooBcwXd8Ul5kr1hoIeZBzm0=;
- b=olUz8zIxozwhV51smu0xhNm3aA8m2Eb2OQI8w86F5dlnw/g9bVHe60Vs4PjZa95vdK
- 90rS3C/nBmDM1R/LHzPFvhP9U8S7In/708/EGJtvO6ImomKcmCG8om7wnSfU0AdZNr1Y
- 2w0V4OmErRFW1qYFjI5PSAO3GZ1fiasuUCsTpSTSUiLNeipbUcBzxc0rBpSMWGFvlGU3
- txFLpd7OplVfPc8BlP9DvpFDsdugNLNrKdmGXLXsCOJso272P9KV6Km/ohcZnFrK4wD4
- S0LQt9OYaneg0V/jJFFYomrIPWmeC1p02+r7NuRZRv9/W/mGO1qjnXkA5RKUDzZd+gk3
- qMQw==
-From: Till Kamppeter <till.kamppeter@gmail.com>
-Message-ID: <647bc976-ada5-b3af-609e-557036f5c744@gmail.com>
-Date: Sat, 17 Jul 2021 21:21:18 +0200
+Return-Path: <andreas.radke@mailbox.org>
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=mailbox.org; h=
+ content-type:content-type:mime-version:references:in-reply-to
+ :message-id:subject:subject:from:from:date:date:received; s=
+ mail20150812; t=1626605445; bh=DJ2SCi/NCuwSJfP+CRr7biPvDRKuBXNNj
+ HXygvRSNl4=; b=UDRYmZr16on9o/N2vwtq3+MXfIHhBb4fu6ZBHmn4S2GQ6DdVL
+ WlgzkbBWPQ7oicm39qqFBBuCkgrWNHZb1Fdqqqbk3pxvM7Ytv2D1b5OK44LgXme0
+ fxcci1SE4vQ8938+lPZRDt8OjeB7f1sJAuyf8vhTC97kCjBWSU5TVHussD+lUmOC
+ 8Y3bgYChwfksk/9AFZav8NRVIytA3gBn4yEj32THjpBs8ZvDJ7Mfor5Qo+y0bBh0
+ L4kJt2yMz2ZI4Qlo8f6vwtvhK73BO+ZYC+KxujlvPIn5MSKyvuFUFd9u37yydvf3
+ XXmdC37nMj30azLoFFpu6vvgQdXE7XiVnur7g==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=mailbox.org;
+ s=mail20150812; t=1626605447;
+ h=from:from:reply-to:subject:subject:date:date:message-id:message-id:
+ to:to:cc:mime-version:mime-version:content-type:content-type:
+ in-reply-to:in-reply-to:references:references;
+ bh=+8vja1Lwnz1jj+Ovglc86c+GldH+WAoiermoxui8v18=;
+ b=I/tnGAoZPQczjJ6C4ERBKPlyZ5z1IaxrrlBt11Xwr8ioEkF1D36jdyRajEAqVTOLFTk7w0
+ xGniYU9XfuV2PQMi6nO2gXAkFyhHL9dR19bg4soi+K7zsKe3OX1IX1HVSWywOHp4n10pBG
+ oYSi6wTzznV26KPSmvwovL2ev25emPBaRX/MSSCrNGNHFnckoQAor6/ylmfww6EXFQo+0+
+ Q89aRgu6ClcmuIvwBDt9CG0A5PcV63SVwToV6djI/CV/0rwtBjTfSDF0HbmsQ9xxxQnQGw
+ raMDCEcPL2LnnB9zf3FORTkwnM6B/TG2bGuEwPUVXK2FvgF52GWX14GQQxSm+A==
+Date: Sun, 18 Jul 2021 12:50:41 +0200
+From: Andreas Radke <andreas.radke@mailbox.org>
+Message-ID: <20210718125041.65da6c5a@workstation64.local>
+In-Reply-To: <d3908bd8-c10e-9133-dc4f-19b5494b0730@gmail.com>
+References: <d3908bd8-c10e-9133-dc4f-19b5494b0730@gmail.com>
 MIME-Version: 1.0
-Content-Type: text/plain; charset=utf-8; format=flowed
-Content-Language: en-US
-Content-Transfer-Encoding: 7bit
-Subject: [Printing-architecture] PPD files in the PostScript Printer
-	Application Snap
+Content-Type: multipart/signed; boundary="Sig_/KYkAfIAJXoAsb.LW6aZK_F6";
+ protocol="application/pgp-signature"; micalg=pgp-sha256
+Subject: Re: [Printing-architecture] OpenPrinting News
 List-Id: Printing architecture under linux
  <printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>, 
@@ -27,56 +38,55 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>, 
  <mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Open Printing <printing-architecture@lists.linux-foundation.org>
-Cc: James Cloos <cloos@jhcloos.com>
+To: printing-architecture@lists.linux-foundation.org
 
-James Cloos wrote
+--Sig_/KYkAfIAJXoAsb.LW6aZK_F6
+Content-Type: text/plain; charset=US-ASCII
+Content-Transfer-Encoding: quoted-printable
 
-----------
-Are the "~4000 ... PPD files" ppd file available outside of that "snap"?
+Am Sat, 17 Jul 2021 02:10:04 +0200
+schrieb Till Kamppeter <till.kamppeter@gmail.com>:
 
-Ideally in a git repo?
+> Hi,
+>=20
+> I have posted the newest development of the last month on our web
+> site now.
+>=20
+> Here we go:
+>=20
+> https://openprinting.github.io/OpenPrinting-News-July-2021/
+>=20
+>     Till
 
--JimC
-----------
-
-probably reading several times in my news posts that the Snap of the 
-PostScript Printer Application includes ~4000 PPD files.
-
-These PPD files are not part of the GIT repository of the PostScript 
-Printer Application:
-
-https://github.com/OpenPrinting/ps-printer-app
-
-Snaps do not include only code and data which comes in the same 
-repository as their snapcraft.yaml file (Control file with instructions 
-for snapcraft to build a Snap see http://snapcraft.io/). A Snap contains 
-all the dependencies (libraries, auxiliary files, ...) of the snapped 
-application, to make it working with any arbitrary Linux distribution 
-(at least the ones using systemd where you can install snapd on).
-
-In case of the PostScript Printer Application I have included these 
-~4000 PPD files as they were a dependency (actually the Printer 
-Application does not depend on these, but it makes the PostScript 
-Printer user's life easier). These are all free software PostScript PPD 
-files from printer manufacturers which ususally come with Linux 
-distributions, like Ubuntu Desktop.
-
-The files come from two projects and are hosted and maintained there:
+"Add a migration script so that OS distributions can easily switch over
+from classic packages to the CUPS Snap"
 
 
-1. foomatic-db
 
-https://github.com/OpenPrinting/foomatic-db
+I highly doubt major distributions will follow that way. Please make
+sure it will be possible to kepp full support with custom
+built distribution packages as well.
 
-All PostScript PPD files under db/source/PPD/
+Arch Linux will never add such official snap support or access to the
+snap store at all.
 
+Andy
+Arch Linux
 
-2. HPLIP
+--Sig_/KYkAfIAJXoAsb.LW6aZK_F6
+Content-Type: application/pgp-signature
+Content-Description: Digitale Signatur von OpenPGP
 
-All PostScript PPD files under prnt/ps/
+-----BEGIN PGP SIGNATURE-----
 
+iQEzBAEBCAAdFiEErcih/MFeAdRTEEGelGV6sg8qCSsFAmD0B4EACgkQlGV6sg8q
+CSsw6wf/eICYukFT/CJXOKLp//cSEf6+zTte+5+4+U+sYp8qWBQzrzxRm68B2L2M
+LFTKR+4+hIqH9TxP3mNu8wJ9IgHaFzF0BFdpPXW+ISS7WTIRGa3w/IFv5FXaacBW
+0DIWwSx+8svcctk9e5dQ1xgKtITSqtvUK+kzG1eO9Rt3l8jKFGuUu7YDE+ABDRfB
+am3RcAfroFsxLtSxU8dYeVFsDTnryM05ffqLgiFyRaNttJUwnWD1hkwI1JCfFZYp
+uXuycx/1erta4jytXjwNGQEqzV5aBm1s0PGVmW9EgMo1YpKHkwo30OATxIOYZKzw
+6VoHH2hzKAtNqZlT1OQo1UE2q7XdMA==
+=GUnG
+-----END PGP SIGNATURE-----
 
-See also the snap/snapcraft.yaml of the PostScript Printer Application.
-
-    Till
+--Sig_/KYkAfIAJXoAsb.LW6aZK_F6--
