@@ -1,25 +1,19 @@
-Return-Path: <zdohnal@redhat.com>
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=redhat.com;
- s=mimecast20190719; t=1626681928;
- h=from:from:reply-to:subject:subject:date:date:message-id:message-id:
- to:to:cc:mime-version:mime-version:content-type:content-type:
- in-reply-to:in-reply-to:references:references;
- bh=tCVUo/g4NuTFuoBaJM27klsUO/4yEu0cLOdHwCFRJxc=;
- b=g8JcKO0jGCC2czlBTS+dNtxP8pcw5dMS36MZ8m/xISfdlMsRDfC+P790wsc6gfVBy41Zth
- Ohiw9Eme3mdnexkDl/tAGq0wvvR0V6pf9BA4bSBexTdjrW6u3IllLYvbSnroICQIFluLye
- yWBSqLDo0UfafPcaHlws3IrREeLEfIE=
-References: <d3908bd8-c10e-9133-dc4f-19b5494b0730@gmail.com>
- <20210718125041.65da6c5a@workstation64.local>
-From: Zdenek Dohnal <zdohnal@redhat.com>
-Message-ID: <d681b333-e8d5-2ab1-8007-9834752a1abc@redhat.com>
-Date: Mon, 19 Jul 2021 10:05:22 +0200
+Return-Path: <blueroofmusic@gmail.com>
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
+ h=mime-version:from:date:message-id:subject:to;
+ bh=5jD1O4sAdMRjQWaKlRS4ejmJmOkbyPe5T1LNRADj12c=;
+ b=OF/NX+I25xFbQb0D6cKwYoUpOHeZE6NIygbOQsinv/ILS5kqWaXNefUGIWNeWCK+1/
+ PFFeva+/b5OC1BXUxfBV9P2H703HFSXhprd1COaRxSTF6//6K/KuQICwYg3xvOMJwsSN
+ CXE+25y0kPs51ZcF4F6IilvV4yUSl1/NAXBzWYL0P8k5QuJCH2+jX/frP3ue6udeqnHS
+ p/LhXnp6I5NCt2chZYh+Sj0oZ7ZGBNFeLMMABlkT5O71mz7VLMMP4Ak/iMN8pl/NchOx
+ Dg6H4lR+6ShKeGWpHzaOL9AROm2uqhnu2qOG+RGW1l96z5czdscvzQP8Y53RCeN8JBYr
+ GEqg==
 MIME-Version: 1.0
-In-Reply-To: <20210718125041.65da6c5a@workstation64.local>
-Content-Type: multipart/alternative;
- boundary="------------A4B1A80F59B0656829EABB61"
-Content-Language: en-US
-Subject: [Printing-architecture] CUPS SNAP and distributions (was Re:
- OpenPrinting News)
+From: Ira McDonald <blueroofmusic@gmail.com>
+Date: Sun, 25 Jul 2021 16:59:24 -0400
+Message-ID: <CAN40gSuWp11XDcwxb1TRSh+Q6Vq_bXta_khD3fvW5FHfPBDiAA@mail.gmail.com>
+Content-Type: multipart/alternative; boundary="00000000000053390705c7f8ea8f"
+Subject: [Printing-architecture] OP Minutes (13 July 2021)
 List-Id: Printing architecture under linux
  <printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>, 
@@ -29,192 +23,211 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>, 
  <mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: printing-architecture@lists.linux-foundation.org
+To: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>, Ira McDonald <blueroofmusic@gmail.com>
 
-This is a multi-part message in MIME format.
---------------A4B1A80F59B0656829EABB61
-Content-Type: text/plain; charset=windows-1252; format=flowed
+--00000000000053390705c7f8ea8f
+Content-Type: text/plain; charset="UTF-8"
+
+ Hi,
+
+Minutes from our last OpenPrinting call are posted at:
+
+
+http://ftp.pwg.org/pub/pwg/liaison/openprinting/minutes/OP-Minutes-20210713.htm
+
+
+Next OP US/Europe/Brazil/India Conference Calls:
+
+(1) August - US/Europe/Brazil/India - OP Monthly Meeting
+    - Tuesday 10 August 2021, Daytime
+      - Web conference to be announced
+      - Note - USENIX Security - 11-13 August 2021 - Ira to attend
+      - Note - Sugar Island Music Festival - 13-15 August 2021 - Ira to
+perform
+      - Note - PWG Virtual F2F - 17-19 August 2021 - Ira to attend
+      - Note - ISO TC22/SC32/WG12 Virtual F2F - 23-27 August 2021 - Ira to
+attend
+      - US
+        10am in San Francisco - US PDT (Pacific Daylight Time)
+        11am in Colorado - US MDT (Mountain Daylight Time)
+        12am in Chicago - US CDT (Central Daylight Time)
+        1pm in New York - US EDT (Eastern Daylight Time)
+      - Europe
+        7pm in Berlin - CEST (Central Europe Summer Time)
+      - Brazil
+        2pm in Belo Horizonte - BRT (Brasilia Time)
+      - India
+        10:30pm in New Delhi - IST (India Standard Time)
+
+(2) September - US/Europe/Brazil/India - OP Monthly Meeting (tentative)
+    - Tuesday 7 September 2021, Daytime
+      - Web conference to be announced
+      - Note - US Labor Day - 6 September 2021
+      - Note - ISO TC22/SC32/WG12 Adhoc - 7 September 2021 - Ira to attend
+      - Note - ISO TC22/SC32/WG12 Virtual F2F - 13-16 September 2021 - Ira
+to attend
+      - US
+        10am in San Francisco - US PDT (Pacific Daylight Time)
+        11am in Colorado - US MDT (Mountain Daylight Time)
+        12am in Chicago - US CDT (Central Daylight Time)
+        1pm in New York - US EDT (Eastern Daylight Time)
+      - Europe
+        7pm in Berlin - CEST (Central Europe Summer Time)
+      - Brazil
+        2pm in Belo Horizonte - BRT (Brasilia Time)
+      - India
+        10:30pm in New Delhi - IST (India Standard Time)
+
+(3) October - US/Europe/Brazil/India - OP Monthly Meeting (tentative)
+    - Tuesday 5 October 2021, Daytime
+      - Web conference to be announced
+      - Note - ISO TC22/SC32/WG12 Virtual F2F - 11-15 October 2021 - Ira to
+attend
+      - US
+        10am in San Francisco - US PDT (Pacific Daylight Time)
+        11am in Colorado - US MDT (Mountain Daylight Time)
+        12am in Chicago - US CDT (Central Daylight Time)
+        1pm in New York - US EDT (Eastern Daylight Time)
+      - Europe
+        7pm in Berlin - CEST (Central Europe Summer Time)
+      - Brazil
+        2pm in Belo Horizonte - BRT (Brasilia Time)
+      - India
+        10:30pm in New Delhi - IST (India Standard Time)
+
+Cheers,
+- Ira
+
+*Ira McDonald (Musician / Software Architect)*
+
+*Chair - SAE Trust Anchors and Authentication TF*
+*Co-Chair - TCG Trusted Mobility Solutions WG*
+
+*Co-Chair - TCG Metadata Access Protocol SG*
+
+
+
+
+
+
+
+
+*Chair - Linux Foundation Open Printing WGSecretary - IEEE-ISTO Printer
+Working GroupCo-Chair - IEEE-ISTO PWG Internet Printing Protocol WGIETF
+Designated Expert - IPP & Printer MIBBlue Roof Music / High North
+Inchttp://sites.google.com/site/blueroofmusic
+<http://sites.google.com/site/blueroofmusic>http://sites.google.com/site/highnorthinc
+<http://sites.google.com/site/highnorthinc>mailto: blueroofmusic@gmail.com
+<blueroofmusic@gmail.com>(permanent) PO Box 221  Grand Marais, MI 49839
+906-494-2434*
+
+--00000000000053390705c7f8ea8f
+Content-Type: text/html; charset="UTF-8"
 Content-Transfer-Encoding: quoted-printable
 
-On 7/18/21 12:50 PM, Andreas Radke via Printing-architecture wrote:
-> Am Sat, 17 Jul 2021 02:10:04 +0200
-> schrieb Till Kamppeter <till.kamppeter@gmail.com>:
->
->> Hi,
->>
->> I have posted the newest development of the last month on our web
->> site now.
->>
->> Here we go:
->>
->> https://openprinting.github.io/OpenPrinting-News-July-2021/
->>
->>      Till
-> "Add a migration script so that OS distributions can easily switch over
-> from classic packages to the CUPS Snap"
->
->
->
-> I highly doubt major distributions will follow that way.
-I wanted to mention my thoughts regarding this on a OpenPrinting monthly=20
-call, but I haven't managed to join yet :( , so I'll post my=20
-plans+thoughts here, since you began the conversation :)
->   Please make
-> sure it will be possible to kepp full support with custom
-> built distribution packages as well.
-It would be great if it was possible. And IMO it still will be.
->
-> Arch Linux will never add such official snap support or access to the
-> snap store at all.
-
-As for Fedora I plan to package all required projects as RPMs, verify=20
-that all new features work as expected and then focus on SNAP. IMHO it=20
-is easier to figure out whether the possible issue is due SNAP=20
-environment, or if the feature itself is buggy.
-
-For RHEL/CentOS Stream, RPMs will be supported projects versions for now=20
-- as for a containerized printing stack, IMHO I cannot use SNAPs (unless=20
-I take snapd under my wings) there, but I will need to use flatpack=20
-(already in RHEL/CentOS Stream).
-
-But as an overall thought on containerized printing stack - it would be=20
-great if the test suites of containerized projects were improved first=20
-(where possible) if we ship the current upstream sources (from master=20
-branch) - then if we run those test suites before the project gets=20
-containerized, this way we can provide a quality assurance for people=20
-using the container.
-
-And testing would help getting the containerized CUPS as a default in=20
-the future.
-
-I'm planning to go through our downstream regression test suite and see=20
-if some of those can be added to CUPS/cups-filters test suites, and=20
-enhancing the test suites where I can.
-
->
-> Andy
-> Arch Linux
->
-> _______________________________________________
-> Printing-architecture mailing list
-> Printing-architecture@lists.linux-foundation.org
-> https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture
-
---=20
-Zdenek Dohnal
-Software Engineer
-Red Hat Czech - Brno TPB-C
-
-
---------------A4B1A80F59B0656829EABB61
-Content-Type: text/html; charset="windows-1252"
-Content-Transfer-Encoding: quoted-printable
-
-<html>
-  <head>
-    <meta http-equiv=3D"Content-Type" content=3D"text/html;
-      charset=3Dwindows-1252">
-  </head>
-  <body>
-    <div class=3D"moz-cite-prefix">On 7/18/21 12:50 PM, Andreas Radke via
-      Printing-architecture wrote:<br>
-    </div>
-    <blockquote type=3D"cite"
-      cite=3D"mid:20210718125041.65da6c5a@workstation64.local">
-      <pre class=3D"moz-quote-pre" wrap=3D"">Am Sat, 17 Jul 2021 02:10:04 +=
-0200
-schrieb Till Kamppeter <a class=3D"moz-txt-link-rfc2396E" href=3D"mailto:ti=
-ll.kamppeter@gmail.com">&lt;till.kamppeter@gmail.com&gt;</a>:
-
-</pre>
-      <blockquote type=3D"cite">
-        <pre class=3D"moz-quote-pre" wrap=3D"">Hi,
-
-I have posted the newest development of the last month on our web
-site now.
-
-Here we go:
-
-<a class=3D"moz-txt-link-freetext" href=3D"https://openprinting.github.io/O=
-penPrinting-News-July-2021/">https://openprinting.github.io/OpenPrinting-Ne=
-ws-July-2021/</a>
-
-    Till
-</pre>
-      </blockquote>
-      <pre class=3D"moz-quote-pre" wrap=3D"">
-"Add a migration script so that OS distributions can easily switch over
-from classic packages to the CUPS Snap"
+<div dir=3D"ltr">
+<div>Hi,</div><div><br></div><div>
+<div dir=3D"ltr"><span><span><span><span><span><span><span><span><span><spa=
+n><span><span><span><span><span><span><span><span><span><span><span><span><=
+span><span><span><span><span><span><span><span><span><span><span><span clas=
+s=3D"gmail-il">Minutes</span></span></span></span></span></span></span></sp=
+an></span></span></span></span></span></span></span></span></span></span></=
+span></span></span></span></span></span></span></span></span></span></span>=
+</span></span></span></span></span> from our last OpenPrinting<span> call</=
+span> are <span><span><span><span><span><span><span><span><span><span><span=
+><span><span><span><span><span>posted</span></span></span></span></span></s=
+pan></span></span></span></span></span></span></span></span></span></span> =
+at:<br>
 
 
 
-I highly doubt major distributions will follow that way.</pre>
-    </blockquote>
-    I wanted to mention my thoughts regarding this on a OpenPrinting
-    monthly call, but I haven't managed to join yet :( , so I'll post my
-    plans+thoughts here, since you began the conversation :)<br>
-    <blockquote type=3D"cite"
-      cite=3D"mid:20210718125041.65da6c5a@workstation64.local">
-      <pre class=3D"moz-quote-pre" wrap=3D""> Please make
-sure it will be possible to kepp full support with custom
-built distribution packages as well.</pre>
-    </blockquote>
-    It would be great if it was possible. And IMO it still will be.<br>
-    <blockquote type=3D"cite"
-      cite=3D"mid:20210718125041.65da6c5a@workstation64.local">
-      <pre class=3D"moz-quote-pre" wrap=3D"">
 
-Arch Linux will never add such official snap support or access to the
-snap store at all.</pre>
-    </blockquote>
-    <p>As for Fedora I plan to package all required projects as RPMs,
-      verify that all new features work as expected and then focus on
-      SNAP. IMHO it is easier to figure out whether the possible issue
-      is due SNAP environment, or if the feature itself is buggy.<br>
-    </p>
-    <p>For RHEL/CentOS Stream, RPMs will be supported projects versions
-      for now - as for a containerized printing stack, IMHO I cannot use
-      SNAPs (unless I take snapd under my wings) there, but I will need
-      to use flatpack (already in RHEL/CentOS Stream).=A0</p>
-    <p>But as an overall thought on containerized printing stack - it
-      would be great if the test suites of containerized projects were
-      improved first (where possible) if we ship the current upstream
-      sources (from master branch) - then if we run those test suites
-      before the project gets containerized, this way we can provide a
-      quality assurance for people using the container.</p>
-    <p>And testing would help getting the containerized CUPS as a
-      default in the future.</p>
-    <p>I'm planning to go through our downstream regression test suite
-      and see if some of those can be added to CUPS/cups-filters test
-      suites, and enhancing the test suites where I can.<br>
-    </p>
-    <blockquote type=3D"cite"
-      cite=3D"mid:20210718125041.65da6c5a@workstation64.local">
-      <pre class=3D"moz-quote-pre" wrap=3D"">
 
-Andy
-Arch Linux
-</pre>
-      <br>
-      <fieldset class=3D"mimeAttachmentHeader"></fieldset>
-      <pre class=3D"moz-quote-pre" wrap=3D"">______________________________=
-_________________
-Printing-architecture mailing list
-<a class=3D"moz-txt-link-abbreviated" href=3D"mailto:Printing-architecture@=
-lists.linux-foundation.org">Printing-architecture@lists.linux-foundation.or=
-g</a>
-<a class=3D"moz-txt-link-freetext" href=3D"https://lists.linuxfoundation.or=
-g/mailman/listinfo/printing-architecture">https://lists.linuxfoundation.org=
-/mailman/listinfo/printing-architecture</a>
-</pre>
-    </blockquote>
-    <pre class=3D"moz-signature" cols=3D"72">--=20
-Zdenek Dohnal
-Software Engineer
-Red Hat Czech - Brno TPB-C
-</pre>
-  </body>
-</html>
 
---------------A4B1A80F59B0656829EABB61--
 
+
+
+
+
+
+<br>
+=C2=A0 <a href=3D"http://ftp.pwg.org/pub/pwg/liaison/openprinting/minutes/O=
+P-Minutes-20210713.htm" target=3D"_blank">http://ftp.pwg.org/pub/pwg/liaiso=
+n/openprinting/minutes/OP-Minutes-20210713.htm</a><br><br></div><div dir=3D=
+"ltr"><br></div><div dir=3D"ltr">
+Next <span><span><span><span><span><span><span><span><span><span><span><spa=
+n><span><span><span><span><span><span><span><span><span><span><span><span c=
+lass=3D"gmail-il">OP</span></span></span></span></span></span></span></span=
+></span></span></span></span></span></span></span></span></span></span></sp=
+an></span></span></span></span></span> US/Europe/Brazil/India Conference Ca=
+lls: <br></div><div dir=3D"ltr"><br></div><div dir=3D"ltr">(1) August - US/=
+Europe/Brazil/India - OP Monthly Meeting<br>=C2=A0 =C2=A0 - Tuesday 10 Augu=
+st 2021, Daytime<br>=C2=A0 =C2=A0 =C2=A0 - Web conference to be announced<b=
+r>=C2=A0 =C2=A0 =C2=A0 - Note - USENIX Security - 11-13 August 2021 - Ira t=
+o attend<br>=C2=A0 =C2=A0 =C2=A0 - Note - Sugar Island Music Festival - 13-=
+15 August 2021 - Ira to perform<br>=C2=A0 =C2=A0 =C2=A0 - Note - PWG Virtua=
+l F2F - 17-19 August 2021 - Ira to attend<br>=C2=A0 =C2=A0 =C2=A0 - Note - =
+ISO TC22/SC32/WG12 Virtual F2F - 23-27 August 2021 - Ira to attend<br>=C2=
+=A0 =C2=A0 =C2=A0 - US<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 10am in San Francisco=
+ - US PDT (Pacific Daylight Time)<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 11am in Co=
+lorado - US MDT (Mountain Daylight Time)<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 12a=
+m in Chicago - US CDT (Central Daylight Time)<br>=C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 1pm in New York - US EDT (Eastern Daylight Time)<br>=C2=A0 =C2=A0 =C2=
+=A0 - Europe<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 7pm in Berlin - CEST (Central E=
+urope Summer Time)<br>=C2=A0 =C2=A0 =C2=A0 - Brazil<br>=C2=A0 =C2=A0 =C2=A0=
+ =C2=A0 2pm in Belo Horizonte - BRT (Brasilia Time)<br>=C2=A0 =C2=A0 =C2=A0=
+ - India<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 10:30pm in New Delhi - IST (India S=
+tandard Time)<br><br>(2) September - US/Europe/Brazil/India - OP Monthly Me=
+eting (tentative)<br>=C2=A0 =C2=A0 - Tuesday 7 September 2021, Daytime<br>=
+=C2=A0 =C2=A0 =C2=A0 - Web conference to be announced<br>=C2=A0 =C2=A0 =C2=
+=A0 - Note - US Labor Day - 6 September 2021<br>=C2=A0 =C2=A0 =C2=A0 - Note=
+ - ISO TC22/SC32/WG12 Adhoc - 7 September 2021 - Ira to attend<br>=C2=A0 =
+=C2=A0 =C2=A0 - Note - ISO TC22/SC32/WG12 Virtual F2F - 13-16 September 202=
+1 - Ira to attend<br>=C2=A0 =C2=A0 =C2=A0 - US<br>=C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 10am in San Francisco - US PDT (Pacific Daylight Time)<br>=C2=A0 =C2=A0=
+ =C2=A0 =C2=A0 11am in Colorado - US MDT (Mountain Daylight Time)<br>=C2=A0=
+ =C2=A0 =C2=A0 =C2=A0 12am in Chicago - US CDT (Central Daylight Time)<br>=
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 1pm in New York - US EDT (Eastern Daylight Time=
+)<br>=C2=A0 =C2=A0 =C2=A0 - Europe<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 7pm in Be=
+rlin - CEST (Central Europe Summer Time)<br>=C2=A0 =C2=A0 =C2=A0 - Brazil<b=
+r>=C2=A0 =C2=A0 =C2=A0 =C2=A0 2pm in Belo Horizonte - BRT (Brasilia Time)<b=
+r>=C2=A0 =C2=A0 =C2=A0 - India<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 10:30pm in Ne=
+w Delhi - IST (India Standard Time)<br><br>(3) October - US/Europe/Brazil/I=
+ndia - OP Monthly Meeting (tentative)<br>=C2=A0 =C2=A0 - Tuesday 5 October =
+2021, Daytime<br>=C2=A0 =C2=A0 =C2=A0 - Web conference to be announced<br>=
+=C2=A0 =C2=A0 =C2=A0 - Note - ISO TC22/SC32/WG12 Virtual F2F - 11-15 Octobe=
+r 2021 - Ira to attend<br>=C2=A0 =C2=A0 =C2=A0 - US<br>=C2=A0 =C2=A0 =C2=A0=
+ =C2=A0 10am in San Francisco - US PDT (Pacific Daylight Time)<br>=C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 11am in Colorado - US MDT (Mountain Daylight Time)<br>=
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 12am in Chicago - US CDT (Central Daylight Time=
+)<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 1pm in New York - US EDT (Eastern Daylight=
+ Time)<br>=C2=A0 =C2=A0 =C2=A0 - Europe<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 7pm =
+in Berlin - CEST (Central Europe Summer Time)<br>=C2=A0 =C2=A0 =C2=A0 - Bra=
+zil<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 2pm in Belo Horizonte - BRT (Brasilia Ti=
+me)<br>=C2=A0 =C2=A0 =C2=A0 - India<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 10:30pm =
+in New Delhi - IST (India Standard Time)</div><div dir=3D"ltr"><br></div><d=
+iv>Cheers,</div><div>- Ira</div><div><br></div></div>
+
+<div><div dir=3D"ltr" class=3D"gmail_signature" data-smartmail=3D"gmail_sig=
+nature"><div dir=3D"ltr"><div><div dir=3D"ltr"><div><div dir=3D"ltr"><div><=
+div dir=3D"ltr"><div><div dir=3D"ltr"><div><div dir=3D"ltr"><div><div dir=
+=3D"ltr"><div><div dir=3D"ltr"><div><div dir=3D"ltr"><i><font size=3D"1">Ir=
+a McDonald (Musician / Software Architect)</font></i></div><div><i><font si=
+ze=3D"1">Chair - SAE Trust Anchors and Authentication TF<br></font></i></di=
+v><div dir=3D"ltr"><i><font size=3D"1">Co-Chair - TCG Trusted Mobility Solu=
+tions WG</font></i></div><div><i><font size=3D"1">Co-Chair - TCG Metadata A=
+ccess Protocol SG<br></font></i></div><div dir=3D"ltr"><i><font size=3D"1">=
+Chair - Linux Foundation Open Printing WG<br>Secretary - IEEE-ISTO Printer =
+Working Group<br>Co-Chair - IEEE-ISTO PWG Internet Printing Protocol WG<br>=
+IETF Designated Expert - IPP &amp; Printer MIB<br>Blue Roof Music / High No=
+rth Inc<br><a style=3D"color:rgb(51,51,255)" href=3D"http://sites.google.co=
+m/site/blueroofmusic" target=3D"_blank">http://sites.google.com/site/bluero=
+ofmusic</a><br><a style=3D"color:rgb(102,0,204)" href=3D"http://sites.googl=
+e.com/site/highnorthinc" target=3D"_blank">http://sites.google.com/site/hig=
+hnorthinc</a><br>mailto: <a href=3D"mailto:blueroofmusic@gmail.com" target=
+=3D"_blank">blueroofmusic@gmail.com</a><br>(permanent) PO Box 221=C2=A0 Gra=
+nd Marais, MI 49839=C2=A0 906-494-2434</font></i></div></div></div></div></=
+div></div></div></div></div></div></div></div></div></div></div></div></div=
+></div></div></div>
+
+--00000000000053390705c7f8ea8f--
