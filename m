@@ -2,21 +2,21 @@ Return-Path: <till.kamppeter@gmail.com>
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
  h=from:subject:to:message-id:date:user-agent:mime-version
  :content-language:content-transfer-encoding;
- bh=tDzSpo15Yh5FmT4+GwjHBLVk/VNTB9AKJXB2EeeL018=;
- b=e0qPFHS40TnqYL79nKlCiaUjnMRrmEcq988gJEjMBZQ5u+04YdS9Ivbc23iLrV7c6l
- E1w8knyfffM/c1lwZ9+XbPOKzPHGH8QpuxMO/kH2mgs+sRjtV6KlxDkgJzQll8gUgvP3
- FPYB6ZYq2S9ECA5eqWL3nqaZ4n0Nu8+gwGQ5Hs2g9Hqmu/SpnhHKpjx9BnnfPKPPtblf
- URVHULqHWkd5GBFNGVgNRbh6OIvBb7+CLJf5vpu+XkJ5vkFSGt6D0GfCqIYTpgoXBQxJ
- ihg1vlNCfbDITud06hlRgbUIjS3hQUbwxbjH9i/fnt/UBJFhnamnfUvu/+BIpeKunaON
- g87Q==
+ bh=8ts6kxSSFYadlj8eP7peNIMfGU+fOQfwO19bu2nkFeA=;
+ b=iQq/hiMDmVI6ooucFySwf3MVp6oK3r87oXF6F2UtM0l21rIh9DqUuqhg0hLpDG6+Yo
+ fsujiqHfqT59iF33DW1yAQb2u3TkbeJom+leliE/N3/gZjWEBvNjVSMwpmF1D+7bHvDS
+ 4ZEyCHxdGtiBATPaTYzBCm/0lBGSZaEOwbAZxADnrZN9LyqskE0traKPaD2aXM8CLCR7
+ ViQKHoQM+p4hew7CD37IFpcgktxi71ZxKSPySV+pGsC37K8qg87St0bu/SQAPQstDtRp
+ HQULnExpMFXKKqlohYe3bX0hIzTvy/FRtrYcWN/UrE4+DcboWYNrnghuCnzkw5lxFpME
+ Q1QQ==
 From: Till Kamppeter <till.kamppeter@gmail.com>
-Message-ID: <50fec94a-b9e2-1e9b-7857-6358465ff8a0@gmail.com>
-Date: Tue, 17 Aug 2021 13:55:44 +0200
+Message-ID: <4a4a5439-5267-0925-f63b-6f14eb993fa2@gmail.com>
+Date: Sat, 28 Aug 2021 00:36:03 +0200
 MIME-Version: 1.0
 Content-Type: text/plain; charset=utf-8; format=flowed
 Content-Language: en-US
 Content-Transfer-Encoding: 7bit
-Subject: [Printing-architecture] cups-filters 1.28.10 released!
+Subject: [Printing-architecture] OpenPrinting News Flash
 List-Id: Printing architecture under linux
  <printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>, 
@@ -26,16 +26,19 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>, 
  <mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Open Printing <printing-architecture@lists.linux-foundation.org>
+To: Ira McDonald <blueroofmusic@gmail.com>, Aveek Basu <aveek.basu@lexmark.com>, Open Printing <printing-architecture@lists.linux-foundation.org>, Michael Sweet <msweet@msweet.org>
 
 Hi,
 
-Bug fix release: More reliable legacy CUPS browsing in cups-browsed, 
-improved PDF printer sample PPDs, with borderless page sizes, eliminated 
-unneeded dependency on DjVu font, minor fixes
+a lot has happened in the last days, therefore I have posted an extra 
+news post today.
 
 Here we go:
 
-https://github.com/OpenPrinting/cups-filters/releases/tag/1.28.10
+https://openprinting.github.io/OpenPrinting-News-Flash-Ubuntu-Indaba-and-Ghostscript-Printer-Application/
+
+Michael, and thanks a lot for your participation in the Indaba, even I 
+have learned a lot of new things about printing and about you. It was 
+really great. And also my co-workers at Canonical liked it a lot!
 
     Till
