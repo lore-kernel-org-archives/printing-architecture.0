@@ -1,24 +1,30 @@
-Return-Path: <till.kamppeter@gmail.com>
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
- h=subject:to:references:from:message-id:date:user-agent:mime-version
- :in-reply-to:content-language:content-transfer-encoding;
- bh=2VkpaLig55B/CEFieekD12LtuawfCvsoTg9YeLW2osA=;
- b=bgXM4DDlo1g99YUbuGpNGqNNpRm794lZizd5NwG0zr9t3ZHQtR1uhVblQ4uX7x+Hwu
- /MIRcfQLWp5wt5Mz0c3yhhPIzxhrPuH+w6wJgMvXyYz3qRPeViX46/zeM73KFwh+IxTC
- EqcJnHsTs9aV3HFTN6U5nGzktsUAdnpkd4NmDaNMsJXBvq7100wIerQUXzCyZX5lDckF
- 77Va0pZJFpQvqXbf414Swj1wXK3y4EboyJaZjS5yVUs8xzOKWYMcRXX/UO3Vv1w8jmAZ
- bYuiTy+YLOgssZEPffXbznEQsv4vcZh1d29y3NdNccQ5ZZbOQtkCEZaJNVPxFKolmFnD
- TyPA==
-References: <CE67ED23-12F1-42B9-A1A2-790966FB4D72@msweet.org>
-From: Till Kamppeter <till.kamppeter@gmail.com>
-Message-ID: <a2a2ada6-4226-fbe7-9336-bf44c6c3e740@gmail.com>
-Date: Wed, 1 Sep 2021 01:03:04 +0200
+Return-Path: <dottedmag@dottedmag.net>
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=dottedmag.net;
+ h=from:to:subject:date:message-id:mime-version:content-type; s=
+ fm3; bh=3Nu02XqtG5j3PDg9Sr4uwr10GFs9PU5FmJBSGqVz2Pk=; b=Zw5NGk8D
+ s0D9iDosS24cmlrveGUegW0qJo64vSoG2CB0KYJZ0bLL/brbeZgSnu15vWoSaAyY
+ Eaf7gO4Z8VkX8K4VSHIdUx8wzNkCreu5SJFU50uxET1LJpOfXrCFEM2DPD7xyrCM
+ fUkYpmDNMq0kevOrHcITuKyvhvMfXlKq+qARvjncd1mBB5GBm7S8ELWhr/CByJPJ
+ hh2ApxufV7IZXsLSAWEloaPXGXd+TvqyzdwSMah73RSh4g9IeSebXJSRCqIFL+WL
+ mpUxfqAy1EzRZIC7G8+GwPYE9Up12zsc9IXJolSfrrfi23FuEU1TtBdxZ3E0cLTQ
+ VoZMot/HJ8Xtvw==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=
+ messagingengine.com; h=content-type:date:from:message-id
+ :mime-version:subject:to:x-me-proxy:x-me-proxy:x-me-sender
+ :x-me-sender:x-sasl-enc; s=fm3; bh=3Nu02XqtG5j3PDg9Sr4uwr10GFs9P
+ U5FmJBSGqVz2Pk=; b=b2fjthGX/mCHR0IbMXQP6sLBmwxA+tlrSD4JFWUxAVWMS
+ I+ZOPQIs5EziCYVbVofUilOzDShQ2U4JD0KSl6YxGn+GMnlak45fq6i+di7EKl51
+ PzKR6D3uuKoPWgiZGirxKxtZe/q0vdIboscA172oWBwzh6z9SAk3sEqX7nvgIDFt
+ p9mItsTgOGodh+beZ0CoyP9YNYEeHyFxLG4tlR4AKtW/kibOosnNHTnNMXhhhMuR
+ H0teK+Tol+CGeY/5K+quy8RMB2/PzAbyk9X8JiE8DMNUIwEpInsZn3okjjc+Xt3k
+ LR0iGIOX18qaQQSR8ig29lo4fqCJWS+nx9SwnI3BQ==
+From: "Misha Gusarov" <dottedmag@dottedmag.net>
+Date: Sun, 05 Sep 2021 08:33:46 +0200
+Message-ID: <D8F97724-8C64-4FC7-A7FA-326B3BF08DD7@dottedmag.net>
 MIME-Version: 1.0
-In-Reply-To: <CE67ED23-12F1-42B9-A1A2-790966FB4D72@msweet.org>
-Content-Type: text/plain; charset="utf-8"; format="flowed"
-Content-Language: en-US
-Content-Transfer-Encoding: 8bit
-Subject: Re: [Printing-architecture] PAPPL 1.1b1
+Content-Type: text/plain; format=flowed
+Subject: [Printing-architecture] Right place to put the code: label size
+ protocol for Brother QL720NW label printer
 List-Id: Printing architecture under linux
  <printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>, 
@@ -28,65 +34,20 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>, 
  <mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Michael Sweet <msweet@msweet.org>, "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>
+To: printing-architecture@lists.linux-foundation.org
 
-Michael, thanks for the announcement.
+Hello.
 
-Now everyone can test the new PAPPL features on the Ghostscript Printer 
-Applications and the PostScript Printer Application.
+I have reverse-engineered the protocol Brother QL720NW networked label 
+printer (and similar)
+use to report the size of installed labels reel (it's a custom SNMP 
+attribute, heh).
 
-They are rebuilding now in the Snap Store, using the newest PAPPL as 
-announced here and will be ready in 30 min to 1 hour depending on 
-architecture (amd64 is fastest).
+I'd like to add this support to the corresponding driver, however I'm at 
+loss
+where the corresponding driver is.
 
-Then they can get grabbed from the Snap Store and the new functionality 
-of PAPPL can be tested. Anyone who already has one or another of these 
-Printer Applications installed as Snap will get an automatic updated.
+Could you please guide me to the proper place?
 
-    Till
-
-
-On 31/08/2021 23:03, Michael Sweet via Printing-architecture wrote:
-> All,
-> 
-> The first beta release of PAPPL v1.1 is now available for download.  PAPPL v1.1 adds support for Wi-Fi configuration, IPP-USB, printer driver lookup and auto-add functionality, improves management of multiple printers, and adds support for Microsoft® Windows® 10 and higher.
-> 
-> 	https://github.com/michaelrsweet/pappl/releases/tag/v1.1b1
-> 
-> Changes in 1.1b1 include:
-> 
-> - Added support for Windows 10 and higher.
-> - Added `PAPPL_SOPTIONS_NO_TLS` option to disable TLS support.
-> - Added Wi-Fi callbacks to support configuration over IPP-USB (Issue #45)
-> - Added buttons and sub-commands to pause and resume printers (Issue #124)
-> - `papplMainLoop` now uses a persistent location for state and spool files by
->    default (Issue #128)
-> - `papplMainLoop` now supports clients talking to a system-wide server running
->    as root (Issue #148)
-> - Added a "set default" button to the web interface (Issue #150)
-> - The `drivers` sub-command now reports the IEEE-1284 device ID for a given
->    driver (Issue #157)
-> - Jobs can now be canceled and printers deleted when a processing job is trying
->    to connect to a printer (Issue #163)
-> - The default media is now updated if the ready media for a given tray is
->    updated (Issue #164)
-> - Fixed an issue with the "drivers" sub-command not working if you don't have a
->    system callback.
-> - Fixed a deadlock issue on macOS.
-> - Added a new `papplJobCreateWithFile` API to allow printer applications to
->    submit print jobs internally.
-> - Refactored the `papplSystem` hostname/port APIs to be consistent with the
->    naming used for the `papplClient` APIs.
-> 
-> Enjoy!
-> 
-> ________________________
-> Michael Sweet
-> 
-> 
-> 
-> _______________________________________________
-> Printing-architecture mailing list
-> Printing-architecture@lists.linux-foundation.org
-> https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture
-> 
+Best,
+Misha.
