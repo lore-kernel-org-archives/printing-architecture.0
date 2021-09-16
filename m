@@ -1,30 +1,22 @@
-Return-Path: <dottedmag@dottedmag.net>
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=dottedmag.net;
- h=from:to:subject:date:message-id:mime-version:content-type; s=
- fm3; bh=3Nu02XqtG5j3PDg9Sr4uwr10GFs9PU5FmJBSGqVz2Pk=; b=Zw5NGk8D
- s0D9iDosS24cmlrveGUegW0qJo64vSoG2CB0KYJZ0bLL/brbeZgSnu15vWoSaAyY
- Eaf7gO4Z8VkX8K4VSHIdUx8wzNkCreu5SJFU50uxET1LJpOfXrCFEM2DPD7xyrCM
- fUkYpmDNMq0kevOrHcITuKyvhvMfXlKq+qARvjncd1mBB5GBm7S8ELWhr/CByJPJ
- hh2ApxufV7IZXsLSAWEloaPXGXd+TvqyzdwSMah73RSh4g9IeSebXJSRCqIFL+WL
- mpUxfqAy1EzRZIC7G8+GwPYE9Up12zsc9IXJolSfrrfi23FuEU1TtBdxZ3E0cLTQ
- VoZMot/HJ8Xtvw==
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=
- messagingengine.com; h=content-type:date:from:message-id
- :mime-version:subject:to:x-me-proxy:x-me-proxy:x-me-sender
- :x-me-sender:x-sasl-enc; s=fm3; bh=3Nu02XqtG5j3PDg9Sr4uwr10GFs9P
- U5FmJBSGqVz2Pk=; b=b2fjthGX/mCHR0IbMXQP6sLBmwxA+tlrSD4JFWUxAVWMS
- I+ZOPQIs5EziCYVbVofUilOzDShQ2U4JD0KSl6YxGn+GMnlak45fq6i+di7EKl51
- PzKR6D3uuKoPWgiZGirxKxtZe/q0vdIboscA172oWBwzh6z9SAk3sEqX7nvgIDFt
- p9mItsTgOGodh+beZ0CoyP9YNYEeHyFxLG4tlR4AKtW/kibOosnNHTnNMXhhhMuR
- H0teK+Tol+CGeY/5K+quy8RMB2/PzAbyk9X8JiE8DMNUIwEpInsZn3okjjc+Xt3k
- LR0iGIOX18qaQQSR8ig29lo4fqCJWS+nx9SwnI3BQ==
-From: "Misha Gusarov" <dottedmag@dottedmag.net>
-Date: Sun, 05 Sep 2021 08:33:46 +0200
-Message-ID: <D8F97724-8C64-4FC7-A7FA-326B3BF08DD7@dottedmag.net>
+Return-Path: <till.kamppeter@gmail.com>
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20210112;
+ h=from:subject:to:message-id:date:user-agent:mime-version
+ :content-language:content-transfer-encoding;
+ bh=mOvqJgSfMcWOdEkpMVuNByn7G1bliacuhta0u1wxJqY=;
+ b=KiGz77XESHioTYO2rs3JC1r/shaqh32jP7oNHBxllnskarimMzQatla4QObmGnGsTM
+ F7XNeL7JDiMp+vm4t3r/M6TiP+fIA5ibaVdgm4GJqUAc2DoudAfFa+plHmXp52XNqg9P
+ aFofSDp2QyUzQKfe64ULkgCanff6801+10QWiVzG6VjoGHylvXK4mb+GkKyUF0jwDfYE
+ URaHhQVJyh+JEzv9wWoxUNIeFvP5T+JtLRms5SsxpKo19TUhXXfJ4LhJBM5Ps1Y1zBvx
+ Fq3p7E511BFWdLdKeILNI/u6T3R/dOuvqygCYxxiOvCxcvk887pTa/SKRCwewmdPASKh
+ rBag==
+From: Till Kamppeter <till.kamppeter@gmail.com>
+Message-ID: <9474bd42-b89a-8da3-05f8-4b03ef944ac4@gmail.com>
+Date: Thu, 16 Sep 2021 21:18:42 +0200
 MIME-Version: 1.0
-Content-Type: text/plain; format=flowed
-Subject: [Printing-architecture] Right place to put the code: label size
- protocol for Brother QL720NW label printer
+Content-Type: text/plain; charset=utf-8; format=flowed
+Content-Language: en-US
+Content-Transfer-Encoding: 7bit
+Subject: [Printing-architecture] OpenPrinting News
 List-Id: Printing architecture under linux
  <printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>, 
@@ -34,20 +26,14 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>, 
  <mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: printing-architecture@lists.linux-foundation.org
+To: Ira McDonald <blueroofmusic@gmail.com>, Aveek Basu <aveek.basu@lexmark.com>, Open Printing <printing-architecture@lists.linux-foundation.org>
 
-Hello.
+Hi,
 
-I have reverse-engineered the protocol Brother QL720NW networked label 
-printer (and similar)
-use to report the size of installed labels reel (it's a custom SNMP 
-attribute, heh).
+I have posted the newest development of the last month on our web site now.
 
-I'd like to add this support to the corresponding driver, however I'm at 
-loss
-where the corresponding driver is.
+Here we go:
 
-Could you please guide me to the proper place?
+https://openprinting.github.io/OpenPrinting-News-September-2021/
 
-Best,
-Misha.
+    Till
