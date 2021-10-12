@@ -1,25 +1,22 @@
 Return-Path: <till.kamppeter@gmail.com>
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20210112;
- h=message-id:date:mime-version:user-agent:subject:content-language
- :from:to:cc:references:in-reply-to:content-transfer-encoding;
- bh=KX5x+G85boEvYXpU12By1bRbqZ5GO5DMdragXnoGXcY=;
- b=i0dH3imRtC1dCHPBEIn3cb1ky3hJqMUUXWJIRDRo/Enn6EnaV9jHBq5BrZISw81Am4
- 4sSN14Q2CM5KQAv4cwf3fyWKh6zzMqANxrn0UsLTHVpBGNPxK89Sr/LVN6u6ReBfdpTb
- j2TyMgAoy3Xzl/gG7EPJyTvJX8wCC7IXDr0wQJhy5LYWH0D95PCBn+/Y+HNEIkBSLZWl
- wst6ejc7dpmD3zd3m4WgogXyGSzAtcafc/hTc/SZ5B+MSRyBdmyYXfDYxJFAUch9Gd5C
- ue3T979LjYoao4jZZZOnxLo8VgbYjFJlpkcW4NG8NjJEcgf6QdP1tv5W61nXpDI6xaw7
- Hcjg==
-Message-ID: <977a9e42-c11b-2d3b-f57d-c009a617c0a6@gmail.com>
-Date: Tue, 5 Oct 2021 17:43:47 +0200
+ h=message-id:date:mime-version:user-agent:from:subject:to
+ :content-language:content-transfer-encoding;
+ bh=e93DX8kST1lrdxH37wUn1q+uM4gR4NasGxKsF6mkgXQ=;
+ b=jUlc9cypl9AYp2ooTDcTwvhzDTTpziYJClJvtDWC1yveD6PIrdWV/w/DwtSuo7FubI
+ +091M4fFQPdBNHeYCf25il4koHCAmtIFT6Pg+ZlNIFemK/3L9rCehEZFaT24I1VjmRC9
+ AnCNUo9V58tfGL9NdtnoDxnAqmP11Ddr93Wu5RJicKnz+/LHOAGbd4QXwjgeHfoB2Osf
+ x5wOeedEqt49KrCFcQFqgN7z79YZ1fC33EO+lQ+YcGnAOaluxlH6Q9H+WYgD1pzxjiQr
+ kgwlf2EauIiYFgFmGDGIqrS67f+xM71hDdo2ccVm3R1Coa23/ruEmwaIFzUZVFgjhwhK
+ g90g==
+Message-ID: <f92096c7-c6ab-631d-df6d-0d1400999dc9@gmail.com>
+Date: Wed, 13 Oct 2021 00:09:07 +0200
 MIME-Version: 1.0
-Content-Language: en-US
 From: Till Kamppeter <till.kamppeter@gmail.com>
-References: <13a4e173-ac8b-09c0-3521-a4c28cace315@gmail.com>
-In-Reply-To: <13a4e173-ac8b-09c0-3521-a4c28cace315@gmail.com>
-Content-Type: text/plain; charset="utf-8"; format="flowed"
-Content-Transfer-Encoding: 8bit
-Subject: Re: [Printing-architecture] [TIME CORRECTION] OpenPrinting Live in
-	the Ubuntu Office Hours
+Content-Language: en-US
+Content-Type: text/plain; charset=UTF-8; format=flowed
+Content-Transfer-Encoding: 7bit
+Subject: [Printing-architecture] OpenPrinting News
 List-Id: Printing architecture under linux
  <printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>, 
@@ -30,29 +27,13 @@ List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subj
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>, 
  <mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
 To: Ira McDonald <blueroofmusic@gmail.com>, Aveek Basu <aveek.basu@lexmark.com>, Open Printing <printing-architecture@lists.linux-foundation.org>
-Cc: Monica Ayhens-Madon <monica.ayhens.madon@canonical.com>
 
-Please note that I had put the wrong time into my announcements. I have 
-corrected them now.
+Hi,
 
-The correct time is
+I have posted the newest development of the last month on our web site now.
 
-    Thursday, October 7, 2021, 15:00 - 16:00 UTC
+Here we go:
 
-Please update your calendars.
+https://openprinting.github.io/OpenPrinting-News-October-2021/
 
     Till
-
-On 05/10/2021 10:58, Till Kamppeter wrote:
-> Hi,
-> 
-> On Thursday we are on the Ubuntu Office Hours live event on YouTube 
-> talking about our success with the Google Summer of Code and our 
-> developer community.
-> 
-> See
-> 
-> https://openprinting.github.io/OpenPrinting-Live-in-the-Ubuntu-Office-Hours/ 
-> 
-> 
->     Till
