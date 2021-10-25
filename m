@@ -1,19 +1,12 @@
-Return-Path: <blueroofmusic@gmail.com>
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20210112;
- h=mime-version:from:date:message-id:subject:to;
- bh=/jHxFFZvP+hktE2iHqxJNrW4hqhB5OoBtM424yqXpq0=;
- b=YTYK+wWYMwclQgyjkJJzPg+4Buhi0/SUtxtNWiEfcsvbNDZfXOZ1q8IDTAgANIsfXJ
- amfO1EFYpS3fMX5OUDW5X91nsW0oobCoajXWhZuubOpW50+jKv5CLzYwLt5PWAsIBAIw
- wfQYLr9wV5olawd9v8NR2h3GccYGgYHwbl2phgufFS2WO/FUGQKTNT376DA2xea/JL/a
- SdwxbvNAsEoBCEw2IYUF1SPW8Q7Kkag2wHqMSYER9ceIkIYYnv4Om2Xm6PrlWE6yMByy
- vK0IzWd4FXMbnqUeRJMk0qub7dW2SwKGh84+oCUbNqGHYyTKiApzjyKTpmbN8HMPs1Lj
- F73w==
+Return-Path: <cups@accounts.christian-wolf.click>
+From: Christian Wolf <cups@accounts.christian-wolf.click>
+Date: Mon, 25 Oct 2021 15:15:35 +0200
+Message-ID: <1768598.8bk4Q0uJvS@cwolf-work>
 MIME-Version: 1.0
-From: Ira McDonald <blueroofmusic@gmail.com>
-Date: Sat, 16 Oct 2021 16:27:36 -0400
-Message-ID: <CAN40gSscrBEXLZL6sHx_Ty0rk_wv11yUMLJk6FWmO171g1yVLQ@mail.gmail.com>
-Content-Type: multipart/alternative; boundary="00000000000061e8dd05ce7e259c"
-Subject: [Printing-architecture] OP Minutes (5 October 2021)
+Content-Transfer-Encoding: 7Bit
+Content-Type: text/plain; charset="us-ascii"
+Subject: [Printing-architecture] How to correctly share a printer with
+	option to set options?
 List-Id: Printing architecture under linux
  <printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>, 
@@ -23,205 +16,80 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>, 
  <mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>, Ira McDonald <blueroofmusic@gmail.com>
+To: printing-architecture@lists.linux-foundation.org
 
---00000000000061e8dd05ce7e259c
-Content-Type: text/plain; charset="UTF-8"
+Hello,
 
- Hi,
+I recently ran over the problem, that I need to configure multiple instances of 
+cups to work together. Let me first explain my setup/problem:
 
-Minutes from our last OpenPrinting call are posted at:
+I have a Brother QL-500 label printer. There is a driver/PPD provided by the 
+vendor. This printer allows various different label formats, that I need to 
+specify during the print invocation (using lp -o PageSize=...). If the page 
+size is not set, the printer will accept the job (thus cups thinks it is 
+successfully printed) and then just stalls printing with a blinking LED.
+Long story short: I need to set the PageSize on each invocation of lp.
 
+Now, the printer is only equipped with USB connection. No big deal in times of 
+raspberry pi and similar devices. Then, you can attach a network capable mini 
+computer to the printer and you have it available on the network. It does not 
+matter, what machine type this is, let's call it machine A.
 
-http://ftp.pwg.org/pub/pwg/liaison/openprinting/minutes/OP-Minutes-20211005.htm
+On my workstation machine, I am creating some fancy labels in software and 
+want to print them. Let's call this machine B. On B, of course, I have to run 
+a cups instance as well to handle all available printers in the network/house 
+(e.g. also the normal paper printer).
 
+As I am sitting in front of B (and A most probably does not even have a 
+monitor), I need to select the settings like paper size during the printing.
 
-Next OP US/Europe/Brazil/India Conference Calls:
+One option would be to copy the printout from B to A using SSH and invoking 
+the print there. This neglects the cups on B completely and I consider it only 
+a  fallback solution, as shell access and knowledge is required by the users.
 
-(1) November - US/Europe/Brazil/India - OP Monthly Meeting
-    - Tuesday 9 November 2021, Daytime - *changed* from 16 November 2021
-      - Web conference to be announced
-      - Note - European Summer Time ends on 31 October 2021
-      - Note - US Daylight Savings Time ends on 7 November 2021
-      - Note - PWG Virtual F2F - 10am-2pm US EST on 2-4 November 2021 - Ira
-to attend
-      - Note - IETF 112 Virtual F2F - 7am-1pm US EST on 8-12 November 2021
-- Ira to attend
-      - Note - IEEE 1609 Virtual F2F - 12-5pm US EST on 16 November 2021 -
-Ira to attend
-      - US
-        10am in San Francisco - US PST (Pacific Standard Time)
-        11am in Colorado - US MST (Mountain Standard Time)
-        12am in Chicago - US CST (Central Standard Time)
-        1pm in New York - US EST (Eastern Standard Time)
-      - Europe
-        7pm in Berlin - CET (Central Europe Time)
-      - Brazil
-        3pm in Belo Horizonte - BRT (Brasilia Time)
-      - India
-        11:30pm in New Delhi - IST (India Standard Time)
+I thought it should be possible to share the printer in A using CUPS and use 
+this printer in my CUPS instance on B. That's the theory.
 
-(2) December - US/Europe/Brazil/India - OP Monthly Meeting (tentative)
-    - Tuesday 7 December 2021, Daytime
-      - Web conference to be announced
-      - US
-        10am in San Francisco - US PST (Pacific Standard Time)
-        11am in Colorado - US MST (Mountain Standard Time)
-        12am in Chicago - US CST (Central Standard Time)
-        1pm in New York - US EST (Eastern Standard Time)
-      - Europe
-        7pm in Berlin - CET (Central Europe Time)
-      - Brazil
-        3pm in Belo Horizonte - BRT (Brasilia Time)
-      - India
-        11:30pm in New Delhi - IST (India Standard Time)
+Unfortunately, I am not sure, how I should build this system up.
 
-(3) January - US/Europe/Brazil/India - OP Monthly Meeting (tentative)
-    - Tuesday 4 January 2022, Daytime
-      - Web conference to be announced
-      - US
-        10am in San Francisco - US PST (Pacific Standard Time)
-        11am in Colorado - US MST (Mountain Standard Time)
-        12am in Chicago - US CST (Central Standard Time)
-        1pm in New York - US EST (Eastern Standard Time)
-      - Europe
-        7pm in Berlin - CET (Central Europe Time)
-      - Brazil
-        3pm in Belo Horizonte - BRT (Brasilia Time)
-      - India
-        11:30pm in New Delhi - IST (India Standard Time)
+1st attempt: (preferred solution)
+My first  intuition was to install the printer driver on A (having a static IP) 
+and use this printer using IPP over the network on B. Due to the static IP, 
+the address of the printer can quickly be derived and used. However, I need to 
+select a model for the printer on B. Would this be IPP everywhere?
 
-Cheers,
-- Ira
+Also then I had the problem that the settings were of general form. So I could 
+set the PageSize. But when looking at the options using `lpoptions -p ... -l`, 
+I was presented with page sizes like A4, A5, Letter, Legal etc. This will not 
+work, I need to provide the sizes for the brother printer like 23x23 etc.
 
-*Ira McDonald (Musician / Software Architect)*
+Here, I am doing something wrong I suspect that the options were not 
+propagated from the brother driver on A to the options on B, am I correct? How 
+could I get the correct setting associated to the brother printer instead some 
+generic options?
 
-*Chair - SAE Trust Anchors and Authentication TF*
-*Co-Chair - TCG Trusted Mobility Solutions WG*
+2nd attempt:
+When the 1st attempt failed, I tried something different: I put a raw queue on 
+A that I used on B. The printer driver is now installed on B thus the options 
+are correct. As far as I remember this was mostly working but not 100% stable.
 
-*Co-Chair - TCG Metadata Access Protocol SG*
+The big drawback is that I need to provide printer drivers on all client 
+machines in the network which gets tricky, once windows machines come into 
+play.
+
+I looked at the docs on the web site, e.g. https://openprinting.github.io/
+cups/doc/network.html and https://openprinting.github.io/cups/doc/sharing.html 
+but did not find any more in-depth understanding, how this might be set up 
+best. Unfortunately, there are some keywords thrown around that might attract 
+people but they do not help me when I do not understand what these do exactly. 
+One major question of the IPP everywhere protocol from my side would be if it 
+passes options along or are just generic options covering most printers out 
+there (see above).
+
+Sorry for the lengthy text!
+
+Cheers
+Christian
 
 
 
-
-
-
-
-
-*Chair - Linux Foundation Open Printing WGSecretary - IEEE-ISTO Printer
-Working GroupCo-Chair - IEEE-ISTO PWG Internet Printing Protocol WGIETF
-Designated Expert - IPP & Printer MIBBlue Roof Music / High North
-Inchttp://sites.google.com/site/blueroofmusic
-<http://sites.google.com/site/blueroofmusic>http://sites.google.com/site/highnorthinc
-<http://sites.google.com/site/highnorthinc>mailto: blueroofmusic@gmail.com
-<blueroofmusic@gmail.com>(permanent) PO Box 221  Grand Marais, MI 49839
-906-494-2434*
-
---00000000000061e8dd05ce7e259c
-Content-Type: text/html; charset="UTF-8"
-Content-Transfer-Encoding: quoted-printable
-
-<div dir=3D"ltr">
-<div>Hi,</div><div><br></div><div>
-<div dir=3D"ltr"><span><span><span><span><span><span><span><span><span><spa=
-n><span><span><span><span><span><span><span><span><span><span><span><span><=
-span><span><span><span><span><span><span><span><span><span><span><span><spa=
-n><span><span class=3D"gmail-il">Minutes</span></span></span></span></span>=
-</span></span></span></span></span></span></span></span></span></span></spa=
-n></span></span></span></span></span></span></span></span></span></span></s=
-pan></span></span></span></span></span></span></span></span></span></span> =
-from our last OpenPrinting<span> call</span> are <span><span><span><span><s=
-pan><span><span><span><span><span><span><span><span><span><span><span>poste=
-d</span></span></span></span></span></span></span></span></span></span></sp=
-an></span></span></span></span></span> at:<br>
-
-
-
-
-
-
-
-
-
-
-
-
-<br>
-=C2=A0 <a href=3D"http://ftp.pwg.org/pub/pwg/liaison/openprinting/minutes/O=
-P-Minutes-20211005.htm" target=3D"_blank">http://ftp.pwg.org/pub/pwg/liaiso=
-n/openprinting/minutes/OP-Minutes-20211005.htm</a><br><br></div><div dir=3D=
-"ltr"><br></div><div dir=3D"ltr">
-Next <span><span><span><span><span><span><span><span><span><span><span><spa=
-n><span><span><span><span><span><span><span><span><span><span><span><span><=
-span><span><span class=3D"gmail-il">OP</span></span></span></span></span></=
-span></span></span></span></span></span></span></span></span></span></span>=
-</span></span></span></span></span></span></span></span></span></span></spa=
-n> US/Europe/Brazil/India Conference Calls: </div></div>
-
-<div><br></div>
-
-<div>(1) November - US/Europe/Brazil/India - OP Monthly Meeting<br>=C2=A0 =
-=C2=A0 - Tuesday 9 November 2021, Daytime - *changed* from 16 November 2021=
-<br>=C2=A0 =C2=A0 =C2=A0 - Web conference to be announced<br>=C2=A0 =C2=A0 =
-=C2=A0 - Note - European Summer Time ends on 31 October 2021<br>=C2=A0 =C2=
-=A0 =C2=A0 - Note - US Daylight Savings Time ends on 7 November 2021<br>=C2=
-=A0 =C2=A0 =C2=A0 - Note - PWG Virtual F2F - 10am-2pm US EST on 2-4 Novembe=
-r 2021 - Ira to attend<br>=C2=A0 =C2=A0 =C2=A0 - Note - IETF 112 Virtual F2=
-F - 7am-1pm US EST on 8-12 November 2021 - Ira to attend<br>=C2=A0 =C2=A0 =
-=C2=A0 - Note - IEEE 1609 Virtual F2F - 12-5pm US EST on 16 November 2021 -=
- Ira to attend<br>=C2=A0 =C2=A0 =C2=A0 - US<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 =
-10am in San Francisco - US PST (Pacific Standard Time)<br>=C2=A0 =C2=A0 =C2=
-=A0 =C2=A0 11am in Colorado - US MST (Mountain Standard Time)<br>=C2=A0 =C2=
-=A0 =C2=A0 =C2=A0 12am in Chicago - US CST (Central Standard Time)<br>=C2=
-=A0 =C2=A0 =C2=A0 =C2=A0 1pm in New York - US EST (Eastern Standard Time)<b=
-r>=C2=A0 =C2=A0 =C2=A0 - Europe<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 7pm in Berli=
-n - CET (Central Europe Time)<br>=C2=A0 =C2=A0 =C2=A0 - Brazil<br>=C2=A0 =
-=C2=A0 =C2=A0 =C2=A0 3pm in Belo Horizonte - BRT (Brasilia Time)<br>=C2=A0 =
-=C2=A0 =C2=A0 - India<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 11:30pm in New Delhi -=
- IST (India Standard Time)<br><br>(2) December - US/Europe/Brazil/India - O=
-P Monthly Meeting (tentative)<br>=C2=A0 =C2=A0 - Tuesday 7 December 2021, D=
-aytime<br>=C2=A0 =C2=A0 =C2=A0 - Web conference to be announced<br>=C2=A0 =
-=C2=A0 =C2=A0 - US<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 10am in San Francisco - U=
-S PST (Pacific Standard Time)<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 11am in Colora=
-do - US MST (Mountain Standard Time)<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 12am in=
- Chicago - US CST (Central Standard Time)<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 1p=
-m in New York - US EST (Eastern Standard Time)<br>=C2=A0 =C2=A0 =C2=A0 - Eu=
-rope<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 7pm in Berlin - CET (Central Europe Tim=
-e)<br>=C2=A0 =C2=A0 =C2=A0 - Brazil<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 3pm in B=
-elo Horizonte - BRT (Brasilia Time)<br>=C2=A0 =C2=A0 =C2=A0 - India<br>=C2=
-=A0 =C2=A0 =C2=A0 =C2=A0 11:30pm in New Delhi - IST (India Standard Time)<b=
-r><br>(3) January - US/Europe/Brazil/India - OP Monthly Meeting (tentative)=
-<br>=C2=A0 =C2=A0 - Tuesday 4 January 2022, Daytime<br>=C2=A0 =C2=A0 =C2=A0=
- - Web conference to be announced<br>=C2=A0 =C2=A0 =C2=A0 - US<br>=C2=A0 =
-=C2=A0 =C2=A0 =C2=A0 10am in San Francisco - US PST (Pacific Standard Time)=
-<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 11am in Colorado - US MST (Mountain Standar=
-d Time)<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 12am in Chicago - US CST (Central St=
-andard Time)<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 1pm in New York - US EST (Easte=
-rn Standard Time)<br>=C2=A0 =C2=A0 =C2=A0 - Europe<br>=C2=A0 =C2=A0 =C2=A0 =
-=C2=A0 7pm in Berlin - CET (Central Europe Time)<br>=C2=A0 =C2=A0 =C2=A0 - =
-Brazil<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 3pm in Belo Horizonte - BRT (Brasilia=
- Time)<br>=C2=A0 =C2=A0 =C2=A0 - India<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 11:30=
-pm in New Delhi - IST (India Standard Time)<br></div><div><br></div><div>Ch=
-eers,</div><div>- Ira<br></div><div><br></div><div><div dir=3D"ltr" class=
-=3D"gmail_signature" data-smartmail=3D"gmail_signature"><div dir=3D"ltr"><d=
-iv><div dir=3D"ltr"><div><div dir=3D"ltr"><div><div dir=3D"ltr"><div><div d=
-ir=3D"ltr"><div><div dir=3D"ltr"><div><div dir=3D"ltr"><div><div dir=3D"ltr=
-"><div><div dir=3D"ltr"><i><font size=3D"1">Ira McDonald (Musician / Softwa=
-re Architect)</font></i></div><div><i><font size=3D"1">Chair - SAE Trust An=
-chors and Authentication TF<br></font></i></div><div dir=3D"ltr"><i><font s=
-ize=3D"1">Co-Chair - TCG Trusted Mobility Solutions WG</font></i></div><div=
-><i><font size=3D"1">Co-Chair - TCG Metadata Access Protocol SG<br></font><=
-/i></div><div dir=3D"ltr"><i><font size=3D"1">Chair - Linux Foundation Open=
- Printing WG<br>Secretary - IEEE-ISTO Printer Working Group<br>Co-Chair - I=
-EEE-ISTO PWG Internet Printing Protocol WG<br>IETF Designated Expert - IPP =
-&amp; Printer MIB<br>Blue Roof Music / High North Inc<br><a style=3D"color:=
-rgb(51,51,255)" href=3D"http://sites.google.com/site/blueroofmusic" target=
-=3D"_blank">http://sites.google.com/site/blueroofmusic</a><br><a style=3D"c=
-olor:rgb(102,0,204)" href=3D"http://sites.google.com/site/highnorthinc" tar=
-get=3D"_blank">http://sites.google.com/site/highnorthinc</a><br>mailto: <a =
-href=3D"mailto:blueroofmusic@gmail.com" target=3D"_blank">blueroofmusic@gma=
-il.com</a><br>(permanent) PO Box 221=C2=A0 Grand Marais, MI 49839=C2=A0 906=
--494-2434</font></i></div></div></div></div></div></div></div></div></div><=
-/div></div></div></div></div></div></div></div></div></div></div>
-
---00000000000061e8dd05ce7e259c--
