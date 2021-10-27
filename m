@@ -1,27 +1,21 @@
-Return-Path: <till.kamppeter@gmail.com>
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20210112;
- h=message-id:date:mime-version:user-agent:subject:content-language:to
- :references:from:in-reply-to:content-transfer-encoding;
- bh=OG9ZyKB3RuDrdes1sRbhWBdiYcTvKomtkOkpH7ZiYvQ=;
- b=pgshD1mpaOft4e6fsVld8mfmI4uQdaJOz98sKPvqF2ex+dsi057f3ehkM6WnPh0NHG
- g2nWfqX95kN/INylV8t242gkqg7gfg9Zo+8zSogF6SQuiTn5oorRordRcTNdHuO5VIfN
- VQpudxzJHOM32beudri0AH4uTVlo0nXY/ht4BvPNHHHyPJopolJxware1jK4E5CUMLPE
- F1eSxYfS5T4YYRY15ocEddUMLG0s0LlrOAFgo1WjHviALAkxp7svwq+KkbpBYGbBWg9u
- jSTrwDRo1Ed9mR5gMvrgbLY6NYBySDG90SJ4DisqqY+6qlwqPgE4+gpCDbtUltkKaUZs
- PjOw==
-Message-ID: <d263b5ce-4a76-5dd2-6e2b-88a0dfcaef24@gmail.com>
-Date: Mon, 25 Oct 2021 17:19:14 +0200
+Return-Path: <zdohnal@redhat.com>
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=redhat.com;
+ s=mimecast20190719; t=1635323540;
+ h=from:from:reply-to:subject:subject:date:date:message-id:message-id:
+ to:to:cc:mime-version:mime-version:content-type:content-type:
+ content-transfer-encoding:content-transfer-encoding;
+ bh=0FfFmq3aa5H7R/daMquTcNU2mA6m7SLKJl0SXam6f0Q=;
+ b=egZpH8qkqzWU1NmmupablgVRJMO1pms5GD2VFeEXq5ZtPE1i382Be0fwU19UjCs7qzxvLY
+ ZehzbKyV7j++NkLbc8jL/xIRV18vgsYkDlc0ewIC3cG68a1TPurVesqpUM+DvABffpklwH
+ 3Y622Z9TxccaD/9x501NHqZf11OenPc=
+Message-ID: <a742edec-d6bb-9bf7-36df-03c1f5ab5030@redhat.com>
+Date: Wed, 27 Oct 2021 10:32:16 +0200
 MIME-Version: 1.0
+From: Zdenek Dohnal <zdohnal@redhat.com>
 Content-Language: en-US
-References: <34184587.8yKaOjHuOU@cwolf-work>
- <1489e0d9-cacb-bd92-7985-9fef4afb02bb@gmail.com>
- <1880865.CGEiM1yXm4@cwolf-work>
-From: Till Kamppeter <till.kamppeter@gmail.com>
-In-Reply-To: <1880865.CGEiM1yXm4@cwolf-work>
-Content-Type: text/plain; charset=UTF-8; format=flowed
-Content-Transfer-Encoding: 7bit
-Subject: Re: [Printing-architecture] Deprecation of all modules except for
- everywhere
+Content-Type: text/plain; charset="utf-8"; format="flowed"
+Content-Transfer-Encoding: 8bit
+Subject: [Printing-architecture] CUPS 2.4b1 is available for download now!
 List-Id: Printing architecture under linux
  <printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>, 
@@ -33,35 +27,107 @@ List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-arc
  <mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
 To: printing-architecture@lists.linux-foundation.org
 
+Hi all,
 
+CUPS 2.4b1 is the beta release for OpenPrinting CUPS 2.4 which contains  
+several new features such as basic OAuth support, support for AirPrint 
+and Mopria clients and support for running CUPS as a snap, several 
+deprecations (Kerberos, cups-config), removals of old deprecated 
+directives, and many bug fixes.
 
-On 25/10/2021 16:36, Christian Wolf wrote:
-> Hello,
-> 
->> Classic CUPS printer drivers are replaced by Printer Applications and
->> Printer Applications are emulations of IPP Everywhere printers. With
->> trhis all printers will appear as IPP Everywhere (or driverless IPP)
->> printers. The modern ones do this already by themselves, for the old
->> ones we use Printer Applications.
-> 
-> so, I see there is a fallback plan in place. If I understand this correctly,
-> one mainly sourced the usage of PPDs out into standalone applications so the
-> CUPS core is free of bloat. Makes sense.
->
+The detailed list of changes:
 
-Generally, Printer Applications do not use PPDs. One can use any 
-architecture to get an emulation of an IPP printer. LPrint for example 
-does not use PPD files internally, same for the sample Printer 
-Application in the PAPPL project.
+- Added support for CUPS running in a Snapcraft snap.
+- Added basic OAuth 2.0 client support (Issue #100)
+- Added support for AirPrint and Mopria clients (Issue #105)
+- Added configure support for specifying systemd dependencies in the CUPS
+   service file (Issue #144)
+- Added several features and improvements to `ipptool` (Issue #153)
+- Added a JSON output mode for `ipptool`.
+- The `ipptool` command now correctly reports an error when a test file 
+cannot
+   be found.
+- CUPS library now uses thread safe `getpwnam_r` and `getpwuid_r` 
+functions (Issue #274)
+- Fixed Kerberos authentication for the web interface (Issue #19)
+- The ZPL sample driver now supports more "standard" label sizes (Issue #70)
+- Fixed reporting of printer instances when enumerating and when no 
+options are
+   set for the main instance (Issue #71)
+- Reverted USB read limit enforcement change from CUPS 2.2.12 (Issue #72)
+- The IPP backend did not return the correct status code when a job was 
+canceled
+   at the printer/server (Issue #74)
+- The `testlang` unit test program now loops over all of the available 
+locales
+   by default (Issue #85)
+- The `cupsfilter` command now shows error messages when options are used
+   incorrectly (Issue #88)
+- The PPD functions now treat boolean values as case-insensitive (Issue 
+#106)
+- Temporary queue names no longer end with an underscore (Issue #110)
+- The USB backend now runs as root (Issue #121)
+- Added pkg-config file for libcups (Issue #122)
+- Fixed a PPD memory leak caused by emulator definitions (Issue #124)
+- Fixed a `DISPLAY` bug in `ipptool` (Issue #139)
+- The scheduler now includes the `[Job N]` prefix for job log messages, even
+   when using syslog logging (Issue #154)
+- Added support for locales using the GB18030 character set (Issue #159)
+- `httpReconnect2` did not reset the socket file descriptor when the TLS
+   negotiation failed (Apple #5907)
+- `httpUpdate` did not reset the socket file descriptor when the TLS
+   negotiation failed (Apple #5915)
+- The IPP backend now retries Validate-Job requests (Issue #132)
+- Now show better error messages when a driver interface program fails to
+   provide a PPD file (Issue #148)
+- Added dark mode support to the CUPS web interface (Issue #152)
+- Added a workaround for Solaris in `httpAddrConnect2` (Issue #156)
+- Fixed an interaction between `--remote-admin` and `--remote-any` for the
+   `cupsctl` command (Issue #158)
+- Now use a 60 second timeout for reading USB backchannel data (Issue #160)
+- The USB backend now tries harder to find a serial number (Issue #170)
+- Fixed `@IF(name)` handling in `cupsd.conf` (Apple #5918)
+- Fixed documentation and added examples for CUPS' limited CGI support
+   (Apple #5940)
+- Fixed the `lpc` command prompt (Apple #5946)
+- Now always pass "localhost" in the `Host:` header when talking over a 
+domain
+   socket or the loopback interface (Issue #185)
+- Fixed a job history update issue in the scheduler (Issue #187)
+- Fixed `job-pages-per-set` value for duplex print jobs.
+- Fixed an edge case in `ippReadIO` to make sure that only complete 
+attributes
+   and values are retained on an error (Issue #195)
+- Hardened `ippReadIO` to prevent invalid IPP messages from being propagated
+   (Issue #195, Issue #196)
+- The scheduler now supports the "everywhere" model directly (Issue #201)
+- Fixed some IPP Everywhere option mapping problems (Issue #238)
+- Fixed support for "job-hold-until" with the Restart-Job operation 
+(Issue #250)
+- Fixed the default color/grayscale presets for IPP Everywhere PPDs 
+(Issue #262)
+- Fixed support for the 'offline-report' state for all USB backends 
+(Issue #264)
+- Documentation fixes (Issue #92, Issue #163, Issue #177, Issue #184)
+- Localization updates (Issue #123, Issue #129, Issue #134, Issue #146,
+   Issue #164)
+- USB quirk updates (Issue #192, Issue #270, Apple #5766, Apple #5838,
+   Apple #5843, Apple #5867)
+- Web interface updates (Issue #142, Issue #218)
+- The `ippeveprinter` tool now automatically uses an available port.
+- Fixed several Windows TLS and hashing issues.
+- Deprecated cups-config (Issue #97)
+- Deprecated Kerberos (`AuthType Negotiate`) authentication (Issue #98)
+- Removed support for the (long deprecated and unused) `FontPath`,
+   `ListenBackLog`, `LPDConfigFile`, `KeepAliveTimeout`, `RIPCache`, and
+   `SMBConfigFile` directives in `cupsd.conf` and `cups-files.conf`.
+- Stubbed out deprecated `httpMD5` functions.
+- Add test for undefined page ranges during printing.
 
-For PostScript printers, where the manufacturer provides a PPD file, and 
-also for classic CUPS drivers for old printers where I do not have 
-access to for testing, the easiest way to go is to have an architecture 
-which wraps the classic CUPS driver with its PPD files into a Printer 
-Application. For this I have created the pappl-retrofit 
-(https://github.com/OpenPrinting/pappl-retrofit) library with which I 
-have maded my 4 Printer Applications to retro-fit practically all free 
-software CUPS drivers which are available as *.deb packages in the 
-Debian distribution.
+Enjoy!
 
-    Till
+-- 
+Zdenek Dohnal
+Software Engineer
+Red Hat Czech - Brno TPB-C
+
