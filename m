@@ -1,21 +1,22 @@
-Return-Path: <zdohnal@redhat.com>
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=redhat.com;
- s=mimecast20190719; t=1635323540;
- h=from:from:reply-to:subject:subject:date:date:message-id:message-id:
- to:to:cc:mime-version:mime-version:content-type:content-type:
- content-transfer-encoding:content-transfer-encoding;
- bh=0FfFmq3aa5H7R/daMquTcNU2mA6m7SLKJl0SXam6f0Q=;
- b=egZpH8qkqzWU1NmmupablgVRJMO1pms5GD2VFeEXq5ZtPE1i382Be0fwU19UjCs7qzxvLY
- ZehzbKyV7j++NkLbc8jL/xIRV18vgsYkDlc0ewIC3cG68a1TPurVesqpUM+DvABffpklwH
- 3Y622Z9TxccaD/9x501NHqZf11OenPc=
-Message-ID: <a742edec-d6bb-9bf7-36df-03c1f5ab5030@redhat.com>
-Date: Wed, 27 Oct 2021 10:32:16 +0200
+Return-Path: <blueroofmusic@gmail.com>
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20210112;
+ h=mime-version:references:in-reply-to:from:date:message-id:subject:to;
+ bh=8m9eYPzmCkPBZRO+KBd05RBR0bxXoQ+Koi/XEItXJ0g=;
+ b=cteEX8JMWExy5eY8w6iRnGDe2Bicwu3uVMCNAjw15rIoWcNQSJKL7OZh+iKb4bcBiH
+ 2MpwGMaBoM459na5ggA3DyWOj0wloOZyy0YMMg21DXb8cnIbroJsEjxhX74Sam4aPKN7
+ Yw8h1b5HAfi9mrYa6U9RUJ+Hz201ShY7wyRry45xEDWu1VGj9Eh8uy3NWmQJHTLvl9jG
+ c6MEyzNuSTEETcQCPiM3T7nxgRJxI3Yr5vPqiC+BLWCPg3BIf+jWQyBumdx4qbRZ5boF
+ y8ll13CEkQwhlDyUXB0DLOBGyk+27w8X7TT7En8gl4ezTqEfYBONh9XsxTSZKxmrI8xY
+ yUdQ==
 MIME-Version: 1.0
-From: Zdenek Dohnal <zdohnal@redhat.com>
-Content-Language: en-US
-Content-Type: text/plain; charset="utf-8"; format="flowed"
-Content-Transfer-Encoding: 8bit
-Subject: [Printing-architecture] CUPS 2.4b1 is available for download now!
+References: <198F5788-7F8F-40AE-928E-916FD3B7DC78@hp.com>
+In-Reply-To: <198F5788-7F8F-40AE-928E-916FD3B7DC78@hp.com>
+From: Ira McDonald <blueroofmusic@gmail.com>
+Date: Mon, 1 Nov 2021 19:18:01 -0400
+Message-ID: <CAN40gSuQ80=yEGx87ut54pWW4YdK5+OJP2zZJmZz1pkMYWvRNA@mail.gmail.com>
+Content-Type: multipart/mixed; boundary="0000000000002d886b05cfc26489"
+Subject: [Printing-architecture] Fwd: [PWG-Announce] PWG November 2021 Face
+	to Face - November 2-4, 2021
 List-Id: Printing architecture under linux
  <printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>, 
@@ -25,109 +26,157 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>, 
  <mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: printing-architecture@lists.linux-foundation.org
+To: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>, Ira McDonald <blueroofmusic@gmail.com>
 
-Hi all,
+--0000000000002d886b05cfc26489
+Content-Type: multipart/alternative; boundary="0000000000002d886a05cfc26487"
 
-CUPS 2.4b1 is the beta release for OpenPrinting CUPS 2.4 which contains  
-several new features such as basic OAuth support, support for AirPrint 
-and Mopria clients and support for running CUPS as a snap, several 
-deprecations (Kerberos, cups-config), removals of old deprecated 
-directives, and many bug fixes.
+--0000000000002d886a05cfc26487
+Content-Type: text/plain; charset="UTF-8"
 
-The detailed list of changes:
+*Ira McDonald (Musician / Software Architect)*
 
-- Added support for CUPS running in a Snapcraft snap.
-- Added basic OAuth 2.0 client support (Issue #100)
-- Added support for AirPrint and Mopria clients (Issue #105)
-- Added configure support for specifying systemd dependencies in the CUPS
-   service file (Issue #144)
-- Added several features and improvements to `ipptool` (Issue #153)
-- Added a JSON output mode for `ipptool`.
-- The `ipptool` command now correctly reports an error when a test file 
-cannot
-   be found.
-- CUPS library now uses thread safe `getpwnam_r` and `getpwuid_r` 
-functions (Issue #274)
-- Fixed Kerberos authentication for the web interface (Issue #19)
-- The ZPL sample driver now supports more "standard" label sizes (Issue #70)
-- Fixed reporting of printer instances when enumerating and when no 
-options are
-   set for the main instance (Issue #71)
-- Reverted USB read limit enforcement change from CUPS 2.2.12 (Issue #72)
-- The IPP backend did not return the correct status code when a job was 
-canceled
-   at the printer/server (Issue #74)
-- The `testlang` unit test program now loops over all of the available 
-locales
-   by default (Issue #85)
-- The `cupsfilter` command now shows error messages when options are used
-   incorrectly (Issue #88)
-- The PPD functions now treat boolean values as case-insensitive (Issue 
-#106)
-- Temporary queue names no longer end with an underscore (Issue #110)
-- The USB backend now runs as root (Issue #121)
-- Added pkg-config file for libcups (Issue #122)
-- Fixed a PPD memory leak caused by emulator definitions (Issue #124)
-- Fixed a `DISPLAY` bug in `ipptool` (Issue #139)
-- The scheduler now includes the `[Job N]` prefix for job log messages, even
-   when using syslog logging (Issue #154)
-- Added support for locales using the GB18030 character set (Issue #159)
-- `httpReconnect2` did not reset the socket file descriptor when the TLS
-   negotiation failed (Apple #5907)
-- `httpUpdate` did not reset the socket file descriptor when the TLS
-   negotiation failed (Apple #5915)
-- The IPP backend now retries Validate-Job requests (Issue #132)
-- Now show better error messages when a driver interface program fails to
-   provide a PPD file (Issue #148)
-- Added dark mode support to the CUPS web interface (Issue #152)
-- Added a workaround for Solaris in `httpAddrConnect2` (Issue #156)
-- Fixed an interaction between `--remote-admin` and `--remote-any` for the
-   `cupsctl` command (Issue #158)
-- Now use a 60 second timeout for reading USB backchannel data (Issue #160)
-- The USB backend now tries harder to find a serial number (Issue #170)
-- Fixed `@IF(name)` handling in `cupsd.conf` (Apple #5918)
-- Fixed documentation and added examples for CUPS' limited CGI support
-   (Apple #5940)
-- Fixed the `lpc` command prompt (Apple #5946)
-- Now always pass "localhost" in the `Host:` header when talking over a 
-domain
-   socket or the loopback interface (Issue #185)
-- Fixed a job history update issue in the scheduler (Issue #187)
-- Fixed `job-pages-per-set` value for duplex print jobs.
-- Fixed an edge case in `ippReadIO` to make sure that only complete 
-attributes
-   and values are retained on an error (Issue #195)
-- Hardened `ippReadIO` to prevent invalid IPP messages from being propagated
-   (Issue #195, Issue #196)
-- The scheduler now supports the "everywhere" model directly (Issue #201)
-- Fixed some IPP Everywhere option mapping problems (Issue #238)
-- Fixed support for "job-hold-until" with the Restart-Job operation 
-(Issue #250)
-- Fixed the default color/grayscale presets for IPP Everywhere PPDs 
-(Issue #262)
-- Fixed support for the 'offline-report' state for all USB backends 
-(Issue #264)
-- Documentation fixes (Issue #92, Issue #163, Issue #177, Issue #184)
-- Localization updates (Issue #123, Issue #129, Issue #134, Issue #146,
-   Issue #164)
-- USB quirk updates (Issue #192, Issue #270, Apple #5766, Apple #5838,
-   Apple #5843, Apple #5867)
-- Web interface updates (Issue #142, Issue #218)
-- The `ippeveprinter` tool now automatically uses an available port.
-- Fixed several Windows TLS and hashing issues.
-- Deprecated cups-config (Issue #97)
-- Deprecated Kerberos (`AuthType Negotiate`) authentication (Issue #98)
-- Removed support for the (long deprecated and unused) `FontPath`,
-   `ListenBackLog`, `LPDConfigFile`, `KeepAliveTimeout`, `RIPCache`, and
-   `SMBConfigFile` directives in `cupsd.conf` and `cups-files.conf`.
-- Stubbed out deprecated `httpMD5` functions.
-- Add test for undefined page ranges during printing.
+*Chair - SAE Trust Anchors and Authentication TF*
+*Co-Chair - TCG Trusted Mobility Solutions WG*
 
-Enjoy!
+*Co-Chair - TCG Metadata Access Protocol SG*
 
--- 
-Zdenek Dohnal
-Software Engineer
-Red Hat Czech - Brno TPB-C
 
+
+
+
+
+
+
+*Chair - Linux Foundation Open Printing WGSecretary - IEEE-ISTO Printer
+Working GroupCo-Chair - IEEE-ISTO PWG Internet Printing Protocol WGIETF
+Designated Expert - IPP & Printer MIBBlue Roof Music / High North
+Inchttp://sites.google.com/site/blueroofmusic
+<http://sites.google.com/site/blueroofmusic>http://sites.google.com/site/highnorthinc
+<http://sites.google.com/site/highnorthinc>mailto: blueroofmusic@gmail.com
+<blueroofmusic@gmail.com>(permanent) PO Box 221  Grand Marais, MI 49839
+906-494-2434*
+
+
+---------- Forwarded message ---------
+From: Kennedy, Smith (Wireless & IPP Standards) via pwg-announce <
+pwg-announce@pwg.org>
+Date: Mon, Nov 1, 2021 at 12:31 PM
+Subject: [PWG-Announce] PWG November 2021 Face to Face - November 2-4, 2021
+To: PWG Announcements Reflector <pwg-announce@pwg.org>
+
+
+Greetings,
+
+The PWG will hold its November 2021 Face to Face on November 2-4, 2021. It
+will be a virtual event, so all sessions will be held via WebEx. The
+November 2021
+F2F Event Page
+<https://www.pwg.org/chair/meeting-info/november-2021-virtual.html> provides
+the event's daily agenda and teleconference information. Any and all
+interested parties are invited to attend.
+
+We hope to see you there!
+
+Smith
+
+/**
+    Smith Kennedy
+    Chair, IEEE ISTO Printer Working Group
+*/
+_______________________________________________
+pwg-announce mailing list
+pwg-announce@pwg.org
+https://www.pwg.org/mailman/listinfo/pwg-announce
+
+--0000000000002d886a05cfc26487
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><br clear=3D"all"><div><div dir=3D"ltr" class=3D"gmail_sig=
+nature" data-smartmail=3D"gmail_signature"><div dir=3D"ltr"><div><div dir=
+=3D"ltr"><div><div dir=3D"ltr"><div><div dir=3D"ltr"><div><div dir=3D"ltr">=
+<div><div dir=3D"ltr"><div><div dir=3D"ltr"><div><div dir=3D"ltr"><div><div=
+ dir=3D"ltr"><i><font size=3D"1">Ira McDonald (Musician / Software Architec=
+t)</font></i></div><div><i><font size=3D"1">Chair - SAE Trust Anchors and A=
+uthentication TF<br></font></i></div><div dir=3D"ltr"><i><font size=3D"1">C=
+o-Chair - TCG Trusted Mobility Solutions WG</font></i></div><div><i><font s=
+ize=3D"1">Co-Chair - TCG Metadata Access Protocol SG<br></font></i></div><d=
+iv dir=3D"ltr"><i><font size=3D"1">Chair - Linux Foundation Open Printing W=
+G<br>Secretary - IEEE-ISTO Printer Working Group<br>Co-Chair - IEEE-ISTO PW=
+G Internet Printing Protocol WG<br>IETF Designated Expert - IPP &amp; Print=
+er MIB<br>Blue Roof Music / High North Inc<br><a style=3D"color:rgb(51,51,2=
+55)" href=3D"http://sites.google.com/site/blueroofmusic" target=3D"_blank">=
+http://sites.google.com/site/blueroofmusic</a><br><a style=3D"color:rgb(102=
+,0,204)" href=3D"http://sites.google.com/site/highnorthinc" target=3D"_blan=
+k">http://sites.google.com/site/highnorthinc</a><br>mailto: <a href=3D"mail=
+to:blueroofmusic@gmail.com" target=3D"_blank">blueroofmusic@gmail.com</a><b=
+r>(permanent) PO Box 221=C2=A0 Grand Marais, MI 49839=C2=A0 906-494-2434</f=
+ont></i></div></div></div></div></div></div></div></div></div></div></div><=
+/div></div></div></div></div></div></div></div><br><br><div class=3D"gmail_=
+quote"><div dir=3D"ltr" class=3D"gmail_attr">---------- Forwarded message -=
+--------<br>From: <b class=3D"gmail_sendername" dir=3D"auto">Kennedy, Smith=
+ (Wireless &amp; IPP Standards) via pwg-announce</b> <span dir=3D"auto">&lt=
+;<a href=3D"mailto:pwg-announce@pwg.org">pwg-announce@pwg.org</a>&gt;</span=
+><br>Date: Mon, Nov 1, 2021 at 12:31 PM<br>Subject: [PWG-Announce] PWG Nove=
+mber 2021 Face to Face - November 2-4, 2021<br>To: PWG Announcements Reflec=
+tor &lt;<a href=3D"mailto:pwg-announce@pwg.org">pwg-announce@pwg.org</a>&gt=
+;<br></div><br><br><div style=3D"word-wrap:break-word;line-break:after-whit=
+e-space">
+
+
+<div style=3D"word-wrap:break-word;line-break:after-white-space">
+<div>Greetings,</div>
+<div><br>
+</div>
+<div>The PWG will hold its November 2021 Face to Face on November 2-4, 2021=
+. It will be a virtual event, so all sessions will be held via WebEx. The=
+=C2=A0<a href=3D"https://www.pwg.org/chair/meeting-info/november-2021-virtu=
+al.html" target=3D"_blank">November=C2=A02021
+ F2F Event Page</a>=C2=A0provides the event&#39;s daily agenda and teleconf=
+erence information. Any and all interested parties are invited to attend.</=
+div>
+<div><br>
+</div>
+<div>We hope to see you there!</div>
+<div><br>
+</div>
+<div>Smith<br>
+<br>
+/**<br>
+=C2=A0 =C2=A0 Smith Kennedy<br>
+=C2=A0 =C2=A0 Chair, IEEE ISTO Printer Working Group<br>
+*/<br></div></div></div>_______________________________________________<br>
+pwg-announce mailing list<br>
+<a href=3D"mailto:pwg-announce@pwg.org" target=3D"_blank">pwg-announce@pwg.=
+org</a><br>
+<a href=3D"https://www.pwg.org/mailman/listinfo/pwg-announce" rel=3D"norefe=
+rrer" target=3D"_blank">https://www.pwg.org/mailman/listinfo/pwg-announce</=
+a><br>
+</div></div>
+
+--0000000000002d886a05cfc26487--
+
+--0000000000002d886b05cfc26489
+Content-Type: text/plain; charset="US-ASCII"; name="signature.asc"
+Content-Disposition: attachment; filename="signature.asc"
+Content-Transfer-Encoding: base64
+Content-ID: <17cddcb410d61a8e03b1>
+X-Attachment-Id: 17cddcb410d61a8e03b1
+
+LS0tLS1CRUdJTiBQR1AgU0lHTkFUVVJFLS0tLS0NCg0KaVFJekJBRUJDQUFkRmlFRVg0VE0vRTJQ
+cjdsVFp6eTJxc2tiS0xEVzFOMEZBbUdBRmk4QUNna1Fxc2tiS0xEVw0KMU4yZnZBLy9YM1Zyczd4
+bHRONkJjL3lOenJ5WlVIekJBVHJjdjZob1BVUFNiOFZmZlJzblhqLzNnUXllNlBrTA0KRXE1di9N
+UnI4N0M3K1lYV0U0QjNPbWtxY3VBdFdjeEpDMFZPQ3hubXhLME9HSk90aWVWeHc2cHJBRWg0eWx6
+Mg0KWm1MOEdicG53K0xETTFCT2k1V0xObTlJTVh3NFBGZkhudmNwbnp6VHpvdzVtU0ozeCt0aURD
+Y1NDSDJ0S2lMKw0KVlp2SHFQQzNUbnpQREk3aUMwNUNvR0ZZVG1jaFF6T1VLeXRyYnNWRUxIcFFr
+VTk4SUJ0eHBYM3hnSkpCUmNxNw0KdVNrNXA5WG1nVmIvYlJ4dWJuSDVSclZrU2lvdDJUMXJRY2Jz
+eWdZVlVxY3JkREFSZVB3WW1qMTk1c0pNdGV1bg0KbnNBWC9md29ha2szZGpyYXRLTmk0L3ZoQWlJ
+ZWFSNTdDdXBqamUrRHowZUlLS3pnRFJSNHhLYXRzVU1jQWpBUg0KZ2JrNy83UVpTLzVjbVNsOFlZ
+cUJaUVRLdHVGcVlXcXZ2NFVHSFQ4RkVjckFZQW1wR1U0cG5jd0M1cHYvaFpJQg0Kdk1YNlFNMXJ6
+SG1WSU9pZ1o0N3lHekJZU1A5NDIyVjBOQVBpYm1Qam1uOFZkZzd0dU5TWHEyOUtEVG0wR1pPbA0K
+NlMrR25SYlJlZXFYeGE1UHZvcU9JUmFFVkZuNXRsdEMwT2dXdlA1MGg5WVZxaWY4MEs2VzdHQXFM
+Qyt3d21MYQ0KazVmSzBmMDlUeXJudmtwUmR0ekR6RW1tYzV3TTAwU1N1aXFicmlMbTZHdjZZN3Fl
+WjVPaWF2ckUxdjVwcWdKRw0KSFN0eitWay9uNzZDMTdKNEZaM0FqSGptWGx2M201bFJFNEs2L3cz
+TVRCMWU5SlBudGVJPQ0KPWtlM2QNCi0tLS0tRU5EIFBHUCBTSUdOQVRVUkUtLS0tLQ0K
+--0000000000002d886b05cfc26489--
