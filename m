@@ -1,18 +1,25 @@
-Return-Path: <zdohnal@redhat.com>
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=redhat.com;
- s=mimecast20190719; t=1643286072;
- h=from:from:reply-to:subject:subject:date:date:message-id:message-id:
- to:to:cc:mime-version:mime-version:content-type:content-type;
- bh=b2k8DiVeyopE+DJ4KPwwL43rRVnBXtl9vCpdwvOdixQ=;
- b=CpQCijEcseyuXNeUmIZUrXU3dxoborshVtSA4u7fzJGA7+iMZf+ZNd2wTc6ivnVD1UyCwo
- FxdgQPrXKQO9NvXR+opyLfzGKEnz7sVIYhq9/DkdthEzBwvVPMYOLosi2xC383RuhrikYx
- LZg+HpvKPZ+DD4bF6LwjGsunINEBlos=
+Return-Path: <till.kamppeter@gmail.com>
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20210112;
+ h=message-id:date:mime-version:user-agent:subject:content-language:to
+ :references:from:in-reply-to:content-transfer-encoding;
+ bh=XPPK1gSFobjKzgfU8znwfQ1+qjEp+le/eKFp+X0aJuI=;
+ b=OJ7N0NIdH/YNSCc8ywoZur5tYzw1h7w1KKRwQ1qfhifNjPHYlryVXHnasfqVSTWDU4
+ JOuD1w4kIr4uWJVfhIHCQu4PCwoB9LNRhfMlsVMBJG4L9/DYlB8zPP7Ms05xQOc3/wiQ
+ oEsAT0qZUarC38fOM7dJwlYXi4eeWQmlqvjWNiNKyNaCtjlTM0zrQgdF+o6xTsLMOZo3
+ avxBgHWpJ7Nm49VkNNiwE+z3y8hUAMan6alLmzE2Sso7NOjoCoUlLu+n/HMV/dIQ5e5R
+ xAuZnCuOYQ6iLE1GotHHdM6OvVU+9tEXUJsgTFBTARlQ/lR8oSMdny856FvKyKPRi4l+
+ qItw==
+Message-ID: <9d52dd4d-52ff-cec9-db00-064f19373fbe@gmail.com>
+Date: Tue, 1 Feb 2022 00:11:00 -0300
 MIME-Version: 1.0
-From: Zdenek Dohnal <zdohnal@redhat.com>
-Date: Thu, 27 Jan 2022 13:20:51 +0100
-Message-ID: <CAAqMZmZUqRG-F5XMN3viALLDXXU7L0PMZoYS31yecMrQUfwuEA@mail.gmail.com>
-Content-Type: multipart/alternative; boundary="000000000000f7417005d68f596c"
-Subject: [Printing-architecture] CUPS 2.4.1 is released!
+Content-Language: en-US
+References: <CAN40gSsG_WznJYei0SeycuBwDMUqRXNOKBJSX5nGbTxqLCtXkw@mail.gmail.com>
+From: Till Kamppeter <till.kamppeter@gmail.com>
+In-Reply-To: <CAN40gSsG_WznJYei0SeycuBwDMUqRXNOKBJSX5nGbTxqLCtXkw@mail.gmail.com>
+Content-Type: text/plain; charset="utf-8"; format="flowed"
+Content-Transfer-Encoding: 8bit
+Subject: [Printing-architecture] Need to move meeting,
+	my return from Brazil changed to Feb 15
 List-Id: Printing architecture under linux
  <printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>, 
@@ -22,63 +29,110 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>, 
  <mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Open Printing <printing-architecture@lists.linux-foundation.org>
+To: Ira McDonald <blueroofmusic@gmail.com>, "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>
 
---000000000000f7417005d68f596c
-Content-Type: text/plain; charset="UTF-8"
+Hi,
 
-Hi all!
+I had to change my move back from Brazil to Vienna from Feb 1 to Feb 15. 
+So we cannot meet on Feb 15 any more.
 
-CUPS 2.4.1 is the first bug fix release from 2.4.x series. Among the other
-bug fixes it fixes sharing default color mode to clients and several memory
-leaks.
+We can either meet today (Tuesday Feb 1, ~15 hours from now) or skip our 
+Feb meeting altogether.
 
-Detailed list of changes:
+WDYT?
 
-- The default color mode now is now configurable and defaults to the
-printer's
-  reported default mode (Issue #277)
-- Configuration script now checks linking for -Wl,-pie flags (Issue #303)
-- Fixed memory leaks - in testi18n (Issue #313), in `cups_enum_dests()`
-  (Issue #317), in `_cupsEncodeOption()` and `http_tls_upgrade()` (Issue
-#322)
-- Fixed missing bracket in de/index.html (Issue #299)
-- Fixed typos in configuration scripts (Issues #304, #316)
-- Removed remaining legacy code for `RIP_MAX_CACHE` environment variable
-  (Issue #323)
-- Removed deprecated directives from cupsctl and cups-files.conf (Issue
-#300)
-- Removed `purge-jobs` legacy code from CGI scripts and templates (Issue
-#325)
+    Till
 
-Enjoy! :)
-
--- 
-Zdenek Dohnal
-Software Engineer
-Red Hat, BRQ-TPBC
-
---000000000000f7417005d68f596c
-Content-Type: text/html; charset="UTF-8"
-Content-Transfer-Encoding: quoted-printable
-
-<div dir=3D"ltr"><div>Hi all!<br></div><div><br></div><div>CUPS 2.4.1 is th=
-e first bug fix release from 2.4.x series. Among the other bug fixes it fix=
-es sharing default color mode to clients and several memory leaks.</div><br=
->Detailed list of changes:<br><br>- The default color mode now is now confi=
-gurable and defaults to the printer&#39;s<br>=C2=A0 reported default mode (=
-Issue #277)<br>- Configuration script now checks linking for -Wl,-pie flags=
- (Issue #303)<br>- Fixed memory leaks - in testi18n (Issue #313), in `cups_=
-enum_dests()`<br>=C2=A0 (Issue #317), in `_cupsEncodeOption()` and `http_tl=
-s_upgrade()` (Issue #322)<br>- Fixed missing bracket in de/index.html (Issu=
-e #299)<br>- Fixed typos in configuration scripts (Issues #304, #316)<br>- =
-Removed remaining legacy code for `RIP_MAX_CACHE` environment variable<br>=
-=C2=A0 (Issue #323)<br>- Removed deprecated directives from cupsctl and cup=
-s-files.conf (Issue #300)<br>- Removed `purge-jobs` legacy code from CGI sc=
-ripts and templates (Issue #325)<br><br>Enjoy! :)<br clear=3D"all"><br>-- <=
-br><div dir=3D"ltr" class=3D"gmail_signature" data-smartmail=3D"gmail_signa=
-ture"><div dir=3D"ltr"><div>Zdenek Dohnal</div><div>Software Engineer</div>=
-<div>Red Hat, BRQ-TPBC<br></div></div></div></div>
-
---000000000000f7417005d68f596c--
-
+On 17/01/2022 19:39, Ira McDonald wrote:
+> Hi,
+> 
+> Minutes from our last OpenPrintingcall are posted at:
+> 
+> http://ftp.pwg.org/pub/pwg/liaison/openprinting/minutes/OP-Minutes-20220104.htm 
+> <http://ftp.pwg.org/pub/pwg/liaison/openprinting/minutes/OP-Minutes-20220104.htm>
+> 
+> 
+> Next OP US/Europe/Brazil/India Conference Calls:
+> 
+> (1) February - US/Europe/Brazil/India - OP Monthly Meeting
+>      - Tuesday 15 February 2022, Daytime
+>        - Web conference to be announced
+>        - Note - Till will be traveling on 1 February 2022
+>        - Note - PWG Virtual F2F - 8-9 February 2022
+>        - Note - TCG Members Meeting Virtual F2F - 21-25 February 2022
+>        - Note - IEEE 1609 Virtual F2F - 22 February 2022
+>        - US
+>          10am in San Francisco - US PST (Pacific Standard Time)
+>          11am in Colorado - US MST (Mountain Standard Time)
+>          12am in Chicago - US CST (Central Standard Time)
+>          1pm in New York - US EST (Eastern Standard Time)
+>        - Europe
+>          7pm in Berlin - CET (Central Europe Time)
+>        - Brazil
+>          3pm in Belo Horizonte - BRT (Brasilia Time)
+>        - India
+>          11:30pm in New Delhi - IST (India Standard Time)
+> 
+> (2) March - US/Europe/Brazil/India - OP Monthly Meeting (tentative)
+>      - Tuesday 15 March 2022, Daytime
+>        - Web conference to be announced
+>        - Note - US Daylight Savings Time starts 13 March 2022
+>        - Note - EU Summer Time starts 27 March 2022
+>        - Note - Canonical F2F 28 February to 4 March 2022
+>        - Note - IETF 113 Hybrid F2F (Vienna, Austria) - 21-25 March 2022
+>        - Note - IQPC Automotive Cybersecurity Summit 29-31 March 2022
+>        - US
+>          10am in San Francisco - US PDT (Pacific Daylight Time)
+>          11am in Colorado - US MDT (Mountain Daylight Time)
+>          12am in Chicago - US CDT (Central Daylight Time)
+>          1pm in New York - US EDT (Eastern Daylight Time)
+>        - Europe
+>          6pm in Berlin - CET (Central Europe Time)
+>        - Brazil
+>          2pm in Belo Horizonte - BRT (Brasilia Time)
+>        - India
+>          10:30pm in New Delhi - IST (India Standard Time)
+> 
+> (3) April - US/Europe/Brazil/India - OP Monthly Meeting (tentative)
+>      - Tuesday 5 April 2022, Daytime
+>        - Web conference to be announced
+>        - Note - US Daylight Savings Time starts 13 March 2022
+>        - Note - EU Summer Time starts 27 March 2022
+>        - US
+>          10am in San Francisco - US PDT (Pacific Daylight Time)
+>          11am in Colorado - US MDT (Mountain Daylight Time)
+>          12am in Chicago - US CDT (Central Daylight Time)
+>          1pm in New York - US EDT (Eastern Daylight Time)
+>        - Europe
+>          7pm in Berlin - CEST (Central Europe Summer Time)
+>        - Brazil
+>          2pm in Belo Horizonte - BRT (Brasilia Time)
+>        - India
+>          10:30pm in New Delhi - IST (India Standard Time)
+> 
+> Cheers,
+> - Ira
+> 
+> /Ira McDonald (Musician / Software Architect)/
+> /Chair - SAE Trust Anchors and Authentication TF
+> /
+> /Co-Chair - TCG Trusted Mobility Solutions WG/
+> /Co-Chair - TCG Metadata Access Protocol SG
+> /
+> /Chair - Linux Foundation Open Printing WG
+> Secretary - IEEE-ISTO Printer Working Group
+> Co-Chair - IEEE-ISTO PWG Internet Printing Protocol WG
+> IETF Designated Expert - IPP & Printer MIB
+> Blue Roof Music / High North Inc
+> http://sites.google.com/site/blueroofmusic 
+> <http://sites.google.com/site/blueroofmusic>
+> http://sites.google.com/site/highnorthinc 
+> <http://sites.google.com/site/highnorthinc>
+> mailto: blueroofmusic@gmail.com <mailto:blueroofmusic@gmail.com>
+> (permanent) PO Box 221  Grand Marais, MI 49839  906-494-2434/
+> 
+> _______________________________________________
+> Printing-architecture mailing list
+> Printing-architecture@lists.linux-foundation.org
+> https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture
+> 
