@@ -1,19 +1,21 @@
-Return-Path: <blueroofmusic@gmail.com>
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20210112;
- h=mime-version:from:date:message-id:subject:to;
- bh=vT/t07h+re2V9p2HkVEgsUsXGhKzE208ZaI0LjnUGoA=;
- b=evM9O1j4MfRrl35eJiKcb343i6YsTH+HGGfskmjSrpyiLJnZWUVYyY70CpfQk62wjX
- bfDASZ0VC6vaB7RAG4P+P6lmrP5BagkPNjngMf2WjUlBkqm/BlUu2cM31s0zxaH1bn8s
- QPEP2++P7aHsNtmpTN0Cp5MxE3VuE4UEyEWO2SGcE9gHuPdkkbO2uoi6ZMxIcCHRBKXi
- RtB3d8fawCM6oHAGRX/SxwwRsZHvv8D/TNBXYyv+KliIHAblD8c4CjMEHjDki9DfWIKS
- 2NOL/GpR8dI5m2KyM8Hoj6tCX67qRkgJBmISISoIvTG+UTwMXlV7IiTCW2y+2DVr3ZSf
- YaHA==
-MIME-Version: 1.0
-From: Ira McDonald <blueroofmusic@gmail.com>
-Date: Sun, 27 Mar 2022 17:23:37 -0400
-Message-ID: <CAN40gSvewhcMCjv2fsHS_BkA+5gC7-HbAK7jFs+L3=Zqz99BvA@mail.gmail.com>
-Content-Type: multipart/alternative; boundary="000000000000bf94c205db39cfa7"
-Subject: [Printing-architecture] OP Minutes (15 March 2022)
+Return-Path: <msweet@msweet.org>
+DKIM-Filter: OpenDKIM Filter v2.11.0 mail.msweet.org B1E8981012
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=msweet.org;
+ s=default; t=1648737141;
+ bh=0g9agtrfQ2fLBHumkxVy3jmavf8/AyqZ+BpTlNU63xU=;
+ h=From:Date:Subject:To:From;
+ b=do+UwMriLa0uD8WzYCzIEa58J61I+wfjV+8qXosd38w4Ynfk3Zj1XQMP/g8DszeHL
+ aFPpEXTllOe/bQxtHbVuqUNqjuz8/PH/KtQnYF0iFOj4y6tTCCBZLayFJK+IU/KQf1
+ OscLKu2LLFx6jy871GCq+4WZe4V504MdLdvZdVKo=
+From: Michael Sweet <msweet@msweet.org>
+Content-Type: multipart/signed;
+ boundary="Apple-Mail=_122C88E4-4F20-4D1F-99BD-BE6478DD4E39";
+ protocol="application/pgp-signature"; micalg=pgp-sha256
+Mime-Version: 1.0 (Mac OS X Mail 16.0 \(3696.80.82.1.1\))
+Date: Thu, 31 Mar 2022 10:32:20 -0400
+Message-Id: <FCF5E769-F94E-4B0C-83FA-3DF618749621@msweet.org>
+Subject: [Printing-architecture] OpenSSL/LibreSSL support now back in CUPS,
+	soon to be in PAPPL...
 List-Id: Printing architecture under linux
  <printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>, 
@@ -23,172 +25,52 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>, 
  <mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>, Ira McDonald <blueroofmusic@gmail.com>
-
---000000000000bf94c205db39cfa7
-Content-Type: text/plain; charset="UTF-8"
-
- Hi,
-
-Minutes from our last OpenPrinting call are posted at:
+To: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>
 
 
-http://ftp.pwg.org/pub/pwg/liaison/openprinting/minutes/OP-Minutes-20220315.htm
-
-
-Next OP US/Europe/Brazil/India Conference Calls:
-
-(1) April - US/Europe/Brazil/India - OP Monthly Meeting
-    - Tuesday 12 April 2022, Daytime
-      - Web conference to be announced
-      - Note - US Daylight Savings Time starts 13 March 2022
-      - Note - EU Summer Time starts 27 March 2022
-      - US
-        10am in San Francisco - US PDT (Pacific Daylight Time)
-        11am in Colorado - US MDT (Mountain Daylight Time)
-        12am in Chicago - US CDT (Central Daylight Time)
-        1pm in New York - US EDT (Eastern Daylight Time)
-      - Europe
-        7pm in Berlin - CEST (Central Europe Summer Time)
-      - Brazil
-        2pm in Belo Horizonte - BRT (Brasilia Time)
-      - India
-        10:30pm in New Delhi - IST (India Standard Time)
-
-(2) May - SKIP - attend Joint PWG/OP Summit instead
-    - Tuesday to Thursday 17-19 May 2022 - Ira/Aveek/Till to attend
-
-(3) June - US/Europe/Brazil/India - OP Monthly Meeting (tentative)
-    - Tuesday 7 June 2022, Daytime
-      - Web conference to be announced
-      - US
-        10am in San Francisco - US PDT (Pacific Daylight Time)
-        11am in Colorado - US MDT (Mountain Daylight Time)
-        12am in Chicago - US CDT (Central Daylight Time)
-        1pm in New York - US EDT (Eastern Daylight Time)
-      - Europe
-        7pm in Berlin - CEST (Central Europe Summer Time)
-      - Brazil
-        2pm in Belo Horizonte - BRT (Brasilia Time)
-      - India
-        10:30pm in New Delhi - IST (India Standard Time)
-
-Cheers,
-- Ira
-
-*Ira McDonald (Musician / Software Architect)*
-
-*Chair - SAE Trust Anchors and Authentication TF*
-*Co-Chair - TCG Trusted Mobility Solutions WG*
-
-*Co-Chair - TCG Metadata Access Protocol SG*
-
-
-
-
-
-
-
-
-*Chair - Linux Foundation Open Printing WGSecretary - IEEE-ISTO Printer
-Working GroupCo-Chair - IEEE-ISTO PWG Internet Printing Protocol WGIETF
-Designated Expert - IPP & Printer MIBBlue Roof Music / High North
-Inchttp://sites.google.com/site/blueroofmusic
-<http://sites.google.com/site/blueroofmusic>http://sites.google.com/site/highnorthinc
-<http://sites.google.com/site/highnorthinc>mailto: blueroofmusic@gmail.com
-<blueroofmusic@gmail.com>(permanent) PO Box 221  Grand Marais, MI 49839
-906-494-2434*
-
---000000000000bf94c205db39cfa7
-Content-Type: text/html; charset="UTF-8"
+--Apple-Mail=_122C88E4-4F20-4D1F-99BD-BE6478DD4E39
 Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain;
+	charset=us-ascii
 
-<div dir=3D"ltr">
-<div>Hi,</div><div><br></div><div>
-<div dir=3D"ltr"><span><span><span><span><span><span><span><span><span><spa=
-n><span><span><span><span><span><span><span><span><span><span><span><span><=
-span><span><span><span><span><span><span><span><span><span><span><span><spa=
-n><span><span><span><span class=3D"gmail-il">Minutes</span></span></span></=
-span></span></span></span></span></span></span></span></span></span></span>=
-</span></span></span></span></span></span></span></span></span></span></spa=
-n></span></span></span></span></span></span></span></span></span></span></s=
-pan></span></span></span> from our last OpenPrinting<span> call</span> are =
-<span><span><span><span><span><span><span><span><span><span><span><span><sp=
-an><span><span><span>posted</span></span></span></span></span></span></span=
-></span></span></span></span></span></span></span></span></span> at:<br>
+All,
 
+Starting with CUPS 2.4.2, you'll now be able to build CUPS using OpenSSL =
+or LibreSSL instead of GNU TLS.  I've restricted the OpenSSL API usage =
+to functions that are common to OpenSSL 1.0.x and LibreSSL 3.x, with a =
+very small amount of conditional code concerning TLS 1.3 support.
 
+I will also be adding OpenSSL/LibreSSL support to PAPPL, where it =
+provides support for managing certificates and certificate requests for =
+printer applications...
 
-
+________________________
+Michael Sweet
 
 
+--Apple-Mail=_122C88E4-4F20-4D1F-99BD-BE6478DD4E39
+Content-Transfer-Encoding: 7bit
+Content-Disposition: attachment;
+	filename=signature.asc
+Content-Type: application/pgp-signature;
+	name=signature.asc
+Content-Description: Message signed with OpenPGP
 
+-----BEGIN PGP SIGNATURE-----
 
+iQIzBAEBCAAdFiEEkIbDzcZsP1Y8+PQFvmfHXsgfMkQFAmJFu3QACgkQvmfHXsgf
+MkRJLxAAsDLJtA9jlSFusa4Vzcr9nW3WvPsf2X3KHYXmCYJ/JxpH5PrCt+xyTIGF
+pom/5Vha3CPtmcG/8ZtgtR2up9qm/1EkIf2xdeaTeojByx7+QbpIUy/X4CYpyXTy
+l32QSmHpMY9cRjq38KyIPaqilW5lST8ISjsvCTbbNUwt16oBigeRBFOYgxNyVRo9
+PNpD89O1T4hkfmzl2z8AlL/15qNNhte4NGKGigN+XEG3rnz3Lw9Sz0kXW8DPs2T7
+8ZFf2EJ6MEzOERtlB1377s0BnLwAJLXT6unUj+DBl/PRfp+Y96fb5CIL2lDFiZ36
+rP7OQo2UH6Lva3yNLLPwZusyWme15gkY7f0hxI811xura8Poq2QhHCNtJPYkYNwP
+2KyHrWLEDOGli/Ya1cVwlsteetuBvoqsjozSuLsuE8fsPmZ5xAACRSHF/C1ddwYq
+JjxZdHDddTzJpokaTmRn8xnQMs3Oh7oRc5+mJVUJCNDkpm/4FapxgHdvgiaV7lVW
+4e7iSmOW6K50dUQUDKgQOtDkxr0j1Ll2zZO9LndE9oSDHW9FQPgo8Y6NpFms2OzL
+x0Ai0ofME589FngFAUKh1oFD+hFTFhlh2394JTEUDu8kQyM0W8yhgNFMRb2X3/Z0
+lcYRZYzGVlBWwsINfvGudQHvGHtTmTbvkUogsc8OqLMRbMdrdtc=
+=IE0t
+-----END PGP SIGNATURE-----
 
-
-
-
-<br>
-=C2=A0 <a href=3D"http://ftp.pwg.org/pub/pwg/liaison/openprinting/minutes/O=
-P-Minutes-20220315.htm" target=3D"_blank">http://ftp.pwg.org/pub/pwg/liaiso=
-n/openprinting/minutes/OP-Minutes-20220315.htm</a><br><br></div><div dir=3D=
-"ltr"><br></div><div dir=3D"ltr">
-Next <span><span><span><span><span><span><span><span><span><span><span><spa=
-n><span><span><span><span><span><span><span><span><span><span><span><span><=
-span><span><span><span><span class=3D"gmail-il">OP</span></span></span></sp=
-an></span></span></span></span></span></span></span></span></span></span></=
-span></span></span></span></span></span></span></span></span></span></span>=
-</span></span></span></span> US/Europe/Brazil/India Conference Calls: </div=
-></div>
-
-<div><br></div><div>(1) April - US/Europe/Brazil/India - OP Monthly Meeting=
-<br>=C2=A0 =C2=A0 - Tuesday 12 April 2022, Daytime<br>=C2=A0 =C2=A0 =C2=A0 =
-- Web conference to be announced<br>=C2=A0 =C2=A0 =C2=A0 - Note - US Daylig=
-ht Savings Time starts 13 March 2022<br>=C2=A0 =C2=A0 =C2=A0 - Note - EU Su=
-mmer Time starts 27 March 2022<br>=C2=A0 =C2=A0 =C2=A0 - US<br>=C2=A0 =C2=
-=A0 =C2=A0 =C2=A0 10am in San Francisco - US PDT (Pacific Daylight Time)<br=
->=C2=A0 =C2=A0 =C2=A0 =C2=A0 11am in Colorado - US MDT (Mountain Daylight T=
-ime)<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 12am in Chicago - US CDT (Central Dayli=
-ght Time)<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 1pm in New York - US EDT (Eastern =
-Daylight Time)<br>=C2=A0 =C2=A0 =C2=A0 - Europe<br>=C2=A0 =C2=A0 =C2=A0 =C2=
-=A0 7pm in Berlin - CEST (Central Europe Summer Time)<br>=C2=A0 =C2=A0 =C2=
-=A0 - Brazil<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 2pm in Belo Horizonte - BRT (Br=
-asilia Time)<br>=C2=A0 =C2=A0 =C2=A0 - India<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0=
- 10:30pm in New Delhi - IST (India Standard Time)<br><br>(2) May - SKIP - a=
-ttend Joint PWG/OP Summit instead<br>=C2=A0 =C2=A0 - Tuesday to Thursday 17=
--19 May 2022 - Ira/Aveek/Till to attend <br><br>(3) June - US/Europe/Brazil=
-/India - OP Monthly Meeting (tentative)<br>=C2=A0 =C2=A0 - Tuesday 7 June 2=
-022, Daytime<br>=C2=A0 =C2=A0 =C2=A0 - Web conference to be announced<br>=
-=C2=A0 =C2=A0 =C2=A0 - US<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 10am in San Franci=
-sco - US PDT (Pacific Daylight Time)<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 11am in=
- Colorado - US MDT (Mountain Daylight Time)<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 =
-12am in Chicago - US CDT (Central Daylight Time)<br>=C2=A0 =C2=A0 =C2=A0 =
-=C2=A0 1pm in New York - US EDT (Eastern Daylight Time)<br>=C2=A0 =C2=A0 =
-=C2=A0 - Europe<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 7pm in Berlin - CEST (Centra=
-l Europe Summer Time)<br>=C2=A0 =C2=A0 =C2=A0 - Brazil<br>=C2=A0 =C2=A0 =C2=
-=A0 =C2=A0 2pm in Belo Horizonte - BRT (Brasilia Time)<br>=C2=A0 =C2=A0 =C2=
-=A0 - India<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 10:30pm in New Delhi - IST (Indi=
-a Standard Time)</div><div><br></div><div>Cheers,</div><div>- Ira</div><div=
-><br></div><div><div dir=3D"ltr" class=3D"gmail_signature" data-smartmail=
-=3D"gmail_signature"><div dir=3D"ltr"><div><div dir=3D"ltr"><div><div dir=
-=3D"ltr"><div><div dir=3D"ltr"><div><div dir=3D"ltr"><div><div dir=3D"ltr">=
-<div><div dir=3D"ltr"><div><div dir=3D"ltr"><div><div dir=3D"ltr"><i><font =
-size=3D"1">Ira McDonald (Musician / Software Architect)</font></i></div><di=
-v><i><font size=3D"1">Chair - SAE Trust Anchors and Authentication TF<br></=
-font></i></div><div dir=3D"ltr"><i><font size=3D"1">Co-Chair - TCG Trusted =
-Mobility Solutions WG</font></i></div><div><i><font size=3D"1">Co-Chair - T=
-CG Metadata Access Protocol SG<br></font></i></div><div dir=3D"ltr"><i><fon=
-t size=3D"1">Chair - Linux Foundation Open Printing WG<br>Secretary - IEEE-=
-ISTO Printer Working Group<br>Co-Chair - IEEE-ISTO PWG Internet Printing Pr=
-otocol WG<br>IETF Designated Expert - IPP &amp; Printer MIB<br>Blue Roof Mu=
-sic / High North Inc<br><a style=3D"color:rgb(51,51,255)" href=3D"http://si=
-tes.google.com/site/blueroofmusic" target=3D"_blank">http://sites.google.co=
-m/site/blueroofmusic</a><br><a style=3D"color:rgb(102,0,204)" href=3D"http:=
-//sites.google.com/site/highnorthinc" target=3D"_blank">http://sites.google=
-.com/site/highnorthinc</a><br>mailto: <a href=3D"mailto:blueroofmusic@gmail=
-.com" target=3D"_blank">blueroofmusic@gmail.com</a><br>(permanent) PO Box 2=
-21=C2=A0 Grand Marais, MI 49839=C2=A0 906-494-2434</font></i></div></div></=
-div></div></div></div></div></div></div></div></div></div></div></div></div=
-></div></div></div></div></div>
-
---000000000000bf94c205db39cfa7--
+--Apple-Mail=_122C88E4-4F20-4D1F-99BD-BE6478DD4E39--
