@@ -1,22 +1,13 @@
-Return-Path: <till.kamppeter@gmail.com>
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20210112;
- h=message-id:date:mime-version:user-agent:from:subject:to
- :content-language:content-transfer-encoding;
- bh=/HnYsYVxmaB2BWMMnBAqRrDWf5BuNOuRxa4HjPvru8c=;
- b=Qg/i9QSrWKDbSCvhG43rCNjAadEMIIaRn2rJGJzCxzrQr0wB40h8pnHOOwgit7CnZ+
- JFgjlQcZ1ae7nPEcKQ2NW5uGnLXQirSUnKIWXJJq4519XfC6ptHLlQ4Nejp72dUwQDS5
- 4qg0kDF+RK1mNiTxNxt2TBadVGKB4c0aTwKno0i1JEN0uPzYf1l8XQJ4mXNKxLfMWBQ9
- tTNEJ2R41CmHUWLf/6ADDCb+qWjav587ZuixWVwntqUPEIb6QFOtqObyxe5bcoDCNJ5Q
- hir1e3lVjspfuwq9CtglsolK/vts1BzLwDrxePGBXV6XGZ4m0K3LfgZiV6eHUHLNWEVX
- cGpQ==
-Message-ID: <1b65439a-b27e-80a0-45cc-660e397a729b@gmail.com>
-Date: Wed, 13 Apr 2022 22:08:25 +0200
+Return-Path: <postmaster@tnonline.net>
+Message-ID: <bdb5727d-1aee-de03-4ba3-5f4cdb1d9ec3@tnonline.net>
+Date: Wed, 13 Apr 2022 22:24:45 +0200
 MIME-Version: 1.0
-From: Till Kamppeter <till.kamppeter@gmail.com>
-Content-Language: en-US
+Content-Language: en-GB
+From: Forza <forza@tnonline.net>
 Content-Type: text/plain; charset=UTF-8; format=flowed
 Content-Transfer-Encoding: 7bit
-Subject: [Printing-architecture] OpenPrinting News
+Subject: [Printing-architecture] What windows driver to use with a CUPS IPP
+	server?
 List-Id: Printing architecture under linux
  <printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>, 
@@ -26,14 +17,47 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>, 
  <mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Ira McDonald <blueroofmusic@gmail.com>, Aveek Basu <basu.aveek@gmail.com>, Open Printing <printing-architecture@lists.linux-foundation.org>
+To: printing-architecture@lists.linux-foundation.org
 
-Hi,
+Hello,
 
-I have posted the newest development of the last month on our web site now.
 
-Here we go:
+I have a Ubuntu Server 21.10 with CUPS 2.3.3o installed. I've set up to 
+the printers with either socket://printer:9100 or ipp://printer and 
+enabled sharing on each queue. This exposes each CUPS queue as an IPP 
+printer to all clients.
 
-https://openprinting.github.io/OpenPrinting-News-April-2022/
+Now my problem is to determine what driver should be used in Windows.
 
-    Till
+A little background:
+
+We have several Windows clients ranging from WinXP to Win10 that are 
+printing on about a hundred HP printers (LaserJet and PageWide). 
+Currently these machines print through a Windows Printer server, but it 
+is getting more and more difficult to properly support older clients 
+with the HP universal printer drivers. Also from security perspective we 
+need to isolate older clients on separate quite restrictive networks and 
+generally not enable SMB/Samba access.
+
+There is a built-in Windows driver called "MS Publisher Imagesetter" 
+that works pretty well, but it lacks most options such as selecting 
+colour/greyscale or duplex output, as well as exposing proper printer 
+margins and scaling to the applications.
+
+The CUPS server is not on the same broadcast domain as the clients and 
+DNS-SD and similar can not be used. This means that Windows clients 
+cannot automatically detect and setup WSD or IPP queues from CUPS.
+
+Someone on IRC said I should use the native HP drivers, but this seems 
+wrong to me;
+* First there are no updated drivers for older clients
+* Isn't the idea of CUPS as a printer spooler to separate the client 
+from the printer so that we can use classes etc to direct output without 
+the clients knowing?
+
+I'd be grateful for any suggestions and insights.
+
+
+Forza
+
+
