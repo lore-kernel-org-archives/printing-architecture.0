@@ -1,20 +1,16 @@
-Return-Path: <markosjal@gmail.com>
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20210112;
- h=mime-version:reply-to:from:date:message-id:subject:to;
- bh=+J360noPmZi/nc3aeS1eqxBNONJqvawvGnzwTAxgsr8=;
- b=jUErdQcwyckVbdCYBncbRemKa/ZtXntBYrSlW4JOhmvZkK0n6JjEAgW82UxwJOY4Ah
- fFrwdOZNEPjt2zShKPGIEOmiU8BAoYe14gLG+QKjWykwa3nzD5Za4xWMgh3q5GK7Xv0L
- wSR/HiZKIV07O5B0Qq24DhtjYGzmZbDCFVhu45sw27EQq3JlzEqV1LBv0e5jg9ggsMKc
- YeUGYnK/BXzBQ7I2W3wyoiyWKWVFoXw8mlgEAlHTzK7bDnpYkFsYR6bzDJ3Ld40rxw0d
- aHgbSEEHeaxAxTGOBV+GMa6UGLpoUwUnInvGCOdiGKE4qJXqbm9vjt9X/G/pxGdxGbqL
- meSQ==
+Return-Path: <postmaster@tnonline.net>
+Date: Thu, 14 Apr 2022 10:48:25 +0200 (GMT+02:00)
+From: Forza <forza@tnonline.net>
+Message-ID: <8f7a3d7.5dc3e068.18027426970@tnonline.net>
+In-Reply-To: <CAK-1bsrJSsK_U_eOAHjSD6k7y5cMnOnr3_gX3rXARPhLzWENdQ@mail.gmail.com>
+References: <bdb5727d-1aee-de03-4ba3-5f4cdb1d9ec3@tnonline.net>
+ <CAK-1bsoup4aNhk3U6NtDg0xVbcBWMVFP2+q-tAOaphb_V2K2iw@mail.gmail.com>
+ <CAK-1bsrJSsK_U_eOAHjSD6k7y5cMnOnr3_gX3rXARPhLzWENdQ@mail.gmail.com>
 MIME-Version: 1.0
-Reply-To: markosjal@gmail.com
-From: Mark Dm <markosjal@gmail.com>
-Date: Wed, 13 Apr 2022 22:38:18 -0700
-Message-ID: <CAK-1bsq2_a5u8FUVoCok7BdFwUk+k0dyAXGN+cfJM3=wsCqpxg@mail.gmail.com>
-Content-Type: multipart/alternative; boundary="000000000000254bf105dc96b496"
-Subject: [Printing-architecture] Something Bad Just Happened to CUPS
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: quoted-printable
+Subject: Re: [Printing-architecture] Fwd: What windows driver to use with a
+ CUPS IPP server?
 List-Id: Printing architecture under linux
  <printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>, 
@@ -24,44 +20,75 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>, 
  <mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: printing-architecture@lists.linux-foundation.org
-
---000000000000254bf105dc96b496
-Content-Type: text/plain; charset="UTF-8"
-
-I have an old install of Raspbian that has always worked for me. Recently I
-changed the printer. It was working fine then in the web GUI, I changed the
-printer name and then disabled "allow printing from Internet"
-
-then suddenly I could not open CUPS pages (over LAN)
-
-So I went to the Web Browser on the Raspberry Pi (localhost) and the pages
-loaded. "Allow Remote administration" was somehow unchecked, but previously
-had been checked. I checked it and clicked save.
-
-Now I can not access cups from anywhere, not even from localhost. Its just
-GONE
+To: markosjal@gmail.com, printing-architecture@lists.linux-foundation.org
 
 
-Thanks for any help
+
+---- From: Mark Dm <markosjal@gmail.com> -- Sent: 2022-04-14 - 07:24 ----
+>=20
+> I think My WIndows 10 had a Generic "IPP Everywhere" driver installed
+>=20
+
+Hi!=20
+
+Yes indeed. It is, however, disabled by default. I enabled it on one machin=
+e but I had no luck with it to print to cups. Also it is not available on o=
+lder clients.=20
+
+Thanks=20
+
+> On Wed, Apr 13, 2022 at 1:32 PM Forza <forza@tnonline.net> wrote:
+>=20
+>> Hello,
+>>
+>>
+>> I have a Ubuntu Server 21.10 with CUPS 2.3.3o installed. I've set up to
+>> the printers with either socket://printer:9100 or ipp://printer and
+>> enabled sharing on each queue. This exposes each CUPS queue as an IPP
+>> printer to all clients.
+>>
+>> Now my problem is to determine what driver should be used in Windows.
+>>
+>> A little background:
+>>
+>> We have several Windows clients ranging from WinXP to Win10 that are
+>> printing on about a hundred HP printers (LaserJet and PageWide).
+>> Currently these machines print through a Windows Printer server, but it
+>> is getting more and more difficult to properly support older clients
+>> with the HP universal printer drivers. Also from security perspective we
+>> need to isolate older clients on separate quite restrictive networks and
+>> generally not enable SMB/Samba access.
+>>
+>> There is a built-in Windows driver called "MS Publisher Imagesetter"
+>> that works pretty well, but it lacks most options such as selecting
+>> colour/greyscale or duplex output, as well as exposing proper printer
+>> margins and scaling to the applications.
+>>
+>> The CUPS server is not on the same broadcast domain as the clients and
+>> DNS-SD and similar can not be used. This means that Windows clients
+>> cannot automatically detect and setup WSD or IPP queues from CUPS.
+>>
+>> Someone on IRC said I should use the native HP drivers, but this seems
+>> wrong to me;
+>> * First there are no updated drivers for older clients
+>> * Isn't the idea of CUPS as a printer spooler to separate the client
+>> from the printer so that we can use classes etc to direct output without
+>> the clients knowing?
+>>
+>> I'd be grateful for any suggestions and insights.
+>>
+>>
+>> Forza
+>>
+>>
+>> _______________________________________________
+>> Printing-architecture mailing list
+>> Printing-architecture@lists.linux-foundation.org
+>> https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture
+>>
+> _______________________________________________
+> Printing-architecture mailing list
+> Printing-architecture@lists.linux-foundation.org
+> https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture
 
 
-Mark
-
---000000000000254bf105dc96b496
-Content-Type: text/html; charset="UTF-8"
-Content-Transfer-Encoding: quoted-printable
-
-<div dir=3D"ltr">I have an old install of Raspbian that has always worked f=
-or me. Recently I changed=C2=A0the printer. It was working fine then in the=
- web GUI, I changed the printer name and then disabled &quot;allow printing=
- from Internet&quot;<div><br></div><div>then suddenly I could not open CUPS=
- pages (over LAN)=C2=A0</div><div><br></div><div>So I went to the Web Brows=
-er on the Raspberry Pi (localhost) and the pages loaded. &quot;Allow Remote=
- administration&quot; was somehow unchecked, but previously had been checke=
-d. I checked it and clicked=C2=A0save.</div><div><br></div><div>Now I can n=
-ot access cups from anywhere, not even from localhost. Its just GONE</div><=
-div><br></div><div><br></div><div>Thanks for any help</div><div><br></div><=
-div><br></div><div>Mark</div><div><br></div><div><br></div></div>
-
---000000000000254bf105dc96b496--
