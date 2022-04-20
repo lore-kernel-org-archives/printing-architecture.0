@@ -1,14 +1,33 @@
-Return-Path: <postmaster@tnonline.net>
-Message-ID: <38cd3cb1-5e0a-6735-5857-090cf6172c71@tnonline.net>
-Date: Wed, 20 Apr 2022 09:35:42 +0200
+Return-Path: <jsmeix@suse.de>
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=suse.de; s=susede2_rsa;
+ t=1650441528; h=from:from:reply-to:date:date:message-id:message-id:to:to:cc:
+ mime-version:mime-version:content-type:content-type:
+ content-transfer-encoding:content-transfer-encoding:
+ in-reply-to:in-reply-to:references:references;
+ bh=wWzmkNI7mkm9qH39hlyJgQZVvnB7BcxLH5SwsOF0EBc=;
+ b=X86cXEZdfY0EwItccCQXvo471lBQYOWtwzhsL1MMnddkYlctmLQ/wXuJZuc4h7XslDMzK2
+ VC9OJDAm/LSTNAnm8w2IG7qyXwl6DOsq9STs+a/oeWWDaldXmt0GXK17QAMBQ00au8pAjG
+ dqUtqIUP2Pi+o+ANqT70sWyL4ECTlaY=
+DKIM-Signature: v=1; a=ed25519-sha256; c=relaxed/relaxed; d=suse.de;
+ s=susede2_ed25519; t=1650441528;
+ h=from:from:reply-to:date:date:message-id:message-id:to:to:cc:
+ mime-version:mime-version:content-type:content-type:
+ content-transfer-encoding:content-transfer-encoding:
+ in-reply-to:in-reply-to:references:references;
+ bh=wWzmkNI7mkm9qH39hlyJgQZVvnB7BcxLH5SwsOF0EBc=;
+ b=XaBaWCpgdwApIwvdTQX1aJcZQDBvLdPJc88vnjMN27MWODk8OifOV7Cgrl+icIgX+WLDxU
+ 9u/q4BVQ9lZfK0CA==
 MIME-Version: 1.0
-Content-Language: en-US
+Date: Wed, 20 Apr 2022 09:58:48 +0200
+From: Johannes Meixner <jsmeix@suse.de>
+In-Reply-To: <38cd3cb1-5e0a-6735-5857-090cf6172c71@tnonline.net>
 References: <bdb5727d-1aee-de03-4ba3-5f4cdb1d9ec3@tnonline.net>
  <48896244878cd00c9e15e77fbd636696@suse.de>
-From: Forza <forza@tnonline.net>
-In-Reply-To: <48896244878cd00c9e15e77fbd636696@suse.de>
-Content-Type: text/plain; charset="utf-8"; format="flowed"
-Content-Transfer-Encoding: 8bit
+ <38cd3cb1-5e0a-6735-5857-090cf6172c71@tnonline.net>
+Message-ID: <c40a92532e9a57ce6d6bb7cd55b152e3@suse.de>
+Content-Type: text/plain; charset=US-ASCII;
+ format=flowed
+Content-Transfer-Encoding: 7bit
 Subject: Re: [Printing-architecture] What windows driver to use with a CUPS
  IPP server?
 List-Id: Printing architecture under linux
@@ -20,64 +39,25 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>, 
  <mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Johannes Meixner <jsmeix@suse.de>, printing-architecture@lists.linux-foundation.org
+To: printing-architecture@lists.linux-foundation.org
 
 
+Hello,
 
-On 4/20/22 09:07, Johannes Meixner wrote:
-> 
-> Hello,
-> 
-> only a general note FYI:
-> 
-> On 2022-04-13 22:24, Forza wrote (excerpt):
->> Someone on IRC said I should use the native HP drivers,
->> but this seems wrong to me;
->> * First there are no updated drivers for older clients
->> * Isn't the idea of CUPS as a printer spooler to separate
->>   the client from the printer so that we can use classes etc
->>   to direct output without the clients knowing?
-> 
-> You may have a look at my generic but rather old article
-> https://en.opensuse.org/SDB:Printing_from_Windows_to_Linux
-> 
-> In general it should be still valid in particular for
-> older Windows versions but some things have changed
-> meanwhile, e.g. in CUPS 2.3 the cupsaddsmb program
-> has been removed, cf.
-> https://github.com/apple/cups/issues/5449
-> 
-> By the way FYI:
-> Current CUPS upstream is no longer
-> https://github.com/apple/cups
-> and
-> https://www.cups.org
-> but nowadays it is
-> https://github.com/OpenPrinting/cups
-> and
-> https://openprinting.github.io/cups
-> 
-> 
-> Kind Regards
-> Johannes Meixner
+On 2022-04-20 09:35, Forza wrote (excerpt):
+> What I don't fully understand is the RAW queue here.
+> Is the idea to set up a RAW queue from CUPS->printer and then
+> use IPP from Windows->CUPS, but with printer specific printer
+> driver installed in Windows?
 
-Thank you for the pointers.
-
-The example "http://server.domain:631/printers/funprinter1000" from 
-https://en.opensuse.org/SDB:Printing_from_Windows_to_Linux#Send_data_via_LPD_protocol_or_IPP 
-is what I am trying to use because we want to close SMB traffic on these 
-clients. Especially the really old ones that can't be upgraded to modern 
-computers/Windows OS.
-
-What I don't fully understand is the RAW queue here. Is the idea to set 
-up a RAW queue from CUPS->printer and then use IPP from Windows->CUPS, 
-but with printer specific printer driver installed in Windows?
-
-I think that ideally, we should not have a printer specific driver in 
-Windows, so that we can use CUPS to handle the printer specifics. But 
-perhaps this is not possible?
-
-Regards,
-Forza
+Yes, and the reasons are described in the section
+"Why Windows clients have a printer driver installed" in
+https://en.opensuse.org/SDB:Printing_from_Windows_to_Linux
 
 
+Kind Regards
+Johannes Meixner
+-- 
+SUSE Software Solutions Germany GmbH
+Maxfeldstr. 5 - 90409 Nuernberg - Germany
+(HRB 36809, AG Nuernberg) GF: Ivo Totev
