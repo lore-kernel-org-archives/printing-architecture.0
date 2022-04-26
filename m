@@ -1,23 +1,22 @@
 Return-Path: <till.kamppeter@gmail.com>
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20210112;
- h=message-id:date:mime-version:user-agent:content-language:to:from
- :subject:content-transfer-encoding;
- bh=uMtUClMcaUzXyFrAehek1g9yX2WuwiT96cTXsAMqatQ=;
- b=ZB5F5xfADSBFyz2IHJg/3DouZY94DZDyySMdVVxwXCO0Jj513VMwZkpQrM7KApICUF
- kwD22hfDqMadmUMee39m0Y8K888SzDQ0YkYjG2mQzBgR6iNTewCwOh7yuKLIi8pTtRkG
- 5y2URinhlqkquw1k9lGfeEO/Q3gnM11U6OhJx38rq4LLjz24lwgJBdAXe0VFCVy+DPBx
- U+mFIQ0+QeaD08XIiooZi1DZVAy42aEGDeueM2DlcbR49irFUya3z0S9BlFeZRSwHVzL
- 1EUESF+mAYKd7DUclwIU91kMj+QuyILTnd/Wv4jHX9tHtxhoqr1Csu5BVfKX1AeE2f3R
- lPeg==
-Message-ID: <0aa65341-6244-d76e-2751-75dd02413568@gmail.com>
-Date: Tue, 26 Apr 2022 17:42:37 +0200
+ h=message-id:date:mime-version:user-agent:from:subject:to
+ :content-language:content-transfer-encoding;
+ bh=8AQEA6kEOpXYEj1dHaE46SCdDDn3xqLFSE9tuO5EuHs=;
+ b=BUFLeVKLvp8I6jHNnqUStCK1oGcOmXBptmsXSzdzgQC3Xc8Jbe5diJPcCicffuqRf7
+ I3Ztw6u77nQI/Z8WXCr48zDrW9P8mHkHxcUNv4jQvdK1uJcL1h6rZMDRpla3JU+6VC9p
+ YmchoboRYiSQ/JUj4FXynLlvDFCYeQszZQO7mz6uuhX+7y0RIGDnkpRJx4pRVkvAbnLk
+ c5jNebFDXYtzYxQ/W/NWNs1vUt/fz1hXxH6QWilOxmheXRc4pcQd1S5/JhT2zMkgC4fL
+ 7SMkhrakY3bKkABssZWjic6EqAKAMVhiGh3xNOlafhVK2e3zm1KMdxf/guQOO4Yu6KJc
+ MG5A==
+Message-ID: <7ffdde3b-d938-1cfc-4932-cfb670c25b4b@gmail.com>
+Date: Tue, 26 Apr 2022 18:56:36 +0200
 MIME-Version: 1.0
-Content-Language: en-US
 From: Till Kamppeter <till.kamppeter@gmail.com>
+Content-Language: en-US
 Content-Type: text/plain; charset=UTF-8; format=flowed
 Content-Transfer-Encoding: 7bit
-Subject: [Printing-architecture] CUPS 3.x: How we make it converting job
-	data formats?
+Subject: [Printing-architecture] CUPS 3.x: Printing via D-Bus
 List-Id: Printing architecture under linux
  <printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>, 
@@ -32,93 +31,75 @@ To: Michael Sweet <msweet@msweet.org>, Open Printing <printing-architecture@list
 Hi,
 
 I have looked through the CUPS 3.x planning and hit into the following 
-problem:
+feature:
 
-Filters
--------
+Printing via D-Bus
+------------------
 
-CUPS 3.x, independent whether local or sharing server, has to convert 
-formats to turn the input format into one of the 4 output formats. So we 
-need filter, not a way to add filters, but we need filters.
+In the local CUPS server it is planned to provide, in addition to the 
+usual Unix domain socket, a D-Bus interface to receive requests from the 
+client.
 
-I am working on cups-filter 2.x for longer time now, with the principal 
-intention to better integrate with the New Architecture, of driverless 
-IPP-only CUPS and Printer Applications.
+This is not a new idea but before it was not thought out to be done in 
+the CUPS daemon itself but in separate utilities.
 
-Especially now when I was looking about handling dependencies and moving 
-PPD support completely only into the retro-fitting Printer Applications 
-I have started to change libcupsfilters in a way so that it has no PPD 
-support at all, especially also not by conditional compiling.
+Back in 2006, on the first OpenPrinting Summit in Atlanta, Georgia we 
+raised the idea of a Common Print Dialog and I started its 
+implementation via the Google Summer of Code 2008, the first one ever I 
+have participated in, I suggested my students to let the GUI 
+applications not call the print dialog via direct library calls but by a 
+D-Bus interface so that the desktop environment provides the dialog and 
+so all applications appear with the same print dialog, if you use GNOME, 
+all applications show the GTK dialog, also the Qt ones.
 
-The filter functions (named "cfFilter...()" will accept printer 
-properties only as an IPP message (like the response to a 
-get-printer-attributes request) and job options only by an IPP message 
-containing job IPP attributes (like they come with jobs via IPP) or a 
-CUPS options list data structure.
+We did not succeed to complete this due to lack of man power for the coding.
 
-All PPD handling for retro-fits and for CUPS filters to be used with 
-CUPS 2.5.x or older will get moved into libppd. For this libppd will get 
-some new API functions, for example for loading PPDs and converting all 
-properties and options into a printer IPP attributes message compatible 
-to a get-printer-attributes IPP response, and especially a set of 
-PPD-supporting filter functions (named "ppdFilter...()", name 
-corresponding to the appropriate original filter function in 
-libcupsfilters) which load and convert the PPD, do PPD-specific action 
-and then call the original filter function doing the dirty work in 
-libcupsfilters. So the filter functions in libppd are wrappers around 
-the ones in libcupsfilters to add PPD file support.
+Recently, I investigated how Flatpak handles applications with print 
+functionality, and what they do is exactly this concept, not only for 
+printing, but also for "Open", "Save as", ... dialogs. This way the 
+system's dialog are used by the sandboxed application and through these 
+the application has access to system resources like file systems and 
+printers. I do not know whether they came to this idea by themselves or 
+whether they picked up my idea of the Common Print Dialog, extending it 
+to the other dialogs. They never talked with me.
 
-The CUPS filter stubs in the filter/ directory will call the filter 
-functions of libppd, as they are for CUPS 2.5.x or older.
+Independent of all this, back in 2017, when I did not know anything 
+about Flatpak (did it exist already that time?) Aveek Basu remembered me 
+to the Common Print Dialog project and whether we should revive it.
 
-Now I am thinking about how to get filter functionality into CUPS 3.x. A 
-pur IPP, PPD- and driver-free CUPS still needs filtering. CUPS 3.x will 
-accept the same input formats as 2.x, PDF, PostScript, Apple/PWG Raster, 
-JPG, PNG, plain text at least and as output formats it has to provide 
-PDF, Apple Raster, PWG Raster, and PCLm at least, to cover all 
-driverless printers. So we need to convert formats if needed and most 
-probably we also want to do page management (N-up, even/odd, reverse 
-order, booklet, ...) in an inbetween PDF step.
+But I came to the conclusion to not put a D-Bus interface between 
+application and print dialog but between print dialog and print 
+technology (CUPS, print-to-file, cloud print services, ...) so having 
+the dialog being a frontend and talking to backends, one for each print 
+technology, and let the author/maintainer/provider of each print 
+technology also maintain his backend.
 
-To do this there are the following possibilities:
+This I have called the Common Print Dialog Backends (CPDB) then:
 
-1. Continue with external filter executables from cups-filters, but now 
-they do not need support PPDs, they can be based on the original filter 
-functions in libcupsfilters. The "universal" CUPS filter, based on the 
-"cfFilterUniversal()" filter function, can be used to call filter chains 
-from a single executable to reduce external executable calls).
+https://linuxplumbersconf.org/event/11/contributions/1028/attachments/762/1433/Common-Print-Dialog-Backends.pdf
 
-2. Let CUPS use libcupsfilters to call its filter functions, makes cupsd 
-(both local and sharing) depending on libcupsfilters which in turn 
-depends on libcups.
+Good part of it is already implemented in GSoC 2017 and following.
 
-3. Re-merge libcupsfilters into libcups: All functions in libcupsfilters 
-get moved into libcups, their names change from "cf...()" to 
-"cups...()". The CUPS project will get independent of cups-filters, both 
-for build and for use. the project cups-filters will end then, libppd 
-and cups-browsed will be projects on their own and both only depend on 
-libcups,
+This D-Bus interface does the standard print activity:
 
-4. (PLEASE DO NOT) Re-implement all the filtering independently in 
-libcups. So we re-invent the wheel after more than 2 decades of filter 
-experience. Note that software is like a human being, it gets experience 
-throughout its life, it gets better and better ...
+- List the available printers
+- List capabilities and user-settable options for a selected printer
+- Send a job to a selected printer, with option settings
+- List the jobs
 
-Independent of this, cups-browsed will get turned into a Printer 
-Application whose purpose it is to create and manage printer clusters, 
-especially if such functionality is not provided by the sharing CUPS 
-server. The PPD dependecy of cups-browsed will get completely removed.
+What my imagination is for Michael's idea of a D-Bus interface to print 
+on a local CUPS server is exactly this functionality. Therefore I think 
+that we SHOULD NOT develop a new D-Bus interface for CUPS and then have 
+our CUPS CPDB backend on its front side receive print requests from the 
+print dialog via one D-Bus protocol (CPDB), convert the request to 
+another D-Bus protocol (CUPS 3.x) and pass it on to CUPS, but instead, 
+we right away take the CPDB D-Bus interface protocol and implement it in 
+the local CUPS server, so that we do not need a separate CPDB backend 
+for CUPS any more.
 
-libppd, residing in its own project will solely be used for 
-retro-fitting purposes, especially Printer Applications using 
-libpappl-retrofit or old CUPS versions in enterprise distros.
-
-cups-filters 2.x will provide the non-PPD-supporting libcupsfilters. 
-libppd and cups-browsed can be already split off, but I am not yet 100% 
-sure.
-
-Now I want to ask you all how we should solve the need of the filtering 
-capability of CUPS 3.x: (1), (2), (3), or ...???
+Note that CPDB is not actuall;y used in the wild yet, so we can do any 
+change on it to make it better suit CUPS if needed. Nothing is hammered 
+in stone yet.
 
 WDYT?
 
