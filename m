@@ -1,18 +1,20 @@
-Return-Path: <till.kamppeter@gmail.com>
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20210112;
- h=message-id:date:mime-version:user-agent:subject:content-language:to
- :cc:references:from:in-reply-to:content-transfer-encoding;
- bh=beAw/Pod6aaUvmkzAJtTJTi+6CjNDwIRij9NUK+AjjE=;
- b=Qx04Z16NfqLps0s/5RLSCZlQuhS6J+P2UruliebAM/vazOXzWlp5Fh0lAU7N3m8Mbg
- GEFUWDT8mnm10ldKVn7OoRfZs/nRcEcqM25a7dwO4z6+1ccCdCfFBFWwF25KK5dGdV5N
- WbR5qGCLJRPop7PFUId6l8zhEIe9ev06IaNEdrpEB5ydlho/1S4VM7RU1kHBmzbkWkzR
- PI7+0HS3O6YrYuK1CWx+4z6jm0eKmgQgySv+65bn/Ib9TE5hRogvnD6oCddTIkzkuV2E
- 857I/3QKHYoaSQnqrBMirHqBU86sR5zDK9u+ZxAaHsJpxEgscJPrXhb/1cZi3YV/5bKY
- G1ig==
-Message-ID: <099283be-d7a2-c81e-258a-3c90e89ab3ef@gmail.com>
-Date: Sun, 15 May 2022 23:47:55 +0200
-MIME-Version: 1.0
-Content-Language: en-US
+Return-Path: <msweet@msweet.org>
+DKIM-Filter: OpenDKIM Filter v2.11.0 mail.msweet.org C181480438
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=msweet.org;
+ s=default; t=1652653875;
+ bh=yLnGjzf/UXm+e9eZqXn3IaJtdC70qBzWwvQlm4qVlEY=;
+ h=Subject:From:In-Reply-To:Date:Cc:References:To:From;
+ b=bQ6m2DENf8weLq+f0cpby4e92+2hLbBLpVwPQ16ER4EAynPmpvVxJ5oIXBUYvh7Dp
+ J+z5/3ClFX6IWAqnaUg6yDceqzIc7OXG/6ousApGO/VZRVNEX3FpirYGc6PASTpxew
+ HmRpsPBOFxeH5IhRlXfL84WPNfqh96W6MIPKQ5J0=
+Content-Type: multipart/signed;
+ boundary="Apple-Mail=_CFB08ACA-E2DF-47CE-9720-C7E7F70A6657";
+ protocol="application/pgp-signature"; micalg=pgp-sha256
+Mime-Version: 1.0 (Mac OS X Mail 16.0 \(3696.100.31\))
+From: Michael Sweet <msweet@msweet.org>
+In-Reply-To: <099283be-d7a2-c81e-258a-3c90e89ab3ef@gmail.com>
+Date: Sun, 15 May 2022 18:31:12 -0400
+Message-Id: <A98D57DF-B7E9-4D8D-AEBA-061E1E6013A2@msweet.org>
 References: <7AECB015-F222-4111-A05F-B57F68F76FAD@msweet.org>
  <b3d58dc0-1405-fc42-34d7-e3964407b5da@gmail.com>
  <D352678D-C1E1-4B39-96E1-EC54026FD4FF@msweet.org>
@@ -22,10 +24,7 @@ References: <7AECB015-F222-4111-A05F-B57F68F76FAD@msweet.org>
  <DDD5F2DC-E1A4-4EEB-9613-CBEF15462563@msweet.org>
  <04994e7b-3400-0c73-9b6c-be63587775df@gmail.com>
  <7A3378E6-E927-483A-9CD6-7780226A2EF2@msweet.org>
-From: Till Kamppeter <till.kamppeter@gmail.com>
-In-Reply-To: <7A3378E6-E927-483A-9CD6-7780226A2EF2@msweet.org>
-Content-Type: text/plain; charset=UTF-8; format=flowed
-Content-Transfer-Encoding: 7bit
+ <099283be-d7a2-c81e-258a-3c90e89ab3ef@gmail.com>
 Subject: Re: [Printing-architecture] PAPPL 1.2rc1 (Supply levels)
 List-Id: Printing architecture under linux
  <printing-architecture.lists.linux-foundation.org>
@@ -36,116 +35,57 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>, 
  <mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Michael Sweet <msweet@msweet.org>
+To: Till Kamppeter <till.kamppeter@gmail.com>
 Cc: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>
 
-SNMP:
-----------
-$ testsuite/testpappl --get-id snmp://HP5B78A3
 
-MFG:HP;MDL:HP OfficeJet Pro 8730;
+--Apple-Mail=_CFB08ACA-E2DF-47CE-9720-C7E7F70A6657
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain;
+	charset=us-ascii
 
-$ testsuite/testpappl --get-status snmp://HP5B78A3
+Till,
 
-none
-
-$ testsuite/testpappl --get-supplies snmp://HP5B78A3
-
-                       cyan ink HP N9H71A: 54% (ink, cyan)
-
-                    magenta ink HP N9H75A: 58% (ink, magenta)
-
-                     yellow ink HP N9H79A: 60% (ink, yellow)
-
-                      black ink HP N9H83A: 79% (ink, black)
-
-$
-----------
-
-DNS-SD:
-----------
-$ testsuite/testpappl --get-id 
-dnssd://HP%5C032OfficeJet%5C032Pro%5C0328730%5C032%5C0915B78A3%5C093._pdl-datastream._tcp.local/
-
-MFG:HP;MDL:HP OfficeJet Pro 8730;
-
-$ testsuite/testpappl --get-status 
-dnssd://HP%5C032OfficeJet%5C032Pro%5C0328730%5C032%5C0915B78A3%5C093._pdl-datastream._tcp.local/
-
-none
-
-$ testsuite/testpappl --get-supplies 
-dnssd://HP%5C032OfficeJet%5C032Pro%5C0328730%5C032%5C0915B78A3%5C093._pdl-datastream._tcp.local/
-
-                       cyan ink HP N9H71A: 54% (ink, cyan)
-
-                    magenta ink HP N9H75A: 58% (ink, magenta)
-
-                     yellow ink HP N9H79A: 60% (ink, yellow)
-
-                      black ink HP N9H83A: 79% (ink, black)
-
-$
-----------
-
-The answers with the SNMP URI take some seconds, with the DNS-SD URI 
+> On May 15, 2022, at 5:47 PM, Till Kamppeter <till.kamppeter@gmail.com> =
+wrote:
+> ...
+> The answers with the SNMP URI take some seconds, with the DNS-SD URI =
 they are instantaneous.
 
-    Till
+That's to be expected - SNMP name resolution is slow... :/
+
+Have you implemented the status callback or added a call to =
+papplDeviceGetSupplies anywhere in ps-printer-app?
+
+________________________
+Michael Sweet
 
 
-On 15/05/2022 23:22, Michael Sweet wrote:
-> Till,
-> 
-> Try the dnssd and snmp URIs with these commands and post the results.
-> 
-> 
->> On May 15, 2022, at 3:46 PM, Till Kamppeter <till.kamppeter@gmail.com> wrote:
->>
->> Seems that ink level query on my printer is supported:
->>
->> ----------
->> $ testsuite/testpappl --get-id socket://192.168.68.101
->>
->> MFG:HP;MDL:HP OfficeJet Pro 8730;
->>
->> $ testsuite/testpappl --get-status socket://192.168.68.101
->>
->> none
->>
->> $ testsuite/testpappl --get-supplies socket://192.168.68.101
->>
->>                       cyan ink HP N9H71A: 54% (ink, cyan)
->>
->>                    magenta ink HP N9H75A: 58% (ink, magenta)
->>
->>                     yellow ink HP N9H79A: 60% (ink, yellow)
->>
->>                      black ink HP N9H83A: 79% (ink, black)
->>
->> $
->> ----------
->>
->> What else could go wrong here?
->>
->> I have tested with the original network backends (schemes, devices) of PAPPL, both the one with DNS-Sd discovery and the one with SNMP discovery, and even with them I get only the gauge.
->>
->>    Till
->>
->>
->> On 15/05/2022 21:37, Michael Sweet wrote:
->>> The "testpappl" program provided with PAPPL can be used to test the SNMP stuff:
->>>      git clone https://github.com/michaelrsweet/pappl.git
->>>      cd pappl
->>>      ./configure
->>>      make
->>>      testsuite/testpappl --get-id socket://IP-ADDRESS
->>>      testsuite/testpappl --get-status socket://IP-ADDRESS
->>>      testsuite/testpappl --get-supplies socket://IP-ADDRESS
->>
-> 
-> ________________________
-> Michael Sweet
-> 
-> 
-> 
+
+
+--Apple-Mail=_CFB08ACA-E2DF-47CE-9720-C7E7F70A6657
+Content-Transfer-Encoding: 7bit
+Content-Disposition: attachment;
+	filename=signature.asc
+Content-Type: application/pgp-signature;
+	name=signature.asc
+Content-Description: Message signed with OpenPGP
+
+-----BEGIN PGP SIGNATURE-----
+
+iQIzBAEBCAAdFiEEkIbDzcZsP1Y8+PQFvmfHXsgfMkQFAmKBfzAACgkQvmfHXsgf
+MkRDDQ//UC+QQjIR1t1i+6tKZ1Ow1re8+s9RuwIM3wf9SWDEmLJLX3ZIB+g/5UDS
+V17yBh0SFOQWHdxrCbOV10ETKMrMI9yzDcKYhZ/CjprDT3ErPu2r/v1/onppiZvu
+vxWfxz5+dudOMtdUBvMJQ6S0vPXh/lZ1jBpPknW6VqC8pvvYoE5c1NBUp3ad7d/6
+ghQenpzitdS7ZIVr9ola+9pvIuzUaUn0nEZil7Dmc0mz0lygc7zNyr6IJC8DZr9y
+9N2zURDO3aTn5j13q59gPBv7KM5XwVKRmLe5n4TYQ6SGlJe0Mxf+8h+M0jAA5zJI
+W1DnwP6lSrFU89euGxbV8x2mxYztQeGtZBKkMZbKFydd3lXD1oim3R72+6WfcKRd
+kPBX1/6IlVqHFoB3uyOi4tOv5zQ1X8OiFfWBZMRoOYJNkygbldwhrCjz5O1SpCC9
+afLnVI+l0vTcaTQ/XEPjeZWrUryDaQ5tsn/E9YkEf2TuPvbzjn7K12/18ou4lCTx
+ugzQSnik7A8x4LwmGBYL39n4PBD861pQo1c0llflcgn4EaNvavF05ei3nth09zJT
+HpZKkM9vQMsXlVMDZD+pbxml8fuu6xOV4B8v/GFkwnVJIQKPIEwXDMlu0UsawlyC
+Cu3YJOZop+3e/5HpV0wDtGXK4HSykaOFKMiuM/CkBmaLDMke6z0=
+=AjOL
+-----END PGP SIGNATURE-----
+
+--Apple-Mail=_CFB08ACA-E2DF-47CE-9720-C7E7F70A6657--
