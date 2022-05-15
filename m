@@ -1,23 +1,23 @@
 Return-Path: <msweet@msweet.org>
-DKIM-Filter: OpenDKIM Filter v2.11.0 mail.msweet.org 743CA80438
+DKIM-Filter: OpenDKIM Filter v2.11.0 mail.msweet.org 0AE7580438
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=msweet.org;
- s=default; t=1652622813;
- bh=l37aGfsav87ZW2aLqpWdpxJrcAsYaZGvZaz1KfMlt88=;
+ s=default; t=1652623048;
+ bh=OoQ2hMwFZLT+/oDjvrErRu/QZdG3v4fR+1P5+ER7oSo=;
  h=Subject:From:In-Reply-To:Date:Cc:References:To:From;
- b=jg5O8Z7zCjHrETIYUQWvjvRVhyte5fDNixun2IJsmLQyA1ooLTRg07Izl11YNsWaW
- oj+3B1XY/I25cf91/7PX6l//6ePr3x+q6hPXr8IS5IecLA/17BaN9z2SikItM7z2i2
- syg4xwqbYVzznP+nV58IjxWWxoYWSLz1CGIeSqUU=
+ b=FkqSBEh88wwE53KD6gu45iwpzkeSwXEbr3mEpWFFa467r0DHe84JpdBtTmkcRAPs0
+ /7JDKseJ15ycHZNLE4cYH2FWUZjw/1+4gTWuZ91+HPV14k+QX4B3eJf41sHJGexCYL
+ oZfUXcuN8itq90HhFxdKsMDxZ8aWFosPKC/hqruY=
 Content-Type: multipart/signed;
- boundary="Apple-Mail=_1FAD5F1D-039D-40E8-B67C-3644195ADB30";
+ boundary="Apple-Mail=_7EAB1A35-945F-49A2-8695-B61D3B5895B5";
  protocol="application/pgp-signature"; micalg=pgp-sha256
 Mime-Version: 1.0 (Mac OS X Mail 16.0 \(3696.100.31\))
 From: Michael Sweet <msweet@msweet.org>
-In-Reply-To: <b3d58dc0-1405-fc42-34d7-e3964407b5da@gmail.com>
-Date: Sun, 15 May 2022 09:53:31 -0400
-Message-Id: <D352678D-C1E1-4B39-96E1-EC54026FD4FF@msweet.org>
-References: <7AECB015-F222-4111-A05F-B57F68F76FAD@msweet.org>
- <b3d58dc0-1405-fc42-34d7-e3964407b5da@gmail.com>
-Subject: Re: [Printing-architecture] PAPPL 1.2rc1 (Supply levels)
+In-Reply-To: <0a8a483f-edec-212b-c4b7-029833de0d84@gmail.com>
+Date: Sun, 15 May 2022 09:57:26 -0400
+Message-Id: <917E2E0A-E1BA-4219-8C96-E0A31808BA11@msweet.org>
+References: <8FA81456-F65C-47A7-927D-50B4FE05E6D7@msweet.org>
+ <0a8a483f-edec-212b-c4b7-029833de0d84@gmail.com>
+Subject: Re: [Printing-architecture] PAPPL 1.2.0
 List-Id: Printing architecture under linux
  <printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>, 
@@ -31,43 +31,42 @@ To: Till Kamppeter <till.kamppeter@gmail.com>
 Cc: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>
 
 
---Apple-Mail=_1FAD5F1D-039D-40E8-B67C-3644195ADB30
+--Apple-Mail=_7EAB1A35-945F-49A2-8695-B61D3B5895B5
 Content-Transfer-Encoding: quoted-printable
 Content-Type: text/plain;
 	charset=us-ascii
 
 Till,
 
-You need to set the "have_supplies" member of the pappl_pr_driver_data_t =
-structure to 'true'.
+You need to create a .strings file of the form:
+
+    "optionname" =3D "localized text";
+    "optionname.choicename" =3D "localized text";
+
+Add these resources in your system callback with =
+papplSystemAddStringsData/File.
+
+More information is available in the manual at:
+
+    https://www.msweet.org/pappl/pappl.html#localization
 
 
-> On May 15, 2022, at 9:47 AM, Till Kamppeter <till.kamppeter@gmail.com> =
+> On May 15, 2022, at 9:44 AM, Till Kamppeter <till.kamppeter@gmail.com> =
 wrote:
 >=20
-> On 04/05/2022 02:49, Michael Sweet via Printing-architecture wrote:
->> PAPPL v1.2rc1 is now available for download from:
+> On 15/05/2022 14:35, Michael Sweet via Printing-architecture wrote:
+>> All,
+>> PAPPL v1.2.0 is now available for download from:
+>> 	https://github.com/michaelrsweet/pappl/releases/tag/v1.2.0
+>> PAPPL v1.2 adds full localization, support for additional IPP =
+features, and some other improvements.  Changes in 1.2.0 include:
 >=20
-> [...]
+> Is there any documentation or example how to get human-readable =
+strings for the vendor options/attributes on the "Printer Defaults" web =
+interface page?
 >=20
->> - Added unit test support for the new SNMP-based supply level and =
-status monitoring code.
->=20
-> [...]
->=20
->> - Fixed double "Supplies" buttons in the web interface.
->=20
-> [...]
->=20
->> - Fixed printer compatibility issues with the new =
-`papplDeviceGetSupplies` API.
->=20
-> [...]
->=20
-> Is there any documentation/example for how to get a "Supplies" button =
-(or permanent display on printer page) to display the supply levels =
-obtained from the printer via SNMP? I would like to add such =
-functionality to pappl-retrofit.
+> For pappl-retrofit I would like to show the same human-readable =
+strings as one sees them in the PPD files.
 >=20
 >   Till
 >=20
@@ -78,7 +77,7 @@ Michael Sweet
 
 
 
---Apple-Mail=_1FAD5F1D-039D-40E8-B67C-3644195ADB30
+--Apple-Mail=_7EAB1A35-945F-49A2-8695-B61D3B5895B5
 Content-Transfer-Encoding: 7bit
 Content-Disposition: attachment;
 	filename=signature.asc
@@ -88,19 +87,19 @@ Content-Description: Message signed with OpenPGP
 
 -----BEGIN PGP SIGNATURE-----
 
-iQIzBAEBCAAdFiEEkIbDzcZsP1Y8+PQFvmfHXsgfMkQFAmKBBdsACgkQvmfHXsgf
-MkTMWA/+LT258g1Y6v7GuxWo/YHKSpDD+WCRFtSqYJbIWJtFq4t6aZmGdHbNesU1
-uYomcIt0uCHPtokffFyJMmKGrF5dVO0HJjf6RtGIX285Lg5xYCRZBTbeJ4V27nFz
-qdIavpGKr8vHSAK0kMoil7+2jbmvowjlYzM/NzdAgNBrkbZXbKwJlqvEzdAPD2TR
-VBRyB8zjpXYM767eEWiKoRJUWOj3nYfqMqcNGsZP5MEsLGxA8DRg1+b3hFVchk9x
-qHKBd2ejuxkIFcitaL7T7z616mzE4BX3Pr71KUhD9q1+f99MHiSojaM/2zyX5DS6
-wwagG6l3L6I8E+bq65zG8wa9IBxeI+dgU4QU5Nyt1ZSMsdqlh5p7GTjpv/u2mMGA
-JUOm0y6HrzisbNB4foLAMz80x0isUD8f7mLi+TYvt3NloxIbsmmUj/7m4WB2PITR
-/BHYq+DVgHh41CdYSv9IEBKNMqRgL49cxDf0oPQ4Vd3m1GAHp7HaSWAAKVlolpRq
-pZYoO/zWPiV9JakHt7dKphxF07MkOfv1LUjM/9X3Rp0z3D+yZEJZUsiu1BSLU7u3
-Ss/nmbOqOKPoA/QkIUtnD85SXejKumc9HqTf3y9CyISDmrFNk2NhZrXpILJ3mXAh
-cHCgz+rIxeGECPqj9CB8/H1w6p8DShk6w6cM0GWNY1sP6XiCEP0=
-=DH2I
+iQIzBAEBCAAdFiEEkIbDzcZsP1Y8+PQFvmfHXsgfMkQFAmKBBsYACgkQvmfHXsgf
+MkR/NBAAmjlepvHBIxJaKiHt28BQ6wBiic87+elbrRNOoes9KL3kVRWKBofO7kwR
+aWtkNWuNDU2CHSAZEufYn8TXA4yy5EiUYFB3fV2FcP8sEmSc8mj/YoRiD/DJ3VFA
+uvIOi1BMjGNU4YbRavEQAioPT/Ng4NhrG/CTfCN1p14g4tlGgW2G98pMzwU7LtKl
+ljHUUaFfsPWVDMldz5bYmSMxvGQwQVYvJ67x7VKVrN9yDyenss9/S0P/IvdB0zPI
+evNU4+psSD9H+67Ya/QsBstRtgtb9v10F77FA5Irp+HI1kGGZVOPw1dCI9cdnlJJ
+fo1kwayCMG6sSC7ZksMpWLeOZF88VgdfxlOinCS9o8kpT6JxpLL42t/eKKMZ+I0c
+jreiiaa4Zc2gdVsBh4mWHWg2z0wMnfccWDNyYq/oGBZqWmVvGFKP5/2SFAoQLajl
+8wkrzFVSaEGFYVW9whLkgBnwusSVGarcX+OVzpy1dYQBV+eSc25ShImZ1vH68Ghg
+wT/fOXbylsjB5cm8WcrMIW/zAuqX/wEMbrqIAK9WrIkYknlAUuMDux77BPi7Mm27
+vEXGgyY2CUB0XYuL7fn5FlrWkh4YyZu4wGsNkd99bsq0LcwKNt0hum1AdiT5z1Ig
+N4MBu0M7LQZSufkHERfa+bErToA+EDrwnDF4XOmHO9TJzhCCTec=
+=VWnm
 -----END PGP SIGNATURE-----
 
---Apple-Mail=_1FAD5F1D-039D-40E8-B67C-3644195ADB30--
+--Apple-Mail=_7EAB1A35-945F-49A2-8695-B61D3B5895B5--
