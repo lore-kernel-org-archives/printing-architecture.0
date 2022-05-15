@@ -1,27 +1,27 @@
 Return-Path: <msweet@msweet.org>
-DKIM-Filter: OpenDKIM Filter v2.11.0 mail.msweet.org 992FD80438
+DKIM-Filter: OpenDKIM Filter v2.11.0 mail.msweet.org 8D93680438
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=msweet.org;
- s=default; t=1652643251;
- bh=/bYcy2UXyqo5vI+AMJHK9rUKT4KUzyNRGrmTujOOyBE=;
+ s=default; t=1652643437;
+ bh=2EC85xNtNAhuK4rXYq800iOeAQW649CwbXVQ/xZiMLo=;
  h=Subject:From:In-Reply-To:Date:Cc:References:To:From;
- b=OmE/zbtgQBJfze+ZeREVZX+9Z54PYt3ZMAwN5u3W40iZRcINJEKTcVuTDehn42alY
- Tf0xtdrgE0cXvVtrBix4p+1yiGV9nKMwbt/rrm+xuhbl74fwfJs0ap0w6SQ+M5vzHW
- mJZOsgjV9c51ZC4yBWjKweqPQ3WI+EL2xeJ2ACHc=
+ b=HBR/mfuwP861EJZWFX+4dTn80H3RZqoKnX2LmhWsRRPOH3TX3DEMf/zeapL1ZS4S+
+ GRnlWfwPTXPkt9rSMrIErE12RDs/TjDTFoNcexAmCV4LrEtNCt8n/rmnwYMJNVxUba
+ Nh9N8Dd07Ucvno72b1vtRNI4UKOF+VnmhZ6Z7bHM=
 Content-Type: multipart/signed;
- boundary="Apple-Mail=_02B99CFD-FE1E-41E1-9729-203FE71B17DC";
+ boundary="Apple-Mail=_B93263C9-3A80-4905-82C6-6E6F9DFBA2BA";
  protocol="application/pgp-signature"; micalg=pgp-sha256
 Mime-Version: 1.0 (Mac OS X Mail 16.0 \(3696.100.31\))
 From: Michael Sweet <msweet@msweet.org>
-In-Reply-To: <34366be2-d1fd-6ac8-2a60-3f091d5f596c@gmail.com>
-Date: Sun, 15 May 2022 15:34:08 -0400
-Message-Id: <9EFF5924-7325-4FD2-B04A-0B08112C48E4@msweet.org>
-References: <8FA81456-F65C-47A7-927D-50B4FE05E6D7@msweet.org>
- <0a8a483f-edec-212b-c4b7-029833de0d84@gmail.com>
- <917E2E0A-E1BA-4219-8C96-E0A31808BA11@msweet.org>
- <8db7ade3-a098-5ca1-d3b4-f1d2df02a8e6@gmail.com>
- <F24F1B74-BA5F-44F5-A083-4E8A925A3B6F@msweet.org>
- <34366be2-d1fd-6ac8-2a60-3f091d5f596c@gmail.com>
-Subject: Re: [Printing-architecture] PAPPL 1.2.0
+In-Reply-To: <4a81b64b-c2d8-bdce-a64c-8fe4697f0cbf@gmail.com>
+Date: Sun, 15 May 2022 15:37:15 -0400
+Message-Id: <DDD5F2DC-E1A4-4EEB-9613-CBEF15462563@msweet.org>
+References: <7AECB015-F222-4111-A05F-B57F68F76FAD@msweet.org>
+ <b3d58dc0-1405-fc42-34d7-e3964407b5da@gmail.com>
+ <D352678D-C1E1-4B39-96E1-EC54026FD4FF@msweet.org>
+ <2d78d025-3216-2d0f-aae6-a4e5db4e11d1@gmail.com>
+ <184255CD-9208-42EC-9919-3E980378E57E@msweet.org>
+ <4a81b64b-c2d8-bdce-a64c-8fe4697f0cbf@gmail.com>
+Subject: Re: [Printing-architecture] PAPPL 1.2rc1 (Supply levels)
 List-Id: Printing architecture under linux
  <printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>, 
@@ -35,49 +35,45 @@ To: Till Kamppeter <till.kamppeter@gmail.com>
 Cc: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>
 
 
---Apple-Mail=_02B99CFD-FE1E-41E1-9729-203FE71B17DC
+--Apple-Mail=_B93263C9-3A80-4905-82C6-6E6F9DFBA2BA
 Content-Transfer-Encoding: quoted-printable
 Content-Type: text/plain;
 	charset=us-ascii
 
 Till,
 
-> On May 15, 2022, at 3:01 PM, Till Kamppeter <till.kamppeter@gmail.com> =
+> On May 15, 2022, at 2:57 PM, Till Kamppeter <till.kamppeter@gmail.com> =
 wrote:
 >=20
-> On 15/05/2022 17:42, Michael Sweet wrote:
+> On 15/05/2022 17:30, Michael Sweet wrote:
 >> Till,
->> You will need to maintain a single strings file for each language =
-that is localized, among all of the added printers.  Then make sure to =
-remove any existing resource file before re-adding it, otherwise the =
-resource will not be added:
->>     // Update LOCALE.strings file
->>     papplSystemRemoveResource(system, "/LOCALE.strings");
->>     papplSystemAddStringsData/File(system, "/LOCALE.strings", =
-"LOCALE", ...);
+>> You can set it unconditionally; ideally I'd at least look at the =
+device URI and only do it for network printers.
 >=20
-> So it needs to be a single file for all printers set up? Or can it be =
-one per printer and per language (4 printers, each printer's PPD has 3 =
-languages -> 12 files)?
+> Set it unconditionally in pappl-retrofit, file =
+pappl-retrofit/pappl-retrofit.c:
+> ...
+> Now I get a "Supplies" button for each network printer setup.
+>=20
+> But clicking it does not show any ink levels, only a gauge as it would =
+appear above the ink level diagram (when comparing to what I see in the =
+test app of PAPPL where the ink levels are totally artificial).
+>=20
+> Printer is the HP OfficeJet Pro 8730.
+>=20
+> Can it be that the printer does not supply sufficient info? How can I =
+do a simple test on the printer?
 
-A single file for all printers.
+The "testpappl" program provided with PAPPL can be used to test the SNMP =
+stuff:
 
-Normally a printer application has a closed set of drivers, options, and =
-choices, but in your case the PPD files work against that assumption.  I =
-don't know that I want to change PAPPL just to accommodate =
-ps-printer-app when there is an easy enough workaround.
-
-> And the localization for PAPPL's UI has to be in the same file as the =
-localization for the vendor options?
-
-Yes, though most of that (if not all) is options/attributes and values =
-anyways.
-
-Anything provided by PAPPL is localized for you, you just provide =
-strings for anything specific/unique to your application.  Right now =
-PAPPL has built-in localizations for English, French, German, Italian, =
-Japanese, and Spanish.  I want to add more, obviously, but that will =
-depend on contributions...
+    git clone https://github.com/michaelrsweet/pappl.git
+    cd pappl
+    ./configure
+    make
+    testsuite/testpappl --get-id socket://IP-ADDRESS
+    testsuite/testpappl --get-status socket://IP-ADDRESS
+    testsuite/testpappl --get-supplies socket://IP-ADDRESS
 
 ________________________
 Michael Sweet
@@ -85,7 +81,7 @@ Michael Sweet
 
 
 
---Apple-Mail=_02B99CFD-FE1E-41E1-9729-203FE71B17DC
+--Apple-Mail=_B93263C9-3A80-4905-82C6-6E6F9DFBA2BA
 Content-Transfer-Encoding: 7bit
 Content-Disposition: attachment;
 	filename=signature.asc
@@ -95,19 +91,19 @@ Content-Description: Message signed with OpenPGP
 
 -----BEGIN PGP SIGNATURE-----
 
-iQIzBAEBCAAdFiEEkIbDzcZsP1Y8+PQFvmfHXsgfMkQFAmKBVbAACgkQvmfHXsgf
-MkSqTBAAuwotyPrhTznhZdKLkdPgfWtwSaAl/0yUb6vvIRvYwMcPs9g4pLMXRxID
-A3gbX9Rvk1j2M82IJgsVknEdjpb5a0Oax0/2jqbHzcd3E+7OnARkXAnurfFuhMRu
-huu7Y35bnvVw/ZpmKU89wAHzU9NoleA8Gu8E1rRMdyustMMIL7d/O1whsw27DhoD
-ATYK5jUBtzDYfkoTpvdzEf4ojJwmEf31VRaKrhc3SbSembC70wAALfnYI4vJeaJA
-5s1DUXurdZK+rqpU0QGCJlua9OBedZP5G2upjkOPQdqETE+kdw2FFM/2V+nBeIOo
-ZbQUeWfBE8qYQaXhwazr7QEx5sC5aaYVB12YAZqz/zmClFUKUjBkIVNvk7F8w295
-tRt0Ay7D4+l+QOAHEu+Y0Mw/8WvuoEPhkD/AiSL2hVtevmC2TaMOU3OBh9fF/K0L
-3jmRKbB5j/pkqEGG63d4b8zVLik4x71nhdeoT0DFx4A2mzAkB0gTtc0VqW4EAibo
-860j5gwhGRFUf+FJmERrgZdSY4ULKG4KGc8NOAzAv48UDD+XCko1+t1AJ7O1yts1
-o12jqP35p9H6Y6tyjxTPftbnypxq4A7cCs6VizD94xHIHyRre19xke0y//OjvSME
-MNLoAqoRjSZeclkrMNBoS0q4C2XH5PEWgVB/TN90WXm8l26jKdk=
-=ICh1
+iQIzBAEBCAAdFiEEkIbDzcZsP1Y8+PQFvmfHXsgfMkQFAmKBVmsACgkQvmfHXsgf
+MkSZ/hAAsnMHWIys2oqiqwPG95MbHAjyOEFXLEYemJGS9MP9DiHZ8SKV484zd6l3
+yZKTHzKgpi6SsbMVE24nw46makyAfCePRsDjldE7GVOKbEvOtiZBtT2RxM4C9Uwf
+bWa5IbK1uwMEy2gvMBLVoMV1Fnl20IwfU7AN0+8S3V51YwYwJjGPjEqz2Mkn/C7h
+yQcU32SOfyHBawaDXrHlEwNwzF1cWx3h/ZUw/QK5flg9UGrT04QgxxQj4IjR5MSl
+3qA5R1vSgaXt3AScZpxqG0/wAFHPkrbLsP2zmZryG+A9obY+v9vx2XS8rASgr+y9
+2Ro3muvLMdrIgyNwniuPRprGfpHYCXKAcoVXSfTzYBcjZx3HwLOqAAHxDzBTYwVM
+wQ0spjKIoay4/KZdjjbgiFsx8b3bWyHbOQosrULw2IkZdFGkAchsHv67Lqf/1IZW
+AVsZwvfhdQTM6JifPcxPQORqdzeSL42kE454UCNC+/qLLB+BVDTmiAz0zdp/CG+k
+2z1i2Ae43qAvOQwwm6hsRcw96PVSV7QhqJdyUSMZQbfOBJKtSWHnxOxW6py+3Lxi
+0mpjWRLa+qjF2jwFXSCIMeoiNuJtpapAYSUWnqvU85epoYxMg+/aC2MaB51hp9zG
+oY6g0KFeEcoSZ239hcsMwDKfxcKVLiUucdZYhDilkhPI0lkz2AA=
+=XYNV
 -----END PGP SIGNATURE-----
 
---Apple-Mail=_02B99CFD-FE1E-41E1-9729-203FE71B17DC--
+--Apple-Mail=_B93263C9-3A80-4905-82C6-6E6F9DFBA2BA--
