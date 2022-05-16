@@ -1,18 +1,18 @@
-Return-Path: <till.kamppeter@gmail.com>
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20210112;
- h=message-id:date:mime-version:user-agent:subject:content-language:to
- :cc:references:from:in-reply-to:content-transfer-encoding;
- bh=wlku8FAZxmvQ3IUEZBX20LG094RzNIwyr7XRgLddtZM=;
- b=FbnTU8QmT4KGQJZTyKrPk+g2BwQIoQ3VofN4jta9JRoWUzbMEJi/3JZzQUKlqqjDs/
- R5W/NntcOZW38nLxZIIW5B5OB/OmrdkRjHgg6HgDIyl5xQ1Uti4zxmU5AHeXW97hZSbk
- 5ybrST9eM+Mud0LCWKE3NTdBWBSnAK2VteEEvC/lTSJtclGdC0HK+0k1gJ4HG1HshmDB
- CC2AauEnXM7uh1sDeBb+ALqRVxNif6PWoc1m1QzxHqomELK8/pULJLkE88F9EGUue6l/
- 1LmunlYqtmhogo5wN0f+7tlVF9mMHvoTNMd06qYSRqjOwMqPITS6S91x8Axvqq9QbF8S
- gRaw==
-Message-ID: <05b501f9-7737-dbc6-603f-1ef242446ef8@gmail.com>
-Date: Mon, 16 May 2022 17:11:43 +0200
-MIME-Version: 1.0
-Content-Language: en-US
+Return-Path: <cloos@jhcloos.com>
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=jhcloos.com;
+ s=ore17; t=1652721220;
+ bh=PR2+474An3Lfl8V7iWl5eNQO+Prj1au6rrriB/2eUFw=;
+ h=From:To:Cc:Subject:In-Reply-To:References:Date:From;
+ b=jL4rCbcRgH9YGvYm2mXnr4wuhhrgJ8iMfLmnHPafuYGLbhtN0BpWYxkemMrtFRmE2
+ qDlRb4L16OOhFJzO+I562J97iMmgLANU8ssHygaqaNQu/xIe86pDdg5G7jd+/a3gey
+ 3+V8eQ/tOXqTywouPLHm4FCdHXK13KQC6UIqOWDCpN5wfFNzm54Hs05uiRGN9kjXlY
+ zjBr2qEqgB/NFsdCIuGfZ7OXZ0r9CPlIlroFGA7R5xGCgHLu8WQHKUWEqym10ebicn
+ PMzTdvpFNK2YkGkw1/inMaDonrMEXWvzfXXLavNB4ZfrWKAik2IhrmDfM+g/lgCfUE
+ z2P1D6p1/VOOQ==
+From: James Cloos <cloos@jhcloos.com>
+In-Reply-To: <FB549E97-8B2E-45A1-9550-684DC2A499B7@msweet.org> (Michael Sweet
+ via Printing-architecture's message of "Mon, 16 May 2022 10:46:18
+ -0400")
 References: <7AECB015-F222-4111-A05F-B57F68F76FAD@msweet.org>
  <b3d58dc0-1405-fc42-34d7-e3964407b5da@gmail.com>
  <D352678D-C1E1-4B39-96E1-EC54026FD4FF@msweet.org>
@@ -20,16 +20,12 @@ References: <7AECB015-F222-4111-A05F-B57F68F76FAD@msweet.org>
  <184255CD-9208-42EC-9919-3E980378E57E@msweet.org>
  <4a81b64b-c2d8-bdce-a64c-8fe4697f0cbf@gmail.com>
  <DDD5F2DC-E1A4-4EEB-9613-CBEF15462563@msweet.org>
- <04994e7b-3400-0c73-9b6c-be63587775df@gmail.com>
- <7A3378E6-E927-483A-9CD6-7780226A2EF2@msweet.org>
- <099283be-d7a2-c81e-258a-3c90e89ab3ef@gmail.com>
- <A98D57DF-B7E9-4D8D-AEBA-061E1E6013A2@msweet.org>
- <7d62d52d-f7ac-5131-f51c-98a5ad286026@gmail.com>
- <B715B740-C6FA-48FC-8F95-3B92CAF273B7@msweet.org>
-From: Till Kamppeter <till.kamppeter@gmail.com>
-In-Reply-To: <B715B740-C6FA-48FC-8F95-3B92CAF273B7@msweet.org>
-Content-Type: text/plain; charset=UTF-8; format=flowed
-Content-Transfer-Encoding: 7bit
+ <m3y1z1o89y.fsf@carbon.jhcloos.org>
+ <FB549E97-8B2E-45A1-9550-684DC2A499B7@msweet.org>
+Date: Mon, 16 May 2022 13:13:33 -0400
+Message-ID: <m3sfp9o0xu.fsf@carbon.jhcloos.org>
+MIME-Version: 1.0
+Content-Type: text/plain
 Subject: Re: [Printing-architecture] PAPPL 1.2rc1 (Supply levels)
 List-Id: Printing architecture under linux
  <printing-architecture.lists.linux-foundation.org>
@@ -40,22 +36,14 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>, 
  <mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Michael Sweet <msweet@msweet.org>
-Cc: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>
+To: Michael Sweet via Printing-architecture <printing-architecture@lists.linux-foundation.org>
+Cc: Till Kamppeter <till.kamppeter@gmail.com>
 
-On 16/05/2022 16:35, Michael Sweet wrote:
-> Till,
-> 
-> The status callback is called as needed, so you basically need to open the printer device, query, and set the supplies from the response.  Look at the "pcl_status" code in my hp-printer-app for a complete example:
-> 
->      https://github.com/michaelrsweet/hp-printer-app
-> 
-> You don't need the "dummy" sample values I include in hp-printer-app (it is still mostly sample code, even if people are apparently using it :) - if you don't get a response, just don't set the supplies.
-> 
+the failing box still had 2.2.6 on it.
 
-Perfect, that is what I was looking for. I will apply it to 
-pappl-retrofit soon.
+i'm in the process of trying to update that, but a simple emerge cups
+failed.....
 
-Thank you very much.
-
-    Till
+-JimC
+-- 
+James Cloos <cloos@jhcloos.com>         OpenPGP: 0x997A9F17ED7DAEA6
