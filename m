@@ -1,18 +1,18 @@
-Return-Path: <till.kamppeter@gmail.com>
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20210112;
- h=message-id:date:mime-version:user-agent:subject:content-language:to
- :cc:references:from:in-reply-to:content-transfer-encoding;
- bh=Q7BqlyTIa47tPLbgmBluwoQdOuqgsWTZxEnFBe3XK1M=;
- b=WJmmyRkE2DeQHjf4Todsv4YOccvnl4eYQgMsf/vzIOVx7vjs8YUL2Dh5noDXXOFqNS
- 365W4qeH26x+RvJQ4Knw6yh9w2a/XPa2tx3EOqYuTZL2xuqNevsJztTJUC62Bwz0YVMm
- 4nQjTxRAElWUpRMAt+W89xOtAFK+bGSCF0YIfWLf5/WpGZM75dQAHTXIoojT0jy87EOe
- JizU9b67RsbDZrDXPc2Uu8q2+wYiPgyNiN+0VwZDhT0uL11+wmvtO/R0D5KVrby5cuum
- kaXhdyOtMf+ywc1EYLWU3h7ZHdqs71WvWoiQlM6MlQ3il10C02yCsqIH9JRLZt+VGJN2
- 8CHQ==
-Message-ID: <0ab53906-eeb8-e359-c720-27236dcbf7dd@gmail.com>
-Date: Mon, 16 May 2022 21:58:01 +0200
-MIME-Version: 1.0
-Content-Language: en-US
+Return-Path: <cloos@jhcloos.com>
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=jhcloos.com;
+ s=ore17; t=1652731385;
+ bh=pxNESO77xESHYIIORIrjVzLjvCtkP2hO0zjVs7/I/Dg=;
+ h=From:To:Cc:Subject:In-Reply-To:References:Date:From;
+ b=VlQW5dhEXXKXR35VZUGKY83glk+AtWcKS8s4ANn9ht9sWSrlYZuqIabJ2jzxFW9aS
+ l/ENl1hfVYcemtg1WPlNhr22L2gMYp9eeb4hfWWrsUxC57l7nfnXTm5Ti2WGqCVwhl
+ +vVwNW+HFrH1/JyeD3gD4wir743hkNH/okvfc4BMT8dTimP/zA2RDFuj9IzmcudayO
+ 1V8L3npSsGZLt/ZdnHBppN9H6+HFUwxkuzHq6I1BP6DkKLg8U8bjcDeGd3yGEjJFlD
+ H74xObgDeNvrpXmmUaZFu+cqTYh7bZst4yoXIS8m9DyPvOcS1xUFE3miDbuDDjq2kA
+ g7LNJgUn1YUgg==
+From: James Cloos <cloos@jhcloos.com>
+In-Reply-To: <E70BA899-B53D-454A-851C-9A182ADE0FCC@msweet.org> (Michael Sweet
+ via Printing-architecture's message of "Mon, 16 May 2022 13:39:21
+ -0400")
 References: <7AECB015-F222-4111-A05F-B57F68F76FAD@msweet.org>
  <b3d58dc0-1405-fc42-34d7-e3964407b5da@gmail.com>
  <D352678D-C1E1-4B39-96E1-EC54026FD4FF@msweet.org>
@@ -20,16 +20,14 @@ References: <7AECB015-F222-4111-A05F-B57F68F76FAD@msweet.org>
  <184255CD-9208-42EC-9919-3E980378E57E@msweet.org>
  <4a81b64b-c2d8-bdce-a64c-8fe4697f0cbf@gmail.com>
  <DDD5F2DC-E1A4-4EEB-9613-CBEF15462563@msweet.org>
- <04994e7b-3400-0c73-9b6c-be63587775df@gmail.com>
- <7A3378E6-E927-483A-9CD6-7780226A2EF2@msweet.org>
- <099283be-d7a2-c81e-258a-3c90e89ab3ef@gmail.com>
- <A98D57DF-B7E9-4D8D-AEBA-061E1E6013A2@msweet.org>
- <7d62d52d-f7ac-5131-f51c-98a5ad286026@gmail.com>
- <B715B740-C6FA-48FC-8F95-3B92CAF273B7@msweet.org>
-From: Till Kamppeter <till.kamppeter@gmail.com>
-In-Reply-To: <B715B740-C6FA-48FC-8F95-3B92CAF273B7@msweet.org>
-Content-Type: text/plain; charset=UTF-8; format=flowed
-Content-Transfer-Encoding: 7bit
+ <m3y1z1o89y.fsf@carbon.jhcloos.org>
+ <FB549E97-8B2E-45A1-9550-684DC2A499B7@msweet.org>
+ <m3sfp9o0xu.fsf@carbon.jhcloos.org>
+ <E70BA899-B53D-454A-851C-9A182ADE0FCC@msweet.org>
+Date: Mon, 16 May 2022 16:02:58 -0400
+Message-ID: <m3ilq5nt3h.fsf@carbon.jhcloos.org>
+MIME-Version: 1.0
+Content-Type: text/plain
 Subject: Re: [Printing-architecture] PAPPL 1.2rc1 (Supply levels)
 List-Id: Printing architecture under linux
  <printing-architecture.lists.linux-foundation.org>
@@ -40,32 +38,40 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>, 
  <mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Michael Sweet <msweet@msweet.org>
-Cc: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>
+To: Michael Sweet via Printing-architecture <printing-architecture@lists.linux-foundation.org>
+Cc: Till Kamppeter <till.kamppeter@gmail.com>
 
-Thank you very much, Mike!
+>>>>> "MS" == Michael Sweet via Printing-architecture <printing-architecture@lists.linux-foundation.org> writes:
 
-It works now!
+MS> It looks like the change was made in CUPS 2.2.7 to use the new name.
+MS> I've pushed a workaround to the PAPPL repository - please let me know
+MS> whether that fixes things for you.
 
-I have done the same implementation as with hp-printer-app in 
-pappl-retrofit now and I get supply levels! At least if I use one of 
-PAPPLs own backends (and not embedded CUPS backends) and network printers.
+cups 2.4.0_pre refused to emergem but 2.3.3_p2-r3 succeeded.
 
-Later on I will see how to do it with the CUPS backends (they are custom 
-scheme "cups:", any hints welcome) and also whether one can use 
-hp-levels of HPLIP in the HPLIP Printer Application so that there one 
-can also get supply levels of USB printers.
+before that, there was still another failure due to the older cups.
 
-https://github.com/OpenPrinting/pappl-retrofit/commit/f5ba4229ddb
+but pappl compiles fine with 2.3.3_p2-r3 installed.
 
-    Till
+on all of the boxen snmp:// fails even though socket:// uses snmp to get
+its data.
 
-On 16/05/2022 16:35, Michael Sweet wrote:
-> Till,
-> 
-> The status callback is called as needed, so you basically need to open the printer device, query, and set the supplies from the response.  Look at the "pcl_status" code in my hp-printer-app for a complete example:
-> 
->      https://github.com/michaelrsweet/hp-printer-app
-> 
-> You don't need the "dummy" sample values I include in hp-printer-app (it is still mostly sample code, even if people are apparently using it :) - if you don't get a response, just don't set the supplies.
-> 
+strace shoes that it succeeds in gettig snmp date, but it prints
+nothing.
+
+the strace output ends with:
+
+recvfrom(3, "00\2\1\0\4\6public\242#\2\1\4\2\1\0\2\1\0000\0300\26\6\20+\6\1\4\1\225\v\1\2\1\3\1\1\6\1\1\2\2\2\3", 1472, 0, {sa_family=AF_INET, sin_port=htons(161), sin_addr=inet_addr("192.168.1.5")}, [256 => 16]) = 50
+pselect6(4, [3], NULL, NULL, {tv_sec=2, tv_nsec=0}, NULL) = 1 (in [3], left {tv_sec=1, tv_nsec=990743222})
+recvfrom(3, "0+\2\1\0\4\6public\242\36\2\1\4\2\1\2\2\1\0010\0230\21\6\r+\6\1\4\1\205+\6\3\1\4\21\0\5\0", 1472, 0, {sa_family=AF_INET, sin_port=htons(161), sin_addr=inet_addr("192.168.1.5")}, [256 => 16]) = 45
+pselect6(4, [3], NULL, NULL, {tv_sec=2, tv_nsec=0}, NULL) = 0 (Timeout)
+pselect6(4, [3], NULL, NULL, {tv_sec=2, tv_nsec=0}, NULL) = 0 (Timeout)
+close(3)                                = 0
+exit_group(1)                           = ?
++++ exited with 1 +++
+
+(that trace is from my magicolor.  my cheap inkjet shows a similar end.)
+
+-JimC
+-- 
+James Cloos <cloos@jhcloos.com>         OpenPGP: 0x997A9F17ED7DAEA6
