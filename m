@@ -1,20 +1,18 @@
-Return-Path: <msweet@msweet.org>
-DKIM-Filter: OpenDKIM Filter v2.11.0 mail.msweet.org 94D7D826FC
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=msweet.org;
- s=default; t=1652711703;
- bh=bSZSdX7Ml0cSoDDRDFHljchDagGA5LMwESq178+CgOU=;
- h=Subject:From:In-Reply-To:Date:Cc:References:To:From;
- b=jK/kPyhGQe++JaGtWPxZ23vpIJyyHdQuicpwGOcf9FBHZKQKOishdRjN04TFjAwfF
- XA2wF0+34ztgbMTDS8OwF0kJsaGGYAwJShVbVU08xNO4xSKLhZHNimz4uk46h3HjUn
- fDmwo59CPKtvAbifa3K4NwlaubpDPsXCBjHFBVls=
-Content-Type: multipart/signed;
- boundary="Apple-Mail=_D6474BCE-B186-4625-BF42-62240863E692";
- protocol="application/pgp-signature"; micalg=pgp-sha256
-Mime-Version: 1.0 (Mac OS X Mail 16.0 \(3696.100.31\))
-From: Michael Sweet <msweet@msweet.org>
-In-Reply-To: <7d62d52d-f7ac-5131-f51c-98a5ad286026@gmail.com>
-Date: Mon, 16 May 2022 10:35:00 -0400
-Message-Id: <B715B740-C6FA-48FC-8F95-3B92CAF273B7@msweet.org>
+Return-Path: <cloos@jhcloos.com>
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=jhcloos.com;
+ s=ore17; t=1652711713;
+ bh=LfepD7pq0lkFeFxQ2VDhbsYSQJSl4OPFmyUe0JBXjLE=;
+ h=From:To:Cc:Subject:In-Reply-To:References:Date:From;
+ b=Y5Z2rA1MH+RMBY/yxQJpBbkVNAOYZz0sjn4Qb1WtNuXFfR4jOCOBsD3pltm3jIXF7
+ nB9KGjJw+F8BcJCSn0mt1uOVp7/GHtfzTGLXK9QGlxn62dyF3pcpbDFSIvjz7E0NLn
+ 7D3dPf7HuudXLsnAdMDC34rDOv6SxkJT9cP4kjrAL9NMGkZfnxXjAkCbHUb9QeuYnn
+ hSYagUvK2jvgrWqKgAAvCSV1iLRub17YajVhRX50gRL+7/xD8swR5gvQDsrsmw628y
+ ciL5OeRAd7Qih157OLEAQSK05PuITmptwq6vRQ/qctLa+DmJNoXseSnEVV+3lxXrLl
+ bqBp2AHcKJ77w==
+From: James Cloos <cloos@jhcloos.com>
+In-Reply-To: <DDD5F2DC-E1A4-4EEB-9613-CBEF15462563@msweet.org> (Michael Sweet
+ via Printing-architecture's message of "Sun, 15 May 2022 15:37:15
+ -0400")
 References: <7AECB015-F222-4111-A05F-B57F68F76FAD@msweet.org>
  <b3d58dc0-1405-fc42-34d7-e3964407b5da@gmail.com>
  <D352678D-C1E1-4B39-96E1-EC54026FD4FF@msweet.org>
@@ -22,11 +20,10 @@ References: <7AECB015-F222-4111-A05F-B57F68F76FAD@msweet.org>
  <184255CD-9208-42EC-9919-3E980378E57E@msweet.org>
  <4a81b64b-c2d8-bdce-a64c-8fe4697f0cbf@gmail.com>
  <DDD5F2DC-E1A4-4EEB-9613-CBEF15462563@msweet.org>
- <04994e7b-3400-0c73-9b6c-be63587775df@gmail.com>
- <7A3378E6-E927-483A-9CD6-7780226A2EF2@msweet.org>
- <099283be-d7a2-c81e-258a-3c90e89ab3ef@gmail.com>
- <A98D57DF-B7E9-4D8D-AEBA-061E1E6013A2@msweet.org>
- <7d62d52d-f7ac-5131-f51c-98a5ad286026@gmail.com>
+Date: Mon, 16 May 2022 10:35:05 -0400
+Message-ID: <m3y1z1o89y.fsf@carbon.jhcloos.org>
+MIME-Version: 1.0
+Content-Type: text/plain
 Subject: Re: [Printing-architecture] PAPPL 1.2rc1 (Supply levels)
 List-Id: Printing architecture under linux
  <printing-architecture.lists.linux-foundation.org>
@@ -37,80 +34,62 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>, 
  <mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Till Kamppeter <till.kamppeter@gmail.com>
-Cc: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>
+To: Michael Sweet via Printing-architecture <printing-architecture@lists.linux-foundation.org>
+Cc: Till Kamppeter <till.kamppeter@gmail.com>
+
+>>>>> "MS" == Michael Sweet via Printing-architecture <printing-architecture@lists.linux-foundation.org> writes:
+
+MS> The "testpappl" program provided with PAPPL can be used to test the SNMP stuff:
+
+MS>     git clone https://github.com/michaelrsweet/pappl.git
+MS>     cd pappl
+MS>     ./configure
+MS>     make
+MS>     testsuite/testpappl --get-id socket://IP-ADDRESS
+MS>     testsuite/testpappl --get-status socket://IP-ADDRESS
+MS>     testsuite/testpappl --get-supplies socket://IP-ADDRESS
+
+i wanted to check that out with my printers.
+
+it worked well for socket: on one of my boxen, but on my main
+workstation i got:
+
+Compiling printer-webif.c...
+printer-webif.c: In function '_papplPrinterWebCancelAllJobs':
+printer-webif.c:64:42: error: 'HTTP_STATUS_FOUND' undeclared (first use in this function); did you mean 'HTTP_STATUS_GONE'?
+   64 |       papplClientRespondRedirect(client, HTTP_STATUS_FOUND, path);
+      |                                          ^~~~~~~~~~~~~~~~~
+      |                                          HTTP_STATUS_GONE
+printer-webif.c:64:42: note: each undeclared identifier is reported only once for each function it appears in
+printer-webif.c: In function '_papplPrinterWebCancelJob':
+printer-webif.c:169:44: error: 'HTTP_STATUS_FOUND' undeclared (first use in this function); did you mean 'HTTP_STATUS_GONE'?
+  169 |         papplClientRespondRedirect(client, HTTP_STATUS_FOUND, path);
+      |                                            ^~~~~~~~~~~~~~~~~
+      |                                            HTTP_STATUS_GONE
+printer-webif.c: In function '_papplPrinterWebDelete':
+printer-webif.c:784:42: error: 'HTTP_STATUS_FOUND' undeclared (first use in this function); did you mean 'HTTP_STATUS_GONE'?
+  784 |       papplClientRespondRedirect(client, HTTP_STATUS_FOUND, "/");
+      |                                          ^~~~~~~~~~~~~~~~~
+      |                                          HTTP_STATUS_GONE
+printer-webif.c: In function '_papplPrinterWebReprintJob':
+printer-webif.c:1414:50: error: 'HTTP_STATUS_FOUND' undeclared (first use in this function); did you mean 'HTTP_STATUS_GONE'?
+ 1414 |               papplClientRespondRedirect(client, HTTP_STATUS_FOUND, path);
+      |                                                  ^~~~~~~~~~~~~~~~~
+      |                                                  HTTP_STATUS_GONE
+make[1]: *** [../Makedefs:75: printer-webif.o] Error 1
+make: *** [Makefile:28: all] Error 1
 
 
---Apple-Mail=_D6474BCE-B186-4625-BF42-62240863E692
-Content-Transfer-Encoding: quoted-printable
-Content-Type: text/plain;
-	charset=us-ascii
+make -k showed a number of similar issues in other files.
 
-Till,
+obviously some dependency is too old; where does HTTP_STATUS_FOUND come
+from?
 
-The status callback is called as needed, so you basically need to open =
-the printer device, query, and set the supplies from the response.  Look =
-at the "pcl_status" code in my hp-printer-app for a complete example:
+in any case it looks like configure fail to notice that said dep is too
+old.
 
-    https://github.com/michaelrsweet/hp-printer-app
-
-You don't need the "dummy" sample values I include in hp-printer-app (it =
-is still mostly sample code, even if people are apparently using it :) - =
-if you don't get a response, just don't set the supplies.
-
-> On May 16, 2022, at 3:05 AM, Till Kamppeter <till.kamppeter@gmail.com> =
-wrote:
->=20
->=20
->=20
-> On 16/05/2022 00:31, Michael Sweet wrote:
->> Till,
->>> On May 15, 2022, at 5:47 PM, Till Kamppeter =
-<till.kamppeter@gmail.com> wrote:
->>> ...
->>> The answers with the SNMP URI take some seconds, with the DNS-SD URI =
-they are instantaneous.
->> That's to be expected - SNMP name resolution is slow... :/
->> Have you implemented the status callback or added a call to =
-papplDeviceGetSupplies anywhere in ps-printer-app?
->=20
-> I have a status callback, but without papplDeviceGetSupplies() call. =
-How do I call it in this case. As only example I see the code for =
-"--get-supplies" in testsuite/testpappl.c. But how does the array with =
-the output make it into the web interface page?
->=20
->   Till
->=20
-
-________________________
-Michael Sweet
+-JimC
+-- 
+James Cloos <cloos@jhcloos.com>         OpenPGP: 0x997A9F17ED7DAEA6
 
 
-
-
---Apple-Mail=_D6474BCE-B186-4625-BF42-62240863E692
-Content-Transfer-Encoding: 7bit
-Content-Disposition: attachment;
-	filename=signature.asc
-Content-Type: application/pgp-signature;
-	name=signature.asc
-Content-Description: Message signed with OpenPGP
-
------BEGIN PGP SIGNATURE-----
-
-iQIzBAEBCAAdFiEEkIbDzcZsP1Y8+PQFvmfHXsgfMkQFAmKCYRQACgkQvmfHXsgf
-MkQSaQ/+MDtZAn6pJp7qVSJExtnuU2I3wH+vXr8dMuJBlXbRWMlSN8ohQ4WKxo3+
-bH+PvN9f8BbUhC5+8+l47ee7h9lWuLDf4EvR2Epwh0gth2C1lk7LaFNnErS/3uBX
-eDYr3iLCkCuBjMid5WrcT8qEyvT1Jf6AY1qXxW6rtpm9gwgWkh8vbfqoKA4HBkq4
-uLnzlrTcEl5gIrbKauNgKPOO6jDqlS0J6Z3srwR9H2TzoK/nPq9kXRVEzVkEEy3u
-WsbCLCothtjVJdtEbRSzlHeMbJ7RRTOuCvoTKYZpYFRdEPgRCg+Mk88ufOpZi7Sw
-2M2EnNOeo5tesP6xa0x+GjojqFm0pZmwJFAjG2SjsBXuRDCFDeMSwD2CE3s5HHaR
-KhNSRWIayU2sklhvijZmwl0gd8twrjGqSrvfjzapj7WWlaHrwxdOR9+37W+8Cnt1
-7jiN9nkCGczZwWb+NbBrK+uq6OIcY86b19fBWIQleqXfEHEcMr/wcFfbOjoeC6go
-1vOE/Nh9zgoexwKXGsMS7MEpl5kIJGN5NEmthfozPi9RZWxjZab+ifmW6TqIb1aK
-H1oLMHNdTKFcsg1Mc2VM6RgiIya7wwlz6jS8AM91p1M0+gbJMOxhalHN+7K6buY6
-w/+qLPw4ikv6PtRwrY5UujshmEwfmoCpDrYaZuzJfO9SlG9zbcE=
-=H3kX
------END PGP SIGNATURE-----
-
---Apple-Mail=_D6474BCE-B186-4625-BF42-62240863E692--
