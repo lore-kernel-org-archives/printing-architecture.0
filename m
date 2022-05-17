@@ -1,33 +1,22 @@
-Return-Path: <msweet@msweet.org>
-DKIM-Filter: OpenDKIM Filter v2.11.0 mail.msweet.org 23F0480B71
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=msweet.org;
- s=default; t=1652791527;
- bh=ZCxBuQ/mjWRqC7IE9hiGoorBuxRIGIHlLsHv1/MteaM=;
- h=Subject:From:In-Reply-To:Date:Cc:References:To:From;
- b=FrgphyxCF7ouYLJt1fo8Fru3XPu9jzFp5/Eo3HKhr7QF6OtcO5D1EbwxASF3NBDE/
- RkIF6WedjeTOrjQX3fPtUcIETEEUTab+j1SLlObs+YDRtxj6xF6eKjpWoES93Zqn0Y
- DB5bGMn0i8olO0vS8/TvbTfDxGEoO+fmyV6oeB3Y=
-Content-Type: multipart/signed;
- boundary="Apple-Mail=_3E5897AC-4E6C-4A7A-B2B9-6A0D16BE4F0A";
- protocol="application/pgp-signature"; micalg=pgp-sha256
-Mime-Version: 1.0 (Mac OS X Mail 16.0 \(3696.100.31\))
-From: Michael Sweet <msweet@msweet.org>
-In-Reply-To: <m3ilq5nt3h.fsf@carbon.jhcloos.org>
-Date: Tue, 17 May 2022 08:45:25 -0400
-Message-Id: <CB76AAD0-BDAD-4E7C-9CB6-1DBE92D5A055@msweet.org>
-References: <7AECB015-F222-4111-A05F-B57F68F76FAD@msweet.org>
- <b3d58dc0-1405-fc42-34d7-e3964407b5da@gmail.com>
- <D352678D-C1E1-4B39-96E1-EC54026FD4FF@msweet.org>
- <2d78d025-3216-2d0f-aae6-a4e5db4e11d1@gmail.com>
- <184255CD-9208-42EC-9919-3E980378E57E@msweet.org>
- <4a81b64b-c2d8-bdce-a64c-8fe4697f0cbf@gmail.com>
- <DDD5F2DC-E1A4-4EEB-9613-CBEF15462563@msweet.org>
- <m3y1z1o89y.fsf@carbon.jhcloos.org>
- <FB549E97-8B2E-45A1-9550-684DC2A499B7@msweet.org>
- <m3sfp9o0xu.fsf@carbon.jhcloos.org>
- <E70BA899-B53D-454A-851C-9A182ADE0FCC@msweet.org>
- <m3ilq5nt3h.fsf@carbon.jhcloos.org>
-Subject: Re: [Printing-architecture] PAPPL 1.2rc1 (Supply levels)
+Return-Path: <blueroofmusic@gmail.com>
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20210112;
+ h=mime-version:references:in-reply-to:from:date:message-id:subject:to;
+ bh=3Cz1qkNl9Hv6fvn0VXAQUMwLkV029U3c/NYrbNPCWx4=;
+ b=cC8WarSKqmytx8jB2lG50RPazFli+cVMduFBYrXIRv9KbFdDWbJn4b/GtWnpSiyN2I
+ sHIuNpcp65D0luwq7jpewWiHUygiFYZ2yt98Nd3hYPzyJ1eVS8H4bmVs1+qkDhJXdJkb
+ DGAGT44LUdllc6fEEPvz//YfNSkh34dEpNvy0OGvNnlPzwZnsalsmrZqHoBB16Oc5C5c
+ ILYHWnoBK3ZGz/Byu9KTg3aASDfKzBDP4U5w+hSrMGnEBo5ngOe7+xnlmq69H4vEA0sF
+ 35wvIQan8o0rLeq+iwlTLU6kUJYnJiLZ9SqdUQLmOnPmiFTmv9OXJaW+K8EGgUTgaYdm
+ blfg==
+MIME-Version: 1.0
+References: <mailman.312.1652792466.17602.pwg-announce@pwg.org>
+In-Reply-To: <mailman.312.1652792466.17602.pwg-announce@pwg.org>
+From: Ira McDonald <blueroofmusic@gmail.com>
+Date: Tue, 17 May 2022 09:37:14 -0400
+Message-ID: <CAN40gStcgZMNQP+OtxwV9J30srFZCT_uQCQgGwZz-r+xmoPU8A@mail.gmail.com>
+Content-Type: multipart/alternative; boundary="000000000000ba012a05df353d13"
+Subject: [Printing-architecture] Fwd: [PWG-Announce] PWG / OpenPrinting May
+ 2022 Virtual Face to Face - May 17-19, 2022 - Today!
 List-Id: Printing architecture under linux
  <printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>, 
@@ -37,112 +26,133 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>, 
  <mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: James Cloos <cloos@jhcloos.com>
-Cc: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>, Till Kamppeter <till.kamppeter@gmail.com>
+To: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>
+
+--000000000000ba012a05df353d13
+Content-Type: text/plain; charset="UTF-8"
+
+Hi OP folks,
+
+All final slides are now posted for this interesting and full agenda.
+
+Cheers,
+- Ira (PWG Secretary, OP Chair)
+
+*Ira McDonald (Musician / Software Architect)*
+
+*Chair - SAE Trust Anchors and Authentication TF*
+*Co-Chair - TCG Trusted Mobility Solutions WG*
+
+*Co-Chair - TCG Metadata Access Protocol SG*
 
 
---Apple-Mail=_3E5897AC-4E6C-4A7A-B2B9-6A0D16BE4F0A
+
+
+
+
+
+
+*Chair - Linux Foundation Open Printing WGSecretary - IEEE-ISTO Printer
+Working GroupCo-Chair - IEEE-ISTO PWG Internet Printing Protocol WGIETF
+Designated Expert - IPP & Printer MIBBlue Roof Music / High North
+Inchttp://sites.google.com/site/blueroofmusic
+<http://sites.google.com/site/blueroofmusic>http://sites.google.com/site/highnorthinc
+<http://sites.google.com/site/highnorthinc>mailto: blueroofmusic@gmail.com
+<blueroofmusic@gmail.com>(permanent) PO Box 221  Grand Marais, MI 49839
+906-494-2434*
+
+
+---------- Forwarded message ---------
+From: ISTO Printer Working Group announcement forum via pwg-announce <
+pwg-announce@pwg.org>
+Date: Tue, May 17, 2022 at 9:01 AM
+Subject: [PWG-Announce] PWG / OpenPrinting May 2022 Virtual Face to Face -
+May 17-19, 2022 - Today!
+To: <pwg-announce@pwg.org>
+
+
+Hello All,
+
+The PWG / Linux Foundation OpenPrinting Spring Virtual Face-to-Face event
+will be held May 17 - 19, 2022, beginning today at 10:00AM EDT.
+
+Since this is a virtual event, all sessions will be held via WebEx.   The event
+page <https://www.pwg.org/chair/meeting-info/may-2022-virtual.html> has the
+current agenda as well as the teleconference information.  Any and all
+interested parties are welcome to attend.  If you have any questions,
+please feel free to reach out.
+
+We have a great agenda lined up and hope to see everyone there!
+
+Thanks!
+Jeremy
+
+Jeremy Leber
+Chair, IEEE ISTO Printer Working Group
+chair@pwg.org
+jeremy.leber@lexmark.com
+_______________________________________________
+pwg-announce mailing list
+pwg-announce@pwg.org
+https://www.pwg.org/mailman/listinfo/pwg-announce
+
+--000000000000ba012a05df353d13
+Content-Type: text/html; charset="UTF-8"
 Content-Transfer-Encoding: quoted-printable
-Content-Type: text/plain;
-	charset=us-ascii
 
-James,
+<div dir=3D"ltr"><div>Hi OP folks,</div><div><br></div><div>All final slide=
+s are now posted for this interesting and full agenda.</div><div><br></div>=
+<div>Cheers,</div><div>- Ira (PWG Secretary, OP Chair)</div><div><br></div>=
+<div><div><div dir=3D"ltr" class=3D"gmail_signature" data-smartmail=3D"gmai=
+l_signature"><div dir=3D"ltr"><div><div dir=3D"ltr"><div><div dir=3D"ltr"><=
+div><div dir=3D"ltr"><div><div dir=3D"ltr"><div><div dir=3D"ltr"><div><div =
+dir=3D"ltr"><div><div dir=3D"ltr"><div><div dir=3D"ltr"><i><font size=3D"1"=
+>Ira McDonald (Musician / Software Architect)</font></i></div><div><i><font=
+ size=3D"1">Chair - SAE Trust Anchors and Authentication TF<br></font></i><=
+/div><div dir=3D"ltr"><i><font size=3D"1">Co-Chair - TCG Trusted Mobility S=
+olutions WG</font></i></div><div><i><font size=3D"1">Co-Chair - TCG Metadat=
+a Access Protocol SG<br></font></i></div><div dir=3D"ltr"><i><font size=3D"=
+1">Chair - Linux Foundation Open Printing WG<br>Secretary - IEEE-ISTO Print=
+er Working Group<br>Co-Chair - IEEE-ISTO PWG Internet Printing Protocol WG<=
+br>IETF Designated Expert - IPP &amp; Printer MIB<br>Blue Roof Music / High=
+ North Inc<br><a style=3D"color:rgb(51,51,255)" href=3D"http://sites.google=
+.com/site/blueroofmusic" target=3D"_blank">http://sites.google.com/site/blu=
+eroofmusic</a><br><a style=3D"color:rgb(102,0,204)" href=3D"http://sites.go=
+ogle.com/site/highnorthinc" target=3D"_blank">http://sites.google.com/site/=
+highnorthinc</a><br>mailto: <a href=3D"mailto:blueroofmusic@gmail.com" targ=
+et=3D"_blank">blueroofmusic@gmail.com</a><br>(permanent) PO Box 221=C2=A0 G=
+rand Marais, MI 49839=C2=A0 906-494-2434</font></i></div></div></div></div>=
+</div></div></div></div></div></div></div></div></div></div></div></div></d=
+iv></div></div><br><br><div class=3D"gmail_quote"><div dir=3D"ltr" class=3D=
+"gmail_attr">---------- Forwarded message ---------<br>From: <b class=3D"gm=
+ail_sendername" dir=3D"auto">ISTO Printer Working Group announcement forum =
+via pwg-announce</b> <span dir=3D"auto">&lt;<a href=3D"mailto:pwg-announce@=
+pwg.org">pwg-announce@pwg.org</a>&gt;</span><br>Date: Tue, May 17, 2022 at =
+9:01 AM<br>Subject: [PWG-Announce] PWG / OpenPrinting May 2022 Virtual Face=
+ to Face - May 17-19, 2022 - Today!<br>To:  &lt;<a href=3D"mailto:pwg-annou=
+nce@pwg.org">pwg-announce@pwg.org</a>&gt;<br></div><br><br><div dir=3D"ltr"=
+>Hello All,<br><div><br>The PWG / Linux Foundation OpenPrinting Spring Virt=
+ual Face-to-Face event will be held May 17 - 19, 2022, beginning today at 1=
+0:00AM EDT.=C2=A0=C2=A0 <br><br>Since this is a virtual event, all sessions=
+ will be held via WebEx. =C2=A0 The <a href=3D"https://www.pwg.org/chair/me=
+eting-info/may-2022-virtual.html" target=3D"_blank">event page</a>
+ has the current agenda as well as the teleconference information.=C2=A0 An=
+y=20
+and all interested parties are welcome to attend.=C2=A0 If you have any=20
+questions, please feel free to reach out.<br><br>We have a great agenda lin=
+ed up and hope to see everyone there!<br><br>Thanks!<br>Jeremy<font color=
+=3D"#888888"><font color=3D"#888888"><font color=3D"#888888"><br><br>Jeremy=
+ Leber<br>Chair, IEEE ISTO Printer Working Group<br><div><a href=3D"mailto:=
+chair@pwg.org" target=3D"_blank">chair@pwg.org</a></div><div><a href=3D"mai=
+lto:jeremy.leber@lexmark.com" target=3D"_blank">jeremy.leber@lexmark.com</a=
+></div></font></font></font></div></div>
+_______________________________________________<br>
+pwg-announce mailing list<br>
+<a href=3D"mailto:pwg-announce@pwg.org" target=3D"_blank">pwg-announce@pwg.=
+org</a><br>
+<a href=3D"https://www.pwg.org/mailman/listinfo/pwg-announce" rel=3D"norefe=
+rrer" target=3D"_blank">https://www.pwg.org/mailman/listinfo/pwg-announce</=
+a><br>
+</div></div></div>
 
-So "socket://ip-or-hostname" works but "snmp://name" doesn't?
-
-Can you send me (privately) a wireshark or tcpdump capture showing the =
-runs?  The SNMP "backend" in PAPPL is using the Host MIB to find the =
-named printer and use the response address as the printer's local IP =
-address.  It is a pitiful backup to DNS-SD and mDNS discovery, but a =
-somewhat necessary one given that certain popular label printers from a =
-vendor whose name starts with the last letter of the alphabet doesn't =
-implement mDNS nor do they provide an easy way to configure a static IP =
-for their network interfaces... :(
-
-
-
-> On May 16, 2022, at 4:02 PM, James Cloos <cloos@jhcloos.com> wrote:
->=20
->>>>>> "MS" =3D=3D Michael Sweet via Printing-architecture =
-<printing-architecture@lists.linux-foundation.org> writes:
->=20
-> MS> It looks like the change was made in CUPS 2.2.7 to use the new =
-name.
-> MS> I've pushed a workaround to the PAPPL repository - please let me =
-know
-> MS> whether that fixes things for you.
->=20
-> cups 2.4.0_pre refused to emergem but 2.3.3_p2-r3 succeeded.
->=20
-> before that, there was still another failure due to the older cups.
->=20
-> but pappl compiles fine with 2.3.3_p2-r3 installed.
->=20
-> on all of the boxen snmp:// fails even though socket:// uses snmp to =
-get
-> its data.
->=20
-> strace shoes that it succeeds in gettig snmp date, but it prints
-> nothing.
->=20
-> the strace output ends with:
->=20
-> recvfrom(3, =
-"00\2\1\0\4\6public\242#\2\1\4\2\1\0\2\1\0000\0300\26\6\20+\6\1\4\1\225\v\=
-1\2\1\3\1\1\6\1\1\2\2\2\3", 1472, 0, {sa_family=3DAF_INET, =
-sin_port=3Dhtons(161), sin_addr=3Dinet_addr("192.168.1.5")}, [256 =3D> =
-16]) =3D 50
-> pselect6(4, [3], NULL, NULL, {tv_sec=3D2, tv_nsec=3D0}, NULL) =3D 1 =
-(in [3], left {tv_sec=3D1, tv_nsec=3D990743222})
-> recvfrom(3, =
-"0+\2\1\0\4\6public\242\36\2\1\4\2\1\2\2\1\0010\0230\21\6\r+\6\1\4\1\205+\=
-6\3\1\4\21\0\5\0", 1472, 0, {sa_family=3DAF_INET, sin_port=3Dhtons(161), =
-sin_addr=3Dinet_addr("192.168.1.5")}, [256 =3D> 16]) =3D 45
-> pselect6(4, [3], NULL, NULL, {tv_sec=3D2, tv_nsec=3D0}, NULL) =3D 0 =
-(Timeout)
-> pselect6(4, [3], NULL, NULL, {tv_sec=3D2, tv_nsec=3D0}, NULL) =3D 0 =
-(Timeout)
-> close(3)                                =3D 0
-> exit_group(1)                           =3D ?
-> +++ exited with 1 +++
->=20
-> (that trace is from my magicolor.  my cheap inkjet shows a similar =
-end.)
->=20
-> -JimC
-> --
-> James Cloos <cloos@jhcloos.com>         OpenPGP: 0x997A9F17ED7DAEA6
->=20
-
-________________________
-Michael Sweet
-
-
-
-
---Apple-Mail=_3E5897AC-4E6C-4A7A-B2B9-6A0D16BE4F0A
-Content-Transfer-Encoding: 7bit
-Content-Disposition: attachment;
-	filename=signature.asc
-Content-Type: application/pgp-signature;
-	name=signature.asc
-Content-Description: Message signed with OpenPGP
-
------BEGIN PGP SIGNATURE-----
-
-iQIzBAEBCAAdFiEEkIbDzcZsP1Y8+PQFvmfHXsgfMkQFAmKDmOUACgkQvmfHXsgf
-MkQW0RAAqG2hovYAgIVfz9AZEHFBMcM+/gIIdJ+7Zygxs0FYcI6u3rLsFOVeTMS/
-ZMh4Gcu98hDizLaGIAw/1H7YOo04A7vY1KADZTnn6UHk/kbNQAvLrsAt0apPgeu1
-q/ZB8edZdppSIf4Gka6KdegEHUCP/EDnZYxms3IvFu6YL2h4lHckHmwJi5rD0eGc
-vhu6i++5IbCEx1JE0f2oNoFp602QIu75qkeIPYCkfvDrJKoHdGOi6JzLnt/cxkpG
-Bqjiz5wHCLU7hffME5T8M/tqUBP6lPEecd2JJuRQxRd5mnNtHS4RU1avAfHAH+t+
-aPPmC5yKeK+q1YAzSeXVxQetN/g22JNTMnh3mxFWe1Sd7xeqW2OUB1eUk2+0pugh
-dHpBtZENv7mEX0xWyCTn/J2DBzcB+ldM+a1dn4TQgbB2LDhsC0Up4vGGSXYbvgu8
-W3r2BMdFNeeIc7S9OfU5lm3rGPiS8V3sY3EK6Y0DNi9ywytV0iNJbm2IB4lyvsX9
-0qEy1+wueFewHnebsIc4YsYMfiuTjlBpXrSfKdJhGUM9b/hFez8Z1O0IfS206JL8
-ExCCPUGJ3bRG4QCSspekrk23M4P9C7AHr8oiTrPrkQqOKsDYKxh7B+buqqeDqXf9
-Eeulx2CIxK60dIDB5XntAobc2iHByYaRWSIk6XvdS8whL+4FIsc=
-=2G2E
------END PGP SIGNATURE-----
-
---Apple-Mail=_3E5897AC-4E6C-4A7A-B2B9-6A0D16BE4F0A--
+--000000000000ba012a05df353d13--
