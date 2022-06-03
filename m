@@ -1,20 +1,24 @@
-Return-Path: <msweet@msweet.org>
-DKIM-Filter: OpenDKIM Filter v2.11.0 mail.msweet.org 4E48F826DD
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=msweet.org;
- s=default; t=1653593649;
- bh=TcMzwkqdd+RSpppL2fSW41S+RF/2pl+xgs71IHUG/Mo=;
- h=From:Date:Subject:To:From;
- b=jFz0bZTPLSpFFCtgYRErrCo2IBHz1XeGkIkkF8ThwCO3XGuSyk866BLpag/OuQmrK
- cV3HDy6EuQH1rsn6sLaPjybKo/3rn265qLuRbfOSLnIHIqG6q35I+GUf9argGemgOy
- Wr/DHkHhmZ3cWe+6J44jKoMq6APzGPDGxPC8xoVE=
-From: Michael Sweet <msweet@msweet.org>
-Content-Type: multipart/signed;
- boundary="Apple-Mail=_BB902CFE-FC07-4344-A0D8-E6E11A9BE2E3";
- protocol="application/pgp-signature"; micalg=pgp-sha256
-Mime-Version: 1.0 (Mac OS X Mail 16.0 \(3696.100.31\))
-Date: Thu, 26 May 2022 15:34:07 -0400
-Message-Id: <9A85AB78-7678-4735-B304-361A4DCA3EAD@msweet.org>
-Subject: [Printing-architecture] PAPPL 1.2.1
+Return-Path: <till.kamppeter@gmail.com>
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20210112;
+ h=message-id:date:mime-version:user-agent:subject:content-language
+ :references:to:from:in-reply-to:content-transfer-encoding;
+ bh=WOkrPdkFWMPN/dDNYGxzmtRU9ALQvoE3xpbbp3fooLw=;
+ b=atw3pMPgKiku/09meHtyULeW5bwpUaco6HhQjH82e6k96Tnwsr8tbYtQacTyr2C0jj
+ 6Xznm7gTGoJ8jlBLpSUzHXtHygTT+J1iBR+MxLMqHazkK+XRfKy3kQIMo6tHageqhcST
+ 1kXs1SgpPy4vvCY1FFArUinrq7CsFeaI8/bQlttobA7VRrbAR+jD9rubvelJpcbrTaFQ
+ CCdHNeDhm2Ms1QJ9h46S0skara2MEiUny6kMuW6kRCvpAWjb22+XHEI79DtoKmJCtYtp
+ g+VG0sTHWITBAaEsD7jsVKrDkIxjLP9FRsfUkv6pe/sV1+HU4f2fxVCEY0hs/zwms1th
+ hkdA==
+Message-ID: <e1b94a78-77e8-722e-622a-9d6ab208acc3@gmail.com>
+Date: Fri, 3 Jun 2022 19:44:48 +0200
+MIME-Version: 1.0
+Content-Language: en-US
+References: <CH0PR10MB53059FA5EAD2316F4FB30C698FA19@CH0PR10MB5305.namprd10.prod.outlook.com>
+From: Till Kamppeter <till.kamppeter@gmail.com>
+In-Reply-To: <CH0PR10MB53059FA5EAD2316F4FB30C698FA19@CH0PR10MB5305.namprd10.prod.outlook.com>
+Content-Type: text/plain; charset="utf-8"; format="flowed"
+Content-Transfer-Encoding: 8bit
+Subject: [Printing-architecture] Summary of the OpenPrinting/PWG Summit
 List-Id: Printing architecture under linux
  <printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>, 
@@ -24,57 +28,108 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>, 
  <mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>
+To: Open Printing <printing-architecture@lists.linux-foundation.org>
+
+Hi,
+
+Jeremy Leber from Lexmark has posted the summary of this year's 
+OpenPrinting Summit:
+
+https://www.pwg.org/blog/pwg-may-2022-F2F-summary.html
+
+Jeremy, thanks a lot for it.
+
+It will get updated with a link to Ira's full OP meeting minutes once 
+those are available.
+
+    Till
 
 
---Apple-Mail=_BB902CFE-FC07-4344-A0D8-E6E11A9BE2E3
-Content-Transfer-Encoding: quoted-printable
-Content-Type: text/plain;
-	charset=us-ascii
-
-All,
-
-PAPPL v1.2.1 is now available for download from:
-
-	https://github.com/michaelrsweet/pappl/releases/tag/v1.2.1
-
-The new release fixes some key issues with localization, client limits, =
-and compiling against older versions of CUPS. Changes include:
-
-- Fixed a bug in the max-clients support code (Issue #205)
-- Fixed compiler warnings (Issue #206, Issue #207)
-- Fixed corruption in the English localization file.
-- PAPPL didn't compile against CUPS 2.2.6 and earlier.
-
-Enjoy!
-
-________________________
-Michael Sweet
+-------- Forwarded Message --------
+Subject: 	Re: Summary of the OpenPrinting/PWG Summit?
+Date: 	Fri, 3 Jun 2022 14:28:21 +0000
+From: 	Jeremy L Leber <jeremy.leber@lexmark.com>
+To: 	Ira McDonald <blueroofmusic@gmail.com>, Till Kamppeter 
+<till.kamppeter@gmail.com>
+CC: 	Kennedy, Smith (Wireless Architect) <smith.kennedy@hp.com>, Michael 
+Sweet <msweet@msweet.org>, Aveek Basu <basu.aveek@gmail.com>
 
 
---Apple-Mail=_BB902CFE-FC07-4344-A0D8-E6E11A9BE2E3
-Content-Transfer-Encoding: 7bit
-Content-Disposition: attachment;
-	filename=signature.asc
-Content-Type: application/pgp-signature;
-	name=signature.asc
-Content-Description: Message signed with OpenPGP
 
------BEGIN PGP SIGNATURE-----
+Hi Till,
 
-iQIzBAEBCAAdFiEEkIbDzcZsP1Y8+PQFvmfHXsgfMkQFAmKP1i8ACgkQvmfHXsgf
-MkTQig//Ryw66XfkjIOjRTr2eLrkFgPcoZujOXM5JpdDB91u5hsfKIvyjGbD6R/o
-SRGsvsnz2KmAl8iwX9nngubXFYKxmMWnOepL9kj0F5ZFoPxdqQJ7IY5GTWiNR/df
-ak7xe24lm5IG9mrY4f/bEcTKUY+U91FCmjEb9DOCEFP2MAz0wb50oTD/nJv2ssqX
-weLBW/SlXZPSIP9NcXYbG+ySKD7S0CpTFuQS8CJFl0peL0sa4oZG4M6+RvGm8NT2
-FIWU1gRqWAEcryEk9S7wsgm/fW5HrqpXN6YGI3VXrgk+qLjvodQM3+xNbCjXa0Hn
-8q6WBQZVdv7x51Q/0YtcTJNd0k7ZS0a8BiDbYDwfkPRHMvW/lwHYS3G3geLk9us3
-ZLKrI0H4rUZH6b3chTbSHJ6xalV8fJJToFQE+ngGVwZwZ1yLQvWORSDCk5IfM/wc
-Hn6eJNUW8PuVuqZfForOB0mBj2GW6o5qWTAHNIfWzu44bJrWEFKUXMOhlVUMCg3m
-ShrpnvyBcQUDH01SbjJ4X2r0xhBnwiOJoG3jYji/GnMNoFBc4/LdSDStMxrStEAN
-/8QfE6wZ5AfS/YlI70NvQbnu1w+ruhXlUP2kPwhu8HyBld8fVohFCHJDYd0TTHir
-ADLnTbO/i/4vt3I7QJaica1sDC78iMG+ML3gE3TSU7ov35AVJME=
-=eTGC
------END PGP SIGNATURE-----
+The meeting summary has been published here: 
+https://www.pwg.org/blog/pwg-may-2022-F2F-summary.html 
+<https://www.pwg.org/blog/pwg-may-2022-F2F-summary.html>
 
---Apple-Mail=_BB902CFE-FC07-4344-A0D8-E6E11A9BE2E3--
+We will update this with a link to Ira's full OP meeting minutes once 
+those are available.
+
+Thanks,
+Jeremy
+
+*Jeremy Leber*
+Product Owner, Connectivity Firmware
+Chair, IEEE-ISTO Printer Working Group
+
+*O*+1 859 825-4505
+jeremy.leber@lexmark.com <mailto:jeremy.leber@lexmark.com>
+chair@pwg.org <mailto:jeremy.leber@lexmark.com>
+
+<http://www.lexmark.com/>
+www.lexmark.com <http://www.lexmark.com/>
+
+------------------------------------------------------------------------
+*From:* Ira McDonald <blueroofmusic@gmail.com>
+*Sent:* Thursday, June 2, 2022 1:03 PM
+*To:* Till Kamppeter <till.kamppeter@gmail.com>; Ira McDonald 
+<blueroofmusic@gmail.com>
+*Cc:* Jeremy L Leber <jeremy.leber@lexmark.com>; Kennedy, Smith 
+(Wireless Architect) <smith.kennedy@hp.com>; Michael Sweet 
+<msweet@msweet.org>; Aveek Basu <basu.aveek@gmail.com>
+*Subject:* Re: Summary of the OpenPrinting/PWG Summit?
+Hi Till,
+
+And I am stuck in a five-day ISO WG12 conference all week.  I will work
+on OP Summit summary minutes over the weekend.  Jeremy has already
+written good paragraph-level summaries of each of the PWG and the OP
+sessions in his overall meeting summary.
+
+Cheers,
+- Ira
+
+/Ira McDonald (Musician / Software Architect)/
+/Chair - SAE Trust Anchors and Authentication TF
+/
+/Co-Chair - TCG Trusted Mobility Solutions WG/
+/Co-Chair - TCG Metadata Access Protocol SG
+/
+/Chair - Linux Foundation Open Printing WG
+Secretary - IEEE-ISTO Printer Working Group
+Co-Chair - IEEE-ISTO PWG Internet Printing Protocol WG
+IETF Designated Expert - IPP & Printer MIB
+Blue Roof Music / High North Inc
+http://sites.google.com/site/blueroofmusic 
+<http://sites.google.com/site/blueroofmusic>
+http://sites.google.com/site/highnorthinc 
+<http://sites.google.com/site/highnorthinc>
+mailto: blueroofmusic@gmail.com <mailto:blueroofmusic@gmail.com>
+(permanent) PO Box 221  Grand Marais, MI 49839  906-494-2434/
+
+
+On Thu, Jun 2, 2022 at 12:49 PM Till Kamppeter <till.kamppeter@gmail.com 
+<mailto:till.kamppeter@gmail.com>> wrote:
+
+     What about the summary/minutes of our meeting? I would like to use
+     it/link it in the June OpenPrinting News which I will issue next week.
+
+          Till
+
+
+     On 21/05/2022 01:08, Ira McDonald wrote:
+      > I will also try to write up some minutes from slide highlights
+     for OP
+      > sessions as I did last year. But I am out of town this weekend
+     without
+      > my laptop.
+
