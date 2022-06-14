@@ -1,26 +1,22 @@
 Return-Path: <till.kamppeter@gmail.com>
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20210112;
- h=message-id:date:mime-version:user-agent:subject:content-language:to
- :cc:references:from:in-reply-to:content-transfer-encoding;
- bh=C/s1Y9n0IKsm/YQzBLLp6BGNZMO7iP7yfZj2MRh8pZA=;
- b=UNTaMJhH+jmSOJZ2XISjVevYDMA7R+b4R8CyhvF+8fL0XgSgQKJKRvqjyuqYMtUQVI
- 7971bkWgH0xxX67dw4N7GOuKG03Fw/vJSO34WHABZ2b6TJ++JLSEMy27FcCbdlgSD8G1
- urfgFnq+6sGzynS/d/HuV2LKFa0PvLv1byPjWv8j4LLEfAGq4Y5KOrH412+MecADCMPZ
- JymHBGGFgvjh3SBQH3Xfi40wN8imv+YvRqWjq1Yx1xaYndkG73QE7JSEIPJBTG3L17s/
- WzYxQKAAQ+XurYj+Dq3SKMBq3omoXnvgFaxMg6Xgk2eDUu7QWCCtrCx0ySGCj7mAbhHy
- 9LCQ==
-Message-ID: <e3ee80c9-74b5-0a09-ece4-4af47ac8f3a3@gmail.com>
-Date: Tue, 7 Jun 2022 13:35:11 +0200
+ h=message-id:date:mime-version:user-agent:from:subject:to
+ :content-language:content-transfer-encoding;
+ bh=DfCEqf8UAAQGrQ0jbuVUCYRcXKLWzo8dEpRdkSRJD4A=;
+ b=d3MmL+Zg1agoqJNpPT+2GcnkNx6hot2Tnlo61pTskiDN7XFFer53mvKFlbmaDfGVKN
+ E1ZvL75LeSFopmCK99Ng09lSmmAsBiUY9zDU7vimS0AuXwKjPzYVY3msym2aml82824/
+ E1NwvXIBo6ZJc8ZztpKLv9EdJpy4Q8iwG1h7PcuEoCxgBBRPC+0A7bp0QjvATeaYz/rR
+ zjrS7Qco48ejEBjCGnAwZh9OCNoTZ1XViQ5pXFJGMk5giJ3pkVV+XzWkDUo14x3U9DRE
+ r62a+b/dNO0VfqjfAs+7IgKPlneg2ysGDCe7jhKU6fn1vOqU9ZsYb471od4TNjESOrod
+ puZQ==
+Message-ID: <eca40186-214b-2000-398a-407a26ce5446@gmail.com>
+Date: Tue, 14 Jun 2022 20:51:50 +0200
 MIME-Version: 1.0
-Content-Language: en-US
-References: <CAKSHSL6TPbAjEVy-CpbKfmhOkGF2f_ummU=5aYVyzcVKAhFVFA@mail.gmail.com>
- <CAKSHSL4GKmHQwOs5rTeUcxSKQCO4zo79Dfoeg0=t5gMGnt1_gg@mail.gmail.com>
 From: Till Kamppeter <till.kamppeter@gmail.com>
-In-Reply-To: <CAKSHSL4GKmHQwOs5rTeUcxSKQCO4zo79Dfoeg0=t5gMGnt1_gg@mail.gmail.com>
-Content-Type: text/plain; charset="utf-8"; format="flowed"
-Content-Transfer-Encoding: 8bit
-Subject: Re: [Printing-architecture] Inviting proposals for Linux Plumbers
-	2022 for Open Printing.
+Content-Language: en-US
+Content-Type: text/plain; charset=UTF-8; format=flowed
+Content-Transfer-Encoding: 7bit
+Subject: [Printing-architecture] OpenPrinting News
 List-Id: Printing architecture under linux
  <printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>, 
@@ -30,20 +26,14 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>, 
  <mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Aveek Basu <basu.aveek@gmail.com>, Open Printing <printing-architecture@lists.linux-foundation.org>, Zdenek Dohnal <zdohnal@redhat.com>, Johannes Meixner <jsmeix@suse.de>, Alexander Pevzner <pzz@apevzner.com>, Danny Brennan <mdannyb11@gmail.com>, DK18 <divyasheelk@gmail.com>, Pratyush Ranjan <pratyush.ranjan911@gmail.com>, pranshukharkwal08@gmail.com, Bhavna Kosta <bhavnakosta2020@gmail.com>, Suraj Kulriya <surajkulriya@gmail.com>, Piotr Pawliczek <pawliczek@chromium.org>
-Cc: "Kennedy, Smith (Wireless Architect)" <smith.kennedy@hp.com>, Jeremy Leber <jeremy.leber@lexmark.com>
+To: Ira McDonald <blueroofmusic@gmail.com>, Aveek Basu <basu.aveek@gmail.com>, Open Printing <printing-architecture@lists.linux-foundation.org>
 
-I have added all proposals from Michael Sweet and me now, what I could 
-copy and paste from our initial MC description.
+Hi,
 
-These are 5 topics. Perhaps we will drop one or another of these to get 
-time for Piotr's topic.
+I have posted the newest development of the last month on our web site now.
 
-Piotr, do not hesitate to submit your topic, I think yours is more 
-important than the CI/testing or documentation topic I proposed earlier, 
-so we will drop one of these if needed.
+Here we go:
+
+https://openprinting.github.io/OpenPrinting-News-June-2022/
 
     Till
-
-On 07/06/2022 10:16, Aveek Basu wrote:
-> Gentle reminder to all. Please submit your proposals by 13th June 22.
