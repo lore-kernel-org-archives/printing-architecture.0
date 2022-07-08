@@ -1,21 +1,25 @@
-Return-Path: <blueroofmusic@gmail.com>
-DKIM-Filter: OpenDKIM Filter v2.11.0 smtp4.osuosl.org 9A68C40997
-DKIM-Filter: OpenDKIM Filter v2.11.0 smtp4.osuosl.org E9C0E40994
+Return-Path: <till.kamppeter@gmail.com>
+DKIM-Filter: OpenDKIM Filter v2.11.0 smtp4.osuosl.org E1689425D5
+DKIM-Filter: OpenDKIM Filter v2.11.0 smtp4.osuosl.org 77437425BC
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20210112;
- h=mime-version:from:date:message-id:subject:to;
- bh=0afCa/jRPZLl92lYSXHC8YXqujxZJMXkZru3xivhOWE=;
- b=TihGDZGOY0KkWbSLvYXYH3F9V8qA51C4tG7MKZB8n8VUco8cMQmH1nCMzS1je8pByE
- NpMRFwO4LMjpaobTmm7FbjuiCgIWAFnwcvjABFp/JMeCo+ndUJ/9YAVtltB6bfw2Di7V
- LBiVtqOkwuQXWrE0k0GoVUe0ggh9vPJwek1Clp2H8iafzkfTieD+JIY9b7lNMraQhhj0
- Gv9A5WTEyUlK5eLALSZSMdkO8lh/INHZTOEPzM61vTIzhlpaswmIYShOVIR6tffSjGyS
- rSXcRjYlScQ72461fWpDiLCdn5Vw1SRzK41t6z5JB+ltjTAai6IZNGS9uOkd+gqm/M58
- 9JnQ==
+ h=message-id:date:mime-version:user-agent:content-language:to:from
+ :subject:cc:content-transfer-encoding;
+ bh=3XCOpm6Q3epiYpOVOv5IWYk7NFrMO8ZKME4knSAU6vA=;
+ b=Sk0cWUl/galo2iV0CoF10r36AoPrGu7GR3wyt8SfmvQou2kJgHD6AY2SC5wwpJ2yWb
+ rI/3BHrSpGUta2SEhuMLItx47Xz0FueCJYr88AyqGge49R8yUiuVvk/PibWNhmi9cVS/
+ UHcmI38Hs5/76PuoTt3m9pg/W2leiDdx0B20WyII6zq2vT3FcsukPIJor2wVC/SlXzFv
+ xlufhF0gDfkwGp4uPI3YS01cLDIkJHQytGl5v2Y4UJ0fATRpvlnHJU88aDBcA5S4IUwx
+ hKNq1aPhZgif1NSjFj8n3dcovlnb7g8yr76JOxH5GRUCoCgZylU2QHCFk1Cm86gU9DO9
+ 3Tsw==
+Message-ID: <49581530-f198-2c33-ee93-27cac05c3084@gmail.com>
+Date: Fri, 8 Jul 2022 21:53:26 +0200
 MIME-Version: 1.0
-From: Ira McDonald <blueroofmusic@gmail.com>
-Date: Sun, 19 Jun 2022 19:23:49 -0400
-Message-ID: <CAN40gSvsiKfBPTNWP0=H6Gk46NDTopuarCmxPDo8ob+jogNs_g@mail.gmail.com>
-Content-Type: multipart/alternative; boundary="000000000000792ab005e1d5480c"
-Subject: [Printing-architecture] OP Minutes (7 June 2022)
+Content-Language: en-US
+From: Till Kamppeter <till.kamppeter@gmail.com>
+Content-Type: text/plain; charset=UTF-8; format=flowed
+Content-Transfer-Encoding: 7bit
+Subject: [Printing-architecture] OpenPrinting Micro-Conference on Linux
+	Plumbers 2022
 List-Id: Printing architecture under linux
  <printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>, 
@@ -25,211 +29,121 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>, 
  <mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>, Ira McDonald <blueroofmusic@gmail.com>
+To: Open Printing <printing-architecture@lists.linux-foundation.org>, Aveek Basu <basu.aveek@gmail.com>, Michael Sweet <msweet@msweet.org>, Piotr Pawliczek <pawliczek@chromium.org>, Mohit Verma <b20215@students.iitmandi.ac.in>, Rishabh Arya <rishabharya2799@gmail.com>, Deepak Patankar <patankardeepak04@gmail.com>, Rithvik Patibandla <rithvikp98@gmail.com>, Gaurav Guleria <b20099@students.iitmandi.ac.in>, SAHIL KUMAR <sahil_kumar.ug20@nsut.ac.in>, chandresh soni <chandresh2702@gmail.com>, mshivam20@iitk.ac.in, Deepak Khatri <deepakkhatri19158@gmail.com>, Sachin Thakan <sachinthakan001@gmail.com>, DK18 <divyasheelk@gmail.com>
+Cc: Monica Ayhens-Madon <monica.ayhens.madon@canonical.com>
 
---000000000000792ab005e1d5480c
-Content-Type: text/plain; charset="UTF-8"
+Hi,
 
- Hi,
-
-Minutes from our last OpenPrinting call are posted at:
-
-
-http://ftp.pwg.org/pub/pwg/liaison/openprinting/minutes/OP-Minutes-20220607.htm
+it is at the time to find out when to schedule the OpenPrinting 
+micro-conference. The micro-conference will take 3:30 hours in total. It 
+can take place on each of the conference days (Mon, Sep 12 to Wed, Sep 
+14) and on each day there is a morning and an afternoon slot. The 
+conference takes place in Dublin in Ireland, so during the day of Europe.
 
 
-Next OP US/Europe/Brazil/India Conference Calls:
+We will talk about:
+-------------------
 
-(1) July - US/Europe/Brazil/India - OP Monthly Meeting
-    - Tuesday 5 July 2022, Daytime
-      - Web conference to be announced
-      - Note - US Independence Day holiday - 4 July 2022
-      - Note - ISO/IEC JTC 1/SC 27/JWG6 - 6 July 2022
-      - Note - ISO TC22/SC32/WG12 Hybrid F2F (Tokyo) - 11-15 July 2022
-      - Note - TCG Members Meeting Hybrid F2F (Chevy Chase, MD) - 18-22
-July 2022
-      - Note - IETF 114 Hybrid F2F (Philadephia, PA) - 25-29 July 2022
-      - US
-        10am in San Francisco - US PDT (Pacific Daylight Time)
-        11am in Colorado - US MDT (Mountain Daylight Time)
-        12am in Chicago - US CDT (Central Daylight Time)
-        1pm in New York - US EDT (Eastern Daylight Time)
-      - Europe
-        7pm in Berlin - CEST (Central Europe Summer Time)
-      - Brazil
-        2pm in Belo Horizonte - BRT (Brasilia Time)
-      - India
-        10:30pm in New Delhi - IST (India Standard Time)
+Till Kamppeter: Testing and CI for OpenPrinting projects
 
-(2) August - US/Europe/Brazil/India - OP Monthly Meeting (tentative)
-    - Tuesday 9 August 2022, Daytime
-      - Web conference to be announced
-      - Note - IEEE 1609 WG Virtual F2F - 16 August 2022
-      - Note - PWG Virtual F2F - 16-18 August 2022
-      - Note - ISO TC22/SC32/WG12 Virtual F2F - 23-25 August 2022
-      - US
-        10am in San Francisco - US PDT (Pacific Daylight Time)
-        11am in Colorado - US MDT (Mountain Daylight Time)
-        12am in Chicago - US CDT (Central Daylight Time)
-        1pm in New York - US EDT (Eastern Daylight Time)
-      - Europe
-        7pm in Berlin - CEST (Central Europe Summer Time)
-      - Brazil
-        2pm in Belo Horizonte - BRT (Brasilia Time)
-      - India
-        10:30pm in New Delhi - IST (India Standard Time)
+Till Kamppeter: Sandboxing/Containerizing alternatives to Snap for 
+Printer Applications or CUPS
 
-(3) September - US/Europe/Brazil/India - OP Monthly Meeting (tentative)
-    - Tuesday 6 September 2022, Daytime
-      - Web conference to be announced
-      - Note - US Labor Day holiday - 5 September 2022
-      - US
-        10am in San Francisco - US PDT (Pacific Daylight Time)
-        11am in Colorado - US MDT (Mountain Daylight Time)
-        12am in Chicago - US CDT (Central Daylight Time)
-        1pm in New York - US EDT (Eastern Daylight Time)
-      - Europe
-        7pm in Berlin - CEST (Central Europe Summer Time)
-      - Brazil
-        2pm in Belo Horizonte - BRT (Brasilia Time)
-      - India
-        10:30pm in New Delhi - IST (India Standard Time)
+Michael Sweet, Till Kamppeter: 3D Printing
 
-Cheers,
-- Ira
+Michael Sweet: CUPS 2.5 and 3.0 Development
 
-*Ira McDonald (Musician / Software Architect)*
+Till Kamppeter, Aveek Basu: Documentation for OpenPrinting projects
 
-*Chair - SAE Trust Anchors and Authentication TF*
-*Co-Chair - TCG Trusted Mobility Solutions WG*
-
-*Co-Chair - TCG Metadata Access Protocol SG*
+Piotr Pawliczek: Restricting access to IPP printers with OAuth2 framework
 
 
 
+Now I have some questions (I need answers as soon as possible):
 
 
 
+Who of you wants to participate?
+--------------------------------
+
+I know that as speakers me, Michael Sweet, Aveek Basu, and Piotr 
+Pawliczek are participating. At least I will participate in person.
+
+Anyone can participate, in person or virtually.
+
+in-person registration is sold out, but we have 6 reserved slots for 
+in-person registration for participants of our MC. One slot I will need 
+for me. 3 slots are free-of-charge and 3 require the payment of the 
+usual conference fee.
+
+Any amount of people can participate virtually. Aveek Basu will 
+participate virtually.
+
+You do not need to be a speaker in order to participate, both in person 
+or virtually.
+
+Please anyone reading here tell whether you want to participate, whether 
+virtually or in person in Dublin, whether you require a free-of-charge 
+pass for in-person participation.
+
+Once we know who will participate in person we will send registration 
+codes to the appropriate people.
 
 
-*Chair - Linux Foundation Open Printing WGSecretary - IEEE-ISTO Printer
-Working GroupCo-Chair - IEEE-ISTO PWG Internet Printing Protocol WGIETF
-Designated Expert - IPP & Printer MIBBlue Roof Music / High North
-Inchttp://sites.google.com/site/blueroofmusic
-<http://sites.google.com/site/blueroofmusic>http://sites.google.com/site/highnorthinc
-<http://sites.google.com/site/highnorthinc>mailto: blueroofmusic@gmail.com
-<blueroofmusic@gmail.com>(permanent) PO Box 221  Grand Marais, MI 49839
-906-494-2434*
+When should the event take place?
+---------------------------------
 
---000000000000792ab005e1d5480c
-Content-Type: text/html; charset="UTF-8"
-Content-Transfer-Encoding: quoted-printable
+Principally, we want to run the MC at a time when as many people as 
+possible can participate and when it is assured that all speakers can 
+participate. We also want to avoid that virtual participants, especially 
+if they are speakers, do not have to get up in the middle of the night. 
+And if you want to participate in person, we want that you do not miss 
+anything running in parallel with our MC, other MCs, refereeed talks, 
+BoFs, ... or presentations on the OSS EU, which also takes place in 
+Dublin, in the same week.
 
-<div dir=3D"ltr">
-<div>Hi,</div><div><br></div><div>
-<div dir=3D"ltr"><span><span><span><span><span><span><span><span><span><spa=
-n><span><span><span><span><span><span><span><span><span><span><span><span><=
-span><span><span><span><span><span><span><span><span><span><span><span><spa=
-n><span><span><span><span><span><span class=3D"gmail-il">Minutes</span></sp=
-an></span></span></span></span></span></span></span></span></span></span></=
-span></span></span></span></span></span></span></span></span></span></span>=
-</span></span></span></span></span></span></span></span></span></span></spa=
-n></span></span></span></span></span></span></span> from our last OpenPrint=
-ing<span> call</span> are <span><span><span><span><span><span><span><span><=
-span><span><span><span><span><span><span><span>posted</span></span></span><=
-/span></span></span></span></span></span></span></span></span></span></span=
-></span></span> at:<br>
+So please tell us:
 
+Do you want to participate virtually or in person?
+
+In case of virtual participation, do you prefer the MC in the morning or 
+in the afternoon in Dublin? Also do you prfer a certain topic of the MC 
+to be near the beginning or near the end of the MC? Which of the 3 days 
+do you prefer? Do you have conflicts? Days? Hours?
+
+In case of in-person participation, have a look at the schedules of the 
+Linux Plumbers and also (if you attend it also) of the OSS EU. If 
+schedules are not ready yet, tell us at least which other MC, talk, 
+presentation, ... you want to attend. Also tell us if you are not 
+present all the three days.
 
 
+Possible overrun
+----------------
+
+It is possible that we will not be able to complete our MC in the given 
+3:30 hours. For such a case the Linux Plumbers organizers are offering 
+to select an afternoon slot as one can stay longer in the MC room at the 
+end, but there are restrictions: The A/V team hired by Linux Plumbers is 
+hired only for the scheduled time, so their service ends appropriately 
+and for the extra time we do not have any A/V, neither in the room nor 
+for broadcasting to virtual attendees. We can feed into Big Blue Button 
+from the room with our own equipment (laptop), like a virtual attendee, 
+though and so stay connected during the extra time, but I am not sure 
+whether we will still get recorded then. Also in-person attendees do 
+perhaps not want to miss the evening social event of that day.
 
 
+Life experience in Dublin
+-------------------------
+
+And please, consider in-person participation. I do not only want to be 
+alone in the MC room but also it is a lot more fun to be there, attend 
+also the other sessions, perhaps even the OSS EU, attend the evening 
+social events, and ... Hallway sessions!!!
 
 
+Please tell us your decisions as soon as possible. Thanks in advance.
 
+    Till
 
-
-
-
-<br>
-=C2=A0 <a href=3D"http://ftp.pwg.org/pub/pwg/liaison/openprinting/minutes/O=
-P-Minutes-20220607.htm" target=3D"_blank">http://ftp.pwg.org/pub/pwg/liaiso=
-n/openprinting/minutes/OP-Minutes-20220607.htm</a><br><br></div><div dir=3D=
-"ltr"><br></div><div dir=3D"ltr">
-Next <span><span><span><span><span><span><span><span><span><span><span><spa=
-n><span><span><span><span><span><span><span><span><span><span><span><span><=
-span><span><span><span><span><span>OP</span></span></span></span></span></s=
-pan></span></span></span></span></span></span></span></span></span></span><=
-/span></span></span></span></span></span></span></span></span></span></span=
-></span></span></span> US/Europe/Brazil/India Conference Calls: <br></div><=
-div dir=3D"ltr"><br></div><div dir=3D"ltr">(1) July - US/Europe/Brazil/Indi=
-a - OP Monthly Meeting<br>=C2=A0 =C2=A0 - Tuesday 5 July 2022, Daytime<br>=
-=C2=A0 =C2=A0 =C2=A0 - Web conference to be announced<br>=C2=A0 =C2=A0 =C2=
-=A0 - Note - US Independence Day holiday - 4 July 2022<br>=C2=A0 =C2=A0 =C2=
-=A0 - Note - ISO/IEC JTC 1/SC 27/JWG6 - 6 July 2022<br>=C2=A0 =C2=A0 =C2=A0=
- - Note - ISO TC22/SC32/WG12 Hybrid F2F (Tokyo) - 11-15 July 2022<br>=C2=A0=
- =C2=A0 =C2=A0 - Note - TCG Members Meeting Hybrid F2F (Chevy Chase, MD) - =
-18-22 July 2022<br>=C2=A0 =C2=A0 =C2=A0 - Note - IETF 114 Hybrid F2F (Phila=
-dephia, PA) - 25-29 July 2022<br>=C2=A0 =C2=A0 =C2=A0 - US<br>=C2=A0 =C2=A0=
- =C2=A0 =C2=A0 10am in San Francisco - US PDT (Pacific Daylight Time)<br>=
-=C2=A0 =C2=A0 =C2=A0 =C2=A0 11am in Colorado - US MDT (Mountain Daylight Ti=
-me)<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 12am in Chicago - US CDT (Central Daylig=
-ht Time)<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 1pm in New York - US EDT (Eastern D=
-aylight Time)<br>=C2=A0 =C2=A0 =C2=A0 - Europe<br>=C2=A0 =C2=A0 =C2=A0 =C2=
-=A0 7pm in Berlin - CEST (Central Europe Summer Time)<br>=C2=A0 =C2=A0 =C2=
-=A0 - Brazil<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 2pm in Belo Horizonte - BRT (Br=
-asilia Time)<br>=C2=A0 =C2=A0 =C2=A0 - India<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0=
- 10:30pm in New Delhi - IST (India Standard Time)</div><div dir=3D"ltr"><br=
->(2) August - US/Europe/Brazil/India - OP Monthly Meeting (tentative)<br>=
-=C2=A0 =C2=A0 - Tuesday 9 August 2022, Daytime<br>=C2=A0 =C2=A0 =C2=A0 - We=
-b conference to be announced<br>=C2=A0 =C2=A0 =C2=A0 - Note - IEEE 1609 WG =
-Virtual F2F - 16 August 2022<br>=C2=A0 =C2=A0 =C2=A0 - Note - PWG Virtual F=
-2F - 16-18 August 2022<br>=C2=A0 =C2=A0 =C2=A0 - Note - ISO TC22/SC32/WG12 =
-Virtual F2F - 23-25 August 2022<br>=C2=A0 =C2=A0 =C2=A0 - US<br>=C2=A0 =C2=
-=A0 =C2=A0 =C2=A0 10am in San Francisco - US PDT (Pacific Daylight Time)<br=
->=C2=A0 =C2=A0 =C2=A0 =C2=A0 11am in Colorado - US MDT (Mountain Daylight T=
-ime)<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 12am in Chicago - US CDT (Central Dayli=
-ght Time)<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 1pm in New York - US EDT (Eastern =
-Daylight Time)<br>=C2=A0 =C2=A0 =C2=A0 - Europe<br>=C2=A0 =C2=A0 =C2=A0 =C2=
-=A0 7pm in Berlin - CEST (Central Europe Summer Time)<br>=C2=A0 =C2=A0 =C2=
-=A0 - Brazil<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 2pm in Belo Horizonte - BRT (Br=
-asilia Time)<br>=C2=A0 =C2=A0 =C2=A0 - India<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0=
- 10:30pm in New Delhi - IST (India Standard Time)<br><br>(3) September - US=
-/Europe/Brazil/India - OP Monthly Meeting (tentative)<br>=C2=A0 =C2=A0 - Tu=
-esday 6 September 2022, Daytime<br>=C2=A0 =C2=A0 =C2=A0 - Web conference to=
- be announced<br>=C2=A0 =C2=A0 =C2=A0 - Note - US Labor Day holiday - 5 Sep=
-tember 2022<br>=C2=A0 =C2=A0 =C2=A0 - US<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 10a=
-m in San Francisco - US PDT (Pacific Daylight Time)<br>=C2=A0 =C2=A0 =C2=A0=
- =C2=A0 11am in Colorado - US MDT (Mountain Daylight Time)<br>=C2=A0 =C2=A0=
- =C2=A0 =C2=A0 12am in Chicago - US CDT (Central Daylight Time)<br>=C2=A0 =
-=C2=A0 =C2=A0 =C2=A0 1pm in New York - US EDT (Eastern Daylight Time)<br>=
-=C2=A0 =C2=A0 =C2=A0 - Europe<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 7pm in Berlin =
-- CEST (Central Europe Summer Time)<br>=C2=A0 =C2=A0 =C2=A0 - Brazil<br>=C2=
-=A0 =C2=A0 =C2=A0 =C2=A0 2pm in Belo Horizonte - BRT (Brasilia Time)<br>=C2=
-=A0 =C2=A0 =C2=A0 - India<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 10:30pm in New Del=
-hi - IST (India Standard Time)</div><div dir=3D"ltr"><br></div><div>Cheers,=
-</div><div>- Ira</div><div><br></div></div>
-
-<div><div dir=3D"ltr" class=3D"gmail_signature" data-smartmail=3D"gmail_sig=
-nature"><div dir=3D"ltr"><div><div dir=3D"ltr"><div><div dir=3D"ltr"><div><=
-div dir=3D"ltr"><div><div dir=3D"ltr"><div><div dir=3D"ltr"><div><div dir=
-=3D"ltr"><div><div dir=3D"ltr"><div><div dir=3D"ltr"><i><font size=3D"1">Ir=
-a McDonald (Musician / Software Architect)</font></i></div><div><i><font si=
-ze=3D"1">Chair - SAE Trust Anchors and Authentication TF<br></font></i></di=
-v><div dir=3D"ltr"><i><font size=3D"1">Co-Chair - TCG Trusted Mobility Solu=
-tions WG</font></i></div><div><i><font size=3D"1">Co-Chair - TCG Metadata A=
-ccess Protocol SG<br></font></i></div><div dir=3D"ltr"><i><font size=3D"1">=
-Chair - Linux Foundation Open Printing WG<br>Secretary - IEEE-ISTO Printer =
-Working Group<br>Co-Chair - IEEE-ISTO PWG Internet Printing Protocol WG<br>=
-IETF Designated Expert - IPP &amp; Printer MIB<br>Blue Roof Music / High No=
-rth Inc<br><a style=3D"color:rgb(51,51,255)" href=3D"http://sites.google.co=
-m/site/blueroofmusic" target=3D"_blank">http://sites.google.com/site/bluero=
-ofmusic</a><br><a style=3D"color:rgb(102,0,204)" href=3D"http://sites.googl=
-e.com/site/highnorthinc" target=3D"_blank">http://sites.google.com/site/hig=
-hnorthinc</a><br>mailto: <a href=3D"mailto:blueroofmusic@gmail.com" target=
-=3D"_blank">blueroofmusic@gmail.com</a><br>(permanent) PO Box 221=C2=A0 Gra=
-nd Marais, MI 49839=C2=A0 906-494-2434</font></i></div></div></div></div></=
-div></div></div></div></div></div></div></div></div></div></div></div></div=
-></div></div></div>
-
---000000000000792ab005e1d5480c--
