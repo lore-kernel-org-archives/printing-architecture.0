@@ -1,19 +1,26 @@
-Return-Path: <m.dababi@hotmail.com>
-DKIM-Filter: OpenDKIM Filter v2.11.0 smtp4.osuosl.org B0984410A0
-DKIM-Filter: OpenDKIM Filter v2.11.0 smtp4.osuosl.org 7EF5D416F4
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=hotmail.com;
- s=selector1;
- h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-SenderADCheck;
- bh=MGDOAOMt6kggifmbti5Uz7YhVR82/dvo7kJ8ZvlJmGM=;
- b=S66H+Q3Qr4avGj1NK7i7bfzcIvfuqzjfJDuGEJpMGdSJnqGwTfgqXIEqPUW3qivj2Iu3xIxypHxDFu85IkCmx9MTHZlbsbr7aLGDpM+xNkRYcZ6oKCTHtiG11shsZwTWqtcv4sclicZFTiphSuO5yQjJ2ZIv6Hy44Mhfe7/MkUemqvoVY11HuUR4GGpycOC5zQ2n8fPh7UtUDwSy/XgrPvt+mD2KNNP+ROXJ2TUiVSXWof7I3ap10WUCrltCq/G6kYnhVb5YgMbf74AGpCUCi3AOJoCNheyJku5W8KmT/yCtLi0F2ZEG6J1y5xpke2t+dVCLrPaKz+y8d9VvVthyTQ==
-From: Mustapha Dababi <m.dababi@hotmail.com>
-Date: Mon, 08 Aug 2022 15:22:03 +0100
-Message-ID: <AM6PR01MB453697E368B0C1503CE427F781639@AM6PR01MB4536.eurprd01.prod.exchangelabs.com>
-In-Reply-To: <9fd528dc-46eb-6043-bacf-be1398aa55cd@redhat.com>
+Return-Path: <zdohnal@redhat.com>
+DKIM-Filter: OpenDKIM Filter v2.11.0 smtp3.osuosl.org 26B7C60E66
+DKIM-Filter: OpenDKIM Filter v2.11.0 smtp3.osuosl.org ADADA60E65
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=redhat.com;
+ s=mimecast20190719; t=1659969671;
+ h=from:from:reply-to:subject:subject:date:date:message-id:message-id:
+ to:to:cc:mime-version:mime-version:content-type:content-type:
+ in-reply-to:in-reply-to:references:references;
+ bh=XO42pUJU3u7g++c7Bo8Ub9/IrVd8sOlFE2KwvWd4l1I=;
+ b=F71n6cT9hXqsfVYOOSwl5v5tegEkymM3eJ4IN+jjJjQTZVzOpOWrtDDZQ7DIX3qML9pJ+C
+ EXquPWSW/hv2B6qZpedXanpjJ7vxG4VhI6QSHbSoxD1dzoaEf1DagkhrLxAe/VkrSl2wRX
+ Z+Eo1vRtDB8D1AwPldSjfNj7T+JctqA=
+Message-ID: <6000dc49-6a19-2b6f-dc4c-d06b9eff09d5@redhat.com>
+Date: Mon, 8 Aug 2022 16:41:05 +0200
+MIME-Version: 1.0
 References: <AM6PR01MB45368D5F3078A318E30C0F0D819E9@AM6PR01MB4536.eurprd01.prod.exchangelabs.com>
  <9fd528dc-46eb-6043-bacf-be1398aa55cd@redhat.com>
-Content-Type: multipart/alternative; boundary="1827dd58eee426d2861bfbb5ee"
-MIME-Version: 1.0
+ <AM6PR01MB453697E368B0C1503CE427F781639@AM6PR01MB4536.eurprd01.prod.exchangelabs.com>
+From: Zdenek Dohnal <zdohnal@redhat.com>
+In-Reply-To: <AM6PR01MB453697E368B0C1503CE427F781639@AM6PR01MB4536.eurprd01.prod.exchangelabs.com>
+Content-Type: multipart/alternative;
+ boundary="------------4mK7onSMcclmWVKWgoUFtMgO"
+Content-Language: en-US
 Subject: Re: [Printing-architecture] =?utf-8?q?Epson_l110_s=C3=A9ries?=
 List-Id: Printing architecture under linux
  <printing-architecture.lists.linux-foundation.org>
@@ -24,118 +31,170 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>, 
  <mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Zdenek Dohnal <zdohnal@redhat.com>, printing-architecture@lists.linux-foundation.org
+To: Mustapha Dababi <m.dababi@hotmail.com>, printing-architecture@lists.linux-foundation.org
 
---1827dd58eee426d2861bfbb5ee
-Content-Type: text/plain; format="flowed"; charset="utf-8"
+This is a multi-part message in MIME format.
+--------------4mK7onSMcclmWVKWgoUFtMgO
+Content-Type: text/plain; charset="utf-8"; format="flowed"
 Content-Transfer-Encoding: 8bit
 
-Hi,
+There are links to .rpm and .deb packages, which you install on your 
+machine and your model will be available for CUPS. Then if you install 
+your printer with the selected model, CUPS will set your printer with PPD.
 
-Thanks for your answer
-
-But there is no ppd file
-
-My machine accepte only ppd
-
-Thanks again
-
-Le 8 août 2022 15:10:00 Zdenek Dohnal <zdohnal@redhat.com> a écrit :
-
-> Hi Mustapha,
+On 8/8/22 16:22, Mustapha Dababi wrote:
+> Hi,
 >
-> there should be a link to the driver -
-> https://openprinting.org/printer/Epson/Epson-L110_Series .
+> Thanks for your answer
 >
+> But there is no ppd file
 >
-> Zdenek
+> My machine accepte only ppd
 >
-> On 8/5/22 13:46, Mustapha Dababi wrote:
->> Hi every body,
->> Please i need Epson l110 ppd file
->> Please help me!
+> Thanks again
+>
+> Le 8 août 2022 15:10:00 Zdenek Dohnal <zdohnal@redhat.com> a écrit :
+>
+>> Hi Mustapha,
 >>
->> Thanks !
+>> there should be a link to the driver -
+>> https://openprinting.org/printer/Epson/Epson-L110_Series .
 >>
->> _______________________________________________
->> Printing-architecture mailing list
->> Printing-architecture@lists.linux-foundation.org
->> https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture
+>>
+>> Zdenek
+>>
+>> On 8/5/22 13:46, Mustapha Dababi wrote:
+>>> Hi every body,
+>>> Please i need Epson l110 ppd file
+>>> Please help me!
+>>>
+>>> Thanks !
+>>>
+>>> _______________________________________________
+>>> Printing-architecture mailing list
+>>> Printing-architecture@lists.linux-foundation.org
+>>> https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture
+>>
+>> -- 
+>> Zdenek Dohnal
+>> Software Engineer
+>> Red Hat, BRQ-TPBC
 >
-> --
-> Zdenek Dohnal
-> Software Engineer
-> Red Hat, BRQ-TPBC
+>
+-- 
+Zdenek Dohnal
+Software Engineer
+Red Hat, BRQ-TPBC
 
+--------------4mK7onSMcclmWVKWgoUFtMgO
+Content-Type: multipart/related;
+ boundary="------------v3YdcsyxRRBxhTcccFosoxEi"
 
+--------------v3YdcsyxRRBxhTcccFosoxEi
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: 8bit
 
---1827dd58eee426d2861bfbb5ee
-Content-Type: multipart/related; boundary="1827dd58eee426d28613c5e769"
-
---1827dd58eee426d28613c5e769
-Content-Type: text/html; charset="UTF-8"
-Content-Transfer-Encoding: quoted-printable
-
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.=
-w3.org/TR/html4/loose.dtd"><html>
-<head>
-<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8"></=
-head>
-<body>
-<div dir=3D"auto">
-<div dir=3D"auto">Hi,</div><div dir=3D"auto"><br></div><div dir=3D"auto">Th=
-anks for your answer</div><div dir=3D"auto"><br></div><div dir=3D"auto">But=
- there is no ppd file</div><div dir=3D"auto"><br></div><div dir=3D"auto">My=
- machine accepte only ppd&nbsp;</div><div dir=3D"auto"><br></div><div dir=
-=3D"auto">Thanks again</div><div dir=3D"auto"><br></div>
-<div id=3D"aqm-original" style=3D"color: black;">
-<div dir=3D"auto">Le 8 ao=C3=BBt 2022 15:10:00 Zdenek Dohnal &lt;zdohnal@re=
-dhat.com&gt; a =C3=A9crit :</div>
-<div><br></div>
-<blockquote type=3D"cite" class=3D"gmail_quote" style=3D"margin: 0 0 0 0.75=
-ex; border-left: 1px solid #808080; padding-left: 0.75ex;">
-<div dir=3D"auto">Hi Mustapha,</div>
-<div dir=3D"auto"><br></div>
-<div dir=3D"auto">there should be a link to the driver -&nbsp;</div>
-<div dir=3D"auto">https://openprinting.org/printer/Epson/Epson-L110_Series =
-.</div>
-<div dir=3D"auto"><br></div>
-<div dir=3D"auto"><br></div>
-<div dir=3D"auto">Zdenek</div>
-<div dir=3D"auto"><br></div>
-<div dir=3D"auto">On 8/5/22 13:46, Mustapha Dababi wrote:</div>
-<blockquote type=3D"cite" class=3D"gmail_quote" style=3D"margin: 0 0 0 0.75=
-ex; border-left: 1px solid #0099CC; padding-left: 0.75ex;">
-<div dir=3D"auto">Hi every body,</div>
-<div dir=3D"auto">Please i need Epson l110 ppd file</div>
-<div dir=3D"auto">Please help me!</div>
-<div dir=3D"auto"><br></div>
-<div dir=3D"auto">Thanks !</div>
-<div dir=3D"auto"><br></div>
-<div dir=3D"auto">_______________________________________________</div>
-<div dir=3D"auto">Printing-architecture mailing list</div>
-<div dir=3D"auto">Printing-architecture@lists.linux-foundation.org</div>
-<div dir=3D"auto">https://lists.linuxfoundation.org/mailman/listinfo/printi=
-ng-architecture</div>
-</blockquote>
-<div dir=3D"auto"><br></div>
-<div dir=3D"auto">--&nbsp;</div>
-<div dir=3D"auto">Zdenek Dohnal</div>
-<div dir=3D"auto">Software Engineer</div>
-<div dir=3D"auto">Red Hat, BRQ-TPBC</div>
-</blockquote>
-</div><div dir=3D"auto"><br></div>
-<div id=3D"aqm-signature" dir=3D"auto" style=3D"color: black;"><div dir=3D"=
-auto"><img style=3D"border: none; vertical-align: bottom; width: 126px; hei=
-ght: auto;" data-aqm-editable=3D"true" src=3D"cid:0x8e3ec5e.0x83242306.0xe5=
-d9b8.0xa7356fd56a58329758dec2ce"></div></div><div dir=3D"auto"><br></div>
-</div></body>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  </head>
+  <body>
+    <p>There are links to .rpm and .deb packages, which you install on
+      your machine and your model will be available for CUPS. Then if
+      you install your printer with the selected model, CUPS will set
+      your printer with PPD.<br>
+    </p>
+    <div class="moz-cite-prefix">On 8/8/22 16:22, Mustapha Dababi wrote:<br>
+    </div>
+    <blockquote type="cite"
+cite="mid:AM6PR01MB453697E368B0C1503CE427F781639@AM6PR01MB4536.eurprd01.prod.exchangelabs.com">
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <div dir="auto">
+        <div dir="auto">Hi,</div>
+        <div dir="auto"><br>
+        </div>
+        <div dir="auto">Thanks for your answer</div>
+        <div dir="auto"><br>
+        </div>
+        <div dir="auto">But there is no ppd file</div>
+        <div dir="auto"><br>
+        </div>
+        <div dir="auto">My machine accepte only ppd </div>
+        <div dir="auto"><br>
+        </div>
+        <div dir="auto">Thanks again</div>
+        <div dir="auto"><br>
+        </div>
+        <div id="aqm-original" style="color: black;">
+          <div dir="auto">Le 8 août 2022 15:10:00 Zdenek Dohnal
+            <a class="moz-txt-link-rfc2396E" href="mailto:zdohnal@redhat.com">&lt;zdohnal@redhat.com&gt;</a> a écrit :</div>
+          <div><br>
+          </div>
+          <blockquote type="cite" class="gmail_quote" style="margin: 0 0
+            0 0.75ex; border-left: 1px solid #808080; padding-left:
+            0.75ex;">
+            <div dir="auto">Hi Mustapha,</div>
+            <div dir="auto"><br>
+            </div>
+            <div dir="auto">there should be a link to the driver - </div>
+            <div dir="auto"><a class="moz-txt-link-freetext" href="https://openprinting.org/printer/Epson/Epson-L110_Series">https://openprinting.org/printer/Epson/Epson-L110_Series</a>
+              .</div>
+            <div dir="auto"><br>
+            </div>
+            <div dir="auto"><br>
+            </div>
+            <div dir="auto">Zdenek</div>
+            <div dir="auto"><br>
+            </div>
+            <div dir="auto">On 8/5/22 13:46, Mustapha Dababi wrote:</div>
+            <blockquote type="cite" class="gmail_quote" style="margin: 0
+              0 0 0.75ex; border-left: 1px solid #0099CC; padding-left:
+              0.75ex;">
+              <div dir="auto">Hi every body,</div>
+              <div dir="auto">Please i need Epson l110 ppd file</div>
+              <div dir="auto">Please help me!</div>
+              <div dir="auto"><br>
+              </div>
+              <div dir="auto">Thanks !</div>
+              <div dir="auto"><br>
+              </div>
+              <div dir="auto">_______________________________________________</div>
+              <div dir="auto">Printing-architecture mailing list</div>
+              <div dir="auto"><a class="moz-txt-link-abbreviated" href="mailto:Printing-architecture@lists.linux-foundation.org">Printing-architecture@lists.linux-foundation.org</a></div>
+              <div dir="auto"><a class="moz-txt-link-freetext" href="https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture">https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture</a></div>
+            </blockquote>
+            <div dir="auto"><br>
+            </div>
+            <div dir="auto">-- </div>
+            <div dir="auto">Zdenek Dohnal</div>
+            <div dir="auto">Software Engineer</div>
+            <div dir="auto">Red Hat, BRQ-TPBC</div>
+          </blockquote>
+        </div>
+        <div dir="auto"><br>
+        </div>
+        <div id="aqm-signature" dir="auto" style="color: black;">
+          <div dir="auto"><img style="border: none; vertical-align:
+              bottom; width: 126px; height: auto;"
+              data-aqm-editable="true"
+              src="cid:part1.0TUxxS0C.zrcJv2Nw@redhat.com" class=""></div>
+        </div>
+        <div dir="auto"><br>
+        </div>
+      </div>
+    </blockquote>
+    <pre class="moz-signature" cols="72">-- 
+Zdenek Dohnal
+Software Engineer
+Red Hat, BRQ-TPBC</pre>
+  </body>
 </html>
-
---1827dd58eee426d28613c5e769
-Content-Disposition: inline; filename="0x8e3ec5e.0x83242306.0xe5d9b8.0xa7356fd56a58329758dec2ce.png"
-Content-Type: image/png; name="0x8e3ec5e.0x83242306.0xe5d9b8.0xa7356fd56a58329758dec2ce.png"
-Content-ID: <0x8e3ec5e.0x83242306.0xe5d9b8.0xa7356fd56a58329758dec2ce>
+--------------v3YdcsyxRRBxhTcccFosoxEi
+Content-Type: image/png;
+ name="0x8e3ec5e.0x83242306.0xe5d9b8.0xa7356fd56a58329758dec2ce.png"
+Content-Disposition: inline;
+ filename*0="0x8e3ec5e.0x83242306.0xe5d9b8.0xa7356fd56a58329758dec2ce.png"
+Content-Id: <part1.0TUxxS0C.zrcJv2Nw@redhat.com>
 Content-Transfer-Encoding: base64
 
 iVBORw0KGgoAAAANSUhEUgAAA+wAAAJOCAYAAAAteo3ZAAAACXBIWXMAAC4jAAAuIwF4pT92AAAD
@@ -2470,7 +2529,7 @@ jpRojBjYuLIVMG2OcyOaBymlWrOeNTGSzLvPJ450IyIiovrGgP0cMjlrLoTA8HAaX7ntWQwPZ9gR
 +uJ2HDgw6jaYAySYXX8teOtpLdtBJGjgivPbYbrz17nWlqh2/gz2nIl4uqBGT57pgyIiIiI6w4wz
 fQA0f6Xl8EcOj+Gb/7QLx4/HoevalM/T/Hg3RwK6hpXtDQg1hpBPF6AJwXNMNC8S0ASSWROxVB6G
 xhnsRERERP8f4KdnLpyXZ8AAAAAASUVORK5CYII=
+--------------v3YdcsyxRRBxhTcccFosoxEi--
 
---1827dd58eee426d28613c5e769--
+--------------4mK7onSMcclmWVKWgoUFtMgO--
 
---1827dd58eee426d2861bfbb5ee--
