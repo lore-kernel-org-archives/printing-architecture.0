@@ -1,25 +1,30 @@
-Return-Path: <msweet@msweet.org>
-DKIM-Filter: OpenDKIM Filter v2.11.0 smtp3.osuosl.org 0071960E0A
-DKIM-Filter: OpenDKIM Filter v2.11.0 smtp3.osuosl.org 628FA60B24
-DKIM-Filter: OpenDKIM Filter v2.11.0 mail.msweet.org 74B8981FD5
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=msweet.org;
- s=default; t=1661171059;
- bh=Bi51WKn8xVZtThvijbnDDSuUXPMOnv/CZqYfQOAeuVQ=;
- h=Subject:From:In-Reply-To:Date:Cc:References:To:From;
- b=VIBM9l+buKRM35rvDnc+FSNthESn+pVuHSW1qXqqUEq4/CX74szEgrsnJhXQI+Nkz
- KkLhEuMYHtyH28dR6kkLgvlyxplRL0pUuykqXk0nyVImxitAWn/DiNcF8h0Rhn9lBz
- vW8SVHrblWsIHONcc73PxCxz+oCFKlra8KrY8+tU=
-Content-Type: multipart/signed;
- boundary="Apple-Mail=_6669D256-53C2-4349-ABDF-04FD547FAAF8";
- protocol="application/pgp-signature"; micalg=pgp-sha256
-Mime-Version: 1.0 (Mac OS X Mail 16.0 \(3696.120.41.1.1\))
-From: Michael Sweet <msweet@msweet.org>
-In-Reply-To: <865e65a1-20e8-8fa7-892f-0eab109de7c0@redhat.com>
-Date: Mon, 22 Aug 2022 08:24:16 -0400
-Message-Id: <58D8CACF-BFDD-4FB0-8123-10FE35FE7D2F@msweet.org>
-References: <865e65a1-20e8-8fa7-892f-0eab109de7c0@redhat.com>
-Subject: Re: [Printing-architecture] [IPP] Changing defaults of a driverless
- printer (physical device) via CLI
+Return-Path: <till.kamppeter@gmail.com>
+DKIM-Filter: OpenDKIM Filter v2.11.0 smtp2.osuosl.org C704640A4B
+DKIM-Filter: OpenDKIM Filter v2.11.0 smtp2.osuosl.org DED834013C
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20210112;
+ h=content-transfer-encoding:in-reply-to:from:references:cc:to
+ :content-language:subject:user-agent:mime-version:date:message-id
+ :from:to:cc; bh=kjX2vmCW2xhbJD5E2stoL23FteOUTZrgPOx/QV1nbRQ=;
+ b=qd2TumkTUnngBhK0h45OhsJoNBZXPgZdSdF1iDemDngAiIZRQVqZ9B4VgCNwR0Iyjy
+ PdAUKwun6YOjRzt3Yu7wMkNjoOJgu70mf256uaxnq16zLhA0WX9Sl1HVJ9VV4/dklaCk
+ ExxtQVWX1N95fcpx4owsTWkr8BRiqDqcbIU9dqHlc1UO4kFSObvedMmEDT/SIacnKdpk
+ Qo+UtYOEM4tRHgpumkAusfQybu62YYZbbbqsHQNt6JvLwtaCzkoR0w08GW9KAT4pbiYk
+ XqWzKiqhsMGmd5TJ7axpAHQW/d7poDeunojFuSJJ3Q12zbRF15r8R2vO2U5GoU4QaY83
+ gRQQ==
+Message-ID: <2a25a2c6-c80c-be2c-4ab2-d595ed4267b7@gmail.com>
+Date: Mon, 22 Aug 2022 15:04:48 +0200
+MIME-Version: 1.0
+Content-Language: en-US
+References: <e75ae2ef-3b1b-649e-24d0-74e9311268cb@gmail.com>
+ <b9ea823b370b12f20c91e6ee00dabcb5@sebastianwick.net>
+ <49e9161a-6ded-8196-cc67-9ce8d06c8176@gmail.com>
+ <BDF4CF3B-C196-4CDE-AA35-6D47AC4B3CDF@msweet.org>
+From: Till Kamppeter <till.kamppeter@gmail.com>
+In-Reply-To: <BDF4CF3B-C196-4CDE-AA35-6D47AC4B3CDF@msweet.org>
+Content-Type: text/plain; charset=UTF-8; format=flowed
+Content-Transfer-Encoding: 7bit
+Subject: Re: [Printing-architecture] Bye-Bye colord - OR - Poll ICC profiles
+ via IPP for soft proofing
 List-Id: Printing architecture under linux
  <printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>, 
@@ -29,80 +34,46 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>, 
  <mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Zdenek Dohnal <zdohnal@redhat.com>, PWG IPP Workgroup <ipp@pwg.org>
-Cc: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>
+To: Michael Sweet <msweet@msweet.org>
+Cc: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>, Sebastian Wick <sebastian@sebastianwick.net>
 
+On 22/08/2022 13:51, Michael Sweet wrote:
+> Color Profiles
+> --------------
+ >
+> While IPP Everywhere and AirPrint printers will always support standard color spaces, high end photo/fine art printers will also support device color spaces (typically RGB or CMYK) which are described by the color profiles reported by the "printer-icc-profiles" attribute.  For AirPrint printers printers are also required to support uploading new profiles to a printer via HTTP PUT and registering them with the Set-Printer-Attributes IPP operation so that any client on the network will be able to access the same profiles served by the printer.
+> 
+> The ICC profiles reported by "printer-icc-profiles" are also used for soft-proofing, although because more printers don't report their own ICC profiles (because they don't support device color spaces) this is far less likely to be available.  In this case, there is no meaningful way to do soft-proofing (a generic CMYK profile won't really be useful) but conceptually you could download profiles from a vendor's web site to do it.
 
---Apple-Mail=_6669D256-53C2-4349-ABDF-04FD547FAAF8
-Content-Transfer-Encoding: quoted-printable
-Content-Type: text/plain;
-	charset=us-ascii
+[...]
 
-Zdenek,
+> Finally, there will always be a need to use custom ICC profiles that the user supplies/downloads. If you are going to bother supporting soft-proofing then there should be a way to use them as well.
 
-> On Aug 22, 2022, at 1:08 AM, Zdenek Dohnal via ipp <ipp@pwg.org> =
-wrote:
->=20
-> Hi all,
->=20
-> Fedora user brought up an interesting question for me - whether user =
-has some CLI tool for changing default options on the printer itself =
-(which supports one or more of driverless standards - AirPrint, IPP =
-Everywhere etc.), without going to printer's web interface.
+[...]
 
-Yes, IPP allows for this although most printers do not currently support =
-it.  Basically, the Set-Printer-Attributes operation is what you would =
-use to set the "xxx-default" attributes (media-default, =
-print-color-mode-default, sides-default, etc.), and you should expect =
-that the printer will require authentication for the operation to =
-succeed.
+Does this mean that in a colord-free world we proceed as follows:
 
-> IMHO it might be possible - printer supports IPP 2.0+, CUPS supports =
-IPP as well and CUPS CLI tools, which work with CUPS, have an option for =
-setting a CUPS server which they want to send the request to. Once the =
-local user has the correct permissions (since IPP backend is run under =
-root, my guess is root has at least some permissions...) it could be =
-possible.
+If the printer does not provide built-in, downloadable profiles via the 
+"printer-icc-profiles" printer IPP attribute, we have to get the 
+profiles separately from the manufacturer's web site (printer is not 
+self-contained, not really actually "driverless" ...) and upload them to 
+the printer using HTTP PUT and registering them with the 
+Set-Printer-Attributes IPP operation, so that they are available for all 
+users of this printer. Am I right? And, after the upload, will the newly 
+uploaded profiles be listed in the "printer-icc-profiles" IPP attribute, 
+so that every user knows which profiles are available?
 
-Running as root doesn't influence things - all authentication happens at =
-the printer end.
+Now, with profiles listed by the "printer-icc-profiles" printer IPP 
+attribute, could the soft-proofing software simply download and use 
+these profiles?
 
-> Is my understanding incorrect? Is there a different CLI tool which can =
-do the trick? (maybe ipptool?) To be honest I'm interested how is IPP =
-usually implemented internally in the printer - is there some CUPS =
-version? Or HTTPD (Apache) with proprietary IPP support on the top of =
-that? Or  whole HTTP+IPP implementation is written as a new there?
+If this is the case, the IPP printer is more or less replacing colord 
+for printers.
 
-Anything goes for printer firmware.  There are some using CUPS and/or =
-PAPPL, some using Apache, but most use a custom HTTP+IPP implementation.
+In case of a legacy printer the Printer Application should be able to 
+hold color profiles, ideally both in the Snap's static file system image 
+for the profiles which come with the Printer Application and in the 
+variable/state file system for user-added profiles. Ideally such 
+functionality should get added to PAPPL.
 
-________________________
-Michael Sweet
-
-
---Apple-Mail=_6669D256-53C2-4349-ABDF-04FD547FAAF8
-Content-Transfer-Encoding: 7bit
-Content-Disposition: attachment;
-	filename=signature.asc
-Content-Type: application/pgp-signature;
-	name=signature.asc
-Content-Description: Message signed with OpenPGP
-
------BEGIN PGP SIGNATURE-----
-
-iQIzBAEBCAAdFiEEkIbDzcZsP1Y8+PQFvmfHXsgfMkQFAmMDdXAACgkQvmfHXsgf
-MkSoyg//U4jRvVnsbReMSAQiqCNBdihImsgqMRTc5qEPXaBp2T6b41F/eRAZl0Ny
-g3gDklJgTHRxAzWN4FTnOaOoJkf7whVeBXxVuA0Ps3z7Enro4UTelY3c5BSVgFKl
-Ec3mcPKcIP+Uj9BLJpvYH+bdM29z1N/7cD4uT7CPgnnUuq198JySctl4pRHX/aHn
-IDFZao6HM5b1HYzLqjVw08EqQ69lvpOKtpODfDCF3AbKmwEiBerRuQS6W2hOuSRK
-/odc6o3KzKWEtyPJxg6ys+XXZA2jkXXYBU2mQBELfdd1+H+jeFQnxD4vmHs3ezXe
-PD/bbPZ71J64UK4LZM2+JoFVMH9jdbrEzmB6ofg0Y21div5UwpbQDK7OPdkluiv0
-Vp5YHsAJ61mDdOjbB/h+8zJEsnSWvsKuuGyRjPU1h8xbgQypS11mJmG0Z65IOIcg
-0l5YLILH8BFMBaleWHUvXIn8f+rCsJR86wGhCdEoVQ07LAV7nD75x90rhybhPGAk
-2LUgcTndfsNCToNgfeYHIxUbQlm0AyPQlr39Gv2x5lcR6Z8kXiTkWH3ULG81e72r
-Ttsz6UDTFm3UkC50ZmXJS/IYZ8PDJIn0LlWGqz12/tcDLR2OhO/AzE5Dy96OJX2c
-mlhOVSM/4WHCgZKcSFaTjIOuQB/o8c2ZMndW13RSmXON7S5RKoM=
-=phTk
------END PGP SIGNATURE-----
-
---Apple-Mail=_6669D256-53C2-4349-ABDF-04FD547FAAF8--
+    Till
