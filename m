@@ -1,24 +1,24 @@
-Return-Path: <till.kamppeter@gmail.com>
-DKIM-Filter: OpenDKIM Filter v2.11.0 smtp4.osuosl.org 180D141CDA
-DKIM-Filter: OpenDKIM Filter v2.11.0 smtp4.osuosl.org E8BB341CD3
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20210112;
- h=content-transfer-encoding:content-language:to:subject:from
- :user-agent:mime-version:date:message-id:from:to:cc;
- bh=KMDZpBX5MYimGIxj5IwUbR5mpQn2A2Yv3dfF1uyMceM=;
- b=GXJSMk2RinFDBowLbMvJDx0ZCx/NmxBCyFlAxVoUYLLQLPyo1VCCksxlN8ZwLc4txQ
- obN15ihgHBR6CcigUxH8yld0dlRCugGgyEabAXYQgbpuVE7E1341AsQwpAFWIeXTZ7Jz
- IC457O/KT78YNAvB2ZRqehXgUPeXzaTBTYjNozkHFuoaSi+cQObn5DVzZ9/+Da5Jh0Yq
- NTosvn3U+5seIA77LI+ec9FAjxmiCTyGTuNBkRToP1nZXVLB8QNfQTJir59pLIRmjgN4
- JojjsAtiBxMtATXQm1ehb3vlCPUFF4ho6kXg79AMJRtiu8bkr4BjCzABeyk0t7seT+et
- 2Tyw==
-Message-ID: <dd3516bb-bc99-1295-f249-68c2799c6e72@gmail.com>
-Date: Sat, 20 Aug 2022 00:13:40 +0200
+Return-Path: <zdohnal@redhat.com>
+DKIM-Filter: OpenDKIM Filter v2.11.0 smtp3.osuosl.org C664C60B54
+DKIM-Filter: OpenDKIM Filter v2.11.0 smtp3.osuosl.org D8D1760750
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=redhat.com;
+ s=mimecast20190719; t=1661144897;
+ h=from:from:reply-to:subject:subject:date:date:message-id:message-id:
+ to:to:cc:mime-version:mime-version:content-type:content-type:
+ content-transfer-encoding:content-transfer-encoding;
+ bh=D2i0V6y0jvEBqlrEOpJusM4ylc93pZbcHVH9sjPQMgk=;
+ b=ROfDbn/e2IGyW/twVCu9emdbQ8awB1dibEVlTvAe65xjUX7axZyXnfQHTGX1wRUlVL1j+i
+ ZTIL7sdc8Zg790azs8TJAfn+RKS8kDE+6tXEy78iy0hG5z4wt3qJEsC3/+IIWLtuBu7uod
+ IuX8Ovpx56GhfKJnXCnWZIzcB6vE4DM=
+Message-ID: <865e65a1-20e8-8fa7-892f-0eab109de7c0@redhat.com>
+Date: Mon, 22 Aug 2022 07:08:12 +0200
 MIME-Version: 1.0
-From: Till Kamppeter <till.kamppeter@gmail.com>
+From: Zdenek Dohnal <zdohnal@redhat.com>
 Content-Language: en-US
-Content-Type: text/plain; charset=UTF-8; format=flowed
-Content-Transfer-Encoding: 7bit
-Subject: [Printing-architecture] OpenPrinting News
+Content-Type: text/plain; charset="utf-8"; format="flowed"
+Content-Transfer-Encoding: 8bit
+Subject: [Printing-architecture] Changing defaults of a driverless printer
+	(physical device) via CLI
 List-Id: Printing architecture under linux
  <printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>, 
@@ -28,14 +28,35 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>, 
  <mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Ira McDonald <blueroofmusic@gmail.com>, Aveek Basu <basu.aveek@gmail.com>, Open Printing <printing-architecture@lists.linux-foundation.org>
+To: Open Printing <printing-architecture@lists.linux-foundation.org>, ipp@pwg.org
 
-Hi,
+Hi all,
 
-I have posted the newest development of the last month on our website now.
+Fedora user brought up an interesting question for me - whether user has 
+some CLI tool for changing default options on the printer itself (which 
+supports one or more of driverless standards - AirPrint, IPP Everywhere 
+etc.), without going to printer's web interface.
 
-Here we go:
+IMHO it might be possible - printer supports IPP 2.0+, CUPS supports IPP 
+as well and CUPS CLI tools, which work with CUPS, have an option for 
+setting a CUPS server which they want to send the request to. Once the 
+local user has the correct permissions (since IPP backend is run under 
+root, my guess is root has at least some permissions...) it could be 
+possible.
 
-https://openprinting.github.io/OpenPrinting-News-August-2022/
+Is my understanding incorrect? Is there a different CLI tool which can 
+do the trick? (maybe ipptool?) To be honest I'm interested how is IPP 
+usually implemented internally in the printer - is there some CUPS 
+version? Or HTTPD (Apache) with proprietary IPP support on the top of 
+that? Or  whole HTTP+IPP implementation is written as a new there?
 
-    Till
+Thank you in advance!
+
+
+Zdenek
+
+-- 
+Zdenek Dohnal
+Software Engineer
+Red Hat, BRQ-TPBC
+
