@@ -1,25 +1,26 @@
 Return-Path: <till.kamppeter@gmail.com>
-DKIM-Filter: OpenDKIM Filter v2.11.0 smtp2.osuosl.org 3ADA34013F
-DKIM-Filter: OpenDKIM Filter v2.11.0 smtp2.osuosl.org 5E8AA400F6
+DKIM-Filter: OpenDKIM Filter v2.11.0 smtp3.osuosl.org 2EED860F60
+DKIM-Filter: OpenDKIM Filter v2.11.0 smtp3.osuosl.org 284C860E07
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20210112;
  h=content-transfer-encoding:content-language:to:subject:from
  :user-agent:mime-version:date:message-id:from:to:cc:subject:date
  :message-id:reply-to;
- bh=50Cf2qJ1phoIh+mHzFzEtz8EgvbGj6zdd50waGg+vJQ=;
- b=VO9Pguhd5XtujvO0+4c98ohasz9P8/sZU1FzL9mzma65nlqIumflpSSF++gOkI7ti8
- v81I4r/oTpR+KzFonqXI/RVJjIJYRk6ylUbhwzQ7vNcAa14omHLx67pZ/HV4JH/oRx+C
- /eEDJAAxLjl/ZBQij6fSrGU0dmz5/oynaRVtbhxDa564Eur0Yb5ZlTUDqcNMlwHgFbR/
- ygkXPm3veQLJbjKtxpl0LeENlm30soKlrWV/F4uKX75wu1d2Idgaj5JPJKEteHNoUx/+
- SMecbj1v8hr2CLBJu0/CMX2gNthD34YTunPtrRF5a9pubu8rGI8EZmZfDp1sj9nfE+vh
- MjVg==
-Message-ID: <bda56eb2-ee79-d452-9d2a-a73c1013b435@gmail.com>
-Date: Fri, 9 Dec 2022 18:27:38 -0300
+ bh=j4ZIreH9kyn7+e3u00PuQQipDyrM0tSWowj3MKYjMtM=;
+ b=Ohg62sOMCYDLSi8d8Pxs1NS93qvQtQ6znMTvWBDYpzlydVMcVF2YmqTPjAwDBePO2f
+ 85at7CB6LrPK/lMzTkraxKo/gP7qbLKC14aeIclj0l0xkKr01pc1bqyCv4E4Xz4ON/Dn
+ qNPHinOxOR6uC6jca4tMswGGJSkuE0oSGNl6qB3/w5kKveTUdp6DfUvIQVtki/megB0M
+ mD+NzO0L1A0EIvDxlmMaYFoVgFWo1GcCESEbICZTbigCzZOmY/jaXDrjrSK+DqOzf6Si
+ EVE1JB3Hti/wluom9DucsXelZ3Wve6YouXQThh8+KVDNq9CdFNVdDJBhEiuKZbJ3D2PL
+ XTCw==
+Message-ID: <e556884d-e068-0783-d497-05e94c0f9a0e@gmail.com>
+Date: Tue, 13 Dec 2022 23:31:28 -0300
 MIME-Version: 1.0
 From: Till Kamppeter <till.kamppeter@gmail.com>
 Content-Language: en-US
 Content-Type: text/plain; charset=UTF-8; format=flowed
 Content-Transfer-Encoding: 7bit
-Subject: [Printing-architecture] First beta of pappl-retrofit released!
+Subject: [Printing-architecture] First beta of the second generation of the
+ Common Print Dialog Backends released!
 List-Id: Printing architecture under linux
  <printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>, 
@@ -33,23 +34,43 @@ To: Open Printing <printing-architecture@lists.linux-foundation.org>, Zdenek Doh
 
 Hi,
 
-After two years of development (first year as part of the PostScript 
-Printer Application) I am finally spinning a first release of 
-pappl-retrofit, the library to convert classic CUPS printer drivers and 
-PPD files into Printer Applications.
+We are now releasing the first beta of the second generation of the 
+Common Print Dialog Backends (CPDB).
 
-With CUPS 3.x (does not support PPDs/classic drivers) around the corner 
-and also my plans to switch to the CUPS Snap (does not support 
-PPDs/classic drivers) as default printing system in Ubuntu 23.04 
-(Feature Freeze Feb 2023) we need to make pappl-retrofit "distro-ready", 
-so it needs releases and versions.
+As part of making everything ready for the New Architecture of printing 
+we have finally added CPDB support to the print dialogs of the major 
+desktop environments/GUI toolkits, GNOME/GTK and KDE/Qt. This was done 
+in Gaurav Guleria's GSoC project and in the course of his work on the 
+print dialogs he also did a lot of improvements on the CPDB framework, 
+mainly due to missing features but also to work well in a PPD-less world.
 
-Therefore I have released 1.0b1 now and ask everyone of you to test and 
-also to start distro-packaging, for Debian, Red Hat, SUSE, ...
+The components we are currently maintaining got all updated and released 
+as version 2.0b1:
+
+- **cpdb-libs:** The central library package implementing both ends of 
+the D-Bus interface (backend = server, frontend = client) and the APIs 
+for frontends and backends.
+- **cpdb-backend-cups:** The CUPS backend. It allows the print dialogs 
+(frontends) to print with CUPS. It polls the list of available printers 
+(queues) from CUPS and also the option/setting list for a selected 
+printer, and it passes on jobs with option settings to CUPS. It uses the 
+current APIs of libcups for that and does not interact with PPD files at 
+all, so that porting the backend to CUPS 3.x will be easy.
+- **cpdb-backend-file:** This backend allows the print dialogs to print 
+into a file. As most print dialogs have already their own functionality 
+for that, this backend will probably not be needed in production. We 
+have it at least for sake of completeness, but it is also useful as code 
+example for backend developers.
+
+We especially added support for human-readable (user interface) strings 
+for option and setting names, better support for media sizes, especially 
+also supporting more than one margin variant for the same page size. 
+asynchronous functions to query printer details, cpdb-libs completely 
+inependent of libcups, ... and many bug fixes.
 
 Here we go:
 
-https://openprinting.github.io/pappl-retrofit-First-Beta-Release/
+https://openprinting.github.io/Common-Print-Dialog-Backends-Second-Generation-First-Beta-Release/
 
 There are also GitHub discussions set up for each release now.
 
