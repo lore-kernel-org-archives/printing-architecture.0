@@ -1,27 +1,25 @@
-Return-Path: <gary@extremeground.com>
-DKIM-Filter: OpenDKIM Filter v2.11.0 smtp4.osuosl.org E027041802
-DKIM-Filter: OpenDKIM Filter v2.11.0 smtp4.osuosl.org 15746416EF
-DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=extremeground.com; s=default; h=Content-Transfer-Encoding:Content-Type:
- Subject:From:To:MIME-Version:Date:Message-ID:Sender:Reply-To:Cc:Content-ID:
- Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
- :Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
- List-Subscribe:List-Post:List-Owner:List-Archive;
- bh=8JX80LH8C2gLK4ctuKamuFE05pHVJ2mGDmF7haWQ9oI=; b=iGNYIlwyYD0/LI+1H5LEEETDEi
- Q7bZtammb9QxEXwe+9aGM0CU6pvi3UT3lcloy8rvjXVkBJDHgVddLx2YONLWF5RnvLvAWgdlncutz
- urB0+yPmg9NdczPvRU2ifnzVD9fODKRoP2nQR3QnBDNYwLpJ+VwhjZ19YdSMft7tk5kSIjB4H6q7I
- 6Z7IIENl3PKWhVY6kP+SGANGJPm9VfT1Muchc9+oPLKm6a83H+cAVk7xnSvoxXyDS+bVXzIlCe111
- uTQJdwYNxwDpN30uo6q2Gc7mf6zuSe++0RESWK056w2HHgklyxUn1OivtCkr3+IyqFfJsZtdByeTI
- k45r/CTg==;
-Message-ID: <4689e6ca-01a0-8664-dabf-431fee58ac28@extremeground.com>
-Date: Tue, 13 Dec 2022 21:40:08 -0500
+Return-Path: <till.kamppeter@gmail.com>
+DKIM-Filter: OpenDKIM Filter v2.11.0 smtp4.osuosl.org 5DC7840319
+DKIM-Filter: OpenDKIM Filter v2.11.0 smtp4.osuosl.org F0D0B4030C
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20210112;
+ h=content-transfer-encoding:content-language:to:subject:from
+ :user-agent:mime-version:date:message-id:from:to:cc:subject:date
+ :message-id:reply-to;
+ bh=N9YJS16ccGE8KBv2tnjmA4GchsJCaQgsKQlBbNQV4Vs=;
+ b=MzafXd8EPi/B04ldNmWa3o/neZW3DctOpXEQM4fCQqMycrZDZCKbt/fci7UP6e+EmN
+ 3FQEAVpB8+MoJR2JuY/Ai07CYCNUqbFa6zO1l2yKokbQz4K/gldQ85vD3LRsjtcxxs6o
+ TagbWxbVwsShj9LcJFXhpO3lx1siQTA2AAcTSmGn93wVH5CMJDg1agaZfN73utAbWgu6
+ 8Gx98cVvizDvolaodXGQGsZ+nCOfg0AMIMfrHAs9W4M0XtNYb5wVzk+2P7lhzS6pnr4f
+ otH5oJYhWjq+N34Yh79UoeHSvg0ZgrAUSl9CSN5esDir6dEna5SaNrpI/gM483v4KJCj
+ FbTw==
+Message-ID: <fc5c8021-250d-e96a-d615-92b1d9aa4e5c@gmail.com>
+Date: Sun, 18 Dec 2022 21:26:03 -0300
 MIME-Version: 1.0
-Content-Language: en-CA
-From: Gary Dale <gary@extremeground.com>
-Content-Type: text/plain; charset="utf-8"; format="flowed"
-Content-Transfer-Encoding: 8bit
-Subject: [Printing-architecture] controlling media size / paper tray
- selection when printing to a class
+From: Till Kamppeter <till.kamppeter@gmail.com>
+Content-Language: en-US
+Content-Type: text/plain; charset=UTF-8; format=flowed
+Content-Transfer-Encoding: 7bit
+Subject: [Printing-architecture] OpenPrinting News
 List-Id: Printing architecture under linux
  <printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>, 
@@ -31,46 +29,14 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>, 
  <mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: printing-architecture@lists.linux-foundation.org
+To: Ira McDonald <blueroofmusic@gmail.com>, Aveek Basu <basu.aveek@gmail.com>, Open Printing <printing-architecture@lists.linux-foundation.org>
 
-I'm running Debian/Bookworm on an AMD64 system.
+Hi,
 
-I've got a script that prints to class queue - "photo" - which has 3 
-actual photo printers in it. The printers are all different except that 
-they are made by Epson. On is an old R300, the second is an XP-820 and 
-the third is an XP-6100.
+I have posted the newest development of the last month on our website now.
 
-I have a script that controls a camera to take and download a picture 
-then rotate and crop it before sending it to the printer. This worked 
-fine until I added the third printer and bought a new laptop.
+Here we go:
 
-The old R300 uses a CUPS+Gutenprint driver while the XP-820 used the 
-Epson Inkjet Printer Driver (ESC/P-R) for Linux - which somehow survived 
-upgrading over the years. However when I installed Linux on the new 
-laptop, I had to install Debian/Bookworm - Debian/Bullseye had too many 
-issues. However I've got the CUPS+Gutenprint driver now because the 
-Epson drivers wouldn't install. For some reason photos printed with the 
-new driver are distinctly yellowy.
+https://openprinting.github.io/OpenPrinting-News-December-2022/
 
-The real problem however is the XP-6100, which doesn't have a Linux 
-driver per se so I installed it as an ipps printer. It prints a 
-beautiful test page on Letter and 4x6.borderless photo paper. However 
-when I print a photo to it, it insists on printing on letter size paper 
-- scaling the photo up to file the page.
-
-The CUPS default options are 4x6.borderless glossy photo paper printing 
-cropped to fit. However, when I send a photo to it using
-
-     lpr -P photo <photo name>.jpeg
-
-which works on the other two printers, I get letter-size output. Even if 
-I remove the paper from the letter-size tray, it still wants to print 
-from it.
-
-I thought of adding a paper size definition to the lpr command but the 
-first two printers have a 4x6 size for borderless printing while the 
-XP-6100 uses 4x6.Borderless - the 4x6 size has a border. That would mean 
-I didn't get the same output from all three printers.
-
-Can anyone suggest a way I can get all three printers to print the same?
-
+    Till
