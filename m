@@ -1,22 +1,26 @@
-Return-Path: <msweet@msweet.org>
-DKIM-Filter: OpenDKIM Filter v2.11.0 smtp2.osuosl.org EB0C64013F
-DKIM-Filter: OpenDKIM Filter v2.11.0 smtp2.osuosl.org 336DD40017
-DKIM-Filter: OpenDKIM Filter v2.11.0 mail.msweet.org 02618803DB
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=msweet.org;
- s=default; t=1672458145;
- bh=0v2tndC9/VjdugmbRsqBOd95dEheDA45dkAFJEmoU48=;
- h=From:Date:Subject:To:From;
- b=wVvNlx+mxlECMciYYktpPfmyh02ubZL+5d1OlaJS1HRxWZQWyCmj0LjSI5BDRz1pp
- JsWhx3m2QYN8ArHgb8cMEJaDvsuCldyUdxUYJ5yuR9bdXrXsWrjOacYLj/ax+FLB5r
- sC23LvjITmklnEFthAsUXXy9ZCKmM+AmNCQOV+iw=
-From: Michael Sweet <msweet@msweet.org>
-Content-Type: multipart/signed;
- boundary="Apple-Mail=_C89A7BE6-66E6-4925-A517-F0E39FD4BAEA";
- protocol="application/pgp-signature"; micalg=pgp-sha256
-Mime-Version: 1.0 (Mac OS X Mail 16.0 \(3731.400.23\))
-Date: Fri, 30 Dec 2022 22:42:13 -0500
-Message-Id: <BB5416D5-3895-41B0-99F0-46E3208F3BBB@msweet.org>
-Subject: [Printing-architecture] PAPPL 1.3.1
+Return-Path: <till.kamppeter@gmail.com>
+DKIM-Filter: OpenDKIM Filter v2.11.0 smtp3.osuosl.org 5353060A70
+DKIM-Filter: OpenDKIM Filter v2.11.0 smtp3.osuosl.org 56FF9607BC
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20210112;
+ h=content-transfer-encoding:content-language:to:subject:from
+ :user-agent:mime-version:date:message-id:from:to:cc:subject:date
+ :message-id:reply-to;
+ bh=jct3UmI/6Cus3yyP05EMoSEyk/8NmcjLMZ46WPDYUkk=;
+ b=P5YehGUjS3OVwQz7kuSWCNoW6P/6Yg0BAs98cKvk5xWXAndMt+gxrcyf3zMbHPTEtf
+ z1Vx0yJ2H3LwNAPkR4AsQbjvVCYKBkCUP7o/W9LzZp1aJk31R3cU6cf0Oap3hKzu03Ny
+ KlGHLnJIiTNkeAImdgEXbpvxc2q0NAUSfFFQGdvSXjeEcDwnXVt3za5LvGKAjfR4rNyG
+ F2J99oBS4+g0QUfUCZZxAx5d6ontWi5HT5i6ppkZNGKzF1ccUjNxdnHV1XNAbfV8Mdjc
+ FANN1F08vac/8QEXFKAcU4giMNopm8eUz/jHQbrwwq2LUEJ7i2H+FOMZzkZ11fE2dWJz
+ If6g==
+Message-ID: <acf50795-1628-1746-c82a-d8290ffca169@gmail.com>
+Date: Mon, 9 Jan 2023 00:29:29 -0300
+MIME-Version: 1.0
+From: Till Kamppeter <till.kamppeter@gmail.com>
+Content-Language: en-US
+Content-Type: text/plain; charset=UTF-8; format=flowed
+Content-Transfer-Encoding: 7bit
+Subject: [Printing-architecture] Second beta of the second generation of
+	cups-filters released!
 List-Id: Printing architecture under linux
  <printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>, 
@@ -26,53 +30,27 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>, 
  <mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>
+To: Open Printing <printing-architecture@lists.linux-foundation.org>, Zdenek Dohnal <zdohnal@redhat.com>, "jsmeix@suse.de" <jsmeix@suse.de>, Thorsten Alteholz <debian@alteholz.de>, Frederik Feichtmeier <frederik.feichtmeier@gmail.com>, Michael Sweet <msweet@msweet.org>, Sebastien Bacher <sebastien.bacher@canonical.com>, Ken VanDine <ken.vandine@canonical.com>
 
+Hi,
 
---Apple-Mail=_C89A7BE6-66E6-4925-A517-F0E39FD4BAEA
-Content-Transfer-Encoding: 7bit
-Content-Type: text/plain;
-	charset=us-ascii
+I have done the second beta releases of the new cups-filters components now!
 
-PAPPL v1.3.1 is now available for download and is a general bug fix release:
+During creation of the Debian/Ubuntu packages for the components of the 
+2nd-generation cups-filters and also during the further development of 
+the Common Print Dialog Backends (CPDB) some bugs were discovered which 
+are fixed now.
 
-	https://github.com/michaelrsweet/pappl/releases/tag/v1.3.1
+Also the adaptation of the source code documentation files to the 
+individual components was not yet complete.
 
-Changes in 1.3.1 include:
+So there were many things to fix and these fixes are now available in 
+the second beta release.
 
-- Fixed auto-add of USB printers
-- Updated "ipp-attribute-fidelity" support
-- Reduced sleep interval for USB gadget initialization
+Here we go:
 
-Enjoy!
+https://openprinting.github.io/cups-filters-Second-Generation-Second-Beta-Release/
 
-________________________
-Michael Sweet
+There are also GitHub discussions set up for each release now.
 
-
---Apple-Mail=_C89A7BE6-66E6-4925-A517-F0E39FD4BAEA
-Content-Transfer-Encoding: 7bit
-Content-Disposition: attachment;
-	filename=signature.asc
-Content-Type: application/pgp-signature;
-	name=signature.asc
-Content-Description: Message signed with OpenPGP
-
------BEGIN PGP SIGNATURE-----
-
-iQIzBAEBCAAdFiEEkIbDzcZsP1Y8+PQFvmfHXsgfMkQFAmOvr5UACgkQvmfHXsgf
-MkTKVBAAgnwVQIIX6vFERIoTZAKEXP9QWTCW5vOFVTBtaWZ5nqEIdZ3hMzjOUcjY
-TatTpq2Pinh/pP4qfdWQsF5q8wrbAEUkSP/3qmz8Tp0A+nqwCvmdzPEgf2haYuOD
-Vvsq5gv4KN3YHMTKhg7GVgN4XC15BFv2G+86oDyZ2TyPmMIpYIMwb6D80/aOhbAn
-ESUqjUxt4IXqw9XwcbmGVAdnQCfSq8FlrbAxOb9A9O+VULFpMMKC+lNSEoR00e+0
-mVrvs0CyRa+VGexaiWYemfTBQ+pQxe59a6TwO/wAkpZcktjDqzScoluNZ6WGt/oZ
-A/wnzg7qXsj7/B8pwv/VfFwXYwYiyJ3KWCiTty00LwSTJi2BlfEJkHi5lvMtgIb3
-NWuxvDbrj10Oq1uotUNw68ckLMTx+lEWBIDIyyG4x8bKhNTFbAz4MSOoinwXMwi7
-zSAlueqcmlLPmugrnoVWJOHEN/O2MeaEYE8c3YtkJGaBBsTvjC9qN8r17UvIpPpI
-lwyQc7LmjBYdyyZOdp2TEZIP6Mbr9WF1nWPSUnpWOVOqZ2fKcmv3hjV1Au6nWhGm
-3kOoYHMKbY0DN/ihvjE/QQeam4xsyqN2yWzalGE/5TCTcrfsdPRoShInn1shO18X
-n6JhR7ruEzQBLt7X6i/fAxrbekJwXy3TA+8rxBnpC0/+/vwW3/E=
-=8taP
------END PGP SIGNATURE-----
-
---Apple-Mail=_C89A7BE6-66E6-4925-A517-F0E39FD4BAEA--
+    Till
