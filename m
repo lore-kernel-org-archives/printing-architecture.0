@@ -1,27 +1,25 @@
-Return-Path: <till.kamppeter@gmail.com>
-DKIM-Filter: OpenDKIM Filter v2.11.0 smtp3.osuosl.org 7342660E30
-DKIM-Filter: OpenDKIM Filter v2.11.0 smtp3.osuosl.org 419D660C13
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20210112;
- h=content-transfer-encoding:in-reply-to:cc:from:references:to
- :content-language:subject:user-agent:mime-version:date:message-id
- :from:to:cc:subject:date:message-id:reply-to;
- bh=WCfZmluo0I6eBOBjU6PU3BiBZfbPA44PAHsTjtS0gK4=;
- b=Kt0LytgN3ncO7qydauHIChFzrj9CviRW7vcNp1Whlmrg0/IgWhpJ/RkjcKhaf09a8L
- LbLcRNadsM+hUQxUM11o3e2iC/yBzEizEWeoqPTBKlyrREj21WP0wXMRwJcLeRx2vZI9
- 9SQOFCrLTotffUh65SfAaavZeJKtT9L50J/TAWorr9xnGqZP3vAGG6NgnU3vJz0BDwS/
- xCnTqAL5pp1f4vFQSvc2TURAJ50dDlJKAe58inwBOULz1raiTeFQcPO6UfQ0tTfSlD8j
- QGAlZHtqw7yMmSnGF1LownWJFfQX6wbAR8XFKC7HbSzAwPKy7fPWJ2k3wqBvIfg4Gx4V
- xn+A==
-Message-ID: <8b095d8c-f33a-5686-72e9-70ab9ad4e2cd@gmail.com>
-Date: Mon, 16 Jan 2023 17:06:48 -0300
-MIME-Version: 1.0
-Content-Language: en-US
+Return-Path: <msweet@msweet.org>
+DKIM-Filter: OpenDKIM Filter v2.11.0 smtp4.osuosl.org 5D167410AF
+DKIM-Filter: OpenDKIM Filter v2.11.0 smtp4.osuosl.org 09F90410A1
+DKIM-Filter: OpenDKIM Filter v2.11.0 mail.msweet.org 6830D800B2
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=msweet.org;
+ s=default; t=1673904466;
+ bh=xdDh2gqnBAqlESoxO8Sjx/TXwKdivfLFkACsYs8yXTU=;
+ h=Subject:From:In-Reply-To:Date:Cc:References:To:From;
+ b=TYI0wFQi5/lF0kLeKIEI0y3KxvKRa+5wePPh+qH8/PyXS0oXTO4EK+euRv2zBnNmP
+ KO/L5h/Z2xHokPC7SrYQ/fpg6KlDC9hD0p0UijAhyTlkKCEsI+SK4GE+Z1E8jlduJg
+ GQGhQs9GdVA5vAMbxjhq57I0KgDqFQ4x+SxESZ+w=
+Content-Type: multipart/signed;
+ boundary="Apple-Mail=_C640C94C-736D-4499-A673-7F2497C92CF2";
+ protocol="application/pgp-signature"; micalg=pgp-sha256
+Mime-Version: 1.0 (Mac OS X Mail 16.0 \(3731.400.42.1.1\))
+From: Michael Sweet <msweet@msweet.org>
+In-Reply-To: <8b095d8c-f33a-5686-72e9-70ab9ad4e2cd@gmail.com>
+Date: Mon, 16 Jan 2023 16:27:34 -0500
+Message-Id: <09B091BC-0273-42EC-8F3B-C01AF9761048@msweet.org>
 References: <7ed5b062-73bc-0002-14c8-bda32c5f7866@gmail.com>
  <63ED10FD-8152-401C-92A8-F5B89CCA1F68@msweet.org>
-From: Till Kamppeter <till.kamppeter@gmail.com>
-In-Reply-To: <63ED10FD-8152-401C-92A8-F5B89CCA1F68@msweet.org>
-Content-Type: text/plain; charset=UTF-8; format=flowed
-Content-Transfer-Encoding: 7bit
+ <8b095d8c-f33a-5686-72e9-70ab9ad4e2cd@gmail.com>
 Subject: Re: [Printing-architecture] Google Summer of Code 2023 - Project
  ideas page for the Linux Foundation online
 List-Id: Printing architecture under linux
@@ -33,93 +31,157 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>, 
  <mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Michael Sweet <msweet@msweet.org>, Ira McDonald <blueroofmusic@gmail.com>, Open Printing <printing-architecture@lists.linux-foundation.org>
-Cc: Aveek Basu <basu.aveek@gmail.com>
+To: Till Kamppeter <till.kamppeter@gmail.com>
+Cc: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>, Aveek Basu <basu.aveek@gmail.com>
 
-On 16/01/2023 16:17, Michael Sweet wrote:
-> Till,
-> 
-> FWIW, some of the PAPPL project ideas aren't a good fit for GSoC, particularly the IPP Everywhere 2.0 stuff (still in flux, and something I am already working on) and presets.  The scan stuff is "nice to have" but we are still a long ways away from having anything that can be merged and supported.
-> 
 
-OpenPrinting project ideas on
+--Apple-Mail=_C640C94C-736D-4499-A673-7F2497C92CF2
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain;
+	charset=us-ascii
 
-https://wiki.linuxfoundation.org/gsoc/google-summer-code-2023-openprinting-projects
+Till,
 
-Michael,
-
-I was also in doubt about some ideas when I tried to create a 
+> On Jan 16, 2023, at 3:06 PM, Till Kamppeter <till.kamppeter@gmail.com> =
+wrote:
+>=20
+> On 16/01/2023 16:17, Michael Sweet wrote:
+>> Till,
+>> FWIW, some of the PAPPL project ideas aren't a good fit for GSoC, =
+particularly the IPP Everywhere 2.0 stuff (still in flux, and something =
+I am already working on) and presets.  The scan stuff is "nice to have" =
+but we are still a long ways away from having anything that can be =
+merged and supported.
+>=20
+> OpenPrinting project ideas on
+>=20
+> =
+https://wiki.linuxfoundation.org/gsoc/google-summer-code-2023-openprinting=
+-projects
+>=20
+> Michael,
+>=20
+> I was also in doubt about some ideas when I tried to create a =
 description for them:
-
-Update of OpenPrinting software to IPP Everywhere 2.0
------------------------------------------------------
-
-- What are the exact differences between 1.1 and 2.0? Is it written 
+>=20
+> Update of OpenPrinting software to IPP Everywhere 2.0
+> -----------------------------------------------------
+>=20
+> - What are the exact differences between 1.1 and 2.0? Is it written =
 somewhere to easily check?
-- Is 2.0 stable and complete enough for working towards it and is it 
-also no subject of a quick replacement (by 2.1?)? Not like OAuth support 
-where we decided on skipping working on its integration this year?
-- Is there actual coding work to do to achieve this?
 
-So if you feel better to work on this by yourself, at least for CUPS and 
-PAPPL, no problem, I can remove it.
+The current draft of the 2.0 spec is at:
 
+    https://www.pwg.org/ipp
 
-CPDB backend for IPP Infrastructure/Cloud printing
---------------------------------------------------
+The main changes are to make certain optional 1.1 things required in =
+2.0.  It will also depend on newer versions of several dependent =
+specifications (PWG 5100.7 and 5100.13, in particular, have been updated =
+since 1.1 and are in the final approval phase...)
 
-Which software is the actual implementation of this standard and visible 
-for the end user who wants to print from an application?
+> - Is 2.0 stable and complete enough for working towards it and is it =
+also no subject of a quick replacement (by 2.1?)?
 
-If it is simply an emulation of an IPP Printer (Printer Application) it 
-would be hidden behind CUPS for applications and so no new backend is 
-needed. CUPSD backend is sufficient.
+2.0 is marked as a prototype draft, which means it is ready for =
+prototyping and is not expected to have significant technical changes.
 
-If it is the sharing server of CUPS 3.x then the CUPS backend would also 
-be the one to be used but we would need to add some extra functionality 
-for extra control points, meaning that the project better gets titled: 
-"Extend the CPDB CUPS backend for the sharing server of CUPS 3.x".
+WRT 2.1, we haven't even published 2.0 yet, but a 2.1 errata release =
+MUST be backwards-compatible with 2.0 (conformance-wise) so I wouldn't =
+worry about that.  Even 2.0 is just an incremental change from 1.1...
 
-What is the situation, retitle the project or remove it?
+> Not like OAuth support where we decided on skipping working on its =
+integration this year?
 
+Um, I'm not aware of any such decision!  Certainly we haven't finalized =
+things but our goal is to have IPP+OAuth prototyped this year (at =
+least).
 
-These two looked rather viable for me:
+> - Is there actual coding work to do to achieve this?
 
-PAPPL Scanning support
-----------------------
+PAPPL should already have everything covered, but I'll do a final pass =
+after the 5100.7 and 5100.13 updates are final/approved.
 
-PAPPL scanning support was already planned and worked on in GSoC 2022, 
-but one of the two contributors has failed, and therefore we did not 
-complete it. Therefore I have opened one project idea for its 
-completion. There is even already a candidate investigating on what 
+> CPDB backend for IPP Infrastructure/Cloud printing
+> --------------------------------------------------
+>=20
+> Which software is the actual implementation of this standard and =
+visible for the end user who wants to print from an application?
+
+=46rom the client side you are just printing to a different server.
+
+> These two looked rather viable for me:
+>=20
+> PAPPL Scanning support
+> ----------------------
+>=20
+> PAPPL scanning support was already planned and worked on in GSoC 2022, =
+but one of the two contributors has failed, and therefore we did not =
+complete it. Therefore I have opened one project idea for its =
+completion. There is even already a candidate investigating on what =
 needs to get done.
+>=20
+> What do you mean with
+>=20
+>    but we are still a long ways away from having anything that can be
+>    merged and supported
 
-What do you mean with
+I mean that the current work has laid the foundation but we haven't =
+actually implemented everything needed to handle IPP and/or eSCL =
+requests, route them through the scanner driver, get the scan data from =
+the scanner, and feed it back to the client.
 
-     but we are still a long ways away from having anything that can be
-     merged and supported
-
-Is too much missing for scanning so that one could complete it by the 
-one project idea I have opened now? Would it need a complete 
-re-architecturing of PAPPL? Would you prefer to do it by yourself from 
-scratch, dropping all the GSoC contributions?
-
-Should I better snap AirSANE to make scanner drivers snappable (but it 
-will be confusing for users if an MF device has 2 daemons, one for 
+> ...
+> Should I better snap AirSANE to make scanner drivers snappable (but it =
+will be confusing for users if an MF device has 2 daemons, one for =
 printing and one for scanning)?
 
+Honestly that is the simplest way since ALL of the scanners we planned =
+on supporting via PAPPL printer applications are already supported by =
+SANE.
 
-PAPPL presets
--------------
-
-Is my idea in the feature request
-
-https://github.com/michaelrsweet/pappl/issues/244
-
-wrong? Or not implementable with current IPP? Or do you prefer to 
+> PAPPL presets
+> -------------
+>=20
+> Is my idea in the feature request
+>=20
+> https://github.com/michaelrsweet/pappl/issues/244
+>=20
+> wrong? Or not implementable with current IPP? Or do you prefer to =
 implement this by yourself.
 
+Honestly I don't have a good feel for how/whether this should be =
+implemented and added to PAPPL, and the only printer application that =
+really needs this functionality is Gutenprint.  Probably better to focus =
+on getting Gutenprint ported and supporting its presets, then we can =
+look at how those presets will work with the existing PAPPL.
 
-So please tell me what should I remove or reformulate?
+________________________
+Michael Sweet
 
-    Till
+
+--Apple-Mail=_C640C94C-736D-4499-A673-7F2497C92CF2
+Content-Transfer-Encoding: 7bit
+Content-Disposition: attachment;
+	filename=signature.asc
+Content-Type: application/pgp-signature;
+	name=signature.asc
+Content-Description: Message signed with OpenPGP
+
+-----BEGIN PGP SIGNATURE-----
+
+iQIzBAEBCAAdFiEEkIbDzcZsP1Y8+PQFvmfHXsgfMkQFAmPFwUYACgkQvmfHXsgf
+MkT54g//Wb0zymC6Erpyp0oyyhEd+XhvF93nAvrbeS5dSou1c/1jryQjl+fD6I/f
+1JmfL8/Q4sA6bCxxIhg0ifneUkhIHA46E3Sm2RRKYqY82XUBJPcgDua37sosjA5u
+BYzSce/7KZuNTRsu/4Wmxs5U2w4WnyobpmJhdDKqmseKRUd+vwSQQpXCrp2GA/ZC
+4EcZVlXpBEWugCG+U7l2ue5RCDT9rqZowj0vPJUSQqoOq4Ru2UUO7ud2dPpmseEn
+yfXQhJuOL4gAg2jcZtpLD8Z5JPzhD52HF1Tpooxv9h+syo6xDXfC92W0dzuTA0HY
+eWpfo+semhDRiL9R+hm/oh3a7ZlCMBXp2oJybNvvHuG/6uW2to01NzMLTU+wjMgY
+3NoOz7KWEeyOGxsZOBKLPJgNznNme7c0KiYEjtJ0YwQTpwjWYmL8Y7bsGzpTf6m2
+H00gqnnqlNzubwTAgqhg/ib4SRoY2zoOhVCKRSAZ1gyFXJ1WWaqOtqzDxs5EnKqv
+u+2BhPcreYfGqPeynyaDPPH8xyhhpOfYHXonRuEe5j0FHUBOVkgWn61+9fwpDeSJ
+keL3lPqOAHjrfYoe35HFvxDbL9oOw45xn4hH4qD0mbeXjdkAhcN/bZjX1EXVqAnj
+4J8FcenG8tKiYq6Aaxri2P0Ul5PF2MxfmoJBfuC+joUHOX/cMtw=
+=MULq
+-----END PGP SIGNATURE-----
+
+--Apple-Mail=_C640C94C-736D-4499-A673-7F2497C92CF2--
