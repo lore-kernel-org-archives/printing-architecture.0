@@ -1,25 +1,26 @@
 Return-Path: <till.kamppeter@gmail.com>
-DKIM-Filter: OpenDKIM Filter v2.11.0 smtp2.osuosl.org 0DA24400D8
-DKIM-Filter: OpenDKIM Filter v2.11.0 smtp2.osuosl.org 094EC400BB
+DKIM-Filter: OpenDKIM Filter v2.11.0 smtp3.osuosl.org 8A0A860BD6
+DKIM-Filter: OpenDKIM Filter v2.11.0 smtp3.osuosl.org CE31860F63
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20210112;
  h=content-transfer-encoding:content-language:to:subject:from
  :user-agent:mime-version:date:message-id:from:to:cc:subject:date
  :message-id:reply-to;
- bh=ArDRqHadDi/rCCC6YWGpP2n6k/F57xLRXiwruPS3Ek4=;
- b=Yp+g2CTh8qkjJj5krbWg5wY4Rzqs2nVWQ8wZooJbcZAB6XQHiLHlKWoIC9twdBlO1L
- SmUTe5IcsYFHFwy6MjWCV0IYkgVoJ3Jedz1VtWjpBDcciXTcgpcsTsCAVfZ68QupXAPt
- IUz4SVtk5apzR4lfhLsJhmrirmScDtwhRALb7XNcv0fxtBQUL0j8QTn4wmtsl1KJ2Z49
- 1UzmPmQYOlMD5aWbsm7+QN6hv1AEFMWqMKFKiRo1a6V2SKtl0+Ik4yV64l4mUzgsM1/5
- T+Xy2Fs00+Oze0lfAhvl3onH8aIxYppnxdWsVLLlQKyOjaMLi4c2CjcthL2BfTgXBhY3
- IqAg==
-Message-ID: <bcdfc0d7-c368-5b54-3731-053ae1603967@gmail.com>
-Date: Sat, 11 Feb 2023 00:54:34 +0100
+ bh=YysMxychcqI5nsjsOYYOKtcoZpjaogd1ThXPeyZuBcw=;
+ b=BdkXj49dplWMp5w7yV04+copPMz/fcOpXCBqveQPlEq67ca2tRIvqey7n+JWFBEhdO
+ EtEyKBhVCmcUgew3klPqgilC8Rg91zWiF2HOzdmRI0dFbSGmoQd4XSgOwZi5vA7lRCrE
+ fuKS8UwWHn9Cl161VXu1xrnr3ezJdNfrMd2JUrCwqqdhrhjUjGTbQfMCLqwLYZ3qUQti
+ OFyHJLu8nyBKsJ+rrdZe919HpQi1BJ1Sch1djhiYPA/8jsP2usdyerw5RTnuluyaJgWD
+ k5Qhr1WYIfakJOLVO2/v1IIijepwY1bdtkq/8ND2VU4HRy5HX99W8KQoMhGkhzjpo8M1
+ dwvg==
+Message-ID: <df7baa01-4dfe-33aa-c7fc-fc4c50d25e1a@gmail.com>
+Date: Tue, 14 Feb 2023 18:36:04 +0100
 MIME-Version: 1.0
 From: Till Kamppeter <till.kamppeter@gmail.com>
 Content-Language: en-US
-Content-Type: text/plain; charset=UTF-8; format=flowed
-Content-Transfer-Encoding: 7bit
-Subject: [Printing-architecture] First beta of pappl-retrofit released!
+Content-Type: text/plain; charset="utf-8"; format="flowed"
+Content-Transfer-Encoding: 8bit
+Subject: [Printing-architecture] Second beta of the second generation of the
+ Common Print Dialog Backends released!
 List-Id: Printing architecture under linux
  <printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>, 
@@ -33,23 +34,38 @@ To: Open Printing <printing-architecture@lists.linux-foundation.org>, Zdenek Doh
 
 Hi,
 
-in the course of creating the first Debian package of pappl-retrofit 
-(for Ubuntu) I have done some fixes and improvements on the 1.0b1 
-version and released them in version 1.0b2.
+We are now releasing the second beta of the second generation of the 
+Common Print Dialog Backends (CPDB).
 
-Besides many little fixes in the source code documentation I have added 
-support for the Legacy Printer Application being run permanently as a 
-system daemon. So distros can opt for this mode via a simple command 
-line option to the ./configure call.
+In the 4.9.4 version of GTK the Merge Request [1] for Gaurav Gulerias 
+GSoC work [2] on adding CPDB support to GTK’s print dialog got finally 
+accepted. To reach this goal, Gaurav also needed to do a lot of 
+enhancements on CPDB itself, and when his merge request got accepted 
+into GTK, CPDB 2.0b1 was already 2 months old and after that a lot of 
+changes have been done, ending up with GTK’s CPDB support not building 
+with any released version of CPDB [3]. Therefore we have now released 
+version 2.0b2 of all the three components of the CPDB to allow easy 
+building of the first CPDB-supporting GTK.
 
-This way a user who wants to continue using a certain CUPS printer 
-driver, which is installed as classic driver, only needs to install 
-their distro's Legacy Printer Application package, and create a printer 
-in the Legacy Printer Application's web interface.
+[1] https://gitlab.gnome.org/GNOME/gtk/-/merge_requests/4930
+[2] https://github.com/TinyTrebuchet/gsoc22/
+[3] https://gitlab.gnome.org/GNOME/gtk/-/issues/5589
+
+The components we are currently maintaining got all updated and released 
+as version 2.0b2.
+
+We especially added support for starting print the dialog with a 
+complete list of available printers and keeping the list up-to-date 
+while the dialog is open. We also added support for option groups (like 
+"Media", "Color", "Finishing", ...) and translations for option, choice, 
+and group names, letting in the first place the backends obtain the 
+translations from the printing system and/or the printer, before the 
+frontend uses translations for standard names. And, as usual, there are 
+many bug fixes.
 
 Here we go:
 
-https://openprinting.github.io/pappl-retrofit-Second-Beta-Release/
+https://openprinting.github.io/Common-Print-Dialog-Backends-Second-Generation-Second-Beta-Release/
 
 There are also GitHub discussions set up for each release now.
 
