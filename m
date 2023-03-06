@@ -1,23 +1,26 @@
 Return-Path: <blueroofmusic@gmail.com>
-DKIM-Filter: OpenDKIM Filter v2.11.0 smtp4.osuosl.org E356F41D31
-DKIM-Filter: OpenDKIM Filter v2.11.0 smtp4.osuosl.org 54B5341CF3
+DKIM-Filter: OpenDKIM Filter v2.11.0 smtp4.osuosl.org EB04B4098B
+DKIM-Filter: OpenDKIM Filter v2.11.0 smtp4.osuosl.org D87E04092D
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=gmail.com; s=20210112; t=1677890038;
- h=to:subject:message-id:date:from:mime-version:from:to:cc:subject
- :date:message-id:reply-to;
- bh=3UFkijC7IWs/xOCXwIf8oFgrOvYU/NTpGdRnytxjcJc=;
- b=iIiGx27iHMLo756CvzPsi2PUTmiyVIkbrc3HtrF59cj1QPw3zyO01yPLMApzQLOB2G
- DtBnWObJL6xJ0X1zzB7RtlQSfmEUubihV2pAmmR5UEO/zxWZQTk8kgXB/O00zijHN5b3
- lcS1I6geaM2NLRw0NVWHFG+VRdrYOo89hmCEqxnI0RxRBd6DuJ8uExOEdZ4M+ZRs7jqH
- pY2p0PA5LOD73IEmwAJIinpUmXMrHXw57PE0+ypeM9VS0kKmYq3zBZ5MOajM8WXBb4sF
- vqyql1Y8AEOA3ASk8GHMnQB4YShKfIo+umJPbFL6OhcKHyKE/fgVVJ2SdmVvvBITGdzm
- wGOQ==
+ d=gmail.com; s=20210112; t=1678133522;
+ h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+ :from:to:cc:subject:date:message-id:reply-to;
+ bh=gJgpGqMhqG89y2noLxSITe21UYdryrNrd6RAqJi9W3A=;
+ b=puf4Bff/MaXTw64i7t8pUikxwOz9O06qSchIyc63yyJJQ+BtSNt2bO/2PRs9yqxPii
+ 0NMsvuE//hDk0aEgdJDDL6APhncYNDsu0rvgwIZ+dqPp7DWE6ioI0ypfjU+1oQ2T9Gm7
+ lTCWsoQR1HvsUYopN99J/Ds3VauoPExxd18VWRqXJ4N7Nr8L4XiftCjD1POZxN+Svw2s
+ 3ITVQbN3fmZWZU64zXJOQSMOX1GI0T/ZNmEywvbmr278V0l/K/DvCGMPlL/b6xiouWSg
+ 1rH/cZubxnGZz66d++MNGA75fMSfhuIIBg7uftf454uCUilJs0riPqk8Tx/Cuy/Cf2Dy
+ UW4w==
 MIME-Version: 1.0
+References: <CAJTF00892rnWHQX6npnU_p3E41jLNOu4aa+CMAD3HUH_XAYgBQ@mail.gmail.com>
+In-Reply-To: <CAJTF00892rnWHQX6npnU_p3E41jLNOu4aa+CMAD3HUH_XAYgBQ@mail.gmail.com>
 From: Ira McDonald <blueroofmusic@gmail.com>
-Date: Fri, 3 Mar 2023 19:33:44 -0500
-Message-ID: <CAN40gStRZNX5+ePctVHWueV37WE4_Ga7mRi5eMPaVrDCoBOOXA@mail.gmail.com>
-Content-Type: multipart/alternative; boundary="000000000000aedd2705f608372b"
-Subject: [Printing-architecture] OP Minutes (21 February 2023)
+Date: Mon, 6 Mar 2023 15:11:48 -0500
+Message-ID: <CAN40gSsEDzUuvg8ZCNgoaHa5iyFkS+8ZTC_tN0f2W7QyfhHHUg@mail.gmail.com>
+Content-Type: multipart/alternative; boundary="00000000000080975305f640e801"
+Subject: [Printing-architecture] Fwd: [PWG-Announce] Poll - Options for May
+	PWG/OpenPrinting Face-to-Face
 List-Id: Printing architecture under linux
  <printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>, 
@@ -27,76 +30,20 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>, 
  <mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>, Ira McDonald <blueroofmusic@gmail.com>
+To: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>, Ira McDonald <blueroofmusic@gmail.com>, Till Kamppeter <till.kamppeter@gmail.com>, Aveek Basu <basu.aveek@gmail.com>, Danny Brennan <mdannyb11@gmail.com>
 
---000000000000aedd2705f608372b
+--00000000000080975305f640e801
 Content-Type: text/plain; charset="UTF-8"
 
- Hi,
+Hi,
 
-Minutes from our last OpenPrinting call are posted at:
-
-
-http://ftp.pwg.org/pub/pwg/liaison/openprinting/minutes/OP-Minutes-20230221.htm
-
-
-Next OP US/Europe/Brazil/India Conference Calls:
-
-(1) March - US/Europe/Brazil/India - OP Monthly Meeting
-    - Tuesday 7 March 2022, Daytime
-      - Note - US Daylight Savings Time starts 12 March 2023
-      - Note - European Summer Time starts 26 March 2023
-      - Note - IETF 116 Hybrid F2F (Yokohama, Japan) - 27-31 March 2023
-      - Note - IEEE 1609 Virtual F2F - 28 March 2023
-      - US
-        8am in San Francisco - US PST (Pacific Standard Time)
-        9am in Colorado - US MST (Mountain Standard Time)
-        10am in Chicago - US CST (Central Standard Time)
-        11am in New York - US EST (Eastern Standard Time)
-      - Europe
-        5pm in Berlin - CET (Central Europe Time)
-      - Brazil
-        1pm in Belo Horizonte - BRT (Brasilia Time)
-      - India
-        9:30pm in New Delhi - IST (India Standard Time)
-
-(2) April - US/Europe/Brazil/India - OP Monthly Meeting (tentative)
-    - Tuesday 4 April 2022, Daytime
-      - Note - ISO JTC1/SC27 and TC22/SC32 JWG6 Hybrid F2F (Redmond, WA) -
-20-21 April 2023
-      - Note - GP/SAE Hybrid F2F (Troy, MI) - 21 April 2023
-      - Note - ISO/SAE JWG Hybrid F2F (Troy, MI) - 24-27 April 2023
-      - US
-        8am in San Francisco - US PDT (Pacific Daylight Time)
-        9am in Colorado - US MDT (Mountain Daylight Time)
-        10am in Chicago - US CDT (Central Daylight Time)
-        11am in New York - US EDT (Eastern Daylight Time)
-      - Europe
-        5pm in Berlin - CEST (Central Europe Summer Time)
-      - Brazil
-        2pm in Belo Horizonte - BRT (Brasilia Time)
-      - India
-        10:30pm in New Delhi - IST (India Standard Time)
-
-(3) May - US/Europe/Brazil/India - OP Monthly Meeting (tentative)
-    - Tuesday 9 May 2022, Daytime
-      - Note - ISO TC204 61st Plenary Hybrid F2F (San Antonio, USA) - 15-19
-May 2023
-      - Note - Joint PWG/Open Printing Summit Virtual F2F - 16-18 May 2023
-      - US
-        8am in San Francisco - US PDT (Pacific Daylight Time)
-        9am in Colorado - US MDT (Mountain Daylight Time)
-        10am in Chicago - US CDT (Central Daylight Time)
-        11am in New York - US EDT (Eastern Daylight Time)
-      - Europe
-        5pm in Berlin - CEST (Central Europe Summer Time)
-      - Brazil
-        2pm in Belo Horizonte - BRT (Brasilia Time)
-      - India
-        10:30pm in New Delhi - IST (India Standard Time)
+Please respond to this private poll, if you're interested in attending
+remotely or in-person
+to our annual Joint PWG / Open Printing Summit meeting this year on 16-18
+May 2023.
 
 Cheers,
-- Ira
+- Ira (Chair OP, Secretary PWG)
 
 
 *Ira McDonald (Musician / Software Architect)*
@@ -122,115 +69,103 @@ Inchttp://sites.google.com/site/blueroofmusic
 <blueroofmusic@gmail.com>(permanent) PO Box 221  Grand Marais, MI 49839
 906-494-2434*
 
---000000000000aedd2705f608372b
+
+---------- Forwarded message ---------
+From: Jeremy Leber via pwg-announce <pwg-announce@pwg.org>
+Date: Fri, Mar 3, 2023 at 5:09 PM
+Subject: [PWG-Announce] Poll - Options for May PWG/OpenPrinting Face-to-Face
+To: <pwg-announce@pwg.org>
+Cc: Jeremy Leber <jeremy.leber@gmail.com>, <till.kamppeter@gmail.com>, <
+basu.aveek@gmail.com>
+
+
+Hello All,
+
+As we begin the preparations for our upcoming May Face-to-Face, we'd like
+to get an idea for who would be interested (and able to travel for) in an
+in-person meeting this time around.  Please take just a moment to fill out
+the survey below to help us plan accordingly:
+
+https://www.surveymonkey.com/r/VRQ5X2H
+
+If you have any questions or concerns, please let us know.
+
+Thanks,
+Jeremy
+
+Jeremy Leber
+Chair, IEEE ISTO Printer Working Group
+chair@pwg.org
+jeremy.leber@lexmark.com
+
+_______________________________________________
+pwg-announce mailing list
+pwg-announce@pwg.org
+https://www.pwg.org/mailman/listinfo/pwg-announce
+
+--00000000000080975305f640e801
 Content-Type: text/html; charset="UTF-8"
 Content-Transfer-Encoding: quoted-printable
 
-<div dir=3D"ltr">
-<div>Hi,</div><div><br></div><div>
-<div dir=3D"ltr"><span><span><span><span><span><span><span><span><span><spa=
-n><span><span><span><span><span><span><span><span><span><span><span><span><=
-span><span><span><span><span><span><span><span><span><span><span><span><spa=
-n><span><span><span><span><span><span><span><span><span><span><span><span>M=
-inutes</span></span></span></span></span></span></span></span></span></span=
-></span></span></span></span></span></span></span></span></span></span></sp=
-an></span></span></span></span></span></span></span></span></span></span></=
-span></span></span></span></span></span></span></span></span></span></span>=
-</span></span></span></span></span> from our last OpenPrinting<span> call</=
-span> are <span><span><span><span><span><span><span><span><span><span><span=
-><span><span><span><span><span>posted</span></span></span></span></span></s=
-pan></span></span></span></span></span></span></span></span></span></span> =
-at:<br>
+<div dir=3D"ltr"><div>Hi,</div><div><br></div><div>Please respond to this p=
+rivate poll, if you&#39;re interested in attending remotely or in-person <b=
+r></div><div>to our annual Joint PWG / Open Printing Summit meeting this ye=
+ar on 16-18 May 2023.</div><div><br></div><div>Cheers,</div><div>- Ira (Cha=
+ir OP, Secretary PWG)</div><div><br></div><div><br></div><div><div><div dir=
+=3D"ltr" class=3D"gmail_signature" data-smartmail=3D"gmail_signature"><div =
+dir=3D"ltr"><div><div dir=3D"ltr"><div><div dir=3D"ltr"><div><div dir=3D"lt=
+r"><div><div dir=3D"ltr"><div><div dir=3D"ltr"><div><div dir=3D"ltr"><div><=
+div dir=3D"ltr"><div><div dir=3D"ltr"><i><font size=3D"1">Ira McDonald (Mus=
+ician / Software Architect)</font></i></div><div><i><font size=3D"1">Chair =
+- SAE Trust Anchors and Authentication TF<br></font></i></div><div dir=3D"l=
+tr"><i><font size=3D"1">Co-Chair - TCG Trusted Mobility Solutions WG</font>=
+</i></div><div><i><font size=3D"1">Co-Chair - TCG Metadata Access Protocol =
+SG<br></font></i></div><div dir=3D"ltr"><i><font size=3D"1">Chair - Linux F=
+oundation Open Printing WG<br>Secretary - IEEE-ISTO Printer Working Group<b=
+r>Co-Chair - IEEE-ISTO PWG Internet Printing Protocol WG<br>IETF Designated=
+ Expert - IPP &amp; Printer MIB<br>Blue Roof Music / High North Inc<br><a s=
+tyle=3D"color:rgb(51,51,255)" href=3D"http://sites.google.com/site/blueroof=
+music" target=3D"_blank">http://sites.google.com/site/blueroofmusic</a><br>=
+<a style=3D"color:rgb(102,0,204)" href=3D"http://sites.google.com/site/high=
+northinc" target=3D"_blank">http://sites.google.com/site/highnorthinc</a><b=
+r>mailto: <a href=3D"mailto:blueroofmusic@gmail.com" target=3D"_blank">blue=
+roofmusic@gmail.com</a><br>(permanent) PO Box 221=C2=A0 Grand Marais, MI 49=
+839=C2=A0 906-494-2434</font></i></div></div></div></div></div></div></div>=
+</div></div></div></div></div></div></div></div></div></div></div></div><br=
+><br><div class=3D"gmail_quote"><div dir=3D"ltr" class=3D"gmail_attr">-----=
+----- Forwarded message ---------<br>From: <b class=3D"gmail_sendername" di=
+r=3D"auto">Jeremy Leber via pwg-announce</b> <span dir=3D"auto">&lt;<a href=
+=3D"mailto:pwg-announce@pwg.org">pwg-announce@pwg.org</a>&gt;</span><br>Dat=
+e: Fri, Mar 3, 2023 at 5:09 PM<br>Subject: [PWG-Announce] Poll - Options fo=
+r May PWG/OpenPrinting Face-to-Face<br>To:  &lt;<a href=3D"mailto:pwg-annou=
+nce@pwg.org">pwg-announce@pwg.org</a>&gt;<br>Cc: Jeremy Leber &lt;<a href=
+=3D"mailto:jeremy.leber@gmail.com">jeremy.leber@gmail.com</a>&gt;,  &lt;<a =
+href=3D"mailto:till.kamppeter@gmail.com">till.kamppeter@gmail.com</a>&gt;, =
+ &lt;<a href=3D"mailto:basu.aveek@gmail.com">basu.aveek@gmail.com</a>&gt;<b=
+r></div><br><br><div dir=3D"ltr"><div>Hello All,</div><div><br></div><div>A=
+s we begin the preparations for our upcoming May Face-to-Face, we&#39;d lik=
+e to get an idea for who would be interested (and able to travel for) in an=
+ in-person meeting this time around.=C2=A0=C2=A0Please take just a moment t=
+o fill out the survey below to help us plan accordingly:</div><div><br></di=
+v><div><a href=3D"https://www.surveymonkey.com/r/VRQ5X2H" target=3D"_blank"=
+>https://www.surveymonkey.com/r/VRQ5X2H</a></div><div><br></div><div>If you=
+ have any questions or concerns, please let us know.</div><div><br></div><d=
+iv>Thanks,</div><div>Jeremy</div><div><br></div><div><font color=3D"#888888=
+"><font color=3D"#888888"><font color=3D"#888888"><font color=3D"#888888"><=
+font color=3D"#888888"><font color=3D"#888888"><font color=3D"#888888"><fon=
+t color=3D"#888888"><font color=3D"#888888"><font color=3D"#888888">Jeremy =
+Leber<br>Chair, IEEE ISTO Printer Working Group<br><div><a href=3D"mailto:c=
+hair@pwg.org" target=3D"_blank">chair@pwg.org</a></div><div><a href=3D"mail=
+to:jeremy.leber@lexmark.com" target=3D"_blank">jeremy.leber@lexmark.com</a>=
+</div></font></font></font></font></font></font></font></font></font></font=
+></div><div><br></div></div>
+_______________________________________________<br>
+pwg-announce mailing list<br>
+<a href=3D"mailto:pwg-announce@pwg.org" target=3D"_blank">pwg-announce@pwg.=
+org</a><br>
+<a href=3D"https://www.pwg.org/mailman/listinfo/pwg-announce" rel=3D"norefe=
+rrer" target=3D"_blank">https://www.pwg.org/mailman/listinfo/pwg-announce</=
+a><br>
+</div></div></div>
 
-
-
-
-
-
-
-
-
-
-
-
-<br>
-=C2=A0 <a href=3D"http://ftp.pwg.org/pub/pwg/liaison/openprinting/minutes/O=
-P-Minutes-20230221.htm" target=3D"_blank">http://ftp.pwg.org/pub/pwg/liaiso=
-n/openprinting/minutes/OP-Minutes-20230221.htm</a><br><br></div><div dir=3D=
-"ltr"><br></div><div dir=3D"ltr">
-Next <span><span><span><span><span><span><span><span><span><span><span><spa=
-n><span><span><span><span><span><span><span><span><span><span><span><span><=
-span><span><span><span><span><span>OP</span></span></span></span></span></s=
-pan></span></span></span></span></span></span></span></span></span></span><=
-/span></span></span></span></span></span></span></span></span></span></span=
-></span></span></span> US/Europe/Brazil/India Conference Calls: <br></div><=
-div dir=3D"ltr"><br></div><div dir=3D"ltr">(1) March - US/Europe/Brazil/Ind=
-ia - OP Monthly Meeting<br>=C2=A0 =C2=A0 - Tuesday 7 March 2022, Daytime<br=
->=C2=A0 =C2=A0 =C2=A0 - Note - US Daylight Savings Time starts 12 March 202=
-3<br>=C2=A0 =C2=A0 =C2=A0 - Note - European Summer Time starts 26 March 202=
-3<br>=C2=A0 =C2=A0 =C2=A0 - Note - IETF 116 Hybrid F2F (Yokohama, Japan) - =
-27-31 March 2023<br>=C2=A0 =C2=A0 =C2=A0 - Note - IEEE 1609 Virtual F2F - 2=
-8 March 2023<br>=C2=A0 =C2=A0 =C2=A0 - US<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 8a=
-m in San Francisco - US PST (Pacific Standard Time)<br>=C2=A0 =C2=A0 =C2=A0=
- =C2=A0 9am in Colorado - US MST (Mountain Standard Time)<br>=C2=A0 =C2=A0 =
-=C2=A0 =C2=A0 10am in Chicago - US CST (Central Standard Time)<br>=C2=A0 =
-=C2=A0 =C2=A0 =C2=A0 11am in New York - US EST (Eastern Standard Time)<br>=
-=C2=A0 =C2=A0 =C2=A0 - Europe<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 5pm in Berlin =
-- CET (Central Europe Time)<br>=C2=A0 =C2=A0 =C2=A0 - Brazil<br>=C2=A0 =C2=
-=A0 =C2=A0 =C2=A0 1pm in Belo Horizonte - BRT (Brasilia Time)<br>=C2=A0 =C2=
-=A0 =C2=A0 - India<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 9:30pm in New Delhi - IST=
- (India Standard Time)<br><br>(2) April - US/Europe/Brazil/India - OP Month=
-ly Meeting (tentative)<br>=C2=A0 =C2=A0 - Tuesday 4 April 2022, Daytime<br>=
-=C2=A0 =C2=A0 =C2=A0 - Note - ISO JTC1/SC27 and TC22/SC32 JWG6 Hybrid F2F (=
-Redmond, WA) - 20-21 April 2023<br>=C2=A0 =C2=A0 =C2=A0 - Note - GP/SAE Hyb=
-rid F2F (Troy, MI) - 21 April 2023<br>=C2=A0 =C2=A0 =C2=A0 - Note - ISO/SAE=
- JWG Hybrid F2F (Troy, MI) - 24-27 April 2023<br>=C2=A0 =C2=A0 =C2=A0 - US<=
-br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 8am in San Francisco - US PDT (Pacific Dayli=
-ght Time)<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 9am in Colorado - US MDT (Mountain=
- Daylight Time)<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 10am in Chicago - US CDT (Ce=
-ntral Daylight Time)<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 11am in New York - US E=
-DT (Eastern Daylight Time)<br>=C2=A0 =C2=A0 =C2=A0 - Europe<br>=C2=A0 =C2=
-=A0 =C2=A0 =C2=A0 5pm in Berlin - CEST (Central Europe Summer Time)<br>=C2=
-=A0 =C2=A0 =C2=A0 - Brazil<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 2pm in Belo Horiz=
-onte - BRT (Brasilia Time)<br>=C2=A0 =C2=A0 =C2=A0 - India<br>=C2=A0 =C2=A0=
- =C2=A0 =C2=A0 10:30pm in New Delhi - IST (India Standard Time)<br></div><d=
-iv dir=3D"ltr"><br>(3) May - US/Europe/Brazil/India - OP Monthly Meeting (t=
-entative)<br>=C2=A0 =C2=A0 - Tuesday 9 May 2022, Daytime<br>=C2=A0 =C2=A0 =
-=C2=A0 - Note - ISO TC204 61st Plenary Hybrid F2F (San Antonio, USA) - 15-1=
-9 May 2023<br>=C2=A0 =C2=A0 =C2=A0 - Note - Joint PWG/Open Printing Summit =
-Virtual F2F - 16-18 May 2023<br>=C2=A0 =C2=A0 =C2=A0 - US<br>=C2=A0 =C2=A0 =
-=C2=A0 =C2=A0 8am in San Francisco - US PDT (Pacific Daylight Time)<br>=C2=
-=A0 =C2=A0 =C2=A0 =C2=A0 9am in Colorado - US MDT (Mountain Daylight Time)<=
-br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 10am in Chicago - US CDT (Central Daylight T=
-ime)<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 11am in New York - US EDT (Eastern Dayl=
-ight Time)<br>=C2=A0 =C2=A0 =C2=A0 - Europe<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 =
-5pm in Berlin - CEST (Central Europe Summer Time)<br>=C2=A0 =C2=A0 =C2=A0 -=
- Brazil<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 2pm in Belo Horizonte - BRT (Brasili=
-a Time)<br>=C2=A0 =C2=A0 =C2=A0 - India<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 10:3=
-0pm in New Delhi - IST (India Standard Time)</div><div dir=3D"ltr"><br></di=
-v><div>Cheers,</div><div>- Ira</div><div><br></div><div dir=3D"ltr"><br></d=
-iv></div>
-
-<div><div dir=3D"ltr" class=3D"gmail_signature" data-smartmail=3D"gmail_sig=
-nature"><div dir=3D"ltr"><div><div dir=3D"ltr"><div><div dir=3D"ltr"><div><=
-div dir=3D"ltr"><div><div dir=3D"ltr"><div><div dir=3D"ltr"><div><div dir=
-=3D"ltr"><div><div dir=3D"ltr"><div><div dir=3D"ltr"><i><font size=3D"1">Ir=
-a McDonald (Musician / Software Architect)</font></i></div><div><i><font si=
-ze=3D"1">Chair - SAE Trust Anchors and Authentication TF<br></font></i></di=
-v><div dir=3D"ltr"><i><font size=3D"1">Co-Chair - TCG Trusted Mobility Solu=
-tions WG</font></i></div><div><i><font size=3D"1">Co-Chair - TCG Metadata A=
-ccess Protocol SG<br></font></i></div><div dir=3D"ltr"><i><font size=3D"1">=
-Chair - Linux Foundation Open Printing WG<br>Secretary - IEEE-ISTO Printer =
-Working Group<br>Co-Chair - IEEE-ISTO PWG Internet Printing Protocol WG<br>=
-IETF Designated Expert - IPP &amp; Printer MIB<br>Blue Roof Music / High No=
-rth Inc<br><a style=3D"color:rgb(51,51,255)" href=3D"http://sites.google.co=
-m/site/blueroofmusic" target=3D"_blank">http://sites.google.com/site/bluero=
-ofmusic</a><br><a style=3D"color:rgb(102,0,204)" href=3D"http://sites.googl=
-e.com/site/highnorthinc" target=3D"_blank">http://sites.google.com/site/hig=
-hnorthinc</a><br>mailto: <a href=3D"mailto:blueroofmusic@gmail.com" target=
-=3D"_blank">blueroofmusic@gmail.com</a><br>(permanent) PO Box 221=C2=A0 Gra=
-nd Marais, MI 49839=C2=A0 906-494-2434</font></i></div></div></div></div></=
-div></div></div></div></div></div></div></div></div></div></div></div></div=
-></div></div></div>
-
---000000000000aedd2705f608372b--
+--00000000000080975305f640e801--
