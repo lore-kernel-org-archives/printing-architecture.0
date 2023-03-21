@@ -1,27 +1,27 @@
-Return-Path: <zdohnal@redhat.com>
-DKIM-Filter: OpenDKIM Filter v2.11.0 smtp1.osuosl.org 7059F80C3D
-DKIM-Filter: OpenDKIM Filter v2.11.0 smtp1.osuosl.org 60E3B80C3C
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=redhat.com;
- s=mimecast20190719; t=1678274556;
- h=from:from:reply-to:subject:subject:date:date:message-id:message-id:
- to:to:cc:cc:mime-version:mime-version:content-type:content-type:
- content-transfer-encoding:content-transfer-encoding:
- in-reply-to:in-reply-to:references:references;
- bh=pDx3bAIX7smvFNYELZGt0TKSHzRywnZme9yHKGxlKeY=;
- b=XTfYNNF6vgNEHvevjmxzGvX2VK80vv2TLc/7HtayPc6TqVGGK9L6U0W7ziOb1AQgnyHpPB
- d/q0xosUUy6fQcX1dDv81Sm6ejP9EsBymRwQfT1FvVb0U52nJDyaadusUIMphLRIxmGYI6
- 0an2hAlRpI3E1ui7ZLF1tPpCYm6LVy8=
-Message-ID: <8a157c63-1d12-52fd-7463-5864de51aa80@redhat.com>
-Date: Wed, 8 Mar 2023 12:22:32 +0100
+Return-Path: <till.kamppeter@gmail.com>
+DKIM-Filter: OpenDKIM Filter v2.11.0 smtp1.osuosl.org C110F813D0
+DKIM-Filter: OpenDKIM Filter v2.11.0 smtp1.osuosl.org 76A4F813CA
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=gmail.com; s=20210112; t=1679432416;
+ h=content-transfer-encoding:content-language:to:subject:from
+ :user-agent:mime-version:date:message-id:from:to:cc:subject:date
+ :message-id:reply-to;
+ bh=IWsV2NQyCLQ6m6UcNwbF5Q6A3EfGheXc1253gtQ+6F4=;
+ b=F/09cPStlFsZYYwP389qj1n1YPrglchr1K963ULcwVJXdC4sV6qo6qHBfB2CN4WweV
+ IU8k+awm81fKbdjcLPrwtU/Gj/Lsu6Rbq9U3xxP+EJGhFjk7vBT9FTp2JMZYvjexrNaH
+ IywnUXadJt6/YQfg2kRF2+l3HR1oOxliDpiM45MdWdUK4nB4xce6sgGBafaWPpb2eaSC
+ /c4va6Qn3ikAxsGzFwb3sqA3ukDtdQg9uOHQOOLnrF8uhDXZcDXt+1Ms2/cQ9hUFMrmj
+ ZzoBARcGzAPElmWnafQwEkucEr1KFVM10eYoWbAYpjjUmjzVG2dWmbNbWhw9MJz6iqL5
+ uM5A==
+Message-ID: <35659086-3f0e-11cf-11a1-cf64e010263b@gmail.com>
+Date: Tue, 21 Mar 2023 22:00:13 +0100
 MIME-Version: 1.0
-References: <1694880310.2965478.1678262580752.JavaMail.zimbra@desy.de>
-From: Zdenek Dohnal <zdohnal@redhat.com>
-In-Reply-To: <1694880310.2965478.1678262580752.JavaMail.zimbra@desy.de>
+From: Till Kamppeter <till.kamppeter@gmail.com>
 Content-Language: en-US
 Content-Type: text/plain; charset=UTF-8; format=flowed
 Content-Transfer-Encoding: 7bit
-Subject: Re: [Printing-architecture] driverless clients after cups upgrade
- and general qyestion about larger environment concepts
+Subject: [Printing-architecture] Forth beta of the second generation of the
+ Common Print Dialog Backends released!
 List-Id: Printing architecture under linux
  <printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>, 
@@ -31,54 +31,46 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>, 
  <mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: printing-architecture@lists.linux-foundation.org
-Cc: Till Kamppeter <till.kamppeter@gmail.com>
+To: Open Printing <printing-architecture@lists.linux-foundation.org>, Zdenek Dohnal <zdohnal@redhat.com>, "jsmeix@suse.de" <jsmeix@suse.de>, Thorsten Alteholz <debian@alteholz.de>, Frederik Feichtmeier <frederik.feichtmeier@gmail.com>, Michael Sweet <msweet@msweet.org>, Sebastien Bacher <sebastien.bacher@canonical.com>, Ken VanDine <ken.vandine@canonical.com>
 
 Hi,
 
-there was a bug regarding color printing in 2.4.1, which is mostly fixed 
-(only one corner case remains to fix) in the current master branch of CUPS.
+We are now releasing the forth beta of the second generation of the 
+Common Print Dialog Backends (CPDB).
 
-Relevant PRs:
+Main addition are build test scripts (make check) for all the three 
+components, as they are not only useful for general QA but especially 
+required for inclusion of the CPDB packages into Ubuntu Main. Main is 
+the core part of Ubuntu, which gets full support from Canonical.
 
-https://github.com/OpenPrinting/cups/pull/417
+To facilitate creation of test scripts for the backends, for creating 
+test scripts which test packages installed into a system (like 
+autopkgtests of Debian and Ubuntu), and also for general development and 
+debugging use, the demo programs of cpdb-libs (former demo/ 
+sub-directory) got promoted to be development tools. Not only their 
+directory got renamed (to tools/) but also the programs get built 
+together with the libraries by make and get installed by make install. 
+And they got also renamed to nicely live in a system: cpdb-text-frontend 
+and cpdb-pickle-print.
 
-https://github.com/OpenPrinting/cups/pull/451
+Another feature to ease writing test scripts for backend packages is 
+that now the frontend library does not only look for backend metadata in 
+a hard-wired system directory (/usr/share/print-backends/) but one can 
+provide an alternative location via the CPDB_BACKEND_INFO_DIR 
+environment variable. So a build test of a freshly compiled and not yet 
+installed backend is no problem any more.
 
-https://github.com/OpenPrinting/cups/pull/500
+And while developing test scripts one usually tests the software itself 
+a lot. And this revealed some bugs, including crashers, which got also 
+fixed with this release.
 
-You can ask your distro maintainer for including those patches until 
-there is a new release.
+The components we are currently maintaining got all updated and released 
+as version 2.0b4.
 
-(@Till ^^)
+Here we go:
 
+https://openprinting.github.io/Common-Print-Dialog-Backends-Second-Generation-Forth-Beta-Release/
 
-Zdenek
+There are also GitHub discussions set up for each release now.
 
-On 3/8/23 09:03, Beyer, Christoph wrote:
-> Hi,
->
-> I am new on this list and would like to bother you with a (maybe stupid question) right away :)
->
-> I do run a 'large' environment with roughly 1.000 queues pointing to 500 printers, the current setup involves a lpd server as a backend talking to the printers and different cups servers for different departments offering the relevant share of the queues to the LINUX clients.
->
-> I use the factory provided PPD files for the printers and lpadmin to install the printers on the cups server (with an lpd backend pointing to the lpd server) then poll-server <cups-server-of-this-department> directive in cups-browsed.conf on the LINUX client.
->
-> After a recent upgrade to CUPS 2.4.1 on the cups servers (coming from ubuntu 18.04- whatever cups version that was)  support for color printing stopped and on the clients desktops I recognize that the printers are visible but tagged as 'driverless' which is probably part of my problem (?)
->
-> Maybe the whole concept is also a bit ignorant towards the ideas of cups but for quite a while I did not really see the concept of a client-server model for larger entreprise installations that can not rely on browsing etc.  ?
->
-> Any insight would be much appreciated !
->
-> Best
-> christoph
-> _______________________________________________
-> Printing-architecture mailing list
-> Printing-architecture@lists.linux-foundation.org
-> https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture
->
--- 
-Zdenek Dohnal
-Software Engineer
-Red Hat, BRQ-TPBC
-
+    Till
