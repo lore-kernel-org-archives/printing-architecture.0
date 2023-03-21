@@ -1,27 +1,27 @@
 Return-Path: <till.kamppeter@gmail.com>
-DKIM-Filter: OpenDKIM Filter v2.11.0 smtp1.osuosl.org C110F813D0
-DKIM-Filter: OpenDKIM Filter v2.11.0 smtp1.osuosl.org 76A4F813CA
+DKIM-Filter: OpenDKIM Filter v2.11.0 smtp4.osuosl.org 826B040897
+DKIM-Filter: OpenDKIM Filter v2.11.0 smtp4.osuosl.org 435D240357
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=gmail.com; s=20210112; t=1679432416;
+ d=gmail.com; s=20210112; t=1679433574;
  h=content-transfer-encoding:content-language:to:subject:from
  :user-agent:mime-version:date:message-id:from:to:cc:subject:date
  :message-id:reply-to;
- bh=IWsV2NQyCLQ6m6UcNwbF5Q6A3EfGheXc1253gtQ+6F4=;
- b=F/09cPStlFsZYYwP389qj1n1YPrglchr1K963ULcwVJXdC4sV6qo6qHBfB2CN4WweV
- IU8k+awm81fKbdjcLPrwtU/Gj/Lsu6Rbq9U3xxP+EJGhFjk7vBT9FTp2JMZYvjexrNaH
- IywnUXadJt6/YQfg2kRF2+l3HR1oOxliDpiM45MdWdUK4nB4xce6sgGBafaWPpb2eaSC
- /c4va6Qn3ikAxsGzFwb3sqA3ukDtdQg9uOHQOOLnrF8uhDXZcDXt+1Ms2/cQ9hUFMrmj
- ZzoBARcGzAPElmWnafQwEkucEr1KFVM10eYoWbAYpjjUmjzVG2dWmbNbWhw9MJz6iqL5
- uM5A==
-Message-ID: <35659086-3f0e-11cf-11a1-cf64e010263b@gmail.com>
-Date: Tue, 21 Mar 2023 22:00:13 +0100
+ bh=tWzMEfbfUvdNcD2k8qNnM2YaYoVuJv7OdZqA4vfCnjs=;
+ b=ZCcLpS/YS0nSeetGVvGqPRwDGItT1XHUmz+VLkH8jn4ATGgnIaT8S3PDYhq3bBi6yL
+ POa3QX4iZ1KN/QUYD3lhm0UnUCXR+4uZZhdbFjdV+zE3sC56ophowoQg/4Q7zsCU/r/t
+ rng88bUZ7LHDrjpWok+Z6RuUt0QgdTzvhaBrsHmIfBF1mtKZ+s/349zfx/rElsbPBymF
+ iMKwLMIa+zladGNQBfBh327lC6qBP7pNaeFY0Rqc8x3PnZ3ylwo736quOrSd6mTIxGLE
+ GQIO+tTxz1i/Fl8GyrOFTk1t637RwyHSV3BfeMWwhc7B60wCeF9ihbk3LTbi0gs/zxyb
+ N6BA==
+Message-ID: <c56818cd-9ac8-a512-a3da-81ca91ca6230@gmail.com>
+Date: Tue, 21 Mar 2023 22:19:32 +0100
 MIME-Version: 1.0
 From: Till Kamppeter <till.kamppeter@gmail.com>
 Content-Language: en-US
 Content-Type: text/plain; charset=UTF-8; format=flowed
 Content-Transfer-Encoding: 7bit
-Subject: [Printing-architecture] Forth beta of the second generation of the
- Common Print Dialog Backends released!
+Subject: [Printing-architecture] Forth beta of the cups-browsed in the
+ second generation of cups-filters released!
 List-Id: Printing architecture under linux
  <printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>, 
@@ -35,41 +35,26 @@ To: Open Printing <printing-architecture@lists.linux-foundation.org>, Zdenek Doh
 
 Hi,
 
-We are now releasing the forth beta of the second generation of the 
-Common Print Dialog Backends (CPDB).
+I have done the forth beta release of the new, separated cups-browsed 
+package, one of the new components of the former cups-filters.
 
-Main addition are build test scripts (make check) for all the three 
-components, as they are not only useful for general QA but especially 
-required for inclusion of the CPDB packages into Ubuntu Main. Main is 
-the core part of Ubuntu, which gets full support from Canonical.
+Central part of this release isa new test script, to be used both for 
+build tests ( "make check") and tests on the packages installed into a 
+system (like autopkgtests of Debian and Ubuntu).
 
-To facilitate creation of test scripts for the backends, for creating 
-test scripts which test packages installed into a system (like 
-autopkgtests of Debian and Ubuntu), and also for general development and 
-debugging use, the demo programs of cpdb-libs (former demo/ 
-sub-directory) got promoted to be development tools. Not only their 
-directory got renamed (to tools/) but also the programs get built 
-together with the libraries by make and get installed by make install. 
-And they got also renamed to nicely live in a system: cpdb-text-frontend 
-and cpdb-pickle-print.
+This is not only for general QA but also a requirement for the package 
+being accepted in the core part ("Main") of the Ubuntu operating system. 
+See also
 
-Another feature to ease writing test scripts for backend packages is 
-that now the frontend library does not only look for backend metadata in 
-a hard-wired system directory (/usr/share/print-backends/) but one can 
-provide an alternative location via the CPDB_BACKEND_INFO_DIR 
-environment variable. So a build test of a freshly compiled and not yet 
-installed backend is no problem any more.
+https://openprinting.github.io/OpenPrinting-News-February-2023/#the-new-architecture-is-going-into-ubuntu-and-red-hat
 
-And while developing test scripts one usually tests the software itself 
-a lot. And this revealed some bugs, including crashers, which got also 
-fixed with this release.
-
-The components we are currently maintaining got all updated and released 
-as version 2.0b4.
+Developing of such a script naturally involves a lot of testing of 
+cups-browsed itself, making us find several bugs and fix them. These 
+fixes are also included in the new release.
 
 Here we go:
 
-https://openprinting.github.io/Common-Print-Dialog-Backends-Second-Generation-Forth-Beta-Release/
+https://openprinting.github.io/cups-browsed-Second-Generation-Forth-Beta-Release/
 
 There are also GitHub discussions set up for each release now.
 
