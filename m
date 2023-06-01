@@ -1,23 +1,23 @@
-Return-Path: <blueroofmusic@gmail.com>
-DKIM-Filter: OpenDKIM Filter v2.11.0 smtp4.osuosl.org 3FBA8409E6
-DKIM-Filter: OpenDKIM Filter v2.11.0 smtp4.osuosl.org 93EC5409B2
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=gmail.com; s=20221208; t=1685534284; x=1688126284;
- h=to:subject:message-id:date:from:mime-version:from:to:cc:subject
- :date:message-id:reply-to;
- bh=HDrCxwUwubRl/KxAByfvSmN4mb47BUs2HSu6Awpt5B8=;
- b=d8lCOQQxvxuTGfBnx37cESjpaUBRLGMHiby1nMB3v/VJLgw4kTtj+qZIhd5pu0Td1c
- qwO4dyoumoa3w6juFNT1sCUSaOaGEHAxR88HfYI+1RtntXTLe6jerGlPBiR/kKAmdHAf
- K0ccwrICiLbovZBY9I5PB3f0i87wXZuYbd1O4W4HbT12baDkZ0bmN73ndGfzVIXF16qg
- TurRW/9Vmfixl3oXSGiVpE7HU+ckuwp1brWL64o6G1JwoJc9pSZAQJekkMp1w0eFJEoB
- 9PsOfoaTtuP9sh2/lyCCsnenz5IXnRN40qQG4YWCnqr+OB3jOr3WClUJVmKV99GYn580
- UVcw==
+Return-Path: <zdohnal@redhat.com>
+DKIM-Filter: OpenDKIM Filter v2.11.0 smtp4.osuosl.org 133CF423F0
+DKIM-Filter: OpenDKIM Filter v2.11.0 smtp4.osuosl.org 8A8E44240D
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=redhat.com;
+ s=mimecast20190719; t=1685634870;
+ h=from:from:reply-to:subject:subject:date:date:message-id:message-id:
+ to:to:cc:mime-version:mime-version:content-type:content-type:
+ content-transfer-encoding:content-transfer-encoding;
+ bh=uWT05rSpQRwgwQLao5MdTvO76BvdnikKoy3MoRvxxKM=;
+ b=jCU1n/tYoSPhQ6mHmhdzAiWjaUu34taPDfHrbXwCrC3Nd5SaQUA9R164rsOw8/aK4xXEGt
+ mzFgjeC7qEDwlEYdyqa8NluXlchPDI2GkE1LoEdRpR6r5U+Lb6REsUH5b2RFlYrcBJCcBI
+ D/boREbufx/Rnq1ldfAuAGX2/wee1+I=
+Message-ID: <26a3b774-9a0f-56c0-c63c-4e6e344490ab@redhat.com>
+Date: Thu, 1 Jun 2023 17:54:24 +0200
 MIME-Version: 1.0
-From: Ira McDonald <blueroofmusic@gmail.com>
-Date: Wed, 31 May 2023 07:57:48 -0400
-Message-ID: <CAN40gStLgfB=E9r6tVHx2+0_BfEPjSNjvb5NiucxHvQN+=D-YA@mail.gmail.com>
-Content-Type: multipart/alternative; boundary="00000000000042952705fcfc08be"
-Subject: [Printing-architecture] OP Minutes (9 May 2023)
+From: Zdenek Dohnal <zdohnal@redhat.com>
+Content-Language: en-US
+Content-Type: text/plain; charset="utf-8"; format="flowed"
+Content-Transfer-Encoding: 8bit
+Subject: [Printing-architecture] CUPS 2.4.3 is released!
 List-Id: Printing architecture under linux
  <printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>, 
@@ -27,206 +27,78 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>, 
  <mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>, Ira McDonald <blueroofmusic@gmail.com>
+To: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>
 
---00000000000042952705fcfc08be
-Content-Type: text/plain; charset="UTF-8"
+Hi all!
 
- Hi,
+CUPS 2.4.3 is finally here!
 
-Minutes from our last OpenPrinting call are posted at:
+CUPS 2.4.3 brings fix for CVE-2023-32324, several improvements and many 
+bug fixes. CUPS now implements fallback for printers with broken 
+firmware, which is not capable of answering to IPP request 
+`get-printer-attributes` with `all, media-col-database` - this enables 
+driverless support for bunch of printers which don't follow IPP 
+Everywhere standard. Aside from the CVE fix the most important fixes are 
+around color settings, printer application support fixes and OpenSSL 
+support.
 
+Detailed list of changes:
 
-http://ftp.pwg.org/pub/pwg/liaison/openprinting/minutes/OP-Minutes-20230509.htm
-
-Next OP US/Europe/Brazil/India Conference Calls:
-
-(1) June - US/Europe/Brazil/India - OP Monthly Meeting
-    - Tuesday 6 June 2022, Daytime
-      - Note - ISO TC22/SC32/WG12 Hybrid F2F (Seoul, Korea) - 13-15 June
-2023
-      - Note - GP Cybersecurity Vehicle Forum Hybrid F2F (Plymouth, MI) -
-20 June 2023
-      - Note - ESCAR USA Physical F2F (Detroit, MI) - 21-22 June 2023
-      - Note - Uptane Hybrid F2F (Southfield, MI) - 23 June 2023
-      - Note - TCG Members Meeting Hybrid F2F (Berlin, Germany) - 27-29
-June 2023
-      - US
-        8am in San Francisco - US PDT (Pacific Daylight Time)
-        9am in Colorado - US MDT (Mountain Daylight Time)
-        10am in Chicago - US CDT (Central Daylight Time)
-        11am in New York - US EDT (Eastern Daylight Time)
-      - Europe
-        5pm in Berlin - CEST (Central Europe Summer Time)
-      - Brazil
-        2pm in Belo Horizonte - BRT (Brasilia Time)
-      - India
-        8:30pm in New Delhi - IST (India Standard Time)
-
-(2) July - US/Europe/Brazil/India - OP Monthly Meeting (tentative)
-    - Tuesday 11 July 2022, Daytime
-      - Note - IETF 117 Hybrid F2F (San Francisco, USA) 24-28 July 2023
-      - US
-        8am in San Francisco - US PDT (Pacific Daylight Time)
-        9am in Colorado - US MDT (Mountain Daylight Time)
-        10am in Chicago - US CDT (Central Daylight Time)
-        11am in New York - US EDT (Eastern Daylight Time)
-      - Europe
-        5pm in Berlin - CEST (Central Europe Summer Time)
-      - Brazil
-        2pm in Belo Horizonte - BRT (Brasilia Time)
-      - India
-        8:30pm in New Delhi - IST (India Standard Time)
-
-(3) August - US/Europe/Brazil/India - OP Monthly Meeting (tentative)
-    - Tuesday 22 August 2022, Daytime
-      - Note - PWG Virtual F2F - 8-10 August 2023
-      - US
-        8am in San Francisco - US PDT (Pacific Daylight Time)
-        9am in Colorado - US MDT (Mountain Daylight Time)
-        10am in Chicago - US CDT (Central Daylight Time)
-        11am in New York - US EDT (Eastern Daylight Time)
-      - Europe
-        5pm in Berlin - CEST (Central Europe Summer Time)
-      - Brazil
-        2pm in Belo Horizonte - BRT (Brasilia Time)
-      - India
-        8:30pm in New Delhi - IST (India Standard Time)
-
-Cheers,
-- Ira
+- Added a title with device uri for found network printers (Issues #402, 
+#393)
+- Added new media sizes defined by IANA (Issues #501)
+- Added quirk for GoDEX label printers (Issue #440)
+- Fixed `--enable-libtool-unsupported` (Issue #394)
+- Fixed configuration on RISC-V machines (Issue #404)
+- Fixed the `device_uri` invalid pointer for driverless printers with 
+`.local`
+   hostname (Issue #419)
+- Fixed an OpenSSL crash bug (Issue #409)
+- Fixed a potential SNMP OID value overflow issue (Issue #431)
+- Fixed an OpenSSL certificate loading issue (Issue #465)
+- Fixed Brazilian Portuguese translations (Issue #288)
+- Fixed `cupsd` default keychain location when building with OpenSSL
+   (Issue #529)
+- Fixed default color settings for CMYK printers as well (Issue #500)
+- Fixed duplicate PPD2IPP media-type names (Issue #688)
+- Fixed possible heap buffer overflow in `_cups_strlcpy()` (fixes 
+CVE-2023-32324)
+- Fixed InputSlot heuristic for photo sizes smaller than 5x7" if there is no
+   media-source in the request (Issue #569)
+- Fixed invalid memory access during generating IPP Everywhere queue
+   (Issue #466)
+- Fixed lprm if no destination is provided (Issue #457)
+- Fixed memory leaks in `create_local_bg_thread()` (Issue #466)
+- Fixed media size tolerance in `ippeveprinter` (Issue #487)
+- Fixed passing command name without path into `ippeveprinter` (Issue #629)
+- Fixed saving strings file path in `printers.conf` (Issue #710)
+- Fixed TLS certificate generation bugs (Issue #652)
+- `ippDeleteValues` would not delete the last value (Issue #556)
+- Ignore some of IPP defaults if the application sends its PPD alternative
+   (Issue #484)
+- Make `Letter` the default size in `ippevepcl` (Issue #543)
+- Now accessing Admin page in Web UI requires authentication (Issue #518)
+- Now look for default printer on network if needed (Issue #452)
+- Now we poll `media-col-database` separately if we fail at first (Issue 
+#599)
+- Now report fax attributes and values as needed (Issue #459)
+- Now localize HTTP responses using the Content-Language value (Issue #426)
+- Raised file size limit for importing PPD via Web UI (Issue #433)
+- Raised maximum listen backlog size to INT MAX (Issue #626)
+- Update print-color-mode if the printer is modified via ColorModel PPD 
+option  (Issue #451)
+- Use localhost when printing via printer application (Issue #353)
+- Write defaults into /etc/cups/lpoptions if we're root (Issue #456)
 
 
-*Ira McDonald (Musician / Software Architect)*
-
-*Chair - SAE Trust Anchors and Authentication TF*
-*Co-Chair - TCG Trusted Mobility Solutions WG*
-
-*Co-Chair - TCG Metadata Access Protocol SG*
+Thank you all for contributions and help!
 
 
+Zdenek
 
 
+-- 
+Zdenek Dohnal
+Senior Software Engineer
+Red Hat, BRQ-TPBC
 
-
-
-
-*Chair - Linux Foundation Open Printing WGSecretary - IEEE-ISTO Printer
-Working GroupCo-Chair - IEEE-ISTO PWG Internet Printing Protocol WGIETF
-Designated Expert - IPP & Printer MIBBlue Roof Music / High North
-Inchttp://sites.google.com/site/blueroofmusic
-<http://sites.google.com/site/blueroofmusic>http://sites.google.com/site/highnorthinc
-<http://sites.google.com/site/highnorthinc>mailto: blueroofmusic@gmail.com
-<blueroofmusic@gmail.com>(permanent) PO Box 221  Grand Marais, MI 49839
-906-494-2434*
-
---00000000000042952705fcfc08be
-Content-Type: text/html; charset="UTF-8"
-Content-Transfer-Encoding: quoted-printable
-
-<div dir=3D"ltr">
-<div>Hi,</div><div><br></div><div>
-<div dir=3D"ltr"><span><span><span><span><span><span><span><span><span><spa=
-n><span><span><span><span><span><span><span><span><span><span><span><span><=
-span><span><span><span><span><span><span><span><span><span><span><span><spa=
-n><span><span><span><span><span><span><span><span><span><span><span><span><=
-span><span><span class=3D"gmail-il">Minutes</span></span></span></span></sp=
-an></span></span></span></span></span></span></span></span></span></span></=
-span></span></span></span></span></span></span></span></span></span></span>=
-</span></span></span></span></span></span></span></span></span></span></spa=
-n></span></span></span></span></span></span></span></span></span></span></s=
-pan></span></span> from our last OpenPrinting<span> call</span> are <span><=
-span><span><span><span><span><span><span><span><span><span><span><span><spa=
-n><span><span>posted</span></span></span></span></span></span></span></span=
-></span></span></span></span></span></span></span></span> at:<br>
-
-
-
-
-
-
-
-
-
-
-
-
-<br>
-=C2=A0 <a href=3D"http://ftp.pwg.org/pub/pwg/liaison/openprinting/minutes/O=
-P-Minutes-20230509.htm" target=3D"_blank">http://ftp.pwg.org/pub/pwg/liaiso=
-n/openprinting/minutes/OP-Minutes-20230509.htm</a><br></div><div dir=3D"ltr=
-"><br></div><div dir=3D"ltr">
-Next <span><span><span><span><span><span><span><span><span><span><span><spa=
-n><span><span><span><span><span><span><span><span><span><span><span><span><=
-span><span><span><span><span><span><span>OP</span></span></span></span></sp=
-an></span></span></span></span></span></span></span></span></span></span></=
-span></span></span></span></span></span></span></span></span></span></span>=
-</span></span></span></span></span> US/Europe/Brazil/India Conference Calls=
-: <br></div><div dir=3D"ltr"><br></div><div dir=3D"ltr">(1) June - US/Europ=
-e/Brazil/India - OP Monthly Meeting<br>=C2=A0 =C2=A0 - Tuesday 6 June 2022,=
- Daytime<br>=C2=A0 =C2=A0 =C2=A0 - Note - ISO TC22/SC32/WG12 Hybrid F2F (Se=
-oul, Korea) - 13-15 June 2023<br>=C2=A0 =C2=A0 =C2=A0 - Note - GP Cybersecu=
-rity Vehicle Forum Hybrid F2F (Plymouth, MI) - 20 June 2023<br>=C2=A0 =C2=
-=A0 =C2=A0 - Note - ESCAR USA Physical F2F (Detroit, MI) - 21-22 June 2023<=
-br>=C2=A0 =C2=A0 =C2=A0 - Note - Uptane Hybrid F2F (Southfield, MI) - 23 Ju=
-ne 2023<br>=C2=A0 =C2=A0 =C2=A0 - Note - TCG Members Meeting Hybrid F2F (Be=
-rlin, Germany) - 27-29 June 2023<br>=C2=A0 =C2=A0 =C2=A0 - US<br>=C2=A0 =C2=
-=A0 =C2=A0 =C2=A0 8am in San Francisco - US PDT (Pacific Daylight Time)<br>=
-=C2=A0 =C2=A0 =C2=A0 =C2=A0 9am in Colorado - US MDT (Mountain Daylight Tim=
-e)<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 10am in Chicago - US CDT (Central Dayligh=
-t Time)<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 11am in New York - US EDT (Eastern D=
-aylight Time)<br>=C2=A0 =C2=A0 =C2=A0 - Europe<br>=C2=A0 =C2=A0 =C2=A0 =C2=
-=A0 5pm in Berlin - CEST (Central Europe Summer Time)<br>=C2=A0 =C2=A0 =C2=
-=A0 - Brazil<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 2pm in Belo Horizonte - BRT (Br=
-asilia Time)<br>=C2=A0 =C2=A0 =C2=A0 - India<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0=
- 8:30pm in New Delhi - IST (India Standard Time)<br><br>(2) July - US/Europ=
-e/Brazil/India - OP Monthly Meeting (tentative)<br>=C2=A0 =C2=A0 - Tuesday =
-11 July 2022, Daytime<br>=C2=A0 =C2=A0 =C2=A0 - Note - IETF 117 Hybrid F2F =
-(San Francisco, USA) 24-28 July 2023<br>=C2=A0 =C2=A0 =C2=A0 - US<br>=C2=A0=
- =C2=A0 =C2=A0 =C2=A0 8am in San Francisco - US PDT (Pacific Daylight Time)=
-<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 9am in Colorado - US MDT (Mountain Daylight=
- Time)<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 10am in Chicago - US CDT (Central Day=
-light Time)<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 11am in New York - US EDT (Easte=
-rn Daylight Time)<br>=C2=A0 =C2=A0 =C2=A0 - Europe<br>=C2=A0 =C2=A0 =C2=A0 =
-=C2=A0 5pm in Berlin - CEST (Central Europe Summer Time)<br>=C2=A0 =C2=A0 =
-=C2=A0 - Brazil<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 2pm in Belo Horizonte - BRT =
-(Brasilia Time)<br>=C2=A0 =C2=A0 =C2=A0 - India<br>=C2=A0 =C2=A0 =C2=A0 =C2=
-=A0 8:30pm in New Delhi - IST (India Standard Time)<br><br>(3) August - US/=
-Europe/Brazil/India - OP Monthly Meeting (tentative)<br>=C2=A0 =C2=A0 - Tue=
-sday 22 August 2022, Daytime<br>=C2=A0 =C2=A0 =C2=A0 - Note - PWG Virtual F=
-2F - 8-10 August 2023<br>=C2=A0 =C2=A0 =C2=A0 - US<br>=C2=A0 =C2=A0 =C2=A0 =
-=C2=A0 8am in San Francisco - US PDT (Pacific Daylight Time)<br>=C2=A0 =C2=
-=A0 =C2=A0 =C2=A0 9am in Colorado - US MDT (Mountain Daylight Time)<br>=C2=
-=A0 =C2=A0 =C2=A0 =C2=A0 10am in Chicago - US CDT (Central Daylight Time)<b=
-r>=C2=A0 =C2=A0 =C2=A0 =C2=A0 11am in New York - US EDT (Eastern Daylight T=
-ime)<br>=C2=A0 =C2=A0 =C2=A0 - Europe<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 5pm in=
- Berlin - CEST (Central Europe Summer Time)<br>=C2=A0 =C2=A0 =C2=A0 - Brazi=
-l<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 2pm in Belo Horizonte - BRT (Brasilia Time=
-)<br>=C2=A0 =C2=A0 =C2=A0 - India<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 8:30pm in =
-New Delhi - IST (India Standard Time)</div><div dir=3D"ltr"><br></div><div>=
-Cheers,</div><div>- Ira</div><div><br></div><div dir=3D"ltr"><br></div></di=
-v>
-
-<div><div dir=3D"ltr" class=3D"gmail_signature" data-smartmail=3D"gmail_sig=
-nature"><div dir=3D"ltr"><div><div dir=3D"ltr"><div><div dir=3D"ltr"><div><=
-div dir=3D"ltr"><div><div dir=3D"ltr"><div><div dir=3D"ltr"><div><div dir=
-=3D"ltr"><div><div dir=3D"ltr"><div><div dir=3D"ltr"><i><font size=3D"1">Ir=
-a McDonald (Musician / Software Architect)</font></i></div><div><i><font si=
-ze=3D"1">Chair - SAE Trust Anchors and Authentication TF<br></font></i></di=
-v><div dir=3D"ltr"><i><font size=3D"1">Co-Chair - TCG Trusted Mobility Solu=
-tions WG</font></i></div><div><i><font size=3D"1">Co-Chair - TCG Metadata A=
-ccess Protocol SG<br></font></i></div><div dir=3D"ltr"><i><font size=3D"1">=
-Chair - Linux Foundation Open Printing WG<br>Secretary - IEEE-ISTO Printer =
-Working Group<br>Co-Chair - IEEE-ISTO PWG Internet Printing Protocol WG<br>=
-IETF Designated Expert - IPP &amp; Printer MIB<br>Blue Roof Music / High No=
-rth Inc<br><a style=3D"color:rgb(51,51,255)" href=3D"http://sites.google.co=
-m/site/blueroofmusic" target=3D"_blank">http://sites.google.com/site/bluero=
-ofmusic</a><br><a style=3D"color:rgb(102,0,204)" href=3D"http://sites.googl=
-e.com/site/highnorthinc" target=3D"_blank">http://sites.google.com/site/hig=
-hnorthinc</a><br>mailto: <a href=3D"mailto:blueroofmusic@gmail.com" target=
-=3D"_blank">blueroofmusic@gmail.com</a><br>(permanent) PO Box 221=C2=A0 Gra=
-nd Marais, MI 49839=C2=A0 906-494-2434</font></i></div></div></div></div></=
-div></div></div></div></div></div></div></div></div></div></div></div></div=
-></div></div></div>
-
---00000000000042952705fcfc08be--
