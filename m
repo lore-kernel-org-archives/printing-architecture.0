@@ -1,23 +1,26 @@
-Return-Path: <zdohnal@redhat.com>
-DKIM-Filter: OpenDKIM Filter v2.11.0 smtp4.osuosl.org 133CF423F0
-DKIM-Filter: OpenDKIM Filter v2.11.0 smtp4.osuosl.org 8A8E44240D
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=redhat.com;
- s=mimecast20190719; t=1685634870;
- h=from:from:reply-to:subject:subject:date:date:message-id:message-id:
- to:to:cc:mime-version:mime-version:content-type:content-type:
- content-transfer-encoding:content-transfer-encoding;
- bh=uWT05rSpQRwgwQLao5MdTvO76BvdnikKoy3MoRvxxKM=;
- b=jCU1n/tYoSPhQ6mHmhdzAiWjaUu34taPDfHrbXwCrC3Nd5SaQUA9R164rsOw8/aK4xXEGt
- mzFgjeC7qEDwlEYdyqa8NluXlchPDI2GkE1LoEdRpR6r5U+Lb6REsUH5b2RFlYrcBJCcBI
- D/boREbufx/Rnq1ldfAuAGX2/wee1+I=
-Message-ID: <26a3b774-9a0f-56c0-c63c-4e6e344490ab@redhat.com>
-Date: Thu, 1 Jun 2023 17:54:24 +0200
+Return-Path: <till.kamppeter@gmail.com>
+DKIM-Filter: OpenDKIM Filter v2.11.0 smtp4.osuosl.org E6B0E40987
+DKIM-Filter: OpenDKIM Filter v2.11.0 smtp4.osuosl.org BCB074099D
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=gmail.com; s=20221208; t=1685998445; x=1688590445;
+ h=content-transfer-encoding:subject:from:to:content-language
+ :user-agent:mime-version:date:message-id:from:to:cc:subject:date
+ :message-id:reply-to;
+ bh=11OyD8loTE5aXbfsYPZlI+GtNbYma4nb6nOg6iPNt9c=;
+ b=WrYICVMxE0wbNrpAZ0LTltGUR2WaCDg3PKZ7IxXyz+SY6d6rnAoV751xQD4wmYzqIh
+ eixfS1hZqQdMMCk8AWyGkhgOIptrL78Fe/4GivxsiuNO3xlM9E40E7sTlVvJ/ROw/qsa
+ L0FBsU8IghL/n+fl4jlNyMDR+FNIC7aV0HSGRybhJvstnw6M67VCcT9Ab0ukl1qamdSC
+ jeWjFMQ506/dpgN8PsqIUZ58YOkrZh6zAYXO4S3elMxN4EeaJx0VWblCzOjT4N++HwO4
+ P9jwwS2ug2khErTwjx2fY4h8kiRRKTzabWwXMBs28xAKYVBgX9I8e5L4UbCY1L6YmPy8
+ La2Q==
+Message-ID: <681e8990-eb04-b1b0-dfdb-ab04cd0de619@gmail.com>
+Date: Mon, 5 Jun 2023 22:54:03 +0200
 MIME-Version: 1.0
-From: Zdenek Dohnal <zdohnal@redhat.com>
 Content-Language: en-US
-Content-Type: text/plain; charset="utf-8"; format="flowed"
-Content-Transfer-Encoding: 8bit
-Subject: [Printing-architecture] CUPS 2.4.3 is released!
+From: Till Kamppeter <till.kamppeter@gmail.com>
+Content-Type: text/plain; charset=UTF-8; format=flowed
+Content-Transfer-Encoding: 7bit
+Subject: [Printing-architecture] OpenPrinting micro-conference 2023
 List-Id: Printing architecture under linux
  <printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>, 
@@ -27,78 +30,55 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>, 
  <mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>
+To: Open Printing <printing-architecture@lists.linux-foundation.org>, Michael Sweet <msweet@msweet.org>, Ira McDonald <blueroofmusic@gmail.com>, Piotr Pawliczek <pawliczek@chromium.org>, Benjamin Gordon <bmgordon@google.com>, Aveek Basu <basu.aveek@gmail.com>, Zdenek Dohnal <zdohnal@redhat.com>
 
-Hi all!
+Hi,
 
-CUPS 2.4.3 is finally here!
+this year the Linux Plumbers takes place on Nov 13-15, clashing with the 
+PWG Virtual F2F on Nov 14-16. Also the date is very late in the year.
 
-CUPS 2.4.3 brings fix for CVE-2023-32324, several improvements and many 
-bug fixes. CUPS now implements fallback for printers with broken 
-firmware, which is not capable of answering to IPP request 
-`get-printer-attributes` with `all, media-col-database` - this enables 
-driverless support for bunch of printers which don't follow IPP 
-Everywhere standard. Aside from the CVE fix the most important fixes are 
-around color settings, printer application support fixes and OpenSSL 
-support.
+So we (Aveek and me) decided to do this year's micro-conference on a 
+different platform.
 
-Detailed list of changes:
+The DebConf takes place in India this year, in Kochi (near the southern 
+tip of India), on Sep 10-17 (8 days, Sun-Sun), this led me to the idea 
+to travel to India this year and I suggested to Aveek to do a panel with 
+him and the GSoC contributors/mentors on the DebConf.
 
-- Added a title with device uri for found network printers (Issues #402, 
-#393)
-- Added new media sizes defined by IANA (Issues #501)
-- Added quirk for GoDEX label printers (Issue #440)
-- Fixed `--enable-libtool-unsupported` (Issue #394)
-- Fixed configuration on RISC-V machines (Issue #404)
-- Fixed the `device_uri` invalid pointer for driverless printers with 
-`.local`
-   hostname (Issue #419)
-- Fixed an OpenSSL crash bug (Issue #409)
-- Fixed a potential SNMP OID value overflow issue (Issue #431)
-- Fixed an OpenSSL certificate loading issue (Issue #465)
-- Fixed Brazilian Portuguese translations (Issue #288)
-- Fixed `cupsd` default keychain location when building with OpenSSL
-   (Issue #529)
-- Fixed default color settings for CMYK printers as well (Issue #500)
-- Fixed duplicate PPD2IPP media-type names (Issue #688)
-- Fixed possible heap buffer overflow in `_cups_strlcpy()` (fixes 
-CVE-2023-32324)
-- Fixed InputSlot heuristic for photo sizes smaller than 5x7" if there is no
-   media-source in the request (Issue #569)
-- Fixed invalid memory access during generating IPP Everywhere queue
-   (Issue #466)
-- Fixed lprm if no destination is provided (Issue #457)
-- Fixed memory leaks in `create_local_bg_thread()` (Issue #466)
-- Fixed media size tolerance in `ippeveprinter` (Issue #487)
-- Fixed passing command name without path into `ippeveprinter` (Issue #629)
-- Fixed saving strings file path in `printers.conf` (Issue #710)
-- Fixed TLS certificate generation bugs (Issue #652)
-- `ippDeleteValues` would not delete the last value (Issue #556)
-- Ignore some of IPP defaults if the application sends its PPD alternative
-   (Issue #484)
-- Make `Letter` the default size in `ippevepcl` (Issue #543)
-- Now accessing Admin page in Web UI requires authentication (Issue #518)
-- Now look for default printer on network if needed (Issue #452)
-- Now we poll `media-col-database` separately if we fail at first (Issue 
-#599)
-- Now report fax attributes and values as needed (Issue #459)
-- Now localize HTTP responses using the Content-Language value (Issue #426)
-- Raised file size limit for importing PPD via Web UI (Issue #433)
-- Raised maximum listen backlog size to INT MAX (Issue #626)
-- Update print-color-mode if the printer is modified via ColorModel PPD 
-option  (Issue #451)
-- Use localhost when printing via printer application (Issue #353)
-- Write defaults into /etc/cups/lpoptions if we're root (Issue #456)
+Then we realized that India is huge and Kochi in the very South, Aveek's 
+home in the very East, and Mandi, where most of the contributors study, 
+is in the very North of India, so we cannot easily meet all in Kochi.
 
+So Aveek suggested that we all should meet in Mandi (he already 
+organized such an event some years ago, with ~150 attendees) and then I 
+suggested to run a 2-day OpenPrinting conference there, with 2 panels 
+(one technical, one community), talks of the contributors, also Michael 
+Sweet or others speaking remotely, a workshop of recycling old printers 
+and scanners with a Raspberry Pi, ...
 
-Thank you all for contributions and help!
+We came also to the conclusion to not only have sessions about printing 
+and for that to run a second track in a second room for which we post a CfP.
 
+And after discussing all this we came to the conclusion why not taking 
+half a day of the OpenPrinting track and use it for the 
+micro-conference, running the micro-conference with students and 
+professors of the IIT Mandi as audience. Michael, Zdenek, Piotr, ... 
+could connect remotely while Aveek, me and the contributors are on the 
+stage.
 
-Zdenek
+As the date we have though about the weekend of 9-10 of Sep, so that 
+after the conference I could move to DebConf and there also give a talk 
+about the conference.
 
+So WDYT?
 
--- 
-Zdenek Dohnal
-Senior Software Engineer
-Red Hat, BRQ-TPBC
+The MC would happen on Sat or Sun in the afternoon Indian time.
 
+Would this work for you? Or do we have to run it on a workday?
+
+I have also talked with the Community Team of Canonical and they would 
+provide me the system for remote speaking, live streaming, and recording 
+the conference (Streamyard, what is also used for the Indabas and was 
+used for the Ubuntu Summit 2022 in Prague).
+
+    Till
