@@ -1,23 +1,26 @@
-Return-Path: <zdohnal@redhat.com>
-DKIM-Filter: OpenDKIM Filter v2.11.0 smtp1.osuosl.org DAC3983BD9
-DKIM-Filter: OpenDKIM Filter v2.11.0 smtp1.osuosl.org 3542583BD0
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=redhat.com;
- s=mimecast20190719; t=1687430290;
- h=from:from:reply-to:subject:subject:date:date:message-id:message-id:
- to:to:cc:mime-version:mime-version:content-type:content-type:
- content-transfer-encoding:content-transfer-encoding;
- bh=LGVhsB4MfjLQHHkEtw9zQ780h2NeT2/aDjFnpgxGYyA=;
- b=WUwWiTHgxFIxJE6q4P9/0K8q7cZU5/p4m5LVJ5FphwW+wQCkxy+TVFle5x1g97dyh9N+Aa
- Z2wIF+E6uY2IYkxcTzoKtS5IsF9OBs++3uht7QaJQYHOSfpnzGDRIK/6E340392bujS9ev
- BBTnZHSQLjyJBohk6VbfEXg4Q+R5Kys=
-Message-ID: <bc238c7f-859a-e90e-f2c2-196bc853af7a@redhat.com>
-Date: Thu, 22 Jun 2023 12:38:06 +0200
+Return-Path: <till.kamppeter@gmail.com>
+DKIM-Filter: OpenDKIM Filter v2.11.0 smtp2.osuosl.org 45962417A6
+DKIM-Filter: OpenDKIM Filter v2.11.0 smtp2.osuosl.org 78DE54020B
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=gmail.com; s=20221208; t=1688111604; x=1690703604;
+ h=content-transfer-encoding:subject:from:cc:to:content-language
+ :user-agent:mime-version:date:message-id:from:to:cc:subject:date
+ :message-id:reply-to;
+ bh=bCtJAEqbx7eYlI0/hG+inhhEYPkbpSptHtJ0O7RMfHE=;
+ b=MP3rCj1eKAMOPT2JB/BSo4BHs/rWrwdj2ZwmHwrgCv9c157Do0WZKSAGngptn7xmrb
+ EOZrWPlHOplgv6ZsYelv8ZqWE9Uqvh/88h/ewzEG5bkeY2pMeNr7vZh0PxDbM6kJ/CGX
+ +2nLSX7CChHxN5L0EUFXOf7KQa3qz+ublhxqEyYNFWI6lhUjpfv5iNbi1SXD7O+JRW6a
+ 4qAnrNpzJY2OctwfjYbro6jlQ5AsxDhZfdCxfWMpjC7lvvoRB2PndgAGdptfnd4Yv64O
+ tGaZAFWsw5xRnBSpg1aXvvZnKwThsPOMhEnyKusY0O/BW+fg3/HdTzQroPjJDDFsOpTl
+ qfUQ==
+Message-ID: <d0938697-f149-b13a-eba2-bf6d08027b74@gmail.com>
+Date: Fri, 30 Jun 2023 09:53:22 +0200
 MIME-Version: 1.0
-From: Zdenek Dohnal <zdohnal@redhat.com>
 Content-Language: en-US
+From: Till Kamppeter <till.kamppeter@gmail.com>
 Content-Type: text/plain; charset=UTF-8; format=flowed
 Content-Transfer-Encoding: 7bit
-Subject: [Printing-architecture] CUPS 2.4.6 is released!
+Subject: [Printing-architecture] OpenPrinting Roadmap Sprint 2023
 List-Id: Printing architecture under linux
  <printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>, 
@@ -27,23 +30,48 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>, 
  <mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>
+To: Open Printing <printing-architecture@lists.linux-foundation.org>
+Cc: Benjamin Gordon <bmgordon@google.com>, Piotr Pawliczek <pppawliczek@gmail.com>, Piotr Pawliczek <pawliczek@google.com>, Aveek Basu <basu.aveek@gmail.com>
 
-Hi all!
+[ Please forward this mail to anyone who might be interested. ]
 
-CUPS 2.4.6 is released to ship the fix for the latest CVE - 
-CVE-2023-34241 - and two other bug fixes.
 
-Detailed list:
-- Fix linking error on old MacOS (Issue #715)
-- Fix printing multiple files on specific printers (Issue #643)
-- Fix use-after-free when logging warnings in case of failures in 
-`cupsdAcceptClient()` (fixes CVE-2023-34241)
+Hi,
 
-Enjoy!
+we got confirmation for the venue in the IIT Mandi last week and 
+currently we are working on an Indico setup to manage our conference.
 
--- 
-Zdenek Dohnal
-Senior Software Engineer
-Red Hat, BRQ-TPBC
+As part of the conference we have planned to run an OpenPrinting Roadmap 
+Sprint 2023 mainly in the style of the micro-conferences we did in the 
+previous years.
 
+So we will have
+
+     OpenPrinting Roadmap Sprint 2023
+     Fri, September 8, 4pm - 8pm IST (10:30am - 2:30pm UTC)
+     Venue is the IIT Mandi in India
+
+- We will have 4 hours instead of 3:30 in total, and even an overrun in
+   the end would not be a problem as there is no other session
+   afterwards.
+
+- We are not bound to any rules of Linux Plumbers, so one or another
+   session which are a talk and not actually a discussion are no problem
+   (Ira), but generally, we should have discussion in most of our
+   sessions.
+
+- As for Plumbers, conference management is done via Indico. In the next
+   days I will post a link here. Then we can plan what we will cover and
+   enter session descriptions.
+
+- On Friday there is no parallel track in another room, so Aveek and me
+   are on the Roadmap Sprint during the whole time.
+
+- Most of you will participate remotely. We will set up an appropriate
+   video conference, similar to Plumbers. We will also record the
+   sessions.
+
+I hope we will get some audience into our room and not be in an empty 
+room as it happened to us on Plumbers 2022.
+
+    Till
