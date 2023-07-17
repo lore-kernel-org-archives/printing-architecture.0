@@ -1,27 +1,26 @@
-Return-Path: <till.kamppeter@gmail.com>
-DKIM-Filter: OpenDKIM Filter v2.11.0 smtp2.osuosl.org 374674019D
-DKIM-Filter: OpenDKIM Filter v2.11.0 smtp2.osuosl.org 1F59D400F8
+Return-Path: <blueroofmusic@gmail.com>
+DKIM-Filter: OpenDKIM Filter v2.11.0 smtp2.osuosl.org AAD354053D
+DKIM-Filter: OpenDKIM Filter v2.11.0 smtp2.osuosl.org CA0CC40500
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=gmail.com; s=20221208; t=1688768578; x=1691360578;
- h=content-transfer-encoding:subject:from:cc:to:content-language
- :user-agent:mime-version:date:message-id:from:to:cc:subject:date
- :message-id:reply-to;
- bh=ceqePnaTI4b4DSOqVqa8lQaY0mB9LUj9t9H7KG0O0Zk=;
- b=PNiZVDFPrY7it5dKChUh0fCEpvjLHHXBG5JJZSk0wk/cQ2yzsN1q/Iz3s++VuCOgff
- +OpQ/dxdJdesBY8Jelyk9GaKoNyB2n56/agd4JL6j3SKE/qJAkSDsGFf6T2SiQD9GnB+
- x1tKfzpvTNolxo9i4E1toVDp6KVDxdBAZHOtXqe+aXBmflU9UQUpXHdq/2/qeFXa4w8N
- 06H9kcYxOm9vOAz4HIW+xn7SJQenaoWzHYuTubLFtSSSl9OcEVqswtin9IcXzcLvmgrn
- WLSg+A1bu5zIDrTMakBhXp1GqNwhnF1oNpyQV5aBhrOFvHzdNui2xik0rIwdng+oh1w0
- S1FQ==
-Message-ID: <68b9e4fc-e1f3-d091-12ce-849247d16ed5@gmail.com>
-Date: Sat, 8 Jul 2023 00:22:56 +0200
+ d=gmail.com; s=20221208; t=1689625028; x=1690229828;
+ h=cc:to:subject:message-id:date:from:in-reply-to:references
+ :mime-version:from:to:cc:subject:date:message-id:reply-to;
+ bh=LdEADoyoUaXF+yKwO0eAcKOZJt1Rzus6Y7HYAH+SLwI=;
+ b=m10IgwrFtQj3CkPasYkXsGR3RbevjVIAxAth20ioGmGD7RaxOyDs7CG4JiMYdPgl9S
+ Y/MfiyWhupE0JgvWigsGstnWr7/lPPQZUmSziYOMHvqNq2jq57Dr9M5cIbdEh0w+C9Vs
+ GG4Jd2Sbo1rqJdi3eMxEAdryO2wg52L8MDDdehP0qfyLuc1/o4E4+ZytQo9T/tBNCO2Q
+ vxm5Q0U9g9vl0QKAPdkEc0/ELNB3MPT+dZUZfkWJIrAlEhKqtHzZSyfT79jGJiqMk8Aq
+ zLx7csz7IhWdkozlLD9VuUIpfxlc546L0Rm2Mq8yKCcVsBXM8NxtG6IHvOXJV4tosUpN
+ WxRw==
 MIME-Version: 1.0
-Content-Language: en-US
-From: Till Kamppeter <till.kamppeter@gmail.com>
-Content-Type: text/plain; charset=UTF-8; format=flowed
-Content-Transfer-Encoding: 7bit
-Subject: [Printing-architecture] OpenPrinting Roadmap Sprint 2023 on the
- Opportunity Open Source in the IIT Mandi in India
+References: <CAJTF008-9johJZte83bwZ2O79dCRG4b9bm2ZaeBAhfQGNHVGoQ@mail.gmail.com>
+In-Reply-To: <CAJTF008-9johJZte83bwZ2O79dCRG4b9bm2ZaeBAhfQGNHVGoQ@mail.gmail.com>
+From: Ira McDonald <blueroofmusic@gmail.com>
+Date: Mon, 17 Jul 2023 16:16:53 -0400
+Message-ID: <CAN40gSun2btNMEowX62w5xsCckUBNj6zwhFkNczaJSun6F1Tvg@mail.gmail.com>
+Content-Type: multipart/alternative; boundary="000000000000a044d30600b47b4f"
+Subject: [Printing-architecture] Fwd: [PWG-Announce] PWG August 2023 Virtual
+	Face to Face [August 9-10]
 List-Id: Printing architecture under linux
  <printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>, 
@@ -31,77 +30,81 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>, 
  <mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Open Printing <printing-architecture@lists.linux-foundation.org>
-Cc: Kate Stewart <kstewart@linuxfoundation.org>, Benjamin Gordon <bmgordon@google.com>, Piotr Pawliczek <pppawliczek@gmail.com>, Piotr Pawliczek <pawliczek@google.com>, Aveek Basu <basu.aveek@gmail.com>, Jeff Licquia <licquia@linuxfoundation.org>
+To: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>
 
-Hi,
+--000000000000a044d30600b47b4f
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
 
-with the DebConf being in India, and so me having already one reason to 
-travel to India, Aveek and me have decided to meet most of our current 
-and former contributors in-person and motivate the students, professors, 
-researchers to join the community of developers, designers, doc writers, 
-... in a 2-1/2-day conference, the "Opportunity Open Source". As most of 
-our contributors are studying in the Indian Institute of Technology 
-(IIT) Mandi, in the north of India, not far from Delhi, we have selected 
-this place to run the conference.
+---------- Forwarded message ---------
+From: Jeremy Leber via pwg-announce <pwg-announce@pwg.org>
+Date: Mon, Jul 17, 2023 at 12:56=E2=80=AFPM
+Subject: [PWG-Announce] PWG August 2023 Virtual Face to Face [August 9-10]
 
-There we will talk with them about their GSoC experience on a panel, 
-have a GSoC Q&A session, and the contributors presenting their work. By 
-a Call for Proposals we hope to get a wide range of more contributions.
 
-And for attendees getting some real-life experience and for us getting 
-audience contributing to our discussions we are running this year's 
-OpenPrinting Roadmap Sprint on the conference and attendees can 
-participate in the discussion and planning of the next 12 months in 
-printing and scanning.
+Hello All,
 
-We will also live-stream and record everything and allow remote 
-participation.
+The Printer Working Group's August virtual face-to-face event will be held
+Wednesday and Thursday, August 9-10 2023.
 
-This way we also overcome the fact that Linux Plumbers clashes with the 
-PWG meeting in November and that we did not get any audience on the 
-previous Plumbers.
+Since this is a virtual event, all sessions will be held via WebEx.   The e=
+vent
+page <https://www.pwg.org/chair/meeting-info/august-2023-virtual.html> has
+the current agenda as well as the teleconference information.  Any and all
+interested parties are welcome to attend.  If you have any questions,
+please feel free to reach out.
 
-The conference will start with our OpenPrinting Roadmap Sprint 2023 on
+We hope to see everyone there!
 
-     Friday, September 8, 4pm - 8pm IST (UTC+5:30, 10:30am - 2:30pm UTC)
+Thanks!
+Jeremy
 
-and continue with the main conference sessions on Saturday and Sunday, 
-most probably 9am-6pm IST (exact time determined by amount of sessions 
-scheduled).
+Jeremy Leber
+Chair, IEEE ISTO Printer Working Group
+chair@pwg.org
+jeremy.leber@lexmark.com
+_______________________________________________
+pwg-announce mailing list
+pwg-announce@pwg.org
+https://www.pwg.org/mailman/listinfo/pwg-announce
 
-The Roadmap Sprint will serve the same purpose as our micro-conferences 
-in the previous years. We will discuss and plan on all the areas of work 
-at OpenPrinting. So principally the sessions should be again a short 
-talk with following discussion, but as we are not at Plumbers, rules are 
-not that strict and so if you want to give a regular talk this is no 
-problem for one or another session (Ira).
+--000000000000a044d30600b47b4f
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
 
-The conference web site is here:
+<div dir=3D"ltr"><br clear=3D"all"><div class=3D"gmail_quote"><div dir=3D"l=
+tr" class=3D"gmail_attr">---------- Forwarded message ---------<br>From: <b=
+ class=3D"gmail_sendername" dir=3D"auto">Jeremy Leber via pwg-announce</b> =
+<span dir=3D"auto">&lt;<a href=3D"mailto:pwg-announce@pwg.org">pwg-announce=
+@pwg.org</a>&gt;</span><br>Date: Mon, Jul 17, 2023 at 12:56=E2=80=AFPM<br>S=
+ubject: [PWG-Announce] PWG August 2023 Virtual Face to Face [August 9-10]<b=
+r></div><br><br><div dir=3D"ltr">Hello All,<br><div><br>The Printer Working=
+ Group&#39;s August
+virtual face-to-face event will be held Wednesday and Thursday, August 9-10=
+ 2023.<br><br>Since this is a virtual event, all sessions will be held via =
+WebEx. =C2=A0 The=C2=A0<a href=3D"https://www.pwg.org/chair/meeting-info/au=
+gust-2023-virtual.html" target=3D"_blank">event page</a>=C2=A0has
+ the current agenda as well as the teleconference information.=C2=A0 Any an=
+d=20
+all interested parties are welcome to attend.=C2=A0 If you have any=20
+questions, please feel free to reach out.<br><br>We hope to see everyone th=
+ere!<br><br>Thanks!<br>Jeremy<font color=3D"#888888"><font color=3D"#888888=
+"><font color=3D"#888888"><font color=3D"#888888"><font color=3D"#888888"><=
+font color=3D"#888888"><font color=3D"#888888"><font color=3D"#888888"><fon=
+t color=3D"#888888"><font color=3D"#888888"><font color=3D"#888888"><font c=
+olor=3D"#888888"><font color=3D"#888888"><br><br>Jeremy Leber<br>Chair, IEE=
+E ISTO Printer Working Group<br><div><a href=3D"mailto:chair@pwg.org" targe=
+t=3D"_blank">chair@pwg.org</a></div><div><a href=3D"mailto:jeremy.leber@lex=
+mark.com" target=3D"_blank">jeremy.leber@lexmark.com</a></div></font></font=
+></font></font></font></font></font></font></font></font></font></font></fo=
+nt></div></div>
+_______________________________________________<br>
+pwg-announce mailing list<br>
+<a href=3D"mailto:pwg-announce@pwg.org" target=3D"_blank">pwg-announce@pwg.=
+org</a><br>
+<a href=3D"https://www.pwg.org/mailman/listinfo/pwg-announce" rel=3D"norefe=
+rrer" target=3D"_blank">https://www.pwg.org/mailman/listinfo/pwg-announce</=
+a><br>
+</div></div>
 
-     https://events.canonical.com/e/mandi2023
-
-To plan the Roadmap Sprint, please write up what you want to talk 
-about/discuss and submit it to the Call for Abstracts, and choose 
-"OpenPrinting Roadmap Sprint" as the track.
-
-As contribution type choose "BoF" when it is mostly discussion, as we 
-had on Plumbers and one of the talk formats if you want to give a talk. 
-The times are mostly a hint, we will adjust the times when scheduling 
-the Sprint, to get the best from the 4 hours.
-
-The scheduling we will discuss here on the list and also in our monthly 
-video meetings.
-
-Remote speaking is encouraged and allowed. We will also stream and 
-record the Sprint (and also the other conference days). Aveek, me, and 
-our GSoC contributors/mentors will be in-person in the room.
-
-All the other tracks in the Call for Abstracts are for Saturday and 
-Sunday, you can also submit there if you want to present to a wider 
-audience and/or something not fitting into the Roadmap Sprint and you 
-are attending in-person or willing to remote-speak on a weekend day.
-
-So let us have a great Roadmap Sprint ...
-
-    Till
+--000000000000a044d30600b47b4f--
