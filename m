@@ -1,27 +1,22 @@
-Return-Path: <till.kamppeter@gmail.com>
-DKIM-Filter: OpenDKIM Filter v2.11.0 smtp3.osuosl.org E29AF60C1F
-DKIM-Filter: OpenDKIM Filter v2.11.0 smtp3.osuosl.org 1F5C260B69
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=gmail.com; s=20221208; t=1693951582; x=1694556382;
- darn=lists.linux-foundation.org; 
- h=content-transfer-encoding:content-language:to:subject:from
- :user-agent:mime-version:date:message-id:from:to:cc:subject:date
- :message-id:reply-to;
- bh=RW8Yn1qGAUOLzQ0kx8FrIf61/ZuDyqn4t2PKvYd89uE=;
- b=JAZYsqXajer6dlsGBjL0f9d7Fw+aTGwOCLy/KRbSFnQtdjxMCDd1grbkDCCAyDAGYH
- baaDJ4pPQQM9Id+vJ7H1xgaXJRsNRoQaZ7Njhiv9uXqlbYGAsTCUIKVPxfI5kqgP5KOh
- QrcPeVTsdXUFiQW8sFSQ0q4D8Z/HsebhkeDtfChFJk1hcrJVPl0oc4OtRFR/Qp8jzogo
- oImEIoUE4xG4s12Z/Pdt3VhhHlqZtXa4gissQhzil8I8MzQF0Dg0+Z0G+jbVgJjngW4+
- nOp75ACciFLhG4xH2RCkUsHLllxoa1Xroig/iJSt9buE+lS3H3beSsZbPY4Krtah9n1/
- kXUw==
-Message-ID: <691d088c-5828-4f90-726e-6e8b75232d3a@gmail.com>
-Date: Wed, 6 Sep 2023 03:36:16 +0530
-MIME-Version: 1.0
-From: Till Kamppeter <till.kamppeter@gmail.com>
-Content-Language: en-US
-Content-Type: text/plain; charset=UTF-8; format=flowed
-Content-Transfer-Encoding: 7bit
-Subject: [Printing-architecture] OpenPrinting News
+Return-Path: <msweet@msweet.org>
+DKIM-Filter: OpenDKIM Filter v2.11.0 smtp4.osuosl.org F155941BD6
+DKIM-Filter: OpenDKIM Filter v2.11.0 smtp4.osuosl.org ABE7541BD4
+DKIM-Filter: OpenDKIM Filter v2.11.0 mail.msweet.org 3952B803AC
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=msweet.org;
+ s=default; t=1694096745;
+ bh=5KEBH2MjM0OMQHskZfMNNCfAnqUl09BAezstSYpj4fQ=;
+ h=From:Date:Subject:To:From;
+ b=UVLDM2+fdQ90zZMFV3fEOV88UU25prXM268eAkvfk7RVaShNFR4gElH1D2RqaEXUh
+ UAHGAEP2CF48iKSnBzPYu/8R9v5yff21iF0H40hNZrcs/taba/Gs7KTWC/uqmPNkpm
+ C5xA12ZhMAmY5QUownLVtA2jArGqRvHza0FXqugo=
+From: Michael Sweet <msweet@msweet.org>
+Content-Type: multipart/signed;
+ boundary="Apple-Mail=_665B49CD-BEEB-442C-9A75-30BF54FE21F8";
+ protocol="application/pgp-signature"; micalg=pgp-sha256
+Mime-Version: 1.0 (Mac OS X Mail 16.0 \(3731.700.6\))
+Date: Thu, 7 Sep 2023 10:25:33 -0400
+Message-Id: <7055C646-3E97-4DC5-B643-B56E79A04530@msweet.org>
+Subject: [Printing-architecture] PAPPL 1.3.3
 List-Id: Printing architecture under linux
  <printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>, 
@@ -31,14 +26,61 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>, 
  <mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Ira McDonald <blueroofmusic@gmail.com>, Aveek Basu <basu.aveek@gmail.com>, Open Printing <printing-architecture@lists.linux-foundation.org>
+To: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>
 
-Hi,
 
-I have posted the newest development of the last month on our website now.
+--Apple-Mail=_665B49CD-BEEB-442C-9A75-30BF54FE21F8
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain;
+	charset=us-ascii
 
-Here we go:
+PAPPL v1.3.3 is now available for download and is a general bug fix =
+release:
 
-https://openprinting.github.io/OpenPrinting-News-August-2023/
+    https://github.com/michaelrsweet/pappl/releases/tag/v1.3.3
 
-    Till
+Changes in 1.3.3 include:
+
+- Fixed USB serial number for DYMO printers (Issue #271)
+- Fixed DNS-SD advertisements when the server name is set to "localhost"
+  (Issue #274)
+- Fixed hostname change detection when using mDNSResponder (Issue #282)
+- Fixed authentication cookie comparisons for simple password mode.
+- Fixed a potential time-of-use issue with PAPPL-created directories.
+- Fixed handling of trailing '%' in log format strings.
+- Updated TLS certificate generation to support more types of =
+certificates and
+  to use modern OpenSSL/GNU TLS APIs.
+
+Enjoy!
+
+________________________
+Michael Sweet
+
+
+--Apple-Mail=_665B49CD-BEEB-442C-9A75-30BF54FE21F8
+Content-Transfer-Encoding: 7bit
+Content-Disposition: attachment;
+	filename=signature.asc
+Content-Type: application/pgp-signature;
+	name=signature.asc
+Content-Description: Message signed with OpenPGP
+
+-----BEGIN PGP SIGNATURE-----
+
+iQIzBAEBCAAdFiEEkIbDzcZsP1Y8+PQFvmfHXsgfMkQFAmT53V0ACgkQvmfHXsgf
+MkQ8eg//c8sMPMi/D8P/fGkKvD+FreoJR5jcIwvKN59Z11fi//fvEtEjfv1fhTNB
+TL0Q1IwPzILMxpU2OpftP3v+eviHxyDK+dyW5bcqt9pWTj/7Y+4k8PczqsWu0Igh
+nXT6DJY9io+RyC2CL7hoalmab3ZwKS/URVS/iLkZap775S9v0jXWRYJ+U0TxkXbW
+GyB/gXPRZ622OJ9aw5NIws1wrPoSH4g+6sXwmmWsyijWal5aRSKeXKBjZ2lINOhN
+robpZlhVfBEF1N5e0UFLyZE78bgeE/kzpHh2HeCA8xLmfJvj1Yn/d/UemPem5942
+sGw63Ddd7c8ZQwJ33PyKipQafPb7Zw4f6fQfQTvAZEJyKxpJP36usJXbTpuGp3Xn
+ma7F+yy/hJ39J0KpDtg3AyU9cSvC9Fd0YU5N5FS1hV+S/P937zzspSMKzF1teZbW
+IIjFsVf7MxNg9IeSV6FAjdYu1pSIuvXWPaWe1eG/AYVnBHiSCfETJykgBSf8KcfS
+I/b3kVHmIhEIFKGf5gySKPbfz37mUTmMoh3x2/lpgR8wOI6y66KCwgqPVTGANohu
+VcCBpg1IwyvztKxE6yYkoS294LnVctnAtJGUiB1hIIbmmCtKKbuVt9rmGGRwDCdD
+tyU/0t3hB9QUQpyj2r3K0oe09EQf9kZoaXD1vDHYFL5LqDdxkFE=
+=VVYH
+-----END PGP SIGNATURE-----
+
+--Apple-Mail=_665B49CD-BEEB-442C-9A75-30BF54FE21F8--
