@@ -1,23 +1,28 @@
-Return-Path: <zdohnal@redhat.com>
-DKIM-Filter: OpenDKIM Filter v2.11.0 smtp1.osuosl.org CC32783AA5
-DKIM-Filter: OpenDKIM Filter v2.11.0 smtp1.osuosl.org 19A5D83AA4
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=redhat.com;
- s=mimecast20190719; t=1695218487;
- h=from:from:reply-to:subject:subject:date:date:message-id:message-id:
- to:to:cc:mime-version:mime-version:content-type:content-type:
- content-transfer-encoding:content-transfer-encoding;
- bh=mk+AzLSkr00BNqQ8nkEWYw9RkmHksGiOUVXpeJ080GE=;
- b=LRKqJXaXFE+yp5RSFmr5Oqt6dhT4vRkYWlJCxjDhDxAzrirh3yaVqSiHN05SMTpzkmsQOV
- ItjMx3gks3NY30cGGgtGgjMBn5/ZJqUS2QlR5ME00ngLUP+5gM7H/2Oo8b71tD+ddF/U2U
- ea6zWOeFJWDZxmPH4WFVA2Jracy4EY8=
-Message-ID: <4a29849b-f365-db56-f1e5-0ac7a6c3e79e@redhat.com>
-Date: Wed, 20 Sep 2023 16:01:17 +0200
+Return-Path: <till.kamppeter@gmail.com>
+DKIM-Filter: OpenDKIM Filter v2.11.0 smtp2.osuosl.org 06982419CF
+DKIM-Filter: OpenDKIM Filter v2.11.0 smtp2.osuosl.org E5AEF419CE
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=gmail.com; s=20230601; t=1695424659; x=1696029459;
+ darn=lists.linux-foundation.org; 
+ h=content-transfer-encoding:content-language:to:subject:from
+ :user-agent:mime-version:date:message-id:from:to:cc:subject:date
+ :message-id:reply-to;
+ bh=nQTHI62qDMJN02EDFifNuoUjOYhkEMR/cbavk69tCdY=;
+ b=QTlp7j4bCsjCc2csOCf+7HNN05i4MthEGIAItVYyy5I4QQECWnuB3XRAfAxOl8cb3W
+ pP6W1Zr6oY/EzSJCgh31O6elG7PJWLfQqwMoBQWKeLkE7zI469qvHvlxjUMak2xDWAPa
+ urU097y18TWY+8Uod4tjCY/C7cE8GeVXbWHowL4Hhk1kkXmBT/1Ay7dfnZk/Slr7TRM6
+ 4xvGLQNtqJkesR8AMe4mPj7whWncrkYgKMURSxVEcpOUn8c5I0zayUFh+XV6ywZS6Yh1
+ sm629/s/muHfYZNhUJhhTKCs1h76gy3eCqDNlEisBM5gbac/Yzrup5aOKFKN0gtGJvdE
+ kWPQ==
+Message-ID: <5bb9b91b-8854-98bd-3956-09731fe0a366@gmail.com>
+Date: Sat, 23 Sep 2023 01:17:37 +0200
 MIME-Version: 1.0
-From: Zdenek Dohnal <zdohnal@redhat.com>
+From: Till Kamppeter <till.kamppeter@gmail.com>
 Content-Language: en-US
 Content-Type: text/plain; charset=UTF-8; format=flowed
 Content-Transfer-Encoding: 7bit
-Subject: [Printing-architecture] CUPS 2.4.7 is released!
+Subject: [Printing-architecture] Final 2.0.0 release of the second
+	generation of cups-filters!
 List-Id: Printing architecture under linux
  <printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>, 
@@ -27,32 +32,19 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>, 
  <mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>
+To: Open Printing <printing-architecture@lists.linux-foundation.org>, Zdenek Dohnal <zdohnal@redhat.com>, "jsmeix@suse.de" <jsmeix@suse.de>, Thorsten Alteholz <debian@alteholz.de>, Frederik Feichtmeier <frederik.feichtmeier@gmail.com>, Michael Sweet <msweet@msweet.org>, Sebastien Bacher <sebastien.bacher@canonical.com>, Ken VanDine <ken.vandine@canonical.com>
 
-Hi all!
+Hi,
 
-CUPS 2.4.7 is released to ship the fix for CVE-2023-4504 and several 
-other changes, among them it is adding OpenSSL support for cupsHashData 
-function and bug fixes.
+I have done the final 2.0.0 Release of the new cups-filters components now!
 
-Detailed list:
+It contains the fix for security vulnerability CVE-2023-4504 in libppd 
+and several fixes for bugs reported after RC2.
 
-- CVE-2023-4504 - Fixed Heap-based buffer overflow when reading 
-Postscript in PPD files
-- Added OpenSSL support for cupsHashData (Issue #762)
-- Fixed delays in lpd backend (Issue #741)
-- Fixed extensive logging in scheduler (Issue #604)
-- Fixed hanging of lpstat on IBM AIX (Issue #773)
-- Fixed hanging of lpstat on Solaris (Issue #156)
-- Fixed printing to stderr if we can't open cups-files.conf (Issue #777)
-- Fixed purging job files via cancel -x (Issue #742)
-- Fixed RFC 1179 port reserving behavior in LPD backend (Issue #743)
-- Fixed a bug in the PPD command interpretation code (Issue #768)
+Here we go:
 
-Enjoy the new release!
+https://openprinting.github.io/cups-filters-Second-Generation-Final-2.0.0-Release/
 
--- 
-Zdenek Dohnal
-Senior Software Engineer
-Red Hat, BRQ-TPBC
+There are also GitHub discussions set up for each release.
 
+    Till
