@@ -1,27 +1,22 @@
-Return-Path: <till.kamppeter@gmail.com>
-DKIM-Filter: OpenDKIM Filter v2.11.0 smtp1.osuosl.org F1FEE82890
-DKIM-Filter: OpenDKIM Filter v2.11.0 smtp1.osuosl.org D546182792
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=gmail.com; s=20230601; t=1696463302; x=1697068102;
- darn=lists.linux-foundation.org; 
- h=content-transfer-encoding:content-language:to:subject:from
- :user-agent:mime-version:date:message-id:from:to:cc:subject:date
- :message-id:reply-to;
- bh=NFdJ5CVvrERiHq2l/lXs5HYSGK6taGSXORSu34XSy+Y=;
- b=IvcIFvepx6Mu7MX6FtG703OUkOtnnlse4QLP2OR5T7zYEoQOEPDNATRYX35fH3TSkS
- kcDjYdiXMa/gr8AE1m/6g9bLoGx5I1e6CFcu6tUseSNRl3TAtQXTYxi6fi7lSg8qBhle
- YFD+E8HZs7urq0k8o3FlGE+dvyo3MLMBUFNNIrxJCICicXYR14UAAk6ZVmn7WYhsZ4B/
- jHpnC9I0WPaku8nhRK7BmbAEGg0Jatsrg7aWYtyw7VcrPFhiLUhKJqVaTzEtDm81ZByq
- i81Whq2MBLaD3fqbtwaEOq1M8QsL1W0tMCMkZQeZGhHN1H1uLBloTNK3Tyt+b4MCx3fG
- TDaw==
-Message-ID: <484ceca0-558a-45c8-d8d3-e12be62c3b0d@gmail.com>
-Date: Thu, 5 Oct 2023 01:48:19 +0200
-MIME-Version: 1.0
-From: Till Kamppeter <till.kamppeter@gmail.com>
-Content-Language: en-US
-Content-Type: text/plain; charset=UTF-8; format=flowed
-Content-Transfer-Encoding: 7bit
-Subject: [Printing-architecture] OpenPrinting News
+Return-Path: <msweet@msweet.org>
+DKIM-Filter: OpenDKIM Filter v2.11.0 smtp4.osuosl.org 7EC5941FBA
+DKIM-Filter: OpenDKIM Filter v2.11.0 smtp4.osuosl.org 362A541F85
+DKIM-Filter: OpenDKIM Filter v2.11.0 mail.msweet.org F40AD803A9
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=msweet.org;
+ s=default; t=1696555742;
+ bh=YkEVbusoFf99eDWOTzKGGz/1FmpN/y0YaPtYL5oJ27k=;
+ h=From:Date:Subject:To:From;
+ b=KbZDWjadAWjQ2G9ohAKrAusFsH4FNHU4NcPTzLos1s4w7HAEqJkw9yCphqSpLVdq+
+ aLIDzuiMR4i/HuGldvIbqUrlfrmFZ//PCa9SSf3HM0RAWWBp9iqK5G8yguKY6xbic8
+ HWdhXQn3EsSGEepWfV2hwSqZlLBHt9hwrMDAWpH4=
+From: Michael Sweet <msweet@msweet.org>
+Content-Type: text/plain;
+	charset=us-ascii
+Content-Transfer-Encoding: quoted-printable
+Mime-Version: 1.0 (Mac OS X Mail 16.0 \(3731.700.6\))
+Date: Thu, 5 Oct 2023 21:28:49 -0400
+Message-Id: <244F7933-E4EB-427A-AEA0-FEDEB8E82666@msweet.org>
+Subject: [Printing-architecture] libcups v3.0b2
 List-Id: Printing architecture under linux
  <printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>, 
@@ -31,14 +26,43 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>, 
  <mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Ira McDonald <blueroofmusic@gmail.com>, Aveek Basu <basu.aveek@gmail.com>, Open Printing <printing-architecture@lists.linux-foundation.org>
+To: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>
 
-Hi,
+libcups v3.0b2 is the second beta release of the CUPS v3 library and =
+tools which remove deprecated APIs, add new APIs, and normalize existing =
+APIs:
 
-I have posted the newest development of the last month on our website now.
+	https://github.com/OpenPrinting/libcups/releases/tag/v3.0b2
 
-Here we go:
+Changes include:
 
-https://openprinting.github.io/OpenPrinting-News-September-2023/
+- Added the `ipptransform` command to replace/upgrade the `ippevepcl` =
+and
+  `ippeveps` commands (Issue #65)
+- Added `cupsFormDecode` and `cupsFormEncode` APIs (Issue #49)
+- Added `cupsJWT` APIs to support JSON Web Tokens (Issue #50, Issue #52)
+- Added `ippAddCredentialsString` and `ippCopyCredentialsString` APIs
+  (Issue #58)
+- Added `cupsCreateCredentialsRequest` and `cupsSignCredentialsRequest` =
+APIs and
+  updated `cupsCreateCredentials` API to better support X.509 =
+certificates
+  (Issue #59)
+- Updated the configure script to add `_FORTIFY_SOURCE=3D3` (previous =
+level was 2)
+  when not using address sanitizer and when it hasn't already been added
+  (Issue #51)
+- Updated the `httpAddrListen` function to use the maximum backlog =
+value.
+- Fixed ipptool limit on the size of an attribute value that would be =
+printed
+  (Issue #5)
+- Fixed some configure script issues (Issue #48)
+- Fixed JSON output bug in ipptool.
+- Fixed `CUPS_DNSSD_IF_INDEX_LOCAL` when using Avahi.
 
-    Till
+Enjoy!
+
+________________________
+Michael Sweet
+
