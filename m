@@ -1,24 +1,33 @@
-Return-Path: <blueroofmusic@gmail.com>
-DKIM-Filter: OpenDKIM Filter v2.11.0 smtp2.osuosl.org 91C6040253
-DKIM-Filter: OpenDKIM Filter v2.11.0 smtp2.osuosl.org F19A340136
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=gmail.com; s=20230601; t=1701705339; x=1702310139;
- darn=lists.linux-foundation.org; 
- h=to:subject:message-id:date:from:mime-version:from:to:cc:subject
- :date:message-id:reply-to;
- bh=CK40QfNhvmNMcvK182RtKPNpbjKR2xhOvU4qwkEhzn8=;
- b=VU+1NLQGI6hR0LVlVlCLMw3slFW7IrPFJX+1AAKCoqbjcO8YYZdNoN5O4D6oZzdgmN
- gEIuF6Hq2o8jGO9QxtCKg3AKETpasIr7DV2VZ8RfCE6cyXwXTGWZKz8QRUxZXim436b5
- gc8tb9VXOiRGi0Jey/GkBW4w/v1fgXhWagRjXU55pnvCumTNQwgvv/EWrut3z5310LAc
- gciobuFZd+MaNIOhKOiXT9o4zR9IRMcmIUqczU1KFFasyvrAvwIuXTMq1/SCQxbT1P9z
- AgV+VL3MsXF31/QoXnz1O6Ud8va5rrOtI8ktYA3CuhfsuEwvpqlYKzH5fuq6OFNeE1zk
- OYZg==
+Return-Path: <doug@uq.edu.au>
+DKIM-Filter: OpenDKIM Filter v2.11.0 smtp1.osuosl.org C8A7B81699
+DKIM-Filter: OpenDKIM Filter v2.11.0 smtp1.osuosl.org 98EFA814B3
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple;
+ d=uq.edu.au; s=s1ces; t=1701771052;
+ h=from:to:subject:date:message-id:references:in-reply-to:
+ content-transfer-encoding:mime-version;
+ bh=3cjnWEswtOh+YzZrQP46yDmsYHuBB/ffq4btEXiXlkc=;
+ b=GDUfE+CBytV+VAlpoq6sk4lhV6/MDPZd9h2GYZEf91xCRkpUT6hhQ3+F
+ tYTx5u6K0CkOQOimHwxkTrceWeTMhERa96Lv/pktQ0foM6dzfA0on3GLQ
+ Ukv5KKDJLqwUEQjEtBJvsjFsyR2pjxWTF2w5RbonBo1NbKG/4QegtZI3G
+ d7z8dG07jyPJOZF44fabmQ+RLehYTLAlUMXSHdxIjz4sCB+7TV6AEeNB4
+ zjjueXSn+O/Hr+S08QP4SiLDWxwtayLsumr3IEEQ3qJkZj2VegOCvr8dJ
+ 43huRTI2TqYQYnjVofdgZQHL/sAl+SnNMJuP4qSYuQIw6SvaGEk6XQzci w==;
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=uq.edu.au; s=selector1;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-SenderADCheck;
+ bh=3cjnWEswtOh+YzZrQP46yDmsYHuBB/ffq4btEXiXlkc=;
+ b=Aa1VBvta0MARVL8txwIe4SMGYlUOp3W9AvnU6f8Q4dW8Cu6wpySYIjnN+4kLwnZdNa6ATf5Nd0XBNlqSdTyL/r5mi/1fnoriYqIMIC265vTNk8gGqGp3k7VfknUKtKM42Osg/TzlY12uHx9V5cBWXGhff4UZishszYq6SIGv/Vs=
+From: Douglas Kosovic <doug@uq.edu.au>
+Date: Tue, 5 Dec 2023 10:03:33 +0000
+Message-ID: <SYBP282MB261780509FF7F2F97B2A31D78785A@SYBP282MB2617.AUSP282.PROD.OUTLOOK.COM>
+References: <trinity-aa4ecf8b-1604-4eb3-b482-ee17d53c54a8-1701190767678@3c-app-gmx-bap02>
+ <540a6eb1-4964-4281-a333-cf18f44ecac2@gmail.com>
+ <trinity-dc79b1f8-46da-4df4-b10d-8ba39c8c1512-1701249802882@3c-app-gmx-bap15>
+In-Reply-To: <trinity-dc79b1f8-46da-4df4-b10d-8ba39c8c1512-1701249802882@3c-app-gmx-bap15>
+Content-Language: en-US
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: base64
 MIME-Version: 1.0
-From: Ira McDonald <blueroofmusic@gmail.com>
-Date: Mon, 4 Dec 2023 10:55:22 -0500
-Message-ID: <CAN40gSv3c5Mx5JnR+grbVy9DViAegB2bw_ahwxnZfHxbeLXuqA@mail.gmail.com>
-Content-Type: multipart/alternative; boundary="00000000000038ef9d060bb12671"
-Subject: [Printing-architecture] OP Minutes (14 November 2023)
+Subject: Re: [Printing-architecture] high delay while printing
 List-Id: Printing architecture under linux
  <printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>, 
@@ -28,186 +37,54 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>, 
  <mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>, Ira McDonald <blueroofmusic@gmail.com>
+To: Stefan K <Shadow_7@gmx.net>, "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>
 
---00000000000038ef9d060bb12671
-Content-Type: text/plain; charset="UTF-8"
-
- Hi,
-
-Minutes from our last OpenPrinting call are posted at:
-
-
-http://ftp.pwg.org/pub/pwg/liaison/openprinting/minutes/OP-Minutes-20231114.htm
-
-Next OP US/Europe/Brazil/India Conference Calls:
-
-(1) December - US/Europe/Brazil/India - OP Monthly Meeting
-    - Tuesday 12 December 2023, Daytime
-      - US
-        8am in San Francisco - US PST (Pacific Standard Time)
-        9am in Colorado - US MST (Mountain Standard Time)
-        10am in Chicago - US CST (Central Standard Time)
-        11am in New York - US EST (Eastern Standard Time)
-      - Europe
-        5pm in Berlin - CET (Central Europe Time)
-      - Brazil
-        3pm in Belo Horizonte - BRT (Brasilia Time)
-      - India
-        9:30pm in New Delhi - IST (India Standard Time)
-
-(2) January - US/Europe/Brazil/India - OP Monthly Meeting (tentative)
-    - Tuesday 9 January 2024, Daytime - 16 January 2023 backup date
-      - US
-        8am in San Francisco - US PST (Pacific Standard Time)
-        9am in Colorado - US MST (Mountain Standard Time)
-        10am in Chicago - US CST (Central Standard Time)
-        11am in New York - US EST (Eastern Standard Time)
-      - Europe
-        5pm in Berlin - CET (Central Europe Time)
-      - Brazil
-        3pm in Belo Horizonte - BRT (Brasilia Time)
-      - India
-        9:30pm in New Delhi - IST (India Standard Time)
-
-(3) February - US/Europe/Brazil/India - OP Monthly Meeting (tentative)
-    - Tuesday 20 February 2024, Daytime - 16 January 2023 backup date
-      - US
-        8am in San Francisco - US PST (Pacific Standard Time)
-        9am in Colorado - US MST (Mountain Standard Time)
-        10am in Chicago - US CST (Central Standard Time)
-        11am in New York - US EST (Eastern Standard Time)
-      - Europe
-        5pm in Berlin - CET (Central Europe Time)
-      - Brazil
-        3pm in Belo Horizonte - BRT (Brasilia Time)
-      - India
-        9:30pm in New Delhi - IST (India Standard Time)
-
-Cheers,
-- Ira
-
-*Ira McDonald (Musician / Software Architect)*
-
-*Chair - SAE Trust Anchors and Authentication TF*
-*Co-Chair - TCG Trusted Mobility Solutions WG*
-
-*Co-Chair - TCG Metadata Access Protocol SG*
-
-
-
-
-
-
-
-
-*Chair - Linux Foundation Open Printing WGSecretary - IEEE-ISTO Printer
-Working GroupCo-Chair - IEEE-ISTO PWG Internet Printing Protocol WGIETF
-Designated Expert - IPP & Printer MIBBlue Roof Music / High North
-Inchttp://sites.google.com/site/blueroofmusic
-<http://sites.google.com/site/blueroofmusic>http://sites.google.com/site/highnorthinc
-<http://sites.google.com/site/highnorthinc>mailto: blueroofmusic@gmail.com
-<blueroofmusic@gmail.com>(permanent) PO Box 221  Grand Marais, MI 49839
-906-494-2434*
-
---00000000000038ef9d060bb12671
-Content-Type: text/html; charset="UTF-8"
-Content-Transfer-Encoding: quoted-printable
-
-<div dir=3D"ltr">
-<div>Hi,</div><div><br></div><div>
-<div dir=3D"ltr"><span><span><span><span><span><span><span><span><span><spa=
-n><span><span><span><span><span><span><span><span><span><span><span><span><=
-span><span><span><span><span><span><span><span><span><span><span><span><spa=
-n><span><span><span><span><span><span><span><span><span><span><span><span><=
-span><span><span><span>Minutes</span></span></span></span></span></span></s=
-pan></span></span></span></span></span></span></span></span></span></span><=
-/span></span></span></span></span></span></span></span></span></span></span=
-></span></span></span></span></span></span></span></span></span></span></sp=
-an></span></span></span></span></span></span></span></span></span></span></=
-span></span> from our last OpenPrinting<span> call</span> are <span><span><=
-span><span><span><span><span><span><span><span><span><span><span><span><spa=
-n><span>posted</span></span></span></span></span></span></span></span></spa=
-n></span></span></span></span></span></span></span> at:<br>
-
-
-
-
-
-
-
-
-
-
-
-
-<br>
-=C2=A0 <a href=3D"http://ftp.pwg.org/pub/pwg/liaison/openprinting/minutes/O=
-P-Minutes-20231114.htm" target=3D"_blank">http://ftp.pwg.org/pub/pwg/liaiso=
-n/openprinting/minutes/OP-Minutes-20231114.htm</a><br></div><div dir=3D"ltr=
-"><br></div><div dir=3D"ltr">
-Next <span><span><span><span><span><span><span><span><span><span><span><spa=
-n><span><span><span><span><span><span><span><span><span><span><span><span><=
-span><span><span><span><span><span><span>OP</span></span></span></span></sp=
-an></span></span></span></span></span></span></span></span></span></span></=
-span></span></span></span></span></span></span></span></span></span></span>=
-</span></span></span></span></span> US/Europe/Brazil/India Conference Calls=
-: <br></div><div dir=3D"ltr"><br></div></div><div>(1) December - US/Europe/=
-Brazil/India - OP Monthly Meeting<br>=C2=A0 =C2=A0 - Tuesday 12 December 20=
-23, Daytime<br>=C2=A0 =C2=A0 =C2=A0 - US<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 8am=
- in San Francisco - US PST (Pacific Standard Time)<br>=C2=A0 =C2=A0 =C2=A0 =
-=C2=A0 9am in Colorado - US MST (Mountain Standard Time)<br>=C2=A0 =C2=A0 =
-=C2=A0 =C2=A0 10am in Chicago - US CST (Central Standard Time)<br>=C2=A0 =
-=C2=A0 =C2=A0 =C2=A0 11am in New York - US EST (Eastern Standard Time)<br>=
-=C2=A0 =C2=A0 =C2=A0 - Europe<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 5pm in Berlin =
-- CET (Central Europe Time)<br>=C2=A0 =C2=A0 =C2=A0 - Brazil<br>=C2=A0 =C2=
-=A0 =C2=A0 =C2=A0 3pm in Belo Horizonte - BRT (Brasilia Time)<br>=C2=A0 =C2=
-=A0 =C2=A0 - India<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 9:30pm in New Delhi - IST=
- (India Standard Time)<br><br>(2) January - US/Europe/Brazil/India - OP Mon=
-thly Meeting (tentative)<br>=C2=A0 =C2=A0 - Tuesday 9 January 2024, Daytime=
- - 16 January 2023 backup date<br>=C2=A0 =C2=A0 =C2=A0 - US<br>=C2=A0 =C2=
-=A0 =C2=A0 =C2=A0 8am in San Francisco - US PST (Pacific Standard Time)<br>=
-=C2=A0 =C2=A0 =C2=A0 =C2=A0 9am in Colorado - US MST (Mountain Standard Tim=
-e)<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 10am in Chicago - US CST (Central Standar=
-d Time)<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 11am in New York - US EST (Eastern S=
-tandard Time)<br>=C2=A0 =C2=A0 =C2=A0 - Europe<br>=C2=A0 =C2=A0 =C2=A0 =C2=
-=A0 5pm in Berlin - CET (Central Europe Time)<br>=C2=A0 =C2=A0 =C2=A0 - Bra=
-zil<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 3pm in Belo Horizonte - BRT (Brasilia Ti=
-me)<br>=C2=A0 =C2=A0 =C2=A0 - India<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 9:30pm i=
-n New Delhi - IST (India Standard Time)<br><br>(3) February - US/Europe/Bra=
-zil/India - OP Monthly Meeting (tentative)<br>=C2=A0 =C2=A0 - Tuesday 20 Fe=
-bruary 2024, Daytime - 16 January 2023 backup date<br>=C2=A0 =C2=A0 =C2=A0 =
-- US<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 8am in San Francisco - US PST (Pacific =
-Standard Time)<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 9am in Colorado - US MST (Mou=
-ntain Standard Time)<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 10am in Chicago - US CS=
-T (Central Standard Time)<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 11am in New York -=
- US EST (Eastern Standard Time)<br>=C2=A0 =C2=A0 =C2=A0 - Europe<br>=C2=A0 =
-=C2=A0 =C2=A0 =C2=A0 5pm in Berlin - CET (Central Europe Time)<br>=C2=A0 =
-=C2=A0 =C2=A0 - Brazil<br>=C2=A0 =C2=A0 =C2=A0 =C2=A0 3pm in Belo Horizonte=
- - BRT (Brasilia Time)<br>=C2=A0 =C2=A0 =C2=A0 - India<br>=C2=A0 =C2=A0 =C2=
-=A0 =C2=A0 9:30pm in New Delhi - IST (India Standard Time)</div><div><br></=
-div><div>Cheers,</div><div>- Ira<br></div><div><br></div>
-
-<div><div dir=3D"ltr" class=3D"gmail_signature" data-smartmail=3D"gmail_sig=
-nature"><div dir=3D"ltr"><div><div dir=3D"ltr"><div><div dir=3D"ltr"><div><=
-div dir=3D"ltr"><div><div dir=3D"ltr"><div><div dir=3D"ltr"><div><div dir=
-=3D"ltr"><div><div dir=3D"ltr"><div><div dir=3D"ltr"><i><font size=3D"1">Ir=
-a McDonald (Musician / Software Architect)</font></i></div><div><i><font si=
-ze=3D"1">Chair - SAE Trust Anchors and Authentication TF<br></font></i></di=
-v><div dir=3D"ltr"><i><font size=3D"1">Co-Chair - TCG Trusted Mobility Solu=
-tions WG</font></i></div><div><i><font size=3D"1">Co-Chair - TCG Metadata A=
-ccess Protocol SG<br></font></i></div><div dir=3D"ltr"><i><font size=3D"1">=
-Chair - Linux Foundation Open Printing WG<br>Secretary - IEEE-ISTO Printer =
-Working Group<br>Co-Chair - IEEE-ISTO PWG Internet Printing Protocol WG<br>=
-IETF Designated Expert - IPP &amp; Printer MIB<br>Blue Roof Music / High No=
-rth Inc<br><a style=3D"color:rgb(51,51,255)" href=3D"http://sites.google.co=
-m/site/blueroofmusic" target=3D"_blank">http://sites.google.com/site/bluero=
-ofmusic</a><br><a style=3D"color:rgb(102,0,204)" href=3D"http://sites.googl=
-e.com/site/highnorthinc" target=3D"_blank">http://sites.google.com/site/hig=
-hnorthinc</a><br>mailto: <a href=3D"mailto:blueroofmusic@gmail.com" target=
-=3D"_blank">blueroofmusic@gmail.com</a><br>(permanent) PO Box 221=C2=A0 Gra=
-nd Marais, MI 49839=C2=A0 906-494-2434</font></i></div></div></div></div></=
-div></div></div></div></div></div></div></div></div></div></div></div></div=
-></div></div></div>
-
---00000000000038ef9d060bb12671--
+SGkgU3RlZmFuLA0KDQpZb3UgY291bGQgdHJ5IGNoYW5naW5nIHRoZSBmb2xsb3dpbmcgdHdvIGxp
+bmVzIGluIHRoYXQgUFBEIDoNCg0KICAgICpjdXBzRmlsdGVyMjogImFwcGxpY2F0aW9uL3ZuZC5j
+dXBzLXBkZiBhcHBsaWNhdGlvbi9wZGYgMjAwIC0iDQogICAgKmN1cHNGaWx0ZXIyOiAiaW1hZ2Uv
+dXJmIGltYWdlL3VyZiAwIC0iDQoNCnRvOg0KDQogICAgKmN1cHNGaWx0ZXIyOiAiYXBwbGljYXRp
+b24vdm5kLmN1cHMtcGRmIGFwcGxpY2F0aW9uL3BkZiAxMCAtIg0KICAgICpjdXBzRmlsdGVyMjog
+ImltYWdlL3VyZiBpbWFnZS91cmYgMTAwIC0iDQoNClNvIHRoYXQgUERGIHJhdGhlciB0aGFuIFVS
+RiByYXN0ZXIgaXMgcHJlZmVycmVkIHRvIGJlIHNlbnQgdG8gdGhlIHByaW50ZXIuDQoNCkFmdGVy
+IG1ha2luZyBjaGFuZ2VzIHRvIHRoZSBQUEQgZmlsZSwgeW91J2xsIG5lZWQgdG8gcmVzdGFydCB0
+aGUgQ1VQUyBzZXJ2ZXIgZm9yIHRoZSBjaGFuZ2VzIHRvIHRha2UgZWZmZWN0Lg0KDQpUaGUgZHJp
+dmVybGVzcyBQUEQgZ2VuZXJhdG9yIHByaW9yaXRpc2VzIFVSRiByYXN0ZXIgb3ZlciBQREYgYXMg
+bWFueSBlbnRyeSBsZXZlbCBwcmludGVycyBoYXZlIGxvdyBzcGVjIENQVXMgd2hpY2ggY2FuIGJl
+IHNsb3cgZm9yIHJhc3Rlcml6aW5nIFBERiwgc28gcHJlLXJhc3Rlcml6ZWQgVVJGIGlzIHNlbnQg
+aW5zdGVhZC4NCg0KVGhlIElQUCBFdmVyeXdoZXJlIFBQRCBnZW5lcmF0b3IgcHJpb3JpdGlzZXMg
+UERGIG92ZXIgVVJGIHJhc3RlciwgdGhlIHN1Z2dlc3RlZCBtb2RpZmljYXRpb25zIGFib3ZlIGlz
+IHdoYXQgdGhlIElQUCBFdmVyeXdoZXJlIFBQRCBnZW5lcmF0b3IgZ2VuZXJhdGVzLg0KDQoNCg0K
+Q2hlZXJzLA0KRG91Zw0KDQotLS0tLU9yaWdpbmFsIE1lc3NhZ2UtLS0tLQ0KRnJvbTogUHJpbnRp
+bmctYXJjaGl0ZWN0dXJlIDxwcmludGluZy1hcmNoaXRlY3R1cmUtYm91bmNlc0BsaXN0cy5saW51
+eC1mb3VuZGF0aW9uLm9yZz4gT24gQmVoYWxmIE9mIFN0ZWZhbiBLDQpTZW50OiBXZWRuZXNkYXks
+IE5vdmVtYmVyIDI5LCAyMDIzIDc6MjMgUE0NClRvOiBwcmludGluZy1hcmNoaXRlY3R1cmVAbGlz
+dHMubGludXgtZm91bmRhdGlvbi5vcmcNClN1YmplY3Q6IFJlOiBbUHJpbnRpbmctYXJjaGl0ZWN0
+dXJlXSBoaWdoIGRlbGF5IHdoaWxlIHByaW50aW5nDQoNCkhpIFRpbGwsDQoNCnRoYW5rcyBmb3Ig
+eW91ciByZXBseSwgSSd2ZSBhdHRhY2hlZCB0aGUgbG9ncyBhbmQgUFBEIGZpbGUuDQoNCmJlc3Qg
+cmVnYXJkcw0KU3RlZmFuDQoNCj4gR2VzZW5kZXQ6IERpZW5zdGFnLCAyOC4gTm92ZW1iZXIgMjAy
+MyB1bSAxOToxMyBVaHINCj4gVm9uOiAiVGlsbCBLYW1wcGV0ZXIiIDx0aWxsLmthbXBwZXRlckBn
+bWFpbC5jb20+DQo+IEFuOiBwcmludGluZy1hcmNoaXRlY3R1cmVAbGlzdHMubGludXgtZm91bmRh
+dGlvbi5vcmcNCj4gQmV0cmVmZjogUmU6IFtQcmludGluZy1hcmNoaXRlY3R1cmVdIGhpZ2ggZGVs
+YXkgd2hpbGUgcHJpbnRpbmcNCj4NCj4gT24gMjgvMTEvMjAyMyAxNzo1OSwgU3RlZmFuIEsgd3Jv
+dGU6DQo+ID4gSGVsbG8gZ3V5cywNCj4gPg0KPiA+IEkgaG9wZSBzb21lb25lIGNhbiBoZWxwIG1l
+IHdpdGggbXkgcHJvYmxlbSBiZWNhdXNlIEknbSBhIGxpdHRsZSBiaXQgZnJ1c3RyYXRlZCBhbmQg
+SSBkb24ndCBoYXZlIGFic29sdXRlbHkgbm8gY2x1ZSBob3cgdG8gZml4IHRoYXQuDQo+ID4NCj4g
+PiBJIGhhdmUgYSBEZWJpYW4gMTIgYmFzZWQgcHJpbnQgc2VydmVyIHJ1bm5pbmcsIGFsbCBwcmlu
+dGVycyBhcmUgY29ubmVjdGVkIHZpYSBJUFAgd2hpY2ggd29ya3Mgc28gZmFyIGJ1dCBpdCB0YWtl
+cyBhIHdoaWxlIGlmIHdlIHN0YXJ0IHByaW50aW5nIG11bHRpcGxlIHBhZ2VzIGFuZCB0aGVuIGZv
+ciBlYWNoIHBhZ2UsIGl0IHRha2VzID4xNXMgZm9yIHRoZSBuZXh0IHBhZ2UuIEl0IGRvZXNuJ3Qg
+bWF0dGVyIGlmIHdlIHByaW50IFBERiBvciBzaW1wbGUgdGV4dCBmaWxlcy4NCj4gPg0KPiA+IEZv
+ciBtZSwgaXQgbG9va3MgbGlrZSB0aGF0IGN1cHMgaXMgd2FpdGluZyB1bnRpbCB0aGUgcHJpbnRl
+ciBzYXlzIA0KPiA+ICJJJ20gZG9uZSIuIEFjY29yZGluZyB0byB0aGUgRG9jdW1lbnRhdGlvbiBJ
+IHRyaWVkIA0KPiA+ID93YWl0am9iPWZhbHNlJndhaXRwcmludGVyPWZhbHNlIGF0IHRoZSBlbmQg
+b2YgdGhlIGRldmljZVVSSSBhbmQgDQo+ID4gcmVzdGFydCBjdXBzLCBidXQgaXQncyBzdGlsbCB0
+aGUgc2FtZS4gVGhpcyBoYXBwZW5zIG9uIGRpZmZlcmVudCANCj4gPiB0eXBlcyBvZiBwcmludGVy
+cyBlZy4gSFAgUGFnZVdpZGUgUHJvIDQ3N2R3IE1GUCBvciBLeW9jZXJhIFRBU0thbGZhIA0KPiA+
+IDQwNTJjaQ0KPiA+DQo+ID4gSSBjYW4gYXR0YWNoIHRoZSBlcnJvcl9sb2cgd2l0aCBkZWJ1ZyBp
+bmZvcm1hdGlvbi4NCj4gPg0KPg0KPiBQbGVhc2UgZG8gc28sIGFuZCBhbHNvIGF0dGFjaCB0aGUg
+UFBEIGZpbGUgb2YgdGhlIHByaW50IHF1ZXVlIChmcm9tIA0KPiAvZXRjL2N1cHMvcHBkLykuDQo+
+DQo+ICAgICBUaWxsDQo+IF9fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19f
+X19fX19fDQo+IFByaW50aW5nLWFyY2hpdGVjdHVyZSBtYWlsaW5nIGxpc3QNCj4gUHJpbnRpbmct
+YXJjaGl0ZWN0dXJlQGxpc3RzLmxpbnV4LWZvdW5kYXRpb24ub3JnDQo+IGh0dHBzOi8vbGlzdHMu
+bGludXhmb3VuZGF0aW9uLm9yZy9tYWlsbWFuL2xpc3RpbmZvL3ByaW50aW5nLWFyY2hpdGVjdHUN
+Cj4gcmUNCj4NCg==
