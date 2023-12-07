@@ -1,33 +1,28 @@
-Return-Path: <doug@uq.edu.au>
-DKIM-Filter: OpenDKIM Filter v2.11.0 smtp1.osuosl.org C8A7B81699
-DKIM-Filter: OpenDKIM Filter v2.11.0 smtp1.osuosl.org 98EFA814B3
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple;
- d=uq.edu.au; s=s1ces; t=1701771052;
- h=from:to:subject:date:message-id:references:in-reply-to:
- content-transfer-encoding:mime-version;
- bh=3cjnWEswtOh+YzZrQP46yDmsYHuBB/ffq4btEXiXlkc=;
- b=GDUfE+CBytV+VAlpoq6sk4lhV6/MDPZd9h2GYZEf91xCRkpUT6hhQ3+F
- tYTx5u6K0CkOQOimHwxkTrceWeTMhERa96Lv/pktQ0foM6dzfA0on3GLQ
- Ukv5KKDJLqwUEQjEtBJvsjFsyR2pjxWTF2w5RbonBo1NbKG/4QegtZI3G
- d7z8dG07jyPJOZF44fabmQ+RLehYTLAlUMXSHdxIjz4sCB+7TV6AEeNB4
- zjjueXSn+O/Hr+S08QP4SiLDWxwtayLsumr3IEEQ3qJkZj2VegOCvr8dJ
- 43huRTI2TqYQYnjVofdgZQHL/sAl+SnNMJuP4qSYuQIw6SvaGEk6XQzci w==;
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=uq.edu.au; s=selector1;
- h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-SenderADCheck;
- bh=3cjnWEswtOh+YzZrQP46yDmsYHuBB/ffq4btEXiXlkc=;
- b=Aa1VBvta0MARVL8txwIe4SMGYlUOp3W9AvnU6f8Q4dW8Cu6wpySYIjnN+4kLwnZdNa6ATf5Nd0XBNlqSdTyL/r5mi/1fnoriYqIMIC265vTNk8gGqGp3k7VfknUKtKM42Osg/TzlY12uHx9V5cBWXGhff4UZishszYq6SIGv/Vs=
-From: Douglas Kosovic <doug@uq.edu.au>
-Date: Tue, 5 Dec 2023 10:03:33 +0000
-Message-ID: <SYBP282MB261780509FF7F2F97B2A31D78785A@SYBP282MB2617.AUSP282.PROD.OUTLOOK.COM>
-References: <trinity-aa4ecf8b-1604-4eb3-b482-ee17d53c54a8-1701190767678@3c-app-gmx-bap02>
- <540a6eb1-4964-4281-a333-cf18f44ecac2@gmail.com>
- <trinity-dc79b1f8-46da-4df4-b10d-8ba39c8c1512-1701249802882@3c-app-gmx-bap15>
-In-Reply-To: <trinity-dc79b1f8-46da-4df4-b10d-8ba39c8c1512-1701249802882@3c-app-gmx-bap15>
-Content-Language: en-US
-Content-Type: text/plain; charset="utf-8"
-Content-Transfer-Encoding: base64
+Return-Path: <till.kamppeter@gmail.com>
+DKIM-Filter: OpenDKIM Filter v2.11.0 smtp1.osuosl.org AE35783A43
+DKIM-Filter: OpenDKIM Filter v2.11.0 smtp1.osuosl.org DB35982F31
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=gmail.com; s=20230601; t=1701957503; x=1702562303;
+ darn=lists.linux-foundation.org; 
+ h=content-transfer-encoding:subject:from:to:content-language
+ :user-agent:mime-version:date:message-id:from:to:cc:subject:date
+ :message-id:reply-to;
+ bh=DfuNId4YBBYA2ca9NYfLkqGSjUdiwoMe0HlFud8EC5E=;
+ b=A3P/mvE4w079aANUnctwabmSEP4IIQJddCO0/KLz9Cq14NuBeYwF5yjkV8Ym0hh18U
+ BWSPR2nWfcCICbQB4d80d/eVIWrPLM+rKWQHgphHB0s5X//iP2BX6CnzmI0aPSPjEzuJ
+ DORThfSfS69Epp/Nm98K3SfIO/eMkxT231oxUf0o8ftEhhoTEO32WXeJgCyvtfDB+l+B
+ Zo+uvAYwkOlQzP4ppDgRmicZyyh97A5/yLiNC3GmxMrfXXfIg+o5F1WkwdlIx+LInHlP
+ 76cgLGOhIOG+Qaoj5tewfnKq1Z+8qwdUSIjHZhQ2q29AkMafQ3f/CX7J7vip+jSA288/
+ Ikpw==
+Message-ID: <c7a55ce9-b1a0-49f9-869a-b3c021fc51fb@gmail.com>
+Date: Thu, 7 Dec 2023 14:58:21 +0100
 MIME-Version: 1.0
-Subject: Re: [Printing-architecture] high delay while printing
+Content-Language: en-US
+From: Till Kamppeter <till.kamppeter@gmail.com>
+Content-Type: text/plain; charset=UTF-8; format=flowed
+Content-Transfer-Encoding: 7bit
+Subject: [Printing-architecture] PDFio: Replaced QPDF by PDFio in
+	libcupsfilters as GSoC project?
 List-Id: Printing architecture under linux
  <printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>, 
@@ -37,54 +32,21 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>, 
  <mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Stefan K <Shadow_7@gmx.net>, "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>
+To: Michael Sweet <msweet@msweet.org>, Open Printing <printing-architecture@lists.linux-foundation.org>
 
-SGkgU3RlZmFuLA0KDQpZb3UgY291bGQgdHJ5IGNoYW5naW5nIHRoZSBmb2xsb3dpbmcgdHdvIGxp
-bmVzIGluIHRoYXQgUFBEIDoNCg0KICAgICpjdXBzRmlsdGVyMjogImFwcGxpY2F0aW9uL3ZuZC5j
-dXBzLXBkZiBhcHBsaWNhdGlvbi9wZGYgMjAwIC0iDQogICAgKmN1cHNGaWx0ZXIyOiAiaW1hZ2Uv
-dXJmIGltYWdlL3VyZiAwIC0iDQoNCnRvOg0KDQogICAgKmN1cHNGaWx0ZXIyOiAiYXBwbGljYXRp
-b24vdm5kLmN1cHMtcGRmIGFwcGxpY2F0aW9uL3BkZiAxMCAtIg0KICAgICpjdXBzRmlsdGVyMjog
-ImltYWdlL3VyZiBpbWFnZS91cmYgMTAwIC0iDQoNClNvIHRoYXQgUERGIHJhdGhlciB0aGFuIFVS
-RiByYXN0ZXIgaXMgcHJlZmVycmVkIHRvIGJlIHNlbnQgdG8gdGhlIHByaW50ZXIuDQoNCkFmdGVy
-IG1ha2luZyBjaGFuZ2VzIHRvIHRoZSBQUEQgZmlsZSwgeW91J2xsIG5lZWQgdG8gcmVzdGFydCB0
-aGUgQ1VQUyBzZXJ2ZXIgZm9yIHRoZSBjaGFuZ2VzIHRvIHRha2UgZWZmZWN0Lg0KDQpUaGUgZHJp
-dmVybGVzcyBQUEQgZ2VuZXJhdG9yIHByaW9yaXRpc2VzIFVSRiByYXN0ZXIgb3ZlciBQREYgYXMg
-bWFueSBlbnRyeSBsZXZlbCBwcmludGVycyBoYXZlIGxvdyBzcGVjIENQVXMgd2hpY2ggY2FuIGJl
-IHNsb3cgZm9yIHJhc3Rlcml6aW5nIFBERiwgc28gcHJlLXJhc3Rlcml6ZWQgVVJGIGlzIHNlbnQg
-aW5zdGVhZC4NCg0KVGhlIElQUCBFdmVyeXdoZXJlIFBQRCBnZW5lcmF0b3IgcHJpb3JpdGlzZXMg
-UERGIG92ZXIgVVJGIHJhc3RlciwgdGhlIHN1Z2dlc3RlZCBtb2RpZmljYXRpb25zIGFib3ZlIGlz
-IHdoYXQgdGhlIElQUCBFdmVyeXdoZXJlIFBQRCBnZW5lcmF0b3IgZ2VuZXJhdGVzLg0KDQoNCg0K
-Q2hlZXJzLA0KRG91Zw0KDQotLS0tLU9yaWdpbmFsIE1lc3NhZ2UtLS0tLQ0KRnJvbTogUHJpbnRp
-bmctYXJjaGl0ZWN0dXJlIDxwcmludGluZy1hcmNoaXRlY3R1cmUtYm91bmNlc0BsaXN0cy5saW51
-eC1mb3VuZGF0aW9uLm9yZz4gT24gQmVoYWxmIE9mIFN0ZWZhbiBLDQpTZW50OiBXZWRuZXNkYXks
-IE5vdmVtYmVyIDI5LCAyMDIzIDc6MjMgUE0NClRvOiBwcmludGluZy1hcmNoaXRlY3R1cmVAbGlz
-dHMubGludXgtZm91bmRhdGlvbi5vcmcNClN1YmplY3Q6IFJlOiBbUHJpbnRpbmctYXJjaGl0ZWN0
-dXJlXSBoaWdoIGRlbGF5IHdoaWxlIHByaW50aW5nDQoNCkhpIFRpbGwsDQoNCnRoYW5rcyBmb3Ig
-eW91ciByZXBseSwgSSd2ZSBhdHRhY2hlZCB0aGUgbG9ncyBhbmQgUFBEIGZpbGUuDQoNCmJlc3Qg
-cmVnYXJkcw0KU3RlZmFuDQoNCj4gR2VzZW5kZXQ6IERpZW5zdGFnLCAyOC4gTm92ZW1iZXIgMjAy
-MyB1bSAxOToxMyBVaHINCj4gVm9uOiAiVGlsbCBLYW1wcGV0ZXIiIDx0aWxsLmthbXBwZXRlckBn
-bWFpbC5jb20+DQo+IEFuOiBwcmludGluZy1hcmNoaXRlY3R1cmVAbGlzdHMubGludXgtZm91bmRh
-dGlvbi5vcmcNCj4gQmV0cmVmZjogUmU6IFtQcmludGluZy1hcmNoaXRlY3R1cmVdIGhpZ2ggZGVs
-YXkgd2hpbGUgcHJpbnRpbmcNCj4NCj4gT24gMjgvMTEvMjAyMyAxNzo1OSwgU3RlZmFuIEsgd3Jv
-dGU6DQo+ID4gSGVsbG8gZ3V5cywNCj4gPg0KPiA+IEkgaG9wZSBzb21lb25lIGNhbiBoZWxwIG1l
-IHdpdGggbXkgcHJvYmxlbSBiZWNhdXNlIEknbSBhIGxpdHRsZSBiaXQgZnJ1c3RyYXRlZCBhbmQg
-SSBkb24ndCBoYXZlIGFic29sdXRlbHkgbm8gY2x1ZSBob3cgdG8gZml4IHRoYXQuDQo+ID4NCj4g
-PiBJIGhhdmUgYSBEZWJpYW4gMTIgYmFzZWQgcHJpbnQgc2VydmVyIHJ1bm5pbmcsIGFsbCBwcmlu
-dGVycyBhcmUgY29ubmVjdGVkIHZpYSBJUFAgd2hpY2ggd29ya3Mgc28gZmFyIGJ1dCBpdCB0YWtl
-cyBhIHdoaWxlIGlmIHdlIHN0YXJ0IHByaW50aW5nIG11bHRpcGxlIHBhZ2VzIGFuZCB0aGVuIGZv
-ciBlYWNoIHBhZ2UsIGl0IHRha2VzID4xNXMgZm9yIHRoZSBuZXh0IHBhZ2UuIEl0IGRvZXNuJ3Qg
-bWF0dGVyIGlmIHdlIHByaW50IFBERiBvciBzaW1wbGUgdGV4dCBmaWxlcy4NCj4gPg0KPiA+IEZv
-ciBtZSwgaXQgbG9va3MgbGlrZSB0aGF0IGN1cHMgaXMgd2FpdGluZyB1bnRpbCB0aGUgcHJpbnRl
-ciBzYXlzIA0KPiA+ICJJJ20gZG9uZSIuIEFjY29yZGluZyB0byB0aGUgRG9jdW1lbnRhdGlvbiBJ
-IHRyaWVkIA0KPiA+ID93YWl0am9iPWZhbHNlJndhaXRwcmludGVyPWZhbHNlIGF0IHRoZSBlbmQg
-b2YgdGhlIGRldmljZVVSSSBhbmQgDQo+ID4gcmVzdGFydCBjdXBzLCBidXQgaXQncyBzdGlsbCB0
-aGUgc2FtZS4gVGhpcyBoYXBwZW5zIG9uIGRpZmZlcmVudCANCj4gPiB0eXBlcyBvZiBwcmludGVy
-cyBlZy4gSFAgUGFnZVdpZGUgUHJvIDQ3N2R3IE1GUCBvciBLeW9jZXJhIFRBU0thbGZhIA0KPiA+
-IDQwNTJjaQ0KPiA+DQo+ID4gSSBjYW4gYXR0YWNoIHRoZSBlcnJvcl9sb2cgd2l0aCBkZWJ1ZyBp
-bmZvcm1hdGlvbi4NCj4gPg0KPg0KPiBQbGVhc2UgZG8gc28sIGFuZCBhbHNvIGF0dGFjaCB0aGUg
-UFBEIGZpbGUgb2YgdGhlIHByaW50IHF1ZXVlIChmcm9tIA0KPiAvZXRjL2N1cHMvcHBkLykuDQo+
-DQo+ICAgICBUaWxsDQo+IF9fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19f
-X19fX19fDQo+IFByaW50aW5nLWFyY2hpdGVjdHVyZSBtYWlsaW5nIGxpc3QNCj4gUHJpbnRpbmct
-YXJjaGl0ZWN0dXJlQGxpc3RzLmxpbnV4LWZvdW5kYXRpb24ub3JnDQo+IGh0dHBzOi8vbGlzdHMu
-bGludXhmb3VuZGF0aW9uLm9yZy9tYWlsbWFuL2xpc3RpbmZvL3ByaW50aW5nLWFyY2hpdGVjdHUN
-Cj4gcmUNCj4NCg==
+Hi,
+
+Michael Sweet has closed the PDFio issue in which I ask for support of 
+PDF forms and annotations, telling that inside PDFio nothing further 
+needs to be done, that everything can be solved outside PDFio, by the 
+calling application.
+
+As we want to get rid of C++ in libcupsfilters I plan to let it use 
+PDFio where it is currently using QPDF.
+
+Mike, as you tell that PDFio is OK for handling PDF files with filled 
+forms/annotations, I want to post a GSoC project idea to switch over 
+libcupsfilters from using QPDF to PDFio. WDYT? Is this possible already? 
+Or are there still any features missing in PDFio?
+
+    Till
