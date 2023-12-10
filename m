@@ -1,25 +1,25 @@
-Return-Path: <pizza@hurricane.shaftnet.org>
-DKIM-Filter: OpenDKIM Filter v2.11.0 smtp4.osuosl.org 6AFD9415F5
-DKIM-Filter: OpenDKIM Filter v2.11.0 smtp4.osuosl.org A7C9D4161C
-DKIM-Filter: OpenDKIM Filter v2.11.0 hurricane.shaftnet.org 3BAMVXUP3886070
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=shaftnet.org;
- s=default; t=1702247494;
- bh=J0BeweJkF+7wBq8euT6IXb6eYZJCjGE/4Ahme4AZ/MA=;
- h=Date:From:To:Subject:References:In-Reply-To:From;
- b=I5AMSbP5c7aFAliERicEe7/9kHRznwQKjhiABK3us4XOa44kxYWP9FCY+Le983w4n
- UVqU7sqDoFHwu6Uyw2CBqs724MuG+RoKkUlM01eHKDj8kIdDG/C+fLkbY13jmonVK/
- Vu5TuxtQAChW6QsKa4bh+aj0K3L3z3UMHzfnUQDg=
-Date: Sun, 10 Dec 2023 17:31:33 -0500
-From: Solomon Peachy <pizza@shaftnet.org>
-Message-ID: <ZXY8RUrpqRmoaxDZ@shaftnet.org>
+Return-Path: <msweet@msweet.org>
+DKIM-Filter: OpenDKIM Filter v2.11.0 smtp2.osuosl.org 6FCD3419B5
+DKIM-Filter: OpenDKIM Filter v2.11.0 smtp2.osuosl.org 125A241769
+DKIM-Filter: OpenDKIM Filter v2.11.0 mail.msweet.org 01C8D81D95
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=msweet.org;
+ s=default; t=1702247897;
+ bh=f487hik4f/HyCyjEYpDk84F1F6Rrt5kc/l771bWoXv8=;
+ h=Subject:From:In-Reply-To:Date:Cc:References:To:From;
+ b=ClNoAwbUgbIKcgnKs660KNwLX6X1drx2KJac/dr22yXKELePicciEgGAnCymhgzYd
+ N2p1T2IXrrh1mEWNUwWKb6Pqri14o9uEKQ/ak+F/jQlSDwxppY6m4a5AtrZTSdCi96
+ QTnDAS+tsryQYjTr2MbKDiZK2E5LekD7Twp3NZkg=
+Content-Type: text/plain;
+	charset=utf-8
+Mime-Version: 1.0 (Mac OS X Mail 16.0 \(3774.300.61.1.2\))
+From: Michael Sweet <msweet@msweet.org>
+In-Reply-To: <ZXYwgQqZayDJsT9-@shaftnet.org>
+Date: Sun, 10 Dec 2023 17:38:04 -0500
+Content-Transfer-Encoding: quoted-printable
+Message-Id: <9B9A7C8D-5C36-465A-890A-44CF6AF68F6B@msweet.org>
 References: <c4acbedb-c17d-4440-9945-c1b04abcd052@apevzner.com>
  <AE4A3F66-C7EE-470F-B326-A4B357A55F2B@msweet.org>
  <ZXYwgQqZayDJsT9-@shaftnet.org>
-MIME-Version: 1.0
-Content-Type: multipart/signed; micalg=pgp-sha512;
- protocol="application/pgp-signature"; boundary="AUJrBoiQHoeugMwF"
-Content-Disposition: inline
-In-Reply-To: <ZXYwgQqZayDJsT9-@shaftnet.org>
 Subject: Re: [Printing-architecture] RFC: Pantum M7300FDW and similar
 List-Id: Printing architecture under linux
  <printing-architecture.lists.linux-foundation.org>
@@ -30,54 +30,53 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>, 
  <mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>
+To: Solomon Peachy <pizza@shaftnet.org>
+Cc: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>
 
+Solomon,
 
---AUJrBoiQHoeugMwF
-Content-Type: text/plain; charset=utf-8
-Content-Disposition: inline
-Content-Transfer-Encoding: quoted-printable
+> On Dec 10, 2023, at 4:41=E2=80=AFPM, Solomon Peachy via =
+Printing-architecture <printing-architecture@lists.linux-foundation.org> =
+wrote:
+> ...
+> So assuming that getting certified/listed means demonstrating that you=20=
 
-On Sun, Dec 10, 2023 at 04:41:21PM -0500, Solomon Peachy via Printing-archi=
-tecture wrote:
-> The extent of the AirPrint in their documentation is about how to=20
-> enable Airprint sharing for a locally-connected printer.
-> [...]
-> A little digging shows that Apple lists this printer model on their web
-> site as supporting AirPrint; I presume this would mean the printer "nativ=
-ely"
-> supports it.
+> pass some sort of compliance suite, this means that the Mopria and=20
+> AirPrint clients don't actually care about these printers violating =
+the=20
+> IPP specification.
 
-Correction:  Their manual also documents using the standard iOS AirPrint cl=
-ient.
+I can't speak for Mopria, but for AirPrint the printer MUST pass a =
+fairly strict set of tests.  If the printer was tested prior to 2019 it =
+might have avoided a hard fail since the member attribute security fix =
+wasn't yet in place, but it definitely would not be able to support =
+media selection.
 
-So the printer presumably works with both Mopria and Airprint, despite=20
-its violations of the IPP spec.
+> Over the years, Airprint's not-quite-IPP-compliant nature has caused=20=
 
- - Solomon
---=20
-Solomon Peachy			      pizza at shaftnet dot org (email&xmpp)
-                                      @pizza:shaftnet dot org   (matrix)
-Dowling Park, FL                      speachy (libera.chat)
+> quite a bit of grief in my little niche.  This may be another one of=20=
 
---AUJrBoiQHoeugMwF
-Content-Type: application/pgp-signature; name="signature.asc"
+> those "We support Airprint, not IPP" impedence mismatches.
 
------BEGIN PGP SIGNATURE-----
+AirPrint is absolutely IPP-compliant - I know because I wrote the spec =
+and much of the software.  What you might be running into is that =
+AirPrint from iOS/iPadOS often exercises a different part of the IPP =
+stack than CUPS 1.x/2.x.
 
-iQIzBAABCgAdFiEE3H5Sx9DyiyB5hnENrGLLO/XVulEFAmV2PEMACgkQrGLLO/XV
-ulEhTA//aCMNoxGuK7hQK7JJrqlF8TxN0jJ/eHBd1RfYScEAhOreOVBt2BpCdKEp
-lUIi4/isU5XPZh9j2qi55HthkVfSMbuN/2JTghScnrO1jgJ5Irou2wxqoq27NpFW
-lK91wGZav4Z4hK00/9HvpekJGn44VaRA7lQtujWWbDlimxk1uyHF7bYpyKUi/+tT
-as6ilFD15TT6QM7197+W5+kjUIW3hs8ZK85KALdkV28hr8nttgKwqpjZuDpcqcBT
-xIwkMOQMErE44Ski8StwTHRurAtYckKaFoRlY40D4qbXyyXKkiiwQJPMzbuCo9Xb
-QFNRUhHN0/JVSo6b2b/qwR82oj/Z5jKFh4uGBjneQXoKgyHL1aSQ16kmBoZmCdqf
-9g1sF/Va9Vy/faoJG9mXKirNixNVGsdPPVlxMNoDz0eIxZ8UqQOO0U3yDPWPHsZ2
-zUL1Ja8LuZkX9/yFxSj24DXN53LWBuzVl0aPdtIOTOytxTHsptWSq12ipsxOXd5+
-g6sR2LQ6Na5jaR4SFZmlibNkZWLQah31Y+Ep1fKyDbPHa5mc8S9qZlDv82MYubi/
-J3kHiQVEQCxJeB01DVpfb6iG25drFpkZxOgzKrrh9ahpU7dRnw0n2uk30VHZri1Z
-XGVorT4QbJe/PMRm/LuSs7Yi2uWMFDxGF/O5Xa5TfBio3fRd3zk=
-=QWPs
------END PGP SIGNATURE-----
+> One would think Pantum could be made to care, but given that this=20
+> printer family apparently already works with Windows, Macs, Android,=20=
 
---AUJrBoiQHoeugMwF--
+> iOS, and even Linux, this is just some geeks being overly pedantic =
+about=20
+> something (ie IPP) that Pantum never claimed to support to begin with.
+
+First, we really don't know whether the customer has the most recent =
+version of the firmware.  Second, we don't know whether the printer =
+works with any of those other OS's.  Finally, this particular issue =
+might not manifest as a "problem" (one that prevents printing) unless =
+you tried to print something that doesn't match the media in the =
+printer...
+
+________________________
+Michael Sweet
+
