@@ -1,23 +1,25 @@
-Return-Path: <msweet@msweet.org>
-DKIM-Filter: OpenDKIM Filter v2.11.0 smtp3.osuosl.org 3007660A89
-DKIM-Filter: OpenDKIM Filter v2.11.0 smtp3.osuosl.org 0143960A7F
-DKIM-Filter: OpenDKIM Filter v2.11.0 mail.msweet.org 7E3CF81D95
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=msweet.org;
- s=default; t=1702221077;
- bh=qy4egcSMD0QY6CV3VJUbJA5INqgXn5a4Dq9xp8XFcus=;
- h=Subject:From:In-Reply-To:Date:Cc:References:To:From;
- b=Kb0/G6iX/sKHc3tTUdFz6TK5ytT+DTCVzpV2j6VcVrLi1ZVJYpzdPJv/zT0+HFQ8V
- NobHcrJGFxW6DWXVLfuNSHuSlhckOpEU9/3E6P+Q+cYwyWCIcoa+U2Os5aw0N6/3GU
- GoAnf1SxryjaTybGXh3U9KXTyQcwCOAJdjeJzolA=
-Content-Type: text/plain;
-	charset=utf-8
-Mime-Version: 1.0 (Mac OS X Mail 16.0 \(3774.300.61.1.2\))
-From: Michael Sweet <msweet@msweet.org>
-In-Reply-To: <c4acbedb-c17d-4440-9945-c1b04abcd052@apevzner.com>
-Date: Sun, 10 Dec 2023 10:11:05 -0500
-Content-Transfer-Encoding: quoted-printable
-Message-Id: <AE4A3F66-C7EE-470F-B326-A4B357A55F2B@msweet.org>
+Return-Path: <debian@alteholz.de>
+DKIM-Filter: OpenDKIM Filter v2.11.0 smtp1.osuosl.org 855138196E
+DKIM-Filter: OpenDKIM Filter v2.11.0 smtp1.osuosl.org 31F9F818EC
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=alteholz.de
+ ; s=202105;
+ h=Content-Transfer-Encoding:Content-Type:In-Reply-To:From:
+ References:To:Subject:MIME-Version:Date:Message-ID:Sender:Reply-To:Cc:
+ Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender:
+ Resent-To:Resent-Cc:Resent-Message-ID:List-Id:List-Help:List-Unsubscribe:
+ List-Subscribe:List-Post:List-Owner:List-Archive;
+ bh=BKAN6fPQXEk6JIhMYgn1ixmlCklXN1yVAyM54HlpUcI=; b=Ulc9oc2fFYkbDunjdXkZ4GpwSL
+ Gp5Ik2TCYNQ4x5tD8pg3LYozxyRCN2/K8m+rYpNjMBtgHLzkqTt9uqzsyJDTBXRaSL5c+vq6kkWnM
+ /TkoiuJGEOX4RY6CuY9JF8uNwiHPgRkG1ber2kuyS3bGw6hsLApEH7ILSv0u4rclLz28=;
+Message-ID: <4b008b1a-8f68-4e5e-9a4a-e3e6d7473323@alteholz.de>
+Date: Sun, 10 Dec 2023 19:28:47 +0100
+MIME-Version: 1.0
+Content-Language: en-US
 References: <c4acbedb-c17d-4440-9945-c1b04abcd052@apevzner.com>
+From: Thorsten Alteholz <debian@alteholz.de>
+In-Reply-To: <c4acbedb-c17d-4440-9945-c1b04abcd052@apevzner.com>
+Content-Type: text/plain; charset="utf-8"; format="flowed"
+Content-Transfer-Encoding: 8bit
 Subject: Re: [Printing-architecture] RFC: Pantum M7300FDW and similar
 List-Id: Printing architecture under linux
  <printing-architecture.lists.linux-foundation.org>
@@ -28,170 +30,73 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>, 
  <mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Alexander Pevzner <pzz@apevzner.com>
-Cc: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>
+To: printing-architecture@lists.linux-foundation.org
 
-Alexander,
+Hi everybody,
 
-> On Dec 10, 2023, at 2:08=E2=80=AFAM, Alexander Pevzner =
-<pzz@apevzner.com> wrote:
-> ...
-> Michael's position, as I hear it, is following:
-> - device violates IPP specs, so problems is on device, and device must =
-be fixed
-> - IPP parser is a quite complex stuff. Touching it is dangerous and =
-may open a way to security vulnerabilities
-
-This code has been the focus of *six* CVEs since the move to Git in 2015 =
-- not quite one CVE a year, but enough to be concerning.  More =
-specifically, commit 5754bccee =
-(https://github.com/apple/cups/issues/5630) addressed the code that =
-allowed "alternate" encodings of member attributes that was causing =
-interoperability issues.
-
-> ...
+On 10.12.23 08:08, Alexander Pevzner wrote:
+>
 > My position is following:
-> 1. I agree, that following specification is very important, and, where =
-possible, trying to do so.
+> 1. I agree, that following specification is very important, and, where 
+> possible, trying to do so.
 
-IPP started in the IETF and the PWG has continued the IETF's goals for =
-conformance terminology: any requirements are there to ensure =
-interoperability and proper functionality.  Postel's Law doesn't apply =
-when it breaks interoperability and potentially has bad side effects.  =
-See the following for some applicable reading/links:
+ From my experience companies don't follow specs because development 
+costs for doing things right, are higher than doing just things to keep 
+up appearances. So if the marketing department wants to advertise with 
+IPP, they should not trying to follow a spec but the spec must be 
+followed. As others show, the IPP spec is not that complicated or 
+ambiguous that it would not be possible to do so.
 
-    https://en.wikipedia.org/wiki/Robustness_principle
+> 2. But being practical engineers, we know that sometimes we have to 
+> carefully violate rules. 
 
-> 2. But being practical engineers, we know that sometimes we have to =
-carefully violate rules. cups/ipp.c already has an exception for Brother =
-devices that use some IPP tags incorrectly.
+Being practical engineers we also know that adding exceptions to the 
+code will add technical debt. After a while nobody still knows why this 
+code was added and maintenance will become hell. This should not be 
+dumped onto the shoulders of the cups maintainers. This must be handled 
+by the printer companies.
+Also I would prefer to tell the Debian users that Pantum printers don't 
+work instead of working on bug reports that release A of cups works but 
+release B suddenly stops working because there is this special case that 
+breaks things.
 
-This was a case where allowing a non-zero length value (typically the =
-keyword string for the given out-of-band tag) did not cause =
-interoperability issues with other printers and also did not pose any =
-security issues.
+> cups/ipp.c already has an exception for Brother devices that use some 
+> IPP tags incorrectly. sane-airscan, ipp-usb contains many quirks that 
+> make incorrectly behaving devices full-functional. Without these 
+> quirks, many devices will not work.
 
-Looking at the history of this change (and had to dig into the original =
-SVN repository for this - r7847 on August 19, 2008), back in 2007/2008 =
-when Brother first started making IPP-capable printers (and this was =
-before AirPrint or IPP Everywhere), their implementation had a bug that =
-returned the string "no-value" with the 'no-value' out-of-band syntax =
-(which should have a value length of 0).  Brother was notified and =
-current printers no longer do this...
+... and this is bad and should not be used as an excuse to make things 
+worse.
 
-> sane-airscan, ipp-usb contains many quirks that make incorrectly =
-behaving devices full-functional. Without these quirks, many devices =
-will not work.
-> 3. Even if Pantum will fix their firmware, 50% of users of already =
-purchased devices will not upgrade.
+> 3. Even if Pantum will fix their firmware, 50% of users of already 
+> purchased devices will not upgrade.
 
-They already won't be able to print from iOS or macOS, and probably not =
-from Windows (IPP class driver) or Android (Mopria print provider) =
-because the Get-Printer-Attributes response cannot be parsed.  And if =
-they actually ask someone about the problem they can be pointed to =
-Pantum to get a firmware update.
+But this is a problem of the QA department of Pantum. My network 
+connected printer always bugs me when new software is available. In the 
+end I give in and install the software. So why should there be only 50% 
+of users having the new software?
 
-Firmware update capability is required for both AirPrint and Mopria, and =
-at least the AirPrint folks require the ability to upgrade without =
-special software and highly recommend automatic firmware updates over =
-the Internet whenever possible...  Pantum is an AirPrint licensee...
+> 7. We are doing our work for people, for our end users. And actual 
+> tradeoff here is between user's needs to have reliable and secure 
+> software (technical "purism" helps as here) and user's needs to have 
+> their device supported out of box (here "purism" sometimes works 
+> against us).
 
-> 4. I understand the complexity of IPP decoder, because I'm the author =
-of alternative, independent implementation in Go =
-(https://github.com/OpenPrinting/goipp). I believe my implementation is =
-similar to CUPS's on its level of correctness and strictness. And has =
-near 100% test coverage, BTW.
+I know my argument is far-fetched, but part of working for end users is 
+also to show them how bad a product actually is. It makes no sense to 
+hide any faults.
 
-As does the CUPS implementation, which Google and others have put =
-through the wringer with long-term fuzzing projects...
+> 8. If we will eventually rich the Pantum representative, good 
+> discussion with weighted arguments can help to convince them to 
+> implement some improvements at their side, while aborted discussion 
+> will not help a lot.
 
-> 5. My patch is simple and observable. It is only few lines of code =
-(see https://github.com/OpenPrinting/cups/pull/826 for details). It =
-doesn't change any assumptions of the upper-level code about the parsed =
-IPP message. It only slightly relaxes decoding rules. Honestly, I don't =
-see how it can expose any vulnerability.
+ From my experience the only argument that is relevant for companies is 
+the amount of money they will loose.
 
-It was causing problems before I fixed it, mainly because the returned =
-values made no sense - basically=20
+>
+> Looking forward for your feedback, dear colleagues.
 
-> 6. My patch is not "just a quick hack". I understand that this is very =
-important part of the CUPS code, so I've spent more that 2 weeks, =
-thinking about it correctness and modelling various corner cases, using =
-my goipp library.
+ From my point of view it is fine to not introduce special cases into cups.
 
-I don't think I ever called it a quick hack.  No matter how =
-well-tested/reasoned, you are creating an edge-case for allowing invalid =
-collection values as long as a single memberName value is seen in an IPP =
-message.
-
-You need to notify PANTUM that they have an issue.  Regardless of =
-whether you believe that a user will update the firmware, they don't =
-even have an opportunity unless you report the issue to the =
-manufacturer.  And in fact, you don't even know whether PANTUM has =
-already fixed the issue!?!
-
-> 7. We are doing our work for people, for our end users. And actual =
-tradeoff here is between user's needs to have reliable and secure =
-software (technical "purism" helps as here) and user's needs to have =
-their device supported out of box (here "purism" sometimes works against =
-us).
-
-So we should provide them with intentionally defective software so that =
-they don't need to press a button on their printer to update the =
-firmware?  How far down the slippery slope of "we'll just add a =
-workaround for this printer" do you want to go?
-
-I can speak from 30 years of experience doing printing software - that =
-is not a path you want to go down.  The number of variables in printing =
-configurations is *immense*, and you do not want to bring back vendor =
-printer drivers - that is the end game if you allow for too many =
-"workarounds".
-
-> 8. If we will eventually rich the Pantum representative, good =
-discussion with weighted arguments can help to convince them to =
-implement some improvements at their side, while aborted discussion will =
-not help a lot.
-
-"Your printers don't work with iOS" should be enough.  They probably =
-won't care about Linux.
-
-> If my patch looks "too wide", I can do it more precious, by affecting =
-only behavior of parsing IPP responses received from devices, not =
-received requests. At this case it looks even safer.
-
-Let's say we accept invalid collection attribute values.  We get the =
-media-col-database and media-col-ready values from the printer, and then =
-send it a media-col collection to specify printing from tray 2 on =
-cardstock: will the printer be able to understand a correctly encoded =
-collection value for media-col if it doesn't return valid collection =
-values for media-col-database/ready?  (probably not)
-
-Then you get a support request from a user saying, "I can't print from =
-tray 2."
-
-Did you fix the problem for the user?  Is this better?
-
-> I'd prefer to make it even more precious, affection only communication =
-with Pantum devices. But in that places of the CUPS code where responses =
-are parsed there is no information what kind devices we are speaking =
-with.
-
-And I would be even more opposed to such a change.  At that point you =
-have created a printer driver...
-
-> ...
-> P.S. I remember a while ago we were in the similar discussion with =
-Trent Lloyd, author of Avahi. He didn't want to include localhost =
-support because it violates (according to him) mDNS RFC, and it took =
-about 3 years to convince him to make an exception (according to Till, =
-it was me who has reached out to him, =
-https://openprinting.github.io/OpenPrinting-News-February-2020/#avahi-loca=
-l-service-support)
-
-Not at all the same issue, and honestly he was wrong that you can't =
-support multicast over the loopback interface (there is just nobody else =
-to talk to, so multicast becomes broadcast to the local host...)
-
-________________________
-Michael Sweet
-
+    Thorsten
