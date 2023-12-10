@@ -1,24 +1,25 @@
 Return-Path: <pizza@hurricane.shaftnet.org>
-DKIM-Filter: OpenDKIM Filter v2.11.0 smtp1.osuosl.org A1F8D81E7F
-DKIM-Filter: OpenDKIM Filter v2.11.0 smtp1.osuosl.org 3E4B181EA4
-DKIM-Filter: OpenDKIM Filter v2.11.0 hurricane.shaftnet.org 3BALfLbT3867565
+DKIM-Filter: OpenDKIM Filter v2.11.0 smtp4.osuosl.org 6AFD9415F5
+DKIM-Filter: OpenDKIM Filter v2.11.0 smtp4.osuosl.org A7C9D4161C
+DKIM-Filter: OpenDKIM Filter v2.11.0 hurricane.shaftnet.org 3BAMVXUP3886070
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=shaftnet.org;
- s=default; t=1702244481;
- bh=wNP2bdqRDC09ntqn1za+zAQ4GmUzUEAV9HE0t/+gVHM=;
+ s=default; t=1702247494;
+ bh=J0BeweJkF+7wBq8euT6IXb6eYZJCjGE/4Ahme4AZ/MA=;
  h=Date:From:To:Subject:References:In-Reply-To:From;
- b=CvffLgkj8PSyJ3+zB9HscrC+wtzJqc8QLjNuG2teJOf8tm6ui2egjm2b10N/CXuD3
- X3V8l7P5Zp/epUM63SRWmc99psavQlYcvSGA4e1iGLk+Jp/vZnFF1J6EHCxMlDAWa7
- sTC1QQ/HqCFsfD+IojTJ5VMHwHVJT9vhNbcEK5VU=
-Date: Sun, 10 Dec 2023 16:41:21 -0500
+ b=I5AMSbP5c7aFAliERicEe7/9kHRznwQKjhiABK3us4XOa44kxYWP9FCY+Le983w4n
+ UVqU7sqDoFHwu6Uyw2CBqs724MuG+RoKkUlM01eHKDj8kIdDG/C+fLkbY13jmonVK/
+ Vu5TuxtQAChW6QsKa4bh+aj0K3L3z3UMHzfnUQDg=
+Date: Sun, 10 Dec 2023 17:31:33 -0500
 From: Solomon Peachy <pizza@shaftnet.org>
-Message-ID: <ZXYwgQqZayDJsT9-@shaftnet.org>
+Message-ID: <ZXY8RUrpqRmoaxDZ@shaftnet.org>
 References: <c4acbedb-c17d-4440-9945-c1b04abcd052@apevzner.com>
  <AE4A3F66-C7EE-470F-B326-A4B357A55F2B@msweet.org>
+ <ZXYwgQqZayDJsT9-@shaftnet.org>
 MIME-Version: 1.0
 Content-Type: multipart/signed; micalg=pgp-sha512;
- protocol="application/pgp-signature"; boundary="JIoj6zRmH9FK+CfS"
+ protocol="application/pgp-signature"; boundary="AUJrBoiQHoeugMwF"
 Content-Disposition: inline
-In-Reply-To: <AE4A3F66-C7EE-470F-B326-A4B357A55F2B@msweet.org>
+In-Reply-To: <ZXYwgQqZayDJsT9-@shaftnet.org>
 Subject: Re: [Printing-architecture] RFC: Pantum M7300FDW and similar
 List-Id: Printing architecture under linux
  <printing-architecture.lists.linux-foundation.org>
@@ -32,47 +33,26 @@ List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-arc
 To: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>
 
 
---JIoj6zRmH9FK+CfS
+--AUJrBoiQHoeugMwF
 Content-Type: text/plain; charset=utf-8
 Content-Disposition: inline
 Content-Transfer-Encoding: quoted-printable
 
-On Sun, Dec 10, 2023 at 10:11:05AM -0500, Michael Sweet via Printing-archit=
-ecture wrote:
-> They already won't be able to print from iOS or macOS, and probably=20
-> not from Windows (IPP class driver) or Android (Mopria print provider)=20
-> because the Get-Printer-Attributes response cannot be parsed.  And if=20
-> they actually ask someone about the problem they can be pointed to=20
-> Pantum to get a firmware update.
+On Sun, Dec 10, 2023 at 04:41:21PM -0500, Solomon Peachy via Printing-archi=
+tecture wrote:
+> The extent of the AirPrint in their documentation is about how to=20
+> enable Airprint sharing for a locally-connected printer.
+> [...]
+> A little digging shows that Apple lists this printer model on their web
+> site as supporting AirPrint; I presume this would mean the printer "nativ=
+ely"
+> supports it.
 
-I should point out that Pantum seems to make no mention of IPP in the=20
-documentation for this printer. They provide Windows, MacOS, and (x86)=20
-Linux drivers for direct USB attachment, and state iOS and Android=20
-printing is supported via "the Pantum APP".  The extent of the AirPrint=20
-in their documentation is about how to enable Airprint sharing for a=20
-locally-connected printer.
+Correction:  Their manual also documents using the standard iOS AirPrint cl=
+ient.
 
-A little digging shows that Apple lists this printer model on their web=20
-site as supporting AirPrint; I presume this would mean the printer "nativel=
-y"
-supports it.
-
-With regards to Mopria, Pantum documents using the Mopria Print Service=20
-on Android devices.
-
-So assuming that getting certified/listed means demonstrating that you=20
-pass some sort of compliance suite, this means that the Mopria and=20
-AirPrint clients don't actually care about these printers violating the=20
-IPP specification.
-
-Over the years, Airprint's not-quite-IPP-compliant nature has caused=20
-quite a bit of grief in my little niche.  This may be another one of=20
-those "We support Airprint, not IPP" impedence mismatches.
-
-One would think Pantum could be made to care, but given that this=20
-printer family apparently already works with Windows, Macs, Android,=20
-iOS, and even Linux, this is just some geeks being overly pedantic about=20
-something (ie IPP) that Pantum never claimed to support to begin with.
+So the printer presumably works with both Mopria and Airprint, despite=20
+its violations of the IPP spec.
 
  - Solomon
 --=20
@@ -80,24 +60,24 @@ Solomon Peachy			      pizza at shaftnet dot org (email&xmpp)
                                       @pizza:shaftnet dot org   (matrix)
 Dowling Park, FL                      speachy (libera.chat)
 
---JIoj6zRmH9FK+CfS
+--AUJrBoiQHoeugMwF
 Content-Type: application/pgp-signature; name="signature.asc"
 
 -----BEGIN PGP SIGNATURE-----
 
-iQIzBAABCgAdFiEE3H5Sx9DyiyB5hnENrGLLO/XVulEFAmV2MH4ACgkQrGLLO/XV
-ulHM+Q//Z4Q+diBW0WwLACp8Nw1F4rl6P2e4K/3/oX+8bAx4LdLnrmtGGm7OAD5e
-KAqRQDfMnNtiHc19w/yZi5DyfrJ9oRGHqOmf/UoxlpTdyTEV2SzRxnmo0t6KE1/N
-qB5Q3Cp0iG2LN1HK+whNHFwzDms8EnJfAqDoAisMlaFx4r0XFXPlG4vROWD6l+CL
-9A7ZTxnbZ+j2G9tsoWPD9e/+ADItVAO6KEoXImwpovoj1/faQslqKZPkllqd8+5e
-mavE7ZZQsY5wbDZuibvQoLT0TmLuuvgPSU1ggUTg3aCSGg6Ep8zPsJLz35Yn+UwL
-LEAAABP2CWcVPGmBC+Hpc3foRN5SwHprci34ROUGn9FMuC5n4+2hAzzLNIhdjfBC
-YRIy3l5nXmLfsBCJDp13l3oICdDcIRUcTzVBTaasCdC2QPl+cevLvSxjqq4wIo7Q
-oBq4pYq0xtY8EM5BTL266FAoLAdGZmgDNA4ANHinGdSjNLysifOOSZryTPkZuot8
-L9FCI6NCP4oPt5tXN1CpUCaGHe519LNQl6SO0e/R/wt3EOGQKgmHHmo2CfbHNhFg
-mEWpsdi8Lcn2Taew2uJv5UaKAFxFwMUTcPt1BWkFodw1RhxJrKd0eRszG7odOtHG
-xDgwxcS7EzFTuYSXVTvvks0Y+kB996ZU2ELhCzVMDfhrjlXWItM=
-=WJ16
+iQIzBAABCgAdFiEE3H5Sx9DyiyB5hnENrGLLO/XVulEFAmV2PEMACgkQrGLLO/XV
+ulEhTA//aCMNoxGuK7hQK7JJrqlF8TxN0jJ/eHBd1RfYScEAhOreOVBt2BpCdKEp
+lUIi4/isU5XPZh9j2qi55HthkVfSMbuN/2JTghScnrO1jgJ5Irou2wxqoq27NpFW
+lK91wGZav4Z4hK00/9HvpekJGn44VaRA7lQtujWWbDlimxk1uyHF7bYpyKUi/+tT
+as6ilFD15TT6QM7197+W5+kjUIW3hs8ZK85KALdkV28hr8nttgKwqpjZuDpcqcBT
+xIwkMOQMErE44Ski8StwTHRurAtYckKaFoRlY40D4qbXyyXKkiiwQJPMzbuCo9Xb
+QFNRUhHN0/JVSo6b2b/qwR82oj/Z5jKFh4uGBjneQXoKgyHL1aSQ16kmBoZmCdqf
+9g1sF/Va9Vy/faoJG9mXKirNixNVGsdPPVlxMNoDz0eIxZ8UqQOO0U3yDPWPHsZ2
+zUL1Ja8LuZkX9/yFxSj24DXN53LWBuzVl0aPdtIOTOytxTHsptWSq12ipsxOXd5+
+g6sR2LQ6Na5jaR4SFZmlibNkZWLQah31Y+Ep1fKyDbPHa5mc8S9qZlDv82MYubi/
+J3kHiQVEQCxJeB01DVpfb6iG25drFpkZxOgzKrrh9ahpU7dRnw0n2uk30VHZri1Z
+XGVorT4QbJe/PMRm/LuSs7Yi2uWMFDxGF/O5Xa5TfBio3fRd3zk=
+=QWPs
 -----END PGP SIGNATURE-----
 
---JIoj6zRmH9FK+CfS--
+--AUJrBoiQHoeugMwF--
