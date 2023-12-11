@@ -1,35 +1,30 @@
 Return-Path: <till.kamppeter@gmail.com>
-DKIM-Filter: OpenDKIM Filter v2.11.0 smtp2.osuosl.org 5E2A54057C
-DKIM-Filter: OpenDKIM Filter v2.11.0 smtp2.osuosl.org EEA41401DF
+DKIM-Filter: OpenDKIM Filter v2.11.0 smtp1.osuosl.org 882B882028
+DKIM-Filter: OpenDKIM Filter v2.11.0 smtp1.osuosl.org B67D981F92
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=gmail.com; s=20230601; t=1702324786; x=1702929586;
+ d=gmail.com; s=20230601; t=1702326593; x=1702931393;
  darn=lists.linux-foundation.org; 
- h=content-transfer-encoding:in-reply-to:from:references:cc:to
+ h=content-transfer-encoding:in-reply-to:from:references:to
  :content-language:subject:user-agent:mime-version:date:message-id
  :from:to:cc:subject:date:message-id:reply-to;
- bh=KBFHBsW/JlNqTxnEJvUSejxiN44YkRXrEkYJcOtLiGw=;
- b=a9/lqCzhZ+3dKTpaS9XbtKar1LCWoPZlgRLQlYvljhZTSKL8JNynW+bNJEXu5ju13C
- YgGTzzjUt8IVs4ndB7DRR9sF7fOUmnT8fxsVZXaAJj8QplGhfWX/Upw2QfNMkZ5MXiYK
- QaHxUlecIOkR4EqA30qA+V1gfNK3N4K/sHFmKrTX05jjCDUWCBemEYngGE/0kjGv2LWw
- opHwp8RNowmdg5VpiVljfSPqloNnQrAMuCCTuCL6y5CXwixSLUoxUcPTQI7ICsWzBhyW
- XAzV9P5xkAJo20DYqwQgZCSf8hR4JpS/SZ7UCGX170+lWt390OHxEuriPPKRlWg/9cSr
- UwtQ==
-Message-ID: <e9362830-436b-45cb-964a-18d95819f32c@gmail.com>
-Date: Mon, 11 Dec 2023 20:59:44 +0100
+ bh=Rd0RwJnyv8UDt49UIxeFhQDe5Bf8Pv19gaZJeishFJo=;
+ b=FQ6ly+4ygDM/djR6qXMxJbNDVpLH9bOQs9sOD3bQtMRrC7lbHZggFxvpZyjsr2Ab2S
+ GJ8jWcA70XzcrDs2sy+542wiN35E5us8k/EH1Oa9FxJmLbO0v4m3QEu605suV92sIOCa
+ OHZz5lC8T3bF23fMHWpPTz1fF2jBUvhJNEr2a85V2EMgpnOBNRJcF9TTo23B8T5vqw2J
+ kWES/SRFLxxBeW92Glkp7mQqcM2QeWl3vnOOcvbORjrYjUfalYb5eYRl9A3+x6OgO5dg
+ LW58onmFUopOXHdtX5Uh7wEk/b49/cHXOxnNWLSevd91Z/sOpMo70c2qnFvpscOzze/u
+ G4mQ==
+Message-ID: <6992d5a4-71b0-4860-872f-f223872b2edb@gmail.com>
+Date: Mon, 11 Dec 2023 21:29:52 +0100
 MIME-Version: 1.0
 Content-Language: en-US
-References: <trinity-aa4ecf8b-1604-4eb3-b482-ee17d53c54a8-1701190767678@3c-app-gmx-bap02>
- <540a6eb1-4964-4281-a333-cf18f44ecac2@gmail.com>
- <trinity-dc79b1f8-46da-4df4-b10d-8ba39c8c1512-1701249802882@3c-app-gmx-bap15>
- <SYBP282MB261780509FF7F2F97B2A31D78785A@SYBP282MB2617.AUSP282.PROD.OUTLOOK.COM>
- <trinity-3c8ea779-9126-4afa-872b-a88075ac08bf-1702280122490@3c-app-gmx-bap41>
- <832fed55-c020-48e8-9815-c00198875e90@redhat.com>
- <BBF2A8EF-9A59-492E-8431-1DD760BF0848@msweet.org>
+References: <CAK+62wgybwAcCznC5PXuPJn-BoYuMa5E_soy6nsKeahoQ+GAWw@mail.gmail.com>
 From: Till Kamppeter <till.kamppeter@gmail.com>
-In-Reply-To: <BBF2A8EF-9A59-492E-8431-1DD760BF0848@msweet.org>
-Content-Type: text/plain; charset=UTF-8; format=flowed
-Content-Transfer-Encoding: 7bit
-Subject: Re: [Printing-architecture] high delay while printing
+In-Reply-To: <CAK+62wgybwAcCznC5PXuPJn-BoYuMa5E_soy6nsKeahoQ+GAWw@mail.gmail.com>
+Content-Type: text/plain; charset="utf-8"; format="flowed"
+Content-Transfer-Encoding: 8bit
+Subject: Re: [Printing-architecture] How to request "Media Limits: ..." on
+ job-sheets to print mm instead of inches?
 List-Id: Printing architecture under linux
  <printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>, 
@@ -39,21 +34,38 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>, 
  <mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Michael Sweet <msweet@msweet.org>, Zdenek Dohnal <zdohnal@redhat.com>
-Cc: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>
+To: kurt.pfeifle@gmail.com, printing-architecture@lists.linux-foundation.org
 
-On 11/12/2023 17:12, Michael Sweet via Printing-architecture wrote:
-> OK, so AirPrint (which is the spec that drove this; the same is true for IPP Everywhere) uses attributes (document-format-supported, pdf-*-supported) and job-state-reasons keywords ('document-format-error' and 'document-format-unprintable') to drive whether PDF is used for a job.
+On 10/12/2023 21:19, Kurt Pfeifle wrote:
+> I have a print queue installed via "lpadmin ... -m everywhere". This 
+> auto-generated a PPD with a line for the printable area saying
 > 
-> The preference is always PDF, because regardless of any speed concerns it is the most capable of producing optimal output for a printer (dynamic resolution features, color management, font hinting, etc.)  This functionality has been in place since the original AirPrint release in 2010, and we should not second guess the printer or the protocol.
+>     *ImageableArea A4: "11.990551181102 11.990551181102 583.285039370079 
+> 829.899212598425"
 > 
-> *If* the PDF file is too large (pdf-k-octets-supported tells you this), uses unsupported PDF features (pdf-features-supported tells you what versions of PDF the printer supports), or the printer reports a problem with the PDF file (via the job-state-reasons keywords), then the Client (re)submits the job as raster (URF/Apple Raster for AirPrint, PWG Raster for IPP Everywhere/Mopria/Wi-Fi Direct).  The file size issue is easy to check and CUPS already does this.  The supported PDF versions are less of an issue today since PDF isn't going through as much churn today as 10-15 years ago.  But if a printer isn't able to print a particular PDF file you get the "document-format-unprintable" keyword and can automatically re-submit as raster.
+> When I request job-sheets to be printed the respective line on the 
+> printed sheet reads
 > 
+>     Media Limits: 0.17 x 0.17 to 8.10 x 11.53 inches
+> 
+> What should I do to get this Info given in millimeters instead of inches?
+> 
+> I tried adding a line of "DefaultLanguage de"to cupsd.conf and restarted 
+> the service. But this didn't change the printed line on the job-sheet 
+> (not even the English /"Media Limits" /changed -- but I do not care so 
+> much about that).
+> 
+> P.S.: Is this currently the right forum to ask such questions? I 
+> searched OpenPrinting's github, but couldn't figure it out there, and I 
+> didn't want to open an issue (yet).
 
-So slow printing speed can also be caused by the printer failing on the 
-PDF and then CUPS sending Raster, but this should be easily visible in 
-CUPS' error_log (in debug mode). This should also be checked. Perhaps a 
-certain application's PDF (or pdftopdf's output) is always failing on a 
-printer and CUPS retries with Raster ...
+I think, this functionality of displaying sizes and margins in mm on 
+test and banner pages is really missing. It should either find the 
+locale or simply output two lines, one for inches and another for mm.
+
+The program generating the banners nowadays is the bannertopdf filter of 
+cups-filters, which in the latest cups-filters (2.x uses the 
+cfFilterBannerToPDF() filter function of libcupsfilters, so it would be 
+a feature request for libcupsfilters, to be reported as issue on GitHub ...
 
     Till
