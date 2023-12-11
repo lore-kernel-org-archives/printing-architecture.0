@@ -1,27 +1,29 @@
-Return-Path: <korobkin@gmail.com>
-DKIM-Filter: OpenDKIM Filter v2.11.0 smtp4.osuosl.org 6D68C418C7
-DKIM-Filter: OpenDKIM Filter v2.11.0 smtp4.osuosl.org 926AE4189F
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=gmail.com; s=20230601; t=1702311149; x=1702915949;
- darn=lists.linux-foundation.org; 
- h=to:subject:message-id:date:from:in-reply-to:references:mime-version
- :from:to:cc:subject:date:message-id:reply-to;
- bh=icndicamMuq5em/H9P6PiayVceMtYdialBUcBV4uzCs=;
- b=kMDwGiPM7MpazNaZd41kbun17UkyX6yBwudts0kW4qpgCYKGqJQue4n6Bxs83yypXM
- OmTS2X21tZuYL9SCa+54XOTyZv8wU0RvxuIzmjI5X75HluFTMt0xOEpDcQ6uFnBzltDh
- b9xgAz8sEqt5QSkSzxoPZ6FbVabWQkjrr6D2DBmBT3nJhqJlzXM9FxfRgrRE/Ue5hsIZ
- 4SRN5UZGFcUg6KYJkPEJgM5BYndgtNmhdorfJKJ6VX38tfal8Y5zg4A0iR2YJ52kPyo0
- HDvJ7jaDV0qLHiR3ft/HJt7CXKPHCsXkjdHk7qcESHGVokxZf4fvzdKzEqPb5bigpsHn
- 0T5A==
-MIME-Version: 1.0
-References: <c7a55ce9-b1a0-49f9-869a-b3c021fc51fb@gmail.com>
-In-Reply-To: <c7a55ce9-b1a0-49f9-869a-b3c021fc51fb@gmail.com>
-From: Alex Korobkin <korobkin+op@gmail.com>
-Date: Mon, 11 Dec 2023 11:12:12 -0500
-Message-ID: <CA+3RNfgm8TtZFAoJP5+WZuH698VsDvgBMx1XV=DciLdTiswFrQ@mail.gmail.com>
-Content-Type: multipart/alternative; boundary="000000000000588a5a060c3e33c0"
-Subject: Re: [Printing-architecture] PDFio: Replaced QPDF by PDFio in
- libcupsfilters as GSoC project?
+Return-Path: <msweet@msweet.org>
+DKIM-Filter: OpenDKIM Filter v2.11.0 smtp3.osuosl.org 8E8406115C
+DKIM-Filter: OpenDKIM Filter v2.11.0 smtp3.osuosl.org 3617260E31
+DKIM-Filter: OpenDKIM Filter v2.11.0 mail.msweet.org BAC81803AC
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=msweet.org;
+ s=default; t=1702311177;
+ bh=yoQCR1odmklPGyHt1fRqZvRozftPTyG8yKlIZ6y0H5w=;
+ h=Subject:From:In-Reply-To:Date:Cc:References:To:From;
+ b=GbH3wTZA7ybJOw0qDUhM6Wr9Zs2ef4B/jyV8CljPkjek5An/OkRkuEU43H03Qlj6J
+ nKh8icxenHECX9uf6uIBrON27lBwgdvncN5iaDlHVukWqn7kFkaJm2kQJo6PMwQ86n
+ G3k4tyTjRNIJKu4SCqsYPWJu0gVl83d7/LhFQEBw=
+Content-Type: text/plain;
+	charset=utf-8
+Mime-Version: 1.0 (Mac OS X Mail 16.0 \(3774.200.91.1.1\))
+From: Michael Sweet <msweet@msweet.org>
+In-Reply-To: <832fed55-c020-48e8-9815-c00198875e90@redhat.com>
+Date: Mon, 11 Dec 2023 11:12:45 -0500
+Content-Transfer-Encoding: quoted-printable
+Message-Id: <BBF2A8EF-9A59-492E-8431-1DD760BF0848@msweet.org>
+References: <trinity-aa4ecf8b-1604-4eb3-b482-ee17d53c54a8-1701190767678@3c-app-gmx-bap02>
+ <540a6eb1-4964-4281-a333-cf18f44ecac2@gmail.com>
+ <trinity-dc79b1f8-46da-4df4-b10d-8ba39c8c1512-1701249802882@3c-app-gmx-bap15>
+ <SYBP282MB261780509FF7F2F97B2A31D78785A@SYBP282MB2617.AUSP282.PROD.OUTLOOK.COM>
+ <trinity-3c8ea779-9126-4afa-872b-a88075ac08bf-1702280122490@3c-app-gmx-bap41>
+ <832fed55-c020-48e8-9815-c00198875e90@redhat.com>
+Subject: Re: [Printing-architecture] high delay while printing
 List-Id: Printing architecture under linux
  <printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>, 
@@ -31,103 +33,82 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>, 
  <mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Open Printing <printing-architecture@lists.linux-foundation.org>
+To: Zdenek Dohnal <zdohnal@redhat.com>
+Cc: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>
 
---000000000000588a5a060c3e33c0
-Content-Type: text/plain; charset="UTF-8"
-Content-Transfer-Encoding: quoted-printable
+Zdenek,
 
-Hello printing folks,
+> On Dec 11, 2023, at 3:53=E2=80=AFAM, Zdenek Dohnal =
+<zdohnal@redhat.com> wrote:
+> ...
+> So but even without possible bugs, it is a matter of choice - PDF =
+printing is faster than raster, but sometimes you get issues. Raster is =
+slower, but worked for me till now when PDF failed.
+>=20
+> In the past I have tried to pass 'document-format' to the print to =
+enforce the output format I would like to have, but it is not among =
+job-settable-attributes.
+>=20
+> @Mike, do you think supporting switching final format would =
+possible/useful?
 
-If you don't mind, may I chime in from the user's perspective? As you know,
-there are lots of bad PDFs out there, and even if they represent only 0.1%
-of the total number of all PDFs that people print, one million print jobs
-turns into 1000 tickets about unprintable files. QPDF is extremely
-accommodating about it: no matter how bad a PDF is, it will try to recover
-and proceed. Over the last few years I filed numerous requests about
-handling some despicable PDFs, and all of them were accepted.
+OK, so AirPrint (which is the spec that drove this; the same is true for =
+IPP Everywhere) uses attributes (document-format-supported, =
+pdf-*-supported) and job-state-reasons keywords ('document-format-error' =
+and 'document-format-unprintable') to drive whether PDF is used for a =
+job.
 
-How is PDFio with regards to handling bad PDFs? Is there any testing tool
-with PDFio compiled in that I can run against my corpus of bad PDFs to see
-how it would treat them?
+The preference is always PDF, because regardless of any speed concerns =
+it is the most capable of producing optimal output for a printer =
+(dynamic resolution features, color management, font hinting, etc.)  =
+This functionality has been in place since the original AirPrint release =
+in 2010, and we should not second guess the printer or the protocol.
 
+*If* the PDF file is too large (pdf-k-octets-supported tells you this), =
+uses unsupported PDF features (pdf-features-supported tells you what =
+versions of PDF the printer supports), or the printer reports a problem =
+with the PDF file (via the job-state-reasons keywords), then the Client =
+(re)submits the job as raster (URF/Apple Raster for AirPrint, PWG Raster =
+for IPP Everywhere/Mopria/Wi-Fi Direct).  The file size issue is easy to =
+check and CUPS already does this.  The supported PDF versions are less =
+of an issue today since PDF isn't going through as much churn today as =
+10-15 years ago.  But if a printer isn't able to print a particular PDF =
+file you get the "document-format-unprintable" keyword and can =
+automatically re-submit as raster.
 
+On the question of speed, Apple/PWG Raster is almost always deflated =
+(gzip'd) on the way to the printer, and the formats were designed to =
+allow printers to quickly process and print the data.  I did a white =
+paper on this in 2011:
 
-On Thu, Dec 7, 2023 at 8:58=E2=80=AFAM Till Kamppeter <till.kamppeter@gmail=
-.com>
-wrote:
+    =
+https://ftp.pwg.org/pub/pwg/ipp/whitepaper/RasterAnalysis-20110922.pdf
 
-> Hi,
->
-> Michael Sweet has closed the PDFio issue in which I ask for support of
-> PDF forms and annotations, telling that inside PDFio nothing further
-> needs to be done, that everything can be solved outside PDFio, by the
-> calling application.
->
-> As we want to get rid of C++ in libcupsfilters I plan to let it use
-> PDFio where it is currently using QPDF.
->
-> Mike, as you tell that PDFio is OK for handling PDF files with filled
-> forms/annotations, I want to post a GSoC project idea to switch over
-> libcupsfilters from using QPDF to PDFio. WDYT? Is this possible already?
-> Or are there still any features missing in PDFio?
->
->     Till
-> _______________________________________________
-> Printing-architecture mailing list
-> Printing-architecture@lists.linux-foundation.org
-> https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture
->
+CUPS Raster v2 is PWG Raster.  Apple Raster uses the same compression =
+codec (just smaller file/page headers) so the analysis is the same. =46rom=
+ the conclusions:
 
+The best combination seems to be CUPS Raster Version 2 with LZ77 which =
+has low CPU and memory requirements with excellent overall performance. =
+For extremely limited clients and servers CUPS Raster Version 2 provides =
+extremely low CPU and memory requirements with good overall performance.
 
---=20
--Alex
+For the sample documents rendered at 300 PPI, CUPS Raster Version 2 can =
+easily provide 18 pages per minute over Wi-Fi in color and and about 2 =
+pages per minute over DSL. Adding LZ77 basically doubles the potential =
+print speed to 32 pages per minute over Wi-Fi and 4 pages per minute =
+over DSL.
 
---000000000000588a5a060c3e33c0
-Content-Type: text/html; charset="UTF-8"
-Content-Transfer-Encoding: quoted-printable
+(Wi-Fi in this case would have probably been 300Mbit/sec 802.11n...)
 
-<div dir=3D"ltr"><div>Hello printing folks,=C2=A0</div><div><br></div>If yo=
-u don&#39;t mind, may I chime in from the user&#39;s perspective? As you kn=
-ow, there are lots of bad PDFs out there, and even if they represent only 0=
-.1% of the total number of all PDFs that people print, one million print jo=
-bs turns into 1000 tickets about unprintable files. QPDF is extremely accom=
-modating about it: no matter how bad a PDF is, it will try to recover and p=
-roceed. Over the last few years I filed numerous requests about handling so=
-me despicable=C2=A0PDFs, and all of them were accepted.<div><br></div><div>=
-How is PDFio with regards to handling bad PDFs? Is there any testing tool w=
-ith PDFio compiled in that I can run against my corpus of bad PDFs to see h=
-ow it would treat them?<br><div><br></div><div><br></div></div></div><br><d=
-iv class=3D"gmail_quote"><div dir=3D"ltr" class=3D"gmail_attr">On Thu, Dec =
-7, 2023 at 8:58=E2=80=AFAM Till Kamppeter &lt;<a href=3D"mailto:till.kamppe=
-ter@gmail.com">till.kamppeter@gmail.com</a>&gt; wrote:<br></div><blockquote=
- class=3D"gmail_quote" style=3D"margin:0px 0px 0px 0.8ex;border-left:1px so=
-lid rgb(204,204,204);padding-left:1ex">Hi,<br>
-<br>
-Michael Sweet has closed the PDFio issue in which I ask for support of <br>
-PDF forms and annotations, telling that inside PDFio nothing further <br>
-needs to be done, that everything can be solved outside PDFio, by the <br>
-calling application.<br>
-<br>
-As we want to get rid of C++ in libcupsfilters I plan to let it use <br>
-PDFio where it is currently using QPDF.<br>
-<br>
-Mike, as you tell that PDFio is OK for handling PDF files with filled <br>
-forms/annotations, I want to post a GSoC project idea to switch over <br>
-libcupsfilters from using QPDF to PDFio. WDYT? Is this possible already? <b=
-r>
-Or are there still any features missing in PDFio?<br>
-<br>
-=C2=A0 =C2=A0 Till<br>
-_______________________________________________<br>
-Printing-architecture mailing list<br>
-<a href=3D"mailto:Printing-architecture@lists.linux-foundation.org" target=
-=3D"_blank">Printing-architecture@lists.linux-foundation.org</a><br>
-<a href=3D"https://lists.linuxfoundation.org/mailman/listinfo/printing-arch=
-itecture" rel=3D"noreferrer" target=3D"_blank">https://lists.linuxfoundatio=
-n.org/mailman/listinfo/printing-architecture</a><br>
-</blockquote></div><br clear=3D"all"><div><br></div><span class=3D"gmail_si=
-gnature_prefix">-- </span><br><div dir=3D"ltr" class=3D"gmail_signature"><d=
-iv dir=3D"ltr">-Alex</div></div>
+WRT print speed, Apple/PWG Raster *might* be printed more slowly on high =
+end printers due to the extra processing they do in general, but those =
+printers also will support PDF and *that* will print more quickly.  The =
+challenge is the low-to-mid end printers with PDF support because they =
+can print PDF documents with text very quickly but throw in images or =
+gradients and then raster is faster.  There is really no easy way to =
+know, unfortunately...
 
---000000000000588a5a060c3e33c0--
+________________________
+Michael Sweet
+
