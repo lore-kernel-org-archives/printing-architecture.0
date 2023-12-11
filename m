@@ -1,28 +1,35 @@
-Return-Path: <msweet@msweet.org>
-DKIM-Filter: OpenDKIM Filter v2.11.0 smtp1.osuosl.org 037FE821A8
-DKIM-Filter: OpenDKIM Filter v2.11.0 smtp1.osuosl.org D2C7382186
-DKIM-Filter: OpenDKIM Filter v2.11.0 mail.msweet.org AA62882101
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=msweet.org;
- s=default; t=1702318150;
- bh=AlrzsIkhWe7Lyft8NZrFd5aOxiH73pqahvllUXh+SJ0=;
- h=Subject:From:In-Reply-To:Date:Cc:References:To:From;
- b=P3qy3TTn+iYnjkuWik9rtlh8DifidUy+W+w9dkzV2nnHh91Tj00qc8VU27M6KAPg4
- A7oBaSxcPjpoEc9FHMhQ1TbZnwYq4/N5fMU+PF4lSs0uA1BTN0wrvicqWpYSR4SvSN
- jd9igIiVPZTK5bkoTgz5LDP53idAVwcUy0qA7+0w=
-Content-Type: text/plain;
-	charset=utf-8
-Mime-Version: 1.0 (Mac OS X Mail 16.0 \(3774.300.61.1.2\))
-From: Michael Sweet <msweet@msweet.org>
-In-Reply-To: <CA+3RNfhzN+BB_OiO12B62pGh1H4EJXsZpsFBwYK5eiH+5+Ra=w@mail.gmail.com>
-Date: Mon, 11 Dec 2023 13:08:58 -0500
-Content-Transfer-Encoding: quoted-printable
-Message-Id: <F8540CAC-A93F-42DD-9E1A-D46746C92283@msweet.org>
-References: <c7a55ce9-b1a0-49f9-869a-b3c021fc51fb@gmail.com>
- <CA+3RNfgm8TtZFAoJP5+WZuH698VsDvgBMx1XV=DciLdTiswFrQ@mail.gmail.com>
- <233C4113-5BD2-494F-A342-30C4A2607452@msweet.org>
- <CA+3RNfhzN+BB_OiO12B62pGh1H4EJXsZpsFBwYK5eiH+5+Ra=w@mail.gmail.com>
-Subject: Re: [Printing-architecture] PDFio: Replaced QPDF by PDFio in
- libcupsfilters as GSoC project?
+Return-Path: <till.kamppeter@gmail.com>
+DKIM-Filter: OpenDKIM Filter v2.11.0 smtp2.osuosl.org 5E2A54057C
+DKIM-Filter: OpenDKIM Filter v2.11.0 smtp2.osuosl.org EEA41401DF
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=gmail.com; s=20230601; t=1702324786; x=1702929586;
+ darn=lists.linux-foundation.org; 
+ h=content-transfer-encoding:in-reply-to:from:references:cc:to
+ :content-language:subject:user-agent:mime-version:date:message-id
+ :from:to:cc:subject:date:message-id:reply-to;
+ bh=KBFHBsW/JlNqTxnEJvUSejxiN44YkRXrEkYJcOtLiGw=;
+ b=a9/lqCzhZ+3dKTpaS9XbtKar1LCWoPZlgRLQlYvljhZTSKL8JNynW+bNJEXu5ju13C
+ YgGTzzjUt8IVs4ndB7DRR9sF7fOUmnT8fxsVZXaAJj8QplGhfWX/Upw2QfNMkZ5MXiYK
+ QaHxUlecIOkR4EqA30qA+V1gfNK3N4K/sHFmKrTX05jjCDUWCBemEYngGE/0kjGv2LWw
+ opHwp8RNowmdg5VpiVljfSPqloNnQrAMuCCTuCL6y5CXwixSLUoxUcPTQI7ICsWzBhyW
+ XAzV9P5xkAJo20DYqwQgZCSf8hR4JpS/SZ7UCGX170+lWt390OHxEuriPPKRlWg/9cSr
+ UwtQ==
+Message-ID: <e9362830-436b-45cb-964a-18d95819f32c@gmail.com>
+Date: Mon, 11 Dec 2023 20:59:44 +0100
+MIME-Version: 1.0
+Content-Language: en-US
+References: <trinity-aa4ecf8b-1604-4eb3-b482-ee17d53c54a8-1701190767678@3c-app-gmx-bap02>
+ <540a6eb1-4964-4281-a333-cf18f44ecac2@gmail.com>
+ <trinity-dc79b1f8-46da-4df4-b10d-8ba39c8c1512-1701249802882@3c-app-gmx-bap15>
+ <SYBP282MB261780509FF7F2F97B2A31D78785A@SYBP282MB2617.AUSP282.PROD.OUTLOOK.COM>
+ <trinity-3c8ea779-9126-4afa-872b-a88075ac08bf-1702280122490@3c-app-gmx-bap41>
+ <832fed55-c020-48e8-9815-c00198875e90@redhat.com>
+ <BBF2A8EF-9A59-492E-8431-1DD760BF0848@msweet.org>
+From: Till Kamppeter <till.kamppeter@gmail.com>
+In-Reply-To: <BBF2A8EF-9A59-492E-8431-1DD760BF0848@msweet.org>
+Content-Type: text/plain; charset=UTF-8; format=flowed
+Content-Transfer-Encoding: 7bit
+Subject: Re: [Printing-architecture] high delay while printing
 List-Id: Printing architecture under linux
  <printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>, 
@@ -32,42 +39,21 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>, 
  <mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Alex Korobkin <korobkin+op@gmail.com>
+To: Michael Sweet <msweet@msweet.org>, Zdenek Dohnal <zdohnal@redhat.com>
 Cc: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>
 
-Alex,
+On 11/12/2023 17:12, Michael Sweet via Printing-architecture wrote:
+> OK, so AirPrint (which is the spec that drove this; the same is true for IPP Everywhere) uses attributes (document-format-supported, pdf-*-supported) and job-state-reasons keywords ('document-format-error' and 'document-format-unprintable') to drive whether PDF is used for a job.
+> 
+> The preference is always PDF, because regardless of any speed concerns it is the most capable of producing optimal output for a printer (dynamic resolution features, color management, font hinting, etc.)  This functionality has been in place since the original AirPrint release in 2010, and we should not second guess the printer or the protocol.
+> 
+> *If* the PDF file is too large (pdf-k-octets-supported tells you this), uses unsupported PDF features (pdf-features-supported tells you what versions of PDF the printer supports), or the printer reports a problem with the PDF file (via the job-state-reasons keywords), then the Client (re)submits the job as raster (URF/Apple Raster for AirPrint, PWG Raster for IPP Everywhere/Mopria/Wi-Fi Direct).  The file size issue is easy to check and CUPS already does this.  The supported PDF versions are less of an issue today since PDF isn't going through as much churn today as 10-15 years ago.  But if a printer isn't able to print a particular PDF file you get the "document-format-unprintable" keyword and can automatically re-submit as raster.
+> 
 
-> On Dec 11, 2023, at 12:08=E2=80=AFPM, Alex Korobkin =
-<korobkin+op@gmail.com> wrote:
->=20
-> Thank you, that's exactly what I needed.=20
-> I ran it against my collection of bad PDFs, and 10% of them failed =
-with " Malformed xref table entry '0000000000 65536 f'."
+So slow printing speed can also be caused by the printer failing on the 
+PDF and then CUPS sending Raster, but this should be easily visible in 
+CUPS' error_log (in debug mode). This should also be checked. Perhaps a 
+certain application's PDF (or pdftopdf's output) is always failing on a 
+printer and CUPS retries with Raster ...
 
-The allowed range for generation numbers is 0-65535, so this is a bad =
-PDF file. I can certainly allow a wider range of values (will require a =
-small change to the internal representation) or just allow invalid =
-values for object 0 but I'll want to understand the scope of the problem =
-first...  Can you file a bug with a file or two that has this problem?
-
-> I suppose that's the #1 point from your reply, so perhaps it's not too =
-bad of an idea to reconstruct the xref table when possible?
-
-No, the usual xref table issue is that the offsets are wrong, either =
-from line ending changes or hand editing of the PDF file.
-
-> It also reported "Too many object streams." for one file with 7000 =
-pages, and "Unexpected 'startxref' token seen." on this file created by =
-Till in 2013 to test various page sizes in a single PDF.=20
-
-Really?  The current code allows up to 4k object streams per xref table, =
-and most files only have 1 or 2 (Acrobat will make 1 for the first page =
-and 2 for the remaining pages in a linearized file).
-
-Filed this as issue #58:
-
-	https://github.com/michaelrsweet/pdfio/issues/58
-
-________________________
-Michael Sweet
-
+    Till
