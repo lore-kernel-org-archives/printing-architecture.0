@@ -1,30 +1,29 @@
-Return-Path: <till.kamppeter@gmail.com>
-DKIM-Filter: OpenDKIM Filter v2.11.0 smtp1.osuosl.org 882B882028
-DKIM-Filter: OpenDKIM Filter v2.11.0 smtp1.osuosl.org B67D981F92
+Return-Path: <pzz@apevzner.com>
+DKIM-Filter: OpenDKIM Filter v2.11.0 smtp3.osuosl.org 3B09960E3E
+DKIM-Filter: OpenDKIM Filter v2.11.0 smtp3.osuosl.org E411960C1A
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=gmail.com; s=20230601; t=1702326593; x=1702931393;
+ d=apevzner.com; s=google; t=1702480127; x=1703084927;
  darn=lists.linux-foundation.org; 
- h=content-transfer-encoding:in-reply-to:from:references:to
+ h=content-transfer-encoding:in-reply-to:from:cc:to:references
  :content-language:subject:user-agent:mime-version:date:message-id
  :from:to:cc:subject:date:message-id:reply-to;
- bh=Rd0RwJnyv8UDt49UIxeFhQDe5Bf8Pv19gaZJeishFJo=;
- b=FQ6ly+4ygDM/djR6qXMxJbNDVpLH9bOQs9sOD3bQtMRrC7lbHZggFxvpZyjsr2Ab2S
- GJ8jWcA70XzcrDs2sy+542wiN35E5us8k/EH1Oa9FxJmLbO0v4m3QEu605suV92sIOCa
- OHZz5lC8T3bF23fMHWpPTz1fF2jBUvhJNEr2a85V2EMgpnOBNRJcF9TTo23B8T5vqw2J
- kWES/SRFLxxBeW92Glkp7mQqcM2QeWl3vnOOcvbORjrYjUfalYb5eYRl9A3+x6OgO5dg
- LW58onmFUopOXHdtX5Uh7wEk/b49/cHXOxnNWLSevd91Z/sOpMo70c2qnFvpscOzze/u
- G4mQ==
-Message-ID: <6992d5a4-71b0-4860-872f-f223872b2edb@gmail.com>
-Date: Mon, 11 Dec 2023 21:29:52 +0100
+ bh=lHZ1ViMFxk/+N9q+azUeT4Op6yhF5rOOFVS07Mugmp8=;
+ b=ILEFKHrTiX4lfUzIc7owY58wxoUd69AVBrUs5R0HzZ7BhuTw0E5sqVF6xGLBLMNsEI
+ ZtZ/TZXXHI1zpl2f10MKm+xKRKxlP6LG8t9nRNZU/GIvNdhPx1dRFgPMc6pgDSKxnQsL
+ rSDvKbMjvGcOF6xNT3lYX8ct6EJF9kSsiRk7VFp0trVPsYFVnYwsfOpvk9Q22+KOmFxA
+ VnYikTxkcYmZuW2LDcT/iu3oMAmHnKTNMMJdKoczlLCgVV2yO3ryrMjtDJ1xWO2UtYF5
+ JVYYGPgJBd1PHtdI5VxIR2WxMR0c8B0nxrZYJxXOtYZ4iFvc0wIDBCpajOp8r0eM/DYS
+ r3bw==
+Message-ID: <3d5242f7-2871-4d97-857e-1cb697782765@apevzner.com>
+Date: Wed, 13 Dec 2023 18:08:46 +0300
 MIME-Version: 1.0
 Content-Language: en-US
-References: <CAK+62wgybwAcCznC5PXuPJn-BoYuMa5E_soy6nsKeahoQ+GAWw@mail.gmail.com>
-From: Till Kamppeter <till.kamppeter@gmail.com>
-In-Reply-To: <CAK+62wgybwAcCznC5PXuPJn-BoYuMa5E_soy6nsKeahoQ+GAWw@mail.gmail.com>
-Content-Type: text/plain; charset="utf-8"; format="flowed"
-Content-Transfer-Encoding: 8bit
-Subject: Re: [Printing-architecture] How to request "Media Limits: ..." on
- job-sheets to print mm instead of inches?
+References: <4ea25bd1-6a61-4987-ad2a-41e3e8d4437c@apevzner.com>
+From: Alexander Pevzner <pzz@apevzner.com>
+In-Reply-To: <4ea25bd1-6a61-4987-ad2a-41e3e8d4437c@apevzner.com>
+Content-Type: text/plain; charset=UTF-8; format=flowed
+Content-Transfer-Encoding: 7bit
+Subject: Re: [Printing-architecture] RFC: Pantum M7300FDW and similar
 List-Id: Printing architecture under linux
  <printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>, 
@@ -34,38 +33,111 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>, 
  <mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: kurt.pfeifle@gmail.com, printing-architecture@lists.linux-foundation.org
+To: Michael Sweet <msweet@msweet.org>
+Cc: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>
 
-On 10/12/2023 21:19, Kurt Pfeifle wrote:
-> I have a print queue installed via "lpadmin ... -m everywhere". This 
-> auto-generated a PPD with a line for the printable area saying
-> 
->     *ImageableArea A4: "11.990551181102 11.990551181102 583.285039370079 
-> 829.899212598425"
-> 
-> When I request job-sheets to be printed the respective line on the 
-> printed sheet reads
-> 
->     Media Limits: 0.17 x 0.17 to 8.10 x 11.53 inches
-> 
-> What should I do to get this Info given in millimeters instead of inches?
-> 
-> I tried adding a line of "DefaultLanguage de"to cupsd.conf and restarted 
-> the service. But this didn't change the printed line on the job-sheet 
-> (not even the English /"Media Limits" /changed -- but I do not care so 
-> much about that).
-> 
-> P.S.: Is this currently the right forum to ask such questions? I 
-> searched OpenPrinting's github, but couldn't figure it out there, and I 
-> didn't want to open an issue (yet).
+Michael,
 
-I think, this functionality of displaying sizes and margins in mm on 
-test and banner pages is really missing. It should either find the 
-locale or simply output two lines, one for inches and another for mm.
+thank you very much for your response!
 
-The program generating the banners nowadays is the bannertopdf filter of 
-cups-filters, which in the latest cups-filters (2.x uses the 
-cfFilterBannerToPDF() filter function of libcupsfilters, so it would be 
-a feature request for libcupsfilters, to be reported as issue on GitHub ...
+On 12/10/23 18:11, Michael Sweet wrote:
+> This code has been the focus of *six* CVEs since the move to Git in 2015 - not quite one CVE a year, but enough to be concerning.  More specifically, commit 5754bccee (https://github.com/apple/cups/issues/5630) addressed the code that allowed "alternate" encodings of member attributes that was causing interoperability issues.
 
-    Till
+CVE is about security, not about interoperability. You told several 
+times that you are concerned about security risks associated with my 
+patch, so it sounds like some kind if security review could be useful here.
+
+BTW, where do you see security risk, in the changed (relaxed) IPP 
+"syntactical" rules by itself or in my implementation (code 
+modifications) made to implement this change?
+
+Regarding interoperatibily, issue #5630, as I understand it, means that 
+some clients that were able to speak with CUPS were not able to speak 
+with real printers, because CUPS was too forgiving while printers were not.
+
+First of all, I don't agree that this is about interoperatibility. This 
+is about applicability of CUPS as strong testing/diagnostics tool. Being 
+too forgiving, CUPS by itself still remains compatible with invalid 
+implementations, but becomes not very useful to test these 
+implementations for correctness (which is not primary purpose of CUPS, BTW).
+
+Second, if I relax parsing of IPP responses, but not of incoming IPP 
+requests, looks like we can achieve two goals: to be strict enough for 
+testing of clients and to be compatible with broken hardware as well, 
+isn't it?
+
+And I know that the same IPP parser is used as a part of IPP 
+self-certifications tools. If I will implement "relaxed IPP parsing" as 
+an option, disabled by default, and will only enable it where CUPS 
+interprets responses from printers, it will not change CUPS behavior as 
+server and will not change IPP tools behavior, at this case will it look 
+good enough for you?
+
+>> 1. I agree, that following specification is very important, and, where possible, trying to do so.
+> 
+> IPP started in the IETF and the PWG has continued the IETF's goals for conformance terminology: any requirements are there to ensure interoperability and proper functionality.  Postel's Law doesn't apply when it breaks interoperability and potentially has bad side effects.  See the following for some applicable reading/links:
+
+I agree that interoperability should not be broken, but I don't see how 
+my (updated) proposal, explained above, can break interoperability with 
+anything.
+
+Please, correct me, if I wrong.
+
+> They already won't be able to print from iOS or macOS, and probably not from Windows (IPP class driver) or Android (Mopria print provider) because the Get-Printer-Attributes response cannot be parsed.  And if they actually ask someone about the problem they can be pointed to Pantum to get a firmware update.
+
+Interesting that this device included into the Apple's list of supported 
+AirPrint devices: https://support.apple.com/en-us/HT201311
+
+Unfortunately, I don't have any iOS/macOS device to test by myself. 
+Regarding Windows, Windows wants to install vendor driver (which is 
+known to work) and I don't know is it any way to force Windows to print 
+"driverlessly".
+
+> Firmware update capability is required for both AirPrint and Mopria, and at least the AirPrint folks require the ability to upgrade without special software and highly recommend automatic firmware updates over the Internet whenever possible...  Pantum is an AirPrint licensee...
+
+Device has offline/online upgrade options. For offline upgdade, I was 
+not able to find firmware image for this model (and other member of this 
+discussion writes the same). Online upgrade claims that the newest 
+version of firmware already installed.
+
+> You need to notify PANTUM that they have an issue.  Regardless of whether you believe that a user will update the firmware, they don't even have an opportunity unless you report the issue to the manufacturer.  And in fact, you don't even know whether PANTUM has already fixed the issue!?!
+
+I'm doing my best to reach them, but didn't succeed so far. If and when 
+I'll get any feedback, I'll notify you (I mean all readers of this 
+discussion).
+
+> Let's say we accept invalid collection attribute values.  We get the media-col-database and media-col-ready values from the printer, and then send it a media-col collection to specify printing from tray 2 on cardstock: will the printer be able to understand a correctly encoded collection value for media-col if it doesn't return valid collection values for media-col-database/ready?  (probably not)
+
+I wrote the test. Printer correctly mirrors media-col parameters in the 
+Print-Job response (and my test encodes requests correctly) but I don't 
+see any change of the printed image when I play with these parameters.
+
+> Did you fix the problem for the user?  Is this better?
+
+In general yes, because actually all printer functionality is available 
+for user.
+
+Regarding tray selection, printer chooses paper from the manual tray if 
+it is not empty or from the automatic tray otherwise, and I'm not sure 
+if it can be changed programmatically. In any case, it is reasonable 
+behavior.
+
+>> I'd prefer to make it even more precious, affection only communication with Pantum devices. But in that places of the CUPS code where responses are parsed there is no information what kind devices we are speaking with.
+> 
+> And I would be even more opposed to such a change.  At that point you have created a printer driver...
+
+Printer driver may be a way to ho, though at this case it is 1000x 
+bigger effort.
+
+But at this case we need to provide a mechanism to disable 
+auto-discovered printer in a favor of device instance, found and handled 
+by the driver.
+
+And another thing, we loose IPP over USB functionality (or ipp-usb must 
+mimic their printer in enough details to fool the driver that it speaks 
+with actual hardware printer).
+
+-- 
+
+	Wishes, Alexander Pevzner (pzz@apevzner.com)
+
