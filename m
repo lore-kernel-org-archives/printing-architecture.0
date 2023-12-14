@@ -1,26 +1,34 @@
-Return-Path: <msweet@msweet.org>
-DKIM-Filter: OpenDKIM Filter v2.11.0 smtp2.osuosl.org E934F401D8
-DKIM-Filter: OpenDKIM Filter v2.11.0 smtp2.osuosl.org 1448C40148
-DKIM-Filter: OpenDKIM Filter v2.11.0 mail.msweet.org 8543F807B7
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=msweet.org;
- s=default; t=1702507189;
- bh=stnVSjgUUZcgn2LIO5++WH9GWIivNGZwozroZbYL+Fw=;
- h=Subject:From:In-Reply-To:Date:Cc:References:To:From;
- b=FKF6R5FEmno/QZJ+ucrtRDTn9tKO6qPnwmj75b7FWCPw/FOTQyutnL+OOrq2K3cox
- UYjNicUm1O2QMh8qhXn0uAUlmVaefjMDtkMNr2swqc4zCpLCQEqLs23VVZhycw/UcV
- Ns6iU2DXkYqCRVVMYJoSbMc3bYsMbTakFgUTomMQ=
-Content-Type: text/plain;
-	charset=utf-8
-Mime-Version: 1.0 (Mac OS X Mail 16.0 \(3774.300.61.1.2\))
-From: Michael Sweet <msweet@msweet.org>
-In-Reply-To: <d3f8250b-8d31-4806-a214-e0fca527844f@apevzner.com>
-Date: Wed, 13 Dec 2023 17:39:36 -0500
-Content-Transfer-Encoding: quoted-printable
-Message-Id: <8F0FFB8F-E1E8-44DB-8A53-3E3386A049DE@msweet.org>
+Return-Path: <doug@uq.edu.au>
+DKIM-Filter: OpenDKIM Filter v2.11.0 smtp2.osuosl.org A8E9C4367F
+DKIM-Filter: OpenDKIM Filter v2.11.0 smtp2.osuosl.org CC692402C3
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple;
+ d=uq.edu.au; s=s1ces; t=1702513484;
+ h=from:to:subject:date:message-id:references:in-reply-to:
+ content-transfer-encoding:mime-version;
+ bh=aOEk+nRpOtXhBtRIXietiOzF5EJXPauSevX+MRj9P/w=;
+ b=MkxYXt65swVsIVgcUO2igQGPI9QMC38uNm+vID9WO9txWYpRfdgtZwIW
+ WtPIrHHhwtStwd0FAObWc4pI75/BxrZcNmCyhZ9ilUrRZZMJbJHOD+2f3
+ bcOJD3l5WScLgJoVPLXyaTkf4Gga0hpDUQp3HTmGtikJTHwW13T4i0/nY
+ plyZ9WGJzmrO7BJcqvynZJyrScAG8/4e3X05WbqmS4JrSw/VjQSWhqwtl
+ 0BGDjZ6WeX8SKSeX5cxzk62epfE5RmQi7tfni1bZV9MelWLbdgEnVrZbM
+ 8i4V33qlEqLNRWswcoNNUpqDbXbQzlFDaQhAcMvBTHXZ4BpD7UB6QRJRp w==;
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=uq.edu.au; s=selector1;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-SenderADCheck;
+ bh=aOEk+nRpOtXhBtRIXietiOzF5EJXPauSevX+MRj9P/w=;
+ b=hb1xWn2caeEEBM6DZvmLTg8mR7oC4qK33Dwh659FyTOFzwIx2tJVrGfNe2s1F3ise2bPQHE2VSenXyLDPJ1y/AuqR/JA25818kmsGAd6vHClPVleQBv+wnRwrXE53TLkXW0pJ+QDAX6Vi4IKHlRlX8KHHIIzZXIvnZKnRPuLtdk=
+From: Douglas Kosovic <doug@uq.edu.au>
+Date: Thu, 14 Dec 2023 00:24:33 +0000
+Message-ID: <SYBP282MB26176D7E8D1C09528DDBCFF7878CA@SYBP282MB2617.AUSP282.PROD.OUTLOOK.COM>
 References: <4ea25bd1-6a61-4987-ad2a-41e3e8d4437c@apevzner.com>
  <3d5242f7-2871-4d97-857e-1cb697782765@apevzner.com>
  <8056ba21-29f8-4a46-8763-7579db1b5b6c@gmail.com>
  <d3f8250b-8d31-4806-a214-e0fca527844f@apevzner.com>
+ <8F0FFB8F-E1E8-44DB-8A53-3E3386A049DE@msweet.org>
+In-Reply-To: <8F0FFB8F-E1E8-44DB-8A53-3E3386A049DE@msweet.org>
+Content-Language: en-US
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: base64
+MIME-Version: 1.0
 Subject: Re: [Printing-architecture] RFC: Pantum M7300FDW and similar
 List-Id: Printing architecture under linux
  <printing-architecture.lists.linux-foundation.org>
@@ -31,197 +39,174 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>, 
  <mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Alexander Pevzner <pzz@apevzner.com>
-Cc: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>, Till Kamppeter <till.kamppeter@gmail.com>
+To: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>
 
-Alex,
-
-Windows 10 is the first version of Windows with the (Mopria-based) IPP =
-class driver.  Earlier versions of Windows only supported the =
-experimental IPP/1.0 (!) and relied on drivers to send data to IPP =
-printers...
-
-
-> On Dec 13, 2023, at 4:22=E2=80=AFPM, Alexander Pevzner =
-<pzz@apevzner.com> wrote:
->=20
-> Till, I will try.
->=20
-> I already tried with Windows 7 that I have running in VM and didn't =
-succeed (it wants to install Pantum drivers).
->=20
-> I'll try to install Windows 10 or 11 into VM and will see how it will =
-work. However, it will take some time.
->=20
-> I'll return with results when results will be available.
->=20
-> On 12/13/23 20:31, Till Kamppeter wrote:
->> Alex, I will perhaps reply in more detail later, but I would like you =
-to test something:
->> You say that Windows always wants you to install a driver.
->> Windows principally supports driverless printing. Have a look at
->> https://openprinting.github.io/wsl-printer-app/
->> This is a HOWTO to eun a Printer Application (=3D emulation of =
-driverless printer) under WSL and Windows sees this as a driverless =
-printer.
->> So now click "Cancel" in any pop-up of Windows telling you to install =
-a printer driver.
->> Now go to the HOWTO and only see the steps to set up a driverless =
-printer (you will not need WSL nor a Printer Application).
->> So you start in the section which starts with "Add the printer to =
-Windows".
->> Look in the "Bluetooth & devices > Printers & scanners" whether there =
-is an entry which could represent your printer. Select it, finish the =
-setup and test.
->> Is your printer working at all?
->> Is it completely working?
->> Does it show the same problems as under Linux?
->> If it works under Windows we will need to reverse-engineer what =
-Windows is doing and compare it to what CUPS is doing.
->>    Till
->> On 13/12/2023 16:08, Alexander Pevzner wrote:
->>> Michael,
->>>=20
->>> thank you very much for your response!
->>>=20
->>> On 12/10/23 18:11, Michael Sweet wrote:
->>>> This code has been the focus of *six* CVEs since the move to Git in =
-2015 - not quite one CVE a year, but enough to be concerning.  More =
-specifically, commit 5754bccee =
-(https://github.com/apple/cups/issues/5630) addressed the code that =
-allowed "alternate" encodings of member attributes that was causing =
-interoperability issues.
->>>=20
->>> CVE is about security, not about interoperability. You told several =
-times that you are concerned about security risks associated with my =
-patch, so it sounds like some kind if security review could be useful =
-here.
->>>=20
->>> BTW, where do you see security risk, in the changed (relaxed) IPP =
-"syntactical" rules by itself or in my implementation (code =
-modifications) made to implement this change?
->>>=20
->>> Regarding interoperatibily, issue #5630, as I understand it, means =
-that some clients that were able to speak with CUPS were not able to =
-speak with real printers, because CUPS was too forgiving while printers =
-were not.
->>>=20
->>> First of all, I don't agree that this is about interoperatibility. =
-This is about applicability of CUPS as strong testing/diagnostics tool. =
-Being too forgiving, CUPS by itself still remains compatible with =
-invalid implementations, but becomes not very useful to test these =
-implementations for correctness (which is not primary purpose of CUPS, =
-BTW).
->>>=20
->>> Second, if I relax parsing of IPP responses, but not of incoming IPP =
-requests, looks like we can achieve two goals: to be strict enough for =
-testing of clients and to be compatible with broken hardware as well, =
-isn't it?
->>>=20
->>> And I know that the same IPP parser is used as a part of IPP =
-self-certifications tools. If I will implement "relaxed IPP parsing" as =
-an option, disabled by default, and will only enable it where CUPS =
-interprets responses from printers, it will not change CUPS behavior as =
-server and will not change IPP tools behavior, at this case will it look =
-good enough for you?
->>>=20
->>>>> 1. I agree, that following specification is very important, and, =
-where possible, trying to do so.
->>>>=20
->>>> IPP started in the IETF and the PWG has continued the IETF's goals =
-for conformance terminology: any requirements are there to ensure =
-interoperability and proper functionality.  Postel's Law doesn't apply =
-when it breaks interoperability and potentially has bad side effects. =
-See the following for some applicable reading/links:
->>>=20
->>> I agree that interoperability should not be broken, but I don't see =
-how my (updated) proposal, explained above, can break interoperability =
-with anything.
->>>=20
->>> Please, correct me, if I wrong.
->>>=20
->>>> They already won't be able to print from iOS or macOS, and probably =
-not from Windows (IPP class driver) or Android (Mopria print provider) =
-because the Get-Printer-Attributes response cannot be parsed.  And if =
-they actually ask someone about the problem they can be pointed to =
-Pantum to get a firmware update.
->>>=20
->>> Interesting that this device included into the Apple's list of =
-supported AirPrint devices: https://support.apple.com/en-us/HT201311
->>>=20
->>> Unfortunately, I don't have any iOS/macOS device to test by myself. =
-Regarding Windows, Windows wants to install vendor driver (which is =
-known to work) and I don't know is it any way to force Windows to print =
-"driverlessly".
->>>=20
->>>> Firmware update capability is required for both AirPrint and =
-Mopria, and at least the AirPrint folks require the ability to upgrade =
-without special software and highly recommend automatic firmware updates =
-over the Internet whenever possible...  Pantum is an AirPrint =
-licensee...
->>>=20
->>> Device has offline/online upgrade options. For offline upgdade, I =
-was not able to find firmware image for this model (and other member of =
-this discussion writes the same). Online upgrade claims that the newest =
-version of firmware already installed.
->>>=20
->>>> You need to notify PANTUM that they have an issue.  Regardless of =
-whether you believe that a user will update the firmware, they don't =
-even have an opportunity unless you report the issue to the =
-manufacturer.  And in fact, you don't even know whether PANTUM has =
-already fixed the issue!?!
->>>=20
->>> I'm doing my best to reach them, but didn't succeed so far. If and =
-when I'll get any feedback, I'll notify you (I mean all readers of this =
-discussion).
->>>=20
->>>> Let's say we accept invalid collection attribute values.  We get =
-the media-col-database and media-col-ready values from the printer, and =
-then send it a media-col collection to specify printing from tray 2 on =
-cardstock: will the printer be able to understand a correctly encoded =
-collection value for media-col if it doesn't return valid collection =
-values for media-col-database/ready?  (probably not)
->>>=20
->>> I wrote the test. Printer correctly mirrors media-col parameters in =
-the Print-Job response (and my test encodes requests correctly) but I =
-don't see any change of the printed image when I play with these =
-parameters.
->>>=20
->>>> Did you fix the problem for the user?  Is this better?
->>>=20
->>> In general yes, because actually all printer functionality is =
-available for user.
->>>=20
->>> Regarding tray selection, printer chooses paper from the manual tray =
-if it is not empty or from the automatic tray otherwise, and I'm not =
-sure if it can be changed programmatically. In any case, it is =
-reasonable behavior.
->>>=20
->>>>> I'd prefer to make it even more precious, affection only =
-communication with Pantum devices. But in that places of the CUPS code =
-where responses are parsed there is no information what kind devices we =
-are speaking with.
->>>>=20
->>>> And I would be even more opposed to such a change.  At that point =
-you have created a printer driver...
->>>=20
->>> Printer driver may be a way to ho, though at this case it is 1000x =
-bigger effort.
->>>=20
->>> But at this case we need to provide a mechanism to disable =
-auto-discovered printer in a favor of device instance, found and handled =
-by the driver.
->>>=20
->>> And another thing, we loose IPP over USB functionality (or ipp-usb =
-must mimic their printer in enough details to fool the driver that it =
-speaks with actual hardware printer).
->>>=20
->=20
-> --=20
->=20
-> Wishes, Alexander Pevzner (pzz@apevzner.com)
->=20
-
-________________________
-Michael Sweet
-
+SGksDQoNCkp1c3QgYSBmZXcgbW9yZSBjb21tZW50cyB0byBhZGQgYWJvdXQgdGhlIE1vcHJpYS1i
+YXNlZCBJUFAgY2xhc3MgZHJpdmVyLCB5b3UgY2FuIG1hbnVhbGx5IGFkZCBhbiBJUFAgMi4wIG9y
+IGxhdGVyIHByaW50ZXIgZnJvbSB0aGUgY29tbWFuZC1saW5lIHdpdGggZWl0aGVyIG9mIHRoZSBm
+b2xsb3dpbmcuDQoNCkZyb20gYW4gYWRtaW5pc3RyYXRvciBQb3dlclNoZWxsIGNvbW1hbmQgbGlu
+ZSwgcnVuIHNvbWV0aGluZyBzaW1pbGFyIHRvIHRoZSBmb2xsb3dpbmcgUG93ZXJTaGVsbCBjb21h
+bmRsZXQgOg0KDQogICAgQWRkLVByaW50ZXIgLUlwcFVSTCBpcHA6Ly94eHgueHh4Lnh4eC54eHgv
+aXBwL3ByaW50DQoNCg0KQWx0ZXJuYXRpdmVseSB5b3UgY2FuIGRvIHRoZSBmb2xsb3dpbmcgb24g
+YSByZWd1bGFyIGNvbW1hbmQgcHJvbXB0IG9yIGZyb20gUG93ZXJTaGVsbCAoYW5kIHlvdSBkb24n
+dCBldmVuIG5lZWQgYWRtaW4gcHJpdmlsZWdlcyB0byBhZGQgYSBkcml2ZXJsZXNzIHByaW50ZXIp
+Og0KDQogICAgcnVuZGxsMzIgcHJpbnR1aS5kbGwsUHJpbnRVSUVudHJ5IC9pcA0KDQp0aGVuIGNs
+aWNrIE5leHQgYW5kIGVudGVyIHRoZSBJUFAgVVJMLi4uDQoNCg0KQ29tZXMgaW4gaGFuZHkgaWYg
+dGhlIHByaW50ZXIgY2FuJ3QgYmUgZGlzY292ZXJlZCB3aXRoIG1ETlMgKEJvbmpvaXVyKS4NCg0K
+DQoNCkNoZWVycywNCkRvdWcNCi0tLS0tT3JpZ2luYWwgTWVzc2FnZS0tLS0tDQpGcm9tOiBQcmlu
+dGluZy1hcmNoaXRlY3R1cmUgPHByaW50aW5nLWFyY2hpdGVjdHVyZS1ib3VuY2VzQGxpc3RzLmxp
+bnV4LWZvdW5kYXRpb24ub3JnPiBPbiBCZWhhbGYgT2YgTWljaGFlbCBTd2VldCB2aWEgUHJpbnRp
+bmctYXJjaGl0ZWN0dXJlDQpTZW50OiBUaHVyc2RheSwgRGVjZW1iZXIgMTQsIDIwMjMgODo0MCBB
+TQ0KVG86IEFsZXhhbmRlciBQZXZ6bmVyIDxwenpAYXBldnpuZXIuY29tPg0KQ2M6IHByaW50aW5n
+LWFyY2hpdGVjdHVyZUBsaXN0cy5saW51eC1mb3VuZGF0aW9uLm9yZzsgVGlsbCBLYW1wcGV0ZXIg
+PHRpbGwua2FtcHBldGVyQGdtYWlsLmNvbT4NClN1YmplY3Q6IFJlOiBbUHJpbnRpbmctYXJjaGl0
+ZWN0dXJlXSBSRkM6IFBhbnR1bSBNNzMwMEZEVyBhbmQgc2ltaWxhcg0KDQpBbGV4LA0KDQpXaW5k
+b3dzIDEwIGlzIHRoZSBmaXJzdCB2ZXJzaW9uIG9mIFdpbmRvd3Mgd2l0aCB0aGUgKE1vcHJpYS1i
+YXNlZCkgSVBQIGNsYXNzIGRyaXZlci4gIEVhcmxpZXIgdmVyc2lvbnMgb2YgV2luZG93cyBvbmx5
+IHN1cHBvcnRlZCB0aGUgZXhwZXJpbWVudGFsIElQUC8xLjAgKCEpIGFuZCByZWxpZWQgb24gZHJp
+dmVycyB0byBzZW5kIGRhdGEgdG8gSVBQIHByaW50ZXJzLi4uDQoNCg0KPiBPbiBEZWMgMTMsIDIw
+MjMsIGF0IDQ6MjLigK9QTSwgQWxleGFuZGVyIFBldnpuZXIgPHB6ekBhcGV2em5lci5jb20+IHdy
+b3RlOg0KPiANCj4gVGlsbCwgSSB3aWxsIHRyeS4NCj4gDQo+IEkgYWxyZWFkeSB0cmllZCB3aXRo
+IFdpbmRvd3MgNyB0aGF0IEkgaGF2ZSBydW5uaW5nIGluIFZNIGFuZCBkaWRuJ3Qgc3VjY2VlZCAo
+aXQgd2FudHMgdG8gaW5zdGFsbCBQYW50dW0gZHJpdmVycykuDQo+IA0KPiBJJ2xsIHRyeSB0byBp
+bnN0YWxsIFdpbmRvd3MgMTAgb3IgMTEgaW50byBWTSBhbmQgd2lsbCBzZWUgaG93IGl0IHdpbGwg
+d29yay4gSG93ZXZlciwgaXQgd2lsbCB0YWtlIHNvbWUgdGltZS4NCj4gDQo+IEknbGwgcmV0dXJu
+IHdpdGggcmVzdWx0cyB3aGVuIHJlc3VsdHMgd2lsbCBiZSBhdmFpbGFibGUuDQo+IA0KPiBPbiAx
+Mi8xMy8yMyAyMDozMSwgVGlsbCBLYW1wcGV0ZXIgd3JvdGU6DQo+PiBBbGV4LCBJIHdpbGwgcGVy
+aGFwcyByZXBseSBpbiBtb3JlIGRldGFpbCBsYXRlciwgYnV0IEkgd291bGQgbGlrZSB5b3UgdG8g
+dGVzdCBzb21ldGhpbmc6DQo+PiBZb3Ugc2F5IHRoYXQgV2luZG93cyBhbHdheXMgd2FudHMgeW91
+IHRvIGluc3RhbGwgYSBkcml2ZXIuDQo+PiBXaW5kb3dzIHByaW5jaXBhbGx5IHN1cHBvcnRzIGRy
+aXZlcmxlc3MgcHJpbnRpbmcuIEhhdmUgYSBsb29rIGF0IA0KPj4gaHR0cHM6Ly9vcGVucHJpbnRp
+bmcuZ2l0aHViLmlvL3dzbC1wcmludGVyLWFwcC8NCj4+IFRoaXMgaXMgYSBIT1dUTyB0byBldW4g
+YSBQcmludGVyIEFwcGxpY2F0aW9uICg9IGVtdWxhdGlvbiBvZiBkcml2ZXJsZXNzIHByaW50ZXIp
+IHVuZGVyIFdTTCBhbmQgV2luZG93cyBzZWVzIHRoaXMgYXMgYSBkcml2ZXJsZXNzIHByaW50ZXIu
+DQo+PiBTbyBub3cgY2xpY2sgIkNhbmNlbCIgaW4gYW55IHBvcC11cCBvZiBXaW5kb3dzIHRlbGxp
+bmcgeW91IHRvIGluc3RhbGwgYSBwcmludGVyIGRyaXZlci4NCj4+IE5vdyBnbyB0byB0aGUgSE9X
+VE8gYW5kIG9ubHkgc2VlIHRoZSBzdGVwcyB0byBzZXQgdXAgYSBkcml2ZXJsZXNzIHByaW50ZXIg
+KHlvdSB3aWxsIG5vdCBuZWVkIFdTTCBub3IgYSBQcmludGVyIEFwcGxpY2F0aW9uKS4NCj4+IFNv
+IHlvdSBzdGFydCBpbiB0aGUgc2VjdGlvbiB3aGljaCBzdGFydHMgd2l0aCAiQWRkIHRoZSBwcmlu
+dGVyIHRvIFdpbmRvd3MiLg0KPj4gTG9vayBpbiB0aGUgIkJsdWV0b290aCAmIGRldmljZXMgPiBQ
+cmludGVycyAmIHNjYW5uZXJzIiB3aGV0aGVyIHRoZXJlIGlzIGFuIGVudHJ5IHdoaWNoIGNvdWxk
+IHJlcHJlc2VudCB5b3VyIHByaW50ZXIuIFNlbGVjdCBpdCwgZmluaXNoIHRoZSBzZXR1cCBhbmQg
+dGVzdC4NCj4+IElzIHlvdXIgcHJpbnRlciB3b3JraW5nIGF0IGFsbD8NCj4+IElzIGl0IGNvbXBs
+ZXRlbHkgd29ya2luZz8NCj4+IERvZXMgaXQgc2hvdyB0aGUgc2FtZSBwcm9ibGVtcyBhcyB1bmRl
+ciBMaW51eD8NCj4+IElmIGl0IHdvcmtzIHVuZGVyIFdpbmRvd3Mgd2Ugd2lsbCBuZWVkIHRvIHJl
+dmVyc2UtZW5naW5lZXIgd2hhdCBXaW5kb3dzIGlzIGRvaW5nIGFuZCBjb21wYXJlIGl0IHRvIHdo
+YXQgQ1VQUyBpcyBkb2luZy4NCj4+ICAgIFRpbGwNCj4+IE9uIDEzLzEyLzIwMjMgMTY6MDgsIEFs
+ZXhhbmRlciBQZXZ6bmVyIHdyb3RlOg0KPj4+IE1pY2hhZWwsDQo+Pj4gDQo+Pj4gdGhhbmsgeW91
+IHZlcnkgbXVjaCBmb3IgeW91ciByZXNwb25zZSENCj4+PiANCj4+PiBPbiAxMi8xMC8yMyAxODox
+MSwgTWljaGFlbCBTd2VldCB3cm90ZToNCj4+Pj4gVGhpcyBjb2RlIGhhcyBiZWVuIHRoZSBmb2N1
+cyBvZiAqc2l4KiBDVkVzIHNpbmNlIHRoZSBtb3ZlIHRvIEdpdCBpbiAyMDE1IC0gbm90IHF1aXRl
+IG9uZSBDVkUgYSB5ZWFyLCBidXQgZW5vdWdoIHRvIGJlIGNvbmNlcm5pbmcuICBNb3JlIHNwZWNp
+ZmljYWxseSwgY29tbWl0IDU3NTRiY2NlZSAoaHR0cHM6Ly9naXRodWIuY29tL2FwcGxlL2N1cHMv
+aXNzdWVzLzU2MzApIGFkZHJlc3NlZCB0aGUgY29kZSB0aGF0IGFsbG93ZWQgImFsdGVybmF0ZSIg
+ZW5jb2RpbmdzIG9mIG1lbWJlciBhdHRyaWJ1dGVzIHRoYXQgd2FzIGNhdXNpbmcgaW50ZXJvcGVy
+YWJpbGl0eSBpc3N1ZXMuDQo+Pj4gDQo+Pj4gQ1ZFIGlzIGFib3V0IHNlY3VyaXR5LCBub3QgYWJv
+dXQgaW50ZXJvcGVyYWJpbGl0eS4gWW91IHRvbGQgc2V2ZXJhbCB0aW1lcyB0aGF0IHlvdSBhcmUg
+Y29uY2VybmVkIGFib3V0IHNlY3VyaXR5IHJpc2tzIGFzc29jaWF0ZWQgd2l0aCBteSBwYXRjaCwg
+c28gaXQgc291bmRzIGxpa2Ugc29tZSBraW5kIGlmIHNlY3VyaXR5IHJldmlldyBjb3VsZCBiZSB1
+c2VmdWwgaGVyZS4NCj4+PiANCj4+PiBCVFcsIHdoZXJlIGRvIHlvdSBzZWUgc2VjdXJpdHkgcmlz
+aywgaW4gdGhlIGNoYW5nZWQgKHJlbGF4ZWQpIElQUCAic3ludGFjdGljYWwiIHJ1bGVzIGJ5IGl0
+c2VsZiBvciBpbiBteSBpbXBsZW1lbnRhdGlvbiAoY29kZSBtb2RpZmljYXRpb25zKSBtYWRlIHRv
+IGltcGxlbWVudCB0aGlzIGNoYW5nZT8NCj4+PiANCj4+PiBSZWdhcmRpbmcgaW50ZXJvcGVyYXRp
+YmlseSwgaXNzdWUgIzU2MzAsIGFzIEkgdW5kZXJzdGFuZCBpdCwgbWVhbnMgdGhhdCBzb21lIGNs
+aWVudHMgdGhhdCB3ZXJlIGFibGUgdG8gc3BlYWsgd2l0aCBDVVBTIHdlcmUgbm90IGFibGUgdG8g
+c3BlYWsgd2l0aCByZWFsIHByaW50ZXJzLCBiZWNhdXNlIENVUFMgd2FzIHRvbyBmb3JnaXZpbmcg
+d2hpbGUgcHJpbnRlcnMgd2VyZSBub3QuDQo+Pj4gDQo+Pj4gRmlyc3Qgb2YgYWxsLCBJIGRvbid0
+IGFncmVlIHRoYXQgdGhpcyBpcyBhYm91dCBpbnRlcm9wZXJhdGliaWxpdHkuIFRoaXMgaXMgYWJv
+dXQgYXBwbGljYWJpbGl0eSBvZiBDVVBTIGFzIHN0cm9uZyB0ZXN0aW5nL2RpYWdub3N0aWNzIHRv
+b2wuIEJlaW5nIHRvbyBmb3JnaXZpbmcsIENVUFMgYnkgaXRzZWxmIHN0aWxsIHJlbWFpbnMgY29t
+cGF0aWJsZSB3aXRoIGludmFsaWQgaW1wbGVtZW50YXRpb25zLCBidXQgYmVjb21lcyBub3QgdmVy
+eSB1c2VmdWwgdG8gdGVzdCB0aGVzZSBpbXBsZW1lbnRhdGlvbnMgZm9yIGNvcnJlY3RuZXNzICh3
+aGljaCBpcyBub3QgcHJpbWFyeSBwdXJwb3NlIG9mIENVUFMsIEJUVykuDQo+Pj4gDQo+Pj4gU2Vj
+b25kLCBpZiBJIHJlbGF4IHBhcnNpbmcgb2YgSVBQIHJlc3BvbnNlcywgYnV0IG5vdCBvZiBpbmNv
+bWluZyBJUFAgcmVxdWVzdHMsIGxvb2tzIGxpa2Ugd2UgY2FuIGFjaGlldmUgdHdvIGdvYWxzOiB0
+byBiZSBzdHJpY3QgZW5vdWdoIGZvciB0ZXN0aW5nIG9mIGNsaWVudHMgYW5kIHRvIGJlIGNvbXBh
+dGlibGUgd2l0aCBicm9rZW4gaGFyZHdhcmUgYXMgd2VsbCwgaXNuJ3QgaXQ/DQo+Pj4gDQo+Pj4g
+QW5kIEkga25vdyB0aGF0IHRoZSBzYW1lIElQUCBwYXJzZXIgaXMgdXNlZCBhcyBhIHBhcnQgb2Yg
+SVBQIHNlbGYtY2VydGlmaWNhdGlvbnMgdG9vbHMuIElmIEkgd2lsbCBpbXBsZW1lbnQgInJlbGF4
+ZWQgSVBQIHBhcnNpbmciIGFzIGFuIG9wdGlvbiwgZGlzYWJsZWQgYnkgZGVmYXVsdCwgYW5kIHdp
+bGwgb25seSBlbmFibGUgaXQgd2hlcmUgQ1VQUyBpbnRlcnByZXRzIHJlc3BvbnNlcyBmcm9tIHBy
+aW50ZXJzLCBpdCB3aWxsIG5vdCBjaGFuZ2UgQ1VQUyBiZWhhdmlvciBhcyBzZXJ2ZXIgYW5kIHdp
+bGwgbm90IGNoYW5nZSBJUFAgdG9vbHMgYmVoYXZpb3IsIGF0IHRoaXMgY2FzZSB3aWxsIGl0IGxv
+b2sgZ29vZCBlbm91Z2ggZm9yIHlvdT8NCj4+PiANCj4+Pj4+IDEuIEkgYWdyZWUsIHRoYXQgZm9s
+bG93aW5nIHNwZWNpZmljYXRpb24gaXMgdmVyeSBpbXBvcnRhbnQsIGFuZCwgd2hlcmUgcG9zc2li
+bGUsIHRyeWluZyB0byBkbyBzby4NCj4+Pj4gDQo+Pj4+IElQUCBzdGFydGVkIGluIHRoZSBJRVRG
+IGFuZCB0aGUgUFdHIGhhcyBjb250aW51ZWQgdGhlIElFVEYncyBnb2FscyBmb3IgY29uZm9ybWFu
+Y2UgdGVybWlub2xvZ3k6IGFueSByZXF1aXJlbWVudHMgYXJlIHRoZXJlIHRvIGVuc3VyZSBpbnRl
+cm9wZXJhYmlsaXR5IGFuZCBwcm9wZXIgZnVuY3Rpb25hbGl0eS4gIFBvc3RlbCdzIExhdyBkb2Vz
+bid0IGFwcGx5IHdoZW4gaXQgYnJlYWtzIGludGVyb3BlcmFiaWxpdHkgYW5kIHBvdGVudGlhbGx5
+IGhhcyBiYWQgc2lkZSBlZmZlY3RzLiBTZWUgdGhlIGZvbGxvd2luZyBmb3Igc29tZSBhcHBsaWNh
+YmxlIHJlYWRpbmcvbGlua3M6DQo+Pj4gDQo+Pj4gSSBhZ3JlZSB0aGF0IGludGVyb3BlcmFiaWxp
+dHkgc2hvdWxkIG5vdCBiZSBicm9rZW4sIGJ1dCBJIGRvbid0IHNlZSBob3cgbXkgKHVwZGF0ZWQp
+IHByb3Bvc2FsLCBleHBsYWluZWQgYWJvdmUsIGNhbiBicmVhayBpbnRlcm9wZXJhYmlsaXR5IHdp
+dGggYW55dGhpbmcuDQo+Pj4gDQo+Pj4gUGxlYXNlLCBjb3JyZWN0IG1lLCBpZiBJIHdyb25nLg0K
+Pj4+IA0KPj4+PiBUaGV5IGFscmVhZHkgd29uJ3QgYmUgYWJsZSB0byBwcmludCBmcm9tIGlPUyBv
+ciBtYWNPUywgYW5kIHByb2JhYmx5IG5vdCBmcm9tIFdpbmRvd3MgKElQUCBjbGFzcyBkcml2ZXIp
+IG9yIEFuZHJvaWQgKE1vcHJpYSBwcmludCBwcm92aWRlcikgYmVjYXVzZSB0aGUgR2V0LVByaW50
+ZXItQXR0cmlidXRlcyByZXNwb25zZSBjYW5ub3QgYmUgcGFyc2VkLiAgQW5kIGlmIHRoZXkgYWN0
+dWFsbHkgYXNrIHNvbWVvbmUgYWJvdXQgdGhlIHByb2JsZW0gdGhleSBjYW4gYmUgcG9pbnRlZCB0
+byBQYW50dW0gdG8gZ2V0IGEgZmlybXdhcmUgdXBkYXRlLg0KPj4+IA0KPj4+IEludGVyZXN0aW5n
+IHRoYXQgdGhpcyBkZXZpY2UgaW5jbHVkZWQgaW50byB0aGUgQXBwbGUncyBsaXN0IG9mIA0KPj4+
+IHN1cHBvcnRlZCBBaXJQcmludCBkZXZpY2VzOiBodHRwczovL3N1cHBvcnQuYXBwbGUuY29tL2Vu
+LXVzL0hUMjAxMzExDQo+Pj4gDQo+Pj4gVW5mb3J0dW5hdGVseSwgSSBkb24ndCBoYXZlIGFueSBp
+T1MvbWFjT1MgZGV2aWNlIHRvIHRlc3QgYnkgbXlzZWxmLiBSZWdhcmRpbmcgV2luZG93cywgV2lu
+ZG93cyB3YW50cyB0byBpbnN0YWxsIHZlbmRvciBkcml2ZXIgKHdoaWNoIGlzIGtub3duIHRvIHdv
+cmspIGFuZCBJIGRvbid0IGtub3cgaXMgaXQgYW55IHdheSB0byBmb3JjZSBXaW5kb3dzIHRvIHBy
+aW50ICJkcml2ZXJsZXNzbHkiLg0KPj4+IA0KPj4+PiBGaXJtd2FyZSB1cGRhdGUgY2FwYWJpbGl0
+eSBpcyByZXF1aXJlZCBmb3IgYm90aCBBaXJQcmludCBhbmQgTW9wcmlhLCBhbmQgYXQgbGVhc3Qg
+dGhlIEFpclByaW50IGZvbGtzIHJlcXVpcmUgdGhlIGFiaWxpdHkgdG8gdXBncmFkZSB3aXRob3V0
+IHNwZWNpYWwgc29mdHdhcmUgYW5kIGhpZ2hseSByZWNvbW1lbmQgYXV0b21hdGljIGZpcm13YXJl
+IHVwZGF0ZXMgb3ZlciB0aGUgSW50ZXJuZXQgd2hlbmV2ZXIgcG9zc2libGUuLi4gIFBhbnR1bSBp
+cyBhbiBBaXJQcmludCBsaWNlbnNlZS4uLg0KPj4+IA0KPj4+IERldmljZSBoYXMgb2ZmbGluZS9v
+bmxpbmUgdXBncmFkZSBvcHRpb25zLiBGb3Igb2ZmbGluZSB1cGdkYWRlLCBJIHdhcyBub3QgYWJs
+ZSB0byBmaW5kIGZpcm13YXJlIGltYWdlIGZvciB0aGlzIG1vZGVsIChhbmQgb3RoZXIgbWVtYmVy
+IG9mIHRoaXMgZGlzY3Vzc2lvbiB3cml0ZXMgdGhlIHNhbWUpLiBPbmxpbmUgdXBncmFkZSBjbGFp
+bXMgdGhhdCB0aGUgbmV3ZXN0IHZlcnNpb24gb2YgZmlybXdhcmUgYWxyZWFkeSBpbnN0YWxsZWQu
+DQo+Pj4gDQo+Pj4+IFlvdSBuZWVkIHRvIG5vdGlmeSBQQU5UVU0gdGhhdCB0aGV5IGhhdmUgYW4g
+aXNzdWUuICBSZWdhcmRsZXNzIG9mIHdoZXRoZXIgeW91IGJlbGlldmUgdGhhdCBhIHVzZXIgd2ls
+bCB1cGRhdGUgdGhlIGZpcm13YXJlLCB0aGV5IGRvbid0IGV2ZW4gaGF2ZSBhbiBvcHBvcnR1bml0
+eSB1bmxlc3MgeW91IHJlcG9ydCB0aGUgaXNzdWUgdG8gdGhlIG1hbnVmYWN0dXJlci4gIEFuZCBp
+biBmYWN0LCB5b3UgZG9uJ3QgZXZlbiBrbm93IHdoZXRoZXIgUEFOVFVNIGhhcyBhbHJlYWR5IGZp
+eGVkIHRoZSBpc3N1ZSE/IQ0KPj4+IA0KPj4+IEknbSBkb2luZyBteSBiZXN0IHRvIHJlYWNoIHRo
+ZW0sIGJ1dCBkaWRuJ3Qgc3VjY2VlZCBzbyBmYXIuIElmIGFuZCB3aGVuIEknbGwgZ2V0IGFueSBm
+ZWVkYmFjaywgSSdsbCBub3RpZnkgeW91IChJIG1lYW4gYWxsIHJlYWRlcnMgb2YgdGhpcyBkaXNj
+dXNzaW9uKS4NCj4+PiANCj4+Pj4gTGV0J3Mgc2F5IHdlIGFjY2VwdCBpbnZhbGlkIGNvbGxlY3Rp
+b24gYXR0cmlidXRlIHZhbHVlcy4gIFdlIGdldCANCj4+Pj4gdGhlIG1lZGlhLWNvbC1kYXRhYmFz
+ZSBhbmQgbWVkaWEtY29sLXJlYWR5IHZhbHVlcyBmcm9tIHRoZSBwcmludGVyLCANCj4+Pj4gYW5k
+IHRoZW4gc2VuZCBpdCBhIG1lZGlhLWNvbCBjb2xsZWN0aW9uIHRvIHNwZWNpZnkgcHJpbnRpbmcg
+ZnJvbSANCj4+Pj4gdHJheSAyIG9uIGNhcmRzdG9jazogd2lsbCB0aGUgcHJpbnRlciBiZSBhYmxl
+IHRvIHVuZGVyc3RhbmQgYSANCj4+Pj4gY29ycmVjdGx5IGVuY29kZWQgY29sbGVjdGlvbiB2YWx1
+ZSBmb3IgbWVkaWEtY29sIGlmIGl0IGRvZXNuJ3QgDQo+Pj4+IHJldHVybiB2YWxpZCBjb2xsZWN0
+aW9uIHZhbHVlcyBmb3IgbWVkaWEtY29sLWRhdGFiYXNlL3JlYWR5PyAgDQo+Pj4+IChwcm9iYWJs
+eSBub3QpDQo+Pj4gDQo+Pj4gSSB3cm90ZSB0aGUgdGVzdC4gUHJpbnRlciBjb3JyZWN0bHkgbWly
+cm9ycyBtZWRpYS1jb2wgcGFyYW1ldGVycyBpbiB0aGUgUHJpbnQtSm9iIHJlc3BvbnNlIChhbmQg
+bXkgdGVzdCBlbmNvZGVzIHJlcXVlc3RzIGNvcnJlY3RseSkgYnV0IEkgZG9uJ3Qgc2VlIGFueSBj
+aGFuZ2Ugb2YgdGhlIHByaW50ZWQgaW1hZ2Ugd2hlbiBJIHBsYXkgd2l0aCB0aGVzZSBwYXJhbWV0
+ZXJzLg0KPj4+IA0KPj4+PiBEaWQgeW91IGZpeCB0aGUgcHJvYmxlbSBmb3IgdGhlIHVzZXI/ICBJ
+cyB0aGlzIGJldHRlcj8NCj4+PiANCj4+PiBJbiBnZW5lcmFsIHllcywgYmVjYXVzZSBhY3R1YWxs
+eSBhbGwgcHJpbnRlciBmdW5jdGlvbmFsaXR5IGlzIGF2YWlsYWJsZSBmb3IgdXNlci4NCj4+PiAN
+Cj4+PiBSZWdhcmRpbmcgdHJheSBzZWxlY3Rpb24sIHByaW50ZXIgY2hvb3NlcyBwYXBlciBmcm9t
+IHRoZSBtYW51YWwgdHJheSBpZiBpdCBpcyBub3QgZW1wdHkgb3IgZnJvbSB0aGUgYXV0b21hdGlj
+IHRyYXkgb3RoZXJ3aXNlLCBhbmQgSSdtIG5vdCBzdXJlIGlmIGl0IGNhbiBiZSBjaGFuZ2VkIHBy
+b2dyYW1tYXRpY2FsbHkuIEluIGFueSBjYXNlLCBpdCBpcyByZWFzb25hYmxlIGJlaGF2aW9yLg0K
+Pj4+IA0KPj4+Pj4gSSdkIHByZWZlciB0byBtYWtlIGl0IGV2ZW4gbW9yZSBwcmVjaW91cywgYWZm
+ZWN0aW9uIG9ubHkgY29tbXVuaWNhdGlvbiB3aXRoIFBhbnR1bSBkZXZpY2VzLiBCdXQgaW4gdGhh
+dCBwbGFjZXMgb2YgdGhlIENVUFMgY29kZSB3aGVyZSByZXNwb25zZXMgYXJlIHBhcnNlZCB0aGVy
+ZSBpcyBubyBpbmZvcm1hdGlvbiB3aGF0IGtpbmQgZGV2aWNlcyB3ZSBhcmUgc3BlYWtpbmcgd2l0
+aC4NCj4+Pj4gDQo+Pj4+IEFuZCBJIHdvdWxkIGJlIGV2ZW4gbW9yZSBvcHBvc2VkIHRvIHN1Y2gg
+YSBjaGFuZ2UuICBBdCB0aGF0IHBvaW50IHlvdSBoYXZlIGNyZWF0ZWQgYSBwcmludGVyIGRyaXZl
+ci4uLg0KPj4+IA0KPj4+IFByaW50ZXIgZHJpdmVyIG1heSBiZSBhIHdheSB0byBobywgdGhvdWdo
+IGF0IHRoaXMgY2FzZSBpdCBpcyAxMDAweCBiaWdnZXIgZWZmb3J0Lg0KPj4+IA0KPj4+IEJ1dCBh
+dCB0aGlzIGNhc2Ugd2UgbmVlZCB0byBwcm92aWRlIGEgbWVjaGFuaXNtIHRvIGRpc2FibGUgYXV0
+by1kaXNjb3ZlcmVkIHByaW50ZXIgaW4gYSBmYXZvciBvZiBkZXZpY2UgaW5zdGFuY2UsIGZvdW5k
+IGFuZCBoYW5kbGVkIGJ5IHRoZSBkcml2ZXIuDQo+Pj4gDQo+Pj4gQW5kIGFub3RoZXIgdGhpbmcs
+IHdlIGxvb3NlIElQUCBvdmVyIFVTQiBmdW5jdGlvbmFsaXR5IChvciBpcHAtdXNiIG11c3QgbWlt
+aWMgdGhlaXIgcHJpbnRlciBpbiBlbm91Z2ggZGV0YWlscyB0byBmb29sIHRoZSBkcml2ZXIgdGhh
+dCBpdCBzcGVha3Mgd2l0aCBhY3R1YWwgaGFyZHdhcmUgcHJpbnRlcikuDQo+Pj4gDQo+IA0KPiAt
+LQ0KPiANCj4gV2lzaGVzLCBBbGV4YW5kZXIgUGV2em5lciAocHp6QGFwZXZ6bmVyLmNvbSkNCj4g
+DQoNCl9fX19fX19fX19fX19fX19fX19fX19fXw0KTWljaGFlbCBTd2VldA0KDQpfX19fX19fX19f
+X19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fXw0KUHJpbnRpbmctYXJjaGl0ZWN0
+dXJlIG1haWxpbmcgbGlzdA0KUHJpbnRpbmctYXJjaGl0ZWN0dXJlQGxpc3RzLmxpbnV4LWZvdW5k
+YXRpb24ub3JnDQpodHRwczovL2xpc3RzLmxpbnV4Zm91bmRhdGlvbi5vcmcvbWFpbG1hbi9saXN0
+aW5mby9wcmludGluZy1hcmNoaXRlY3R1cmUNCg==
