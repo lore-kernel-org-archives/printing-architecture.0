@@ -1,28 +1,21 @@
-Return-Path: <till.kamppeter@gmail.com>
-DKIM-Filter: OpenDKIM Filter v2.11.0 smtp2.osuosl.org C1CFB40207
-DKIM-Filter: OpenDKIM Filter v2.11.0 smtp2.osuosl.org 45886400D7
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=gmail.com; s=20230601; t=1702839608; x=1703444408;
- darn=lists.linux-foundation.org; 
- h=content-transfer-encoding:subject:from:cc:to:content-language
- :user-agent:mime-version:date:message-id:from:to:cc:subject:date
- :message-id:reply-to;
- bh=HCR8qyv3oHl28zwmNobbZyA5yVCi2cUC99ENF7cxNVo=;
- b=NV/0C2GASCl3qRRCXFj/DwBUnwiTH+A3mgDOuJvKzrlf+da5gOAnSLvTbHtmMYIrxc
- e2U0SOs9OrX+qJdtSk6oEXNvF+oYaTeXfVXnZdFUtL6LPrqdz8flyu9dThb/ukeQ/Cij
- dGxTYFTI8KtMv6kDLmilXEZpiM9YFlnljkrYbELNovq+HEk1j6fL8jduFU9PdFwcpoPL
- qVxqNvLYADfhwFHfSQFWClYE9q1Od3J4ldK0SJuECGEqthkYrpNbQNf7KiEyxmWSENHV
- 7lg8WGGRnMM1h3N1Ifwed80pqI8M43rTtS71c+f4R3gdcCf13yAx+/9OTRCGt33evgX9
- slIw==
-Message-ID: <00f9e2e1-b496-4004-91b3-5ef13afdf3ff@gmail.com>
-Date: Sun, 17 Dec 2023 20:00:06 +0100
+Return-Path: <konstantin@linuxfoundation.org>
+DKIM-Filter: OpenDKIM Filter v2.11.0 smtp3.osuosl.org 1B73160F34
+DKIM-Filter: OpenDKIM Filter v2.11.0 smtp3.osuosl.org 3389160A7D
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=linuxfoundation.org;
+ s=korg; t=1702940541;
+ bh=3MMLBDBRdINi8ffa1IqCI8uDAfXuuG9VL3kaMJnOiFU=;
+ h=Date:From:To:Subject:From;
+ b=SRnzIPX9qG53D61Z8zWXwc4XpyRZ1p+8enP02HDvMJR0Mk8mGw0vMZVAJKUCAKGne
+ X3t8+4jQ+2kWD8O2Rp8LLsBTzDLEEB6aGeBHyU9gFqPMEr0ViUxYiOXbJnySRs4avI
+ PiFCFGCi8CQAbb3qELdSwLVeE68T9IMWbrPj9I6c=
+Date: Mon, 18 Dec 2023 18:02:20 -0500
+From: Konstantin Ryabitsev <konstantin@linuxfoundation.org>
+Message-ID: <20231218-khaki-adder-from-eldorado-aa4f1a@lemur>
 MIME-Version: 1.0
-Content-Language: en-US
-From: Till Kamppeter <till.kamppeter@gmail.com>
-Content-Type: text/plain; charset=UTF-8; format=flowed
-Content-Transfer-Encoding: 7bit
-Subject: [Printing-architecture] Congrats,
-	Mike! IPP Everywhere is now really Everywhere!
+Content-Type: text/plain; charset=utf-8
+Content-Disposition: inline
+Subject: [Printing-architecture] PSA: this list is moving to lists.linux.dev
+	(no action required)
 List-Id: Printing architecture under linux
  <printing-architecture.lists.linux-foundation.org>
 List-Unsubscribe: <https://lists.linuxfoundation.org/mailman/options/printing-architecture>, 
@@ -32,30 +25,47 @@ List-Post: <mailto:printing-architecture@lists.linux-foundation.org>
 List-Help: <mailto:printing-architecture-request@lists.linux-foundation.org?subject=help>
 List-Subscribe: <https://lists.linuxfoundation.org/mailman/listinfo/printing-architecture>, 
  <mailto:printing-architecture-request@lists.linux-foundation.org?subject=subscribe>
-To: Michael Sweet <msweet@msweet.org>
-Cc: Open Printing <printing-architecture@lists.linux-foundation.org>
+To: printing-architecture@lists.linuxfoundation.org
 
-Mike,
 
-I want to express my congratulations as the driverless IPP printing, 
-which was created by you made it also to be the exclusive standard by 
-Microsoft in Windows now!
+Hello, all:
 
-Unfortunately, Microsoft did not adopt CUPS, but as you with CUPS 3.x 
-Microsoft is going all-IPP now and does away with classic printer 
-drivers, by their new Windows Protected Print architecture:
+The mailman-2 system running on lists.linuxfoundation.org is being
+decommissioned, so all lists currently hosted there will be found new homes.
 
-https://techcommunity.microsoft.com/t5/security-compliance-and-identity/a-new-modern-and-secure-print-experience-from-windows/ba-p/4002645
+This Thursday, December 21, at 11AM PST (19:00 UTC), this list will be migrated
+to live on lists.linux.dev, but the impact of this move should be minor:
 
-So all printer communication is via driverless IPP printing, in Windows 
-they are actually following Mopria but IPP Everywhere is very similar, 
-so we have IPP Everywhere everywhere now ...
+1. The new canonical list address will be printing-architecture@lists.linux.dev.
 
-Support for all non-driverless printers will get dropped and Microsoft 
-does not provide any legacy support for them (so the solution would be 
-WSL + Printer Applications: 
-https://openprinting.github.io/wsl-printer-app/).
+2. *The old address will continue to work* for the foreseeable future, so any
+   existing conversations can continue and any new messages sent to the old
+   list address will be properly delivered to all subscribers.
 
-So IPP and IPP Everwhere (driverless printing) were really successful, Mike!
+3. All members will be automatically subscribed to the new list, so no action
+   is required on anyone's part to keep receiving list mail.
 
-    Till
+4. The list will be archived on https://lore.kernel.org/printing-architecture/
+   with all prior archives automatically imported.
+
+5. The List-ID header will change, regardless to which address the message is
+   sent:
+
+   before: List-Id: <printing-architecture.lists.linuxfoundation.org>
+    after: List-Id: <printing-architecture.lists.linux.dev>
+
+   You will need to update your filtering rules if you filter based on the
+   contents of that header (on or after the migration date).
+
+6. The mailman footer will no longer be added to message bodies and the
+   subject will no longer be modified to insert [Printing-architecture]
+   (because this violates DMARC).
+
+7. Subscribing and unsubscribing will be done using the mlmmj supported
+   commands, documented at https://subspace.kernel.org/subscribing.html
+
+Please let me know if you have any questions or concerns. I will follow up
+on Thursday after the migration has been completed.
+
+Best regards,
+-K
