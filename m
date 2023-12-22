@@ -1,73 +1,75 @@
-Received: from smtp3.osuosl.org (smtp3.osuosl.org [140.211.166.136])
+Received: from smtp2.osuosl.org (smtp2.osuosl.org [140.211.166.133])
 	(using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
 	(No client certificate requested)
-	by smtp.subspace.kernel.org (Postfix) with ESMTPS id 7E995634F9
-	for <printing-architecture@lists.linux-foundation.org>; Thu, 21 Dec 2023 20:58:45 +0000 (UTC)
+	by smtp.subspace.kernel.org (Postfix) with ESMTPS id 7167C2EB08
+	for <printing-architecture@lists.linux-foundation.org>; Fri, 22 Dec 2023 18:31:39 +0000 (UTC)
 Authentication-Results: smtp.subspace.kernel.org;
-	dkim=pass (1024-bit key) header.d=msweet.org header.i=@msweet.org header.b="nuCn/EMB"
+	dkim=pass (1024-bit key) header.d=linuxfoundation.org header.i=@linuxfoundation.org header.b="qsiwcK5h"
 Received: from localhost (localhost [127.0.0.1])
-	by smtp3.osuosl.org (Postfix) with ESMTP id D65AB60ED8
-	for <printing-architecture@lists.linux-foundation.org>; Thu, 21 Dec 2023 20:58:44 +0000 (UTC)
-DKIM-Filter: OpenDKIM Filter v2.11.0 smtp3.osuosl.org D65AB60ED8
-Authentication-Results: smtp3.osuosl.org;
-	dkim=pass (1024-bit key) header.d=msweet.org header.i=@msweet.org header.a=rsa-sha256 header.s=default header.b=nuCn/EMB
+	by smtp2.osuosl.org (Postfix) with ESMTP id E214843974
+	for <printing-architecture@lists.linux-foundation.org>; Fri, 22 Dec 2023 18:31:38 +0000 (UTC)
+DKIM-Filter: OpenDKIM Filter v2.11.0 smtp2.osuosl.org E214843974
+Authentication-Results: smtp2.osuosl.org;
+	dkim=pass (1024-bit key) header.d=linuxfoundation.org header.i=@linuxfoundation.org header.a=rsa-sha256 header.s=korg header.b=qsiwcK5h
 X-Virus-Scanned: amavisd-new at osuosl.org
 X-Spam-Flag: NO
-X-Spam-Score: -1.6
+X-Spam-Score: -4.401
 X-Spam-Level:
-Received: from smtp3.osuosl.org ([127.0.0.1])
-	by localhost (smtp3.osuosl.org [127.0.0.1]) (amavisd-new, port 10024)
-	with ESMTP id x4AH9OX5Mm1S
+Received: from smtp2.osuosl.org ([127.0.0.1])
+	by localhost (smtp2.osuosl.org [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id 5aCMr5ieNkK2
 	for <printing-architecture@lists.linux-foundation.org>;
-	Thu, 21 Dec 2023 20:58:44 +0000 (UTC)
-Received: from mail.msweet.org (mail.msweet.org [173.255.209.91])
-	by smtp3.osuosl.org (Postfix) with ESMTPS id 250AD607A1
-	for <printing-architecture@lists.linux-foundation.org>; Thu, 21 Dec 2023 20:58:43 +0000 (UTC)
-DKIM-Filter: OpenDKIM Filter v2.11.0 smtp3.osuosl.org 250AD607A1
-Received: from smtpclient.apple (cbl-66-186-76-47.vianet.ca [66.186.76.47])
-	(using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
-	(No client certificate requested)
-	by mail.msweet.org (Postfix) with ESMTPSA id BE29E80445;
-	Thu, 21 Dec 2023 20:58:42 +0000 (UTC)
-DKIM-Filter: OpenDKIM Filter v2.11.0 mail.msweet.org BE29E80445
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=msweet.org;
-	s=default; t=1703192323;
-	bh=adPBwuJwCs7vDHLve+jfBjeOm+INdNgSn7ZyR7LDRgs=;
-	h=From:Date:Subject:To:From;
-	b=nuCn/EMBEZG9xnG4Tbc4LRUsbbxCYOzS9DBpV+q71eAG5zP/XeETinsJLMBa2TRH+
-	 sZ7wdZQUqkPg6y+9WHZFctjZ2YiklgGcKXFui5sOYSZTmntUavxiIUx16u2CHOsRby
-	 L2E37yVUHkU/NpzVeuVHSEU5GP7j/1GzQI6tVbgo=
-From: Michael Sweet <msweet@msweet.org>
-Content-Type: text/plain;
-	charset=us-ascii
-Content-Transfer-Encoding: 7bit
+	Fri, 22 Dec 2023 18:31:38 +0000 (UTC)
+Received: from ams.source.kernel.org (ams.source.kernel.org [IPv6:2604:1380:4601:e00::1])
+	by smtp2.osuosl.org (Postfix) with ESMTPS id BB7744049F
+	for <printing-architecture@lists.linux-foundation.org>; Fri, 22 Dec 2023 18:31:37 +0000 (UTC)
+DKIM-Filter: OpenDKIM Filter v2.11.0 smtp2.osuosl.org BB7744049F
+Received: from smtp.kernel.org (transwarp.subspace.kernel.org [100.75.92.58])
+	by ams.source.kernel.org (Postfix) with ESMTP id 4D43BB821AE;
+	Fri, 22 Dec 2023 18:31:35 +0000 (UTC)
+Received: by smtp.kernel.org (Postfix) with ESMTPSA id 81145C433C7;
+	Fri, 22 Dec 2023 18:31:34 +0000 (UTC)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=linuxfoundation.org;
+	s=korg; t=1703269894;
+	bh=SfRikO9DxgWGql4xJCEl9lw9bjMI2m3PAaX3qeXR25g=;
+	h=Date:From:To:Cc:Subject:References:In-Reply-To:From;
+	b=qsiwcK5hWuLiyZ4WxR/nCmx3S9mPmx2+JzyNJlK+d/f5e8GgrhoxhBcIKP3f9eoA0
+	 pzrBoJx03FVEXen9huToB4rRbsuZ5wJt9l+fM+fupYuwN64NuuMoMudYEU+3Ipol13
+	 4ozl/UD4evJddLNGvAPR2++o2UBzGhkxeNkMc0B8=
+Date: Fri, 22 Dec 2023 13:31:33 -0500
+From: Konstantin Ryabitsev <konstantin@linuxfoundation.org>
+To: Michael Sweet <msweet@msweet.org>
+Cc: 
+	"printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>
+Subject: Re: [Printing-architecture] RFC: Moving the printing-architecture
+ list
+Message-ID: <20231222-careful-oxpecker-of-gallantry-f0dff3@lemur>
+References: <20231121-turquoise-starling-of-fascination-1e4144@meerkat>
+ <B966EAD0-AEBB-4035-9BB1-B449A00D2A21@msweet.org>
 Precedence: bulk
 X-Mailing-List: printing-architecture@lists.linux.dev
 List-Id: <printing-architecture.lists.linux.dev>
 List-Subscribe: <mailto:printing-architecture+subscribe@lists.linux.dev>
 List-Unsubscribe: <mailto:printing-architecture+unsubscribe@lists.linux.dev>
-Mime-Version: 1.0 (Mac OS X Mail 16.0 \(3774.300.61.1.2\))
-Date: Thu, 21 Dec 2023 15:58:31 -0500
-Subject: PAPPL 1.4.4
-Message-Id: <1CB46E77-D553-480B-B944-D95D96AA2CB1@msweet.org>
-To: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>
-X-Mailer: Apple Mail (2.3774.300.61.1.2)
+MIME-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+Content-Disposition: inline
+In-Reply-To: <B966EAD0-AEBB-4035-9BB1-B449A00D2A21@msweet.org>
 
-PAPPL v1.4.4 is now available for download and is a bug fix release:
+On Wed, Nov 22, 2023 at 09:18:53AM -0500, Michael Sweet wrote:
+> Konstantin,
+> 
+> My preference is the Linux development lists.  Also, I request that we add a
+> printing-users list for discussing general printing issues vs. discussions
+> of development and design.  (I've been asking for the users list since 2020
+> because Apple is eliminating the CUPS mailing lists...)
 
-    https://github.com/michaelrsweet/pappl/releases/tag/v1.4.4
+Hello:
 
-Changes include:
+If you would like a printing-users list, please request it following the
+procedure described here:
 
-- Fixed "printer-settable-attributes-supported" value (Issue #311)
-- Fixed `-n` support for setting number of copies (Issue #312)
-- Fixed `papplPrinterSetDriverDefaults` didn't set the
-  "orientation-requested-default" value (Issue #313)
-- Fixed job file preservation logic.
-- Fixed builds against current libcups3.
+https://subspace.kernel.org/lists.linux.dev.html#requesting-list-hosting
 
-Enjoy!
-
-________________________
-Michael Sweet
-
+Best regards,
+-K
