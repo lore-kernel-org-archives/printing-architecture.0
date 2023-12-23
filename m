@@ -1,91 +1,87 @@
-Received: from smtp2.osuosl.org (smtp2.osuosl.org [140.211.166.133])
-	(using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
+Received: from mail-ot1-f45.google.com (mail-ot1-f45.google.com [209.85.210.45])
+	(using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
 	(No client certificate requested)
-	by smtp.subspace.kernel.org (Postfix) with ESMTPS id D2B4B2E828
-	for <printing-architecture@lists.linux-foundation.org>; Fri, 22 Dec 2023 19:55:43 +0000 (UTC)
+	by smtp.subspace.kernel.org (Postfix) with ESMTPS id 47C55656
+	for <printing-architecture@lists.linux.dev>; Sat, 23 Dec 2023 01:01:38 +0000 (UTC)
+Authentication-Results: smtp.subspace.kernel.org; dmarc=pass (p=none dis=none) header.from=gmail.com
+Authentication-Results: smtp.subspace.kernel.org; spf=pass smtp.mailfrom=gmail.com
 Authentication-Results: smtp.subspace.kernel.org;
-	dkim=pass (1024-bit key) header.d=msweet.org header.i=@msweet.org header.b="j5eriUbP"
-Received: from localhost (localhost [127.0.0.1])
-	by smtp2.osuosl.org (Postfix) with ESMTP id 42A984016F
-	for <printing-architecture@lists.linux-foundation.org>; Fri, 22 Dec 2023 19:55:43 +0000 (UTC)
-DKIM-Filter: OpenDKIM Filter v2.11.0 smtp2.osuosl.org 42A984016F
-Authentication-Results: smtp2.osuosl.org;
-	dkim=pass (1024-bit key) header.d=msweet.org header.i=@msweet.org header.a=rsa-sha256 header.s=default header.b=j5eriUbP
-X-Virus-Scanned: amavisd-new at osuosl.org
-X-Spam-Flag: NO
-X-Spam-Score: -2.1
-X-Spam-Level:
-Received: from smtp2.osuosl.org ([127.0.0.1])
-	by localhost (smtp2.osuosl.org [127.0.0.1]) (amavisd-new, port 10024)
-	with ESMTP id 7AtyDh6PkgaL
-	for <printing-architecture@lists.linux-foundation.org>;
-	Fri, 22 Dec 2023 19:55:41 +0000 (UTC)
-Received: from mail.msweet.org (mail.msweet.org [173.255.209.91])
-	by smtp2.osuosl.org (Postfix) with ESMTPS id CF42C400D7
-	for <printing-architecture@lists.linux-foundation.org>; Fri, 22 Dec 2023 19:55:41 +0000 (UTC)
-DKIM-Filter: OpenDKIM Filter v2.11.0 smtp2.osuosl.org CF42C400D7
-Received: from smtpclient.apple (cbl-66-186-76-47.vianet.ca [66.186.76.47])
-	(using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
-	(No client certificate requested)
-	by mail.msweet.org (Postfix) with ESMTPSA id 66D3D800B2;
-	Fri, 22 Dec 2023 19:55:40 +0000 (UTC)
-DKIM-Filter: OpenDKIM Filter v2.11.0 mail.msweet.org 66D3D800B2
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=msweet.org;
-	s=default; t=1703274940;
-	bh=r1OiLoJVr56QFo1ivH1kYXtwDnN31lKFUpfLyg9UXA8=;
-	h=Subject:From:In-Reply-To:Date:Cc:References:To:From;
-	b=j5eriUbP5/od96Bqrygm10mUzGlXjF8yEvyZwCwZX3g4nM7zJLVlPifoGjEYGyXQD
-	 Dss+J1WSgOqjXxiou0blhObVZhnqtWEuLouuJ/sPBIJTcaBk0iHd7wq2vdNL+nuIPD
-	 EoJKH4ucIE1tw7EL118q0TTSCj5EY9bTLnfCwllY=
-Content-Type: text/plain;
-	charset=utf-8
+	dkim=pass (2048-bit key) header.d=gmail.com header.i=@gmail.com header.b="TYpsi13x"
+Received: by mail-ot1-f45.google.com with SMTP id 46e09a7af769-6da4893142aso1595603a34.0
+        for <printing-architecture@lists.linux.dev>; Fri, 22 Dec 2023 17:01:38 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1703293297; x=1703898097; darn=lists.linux.dev;
+        h=content-transfer-encoding:in-reply-to:from:references:to
+         :content-language:subject:user-agent:mime-version:date:message-id
+         :from:to:cc:subject:date:message-id:reply-to;
+        bh=2GJ613ThVpb0hFEz2DmTD0XNi/c9DzsdVc8GM+GN3RI=;
+        b=TYpsi13xFsKh2lxSY4RzeSZmxO+WlsfKBWlzHa8Anm7+3HJ0BHrhgtVWm/0ikwFSs+
+         0+xEvK+bRLN5Mfd4uY37zE/RBauiL6jazM4GT0C6+doc8w+/DlDfjWdPdYXROro73OTr
+         toHbZbZm7YbmscxWd1xSYUlwvqXPfDstbX675gVBxVTbfveAsIFZZ/0+GrZluV1oSC1S
+         u/turV9O9dOiR8rTtm0QndXD1JF2sZpKqrt8KiAClJ3jZ8/p5xTLgBN9E7wHX7Tv8fGh
+         /9k+4R346Np9D5b5FsC9Cx2BaPeZheeelnU4Wq/B8BbPLf7Vzjfm4ROkqwZeof6/Wevn
+         mNww==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1703293297; x=1703898097;
+        h=content-transfer-encoding:in-reply-to:from:references:to
+         :content-language:subject:user-agent:mime-version:date:message-id
+         :x-gm-message-state:from:to:cc:subject:date:message-id:reply-to;
+        bh=2GJ613ThVpb0hFEz2DmTD0XNi/c9DzsdVc8GM+GN3RI=;
+        b=dpVcNQBfYK7eM9Y9+KsGIhZPcJSd32O7U4MGivn/Pjsc9A/pRWKXae0++QjKo3AdSh
+         7iz4/dC8JP+NTQlYoAtbbFyhd97GTCWE91BL6sXNZcQoGUmak3/OK7uCTtsq/8RCGC1Z
+         yLF5qYTjnjtsjnZYwutSRRvqLcMOdjTyVhcwzrbPaCfrrEs9rwX1Df59tHcx/+zmYvhd
+         yY00uMSHTYwvVJflD4hg9XXpMNwEwdrn6/MCO9jds0LFFu3yqKf2G1kZJkykNlnJzIdP
+         O1jAjuqAqGVlmMs/3UoPyXoUnpMB1Vk/sBOUXN+r5zo6UBe/UCB1GRZoWet3OP1r9wvH
+         j7Yg==
+X-Gm-Message-State: AOJu0YyaNO4IIyKNWAP4/CTdvpbnkhlSiAPevXTAheSM8+YtudjDg1I6
+	zKb7jzIII7uw6yIJ+TCZVsk=
+X-Google-Smtp-Source: AGHT+IF09aD6zp2PAyZCsu7P+EGhtOs7PPp+iT72DZjr1az6qloYM34NLEnVOM62K5NXl8INj6u2iQ==
+X-Received: by 2002:a05:6808:308c:b0:3b9:dea6:f336 with SMTP id bl12-20020a056808308c00b003b9dea6f336mr2849731oib.50.1703293296728;
+        Fri, 22 Dec 2023 17:01:36 -0800 (PST)
+Received: from ?IPV6:2804:14d:b087:485b:55cd:609b:6d26:8330? ([2804:14d:b087:485b:55cd:609b:6d26:8330])
+        by smtp.gmail.com with ESMTPSA id v124-20020a626182000000b006d96d753ca0sm4089714pfb.38.2023.12.22.17.01.34
+        (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
+        Fri, 22 Dec 2023 17:01:35 -0800 (PST)
+Message-ID: <8f34c6b0-76f8-4b4d-a507-ae78872deb9d@gmail.com>
+Date: Fri, 22 Dec 2023 22:01:33 -0300
 Precedence: bulk
 X-Mailing-List: printing-architecture@lists.linux.dev
 List-Id: <printing-architecture.lists.linux.dev>
 List-Subscribe: <mailto:printing-architecture+subscribe@lists.linux.dev>
 List-Unsubscribe: <mailto:printing-architecture+unsubscribe@lists.linux.dev>
-Mime-Version: 1.0 (Mac OS X Mail 16.0 \(3774.300.61.1.2\))
-Subject: Re: [Printing-architecture] RFC: Moving the printing-architecture
- list
-From: Michael Sweet <msweet@msweet.org>
-In-Reply-To: <20231222-careful-oxpecker-of-gallantry-f0dff3@lemur>
-Date: Fri, 22 Dec 2023 14:55:30 -0500
-Cc: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>
-Content-Transfer-Encoding: quoted-printable
-Message-Id: <E9E1CE6A-1628-490F-A817-CF1F5B9B8611@msweet.org>
-References: <20231121-turquoise-starling-of-fascination-1e4144@meerkat>
- <B966EAD0-AEBB-4035-9BB1-B449A00D2A21@msweet.org>
- <20231222-careful-oxpecker-of-gallantry-f0dff3@lemur>
-To: Konstantin Ryabitsev <konstantin@linuxfoundation.org>
-X-Mailer: Apple Mail (2.3774.300.61.1.2)
+MIME-Version: 1.0
+User-Agent: Mozilla Thunderbird
+Subject: Re: PSA: this list is moving to lists.linux.dev (no action required)
+Content-Language: en-US
+To: Konstantin Ryabitsev <konstantin@linuxfoundation.org>,
+ printing-architecture@lists.linux.dev
+References: <20231218-khaki-adder-from-eldorado-aa4f1a@lemur>
+ <CAMwyc-T=OzZoHz9iiM_hrDgqVjCMErrN50OhxSGRzRs4rZ7mxQ@mail.gmail.com>
+From: Till Kamppeter <till.kamppeter@gmail.com>
+In-Reply-To: <CAMwyc-T=OzZoHz9iiM_hrDgqVjCMErrN50OhxSGRzRs4rZ7mxQ@mail.gmail.com>
+Content-Type: text/plain; charset=UTF-8; format=flowed
+Content-Transfer-Encoding: 7bit
+
+On 21/12/2023 17:30, Konstantin Ryabitsev wrote:
+> 
+> Hello:
+> 
+> This work is complete and this message acts as a test to make sure
+> that everything is working properly. The list archives will be moved
+> later today.
+> 
+> Best regards,
+> Konstantin
+> 
 
 Konstantin,
 
-> On Dec 22, 2023, at 1:31=E2=80=AFPM, Konstantin Ryabitsev =
-<konstantin@linuxfoundation.org> wrote:
->=20
-> On Wed, Nov 22, 2023 at 09:18:53AM -0500, Michael Sweet wrote:
->> Konstantin,
->>=20
->> My preference is the Linux development lists.  Also, I request that =
-we add a
->> printing-users list for discussing general printing issues vs. =
-discussions
->> of development and design.  (I've been asking for the users list =
-since 2020
->> because Apple is eliminating the CUPS mailing lists...)
->=20
-> Hello:
->=20
-> If you would like a printing-users list, please request it following =
-the
-> procedure described here:
->=20
-> =
-https://subspace.kernel.org/lists.linux.dev.html#requesting-list-hosting
+thank you very much for moving over the mailing list and its archives.
 
-Done!  And thank you for taking care of the printing-architecture list!
+For testing, I am sending this e-mail to the new e-mail address.
 
-________________________
-Michael Sweet
+I have updated the links in my December News:
 
+https://openprinting.github.io/OpenPrinting-News-December-2023/#what-is-hot-on-the-openprinting-maiing-list
+
+    Till
