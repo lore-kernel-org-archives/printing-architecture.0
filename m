@@ -1,75 +1,74 @@
-Received: from smtp1.osuosl.org (smtp1.osuosl.org [140.211.166.138])
+Received: from smtp3.osuosl.org (smtp3.osuosl.org [140.211.166.136])
 	(using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
 	(No client certificate requested)
-	by smtp.subspace.kernel.org (Postfix) with ESMTPS id 09AE44C66
-	for <printing-architecture@lists.linuxfoundation.org>; Tue, 30 Jan 2024 12:15:21 +0000 (UTC)
-Authentication-Results: smtp.subspace.kernel.org; arc=none smtp.client-ip=140.211.166.138
+	by smtp.subspace.kernel.org (Postfix) with ESMTPS id 955CDA29
+	for <printing-architecture@lists.linux-foundation.org>; Wed, 31 Jan 2024 01:06:42 +0000 (UTC)
+Authentication-Results: smtp.subspace.kernel.org; arc=none smtp.client-ip=140.211.166.136
 ARC-Seal:i=1; a=rsa-sha256; d=subspace.kernel.org; s=arc-20240116;
-	t=1706616923; cv=none; b=AGwyiVdTg3s/3QemptUnkE99/OJTK1+VOdZPqMWm5QcRRZwAznIz6sjVeEDopyEXuxIrJ3w3MhvG/joPRlOvvE0ig7Un+g6XKp6jB6B122j+vsFuM7GBg4QTX9jHCNDp11fES8RlnGi/eIyCtLkUYqvkSP5bs4DQuoewDL4O+vw=
+	t=1706663203; cv=none; b=Mflg0Yt9OJsK+THB/b8ZnT35CISXO5UsZ+L495pXOr1IbEFBex+qJ/yx87YQPzIOpEvyeSS+NCrD2lxUgHMYblZqHLkl53WSqmZyApj335i13kSvmMJfjXazz3FufvHvSDrXsC8wjTj53R90OGUikibko7oZdTmRzOoyy1s28hY=
 ARC-Message-Signature:i=1; a=rsa-sha256; d=subspace.kernel.org;
-	s=arc-20240116; t=1706616923; c=relaxed/simple;
-	bh=UwNKwHMTQkaELRwKZzQfbHl6eSq8lPJEFwByODqYvc8=;
-	h=Message-ID:Date:MIME-Version:Subject:To:References:From:
-	 In-Reply-To:Content-Type; b=AtiGqpq3/5mTOesmQaxQHR6ic1UeHi+pfeooTMeVHpR6bATeqOLTwraL6XmjL3Ztk/c6G/ZFqgTp3pIH/Erxpo6KOD/5JifBfy+ljKGTqOo2w8cBAZOUhHzlOeFZLeyeSY6Dv7GhcO1AJqomqfndgjpRX9306q4xDOW4cwSWyMU=
-ARC-Authentication-Results:i=1; smtp.subspace.kernel.org; dkim=pass (2048-bit key) header.d=gmail.com header.i=@gmail.com header.b=WtLK4H8L; arc=none smtp.client-ip=140.211.166.138
+	s=arc-20240116; t=1706663203; c=relaxed/simple;
+	bh=5FH/ZGwA0UcosYVh9TQhmpF9OtfjiQfUR3F6llFLilU=;
+	h=Message-ID:Date:MIME-Version:From:Subject:To:Content-Type; b=tCJFCskx3iZ0SU7oWiepwPxdbM8BVyW/cFFmUZ1d0LifNDXTGTSsQUR1IqEdNUGrdd714M1PebpdPfxfouY3Rz6wP2cD0seX4Q44hPzzXB/BtU/OMic84jcocG2Z+rASmRpG3/elUuGZzdOg9m5jFFGzkEY2WNY9qy4ERmfT2LI=
+ARC-Authentication-Results:i=1; smtp.subspace.kernel.org; dkim=pass (2048-bit key) header.d=gmail.com header.i=@gmail.com header.b=dC49keo5; arc=none smtp.client-ip=140.211.166.136
 Authentication-Results: smtp.subspace.kernel.org;
-	dkim=pass (2048-bit key) header.d=gmail.com header.i=@gmail.com header.b="WtLK4H8L"
+	dkim=pass (2048-bit key) header.d=gmail.com header.i=@gmail.com header.b="dC49keo5"
 Received: from localhost (localhost [127.0.0.1])
-	by smtp1.osuosl.org (Postfix) with ESMTP id 8940882237
-	for <printing-architecture@lists.linuxfoundation.org>; Tue, 30 Jan 2024 12:15:21 +0000 (UTC)
-DKIM-Filter: OpenDKIM Filter v2.11.0 smtp1.osuosl.org 8940882237
-Authentication-Results: smtp1.osuosl.org;
-	dkim=pass (2048-bit key) header.d=gmail.com header.i=@gmail.com header.a=rsa-sha256 header.s=20230601 header.b=WtLK4H8L
+	by smtp3.osuosl.org (Postfix) with ESMTP id 0E30B6140C
+	for <printing-architecture@lists.linux-foundation.org>; Wed, 31 Jan 2024 01:06:42 +0000 (UTC)
+DKIM-Filter: OpenDKIM Filter v2.11.0 smtp3.osuosl.org 0E30B6140C
+Authentication-Results: smtp3.osuosl.org;
+	dkim=pass (2048-bit key) header.d=gmail.com header.i=@gmail.com header.a=rsa-sha256 header.s=20230601 header.b=dC49keo5
 X-Virus-Scanned: amavisd-new at osuosl.org
 X-Spam-Flag: NO
-X-Spam-Score: -2.099
+X-Spam-Score: -1.999
 X-Spam-Level:
-Received: from smtp1.osuosl.org ([127.0.0.1])
-	by localhost (smtp1.osuosl.org [127.0.0.1]) (amavisd-new, port 10024)
-	with ESMTP id Zmurs7lJ6H2h
-	for <printing-architecture@lists.linuxfoundation.org>;
-	Tue, 30 Jan 2024 12:15:21 +0000 (UTC)
-Received: from mail-wm1-x333.google.com (mail-wm1-x333.google.com [IPv6:2a00:1450:4864:20::333])
-	by smtp1.osuosl.org (Postfix) with ESMTPS id D602E8208F
-	for <printing-architecture@lists.linuxfoundation.org>; Tue, 30 Jan 2024 12:15:20 +0000 (UTC)
-DKIM-Filter: OpenDKIM Filter v2.11.0 smtp1.osuosl.org D602E8208F
-Received: by mail-wm1-x333.google.com with SMTP id 5b1f17b1804b1-40fafced20aso1304775e9.0
-        for <printing-architecture@lists.linuxfoundation.org>; Tue, 30 Jan 2024 04:15:20 -0800 (PST)
+Received: from smtp3.osuosl.org ([127.0.0.1])
+	by localhost (smtp3.osuosl.org [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id RoAO8sGRa5v3
+	for <printing-architecture@lists.linux-foundation.org>;
+	Wed, 31 Jan 2024 01:06:40 +0000 (UTC)
+Received: from mail-wm1-x32e.google.com (mail-wm1-x32e.google.com [IPv6:2a00:1450:4864:20::32e])
+	by smtp3.osuosl.org (Postfix) with ESMTPS id D47D861403
+	for <printing-architecture@lists.linux-foundation.org>; Wed, 31 Jan 2024 01:06:39 +0000 (UTC)
+DKIM-Filter: OpenDKIM Filter v2.11.0 smtp3.osuosl.org D47D861403
+Received: by mail-wm1-x32e.google.com with SMTP id 5b1f17b1804b1-40f033c2e30so10208785e9.0
+        for <printing-architecture@lists.linux-foundation.org>; Tue, 30 Jan 2024 17:06:39 -0800 (PST)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
-        d=gmail.com; s=20230601; t=1706616919; x=1707221719; darn=lists.linuxfoundation.org;
-        h=content-transfer-encoding:in-reply-to:from:references:to
-         :content-language:subject:user-agent:mime-version:date:message-id
-         :from:to:cc:subject:date:message-id:reply-to;
-        bh=XJrimWrc0fSADUO1d7CFDJkTyxSrORLeEC5ELojKmag=;
-        b=WtLK4H8LVNjnZwpXaCev4tUg63rvNOkQDUHBfImW1uCueSfYEeSUSizwmU5cwQaRFf
-         vLU/1f2AKS9iGiKYcpHBHc1cfYUDnrw2UwRjU13Qcofu5UTKP3jCWORivnLrYAJ7x2++
-         bu3lsxvlQGIUrfDri5MOi31band+dpG/aNDBsI6fq5vSO9euewbxCOt6ltlsBuXzK8Fp
-         0BNT64yWGjuZzVuJWhhi1tQCfIWasUFnnSRRh4gxx5tF//Ld6WqCXmSwa6WtxKw303I8
-         p8y9JEBx3o+729nGi+eWuJ20eBdekHVv5xn1qmB+EgWfA3d7tvxPPFyVOJUjX4BunC9/
-         HRSA==
+        d=gmail.com; s=20230601; t=1706663198; x=1707267998; darn=lists.linux-foundation.org;
+        h=content-transfer-encoding:content-language:to:subject:from
+         :user-agent:mime-version:date:message-id:from:to:cc:subject:date
+         :message-id:reply-to;
+        bh=MJ0T+fezo3aU/US6pjUlZHIAAdSne41dDLnvab60TNw=;
+        b=dC49keo5rtnRX7LofbOEVQFbcSCKG7SgYVs518Sm4c7T+ja93DBUS1lM/gTFLCUSgc
+         DQc6DAGrAME5U/+78FRM1GU0etdsMkQRv6pPwFuat4A5WNe9ZA/0+s5x1GInLhF4Sk0e
+         yjAeOT+qjoI9efprxkzaxDVNY9GsGZKMJO01yorD06nQZuaeA4U41em7mFnVOaTUvmXE
+         pN2v6/J11Y8//pSuPHYGNJJexFMsMvlKcvdqdoozZooWk0r5nbXTiNrEDa2pGvT8LqIh
+         rjBTdqPwuVp9faBuheu6sI7zyU/0EAVsu3EEyG8EQbMIrSkO0zbElQI8Yy+IESNOqgzp
+         Jw8Q==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
-        d=1e100.net; s=20230601; t=1706616919; x=1707221719;
-        h=content-transfer-encoding:in-reply-to:from:references:to
-         :content-language:subject:user-agent:mime-version:date:message-id
-         :x-gm-message-state:from:to:cc:subject:date:message-id:reply-to;
-        bh=XJrimWrc0fSADUO1d7CFDJkTyxSrORLeEC5ELojKmag=;
-        b=sWB0TyrDvbV5CcEz0dktk9ExnNmFm4lxKuFprQDzHOQIojsduYkjvYOnJTjgYZHjYP
-         wK5vP+7f28NateJdNxL8kuSdpLY7aVyTKKlEHc6W66CveIP91N45GsqAUrnwivvY7k9V
-         cwPbEc/ZXKuF1/o6+aS5s3iaLvnjrLhrbPQex8+JEOV51StSG3ecCm3bwlC0K1uCxwv8
-         iaHI55XncN5NI9Hitd065VIq3UP6s/VbHPe7X18Ry6Yr7t+0xYilQFkP9a5uwe4VvvAL
-         vOrTkmEvBUjkWnsJgvlNJlr4jvz506LjMtBNH5vTNyIbpVlfDL2JgZN5HogirjUIMUDc
-         Zagw==
-X-Gm-Message-State: AOJu0Yxor6DiYwveAF7E9VnKODT6HqwvsxgiBBRfV1l3oubIrL/8iR1n
-	dCgko30AXWmRq2PvdL25hmvmS9zqxlhd0EvFHONHBnVJZBl09qHv
-X-Google-Smtp-Source: AGHT+IHik/dHjVk1OUHZHcfrn4UEb2iIlEO45sYBkuS+sv0+qklHC+Pu7ksPMWRVljtOvsflUvLwSQ==
-X-Received: by 2002:a05:600c:4507:b0:40e:f632:723d with SMTP id t7-20020a05600c450700b0040ef632723dmr5282569wmo.16.1706616918486;
-        Tue, 30 Jan 2024 04:15:18 -0800 (PST)
+        d=1e100.net; s=20230601; t=1706663198; x=1707267998;
+        h=content-transfer-encoding:content-language:to:subject:from
+         :user-agent:mime-version:date:message-id:x-gm-message-state:from:to
+         :cc:subject:date:message-id:reply-to;
+        bh=MJ0T+fezo3aU/US6pjUlZHIAAdSne41dDLnvab60TNw=;
+        b=um8SBVqjTm9yMFjD+PGcOq2ePRNEmCrTv9CcozQ2wtY98fx/kPCkWKJD31CFjhGc77
+         2TXXfidrwS51YtSeT+EiOrwXfMr/OF/Dbj+VFL7zXvK0MNoC3n96Jo2OIKIk6ojyDC96
+         IgGFxoYG6pWF9IxURWCzxrYDD4rswcpPcD5W+huVKd/zfGQSJ7i2vviE8yPgHQDKzoEK
+         EAgUcX6c2SAc6v5bTXet/n9LhMwhxhY9hoaHY7vAzC3lm7HE72FlKM8CtdBVB73IhnR7
+         UjoK62I846m+HUXHSg6JLcj/v1XiEQOcYxkEiEqws0kPW4v5ZlPurAYQPFUEubAbzWcn
+         EKlQ==
+X-Gm-Message-State: AOJu0YxVubqICllde6U6GlyXKlTGYlIY4JQvYkhCwvy8sSBWIyi0LvAp
+	0ok9t1A/gCSfeTYwLN3AiaQxpvEkkvY+wJ4aP9XETWR/lVar0FWrFCVV/AUW
+X-Google-Smtp-Source: AGHT+IFeRa3tRluycGUyke89nPnGaggVJvCx6ZRuejA+ZaHZFWJZth1jk1VRngG6wEzCweTN8m4ngQ==
+X-Received: by 2002:a05:600c:4f10:b0:40e:d316:8cb8 with SMTP id l16-20020a05600c4f1000b0040ed3168cb8mr106873wmq.27.1706663197677;
+        Tue, 30 Jan 2024 17:06:37 -0800 (PST)
 Received: from [192.168.68.106] (178-191-157-184.hdsl.highway.telekom.at. [178.191.157.184])
-        by smtp.gmail.com with ESMTPSA id o4-20020a05600c510400b0040ef7186b7esm5772695wms.29.2024.01.30.04.15.17
+        by smtp.gmail.com with ESMTPSA id t10-20020a05600c198a00b0040f22171921sm29657wmq.3.2024.01.30.17.06.36
         (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
-        Tue, 30 Jan 2024 04:15:18 -0800 (PST)
-Message-ID: <756eae59-6faf-461d-b8cd-8c56fbc5a999@gmail.com>
-Date: Tue, 30 Jan 2024 13:15:17 +0100
+        Tue, 30 Jan 2024 17:06:36 -0800 (PST)
+Message-ID: <a67e5de1-7e56-47cd-99c3-b4cd7e471c3d@gmail.com>
+Date: Wed, 31 Jan 2024 02:06:36 +0100
 Precedence: bulk
 X-Mailing-List: printing-architecture@lists.linux.dev
 List-Id: <printing-architecture.lists.linux.dev>
@@ -77,29 +76,21 @@ List-Subscribe: <mailto:printing-architecture+subscribe@lists.linux.dev>
 List-Unsubscribe: <mailto:printing-architecture+unsubscribe@lists.linux.dev>
 MIME-Version: 1.0
 User-Agent: Mozilla Thunderbird
-Subject: Re: Change: Joint PWG/OP Summit in May 2024 will be Virtual!
-Content-Language: en-US
-To: Ira McDonald <blueroofmusic@gmail.com>,
- printing-architecture@lists.linuxfoundation.org,
- Aveek Basu <basu.aveek@gmail.com>, Zdenek Dohnal <zdohnal@redhat.com>,
- Danny Brennan <mdannyb11@gmail.com>, Jeremy Leber
- <jeremy.leber@lexmark.com>,
- "Kennedy, Smith (Wireless Architect)" <smith.kennedy@hp.com>
-References: <CAN40gSu8xPrmCeGQvaqKxATo7BB75kn3neAzOXiE5vnw_GhSXg@mail.gmail.com>
 From: Till Kamppeter <till.kamppeter@gmail.com>
-In-Reply-To: <CAN40gSu8xPrmCeGQvaqKxATo7BB75kn3neAzOXiE5vnw_GhSXg@mail.gmail.com>
+Subject: OpenPrinting News
+To: Ira McDonald <blueroofmusic@gmail.com>, Aveek Basu
+ <basu.aveek@gmail.com>,
+ Open Printing <printing-architecture@lists.linux-foundation.org>
+Content-Language: en-US
 Content-Type: text/plain; charset=UTF-8; format=flowed
 Content-Transfer-Encoding: 7bit
 
-One question: Who were the 3 who have answered to be able to travel?
+Hi,
+
+I have posted the newest development of the last month on our website now.
+
+Here we go:
+
+https://openprinting.github.io/OpenPrinting-News-January-2024/
 
     Till
-
-On 29/01/2024 23:21, Ira McDonald wrote:
-> Hi,
-> 
-> PWG Steering Committee decided today to shift to Virtual because only 3 
-> people were able to travel to Lexington.
-> 
-> Cheers,
-> - Ira
