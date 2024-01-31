@@ -1,96 +1,91 @@
-Received: from smtp3.osuosl.org (smtp3.osuosl.org [140.211.166.136])
+Received: from smtp1.osuosl.org (smtp1.osuosl.org [140.211.166.138])
 	(using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
 	(No client certificate requested)
-	by smtp.subspace.kernel.org (Postfix) with ESMTPS id 955CDA29
-	for <printing-architecture@lists.linux-foundation.org>; Wed, 31 Jan 2024 01:06:42 +0000 (UTC)
-Authentication-Results: smtp.subspace.kernel.org; arc=none smtp.client-ip=140.211.166.136
+	by smtp.subspace.kernel.org (Postfix) with ESMTPS id 8A04612BF32
+	for <printing-architecture@lists.linux-foundation.org>; Wed, 31 Jan 2024 17:04:40 +0000 (UTC)
+Authentication-Results: smtp.subspace.kernel.org; arc=none smtp.client-ip=140.211.166.138
 ARC-Seal:i=1; a=rsa-sha256; d=subspace.kernel.org; s=arc-20240116;
-	t=1706663203; cv=none; b=Mflg0Yt9OJsK+THB/b8ZnT35CISXO5UsZ+L495pXOr1IbEFBex+qJ/yx87YQPzIOpEvyeSS+NCrD2lxUgHMYblZqHLkl53WSqmZyApj335i13kSvmMJfjXazz3FufvHvSDrXsC8wjTj53R90OGUikibko7oZdTmRzOoyy1s28hY=
+	t=1706720681; cv=none; b=fzssrfFlFSN3SISVseTC6WEdYmVJtqbphdyTfeH1XsQKZnDsi2Kv+jMRXGK4g3cy9n3t/0WfnR+C3yK9skx110lgTxwo3z7ilaUhSeog/OlXBtT5vgaydfBftaauprSzMUQcz4hs7E2TSbwytufPe8S903Hb2zU/nJlf0Y0Uh6o=
 ARC-Message-Signature:i=1; a=rsa-sha256; d=subspace.kernel.org;
-	s=arc-20240116; t=1706663203; c=relaxed/simple;
-	bh=5FH/ZGwA0UcosYVh9TQhmpF9OtfjiQfUR3F6llFLilU=;
-	h=Message-ID:Date:MIME-Version:From:Subject:To:Content-Type; b=tCJFCskx3iZ0SU7oWiepwPxdbM8BVyW/cFFmUZ1d0LifNDXTGTSsQUR1IqEdNUGrdd714M1PebpdPfxfouY3Rz6wP2cD0seX4Q44hPzzXB/BtU/OMic84jcocG2Z+rASmRpG3/elUuGZzdOg9m5jFFGzkEY2WNY9qy4ERmfT2LI=
-ARC-Authentication-Results:i=1; smtp.subspace.kernel.org; dkim=pass (2048-bit key) header.d=gmail.com header.i=@gmail.com header.b=dC49keo5; arc=none smtp.client-ip=140.211.166.136
+	s=arc-20240116; t=1706720681; c=relaxed/simple;
+	bh=FbotXWqqDib5yUEpUznGccwBQ8JscQjt8UGpplrUc6w=;
+	h=From:Content-Type:Mime-Version:Date:Subject:Message-Id:To; b=Cf4tG9GKgSYGKyonijwlY+LkwAEG+QHrmaosUhhCaCENVCRRPoCT8kfir/y8cvotKMZeRZCvSjo5U+Sr6nu4XSlCNnsf/ILX4cEaVFs0WDk5uQMsKbJCPbt74ToY3hRC4q16JHocxl5BG94EzkxZ6PIyGUx6BTZjuUZQr4iy038=
+ARC-Authentication-Results:i=1; smtp.subspace.kernel.org; dkim=pass (1024-bit key) header.d=msweet.org header.i=@msweet.org header.b=l80hYZe+; arc=none smtp.client-ip=140.211.166.138
 Authentication-Results: smtp.subspace.kernel.org;
-	dkim=pass (2048-bit key) header.d=gmail.com header.i=@gmail.com header.b="dC49keo5"
+	dkim=pass (1024-bit key) header.d=msweet.org header.i=@msweet.org header.b="l80hYZe+"
 Received: from localhost (localhost [127.0.0.1])
-	by smtp3.osuosl.org (Postfix) with ESMTP id 0E30B6140C
-	for <printing-architecture@lists.linux-foundation.org>; Wed, 31 Jan 2024 01:06:42 +0000 (UTC)
-DKIM-Filter: OpenDKIM Filter v2.11.0 smtp3.osuosl.org 0E30B6140C
-Authentication-Results: smtp3.osuosl.org;
-	dkim=pass (2048-bit key) header.d=gmail.com header.i=@gmail.com header.a=rsa-sha256 header.s=20230601 header.b=dC49keo5
+	by smtp1.osuosl.org (Postfix) with ESMTP id F3EC383DFB
+	for <printing-architecture@lists.linux-foundation.org>; Wed, 31 Jan 2024 17:04:39 +0000 (UTC)
+DKIM-Filter: OpenDKIM Filter v2.11.0 smtp1.osuosl.org F3EC383DFB
+Authentication-Results: smtp1.osuosl.org;
+	dkim=pass (1024-bit key) header.d=msweet.org header.i=@msweet.org header.a=rsa-sha256 header.s=default header.b=l80hYZe+
 X-Virus-Scanned: amavisd-new at osuosl.org
 X-Spam-Flag: NO
-X-Spam-Score: -1.999
+X-Spam-Score: -2.1
 X-Spam-Level:
-Received: from smtp3.osuosl.org ([127.0.0.1])
-	by localhost (smtp3.osuosl.org [127.0.0.1]) (amavisd-new, port 10024)
-	with ESMTP id RoAO8sGRa5v3
+Received: from smtp1.osuosl.org ([127.0.0.1])
+	by localhost (smtp1.osuosl.org [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id bBO3KpHU5vhO
 	for <printing-architecture@lists.linux-foundation.org>;
-	Wed, 31 Jan 2024 01:06:40 +0000 (UTC)
-Received: from mail-wm1-x32e.google.com (mail-wm1-x32e.google.com [IPv6:2a00:1450:4864:20::32e])
-	by smtp3.osuosl.org (Postfix) with ESMTPS id D47D861403
-	for <printing-architecture@lists.linux-foundation.org>; Wed, 31 Jan 2024 01:06:39 +0000 (UTC)
-DKIM-Filter: OpenDKIM Filter v2.11.0 smtp3.osuosl.org D47D861403
-Received: by mail-wm1-x32e.google.com with SMTP id 5b1f17b1804b1-40f033c2e30so10208785e9.0
-        for <printing-architecture@lists.linux-foundation.org>; Tue, 30 Jan 2024 17:06:39 -0800 (PST)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
-        d=gmail.com; s=20230601; t=1706663198; x=1707267998; darn=lists.linux-foundation.org;
-        h=content-transfer-encoding:content-language:to:subject:from
-         :user-agent:mime-version:date:message-id:from:to:cc:subject:date
-         :message-id:reply-to;
-        bh=MJ0T+fezo3aU/US6pjUlZHIAAdSne41dDLnvab60TNw=;
-        b=dC49keo5rtnRX7LofbOEVQFbcSCKG7SgYVs518Sm4c7T+ja93DBUS1lM/gTFLCUSgc
-         DQc6DAGrAME5U/+78FRM1GU0etdsMkQRv6pPwFuat4A5WNe9ZA/0+s5x1GInLhF4Sk0e
-         yjAeOT+qjoI9efprxkzaxDVNY9GsGZKMJO01yorD06nQZuaeA4U41em7mFnVOaTUvmXE
-         pN2v6/J11Y8//pSuPHYGNJJexFMsMvlKcvdqdoozZooWk0r5nbXTiNrEDa2pGvT8LqIh
-         rjBTdqPwuVp9faBuheu6sI7zyU/0EAVsu3EEyG8EQbMIrSkO0zbElQI8Yy+IESNOqgzp
-         Jw8Q==
-X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
-        d=1e100.net; s=20230601; t=1706663198; x=1707267998;
-        h=content-transfer-encoding:content-language:to:subject:from
-         :user-agent:mime-version:date:message-id:x-gm-message-state:from:to
-         :cc:subject:date:message-id:reply-to;
-        bh=MJ0T+fezo3aU/US6pjUlZHIAAdSne41dDLnvab60TNw=;
-        b=um8SBVqjTm9yMFjD+PGcOq2ePRNEmCrTv9CcozQ2wtY98fx/kPCkWKJD31CFjhGc77
-         2TXXfidrwS51YtSeT+EiOrwXfMr/OF/Dbj+VFL7zXvK0MNoC3n96Jo2OIKIk6ojyDC96
-         IgGFxoYG6pWF9IxURWCzxrYDD4rswcpPcD5W+huVKd/zfGQSJ7i2vviE8yPgHQDKzoEK
-         EAgUcX6c2SAc6v5bTXet/n9LhMwhxhY9hoaHY7vAzC3lm7HE72FlKM8CtdBVB73IhnR7
-         UjoK62I846m+HUXHSg6JLcj/v1XiEQOcYxkEiEqws0kPW4v5ZlPurAYQPFUEubAbzWcn
-         EKlQ==
-X-Gm-Message-State: AOJu0YxVubqICllde6U6GlyXKlTGYlIY4JQvYkhCwvy8sSBWIyi0LvAp
-	0ok9t1A/gCSfeTYwLN3AiaQxpvEkkvY+wJ4aP9XETWR/lVar0FWrFCVV/AUW
-X-Google-Smtp-Source: AGHT+IFeRa3tRluycGUyke89nPnGaggVJvCx6ZRuejA+ZaHZFWJZth1jk1VRngG6wEzCweTN8m4ngQ==
-X-Received: by 2002:a05:600c:4f10:b0:40e:d316:8cb8 with SMTP id l16-20020a05600c4f1000b0040ed3168cb8mr106873wmq.27.1706663197677;
-        Tue, 30 Jan 2024 17:06:37 -0800 (PST)
-Received: from [192.168.68.106] (178-191-157-184.hdsl.highway.telekom.at. [178.191.157.184])
-        by smtp.gmail.com with ESMTPSA id t10-20020a05600c198a00b0040f22171921sm29657wmq.3.2024.01.30.17.06.36
-        (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
-        Tue, 30 Jan 2024 17:06:36 -0800 (PST)
-Message-ID: <a67e5de1-7e56-47cd-99c3-b4cd7e471c3d@gmail.com>
-Date: Wed, 31 Jan 2024 02:06:36 +0100
+	Wed, 31 Jan 2024 17:04:39 +0000 (UTC)
+Received: from mail.msweet.org (mail.msweet.org [173.255.209.91])
+	by smtp1.osuosl.org (Postfix) with ESMTPS id 39B5983CBC
+	for <printing-architecture@lists.linux-foundation.org>; Wed, 31 Jan 2024 17:04:39 +0000 (UTC)
+DKIM-Filter: OpenDKIM Filter v2.11.0 smtp1.osuosl.org 39B5983CBC
+Received: from smtpclient.apple (cbl-66-186-76-47.vianet.ca [66.186.76.47])
+	(using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
+	(No client certificate requested)
+	by mail.msweet.org (Postfix) with ESMTPSA id 1FF5D80F09;
+	Wed, 31 Jan 2024 17:04:38 +0000 (UTC)
+DKIM-Filter: OpenDKIM Filter v2.11.0 mail.msweet.org 1FF5D80F09
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=msweet.org;
+	s=default; t=1706720678;
+	bh=FbotXWqqDib5yUEpUznGccwBQ8JscQjt8UGpplrUc6w=;
+	h=From:Date:Subject:To:From;
+	b=l80hYZe+jZhvVFUODd/6BHrWXZld5JrDD8v36TDNV+Y338bhSzdOcWUGxfRvrNs+U
+	 IOpr4DLFnFg+LVIXE8nMfldpstr1OYI/DcDuS3qBCldDq/k0CXbV9NB7hBjLx/bmei
+	 h5qp62JTzjszHLaR6m52D/VBis1q0Jq0cWq2/MJs=
+From: Michael Sweet <msweet@msweet.org>
+Content-Type: text/plain;
+	charset=us-ascii
+Content-Transfer-Encoding: quoted-printable
 Precedence: bulk
 X-Mailing-List: printing-architecture@lists.linux.dev
 List-Id: <printing-architecture.lists.linux.dev>
 List-Subscribe: <mailto:printing-architecture+subscribe@lists.linux.dev>
 List-Unsubscribe: <mailto:printing-architecture+unsubscribe@lists.linux.dev>
-MIME-Version: 1.0
-User-Agent: Mozilla Thunderbird
-From: Till Kamppeter <till.kamppeter@gmail.com>
-Subject: OpenPrinting News
-To: Ira McDonald <blueroofmusic@gmail.com>, Aveek Basu
- <basu.aveek@gmail.com>,
- Open Printing <printing-architecture@lists.linux-foundation.org>
-Content-Language: en-US
-Content-Type: text/plain; charset=UTF-8; format=flowed
-Content-Transfer-Encoding: 7bit
+Mime-Version: 1.0 (Mac OS X Mail 16.0 \(3774.300.61.1.2\))
+Date: Wed, 31 Jan 2024 12:04:26 -0500
+Subject: LPrint 1.3.0
+Message-Id: <6AABDE8A-AAE5-4887-9F75-1972053ECC26@msweet.org>
+To: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>
+X-Mailer: Apple Mail (2.3774.300.61.1.2)
 
-Hi,
+LPrint v1.3.0 adds a new dithering algorithm, support for new printers, =
+support
+for configuration files, and fixes a number of bugs:
 
-I have posted the newest development of the last month on our website now.
+    https://github.com/michaelrsweet/lprint/releases/tag/v1.3.0
 
-Here we go:
+Changes include:
 
-https://openprinting.github.io/OpenPrinting-News-January-2024/
+- Added new dithering algorithm to better support barcode printing with =
+shaded
+  content.
+- Added experimental Brother printer support (Issue #15)
+- Added basic TSPL printer support (Issue #54)
+- Added basic SEIKO printer support (Issue #58)
+- Added experimental Zebra CPCL printer support.
+- Added support for configuration files in "/etc", "/usr/local/etc", or
+  "/Library/Application Support" (macOS).
+- Updated ZPL driver to report 'media-needed' reason when out of labels =
+during a
+  job.
+- Fixed copies support for ZPL printers (Issue #100)
+- Fixed darkness calculations for EPL and ZPL printers (Issue #104)
 
-    Till
+Enjoy!
+
+________________________
+Michael Sweet
+
