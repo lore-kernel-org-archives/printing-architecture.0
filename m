@@ -1,78 +1,78 @@
-Received: from smtp4.osuosl.org (smtp4.osuosl.org [140.211.166.137])
+Received: from smtp1.osuosl.org (smtp1.osuosl.org [140.211.166.138])
 	(using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
 	(No client certificate requested)
-	by smtp.subspace.kernel.org (Postfix) with ESMTPS id B0A59604D5
-	for <printing-architecture@lists.linuxfoundation.org>; Wed,  6 Mar 2024 12:01:52 +0000 (UTC)
-Authentication-Results: smtp.subspace.kernel.org; arc=none smtp.client-ip=140.211.166.137
+	by smtp.subspace.kernel.org (Postfix) with ESMTPS id 14EB73BB3A
+	for <printing-architecture@lists.linux-foundation.org>; Fri, 15 Mar 2024 14:23:52 +0000 (UTC)
+Authentication-Results: smtp.subspace.kernel.org; arc=none smtp.client-ip=140.211.166.138
 ARC-Seal:i=1; a=rsa-sha256; d=subspace.kernel.org; s=arc-20240116;
-	t=1709726513; cv=none; b=ae7nGDsfJvr5UNJ0vbHYVJNY8dIyskmTTvPkzTrJy45hJtilPrs4g1CZRYEybDVkHHuvLbeuF3rj2mn0QuVoUGFIuU+kEWcS5g7FPF+M5prlPzxjPeP7fT5rRARcT4d/NihtddJiYlxmac1lP8IDjykSA1iVBi/KEtndKp3pcFQ=
+	t=1710512635; cv=none; b=PLEHsl7RrZXVheRNUIkYK1ZzYL+qFAXIEb10Gji9JHQ6BY+qa6dLLphT7yJw7yTxdxlZYbAjSVDv/VK/C7xalu1TSYtw9UPg22Vu56QcMgZiFmjHfzbwtbHLBA5pDN9jqfbLYcRrUEFgN3Rl6msDixZia+/tM/sZceGinjdh5Ww=
 ARC-Message-Signature:i=1; a=rsa-sha256; d=subspace.kernel.org;
-	s=arc-20240116; t=1709726513; c=relaxed/simple;
-	bh=SYj95lge7YSpLByIOMzTxWUk1RkBMnaN7nTEYNEtpqQ=;
-	h=Message-ID:Date:MIME-Version:Subject:To:Cc:References:From:
-	 In-Reply-To:Content-Type; b=IsJh6YBJ38rErQEQgc9F3zBxuFop8K+KuorORoXnlZwe30TV4lAWafo1f9ewR9NXjCA3KqDHnzrj1EmnYXsJGMuJdCV4hwaBqYWg41B2+v8H0kV0NBLpjw5padHeIinjgZIwTRPtw1y2qGp+2J123xJ3XZcoCrGiL2c5gxy0orw=
-ARC-Authentication-Results:i=1; smtp.subspace.kernel.org; dkim=pass (2048-bit key) header.d=gmail.com header.i=@gmail.com header.b=hWSFTQ4n; arc=none smtp.client-ip=140.211.166.137
+	s=arc-20240116; t=1710512635; c=relaxed/simple;
+	bh=yEFtH0mqTUXwehitt3wE0SbOpStN9MzKukA/XKyp0OY=;
+	h=Message-ID:Date:MIME-Version:From:Subject:To:Content-Type; b=ojWjRHD5yRruUrW3KHlrhChq7Jq7tLR3YDWY/Ksps0wKjD56gfXZHeuqKGnCoE+u1j2jwPEfGNZsdweoKIqfilGTscp0NKOgPnRMV6qYj3VmJezogqoGXPXyDG1O7mXCaRzB1zMxpzXlXZXBG8XVfO3WKxW6MADpbs3YipeEVxg=
+ARC-Authentication-Results:i=1; smtp.subspace.kernel.org; dkim=pass (2048-bit key) header.d=apevzner.com header.i=@apevzner.com header.b=S3ikVA/e; arc=none smtp.client-ip=140.211.166.138
 Authentication-Results: smtp.subspace.kernel.org;
-	dkim=pass (2048-bit key) header.d=gmail.com header.i=@gmail.com header.b="hWSFTQ4n"
+	dkim=pass (2048-bit key) header.d=apevzner.com header.i=@apevzner.com header.b="S3ikVA/e"
 Received: from localhost (localhost [127.0.0.1])
-	by smtp4.osuosl.org (Postfix) with ESMTP id 570BC40500
-	for <printing-architecture@lists.linuxfoundation.org>; Wed,  6 Mar 2024 12:01:52 +0000 (UTC)
+	by smtp1.osuosl.org (Postfix) with ESMTP id 6C232822D3
+	for <printing-architecture@lists.linux-foundation.org>; Fri, 15 Mar 2024 14:23:52 +0000 (UTC)
 X-Virus-Scanned: amavisd-new at osuosl.org
 X-Spam-Flag: NO
-X-Spam-Score: -2.099
+X-Spam-Score: -2.1
 X-Spam-Level:
-Received: from smtp4.osuosl.org ([127.0.0.1])
-	by localhost (smtp4.osuosl.org [127.0.0.1]) (amavisd-new, port 10024)
-	with ESMTP id 2J58t4FqTsgo
-	for <printing-architecture@lists.linuxfoundation.org>;
-	Wed,  6 Mar 2024 12:01:51 +0000 (UTC)
-Received-SPF: Pass (mailfrom) identity=mailfrom; client-ip=2a00:1450:4864:20::62c; helo=mail-ej1-x62c.google.com; envelope-from=till.kamppeter@gmail.com; receiver=<UNKNOWN> 
-DMARC-Filter: OpenDMARC Filter v1.4.2 smtp4.osuosl.org 2B2B1405F2
-Authentication-Results: smtp4.osuosl.org; dmarc=pass (p=none dis=none) header.from=gmail.com
-DKIM-Filter: OpenDKIM Filter v2.11.0 smtp4.osuosl.org 2B2B1405F2
-Authentication-Results: smtp4.osuosl.org;
-	dkim=pass (2048-bit key) header.d=gmail.com header.i=@gmail.com header.a=rsa-sha256 header.s=20230601 header.b=hWSFTQ4n
-Received: from mail-ej1-x62c.google.com (mail-ej1-x62c.google.com [IPv6:2a00:1450:4864:20::62c])
-	by smtp4.osuosl.org (Postfix) with ESMTPS id 2B2B1405F2
-	for <printing-architecture@lists.linuxfoundation.org>; Wed,  6 Mar 2024 12:01:50 +0000 (UTC)
-Received: by mail-ej1-x62c.google.com with SMTP id a640c23a62f3a-a449c5411e1so686253166b.1
-        for <printing-architecture@lists.linuxfoundation.org>; Wed, 06 Mar 2024 04:01:50 -0800 (PST)
+Received: from smtp1.osuosl.org ([127.0.0.1])
+	by localhost (smtp1.osuosl.org [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id f-p-xQU7dIgx
+	for <printing-architecture@lists.linux-foundation.org>;
+	Fri, 15 Mar 2024 14:23:51 +0000 (UTC)
+Received-SPF: Pass (mailfrom) identity=mailfrom; client-ip=2a00:1450:4864:20::131; helo=mail-lf1-x131.google.com; envelope-from=pzz@apevzner.com; receiver=<UNKNOWN> 
+DMARC-Filter: OpenDMARC Filter v1.4.2 smtp1.osuosl.org 7DB908226F
+Authentication-Results: smtp1.osuosl.org; dmarc=none (p=none dis=none) header.from=apevzner.com
+DKIM-Filter: OpenDKIM Filter v2.11.0 smtp1.osuosl.org 7DB908226F
+Authentication-Results: smtp1.osuosl.org;
+	dkim=pass (2048-bit key, unprotected) header.d=apevzner.com header.i=@apevzner.com header.a=rsa-sha256 header.s=google header.b=S3ikVA/e
+Received: from mail-lf1-x131.google.com (mail-lf1-x131.google.com [IPv6:2a00:1450:4864:20::131])
+	by smtp1.osuosl.org (Postfix) with ESMTPS id 7DB908226F
+	for <printing-architecture@lists.linux-foundation.org>; Fri, 15 Mar 2024 14:23:49 +0000 (UTC)
+Received: by mail-lf1-x131.google.com with SMTP id 2adb3069b0e04-51320ca689aso2454660e87.2
+        for <printing-architecture@lists.linux-foundation.org>; Fri, 15 Mar 2024 07:23:49 -0700 (PDT)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
-        d=gmail.com; s=20230601; t=1709726509; x=1710331309; darn=lists.linuxfoundation.org;
-        h=content-transfer-encoding:in-reply-to:from:references:cc:to
-         :content-language:subject:user-agent:mime-version:date:message-id
-         :from:to:cc:subject:date:message-id:reply-to;
-        bh=OxKjQTRj7PB7cUZl0T7Mi/jJCMrUzRwjTKU2gpweZgo=;
-        b=hWSFTQ4n6SWMYoR6dWfSPaL4CnJb9WTLEYN8suU3iz9fr8B8/vw0Zsf1oQ3Nj19i3x
-         oVWRIKkomL9l+t2TqWwZCLW74OdeVD+L/vsfFq/8ERXjrmTKVpe6A/t730TI7oEvhSs4
-         B85bEunTes+LcoPLkGSnjb/oZZSrYiKinEf8Lg7QWkmekRP/6lNv4soVNfd2XL1IUtyM
-         kkH7p5sNpTIcgUrOKNq2GR2C0jbA7n0ZRZvjJADej57sLU+XERbrjQdcp3kaHZd08LC3
-         WVIwTPzTNuY4UpTVfxddXA8lRGxjVE5VeNLAJWKmYPrFRKCScaG4sUrWoV15JBFYN3GO
-         upmg==
+        d=apevzner.com; s=google; t=1710512627; x=1711117427; darn=lists.linux-foundation.org;
+        h=content-transfer-encoding:to:subject:from:content-language
+         :user-agent:mime-version:date:message-id:from:to:cc:subject:date
+         :message-id:reply-to;
+        bh=pqT0BNVQMgNvkYVQXZAa4R6pavnpZfLh1vXyuzGFCCM=;
+        b=S3ikVA/erdDxa3EHyhmtlCGVMj9Yq4tEcemX7XqNNWJNniHdF3y0s6Re9sFCkgtdxU
+         pALYQiqy7c+7qfxxyVEtXzB81GLUE4+7n7CMG1tsShAmLwfPQS0qeq0giXhPsE6NsdkS
+         VZS1v80/GNhHo8lkCroMblHeEpATQc3NiIUxRNzJUt5MlleDlATFm3nbu7vLUKt6jWKQ
+         Q1c7pYorhEo89glqigU2Xa1zFy3hNw5tUOkz/ga8i0hM6XJR3zzPlXLwh4Tcs3fzOIdN
+         3bO9yLRz5IZY9DVe8eTJvXOqXs2aH9WPZ8RQajfCZRKFhdG55z2N62a4tXTRi6LQkmcT
+         zb6w==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
-        d=1e100.net; s=20230601; t=1709726509; x=1710331309;
-        h=content-transfer-encoding:in-reply-to:from:references:cc:to
-         :content-language:subject:user-agent:mime-version:date:message-id
-         :x-gm-message-state:from:to:cc:subject:date:message-id:reply-to;
-        bh=OxKjQTRj7PB7cUZl0T7Mi/jJCMrUzRwjTKU2gpweZgo=;
-        b=enB+Iof1sMGKcTlySL+oW5d4WZnQ0xz8/Gjw4Sbe0Etwrl+Tu491Srq76qL7GFOe2Z
-         Mco6X0PVgF13c/lDR4ohrKIVLmBrOK88QfrT+h9SwmyymL9LY6zEaNJGAk8GgDEMXFwU
-         6sKrSuJPuCednmJqEP4CJGzwXq0482m4KG9SCvkuLRtPwqOlPeGAYWgELf8Qi4Ot6BWm
-         vpn2593j+d35yPoE0x+XhXq2sQDGj8l/70QIDgaG5uqKrWbJVK2QEcNE1b8pjYlqxBTr
-         BJ71ZromFIy6ViZHJjZSwH3MjajwcUhh1xPuNLOsDGfhSH5S+Soln3hbjgvxiGmOCKnf
-         +T6Q==
-X-Forwarded-Encrypted: i=1; AJvYcCXxFWI5ucGThfhqYtUmjrpsInp/HJ9wwMNQRfF0AjUca8eb8OhYkKvQv14c7nFr/q50PSZJariYEJNtvIlFnyS7c+fXNQe9SUI1C5SzicSnoWE30kNbB4g6AE8bHIS+tw==
-X-Gm-Message-State: AOJu0YzSJVl7H3x9pLl2KsGsaIeL4amfQKd2VjwUwiZYQo+UBdVLTLLc
-	tnDUn7uyT+CMhCviMtbq5Y+NULInqHcQSgO6LPJ4qHr0EhcUUsTb
-X-Google-Smtp-Source: AGHT+IEV761vnJSHZHuWNQ28zMRP8XZgbI/fpfPckeGH8iMLFZQOE6sz1t4N2KEFakA6adnsb7pmow==
-X-Received: by 2002:a17:906:4156:b0:a44:7ad0:8069 with SMTP id l22-20020a170906415600b00a447ad08069mr9952034ejk.72.1709726508629;
-        Wed, 06 Mar 2024 04:01:48 -0800 (PST)
-Received: from [192.168.68.106] (178-191-200-70.hdsl.highway.telekom.at. [178.191.200.70])
-        by smtp.gmail.com with ESMTPSA id f17-20020a170906085100b00a45b6e84e00sm756195ejd.75.2024.03.06.04.01.47
+        d=1e100.net; s=20230601; t=1710512627; x=1711117427;
+        h=content-transfer-encoding:to:subject:from:content-language
+         :user-agent:mime-version:date:message-id:x-gm-message-state:from:to
+         :cc:subject:date:message-id:reply-to;
+        bh=pqT0BNVQMgNvkYVQXZAa4R6pavnpZfLh1vXyuzGFCCM=;
+        b=rWINFqcn9JGR+RrAoqxF8nXmlN0nLHBRUYHmwpHUoTlBH7T7nBeoWXRn81/GHvFJdN
+         qbcTEzwXYgFuSjT9jU3hMucEZAOj4Jsn+SmERCgwTB7zoi8KAuanf0I+4CJ9R2gRKbOn
+         dWqNeybJWrvt379hOKKvNCjYSrY3TAXnaxMMuZdM8g8CBuQgmTMtkcivn6Xd+2iDdscM
+         7pvltUCfuQv0hzwA6PyjwIXnrweptn4psZv7TFin+TdYPVARyHSHt4YZsbUbmuxtIueo
+         gD5HePLHkuUb+NBKitEUDYgG1p0wARtha09TooFHJiwgFufZbNIBXS8ly9lNSq/ic4yT
+         O1hA==
+X-Gm-Message-State: AOJu0YwSASgWwMinmGExim2O9cXaSnJlViTjx/ffBXQJKzZ6jUhR01oe
+	jhhUCLw2WJ2H5yF2UpDjS3YmofXNoadA9XpK0zVmtFdGFXZHzP7N/9icwZtT+B/OQup5KX/TCug
+	o
+X-Google-Smtp-Source: AGHT+IGA59njMMhFeguukAwPF6+N2f85xrGfHz0VAyg6J5zrkHDlpzCS2RlemnyHLKSFQ133ZAQmzQ==
+X-Received: by 2002:a19:2d08:0:b0:513:c43a:f0bc with SMTP id k8-20020a192d08000000b00513c43af0bcmr2423423lfj.4.1710512627041;
+        Fri, 15 Mar 2024 07:23:47 -0700 (PDT)
+Received: from [192.168.0.6] (ppp85-141-192-142.pppoe.mtu-net.ru. [85.141.192.142])
+        by smtp.googlemail.com with ESMTPSA id m21-20020a194355000000b00513da68c536sm225423lfj.152.2024.03.15.07.23.46
+        for <printing-architecture@lists.linux-foundation.org>
         (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
-        Wed, 06 Mar 2024 04:01:48 -0800 (PST)
-Message-ID: <d786d4b6-5456-4250-998e-abdecb4944bd@gmail.com>
-Date: Wed, 6 Mar 2024 13:01:47 +0100
+        Fri, 15 Mar 2024 07:23:46 -0700 (PDT)
+Message-ID: <bb31aff4-2b72-4aeb-925a-c7924b80f110@apevzner.com>
+Date: Fri, 15 Mar 2024 17:23:45 +0300
 Precedence: bulk
 X-Mailing-List: printing-architecture@lists.linux.dev
 List-Id: <printing-architecture.lists.linux.dev>
@@ -80,71 +80,52 @@ List-Subscribe: <mailto:printing-architecture+subscribe@lists.linux.dev>
 List-Unsubscribe: <mailto:printing-architecture+unsubscribe@lists.linux.dev>
 MIME-Version: 1.0
 User-Agent: Mozilla Thunderbird
-Subject: Re: Fwd: [SC] Draft May 2024 F2F Agenda
 Content-Language: en-US
-To: Ira McDonald <blueroofmusic@gmail.com>,
- printing-architecture@lists.linuxfoundation.org,
- Aveek Basu <basu.aveek@gmail.com>, Danny Brennan <mdannyb11@gmail.com>,
- Zdenek Dohnal <zdohnal@redhat.com>, Michael Sweet <msweet@msweet.org>
-Cc: Jeremy Leber <jeremy.leber@lexmark.com>,
- "Kennedy, Smith (Wireless Architect)" <smith.kennedy@hp.com>
-References: <3EFFAB21-3445-49B0-901B-2672DD0C2921@hp.com>
- <CAN40gSvwaETcapL42DOkGgCLtsGbP8hVev_iQKL-r3XNox=ThQ@mail.gmail.com>
- <234B4709-0873-49F1-86DF-3DBF98D47D1F@hp.com>
- <CAN40gSuTCnD1G0_fzSkgF71ndqDa1qHpLbWbQe4i-TCBFHyw3w@mail.gmail.com>
-From: Till Kamppeter <till.kamppeter@gmail.com>
-In-Reply-To: <CAN40gSuTCnD1G0_fzSkgF71ndqDa1qHpLbWbQe4i-TCBFHyw3w@mail.gmail.com>
+From: Alexander Pevzner <pzz@apevzner.com>
+Subject: ipp-usb 0.9.25 announce
+To: Open Printing <printing-architecture@lists.linux-foundation.org>
 Content-Type: text/plain; charset=UTF-8; format=flowed
-Content-Transfer-Encoding: 8bit
+Content-Transfer-Encoding: 7bit
 
-On 06/03/2024 01:14, Ira McDonald wrote:
-> Updated draft from yesterday's SC meeting - OP and IPP list of topics 
-> may need work.
-> 
-> 
-> May 2024 F2F Agenda Rough Draft
-> =============================================
-> 
-> May 6
-> --------------------------------------------
-> 10:00 AM - 10:30 AM    OpenPrinting Plenary
-> 10:30 AM - 11:15 AM    OpenPrinting : GSoC Project Updates
-> 11:15 AM - 12:00 PM    OpenPrinting : ChromiumOS Printing Update
-> 12:00 PM - 12:45 PM    Lunch
-> 12:45 PM -  1:45 PM    OpenPrinting : CUPS Plenary
->  1:45 PM -  2:30 PM    OpenPrinting : cups-filters • CUPS Snap
->  2:30 PM -  3:00 PM    Break
->  3:00 PM -  4:00 PM    OpenPrinting : Printer Applications
-> 
-> May 7
-> ---------------------------------------------
-> 10:00 AM - 11:00 AM    OpenPrinting : Distribution mechanisms roadmap
+Hi everybody,
 
-Is "Distribution mechanisms roadmap" about Snap, OCI 
-(Docker/ROCKs/podman) containers?
+I am pleased to announce the release of ipp-usb 0.9.25.
 
-> 11:00 AM - 12:00 PM    OpenPrinting : OpenPrinting and Ghostscript BoF
+In this release, there are two notable changes from the previous version:
 
-You say "BoF" here, should this then be more an open discussion session 
-than a presentation, as the last session of the OpenPrinting part?
+1. A new quirk has been added to address the initialization issue with 
+HP OfficeJet Pro 8710. More information can be found at 
+https://github.com/OpenPrinting/ipp-usb/issues/75.
 
-> 12:00 PM - 12:45 PM    Lunch
-> 12:45 PM -  1:45 PM    PWG Plenary
->  1:45 PM -  2:15 PM    IPP WG : Status • Charter • IPP OAuth Extensions 
->                        v1.0
->  2:15 PM -  2:45 PM    Break
->  2:45 PM -  3:30 PM    IPP WG : 3D Printing Liaisons: Status & Guidance
->  3:30 PM -  5:00 PM    IPP WG : IPP System Service v1.1 • IPP Shared 
->                        Infrastructure Extensions v1.1
-> 
-> May 8
-> ---------------------------------------------
-> 10:00 AM - 12:00 PM    IDS WG : Status and Discussion • Liaisons • PWG 
->                        Hardcopy Device Security Guidelines v1.0
-> 12:00 PM - 12:45 PM    Lunch
-> 12:45 PM -  1:45 PM    IPP WG : Strong Device Identity BoF
->  1:45 PM -  2:45 PM    IPP WG : IPP Everywhere v2.0
->  2:45 PM -  3:00 PM    IPP WG : Next Steps
-> 
+2. The introduction of a new quirk setting:
 
-    Till
+    - buggy-ipp-responses = reject | allow | sanitize
+
+    This setting determines how ipp-usb handles malformed IPP responses 
+received from devices. It is important to note that there are two types 
+of IPP responses: those generated during the initialization process by 
+ipp-usb and those in response to client requests (e.g., from CUPS).
+
+    - "reject": Malformed IPP responses are not accepted. In cases like 
+the Pantum M7300FDW, where the device fails to initialize printing 
+support, ipp-usb will continue to manage the device and provide eSCL 
+support, as seen in versions 0.9.23 and earlier.
+
+    - "allow": Malformed IPP responses are accepted when ipp-usb is the 
+final destination of these responses, as seen in version 0.9.24.
+
+    - "sanitize": ipp-usb not only allows malformed IPP responses for 
+itself but also corrects them for clients.
+
+For Pantum printers, the "sanitize" option is set as the default for 
+handling buggy IPP responses.
+
+P.S. Zdenek, it is recommended to use the "sanitize" setting or consider 
+blacklisting Pantum printers entirely in your RedHat builds. With your 
+patches to version 0.9.24, ipp-usb will still manage the device and 
+provide eSCL support, but it will prevent proprietary drivers from 
+functioning correctly, resulting in non-functional printing.
+
+-- 
+
+	Wishes, Alexander Pevzner (pzz@apevzner.com)
