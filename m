@@ -1,78 +1,85 @@
-Received: from smtp2.osuosl.org (smtp2.osuosl.org [140.211.166.133])
+Received: from smtp3.osuosl.org (smtp3.osuosl.org [140.211.166.136])
 	(using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
 	(No client certificate requested)
-	by smtp.subspace.kernel.org (Postfix) with ESMTPS id C4B1537145
-	for <printing-architecture@lists.linux-foundation.org>; Fri, 15 Mar 2024 14:27:35 +0000 (UTC)
-Authentication-Results: smtp.subspace.kernel.org; arc=none smtp.client-ip=140.211.166.133
+	by smtp.subspace.kernel.org (Postfix) with ESMTPS id B99005A782
+	for <printing-architecture@lists.linux-foundation.org>; Tue, 19 Mar 2024 13:25:48 +0000 (UTC)
+Authentication-Results: smtp.subspace.kernel.org; arc=none smtp.client-ip=140.211.166.136
 ARC-Seal:i=1; a=rsa-sha256; d=subspace.kernel.org; s=arc-20240116;
-	t=1710512857; cv=none; b=dzENibdujwjxbIFtnDi2TkI0GiHzTYPQizxcEYP9Bb8F6dnXHOG6oOGy+jMsCc3hk/JlUFrwAVbwiJnIucuv0pGDkt9x0H82wuLUUR38YN2DKCSOg4WXJQcbJZAQs6efvBy7FcUH7SdNIwyPYjZPpmW0lGUDsrSRhCrYFrEIUhk=
+	t=1710854749; cv=none; b=YGgj4/YY5Sby3OffIpcHnHOHcGiUdArsDNRgfHpOYhAJ4XQgTtHjimxHTsKyxzoFAFSabbnZqJkA3DtCRRGVvbXQ3SOWzmiJ4HlMt8ZhRF3TyArExyEk0vJ7MLSmSJ6rsHr7V7OrVr9ev5N3huFLgGuWz9jn3uYV7PpN2FfQZP4=
 ARC-Message-Signature:i=1; a=rsa-sha256; d=subspace.kernel.org;
-	s=arc-20240116; t=1710512857; c=relaxed/simple;
-	bh=ebdFzD5vNfeCtre/QaxD+nDvbt8QPlOWq+FMPOYvuAo=;
-	h=Content-Type:Message-ID:Date:MIME-Version:From:Subject:To; b=hmVMca8Gt8LVlToBRLBSYqzTUxCa69wPS6IrgQFnWTlO1yuK4DPLvDslMcBq+qrVDlUKxM6AXWhrgVql+15GOhDZNTMXYi3/59N4oTdNBLty0ynKDL1sPid6rYLvyhNcV3EGOoVy5/OphO9oCL187Mew5m5zhBANeLBd8MqxTg8=
-ARC-Authentication-Results:i=1; smtp.subspace.kernel.org; dkim=pass (2048-bit key) header.d=apevzner.com header.i=@apevzner.com header.b=V0407L/W; arc=none smtp.client-ip=140.211.166.133
+	s=arc-20240116; t=1710854749; c=relaxed/simple;
+	bh=y5cLBjnqS+JZUezyn7un+W3ASX2881N/AzIFntUNdV8=;
+	h=Message-ID:Date:MIME-Version:Subject:To:References:From:
+	 In-Reply-To:Content-Type; b=BYyMutLteAQUpEiUWM4+XHpCYKDV8sU55r241moyZnirFX7F9BdIuxfMLPZnclkC0aPgDx9VewVMW7Yz6uv+8jugIgmwfzdDtTkLAuKb3AMR2LE7XRpjUfDOFI+1bgjR6piqQG95WrpImMJrTi7D/uXzDFvcIW+mSp5dbW9v42k=
+ARC-Authentication-Results:i=1; smtp.subspace.kernel.org; dkim=pass (1024-bit key) header.d=redhat.com header.i=@redhat.com header.b=NLbx0SKm; arc=none smtp.client-ip=140.211.166.136
 Authentication-Results: smtp.subspace.kernel.org;
-	dkim=pass (2048-bit key) header.d=apevzner.com header.i=@apevzner.com header.b="V0407L/W"
+	dkim=pass (1024-bit key) header.d=redhat.com header.i=@redhat.com header.b="NLbx0SKm"
 Received: from localhost (localhost [127.0.0.1])
-	by smtp2.osuosl.org (Postfix) with ESMTP id 3291B41888
-	for <printing-architecture@lists.linux-foundation.org>; Fri, 15 Mar 2024 14:27:35 +0000 (UTC)
+	by smtp3.osuosl.org (Postfix) with ESMTP id 49AA060A8A
+	for <printing-architecture@lists.linux-foundation.org>; Tue, 19 Mar 2024 13:25:48 +0000 (UTC)
 X-Virus-Scanned: amavisd-new at osuosl.org
 X-Spam-Flag: NO
-X-Spam-Score: -2.1
+X-Spam-Score: -2.099
 X-Spam-Level:
-Received: from smtp2.osuosl.org ([127.0.0.1])
-	by localhost (smtp2.osuosl.org [127.0.0.1]) (amavisd-new, port 10024)
-	with ESMTP id yKglBPAHI9Wn
+Received: from smtp3.osuosl.org ([127.0.0.1])
+	by localhost (smtp3.osuosl.org [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id EfM23_ZftRHM
 	for <printing-architecture@lists.linux-foundation.org>;
-	Fri, 15 Mar 2024 14:27:33 +0000 (UTC)
-Received-SPF: Pass (mailfrom) identity=mailfrom; client-ip=2a00:1450:4864:20::12a; helo=mail-lf1-x12a.google.com; envelope-from=pzz@apevzner.com; receiver=<UNKNOWN> 
-DMARC-Filter: OpenDMARC Filter v1.4.2 smtp2.osuosl.org EC3BC41897
-Authentication-Results: smtp2.osuosl.org; dmarc=none (p=none dis=none) header.from=apevzner.com
-DKIM-Filter: OpenDKIM Filter v2.11.0 smtp2.osuosl.org EC3BC41897
-Authentication-Results: smtp2.osuosl.org;
-	dkim=pass (2048-bit key, unprotected) header.d=apevzner.com header.i=@apevzner.com header.a=rsa-sha256 header.s=google header.b=V0407L/W
-Received: from mail-lf1-x12a.google.com (mail-lf1-x12a.google.com [IPv6:2a00:1450:4864:20::12a])
-	by smtp2.osuosl.org (Postfix) with ESMTPS id EC3BC41897
-	for <printing-architecture@lists.linux-foundation.org>; Fri, 15 Mar 2024 14:27:32 +0000 (UTC)
-Received: by mail-lf1-x12a.google.com with SMTP id 2adb3069b0e04-51325c38d10so2941268e87.1
-        for <printing-architecture@lists.linux-foundation.org>; Fri, 15 Mar 2024 07:27:32 -0700 (PDT)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
-        d=apevzner.com; s=google; t=1710512850; x=1711117650; darn=lists.linux-foundation.org;
-        h=to:subject:from:content-language:user-agent:mime-version:date
-         :message-id:from:to:cc:subject:date:message-id:reply-to;
-        bh=JoD/GJ1fusM2E8U5qdN+4nQG3sANj/9AA20kgBJcoRI=;
-        b=V0407L/WTqJvaNtGz35E/gbpclL3KeGcAxg27b0XK6J/P0/aTLp7gnHObB6EBI/2Pz
-         gKhYyibaLUBCy6VjIgnAKLVUBq6enbdE8fAb+TzMwU2HAV0QkEato7qPrG/w2jWw5+kj
-         a3+hG/cW94gRyEhiXE2tUb/s8IWOxkhmAsOWNSSqpB8uWs5bTq6ihTYdrFrNKIiqzoFw
-         v1Q7bKN5icpoqYskzdaeattSH4saTyV4a+u+3b5fZtLkeOdAmrVD/VMwsL1Ck5COvyYd
-         hL/OwAP+mFt/792fmn07SWyh/uatr+i0ZsmaouyVGDr+bDK5uZPWilm+Q2AQW0J+j9Tn
-         jfxw==
+	Tue, 19 Mar 2024 13:25:47 +0000 (UTC)
+Received-SPF: Pass (mailfrom) identity=mailfrom; client-ip=170.10.129.124; helo=us-smtp-delivery-124.mimecast.com; envelope-from=zdohnal@redhat.com; receiver=<UNKNOWN> 
+DMARC-Filter: OpenDMARC Filter v1.4.2 smtp3.osuosl.org 8568360A9C
+Authentication-Results: smtp3.osuosl.org; dmarc=pass (p=none dis=none) header.from=redhat.com
+DKIM-Filter: OpenDKIM Filter v2.11.0 smtp3.osuosl.org 8568360A9C
+Authentication-Results: smtp3.osuosl.org;
+	dkim=pass (1024-bit key) header.d=redhat.com header.i=@redhat.com header.a=rsa-sha256 header.s=mimecast20190719 header.b=NLbx0SKm
+Received: from us-smtp-delivery-124.mimecast.com (us-smtp-delivery-124.mimecast.com [170.10.129.124])
+	by smtp3.osuosl.org (Postfix) with ESMTPS id 8568360A9C
+	for <printing-architecture@lists.linux-foundation.org>; Tue, 19 Mar 2024 13:25:47 +0000 (UTC)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=redhat.com;
+	s=mimecast20190719; t=1710854746;
+	h=from:from:reply-to:subject:subject:date:date:message-id:message-id:
+	 to:to:cc:mime-version:mime-version:content-type:content-type:
+	 content-transfer-encoding:content-transfer-encoding:
+	 in-reply-to:in-reply-to:references:references;
+	bh=h1WcYAI7/xHm5rprghyorwak9vj06xIo7ePKiJri48k=;
+	b=NLbx0SKmQvojBjGPFcovXGdZ83aT/TsbpLXXpbSUx0ZBt8FjqM8sajCCiXALblVTg9CV67
+	U5Tk60/UVhZ8XA02fPmCgSdoK/BJXAvoeo8e7iE38xsE1MhmUK5LKVkqqXSrJ16Y85M7sN
+	zzDq5244QQ9v+Z8HG0V9jKgh8SzWvKs=
+Received: from mail-lf1-f69.google.com (mail-lf1-f69.google.com
+ [209.85.167.69]) by relay.mimecast.com with ESMTP with STARTTLS
+ (version=TLSv1.3, cipher=TLS_AES_256_GCM_SHA384) id
+ us-mta-693-gpXAZuEVMHOGX4jFzCiD4w-1; Tue, 19 Mar 2024 09:25:44 -0400
+X-MC-Unique: gpXAZuEVMHOGX4jFzCiD4w-1
+Received: by mail-lf1-f69.google.com with SMTP id 2adb3069b0e04-513decf1c8aso2958697e87.1
+        for <printing-architecture@lists.linux-foundation.org>; Tue, 19 Mar 2024 06:25:44 -0700 (PDT)
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
-        d=1e100.net; s=20230601; t=1710512850; x=1711117650;
-        h=to:subject:from:content-language:user-agent:mime-version:date
-         :message-id:x-gm-message-state:from:to:cc:subject:date:message-id
-         :reply-to;
-        bh=JoD/GJ1fusM2E8U5qdN+4nQG3sANj/9AA20kgBJcoRI=;
-        b=kI1gerSSBEdf/pJTjCkOFutFynpCKZE/61pmBnSKV5mFm+Ql2RM4y6Jk2B67AmBeRN
-         ttbt6bygg8pE7Fle17KRZ4E/K4OvHkNh7zDnPxZCjwoSpDRS76ek9l1PNAnML4wb88QQ
-         EhCqG1/olOOtxxE1B4Ey3rDQVyUBZyG4yE2FGEEp7sB4k4nD67jrtjwqKQ5yqTT5eNNc
-         tju2AIbxzrfuDgZbulNDzrm54d6zSsv8dA20cuO23hQUlZ9R8bSRs0jgusRJNhmjauVH
-         Bb5LsC/DlK8WDgsm4Xtyure7IuVZ49BJoiV4BJdZYvYpBGeRwwe1dF0EsvKGJDuqgctv
-         QHGA==
-X-Gm-Message-State: AOJu0Yyaztfxoz6qn/IbKj78DgoEL82Y7PMqe7wq5n9HuB0zIbAALlO5
-	xgL/D8DuCHhQvWbNnVGlnyPQovvy6wS3L/2ulW4PlW69HGLQLz7Q9bJAD1sULGVekv1siK4ecw/
-	J
-X-Google-Smtp-Source: AGHT+IHpLb1dOeSCaNscCxC/lSJlv9/uMJwHc9vUoWmXDXNPeyPs+S0luAt9X8wPmqKdm1UPSrapHg==
-X-Received: by 2002:ac2:4c87:0:b0:513:dd66:d5e9 with SMTP id d7-20020ac24c87000000b00513dd66d5e9mr237936lfl.21.1710512849681;
-        Fri, 15 Mar 2024 07:27:29 -0700 (PDT)
-Received: from [192.168.0.6] (ppp85-141-192-142.pppoe.mtu-net.ru. [85.141.192.142])
-        by smtp.googlemail.com with ESMTPSA id r7-20020a19ac47000000b0051330f9d828sm185555lfc.129.2024.03.15.07.27.28
-        for <printing-architecture@lists.linux-foundation.org>
+        d=1e100.net; s=20230601; t=1710854743; x=1711459543;
+        h=content-transfer-encoding:in-reply-to:from:content-language
+         :references:to:subject:user-agent:mime-version:date:message-id
+         :x-gm-message-state:from:to:cc:subject:date:message-id:reply-to;
+        bh=h1WcYAI7/xHm5rprghyorwak9vj06xIo7ePKiJri48k=;
+        b=cONeIbsX4hhn69z6knsw8BF6hI87U/XbLP1y9s/1nvdIP7FPJtMEej6H67LL8oTlF1
+         pj6pp51UPwf4FMNRuUAufXOqygOiniZ6VJ1+ygsvydAKmgeHoruvP2xRQJVs2/C5dB8c
+         t92kRRJ0aRQ6vOZljojDpysiaJOPO87zc516vQUKV9fCmi+fJaN7OO+YMPXzA4iu9KgD
+         9pX+E9cDmSVm7evbOuQcghl2Bs6nn3451NdaQtMrnYwUTfC9SIaNXh1GuJ/sI/7MiDhB
+         Rp1WZHJ3nnI1sFVSkb/IPNrAqC5Rgim0JP8sW39LnBj7fW7r5j0dUFDejx2dvjTUsQAZ
+         gzSQ==
+X-Forwarded-Encrypted: i=1; AJvYcCU+V4uVBPiyvEuf0yupR4pnK7nHjkc7pATLskUEv5zaHUxx4vEenIq5RtuAyGsb2MUxJuVGSeAEN3NUu46Ba+zN/NV/qt6dTEiOku87+YUMLsTehZ3YDPIy0NPS07aZef8=
+X-Gm-Message-State: AOJu0Yx5Znc275N8JCSnEgct7yx2LPQsW9AYnZvn043/6ldHHpUQiDhB
+	MCNl4O3i17Zs6Kzl7eg04iWGUPiLY2eXPQ70AYWLtCkvXxYs7hSitEweHCFQjsNYBVbdBrMuSnA
+	ajBvnsFLgvNRlP7CrOTirOw2soBDSmek91LDdeVkMgToYlvP5ryBb9m1EZRs0VcIboaEgjx8z5O
+	xwdtZTDzXz8uAb
+X-Received: by 2002:a19:6455:0:b0:513:9d80:f776 with SMTP id b21-20020a196455000000b005139d80f776mr10168052lfj.30.1710854743207;
+        Tue, 19 Mar 2024 06:25:43 -0700 (PDT)
+X-Google-Smtp-Source: AGHT+IFv9zsmrCXHPpgGquCThtuOz35YIfWDna2hzWMdBa40wGkeKfm0krsRK1Zp1j5erR5nfcjBIw==
+X-Received: by 2002:a19:6455:0:b0:513:9d80:f776 with SMTP id b21-20020a196455000000b005139d80f776mr10168030lfj.30.1710854742795;
+        Tue, 19 Mar 2024 06:25:42 -0700 (PDT)
+Received: from [10.43.3.238] (nat-pool-brq-t.redhat.com. [213.175.37.10])
+        by smtp.gmail.com with ESMTPSA id iv9-20020a05600c548900b00413eedd36a4sm19308375wmb.39.2024.03.19.06.25.42
         (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
-        Fri, 15 Mar 2024 07:27:28 -0700 (PDT)
-Content-Type: multipart/mixed; boundary="------------dzWzfdsRWJYW0CnV8N9PrB6z"
-Message-ID: <7555e91e-562c-4d89-9c92-91ddc17135a4@apevzner.com>
-Date: Fri, 15 Mar 2024 17:27:27 +0300
+        Tue, 19 Mar 2024 06:25:42 -0700 (PDT)
+Message-ID: <2c995986-9bf3-4f62-8f74-88c056eae5c5@redhat.com>
+Date: Tue, 19 Mar 2024 14:25:41 +0100
 Precedence: bulk
 X-Mailing-List: printing-architecture@lists.linux.dev
 List-Id: <printing-architecture.lists.linux.dev>
@@ -80,299 +87,50 @@ List-Subscribe: <mailto:printing-architecture+subscribe@lists.linux.dev>
 List-Unsubscribe: <mailto:printing-architecture+unsubscribe@lists.linux.dev>
 MIME-Version: 1.0
 User-Agent: Mozilla Thunderbird
+Subject: Re: Pantum M7300FDW
+To: Alexander Pevzner <pzz@apevzner.com>,
+ Open Printing <printing-architecture@lists.linux-foundation.org>
+References: <7555e91e-562c-4d89-9c92-91ddc17135a4@apevzner.com>
+From: Zdenek Dohnal <zdohnal@redhat.com>
+In-Reply-To: <7555e91e-562c-4d89-9c92-91ddc17135a4@apevzner.com>
+X-Mimecast-Spam-Score: 0
+X-Mimecast-Originator: redhat.com
 Content-Language: en-US
-From: Alexander Pevzner <pzz@apevzner.com>
-Subject: Pantum M7300FDW
-To: Open Printing <printing-architecture@lists.linux-foundation.org>
-
-This is a multi-part message in MIME format.
---------------dzWzfdsRWJYW0CnV8N9PrB6z
 Content-Type: text/plain; charset=UTF-8; format=flowed
 Content-Transfer-Encoding: 7bit
 
-Hi, everybody!
+Hi Alex!
 
-Some time ago, I initiated a discussion regarding workarounds for Pantum 
-M7300FDW and similar devices.
+On 3/15/24 15:27, Alexander Pevzner wrote:
+>
+> P.S. I observed that my patch to ipp-usb, which enables devices with 
+> similar issues, was not accepted by RedHat.
+Yes, I tried to remove the functionality based on security concerns that 
+were raised here, but completely forgot about that I could (and have to) 
+do that via quirks...
+>
+> Zdenek, if you choose to pursue this route, it may be safer to 
+> blacklist this device in your ipp-usb build. Otherwise, ipp-usb may 
+> hold the device while still providing eSCL but preventing access by 
+> proprietary printing drivers.
+Thanks, I totally forgot about this!
+>
+> In the latest version of ipp-usb, I have transformed this workaround 
+> into a quirk with three options: "reject" - the old behavior, "accept" 
+> - akin to 0.99.24 behavior, and "sanitize" - ipp-usb rectifies all 
+> broken IPP responses. With the "sanitize" option, this device prints 
+> over USB using unmodified CUPS.
+That's great! To have a way how to configure this behavior is ideal from 
+POV - we can ship the safe way as default (IMO sanitize option should 
+insert message into the log - admin would like to know whether something 
+is not correct, instead of silently workaround issue) and if the user 
+has problems, they can switch the quirk anytime.
 
-I would like to remind you that this particular device violates the IPP 
-protocol by using named attributes within collections instead of 
-utilizing IPP_TAG_MEMBERNAME.
 
-Previously, I proposed a patch to CUPS that allowed it to accept such 
-malformed messages. However, the patch was promptly rejected 
-(https://github.com/OpenPrinting/cups/pull/826). Therefore, I have 
-decided to bring this matter up for discussion here.
-
-This printer is listed as certified/compatible at Mopria site, at the 
-Apple list of compatible printers an in the IPP.Everwhere list of 
-compatible printers.
-
-It's firmware is dated 2016, and there is no firmware updates since that 
-time. It is worth noting that the  CUPS IPP parser was strengthened in 
-2019 (https://github.com/apple/cups/issues/5630), suggesting that the 
-printer may have received its certification before this enhancement.
-
-Despite its older firmware release date, this printer is still being 
-sold in stores.
-
-I've performed several attempts to connect Pantum representatives, using 
-both official support channel and my own unofficial channel, but didn't 
-succeed.
-
-There are probably other Pantum models that have the similar defect, but 
-I don't have an exact list. Also, according to Zdenek, there is some 
-Canon model with the similar defect.
-
-During the previous discussion I was asked several questions, so now 
-I've performed some investigations and now ready to answer.
-
-The Windows 11 IPP class driver doesn't print on this device.
-
-Also, Mopria Print for Android doesn't work too.
-
-Pantum provides drivers for Linux, and with these drivers printer works. 
-Under the hood this driver uses IPP protocol with "extensions" similar 
-to whatever I purpose.
-
-This case is important for us, because here in Moscow we have thousands 
-of computer classes in all Moscow public schools with thousands of 
-not-so-qualified users (school teachers), all moving to Linux, so "make 
-printing just work" becomes really essential for us.
-
-Please note that I have revisited my patch since our last discussion. 
-The updated version is more precise, affecting only IPP response parsing 
-when CUPS communicates with the hardware printer. IPP certification 
-tools and requests sent to the CUPS server remain unaffected.
-
-While I am not rushing to create a new PR at the moment, I would 
-appreciate it if someone could review the attached patch.
-
-If a patch like this is deemed unacceptable, please provide guidance on 
-addressing such problems. My objective remains unchanged: maintaining 
-the quality and security of the existing CUPS implementation while 
-enabling sometimes non-conforming hardware to function out of the box.
-
-t is worth mentioning that my patch has been tested on our range of 
-printers and functions effectively.
-
-P.S. I observed that my patch to ipp-usb, which enables devices with 
-similar issues, was not accepted by RedHat.
-
-Zdenek, if you choose to pursue this route, it may be safer to blacklist 
-this device in your ipp-usb build. Otherwise, ipp-usb may hold the 
-device while still providing eSCL but preventing access by proprietary 
-printing drivers.
-
-In the latest version of ipp-usb, I have transformed this workaround 
-into a quirk with three options: "reject" - the old behavior, "accept" - 
-akin to 0.99.24 behavior, and "sanitize" - ipp-usb rectifies all broken 
-IPP responses. With the "sanitize" option, this device prints over USB 
-using unmodified CUPS.
-
-Nevertheless, I am eager for these modifications to be implemented as 
-they resolve network printing issues that ipp-usb cannot address.
+Zdenek
 
 -- 
+Zdenek Dohnal
+Senior Software Engineer
+Red Hat, BRQ-TPBC
 
-	Wishes, Alexander Pevzner (pzz@apevzner.com)
---------------dzWzfdsRWJYW0CnV8N9PrB6z
-Content-Type: text/x-patch; charset=UTF-8; name="pantum-m7300fdw.patch"
-Content-Disposition: attachment; filename="pantum-m7300fdw.patch"
-Content-Transfer-Encoding: base64
-
-ZGlmZiAtLWdpdCBhL2JhY2tlbmQvaXBwLmMgYi9iYWNrZW5kL2lwcC5jCmluZGV4IDJiYmRl
-ZmJkMS4uZjFkNTMxNWYzIDEwMDY0NAotLS0gYS9iYWNrZW5kL2lwcC5jCisrKyBiL2JhY2tl
-bmQvaXBwLmMKQEAgLTY3OCw2ICs2NzgsNyBAQCBtYWluKGludCAgYXJnYywJCQkJLyogSSAt
-IE51bWJlciBvZiBjb21tYW5kLWxpbmUgYXJncyAqLwogICBodHRwID0gaHR0cENvbm5lY3Qy
-KGhvc3RuYW1lLCBwb3J0LCBhZGRybGlzdCwgQUZfVU5TUEVDLCBjdXBzRW5jcnlwdGlvbigp
-LCAxLAogICAgICAgICAgICAgICAgICAgICAgIDAsIE5VTEwpOwogICBodHRwU2V0VGltZW91
-dChodHRwLCAzMC4wLCB0aW1lb3V0X2NiLCBOVUxMKTsKKyAgaHR0cFNldElwcFJlc3BvbnNl
-RmxhZ3MoaHR0cCwgSVBQX0ZMR19XSVRIX0hXX1dPUktBUk9VTkRTKTsKIAogIC8qCiAgICog
-U2VlIGlmIHRoZSBwcmludGVyIHN1cHBvcnRzIFNOTVAuLi4KQEAgLTI1NDIsNiArMjU0Myw3
-IEBAIG1vbml0b3JfcHJpbnRlcigKICAgaHR0cCA9IGh0dHBDb25uZWN0Mihtb25pdG9yLT5o
-b3N0bmFtZSwgbW9uaXRvci0+cG9ydCwgTlVMTCwgQUZfVU5TUEVDLAogICAgICAgICAgICAg
-ICAgICAgICAgIG1vbml0b3ItPmVuY3J5cHRpb24sIDEsIDAsIE5VTEwpOwogICBodHRwU2V0
-VGltZW91dChodHRwLCAzMC4wLCB0aW1lb3V0X2NiLCBOVUxMKTsKKyAgaHR0cFNldElwcFJl
-c3BvbnNlRmxhZ3MoaHR0cCwgSVBQX0ZMR19XSVRIX0hXX1dPUktBUk9VTkRTKTsKICAgaWYg
-KHVzZXJuYW1lWzBdKQogICAgIGN1cHNTZXRVc2VyKHVzZXJuYW1lKTsKIApkaWZmIC0tZ2l0
-IGEvY3Vwcy9kZXN0LmMgYi9jdXBzL2Rlc3QuYwppbmRleCBiZWRkNGUxNzAuLjE0MWU1Yzg1
-NyAxMDA2NDQKLS0tIGEvY3Vwcy9kZXN0LmMKKysrIGIvY3Vwcy9kZXN0LmMKQEAgLTcyNiw2
-ICs3MjYsOSBAQCBjdXBzQ29ubmVjdERlc3QoCiAgICAgZW5jcnlwdGlvbiA9IEhUVFBfRU5D
-UllQVElPTl9JRl9SRVFVRVNURUQ7CiAKICAgaHR0cCA9IGh0dHBDb25uZWN0Mihob3N0bmFt
-ZSwgcG9ydCwgYWRkcmxpc3QsIEFGX1VOU1BFQywgZW5jcnlwdGlvbiwgMSwgMCwgTlVMTCk7
-CisgIGlmIChmbGFncyAmIENVUFNfREVTVF9GTEFHU19ERVZJQ0UpCisgICAgaHR0cFNldElw
-cFJlc3BvbnNlRmxhZ3MoaHR0cCwgSVBQX0ZMR19XSVRIX0hXX1dPUktBUk9VTkRTKTsKKwog
-ICBodHRwQWRkckZyZWVMaXN0KGFkZHJsaXN0KTsKIAogIC8qCmRpZmYgLS1naXQgYS9jdXBz
-L2h0dHAtcHJpdmF0ZS5oIGIvY3Vwcy9odHRwLXByaXZhdGUuaAppbmRleCA1Zjc3YjhlZjAu
-LmJjNzMwNDRkMCAxMDA2NDQKLS0tIGEvY3Vwcy9odHRwLXByaXZhdGUuaAorKysgYi9jdXBz
-L2h0dHAtcHJpdmF0ZS5oCkBAIC0zMDcsNiArMzA3LDkgQEAgc3RydWN0IF9odHRwX3MJCQkJ
-LyoqKiogSFRUUCBjb25uZWN0aW9uIHN0cnVjdHVyZSAqKioqLwogCQkJCQkvKiBBbGxvY2F0
-ZWQgZmllbGQgdmFsdWVzICovCiAgIAkJCSpkZWZhdWx0X2ZpZWxkc1tIVFRQX0ZJRUxEX01B
-WF07CiAJCQkJCS8qIERlZmF1bHQgZmllbGQgdmFsdWVzLCBpZiBhbnkgKi8KKworICAvKioq
-KiBOZXcgaW4gQ1VQUyAyLjQgKioqKiovCisgIHVuc2lnbmVkICAgICAgICAgICAgICBpcHBf
-cnNwX2ZsYWdzOwkvKiBJUFBfRkxHXyogZm9yIHBhcnNpbmcgSVBQIHJlc3BvbnNlcyAqLwog
-fTsKICMgIGVuZGlmIC8qICFfSFRUUF9OT19QUklWQVRFICovCiAKZGlmZiAtLWdpdCBhL2N1
-cHMvaHR0cC5jIGIvY3Vwcy9odHRwLmMKaW5kZXggMTk4MDg3ZjI3Li4xNzg4MDFkNzMgMTAw
-NjQ0Ci0tLSBhL2N1cHMvaHR0cC5jCisrKyBiL2N1cHMvaHR0cC5jCkBAIC0yNjUyLDYgKzI2
-NTIsMzcgQEAgaHR0cFNldEtlZXBBbGl2ZSgKICAgICBodHRwLT5rZWVwX2FsaXZlID0ga2Vl
-cF9hbGl2ZTsKIH0KIAorLyoKKyAqICdodHRwSXBwUmVzcG9uc2VGbGFncygpJyAtIEdldCBJ
-UFBfRkxHXyogZmxhZ3MgZm9yIHBhcnNpbmcgSVBQIHJlc3BvbnNlcworICogcmVjZWl2ZWQg
-ZnJvbSB0aGlzIEhUVFAgY29ubmVjdGlvbgorICoKKyAqIEBzaW5jZSBDVVBTIDIuNEAKKyAq
-LwordW5zaWduZWQJCQkJLyogSVBQX0ZMR18qIGZsYWdzIGZvciBJUFAgcmVzcG9uc2VzICov
-CitodHRwSXBwUmVzcG9uc2VGbGFncygKKyAgICBodHRwX3QgICAgICAgICAgICpodHRwKQkJ
-LyogSSAtIEhUVFAgY29ubmVjdGlvbiAqLworeworICBpZiAoaHR0cCkKKyAgICByZXR1cm4g
-aHR0cC0+aXBwX3JzcF9mbGFnczsKKworICByZXR1cm4gMDsKK30KKworLyoKKyAqICdodHRw
-U2V0SXBwUmVzcG9uc2VGbGFncycgLSBTZXQgSVBQX0ZMR18qIGZsYWdzIGZvciBwYXJzaW5n
-IElQUCByZXNwb25zZXMKKyAqIHJlY2VpdmVkIGZyb20gdGhpcyBIVFRQIGNvbm5lY3Rpb24K
-KyAqCisgKiBAc2luY2UgQ1VQUyAyLjRACisgKi8KK3ZvaWQKK2h0dHBTZXRJcHBSZXNwb25z
-ZUZsYWdzKAorICAgIGh0dHBfdCAgICAgICAgICAgKmh0dHAsCQkvKiBJIC0gSFRUUCBjb25u
-ZWN0aW9uICovCisgICAgdW5zaWduZWQgICAgICAgICBmbGFncykJCS8qIElQUF9GTEdfKiBm
-bGFncyBmb3IgSVBQIHJlc3BvbnNlcyAqLworeworICBpZiAoaHR0cCkKKyAgICBodHRwLT5p
-cHBfcnNwX2ZsYWdzID0gZmxhZ3M7Cit9CisKIAogLyoKICAqICdodHRwU2V0TGVuZ3RoKCkn
-IC0gU2V0IHRoZSBjb250ZW50LWxlbmd0aCBhbmQgY29udGVudC1lbmNvZGluZy4KZGlmZiAt
-LWdpdCBhL2N1cHMvaHR0cC5oIGIvY3Vwcy9odHRwLmgKaW5kZXggZmJjYTkzZjJmLi5lOWIz
-NmFkNDYgMTAwNjQ0Ci0tLSBhL2N1cHMvaHR0cC5oCisrKyBiL2N1cHMvaHR0cC5oCkBAIC02
-MDMsNiArNjAzLDEwIEBAIGV4dGVybiB2b2lkCQlodHRwU2h1dGRvd24oaHR0cF90ICpodHRw
-KSBfQ1VQU19BUElfMl8wOwogZXh0ZXJuIGNvbnN0IGNoYXIJKmh0dHBTdGF0ZVN0cmluZyho
-dHRwX3N0YXRlX3Qgc3RhdGUpIF9DVVBTX0FQSV8yXzA7CiBleHRlcm4gY29uc3QgY2hhcgkq
-aHR0cFVSSVN0YXR1c1N0cmluZyhodHRwX3VyaV9zdGF0dXNfdCBzdGF0dXMpIF9DVVBTX0FQ
-SV8yXzA7CiAKKy8qIE5ldyBpbiBDVVBTIDIuNCAqLworZXh0ZXJuIHVuc2lnbmVkCQlodHRw
-SXBwUmVzcG9uc2VGbGFncyhodHRwX3QgKmh0dHApIF9DVVBTX0FQSV8yXzQ7CitleHRlcm4g
-dm9pZAkJaHR0cFNldElwcFJlc3BvbnNlRmxhZ3MoaHR0cF90ICpodHRwLCB1bnNpZ25lZCBm
-bGFncykgX0NVUFNfQVBJXzJfNDsKKwogLyoKICAqIEMrKyBtYWdpYy4uLgogICovCmRpZmYg
-LS1naXQgYS9jdXBzL2lwcC1wcml2YXRlLmggYi9jdXBzL2lwcC1wcml2YXRlLmgKaW5kZXgg
-YjM5MDJmMDViLi42OTFiYzE1NmUgMTAwNjQ0Ci0tLSBhL2N1cHMvaXBwLXByaXZhdGUuaAor
-KysgYi9jdXBzL2lwcC1wcml2YXRlLmgKQEAgLTEyMSw2ICsxMjEsNyBAQCBzdHJ1Y3QgX2lw
-cF9hdHRyaWJ1dGVfcwkJCS8qKioqIElQUCBhdHRyaWJ1dGUgKioqKi8KIAogc3RydWN0IF9p
-cHBfcwkJCQkvKioqKiBJUFAgUmVxdWVzdC9SZXNwb25zZS9Ob3RpZmljYXRpb24gKioqKi8K
-IHsKKyAgdW5zaWduZWQgICAgICAgICAgICAgIGZsYWdzOyAgICAgICAgICAvKiBJUFBfRkxH
-XyogZmxhZ3MgKi8KICAgaXBwX3N0YXRlX3QJCXN0YXRlOwkJLyogU3RhdGUgb2YgcmVxdWVz
-dCAqLwogICBfaXBwX3JlcXVlc3RfdAlyZXF1ZXN0OwkvKiBSZXF1ZXN0IGhlYWRlciAqLwog
-ICBpcHBfYXR0cmlidXRlX3QJKmF0dHJzOwkJLyogQXR0cmlidXRlcyAqLwpkaWZmIC0tZ2l0
-IGEvY3Vwcy9pcHAtc3VwcG9ydC5jIGIvY3Vwcy9pcHAtc3VwcG9ydC5jCmluZGV4IGIwY2Jh
-ZGY4ZC4uYzA5NGQ1YWNhIDEwMDY0NAotLS0gYS9jdXBzL2lwcC1zdXBwb3J0LmMKKysrIGIv
-Y3Vwcy9pcHAtc3VwcG9ydC5jCkBAIC0yNDMyLDcgKzI0MzIsNiBAQCBpcHBTZXRQb3J0KGlu
-dCBwKQkJCS8qIEkgLSBQb3J0IG51bWJlciB0byB1c2UgKi8KICAgX2N1cHNHbG9iYWxzKCkt
-PmlwcF9wb3J0ID0gcDsKIH0KIAotCiAvKgogICogJ2lwcFN0YXRlU3RyaW5nKCknIC0gUmV0
-dXJuIHRoZSBuYW1lIGNvcnJlc3BvbmRpbmcgdG8gYSBzdGF0ZSB2YWx1ZS4KICAqCmRpZmYg
-LS1naXQgYS9jdXBzL2lwcC5jIGIvY3Vwcy9pcHAuYwppbmRleCA1OWIwNGFhMWQuLjQ3OTQw
-ODFjYyAxMDA2NDQKLS0tIGEvY3Vwcy9pcHAuYworKysgYi9jdXBzL2lwcC5jCkBAIC0yNjA5
-LDkgKzI2MDksMTcgQEAgaXBwTmV4dEF0dHJpYnV0ZShpcHBfdCAqaXBwKQkJLyogSSAtIElQ
-UCBtZXNzYWdlICovCiAvKgogICogJ2lwcE5ldygpJyAtIEFsbG9jYXRlIGEgbmV3IElQUCBt
-ZXNzYWdlLgogICovCi0KIGlwcF90ICoJCQkJCS8qIE8gLSBOZXcgSVBQIG1lc3NhZ2UgKi8K
-IGlwcE5ldyh2b2lkKQoreworICAgIHJldHVybiBpcHBOZXdGbGcoMCk7Cit9CisKKy8qCisg
-KiAnaXBwTmV3KCknIC0gQWxsb2NhdGUgYSBuZXcgSVBQIG1lc3NhZ2Ugd2l0aCBmbGFncwor
-ICovCitpcHBfdCAqCQkJCQkvKiBPIC0gTmV3IElQUCBtZXNzYWdlICovCitpcHBOZXdGbGco
-dW5zaWduZWQgZmxhZ3MpCQkvKiBJIC0gSVBQX0ZMR18qIGZsYWdzICovCiB7CiAgIGlwcF90
-CQkJKnRlbXA7CQkvKiBOZXcgSVBQIG1lc3NhZ2UgKi8KICAgX2N1cHNfZ2xvYmFsc190CSpj
-ZyA9IF9jdXBzR2xvYmFscygpOwpAQCAtMjYzMSw2ICsyNjM5LDcgQEAgaXBwTmV3KHZvaWQp
-CiAgICAgaWYgKGNnLT5zZXJ2ZXJfdmVyc2lvbiA9PSAwKQogICAgICAgX2N1cHNTZXREZWZh
-dWx0cygpOwogCisgICAgdGVtcC0+ZmxhZ3MgPSBmbGFnczsKICAgICB0ZW1wLT5yZXF1ZXN0
-LmFueS52ZXJzaW9uWzBdID0gKGlwcF91Y2hhcl90KShjZy0+c2VydmVyX3ZlcnNpb24gLyAx
-MCk7CiAgICAgdGVtcC0+cmVxdWVzdC5hbnkudmVyc2lvblsxXSA9IChpcHBfdWNoYXJfdCko
-Y2ctPnNlcnZlcl92ZXJzaW9uICUgMTApOwogICAgIHRlbXAtPnVzZSAgICAgICAgICAgICAg
-ICAgICAgPSAxOwpAQCAtMjY1NCw2ICsyNjYzLDE2IEBAIGlwcE5ldyh2b2lkKQogCiBpcHBf
-dCAqCQkJCQkvKiBPIC0gSVBQIHJlcXVlc3QgbWVzc2FnZSAqLwogaXBwTmV3UmVxdWVzdChp
-cHBfb3BfdCBvcCkJCS8qIEkgLSBPcGVyYXRpb24gY29kZSAqLworeworICAgIHJldHVybiBp
-cHBOZXdSZXF1ZXN0RmxnKG9wLCAwKTsKK30KKworLyoKKyAqICAnaXBwTmV3UmVxdWVzdEZs
-ZygpJyAtIEFsbG9jYXRlIGEgbmV3IElQUCByZXF1ZXN0IG1lc3NhZ2Ugd2l0aCBmbGFncy4K
-KyAqLworaXBwX3QgKgkJCQkJLyogTyAtIElQUCByZXF1ZXN0IG1lc3NhZ2UgKi8KK2lwcE5l
-d1JlcXVlc3RGbGcoaXBwX29wX3Qgb3AsCQkvKiBJIC0gT3BlcmF0aW9uIGNvZGUgKi8KKyAg
-ICAgICAgICAgICAgICAgdW5zaWduZWQgZmxhZ3MpCS8qIEkgLSBJUFBfRkxHXyogZmxhZ3Mg
-Ki8KIHsKICAgaXBwX3QJCSpyZXF1ZXN0OwkJLyogSVBQIHJlcXVlc3QgbWVzc2FnZSAqLwog
-ICBjdXBzX2xhbmdfdAkqbGFuZ3VhZ2U7CQkvKiBDdXJyZW50IGxhbmd1YWdlIGxvY2FsaXph
-dGlvbiAqLwpAQCAtMjY2OCw3ICsyNjg3LDcgQEAgaXBwTmV3UmVxdWVzdChpcHBfb3BfdCBv
-cCkJCS8qIEkgLSBPcGVyYXRpb24gY29kZSAqLwogICAqIENyZWF0ZSBhIG5ldyBJUFAgbWVz
-c2FnZS4uLgogICAqLwogCi0gIGlmICgocmVxdWVzdCA9IGlwcE5ldygpKSA9PSBOVUxMKQor
-ICBpZiAoKHJlcXVlc3QgPSBpcHBOZXdGbGcoZmxhZ3MpKSA9PSBOVUxMKQogICAgIHJldHVy
-biAoTlVMTCk7CiAKICAvKgpAQCAtMjcyMSw2ICsyNzQwLDE3IEBAIGlwcE5ld1JlcXVlc3Qo
-aXBwX29wX3Qgb3ApCQkvKiBJIC0gT3BlcmF0aW9uIGNvZGUgKi8KIAogaXBwX3QgKgkJCQkJ
-LyogTyAtIElQUCByZXNwb25zZSBtZXNzYWdlICovCiBpcHBOZXdSZXNwb25zZShpcHBfdCAq
-cmVxdWVzdCkJCS8qIEkgLSBJUFAgcmVxdWVzdCBtZXNzYWdlICovCit7CisgICAgcmV0dXJu
-IGlwcE5ld1Jlc3BvbnNlRmxnKHJlcXVlc3QsIDApOworfQorCisKKy8qCisgKiAnaXBwTmV3
-UmVzcG9uc2VGbGcoKScgLSBBbGxvY2F0ZSBhIG5ldyBJUFAgcmVzcG9uc2UgbWVzc2FnZSB3
-aXRoIGZsYWdzLgorICovCitpcHBfdCAqCQkJCQkvKiBPIC0gSVBQIHJlc3BvbnNlIG1lc3Nh
-Z2UgKi8KK2lwcE5ld1Jlc3BvbnNlRmxnKGlwcF90ICpyZXF1ZXN0LAkvKiBJIC0gSVBQIHJl
-cXVlc3QgbWVzc2FnZSAqLworICAgICAgICAgICAgICAgICAgdW5zaWduZWQgZmxhZ3MpCS8q
-IEkgLSBJUFBfRkxHXyogZmxhZ3MgKi8KIHsKICAgaXBwX3QJCQkqcmVzcG9uc2U7CS8qIElQ
-UCByZXNwb25zZSBtZXNzYWdlICovCiAgIGlwcF9hdHRyaWJ1dGVfdAkqYXR0cjsJCS8qIEN1
-cnJlbnQgYXR0cmlidXRlICovCkBAIC0yNzM3LDcgKzI3NjcsNyBAQCBpcHBOZXdSZXNwb25z
-ZShpcHBfdCAqcmVxdWVzdCkJCS8qIEkgLSBJUFAgcmVxdWVzdCBtZXNzYWdlICovCiAgICog
-Q3JlYXRlIGEgbmV3IElQUCBtZXNzYWdlLi4uCiAgICovCiAKLSAgaWYgKChyZXNwb25zZSA9
-IGlwcE5ldygpKSA9PSBOVUxMKQorICBpZiAoKHJlc3BvbnNlID0gaXBwTmV3RmxnKGZsYWdz
-KSkgPT0gTlVMTCkKICAgICByZXR1cm4gKE5VTEwpOwogCiAgLyoKQEAgLTMwNDAsMTAgKzMw
-NzAsMjYgQEAgaXBwUmVhZElPKHZvaWQgICAgICAgKnNyYywJCS8qIEkgLSBEYXRhIHNvdXJj
-ZSAqLwogCiAgICAgICAgICAgREVCVUdfcHJpbnRmKCgiMmlwcFJlYWRJTzogbmFtZSBsZW5n
-dGg9JWQiLCBuKSk7CiAKLSAgICAgICAgICBpZiAobiAmJiBwYXJlbnQpCisgICAgICAgICAg
-aWYgKG4gJiYgcGFyZW50ICYmIChpcHAtPmZsYWdzICYgSVBQX0ZMR19BTExPV19OQU1FRF9N
-RU1CRVJTKSA9PSAwKQogICAgICAgICAgIHsKKwkgICAgLyoKKwkgICAgICogQWNjb3JkaW5n
-IHRvIFJGQyA4MDEwLCBhdHRyaWJ1dGVzIHdpdGhpbiBjb2xsZWN0aW9uIG11c3Qgbm90IGhh
-dmUgbmFtZS4KKwkgICAgICogSW5zdGVhZCwgbmFtZSBtdXN0IGJlIGVuY29kZWQgYXMgdmFs
-dWUgb2Ygc3BlY2lhbCBkZWRpY2F0ZWQgYXR0cmlidXRlLAorCSAgICAgKiBJUFBfVEFHX01F
-TUJFUk5BTUUKKwkgICAgICoKKwkgICAgICogVW5mb3J0dW5hdGVseSwgc29tZSBkZXZpY2Vz
-IHZpb2xhdGUgdGhpcyBzcGVjaWZpY2F0aW9uIGFuZCBlbmNvZGUgY29sbGVjdGlvbgorCSAg
-ICAgKiBtZW1iZXIgbmFtZXMgYXMgYXR0cmlidXRlIG5hbWVzLgorCSAgICAgKgorCSAgICAg
-KiBQYW50dW0gTTczMDBGRFcgaXMga25vd24gdG8gaGF2ZSB0aGlzIGJ1ZyBpbiBmaXJtd2Fy
-ZS4KKwkgICAgICoKKwkgICAgICogU2V0dGluZyBJUFBfRkxHX0FMTE9XX05BTUVEX01FTUJF
-UlMgaW4gaXBwTmV3RmxnLCBpcHBOZXdSZXF1ZXN0RmxnCisJICAgICAqIGFuZCBpcHBOZXdS
-ZXNwb25zZUZsZyBhbGxvd3MgdG8gdmlvbGF0ZSB0aGlzIHJ1bGUgYW5kIHRyZWF0IGF0dHJp
-YnV0ZQorCSAgICAgKiBuYW1lIGFzIG1lbWJlciBuYW1lLgorCSAgICAgKi8KKwogICAgICAg
-ICAgICAgX2N1cHNTZXRFcnJvcihJUFBfU1RBVFVTX0VSUk9SX0lOVEVSTkFMLCBfKCJJbnZh
-bGlkIG5hbWVkIElQUCBhdHRyaWJ1dGUgaW4gY29sbGVjdGlvbi4iKSwgMSk7CiAgICAgICAg
-ICAgICBERUJVR19wdXRzKCIxaXBwUmVhZElPOiBiYWQgYXR0cmlidXRlIG5hbWUgaW4gY29s
-bGVjdGlvbi4iKTsKKyAgICAgICAgICAgIGN1cHNfZGVidWdfcHJpbnRmKCIxaXBwUmVhZElP
-OiBiYWQgYXR0cmlidXRlIG5hbWUgaW4gY29sbGVjdGlvbi4iKTsKIAkgICAgZ290byByb2xs
-YmFjazsKICAgICAgICAgICB9CiAgICAgICAgICAgZWxzZSBpZiAobiA9PSAwICYmIHRhZyAh
-PSBJUFBfVEFHX01FTUJFUk5BTUUgJiYgdGFnICE9IElQUF9UQUdfRU5EX0NPTExFQ1RJT04p
-CkBAIC0zNDY3LDcgKzM1MTMsNyBAQCBpcHBSZWFkSU8odm9pZCAgICAgICAqc3JjLAkJLyog
-SSAtIERhdGEgc291cmNlICovCiAJICAgICAgICAqIE9oLCBib3ksIGhlcmUgY29tZXMgYSBj
-b2xsZWN0aW9uIHZhbHVlLCBzbyByZWFkIGl0Li4uCiAJCSovCiAKLSAgICAgICAgICAgICAg
-ICB2YWx1ZS0+Y29sbGVjdGlvbiA9IGlwcE5ldygpOworICAgICAgICAgICAgICAgIHZhbHVl
-LT5jb2xsZWN0aW9uID0gaXBwTmV3RmxnKGlwcC0+ZmxhZ3MpOwogCiAgICAgICAgICAgICAg
-ICAgaWYgKG4gPiAwKQogCQl7CmRpZmYgLS1naXQgYS9jdXBzL2lwcC5oIGIvY3Vwcy9pcHAu
-aAppbmRleCBmN2FiNmY0MjMuLmEyMjQzZjdkZiAxMDA2NDQKLS0tIGEvY3Vwcy9pcHAuaAor
-KysgYi9jdXBzL2lwcC5oCkBAIC05MzcsNiArOTM3LDI4IEBAIGV4dGVybiBpbnQJCWlwcFZh
-bGlkYXRlQXR0cmlidXRlcyhpcHBfdCAqaXBwKSBfQ1VQU19BUElfMV83OwogLyoqKiogTmV3
-IGluIENVUFMgMi4wICoqKiovCiBleHRlcm4gY29uc3QgY2hhcgkqaXBwU3RhdGVTdHJpbmco
-aXBwX3N0YXRlX3Qgc3RhdGUpIF9DVVBTX0FQSV8yXzA7CiAKKy8qKioqIE5ldyBpbiBDVVBT
-IDIuNCAqKioqLworCisvKiBGbGFncyBmb3IgaXBwTmV3RmxnLCBpcHBOZXdSZXF1ZXN0Rmxn
-IGFuZCBpcHBOZXdSZXNwb25zZUZsZworICoKKyAqIFdpdGggdGhlc2UgZmxhZ3MgSVBQIHBy
-b3RvY29sIHBhcnNlciBhbGxvd3Mgc29tZSB2aW9sYXRpb25zCisgKiBvZiB0aGUgcHJvdG9j
-b2wgc3BlY2lmaWNhdGlvbi4gVGhlc2UgZmxhZ3MgaW50ZW5kZWQgZm9yIHRlc3RpbmcKKyAq
-IGFuZCBpbXBsZW1lbnRpbmcgd29ya2Fyb3VuZHMgZm9yIGZpcm13YXJlIGJ1Z3MKKyAqCisg
-KiBVc2Ugd2lzZWx5IGFuZCB3aXRoIGNhcmUhCisgKi8KKyMgIGRlZmluZSBJUFBfRkxHX0FM
-TE9XX05BTUVEX01FTUJFUlMJMHgwMQkvKiBBbGxvdyBjb2xsZWN0aW9uIG1lbWJlcgorCQkJ
-CQkJICogbmFtZXMgdG8gYmUgZW5jb2RlZCBhcworCQkJCQkJICogYXR0cmlidXRlIG5hbWUs
-IG5vdCB1c2luZworCQkJCQkJICogSVBQX1RBR19NRU1CRVJOQU1FICovCisKKyMgIGRlZmlu
-ZSBJUFBfRkxHX1dJVEhfSFdfV09SS0FST1VORFMJCUlQUF9GTEdfQUxMT1dfTkFNRURfTUVN
-QkVSUworCitleHRlcm4gaXBwX3QJCSppcHBOZXdGbGcodW5zaWduZWQgZmxhZ3MpIF9DVVBT
-X1BVQkxJQzsKK2V4dGVybiBpcHBfdAkJKmlwcE5ld1JlcXVlc3RGbGcoaXBwX29wX3Qgb3As
-CisJCQkgICAgICAgICAgICAgICAgICB1bnNpZ25lZCBmbGFncykgX0NVUFNfUFVCTElDOwor
-ZXh0ZXJuIGlwcF90CQkqaXBwTmV3UmVzcG9uc2VGbGcoaXBwX3QgKnJlcXVlc3QsCisJCQkg
-ICAgICAgICAgICAgICAgICB1bnNpZ25lZCBmbGFncykgX0NVUFNfUFVCTElDOwogCiAvKgog
-ICogQysrIG1hZ2ljLi4uCmRpZmYgLS1naXQgYS9jdXBzL3BwZC1jYWNoZS5jIGIvY3Vwcy9w
-cGQtY2FjaGUuYwppbmRleCBkNjY0ODEyYTIuLjljYTRkN2U5MSAxMDA2NDQKLS0tIGEvY3Vw
-cy9wcGQtY2FjaGUuYworKysgYi9jdXBzL3BwZC1jYWNoZS5jCkBAIC01MzE2LDYgKzUzMTYs
-NyBAQCBjdXBzX2Nvbm5lY3QoaHR0cF90ICAgICAqKmh0dHAsCQkvKiBJTyAtIEN1cnJlbnQg
-SFRUUCBjb25uZWN0aW9uICovCiAgIHsKICAgICBodHRwQ2xvc2UoKmh0dHApOwogICAgICpo
-dHRwID0gaHR0cENvbm5lY3QyKGhvc3QsIHBvcnQsIE5VTEwsIEFGX1VOU1BFQywgZW5jcnlw
-dGlvbiwgMSwgNTAwMCwgTlVMTCk7CisgICAgaHR0cFNldElwcFJlc3BvbnNlRmxhZ3MoKmh0
-dHAsIElQUF9GTEdfV0lUSF9IV19XT1JLQVJPVU5EUyk7CiAgIH0KIAogICByZXR1cm4gKCpo
-dHRwICE9IE5VTEwpOwpkaWZmIC0tZ2l0IGEvY3Vwcy9yZXF1ZXN0LmMgYi9jdXBzL3JlcXVl
-c3QuYwppbmRleCA1YmFhNTEyYmIuLjVhZDBhM2VhMCAxMDA2NDQKLS0tIGEvY3Vwcy9yZXF1
-ZXN0LmMKKysrIGIvY3Vwcy9yZXF1ZXN0LmMKQEAgLTM4Myw3ICszODMsNyBAQCBjdXBzR2V0
-UmVzcG9uc2UoaHR0cF90ICAgICAqaHR0cCwJLyogSSAtIENvbm5lY3Rpb24gdG8gc2VydmVy
-IG9yIEBjb2RlIENVUFNfSFRUUAogICAgICogR2V0IHRoZSBJUFAgcmVzcG9uc2UuLi4KICAg
-ICAqLwogCi0gICAgcmVzcG9uc2UgPSBpcHBOZXcoKTsKKyAgICByZXNwb25zZSA9IGlwcE5l
-d0ZsZyhodHRwSXBwUmVzcG9uc2VGbGFncyhodHRwKSk7CiAKICAgICB3aGlsZSAoKHN0YXRl
-ID0gaXBwUmVhZChodHRwLCByZXNwb25zZSkpICE9IElQUF9TVEFURV9EQVRBKQogICAgICAg
-aWYgKHN0YXRlID09IElQUF9TVEFURV9FUlJPUikKZGlmZiAtLWdpdCBhL3NjaGVkdWxlci9p
-cHAuYyBiL3NjaGVkdWxlci9pcHAuYwppbmRleCBlMGNhYTk4ZmUuLjRmNDljNWJlZSAxMDA2
-NDQKLS0tIGEvc2NoZWR1bGVyL2lwcC5jCisrKyBiL3NjaGVkdWxlci9pcHAuYwpAQCAtNTM0
-OCw2ICs1MzQ4LDggQEAgY3JlYXRlX2xvY2FsX2JnX3RocmVhZCgKICAgICByZXR1cm4gKE5V
-TEwpOwogICB9CiAKKyAgaHR0cFNldElwcFJlc3BvbnNlRmxhZ3MoaHR0cCwgSVBQX0ZMR19X
-SVRIX0hXX1dPUktBUk9VTkRTKTsKKwogIC8qCiAgICogUXVlcnkgdGhlIHByaW50ZXIgZm9y
-IGl0cyBjYXBhYmlsaXRpZXMuLi4KICAgKi8K
-
---------------dzWzfdsRWJYW0CnV8N9PrB6z--
