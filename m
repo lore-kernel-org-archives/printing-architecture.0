@@ -1,85 +1,78 @@
-Received: from smtp2.osuosl.org (smtp2.osuosl.org [140.211.166.133])
+Received: from smtp3.osuosl.org (smtp3.osuosl.org [140.211.166.136])
 	(using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
 	(No client certificate requested)
-	by smtp.subspace.kernel.org (Postfix) with ESMTPS id D248B2E400
-	for <printing-architecture@lists.linux-foundation.org>; Tue, 19 Mar 2024 15:40:33 +0000 (UTC)
-Authentication-Results: smtp.subspace.kernel.org; arc=none smtp.client-ip=140.211.166.133
+	by smtp.subspace.kernel.org (Postfix) with ESMTPS id DE49A132C1F
+	for <printing-architecture@lists.linux-foundation.org>; Thu, 21 Mar 2024 17:25:34 +0000 (UTC)
+Authentication-Results: smtp.subspace.kernel.org; arc=none smtp.client-ip=140.211.166.136
 ARC-Seal:i=1; a=rsa-sha256; d=subspace.kernel.org; s=arc-20240116;
-	t=1710862835; cv=none; b=TF9CowqPkXW90nau/CH/RGHXHs3dus2d5ckhiNMbBRLO4TOq2kwsGJLUsAgjbw6AlhFCvpKyfjK8xN1mNGZvHSg11S+BP77i1KwcvxpudAOMJNZiPLSXZFwzuhgYShLRLskh+DtWb2/itjrLytr24eqlIuMN99RPpvGZpLYSvFo=
+	t=1711041936; cv=none; b=ADCtO4SzF6JpxEeF6eVEzazfieapOwChWFwB2Z3fNoRNJdEeH9qmG48k9VGP3H4xBKUDNd1dvKqsokBYfy7l8/Rd+QvHCXt+wjOJb/IOd1A4axZarD4EbGF0pXE9AgE/1xZ7Ia0H66yfIe1yTj1jBVF4Dn0iINe3VyZ2z/0B/X0=
 ARC-Message-Signature:i=1; a=rsa-sha256; d=subspace.kernel.org;
-	s=arc-20240116; t=1710862835; c=relaxed/simple;
-	bh=GrA6I5IPTMO+SSTVf515xGAwfMhjOFBlsfjlMt0vjBY=;
-	h=Message-ID:Date:MIME-Version:Subject:To:References:From:
-	 In-Reply-To:Content-Type; b=cMRbfFm7CBSMJ31bw2EjMknQp/NqLgvSm9bxOb/U9XYy7Iqwyrn2QyrFef7648okZjIYCQcNm2r8r1zRsEuoNIa8sQ4cqy6DM7KpQjLCtYw+1h40KOE7s/GNTXaM55vXt09Go8/yDclQgaEY20T9MdIyqgNy+a4bSEnrxpMgTug=
-ARC-Authentication-Results:i=1; smtp.subspace.kernel.org; dkim=pass (1024-bit key) header.d=redhat.com header.i=@redhat.com header.b=a0kZYn+H; arc=none smtp.client-ip=140.211.166.133
+	s=arc-20240116; t=1711041936; c=relaxed/simple;
+	bh=EZuZN6+AYCgxjyvWILIgUYOzgesYOkpu0eLmPC+8jmI=;
+	h=Message-ID:Date:MIME-Version:To:From:Subject:Content-Type; b=IkGSp7OMsF+SFla1FYtv8VW5PVs/22q59CHXh7me3E1HeQwWrQzPZrOsEpkmQvu6byI4Yep0ZZWJolri8ljJNJdPe5N6NEJ9DTdd+oF/ZCLQuJae8whbNcE9QgBlmz7lZ3XhhxzTNIuG6AZf2X6PLvheDZPyhGuvYduzuHRb2Os=
+ARC-Authentication-Results:i=1; smtp.subspace.kernel.org; dkim=pass (2048-bit key) header.d=apevzner.com header.i=@apevzner.com header.b=HyJZj4A1; arc=none smtp.client-ip=140.211.166.136
 Authentication-Results: smtp.subspace.kernel.org;
-	dkim=pass (1024-bit key) header.d=redhat.com header.i=@redhat.com header.b="a0kZYn+H"
+	dkim=pass (2048-bit key) header.d=apevzner.com header.i=@apevzner.com header.b="HyJZj4A1"
 Received: from localhost (localhost [127.0.0.1])
-	by smtp2.osuosl.org (Postfix) with ESMTP id 7A26740BD6
-	for <printing-architecture@lists.linux-foundation.org>; Tue, 19 Mar 2024 15:40:33 +0000 (UTC)
+	by smtp3.osuosl.org (Postfix) with ESMTP id 30ABA60EF3
+	for <printing-architecture@lists.linux-foundation.org>; Thu, 21 Mar 2024 17:25:34 +0000 (UTC)
 X-Virus-Scanned: amavisd-new at osuosl.org
 X-Spam-Flag: NO
-X-Spam-Score: -2.099
+X-Spam-Score: -2.1
 X-Spam-Level:
-Received: from smtp2.osuosl.org ([127.0.0.1])
-	by localhost (smtp2.osuosl.org [127.0.0.1]) (amavisd-new, port 10024)
-	with ESMTP id csOc7FnviEuf
+Received: from smtp3.osuosl.org ([127.0.0.1])
+	by localhost (smtp3.osuosl.org [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id HlepwyHot7G0
 	for <printing-architecture@lists.linux-foundation.org>;
-	Tue, 19 Mar 2024 15:40:30 +0000 (UTC)
-Received-SPF: Pass (mailfrom) identity=mailfrom; client-ip=170.10.133.124; helo=us-smtp-delivery-124.mimecast.com; envelope-from=zdohnal@redhat.com; receiver=<UNKNOWN> 
-DMARC-Filter: OpenDMARC Filter v1.4.2 smtp2.osuosl.org 6EF8B40BFF
-Authentication-Results: smtp2.osuosl.org; dmarc=pass (p=none dis=none) header.from=redhat.com
-DKIM-Filter: OpenDKIM Filter v2.11.0 smtp2.osuosl.org 6EF8B40BFF
-Authentication-Results: smtp2.osuosl.org;
-	dkim=pass (1024-bit key) header.d=redhat.com header.i=@redhat.com header.a=rsa-sha256 header.s=mimecast20190719 header.b=a0kZYn+H
-Received: from us-smtp-delivery-124.mimecast.com (us-smtp-delivery-124.mimecast.com [170.10.133.124])
-	by smtp2.osuosl.org (Postfix) with ESMTPS id 6EF8B40BFF
-	for <printing-architecture@lists.linux-foundation.org>; Tue, 19 Mar 2024 15:40:30 +0000 (UTC)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=redhat.com;
-	s=mimecast20190719; t=1710862829;
-	h=from:from:reply-to:subject:subject:date:date:message-id:message-id:
-	 to:to:cc:mime-version:mime-version:content-type:content-type:
-	 content-transfer-encoding:content-transfer-encoding:
-	 in-reply-to:in-reply-to:references:references;
-	bh=jDRiWbHoyMfcbw2QkHrUzR5U9DDTZ+5mysMqZa3sesM=;
-	b=a0kZYn+HD3eJyUIb8taQgr6F+uFZJYgRMAFADRzeyn0D7CjUVwKq3XQtWi20BZvoekIce2
-	v5RkipuD4VNpXbLVwvlf2wN80vREsguj3bkniQ3aUpv7L15caQmAG7I9wnToMzBMpcX5fd
-	QVwdQ6u80QyQAb8oga6UBoTEBu6j7f4=
-Received: from mail-wr1-f71.google.com (mail-wr1-f71.google.com
- [209.85.221.71]) by relay.mimecast.com with ESMTP with STARTTLS
- (version=TLSv1.3, cipher=TLS_AES_256_GCM_SHA384) id
- us-mta-112-b7lJPfflNvSXsR3nxkNgFw-1; Tue, 19 Mar 2024 11:40:27 -0400
-X-MC-Unique: b7lJPfflNvSXsR3nxkNgFw-1
-Received: by mail-wr1-f71.google.com with SMTP id ffacd0b85a97d-33ed8677d16so1933474f8f.1
-        for <printing-architecture@lists.linux-foundation.org>; Tue, 19 Mar 2024 08:40:27 -0700 (PDT)
+	Thu, 21 Mar 2024 17:25:33 +0000 (UTC)
+Received-SPF: Pass (mailfrom) identity=mailfrom; client-ip=2a00:1450:4864:20::12b; helo=mail-lf1-x12b.google.com; envelope-from=pzz@apevzner.com; receiver=<UNKNOWN> 
+DMARC-Filter: OpenDMARC Filter v1.4.2 smtp3.osuosl.org 271A860EF1
+Authentication-Results: smtp3.osuosl.org; dmarc=none (p=none dis=none) header.from=apevzner.com
+DKIM-Filter: OpenDKIM Filter v2.11.0 smtp3.osuosl.org 271A860EF1
+Authentication-Results: smtp3.osuosl.org;
+	dkim=pass (2048-bit key, unprotected) header.d=apevzner.com header.i=@apevzner.com header.a=rsa-sha256 header.s=google header.b=HyJZj4A1
+Received: from mail-lf1-x12b.google.com (mail-lf1-x12b.google.com [IPv6:2a00:1450:4864:20::12b])
+	by smtp3.osuosl.org (Postfix) with ESMTPS id 271A860EF1
+	for <printing-architecture@lists.linux-foundation.org>; Thu, 21 Mar 2024 17:25:29 +0000 (UTC)
+Received: by mail-lf1-x12b.google.com with SMTP id 2adb3069b0e04-512e4f4e463so1540772e87.1
+        for <printing-architecture@lists.linux-foundation.org>; Thu, 21 Mar 2024 10:25:29 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=apevzner.com; s=google; t=1711041927; x=1711646727; darn=lists.linux-foundation.org;
+        h=content-transfer-encoding:subject:from:content-language:to
+         :user-agent:mime-version:date:message-id:from:to:cc:subject:date
+         :message-id:reply-to;
+        bh=2i9j4DT2Oh+G2SbOKsdymvhL+mJCCq3OJ7WCNCUTdjU=;
+        b=HyJZj4A1cb0hRaobz0e2BDatnm+eqHFsh54YHQfC1xLxrXxehX/c7EMTARaN7h5Du5
+         G9r7ZCHuu4ebDdCqcWmKRRriLT5LnNDd/DFBaOrjakCDfHsfdG4vglBWdPYTLrDaHcfH
+         Cf81s9O6giIk16/+77GSEwAoZRDtPaeYoiyszhTjqbYBCmIthEigQKxb//zjWSnAfOHn
+         s0xAb4mjwOmLK2e0XkBbUwmjB7Cm5yVMl2zDqtoKTD4p2ZMBics5+5nQz8cFXLSp4xWO
+         sjVhR1mJ4jxZhXT6T4Ln4KzgkBdGqrhx5TlB/lRgigcl9OfkhrUeTzt8QLsCQCTHOTVb
+         kxGQ==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
-        d=1e100.net; s=20230601; t=1710862826; x=1711467626;
-        h=content-transfer-encoding:in-reply-to:from:references:to
-         :content-language:subject:user-agent:mime-version:date:message-id
-         :x-gm-message-state:from:to:cc:subject:date:message-id:reply-to;
-        bh=jDRiWbHoyMfcbw2QkHrUzR5U9DDTZ+5mysMqZa3sesM=;
-        b=Qvc0zii8AF+BQYskfLA7sHIEwR1lRpJgg3cXCb3ONEUImx+pinMLtx+2Fp6zAGhQAI
-         YLXls7iBozzdsCBLL0PIiD5UGkG894DT1oVpCbf7kJjxmPOcMjnlC9D8JCJ9UR06kBKw
-         gmfEiRwHaK7IX3QBSe+8W01vP8O9LLY769+KgCCmZqMkHr9q+WbRtF36CltTuOt4gXab
-         BakHHOTVUpLsLBsX4E0Rlwl0MDK80mDQ5x2XXUzP109iuSNZYUAuq3qWnTpNa/zIxfUH
-         P06v0PmRMy+ea9mBfd/ZeZ3uQQmvMQk90+klJp8x7P0KNrVlafMBqXXqfvYKBeofWZgI
-         LV0Q==
-X-Forwarded-Encrypted: i=1; AJvYcCVAZ0CNCeE5DdXWtVj16Kd2fY+dPKCP9dpzoAhfNpWda/Q5/i4a2N7mHk3T+UUurrEk/N2AheJ6N7EXksdtb+8Si2v1ota1YdWfirawqvBGLS16S6yckbdXPoyk77Td70Q=
-X-Gm-Message-State: AOJu0Yz2IiPH6mEz1vlREGyaQdidiau+7mi4cUsIEAfnWMXBFu1vt5Jl
-	rMnmrjEHnmROC2Akp8wvkWdJOq+sIETHDj+l+/2OF/k9bL/B9BUhhtcQXRNJth3hYMjcxlvC8u0
-	Z0AKwxqcSnfS/EbBK2422gonKxYLKQPxxwc6hqu+LQc9H57XZvepS6O48kd+8nEy4w0pmOGBChL
-	u/93UNVjuACMRPjyWooWpj
-X-Received: by 2002:a05:6000:36c:b0:341:9087:8a4 with SMTP id f12-20020a056000036c00b00341908708a4mr532227wrf.13.1710862826534;
-        Tue, 19 Mar 2024 08:40:26 -0700 (PDT)
-X-Google-Smtp-Source: AGHT+IFwemxIi+X7dow7hqgwtFzV+6UibE37s47EXtbS/tDcFQwJIgWzM8Yo6mCNt5a0uI2tJVpWLQ==
-X-Received: by 2002:a05:6000:36c:b0:341:9087:8a4 with SMTP id f12-20020a056000036c00b00341908708a4mr532213wrf.13.1710862826200;
-        Tue, 19 Mar 2024 08:40:26 -0700 (PDT)
-Received: from [10.43.3.238] (nat-pool-brq-t.redhat.com. [213.175.37.10])
-        by smtp.gmail.com with ESMTPSA id f1-20020a5d4dc1000000b0033e99b7cfa8sm7458002wru.13.2024.03.19.08.40.25
+        d=1e100.net; s=20230601; t=1711041927; x=1711646727;
+        h=content-transfer-encoding:subject:from:content-language:to
+         :user-agent:mime-version:date:message-id:x-gm-message-state:from:to
+         :cc:subject:date:message-id:reply-to;
+        bh=2i9j4DT2Oh+G2SbOKsdymvhL+mJCCq3OJ7WCNCUTdjU=;
+        b=qAKZQojTcYAYxqjX5dv0SXtScJ7Tj/yWWXeiX5BiJ90dUVobSAWPp6fAaLQeAjMIp0
+         qztJGfpQMeUVPTmm6hAxU+qloK2waYmCO62N2f58/N90UAOvRKgzl5Q75yAbse6rZohE
+         bHGufm+xMppcQOikBmmvfNhmDetmoFZIv1YmNaPpdcEq1cGa+prUTqOKJdskjRNI85zq
+         FG9vEzW2u0gDZLuePScRuNAmL8YEvoidmqe66IaoeRYcode1mfp7dzNaDoKXxyoNDzPO
+         N5IUWSYJjkKnujcSyaa4aTUaaV6AOpjFr47rnTWWhi4UCcJHngeeHAKgPz+3x4GsTBCP
+         uuLQ==
+X-Gm-Message-State: AOJu0Yz3cToZ27yu/y/GQlsgm4zdIIFn0tzwx6zUARLPUsfuKnldSr7p
+	5SjYWNfxoofyPXs/mg1spoJzDwgKuDlSNuM3uBr1izU+PhDBy46JfGoTfe8SDv/Ktplo9cqbnQS
+	1
+X-Google-Smtp-Source: AGHT+IGXfTvsMNtIva4ggBYAUiuOIsYI8dUc8muxAFNydFD+WI+KrvXcA60sKwcy3kT7fQV0X5o7iw==
+X-Received: by 2002:a05:6512:557:b0:513:1a94:f9ff with SMTP id h23-20020a056512055700b005131a94f9ffmr18209lfl.3.1711041927059;
+        Thu, 21 Mar 2024 10:25:27 -0700 (PDT)
+Received: from [192.168.0.6] (ppp85-141-193-150.pppoe.mtu-net.ru. [85.141.193.150])
+        by smtp.googlemail.com with ESMTPSA id q1-20020ac25a01000000b00513a76b310esm16022lfn.60.2024.03.21.10.25.26
+        for <printing-architecture@lists.linux-foundation.org>
         (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
-        Tue, 19 Mar 2024 08:40:25 -0700 (PDT)
-Message-ID: <febb2328-4ecc-4c9c-9b0b-7b2a1a48f8cc@redhat.com>
-Date: Tue, 19 Mar 2024 16:40:25 +0100
+        Thu, 21 Mar 2024 10:25:26 -0700 (PDT)
+Message-ID: <5c414fd9-204b-4c9d-a829-1a6f368bd42d@apevzner.com>
+Date: Thu, 21 Mar 2024 20:25:25 +0300
 Precedence: bulk
 X-Mailing-List: printing-architecture@lists.linux.dev
 List-Id: <printing-architecture.lists.linux.dev>
@@ -87,45 +80,29 @@ List-Subscribe: <mailto:printing-architecture+subscribe@lists.linux.dev>
 List-Unsubscribe: <mailto:printing-architecture+unsubscribe@lists.linux.dev>
 MIME-Version: 1.0
 User-Agent: Mozilla Thunderbird
-Subject: Re: Pantum M7300FDW
-To: Alexander Pevzner <pzz@apevzner.com>,
- Open Printing <printing-architecture@lists.linux-foundation.org>
-References: <7555e91e-562c-4d89-9c92-91ddc17135a4@apevzner.com>
- <2c995986-9bf3-4f62-8f74-88c056eae5c5@redhat.com>
- <161119ad-2e9a-42d3-8984-556506e402f0@apevzner.com>
-From: Zdenek Dohnal <zdohnal@redhat.com>
-In-Reply-To: <161119ad-2e9a-42d3-8984-556506e402f0@apevzner.com>
-X-Mimecast-Spam-Score: 0
-X-Mimecast-Originator: redhat.com
+To: Open Printing <printing-architecture@lists.linux-foundation.org>
 Content-Language: en-US
+From: Alexander Pevzner <pzz@apevzner.com>
+Subject: A couple of questions regarding IPP specs
 Content-Type: text/plain; charset=UTF-8; format=flowed
-Content-Transfer-Encoding: 8bit
+Content-Transfer-Encoding: 7bit
 
-On 3/19/24 14:37, Alexander Pevzner wrote:
-> Hi Zdenek!
->
-> On 3/19/24 16:25, Zdenek Dohnal wrote:
->> That's great! To have a way how to configure this behavior is ideal 
->> from POV - we can ship the safe way as default (IMO sanitize option 
->> should insert message into the log - admin would like to know whether 
->> something is not correct, instead of silently workaround issue) and 
->> if the user has problems, they can switch the quirk anytime.
->
-> It actually writes messages to the log:
->
->   IPP sanitize: 1511 bytes replaced with 1621 -- IPP message was fixed
->   IPP sanitize: not needed - message is OK, no need to sanitize
+Hi Everybody,
 
-I meant something around - "Printer XY sends invalid IPP response - 
-please try to install the latest firmware. If the problem persists, 
-report it to your printer manufacturer." . This should give a clear 
-message something is problematic and can cause issues, plus hint what to do.
+I have a couple of questions regarding IPP specs.
 
+1) Are attribute names case-sensitive or not? Is the answer the same for 
+top-level attributes and for member attributes within a collection?
 
-Zdenek
+In the CUPS sources, in the ippFindNextAttribute(), I see name is used 
+twice for comparison, with strcmp() in one place and with 
+_cups_strcasecmp() in another place...
+
+2) If two or more attributes in the same scope have the same name, how 
+the conforming implementation SHOULD behave: ignore the second 
+occurrence (seems, CUPS does this way), reject such a message with an 
+error or merge values?
 
 -- 
-Zdenek Dohnal
-Senior Software Engineer
-Red Hat, BRQ-TPBC
 
+	Wishes, Alexander Pevzner (pzz@apevzner.com)
