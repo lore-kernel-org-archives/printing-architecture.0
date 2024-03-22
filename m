@@ -1,107 +1,103 @@
-Received: from smtp4.osuosl.org (smtp4.osuosl.org [140.211.166.137])
+Received: from smtp3.osuosl.org (smtp3.osuosl.org [140.211.166.136])
 	(using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
 	(No client certificate requested)
-	by smtp.subspace.kernel.org (Postfix) with ESMTPS id DCBE31B943
-	for <printing-architecture@lists.linux-foundation.org>; Fri, 22 Mar 2024 09:06:32 +0000 (UTC)
-Authentication-Results: smtp.subspace.kernel.org; arc=none smtp.client-ip=140.211.166.137
+	by smtp.subspace.kernel.org (Postfix) with ESMTPS id 121AB4AEC1
+	for <printing-architecture@lists.linux-foundation.org>; Fri, 22 Mar 2024 15:41:06 +0000 (UTC)
+Authentication-Results: smtp.subspace.kernel.org; arc=none smtp.client-ip=140.211.166.136
 ARC-Seal:i=1; a=rsa-sha256; d=subspace.kernel.org; s=arc-20240116;
-	t=1711098394; cv=none; b=sTqfC8HieXe3tC6A8faCytZiERJYul3ZDxYsb/hQ6Wm0OfT4XhSOMZuGUlwCHkQGGIr1QeNvQqXPBrY1vS26yZMq79zjdpMWofxoDcHncFKQkJQITFnI+NPkwazLpmVcDqtVL4mxzbdkHoY61ZFwh2QaqAqEy05mw0w5ia1eLrg=
+	t=1711122069; cv=none; b=JAtksPtjRm5iL0HnOk6JpLc+QUwi4JOekADm8kbzdSa/LuqGVj+0VRytFUZDracj6dQZ1zlwWsA6whKrftSjsobyX9xb6cM+sFB2CnYRbB880Lkw0mMmVKz1Yu8lkvCYQWz15a8K9aGVcjy6tpx2hJHzlIpb7GEfchdtEqzcgd8=
 ARC-Message-Signature:i=1; a=rsa-sha256; d=subspace.kernel.org;
-	s=arc-20240116; t=1711098394; c=relaxed/simple;
-	bh=QIBc3CDMSsWpTpjZnQm2vVWN+tndzA/pg3orCGhcjPs=;
-	h=Message-ID:Date:MIME-Version:To:From:Subject:Content-Type; b=ueSvVgA73UT0rZPEj5ApyXqox4LXH4alh/4FQ5790ZCZv8GqdKYTXWk7LKltsQXEN+EavlF0C6JkU5Qmv/50klHiDKRX46Pew1OMWwCgEg+PCXWJsrZqtC3YsWUjvijvWvPcqYoeDrd/OH3G936KHwoBdcHKYZq+DCu1Ek8qB2k=
-ARC-Authentication-Results:i=1; smtp.subspace.kernel.org; dkim=pass (2048-bit key) header.d=apevzner.com header.i=@apevzner.com header.b=HXDhgS3G; arc=none smtp.client-ip=140.211.166.137
+	s=arc-20240116; t=1711122069; c=relaxed/simple;
+	bh=qUusY3E44HLozFCWY2IiJp8DuwkrGgHEJ2qzvjPXE6g=;
+	h=Content-Type:Mime-Version:Subject:From:In-Reply-To:Date:Cc:
+	 Message-Id:References:To; b=cejqVsM158CXYzvXm0OxCiFoxePmAMVNXOrGBTJD8IFWa3VHH81drNHoeJ6J2rf6ve8tT1wToMM+1BSElzzNfi/X+3ip4++TAzDsQF54uKu+EIQIyuEoWlm2LyfetRdWbGHLFidwsHAbRoacEqGTlPHnE79aD+c43T+w5dlIt0Y=
+ARC-Authentication-Results:i=1; smtp.subspace.kernel.org; dkim=pass (1024-bit key) header.d=msweet.org header.i=@msweet.org header.b=jpXNT0Lw; arc=none smtp.client-ip=140.211.166.136
 Authentication-Results: smtp.subspace.kernel.org;
-	dkim=pass (2048-bit key) header.d=apevzner.com header.i=@apevzner.com header.b="HXDhgS3G"
+	dkim=pass (1024-bit key) header.d=msweet.org header.i=@msweet.org header.b="jpXNT0Lw"
 Received: from localhost (localhost [127.0.0.1])
-	by smtp4.osuosl.org (Postfix) with ESMTP id 508A341734
-	for <printing-architecture@lists.linux-foundation.org>; Fri, 22 Mar 2024 09:06:32 +0000 (UTC)
+	by smtp3.osuosl.org (Postfix) with ESMTP id 9692860FDF
+	for <printing-architecture@lists.linux-foundation.org>; Fri, 22 Mar 2024 15:41:06 +0000 (UTC)
 X-Virus-Scanned: amavisd-new at osuosl.org
 X-Spam-Flag: NO
 X-Spam-Score: -1.6
 X-Spam-Level:
-Received: from smtp4.osuosl.org ([127.0.0.1])
-	by localhost (smtp4.osuosl.org [127.0.0.1]) (amavisd-new, port 10024)
-	with ESMTP id szgrDwj9mmVH
+Received: from smtp3.osuosl.org ([127.0.0.1])
+	by localhost (smtp3.osuosl.org [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id Utzc8IajPunN
 	for <printing-architecture@lists.linux-foundation.org>;
-	Fri, 22 Mar 2024 09:06:31 +0000 (UTC)
-Received-SPF: Pass (mailfrom) identity=mailfrom; client-ip=2a00:1450:4864:20::131; helo=mail-lf1-x131.google.com; envelope-from=pzz@apevzner.com; receiver=<UNKNOWN> 
-DMARC-Filter: OpenDMARC Filter v1.4.2 smtp4.osuosl.org E4EAF416D8
-Authentication-Results: smtp4.osuosl.org; dmarc=none (p=none dis=none) header.from=apevzner.com
-DKIM-Filter: OpenDKIM Filter v2.11.0 smtp4.osuosl.org E4EAF416D8
-Authentication-Results: smtp4.osuosl.org;
-	dkim=pass (2048-bit key, unprotected) header.d=apevzner.com header.i=@apevzner.com header.a=rsa-sha256 header.s=google header.b=HXDhgS3G
-Received: from mail-lf1-x131.google.com (mail-lf1-x131.google.com [IPv6:2a00:1450:4864:20::131])
-	by smtp4.osuosl.org (Postfix) with ESMTPS id E4EAF416D8
-	for <printing-architecture@lists.linux-foundation.org>; Fri, 22 Mar 2024 09:06:30 +0000 (UTC)
-Received: by mail-lf1-x131.google.com with SMTP id 2adb3069b0e04-512b3b04995so1238016e87.3
-        for <printing-architecture@lists.linux-foundation.org>; Fri, 22 Mar 2024 02:06:30 -0700 (PDT)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
-        d=apevzner.com; s=google; t=1711098388; x=1711703188; darn=lists.linux-foundation.org;
-        h=content-transfer-encoding:subject:from:content-language:to
-         :user-agent:mime-version:date:message-id:from:to:cc:subject:date
-         :message-id:reply-to;
-        bh=JR9NSa14CHlV5Dsk4oiAXBtIc+kjOB0budN0WZ8txsk=;
-        b=HXDhgS3GJOJ58dIeGekVZhXf43oULWo/Y2N9Sn7UPtC6lu+ou0Dv5bChIq/YAg1c9V
-         bLw+PW4gOv0FW7MyN1Xs8gCAx0GsE/SLxaDbBTJ9bX8Bhf48BPlD5z4gx/Pu/mRRkF0U
-         F63ip/E1FSO2ltWpbs7ozo5nwSuxVVQZBw7UEsr/iszUxPSYAQKzuL0QapyI0oAnxW4s
-         5fKTlblabWYFTKNyjOwUTNWQl+8Qt3QBuMS/VFz3d3Lrm1j0a4Cn1TXb01i9SXYaBYRq
-         7nFEExYUF4Fvr7pwhLr3e4AbYNxfoHq3rUAVZECX7/J3gxxg6EKp5iV0fkm3dlpratEI
-         uScw==
-X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
-        d=1e100.net; s=20230601; t=1711098388; x=1711703188;
-        h=content-transfer-encoding:subject:from:content-language:to
-         :user-agent:mime-version:date:message-id:x-gm-message-state:from:to
-         :cc:subject:date:message-id:reply-to;
-        bh=JR9NSa14CHlV5Dsk4oiAXBtIc+kjOB0budN0WZ8txsk=;
-        b=EWbLLsd7IUxpGj3FZ5tYOgjN36+pI7Al2OOKiNHb+yhk/VorXJXIcW6eYK2UaCG7bs
-         1zeHnVdAJ1/FQFg9aIiq6Tu+QaxtLyCU7Z2pmvV2Z4mhiBPI+CrqaRkRNnVTl7k67PPn
-         IHzH19jID9nd0FVx4HOa5/sHOsU+GxcuQfP4L3HVfM2qEexBKGmWWbNBzDotBNboO1+B
-         f0g5TUQ++bATbUuHUsr43C03GfVs1etz92LyhVCE55v/15IrW00SZ9tMWjCvO/tVsfk8
-         Ef/xROCak87DVJ6Itwcpa3U0jS0EYwlaUdzzZ+CPmH3R0neUZO0NggWo8dPc9PiSQfpr
-         UCgw==
-X-Gm-Message-State: AOJu0YxxIFZF/iYHY1boP4rNcOWTC4UaTqmlyYXKwA5KcOa9pMQAXdsx
-	gUsCzNoQm3X0jatZETZs8enpGWU6li3zHOUyMddd5kczaJKPWiqRYX/Fe/SGKRtLMxgMiQ146YG
-	1
-X-Google-Smtp-Source: AGHT+IHYPjv1Ecn+qLc51ZCOd09n/fHOyQX0dZzyTPsfgUE4rabH46SNlhZ4K7MyXO05H9Pk7vI2UQ==
-X-Received: by 2002:a19:770e:0:b0:513:e918:42e9 with SMTP id s14-20020a19770e000000b00513e91842e9mr1103032lfc.62.1711098388006;
-        Fri, 22 Mar 2024 02:06:28 -0700 (PDT)
-Received: from [192.168.0.6] (ppp85-141-193-150.pppoe.mtu-net.ru. [85.141.193.150])
-        by smtp.googlemail.com with ESMTPSA id h5-20020a056512350500b005159c7939basm78980lfs.185.2024.03.22.02.06.27
-        for <printing-architecture@lists.linux-foundation.org>
-        (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
-        Fri, 22 Mar 2024 02:06:27 -0700 (PDT)
-Message-ID: <6eb5d746-bbce-4b50-8dde-1c8afcb32187@apevzner.com>
-Date: Fri, 22 Mar 2024 12:06:26 +0300
+	Fri, 22 Mar 2024 15:41:02 +0000 (UTC)
+Received-SPF: Pass (mailfrom) identity=mailfrom; client-ip=173.255.209.91; helo=mail.msweet.org; envelope-from=msweet@msweet.org; receiver=<UNKNOWN> 
+DMARC-Filter: OpenDMARC Filter v1.4.2 smtp3.osuosl.org 6F6B9606D3
+Authentication-Results: smtp3.osuosl.org; dmarc=pass (p=quarantine dis=none) header.from=msweet.org
+DKIM-Filter: OpenDKIM Filter v2.11.0 smtp3.osuosl.org 6F6B9606D3
+Authentication-Results: smtp3.osuosl.org;
+	dkim=pass (1024-bit key, unprotected) header.d=msweet.org header.i=@msweet.org header.a=rsa-sha256 header.s=default header.b=jpXNT0Lw
+Received: from mail.msweet.org (mail.msweet.org [173.255.209.91])
+	by smtp3.osuosl.org (Postfix) with ESMTPS id 6F6B9606D3
+	for <printing-architecture@lists.linux-foundation.org>; Fri, 22 Mar 2024 15:41:02 +0000 (UTC)
+Received: from smtpclient.apple (cbl-66-186-76-47.vianet.ca [66.186.76.47])
+	(using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
+	(No client certificate requested)
+	by mail.msweet.org (Postfix) with ESMTPSA id 0ADA280F11;
+	Fri, 22 Mar 2024 15:41:00 +0000 (UTC)
+DKIM-Filter: OpenDKIM Filter v2.11.0 mail.msweet.org 0ADA280F11
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=msweet.org;
+	s=default; t=1711122061;
+	bh=qUusY3E44HLozFCWY2IiJp8DuwkrGgHEJ2qzvjPXE6g=;
+	h=Subject:From:In-Reply-To:Date:Cc:References:To:From;
+	b=jpXNT0LwfgepUbBAmaTN2t9QDBLOqPBYN1zqZqnagU5I6mZO69lT17vzdxxorLOPf
+	 q/mdo4UqVtJSkeEs1YNsdnY6fP7bbG+yfCfwJaNHTyeG7NG7XvfNH2MzNWUdEtH37f
+	 hqti2MHkJfKPnb5rty6wiwAeVizt4ud5gVtHkWL8=
+Content-Type: text/plain;
+	charset=utf-8
 Precedence: bulk
 X-Mailing-List: printing-architecture@lists.linux.dev
 List-Id: <printing-architecture.lists.linux.dev>
 List-Subscribe: <mailto:printing-architecture+subscribe@lists.linux.dev>
 List-Unsubscribe: <mailto:printing-architecture+unsubscribe@lists.linux.dev>
-MIME-Version: 1.0
-User-Agent: Mozilla Thunderbird
-To: Open Printing <printing-architecture@lists.linux-foundation.org>
-Content-Language: en-US
-From: Alexander Pevzner <pzz@apevzner.com>
-Subject: CUPS & IPP_TAG_EXTENSION
-Content-Type: text/plain; charset=UTF-8; format=flowed
-Content-Transfer-Encoding: 7bit
+Mime-Version: 1.0 (Mac OS X Mail 16.0 \(3774.400.31\))
+Subject: Re: CUPS & IPP_TAG_EXTENSION
+From: Michael Sweet <msweet@msweet.org>
+In-Reply-To: <6eb5d746-bbce-4b50-8dde-1c8afcb32187@apevzner.com>
+Date: Fri, 22 Mar 2024 11:40:49 -0400
+Cc: "printing-architecture@lists.linux-foundation.org" <printing-architecture@lists.linux-foundation.org>
+Content-Transfer-Encoding: quoted-printable
+Message-Id: <9F488FC6-18B7-4333-B17F-C98B0E0EA41F@msweet.org>
+References: <6eb5d746-bbce-4b50-8dde-1c8afcb32187@apevzner.com>
+To: Alexander Pevzner <pzz@apevzner.com>
+X-Mailer: Apple Mail (2.3774.400.31)
 
-Hi Everybody,
+Alexander,
 
-yet another question regarding IPP.
-
-In RFC8010, it is stated that IPP_TAG_EXTENSION is encoded similarly to 
-any other tag: starting with 1 byte of tag (0x7f), followed by the 
-attribute name, and then the attribute value. However, the RFC specifies 
-that the first 4 bytes of the value should be reserved to encode 4 bytes 
+> On Mar 22, 2024, at 5:06=E2=80=AFAM, Alexander Pevzner =
+<pzz@apevzner.com> wrote:
+>=20
+> Hi Everybody,
+>=20
+> yet another question regarding IPP.
+>=20
+> In RFC8010, it is stated that IPP_TAG_EXTENSION is encoded similarly =
+to any other tag: starting with 1 byte of tag (0x7f), followed by the =
+attribute name, and then the attribute value. However, the RFC specifies =
+that the first 4 bytes of the value should be reserved to encode 4 bytes =
 of an extended tag.
 
-On the other hand, the CUPS implementation encodes 0x7f, followed by 4 
+Wow, good catch!
+
+> On the other hand, the CUPS implementation encodes 0x7f, followed by 4 =
 bytes of the extended tag, and then the attribute name and value.
+>=20
+> So, the question arises: which approach is correct, CUPS or the RFC?
 
-So, the question arises: which approach is correct, CUPS or the RFC?
+The RFC.  CUPS is broken in this respect, but then there have never been =
+any extended types in standards-track nor vendor implementations that I =
+am aware of, which is probably why we've never had problems... :)
 
--- 
+I've created issues to track the fixes:
 
-	Wishes, Alexander Pevzner (pzz@apevzner.com)
+    https://github.com/OpenPrinting/cups/issues/913
+    https://github.com/OpenPrinting/libcups/issues/80
+
+________________________
+Michael Sweet
+
