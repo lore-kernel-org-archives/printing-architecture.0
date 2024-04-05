@@ -1,58 +1,76 @@
-Received: from mail-ed1-f43.google.com (mail-ed1-f43.google.com [209.85.208.43])
-	(using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
+Received: from smtp2.osuosl.org (smtp2.osuosl.org [140.211.166.133])
+	(using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
 	(No client certificate requested)
-	by smtp.subspace.kernel.org (Postfix) with ESMTPS id 5A343763EE
-	for <printing-architecture@lists.linux.dev>; Mon, 25 Mar 2024 22:34:25 +0000 (UTC)
-Authentication-Results: smtp.subspace.kernel.org; arc=none smtp.client-ip=209.85.208.43
+	by smtp.subspace.kernel.org (Postfix) with ESMTPS id 791EC16132B
+	for <printing-architecture@lists.linux-foundation.org>; Fri,  5 Apr 2024 11:22:56 +0000 (UTC)
+Authentication-Results: smtp.subspace.kernel.org; arc=none smtp.client-ip=140.211.166.133
 ARC-Seal:i=1; a=rsa-sha256; d=subspace.kernel.org; s=arc-20240116;
-	t=1711406067; cv=none; b=O4CD01ITXsQef0zcV0ICPS4uLzKaNti5794OFO995njX2OjuFbgtTWD7JJa7yFAhapcs+woynlohD8pOlglGnvXENFIpbrHFVYCDBL3Sr9gF+Q+DG6ISRZ+aoDmKh971xcEPFA/Y5UpuuvC/TwGnESBR4JjnmHohJlhqH2eHzvw=
+	t=1712316177; cv=none; b=EduCNSCPibtxotmnEd8XQLTu5k7NtJcfmTlnalEE+d0UlFDZpOGZ4XwpulTr2XDsI7zSG4guMk+w2diQM/fR8amuE1dqAHYgOiSRcvH4kj56lBVhH6lZipgRqmCRL+FtaNgHZOSvjuQ8YeH2fu1NW/zAl7xPsRW54d0OGz6MCo8=
 ARC-Message-Signature:i=1; a=rsa-sha256; d=subspace.kernel.org;
-	s=arc-20240116; t=1711406067; c=relaxed/simple;
-	bh=+uIco5idrf7RHroeHFaxA2tN+GuUVpO6bqIvMyxsiJ4=;
-	h=Message-ID:Date:MIME-Version:From:To:Subject:Content-Type; b=HQec3cOj9FLVqDpU6yT4ulpUHSNcBIyf96iJAI4igQLNrC/haQAKSdHu4W0qbLp2nbkLeyiYgY1HNnARfgmC1REawulJldLBD8Tj48Ana9kr77EiamkcbUM/ZJ9WFYluV0UaE+ZWhQexAi3O+ph/eMMZaKaSNcOs/yk+Z5kWi0M=
-ARC-Authentication-Results:i=1; smtp.subspace.kernel.org; dmarc=pass (p=none dis=none) header.from=gmail.com; spf=pass smtp.mailfrom=gmail.com; dkim=pass (2048-bit key) header.d=gmail.com header.i=@gmail.com header.b=aropHeOL; arc=none smtp.client-ip=209.85.208.43
-Authentication-Results: smtp.subspace.kernel.org; dmarc=pass (p=none dis=none) header.from=gmail.com
-Authentication-Results: smtp.subspace.kernel.org; spf=pass smtp.mailfrom=gmail.com
+	s=arc-20240116; t=1712316177; c=relaxed/simple;
+	bh=19+oVY27jxdtfGOWaYFWle/ASEP52HltGR1+o/U3mgU=;
+	h=Message-ID:Date:MIME-Version:From:Subject:To:Content-Type; b=Wt8izvs2L6PRSwLUbQPcdJumCSI/aZN1yE2HFF0+8QXbioLIFyvY7aFen6ttMFBcAb8454832yXjYk0AtOcHUy24PR8+QvL0Zoj5/Ih5jD4ssL7nYzeNPH01/H4zSGI+Cm+iRb8QxkQNLJVNGT8E6RnYI8aasrdA29h32JJ6Lac=
+ARC-Authentication-Results:i=1; smtp.subspace.kernel.org; dkim=pass (2048-bit key) header.d=gmail.com header.i=@gmail.com header.b=VsR48/gQ; arc=none smtp.client-ip=140.211.166.133
 Authentication-Results: smtp.subspace.kernel.org;
-	dkim=pass (2048-bit key) header.d=gmail.com header.i=@gmail.com header.b="aropHeOL"
-Received: by mail-ed1-f43.google.com with SMTP id 4fb4d7f45d1cf-56be32b9775so4436760a12.1
-        for <printing-architecture@lists.linux.dev>; Mon, 25 Mar 2024 15:34:25 -0700 (PDT)
+	dkim=pass (2048-bit key) header.d=gmail.com header.i=@gmail.com header.b="VsR48/gQ"
+Received: from localhost (localhost [127.0.0.1])
+	by smtp2.osuosl.org (Postfix) with ESMTP id 09B4140188
+	for <printing-architecture@lists.linux-foundation.org>; Fri,  5 Apr 2024 11:22:56 +0000 (UTC)
+X-Virus-Scanned: amavis at osuosl.org
+X-Spam-Flag: NO
+X-Spam-Score: -1.999
+X-Spam-Level:
+Received: from smtp2.osuosl.org ([127.0.0.1])
+ by localhost (smtp2.osuosl.org [127.0.0.1]) (amavis, port 10024) with ESMTP
+ id Z8gLRZf3JBNe for <printing-architecture@lists.linux-foundation.org>;
+ Fri,  5 Apr 2024 11:22:54 +0000 (UTC)
+Received-SPF: Pass (mailfrom) identity=mailfrom; client-ip=2a00:1450:4864:20::332; helo=mail-wm1-x332.google.com; envelope-from=till.kamppeter@gmail.com; receiver=<UNKNOWN> 
+DMARC-Filter: OpenDMARC Filter v1.4.2 smtp2.osuosl.org 7075B40119
+Authentication-Results: smtp2.osuosl.org; dmarc=pass (p=none dis=none) header.from=gmail.com
+DKIM-Filter: OpenDKIM Filter v2.11.0 smtp2.osuosl.org 7075B40119
+Authentication-Results: smtp2.osuosl.org;
+	dkim=pass (2048-bit key, unprotected) header.d=gmail.com header.i=@gmail.com header.a=rsa-sha256 header.s=20230601 header.b=VsR48/gQ
+Received: from mail-wm1-x332.google.com (mail-wm1-x332.google.com [IPv6:2a00:1450:4864:20::332])
+	by smtp2.osuosl.org (Postfix) with ESMTPS id 7075B40119
+	for <printing-architecture@lists.linux-foundation.org>; Fri,  5 Apr 2024 11:22:54 +0000 (UTC)
+Received: by mail-wm1-x332.google.com with SMTP id 5b1f17b1804b1-4148c6132b4so18646895e9.1
+        for <printing-architecture@lists.linux-foundation.org>; Fri, 05 Apr 2024 04:22:54 -0700 (PDT)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
-        d=gmail.com; s=20230601; t=1711406062; x=1712010862; darn=lists.linux.dev;
-        h=content-transfer-encoding:subject:to:from:content-language
+        d=gmail.com; s=20230601; t=1712316172; x=1712920972; darn=lists.linux-foundation.org;
+        h=content-transfer-encoding:content-language:to:subject:from
          :user-agent:mime-version:date:message-id:from:to:cc:subject:date
          :message-id:reply-to;
-        bh=3S0cw+CZNZcmuVOiCRg4V0EjAE+ax7Du6SAyVD71aao=;
-        b=aropHeOLVWN07THxUnDWnKPyQAJb8MDuKwadmcqFjLQ6XozguDElxBZgKaHrBE46wK
-         IFZwwsMdXdsk1V4N3dQwj36TTUiWQTjbUND7puRX/4ab02TiL9zi5yKDiA3wtQSLmCrL
-         kCdS5bbtl1km2WEppC4OaRuCIN43bCv7EH2TEhltqygX9IUS0XzdC22MhZKU3c+rwKDT
-         HHH3GEsQFOfUMXHvsLFa6JjvBJreKSXYguEJ09oKWLWNCi3GocpRiWWEDyLfctCNvPhn
-         1bgbe+O7QH9/mQehSzESOc4yoZhtfvU40eeqm8+r9efKBBdd5xDcLlvv9msbP1AL+wt+
-         NFPg==
+        bh=X7/LZlc7L7sfBK/ThtnHqnxneV3C1cuLVQly3m2IH4w=;
+        b=VsR48/gQzRrozF9DDMaTAcirLjEuEue5Ky/HJlcKQFHTOE0XXHFBpgfEHZ0A2gjBXH
+         x02CB/otT+TdSk0Kdw3iXClIjyyXPtJ0//U9kChNe1NdCXTNm78TeDUoVGGdndXC0eoE
+         8b3gMd3TUnNrBDl/d7g8XTJTur/mdvrlABnH0HYXm8GqZ+JNFCVUVo8z6Le/jn7OZLzL
+         4+/CRkWR5+AYvVsoja+5WqHHF/gd0wPAmnV1XN/QTsWGNK+ecFwE3xRCNdb8ZeKiDWNI
+         dhXA/TZfsJRzJw8D3CA4zKu5okZZ7GcTXZV0/Kyzhhrf9LVUNxdRq942mBj8M9kamqR3
+         nIgA==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
-        d=1e100.net; s=20230601; t=1711406062; x=1712010862;
-        h=content-transfer-encoding:subject:to:from:content-language
+        d=1e100.net; s=20230601; t=1712316172; x=1712920972;
+        h=content-transfer-encoding:content-language:to:subject:from
          :user-agent:mime-version:date:message-id:x-gm-message-state:from:to
          :cc:subject:date:message-id:reply-to;
-        bh=3S0cw+CZNZcmuVOiCRg4V0EjAE+ax7Du6SAyVD71aao=;
-        b=hbjh0FtgVd2wFkHBSHTyoGjdFMnINPuqVb2AW1oOvDi3d7V+ppsrKdSFhhg6HVbpJF
-         RnnFkT7i+NX+DcV9zLUky+ht/Tz58eftmIxYUPBnGgyUmYd+yIir8A0gEhQGnfWnn0Rc
-         aQdjjt7ezFpZtUyCV/92zgjxuAGwAXLy6Y0jz1DWtS1pH46nC4Abb8ALi2DSMa9y6Ki7
-         p6XX/17yKrdejgwCLY7qQdBPTR56oPy9JArgJGVSoGLPx5kAsQZZ3+FWeg8lcNf36Sne
-         EZXu3r/biwhfHmQ6zm+cCNLsNrbTHzFo3QhNU0AKdzcWwrEmn4rfu3Pri8XlN8m/4xzo
-         XNjA==
-X-Gm-Message-State: AOJu0Yy+kTXVNP5BbDD7hA/VvhkBnrIacP1RMXqzHGNarf8ykSjAu2UV
-	JKu2Z2CbgIDA4pwoRf9BcMZMGu3MXhzTfzv6A8KIqc1vuowg7eC6WVabQbcndDU=
-X-Google-Smtp-Source: AGHT+IE9Zx1UyZbe2JaE3wkh9T7sDSFm++uMrfiAg2lUZGR6JRWDYHy+WNfEZHNsSIxG394Bvemw6w==
-X-Received: by 2002:a17:907:98c:b0:a47:53be:5e6c with SMTP id bf12-20020a170907098c00b00a4753be5e6cmr4111599ejc.34.1711406062241;
-        Mon, 25 Mar 2024 15:34:22 -0700 (PDT)
+        bh=X7/LZlc7L7sfBK/ThtnHqnxneV3C1cuLVQly3m2IH4w=;
+        b=qpEmy+CeZ/UWxnmbvnOeiSC7+C/un/2cTGNYZIaG3RhWecJY08f7qTHESmnlqMgGsF
+         Ka66v2rF+mEs9evTaCbW501cMHKpVNsvGUs5LOf8Yc7tYVPXsh2hr68KZqRk5ez+jehu
+         /gB01NxqaSm9+2ReiZKQaIBsbTbCPBmiF+k+zqtmEAmOH5knOuOR24RN2qyb/dEOcQhc
+         cxg+yCvWfP8mx9lBXLMz7sIfHzaTwtsoaPuDze9pJveY58fM/fhI5k+u/68pHg0SgG+y
+         o2VxaGWLLXHavNHKwDCCnrx99mf+Kau07dTQaIJr+JmzKFuIxjesVIBF4y6WaBq3Gd0S
+         EeeQ==
+X-Forwarded-Encrypted: i=1; AJvYcCVKDi+EU7LK3vz5No+IzGelrYlLwSCNhjsTeADHZvhm7CusLeqkCBM0gSJqtOUb/xZSEcQX5hNMQqCndXyymzC42hjdFnAWvTqdPV8PJoeQe6CZG0dEz7ZVL4fceHusU6Q=
+X-Gm-Message-State: AOJu0YwsXkWaNZtFRuHeAnpZaqj2XNAKaOQ2UJuk8oAXYDWH1NSxcp0Q
+	s7ybccVxhYrNFZivJb/OkWFUSi61ZQdYH6aeiTpTk78NF0m9cpTi
+X-Google-Smtp-Source: AGHT+IEAMTTSQDaTTlGitOJJSwUmWYU/WoLqzfETlC6XISBudb9FyPFzCBhO0HAYr65sX2ZkLxAMGA==
+X-Received: by 2002:a05:600c:354f:b0:415:62d0:af7e with SMTP id i15-20020a05600c354f00b0041562d0af7emr2096018wmq.3.1712316171907;
+        Fri, 05 Apr 2024 04:22:51 -0700 (PDT)
 Received: from [192.168.68.107] (192-164-134-179.hdsl.highway.telekom.at. [192.164.134.179])
-        by smtp.gmail.com with ESMTPSA id i8-20020a17090671c800b00a46d4e26301sm3477970ejk.27.2024.03.25.15.34.21
-        for <printing-architecture@lists.linux.dev>
+        by smtp.gmail.com with ESMTPSA id bg8-20020a05600c3c8800b00414807ef8dfsm2632872wmb.5.2024.04.05.04.22.50
         (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
-        Mon, 25 Mar 2024 15:34:21 -0700 (PDT)
-Message-ID: <18827a06-e530-4861-88b2-3e085bbbe123@gmail.com>
-Date: Mon, 25 Mar 2024 23:34:20 +0100
+        Fri, 05 Apr 2024 04:22:50 -0700 (PDT)
+Message-ID: <ea935fec-1a4c-485a-b48d-0dae369ca356@gmail.com>
+Date: Fri, 5 Apr 2024 13:22:50 +0200
 Precedence: bulk
 X-Mailing-List: printing-architecture@lists.linux.dev
 List-Id: <printing-architecture.lists.linux.dev>
@@ -60,46 +78,21 @@ List-Subscribe: <mailto:printing-architecture+subscribe@lists.linux.dev>
 List-Unsubscribe: <mailto:printing-architecture+unsubscribe@lists.linux.dev>
 MIME-Version: 1.0
 User-Agent: Mozilla Thunderbird
-Content-Language: en-US
 From: Till Kamppeter <till.kamppeter@gmail.com>
-To: OpenPrinting <printing-architecture@lists.linux.dev>
-Subject: Linux Plumbers in Vienna - OpenPrinting micro-conference?
+Subject: OpenPrinting News
+To: Ira McDonald <blueroofmusic@gmail.com>, Aveek Basu
+ <basu.aveek@gmail.com>,
+ Open Printing <printing-architecture@lists.linux-foundation.org>
+Content-Language: en-US
 Content-Type: text/plain; charset=UTF-8; format=flowed
 Content-Transfer-Encoding: 7bit
 
 Hi,
 
-this year's Linux Plumber's Conference (LPC) takes place in Vienna, Austria, the 
-city where I live. It takes place on September 18-20, right after the Open 
-Source Summit Europe which takes place also in Vienna, on September 16-18.
+I have posted the newest development of the last month on our website now.
 
-     https://lpc.events/
+Here we go:
 
-As usual, they accommodate micro-conferences and the Call for Proposals for 
-these micro-conferences is open, until April 4, 9 days from now.
-
-So this year's LPC takes place at a reasonable date again. And due to the 
-location I will also not have any problem to attend in-person.
-
-Now there is the question whether it would make sense to propose an OpenPrinting 
-micro-conference again.
-
-- Do we have enough new areas to discuss? Note that the micro-conferences are 
-for discussing new stuff, not reporting what we have achieved.
-
-- Somebody of you likes to attend in-person? Meeting me and others.
-
-If I am not wrong, currently we are mainly implementing things we have planned 
-in the last years, and not planning many new things. Or anybody has some great 
-new ideas to discuss on Plumbers?
-
-Also, in 2022 (in Dublin) we had no audience at all. I we get accepted again, I 
-can try to talk with the organizers to put us into a more visible place, as 2019 
-in Lisbon we had at least some people in our room.
-
-So WDYT?
+https://openprinting.github.io/OpenPrinting-News-March-2024/
 
     Till
-
-
-
