@@ -1,76 +1,64 @@
-Received: from smtp2.osuosl.org (smtp2.osuosl.org [140.211.166.133])
+Received: from us-smtp-delivery-124.mimecast.com (us-smtp-delivery-124.mimecast.com [170.10.129.124])
 	(using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
 	(No client certificate requested)
-	by smtp.subspace.kernel.org (Postfix) with ESMTPS id 791EC16132B
-	for <printing-architecture@lists.linux-foundation.org>; Fri,  5 Apr 2024 11:22:56 +0000 (UTC)
-Authentication-Results: smtp.subspace.kernel.org; arc=none smtp.client-ip=140.211.166.133
+	by smtp.subspace.kernel.org (Postfix) with ESMTPS id 6C93E3E493
+	for <printing-architecture@lists.linux.dev>; Wed, 17 Apr 2024 15:18:00 +0000 (UTC)
+Authentication-Results: smtp.subspace.kernel.org; arc=none smtp.client-ip=170.10.129.124
 ARC-Seal:i=1; a=rsa-sha256; d=subspace.kernel.org; s=arc-20240116;
-	t=1712316177; cv=none; b=EduCNSCPibtxotmnEd8XQLTu5k7NtJcfmTlnalEE+d0UlFDZpOGZ4XwpulTr2XDsI7zSG4guMk+w2diQM/fR8amuE1dqAHYgOiSRcvH4kj56lBVhH6lZipgRqmCRL+FtaNgHZOSvjuQ8YeH2fu1NW/zAl7xPsRW54d0OGz6MCo8=
+	t=1713367082; cv=none; b=a4NnU9U7zwWEhFTXhkF/dpBg3XUlaY9GJE3mIxYj/tkHek1EtdxdE5ptG2R8QJXVC1TMAv0kLSBSsuG4n1rYzOhXCtSDMxlqCMtPLtcw+jCIW3ko7eUsE2k71vZuBIBsBzBa5O8zsC38v8EOWCl9ZCrXKOiEwCCFwmqRcQshBhM=
 ARC-Message-Signature:i=1; a=rsa-sha256; d=subspace.kernel.org;
-	s=arc-20240116; t=1712316177; c=relaxed/simple;
-	bh=19+oVY27jxdtfGOWaYFWle/ASEP52HltGR1+o/U3mgU=;
-	h=Message-ID:Date:MIME-Version:From:Subject:To:Content-Type; b=Wt8izvs2L6PRSwLUbQPcdJumCSI/aZN1yE2HFF0+8QXbioLIFyvY7aFen6ttMFBcAb8454832yXjYk0AtOcHUy24PR8+QvL0Zoj5/Ih5jD4ssL7nYzeNPH01/H4zSGI+Cm+iRb8QxkQNLJVNGT8E6RnYI8aasrdA29h32JJ6Lac=
-ARC-Authentication-Results:i=1; smtp.subspace.kernel.org; dkim=pass (2048-bit key) header.d=gmail.com header.i=@gmail.com header.b=VsR48/gQ; arc=none smtp.client-ip=140.211.166.133
+	s=arc-20240116; t=1713367082; c=relaxed/simple;
+	bh=x/3NHKCnCPm3Z0+KaryWAnkbXVuoGoBarYthrIk5Oxo=;
+	h=Message-ID:Date:MIME-Version:To:From:Subject:Content-Type; b=ZeQO1eE0jBE5L5fNyTIi3z6nSR6Xc7by1AX58AcUt65keTy2PFCZtS1LWJRvIB65xdGsVeObP0ImXNPB6fgBdWNnCfYTP7kPnVIl/cUcTQrFE/MM3CmB8gpk2SuMn3og+UIzeftBKYwLu+p7kzp3fI/hTqmVw3qd/niV3GCq4uU=
+ARC-Authentication-Results:i=1; smtp.subspace.kernel.org; dmarc=pass (p=none dis=none) header.from=redhat.com; spf=pass smtp.mailfrom=redhat.com; dkim=pass (1024-bit key) header.d=redhat.com header.i=@redhat.com header.b=IBZ6BW/Q; arc=none smtp.client-ip=170.10.129.124
+Authentication-Results: smtp.subspace.kernel.org; dmarc=pass (p=none dis=none) header.from=redhat.com
+Authentication-Results: smtp.subspace.kernel.org; spf=pass smtp.mailfrom=redhat.com
 Authentication-Results: smtp.subspace.kernel.org;
-	dkim=pass (2048-bit key) header.d=gmail.com header.i=@gmail.com header.b="VsR48/gQ"
-Received: from localhost (localhost [127.0.0.1])
-	by smtp2.osuosl.org (Postfix) with ESMTP id 09B4140188
-	for <printing-architecture@lists.linux-foundation.org>; Fri,  5 Apr 2024 11:22:56 +0000 (UTC)
-X-Virus-Scanned: amavis at osuosl.org
-X-Spam-Flag: NO
-X-Spam-Score: -1.999
-X-Spam-Level:
-Received: from smtp2.osuosl.org ([127.0.0.1])
- by localhost (smtp2.osuosl.org [127.0.0.1]) (amavis, port 10024) with ESMTP
- id Z8gLRZf3JBNe for <printing-architecture@lists.linux-foundation.org>;
- Fri,  5 Apr 2024 11:22:54 +0000 (UTC)
-Received-SPF: Pass (mailfrom) identity=mailfrom; client-ip=2a00:1450:4864:20::332; helo=mail-wm1-x332.google.com; envelope-from=till.kamppeter@gmail.com; receiver=<UNKNOWN> 
-DMARC-Filter: OpenDMARC Filter v1.4.2 smtp2.osuosl.org 7075B40119
-Authentication-Results: smtp2.osuosl.org; dmarc=pass (p=none dis=none) header.from=gmail.com
-DKIM-Filter: OpenDKIM Filter v2.11.0 smtp2.osuosl.org 7075B40119
-Authentication-Results: smtp2.osuosl.org;
-	dkim=pass (2048-bit key, unprotected) header.d=gmail.com header.i=@gmail.com header.a=rsa-sha256 header.s=20230601 header.b=VsR48/gQ
-Received: from mail-wm1-x332.google.com (mail-wm1-x332.google.com [IPv6:2a00:1450:4864:20::332])
-	by smtp2.osuosl.org (Postfix) with ESMTPS id 7075B40119
-	for <printing-architecture@lists.linux-foundation.org>; Fri,  5 Apr 2024 11:22:54 +0000 (UTC)
-Received: by mail-wm1-x332.google.com with SMTP id 5b1f17b1804b1-4148c6132b4so18646895e9.1
-        for <printing-architecture@lists.linux-foundation.org>; Fri, 05 Apr 2024 04:22:54 -0700 (PDT)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
-        d=gmail.com; s=20230601; t=1712316172; x=1712920972; darn=lists.linux-foundation.org;
-        h=content-transfer-encoding:content-language:to:subject:from
-         :user-agent:mime-version:date:message-id:from:to:cc:subject:date
-         :message-id:reply-to;
-        bh=X7/LZlc7L7sfBK/ThtnHqnxneV3C1cuLVQly3m2IH4w=;
-        b=VsR48/gQzRrozF9DDMaTAcirLjEuEue5Ky/HJlcKQFHTOE0XXHFBpgfEHZ0A2gjBXH
-         x02CB/otT+TdSk0Kdw3iXClIjyyXPtJ0//U9kChNe1NdCXTNm78TeDUoVGGdndXC0eoE
-         8b3gMd3TUnNrBDl/d7g8XTJTur/mdvrlABnH0HYXm8GqZ+JNFCVUVo8z6Le/jn7OZLzL
-         4+/CRkWR5+AYvVsoja+5WqHHF/gd0wPAmnV1XN/QTsWGNK+ecFwE3xRCNdb8ZeKiDWNI
-         dhXA/TZfsJRzJw8D3CA4zKu5okZZ7GcTXZV0/Kyzhhrf9LVUNxdRq942mBj8M9kamqR3
-         nIgA==
+	dkim=pass (1024-bit key) header.d=redhat.com header.i=@redhat.com header.b="IBZ6BW/Q"
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=redhat.com;
+	s=mimecast20190719; t=1713367079;
+	h=from:from:reply-to:subject:subject:date:date:message-id:message-id:
+	 to:to:cc:mime-version:mime-version:content-type:content-type:
+	 content-transfer-encoding:content-transfer-encoding;
+	bh=YFmPPyO1NobTCn4skNRs1dRsthyVeKtyq+kmxEIv9R8=;
+	b=IBZ6BW/QRxE4kSuWo14ZkGxFsCoZcegE+a93jXZPQw2oqCNZO3/fDTGPtELV8Q34bnp2ii
+	TlWJJSDlaWL06qYyPzkNPZJejstDn9QVlcJ0SaSsqtopOwH/6Wv3k6ATpiZUCgTi5Lln11
+	nSyIWEcAMr26jw+0rPCW9C5R5Fw+/lU=
+Received: from mail-lj1-f199.google.com (mail-lj1-f199.google.com
+ [209.85.208.199]) by relay.mimecast.com with ESMTP with STARTTLS
+ (version=TLSv1.3, cipher=TLS_AES_256_GCM_SHA384) id
+ us-mta-345-XNUrbjpUOia_dfiobPZ6SQ-1; Wed, 17 Apr 2024 11:17:57 -0400
+X-MC-Unique: XNUrbjpUOia_dfiobPZ6SQ-1
+Received: by mail-lj1-f199.google.com with SMTP id 38308e7fff4ca-2d88271f485so49362341fa.1
+        for <printing-architecture@lists.linux.dev>; Wed, 17 Apr 2024 08:17:57 -0700 (PDT)
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
-        d=1e100.net; s=20230601; t=1712316172; x=1712920972;
-        h=content-transfer-encoding:content-language:to:subject:from
+        d=1e100.net; s=20230601; t=1713367076; x=1713971876;
+        h=content-transfer-encoding:subject:from:to:content-language
          :user-agent:mime-version:date:message-id:x-gm-message-state:from:to
          :cc:subject:date:message-id:reply-to;
-        bh=X7/LZlc7L7sfBK/ThtnHqnxneV3C1cuLVQly3m2IH4w=;
-        b=qpEmy+CeZ/UWxnmbvnOeiSC7+C/un/2cTGNYZIaG3RhWecJY08f7qTHESmnlqMgGsF
-         Ka66v2rF+mEs9evTaCbW501cMHKpVNsvGUs5LOf8Yc7tYVPXsh2hr68KZqRk5ez+jehu
-         /gB01NxqaSm9+2ReiZKQaIBsbTbCPBmiF+k+zqtmEAmOH5knOuOR24RN2qyb/dEOcQhc
-         cxg+yCvWfP8mx9lBXLMz7sIfHzaTwtsoaPuDze9pJveY58fM/fhI5k+u/68pHg0SgG+y
-         o2VxaGWLLXHavNHKwDCCnrx99mf+Kau07dTQaIJr+JmzKFuIxjesVIBF4y6WaBq3Gd0S
-         EeeQ==
-X-Forwarded-Encrypted: i=1; AJvYcCVKDi+EU7LK3vz5No+IzGelrYlLwSCNhjsTeADHZvhm7CusLeqkCBM0gSJqtOUb/xZSEcQX5hNMQqCndXyymzC42hjdFnAWvTqdPV8PJoeQe6CZG0dEz7ZVL4fceHusU6Q=
-X-Gm-Message-State: AOJu0YwsXkWaNZtFRuHeAnpZaqj2XNAKaOQ2UJuk8oAXYDWH1NSxcp0Q
-	s7ybccVxhYrNFZivJb/OkWFUSi61ZQdYH6aeiTpTk78NF0m9cpTi
-X-Google-Smtp-Source: AGHT+IEAMTTSQDaTTlGitOJJSwUmWYU/WoLqzfETlC6XISBudb9FyPFzCBhO0HAYr65sX2ZkLxAMGA==
-X-Received: by 2002:a05:600c:354f:b0:415:62d0:af7e with SMTP id i15-20020a05600c354f00b0041562d0af7emr2096018wmq.3.1712316171907;
-        Fri, 05 Apr 2024 04:22:51 -0700 (PDT)
-Received: from [192.168.68.107] (192-164-134-179.hdsl.highway.telekom.at. [192.164.134.179])
-        by smtp.gmail.com with ESMTPSA id bg8-20020a05600c3c8800b00414807ef8dfsm2632872wmb.5.2024.04.05.04.22.50
+        bh=YFmPPyO1NobTCn4skNRs1dRsthyVeKtyq+kmxEIv9R8=;
+        b=tLErUlMF8ynDCkIVxp+t0rmnpM5+REcbdMOM14E7m1316tnyJbhuGrPGJU/Da6HEMW
+         HHFgMrudaAZgVrcOZvWsSFgvtA9JNjRh2qJ8S0B+BDZNVGNLAj5dR2lt3T+efyB2YcAM
+         r8G/skD0wKL2CIy/jLNJ0x+lbZIOpdmRsN8PLjtfZhLt4ZjjCwAinPqReFLSI+1oDJPW
+         lAeCRdmicGa9BnsbV8uD5ytSMpjTEu2spHIcOtNdFnDQSxQpg3AB/ovEDnpVvHVpD7wh
+         RM4lZxiW4j5nJcANoBX7+hradtCNtGlcA6xd4W/DSMcS+8pDuZ/lfwSWO/iuGvo1gUJC
+         E5YA==
+X-Gm-Message-State: AOJu0YxfZCGKrSiYRfS9p1FEc608pwShZzoidlpNyvRzgRW4Dgat1zEp
+	Ep4SR3BI7dZRkIgWkxY4p/tkUQdf5jfnL+bSMGhhLKDc0f8s1vLkvvVDJwkfdBjPyGB27H3wSWf
+	qEhmyllyPV2WbMUEisabyxOS0sGQk2smk14KjwXis7fVl96Zd3TDoBX1pTbeUCn84KqkSU8GDgh
+	sMtfyunwxTrxp085JXWCElV8BatTwj1VQmehnQYjBoqW+Xui5S84AIqoDQ
+X-Received: by 2002:a2e:9f14:0:b0:2d8:66d:7571 with SMTP id u20-20020a2e9f14000000b002d8066d7571mr10186226ljk.23.1713367075815;
+        Wed, 17 Apr 2024 08:17:55 -0700 (PDT)
+X-Google-Smtp-Source: AGHT+IF36BuRfrfONEVSqXZWi5PovXhq8KGYncE6dk9sXCpVG5K3iGRZB/TxX/c51qKR/AtXY/VtTw==
+X-Received: by 2002:a2e:9f14:0:b0:2d8:66d:7571 with SMTP id u20-20020a2e9f14000000b002d8066d7571mr10186171ljk.23.1713367074282;
+        Wed, 17 Apr 2024 08:17:54 -0700 (PDT)
+Received: from [10.43.3.238] (nat-pool-brq-t.redhat.com. [213.175.37.10])
+        by smtp.gmail.com with ESMTPSA id s14-20020a05600c45ce00b0041896d2a05fsm3191149wmo.5.2024.04.17.08.17.53
+        for <printing-architecture@lists.linux.dev>
         (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
-        Fri, 05 Apr 2024 04:22:50 -0700 (PDT)
-Message-ID: <ea935fec-1a4c-485a-b48d-0dae369ca356@gmail.com>
-Date: Fri, 5 Apr 2024 13:22:50 +0200
+        Wed, 17 Apr 2024 08:17:53 -0700 (PDT)
+Message-ID: <21cbcdbf-e6c6-4fe8-9950-94c72c4f2628@redhat.com>
+Date: Wed, 17 Apr 2024 17:17:53 +0200
 Precedence: bulk
 X-Mailing-List: printing-architecture@lists.linux.dev
 List-Id: <printing-architecture.lists.linux.dev>
@@ -78,21 +66,51 @@ List-Subscribe: <mailto:printing-architecture+subscribe@lists.linux.dev>
 List-Unsubscribe: <mailto:printing-architecture+unsubscribe@lists.linux.dev>
 MIME-Version: 1.0
 User-Agent: Mozilla Thunderbird
-From: Till Kamppeter <till.kamppeter@gmail.com>
-Subject: OpenPrinting News
-To: Ira McDonald <blueroofmusic@gmail.com>, Aveek Basu
- <basu.aveek@gmail.com>,
- Open Printing <printing-architecture@lists.linux-foundation.org>
+To: OpenPrinting <printing-architecture@lists.linux.dev>
+From: Zdenek Dohnal <zdohnal@redhat.com>
+Subject: pycups 2.0.3 is released!
+X-Mimecast-Spam-Score: 0
+X-Mimecast-Originator: redhat.com
 Content-Language: en-US
 Content-Type: text/plain; charset=UTF-8; format=flowed
 Content-Transfer-Encoding: 7bit
 
-Hi,
+Hi all,
 
-I have posted the newest development of the last month on our website now.
+today I got into fixing build failure of pycups with the newest Python 
+3.13, so I created new release with the fix.
 
-Here we go:
+pycups 2.0.3 contains changes from 2.0.2 - mainly changes related to 
+newer Python3 versions:
 
-https://openprinting.github.io/OpenPrinting-News-March-2024/
+  * removed shebang from example/cupstree.py
+  * ignore driverless utilities for postscriptdriver tags creation
+    (Fedora bug #1873385)
+  * remove epydoc from Makefile (#27
+    <https://github.com/OpenPrinting/pycups/issues/27>)
+  * fix invalid delete of pointer (#11
+    <https://github.com/OpenPrinting/pycups/issues/11>)
+  * Makefile uses wrong Python (#32
+    <https://github.com/OpenPrinting/pycups/issues/32>)
+  * define PY_SSIZE_T_CLEAN in cupsipp.h - fixes traceback during
+    IPPRequest.writeIO
+    with Python 3.10
+  * fix the test.py when there is no printer installed (#46
+    <https://github.com/OpenPrinting/pycups/issues/46>)
+  * Use PyObject_Call() instead of deprecated PyEval_CallObject()
 
-    Till
+Version 2.0.3 was created to attempt to fix pycups installation via pip, 
+but it was unsuccessful.
+
+Enjoy!
+
+-- 
+Zdenek Dohnal
+Senior Software Engineer
+Red Hat, BRQ-TPBC
+
+-- 
+Zdenek Dohnal
+Senior Software Engineer
+Red Hat, BRQ-TPBC
+
