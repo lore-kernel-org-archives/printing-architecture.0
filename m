@@ -1,76 +1,64 @@
-Received: from smtp1.osuosl.org (smtp1.osuosl.org [140.211.166.138])
+Received: from us-smtp-delivery-124.mimecast.com (us-smtp-delivery-124.mimecast.com [170.10.133.124])
 	(using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
 	(No client certificate requested)
-	by smtp.subspace.kernel.org (Postfix) with ESMTPS id 8873510A3D
-	for <printing-architecture@lists.linux-foundation.org>; Sun,  2 Jun 2024 10:46:19 +0000 (UTC)
-Authentication-Results: smtp.subspace.kernel.org; arc=none smtp.client-ip=140.211.166.138
+	by smtp.subspace.kernel.org (Postfix) with ESMTPS id 5C2811EF01
+	for <printing-architecture@lists.linux.dev>; Tue, 11 Jun 2024 14:25:37 +0000 (UTC)
+Authentication-Results: smtp.subspace.kernel.org; arc=none smtp.client-ip=170.10.133.124
 ARC-Seal:i=1; a=rsa-sha256; d=subspace.kernel.org; s=arc-20240116;
-	t=1717325180; cv=none; b=QiP8mMkUeKPukW+Ix+j791kX64aC4ibLZQhWLwLrEyd8qIijprsGenyhDQePrbCiq5wbAp3Bfgm7PFvUydP9lQ7TxRTKDiEeZlzXlfPBU9RkkY2y/9NcYjZdZFU5UAf2f3UMIsXD/YVg+sZYTXLLcI5EBX3n+zr0NZPL1x129OA=
+	t=1718115939; cv=none; b=OTPQ7n4Rtna8sWzWpdLg0YIK7QJuNtpn3lVU5JO5k7EBvpqQPnuGcVijd7r+EHMpfveDF5ajm8a3sIgMkLPU8sKQEwZicg+2zDf1NRUiJHO2a9hW1q6WnWyNYpBvCUY4G+ffHKE4jPMzh7LR8d0Js5D/Pkt4T7fYGZCwJ4LIXsw=
 ARC-Message-Signature:i=1; a=rsa-sha256; d=subspace.kernel.org;
-	s=arc-20240116; t=1717325180; c=relaxed/simple;
-	bh=g97x7duRshOW/W4GbwMOi9k4EqsS0eDhqKOrjMIYFm0=;
-	h=Message-ID:Date:MIME-Version:From:Subject:To:Content-Type; b=XtwoZq1X6Cvdc2ku3b60bqQkXUI9eYlhbKIBMJxsKFmNKohZofSpJBsM9NAyydDZ37uNp9visi/J0RLl9YUKriI3lekbBxKqzTEexuYTQqVxwyyge6Ut3cpvG+gMnk9BARdMAyJAzlTan/xenxObB8AX++BSu8DpdEA6cWg4aic=
-ARC-Authentication-Results:i=1; smtp.subspace.kernel.org; dkim=pass (2048-bit key) header.d=gmail.com header.i=@gmail.com header.b=QoLVf8UE; arc=none smtp.client-ip=140.211.166.138
+	s=arc-20240116; t=1718115939; c=relaxed/simple;
+	bh=JyHT9GfdZD9ysbugj8k73Z5Vb4FMAM6IvLwj4jqph4g=;
+	h=Message-ID:Date:MIME-Version:To:From:Subject:Content-Type; b=VrQcP84qlKvr40gIHg1V71FHUzlYwY9wtLIGsbzH9S1Llek0dJtx5YXBllQXuiqs9lVFB3rqBtONYjLb5o6iQAAiPF+X/R3z2RYkcYuBrp8XihXc9dhoFWbcvhr+doAjq51k03BSOTeVKhEbTOwmdm0Dbj3AJOYPmLC1uSOYCDY=
+ARC-Authentication-Results:i=1; smtp.subspace.kernel.org; dmarc=pass (p=none dis=none) header.from=redhat.com; spf=pass smtp.mailfrom=redhat.com; dkim=pass (1024-bit key) header.d=redhat.com header.i=@redhat.com header.b=ISQyXlna; arc=none smtp.client-ip=170.10.133.124
+Authentication-Results: smtp.subspace.kernel.org; dmarc=pass (p=none dis=none) header.from=redhat.com
+Authentication-Results: smtp.subspace.kernel.org; spf=pass smtp.mailfrom=redhat.com
 Authentication-Results: smtp.subspace.kernel.org;
-	dkim=pass (2048-bit key) header.d=gmail.com header.i=@gmail.com header.b="QoLVf8UE"
-Received: from localhost (localhost [127.0.0.1])
-	by smtp1.osuosl.org (Postfix) with ESMTP id 1ACD384455
-	for <printing-architecture@lists.linux-foundation.org>; Sun,  2 Jun 2024 10:46:19 +0000 (UTC)
-X-Virus-Scanned: amavis at osuosl.org
-X-Spam-Flag: NO
-X-Spam-Score: -1.999
-X-Spam-Level:
-Received: from smtp1.osuosl.org ([127.0.0.1])
- by localhost (smtp1.osuosl.org [127.0.0.1]) (amavis, port 10024) with ESMTP
- id fm_HicVxEp4O for <printing-architecture@lists.linux-foundation.org>;
- Sun,  2 Jun 2024 10:46:18 +0000 (UTC)
-Received-SPF: Pass (mailfrom) identity=mailfrom; client-ip=2a00:1450:4864:20::533; helo=mail-ed1-x533.google.com; envelope-from=till.kamppeter@gmail.com; receiver=<UNKNOWN> 
-DMARC-Filter: OpenDMARC Filter v1.4.2 smtp1.osuosl.org 0BFDD843F3
-Authentication-Results: smtp1.osuosl.org; dmarc=pass (p=none dis=none) header.from=gmail.com
-DKIM-Filter: OpenDKIM Filter v2.11.0 smtp1.osuosl.org 0BFDD843F3
-Authentication-Results: smtp1.osuosl.org;
-	dkim=pass (2048-bit key) header.d=gmail.com header.i=@gmail.com header.a=rsa-sha256 header.s=20230601 header.b=QoLVf8UE
-Received: from mail-ed1-x533.google.com (mail-ed1-x533.google.com [IPv6:2a00:1450:4864:20::533])
-	by smtp1.osuosl.org (Postfix) with ESMTPS id 0BFDD843F3
-	for <printing-architecture@lists.linux-foundation.org>; Sun,  2 Jun 2024 10:46:17 +0000 (UTC)
-Received: by mail-ed1-x533.google.com with SMTP id 4fb4d7f45d1cf-57a4ea8058bso896570a12.1
-        for <printing-architecture@lists.linux-foundation.org>; Sun, 02 Jun 2024 03:46:17 -0700 (PDT)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
-        d=gmail.com; s=20230601; t=1717325176; x=1717929976; darn=lists.linux-foundation.org;
-        h=content-transfer-encoding:content-language:to:subject:from
-         :user-agent:mime-version:date:message-id:from:to:cc:subject:date
-         :message-id:reply-to;
-        bh=VOyk/h08YFqMoojNeaUTByKIgx1L1o0IShB1a0fWCpw=;
-        b=QoLVf8UEoFADqi4OIsEGTJqI2SP1BYR3dGaOJS/4aoyksk97nfwd2Z1ISdY4dWGgmA
-         CJikaQInBbXg2ucecu4KUR1QyLz4KTeKibbRuNandStVCsB7bVfxI4tULAh3ixY28OnO
-         ckS4JvTF/T2L0D+dwaJvJOnb7lOGnBVAD5Yz/1diNfY1nMLzhKhSCUP38hFIMoEfBa0v
-         vx/I8V3R0wG7ldf4Un4GkVW35h86ZrA02AKc/dsENfaOzuxTHUyOOrbi/dE4qk67MMim
-         oSDffgUhdD/cd6DF7RtsDsuwRdKgJaH9oBL7V16WJiNZMjFJ1xL3TwdiTO9Ve7ng0XcP
-         HXuw==
+	dkim=pass (1024-bit key) header.d=redhat.com header.i=@redhat.com header.b="ISQyXlna"
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=redhat.com;
+	s=mimecast20190719; t=1718115936;
+	h=from:from:reply-to:subject:subject:date:date:message-id:message-id:
+	 to:to:cc:mime-version:mime-version:content-type:content-type:
+	 content-transfer-encoding:content-transfer-encoding;
+	bh=2bG58HwpHQ4Ak8Vj3KVLyyQmU8M0+m439sOJoHjYJjU=;
+	b=ISQyXlna4eIv7CgEfM/43cEnqu1vRTKkxOJDEkg/bqP+YfBm/eaHasFzg8OU3m5cAyHx0t
+	EzZRFjj3Uu2Nz4ooLBQofrtqg6ItokNIN5tPyQvZfg4flhkVRxs/UDhnJhHPXME7SaSkcW
+	yEVLVsaS/HzxhWdjIgozKKhEAuYQ904=
+Received: from mail-wr1-f70.google.com (mail-wr1-f70.google.com
+ [209.85.221.70]) by relay.mimecast.com with ESMTP with STARTTLS
+ (version=TLSv1.3, cipher=TLS_AES_256_GCM_SHA384) id
+ us-mta-172-yrprKAJmPuuGzYc7sT-f-w-1; Tue, 11 Jun 2024 10:25:34 -0400
+X-MC-Unique: yrprKAJmPuuGzYc7sT-f-w-1
+Received: by mail-wr1-f70.google.com with SMTP id ffacd0b85a97d-357766bb14fso3729502f8f.2
+        for <printing-architecture@lists.linux.dev>; Tue, 11 Jun 2024 07:25:34 -0700 (PDT)
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
-        d=1e100.net; s=20230601; t=1717325176; x=1717929976;
-        h=content-transfer-encoding:content-language:to:subject:from
+        d=1e100.net; s=20230601; t=1718115933; x=1718720733;
+        h=content-transfer-encoding:subject:from:to:content-language
          :user-agent:mime-version:date:message-id:x-gm-message-state:from:to
          :cc:subject:date:message-id:reply-to;
-        bh=VOyk/h08YFqMoojNeaUTByKIgx1L1o0IShB1a0fWCpw=;
-        b=hrcxBGyoacdRgyrweyPXrBLBWnHLNkUlsctJr58DvChQipNXGpzirCSPrKvR4UBYKw
-         XYRSKwvtDw5Wk0O20kAst1fBwbn0vzQN+Ji57Zv+HftMgGeTRyU61YSLufv+sqxNfgNj
-         k31sUwrp4OWV+OXkbhqQDlHU7AC3D+Z63OvLl3gIIAbCs2lMlYGUYWrj+/ONXi5SpSm8
-         RWPL5TJ0uCwWmw/1d51VG++Pc4CM+D9VaMeUUk1BhEOFyraDKt+nVw6bIwTVkT27sxu9
-         NmYCs6oSsPWpF/zsKum1MwyJpA1S1hRak/sxAPddQoKaibcqU04oX2PSYKSOFzq0a/FJ
-         zqKQ==
-X-Forwarded-Encrypted: i=1; AJvYcCWcqU+dNA/Q59bI8di/Y3SnliUe7qrJ04XwU+DPlQwNkBxdCZ3a/8Ol/55pMBERImQZd6u2j3pl09xmvYNx7Nj2Gzy3Q2dOKr9Tk5f4+ysWgkT3TjL5G782TGJVpubPs+A=
-X-Gm-Message-State: AOJu0YxEoo8FnBbkwMWdl8LJ0mNnaggZp02nbrtsvSuWiCkNaXWSZIu2
-	wBg6bXp/FtbRvVx+5a2pMG/qi0OLkbe/METg4DzNbfTEjm2HVWAItOEYrg==
-X-Google-Smtp-Source: AGHT+IGTV+gU2+DDzvA39CU9gPt4GiIwqp9HzWnwj0yi5SLuYQeBygrqZL3onKCNKO5SLQYRtJXKOg==
-X-Received: by 2002:a50:d794:0:b0:578:676e:324 with SMTP id 4fb4d7f45d1cf-57a36393dc7mr3674230a12.17.1717325175463;
-        Sun, 02 Jun 2024 03:46:15 -0700 (PDT)
-Received: from [192.168.68.107] (192-164-134-179.hdsl.highway.telekom.at. [192.164.134.179])
-        by smtp.gmail.com with ESMTPSA id 4fb4d7f45d1cf-57a31c6d40dsm3556059a12.75.2024.06.02.03.46.14
+        bh=2bG58HwpHQ4Ak8Vj3KVLyyQmU8M0+m439sOJoHjYJjU=;
+        b=RC7WLRbwIzWTSqntUaAUM4WYcORh1zdUXkpV05RY/yleLa3NNlfGhKMIegSt3kS38P
+         f+o4kMqjEmTCcFu+HnH6eYrgUykxz1LM3tzqsLugLOU3YcILPFjNLk1jsbF0ByqZjSX2
+         2LPAcvsuqHSbwwkIlpB8yxtUiSZ4jLXAxoGBLbNfg20mnhcQ2mcPhWEW/LRlM1wrgI0F
+         clNAtDyfc1tTaqso62fIuVa03ZhAOFnCa5LFnWRulRGIvd4cJEIblG17o5IO9+jOXxpD
+         pCPDLN0gCoooNlUGWY7zBHqqdjgox5RuWkOaf+z8mZqVADstETDmsm0iG4TkxKY6/y8F
+         N29w==
+X-Gm-Message-State: AOJu0YxrjdYr6HoKoL2BCcQlZo1gV1YmHDzQ+eCK3WZkx4R9A6J/Yu54
+	UtQYSs/4jo3oA2TMoTCeFZRkTKztyPBKspf8+MB+2mwHUsZqnH2WItp5WSgWGwe5+7XmowV0AOQ
+	1a9QAOBu+j3nTOcWBMeVpuQA/gLV8oLmX/0vkP81LJ4wck6zGI0NybCIPxFDR4cf4OZh/n1A3LG
+	iOyxZYRHLGFhynzpAeXkcWhHWKBpacE0qlrY1AaZqOZbroMWaxcklBZ9v2
+X-Received: by 2002:adf:e507:0:b0:35f:1b02:6467 with SMTP id ffacd0b85a97d-35f1b02650fmr5870890f8f.71.1718115933033;
+        Tue, 11 Jun 2024 07:25:33 -0700 (PDT)
+X-Google-Smtp-Source: AGHT+IFufFCioMhhR8wO9KNllUi9epEBLcG/9Qs54cgjGUbq8lAqwMLqULBWtCZvtzWAOFwadHHTMQ==
+X-Received: by 2002:adf:e507:0:b0:35f:1b02:6467 with SMTP id ffacd0b85a97d-35f1b02650fmr5870873f8f.71.1718115932582;
+        Tue, 11 Jun 2024 07:25:32 -0700 (PDT)
+Received: from [10.43.3.238] (nat-pool-brq-t.redhat.com. [213.175.37.10])
+        by smtp.gmail.com with ESMTPSA id ffacd0b85a97d-35f1d3d7b11sm7766989f8f.28.2024.06.11.07.25.32
+        for <printing-architecture@lists.linux.dev>
         (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
-        Sun, 02 Jun 2024 03:46:14 -0700 (PDT)
-Message-ID: <6340faa8-f8b7-4cf0-a313-cdc8ddb0362d@gmail.com>
-Date: Sun, 2 Jun 2024 12:46:13 +0200
+        Tue, 11 Jun 2024 07:25:32 -0700 (PDT)
+Message-ID: <fcea1b59-ba26-4ebb-9c9c-ab5e5ab75bca@redhat.com>
+Date: Tue, 11 Jun 2024 16:25:31 +0200
 Precedence: bulk
 X-Mailing-List: printing-architecture@lists.linux.dev
 List-Id: <printing-architecture.lists.linux.dev>
@@ -78,21 +66,27 @@ List-Subscribe: <mailto:printing-architecture+subscribe@lists.linux.dev>
 List-Unsubscribe: <mailto:printing-architecture+unsubscribe@lists.linux.dev>
 MIME-Version: 1.0
 User-Agent: Mozilla Thunderbird
-From: Till Kamppeter <till.kamppeter@gmail.com>
-Subject: OpenPrinting News
-To: Ira McDonald <blueroofmusic@gmail.com>, Aveek Basu
- <basu.aveek@gmail.com>,
- Open Printing <printing-architecture@lists.linux-foundation.org>
+To: OpenPrinting <printing-architecture@lists.linux.dev>
+From: Zdenek Dohnal <zdohnal@redhat.com>
+Subject: CUPS 2.4.9 is released!
+X-Mimecast-Spam-Score: 0
+X-Mimecast-Originator: redhat.com
 Content-Language: en-US
 Content-Type: text/plain; charset=UTF-8; format=flowed
 Content-Transfer-Encoding: 7bit
 
-Hi,
+Hi all!
 
-I have posted the newest development of the last month on our website now.
+CUPS 2.4.9 brings security fix for CVE-2024-35235 and several bug fixes 
+regarding CUPS Web User Interface, PPD generation and HTTP protocol 
+implementation.
 
-Here we go:
+Detailed list of changes is available in CHANGES.md.
 
-https://openprinting.github.io/OpenPrinting-News-May-2024/
+Enjoy!
 
-    Till
+-- 
+Zdenek Dohnal
+Senior Software Engineer
+Red Hat, BRQ-TPBC
+
