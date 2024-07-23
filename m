@@ -1,76 +1,77 @@
-Received: from smtp3.osuosl.org (smtp3.osuosl.org [140.211.166.136])
+Received: from smtp2.osuosl.org (smtp2.osuosl.org [140.211.166.133])
 	(using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
 	(No client certificate requested)
-	by smtp.subspace.kernel.org (Postfix) with ESMTPS id B6509208A7
-	for <printing-architecture@lists.linux-foundation.org>; Fri,  5 Jul 2024 20:55:45 +0000 (UTC)
-Authentication-Results: smtp.subspace.kernel.org; arc=none smtp.client-ip=140.211.166.136
+	by smtp.subspace.kernel.org (Postfix) with ESMTPS id F147413D628
+	for <printing-architecture@lists.linux-foundation.org>; Tue, 23 Jul 2024 19:41:51 +0000 (UTC)
+Authentication-Results: smtp.subspace.kernel.org; arc=none smtp.client-ip=140.211.166.133
 ARC-Seal:i=1; a=rsa-sha256; d=subspace.kernel.org; s=arc-20240116;
-	t=1720212946; cv=none; b=HY0zCvLx7sFq53uIBqAxGDsGH+muqoXfhWUW3OtDakoM99eBflvkrxsBKqGPhdstP0lJAPlTNyyYjeMwMSx/OkpHqZuRmYHcY8nxuB14Rhzz7GKtTWTNjsfNsaNCZ53CsvvzOlGyhYbfATqV38X0Np5qeDfRnJkXfZhBQBBun5g=
+	t=1721763714; cv=none; b=ro+p9cK1H2s2JbX7LNg7MsR9C49FC2CKltu22kMpDsg1Wac/IKEWowptCAMPBKMhU6rWYUhNL1WdVSJHejde9FWmrFPY5hp8OJIOovkmVkQrN/SSPPbrVSf+wOK01VDxb1OiFLwSLyVaYeXgCyEPD/Hn9zNiTODsY+7TYPWG3es=
 ARC-Message-Signature:i=1; a=rsa-sha256; d=subspace.kernel.org;
-	s=arc-20240116; t=1720212946; c=relaxed/simple;
-	bh=3fum1mkJqux2aCTqMDUamiMMeWWszs4Bs8VkKaV5TUg=;
-	h=Message-ID:Date:MIME-Version:From:Subject:To:Content-Type; b=srhwGgxCX4s+2SwWp1UhDZFh5Zay+g0UYp6zlr1rHQAnLFcEr0je1QVyRsaIJg/QMZ1LFPzE2aUsLcxUyo2jIxYchdfhQsxZ2wnOv6zUV7+Z+YN+u8eJc2zV7qQfNqjJ5REFFQNvk1NYGYuShxYrzajSFZouE0SloMzXqhmxa60=
-ARC-Authentication-Results:i=1; smtp.subspace.kernel.org; dkim=pass (2048-bit key) header.d=gmail.com header.i=@gmail.com header.b=XAwhJPbZ; arc=none smtp.client-ip=140.211.166.136
+	s=arc-20240116; t=1721763714; c=relaxed/simple;
+	bh=WqXeQaAxKChwS8xMp+SId/asBqqynBGQfMxO1gULDLM=;
+	h=Message-ID:Date:MIME-Version:To:From:Subject:Content-Type; b=fjDDJMH6Z0utL6LGRYM9JpnfBsYbgpExHzQM3SQA/MkQmmJYvq/9/xua9R5INU09y/Tid5uUf0GjDsLHiRQ5J+bXWnye7o+NgRDE79h8eLVR9fUvoiKYhD0E/hiTaurYz7HJ1KO9VwA9qrVwQOKbuzAm0Vd8IT4igEAFnHmwW7U=
+ARC-Authentication-Results:i=1; smtp.subspace.kernel.org; dkim=pass (2048-bit key) header.d=apevzner.com header.i=@apevzner.com header.b=MK1rs5uo; arc=none smtp.client-ip=140.211.166.133
 Authentication-Results: smtp.subspace.kernel.org;
-	dkim=pass (2048-bit key) header.d=gmail.com header.i=@gmail.com header.b="XAwhJPbZ"
+	dkim=pass (2048-bit key) header.d=apevzner.com header.i=@apevzner.com header.b="MK1rs5uo"
 Received: from localhost (localhost [127.0.0.1])
-	by smtp3.osuosl.org (Postfix) with ESMTP id 4A4D160857
-	for <printing-architecture@lists.linux-foundation.org>; Fri,  5 Jul 2024 20:55:45 +0000 (UTC)
+	by smtp2.osuosl.org (Postfix) with ESMTP id 7986840465
+	for <printing-architecture@lists.linux-foundation.org>; Tue, 23 Jul 2024 19:41:51 +0000 (UTC)
 X-Virus-Scanned: amavis at osuosl.org
 X-Spam-Flag: NO
-X-Spam-Score: -2.099
+X-Spam-Score: -2.1
 X-Spam-Level:
-Received: from smtp3.osuosl.org ([127.0.0.1])
- by localhost (smtp3.osuosl.org [127.0.0.1]) (amavis, port 10024) with ESMTP
- id o1RowN46GIUA for <printing-architecture@lists.linux-foundation.org>;
- Fri,  5 Jul 2024 20:55:44 +0000 (UTC)
-Received-SPF: Pass (mailfrom) identity=mailfrom; client-ip=2a00:1450:4864:20::129; helo=mail-lf1-x129.google.com; envelope-from=till.kamppeter@gmail.com; receiver=<UNKNOWN> 
-DMARC-Filter: OpenDMARC Filter v1.4.2 smtp3.osuosl.org 158BE60784
-Authentication-Results: smtp3.osuosl.org; dmarc=pass (p=none dis=none) header.from=gmail.com
-DKIM-Filter: OpenDKIM Filter v2.11.0 smtp3.osuosl.org 158BE60784
-Authentication-Results: smtp3.osuosl.org;
-	dkim=pass (2048-bit key) header.d=gmail.com header.i=@gmail.com header.a=rsa-sha256 header.s=20230601 header.b=XAwhJPbZ
+Received: from smtp2.osuosl.org ([127.0.0.1])
+ by localhost (smtp2.osuosl.org [127.0.0.1]) (amavis, port 10024) with ESMTP
+ id 4svjSUrGyo7k for <printing-architecture@lists.linux-foundation.org>;
+ Tue, 23 Jul 2024 19:41:50 +0000 (UTC)
+Received-SPF: Pass (mailfrom) identity=mailfrom; client-ip=2a00:1450:4864:20::129; helo=mail-lf1-x129.google.com; envelope-from=pzz@apevzner.com; receiver=<UNKNOWN> 
+DMARC-Filter: OpenDMARC Filter v1.4.2 smtp2.osuosl.org 9E0BE4004A
+Authentication-Results: smtp2.osuosl.org; dmarc=none (p=none dis=none) header.from=apevzner.com
+DKIM-Filter: OpenDKIM Filter v2.11.0 smtp2.osuosl.org 9E0BE4004A
+Authentication-Results: smtp2.osuosl.org;
+	dkim=pass (2048-bit key, unprotected) header.d=apevzner.com header.i=@apevzner.com header.a=rsa-sha256 header.s=google header.b=MK1rs5uo
 Received: from mail-lf1-x129.google.com (mail-lf1-x129.google.com [IPv6:2a00:1450:4864:20::129])
-	by smtp3.osuosl.org (Postfix) with ESMTPS id 158BE60784
-	for <printing-architecture@lists.linux-foundation.org>; Fri,  5 Jul 2024 20:55:43 +0000 (UTC)
-Received: by mail-lf1-x129.google.com with SMTP id 2adb3069b0e04-52ea929ea56so848232e87.0
-        for <printing-architecture@lists.linux-foundation.org>; Fri, 05 Jul 2024 13:55:43 -0700 (PDT)
+	by smtp2.osuosl.org (Postfix) with ESMTPS id 9E0BE4004A
+	for <printing-architecture@lists.linux-foundation.org>; Tue, 23 Jul 2024 19:41:49 +0000 (UTC)
+Received: by mail-lf1-x129.google.com with SMTP id 2adb3069b0e04-52efd530a4eso4937834e87.0
+        for <printing-architecture@lists.linux-foundation.org>; Tue, 23 Jul 2024 12:41:49 -0700 (PDT)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
-        d=gmail.com; s=20230601; t=1720212941; x=1720817741; darn=lists.linux-foundation.org;
-        h=content-transfer-encoding:content-language:to:subject:from
+        d=apevzner.com; s=google; t=1721763707; x=1722368507; darn=lists.linux-foundation.org;
+        h=content-transfer-encoding:subject:from:content-language:to
          :user-agent:mime-version:date:message-id:from:to:cc:subject:date
          :message-id:reply-to;
-        bh=/S3mY2qIHQeiQgRz6o+dAuFxIi+ohmTscig2Imyy8JE=;
-        b=XAwhJPbZKS0vujsMeK3+kcSgL6j5ySiyPlNuHWKBasevllcQa54LhZvOEjV6oMrOIr
-         CEZ8qMeTh69aq0mPOuAjqZNbt0MliahwosF6QodcFukMjh/I30/1tGSXEN+rcWKdOrvi
-         UUhupemTE/k/IJvsyHRJr03Il8DuCt6f+k1CS3oSRZUwfO07tNHq4rasvppObJ8jsg9c
-         dBKLw4Xk7FOxHdQMogG5hPP0utGQ0p4+fy5tcLB9mNBwA7ojas0YFhrXbcUAxckYAK5Q
-         EEo08pARo4x8ZCIrcpGv3uJIVRScAt7/5dqCEJ5YxBmo19zY+RUl2h9Ix1av/e5rCEwX
-         wnWw==
+        bh=BhqGWqkyDNNc5oO+6qa/em3QyL4FswoTpAoc4+2tcpo=;
+        b=MK1rs5uoIldqEc/fqXDTAasBZD+yHvU7G5JIkXh/L4hJyYdQpcBcCKUTPlU1Dqlmmz
+         tdgqUkSHNtOFqO4co5YliJdAs1TXbMosRaAdlYHQm+tFduF51sn/c/EqIxwxWA6bQVrH
+         dZ9ViZupQtQC752gl5ZptgS0lh/JACJmNiw2JCEQhLIlBgVlkPDD3j9n3THKaR2Iyi5F
+         K3B2662MYylJdDmrDAOTGRR9KkgxWJVCGiVUqceDkmGlZCqcMrix7a7g/7jUDLIIZXRw
+         FyKuUl9IeoQPy+ra4xoc1jsKD1DxiYZnYula54umkrq+RZLPlKTXIpa5V6s9URntJKYD
+         EHIA==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
-        d=1e100.net; s=20230601; t=1720212941; x=1720817741;
-        h=content-transfer-encoding:content-language:to:subject:from
+        d=1e100.net; s=20230601; t=1721763707; x=1722368507;
+        h=content-transfer-encoding:subject:from:content-language:to
          :user-agent:mime-version:date:message-id:x-gm-message-state:from:to
          :cc:subject:date:message-id:reply-to;
-        bh=/S3mY2qIHQeiQgRz6o+dAuFxIi+ohmTscig2Imyy8JE=;
-        b=KPz2p18gJkTykG6OrDj/KnjkuHnHagOKYPWfz0kRs5FP5/LpVX8PNE9wxj2cbELEXW
-         MCisLg9tGHcwo7QFJwFFCFCUkEMaV4MBsdh3sYSr7PVMVtH6Qn17nWHgD7gcewWSsI9J
-         ufBhPH2ttBe3ODYGtGqXEdXT54N7zpB2zm11JCujoCdrg+wwEqaZl4C/Q4iahE3IQ/TK
-         r+bpZIUGCo82rzrf+rVqJEGyocm4Wa8pdwWqLcaWh5Gb6EV9IQv0048nH3ZuCk/AdqMt
-         AqRLg9gLiyokDgDpCj9Eg/OenvBjgbtH32g6uzZF3ow/bFsWRqToGez7cOMi9MX/fTq6
-         0PPg==
-X-Forwarded-Encrypted: i=1; AJvYcCXecfuM89UDCVlGRLmzBBfSIDfa8f8YL6dqWwgz8ogP+gpNZ5ZcM04zs4vhjurTRzpcnR5v4/WLOYHFNzbg0VW6O9PS/OPkGy8q0/jZWL7ODdnmflWrOBiIBKES37WDvbs=
-X-Gm-Message-State: AOJu0Yx5oNWoAhgoDuWYV0Ha62W/K771SUDwdjWszRTvu3nTIwTG3OcH
-	hDcBxovyQtUYtlF80WnzGZWkYpz1GtLFfgC0UG7QurJRkapK9WAi
-X-Google-Smtp-Source: AGHT+IF2vwVRlUEDBSBeuflhkTQ+YwQ2NismMUqaKfYjAzyBaHO80WiMuVfRMutSwRkCdEItCFNZQw==
-X-Received: by 2002:a05:6512:3aa:b0:52c:e119:7f1 with SMTP id 2adb3069b0e04-52ea06a6be8mr4626204e87.51.1720212940945;
-        Fri, 05 Jul 2024 13:55:40 -0700 (PDT)
-Received: from [192.168.68.107] (194-118-229-123.hdsl.highway.telekom.at. [194.118.229.123])
-        by smtp.gmail.com with ESMTPSA id a640c23a62f3a-a77db963ee4sm45425866b.154.2024.07.05.13.55.37
+        bh=BhqGWqkyDNNc5oO+6qa/em3QyL4FswoTpAoc4+2tcpo=;
+        b=oERMM3tASxqzOv+ox42aetDW6ORKYrDQXuAiv84A83b/+yzYdbBJQnutSQ2P1O1hIf
+         Gxo4OE7+mDkdCBm0dHFQwhR0j+gsoSjY5Rim6NUavGGISkkN8NJmPzm23LrvUXxskSr0
+         prp/e5bcspyMujyXlYS4LlQtZZfY01WCrJv8Ci9WIjFEfQH+VVBAynRLI1X+3yXmotDN
+         v1U6Gfs9SxIWE2aBpptVmJMlOd5kLND1eIhPZXbRpDj900dQexRrM2MR1k+FpOEV3SwY
+         zbHIqlTUI1SlR4/kCTTrLBjQjWRIbl9LEtHWfiCARO1/PnmZ7A/1gsuaPAOmceZvgL2e
+         FHiw==
+X-Gm-Message-State: AOJu0Yxfw58jOadtRG/4/3geY9RkKnpoZe2WFOX4oS48quOoUScxTpvy
+	EzRC9j1WV+PYlBxhiciQ+CkY2x8LeJBkBqBqF2mudXwnqcDgwanbef/ajnnVxIRH51m6mLqXZ5T
+	K
+X-Google-Smtp-Source: AGHT+IFIWPd6FPwGynIoWL5yP8lRumK6PvqWpbNj+gUMql2EGozxJWWSZcza0G3/HKABKs3bWQrioA==
+X-Received: by 2002:a05:6512:ba1:b0:52e:f95c:8b with SMTP id 2adb3069b0e04-52fc4046329mr3173296e87.16.1721763706568;
+        Tue, 23 Jul 2024 12:41:46 -0700 (PDT)
+Received: from [192.168.0.6] (ppp85-141-192-151.pppoe.mtu-net.ru. [85.141.192.151])
+        by smtp.googlemail.com with ESMTPSA id 2adb3069b0e04-52f041e0bd6sm840139e87.198.2024.07.23.12.41.45
+        for <printing-architecture@lists.linux-foundation.org>
         (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
-        Fri, 05 Jul 2024 13:55:38 -0700 (PDT)
-Message-ID: <514395d7-a51b-45e5-9d49-f6797c63aa37@gmail.com>
-Date: Fri, 5 Jul 2024 22:55:37 +0200
+        Tue, 23 Jul 2024 12:41:46 -0700 (PDT)
+Message-ID: <b6902ee7-e159-43a3-92eb-0dd7b7956587@apevzner.com>
+Date: Tue, 23 Jul 2024 22:41:45 +0300
 Precedence: bulk
 X-Mailing-List: printing-architecture@lists.linux.dev
 List-Id: <printing-architecture.lists.linux.dev>
@@ -78,21 +79,62 @@ List-Subscribe: <mailto:printing-architecture+subscribe@lists.linux.dev>
 List-Unsubscribe: <mailto:printing-architecture+unsubscribe@lists.linux.dev>
 MIME-Version: 1.0
 User-Agent: Mozilla Thunderbird
-From: Till Kamppeter <till.kamppeter@gmail.com>
-Subject: OpenPrinting News
-To: Ira McDonald <blueroofmusic@gmail.com>, Aveek Basu
- <basu.aveek@gmail.com>,
- Open Printing <printing-architecture@lists.linux-foundation.org>
+To: Open Printing <printing-architecture@lists.linux-foundation.org>
 Content-Language: en-US
+From: Alexander Pevzner <pzz@apevzner.com>
+Subject: ipp-usb 0.9.27 announce
 Content-Type: text/plain; charset=UTF-8; format=flowed
 Content-Transfer-Encoding: 7bit
 
-Hi,
+Hi everybody,
 
-I have posted the newest development of the last month on our website now.
+I am pleased to announce the release of ipp-usb 0.9.27.
 
-Here we go:
+A few hours before I've erroneously issued a  0.9.26 release. Please, 
+ignore it and sorry for inconvenience.
 
-https://openprinting.github.io/OpenPrinting-News-June-2024/
+This new release brings some bug fixes and improvements.
 
-    Till
+1. Previously, after introduction of [uid auth], ipp-usb attempted to 
+obtain localhost client UID even if it was not actually required. For 
+example, in the default, permissive configuration. If client UID could 
+not be obtained, it could cause connection attempt to be rejected.
+
+As result, ipp-usb didn't work in snap, because snap configuration 
+effectively prohibits ability to obtain client UID (this problem was 
+noticed and reported by Till).
+
+Now, ipp-usb obtains client UID only if it is really required by 
+configuration.
+
+2. Fixed [uid auth] behavior on systems with IPv6 disabled in the kernel 
+configuration and only IPv4 is enabled.
+
+3. Fixed allocation of TCP ports for devices. ipp-usb attempts to 
+persist port allocation, so once allocated, port is "bound" to device, 
+and if device disconnected and then connected again, it will receive the 
+same port. Strictly speaking, it is not required neither for printing 
+nor for scanning, but this level of reproducibility should be convenient 
+for users.
+
+Due to mistake, at the moment of port allocation for newly connected 
+device only allocations of currently connected devices were taken into 
+consideration. So port allocated for some device could be reused by 
+newly connected device, if old device was not connected when new device 
+arrives.
+
+This is fixed in this release.
+
+4. External dependency, github.com/OpenPrinting/goipp, now "vendored" 
+which means that copy of its sources included into the ipp-usb source 
+tree. This is a standard Go practice, and consistency of "vendored" 
+libraries is strictly controlled by Go toolchain.
+
+As result, there is no need to package the github.com/OpenPrinting/goipp 
+in order to build ipp-usb; The ipp-usb package currently has no external 
+dependencies at the moment of building. It should simplify packaging 
+process.
+
+-- 
+
+	Wishes, Alexander Pevzner (pzz@apevzner.com)
