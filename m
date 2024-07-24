@@ -1,167 +1,206 @@
-Received: from smtp3.osuosl.org (smtp3.osuosl.org [140.211.166.136])
+Received: from smtp4.osuosl.org (smtp4.osuosl.org [140.211.166.137])
 	(using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
 	(No client certificate requested)
-	by smtp.subspace.kernel.org (Postfix) with ESMTPS id 6863E1581F8
-	for <printing-architecture@lists.linux-foundation.org>; Wed, 24 Jul 2024 13:59:40 +0000 (UTC)
-Authentication-Results: smtp.subspace.kernel.org; arc=none smtp.client-ip=140.211.166.136
+	by smtp.subspace.kernel.org (Postfix) with ESMTPS id 58336134DE
+	for <printing-architecture@lists.linux-foundation.org>; Wed, 24 Jul 2024 14:22:38 +0000 (UTC)
+Authentication-Results: smtp.subspace.kernel.org; arc=none smtp.client-ip=140.211.166.137
 ARC-Seal:i=1; a=rsa-sha256; d=subspace.kernel.org; s=arc-20240116;
-	t=1721829583; cv=none; b=nR8KL0/kHvE1wJr9w3djHQF+BNAHNmIH72TpU8r7lEIYUY3CdNbjZ6TnqvNG/K9QqGiG3dAEZASSRPKjvMmOF+4EsXa7Pz7IRJB4xIdQsL3xsLvd5QhYV+hPrVT7Ay59O1+42bH3oppErlYn6300Mpa9k0k540e3moxhDip8B+g=
+	t=1721830959; cv=none; b=cgS8WjKxgdol1LRC1yUd7PiqsLWILxlRMr3gIoCuYc8+B8b7y1cx4J3vP8QGP2pXU/l0zlhwhuVJD6tYWYNLAVjr6v0sKiITethclnSTNl9tGIsyYnyUpIUOZQkcbDrVya3DwQZbst6wk3bxoBDIJ/YEqK4TVo5ehdtAIBPnIhE=
 ARC-Message-Signature:i=1; a=rsa-sha256; d=subspace.kernel.org;
-	s=arc-20240116; t=1721829583; c=relaxed/simple;
-	bh=K7NiudV47Fgrkzm7B4DDY/c0qkXhLIu9SIEd67nCb74=;
-	h=Message-ID:Date:MIME-Version:Subject:To:References:From:
-	 In-Reply-To:Content-Type; b=q3xyOEsvQVwLHzJv9/PlN98CYMPHO1VAY3iiO79zeI2E1/QhomkLzSFrT+h63J//XPZYp0RI2W0QWFzIzC2lDaDyivYvbyct9HT09BG7kBnKGYgafD44iokwrvofptNQejQ76Wl3EM7jwjCKE9I6CZ68Z9t9t1UL1+JbZt5StP0=
-ARC-Authentication-Results:i=1; smtp.subspace.kernel.org; dkim=pass (2048-bit key) header.d=apevzner.com header.i=@apevzner.com header.b=i+RCZTK+; arc=none smtp.client-ip=140.211.166.136
+	s=arc-20240116; t=1721830959; c=relaxed/simple;
+	bh=kfbd55nt2fl9M4DpG2FJzwyA02OXyASmBJ5RRJkksC4=;
+	h=MIME-Version:Date:From:To:Cc:Subject:In-Reply-To:References:
+	 Message-ID:Content-Type; b=o5/eL/YT8t5lE1/YCkDcHi/ovg5/apq/GdN2kVin+IiWxlAuupsZs7aVZD9ES3aSJltUJ+OfFyR84p4+icN0YJFvWNCWi0kb8WGkj+sh88/XVjQLjRW1FHy69av7VlYLqUiPCFC+b0sCeSk2awM6OG5PrymPNp+7jusp61cJqkM=
+ARC-Authentication-Results:i=1; smtp.subspace.kernel.org; dkim=pass (1024-bit key) header.d=suse.de header.i=@suse.de header.b=M8TtzCX3; dkim=permerror (0-bit key) header.d=suse.de header.i=@suse.de header.b=YjPIGtmg; dkim=pass (1024-bit key) header.d=suse.de header.i=@suse.de header.b=MSEkZpmD; dkim=permerror (0-bit key) header.d=suse.de header.i=@suse.de header.b=0UHmNGXy; arc=none smtp.client-ip=140.211.166.137
 Authentication-Results: smtp.subspace.kernel.org;
-	dkim=pass (2048-bit key) header.d=apevzner.com header.i=@apevzner.com header.b="i+RCZTK+"
+	dkim=pass (1024-bit key) header.d=suse.de header.i=@suse.de header.b="M8TtzCX3";
+	dkim=permerror (0-bit key) header.d=suse.de header.i=@suse.de header.b="YjPIGtmg";
+	dkim=pass (1024-bit key) header.d=suse.de header.i=@suse.de header.b="MSEkZpmD";
+	dkim=permerror (0-bit key) header.d=suse.de header.i=@suse.de header.b="0UHmNGXy"
 Received: from localhost (localhost [127.0.0.1])
-	by smtp3.osuosl.org (Postfix) with ESMTP id A5A536086B
-	for <printing-architecture@lists.linux-foundation.org>; Wed, 24 Jul 2024 13:59:40 +0000 (UTC)
+	by smtp4.osuosl.org (Postfix) with ESMTP id 02F7C40676
+	for <printing-architecture@lists.linux-foundation.org>; Wed, 24 Jul 2024 14:22:38 +0000 (UTC)
 X-Virus-Scanned: amavis at osuosl.org
 X-Spam-Flag: NO
-X-Spam-Score: -2.1
+X-Spam-Score: -4.4
 X-Spam-Level:
-Received: from smtp3.osuosl.org ([127.0.0.1])
- by localhost (smtp3.osuosl.org [127.0.0.1]) (amavis, port 10024) with ESMTP
- id Xac8r_4TJvVD for <printing-architecture@lists.linux-foundation.org>;
- Wed, 24 Jul 2024 13:59:40 +0000 (UTC)
-Received-SPF: Pass (mailfrom) identity=mailfrom; client-ip=2a00:1450:4864:20::232; helo=mail-lj1-x232.google.com; envelope-from=pzz@apevzner.com; receiver=<UNKNOWN> 
-DMARC-Filter: OpenDMARC Filter v1.4.2 smtp3.osuosl.org 2C0E96077F
-Authentication-Results: smtp3.osuosl.org; dmarc=none (p=none dis=none) header.from=apevzner.com
-DKIM-Filter: OpenDKIM Filter v2.11.0 smtp3.osuosl.org 2C0E96077F
-Authentication-Results: smtp3.osuosl.org;
-	dkim=pass (2048-bit key, unprotected) header.d=apevzner.com header.i=@apevzner.com header.a=rsa-sha256 header.s=google header.b=i+RCZTK+
-Received: from mail-lj1-x232.google.com (mail-lj1-x232.google.com [IPv6:2a00:1450:4864:20::232])
-	by smtp3.osuosl.org (Postfix) with ESMTPS id 2C0E96077F
-	for <printing-architecture@lists.linux-foundation.org>; Wed, 24 Jul 2024 13:59:39 +0000 (UTC)
-Received: by mail-lj1-x232.google.com with SMTP id 38308e7fff4ca-2f01e9f53e3so38247801fa.1
-        for <printing-architecture@lists.linux-foundation.org>; Wed, 24 Jul 2024 06:59:38 -0700 (PDT)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
-        d=apevzner.com; s=google; t=1721829577; x=1722434377; darn=lists.linux-foundation.org;
-        h=content-transfer-encoding:in-reply-to:from:content-language
-         :references:to:subject:user-agent:mime-version:date:message-id:from
-         :to:cc:subject:date:message-id:reply-to;
-        bh=MuwdayKjlZGoTNBxNC7Ajf/Ts/UA6OaiFyRFqAhUbz0=;
-        b=i+RCZTK+nA4VCFGUb6vno0CVsYJLoRYLt2EzJDU+Imw3ZjxHY32St6D0aOzUMUQtQI
-         G2FflwfJDnKvObiWxes1rsooAMW3fqE7o/DOuhc6BKK+FnMpXc9744CqihhmbiUEvTil
-         tXBaDrqUrPz4fAVCOw+PymU1DUUhDqEXNDWdSRebHDSzZ+Iz+Kp84bUXtEW3EYxoW+tb
-         iVQWl+3EXv2Eu94WpQQzMFr+m/onk0o8aBwU9N63nGMqkmm0fbWc69FnkAUU76/T3soH
-         HyvP1iErhSIIy8GA0dUcIF0p6xUKkW9MJyoBn5X2XhWn+uz8UAEkf1iHy9uzPJDxsAlF
-         XnfA==
-X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
-        d=1e100.net; s=20230601; t=1721829577; x=1722434377;
-        h=content-transfer-encoding:in-reply-to:from:content-language
-         :references:to:subject:user-agent:mime-version:date:message-id
-         :x-gm-message-state:from:to:cc:subject:date:message-id:reply-to;
-        bh=MuwdayKjlZGoTNBxNC7Ajf/Ts/UA6OaiFyRFqAhUbz0=;
-        b=DN2PTX98RQ9P0VibisKeGuamQMODMAK9Dyd4ijahXiFWqCvz581TA1ID0EQiXvxLP9
-         AWwPhK2DNOmhKWgdZmh7JKswzf6kymCJTdHMpeFa5GUpyD3Qy9iQpsKIGW1z5Wuzirh9
-         lpwADkf28wyxN++QR3d1ZiXWuyAMKaYYASod3lEEYvJuv5s2LpPMAxhGeZUBK+PlGELi
-         DL/zZ/Fn8my2yMasatLfYAUNo0Xh/PhILqiWwIMYHIfNDZk/K/J3a1XXhb/IW68O63vu
-         NoLfcBkpw9dIiNcQeceYAJ12MjrQQ2lp2k4m8fdWLlE5qJSLnb8bmi9wqzgowS2lyNVw
-         GoCg==
-X-Forwarded-Encrypted: i=1; AJvYcCX7VwA+who9Ga+3/JjNJpAiefndgWXrk3u1qRe3QuaB3LKcAuXCgz2hklyUJ8I/JeHzqnVF2k5dmuyZbInD3r6iUWuKSFdc6Plzfu2jXqqFsJt7Bo4ltwrz2OhJEO5WS3k=
-X-Gm-Message-State: AOJu0Yx/3V2fJnmC+KipmxEoe4To+mHPjeednw0B/M6eRLdblFK1A7hJ
-	9+y14D+oC6Wa3DMf7QmXw1HfYuTP0C/BOpWlbIrq0bjAtCE8yeP4pzuEekVE27gEyg0FIt6HkhQ
-	B
-X-Google-Smtp-Source: AGHT+IHj3gaV2MuLPbMFWjwxOeppl4jfnbknesQthcX0NI8IPfcnuP5enyklymVApzXHsMK289pFzA==
-X-Received: by 2002:a05:6512:1104:b0:52c:c9e4:3291 with SMTP id 2adb3069b0e04-52fcdab33e8mr2383209e87.60.1721829576463;
-        Wed, 24 Jul 2024 06:59:36 -0700 (PDT)
-Received: from [192.168.0.6] (ppp85-141-192-151.pppoe.mtu-net.ru. [85.141.192.151])
-        by smtp.googlemail.com with ESMTPSA id 2adb3069b0e04-52f04aac368sm1038946e87.283.2024.07.24.06.59.35
-        (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
-        Wed, 24 Jul 2024 06:59:35 -0700 (PDT)
-Message-ID: <b2bc0cd2-1996-448d-a93d-2964f9caf4b4@apevzner.com>
-Date: Wed, 24 Jul 2024 16:59:34 +0300
+Received: from smtp4.osuosl.org ([127.0.0.1])
+ by localhost (smtp4.osuosl.org [127.0.0.1]) (amavis, port 10024) with ESMTP
+ id uw_S6aqh0Hmj for <printing-architecture@lists.linux-foundation.org>;
+ Wed, 24 Jul 2024 14:22:36 +0000 (UTC)
+X-Greylist: delayed 477 seconds by postgrey-1.37 at util1.osuosl.org; Wed, 24 Jul 2024 14:22:36 UTC
+DMARC-Filter: OpenDMARC Filter v1.4.2 smtp4.osuosl.org 50A0C4029D
+Authentication-Results: smtp4.osuosl.org; dmarc=pass (p=none dis=none) header.from=suse.de
+DKIM-Filter: OpenDKIM Filter v2.11.0 smtp4.osuosl.org 50A0C4029D
+Authentication-Results: smtp4.osuosl.org;
+	dkim=pass (1024-bit key, unprotected) header.d=suse.de header.i=@suse.de header.a=rsa-sha256 header.s=susede2_rsa header.b=M8TtzCX3;
+	dkim=pass header.d=suse.de header.i=@suse.de header.a=ed25519-sha256 header.s=susede2_ed25519 header.b=YjPIGtmg;
+	dkim=pass (1024-bit key) header.d=suse.de header.i=@suse.de header.a=rsa-sha256 header.s=susede2_rsa header.b=MSEkZpmD;
+	dkim=neutral header.d=suse.de header.i=@suse.de header.a=ed25519-sha256 header.s=susede2_ed25519 header.b=0UHmNGXy
+Received-SPF: Pass (mailfrom) identity=mailfrom; client-ip=195.135.223.130; helo=smtp-out1.suse.de; envelope-from=jsmeix@suse.de; receiver=<UNKNOWN> 
+Received: from smtp-out1.suse.de (smtp-out1.suse.de [195.135.223.130])
+	by smtp4.osuosl.org (Postfix) with ESMTPS id 50A0C4029D
+	for <printing-architecture@lists.linux-foundation.org>; Wed, 24 Jul 2024 14:22:36 +0000 (UTC)
+Received: from imap1.dmz-prg2.suse.org (unknown [10.150.64.97])
+	(using TLSv1.3 with cipher TLS_AES_256_GCM_SHA384 (256/256 bits)
+	 key-exchange X25519 server-signature RSA-PSS (4096 bits) server-digest SHA256)
+	(No client certificate requested)
+	by smtp-out1.suse.de (Postfix) with ESMTPS id 7594F21A28;
+	Wed, 24 Jul 2024 14:14:35 +0000 (UTC)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=suse.de; s=susede2_rsa;
+	t=1721830476; h=from:from:reply-to:date:date:message-id:message-id:to:to:cc:cc:
+	 mime-version:mime-version:content-type:content-type:
+	 content-transfer-encoding:content-transfer-encoding:
+	 in-reply-to:in-reply-to:references:references;
+	bh=UR8IuTa5xJ1P2o46vN8w8u22qCsAit4B1fNTHkjx3mc=;
+	b=M8TtzCX31S/nCaTpHIOFL7b5xpUs76sj5IFwDQCGHLufRpPUlERugTkvYqF/MvHD6NcUqR
+	pLl6n0QXDe59Q60EBT8ftUOIB/G8HsFOONEONFi26UyA5hX42+yG3DgejssJ/PAfCG/stI
+	NxEUjHT2Kp66d+yQdXAaNhYZWtUIliI=
+DKIM-Signature: v=1; a=ed25519-sha256; c=relaxed/relaxed; d=suse.de;
+	s=susede2_ed25519; t=1721830476;
+	h=from:from:reply-to:date:date:message-id:message-id:to:to:cc:cc:
+	 mime-version:mime-version:content-type:content-type:
+	 content-transfer-encoding:content-transfer-encoding:
+	 in-reply-to:in-reply-to:references:references;
+	bh=UR8IuTa5xJ1P2o46vN8w8u22qCsAit4B1fNTHkjx3mc=;
+	b=YjPIGtmgzu9Z2QRFRhAbeDh8uZdgRq5MZjopqXjG8ao6RkoP1iVERl6jb8B5Wjkemfb13V
+	S0t0GfYD+N+9RxAg==
+Authentication-Results: smtp-out1.suse.de;
+	none
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=suse.de; s=susede2_rsa;
+	t=1721830475; h=from:from:reply-to:date:date:message-id:message-id:to:to:cc:cc:
+	 mime-version:mime-version:content-type:content-type:
+	 content-transfer-encoding:content-transfer-encoding:
+	 in-reply-to:in-reply-to:references:references;
+	bh=UR8IuTa5xJ1P2o46vN8w8u22qCsAit4B1fNTHkjx3mc=;
+	b=MSEkZpmDlPmgD1kDSkOgnhZD8GQWpvlZWAilytJ4gghqWnX/tldk1MzcHGZ3GSHxSVuLVh
+	ds5v3IHm49rHnSpWjR8oW4mgql5Rl9q6gwG6SfUvpJYEPs5qhf/RADUo1AGttp2Yh1tI0i
+	+C+6uW62THKiACi9bCaKTzvbXIYuzCY=
+DKIM-Signature: v=1; a=ed25519-sha256; c=relaxed/relaxed; d=suse.de;
+	s=susede2_ed25519; t=1721830475;
+	h=from:from:reply-to:date:date:message-id:message-id:to:to:cc:cc:
+	 mime-version:mime-version:content-type:content-type:
+	 content-transfer-encoding:content-transfer-encoding:
+	 in-reply-to:in-reply-to:references:references;
+	bh=UR8IuTa5xJ1P2o46vN8w8u22qCsAit4B1fNTHkjx3mc=;
+	b=0UHmNGXyBGxkfY99S1Bg4U8Phl1EhAnet0a74ueV8zP/1szxoyT9Xes+JbS0dKaZ2Xjl/Z
+	zgGbcmAGNb2KPKDQ==
+Received: from imap1.dmz-prg2.suse.org (localhost [127.0.0.1])
+	(using TLSv1.3 with cipher TLS_AES_256_GCM_SHA384 (256/256 bits)
+	 key-exchange X25519 server-signature RSA-PSS (4096 bits) server-digest SHA256)
+	(No client certificate requested)
+	by imap1.dmz-prg2.suse.org (Postfix) with ESMTPS id 6C0F513411;
+	Wed, 24 Jul 2024 14:14:35 +0000 (UTC)
+Received: from dovecot-director2.suse.de ([2a07:de40:b281:106:10:150:64:167])
+	by imap1.dmz-prg2.suse.org with ESMTPSA
+	id N6cAGksMoWaUIgAAD6G6ig
+	(envelope-from <jsmeix@suse.de>); Wed, 24 Jul 2024 14:14:35 +0000
 Precedence: bulk
 X-Mailing-List: printing-architecture@lists.linux.dev
 List-Id: <printing-architecture.lists.linux.dev>
 List-Subscribe: <mailto:printing-architecture+subscribe@lists.linux.dev>
 List-Unsubscribe: <mailto:printing-architecture+unsubscribe@lists.linux.dev>
 MIME-Version: 1.0
-User-Agent: Mozilla Thunderbird
+Date: Wed, 24 Jul 2024 16:14:35 +0200
+From: Johannes Meixner <jsmeix@suse.de>
+To: Zdenek Dohnal <zdohnal@redhat.com>
+Cc: Alexander Pevzner <pzz@apevzner.com>, Open Printing
+ <printing-architecture@lists.linux-foundation.org>
 Subject: Re: ipp-usb 0.9.27 announce
-To: Zdenek Dohnal <zdohnal@redhat.com>,
- Open Printing <printing-architecture@lists.linux-foundation.org>
+In-Reply-To: <5fc6f6ec-5f22-4a69-adf1-6754058c222e@redhat.com>
 References: <b6902ee7-e159-43a3-92eb-0dd7b7956587@apevzner.com>
  <5fc6f6ec-5f22-4a69-adf1-6754058c222e@redhat.com>
-Content-Language: en-US
-From: Alexander Pevzner <pzz@apevzner.com>
-In-Reply-To: <5fc6f6ec-5f22-4a69-adf1-6754058c222e@redhat.com>
-Content-Type: text/plain; charset=UTF-8; format=flowed
-Content-Transfer-Encoding: 8bit
+User-Agent: Roundcube Webmail
+Message-ID: <efb5a88c49a51289f0f9f4f9de801591@suse.de>
+X-Sender: jsmeix@suse.de
+Content-Type: text/plain; charset=US-ASCII;
+ format=flowed
+Content-Transfer-Encoding: 7bit
+X-Spamd-Result: default: False [-4.09 / 50.00];
+	BAYES_HAM(-3.00)[100.00%];
+	NEURAL_HAM_LONG(-1.00)[-1.000];
+	MIME_GOOD(-0.10)[text/plain];
+	XM_UA_NO_VERSION(0.01)[];
+	MID_RHS_MATCH_FROM(0.00)[];
+	RCVD_VIA_SMTP_AUTH(0.00)[];
+	ARC_NA(0.00)[];
+	DKIM_SIGNED(0.00)[suse.de:s=susede2_rsa,suse.de:s=susede2_ed25519];
+	MIME_TRACE(0.00)[0:+];
+	FUZZY_BLOCKED(0.00)[rspamd.com];
+	RCVD_TLS_ALL(0.00)[];
+	TO_DN_ALL(0.00)[];
+	FROM_HAS_DN(0.00)[];
+	RCPT_COUNT_THREE(0.00)[3];
+	FROM_EQ_ENVFROM(0.00)[];
+	TO_MATCH_ENVRCPT_ALL(0.00)[];
+	RCVD_COUNT_TWO(0.00)[2];
+	DBL_BLOCKED_OPENRESOLVER(0.00)[opensuse.org:url,imap1.dmz-prg2.suse.org:helo]
 
-Hi Zdenek,
 
-you don't need to ignore. goipp can peacefully coexist with ipp-usb.
+Hello Zdenek
 
-Alex.
-
-On 7/24/24 4:37 PM, Zdenek Dohnal wrote:
-> Hi Alex,
-> 
+On 2024-07-24 15:37, Zdenek Dohnal wrote:
 > can I somehow ignore vendor dir of goipp at the moment?
-> 
-> goipp project is already in Fedora for several years, and now it is 
-> already cloned into the newest CentOS Stream, so making it disappear 
-> would be more work than it gains.
-> 
-> Thank you in advance!
-> 
-> Zdenek
-> 
-> On 7/23/24 21:41, Alexander Pevzner wrote:
->> Hi everybody,
->>
->> I am pleased to announce the release of ipp-usb 0.9.27.
->>
->> A few hours before I've erroneously issued a  0.9.26 release. Please, 
->> ignore it and sorry for inconvenience.
->>
->> This new release brings some bug fixes and improvements.
->>
->> 1. Previously, after introduction of [uid auth], ipp-usb attempted to 
->> obtain localhost client UID even if it was not actually required. For 
->> example, in the default, permissive configuration. If client UID could 
->> not be obtained, it could cause connection attempt to be rejected.
->>
->> As result, ipp-usb didn't work in snap, because snap configuration 
->> effectively prohibits ability to obtain client UID (this problem was 
->> noticed and reported by Till).
->>
->> Now, ipp-usb obtains client UID only if it is really required by 
->> configuration.
->>
->> 2. Fixed [uid auth] behavior on systems with IPv6 disabled in the 
->> kernel configuration and only IPv4 is enabled.
->>
->> 3. Fixed allocation of TCP ports for devices. ipp-usb attempts to 
->> persist port allocation, so once allocated, port is "bound" to device, 
->> and if device disconnected and then connected again, it will receive 
->> the same port. Strictly speaking, it is not required neither for 
->> printing nor for scanning, but this level of reproducibility should be 
->> convenient for users.
->>
->> Due to mistake, at the moment of port allocation for newly connected 
->> device only allocations of currently connected devices were taken into 
->> consideration. So port allocated for some device could be reused by 
->> newly connected device, if old device was not connected when new 
->> device arrives.
->>
->> This is fixed in this release.
->>
->> 4. External dependency, github.com/OpenPrinting/goipp, now "vendored" 
->> which means that copy of its sources included into the ipp-usb source 
->> tree. This is a standard Go practice, and consistency of "vendored" 
->> libraries is strictly controlled by Go toolchain.
->>
->> As result, there is no need to package the 
->> github.com/OpenPrinting/goipp in order to build ipp-usb; The ipp-usb 
->> package currently has no external dependencies at the moment of 
->> building. It should simplify packaging process.
->>
 
+I don't know how ipp-usb is made on Fedora / Red Hat
+so I may misunderstand things here.
+
+I guess you talk about some additional vendor.tar.zst
+source file?
+
+At openSUSE we have ipp-usb and goipp as separated
+source packages in the openSUSE Build Service (OBS)
+see
+https://build.opensuse.org/package/show/Printing/ipp-usb
+and
+https://build.opensuse.org/package/show/Printing/goipp
+
+Why separated source packages?
+
+See my
+https://build.opensuse.org/request/show/1157901#comment-1919874
+where I wrote (excerpt):
+-----------------------------------------------------------
+please describe via an explanatory comment in the spec file
+what the additional vendor.tar.zst source is,
+what its purpose is, and wherefrom it can be downloaded
+(exact upstream download URL) so that others at openSUSE
+can understand what that additional source is,
+why it is needed for the openSUSE package, and
+that we can verify that vendor.tar.zst in the openSUSE
+package is the unmodified source from its upstream URL.
+-----------------------------------------------------------
+and my subsequent
+https://build.opensuse.org/request/show/1157901#comment-1919883
+where I wrote (excerpt):
+-----------------------------------------------------------
+In this particular case (additional vendor.tar.zst source)
+the files in vendor/github.com/OpenPrinting/goipp
+neither match GitHub master code in
+https://github.com/OpenPrinting/goipp
+nor what on
+https://github.com/OpenPrinting/goipp/tags
+the tar.gz for v1.0.0 nor v1.1.0 result
+(in contrast to what vendor/modules.txt seems to tell)
+so currently the additional vendor.tar.zst source
+looks rather "suspicious" - at least to me.
+-----------------------------------------------------------
+
+I wrote that in Aplil 2024 with the XZ attack in my mind
+so additional sources that do not match what one gets
+from its "well known" upstream URLs are rather scary.
+
+I would recommend to
+Keep Separated Sources Strictly Separated ( KSSSS ;-)
+so that others can understand what "the sources" are
+and can retrace where "the sources" come from and
+can validate that "the sources" are unmodified
+upstream sources.
+
+
+Kind Regards
+Johannes Meixner
 -- 
-
-	Wishes, Alexander Pevzner (pzz@apevzner.com)
-
+SUSE Software Solutions Germany GmbH
+Frankenstr. 146 - 90461 Nuernberg - Germany
+(HRB 36809, AG Nuernberg) GF: Ivo Totev
