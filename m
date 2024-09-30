@@ -1,100 +1,96 @@
-Received: from mail.msweet.org (mail.msweet.org [173.255.209.91])
+Received: from smtp3.osuosl.org (smtp3.osuosl.org [140.211.166.136])
 	(using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
 	(No client certificate requested)
-	by smtp.subspace.kernel.org (Postfix) with ESMTPS id C5F8513D26B
-	for <printing-architecture@lists.linux.dev>; Fri, 20 Sep 2024 19:10:26 +0000 (UTC)
-Authentication-Results: smtp.subspace.kernel.org; arc=none smtp.client-ip=173.255.209.91
+	by smtp.subspace.kernel.org (Postfix) with ESMTPS id A6C2415C3
+	for <printing-architecture@lists.linux-foundation.org>; Mon, 30 Sep 2024 01:38:29 +0000 (UTC)
+Authentication-Results: smtp.subspace.kernel.org; arc=none smtp.client-ip=140.211.166.136
 ARC-Seal:i=1; a=rsa-sha256; d=subspace.kernel.org; s=arc-20240116;
-	t=1726859429; cv=none; b=ZgTe33YiHapLrj+YnV/8YRu9SG7qHMZD7zTTFp3IhF7jEA1rYC+k+c+cScHHNy+7olIsioFjS3oiKE6omW8bk3zB4Tx58gCYbUbUS1dMtrbT+0x6OlaFkBOE8eEYxR19LYr0/Ba2+eoMEI+qJMKAirCwnCjmYFAcL/vSClPeJz0=
+	t=1727660310; cv=none; b=P5mdB8v/t9l5qe2U0dqAt4BS439jO/7vznqQNEv4XNcmF9SNwxUmRRDIlY5g+5TGChHlT47WYUgnd5Q0+tHEPwOlyeg7z8cQTILJRFbO0PUS68w+MgN3nTsQI/n1VJc4PVLwGaAEBu8euR00A2ojOmNmyCLHHU9O3h8huz6b1XM=
 ARC-Message-Signature:i=1; a=rsa-sha256; d=subspace.kernel.org;
-	s=arc-20240116; t=1726859429; c=relaxed/simple;
-	bh=0W3bkB+QlZVYz8k5hanabUjwjDrRDi6vFPG+GnmmVkI=;
-	h=From:Content-Type:Mime-Version:Date:Subject:Message-Id:To; b=OyeJwM55s+HnKqvbiwE6rNwmDPMdHRNaWH4dJgEDzHdvIVyltED4DgXG+4Y9U7PeX+xyFhj0B/yvta0n3hwBAYOcA4PG2LOibKxqQw02ogITIn1dGMqyPNsev91HdKh2fg40WvPoIBVF834V4PqcTC6YUDrhG4jmjUloJWEiHdY=
-ARC-Authentication-Results:i=1; smtp.subspace.kernel.org; dmarc=pass (p=quarantine dis=none) header.from=msweet.org; spf=pass smtp.mailfrom=msweet.org; dkim=pass (1024-bit key) header.d=msweet.org header.i=@msweet.org header.b=fyFQLvs7; arc=none smtp.client-ip=173.255.209.91
-Authentication-Results: smtp.subspace.kernel.org; dmarc=pass (p=quarantine dis=none) header.from=msweet.org
-Authentication-Results: smtp.subspace.kernel.org; spf=pass smtp.mailfrom=msweet.org
+	s=arc-20240116; t=1727660310; c=relaxed/simple;
+	bh=VHX8dt9B0Lkhw/ule9IKgmuMjN+ynYNpB0v3AGeUb2s=;
+	h=Message-ID:Date:MIME-Version:From:Subject:To:Content-Type; b=dl1iBWN+HSxuiSPAjt7eboelDVHP7nP2fxaYH6p7dqhMjPUmos0COaX/V2IeUulGlDVC5hHiYBsthIeYftZF6E9bhnyHKOgXqOF4Ske4PGgIxBL9W2lAacCXOMF6Tc1KCH5i15SnTcFBtzR80YKPjLuHrJ+rwLIibZQkY1FhnMw=
+ARC-Authentication-Results:i=1; smtp.subspace.kernel.org; dkim=pass (2048-bit key) header.d=gmail.com header.i=@gmail.com header.b=kohwy9oG; arc=none smtp.client-ip=140.211.166.136
 Authentication-Results: smtp.subspace.kernel.org;
-	dkim=pass (1024-bit key) header.d=msweet.org header.i=@msweet.org header.b="fyFQLvs7"
-Received: from smtpclient.apple (cbl-66-186-76-47.vianet.ca [66.186.76.47])
-	(using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
-	(No client certificate requested)
-	by mail.msweet.org (Postfix) with ESMTPSA id 95A20803DC;
-	Fri, 20 Sep 2024 19:03:29 +0000 (UTC)
-DKIM-Filter: OpenDKIM Filter v2.11.0 mail.msweet.org 95A20803DC
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=msweet.org;
-	s=default; t=1726859009;
-	bh=0W3bkB+QlZVYz8k5hanabUjwjDrRDi6vFPG+GnmmVkI=;
-	h=From:Date:Subject:To:From;
-	b=fyFQLvs77UYV0SPtK+QcIegrO4Z64E36VXLdsITO09uY45I6QJNaQb8JtkZhf+x8H
-	 QRSL4hEemhKHdnEs/N24m5AtQu4ao8ckRfw5PKqe60D/NZ930F8a5r56EnJB2rqM3U
-	 4oTj2t1sM7tkFO99ahKko9OxV0J/QBYWKKCCAnn0=
-From: Michael Sweet <msweet@msweet.org>
-Content-Type: text/plain;
-	charset=us-ascii
-Content-Transfer-Encoding: quoted-printable
+	dkim=pass (2048-bit key) header.d=gmail.com header.i=@gmail.com header.b="kohwy9oG"
+Received: from localhost (localhost [127.0.0.1])
+	by smtp3.osuosl.org (Postfix) with ESMTP id 3F9FF605CD
+	for <printing-architecture@lists.linux-foundation.org>; Mon, 30 Sep 2024 01:38:29 +0000 (UTC)
+X-Virus-Scanned: amavis at osuosl.org
+X-Spam-Flag: NO
+X-Spam-Score: -2.099
+X-Spam-Level:
+Received: from smtp3.osuosl.org ([127.0.0.1])
+ by localhost (smtp3.osuosl.org [127.0.0.1]) (amavis, port 10024) with ESMTP
+ id ob4G6r8ICeRL for <printing-architecture@lists.linux-foundation.org>;
+ Mon, 30 Sep 2024 01:38:28 +0000 (UTC)
+Received-SPF: Pass (mailfrom) identity=mailfrom; client-ip=2a00:1450:4864:20::631; helo=mail-ej1-x631.google.com; envelope-from=till.kamppeter@gmail.com; receiver=<UNKNOWN> 
+DMARC-Filter: OpenDMARC Filter v1.4.2 smtp3.osuosl.org 1D958605A8
+Authentication-Results: smtp3.osuosl.org; dmarc=pass (p=none dis=none) header.from=gmail.com
+DKIM-Filter: OpenDKIM Filter v2.11.0 smtp3.osuosl.org 1D958605A8
+Authentication-Results: smtp3.osuosl.org;
+	dkim=pass (2048-bit key, unprotected) header.d=gmail.com header.i=@gmail.com header.a=rsa-sha256 header.s=20230601 header.b=kohwy9oG
+Received: from mail-ej1-x631.google.com (mail-ej1-x631.google.com [IPv6:2a00:1450:4864:20::631])
+	by smtp3.osuosl.org (Postfix) with ESMTPS id 1D958605A8
+	for <printing-architecture@lists.linux-foundation.org>; Mon, 30 Sep 2024 01:38:27 +0000 (UTC)
+Received: by mail-ej1-x631.google.com with SMTP id a640c23a62f3a-a86e9db75b9so718560566b.1
+        for <printing-architecture@lists.linux-foundation.org>; Sun, 29 Sep 2024 18:38:27 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1727660306; x=1728265106; darn=lists.linux-foundation.org;
+        h=content-transfer-encoding:content-language:to:subject:from
+         :user-agent:mime-version:date:message-id:from:to:cc:subject:date
+         :message-id:reply-to;
+        bh=A4LmgoF57512Ef/6BCSBRwvQF4sc3XC9GzJPwbHS2bA=;
+        b=kohwy9oG5JVDWoPL8Dxl/pHzZe0j5OvymJB2t8lQcbSMy4zCYLyt4ySU6fHCCS9MtM
+         WYMJbPkwA6YyG7EJd75o/jREvvVJoUP5DRxHCtMmloLamTFaFMIznUKPC5Uc5ZBdvbV/
+         /NdxCnCYWDZLmInPLG/9q9p4lzSHW4noXgsjQXeFzegLd0/GGC0I/onKVBR3cd2n2X39
+         3ZwvI4XM8xFOvXKR7BDfGBIhiQ/0VRqE0yIFoJREWwpdXnW6W21aIgkR/eFtZvAdmkpj
+         xnx/6ckbSVvlndO9d4Oqwf+wbVB2MJuJ/zlOHNQVZi6c7rpfn7UyZR9lv2oSQTkITKhc
+         fNHQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1727660306; x=1728265106;
+        h=content-transfer-encoding:content-language:to:subject:from
+         :user-agent:mime-version:date:message-id:x-gm-message-state:from:to
+         :cc:subject:date:message-id:reply-to;
+        bh=A4LmgoF57512Ef/6BCSBRwvQF4sc3XC9GzJPwbHS2bA=;
+        b=Q/j860HkcGcZBciSEersq8VbiwXrVmOQEMKFme/TUtJibjEOVA3f0bR0FCX4vLfjko
+         f0KIbvk4i+hK2ipAoJ5SRA6jLdyvRq7RlZQEw48a1tVRlOmhJ+bBszyCI0QyLHdq5rT7
+         dT9xFDNt74rBwnEB5EONajpCvhYJTx1N9oW4G/W3vAAzDP9N3BSqSD+I8lXM4ZpwaAiA
+         o/sb9/xmjeaGvdV0NZcybARGBYQE52jRGQ6LOm03AVH3a740NIrbasTew0s3qNU7rTYp
+         ImdEstJgmoM8s1O/L9Iy35EiuoKV0lhnwkGjtzsZwNBLGQKMyAi01AZNX84XMgHrvr7D
+         1EuQ==
+X-Forwarded-Encrypted: i=1; AJvYcCUHgHHbgx/YhW2VpkgweICR25/2WvPTWw2qGaPbOQC/d0JOpvfovQJ6d+u2L0cjR+xLeii/VqjjHLhoL2gjFAbBd7TU84A=@lists.linux-foundation.org
+X-Gm-Message-State: AOJu0YzgKN3SE2tfbqmVkasuawQW1ExUfY4EvgWQM5zOARX50Gj5Oa/i
+	rzY1iFFRDbeeNkXPSLPDZgMHVUYk9NYq/7rTKCyxLTL21iQQnhIq
+X-Google-Smtp-Source: AGHT+IE1xQSMHyzEjtEIKuEmXSIGb0qTFj4UJnR9ipTFquM7sTafuQtbLxoQz1yNyPpi1JwwVK9yDA==
+X-Received: by 2002:a17:906:7953:b0:a8a:9195:922d with SMTP id a640c23a62f3a-a93c47d5200mr1166093966b.0.1727660305452;
+        Sun, 29 Sep 2024 18:38:25 -0700 (PDT)
+Received: from [192.168.68.113] (194-96-30-82.hdsl.highway.telekom.at. [194.96.30.82])
+        by smtp.gmail.com with ESMTPSA id a640c23a62f3a-a93c2777baasm448613066b.25.2024.09.29.18.38.23
+        (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
+        Sun, 29 Sep 2024 18:38:24 -0700 (PDT)
+Message-ID: <78b9630e-772a-4aeb-81d3-87fa5ff6c11c@gmail.com>
+Date: Mon, 30 Sep 2024 03:38:23 +0200
 Precedence: bulk
 X-Mailing-List: printing-architecture@lists.linux.dev
 List-Id: <printing-architecture.lists.linux.dev>
 List-Subscribe: <mailto:printing-architecture+subscribe@lists.linux.dev>
 List-Unsubscribe: <mailto:printing-architecture+unsubscribe@lists.linux.dev>
-Mime-Version: 1.0 (Mac OS X Mail 16.0 \(3818.100.11.1.3\))
-Date: Fri, 20 Sep 2024 15:03:18 -0400
-Subject: libcups3 v3.0rc1
-Message-Id: <D6E31DFC-0D86-46AD-A089-35F2438C2569@msweet.org>
-To: OpenPrinting <printing-architecture@lists.linux.dev>
-X-Mailer: Apple Mail (2.3818.100.11.1.3)
+MIME-Version: 1.0
+User-Agent: Mozilla Thunderbird
+From: Till Kamppeter <till.kamppeter@gmail.com>
+Subject: cups-browsed vulnerability
+To: Ira McDonald <blueroofmusic@gmail.com>, Aveek Basu
+ <basu.aveek@gmail.com>,
+ Open Printing <printing-architecture@lists.linux-foundation.org>
+Content-Language: en-US
+Content-Type: text/plain; charset=UTF-8; format=flowed
+Content-Transfer-Encoding: 7bit
 
-libcups v3.0rc1 is the first release candidate of the CUPS v3 library =
-and tools which remove deprecated APIs, add new APIs, and normalize =
-existing APIs.  Available at:
+Hi,
 
-    https://github.com/OpenPrinting/libcups/releases/tag/v3.0rc1
+an overview about the overhyped RCE vulnerability on cups-browsed:
 
-Changes include:
+https://openprinting.github.io/OpenPrinting-News-Flash-cups-browsed-Remote-Code-Execution-vulnerability/
 
-- Added `cupsFormatString` and `cupsFormatStringv` APIs to safely format =
-UTF-8 strings.
-- Added support for per-user instances of `cups-locald` (Issue #69)
-- Added `httpConnectURI` API.
-- Added "end" argument to `cupsParseOptions` API.
-- Renamed `httpReconnect` to `httpConnectAgain`.
-- Updated `cupsDestInfo` to accept a `cups_dest_flags_t` argument.
-- Updated `cupsCopyString` and `cupsConcatString` APIs to safely =
-terminate UTF-8 strings.
-- Updated list of attributes included in the destination options.
-- Updated `cupsAddIntegerOption` and `cupsGetIntegerOption` to use the =
-`long` type.
-- Updated `httpAddrConnect()` to handle `POLLHUP` together with `POLLIN` =
-or `POLLOUT`.
-- Updated the various tool man pages, usage output, and examples.
-- Updated `ippCreateRequestedArray` for the Get-Documents and =
-Get-Output-Device-Attributes operations.
-- Updated `ipptool` to validate IPP, PDF, and .strings files using the =
-"WITH-[ALL-]CONTENT" predicate (Issue #87)
-- Now use installed PDFio library, if available.
-- Now use NotoSansMono font for `ipptransform` text conversions.
-- Brought back IPP/2.x and related conformance test files (Issue #85)
-- The `ipptransform` program now supports uncollated copies.
-- Fixed GNU TLS crash.
-- Fixed PCL output from `ipptransform` (Issue #72)
-- Fixed JSON output from `ipptool`.
-- Fixed hang/crash in `cupsEnumDests`/`cupsGetDests` (Issue #74)
-- Fixed encoding of IPv6 addresses in HTTP requests (Issue #78)
-- Fixed encoding of `IPP_TAG_EXTENSION` values in IPP messages (Issue =
-#80)
-- Fixed error handling when reading a mixed `1setOf` attribute (Issue =
-#83)
-- Fixed non-quick copy of collection values.
-- Fixed error handling in `cupsConnectDest`.
-- Fixed TLS negotiation using OpenSSL with servers that require the TLS =
-SNI extension.
-- Fixed a certificate loading issue with OpenSSL.
-- Fixed cupsAreCredentialsValidForName with OpenSSL.
-- Fixed how `ippeveprinter` responds to an unsupported request character =
-set.
-
-Enjoy!
-
-________________________
-Michael Sweet
-
+    Till
