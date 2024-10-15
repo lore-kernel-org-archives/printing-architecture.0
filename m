@@ -1,33 +1,33 @@
 Received: from mail.msweet.org (mail.msweet.org [173.255.209.91])
 	(using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
 	(No client certificate requested)
-	by smtp.subspace.kernel.org (Postfix) with ESMTPS id 807D0171E49
-	for <printing-architecture@lists.linux.dev>; Tue, 15 Oct 2024 17:45:18 +0000 (UTC)
+	by smtp.subspace.kernel.org (Postfix) with ESMTPS id 584081B0F0F
+	for <printing-architecture@lists.linux.dev>; Tue, 15 Oct 2024 22:18:10 +0000 (UTC)
 Authentication-Results: smtp.subspace.kernel.org; arc=none smtp.client-ip=173.255.209.91
 ARC-Seal:i=1; a=rsa-sha256; d=subspace.kernel.org; s=arc-20240116;
-	t=1729014321; cv=none; b=u4G4G6wKlJpS/xZXIq5aCyICRGFaUkno8KdmROq8mj8XkyWGtqVd6jqWX/y8kA6FDwVLqneMaR9q7e4Zt252J/r/fhTzg6E9QRmppxsU3o9/mqKHJqrOGgregyHjv0ihcEX9L90B8UxPIsMBOq+M+4bZjJABfK1Jq41UkngkdD0=
+	t=1729030691; cv=none; b=bq1fHsqA8T0iw9TvuESEdOcpeouchtXBNQ92j1w4ASx5ajBIUAn9npuGGTs2fDe4nNKnPVt0RrLDtjd3baI8OWW4AexgoFfdn573TOubr+KiLm2r0BMnAXtBX31SxLMSeG6/oSP4QadO2TH++qNznCIJ7vm5j71ENwluvMsET/E=
 ARC-Message-Signature:i=1; a=rsa-sha256; d=subspace.kernel.org;
-	s=arc-20240116; t=1729014321; c=relaxed/simple;
-	bh=cEQlkpWfDe5W5lAWGfDXoI9LPzOjtjZVYfAbtyU62RY=;
-	h=From:Content-Type:Mime-Version:Date:Subject:Message-Id:To; b=kN/B3BR54MKsDeztFq0R8qC6Iyn5wUP78lKIItx3rcK+fWFo2eeTdwknAhHmDpY1HGaXVHan3Mp49sJJtuf1i6mbIFDgkHxlNYxJokgz6im83+8tab9dMWkkPwErtT6QwNkpwXpBmJ0TewOl+mxYRP+eI7aYAu4ttqFtjeGcvmc=
-ARC-Authentication-Results:i=1; smtp.subspace.kernel.org; dmarc=pass (p=quarantine dis=none) header.from=msweet.org; spf=pass smtp.mailfrom=msweet.org; dkim=pass (1024-bit key) header.d=msweet.org header.i=@msweet.org header.b=SvyAlYb+; arc=none smtp.client-ip=173.255.209.91
+	s=arc-20240116; t=1729030691; c=relaxed/simple;
+	bh=tJcyCKobOWCGrqpoct6//Y7cbvUZrOrE+BcUWVYnkXA=;
+	h=From:Content-Type:Mime-Version:Date:Subject:Message-Id:To; b=FnIPe4W0q7Blz+Mldy2iAwSk34z3L9g/h68QfdahpibYGaEQ0CQUZQvjnljsIWcGEGalpEaIGmgbWMBbPdoTi1dOjbVRON/W+21lVx20dl2IB1wfkzN4PntSZEeygZHUSHoRj7jeF69z6/N75lLp2A7UhVJ7zr72Z/+osGRAuJ4=
+ARC-Authentication-Results:i=1; smtp.subspace.kernel.org; dmarc=pass (p=quarantine dis=none) header.from=msweet.org; spf=pass smtp.mailfrom=msweet.org; dkim=pass (1024-bit key) header.d=msweet.org header.i=@msweet.org header.b=KrLc7lz3; arc=none smtp.client-ip=173.255.209.91
 Authentication-Results: smtp.subspace.kernel.org; dmarc=pass (p=quarantine dis=none) header.from=msweet.org
 Authentication-Results: smtp.subspace.kernel.org; spf=pass smtp.mailfrom=msweet.org
 Authentication-Results: smtp.subspace.kernel.org;
-	dkim=pass (1024-bit key) header.d=msweet.org header.i=@msweet.org header.b="SvyAlYb+"
+	dkim=pass (1024-bit key) header.d=msweet.org header.i=@msweet.org header.b="KrLc7lz3"
 Received: from smtpclient.apple (cbl-66-186-76-47.vianet.ca [66.186.76.47])
 	(using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
 	(No client certificate requested)
-	by mail.msweet.org (Postfix) with ESMTPSA id B9C2A81D95;
-	Tue, 15 Oct 2024 17:39:07 +0000 (UTC)
-DKIM-Filter: OpenDKIM Filter v2.11.0 mail.msweet.org B9C2A81D95
+	by mail.msweet.org (Postfix) with ESMTPSA id 2AF2481D95;
+	Tue, 15 Oct 2024 22:18:09 +0000 (UTC)
+DKIM-Filter: OpenDKIM Filter v2.11.0 mail.msweet.org 2AF2481D95
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=msweet.org;
-	s=default; t=1729013947;
-	bh=cEQlkpWfDe5W5lAWGfDXoI9LPzOjtjZVYfAbtyU62RY=;
+	s=default; t=1729030689;
+	bh=tJcyCKobOWCGrqpoct6//Y7cbvUZrOrE+BcUWVYnkXA=;
 	h=From:Date:Subject:To:From;
-	b=SvyAlYb+67P21BD6YjIOYXkyuJ795Y4E4DFJFw6xbu2xVgsTReJQXNs0nvChkwBwq
-	 nui73A1jE5fnQ6yyyl/siCvgl/txgGKbiZhQ6IYAKJMpGQeUCaMhssfpUmfIMcohWR
-	 CC5jEsdDnqQt6YMzNI7fj86Cwkq9m928x8IlEuAQ=
+	b=KrLc7lz3u8BIx3GEaRQfzqjUqlr5BdHh3SbDC5NlP4tOamQ7d/RG5WjKdH9nHRgxp
+	 KfQirz/ZMpJtV5fTOKoQsvhThnPGWggQyB+GFazt3BL/WI0kcLuqDMU/6J9nEoMaok
+	 FJOWFmpBSyhz5Ix9bAobE4mWI1DFl6NvdULMVM58=
 From: Michael Sweet <msweet@msweet.org>
 Content-Type: text/plain;
 	charset=us-ascii
@@ -38,30 +38,33 @@ List-Id: <printing-architecture.lists.linux.dev>
 List-Subscribe: <mailto:printing-architecture+subscribe@lists.linux.dev>
 List-Unsubscribe: <mailto:printing-architecture+unsubscribe@lists.linux.dev>
 Mime-Version: 1.0 (Mac OS X Mail 16.0 \(3818.100.11.1.3\))
-Date: Tue, 15 Oct 2024 13:38:56 -0400
-Subject: libcups v3.0rc2
-Message-Id: <A7407DA5-469E-4D6C-A337-075D904B17C7@msweet.org>
+Date: Tue, 15 Oct 2024 18:18:03 -0400
+Subject: PAPPL v1.4.7
+Message-Id: <6A773CA2-5D93-41A8-A444-9F03AE3C2DAD@msweet.org>
 To: OpenPrinting <printing-architecture@lists.linux.dev>
 X-Mailer: Apple Mail (2.3818.100.11.1.3)
 
 All,
 
-libcups v3.0rc2 is the second release candidate of the CUPS v3 library =
-and tools which remove deprecated APIs, add new APIs, and normalize =
-existing APIs.  It is available from:
+PAPPL v1.4.7 is now available for download and is a bug fix release:
 
-    https://github.com/OpenPrinting/libcups/releases/tag/v3.0rc2
+    https://github.com/michaelrsweet/pappl/releases/tag/v1.4.7
 
 Changes include:
 
-- Updated `httpConnectAgain` to re-validate the server's X.509 =
-certificate (Issue #90)
-- Updated the source tarball script to include the PDFio sources.
-- Fixed handling of empty resolution values passed to `ipptool` (Issue =
-#63)
-- Fixed a compressed file error handling bug (Issue #91)
-- Fixed the default User-Agent string sent in requests.
-- Fixed a recursion issue in `ippReadIO`.
+- PAM-based authentication did not work on Linux due to a glibc =
+incompatibility (Issue #343)
+- Fixed the web interface for setting the admin and print groups (Issue =
+#356)
+- Fixed the web interface for adding network printers on non-standard =
+port
+  numbers (Issue #360)
+- Fixed some USB gadget error conditions.
+- Fixed the Wi-Fi configuration web page.
+- Fixed a logging deadlock issue.
+- Fixed some threading issues.
+- Fixed how PAPPL responds to an unsupported request character set.
+- Fixed the "no-tls" server option.
 
 Enjoy!
 
