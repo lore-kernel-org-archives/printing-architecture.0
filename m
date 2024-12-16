@@ -1,81 +1,62 @@
-Received: from smtp2.osuosl.org (smtp2.osuosl.org [140.211.166.133])
-	(using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
+Received: from mail-ej1-f41.google.com (mail-ej1-f41.google.com [209.85.218.41])
+	(using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
 	(No client certificate requested)
-	by smtp.subspace.kernel.org (Postfix) with ESMTPS id 99E1A36D
-	for <printing-architecture@lists.linux-foundation.org>; Mon, 25 Nov 2024 01:17:54 +0000 (UTC)
-Authentication-Results: smtp.subspace.kernel.org; arc=none smtp.client-ip=140.211.166.133
+	by smtp.subspace.kernel.org (Postfix) with ESMTPS id 93B89206297
+	for <printing-architecture@lists.linux.dev>; Mon, 16 Dec 2024 18:31:13 +0000 (UTC)
+Authentication-Results: smtp.subspace.kernel.org; arc=none smtp.client-ip=209.85.218.41
 ARC-Seal:i=1; a=rsa-sha256; d=subspace.kernel.org; s=arc-20240116;
-	t=1732497475; cv=none; b=rOaw0Bo2HgAOPC+djrc+s4LXmS47EHYylHY/VKa8cXLdYMBC6v0Coz1z48xu6AD44iySOHioLB1p3LI4OqhVp8xT/HocyRZgx7kEw0gOb8/PCAhV3BRlMCajzd3pMt+SOj0zRQsCz4/MDdcrc5JGL997TYJsMGFtQUbudwj7CL0=
+	t=1734373875; cv=none; b=I8GPsqBc20D/aNe7VfG8wbeK/FeIQwE+DMPaceDwfYqudrajMWsqkcRbIKiNq5lFi/L3XKCZmdHxa/3kSyr4QHdF4QCgOAR6Rfla0sdjXHv9YLuwfaX/sP+/gB0vUccwvVZHcinbZOn+FXTwC/mOx5KJwvuDw6cWQPGgcm5hOyc=
 ARC-Message-Signature:i=1; a=rsa-sha256; d=subspace.kernel.org;
-	s=arc-20240116; t=1732497475; c=relaxed/simple;
-	bh=xB3BlVadjsPlqsGnCx0qPDH03K20Cd1QWaB/IB2H0KM=;
-	h=Message-ID:Date:MIME-Version:From:Subject:To:Content-Type; b=SaQuMo21UsMdsdSSMa3qr1zUuaNm5RfLVZWkO77fSpCNQFLpSJ95UGRHg5sg9nY+ObKX3SIe5K1JQaxX94QFZ3E0bplRG0I4yKPE+NnMLPr3GAayLw3kkLPZ+/o8OpN44hL7T3WhBhKAEMtxjQpI6i6k346oLnSI/HqZDQ4r3gA=
-ARC-Authentication-Results:i=1; smtp.subspace.kernel.org; dkim=pass (2048-bit key) header.d=gmail.com header.i=@gmail.com header.b=dAl9QYhB; arc=none smtp.client-ip=140.211.166.133
+	s=arc-20240116; t=1734373875; c=relaxed/simple;
+	bh=r7n+0N/6HCAYe1FMtknAwB+Bj3rrrLl7FJcYfBXaq1I=;
+	h=Message-ID:Date:MIME-Version:From:Subject:To:Content-Type; b=azDdkbZLpafDbqW4JJz5bGiz/7m/ttO6ks3xfymneMGADpQG42VDa0nwSkw4Qkp/dwfWBDKdL+jh6XD42OAZ2quzxcvXXg921K2LgSGAUTDm/CmKlwaM/w4xwexA2qXXBsEWgb6gtlv4MyzMOW5peyvG/l+rxUWIbyOu+EA9lvc=
+ARC-Authentication-Results:i=1; smtp.subspace.kernel.org; dmarc=pass (p=none dis=none) header.from=gmail.com; spf=pass smtp.mailfrom=gmail.com; dkim=pass (2048-bit key) header.d=gmail.com header.i=@gmail.com header.b=jSr2NqF3; arc=none smtp.client-ip=209.85.218.41
+Authentication-Results: smtp.subspace.kernel.org; dmarc=pass (p=none dis=none) header.from=gmail.com
+Authentication-Results: smtp.subspace.kernel.org; spf=pass smtp.mailfrom=gmail.com
 Authentication-Results: smtp.subspace.kernel.org;
-	dkim=pass (2048-bit key) header.d=gmail.com header.i=@gmail.com header.b="dAl9QYhB"
-Received: from localhost (localhost [127.0.0.1])
-	by smtp2.osuosl.org (Postfix) with ESMTP id 1AA5741C9E
-	for <printing-architecture@lists.linux-foundation.org>; Mon, 25 Nov 2024 01:17:54 +0000 (UTC)
-X-Virus-Scanned: amavis at osuosl.org
-X-Spam-Flag: NO
-X-Spam-Score: -1.999
-X-Spam-Level:
-Received: from smtp2.osuosl.org ([127.0.0.1])
- by localhost (smtp2.osuosl.org [127.0.0.1]) (amavis, port 10024) with ESMTP
- id 46yzatFQVEc6 for <printing-architecture@lists.linux-foundation.org>;
- Mon, 25 Nov 2024 01:17:53 +0000 (UTC)
-Received-SPF: Pass (mailfrom) identity=mailfrom; client-ip=2a00:1450:4864:20::634; helo=mail-ej1-x634.google.com; envelope-from=till.kamppeter@gmail.com; receiver=<UNKNOWN> 
-DMARC-Filter: OpenDMARC Filter v1.4.2 smtp2.osuosl.org C79B143335
-Authentication-Results: smtp2.osuosl.org; dmarc=pass (p=none dis=none) header.from=gmail.com
-DKIM-Filter: OpenDKIM Filter v2.11.0 smtp2.osuosl.org C79B143335
-Authentication-Results: smtp2.osuosl.org;
-	dkim=pass (2048-bit key, unprotected) header.d=gmail.com header.i=@gmail.com header.a=rsa-sha256 header.s=20230601 header.b=dAl9QYhB
-Received: from mail-ej1-x634.google.com (mail-ej1-x634.google.com [IPv6:2a00:1450:4864:20::634])
-	by smtp2.osuosl.org (Postfix) with ESMTPS id C79B143335
-	for <printing-architecture@lists.linux-foundation.org>; Mon, 25 Nov 2024 01:17:52 +0000 (UTC)
-Received: by mail-ej1-x634.google.com with SMTP id a640c23a62f3a-aa520699becso353651966b.1
-        for <printing-architecture@lists.linux-foundation.org>; Sun, 24 Nov 2024 17:17:52 -0800 (PST)
+	dkim=pass (2048-bit key) header.d=gmail.com header.i=@gmail.com header.b="jSr2NqF3"
+Received: by mail-ej1-f41.google.com with SMTP id a640c23a62f3a-a9a68480164so731524266b.3
+        for <printing-architecture@lists.linux.dev>; Mon, 16 Dec 2024 10:31:13 -0800 (PST)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
-        d=gmail.com; s=20230601; t=1732497471; x=1733102271; darn=lists.linux-foundation.org;
-        h=content-transfer-encoding:content-language:to:subject:from
+        d=gmail.com; s=20230601; t=1734373871; x=1734978671; darn=lists.linux.dev;
+        h=content-transfer-encoding:to:subject:from:content-language
          :user-agent:mime-version:date:message-id:from:to:cc:subject:date
          :message-id:reply-to;
-        bh=ZOFhp2s1DujTgVvlAac+vPubQOgKpg7Rs9X65bJDB+Y=;
-        b=dAl9QYhBzztdn6bv486LB6Z4NuT9Qd3cOq8NBoPPnjfJWuzX34cdNbYElNWkwgVt40
-         HIdbtcE5xqHJEiwgfoai51tjhNGTVp2OC6/pO6NmPA7CcSQDfea7rt0ARJ47r13YBUbF
-         jljx+wmiv6Wbwu5ckLqNc5+Cs+6aAf9qwufQ7SoAFQTnqMvhpb2X5MBAjeNGM+t+rhXR
-         gs4cXf+4FvYFzRuKXxoc56mLmkEDmhrqYAFSNJRqH2Z6UWQDXzinDSIaQ2EmhrWkEeOe
-         pCPlbm/l1RL67p1cK7fhtJaObm2z6AlGEBmLaiFCIY7So2R71tW1+gafW92G7eNG1mZd
-         3eKw==
+        bh=NvYxcAK9RP2IHL8UfsKE6qE8WvOWU8cq3s+P6KPTL6I=;
+        b=jSr2NqF3UWBy5OJUnkOoJ/K3kCgzBGZhGeYNaazq6d2VrdYCByTMkq95iUef9aNuGL
+         5c9BEnDxK+PjnM/C6Ly8a88jj6YkGu9PnQRXMm8gWo3ydk7/q0T1KMGP4SVD6E4V+i9A
+         SzekovWjEL4ZETbCfK+f7b75s3ALqQoNxQhZ4qDCvdSa4B0HQLZPzm3XVI8ruo4dS9S4
+         NqViOsX8NYR7HckGFu344CgUWsjBknvFSDC1ZhoHxVo5ENSHLrXRUuJPzG4YgLUcjApD
+         0RCJh3Q+lXPsoIkBfqe761+I/hdOa+j30tGKc35fOETJ8erpQoDXq3O3f9ezzjJFsc02
+         FQhg==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
-        d=1e100.net; s=20230601; t=1732497471; x=1733102271;
-        h=content-transfer-encoding:content-language:to:subject:from
+        d=1e100.net; s=20230601; t=1734373871; x=1734978671;
+        h=content-transfer-encoding:to:subject:from:content-language
          :user-agent:mime-version:date:message-id:x-gm-message-state:from:to
          :cc:subject:date:message-id:reply-to;
-        bh=ZOFhp2s1DujTgVvlAac+vPubQOgKpg7Rs9X65bJDB+Y=;
-        b=gkLf4Je7P9p/F1/redFJV9FXpgoILXlzyLVnKcrT/nT8EaGatUlcwzkKgQ8JvM7jff
-         neF8UdEaD8syG1kRARuWBTteYMAPZCt3DLYraJN7SvgupYdUsY/KVRU+5uYdF+h3bXUq
-         zzk0XCUZW1aQzJrxat8P3BYyzv85M9JpUEVUx+vnUe8sPsxyh3eJhnqio3kTjjljp1tn
-         FXrQ6KmBVUl7q3b4WM5Apg1FS9HpI7x4JFnvqGrHSeTGzdI3S3zH57sXShxao+5DPMtd
-         HTsj1OL/2jtVxv82ACi1lm51ZUe5QLiZO2CH8q37AFsKAk70QZnz4gxGZT8pSpP8cIiF
-         WICQ==
-X-Forwarded-Encrypted: i=1; AJvYcCVhCQtxz/HWKbpa4ZGQrvQ4kzmTc07DbaVOACUp3nsCNec76EQ+McEZE2mS3zzsR7WIAEPR3xNT4dGQ5tGb09H/0trmSIs=@lists.linux-foundation.org
-X-Gm-Message-State: AOJu0YxM/2XFXqocvwOAi70utGSziv7o3U653oax4LYUtM4GNlPif0Nh
-	yurrJc/TBRJ9PBFb73DtGEus04awOjqHvRtcZaSigWAo3z0U70Yr
-X-Gm-Gg: ASbGncvK0WvujHRppdjdh9qGIQQnD7r/cayzr9Ci5I3dKXixyE2emObCMtMcn4MX3Qj
-	QCgyu7AodF+R1eJznt5ntxXDqbfES5tOcgZzABY+G2K7XPgH20sIT078xWQeZUfPeQKngIJd7Y8
-	cmAFZGFBS5VAY9Tu52t8WakIpTpIo3+Dwjp77gg81XDq/rhF40GY0Qk5KenpnjjZPAIjXNPMz3m
-	RgMMTT+eglQsBInjOAB4KPOPaI3cvZM+t/G4wsvUYB6W73mNsU0zfFxOoRA7ilT3u5n32q/vdeV
-	V5P2S5m2XUqwb0bD+HdvgscG
-X-Google-Smtp-Source: AGHT+IExFQy++7zL6V0k9t+FvNhwjat21OvqYNnjToIVlPof1qdJe0B60wXvvNDd9wP4tx1XGc/Phg==
-X-Received: by 2002:a17:906:32c9:b0:aa5:1d08:dacf with SMTP id a640c23a62f3a-aa51d090340mr734365566b.13.1732497470497;
-        Sun, 24 Nov 2024 17:17:50 -0800 (PST)
+        bh=NvYxcAK9RP2IHL8UfsKE6qE8WvOWU8cq3s+P6KPTL6I=;
+        b=W7DT1bm8vRF4x1IAsdTlqxgj2hWEKAzob/CHr0TV8NDXSOFU710fiaihWGzXsvcAA5
+         rLnJjCA8XVp3UXxDP07hV0W2xMJD7bAcT4X5yDWaFqjnZ079QbnTegwaXcJ+8qlvR6Iz
+         nAF68x6Ah6O0IAGAbP/P0gOAf7CxZM7Wp9qZGLjmF4Xto+czS6tP2TT1Ihv3Ai89cHbK
+         O1zA62LQlGBz3MB7Z2dCYpyN6J0Q7UMU28AbVzjKx2IGzb4vIAgJf6DsGrJRuwiGKkwp
+         i9yXp266SYSYDrlC2WpFRq3Q0bxMFcld9pj22+DEhz0z+VIFVNnMBneL9T/NXedZt6UL
+         qOHA==
+X-Gm-Message-State: AOJu0Yye8uQw3BKCpu/qh08M8MrYoslb/oCjyfykY775gtfSxc+MyabE
+	AD90P7gdET2fOZyheYWsbh+SH37nUAAfj498Vp2ibHR7RFieASuCp0rrsrh4
+X-Gm-Gg: ASbGncv3SfjdCsl6dKi/Go+KIe8EyqXahubfm7y+JS+uCoEKiRaEyYXXungy/HECq6r
+	aTZgM4kVNC4Ezw4CY6nEnqh6X4lCEJoKB1815uOv3zFY/eUfhOCaI09y5RDsjPcZvOc8VTlhp9+
+	kkwzQlIZxWxcoTGQ2dZPKXsxSVO+LpuGEP27RS8McCE3U+JoPaC/JLgUfjnJxnwuozzL5RtJuVY
+	iK+ddcyVfU8OYRDa1Z32lVFjBYWu24hGwNFFHNuFQwm/HRoOR9Tr1WTVRvKfoEnAzltBo9bL8qE
+	DWa8SkPuIZpngGHs9f+GAI/0NREF9N8=
+X-Google-Smtp-Source: AGHT+IFTaHEImaWDVZpwfHnDLo+3DIgir1kmTbf/ElSbJs0W4Ops1wM+xdVu5lXbdIamUlmDxtnglg==
+X-Received: by 2002:a17:907:3f8d:b0:aa6:a7ef:7f1f with SMTP id a640c23a62f3a-aab778c80a7mr1276497066b.11.1734373871047;
+        Mon, 16 Dec 2024 10:31:11 -0800 (PST)
 Received: from [192.168.68.113] (194-96-30-82.hdsl.highway.telekom.at. [194.96.30.82])
-        by smtp.gmail.com with ESMTPSA id a640c23a62f3a-aa55195b32csm71025366b.29.2024.11.24.17.17.48
+        by smtp.gmail.com with ESMTPSA id a640c23a62f3a-aab96006456sm354647266b.31.2024.12.16.10.31.09
         (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
-        Sun, 24 Nov 2024 17:17:49 -0800 (PST)
-Message-ID: <69ecca00-3435-44ef-bce3-70ce200e6c73@gmail.com>
-Date: Mon, 25 Nov 2024 02:17:47 +0100
+        Mon, 16 Dec 2024 10:31:10 -0800 (PST)
+Message-ID: <50499e9a-3f1b-4b7c-b293-11c8363486c2@gmail.com>
+Date: Mon, 16 Dec 2024 19:31:08 +0100
 Precedence: bulk
 X-Mailing-List: printing-architecture@lists.linux.dev
 List-Id: <printing-architecture.lists.linux.dev>
@@ -83,21 +64,99 @@ List-Subscribe: <mailto:printing-architecture+subscribe@lists.linux.dev>
 List-Unsubscribe: <mailto:printing-architecture+unsubscribe@lists.linux.dev>
 MIME-Version: 1.0
 User-Agent: Mozilla Thunderbird
-From: Till Kamppeter <till.kamppeter@gmail.com>
-Subject: OpenPrinting News
-To: Ira McDonald <blueroofmusic@gmail.com>, Aveek Basu
- <basu.aveek@gmail.com>,
- Open Printing <printing-architecture@lists.linux-foundation.org>
 Content-Language: en-US
+From: Till Kamppeter <till.kamppeter@gmail.com>
+Subject: Winter of Code - by Google Developer Group on Campus Indian Institute
+ of Information Technology Kalyani
+To: OpenPrinting <printing-architecture@lists.linux.dev>,
+ Aveek Basu <basu.aveek@gmail.com>, Michael Sweet <msweet@msweet.org>,
+ Zdenek Dohnal <zdohnal@redhat.com>, Sahil Arora <sahilarora.535@gmail.com>,
+ Deepak Patankar <patankardeepak04@gmail.com>,
+ Kushagra Sharma <kushagrasharma30072001@gmail.com>,
+ Mohit Verma <vermamohit3301@gmail.com>,
+ Akarshan Kapoor <akarshankap@gmail.com>,
+ Cristovao Cordeiro <cristovao.cordeiro@canonical.com>,
+ singhrudra5556@gmail.com, Saurav Dharwadkar <dharwadkarsaurav@gmail.com>,
+ ttfish <jiongchiyu@gmail.com>, George-Andrei Iosif <hi@iosifache.me>,
+ Dongge Liu <donggeliu@google.com>,
+ Soumyadeep Ghosh <soumyadeepghosh2004@zohomail.in>,
+ Solomon Peachy <pizza@shaftnet.org>,
+ Biswadeep Purkayastha <bpdps95@hotmail.com>,
+ UDDHAV PHATAK 22BCE10731 <uddhavphatak2022@vitbhopal.ac.in>,
+ Alexander Pevzner <pzz@apevzner.com>,
+ Samuel Thibault <samuel.thibault@aquilenet.fr>,
+ Michael Weghorn <m.weghorn@posteo.de>,
+ Arun Patwa B 2 0 1 8 4 <b20184@students.iitmandi.ac.in>
 Content-Type: text/plain; charset=UTF-8; format=flowed
 Content-Transfer-Encoding: 7bit
 
 Hi,
 
-I have posted the newest development of the last month on our website now.
+the Google Developer Group on Campus Indian Institute of Information Technology 
+Kalyani (GDG on Campus IIIT Kalyani, https://gdgiiitk.bio.link/) is organizing 
+the 4th Winter of Code:
 
-Here we go:
+https://winterofcode.tech/
 
-https://openprinting.github.io/OpenPrinting-News-October-2024/
+This is a mentoring program similar to GSoC, but smaller, the coding period is 
+one month (Jan 20 - Feb 20), there are also no stipends for contributors. 
+Passing contributors will get swag from the sponsors though. My intention is to 
+attract GSoC contributors for 2025. WoC contributors doing well on OpenPrinting 
+projects get high-priority candidates for the GSoC with us.
+
+Contributor can be anybody, no requirement to be a student, but most will 
+probably students, they are young, want to make experience, have time to engage 
+themselves, ... and WoC is probably mostly advertised in Indian universities.
+
+Contributor candidates are already registering and can do so until Dec 20.
+
+On January 5-12 organizations are presenting their projects and registered 
+contributors are applying for them. On January 12-19 contributors get selected 
+by the mentors and onboarded.
+
+Coding is from January 20 to February 20.
+
+After that, mentors evaluste the contributors from February 21-27, for the 
+results to get presented on February 28.
+
+Timeline:
+
+https://winterofcode.tech/#timeline
+
+Organizations apply until December 31 with the following form:
+
+https://forms.gle/fxHLpHtf2Bp8uXyK7
+
+The application consists of telling which org you are, listing your mentors with 
+contact and posting a short list of project ideas.
+
+Project ideas which I would suggest so far are:
+
+- Add JPG-XL (JXL) image support to libcupsfilters
+- Make a Rock/OCI image from ipp-usb
+- Desktop/GUI: Printer certificate resetter pop-up on cups-pki-invalid 
+(https://github.com/OpenPrinting/cups/issues/1072)
+- Web: Manage database of get-printer-atrributes responses for listed driverless 
+printers, to allow emulating any printer and also to use for CI
+- Printer Applications (PAPPL): Complete IPP interface to create queues in the 
+Printer Application (https://github.com/michaelrsweet/pappl/discussions/372)
+
+Now I want to ask the following:
+
+- Who wants to mentor together with me?
+- Which of the projects you would like to mentor?
+- Do you also have project ideas?
+
+Note that all project for the WoC must be relatively small, as there is only 1 
+month of coding period.
+
+For contributors it is a way to get involved in OpenPrinting to join the 
+developer community and also to show their skills and enthusiasm as possible 
+GSoC contributors.
+
+Please respond ASAP, the sooner we apply, the sooner we will get visible for 
+potential contributors. Note also that contributor registration ends on Dec 20, 
+Friday this week.
 
     Till
+
