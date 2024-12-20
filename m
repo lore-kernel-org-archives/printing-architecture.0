@@ -1,62 +1,62 @@
-Received: from mail-ej1-f41.google.com (mail-ej1-f41.google.com [209.85.218.41])
+Received: from mail-ej1-f43.google.com (mail-ej1-f43.google.com [209.85.218.43])
 	(using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
 	(No client certificate requested)
-	by smtp.subspace.kernel.org (Postfix) with ESMTPS id 93B89206297
-	for <printing-architecture@lists.linux.dev>; Mon, 16 Dec 2024 18:31:13 +0000 (UTC)
-Authentication-Results: smtp.subspace.kernel.org; arc=none smtp.client-ip=209.85.218.41
+	by smtp.subspace.kernel.org (Postfix) with ESMTPS id 7368E227B90
+	for <printing-architecture@lists.linux.dev>; Fri, 20 Dec 2024 23:55:55 +0000 (UTC)
+Authentication-Results: smtp.subspace.kernel.org; arc=none smtp.client-ip=209.85.218.43
 ARC-Seal:i=1; a=rsa-sha256; d=subspace.kernel.org; s=arc-20240116;
-	t=1734373875; cv=none; b=I8GPsqBc20D/aNe7VfG8wbeK/FeIQwE+DMPaceDwfYqudrajMWsqkcRbIKiNq5lFi/L3XKCZmdHxa/3kSyr4QHdF4QCgOAR6Rfla0sdjXHv9YLuwfaX/sP+/gB0vUccwvVZHcinbZOn+FXTwC/mOx5KJwvuDw6cWQPGgcm5hOyc=
+	t=1734738957; cv=none; b=JbIZmyThnssM95AzvmEQYIqiiCikfkpoIU/ogKfw3gHNvqRdw57OXbdCLu+YTbhrLsw3syaqpteTUrlH0WKKjFqWngzPh3hYqdK6ZECIHJ6JzZ8voA41q/0Cu9jFhodRlCxcgD4Jgo97V9yC7cDE+WTBk08h3ufCf/0BK+uOpK4=
 ARC-Message-Signature:i=1; a=rsa-sha256; d=subspace.kernel.org;
-	s=arc-20240116; t=1734373875; c=relaxed/simple;
-	bh=r7n+0N/6HCAYe1FMtknAwB+Bj3rrrLl7FJcYfBXaq1I=;
-	h=Message-ID:Date:MIME-Version:From:Subject:To:Content-Type; b=azDdkbZLpafDbqW4JJz5bGiz/7m/ttO6ks3xfymneMGADpQG42VDa0nwSkw4Qkp/dwfWBDKdL+jh6XD42OAZ2quzxcvXXg921K2LgSGAUTDm/CmKlwaM/w4xwexA2qXXBsEWgb6gtlv4MyzMOW5peyvG/l+rxUWIbyOu+EA9lvc=
-ARC-Authentication-Results:i=1; smtp.subspace.kernel.org; dmarc=pass (p=none dis=none) header.from=gmail.com; spf=pass smtp.mailfrom=gmail.com; dkim=pass (2048-bit key) header.d=gmail.com header.i=@gmail.com header.b=jSr2NqF3; arc=none smtp.client-ip=209.85.218.41
+	s=arc-20240116; t=1734738957; c=relaxed/simple;
+	bh=5gxAXO5Mfnz055b2Jbifa6MCqVNA0/SbTt6YNZdX3zI=;
+	h=Message-ID:Date:MIME-Version:To:From:Subject:Cc:Content-Type; b=kqhIdBqlVXijZ8ascMUlXTi8rfESKQeUdPgs5RraANVM1bDi2hAiY33M8vfIxFX2PzWbcE4QSTjMl2OWbcjWhFb4iuckF+bjeFJDm7d1hNzF4cJQ8JP3hs8UzHVSEE79EXtt3KE+XiZavGUdiJN7l6gNc6DZ+5poEKPEITCdAms=
+ARC-Authentication-Results:i=1; smtp.subspace.kernel.org; dmarc=pass (p=none dis=none) header.from=gmail.com; spf=pass smtp.mailfrom=gmail.com; dkim=pass (2048-bit key) header.d=gmail.com header.i=@gmail.com header.b=Cf8U0kL8; arc=none smtp.client-ip=209.85.218.43
 Authentication-Results: smtp.subspace.kernel.org; dmarc=pass (p=none dis=none) header.from=gmail.com
 Authentication-Results: smtp.subspace.kernel.org; spf=pass smtp.mailfrom=gmail.com
 Authentication-Results: smtp.subspace.kernel.org;
-	dkim=pass (2048-bit key) header.d=gmail.com header.i=@gmail.com header.b="jSr2NqF3"
-Received: by mail-ej1-f41.google.com with SMTP id a640c23a62f3a-a9a68480164so731524266b.3
-        for <printing-architecture@lists.linux.dev>; Mon, 16 Dec 2024 10:31:13 -0800 (PST)
+	dkim=pass (2048-bit key) header.d=gmail.com header.i=@gmail.com header.b="Cf8U0kL8"
+Received: by mail-ej1-f43.google.com with SMTP id a640c23a62f3a-aa68b513abcso473368366b.0
+        for <printing-architecture@lists.linux.dev>; Fri, 20 Dec 2024 15:55:55 -0800 (PST)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
-        d=gmail.com; s=20230601; t=1734373871; x=1734978671; darn=lists.linux.dev;
-        h=content-transfer-encoding:to:subject:from:content-language
+        d=gmail.com; s=20230601; t=1734738952; x=1735343752; darn=lists.linux.dev;
+        h=content-transfer-encoding:cc:subject:from:to:content-language
          :user-agent:mime-version:date:message-id:from:to:cc:subject:date
          :message-id:reply-to;
-        bh=NvYxcAK9RP2IHL8UfsKE6qE8WvOWU8cq3s+P6KPTL6I=;
-        b=jSr2NqF3UWBy5OJUnkOoJ/K3kCgzBGZhGeYNaazq6d2VrdYCByTMkq95iUef9aNuGL
-         5c9BEnDxK+PjnM/C6Ly8a88jj6YkGu9PnQRXMm8gWo3ydk7/q0T1KMGP4SVD6E4V+i9A
-         SzekovWjEL4ZETbCfK+f7b75s3ALqQoNxQhZ4qDCvdSa4B0HQLZPzm3XVI8ruo4dS9S4
-         NqViOsX8NYR7HckGFu344CgUWsjBknvFSDC1ZhoHxVo5ENSHLrXRUuJPzG4YgLUcjApD
-         0RCJh3Q+lXPsoIkBfqe761+I/hdOa+j30tGKc35fOETJ8erpQoDXq3O3f9ezzjJFsc02
-         FQhg==
+        bh=yTgqpu28XdJNeIPlvBs0N+exsgjxEldc90Wy0sHPmHE=;
+        b=Cf8U0kL8j/9Y/VxJSYWUn6r9MMtL2FlXvZk1Mp2KvUaZhWoyoytcnO1MZKsjzj+nhI
+         gmDJ+PAeKEy7Wz00SfbmnCTUHsX/LvGYGS+hSAIbMmJ1QMe1UUO+4nJUp9nStkQ+l4Mo
+         1lbuAqVi2aIPGawuXG3q2W2QYR1NrEgLedUc2zjvfRNaF8cmlt7meWyapERRVpvj+WVO
+         TKb6hEmWEL4G50iytskSLhYyspOXIKQ8byD3KXxg9HO0sp9fG6EJiQin8dMVV5Y7H3C2
+         MJ+MmtpqRqK0HNGOZb13LvidSWCe/wSlCS6MdgpdDAAxLOXLhgOYeKPQszpSvoZJd8UQ
+         RsDw==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
-        d=1e100.net; s=20230601; t=1734373871; x=1734978671;
-        h=content-transfer-encoding:to:subject:from:content-language
+        d=1e100.net; s=20230601; t=1734738952; x=1735343752;
+        h=content-transfer-encoding:cc:subject:from:to:content-language
          :user-agent:mime-version:date:message-id:x-gm-message-state:from:to
          :cc:subject:date:message-id:reply-to;
-        bh=NvYxcAK9RP2IHL8UfsKE6qE8WvOWU8cq3s+P6KPTL6I=;
-        b=W7DT1bm8vRF4x1IAsdTlqxgj2hWEKAzob/CHr0TV8NDXSOFU710fiaihWGzXsvcAA5
-         rLnJjCA8XVp3UXxDP07hV0W2xMJD7bAcT4X5yDWaFqjnZ079QbnTegwaXcJ+8qlvR6Iz
-         nAF68x6Ah6O0IAGAbP/P0gOAf7CxZM7Wp9qZGLjmF4Xto+czS6tP2TT1Ihv3Ai89cHbK
-         O1zA62LQlGBz3MB7Z2dCYpyN6J0Q7UMU28AbVzjKx2IGzb4vIAgJf6DsGrJRuwiGKkwp
-         i9yXp266SYSYDrlC2WpFRq3Q0bxMFcld9pj22+DEhz0z+VIFVNnMBneL9T/NXedZt6UL
-         qOHA==
-X-Gm-Message-State: AOJu0Yye8uQw3BKCpu/qh08M8MrYoslb/oCjyfykY775gtfSxc+MyabE
-	AD90P7gdET2fOZyheYWsbh+SH37nUAAfj498Vp2ibHR7RFieASuCp0rrsrh4
-X-Gm-Gg: ASbGncv3SfjdCsl6dKi/Go+KIe8EyqXahubfm7y+JS+uCoEKiRaEyYXXungy/HECq6r
-	aTZgM4kVNC4Ezw4CY6nEnqh6X4lCEJoKB1815uOv3zFY/eUfhOCaI09y5RDsjPcZvOc8VTlhp9+
-	kkwzQlIZxWxcoTGQ2dZPKXsxSVO+LpuGEP27RS8McCE3U+JoPaC/JLgUfjnJxnwuozzL5RtJuVY
-	iK+ddcyVfU8OYRDa1Z32lVFjBYWu24hGwNFFHNuFQwm/HRoOR9Tr1WTVRvKfoEnAzltBo9bL8qE
-	DWa8SkPuIZpngGHs9f+GAI/0NREF9N8=
-X-Google-Smtp-Source: AGHT+IFTaHEImaWDVZpwfHnDLo+3DIgir1kmTbf/ElSbJs0W4Ops1wM+xdVu5lXbdIamUlmDxtnglg==
-X-Received: by 2002:a17:907:3f8d:b0:aa6:a7ef:7f1f with SMTP id a640c23a62f3a-aab778c80a7mr1276497066b.11.1734373871047;
-        Mon, 16 Dec 2024 10:31:11 -0800 (PST)
+        bh=yTgqpu28XdJNeIPlvBs0N+exsgjxEldc90Wy0sHPmHE=;
+        b=pkiXK7u1WKIVetW9sq32t158AT6M8cbknP7NdxaKJzbF3McpK3PLBiHPfzCbVji+C/
+         4kAbT/OmSWs/GvJzcyuE0lrqAw9V1jy/0zvjmvW26VGL2XyhFILuZHTX9/bDDsIcG3eU
+         Vf/Rf00y4/rrAyljzXa/jJ8x62E3lyYuWfpRmFr4owlLO/18DPUVzgZarHEp+HQIOau7
+         z6+4bpqieVkZXMD4OHgpghzDMXUuepV6AqjQ1VRlct9qp5fBnSHa626rMvd3mih1tB3i
+         2UZj+hwXz45XRZ3kSqbCHprklN4CxiQWrajCCbh0tIiXyJpcaOjLoW6SxK52pXdu8cbI
+         xWKg==
+X-Gm-Message-State: AOJu0Yzq2Gqr6+J//yBq+f17jfyvn0CAIsaAvFihqg/5WHAlhuC2ycAI
+	Usjw57AI7TfQzqJCBBr7Ap+XNjtzEwg2cJOQKmPIF5dbu3HIfzigy+5A6A==
+X-Gm-Gg: ASbGncsPUDQXPSPla1xDWRem+2pfBrW/e6PRFYd0X7YQcbjHg8/HKfLh3P6K3zLOHkW
+	SBKEc40KwQNF4wVPF+My+LbNASCTW1a/IW/t6WtLNZZpRdp+ZhA2xPglY0MVHxXBrPWpEiUqfCN
+	nIrw0AOIGRFPW/hHNEV+cfVGGEVxD+Enek2WswKAFos+sbj4Cg1yadSlC9WDPkV8ApXqcFxUc/O
+	QNsIX2yJ8gip/gL9HRH5EADdKOfxRH1aw07LUO7uQ8Zw4LRS5havXSGDUBVp6iQZ8CmInu5jEFP
+	i/+6LBLF6vHzWpasDx/12HcnDPbb6kw=
+X-Google-Smtp-Source: AGHT+IHYokMu4UG9fZM6rEcOCSzwglENrxWFQNPCPCKKMxOzJXxqKg13QbrKXpW01Zh9S4/lnSMzGA==
+X-Received: by 2002:a17:907:9346:b0:aa6:7165:504c with SMTP id a640c23a62f3a-aac3352c2d0mr460292066b.37.1734738952201;
+        Fri, 20 Dec 2024 15:55:52 -0800 (PST)
 Received: from [192.168.68.113] (194-96-30-82.hdsl.highway.telekom.at. [194.96.30.82])
-        by smtp.gmail.com with ESMTPSA id a640c23a62f3a-aab96006456sm354647266b.31.2024.12.16.10.31.09
+        by smtp.gmail.com with ESMTPSA id a640c23a62f3a-aac0f05ee5esm221890966b.171.2024.12.20.15.55.51
         (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
-        Mon, 16 Dec 2024 10:31:10 -0800 (PST)
-Message-ID: <50499e9a-3f1b-4b7c-b293-11c8363486c2@gmail.com>
-Date: Mon, 16 Dec 2024 19:31:08 +0100
+        Fri, 20 Dec 2024 15:55:51 -0800 (PST)
+Message-ID: <1ca4c555-aa30-43db-a9b4-74bd2729f8dc@gmail.com>
+Date: Sat, 21 Dec 2024 00:55:50 +0100
 Precedence: bulk
 X-Mailing-List: printing-architecture@lists.linux.dev
 List-Id: <printing-architecture.lists.linux.dev>
@@ -65,98 +65,57 @@ List-Unsubscribe: <mailto:printing-architecture+unsubscribe@lists.linux.dev>
 MIME-Version: 1.0
 User-Agent: Mozilla Thunderbird
 Content-Language: en-US
-From: Till Kamppeter <till.kamppeter@gmail.com>
-Subject: Winter of Code - by Google Developer Group on Campus Indian Institute
- of Information Technology Kalyani
 To: OpenPrinting <printing-architecture@lists.linux.dev>,
- Aveek Basu <basu.aveek@gmail.com>, Michael Sweet <msweet@msweet.org>,
- Zdenek Dohnal <zdohnal@redhat.com>, Sahil Arora <sahilarora.535@gmail.com>,
- Deepak Patankar <patankardeepak04@gmail.com>,
- Kushagra Sharma <kushagrasharma30072001@gmail.com>,
- Mohit Verma <vermamohit3301@gmail.com>,
- Akarshan Kapoor <akarshankap@gmail.com>,
- Cristovao Cordeiro <cristovao.cordeiro@canonical.com>,
- singhrudra5556@gmail.com, Saurav Dharwadkar <dharwadkarsaurav@gmail.com>,
- ttfish <jiongchiyu@gmail.com>, George-Andrei Iosif <hi@iosifache.me>,
- Dongge Liu <donggeliu@google.com>,
- Soumyadeep Ghosh <soumyadeepghosh2004@zohomail.in>,
- Solomon Peachy <pizza@shaftnet.org>,
- Biswadeep Purkayastha <bpdps95@hotmail.com>,
- UDDHAV PHATAK 22BCE10731 <uddhavphatak2022@vitbhopal.ac.in>,
- Alexander Pevzner <pzz@apevzner.com>,
- Samuel Thibault <samuel.thibault@aquilenet.fr>,
- Michael Weghorn <m.weghorn@posteo.de>,
- Arun Patwa B 2 0 1 8 4 <b20184@students.iitmandi.ac.in>
+ Michael Sweet <msweet@msweet.org>, rudransh.iitm@gmail.com
+From: Till Kamppeter <till.kamppeter@gmail.com>
+Subject: Merge repositories for CUPS Snap and CUPS OCI/Docker Container into
+ the CUPS repo itself
+Cc: Cristovao Cordeiro <cristovao.cordeiro@canonical.com>
 Content-Type: text/plain; charset=UTF-8; format=flowed
-Content-Transfer-Encoding: 7bit
+Content-Transfer-Encoding: 8bit
 
 Hi,
 
-the Google Developer Group on Campus Indian Institute of Information Technology 
-Kalyani (GDG on Campus IIIT Kalyani, https://gdgiiitk.bio.link/) is organizing 
-the 4th Winter of Code:
+when I started snapping CUPS back in 2017, the CUPS source was still maintained 
+at Apple and therefore I created the separate repo cups-snap at OpenPrinting.
 
-https://winterofcode.tech/
+As I generally recommend that Snaps should be created by the respective upstream 
+projects I am snapping all the projects of OpenPrinting, including CUPS, and 
+also the (retro-fitting) Printer Applications and ipp-usb. As for the Printer 
+Applications and ipp-usb the repositories were all the time at OpenPrinting I 
+have included the files for snapping them right into their repositories. The 
+same I did now also with the files to create the rockcraft-based OCI container 
+images, on which Rudra (CCed) has worked in his GSoC project, with Cristovão 
+(also CCed) as mentor.
 
-This is a mentoring program similar to GSoC, but smaller, the coding period is 
-one month (Jan 20 - Feb 20), there are also no stipends for contributors. 
-Passing contributors will get swag from the sponsors though. My intention is to 
-attract GSoC contributors for 2025. WoC contributors doing well on OpenPrinting 
-projects get high-priority candidates for the GSoC with us.
+Now we arrived also at the point what to do with CUPS, and my suggestion is to 
+not only add the OCI-container-related files to the CUPS 2.x repository "cups" 
+but then also migrate "cups-snap" to "cups", so that all the 
+distribution-independent packaging methods are included in the "cups" 
+repository, where also the code is.
 
-Contributor can be anybody, no requirement to be a student, but most will 
-probably students, they are young, want to make experience, have time to engage 
-themselves, ... and WoC is probably mostly advertised in Indian universities.
+For CUPS 3.x we can then migrate the two packaging methods Snap and OCI 
+container over to the two new CUPS daemons, "cups-local" and "cups-sharing", so 
+that each of them will be available in the Snap Store but also on OCI container 
+image "stores" like DockerHub.
 
-Contributor candidates are already registering and can do so until Dec 20.
+This is Rudra's final report of his GSoC project:
 
-On January 5-12 organizations are presenting their projects and registered 
-contributors are applying for them. On January 12-19 contributors get selected 
-by the mentors and onboarded.
+https://medium.com/@rudransh.iitm/gsoc-2024-final-report-container-chronicles-759fe7f23ac6
 
-Coding is from January 20 to February 20.
+This is Rudra's repository of the CUPS container image:
 
-After that, mentors evaluste the contributors from February 21-27, for the 
-results to get presented on February 28.
+https://github.com/rudra-iitm/cups-rock
 
-Timeline:
+Rudra's work on the retro-fitting Printer Applications is already in the 
+appropriate repositories "ps-printer-app", "ghostscript-printer-app", 
+"hplip-printer-app", "gutenprint-printer-app".
 
-https://winterofcode.tech/#timeline
-
-Organizations apply until December 31 with the following form:
-
-https://forms.gle/fxHLpHtf2Bp8uXyK7
-
-The application consists of telling which org you are, listing your mentors with 
-contact and posting a short list of project ideas.
-
-Project ideas which I would suggest so far are:
-
-- Add JPG-XL (JXL) image support to libcupsfilters
-- Make a Rock/OCI image from ipp-usb
-- Desktop/GUI: Printer certificate resetter pop-up on cups-pki-invalid 
-(https://github.com/OpenPrinting/cups/issues/1072)
-- Web: Manage database of get-printer-atrributes responses for listed driverless 
-printers, to allow emulating any printer and also to use for CI
-- Printer Applications (PAPPL): Complete IPP interface to create queues in the 
-Printer Application (https://github.com/michaelrsweet/pappl/discussions/372)
-
-Now I want to ask the following:
-
-- Who wants to mentor together with me?
-- Which of the projects you would like to mentor?
-- Do you also have project ideas?
-
-Note that all project for the WoC must be relatively small, as there is only 1 
-month of coding period.
-
-For contributors it is a way to get involved in OpenPrinting to join the 
-developer community and also to show their skills and enthusiasm as possible 
-GSoC contributors.
-
-Please respond ASAP, the sooner we apply, the sooner we will get visible for 
-potential contributors. Note also that contributor registration ends on Dec 20, 
-Friday this week.
+Mike, WDYT? Should we migrate the Snap and OCI-image repos into the CUPS one?
 
     Till
+
+
+
+
 
