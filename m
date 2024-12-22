@@ -1,63 +1,64 @@
-Received: from mail-ej1-f46.google.com (mail-ej1-f46.google.com [209.85.218.46])
+Received: from mail-ej1-f47.google.com (mail-ej1-f47.google.com [209.85.218.47])
 	(using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
 	(No client certificate requested)
-	by smtp.subspace.kernel.org (Postfix) with ESMTPS id 52B41290F
-	for <printing-architecture@lists.linux.dev>; Sun, 22 Dec 2024 15:33:05 +0000 (UTC)
-Authentication-Results: smtp.subspace.kernel.org; arc=none smtp.client-ip=209.85.218.46
+	by smtp.subspace.kernel.org (Postfix) with ESMTPS id B811D188CC9
+	for <printing-architecture@lists.linux.dev>; Sun, 22 Dec 2024 15:41:00 +0000 (UTC)
+Authentication-Results: smtp.subspace.kernel.org; arc=none smtp.client-ip=209.85.218.47
 ARC-Seal:i=1; a=rsa-sha256; d=subspace.kernel.org; s=arc-20240116;
-	t=1734881587; cv=none; b=oNhDTGowiz/67RiIDukXNBRDrhP+OAbjyIvSRdn76+GV1VPcOB5382T70jOQJycX2X8KM/pDFq0YrUbmfGokX4Gn+Th9LRpdBYAAD7HT4iWohzN4as50oDneipGB/dh/oWeJ0R3h/30zyspwmP8OBNpUQajhwPu8cy5PTicQ51o=
+	t=1734882062; cv=none; b=rTtBMZCc1j5511jSbk+UEXw5ZJMi+R6PAwyaKd2eUij7IT7p+UtJQ4gYMCb2ZczQYAMk4w5adVxT020oMDSn57akd2jOpR9tVzqBYpq1/Dqq0FjUZDzvdIT6epsPZHQtngfXNRwt8fO8r62Fw+SWJf6QHvF4F5ULFfTU6bolqx4=
 ARC-Message-Signature:i=1; a=rsa-sha256; d=subspace.kernel.org;
-	s=arc-20240116; t=1734881587; c=relaxed/simple;
-	bh=b+kiwblVFPWWqsCipOK2xmkygjvHd5Ip164qP/DtHVs=;
+	s=arc-20240116; t=1734882062; c=relaxed/simple;
+	bh=ei9sfZFXLJolHCIGL63Svr2l23B6+aVb8rlXTgSM5Y4=;
 	h=Message-ID:Date:MIME-Version:Subject:To:Cc:References:From:
-	 In-Reply-To:Content-Type; b=Z+Vzpf6/J4so+sM0rdj0tQONtzUeTSlqggDzzS7kK1HxVm3Zi61gPVO3XrwBMsIiTYqm6PJWqctP7YAVM4rqoDPs20VOcuF61MlM3kG6QlTUekCHqurQVCcipmoEb+ZMfpjKVBO85PjdT6r5W/CKw0x+mH1aDhEUPUebkepVsLI=
-ARC-Authentication-Results:i=1; smtp.subspace.kernel.org; dmarc=pass (p=none dis=none) header.from=gmail.com; spf=pass smtp.mailfrom=gmail.com; dkim=pass (2048-bit key) header.d=gmail.com header.i=@gmail.com header.b=BXSRBMaJ; arc=none smtp.client-ip=209.85.218.46
+	 In-Reply-To:Content-Type; b=PicljysxUzjB07mnTBG8ygwvBBsxXx2kfG8KiYZ1b9nTkagMVeuXp2J9BCJAygRIZcMBkMx6Gu5igFoUpZyRgoPb5UOioNjPY+F2iCOQ3QYyQFKz1RgxMwiLB4DDgen2G+IN0MT2Bg7JKqKTYsZS4hMMQAWAS9kD8GrY9mQm2yI=
+ARC-Authentication-Results:i=1; smtp.subspace.kernel.org; dmarc=pass (p=none dis=none) header.from=gmail.com; spf=pass smtp.mailfrom=gmail.com; dkim=pass (2048-bit key) header.d=gmail.com header.i=@gmail.com header.b=Y+tS13KI; arc=none smtp.client-ip=209.85.218.47
 Authentication-Results: smtp.subspace.kernel.org; dmarc=pass (p=none dis=none) header.from=gmail.com
 Authentication-Results: smtp.subspace.kernel.org; spf=pass smtp.mailfrom=gmail.com
 Authentication-Results: smtp.subspace.kernel.org;
-	dkim=pass (2048-bit key) header.d=gmail.com header.i=@gmail.com header.b="BXSRBMaJ"
-Received: by mail-ej1-f46.google.com with SMTP id a640c23a62f3a-aa66ead88b3so646289666b.0
-        for <printing-architecture@lists.linux.dev>; Sun, 22 Dec 2024 07:33:05 -0800 (PST)
+	dkim=pass (2048-bit key) header.d=gmail.com header.i=@gmail.com header.b="Y+tS13KI"
+Received: by mail-ej1-f47.google.com with SMTP id a640c23a62f3a-aa6c0d1833eso719121666b.1
+        for <printing-architecture@lists.linux.dev>; Sun, 22 Dec 2024 07:41:00 -0800 (PST)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
-        d=gmail.com; s=20230601; t=1734881583; x=1735486383; darn=lists.linux.dev;
+        d=gmail.com; s=20230601; t=1734882059; x=1735486859; darn=lists.linux.dev;
         h=content-transfer-encoding:in-reply-to:from:content-language
          :references:cc:to:subject:user-agent:mime-version:date:message-id
          :from:to:cc:subject:date:message-id:reply-to;
-        bh=DjlJeZ76YeiWdc7B6DY+VhIf7jPi83kq05rAAE/3h6k=;
-        b=BXSRBMaJ/JQgm0LpZfwWvxz0ntz2ktILRJjVB5Gf9iLDnbM+Qxk7ZGyH4OSE7QYljf
-         uzvlIv5wnuay+e6h10S0230MFSuxYrcxPgazSYh3qYO5qAKqZNwmGoSIioM9UAvB/wfU
-         +L7l2kt/oKx1q7MATF/Dz+rCsJu0hh/RVvVQnjzviUbSMCOGgNCswBSrKYH9/PmNkCu5
-         WJO6YEf58cYDTw3YCdSeNoVSOBuaneWYolngkr/0KKqqOb7NOgssqLUBHL4uYmM03+SW
-         KTPlWMXfraquqbAeETLlGXqeA8BswcGPWn42TzNjgoucIHFC8e5Gd1uHAHqvzVsZdCsC
-         QL8w==
+        bh=yXiPk+l/GeNt3rC4X4L48LVipk9udIN2GAQ/zfMxKMc=;
+        b=Y+tS13KI8CHEthuRbKze0e2hn2cQ2VrmVVYigUbCDLAXhTEmwa8cUxNC2/VKxXr0Cx
+         fyX3gNR05y+0JESaxq5IAJXVvmPI04jGnL6gh2ZCwS0lMACkZhK549WkCpGW5Ep8GJ6w
+         8vvEAgZRSo5vFg1dlrib0oQYX0JBzAnd6FDUWzTBFAvX8wIINu3C0ZaEZKTeUa4qum1L
+         Youzj0/gYvkCGr2eUYetg+CCi+CI93PubtCca2WZldAWnIL3iiw5RMG2RJ8DWeGe6uRz
+         3faDXHcJwa1uD9RLWwchIYL0jtc858QQk+wipFURDT1LFGNr5SbMDJZjHQEB6UYptPN2
+         xlEw==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
-        d=1e100.net; s=20230601; t=1734881583; x=1735486383;
+        d=1e100.net; s=20230601; t=1734882059; x=1735486859;
         h=content-transfer-encoding:in-reply-to:from:content-language
          :references:cc:to:subject:user-agent:mime-version:date:message-id
          :x-gm-message-state:from:to:cc:subject:date:message-id:reply-to;
-        bh=DjlJeZ76YeiWdc7B6DY+VhIf7jPi83kq05rAAE/3h6k=;
-        b=GB2gRFoWri6ZPhuJpP22FXhYJOsgnWvtTB/hEcx2kqfziv/k2E6BlDHWVaMYEpSN+F
-         nNW7f4eQyLLQTpcV4t7CRvicUvPTwS57Ba4momIInI/t1uV4+3YRGJGRs391ROHOYvQO
-         XbXFv/MDkLd7CNdqDgeTkg2MQ1KQmC6TZ6kqhnSQaLy2a44yIZoGIsg3HHuL3horlQaS
-         KHNTi2XqShjDGeUgfk2b2bNeaNBJsGylsnV9NZf2qtaiwS62aycbBTnZhFsWMTKcIZ8B
-         29UQfk7R3FpPo/rOHrNClOLs2tnLNTStV7LqIuGD+HH4FuBsk352ueGFFBfEL1dtLFfS
-         5SVg==
-X-Gm-Message-State: AOJu0Yxtv4ytuoGDtUZiSKY1nr8LHTgyUO9OeYIMABZrsrXswKfoVYUM
-	snv46CxV4Pozx9vc9OqSi6eF2gLUjbHuUPjybGHAdTCxsdFlV8a3
-X-Gm-Gg: ASbGncuQplYVWWCOnYGudW7F2FMTxwqtwRFWbB2Dnf0BHlyvzlV0HH3W3ZkaAYMIv+E
-	eCv0T7otC3zFdr9IttUd+ApS307gsD80+j2i2PNuamPgmw66PsbC/Gmo7pem96k//J74vudRJkv
-	Vak5mkw8GfhsT4TPZ7qiFCtBkEoveFVN3t83eqicOh5RMoLRK9s626hjl4ehkJrYcaXvF6RnMm9
-	cG+rFm19O8AVDKANhjSdcik+NJOLw1XOp+7r+dllN/FDwhsOVBthivwGK18WW9wyEfoTh4mjPjW
-	tfORH1ypUE1eVUawAlTVi5zNRKlxSJk=
-X-Google-Smtp-Source: AGHT+IE7UXQuN6T2nOSubAxZd9CF0QJ9hjHTFoWaT7atwk6MeEsYWbmFQdRmuLKziasNuNOF3lCXuA==
-X-Received: by 2002:a17:906:dc92:b0:aab:da48:493e with SMTP id a640c23a62f3a-aac2ad88fdbmr1050053066b.21.1734881583369;
-        Sun, 22 Dec 2024 07:33:03 -0800 (PST)
+        bh=yXiPk+l/GeNt3rC4X4L48LVipk9udIN2GAQ/zfMxKMc=;
+        b=gEP8HKSEct78tD1Mo49BQhxu8yyRAdF/0iTyoW08kENb4DZbmGJOiVVaceMiv+7cFU
+         xbQn1c/way+l/48LMX38Ul6tGwYiAvv2Rin9SSYdl05T4jVnF8GmeoSokdGgtwq2KRun
+         tz1BVrgVmPqMXBkodJk5FPIfSzJQbrAbkbQOIQbgukiw1Kx/6ErN2UFoNl4TxSUBgMCr
+         1yu+ogc1KB9qqAVE+BK2IAORgxkgXNon2HI0ODhnBkJ3RYx1wOo4X7E/YR5LBo0kMjLO
+         bnqe9Gg1rMtikwpzAIneXbnds6MzA/kWHdeQBa2xR6ZOzWzjuvAHjGG3BLYimvOnEX1/
+         VCHA==
+X-Forwarded-Encrypted: i=1; AJvYcCXilab/YcnPajhxAh18EdyGD4MxSoZ1UkjvDkTjSL/RdinJ71V/CFjk+Vv6RONg+sbrGVTMO5tYl5AhkrXrLYEkkUNWlXM=@lists.linux.dev
+X-Gm-Message-State: AOJu0Yx7c4SNp6hkIktjc7Gk1ooDUdTQa1x6RksuP8EE4ZcUWOz1kPhe
+	kPY6p3ZYhp3fY/37JPbc4gbSvs9tk1z7H83LWMIDlpkHC1xCmIZuVLSysA==
+X-Gm-Gg: ASbGncvGpQ8n1AL7wCpXrHrxyAU9GaU1iNRlGndtmJJO5WGXDq/60NhVhI8uDGiUxFq
+	Yq75xoAFS2JuupQtmVCG+yndRso8ZjyL9189tPHLnz1bR0EA7eKPklJ5VqFVWdVPOrMBihR3dp5
+	1JTaLalRwMFtXE4GiDwyQacB4+cZhEwnXBVxsTv9MyySY7bRvMUK7ixKz36MnglH/JJwJGKR9gh
+	2JJ/3xZ38pzec+v14djHm1rs+EoiAx4/I+N/26QKqN7OZxp0Cx/6Lmck56/KukeodhFJW5SFT7j
+	Tm+/2GEkBuS82W7dK4jEoDWyNsneD2Q=
+X-Google-Smtp-Source: AGHT+IFFUVD6PRsWax0Dmvy0YGoSSCA+x8YfXH/bMe7C48Xm3MPewN0Ngt9Khw12ng+FucLTt+acbQ==
+X-Received: by 2002:a17:907:7dab:b0:aa6:98c9:aadc with SMTP id a640c23a62f3a-aac2d45fb01mr870155966b.31.1734882058803;
+        Sun, 22 Dec 2024 07:40:58 -0800 (PST)
 Received: from [192.168.68.113] (194-96-30-82.hdsl.highway.telekom.at. [194.96.30.82])
-        by smtp.gmail.com with ESMTPSA id 4fb4d7f45d1cf-5d80675a27bsm3791251a12.9.2024.12.22.07.33.02
+        by smtp.gmail.com with ESMTPSA id a640c23a62f3a-aac0efe3958sm399263566b.96.2024.12.22.07.40.57
         (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
-        Sun, 22 Dec 2024 07:33:02 -0800 (PST)
-Message-ID: <34cc8c02-8e8a-47ba-856f-9ce834bd4496@gmail.com>
-Date: Sun, 22 Dec 2024 16:33:01 +0100
+        Sun, 22 Dec 2024 07:40:58 -0800 (PST)
+Message-ID: <7fa0204d-0804-4d7a-bb10-ff228dea2e67@gmail.com>
+Date: Sun, 22 Dec 2024 16:40:57 +0100
 Precedence: bulk
 X-Mailing-List: printing-architecture@lists.linux.dev
 List-Id: <printing-architecture.lists.linux.dev>
@@ -67,9 +68,9 @@ MIME-Version: 1.0
 User-Agent: Mozilla Thunderbird
 Subject: Re: Merge repositories for CUPS Snap and CUPS OCI/Docker Container
  into the CUPS repo itself
-To: Rudra Pratap Singh <rudransh.iitm@gmail.com>,
- Michael Sweet <msweet@msweet.org>
-Cc: OpenPrinting <printing-architecture@lists.linux.dev>,
+To: Rudra Pratap Singh <rudransh.iitm@gmail.com>
+Cc: Michael Sweet <msweet@msweet.org>,
+ OpenPrinting <printing-architecture@lists.linux.dev>,
  Cristovao Cordeiro <cristovao.cordeiro@canonical.com>,
  Soumyadeep Ghosh <soumyadeepghosh2004@zohomail.in>
 References: <1ca4c555-aa30-43db-a9b4-74bd2729f8dc@gmail.com>
@@ -78,29 +79,20 @@ References: <1ca4c555-aa30-43db-a9b4-74bd2729f8dc@gmail.com>
  <CADmOQacnfVS5VR+dpudVt2NxgV_HG+K0in0mm-h5Hwe0nfF0cQ@mail.gmail.com>
  <EA694437-FF7A-4A92-9927-D752C965BCB7@msweet.org>
  <CADmOQafms3c=7FAzeX9cbvnPOYDcf9Xxe9QyKUjYEYTgJq3AJw@mail.gmail.com>
+ <34cc8c02-8e8a-47ba-856f-9ce834bd4496@gmail.com>
+ <CADmOQadkw-BY2vNqQtJDqi7TqGpHErVM29rkPfGAajiFVhGUiw@mail.gmail.com>
 Content-Language: en-US
 From: Till Kamppeter <till.kamppeter@gmail.com>
-In-Reply-To: <CADmOQafms3c=7FAzeX9cbvnPOYDcf9Xxe9QyKUjYEYTgJq3AJw@mail.gmail.com>
+In-Reply-To: <CADmOQadkw-BY2vNqQtJDqi7TqGpHErVM29rkPfGAajiFVhGUiw@mail.gmail.com>
 Content-Type: text/plain; charset=UTF-8; format=flowed
 Content-Transfer-Encoding: 7bit
 
-On 12/22/24 16:26, Rudra Pratap Singh wrote:
-> To clarify, the feature to update the README.md file is not currently available 
-> in the desktop-snaps action. To implement this, I would need to dive into their 
-> codebase (which I am already familiar with) and make modifications to suit our 
-> specific requirements.
-> 
-> Whether this concerns the repository's main |README.md| file or a separate one 
-> for the packaged CUPS, I will ensure it is tailored appropriately.
-> 
-> Best regards,
-> Rudra
+On 12/22/24 16:37, Rudra Pratap Singh wrote:
+> It would be easier to pass the path of the README (or any Markdown file) where 
+> we want to list the parts, directly in the workflow itself.
 
-You could make an entry (a comment) in snapcraft.yaml and rockcraft.yaml which 
-is/are the files to create the component version list in or just search files in 
-the base directory of the repo and in the directory where the *craft.yaml is in 
-whether they have the appropriate "## Included Components" mark and then 
-auto-update these files.
+OK, yes, you are right. We have the workflow in each repo with automation ... 
+Let us do it this way.
 
     Till
 
