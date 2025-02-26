@@ -1,123 +1,218 @@
-Received: from mail.msweet.org (mail.msweet.org [173.255.209.91])
+Received: from smtp3.osuosl.org (smtp3.osuosl.org [140.211.166.136])
 	(using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
 	(No client certificate requested)
-	by smtp.subspace.kernel.org (Postfix) with ESMTPS id C3AE714F70
-	for <printing-architecture@lists.linux.dev>; Wed, 19 Feb 2025 01:35:48 +0000 (UTC)
-Authentication-Results: smtp.subspace.kernel.org; arc=none smtp.client-ip=173.255.209.91
+	by smtp.subspace.kernel.org (Postfix) with ESMTPS id C5D3323815A
+	for <printing-architecture@lists.linux-foundation.org>; Wed, 26 Feb 2025 09:25:25 +0000 (UTC)
+Authentication-Results: smtp.subspace.kernel.org; arc=none smtp.client-ip=140.211.166.136
 ARC-Seal:i=1; a=rsa-sha256; d=subspace.kernel.org; s=arc-20240116;
-	t=1739928950; cv=none; b=jK4utj/JClSkhhmmGxCgYya4sX3vJS8vPWKioa4aDT9xKPfK/c/+brwQkOYJ1tBg+XR4O4dDKsvYx9RPHZd8MTfNUiRtyz5rplXUds8MLS+ZHn5FGZstFDZ/+yB3FgTZb0c7GathJNg3aVfy2wGS9oRjmchT0N8aS2eaRme10o4=
+	t=1740561927; cv=none; b=OpVFDLJbe4NZEHaYTNeIej7JXAapBjiBGQhRzNm+R5vP5DBr/ALVWpzgQL5vgYlfUZGnnm+kDMRlejRm30NSdwhj+X1WarkqfHvc0gWjwBN9J0WCnd0hgSZTrbsQAqtZSymG+AFSMG1KNmzGWUD9HKdF+AK69U03MvHF++oq9vY=
 ARC-Message-Signature:i=1; a=rsa-sha256; d=subspace.kernel.org;
-	s=arc-20240116; t=1739928950; c=relaxed/simple;
-	bh=4NGJL4HIZaoFOWDlCPM9fTlSxY1+kexCd8ajoI/+SCw=;
-	h=Content-Type:Mime-Version:Subject:From:In-Reply-To:Date:Cc:
-	 Message-Id:References:To; b=lEpfFEalp0I0QTxU1KY6QLXnC17IztJONhi93YoRMt06LS4CkL/NLlYQwPulUGtViKex6j2tszkAf8GRhuxzEup8h/yFodOgZ2FJnRvKforEFpuTTXBTkH5rD2NEesVAWuUqxY6l4zxIvCal2Yg6D2bJTvVSOftW3wSgYoFDauI=
-ARC-Authentication-Results:i=1; smtp.subspace.kernel.org; dmarc=pass (p=quarantine dis=none) header.from=msweet.org; spf=pass smtp.mailfrom=msweet.org; dkim=pass (1024-bit key) header.d=msweet.org header.i=@msweet.org header.b=BX+pU1oN; arc=none smtp.client-ip=173.255.209.91
-Authentication-Results: smtp.subspace.kernel.org; dmarc=pass (p=quarantine dis=none) header.from=msweet.org
-Authentication-Results: smtp.subspace.kernel.org; spf=pass smtp.mailfrom=msweet.org
+	s=arc-20240116; t=1740561927; c=relaxed/simple;
+	bh=Aq3i5sxwG3ZYEgnTd+3BU/Nw1GG9j9j1pL1eNg8qGP0=;
+	h=Message-ID:Date:MIME-Version:Subject:To:References:From:
+	 In-Reply-To:Content-Type; b=XvlnqWGm1nkZqWB5To9l+kKToag5pwaAoQs97tUjPLjsFFZGPP/VlYKePac9hMT5uRnm8Dd/Aaj6vPZsjPjIE1dEgEqotajR0fCVuWafQ3Bf6cfzBRenPOm5B4wTEkz5esQfP0IIH0tREfPs9+1VQhiIdQHdP/vDHQoqLIf4UCc=
+ARC-Authentication-Results:i=1; smtp.subspace.kernel.org; dkim=pass (1024-bit key) header.d=redhat.com header.i=@redhat.com header.b=fdXUu6mO; arc=none smtp.client-ip=140.211.166.136
 Authentication-Results: smtp.subspace.kernel.org;
-	dkim=pass (1024-bit key) header.d=msweet.org header.i=@msweet.org header.b="BX+pU1oN"
-Received: from smtpclient.apple (unknown [IPv6:2605:b100:325:380a:3519:2ecd:dc34:17ff])
-	(using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
-	(No client certificate requested)
-	by mail.msweet.org (Postfix) with ESMTPSA id F3F91803C9;
-	Wed, 19 Feb 2025 01:35:41 +0000 (UTC)
-DKIM-Filter: OpenDKIM Filter v2.11.0 mail.msweet.org F3F91803C9
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=msweet.org;
-	s=default; t=1739928942;
-	bh=4NGJL4HIZaoFOWDlCPM9fTlSxY1+kexCd8ajoI/+SCw=;
-	h=Subject:From:In-Reply-To:Date:Cc:References:To:From;
-	b=BX+pU1oNCyFWsBT2OTy7OHpcErV6gO2E/U+Ed4GVzyG7p9sM0IffAji3J5dNWrFlD
-	 Y+fTj1HrT/l5fv9bydFikCyVo9vrYg/Mk4J7sJrHIyoAWwdeZHInQyNEqPCkhVJZHI
-	 kChEwM/87f1Nhv4fx8LKETabDshza+HPTTiKdcIU=
-Content-Type: text/plain;
-	charset=utf-8
+	dkim=pass (1024-bit key) header.d=redhat.com header.i=@redhat.com header.b="fdXUu6mO"
+Received: from localhost (localhost [127.0.0.1])
+	by smtp3.osuosl.org (Postfix) with ESMTP id 56ACB60AD1
+	for <printing-architecture@lists.linux-foundation.org>; Wed, 26 Feb 2025 09:25:25 +0000 (UTC)
+X-Virus-Scanned: amavis at osuosl.org
+X-Spam-Flag: NO
+X-Spam-Score: -5.79
+X-Spam-Level:
+Received: from smtp3.osuosl.org ([127.0.0.1])
+ by localhost (smtp3.osuosl.org [127.0.0.1]) (amavis, port 10024) with ESMTP
+ id KR5XSSPQIxoM for <printing-architecture@lists.linux-foundation.org>;
+ Wed, 26 Feb 2025 09:25:24 +0000 (UTC)
+Received-SPF: Pass (mailfrom) identity=mailfrom; client-ip=170.10.129.124; helo=us-smtp-delivery-124.mimecast.com; envelope-from=zdohnal@redhat.com; receiver=<UNKNOWN> 
+DMARC-Filter: OpenDMARC Filter v1.4.2 smtp3.osuosl.org 35A44607E0
+Authentication-Results: smtp3.osuosl.org; dmarc=pass (p=none dis=none) header.from=redhat.com
+DKIM-Filter: OpenDKIM Filter v2.11.0 smtp3.osuosl.org 35A44607E0
+Authentication-Results: smtp3.osuosl.org;
+	dkim=pass (1024-bit key) header.d=redhat.com header.i=@redhat.com header.a=rsa-sha256 header.s=mimecast20190719 header.b=fdXUu6mO
+Received: from us-smtp-delivery-124.mimecast.com (us-smtp-delivery-124.mimecast.com [170.10.129.124])
+	by smtp3.osuosl.org (Postfix) with ESMTPS id 35A44607E0
+	for <printing-architecture@lists.linux-foundation.org>; Wed, 26 Feb 2025 09:25:23 +0000 (UTC)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=redhat.com;
+	s=mimecast20190719; t=1740561922;
+	h=from:from:reply-to:subject:subject:date:date:message-id:message-id:
+	 to:to:cc:mime-version:mime-version:content-type:content-type:
+	 content-transfer-encoding:content-transfer-encoding:
+	 in-reply-to:in-reply-to:references:references;
+	bh=ZtH1bILcg/6RTOZC6Ef3RNATJwa621iTaaovGJ3BmRQ=;
+	b=fdXUu6mOk0MjUdmpnJZr00+q4Sw0U6+LitKQl10aNBHd15K6b26rz6Gf7BF6b9bpXO+qJu
+	zFLSYHRectCBoYgIdZBZhlu5/gV0kmeVnnEanTZSHIqtkEyFEknGxSwdFolU223Pzhg1ek
+	YOOeF+F7XceMCI3eUI5A3XxEpx+VpQw=
+Received: from mail-wm1-f70.google.com (mail-wm1-f70.google.com
+ [209.85.128.70]) by relay.mimecast.com with ESMTP with STARTTLS
+ (version=TLSv1.3, cipher=TLS_AES_256_GCM_SHA384) id
+ us-mta-153-MNaw_XRAP-yhBhmUbLpcSg-1; Wed, 26 Feb 2025 04:25:21 -0500
+X-MC-Unique: MNaw_XRAP-yhBhmUbLpcSg-1
+X-Mimecast-MFC-AGG-ID: MNaw_XRAP-yhBhmUbLpcSg_1740561920
+Received: by mail-wm1-f70.google.com with SMTP id 5b1f17b1804b1-43941ad86d4so33040465e9.2
+        for <printing-architecture@lists.linux-foundation.org>; Wed, 26 Feb 2025 01:25:20 -0800 (PST)
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1740561919; x=1741166719;
+        h=content-transfer-encoding:in-reply-to:from:content-language
+         :references:to:subject:user-agent:mime-version:date:message-id
+         :x-gm-message-state:from:to:cc:subject:date:message-id:reply-to;
+        bh=ZtH1bILcg/6RTOZC6Ef3RNATJwa621iTaaovGJ3BmRQ=;
+        b=CvAo3d85Gtc6/TS4gOOmlGDWTkeGqOJrn1cVu1fZkWpJo2xaiXxfw87S5FENr51H+w
+         4kplUMTRvExJMbIJqW5GXTc4iEFfWBSjbkGkaZWEibG36mTP/mkF2Eq9YQebbQxq/83D
+         5Lrgyvcyze/UrPrgP9SUuyWpl4SGkKgb8eKQmdvtdP2WCYRF/lFrA1Jjc6U31FxKi+EN
+         sgXTPQkOmgvetPJpfgvqgmNTvprs/qIAhDHjQwPMZbsTeioagCg96RbLYThofjecjw+h
+         Hm/m6DFx1bdsdL6XnsWxO1/ZCoVplV3pn/XbnwJeFMa+JINq6MctW5zEGfLRNv1QZ5a/
+         OVNg==
+X-Forwarded-Encrypted: i=1; AJvYcCUo8tCw3klEeO01Cos3MIUPSq6gqVYiJdtTRJqBEbDuD5U2OLgHCgTnAM/8eZw7+OYtxhfkjFgQD8387bhER4xZtgXQOHo=@lists.linux-foundation.org
+X-Gm-Message-State: AOJu0YzNq+sZA1Xpm51AxrhvphkD4cGWyFdEpjGQsWAKe0TX6XjqKYvW
+	uHSgTaZnbwKfru1U29beFa+p3Ue5SMJND5rDpII/gXOg01ytRiED2QHFzmEpXAkaK7kMSZkao80
+	PAluAxXlg7WwLWoycZded2HmYS3vyeueVpLfDslZf6wyWO6/kJnYZRZ3fhQvglHuT/Zh7msxqnz
+	8oEKHPlWCDTZFPclzoQThP
+X-Gm-Gg: ASbGnctpQt+PGZVDXxo8EhP3Aj/9t32gfEG23Gq+JzxyOd/qTnXHZHvQwk1LOOebI7h
+	/eWg8Goe1AtAuFTHB2pp1RSc+9tHLevwNjanY9za4TKzdbNqLnxWB5HoAXAT8nV4iLU5Dv12F1s
+	5yr5ZlvoAQ27oAc/jfMLvhPDUxbkpIS4rg9EjOU8XLmfTMUebm1eKg3xiDD9AjEbEny4hq2Cfn3
+	PhEMG+1bY1p8/gu9uhsXTGs/ulV/5A7WOT93lrD2O8zi4Z4d6UDn0juu0XtB7DmxFh7LvbPmfRZ
+	+pAsHSplJq2taCcTSOHhycSHW3oMbaP0tcjbgbw=
+X-Received: by 2002:a05:600c:3b04:b0:439:98ca:e39e with SMTP id 5b1f17b1804b1-439aebc36a9mr132830305e9.24.1740561919508;
+        Wed, 26 Feb 2025 01:25:19 -0800 (PST)
+X-Google-Smtp-Source: AGHT+IHtevl66qxY0ig9ptlzJwp8usfFL1HFIKoH1tyZBUTJU+DbhXZy6FGTYW8BbmsbqGkxIYgdSA==
+X-Received: by 2002:a05:600c:3b04:b0:439:98ca:e39e with SMTP id 5b1f17b1804b1-439aebc36a9mr132830105e9.24.1740561919051;
+        Wed, 26 Feb 2025 01:25:19 -0800 (PST)
+Received: from [10.43.3.35] (nat-pool-brq-t.redhat.com. [213.175.37.10])
+        by smtp.gmail.com with ESMTPSA id 5b1f17b1804b1-43aba543f21sm14380535e9.28.2025.02.26.01.25.17
+        (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
+        Wed, 26 Feb 2025 01:25:17 -0800 (PST)
+Message-ID: <c4066f25-c650-4037-9bce-864940daf3fa@redhat.com>
+Date: Wed, 26 Feb 2025 10:25:16 +0100
 Precedence: bulk
 X-Mailing-List: printing-architecture@lists.linux.dev
 List-Id: <printing-architecture.lists.linux.dev>
 List-Subscribe: <mailto:printing-architecture+subscribe@lists.linux.dev>
 List-Unsubscribe: <mailto:printing-architecture+unsubscribe@lists.linux.dev>
-Mime-Version: 1.0 (Mac OS X Mail 16.0 \(3826.400.131.1.6\))
-Subject: Re: Free-/Open-Source-licensed JPG, JPG-XL, PNG, TIFF, PDF,
- PostScript files for print filter and OCR CI testing
-From: Michael Sweet <msweet@msweet.org>
-In-Reply-To: <762971A3-E6FA-4764-9C1F-2C1C83434303@msweet.org>
-Date: Tue, 18 Feb 2025 20:35:09 -0500
-Cc: OpenPrinting <printing-architecture@lists.linux.dev>,
- UDDHAV PHATAK 22BCE10731 <uddhavphatak2022@vitbhopal.ac.in>,
- Titiksha Bansal <titikshabansal0209@gmail.com>
-Content-Transfer-Encoding: quoted-printable
-Message-Id: <CA159C96-DFAC-4E08-8888-1473A5906611@msweet.org>
-References: <4c111a8a-caed-4539-a9eb-96de0988bfd1@gmail.com>
- <CB450CD2-139A-4735-BF41-DFCED376D44D@msweet.org>
- <a677abf6-085b-448b-88b7-28b830f2f133@gmail.com>
- <DD25184F-36DF-48D7-818D-FEBC045FEB71@msweet.org>
- <762971A3-E6FA-4764-9C1F-2C1C83434303@msweet.org>
-To: Till Kamppeter <till.kamppeter@gmail.com>
-X-Mailer: Apple Mail (2.3826.400.131.1.6)
+MIME-Version: 1.0
+User-Agent: Mozilla Thunderbird
+Subject: Re: Qt issue with printing landscape-oriented images
+To: Alexander Pevzner <pzz@apevzner.com>,
+ Open Printing <printing-architecture@lists.linux-foundation.org>
+References: <2ebbd828-47f8-406e-8d67-ad1a8abb9393@apevzner.com>
+From: Zdenek Dohnal <zdohnal@redhat.com>
+In-Reply-To: <2ebbd828-47f8-406e-8d67-ad1a8abb9393@apevzner.com>
+X-Mimecast-Spam-Score: 0
+X-Mimecast-MFC-PROC-ID: EUVHbo6NZ-BSGFOhUWMbVHMIBq6nhQXz0ErVGEkf1TQ_1740561920
+X-Mimecast-Originator: redhat.com
+Content-Language: en-US
+Content-Type: text/plain; charset=UTF-8; format=flowed
+Content-Transfer-Encoding: 8bit
 
-All,
+Hi Alex,
 
-I have started adding some test documents to the repository, starting =
-with some JPEG and PNG photo test files.
+thank you for heads-up!
+
+To be honest I have never seen IPP attribute landscape  :D - I know 
+there is IPP attribute 'orientation-requested' which is used for setting 
+whether you want portrait, landscape, etc.
+
+Based on the code for image it looks like landscape is really a thing, 
+and if okular wants to do landscape this way, it should pass 
+landscape=true instead of false.
+
+The older cups-filters ignores anything besides landscape=true, but the 
+current libcupsfilters sets "auto-rotate" if landscape=false is passed, 
+which looks correct to me.
 
 
-> On Feb 17, 2025, at 4:48=E2=80=AFPM, Michael Sweet <msweet@msweet.org> =
-wrote:
->=20
-> Till,
->=20
-> I created an OpenPrinting project to hold the sample files:
->=20
->    https://github.com/OpenPrinting/sample-files
->=20
->=20
->> On Feb 17, 2025, at 4:22=E2=80=AFPM, Michael Sweet =
-<msweet@msweet.org> wrote:
->>=20
->> Till,
->>=20
->>> On Feb 17, 2025, at 1:30=E2=80=AFPM, Till Kamppeter =
-<till.kamppeter@gmail.com> wrote:
->>>> ...
->>>> to the IEEE-ISTO and the Printer Working Group, a program of the =
-IEEE-ISTO.
->>>=20
->>> Is this a well-known free software/document license? And if yes, =
-which one?
->>=20
->> I don't think it is a well-known "license", however the terms match =
-the Creative Commons Attribution-NoDerivatives 4.0 International (CC =
-BY-ND 4.0) license.
->>=20
->>> ...
->>>> The libcups project includes the ipptransform tool, which can =
-generate PDF, PWG Raster, Apple Raster, and PCL content at different =
-resolutions from PNG, JPEG, PDF, and text input, and I can certainly =
-revive that sample file script.
->>>=20
->>> Could you please do so?
->>=20
->> OK, I'll set something up as a starting point...
->>=20
->>> ...
->>> As JPEX-XL is a format which I am newly adding to the filters, how =
-and where could I obtain free sample images for that format?
->>=20
->> I suspect you'll need to generate them.  I think ImageMagick supports =
-conversion to the format, so that might be a way towards that goal.  The =
-libjxl project also includes a cjxl utility that can convert PNG files =
-to JXL, and libjxl also provides a Gimp plugin...
->>=20
->> ________________________
->> Michael Sweet
->>=20
->>=20
->=20
-> ________________________
-> Michael Sweet
->=20
->=20
+Zdenek
 
-________________________
-Michael Sweet
+On 2/18/25 15:18, Alexander Pevzner wrote:
+> Hi!
+>
+> This information may be interesting for printing stack maintainers of 
+> various Linus distros (Zdenek?).
+>
+> I've already posted it into the OpenPrinting Telegram group, but as 
+> not everybody subscribed to the group, I repost it here, by Till's 
+> advise.
+>
+> We've recently noticed, that the Okular (Qt-based image viewer) 
+> incorrectly prints images in the landscape orientation.
+>
+> When printing image (see attached test.png) it sends the following 
+> Create-Job request, followed by the image, converted to PDF (see 
+> attached 00000020-data.pdf:
+>
+> -----
+> IPP: request message:
+> {
+>     VERSION 2.0
+>     OPERATION Create-Job
+>
+>     GROUP operation-attributes-tag
+>     ATTR "attributes-charset" charset: utf-8
+>     ATTR "attributes-natural-language" naturalLanguage: en-us
+>     ATTR "printer-uri" uri: 
+> ipp://localhost/printers/Kyocera_ECOSYS_M2040dn
+>     ATTR "requesting-user-name" nameWithoutLanguage: pzz
+>     ATTR "job-name" nameWithoutLanguage: bug.png
+>
+>     GROUP job-attributes-tag
+>     ATTR "media" keyword: A4
+>     ATTR "sides" keyword: one-sided
+>     ATTR "landscape" boolean: false
+>     ATTR "number-up" integer: 1
+>     ATTR "number-up-layout" keyword: lrtb
+>     ATTR "job-billing" nameWithoutLanguage:
+>     ATTR "job-priority" integer: 50
+>     ATTR "job-sheets" nameWithoutLanguage: none none
+> }
+> -----
+>
+> It can be reduced down to the very simple Qt example:
+>
+> -----
+> #include <iostream>
+> #include <QApplication>
+> #include <QPrinter>
+> #include <QPrintDialog>
+> #include <QImage>
+> #include <QPainter>
+>
+> int main(int argc, char* argv[])
+> {
+>     QApplication app(argc, argv);
+>     QPrinter printer;
+>     printer.setPageOrientation(QPageLayout::Landscape);
+>     QImage img("./test.png");
+>     img = img.scaled(printer.width(), printer.height(), 
+> Qt::KeepAspectRatio, Qt:
+>     QPainter painter(&printer);
+>     painter.drawImage(0, 0, img, 0, 0);
+>     painter.end();
+>     return 0;
+> }
+> -----
+>
+> The problem is obviously in the ATTR "landscape" boolean: false 
+> attribute. This is definitely at the Qt side. Seems like all existing 
+> versions of Qt are affected.
+>
+> We have submitted PR agains qt-base, it is pretty trivial and 
+> currently on review:
+>
+> https://codereview.qt-project.org/c/qt/qtbase/+/624835
+>
+> I believe, all more or less modern Linux distros are affected and 
+> wonder why nobody complained before
+>
+> Note, the problem doesn't exist with old versions of the cups-filters 
+> (I was able to test with very old version1.28)
+>
+> Looks like the landscape attribute attribute is silently ignoring by 
+> these old versions, and without this explicit orientation setting, 
+> filters set correct orientation automatically.
+>
+-- 
+Zdenek Dohnal
+Senior Software Engineer
+Red Hat, BRQ-TPBC
 
