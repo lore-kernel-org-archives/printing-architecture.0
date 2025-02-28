@@ -1,82 +1,82 @@
 Received: from smtp4.osuosl.org (smtp4.osuosl.org [140.211.166.137])
 	(using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
 	(No client certificate requested)
-	by smtp.subspace.kernel.org (Postfix) with ESMTPS id C642D23F38F
-	for <printing-architecture@lists.linux-foundation.org>; Fri, 28 Feb 2025 22:07:56 +0000 (UTC)
+	by smtp.subspace.kernel.org (Postfix) with ESMTPS id 5459C1DE3C0
+	for <printing-architecture@lists.linux-foundation.org>; Fri, 28 Feb 2025 22:20:21 +0000 (UTC)
 Authentication-Results: smtp.subspace.kernel.org; arc=none smtp.client-ip=140.211.166.137
 ARC-Seal:i=1; a=rsa-sha256; d=subspace.kernel.org; s=arc-20240116;
-	t=1740780478; cv=none; b=CuAmagaKFnWqHaGqq+FaU4cKx5LW29ZAYamZ76N7df9f3307PxihKYsFO9UvfBq0y0+zxzSh6W/8NMVBl/eA9iz5VpITNDJyNUXbr4cIp8oFUwR0H8TjKFk8vk2o2K4z7KJcmKc+jb8OIITCXVWKIVu3FYncJRv3Dqv8OT2Ay7Y=
+	t=1740781223; cv=none; b=ee4CteCtnr3TgTrqs2IB6wWmk++IW6Z50Pgct5M7kXT4UIYiLdIYqxOq/78MGv+bkBPi8+LBAEzKRnPYnF16qxpqsVyNa7K31zeEfh+SvZ71ZqQMsi47ehnu/nB6jZOVWHZxv61UyEOMPaHMufSM2U7aY6h/NZ+3LepTJE/Lqag=
 ARC-Message-Signature:i=1; a=rsa-sha256; d=subspace.kernel.org;
-	s=arc-20240116; t=1740780478; c=relaxed/simple;
-	bh=8cLuyncg2GlfwlTXdxihL7Yt5GkAQemK/6445ogIot8=;
-	h=Message-ID:Date:MIME-Version:To:From:Subject:Content-Type; b=TBUVIcIAF47HW41aLWkVdREAGVmi9KIAgUUQkKzxwJ3y+PHXE+3tVkLJmjZdolXCbgHah8tTgNWAgA/F+U+Mmk0ijeNiAgfzQCIcOaErGrm31wuRNWCJlPExWxF288xNHzeyP/xw+j1KHXx31XEFfP9GuW9Udger3vILmLLADb8=
-ARC-Authentication-Results:i=1; smtp.subspace.kernel.org; dkim=pass (2048-bit key) header.d=apevzner.com header.i=@apevzner.com header.b=Ci6PxAn8; arc=none smtp.client-ip=140.211.166.137
+	s=arc-20240116; t=1740781223; c=relaxed/simple;
+	bh=5LhVw7m83WaigxAHxx2H2ppMokfPOBEkeovu2wKZ0Ts=;
+	h=Message-ID:Date:MIME-Version:Subject:To:References:From:
+	 In-Reply-To:Content-Type; b=kgTGt8EQIsUlzR47rAD3DA4vkQjsYjuK9VBRN4yFcdABObNRyv64F0bC6Y2+q7HeA94bCrQKRnzeR3pL7qa8x2ILxIwm0wTwkIByMmQLhIniF/YS1Xypqgw0lA2VIKatBDzD2s4XEsQcReb6rqypzI0HcS8iHa2a5+U0aL5+aNg=
+ARC-Authentication-Results:i=1; smtp.subspace.kernel.org; dkim=pass (2048-bit key) header.d=apevzner.com header.i=@apevzner.com header.b=hUlKeLm+; arc=none smtp.client-ip=140.211.166.137
 Authentication-Results: smtp.subspace.kernel.org;
-	dkim=pass (2048-bit key) header.d=apevzner.com header.i=@apevzner.com header.b="Ci6PxAn8"
+	dkim=pass (2048-bit key) header.d=apevzner.com header.i=@apevzner.com header.b="hUlKeLm+"
 Received: from localhost (localhost [127.0.0.1])
-	by smtp4.osuosl.org (Postfix) with ESMTP id 44A1C5214D
-	for <printing-architecture@lists.linux-foundation.org>; Fri, 28 Feb 2025 21:29:50 +0000 (UTC)
+	by smtp4.osuosl.org (Postfix) with ESMTP id 811844F902
+	for <printing-architecture@lists.linux-foundation.org>; Fri, 28 Feb 2025 22:09:01 +0000 (UTC)
 X-Virus-Scanned: amavis at osuosl.org
 X-Spam-Flag: NO
 X-Spam-Score: -2.1
 X-Spam-Level:
 Received: from smtp4.osuosl.org ([127.0.0.1])
  by localhost (smtp4.osuosl.org [127.0.0.1]) (amavis, port 10024) with ESMTP
- id XvMGK5iS0TsV for <printing-architecture@lists.linux-foundation.org>;
- Fri, 28 Feb 2025 21:29:47 +0000 (UTC)
-Received-SPF: Pass (mailfrom) identity=mailfrom; client-ip=2a00:1450:4864:20::132; helo=mail-lf1-x132.google.com; envelope-from=pzz@apevzner.com; receiver=<UNKNOWN> 
-DMARC-Filter: OpenDMARC Filter v1.4.2 smtp4.osuosl.org EC8E94F3B3
+ id lFrGhXMyhsbs for <printing-architecture@lists.linux-foundation.org>;
+ Fri, 28 Feb 2025 22:09:00 +0000 (UTC)
+Received-SPF: Pass (mailfrom) identity=mailfrom; client-ip=2a00:1450:4864:20::135; helo=mail-lf1-x135.google.com; envelope-from=pzz@apevzner.com; receiver=<UNKNOWN> 
+DMARC-Filter: OpenDMARC Filter v1.4.2 smtp4.osuosl.org 8F510537D8
 Authentication-Results: smtp4.osuosl.org; dmarc=none (p=none dis=none) header.from=apevzner.com
-DKIM-Filter: OpenDKIM Filter v2.11.0 smtp4.osuosl.org EC8E94F3B3
+DKIM-Filter: OpenDKIM Filter v2.11.0 smtp4.osuosl.org 8F510537D8
 Authentication-Results: smtp4.osuosl.org;
-	dkim=pass (2048-bit key, unprotected) header.d=apevzner.com header.i=@apevzner.com header.a=rsa-sha256 header.s=google header.b=Ci6PxAn8
-Received: from mail-lf1-x132.google.com (mail-lf1-x132.google.com [IPv6:2a00:1450:4864:20::132])
-	by smtp4.osuosl.org (Postfix) with ESMTPS id EC8E94F3B3
-	for <printing-architecture@lists.linux-foundation.org>; Fri, 28 Feb 2025 21:03:03 +0000 (UTC)
-Received: by mail-lf1-x132.google.com with SMTP id 2adb3069b0e04-543e4bbcd86so2744069e87.1
-        for <printing-architecture@lists.linux-foundation.org>; Fri, 28 Feb 2025 13:03:03 -0800 (PST)
+	dkim=pass (2048-bit key) header.d=apevzner.com header.i=@apevzner.com header.a=rsa-sha256 header.s=google header.b=hUlKeLm+
+Received: from mail-lf1-x135.google.com (mail-lf1-x135.google.com [IPv6:2a00:1450:4864:20::135])
+	by smtp4.osuosl.org (Postfix) with ESMTPS id 8F510537D8
+	for <printing-architecture@lists.linux-foundation.org>; Fri, 28 Feb 2025 21:40:31 +0000 (UTC)
+Received: by mail-lf1-x135.google.com with SMTP id 2adb3069b0e04-543d8badc30so2891463e87.0
+        for <printing-architecture@lists.linux-foundation.org>; Fri, 28 Feb 2025 13:40:31 -0800 (PST)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
-        d=apevzner.com; s=google; t=1740776581; x=1741381381; darn=lists.linux-foundation.org;
-        h=content-transfer-encoding:subject:from:content-language:to
-         :user-agent:mime-version:date:message-id:from:to:cc:subject:date
-         :message-id:reply-to;
-        bh=AWh8RdVg+MowQONiyhMGPySYpmVJtJmDns4iBBmXtIk=;
-        b=Ci6PxAn8VFS8vGyjW2qFPFrWfvIZCcpX08ru8TijgRFa1fXBGlHWbCr1YasDtI6Fv1
-         Ms7IoCpOIo6A+OugQLtQ0wxLtiAcscFlFHMZiUkk4kJftxD8Y2MNXO/1nY7THkcxcIhm
-         JLu/lI8WAW4QMrDRl6f6zxN9bE0bRN/gHoNY71oTcWkLv6sVfpqmIn7SO01kjDtqAxB5
-         6AbXDYMbMtiQUMNl8PyRnWUWf4GL6G8DUJXKgf6HGkm0/fQODdcdSrX09Kwr5fHR0AEY
-         SrJZcwNJlTf4yA8PjVog9RCugJZFqA/QDgkmfYq7oYSVaXl6w08atCdI6iY1CAcBttwk
-         t81w==
+        d=apevzner.com; s=google; t=1740778830; x=1741383630; darn=lists.linux-foundation.org;
+        h=content-transfer-encoding:in-reply-to:from:content-language
+         :references:to:subject:user-agent:mime-version:date:message-id:from
+         :to:cc:subject:date:message-id:reply-to;
+        bh=be0RlAYwuX4GABgXb3My/f602a0pQv1/gec00IdXpW8=;
+        b=hUlKeLm+/pbDSY1H0mUCvJklP3uJeVvcTf14nSF4DAVmr3Xy8YAJSW+t02ApzkBdvm
+         Nl/n0u8849MGmJaXSbOyG4Up/enJfIN5BodLMTHU/AwswrHcSb+TfIyCdjPzDc3gDDhx
+         sSxnUxv/Oyq7qe1gK7+XgU7VY+tbdGuw4AnSw2QBA6NcUzN7d1VYmR3pfI5J7kqC1+8l
+         rvrdrfIczXkUPsuhTDyCw0F/59FdvJOQCDLMYeIhZz0LNs4/RP018LoBi/BBIfcHc062
+         ovH3umVFSXzDrpAldWIMWD51Y+ZbdHnGmv1Mxqo3COP9j05Mp3eHRFAte9AlQykoxP2B
+         VvLA==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
-        d=1e100.net; s=20230601; t=1740776581; x=1741381381;
-        h=content-transfer-encoding:subject:from:content-language:to
-         :user-agent:mime-version:date:message-id:x-gm-message-state:from:to
-         :cc:subject:date:message-id:reply-to;
-        bh=AWh8RdVg+MowQONiyhMGPySYpmVJtJmDns4iBBmXtIk=;
-        b=ozeDa21/gyzfxz0+ruHShxJn/mszIZkxJ873Ut5F5GrndzrrjlUyhfyl1ZMqYy64CW
-         eVOcHsnz4sVXMH9keaBELO5eSWjUlDXuLMu3YioUdOFNiJDekZ05aLh7YQGzP4km7NfU
-         ymfqv69B/EK2RdiU6KGatzJBbepmhoEmRPL1mDXYvVUJbDuJoNjG+CDII2i3L9CV883R
-         tOcO/S1ylkSBIJLsDTWTPg4jMR+q/xJARErQ36O6NcV0UOipI+dBdEUKiV3klMhtjxY0
-         /Ug3Pfn0OqMoUYMLiTV9ERj0pxvxoHP9s+HvfdLyBkhoUIWpaiNy9hBR85p1a2t/SfBn
-         vGQw==
-X-Gm-Message-State: AOJu0YxgJt4l/Diw2MYaUwn3Fbq0GR5mlu/R/KxEmhdn8YXmsAO3hQxc
-	wgZl9RG3/ELNr5fXiqJqvSC5g8HdbgMjhuTsoGjpXTKrzFyfHyJPnebukOAnux0fV0IxxVLOzui
-	q
-X-Gm-Gg: ASbGncsvZSMYv8lDikKVx+lKGUvMFIKb4hpTOLafD95jtRNYk7IIgE2iD05PLWJ6oCh
-	cY0IJedqD78QAgaLPCfdDQztwDpI88v03/pdOHrynLv0bLPl92rqWfTJG+ccB5DA/wOhKJwGcHj
-	1R2sAZVDyBHdWNoas/v70XNUHs9+FZSO9Xuf0moVz56Sb6o7K8YjKAy5Kn+LsbvKvqol7dTEdEH
-	7WD2e+nr5eLZccRcOGLdsQQh0k3ttf6k/CTvlFuIoezzXn4thPHXSs+9iV6KklfSjVbxnhhLRFv
-	pCDJpbtfWmGm3xN/mzIIvoBVM87GbqqfOv8MJA4RyD03zZQLIQiPivgNjfiXLw==
-X-Google-Smtp-Source: AGHT+IGsup77L7v0UcnN200gNEe+kkWGPnW4IAtUZoZxnaqdZp9+zvlXNFuoDlOlPgtV/TcR+aGYrw==
-X-Received: by 2002:a05:6512:1103:b0:545:5d:a5cd with SMTP id 2adb3069b0e04-5494c129d3cmr1665631e87.6.1740776580682;
-        Fri, 28 Feb 2025 13:03:00 -0800 (PST)
+        d=1e100.net; s=20230601; t=1740778830; x=1741383630;
+        h=content-transfer-encoding:in-reply-to:from:content-language
+         :references:to:subject:user-agent:mime-version:date:message-id
+         :x-gm-message-state:from:to:cc:subject:date:message-id:reply-to;
+        bh=be0RlAYwuX4GABgXb3My/f602a0pQv1/gec00IdXpW8=;
+        b=kLzMuuGuUtAHi8noN+KPD9PIk+okFxvt3jNA0LOIXSefqZCEgbldLrsgHWAZCqGn0I
+         VUDZ9zKwCpvRr9+GslWmjLM0rVniZ3jdF7C+OGVRaVAstqZCtKpuL1TqTPb8vdAHwOkA
+         uXH5p44NN/PS5qmraGn6OulotsM9Ho5D95ixlFEkBhSXy+Ucxs0y95I5XhODIZrSqfJY
+         IAUbrQcEBUHHMj0bAwTp3OddnCUBpcsIa46RqXYwjvUALhdldmBLLovVTF8wczjPqnPQ
+         ivrkK5BdOfWjLkcis6LtwhPcPDDupW1SrfTOU+CI2J3MQyViUwNQx+8Osyir4FlZ3BmM
+         biDA==
+X-Forwarded-Encrypted: i=1; AJvYcCVwX+TBXpRCP363p6fHDAhuOOKSNVnB+g/7P7Pddb+6KeTl7qsuMHH9HGsj/22j2z1pddk3EHbVKsNcxBiaGROSIQolGqk=@lists.linux-foundation.org
+X-Gm-Message-State: AOJu0YxmG44UQjn5WKHgKxfV90a4ofk5WyE6iEUIs7hy6nvr47F9wyya
+	U1uxkg6jrExVQl/Fxb8o29BzCXTvkBQIjVX5bqaeBfJHFfExDyZEfjxPtbgSyp0=
+X-Gm-Gg: ASbGncsg6X8f6JjDMls9lBYnjsUTBUGDHiLhzI2duIC9Bgv9FtqqUhAB1wNdsKxAblo
+	Ghx58qtzDbF8FAuriFKZxcOBKoeV0jczGfx4ccYhabm1exmcfhPtN2iKJDl1q4vgnEJnFKy/8up
+	t8I7SnBJ9IQNnwXjdpo3bvvU54swbaDXm9zuGghtRsKQ1aomo4g/ZgZe1vMECTMhDNj2E8H860M
+	+R8514elpdcH6Ip983elN6OxAMkH0TfK/860P9ksGJCUcr854bUEAUUjdO2uzF+cB/tgJaBKrQ2
+	Oi3tJjPPxwLz+gbkpGTnNbC6XkiDZg9DSvs9/RiJ6zk1EVEboBh6CNowaf1BeQ==
+X-Google-Smtp-Source: AGHT+IFG71bOMZBk7JtHtPerYCW9DY+NPZL+Kwp9NNPEd2WxRsmdHM1JL34Ncc317Yu7LvJSbLA/tw==
+X-Received: by 2002:a05:6512:693:b0:545:2474:2c98 with SMTP id 2adb3069b0e04-5494c124b40mr2263641e87.23.1740778829460;
+        Fri, 28 Feb 2025 13:40:29 -0800 (PST)
 Received: from [192.168.0.6] (ppp85-141-194-124.pppoe.mtu-net.ru. [85.141.194.124])
-        by smtp.googlemail.com with ESMTPSA id 38308e7fff4ca-30b8dbd1ad9sm5058981fa.76.2025.02.28.13.02.58
-        for <printing-architecture@lists.linux-foundation.org>
+        by smtp.googlemail.com with ESMTPSA id 2adb3069b0e04-549443cb00dsm620860e87.211.2025.02.28.13.40.27
         (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
-        Fri, 28 Feb 2025 13:02:59 -0800 (PST)
-Message-ID: <a267e901-53d5-4084-997c-a3307c26cebc@apevzner.com>
-Date: Sat, 1 Mar 2025 00:02:57 +0300
+        Fri, 28 Feb 2025 13:40:28 -0800 (PST)
+Message-ID: <5a022387-2bcf-4d5f-a60b-5d908b4828e9@apevzner.com>
+Date: Sat, 1 Mar 2025 00:40:26 +0300
 Precedence: bulk
 X-Mailing-List: printing-architecture@lists.linux.dev
 List-Id: <printing-architecture.lists.linux.dev>
@@ -84,144 +84,43 @@ List-Subscribe: <mailto:printing-architecture+subscribe@lists.linux.dev>
 List-Unsubscribe: <mailto:printing-architecture+unsubscribe@lists.linux.dev>
 MIME-Version: 1.0
 User-Agent: Mozilla Thunderbird
-To: Open Printing <printing-architecture@lists.linux-foundation.org>
+Subject: Re: Qt issue with printing landscape-oriented images
+To: Zdenek Dohnal <zdohnal@redhat.com>,
+ Open Printing <printing-architecture@lists.linux-foundation.org>
+References: <2ebbd828-47f8-406e-8d67-ad1a8abb9393@apevzner.com>
+ <c4066f25-c650-4037-9bce-864940daf3fa@redhat.com>
 Content-Language: en-US
 From: Alexander Pevzner <pzz@apevzner.com>
-Subject: ipp-usb 0.9.29
+In-Reply-To: <c4066f25-c650-4037-9bce-864940daf3fa@redhat.com>
 Content-Type: text/plain; charset=UTF-8; format=flowed
-Content-Transfer-Encoding: 7bit
+Content-Transfer-Encoding: 8bit
 
-Hi,
+Hi Zdenek,
 
-ipp-usb version 0.9.29 is now available.
+On 2/26/25 12:25 PM, Zdenek Dohnal wrote:
+> To be honest I have never seen IPP attribute landscape  :D - I know 
+> there is IPP attribute 'orientation-requested' which is used for setting 
+> whether you want portrait, landscape, etc.
 
-This release addresses issues #64, #32, and #83 and introduces several 
-enhancements and bug fixes.
+Honestly, me too.
 
-1. Performance Tuning After Receiving 0-Length USB Packets
+I has discussed this issue with Till in the OpenPrinting Telegram group.
 
-When a 0-length packet is received, there is a high probability that 
-subsequent attempts to receive a packet from USB will return 
-immediately, also yielding 0-length packets. To prevent excessive CPU 
-usage, ipp-usb introduces pauses upon receiving zero-length USB packets 
-and employs an exponential backoff algorithm to manage wait intervals.
+He told that best of all for Qt is to use the IPP-standard 
+orientation-requested attribute instead of the CUPS-specific landscape 
+attribute, but as Qt moves to CPDB, it is good enough just to use the 
+landscape attribute correctly, as a temporary solution.
 
-The algorithm's parameters have been fine-tuned to avoid performance 
-degradation when working with high-end devices capable of transmitting 
-large volumes of data at high speeds.
+Seems tha Qt people have accepted out simple patch into master and plan 
+to backport to older releases.
 
-2. Fixed Crash in ipp-usb status Command (PR #85)
+> Based on the code for image it looks like landscape is really a thing, 
+> and if okular wants to do landscape this way, it should pass 
+> landscape=true instead of false.
 
-A crash occurring when executing the ipp-usb status command has been 
-resolved.
-
-3. Added TCP Port Information to Status Output (PR #86)
-
-The status output now includes TCP port information:
-
-   $ ./ipp-usb status
-   ipp-usb daemon: running
-   ipp-usb devices:
-    Num  Device              Vndr:Prod  Port  Model
-      1. Bus 001 Device 039  04a9:1912  60100 "Canon LiDE 400" status: OK
-
-4. USB Serial Number and Vendor/Device ID Exposed via TXT Record
-
-The following parameters have been added to the TXT record published by 
-ipp-usb:
-
-     usb_SER=VCF9192281 ; Device serial number
-     usb_HWID=0482&069d ; Vendor and device ID
-
-This change affects the _ipp._tcp, _printer._tcp, and _uscan._tcp 
-services. The _http._tcp service remains unchanged.
-
-This enhancement facilitates matching devices exposed via ipp-usb with 
-those detected on the local USB bus.
-
-5. Refactored Quirks Handling
-
-The internal implementation of quirks has been significantly refactored 
-to simplify code maintenance and streamline the addition of new quirks. 
-This change does not alter the syntax or semantics of existing quirks.
-
-6. Revisited Device Initialization Timeout Handling
-
-When a new device is added, ipp-usb performs multiple HTTP requests 
-(IPP/eSCL) to retrieve device parameters for DNS-SD advertising. 
-Previously, the entire initialization process was governed by a single 
-timeout, which disproportionately affected different requests in the 
-sequence. Additionally, fetching unnecessary response bodies was not 
-subject to a timeout, potentially causing ipp-usb to indefinitely hold a 
-failed USB interface and prevent a clean shutdown (see #32 for details).
-
-The updated implementation introduces individual timeouts for each HTTP 
-request during initialization, including a timeout for body reception.
-
-7. Added Alternative Syntax for Delays in Quirks
-
-Delays (e.g., init-delay, request-delay, ...) can now be specified using 
-the following syntax:
-
-    init-delay = 15s
-
-This syntax is more convenient, especially for delays longer than a few 
-seconds. The old syntax remains supported.
-
-8. Added 'init-timeout' Quirk
-
-This quirk defines a timeout for HTTP requests sent by ipp-usb to a 
-device during initialization.
-
-9. Added 'zlp-send' Quirk
-
-When enabled, this quirk sets the LIBUSB_TRANSFER_ADD_ZERO_PACKET flag 
-on each outgoing transfer. This causes libusb to terminate outgoing 
-transfers that are a multiple of the endpoint's packet size with an 
-extra zero-length packet.
-
-Note: No known devices currently require this quirk. It has been added 
-for completeness.
-
-10. Added 'zlp-recv-hack' Quirk
-
-Some enterprise-level HP devices, during their initialization phase 
-(which can last several minutes), may respond with an HTTP 503 status or 
-similar. While this is expected, the response body may be truncated 
-(often missing the terminating \n). In such cases, ipp-usb would wait 
-indefinitely for a response to maintain synchronization with the device.
-
-These devices also send a zero-length UDP packet at the end of the 
-truncated output. When the zlp-recv-hack quirk is enabled, ipp-usb 
-interprets the combination of a zero-length packet followed by a receive 
-timeout as a valid termination of the response body. This quirk only 
-applies during initialization and does not affect subsequent operations.
-
-11. Added 'init-retry-partial' Quirk
-
-When enabled, this quirk retries device initialization if only part of 
-the device's functions (e.g., only the printer or only the scanner) have 
-been initialized, rather than continuing with incomplete functionality.
-
-This is particularly useful for devices that take a long time to fully 
-initialize. During this period, some components may respond normally 
-while others are still initializing. For example, a device may quickly 
-report its scanning capabilities shortly after startup, while its 
-printing functionality may take several minutes to become operational.
-
-Some enterprise-level HP printers are known to exhibit this behavior.
-
-12. Fixed Initialization for HP Color LaserJet Flow X677 and HP Color 
-LaserJet FlowMFP M578
-
-With the help of the newly added quirks, initialization issues for the 
-HP Color LaserJet Flow X677 and HP Color LaserJet FlowMFP M578 have been 
-resolved.
-
-This release brings significant improvements to performance, stability, 
-and usability, ensuring better compatibility with a wide range of devices.
+Yes, exactly. Actually, all current Qt programs are affected, not only 
+okular.
 
 -- 
 
 	Wishes, Alexander Pevzner (pzz@apevzner.com)
-
