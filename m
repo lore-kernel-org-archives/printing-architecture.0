@@ -1,64 +1,82 @@
-Received: from mail-wm1-f54.google.com (mail-wm1-f54.google.com [209.85.128.54])
-	(using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
+Received: from smtp4.osuosl.org (smtp4.osuosl.org [140.211.166.137])
+	(using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
 	(No client certificate requested)
-	by smtp.subspace.kernel.org (Postfix) with ESMTPS id AB40427126C
-	for <printing-architecture@lists.linux.dev>; Thu, 27 Feb 2025 21:28:07 +0000 (UTC)
-Authentication-Results: smtp.subspace.kernel.org; arc=none smtp.client-ip=209.85.128.54
+	by smtp.subspace.kernel.org (Postfix) with ESMTPS id C642D23F38F
+	for <printing-architecture@lists.linux-foundation.org>; Fri, 28 Feb 2025 22:07:56 +0000 (UTC)
+Authentication-Results: smtp.subspace.kernel.org; arc=none smtp.client-ip=140.211.166.137
 ARC-Seal:i=1; a=rsa-sha256; d=subspace.kernel.org; s=arc-20240116;
-	t=1740691689; cv=none; b=e72ojtvtWYDvPASULrbsvKkm6dkBogvNiLxSxJSjO/AflQXS+1J05A6CnvlH159D5lyJlZRtzI84sB1paDdeuqW4m5ST1DSKvgag0lZl931QFN3j2u36J+YD2ltCPoKCtapYM2IrSYxXQIYPnaolYutd0Ai2J8iksHsForWORyI=
+	t=1740780478; cv=none; b=CuAmagaKFnWqHaGqq+FaU4cKx5LW29ZAYamZ76N7df9f3307PxihKYsFO9UvfBq0y0+zxzSh6W/8NMVBl/eA9iz5VpITNDJyNUXbr4cIp8oFUwR0H8TjKFk8vk2o2K4z7KJcmKc+jb8OIITCXVWKIVu3FYncJRv3Dqv8OT2Ay7Y=
 ARC-Message-Signature:i=1; a=rsa-sha256; d=subspace.kernel.org;
-	s=arc-20240116; t=1740691689; c=relaxed/simple;
-	bh=IbhFrwvrOeKF+rXRRkZ6fqZl5K1adBxM3bk6gjsCr2A=;
-	h=Message-ID:Date:MIME-Version:From:Subject:To:Content-Type; b=qshexbo03tg7tS8HPbo+ZZ1IvZwUlgAtw7Ydj7wU/jsLyyiVqmSuSp5ji2GjuTdJHG5YlChttIS8IpJ2LPWJqgUquw1kCJYdTZLwUby33Ln192bLpMyj5ebi4UC7lUh1rG/wMioG4U2eGqeXQ4rg3o2iXep71PMMPUzdXW6NXyw=
-ARC-Authentication-Results:i=1; smtp.subspace.kernel.org; dmarc=pass (p=none dis=none) header.from=gmail.com; spf=pass smtp.mailfrom=gmail.com; dkim=pass (2048-bit key) header.d=gmail.com header.i=@gmail.com header.b=Fd1Izv2c; arc=none smtp.client-ip=209.85.128.54
-Authentication-Results: smtp.subspace.kernel.org; dmarc=pass (p=none dis=none) header.from=gmail.com
-Authentication-Results: smtp.subspace.kernel.org; spf=pass smtp.mailfrom=gmail.com
+	s=arc-20240116; t=1740780478; c=relaxed/simple;
+	bh=8cLuyncg2GlfwlTXdxihL7Yt5GkAQemK/6445ogIot8=;
+	h=Message-ID:Date:MIME-Version:To:From:Subject:Content-Type; b=TBUVIcIAF47HW41aLWkVdREAGVmi9KIAgUUQkKzxwJ3y+PHXE+3tVkLJmjZdolXCbgHah8tTgNWAgA/F+U+Mmk0ijeNiAgfzQCIcOaErGrm31wuRNWCJlPExWxF288xNHzeyP/xw+j1KHXx31XEFfP9GuW9Udger3vILmLLADb8=
+ARC-Authentication-Results:i=1; smtp.subspace.kernel.org; dkim=pass (2048-bit key) header.d=apevzner.com header.i=@apevzner.com header.b=Ci6PxAn8; arc=none smtp.client-ip=140.211.166.137
 Authentication-Results: smtp.subspace.kernel.org;
-	dkim=pass (2048-bit key) header.d=gmail.com header.i=@gmail.com header.b="Fd1Izv2c"
-Received: by mail-wm1-f54.google.com with SMTP id 5b1f17b1804b1-43994ef3872so9888735e9.2
-        for <printing-architecture@lists.linux.dev>; Thu, 27 Feb 2025 13:28:07 -0800 (PST)
+	dkim=pass (2048-bit key) header.d=apevzner.com header.i=@apevzner.com header.b="Ci6PxAn8"
+Received: from localhost (localhost [127.0.0.1])
+	by smtp4.osuosl.org (Postfix) with ESMTP id 44A1C5214D
+	for <printing-architecture@lists.linux-foundation.org>; Fri, 28 Feb 2025 21:29:50 +0000 (UTC)
+X-Virus-Scanned: amavis at osuosl.org
+X-Spam-Flag: NO
+X-Spam-Score: -2.1
+X-Spam-Level:
+Received: from smtp4.osuosl.org ([127.0.0.1])
+ by localhost (smtp4.osuosl.org [127.0.0.1]) (amavis, port 10024) with ESMTP
+ id XvMGK5iS0TsV for <printing-architecture@lists.linux-foundation.org>;
+ Fri, 28 Feb 2025 21:29:47 +0000 (UTC)
+Received-SPF: Pass (mailfrom) identity=mailfrom; client-ip=2a00:1450:4864:20::132; helo=mail-lf1-x132.google.com; envelope-from=pzz@apevzner.com; receiver=<UNKNOWN> 
+DMARC-Filter: OpenDMARC Filter v1.4.2 smtp4.osuosl.org EC8E94F3B3
+Authentication-Results: smtp4.osuosl.org; dmarc=none (p=none dis=none) header.from=apevzner.com
+DKIM-Filter: OpenDKIM Filter v2.11.0 smtp4.osuosl.org EC8E94F3B3
+Authentication-Results: smtp4.osuosl.org;
+	dkim=pass (2048-bit key, unprotected) header.d=apevzner.com header.i=@apevzner.com header.a=rsa-sha256 header.s=google header.b=Ci6PxAn8
+Received: from mail-lf1-x132.google.com (mail-lf1-x132.google.com [IPv6:2a00:1450:4864:20::132])
+	by smtp4.osuosl.org (Postfix) with ESMTPS id EC8E94F3B3
+	for <printing-architecture@lists.linux-foundation.org>; Fri, 28 Feb 2025 21:03:03 +0000 (UTC)
+Received: by mail-lf1-x132.google.com with SMTP id 2adb3069b0e04-543e4bbcd86so2744069e87.1
+        for <printing-architecture@lists.linux-foundation.org>; Fri, 28 Feb 2025 13:03:03 -0800 (PST)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
-        d=gmail.com; s=20230601; t=1740691685; x=1741296485; darn=lists.linux.dev;
-        h=content-transfer-encoding:content-language:to:subject:from
+        d=apevzner.com; s=google; t=1740776581; x=1741381381; darn=lists.linux-foundation.org;
+        h=content-transfer-encoding:subject:from:content-language:to
          :user-agent:mime-version:date:message-id:from:to:cc:subject:date
          :message-id:reply-to;
-        bh=oRDBPJLvEEnaQNddtrHjN36HP6FLHCQ7Z9gf28EHYyQ=;
-        b=Fd1Izv2c3TJXS0ICgdgcJH/Xjag9IEliX0dAqsDkcrOXNWsLJfN4eRfhlXsRuaIi9w
-         jhLSOxsb2hWJouynEXKuRb5GS4Ds8ppWqQvMdz1ZP3MWUB07Ujfbfn2EEfYBlCzyUo17
-         HxvwhiRuHacrGpjd6y6en7y/BhkZmZEyQjhE4OnJMQQDgGY4K7iASs2dCbNxVOs/0Lrs
-         VuXNinMGsDL6m0S3c7o58jK2rZRpTlOgzzzi37XWIVq6p1lt6jPwSO6g/10FQwQ9H5Wo
-         32oVJpTQNxvihkJcM9UtJ0O8EcidGprRZ+MEcx7l67RUWLGUZ2eoAedDDL12vwOGj8v2
-         CFuA==
+        bh=AWh8RdVg+MowQONiyhMGPySYpmVJtJmDns4iBBmXtIk=;
+        b=Ci6PxAn8VFS8vGyjW2qFPFrWfvIZCcpX08ru8TijgRFa1fXBGlHWbCr1YasDtI6Fv1
+         Ms7IoCpOIo6A+OugQLtQ0wxLtiAcscFlFHMZiUkk4kJftxD8Y2MNXO/1nY7THkcxcIhm
+         JLu/lI8WAW4QMrDRl6f6zxN9bE0bRN/gHoNY71oTcWkLv6sVfpqmIn7SO01kjDtqAxB5
+         6AbXDYMbMtiQUMNl8PyRnWUWf4GL6G8DUJXKgf6HGkm0/fQODdcdSrX09Kwr5fHR0AEY
+         SrJZcwNJlTf4yA8PjVog9RCugJZFqA/QDgkmfYq7oYSVaXl6w08atCdI6iY1CAcBttwk
+         t81w==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
-        d=1e100.net; s=20230601; t=1740691685; x=1741296485;
-        h=content-transfer-encoding:content-language:to:subject:from
+        d=1e100.net; s=20230601; t=1740776581; x=1741381381;
+        h=content-transfer-encoding:subject:from:content-language:to
          :user-agent:mime-version:date:message-id:x-gm-message-state:from:to
          :cc:subject:date:message-id:reply-to;
-        bh=oRDBPJLvEEnaQNddtrHjN36HP6FLHCQ7Z9gf28EHYyQ=;
-        b=FVFqdXxznMR9hdMqozwzZsi9oS1VSkXyv85kNjPh0xtXv/WgutQN7fZdFRujegX7oY
-         rJj2Es1+hiyvd2IfUgmwnefN7LsHPCbiolMPf+M52rhQNtoZf7q3SikFFZb/FAF9UcSW
-         UUijStMhKVe3WMWdcvdFpLKAgsCiFBYccF+GLr1TXuHXnJYpylcGKGKQ4TLteuqmeoJm
-         S/Zhlkxc8vaKpxITOXEOGjSg6CkZW9dXZFqeDXZh0Q9RAKbczTNB+RS/5MekSNzcCgOx
-         uKkzugEVM1rDH7REkaA+jlsy3B2JEtWRPwFGGAlAHe/cEtsZYVxf6MTrGWSk6U7NoIAP
-         FT0Q==
-X-Gm-Message-State: AOJu0YzBsOSHMwHJrpqHNk/HhRTBt7xtO5IfWL+keXi25ZEtp/zWfBBf
-	z9NTietL1O3KH3RAMzBCIh5di+JyqAO/uSjLS/jb+8tQF4BX6aiZh61HLPG3
-X-Gm-Gg: ASbGnctJxZPLQ91wcFV7mDPvWy4uqVvb4vH5zEBJ2/4O/cyVB+rHFlVKYgN4pCklx6c
-	WGHqnTCiAwdmwc3X9PWedn0Mh1Clqu1VkJmOs0NKeyijP5yG3256bheU5jsWkifZc0Dmy1ZDmKQ
-	ILkw+Gl29n2jYUegZY4wVLf0o/lLkmZy+Zup1MHJkVexLXgq+xfbdX0oL4flLyBShFpB+XLVeGs
-	GAO12PUUJ5JNqFylXQDubU+YSVrG5tlvWjOitWBU2c3MlW3oUsnW0+1RQVV2MjiQlvXaHcq/JiS
-	tisqZWXrVLFWq5N4b5USb5ksuIc9JMfy9ur/noPyw4emvD9AXFGY2SUwlPQ2YHqXM37tj5pcdNB
-	B
-X-Google-Smtp-Source: AGHT+IGfToLFNCCmfh5Y8Nuxgn7cVB/wHpfciWjeTGN/ug8tqLm7opitPbAMfy8gnxlOv3RMA93n+Q==
-X-Received: by 2002:a05:600c:4f89:b0:439:9a28:9e8d with SMTP id 5b1f17b1804b1-43ba6703767mr6054925e9.12.1740691684387;
-        Thu, 27 Feb 2025 13:28:04 -0800 (PST)
-Received: from [192.168.68.113] (194-96-30-82.hdsl.highway.telekom.at. [194.96.30.82])
-        by smtp.gmail.com with ESMTPSA id ffacd0b85a97d-390e4844c2bsm3133541f8f.77.2025.02.27.13.28.03
-        for <printing-architecture@lists.linux.dev>
+        bh=AWh8RdVg+MowQONiyhMGPySYpmVJtJmDns4iBBmXtIk=;
+        b=ozeDa21/gyzfxz0+ruHShxJn/mszIZkxJ873Ut5F5GrndzrrjlUyhfyl1ZMqYy64CW
+         eVOcHsnz4sVXMH9keaBELO5eSWjUlDXuLMu3YioUdOFNiJDekZ05aLh7YQGzP4km7NfU
+         ymfqv69B/EK2RdiU6KGatzJBbepmhoEmRPL1mDXYvVUJbDuJoNjG+CDII2i3L9CV883R
+         tOcO/S1ylkSBIJLsDTWTPg4jMR+q/xJARErQ36O6NcV0UOipI+dBdEUKiV3klMhtjxY0
+         /Ug3Pfn0OqMoUYMLiTV9ERj0pxvxoHP9s+HvfdLyBkhoUIWpaiNy9hBR85p1a2t/SfBn
+         vGQw==
+X-Gm-Message-State: AOJu0YxgJt4l/Diw2MYaUwn3Fbq0GR5mlu/R/KxEmhdn8YXmsAO3hQxc
+	wgZl9RG3/ELNr5fXiqJqvSC5g8HdbgMjhuTsoGjpXTKrzFyfHyJPnebukOAnux0fV0IxxVLOzui
+	q
+X-Gm-Gg: ASbGncsvZSMYv8lDikKVx+lKGUvMFIKb4hpTOLafD95jtRNYk7IIgE2iD05PLWJ6oCh
+	cY0IJedqD78QAgaLPCfdDQztwDpI88v03/pdOHrynLv0bLPl92rqWfTJG+ccB5DA/wOhKJwGcHj
+	1R2sAZVDyBHdWNoas/v70XNUHs9+FZSO9Xuf0moVz56Sb6o7K8YjKAy5Kn+LsbvKvqol7dTEdEH
+	7WD2e+nr5eLZccRcOGLdsQQh0k3ttf6k/CTvlFuIoezzXn4thPHXSs+9iV6KklfSjVbxnhhLRFv
+	pCDJpbtfWmGm3xN/mzIIvoBVM87GbqqfOv8MJA4RyD03zZQLIQiPivgNjfiXLw==
+X-Google-Smtp-Source: AGHT+IGsup77L7v0UcnN200gNEe+kkWGPnW4IAtUZoZxnaqdZp9+zvlXNFuoDlOlPgtV/TcR+aGYrw==
+X-Received: by 2002:a05:6512:1103:b0:545:5d:a5cd with SMTP id 2adb3069b0e04-5494c129d3cmr1665631e87.6.1740776580682;
+        Fri, 28 Feb 2025 13:03:00 -0800 (PST)
+Received: from [192.168.0.6] (ppp85-141-194-124.pppoe.mtu-net.ru. [85.141.194.124])
+        by smtp.googlemail.com with ESMTPSA id 38308e7fff4ca-30b8dbd1ad9sm5058981fa.76.2025.02.28.13.02.58
+        for <printing-architecture@lists.linux-foundation.org>
         (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
-        Thu, 27 Feb 2025 13:28:03 -0800 (PST)
-Message-ID: <f207973c-2a80-47e8-997c-9f496d55310c@gmail.com>
-Date: Thu, 27 Feb 2025 22:28:03 +0100
+        Fri, 28 Feb 2025 13:02:59 -0800 (PST)
+Message-ID: <a267e901-53d5-4084-997c-a3307c26cebc@apevzner.com>
+Date: Sat, 1 Mar 2025 00:02:57 +0300
 Precedence: bulk
 X-Mailing-List: printing-architecture@lists.linux.dev
 List-Id: <printing-architecture.lists.linux.dev>
@@ -66,92 +84,144 @@ List-Subscribe: <mailto:printing-architecture+subscribe@lists.linux.dev>
 List-Unsubscribe: <mailto:printing-architecture+unsubscribe@lists.linux.dev>
 MIME-Version: 1.0
 User-Agent: Mozilla Thunderbird
-From: Till Kamppeter <till.kamppeter@gmail.com>
-Subject: Google Summer of Code 2025 - Linux Foundation accepted as mentoring
- organization! We need mentors now!
-To: OpenPrinting <printing-architecture@lists.linux.dev>
+To: Open Printing <printing-architecture@lists.linux-foundation.org>
 Content-Language: en-US
+From: Alexander Pevzner <pzz@apevzner.com>
+Subject: ipp-usb 0.9.29
 Content-Type: text/plain; charset=UTF-8; format=flowed
 Content-Transfer-Encoding: 7bit
 
 Hi,
 
-today the mentoring organizations accepted for this year's Google Summer of Code 
-got announced, and the Linux Foundation is one of them!
+ipp-usb version 0.9.29 is now available.
 
-https://summerofcode.withgoogle.com/programs/2025-ao/organizations/the-linux-foundation
+This release addresses issues #64, #32, and #83 and introduces several 
+enhancements and bug fixes.
 
-This means that now we have to everything to get amazing projects going this summer.
+1. Performance Tuning After Receiving 0-Length USB Packets
 
-First, you are probably all actively working on finding contributors 
-(open-source newcomers or students), familiarizing them with your code base, 
-integrating them into your community, giveing them assignments to learn about 
-how things work in your project, ... If not, start with this ASAP and do not 
-accept candidates only showing up during the official application window in 
-March 24 - April 8, or even worse, only their proposal appearing in the list you 
-see after the deadline. The earlier you interact with the person, the better you 
-can decide on whether they are the right one for your project.
+When a 0-length packet is received, there is a high probability that 
+subsequent attempts to receive a packet from USB will return 
+immediately, also yielding 0-length packets. To prevent excessive CPU 
+usage, ipp-usb introduces pauses upon receiving zero-length USB packets 
+and employs an exponential backoff algorithm to manage wait intervals.
 
-Technically the having gotten accepted means that we can register mentors, and 
-as in the other years we need as many mentors as possible, 2 mentors per 
-contributor project we want to run (usually they do not give us more contribuotr 
-slot than half the number of registered mentors).
+The algorithm's parameters have been fine-tuned to avoid performance 
+degradation when working with high-end devices capable of transmitting 
+large volumes of data at high speeds.
 
-If you want to mentor you have to register as follows (According to the official 
-e-mail which the org admins got today):
+2. Fixed Crash in ipp-usb status Command (PR #85)
 
+A crash occurring when executing the ipp-usb status command has been 
+resolved.
 
-     - Returning Mentors (who mentored with us in 2022, 2023, or 2024):
-       o Log in to https://g.co/gsoc and agree to the 2025 Program Rules and
-         Org Member agreement
-       o Inform the org admins (Aveek and me) that you have done so
-       o One of the org admins will accept your request
+3. Added TCP Port Information to Status Output (PR #86)
 
-     - New Mentors:
-       o Org Admins have to invite you. So tell the org admins (Aveek or me) that
-         you want to mentor
-       o They will invite you and you get an e-mail from GSoC telling so. Please
-         check also your spam folder if you do not find this e-mail
-       o Follow the link in the e-mail to register and agree to the 2025 program
-         rules and terms. Tell the org admins when you are done.
-       o One of the org admins will finally accept your request
+The status output now includes TCP port information:
 
-There is no deadline for registering as mentor, but please register ASAP, the 
-sooner your register the sooner
+   $ ./ipp-usb status
+   ipp-usb daemon: running
+   ipp-usb devices:
+    Num  Device              Vndr:Prod  Port  Model
+      1. Bus 001 Device 039  04a9:1912  60100 "Canon LiDE 400" status: OK
 
-     - We can see that we get enough mentors and do not need to chase after them.
-     - You get important e-mails from the GSoC organizers about your duties and
-       how to proceed. All these e-mails are also available on
+4. USB Serial Number and Vendor/Device ID Exposed via TXT Record
 
-https://docs.google.com/document/d/1DFlES2qkSaVRnUBaODNtdD3eY5M0hFPfYerSyxf85Pw/
+The following parameters have been added to the TXT record published by 
+ipp-usb:
 
-       but it is always better to get them right when they get posted.
+     usb_SER=VCF9192281 ; Device serial number
+     usb_HWID=0482&069d ; Vendor and device ID
 
-Please also join the communication channels of the sub-group in which you want 
-to mentor (in case you are not already there as part of the sub-group). Please 
-interact with the contributor candidates who are introducing themselves there.
+This change affects the _ipp._tcp, _printer._tcp, and _uscan._tcp 
+services. The _http._tcp service remains unchanged.
 
-Also see our project ideas lists to find out which projects you prefer to mentor:
+This enhancement facilitates matching devices exposed via ipp-usb with 
+those detected on the local USB bus.
 
-https://wiki.linuxfoundation.org/gsoc/google-summer-code-2025
+5. Refactored Quirks Handling
 
-Important is also to get the candidates interacting with the code base. 
-Therefore please let them first build the code base on which they are supposed 
-to work on and then give them assignments, like bug reports, to work on. Only 
-accept proposals from candidates who are well onboarded, do not base you 
-decisions on a just a proposal you find in the submission list after the 
-application deadline.
+The internal implementation of quirks has been significantly refactored 
+to simplify code maintenance and streamline the addition of new quirks. 
+This change does not alter the syntax or semantics of existing quirks.
 
-And keep in mind:
+6. Revisited Device Initialization Timeout Handling
 
-     - A person can be GSoC contributor not more than 2 times
-     - A person cannot be GSoC contributor any more if they have been mentor at
-       least once.
+When a new device is added, ipp-usb performs multiple HTTP requests 
+(IPP/eSCL) to retrieve device parameters for DNS-SD advertising. 
+Previously, the entire initialization process was governed by a single 
+timeout, which disproportionately affected different requests in the 
+sequence. Additionally, fetching unnecessary response bodies was not 
+subject to a timeout, potentially causing ipp-usb to indefinitely hold a 
+failed USB interface and prevent a clean shutdown (see #32 for details).
 
-So make sure you do not want to participate as contributor before doing your 
-first registration as mentor. And ask contributor candidates if they already 
-have been contributor and how often.
+The updated implementation introduces individual timeouts for each HTTP 
+request during initialization, including a timeout for body reception.
 
-I hope we will have a great GSoC 2025 with all of you!
+7. Added Alternative Syntax for Delays in Quirks
 
-    Till
+Delays (e.g., init-delay, request-delay, ...) can now be specified using 
+the following syntax:
+
+    init-delay = 15s
+
+This syntax is more convenient, especially for delays longer than a few 
+seconds. The old syntax remains supported.
+
+8. Added 'init-timeout' Quirk
+
+This quirk defines a timeout for HTTP requests sent by ipp-usb to a 
+device during initialization.
+
+9. Added 'zlp-send' Quirk
+
+When enabled, this quirk sets the LIBUSB_TRANSFER_ADD_ZERO_PACKET flag 
+on each outgoing transfer. This causes libusb to terminate outgoing 
+transfers that are a multiple of the endpoint's packet size with an 
+extra zero-length packet.
+
+Note: No known devices currently require this quirk. It has been added 
+for completeness.
+
+10. Added 'zlp-recv-hack' Quirk
+
+Some enterprise-level HP devices, during their initialization phase 
+(which can last several minutes), may respond with an HTTP 503 status or 
+similar. While this is expected, the response body may be truncated 
+(often missing the terminating \n). In such cases, ipp-usb would wait 
+indefinitely for a response to maintain synchronization with the device.
+
+These devices also send a zero-length UDP packet at the end of the 
+truncated output. When the zlp-recv-hack quirk is enabled, ipp-usb 
+interprets the combination of a zero-length packet followed by a receive 
+timeout as a valid termination of the response body. This quirk only 
+applies during initialization and does not affect subsequent operations.
+
+11. Added 'init-retry-partial' Quirk
+
+When enabled, this quirk retries device initialization if only part of 
+the device's functions (e.g., only the printer or only the scanner) have 
+been initialized, rather than continuing with incomplete functionality.
+
+This is particularly useful for devices that take a long time to fully 
+initialize. During this period, some components may respond normally 
+while others are still initializing. For example, a device may quickly 
+report its scanning capabilities shortly after startup, while its 
+printing functionality may take several minutes to become operational.
+
+Some enterprise-level HP printers are known to exhibit this behavior.
+
+12. Fixed Initialization for HP Color LaserJet Flow X677 and HP Color 
+LaserJet FlowMFP M578
+
+With the help of the newly added quirks, initialization issues for the 
+HP Color LaserJet Flow X677 and HP Color LaserJet FlowMFP M578 have been 
+resolved.
+
+This release brings significant improvements to performance, stability, 
+and usability, ensuring better compatibility with a wide range of devices.
+
+-- 
+
+	Wishes, Alexander Pevzner (pzz@apevzner.com)
+
