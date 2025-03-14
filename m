@@ -1,73 +1,97 @@
-Received: from mail.msweet.org (mail.msweet.org [173.255.209.91])
-	(using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
+Received: from mail-yb1-f171.google.com (mail-yb1-f171.google.com [209.85.219.171])
+	(using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
 	(No client certificate requested)
-	by smtp.subspace.kernel.org (Postfix) with ESMTPS id 014431FCFFE
-	for <printing-architecture@lists.linux.dev>; Thu,  6 Mar 2025 22:30:25 +0000 (UTC)
-Authentication-Results: smtp.subspace.kernel.org; arc=none smtp.client-ip=173.255.209.91
+	by smtp.subspace.kernel.org (Postfix) with ESMTPS id 90D03202F68;
+	Fri, 14 Mar 2025 15:53:12 +0000 (UTC)
+Authentication-Results: smtp.subspace.kernel.org; arc=none smtp.client-ip=209.85.219.171
 ARC-Seal:i=1; a=rsa-sha256; d=subspace.kernel.org; s=arc-20240116;
-	t=1741300227; cv=none; b=T7gdRtk4V512AsaLxgwZ+wWbenBgKAbF1MzXsHtlccNXGCX0QhQp+LhRQ7G+Cqu4fmYMT0LDqHThXHZoK+Ax0tC4XiIx2K/mFS7B63+WA4u+53JC2q8YbGpenpxZSMhs4pEbcZWn8Tl2yYQXEL0GwSJkYmBMWwpdYZcTo4ixs0w=
+	t=1741967594; cv=none; b=O1M1PY1FpcxTGB6y1Wj8C7OuVhwSnN3Ph6Oy0D975fRBFsmIx+5aomeRfqdT/peLOUu+aHzx3kU1mB2qAhmkR1rgMJ5ACgOoH5bHkHRkeyr8Y+PSK9AaaBY0wnYk8jKv3cRE0Qao2ubA6ki8rT715zNZIesXe/I+xgItTichMKQ=
 ARC-Message-Signature:i=1; a=rsa-sha256; d=subspace.kernel.org;
-	s=arc-20240116; t=1741300227; c=relaxed/simple;
-	bh=3LYC7/z5RfpvUvbzfm4mv61F4l8TKEvRritbu1Sw7YU=;
-	h=From:Content-Type:Mime-Version:Date:Subject:Message-Id:To; b=IBB3b5c2YwlR71yjvCRtVusN5RBuR6qAesh1zmXRHIOIglefv/C6OhdYR7cy8eW8xzIyAehfVx7NeQLkWFwLK/IlUIUehiHYlf8mtlozsLYz7Trbo2qyMm30qkh5huwpIFpLiyJ35g6uRGPE/jCd9muM6YQOiJG/EMejzeQKGfQ=
-ARC-Authentication-Results:i=1; smtp.subspace.kernel.org; dmarc=pass (p=quarantine dis=none) header.from=msweet.org; spf=pass smtp.mailfrom=msweet.org; dkim=pass (1024-bit key) header.d=msweet.org header.i=@msweet.org header.b=DBUr5X7b; arc=none smtp.client-ip=173.255.209.91
-Authentication-Results: smtp.subspace.kernel.org; dmarc=pass (p=quarantine dis=none) header.from=msweet.org
-Authentication-Results: smtp.subspace.kernel.org; spf=pass smtp.mailfrom=msweet.org
+	s=arc-20240116; t=1741967594; c=relaxed/simple;
+	bh=05p8/Lt/ZskhmdDzTJTzMFHH70/wVP3kK9JsR9Yls8Q=;
+	h=MIME-Version:From:Date:Message-ID:Subject:To:Content-Type; b=AfWHFmYCfrDMDEJVe91ylB34x4bizPwvLR/8qDcgK2ot++Kk2+AIrk0slhM+uFR2IIF1bubBNZ71lARC1io5dw5uBv5kw1nFTF/xzl/IBuwm/m1TSkvQ0YdP3YncRAlRzO9VXW6wgbF4hhEm6Wi9VyZ/wStJqdUyscoLxhkkjEs=
+ARC-Authentication-Results:i=1; smtp.subspace.kernel.org; dmarc=pass (p=none dis=none) header.from=gmail.com; spf=pass smtp.mailfrom=gmail.com; dkim=pass (2048-bit key) header.d=gmail.com header.i=@gmail.com header.b=ne75KCrg; arc=none smtp.client-ip=209.85.219.171
+Authentication-Results: smtp.subspace.kernel.org; dmarc=pass (p=none dis=none) header.from=gmail.com
+Authentication-Results: smtp.subspace.kernel.org; spf=pass smtp.mailfrom=gmail.com
 Authentication-Results: smtp.subspace.kernel.org;
-	dkim=pass (1024-bit key) header.d=msweet.org header.i=@msweet.org header.b="DBUr5X7b"
-Received: from smtpclient.apple (cbl-66-186-76-47.vianet.ca [66.186.76.47])
-	(using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
-	(No client certificate requested)
-	by mail.msweet.org (Postfix) with ESMTPSA id 7625B81021;
-	Thu,  6 Mar 2025 22:21:32 +0000 (UTC)
-DKIM-Filter: OpenDKIM Filter v2.11.0 mail.msweet.org 7625B81021
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=msweet.org;
-	s=default; t=1741299692;
-	bh=3LYC7/z5RfpvUvbzfm4mv61F4l8TKEvRritbu1Sw7YU=;
-	h=From:Date:Subject:To:From;
-	b=DBUr5X7bmX8NqFdwkMKRReCuSBFIL9050r5xNP/zCymV3iKS3BEsDQEE1qS2s3lLO
-	 Zpgo7KHlXe9EVrUxDrhjUWERpcVmhrF97Hu8QR1WzCQZgyp8Fz2++fqtXrOVmUOnDX
-	 wRZkL6CWB0oobi8cj/i4dyWydDfTjJzMwGQjpiU0=
-From: Michael Sweet <msweet@msweet.org>
-Content-Type: text/plain;
-	charset=us-ascii
-Content-Transfer-Encoding: quoted-printable
+	dkim=pass (2048-bit key) header.d=gmail.com header.i=@gmail.com header.b="ne75KCrg"
+Received: by mail-yb1-f171.google.com with SMTP id 3f1490d57ef6-e46ebe19489so1886128276.2;
+        Fri, 14 Mar 2025 08:53:12 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1741967591; x=1742572391; darn=lists.linux.dev;
+        h=content-transfer-encoding:to:subject:message-id:date:from
+         :mime-version:from:to:cc:subject:date:message-id:reply-to;
+        bh=05p8/Lt/ZskhmdDzTJTzMFHH70/wVP3kK9JsR9Yls8Q=;
+        b=ne75KCrgep/n8X4LNAHViRZkPhc/gY0XFbDaS75zBrVTC2i73dZDllyn9acZdom9p/
+         JJZCTFy7/9cpvhLpH9fKHep2z1aKF3AT36Kz5mJriyqKxXmlIAdbw2Zmw1beCRUTTKuL
+         o/IkRhX8X/oHbf8q/XAYomPEnHKRwIMdhkwUJdkbNnqLU3ZN7hAGo2DlE4YhH39I3d3A
+         ey9aHP2LlwKx8XMLnBz71iJdrBwgFgvYRbFE7JwnP92vwTw7WokKsiw7gyT73FRZEqwn
+         8YRHp+HTW7q/1ZzjnmiczKJ0BKldtBRwFzFm8AZeMUx/avSuzql+4HuCrZobBffRZ2kE
+         m1tQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1741967591; x=1742572391;
+        h=content-transfer-encoding:to:subject:message-id:date:from
+         :mime-version:x-gm-message-state:from:to:cc:subject:date:message-id
+         :reply-to;
+        bh=05p8/Lt/ZskhmdDzTJTzMFHH70/wVP3kK9JsR9Yls8Q=;
+        b=qd0eh+7pChIf1jMnhWGbQClrywQXSDIz1EfN6REi3bHvuJGESNg82gLtcoEQSQFgA/
+         yB24vEDWTIivrMnaQQLNWHz8RlDdrtjcuowP9IEF/up5Ucf5m9wnqfW3bFNriJlTDHvh
+         GBBel8UrVrXluK9dhljVUfLG+2LNAiMKO/U+CIT/fg11mCiGZLG2NTOPrwQHPBKvShuO
+         pytbphySAHgzWsfluCoFhNm11mE3atelO5Cc1lqOki6dHB0LQD/hIFK7ZHhkW0FDSrwI
+         uaC82kQHpxX42ofEvFXQROk+Yv3uGgzgjWdmDfGsjiIVnO7UhDHj6dDbdHZ9oqsDH363
+         NZNg==
+X-Forwarded-Encrypted: i=1; AJvYcCVip4Eo1UCFes8h7IeWwSY4O9AUvqPbYhQSwp/WsJSdtsAL/Wm9TOcKQRTi2pdZpGtQQPIzoEK340uHtCrmpL3qoPsPq+I=@lists.linux.dev
+X-Gm-Message-State: AOJu0YykBOnvLnoVcg348lqmQYUORwezX769d4Hv7xKz9Tnt9kM5SZ/8
+	1QqQ2ZSBki9cwM+74PrYFyZxkbZihnRLjiSPXymZtTieBLNe+foRNBkdpSNcYqiA2c8UIg890kl
+	Cl8NDlWxSLJwNBVhIwbxH9gNzCSrcKub3rg0=
+X-Gm-Gg: ASbGncuJoCGq9FaRZB0BvzC+kCZGdwOgkPPz8QGza//pqAt1wTur2mLdAZvhATqn/jx
+	BVFx63OgkLLnTNoxAIicjBZWR4JZauEtzJSkqw1rmYR3ykTFuHveqxiVRHiQFBM1JlfQA2uH5Vi
+	b2CekrIaCNXGWjxkpq2C6c3owe
+X-Google-Smtp-Source: AGHT+IFGAuP9NrYxJ7u8mR0QQ79M+mq1OdDfVHlpx4wmftf4miFKl1lYtlKYw6FBgfvkpH5QSTF1119Cie7GkEpaMjA=
+X-Received: by 2002:a05:6902:2490:b0:e63:3e41:656d with SMTP id
+ 3f1490d57ef6-e63f650e1a0mr3248346276.15.1741967591246; Fri, 14 Mar 2025
+ 08:53:11 -0700 (PDT)
 Precedence: bulk
 X-Mailing-List: printing-architecture@lists.linux.dev
 List-Id: <printing-architecture.lists.linux.dev>
 List-Subscribe: <mailto:printing-architecture+subscribe@lists.linux.dev>
 List-Unsubscribe: <mailto:printing-architecture+unsubscribe@lists.linux.dev>
-Mime-Version: 1.0 (Mac OS X Mail 16.0 \(3826.400.131.1.6\))
-Date: Thu, 6 Mar 2025 17:21:21 -0500
-Subject: PDFio 1.5.0
-Message-Id: <9CA77122-B8B2-4D9F-88C4-8775E285F03B@msweet.org>
-To: OpenPrinting <printing-architecture@lists.linux.dev>
-X-Mailer: Apple Mail (2.3826.400.131.1.6)
+MIME-Version: 1.0
+From: Abhivyakti Singh <abhivyaktis04@gmail.com>
+Date: Fri, 14 Mar 2025 21:23:00 +0530
+X-Gm-Features: AQ5f1JqCsKt7PIYk0NCddodBDT5hFGKgKJ-ptPD2SWeCbxOuNSArso6MVAy6zYw
+Message-ID: <CAHDAiUqbowc-zGu_E6jLrHya0UMpp_L4pmky42k2UX+QiDEXJg@mail.gmail.com>
+Subject: Introduction and Interest in Contributing to OpenPrinting for GSoC
+To: printing-users@lists.linux.dev, printing-architecture@lists.linux.dev
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
 
-PDFio 1.5.0 is a feature and bug fix release. Changes include:
+Dear OpenPrinting Maintainers,
 
-- Added support for embedded color profiles in JPEG images (Issue #7)
-- Added `pdfioFileCreateICCObjFromData` API.
-- Added support for writing cross-reference streams for PDF 1.5 and =
-newer files (Issue #10)
-- Added `pdfioFileGetModDate()` API (Issue #88)
-- Added support for using libpng to embed PNG images in PDF output =
-(Issue #90)
-- Added support for writing the PCLm subset of PDF (Issue #99)
-- Now support opening damaged PDF files (Issue #45)
-- Updated documentation (Issue #95)
-- Updated the pdf2txt example to support font encodings.
-- Fixed potential heap/integer overflow issues in the TrueType cmap =
-code.
-- Fixed an output issue for extremely small `double` values with the
-  `pdfioContent` APIs.
-- Fixed a missing Widths array issue for embedded TrueType fonts.
-- Fixed some Unicode font embedding issues.
+I=E2=80=99m Abhivyakti Singh, a first-year Computer Science student eager t=
+o
+contribute to OpenPrinting as part of my preparation for Google Summer
+of Code (GSoC) 2025.
 
-Enjoy!
+My experience includes:
 
-https://github.com/michaelrsweet/pdfio/releases/tag/v1.5.0
+* C/C++ programming
+* Web development
+* Linux command-line tools
+* Verilog for hardware design
+* Exploring Linux kernel development
 
-________________________
-Michael Sweet
+I'm particularly interested in learning more about OpenPrinting and
+contributing to its development. If there are any beginner-friendly
+issues or resources you recommend for newcomers, I would greatly
+appreciate your guidance.
 
+I=E2=80=99m excited to start learning and contributing. Looking forward to
+your suggestions!
+
+Best regards,
+Abhivyakti Singh
+
+GitHub: https://github.com/just-a-coder23
+
+LinkedIn: https://www.linkedin.com/in/abhivyakti-singh-70a98231a/
