@@ -1,65 +1,83 @@
-Received: from mail-wm1-f41.google.com (mail-wm1-f41.google.com [209.85.128.41])
-	(using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
+Received: from smtp2.osuosl.org (smtp2.osuosl.org [140.211.166.133])
+	(using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
 	(No client certificate requested)
-	by smtp.subspace.kernel.org (Postfix) with ESMTPS id 7458F17D2;
-	Fri, 14 Mar 2025 19:43:05 +0000 (UTC)
-Authentication-Results: smtp.subspace.kernel.org; arc=none smtp.client-ip=209.85.128.41
+	by smtp.subspace.kernel.org (Postfix) with ESMTPS id 5351123371D
+	for <printing-architecture@lists.linux-foundation.org>; Mon, 17 Mar 2025 10:14:15 +0000 (UTC)
+Authentication-Results: smtp.subspace.kernel.org; arc=none smtp.client-ip=140.211.166.133
 ARC-Seal:i=1; a=rsa-sha256; d=subspace.kernel.org; s=arc-20240116;
-	t=1741981387; cv=none; b=E+808DciwqSLy/TQLqO2YRKQ9hHYN616j9LRBakMrYASxuuCOqkPz072vfm+ajaq7h9WP/pjDbs4EaGkV2w6cyX5kP4yBaembH3xfgd2YqzdZrP/5lrRSfGwUshQK9M+9zq5Pgi5fGz1XaYcXj1mgCMv3uVQD9LOz1pLOx4fDjY=
+	t=1742206458; cv=none; b=LgipwMsZ7Stja1+J7/+aWSODkZblOpfICFbmSvM4ORbyKbcZq/m8p9Zm6NMhNhObo/vk9Fah7p3DNhXUioCpwVAsWm8SdjZ9ik3D1VWyyM9WXG6vF/le/i2DZW7DqDu1C+NHEyEk8hZSbnO+bAcc0hlalPI1dP2lUEztbPnRaZs=
 ARC-Message-Signature:i=1; a=rsa-sha256; d=subspace.kernel.org;
-	s=arc-20240116; t=1741981387; c=relaxed/simple;
-	bh=0cek4zicYSAilemNtWiJrixntaXoy3H/CrN+ktAhL9k=;
-	h=Message-ID:Date:MIME-Version:Subject:To:References:From:
-	 In-Reply-To:Content-Type; b=nhpv83Hkd4lpkl0oc1IWThL0yH8DiZpmTG3cbrGg7GHU0Atc9FUak52+hUbQ9blitoocGXwj8xKgsV+AuUm0aumkQMOjGTf7hlAGhKIrcJapX5YSOIPrjA69RAcidGJ72tv+Z+SFKCN/Wap2VK+68BuX4ULrOA3oaXX2fdhTwnM=
-ARC-Authentication-Results:i=1; smtp.subspace.kernel.org; dmarc=pass (p=none dis=none) header.from=gmail.com; spf=pass smtp.mailfrom=gmail.com; dkim=pass (2048-bit key) header.d=gmail.com header.i=@gmail.com header.b=X5alBAeU; arc=none smtp.client-ip=209.85.128.41
-Authentication-Results: smtp.subspace.kernel.org; dmarc=pass (p=none dis=none) header.from=gmail.com
-Authentication-Results: smtp.subspace.kernel.org; spf=pass smtp.mailfrom=gmail.com
+	s=arc-20240116; t=1742206458; c=relaxed/simple;
+	bh=YKXTZwMD315w3hWoKjm51GfGR3JrILKJNTwLLn2jmZY=;
+	h=Message-ID:Date:MIME-Version:To:From:Subject:Content-Type; b=ugJ7rWr6dnNFK6Zig29gkJOuqaGBqQGcwJbJ/BGfg5sU3kYbLhC4vkIjhbokpxSxPteOJxc3MvG9GGWURb3kztMfrSs450IXX0dESlQI6qKtbjLcQ4UPyq5M0UDqOVP2icHfaQ9JWddfT5f/QRYbEO3Hp4+dfPoKQ1XQIOIpR2g=
+ARC-Authentication-Results:i=1; smtp.subspace.kernel.org; dkim=pass (2048-bit key) header.d=apevzner.com header.i=@apevzner.com header.b=QtTX2dvW; arc=none smtp.client-ip=140.211.166.133
 Authentication-Results: smtp.subspace.kernel.org;
-	dkim=pass (2048-bit key) header.d=gmail.com header.i=@gmail.com header.b="X5alBAeU"
-Received: by mail-wm1-f41.google.com with SMTP id 5b1f17b1804b1-43d0a5cfd7dso591855e9.1;
-        Fri, 14 Mar 2025 12:43:05 -0700 (PDT)
+	dkim=pass (2048-bit key) header.d=apevzner.com header.i=@apevzner.com header.b="QtTX2dvW"
+Received: from localhost (localhost [127.0.0.1])
+	by smtp2.osuosl.org (Postfix) with ESMTP id 962D6400E7
+	for <printing-architecture@lists.linux-foundation.org>; Mon, 17 Mar 2025 10:14:15 +0000 (UTC)
+X-Virus-Scanned: amavis at osuosl.org
+X-Spam-Flag: NO
+X-Spam-Score: -2.1
+X-Spam-Level:
+Received: from smtp2.osuosl.org ([127.0.0.1])
+ by localhost (smtp2.osuosl.org [127.0.0.1]) (amavis, port 10024) with ESMTP
+ id fAgOfaCKVBu8 for <printing-architecture@lists.linux-foundation.org>;
+ Mon, 17 Mar 2025 10:14:14 +0000 (UTC)
+Received-SPF: Pass (mailfrom) identity=mailfrom; client-ip=2a00:1450:4864:20::130; helo=mail-lf1-x130.google.com; envelope-from=pzz@apevzner.com; receiver=<UNKNOWN> 
+DMARC-Filter: OpenDMARC Filter v1.4.2 smtp2.osuosl.org C351440249
+Authentication-Results: smtp2.osuosl.org; dmarc=none (p=none dis=none) header.from=apevzner.com
+DKIM-Filter: OpenDKIM Filter v2.11.0 smtp2.osuosl.org C351440249
+Authentication-Results: smtp2.osuosl.org;
+	dkim=pass (2048-bit key, unprotected) header.d=apevzner.com header.i=@apevzner.com header.a=rsa-sha256 header.s=google header.b=QtTX2dvW
+Received: from mail-lf1-x130.google.com (mail-lf1-x130.google.com [IPv6:2a00:1450:4864:20::130])
+	by smtp2.osuosl.org (Postfix) with ESMTPS id C351440249
+	for <printing-architecture@lists.linux-foundation.org>; Mon, 17 Mar 2025 10:14:13 +0000 (UTC)
+Received: by mail-lf1-x130.google.com with SMTP id 2adb3069b0e04-543e4bbcd86so4642982e87.1
+        for <printing-architecture@lists.linux-foundation.org>; Mon, 17 Mar 2025 03:14:13 -0700 (PDT)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
-        d=gmail.com; s=20230601; t=1741981383; x=1742586183; darn=lists.linux.dev;
-        h=content-transfer-encoding:in-reply-to:from:content-language
-         :references:to:subject:user-agent:mime-version:date:message-id:from
-         :to:cc:subject:date:message-id:reply-to;
-        bh=1hu/zJ2jHGdBnKchkjhSGGREZ6UBkK9mReCjWBTN9G4=;
-        b=X5alBAeURrtSaRAtAj9nAw+6pC0x7kzXEK98reBL7cHO+1aUlVKY6i+TCNhneQ1Mc9
-         CBRVEAJcEjic8lzPWIrfpwGU9B8HWvH2Usv6v399tb4mbF5tirkUmh2rr0TVzn+982n4
-         dvIdFzHNQADmj2sZPJOhDAcipb7fUXv1rKvRx2RwvQXX0fIyCpqHuoGiS9+tO42it+3/
-         xYeVDXWZgL6Q9gXmC85+s04LMMcYKWWqY/fFBQXHNBO8+HAenOs+r3Uvv4m0p4wcDBcb
-         SG0TQJQrbwIXhqDgXSu+3BZc5IQe86oe/hdwjGuDPV0buTh2e1e1jrP4AGY97W/xree5
-         RaDQ==
+        d=apevzner.com; s=google; t=1742206451; x=1742811251; darn=lists.linux-foundation.org;
+        h=content-transfer-encoding:subject:from:content-language:to
+         :user-agent:mime-version:date:message-id:from:to:cc:subject:date
+         :message-id:reply-to;
+        bh=ZJZVE7hXKuxLQ2DDbGcloXbcBZ0jHLrEsCnnV2oGWVs=;
+        b=QtTX2dvWr4JZV9exwTcib+EjcXORh/WFw9m6OACv3tao0voMd3h7tJR+adu8G++RIv
+         Z9xQZT0rCjMWiwhpWkqAD01f2F6g4V6UZ36ZrTJrdUL8ev9ExedLghx9KKvlvH5/eChT
+         PEIOsHX0uy+dsDcYwWv1R/AlwKpQdGTI6HLchaQ7ja8YK2Ryb5q1cZjiuBUWJ9p50u/z
+         c2awXDyLnvb04m8fFNgbdjhAHVdTQJW48EYgS17rtOTuQsxpQEeervTxmR75fKrGSctK
+         7rBNDTtIoEPAiYsj3FDuLE7cgXGGFlt/e/ph/DWdK5y4jFI2b0e5mkpurFY2RZ1YvRhY
+         UnMw==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
-        d=1e100.net; s=20230601; t=1741981383; x=1742586183;
-        h=content-transfer-encoding:in-reply-to:from:content-language
-         :references:to:subject:user-agent:mime-version:date:message-id
-         :x-gm-message-state:from:to:cc:subject:date:message-id:reply-to;
-        bh=1hu/zJ2jHGdBnKchkjhSGGREZ6UBkK9mReCjWBTN9G4=;
-        b=Bzbkb0Rf5NdEJvOE6B8D7qbUKRZiIlVqo04LfgyMAEvlhNWF32RNxqMPjVYUakkTo7
-         ZcqNz4yY52AhzStkpVSXOh98JU1PTfM/srirWIHvTYQS+zqVbxWCXGJCyF4Igax3FI2f
-         LP5RyqozB/LVXdI9NZx9Rt0WtBKCb2J1JgN3Cmtspoh1WZ/sCVU0RdYCmHPijnoyRHb2
-         71pZUz+QXnwZMIPP3zOY5S8E9rdhmk6PQyNRqhpyNF6dPaEDBuUT3IRcUS0fK7rIVlNe
-         yWrlxo9pBL7tx/ZJDurt3ZWL6gOrcyxDgYXRTAmWbpehDGrG+rc69Fwrt5UyUvSOwi6+
-         jdWg==
-X-Forwarded-Encrypted: i=1; AJvYcCUm5TWNMwdyjLgQEZvWZSgvSmKwQfykCE0efxBFC4rezwrXF6rM1YLeVpfKUYXcreYXu7Wyt9pVL2lEjL7BDgbUUhXnuoI=@lists.linux.dev, AJvYcCXvXFO5cxKYArK7V0zSCtNCJzJqoN9cWlF+9eSuDTVjnPI5JlQc5ocGMpYi081G3uuBBO7gYNw+NkbQnAnk5Yc=@lists.linux.dev
-X-Gm-Message-State: AOJu0YxzCYokpOlaWB2GboiSiNXoLqg+a2OYMzF5loo5SlsHqhGmRtvl
-	iW6cHL2l1qRVvyrb2/xP4lbbzGn1Vv545VQnzbmbBhzEQ++A1Sc9hN0nF6ZP
-X-Gm-Gg: ASbGncuqwEdnRk4w1XycsPXIdGPRs1bZaEv67hO7m73gBAfu0en6HBZScl2k5yVVhuh
-	MAY8hTJmEKSP/EU/LjfXSOo6YpEXfcaGnLhYxRz39Vuk/5aR56yt+dz4+7KLYfY2/S7BwUOHDPI
-	lf2HtfF//o6TTg5Iz7hCroGqqgM2ghf8tyON/UgxawAGPPVdfJKedrxDDuiBSl24FLfpt5wLY+n
-	mbskFqk8Ars36RT5Ganjdku2kMXBPwSs891w8wF08h5aUX/cakb1vA88xjX0Bow9gt1nDOBR9ai
-	nxxz/LQGWAN7KaawoE6xizdLv5Rnd0+vE5Adk9ZmvKmjhGfUyJgiGAuT0n7JkhqUpi5xh+bui88
-	+dLBciG5YCEsnBdBuZCg=
-X-Google-Smtp-Source: AGHT+IEeIqRW6kF/AECWxyZR2vdYtkBLeMY5mDHuFk+9szvO4FmCmBeMvc1wZdHwXUyrDxCUqjLS7w==
-X-Received: by 2002:a05:600c:470e:b0:43c:ee62:33f5 with SMTP id 5b1f17b1804b1-43d1eccf8c6mr45245185e9.27.1741981383190;
-        Fri, 14 Mar 2025 12:43:03 -0700 (PDT)
-Received: from [192.168.68.113] (194-96-30-82.hdsl.highway.telekom.at. [194.96.30.82])
-        by smtp.gmail.com with ESMTPSA id 5b1f17b1804b1-43d200fad4dsm26563245e9.29.2025.03.14.12.43.02
+        d=1e100.net; s=20230601; t=1742206451; x=1742811251;
+        h=content-transfer-encoding:subject:from:content-language:to
+         :user-agent:mime-version:date:message-id:x-gm-message-state:from:to
+         :cc:subject:date:message-id:reply-to;
+        bh=ZJZVE7hXKuxLQ2DDbGcloXbcBZ0jHLrEsCnnV2oGWVs=;
+        b=P8q0QUa8pfOsKqZ7HmprC79F3ibsELOXv1suCBPHqahwFghWdJif+o3RRO7SrmDVIV
+         oGPwihZNsD8qJSC1xdtL8nXg7r43Qou2DRB4g3mFOBjZBOMakmhRnYJGS3II/RztIsul
+         Iqtc74Lvj1XObeg3LbC4XshSkZenrflbKDDTjiOOZdn6BjavrbFH4XYVwoU5wUWr2nSL
+         +94it/xjpY+hCby/oTf/zivi7HNt4WtwUdTpr7wlTNq4QMceita5TFhSYe8XT4yns1b0
+         vzAi9h8fOIteCiG5ZCOPxdej1uomwzUYiFTsJoPokw/FzGlJoKFByUcxh/pqd2Nl0WNV
+         Ab4w==
+X-Gm-Message-State: AOJu0YwV0CxyR9nHcxrF2JGDSePrEe7PaB/djrM3riLUMWxcimsC/XON
+	ffXlYpoeti/Qu1VK6LW5H3BUgcjorMSvk5dtUZwnGIeW0iX5S+2TWRCUn5Vz9IUElSpK5HrEtTy
+	2
+X-Gm-Gg: ASbGncvb+xv9N56jPt1zduvUhp+rDnHeFE8Mxp18V7NVippZ8ROZS4bC3wZhc1MT89t
+	JYfr4KiVITmEICCEn8y9dFHuZe35GTQ8cRZzSbfvOs6E6+02VS2Yx2RA70X6zK7QOfQtqPIyLiS
+	+nJpOvrYbZNKTNXCuJnppqp9LmwIsMg40BETGXzFiBuQfvnLhH4Ltrn8iPF9cH2GM4LIRyd5XYL
+	3eeRsI8s52/SlE9TumKiCW1gTLvW6wPevQIVAF5fDHwWglvPrFrIRpghY0IAbIg/It0LyEzjRKO
+	5IECuYF3/wgu0M8HLvZDYWiHOQZYqss8sxD1eobAbL9kdwLXpBy5YkFImSYc51NdNZaLPE66H5J
+	n92xTToM64w==
+X-Google-Smtp-Source: AGHT+IFvewfiYvoNGgiYC/vuH66NlYqIhiv90ZE/sqYtj5X26id1PqJlkbRhUIpLacpchrg08txBsw==
+X-Received: by 2002:a05:6512:3192:b0:549:7394:2cd0 with SMTP id 2adb3069b0e04-549c3907dcamr6241382e87.19.1742206450298;
+        Mon, 17 Mar 2025 03:14:10 -0700 (PDT)
+Received: from [192.168.0.6] (ppp85-141-192-7.pppoe.mtu-net.ru. [85.141.192.7])
+        by smtp.googlemail.com with ESMTPSA id 38308e7fff4ca-30c3f0ea4d8sm15071101fa.27.2025.03.17.03.14.09
+        for <printing-architecture@lists.linux-foundation.org>
         (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
-        Fri, 14 Mar 2025 12:43:02 -0700 (PDT)
-Message-ID: <50c26c93-01e2-4a10-b878-070a6380c543@gmail.com>
-Date: Fri, 14 Mar 2025 20:43:01 +0100
+        Mon, 17 Mar 2025 03:14:09 -0700 (PDT)
+Message-ID: <d91c686a-e3f8-4012-88fc-dc5547512ebd@apevzner.com>
+Date: Mon, 17 Mar 2025 13:14:08 +0300
 Precedence: bulk
 X-Mailing-List: printing-architecture@lists.linux.dev
 List-Id: <printing-architecture.lists.linux.dev>
@@ -67,97 +85,40 @@ List-Subscribe: <mailto:printing-architecture+subscribe@lists.linux.dev>
 List-Unsubscribe: <mailto:printing-architecture+unsubscribe@lists.linux.dev>
 MIME-Version: 1.0
 User-Agent: Mozilla Thunderbird
-Subject: Re: Introduction and Interest in Contributing to OpenPrinting for
- GSoC
-To: Abhivyakti Singh <abhivyaktis04@gmail.com>,
- printing-users@lists.linux.dev, printing-architecture@lists.linux.dev
-References: <CAHDAiUqbowc-zGu_E6jLrHya0UMpp_L4pmky42k2UX+QiDEXJg@mail.gmail.com>
+To: Open Printing <printing-architecture@lists.linux-foundation.org>
 Content-Language: en-US
-From: Till Kamppeter <till.kamppeter@gmail.com>
-In-Reply-To: <CAHDAiUqbowc-zGu_E6jLrHya0UMpp_L4pmky42k2UX+QiDEXJg@mail.gmail.com>
+From: Alexander Pevzner <pzz@apevzner.com>
+Subject: ipp-usb 0.9.30
 Content-Type: text/plain; charset=UTF-8; format=flowed
-Content-Transfer-Encoding: 8bit
+Content-Transfer-Encoding: 7bit
 
-Hi, welcome to OpenPrinting!
-
-Perhaps you already went through some points of what I am asking you to do. 
-Please do what you did not have done yet.
-
-To get deeper insight into OpenPrinting, have a look here:
-
-https://wiki.linuxfoundation.org/gsoc/google-summer-code-2025-openprinting-projects#introduction
-
-This is the project idea list for this year's Google Summer of Code (which you 
-probably have already seen). It has an introduction about what we are doing, and 
-in the beginning links to several videos and podcasts with me. Especially watch 
-the Destination Linux video for a general introduction and the Indaba to learn 
-about the New Architecture, removal of PPD file and classic driver support in 
-CUPS 3.x.
-
-For an impression how our GSoC projects look like, see the contributor's 
-write-ups in my news posts and their final reports are linked in my October News:
-
-https://openprinting.github.io/OpenPrinting-News-October-2024/#google-summer-of-code-2024
-
-All my news posts are here
-
-https://openprinting.github.io/news/
-
-So you get updates on what we are doing and what we have done.
-
-In the project ideas list and in the news posts you find links to join our 
-Telegram group, mailing lists, and Mastodon.
-
-Telegram OpenPrinting group: https://t.me/+RizBbjXz4uU2ZWM1
-
-Please have a look through the materials and tell us where you are most 
-interested in. Also feel free to ask questions, asking here in this chat or 
-using the other communication platforms of OpenPrinting.
-
-To familiarize with our code please try out the following
-
-1. Create a print queue in Linux (btr to take Ubuntu as the base system) and 
-print out of that.
-2. Download CUPS code, build it, add a comment in the code, and try to print and 
-capture the CUPS error log. Your comments should be visible in the CUPS error log.
-3. Go to Openprinting.Org and learn the basics.
-4. Learn about driverless print.
-5. Learn about print applications.
-
-Once you are done with these basics, let me know and we can proceed from there.
-
-    Till
+Hi,
 
 
+ipp-usb version 0.9.30 is now available.
 
-On 3/14/25 16:53, Abhivyakti Singh wrote:
-> Dear OpenPrinting Maintainers,
-> 
-> I’m Abhivyakti Singh, a first-year Computer Science student eager to
-> contribute to OpenPrinting as part of my preparation for Google Summer
-> of Code (GSoC) 2025.
-> 
-> My experience includes:
-> 
-> * C/C++ programming
-> * Web development
-> * Linux command-line tools
-> * Verilog for hardware design
-> * Exploring Linux kernel development
-> 
-> I'm particularly interested in learning more about OpenPrinting and
-> contributing to its development. If there are any beginner-friendly
-> issues or resources you recommend for newcomers, I would greatly
-> appreciate your guidance.
-> 
-> I’m excited to start learning and contributing. Looking forward to
-> your suggestions!
-> 
-> Best regards,
-> Abhivyakti Singh
-> 
-> GitHub: https://github.com/just-a-coder23
-> 
-> LinkedIn: https://www.linkedin.com/in/abhivyakti-singh-70a98231a/
-> 
+   1) Fixed potential crashes during printer initialization under 
+certain error conditions (Issue #102).
+
+   2) Added new quirks:
+
+     - usb-send-delay: Introduces a small delay after each USB transmit 
+request.
+     - usb-send-delay-threshold: Sets a USB send size threshold, 
+ensuring that only transfers exceeding this size will apply the 
+usb-send-delay quirk.
+
+   3) Discovered a working combination of quirks that successfully 
+enables the HP X677 printer (Issue #95).
+
+   4) Added quirks to make Brother QL-810W work properly (issue #97, PR #98)
+
+   5) Use "ipp://" scheme instead of "http://" for "printer-uri" 
+attribute in the Get-Printer-Attributes requests that ipp-usb issues by 
+itself during printer initialization. It seems to improve the Canon 
+Selphy CP1500 support (see PR #96 for details).
+
+-- 
+
+	Wishes, Alexander Pevzner (pzz@apevzner.com)
 
