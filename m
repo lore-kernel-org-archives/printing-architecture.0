@@ -1,86 +1,73 @@
 Received: from mail.msweet.org (mail.msweet.org [173.255.209.91])
 	(using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
 	(No client certificate requested)
-	by smtp.subspace.kernel.org (Postfix) with ESMTPS id 8BFE823B0
-	for <printing-architecture@lists.linux.dev>; Sun, 23 Mar 2025 15:02:21 +0000 (UTC)
+	by smtp.subspace.kernel.org (Postfix) with ESMTPS id ABC81192B89
+	for <printing-architecture@lists.linux.dev>; Fri, 28 Mar 2025 18:05:17 +0000 (UTC)
 Authentication-Results: smtp.subspace.kernel.org; arc=none smtp.client-ip=173.255.209.91
 ARC-Seal:i=1; a=rsa-sha256; d=subspace.kernel.org; s=arc-20240116;
-	t=1742742143; cv=none; b=YlIHiV7WkQFej4NO/8kMGccPNj/nnd68yTy5saUU8lxf9mAsU1GBU9FpSSOgb1Nxy5GiOzumojtMgSmbDXHOHv7HyNLwxkeRQM+R6yn1AuYEr+iZbiZkEKtBVCOklWHeH65Sl5DtjX0kiWASb3nw6NZ8h9FfrYf8JRsEnoenc40=
+	t=1743185121; cv=none; b=HKVhkE3xbCIm6Oup6Nt8IIRk34afsdG/3hA5JqHv9kjt6FXLYtGekhZm9EdQcX/XH2IU3kzeV2F4FubuGpZdYkoyF5LjDh0f8KPBMcMQt/jqW/MKTRXoRWjvE4ay6O9SIjwzHuHrZecnfnkPIecOeh16n+JIso+rEQqtMWDs1Mg=
 ARC-Message-Signature:i=1; a=rsa-sha256; d=subspace.kernel.org;
-	s=arc-20240116; t=1742742143; c=relaxed/simple;
-	bh=NnhindfzOejve9Yo0a+OEmos+r0DTwhyrnlArxg+ybk=;
-	h=Content-Type:Mime-Version:Subject:From:In-Reply-To:Date:Cc:
-	 Message-Id:References:To; b=nTRjSgS7WS2OC9Jap4X5t3VkYIhFb6g/XUvPyEdFWh6lz+xQ4G0feOKum8x+RaWZfiJbZES7DCGY9DImifN+75yipBPzPQfCWuKokL7Grhwjefe8D69Zts0335jZgbV0HjKl0uHNDCrJFDKHWKO2MKXSaiBFxP1TDaZMSlTMQBs=
-ARC-Authentication-Results:i=1; smtp.subspace.kernel.org; dmarc=pass (p=quarantine dis=none) header.from=msweet.org; spf=pass smtp.mailfrom=msweet.org; dkim=pass (1024-bit key) header.d=msweet.org header.i=@msweet.org header.b=KSeSbCep; arc=none smtp.client-ip=173.255.209.91
+	s=arc-20240116; t=1743185121; c=relaxed/simple;
+	bh=nddbnijWb+7pJvzVi1WohhtPThvUqAcUceQLrBWCbvI=;
+	h=From:Content-Type:Mime-Version:Date:Subject:Message-Id:To; b=okT1EeOeW/eljN5Tq/bxM2i2X6ewsWsGlUtac2phJIT3Tc4sTEZ/qzE1zRnSvxFoiIweQP6sWnQgLXZVYwqto/lzVBf4s4ggkZPcb2vAsh8kXggE+7yp2c0cwS0TSPwMEf6OIDChHoDGf0uLOtWRUGU6Rko85SGXX/+hG4JWX4A=
+ARC-Authentication-Results:i=1; smtp.subspace.kernel.org; dmarc=pass (p=quarantine dis=none) header.from=msweet.org; spf=pass smtp.mailfrom=msweet.org; dkim=pass (1024-bit key) header.d=msweet.org header.i=@msweet.org header.b=YYlMUfOd; arc=none smtp.client-ip=173.255.209.91
 Authentication-Results: smtp.subspace.kernel.org; dmarc=pass (p=quarantine dis=none) header.from=msweet.org
 Authentication-Results: smtp.subspace.kernel.org; spf=pass smtp.mailfrom=msweet.org
 Authentication-Results: smtp.subspace.kernel.org;
-	dkim=pass (1024-bit key) header.d=msweet.org header.i=@msweet.org header.b="KSeSbCep"
+	dkim=pass (1024-bit key) header.d=msweet.org header.i=@msweet.org header.b="YYlMUfOd"
 Received: from smtpclient.apple (cbl-66-186-76-47.vianet.ca [66.186.76.47])
 	(using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
 	(No client certificate requested)
-	by mail.msweet.org (Postfix) with ESMTPSA id 327B180445;
-	Sun, 23 Mar 2025 15:02:14 +0000 (UTC)
-DKIM-Filter: OpenDKIM Filter v2.11.0 mail.msweet.org 327B180445
+	by mail.msweet.org (Postfix) with ESMTPSA id 5A4E780E74;
+	Fri, 28 Mar 2025 18:05:10 +0000 (UTC)
+DKIM-Filter: OpenDKIM Filter v2.11.0 mail.msweet.org 5A4E780E74
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=msweet.org;
-	s=default; t=1742742134;
-	bh=NnhindfzOejve9Yo0a+OEmos+r0DTwhyrnlArxg+ybk=;
-	h=Subject:From:In-Reply-To:Date:Cc:References:To:From;
-	b=KSeSbCepKewQ7Zx44fflWZuw97SKNmbzdRy1F8NocDyh0t/GtP2DySvMqzoqRSP2x
-	 gPCX+TRX1g85nyGzjPWO70lTpwe9qkrehLks28rcL7HF9wpwx4j0NczZ3Zj/ztDH7S
-	 QqiVPbF4VVTdiGxlQj4ICXlxR7OzTc+w/xKmWeJE=
+	s=default; t=1743185110;
+	bh=nddbnijWb+7pJvzVi1WohhtPThvUqAcUceQLrBWCbvI=;
+	h=From:Date:Subject:To:From;
+	b=YYlMUfOd2NWfF87akZYxwNaxzK1S0ww4/KsHlDJptGlOgXD91ZO7rs1d1O8WMTI/m
+	 DSgwxKGCAdtNVKrozUqSrUB0P81MUPKITtUSutlUb9th/quEVCv+zoXapsi6neV1x4
+	 i+ZvZDDOPOwIs4Jy5O0HulzNZbzQyv7otzSHJHXI=
+From: Michael Sweet <msweet@msweet.org>
 Content-Type: text/plain;
-	charset=utf-8
+	charset=us-ascii
+Content-Transfer-Encoding: quoted-printable
 Precedence: bulk
 X-Mailing-List: printing-architecture@lists.linux.dev
 List-Id: <printing-architecture.lists.linux.dev>
 List-Subscribe: <mailto:printing-architecture+subscribe@lists.linux.dev>
 List-Unsubscribe: <mailto:printing-architecture+unsubscribe@lists.linux.dev>
 Mime-Version: 1.0 (Mac OS X Mail 16.0 \(3826.400.131.1.6\))
-Subject: Re: Issue with adminutil.h Removal in libcups3
-From: Michael Sweet <msweet@msweet.org>
-In-Reply-To: <CAMCgP36ngL7_xSv2_O+AkCnAkhz4KzG9AmkaC-EwU=cA6D4acQ@mail.gmail.com>
-Date: Sun, 23 Mar 2025 11:02:02 -0400
-Cc: printing-architecture@lists.linux.dev
-Content-Transfer-Encoding: quoted-printable
-Message-Id: <5FA7ADDA-B1C3-44E2-B891-E0E3B5B36CB3@msweet.org>
-References: <CAMCgP36ngL7_xSv2_O+AkCnAkhz4KzG9AmkaC-EwU=cA6D4acQ@mail.gmail.com>
-To: Tarun srivastava <tarurak4@gmail.com>
+Date: Fri, 28 Mar 2025 14:04:58 -0400
+Subject: CUPS 2.x web interface changes
+Message-Id: <8CC30A8A-F699-4D18-BB01-EF9B584F86AB@msweet.org>
+To: OpenPrinting <printing-architecture@lists.linux.dev>
 X-Mailer: Apple Mail (2.3826.400.131.1.6)
 
-Tarun,
+All,
 
-> On Mar 23, 2025, at 5:14=E2=80=AFAM, Tarun srivastava =
-<tarurak4@gmail.com> wrote:
->=20
-> Hi Maintainers,
->=20
-> I=E2=80=99m working on porting the KDE Print Manager from CUPS 2.x =
-APIs to
-> CUPS 3.x APIs and have encountered an issue related to libcups3
-> functions and macros.
->=20
-> Currently, KDE relies on the macros and functions from adminutil.h to
-> interact with the CUPS server and later use this result in UI
-> components. However, since adminutil.h has been removed from libcups3,
-> I=E2=80=99m unsure how to proceed.
->=20
-> Could you guide me on how to interact with the CUPS server without =
-adminutil.h?
+A user recently posted an issue against CUPS concerning the CUPS web =
+interface:
 
-CUPS 3.x changes a lot of the assumptions people have made about how =
-CUPS (and printing) works.
+    https://github.com/OpenPrinting/cups/issues/1207
 
-*Most* users will only ever use/interact with cupslocald, the per-user =
-print spooler which will have very limited configuration options - =
-basically just "configuration profiles" to supplement mDNS/DNS-SD =
-discovery.
+Now, given that CUPS 2.5 will be the last version that uses the current =
+CGI-based web interface, I do *not* wish to embark on a major rewrite of =
+the code.  However, the two main complaints - the navigation bar =
+"blending in" with the browser's UI and the lack of "action" controls on =
+the home page can be resolved fairly simply with some changes to the =
+stylesheet (cups.css) and home page (index.html{.in}) files.
 
-The sharing server (cupssharingd) will likely have a configuration file, =
-but mainly for things that are currently in cups-files.conf.  Other =
-configurable things will be accessible via IPP operations.
+I have posted a screenshot of some initial tweaks to the above issue to =
+get some feedback from the reporter, and I'd appreciate additional =
+opinions/feedback on these changes...  Again, I don't want to rewrite or =
+add new CGI programs for CUPS 2.5 but *would* like to improve the =
+usability of the current web interface for those that need it.  And =
+obviously we can make sure the PAPPL-based CUPS 3.0 sharing server's web =
+interface incorporates these changes and queues up other (more =
+substantive) changes that we might want to make.
 
-So the short answer is: adminutil.h is only for CUPS 2.x and earlier.
+Thanks!
 
 ________________________
 Michael Sweet
