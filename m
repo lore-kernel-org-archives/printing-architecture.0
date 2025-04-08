@@ -1,65 +1,70 @@
-Received: from mail-wm1-f54.google.com (mail-wm1-f54.google.com [209.85.128.54])
-	(using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
+Received: from us-smtp-delivery-124.mimecast.com (us-smtp-delivery-124.mimecast.com [170.10.133.124])
+	(using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
 	(No client certificate requested)
-	by smtp.subspace.kernel.org (Postfix) with ESMTPS id 6AE1318BC3F
-	for <printing-architecture@lists.linux.dev>; Fri,  4 Apr 2025 10:38:33 +0000 (UTC)
-Authentication-Results: smtp.subspace.kernel.org; arc=none smtp.client-ip=209.85.128.54
+	by smtp.subspace.kernel.org (Postfix) with ESMTPS id 464BE1B4243
+	for <printing-architecture@lists.linux.dev>; Tue,  8 Apr 2025 14:01:35 +0000 (UTC)
+Authentication-Results: smtp.subspace.kernel.org; arc=none smtp.client-ip=170.10.133.124
 ARC-Seal:i=1; a=rsa-sha256; d=subspace.kernel.org; s=arc-20240116;
-	t=1743763115; cv=none; b=LgZvLJaZ6VVv3x7uwHDcUgOr4hoMnfItpchEwsIe8cHiDKn5Lck+Td6z7Fogkpy3EVs2bWp5wcXl1jZS0F9BFIeAO5qzFiTVkk/yh+tKOprwnw3IkFWQV+L3YU/e6s3BvZA4TBpSptoxBmiVXFk3ifN0XdnstnHfJW3sDR2wsS4=
+	t=1744120898; cv=none; b=GhDfBIHG6s8Kc4qYUrELqofLmwTgJJUPMrTVn0GMDYos6c82jjKmti89k7Hfr5KbYadAi4W21m1MU3uvGnKUHCso/J9HpEb2Gk9izstbxinyU8QgYthKeVD4sNYTeNMY0o5Seiib2JHcCihPTW0gzIs0XS2JOpf4x4ItuFIOfno=
 ARC-Message-Signature:i=1; a=rsa-sha256; d=subspace.kernel.org;
-	s=arc-20240116; t=1743763115; c=relaxed/simple;
-	bh=e/vjhF98KQiFmc0KBT9fHeS8RW+Y2G8xYeabR0We3tY=;
-	h=Message-ID:Date:MIME-Version:Subject:To:Cc:References:From:
-	 In-Reply-To:Content-Type; b=Vu1hythbgmCD30hER+NfGhmR8Qc5fX0T2xA/JjlkT6Afiv4sneSbDKzKe+u4HQ4PC+f53dLQ6/2pzKWdqF4saA5r/sBkWwJFjt/lscaO9nVBeBebCSCnRbOgfBeqL9vg4K7cQnMH+yBDRoBdEo/i2yb2o+rFUg2aAo88RHU2SbA=
-ARC-Authentication-Results:i=1; smtp.subspace.kernel.org; dmarc=pass (p=none dis=none) header.from=gmail.com; spf=pass smtp.mailfrom=gmail.com; dkim=pass (2048-bit key) header.d=gmail.com header.i=@gmail.com header.b=YjyQosmf; arc=none smtp.client-ip=209.85.128.54
-Authentication-Results: smtp.subspace.kernel.org; dmarc=pass (p=none dis=none) header.from=gmail.com
-Authentication-Results: smtp.subspace.kernel.org; spf=pass smtp.mailfrom=gmail.com
+	s=arc-20240116; t=1744120898; c=relaxed/simple;
+	bh=nQVckOuymTr/HwJM14XHbidsvJTu3ICGDJqqvKWmggU=;
+	h=Message-ID:Date:MIME-Version:To:From:Subject:Content-Type; b=a0sFVNprIBj7j4wIFe0QLlZBx7yDvbev3DFWXr8/8XI9P1O7WPEfGIey9X8uVDYb5MTF9HoEHP6ljDBHz9wlgHIWvxOYvERyAFJ5zUk7+dcyiyKYchy1g2zJiMT/k9HLlkQtayq9ziTYcL+9wKOooz5LuJSZH+U3IZucYaLycME=
+ARC-Authentication-Results:i=1; smtp.subspace.kernel.org; dmarc=pass (p=quarantine dis=none) header.from=redhat.com; spf=pass smtp.mailfrom=redhat.com; dkim=pass (1024-bit key) header.d=redhat.com header.i=@redhat.com header.b=DbLDFGFy; arc=none smtp.client-ip=170.10.133.124
+Authentication-Results: smtp.subspace.kernel.org; dmarc=pass (p=quarantine dis=none) header.from=redhat.com
+Authentication-Results: smtp.subspace.kernel.org; spf=pass smtp.mailfrom=redhat.com
 Authentication-Results: smtp.subspace.kernel.org;
-	dkim=pass (2048-bit key) header.d=gmail.com header.i=@gmail.com header.b="YjyQosmf"
-Received: by mail-wm1-f54.google.com with SMTP id 5b1f17b1804b1-43cfe63c592so18327165e9.2
-        for <printing-architecture@lists.linux.dev>; Fri, 04 Apr 2025 03:38:33 -0700 (PDT)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
-        d=gmail.com; s=20230601; t=1743763111; x=1744367911; darn=lists.linux.dev;
-        h=content-transfer-encoding:in-reply-to:from:content-language
-         :references:cc:to:subject:user-agent:mime-version:date:message-id
-         :from:to:cc:subject:date:message-id:reply-to;
-        bh=z54eMNcOoGHBjIwnM+VRBSfXP4LPnWvnk3ABL5qxAsw=;
-        b=YjyQosmfOzELIcyMSovarakDQEzncU82KwH9zkCIgHN1t+pzsQN2XpryLxZmOqkfAX
-         sVA/JFx/NVAcWPF7/bymU+PIvZfjYRYyMgtb1n1jXhAxAhBIgW5hrS523vn8hGYQBxyy
-         7NBp0fvhZ+riawbgAXZuikJq9ur4c+IxSsUT/MwFZj91p7khUA/8XA3aycJTLlcP00H+
-         I5RrdywXgHFN+adjEMLiuthYn2P/X2Z5GGxav0Hwc4uqpnHx2CUb7D7Q7Ro1VZN/fdwb
-         WFkTaUj1qMkGONJLOThcrvHuKqNyYws5Og0K/kxBqIWVfKBEGbxj6RinBwaF6GbDEKvw
-         BaGg==
+	dkim=pass (1024-bit key) header.d=redhat.com header.i=@redhat.com header.b="DbLDFGFy"
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=redhat.com;
+	s=mimecast20190719; t=1744120895;
+	h=from:from:reply-to:subject:subject:date:date:message-id:message-id:
+	 to:to:cc:mime-version:mime-version:content-type:content-type:
+	 content-transfer-encoding:content-transfer-encoding;
+	bh=NkAWOPfPy7EiBE2HctVrq2QX8mGp0Jr97+uU6K75OzE=;
+	b=DbLDFGFyX1ToxiOiHKA0Hg5AMIdHwkJFI1P+azOBbW5oa73kFH9VFjULtA/EpPE3ELl6JI
+	uTOlvQlnSoxlC2XsHQJym6ANcFR9GMqINpCJufHc8PFFXYpxdSj1cXXENpOa2+boYnGd3W
+	WYtt3/XiZV7ikcQft1ST4Mjvwutem5I=
+Received: from mail-wm1-f70.google.com (mail-wm1-f70.google.com
+ [209.85.128.70]) by relay.mimecast.com with ESMTP with STARTTLS
+ (version=TLSv1.3, cipher=TLS_AES_256_GCM_SHA384) id
+ us-mta-490-lbdx_lvlP6eEZnRi4-8hVA-1; Tue, 08 Apr 2025 10:01:32 -0400
+X-MC-Unique: lbdx_lvlP6eEZnRi4-8hVA-1
+X-Mimecast-MFC-AGG-ID: lbdx_lvlP6eEZnRi4-8hVA_1744120891
+Received: by mail-wm1-f70.google.com with SMTP id 5b1f17b1804b1-43efa869b0aso15730695e9.3
+        for <printing-architecture@lists.linux.dev>; Tue, 08 Apr 2025 07:01:32 -0700 (PDT)
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
-        d=1e100.net; s=20230601; t=1743763111; x=1744367911;
-        h=content-transfer-encoding:in-reply-to:from:content-language
-         :references:cc:to:subject:user-agent:mime-version:date:message-id
-         :x-gm-message-state:from:to:cc:subject:date:message-id:reply-to;
-        bh=z54eMNcOoGHBjIwnM+VRBSfXP4LPnWvnk3ABL5qxAsw=;
-        b=Ek6YBrLxO9YDjLpTFBAW3Rfyk5XhtV5dKbJbCZTWpHhUCaeN5H4Bw9vz1fGvGpAJzG
-         5+5d6bMmb4pG4Bb4JOEQoxxv7Xgw4P4dfOHUsxk2A9JX2BhxDDvYbBpvWlhxEtHHVkjf
-         Cw8k+lmrtfTJ+3L3wb9EjNsI/+hy0g/WIo362+jwDfbS4R8iTtDSQxRbP9IOHR56f0HN
-         /uyVTJVpP4Qv1ZnCZJRr7kQ9UQV9SUrxckAELz25Vlc1c0/e0Jqk7w8NynfXph/BnPX8
-         2CkefMhn8PvmpNeYLElJAEPL5aI5Nt5REizzvZQLqH1VzybLNOD/33+5b0/DOPlVTvec
-         lLDQ==
-X-Forwarded-Encrypted: i=1; AJvYcCUdNXfpxBhz3gxPmn0G8F3yQAESS+vcJyddg7VzEVnnaXLrYFiNeUAQqNTcfrvU2G9xyqdlz5suKRT2Cu4I8+Rc6i/T4eI=@lists.linux.dev
-X-Gm-Message-State: AOJu0Yx+34ahRCY+vIP/9gqzZFUzEEhZA5bx39Sv/UryIbaS9tt2423q
-	8Jomg9PkGTMSaJsWWX/8aAdZDrSDbPqIrXTG4ha8gc29ZUTFNU9AQUnFow==
-X-Gm-Gg: ASbGncuUf7I84RTUsukrbIxi0DFveM0hipo7AQtLIBnxQrVdLUMWVh7yPrjH3UwDSKC
-	PvY9oiC/TQuGJlXOLcE+XtBbILTGbLNHSZ63U5ZUm79ZifRjpM+7oj703d9KV/sPO1SrO2z2GkN
-	x9ncOdnEHX3X6WIrnEOY782UzHTIngVkiidzPnzy5fgCVRcc9ixapkNt+IH1oPSrSI3NNExc3LN
-	dy1zRLZEfKjzCSgUZwFX8t8MilA8UVcbGHUmVpZ9Fbad9Q+Jzy9GCknOeKGIKyxD/LFfxM8mFmk
-	Xyhfog9Hla05gdZKSPSQXdhvhpeswBccw9kaqlR3mTtikfjTHbQ0JL7E6HZROYsfJVAFtzqGFWA
-	nJ0A6BK1FXNI9zZItIp4=
-X-Google-Smtp-Source: AGHT+IFG3PwBbCAAD033U+5tnrzvBGLkgynloEPZ4qr6z51NZWe+BL7QO+xLFl1BtrKnJ9F0M+N6UA==
-X-Received: by 2002:a05:600c:698c:b0:43c:fa0e:471a with SMTP id 5b1f17b1804b1-43ed6615862mr13583735e9.5.1743763111397;
-        Fri, 04 Apr 2025 03:38:31 -0700 (PDT)
-Received: from [192.168.68.113] (194-96-30-82.hdsl.highway.telekom.at. [194.96.30.82])
-        by smtp.gmail.com with ESMTPSA id ffacd0b85a97d-39c30096964sm4052888f8f.15.2025.04.04.03.38.30
+        d=1e100.net; s=20230601; t=1744120891; x=1744725691;
+        h=content-transfer-encoding:subject:from:to:content-language
+         :user-agent:mime-version:date:message-id:x-gm-message-state:from:to
+         :cc:subject:date:message-id:reply-to;
+        bh=NkAWOPfPy7EiBE2HctVrq2QX8mGp0Jr97+uU6K75OzE=;
+        b=jdJWKQvAzcDmI24xWnRwxv3ZiNWRBRFbnLlKh4D6nZNmzAtaTjz7iRUvYKOzZltpbC
+         /elAXnj4nF0INHkal2bnq+16oNeB2e0YNMYpfXI4xglFKmxiOqnIfNo2wQXOLQViU0k7
+         YVL9rVlTTPkIdhOeEQ4SS/ix90TLkNsqAY959ibvvNpX3s4gqcR8u9SCUnSGGued5jDI
+         Uu0S5DtS5FA/YV1Xio93lgg/XChmQRDQux/60088TSmIpve+CuV9Xajka3jZIs/rN2OA
+         96/RrFNITlw1zaTwedr/t1+BvJrGhryOWxgmP+EZS3l5dNWsjGAobhDekJ5NixYK1GrD
+         DXhQ==
+X-Gm-Message-State: AOJu0YwkqIvaZbzux5ExuVypZtVDsc1OgWHkJMK+I8tc012YWu/xIN6C
+	JgX6tyFAionSt5BUzKlOvma6z8tc9Gco1PWjx27DeU+4P2naOlW3JSJ7SCveK9fJc2JJXvoEISu
+	JRdQKoeQbtEopaKHwVa83vgtZE2PYotkQCWMqBQyLtZJV3mDOI5CK1E9sl6Xx5V53Q1K0B5aH1p
+	UaR+ZhffQdyCBd6ElUT7wioizULY1EBYiFT+qeI72VAp3lrnNoo7vmrBc+
+X-Gm-Gg: ASbGncvQUEGDv/sSJUCs3wNTRDfIZdE3a4RzYK43qT5yc9e4Z83OoR4MVFlYAeCwGSy
+	a0binwlE7fbTeWE/l7i4DGNFUYpTDYWOGRDpD+jyQIVRUXKySdqkLMoJyZXLPtHzqhgb5jvSCCB
+	Yf/cEo8dFz2/LutG9I6dXPZL2/dLAssi4rcFJLx5F1kwHaOK4iZDx67BedZdlarHzqC2db+6kF2
+	V673O+WqHkWyFvg95gy8/j5PPQlNFnsfoycAzovrh1HV0XjnRLnZktfuz9pREG4DLthx6IFZB9b
+	HhemWyLOp0Nw
+X-Received: by 2002:a05:600c:1e13:b0:43c:fbbf:7bf1 with SMTP id 5b1f17b1804b1-43ed0da49e6mr195022035e9.30.1744120890717;
+        Tue, 08 Apr 2025 07:01:30 -0700 (PDT)
+X-Google-Smtp-Source: AGHT+IEQSaKOGluY18bHgnkXY0jnQds/g1OUfOxl3NWv5ggoLRJorRvaq9kTpSdFVJjXmrFznFEjzw==
+X-Received: by 2002:a05:600c:1e13:b0:43c:fbbf:7bf1 with SMTP id 5b1f17b1804b1-43ed0da49e6mr195020885e9.30.1744120889873;
+        Tue, 08 Apr 2025 07:01:29 -0700 (PDT)
+Received: from [10.43.3.35] ([85.93.96.130])
+        by smtp.gmail.com with ESMTPSA id 5b1f17b1804b1-43ec16a5776sm167448465e9.22.2025.04.08.07.01.29
+        for <printing-architecture@lists.linux.dev>
         (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
-        Fri, 04 Apr 2025 03:38:30 -0700 (PDT)
-Message-ID: <1bbbcc6f-56af-414c-951e-e22d39328b61@gmail.com>
-Date: Fri, 4 Apr 2025 12:38:29 +0200
+        Tue, 08 Apr 2025 07:01:29 -0700 (PDT)
+Message-ID: <2a915be4-20e1-4dbf-82af-3c712c3529cb@redhat.com>
+Date: Tue, 8 Apr 2025 16:01:28 +0200
 Precedence: bulk
 X-Mailing-List: printing-architecture@lists.linux.dev
 List-Id: <printing-architecture.lists.linux.dev>
@@ -67,42 +72,34 @@ List-Subscribe: <mailto:printing-architecture+subscribe@lists.linux.dev>
 List-Unsubscribe: <mailto:printing-architecture+unsubscribe@lists.linux.dev>
 MIME-Version: 1.0
 User-Agent: Mozilla Thunderbird
-Subject: Re: Migrating PyCups to Python CFFI for libcups 3.x
-To: Zdenek Dohnal <zdohnal@redhat.com>,
- Soumyadeep Ghosh <soumyadeepghosh2004@zohomail.in>
-Cc: Johannes Meixner <jsmeix@suse.de>, Thorsten Alteholz
- <debian@alteholz.de>,
- printing-architecture <printing-architecture@lists.linux.dev>
-References: <195f6c36bda.7bed295d81707.2073846750099631163@zohomail.in>
- <b917b1cb-013a-4fe2-ac4a-c3d4b37f0c00@redhat.com>
+To: OpenPrinting <printing-architecture@lists.linux.dev>
+From: Zdenek Dohnal <zdohnal@redhat.com>
+Subject: CUPS 2.4.12 is released!
+X-Mimecast-Spam-Score: 0
+X-Mimecast-MFC-PROC-ID: 12hqx3M-JdXxeVT4wRr-i82Ufi5cS2EdAWyg2vGeQYY_1744120891
+X-Mimecast-Originator: redhat.com
 Content-Language: en-US
-From: Till Kamppeter <till.kamppeter@gmail.com>
-In-Reply-To: <b917b1cb-013a-4fe2-ac4a-c3d4b37f0c00@redhat.com>
 Content-Type: text/plain; charset=UTF-8; format=flowed
 Content-Transfer-Encoding: 7bit
 
-On 4/3/25 10:52, Zdenek Dohnal wrote:
-> Sounds good! cffi is present at least in Centos, so I don't have a dependency 
-> issue - I'm not sure about other maintainers (added Johannes and Thorsten I know 
-> of).
-> 
+Hi all!
 
-It is also in Ubuntu in Main (package python3-cffi, upstream version 1.17.1), so 
-no problem using it.
+The last planned release of CUPS 2.4.x series (the next will be 2.5.x 
+series) contains several enhancements among set of bug fixes, such 
+following cryptographic policies when using GnuTLS crypto provider and 
+possibility to opt-out from this behavior, logging job debugging history 
+if print queue backends fails, or raising alerts for certificate issues 
+in IPPS backend.
 
-> What we have to make sure (based on the example) that path to .so file is not 
-> hardcoded, but configurable during setup.
-> 
-> Thank you for working on this!
-> 
-> 
-> P.S. I see two mails in the list with almost the same content - is there a 
-> difference?
-> 
+The detailed list of changes is available in CHANGES.md.
 
-Zdenek, Soumyadeep has posted it to the list twice because the first version got 
-rejected. So in the list it is only once (I checked the archives). You see it 
-twice because you got explicitly CCed.
+Enjoy the new release!
 
-    Till
+P.S. I'm sorry for possible duplicate email - the previous was rejected 
+due sending format being HTML.
+
+-- 
+Zdenek Dohnal
+Senior Software Engineer
+Red Hat, BRQ-TPBC
 
