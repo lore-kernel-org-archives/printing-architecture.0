@@ -1,106 +1,70 @@
-Received: from smtp4.osuosl.org (smtp4.osuosl.org [140.211.166.137])
+Received: from mail-43166.protonmail.ch (mail-43166.protonmail.ch [185.70.43.166])
 	(using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
 	(No client certificate requested)
-	by smtp.subspace.kernel.org (Postfix) with ESMTPS id 50D121422AB
-	for <printing-architecture@lists.linux-foundation.org>; Tue, 15 Apr 2025 17:38:39 +0000 (UTC)
-Authentication-Results: smtp.subspace.kernel.org; arc=none smtp.client-ip=140.211.166.137
+	by smtp.subspace.kernel.org (Postfix) with ESMTPS id A697015D1
+	for <printing-architecture@lists.linux.dev>; Sun, 20 Apr 2025 02:50:22 +0000 (UTC)
+Authentication-Results: smtp.subspace.kernel.org; arc=none smtp.client-ip=185.70.43.166
 ARC-Seal:i=1; a=rsa-sha256; d=subspace.kernel.org; s=arc-20240116;
-	t=1744738723; cv=none; b=GKY9qxtOfFVleiPX+5ei7P+n1x0NQ7oiqCog3KrIpuAyNbWIhp2Mv4u+fax5TlFkycEvdAcr96fSmkYsez4W4CPtWB2aTyUmPISQoBM0C3YvT2xlhjXfScfY15JCu1FdkbC0TLLX5/EFzukx1rzMJLaMZja7g/jetP59+6ENqLA=
+	t=1745117424; cv=none; b=g1VTQJNr8b+sAP0LDwrt0Cdnm8oitNNn2QQlD6u+jQhfCrDKrkGyc3B0XswnAosdgRXuJEj/cxWaoN3nFXzO/e1+jE3v7YlCBDs1h3PISnYvVzqVkRJszFISg9WqvBeGpbIG/NXwClq+W2g7Bn7ej3BoNufIs8MwfioXkz+CHus=
 ARC-Message-Signature:i=1; a=rsa-sha256; d=subspace.kernel.org;
-	s=arc-20240116; t=1744738723; c=relaxed/simple;
-	bh=nP1+qkCv3lqhUvhNxrIDDS9ozfz1iywtgA7UCPy0+IU=;
-	h=Message-ID:Date:MIME-Version:To:From:Subject:Content-Type; b=Nkgt0fIN3Hax7BngbWhhQ/eH7dcpFcbTNb1Q5Qa6NLDL+quJA5pfkcLHCftSxPmVXAbV5v4l/FDVgUrJdv1kCokgbNeRPbjDrlAKf1bYCJ58EHB1Izq8/p7nM+0aE/wvl+xPXsL7+crTbd70OjYDVtXsNtoyqBXGSUpdro+Me2o=
-ARC-Authentication-Results:i=1; smtp.subspace.kernel.org; dkim=pass (2048-bit key) header.d=apevzner.com header.i=@apevzner.com header.b=BpeJOjsK; arc=none smtp.client-ip=140.211.166.137
+	s=arc-20240116; t=1745117424; c=relaxed/simple;
+	bh=SjDJj20du91CSfqhB46Km+BtV+HvbuF5a86pVEC7Vzo=;
+	h=Date:To:From:Subject:Message-ID:MIME-Version:Content-Type; b=ZK0/PVtZshqeg6ZFdrZybsxZ5sLL1itkGLEc8i5SZjQGU2DWI6yDVQuSW1lArY5u2YskpSxP2oFvRVW3ph9h0fdvdK+qrDgekjk8ezO9i1AaYZkWnC4VRBO5rtG0MZ1hQxISaiCGPw1dmzdplsfLNNTC4Lv4sS/hUEKt4mpiKrE=
+ARC-Authentication-Results:i=1; smtp.subspace.kernel.org; dmarc=pass (p=quarantine dis=none) header.from=protonmail.ch; spf=pass smtp.mailfrom=protonmail.ch; dkim=pass (2048-bit key) header.d=protonmail.ch header.i=@protonmail.ch header.b=BfNGNcLj; arc=none smtp.client-ip=185.70.43.166
+Authentication-Results: smtp.subspace.kernel.org; dmarc=pass (p=quarantine dis=none) header.from=protonmail.ch
+Authentication-Results: smtp.subspace.kernel.org; spf=pass smtp.mailfrom=protonmail.ch
 Authentication-Results: smtp.subspace.kernel.org;
-	dkim=pass (2048-bit key) header.d=apevzner.com header.i=@apevzner.com header.b="BpeJOjsK"
-Received: from localhost (localhost [127.0.0.1])
-	by smtp4.osuosl.org (Postfix) with ESMTP id B966D40664
-	for <printing-architecture@lists.linux-foundation.org>; Tue, 15 Apr 2025 17:38:39 +0000 (UTC)
-X-Virus-Scanned: amavis at osuosl.org
-X-Spam-Flag: NO
-X-Spam-Score: -2.1
-X-Spam-Level:
-Received: from smtp4.osuosl.org ([127.0.0.1])
- by localhost (smtp4.osuosl.org [127.0.0.1]) (amavis, port 10024) with ESMTP
- id 2fjZrvOqWJQ3 for <printing-architecture@lists.linux-foundation.org>;
- Tue, 15 Apr 2025 17:38:39 +0000 (UTC)
-Received-SPF: Pass (mailfrom) identity=mailfrom; client-ip=2a00:1450:4864:20::129; helo=mail-lf1-x129.google.com; envelope-from=pzz@apevzner.com; receiver=<UNKNOWN> 
-DMARC-Filter: OpenDMARC Filter v1.4.2 smtp4.osuosl.org 2BE51410DC
-Authentication-Results: smtp4.osuosl.org; dmarc=none (p=none dis=none) header.from=apevzner.com
-DKIM-Filter: OpenDKIM Filter v2.11.0 smtp4.osuosl.org 2BE51410DC
-Authentication-Results: smtp4.osuosl.org;
-	dkim=pass (2048-bit key, unprotected) header.d=apevzner.com header.i=@apevzner.com header.a=rsa-sha256 header.s=google header.b=BpeJOjsK
-Received: from mail-lf1-x129.google.com (mail-lf1-x129.google.com [IPv6:2a00:1450:4864:20::129])
-	by smtp4.osuosl.org (Postfix) with ESMTPS id 2BE51410DC
-	for <printing-architecture@lists.linux-foundation.org>; Tue, 15 Apr 2025 17:38:37 +0000 (UTC)
-Received: by mail-lf1-x129.google.com with SMTP id 2adb3069b0e04-54afb5fcebaso7355604e87.3
-        for <printing-architecture@lists.linux-foundation.org>; Tue, 15 Apr 2025 10:38:37 -0700 (PDT)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
-        d=apevzner.com; s=google; t=1744738715; x=1745343515; darn=lists.linux-foundation.org;
-        h=content-transfer-encoding:subject:from:content-language:to
-         :user-agent:mime-version:date:message-id:from:to:cc:subject:date
-         :message-id:reply-to;
-        bh=XRIW9Xmn9T8XWfnyxSF+F4fU7MQClwyH6qo8L5Ui858=;
-        b=BpeJOjsKj8xD5ZPyAtCFPl1GLdTvrhoqHCNzyp1JscS4TGUivpc8S1ZaD6dX9odaS/
-         w0UzOmhiQXUoK/TEErJMUq4EenxzlXV+YYUZ/n0TaKKQ64TbU75Wbk/OUHrX4gXBJpC0
-         r7h57WBSswTH1ZFwfUPyag/TxvqG7TLX0As4Aazfndpxt/rE61IfjBxA5A5K2ABSLfWV
-         U0tV8XACM9vhl4eg2NZ66OC733OGINF7Mj0NooYAoZkLvHcjKIIDV023mk5N36aM4xCs
-         Gy1UI1ATAPOHA3Dtc5QDi5ufjCLU9qLLeGWr4yfynPG+rzptQFn8f+K9J8YwFpZUd8xI
-         oR3w==
-X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
-        d=1e100.net; s=20230601; t=1744738715; x=1745343515;
-        h=content-transfer-encoding:subject:from:content-language:to
-         :user-agent:mime-version:date:message-id:x-gm-message-state:from:to
-         :cc:subject:date:message-id:reply-to;
-        bh=XRIW9Xmn9T8XWfnyxSF+F4fU7MQClwyH6qo8L5Ui858=;
-        b=ZYgLW95XqkZdE68oaUt6bc4AJfgHGIVsGcNEUVpPbEzHDSekE4mXQePGkD7jGdEGUd
-         7NoY9Bk9fuipJX89WeK+54pwik0gez8WMmA5cfslD25smbqPH82ecd5ntMZy942bMgX3
-         w00n6URXpdSER7BWXQ2c+wi8Y1ywySq+1xdcVzUdlASl7Z1nAa7UcaCo4cyfZ7UUgm0l
-         4hlVrOpqLgiUAyLFS9r9+NBJa21wt25mvpH1Rp3ugsYPTb1JE/FUoXsUhNurlf1luAMF
-         ww+8e9NGw4pJcGQeOWfso9yYbfxWWsBb/1/KmWhaW13Unjmgs0/sUlPTQCPmXBo/rY6L
-         iZww==
-X-Forwarded-Encrypted: i=1; AJvYcCUckNouATAfrZ3d4o0plWTeJEyU11/nR+kjwcJN/8Ql80tYm/G7UX5zGnPb9QQoRsRJUnw0G3g15sCNQl3zE7Segoz0ss4=@lists.linux-foundation.org
-X-Gm-Message-State: AOJu0YzX2OhpdDBxDkWWmzZgrncwuIfr1iaDkrFuy9PcIROHYkgaZZW3
-	6K+CPOSF2x8dVGkSno/hf5+GfG9kOxbAfQEmrc+JYppzRsBL5fa9wIxKBfI+Mug=
-X-Gm-Gg: ASbGncuyJEMujJUiwQ5HngwBOaZ+apE0aASYjHyDl6gpxhSyMTlW3Y0VA09BpOb1+fU
-	7Q+Kb2E5pQVn1ljJlD0nusuGPRhCW01m8rV0WyvPMeahoG9zL86GQZaI9bWF5nuBTzzPzmPmumx
-	MTzUk6E+3g4S7DJqn3edIlNSeiFdQ7n2piM/VGKkaW9Z+Q2joeVVbqneJTWgflGFwKsnI/4odJQ
-	xw7tZ+0nZj/IrOdMm4nwrkbezx2qFq1gu8MmiTcaLfnBAKVnc5opNlJ41VBBD42Wd7nSUU6CInt
-	ktQdCYEtGN/LOUvYsF+AAB0mEsHQ6NqSSQ==
-X-Google-Smtp-Source: AGHT+IGMz4B97vgT6SjWA9Z3bohnDRTz1br5hpfjRz3It+E2L0hEwJZvOPX310hQ5KqJsf5h85lEdw==
-X-Received: by 2002:a05:6512:2213:b0:54b:1055:f4c0 with SMTP id 2adb3069b0e04-54d4528cf5bmr5073081e87.4.1744738714700;
-        Tue, 15 Apr 2025 10:38:34 -0700 (PDT)
-Received: from [192.168.0.6] ([46.188.9.40])
-        by smtp.googlemail.com with ESMTPSA id 2adb3069b0e04-54d3d2379ddsm1483675e87.63.2025.04.15.10.38.33
-        (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
-        Tue, 15 Apr 2025 10:38:34 -0700 (PDT)
-Message-ID: <d1482dbb-bc62-474b-8f75-de787e7db0ec@apevzner.com>
-Date: Tue, 15 Apr 2025 20:38:33 +0300
+	dkim=pass (2048-bit key) header.d=protonmail.ch header.i=@protonmail.ch header.b="BfNGNcLj"
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=protonmail.ch;
+	s=protonmail3; t=1745117420; x=1745376620;
+	bh=SjDJj20du91CSfqhB46Km+BtV+HvbuF5a86pVEC7Vzo=;
+	h=Date:To:From:Subject:Message-ID:Feedback-ID:From:To:Cc:Date:
+	 Subject:Reply-To:Feedback-ID:Message-ID:BIMI-Selector:
+	 List-Unsubscribe:List-Unsubscribe-Post;
+	b=BfNGNcLjmStTC/XrM2ekwqgspP+42nhWjSraNALNmIoL1NbE6ljpwiXxnGxsVh2D8
+	 EDWAqyNEuGIBpEN0p29A9QV44bvjgiMA5cAx+mQD9PXjQnfA7YAixHCPJwNwbOz8NM
+	 xE/NSsER82ggA5FyiP0JhN2si2dIlyUjDI64Jz0dSrtQFz/Y0upmg+BvNkfu9IjvuV
+	 NW9IuiMQcdBatwJI7XGJIf82eN8O7kV3jVLgtJBKm4aMmrbkTDRycTfgYmRrES/bys
+	 KA4nr25pdHaa1o0OjjujRqJFAY3jI7sXqzGwIonqRaaO2dSEHouCXbxCFDcGMieYl9
+	 tCbvq9SaUSVUw==
+Date: Sun, 20 Apr 2025 02:50:14 +0000
+To: printing-architecture@lists.linux.dev
+From: aisuneko icecat <iceneko@protonmail.ch>
+Subject: Exit behavior of system-config-printer
+Message-ID: <f364e80a-cfe9-47ca-ba7a-7af5fc881ebb@protonmail.ch>
+Feedback-ID: 34173221:user:proton
+X-Pm-Message-ID: 4d8c72ed4f28562b6939890bc1416f6e5c3ad25f
 Precedence: bulk
 X-Mailing-List: printing-architecture@lists.linux.dev
 List-Id: <printing-architecture.lists.linux.dev>
 List-Subscribe: <mailto:printing-architecture+subscribe@lists.linux.dev>
 List-Unsubscribe: <mailto:printing-architecture+unsubscribe@lists.linux.dev>
 MIME-Version: 1.0
-User-Agent: Mozilla Thunderbird
-To: sane-devel@alioth-lists.debian.net,
- Open Printing <printing-architecture@lists.linux-foundation.org>
-Content-Language: en-US
-From: Alexander Pevzner <pzz@apevzner.com>
-Subject: sane-airscan 0.99.34
-Content-Type: text/plain; charset=UTF-8; format=flowed
-Content-Transfer-Encoding: 7bit
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
 
-Hi,
+Hi list,
+when I inspect the failed systemd services on my system, I came across=20
+the following failed udev configure-printer@.service, which belongs to=20
+system-config-printer:
+Apr 19 22:51:42 liquidice systemd[1]: Started Configure Plugged-In Printer.
+Apr 19 22:51:42 liquidice udev-configure-printer[29612]: add usb-007-032
+Apr 19 22:51:42 liquidice udev-configure-printer[29612]: device devpath=20
+is /devices/pci0000:00/0000:00:08.3/0000:65:00.4/usb7/7-1/7-1.2/7-1.>
+Apr 19 22:51:42 liquidice udev-configure-printer[29612]: Device already=20
+handled
+Apr 19 22:51:42 liquidice systemd[1]:=20
+configure-printer@usb-007-032.service: Main process exited, code=3Dexited,=
+=20
+status=3D1/FAILURE
+Apr 19 22:51:42 liquidice systemd[1]:=20
+configure-printer@usb-007-032.service: Failed with result 'exit-code'.
 
-sane-airscan version 0.99.34 is now available. This release adds quirks, 
-specific for Xerox B205/B215 and solves many problems with these devices:
 
-   - unstable eSCL scanning if device has entered the powersave state
-   - VERY unstable eSCL scanning via ipp-usb
-   - workaround for the broken IPv6 support on device
+Is returning exit code 1 on "Device already handled" intended behavior?=20
+I believe this could be misleading at some point.
+Thanks,
+aisuneko
 
--- 
 
-	Wishes, Alexander Pevzner (pzz@apevzner.com)
 
