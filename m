@@ -1,26 +1,81 @@
-Received: from mwweb08oc.mail2world.com (mwweb08oc.mail2world.com [74.202.142.113])
-	(using TLSv1.2 with cipher ECDHE-RSA-AES256-SHA384 (256/256 bits))
+Received: from smtp4.osuosl.org (smtp4.osuosl.org [140.211.166.137])
+	(using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
 	(No client certificate requested)
-	by smtp.subspace.kernel.org (Postfix) with ESMTPS id 46922524C
-	for <printing-architecture@lists.linux.dev>; Sun, 20 Apr 2025 04:22:24 +0000 (UTC)
-Authentication-Results: smtp.subspace.kernel.org; arc=none smtp.client-ip=74.202.142.113
+	by smtp.subspace.kernel.org (Postfix) with ESMTPS id 6107C258CE9
+	for <printing-architecture@lists.linux-foundation.org>; Tue, 29 Apr 2025 11:13:14 +0000 (UTC)
+Authentication-Results: smtp.subspace.kernel.org; arc=none smtp.client-ip=140.211.166.137
 ARC-Seal:i=1; a=rsa-sha256; d=subspace.kernel.org; s=arc-20240116;
-	t=1745122947; cv=none; b=Sd9glG13K5waJzcWomYWLrgtldrDm/yN3TKGVd1KcVaW7bFXa0QKsy+9EzhUXejOToF+XRz/gXEKT1Dzi+Mq1IQ12oykotTURxMCv3yIgQUElVYc07y8YizLnEnam95menmk0QAGGzqPXCqjh6oAl0HpftibUWExpqadHLM/22E=
+	t=1745925198; cv=none; b=f7JDzWGFq/bl05EaL9qoL/UgzMEcCsQOXRVyhcFNJUrC0pdzQQcPqYIp+XVgn4z/Igqjc1beVj+EqthIOCP+TQqJuEHSJxlbGiF+k+AXlcLcRPsKOMEuVUv3tzPAOp6O+kTT1IOjIC/vERAre2i2L8vgdviY0jBg7z3pCLedyi8=
 ARC-Message-Signature:i=1; a=rsa-sha256; d=subspace.kernel.org;
-	s=arc-20240116; t=1745122947; c=relaxed/simple;
-	bh=Y0ar17YYf3dFEG1VYBzZnV4pwbK4Acd9HvNrDmbhNJE=;
-	h=Message-ID:Date:MIME-Version:Subject:To:References:From:
-	 In-Reply-To:Content-Type; b=TM+sQL17PPXlnoAXvgBE1YzczIvUmTpHBUM9NXVrFFVT8B8vm31n7WTSQWOo7vqKaEFuK6ploV8KJldlt87b7K7JNoHGthT0f6pOw/Wfuk60M+C+dAcWz7X6T6KUq4EwbgDSXuUeENiM0OHibdAZO6bRNOSSJg9odlj43DyoQ7g=
-ARC-Authentication-Results:i=1; smtp.subspace.kernel.org; dmarc=pass (p=none dis=none) header.from=shentel.net; spf=pass smtp.mailfrom=shentel.net; arc=none smtp.client-ip=74.202.142.113
-Authentication-Results: smtp.subspace.kernel.org; dmarc=pass (p=none dis=none) header.from=shentel.net
-Authentication-Results: smtp.subspace.kernel.org; spf=pass smtp.mailfrom=shentel.net
-Received: from mail pickup service by mwweb08oc.mail2world.com with Microsoft SMTPSVC;
-	 Sat, 19 Apr 2025 21:21:18 -0700
-auth-sender:gheskett@shentel.net
-Received: from 204.111.66.52 unverified ([204.111.66.52]) by mwweb08oc.mail2world.com with Mail2World SMTP Server; 
-	Sat, 19 Apr 2025 21:21:18 -0700
-Message-ID: <7d8ad828-b355-416c-b2f6-1542d0919944@shentel.net>
-Date: Sun, 20 Apr 2025 00:21:17 -0400
+	s=arc-20240116; t=1745925198; c=relaxed/simple;
+	bh=x4bEGpbqxcaOMsYYlshBRKOMf3+SF5ozF8iaNJNfU8A=;
+	h=Message-ID:Date:MIME-Version:To:From:Subject:Content-Type; b=qPbpvglgqdQ4Eq9Xc2a+6mRVv+TAG6/uAvDS7Lhrhn7WoAOMQmi4+Fq4niupfa6NanxnnuMGNtEWOlTIgGurarJRPFWcMxaXLMovabXtAl8c1VrY9fhSIOvMMJ4eXgyO/kPs0gWTR4uCcZndSvOuReZsS0ExmQWRKO7jkT7rnjc=
+ARC-Authentication-Results:i=1; smtp.subspace.kernel.org; dkim=pass (2048-bit key) header.d=apevzner.com header.i=@apevzner.com header.b=UyeFtqYu; arc=none smtp.client-ip=140.211.166.137
+Authentication-Results: smtp.subspace.kernel.org;
+	dkim=pass (2048-bit key) header.d=apevzner.com header.i=@apevzner.com header.b="UyeFtqYu"
+Received: from localhost (localhost [127.0.0.1])
+	by smtp4.osuosl.org (Postfix) with ESMTP id A730540552
+	for <printing-architecture@lists.linux-foundation.org>; Tue, 29 Apr 2025 11:13:14 +0000 (UTC)
+X-Virus-Scanned: amavis at osuosl.org
+X-Spam-Flag: NO
+X-Spam-Score: -0.857
+X-Spam-Level:
+Received: from smtp4.osuosl.org ([127.0.0.1])
+ by localhost (smtp4.osuosl.org [127.0.0.1]) (amavis, port 10024) with ESMTP
+ id isK65WpdyZD9 for <printing-architecture@lists.linux-foundation.org>;
+ Tue, 29 Apr 2025 11:13:14 +0000 (UTC)
+Received-SPF: Pass (mailfrom) identity=mailfrom; client-ip=2a00:1450:4864:20::12f; helo=mail-lf1-x12f.google.com; envelope-from=pzz@apevzner.com; receiver=<UNKNOWN> 
+DMARC-Filter: OpenDMARC Filter v1.4.2 smtp4.osuosl.org 0747E405BB
+Authentication-Results: smtp4.osuosl.org; dmarc=none (p=none dis=none) header.from=apevzner.com
+DKIM-Filter: OpenDKIM Filter v2.11.0 smtp4.osuosl.org 0747E405BB
+Authentication-Results: smtp4.osuosl.org;
+	dkim=pass (2048-bit key, unprotected) header.d=apevzner.com header.i=@apevzner.com header.a=rsa-sha256 header.s=google header.b=UyeFtqYu
+Received: from mail-lf1-x12f.google.com (mail-lf1-x12f.google.com [IPv6:2a00:1450:4864:20::12f])
+	by smtp4.osuosl.org (Postfix) with ESMTPS id 0747E405BB
+	for <printing-architecture@lists.linux-foundation.org>; Tue, 29 Apr 2025 11:13:12 +0000 (UTC)
+Received: by mail-lf1-x12f.google.com with SMTP id 2adb3069b0e04-54b0d638e86so6918233e87.1
+        for <printing-architecture@lists.linux-foundation.org>; Tue, 29 Apr 2025 04:13:12 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=apevzner.com; s=google; t=1745925190; x=1746529990; darn=lists.linux-foundation.org;
+        h=content-transfer-encoding:subject:from:content-language:to
+         :user-agent:mime-version:date:message-id:from:to:cc:subject:date
+         :message-id:reply-to;
+        bh=GWhkYurf9K1qd4soAuHKhf0RMJQm78XZzcQM0SD+IxU=;
+        b=UyeFtqYuknAT2UCrubMbDCiLp5uuZki1THYSCEiAqISTf5pc2mpwRADkLUuFzV3ghc
+         mTs37U3ZcSNA5B219HLOo3yA7/s+GaViVmkr2B9UloOqWvBB5u3ogxlHFDF0Ag7ZiBwS
+         HbupZDvMz6uZCEe8Vo0oC8jesOjeF2YsTqUY+0qKYMKlSV2RyiKu9nOy4aIE/5T8I3jw
+         gFppBnFfH3HT6OZTXjhoSrRnNSddsdR5WRekOv5/sdm2OdYsdhiC8GECD8+WBjoELy+P
+         ibC7HB12XH4b2dRMM2Ii1m7aUO1Nn1m731WXI3pLGfLRXch3ernnERCFycjdr9lCUeh5
+         VmTg==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1745925190; x=1746529990;
+        h=content-transfer-encoding:subject:from:content-language:to
+         :user-agent:mime-version:date:message-id:x-gm-message-state:from:to
+         :cc:subject:date:message-id:reply-to;
+        bh=GWhkYurf9K1qd4soAuHKhf0RMJQm78XZzcQM0SD+IxU=;
+        b=DhXyG1GitqteivenN874yT2g5PG8iRv/FWu6QnPlW4ctH3G5hQTC9c7i6Xy/nWjZue
+         QhRmLXatdXkuwiItwskK0HlWPofFiw5Rjlm+5wh+xxSgr7pc4vNPgRVYlD47rTC/p8tG
+         ejmiruZyLbi64EyMg4QdQ8PdBNDfjMjiju7J6sc67wR6TOjOSTDTeliNzBLwBCEVOPGh
+         Eow6fm2OPQfDqhchc0QjUVyUSj0zYC1dTF4XJKDdx+D2D2dBZmsLkWs0eii8Hzh1BA7B
+         KC0w6sj7P4hUt7Ehu9IjjgLyM6fvMboPyoxSiNG74RgxZ8Ng3wPIX1dzxzxFSB57bjqP
+         Qxgg==
+X-Forwarded-Encrypted: i=1; AJvYcCXaaTTYIQZe4xsqQcpw6bpSTMIWEu7lufFuTsjmaJNr8s1MVMbEMpwkCBf5fpFbIdNBmP/rN8O2GR1j0evqcpFLfscL/qM=@lists.linux-foundation.org
+X-Gm-Message-State: AOJu0Yw15VvSvAMUJq8k3N3xBn8vX5kZJO13wxuTUSThpJ2B+U5Ru7AC
+	yOFwCOyCIYnOv+EVY1MBnlfJb2XCPDVwl/ZlgDVn3ZnMa+up8G9Ty2E4mun+Dn4=
+X-Gm-Gg: ASbGncum0pCFqAvgahPfa18p47CjWwrYTIaFDcCZ3WbklSBNJxRSyKC2iP/Xz6714MX
+	GZD4lgduX3ce3ZU2ZvhpoAVNvCesU2AU7f2eku+iunKwBZ6Oww908xUqRmu36eAt06y4JhaY32E
+	nXFfkX6NiRvmoFAbZE3W+veL4PJtT6m5yx1iqt/paECkTyD4dL0fiHRhcE5OI5oh8GnUHQlPiqO
+	ZIW1f7s0Zn2sBdLIah0WPGXVw9KH1v31RnLkjbweWSeMaX+9nm8x4eB8PPvz0AKAMU1CII4F2tc
+	mOqd4nL3u7htrxhMPzP8lCyGo6pQ/kEmUw+RhA==
+X-Google-Smtp-Source: AGHT+IEL3jMtAiWpEcBdAhuN4BBhu46mNytcdyqEH0g+zISu1SiKrI6p5tu5fxsBBHiOq0nE1v9hAQ==
+X-Received: by 2002:a05:6512:2346:b0:549:8ed4:fb5c with SMTP id 2adb3069b0e04-54e8ffdb594mr4695928e87.31.1745925190044;
+        Tue, 29 Apr 2025 04:13:10 -0700 (PDT)
+Received: from [192.168.1.10] ([94.25.175.98])
+        by smtp.googlemail.com with ESMTPSA id 2adb3069b0e04-54e7cb371a2sm1841788e87.57.2025.04.29.04.13.09
+        (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
+        Tue, 29 Apr 2025 04:13:09 -0700 (PDT)
+Message-ID: <b84164e0-4716-4413-9db7-7b6c64ec8c35@apevzner.com>
+Date: Tue, 29 Apr 2025 14:13:07 +0300
 Precedence: bulk
 X-Mailing-List: printing-architecture@lists.linux.dev
 List-Id: <printing-architecture.lists.linux.dev>
@@ -28,53 +83,34 @@ List-Subscribe: <mailto:printing-architecture+subscribe@lists.linux.dev>
 List-Unsubscribe: <mailto:printing-architecture+unsubscribe@lists.linux.dev>
 MIME-Version: 1.0
 User-Agent: Mozilla Thunderbird
-Subject: Re: Exit behavior of system-config-printer
-To: aisuneko icecat <iceneko@protonmail.ch>,
- printing-architecture@lists.linux.dev
-References: <f364e80a-cfe9-47ca-ba7a-7af5fc881ebb@protonmail.ch>
+To: sane-devel@alioth-lists.debian.net,
+ Open Printing <printing-architecture@lists.linux-foundation.org>
 Content-Language: en-US
-From: gene heskett <gheskett@shentel.net>
-In-Reply-To: <f364e80a-cfe9-47ca-ba7a-7af5fc881ebb@protonmail.ch>
+From: Alexander Pevzner <pzz@apevzner.com>
+Subject: sane-airscan 0.99.35
 Content-Type: text/plain; charset=UTF-8; format=flowed
 Content-Transfer-Encoding: 7bit
-X-CTCH-Spam: Unknown
-X-CTCH-RefID: str=0001.0A00211B.68047628.0014,ss=1,re=0.000,recu=0.000,reip=0.000,cl=1,cld=1,fgs=0
-X-OriginalArrivalTime: 20 Apr 2025 04:21:18.0622 (UTC) FILETIME=[A9F0DBE0:01DBB1AB]
 
-On 4/19/25 22:50, aisuneko icecat wrote:
-> Hi list,
-> when I inspect the failed systemd services on my system, I came across
-> the following failed udev configure-printer@.service, which belongs to
-> system-config-printer:
-> Apr 19 22:51:42 liquidice systemd[1]: Started Configure Plugged-In Printer.
-> Apr 19 22:51:42 liquidice udev-configure-printer[29612]: add usb-007-032
-> Apr 19 22:51:42 liquidice udev-configure-printer[29612]: device devpath
-> is /devices/pci0000:00/0000:00:08.3/0000:65:00.4/usb7/7-1/7-1.2/7-1.>
-> Apr 19 22:51:42 liquidice udev-configure-printer[29612]: Device already
-> handled
-> Apr 19 22:51:42 liquidice systemd[1]:
-> configure-printer@usb-007-032.service: Main process exited, code=exited,
-> status=1/FAILURE
-> Apr 19 22:51:42 liquidice systemd[1]:
-> configure-printer@usb-007-032.service: Failed with result 'exit-code'.
->
->
-> Is returning exit code 1 on "Device already handled" intended behavior?
-> I believe this could be misleading at some point.
-> Thanks,
-> aisuneko
-Probably already claimed by cups-browsed.
->
->
->
->
-> .
+Hi,
 
-Cheers, Gene Heskett, CET.
+sane-airscan version 0.99.35 is now available.
+
+1. It fixes compilation against the libxml2 2.14.2 (Issue ##369, 
+reported from the Arch Linux).
+
+2. It adds the SANE_AIRSCAN_DEVICE environment variable which, if set, 
+overrides all devices, manually configured in the configuration files 
+and disables auto discovery.
+
+Examples:
+
+  SANE_AIRSCAN_DEVICE="escl:Kyocera eSCL:http://192.168.1.102:9095/eSCL"
+  SANE_AIRSCAN_DEVICE="wsd:Kyocera WSD:http://192.168.1.102:5358/WSDScanner"
+
+The primary purpose of this variable is the automated testing of the 
+sane-airscan backend.
+
 -- 
-"There are four boxes to be used in defense of liberty:
-  soap, ballot, jury, and ammo. Please use in that order."
--Ed Howdershelt (Author, 1940)
-If we desire respect for the law, we must first make the law respectable.
-  - Louis D. Brandeis
+
+	Wishes, Alexander Pevzner (pzz@apevzner.com)
 
