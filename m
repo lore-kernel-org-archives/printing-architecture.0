@@ -1,152 +1,99 @@
-Received: from smtp2.osuosl.org (smtp2.osuosl.org [140.211.166.133])
+Received: from us-smtp-delivery-124.mimecast.com (us-smtp-delivery-124.mimecast.com [170.10.129.124])
 	(using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
 	(No client certificate requested)
-	by smtp.subspace.kernel.org (Postfix) with ESMTPS id 3381934575B
-	for <printing-architecture@lists.linux-foundation.org>; Thu, 11 Sep 2025 15:10:30 +0000 (UTC)
-Authentication-Results: smtp.subspace.kernel.org; arc=none smtp.client-ip=140.211.166.133
+	by smtp.subspace.kernel.org (Postfix) with ESMTPS id 82C7D35E4E8
+	for <printing-architecture@lists.linux.dev>; Thu, 11 Sep 2025 16:58:57 +0000 (UTC)
+Authentication-Results: smtp.subspace.kernel.org; arc=none smtp.client-ip=170.10.129.124
 ARC-Seal:i=1; a=rsa-sha256; d=subspace.kernel.org; s=arc-20240116;
-	t=1757603432; cv=none; b=l0InpiA07pHxPHqUWTYZwe8ZC1kFGwvwG0K0x65Ih/W+VZcy0iymAYafNlXcrKz/ehDdCoToXCR/JdzjbVYUVSXpWFQzJ1VZ2LfS9xw4lpPKmUsJZgkOJe/GLEs8GNB6eNuoB+dd9ZFi/6Z47DPgmMtipjWUsCxosy9Jm+D11EQ=
+	t=1757609939; cv=none; b=XRMDtxPWVNKuP2A8RBaQDc0odgCGEWrHg3/5LYQ8Zs8o5Q7UaHMUozmeLmWLkccmcylOcE64NbVYa4etcuLnFXAt90XjitRUMgqRbQdERKzBSuncAhf5q9paMAKvsHuGbETUnRCmc5cbB1pikzl7wq+6xA8LV4fWMBgXV4Ryk/Y=
 ARC-Message-Signature:i=1; a=rsa-sha256; d=subspace.kernel.org;
-	s=arc-20240116; t=1757603432; c=relaxed/simple;
-	bh=WPgkyh0EIACnrgeq4SeF8zQqEPVRkKS+EYSOovsmBZY=;
-	h=Content-Type:Mime-Version:Subject:From:In-Reply-To:Date:Cc:
-	 Message-Id:References:To; b=Nhr5eiejkfvpOxMvqg/im8fB/ZS7XFLAbbXPtRIh5kEhJyMukVv5GmvOXWRVPe5RuNK5PjqOyy0tfzpYeQChumjbEkgADaIlsuXchsZwKBJSvtFtN9rvH21lCLnL8MKq4U4qwjIe+NB/cJzOTYjFC499AvbfphW9O+HU/sBr3Pg=
-ARC-Authentication-Results:i=1; smtp.subspace.kernel.org; dkim=pass (1024-bit key) header.d=msweet.org header.i=@msweet.org header.b=NMV75mQz; arc=none smtp.client-ip=140.211.166.133
+	s=arc-20240116; t=1757609939; c=relaxed/simple;
+	bh=5c0W3aj4rJdQ6SRDz0S0GADni+NEYMqSaWeqeuIlEKA=;
+	h=Message-ID:Date:MIME-Version:To:From:Subject:Content-Type; b=gmJyysrlQz8J2mRrjzLgeU21FKLc6V+DQfmfq4FOfM12Luw6ggcv2he2AGyUgpyM7owa+mT+L/QH/Cz2Qi7rrKcgFXKxLx4PdrpyXpvXszEVfEJwgE25pkxlLpKRu1dB4taH4EmmDD2UAt82hU2JH6oJPcoT6J1QxtYkamIsY9k=
+ARC-Authentication-Results:i=1; smtp.subspace.kernel.org; dmarc=pass (p=quarantine dis=none) header.from=redhat.com; spf=pass smtp.mailfrom=redhat.com; dkim=pass (1024-bit key) header.d=redhat.com header.i=@redhat.com header.b=SV+VrhFy; arc=none smtp.client-ip=170.10.129.124
+Authentication-Results: smtp.subspace.kernel.org; dmarc=pass (p=quarantine dis=none) header.from=redhat.com
+Authentication-Results: smtp.subspace.kernel.org; spf=pass smtp.mailfrom=redhat.com
 Authentication-Results: smtp.subspace.kernel.org;
-	dkim=pass (1024-bit key) header.d=msweet.org header.i=@msweet.org header.b="NMV75mQz"
-Received: from localhost (localhost [127.0.0.1])
-	by smtp2.osuosl.org (Postfix) with ESMTP id A559441D68
-	for <printing-architecture@lists.linux-foundation.org>; Thu, 11 Sep 2025 15:10:30 +0000 (UTC)
-X-Virus-Scanned: amavis at osuosl.org
-X-Spam-Flag: NO
-X-Spam-Score: -3.892
-X-Spam-Level:
-Received: from smtp2.osuosl.org ([127.0.0.1])
- by localhost (smtp2.osuosl.org [127.0.0.1]) (amavis, port 10024) with ESMTP
- id S1ybTUbXHrpZ for <printing-architecture@lists.linux-foundation.org>;
- Thu, 11 Sep 2025 15:10:29 +0000 (UTC)
-X-Greylist: delayed 474 seconds by postgrey-1.37 at util1.osuosl.org; Thu, 11 Sep 2025 15:10:29 UTC
-DMARC-Filter: OpenDMARC Filter v1.4.2 smtp2.osuosl.org A5196404CA
-Authentication-Results: smtp2.osuosl.org; dmarc=pass (p=quarantine dis=none) header.from=msweet.org
-DKIM-Filter: OpenDKIM Filter v2.11.0 smtp2.osuosl.org A5196404CA
-Authentication-Results: smtp2.osuosl.org;
-	dkim=pass (1024-bit key, unprotected) header.d=msweet.org header.i=@msweet.org header.a=rsa-sha256 header.s=default header.b=NMV75mQz
-Received-SPF: Pass (mailfrom) identity=mailfrom; client-ip=173.255.209.91; helo=mail.msweet.org; envelope-from=msweet@msweet.org; receiver=<UNKNOWN> 
-Received: from mail.msweet.org (mail.msweet.org [173.255.209.91])
-	by smtp2.osuosl.org (Postfix) with ESMTPS id A5196404CA
-	for <printing-architecture@lists.linux-foundation.org>; Thu, 11 Sep 2025 15:10:29 +0000 (UTC)
-Received: from smtpclient.apple (cbl-66-186-76-47.vianet.ca [66.186.76.47])
-	(using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
-	(No client certificate requested)
-	by mail.msweet.org (Postfix) with ESMTPSA id 7F90C803C9;
-	Thu, 11 Sep 2025 15:02:33 +0000 (UTC)
-DKIM-Filter: OpenDKIM Filter v2.11.0 mail.msweet.org 7F90C803C9
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=msweet.org;
-	s=default; t=1757602954;
-	bh=WPgkyh0EIACnrgeq4SeF8zQqEPVRkKS+EYSOovsmBZY=;
-	h=Subject:From:In-Reply-To:Date:Cc:References:To:From;
-	b=NMV75mQz+wpiPSqy9nb+ePLwz5YPmCZ070ol+Z6bhNx9zucniC9HoNRkJxhA71ZPb
-	 qlVU/XxpPPW6+FGGBgHtUHGMxppwnq7w7LcT6SAfItQRAj2itOF3KSr+/KQ0etzn4q
-	 U8TTwtFFe86PQzMgs4yekdG5s6lKhOSJO3HY//OY=
-Content-Type: text/plain;
-	charset=utf-8
+	dkim=pass (1024-bit key) header.d=redhat.com header.i=@redhat.com header.b="SV+VrhFy"
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=redhat.com;
+	s=mimecast20190719; t=1757609936;
+	h=from:from:reply-to:subject:subject:date:date:message-id:message-id:
+	 to:to:cc:mime-version:mime-version:content-type:content-type:
+	 content-transfer-encoding:content-transfer-encoding;
+	bh=nZyG4QWS9f6o4n5Ntrg/PiM5t4eiaufMU7L2kBI34N4=;
+	b=SV+VrhFy6R6iCLbsyXWLAgCPXsyKK4364zEG1ESKmGUqg4wLXjVKKH0WL7NURwf6lFSbar
+	qOyJus8ycPUiszS6SEJE2xBtSsmm28rGk6HwwsFtZnI1tGZ2VJ4XeZ9Y3Yw2WxzpLiBt3y
+	wdhcZaRwllkSleXV6gTo7EcVOMgZ6u4=
+Received: from mail-wm1-f69.google.com (mail-wm1-f69.google.com
+ [209.85.128.69]) by relay.mimecast.com with ESMTP with STARTTLS
+ (version=TLSv1.3, cipher=TLS_AES_256_GCM_SHA384) id
+ us-mta-359-yA3wgZ8AO6qnmQUEmg7J1Q-1; Thu, 11 Sep 2025 12:58:53 -0400
+X-MC-Unique: yA3wgZ8AO6qnmQUEmg7J1Q-1
+X-Mimecast-MFC-AGG-ID: yA3wgZ8AO6qnmQUEmg7J1Q_1757609932
+Received: by mail-wm1-f69.google.com with SMTP id 5b1f17b1804b1-45df609b181so8236505e9.2
+        for <printing-architecture@lists.linux.dev>; Thu, 11 Sep 2025 09:58:53 -0700 (PDT)
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1757609931; x=1758214731;
+        h=content-transfer-encoding:subject:from:to:content-language
+         :user-agent:mime-version:date:message-id:x-gm-message-state:from:to
+         :cc:subject:date:message-id:reply-to;
+        bh=nZyG4QWS9f6o4n5Ntrg/PiM5t4eiaufMU7L2kBI34N4=;
+        b=OYQLwSjgm3h1VqsmtcUGVW2m0vr7iPITv0y5ZyvYjxBqXFr/LRteA8YJyac43u0ryw
+         toV1MeyRUniY99SeXBDOAVjjBQ6hV7xYpVwEPtaEhq3NNUjuybmfFLsELCs4VTCtmlHD
+         py4x7oj9p3uuSWnNGAWd912mj19FRmVq+O7zWQOfyPvTEb3pcKadpl0PTLdoNPvv2HJq
+         NjgbLUKjDcmS/dEPZN/mvOOc2zs999uw/M7irxGY7m7/pQxhXXCwxoSUoKdRejGmu550
+         kTnf2Z0+EJJPJB/7yyjh0WntKabqf5fo5pCquUENKhPUd25WBuzkU7SiwbRvviclU98/
+         JVQQ==
+X-Gm-Message-State: AOJu0Yxdz4ZQPbyAWb6cp5JRggQSvH1CiN/CB81T1TPR5eSpPy9FqHDY
+	g/Ln78hIM32hID6E1b5E+w3Ef/GYLCW8FPAOA3XxlNUjMWiruuHvjyyKMFlH1HEtLu30zEeLU3r
+	7BmFrTRIBhI6GPQ9p1+qFInSaan/af5XZmp3rHte7bUUqA7j8O7KMDueYQDYOmXT53fSTVOBBHD
+	hClRhA5WFqvQ+UmNYbgv12OgNAjxCJLu/JVdQXts8cIAupBMQOnT6M7xqbAaQK
+X-Gm-Gg: ASbGncsrRYF/tLJq9sFJh3SK7ov+jPeeOYLj/UFnHoclWA5YN3p1P+978/czCwH0iPa
+	e/mS1qH1GRUDhFleqNrMAX1j5nsa507zr+xttZNHd0z5qpakxUgjpyJMAvqGd1ekPeTU5Mu5Xdm
+	3kHNrmmxtJjeYR19CF5DRhn5AYhwmxUII/zztT7uV5hCQ1BYuIp0TPk2YCIq/e88lqS4Xz3yT59
+	OUAAH/RPk6ntEkefcwG5NjwsO5TuTUMQqbzt37kOcWYd+YqdoMhnc0wANEW7FEPpb4dRSms6mza
+	NpynvHOTopK7E36ar8vnLP9Sw3Z1m/FzzR4TAw==
+X-Received: by 2002:a05:600c:22d2:b0:45d:ec9d:5fc3 with SMTP id 5b1f17b1804b1-45f211f6790mr1508485e9.18.1757609931297;
+        Thu, 11 Sep 2025 09:58:51 -0700 (PDT)
+X-Google-Smtp-Source: AGHT+IEG0KUcYC/dnl+fRFfR1eCvaGjb1VBA1F+3vhaP59gghiqIz3bjZExhir02nHvAq59ioDWB/g==
+X-Received: by 2002:a05:600c:22d2:b0:45d:ec9d:5fc3 with SMTP id 5b1f17b1804b1-45f211f6790mr1508275e9.18.1757609930880;
+        Thu, 11 Sep 2025 09:58:50 -0700 (PDT)
+Received: from [10.43.3.35] ([85.93.96.130])
+        by smtp.gmail.com with ESMTPSA id 5b1f17b1804b1-45e017b3137sm34393335e9.19.2025.09.11.09.58.50
+        for <printing-architecture@lists.linux.dev>
+        (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
+        Thu, 11 Sep 2025 09:58:50 -0700 (PDT)
+Message-ID: <128ab48a-d5a5-4a64-88de-61df5d71c4a6@redhat.com>
+Date: Thu, 11 Sep 2025 18:58:49 +0200
 Precedence: bulk
 X-Mailing-List: printing-architecture@lists.linux.dev
 List-Id: <printing-architecture.lists.linux.dev>
 List-Subscribe: <mailto:printing-architecture+subscribe@lists.linux.dev>
 List-Unsubscribe: <mailto:printing-architecture+unsubscribe@lists.linux.dev>
-Mime-Version: 1.0 (Mac OS X Mail 16.0 \(3864.100.1.1.5\))
-Subject: Re: PDF problem - Help needed
-From: Michael Sweet <msweet@msweet.org>
-In-Reply-To: <ed6f7e77-09f5-4df8-97b1-20358f28bccc@gmail.com>
-Date: Thu, 11 Sep 2025 11:02:22 -0400
-Cc: Jay Berkenbilt <ejb@ql.org>,
- Chris Liddell <chris.liddell@artifex.com>,
- Tobias Hoffmann <smilingthax@googlemail.com>,
- Open Printing <printing-architecture@lists.linux-foundation.org>,
- UDDHAV PHATAK 22BCE10731 <uddhavphatak2022@vitbhopal.ac.in>
-Content-Transfer-Encoding: quoted-printable
-Message-Id: <883B30C7-C21A-4074-8D62-BCD0729778E2@msweet.org>
-References: <ed6f7e77-09f5-4df8-97b1-20358f28bccc@gmail.com>
-To: Till Kamppeter <till.kamppeter@gmail.com>
-X-Mailer: Apple Mail (2.3864.100.1.1.5)
+MIME-Version: 1.0
+User-Agent: Mozilla Thunderbird
+To: OpenPrinting <printing-architecture@lists.linux.dev>
+From: Zdenek Dohnal <zdohnal@redhat.com>
+Subject: CUPS 2.4.14 bug fix release
+X-Mimecast-Spam-Score: 0
+X-Mimecast-MFC-PROC-ID: AiJT5e1XP2pHB1-RhRLmUe1wvitiQu8JTXBCpmxtcpY_1757609932
+X-Mimecast-Originator: redhat.com
+Content-Language: en-US
+Content-Type: text/plain; charset=UTF-8; format=flowed
+Content-Transfer-Encoding: 7bit
 
-Till,
+Hi all,
 
-I don't have a lot of time to look at this right now, but from the =
-standpoint of adding the appearance streams as XObject resources in the =
-page dictionary, you still need to *draw* the objects from the page =
-content stream using the "Do" operator.  For example, if the XObject was =
-named "foo" then you'd need to add:
+I'm sorry for the issues with 2.4.13 - I've created hotfix version 2.4.14.
 
-    /foo Do
-
-to the content stream.
+The hotfix release brings fix for installation process of localized 
+templates and CUPS web UI home pages.
 
 
-> On Sep 11, 2025, at 10:50=E2=80=AFAM, Till Kamppeter =
-<till.kamppeter@gmail.com> wrote:
->=20
-> [ This mail is addressed to people from whom I know that they have =
-konwledge on
->  the inner workings of the PDF file format due to the projects they =
-are working
->  on. ]
->=20
-> Hi,
->=20
-> Uddhav Phatak (CCed) has done a GSoC 2024 project on eliminating C++ =
-in libcupsfilters, mainly by replacing the PDF manipulator QPDF by Mike =
-Sweet's PDFio.
->=20
-> His project report:
->=20
-> =
-https://medium.com/@uddhavphatak/gsoc-2024-final-report-the-refactor-repor=
-t-a46756e9d6ce
->=20
-> His code as PR #71 on libcupsfilters:
->=20
-> https://github.com/OpenPrinting/libcupsfilters/pull/71
->=20
-> Some parts he did not succeed to complete withing the GSoC time frame =
-due to their complexity.
->=20
-> What is remaining to be completed is flattening filled forms and =
-annotations into static content of the PDF, so that the filled in text =
-is correctly taken into account by doing page manipulations (like N-up) =
-and that it is assured that the text gets printed.
->=20
-> On this step Uddhav ran into a problem:
->=20
-> -----
-> Hi Till,
-> I am not able to debug one issue, could you help me where I might be =
-going wrong,
->=20
-> form_english_filled.pdf and needtrue.pdf, both have needAppearances =
-set as true.
->=20
-> form_english_filled.pdf is successfully flattened as shown in test.pdf
->=20
-> but when converting needtrue.pdf into needtrue-test.pdf, even though =
-all the annotation objects are successfully converted to Xobjects and =
-added into the page dict, I am not understanding why aren't they =
-visible.
->=20
-> Can you look through this and tell me where I might be going wrong, =
-and what value is missing from the Xobject Dictionary.
-> -----
->=20
-> The files mentioned here are all attached.
->=20
-> Anybody has an idea what can be wrong here?
->=20
-> Thanks in advance.
->=20
->   Till
-> <test.pdf><needtrue-test.pdf><needtrue.pdf><form_english_filled.pdf>
+Zdenek
 
-________________________
-Michael Sweet
+-- 
+Zdenek Dohnal
+Senior Software Engineer
+Red Hat, BRQ-TPBC
 
