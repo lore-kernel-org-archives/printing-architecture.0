@@ -1,82 +1,83 @@
-Received: from smtp1.osuosl.org (smtp1.osuosl.org [140.211.166.138])
+Received: from smtp2.osuosl.org (smtp2.osuosl.org [140.211.166.133])
 	(using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
 	(No client certificate requested)
-	by smtp.subspace.kernel.org (Postfix) with ESMTPS id EAAB72882CE
-	for <printing-architecture@lists.linux-foundation.org>; Tue, 16 Sep 2025 23:07:52 +0000 (UTC)
-Authentication-Results: smtp.subspace.kernel.org; arc=none smtp.client-ip=140.211.166.138
+	by smtp.subspace.kernel.org (Postfix) with ESMTPS id 57A492882C9
+	for <printing-architecture@lists.linux-foundation.org>; Thu, 25 Sep 2025 22:20:13 +0000 (UTC)
+Authentication-Results: smtp.subspace.kernel.org; arc=none smtp.client-ip=140.211.166.133
 ARC-Seal:i=1; a=rsa-sha256; d=subspace.kernel.org; s=arc-20240116;
-	t=1758064074; cv=none; b=Zsh/pPgCbPCA+5cuqxEFA5U9UszjtrVC0eqN7+eTzdwoqCQ1KDffPUfNeElSZz2yW2nhrfaHsk8tkFyXsaJYWK7+lWcoISpZ9N+//Rn56pzz91nVfHmQqGZTsHkTCXSh3dYPh4nrMBx9oSCSCB0X5M1jS3QoYt7OUvZwAEA6+lQ=
+	t=1758838814; cv=none; b=QaxyIbSvDMKUSlN4jGw58ee0ow+K3WhYf+03ZlAEkvBx9L/9VRGjHD3r1Ljrn4uQlpEW4MkaVmLwCRrQZ9LmGmvotkjhYrGq6bnUdNys4cMMV0xzfawT24Z4rAnjsdObWcDx3XsL3/nzvycGMf7NfIrkbHregrCBhxVFBTUhtzg=
 ARC-Message-Signature:i=1; a=rsa-sha256; d=subspace.kernel.org;
-	s=arc-20240116; t=1758064074; c=relaxed/simple;
-	bh=4UXBuqyvsRNqWDRIfd9ViSirM6jFxJRorBpopk2hHjs=;
-	h=Message-ID:Date:MIME-Version:To:From:Subject:Content-Type; b=s2cT8TtpWjKbwoLRAllRGD3dV6HNRSXXEOSRZU6Oaa6S5mi4DrintIl+XtOGP+w3xU0SNFhndUYxHk1VsUlV3DAQB7grjOOiXpGAZaJPWha/BXeZ4P/QCqpBZafgYm6x/c6Y8SLftclJlO5IGgtlzDCVoyNNI8GRXiEzPV4AwKE=
-ARC-Authentication-Results:i=1; smtp.subspace.kernel.org; dkim=pass (2048-bit key) header.d=gmail.com header.i=@gmail.com header.b=dwxGiwZz; arc=none smtp.client-ip=140.211.166.138
+	s=arc-20240116; t=1758838814; c=relaxed/simple;
+	bh=9SMk6ppzb96tYNPt/WBH78o/9rnUYXFd1pgjvvJzdOw=;
+	h=Message-ID:Date:MIME-Version:From:Subject:To:Content-Type; b=Cz/ZbnHKaj0tLVwmtohRh7Pza/aKIDSTaHneSwgYlYUXw5j03q5hTYtbT1RjPXdvwXZ4AW1GWzv7Ewp4HLQrYBWpV0BaI+Df2EVlmAjhgZDMGsB0699fKsmLYO5PQZv3hQTHzOU7TyfU55i7sZlElhCKDgBhgRdhOkgqpXWuEhM=
+ARC-Authentication-Results:i=1; smtp.subspace.kernel.org; dkim=pass (2048-bit key) header.d=gmail.com header.i=@gmail.com header.b=ZIVgb/zX; arc=none smtp.client-ip=140.211.166.133
 Authentication-Results: smtp.subspace.kernel.org;
-	dkim=pass (2048-bit key) header.d=gmail.com header.i=@gmail.com header.b="dwxGiwZz"
+	dkim=pass (2048-bit key) header.d=gmail.com header.i=@gmail.com header.b="ZIVgb/zX"
 Received: from localhost (localhost [127.0.0.1])
-	by smtp1.osuosl.org (Postfix) with ESMTP id 8B72F83B88
-	for <printing-architecture@lists.linux-foundation.org>; Tue, 16 Sep 2025 23:07:52 +0000 (UTC)
+	by smtp2.osuosl.org (Postfix) with ESMTP id E035941218
+	for <printing-architecture@lists.linux-foundation.org>; Thu, 25 Sep 2025 22:20:12 +0000 (UTC)
 X-Virus-Scanned: amavis at osuosl.org
 X-Spam-Flag: NO
-X-Spam-Score: -2.099
+X-Spam-Score: -0.2
 X-Spam-Level:
-Received: from smtp1.osuosl.org ([127.0.0.1])
- by localhost (smtp1.osuosl.org [127.0.0.1]) (amavis, port 10024) with ESMTP
- id 8FtpUFkmbchj for <printing-architecture@lists.linux-foundation.org>;
- Tue, 16 Sep 2025 23:07:52 +0000 (UTC)
-Received-SPF: Pass (mailfrom) identity=mailfrom; client-ip=2a00:1450:4864:20::434; helo=mail-wr1-x434.google.com; envelope-from=till.kamppeter@gmail.com; receiver=<UNKNOWN> 
-DMARC-Filter: OpenDMARC Filter v1.4.2 smtp1.osuosl.org 95E0F81E10
-Authentication-Results: smtp1.osuosl.org; dmarc=pass (p=none dis=none) header.from=gmail.com
-DKIM-Filter: OpenDKIM Filter v2.11.0 smtp1.osuosl.org 95E0F81E10
-Authentication-Results: smtp1.osuosl.org;
-	dkim=pass (2048-bit key, unprotected) header.d=gmail.com header.i=@gmail.com header.a=rsa-sha256 header.s=20230601 header.b=dwxGiwZz
-Received: from mail-wr1-x434.google.com (mail-wr1-x434.google.com [IPv6:2a00:1450:4864:20::434])
-	by smtp1.osuosl.org (Postfix) with ESMTPS id 95E0F81E10
-	for <printing-architecture@lists.linux-foundation.org>; Tue, 16 Sep 2025 23:07:51 +0000 (UTC)
-Received: by mail-wr1-x434.google.com with SMTP id ffacd0b85a97d-3e9ca387425so2412248f8f.0
-        for <printing-architecture@lists.linux-foundation.org>; Tue, 16 Sep 2025 16:07:51 -0700 (PDT)
+Received: from smtp2.osuosl.org ([127.0.0.1])
+ by localhost (smtp2.osuosl.org [127.0.0.1]) (amavis, port 10024) with ESMTP
+ id lFNnydEcmnDD for <printing-architecture@lists.linux-foundation.org>;
+ Thu, 25 Sep 2025 22:20:12 +0000 (UTC)
+Received-SPF: Pass (mailfrom) identity=mailfrom; client-ip=2a00:1450:4864:20::32b; helo=mail-wm1-x32b.google.com; envelope-from=till.kamppeter@gmail.com; receiver=<UNKNOWN> 
+DMARC-Filter: OpenDMARC Filter v1.4.2 smtp2.osuosl.org E961D40366
+Authentication-Results: smtp2.osuosl.org; dmarc=pass (p=none dis=none) header.from=gmail.com
+DKIM-Filter: OpenDKIM Filter v2.11.0 smtp2.osuosl.org E961D40366
+Authentication-Results: smtp2.osuosl.org;
+	dkim=pass (2048-bit key, unprotected) header.d=gmail.com header.i=@gmail.com header.a=rsa-sha256 header.s=20230601 header.b=ZIVgb/zX
+Received: from mail-wm1-x32b.google.com (mail-wm1-x32b.google.com [IPv6:2a00:1450:4864:20::32b])
+	by smtp2.osuosl.org (Postfix) with ESMTPS id E961D40366
+	for <printing-architecture@lists.linux-foundation.org>; Thu, 25 Sep 2025 22:20:11 +0000 (UTC)
+Received: by mail-wm1-x32b.google.com with SMTP id 5b1f17b1804b1-46e34bd8eb2so12623015e9.3
+        for <printing-architecture@lists.linux-foundation.org>; Thu, 25 Sep 2025 15:20:11 -0700 (PDT)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
-        d=gmail.com; s=20230601; t=1758064069; x=1758668869; darn=lists.linux-foundation.org;
-        h=content-transfer-encoding:subject:from:to:content-language
+        d=gmail.com; s=20230601; t=1758838810; x=1759443610; darn=lists.linux-foundation.org;
+        h=content-transfer-encoding:content-language:to:subject:from
          :user-agent:mime-version:date:message-id:from:to:cc:subject:date
          :message-id:reply-to;
-        bh=DX99+xVyP+vh4ALfzKJDJ1brkXzi9E5tm1JCQUE2GKw=;
-        b=dwxGiwZzdfIR+cEaxpFFsYVsll9JiUDUM5FyQU6nbA/4kr3wl4xhI0JyC64CzJHer/
-         Esw9tNBAheuGW0H/27GnCIFnVhXKWItLWbsmy5QhkujzTkAt9DB6tysKJDNDb6569iE3
-         uqALuJMdUzMIR3qLm6OoqEokFGR7uzwAR4cv7MtGrtwrQV2/7H3M39Tg/BMbSE4Ddoxo
-         EkvzRKcbut0ukXo9MUg9sv5JS6DLzHgg9v04QczoKrv28Zl6pgzM/muNukzstNW8EBO0
-         DJSzdfyjDv93e+3wAGcemFHn8NjW1wp4yMa25JGckwh0l2wp+rc2iyknpBdgdBulj8Pp
-         Lwpg==
+        bh=/WARyTwSIYhjxNa5PsL6amLZojblGUbq7mT2IWkXS+I=;
+        b=ZIVgb/zXawit6z8NoiYaK0hUr6GFJntX9s/daKmck/+XqCdeFSAv6s/vQo18opj/c2
+         T7Vl2FYhjsmMECZq+Gven270MsS7Zr+WErXuiClzU2rc/cwUQqlqYHdeNrG8JTomKgS5
+         BjdO6lzoRsrsW+owVuFAnQEKnd9n7820WxkGAQ4YYknzK2+QA+om7JCxp7KcByCWuAA8
+         1WvXSHP2i/38+WmXKgnRj5KShGmRT1UoQEIPobtbynFhf4Kyn60GG90QTiDMlKz7r+D9
+         pqH+0w/SY9g/ukY7uT6VAVycu5TSkq18d0N3sz/yz0XOFmvQ0g3BEEsAH8IBcypvfMC8
+         fKSA==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
-        d=1e100.net; s=20230601; t=1758064069; x=1758668869;
-        h=content-transfer-encoding:subject:from:to:content-language
+        d=1e100.net; s=20230601; t=1758838810; x=1759443610;
+        h=content-transfer-encoding:content-language:to:subject:from
          :user-agent:mime-version:date:message-id:x-gm-message-state:from:to
          :cc:subject:date:message-id:reply-to;
-        bh=DX99+xVyP+vh4ALfzKJDJ1brkXzi9E5tm1JCQUE2GKw=;
-        b=dj4zk+xCHw7Xbyv3xisHuqXA0nvTMhPqSHqA40azoMNGnTP48zA/f1o7PdMJP8ol7r
-         ij3SHD87yMhhtdjw5wElDmg8Nr0PNrO4CkC86fjL84NsRNO/PWi000J82iDvYz6vfSHA
-         SDoeLKY+2YpGPPmTYFToQwm62HpNSqaMFSHNi0nSh00GReGZ3ycErYY6Tku1BV0gBFi/
-         rt8SrNAHQY5+0wMk0WcFYnj0Sj8kVJm9XU/rfGi8JE8/FtIAHl6gCXQjiM6o59wPXhIy
-         Vp5jbr2gTnRK299h8u22WqH8Ox+k7B4ONKDkP4m0OfUWRpX1WmrNQ6GYJubPfPYrwNtP
-         98QQ==
-X-Gm-Message-State: AOJu0YyxhC+IZOVbgNRKjuVG7o0mwTN8e76mK8m3PUSFpq6m5ZVzrD0y
-	Xc7ZPUx8qOKuMhhAR8+s55MyDDRvJ7Ht8mCBNL9da53SGLzc4RwEF7f4Ehc/fA==
-X-Gm-Gg: ASbGnctelX1o7/t4wFabvB6b4GcNYKs5kate/aoFFj+dD+5cuJZthPzXlyd2AcrepBO
-	hLeqYOuH/EbhrgFekzr4lcgBEUMuskx4gFP8ixDirnzPJygtdY94bmJOf9veP6v0dEm3qOEO6hw
-	IEfv6uv3vqdBkCywgKNgzcejnyGfSBG8PaKzPwUDpxXHgnUgwgXIaFJEE32dDMYoVxsp0bko92c
-	nhRmAFPA6N6wzSCLk1+dy8bPrUWsi0z8VvufxsV4/MkdCihWo4k2AUmGSV7j8VtoH7llFEzx6+5
-	LHqD8XdCqXWyyY7OBsn6mSeWB8im+slxQLbgC1mMtpvCl/SHL5e7BUt0nbvHeDDph+XBkICZQTb
-	P3Lct7yDBjtCR6GObIVjay/ro1HHyGXnniOEC70IqIxRk33SLvisYCv60pDZyG3GfHo/ha7nuCk
-	H/MgM+cFiuoqOO
-X-Google-Smtp-Source: AGHT+IE/t8RPnnFWW9giD50MA3ucudY4kO5D4aLhHBeCt2vWnKp3R1OJrPU2VNIXFwR5RimjANuMcg==
-X-Received: by 2002:a5d:5f84:0:b0:3e4:471e:3c91 with SMTP id ffacd0b85a97d-3ecdfa57728mr63563f8f.63.1758064068618;
-        Tue, 16 Sep 2025 16:07:48 -0700 (PDT)
+        bh=/WARyTwSIYhjxNa5PsL6amLZojblGUbq7mT2IWkXS+I=;
+        b=fe4gT3S3LDv0QvkONeJQ9r3JziC8D60GnDbxKOUPCiILVXGkouAnYDJc5i67KiTfYC
+         yZno8/7eO4/tj/WgrnmNYmBpV7Tn+a9qQwLnzYXQHj/1qJr1yhxMYox5smhMNjE9ON2j
+         FyS6vDKtnqXvBxTWT87WPVPOIyicXlSZslba/8cb5ZRpzLLjuHgYd9NwoX1Jc1gf7IA4
+         mdXAOBTx04xcPhSSgN7JFxkAI7mniQWX8j6rOsA/qeCpt68+PgyBRMxJJ5pld/UhjTQV
+         U/eGTDKkRfJwcrhHyTncRMiAumC75ueqxkaoeJbkj2uuNNwIxml2ckQUKVk5R6XIUmJH
+         moBg==
+X-Forwarded-Encrypted: i=1; AJvYcCXpQ+POgGUG/HvAsZgj/iZ3dxhsz+OFGL2bVanqq+cn6P300I2yXkEE4cw+anZpt1ZfEaiNVqMop5vXA3pzbupyYjillyk=@lists.linux-foundation.org
+X-Gm-Message-State: AOJu0YwXCwxUY0MQubWS5dV/NUc6u0BRil5+P4YkOR7yJ5/NreeLuBcg
+	xCHZUbBriGDwgRc3XNYJmpx6eiVEC+2f1l5AbN49Kpo9EA3GIE5limk7
+X-Gm-Gg: ASbGncslgwbZJO1YrzpoGLXVc/p0psePI5H/lZwPoTbwBFJsMYLdtzowvgNSfufGglh
+	DYt5sBdKArfWQ243Jl80ToWZcE/zdu8vSSczN3k19pGZKYPzEvZ4SuTbtTEkwJ6/mf1V/uSPtOa
+	I4eJqjDftISGB1eF3cDxgYPh6M4paXo07Og1+a8uqrzN1QJB2ibiiRKcJWmK87dRzbGHmNRmSwh
+	hZMdaa/i3C+9zNN01ImThfEy6FpDhlIfrWw1Df0BgLO8ajSUeyw1m0RfOudV9dJjq+1Ek5aSj5T
+	PIVEKnuro8X4AN3/wsAvWqesXl+KB4qyYv62dD32KrIJumFKZoP3bNhsgkI6i6uhgdfi8C9CkQ4
+	9U+vcIQ59EtZmPlOtJxKAEHxQGm+dUVLuZu1a+DRjbo1ol+JQa6ncfSgqMAkcDQ1rrOL/NWcZjK
+	3+VQ==
+X-Google-Smtp-Source: AGHT+IErzoYaYTZciomgCn0xthzbx6Lk/xLUIbZj5U8o9ddukyXq9hb+Zf0oD1yVuV/Fh5vv0uK23Q==
+X-Received: by 2002:a05:6000:290b:b0:3f5:d7c0:8e20 with SMTP id ffacd0b85a97d-40e4accc5cfmr5208617f8f.59.1758838809759;
+        Thu, 25 Sep 2025 15:20:09 -0700 (PDT)
 Received: from [192.168.68.113] (193-80-180-232.hdsl.highway.telekom.at. [193.80.180.232])
-        by smtp.gmail.com with ESMTPSA id ffacd0b85a97d-3e760775b13sm24170228f8f.10.2025.09.16.16.07.47
+        by smtp.gmail.com with ESMTPSA id ffacd0b85a97d-40fc88b0779sm4341524f8f.58.2025.09.25.15.20.09
         (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
-        Tue, 16 Sep 2025 16:07:48 -0700 (PDT)
-Message-ID: <9f07fe2e-154a-4a9e-b2a6-99a83c2c0f82@gmail.com>
-Date: Wed, 17 Sep 2025 01:07:46 +0200
+        Thu, 25 Sep 2025 15:20:09 -0700 (PDT)
+Message-ID: <987f1f95-9d0e-414d-80af-587cda08f812@gmail.com>
+Date: Fri, 26 Sep 2025 00:20:08 +0200
 Precedence: bulk
 X-Mailing-List: printing-architecture@lists.linux.dev
 List-Id: <printing-architecture.lists.linux.dev>
@@ -84,30 +85,21 @@ List-Subscribe: <mailto:printing-architecture+subscribe@lists.linux.dev>
 List-Unsubscribe: <mailto:printing-architecture+unsubscribe@lists.linux.dev>
 MIME-Version: 1.0
 User-Agent: Mozilla Thunderbird
-Content-Language: en-US
-To: Open Printing <printing-architecture@lists.linux-foundation.org>,
- Zdenek Dohnal <zdohnal@redhat.com>, Michael Sweet <msweet@msweet.org>,
- Alexander Pevzner <pzz@apevzner.com>
 From: Till Kamppeter <till.kamppeter@gmail.com>
-Subject: We should announce our releases on
+Subject: OpenPrinting News
+To: Ira McDonald <blueroofmusic@gmail.com>, Aveek Basu
+ <basu.aveek@gmail.com>,
+ Open Printing <printing-architecture@lists.linux-foundation.org>
+Content-Language: en-US
 Content-Type: text/plain; charset=UTF-8; format=flowed
 Content-Transfer-Encoding: 7bit
 
 Hi,
 
-we should not only announce our releases on OpenPrinting's blog but also on 
-Mastodon.
+new post:
 
-I have seen here a post by 9to5linux announcing our latest CUPS release:
+OpenPrinting News - UbuCon Asia 2025 in Kathmandu, Nepal
 
-https://ubuntu.social/@9to5linux@floss.social/115186755345861307
+https://openprinting.github.io/OpenPrinting-News-UbuCon-Asia-2025-in-Kathmandu-Nepal/
 
-Would be great if such announcements come from us.
-
-Perhaps we should create an organizational user, like @OpenPrinting, on 
-Mastodon, for doing such announcements.
-
-WDYT?
-
-   Till
-
+    Till
