@@ -1,58 +1,90 @@
-Received: from smtp2.osuosl.org (smtp2.osuosl.org [140.211.166.133])
+Received: from smtp3.osuosl.org (smtp3.osuosl.org [140.211.166.136])
 	(using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
 	(No client certificate requested)
-	by smtp.subspace.kernel.org (Postfix) with ESMTPS id 3F7C8EEA8
-	for <printing-architecture@lists.linux-foundation.org>; Fri,  3 Oct 2025 12:46:15 +0000 (UTC)
-Authentication-Results: smtp.subspace.kernel.org; arc=none smtp.client-ip=140.211.166.133
+	by smtp.subspace.kernel.org (Postfix) with ESMTPS id C1E281EC01B
+	for <printing-architecture@lists.linux-foundation.org>; Mon,  6 Oct 2025 08:29:23 +0000 (UTC)
+Authentication-Results: smtp.subspace.kernel.org; arc=none smtp.client-ip=140.211.166.136
 ARC-Seal:i=1; a=rsa-sha256; d=subspace.kernel.org; s=arc-20240116;
-	t=1759495578; cv=none; b=oBymiiqHsCes2Qj9C4hq6gA2prC7y5MDtLyowRTR5Mc1az3JD5yFcO7aFL0doGq0jHZ0x2FplJPV6fNYR+sQIxftvi/df98kr2ZSh9qI7lLKbSt6xOd4SG3SepYFQacsosC2S/4C1Lq6Iav3LVtIQAlbhK6KryBPeMvWA2H0/PU=
+	t=1759739365; cv=none; b=QvMt+soMgR/HRi082DHPgrFNtE+kiew5Cqvz0XB0MkxjlX2ZA+DpbyF9zNAxSM7nO/Pjef9hV2biSBV9av1LbzKF052tuFpYKy13rfPpvgUJ9TK9sSsfJ0Rc5nLVcTYugXY80gaKpKwxy3IaJM95DyHklwAww6HAump+KwSTjuI=
 ARC-Message-Signature:i=1; a=rsa-sha256; d=subspace.kernel.org;
-	s=arc-20240116; t=1759495578; c=relaxed/simple;
-	bh=21fZNUVa7of0MhRdH5HJbfsOHFqeiee+YujVrVBX6j4=;
+	s=arc-20240116; t=1759739365; c=relaxed/simple;
+	bh=YnYadZjbfUkvQyabIoSIXq9vkfJlkvYNCYZrAd+9Vpo=;
 	h=Message-ID:Date:MIME-Version:Subject:To:References:From:
-	 In-Reply-To:Content-Type; b=Y6lckmOBZFuQG9429OHQml8IhnwC+lNGamhklrOoaIXDvsWk5fwhm5/WB+0NLVpBekNuI9eaWgXguxOJQgmaILG0JIGqxBmRkALbhg7ofcAsgyEjatXnZBR8bbMec3bAW0GgoP48+ATW6aUj1Qg111eg4DTL/1oiGAReTJZX68U=
-ARC-Authentication-Results:i=1; smtp.subspace.kernel.org; dkim=pass (1024-bit key) header.d=alteholz.de header.i=@alteholz.de header.b=s/8BwN/L; arc=none smtp.client-ip=140.211.166.133
+	 In-Reply-To:Content-Type; b=IxQzyNO3lxtYCKRCmnN3EmNZk/Eooz+8jZDVg7jF6wWDxaiNf5VOKWT+gmJxcpQ2TQqngMsQVNd4p73hSEJRVNhLPu4nPRHsGk9jgDar2ZrYSS7CdsK1g1aS/iBNY7fRD4CrsIYs9J6LVCRFgNxjNhv/K3h9DogPbz7cUPj395U=
+ARC-Authentication-Results:i=1; smtp.subspace.kernel.org; dkim=pass (1024-bit key) header.d=redhat.com header.i=@redhat.com header.b=TGemhVI0; arc=none smtp.client-ip=140.211.166.136
 Authentication-Results: smtp.subspace.kernel.org;
-	dkim=pass (1024-bit key) header.d=alteholz.de header.i=@alteholz.de header.b="s/8BwN/L"
+	dkim=pass (1024-bit key) header.d=redhat.com header.i=@redhat.com header.b="TGemhVI0"
 Received: from localhost (localhost [127.0.0.1])
-	by smtp2.osuosl.org (Postfix) with ESMTP id 7A752409EF
-	for <printing-architecture@lists.linux-foundation.org>; Fri,  3 Oct 2025 12:46:15 +0000 (UTC)
+	by smtp3.osuosl.org (Postfix) with ESMTP id 6E58161090
+	for <printing-architecture@lists.linux-foundation.org>; Mon,  6 Oct 2025 08:29:23 +0000 (UTC)
 X-Virus-Scanned: amavis at osuosl.org
 X-Spam-Flag: NO
-X-Spam-Score: 0.6
+X-Spam-Score: -5.792
 X-Spam-Level:
-Received: from smtp2.osuosl.org ([127.0.0.1])
- by localhost (smtp2.osuosl.org [127.0.0.1]) (amavis, port 10024) with ESMTP
- id 1Eikp2m4CFJk for <printing-architecture@lists.linux-foundation.org>;
- Fri,  3 Oct 2025 12:46:13 +0000 (UTC)
-X-Greylist: delayed 2749 seconds by postgrey-1.37 at util1.osuosl.org; Fri, 03 Oct 2025 12:46:12 UTC
-DMARC-Filter: OpenDMARC Filter v1.4.2 smtp2.osuosl.org 72F09409E4
-Authentication-Results: smtp2.osuosl.org; dmarc=none (p=none dis=none) header.from=alteholz.de
-DKIM-Filter: OpenDKIM Filter v2.11.0 smtp2.osuosl.org 72F09409E4
-Authentication-Results: smtp2.osuosl.org;
-	dkim=pass (1024-bit key, unprotected) header.d=alteholz.de header.i=@alteholz.de header.a=rsa-sha256 header.s=202105 header.b=s/8BwN/L
-Received-SPF: Pass (mailfrom) identity=mailfrom; client-ip=2a01:4f8:1c1c:4223::1; helo=he006.server.alteholz.net; envelope-from=debian@alteholz.de; receiver=<UNKNOWN> 
-Received: from he006.server.alteholz.net (he006.server.alteholz.net [IPv6:2a01:4f8:1c1c:4223::1])
-	by smtp2.osuosl.org (Postfix) with ESMTPS id 72F09409E4
-	for <printing-architecture@lists.linux-foundation.org>; Fri,  3 Oct 2025 12:46:11 +0000 (UTC)
-DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=alteholz.de
-	; s=202105; h=Content-Transfer-Encoding:Content-Type:In-Reply-To:From:
-	References:To:Subject:MIME-Version:Date:Message-ID:Sender:Reply-To:Cc:
-	Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender:
-	Resent-To:Resent-Cc:Resent-Message-ID:List-Id:List-Help:List-Unsubscribe:
-	List-Subscribe:List-Post:List-Owner:List-Archive;
-	bh=L4ssAtIcB3FEmZ9/6pk3y0RSA3CZ8quVyGGMoYjs76w=; b=s/8BwN/LgzkX6npY13g/W3tzXU
-	2+A3ZWcxUdBRqvO4yc2mZB8zTs6yirh/6PAhHWRrJl8oKoaaaICgh8NkeLFs7TIrgyfRlXDbbCIkz
-	+zq3TlgJCjPMl4hnksTDyl/PQjP90RnqlECGL30P0XdPWuZ8teSezMGkKj49D7p63HNE=;
-Received: from uucp by he006.server.alteholz.net with local-bsmtp (Exim 4.92)
-	(envelope-from <debian@alteholz.de>)
-	id 1v4eSR-0006Mw-4D; Fri, 03 Oct 2025 14:00:19 +0200
-Received: from [2001:678:ad8:aa04::41:1] (port=51704)
-	by email.intern.alteholz.me with esmtp (Exim 4.94.2)
-	(envelope-from <debian@alteholz.de>)
-	id 1v4eOo-00At7m-04; Fri, 03 Oct 2025 13:56:34 +0200
-Message-ID: <33c3a352-a2e9-455a-b9d0-65350de28749@alteholz.de>
-Date: Fri, 3 Oct 2025 13:56:23 +0200
+Received: from smtp3.osuosl.org ([127.0.0.1])
+ by localhost (smtp3.osuosl.org [127.0.0.1]) (amavis, port 10024) with ESMTP
+ id XmLIFxGQT-bL for <printing-architecture@lists.linux-foundation.org>;
+ Mon,  6 Oct 2025 08:29:23 +0000 (UTC)
+Received-SPF: Pass (mailfrom) identity=mailfrom; client-ip=170.10.133.124; helo=us-smtp-delivery-124.mimecast.com; envelope-from=zdohnal@redhat.com; receiver=<UNKNOWN> 
+DMARC-Filter: OpenDMARC Filter v1.4.2 smtp3.osuosl.org 6BCD7611EA
+Authentication-Results: smtp3.osuosl.org; dmarc=pass (p=quarantine dis=none) header.from=redhat.com
+DKIM-Filter: OpenDKIM Filter v2.11.0 smtp3.osuosl.org 6BCD7611EA
+Authentication-Results: smtp3.osuosl.org;
+	dkim=pass (1024-bit key, unprotected) header.d=redhat.com header.i=@redhat.com header.a=rsa-sha256 header.s=mimecast20190719 header.b=TGemhVI0
+Received: from us-smtp-delivery-124.mimecast.com (us-smtp-delivery-124.mimecast.com [170.10.133.124])
+	by smtp3.osuosl.org (Postfix) with ESMTPS id 6BCD7611EA
+	for <printing-architecture@lists.linux-foundation.org>; Mon,  6 Oct 2025 08:29:21 +0000 (UTC)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=redhat.com;
+	s=mimecast20190719; t=1759739360;
+	h=from:from:reply-to:subject:subject:date:date:message-id:message-id:
+	 to:to:cc:mime-version:mime-version:content-type:content-type:
+	 content-transfer-encoding:content-transfer-encoding:
+	 in-reply-to:in-reply-to:references:references;
+	bh=MHGXTpXa2RV6KU1kQXAB+DAFFK1cvwE7y3DKA7QyLJ0=;
+	b=TGemhVI0I70K9rBU7lVpKVCHFVc8N08E4C5hHFSBbbDzbcS7GO8CkSwfNBYBGXoMUHowOk
+	uz4sOqx8Sz/5e6G0kzZn2J5FQgaaAe4dz3fTMYIG3NSAuBUZyZisdDwLvMUn7vxIuzuKjp
+	ZcnNC5v5nAehop/M4iEu3Yr6C5BhGLU=
+Received: from mail-wm1-f70.google.com (mail-wm1-f70.google.com
+ [209.85.128.70]) by relay.mimecast.com with ESMTP with STARTTLS
+ (version=TLSv1.3, cipher=TLS_AES_256_GCM_SHA384) id
+ us-mta-516-oxIMlvQaO1GIgjRaZVKefg-1; Mon, 06 Oct 2025 04:29:18 -0400
+X-MC-Unique: oxIMlvQaO1GIgjRaZVKefg-1
+X-Mimecast-MFC-AGG-ID: oxIMlvQaO1GIgjRaZVKefg_1759739357
+Received: by mail-wm1-f70.google.com with SMTP id 5b1f17b1804b1-46e4fa584e7so18440225e9.0
+        for <printing-architecture@lists.linux-foundation.org>; Mon, 06 Oct 2025 01:29:17 -0700 (PDT)
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1759739357; x=1760344157;
+        h=content-transfer-encoding:in-reply-to:from:content-language
+         :references:to:subject:user-agent:mime-version:date:message-id
+         :x-gm-message-state:from:to:cc:subject:date:message-id:reply-to;
+        bh=MHGXTpXa2RV6KU1kQXAB+DAFFK1cvwE7y3DKA7QyLJ0=;
+        b=LcDKZNMv2NajibWHfw1jAhBuxvwrd5h8QL5P7mQmDRfiaUSU73vyZfgFKSZl/ViLnl
+         FAPcTLcfVC5LCjYF+x4OcTD4odFYxBPIViKwhk/LktvS+IGXhD+byrbdFyJpIlr4Ds8a
+         2mwq7i9H27a4KYSJwyOMT4DK0RbVKzAjJUn7b5Zax/o7sCGF+298VS8sfR+MuJb2RcPg
+         w5iD268qov18Lb8ZHz9EebSKnjuI038jAzFsIw+Udxo93RijKd+y01txRDonv99XTp8J
+         OSegzPr+Fq0ZQfb2NVdVj4yjXpGEQ5/m04ucu7RXYn7BTtvOyujZXLBJ2vDbwAADbBh6
+         bgmw==
+X-Forwarded-Encrypted: i=1; AJvYcCXErGttQBdWIYkWx9ZsgmRO3iRlSVUBefHuZMJ4Ka/FCZTBUlUm/y+TWL/bRoSA7/ZXcQADqN2/zGw1q3oXa/gHchPwIOs=@lists.linux-foundation.org
+X-Gm-Message-State: AOJu0Yw/JAYerOs1NF7XNRY0xbPXPVMVbibn6lLKZgDWL/+UyasNdF7y
+	W22l3OT49gbuWlxVLIs7Ig7uU9zXtylHXN/RXIjkMlsGQWnDlAqXb+i1vyA83AUyn7c3mV5Hyfb
+	Zw+CE2gXQ7LsIEr0bQfYgtpOwxwmJari2QBaahJo+4uaFMYfIxv79l7YHwLKLPrLA0k1BUJXeQy
+	LRwLS5OQlYmls0JPRp
+X-Gm-Gg: ASbGnctbtYKhCcYB0BpKEkLZWef5DUNSezQHriBxUYUdt9CgrY3eYrPCFJBjjlTBH5z
+	cvmXbpHT+ewcS/iGM9Bb703CxiLYbQ1BcLw+eP3NP8oL6jcAD1nZbp+Hm2eqIZ17X2ObzQQWmdS
+	ERe0OXy1nFZwY/rKzlBI8iDPt0eYx7VfAW7YXRePNuJFdHvgY8md7yv7SHOlZd47FPQu1SVliuM
+	1TBXOkgJm1mdomi30SvCMBOtVW3xXElgFQIhWdqlBFUJhepH+qfziXF1vDKAU8FHd3F/5Dr3GVf
+	1IubQ7+waQSm2wEnykcCoWgSQBgaBnUcOK8NzVX2wiQ=
+X-Received: by 2002:a05:600c:1383:b0:46b:932f:9201 with SMTP id 5b1f17b1804b1-46e710ae7b2mr80102565e9.0.1759739356679;
+        Mon, 06 Oct 2025 01:29:16 -0700 (PDT)
+X-Google-Smtp-Source: AGHT+IGVgDMtToMNBBb7YXnrfOwXEqtuwDDJ+pQDNpOukrNIE5L0uSc1z+/ygGkwP5y+Egjsq7CkRQ==
+X-Received: by 2002:a05:600c:1383:b0:46b:932f:9201 with SMTP id 5b1f17b1804b1-46e710ae7b2mr80102445e9.0.1759739356311;
+        Mon, 06 Oct 2025 01:29:16 -0700 (PDT)
+Received: from [10.43.3.35] ([85.93.96.130])
+        by smtp.gmail.com with ESMTPSA id 5b1f17b1804b1-46e7236267bsm159103555e9.16.2025.10.06.01.29.15
+        (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
+        Mon, 06 Oct 2025 01:29:15 -0700 (PDT)
+Message-ID: <65025754-f089-4a87-a4dc-458abca25f66@redhat.com>
+Date: Mon, 6 Oct 2025 10:29:14 +0200
 Precedence: bulk
 X-Mailing-List: printing-architecture@lists.linux.dev
 List-Id: <printing-architecture.lists.linux.dev>
@@ -61,68 +93,47 @@ List-Unsubscribe: <mailto:printing-architecture+unsubscribe@lists.linux.dev>
 MIME-Version: 1.0
 User-Agent: Mozilla Thunderbird
 Subject: Re: We should announce our releases on
-To: Till Kamppeter <till.kamppeter@gmail.com>,
+To: Thorsten Alteholz <debian@alteholz.de>,
+ Till Kamppeter <till.kamppeter@gmail.com>,
  Open Printing <printing-architecture@lists.linux-foundation.org>,
- Zdenek Dohnal <zdohnal@redhat.com>, Michael Sweet <msweet@msweet.org>,
- Alexander Pevzner <pzz@apevzner.com>
+ Michael Sweet <msweet@msweet.org>, Alexander Pevzner <pzz@apevzner.com>
 References: <9f07fe2e-154a-4a9e-b2a6-99a83c2c0f82@gmail.com>
+ <33c3a352-a2e9-455a-b9d0-65350de28749@alteholz.de>
+From: Zdenek Dohnal <zdohnal@redhat.com>
+In-Reply-To: <33c3a352-a2e9-455a-b9d0-65350de28749@alteholz.de>
+X-Mimecast-Spam-Score: 0
+X-Mimecast-MFC-PROC-ID: JDy79jPDjTSHNHhtc1qnQUpLGu08YjHhrHN5ihewHyw_1759739357
+X-Mimecast-Originator: redhat.com
 Content-Language: en-US
-From: Thorsten Alteholz <debian@alteholz.de>
-Autocrypt: addr=debian@alteholz.de; keydata=
- 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 MQ==
-In-Reply-To: <9f07fe2e-154a-4a9e-b2a6-99a83c2c0f82@gmail.com>
 Content-Type: text/plain; charset=UTF-8; format=flowed
 Content-Transfer-Encoding: 8bit
 
-Hi Till,
+Hi all,
 
-On 17.09.25 01:07, Till Kamppeter wrote:
-> Perhaps we should create an organizational user, like @OpenPrinting, 
-> on Mastodon, for doing such announcements.
+in my case I separate social media and my work, otherwise I would be 
+working even when I'm on social media :) .
+
+So in case someone would like to handle the announcements on social 
+media, I don't mind, but myself I wouldn't like to handle that.
+
+
+Zdenek
+
+On 10/3/25 13:56, Thorsten Alteholz wrote:
+> Hi Till,
 >
-> WDYT?
-
-yes, I would like this.
-
-   Thorsten
+> On 17.09.25 01:07, Till Kamppeter wrote:
+>> Perhaps we should create an organizational user, like @OpenPrinting, 
+>> on Mastodon, for doing such announcements.
+>>
+>> WDYT?
+>
+> yes, I would like this.
+>
+>   Thorsten
+>
+-- 
+Zdenek Dohnal
+Senior Software Engineer
+Red Hat, BRQ-TPBC
 
