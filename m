@@ -1,84 +1,65 @@
-Received: from smtp3.osuosl.org (smtp3.osuosl.org [140.211.166.136])
-	(using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
+Received: from mail-ej1-f52.google.com (mail-ej1-f52.google.com [209.85.218.52])
+	(using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
 	(No client certificate requested)
-	by smtp.subspace.kernel.org (Postfix) with ESMTPS id 3EEB01547E7
-	for <printing-architecture@lists.linux-foundation.org>; Sun, 12 Oct 2025 20:01:16 +0000 (UTC)
-Authentication-Results: smtp.subspace.kernel.org; arc=none smtp.client-ip=140.211.166.136
+	by smtp.subspace.kernel.org (Postfix) with ESMTPS id 38B2F1E51EA
+	for <printing-architecture@lists.linux.dev>; Wed, 15 Oct 2025 17:36:45 +0000 (UTC)
+Authentication-Results: smtp.subspace.kernel.org; arc=none smtp.client-ip=209.85.218.52
 ARC-Seal:i=1; a=rsa-sha256; d=subspace.kernel.org; s=arc-20240116;
-	t=1760299278; cv=none; b=WVwDE6yY4LMDu3IkTN61IFK+vEHesa/z0U5ErgU37VCI0Guuzpbj2IV5SoZDfvjgNnykkL1bzkjscDf1GxuTEbg1/ptVMgj/hACPOj4Hl99rdcYDyXp5aDs4RGRk09wDZN3StHZacPRjRlzhAR3yjUVvCgXycTem9fcobAOoZfY=
+	t=1760549807; cv=none; b=f1F6AwWJXcGHiHcLIEWaeUUfkRWkK/nZJA9mmO7fs24lnXH+tJ5juJlMcldtm7zjIhvWhiAl/K+u9Kg7ujtqpYIG6ruetyjqr1+pXH4lEKRHl1Q02btNKhcahTANDrKcxinja1I7zNxPS428OFV4kzO6zMhP6v9eKtrhBe+96w8=
 ARC-Message-Signature:i=1; a=rsa-sha256; d=subspace.kernel.org;
-	s=arc-20240116; t=1760299278; c=relaxed/simple;
-	bh=UmwEoUd3aq/Sp8Bl8qDCB34k12ionbebQotZDcOidPM=;
-	h=Message-ID:Date:MIME-Version:Subject:To:References:From:
-	 In-Reply-To:Content-Type; b=fPuwfmegfEIEtv51phCEKHoZiiVjio22LzxHtZhP3anCXvshgUNYYVFMqqlzaUHqoA6P3xQpcHQgdJTuip6/NMZ1idEndpg2iLuW+APJjIgmrLKozyUnNWBCJ8/O6rlI4D2hATwe9IrICkMAIG6r36UiYa+KheDrlRTcapBry1k=
-ARC-Authentication-Results:i=1; smtp.subspace.kernel.org; dkim=pass (2048-bit key) header.d=gmail.com header.i=@gmail.com header.b=JAoZFqcX; arc=none smtp.client-ip=140.211.166.136
+	s=arc-20240116; t=1760549807; c=relaxed/simple;
+	bh=wP83oeTv9UHatzm/R71NT8Mfy8yHYqgrk8wGMnxJJVI=;
+	h=Message-ID:Date:MIME-Version:From:Subject:To:Content-Type; b=XwSxV+wemhdgi2kd5qjkwDRjOop5lJdPrlwWyMewyM9+D3AekK0MMwvWh2JJPpL8a+Rw9a0XWWl/5xvrH2KHK+d7CjK4Bo3xwQVCThh4bFTBFT6DaIzYXiM1ewaecQegN0SZa7OUe8UiCOSXYvZGz05veygYgqZMoOZa1NS0L8A=
+ARC-Authentication-Results:i=1; smtp.subspace.kernel.org; dmarc=pass (p=none dis=none) header.from=gmail.com; spf=pass smtp.mailfrom=gmail.com; dkim=pass (2048-bit key) header.d=gmail.com header.i=@gmail.com header.b=g43Y24tQ; arc=none smtp.client-ip=209.85.218.52
+Authentication-Results: smtp.subspace.kernel.org; dmarc=pass (p=none dis=none) header.from=gmail.com
+Authentication-Results: smtp.subspace.kernel.org; spf=pass smtp.mailfrom=gmail.com
 Authentication-Results: smtp.subspace.kernel.org;
-	dkim=pass (2048-bit key) header.d=gmail.com header.i=@gmail.com header.b="JAoZFqcX"
-Received: from localhost (localhost [127.0.0.1])
-	by smtp3.osuosl.org (Postfix) with ESMTP id C0CC660846
-	for <printing-architecture@lists.linux-foundation.org>; Sun, 12 Oct 2025 20:01:16 +0000 (UTC)
-X-Virus-Scanned: amavis at osuosl.org
-X-Spam-Flag: NO
-X-Spam-Score: -0.2
-X-Spam-Level:
-Received: from smtp3.osuosl.org ([127.0.0.1])
- by localhost (smtp3.osuosl.org [127.0.0.1]) (amavis, port 10024) with ESMTP
- id YoUqw4J9I1XN for <printing-architecture@lists.linux-foundation.org>;
- Sun, 12 Oct 2025 20:01:14 +0000 (UTC)
-Received-SPF: Pass (mailfrom) identity=mailfrom; client-ip=2a00:1450:4864:20::432; helo=mail-wr1-x432.google.com; envelope-from=till.kamppeter@gmail.com; receiver=<UNKNOWN> 
-DMARC-Filter: OpenDMARC Filter v1.4.2 smtp3.osuosl.org 9075D605FE
-Authentication-Results: smtp3.osuosl.org; dmarc=pass (p=none dis=none) header.from=gmail.com
-DKIM-Filter: OpenDKIM Filter v2.11.0 smtp3.osuosl.org 9075D605FE
-Authentication-Results: smtp3.osuosl.org;
-	dkim=pass (2048-bit key, unprotected) header.d=gmail.com header.i=@gmail.com header.a=rsa-sha256 header.s=20230601 header.b=JAoZFqcX
-Received: from mail-wr1-x432.google.com (mail-wr1-x432.google.com [IPv6:2a00:1450:4864:20::432])
-	by smtp3.osuosl.org (Postfix) with ESMTPS id 9075D605FE
-	for <printing-architecture@lists.linux-foundation.org>; Sun, 12 Oct 2025 20:01:13 +0000 (UTC)
-Received: by mail-wr1-x432.google.com with SMTP id ffacd0b85a97d-3ed20bdfdffso3117738f8f.2
-        for <printing-architecture@lists.linux-foundation.org>; Sun, 12 Oct 2025 13:01:13 -0700 (PDT)
+	dkim=pass (2048-bit key) header.d=gmail.com header.i=@gmail.com header.b="g43Y24tQ"
+Received: by mail-ej1-f52.google.com with SMTP id a640c23a62f3a-b41870fef44so587595566b.3
+        for <printing-architecture@lists.linux.dev>; Wed, 15 Oct 2025 10:36:45 -0700 (PDT)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
-        d=gmail.com; s=20230601; t=1760299271; x=1760904071; darn=lists.linux-foundation.org;
-        h=content-transfer-encoding:in-reply-to:from:content-language
-         :references:to:subject:user-agent:mime-version:date:message-id:from
-         :to:cc:subject:date:message-id:reply-to;
-        bh=bCvjiDt36Fyt9pEqeLEvS5JLC51R+pwWtpDSWt7CRFo=;
-        b=JAoZFqcXKV3InUUUJPMZpr+iOHlLxzhEQjd8699oeqPMfp5loE/jCxli3bssAtXeVP
-         HbStscLOe+Abj/xd50vf1sxk/vDncd/FbkW7Mlv1QiYaZJSZX7Eq5mQop4m7nGAN1MZT
-         ANSvtADt8HOOxEFjYcjYbR2uuuWawaQr85eHbR6PGbSa3cM+ajInAe34QVO1bliiIjv/
-         beYJQg299Q4mCUfgVCXZWScZEC2g6+TKUku5IAl32wlWySH8ua43AqKBxjUafHcsxpKO
-         MshiCiV46fPGKJLsVemAImjGuOAnvDtGIgJ2W+SsjHRKMNnlM7Vi6jJva4eRSCHupc99
-         oiKQ==
+        d=gmail.com; s=20230601; t=1760549804; x=1761154604; darn=lists.linux.dev;
+        h=content-transfer-encoding:content-language:to:subject:from
+         :user-agent:mime-version:date:message-id:from:to:cc:subject:date
+         :message-id:reply-to;
+        bh=CBKXFJNFzHP9h2yVZfYQ3JgWshrLw9Rw7Qi6fCEQaac=;
+        b=g43Y24tQFWVf7ciPedm8lPlocbY4T5bcLlXMgFZTRUtQpvrMY5tl+sD342x4vnD+MW
+         paASaAV682tNmlYM5er78Ijf4jkpTebaPIlgoZljtWY6yHsc6Bdziu+wsLz17nI1Bwen
+         xJxE5EZ33wriQvhW8shyq2D9hbvAS9/MXmcDDm8J3Rq3nR6sy0wcAPO8h3gs1ASdiKfN
+         1uTqNIPqJF8tAUN/aHF1FxDt9pkRcHICLlPHh+9ptuyIBedWpbQAQsY3b5DFK2gUOWkC
+         cpFaYccv9Xa8Xa9U4vweZb84XrBleajf2lTw404kVCL7qYbBEJcn6YfREQUH8rGhxNTL
+         thbw==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
-        d=1e100.net; s=20230601; t=1760299271; x=1760904071;
-        h=content-transfer-encoding:in-reply-to:from:content-language
-         :references:to:subject:user-agent:mime-version:date:message-id
-         :x-gm-message-state:from:to:cc:subject:date:message-id:reply-to;
-        bh=bCvjiDt36Fyt9pEqeLEvS5JLC51R+pwWtpDSWt7CRFo=;
-        b=nFK/DuEZzIFrExE6bu7X8jJ/YoTIHA2/ONF1i4N1SJFgEqAwapcOsFgZWDQfJSNPku
-         gG8WS/hCb9D4xYgqYyKF81weNhM4QhagSW8TpB1xABTr9ayTYAahXFngOOdVQMKya3XW
-         eCM7UeqCI5QyZ5Wk6g1Sof4hi9Ua4/TT8BGXG5H6i8hk+4rzf225Rfj49Oj/XUUHv7ZF
-         /6lDLAwf9MaPkDyI4GWR9aEC/BrH66JOsTiLnjh1Q7IvFfzbc1olemgf/HjmX1D7h5o8
-         PxMcd8dyKz/R6580JnyMaqdvskBZ5kKt19SzaQ78U+ZAj5t2vNKNorP88esSz7j2TKb0
-         cgcg==
-X-Forwarded-Encrypted: i=1; AJvYcCVxOjlr9TrnD7toZPsbUEh5x4avccqEU5u8LacXEQWOYuh6HlSmw7hkO7jBdQqPVNBOS6y/9aFbdQ2m5lV4MYnTTpzb47k=@lists.linux-foundation.org
-X-Gm-Message-State: AOJu0YySc5dRrUisB7eEzRrDKlUlCD6XfCVpVs6zxemjxgCAsf9B2uff
-	ySvvn0EfVNIGIWwX54TRklWYOcFDVJZqUcZ9n9YfDR3QpxwnXFbyUOZ8blVlWw==
-X-Gm-Gg: ASbGncvJor0d663cGvmNmJnb2VO9B0B9IBg98jgL+wxWpuNSbE0Tou6yIJC8MRuLIf3
-	NQazFY7WXVqDBSrmQ2BbjlKDFMqVmDstnDOs5mxnnNYrGYcZ1wm/uWqGSBdbAYoP/XqSsyZxtjl
-	sjzip74VH6aCW8ti5WPy+0K6zOJKwP8q6kBA7dRZQRxFQ5PF0K6qlLv5MrM8S//Jfi/MAWQvp6f
-	kAbcsNZuuagZazxSd0P3w6T0AG9QqpaIY+pPmU/VqM7A30Gvq273iiscPxLjrRojGrC1inAKlVs
-	78Aavs6eiTQUfzDrRK8swM8ySb5KB1mSbR6/Eej70N2G9VxewKrU4DZXQkJz762le3u+7y9J/It
-	ijP1/xXk+3hAqc71DeITVy4mjRDH7LW9a8HfkMSd210/lbf4wZy2wbtZYFeEJxgCtp2jsOSvTsH
-	LFs/IOmk7eqVTARnNhYVfSxw==
-X-Google-Smtp-Source: AGHT+IFKHuMX/dC42CD2xI8rxVMJw+uvfg4TU7paQmyEYM0h2DiLohrx0uofRjuyht7rQEM6eMxFrg==
-X-Received: by 2002:a5d:5f82:0:b0:405:9e2a:8535 with SMTP id ffacd0b85a97d-4266e7c0240mr14223581f8f.27.1760299271164;
-        Sun, 12 Oct 2025 13:01:11 -0700 (PDT)
+        d=1e100.net; s=20230601; t=1760549804; x=1761154604;
+        h=content-transfer-encoding:content-language:to:subject:from
+         :user-agent:mime-version:date:message-id:x-gm-message-state:from:to
+         :cc:subject:date:message-id:reply-to;
+        bh=CBKXFJNFzHP9h2yVZfYQ3JgWshrLw9Rw7Qi6fCEQaac=;
+        b=dYX4wYOR3sl4dxDiBurg2TyCFt/4BZk1X+HhI6FKOmLdpCrifUViITtKoTxR5Hht7E
+         8SfApZr4bykb1rTn19jDwkNsRhubIp6AbX3tBdBbbCBHM4zPC2tn/pNQj47nxImseYBa
+         BXmf/tUdevjBxLdwzVtFGK3eFrih1bGd49sGffxoe6q4thMsFxL/9jEWYj5ZVSrCSqNf
+         ETX9136EQ27Kar88zDgpFo+S3KeD1tzxg+yUi4e8LFsKhZbqwO5iZAvYFn+/9R+08anw
+         11p8TNl1NjO/Xt7PaQ1DNSVfBquFe20EEU8rPQUg8Dhcm7vuz/jjXxxadESA1X+d8qtY
+         /+5A==
+X-Forwarded-Encrypted: i=1; AJvYcCUWdc7QnP6F3VWNk11LITGO0B4RfEj8xZRcdwEBv1sVJpdS6uAgBwZQ5KcPmpclcEGnJn2bnw8JR6wfYOxRLaWfzHJygMU=@lists.linux.dev
+X-Gm-Message-State: AOJu0Ywgy4+p7rBwDKJ5gxbGUe006detAAT/93cjQOnOw6NIdp82L8F0
+	igDPpp68GOjKQSrCkTc3apBtHfvEOHBx4vR02cPK2DsMwmjJ7AqYvhYh
+X-Gm-Gg: ASbGncvbPKBORsGpLhCMidTOi2yicK5Bu323nKKmcl0vKS7LW91Jco482k/afRx7Naj
+	WuD17v/kFHgchadw7qcXcrbS9xlU5PgCeHvA373BCPhdp+R0wE5RHIiYHjxarxPvkHUSj2ZKtT5
+	nEK52sRTuSysqeKerJsP3VXC2sGjnod3HJ28mvNU4Xuayws3Hbolt8YnIxVDCm3kfa9JKrWZFdA
+	cbNQmkSMNFNv6WbLNHPL92REjCOmGcFv80P69MF1oY54A0tt+DL5iCCospPXs7Kns4HtlxrQnRQ
+	bdYomhJqBtmupLkbiAxRDlYvXNSN8x/lBRgv8piiagsp3Ysyf9MfmKdXHsmMTVoe4HVQ4G2ZvsP
+	NFAHFmm9z6DAw8P6jeFTRY0oSaUanAov+3XsburKjSuWFUYS0bssgUE9kQ9x4Iqs2DmGTT1oUhW
+	gXARlApa0WBua3KBZaH0hUPVGFGm9AJ/L7
+X-Google-Smtp-Source: AGHT+IFUFMDU2FnssipSmetRL7s7kTK0dSd1l1p40cE4ooJVjn4rP+g9vytJy5WAUNQddc9D5QwIIw==
+X-Received: by 2002:a17:907:d86:b0:b40:8954:a8a9 with SMTP id a640c23a62f3a-b50ac0cc32amr3054885766b.34.1760549804185;
+        Wed, 15 Oct 2025 10:36:44 -0700 (PDT)
 Received: from [192.168.68.113] (193-80-180-232.hdsl.highway.telekom.at. [193.80.180.232])
-        by smtp.gmail.com with ESMTPSA id ffacd0b85a97d-426ce50d70esm14828006f8f.0.2025.10.12.13.01.09
+        by smtp.gmail.com with ESMTPSA id a640c23a62f3a-b5cb965c35csm274748966b.8.2025.10.15.10.36.43
         (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
-        Sun, 12 Oct 2025 13:01:10 -0700 (PDT)
-Message-ID: <195260c2-343f-4d8f-b3ae-84dcbcd293bf@gmail.com>
-Date: Sun, 12 Oct 2025 22:01:09 +0200
+        Wed, 15 Oct 2025 10:36:43 -0700 (PDT)
+Message-ID: <2ab9ece0-1347-433e-a119-6e14e81eb9b1@gmail.com>
+Date: Wed, 15 Oct 2025 19:36:43 +0200
 Precedence: bulk
 X-Mailing-List: printing-architecture@lists.linux.dev
 List-Id: <printing-architecture.lists.linux.dev>
@@ -86,38 +67,20 @@ List-Subscribe: <mailto:printing-architecture+subscribe@lists.linux.dev>
 List-Unsubscribe: <mailto:printing-architecture+unsubscribe@lists.linux.dev>
 MIME-Version: 1.0
 User-Agent: Mozilla Thunderbird
-Subject: =?UTF-8?Q?Re=3A_Open_Printer_=E2=80=94_open-source=2C_repairable_in?=
- =?UTF-8?Q?kjet_printer?=
-To: Douglas Kosovic <doug@uq.edu.au>,
- "printing-architecture@lists.linux-foundation.org"
- <printing-architecture@lists.linux-foundation.org>
-References: <SYBP282MB2617A78D3E14B4D50F9D90D887E4A@SYBP282MB2617.AUSP282.PROD.OUTLOOK.COM>
-Content-Language: en-US
 From: Till Kamppeter <till.kamppeter@gmail.com>
-In-Reply-To: <SYBP282MB2617A78D3E14B4D50F9D90D887E4A@SYBP282MB2617.AUSP282.PROD.OUTLOOK.COM>
+Subject: OpenPrinting News
+To: Ira McDonald <blueroofmusic@gmail.com>, Aveek Basu
+ <basu.aveek@gmail.com>, OpenPrinting <printing-architecture@lists.linux.dev>
+Content-Language: en-US
 Content-Type: text/plain; charset=UTF-8; format=flowed
-Content-Transfer-Encoding: 8bit
+Content-Transfer-Encoding: 7bit
 
-Thanks for the hint.
+Hi,
 
-I have already discovered this in the news and have contacted the creators.
+new post:
+
+OpenPrinting News - Opportunity Open Source 3.0 in the IIT Kanpur, India
+
+https://openprinting.github.io/OpenPrinting-News-Opportunity-Open-Source-3.0-in-the-IIT-Kanpur,-India/
 
     Till
-
-On 10/3/25 03:03, Douglas Kosovic wrote:
-> I noticed Open Printer was announced the other day:
-> 
-> https://www.crowdsupply.com/open-tools/open-printer
-> https://www.xda-developers.com/open-source-printer-raspberry-pi-zero-w/
-> https://www.hackster.io/news/the-open-printer-is-a-raspberry-pi-zero-w-powered-fully-open-highly-flexible-inkjet-printer-30948a1787cc
-> 
-> 
-> It's a newly launched project on Crowd Supply — an open-source, repairable inkjet printer that features no cartridge DRM, yet is compatible with HP 63 (US) or HP 302 (Europe) cartridges.
-> 
-> 
-> 
-> 
-> Cheers,
-> Doug
-> 
-
