@@ -1,84 +1,67 @@
-Received: from smtp1.osuosl.org (smtp1.osuosl.org [140.211.166.138])
-	(using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
+Received: from mail-ed1-f50.google.com (mail-ed1-f50.google.com [209.85.208.50])
+	(using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
 	(No client certificate requested)
-	by smtp.subspace.kernel.org (Postfix) with ESMTPS id 896E92D3ECA
-	for <printing-architecture@lists.linux-foundation.org>; Sun,  9 Nov 2025 09:37:44 +0000 (UTC)
-Authentication-Results: smtp.subspace.kernel.org; arc=none smtp.client-ip=140.211.166.138
+	by smtp.subspace.kernel.org (Postfix) with ESMTPS id 24C2418C008
+	for <printing-architecture@lists.linux.dev>; Sun,  9 Nov 2025 20:23:18 +0000 (UTC)
+Authentication-Results: smtp.subspace.kernel.org; arc=none smtp.client-ip=209.85.208.50
 ARC-Seal:i=1; a=rsa-sha256; d=subspace.kernel.org; s=arc-20240116;
-	t=1762681066; cv=none; b=tKmxKg4AV48QX0rn3i0w4KUGwBZus8DlVQ8FC8VObuBtvXi0W2qfmqY6zbV4buwARlNTJ3+Q9TXEKIkg3SgmyoN122uhPmIPPmvF9m26nYDVRI3jNnZ8ormC6LNQFrxnZtWApavs8AqBDvZCTDiE+tnKNRGxKFwUTcRcXkRPtMk=
+	t=1762719800; cv=none; b=JSJcAWfoMwoSaRFlIAYq2H7SzNWa//OKJm3+DerIMuhhrXM9/l8aocaW6vOwpKNUJA/anh3n2OWvvi2zOhrMyqBLy3zgv4Ya4RW6D0rFB0xdUVCVO+InK9ZYvPT518dnkLOIxGpO2gQ9qVflu0jCqDXXdtO5g1w0cn+hnuLvnL0=
 ARC-Message-Signature:i=1; a=rsa-sha256; d=subspace.kernel.org;
-	s=arc-20240116; t=1762681066; c=relaxed/simple;
-	bh=ndW3vjI6YuBXoPpUpDPpvAq0Mf6gnttXVA+o620G2pI=;
-	h=Message-ID:Date:MIME-Version:To:From:Subject:Content-Type; b=JZN3jXOxvjBV3T3mF7T6K1V9vOIzC9ENX3g8u29FPVdK8gBWc8IaBvn4iZR0Uw5iuIlT4voeNCUShJJhQbwQUZdk2qknXGqQPbTZwgu/zpJezYGVczDgJCnnhefcgqeHm60u7GBT8AJGE/fUSJLh/gZoOlVx9jChneHgUVNTtUo=
-ARC-Authentication-Results:i=1; smtp.subspace.kernel.org; dkim=pass (2048-bit key) header.d=apevzner.com header.i=@apevzner.com header.b=ggAF29XM; arc=none smtp.client-ip=140.211.166.138
+	s=arc-20240116; t=1762719800; c=relaxed/simple;
+	bh=wOvAuoiyLVw4KNlzC0Xfa2MIpzOW6sazXb2Hg3Q2qUY=;
+	h=Message-ID:Date:MIME-Version:Subject:To:Cc:References:From:
+	 In-Reply-To:Content-Type; b=u+6wiY+b1R2MA7LnuhAtTa+J6fwUVCgkguqC//soJzyxDtN7T4PI/1FjGy3fxwiU+iOOOhGHm3Rzd9Cse1k5mYjPYcafDAiUzlsDGyH7G2hpwNpX5PtZIjStINwvanLjY49H1Llr1gtA7/LoyiAP1dLB0BU8mhK6lWV4DeNGntU=
+ARC-Authentication-Results:i=1; smtp.subspace.kernel.org; dmarc=pass (p=none dis=none) header.from=gmail.com; spf=pass smtp.mailfrom=gmail.com; dkim=pass (2048-bit key) header.d=gmail.com header.i=@gmail.com header.b=BpOeYQGo; arc=none smtp.client-ip=209.85.208.50
+Authentication-Results: smtp.subspace.kernel.org; dmarc=pass (p=none dis=none) header.from=gmail.com
+Authentication-Results: smtp.subspace.kernel.org; spf=pass smtp.mailfrom=gmail.com
 Authentication-Results: smtp.subspace.kernel.org;
-	dkim=pass (2048-bit key) header.d=apevzner.com header.i=@apevzner.com header.b="ggAF29XM"
-Received: from localhost (localhost [127.0.0.1])
-	by smtp1.osuosl.org (Postfix) with ESMTP id E8CAE81215
-	for <printing-architecture@lists.linux-foundation.org>; Sun,  9 Nov 2025 09:37:43 +0000 (UTC)
-X-Virus-Scanned: amavis at osuosl.org
-X-Spam-Flag: NO
-X-Spam-Score: -2.1
-X-Spam-Level:
-Received: from smtp1.osuosl.org ([127.0.0.1])
- by localhost (smtp1.osuosl.org [127.0.0.1]) (amavis, port 10024) with ESMTP
- id eLdLNr4CcFPk for <printing-architecture@lists.linux-foundation.org>;
- Sun,  9 Nov 2025 09:37:43 +0000 (UTC)
-Received-SPF: Pass (mailfrom) identity=mailfrom; client-ip=2a00:1450:4864:20::136; helo=mail-lf1-x136.google.com; envelope-from=pzz@apevzner.com; receiver=<UNKNOWN> 
-DMARC-Filter: OpenDMARC Filter v1.4.2 smtp1.osuosl.org C3865806A2
-Authentication-Results: smtp1.osuosl.org; dmarc=none (p=none dis=none) header.from=apevzner.com
-DKIM-Filter: OpenDKIM Filter v2.11.0 smtp1.osuosl.org C3865806A2
-Authentication-Results: smtp1.osuosl.org;
-	dkim=pass (2048-bit key, unprotected) header.d=apevzner.com header.i=@apevzner.com header.a=rsa-sha256 header.s=google header.b=ggAF29XM
-Received: from mail-lf1-x136.google.com (mail-lf1-x136.google.com [IPv6:2a00:1450:4864:20::136])
-	by smtp1.osuosl.org (Postfix) with ESMTPS id C3865806A2
-	for <printing-architecture@lists.linux-foundation.org>; Sun,  9 Nov 2025 09:37:41 +0000 (UTC)
-Received: by mail-lf1-x136.google.com with SMTP id 2adb3069b0e04-5945662a755so1618170e87.1
-        for <printing-architecture@lists.linux-foundation.org>; Sun, 09 Nov 2025 01:37:41 -0800 (PST)
+	dkim=pass (2048-bit key) header.d=gmail.com header.i=@gmail.com header.b="BpOeYQGo"
+Received: by mail-ed1-f50.google.com with SMTP id 4fb4d7f45d1cf-6406f3dcc66so3995817a12.3
+        for <printing-architecture@lists.linux.dev>; Sun, 09 Nov 2025 12:23:18 -0800 (PST)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
-        d=apevzner.com; s=google; t=1762681058; x=1763285858; darn=lists.linux-foundation.org;
-        h=content-transfer-encoding:subject:from:content-language:to
-         :user-agent:mime-version:date:message-id:from:to:cc:subject:date
-         :message-id:reply-to;
-        bh=5GaBQdzO0vQ5nqjHpR4gTtMztlkbbiNfBKkP++Q4NXo=;
-        b=ggAF29XMJwoPGdsGvckMLXMDF9M/+wfefNSAYN4d/gZBjbtLiLtq8yA+x5Ju7E36sB
-         Ham9z15KG/qmVmL9+5lhkuBo8uG0qS9xdqe1z3lUeQJXiYYnAytHt3SYO2FclovUKMeb
-         0Snpd/YTZpycSK06QRNkXKyCVgpVD16F+X+gna16DI8w/LsC+j+z3mn4vbO2anFSiTVj
-         hm73wqnqFeFL3FgnAzCL98123yd3Ibd8tl3PJiXLjoW4/0erHVErfmxB8MvfbcpJaPOZ
-         hKXIrVLl5kWRNsN+3nBQ1HBkHh+YQiQi8HFDP+6POXBJgyCu1nks9w6HNoomEWL8A1P3
-         EDWw==
-X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
-        d=1e100.net; s=20230601; t=1762681058; x=1763285858;
-        h=content-transfer-encoding:subject:from:content-language:to
-         :user-agent:mime-version:date:message-id:x-gm-gg:x-gm-message-state
+        d=gmail.com; s=20230601; t=1762719797; x=1763324597; darn=lists.linux.dev;
+        h=content-transfer-encoding:in-reply-to:from:content-language
+         :references:cc:to:subject:user-agent:mime-version:date:message-id
          :from:to:cc:subject:date:message-id:reply-to;
-        bh=5GaBQdzO0vQ5nqjHpR4gTtMztlkbbiNfBKkP++Q4NXo=;
-        b=ijnlo76LLg9bPRLindJZ5GZwgWNHJ5NWYOS3sZI17LoLwAf1lwXZFXFzXJv3GAmgpm
-         066PJ+JfaCT5Dd0PQNi4fuOHRIJt5Cqvjuqj9UtXFjfRG14Op5amL0OZLi15hIO5yGOO
-         2G/Tn0nOeTtqetFrTQjnQEGdGblRsL2QzWsj9jM90qOnBf+nCs22dd1VB7wmDzc5rdt5
-         ODzwzUK+qlMkvcFBlHzbmwrlGSnkfRQ2BYmhGB89UT0gmWFEA8GNB6dOX4oE7nLYGyiR
-         sYWErZ+Em1Hl0ro5SwPrDrsjzu04nsUh3LLU5NOK5deBLTO8Vos7hkgEkBwEWPO1dL15
-         U4LA==
-X-Gm-Message-State: AOJu0Yy1/dfKs+g5WrEHlNIPU2x5foGzPCKfzDy1Er2CoqZNKxm1K072
-	KW+tNM8dMNs/Tx9KQaOl+0qVeokBNMVTQ3L1q23yERf3cTddo4C/JA1yRYiGt8DoV6yWJerknf9
-	0tNc9eYg=
-X-Gm-Gg: ASbGncuwttboaFFSnAksCbdixnfYXPMlxn5GEKKBW68WIGydqVKPlJOr5B89vyOUGTg
-	aBfBQ2sx2VXQ8Ks7S9HtKdjoON/4N5M2Ip3eaLPp8IOf2Zvfy/cbrEJjJmKS4w+4I1CW/+gSMv4
-	oiZAyvgDxvwRWGWBnY9JGBrgM2Oky0lVqVzIftOVl4BB3xCWEtcRbh7wxHumzWP8tvEHiJD/bfm
-	Mh00QfpNFZXZRzQ/atPbqO3dWF0NYaOwb+xSPeuD+as6L+eDbH48CXTl+0Gbi8VIiIjCcI+39b9
-	LErVbANn7ac7BLH9jSRWzymrktbCx1gYFI/g75u4EotdZwIqiXMGF+A2vwWura69bwC0tLvFttq
-	fdBIiG60SWt3OF/j3YUdQz5mj5h73Wg/8kv8o+2ivuAnErgaxv1awFpf33X4KqQ/6FHVXUSc5Gs
-	uWk+o3pg==
-X-Google-Smtp-Source: AGHT+IECW6DpVcfNUBsVzOuqDZaDaJgo+1bgYF+4ggEnDspC1gT03cxa8UCWA41/feRW+G2RCR8sWQ==
-X-Received: by 2002:a05:6512:6c7:b0:594:282d:f40c with SMTP id 2adb3069b0e04-5945f1bbf29mr1444977e87.31.1762681057972;
-        Sun, 09 Nov 2025 01:37:37 -0800 (PST)
-Received: from [192.168.0.6] ([46.188.9.40])
-        by smtp.googlemail.com with ESMTPSA id 2adb3069b0e04-5944a840e20sm2909645e87.60.2025.11.09.01.37.37
-        for <printing-architecture@lists.linux-foundation.org>
+        bh=piM8JnUIOhLi8shtu6ukxdUvTydhEAzgNic6IccZkYo=;
+        b=BpOeYQGoxfUnDfPbNCqTB38hUQVuCPFCyHne4fcyFdBLwv8C/lqoujUJefO8eE8dac
+         ++jt14bitjWF49dDW0DU8t/Ygi4uJmGDbNnAUdlnz1l/VFptbm1X3FYWwfNsrnLBEdlP
+         Rjauia0XGGumZgGyTHAPRiOhaqz5D1TRrf8DrL9lvEXxj5B9StFIm07BY0If837nWH0Z
+         b2U31r3o0FWi+CKrTr3b3x1wj4k0OXuZkti51UP+LKUPou+FNBNerR4DhjDC5fBLDO4g
+         ZRCfBtyggI0Dz+0z+nyzTbVep9xeBFXDrXinqnwzH0yF+XYDPI4zfzBHFJffZ4lhSgPY
+         HAFg==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1762719797; x=1763324597;
+        h=content-transfer-encoding:in-reply-to:from:content-language
+         :references:cc:to:subject:user-agent:mime-version:date:message-id
+         :x-gm-gg:x-gm-message-state:from:to:cc:subject:date:message-id
+         :reply-to;
+        bh=piM8JnUIOhLi8shtu6ukxdUvTydhEAzgNic6IccZkYo=;
+        b=dK5jnYsyHvlSiC/WP98vGD7D2QCnIh9JEmZV+WmeGd6FBnpoBNftjVaVQ3JZXHf01v
+         MsSTAmtP+uHq5z5hu6NQWZYHzfr4NzfY770qYaS1NWXHeUHF9WcsntdiQYazK8IdekZJ
+         JqxkMuC1tp0+y8bhgzRwJRpovmlIjhIZGaD/Wr2OGbMpkguLW8HHVRnUXiZYJMghqPv1
+         DGb2H6Hvo+YjdGPUO10iyD5Mc4voh999K+nGvLQveNU3PPOGiwNoOm78uxdbTUaCYKYY
+         ZjV7JRi/BGpXJsXzNse3u9wjbspUtxHm+qri0IIh2foHpavsD26fl26P+SEfOHFZby/x
+         45NA==
+X-Gm-Message-State: AOJu0YzzXCNariFcH+jU2j7cBlyoYkn3QLBRRp1uxVZZMv9V00/OUJC9
+	LfOfMG7ONqlONGtb3t27UEt1eu+0EyLTj3PHc6tEA2Yn4TmDL02pEdCY
+X-Gm-Gg: ASbGncvfGy9tHtoxyWTtTsseBJd6iIUHpy4HbIwJVuleHEzcVPylsKa1MHlLyOufhCi
+	Q4ilH61nVgh5x0Nq1LU/+m+SPkssl5GcPxsTiS07muFPlo1lNi8y/w9gAEiLQQzv2e/FnAMmLXE
+	3klK0X3dncuuC45nfxGavcGUvpIJGPeKV73s2eS0qhbJV4BVbeKR+NnJS/oFnT0YDZ5hzokljX8
+	QE/CBwv+NuBXoOPBpFzoexrzS3jfxNwFPT1kQhyi7ZbWPTM9O74RwX3Ej2Km3EEb1hyLz7tEI3t
+	TVi3NEwXym+v0EkClFTnxN23VjQqcrqvsCc5xSKwsCDcfQrdP2S/REQfgtjgXLHyBHnlxHS4DcS
+	IfbowezkASSJy91l7oMDq6quPlO1+sBXm6+y2fjo92N5EBUtXRZy3qL4oMs918tPs5yMESBZpcW
+	iYSA/8cgLMKNo39FNvlk4QBir2ohIL6VXVmJ+HIqfu6QsvzqBTmhF3vLREtBB6kWTu0cytykT2W
+	CSUlw==
+X-Google-Smtp-Source: AGHT+IGIgGX1538q5WBNNP+QuJkY0RBW1Fcx/39nEJrDgcuFQZ8tmtop0JChxOfFId0DOF8NsX0zWQ==
+X-Received: by 2002:a05:6402:3588:b0:640:c8b7:f2bd with SMTP id 4fb4d7f45d1cf-6415e828ebamr4471865a12.29.1762719797378;
+        Sun, 09 Nov 2025 12:23:17 -0800 (PST)
+Received: from [192.168.68.113] (193-80-180-232.hdsl.highway.telekom.at. [193.80.180.232])
+        by smtp.gmail.com with ESMTPSA id 4fb4d7f45d1cf-6411f86e9d7sm9671158a12.36.2025.11.09.12.23.16
         (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
-        Sun, 09 Nov 2025 01:37:37 -0800 (PST)
-Message-ID: <e5921db9-4e50-4417-8488-02722b418fad@apevzner.com>
-Date: Sun, 9 Nov 2025 12:37:36 +0300
+        Sun, 09 Nov 2025 12:23:16 -0800 (PST)
+Message-ID: <39a23d27-ed05-4fca-836a-18a7a043b473@gmail.com>
+Date: Sun, 9 Nov 2025 21:23:15 +0100
 Precedence: bulk
 X-Mailing-List: printing-architecture@lists.linux.dev
 List-Id: <printing-architecture.lists.linux.dev>
@@ -86,24 +69,32 @@ List-Subscribe: <mailto:printing-architecture+subscribe@lists.linux.dev>
 List-Unsubscribe: <mailto:printing-architecture+unsubscribe@lists.linux.dev>
 MIME-Version: 1.0
 User-Agent: Mozilla Thunderbird
-To: Open Printing <printing-architecture@lists.linux-foundation.org>
+Subject: Re: OpenPrinting/Open Printer booth at FOSDEM 2026, Jan 31 - Feb 1
+To: =?UTF-8?Q?L=C3=A9onard_Hartmann?= <leonardhartmann@opentools.studio>
+Cc: OpenPrinting <printing-architecture@lists.linux.dev>,
+ Akarshan Kapoor <akarshankap@gmail.com>,
+ Nicolas Schurando <nicolas@sitronlabs.com>,
+ Laurent Berthuel <laurent.berthuel@printerre.fr>
+References: <3428b088-78e3-41d8-a35a-e57e2e59e7bb@gmail.com>
+ <77c9a577-7159-4f29-9c2e-b16b7cdcee3a@gmail.com>
+ <CAJzULcp_y4iWq+mV8mUg0BnP+XFoY6v+qrdU0Shj-4hiO832pw@mail.gmail.com>
+ <66899ec5-bcba-40cc-91a6-4a492a8a8066@gmail.com>
+ <CAJzULcomDPWTJKtyWv4Bu-tpquh8qEjK7WAyp-4j4Nz7AwxF3g@mail.gmail.com>
 Content-Language: en-US
-From: Alexander Pevzner <pzz@apevzner.com>
-Subject: Minor mistake in the IPP IANA registrations
+From: Till Kamppeter <till.kamppeter@gmail.com>
+In-Reply-To: <CAJzULcomDPWTJKtyWv4Bu-tpquh8qEjK7WAyp-4j4Nz7AwxF3g@mail.gmail.com>
 Content-Type: text/plain; charset=UTF-8; format=flowed
-Content-Transfer-Encoding: 7bit
+Content-Transfer-Encoding: 8bit
 
-Hi,
+Thanks, Leonard.
 
-I've recently noticed a minor mistake in the IANA registrations for the 
-IPP protocol 
-(https://www.iana.org/assignments/ipp-registrations/ipp-registrations.xhtml).
+    Till
 
-The attribute "pclm-strip-height-preferred" is defined as 1setOf 
-integer, while "pclm-strip-height-supported" is defined as integer. In 
-reality, these definitions should be swapped.
-
--- 
-
-	Wishes, Alexander Pevzner (pzz@apevzner.com)
-
+On 11/9/25 18:50, Léonard Hartmann wrote:
+> Thanks Till for the abstract. It's well described.
+> 
+> Nothing to add for me personally.
+> 
+> Have a nice evening,
+> 
+> Léonard Hartmann - CTO
