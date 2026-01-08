@@ -1,33 +1,33 @@
 Received: from mail.msweet.org (mail.msweet.org [173.255.209.91])
 	(using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
 	(No client certificate requested)
-	by smtp.subspace.kernel.org (Postfix) with ESMTPS id 4A9B829ACFD
-	for <printing-architecture@lists.linux.dev>; Fri, 26 Dec 2025 17:27:08 +0000 (UTC)
+	by smtp.subspace.kernel.org (Postfix) with ESMTPS id 1DEF82DAFA2
+	for <printing-architecture@lists.linux.dev>; Thu,  8 Jan 2026 21:25:27 +0000 (UTC)
 Authentication-Results: smtp.subspace.kernel.org; arc=none smtp.client-ip=173.255.209.91
 ARC-Seal:i=1; a=rsa-sha256; d=subspace.kernel.org; s=arc-20240116;
-	t=1766770029; cv=none; b=FJFFSwQEBDRgWeRkj0yPtmP2QAP/SzRIHyeukgwAno7x/0TnmGjjiqeGhcLq+K0Ff5R6Z0YL0uR7FHVZsmVs/GMOlKKXPWkQoDxJb41s2/AjQQbTnBzL8dK3dfU6diEAug7Oey+OQ9YbTGQBmUofOfOfrZkquCs2Cf6QzG43dPs=
+	t=1767907529; cv=none; b=G2SemUyaUzvcFOQdDAtUxvQLbr+CYxU7pa4ehpkAnrv08jyO8jYMcxCbMv4upiX1CRKg5g+hhR6yWo8PDChC+MZQ97iUlbWzaVnwzDdzeWcmt55y7bli5NrcZgI1zcNGKdAWBT4nFGunY9I/RD5hQatidmBJ175iM2w3DR951LE=
 ARC-Message-Signature:i=1; a=rsa-sha256; d=subspace.kernel.org;
-	s=arc-20240116; t=1766770029; c=relaxed/simple;
-	bh=TPLjNA+6SOLa1uICPGMSY8NVdWTv8CmmlFhqBFonGg8=;
-	h=From:Content-Type:Mime-Version:Date:Subject:Message-Id:To; b=JaG55FzugfzQeAGJ6P8asiWC80e8P8HBZGfPPkAjnP67HFpH4xy+ODnQwV4HlGobCTCST9h63vnZdGk7VIj0BCCqAS25PFBt6Bxx9Cy8B6wx0tSYTfyq4go40t6oUo4BT0E43EK+phJoSeQ6EYLoz/tzlxXA1SkiA3z6lIKXq00=
-ARC-Authentication-Results:i=1; smtp.subspace.kernel.org; dmarc=pass (p=quarantine dis=none) header.from=msweet.org; spf=pass smtp.mailfrom=msweet.org; dkim=pass (1024-bit key) header.d=msweet.org header.i=@msweet.org header.b=TQx0voTY; arc=none smtp.client-ip=173.255.209.91
+	s=arc-20240116; t=1767907529; c=relaxed/simple;
+	bh=vu9kfuVY6CFufqnKYEHEd/2edBDM3+NmKbsvR0op0AA=;
+	h=From:Content-Type:Mime-Version:Date:Subject:Message-Id:To; b=fAy6R28cEGamyOES+kw5w4oL1mWlkSX7GiOp1fObb6gA7FZTXXB4jLH8GIt2uI0wtwHz1cNo7TNS5aVkd2c4rC6Qdr3BIWFE3OsxiHwYQEbRE9eCtslFMmSH8LYWVk+IvreTVV6jUO7ucgCN7vCDCMR8n1k7t3y/PLFItPVT8X4=
+ARC-Authentication-Results:i=1; smtp.subspace.kernel.org; dmarc=pass (p=quarantine dis=none) header.from=msweet.org; spf=pass smtp.mailfrom=msweet.org; dkim=pass (1024-bit key) header.d=msweet.org header.i=@msweet.org header.b=RBelFYG7; arc=none smtp.client-ip=173.255.209.91
 Authentication-Results: smtp.subspace.kernel.org; dmarc=pass (p=quarantine dis=none) header.from=msweet.org
 Authentication-Results: smtp.subspace.kernel.org; spf=pass smtp.mailfrom=msweet.org
 Authentication-Results: smtp.subspace.kernel.org;
-	dkim=pass (1024-bit key) header.d=msweet.org header.i=@msweet.org header.b="TQx0voTY"
+	dkim=pass (1024-bit key) header.d=msweet.org header.i=@msweet.org header.b="RBelFYG7"
 Received: from smtpclient.apple (cbl-66-186-76-47.vianet.ca [66.186.76.47])
 	(using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
 	(No client certificate requested)
-	by mail.msweet.org (Postfix) with ESMTPSA id 2497380F07;
-	Fri, 26 Dec 2025 17:27:07 +0000 (UTC)
-DKIM-Filter: OpenDKIM Filter v2.11.0 mail.msweet.org 2497380F07
+	by mail.msweet.org (Postfix) with ESMTPSA id C61EC803AC;
+	Thu,  8 Jan 2026 21:18:50 +0000 (UTC)
+DKIM-Filter: OpenDKIM Filter v2.11.0 mail.msweet.org C61EC803AC
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=msweet.org;
-	s=default; t=1766770027;
-	bh=TPLjNA+6SOLa1uICPGMSY8NVdWTv8CmmlFhqBFonGg8=;
+	s=default; t=1767907131;
+	bh=vu9kfuVY6CFufqnKYEHEd/2edBDM3+NmKbsvR0op0AA=;
 	h=From:Date:Subject:To:From;
-	b=TQx0voTYKBY42z3OxK+ffptHtX8xoMn8evEGbqU3CTW53Blrp4iDGH1CH7mt0jFI4
-	 pygk6nsTTxbTT3+vMsaX9pJ+xRioOhe9hkdbbgS7Me5VCDySs/L0diRKxr+H8CX4qK
-	 FQlVv1qHRyjljAkxWAd1lxLrN8dlroTfoefQSsYg=
+	b=RBelFYG7iB54+Yn8mqGvnpw5bX2a/JGrAaHRKhw76LuHPMZQ8rimDoDxaKHG/q3aX
+	 6W+8pZ2rc7aCduIKAuPaCNcw1ZRNtgO2k5G/NYVlrtnHU8Zi57QDMID/pl8WmgaDds
+	 IdIP/bh5VtgnDWZHrMN9c+VbWf0EkS+hOt9QCO7Y=
 From: Michael Sweet <msweet@msweet.org>
 Content-Type: text/plain;
 	charset=us-ascii
@@ -38,35 +38,47 @@ List-Id: <printing-architecture.lists.linux.dev>
 List-Subscribe: <mailto:printing-architecture+subscribe@lists.linux.dev>
 List-Unsubscribe: <mailto:printing-architecture+unsubscribe@lists.linux.dev>
 Mime-Version: 1.0 (Mac OS X Mail 16.0 \(3864.400.1\))
-Date: Fri, 26 Dec 2025 12:26:56 -0500
-Subject: PAPPL 1.4.10
-Message-Id: <7C42BCF3-080E-41E8-91A6-AFD32E1F4982@msweet.org>
+Date: Thu, 8 Jan 2026 16:18:39 -0500
+Subject: libcups v3.0.0
+Message-Id: <5E69B32D-10A0-44EF-A747-895FCB43CD2A@msweet.org>
 To: OpenPrinting <printing-architecture@lists.linux.dev>
 X-Mailer: Apple Mail (2.3864.400.1)
 
-PAPPL v1.4.10 is now available for download and is a bug fix release:
+libcups v3.0.0 is the first stable release of the CUPS v3 library and =
+tools which remove deprecated APIs, add new APIs, and normalize existing =
+APIs:
 
-    https://github.com/michaelrsweet/pappl/releases/tag/v1.4.10
+    https://github.com/OpenPrinting/libcups/releases/tag/v3.0.0
 
 Changes include:
 
-- Changed the preferred/first printer URI to use the "ipps" scheme.
-- Updated the USB serial number code to better support non-compliant =
-printers such as those from DYMO (Issue #396)
-- Now show the default and supported "output-bin" options (Issue #393)
-- Now suppress a duplicate 'auto' value for "media-source-supported" to =
-work around a bug in the legacy-printer-app (Issue #394)
-- Now log the TLS version and cipher suite, when available.
-- Now create spool files with read-only permissions.
-- Now support setting "media-ready" with the modify sub-command (Issue =
-#395)
-- Fixed attribute copying issue from multiple client threads (Issue =
-#390)
-- Fixed driver validation for raw printing (Issue #391)
-- Fixed PNG looping issue (Issue #398)
-- Fixed default IPv6 listener (Issue #401)
-- Fixed builds against the latest libcups (Issue #403)
-- Fixed a deadlock issue in the web interface (Issue #406)
+- Added `cupsLangIsRTL` API.
+- Added `cupsOAuthGetDeviceGrant`, `cupsOAuthGetJWKS`, and =
+`cupsOAuthGetUserId` APIs.
+- Added `httpGetCookieValue` and `httpGetSecurity` APIs.
+- Added an "install" sub-command to the `cups-x509` command.
+- Added a "--user-agent" option to the `ipptool` command.
+- Updated documentation (Issue #113)
+- Updated the `cupsOAuth` APIs to support sharing of some OAuth values =
+between the system (root) and per-user cache values.
+- Updated the `cupsJWTNew` API to accept an optional JSON claims object.
+- Updated the `httpSetCookie` API to support multiple "Set-Cookie:" =
+header values.
+- Updated `ippfind` to use the `cupsGetClock` API.
+- Updated `ippeveprinter` to include all ready and supported attributes =
+and values in the environment when processing a job.
+- Fixed `ipptransform` media handling to preserve input document =
+dimensions when "media" or "media-col" are not specified (Issue #102)
+- Fixed `cupsJSONExport` functions with empty arrays or objects.
+- Fixed `httpGetDateTime` for dates in the far future (Issue #124)
+- Fixed input checks for `cupsCreateCredentials` and =
+`cupsCreateCredentialsRequest` APIs (Issue #125)
+- Fixed return values of `ippDateToTime` when the timezone isn't GMT.
+- Fixed a potential timing issue with `cupsEnumDests`.
+- Fixed a bug in the Avahi implementation of `cupsDNSSDBrowseNew`.
+- Fixed a memory leak in `httpClose`.
+- Fixed some Coverity-detected issues.
+- Fixed support for device authorization grants.
 
 Enjoy!
 
