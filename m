@@ -1,174 +1,92 @@
-Received: from mout02.posteo.de (mout02.posteo.de [185.67.36.66])
+Received: from mail.msweet.org (mail.msweet.org [173.255.209.91])
 	(using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
 	(No client certificate requested)
-	by smtp.subspace.kernel.org (Postfix) with ESMTPS id 25E5C2E764D
-	for <printing-architecture@lists.linux.dev>; Mon,  9 Feb 2026 19:04:32 +0000 (UTC)
-Authentication-Results: smtp.subspace.kernel.org; arc=none smtp.client-ip=185.67.36.66
+	by smtp.subspace.kernel.org (Postfix) with ESMTPS id 6F7F830E828
+	for <printing-architecture@lists.linux.dev>; Mon,  9 Feb 2026 22:50:10 +0000 (UTC)
+Authentication-Results: smtp.subspace.kernel.org; arc=none smtp.client-ip=173.255.209.91
 ARC-Seal:i=1; a=rsa-sha256; d=subspace.kernel.org; s=arc-20240116;
-	t=1770663872; cv=none; b=J8csrfNv1nIaihqZsGGCkCea3i8cJDmAdVv+1RCmZ7HswPyKEA+u1BzfBkG0/akNmsMH+tjhcslJjcmPI3DYc5FlGAq4HBOS2gO9BH4IhlII1kT6GB8qEcKf47/MY53b7oRLqFklAmhGlB0FdKbHzcCygSRpwSGMrqfJGDbHej0=
+	t=1770677411; cv=none; b=thgIa96zE3iMl4lvkJe/50VeI9j1u4iIBz1p0v1gU5IG0OqHOwyy3249vhAZLitOjwLtMfFe+I/j93LHWkb104s91alaOtdIBp6pIpPOAUv2FrtJp0UC8vDZyOq7XgeOA0iv9V1fvBEbD1txV38+8pF+Cxv+um1VuDYYh1k5kfs=
 ARC-Message-Signature:i=1; a=rsa-sha256; d=subspace.kernel.org;
-	s=arc-20240116; t=1770663872; c=relaxed/simple;
-	bh=0LQ5AaFertJaGfzZtLEuw4KZa2+Z9e2Fh+94RAwn6NY=;
-	h=Message-ID:Subject:From:To:Content-Type:Date:MIME-Version; b=H8kpUp+tN5GN8PLMWbtM9ddw+dnvNM1Pztm/r0UeyEgBe/YqeSk5n6B8lWGTdieWt5lho+W4QsvDDf8kii4Ihi7vFaA7UGBIIh9Saj7Y5qVLemm1nf2ZG7vRcN+anTMGNfMjJTrlHyfEU8hedWieMdZ1fRO5SKKL7Y3GjWnQ2Lw=
-ARC-Authentication-Results:i=1; smtp.subspace.kernel.org; dmarc=pass (p=none dis=none) header.from=posteo.net; spf=pass smtp.mailfrom=posteo.net; dkim=pass (2048-bit key) header.d=posteo.net header.i=@posteo.net header.b=WhankAen; arc=none smtp.client-ip=185.67.36.66
-Authentication-Results: smtp.subspace.kernel.org; dmarc=pass (p=none dis=none) header.from=posteo.net
-Authentication-Results: smtp.subspace.kernel.org; spf=pass smtp.mailfrom=posteo.net
+	s=arc-20240116; t=1770677411; c=relaxed/simple;
+	bh=pEvEhgvmF+pBmBhQBrvAbcIQDqtZ56uZapI4WUocU9I=;
+	h=Content-Type:Mime-Version:Subject:From:In-Reply-To:Date:Cc:
+	 Message-Id:References:To; b=RVhwSuGOupHuLbIj+GF4wKj+gGS/X2dMxAU3duzP1bxU1XHn0N2JRWNtWVX635OdZrmjwP7cRL1mC+nhnWPdYNymmJ3AtR19bQg0jih6+HpwG9h/9b9tp6MOTlOHJpz1c6ykBnMftoOhxyysaxYeEN/bGGEsMfoXwwU60QfGXzU=
+ARC-Authentication-Results:i=1; smtp.subspace.kernel.org; dmarc=pass (p=quarantine dis=none) header.from=msweet.org; spf=pass smtp.mailfrom=msweet.org; dkim=pass (1024-bit key) header.d=msweet.org header.i=@msweet.org header.b=QRoW8nQt; arc=none smtp.client-ip=173.255.209.91
+Authentication-Results: smtp.subspace.kernel.org; dmarc=pass (p=quarantine dis=none) header.from=msweet.org
+Authentication-Results: smtp.subspace.kernel.org; spf=pass smtp.mailfrom=msweet.org
 Authentication-Results: smtp.subspace.kernel.org;
-	dkim=pass (2048-bit key) header.d=posteo.net header.i=@posteo.net header.b="WhankAen"
-Received: from submission (posteo.de [185.67.36.169]) 
-	by mout02.posteo.de (Postfix) with ESMTPS id E9258240103
-	for <printing-architecture@lists.linux.dev>; Mon,  9 Feb 2026 20:04:23 +0100 (CET)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=posteo.net; s=2017;
-	t=1770663863; bh=0LQ5AaFertJaGfzZtLEuw4KZa2+Z9e2Fh+94RAwn6NY=;
-	h=Message-ID:Subject:From:To:Content-Type:Date:MIME-Version:
-	 Autocrypt:OpenPGP:From;
-	b=WhankAen/E13RqL1WTMBesPFS/HsXDltC/dxhc0qZANvlfJGfDQyu++DZ4OnO8An4
-	 EOHuw1GhyeXTwIy+uPOZiAMxjUQxQYu1bByyuky1t4hqhx3Vt45xks2Rf3ZNrziz1U
-	 6AdchEeUNiJTTQtgupKFL7zkK1TIjA8Yll1mS+znr7zm3nvscb7lboWhsV0rnQFVXN
-	 XJ/RffGK6LgEdl02MRPEchqD32g5giYlxOoY+Zb6WrdLMc70p+eUb9HW0NfvfomGsU
-	 o9W4FWdWO/F45uln/tZadz4u3U0L0UG5oDY1XWRxkW1X/6XTZl8v4AezBjxyFk/Sq9
-	 /27scaJu/dcWw==
-Received: from customer (localhost [127.0.0.1])
-	by submission (posteo.de) with ESMTPSA id 4f8vJ72177z9rxD
-	for <printing-architecture@lists.linux.dev>; Mon,  9 Feb 2026 20:04:23 +0100 (CET)
-Message-ID: <1968ca68cbee9db439c5ce1133aec226b7289124.camel@posteo.net>
-Subject: Existing practice for embeddable IPP servers in printers
-From: John Scott <jscott@posteo.net>
-To: printing-architecture@lists.linux.dev
-Jabber-ID: me@johnscott.me
-Content-Type: multipart/signed; micalg="pgp-sha512";
-	protocol="application/pgp-signature"; boundary="=-hleA4gILbYT77Tz2gdvP"
-Date: Mon, 09 Feb 2026 19:04:23 +0000
+	dkim=pass (1024-bit key) header.d=msweet.org header.i=@msweet.org header.b="QRoW8nQt"
+Received: from smtpclient.apple (cbl-66-186-76-47.vianet.ca [66.186.76.47])
+	(using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
+	(No client certificate requested)
+	by mail.msweet.org (Postfix) with ESMTPSA id 13ADC82405;
+	Mon,  9 Feb 2026 22:41:41 +0000 (UTC)
+DKIM-Filter: OpenDKIM Filter v2.11.0 mail.msweet.org 13ADC82405
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=msweet.org;
+	s=default; t=1770676902;
+	bh=pEvEhgvmF+pBmBhQBrvAbcIQDqtZ56uZapI4WUocU9I=;
+	h=Subject:From:In-Reply-To:Date:Cc:References:To:From;
+	b=QRoW8nQt0QEq+XUPji9GoTD9dv/NVpvymoJB5s+MTxv9o5DFVQb+pDHRNi9Q+qygR
+	 hiOC8R+Tt8B8GfWK9WeUQZjrakdvyr/BxlajKthiNEn6gLD1JuYPLy7EAupFnx19Yy
+	 hjEvFfj2YoXrURVjV3A8HVyTgivnXjJWUtEX5Fxk=
+Content-Type: text/plain;
+	charset=utf-8
 Precedence: bulk
 X-Mailing-List: printing-architecture@lists.linux.dev
 List-Id: <printing-architecture.lists.linux.dev>
 List-Subscribe: <mailto:printing-architecture+subscribe@lists.linux.dev>
 List-Unsubscribe: <mailto:printing-architecture+unsubscribe@lists.linux.dev>
-MIME-Version: 1.0
-Autocrypt: addr=jscott@posteo.net;
-  keydata=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
-  2Bms0A==
-OpenPGP: url=https://posteo.de/keys/jscott@posteo.net.asc
-
-
---=-hleA4gILbYT77Tz2gdvP
-Content-Type: text/plain; charset="UTF-8"
+Mime-Version: 1.0 (Mac OS X Mail 16.0 \(3864.400.21\))
+Subject: Re: Existing practice for embeddable IPP servers in printers
+From: Michael Sweet <msweet@msweet.org>
+In-Reply-To: <1968ca68cbee9db439c5ce1133aec226b7289124.camel@posteo.net>
+Date: Mon, 9 Feb 2026 17:41:30 -0500
+Cc: printing-architecture@lists.linux.dev
 Content-Transfer-Encoding: quoted-printable
+Message-Id: <EE84324C-6635-4391-A03F-D8AED174946D@msweet.org>
+References: <1968ca68cbee9db439c5ce1133aec226b7289124.camel@posteo.net>
+To: John Scott <jscott@posteo.net>
+X-Mailer: Apple Mail (2.3864.400.21)
 
-Hi,
+John,
 
-It is my understanding that, for newly-developed devices, it is standard fo=
-r a printer to have an embedded microprocessor which runs an IPP daemon of =
-some sort, and then the printer is operated using IPP (over a network or US=
-B). It is also my understanding that the majority of those printers use pro=
-prietary software internally, and in the absence of evidence otherwise, thi=
-s probably includes the HTTP servers and/or IPP daemons they run on as well=
-. The primary focus of OpenPrinting, CUPS, and friends seems to be running =
-on a server or workstation to interface *with* a printer as a peripheral. I=
-nformation about crafting and maintaining the software *inside* of a printe=
-r seems much more scarce.
+> On Feb 9, 2026, at 2:04=E2=80=AFPM, John Scott <jscott@posteo.net> =
+wrote:
+> ...
+> What's the current state of the art for a printer's internal software =
+stack? Most OpenPrinting software doesn't appear to have been made with =
+small microcontrollers (which may not have virtual memory) or real-time =
+operating systems in mind, and I'm not sure it caters to this need =
+anyway.
 
-What's the current state of the art for a printer's internal software stack=
-? Most OpenPrinting software doesn't appear to have been made with small mi=
-crocontrollers (which may not have virtual memory) or real-time operating s=
-ystems in mind, and I'm not sure it caters to this need anyway.
-Many embedded operating systems that would make good candidates (Linux Foun=
-dation's Zephyr, Eclipse's ThreadX [1], or Apache's Mynewt or NuttX) are ca=
-pable of running HTTP servers without fuss. It's conceivable that an IPP se=
-rvice could work by hooking into it with CGI or something like it. Is that =
-something that's usually done with custom code, or do lightweight libraries=
- exist that help with processing jobs, parsing options, and the like? Is th=
-ere any toolkit or library that helps in making small device-side IPP daemo=
-ns, or is it something that isn't done with free software very often and th=
-ere isn't much precedent for it?
+There are a number of generic printing stacks that are used on "low end" =
+printers with different hardware/software requirements.  CUPS and PAPPL =
+are also used on printers using embedded Linux and various real-time =
+OS's with POSIX programming interfaces.  Otherwise you'll find that =
+"well-established" vendors have developed their own software stacks.
 
-Thanks,
-John
+> Many embedded operating systems that would make good candidates (Linux =
+Foundation's Zephyr, Eclipse's ThreadX [1], or Apache's Mynewt or NuttX) =
+are capable of running HTTP servers without fuss. It's conceivable that =
+an IPP service could work by hooking into it with CGI or something like =
+it.
 
-[1] ThreadX is supposedly used by HP on some printers: https://www.ghs.com/=
-customers/hp.html
+Generic HTTP servers often don't support all of the HTTP functionality =
+that IPP requires (HTTP Upgrade to TLS, chunking, transfer coding) but I =
+do know of several implementations that have taken this approach, =
+regardless of any limitations.
 
---=-hleA4gILbYT77Tz2gdvP
-Content-Type: application/pgp-signature; name="signature.asc"
-Content-Description: This is a digitally signed message part
+> Is that something that's usually done with custom code, or do =
+lightweight libraries exist that help with processing jobs, parsing =
+options, and the like? Is there any toolkit or library that helps in =
+making small device-side IPP daemons, or is it something that isn't done =
+with free software very often and there isn't much precedent for it?
 
------BEGIN PGP SIGNATURE-----
+For reference, CUPS' HTTP and IPP stack was developed on a 32-bit R2000A =
+MIPS processor running at 25MHz with 8MB of RAM.  PAPPL-based printers =
+exist that run on ARM-based MPUs/SoCs with half the =
+capabilities/resources of a Raspberry Pi Zero W.
 
-iPsEABYKAKMWIQSiPzylvTnZ6xisfzWz9N0oYfTNugUCaYovsXIYaHR0cHM6Ly9q
-b2huc2NvdHQubWUvLndlbGwta25vd24vbmkvc2hhLTI1Ni9zWUF3OTN6QUVrRkIy
-RDREM1hOemRSeHEyMFBjNnByZGdtbEVWeXo0QUZRP2N0PWFwcGxpY2F0aW9uJTJG
-cGdwLWtleXMSHGpzY290dEBwb3N0ZW8ubmV0AAoJELP03Shh9M26zXcBAIOgYtgI
-uxxzzYuxOa3hdGSgZ/pwDvkQZAYRsJQEuR1KAQC+wkwVvlw9TntHmowXO6X3nWMz
-dU1boc5RXBHX7xVKAQ==
-=ce3G
------END PGP SIGNATURE-----
+________________________
+Michael Sweet
 
---=-hleA4gILbYT77Tz2gdvP--
