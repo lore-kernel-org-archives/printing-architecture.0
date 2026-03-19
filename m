@@ -1,40 +1,44 @@
-Received: from mout.kundenserver.de (mout.kundenserver.de [217.72.192.75])
+Received: from filter.openoffice.nl (filter.openoffice.nl [144.76.204.185])
 	(using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
 	(No client certificate requested)
-	by smtp.subspace.kernel.org (Postfix) with ESMTPS id 8C70230E0ED
-	for <printing-architecture@lists.linux.dev>; Thu, 19 Mar 2026 14:12:53 +0000 (UTC)
-Authentication-Results: smtp.subspace.kernel.org; arc=none smtp.client-ip=217.72.192.75
+	by smtp.subspace.kernel.org (Postfix) with ESMTPS id AF7732E0401
+	for <printing-architecture@lists.linux.dev>; Thu, 19 Mar 2026 15:18:32 +0000 (UTC)
+Authentication-Results: smtp.subspace.kernel.org; arc=none smtp.client-ip=144.76.204.185
 ARC-Seal:i=1; a=rsa-sha256; d=subspace.kernel.org; s=arc-20240116;
-	t=1773929576; cv=none; b=NWEcHHtgg2gjq8kEJvfn3i07XuuGWIP18p0pDxVWGYH42P3X5Glq7mbqqjLFC8ClI+efQVG5OHMjaoZWxWdvz6cNkc8d/XG8qgsqbeL7gLs6AxncfQD4sRTwxkgsosqIR4cR+ugGwho1eDpZGRdK0h4pMg/OmAvC971f8mv9310=
+	t=1773933515; cv=none; b=b6/x0X+/OQmcHSCVikpGvYimnHXAispYNSlaFODZY/07DReqAKQUh+dtQQo1hNmLq4EdngWGJLzXqC/fsEBxS3/PpOQKlN+U7Npmd00nJdB/3pREgMKKVbszfCh9vMDkJAEMrbWJIuvuRIEig2WjvkSva82OyIbmv67uGtWRkXg=
 ARC-Message-Signature:i=1; a=rsa-sha256; d=subspace.kernel.org;
-	s=arc-20240116; t=1773929576; c=relaxed/simple;
-	bh=asVVy3Koko5iVIKkDzjztKR7137SvaCO6dqDbpotTOs=;
+	s=arc-20240116; t=1773933515; c=relaxed/simple;
+	bh=KXes3UAyppk3QxUj5lAxJj1hvLzyQ4XdoxzqvLCTmLE=;
 	h=Message-ID:Date:MIME-Version:Subject:To:References:From:
-	 In-Reply-To:Content-Type; b=hZm0/AzDeIXzngXAdkYXDR1mYD0K3D8pnDA8aLb+Foj1ypEhfovp3gyKJ4JLfH6Ip2lyk4e9WOYeK1mUrfl8uRBU1y3GHPnWHEKzclVCXGhj3gBDsrBtvS4NRlcRJK8PZUpG6mZNxAmBtzz/oWVI/2U6hmrc2HyOZBP561nLiJQ=
-ARC-Authentication-Results:i=1; smtp.subspace.kernel.org; dmarc=pass (p=reject dis=none) header.from=becherer.de; spf=pass smtp.mailfrom=becherer.de; dkim=pass (2048-bit key) header.d=becherer.de header.i=simon@becherer.de header.b=YA76YkDG; arc=none smtp.client-ip=217.72.192.75
-Authentication-Results: smtp.subspace.kernel.org; dmarc=pass (p=reject dis=none) header.from=becherer.de
-Authentication-Results: smtp.subspace.kernel.org; spf=pass smtp.mailfrom=becherer.de
+	 In-Reply-To:Content-Type; b=UqdgQe0dGRF+F2qdodhA7Ws8f6Mo/UoKm4NBI7Jks+1r5LDI14Fy/IqE80m4bJLmFumgYJmOlXwNpKVxA2lfMSj8GUI/ebBREV/Ik7n/d8xNRo9a/y51NuWO/GjtjdVmKi+4Y/EyUMrIstG1LYPxYeT3VvVMksWGaBgktct2FCA=
+ARC-Authentication-Results:i=1; smtp.subspace.kernel.org; dmarc=none (p=none dis=none) header.from=sessink.nl; spf=pass smtp.mailfrom=sessink.nl; dkim=pass (1024-bit key) header.d=sessink.nl header.i=@sessink.nl header.b=b/2f4DcR; arc=none smtp.client-ip=144.76.204.185
+Authentication-Results: smtp.subspace.kernel.org; dmarc=none (p=none dis=none) header.from=sessink.nl
+Authentication-Results: smtp.subspace.kernel.org; spf=pass smtp.mailfrom=sessink.nl
 Authentication-Results: smtp.subspace.kernel.org;
-	dkim=pass (2048-bit key) header.d=becherer.de header.i=simon@becherer.de header.b="YA76YkDG"
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=becherer.de;
-	s=s1-ionos; t=1773929561; x=1774534361; i=simon@becherer.de;
-	bh=asVVy3Koko5iVIKkDzjztKR7137SvaCO6dqDbpotTOs=;
-	h=X-UI-Sender-Class:Message-ID:Date:MIME-Version:Subject:To:
-	 References:From:In-Reply-To:Content-Type:cc:
-	 content-transfer-encoding:content-type:date:from:message-id:
-	 mime-version:reply-to:subject:to;
-	b=YA76YkDG4/JAl2E8Y+0CPcmIpxYIiF1fO0FB/R2dbh8a9PUchlyu5+6rZvzlXzWL
-	 SbfzW50VJuAMlCK9cwNkxwWRg/JdBGvPrnfE2bsP6Hejukpaw8SEc8/3YT8Qkejam
-	 jqoUhS6d+PkR8dDWh63pmwbZnarlu1Ba0MKdVV2i8/onUdyo6IQsyIdLnosqPqnSL
-	 oZVHMPWGqrOr82vtdSXYdSqKV/libk4CeaC0EpAR36nsKlj8hqQiCC96IAJR4Puvg
-	 d/SVTvE6EMv7LhSfWnqjVcmNGXcMMvkpQyoBVnA3OeArqQbgUfH0UXb10g+spWROZ
-	 gGaA9UFJMeBmdIRelA==
-X-UI-Sender-Class: 55c96926-9e95-11ee-ae09-1f7a4046a0f6
-Received: from client.hidden.invalid by mrelayeu.kundenserver.de (mreue106
- [212.227.15.146]) with ESMTPSA (Nemesis) id 1M1INQ-1w1aU72mxG-006gwL; Thu, 19
- Mar 2026 15:12:41 +0100
-Message-ID: <b24671c3-3957-49ea-82a3-d50a8c426d15@becherer.de>
-Date: Thu, 19 Mar 2026 15:12:41 +0100
+	dkim=pass (1024-bit key) header.d=sessink.nl header.i=@sessink.nl header.b="b/2f4DcR"
+Received: from localhost (localhost [127.0.0.1])
+	by filter.openoffice.nl (Postfix) with ESMTP id 86076100334
+	for <printing-architecture@lists.linux.dev>; Thu, 19 Mar 2026 16:18:30 +0100 (CET)
+X-Virus-Scanned: Debian amavisd-new at filter.openoffice.nl
+Received: from filter.openoffice.nl ([IPv6:::1])
+	by localhost (filter.openoffice.nl [IPv6:::1]) (amavisd-new, port 10024)
+	with ESMTP id if4k8AxCYQL3
+	for <printing-architecture@lists.linux.dev>;
+	Thu, 19 Mar 2026 16:18:30 +0100 (CET)
+Received: from blub.net (mail.blub.net [95.217.39.243])
+	by filter.openoffice.nl (Postfix) with ESMTP id 3173410032F
+	for <printing-architecture@lists.linux.dev>; Thu, 19 Mar 2026 16:18:30 +0100 (CET)
+Received: from [192.168.102.110] (84-86-8-46.fixed.kpn.net [84.86.8.46])
+	by blub.net (Postfix) with ESMTPSA id 06BFF300119
+	for <printing-architecture@lists.linux.dev>; Thu, 19 Mar 2026 16:18:29 +0100 (CET)
+DKIM-Signature: v=1; a=rsa-sha256; c=simple/simple; d=sessink.nl; s=201802;
+	t=1773933510; bh=KXes3UAyppk3QxUj5lAxJj1hvLzyQ4XdoxzqvLCTmLE=;
+	h=Date:Subject:To:References:From:In-Reply-To:From;
+	b=b/2f4DcR25QcURUZKyVfyQmVMCiDAcvcYXafSIBVtToqRd+pzHQ0JZ3mQZd3RXDyv
+	 0GdRuusYzAtTpcDikChGAo8Lu/vze/4ItoBs+OcQj45Dn+2JNaHXCHiE5en84c6c/F
+	 lf1npSsMQB7ZP6oKMix4F/nkgT+nhiUvFZKS1uSA=
+Message-ID: <1b125c13-785c-4d99-bd46-e2211add49d9@sessink.nl>
+Date: Thu, 19 Mar 2026 16:18:29 +0100
 Precedence: bulk
 X-Mailing-List: printing-architecture@lists.linux.dev
 List-Id: <printing-architecture.lists.linux.dev>
@@ -43,163 +47,45 @@ List-Unsubscribe: <mailto:printing-architecture+unsubscribe@lists.linux.dev>
 MIME-Version: 1.0
 User-Agent: Mozilla Thunderbird
 Subject: Re: driverless printing and custom paper size
-To: Valentijn Sessink <valentijn@sessink.nl>,
- printing-architecture@lists.linux.dev
+To: printing-architecture@lists.linux.dev
 References: <40ecc01e-69e6-4bb6-a98e-775cabd4091b@sessink.nl>
-From: Simon Becherer <simon@becherer.de>
-Autocrypt: addr=simon@becherer.de; keydata=
- xjMEXqQ+jhYJKwYBBAHaRw8BAQdAXtBMXHGwb3OCUsYktZYBSVFHmSCjXru+pTbwlA3WcQXN
- IlNpbW9uIEJlY2hlcmVyIDxzaW1vbkBiZWNoZXJlci5kZT7ClgQTFggAPgIbAwULCQgHAgYV
- CgkICwIEFgIDAQIeAQIXgBYhBKjW8inasnMyWz0lMjCnmz4w7QASBQJmJfKXBQkNJjmVAAoJ
- EDCnmz4w7QAS36oA/2zgGdESFn6YLLjAzDyJQEU7A+3uq/mQKKzUXJg5hbDmAP9/wiHSNXYl
- wq0KK6h8En2GDIFIDiYRdJ38K1WfIkVVA844BF6kPo4SCisGAQQBl1UBBQEBB0CfRSEhqfs7
- qS5vXl32l8rQv8Ry2wKyl7cTDkTYr6IAZAMBCAfCfgQYFggAJgIbDBYhBKjW8inasnMyWz0l
- MjCnmz4w7QASBQJmJfKXBQkNJjmVAAoJEDCnmz4w7QASdpoBAO0GQ90wsS2Kx8DC5GXrFmra
- E8CWnpXtidlsX8gWKn2YAQDMHw5IJcjGqPDi3BcgdJ/navIgf6Xs3v8ujKHo29qeBQ==
-Content-Language: en-US
-In-Reply-To: <40ecc01e-69e6-4bb6-a98e-775cabd4091b@sessink.nl>
-Content-Type: multipart/signed; micalg=pgp-sha256;
- protocol="application/pgp-signature";
- boundary="------------SSpSFsyM9LWtkIjcs19QcHvn"
-X-Provags-ID: V03:K1:ChLpcQL+zOYPrn5u8P5G0WLeuLDeEzVEyOMUPqfsbTpg6Ae/q0p
- VUojgDsBVoxJ+RwboAt6+i8ql0j8IOeldaJiMM0Cmh3UMBDzt1Fb2I/4nV2RGxZ+3KXHZpv
- 7VUejXAv8x9QjpEg0QvbXXIAxvylkfOZUEtCkrBXBUwFKKb9nQEbfqUQC48XMUTriG/iHj/
- 6G9N9le3u3eFnOjs9eLMw==
-X-Spam-Flag: NO
-UI-OutboundReport: notjunk:1;M01:P0:IaL6MuWXjac=;y9FzoxhTohNOPzruZZexIsHL3Rc
- IIrZJ/dc0eBxgaBwzXie+ak/psePTEc7NPKz1cJPX1yn2Al7rWfOyHQm/i0h8keTmkKiXTThn
- 5C4GOx0l6IgNFRybPiMHbma+SsUsjx8bppTpSjiXK1MKJ7JZ2RqyU6LaplDnXXgBXAFYQycYc
- QNlc4ShsI/ePh+JPn7TYPjrAGwtzN+oPwS1fI6DfzhUNFcVF+N5CgMcoAOFjuVheSpKeEkHJb
- Ivw3mg0V6VA6DClfD2jctpC5kiqpZRfAZ45GObB3dX07rtgi4MwB9+y/gGo6btlpQ7D7UJl5X
- haVCHZveHsirLlPU7kA5rQLSJztIAMJrsZvGtMCHhcOD7XoPkRSpr0g6CmCXUM5tVW4jf6W0T
- 3FPk/+/qxMzRl+wWm5GUSaJiqzQw2LInyUCTTcoYK2NzXu2S18E2Q4El/We1zGWEkPL/fxANL
- iVe6N+ZpDAxz+jmzNpPPcVOAoy+uXi5IQVLSjVFfuLcBB8nO1Ov7sNeCc6AEtwXQ3kr0Henq8
- vhNOBvR6wp9a5nMxJU7QqElkj5Irh7LtEDlWMDlA3BnO2Vh4qOjrlqNw63wOEjCpib1cJTPbd
- GCg4Wbc9CEetYb0smhrAw6Rcj+fiDeO1o+9E/9nA+B1vUM/jQ9azF1uq93TjZ5eeLkXQ6FxUe
- kqgSwflgf8mBjjZzhd94FfwQZWrHx9d6Q+FIrPVMKXCosd8DKCnYbF8u26UWWrk1ZghiINCBe
- RtURp7xBwNalgojkF3cNhmIuVKruFC0yuSCY38LHaellwou8y7fwrNkzE/hwbbaKk4ePBZ4UD
- y2+jyWBlXQvSjRXbiAZCYHchMCbWDY1P04F/PL3sSF7QQHm0JyBqmDgUl/KZ0zjin0YpKWaXv
- 3n6NOSvfreGM8SQ10RyixQOzgT5Hy+xwNgyWwS3n5KKcpbdSi5YCjO6wcMSamqW5xKCmp46pc
- TBeLr98U7qFS4C75sdn+T57WOadxm5xPB1HWFT3GJ262ag1uftkqBCyhEy1Jfsp5i2YVSkZti
- iswFCygjjses0Iw1Y+DjIL8Wr9LZKK9aeUwrNISMgPrMjeVVwLa3TZhxFKvrFZpCQNHPZXdV8
- RcxZQboabETnsIE9P6K4Sgv5CdbzMmMx4RyTFBS1jWmvMiCeqvQ3s7rktkJhiikEcfQDNu/w9
- AsfaedtHcztUGpqiFxgrPpVy1cX1Z8ni6la03kHWvlELO1PabOYp1h0riEo35m81qLtTGpaUQ
- Q/mFGydb7DEowJjpeBPwZu+DXHHgm2PuQAoGTIBrSZvNiE+TTtv3beBwckjAZxv4kc8k5sJtA
- M5125mqGRyxg9Qq9/1wumY56IB2yHEY/gqBOQ+Kzq9AIfPbENNkNQm1cno2ClNUrEB7Ww12Ya
- uHV1Fw8n618k+0vEAJql+yobjvp7gxw4EnhOUGnkenYQVG7oykLGH19RMkLVCEr/OXOfDT6Qp
- uaQcDQuOUZH5AIzhR0d+iaJxJbtc7ATLu7sYNHFrXRiKN1yAdetOLai3sgNp/J8zqckMGcVTO
- 2dYr3Qs9ScBT7UB83ns9mShuwFZXhYi/JtPPtHSK254zKDIw3HJHUPep9P8of/pczDGtqfz2x
- rzUHoUGevSCMkhzOZWpMccOtVkLzMJu4/+aEk7Ag9VYGCjwTtDwFKhuPTrEAhBycyplsZEmlR
- a0rwlVkBmZltiZ/RygC6+i2pU0WrgkLj2gmsjX56qwEkrD7RaBQHY6Xvu7kK0i4CcyQ6wGFLL
- A+qs66HJ2SPsmtsIkB++PxcQCVVUaIJqRxezzodFIhtp5A9OwN8ACeiOGkI3lp1Ysc4JfBkOH
- juQMeIXemO1ym0NuEiu12olccsxhbUQSmrWsUpQQd1CkEUsZt36g8QA5wa23lhy2O4csZYIuS
- rF8VxiXhCO6lKquAV2plWwJA00PwFzbqSo4Iyk=
-
-This is an OpenPGP/MIME signed message (RFC 4880 and 3156)
---------------SSpSFsyM9LWtkIjcs19QcHvn
-Content-Type: multipart/mixed; boundary="------------7eT4fV0jccCAWPvpkCj9C3g2";
- protected-headers="v1"
-From: Simon Becherer <simon@becherer.de>
-To: Valentijn Sessink <valentijn@sessink.nl>,
- printing-architecture@lists.linux.dev
-Message-ID: <b24671c3-3957-49ea-82a3-d50a8c426d15@becherer.de>
-Subject: Re: driverless printing and custom paper size
-References: <40ecc01e-69e6-4bb6-a98e-775cabd4091b@sessink.nl>
-In-Reply-To: <40ecc01e-69e6-4bb6-a98e-775cabd4091b@sessink.nl>
-
---------------7eT4fV0jccCAWPvpkCj9C3g2
+ <b24671c3-3957-49ea-82a3-d50a8c426d15@becherer.de>
+Content-Language: nl-NL
+From: Valentijn Sessink <valentijn@sessink.nl>
+In-Reply-To: <b24671c3-3957-49ea-82a3-d50a8c426d15@becherer.de>
 Content-Type: text/plain; charset=UTF-8; format=flowed
-Content-Transfer-Encoding: base64
+Content-Transfer-Encoding: 7bit
 
-DQoNCkFtIDE5LjAzLjI2IHVtIDE0OjI4IHNjaHJpZWIgVmFsZW50aWpuIFNlc3Npbms6DQo+
-IEhpIExpc3QsDQo+IA0KPiBJIGhhdmUgdGhlIGZlZWxpbmcgdGhhdCBJJ20gaW4gYSBjYXRj
-aC0yMiBzaXR1YXRpb24uIEkgaGF2ZSBhIGN1c3RvbSBwYXBlciBzaXplIChiZWluZyBhIGRl
-cml2YXRpdmUgb2YgdGhlIEV1cm9wZWFuIEE0IDIxMHgyOTdtbSwgdGhpcyBvbmUncyAyMjR4
-Mjk3KS4NCj4gDQo+IE5vdyB0aGUgcHJpbnRlciBtYW51ZmFjdHVyZXIgdGVsbHMgbWU6ICJk
-ZWZpbmUgdGhlIGN1c3RvbSB3aWR0aCBhbmQgbGVuZ3RoIG9mIHRoZSBwYXBlciBpbiB0aGUg
-cHJpbnQgZHJpdmVyIHNvZnR3YXJlIGFuZCBvbiB0aGUgcHJpbnRlciBjb250cm9sIHBhbmVs
-IiAtIGVzc2VudGlhbGx5IHRlbGxpbmcgbWU6IG5vLCB3ZSBkb24ndCBhZHZlcnRpc2UgdGhl
-IHBhcGVyIHNpemVzIA0KPiB5b3UgZW50ZXJlZCBvbiB0aGUgcHJpbnRlciwgeW91J2xsIGhh
-dmUgdG8gcmUtZGVmaW5lIHRoZW0gbG9jYWxseS4NCj4gDQo+IEhvd2V2ZXIsIHRoZSBwcmlu
-dGVyIGl0c2VsZiBpcyBwZXJmZWN0bHkgYWJsZSB0byBwcmludCBkcml2ZXJsZXNzIC0gb3Ig
-YXQgbGVhc3QsIHRoYXQgaXMgd2hhdCBJJ20gdGhpbmtpbmcgd2hlbiBhIHByaW50ZXIganVz
-dCBzZWVtcyB0byAiYWRkIGl0c2VsZiIgdGhyb3VnaCBjdXBzLWJyb3dzZWQuDQo+IA0KPiBU
-aGlzIGlzIGEgWGVyb3ggQWx0YWxpbmsgQzgxNTUNCj4gY3Vwcy5scG9wdGlvbnMgLXAgWGVy
-b3hfQWx0YUxpbmtfQzgxNTVfQTBfNkFfRkMgLWwNCj4gLi4uIHRlbGxzIG1lOg0KPiBQYWdl
-U2l6ZS9NZWRpYSBTaXplOiAxMngxOSAzLjV4NS41IDR4NiA1eDcgNng5IDh4MTAgQTMgKkE0
-IEE1IEE2IEFSQ0hBIEFSQ0hCIEI0IEI1IEI2IEVudjEwIEVudjkgRW52QzQgRW52QzUgRW52
-QzYgRW52REwgRW52TW9uYXJjaCBFbnZQZXJzb25hbCBFeGVjdXRpdmUgRmFuRm9sZEdlcm1h
-bkxlZ2FsIEZvbGlvU1AgSVNPQjQgSVNPQjUgSVNPQjYgTGVnYWwgTGV0dGVyIA0KPiBPZmlj
-aW8gU1JBMyBTdGF0ZW1lbnQgVGFibG9pZCBDdXN0b20uV0lEVEh4SEVJR0hUDQo+IElucHV0
-U2xvdC9NZWRpYSBTb3VyY2U6ICpBdXRvIFRyYXkxIFRyYXkyIFRyYXkzIFRyYXk0IFRyYXk1
-DQo+IE1lZGlhVHlwZS9NZWRpYSBUeXBlOiAqQXV0byBTdGF0aW9uZXJ5IFN0YXRpb25lcnlQ
-cmVwcmludGVkIFN0YXRpb25lcnlMZXR0ZXJoZWFkIFN0YXRpb25lcnlQcmVwdW5jaGVkIFN0
-YXRpb25lcnlMaWdodHdlaWdodCBUcmFuc3BhcmVuY3kgRW52ZWxvcGUgRW52ZWxvcGVQbGFp
-biBFbnZlbG9wZVdpbmRvdyBMYWJlbHMgQ2FyZHN0b2NrDQo+IGN1cHNQcmludFF1YWxpdHkv
-Y3Vwc1ByaW50UXVhbGl0eTogRHJhZnQgKk5vcm1hbCBIaWdoDQo+IENvbG9yTW9kZWwvT3V0
-cHV0IE1vZGU6ICpSR0IgR3JheQ0KPiBEdXBsZXgvRHVwbGV4OiAqTm9uZSBEdXBsZXhOb1R1
-bWJsZSBEdXBsZXhUdW1ibGUNCj4gT3V0cHV0QmluL091dHB1dEJpbjogKkF1dG8gTGVmdCBN
-aWRkbGUgVG9wDQo+IFN0YXBsZUxvY2F0aW9uL1N0YXBsZUxvY2F0aW9uOiAqTm9uZSBTYWRk
-bGVTdGl0Y2ggU2luZ2xlUG9ydHJhaXQgU2luZ2xlUmV2TGFuZHNjYXBlIFNpbmdsZUxhbmRz
-Y2FwZSBTaW5nbGVSZXZQb3J0cmFpdCBFZGdlU3RpdGNoUG9ydHJhaXQgRWRnZVN0aXRjaExh
-bmRzY2FwZSBFZGdlU3RpdGNoUmV2UG9ydHJhaXQgRWRnZVN0aXRjaFJldkxhbmRzY2FwZSBE
-dWFsUG9ydHJhaXQgDQo+IER1YWxMYW5kc2NhcGUgRHVhbFJldlBvcnRyYWl0IER1YWxSZXZM
-YW5kc2NhcGUgQmluZFBvcnRyYWl0IEJpbmRMYW5kc2NhcGUgQmluZFJldlBvcnRyYWl0IEJp
-bmRSZXZMYW5kc2NhcGUNCj4gRm9sZFR5cGUvRm9sZFR5cGU6ICpOb25lIEF1dG8gSGFsZg0K
-PiBQdW5jaE1lZGlhL1B1bmNoTWVkaWE6ICpOb25lIER1YWxQb3J0cmFpdCBEdWFsTGFuZHNj
-YXBlIER1YWxSZXZQb3J0cmFpdCBEdWFsUmV2TGFuZHNjYXBlIFF1YWRQb3J0cmFpdCBRdWFk
-TGFuZHNjYXBlIFF1YWRSZXZQb3J0cmFpdCBRdWFkUmV2TGFuZHNjYXBlDQo+IEJvb2tsZXQv
-Qm9va2xldDogKkZhbHNlIFRydWUNCj4gY3Vwc0ZpbmlzaGluZ1RlbXBsYXRlL2N1cHNGaW5p
-c2hpbmdUZW1wbGF0ZTogKm5vbmUgSm9nT2Zmc2V0DQo+IA0KPiBIb3dldmVyLCBJIG1hbnVh
-bGx5IHRvbGQgdGhlIHByaW50ZXIgdGhhdCBUcmF5IDEgbm93IGNvbnRhaW5zIDIyNCB4IDI5
-N21tIHBhcGVyLg0KPiANCj4gaHR0cHM6Ly93d3cuc3VwcG9ydC54ZXJveC5jb20vZW4tdXMv
-YXJ0aWNsZS9LQjAwMjg2MzkgaXMgdGhlIERlZmluZSBDdXN0b20gUGFwZXIgU2l6ZXMgcGFn
-ZSBmcm9tIFhlcm94LCB0aGF0IHRlbGxzIHRvIGVkaXQgdGhlIGxvY2FsIHByaW50ZXIgZHJp
-dmVyIHNldHRpbmdzLg0KPiANCj4gSSBob3BlIHNvbWVvbmUgaGFzIGFuIGlkZWEgaG93IHRv
-IHByb2NlZWQuIE5leHQgdGhpbmcgSSdsbCB0cnkgaXMgdG8gYWN0dWFsbHkgImFkZCIgdGhl
-IHByaW50ZXIgbWFudWFsbHksIHRoZW4gY2hhbmdlIHRoZSBsb2NhbCBwYXBlciBzaXplIGlu
-IHRoZSBQUEQgLSBidXQgdGhhdCBkb2Vzbid0IG1ha2UgbWUgYWxsIHRvbyBoYXBweSBiZWNh
-dXNlIGl0IG1lYW5zIGVkaXRpbmcgDQo+IGl0IG9uIGV2ZXJ5IGNvbXB1dGVyIHRoYXQgbmVl
-ZHMgdG8gcHJpbnQuLi4NCj4gDQo+IEJlc3QgcmVnYXJkcywNCj4gDQo+IFZhbGVudGlqbg0K
-DQpJIHdvdWxkIHN1Z2dlc3QgdG8gY2hhbmdlIHRoZSBwcGQgZmlsZSwgaGF2ZSBkb25lIHRo
-aXMgZm9yIHByaW50aW5nDQpwYXBlcnNpemUgYTcgKGkgZm91bmQgbm8gcHJpbnRlciB3aG8g
-aGFzIHRoaXMgc2l6ZSBjb25maWd1cmVkKQ0Kd29ya3MgZmluZSwgcHJpbnRlciBpbiBteSBj
-YXNlIHdhcyBhIGxleG1hcmsgbTExNDUgdGhlIHByaW50ZXIgc2hvd3MNCml0IGFzICJjdXN0
-b20gc2l6ZSIsIGFuZCBpbnNpZGUgdGhlIGNvbXB1dGVyIGl0cyBzaG93biBhcyBBNy4NCnRh
-a2UgeW91ciBwcmludGVyIHBwZC1maWxlIGRpcmVjdCBmcm9tIC9ldGMvY3Vwcy9wcGQsDQpt
-b2RpZnkgaXQgb24gYSBvdGhlciBwbGFjZSwgc3RvcCBjdXBzLXNlcnZpY2UsIGNvcHkgdGhl
-IG1vZGlmeWVkIGZpbGUNCmJhY2sgdG8gdGhlIC9ldGMvY3Vwcy9wcGQgZGlyZWN0b3J5LCBz
-dGFydCBjdXBzLXNlcnZpY2UsIGFuZCB5b3UNCmFyZSBkb25lLiByZXBlYXQgdGhlIHN0YXJ0
-L3N0b3AgYW5kIGNvcHkgd2l0aCBhbGwgY29tcHV0ZXJzIHlvdQ0KbmVlZC4NCg0KaSBoYXZl
-IHBvc3RlZCBoZXJlIGF0OiBwcmludGluZy1hcmNoaXRlY3R1cmVAbGlzdHMubGludXguZGV2
-DQphdCAxMy4wMS4yMDI2IGEgcHBkLiBsb29rIGF0IHRoZSBsaW5lcyBjb250YWluaW5nICJB
-NyIgYWxsDQp0aGVzZSBsaW5lcyB5b3UgaGF2ZSB0byB1c2UgaW5zaWRlIHlvdXIgcHBkIGF0
-IHRoZSBjb3JyZWN0IHBsYWNlLA0Kb2YgY291cnNlIG1vZGlmeWVkIGZvciB5b3VyIG5lZWRz
-LiB5b3UgY291bGQgYXNrZSBjaGF0IGdwdA0KYWJvdXQgdGhlIGNhbGN1bGF0aW9uIG9mIHRo
-ZSBudW1iZXJzIChpIGRvIG5vdCByZW1lbWJlciB0aGUgZmFjdG9yIHRvIHVzZQ0KZnJvbSBt
-aWxpbWV0ZXIgdG8gbnVtYmVycyBoZXJlLCBhbmQgdGhlIGxvZ2ljIGJlaGluZCB0aGUgaW1h
-Z2FibGUgYXJlYSBhbmQNCnRoZSBvdGhlciBudW1iZXJzLCBjaGF0Z3B0IHdhcyBoZWxwZnVs
-IChldmVuIGlmIGl0cyBub3QgaW4gbW9zdCBjYXNlcywgY3Vwcw0KZmlsZXMgc2VlbXMgdG8g
-dW5kZXJzdGFuZCkuKSBvaCBhbmQgYnkgdGhlIHdheSBpdCBjb3VsZCBiZSB0aGF0IGRlcGVu
-ZA0Kb24gdGhlIHBwZCB0aGVyZSBhcmUgcnVsZXMgZm9yIHdoYXQgb3B0aW9uIGlzIHVzYWJs
-ZSBmb3Igd2hhdCBwYXBlciBzaXplLA0KdGhlbiB5b3UgaGF2ZSB0byBtb2RpZnkgb3IgYWRk
-IHlvdXIgcGFwZXJzaXplIGZvciB0aGUgcnVsZXMgdG8uDQoNCnNpbW9ODQoNCi0tIA0Kd3d3
-LmJlY2hlcmVyLmRlDQo=
+Hi,
 
---------------7eT4fV0jccCAWPvpkCj9C3g2--
+Thanks for the fast replies.
 
---------------SSpSFsyM9LWtkIjcs19QcHvn
-Content-Type: application/pgp-signature; name="OpenPGP_signature.asc"
-Content-Description: OpenPGP digital signature
-Content-Disposition: attachment; filename="OpenPGP_signature.asc"
+On 3/19/26 15:12, Simon Becherer wrote:
+ > I would suggest to change the ppd file, have done this for printing
+ > papersize a7 (i found no printer who has this size configured)
 
------BEGIN PGP SIGNATURE-----
+I "sort of" managed to make it work, but the question remains: if I have 
+a "driverless" printer, I can't really change the PPD, right? I.e. I 
+have to *install* a printer and change the PPD?
 
-wr0EABYIAG8Fgmm8BFkJEDCnmz4w7QASRxQAAAAAAB4AIHNhbHRAbm90YXRpb25z
-LnNlcXVvaWEtcGdwLm9yZ96QCHkGR70n3uz/IGGLOZ3MEZDefyCoE4OUCjnSJxvr
-FiEEqNbyKdqyczJbPSUyMKebPjDtABIAAOsNAPwPj55SHxTfVVmhKW5MCz7d+a/q
-um1PaQeNdW73OwQ6EQEA2dodCWZV5MZOdycjv9RnedhZkN8EHEGkSaZ5D0gEwQ4=
-=/97O
------END PGP SIGNATURE-----
+What I had to do is: add printer; edit PPD (did that before and not 
+afraid of code, haha, that helps); in LibreOffice (Ubuntu 22.04 because 
+even more snap in 24.04 - changing to Debian but that's another topic) I 
+had to change the "printer settings" to make the custom paper format 
+that I added to the PPD actually choose a specific tray, then I seem to 
+have to change the paper size every time again - but this might be due 
+to the 7.3.7 Libreoffice version in Ubuntu 22.04, which is yet another 
+topic.
 
---------------SSpSFsyM9LWtkIjcs19QcHvn--
+*PageSize Blah/Blah: "<</PageSize[634.96062992 
+841.889763779528]>>setpagedevice"
+*PageRegion Blah/Blah: "<</PageSize[634.96062992 
+841.889763779528]>>setpagedevice"
+*ImageableArea Blah: "0.1 0.1 634.46062992 841.489763779528"
+*PaperDimension Blah: "634.96062992 841.889763779528"
+
+But: driverless plus this convoluted mess? No go?
+
+Best regards,
+
+Valentijn
