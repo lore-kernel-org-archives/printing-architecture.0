@@ -1,82 +1,40 @@
-Received: from smtp4.osuosl.org (smtp4.osuosl.org [140.211.166.137])
+Received: from mout.kundenserver.de (mout.kundenserver.de [217.72.192.75])
 	(using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
 	(No client certificate requested)
-	by smtp.subspace.kernel.org (Postfix) with ESMTPS id 997EA34B18F
-	for <printing-architecture@lists.linux-foundation.org>; Tue, 10 Mar 2026 19:04:50 +0000 (UTC)
-Authentication-Results: smtp.subspace.kernel.org; arc=none smtp.client-ip=140.211.166.137
+	by smtp.subspace.kernel.org (Postfix) with ESMTPS id 8C70230E0ED
+	for <printing-architecture@lists.linux.dev>; Thu, 19 Mar 2026 14:12:53 +0000 (UTC)
+Authentication-Results: smtp.subspace.kernel.org; arc=none smtp.client-ip=217.72.192.75
 ARC-Seal:i=1; a=rsa-sha256; d=subspace.kernel.org; s=arc-20240116;
-	t=1773169492; cv=none; b=Pq0+4IJzOSd52tyQi4L7VDpCgjeoFffJARtLVzoYTlLhn8zMRNn/eYg9RaYAO8KUJfSIaZ3sBMBvSX2yrsOZ8ge2bHfc/ZSs6T0exvfOwXlLKEbIxkpA32H/MNFeUZUcxuYe1e6cqQ2li/vhK8DQ/uk+Px199Y1Pm1YqAny9e0g=
+	t=1773929576; cv=none; b=NWEcHHtgg2gjq8kEJvfn3i07XuuGWIP18p0pDxVWGYH42P3X5Glq7mbqqjLFC8ClI+efQVG5OHMjaoZWxWdvz6cNkc8d/XG8qgsqbeL7gLs6AxncfQD4sRTwxkgsosqIR4cR+ugGwho1eDpZGRdK0h4pMg/OmAvC971f8mv9310=
 ARC-Message-Signature:i=1; a=rsa-sha256; d=subspace.kernel.org;
-	s=arc-20240116; t=1773169492; c=relaxed/simple;
-	bh=ljqOtYX1AlqRsvU/lIjXwEtNSaxhImCjLGLOUcZtNYI=;
-	h=Message-ID:Date:MIME-Version:To:From:Subject:Content-Type; b=Z/MnZX20CWgYBqEpFX+joU3jh07nGR1hmSsNYTl5Anw1MISa+GNr8aUZxgRxyvIRHg5sM0HrRY7ZAZF6ThkqNj2xWeAqB/f1ulLeNkUv6CdhY26AmAXvjLk1wV0CC8pN4BPW8D2XbtlRi9+iEpcAgQtWTaAq736qBr0p/6ZOJVY=
-ARC-Authentication-Results:i=1; smtp.subspace.kernel.org; dkim=pass (2048-bit key) header.d=apevzner.com header.i=@apevzner.com header.b=Ec6N8BdE; arc=none smtp.client-ip=140.211.166.137
+	s=arc-20240116; t=1773929576; c=relaxed/simple;
+	bh=asVVy3Koko5iVIKkDzjztKR7137SvaCO6dqDbpotTOs=;
+	h=Message-ID:Date:MIME-Version:Subject:To:References:From:
+	 In-Reply-To:Content-Type; b=hZm0/AzDeIXzngXAdkYXDR1mYD0K3D8pnDA8aLb+Foj1ypEhfovp3gyKJ4JLfH6Ip2lyk4e9WOYeK1mUrfl8uRBU1y3GHPnWHEKzclVCXGhj3gBDsrBtvS4NRlcRJK8PZUpG6mZNxAmBtzz/oWVI/2U6hmrc2HyOZBP561nLiJQ=
+ARC-Authentication-Results:i=1; smtp.subspace.kernel.org; dmarc=pass (p=reject dis=none) header.from=becherer.de; spf=pass smtp.mailfrom=becherer.de; dkim=pass (2048-bit key) header.d=becherer.de header.i=simon@becherer.de header.b=YA76YkDG; arc=none smtp.client-ip=217.72.192.75
+Authentication-Results: smtp.subspace.kernel.org; dmarc=pass (p=reject dis=none) header.from=becherer.de
+Authentication-Results: smtp.subspace.kernel.org; spf=pass smtp.mailfrom=becherer.de
 Authentication-Results: smtp.subspace.kernel.org;
-	dkim=pass (2048-bit key) header.d=apevzner.com header.i=@apevzner.com header.b="Ec6N8BdE"
-Received: from localhost (localhost [127.0.0.1])
-	by smtp4.osuosl.org (Postfix) with ESMTP id C159F40C00
-	for <printing-architecture@lists.linux-foundation.org>; Tue, 10 Mar 2026 19:04:49 +0000 (UTC)
-X-Virus-Scanned: amavis at osuosl.org
-X-Spam-Flag: NO
-X-Spam-Score: -2.1
-X-Spam-Level:
-Received: from smtp4.osuosl.org ([127.0.0.1])
- by localhost (smtp4.osuosl.org [127.0.0.1]) (amavis, port 10024) with ESMTP
- id T_rF2hXYPY5d for <printing-architecture@lists.linux-foundation.org>;
- Tue, 10 Mar 2026 19:04:48 +0000 (UTC)
-Received-SPF: Pass (mailfrom) identity=mailfrom; client-ip=2a00:1450:4864:20::129; helo=mail-lf1-x129.google.com; envelope-from=pzz@apevzner.com; receiver=<UNKNOWN> 
-DMARC-Filter: OpenDMARC Filter v1.4.2 smtp4.osuosl.org 12BEE40B0D
-Authentication-Results: smtp4.osuosl.org; dmarc=none (p=none dis=none) header.from=apevzner.com
-DKIM-Filter: OpenDKIM Filter v2.11.0 smtp4.osuosl.org 12BEE40B0D
-Authentication-Results: smtp4.osuosl.org;
-	dkim=pass (2048-bit key, unprotected) header.d=apevzner.com header.i=@apevzner.com header.a=rsa-sha256 header.s=google header.b=Ec6N8BdE
-Received: from mail-lf1-x129.google.com (mail-lf1-x129.google.com [IPv6:2a00:1450:4864:20::129])
-	by smtp4.osuosl.org (Postfix) with ESMTPS id 12BEE40B0D
-	for <printing-architecture@lists.linux-foundation.org>; Tue, 10 Mar 2026 19:04:46 +0000 (UTC)
-Received: by mail-lf1-x129.google.com with SMTP id 2adb3069b0e04-5a12fbbd9d2so6295349e87.3
-        for <printing-architecture@lists.linux-foundation.org>; Tue, 10 Mar 2026 12:04:46 -0700 (PDT)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
-        d=apevzner.com; s=google; t=1773169484; x=1773774284; darn=lists.linux-foundation.org;
-        h=content-transfer-encoding:subject:from:to:content-language
-         :user-agent:mime-version:date:message-id:from:to:cc:subject:date
-         :message-id:reply-to;
-        bh=rwemPcxMzkZK3t3HXAvQHRLEvLMkwOLU/sAJGHvMtwI=;
-        b=Ec6N8BdEaWFoHPppfH6B7vpWf5ZQUpO0SMkblwOfG0s2YBdV7hIvJyl0mCGgbc0g8K
-         isTeUA0sdQqb1vNxkMBnbGRpkhDs+pIuo1KCFhSgc2n1EpMRDyKPx2VsVYAyuh8uYvGi
-         s2NhiB2bykioWBt+tco4CkmO97ylWP4yd12PNGaRd/RJdL2de1JzJq7BnRsZxobSjLqs
-         h4Ef1/2nYyS9gfyBSWzls+lsYpB0sVzvbr+n0KkWlm3yvYrqDaF9cQv/FDE9A/cjSyaH
-         ewFYaIDCPvCIKj7jIFg9s6rGVk0tVBUTVWBOxiFEOFFwrVTEb7ehplYCHT9IPFIbz1bH
-         i0rQ==
-X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
-        d=1e100.net; s=20230601; t=1773169484; x=1773774284;
-        h=content-transfer-encoding:subject:from:to:content-language
-         :user-agent:mime-version:date:message-id:x-gm-gg:x-gm-message-state
-         :from:to:cc:subject:date:message-id:reply-to;
-        bh=rwemPcxMzkZK3t3HXAvQHRLEvLMkwOLU/sAJGHvMtwI=;
-        b=V3ozMpDbyIZgStpcqKkj8c3SsIup3ZwCzo9Ym8bl5qlmStlaDk5QfD/cBu/QUqOKqh
-         7uSPl8q1V9FSGtKDGUMb8U+kl4UxCdZu8g0ysJjNaElmJq3tTqccL8efPvhmoUNgvfDw
-         VDxpx45r/sSIMuOj6xuAdyWnQ9DHEcBqbj/VZjbcbpzaToLNn4OSFf9BJYO3tqo7+nPR
-         a8Q2faTM95xaNwyTKtnhUN3h3pynz+AM+QAgVcjOtFNqAuXW49ZxHGtp8+Fvlafx/HFw
-         G5eUNhqP0B8t26QMvg3h9Rgsdha+iZ+yEcfCbRKSknE1Glx/9rMcFuBa4OMDELuh2gch
-         1P6Q==
-X-Forwarded-Encrypted: i=1; AJvYcCWBNXN6S6J94mFARvNu+i+eRuSOHY2UQ7gpGHdzkzjpRBWQW0IVb6yvNdNsDiPb2ntB0ZCPVbsSMjYlYMSootkx5wVniuM=@lists.linux-foundation.org
-X-Gm-Message-State: AOJu0Yxwb6AyN6ZgOCm4EAH/FkYcJPpchM42Q7pmCtpS6t+LAS6BodAF
-	ugYwvaT0g+83AWXf64Gr3pvOM5JT8k1BensSb6sgffJZ/BlXd1egC/b6DX4qeOm0IIg=
-X-Gm-Gg: ATEYQzx4O9fQufAS/8haYx666Ni5yrKvgDFQLhYoAQEbuqX33HtiUmfKBOjPMg2t1rk
-	FWBFIJPJbvPWG7SMphwBKQ+Flu8cv4vgaUN0PD3KMwAEtSMq4H0lnYuQFdI0HhaRlmh8GhktiSp
-	4tvle6+b1ssZNpKiXgnAkft4oAKNgF/uHsk6IJ5UIsb+ox+WHqCtnsa0swxCZGnkGklCTxzBY1g
-	o6+3bTOg0mbXcz2u4kgJYLV1pxO0fH4gEG4fEeuLVnRFwfRzBTHQPu+yaV2wiYZuyRJmNgorhdB
-	Z09LDF81QhdX4I1rrOTWJZXuQ4g85kEohVgqDYpXEHcjGOxh9IsN8OlV1Vy8RCcnGzIy0xIf34t
-	c/pR4giHhqTsbsyQpQS6r6xePM0uNrXuIFKyUBeZ3XmdUW0+Wytgz84puz1n5LZ/3SwkZkMTSY0
-	mk5X8z6aEdnBK47PEqdg==
-X-Received: by 2002:ac2:4e09:0:b0:59e:6296:80ef with SMTP id 2adb3069b0e04-5a13c968ba0mr5835297e87.0.1773169484016;
-        Tue, 10 Mar 2026 12:04:44 -0700 (PDT)
-Received: from [192.168.0.6] ([46.188.9.40])
-        by smtp.googlemail.com with ESMTPSA id 2adb3069b0e04-5a1549a822bsm27013e87.85.2026.03.10.12.04.42
-        (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
-        Tue, 10 Mar 2026 12:04:42 -0700 (PDT)
-Message-ID: <d1568fe0-1c18-4ead-9532-2284e6f1d91b@apevzner.com>
-Date: Tue, 10 Mar 2026 22:04:41 +0300
+	dkim=pass (2048-bit key) header.d=becherer.de header.i=simon@becherer.de header.b="YA76YkDG"
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=becherer.de;
+	s=s1-ionos; t=1773929561; x=1774534361; i=simon@becherer.de;
+	bh=asVVy3Koko5iVIKkDzjztKR7137SvaCO6dqDbpotTOs=;
+	h=X-UI-Sender-Class:Message-ID:Date:MIME-Version:Subject:To:
+	 References:From:In-Reply-To:Content-Type:cc:
+	 content-transfer-encoding:content-type:date:from:message-id:
+	 mime-version:reply-to:subject:to;
+	b=YA76YkDG4/JAl2E8Y+0CPcmIpxYIiF1fO0FB/R2dbh8a9PUchlyu5+6rZvzlXzWL
+	 SbfzW50VJuAMlCK9cwNkxwWRg/JdBGvPrnfE2bsP6Hejukpaw8SEc8/3YT8Qkejam
+	 jqoUhS6d+PkR8dDWh63pmwbZnarlu1Ba0MKdVV2i8/onUdyo6IQsyIdLnosqPqnSL
+	 oZVHMPWGqrOr82vtdSXYdSqKV/libk4CeaC0EpAR36nsKlj8hqQiCC96IAJR4Puvg
+	 d/SVTvE6EMv7LhSfWnqjVcmNGXcMMvkpQyoBVnA3OeArqQbgUfH0UXb10g+spWROZ
+	 gGaA9UFJMeBmdIRelA==
+X-UI-Sender-Class: 55c96926-9e95-11ee-ae09-1f7a4046a0f6
+Received: from client.hidden.invalid by mrelayeu.kundenserver.de (mreue106
+ [212.227.15.146]) with ESMTPSA (Nemesis) id 1M1INQ-1w1aU72mxG-006gwL; Thu, 19
+ Mar 2026 15:12:41 +0100
+Message-ID: <b24671c3-3957-49ea-82a3-d50a8c426d15@becherer.de>
+Date: Thu, 19 Mar 2026 15:12:41 +0100
 Precedence: bulk
 X-Mailing-List: printing-architecture@lists.linux.dev
 List-Id: <printing-architecture.lists.linux.dev>
@@ -84,25 +42,164 @@ List-Subscribe: <mailto:printing-architecture+subscribe@lists.linux.dev>
 List-Unsubscribe: <mailto:printing-architecture+unsubscribe@lists.linux.dev>
 MIME-Version: 1.0
 User-Agent: Mozilla Thunderbird
+Subject: Re: driverless printing and custom paper size
+To: Valentijn Sessink <valentijn@sessink.nl>,
+ printing-architecture@lists.linux.dev
+References: <40ecc01e-69e6-4bb6-a98e-775cabd4091b@sessink.nl>
+From: Simon Becherer <simon@becherer.de>
+Autocrypt: addr=simon@becherer.de; keydata=
+ xjMEXqQ+jhYJKwYBBAHaRw8BAQdAXtBMXHGwb3OCUsYktZYBSVFHmSCjXru+pTbwlA3WcQXN
+ IlNpbW9uIEJlY2hlcmVyIDxzaW1vbkBiZWNoZXJlci5kZT7ClgQTFggAPgIbAwULCQgHAgYV
+ CgkICwIEFgIDAQIeAQIXgBYhBKjW8inasnMyWz0lMjCnmz4w7QASBQJmJfKXBQkNJjmVAAoJ
+ EDCnmz4w7QAS36oA/2zgGdESFn6YLLjAzDyJQEU7A+3uq/mQKKzUXJg5hbDmAP9/wiHSNXYl
+ wq0KK6h8En2GDIFIDiYRdJ38K1WfIkVVA844BF6kPo4SCisGAQQBl1UBBQEBB0CfRSEhqfs7
+ qS5vXl32l8rQv8Ry2wKyl7cTDkTYr6IAZAMBCAfCfgQYFggAJgIbDBYhBKjW8inasnMyWz0l
+ MjCnmz4w7QASBQJmJfKXBQkNJjmVAAoJEDCnmz4w7QASdpoBAO0GQ90wsS2Kx8DC5GXrFmra
+ E8CWnpXtidlsX8gWKn2YAQDMHw5IJcjGqPDi3BcgdJ/navIgf6Xs3v8ujKHo29qeBQ==
 Content-Language: en-US
-To: "sane-devel@alioth-lists.debian.net"
- <sane-devel@alioth-lists.debian.net>,
- Open Printing <printing-architecture@lists.linux-foundation.org>
-From: Alexander Pevzner <pzz@apevzner.com>
-Subject: sane-airscan 0.99.37
+In-Reply-To: <40ecc01e-69e6-4bb6-a98e-775cabd4091b@sessink.nl>
+Content-Type: multipart/signed; micalg=pgp-sha256;
+ protocol="application/pgp-signature";
+ boundary="------------SSpSFsyM9LWtkIjcs19QcHvn"
+X-Provags-ID: V03:K1:ChLpcQL+zOYPrn5u8P5G0WLeuLDeEzVEyOMUPqfsbTpg6Ae/q0p
+ VUojgDsBVoxJ+RwboAt6+i8ql0j8IOeldaJiMM0Cmh3UMBDzt1Fb2I/4nV2RGxZ+3KXHZpv
+ 7VUejXAv8x9QjpEg0QvbXXIAxvylkfOZUEtCkrBXBUwFKKb9nQEbfqUQC48XMUTriG/iHj/
+ 6G9N9le3u3eFnOjs9eLMw==
+X-Spam-Flag: NO
+UI-OutboundReport: notjunk:1;M01:P0:IaL6MuWXjac=;y9FzoxhTohNOPzruZZexIsHL3Rc
+ IIrZJ/dc0eBxgaBwzXie+ak/psePTEc7NPKz1cJPX1yn2Al7rWfOyHQm/i0h8keTmkKiXTThn
+ 5C4GOx0l6IgNFRybPiMHbma+SsUsjx8bppTpSjiXK1MKJ7JZ2RqyU6LaplDnXXgBXAFYQycYc
+ QNlc4ShsI/ePh+JPn7TYPjrAGwtzN+oPwS1fI6DfzhUNFcVF+N5CgMcoAOFjuVheSpKeEkHJb
+ Ivw3mg0V6VA6DClfD2jctpC5kiqpZRfAZ45GObB3dX07rtgi4MwB9+y/gGo6btlpQ7D7UJl5X
+ haVCHZveHsirLlPU7kA5rQLSJztIAMJrsZvGtMCHhcOD7XoPkRSpr0g6CmCXUM5tVW4jf6W0T
+ 3FPk/+/qxMzRl+wWm5GUSaJiqzQw2LInyUCTTcoYK2NzXu2S18E2Q4El/We1zGWEkPL/fxANL
+ iVe6N+ZpDAxz+jmzNpPPcVOAoy+uXi5IQVLSjVFfuLcBB8nO1Ov7sNeCc6AEtwXQ3kr0Henq8
+ vhNOBvR6wp9a5nMxJU7QqElkj5Irh7LtEDlWMDlA3BnO2Vh4qOjrlqNw63wOEjCpib1cJTPbd
+ GCg4Wbc9CEetYb0smhrAw6Rcj+fiDeO1o+9E/9nA+B1vUM/jQ9azF1uq93TjZ5eeLkXQ6FxUe
+ kqgSwflgf8mBjjZzhd94FfwQZWrHx9d6Q+FIrPVMKXCosd8DKCnYbF8u26UWWrk1ZghiINCBe
+ RtURp7xBwNalgojkF3cNhmIuVKruFC0yuSCY38LHaellwou8y7fwrNkzE/hwbbaKk4ePBZ4UD
+ y2+jyWBlXQvSjRXbiAZCYHchMCbWDY1P04F/PL3sSF7QQHm0JyBqmDgUl/KZ0zjin0YpKWaXv
+ 3n6NOSvfreGM8SQ10RyixQOzgT5Hy+xwNgyWwS3n5KKcpbdSi5YCjO6wcMSamqW5xKCmp46pc
+ TBeLr98U7qFS4C75sdn+T57WOadxm5xPB1HWFT3GJ262ag1uftkqBCyhEy1Jfsp5i2YVSkZti
+ iswFCygjjses0Iw1Y+DjIL8Wr9LZKK9aeUwrNISMgPrMjeVVwLa3TZhxFKvrFZpCQNHPZXdV8
+ RcxZQboabETnsIE9P6K4Sgv5CdbzMmMx4RyTFBS1jWmvMiCeqvQ3s7rktkJhiikEcfQDNu/w9
+ AsfaedtHcztUGpqiFxgrPpVy1cX1Z8ni6la03kHWvlELO1PabOYp1h0riEo35m81qLtTGpaUQ
+ Q/mFGydb7DEowJjpeBPwZu+DXHHgm2PuQAoGTIBrSZvNiE+TTtv3beBwckjAZxv4kc8k5sJtA
+ M5125mqGRyxg9Qq9/1wumY56IB2yHEY/gqBOQ+Kzq9AIfPbENNkNQm1cno2ClNUrEB7Ww12Ya
+ uHV1Fw8n618k+0vEAJql+yobjvp7gxw4EnhOUGnkenYQVG7oykLGH19RMkLVCEr/OXOfDT6Qp
+ uaQcDQuOUZH5AIzhR0d+iaJxJbtc7ATLu7sYNHFrXRiKN1yAdetOLai3sgNp/J8zqckMGcVTO
+ 2dYr3Qs9ScBT7UB83ns9mShuwFZXhYi/JtPPtHSK254zKDIw3HJHUPep9P8of/pczDGtqfz2x
+ rzUHoUGevSCMkhzOZWpMccOtVkLzMJu4/+aEk7Ag9VYGCjwTtDwFKhuPTrEAhBycyplsZEmlR
+ a0rwlVkBmZltiZ/RygC6+i2pU0WrgkLj2gmsjX56qwEkrD7RaBQHY6Xvu7kK0i4CcyQ6wGFLL
+ A+qs66HJ2SPsmtsIkB++PxcQCVVUaIJqRxezzodFIhtp5A9OwN8ACeiOGkI3lp1Ysc4JfBkOH
+ juQMeIXemO1ym0NuEiu12olccsxhbUQSmrWsUpQQd1CkEUsZt36g8QA5wa23lhy2O4csZYIuS
+ rF8VxiXhCO6lKquAV2plWwJA00PwFzbqSo4Iyk=
+
+This is an OpenPGP/MIME signed message (RFC 4880 and 3156)
+--------------SSpSFsyM9LWtkIjcs19QcHvn
+Content-Type: multipart/mixed; boundary="------------7eT4fV0jccCAWPvpkCj9C3g2";
+ protected-headers="v1"
+From: Simon Becherer <simon@becherer.de>
+To: Valentijn Sessink <valentijn@sessink.nl>,
+ printing-architecture@lists.linux.dev
+Message-ID: <b24671c3-3957-49ea-82a3-d50a8c426d15@becherer.de>
+Subject: Re: driverless printing and custom paper size
+References: <40ecc01e-69e6-4bb6-a98e-775cabd4091b@sessink.nl>
+In-Reply-To: <40ecc01e-69e6-4bb6-a98e-775cabd4091b@sessink.nl>
+
+--------------7eT4fV0jccCAWPvpkCj9C3g2
 Content-Type: text/plain; charset=UTF-8; format=flowed
-Content-Transfer-Encoding: 7bit
+Content-Transfer-Encoding: base64
 
-Hi,
+DQoNCkFtIDE5LjAzLjI2IHVtIDE0OjI4IHNjaHJpZWIgVmFsZW50aWpuIFNlc3Npbms6DQo+
+IEhpIExpc3QsDQo+IA0KPiBJIGhhdmUgdGhlIGZlZWxpbmcgdGhhdCBJJ20gaW4gYSBjYXRj
+aC0yMiBzaXR1YXRpb24uIEkgaGF2ZSBhIGN1c3RvbSBwYXBlciBzaXplIChiZWluZyBhIGRl
+cml2YXRpdmUgb2YgdGhlIEV1cm9wZWFuIEE0IDIxMHgyOTdtbSwgdGhpcyBvbmUncyAyMjR4
+Mjk3KS4NCj4gDQo+IE5vdyB0aGUgcHJpbnRlciBtYW51ZmFjdHVyZXIgdGVsbHMgbWU6ICJk
+ZWZpbmUgdGhlIGN1c3RvbSB3aWR0aCBhbmQgbGVuZ3RoIG9mIHRoZSBwYXBlciBpbiB0aGUg
+cHJpbnQgZHJpdmVyIHNvZnR3YXJlIGFuZCBvbiB0aGUgcHJpbnRlciBjb250cm9sIHBhbmVs
+IiAtIGVzc2VudGlhbGx5IHRlbGxpbmcgbWU6IG5vLCB3ZSBkb24ndCBhZHZlcnRpc2UgdGhl
+IHBhcGVyIHNpemVzIA0KPiB5b3UgZW50ZXJlZCBvbiB0aGUgcHJpbnRlciwgeW91J2xsIGhh
+dmUgdG8gcmUtZGVmaW5lIHRoZW0gbG9jYWxseS4NCj4gDQo+IEhvd2V2ZXIsIHRoZSBwcmlu
+dGVyIGl0c2VsZiBpcyBwZXJmZWN0bHkgYWJsZSB0byBwcmludCBkcml2ZXJsZXNzIC0gb3Ig
+YXQgbGVhc3QsIHRoYXQgaXMgd2hhdCBJJ20gdGhpbmtpbmcgd2hlbiBhIHByaW50ZXIganVz
+dCBzZWVtcyB0byAiYWRkIGl0c2VsZiIgdGhyb3VnaCBjdXBzLWJyb3dzZWQuDQo+IA0KPiBU
+aGlzIGlzIGEgWGVyb3ggQWx0YWxpbmsgQzgxNTUNCj4gY3Vwcy5scG9wdGlvbnMgLXAgWGVy
+b3hfQWx0YUxpbmtfQzgxNTVfQTBfNkFfRkMgLWwNCj4gLi4uIHRlbGxzIG1lOg0KPiBQYWdl
+U2l6ZS9NZWRpYSBTaXplOiAxMngxOSAzLjV4NS41IDR4NiA1eDcgNng5IDh4MTAgQTMgKkE0
+IEE1IEE2IEFSQ0hBIEFSQ0hCIEI0IEI1IEI2IEVudjEwIEVudjkgRW52QzQgRW52QzUgRW52
+QzYgRW52REwgRW52TW9uYXJjaCBFbnZQZXJzb25hbCBFeGVjdXRpdmUgRmFuRm9sZEdlcm1h
+bkxlZ2FsIEZvbGlvU1AgSVNPQjQgSVNPQjUgSVNPQjYgTGVnYWwgTGV0dGVyIA0KPiBPZmlj
+aW8gU1JBMyBTdGF0ZW1lbnQgVGFibG9pZCBDdXN0b20uV0lEVEh4SEVJR0hUDQo+IElucHV0
+U2xvdC9NZWRpYSBTb3VyY2U6ICpBdXRvIFRyYXkxIFRyYXkyIFRyYXkzIFRyYXk0IFRyYXk1
+DQo+IE1lZGlhVHlwZS9NZWRpYSBUeXBlOiAqQXV0byBTdGF0aW9uZXJ5IFN0YXRpb25lcnlQ
+cmVwcmludGVkIFN0YXRpb25lcnlMZXR0ZXJoZWFkIFN0YXRpb25lcnlQcmVwdW5jaGVkIFN0
+YXRpb25lcnlMaWdodHdlaWdodCBUcmFuc3BhcmVuY3kgRW52ZWxvcGUgRW52ZWxvcGVQbGFp
+biBFbnZlbG9wZVdpbmRvdyBMYWJlbHMgQ2FyZHN0b2NrDQo+IGN1cHNQcmludFF1YWxpdHkv
+Y3Vwc1ByaW50UXVhbGl0eTogRHJhZnQgKk5vcm1hbCBIaWdoDQo+IENvbG9yTW9kZWwvT3V0
+cHV0IE1vZGU6ICpSR0IgR3JheQ0KPiBEdXBsZXgvRHVwbGV4OiAqTm9uZSBEdXBsZXhOb1R1
+bWJsZSBEdXBsZXhUdW1ibGUNCj4gT3V0cHV0QmluL091dHB1dEJpbjogKkF1dG8gTGVmdCBN
+aWRkbGUgVG9wDQo+IFN0YXBsZUxvY2F0aW9uL1N0YXBsZUxvY2F0aW9uOiAqTm9uZSBTYWRk
+bGVTdGl0Y2ggU2luZ2xlUG9ydHJhaXQgU2luZ2xlUmV2TGFuZHNjYXBlIFNpbmdsZUxhbmRz
+Y2FwZSBTaW5nbGVSZXZQb3J0cmFpdCBFZGdlU3RpdGNoUG9ydHJhaXQgRWRnZVN0aXRjaExh
+bmRzY2FwZSBFZGdlU3RpdGNoUmV2UG9ydHJhaXQgRWRnZVN0aXRjaFJldkxhbmRzY2FwZSBE
+dWFsUG9ydHJhaXQgDQo+IER1YWxMYW5kc2NhcGUgRHVhbFJldlBvcnRyYWl0IER1YWxSZXZM
+YW5kc2NhcGUgQmluZFBvcnRyYWl0IEJpbmRMYW5kc2NhcGUgQmluZFJldlBvcnRyYWl0IEJp
+bmRSZXZMYW5kc2NhcGUNCj4gRm9sZFR5cGUvRm9sZFR5cGU6ICpOb25lIEF1dG8gSGFsZg0K
+PiBQdW5jaE1lZGlhL1B1bmNoTWVkaWE6ICpOb25lIER1YWxQb3J0cmFpdCBEdWFsTGFuZHNj
+YXBlIER1YWxSZXZQb3J0cmFpdCBEdWFsUmV2TGFuZHNjYXBlIFF1YWRQb3J0cmFpdCBRdWFk
+TGFuZHNjYXBlIFF1YWRSZXZQb3J0cmFpdCBRdWFkUmV2TGFuZHNjYXBlDQo+IEJvb2tsZXQv
+Qm9va2xldDogKkZhbHNlIFRydWUNCj4gY3Vwc0ZpbmlzaGluZ1RlbXBsYXRlL2N1cHNGaW5p
+c2hpbmdUZW1wbGF0ZTogKm5vbmUgSm9nT2Zmc2V0DQo+IA0KPiBIb3dldmVyLCBJIG1hbnVh
+bGx5IHRvbGQgdGhlIHByaW50ZXIgdGhhdCBUcmF5IDEgbm93IGNvbnRhaW5zIDIyNCB4IDI5
+N21tIHBhcGVyLg0KPiANCj4gaHR0cHM6Ly93d3cuc3VwcG9ydC54ZXJveC5jb20vZW4tdXMv
+YXJ0aWNsZS9LQjAwMjg2MzkgaXMgdGhlIERlZmluZSBDdXN0b20gUGFwZXIgU2l6ZXMgcGFn
+ZSBmcm9tIFhlcm94LCB0aGF0IHRlbGxzIHRvIGVkaXQgdGhlIGxvY2FsIHByaW50ZXIgZHJp
+dmVyIHNldHRpbmdzLg0KPiANCj4gSSBob3BlIHNvbWVvbmUgaGFzIGFuIGlkZWEgaG93IHRv
+IHByb2NlZWQuIE5leHQgdGhpbmcgSSdsbCB0cnkgaXMgdG8gYWN0dWFsbHkgImFkZCIgdGhl
+IHByaW50ZXIgbWFudWFsbHksIHRoZW4gY2hhbmdlIHRoZSBsb2NhbCBwYXBlciBzaXplIGlu
+IHRoZSBQUEQgLSBidXQgdGhhdCBkb2Vzbid0IG1ha2UgbWUgYWxsIHRvbyBoYXBweSBiZWNh
+dXNlIGl0IG1lYW5zIGVkaXRpbmcgDQo+IGl0IG9uIGV2ZXJ5IGNvbXB1dGVyIHRoYXQgbmVl
+ZHMgdG8gcHJpbnQuLi4NCj4gDQo+IEJlc3QgcmVnYXJkcywNCj4gDQo+IFZhbGVudGlqbg0K
+DQpJIHdvdWxkIHN1Z2dlc3QgdG8gY2hhbmdlIHRoZSBwcGQgZmlsZSwgaGF2ZSBkb25lIHRo
+aXMgZm9yIHByaW50aW5nDQpwYXBlcnNpemUgYTcgKGkgZm91bmQgbm8gcHJpbnRlciB3aG8g
+aGFzIHRoaXMgc2l6ZSBjb25maWd1cmVkKQ0Kd29ya3MgZmluZSwgcHJpbnRlciBpbiBteSBj
+YXNlIHdhcyBhIGxleG1hcmsgbTExNDUgdGhlIHByaW50ZXIgc2hvd3MNCml0IGFzICJjdXN0
+b20gc2l6ZSIsIGFuZCBpbnNpZGUgdGhlIGNvbXB1dGVyIGl0cyBzaG93biBhcyBBNy4NCnRh
+a2UgeW91ciBwcmludGVyIHBwZC1maWxlIGRpcmVjdCBmcm9tIC9ldGMvY3Vwcy9wcGQsDQpt
+b2RpZnkgaXQgb24gYSBvdGhlciBwbGFjZSwgc3RvcCBjdXBzLXNlcnZpY2UsIGNvcHkgdGhl
+IG1vZGlmeWVkIGZpbGUNCmJhY2sgdG8gdGhlIC9ldGMvY3Vwcy9wcGQgZGlyZWN0b3J5LCBz
+dGFydCBjdXBzLXNlcnZpY2UsIGFuZCB5b3UNCmFyZSBkb25lLiByZXBlYXQgdGhlIHN0YXJ0
+L3N0b3AgYW5kIGNvcHkgd2l0aCBhbGwgY29tcHV0ZXJzIHlvdQ0KbmVlZC4NCg0KaSBoYXZl
+IHBvc3RlZCBoZXJlIGF0OiBwcmludGluZy1hcmNoaXRlY3R1cmVAbGlzdHMubGludXguZGV2
+DQphdCAxMy4wMS4yMDI2IGEgcHBkLiBsb29rIGF0IHRoZSBsaW5lcyBjb250YWluaW5nICJB
+NyIgYWxsDQp0aGVzZSBsaW5lcyB5b3UgaGF2ZSB0byB1c2UgaW5zaWRlIHlvdXIgcHBkIGF0
+IHRoZSBjb3JyZWN0IHBsYWNlLA0Kb2YgY291cnNlIG1vZGlmeWVkIGZvciB5b3VyIG5lZWRz
+LiB5b3UgY291bGQgYXNrZSBjaGF0IGdwdA0KYWJvdXQgdGhlIGNhbGN1bGF0aW9uIG9mIHRo
+ZSBudW1iZXJzIChpIGRvIG5vdCByZW1lbWJlciB0aGUgZmFjdG9yIHRvIHVzZQ0KZnJvbSBt
+aWxpbWV0ZXIgdG8gbnVtYmVycyBoZXJlLCBhbmQgdGhlIGxvZ2ljIGJlaGluZCB0aGUgaW1h
+Z2FibGUgYXJlYSBhbmQNCnRoZSBvdGhlciBudW1iZXJzLCBjaGF0Z3B0IHdhcyBoZWxwZnVs
+IChldmVuIGlmIGl0cyBub3QgaW4gbW9zdCBjYXNlcywgY3Vwcw0KZmlsZXMgc2VlbXMgdG8g
+dW5kZXJzdGFuZCkuKSBvaCBhbmQgYnkgdGhlIHdheSBpdCBjb3VsZCBiZSB0aGF0IGRlcGVu
+ZA0Kb24gdGhlIHBwZCB0aGVyZSBhcmUgcnVsZXMgZm9yIHdoYXQgb3B0aW9uIGlzIHVzYWJs
+ZSBmb3Igd2hhdCBwYXBlciBzaXplLA0KdGhlbiB5b3UgaGF2ZSB0byBtb2RpZnkgb3IgYWRk
+IHlvdXIgcGFwZXJzaXplIGZvciB0aGUgcnVsZXMgdG8uDQoNCnNpbW9ODQoNCi0tIA0Kd3d3
+LmJlY2hlcmVyLmRlDQo=
 
-This is a bugfix release addressing the following issues:
+--------------7eT4fV0jccCAWPvpkCj9C3g2--
 
-1. Fixed compilation with ISO C23-capable compilers (see #390)
+--------------SSpSFsyM9LWtkIjcs19QcHvn
+Content-Type: application/pgp-signature; name="OpenPGP_signature.asc"
+Content-Description: OpenPGP digital signature
+Content-Disposition: attachment; filename="OpenPGP_signature.asc"
 
-2. Fixed an assertion that occurs when avahi_service_browser_new() 
-returns NULL (which can happen if browsing is disabled by the D-Bus policy)
+-----BEGIN PGP SIGNATURE-----
 
--- 
+wr0EABYIAG8Fgmm8BFkJEDCnmz4w7QASRxQAAAAAAB4AIHNhbHRAbm90YXRpb25z
+LnNlcXVvaWEtcGdwLm9yZ96QCHkGR70n3uz/IGGLOZ3MEZDefyCoE4OUCjnSJxvr
+FiEEqNbyKdqyczJbPSUyMKebPjDtABIAAOsNAPwPj55SHxTfVVmhKW5MCz7d+a/q
+um1PaQeNdW73OwQ6EQEA2dodCWZV5MZOdycjv9RnedhZkN8EHEGkSaZ5D0gEwQ4=
+=/97O
+-----END PGP SIGNATURE-----
 
-	Wishes, Alexander Pevzner (pzz@apevzner.com)
-
+--------------SSpSFsyM9LWtkIjcs19QcHvn--
