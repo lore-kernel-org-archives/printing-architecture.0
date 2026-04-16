@@ -1,82 +1,64 @@
-Received: from smtp1.osuosl.org (smtp1.osuosl.org [140.211.166.138])
-	(using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
+Received: from mail-wm1-f54.google.com (mail-wm1-f54.google.com [209.85.128.54])
+	(using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
 	(No client certificate requested)
-	by smtp.subspace.kernel.org (Postfix) with ESMTPS id A06AB1643B
-	for <printing-architecture@lists.linux-foundation.org>; Thu, 16 Apr 2026 01:59:27 +0000 (UTC)
-Authentication-Results: smtp.subspace.kernel.org; arc=none smtp.client-ip=140.211.166.138
+	by smtp.subspace.kernel.org (Postfix) with ESMTPS id AFAF2243376
+	for <printing-architecture@lists.linux.dev>; Thu, 16 Apr 2026 02:29:52 +0000 (UTC)
+Authentication-Results: smtp.subspace.kernel.org; arc=none smtp.client-ip=209.85.128.54
 ARC-Seal:i=1; a=rsa-sha256; d=subspace.kernel.org; s=arc-20240116;
-	t=1776304768; cv=none; b=V2N4PD6boYLNQu7MosMdiVwqkN+19dsI0tTNHuhbQxfZemvU+RoLUNo9X9dBuxq3R3fr9L5W4jAjOzbxM2jrGFFW0JYKrQJ4cJmBV1A9dBONsUBEoqMmMQmvexZaQI0FvXA8/Y4L7tRp7oHmBt4zEVq9jf8WjGUQHg5H1BmkjpM=
+	t=1776306594; cv=none; b=K2ivGCZr2ztdbk32nqKBnB+/tue4dObYDb6KQQLw001MyVnal+OSgG2FWu+XZARD6qs6bhbvm0IuY3WtCHri69LmTpe7Kzb7TEHvE5lvffa8y/XB3N7eMT2q1LThVMQOPZuyyG0vr+95T9Ik844AWDrmfl/DX+eZmNfI7OLIpT4=
 ARC-Message-Signature:i=1; a=rsa-sha256; d=subspace.kernel.org;
-	s=arc-20240116; t=1776304768; c=relaxed/simple;
-	bh=FdWtMbmfRNdGlWnO4jHsYPz5xYu1vMn9EGjLHwGVOzA=;
-	h=Message-ID:Date:MIME-Version:To:Cc:From:Subject:Content-Type; b=FjMOlHH5kXCd+YFqqfMFsEOoHyZ3q7B/HXS9gEa2jOVnjUw+IHZ1Czmjlj++HmfBqBIwompMAfNUgJ9pCg4q0I7cke376cwnsbSK/Y79PnvtW36p+vqZvpLaOKw0dwQpce0cLyzdQoZbqH9D9Fh3U375weBU7xExqsp8kA5jXOo=
-ARC-Authentication-Results:i=1; smtp.subspace.kernel.org; dkim=pass (2048-bit key) header.d=gmail.com header.i=@gmail.com header.b=Ck7rHb1Z; arc=none smtp.client-ip=140.211.166.138
+	s=arc-20240116; t=1776306594; c=relaxed/simple;
+	bh=7tcCjcHIHLqASTBPeeocsbQ+BkuEUHEOWYKMmj88tEM=;
+	h=Message-ID:Date:MIME-Version:From:Subject:To:Cc:Content-Type; b=g0/5YpfFFawGr1mPrl4jTn7XmyslOnpayv/1r1vI873hoVjbDjTNKx2a5GJMuz4X0GQNvH7rZm7SNBE3g1epGADXeaKK/T/hAnBFGqRZ39exgPnoxeV9+2gTkcJb0/mAByKolGW0H2qJgi72rn143qkJVuZAbyyeQ0CNXcbSaj8=
+ARC-Authentication-Results:i=1; smtp.subspace.kernel.org; dmarc=pass (p=none dis=none) header.from=gmail.com; spf=pass smtp.mailfrom=gmail.com; dkim=pass (2048-bit key) header.d=gmail.com header.i=@gmail.com header.b=Cr7YxhHq; arc=none smtp.client-ip=209.85.128.54
+Authentication-Results: smtp.subspace.kernel.org; dmarc=pass (p=none dis=none) header.from=gmail.com
+Authentication-Results: smtp.subspace.kernel.org; spf=pass smtp.mailfrom=gmail.com
 Authentication-Results: smtp.subspace.kernel.org;
-	dkim=pass (2048-bit key) header.d=gmail.com header.i=@gmail.com header.b="Ck7rHb1Z"
-Received: from localhost (localhost [127.0.0.1])
-	by smtp1.osuosl.org (Postfix) with ESMTP id 548E980B1E
-	for <printing-architecture@lists.linux-foundation.org>; Thu, 16 Apr 2026 01:59:27 +0000 (UTC)
-X-Virus-Scanned: amavis at osuosl.org
-X-Spam-Flag: NO
-X-Spam-Score: -2.099
-X-Spam-Level:
-Received: from smtp1.osuosl.org ([127.0.0.1])
- by localhost (smtp1.osuosl.org [127.0.0.1]) (amavis, port 10024) with ESMTP
- id Je9AcXbvq0FU for <printing-architecture@lists.linux-foundation.org>;
- Thu, 16 Apr 2026 01:59:26 +0000 (UTC)
-Received-SPF: Pass (mailfrom) identity=mailfrom; client-ip=2a00:1450:4864:20::42b; helo=mail-wr1-x42b.google.com; envelope-from=till.kamppeter@gmail.com; receiver=<UNKNOWN> 
-DMARC-Filter: OpenDMARC Filter v1.4.2 smtp1.osuosl.org 316A380B0D
-Authentication-Results: smtp1.osuosl.org; dmarc=pass (p=none dis=none) header.from=gmail.com
-DKIM-Filter: OpenDKIM Filter v2.11.0 smtp1.osuosl.org 316A380B0D
-Authentication-Results: smtp1.osuosl.org;
-	dkim=pass (2048-bit key) header.d=gmail.com header.i=@gmail.com header.a=rsa-sha256 header.s=20251104 header.b=Ck7rHb1Z
-Received: from mail-wr1-x42b.google.com (mail-wr1-x42b.google.com [IPv6:2a00:1450:4864:20::42b])
-	by smtp1.osuosl.org (Postfix) with ESMTPS id 316A380B0D
-	for <printing-architecture@lists.linux-foundation.org>; Thu, 16 Apr 2026 01:59:25 +0000 (UTC)
-Received: by mail-wr1-x42b.google.com with SMTP id ffacd0b85a97d-43d43e09de5so4441658f8f.1
-        for <printing-architecture@lists.linux-foundation.org>; Wed, 15 Apr 2026 18:59:25 -0700 (PDT)
+	dkim=pass (2048-bit key) header.d=gmail.com header.i=@gmail.com header.b="Cr7YxhHq"
+Received: by mail-wm1-f54.google.com with SMTP id 5b1f17b1804b1-488ab2db91aso114743255e9.3
+        for <printing-architecture@lists.linux.dev>; Wed, 15 Apr 2026 19:29:52 -0700 (PDT)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
-        d=gmail.com; s=20251104; t=1776304762; x=1776909562; darn=lists.linux-foundation.org;
-        h=content-transfer-encoding:subject:from:cc:to:content-language
+        d=gmail.com; s=20251104; t=1776306590; x=1776911390; darn=lists.linux.dev;
+        h=content-transfer-encoding:content-language:cc:to:subject:from
          :user-agent:mime-version:date:message-id:from:to:cc:subject:date
          :message-id:reply-to;
-        bh=OAbqyoJJclaDJlyyf4WpXGL9YSZUpr2JY5uYjOXqFt4=;
-        b=Ck7rHb1Zcf4kWoNtAkiax1m15HF3xdUD5DaDBW6r+OJAGlFYAGdtB2P6QHsrgVw2Rl
-         XjEZXE2HB53+3VfPNgmPpCBD0fiI+v9lguxDW0NdQeBxLm6TSiCd08sNJDF3IKncs+Ie
-         N3nSKJuRXvGpidWyWAU839WLtF3Wu4w6jNJlG25itIcD/+5uxvqez+Lc0DYFV6Prlduc
-         Vts99JwSE9WlqBQ+63HN2//Mw0Cvkbqe+vG0YrKTxjlE666URFfym7ct4DyiAbC0Ypch
-         AJCIxf9T1rqn8O+ZyeF2kNk4ymDuRiaM79X+YyO8s3YsNdIE/wpbTU5P8ePcEEGBcoYV
-         NNNQ==
+        bh=HxwbXk3Q3VIWWYNM6Z5neyxoNE35JuJ9qeeMlqhZ3zg=;
+        b=Cr7YxhHqH2gcmhQur0hbH5d0UrUXYyFhHBpsu9WtdGwvrCzcD3AzsEBPHY+j+euljr
+         t60zlSzOvYr6aLzIt/M+w3Tru9JmX5mGHupBc2LbiaKdSO40+iFQDUkF2mJb6t/gec/7
+         iGeDI5Lcer5vTX3EhGkj1aKBCSdp5d+TQv7Ao+d3RFfMpxOJBQvCrCt7iUbH3aYIj8vx
+         6Vqx3QbEqao8NFKMqDvWA0ZVrGpd7pje1ZfCZoVP7oKPwkJsuwFUSdktJbqvEYTUf0f1
+         OAobDSgq3SiKq1In5jLOkBFmRdw6wY/tohP4JvaNbZfayol23VVzWjYwf2hGQQJD8eQl
+         NRXw==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
-        d=1e100.net; s=20251104; t=1776304762; x=1776909562;
-        h=content-transfer-encoding:subject:from:cc:to:content-language
+        d=1e100.net; s=20251104; t=1776306590; x=1776911390;
+        h=content-transfer-encoding:content-language:cc:to:subject:from
          :user-agent:mime-version:date:message-id:x-gm-gg:x-gm-message-state
          :from:to:cc:subject:date:message-id:reply-to;
-        bh=OAbqyoJJclaDJlyyf4WpXGL9YSZUpr2JY5uYjOXqFt4=;
-        b=R5Y+V+ToCiSC/feaHAjdxCwMuqb1bixg6XQoT+rJS8paonK34zEyezkrS54Hn0Dxru
-         EecgNaCf7rnDnxaXQqQiV0Ii9yt7LaQgVtKWDPDrFhby+n8b5I305gXpeEo9COVyQrtF
-         HyrcHqzJZjvMNvrYiGEhqU7lJUbISHz0arnYBwp58ZffW2Ijuu322CJ+bps+53AIt3oS
-         svbH2g5zWxaNlUJLIggKqDs2mtx2J71XyiF7xS77n7vNd4OZOOyRC7DR9W4B03OJMIg9
-         PLAJKiQRaH2DuFRfhGcMkKdLw5vfBUudJ/Bcp2MQYmhliS5szMRbj1DlU4wTGCmdqhYn
-         Bvwg==
-X-Gm-Message-State: AOJu0Ywf5XcONnIeMvJ894YyBtAja3vMkNZ7+dVSX2owp9cAaMu05Ckm
-	vtmj/t+SIdyGUM9nYmrliQ7t9rYMzR0wdC29LGvZT9EvLHwX5d47giYhhYDWSA==
-X-Gm-Gg: AeBDietphvP3MA6qmAc+n8z4EY/UwoqRgoPFbrA+mchjp44SZwkdC6nMTM+cF0OCNFF
-	K9r/RmMXy5V/t1EKIYQMmwbb0b2qo7VI6x2XQ0P+4c7SqaHeRfEiYxPm01aZ6F6rIqR6fFO1rnr
-	eEyL37u0GsjWHiAvrEzN8Jzs27WTHHwH3gAE8/pi3lWF+c4+HdG6IlFwD8LTSgP0Q/6o836LRfd
-	jR+w2FNfLpIG24zBCPcM3BDilf9m0FBBIiu1Ugli6RZ+kd8ejjPjg2mnceZtjhnEYtkHdd6up+G
-	ffnLyF5wH521UAOQdNv1bYtr79/joW/WToN8RO1m0BTLSsqY8nxp0oVYGdhY5L03L+NiIeFINLS
-	hLTost5k6rsZ7fUqwtoeQZ6OmH2pU/wCxxCiQpxKcaxe7w2fExOoMsYII6nonq4sORt5/3FbJCi
-	4QRgG3YX49rIN/8GeBScjiPkn3jNPUov0/yRSqkPF6JNd2MbghQ3QThJeqfV9awwpvT6VS6sZs7
-	NF4xTzy3NAOU7LI3Q==
-X-Received: by 2002:a05:6000:420e:b0:43e:aa88:f1a2 with SMTP id ffacd0b85a97d-43eaa88f439mr7908690f8f.32.1776304762079;
-        Wed, 15 Apr 2026 18:59:22 -0700 (PDT)
+        bh=HxwbXk3Q3VIWWYNM6Z5neyxoNE35JuJ9qeeMlqhZ3zg=;
+        b=D1kAcEuha1uYO43K2JGBXrNMpaBgYbeB7AKrmFSKWgmt7tcvWgB6cCebax86ZREJ3a
+         rA/PXcrIc8CokLTvw70lY7bwQOkE09o9yE+77Zs/tfxlrDnu+yfsZVcfwkhboTV5M3tK
+         B+82qWFk90bpekW+eKYYMa5FM3Ll4xDaCcjHLyjL9WtYs21NjCa/KrSzrTcuplj86KEn
+         37QXxl2y683UylYExnqcNopMXBKIy1yie/9o/r8cSTq/2oW/MlW3orqAMtsmQrQBgCYX
+         FpsgoDVuMjut760+wekxSRxtzbE25LDE5bufDmEE6/peWdTo6f75Zz8Xi+YSRiHFGwr9
+         Zupw==
+X-Gm-Message-State: AOJu0YwG2HgnaFPEpWprz7VZ/ll6fgezTt6mp9oo4E5sjbg2DW9N/evl
+	4KQNNp4idUk0E1A1cQlpx9r8IC3fKB69O3I17Wq+mrw95e8OuxuKhS8rsuRjPQ==
+X-Gm-Gg: AeBDiev+EjakfUsCekREHijej2aroW9KSg5O5mJYR9tq7WL/vTo3mO7Et85SW0JDqsc
+	sw7h+pgmBgy4z961xTUeUx2ayAUXxx9Lpx6EzKZxBPjJZMxNumy8r8DnJDrQeTkGJhlXk6dmcCl
+	0l+4hp7UZpD/2LOXXWwNYSnwNnl/9f+ikizxjxEnis1HQrLAr+IN1cLNIOC2BUPCsVD5hc0yY7l
+	rNJcC4QXl7db/J+nXcvFPamoPXrGnmkbpL1TgiknBLZN+kPwtEHo3Fgj03PY0p347t/NXSSGc+w
+	SKCWDsG1DJEi6S620QxxZ9UChfoePQfUaPqklatXx4fT84xZscz1sAqA811RhU4KpxvuWLP8RPs
+	tHw6FIW0C2vfjK3BEloHbHcShOsNj2mkfsh6xc9eC18f5y1Sk0bJ//y1pSw+boa6cONW5nRcM+4
+	JQsol6hgI6i8Y6tWnI2dEL88ejN/LQTGgqORH80A/ajKSX5qcCMZq5MDLahbXNXszVjl5Z02nEl
+	JkCvTbl/pw6JMGXaA==
+X-Received: by 2002:a05:600c:3150:b0:486:fcc7:d6a with SMTP id 5b1f17b1804b1-488d67f4c4dmr337264205e9.13.1776306589641;
+        Wed, 15 Apr 2026 19:29:49 -0700 (PDT)
 Received: from [192.168.68.113] (192-164-23-214.hdsl.highway.telekom.at. [192.164.23.214])
-        by smtp.gmail.com with ESMTPSA id ffacd0b85a97d-43ead33d518sm9989726f8f.6.2026.04.15.18.59.21
+        by smtp.gmail.com with ESMTPSA id ffacd0b85a97d-43ead35bf1esm9896063f8f.16.2026.04.15.19.29.48
         (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
-        Wed, 15 Apr 2026 18:59:21 -0700 (PDT)
-Message-ID: <54d940f6-b2ed-4b31-aa14-92c4591516a3@gmail.com>
-Date: Thu, 16 Apr 2026 03:59:20 +0200
+        Wed, 15 Apr 2026 19:29:49 -0700 (PDT)
+Message-ID: <d42c7f96-edf5-446f-b6df-82dcb6ebfd4b@gmail.com>
+Date: Thu, 16 Apr 2026 04:29:48 +0200
 Precedence: bulk
 X-Mailing-List: printing-architecture@lists.linux.dev
 List-Id: <printing-architecture.lists.linux.dev>
@@ -84,14 +66,17 @@ List-Subscribe: <mailto:printing-architecture+subscribe@lists.linux.dev>
 List-Unsubscribe: <mailto:printing-architecture+unsubscribe@lists.linux.dev>
 MIME-Version: 1.0
 User-Agent: Mozilla Thunderbird
-Content-Language: en-US
-To: Open Printing <printing-architecture@lists.linux-foundation.org>
-Cc: Michael Sweet <msweet@msweet.org>, "Ryan \"dasgeek\""
- <dasgeek@protonmail.com>
 From: Till Kamppeter <till.kamppeter@gmail.com>
 Subject: AI-discovered recent CUPS vulnerabilities going through the news
+To: OpenPrinting <printing-architecture@lists.linux.dev>
+Cc: Michael Sweet <msweet@msweet.org>, "Ryan \"dasgeek\""
+ <dasgeek@protonmail.com>
+Content-Language: en-US
 Content-Type: text/plain; charset=UTF-8; format=flowed
 Content-Transfer-Encoding: 7bit
+
+[ Resent to correct list address, pleas only answer to this one, with "Reply to
+   all". ]
 
 When chatting with the hosts of Destination Linux, they told me about following 
 posts:
