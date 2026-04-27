@@ -1,58 +1,101 @@
-Received: from mail.msweet.org (mail.msweet.org [173.255.209.91])
-	(using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
+Received: from mail-lj1-f181.google.com (mail-lj1-f181.google.com [209.85.208.181])
+	(using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
 	(No client certificate requested)
-	by smtp.subspace.kernel.org (Postfix) with ESMTPS id 50B3C3D349F
-	for <printing-architecture@lists.linux.dev>; Mon, 27 Apr 2026 17:25:26 +0000 (UTC)
-Authentication-Results: smtp.subspace.kernel.org; arc=none smtp.client-ip=173.255.209.91
-ARC-Seal:i=1; a=rsa-sha256; d=subspace.kernel.org; s=arc-20240116;
-	t=1777310727; cv=none; b=q7UGShfgIvR1PmhrhUj7DgJU0Di3etT4cDgr84/Np7aJYFSvZax/M655CV200ZCD4VA2KEjzBV1l4Eq58+nUs9Tm+mC6qjqPyGPvIc/voONw52mVKaumeWbTdXGt3YEGAqyVxHImw4iwnYx/NFXat5AnGlgzU42fAjOYGaCgvxs=
-ARC-Message-Signature:i=1; a=rsa-sha256; d=subspace.kernel.org;
-	s=arc-20240116; t=1777310727; c=relaxed/simple;
-	bh=VLcp6jb+TiOMGOZVR2NK6fmno0o1nABXt2XnIf6hzbE=;
-	h=From:Content-Type:Mime-Version:Date:Subject:Message-Id:To; b=MSuTG4gRhbn3Ps0ECJFnIeRmoXnArR8+TpawElmxmV53OYBXJG20LMSKJiBCrGhMVfos8+betdMBsRffvzD05L015I4CXjWxE6PnOqbHRTfLp0GF9QU4xxsqdYfMwyi4jn/A66aWo+v4Ws0x2PCz32lUNSAf1AwZUJf7wH4tWt4=
-ARC-Authentication-Results:i=1; smtp.subspace.kernel.org; dmarc=pass (p=quarantine dis=none) header.from=msweet.org; spf=pass smtp.mailfrom=msweet.org; dkim=pass (1024-bit key) header.d=msweet.org header.i=@msweet.org header.b=jmQbkCI3; arc=none smtp.client-ip=173.255.209.91
-Authentication-Results: smtp.subspace.kernel.org; dmarc=pass (p=quarantine dis=none) header.from=msweet.org
-Authentication-Results: smtp.subspace.kernel.org; spf=pass smtp.mailfrom=msweet.org
+	by smtp.subspace.kernel.org (Postfix) with ESMTPS id 2E46F3A9625
+	for <printing-architecture@lists.linux.dev>; Mon, 27 Apr 2026 21:13:52 +0000 (UTC)
+Authentication-Results: smtp.subspace.kernel.org; arc=pass smtp.client-ip=209.85.208.181
+ARC-Seal:i=2; a=rsa-sha256; d=subspace.kernel.org; s=arc-20240116;
+	t=1777324433; cv=pass; b=bozTUlHArBQjdwwER+KQbS6WCFtfrWAWHLyusIdmsSW/JnDUJwA0Vjsr8XDstXt7s0ld+UCQgWVC2afJe0iuQS0evNHogD3rFcXis7yVuuOwdvWxrbqTgMlW5u4HSMoGxyixc2ICMYmRHxvgMzKqYIIxH19DbPiF9HFjYzCZiUo=
+ARC-Message-Signature:i=2; a=rsa-sha256; d=subspace.kernel.org;
+	s=arc-20240116; t=1777324433; c=relaxed/simple;
+	bh=EdoA2IlWfN7Y/JyDf5dtR+mljnGd5UES7bQoSmnFxn0=;
+	h=MIME-Version:From:Date:Message-ID:Subject:To:Content-Type; b=UVaXf/e6cs5XCTxkcsfszqOD8zGXhJCZ3zC8vnj1ibCh7e/+hwEhy0ZAfDxW8cUNgkzL65KrMWfpKAhNoBWvP43nFj99kGU2QBrvjWqyNBEcMpX2hqHxean5nyExWkCG/XikZmAzv0lXKNynwm8pjwUC/8i1Njeeyyi29d3BJR4=
+ARC-Authentication-Results:i=2; smtp.subspace.kernel.org; dmarc=pass (p=none dis=none) header.from=gmail.com; spf=pass smtp.mailfrom=gmail.com; dkim=pass (2048-bit key) header.d=gmail.com header.i=@gmail.com header.b=gdIx6SUJ; arc=pass smtp.client-ip=209.85.208.181
+Authentication-Results: smtp.subspace.kernel.org; dmarc=pass (p=none dis=none) header.from=gmail.com
+Authentication-Results: smtp.subspace.kernel.org; spf=pass smtp.mailfrom=gmail.com
 Authentication-Results: smtp.subspace.kernel.org;
-	dkim=pass (1024-bit key) header.d=msweet.org header.i=@msweet.org header.b="jmQbkCI3"
-Received: from smtpclient.apple (cbl-66-186-76-47.vianet.ca [66.186.76.47])
-	(using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
-	(No client certificate requested)
-	by mail.msweet.org (Postfix) with ESMTPSA id 4337D80445;
-	Mon, 27 Apr 2026 17:17:02 +0000 (UTC)
-DKIM-Filter: OpenDKIM Filter v2.11.0 mail.msweet.org 4337D80445
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=msweet.org;
-	s=default; t=1777310222;
-	bh=VLcp6jb+TiOMGOZVR2NK6fmno0o1nABXt2XnIf6hzbE=;
-	h=From:Date:Subject:To:From;
-	b=jmQbkCI3CqtYF35L+f/O01fwClKuDDS6rJ5vyGOMgt6owJm+RXD6SQttrYhhtv5+C
-	 bnqGHd46WKWHdZ/Gcg2JVx5nyderb4p0fTAFYVkT0340K+2twEpO3SBR3QJHTNi1fu
-	 gHfYt2pkSiNZ5dZS1L1d1Xu5BwTGtUEa0k39aWbM=
-From: Michael Sweet <msweet@msweet.org>
-Content-Type: text/plain;
-	charset=us-ascii
-Content-Transfer-Encoding: quoted-printable
+	dkim=pass (2048-bit key) header.d=gmail.com header.i=@gmail.com header.b="gdIx6SUJ"
+Received: by mail-lj1-f181.google.com with SMTP id 38308e7fff4ca-38e12c67a6fso106773571fa.1
+        for <printing-architecture@lists.linux.dev>; Mon, 27 Apr 2026 14:13:51 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1777324430; cv=none;
+        d=google.com; s=arc-20240605;
+        b=iV7CBoyHYmeB4G6fFdi4jUHBiax96fAOUkJUzpUCVzFjaKSExqVOKKhM76EWdkuJJC
+         tFfRAddqVQ1aaPZ676WtXM0h6kHRoRykBdYZjgJBJLVtMs///0zYYOp2hc7lpF0e9un2
+         neZ+tgEhOcZt3lg7z39tIaE9NuoUNB4VWv7Pf/vZVDR1t85vUt1nRtWcgS46/O5MWxF0
+         awZVLBSbkHrXwmZTDuvbgSO2axvSoED7Yecox4CxjoWZ9QDHCAq+7qiOTl+HrPYS7wuo
+         61TbxwhfukTO9lPZfKyHG+B41IM4owBFbLkOElr98y/kFayu7jN7HL7oiy7VhEoROyT2
+         5UKg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=to:subject:message-id:date:from:mime-version:dkim-signature;
+        bh=EdoA2IlWfN7Y/JyDf5dtR+mljnGd5UES7bQoSmnFxn0=;
+        fh=m4od8JhQ2tHYJn2BKlkxtLRo/12dAAVN3EaHINuco2Y=;
+        b=ke5+UQRWyP4ZwnAA7TGxhiPuoadAkz3bM5ISnIe36Gou8sA4nkXvBsIQDvmEKFapX+
+         jmdj+9Hg2Nr4mnU0Rhj5VrH+FMGl6JLT10zwBl1MxLy97qbDmEB0eUMOmRP+JXgAuBz+
+         1kKq6dqtT/1+WKLpcNJP9BW0dm0+BXtbmPNysDorTaIbOqLD2H0qAsWapJH+Q9Jfj8Ji
+         xYYsXR0DC0pz6m3FMfE2Adb4GcE2Kux5qGxNV2ZY+aHye3h0x9wPGfMvyyWXIXnsW+IG
+         aldvjvr1PmGDQAi91FQ8FNY6AX73D2YkZ8G3IKgoMNZZmS+s5iH9SJMbr4NmboeXj4fm
+         zDcg==;
+        darn=lists.linux.dev
+ARC-Authentication-Results: i=1; mx.google.com; arc=none
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20251104; t=1777324430; x=1777929230; darn=lists.linux.dev;
+        h=to:subject:message-id:date:from:mime-version:from:to:cc:subject
+         :date:message-id:reply-to;
+        bh=EdoA2IlWfN7Y/JyDf5dtR+mljnGd5UES7bQoSmnFxn0=;
+        b=gdIx6SUJcRaPG8fMABFgrNh/PZwT7XRkS7wPQMOp65k1kn0aM5RYEK/HNLnPgPeBQp
+         l1x+drzvRZqYsTe32sefJ8TZZ9Hc3N25ZLZgrhPSxuWdey2DE1xIuPl16lclW3w1P6A4
+         1im0iCYHujoGk3XAQM75b92U6vwdot+MsyOixjCLXXsYz4C0h5JWYW0ZV7v6CP2uBxAo
+         /JFpyCtqzd0HOblb1dRKEBeBKwHbNCTdEZXP+1Ag6LrO1Kh0ATMlXe54MJM/Es1SPXQ8
+         befj1YgeEoG5IcihW1XTktFVZOtCHYKwANHJXVNordl9g/6LQ37wILy6y3pl/dgNDbKK
+         lgLg==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20251104; t=1777324430; x=1777929230;
+        h=to:subject:message-id:date:from:mime-version:x-gm-gg
+         :x-gm-message-state:from:to:cc:subject:date:message-id:reply-to;
+        bh=EdoA2IlWfN7Y/JyDf5dtR+mljnGd5UES7bQoSmnFxn0=;
+        b=IjwemLCo2BvzaAxHa9FfN/7Li2cspHsN+HxlSLFMwdWjM/TIwJMcPFcO88sLRzL0ij
+         i3faooRhGR7PWrXDO8A/pUh0i6wD6GRuycn2cf/wGSZfoJdpK35Z/Oq711kBYYqieE0N
+         lqLfzih9LN/kHrh7DxTrKL8MWgNrBWjhZW9PGJLXIXD47kXaX1kzp0XkDUc7rwf0U8c1
+         M1YOErvDVepcAZbnO7R73j39MnRauEgmfvlF1ixlBwDnuNPmtJ4dEYzdBJ7SG/FslL2V
+         /TG86qAKZBeGSTT/k63EYhfm4mPohZKU4qSOdSpajdCCgY/cPLe1nv1z9ft0Sw/e78Jw
+         uWdg==
+X-Gm-Message-State: AOJu0YwS60NxkO4hPuQLv8OmDEBKMtuTsAz6J9Y91MUPcBIqHt2VGw5t
+	WtHnytlQqk7FNeKHIG+7cJLpBLroevLI+pnE2+sKY+O5SjgmQzrGYOyqFY5CHMVodzNXwyaSqGA
+	RVNeBOoXD4X313O+A5j2qLb95HxorpBTVPtqzMJ4=
+X-Gm-Gg: AeBDieuERf7u0i34ZnL06kbbGbyJPhqg3XBCporjE8AVevnI9YtDuqAjlPGFRf3kHX4
+	yJ/By4AOl1CrsqJcWpg1afwtDR92NIL3WHTsSB2dF37GVNergs86Txrd7F7NTJM3M60MFiELqSJ
+	lHPkTF2ik04PqtVhcdmmT6Dok11aLSRnQFS/+cJ2smRBE02LJSs32oDldGCjP0ZXxVrwALuoPTd
+	ibxQzlTcnXSjPOzS9d49uhVy79p7gLN5kZLRT1o6U8ynDLTH2sRaAceliRP7w9DZvy8OSVu9YHf
+	lKBCfHSUovO+cEDBQfQA7wqEew==
+X-Received: by 2002:a2e:bd12:0:b0:38e:8902:7a7f with SMTP id
+ 38308e7fff4ca-39240d0a437mr545391fa.13.1777324429809; Mon, 27 Apr 2026
+ 14:13:49 -0700 (PDT)
 Precedence: bulk
 X-Mailing-List: printing-architecture@lists.linux.dev
 List-Id: <printing-architecture.lists.linux.dev>
 List-Subscribe: <mailto:printing-architecture+subscribe@lists.linux.dev>
 List-Unsubscribe: <mailto:printing-architecture+unsubscribe@lists.linux.dev>
-Mime-Version: 1.0 (Mac OS X Mail 16.0 \(3864.600.42\))
-Date: Mon, 27 Apr 2026 13:16:51 -0400
-Subject: CUPS 2.4.19
-Message-Id: <52CF5B7F-7849-4AD4-ADE5-D500D490B58B@msweet.org>
-To: OpenPrinting <printing-architecture@lists.linux.dev>
-X-Mailer: Apple Mail (2.3864.600.42)
+MIME-Version: 1.0
+From: David Day <davidday@gmail.com>
+Date: Mon, 27 Apr 2026 14:13:36 -0700
+X-Gm-Features: AVHnY4JxSixJ9PWSI1M3joDIHVoNinxjPQVSgnOZ-RarXXxtyXJAIbZ2-WCrsrw
+Message-ID: <CAAcCaTTPopK=4DU1Qw_R6WMWc5vBUEU620=4xfzuEq3mwOi73w@mail.gmail.com>
+Subject: Xerox Phaser 7500DX PPD
+To: printing-architecture@lists.linux.dev
+Content-Type: text/plain; charset="UTF-8"
 
-All,
+Greetings,
 
-CUPS 2.4.19 fixes a regression in shared printing from non-local =
-accounts (Issue #1557):
+Not certain if this is the right forum, but I am in the process of
+switching my desktop cold-turkey to Linux (having last used UN*X on a
+Sun Sparc 10 workstation in the mid-1990s) from a Windows 10
+environment. My beloved Xerox Phaser 7500DX printer is suspiciously
+absent from the list of drivers on the Open Printing
+"Postscript-Xerox" page, and I was summarily dismissed by the support
+folks at Xerox. Is anyone aware of a native or compatible driver for
+the 7500 line, or any kind of workaround? The similarly spec'd 7400n
+driver prints 2-sided, B&W, size up to 11x17, and resolutions up to
+1200x1200, but the color profile lists, "Unspecified profile" with no
+option for color printing. Thoughts?
 
-    https://github.com/OpenPrinting/cups/releases/tag/v2.4.19
-
-Enjoy!
-
-________________________
-Michael Sweet
-
+Thank you
