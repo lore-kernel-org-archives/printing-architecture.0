@@ -1,109 +1,112 @@
-Received: from us-smtp-delivery-124.mimecast.com (us-smtp-delivery-124.mimecast.com [170.10.129.124])
-	(using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
+Received: from mail-vk1-f169.google.com (mail-vk1-f169.google.com [209.85.221.169])
+	(using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
 	(No client certificate requested)
-	by smtp.subspace.kernel.org (Postfix) with ESMTPS id 785BF34AAEB
-	for <printing-architecture@lists.linux.dev>; Wed, 22 Apr 2026 11:19:55 +0000 (UTC)
-Authentication-Results: smtp.subspace.kernel.org; arc=none smtp.client-ip=170.10.129.124
-ARC-Seal:i=1; a=rsa-sha256; d=subspace.kernel.org; s=arc-20240116;
-	t=1776856796; cv=none; b=aaiUfa3XJDsUej8JqrWLfZji21TcKICvy7zv6ABbPHpH9VlDHsyxpLBl/sB8FWC/BEk8SCFGKeMz0QPQYqsDG0nxxCIve3PCBOZfdUd5vLqRp2G9ARznmKXGCy+rgrmKcgUA4SZoMgqqGnpjLK1w4zIjgn1/eGUbubMr28L+zzA=
-ARC-Message-Signature:i=1; a=rsa-sha256; d=subspace.kernel.org;
-	s=arc-20240116; t=1776856796; c=relaxed/simple;
-	bh=74Ia4OA3fsbP3jg8L9NN9swtBbnUhdp07zenE3gAgv0=;
-	h=Message-ID:Date:MIME-Version:To:From:Subject:Content-Type; b=X9Xe/tNc9bwLbsCb7NKGCCx46t3k2TAtpXdh/UlExgn1N79u6tPQXmYwcPnOJuRkbOBWasUnQwO6g+WzrmmKMb9bAQ/NLhHUs/c1un1LqMy++Z1J/KvTKH/tbcfVAEBpnPIg1+KJDP/zXVjmcJHPqxiJo2DZbp7a/RuOi2wYiMQ=
-ARC-Authentication-Results:i=1; smtp.subspace.kernel.org; dmarc=pass (p=quarantine dis=none) header.from=redhat.com; spf=pass smtp.mailfrom=redhat.com; dkim=pass (1024-bit key) header.d=redhat.com header.i=@redhat.com header.b=WyTrNs34; arc=none smtp.client-ip=170.10.129.124
-Authentication-Results: smtp.subspace.kernel.org; dmarc=pass (p=quarantine dis=none) header.from=redhat.com
-Authentication-Results: smtp.subspace.kernel.org; spf=pass smtp.mailfrom=redhat.com
+	by smtp.subspace.kernel.org (Postfix) with ESMTPS id D5F7A223708
+	for <printing-architecture@lists.linux.dev>; Mon, 27 Apr 2026 15:46:43 +0000 (UTC)
+Authentication-Results: smtp.subspace.kernel.org; arc=pass smtp.client-ip=209.85.221.169
+ARC-Seal:i=2; a=rsa-sha256; d=subspace.kernel.org; s=arc-20240116;
+	t=1777304806; cv=pass; b=eZGFW71yzytbDnDXrhvNt6O9/egeS3sTW0LUYwcFElWVZ0H/7GSmm64VuusrMcM8HKrbiF/H0y0hK4Ooj6RhstEn5fu6Z7LtCjjXu9+8xaKDeh5RVAX3icUdvdf6nmgdZJPOvymjWkgMM9ZH0xmOmMAorCdnj3MN8LLL2VAg2jk=
+ARC-Message-Signature:i=2; a=rsa-sha256; d=subspace.kernel.org;
+	s=arc-20240116; t=1777304806; c=relaxed/simple;
+	bh=2HrygMjl3oZMqS1+pkAYUPAoBv9zQPLGptDUz+mJp80=;
+	h=MIME-Version:From:Date:Message-ID:Subject:To:Content-Type; b=ble0jf7iVO48xKgNXZ1k4K2ksRr0aJXtienCcuOaXCIe7qywhV2H33UfQUmAvUldeWO8M/HWZYxIE8yD3X+OSSreUQ36zyseCEKAWK7geAjCJVS/S+sDPWpljFX9N58hgmvfv8g+1dG5xUwKEllM2AnYzqH+KGG4Pkj/ToOkkGA=
+ARC-Authentication-Results:i=2; smtp.subspace.kernel.org; dmarc=none (p=none dis=none) header.from=apevzner.com; spf=pass smtp.mailfrom=apevzner.com; dkim=pass (2048-bit key) header.d=apevzner.com header.i=@apevzner.com header.b=PXARFWvp; arc=pass smtp.client-ip=209.85.221.169
+Authentication-Results: smtp.subspace.kernel.org; dmarc=none (p=none dis=none) header.from=apevzner.com
+Authentication-Results: smtp.subspace.kernel.org; spf=pass smtp.mailfrom=apevzner.com
 Authentication-Results: smtp.subspace.kernel.org;
-	dkim=pass (1024-bit key) header.d=redhat.com header.i=@redhat.com header.b="WyTrNs34"
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=redhat.com;
-	s=mimecast20190719; t=1776856794;
-	h=from:from:reply-to:subject:subject:date:date:message-id:message-id:
-	 to:to:cc:mime-version:mime-version:content-type:content-type:
-	 content-transfer-encoding:content-transfer-encoding:autocrypt:autocrypt;
-	bh=RppxsXX1SMP4/A4f+oakK4Qfq34XECBr74aIeAqdUL8=;
-	b=WyTrNs34H/J0Gh0kbGY9oif6h0vCQUwdnopPrg0RFmEKhW9QYCbeXjStCz3IcgGqOwJE1E
-	TXhltv/pRQVUj/uBEraeyf1C5rXsUra+oIy9xEveO1Vig2IsJGqVOUuDx/8+PoOyIAi58h
-	In87n7jsVWEXQpHD/fkCEWS9/iZDRJo=
-Received: from mail-pl1-f200.google.com (mail-pl1-f200.google.com
- [209.85.214.200]) by relay.mimecast.com with ESMTP with STARTTLS
- (version=TLSv1.3, cipher=TLS_AES_256_GCM_SHA384) id
- us-mta-669-DOKBJZn8OW-_Tq8xg9qYMA-1; Wed, 22 Apr 2026 07:19:53 -0400
-X-MC-Unique: DOKBJZn8OW-_Tq8xg9qYMA-1
-X-Mimecast-MFC-AGG-ID: DOKBJZn8OW-_Tq8xg9qYMA_1776856792
-Received: by mail-pl1-f200.google.com with SMTP id d9443c01a7336-2b465bf993cso56322445ad.1
-        for <printing-architecture@lists.linux.dev>; Wed, 22 Apr 2026 04:19:53 -0700 (PDT)
+	dkim=pass (2048-bit key) header.d=apevzner.com header.i=@apevzner.com header.b="PXARFWvp"
+Received: by mail-vk1-f169.google.com with SMTP id 71dfb90a1353d-56a9076813bso4165052e0c.3
+        for <printing-architecture@lists.linux.dev>; Mon, 27 Apr 2026 08:46:43 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1777304802; cv=none;
+        d=google.com; s=arc-20240605;
+        b=beRnu+DOOb1RcZFIre6tZtI7i/z9euQ9BduDcPJQTslpdBWx+WIE+yF8C99JYMy4YJ
+         R7shTm0nePuIsQX95mlywRYfIBILNYl062DCUjXwtRsqrv/ZuKgUZ0S8GZWo+K4Y9OUf
+         ZFXni8QX9Jk3zMrlSwXR5/8rKaBg8wgsjd7ukD6RjjVYKGK2K3NdZ+e4xiOKqmMtfHMZ
+         EGJe8gv1wH69PchqqcFKsYX9UhdfhjjeznRH3X+j2xf4glFdkDDsty0+3OZytWtXpMGL
+         xuUHVqJS3CVjMzjsAZ2Hu7OVwzm7vBijHIOVB8lPCb7qpb+qQL2j19aIufDng2BCssxp
+         NIhg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=to:subject:message-id:date:from:mime-version:dkim-signature;
+        bh=urOm1omSIgsuYHXM8KvuHJqqJFStWZEf1vE9gKjoaCs=;
+        fh=OcgVwSspKgQ6gUYmme5RbhiHqaDCXhuQ54u84qetAUk=;
+        b=Gtq4wzEl/NZBJMhuxurNtMdByrdAdZbExwly8Ftb5oLigvNg3+SR+cjgdNc91vzE9O
+         jIQPg73dD2i1a14ZvGped+O+JS8mYYCGsmh9lfKEviOX8wyxCKwB9rOO9vi5KgWqJ+ht
+         GHbbjucinx6f8wg1ZGBZNd4r2vb28CQzyHvyZHy5e1SRNuOD1QLYcKplpAN/47wjApUQ
+         Ai7dDWicXQq0Ta3/hq1iA5x3zquKU+js0ijSrzPhH/5LeVdDaboYI3HSjMoe/wzpp5n1
+         Yk1Cu0swDn8Ur5PJ59FXyxBN9uEQrIfYWTdW+v8uXHNkvZCYxQXTvpiuMG6+i/tn+zi3
+         r6tw==;
+        darn=lists.linux.dev
+ARC-Authentication-Results: i=1; mx.google.com; arc=none
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=apevzner.com; s=google; t=1777304802; x=1777909602; darn=lists.linux.dev;
+        h=to:subject:message-id:date:from:mime-version:from:to:cc:subject
+         :date:message-id:reply-to;
+        bh=urOm1omSIgsuYHXM8KvuHJqqJFStWZEf1vE9gKjoaCs=;
+        b=PXARFWvp32Shke8numjfMLqLMqk0OlZOiqn5AA3RXw+M3XPs9NbC1m4of6lFZCkWhv
+         ENDPMZaJ+L/Ni2sxJcZXnNUc3MlXiVrA1mRMO9G4wQ8r4m2h7caQgeLeSrNnKSdCCebI
+         isrLyexbEVoj13AhG89x3Yg1eLhk3+KQQmxr4++pcZG0dj5WdHB4HQQ1dFH6Js3U/3sy
+         kwtj5dKUSgOIbOQsgM6SEl23F8LL5+8RFfJPizspY4FcllcJ+fVrVkppijUWMH2fUdll
+         ttjY6OGLNUdpCd62i4Lrmqlli92juiExXPzOtU3FkcQjjj5n+z9EXP1QnmgkBhzPOvKx
+         GVHw==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
-        d=1e100.net; s=20251104; t=1776856791; x=1777461591;
-        h=content-transfer-encoding:autocrypt:subject:from:to
-         :content-language:user-agent:mime-version:date:message-id:x-gm-gg
+        d=1e100.net; s=20251104; t=1777304802; x=1777909602;
+        h=to:subject:message-id:date:from:mime-version:x-gm-gg
          :x-gm-message-state:from:to:cc:subject:date:message-id:reply-to;
-        bh=RppxsXX1SMP4/A4f+oakK4Qfq34XECBr74aIeAqdUL8=;
-        b=CAqnp340BYlSVjxoyA4jnPFs5q2vqcqyVYHCu6E6Eowh8ckzHlvlqogSV0UUnDkNK1
-         if99PNYI0AyThUV6Gmxrg6lzscIO5RKfvRNYGEFnnBYEZsNmdCh5hY3o8hUi5iSM8feT
-         zfbmc0btbzvBYFLPdUE+o/P2UG4qk33FDXlMWUn4mwlAo3w3zqKGqruhldSkgKQdR43J
-         c2QT0x5ruEfzCwnrKSWYRCrmfXPDiJ27JAcquyQ4LzCaUFOBkrYksDk0QhhAKOA0db63
-         2H/ycogfNZj+4D3Qvd43N2q/pNbIzb/AW6/rpF+6tlNAgsFqlk3LxyR5NEYOE1eC6CV5
-         M99g==
-X-Gm-Message-State: AOJu0YzcbXeW3I63flQs3gIxCJIdsz3SngSfuCj5Xq6ZBW9hTa7iTsR+
-	RaBOQOSMesUmaVgVz+YLCWEuFoauANdjjmurdOYlL2sHV+YU+JKh/jAHsn01UgRhgBuPAdYMLvv
-	VZv6MKWXr0856SMqpUnuaKQjTt4b3bG95ymG8cIKguMziiR4P5k39mjCwtFgZEBJA3MDNWkZRUQ
-	y6qwFb02yQSF/7tPcSrNNK9DffgBPjnvFo6aWnjg4YIFYZYXEMJoETjYNTjDF/
-X-Gm-Gg: AeBDiet6l5HLEHOW0L4LZZGaPiUszJX8amSTUw7vLyFEIDpxFPahxman3XryPRF/BX4
-	/ImzvBb3c2OUznpjlbkYjiUtUGEzZIFt9iMFvzCLvS4Ep+SzBDZkCFEtTmhQq8ntypJOX8QSvIo
-	UXjHuVt+CDKPWiz+VJmHbQk9LBLjRX2XBGNxGVDeC5bxSX3Zlqgt/KxOKj5ybeTFvGQJgEGucOo
-	R/fzQ9lI4ZpGOfEmx/V3szI27gktWTYwDBQdTXGOyo45uxTfRGpEA7KVC9skO02Y+bS6X2onJiq
-	enJR+mFDnXsDqf0pYvav09EO5kLRP2+/50Y8sXjzmXdsjGS8S9kHY34WRBhlZ39TTxiNN94RW10
-	TaMC11DRLvFCw6IA9SwMw
-X-Received: by 2002:a17:903:110c:b0:2b4:5e7e:34ce with SMTP id d9443c01a7336-2b5f9fb90efmr224679055ad.39.1776856791594;
-        Wed, 22 Apr 2026 04:19:51 -0700 (PDT)
-X-Received: by 2002:a17:903:110c:b0:2b4:5e7e:34ce with SMTP id d9443c01a7336-2b5f9fb90efmr224678685ad.39.1776856790944;
-        Wed, 22 Apr 2026 04:19:50 -0700 (PDT)
-Received: from [10.43.3.35] ([213.175.46.86])
-        by smtp.gmail.com with ESMTPSA id d9443c01a7336-2b5faa33486sm196581985ad.33.2026.04.22.04.19.48
-        for <printing-architecture@lists.linux.dev>
-        (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
-        Wed, 22 Apr 2026 04:19:49 -0700 (PDT)
-Message-ID: <706917c4-28d5-4c84-ae87-c63c04eda935@redhat.com>
-Date: Wed, 22 Apr 2026 13:19:45 +0200
+        bh=urOm1omSIgsuYHXM8KvuHJqqJFStWZEf1vE9gKjoaCs=;
+        b=nt327ovv/iZ7dasMN2oTadreGIQtY8rlpQJ5NCdE+8sqS3TB9I8h7LC9s69Qe1PJhH
+         smysRpfv7Ynbc7zyp/gja3JVLKenUC3M/vqJXkmBCh0pQ6Vj9Q+MSQdHPT6mLops76CN
+         S52iQ5iONl2Er9iUKuYImlQm3ePR66yRGoWSQxK4xqP30Y3iVY4stCPUXMJU/MXheSd3
+         5V3/bHkEr+ciMFePRVhnClMc7+gYIWF06FPvzRDWN24jKZW7L51+Jdl82caHWCsSQCDw
+         ckh1I9iCNd5tciApcYalJNmCADGClntl2V4DEEZ3usE7DYwy6AzaZ1SWeGpF86L3cNHz
+         Vyew==
+X-Gm-Message-State: AOJu0YxMVjsjI/as7cLiVptvmZBCTabcu5NLhK2InVX+4Tohj9+79klI
+	5hNvtVkTUhgh+q4K2D8AT5ACBCGpWLxTwmoE91HW00Rv1A6oGvBq6OtYc/Bv8TXwu18Dac+Rhod
+	LX4tWfO4yuSo9bfZbLQ0ozbuiT6UFtYKfr8MA6aBADlYkd3Ydtbbwkvcu9w==
+X-Gm-Gg: AeBDieucF1Ad3XQZXMWAnAqdCb7gMMJ9B7y+Eikz4GTH7y+Qb9VlA4NLY/DLuFH45HV
+	1EOzoFnM1Jk1aB5YDcV2nRkr22W4yFPSxrNy0MHf0xcVNrb8BOoLh1jtVzX5ZpKVXUgP1i534Ec
+	ihQZDyptjP07W+N2Uh+EEDuuVnBNgF9UsGq0RSjzdqPZkzLeu+b5HtDSTtF96l8kDs3HUDXReYw
+	3EX9apvs+ueDv/n85Ar6ToCqtKOp7P3ChJx5vZx+V+6hagU1EIuWaLuKBONqunF8sQxhZOdrVJg
+	4AEuClHafnSGPhU=
+X-Received: by 2002:a05:6122:4696:b0:56a:9841:9f81 with SMTP id
+ 71dfb90a1353d-56fa583840emr17449324e0c.6.1777304790802; Mon, 27 Apr 2026
+ 08:46:30 -0700 (PDT)
 Precedence: bulk
 X-Mailing-List: printing-architecture@lists.linux.dev
 List-Id: <printing-architecture.lists.linux.dev>
 List-Subscribe: <mailto:printing-architecture+subscribe@lists.linux.dev>
 List-Unsubscribe: <mailto:printing-architecture+unsubscribe@lists.linux.dev>
 MIME-Version: 1.0
-User-Agent: Mozilla Thunderbird
+From: Alexander Pevzner <pzz@apevzner.com>
+Date: Mon, 27 Apr 2026 18:46:18 +0300
+X-Gm-Features: AVHnY4ITthxK2WIg645JFFkI9_HNlkceodEb9hc51P3qGYazVBibSg3gmQi2aPY
+Message-ID: <CAGONzdi8z_1es_fcmBWMQc5Eomj0SG6KFt1H_YjmHW4pRH=Fjw@mail.gmail.com>
+Subject: ipp-usb 0.9.32 is released
 To: OpenPrinting <printing-architecture@lists.linux.dev>
-From: Zdenek Dohnal <zdohnal@redhat.com>
-Subject: CUPS 2.4.18 is released!
-Autocrypt: addr=zdohnal@redhat.com; keydata=
- xjMEYfKEjRYJKwYBBAHaRw8BAQdAJggn9NALyWqrgrFGPJ9RvPb7wYbskxKRKQcLv+8HpbrN
- QVpkZW5layBEb2huYWwgKFRoZSBvbGQgNEQ0MjI3RDcga2V5IHJldm9rZWQpIDx6ZG9obmFs
- QHJlZGhhdC5jb20+wpQEExYKADwWIQRwgqClCi6SZA84gODkUi3MmyRv9wUCYfKEjQIbAwUL
- CQgHAgMiAgEGFQoJCAsCBBYCAwECHgcCF4AACgkQ5FItzJskb/fbUQEAm6R78JoZSIOpu68g
- tUUp1qbfDdsfoQkbdyfws/myB6gA/A6/9QiIk50DNCmBTisZk5CFP51YNvwnyxafmE3cDn8G
- zjgEYfKEjRIKKwYBBAGXVQEFAQEHQF6Qgj5UQqUdvqvnDqygQ6Vm59nRGHbPVDTwendtM5cC
- AwEIB8J4BBgWCgAgFiEEcIKgpQoukmQPOIDg5FItzJskb/cFAmHyhI0CGwwACgkQ5FItzJsk
- b/e2CwD/SyRi/I5Il5XY5VXEL/eBsnNvvtaO0T10V4/vBMiDb+sBAK3YmRl6WStfRiEvMXQv
- OhMT+sEjx6ufQXkuPeXHvrgK
-X-Mimecast-Spam-Score: 0
-X-Mimecast-MFC-PROC-ID: p4wQbY2A3yV72K7ltZKWQ0Ob_cE5bB0rfAP0LUfGw8g_1776856792
-X-Mimecast-Originator: redhat.com
-Content-Language: en-US
-Content-Type: text/plain; charset=UTF-8; format=flowed
-Content-Transfer-Encoding: 7bit
+Content-Type: text/plain; charset="UTF-8"
 
-Hi all!
+Hi,
 
-The new release 2.4.17 contains hotfix after CVE-2026-27447 fix:
+ipp-usb 0.9.32 is now available.
 
-  * Fixed cupsd crash if user does not exist (Issue #1555
-    <https://github.com/OpenPrinting/cups/issues/1555>)
+This version adds workaround for "Pantum BP5100DN series" initialization
+failure (some other devices may also be affected).
 
-I'm sorry for inconvenience and enjoy!
+Starting with version 0.9.31, ipp-usb requires printers to return
+non-empty Manufacturer, ProductName, and SerialNumber strings. These
+strings are essential for quirks, state files, and per-device logging,
+as they serve as binding keys.
 
+For some devices (e.g., Xerox B205/B210/B215), missing strings may
+indicate improper firmware initialization and require a reset.
 
--- 
-Zdenek Dohnal
-Senior Software Engineer
-Red Hat, BRQ-TPBC
+However, other devices -- notably the Pantum BP5100DN series -- may fail
+to return a string descriptor on the first attempt. Investigation shows
+that the request for language IDs (implicitly performed by
+libusb_get_string_descriptor_ascii) returns a malformed packet, causing
+libusb to fail with LIBUSB_ERROR_IO.
 
+As a workaround, we retry the operation several times before giving up.
+
+--
+
+        Wishes, Alexander Pevzner (pzz@apevzner.com)
