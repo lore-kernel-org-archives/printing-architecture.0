@@ -1,83 +1,66 @@
-Received: from smtp2.osuosl.org (smtp2.osuosl.org [140.211.166.133])
-	(using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
+Received: from mail-wm1-f53.google.com (mail-wm1-f53.google.com [209.85.128.53])
+	(using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
 	(No client certificate requested)
-	by smtp.subspace.kernel.org (Postfix) with ESMTPS id 5F14C3FD12E
-	for <printing-architecture@lists.linux-foundation.org>; Mon, 15 Jun 2026 14:51:42 +0000 (UTC)
-Authentication-Results: smtp.subspace.kernel.org; arc=none smtp.client-ip=140.211.166.133
+	by smtp.subspace.kernel.org (Postfix) with ESMTPS id 08AD52E7631
+	for <printing-architecture@lists.linux.dev>; Mon, 15 Jun 2026 21:47:04 +0000 (UTC)
+Authentication-Results: smtp.subspace.kernel.org; arc=none smtp.client-ip=209.85.128.53
 ARC-Seal:i=1; a=rsa-sha256; d=subspace.kernel.org; s=arc-20240116;
-	t=1781535105; cv=none; b=bl5eQIQ2kqfcUSYaC+6MFAkdMObogFEcPRQFh1FG23/tq04cS1gyHI12x9pJTd/vLR/HzaHqfEeqplc2Y1qpsrpWzfW28xyD+1dAtRPSCMhc3U1GwjfkJZ9XXU872MgFEUZy3jYbQNlKxZ4ZS5EyLxglVQEeI4ClfC91cpM+bhI=
+	t=1781560026; cv=none; b=YmsJoytOaANpCzmMmNziEi9QNdRv2S/IJRS8UWTWwOxD19292SE08ieIGj2GyWmf/VEdaE8xqebPlTosWHTdQ2XjBhYx+xyKgXPLGbVdj8MQKRz2RbTAgyyc5c6SIHyBt4F5fyRuP3F7tlGpaTYgAHaw7qJEmlbk0IBVhrhDnYo=
 ARC-Message-Signature:i=1; a=rsa-sha256; d=subspace.kernel.org;
-	s=arc-20240116; t=1781535105; c=relaxed/simple;
-	bh=peu4Ld7a8jyAQTtKW6nRFK0sSgGWS89WQ5oS2DyF4A0=;
-	h=Message-ID:Date:MIME-Version:To:From:Subject:Content-Type; b=YCnVIcPe6881lHUk5sdQ+fRUwqHbmuMXt+SsGslhGX9MU6X/y7ovx5JLJIPNUATzZMb7H+YWgF2lMyEFcW6nfYFq6ho8VFrAbhXAm5amtJCu1m3NW1E0LUMH6u2k9xGIXsl7toxnD8oA5GO4gS6/Fw7Aq89RiE0ZMAAL5+fbvdw=
-ARC-Authentication-Results:i=1; smtp.subspace.kernel.org; dkim=pass (2048-bit key) header.d=apevzner.com header.i=@apevzner.com header.b=GY3elF6C; arc=none smtp.client-ip=140.211.166.133
+	s=arc-20240116; t=1781560026; c=relaxed/simple;
+	bh=7rX0uyHyOCHuWJaL8U/6ubHjsfFH5DEMvGU54XlMR+U=;
+	h=Message-ID:Date:MIME-Version:To:From:Subject:Content-Type; b=PN81UA986O2ikZZyx98cYmn1FPOp5dX3PZXhUz/UEGFbM8fETszXwbUs1OR1EwagrUYl4piKUixOFHcJ8e9gxDpQdReAExOuVMCBrXoRQiPb3wLW58wHJ0EBpQS4iUi+1xWDpLOYmIPbucTgCV1NeoZYrH6UFeHAphULhzD8PN8=
+ARC-Authentication-Results:i=1; smtp.subspace.kernel.org; dmarc=pass (p=none dis=none) header.from=gmail.com; spf=pass smtp.mailfrom=gmail.com; dkim=pass (2048-bit key) header.d=gmail.com header.i=@gmail.com header.b=X/QSfSsH; arc=none smtp.client-ip=209.85.128.53
+Authentication-Results: smtp.subspace.kernel.org; dmarc=pass (p=none dis=none) header.from=gmail.com
+Authentication-Results: smtp.subspace.kernel.org; spf=pass smtp.mailfrom=gmail.com
 Authentication-Results: smtp.subspace.kernel.org;
-	dkim=pass (2048-bit key) header.d=apevzner.com header.i=@apevzner.com header.b="GY3elF6C"
-Received: from localhost (localhost [127.0.0.1])
-	by smtp2.osuosl.org (Postfix) with ESMTP id CF3AD411C7
-	for <printing-architecture@lists.linux-foundation.org>; Mon, 15 Jun 2026 14:51:42 +0000 (UTC)
-X-Virus-Scanned: amavis at osuosl.org
-X-Spam-Flag: NO
-X-Spam-Score: -2.1
-X-Spam-Level:
-Received: from smtp2.osuosl.org ([127.0.0.1])
- by localhost (smtp2.osuosl.org [127.0.0.1]) (amavis, port 10024) with ESMTP
- id GxQviYum2FdZ for <printing-architecture@lists.linux-foundation.org>;
- Mon, 15 Jun 2026 14:51:42 +0000 (UTC)
-Received-SPF: Pass (mailfrom) identity=mailfrom; client-ip=2a00:1450:4864:20::12f; helo=mail-lf1-x12f.google.com; envelope-from=pzz@apevzner.com; receiver=<UNKNOWN> 
-DMARC-Filter: OpenDMARC Filter v1.4.2 smtp2.osuosl.org D9CDA40291
-Authentication-Results: smtp2.osuosl.org; dmarc=none (p=none dis=none) header.from=apevzner.com
-DKIM-Filter: OpenDKIM Filter v2.11.0 smtp2.osuosl.org D9CDA40291
-Authentication-Results: smtp2.osuosl.org;
-	dkim=pass (2048-bit key, unprotected) header.d=apevzner.com header.i=@apevzner.com header.a=rsa-sha256 header.s=google header.b=GY3elF6C
-Received: from mail-lf1-x12f.google.com (mail-lf1-x12f.google.com [IPv6:2a00:1450:4864:20::12f])
-	by smtp2.osuosl.org (Postfix) with ESMTPS id D9CDA40291
-	for <printing-architecture@lists.linux-foundation.org>; Mon, 15 Jun 2026 14:51:40 +0000 (UTC)
-Received: by mail-lf1-x12f.google.com with SMTP id 2adb3069b0e04-5aa2c25c632so3499648e87.1
-        for <printing-architecture@lists.linux-foundation.org>; Mon, 15 Jun 2026 07:51:40 -0700 (PDT)
+	dkim=pass (2048-bit key) header.d=gmail.com header.i=@gmail.com header.b="X/QSfSsH"
+Received: by mail-wm1-f53.google.com with SMTP id 5b1f17b1804b1-490b4a8e28bso27534395e9.1
+        for <printing-architecture@lists.linux.dev>; Mon, 15 Jun 2026 14:47:04 -0700 (PDT)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
-        d=apevzner.com; s=google; t=1781535098; x=1782139898; darn=lists.linux-foundation.org;
-        h=content-transfer-encoding:subject:from:content-language:to
-         :user-agent:mime-version:date:message-id:from:to:cc:subject:date
+        d=gmail.com; s=20251104; t=1781560023; x=1782164823; darn=lists.linux.dev;
+        h=content-transfer-encoding:autocrypt:subject:from:content-language
+         :to:user-agent:mime-version:date:message-id:from:to:cc:subject:date
          :message-id:reply-to;
-        bh=Rr2RGiCUBD0BExnogKEUwMKz7aVnU78V8buMcwiYkeE=;
-        b=GY3elF6CjT5rEnDseM2aiy7BTDk7q59LdP/78R/QGRiyJ+46W2iSMq+zBHPLpFHcIi
-         LlyUX6iWSdyO+oX90q1PO0NtVP+VGXYu59D5Uiu5+3mzt77k1anDVPbKwf+hpVbpVMN/
-         gfnCXaScjn8lpVAwTe/4/E2zES4QQuo2vIja8l3T5WHM6sIonLayq6xuZOjaBVla9Il2
-         /s0xm/YTCgnGSIctIEIXa5Emy7Gf6uNiEvB+/VMyIbrFT92KQ9ijylpKDO6czVQ44q3l
-         5dQiHOt8Brt1keN1ii0H9PC+2bYSZWbR4APY0WJ3j7ewIgt6SqhbexR9kZ5+yLHOo4sz
-         K+Ww==
+        bh=LYsGrTJxk2kPRZ/jt7EHo1rSwyEFNYpnuvN7cGNwHfw=;
+        b=X/QSfSsHaP68MFfzMpXHe6M7DGNd9tedAl4Z469Cq4HmvLOdEetB7t31Hsov36UkDP
+         YRee0YZCN1DdyXhYlD6Rctq1UwLdUoSt7xBSoLCxYFcPjTLvPTrx61BXZDkaQ6pAdu5T
+         hb8XHvebwrom4pe9pcTO3BRmM7XHNcJj1OapNMpj+TmYPeVbl75yRvu4lGNLRR7T5n91
+         eZuSK9XZ7ABjjTu3HCdFcuSF1j7rQtKq6GATv6+9Wx9CMezTh82/eHDtAzfw6GLFl/q0
+         QeOAhrliW7ACZwEM5K+9XVaqNXrjNveRTP67tBYWU4UHXxoYexjet2LYNm65y7547T2H
+         1KLQ==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
-        d=1e100.net; s=20251104; t=1781535098; x=1782139898;
-        h=content-transfer-encoding:subject:from:content-language:to
-         :user-agent:mime-version:date:message-id:x-gm-gg:x-gm-message-state
-         :from:to:cc:subject:date:message-id:reply-to;
-        bh=Rr2RGiCUBD0BExnogKEUwMKz7aVnU78V8buMcwiYkeE=;
-        b=o8C9CZAEqIyycTdH5bQlCkDG1s0hED23aQOysc+UQ6k8DxNRlgub5TXLFh1akUFy5q
-         PXNPv4De+0o/4uLDGLN7qQ/fYmyzW4eIEEJ3upisWHQGBDdzzk3aopPIxKppNJuRSpTX
-         9hf8o3Hecznm503kKkXVHvLBF9XnX1Jegf+DiXnnLEb49PNDpTTTH2YkOfSTC4c1zrH4
-         J4YtmqWZZkoUR15qDXjwzY7nrf6gQdRUNNYw09t5iEJilnPynK9TxUajuaSwbToP0Meu
-         hYVYfo6JliLBQy7ik6pPppFELvWhoQUMsaJbLuBSbnYbnKLV/bYmD8ax7WxE3vnwe2Z9
-         8KnA==
-X-Gm-Message-State: AOJu0YygOtGboJXHJkeXUJisd3eSZKSKB7r8JSmXvzSgVLSuoZ0cob6x
-	VLFyBeiiN03Io+3PAZjsM5vTnIl3bjrA/OrGQ8V/r+L1PkhLAtWyWhVOqZJ9MpiJRVEQXz6PqgP
-	DEyxPjvI=
-X-Gm-Gg: Acq92OFstGy3reuSbHrLprE0XLa1KHX63+mp3Xk0ogDd9d+mu77T7aF/dlzycbSRBsv
-	Wo03I8Eq0HUoD5Z1xEV+oclpKhfyUk0nDf8C9A3uXYypsioznaNlMMgzXx0mmQTSEe6Qj1E2JD6
-	c4sWt1hlUhs2/vcG2LY6XEceC8+S3UjHgsszD7UWELtgb/FTqN9nLE6ZjzmzYd67TCChY9Fn5pM
-	xrj9nXMzHizPi6TxJE9rZTZP98bK/wjq/mB5e82LM5/9mZ/yimOuu78cYxtfr8VnC99hiKid/Hk
-	rTMRAGYemeGUHpVBpbNsNhz9OvizrAZSA1rxv4TnFtnt3MfAupmbpiu1+fKXV+6LP9iDfOwXmIN
-	HQq6Wv4Xn6KtTP+qV1SR12w0Xwhmm76Sx+XEimeNDfvKpyEvtmno8XNfL0y/Od40kjPFmQ5eEWR
-	LjW9/9bscOyNg1G8OHWY7FnqkNTtv/ATARModskK/P7xriZIEXA0ZadvdI06s=
-X-Received: by 2002:a05:6512:6208:b0:5aa:5ef9:a33 with SMTP id 2adb3069b0e04-5ad30dc3180mr2736797e87.25.1781535097744;
-        Mon, 15 Jun 2026 07:51:37 -0700 (PDT)
-Received: from [192.168.0.6] ([46.188.9.40])
-        by smtp.googlemail.com with ESMTPSA id 2adb3069b0e04-5ad2e1b5031sm2851375e87.79.2026.06.15.07.51.37
-        for <printing-architecture@lists.linux-foundation.org>
+        d=1e100.net; s=20251104; t=1781560023; x=1782164823;
+        h=content-transfer-encoding:autocrypt:subject:from:content-language
+         :to:user-agent:mime-version:date:message-id:x-gm-gg
+         :x-gm-message-state:from:to:cc:subject:date:message-id:reply-to;
+        bh=LYsGrTJxk2kPRZ/jt7EHo1rSwyEFNYpnuvN7cGNwHfw=;
+        b=aIRXmThkf/Ld0BSy6H86h4DRrA9kikrPjONmWURP/yLsPTwKTIGlo0u5v44IPTXItn
+         SvM1ciysrZfyoTU5Jb0TG/XoLtkDcieP8DyAl9Bd4Rk5wd9Pz4qVZzdkoZVkTkH2nf+w
+         Klp+dpUs17VrXRDJIKskGc7unZWj0M7iUftYSYiAQiuuj4irsO1Kp2sEpBF7sM+bXi5/
+         fxWA1PDyB6A6GvKNWrkn88TF0jqtL+3xTba+Jzmh3bteHV4olvInHfusUjowAl/DdKk2
+         VGimOSHfKXfF7Zcpr9xm8hLAiQNqYyC8MI4u6coXjqN63jMv632FY/0coZO/dyJLHVOo
+         VhkA==
+X-Gm-Message-State: AOJu0YxU0yrTpZf5E+UNfA4MztQH4oQ/d6XmyCq5VLvjfGNGE3iTvGTZ
+	UeFH/tZQcmumtD4tmx3Y4p6UTZTa7tITn6vYOZeEv1YxqhhQraBilFlVfGj6Kw==
+X-Gm-Gg: Acq92OEBheg68hOAkHtiUWCyVrRMUtcwbVhBHO/0h24lQl88Sdzn2b++tNZpd/sOuKs
+	3mH3EdQhwkmcMWPKPkg7HXL41R1dgga/YgDs7fSyejlrfwCjPsx4NJ1hT7VbSk0s9QORqvymx8L
+	GbUHSQrfqQr//WNtNd7u6M1nCBwmh1eatt9c/ZxsIQzB64pg17rQgRqiVa6pWD/+VHtSYtp0Zvf
+	+4SCOLmB5ghHx6EBB4itwh15oGyDwLgxSgJ9B8hrAGm1FpGbshgCncm6Wp2oOrCAPBW8MELBvMA
+	jF9TZfEkU+Ss/NH5engOEescNgtxEw0UCsWVwLrqkx8imeb8znVuRWoY6aXyClMpAinaaSfPD9i
+	c6yReEgjJR1w/7NH8cXPot35wCWBqV6KBaV6s8yRTnppLtxCavbTXEzD2yJkSJqWUhIWDKHgmmE
+	azL7Rn2h3Ia5u5YOwn+/92eF2kdykkwx7eMZt1Ra0wx7r/P5NhmlF2SJwu8N7pTcFC6cnvngOhf
+	DhGUpxPGEGSu/BnrWDblL7QnUm37wMFrD5wL+DMTVhooA9l5Ijh/EkA2HM4BlcgYUfD5l+EG3Ft
+	RqCncn4FNQ==
+X-Received: by 2002:a05:600c:a15:b0:490:bcc1:4edb with SMTP id 5b1f17b1804b1-4922ffbe135mr11888005e9.27.1781560023312;
+        Mon, 15 Jun 2026 14:47:03 -0700 (PDT)
+Received: from ?IPV6:2a02:8388:8cb4:cb7c:d34d:9898:b592:199d? (2a02-8388-8cb4-cb7c-d34d-9898-b592-199d.cable.dynamic.v6.surfer.at. [2a02:8388:8cb4:cb7c:d34d:9898:b592:199d])
+        by smtp.gmail.com with ESMTPSA id ffacd0b85a97d-4606f2c473bsm41954984f8f.28.2026.06.15.14.47.02
+        for <printing-architecture@lists.linux.dev>
         (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
-        Mon, 15 Jun 2026 07:51:37 -0700 (PDT)
-Message-ID: <d4e5312d-b047-4392-96f0-4bb1e17c2312@apevzner.com>
-Date: Mon, 15 Jun 2026 17:51:36 +0300
+        Mon, 15 Jun 2026 14:47:02 -0700 (PDT)
+Message-ID: <1afc196c-d7cd-4484-b7cb-9ec434a85d01@gmail.com>
+Date: Mon, 15 Jun 2026 23:47:01 +0200
 Precedence: bulk
 X-Mailing-List: printing-architecture@lists.linux.dev
 List-Id: <printing-architecture.lists.linux.dev>
@@ -85,44 +68,58 @@ List-Subscribe: <mailto:printing-architecture+subscribe@lists.linux.dev>
 List-Unsubscribe: <mailto:printing-architecture+unsubscribe@lists.linux.dev>
 MIME-Version: 1.0
 User-Agent: Mozilla Thunderbird
-To: Open Printing <printing-architecture@lists.linux-foundation.org>
-Content-Language: en-US
-From: Alexander Pevzner <pzz@apevzner.com>
-Subject: ipp-usb 0.9.34
+To: printing-architecture@lists.linux.dev
+Content-Language: en-US, de-DE
+From: Armin Felder <armin.felder@gmail.com>
+Subject: handling of printer-more-info in CUPS
+Autocrypt: addr=armin.felder@gmail.com; keydata=
+ xsBNBFZDBZ8BCADf3RKYMuDmtictpoInQ26wCIRUcRFgI/8NeVtZGteBLfdLNobXU9gSX5kZ
+ kCU9ZtfmT0GQ+sGNgvq69X8JrrchpwowonwCwaaQpZ5VlElzkXPTJdXbmHfKljQPVeri2HTz
+ Rc54/8WXx3y/mj0P724uIE0GEvt58eZ7UkMQdrzh7LS61NR2fQZrDX4f3IrAcush60JftWUq
+ SWAm4lnbbJ5NX8Gb4z0+v0URtJ8oXI+zpEtJ2xUv60O9ME1/YTQ0rCT1g16Z2Gb6ZQzRK3M/
+ mWMPAffn6JKfmQZWprPU2MR1nRcD0ocl1S6X23+Ch+kBBk/VQLBDCY0D15JiWsrqTrbzABEB
+ AAHNJUFybWluIEZlbGRlciA8YXJtaW4uZmVsZGVyQGdtYWlsLmNvbT7CwHcEEwEIACEFAllB
+ M8oCGwMFCwkIBwIGFQgJCgsCBBYCAwECHgECF4AACgkQVv6ymGEcC7QxSwf/Z/aTWD+fIIDo
+ /MMYjk4wCevt7rPd187XUF1eZmAbQcmgfFn4+iJgSkKo+fy0DXdL15Tw3SBIgmK1DfI4KMOt
+ 02Le1tbjvPxBf5Smp3rxvdQmOYw/DPhkABFOZ7odprpqBP51lo8FoR7/c5QjCdzEVy2GcSOi
+ BxCNAe7zJiAyrAEqdFgYP0XC+6sDZLhJ7GZlBw9cRR6z0j2BWu8ymd83Ub/EqsNyLy20vAZJ
+ 7sQAdSHosnm1cJyV2KLu3f2/ne/V0YxQ99BBWFiiBsCxyzx15vRvCVmAdbrOoVFMp4N4c5BH
+ 7AVeNXc3O8zvBAQ/8YkzNXiDSCQPg47N7tqefFkJZs7ATQRWQwWfAQgAuSLc/8HqE8jWgzhq
+ eDJUmhvTIwBDjV/zGA6cnUxn2U0nWn4KT8ouXeqIjR7zwVUJ+WIANzdJp0HQerTLuMGd1gtD
+ xLxJ8w7yb3IF357lU5O7T9YSzUojHNJ8hE6d8h79U8q3igf29Shk6/7iPcdJvPGWEhudwBld
+ dbcIf2eWhGZH9hM3Ffj0rRp0kOBHcHDAuB0B+1Xuv0hwqn2mLSiwB7fVetLkYe0fLRLHlziS
+ j5OCgM6/pL/6rpqwZVyXB72FXGS9HFdzomiLOWipCciVOAAQbvR3CJ2iLFQ/MGqv6beRsR/k
+ d9ZNuLXmW0FE4ttkXtedfJrPdhk9xzfNFx4KTQARAQABwsBfBBgBCAAJBQJWQwWfAhsMAAoJ
+ EFb+sphhHAu054gH/3dvXgWSZPdmDJ0T2513qWLPUGZO+9QnCKWJv30zWAioNk4sPxl1oSIk
+ /jnBRGzIyKYLk+puhS0OcfESy439Yje0/gt+v4sPshEZFN5gnxHptJmi8PTu2uF2NTeDlq2s
+ d0dNQF6ycKS7fp415qiivo3kK8chlKFKRz9HJ5rcbEFrnbmrlqXLydOM+VYws1EQrr1m+4LU
+ xfQR0NRN+Bk1gdr9czxXagbVNQS83/XOZFFmcJpM6C5UJfQTUYAjRMvNaqaqzMpnYNSUlj9y
+ AJTsCb6LEZTkQBh1kVECvS7Ax6RZ8LgmcHnk+OCJ/32yIJ+5TkwVH6urBkWAGhf3clvtBWc=
 Content-Type: text/plain; charset=UTF-8; format=flowed
 Content-Transfer-Encoding: 8bit
 
 Hi,
 
-ipp-usb version 0.9.34 is now available.
+my printer app exposes
 
-This version improves support of the HP LaserJet M406 devices.
+printer-more-info (uri) =http://127.0.0.1:8142/Brother_TD-2020_(USB)/
 
-1. USB configuration mismatch workaround
+to cups, but in the web interface, I can not find any link pointing to 
+this uri.
 
-Some HP LaserJet M406 devices return a current USB configuration value 
-that doesn’t match the bConfigurationValue of any existing USB 
-configuration.
+I think this is a bit confusing for users, as they only see/use the 
+operating systems printer settings dialog,
+which points to http://localhost:631 , but from there they do not get to 
+the printers own page,
+  where may settings/information not exposed via IPP (always on, 
+reconfiguration of generic buttons, phonebook etc.) are offered.
 
-As a workaround, ipp-usb now assumes that if only one configuration 
-exists, it is the current configuration -- regardless of its 
-bConfigurationValue.
+I would suggest either:
+print dialog -> cups webpage -> printer webpage
 
-2. New disable-scan quirk (applied to HP LaserJet M406)
+print dialog : -> printer webpage
+                       : -> cups webpage
 
-This device appears on USB well before it is fully initialized, 
-requiring the existing init-retry-partial quirk (which repeats 
-initialization attempts until all device parts are ready).
-
-However, the device also reports scanner availability via its IPP-USB 
-basic capabilities -- even though the scanner is not actually present.
-
-This previously caused ipp-usb to enter an infinite initialization loop 
-while waiting for a scanner that never becomes ready.
-
-The newly added disable-scan quirk resolves this issue.
-
--- 
-
-	Wishes, Alexander Pevzner (pzz@apevzner.com)
+BR
+Armin
 
