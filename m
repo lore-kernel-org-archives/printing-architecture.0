@@ -1,116 +1,119 @@
-Received: from mail.msweet.org (mail.msweet.org [173.255.209.91])
+Received: from smtp2.osuosl.org (smtp2.osuosl.org [140.211.166.133])
 	(using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
 	(No client certificate requested)
-	by smtp.subspace.kernel.org (Postfix) with ESMTPS id 9EDB22D46A1
-	for <printing-architecture@lists.linux.dev>; Sat, 18 Jul 2026 19:20:09 +0000 (UTC)
-Authentication-Results: smtp.subspace.kernel.org; arc=none smtp.client-ip=173.255.209.91
+	by smtp.subspace.kernel.org (Postfix) with ESMTPS id E4F8B3D9DDF
+	for <printing-architecture@lists.linux-foundation.org>; Thu, 30 Jul 2026 10:20:59 +0000 (UTC)
+Authentication-Results: smtp.subspace.kernel.org; arc=none smtp.client-ip=140.211.166.133
 ARC-Seal:i=1; a=rsa-sha256; d=subspace.kernel.org; s=arc-20240116;
-	t=1784402410; cv=none; b=CL0UNDXQLSyCVX5B+5a+/vc7QOSgalqqJvqKVZkv4TBjOMVoTUTbxbpfBARB3VhXwDTKhPO3m7lN3GSHex94HJ7m0Zc8z2dp3zSwUFtaNtqBIkHBFYdKIIPFlPvLOwjN7EWxW5OfYq6bfkC7o26H8ZpFBuGoaK9xJwQROfRiAiA=
+	t=1785406861; cv=none; b=K0rXrJacXZRJDQwnenWs5Wn38u92bQgsCD8dGRqyBLfZ8quuhh8MomLC6ZeEm8L6LMx8YgV+g+R+T5zLxeVGZeWdFtZFKNUYmzbrfcnKZp9SZ2dVl6iBrwfSN+rQP6twhLVaZm0OYEUo9C29RE4NCU1rxZBe9FLLfMCdXiOf+Kg=
 ARC-Message-Signature:i=1; a=rsa-sha256; d=subspace.kernel.org;
-	s=arc-20240116; t=1784402410; c=relaxed/simple;
-	bh=9oM6Uu6Ar+9Pa5F/24vmMbn9cBvKfEL7kMmFD6xXKqQ=;
-	h=Content-Type:Mime-Version:Subject:From:In-Reply-To:Date:Cc:
-	 Message-Id:References:To; b=OWewMTx1yfKyNTVmkk7taGg4iLGs/WCG9y4CoI2r3s43wdI4emHeDtaT1vnfmw8xCclRutGSi3a9GizbJhcOIT077VxRjji263WTr8AjdyB9kE8eXkFBObrDWrIqYORIWGHJrjuebMIJ/7sLJUqXNIT7niMqYTHbRFkC2jxHsv0=
-ARC-Authentication-Results:i=1; smtp.subspace.kernel.org; dmarc=pass (p=quarantine dis=none) header.from=msweet.org; spf=pass smtp.mailfrom=msweet.org; dkim=pass (1024-bit key) header.d=msweet.org header.i=@msweet.org header.b=BN9BQe2/; arc=none smtp.client-ip=173.255.209.91
-Authentication-Results: smtp.subspace.kernel.org; dmarc=pass (p=quarantine dis=none) header.from=msweet.org
-Authentication-Results: smtp.subspace.kernel.org; spf=pass smtp.mailfrom=msweet.org
+	s=arc-20240116; t=1785406861; c=relaxed/simple;
+	bh=Yp/NGacF33RbCxs4v6FKztDvfnzdiJ8K3MfJEj+az2w=;
+	h=Message-ID:Date:MIME-Version:To:From:Subject:Content-Type; b=r5nJuvUSclVzPVLGynTKU0zP3a+ERyvMWJFVp3kVdj1pmdIljzsT1gyJv0cPixZ6bJZVAkbkY6iq+cr4bLACfhaf/2T++FFikpZ38zQ8mnzGdyTf9EOSB95hM5pH7QopDFHGLbR8x2FyUSJT/8VeHhWN3/KEdp6P7dnWiEKcaWY=
+ARC-Authentication-Results:i=1; smtp.subspace.kernel.org; dkim=pass (2048-bit key) header.d=apevzner.com header.i=@apevzner.com header.b=moHoPFwz; arc=none smtp.client-ip=140.211.166.133
 Authentication-Results: smtp.subspace.kernel.org;
-	dkim=pass (1024-bit key) header.d=msweet.org header.i=@msweet.org header.b="BN9BQe2/"
-Received: from smtpclient.apple (unknown [153.67.41.137])
-	(using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
-	(No client certificate requested)
-	by mail.msweet.org (Postfix) with ESMTPSA id 1FAE6803DC;
-	Sat, 18 Jul 2026 19:20:08 +0000 (UTC)
-DKIM-Filter: OpenDKIM Filter v2.11.0 mail.msweet.org 1FAE6803DC
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=msweet.org;
-	s=default; t=1784402408;
-	bh=9oM6Uu6Ar+9Pa5F/24vmMbn9cBvKfEL7kMmFD6xXKqQ=;
-	h=Subject:From:In-Reply-To:Date:Cc:References:To:From;
-	b=BN9BQe2/TRMclZDsHb07mWrfcSMZoKwshFhSEBh16UcJIDA07cBy4keBnPz1ob6oZ
-	 Z2LclvAOR2bVhJvgKzxZFBQjC23+7BWPxQba4cOR6m96XrlubxdRW6N5MtuXDrqZQP
-	 LkrXORlYuAT2JCSkJ325OkTeAcI94FR3fiF4kq3g=
-Content-Type: text/plain;
-	charset=utf-8
+	dkim=pass (2048-bit key) header.d=apevzner.com header.i=@apevzner.com header.b="moHoPFwz"
+Received: from localhost (localhost [127.0.0.1])
+	by smtp2.osuosl.org (Postfix) with ESMTP id 4A861401EE
+	for <printing-architecture@lists.linux-foundation.org>; Thu, 30 Jul 2026 10:20:59 +0000 (UTC)
+X-Virus-Scanned: amavis at osuosl.org
+X-Spam-Flag: NO
+X-Spam-Score: -2.1
+X-Spam-Level:
+Received: from smtp2.osuosl.org ([127.0.0.1])
+ by localhost (smtp2.osuosl.org [127.0.0.1]) (amavis, port 10024) with ESMTP
+ id guU75HA-omhz for <printing-architecture@lists.linux-foundation.org>;
+ Thu, 30 Jul 2026 10:20:58 +0000 (UTC)
+Received-SPF: Pass (mailfrom) identity=mailfrom; client-ip=2a00:1450:4864:20::134; helo=mail-lf1-x134.google.com; envelope-from=pzz@apevzner.com; receiver=<UNKNOWN> 
+DMARC-Filter: OpenDMARC Filter v1.4.2 smtp2.osuosl.org A9E9A40026
+Authentication-Results: smtp2.osuosl.org; dmarc=none (p=none dis=none) header.from=apevzner.com
+DKIM-Filter: OpenDKIM Filter v2.11.0 smtp2.osuosl.org A9E9A40026
+Authentication-Results: smtp2.osuosl.org;
+	dkim=pass (2048-bit key, unprotected) header.d=apevzner.com header.i=@apevzner.com header.a=rsa-sha256 header.s=google header.b=moHoPFwz
+Received: from mail-lf1-x134.google.com (mail-lf1-x134.google.com [IPv6:2a00:1450:4864:20::134])
+	by smtp2.osuosl.org (Postfix) with ESMTPS id A9E9A40026
+	for <printing-architecture@lists.linux-foundation.org>; Thu, 30 Jul 2026 10:20:56 +0000 (UTC)
+Received: by mail-lf1-x134.google.com with SMTP id 2adb3069b0e04-5b021916bd3so1869445e87.3
+        for <printing-architecture@lists.linux-foundation.org>; Thu, 30 Jul 2026 03:20:56 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=apevzner.com; s=google; t=1785406855; x=1786011655; darn=lists.linux-foundation.org;
+        h=content-transfer-encoding:content-type:subject:from
+         :content-language:to:user-agent:mime-version:date:message-id:from:to
+         :cc:subject:date:message-id:reply-to:content-type;
+        bh=BEkSbStHfuoLYOrmjbApGBPd19Lef5wNbbDexUefzYo=;
+        b=moHoPFwzDbxt+hbHhIWfbWehzI6vZvGMPASdR915ME1cBqC4VJ6RR630A91dqPk5cb
+         0j+hbmN60W4vEMqfHNMedadDybcMnArIQni1bdtWZpG1XTcahT3mPj6w0CezDZLsS5Db
+         tqmDeWzkdI4L8SQ7EMlKyrLBxTUii3v3gt4bLaV0QLwfN4QnmrD8DlRLgXvAEK2VVBng
+         KZdN5yIGmrbMjQhO2/beKe+YXISP87iIYm2jodHikyj94aDVmW1wakdJX7nU8qq4Mm6I
+         V8jbDX4BWX9pEyWu+bfRsDiMyFL4NXIHSs4KLfrbbnz1qLIqQgBAeONH/Q2bBz3L9MWT
+         wVfA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20251104; t=1785406855; x=1786011655;
+        h=content-transfer-encoding:content-type:subject:from
+         :content-language:to:user-agent:mime-version:date:message-id:x-gm-gg
+         :x-gm-message-state:from:to:cc:subject:date:message-id:reply-to
+         :content-type;
+        bh=BEkSbStHfuoLYOrmjbApGBPd19Lef5wNbbDexUefzYo=;
+        b=NBL+uBckVl34bgm5d8ouhMyLrP6b+dHVRNpBqzvv59NVyLz8YXZjAsScjS5MZcnzdn
+         Hd+tpbbJcSm1Xtm1v6NTbwCR6oQxFbFUxvHOYtkZ8TljxpxJggeD95SB8mEKlCpxoyQ4
+         +/xvtmASdHLppopqmLA6f8A3Oi9ugHMLnNmfRs/4ZWXo+gR/MqgFrG9yhEschbddH8Vt
+         19xCBIymFCDScW/ApARG8XGRsqyNf3q0+gE5/GKH1zLr+IvvHhmnYu6ROG1cWpwmnjdf
+         jwZuMTRbH6RVPEXKb9JyK6DxoSu05b6mJPy8wg4ZYlvdakPlRNt+Pl+D4BYdDmxGYm7H
+         VPew==
+X-Forwarded-Encrypted: i=1; AHgh+Rr35q9v9FUN7a+xFuyYodFkvQSErn/yGrLzutKWMh4RP/m2hRLbQ28lN3+Tv+me8PlOFcUg217um71FjPWpEVcHb/bQGrY=@lists.linux-foundation.org
+X-Gm-Message-State: AOJu0YwSZJiLt0ne3V8LIEdztRr8E/5n6q/PJY1Ibjerr0xumgnCR0JL
+	5MUPwoSFXbap0t7mYG2L2aNSLmeWLzvyBGyuh1JoD4XQnRzje60DKOInhuPyeJzGzbs=
+X-Gm-Gg: AR+sD12rRDf9b5nmLKPqMjm3+RokDFiUCwEqsnIk4puLqTqr030JhQLzKJxXNmFdxH8
+	3/BIMEA5mIv5grysmtiAgNLjJPPZSz+IRZJLKKiLBXsBc9lk8EHa+u/QVidaVDEGgxrKjQ2v9KR
+	Z19O5gRVuUafCXas5DNzz4eExtnsNNlG5I8nsUMtLpwXj8kQIodVvt4Cl8Q7JOihopNIQeToxe2
+	MA0VOVftCtNEKChE250Lod3Vd5d0yeMdRbAI2owt+PtTPLISUtJ83Xk6IyoSFrEPHpM7v3/aKIb
+	S67IkhDIRppqX8/iLZgnZ1m8k/EiD4X+uGnObc6o8hDcl9nkmastoAVAWj6J5zen9Z7LoXpC+gT
+	WNzK3nIswNqa3FMy1YRMJ3gYLaWngVpgzIVgeyJonfaZ4LuUKMFgH/K4U9ku3h+TXdwP5nOmv1g
+	WtadVSA9nPxsZn03aoJ1HF6/PAIgl29OXUCZAhJ6/LjZYkHU0jvLUIbp6Ln/mob5sw2+l3VwlVz
+	ziEcGb6E1Cb3al3b0pLsg==
+X-Received: by 2002:a05:6512:6884:20b0:5ae:b900:15b8 with SMTP id 2adb3069b0e04-5b2db387410mr226567e87.55.1785406854443;
+        Thu, 30 Jul 2026 03:20:54 -0700 (PDT)
+Received: from [10.193.236.173] ([94.25.172.223])
+        by smtp.googlemail.com with ESMTPSA id 2adb3069b0e04-5b2db94fe01sm252695e87.20.2026.07.30.03.20.53
+        (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
+        Thu, 30 Jul 2026 03:20:53 -0700 (PDT)
+Message-ID: <26d84e11-f319-4813-9e96-022201982868@apevzner.com>
+Date: Thu, 30 Jul 2026 13:20:32 +0300
 Precedence: bulk
 X-Mailing-List: printing-architecture@lists.linux.dev
 List-Id: <printing-architecture.lists.linux.dev>
 List-Subscribe: <mailto:printing-architecture+subscribe@lists.linux.dev>
 List-Unsubscribe: <mailto:printing-architecture+unsubscribe@lists.linux.dev>
-Mime-Version: 1.0 (Mac OS X Mail 16.0 \(3864.700.51.1.1\))
-Subject: Re: Exploring a universal production printing architecture
-From: Michael Sweet <msweet@msweet.org>
-In-Reply-To: <CAMk8RBYg_CMrbaQiXEmiKDkn-v7uFikGrshCXiqFjpYc7j=nbw@mail.gmail.com>
-Date: Sat, 18 Jul 2026 15:19:56 -0400
-Cc: printing-architecture@lists.linux.dev
-Content-Transfer-Encoding: quoted-printable
-Message-Id: <059507C1-47C3-4C00-A1CA-AED9BBC7B93A@msweet.org>
-References: <CAMk8RBYmD3ad5cANY+VSXMn01TZEyW0pS5Vn6zSOowFjZXxWwg@mail.gmail.com>
- <E82AE91D-DFFC-4598-B19B-6DF903D95165@msweet.org>
- <CAMk8RBYg_CMrbaQiXEmiKDkn-v7uFikGrshCXiqFjpYc7j=nbw@mail.gmail.com>
-To: Joshua Braddock - Queen City Print Shop <joshua@qcprints.net>
-X-Mailer: Apple Mail (2.3864.700.51.1.1)
+MIME-Version: 1.0
+User-Agent: Mozilla Thunderbird
+To: "sane-devel@alioth-lists.debian.net"
+ <sane-devel@alioth-lists.debian.net>,
+ Open Printing <printing-architecture@lists.linux-foundation.org>
+Content-Language: en-US
+From: Alexander Pevzner <pzz@apevzner.com>
+Subject: sane-airscan 0.99.38
+Content-Type: text/plain; charset=UTF-8; format=flowed
+Content-Transfer-Encoding: 7bit
 
-Joshua,
+Hi,
 
-> On Jul 18, 2026, at 11:34=E2=80=AFAM, Joshua Braddock - Queen City =
-Print Shop <joshua@qcprints.net> wrote:
-> ...
-> What I want to preserve is the output composed by the application
-> through its normal Print path. The logical production destination
-> would capture that submitted print content and create a persistent
-> held job from it. The underlying transport representation might be
-> PDF, PostScript, XPS, PWG Raster, or another standard format,
-> depending on the application and operating-system print path. The
-> important point is that the workflow receives what the application
-> submitted for printing rather than requiring the user to perform a
-> separate PDF export. The workflow could retain that original submitted
-> representation and, when necessary, create a normalized production
-> document for previewing, transformation, routing, or output. Any
-> normalization would be recorded as a derivative rather than silently
-> replacing the submitted source.
+sane-airscan version 0.99.38 is now available.
 
-For macOS or Linux, the standard output from an application is almost =
-always PDF.  The few that don't are specialized applications (shipping =
-and other label stuff, point of sale, etc.) or (if you are using a =
-PostScript printer with an Adobe application) PostScript.
+This is a bugfix release that addresses the following issues:
 
-For Windows everything ends up as XPS or (in the case of PostScript =
-printers and Adobe applications) PostScript.
+1. Fix assertion failure on invalid eSCL response: An invalid response 
+to a GET /eSCL/ScannerCapabilities request could cause the backend to 
+terminate on an assertion failure instead of gracefully returning an 
+appropriate error code.
 
-> ...
-> My corrected questions are:
->=20
-> - Is an IPP Infrastructure Printer, Printer Application, or another
-> existing IPP model the appropriate basis for a logical production
-> destination that is not initially bound to one output device?
+2. Fix use-after-free crash in device discovery: Under specific 
+conditions, a use-after-free error could trigger a SIGSEGV during device 
+discovery. This only occurs when a WS-Scan device returns an endpoint 
+URL using a domain name instead of an IP literal address (for example, 
+Pantum-41B931.local instead of 10.88.128.41). Currently, only Pantum 
+devices are known to exhibit this behavior (#404).
 
-Yes.
+-- 
 
-> - Can an operator-facing application hold a submitted job, modify its
-> production attributes, and then route or reproduce it against a
-> selected Printer while remaining within existing IPP semantics?
-
-IPP allows for this, and operator overrides get reflected in the =
-"xxx-actual" attributes.
-
-> - Could locally installed printers, shared queues, and remote systems
-> running supported native drivers all be represented as output
-> destinations behind that workflow?
-
-Yes.
-
-> - Is there an existing open-source implementation that combines these
-> concepts into a mixed-vendor production console rather than presenting
-> them as unrelated individual device queues?
-
-I am not aware of one.
-
-> - If the standards already express nearly all of this, is the missing
-> piece primarily a reference workflow implementation and
-> production-oriented operator interface?
-
-Yes.
-
-________________________
-Michael Sweet
+	Wishes, Alexander Pevzner (pzz@apevzner.com)
 
