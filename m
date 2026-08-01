@@ -1,157 +1,133 @@
-Received: from mail.msweet.org (mail.msweet.org [173.255.209.91])
-	(using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
+Received: from mail-wm1-f54.google.com (mail-wm1-f54.google.com [209.85.128.54])
+	(using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
 	(No client certificate requested)
-	by smtp.subspace.kernel.org (Postfix) with ESMTPS id E04FF363C60
-	for <printing-architecture@lists.linux.dev>; Sat,  1 Aug 2026 23:03:45 +0000 (UTC)
-Authentication-Results: smtp.subspace.kernel.org; arc=none smtp.client-ip=173.255.209.91
+	by smtp.subspace.kernel.org (Postfix) with ESMTPS id A9F4737646A
+	for <printing-architecture@lists.linux.dev>; Sat,  1 Aug 2026 23:11:38 +0000 (UTC)
+Authentication-Results: smtp.subspace.kernel.org; arc=none smtp.client-ip=209.85.128.54
 ARC-Seal:i=1; a=rsa-sha256; d=subspace.kernel.org; s=arc-20240116;
-	t=1785625427; cv=none; b=i5ISic1YoXLMo4EL1MkkFRKz+FgH/lSd2NZBIOxA+f+JpLOv3lioiWo27AjViEq7QlA43ce+2UhWBeQPjU3zD0PfgJkZMBEZAAI8BHKwOU+TIS4Gi+J77DYqAPOxKYo1zbMQWhxWUfQM3g/+lnBJKIY38SeLFvfY6YGlM0a+Kic=
+	t=1785625900; cv=none; b=BB1JuY9Jd4JgIKR0hEH1yVERb6LKiJ4EAEA0hQz0VJ2tCewF4ZexKOkqS/KY0LZ8thLDB7ZbpVMz5xYedfWzENcICZDTnIkeI+/zu3pIONa8FuxKvbBveX1P8KpSCYWG8nV/EweF4yR1ueds0ao+dRpP1amaXFjG9r7SrM2FyxU=
 ARC-Message-Signature:i=1; a=rsa-sha256; d=subspace.kernel.org;
-	s=arc-20240116; t=1785625427; c=relaxed/simple;
-	bh=2xBXnox2sHyopp99ABFOvbrAIG4sgKUlJGbBg/8OGpw=;
-	h=Content-Type:Mime-Version:Subject:From:In-Reply-To:Date:Cc:
-	 Message-Id:References:To; b=iE01HDNIvpeZhjfhbjSxGAF37yK2KPg1hGNfHl2Dj4aKMMIKJl66vTnPEwcGiYQQXS+SM4D4nwJyRrZJT6IFVxD34xSAouPfr2TyPtIRRmIte1Sz81S99lwKGYmH5BzzbxYFyJYyXy3WJoJyfc6aaGw6uzdqqG70vSAwohfIIBc=
-ARC-Authentication-Results:i=1; smtp.subspace.kernel.org; dmarc=pass (p=quarantine dis=none) header.from=msweet.org; spf=pass smtp.mailfrom=msweet.org; dkim=pass (1024-bit key) header.d=msweet.org header.i=@msweet.org header.b=K54Og4w/; arc=none smtp.client-ip=173.255.209.91
-Authentication-Results: smtp.subspace.kernel.org; dmarc=pass (p=quarantine dis=none) header.from=msweet.org
-Authentication-Results: smtp.subspace.kernel.org; spf=pass smtp.mailfrom=msweet.org
+	s=arc-20240116; t=1785625900; c=relaxed/simple;
+	bh=yZpBWDlFIUG28A92Bz3T35XK/bwHnntYhX8vb/KZ5Os=;
+	h=Message-ID:Date:MIME-Version:Subject:To:Cc:References:From:
+	 In-Reply-To:Content-Type; b=HHZsMUhv1NlU/L5EQn7AHDxBBalXx9eD6kH09AaCSnBFc9vAyq/XaR88kM+4R+BUQoz7et3VwgWEHh/jd/OlL8rqGKx7tH6hff8anbpaQHZSJuvtHAY+os19sEZddIZ70PzInDOcW8JhnUEIfIo28gBWP+25T1MfBEfLL6XdqQs=
+ARC-Authentication-Results:i=1; smtp.subspace.kernel.org; dmarc=pass (p=none dis=none) header.from=gmail.com; spf=pass smtp.mailfrom=gmail.com; dkim=pass (2048-bit key) header.d=gmail.com header.i=@gmail.com header.b=oy4lt/qD; arc=none smtp.client-ip=209.85.128.54
+Authentication-Results: smtp.subspace.kernel.org; dmarc=pass (p=none dis=none) header.from=gmail.com
+Authentication-Results: smtp.subspace.kernel.org; spf=pass smtp.mailfrom=gmail.com
 Authentication-Results: smtp.subspace.kernel.org;
-	dkim=pass (1024-bit key) header.d=msweet.org header.i=@msweet.org header.b="K54Og4w/"
-Received: from smtpclient.apple (unknown [153.67.1.85])
-	(using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
-	(No client certificate requested)
-	by mail.msweet.org (Postfix) with ESMTPSA id 1206782444;
-	Sat,  1 Aug 2026 23:03:43 +0000 (UTC)
-DKIM-Filter: OpenDKIM Filter v2.11.0 mail.msweet.org 1206782444
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=msweet.org;
-	s=default; t=1785625424;
-	bh=2xBXnox2sHyopp99ABFOvbrAIG4sgKUlJGbBg/8OGpw=;
-	h=Subject:From:In-Reply-To:Date:Cc:References:To:From;
-	b=K54Og4w/ivELNV4Mv93+TFrq8/uwpOrGW3xhZuqAMUeEHx+b9ysQOleyAkflzYBeE
-	 NV2CwffEaNAAcqXaLSfGgRDighleocGRrBp4CG018NBsoTasrawuKe0z2tGJKjdt76
-	 srti7CdaoTSyMyAv4gpgbQGsbCKbXocUIP2MKyN0=
-Content-Type: text/plain;
-	charset=utf-8
+	dkim=pass (2048-bit key) header.d=gmail.com header.i=@gmail.com header.b="oy4lt/qD"
+Received: by mail-wm1-f54.google.com with SMTP id 5b1f17b1804b1-4954d29264cso4354685e9.2
+        for <printing-architecture@lists.linux.dev>; Sat, 01 Aug 2026 16:11:38 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20251104; t=1785625897; x=1786230697; darn=lists.linux.dev;
+        h=content-transfer-encoding:content-type:in-reply-to:from
+         :content-language:references:cc:to:subject:user-agent:mime-version
+         :date:message-id:from:to:cc:subject:date:message-id:reply-to
+         :content-type;
+        bh=CZYxCocaQdq97d1deWapk9QDK45BN/8J1njfHtYDFA4=;
+        b=oy4lt/qDDEEzOlFNMQtKeor6Ceb/3OomOrEbu1MjzSJzWUBq+4iDrNP57E+pwls/Wz
+         8C1BPs8LAEtjp4+2If+RTxhAENav+cWQw58uXgHua9SS8QhjfA3QDOPJApSSjT4TAaWE
+         h/6rI/q9JLW+bCFkTnTxCh3XvQ0nlzy1vrbCp8Pf8Qnra+ZCaLrUvFQdSdyBnq3y8IUu
+         7rE5bhYYQtwTVLlshFnqVacXfsqUdblAJRFZ+7ITW3fuKB7vhF4zKyPcUvlTUVbaUCso
+         CEaqvpOvrEPphq1nWvAvs3UTovLdV/wa6rPXzo85qdJsucfJTDUGVckgNpeW3hSupln+
+         d1IQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20251104; t=1785625897; x=1786230697;
+        h=content-transfer-encoding:content-type:in-reply-to:from
+         :content-language:references:cc:to:subject:user-agent:mime-version
+         :date:message-id:x-gm-gg:x-gm-message-state:from:to:cc:subject:date
+         :message-id:reply-to:content-type;
+        bh=CZYxCocaQdq97d1deWapk9QDK45BN/8J1njfHtYDFA4=;
+        b=MeEQ9+HvEyMNMNj2Fpw9WOHCJXCaPbUHrFLTMwmZE+42k2AIZ73hbuTBcrttwLg181
+         k8O+wv8iN0uu0qqw0cXBMaRzVvA42BrcUu0qROQKzmNjM80D6aX4ukzDCNgGg+IhMzKX
+         eCS8ibvTf8h2wFq7uKzSnpDhIdODqKMluk9DJ7Mnx7Y4sZ82PB8a0VOfgEhWmiyO9bo7
+         39Q5dvu4c2RGz/3cwr3BKi4Er7amVpgi9bnjOOJUBCXgdAgLNl+nuv1uV3jJCh26z3EE
+         wEqbfB5owlRZZ+c1mIRtKZcRZ72PNQ6RQi3U8yJWJhNAPmy/LoNITlBosz87djt5TOJF
+         qttw==
+X-Gm-Message-State: AOJu0YxLRFqc7xqcKxLxOQ/QmqetBFmjooKYc4tRvHPhVAEiBDOSQakG
+	/RermAkktSnYf7AUbXzuCXSwRnetAPaBnuIkrzquF/fUf2sx9uuIZvf1
+X-Gm-Gg: AR+sD107O6VLss1u2MJi41jGMqvR0XazGT8uX/PblYH3fzVDf1LjiiKbJTTjqxVaSRy
+	eWJyYUp8ul38t9o7ciGV3K9lkXyIWq6UvxYjqpyJSTIi3Ir1VgYmdkQS18YeBR3UI6a85BOPG/C
+	VoHnhN1zyu2WjhswNQRCXsLaFl432zbg5ZVD2ZPAn8Kb651yWxSSWIy/reJgXAU4UIsqcBPVjBR
+	UK6fmhC/k8XxGZ55KVMyZK0xkUkcQTJ9X672dYxiT9gRKh64w4tbj8mUUIzNrQL1TUKJ5LzV6mn
+	v37yD6L7WNcFF1pvasu4BP+IPa+I4pdxtb+hv60DjpHZWnrRlmfT2q/TOrFKdHOcbc+Ttkmvjdy
+	t+/x41dlIwftwb141/k/E8Mwnhm2rCyzdNUfeYLir07x4aul+v2P0W6FBHl5mUWTNxJZjPKbcOw
+	w0AGmzz3AHhafz+eycyWXBYtJ2jDpmiYMbFDYsFAB5PjCz2BeiHvm29FPnlo/LrPS2bFMJhxB/6
+	qNZWiBDgdGonWMG9ITOiBu2mkHqxSD3QNbrTQLOkeArXQV9A6G7Uhv6YA==
+X-Received: by 2002:a5d:64e1:0:b0:47f:86d5:d1d7 with SMTP id ffacd0b85a97d-47fd72bb318mr11725778f8f.6.1785625896768;
+        Sat, 01 Aug 2026 16:11:36 -0700 (PDT)
+Received: from [192.168.68.113] (193-154-187-225.hdsl.highway.telekom.at. [193.154.187.225])
+        by smtp.gmail.com with ESMTPSA id ffacd0b85a97d-47fd45a0ae0sm19693399f8f.33.2026.08.01.16.11.35
+        (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
+        Sat, 01 Aug 2026 16:11:35 -0700 (PDT)
+Message-ID: <54abe364-7f93-4740-aa73-bb4ed3b16ae0@gmail.com>
+Date: Sun, 2 Aug 2026 01:11:34 +0200
 Precedence: bulk
 X-Mailing-List: printing-architecture@lists.linux.dev
 List-Id: <printing-architecture.lists.linux.dev>
 List-Subscribe: <mailto:printing-architecture+subscribe@lists.linux.dev>
 List-Unsubscribe: <mailto:printing-architecture+unsubscribe@lists.linux.dev>
-Mime-Version: 1.0 (Mac OS X Mail 16.0 \(3864.700.51.1.1\))
+MIME-Version: 1.0
+User-Agent: Mozilla Thunderbird
 Subject: Re: Recommended way to manually add an undiscovered IPP printer in
  CUPS 3.x
-From: Michael Sweet <msweet@msweet.org>
-In-Reply-To: <6ac225de-ac78-4dee-805a-37db7b15937e@gmail.com>
-Date: Sat, 1 Aug 2026 19:03:31 -0400
-Cc: AbdElRahman Khalifa <abdelrahman.5alifa@gmail.com>,
- printing-architecture@lists.linux.dev
-Content-Transfer-Encoding: quoted-printable
-Message-Id: <0F92D295-D6BF-444F-84C2-220461CC0678@msweet.org>
+To: Alexander Pevzner <pzz@apevzner.com>, Michael Sweet <msweet@msweet.org>,
+ AbdElRahman Khalifa <abdelrahman.5alifa@gmail.com>
+Cc: printing-architecture@lists.linux.dev
 References: <CAHK3-apgmO5d5EOd5adZ+3NyCjKWOTMaoZPVC4tLDkVKPM-BQQ@mail.gmail.com>
  <EE1E0FD6-B0E9-4E02-948A-0DECCB1BB1F5@msweet.org>
  <debbccfb-2744-4d00-b786-796dea075e09@gmail.com>
- <BFC15E62-A87D-40EC-8462-BCC9B6CD2593@msweet.org>
- <6ac225de-ac78-4dee-805a-37db7b15937e@gmail.com>
-To: Till Kamppeter <till.kamppeter@gmail.com>
-X-Mailer: Apple Mail (2.3864.700.51.1.1)
+ <56747b6e-5994-4691-a06f-daca98c5cb1f@apevzner.com>
+Content-Language: en-US
+From: Till Kamppeter <till.kamppeter@gmail.com>
+In-Reply-To: <56747b6e-5994-4691-a06f-daca98c5cb1f@apevzner.com>
+Content-Type: text/plain; charset=UTF-8; format=flowed
+Content-Transfer-Encoding: 7bit
 
-Till,
+On 8/2/26 00:46, Alexander Pevzner wrote:
+> Till,
+> 
+> I think this is a bad idea for users to disable DNS-SD. It breaks not only 
+> printing, but driverless scanning as well.
+> 
 
-> On Aug 1, 2026, at 5:21=E2=80=AFPM, Till Kamppeter =
-<till.kamppeter@gmail.com> wrote:
->=20
-> On 8/1/26 22:41, Michael Sweet wrote:
->> Till,
->>> On Aug 1, 2026, at 3:50=E2=80=AFPM, Till Kamppeter =
-<till.kamppeter@gmail.com> wrote:
->>> ...
->>> But how to proceed under CUPS 3.x?
->> CUPS 3.x uses PAPPL 2.x which has different operations and attribute =
-names (as part of standardization in the PWG) but otherwise works =
-similarly.
->> The Create-Printer operation accepts the "smi55357-device-uri (uri)" =
-and "smi55357-driver (keyword)" operation attributes to provide the =
-device URI and model/driver name, and cupslocald (from the cups-local =
-project) supports the following driver names:
->> - 'everywhere': IPP Everywhere/AirPrint/Mopria/Wi-Fi Direct printer
->> - 'pcl': Generic B&W PCL printer
->> - 'pcl_duplex': Generic B&W PCL printer with 2-sided printing support
->> - 'ps': Generic B&W PostScript printer
->> - 'ps_duplex': Generic B&W PostScript printer with 2-sided printing =
-support
->> - 'ps_color': Generic Color PostScript printer
->> - 'ps_color_duplex': Generic Color PostScript printer with 2-sided =
-printing support
->> The PCL and PostScript drivers are extremely limited and are just =
-there to support legacy Samba printing basic support for local =
-(typically enterprise) laser printers.
->=20
-> So when I send a Create-Printer request to a CUPS 3.x daemon (both =
-local and sharing) an entry in a profile (~/.cups/profiles/ or =
-/etc/cups/profiles/*, latter only for sharing server) is created?
+There can be corporate settings with DNS-SD turned off.
 
-*No*.
+> Providing user a method to somehow workaround disabled DNS-SD just creates a 
+> wrong illusion that we somehow support this mode of operation.
+> 
 
-Profiles are ONLY for the local server, and they are manually created by =
-the user/admin.  Profiles in /etc/cups/profiles (or similar "world" =
-directories apply to all users while profiles under $HOME apply to that =
-user.  There is one cupslocald running per logged-in user on a system.
+The printer setup tool needs to work for everybody, also those in said corporate 
+environment. And if DNS-SD is on, the printers in the local network appear 
+readily available in the main view. So the user sees their printer already and 
+so does not click on "Add Printer".
 
-The goal is that cupslocald will only list those printers/servers that =
-it can connect to, and will periodically update the list of available =
-printers as conditions change (switching networks, printers/servers =
-coming and going, etc.)
+Also, the printer setup tool know whether DNS-SD is on or off, and with DNS-SD 
+on, the options not making sense in "Add Printer" then could not be shown, to 
+simplify "Add Printer" for the users who have DNS-SD on.
 
->>> If I have only the local server, it is stateless, it only uses =
-temporary queues.
->> It is not stateless.  It just doesn't have permanent queues and =
-doesn't share local queues with other systems.
->>> How do I, in case of not using mDNS/DNS-SD, tell my =
-discoveries/manual IP selections to the local server so that it sticks =
-with them? Or am I REQUIRED to use mDNS/DNS-SD when I have a system with =
-only the local server of CUPS 3.x as print environment?
->> We have been talking about this ("printer profiles") for a very long =
-time:
->>     https://github.com/OpenPrinting/cups-local/issues/2
->=20
-> OK, so they also work with the local server.
+> That said, adding driverless printer manually still a useful option in case the 
+> printer is connected to the non-local LAN segment.
+> 
 
-They *only* work with the local server.  The sharing server does NOT use =
-profiles at all.
+Yes, this is important and "Add Printer" should always display this option.
 
-> So this means that our printer setup tool which Abdelrahman is working =
-on creates entries in the profile when manually adding print =
-destinations, either if mDNS/DNS-SD is not used or when the printer is =
-outside the local network (VLAN or so)?
+> At this case it doesn't make a lot of sense to probe for the ipp-usb managed 
+> printers (which, BTW, may have assigned ports not only 60000 and 60001, but any 
+> subsequent port as well),
+> 
 
-No, he should focus on adding printers to the sharing server.  Profiles =
-are not intended as things that are created/edited with special tools, =
-they are simple text files that replace DNS-SD discovery of IPP =
-printers/servers.
+Probing for IPP-over-USB printers I only intended for the case of DNS-SD off 
+(and there check more ports, perhaps up to 60010).
 
-> OK, so we need to settle on a format for this file so that Abdelrahman =
-can implement that.
+> Regarding normal hardware printers, are there really printers out of existence, 
+> that can respond IPP requests on alternative ports but doesn't respond on a 
+> standard port 631? If not, there is not a lot of sense to probe ports 8000, 8001 
+> etc.
+> 
 
-The proposed format is in the issue.
+Port 8000+ is for Printer Applications, not for driverless hardware network 
+printers.
 
->>> Or do I have to use the sharing server when I just want to print =
-locally but not use mDNS/DNS-SD? Does the sharing server has a config =
-file for holding such printers?
->> The sharing server is more of a traditional "all queues are =
-permanent" service and saves the queue state/configuration across runs.
->>=20
->=20
-> Does the sharing server not get its queues the same way as the local =
-one, both by discovering printers via mDNS/DNS-SD AND including =
-destinations by entries in the profile (which can be system-wide now)? =
-And it adds rules for how to share these printers also in the profile?
-
-No, the sharing server is more akin to a regular printer application - =
-yes, printers get discovered via standard means (DNS-SD, SNMP, USB, =
-etc.) and you add the queues (discovered or manual entry) that you want =
-to share.  Profiles are NOT used to configure the sharing server, =
-although you might use a profile on a client system to point cupslocald =
-at a sharing server.
-
-________________________
-Michael Sweet
+    Till
 
