@@ -1,147 +1,237 @@
-Received: from mail-ot1-f50.google.com (mail-ot1-f50.google.com [209.85.210.50])
+Received: from mail-wm1-f52.google.com (mail-wm1-f52.google.com [209.85.128.52])
 	(using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
 	(No client certificate requested)
-	by smtp.subspace.kernel.org (Postfix) with ESMTPS id 6D26F22ACFA
-	for <printing-architecture@lists.linux.dev>; Sun,  2 Aug 2026 09:18:49 +0000 (UTC)
-Authentication-Results: smtp.subspace.kernel.org; arc=pass smtp.client-ip=209.85.210.50
-ARC-Seal:i=2; a=rsa-sha256; d=subspace.kernel.org; s=arc-20240116;
-	t=1785662330; cv=pass; b=jo2znbebc6WGk1Xk3mhCS6GPsXvI3XXZyiontg4LHLVLG9uii97ucS3+IqfYC+9FWDvtnH1mOifdPIhZbk9Dd2uJ83E284jlMTsbbUKH5pGqG/nQx6BHXTtC7VEvb8e6hrUKV4kFNic6BWRSC5VQ9M6HhuICYOrH4Wu30fMshZ8=
-ARC-Message-Signature:i=2; a=rsa-sha256; d=subspace.kernel.org;
-	s=arc-20240116; t=1785662330; c=relaxed/simple;
-	bh=k2Ht21hFVks/9yhGJ8zGlGw1hRHhQPpecKsF4XcI0bM=;
-	h=MIME-Version:References:In-Reply-To:From:Date:Message-ID:Subject:
-	 To:Cc:Content-Type; b=lZ6ltfeMwkuZqvHNwPn1t1fJV5uyQxt5kbHsoR7eUaggYBZe1K3kLNhemJ+F2n9bQxVJlXuw0XXaUharCMgBn/ZdxkWpQPfrRn97JYRSBl9sF+pWkbRuMX+24TpU0O37ibnBffXoPiGDkeAn8GR07lmT8EpKtOhZKbGAbmVx/HQ=
-ARC-Authentication-Results:i=2; smtp.subspace.kernel.org; dmarc=pass (p=none dis=none) header.from=gmail.com; spf=pass smtp.mailfrom=gmail.com; dkim=pass (2048-bit key) header.d=gmail.com header.i=@gmail.com header.b=I5XJ9MXB; arc=pass smtp.client-ip=209.85.210.50
+	by smtp.subspace.kernel.org (Postfix) with ESMTPS id 4AB5A3A3821
+	for <printing-architecture@lists.linux.dev>; Sun,  2 Aug 2026 12:04:57 +0000 (UTC)
+Authentication-Results: smtp.subspace.kernel.org; arc=none smtp.client-ip=209.85.128.52
+ARC-Seal:i=1; a=rsa-sha256; d=subspace.kernel.org; s=arc-20240116;
+	t=1785672299; cv=none; b=pLwrkccm3HifkzmlqJDjZJIzYbau/lSI0CeClNOI4fW0lRAB30z7lsqV2F6+Aj7N5IVJasV1bcvuss9LQbliR7JjbP1dabiZNgLZOee4R8E3n0XzNtRlOLefuK9YG3V423SArapJ8B7xltXeaKn3V75OPfz+3OdB0sKj4tzqNiQ=
+ARC-Message-Signature:i=1; a=rsa-sha256; d=subspace.kernel.org;
+	s=arc-20240116; t=1785672299; c=relaxed/simple;
+	bh=CSdOfuEjUgpDUOpjQYWgdeAQ8D4KVuIxpKZyRg5H2tY=;
+	h=Message-ID:Date:MIME-Version:Subject:To:Cc:References:From:
+	 In-Reply-To:Content-Type; b=u6JWMrOmcScRcjjfMwbtMkUcr+CwsSPikL7ZtiX3YeBJFfOeczfn2Sk2z7RCFLDZ0tbIQhDrR14Qd/hFhCkQCSv/uCc4jWNZA0opRQa8IS8Q3w89K4WOnkhoY6ur4FPnfKNgJR/PPn0XI2gdhtg2X4MjeuIVfsxC+GvJld3adlg=
+ARC-Authentication-Results:i=1; smtp.subspace.kernel.org; dmarc=pass (p=none dis=none) header.from=gmail.com; spf=pass smtp.mailfrom=gmail.com; dkim=pass (2048-bit key) header.d=gmail.com header.i=@gmail.com header.b=bGez2y5T; arc=none smtp.client-ip=209.85.128.52
 Authentication-Results: smtp.subspace.kernel.org; dmarc=pass (p=none dis=none) header.from=gmail.com
 Authentication-Results: smtp.subspace.kernel.org; spf=pass smtp.mailfrom=gmail.com
 Authentication-Results: smtp.subspace.kernel.org;
-	dkim=pass (2048-bit key) header.d=gmail.com header.i=@gmail.com header.b="I5XJ9MXB"
-Received: by mail-ot1-f50.google.com with SMTP id 46e09a7af769-7ebd88be784so1580649a34.2
-        for <printing-architecture@lists.linux.dev>; Sun, 02 Aug 2026 02:18:49 -0700 (PDT)
-ARC-Seal: i=1; a=rsa-sha256; t=1785662328; cv=none;
-        d=google.com; s=arc-20260327;
-        b=Rrz2aOJ/LdvVaOV+PUbpqe5DzT/vI1+cN0ACGJs3Lc4YW4PzX6/GOuzVLHJ/p698Wo
-         5mGNb+kHc0PHrMEfX6y8vrsT10paEZaDtSuz7af7Sy0dY6RjUkFtu1n6Sj6KE3lwCtTx
-         fJdikNs3QpCjHaUTEt5/tFyRyG8S9RLMu9Z8iW+Dou/C/NxBuTXJO3FiTjuxHFPB+CMk
-         M4WDL9zW8sXNd92Yqh1BHV9TTyMEObl7JIkWcDYSJ2IcyWJRk+4bwjaPAU+dgy6KoxRQ
-         w0u1CLCrkwMN3RW53aLGnRJkdsNjRQUJlVMqYhxg26I9KPbYGIAwPdeM3lxcZh8GoueV
-         tJVg==
-ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20260327;
-        h=cc:to:subject:message-id:date:from:in-reply-to:references
-         :mime-version:dkim-signature;
-        bh=k2Ht21hFVks/9yhGJ8zGlGw1hRHhQPpecKsF4XcI0bM=;
-        fh=0O6Qp0XMbGVMMthBdqcXMO0NYoBoMy/8VhKkbaT41hI=;
-        b=PlOsOJG2xfbhv3VlHdoRK6Ptv/Zm4GZS68z6yp50YtKOhcAHgP46O5FVwaCI+Xy4kn
-         /OUYewkwmm6NWfTMQ2bHy3ALsJGIclCpX8fo9vFLU0R4olIJJShXfZMBOTSscCyMNbxK
-         BSxxxfIiQtFeRxqr84YGOc1nZBRCO/Rs1NQvo58zWbordDEuK7rsNc/k58z2VOjaI5L1
-         19rKR+WxCjA7hWLh9kUUlbzQuGL7VBIpU07SlKkkF02EeeZ/xM+9Z4ui6fH6f9qHONMM
-         Qr2rdfJ9EfCvFWXBNUd+0mitpsbJE2Sq/hSklIJq1Swvg+lCHJxKNCV/aH4dCLzP6FwR
-         ZOaw==;
-        darn=lists.linux.dev
-ARC-Authentication-Results: i=1; mx.google.com; arc=none
+	dkim=pass (2048-bit key) header.d=gmail.com header.i=@gmail.com header.b="bGez2y5T"
+Received: by mail-wm1-f52.google.com with SMTP id 5b1f17b1804b1-49558ce01afso9370265e9.1
+        for <printing-architecture@lists.linux.dev>; Sun, 02 Aug 2026 05:04:57 -0700 (PDT)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
-        d=gmail.com; s=20251104; t=1785662328; x=1786267128; darn=lists.linux.dev;
-        h=content-type:cc:to:subject:message-id:date:from:in-reply-to
-         :references:mime-version:from:to:cc:subject:date:message-id:reply-to
+        d=gmail.com; s=20251104; t=1785672295; x=1786277095; darn=lists.linux.dev;
+        h=content-transfer-encoding:content-type:in-reply-to:from
+         :content-language:references:cc:to:subject:user-agent:mime-version
+         :date:message-id:from:to:cc:subject:date:message-id:reply-to
          :content-type;
-        bh=k2Ht21hFVks/9yhGJ8zGlGw1hRHhQPpecKsF4XcI0bM=;
-        b=I5XJ9MXBfxvvPYvDkDfey75YrYD9a0X5H8xMQkFt5uw8yxa4tV4F9MTkuL+7+/mWaB
-         VmuAjuu4ahgxm2EDN+b0m6DKI4Ycf7h/GTvHROZo2BU2Ax4qkly3R11NmtQYKHhKtyNI
-         qdRpeUTqpADnLdpd7/WozKMtjTpGpLkjbC0bdXavanXYa1jtKovxfCAe8bMNMEv38EOU
-         uzgB7Ca5kDcknsUieKEFZEPT/dE0/YrZQv4JIH4wDGCCFbCuJypJVZDd7rFfKk50l/7B
-         WygaQFWXn+sc24ZROOUrqQhjYbSbCh9ueWi6E0bRca/3KgcQf9sRucSTg+5W1p5KdWfO
-         uAYQ==
+        bh=vkMJzjja3h5t2qxDDmXaKY01hdf701X8ooztlpEbgb0=;
+        b=bGez2y5T+GylvM0jikMiAfK3XHb6wiHcyaqMosW2KIqXaJWn9KrpCwMXa2ySM3mB/e
+         EllZL2ItDT80vlOGo+m1yZ/a8fdRV2so1QXQhZvT6zkGYkedfS+4DBcvWOBXNdbLIm/5
+         4z218f15eaIWaIN7aUwUre+FDpG8YQnC29g8g0krhAJ9QA+sP0tD8ZNqDm4PXjxiCjec
+         dpN8nwYUvuZOyM3g3Y9YbeY1XwhLi4dAu4jElTyQHLrYj4tCYYpTVcXTtnAySArjj+UE
+         5e9Cv+x0qIaM3aDr9D+VDk3nlN8nuDiCUZm8GzHwQInmS41tD4sz/VYRvJEsrQjYQIYw
+         2PLA==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
-        d=1e100.net; s=20251104; t=1785662328; x=1786267128;
-        h=content-type:cc:to:subject:message-id:date:from:in-reply-to
-         :references:mime-version:x-gm-gg:x-gm-message-state:from:to:cc
-         :subject:date:message-id:reply-to:content-type;
-        bh=k2Ht21hFVks/9yhGJ8zGlGw1hRHhQPpecKsF4XcI0bM=;
-        b=hTkBC6SLViBZ14rjMk+HNIblDmdBsS9Hfu37+GZTXnit8E849n0iDFo1jK4jAH/XY9
-         XT768Ly2t/kT4943IfMYgidVJfB6MNtjXrDkjR8Kc8y7pstfyYGdgGjzbve8IEkyNnM2
-         TaIxt8UW9ytz2qKmpWEm2QPtIlbZzws6nKaVzRFTvFTxhlA/7pmezMPYxcVbg7qyK6ha
-         SKeCOgWVTU93ZnrxkKsC6ZBT1ve0B30I15WPPNfq8yHY/dKQyEzSl3YfZDzdFsx7X1qu
-         DGcjbEL6NdY3Jii/uUADO89JtDWbaAizxdybaZDc+U92He5GoYDl1ex3rbDUn9IfzCqD
-         ThRQ==
-X-Forwarded-Encrypted: i=1; AHgh+Rqrz91i3xswNW5/epB5qqfYFY2brZUbT4Qb9U5aVgvXJhg8EzNyBTyhLvEPcHAXu+OyYc6aUjhhJo8xEAoUIEXA7dT9oD8=@lists.linux.dev
-X-Gm-Message-State: AOJu0YyXy5iGM6GBjtWMaSE8fv19r/fn7Y0JIYsLIDzC7blUmEx+f9h+
-	+3nxHPN5AleQbmvA3FGowkjvAxnWV4a77UUb5AoqdoYCrdI4++nvJfdqZir8zYivQFrRc5RLTyT
-	wQPuHeQfWpJt8b44PljhM7VNwSvD5iAE=
-X-Gm-Gg: AR+sD1312u7UvZ1XW4Owqzkz+1Pdw971ODACOxaAz1V2Nqn1PuTnsKGFT3Do65qOBQ+
-	IRvFV7FTp4zeOV9famSpqb12OL629sjI5FqXAgxryd7V4CLP7PvxZB3Vnqcz+6Z0BY129tTkmhE
-	UG8FdMpFDsyZ5XFgMh57DdgJIFT+GUG0exirOj+5lM17WxBV/ecBtaCs6MDvqZdXDW8oW0LgS7n
-	VEhvnAkVJmyit5ToO6q/5h5+18ZhksN9F9utXtEZ2pQOjLEfI0fNl/a0Swztu5AKrSon8XDRctc
-	rAtGSb7b/+bzy9BPoNOYrT/EweXdoyZaS2/ODR3IZlKHcqVoXDcCPTaFNLINGOYL/eB4rdiGl5E
-	/2RLADkyYvYwh7o/qVISZTiTeHKkxrU6CCgeZD/Sm5AXdA58LKnCiNk+dUqolfq+e
-X-Received: by 2002:a05:6808:1819:b0:495:f223:bcdb with SMTP id
- 5614622812f47-4af5dcbbe42mr9415691b6e.0.1785662327956; Sun, 02 Aug 2026
- 02:18:47 -0700 (PDT)
+        d=1e100.net; s=20251104; t=1785672295; x=1786277095;
+        h=content-transfer-encoding:content-type:in-reply-to:from
+         :content-language:references:cc:to:subject:user-agent:mime-version
+         :date:message-id:x-gm-gg:x-gm-message-state:from:to:cc:subject:date
+         :message-id:reply-to:content-type;
+        bh=vkMJzjja3h5t2qxDDmXaKY01hdf701X8ooztlpEbgb0=;
+        b=aXHEB1EKyUhYvMk6kLx24aBhWHw+LUoWAgO1GRs2OvJhOArJhUny+Cs5U4RsRNAEJ+
+         m5z3nCDPdGQoohdDFdciUGYzKGXHE8OePHk4I1MP1ZHVhEv60Du0YD66BQP/t97QWYrj
+         Iz4KvuWFU2K64kJsdnSdkNgT/H6D+EZIE/c06XCuP4JPEllMMVT1JR+qvu6kg6D8KA9f
+         w/F0Ayc+Z18jndE5ZeCTKiniwElRgBtf9ojr2MvlHRT+feHRe50HlxOLeQaTMpwdodMt
+         yK951PA9ewmy0TKwY64Eh9UbYmDPO6FTIWayy8GHKwfa/4l+/MIqblONi2aPy2PXx+PL
+         Ixfg==
+X-Forwarded-Encrypted: i=1; AHgh+Ro3CqbNdfcYt+AuQmA7mldvqH2X5vs8/k5/15lD7zDrkncAPKwRQ9+dzFs9Ncp9CTQiUjqT5p1d53OfK8pBTCABpeMj28E=@lists.linux.dev
+X-Gm-Message-State: AOJu0YxORpGJX62er99vhtHwlOLXxX1XkOIh2JV+Za5FvKPAklBNAvrj
+	3A//ly1S1ibbJ6z7kAhZswj6bmCN1/rGQWmD1Ll+VRVq++bF7iAETOT3
+X-Gm-Gg: AR+sD13FeHDatCVzsXsngltHIdK5db4XW3euv4yDcGYESyOG6bxfeWLBpq5KdUCaBDD
+	OtjXIpz/8lAcZB7FAZbQ28bPm5p1f7BcPfq1Dzq/9YEOpsk3ZQErz3/Z0mwuWSUR1V8iJlFJjBT
+	NOtg/iqpr1g/rGtBgsZAG/vrDDAAHN2MIuGypjWsP8+3jbm9OPeELIFXvS0hi1g8AcNCfHMCjdg
+	YzCUJhuR7nrwzYrPo+yZmg+ffpXjhOo55qvNBbNB/2sqEtzqYKv2Ue87cKNhxfck+fG1DAIXJ/L
+	IycpIT9HZfwn9pC3hY3CYuvtR6D3xFW/WfQXgFRbq7aQlvNmVmxagjQwfgd8Sr6orKLm+xjvxXQ
+	n63tUw34+lxRsnzsuUHT9QuOmqbUl/aZm3/rdPGaw/xT+FF7ui1M+GjaYb5QP+6se6GbL8xo1Qr
+	+9CkBKI2pbS4itugU4l4jOhPWAFmlU9vn00TXhZRsUEYPwBP9sqg/MUKVhtRSBaP8DaiBZi6t/W
+	sIHmkWuAMgf68C4ZnpcXgXIBxQotz7dAEu9io3vdHsgdjfOSSk3LUydJQ==
+X-Received: by 2002:a05:600c:564b:b0:495:52dc:73a9 with SMTP id 5b1f17b1804b1-4980c675370mr96509145e9.11.1785672295223;
+        Sun, 02 Aug 2026 05:04:55 -0700 (PDT)
+Received: from [192.168.68.113] (193-154-187-225.hdsl.highway.telekom.at. [193.154.187.225])
+        by smtp.gmail.com with ESMTPSA id 5b1f17b1804b1-4980878dbaesm226445865e9.12.2026.08.02.05.04.53
+        (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
+        Sun, 02 Aug 2026 05:04:54 -0700 (PDT)
+Message-ID: <84bbe4d2-36b7-4b27-904a-b1b7b23d2d2e@gmail.com>
+Date: Sun, 2 Aug 2026 14:04:53 +0200
 Precedence: bulk
 X-Mailing-List: printing-architecture@lists.linux.dev
 List-Id: <printing-architecture.lists.linux.dev>
 List-Subscribe: <mailto:printing-architecture+subscribe@lists.linux.dev>
 List-Unsubscribe: <mailto:printing-architecture+unsubscribe@lists.linux.dev>
 MIME-Version: 1.0
-References: <CAHK3-apgmO5d5EOd5adZ+3NyCjKWOTMaoZPVC4tLDkVKPM-BQQ@mail.gmail.com>
- <EE1E0FD6-B0E9-4E02-948A-0DECCB1BB1F5@msweet.org> <debbccfb-2744-4d00-b786-796dea075e09@gmail.com>
- <e8fda297-ebbc-4252-87bc-7a1502472c72@gmail.com> <bf7e0634-8972-4078-a0bd-211d348b3d36@gmail.com>
-In-Reply-To: <bf7e0634-8972-4078-a0bd-211d348b3d36@gmail.com>
-From: AbdElRahman Khalifa <abdelrahman.5alifa@gmail.com>
-Date: Sun, 2 Aug 2026 12:18:37 +0300
-X-Gm-Features: AUfX_mzHiC5j7JNrRBswWen24HuAO9x2HEXnpTOVtQo0Bh6xwscbEophEr6Y2xQ
-Message-ID: <CAHK3-aqHugD6ZAjMSaOZadNrWZ6F5M=bKmUbWpDXN6c9yeVNyA@mail.gmail.com>
+User-Agent: Mozilla Thunderbird
 Subject: Re: Recommended way to manually add an undiscovered IPP printer in
  CUPS 3.x
-To: Till Kamppeter <till.kamppeter@gmail.com>
+To: AbdElRahman Khalifa <abdelrahman.5alifa@gmail.com>
 Cc: Michael Sweet <msweet@msweet.org>, printing-architecture@lists.linux.dev
-Content-Type: text/plain; charset="UTF-8"
+References: <CAHK3-apgmO5d5EOd5adZ+3NyCjKWOTMaoZPVC4tLDkVKPM-BQQ@mail.gmail.com>
+ <EE1E0FD6-B0E9-4E02-948A-0DECCB1BB1F5@msweet.org>
+ <debbccfb-2744-4d00-b786-796dea075e09@gmail.com>
+ <e8fda297-ebbc-4252-87bc-7a1502472c72@gmail.com>
+ <bf7e0634-8972-4078-a0bd-211d348b3d36@gmail.com>
+ <CAHK3-aqHugD6ZAjMSaOZadNrWZ6F5M=bKmUbWpDXN6c9yeVNyA@mail.gmail.com>
+Content-Language: en-US
+From: Till Kamppeter <till.kamppeter@gmail.com>
+In-Reply-To: <CAHK3-aqHugD6ZAjMSaOZadNrWZ6F5M=bKmUbWpDXN6c9yeVNyA@mail.gmail.com>
+Content-Type: text/plain; charset=UTF-8; format=flowed
+Content-Transfer-Encoding: 7bit
 
-Thank you for the explanations. I think I now understand the
-separation between printer profiles, the local server, and the sharing
-server.
+On 8/2/26 11:18, AbdElRahman Khalifa wrote:
+> Thank you for the explanations. I think I now understand the
+> separation between printer profiles, the local server, and the sharing
+> server.
+> 
+> My current understanding is the following:
+> 
+> 1. cupsEnumDests() should be the source of truth for the destinations
+> displayed on the main Printers page.
+> It can return automatically discovered IPP destinations, remote CUPS
+> queues, Printer Application destinations, and eventually destinations
+> supplied through profiles.
+> Therefore, a destination must still be displayed even when I cannot
+> find a corresponding local DNS-SD advertisement.
+> 
 
-My current understanding is the following:
+Yes, especially as there can be destinations due to entries in the profile, 
+either because DNS-SD is off or destination outside the local network are 
+defined. You do not need to parse the profile or investigate any reasons, if you 
+are using cupsEnumDests() the right thing will happen and you will see the 
+correct list of available destinations. And as print dialogs are also supposed 
+to use cupsEnumDests(), you see exactly the printers which you see in the print 
+dialogs.
 
-1. cupsEnumDests() should be the source of truth for the destinations
-displayed on the main Printers page.
-It can return automatically discovered IPP destinations, remote CUPS
-queues, Printer Application destinations, and eventually destinations
-supplied through profiles.
-Therefore, a destination must still be displayed even when I cannot
-find a corresponding local DNS-SD advertisement.
+> 2. DNS-SD should be an enrichment and grouping source, rather than the
+> authoritative destination list.
+> I currently use Avahi to obtain information such as the service
+> instance, hostname, port, resource path, TXT UUID, and the
+> relationship between _ipp._tcp and _ipps._tcp advertisements.
+> I will correlate this information with the destinations returned by
+> cupsEnumDests() and use it for physical-device grouping. Where
+> possible.
+> 
 
-2. DNS-SD should be an enrichment and grouping source, rather than the
-authoritative destination list.
-I currently use Avahi to obtain information such as the service
-instance, hostname, port, resource path, TXT UUID, and the
-relationship between _ipp._tcp and _ipps._tcp advertisements.
-I will correlate this information with the destinations returned by
-cupsEnumDests() and use it for physical-device grouping. Where
-possible.
+Yes, DNS-SD checking by your software is only to get extra info, like for 
+grouping. The authoritative list of available destinations comes from 
+cupsEnumDests().
 
-3,. COSMIC Printers should not create or edit printer profile files.
+> 3,. COSMIC Printers should not create or edit printer profile files.
+> 
 
-4. Profiles belong to the local-server/libcups discovery mechanism.
-When libcups supports them, profile-defined destinations should appear
-naturally through cupsEnumDests().
-Queues owned by the sharing server are a separate concept.
-I should query the sharing server using its IPP System Service
-operations, such as Get-Printers, when I specifically need to list or
-administer the queues owned by that server. I should not infer that
-every destination returned by cupsEnumDests() is a configured
-sharing-server queue.
+Generally, under Linux configuration info is stored in text files and GUI tools 
+to do configuration save the settings in that text files. So the GUI tools are 
+frontends to easily "edit" these files and the user sees the realm of 
+controlling the settings by GUI, as this is much more intuitive.
 
-5. A normal driverless destination returned by cupsEnumDests() is
-already usable and does not require an Add operation. A queue on the
-sharing server should only be created if the user explicitly requests
-server-side sharing, relaying, accounting, access control, or similar
-policies, for example, when the user opens the Add Printer dialog and
-selects that printer.
+So principally one can make a GUI for managing a profile for the local server of 
+CUPS.
 
-6. For an undiscovered driverless printer entered manually via IP
-address or hostname, printer setup tool should probe it using
-Get-Printer-Attributes and then create a queue for it on the sharing
-server.
+For correctly configured Linux distros this should not be that necessary, as for 
+end users at home or in small offices (SOHO setting), where we do not have a 
+system administrator, DNS-SD should always be turned on, and so all print 
+destinations get automatically available, without need to edit the profile. An 
+end-user distro coming with DNS-SD off is not a good end-user distro.
 
-Thanks,
-Abdelrahman
+In enterprise settings with a lot of machines and networks there are always 
+system administrators who have no problems to hand-edit config files. And to 
+manage the vast amount of network resources (also printers) they decide on how 
+to do so, and when turning DNS-SD off or sub-dividing the local network into 
+many smaller ones, they enter the needed references to printers and 
+printer-providing external sub-nets, and also filters in the CUPS profiles of 
+the desktop machines, so that cupsEnumDests() called by a user's print dialog or 
+printer setup tool shows exactly the needed printers.
+
+> 4. Profiles belong to the local-server/libcups discovery mechanism.
+> When libcups supports them, profile-defined destinations should appear
+> naturally through cupsEnumDests().
+
+Yes, exactly this.
+
+> Queues owned by the sharing server are a separate concept.
+> I should query the sharing server using its IPP System Service
+> operations, such as Get-Printers, when I specifically need to list or
+> administer the queues owned by that server. I should not infer that
+> every destination returned by cupsEnumDests() is a configured
+> sharing-server queue.
+>
+
+A sharing server is a Printer Application and so it is like an IPP network 
+printer. A Printer Application is not necessarily an application providing the 
+driver for a non-driverless legacy printer, but a Printer Application is any 
+kind of software implementation of a driverless IPP printer. Even ipp-usb is a 
+Printer Application. On the sharing server there are print queues defined. These 
+print queues are IPP print destinations for clients, and they pass on the jobs 
+to other IPP print destinations. They are highly configurable, for example to 
+allow only certain clients to see/use the print queue, to do page accounting, to 
+restrict the use to certain users, to require authentication, ... and the 
+network where the print queues are visible to clients and where the destination 
+printer is do not need to be actually the same.
+
+In most SOHO settings you do not need a sharing server as network printers are 
+sharing themselves to your whole local network. Also Printer Applications to 
+provide the driver for a legacy printer can be set to share the printer to the 
+local network instead of only the local machine. The same is valid even for ipp-usb.
+
+cupsEnumDests() is showing any IPP print destination, regardless of whether it 
+is a network printer, a destination from a sharing server, an IPP-over-USB 
+printer, a legacy printer set up with a Printer Application.
+
+With IPP System Service you handle any IPP server. Get-Printers gives you all 
+IPP destinations which this server provides. Works on a sharing server (shows 
+the queues created on it), on a network multi-function printer (shows the print 
+destination and depending on the device also the fax out destination), ... IPP 
+System Service can especially also help you to group the print destinations 
+correctly, especially if DNS-SD is turned off.
+
+> 5. A normal driverless destination returned by cupsEnumDests() is
+> already usable and does not require an Add operation.
+
+Yes, that's it. The printer setup tool should provide buttons for opening the 
+web admin interface and for default option settings (GUI for lpoptions).
+
+> A queue on the
+> sharing server should only be created if the user explicitly requests
+> server-side sharing, relaying, accounting, access control, or similar
+> policies, for example, when the user opens the Add Printer dialog and
+> selects that printer.
+> 
+
+Yes, you use the sharing server by installing it and creating queues on it if 
+you have special needs, which are not served by the network printers themselves.
+
+You can have for example a sharing server in your local network which has a 
+queue set up pointing to a printer in a VLAN, which your local network's DNS-SD 
+does not see, but your DNS-SD sees your sharing server and so the printer gets 
+available for everybody.
+
+Or you can enforce page accounting by configuring the printer (via its web 
+interface, do not forget to password-protect the web interface) to only accept 
+jobs from the machine running your sharing server. On your sharing server create 
+a queue pointing to your printer and having page accounting. Now users see only 
+the queues of your sharing server and not the printer itself, forcing their jobs 
+through the page accounting.
+
+With DNS-SD in your local network turned off, you have to point to your sharing 
+server in your profile, as you would also do for a regular network printer.
+
+> 6. For an undiscovered driverless printer entered manually via IP
+> address or hostname, printer setup tool should probe it using
+> Get-Printer-Attributes and then create a queue for it on the sharing
+> server.
+
+Here the sharing server is not necessarily needed. To just overcome the fact 
+that DNS-SD is not available or the printer is in a separate local network the 
+sharing server is often overkill and adding the printer's URI to the profile 
+does the trick already.
+
+    Till
+
