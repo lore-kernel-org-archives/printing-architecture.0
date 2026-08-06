@@ -1,144 +1,155 @@
-Received: from mail.msweet.org (mail.msweet.org [173.255.209.91])
-	(using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
+Received: from mail-wm1-f44.google.com (mail-wm1-f44.google.com [209.85.128.44])
+	(using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
 	(No client certificate requested)
-	by smtp.subspace.kernel.org (Postfix) with ESMTPS id 8354A23393C
-	for <printing-architecture@lists.linux.dev>; Sun,  2 Aug 2026 17:48:07 +0000 (UTC)
-Authentication-Results: smtp.subspace.kernel.org; arc=none smtp.client-ip=173.255.209.91
+	by smtp.subspace.kernel.org (Postfix) with ESMTPS id 8376E47ACD5
+	for <printing-architecture@lists.linux.dev>; Thu,  6 Aug 2026 17:19:57 +0000 (UTC)
+Authentication-Results: smtp.subspace.kernel.org; arc=none smtp.client-ip=209.85.128.44
 ARC-Seal:i=1; a=rsa-sha256; d=subspace.kernel.org; s=arc-20240116;
-	t=1785692888; cv=none; b=Sj1QizqMaQFGfclPAF1OP1M0bxnc11Uzp8ZC1RgsGYDrFBgsy5n73Jbt7OFQEqoHdHWtzmm36P6coduISahd3S7QcTFqYRzzF/3SvpU6N0OyzkyUEiKG5eFGDcPWpGtC9tazr6lNceOtdXIlu2E6FUpz8kvVIQpEV6NBNssXbrY=
+	t=1786036799; cv=none; b=WnneGvRElzheCMZnBOHA4d6+bfmUxdRtDxMfSOBf8eE6bPaeDnftiwsQo1JEA/BuaipEFU6KLD5FPyVdVz98izhs7kGpCfLIjnQ9vN8TK3O/NU46PaDJ1RUeDXHP4zxzyoCUXTd3HjoOGiQCldnnjDiFqvu83QLbPH/uZ4Kldvo=
 ARC-Message-Signature:i=1; a=rsa-sha256; d=subspace.kernel.org;
-	s=arc-20240116; t=1785692888; c=relaxed/simple;
-	bh=wbQRk0flwB2VxT9BzzUU9zHHtJOHVNmr6KcWKCZ0/2k=;
-	h=Content-Type:Mime-Version:Subject:From:In-Reply-To:Date:Cc:
-	 Message-Id:References:To; b=gP5fVAt1IdTFxiVv+5Yv69pjKrs/TA0yDp7GJ3qxMhTxYaj1bZYfSHLQvHdIh9sfrkdRhBCFdMsJhG3YYkIYIcmOzTCiAkBWLuuodLiDfFYLjElYlYNP0NVZzGzGK33xmvoCOfjFZ0w8nE5XATM3Fy++B3PjKZIVYSKelP2oZvU=
-ARC-Authentication-Results:i=1; smtp.subspace.kernel.org; dmarc=pass (p=quarantine dis=none) header.from=msweet.org; spf=pass smtp.mailfrom=msweet.org; dkim=pass (1024-bit key) header.d=msweet.org header.i=@msweet.org header.b=wB7q/wAy; arc=none smtp.client-ip=173.255.209.91
-Authentication-Results: smtp.subspace.kernel.org; dmarc=pass (p=quarantine dis=none) header.from=msweet.org
-Authentication-Results: smtp.subspace.kernel.org; spf=pass smtp.mailfrom=msweet.org
+	s=arc-20240116; t=1786036799; c=relaxed/simple;
+	bh=m5y1FlxTtUIQs0Vd9rW95gCdgURbdGLGBAHgYZbNc/g=;
+	h=Message-ID:Date:MIME-Version:Subject:To:References:From:
+	 In-Reply-To:Content-Type; b=R33fTl8KnCqFtfnF0Eei2WtJyaS8HyHeHwtXnhUx8ERGsQDD1wpSwP2386kRcm3c0ebaCpQKHgnMX6lxwiKgtYGClv12OAKXsV8kY6AhoQF5EIrFbCeekYwIaY0o95yOuCqmigroxPJN1U8Tbf+7TPkumtE7wfR3NPvwt2bfxBQ=
+ARC-Authentication-Results:i=1; smtp.subspace.kernel.org; dmarc=pass (p=none dis=none) header.from=gmail.com; spf=pass smtp.mailfrom=gmail.com; dkim=pass (2048-bit key) header.d=gmail.com header.i=@gmail.com header.b=gEJbFaE8; arc=none smtp.client-ip=209.85.128.44
+Authentication-Results: smtp.subspace.kernel.org; dmarc=pass (p=none dis=none) header.from=gmail.com
+Authentication-Results: smtp.subspace.kernel.org; spf=pass smtp.mailfrom=gmail.com
 Authentication-Results: smtp.subspace.kernel.org;
-	dkim=pass (1024-bit key) header.d=msweet.org header.i=@msweet.org header.b="wB7q/wAy"
-Received: from smtpclient.apple (unknown [153.67.1.85])
-	(using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
-	(No client certificate requested)
-	by mail.msweet.org (Postfix) with ESMTPSA id 0C19782014;
-	Sun,  2 Aug 2026 17:48:00 +0000 (UTC)
-DKIM-Filter: OpenDKIM Filter v2.11.0 mail.msweet.org 0C19782014
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=msweet.org;
-	s=default; t=1785692881;
-	bh=wbQRk0flwB2VxT9BzzUU9zHHtJOHVNmr6KcWKCZ0/2k=;
-	h=Subject:From:In-Reply-To:Date:Cc:References:To:From;
-	b=wB7q/wAywWBA72vSxjCgq5mD6HRCuIFgn1toXAFLQmAVXajHMsgcXOR4F+F0agw/R
-	 8FO0fanJJGtadHCTjzJIZjWivKyUA2RzTi6YTCh2JCIncPBgndkYeku54Dbvtz0Ywp
-	 ebABBTcXaIhT+My7e3/ltVWYemYj9RFIAomJaur4=
-Content-Type: text/plain;
-	charset=utf-8
+	dkim=pass (2048-bit key) header.d=gmail.com header.i=@gmail.com header.b="gEJbFaE8"
+Received: by mail-wm1-f44.google.com with SMTP id 5b1f17b1804b1-49556f97a9dso16182065e9.1
+        for <printing-architecture@lists.linux.dev>; Thu, 06 Aug 2026 10:19:57 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20251104; t=1786036796; x=1786641596; darn=lists.linux.dev;
+        h=content-transfer-encoding:content-type:in-reply-to:from
+         :content-language:references:to:subject:user-agent:mime-version:date
+         :message-id:from:to:cc:subject:date:message-id:reply-to:content-type;
+        bh=kQ86boLKU3bX6v/ritDFf/Wl+UJlVMJ3ElIU3CX4+O8=;
+        b=gEJbFaE8NY2Vwney+a8sCslbnaYkp1/uPMBpmdWnFprUmCUIu+9Sw+6NnFnG+bFMZa
+         Xq6APtBmWgEZUwIVV1Z/0DzzcwfIvor3mciN4aTAu0AC2dMYurZUx/VA48LyLXVxZID6
+         40iEWXHdDCXFTLPcyod5N0fO7aWzlCiaN+yH29FzNflPMzqVZ88rEBYaQ2vp6DV6MmOr
+         3028akO5ZSuuxZgllz4B1IHRvT3L6J1JavR3Bdle2PneiSDNtow02So3d2rWF2N5qQnt
+         mlKslDN0KmspsJbbEhbygr2fV86FH9YTw8PmkkBVNl5JeFEFCEc9PsuA+zi5jkJ9iVoX
+         EO2A==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20251104; t=1786036796; x=1786641596;
+        h=content-transfer-encoding:content-type:in-reply-to:from
+         :content-language:references:to:subject:user-agent:mime-version:date
+         :message-id:x-gm-gg:x-gm-message-state:from:to:cc:subject:date
+         :message-id:reply-to:content-type;
+        bh=kQ86boLKU3bX6v/ritDFf/Wl+UJlVMJ3ElIU3CX4+O8=;
+        b=FTsrj0hsGfNl558naa4/psqwIQVMydqMqoKsGnxjnVcjZ6PdPT1QMPC7hQoKFMVmNy
+         UYYQgsqk9/gr9dEq/GFQxhiAWXOKRQIBBUIP0b+Rhb3DAzqT4BKZy6C3eDbl3eKrq19e
+         bmuc6MNzQ8qV/W/bOUgXOfukgpCcoGJl1MbEhk8fxp0r/tNz9HFP2GGGe/MSyyKVszDs
+         rvG9Gw/b3fob6i4JGpkxoZGViiFX6Bpn84q5fgmzesisvnnsD6OIDUyVZwWkmhyaUpJA
+         hjjoEVHdPeK1+0PH0hlidcm1DjCZ1itiOXDo4Mw0vfU+kZTi31QJT/KHo6W7CfFdNeIX
+         lzjg==
+X-Forwarded-Encrypted: i=1; AHgh+RoqmUew+mYq34/WntKG4aqr+8CMxR96T/7lm/+KetVt79CLuaz302uXL+BxPgG+2dgFPwsoJljxlL/6MFmCE9ywiLInSuw=@lists.linux.dev
+X-Gm-Message-State: AOJu0YzZD7Wh1JMABVdO1V6Tq+q1nMSWZmAHQ8HL9NdDdtVt+FyjZZLQ
+	v+1wH0zYmca+IQMForxIHCt8EN8hTrOfiidu0HwJjApYJgyYD5s7b2KKN3usuao51Cg=
+X-Gm-Gg: AR+sD11oTrHlMH1gEeaqSjF80iI04wbaUDaNJkbjiSNmJBOGkTWufT/OUXz8C0y+mjV
+	qcKAZ70pZf4M9YFd1NqldiFHy6FYDbPYTUjrHkugZN/WBNH43igBCtqi59QOtW3k1OCgz9sWV0s
+	fyB5OnMDDdkoyEZG49EJIM3JAJopbRyRYZMsY4g6I30qjHnjkTqNYAaWMJvbe0JTvjskrX0hayZ
+	Ofio1YMLKyygHpIGU/cBqa3q0QZS2kbjBAURUPQsRJzXhuXHS6Pwzlyv5cpUmUjxWhWYSOBMvF7
+	+MLMZAaD8YEgp3GUBUbNZvrQHx7EGt2k7VUsJEeu3McJMg78e3El7+jYKWKbd/a8mvc17z+0joF
+	QwkGHncqG2MDgLTFnWyRCwAZ5+IcuXH3kh6MdC+yeqQAM5PABX10T2+WJQGiMnubWVFkPMY0woO
+	if+IMNy+xX2z2yWBnZd8srLD1q+nFIJP7fXKplqdTPgXJn7gsYV/5iVbBSwaigerICCkbzPfVm9
+	W4x6hmh+E1AZ4Jdu8W0JPqfv4zgN3E5WZDnBDLYBN7CHng=
+X-Received: by 2002:a05:600c:4595:b0:498:952:e276 with SMTP id 5b1f17b1804b1-4994e79e377mr154355555e9.8.1786036795602;
+        Thu, 06 Aug 2026 10:19:55 -0700 (PDT)
+Received: from [192.168.68.113] (193-154-187-225.hdsl.highway.telekom.at. [193.154.187.225])
+        by smtp.gmail.com with ESMTPSA id 5b1f17b1804b1-4995420bd1csm78719155e9.3.2026.08.06.10.19.54
+        (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
+        Thu, 06 Aug 2026 10:19:54 -0700 (PDT)
+Message-ID: <f9f9d69c-5662-4070-b675-68b096e62f99@gmail.com>
+Date: Thu, 6 Aug 2026 19:19:52 +0200
 Precedence: bulk
 X-Mailing-List: printing-architecture@lists.linux.dev
 List-Id: <printing-architecture.lists.linux.dev>
 List-Subscribe: <mailto:printing-architecture+subscribe@lists.linux.dev>
 List-Unsubscribe: <mailto:printing-architecture+unsubscribe@lists.linux.dev>
-Mime-Version: 1.0 (Mac OS X Mail 16.0 \(3864.700.51.1.1\))
-Subject: Re: Recommended way to manually add an undiscovered IPP printer in
- CUPS 3.x
-From: Michael Sweet <msweet@msweet.org>
-In-Reply-To: <CAHK3-aqHugD6ZAjMSaOZadNrWZ6F5M=bKmUbWpDXN6c9yeVNyA@mail.gmail.com>
-Date: Sun, 2 Aug 2026 13:47:54 -0400
-Cc: Till Kamppeter <till.kamppeter@gmail.com>,
- printing-architecture@lists.linux.dev
-Content-Transfer-Encoding: quoted-printable
-Message-Id: <CDA0640E-599F-4E74-83A4-1D88B59BF84C@msweet.org>
-References: <CAHK3-apgmO5d5EOd5adZ+3NyCjKWOTMaoZPVC4tLDkVKPM-BQQ@mail.gmail.com>
- <EE1E0FD6-B0E9-4E02-948A-0DECCB1BB1F5@msweet.org>
- <debbccfb-2744-4d00-b786-796dea075e09@gmail.com>
- <e8fda297-ebbc-4252-87bc-7a1502472c72@gmail.com>
- <bf7e0634-8972-4078-a0bd-211d348b3d36@gmail.com>
- <CAHK3-aqHugD6ZAjMSaOZadNrWZ6F5M=bKmUbWpDXN6c9yeVNyA@mail.gmail.com>
-To: AbdElRahman Khalifa <abdelrahman.5alifa@gmail.com>
-X-Mailer: Apple Mail (2.3864.700.51.1.1)
+MIME-Version: 1.0
+User-Agent: Mozilla Thunderbird
+Subject: Re: A working Samsung printer made obsolete by one unsupported driver
+To: Bas Homans <bas@homans.nl>,
+ OpenPrinting <printing-architecture@lists.linux.dev>,
+ ValdikSS <iam@valdikss.org.ru>, Ayush Singh <ayushsinghceee@gmail.com>,
+ Pankaj Kumar <pankaj955956@gmail.com>
+References: <CC3A107F-882A-407F-9419-120ECC3E4DBD@homans.nl>
+Content-Language: en-US
+From: Till Kamppeter <till.kamppeter@gmail.com>
+In-Reply-To: <CC3A107F-882A-407F-9419-120ECC3E4DBD@homans.nl>
+Content-Type: text/plain; charset=UTF-8; format=flowed
+Content-Transfer-Encoding: 8bit
 
-Abdelrahman,
+Hi,
 
-> On Aug 2, 2026, at 5:18=E2=80=AFAM, AbdElRahman Khalifa =
-<abdelrahman.5alifa@gmail.com> wrote:
->=20
-> Thank you for the explanations. I think I now understand the
-> separation between printer profiles, the local server, and the sharing
-> server.
->=20
-> My current understanding is the following:
->=20
-> 1. cupsEnumDests() should be the source of truth for the destinations
-> displayed on the main Printers page.
-> It can return automatically discovered IPP destinations, remote CUPS
-> queues, Printer Application destinations, and eventually destinations
-> supplied through profiles.
-> Therefore, a destination must still be displayed even when I cannot
-> find a corresponding local DNS-SD advertisement.
+thanks for your mail.
 
-Correct.
+I am forwarding it to our mailing list (please subscribe to it) and also to our 
+maintainers and contributors for legacy printer drivers.
 
-> 2. DNS-SD should be an enrichment and grouping source, rather than the
-> authoritative destination list.
-> I currently use Avahi to obtain information such as the service
-> instance, hostname, port, resource path, TXT UUID, and the
-> relationship between _ipp._tcp and _ipps._tcp advertisements.
-> I will correlate this information with the destinations returned by
-> cupsEnumDests() and use it for physical-device grouping. Where
-> possible.
+    Till
 
-The destinations returned by cupsEnumDests should have device-uri, =
-printer-location, printer-make-and-model, printer-type, and printer-uuid =
-as extracted from the TXT record.  Local queues will have more =
-attributes (including printer-uri-supported which provides the local =
-CUPS queue) but there should be no need to separately browse.
 
-Also, the CUPS DNS-SD APIs are available and will isolate you from other =
-OS changes below you. For example, the systemd folks have been trying to =
-replace Avahi for several years now - it is possible they might actually =
-succeed some day, and using the CUPS APIs will insulate you from that =
-change...
-
-> 3,. COSMIC Printers should not create or edit printer profile files.
-
-You could conceptually provide an admin tool for "exporting" profiles to =
-provide to end-users, but beyond that I don't think there is much point.
-
-> 4. Profiles belong to the local-server/libcups discovery mechanism.
-> When libcups supports them, profile-defined destinations should appear
-> naturally through cupsEnumDests().
-
-Correct.
-
-> Queues owned by the sharing server are a separate concept.
-> I should query the sharing server using its IPP System Service
-> operations, such as Get-Printers, when I specifically need to list or
-> administer the queues owned by that server. I should not infer that
-> every destination returned by cupsEnumDests() is a configured
-> sharing-server queue.
-
-Correct.
-
-> 5. A normal driverless destination returned by cupsEnumDests() is
-> already usable and does not require an Add operation. A queue on the
-> sharing server should only be created if the user explicitly requests
-> server-side sharing, relaying, accounting, access control, or similar
-> policies, for example, when the user opens the Add Printer dialog and
-> selects that printer.
-
-Correct.
-
-> 6. For an undiscovered driverless printer entered manually via IP
-> address or hostname, printer setup tool should probe it using
-> Get-Printer-Attributes and then create a queue for it on the sharing
-> server.
-
-There may not be a sharing server.  There will always be a local server.
-
-A "driverless" printer that has to be manually configured can be setup =
-via a printer profile with the local server. The sharing server only =
-needs to get involved if a) the printer is on a separate network that =
-only the sharing server has access to or b) there is a need to =
-control/monitor access to the printer as you detail in #5 above.
-
-________________________
-Michael Sweet
+On 8/6/26 17:21, bas@homans.nl wrote:
+> Dear Mr Broussard, HP Sustainable Impact team, and OpenPrinting colleagues,
+> 
+> I am writing about a small but rather telling example of avoidable electronic waste.
+> 
+> My Samsung ML-2160 laser printer is mechanically sound, reliable, economical, 
+> and entirely adequate for its purpose. On my Apple-silicon Mac mini, the printer 
+> is detected correctly and print jobs are successfully spooled. However, on both 
+> macOS 26 and macOS 27 Public Beta, printing then stops because the legacy 
+> Samsung print software is rejected as incompatible.
+> 
+> AirPrint is not available on this model, and the printer uses Samsung’s SPL 
+> printing language rather than standard PCL or PostScript. Consequently, a 
+> perfectly functional machine has effectively been turned into electronic waste 
+> solely because a small software translation layer is no longer maintained.
+> 
+> HP acquired Samsung’s printer business in 2017. I do not expect indefinite full 
+> commercial support for every legacy product. I do, however, believe that making 
+> otherwise serviceable hardware unusable through software abandonment is 
+> difficult to reconcile with HP’s stated circularity principles of extending 
+> useful product life through repair, refurbishment and reuse.
+> 
+> I therefore ask HP to consider one of the following proportionate solutions:
+> 
+>  1.
+> 
+>     Release a signed, Apple-silicon-compatible version of the Samsung SPL print
+>     filter;
+> 
+>  2.
+> 
+>     Release the relevant legacy SPL driver source code and/or technical
+>     specifications under a suitable open-source licence, enabling OpenPrinting
+>     and the SpliX community to maintain it;
+> 
+>  3.
+> 
+>     If neither option is possible, explain what legal or technical obstacle
+>     prevents HP from cooperating with the existing open-source printing community.
+> 
+> This is not merely theoretical: OpenPrinting’s SpliX project already provides 
+> support for the ML-2160 family on Linux. The necessary knowledge and developer 
+> community therefore exist; they merely need sufficient documentation, source 
+> access or cooperation from the rights holder.
+> 
+> Please route this message to the teams responsible for Samsung legacy print 
+> engineering, Sustainable Impact, and open-source or intellectual-property 
+> licensing. I would appreciate a substantive response as to whether HP is willing 
+> to pursue any of these options.
+> 
+> I would gladly have printed and posted this letter, but unfortunately HP’s 
+> withdrawal of software support for my otherwise functional printer prevented me 
+> from doing so.
+> 
+> Kind regards,
+> 
+> Bas Homans
+> 
+> 
+> The Netherlands
+> 
 
