@@ -1,132 +1,117 @@
-Received: from smtp3.osuosl.org (smtp3.osuosl.org [140.211.166.136])
+Received: from us-smtp-delivery-124.mimecast.com (us-smtp-delivery-124.mimecast.com [170.10.133.124])
 	(using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
 	(No client certificate requested)
-	by smtp.subspace.kernel.org (Postfix) with ESMTPS id E318D26AC5
-	for <printing-architecture@lists.linux-foundation.org>; Sat, 12 Sep 2026 16:33:41 +0000 (UTC)
-Authentication-Results: smtp.subspace.kernel.org; arc=fail smtp.client-ip=140.211.166.136
-ARC-Seal:i=2; a=rsa-sha256; d=subspace.kernel.org; s=arc-20240116;
-	t=1789230823; cv=fail; b=UTMEZlZL7HOh1xf1rg2TKTLEZKkDcOE8thkpC5Yzo/kRbfsLn/rgcmYimZhMB+GYge+P2u5FpTp/yHdtiMIH0+POxbKpra4zX0noeU9oP36SBFVzlfEmT21XxX/HEWjPRoSBnc48cB7/7C5stjVlBxXmmCVa0DfdR7uYejHPZbk=
-ARC-Message-Signature:i=2; a=rsa-sha256; d=subspace.kernel.org;
-	s=arc-20240116; t=1789230823; c=relaxed/simple;
-	bh=J9QXiOdV54cf/4nDxcMVkqfrnplm9DBurdsKdX4rwA4=;
-	h=From:To:Subject:Date:Message-ID:MIME-Version:Content-Type; b=BaMt/T5s28Pwj/5cVZ3bjddx02l4PM+B9ek8fDF7GlQ+IOHteG28chN7Z6VoPTmoQO8fLLLdf749VDtqxhJHYKJK/58vdfyNiOYWgo3L0Ueg9Y97gmhBf2AO2qO+/ZF2k6sxpTDuzdIpy2EbXLPLwbs8QV8IeU1h1hpmok8dnYM=
-ARC-Authentication-Results:i=2; smtp.subspace.kernel.org; arc=fail smtp.client-ip=140.211.166.136
-Received: from localhost (localhost [127.0.0.1])
-	by smtp3.osuosl.org (Postfix) with ESMTP id 8D55C60600
-	for <printing-architecture@lists.linux-foundation.org>; Sat, 12 Sep 2026 16:33:41 +0000 (UTC)
-X-Virus-Scanned: amavis at osuosl.org
-X-Spam-Flag: NO
-X-Spam-Score: 0.415
-X-Spam-Level:
-Received: from smtp3.osuosl.org ([127.0.0.1])
- by localhost (smtp3.osuosl.org [127.0.0.1]) (amavis, port 10024) with ESMTP
- id 8RsBBdTFwdRJ for <printing-architecture@lists.linux-foundation.org>;
- Sat, 12 Sep 2026 16:33:40 +0000 (UTC)
-ARC-Filter: OpenARC Filter v1.3.0 smtp3.osuosl.org 576646060A
-Authentication-Results: smtp3.osuosl.org; arc=none smtp.remote-ip=23.83.222.57
-ARC-Seal: i=1; d=osuosl.org; s=arc; a=rsa-sha256; cv=none; t=1789230820;
-	b=lAMZBDp/7v3Idc6fOjkfEMjEwc31qMDxigfHZqmFLm/cOW1jAkVwVDl3thwgLaepDZR9
-	 I14yKyBuBdLwv1uFchZkNvDamMB9AIWHbEnIZXgMXavvTCENSZNkNhzlM0mafm1dYsvLc
-	 MWfdkHL5CEXLzE7r+msRxLxB9LYP6k855HmdLrKwqsG8G2u8ckhX+1tA4gBWltjb6V5P1
-	 FVIP5L3p5UIvyWdC6QS+QycclztE7/iBWIPkEgK22MZHX/7Ig7rQFqXGHCBoVOva/WJ92
-	 E6lGx9TNuwaByIzxhveLqcOPNuDSrzQ/HTmCV7WPbqFEsaWEYKgMvLfT2Nk1ldrzHoA==
-ARC-Message-Signature: i=1; d=osuosl.org; s=arc; a=rsa-sha256;
-	c=relaxed/relaxed; t=1789230820;
-	h=Received-SPF:X-Sender-Id:Received:Received:X-Sender-Id:X-MC-Relay:
-	 X-MC-Copy:X-MailChannels-SenderId:X-MailChannels-Auth-Id:
-	 X-Soft-Imminent:X-MC-Loop-Signature:X-MC-Ingress-Time:Received:
-	 Received:From:To:Subject:Date:Message-ID:MIME-Version:Content-Type:
-	 Content-Transfer-Encoding:X-AuthUser;
-	bh=J9QXiOdV54cf/4nDxcMVkqfrnplm9DBurdsKdX4rwA4=;
-	b=kkSB8nWA5BvIpc39LAZOLYkX7DuUDXtE3KL3n0eFkeS3PDsEQt+uyqqjQSItDyiFqWFX
-	 FTNjFZYEeAwOa5P8LP2uNThZcy40k2TnNM8Yevy52KO34j/47qszp8j0CdlJZxfyoDIlK
-	 R4RtkybuZe34hRxc/OlnH9tksA5QK50gR6ftxnfH0Jwko2IkqRez9elLnrfbPNecGDzk8
-	 JSFeZHOTAN3VXgF43w1dsIWZ+vPg52FY2XLHoBl8jbCsW45zvPslQhliyzMdt+fAZuQqR
-	 XiFmDNU5EKcFN5GXMir6G6biUH5IHM4hnh2bAEnMFnVBubJqVrX/LXyiGcfMsGCk7QQ==
-ARC-Authentication-Results: i=1; smtp3.osuosl.org; dmarc=fail header.from=maziyoexports.com;
-	arc=none smtp.remote-ip=23.83.222.57
-Received-SPF: Softfail (mailfrom) identity=mailfrom; client-ip=23.83.222.57; helo=elephant.ash.relay.mailchannels.net; envelope-from=import@bara.co.il; receiver=<UNKNOWN> 
-Authentication-Results: smtp3.osuosl.org; dmarc=fail (p=none dis=none) header.from=maziyoexports.com
-Received: from elephant.ash.relay.mailchannels.net (elephant.ash.relay.mailchannels.net [23.83.222.57])
-	by smtp3.osuosl.org (Postfix) with ESMTPS id 576646060A
-	for <printing-architecture@lists.linux-foundation.org>; Sat, 12 Sep 2026 16:33:38 +0000 (UTC)
-X-Sender-Id: a2hosting|x-authuser|shihan@zandt-sourcing.com
-Received: from relay.mailchannels.net (localhost [127.0.0.1])
-	by relay.mailchannels.net (Postfix) with ESMTP id 0F0334C1644;
-	Sat, 12 Sep 2026 16:33:37 +0000 (UTC)
-Received: from az1-ss25.a2hosting.com (trex-green-2.trex.outbound.svc.cluster.local [100.100.63.247])
-	(Authenticated sender: a2hosting)
-	by relay.mailchannels.net (Postfix) with ESMTPA id C3B204C0A73
-	for <printing-architecture@lists.linux-foundation.org>; Sat, 12 Sep 2026 16:33:36 +0000 (UTC)
-X-Sender-Id: a2hosting|x-authuser|shihan@zandt-sourcing.com
-X-MC-Relay: Neutral
-X-MC-Copy: stored-urls
-X-MailChannels-SenderId: a2hosting|x-authuser|shihan@zandt-sourcing.com
-X-MailChannels-Auth-Id: a2hosting
-X-Soft-Imminent: 7a554b877cb5cde1_1789230816897_3297185608
-X-MC-Loop-Signature: 1789230816897:3176825908
-X-MC-Ingress-Time: 1789230816896
-Received: from az1-ss25.a2hosting.com (az1-ss25.a2hosting.com [68.66.224.51])
-	(using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384)
-	by 100.100.63.247 (trex/8.0.2);
-	Sat, 12 Sep 2026 16:33:36 +0000
-Received: from [207.189.12.98] (port=50896 helo=bara.co.il)
-	by az1-ss25.a2hosting.com with esmtpa (Exim 4.100)
-	(envelope-from <import@bara.co.il>)
-	id 1x5QfX-000000008Rq-2Ys6
-	for printing-architecture@lists.linux-foundation.org;
-	Sat, 12 Sep 2026 09:33:36 -0700
-From: Siddharth Manu <sm@maziyoexports.com>
-To: printing-architecture@lists.linux-foundation.org
-Subject: Product Inquiry
-Date: 12 Sep 2026 12:33:34 -0400
-Message-ID: <20260911183944.6E9BBE6CA9A8B970@maziyoexports.com>
+	by smtp.subspace.kernel.org (Postfix) with ESMTPS id 9E6434CDA31
+	for <printing-architecture@lists.linux.dev>; Mon,  5 Oct 2026 15:47:46 +0000 (UTC)
+Authentication-Results: smtp.subspace.kernel.org; arc=none smtp.client-ip=170.10.133.124
+ARC-Seal:i=1; a=rsa-sha256; d=subspace.kernel.org; s=arc-20240116;
+	t=1791215268; cv=none; b=Jn//nz4TZbqJY0NurEDg+CZS9MUBOhQozD+lou4c74fIcMsMutJMxN8OgDPbmRsXJyWn0Kwxf/tsKt5PBuLyeqQR7LI/6T0vZfEqLea+yW0Gae4bQrNq56jaGQ9jda6tMKdHsBh2HLd6FhRAe+lNShe9F1xjnaQEnua1LtbxA4Y=
+ARC-Message-Signature:i=1; a=rsa-sha256; d=subspace.kernel.org;
+	s=arc-20240116; t=1791215268; c=relaxed/simple;
+	bh=rfSiVip9U5/+EnrIgh8T/ovHOeWBNm3AWLF5ZVWF2ys=;
+	h=Message-ID:Date:MIME-Version:To:From:Subject:Content-Type; b=YS17UAX+BzFmEoCmyn5e0A5OuCzbdZr1hZA+5izp7aGPNSdKz8PfqLUWkfg8HKHhycIpKNu271ENzTVvKPSH3NpZxYdbXN5jBRPzrEOB9mMl8rC1Af+kGTcmB2bG2Ojdw4EeFn1ZmfUXIAEak/zpC/8Al7/iX/4v6keuOshyFv0=
+ARC-Authentication-Results:i=1; smtp.subspace.kernel.org; dmarc=pass (p=quarantine dis=none) header.from=redhat.com; spf=pass smtp.mailfrom=redhat.com; dkim=pass (1024-bit key) header.d=redhat.com header.i=@redhat.com header.b=LE34D9GW; arc=none smtp.client-ip=170.10.133.124
+Authentication-Results: smtp.subspace.kernel.org; dmarc=pass (p=quarantine dis=none) header.from=redhat.com
+Authentication-Results: smtp.subspace.kernel.org; spf=pass smtp.mailfrom=redhat.com
+Authentication-Results: smtp.subspace.kernel.org;
+	dkim=pass (1024-bit key) header.d=redhat.com header.i=@redhat.com header.b="LE34D9GW"
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=redhat.com;
+	s=mimecast20190719; t=1791215265;
+	h=from:from:reply-to:subject:subject:date:date:message-id:message-id:
+	 to:to:cc:mime-version:mime-version:content-type:content-type:
+	 content-transfer-encoding:content-transfer-encoding:autocrypt:autocrypt;
+	bh=Uy87WkbkiNlWvu6SaEbAG46kXIV08UL3WEb5le1AV48=;
+	b=LE34D9GW1q9tYKwHfVpHsDaMjuN19Et2nUGyPW1xXF4YVXhGh+J50TLSRYIMYaSOUsr9qo
+	Xctsl0thljQA6UcLzLvbbAbmTpI9fXdZCaNzDOVKGCgSUnfcjeLARHEScDNimQj3w1urn2
+	m34F824kxLh62xwbrGyCh+HdASd1X9M=
+Received: from mail-wm1-f72.google.com (mail-wm1-f72.google.com
+ [209.85.128.72]) by relay.mimecast.com with ESMTP with STARTTLS
+ (version=TLSv1.3, cipher=TLS_AES_256_GCM_SHA384) id
+ us-mta-198-PkaO92cpNJae7inoFUkIiw-1; Mon, 05 Oct 2026 11:47:44 -0400
+X-MC-Unique: PkaO92cpNJae7inoFUkIiw-1
+X-Mimecast-MFC-AGG-ID: PkaO92cpNJae7inoFUkIiw_1791215263
+Received: by mail-wm1-f72.google.com with SMTP id 5b1f17b1804b1-49953abe51fso14383655e9.1
+        for <printing-architecture@lists.linux.dev>; Mon, 05 Oct 2026 08:47:43 -0700 (PDT)
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20260707; t=1791215263; x=1791820063;
+        h=content-transfer-encoding:content-type:autocrypt:subject:from:to
+         :content-language:user-agent:mime-version:date:message-id:x-gm-gg
+         :x-gm-message-state:from:to:cc:subject:date:message-id:reply-to
+         :content-type;
+        bh=Uy87WkbkiNlWvu6SaEbAG46kXIV08UL3WEb5le1AV48=;
+        b=1rnepO4d8OqbJqC2mgnrdOqNFhSlY4ncK1YCdPIqCUayM+t2cW+k4pryTm1woDU+Eu
+         TsybMyioqGXWFA5g2gkcnLbUU2dRuzw1hbDkabVxCVUIvZb80GL8Z3jMeTB1tcGhC8OV
+         6I8BhdDYK4f84QcQYOZtEHci13q6HcVCwDk1Ql08rJh/ZrR33WHH4bIKKAyvDce2SmlJ
+         l9n2jluOGJiifmfllSkAFmYn3GkXAM0hhNYpRsWteAiua+202WeesYOSg+vgBWH0kjso
+         B8UN62Er5HRN6Hxy8kX69wg7t0UJqq22EHEz0RhoB2/sxHiCMyhJ2NbuRqVZn4MksWfG
+         nQbQ==
+X-Gm-Message-State: AFuF++k1/onjRRF3PoQqF7pfW2BwWUQy+bPRldbg8FJkadaEswOz7r+b
+	TyjbxIQroh+dLPXG9OE9jiGFLLihHdSoMn8SEBd6ZgTpDOUz9GpV3Q/o2LNRoH3fk+wxf0PEX+c
+	L9lY+qFdCvcpPAY28eXFDzl+93vx26S++FFdiqyuVuIclPLqCWW+SrojZ55YT3H8yJ4+xP5EqUQ
+	hF3TYWaQw4g/boP2JCM1a5ogbraVmb4suXs/RDpXCh37mhgfHeNroJce187T61
+X-Gm-Gg: AYBFou3J4jZkU6n87J6hM8KNxunKoAb2zkq9c9Kxwm+GOcLwwCGL0qJMPMTae3rWM+8
+	XI0BxoXWX52V/0WTTeHf6u2hcCpxd22vbpXXec0ONGyH7r0qQioyjfHlcO4J/v7XPJp6Mne3+UU
+	yLYB+Rqo4ONU9KDCxyDNnqVhFYxJsck+NZTCwKM5CIH+idPIV7aDi1eMWJqM5+/bjn0vRm+sqhg
+	bU3uFIR6xZlyT1VQ6YuFwHIpwVC8BdnXFwdAJdPwqxGdHnaYqrPOvPPpieTwF1Ujy2NST6EE/s3
+	awX6vqAEkS64z6YaqZTPFh648KRfHd/guosu2vv3FTbtGUo+qx4ki70sQ/BeXaA=
+X-Received: by 2002:a05:600c:6094:b0:4a0:2488:71cc with SMTP id 5b1f17b1804b1-4a0276b2222mr181739955e9.32.1791215262839;
+        Mon, 05 Oct 2026 08:47:42 -0700 (PDT)
+X-Received: by 2002:a05:600c:6094:b0:4a0:2488:71cc with SMTP id 5b1f17b1804b1-4a0276b2222mr181739585e9.32.1791215262385;
+        Mon, 05 Oct 2026 08:47:42 -0700 (PDT)
+Received: from [10.43.3.35] ([213.175.46.86])
+        by smtp.gmail.com with ESMTPSA id 5b1f17b1804b1-4a1788fa0bfsm813325e9.15.2026.10.05.08.47.41
+        for <printing-architecture@lists.linux.dev>
+        (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
+        Mon, 05 Oct 2026 08:47:41 -0700 (PDT)
+Message-ID: <9ccacf77-ea32-4fb3-a7d9-d64b589da7fe@redhat.com>
+Date: Mon, 5 Oct 2026 17:47:41 +0200
 Precedence: bulk
 X-Mailing-List: printing-architecture@lists.linux.dev
 List-Id: <printing-architecture.lists.linux.dev>
 List-Subscribe: <mailto:printing-architecture+subscribe@lists.linux.dev>
 List-Unsubscribe: <mailto:printing-architecture+unsubscribe@lists.linux.dev>
 MIME-Version: 1.0
-Content-Type: text/plain;
-	charset="utf-8"
-Content-Transfer-Encoding: quoted-printable
-X-AuthUser: shihan@zandt-sourcing.com
+User-Agent: Mozilla Thunderbird
+To: OpenPrinting <printing-architecture@lists.linux.dev>
+From: Zdenek Dohnal <zdohnal@redhat.com>
+Subject: CUPS 2.4.20 is released!
+Autocrypt: addr=zdohnal@redhat.com; keydata=
+ xjMEYfKEjRYJKwYBBAHaRw8BAQdAJggn9NALyWqrgrFGPJ9RvPb7wYbskxKRKQcLv+8HpbrN
+ QVpkZW5layBEb2huYWwgKFRoZSBvbGQgNEQ0MjI3RDcga2V5IHJldm9rZWQpIDx6ZG9obmFs
+ QHJlZGhhdC5jb20+wpQEExYKADwWIQRwgqClCi6SZA84gODkUi3MmyRv9wUCYfKEjQIbAwUL
+ CQgHAgMiAgEGFQoJCAsCBBYCAwECHgcCF4AACgkQ5FItzJskb/fbUQEAm6R78JoZSIOpu68g
+ tUUp1qbfDdsfoQkbdyfws/myB6gA/A6/9QiIk50DNCmBTisZk5CFP51YNvwnyxafmE3cDn8G
+ zjgEYfKEjRIKKwYBBAGXVQEFAQEHQF6Qgj5UQqUdvqvnDqygQ6Vm59nRGHbPVDTwendtM5cC
+ AwEIB8J4BBgWCgAgFiEEcIKgpQoukmQPOIDg5FItzJskb/cFAmHyhI0CGwwACgkQ5FItzJsk
+ b/e2CwD/SyRi/I5Il5XY5VXEL/eBsnNvvtaO0T10V4/vBMiDb+sBAK3YmRl6WStfRiEvMXQv
+ OhMT+sEjx6ufQXkuPeXHvrgK
+X-Mimecast-Spam-Score: 0
+X-Mimecast-MFC-PROC-ID: c0a0aHjuvvdzqaT6pe-LkRw0hys09vmKN0vI3zfbf0c_1791215263
+X-Mimecast-Originator: redhat.com
+Content-Language: en-US
+Content-Type: text/plain; charset=UTF-8; format=flowed
+Content-Transfer-Encoding: 8bit
 
-Dear printing-architecture,
+Hi all!
 
-I hope this email finds you well.
+CUPS 2.4.20 provides amount of bug fixes and security fixes:
 
-We are interested in sourcing your products and are considering placing=20
-an order, subject to competitive pricing and favorable commercial terms.
+Assigned ids:
+- CVE-2025-55480, CVE-2026-61702, CVE-2026-87875, CVE-2026-87876, 
+CVE-2026-55453, CVE-2026-55467, CVE-2026-105326
 
-Could you kindly confirm the following:
+Several fixes use GHSA id, because we changed policy for vulnerabilities 
+with CVSS < 7.0 due long waiting time for ids from CNA, which we take as 
+lower priority vulnerabilities unless print admin rights are      
+required for triggering them, or we explicitly mention the advisory is 
+security hardening, and not vulnerability fix.
 
-Whether you accept export orders.
-Your preferred shipping terms (CIF or Ex Works).
-Your estimated time of dispatch (ETD) for an order placed early next=20
-week.
+More details in CHANGES.md.
 
-Upon receiving your response, we will forward our detailed product=20
-requirements for quotation, along with our company profile, for your=20
-review.
+Enjoy!
 
-If this inquiry has reached the wrong department, we would appreciate it=20=
-
-if you could kindly forward it to the appropriate contact.
-
-We look forward to your response and hope to establish a successful=20
-business relationship.
-
-Kind regards,
-
----
-Kind regards,
-
-Siddharth Manu
-Import Export Manager
-Maziyo Exports LLP
-Office No. 116, 1st Floor, Ostwal Ornate Building No. 1, Jesal Park,=20
-Bhayander East, Thane, Maharashtra, 401105, India
-Website: http://www.maziyoexports.com/
-Email: sm@maziyoexports.com
+-- 
+Zdenek Dohnal
+Senior Software Engineer
+Red Hat, BRQ-TPBC
 
