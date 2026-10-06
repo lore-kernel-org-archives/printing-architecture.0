@@ -1,117 +1,137 @@
-Received: from us-smtp-delivery-124.mimecast.com (us-smtp-delivery-124.mimecast.com [170.10.133.124])
+Received: from ms-10.1blu.de (ms-10.1blu.de [178.254.4.101])
 	(using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
 	(No client certificate requested)
-	by smtp.subspace.kernel.org (Postfix) with ESMTPS id 9E6434CDA31
-	for <printing-architecture@lists.linux.dev>; Mon,  5 Oct 2026 15:47:46 +0000 (UTC)
-Authentication-Results: smtp.subspace.kernel.org; arc=none smtp.client-ip=170.10.133.124
+	by smtp.subspace.kernel.org (Postfix) with ESMTPS id BBE8A3B3BFE
+	for <printing-architecture@lists.linux.dev>; Tue,  6 Oct 2026 11:31:44 +0000 (UTC)
+Authentication-Results: smtp.subspace.kernel.org; arc=none smtp.client-ip=178.254.4.101
 ARC-Seal:i=1; a=rsa-sha256; d=subspace.kernel.org; s=arc-20240116;
-	t=1791215268; cv=none; b=Jn//nz4TZbqJY0NurEDg+CZS9MUBOhQozD+lou4c74fIcMsMutJMxN8OgDPbmRsXJyWn0Kwxf/tsKt5PBuLyeqQR7LI/6T0vZfEqLea+yW0Gae4bQrNq56jaGQ9jda6tMKdHsBh2HLd6FhRAe+lNShe9F1xjnaQEnua1LtbxA4Y=
+	t=1791286307; cv=none; b=QbDxB5N8UizVUiSNi6Z+5ri+IvIFTm+8L4TD7tqo39ziuYnciXay/R+diEmQEODHlPSH6dT9m9faUKXh9uMj7/NE1YtGGNXdAa4Eb8HPG3AfV6Sku6ioE/QotaqljtcI4h7Kf3ZSvhY5i+DH9nkuk7p04YwGXp0irYvBoGi8gfw=
 ARC-Message-Signature:i=1; a=rsa-sha256; d=subspace.kernel.org;
-	s=arc-20240116; t=1791215268; c=relaxed/simple;
-	bh=rfSiVip9U5/+EnrIgh8T/ovHOeWBNm3AWLF5ZVWF2ys=;
-	h=Message-ID:Date:MIME-Version:To:From:Subject:Content-Type; b=YS17UAX+BzFmEoCmyn5e0A5OuCzbdZr1hZA+5izp7aGPNSdKz8PfqLUWkfg8HKHhycIpKNu271ENzTVvKPSH3NpZxYdbXN5jBRPzrEOB9mMl8rC1Af+kGTcmB2bG2Ojdw4EeFn1ZmfUXIAEak/zpC/8Al7/iX/4v6keuOshyFv0=
-ARC-Authentication-Results:i=1; smtp.subspace.kernel.org; dmarc=pass (p=quarantine dis=none) header.from=redhat.com; spf=pass smtp.mailfrom=redhat.com; dkim=pass (1024-bit key) header.d=redhat.com header.i=@redhat.com header.b=LE34D9GW; arc=none smtp.client-ip=170.10.133.124
-Authentication-Results: smtp.subspace.kernel.org; dmarc=pass (p=quarantine dis=none) header.from=redhat.com
-Authentication-Results: smtp.subspace.kernel.org; spf=pass smtp.mailfrom=redhat.com
+	s=arc-20240116; t=1791286307; c=relaxed/simple;
+	bh=mYlAWUDCPd0vu2MM8EuEYgaCaMnFwjfB75WImgPruTQ=;
+	h=Date:From:To:Subject:Message-ID:MIME-Version:Content-Type:
+	 Content-Disposition; b=js18KwMCAHjgydCV2OfB586MbSZtfFAsQQZi69e18Jm5bROfgzdzhLzxCNVjYPvVKRLmLmzvxVtEhisdJanvtyIhTsHlHVC+CWRmylPfMVfWd/WDrYfS9tq6isNBiK2zhUhXCvC17BTX04MJVOftifCTG0MOkYrF22ct9eHMG/Y=
+ARC-Authentication-Results:i=1; smtp.subspace.kernel.org; dmarc=none (p=none dis=none) header.from=unixarea.de; spf=pass smtp.mailfrom=unixarea.de; dkim=pass (2048-bit key) header.d=unixarea.de header.i=@unixarea.de header.b=N0wWgUit; arc=none smtp.client-ip=178.254.4.101
+Authentication-Results: smtp.subspace.kernel.org; dmarc=none (p=none dis=none) header.from=unixarea.de
+Authentication-Results: smtp.subspace.kernel.org; spf=pass smtp.mailfrom=unixarea.de
 Authentication-Results: smtp.subspace.kernel.org;
-	dkim=pass (1024-bit key) header.d=redhat.com header.i=@redhat.com header.b="LE34D9GW"
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=redhat.com;
-	s=mimecast20190719; t=1791215265;
-	h=from:from:reply-to:subject:subject:date:date:message-id:message-id:
-	 to:to:cc:mime-version:mime-version:content-type:content-type:
-	 content-transfer-encoding:content-transfer-encoding:autocrypt:autocrypt;
-	bh=Uy87WkbkiNlWvu6SaEbAG46kXIV08UL3WEb5le1AV48=;
-	b=LE34D9GW1q9tYKwHfVpHsDaMjuN19Et2nUGyPW1xXF4YVXhGh+J50TLSRYIMYaSOUsr9qo
-	Xctsl0thljQA6UcLzLvbbAbmTpI9fXdZCaNzDOVKGCgSUnfcjeLARHEScDNimQj3w1urn2
-	m34F824kxLh62xwbrGyCh+HdASd1X9M=
-Received: from mail-wm1-f72.google.com (mail-wm1-f72.google.com
- [209.85.128.72]) by relay.mimecast.com with ESMTP with STARTTLS
- (version=TLSv1.3, cipher=TLS_AES_256_GCM_SHA384) id
- us-mta-198-PkaO92cpNJae7inoFUkIiw-1; Mon, 05 Oct 2026 11:47:44 -0400
-X-MC-Unique: PkaO92cpNJae7inoFUkIiw-1
-X-Mimecast-MFC-AGG-ID: PkaO92cpNJae7inoFUkIiw_1791215263
-Received: by mail-wm1-f72.google.com with SMTP id 5b1f17b1804b1-49953abe51fso14383655e9.1
-        for <printing-architecture@lists.linux.dev>; Mon, 05 Oct 2026 08:47:43 -0700 (PDT)
-X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
-        d=1e100.net; s=20260707; t=1791215263; x=1791820063;
-        h=content-transfer-encoding:content-type:autocrypt:subject:from:to
-         :content-language:user-agent:mime-version:date:message-id:x-gm-gg
-         :x-gm-message-state:from:to:cc:subject:date:message-id:reply-to
-         :content-type;
-        bh=Uy87WkbkiNlWvu6SaEbAG46kXIV08UL3WEb5le1AV48=;
-        b=1rnepO4d8OqbJqC2mgnrdOqNFhSlY4ncK1YCdPIqCUayM+t2cW+k4pryTm1woDU+Eu
-         TsybMyioqGXWFA5g2gkcnLbUU2dRuzw1hbDkabVxCVUIvZb80GL8Z3jMeTB1tcGhC8OV
-         6I8BhdDYK4f84QcQYOZtEHci13q6HcVCwDk1Ql08rJh/ZrR33WHH4bIKKAyvDce2SmlJ
-         l9n2jluOGJiifmfllSkAFmYn3GkXAM0hhNYpRsWteAiua+202WeesYOSg+vgBWH0kjso
-         B8UN62Er5HRN6Hxy8kX69wg7t0UJqq22EHEz0RhoB2/sxHiCMyhJ2NbuRqVZn4MksWfG
-         nQbQ==
-X-Gm-Message-State: AFuF++k1/onjRRF3PoQqF7pfW2BwWUQy+bPRldbg8FJkadaEswOz7r+b
-	TyjbxIQroh+dLPXG9OE9jiGFLLihHdSoMn8SEBd6ZgTpDOUz9GpV3Q/o2LNRoH3fk+wxf0PEX+c
-	L9lY+qFdCvcpPAY28eXFDzl+93vx26S++FFdiqyuVuIclPLqCWW+SrojZ55YT3H8yJ4+xP5EqUQ
-	hF3TYWaQw4g/boP2JCM1a5ogbraVmb4suXs/RDpXCh37mhgfHeNroJce187T61
-X-Gm-Gg: AYBFou3J4jZkU6n87J6hM8KNxunKoAb2zkq9c9Kxwm+GOcLwwCGL0qJMPMTae3rWM+8
-	XI0BxoXWX52V/0WTTeHf6u2hcCpxd22vbpXXec0ONGyH7r0qQioyjfHlcO4J/v7XPJp6Mne3+UU
-	yLYB+Rqo4ONU9KDCxyDNnqVhFYxJsck+NZTCwKM5CIH+idPIV7aDi1eMWJqM5+/bjn0vRm+sqhg
-	bU3uFIR6xZlyT1VQ6YuFwHIpwVC8BdnXFwdAJdPwqxGdHnaYqrPOvPPpieTwF1Ujy2NST6EE/s3
-	awX6vqAEkS64z6YaqZTPFh648KRfHd/guosu2vv3FTbtGUo+qx4ki70sQ/BeXaA=
-X-Received: by 2002:a05:600c:6094:b0:4a0:2488:71cc with SMTP id 5b1f17b1804b1-4a0276b2222mr181739955e9.32.1791215262839;
-        Mon, 05 Oct 2026 08:47:42 -0700 (PDT)
-X-Received: by 2002:a05:600c:6094:b0:4a0:2488:71cc with SMTP id 5b1f17b1804b1-4a0276b2222mr181739585e9.32.1791215262385;
-        Mon, 05 Oct 2026 08:47:42 -0700 (PDT)
-Received: from [10.43.3.35] ([213.175.46.86])
-        by smtp.gmail.com with ESMTPSA id 5b1f17b1804b1-4a1788fa0bfsm813325e9.15.2026.10.05.08.47.41
-        for <printing-architecture@lists.linux.dev>
-        (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
-        Mon, 05 Oct 2026 08:47:41 -0700 (PDT)
-Message-ID: <9ccacf77-ea32-4fb3-a7d9-d64b589da7fe@redhat.com>
-Date: Mon, 5 Oct 2026 17:47:41 +0200
+	dkim=pass (2048-bit key) header.d=unixarea.de header.i=@unixarea.de header.b="N0wWgUit"
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=unixarea.de
+	; s=blu3434000; h=Content-Transfer-Encoding:Content-Type:MIME-Version:
+	Reply-To:Message-ID:Subject:To:From:Date:Sender:Cc:Content-ID:
+	Content-Description:In-Reply-To:References;
+	bh=MQScJ7zYSOpg2WZhUfzFuvQo2uoSmpNUDoPZT1l2XIo=; b=N0wWgUitbZuz1oRggS2CRXoXhm
+	5Lly9oNSqBF+R5y5wM3V9pNv1FYZXiHod9JcgsclFEHrLsoAX2tty7vz8njHrBm3pOCtJx+d32TpT
+	uT2hFLhwYmSqVVfB+FvDd7KrWvTxV1O0tEB5UV5d0KZ9dumCa9s9IAwXlPGgKtzALc2SXg8D+izA/
+	S4qv3Lvl0bH0vrHekOeE1PfQrL4Sy4N5OZNpJUiI1rGMnSOVybNqoSlxNe9NlXwKSmnS3vqDL3les
+	5GC9b+YZaXmmHozvePJpSPBUkXA5bfQSWfSPKhgeZ5dgvR4FX1kjlFYYEMlvT3Bd2UzlzzjSZGWvF
+	MmD+eQiA==;
+Received: from [212.222.85.114] (helo=pureos)
+	by ms-10.1blu.de with esmtpsa  (TLS1.2) tls TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
+	(Exim 4.95)
+	(envelope-from <guru@unixarea.de>)
+	id 1xE1wX-001wuI-I7;
+	Tue, 06 Oct 2026 11:58:41 +0200
+Date: Tue, 6 Oct 2026 11:58:39 +0200
+From: Matthias Apitz <guru@unixarea.de>
+To: OpenPrinting <printing-architecture@lists.linux.dev>
+Subject: Re: CUPS 2.4.20 is released!
+Message-ID: <asTGTw8NVeDi6z6a@pureos>
+Reply-To: Matthias Apitz <guru@unixarea.de>
 Precedence: bulk
 X-Mailing-List: printing-architecture@lists.linux.dev
 List-Id: <printing-architecture.lists.linux.dev>
 List-Subscribe: <mailto:printing-architecture+subscribe@lists.linux.dev>
 List-Unsubscribe: <mailto:printing-architecture+unsubscribe@lists.linux.dev>
 MIME-Version: 1.0
-User-Agent: Mozilla Thunderbird
-To: OpenPrinting <printing-architecture@lists.linux.dev>
-From: Zdenek Dohnal <zdohnal@redhat.com>
-Subject: CUPS 2.4.20 is released!
-Autocrypt: addr=zdohnal@redhat.com; keydata=
- xjMEYfKEjRYJKwYBBAHaRw8BAQdAJggn9NALyWqrgrFGPJ9RvPb7wYbskxKRKQcLv+8HpbrN
- QVpkZW5layBEb2huYWwgKFRoZSBvbGQgNEQ0MjI3RDcga2V5IHJldm9rZWQpIDx6ZG9obmFs
- QHJlZGhhdC5jb20+wpQEExYKADwWIQRwgqClCi6SZA84gODkUi3MmyRv9wUCYfKEjQIbAwUL
- CQgHAgMiAgEGFQoJCAsCBBYCAwECHgcCF4AACgkQ5FItzJskb/fbUQEAm6R78JoZSIOpu68g
- tUUp1qbfDdsfoQkbdyfws/myB6gA/A6/9QiIk50DNCmBTisZk5CFP51YNvwnyxafmE3cDn8G
- zjgEYfKEjRIKKwYBBAGXVQEFAQEHQF6Qgj5UQqUdvqvnDqygQ6Vm59nRGHbPVDTwendtM5cC
- AwEIB8J4BBgWCgAgFiEEcIKgpQoukmQPOIDg5FItzJskb/cFAmHyhI0CGwwACgkQ5FItzJsk
- b/e2CwD/SyRi/I5Il5XY5VXEL/eBsnNvvtaO0T10V4/vBMiDb+sBAK3YmRl6WStfRiEvMXQv
- OhMT+sEjx6ufQXkuPeXHvrgK
-X-Mimecast-Spam-Score: 0
-X-Mimecast-MFC-PROC-ID: c0a0aHjuvvdzqaT6pe-LkRw0hys09vmKN0vI3zfbf0c_1791215263
-X-Mimecast-Originator: redhat.com
-Content-Language: en-US
-Content-Type: text/plain; charset=UTF-8; format=flowed
-Content-Transfer-Encoding: 8bit
+Content-Type: text/plain; charset=utf-8
+Content-Disposition: inline
+Content-Transfer-Encoding: quoted-printable
+X-Operating-System: FreeBSD 14.0-CURRENT 1400094 (amd64)
+X-message-flag: Mails in HTML will not be read!  Send only plain text.
+X-Con-Id: 51246
+X-Con-U: 0-guru
 
-Hi all!
 
-CUPS 2.4.20 provides amount of bug fixes and security fixes:
+Hello,
 
-Assigned ids:
-- CVE-2025-55480, CVE-2026-61702, CVE-2026-87875, CVE-2026-87876, 
-CVE-2026-55453, CVE-2026-55467, CVE-2026-105326
+I fetched 2.4.20 to my server (SUSE Linux Enterprise Server 15 SP7)
+configured it with:
 
-Several fixes use GHSA id, because we changed policy for vulnerabilities 
-with CVSS < 7.0 due long waiting time for ids from CNA, which we take as 
-lower priority vulnerabilities unless print admin rights are      
-required for triggering them, or we explicitly mention the advisory is 
-security hardening, and not vulnerability fix.
+gmake clean
 
-More details in CHANGES.md.
+export SISISPAP_INSTALL=3D/usr/local/sisis-pap
+export CFLAGS=3D"-m64"
+export CXXFLAGS=3D"-m64"
+export LDFLAGS=3D"-L$SISISPAP_INSTALL/lib -m64"
+export DSOFLAGS=3D"-m64 -L$SISISPAP_INSTALL/lib"
+export PKG_CONFIG_PATH=3D/usr/local/sisis-pap/lib/pkgconfig
+#
+# because of /usr/bin/pkg-config
+#
+export LD_LIBRARY_PATH=3D/usr/lib64:$SISISPAP_INSTALL/lib
 
-Enjoy!
+=2E/configure --prefix=3D$SISISPAP_INSTALL/cups2 --libdir=3D$SISISPAP_INSTA=
+LL/cups2/lib \
+    --with-cups-user=3Dlp         \
+    --with-cups-group=3Dlp        \
+    --with-tls=3Dopenssl          \
+    --with-system-groups=3Droot
 
--- 
-Zdenek Dohnal
-Senior Software Engineer
-Red Hat, BRQ-TPBC
+The compilation stops in cups/dest.c with:
 
+gmake
+=2E..
+dest.c: In function =E2=80=98cups_enum_dests=E2=80=99:
+dest.c:3577:9: error: =E2=80=98_cups_getdata_t {aka struct _cups_getdata_s}=
+=E2=80=99 has no member named =E2=80=98num_local=E2=80=99
+     data.num_local   =3D 0;
+         ^
+dest.c:3578:10: error: =E2=80=98_cups_getdata_t {aka struct _cups_getdata_s=
+}=E2=80=99 has no member named =E2=80=98local_dests=E2=80=99; did you mean =
+=E2=80=98num_dests=E2=80=99?
+     data.local_dests =3D NULL;
+          ^~~~~~~~~~~
+          num_dests
+
+and if I look into cups/dest.c the struct _cups_getdata_t looks indeed
+as something else (lines 124...130 of cups/dest.c):
+
+ 124 typedef struct _cups_getdata_s
+ 125 {
+ 126   int           num_dests;              /* Number of destinations */
+ 127   cups_dest_t   *dests;                 /* Destinations */
+ 128   char          def_name[1024],         /* Default printer name, if an=
+y */
+ 129                 *def_instance;          /* Default printer instance, i=
+f any      */
+ 130 } _cups_getdata_t;
+
+What does this mean? Thanks
+
+Btw: I compared cups/dest.c of version 2.4.14 (our current version) and
+2.4.20. The reference of the missing struct members is new in 2.4.20:
+
+diff cups-2.4.14/cups/dest.c cups-2.4.20/cups/dest.c
+4c4
+<  * Copyright =C2=A9 2020-2025 by OpenPrinting.
+---
+>  * Copyright =C2=A9 2020-2026 by OpenPrinting.
+=2E..
+
+
+>     * Get the list of local printers...
+3553a3577,3578
+>     data.num_local   =3D 0;
+>     data.local_dests =3D NULL;
+
+
+	matthias
+
+--=20
+Matthias Apitz, =E2=9C=89 guru@unixarea.de, http://www.unixarea.de/ +49-176=
+-38902045
+Public GnuPG key: http://www.unixarea.de/key.pub
+
+I do not want to and will not become fit for war. Merz, go to the
+Eastern Front yourself!
