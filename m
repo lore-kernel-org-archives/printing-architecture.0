@@ -1,77 +1,94 @@
-Received: from ms-10.1blu.de (ms-10.1blu.de [178.254.4.101])
-	(using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
+Received: from mail-dl1-f44.google.com (mail-dl1-f44.google.com [74.125.82.44])
+	(using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
 	(No client certificate requested)
-	by smtp.subspace.kernel.org (Postfix) with ESMTPS id 0DE4D2F12DA
-	for <printing-architecture@lists.linux.dev>; Sat, 10 Oct 2026 08:34:39 +0000 (UTC)
-Authentication-Results: smtp.subspace.kernel.org; arc=none smtp.client-ip=178.254.4.101
+	by smtp.subspace.kernel.org (Postfix) with ESMTPS id 5E0E11C5D5E
+	for <printing-architecture@lists.linux.dev>; Sun, 11 Oct 2026 21:20:01 +0000 (UTC)
+Authentication-Results: smtp.subspace.kernel.org; arc=none smtp.client-ip=74.125.82.44
 ARC-Seal:i=1; a=rsa-sha256; d=subspace.kernel.org; s=arc-20240116;
-	t=1791621282; cv=none; b=ISrl6sG6059uxgQcdNAWHfgTZQypAyDEGLn0Iib0Q/jhtqaM2j/Egw2O03kxl0ikxGlk+VW9Z8ikHjo9812QX+buJ3qHTd3fKwMBuOoE26BS0xv3tSV3xkj4iKiR/GRMgMsAtPndqnn4/pr2MweVyPFXHw642Wg3dYvJUQFLqeU=
+	t=1791753602; cv=none; b=TYJ7gylNfBnW/bOzFZGCPRJO7FCEZfd8tOwuWoTeGC+SUhvIAUHjBcIDO7jkZKrVdtHiJ1JGSm6jhoOW21ZNXOctMHP6JaCmhfL2ZScEoycUTXqZCxZ11M/24yjnxb6is4dPg74WfMwkaXrMVGNXxyXJDkkf52soXS0fSBTjx/0=
 ARC-Message-Signature:i=1; a=rsa-sha256; d=subspace.kernel.org;
-	s=arc-20240116; t=1791621282; c=relaxed/simple;
-	bh=OR2jeCgCpITk2/ZWOkc61J6c8+gJn9FeOt/ED8OW15c=;
-	h=Date:From:To:Subject:Message-ID:References:MIME-Version:
-	 Content-Type:Content-Disposition:In-Reply-To; b=LeI7JEajQgHiWZZSvYkPpzGc+4qD7FdStUr2kxG1iS6LeaSa7VPPe6VeiUzPEk9Orx1QbJA9TbwRh8ko6O6r09weYKJO+2ua3jLvuS2twli7QXKr6tijhXfTu4ANcAOg7O4j3/Qc+lbg1/jLhP7KcLAAp0/ZUSxbftK4qugmMNM=
-ARC-Authentication-Results:i=1; smtp.subspace.kernel.org; dmarc=none (p=none dis=none) header.from=unixarea.de; spf=pass smtp.mailfrom=unixarea.de; dkim=pass (2048-bit key) header.d=unixarea.de header.i=@unixarea.de header.b=UhaZWnIC; arc=none smtp.client-ip=178.254.4.101
-Authentication-Results: smtp.subspace.kernel.org; dmarc=none (p=none dis=none) header.from=unixarea.de
-Authentication-Results: smtp.subspace.kernel.org; spf=pass smtp.mailfrom=unixarea.de
+	s=arc-20240116; t=1791753602; c=relaxed/simple;
+	bh=rNaiqLWyzUPaRFum4MccikEB7wWeyBtdiekPqBvMpeM=;
+	h=From:Content-Type:Mime-Version:Subject:Message-Id:Date:To; b=uLExOf79Evejh4d2wTaobOOU2QHSlewiH2hG8cE2AX9L3o7r5vDtDXFh12KeOS65Yb+qYKX0hSxcWnFECiVZV5hmxegB6pZcwPaPdUThVzb1br4kPY0Ac/cD3LhQhlgeKz+qQsPmaBkHyCtzN1ug4AslyDz8d8PGorB7pvOmq0w=
+ARC-Authentication-Results:i=1; smtp.subspace.kernel.org; dmarc=pass (p=none dis=none) header.from=gmail.com; spf=pass smtp.mailfrom=gmail.com; dkim=pass (2048-bit key) header.d=gmail.com header.i=@gmail.com header.b=JHxb99rn; arc=none smtp.client-ip=74.125.82.44
+Authentication-Results: smtp.subspace.kernel.org; dmarc=pass (p=none dis=none) header.from=gmail.com
+Authentication-Results: smtp.subspace.kernel.org; spf=pass smtp.mailfrom=gmail.com
 Authentication-Results: smtp.subspace.kernel.org;
-	dkim=pass (2048-bit key) header.d=unixarea.de header.i=@unixarea.de header.b="UhaZWnIC"
-DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=unixarea.de
-	; s=blu3434000; h=In-Reply-To:Content-Transfer-Encoding:Content-Type:
-	MIME-Version:References:Reply-To:Message-ID:Subject:To:From:Date:Sender:Cc:
-	Content-ID:Content-Description;
-	bh=2Op2P2d79IVJ4aQXOU70p72vK631/5zCW6IW5uLppbY=; b=UhaZWnICu4GbJOOPff4PVkFuNs
-	TLoEn7eRVuKnc90RPpqmbtSTViOkL8D28IVsMpyXZpPEZgqJbG+KKwEQ5ZYCJMke29atHdxctYn8v
-	QtMq+Oh5eMTK+rzERO/bZEDeIEf6dToPDdhhPN7gnu3SFQQW5wPzm05jMtTLAlKnWSgj6ONgvR0zK
-	y3UGv7SxyLYzsz3oNwQbSwor+AfCDGxiJoNK6xbRGCnIrI5b6muIJWfali2H787p4CGfi5CXlv4MT
-	9Gyu+YCOfCPxda28VVWKq2HisJtP2aOlvpTUvAplf00UO43IO/xUyR21LttdRA4Hz0s7NE5O7F8by
-	LfPd6c5g==;
-Received: from [62.216.210.190] (helo=localhost.unixarea.de)
-	by ms-10.1blu.de with esmtpsa  (TLS1.2) tls TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
-	(Exim 4.95)
-	(envelope-from <guru@unixarea.de>)
-	id 1xFSXH-00Ahfs-Nt
-	for printing-architecture@lists.linux.dev;
-	Sat, 10 Oct 2026 10:34:31 +0200
-Received: from localhost.my.domain (c720-1400094 [127.0.0.1])
-	by localhost.unixarea.de (8.17.1/8.14.9) with ESMTP id 69A8YVDC006204
-	for <printing-architecture@lists.linux.dev>; Sat, 10 Oct 2026 10:34:31 +0200 (CEST)
-	(envelope-from guru@unixarea.de)
-Received: (from guru@localhost)
-	by localhost.my.domain (8.17.1/8.14.9/Submit) id 69A8YVMi006203
-	for printing-architecture@lists.linux.dev; Sat, 10 Oct 2026 10:34:31 +0200 (CEST)
-	(envelope-from guru@unixarea.de)
-X-Authentication-Warning: localhost.my.domain: guru set sender to guru@unixarea.de using -f
-Date: Sat, 10 Oct 2026 10:34:30 +0200
-From: Matthias Apitz <guru@unixarea.de>
-To: OpenPrinting <printing-architecture@lists.linux.dev>
-Subject: Re: CUPS 2.4.20 is released!
-Message-ID: <asn4lmmsf8PtFOzf@c720-1400094>
-Reply-To: Matthias Apitz <guru@unixarea.de>
-References: <asTGTw8NVeDi6z6a@pureos>
+	dkim=pass (2048-bit key) header.d=gmail.com header.i=@gmail.com header.b="JHxb99rn"
+Received: by mail-dl1-f44.google.com with SMTP id a92af1059eb24-141395927feso2265260c88.0
+        for <printing-architecture@lists.linux.dev>; Sun, 11 Oct 2026 14:20:01 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20251104; t=1791753600; x=1792358400; darn=lists.linux.dev;
+        h=to:date:message-id:subject:mime-version:content-transfer-encoding
+         :content-type:from:from:to:cc:subject:date:message-id:reply-to
+         :content-type;
+        bh=rNaiqLWyzUPaRFum4MccikEB7wWeyBtdiekPqBvMpeM=;
+        b=JHxb99rnIge6w7yFv8N7L0hU9MQmrDQK7FfvsHqWnFFLxHx9hKZXg2+zd7J2pu0a/T
+         wypdloA8zxYzzYmij8tioC0MMMG0QG6qKILmciJn7APUsp4XLFcqlzYSMQoqG6ErAfba
+         tegsM480dVK1OLZnCFJzEiSMUdlrGFMkwG1k8E1uhBJ01XKijVfq/iuufZfHOYbgbjXo
+         Wo+mI22ZuoydnV9ekCNLL0xvtP8ebDEuXakav40ZYVbdFIfjvvXCuAHmfweVEWQiuI1f
+         iaMVfBXDDHqFqioPKTeOXhpu/M6yslNXYesrEm+8yfeLPHdT4pyZQT12qPDyI7y95jY+
+         Cc3w==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20260707; t=1791753600; x=1792358400;
+        h=to:date:message-id:subject:mime-version:content-transfer-encoding
+         :content-type:from:x-gm-gg:x-gm-message-state:from:to:cc:subject
+         :date:message-id:reply-to:content-type;
+        bh=rNaiqLWyzUPaRFum4MccikEB7wWeyBtdiekPqBvMpeM=;
+        b=RvvBc+CraoBQodTdaa4kq5VgN1Z61beD6WOdszQe0uAFmfBSjTMxRK2ZcEIV1tW8w3
+         I+zfApEngYgjeUTikaAmjAy57Ksg3uvIaK3EliVeKdA6CVDS1gDgUEjGqNGecft/s6pV
+         zjNPJ/QdO/7pMHzJ9ZDd7iEY0SifU+kj0oCBYyJr2WnhW2RBxTDadNG7sjfnB8M/d4xq
+         F+liDQWT2Vr0cq7TGqMAvWYgutSOSlPcslzePkbDZrOWoJF/VzR0mnrSKF4tTgkzzNgg
+         KguDIguwSt/WgG4/oopzHDkqfuTy98QM6+lkGqEPoGgWbOIGMwjaYiLzF6tgE1R1JoW0
+         +8zw==
+X-Gm-Message-State: AFq9FYIp3bdY70UEa3doIJfAWgGoWgQ/sREwL/0EoyIj4f4389r8iDl8
+	9npf4mUEtUEgEabpeHvRD6HkPf706fAdBHRBBDBOCe46XrCSYrTHu3osbexLJw==
+X-Gm-Gg: AYBFou3NyJmtnh8T2pqofiVeerjxno6VcKmn9qgFvdVTZmj7CGd9C3HY5fYd9G9Axsq
+	2dFr3To2Dhj43iX4wJh8ZmA0efbKoImmWbrdRtaGrWKH56ujD64eHvkK0vCjlrT3T53KA8iJvju
+	FzkWa3l/O1ee0jgFT9fi0L4JZnElA/7IsnDdRI+W1xvXcCvDKUBuoKUYU4QSWYCtazYi5oNRx22
+	MQJnQN5OP2lC8+11iLP8sLhr9bIYQjaFzjjsGOKOeaFA0ccIQr/v0sjsre2MZuW8W7sbvyOUx3C
+	oFA0fsLMYY6EfzuG79k161wzFZ1NvDTkOV4++4Qdz1GaA53u3QfRyo4kGnQCRndR3R5S6rRpR/V
+	VyjZWFj85pDOLsQgmTdUYI4r366Rj28OTzIrmyinhrky7QBx4fY1MLHVcwQiRkaf96g47iK3mgg
+	1k1lryryaCW+rxx2rx7maQ3h31ox/h2p/GjDzbocESTt07+FsF8HACLJnEsZgopnb1nHWaXzPOn
+	tounWLppZN5FVzzN3xrFskCYEjkCH11VcH2VDCkdmP2JVEM+HSHqxv1hbi3pz1MsbQ=
+X-Received: by 2002:a05:701b:260e:b0:159:aa67:28c1 with SMTP id a92af1059eb24-16a5eb53f9emr12014926c88.20.1791753600313;
+        Sun, 11 Oct 2026 14:20:00 -0700 (PDT)
+Received: from smtpclient.apple ([2405:201:404d:2829:d4a6:db2e:49af:a73a])
+        by smtp.gmail.com with ESMTPSA id a92af1059eb24-169a6021e49sm23950029c88.20.2026.10.11.14.19.58
+        for <printing-architecture@lists.linux.dev>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Sun, 11 Oct 2026 14:19:59 -0700 (PDT)
+From: Dushyant Prajapati <dushyant20nov@gmail.com>
+Content-Type: text/plain;
+	charset=us-ascii
+Content-Transfer-Encoding: 7bit
 Precedence: bulk
 X-Mailing-List: printing-architecture@lists.linux.dev
 List-Id: <printing-architecture.lists.linux.dev>
 List-Subscribe: <mailto:printing-architecture+subscribe@lists.linux.dev>
 List-Unsubscribe: <mailto:printing-architecture+unsubscribe@lists.linux.dev>
-MIME-Version: 1.0
-Content-Type: text/plain; charset=utf-8
-Content-Disposition: inline
-Content-Transfer-Encoding: 8bit
-In-Reply-To: <asTGTw8NVeDi6z6a@pureos>
-X-Operating-System: FreeBSD 14.0-CURRENT r1400094 (amd64)
-X-message-flag: Mails in HTML will not be read! Please, only plain text.
-X-Con-Id: 51246
-X-Con-U: 0-guru
+Mime-Version: 1.0 (Mac OS X Mail 16.0 \(3864.700.51.1.1\))
+Subject: Introduction - Dushyant, interested in contributing (GSoC 2027)
+Message-Id: <39E3AAB8-58C2-47D6-842A-A7EB7C57C2DF@gmail.com>
+Date: Mon, 12 Oct 2026 02:49:46 +0530
+To: printing-architecture@lists.linux.dev
+X-Mailer: Apple Mail (2.3864.700.51.1.1)
 
-Will the official tar archive for 2.4.20 be renewed due to bug #1743?
-Thanks
+Hi everyone,
 
-	matthias
+I'm Dushyant Prajapati, a 2nd-year B.Tech CSE (AI/ML) student at
+Sharda University, India. I mostly work with Python, FastAPI,
+PostgreSQL and React/Next.js/TypeScript.
 
--- 
-Matthias Apitz, ✉ guru@unixarea.de, http://www.unixarea.de/ +49-176-38902045
-Public GnuPG key: http://www.unixarea.de/key.pub
+I'd like to start contributing to OpenPrinting and hopefully apply
+for GSoC 2027 with you. From the 2026 ideas list, the AI-driven
+printer compatibility portal (ML pipeline + web interface) fits my
+background best.
 
-I do not want to and will not become fit for war. Merz, go to the
-Eastern Front yourself!
+Could you point me to an area where help is needed right now?
+Meanwhile I'm setting up openprinting.github.io locally and looking
+at issue #202.
+
+Thanks,
+Dushyant
+GitHub: https://github.com/Dushyant-web
